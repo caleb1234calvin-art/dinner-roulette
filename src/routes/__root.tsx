@@ -5,7 +5,7 @@ import { AppShell } from "@/components/app-shell";
 import { THEME_BOOTSTRAP_SCRIPT } from "@/lib/theme";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Pick For Us";
+const APP_NAME = "Dinner Roulette";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -13,14 +13,16 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: APP_NAME },
-      { name: "description", content: "Can't decide where to eat? Set the rules. The app chooses." },
+      { name: "description", content: "Can't decide where to eat? Set the rules. Dinner Roulette chooses." },
       { name: "theme-color", content: "#14110e" },
+      { name: "application-name", content: APP_NAME },
+      { name: "apple-mobile-web-app-title", content: APP_NAME },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "stylesheet", href: appCss },
-      { rel: "manifest", href: "/__grok/manifest.webmanifest" },
-      { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
+      { rel: "manifest", href: "/manifest.webmanifest" },
+      { rel: "apple-touch-icon", href: "/favicon.svg" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
