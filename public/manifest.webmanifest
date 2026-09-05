@@ -1,0 +1,18 @@
+{
+  "name": "Dinner Roulette",
+  "short_name": "Dinner Roulette",
+  "description": "Can't decide where to eat? Set the rules. Dinner Roulette chooses.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#14110e",
+  "theme_color": "#14110e",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
