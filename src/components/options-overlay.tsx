@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { Ban, Shuffle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cuisinePhotoSrc } from "@/lib/restaurants/cuisines";
+import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
 import type { DecoratedRestaurant } from "@/lib/restaurants/types";
@@ -90,15 +90,19 @@ function OptionCard({
       ? restaurant.closesLabel ?? "Open"
       : "Closed"
     : null;
+  const visual = restaurantVisual(restaurant.name, restaurant.photoKey);
 
   return (
     <article className="flex flex-col overflow-hidden rounded-xl bg-surface shadow-border">
       <div className="relative">
         <button type="button" onClick={onSelect} className="block w-full text-left">
           <img
-            src={cuisinePhotoSrc(restaurant.photoKey)}
+            src={visual.src}
             alt=""
-            className="h-28 w-full object-cover outline outline-1 -outline-offset-1 outline-fg/10"
+            className={cn(
+              "h-28 w-full outline outline-1 -outline-offset-1 outline-fg/10",
+              visual.isLogo ? "bg-white object-contain p-6" : "object-cover",
+            )}
           />
         </button>
         <button
