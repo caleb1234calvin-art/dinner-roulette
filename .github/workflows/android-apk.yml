@@ -101,7 +101,7 @@ jobs:
           retention-days: 30
 
       - name: Publish direct-download APK
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/feature/android-direct-download'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
