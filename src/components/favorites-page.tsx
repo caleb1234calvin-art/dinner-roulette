@@ -4,7 +4,6 @@ import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { formatDistance, haversineMiles } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
 import { useAppStore } from "@/lib/store";
-import { cn } from "@/lib/utils";
 
 export function FavoritesPage() {
   const preferences = useAppStore((s) => s.preferences);
@@ -43,14 +42,19 @@ export function FavoritesPage() {
             return (
               <li key={item.restaurantId} className="overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
                 <div className="flex gap-3 p-3">
-                  <img
-                    src={visual.src}
-                    alt=""
-                    className={cn(
-                      "size-20 shrink-0 rounded-md outline outline-1 -outline-offset-1 outline-fg/10",
-                      visual.isLogo ? "bg-fg/[0.06] object-contain p-4" : "object-cover",
-                    )}
-                  />
+                  {visual.isLogo ? (
+                    <div className="flex size-20 shrink-0 items-center justify-center rounded-md bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
+                      <div className="flex size-16 items-center justify-center rounded-lg bg-[#d8d8d4] p-2">
+                        <img src={visual.src} alt="" className="max-h-full max-w-full object-contain" />
+                      </div>
+                    </div>
+                  ) : (
+                    <img
+                      src={visual.src}
+                      alt=""
+                      className="size-20 shrink-0 rounded-md object-cover outline outline-1 -outline-offset-1 outline-fg/10"
+                    />
+                  )}
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-base text-fg">{item.name}</p>
                     <p className="mt-0.5 text-sm text-muted">
