@@ -48,7 +48,7 @@ export function FavoritesPage() {
                     alt=""
                     className={cn(
                       "size-20 shrink-0 rounded-md outline outline-1 -outline-offset-1 outline-fg/10",
-                      visual.isLogo ? "bg-white object-contain p-3" : "object-cover",
+                      visual.isLogo ? "bg-fg/[0.06] object-contain p-4" : "object-cover",
                     )}
                   />
                   <div className="min-w-0 flex-1">
