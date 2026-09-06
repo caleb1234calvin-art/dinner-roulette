@@ -290,9 +290,9 @@ export function ResultOverlay({
                             title="Grubhub"
                           >
                             <img
-                              src="https://cdn.simpleicons.org/grubhub/FFFFFF"
+                              src="https://unpkg.com/simple-icons@5.0.0/icons/grubhub.svg"
                               alt=""
-                              className="size-6"
+                              className="size-6 brightness-0 invert"
                             />
                           </a>
                         </Button>
