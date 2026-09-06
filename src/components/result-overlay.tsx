@@ -260,24 +260,40 @@ export function ResultOverlay({
                           <p className="text-xs tracking-[0.18em] text-subtle uppercase">Order delivery</p>
                           <p className="mt-1 text-xs text-muted">Availability is confirmed in the delivery app.</p>
                         </div>
-                        <Button size="icon" variant="outline" asChild>
+                        <Button
+                          size="icon"
+                          className="bg-[#ff3008] text-white shadow-none hover:bg-[#e52b07]"
+                          asChild
+                        >
                           <a
                             href={doorDashUrl}
                             rel="noreferrer"
                             aria-label={`Search DoorDash for ${restaurant.name}`}
                             title="DoorDash"
                           >
-                            <span className="text-[10px] font-bold tracking-[-0.04em]">DD</span>
+                            <img
+                              src="https://cdn.simpleicons.org/doordash/FFFFFF"
+                              alt=""
+                              className="size-6"
+                            />
                           </a>
                         </Button>
-                        <Button size="icon" variant="outline" asChild>
+                        <Button
+                          size="icon"
+                          className="bg-[#ff8000] text-white shadow-none hover:bg-[#e67300]"
+                          asChild
+                        >
                           <a
                             href={grubhubUrl}
                             rel="noreferrer"
                             aria-label={`Search Grubhub for ${restaurant.name}`}
                             title="Grubhub"
                           >
-                            <span className="text-[10px] font-bold tracking-[-0.04em]">GH</span>
+                            <img
+                              src="https://cdn.simpleicons.org/grubhub/FFFFFF"
+                              alt=""
+                              className="size-6"
+                            />
                           </a>
                         </Button>
                       </div>
