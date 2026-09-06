@@ -12,6 +12,22 @@ import { cn } from "@/lib/utils";
 const RATING_LABELS = ["Never again", "Not great", "Fine", "Really good", "Favorite"] as const;
 const SPIN_DELAYS = [50, 50, 55, 60, 70, 80, 95, 115, 140, 170, 210, 260, 320];
 
+function doorDashSearchUrl(restaurantName: string): string {
+  return `https://www.doordash.com/search/store/${encodeURIComponent(restaurantName)}`;
+}
+
+function grubhubSearchUrl(restaurant: DecoratedRestaurant): string {
+  const params = new URLSearchParams({
+    orderMethod: "delivery",
+    locationMode: "DELIVERY",
+    queryText: restaurant.name,
+    latitude: String(restaurant.lat),
+    longitude: String(restaurant.lon),
+    tab: "all",
+  });
+  return `https://www.grubhub.com/search?${params.toString()}`;
+}
+
 export function ResultOverlay({
   restaurant,
   reelNames,
@@ -88,8 +104,10 @@ export function ResultOverlay({
     ? restaurant.address
     : `${restaurant.lat},${restaurant.lon}`;
   const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
+  const doorDashUrl = doorDashSearchUrl(restaurant.name);
+  const grubhubUrl = grubhubSearchUrl(restaurant);
 
-  function saveVisit() {
+  function saveChoice() {
     recordVisit({
       restaurantId: restaurant.id,
       restaurantName: restaurant.name,
@@ -196,7 +214,7 @@ export function ResultOverlay({
                       <Button variant="outline" onClick={() => setRateOpen(false)}>
                         Cancel
                       </Button>
-                      <Button onClick={saveVisit}>Save visit</Button>
+                      <Button onClick={saveChoice}>Save choice</Button>
                     </div>
                   </div>
                 ) : (
@@ -232,9 +250,39 @@ export function ResultOverlay({
                       </Button>
                       <Button variant="outline" onClick={() => setRateOpen(true)}>
                         <Utensils className="size-4" />
-                        We went here
+                        We chose this
                       </Button>
                     </div>
+
+                    <div className="mt-4 rounded-xl bg-surface px-4 py-3 shadow-border">
+                      <div className="flex items-center gap-3">
+                        <div className="min-w-0 flex-1">
+                          <p className="text-xs tracking-[0.18em] text-subtle uppercase">Order delivery</p>
+                          <p className="mt-1 text-xs text-muted">Availability is confirmed in the delivery app.</p>
+                        </div>
+                        <Button size="icon" variant="outline" asChild>
+                          <a
+                            href={doorDashUrl}
+                            rel="noreferrer"
+                            aria-label={`Search DoorDash for ${restaurant.name}`}
+                            title="DoorDash"
+                          >
+                            <span className="text-[10px] font-bold tracking-[-0.04em]">DD</span>
+                          </a>
+                        </Button>
+                        <Button size="icon" variant="outline" asChild>
+                          <a
+                            href={grubhubUrl}
+                            rel="noreferrer"
+                            aria-label={`Search Grubhub for ${restaurant.name}`}
+                            title="Grubhub"
+                          >
+                            <span className="text-[10px] font-bold tracking-[-0.04em]">GH</span>
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
+
                     {restaurant.phone ? (
                       <Button variant="ghost" className="w-full" asChild>
                         <a href={`tel:${restaurant.phone.replace(/[^\d+]/g, "")}`}>
