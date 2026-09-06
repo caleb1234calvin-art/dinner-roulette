@@ -96,14 +96,19 @@ function OptionCard({
     <article className="flex flex-col overflow-hidden rounded-xl bg-surface shadow-border">
       <div className="relative">
         <button type="button" onClick={onSelect} className="block w-full text-left">
-          <img
-            src={visual.src}
-            alt=""
-            className={cn(
-              "h-28 w-full outline outline-1 -outline-offset-1 outline-fg/10",
-              visual.isLogo ? "bg-fg/[0.06] object-contain p-8" : "object-cover",
-            )}
-          />
+          {visual.isLogo ? (
+            <div className="flex h-28 w-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
+              <div className="flex h-20 w-[72%] items-center justify-center rounded-xl bg-[#d8d8d4] p-3 shadow-sm">
+                <img src={visual.src} alt="" className="max-h-full max-w-full object-contain" />
+              </div>
+            </div>
+          ) : (
+            <img
+              src={visual.src}
+              alt=""
+              className="h-28 w-full object-cover outline outline-1 -outline-offset-1 outline-fg/10"
+            />
+          )}
         </button>
         <button
           type="button"
