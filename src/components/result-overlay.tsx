@@ -146,7 +146,7 @@ export function ResultOverlay({
                 alt=""
                 className={cn(
                   "size-full outline outline-1 -outline-offset-1 outline-fg/10",
-                  visual.isLogo ? "bg-white object-contain p-12" : "object-cover",
+                  visual.isLogo ? "bg-fg/[0.06] object-contain p-16" : "object-cover",
                 )}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent" />
