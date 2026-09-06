@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - feature/android-apk
+      - main
+      - "feature/android-*"
 
 permissions:
   contents: read
@@ -41,6 +42,46 @@ jobs:
 
       - name: Generate Android project
         run: npx cap add android
+
+      - name: Generate Dinner Roulette launcher icons
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+
+          source = Image.open("native-android/icon.jpg").convert("RGB")
+          source = ImageOps.fit(source, (512, 512), method=Image.Resampling.LANCZOS)
+
+          launcher_sizes = {
+              "mdpi": 48,
+              "hdpi": 72,
+              "xhdpi": 96,
+              "xxhdpi": 144,
+              "xxxhdpi": 192,
+          }
+
+          foreground_sizes = {
+              "mdpi": 108,
+              "hdpi": 162,
+              "xhdpi": 216,
+              "xxhdpi": 324,
+              "xxxhdpi": 432,
+          }
+
+          for density, size in launcher_sizes.items():
+              folder = Path(f"android/app/src/main/res/mipmap-{density}")
+              folder.mkdir(parents=True, exist_ok=True)
+              icon = source.resize((size, size), Image.Resampling.LANCZOS)
+              icon.save(folder / "ic_launcher.png", format="PNG", optimize=True)
+              icon.save(folder / "ic_launcher_round.png", format="PNG", optimize=True)
+
+          for density, size in foreground_sizes.items():
+              folder = Path(f"android/app/src/main/res/mipmap-{density}")
+              folder.mkdir(parents=True, exist_ok=True)
+              foreground = source.resize((size, size), Image.Resampling.LANCZOS)
+              foreground.save(folder / "ic_launcher_foreground.png", format="PNG", optimize=True)
+          PY
 
       - name: Build debug APK
         working-directory: android
