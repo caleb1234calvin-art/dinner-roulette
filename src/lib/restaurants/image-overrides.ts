@@ -10,6 +10,8 @@ type LogoOverride = {
   aliases: string[];
   slug?: string;
   domain?: string;
+  src?: string;
+  label?: string;
 };
 
 const LOGO_OVERRIDES: LogoOverride[] = [
@@ -20,17 +22,29 @@ const LOGO_OVERRIDES: LogoOverride[] = [
   { aliases: ["starbucks", "starbucks coffee"], slug: "starbucks" },
 
   { aliases: ["wendys", "wendy s"], domain: "wendys.com" },
-  { aliases: ["subway"], domain: "subway.com" },
+  {
+    aliases: ["subway"],
+    src: "https://cdn.worldvectorlogo.com/logos/subway-2016-logo.svg",
+  },
   { aliases: ["pizza hut"], domain: "pizzahut.com" },
   { aliases: ["dominos", "domino s"], domain: "dominos.com" },
   { aliases: ["chick fil a"], domain: "chick-fil-a.com" },
   { aliases: ["chipotle", "chipotle mexican grill"], domain: "chipotle.com" },
   { aliases: ["applebees", "applebee s"], domain: "applebees.com" },
-  { aliases: ["olive garden"], domain: "olivegarden.com" },
-  { aliases: ["cracker barrel"], domain: "crackerbarrel.com" },
+  {
+    aliases: ["olive garden"],
+    src: "https://cdn.worldvectorlogo.com/logos/olive-garden.svg",
+  },
+  {
+    aliases: ["cracker barrel"],
+    src: "https://cdn.worldvectorlogo.com/logos/cracker-barrel.svg",
+  },
   { aliases: ["texas roadhouse"], domain: "texasroadhouse.com" },
   { aliases: ["outback", "outback steakhouse"], domain: "outback.com" },
-  { aliases: ["cheddars", "cheddar s", "cheddar s scratch kitchen"], domain: "cheddars.com" },
+  {
+    aliases: ["cheddars", "cheddar s", "cheddar s scratch kitchen"],
+    src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cheddar%27s_Scratch_Kitchen.jpg",
+  },
   { aliases: ["sonic", "sonic drive in"], domain: "sonicdrivein.com" },
   { aliases: ["dairy queen", "dq grill", "dq grill and chill"], domain: "dairyqueen.com" },
   { aliases: ["arbys", "arby s"], domain: "arbys.com" },
@@ -55,7 +69,10 @@ const LOGO_OVERRIDES: LogoOverride[] = [
   { aliases: ["braums", "braum s"], domain: "braums.com" },
   { aliases: ["7 brew", "7 brew coffee"], domain: "7brew.com" },
 
-  { aliases: ["andys frozen custard", "andy s frozen custard"], domain: "eatandys.com" },
+  {
+    aliases: ["andys frozen custard", "andy s frozen custard"],
+    src: "https://static1.squarespace.com/static/53b0a785e4b044d9476f4eac/t/60b0096094a18801700045f3/1622149472225/AFC+Logo.png",
+  },
   { aliases: ["auntie annes", "auntie anne s"], domain: "auntieannes.com" },
   { aliases: ["the big biscuit", "big biscuit"], domain: "bigbiscuit.com" },
   { aliases: ["black bear diner", "the black bear diner"], domain: "blackbeardiner.com" },
@@ -113,7 +130,7 @@ const LOGO_OVERRIDES: LogoOverride[] = [
   { aliases: ["undercliff bar and grill", "undercliff bar grill", "undercliff grill"], domain: "theundercliffgrill.com" },
   { aliases: ["flat creek webb city", "flat creek restaurant", "flat creek"], domain: "flatcreekrestaurants.com" },
   { aliases: ["habaneros mexican grill", "habanero s mexican grill", "habaneros mexican cantina", "habaneros"], domain: "habanerosmexicancantina.com" },
-  { aliases: ["joplin avenue coffee company", "joplin avenue coffee co"], domain: "joplinavenuecoffeecompany.com" },
+  { aliases: ["joplin avenue coffee company", "joplin avenue coffee co"], label: "JACC" },
   { aliases: ["famos grill", "famos on 66", "famos"], domain: "famos66.com" },
   { aliases: ["angels on the route", "angel s on the route"], domain: "angelsontheroute.com" },
   { aliases: ["old riverton store", "eisler bros old riverton store", "eisler brothers old riverton store"], domain: "eislerbros.com" },
@@ -134,6 +151,11 @@ function faviconUrl(domain: string): string {
   return url.toString();
 }
 
+function textBadgeSrc(label: string): string {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320"><text x="320" y="178" text-anchor="middle" dominant-baseline="middle" fill="#26231f" font-family="Arial, Helvetica, sans-serif" font-size="132" font-weight="800" letter-spacing="8">${label}</text></svg>`;
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
 export function restaurantVisual(name: string, photoKey: PhotoKey): RestaurantVisual {
   const normalized = normalizeRestaurantName(name);
   const override = LOGO_OVERRIDES.find((item) =>
@@ -141,6 +163,20 @@ export function restaurantVisual(name: string, photoKey: PhotoKey): RestaurantVi
       (alias) => normalized === alias || normalized.startsWith(`${alias} `),
     ),
   );
+
+  if (override?.src) {
+    return {
+      src: override.src,
+      isLogo: true,
+    };
+  }
+
+  if (override?.label) {
+    return {
+      src: textBadgeSrc(override.label),
+      isLogo: true,
+    };
+  }
 
   if (override?.slug) {
     return {
