@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { Ban, Heart, MapPinned, Phone, RotateCcw, Star, Utensils, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cuisinePhotoSrc } from "@/lib/restaurants/cuisines";
+import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
 import { TAGLINES, type DecoratedRestaurant } from "@/lib/restaurants/types";
@@ -111,6 +111,7 @@ export function ResultOverlay({
   const doorDashUrl = doorDashSearchUrl(restaurant.name);
   const grubhubUrl = grubhubSearchUrl(restaurant);
   const uberEatsUrl = uberEatsSearchUrl(restaurant.name);
+  const visual = restaurantVisual(restaurant.name, restaurant.photoKey);
 
   function saveChoice() {
     recordVisit({
@@ -141,9 +142,12 @@ export function ResultOverlay({
           <>
             <div className="relative h-56 overflow-hidden">
               <img
-                src={cuisinePhotoSrc(restaurant.photoKey)}
+                src={visual.src}
                 alt=""
-                className="size-full object-cover outline outline-1 -outline-offset-1 outline-fg/10"
+                className={cn(
+                  "size-full outline outline-1 -outline-offset-1 outline-fg/10",
+                  visual.isLogo ? "bg-white object-contain p-12" : "object-cover",
+                )}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent" />
               <button
