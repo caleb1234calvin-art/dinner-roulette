@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { Ban, Heart, MapPinned, Phone, RotateCcw, Star, Utensils, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cuisinePhotoSrc } from "@/lib/restaurants/cuisines";
+import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
 import { TAGLINES, type DecoratedRestaurant } from "@/lib/restaurants/types";
@@ -111,6 +111,7 @@ export function ResultOverlay({
   const doorDashUrl = doorDashSearchUrl(restaurant.name);
   const grubhubUrl = grubhubSearchUrl(restaurant);
   const uberEatsUrl = uberEatsSearchUrl(restaurant.name);
+  const visual = restaurantVisual(restaurant.name, restaurant.photoKey);
 
   function saveChoice() {
     recordVisit({
@@ -140,12 +141,22 @@ export function ResultOverlay({
         ) : (
           <>
             <div className="relative h-56 overflow-hidden">
-              <img
-                src={cuisinePhotoSrc(restaurant.photoKey)}
-                alt=""
-                className="size-full object-cover outline outline-1 -outline-offset-1 outline-fg/10"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent" />
+              {visual.isLogo ? (
+                <div className="flex size-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
+                  <div className="flex h-32 w-[70%] items-center justify-center rounded-2xl bg-[#d8d8d4] p-6 shadow-sm">
+                    <img src={visual.src} alt="" className="max-h-full max-w-full object-contain" />
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <img
+                    src={visual.src}
+                    alt=""
+                    className="size-full object-cover outline outline-1 -outline-offset-1 outline-fg/10"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent" />
+                </>
+              )}
               <button
                 type="button"
                 onClick={onClose}
