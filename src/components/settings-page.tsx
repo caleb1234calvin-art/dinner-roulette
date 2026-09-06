@@ -1,9 +1,37 @@
-import { Check, Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Check, Download, Moon, Smartphone, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { useAppStore } from "@/lib/store";
 import type { ThemeId } from "@/lib/theme";
 import { cn } from "@/lib/utils";
+
+const ANDROID_DOWNLOAD_URL =
+  "https://nightly.link/caleb1234calvin-art/dinner-roulette/workflows/android-apk/main/DinnerRoulette-Android.zip";
+
+type CapacitorWindow = Window & {
+  Capacitor?: {
+    isNativePlatform?: () => boolean;
+    getPlatform?: () => string;
+  };
+};
+
+function isRunningInNativeApp(): boolean {
+  if (typeof window === "undefined") return false;
+
+  const capacitor = (window as CapacitorWindow).Capacitor;
+  if (!capacitor) return false;
+
+  if (typeof capacitor.isNativePlatform === "function") {
+    return capacitor.isNativePlatform();
+  }
+
+  if (typeof capacitor.getPlatform === "function") {
+    return capacitor.getPlatform() !== "web";
+  }
+
+  return false;
+}
 
 export function SettingsPage() {
   const filters = useAppStore((s) => s.filters);
@@ -16,6 +44,11 @@ export function SettingsPage() {
   const resetFilters = useAppStore((s) => s.resetFilters);
   const resetAllData = useAppStore((s) => s.resetAllData);
   const activeExclusions = exclusions.filter((item) => item.expiresAt > Date.now());
+  const [showAndroidDownload, setShowAndroidDownload] = useState(false);
+
+  useEffect(() => {
+    setShowAndroidDownload(!isRunningInNativeApp());
+  }, []);
 
   return (
     <main className="px-4 pt-6 pb-8">
@@ -44,6 +77,32 @@ export function SettingsPage() {
           />
         </div>
       </section>
+
+      {showAndroidDownload ? (
+        <section className="mt-8">
+          <h2 className="text-sm text-muted">Dinner Roulette app</h2>
+          <div className="mt-3 rounded-xl bg-surface p-4 shadow-border">
+            <div className="flex items-start gap-3">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                <Smartphone className="size-5" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="text-sm font-medium text-fg">Get the Android app</p>
+                <p className="mt-1 text-xs leading-relaxed text-subtle">
+                  Install Dinner Roulette on your phone. The app stays connected to the same live restaurant experience.
+                </p>
+              </div>
+            </div>
+            <Button asChild className="mt-4 w-full">
+              <a href={ANDROID_DOWNLOAD_URL}>
+                <Download className="size-4" />
+                Download for Android
+              </a>
+            </Button>
+            <p className="mt-2 text-center text-[11px] text-subtle">Android • v1.0.0</p>
+          </div>
+        </section>
+      ) : null}
 
       <section className="mt-8 space-y-3">
         <ToggleRow
