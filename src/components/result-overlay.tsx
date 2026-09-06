@@ -28,6 +28,10 @@ function grubhubSearchUrl(restaurant: DecoratedRestaurant): string {
   return `https://www.grubhub.com/search?${params.toString()}`;
 }
 
+function uberEatsSearchUrl(restaurantName: string): string {
+  return `https://www.ubereats.com/search?q=${encodeURIComponent(restaurantName)}`;
+}
+
 export function ResultOverlay({
   restaurant,
   reelNames,
@@ -106,6 +110,7 @@ export function ResultOverlay({
   const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
   const doorDashUrl = doorDashSearchUrl(restaurant.name);
   const grubhubUrl = grubhubSearchUrl(restaurant);
+  const uberEatsUrl = uberEatsSearchUrl(restaurant.name);
 
   function saveChoice() {
     recordVisit({
@@ -294,6 +299,23 @@ export function ResultOverlay({
                               alt=""
                               className="size-6 brightness-0 invert"
                             />
+                          </a>
+                        </Button>
+                        <Button
+                          size="icon"
+                          className="bg-black text-white shadow-none hover:bg-black/85"
+                          asChild
+                        >
+                          <a
+                            href={uberEatsUrl}
+                            rel="noreferrer"
+                            aria-label={`Search Uber Eats for ${restaurant.name}`}
+                            title="Uber Eats"
+                          >
+                            <span className="flex flex-col items-center text-[7px] font-bold leading-[0.8] tracking-[-0.04em]">
+                              <span className="text-white">UBER</span>
+                              <span className="text-[#06c167]">EATS</span>
+                            </span>
                           </a>
                         </Button>
                       </div>
