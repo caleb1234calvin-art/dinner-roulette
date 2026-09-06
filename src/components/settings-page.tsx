@@ -7,7 +7,7 @@ import type { ThemeId } from "@/lib/theme";
 import { cn } from "@/lib/utils";
 
 const ANDROID_DOWNLOAD_URL =
-  "https://nightly.link/caleb1234calvin-art/dinner-roulette/workflows/android-apk/main/DinnerRoulette-Android.zip";
+  "https://github.com/caleb1234calvin-art/dinner-roulette/releases/download/android-latest/DinnerRoulette.apk";
 
 type CapacitorWindow = Window & {
   Capacitor?: {
@@ -96,10 +96,10 @@ export function SettingsPage() {
             <Button asChild className="mt-4 w-full">
               <a href={ANDROID_DOWNLOAD_URL}>
                 <Download className="size-4" />
-                Download for Android
+                Download APK
               </a>
             </Button>
-            <p className="mt-2 text-center text-[11px] text-subtle">Android • v1.0.0</p>
+            <p className="mt-2 text-center text-[11px] text-subtle">Android • v1.0.0 • No extraction needed</p>
           </div>
         </section>
       ) : null}
