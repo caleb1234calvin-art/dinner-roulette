@@ -1,9 +1,10 @@
 import { Heart, MapPinned, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cuisinePhotoSrc } from "@/lib/restaurants/cuisines";
+import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { formatDistance, haversineMiles } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
 import { useAppStore } from "@/lib/store";
+import { cn } from "@/lib/utils";
 
 export function FavoritesPage() {
   const preferences = useAppStore((s) => s.preferences);
@@ -38,13 +39,17 @@ export function FavoritesPage() {
               item.lat != null && item.lon != null
                 ? `https://www.google.com/maps/dir/?api=1&destination=${item.lat},${item.lon}`
                 : null;
+            const visual = restaurantVisual(item.name, item.photoKey ?? "american");
             return (
               <li key={item.restaurantId} className="overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
                 <div className="flex gap-3 p-3">
                   <img
-                    src={cuisinePhotoSrc(item.photoKey ?? "american")}
+                    src={visual.src}
                     alt=""
-                    className="size-20 shrink-0 rounded-md object-cover outline outline-1 -outline-offset-1 outline-fg/10"
+                    className={cn(
+                      "size-20 shrink-0 rounded-md outline outline-1 -outline-offset-1 outline-fg/10",
+                      visual.isLogo ? "bg-white object-contain p-3" : "object-cover",
+                    )}
                   />
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-base text-fg">{item.name}</p>
