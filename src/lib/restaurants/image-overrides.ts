@@ -78,7 +78,10 @@ const LOGO_OVERRIDES: LogoOverride[] = [
   { aliases: ["black bear diner", "the black bear diner"], domain: "blackbeardiner.com" },
   { aliases: ["blimpie"], domain: "blimpie.com" },
   { aliases: ["bricktown brewery"], domain: "bricktownbrewery.com" },
-  { aliases: ["caribou coffee"], domain: "cariboucoffee.com" },
+  {
+    aliases: ["caribou coffee", "caribou cafe"],
+    src: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Caribou_coffee_logo_detail.gif",
+  },
   { aliases: ["caseys", "casey s", "caseys carryout pizza", "casey s carryout pizza"], domain: "caseys.com" },
   { aliases: ["charleys", "charley s", "charleys philly steaks", "charleys cheesesteaks"], domain: "charleys.com" },
   { aliases: ["charlies chicken", "charlie s chicken"], domain: "charlieschicken.com" },
@@ -131,13 +134,35 @@ const LOGO_OVERRIDES: LogoOverride[] = [
   { aliases: ["flat creek webb city", "flat creek restaurant", "flat creek"], domain: "flatcreekrestaurants.com" },
   { aliases: ["habaneros mexican grill", "habanero s mexican grill", "habaneros mexican cantina", "habaneros"], domain: "habanerosmexicancantina.com" },
   { aliases: ["joplin avenue coffee company", "joplin avenue coffee co"], label: "JACC" },
-  { aliases: ["famos grill", "famos on 66", "famos"], domain: "famos66.com" },
+  { aliases: ["famos grill", "famos on 66", "famos"], label: "FAMOS\nON 66" },
   { aliases: ["angels on the route", "angel s on the route"], domain: "angelsontheroute.com" },
   { aliases: ["old riverton store", "eisler bros old riverton store", "eisler brothers old riverton store"], domain: "eislerbros.com" },
+
+  { aliases: ["randy s drive in", "randys drive in"], label: "RANDY'S\nDRIVE-IN" },
+  { aliases: ["coffee shop"], label: "COFFEE\nSHOP" },
+  { aliases: ["downtown burgers"], label: "DOWNTOWN\nBURGERS" },
+  { aliases: ["bamboo garden"], label: "BAMBOO\nGARDEN" },
+  { aliases: ["bamboo"], label: "BAMBOO" },
+  {
+    aliases: ["iron skillet"],
+    src: "https://images.seeklogo.com/logo-png/34/1/iron-skillet-restaurant-logo-png_seeklogo-340157.png",
+  },
+  { aliases: ["1988"], label: "1988" },
+  {
+    aliases: ["carterville superman museum and ice cream parlor", "supertam on 66"],
+    label: "SUPERTAM\nON 66",
+  },
+  { aliases: ["broadway burgers"], label: "BROADWAY\nBURGERS" },
+  {
+    aliases: ["wa na bee dea snack bar", "wa na be dea snack bar"],
+    label: "WA-NA-BEÉ-DÉA\nSNACK BAR",
+  },
 ];
 
 function normalizeRestaurantName(name: string): string {
   return name
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/&/g, " and ")
     .replace(/[^a-z0-9]+/g, " ")
@@ -151,8 +176,36 @@ function faviconUrl(domain: string): string {
   return url.toString();
 }
 
+function escapeXml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
 function textBadgeSrc(label: string): string {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320"><text x="320" y="178" text-anchor="middle" dominant-baseline="middle" fill="#26231f" font-family="Arial, Helvetica, sans-serif" font-size="132" font-weight="800" letter-spacing="8">${label}</text></svg>`;
+  const lines = label.split("\n").map(escapeXml);
+  const longest = Math.max(...lines.map((line) => line.length));
+  const fontSize = lines.length > 1
+    ? longest > 12
+      ? 70
+      : 86
+    : longest > 16
+      ? 72
+      : longest > 10
+        ? 92
+        : 122;
+  const lineGap = fontSize * 1.08;
+  const startY = lines.length === 1 ? 174 : 160 - lineGap / 2;
+  const text = lines
+    .map(
+      (line, index) =>
+        `<text x="320" y="${startY + index * lineGap}" text-anchor="middle" dominant-baseline="middle" fill="#26231f" font-family="Arial, Helvetica, sans-serif" font-size="${fontSize}" font-weight="800" letter-spacing="4">${line}</text>`,
+    )
+    .join("");
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320">${text}</svg>`;
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
