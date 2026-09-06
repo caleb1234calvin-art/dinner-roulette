@@ -141,15 +141,22 @@ export function ResultOverlay({
         ) : (
           <>
             <div className="relative h-56 overflow-hidden">
-              <img
-                src={visual.src}
-                alt=""
-                className={cn(
-                  "size-full outline outline-1 -outline-offset-1 outline-fg/10",
-                  visual.isLogo ? "bg-fg/[0.06] object-contain p-16" : "object-cover",
-                )}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent" />
+              {visual.isLogo ? (
+                <div className="flex size-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
+                  <div className="flex h-32 w-[70%] items-center justify-center rounded-2xl bg-[#d8d8d4] p-6 shadow-sm">
+                    <img src={visual.src} alt="" className="max-h-full max-w-full object-contain" />
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <img
+                    src={visual.src}
+                    alt=""
+                    className="size-full object-cover outline outline-1 -outline-offset-1 outline-fg/10"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent" />
+                </>
+              )}
               <button
                 type="button"
                 onClick={onClose}
