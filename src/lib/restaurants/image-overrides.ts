@@ -127,7 +127,10 @@ const LOGO_OVERRIDES: LogoOverride[] = [
   { aliases: ["craves coffee"], domain: "cravescoffee.com" },
   { aliases: ["iggys diner", "iggy s diner"], domain: "iggysdiner.website" },
   { aliases: ["gringos", "gringos joplin", "gringos webb city"], domain: "webbcitygringos.com" },
-  { aliases: ["lucys mexican restaurant", "lucy s mexican restaurant"], domain: "lucysmexicanrestaurantmo.com" },
+  {
+    aliases: ["lucys mexican restaurant", "lucy s mexican restaurant"],
+    src: "https://d2gqo3h0psesgi.cloudfront.net/auto/lucys-mexican-restaurant-q4mdb3t5-logo.png",
+  },
   { aliases: ["pineapple bliss"], domain: "pineappleblissyourself.com" },
   { aliases: ["undercliff bar and grill", "undercliff bar grill", "undercliff grill"], domain: "theundercliffgrill.com" },
   { aliases: ["flat creek webb city", "flat creek restaurant", "flat creek"], domain: "flatcreekrestaurants.com" },
