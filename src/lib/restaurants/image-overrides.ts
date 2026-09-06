@@ -1,4 +1,3 @@
-import { cuisinePhotoSrc } from "./cuisines";
 import type { PhotoKey } from "./types";
 
 export type RestaurantVisual = {
@@ -185,31 +184,66 @@ function escapeXml(value: string): string {
     .replace(/'/g, "&apos;");
 }
 
+function makeBadgeLabel(name: string): string {
+  const cleaned = name.replace(/\s+/g, " ").trim().toUpperCase();
+  if (cleaned.length <= 13) return cleaned;
+
+  const words = cleaned.split(" ");
+  const lines: string[] = [];
+  let current = "";
+
+  for (const word of words) {
+    const next = current ? `${current} ${word}` : word;
+    if (next.length <= 13 || !current) {
+      current = next;
+      continue;
+    }
+
+    if (lines.length < 2) {
+      lines.push(current);
+      current = word;
+    } else {
+      current = `${current} ${word}`;
+    }
+  }
+
+  if (current) lines.push(current);
+  return lines.slice(0, 3).join("\n");
+}
+
 function textBadgeSrc(label: string): string {
   const lines = label.split("\n").map(escapeXml);
   const longest = Math.max(...lines.map((line) => line.length));
-  const fontSize = lines.length > 1
-    ? longest > 12
-      ? 70
-      : 86
-    : longest > 16
-      ? 72
-      : longest > 10
-        ? 92
-        : 122;
+  const fontSize = lines.length >= 3
+    ? longest > 18
+      ? 44
+      : longest > 13
+        ? 52
+        : 60
+    : lines.length === 2
+      ? longest > 15
+        ? 58
+        : longest > 11
+          ? 70
+          : 82
+      : longest > 18
+        ? 66
+        : longest > 12
+          ? 82
+          : 118;
   const lineGap = fontSize * 1.08;
-  const startY = lines.length === 1 ? 174 : 160 - lineGap / 2;
+  const startY = 160 - ((lines.length - 1) * lineGap) / 2;
   const text = lines
     .map(
       (line, index) =>
-        `<text x="320" y="${startY + index * lineGap}" text-anchor="middle" dominant-baseline="middle" fill="#26231f" font-family="Arial, Helvetica, sans-serif" font-size="${fontSize}" font-weight="800" letter-spacing="4">${line}</text>`,
+        `<text x="320" y="${startY + index * lineGap}" text-anchor="middle" dominant-baseline="middle" fill="#26231f" font-family="Arial, Helvetica, sans-serif" font-size="${fontSize}" font-weight="800" letter-spacing="3">${line}</text>`,
     )
     .join("");
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320">${text}</svg>`;
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
-export function restaurantVisual(name: string, photoKey: PhotoKey): RestaurantVisual {
+export function restaurantVisual(name: string, _photoKey: PhotoKey): RestaurantVisual {
   const normalized = normalizeRestaurantName(name);
   const override = LOGO_OVERRIDES.find((item) =>
     item.aliases.some(
@@ -246,7 +280,7 @@ export function restaurantVisual(name: string, photoKey: PhotoKey): RestaurantVi
   }
 
   return {
-    src: cuisinePhotoSrc(photoKey),
-    isLogo: false,
+    src: textBadgeSrc(makeBadgeLabel(name)),
+    isLogo: true,
   };
 }
