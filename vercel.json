@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/downloads/DinnerRoulette.apk",
+      "destination": "https://github.com/caleb1234calvin-art/dinner-roulette/releases/download/android-latest/DinnerRoulette.apk"
+    }
+  ]
+}
