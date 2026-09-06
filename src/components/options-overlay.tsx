@@ -101,7 +101,7 @@ function OptionCard({
             alt=""
             className={cn(
               "h-28 w-full outline outline-1 -outline-offset-1 outline-fg/10",
-              visual.isLogo ? "bg-white object-contain p-6" : "object-cover",
+              visual.isLogo ? "bg-fg/[0.06] object-contain p-8" : "object-cover",
             )}
           />
         </button>
