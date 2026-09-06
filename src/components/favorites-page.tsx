@@ -56,7 +56,7 @@ export function FavoritesPage() {
                       {distance != null ? formatDistance(distance) : "Distance unknown"}
                       {item.ourRating ? ` · Our rating ${item.ourRating}/5` : ""}
                       {item.lastVisited
-                        ? ` · Last went ${new Date(item.lastVisited).toLocaleDateString()}`
+                        ? ` · Last chose ${new Date(item.lastVisited).toLocaleDateString()}`
                         : ""}
                     </p>
                   </div>

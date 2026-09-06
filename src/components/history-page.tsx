@@ -19,16 +19,16 @@ export function HistoryPage() {
 
   return (
     <main className="px-4 pt-6 pb-8">
-      <p className="text-xs tracking-[0.22em] text-subtle uppercase">Places we actually went</p>
+      <p className="text-xs tracking-[0.22em] text-subtle uppercase">Places we chose</p>
       <h1 className="font-display mt-1 text-4xl text-fg">History</h1>
-      <p className="mt-2 text-sm text-muted">Recent visits get a quieter chance next time.</p>
+      <p className="mt-2 text-sm text-muted">Recent choices get a quieter chance next time.</p>
 
       {visits.length === 0 ? (
         <div className="mt-10 rounded-xl bg-surface p-6 text-center shadow-[var(--shadow-border)]">
           <Clock3 className="mx-auto size-8 text-subtle" />
-          <p className="mt-3 text-sm text-fg">No dinners logged yet</p>
+          <p className="mt-3 text-sm text-fg">No choices logged yet</p>
           <p className="mt-1 text-sm text-muted">
-            After you go, mark We went here. That keeps the same place from winning every night.
+            When you settle on a pick, mark We chose this. That keeps the same place from winning every night.
           </p>
         </div>
       ) : (
