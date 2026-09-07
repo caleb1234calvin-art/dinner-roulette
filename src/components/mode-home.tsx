@@ -1,51 +1,95 @@
 import { useEffect, useState } from "react";
 import { Heart, MoonStar, UtensilsCrossed } from "lucide-react";
 import { DateNightHome } from "@/components/date-night-home";
+import { HalloweenDateNightPanel } from "@/components/halloween-date-night-panel";
 import { ModeHint } from "@/components/mode-hint";
 import { NightlifeHome } from "@/components/nightlife-home";
 import { PickHome } from "@/components/pick-home";
 import { trackAppEvent } from "@/lib/analytics";
+import {
+  isHalloweenDateNightSeason,
+  normalizeSeasonalDateNightFilters,
+} from "@/lib/date-night/season";
 import type { HomeMode } from "@/lib/nightlife/types";
+import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 export function ModeHome() {
   const [mode, setMode] = useState<HomeMode>("dinner");
+  const dateNightFilters = useAppStore((state) => state.dateNightFilters);
+  const setDateNightFilters = useAppStore((state) => state.setDateNightFilters);
+  const halloweenSeason = isHalloweenDateNightSeason();
+
+  const nightlife = mode === "nightlife";
+  const dateNight = mode === "date-night";
+  const halloweenDateNight = dateNight && halloweenSeason;
 
   useEffect(() => {
     const root = document.documentElement;
-    root.classList.toggle("nightlife-active", mode === "nightlife");
-    root.classList.toggle("date-night-active", mode === "date-night");
+    root.classList.toggle("nightlife-active", nightlife);
+    root.classList.toggle("date-night-active", dateNight);
+    root.classList.toggle("halloween-date-night-active", halloweenDateNight);
     return () => {
       root.classList.remove("nightlife-active");
       root.classList.remove("date-night-active");
+      root.classList.remove("halloween-date-night-active");
     };
-  }, [mode]);
+  }, [dateNight, halloweenDateNight, nightlife]);
+
+  useEffect(() => {
+    if (halloweenSeason) return;
+    const normalized = normalizeSeasonalDateNightFilters(dateNightFilters);
+    if (
+      normalized.activityTypes.length !== dateNightFilters.activityTypes.length ||
+      normalized.activityTypes.some((type, index) => type !== dateNightFilters.activityTypes[index])
+    ) {
+      setDateNightFilters({ activityTypes: normalized.activityTypes });
+    }
+  }, [dateNightFilters, halloweenSeason, setDateNightFilters]);
 
   function selectMode(next: HomeMode) {
     if (next !== mode) trackAppEvent("Mode Selected", { mode: next });
     setMode(next);
   }
 
-  const nightlife = mode === "nightlife";
-  const dateNight = mode === "date-night";
-
   return (
-    <div className={cn("mode-home min-h-dvh", nightlife && "nightlife-theme", dateNight && "date-night-theme")}>
+    <div
+      className={cn(
+        "mode-home min-h-dvh",
+        nightlife && "nightlife-theme",
+        dateNight && "date-night-theme",
+        halloweenDateNight && "halloween-date-night-theme",
+      )}
+    >
       <ModeHint />
 
       <header className="px-4 pt-8 pb-5">
         <p className="text-kicker text-subtle">
-          {nightlife ? "Dinner roulette · Nightlife" : dateNight ? "Dinner roulette · Date Night" : "Dinner roulette"}
+          {nightlife
+            ? "Dinner roulette · Nightlife"
+            : halloweenDateNight
+              ? "Dinner roulette · October after dark"
+              : dateNight
+                ? "Dinner roulette · Date Night"
+                : "Dinner roulette"}
         </p>
         <h1 className="font-display mt-2 text-4xl leading-tight text-fg">
-          {nightlife ? "What's the Move?" : dateNight ? "What Should We Do?" : "What's for Dinner?"}
+          {nightlife
+            ? "What's the Move?"
+            : halloweenDateNight
+              ? "Where Should the Night Take Us?"
+              : dateNight
+                ? "What Should We Do?"
+                : "What's for Dinner?"}
         </h1>
         <p className="mt-3 max-w-sm text-sm text-muted">
           {nightlife
             ? "Set the vibe. Let the app pick the place."
-            : dateNight
-              ? "Set the mood. Let the app pick the date."
-              : "You set the rules. The app helps decide."}
+            : halloweenDateNight
+              ? "Pick your poison. Set the mood. Let October decide the rest."
+              : dateNight
+                ? "Set the mood. Let the app pick the date."
+                : "You set the rules. The app helps decide."}
         </p>
       </header>
 
@@ -90,7 +134,8 @@ export function ModeHome() {
         </div>
       </div>
 
-      {mode === "dinner" ? <PickHome /> : mode === "nightlife" ? <NightlifeHome /> : <DateNightHome />}
+      {halloweenDateNight ? <HalloweenDateNightPanel /> : null}
+      {mode === "dinner" ? <PickHome /> : nightlife ? <NightlifeHome /> : <DateNightHome />}
     </div>
   );
 }
