@@ -1,15 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
-import { Ban, Heart, MapPinned, MoonStar, Phone, RotateCcw, Sparkles, Star, Utensils, X } from "lucide-react";
+import { Ban, ExternalLink, Heart, MapPinned, MoonStar, Phone, RotateCcw, Sparkles, Star, Utensils, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getDateNightIcon } from "@/lib/date-night/icons";
-import type { DecoratedDateNightPlace } from "@/lib/date-night/types";
+import { DATE_NIGHT_TAGLINES, dateNightTypeLabel, type DecoratedDateNightPlace } from "@/lib/date-night/types";
 import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
 import { TAGLINES, type DecoratedRestaurant } from "@/lib/restaurants/types";
 import { NIGHTLIFE_TAGLINES } from "@/lib/nightlife/types";
-import { DATE_NIGHT_TAGLINES } from "@/lib/date-night/types";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
@@ -113,6 +112,8 @@ export function ResultOverlay({
   const dateNightIcon = mode === "date-night"
     ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel })
     : null;
+  const dateNightTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
+  const websiteLabel = dateNightTypes.includes("movies") ? "Check showtimes" : "Website & info";
 
   function saveChoice() {
     recordVisit({
@@ -145,6 +146,12 @@ export function ResultOverlay({
                 <div className="flex size-full items-center justify-center bg-elevated p-4 outline outline-1 -outline-offset-1 outline-fg/10">
                   <img src={dateNightIcon} alt="" className="size-44 rounded-[2rem] object-cover shadow-lg" />
                 </div>
+              ) : mode === "date-night" ? (
+                <div className="flex size-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10">
+                  <div className="flex size-28 items-center justify-center rounded-full bg-surface shadow-border">
+                    <Sparkles className="size-12 text-accent" />
+                  </div>
+                </div>
               ) : visual.isLogo ? (
                 <div className="flex size-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
                   <div className="flex h-32 w-[70%] items-center justify-center rounded-2xl bg-[#d8d8d4] p-6 shadow-sm">
@@ -167,22 +174,33 @@ export function ResultOverlay({
               <h2 className="font-display mt-2 text-4xl leading-tight text-fg">{restaurant.name}</h2>
               <p className="mt-2 text-sm text-muted">{tagline}</p>
 
-              <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
-                <span>{restaurant.cuisineLabel}</span>
-                {restaurant.priceLevel ? <span>{formatPrice(restaurant.priceLevel)}</span> : null}
-                {restaurant.rating ? (
-                  <span className="inline-flex items-center gap-1 text-fg">
-                    <Star className="size-3.5 fill-fg" />
-                    {restaurant.rating.toFixed(1)}
-                    {restaurant.reviewCount ? <span className="text-subtle">({restaurant.reviewCount})</span> : null}
-                  </span>
-                ) : null}
-              </div>
+              {mode === "date-night" && dateNightTypes.length ? (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {dateNightTypes.map((type) => (
+                    <span key={type} className="rounded-full bg-elevated px-3 py-1.5 text-xs tracking-wide text-muted uppercase shadow-border">
+                      {dateNightTypeLabel([type])}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
+                  <span>{restaurant.cuisineLabel}</span>
+                  {restaurant.priceLevel ? <span>{formatPrice(restaurant.priceLevel)}</span> : null}
+                  {restaurant.rating ? (
+                    <span className="inline-flex items-center gap-1 text-fg">
+                      <Star className="size-3.5 fill-fg" />
+                      {restaurant.rating.toFixed(1)}
+                      {restaurant.reviewCount ? <span className="text-subtle">({restaurant.reviewCount})</span> : null}
+                    </span>
+                  ) : null}
+                </div>
+              )}
 
               <p className="mt-3 text-sm text-muted">
                 {formatDistance(restaurant.distanceMiles)}
                 {restaurant.hoursKnown ? ` · ${restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed"}` : ""}
               </p>
+              {mode === "date-night" && !restaurant.hoursKnown ? <p className="mt-1 text-sm text-subtle">Hours unknown — check before going.</p> : null}
               {restaurant.closingSoon ? <p className="mt-1 text-sm text-danger">Closing soon — go now if you're in.</p> : null}
               <p className="mt-1 text-sm text-subtle">{restaurant.address}</p>
 
@@ -193,6 +211,15 @@ export function ResultOverlay({
                     <span className="tracking-kicker uppercase">Go here</span>
                   </a>
                 </Button>
+
+                {mode === "date-night" && restaurant.website ? (
+                  <Button size="lg" variant="secondary" className="w-full" asChild>
+                    <a href={restaurant.website} target="_blank" rel="noreferrer">
+                      <ExternalLink className="size-4" />
+                      <span className="tracking-kicker uppercase">{websiteLabel}</span>
+                    </a>
+                  </Button>
+                ) : null}
 
                 {rateOpen ? (
                   <div className="rounded-xl bg-surface p-4 shadow-border">
