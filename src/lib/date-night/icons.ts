@@ -1,14 +1,21 @@
 import type { ConcreteDateNightType } from "./types";
 
+const OPTIMIZED_ICON_WIDTH = 640;
+const OPTIMIZED_ICON_QUALITY = 90;
+
+function optimizedIcon(path: string): string {
+  return `/_vercel/image?url=${encodeURIComponent(path)}&w=${OPTIMIZED_ICON_WIDTH}&q=${OPTIMIZED_ICON_QUALITY}`;
+}
+
 export const DATE_NIGHT_ICON_BY_TYPE: Record<ConcreteDateNightType, string> = {
-  park: "/date-night-icons/park.png",
-  movies: "/date-night-icons/movies.png",
-  arcade: "/date-night-icons/arcade.png",
-  bowling: "/date-night-icons/bowling.png",
-  "mini-golf": "/date-night-icons/mini-golf.png",
-  "escape-room": "/date-night-icons/escape-room.png",
-  museum: "/date-night-icons/museum.png",
-  skating: "/date-night-icons/skating.png",
+  park: optimizedIcon("/date-night-icons/park.png"),
+  movies: optimizedIcon("/date-night-icons/movies.png"),
+  arcade: optimizedIcon("/date-night-icons/arcade.png"),
+  bowling: optimizedIcon("/date-night-icons/bowling.png"),
+  "mini-golf": optimizedIcon("/date-night-icons/mini-golf.png"),
+  "escape-room": optimizedIcon("/date-night-icons/escape-room.png"),
+  museum: optimizedIcon("/date-night-icons/museum.png"),
+  skating: optimizedIcon("/date-night-icons/skating.png"),
 };
 
 function inferTypeFromLabel(label?: string | null): ConcreteDateNightType | null {
