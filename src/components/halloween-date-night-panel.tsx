@@ -7,34 +7,65 @@ import { cn } from "@/lib/utils";
 const PRESET_ICONS = [Ghost, Trees, MoonStar] as const;
 
 const OCTOBER_STYLES = `
-html.halloween-date-night-active {
-  color-scheme: dark;
-  --app-bg: #110e0f;
-  --app-surface: #1c1617;
-  --app-elevated: #2a2020;
-  --app-fg: #f5eadb;
-  --app-muted: #c6b5a4;
-  --app-subtle: #8f7d71;
-  --app-accent: #d56a2f;
-  --app-accent-fg: #fff3e5;
-  --app-border: #49342f;
-  --app-open: #748e68;
-  --app-danger: #bd5158;
-  --app-heart: #a94450;
+html.halloween-date-night-active[data-theme="light"] {
+  color-scheme: light;
+  --app-bg: #f1eff0;
+  --app-surface: #fbfafb;
+  --app-elevated: #e7e2e4;
+  --app-fg: #342c2f;
+  --app-muted: #6f6266;
+  --app-subtle: #91858a;
+  --app-accent: #b94f68;
+  --app-accent-fg: #fff8fa;
+  --app-border: #d9cfd2;
+  --app-open: #438a70;
+  --app-danger: #b74756;
+  --app-heart: #b94f68;
   --app-shadow-border:
-    0 0 0 1px color-mix(in oklab, #f5eadb 8%, transparent),
+    0 0 0 1px color-mix(in oklab, #342c2f 9%, transparent),
+    0 1px 2px -1px color-mix(in oklab, #342c2f 7%, transparent);
+  --app-shadow-border-hover:
+    0 0 0 1px color-mix(in oklab, #b94f68 34%, transparent),
+    0 8px 24px -18px color-mix(in oklab, #b94f68 48%, transparent);
+  --october-ember: #c56a32;
+  --october-ember-fg: #6b3518;
+}
+
+html.halloween-date-night-active:not([data-theme="light"]) {
+  color-scheme: dark;
+  --app-bg: #14110e;
+  --app-surface: #1d1915;
+  --app-elevated: #26211c;
+  --app-fg: #f1f4f2;
+  --app-muted: #b8c1bc;
+  --app-subtle: #89938e;
+  --app-accent: #4aa39f;
+  --app-accent-fg: #081f20;
+  --app-border: #353a37;
+  --app-open: #76a88e;
+  --app-danger: #d16b72;
+  --app-heart: #4aa39f;
+  --app-shadow-border:
+    0 0 0 1px color-mix(in oklab, #f1f4f2 8%, transparent),
     0 18px 45px -38px rgba(0, 0, 0, 0.95);
   --app-shadow-border-hover:
-    0 0 0 1px color-mix(in oklab, #d56a2f 34%, transparent),
-    0 18px 45px -34px rgba(213, 106, 47, 0.22);
+    0 0 0 1px color-mix(in oklab, #4aa39f 34%, transparent),
+    0 18px 45px -34px color-mix(in oklab, #4aa39f 24%, transparent);
+  --october-ember: #c56a32;
+  --october-ember-fg: #ffd9bd;
 }
 
 .halloween-date-night-theme {
   min-height: 100dvh;
   background:
-    radial-gradient(circle at 84% 10%, rgba(213, 106, 47, 0.10), transparent 24rem),
-    radial-gradient(circle at 15% 34%, rgba(117, 39, 48, 0.10), transparent 21rem),
-    linear-gradient(180deg, #110e0f 0%, #151011 42%, #110e0f 100%);
+    radial-gradient(circle at 84% 10%, color-mix(in oklab, var(--app-accent) 11%, transparent), transparent 24rem),
+    radial-gradient(circle at 15% 34%, color-mix(in oklab, var(--october-ember) 8%, transparent), transparent 21rem),
+    linear-gradient(
+      180deg,
+      var(--app-bg) 0%,
+      color-mix(in oklab, var(--app-bg) 90%, var(--app-surface)) 42%,
+      var(--app-bg) 100%
+    );
 }
 
 .halloween-date-night-theme > header {
@@ -47,19 +78,32 @@ html.halloween-date-night-active {
   width: 4.5rem;
   height: 1px;
   margin-top: 1rem;
-  background: linear-gradient(90deg, rgba(213, 106, 47, 0.8), rgba(213, 106, 47, 0));
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--app-accent) 82%, transparent),
+    color-mix(in oklab, var(--october-ember) 34%, transparent),
+    transparent
+  );
 }
 
 .october-panel {
   position: relative;
-  background: linear-gradient(145deg, rgba(42, 29, 28, 0.98), rgba(22, 17, 18, 0.98));
+  background: linear-gradient(
+    145deg,
+    color-mix(in oklab, var(--app-surface) 92%, var(--app-accent)),
+    color-mix(in oklab, var(--app-surface) 96%, var(--app-bg))
+  );
   box-shadow:
-    inset 0 0 0 1px rgba(245, 234, 219, 0.08),
-    0 26px 55px -42px rgba(213, 106, 47, 0.62);
+    inset 0 0 0 1px color-mix(in oklab, var(--app-fg) 8%, transparent),
+    0 26px 55px -42px color-mix(in oklab, var(--app-accent) 62%, transparent);
 }
 
 .october-panel-idle {
-  background: linear-gradient(145deg, color-mix(in oklab, var(--app-surface) 96%, #2b1a16), var(--app-surface));
+  background: linear-gradient(
+    145deg,
+    color-mix(in oklab, var(--app-surface) 96%, var(--october-ember)),
+    var(--app-surface)
+  );
 }
 
 .october-panel::before {
@@ -69,8 +113,17 @@ html.halloween-date-night-active {
   pointer-events: none;
   opacity: 0.38;
   background-image:
-    linear-gradient(115deg, transparent 0 48%, rgba(245, 234, 219, 0.035) 49% 50%, transparent 51%),
-    radial-gradient(circle at 18% 20%, rgba(213, 106, 47, 0.12), transparent 16rem);
+    linear-gradient(
+      115deg,
+      transparent 0 48%,
+      color-mix(in oklab, var(--app-fg) 3.5%, transparent) 49% 50%,
+      transparent 51%
+    ),
+    radial-gradient(
+      circle at 18% 20%,
+      color-mix(in oklab, var(--october-ember) 12%, transparent),
+      transparent 16rem
+    );
 }
 
 .october-panel-glow {
@@ -102,15 +155,15 @@ html.halloween-date-night-active {
 }
 
 .spooky-toggle-on {
-  background: linear-gradient(135deg, #d56a2f, #8a3039);
+  background: linear-gradient(135deg, var(--app-accent), var(--october-ember));
   box-shadow:
-    inset 0 0 0 1px rgba(255, 230, 200, 0.18),
-    0 0 22px -10px rgba(213, 106, 47, 0.85);
+    inset 0 0 0 1px color-mix(in oklab, var(--app-accent-fg) 18%, transparent),
+    0 0 22px -10px color-mix(in oklab, var(--app-accent) 85%, transparent);
 }
 
 .spooky-toggle-on::after {
   transform: translateX(1.45rem);
-  background: #fff0d8;
+  background: var(--app-accent-fg);
 }
 
 .october-decor {
@@ -127,7 +180,7 @@ html.halloween-date-night-active {
   top: 1.05rem;
   width: 5.6rem;
   height: 3.4rem;
-  color: rgba(245, 234, 219, 0.44);
+  color: color-mix(in oklab, var(--app-fg) 44%, transparent);
 }
 
 .october-decor-pumpkin {
@@ -136,7 +189,7 @@ html.halloween-date-night-active {
   bottom: 0.2rem;
   width: 4.8rem;
   height: 4.8rem;
-  color: rgba(213, 106, 47, 0.46);
+  color: color-mix(in oklab, var(--october-ember) 48%, transparent);
 }
 
 .october-decor-scarecrow {
@@ -145,12 +198,12 @@ html.halloween-date-night-active {
   bottom: -0.4rem;
   width: 5.2rem;
   height: 6.8rem;
-  color: rgba(198, 181, 164, 0.18);
+  color: color-mix(in oklab, var(--app-muted) 20%, transparent);
 }
 
 .october-preset {
-  background: rgba(245, 234, 219, 0.025);
-  box-shadow: inset 0 0 0 1px rgba(245, 234, 219, 0.07);
+  background: color-mix(in oklab, var(--app-fg) 2.5%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--app-fg) 7%, transparent);
   transition:
     transform 150ms var(--ease-out),
     background 150ms var(--ease-out),
@@ -162,27 +215,44 @@ html.halloween-date-night-active {
 }
 
 .october-preset-selected {
-  background: linear-gradient(135deg, rgba(213, 106, 47, 0.12), rgba(128, 46, 55, 0.12));
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--app-accent) 13%, transparent),
+    color-mix(in oklab, var(--october-ember) 10%, transparent)
+  );
   box-shadow:
-    inset 0 0 0 1px rgba(213, 106, 47, 0.25),
-    0 12px 30px -24px rgba(213, 106, 47, 0.65);
+    inset 0 0 0 1px color-mix(in oklab, var(--app-accent) 28%, transparent),
+    0 12px 30px -24px color-mix(in oklab, var(--app-accent) 62%, transparent);
 }
 
 .october-preset-icon {
-  color: #f4c092;
-  background: rgba(213, 106, 47, 0.10);
-  box-shadow: inset 0 0 0 1px rgba(213, 106, 47, 0.16);
+  color: var(--october-ember-fg);
+  background: color-mix(in oklab, var(--october-ember) 12%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--october-ember) 20%, transparent);
 }
 
 html.halloween-date-night-active .shortlist-brand-stage {
   background: linear-gradient(
     145deg,
-    color-mix(in oklab, #d56a2f 34%, #24191a),
-    color-mix(in oklab, #8a3039 20%, #171314)
+    color-mix(in oklab, var(--app-accent) 34%, var(--app-surface)),
+    color-mix(in oklab, var(--october-ember) 15%, var(--app-elevated))
   );
   box-shadow:
-    inset 0 0 0 1px rgba(245, 234, 219, 0.10),
-    0 16px 34px -22px rgba(213, 106, 47, 0.55);
+    inset 0 0 0 1px color-mix(in oklab, var(--app-fg) 10%, transparent),
+    0 16px 34px -22px color-mix(in oklab, var(--app-accent) 58%, transparent);
+}
+
+html.halloween-date-night-active .chip[aria-pressed="true"] {
+  background: var(--app-accent) !important;
+  color: var(--app-accent-fg) !important;
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--app-accent) 34%, transparent),
+    0 0 20px -10px color-mix(in oklab, var(--app-accent) 78%, transparent) !important;
+}
+
+html.halloween-date-night-active .chip[aria-pressed="false"] {
+  background: var(--app-surface) !important;
+  color: var(--app-muted) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
