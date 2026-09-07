@@ -14,12 +14,14 @@ export function OptionsOverlay({
   onSelect,
   onShuffle,
   onNotTonight,
+  mode = "dinner",
 }: {
   restaurants: DecoratedRestaurant[];
   onClose: () => void;
   onSelect: (restaurant: DecoratedRestaurant) => void;
   onShuffle: () => void;
   onNotTonight: (restaurant: DecoratedRestaurant) => void;
+  mode?: "dinner" | "nightlife";
 }) {
   const [mounted, setMounted] = useState(false);
 
@@ -34,7 +36,7 @@ export function OptionsOverlay({
       <div className="mx-auto flex min-h-dvh max-w-lg flex-col px-4 pb-8 pt-4">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-kicker text-subtle">Compressed shortlist</p>
+            <p className="text-kicker text-subtle">{mode === "nightlife" ? "Nightlife shortlist" : "Compressed shortlist"}</p>
             <h2 className="font-display mt-1 text-3xl leading-tight text-fg">Tonight's options</h2>
             <p className="mt-1 text-sm text-muted">Pick one, or let us shuffle again.</p>
           </div>
