@@ -1,26 +1,18 @@
-export type MainMode = "dinner" | "nightlife" | "date-night";
-
-const PREFIX = "dinner-roulette-hint-seen:";
+const HINT_SEEN_KEY = "dinner-roulette-hint-seen";
 export const HINTS_RESET_EVENT = "dinner-roulette:hints-reset";
 
-function keyFor(mode: MainMode): string {
-  return `${PREFIX}${mode}`;
-}
-
-export function hasSeenModeHint(mode: MainMode): boolean {
+export function hasSeenHint(): boolean {
   if (typeof window === "undefined") return true;
-  return window.sessionStorage.getItem(keyFor(mode)) === "1";
+  return window.sessionStorage.getItem(HINT_SEEN_KEY) === "1";
 }
 
-export function markModeHintSeen(mode: MainMode): void {
+export function markHintSeen(): void {
   if (typeof window === "undefined") return;
-  window.sessionStorage.setItem(keyFor(mode), "1");
+  window.sessionStorage.setItem(HINT_SEEN_KEY, "1");
 }
 
-export function resetModeHints(): void {
+export function resetHints(): void {
   if (typeof window === "undefined") return;
-  (["dinner", "nightlife", "date-night"] as const).forEach((mode) => {
-    window.sessionStorage.removeItem(keyFor(mode));
-  });
+  window.sessionStorage.removeItem(HINT_SEEN_KEY);
   window.dispatchEvent(new Event(HINTS_RESET_EVENT));
 }
