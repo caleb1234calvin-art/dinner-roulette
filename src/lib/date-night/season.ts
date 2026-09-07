@@ -9,6 +9,19 @@ export const HALLOWEEN_DATE_NIGHT_TYPES: readonly DateNightTypeId[] = [
   "pumpkin-patch",
 ];
 
+export const HALLOWEEN_THRILL_TYPES: readonly DateNightTypeId[] = [
+  "haunted-house",
+  "escape-room",
+  "corn-maze",
+];
+
+export const HALLOWEEN_SETTLE_TYPES: readonly DateNightTypeId[] = [
+  "movies",
+  "museum",
+  "pumpkin-patch",
+  "park",
+];
+
 export const HALLOWEEN_DATE_NIGHT_CHIPS: ReadonlyArray<{
   id: DateNightTypeId;
   label: string;
@@ -46,7 +59,23 @@ export const HALLOWEEN_DATE_NIGHT_PRESETS: ReadonlyArray<{
     activityTypes: ["movies", "museum"],
     mood: 38,
   },
+  {
+    id: "full-night",
+    label: "Scare, Then Settle",
+    note: "One sharp thrill, then a quieter closer so the night has an arc.",
+    activityTypes: ["haunted-house", "movies"],
+    mood: 72,
+  },
 ];
+
+export const HALLOWEEN_DATE_NIGHT_TAGLINES = [
+  "That's the night.",
+  "October picked for you.",
+  "Go while the air still feels strange.",
+  "The hard part was deciding. Done.",
+  "Make it a memory before November.",
+  "Plans made. Let the dark do the rest.",
+] as const;
 
 /**
  * Local-calendar availability window for the experimental Halloween Date Night layer.
@@ -64,8 +93,16 @@ export function isHalloweenDateNightSeason(now = new Date()): boolean {
   return false;
 }
 
+export function isHalloweenDateNightActive(spookySeasonEnabled: boolean, now = new Date()) {
+  return spookySeasonEnabled && isHalloweenDateNightSeason(now);
+}
+
+export function isSeasonalDateNightType(type: DateNightTypeId) {
+  return HALLOWEEN_DATE_NIGHT_TYPES.includes(type);
+}
+
 export function dateNightChipsForNow(spookySeasonEnabled: boolean, now = new Date()) {
-  return spookySeasonEnabled && isHalloweenDateNightSeason(now)
+  return isHalloweenDateNightActive(spookySeasonEnabled, now)
     ? [...DATE_NIGHT_TYPE_CHIPS, ...HALLOWEEN_DATE_NIGHT_CHIPS]
     : DATE_NIGHT_TYPE_CHIPS;
 }
@@ -75,10 +112,8 @@ export function normalizeSeasonalDateNightFilters(
   spookySeasonEnabled = isHalloweenDateNightSeason(),
   now = new Date(),
 ): DateNightFilters {
-  if (spookySeasonEnabled && isHalloweenDateNightSeason(now)) return filters;
-  const activityTypes = filters.activityTypes.filter(
-    (type) => !HALLOWEEN_DATE_NIGHT_TYPES.includes(type),
-  );
+  if (isHalloweenDateNightActive(spookySeasonEnabled, now)) return filters;
+  const activityTypes = filters.activityTypes.filter((type) => !HALLOWEEN_DATE_NIGHT_TYPES.includes(type));
   return {
     ...filters,
     activityTypes: activityTypes.length ? activityTypes : ["anything"],
