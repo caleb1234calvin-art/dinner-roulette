@@ -31,7 +31,7 @@ export function ModeHome() {
 
   return (
     <div className={cn("mode-home min-h-dvh", nightlife && "nightlife-theme", dateNight && "date-night-theme")}>
-      <ModeHint mode={mode} />
+      <ModeHint />
 
       <header className="px-4 pt-8 pb-5">
         <p className="text-kicker text-subtle">
