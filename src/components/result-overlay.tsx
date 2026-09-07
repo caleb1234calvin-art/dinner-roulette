@@ -214,45 +214,47 @@ export function ResultOverlay({
             </div>
 
             <div className="result-in px-5 pt-2 pb-10">
-              <div className="mb-5 rounded-xl bg-surface px-4 py-3 shadow-border">
-                {googleReviewsLoading ? (
-                  <p className="text-sm text-subtle">Checking Google reviews…</p>
-                ) : publicRating != null ? (
-                  <>
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="inline-flex items-center gap-1 text-base font-medium text-fg">
-                        <Star className="size-4 fill-fg" />
-                        {publicRating.toFixed(1)}
-                      </span>
-                      {publicReviewCount ? (
-                        <span className="text-sm text-subtle">({publicReviewCount.toLocaleString()} reviews)</span>
-                      ) : null}
-                      {googleReviews?.matched ? (
-                        <span className="ml-auto text-xs font-medium text-subtle">Google</span>
-                      ) : null}
-                    </div>
-                    {topGoogleReview ? (
-                      <div className="mt-3 border-t border-fg/10 pt-3">
-                        <p className="line-clamp-3 text-sm leading-relaxed text-muted">“{topGoogleReview.text}”</p>
-                        <p className="mt-2 text-xs text-subtle">
-                          {topGoogleReview.author.displayName}
-                          {topGoogleReview.relativePublishTimeDescription
-                            ? ` · ${topGoogleReview.relativePublishTimeDescription}`
-                            : ""}
-                        </p>
+              <div className="mb-5">
+                <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-2">
+                  <div className="flex min-h-12 items-center rounded-xl bg-surface px-4 py-3 shadow-border">
+                    {googleReviewsLoading ? (
+                      <p className="text-sm text-subtle">Checking Google reviews…</p>
+                    ) : publicRating != null ? (
+                      <div className="flex min-w-0 flex-wrap items-center gap-2">
+                        <span className="inline-flex items-center gap-1 text-base font-medium text-fg">
+                          <Star className="size-4 fill-fg" />
+                          {publicRating.toFixed(1)}
+                        </span>
+                        {publicReviewCount ? (
+                          <span className="text-sm text-subtle">({publicReviewCount.toLocaleString()} reviews)</span>
+                        ) : null}
+                        {googleReviews?.matched ? (
+                          <span className="text-xs font-medium text-subtle">Google</span>
+                        ) : null}
                       </div>
-                    ) : null}
-                  </>
-                ) : googlePlaceUrl ? (
-                  <a
-                    href={googlePlaceUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-sm text-fg underline underline-offset-4"
-                  >
-                    View on Google Maps
-                    <ExternalLink className="size-3.5" />
-                  </a>
+                    ) : (
+                      <p className="text-sm text-subtle">Google rating unavailable</p>
+                    )}
+                  </div>
+                  {googleWriteReviewUrl ? (
+                    <Button variant="outline" className="h-full min-h-12 px-4" asChild>
+                      <a href={googleWriteReviewUrl} target="_blank" rel="noreferrer">
+                        Rate this
+                      </a>
+                    </Button>
+                  ) : null}
+                </div>
+
+                {topGoogleReview ? (
+                  <div className="mt-2 rounded-xl bg-surface px-4 py-3 shadow-border">
+                    <p className="line-clamp-3 text-sm leading-relaxed text-muted">“{topGoogleReview.text}”</p>
+                    <p className="mt-2 text-xs text-subtle">
+                      {topGoogleReview.author.displayName}
+                      {topGoogleReview.relativePublishTimeDescription
+                        ? ` · ${topGoogleReview.relativePublishTimeDescription}`
+                        : ""}
+                    </p>
+                  </div>
                 ) : null}
               </div>
 
@@ -340,38 +342,16 @@ export function ResultOverlay({
                     ))}
                   </div>
 
-                  <div className="mt-3 grid grid-cols-2 gap-2">
-                    {googleReviewsUrl ? (
-                      <Button variant="outline" asChild>
+                  {googleReviewsUrl ? (
+                    <div className="mt-3">
+                      <Button variant="outline" className="w-full" asChild>
                         <a href={googleReviewsUrl} target="_blank" rel="noreferrer">
                           Read all reviews
                         </a>
                       </Button>
-                    ) : null}
-                    {googleWriteReviewUrl ? (
-                      <Button variant="outline" asChild>
-                        <a href={googleWriteReviewUrl} target="_blank" rel="noreferrer">
-                          Rate on Google
-                        </a>
-                      </Button>
-                    ) : null}
-                  </div>
-                </section>
-              ) : googleWriteReviewUrl ? (
-                <div className="mt-5 grid grid-cols-2 gap-2">
-                  {googlePlaceUrl ? (
-                    <Button variant="outline" asChild>
-                      <a href={googlePlaceUrl} target="_blank" rel="noreferrer">
-                        Google Maps
-                      </a>
-                    </Button>
+                    </div>
                   ) : null}
-                  <Button variant="outline" asChild>
-                    <a href={googleWriteReviewUrl} target="_blank" rel="noreferrer">
-                      Rate on Google
-                    </a>
-                  </Button>
-                </div>
+                </section>
               ) : null}
 
               <div className="mt-6 space-y-2">
