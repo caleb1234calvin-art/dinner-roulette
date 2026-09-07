@@ -4,6 +4,7 @@ import { haversineMiles } from "@/lib/restaurants/geo";
 import { namesMatch } from "@/lib/utils";
 import type { PhotoKey } from "@/lib/restaurants/types";
 import { JASPER_COUNTY_DATE_NIGHT_CATALOG } from "./jasper-county-catalog";
+import { isHalloweenDateNightSeason } from "./season";
 import {
   dateNightTypeLabel,
   type ConcreteDateNightType,
@@ -30,6 +31,9 @@ const QUERY = (lat: number, lon: number, radiusMeters: number) => `
   nwr["leisure"="ice_rink"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["sport"="roller_skating"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["leisure"="park"](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["leisure"="maze"](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["attraction"="maze"](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["attraction"="haunted_house"](around:${Math.round(radiusMeters)},${lat},${lon});
 );
 out center tags;
 `;
@@ -45,9 +49,6 @@ interface OverpassElement {
 
 const RETIRED_DATE_NIGHT_NAMES = ["powers museum"] as const;
 
-// Some live map records describe a sub-attraction rather than the destination a
-// user would actually navigate to. Keep the aliases narrowly scoped and require
-// proximity before applying them in mergeDateNight.
 const DATE_NIGHT_ALIAS_GROUPS = [
   [
     "precious moments chapel",
@@ -81,11 +82,19 @@ function classify(tags: Record<string, string>): ConcreteDateNightType[] {
   if (tags.tourism === "museum") types.add("museum");
   if (tags.leisure === "ice_rink" || tags.sport === "roller_skating") types.add("skating");
   if (tags.leisure === "park") types.add("park");
+  if (tags.leisure === "maze" || tags.attraction === "maze") types.add("corn-maze");
+  if (tags.attraction === "haunted_house") types.add("haunted-house");
+  const name = `${tags.name ?? ""} ${tags.description ?? ""}`.toLowerCase();
+  if (name.includes("pumpkin patch") || name.includes("pumpkin farm")) types.add("pumpkin-patch");
+  if (name.includes("haunted house") || name.includes("haunt")) types.add("haunted-house");
+  if (name.includes("corn maze") || name.includes("maize")) types.add("corn-maze");
   if (types.size === 0) return [];
   return [...types];
 }
 
 function moodFor(types: readonly ConcreteDateNightType[]): 1 | 2 | 3 {
+  if (types.includes("haunted-house")) return 3;
+  if (types.includes("corn-maze") || types.includes("pumpkin-patch")) return 2;
   if (types.includes("movies") || types.includes("museum") || types.includes("park")) return 1;
   if (types.includes("bowling") || types.includes("arcade") || types.includes("mini-golf")) return 2;
   return 3;
@@ -190,9 +199,15 @@ async function queryMirror(url: string, body: string): Promise<DateNightPlace[]>
 }
 
 function localWithin(lat: number, lon: number, radiusMiles: number): DateNightPlace[] {
-  return JASPER_COUNTY_DATE_NIGHT_CATALOG.filter(
-    (place) => haversineMiles(lat, lon, place.lat, place.lon) <= radiusMiles + 1,
-  );
+  const seasonal = isHalloweenDateNightSeason();
+  return JASPER_COUNTY_DATE_NIGHT_CATALOG.filter((place) => {
+    if (haversineMiles(lat, lon, place.lat, place.lon) > radiusMiles + 1) return false;
+    const seasonalOnly = place.activityTypes.some((type) =>
+      type === "haunted-house" || type === "corn-maze" || type === "pumpkin-patch",
+    );
+    if (seasonalOnly && !seasonal) return false;
+    return true;
+  });
 }
 
 function mergeDateNight(live: DateNightPlace[], local: DateNightPlace[]): DateNightPlace[] {
