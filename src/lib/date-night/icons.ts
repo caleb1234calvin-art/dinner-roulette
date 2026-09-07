@@ -16,11 +16,17 @@ export const DATE_NIGHT_ICON_BY_TYPE: Record<ConcreteDateNightType, string> = {
   "escape-room": optimizedIcon("/date-night-icons/escape-room.png"),
   museum: optimizedIcon("/date-night-icons/museum.png"),
   skating: optimizedIcon("/date-night-icons/skating.png"),
+  "haunted-house": optimizedIcon("/date-night-icons/escape-room.png"),
+  "corn-maze": optimizedIcon("/date-night-icons/park.png"),
+  "pumpkin-patch": optimizedIcon("/date-night-icons/park.png"),
 };
 
 function inferTypeFromLabel(label?: string | null): ConcreteDateNightType | null {
   const value = label?.toLowerCase() ?? "";
   if (!value) return null;
+  if (value.includes("haunt") || value.includes("spook")) return "haunted-house";
+  if (value.includes("corn maze") || value.includes("maze")) return "corn-maze";
+  if (value.includes("pumpkin")) return "pumpkin-patch";
   if (value.includes("bowling")) return "bowling";
   if (value.includes("arcade") || value.includes("game")) return "arcade";
   if (value.includes("drive-in") || value.includes("movie") || value.includes("cinema")) return "movies";
