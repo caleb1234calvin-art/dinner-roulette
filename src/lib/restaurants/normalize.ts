@@ -6,6 +6,7 @@ import {
   SECOND_PASS_LOCAL_CATALOG,
   SECOND_PASS_REPLACED_IDS,
 } from "./catalog-refresh-2";
+import { JASPER_COUNTY_LOCAL_CATALOG } from "./jasper-county-catalog";
 import { isLikelyChain, inferPriceLevel } from "./chains";
 import { cuisineLabelFor, mapOsmCuisines, photoForCuisines } from "./cuisines";
 import { haversineMiles } from "./geo";
@@ -27,6 +28,7 @@ export interface RawPlace {
 }
 
 const ACTIVE_LOCAL_CATALOG: CatalogEntry[] = [
+  ...JASPER_COUNTY_LOCAL_CATALOG,
   ...SECOND_PASS_LOCAL_CATALOG,
   ...REFRESHED_LOCAL_CATALOG.filter((entry) => !SECOND_PASS_REPLACED_IDS.has(entry.id)),
   ...LOCAL_CATALOG.filter(
@@ -34,8 +36,10 @@ const ACTIVE_LOCAL_CATALOG: CatalogEntry[] = [
   ),
 ];
 
+const COUNTY_RETIRED_NAMES = ["gem dandy's pizza", "gem dandys pizza"];
+
 function isRetiredLocalName(name: string): boolean {
-  return RETIRED_LOCAL_NAMES.some((retired) => namesMatch(retired, name));
+  return [...RETIRED_LOCAL_NAMES, ...COUNTY_RETIRED_NAMES].some((retired) => namesMatch(retired, name));
 }
 
 export function fallbackToRaw(place: FallbackPlace): RawPlace {
