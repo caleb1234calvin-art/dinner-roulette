@@ -10,13 +10,14 @@ import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { searchDateNight } from "@/lib/date-night/search";
 import {
+  dateNightChipsForNow,
   HALLOWEEN_DATE_NIGHT_TYPES,
   HALLOWEEN_SETTLE_TYPES,
   HALLOWEEN_THRILL_TYPES,
   isHalloweenDateNightActive,
+  isSeasonalDateNightType,
 } from "@/lib/date-night/season";
 import {
-  DATE_NIGHT_TYPE_CHIPS,
   dateNightMoodLabel,
   type ConcreteDateNightType,
   type DateNightFilters,
@@ -162,6 +163,7 @@ export function DateNightHome() {
   const [nightPlan, setNightPlan] = useState<DecoratedDateNightPlace[] | null>(null);
   const [lastCategory, setLastCategory] = useState<ConcreteDateNightType | null>(null);
   const halloweenActive = isHalloweenDateNightActive(spookySeasonEnabled);
+  const activityChips = dateNightChipsForNow(spookySeasonEnabled);
 
   useEffect(() => {
     let cancelled = false;
@@ -371,10 +373,28 @@ export function DateNightHome() {
       <section className="mt-7">
         <h2 className="mb-3 text-sm text-muted">What sounds fun?</h2>
         <div className="flex flex-wrap gap-2">
-          {DATE_NIGHT_TYPE_CHIPS.map((chip) => {
+          {activityChips.map((chip) => {
             const selected = chip.id === "anything" ? filters.activityTypes.includes("anything") : filters.activityTypes.includes(chip.id);
+            const seasonal = isSeasonalDateNightType(chip.id);
             return (
-              <button key={chip.id} type="button" aria-pressed={selected} onClick={() => toggleActivityType(chip.id)} className={cn("chip min-h-11 rounded-full px-3 py-2 text-sm shadow-border", selected ? "bg-accent text-accent-fg" : "bg-surface text-muted")}>{chip.label}</button>
+              <button
+                key={chip.id}
+                type="button"
+                aria-pressed={selected}
+                onClick={() => toggleActivityType(chip.id)}
+                className={cn(
+                  "chip min-h-11 rounded-full px-3 py-2 text-sm shadow-border transition",
+                  seasonal
+                    ? selected
+                      ? "bg-[#d56a2f] text-[#fff3e5] shadow-[0_0_20px_-8px_rgba(213,106,47,0.95)] ring-1 ring-[#f4c092]/35"
+                      : "bg-[#2a2020] text-[#f4c092] shadow-[0_0_16px_-10px_rgba(213,106,47,0.8)] ring-1 ring-[#d56a2f]/30"
+                    : selected
+                      ? "bg-accent text-accent-fg"
+                      : "bg-surface text-muted",
+                )}
+              >
+                {chip.label}
+              </button>
             );
           })}
         </div>
