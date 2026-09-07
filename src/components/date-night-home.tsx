@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
-import { Heart, LayoutGrid, LocateFixed, MapPin, Shuffle } from "lucide-react";
+import { Heart, LayoutGrid, LocateFixed, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
@@ -14,23 +14,22 @@ import { cn } from "@/lib/utils";
 import { searchDateNight } from "@/lib/date-night/search";
 import {
   DATE_NIGHT_TYPE_CHIPS,
-  DEFAULT_DATE_NIGHT_FILTERS,
   dateNightMoodLabel,
+  type ConcreteDateNightType,
   type DateNightFilters,
   type DateNightPlace,
   type DateNightTypeId,
   type DecoratedDateNightPlace,
 } from "@/lib/date-night/types";
 
-function weightedPick(items: DecoratedDateNightPlace[], mood: number, shown: string[], reduceParks: boolean) {
+function venueWeightedPick(items: DecoratedDateNightPlace[], mood: number, shown: string[]) {
   if (!items.length) return null;
   const target = 1 + (Math.min(Math.max(mood, 0), 100) / 100) * 2;
   const weights = items.map((item) => {
     const distancePenalty = 1 / (1 + item.distanceMiles * 0.04);
     const moodFit = 1 / (1 + Math.abs(item.moodLevel - target) * 0.8);
     const shownPenalty = shown.includes(item.id) ? 0.12 : 1;
-    const parkPenalty = reduceParks && item.activityTypes.includes("park") ? 0.06 : 1;
-    return Math.max(0.001, distancePenalty * moodFit * shownPenalty * parkPenalty);
+    return Math.max(0.001, distancePenalty * moodFit * shownPenalty);
   });
   const total = weights.reduce((sum, value) => sum + value, 0);
   let cursor = Math.random() * total;
@@ -41,15 +40,72 @@ function weightedPick(items: DecoratedDateNightPlace[], mood: number, shown: str
   return items[items.length - 1] ?? null;
 }
 
-function pickOptions(items: DecoratedDateNightPlace[], mood: number, shown: string[], reduceParks: boolean, count = 4) {
-  const remaining = [...items];
+function availableCategories(items: DecoratedDateNightPlace[], filters: DateNightFilters): ConcreteDateNightType[] {
+  const present = new Set(items.flatMap((item) => item.activityTypes));
+  if (filters.activityTypes.includes("anything")) return [...present];
+  return filters.activityTypes.filter(
+    (type): type is ConcreteDateNightType => type !== "anything" && present.has(type),
+  );
+}
+
+function pickCategory(categories: ConcreteDateNightType[], reduceParks: boolean) {
+  if (!categories.length) return null;
+  const weights = categories.map((type) => (type === "park" && reduceParks ? 0.08 : 1));
+  const total = weights.reduce((sum, value) => sum + value, 0);
+  let cursor = Math.random() * total;
+  for (let i = 0; i < categories.length; i += 1) {
+    cursor -= weights[i] ?? 0;
+    if (cursor <= 0) return categories[i] ?? categories[0];
+  }
+  return categories[categories.length - 1] ?? null;
+}
+
+function balancedPick(
+  items: DecoratedDateNightPlace[],
+  filters: DateNightFilters,
+  shown: string[],
+  allowedCategories?: ConcreteDateNightType[],
+) {
+  if (!items.length) return null;
+  const categories = allowedCategories ?? availableCategories(items, filters);
+  const category = pickCategory(categories, filters.reduceParks);
+  if (!category) return venueWeightedPick(items, filters.mood, shown);
+  const pool = items.filter((item) => item.activityTypes.includes(category));
+  return venueWeightedPick(pool.length ? pool : items, filters.mood, shown);
+}
+
+function pickDiverseOptions(
+  items: DecoratedDateNightPlace[],
+  filters: DateNightFilters,
+  shown: string[],
+  count = 4,
+) {
   const result: DecoratedDateNightPlace[] = [];
-  while (remaining.length && result.length < count) {
-    const next = weightedPick(remaining, mood, shown, reduceParks);
+  const usedIds = new Set<string>();
+  const remainingCategories = availableCategories(items, filters);
+
+  while (remainingCategories.length && result.length < count) {
+    const category = pickCategory(remainingCategories, filters.reduceParks);
+    if (!category) break;
+    const categoryPool = items.filter(
+      (item) => !usedIds.has(item.id) && item.activityTypes.includes(category),
+    );
+    const next = venueWeightedPick(categoryPool, filters.mood, shown);
+    remainingCategories.splice(remainingCategories.indexOf(category), 1);
+    if (!next) continue;
+    result.push(next);
+    usedIds.add(next.id);
+  }
+
+  while (result.length < count) {
+    const remaining = items.filter((item) => !usedIds.has(item.id));
+    if (!remaining.length) break;
+    const next = balancedPick(remaining, filters, shown);
     if (!next) break;
     result.push(next);
-    remaining.splice(remaining.findIndex((item) => item.id === next.id), 1);
+    usedIds.add(next.id);
   }
+
   return result;
 }
 
@@ -58,11 +114,12 @@ export function DateNightHome() {
   const preferences = useAppStore((s) => s.preferences);
   const exclusions = useAppStore((s) => s.exclusions);
   const sessionShown = useAppStore((s) => s.sessionShown);
+  const filters = useAppStore((s) => s.dateNightFilters);
+  const setDateNightFilters = useAppStore((s) => s.setDateNightFilters);
   const setLocation = useAppStore((s) => s.setLocation);
   const markShown = useAppStore((s) => s.markShown);
   const excludeTonight = useAppStore((s) => s.excludeTonight);
 
-  const [filters, setFilters] = useState<DateNightFilters>(DEFAULT_DATE_NIGHT_FILTERS);
   const [venues, setVenues] = useState<DateNightPlace[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -117,7 +174,7 @@ export function DateNightHome() {
   }, [decorated, exclusions, filters, preferences]);
 
   function updateFilters(patch: Partial<DateNightFilters>) {
-    setFilters((current) => ({ ...current, ...patch }));
+    setDateNightFilters(patch);
   }
 
   function toggleActivityType(id: DateNightTypeId) {
@@ -177,7 +234,7 @@ export function DateNightHome() {
   }
 
   function roll(pool = eligible) {
-    const chosen = weightedPick(pool, filters.mood, sessionShown, filters.reduceParks);
+    const chosen = balancedPick(pool, filters, sessionShown);
     if (!chosen) return;
     markShown(chosen.id);
     setReelNames(pool.map((item) => item.name));
@@ -187,7 +244,7 @@ export function DateNightHome() {
   }
 
   function dealOptions() {
-    const next = pickOptions(eligible, filters.mood, sessionShown, filters.reduceParks, 4);
+    const next = pickDiverseOptions(eligible, filters, sessionShown, 4);
     next.forEach((item) => markShown(item.id));
     setOptions(next.length ? next : null);
     if (next.length && "vibrate" in navigator) navigator.vibrate?.(12);
@@ -266,7 +323,7 @@ export function DateNightHome() {
           <Switch checked={filters.favoritesOnly} onCheckedChange={(checked) => updateFilters({ favoritesOnly: checked })} />
         </div>
         <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">
-          <div><p className="text-sm text-fg">Fewer parks</p><p className="text-xs text-subtle">Keep parks available, but make them much less likely</p></div>
+          <div><p className="text-sm text-fg">Fewer parks</p><p className="text-xs text-subtle">Keep parks available, but make the park category much less likely</p></div>
           <Switch checked={filters.reduceParks} onCheckedChange={(checked) => updateFilters({ reduceParks: checked })} />
         </div>
       </section>
