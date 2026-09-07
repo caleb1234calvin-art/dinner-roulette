@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MoonStar, UtensilsCrossed } from "lucide-react";
 import { PickHome } from "@/components/pick-home";
 import { NightlifeHome } from "@/components/nightlife-home";
@@ -7,6 +7,12 @@ import type { HomeMode } from "@/lib/nightlife/types";
 
 export function ModeHome() {
   const [mode, setMode] = useState<HomeMode>("dinner");
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.toggle("nightlife-active", mode === "nightlife");
+    return () => root.classList.remove("nightlife-active");
+  }, [mode]);
 
   return (
     <div className={cn(mode === "nightlife" && "nightlife-theme min-h-dvh")}>
