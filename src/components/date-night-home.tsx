@@ -8,8 +8,8 @@ import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { searchDateNight } from "@/lib/date-night/search";
+import { dateNightChipsForNow, isHalloweenDateNightSeason } from "@/lib/date-night/season";
 import {
-  DATE_NIGHT_TYPE_CHIPS,
   dateNightMoodLabel,
   type ConcreteDateNightType,
   type DateNightFilters,
@@ -130,6 +130,8 @@ export function DateNightHome() {
   const setLocation = useAppStore((s) => s.setLocation);
   const markShown = useAppStore((s) => s.markShown);
   const excludeTonight = useAppStore((s) => s.excludeTonight);
+  const halloweenSeason = isHalloweenDateNightSeason();
+  const activityChips = dateNightChipsForNow();
 
   const [venues, setVenues] = useState<DateNightPlace[]>([]);
   const [loading, setLoading] = useState(true);
@@ -271,10 +273,21 @@ export function DateNightHome() {
   return (
     <main className="px-4 pb-48 pt-5">
       <header className="mb-6">
-        <p className="text-kicker text-accent">Dinner roulette · Date Night</p>
+        <p className="text-kicker text-accent">{halloweenSeason ? "Dinner roulette · Halloween Date Night" : "Dinner roulette · Date Night"}</p>
         <h1 className="font-display mt-1 text-4xl leading-tight text-fg">What Should We Do?</h1>
-        <p className="mt-2 max-w-sm text-sm text-muted">Set the mood. Let the app pick the date.</p>
+        <p className="mt-2 max-w-sm text-sm text-muted">
+          {halloweenSeason ? "Haunted houses and mazes are in the mix through early November." : "Set the mood. Let the app pick the date."}
+        </p>
       </header>
+
+      {halloweenSeason ? (
+        <section className="mb-6 rounded-xl bg-surface p-4 shadow-border">
+          <p className="text-sm text-fg">Seasonal experiment</p>
+          <p className="mt-1 text-xs text-subtle">
+            Halloween Date Night adds haunted houses, corn mazes, and pumpkin patches. Hours change every year, so confirm before you go. Dinner and Nightlife are unchanged.
+          </p>
+        </section>
+      ) : null}
 
       <section className="rounded-xl bg-surface p-4 shadow-border">
         <div className="flex items-start justify-between gap-3">
@@ -311,7 +324,7 @@ export function DateNightHome() {
       <section className="mt-7">
         <h2 className="mb-3 text-sm text-muted">What sounds fun?</h2>
         <div className="flex flex-wrap gap-2">
-          {DATE_NIGHT_TYPE_CHIPS.map((chip) => {
+          {activityChips.map((chip) => {
             const selected = chip.id === "anything" ? filters.activityTypes.includes("anything") : filters.activityTypes.includes(chip.id);
             return (
               <button key={chip.id} type="button" aria-pressed={selected} onClick={() => toggleActivityType(chip.id)} className={cn("chip min-h-11 rounded-full px-3 py-2 text-sm shadow-border", selected ? "bg-accent text-accent-fg" : "bg-surface text-muted")}>{chip.label}</button>
