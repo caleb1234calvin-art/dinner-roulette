@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
-import { Ban, ExternalLink, Heart, MapPinned, MoonStar, Phone, RotateCcw, Sparkles, Star, Utensils, X } from "lucide-react";
+import { Ban, CheckCircle2, ExternalLink, Heart, MapPinned, MoonStar, Phone, RotateCcw, Sparkles, Star, Utensils, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackAppEvent } from "@/lib/analytics";
 import { getDateNightIcon } from "@/lib/date-night/icons";
 import { DATE_NIGHT_TAGLINES, dateNightTypeLabel, type DecoratedDateNightPlace } from "@/lib/date-night/types";
 import { NIGHTLIFE_TAGLINES, type DecoratedNightlifePlace } from "@/lib/nightlife/types";
@@ -69,6 +70,18 @@ function buildWhyReasons(restaurant: DecoratedRestaurant, mode: ResultMode, favo
   return [...new Set(reasons)].slice(0, 4);
 }
 
+function dateNightWebsiteLabel(types: readonly DecoratedDateNightPlace["activityTypes"]): string {
+  if (types.includes("movies")) return "Check showtimes";
+  if (types.includes("bowling")) return "Check lanes & hours";
+  if (types.includes("escape-room")) return "Check availability";
+  if (types.includes("museum")) return "Hours & tickets";
+  if (types.includes("skating")) return "Check sessions";
+  if (types.includes("mini-golf")) return "Pricing & info";
+  if (types.includes("arcade")) return "Games & info";
+  if (types.includes("park")) return "Park info";
+  return "Website & info";
+}
+
 export function ResultOverlay({
   restaurant,
   reelNames,
@@ -95,6 +108,7 @@ export function ResultOverlay({
   const [rateOpen, setRateOpen] = useState(false);
   const [rating, setRating] = useState(4);
   const [mounted, setMounted] = useState(false);
+  const [savedConfirmation, setSavedConfirmation] = useState(false);
   const taglines = mode === "nightlife" ? NIGHTLIFE_TAGLINES : mode === "date-night" ? DATE_NIGHT_TAGLINES : TAGLINES;
   const tagline = useMemo(
     () => taglines[Math.floor(Math.random() * taglines.length)] ?? taglines[0],
@@ -104,7 +118,15 @@ export function ResultOverlay({
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
+    trackAppEvent(skipSpin ? "Option Selected" : "Roulette Pick", {
+      mode,
+      category: restaurant.cuisineLabel,
+    });
+  }, [restaurant.id, mode, skipSpin]);
+
+  useEffect(() => {
     setRateOpen(false);
+    setSavedConfirmation(false);
     setReel(reelNames[0] ?? restaurant.name);
     const reduceMotion = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (skipSpin || reduceMotion) {
@@ -146,7 +168,7 @@ export function ResultOverlay({
     ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel })
     : null;
   const dateNightTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
-  const websiteLabel = dateNightTypes.includes("movies") ? "Check showtimes" : "Website & info";
+  const websiteLabel = dateNightWebsiteLabel(dateNightTypes);
   const whyReasons = buildWhyReasons(restaurant, mode, favorite);
 
   function saveChoice() {
@@ -156,7 +178,15 @@ export function ResultOverlay({
       cuisineLabel: restaurant.cuisineLabel,
       personalRating: rating,
     });
+    trackAppEvent("Choice Confirmed", { mode, rating });
     setRateOpen(false);
+
+    if (mode === "date-night") {
+      setSavedConfirmation(true);
+      window.setTimeout(onClose, 1200);
+      return;
+    }
+
     onClose();
   }
 
@@ -254,7 +284,7 @@ export function ResultOverlay({
 
               <div className="mt-6 space-y-2">
                 <Button size="lg" className="w-full" asChild>
-                  <a href={mapsUrl} target="_blank" rel="noreferrer">
+                  <a href={mapsUrl} target="_blank" rel="noreferrer" onClick={() => trackAppEvent("Directions Opened", { mode })}>
                     <MapPinned className="size-5" />
                     <span className="tracking-kicker uppercase">Go here</span>
                   </a>
@@ -262,14 +292,20 @@ export function ResultOverlay({
 
                 {mode === "date-night" && restaurant.website ? (
                   <Button size="lg" variant="secondary" className="w-full" asChild>
-                    <a href={restaurant.website} target="_blank" rel="noreferrer">
+                    <a href={restaurant.website} target="_blank" rel="noreferrer" onClick={() => trackAppEvent("Venue Website Opened", { mode, category: restaurant.cuisineLabel })}>
                       <ExternalLink className="size-4" />
                       <span className="tracking-kicker uppercase">{websiteLabel}</span>
                     </a>
                   </Button>
                 ) : null}
 
-                {rateOpen ? (
+                {savedConfirmation ? (
+                  <div className="rounded-xl bg-accent/10 p-5 text-center shadow-border" role="status" aria-live="polite">
+                    <CheckCircle2 className="mx-auto size-8 text-accent" />
+                    <p className="font-display mt-3 text-2xl text-fg">Date locked in.</p>
+                    <p className="mt-1 text-sm text-muted">Have fun.</p>
+                  </div>
+                ) : rateOpen ? (
                   <div className="rounded-xl bg-surface p-4 shadow-border">
                     <p className="text-sm text-fg">Our rating</p>
                     <div className="mt-3 flex justify-between">
@@ -288,11 +324,11 @@ export function ResultOverlay({
                 ) : (
                   <>
                     <div className="grid grid-cols-2 gap-2">
-                      <Button variant="secondary" onClick={onReroll}><RotateCcw className="size-4" />Reroll</Button>
-                      <Button variant="danger" onClick={onNotTonight}><Ban className="size-4" />Not tonight</Button>
+                      <Button variant="secondary" onClick={() => { trackAppEvent("Reroll", { mode }); onReroll(); }}><RotateCcw className="size-4" />Reroll</Button>
+                      <Button variant="danger" onClick={() => { trackAppEvent("Not Tonight", { mode }); onNotTonight(); }}><Ban className="size-4" />Not tonight</Button>
                     </div>
                     <div className="grid grid-cols-2 gap-2">
-                      <Button variant={favorite ? "default" : "outline"} onClick={() => toggleFavorite({ restaurantId: restaurant.id, name: restaurant.name, cuisineLabel: restaurant.cuisineLabel, photoKey: restaurant.photoKey, lat: restaurant.lat, lon: restaurant.lon, address: restaurant.address, priceLevel: restaurant.priceLevel })}>
+                      <Button variant={favorite ? "default" : "outline"} onClick={() => { trackAppEvent("Favorite Toggled", { mode, favorite: !favorite }); toggleFavorite({ restaurantId: restaurant.id, name: restaurant.name, cuisineLabel: restaurant.cuisineLabel, photoKey: restaurant.photoKey, lat: restaurant.lat, lon: restaurant.lon, address: restaurant.address, priceLevel: restaurant.priceLevel }); }}>
                         <Heart className={cn("size-4", favorite && "fill-accent-fg")} />
                         {favorite ? "Favorited" : "Favorite"}
                       </Button>
