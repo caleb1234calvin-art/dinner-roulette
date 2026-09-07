@@ -1,5 +1,6 @@
 import { namesMatch } from "@/lib/utils";
 import { LOCAL_CATALOG, catalogToRestaurant, type CatalogEntry } from "./catalog";
+import { REFRESHED_LOCAL_CATALOG, REPLACED_CATALOG_IDS } from "./catalog-refresh";
 import { isLikelyChain, inferPriceLevel } from "./chains";
 import { cuisineLabelFor, mapOsmCuisines, photoForCuisines } from "./cuisines";
 import { haversineMiles } from "./geo";
@@ -19,6 +20,11 @@ export interface RawPlace {
   website: string | null;
   brand: string | null;
 }
+
+const ACTIVE_LOCAL_CATALOG: CatalogEntry[] = [
+  ...REFRESHED_LOCAL_CATALOG,
+  ...LOCAL_CATALOG.filter((entry) => !REPLACED_CATALOG_IDS.has(entry.id)),
+];
 
 export function fallbackToRaw(place: FallbackPlace): RawPlace {
   return { ...place };
@@ -54,7 +60,7 @@ export function rawToRestaurant(place: RawPlace): Restaurant | null {
 }
 
 function findCatalogMatch(name: string, lat: number, lon: number): CatalogEntry | undefined {
-  return LOCAL_CATALOG.find((entry) => {
+  return ACTIVE_LOCAL_CATALOG.find((entry) => {
     const nameHit = entry.matchNames.some((candidate) => namesMatch(candidate, name));
     if (!nameHit) return false;
     return haversineMiles(entry.lat, entry.lon, lat, lon) < 8;
@@ -104,8 +110,8 @@ export function mergePlaces(
         cuisines: overlay.cuisines,
         cuisineLabel: overlay.cuisineLabel,
         priceLevel: overlay.priceLevel,
-        rating: overlay.rating,
-        reviewCount: overlay.reviewCount,
+        rating: overlay.rating || base.rating,
+        reviewCount: overlay.reviewCount || base.reviewCount,
         openingHours: overlay.openingHours || base.openingHours,
         phone: overlay.phone ?? base.phone,
         website: overlay.website ?? base.website,
@@ -118,7 +124,7 @@ export function mergePlaces(
     }
   }
 
-  for (const entry of LOCAL_CATALOG) {
+  for (const entry of ACTIVE_LOCAL_CATALOG) {
     if (usedCatalog.has(entry.id)) continue;
     if (origin && haversineMiles(origin.lat, origin.lon, entry.lat, entry.lon) > catalogRadius) {
       continue;
