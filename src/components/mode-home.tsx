@@ -19,6 +19,65 @@ html.halloween-date-night-active[data-theme="light"] {
   --app-bg: #ececec !important;
 }
 
+.halloween-accent-splatter {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.2;
+  background:
+    radial-gradient(circle at 6% 4%, var(--app-accent) 0 0.38rem, transparent 0.44rem),
+    radial-gradient(circle at 11% 7%, var(--app-accent) 0 0.18rem, transparent 0.23rem),
+    radial-gradient(circle at 2.5% 10%, var(--app-accent) 0 0.24rem, transparent 0.3rem),
+    radial-gradient(ellipse at 7% 8%, var(--app-accent) 0 1.1rem, transparent 1.18rem),
+    radial-gradient(circle at 92% 5%, var(--app-accent) 0 0.3rem, transparent 0.36rem),
+    radial-gradient(circle at 96% 9%, var(--app-accent) 0 0.17rem, transparent 0.22rem),
+    radial-gradient(circle at 89% 12%, var(--app-accent) 0 0.22rem, transparent 0.28rem),
+    radial-gradient(ellipse at 94% 8%, var(--app-accent) 0 1rem, transparent 1.08rem),
+    radial-gradient(ellipse at 1% 32%, var(--app-accent) 0 0.72rem, transparent 0.8rem),
+    radial-gradient(circle at 4% 35%, var(--app-accent) 0 0.16rem, transparent 0.22rem),
+    radial-gradient(ellipse at 99% 44%, var(--app-accent) 0 0.64rem, transparent 0.72rem),
+    radial-gradient(circle at 96.5% 48%, var(--app-accent) 0 0.14rem, transparent 0.2rem);
+}
+
+html.halloween-date-night-active[data-theme="light"] .halloween-accent-splatter {
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+}
+
+html.halloween-date-night-active:not([data-theme="light"]) .halloween-accent-splatter {
+  opacity: 0.3;
+  filter: drop-shadow(0 0 10px color-mix(in oklab, var(--app-accent) 36%, transparent));
+}
+
+.halloween-accent-splatter::before,
+.halloween-accent-splatter::after {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  width: 0.28rem;
+  border-radius: 999px 999px 70% 70%;
+  background: var(--app-accent);
+}
+
+.halloween-accent-splatter::before {
+  left: 7.4%;
+  height: 3.7rem;
+  transform: rotate(-4deg);
+  box-shadow:
+    1.2rem 1rem 0 -0.07rem var(--app-accent),
+    2.1rem 0.35rem 0 -0.1rem var(--app-accent);
+}
+
+.halloween-accent-splatter::after {
+  right: 6.5%;
+  height: 2.8rem;
+  transform: rotate(5deg);
+  box-shadow:
+    -1.15rem 0.6rem 0 -0.09rem var(--app-accent),
+    -2rem 1.4rem 0 -0.11rem var(--app-accent);
+}
+
 html.date-night-active[data-theme="light"]:not(.halloween-date-night-active) img[src*="date-night-icons"] {
   filter:
     saturate(0.82)
@@ -113,6 +172,7 @@ export function ModeHome() {
       )}
     >
       <style>{DATE_NIGHT_ICON_THEME_STYLES}</style>
+      {halloweenDateNight ? <div className="halloween-accent-splatter" aria-hidden="true" /> : null}
       <ModeHint />
 
       <header className="px-4 pt-8 pb-5">
