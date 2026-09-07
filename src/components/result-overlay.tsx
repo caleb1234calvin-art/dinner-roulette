@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { Ban, Heart, MapPinned, MoonStar, Phone, RotateCcw, Sparkles, Star, Utensils, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getDateNightIcon } from "@/lib/date-night/icons";
+import type { DecoratedDateNightPlace } from "@/lib/date-night/types";
 import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
@@ -107,6 +109,10 @@ export function ResultOverlay({
   const destination = restaurant.address && restaurant.address !== "Address unavailable" ? restaurant.address : `${restaurant.lat},${restaurant.lon}`;
   const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
   const visual = restaurantVisual(restaurant.name, restaurant.photoKey);
+  const dateNightRestaurant = restaurant as DecoratedDateNightPlace;
+  const dateNightIcon = mode === "date-night"
+    ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel })
+    : null;
 
   function saveChoice() {
     recordVisit({
@@ -135,11 +141,9 @@ export function ResultOverlay({
         ) : (
           <>
             <div className="relative h-56 overflow-hidden">
-              {mode === "date-night" ? (
-                <div className="flex size-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10">
-                  <div className="flex size-28 items-center justify-center rounded-full bg-surface shadow-border">
-                    <Sparkles className="size-12 text-accent" />
-                  </div>
+              {mode === "date-night" && dateNightIcon ? (
+                <div className="flex size-full items-center justify-center bg-elevated p-4 outline outline-1 -outline-offset-1 outline-fg/10">
+                  <img src={dateNightIcon} alt="" className="size-44 rounded-[2rem] object-cover shadow-lg" />
                 </div>
               ) : visual.isLogo ? (
                 <div className="flex size-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
