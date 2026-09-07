@@ -7,7 +7,7 @@ export type DateNightTypeId =
   | "movies"
   | "mini-golf"
   | "escape-room"
-  | "shows"
+  | "park"
   | "museum"
   | "skating";
 
@@ -55,7 +55,7 @@ export const DATE_NIGHT_TYPE_CHIPS: ReadonlyArray<{
   { id: "movies", label: "Movies" },
   { id: "mini-golf", label: "Mini Golf" },
   { id: "escape-room", label: "Escape Room" },
-  { id: "shows", label: "Shows / Events" },
+  { id: "park", label: "Parks" },
   { id: "museum", label: "Museum" },
   { id: "skating", label: "Skating" },
 ];
@@ -81,7 +81,7 @@ export function dateNightTypeLabel(types: readonly ConcreteDateNightType[]): str
   if (types.includes("movies")) return "Movies";
   if (types.includes("mini-golf")) return "Mini Golf";
   if (types.includes("escape-room")) return "Escape Room";
-  if (types.includes("shows")) return "Shows / Events";
+  if (types.includes("park")) return "Park";
   if (types.includes("museum")) return "Museum";
   if (types.includes("skating")) return "Skating";
   return "Activity";
