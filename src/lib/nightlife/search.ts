@@ -5,6 +5,7 @@ import { haversineMiles } from "@/lib/restaurants/geo";
 import type { RawPlace } from "@/lib/restaurants/normalize";
 import type { PhotoKey } from "@/lib/restaurants/types";
 import { LOCAL_NIGHTLIFE_CATALOG } from "./catalog";
+import { JASPER_COUNTY_NIGHTLIFE_CATALOG } from "./jasper-county-catalog";
 import {
   nightlifeTypeLabel,
   type ConcreteNightlifeType,
@@ -41,6 +42,8 @@ interface OverpassElement {
   center?: { lat: number; lon: number };
   tags?: Record<string, string>;
 }
+
+const ALL_LOCAL_NIGHTLIFE = [...JASPER_COUNTY_NIGHTLIFE_CATALOG, ...LOCAL_NIGHTLIFE_CATALOG];
 
 function classify(tags: Record<string, string>, name: string): ConcreteNightlifeType[] {
   const types = new Set<ConcreteNightlifeType>();
@@ -135,7 +138,7 @@ async function queryMirror(url: string, body: string): Promise<NightlifePlace[]>
 }
 
 function localWithin(lat: number, lon: number, radiusMiles: number): NightlifePlace[] {
-  return LOCAL_NIGHTLIFE_CATALOG.filter(
+  return ALL_LOCAL_NIGHTLIFE.filter(
     (place) => haversineMiles(lat, lon, place.lat, place.lon) <= radiusMiles + 1,
   );
 }
@@ -154,6 +157,8 @@ function mergeNightlife(live: NightlifePlace[], local: NightlifePlace[]): Nightl
         ...place,
         id: curated.id,
         name: curated.name,
+        lat: curated.lat,
+        lon: curated.lon,
         address: curated.address || place.address,
         cuisines: curated.cuisines,
         cuisineLabel: curated.cuisineLabel,
@@ -208,7 +213,7 @@ export const searchNightlife = createServerFn({ method: "POST" })
       return {
         venues: local,
         source: "fallback",
-        warning: "Using saved Joplin/Carthage nightlife while the live map is unavailable.",
+        warning: "Using saved Jasper County nightlife while the live map is unavailable.",
       };
     }
 
