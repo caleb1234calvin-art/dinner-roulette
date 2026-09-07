@@ -196,6 +196,26 @@ export const LOCAL_NIGHTLIFE_CATALOG: NightlifePlace[] = [
     venueTypes: ["lounge", "bar"],
     energyLevel: 2,
   },
+  {
+    id: "nightlife-club-609",
+    name: "Club 609",
+    lat: 37.085091,
+    lon: -94.513224,
+    address: "609 S Main St, Joplin, MO",
+    cuisines: ["american", "sandwiches", "steakhouse"],
+    cuisineLabel: "Restaurant / Bar",
+    priceLevel: 2,
+    rating: null,
+    reviewCount: null,
+    openingHours: "Mo-We 11:00-23:00; Th 11:00-24:00; Fr-Sa 11:00-24:00; Su off",
+    phone: "+1 417-623-6090",
+    website: "https://club609.com/",
+    isChain: false,
+    photoKey: "american",
+    source: "catalog",
+    venueTypes: ["bar", "lounge"],
+    energyLevel: 2,
+  },
 
   // Carthage crossover nightlife
   {
