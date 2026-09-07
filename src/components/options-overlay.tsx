@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { Ban, Shuffle, X } from "lucide-react";
+import { Ban, Shuffle, Sparkles, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getDateNightIcon } from "@/lib/date-night/icons";
-import type { DecoratedDateNightPlace } from "@/lib/date-night/types";
+import { dateNightTypeLabel, type DecoratedDateNightPlace } from "@/lib/date-night/types";
 import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
@@ -46,25 +46,14 @@ export function OptionsOverlay({
             <h2 className="font-display mt-1 text-3xl leading-tight text-fg">Tonight's options</h2>
             <p className="mt-1 text-sm text-muted">Pick one, or let us shuffle again.</p>
           </div>
-          <button
-            type="button"
-            onClick={onClose}
-            className="flex size-11 shrink-0 items-center justify-center rounded-md bg-surface text-fg shadow-border"
-            aria-label="Close options"
-          >
+          <button type="button" onClick={onClose} className="flex size-11 shrink-0 items-center justify-center rounded-md bg-surface text-fg shadow-border" aria-label="Close options">
             <X className="size-5" />
           </button>
         </div>
 
         <div className={cn("mt-5 grid flex-1 gap-3", restaurants.length === 1 ? "grid-cols-1" : "grid-cols-2")}>
           {restaurants.map((restaurant) => (
-            <OptionCard
-              key={restaurant.id}
-              restaurant={restaurant}
-              mode={mode}
-              onSelect={() => onSelect(restaurant)}
-              onNotTonight={() => onNotTonight(restaurant)}
-            />
+            <OptionCard key={restaurant.id} restaurant={restaurant} mode={mode} onSelect={() => onSelect(restaurant)} onNotTonight={() => onNotTonight(restaurant)} />
           ))}
         </div>
 
@@ -80,12 +69,7 @@ export function OptionsOverlay({
   );
 }
 
-function OptionCard({
-  restaurant,
-  mode,
-  onSelect,
-  onNotTonight,
-}: {
+function OptionCard({ restaurant, mode, onSelect, onNotTonight }: {
   restaurant: DecoratedRestaurant;
   mode: ResultMode;
   onSelect: () => void;
@@ -97,6 +81,7 @@ function OptionCard({
   const dateNightIcon = mode === "date-night"
     ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel })
     : null;
+  const activityTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
 
   return (
     <article className="flex flex-col overflow-hidden rounded-xl bg-surface shadow-border">
@@ -105,6 +90,10 @@ function OptionCard({
           {mode === "date-night" && dateNightIcon ? (
             <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10">
               <img src={dateNightIcon} alt="" className="size-24 rounded-2xl object-cover shadow-sm" />
+            </div>
+          ) : mode === "date-night" ? (
+            <div className="flex h-28 w-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10">
+              <Sparkles className="size-10 text-accent" />
             </div>
           ) : visual.isLogo ? (
             <div className="flex h-28 w-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
@@ -116,25 +105,31 @@ function OptionCard({
             <img src={visual.src} alt="" className="h-28 w-full object-cover outline outline-1 -outline-offset-1 outline-fg/10" />
           )}
         </button>
-        <button
-          type="button"
-          onClick={onNotTonight}
-          className="absolute top-2 right-2 flex size-10 items-center justify-center rounded-md bg-bg/80 text-fg"
-          aria-label={`Not tonight: ${restaurant.name}`}
-        >
+        <button type="button" onClick={onNotTonight} className="absolute top-2 right-2 flex size-10 items-center justify-center rounded-md bg-bg/80 text-fg" aria-label={`Not tonight: ${restaurant.name}`}>
           <Ban className="size-4" />
         </button>
       </div>
       <button type="button" onClick={onSelect} className="flex flex-1 flex-col px-3 py-3 text-left">
         <h3 className="font-display line-clamp-2 text-lg leading-tight text-fg">{restaurant.name}</h3>
-        <p className="mt-1 text-xs text-muted">
-          {restaurant.cuisineLabel}
-          {restaurant.priceLevel ? ` · ${formatPrice(restaurant.priceLevel)}` : ""}
-        </p>
-        <p className="mt-1 text-xs text-subtle">
+        {mode === "date-night" && activityTypes.length ? (
+          <div className="mt-2 flex flex-wrap gap-1">
+            {activityTypes.slice(0, 3).map((type) => (
+              <span key={type} className="rounded-full bg-elevated px-2 py-1 text-[10px] tracking-wide text-muted uppercase">
+                {dateNightTypeLabel([type])}
+              </span>
+            ))}
+          </div>
+        ) : (
+          <p className="mt-1 text-xs text-muted">
+            {restaurant.cuisineLabel}
+            {restaurant.priceLevel ? ` · ${formatPrice(restaurant.priceLevel)}` : ""}
+          </p>
+        )}
+        <p className="mt-2 text-xs text-subtle">
           {formatDistance(restaurant.distanceMiles)}
           {openLabel ? ` · ${openLabel}` : ""}
         </p>
+        {mode === "date-night" && !restaurant.hoursKnown ? <p className="mt-1 text-xs text-subtle">Hours unknown — check before going</p> : null}
         {restaurant.closingSoon ? <p className="mt-1 text-xs text-danger">Closing soon</p> : null}
       </button>
     </article>
