@@ -4,7 +4,8 @@ import { haversineMiles } from "@/lib/restaurants/geo";
 import { namesMatch } from "@/lib/utils";
 import type { PhotoKey } from "@/lib/restaurants/types";
 import { JASPER_COUNTY_DATE_NIGHT_CATALOG } from "./jasper-county-catalog";
-import { isHalloweenDateNightSeason } from "./season";
+import { JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG } from "./seasonal-catalog";
+import { isHalloweenDateNightActive } from "./season";
 import {
   dateNightTypeLabel,
   type ConcreteDateNightType,
@@ -201,10 +202,11 @@ async function queryMirror(url: string, body: string, halloweenSeason: boolean):
   return dedupeDateNight([...unique.values()]);
 }
 
-function localWithin(lat: number, lon: number, radiusMiles: number): DateNightPlace[] {
-  return JASPER_COUNTY_DATE_NIGHT_CATALOG.filter(
-    (place) => haversineMiles(lat, lon, place.lat, place.lon) <= radiusMiles + 1,
-  );
+function localWithin(lat: number, lon: number, radiusMiles: number, halloweenActive: boolean): DateNightPlace[] {
+  const catalog = halloweenActive
+    ? [...JASPER_COUNTY_DATE_NIGHT_CATALOG, ...JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG]
+    : JASPER_COUNTY_DATE_NIGHT_CATALOG;
+  return catalog.filter((place) => haversineMiles(lat, lon, place.lat, place.lon) <= radiusMiles + 1);
 }
 
 function mergeDateNight(live: DateNightPlace[], local: DateNightPlace[]): DateNightPlace[] {
@@ -241,20 +243,21 @@ function mergeDateNight(live: DateNightPlace[], local: DateNightPlace[]): DateNi
 }
 
 export const searchDateNight = createServerFn({ method: "POST" })
-  .validator((data: { lat: number; lon: number; radiusMiles: number }) => {
+  .validator((data: { lat: number; lon: number; radiusMiles: number; spookySeasonEnabled?: boolean }) => {
     if (!Number.isFinite(data.lat) || !Number.isFinite(data.lon)) throw new Error("A location is required");
     return {
       lat: data.lat,
       lon: data.lon,
       radiusMiles: Math.min(Math.max(data.radiusMiles || 15, 1), 30),
+      spookySeasonEnabled: Boolean(data.spookySeasonEnabled),
     };
   })
   .handler(async ({ data }): Promise<DateNightSearchResponse> => {
     const fetchRadius = Math.max(data.radiusMiles, 15);
     const radiusMeters = Math.min(fetchRadius * 1609.34, 48280);
-    const halloweenSeason = isHalloweenDateNightSeason();
+    const halloweenSeason = isHalloweenDateNightActive(data.spookySeasonEnabled);
     const body = `data=${encodeURIComponent(QUERY(data.lat, data.lon, radiusMeters, halloweenSeason))}`;
-    const local = localWithin(data.lat, data.lon, fetchRadius);
+    const local = localWithin(data.lat, data.lon, fetchRadius, halloweenSeason);
     let lastError: unknown;
 
     for (const mirror of MIRRORS) {
