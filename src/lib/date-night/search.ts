@@ -1,6 +1,9 @@
 import { createServerFn } from "@tanstack/react-start";
 import { isLikelyChain } from "@/lib/restaurants/chains";
+import { haversineMiles } from "@/lib/restaurants/geo";
+import { namesMatch } from "@/lib/utils";
 import type { PhotoKey } from "@/lib/restaurants/types";
+import { JASPER_COUNTY_DATE_NIGHT_CATALOG } from "./jasper-county-catalog";
 import {
   dateNightTypeLabel,
   type ConcreteDateNightType,
@@ -23,10 +26,10 @@ const QUERY = (lat: number, lon: number, radiusMeters: number) => `
   nwr["amenity"="cinema"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["leisure"="miniature_golf"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["leisure"="escape_game"](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["amenity"="theatre"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["tourism"="museum"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["leisure"="ice_rink"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["sport"="roller_skating"](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["leisure"="park"](around:${Math.round(radiusMeters)},${lat},${lon});
 );
 out center tags;
 `;
@@ -47,15 +50,15 @@ function classify(tags: Record<string, string>): ConcreteDateNightType[] {
   if (tags.amenity === "cinema") types.add("movies");
   if (tags.leisure === "miniature_golf") types.add("mini-golf");
   if (tags.leisure === "escape_game") types.add("escape-room");
-  if (tags.amenity === "theatre") types.add("shows");
   if (tags.tourism === "museum") types.add("museum");
   if (tags.leisure === "ice_rink" || tags.sport === "roller_skating") types.add("skating");
-  if (types.size === 0) types.add("shows");
+  if (tags.leisure === "park") types.add("park");
+  if (types.size === 0) return [];
   return [...types];
 }
 
 function moodFor(types: readonly ConcreteDateNightType[]): 1 | 2 | 3 {
-  if (types.includes("movies") || types.includes("museum") || types.includes("shows")) return 1;
+  if (types.includes("movies") || types.includes("museum") || types.includes("park")) return 1;
   if (types.includes("bowling") || types.includes("arcade") || types.includes("mini-golf")) return 2;
   return 3;
 }
@@ -72,6 +75,7 @@ function elementToPlace(element: OverpassElement): DateNightPlace | null {
   const city = tags["addr:city"] ?? "";
   const address = [`${house} ${street}`.trim(), city].filter(Boolean).join(", ") || "Address unavailable";
   const activityTypes = classify(tags);
+  if (!activityTypes.length) return null;
   const brand = tags.brand ?? null;
   const isChain = isLikelyChain(name, brand);
 
@@ -120,6 +124,42 @@ async function queryMirror(url: string, body: string): Promise<DateNightPlace[]>
   return [...unique.values()];
 }
 
+function localWithin(lat: number, lon: number, radiusMiles: number): DateNightPlace[] {
+  return JASPER_COUNTY_DATE_NIGHT_CATALOG.filter(
+    (place) => haversineMiles(lat, lon, place.lat, place.lon) <= radiusMiles + 1,
+  );
+}
+
+function mergeDateNight(live: DateNightPlace[], local: DateNightPlace[]): DateNightPlace[] {
+  const merged = [...local];
+  for (const place of live) {
+    const matchIndex = merged.findIndex(
+      (candidate) =>
+        namesMatch(candidate.name, place.name) &&
+        haversineMiles(candidate.lat, candidate.lon, place.lat, place.lon) < 0.35,
+    );
+    if (matchIndex >= 0) {
+      const curated = merged[matchIndex]!;
+      merged[matchIndex] = {
+        ...place,
+        id: curated.id,
+        name: curated.name,
+        address: curated.address || place.address,
+        openingHours: curated.openingHours || place.openingHours,
+        phone: curated.phone ?? place.phone,
+        website: curated.website ?? place.website,
+        activityTypes: curated.activityTypes,
+        moodLevel: curated.moodLevel,
+        cuisineLabel: curated.cuisineLabel,
+        source: "merged",
+      };
+      continue;
+    }
+    merged.push(place);
+  }
+  return merged;
+}
+
 export const searchDateNight = createServerFn({ method: "POST" })
   .validator((data: { lat: number; lon: number; radiusMiles: number }) => {
     if (!Number.isFinite(data.lat) || !Number.isFinite(data.lon)) throw new Error("A location is required");
@@ -133,14 +173,31 @@ export const searchDateNight = createServerFn({ method: "POST" })
     const fetchRadius = Math.max(data.radiusMiles, 15);
     const radiusMeters = Math.min(fetchRadius * 1609.34, 48280);
     const body = `data=${encodeURIComponent(QUERY(data.lat, data.lon, radiusMeters))}`;
+    const local = localWithin(data.lat, data.lon, fetchRadius);
     let lastError: unknown;
+
     for (const mirror of MIRRORS) {
       try {
-        const venues = await queryMirror(mirror, body);
-        if (venues.length > 0) return { venues, source: "live" };
+        const live = await queryMirror(mirror, body);
+        const venues = mergeDateNight(live, local);
+        if (venues.length > 0) {
+          return {
+            venues,
+            source: local.length ? "merged" : "live",
+          };
+        }
       } catch (error) {
         lastError = error;
       }
     }
+
+    if (local.length > 0) {
+      return {
+        venues: local,
+        source: "fallback",
+        warning: "Using saved Jasper County Date Night places while the live map is unavailable.",
+      };
+    }
+
     throw lastError instanceof Error ? lastError : new Error("Could not load date-night activities for that area.");
   });
