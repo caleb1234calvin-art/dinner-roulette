@@ -14,10 +14,26 @@ export function ModeHome() {
     return () => root.classList.remove("nightlife-active");
   }, [mode]);
 
+  const nightlife = mode === "nightlife";
+
   return (
-    <div className={cn(mode === "nightlife" && "nightlife-theme min-h-dvh")}>
-      <div className="sticky top-0 z-20 mx-auto max-w-lg px-4 pt-3">
-        <div className="grid grid-cols-2 rounded-xl bg-surface/95 p-1 shadow-border backdrop-blur-sm">
+    <div className={cn("mode-home min-h-dvh", nightlife && "nightlife-theme")}>
+      <header className="px-4 pt-8 pb-5">
+        <p className="text-kicker text-subtle">
+          {nightlife ? "Dinner roulette · Nightlife" : "Dinner roulette"}
+        </p>
+        <h1 className="font-display mt-2 text-4xl leading-tight text-fg">
+          {nightlife ? "What's the Move?" : "What's for Dinner?"}
+        </h1>
+        <p className="mt-3 max-w-sm text-sm text-muted">
+          {nightlife
+            ? "Set the vibe. Let the app pick the place."
+            : "You set the rules. The app helps decide."}
+        </p>
+      </header>
+
+      <div className="sticky top-0 z-20 mx-auto max-w-lg px-4 py-2 bg-bg/95 backdrop-blur-sm">
+        <div className="grid grid-cols-2 rounded-xl bg-surface/95 p-1 shadow-border">
           <button
             type="button"
             onClick={() => setMode("dinner")}
@@ -35,9 +51,9 @@ export function ModeHome() {
             onClick={() => setMode("nightlife")}
             className={cn(
               "flex min-h-11 items-center justify-center gap-2 rounded-lg text-sm transition",
-              mode === "nightlife" ? "bg-accent text-accent-fg" : "text-muted",
+              nightlife ? "bg-accent text-accent-fg" : "text-muted",
             )}
-            aria-pressed={mode === "nightlife"}
+            aria-pressed={nightlife}
           >
             <MoonStar className="size-4" />
             Nightlife
