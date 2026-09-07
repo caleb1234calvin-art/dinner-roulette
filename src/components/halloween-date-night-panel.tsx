@@ -1,8 +1,5 @@
 import { Ghost, MoonStar, Sparkles, Trees } from "lucide-react";
-import {
-  HALLOWEEN_DATE_NIGHT_CHIPS,
-  HALLOWEEN_DATE_NIGHT_PRESETS,
-} from "@/lib/date-night/season";
+import { HALLOWEEN_DATE_NIGHT_PRESETS } from "@/lib/date-night/season";
 import type { DateNightTypeId } from "@/lib/date-night/types";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
@@ -81,18 +78,6 @@ html.halloween-date-night-active {
   isolation: isolate;
 }
 
-.october-moon {
-  width: 3.1rem;
-  height: 3.1rem;
-  border-radius: 999px;
-  background:
-    radial-gradient(circle at 34% 34%, #fff0d8 0 13%, #e6b474 28%, #b96832 66%, #5a281e 100%);
-  box-shadow:
-    0 0 0 1px rgba(255, 233, 201, 0.10),
-    0 0 34px rgba(213, 106, 47, 0.20);
-  opacity: 0.88;
-}
-
 .spooky-toggle {
   position: relative;
   width: 3.25rem;
@@ -163,29 +148,6 @@ html.halloween-date-night-active {
   color: rgba(198, 181, 164, 0.18);
 }
 
-.october-chip {
-  color: #cbb9a8;
-  background: rgba(245, 234, 219, 0.035);
-  box-shadow: inset 0 0 0 1px rgba(245, 234, 219, 0.10);
-  transition:
-    transform 150ms var(--ease-out),
-    color 150ms var(--ease-out),
-    background 150ms var(--ease-out),
-    box-shadow 150ms var(--ease-out);
-}
-
-.october-chip:active {
-  transform: scale(0.96);
-}
-
-.october-chip-selected {
-  color: #fff3e5;
-  background: linear-gradient(135deg, rgba(213, 106, 47, 0.52), rgba(135, 52, 55, 0.52));
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 221, 186, 0.20),
-    0 8px 24px -16px rgba(213, 106, 47, 0.9);
-}
-
 .october-preset {
   background: rgba(245, 234, 219, 0.025);
   box-shadow: inset 0 0 0 1px rgba(245, 234, 219, 0.07);
@@ -224,7 +186,6 @@ html.halloween-date-night-active .shortlist-brand-stage {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .october-chip,
   .october-preset,
   .spooky-toggle,
   .spooky-toggle::after {
@@ -260,14 +221,6 @@ export function HalloweenDateNightPanel() {
   const setDateNightFilters = useAppStore((state) => state.setDateNightFilters);
   const spookySeasonEnabled = useAppStore((state) => state.spookySeasonEnabled);
   const setSpookySeasonEnabled = useAppStore((state) => state.setSpookySeasonEnabled);
-
-  function toggleSeasonalType(id: DateNightTypeId) {
-    const current = filters.activityTypes.filter((type) => type !== "anything");
-    const next = current.includes(id)
-      ? current.filter((type) => type !== id)
-      : [...current, id];
-    setDateNightFilters({ activityTypes: next.length ? next : ["anything"] });
-  }
 
   function toggleSpookySeason() {
     const next = !spookySeasonEnabled;
@@ -314,34 +267,6 @@ export function HalloweenDateNightPanel() {
               className={cn("spooky-toggle mt-1 shrink-0", spookySeasonEnabled && "spooky-toggle-on")}
             />
           </div>
-
-          {spookySeasonEnabled ? (
-            <>
-              <div className="mt-5 flex items-center justify-between gap-4">
-                <p className="text-[0.68rem] uppercase tracking-[0.2em] text-subtle">Choose your kind of strange</p>
-                <div className="october-moon shrink-0" aria-hidden="true" />
-              </div>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {HALLOWEEN_DATE_NIGHT_CHIPS.map((chip) => {
-                  const selected = filters.activityTypes.includes(chip.id);
-                  return (
-                    <button
-                      key={chip.id}
-                      type="button"
-                      aria-pressed={selected}
-                      onClick={() => toggleSeasonalType(chip.id)}
-                      className={cn(
-                        "october-chip min-h-10 rounded-full px-3.5 py-2 text-sm",
-                        selected && "october-chip-selected",
-                      )}
-                    >
-                      {chip.label}
-                    </button>
-                  );
-                })}
-              </div>
-            </>
-          ) : null}
         </div>
 
         {spookySeasonEnabled ? (
