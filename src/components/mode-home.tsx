@@ -18,11 +18,13 @@ export function ModeHome() {
   const [mode, setMode] = useState<HomeMode>("dinner");
   const dateNightFilters = useAppStore((state) => state.dateNightFilters);
   const setDateNightFilters = useAppStore((state) => state.setDateNightFilters);
+  const spookySeasonEnabled = useAppStore((state) => state.spookySeasonEnabled);
+  const setSpookySeasonEnabled = useAppStore((state) => state.setSpookySeasonEnabled);
   const halloweenSeason = isHalloweenDateNightSeason();
 
   const nightlife = mode === "nightlife";
   const dateNight = mode === "date-night";
-  const halloweenDateNight = dateNight && halloweenSeason;
+  const halloweenDateNight = dateNight && halloweenSeason && spookySeasonEnabled;
 
   useEffect(() => {
     const root = document.documentElement;
@@ -38,14 +40,19 @@ export function ModeHome() {
 
   useEffect(() => {
     if (halloweenSeason) return;
-    const normalized = normalizeSeasonalDateNightFilters(dateNightFilters);
+    if (spookySeasonEnabled) setSpookySeasonEnabled(false);
+  }, [halloweenSeason, setSpookySeasonEnabled, spookySeasonEnabled]);
+
+  useEffect(() => {
+    if (halloweenDateNight) return;
+    const normalized = normalizeSeasonalDateNightFilters(dateNightFilters, false);
     if (
       normalized.activityTypes.length !== dateNightFilters.activityTypes.length ||
       normalized.activityTypes.some((type, index) => type !== dateNightFilters.activityTypes[index])
     ) {
       setDateNightFilters({ activityTypes: normalized.activityTypes });
     }
-  }, [dateNightFilters, halloweenSeason, setDateNightFilters]);
+  }, [dateNightFilters, halloweenDateNight, setDateNightFilters]);
 
   function selectMode(next: HomeMode) {
     if (next !== mode) trackAppEvent("Mode Selected", { mode: next });
@@ -134,7 +141,7 @@ export function ModeHome() {
         </div>
       </div>
 
-      {halloweenDateNight ? <HalloweenDateNightPanel /> : null}
+      {dateNight && halloweenSeason ? <HalloweenDateNightPanel /> : null}
       {mode === "dinner" ? <PickHome /> : nightlife ? <NightlifeHome /> : <DateNightHome />}
     </div>
   );
