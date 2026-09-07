@@ -1,6 +1,6 @@
 import type { DateNightPlace } from "./types";
 
-// Jasper County Date Night safety net, audited September 2026.
+// Jasper County Date Night safety net, re-audited September 2026.
 // Live OpenStreetMap discovery remains the broad source; this catalog guarantees
 // verified local anchors and provides fallback results when live lookup fails.
 export const JASPER_COUNTY_DATE_NIGHT_CATALOG: DateNightPlace[] = [
@@ -125,6 +125,46 @@ export const JASPER_COUNTY_DATE_NIGHT_CATALOG: DateNightPlace[] = [
     moodLevel: 1,
   },
   {
+    id: "date-night-precious-moments-chapel",
+    name: "Precious Moments Chapel",
+    lat: 37.11183,
+    lon: -94.34532,
+    address: "4321 Chapel Road, Carthage, MO 64836",
+    cuisines: ["other"],
+    cuisineLabel: "Chapel / Museum / Gardens",
+    priceLevel: null,
+    rating: null,
+    reviewCount: null,
+    openingHours: "Mo-Su 09:00-17:00",
+    phone: "+1 800-543-7975",
+    website: "https://preciousmomentschapel.org/",
+    isChain: false,
+    photoKey: "cafe",
+    source: "catalog",
+    activityTypes: ["museum"],
+    moodLevel: 1,
+  },
+  {
+    id: "date-night-battle-of-carthage-museum",
+    name: "Battle of Carthage Civil War Museum",
+    lat: 37.177569,
+    lon: -94.309858,
+    address: "205 Grant St, Carthage, MO 64836",
+    cuisines: ["other"],
+    cuisineLabel: "Museum",
+    priceLevel: null,
+    rating: null,
+    reviewCount: null,
+    openingHours: "Mo off; Tu-Sa 08:30-17:00; Su 13:00-17:00",
+    phone: "+1 417-237-7060",
+    website: "https://www.carthagemo.gov/page/civil-war-museum",
+    isChain: false,
+    photoKey: "cafe",
+    source: "catalog",
+    activityTypes: ["museum"],
+    moodLevel: 1,
+  },
+  {
     id: "date-night-joplin-museum",
     name: "Joplin History & Mineral Museum",
     lat: 37.08767,
@@ -135,7 +175,7 @@ export const JASPER_COUNTY_DATE_NIGHT_CATALOG: DateNightPlace[] = [
     priceLevel: null,
     rating: null,
     reviewCount: null,
-    openingHours: "unknown",
+    openingHours: "Mo off; Tu-Sa 10:00-17:00; Su off",
     phone: "+1 417-623-1180",
     website: "https://www.joplin-museum.org/",
     isChain: false,
