@@ -1,16 +1,12 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { Heart, LayoutGrid, LocateFixed, MapPin } from "lucide-react";
+import { DiscoveryLoading, DiscoveryNotice } from "@/components/discovery-status";
+import { OptionsOverlay } from "@/components/options-overlay";
+import { ResultOverlay } from "@/components/result-overlay";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
-import { OptionsOverlay } from "@/components/options-overlay";
-import { ResultOverlay } from "@/components/result-overlay";
-import { decorateAll } from "@/lib/restaurants/decorate";
-import { lookupLocation, lookupReverseLocation } from "@/lib/restaurants/search";
-import { DISTANCE_OPTIONS, type DecoratedRestaurant, type Restaurant } from "@/lib/restaurants/types";
-import { RADIUS_OPTIONS, useAppStore } from "@/lib/store";
-import { cn } from "@/lib/utils";
 import { searchDateNight } from "@/lib/date-night/search";
 import {
   DATE_NIGHT_TYPE_CHIPS,
@@ -21,6 +17,11 @@ import {
   type DateNightTypeId,
   type DecoratedDateNightPlace,
 } from "@/lib/date-night/types";
+import { decorateAll } from "@/lib/restaurants/decorate";
+import { lookupLocation, lookupReverseLocation } from "@/lib/restaurants/search";
+import { DISTANCE_OPTIONS, type DecoratedRestaurant, type Restaurant } from "@/lib/restaurants/types";
+import { useAppStore } from "@/lib/store";
+import { cn } from "@/lib/utils";
 
 function venueWeightedPick(items: DecoratedDateNightPlace[], mood: number, shown: string[]) {
   if (!items.length) return null;
@@ -48,9 +49,18 @@ function availableCategories(items: DecoratedDateNightPlace[], filters: DateNigh
   );
 }
 
-function pickCategory(categories: ConcreteDateNightType[], reduceParks: boolean) {
+function pickCategory(
+  categories: ConcreteDateNightType[],
+  reduceParks: boolean,
+  avoidCategory: ConcreteDateNightType | null = null,
+) {
   if (!categories.length) return null;
-  const weights = categories.map((type) => (type === "park" && reduceParks ? 0.08 : 1));
+  const hasAlternative = Boolean(avoidCategory && categories.some((type) => type !== avoidCategory));
+  const weights = categories.map((type) => {
+    const parkWeight = type === "park" && reduceParks ? 0.08 : 1;
+    const repeatWeight = hasAlternative && type === avoidCategory ? 0.18 : 1;
+    return parkWeight * repeatWeight;
+  });
   const total = weights.reduce((sum, value) => sum + value, 0);
   let cursor = Math.random() * total;
   for (let i = 0; i < categories.length; i += 1) {
@@ -65,10 +75,11 @@ function balancedPick(
   filters: DateNightFilters,
   shown: string[],
   allowedCategories?: ConcreteDateNightType[],
+  avoidCategory: ConcreteDateNightType | null = null,
 ) {
   if (!items.length) return null;
   const categories = allowedCategories ?? availableCategories(items, filters);
-  const category = pickCategory(categories, filters.reduceParks);
+  const category = pickCategory(categories, filters.reduceParks, avoidCategory);
   if (!category) return venueWeightedPick(items, filters.mood, shown);
   const pool = items.filter((item) => item.activityTypes.includes(category));
   return venueWeightedPick(pool.length ? pool : items, filters.mood, shown);
@@ -123,6 +134,7 @@ export function DateNightHome() {
   const [venues, setVenues] = useState<DateNightPlace[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [warning, setWarning] = useState<string | null>(null);
   const [locOpen, setLocOpen] = useState(false);
   const [locQuery, setLocQuery] = useState("");
   const [locBusy, setLocBusy] = useState(false);
@@ -131,20 +143,23 @@ export function DateNightHome() {
   const [reelNames, setReelNames] = useState<string[]>([]);
   const [skipSpin, setSkipSpin] = useState(false);
   const [options, setOptions] = useState<DecoratedDateNightPlace[] | null>(null);
+  const [lastCategory, setLastCategory] = useState<ConcreteDateNightType | null>(null);
 
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
     setError(null);
+    setWarning(null);
     searchDateNight({ data: { lat: location.lat, lon: location.lon, radiusMiles: Math.max(filters.radiusMiles, 15) } })
       .then((result) => {
-        if (!cancelled) setVenues(result.venues);
+        if (cancelled) return;
+        setVenues(result.venues);
+        setWarning(result.warning ?? null);
       })
       .catch((err: unknown) => {
-        if (!cancelled) {
-          setVenues([]);
-          setError(err instanceof Error ? err.message : "Could not load date-night activities");
-        }
+        if (cancelled) return;
+        setVenues([]);
+        setError(err instanceof Error ? err.message : "Could not load date-night activities");
       })
       .finally(() => {
         if (!cancelled) setLoading(false);
@@ -234,9 +249,10 @@ export function DateNightHome() {
   }
 
   function roll(pool = eligible) {
-    const chosen = balancedPick(pool, filters, sessionShown);
+    const chosen = balancedPick(pool, filters, sessionShown, undefined, lastCategory);
     if (!chosen) return;
     markShown(chosen.id);
+    setLastCategory(chosen.activityTypes[0] ?? null);
     setReelNames(pool.map((item) => item.name));
     setSkipSpin(false);
     setPick(chosen);
@@ -250,7 +266,7 @@ export function DateNightHome() {
     if (next.length && "vibrate" in navigator) navigator.vibrate?.(12);
   }
 
-  const radiusIndex = Math.max(0, RADIUS_OPTIONS.indexOf(filters.radiusMiles));
+  const radiusIndex = Math.max(0, DISTANCE_OPTIONS.indexOf(filters.radiusMiles));
 
   return (
     <main className="px-4 pb-48 pt-5">
@@ -273,7 +289,7 @@ export function DateNightHome() {
         </div>
         {locOpen ? (
           <form className="mt-4 space-y-3" onSubmit={searchManualLocation}>
-            <Input value={locQuery} onChange={(event) => setLocQuery(event.target.value)} placeholder="City or ZIP code" />
+            <Input value={locQuery} onChange={(event) => setLocQuery(event.target.value)} placeholder="City or ZIP code" aria-label="City or ZIP code" />
             {locError ? <p className="text-sm text-danger">{locError}</p> : null}
             <div className="flex gap-2">
               <Button type="submit" className="flex-1" disabled={locBusy}>{locBusy ? "Finding…" : "Set location"}</Button>
@@ -288,7 +304,7 @@ export function DateNightHome() {
           <h2 className="text-sm text-muted">How far?</h2>
           <p className="text-base text-fg tabular-nums">Within {filters.radiusMiles} miles</p>
         </div>
-        <Slider min={0} max={DISTANCE_OPTIONS.length - 1} step={1} value={[radiusIndex]} onValueChange={([index]) => updateFilters({ radiusMiles: DISTANCE_OPTIONS[index ?? 0] ?? 15 })} />
+        <Slider min={0} max={DISTANCE_OPTIONS.length - 1} step={1} value={[radiusIndex]} onValueChange={([index]) => updateFilters({ radiusMiles: DISTANCE_OPTIONS[index ?? 0] ?? 15 })} aria-label="Travel distance" />
         <div className="mt-2 flex justify-between text-2xs text-subtle"><span>1</span><span>10</span><span>30</span></div>
       </section>
 
@@ -298,7 +314,7 @@ export function DateNightHome() {
           {DATE_NIGHT_TYPE_CHIPS.map((chip) => {
             const selected = chip.id === "anything" ? filters.activityTypes.includes("anything") : filters.activityTypes.includes(chip.id);
             return (
-              <button key={chip.id} type="button" aria-pressed={selected} onClick={() => toggleActivityType(chip.id)} className={cn("chip min-h-10 rounded-full px-3 py-2 text-sm shadow-border", selected ? "bg-accent text-accent-fg" : "bg-surface text-muted")}>{chip.label}</button>
+              <button key={chip.id} type="button" aria-pressed={selected} onClick={() => toggleActivityType(chip.id)} className={cn("chip min-h-11 rounded-full px-3 py-2 text-sm shadow-border", selected ? "bg-accent text-accent-fg" : "bg-surface text-muted")}>{chip.label}</button>
             );
           })}
         </div>
@@ -309,26 +325,40 @@ export function DateNightHome() {
           <h2 className="text-sm text-muted">What's the mood?</h2>
           <p className="text-base text-fg">{dateNightMoodLabel(filters.mood)}</p>
         </div>
-        <Slider min={0} max={100} step={1} value={[filters.mood]} onValueChange={([value]) => updateFilters({ mood: value ?? 50 })} />
+        <Slider min={0} max={100} step={1} value={[filters.mood]} onValueChange={([value]) => updateFilters({ mood: value ?? 50 })} aria-label="Cozy to adventurous" />
         <div className="mt-2 flex justify-between text-2xs text-subtle"><span>Cozy</span><span>Playful</span><span>Adventurous</span></div>
       </section>
 
       <section className="mt-7 space-y-2">
         <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">
           <div><p className="text-sm text-fg">Open now only</p><p className="text-xs text-subtle">Skip activities that have already closed</p></div>
-          <Switch checked={filters.openNowOnly} onCheckedChange={(checked) => updateFilters({ openNowOnly: checked })} />
+          <Switch checked={filters.openNowOnly} onCheckedChange={(checked) => updateFilters({ openNowOnly: checked })} aria-label="Open now only" />
         </div>
         <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">
           <div><p className="text-sm text-fg">Favorites only</p><p className="text-xs text-subtle">Pick from date spots you've saved</p></div>
-          <Switch checked={filters.favoritesOnly} onCheckedChange={(checked) => updateFilters({ favoritesOnly: checked })} />
+          <Switch checked={filters.favoritesOnly} onCheckedChange={(checked) => updateFilters({ favoritesOnly: checked })} aria-label="Favorites only" />
         </div>
         <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">
           <div><p className="text-sm text-fg">Fewer parks</p><p className="text-xs text-subtle">Keep parks available, but make the park category much less likely</p></div>
-          <Switch checked={filters.reduceParks} onCheckedChange={(checked) => updateFilters({ reduceParks: checked })} />
+          <Switch checked={filters.reduceParks} onCheckedChange={(checked) => updateFilters({ reduceParks: checked })} aria-label="Fewer parks" />
         </div>
       </section>
 
-      {error ? <p className="mt-4 text-sm text-danger">{error}</p> : null}
+      {loading ? <DiscoveryLoading label="Finding date ideas near you…" /> : null}
+      {warning ? (
+        <DiscoveryNotice
+          tone="fallback"
+          title="Live discovery is temporarily unavailable"
+          body="Dinner Roulette is using verified saved local date ideas so the roulette can keep working."
+        />
+      ) : null}
+      {error ? (
+        <DiscoveryNotice
+          tone="error"
+          title="We couldn't refresh date ideas right now"
+          body="Try again in a moment, change your location, or widen your search radius."
+        />
+      ) : null}
       {!loading && !error && eligible.length === 0 ? <div className="mt-5 rounded-xl bg-surface p-4 text-sm text-muted shadow-border">Nothing matches those filters. Try increasing distance or allowing more activity types.</div> : null}
 
       <div className="fixed inset-x-0 bottom-20 z-20 mx-auto w-full max-w-lg px-4 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2">
