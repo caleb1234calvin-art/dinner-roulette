@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { Heart, LayoutGrid, LocateFixed, MapPin } from "lucide-react";
+import { DateNightPlanOverlay } from "@/components/date-night-plan-overlay";
 import { DiscoveryLoading, DiscoveryNotice } from "@/components/discovery-status";
 import { OptionsOverlay } from "@/components/options-overlay";
 import { ResultOverlay } from "@/components/result-overlay";
@@ -158,6 +159,7 @@ export function DateNightHome() {
   const [reelNames, setReelNames] = useState<string[]>([]);
   const [skipSpin, setSkipSpin] = useState(false);
   const [options, setOptions] = useState<DecoratedDateNightPlace[] | null>(null);
+  const [nightPlan, setNightPlan] = useState<DecoratedDateNightPlace[] | null>(null);
   const [lastCategory, setLastCategory] = useState<ConcreteDateNightType | null>(null);
   const halloweenActive = isHalloweenDateNightActive(spookySeasonEnabled);
 
@@ -166,7 +168,14 @@ export function DateNightHome() {
     setLoading(true);
     setError(null);
     setWarning(null);
-    searchDateNight({ data: { lat: location.lat, lon: location.lon, radiusMiles: Math.max(filters.radiusMiles, 15), spookySeasonEnabled } })
+    searchDateNight({
+      data: {
+        lat: location.lat,
+        lon: location.lon,
+        radiusMiles: Math.max(filters.radiusMiles, 15),
+        spookySeasonEnabled,
+      },
+    })
       .then((result) => {
         if (cancelled) return;
         setVenues(result.venues);
@@ -194,7 +203,7 @@ export function DateNightHome() {
     const anything = filters.activityTypes.includes("anything");
     return decorated.filter((venue) => {
       if (
-        !spookySeasonEnabled &&
+        !halloweenActive &&
         venue.activityTypes.length > 0 &&
         venue.activityTypes.every((type) => HALLOWEEN_DATE_NIGHT_TYPES.includes(type))
       ) {
@@ -209,7 +218,7 @@ export function DateNightHome() {
       if (!anything && !venue.activityTypes.some((type) => filters.activityTypes.includes(type))) return false;
       return true;
     });
-  }, [decorated, exclusions, filters, preferences, spookySeasonEnabled]);
+  }, [decorated, exclusions, filters, halloweenActive, preferences]);
 
   function updateFilters(patch: Partial<DateNightFilters>) {
     setDateNightFilters(patch);
@@ -290,15 +299,24 @@ export function DateNightHome() {
   }
 
   function planNight() {
-    const thrillPool = eligible.filter((item) => item.activityTypes.some((type) => HALLOWEEN_THRILL_TYPES.includes(type)));
-    const settlePool = eligible.filter((item) => item.activityTypes.some((type) => HALLOWEEN_SETTLE_TYPES.includes(type)));
-    const first = venueWeightedPick(thrillPool.length ? thrillPool : eligible, Math.max(filters.mood, 70), sessionShown, true);
+    const thrillPool = eligible.filter((item) =>
+      item.activityTypes.some((type) => HALLOWEEN_THRILL_TYPES.includes(type)),
+    );
+    const settlePool = eligible.filter((item) =>
+      item.activityTypes.some((type) => HALLOWEEN_SETTLE_TYPES.includes(type)),
+    );
+    const first = venueWeightedPick(
+      thrillPool.length ? thrillPool : eligible,
+      Math.max(filters.mood, 70),
+      sessionShown,
+      true,
+    );
     if (!first) return;
     const secondPool = (settlePool.length ? settlePool : eligible).filter((item) => item.id !== first.id);
     const second = venueWeightedPick(secondPool, Math.min(filters.mood, 42), sessionShown, false);
     const next = [first, second].filter((item): item is DecoratedDateNightPlace => Boolean(item));
     next.forEach((item) => markShown(item.id));
-    setOptions(next.length ? next : null);
+    setNightPlan(next.length ? next : null);
     if (next.length && "vibrate" in navigator) navigator.vibrate?.(12);
   }
 
@@ -308,7 +326,7 @@ export function DateNightHome() {
     <main className="px-4 pb-48 pt-5">
       {halloweenActive ? null : (
         <header className="mb-6">
-          <p className="text-kicker text-accent">Dinner roulette \u00b7 Date Night</p>
+          <p className="text-kicker text-accent">Dinner roulette · Date Night</p>
           <h1 className="font-display mt-1 text-4xl leading-tight text-fg">What Should We Do?</h1>
           <p className="mt-2 max-w-sm text-sm text-muted">Set the mood. Let the app pick the date.</p>
         </header>
@@ -321,8 +339,12 @@ export function DateNightHome() {
             <p className="truncate text-base text-fg">{location.label}</p>
           </div>
           <div className="flex gap-1">
-            <Button variant="ghost" size="icon" aria-label="Use current location" onClick={useDeviceLocation}><LocateFixed className="size-5" /></Button>
-            <Button variant="ghost" size="icon" aria-label="Change location" onClick={() => setLocOpen((value) => !value)}><MapPin className="size-5" /></Button>
+            <Button variant="ghost" size="icon" aria-label="Use current location" onClick={useDeviceLocation}>
+              <LocateFixed className="size-5" />
+            </Button>
+            <Button variant="ghost" size="icon" aria-label="Change location" onClick={() => setLocOpen((value) => !value)}>
+              <MapPin className="size-5" />
+            </Button>
           </div>
         </div>
         {locOpen ? (
@@ -330,7 +352,7 @@ export function DateNightHome() {
             <Input value={locQuery} onChange={(event) => setLocQuery(event.target.value)} placeholder="City or ZIP code" aria-label="City or ZIP code" />
             {locError ? <p className="text-sm text-danger">{locError}</p> : null}
             <div className="flex gap-2">
-              <Button type="submit" className="flex-1" disabled={locBusy}>{locBusy ? "Finding\u2026" : "Set location"}</Button>
+              <Button type="submit" className="flex-1" disabled={locBusy}>{locBusy ? "Finding…" : "Set location"}</Button>
               <Button type="button" variant="secondary" onClick={() => setLocOpen(false)}>Cancel</Button>
             </div>
           </form>
@@ -382,12 +404,14 @@ export function DateNightHome() {
         </div>
       </section>
 
-      {loading ? <DiscoveryLoading label="Finding date ideas near you\u2026" /> : null}
+      {loading ? <DiscoveryLoading label="Finding date ideas near you…" /> : null}
       {warning ? (
         <DiscoveryNotice
           tone="fallback"
           title="Live discovery is temporarily unavailable"
-          body="Dinner Roulette is using verified saved local date ideas so the roulette can keep working."
+          body={halloweenActive
+            ? "Dinner Roulette is using saved seasonal anchors with unconfirmed hours. Check each stop before you leave."
+            : "Dinner Roulette is using verified saved local date ideas so the roulette can keep working."}
         />
       ) : null}
       {error ? (
@@ -407,7 +431,7 @@ export function DateNightHome() {
 
       <div className="fixed inset-x-0 bottom-20 z-20 mx-auto w-full max-w-lg px-4 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2">
         <div className="rounded-xl bg-bg/95 p-3 shadow-border backdrop-blur-sm">
-          <p className="mb-2 text-center text-xs text-subtle tabular-nums">{loading ? "Finding date ideas\u2026" : `${eligible.length} activities match`}</p>
+          <p className="mb-2 text-center text-xs text-subtle tabular-nums">{loading ? "Finding date ideas…" : `${eligible.length} activities match`}</p>
           <div className="grid grid-cols-2 gap-2">
             <Button size="lg" className="pick-pulse h-14 gap-1.5 px-2 font-display" onClick={() => roll()} disabled={!eligible.length || loading}><Heart className="size-4" />Pick our date</Button>
             <Button size="lg" variant="secondary" className="h-14 gap-1.5 px-2" onClick={dealOptions} disabled={!eligible.length || loading}><LayoutGrid className="size-4" />Give us options</Button>
@@ -422,6 +446,7 @@ export function DateNightHome() {
 
       {pick ? <ResultOverlay restaurant={pick as DecoratedRestaurant} reelNames={reelNames} onClose={() => setPick(null)} onReroll={() => roll()} onNotTonight={() => { excludeTonight(pick.id, pick.name); setPick(null); }} skipSpin={skipSpin} mode="date-night" /> : null}
       {options ? <OptionsOverlay restaurants={options as DecoratedRestaurant[]} onClose={() => setOptions(null)} onSelect={(restaurant) => { setOptions(null); setSkipSpin(true); setPick(restaurant as DecoratedDateNightPlace); }} onShuffle={dealOptions} onNotTonight={(restaurant) => excludeTonight(restaurant.id, restaurant.name)} mode="date-night" /> : null}
+      {nightPlan ? <DateNightPlanOverlay plan={nightPlan} onClose={() => setNightPlan(null)} onReplan={planNight} /> : null}
     </main>
   );
 }
