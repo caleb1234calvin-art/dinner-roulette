@@ -6,6 +6,8 @@ import { THEME_BOOTSTRAP_SCRIPT } from "@/lib/theme";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "Dinner Roulette";
+const VERCEL_ANALYTICS_BOOTSTRAP_SCRIPT =
+  "window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -44,6 +46,8 @@ export const Route = createRootRoute({
             <Outlet />
           </AppShell>
         </AuthProvider>
+        <script dangerouslySetInnerHTML={{ __html: VERCEL_ANALYTICS_BOOTSTRAP_SCRIPT }} />
+        <script defer src="/_vercel/insights/script.js" />
         <Scripts />
       </body>
     </html>
