@@ -1,15 +1,18 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { ChevronDown, LayoutGrid, LocateFixed, MapPin, Shuffle, SlidersHorizontal } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
-import { Switch } from "@/components/ui/switch";
-import { Input } from "@/components/ui/input";
+import { DiscoveryLoading, DiscoveryNotice } from "@/components/discovery-status";
 import { OptionsOverlay } from "@/components/options-overlay";
 import { ResultOverlay } from "@/components/result-overlay";
-import { lookupLocation, lookupReverseLocation, searchRestaurants } from "@/lib/restaurants/search";
-import { decorateAll } from "@/lib/restaurants/decorate";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Slider } from "@/components/ui/slider";
+import { Switch } from "@/components/ui/switch";
+import { PRESETS } from "@/lib/presets";
 import { CUISINE_CHIPS, PRIMARY_CUISINES, isAnythingSelected } from "@/lib/restaurants/cuisines";
+import { decorateAll } from "@/lib/restaurants/decorate";
 import { formatPrice } from "@/lib/restaurants/hours";
+import { lookupLocation, lookupReverseLocation, searchRestaurants } from "@/lib/restaurants/search";
+import { DISTANCE_OPTIONS, type CuisineId, type DecoratedRestaurant, type Restaurant } from "@/lib/restaurants/types";
 import {
   applyHardFilters,
   diagnoseEmptyPool,
@@ -18,9 +21,7 @@ import {
   type EmptyCause,
   type WeightContext,
 } from "@/lib/restaurants/weighting";
-import { DISTANCE_OPTIONS, type CuisineId, type DecoratedRestaurant, type Restaurant } from "@/lib/restaurants/types";
-import { PRESETS } from "@/lib/presets";
-import { RADIUS_OPTIONS, useAppStore } from "@/lib/store";
+import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 function moodLabel(value: number): string {
@@ -100,6 +101,7 @@ export function PickHome() {
     let cancelled = false;
     setLoading(true);
     setError(null);
+    setWarning(null);
     searchRestaurants({
       data: {
         lat: location.lat,
@@ -265,7 +267,7 @@ export function PickHome() {
     setOptions(remaining);
   }
 
-  const radiusIndex = Math.max(0, RADIUS_OPTIONS.indexOf(filters.radiusMiles));
+  const radiusIndex = Math.max(0, DISTANCE_OPTIONS.indexOf(filters.radiusMiles));
   const anything = isAnythingSelected(filters.cuisines);
   const visibleChips = showAllCuisines
     ? CUISINE_CHIPS
@@ -409,7 +411,7 @@ export function PickHome() {
                 aria-pressed={selected}
                 onClick={() => toggleCuisine(chip.id as CuisineId)}
                 className={cn(
-                  "chip min-h-10 rounded-full px-3 py-2 text-sm shadow-border",
+                  "chip min-h-11 rounded-full px-3 py-2 text-sm shadow-border",
                   selected ? "bg-fg text-bg" : "bg-surface text-muted",
                   chip.id === "anything" ? "font-medium" : "",
                 )}
@@ -421,7 +423,7 @@ export function PickHome() {
           <button
             type="button"
             onClick={() => setShowAllCuisines((value) => !value)}
-            className="chip inline-flex min-h-10 items-center gap-1 rounded-full bg-elevated px-3 py-2 text-sm text-muted shadow-border"
+            className="chip inline-flex min-h-11 items-center gap-1 rounded-full bg-elevated px-3 py-2 text-sm text-muted shadow-border"
           >
             {showAllCuisines ? "Fewer" : `More (${hiddenCount})`}
             <ChevronDown className={cn("size-4 transition-transform duration-150", showAllCuisines && "rotate-180")} />
@@ -473,8 +475,21 @@ export function PickHome() {
         </div>
       </section>
 
-      {warning ? <p className="mt-4 text-sm text-muted">{warning}</p> : null}
-      {error ? <p className="mt-4 text-sm text-danger">{error}</p> : null}
+      {loading ? <DiscoveryLoading label="Finding restaurants near you…" /> : null}
+      {warning ? (
+        <DiscoveryNotice
+          tone="fallback"
+          title="Live discovery is temporarily unavailable"
+          body="Dinner Roulette is using verified saved local restaurants so you can keep deciding normally."
+        />
+      ) : null}
+      {error ? (
+        <DiscoveryNotice
+          tone="error"
+          title="We couldn't refresh restaurants right now"
+          body="Try again in a moment, change your location, or widen your search radius."
+        />
+      ) : null}
 
       {emptyCauses ? (
         <EmptyPool

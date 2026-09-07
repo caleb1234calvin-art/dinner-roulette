@@ -1,17 +1,12 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { LayoutGrid, LocateFixed, MapPin, Shuffle } from "lucide-react";
+import { DiscoveryLoading, DiscoveryNotice } from "@/components/discovery-status";
+import { OptionsOverlay } from "@/components/options-overlay";
+import { ResultOverlay } from "@/components/result-overlay";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
-import { OptionsOverlay } from "@/components/options-overlay";
-import { ResultOverlay } from "@/components/result-overlay";
-import { decorateAll } from "@/lib/restaurants/decorate";
-import { formatPrice } from "@/lib/restaurants/hours";
-import { lookupLocation, lookupReverseLocation } from "@/lib/restaurants/search";
-import { DISTANCE_OPTIONS, type DecoratedRestaurant, type Restaurant } from "@/lib/restaurants/types";
-import { RADIUS_OPTIONS, useAppStore } from "@/lib/store";
-import { cn } from "@/lib/utils";
 import { searchNightlife } from "@/lib/nightlife/search";
 import {
   DEFAULT_NIGHTLIFE_FILTERS,
@@ -22,6 +17,12 @@ import {
   type NightlifePlace,
   type NightlifeTypeId,
 } from "@/lib/nightlife/types";
+import { decorateAll } from "@/lib/restaurants/decorate";
+import { formatPrice } from "@/lib/restaurants/hours";
+import { lookupLocation, lookupReverseLocation } from "@/lib/restaurants/search";
+import { DISTANCE_OPTIONS, type DecoratedRestaurant, type Restaurant } from "@/lib/restaurants/types";
+import { RADIUS_OPTIONS, useAppStore } from "@/lib/store";
+import { cn } from "@/lib/utils";
 
 function weightedPick(items: DecoratedNightlifePlace[], energy: number, shown: string[]) {
   if (!items.length) return null;
@@ -66,6 +67,7 @@ export function NightlifeHome() {
   const [venues, setVenues] = useState<NightlifePlace[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [warning, setWarning] = useState<string | null>(null);
   const [locOpen, setLocOpen] = useState(false);
   const [locQuery, setLocQuery] = useState("");
   const [locBusy, setLocBusy] = useState(false);
@@ -79,6 +81,7 @@ export function NightlifeHome() {
     let cancelled = false;
     setLoading(true);
     setError(null);
+    setWarning(null);
     searchNightlife({
       data: {
         lat: location.lat,
@@ -87,13 +90,14 @@ export function NightlifeHome() {
       },
     })
       .then((result) => {
-        if (!cancelled) setVenues(result.venues);
+        if (cancelled) return;
+        setVenues(result.venues);
+        setWarning(result.warning ?? null);
       })
       .catch((err: unknown) => {
-        if (!cancelled) {
-          setVenues([]);
-          setError(err instanceof Error ? err.message : "Could not load nightlife venues");
-        }
+        if (cancelled) return;
+        setVenues([]);
+        setError(err instanceof Error ? err.message : "Could not load nightlife venues");
       })
       .finally(() => {
         if (!cancelled) setLoading(false);
@@ -229,7 +233,7 @@ export function NightlifeHome() {
         </div>
         {locOpen ? (
           <form className="mt-4 space-y-3" onSubmit={searchManualLocation}>
-            <Input value={locQuery} onChange={(event) => setLocQuery(event.target.value)} placeholder="City or ZIP code" />
+            <Input value={locQuery} onChange={(event) => setLocQuery(event.target.value)} placeholder="City or ZIP code" aria-label="City or ZIP code" />
             {locError ? <p className="text-sm text-danger">{locError}</p> : null}
             <div className="flex gap-2">
               <Button type="submit" className="flex-1" disabled={locBusy}>{locBusy ? "Finding…" : "Set location"}</Button>
@@ -244,7 +248,7 @@ export function NightlifeHome() {
           <h2 className="text-sm text-muted">How far?</h2>
           <p className="text-base text-fg tabular-nums">Within {filters.radiusMiles} miles</p>
         </div>
-        <Slider min={0} max={DISTANCE_OPTIONS.length - 1} step={1} value={[radiusIndex]} onValueChange={([index]) => updateFilters({ radiusMiles: DISTANCE_OPTIONS[index ?? 0] ?? 10 })} />
+        <Slider min={0} max={DISTANCE_OPTIONS.length - 1} step={1} value={[radiusIndex]} onValueChange={([index]) => updateFilters({ radiusMiles: DISTANCE_OPTIONS[index ?? 0] ?? 10 })} aria-label="Travel distance" />
         <div className="mt-2 flex justify-between text-2xs text-subtle"><span>1</span><span>10</span><span>30</span></div>
       </section>
 
@@ -253,7 +257,7 @@ export function NightlifeHome() {
           <h2 className="text-sm text-muted">Budget</h2>
           <p className="text-base text-fg">{formatPrice(filters.minPrice)} — {formatPrice(filters.maxPrice)}</p>
         </div>
-        <Slider min={1} max={4} step={1} minStepsBetweenThumbs={0} value={[filters.minPrice, filters.maxPrice]} onValueChange={([min, max]) => updateFilters({ minPrice: (min ?? 1) as 1 | 2 | 3 | 4, maxPrice: (max ?? 4) as 1 | 2 | 3 | 4 })} />
+        <Slider min={1} max={4} step={1} minStepsBetweenThumbs={0} value={[filters.minPrice, filters.maxPrice]} onValueChange={([min, max]) => updateFilters({ minPrice: (min ?? 1) as 1 | 2 | 3 | 4, maxPrice: (max ?? 4) as 1 | 2 | 3 | 4 })} aria-label="Price range" />
         <div className="mt-2 flex justify-between text-2xs text-subtle"><span>$</span><span>$$</span><span>$$$</span><span>$$$$</span></div>
       </section>
 
@@ -263,7 +267,7 @@ export function NightlifeHome() {
           {NIGHTLIFE_TYPE_CHIPS.map((chip) => {
             const selected = chip.id === "anything" ? filters.venueTypes.includes("anything") : filters.venueTypes.includes(chip.id);
             return (
-              <button key={chip.id} type="button" aria-pressed={selected} onClick={() => toggleVenueType(chip.id)} className={cn("chip min-h-10 rounded-full px-3 py-2 text-sm shadow-border", selected ? "bg-accent text-accent-fg" : "bg-surface text-muted")}>
+              <button key={chip.id} type="button" aria-pressed={selected} onClick={() => toggleVenueType(chip.id)} className={cn("chip min-h-11 rounded-full px-3 py-2 text-sm shadow-border", selected ? "bg-accent text-accent-fg" : "bg-surface text-muted")}>
                 {chip.label}
               </button>
             );
@@ -276,22 +280,36 @@ export function NightlifeHome() {
           <h2 className="text-sm text-muted">What's the vibe?</h2>
           <p className="text-base text-fg">{nightlifeEnergyLabel(filters.energy)}</p>
         </div>
-        <Slider min={0} max={100} step={1} value={[filters.energy]} onValueChange={([value]) => updateFilters({ energy: value ?? 50 })} />
+        <Slider min={0} max={100} step={1} value={[filters.energy]} onValueChange={([value]) => updateFilters({ energy: value ?? 50 })} aria-label="Chill to lively" />
         <div className="mt-2 flex justify-between text-2xs text-subtle"><span>Chill</span><span>Lively</span></div>
       </section>
 
       <section className="mt-7 space-y-2">
         <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">
           <div><p className="text-sm text-fg">Open now only</p><p className="text-xs text-subtle">Skip places that have already closed</p></div>
-          <Switch checked={filters.openNowOnly} onCheckedChange={(checked) => updateFilters({ openNowOnly: checked })} />
+          <Switch checked={filters.openNowOnly} onCheckedChange={(checked) => updateFilters({ openNowOnly: checked })} aria-label="Open now only" />
         </div>
         <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">
           <div><p className="text-sm text-fg">Favorites only</p><p className="text-xs text-subtle">Pick from nightlife spots you've saved</p></div>
-          <Switch checked={filters.favoritesOnly} onCheckedChange={(checked) => updateFilters({ favoritesOnly: checked })} />
+          <Switch checked={filters.favoritesOnly} onCheckedChange={(checked) => updateFilters({ favoritesOnly: checked })} aria-label="Favorites only" />
         </div>
       </section>
 
-      {error ? <p className="mt-4 text-sm text-danger">{error}</p> : null}
+      {loading ? <DiscoveryLoading label="Finding nightlife near you…" /> : null}
+      {warning ? (
+        <DiscoveryNotice
+          tone="fallback"
+          title="Live discovery is taking the night off"
+          body="Dinner Roulette is using verified saved local nightlife instead, so you can keep picking without interruption."
+        />
+      ) : null}
+      {error ? (
+        <DiscoveryNotice
+          tone="error"
+          title="We couldn't refresh nightlife right now"
+          body="Try again in a moment, change your location, or widen your search radius."
+        />
+      ) : null}
       {!loading && !error && eligible.length === 0 ? (
         <div className="mt-5 rounded-xl bg-surface p-4 text-sm text-muted shadow-border">Nothing matches those filters. Try increasing distance, allowing more venue types, or turning off Open now only.</div>
       ) : null}

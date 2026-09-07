@@ -1,5 +1,17 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "images": {
+    "sizes": [640],
+    "localPatterns": [
+      {
+        "pathname": "^/date-night-icons/.*$",
+        "search": ""
+      }
+    ],
+    "minimumCacheTTL": 86400,
+    "qualities": [90],
+    "formats": ["image/webp"]
+  },
   "rewrites": [
     {
       "source": "/downloads/DinnerRoulette.apk",

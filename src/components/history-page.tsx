@@ -1,4 +1,5 @@
-import { Clock3 } from "lucide-react";
+import { Clock3, Sparkles } from "lucide-react";
+import { getDateNightIcon, isDateNightRecord } from "@/lib/date-night/icons";
 import { useAppStore } from "@/lib/store";
 
 function formatDay(iso: string): string {
@@ -37,18 +38,28 @@ export function HistoryPage() {
             <section key={day}>
               <h2 className="text-xs tracking-wide text-subtle uppercase">{day}</h2>
               <ul className="mt-2 space-y-2">
-                {items.map((visit) => (
-                  <li
-                    key={visit.id}
-                    className="rounded-lg bg-surface px-4 py-3 shadow-[var(--shadow-border)]"
-                  >
-                    <p className="text-base text-fg">{visit.restaurantName}</p>
-                    <p className="text-sm text-muted">
-                      {visit.cuisineLabel}
-                      {visit.personalRating ? ` · ${visit.personalRating}/5` : ""}
-                    </p>
-                  </li>
-                ))}
+                {items.map((visit) => {
+                  const dateNight = isDateNightRecord(visit.restaurantId);
+                  const icon = dateNight ? getDateNightIcon({ cuisineLabel: visit.cuisineLabel }) : null;
+                  return (
+                    <li key={visit.id} className="rounded-lg bg-surface px-3 py-3 shadow-[var(--shadow-border)]">
+                      <div className="flex items-center gap-3">
+                        {dateNight ? (
+                          <div className="flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-elevated p-1 outline outline-1 -outline-offset-1 outline-fg/10">
+                            {icon ? <img src={icon} alt="" className="size-full rounded-lg object-cover" /> : <Sparkles className="size-6 text-accent" />}
+                          </div>
+                        ) : null}
+                        <div className="min-w-0 flex-1">
+                          <p className="truncate text-base text-fg">{visit.restaurantName}</p>
+                          <p className="text-sm text-muted">
+                            {visit.cuisineLabel}
+                            {visit.personalRating ? ` · ${visit.personalRating}/5` : ""}
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  );
+                })}
               </ul>
             </section>
           ))}

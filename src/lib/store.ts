@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { DEFAULT_DATE_NIGHT_FILTERS, type DateNightFilters } from "./date-night/types";
 import { applyTheme, isThemeId, type ThemeId } from "./theme";
 import { startOfTomorrow, todayKey } from "./utils";
 import {
@@ -17,6 +18,7 @@ import {
 interface AppState {
   location: SearchLocation;
   filters: AppFilters;
+  dateNightFilters: DateNightFilters;
   preferences: Record<string, RestaurantPreference>;
   visits: VisitRecord[];
   exclusions: TemporaryExclusion[];
@@ -28,6 +30,7 @@ interface AppState {
   setTheme: (theme: ThemeId) => void;
   setLocation: (location: SearchLocation) => void;
   setFilters: (patch: Partial<AppFilters>) => void;
+  setDateNightFilters: (patch: Partial<DateNightFilters>) => void;
   toggleCuisine: (id: CuisineId) => void;
   applyPreset: (patch: Partial<AppFilters>) => void;
   markShown: (restaurantId: string) => void;
@@ -89,6 +92,7 @@ export const useAppStore = create<AppState>()(
     (set, get) => ({
       location: DEFAULT_LOCATION,
       filters: DEFAULT_FILTERS,
+      dateNightFilters: DEFAULT_DATE_NIGHT_FILTERS,
       preferences: {},
       visits: [],
       exclusions: [],
@@ -103,6 +107,14 @@ export const useAppStore = create<AppState>()(
       },
       setLocation: (location) => set({ location, sessionShown: [] }),
       setFilters: (patch) => set({ filters: { ...DEFAULT_FILTERS, ...get().filters, ...patch } }),
+      setDateNightFilters: (patch) =>
+        set({
+          dateNightFilters: {
+            ...DEFAULT_DATE_NIGHT_FILTERS,
+            ...get().dateNightFilters,
+            ...patch,
+          },
+        }),
       toggleCuisine: (id) => {
         const current = get().filters.cuisines;
         if (id === "anything") {
@@ -202,10 +214,11 @@ export const useAppStore = create<AppState>()(
           sessionShown: sessionDate === today ? get().sessionShown : [],
         });
       },
-      resetFilters: () => set({ filters: DEFAULT_FILTERS }),
+      resetFilters: () => set({ filters: DEFAULT_FILTERS, dateNightFilters: DEFAULT_DATE_NIGHT_FILTERS }),
       resetAllData: () =>
         set({
           filters: DEFAULT_FILTERS,
+          dateNightFilters: DEFAULT_DATE_NIGHT_FILTERS,
           preferences: {},
           visits: [],
           exclusions: [],
@@ -219,6 +232,7 @@ export const useAppStore = create<AppState>()(
       partialize: (state) => ({
         location: state.location,
         filters: state.filters,
+        dateNightFilters: state.dateNightFilters,
         preferences: state.preferences,
         visits: state.visits,
         exclusions: state.exclusions,
@@ -232,6 +246,7 @@ export const useAppStore = create<AppState>()(
           ...current,
           ...saved,
           filters: { ...DEFAULT_FILTERS, ...saved.filters },
+          dateNightFilters: { ...DEFAULT_DATE_NIGHT_FILTERS, ...saved.dateNightFilters },
           theme: isThemeId(saved.theme) ? saved.theme : current.theme,
         };
       },

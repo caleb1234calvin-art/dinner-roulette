@@ -1,6 +1,6 @@
 import type { CatalogEntry } from "./catalog";
 
-// Jasper County expansion, audited September 2026.
+// Jasper County expansion, re-audited September 2026.
 // This layer supplements live OpenStreetMap discovery. Entries are only added
 // when the business location is precise enough to support distance filtering
 // and directions without guessing.
@@ -37,6 +37,8 @@ export const JASPER_COUNTY_LOCAL_CATALOG: CatalogEntry[] = [
     rating: 0,
     reviewCount: 0,
     openingHours: "Su-Th 10:30-21:00; Fr-Sa 10:30-22:00",
+    phone: "+1 417-717-8930",
+    website: "https://flatcreekrestaurants.com/",
     isChain: false,
     photoKey: "american",
   },
@@ -52,25 +54,30 @@ export const JASPER_COUNTY_LOCAL_CATALOG: CatalogEntry[] = [
     priceLevel: 2,
     rating: 0,
     reviewCount: 0,
-    openingHours: "unknown",
+    openingHours: "Mo-Tu off; We-Th 16:00-22:00; Fr-Sa 14:00-22:00; Su off",
+    phone: "+1 417-437-0164",
     isChain: false,
     photoKey: "american",
   },
 
   // Carl Junction
   {
-    matchNames: ["aussie's", "aussies", "joe's 19th hole", "joes 19th hole"],
+    // "Aussie's" is retained as an alias so stale map records merge into the
+    // current Briarbrook clubhouse name instead of appearing as a duplicate.
+    matchNames: ["joe's 19th hole", "joes 19th hole", "aussie's", "aussies"],
     id: "local-aussies-carl-junction",
-    name: "Aussie's",
+    name: "Joe's 19th Hole",
     lat: 37.159756,
     lon: -94.539375,
     address: "502 Briarbrook Dr, Carl Junction, MO",
     cuisines: ["american", "burgers"],
-    cuisineLabel: "American / Sports Bar",
-    priceLevel: 2,
+    cuisineLabel: "American / Bar & Grill",
+    priceLevel: 1,
     rating: 0,
     reviewCount: 0,
-    openingHours: "Mo-Tu 11:00-21:00; We-Th 11:00-22:00; Fr 11:00-01:00; Sa 09:00-01:00; Su 09:00-21:00",
+    openingHours: "Mo-We 12:00-18:00; Th-Sa 12:00-20:00; Su 12:00-18:00",
+    phone: "+1 417-649-6777",
+    website: "https://www.briarbrookgolfcourse.com/",
     isChain: false,
     photoKey: "american",
   },
@@ -89,6 +96,7 @@ export const JASPER_COUNTY_LOCAL_CATALOG: CatalogEntry[] = [
     rating: 0,
     reviewCount: 0,
     openingHours: "Mo-Sa 11:00-20:00; Su off",
+    phone: "+1 417-548-8067",
     isChain: false,
     photoKey: "asian",
   },
@@ -131,21 +139,42 @@ export const JASPER_COUNTY_LOCAL_CATALOG: CatalogEntry[] = [
 
   // Carterville
   {
-    matchNames: ["dead cow saloon and grill", "dead cow saloon & grill", "dead cow saloon"],
-    id: "local-dead-cow-carterville",
-    name: "Dead Cow Saloon and Grill",
+    matchNames: ["famos on 66", "famos", "famos italian smokehouse"],
+    id: "local-famos-on-66-carterville",
+    name: "Famos on 66",
     lat: 37.149215,
     lon: -94.438933,
     address: "328 E Main St, Carterville, MO",
-    cuisines: ["american", "bbq", "burgers"],
-    cuisineLabel: "Bar & Grill / BBQ",
+    cuisines: ["italian", "bbq", "burgers", "american"],
+    cuisineLabel: "Italian / Smokehouse",
     priceLevel: 2,
     rating: 0,
     reviewCount: 0,
-    openingHours: "Mo-Th 11:00-23:00; Fr-Sa 11:00-24:00; Su 10:00-24:00",
-    phone: "+1 417-673-2833",
+    openingHours: "Mo-We off; Th-Su 11:00-21:00",
+    phone: "+1 417-308-5667",
+    website: "https://famos66.com/",
     isChain: false,
-    photoKey: "bbq",
+    photoKey: "italian",
+  },
+
+  // Carthage / Precious Moments campus
+  {
+    matchNames: ["taste of italy", "taste of italy carthage"],
+    id: "local-taste-of-italy-carthage",
+    name: "Taste of Italy",
+    lat: 37.110697,
+    lon: -94.346761,
+    address: "4321 S Chapel Rd, Carthage, MO",
+    cuisines: ["italian", "pizza"],
+    cuisineLabel: "Italian",
+    priceLevel: 2,
+    rating: 0,
+    reviewCount: 0,
+    openingHours: "Mo off; Tu-Sa 11:00-21:00; Su 11:00-15:00",
+    phone: "+1 417-358-2000",
+    website: "https://preciousmomentschapel.org/pages/experience",
+    isChain: false,
+    photoKey: "italian",
   },
 
   // Alba
@@ -170,7 +199,7 @@ export const JASPER_COUNTY_LOCAL_CATALOG: CatalogEntry[] = [
 ];
 
 export const JASPER_COUNTY_AUDIT = {
-  auditedAt: "2026-09",
+  auditedAt: "2026-09-07",
   incorporatedPlaces: [
     "Airport Drive",
     "Alba",

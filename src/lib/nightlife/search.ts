@@ -45,6 +45,29 @@ interface OverpassElement {
 
 const ALL_LOCAL_NIGHTLIFE = [...JASPER_COUNTY_NIGHTLIFE_CATALOG, ...LOCAL_NIGHTLIFE_CATALOG];
 
+const RETIRED_NIGHTLIFE_NAMES = [
+  "dead cow saloon and grill",
+  "dead cow saloon & grill",
+  "dead cow saloon",
+] as const;
+
+const NIGHTLIFE_ALIAS_GROUPS = [
+  ["joe's 19th hole", "joes 19th hole", "aussie's", "aussies"],
+] as const;
+
+function isRetiredNightlifeName(name: string): boolean {
+  return RETIRED_NIGHTLIFE_NAMES.some((retired) => namesMatch(retired, name));
+}
+
+function nightlifeNamesMatch(a: string, b: string): boolean {
+  if (namesMatch(a, b)) return true;
+  return NIGHTLIFE_ALIAS_GROUPS.some(
+    (group) =>
+      group.some((candidate) => namesMatch(candidate, a)) &&
+      group.some((candidate) => namesMatch(candidate, b)),
+  );
+}
+
 function classify(tags: Record<string, string>, name: string): ConcreteNightlifeType[] {
   const types = new Set<ConcreteNightlifeType>();
   const amenity = tags.amenity ?? "";
@@ -69,7 +92,7 @@ function energyFor(types: readonly ConcreteNightlifeType[], tags: Record<string,
 function elementToPlace(element: OverpassElement): NightlifePlace | null {
   const tags = element.tags ?? {};
   const name = tags.name?.trim();
-  if (!name || /closed/i.test(name)) return null;
+  if (!name || /closed/i.test(name) || isRetiredNightlifeName(name)) return null;
   const lat = element.lat ?? element.center?.lat;
   const lon = element.lon ?? element.center?.lon;
   if (lat == null || lon == null) return null;
@@ -148,7 +171,7 @@ function mergeNightlife(live: NightlifePlace[], local: NightlifePlace[]): Nightl
   for (const place of live) {
     const matchIndex = merged.findIndex(
       (candidate) =>
-        namesMatch(candidate.name, place.name) &&
+        nightlifeNamesMatch(candidate.name, place.name) &&
         haversineMiles(candidate.lat, candidate.lon, place.lat, place.lon) < 0.35,
     );
     if (matchIndex >= 0) {

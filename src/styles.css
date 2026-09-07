@@ -60,6 +60,44 @@ html.nightlife-active,
   --app-shadow-border-hover: 0 0 0 1px color-mix(in oklab, var(--app-accent) 35%, transparent);
 }
 
+html.date-night-active[data-theme="light"] {
+  color-scheme: light;
+  --app-bg: #fbf9fc;
+  --app-surface: #ffffff;
+  --app-elevated: #f4edf4;
+  --app-fg: #352c38;
+  --app-muted: #6f6174;
+  --app-subtle: #93839a;
+  --app-accent: #d85b9f;
+  --app-accent-fg: #fff8fc;
+  --app-border: #e3d6e1;
+  --app-open: #438a70;
+  --app-danger: #c24a66;
+  --app-heart: #d85b9f;
+  --app-shadow-border:
+    0 0 0 1px color-mix(in oklab, var(--app-fg) 9%, transparent),
+    0 1px 2px -1px color-mix(in oklab, var(--app-fg) 7%, transparent);
+  --app-shadow-border-hover: 0 0 0 1px color-mix(in oklab, var(--app-accent) 34%, transparent);
+}
+
+html.date-night-active:not([data-theme="light"]) {
+  color-scheme: dark;
+  --app-bg: #19171d;
+  --app-surface: #232028;
+  --app-elevated: #2d2933;
+  --app-fg: #f5f1f7;
+  --app-muted: #c6bdcc;
+  --app-subtle: #948b9c;
+  --app-accent: #c9a7ff;
+  --app-accent-fg: #241b31;
+  --app-border: #3a3441;
+  --app-open: #76a88e;
+  --app-danger: #d56d7d;
+  --app-heart: #c9a7ff;
+  --app-shadow-border: 0 0 0 1px color-mix(in oklab, var(--app-fg) 8%, transparent);
+  --app-shadow-border-hover: 0 0 0 1px color-mix(in oklab, var(--app-accent) 36%, transparent);
+}
+
 @theme {
   --font-display: "Fraunces", "Times New Roman", serif;
   --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;

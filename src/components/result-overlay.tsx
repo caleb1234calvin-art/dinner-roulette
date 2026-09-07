@@ -1,17 +1,20 @@
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
-import { Ban, Heart, MapPinned, MoonStar, Phone, RotateCcw, Star, Utensils, X } from "lucide-react";
+import { Ban, ExternalLink, Heart, MapPinned, MoonStar, Phone, RotateCcw, Sparkles, Star, Utensils, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { restaurantVisual } from "@/lib/restaurants/image-overrides";
+import { getDateNightIcon } from "@/lib/date-night/icons";
+import { DATE_NIGHT_TAGLINES, dateNightTypeLabel, type DecoratedDateNightPlace } from "@/lib/date-night/types";
+import { NIGHTLIFE_TAGLINES, type DecoratedNightlifePlace } from "@/lib/nightlife/types";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
+import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { TAGLINES, type DecoratedRestaurant } from "@/lib/restaurants/types";
-import { NIGHTLIFE_TAGLINES } from "@/lib/nightlife/types";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 const RATING_LABELS = ["Never again", "Not great", "Fine", "Really good", "Favorite"] as const;
 const SPIN_DELAYS = [50, 50, 55, 60, 70, 80, 95, 115, 140, 170, 210, 260, 320];
+type ResultMode = "dinner" | "nightlife" | "date-night";
 
 function doorDashSearchUrl(name: string) {
   return `https://www.doordash.com/search/store/${encodeURIComponent(name)}`;
@@ -33,6 +36,39 @@ function uberEatsSearchUrl(name: string) {
   return `https://www.ubereats.com/search?q=${encodeURIComponent(name)}`;
 }
 
+function levelLabel(level: number | undefined, mode: ResultMode): string | null {
+  if (!level) return null;
+  if (mode === "nightlife") return level === 1 ? "Chill vibe" : level === 2 ? "Balanced vibe" : "Lively vibe";
+  if (mode === "date-night") return level === 1 ? "Cozy mood" : level === 2 ? "Playful mood" : "Adventurous mood";
+  return null;
+}
+
+function buildWhyReasons(restaurant: DecoratedRestaurant, mode: ResultMode, favorite: boolean): string[] {
+  const reasons: string[] = [];
+
+  if (mode === "date-night") {
+    const date = restaurant as DecoratedDateNightPlace;
+    if (date.activityTypes?.length) reasons.push(dateNightTypeLabel([date.activityTypes[0]!]));
+    const mood = levelLabel(date.moodLevel, mode);
+    if (mood) reasons.push(mood);
+  } else if (mode === "nightlife") {
+    const nightlife = restaurant as DecoratedNightlifePlace;
+    reasons.push(restaurant.cuisineLabel);
+    const vibe = levelLabel(nightlife.energyLevel, mode);
+    if (vibe) reasons.push(vibe);
+  } else {
+    reasons.push(restaurant.cuisineLabel);
+    if (restaurant.priceLevel) reasons.push(`${formatPrice(restaurant.priceLevel)} budget match`);
+  }
+
+  if (favorite) reasons.push("Saved favorite");
+  if (restaurant.hoursKnown && restaurant.isOpen) reasons.push("Open now");
+  else if (!restaurant.hoursKnown) reasons.push("Hours unconfirmed");
+  reasons.push(`${formatDistance(restaurant.distanceMiles)} away`);
+
+  return [...new Set(reasons)].slice(0, 4);
+}
+
 export function ResultOverlay({
   restaurant,
   reelNames,
@@ -48,7 +84,7 @@ export function ResultOverlay({
   onReroll: () => void;
   onNotTonight: () => void;
   skipSpin?: boolean;
-  mode?: "dinner" | "nightlife";
+  mode?: ResultMode;
 }) {
   const preferences = useAppStore((s) => s.preferences);
   const toggleFavorite = useAppStore((s) => s.toggleFavorite);
@@ -59,7 +95,7 @@ export function ResultOverlay({
   const [rateOpen, setRateOpen] = useState(false);
   const [rating, setRating] = useState(4);
   const [mounted, setMounted] = useState(false);
-  const taglines = mode === "nightlife" ? NIGHTLIFE_TAGLINES : TAGLINES;
+  const taglines = mode === "nightlife" ? NIGHTLIFE_TAGLINES : mode === "date-night" ? DATE_NIGHT_TAGLINES : TAGLINES;
   const tagline = useMemo(
     () => taglines[Math.floor(Math.random() * taglines.length)] ?? taglines[0],
     [restaurant.id, mode],
@@ -102,11 +138,16 @@ export function ResultOverlay({
 
   if (!mounted) return null;
 
-  const destination = restaurant.address && restaurant.address !== "Address unavailable"
-    ? restaurant.address
-    : `${restaurant.lat},${restaurant.lon}`;
+  const destination = restaurant.address && restaurant.address !== "Address unavailable" ? restaurant.address : `${restaurant.lat},${restaurant.lon}`;
   const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
   const visual = restaurantVisual(restaurant.name, restaurant.photoKey);
+  const dateNightRestaurant = restaurant as DecoratedDateNightPlace;
+  const dateNightIcon = mode === "date-night"
+    ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel })
+    : null;
+  const dateNightTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
+  const websiteLabel = dateNightTypes.includes("movies") ? "Check showtimes" : "Website & info";
+  const whyReasons = buildWhyReasons(restaurant, mode, favorite);
 
   function saveChoice() {
     recordVisit({
@@ -118,6 +159,9 @@ export function ResultOverlay({
     setRateOpen(false);
     onClose();
   }
+
+  const resultKicker = mode === "nightlife" ? "Tonight's move" : mode === "date-night" ? "Tonight's date" : "Tonight's pick";
+  const chosenLabel = mode === "nightlife" ? "We went here" : mode === "date-night" ? "We did this" : "We chose this";
 
   return createPortal(
     <div className="fixed inset-0 z-50 overflow-y-auto bg-bg">
@@ -132,7 +176,17 @@ export function ResultOverlay({
         ) : (
           <>
             <div className="relative h-56 overflow-hidden">
-              {visual.isLogo ? (
+              {mode === "date-night" && dateNightIcon ? (
+                <div className="flex size-full items-center justify-center bg-elevated p-4 outline outline-1 -outline-offset-1 outline-fg/10">
+                  <img src={dateNightIcon} alt="" className="size-44 rounded-[2rem] object-cover shadow-lg" />
+                </div>
+              ) : mode === "date-night" ? (
+                <div className="flex size-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10">
+                  <div className="flex size-28 items-center justify-center rounded-full bg-surface shadow-border">
+                    <Sparkles className="size-12 text-accent" />
+                  </div>
+                </div>
+              ) : visual.isLogo ? (
                 <div className="flex size-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
                   <div className="flex h-32 w-[70%] items-center justify-center rounded-2xl bg-[#d8d8d4] p-6 shadow-sm">
                     <img src={visual.src} alt="" className="max-h-full max-w-full object-contain" />
@@ -150,28 +204,53 @@ export function ResultOverlay({
             </div>
 
             <div className="result-in px-5 pt-2 pb-10">
-              <p className="text-kicker text-subtle">{mode === "nightlife" ? "Tonight's move" : "Tonight's pick"}</p>
+              <p className="text-kicker text-subtle">{resultKicker}</p>
               <h2 className="font-display mt-2 text-4xl leading-tight text-fg">{restaurant.name}</h2>
               <p className="mt-2 text-sm text-muted">{tagline}</p>
 
-              <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
-                <span>{restaurant.cuisineLabel}</span>
-                <span>{formatPrice(restaurant.priceLevel)}</span>
-                {restaurant.rating ? (
-                  <span className="inline-flex items-center gap-1 text-fg">
-                    <Star className="size-3.5 fill-fg" />
-                    {restaurant.rating.toFixed(1)}
-                    {restaurant.reviewCount ? <span className="text-subtle">({restaurant.reviewCount})</span> : null}
-                  </span>
-                ) : null}
-              </div>
+              {mode === "date-night" && dateNightTypes.length ? (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {dateNightTypes.map((type) => (
+                    <span key={type} className="rounded-full bg-elevated px-3 py-1.5 text-xs tracking-wide text-muted uppercase shadow-border">
+                      {dateNightTypeLabel([type])}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
+                  <span>{restaurant.cuisineLabel}</span>
+                  {restaurant.priceLevel ? <span>{formatPrice(restaurant.priceLevel)}</span> : null}
+                  {restaurant.rating ? (
+                    <span className="inline-flex items-center gap-1 text-fg">
+                      <Star className="size-3.5 fill-fg" />
+                      {restaurant.rating.toFixed(1)}
+                      {restaurant.reviewCount ? <span className="text-subtle">({restaurant.reviewCount})</span> : null}
+                    </span>
+                  ) : null}
+                </div>
+              )}
 
               <p className="mt-3 text-sm text-muted">
                 {formatDistance(restaurant.distanceMiles)}
                 {restaurant.hoursKnown ? ` · ${restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed"}` : ""}
               </p>
+              {mode === "date-night" && !restaurant.hoursKnown ? <p className="mt-1 text-sm text-subtle">Hours unknown — check before going.</p> : null}
               {restaurant.closingSoon ? <p className="mt-1 text-sm text-danger">Closing soon — go now if you're in.</p> : null}
               <p className="mt-1 text-sm text-subtle">{restaurant.address}</p>
+
+              <div className="mt-5 rounded-xl bg-surface p-4 shadow-border">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="size-4 text-accent" />
+                  <p className="text-xs tracking-[0.18em] text-subtle uppercase">Why this pick?</p>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {whyReasons.map((reason) => (
+                    <span key={reason} className="rounded-full bg-elevated px-3 py-1.5 text-xs text-muted">
+                      {reason}
+                    </span>
+                  ))}
+                </div>
+              </div>
 
               <div className="mt-6 space-y-2">
                 <Button size="lg" className="w-full" asChild>
@@ -180,6 +259,15 @@ export function ResultOverlay({
                     <span className="tracking-kicker uppercase">Go here</span>
                   </a>
                 </Button>
+
+                {mode === "date-night" && restaurant.website ? (
+                  <Button size="lg" variant="secondary" className="w-full" asChild>
+                    <a href={restaurant.website} target="_blank" rel="noreferrer">
+                      <ExternalLink className="size-4" />
+                      <span className="tracking-kicker uppercase">{websiteLabel}</span>
+                    </a>
+                  </Button>
+                ) : null}
 
                 {rateOpen ? (
                   <div className="rounded-xl bg-surface p-4 shadow-border">
@@ -209,8 +297,8 @@ export function ResultOverlay({
                         {favorite ? "Favorited" : "Favorite"}
                       </Button>
                       <Button variant="outline" onClick={() => setRateOpen(true)}>
-                        {mode === "nightlife" ? <MoonStar className="size-4" /> : <Utensils className="size-4" />}
-                        {mode === "nightlife" ? "We went here" : "We chose this"}
+                        {mode === "nightlife" ? <MoonStar className="size-4" /> : mode === "date-night" ? <Sparkles className="size-4" /> : <Utensils className="size-4" />}
+                        {chosenLabel}
                       </Button>
                     </div>
 
