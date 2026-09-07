@@ -15,18 +15,18 @@ html.halloween-date-night-active[data-theme="light"] {
   --app-fg: #342c2f;
   --app-muted: #6f6266;
   --app-subtle: #91858a;
-  --app-accent: #c43f48;
+  --app-accent: #a7343e;
   --app-accent-fg: #fff8f8;
   --app-border: #d9cfd2;
   --app-open: #438a70;
   --app-danger: #b74756;
-  --app-heart: #c43f48;
+  --app-heart: #a7343e;
   --app-shadow-border:
     0 0 0 1px color-mix(in oklab, #342c2f 9%, transparent),
     0 1px 2px -1px color-mix(in oklab, #342c2f 7%, transparent);
   --app-shadow-border-hover:
-    0 0 0 1px color-mix(in oklab, #c43f48 34%, transparent),
-    0 8px 24px -18px color-mix(in oklab, #c43f48 48%, transparent);
+    0 0 0 1px color-mix(in oklab, #a7343e 34%, transparent),
+    0 8px 24px -18px color-mix(in oklab, #a7343e 48%, transparent);
   --october-ember: #c56a32;
   --october-ember-fg: #6b3518;
 }
@@ -242,17 +242,8 @@ html.halloween-date-night-active .shortlist-brand-stage {
     0 16px 34px -22px color-mix(in oklab, var(--app-accent) 58%, transparent);
 }
 
-html.halloween-date-night-active .chip[aria-pressed="true"] {
-  background: var(--app-accent) !important;
-  color: var(--app-accent-fg) !important;
-  box-shadow:
-    0 0 0 1px color-mix(in oklab, var(--app-accent) 34%, transparent),
-    0 0 20px -10px color-mix(in oklab, var(--app-accent) 78%, transparent) !important;
-}
-
-html.halloween-date-night-active .chip[aria-pressed="false"] {
-  background: var(--app-surface) !important;
-  color: var(--app-muted) !important;
+html.halloween-date-night-active img[src*="date-night-icons"] {
+  filter: saturate(0.76) contrast(1.07) brightness(0.95);
 }
 
 @media (prefers-reduced-motion: reduce) {
