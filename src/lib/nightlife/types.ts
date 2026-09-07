@@ -5,7 +5,7 @@ import type {
   Restaurant,
 } from "@/lib/restaurants/types";
 
-export type HomeMode = "dinner" | "nightlife";
+export type HomeMode = "dinner" | "nightlife" | "date-night";
 
 export type NightlifeTypeId =
   | "anything"
