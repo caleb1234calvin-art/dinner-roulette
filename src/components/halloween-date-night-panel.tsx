@@ -242,56 +242,33 @@ html.halloween-date-night-active .shortlist-brand-stage {
     0 16px 34px -22px color-mix(in oklab, var(--app-accent) 58%, transparent);
 }
 
-html.halloween-date-night-active .chip:is(
-  [class*="ring-[#d56a2f]"],
-  [class*="ring-[#f4c092]"]
-) {
-  color: #17110d !important;
-  font-weight: 700;
+html.halloween-date-night-active .chip {
+  background: color-mix(in oklab, var(--app-surface) 28%, transparent) !important;
+  color: var(--app-fg) !important;
+  font-weight: 600 !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in oklab, var(--app-fg) 10%, transparent),
+    0 8px 20px -18px rgba(0, 0, 0, 0.35) !important;
 }
 
-html.halloween-date-night-active[data-theme="light"] .chip:is(
-  [class*="ring-[#d56a2f]"],
-  [class*="ring-[#f4c092]"]
-)[aria-pressed="false"] {
-  background: #f5c184 !important;
+html.halloween-date-night-active .chip[aria-pressed="true"] {
+  background: color-mix(in oklab, var(--app-accent) 26%, transparent) !important;
+  color: var(--app-fg) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 10px color-mix(in oklab, var(--app-accent) 30%, transparent);
   box-shadow:
-    inset 0 0 0 1px rgba(177, 92, 34, 0.28),
-    0 3px 10px -7px rgba(197, 106, 50, 0.4) !important;
+    inset 0 0 0 1px color-mix(in oklab, var(--app-accent) 34%, transparent),
+    0 0 0 1px color-mix(in oklab, var(--app-accent) 14%, transparent),
+    0 0 24px -10px color-mix(in oklab, var(--app-accent) 80%, transparent),
+    0 10px 24px -18px color-mix(in oklab, var(--app-accent) 55%, transparent) !important;
 }
 
-html.halloween-date-night-active[data-theme="light"] .chip:is(
-  [class*="ring-[#d56a2f]"],
-  [class*="ring-[#f4c092]"]
-)[aria-pressed="true"] {
-  background: linear-gradient(135deg, #f8ca91, #ec964b) !important;
-  box-shadow:
-    inset 0 0 0 1px rgba(138, 61, 20, 0.2),
-    0 0 0 1px rgba(232, 132, 48, 0.34),
-    0 0 24px -5px rgba(232, 132, 48, 0.78),
-    0 10px 28px -16px rgba(197, 106, 50, 0.75) !important;
-}
-
-html.halloween-date-night-active:not([data-theme="light"]) .chip:is(
-  [class*="ring-[#d56a2f]"],
-  [class*="ring-[#f4c092]"]
-)[aria-pressed="false"] {
-  background: #d98445 !important;
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 215, 171, 0.18),
-    0 5px 14px -9px rgba(229, 126, 50, 0.58) !important;
-}
-
-html.halloween-date-night-active:not([data-theme="light"]) .chip:is(
-  [class*="ring-[#d56a2f]"],
-  [class*="ring-[#f4c092]"]
-)[aria-pressed="true"] {
-  background: linear-gradient(135deg, #f0a35e, #dc742f) !important;
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 228, 195, 0.22),
-    0 0 0 1px rgba(240, 139, 55, 0.38),
-    0 0 26px -4px rgba(240, 139, 55, 0.82),
-    0 12px 30px -17px rgba(197, 106, 50, 0.88) !important;
+html.halloween-date-night-active .chip[aria-pressed="false"] {
+  background: color-mix(in oklab, var(--app-surface) 22%, transparent) !important;
+  color: var(--app-fg) !important;
+  font-weight: 600 !important;
 }
 
 html.halloween-date-night-active img[src*="date-night-icons"] {
