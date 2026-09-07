@@ -79,25 +79,25 @@ export function OptionsOverlay({
 
   return createPortal(
     <div className="fixed inset-0 z-50 overflow-y-auto bg-bg">
-      <div className="mx-auto flex min-h-dvh max-w-lg flex-col px-4 pb-8 pt-4">
+      <div className="mx-auto flex min-h-dvh max-w-lg flex-col px-4 pb-5 pt-3">
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-kicker text-subtle">{kicker}</p>
             <h2 className="font-display mt-1 text-3xl leading-tight text-fg">Tonight's options</h2>
             <p className="mt-1 text-sm text-muted">Pick one, or let us shuffle again.</p>
           </div>
-          <button type="button" onClick={onClose} className="flex size-11 shrink-0 items-center justify-center rounded-md bg-surface text-fg shadow-border" aria-label="Close options">
+          <button type="button" onClick={onClose} className="mt-1.5 flex size-11 shrink-0 items-center justify-center rounded-md bg-surface text-fg shadow-border" aria-label="Close options">
             <X className="size-5" />
           </button>
         </div>
 
-        <div className={cn("mt-5 grid flex-1 gap-3", restaurants.length === 1 ? "grid-cols-1" : "grid-cols-2")}>
+        <div className={cn("mt-4 grid content-start gap-3", restaurants.length === 1 ? "grid-cols-1" : "grid-cols-2")}>
           {restaurants.map((restaurant) => (
             <OptionCard key={restaurant.id} restaurant={restaurant} mode={mode} onSelect={() => onSelect(restaurant)} onNotTonight={() => onNotTonight(restaurant)} />
           ))}
         </div>
 
-        <div className="mt-5">
+        <div className="mt-3">
           <Button size="lg" variant="secondary" className="w-full" onClick={onShuffle}>
             <Shuffle className="size-4" />
             <span className="tracking-kicker uppercase">Shuffle options</span>
@@ -126,7 +126,7 @@ function OptionCard({ restaurant, mode, onSelect, onNotTonight }: {
   const activityTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-xl bg-surface shadow-border">
+    <article className="flex min-h-[17rem] flex-col overflow-hidden rounded-xl bg-surface shadow-border">
       <div className="relative">
         <button type="button" onClick={onSelect} className="block w-full text-left">
           {mode === "date-night" && dateNightIcon ? (
@@ -139,29 +139,21 @@ function OptionCard({ restaurant, mode, onSelect, onNotTonight }: {
             </div>
           ) : visual.isLogo ? (
             <div className="flex h-28 w-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
-              {displayLabel ? (
-                <div
-                  className="relative flex h-20 w-[76%] items-center justify-center overflow-hidden rounded-xl p-3"
-                  style={{
-                    background: "linear-gradient(145deg, color-mix(in oklab, var(--app-accent) 28%, var(--app-surface)), color-mix(in oklab, var(--app-accent) 10%, var(--app-elevated)))",
-                    boxShadow: "inset 0 0 0 1px color-mix(in oklab, var(--app-accent) 28%, transparent), 0 10px 24px -18px var(--app-accent)",
-                  }}
-                >
-                  <div className="absolute -top-5 -left-4 size-16 rounded-full bg-accent/15 blur-sm" />
-                  <div className="absolute -right-3 -bottom-5 size-14 rounded-full bg-accent/10 blur-sm" />
-                  <Sparkles className="absolute top-2 left-2 size-3.5 text-accent/70" />
+              <div className="shortlist-brand-stage relative flex h-20 w-[76%] items-center justify-center overflow-hidden rounded-xl p-3">
+                <div className="absolute -top-5 -left-4 size-16 rounded-full bg-accent/15 blur-sm" />
+                <div className="absolute -right-3 -bottom-5 size-14 rounded-full bg-accent/10 blur-sm" />
+                <Sparkles className="absolute top-2 left-2 size-3.5 text-accent/70" />
+                {displayLabel ? (
                   <span className={cn(
                     "relative z-10 max-w-[90%] whitespace-pre-line break-words text-center font-display font-semibold leading-[0.98] tracking-[0.015em] text-balance text-fg",
                     badgeTextSize(displayLabel),
                   )}>
                     {displayLabel}
                   </span>
-                </div>
-              ) : (
-                <div className="shortlist-logo-stage flex h-20 w-[76%] items-center justify-center rounded-xl p-3">
-                  <img src={visual.src} alt="" className="shortlist-logo-image max-h-full max-w-full object-contain" />
-                </div>
-              )}
+                ) : (
+                  <img src={visual.src} alt="" className="shortlist-logo-image relative z-10 max-h-[78%] max-w-[78%] object-contain" />
+                )}
+              </div>
             </div>
           ) : (
             <img src={visual.src} alt="" className="h-28 w-full object-cover outline outline-1 -outline-offset-1 outline-fg/10" />
