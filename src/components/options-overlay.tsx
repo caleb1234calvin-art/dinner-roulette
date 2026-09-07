@@ -37,13 +37,19 @@ function generatedBadgeLabel(src: string): string | null {
   }
 }
 
+function badgeDisplayLabel(generatedLabel: string, restaurantName: string): string {
+  const generatedWords = generatedLabel.replace(/\n/g, " ").replace(/\s+/g, " ").trim();
+  const sourceWords = restaurantName.replace(/\s+/g, " ").trim();
+  return generatedWords === sourceWords.toUpperCase() ? sourceWords : generatedLabel;
+}
+
 function badgeTextSize(label: string): string {
   const longestLine = Math.max(...label.split("\n").map((line) => line.length));
-  if (longestLine > 20) return "text-[10px]";
-  if (longestLine > 16) return "text-[11px]";
-  if (longestLine > 13) return "text-xs";
-  if (longestLine > 9) return "text-sm";
-  return "text-base";
+  if (longestLine > 20) return "text-[12px]";
+  if (longestLine > 16) return "text-[13px]";
+  if (longestLine > 13) return "text-sm";
+  if (longestLine > 9) return "text-base";
+  return "text-lg";
 }
 
 export function OptionsOverlay({
@@ -112,6 +118,7 @@ function OptionCard({ restaurant, mode, onSelect, onNotTonight }: {
   const openLabel = restaurant.hoursKnown ? (restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed") : null;
   const visual = restaurantVisual(restaurant.name, restaurant.photoKey);
   const generatedLabel = visual.isLogo ? generatedBadgeLabel(visual.src) : null;
+  const displayLabel = generatedLabel ? badgeDisplayLabel(generatedLabel, restaurant.name) : null;
   const dateNightRestaurant = restaurant as DecoratedDateNightPlace;
   const dateNightIcon = mode === "date-night"
     ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel })
@@ -132,18 +139,29 @@ function OptionCard({ restaurant, mode, onSelect, onNotTonight }: {
             </div>
           ) : visual.isLogo ? (
             <div className="flex h-28 w-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
-              <div className="flex h-20 w-[72%] items-center justify-center rounded-xl bg-[#d8d8d4] p-3 shadow-sm">
-                {generatedLabel ? (
+              {displayLabel ? (
+                <div
+                  className="relative flex h-20 w-[76%] items-center justify-center overflow-hidden rounded-xl p-3"
+                  style={{
+                    background: "linear-gradient(145deg, color-mix(in oklab, var(--app-accent) 28%, var(--app-surface)), color-mix(in oklab, var(--app-accent) 10%, var(--app-elevated)))",
+                    boxShadow: "inset 0 0 0 1px color-mix(in oklab, var(--app-accent) 28%, transparent), 0 10px 24px -18px var(--app-accent)",
+                  }}
+                >
+                  <div className="absolute -top-5 -left-4 size-16 rounded-full bg-accent/15 blur-sm" />
+                  <div className="absolute -right-3 -bottom-5 size-14 rounded-full bg-accent/10 blur-sm" />
+                  <Sparkles className="absolute top-2 left-2 size-3.5 text-accent/70" />
                   <span className={cn(
-                    "max-w-[92%] whitespace-pre-line break-words text-center font-sans font-extrabold leading-[0.98] tracking-[0.08em] text-balance text-[#26231f] uppercase",
-                    badgeTextSize(generatedLabel),
+                    "relative z-10 max-w-[90%] whitespace-pre-line break-words text-center font-display font-semibold leading-[0.98] tracking-[0.015em] text-balance text-fg",
+                    badgeTextSize(displayLabel),
                   )}>
-                    {generatedLabel}
+                    {displayLabel}
                   </span>
-                ) : (
+                </div>
+              ) : (
+                <div className="flex h-20 w-[72%] items-center justify-center rounded-xl bg-[#d8d8d4] p-3 shadow-sm">
                   <img src={visual.src} alt="" className="max-h-full max-w-full object-contain" />
-                )}
-              </div>
+                </div>
+              )}
             </div>
           ) : (
             <img src={visual.src} alt="" className="h-28 w-full object-cover outline outline-1 -outline-offset-1 outline-fg/10" />
