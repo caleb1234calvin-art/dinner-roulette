@@ -79,14 +79,14 @@ export function OptionsOverlay({
 
   return createPortal(
     <div className="fixed inset-0 z-50 overflow-y-auto bg-bg">
-      <div className="mx-auto flex min-h-dvh max-w-lg flex-col px-4 pb-6 pt-6">
+      <div className="mx-auto flex min-h-dvh max-w-lg flex-col justify-center px-4 py-6">
         <div className="flex items-start justify-between gap-3">
-          <div>
+          <div className="flex-1">
             <p className="text-kicker text-subtle">{kicker}</p>
             <h2 className="font-display mt-1 text-3xl leading-tight text-fg">Tonight's options</h2>
             <p className="mt-1 text-sm text-muted">Pick one, or let us shuffle again.</p>
           </div>
-          <button type="button" onClick={onClose} className="mt-1.5 flex size-11 shrink-0 items-center justify-center rounded-md bg-surface text-fg shadow-border" aria-label="Close options">
+          <button type="button" onClick={onClose} className="mt-2 flex size-11 shrink-0 items-center justify-center rounded-md bg-surface text-fg shadow-border" aria-label="Close options">
             <X className="size-5" />
           </button>
         </div>
