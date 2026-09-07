@@ -15,18 +15,18 @@ html.halloween-date-night-active[data-theme="light"] {
   --app-fg: #342c2f;
   --app-muted: #6f6266;
   --app-subtle: #91858a;
-  --app-accent: #b94f68;
-  --app-accent-fg: #fff8fa;
+  --app-accent: #c43f48;
+  --app-accent-fg: #fff8f8;
   --app-border: #d9cfd2;
   --app-open: #438a70;
   --app-danger: #b74756;
-  --app-heart: #b94f68;
+  --app-heart: #c43f48;
   --app-shadow-border:
     0 0 0 1px color-mix(in oklab, #342c2f 9%, transparent),
     0 1px 2px -1px color-mix(in oklab, #342c2f 7%, transparent);
   --app-shadow-border-hover:
-    0 0 0 1px color-mix(in oklab, #b94f68 34%, transparent),
-    0 8px 24px -18px color-mix(in oklab, #b94f68 48%, transparent);
+    0 0 0 1px color-mix(in oklab, #c43f48 34%, transparent),
+    0 8px 24px -18px color-mix(in oklab, #c43f48 48%, transparent);
   --october-ember: #c56a32;
   --october-ember-fg: #6b3518;
 }
@@ -39,18 +39,18 @@ html.halloween-date-night-active:not([data-theme="light"]) {
   --app-fg: #f1f4f2;
   --app-muted: #b8c1bc;
   --app-subtle: #89938e;
-  --app-accent: #4aa39f;
-  --app-accent-fg: #081f20;
+  --app-accent: #45a66f;
+  --app-accent-fg: #071d12;
   --app-border: #353a37;
   --app-open: #76a88e;
   --app-danger: #d16b72;
-  --app-heart: #4aa39f;
+  --app-heart: #45a66f;
   --app-shadow-border:
     0 0 0 1px color-mix(in oklab, #f1f4f2 8%, transparent),
     0 18px 45px -38px rgba(0, 0, 0, 0.95);
   --app-shadow-border-hover:
-    0 0 0 1px color-mix(in oklab, #4aa39f 34%, transparent),
-    0 18px 45px -34px color-mix(in oklab, #4aa39f 24%, transparent);
+    0 0 0 1px color-mix(in oklab, #45a66f 34%, transparent),
+    0 18px 45px -34px color-mix(in oklab, #45a66f 24%, transparent);
   --october-ember: #c56a32;
   --october-ember-fg: #ffd9bd;
 }
