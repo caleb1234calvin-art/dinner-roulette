@@ -22,14 +22,15 @@ import {
   type DecoratedDateNightPlace,
 } from "@/lib/date-night/types";
 
-function weightedPick(items: DecoratedDateNightPlace[], mood: number, shown: string[]) {
+function weightedPick(items: DecoratedDateNightPlace[], mood: number, shown: string[], reduceParks: boolean) {
   if (!items.length) return null;
   const target = 1 + (Math.min(Math.max(mood, 0), 100) / 100) * 2;
   const weights = items.map((item) => {
     const distancePenalty = 1 / (1 + item.distanceMiles * 0.04);
     const moodFit = 1 / (1 + Math.abs(item.moodLevel - target) * 0.8);
     const shownPenalty = shown.includes(item.id) ? 0.12 : 1;
-    return Math.max(0.001, distancePenalty * moodFit * shownPenalty);
+    const parkPenalty = reduceParks && item.activityTypes.includes("park") ? 0.06 : 1;
+    return Math.max(0.001, distancePenalty * moodFit * shownPenalty * parkPenalty);
   });
   const total = weights.reduce((sum, value) => sum + value, 0);
   let cursor = Math.random() * total;
@@ -40,11 +41,11 @@ function weightedPick(items: DecoratedDateNightPlace[], mood: number, shown: str
   return items[items.length - 1] ?? null;
 }
 
-function pickOptions(items: DecoratedDateNightPlace[], mood: number, shown: string[], count = 4) {
+function pickOptions(items: DecoratedDateNightPlace[], mood: number, shown: string[], reduceParks: boolean, count = 4) {
   const remaining = [...items];
   const result: DecoratedDateNightPlace[] = [];
   while (remaining.length && result.length < count) {
-    const next = weightedPick(remaining, mood, shown);
+    const next = weightedPick(remaining, mood, shown, reduceParks);
     if (!next) break;
     result.push(next);
     remaining.splice(remaining.findIndex((item) => item.id === next.id), 1);
@@ -176,7 +177,7 @@ export function DateNightHome() {
   }
 
   function roll(pool = eligible) {
-    const chosen = weightedPick(pool, filters.mood, sessionShown);
+    const chosen = weightedPick(pool, filters.mood, sessionShown, filters.reduceParks);
     if (!chosen) return;
     markShown(chosen.id);
     setReelNames(pool.map((item) => item.name));
@@ -186,7 +187,7 @@ export function DateNightHome() {
   }
 
   function dealOptions() {
-    const next = pickOptions(eligible, filters.mood, sessionShown, 4);
+    const next = pickOptions(eligible, filters.mood, sessionShown, filters.reduceParks, 4);
     next.forEach((item) => markShown(item.id));
     setOptions(next.length ? next : null);
     if (next.length && "vibrate" in navigator) navigator.vibrate?.(12);
@@ -263,6 +264,10 @@ export function DateNightHome() {
         <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">
           <div><p className="text-sm text-fg">Favorites only</p><p className="text-xs text-subtle">Pick from date spots you've saved</p></div>
           <Switch checked={filters.favoritesOnly} onCheckedChange={(checked) => updateFilters({ favoritesOnly: checked })} />
+        </div>
+        <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">
+          <div><p className="text-sm text-fg">Fewer parks</p><p className="text-xs text-subtle">Keep parks available, but make them much less likely</p></div>
+          <Switch checked={filters.reduceParks} onCheckedChange={(checked) => updateFilters({ reduceParks: checked })} />
         </div>
       </section>
 
