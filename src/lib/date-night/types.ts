@@ -19,6 +19,7 @@ export interface DateNightFilters {
   mood: number;
   openNowOnly: boolean;
   favoritesOnly: boolean;
+  reduceParks: boolean;
 }
 
 export interface DateNightPlace extends Restaurant {
@@ -43,6 +44,7 @@ export const DEFAULT_DATE_NIGHT_FILTERS: DateNightFilters = {
   mood: 50,
   openNowOnly: true,
   favoritesOnly: false,
+  reduceParks: true,
 };
 
 export const DATE_NIGHT_TYPE_CHIPS: ReadonlyArray<{
