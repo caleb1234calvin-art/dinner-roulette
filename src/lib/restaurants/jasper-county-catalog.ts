@@ -75,7 +75,7 @@ export const JASPER_COUNTY_LOCAL_CATALOG: CatalogEntry[] = [
     priceLevel: 1,
     rating: 0,
     reviewCount: 0,
-    openingHours: "unknown",
+    openingHours: "Mo-We 12:00-18:00; Th-Sa 12:00-20:00; Su 12:00-18:00",
     phone: "+1 417-649-6777",
     website: "https://www.briarbrookgolfcourse.com/",
     isChain: false,
