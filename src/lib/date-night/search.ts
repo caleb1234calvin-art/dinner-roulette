@@ -101,6 +101,43 @@ function elementToPlace(element: OverpassElement): DateNightPlace | null {
   };
 }
 
+function combineTypes(a: readonly ConcreteDateNightType[], b: readonly ConcreteDateNightType[]) {
+  return [...new Set([...a, ...b])];
+}
+
+function dedupeDateNight(places: DateNightPlace[]): DateNightPlace[] {
+  const result: DateNightPlace[] = [];
+  for (const place of places) {
+    const matchIndex = result.findIndex((candidate) => {
+      const distance = haversineMiles(candidate.lat, candidate.lon, place.lat, place.lon);
+      const sameName = namesMatch(candidate.name, place.name);
+      const sharedType = candidate.activityTypes.some((type) => place.activityTypes.includes(type));
+      return (sameName && distance < 0.6) || (distance < 0.03 && sharedType);
+    });
+
+    if (matchIndex < 0) {
+      result.push(place);
+      continue;
+    }
+
+    const existing = result[matchIndex]!;
+    const activityTypes = combineTypes(existing.activityTypes, place.activityTypes);
+    result[matchIndex] = {
+      ...place,
+      ...existing,
+      activityTypes,
+      cuisineLabel: dateNightTypeLabel(activityTypes),
+      openingHours: existing.openingHours ?? place.openingHours,
+      phone: existing.phone ?? place.phone,
+      website: existing.website ?? place.website,
+      address: existing.address !== "Address unavailable" ? existing.address : place.address,
+      moodLevel: moodFor(activityTypes),
+      source: existing.source === "catalog" || place.source === "catalog" ? "merged" : existing.source,
+    };
+  }
+  return result;
+}
+
 async function queryMirror(url: string, body: string): Promise<DateNightPlace[]> {
   const response = await fetch(url, {
     method: "POST",
@@ -121,7 +158,7 @@ async function queryMirror(url: string, body: string): Promise<DateNightPlace[]>
     const key = `${place.name.toLowerCase()}-${place.lat.toFixed(4)}-${place.lon.toFixed(4)}`;
     unique.set(key, place);
   }
-  return [...unique.values()];
+  return dedupeDateNight([...unique.values()]);
 }
 
 function localWithin(lat: number, lon: number, radiusMiles: number): DateNightPlace[] {
@@ -140,6 +177,7 @@ function mergeDateNight(live: DateNightPlace[], local: DateNightPlace[]): DateNi
     );
     if (matchIndex >= 0) {
       const curated = merged[matchIndex]!;
+      const activityTypes = combineTypes(curated.activityTypes, place.activityTypes);
       merged[matchIndex] = {
         ...place,
         id: curated.id,
@@ -148,16 +186,16 @@ function mergeDateNight(live: DateNightPlace[], local: DateNightPlace[]): DateNi
         openingHours: curated.openingHours || place.openingHours,
         phone: curated.phone ?? place.phone,
         website: curated.website ?? place.website,
-        activityTypes: curated.activityTypes,
-        moodLevel: curated.moodLevel,
-        cuisineLabel: curated.cuisineLabel,
+        activityTypes,
+        moodLevel: moodFor(activityTypes),
+        cuisineLabel: dateNightTypeLabel(activityTypes),
         source: "merged",
       };
       continue;
     }
     merged.push(place);
   }
-  return merged;
+  return dedupeDateNight(merged);
 }
 
 export const searchDateNight = createServerFn({ method: "POST" })
@@ -193,7 +231,7 @@ export const searchDateNight = createServerFn({ method: "POST" })
 
     if (local.length > 0) {
       return {
-        venues: local,
+        venues: dedupeDateNight(local),
         source: "fallback",
         warning: "Using saved Jasper County Date Night places while the live map is unavailable.",
       };
