@@ -79,7 +79,7 @@ export function OptionsOverlay({
 
   return createPortal(
     <div className="fixed inset-0 z-50 overflow-y-auto bg-bg">
-      <div className="mx-auto flex min-h-dvh max-w-lg flex-col px-4 pb-5 pt-3">
+      <div className="mx-auto flex min-h-dvh max-w-lg flex-col px-4 pb-6 pt-6">
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-kicker text-subtle">{kicker}</p>
@@ -91,13 +91,13 @@ export function OptionsOverlay({
           </button>
         </div>
 
-        <div className={cn("mt-4 grid content-start gap-3", restaurants.length === 1 ? "grid-cols-1" : "grid-cols-2")}>
+        <div className={cn("mt-5 grid content-start gap-x-3 gap-y-4", restaurants.length === 1 ? "grid-cols-1" : "grid-cols-2")}>
           {restaurants.map((restaurant) => (
             <OptionCard key={restaurant.id} restaurant={restaurant} mode={mode} onSelect={() => onSelect(restaurant)} onNotTonight={() => onNotTonight(restaurant)} />
           ))}
         </div>
 
-        <div className="mt-3">
+        <div className="mt-4">
           <Button size="lg" variant="secondary" className="w-full" onClick={onShuffle}>
             <Shuffle className="size-4" />
             <span className="tracking-kicker uppercase">Shuffle options</span>
