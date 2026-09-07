@@ -1,5 +1,6 @@
 import { Heart, MapPinned, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getDateNightIcon, isDateNightRecord } from "@/lib/date-night/icons";
 import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { formatDistance, haversineMiles } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
@@ -39,10 +40,17 @@ export function FavoritesPage() {
                 ? `https://www.google.com/maps/dir/?api=1&destination=${item.lat},${item.lon}`
                 : null;
             const visual = restaurantVisual(item.name, item.photoKey ?? "american");
+            const dateNightIcon = isDateNightRecord(item.restaurantId)
+              ? getDateNightIcon({ cuisineLabel: item.cuisineLabel })
+              : null;
             return (
               <li key={item.restaurantId} className="overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
                 <div className="flex gap-3 p-3">
-                  {visual.isLogo ? (
+                  {dateNightIcon ? (
+                    <div className="flex size-20 shrink-0 items-center justify-center rounded-md bg-elevated p-1 outline outline-1 -outline-offset-1 outline-fg/10">
+                      <img src={dateNightIcon} alt="" className="size-full rounded-lg object-cover" />
+                    </div>
+                  ) : visual.isLogo ? (
                     <div className="flex size-20 shrink-0 items-center justify-center rounded-md bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
                       <div className="flex size-16 items-center justify-center rounded-lg bg-[#d8d8d4] p-2">
                         <img src={visual.src} alt="" className="max-h-full max-w-full object-contain" />
