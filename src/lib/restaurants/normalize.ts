@@ -42,6 +42,10 @@ const COUNTY_RETIRED_NAMES = [
   "dead cow saloon and grill",
   "dead cow saloon & grill",
   "dead cow saloon",
+  "granny shaffer's family restaurant",
+  "granny shaffers family restaurant",
+  "granny shaffer's",
+  "granny shaffers",
 ] as const;
 
 function isRetiredLocalName(name: string): boolean {
