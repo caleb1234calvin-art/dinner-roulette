@@ -43,6 +43,34 @@ interface OverpassElement {
   tags?: Record<string, string>;
 }
 
+const RETIRED_DATE_NIGHT_NAMES = ["powers museum"] as const;
+
+// Some live map records describe a sub-attraction rather than the destination a
+// user would actually navigate to. Keep the aliases narrowly scoped and require
+// proximity before applying them in mergeDateNight.
+const DATE_NIGHT_ALIAS_GROUPS = [
+  [
+    "precious moments chapel",
+    "precious moments chapel and gardens",
+    "precious moments chapel & gardens",
+    "samuel j butcher museum",
+    "samuel j. butcher museum",
+  ],
+] as const;
+
+function isRetiredDateNightName(name: string): boolean {
+  return RETIRED_DATE_NIGHT_NAMES.some((retired) => namesMatch(retired, name));
+}
+
+function dateNightNamesMatch(a: string, b: string): boolean {
+  if (namesMatch(a, b)) return true;
+  return DATE_NIGHT_ALIAS_GROUPS.some(
+    (group) =>
+      group.some((candidate) => namesMatch(candidate, a)) &&
+      group.some((candidate) => namesMatch(candidate, b)),
+  );
+}
+
 function classify(tags: Record<string, string>): ConcreteDateNightType[] {
   const types = new Set<ConcreteDateNightType>();
   if (tags.leisure === "bowling_alley") types.add("bowling");
@@ -66,7 +94,7 @@ function moodFor(types: readonly ConcreteDateNightType[]): 1 | 2 | 3 {
 function elementToPlace(element: OverpassElement): DateNightPlace | null {
   const tags = element.tags ?? {};
   const name = tags.name?.trim();
-  if (!name || /closed/i.test(name)) return null;
+  if (!name || /closed/i.test(name) || isRetiredDateNightName(name)) return null;
   const lat = element.lat ?? element.center?.lat;
   const lon = element.lon ?? element.center?.lon;
   if (lat == null || lon == null) return null;
@@ -172,7 +200,7 @@ function mergeDateNight(live: DateNightPlace[], local: DateNightPlace[]): DateNi
   for (const place of live) {
     const matchIndex = merged.findIndex(
       (candidate) =>
-        namesMatch(candidate.name, place.name) &&
+        dateNightNamesMatch(candidate.name, place.name) &&
         haversineMiles(candidate.lat, candidate.lon, place.lat, place.lon) < 0.35,
     );
     if (matchIndex >= 0) {
@@ -182,6 +210,8 @@ function mergeDateNight(live: DateNightPlace[], local: DateNightPlace[]): DateNi
         ...place,
         id: curated.id,
         name: curated.name,
+        lat: curated.lat,
+        lon: curated.lon,
         address: curated.address || place.address,
         openingHours: curated.openingHours || place.openingHours,
         phone: curated.phone ?? place.phone,
