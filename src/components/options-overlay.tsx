@@ -12,6 +12,40 @@ import { cn } from "@/lib/utils";
 
 type ResultMode = "dinner" | "nightlife" | "date-night";
 
+function decodeXmlText(value: string): string {
+  return value
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'");
+}
+
+function generatedBadgeLabel(src: string): string | null {
+  if (!src.startsWith("data:image/svg+xml")) return null;
+
+  try {
+    const comma = src.indexOf(",");
+    if (comma < 0) return null;
+    const svg = decodeURIComponent(src.slice(comma + 1));
+    const lines = [...svg.matchAll(/<text[^>]*>(.*?)<\/text>/g)]
+      .map((match) => decodeXmlText(match[1] ?? "").trim())
+      .filter(Boolean);
+    return lines.length ? lines.join("\n") : null;
+  } catch {
+    return null;
+  }
+}
+
+function badgeTextSize(label: string): string {
+  const longestLine = Math.max(...label.split("\n").map((line) => line.length));
+  if (longestLine > 20) return "text-[10px]";
+  if (longestLine > 16) return "text-[11px]";
+  if (longestLine > 13) return "text-xs";
+  if (longestLine > 9) return "text-sm";
+  return "text-base";
+}
+
 export function OptionsOverlay({
   restaurants,
   onClose,
@@ -77,6 +111,7 @@ function OptionCard({ restaurant, mode, onSelect, onNotTonight }: {
 }) {
   const openLabel = restaurant.hoursKnown ? (restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed") : null;
   const visual = restaurantVisual(restaurant.name, restaurant.photoKey);
+  const generatedLabel = visual.isLogo ? generatedBadgeLabel(visual.src) : null;
   const dateNightRestaurant = restaurant as DecoratedDateNightPlace;
   const dateNightIcon = mode === "date-night"
     ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel })
@@ -98,7 +133,16 @@ function OptionCard({ restaurant, mode, onSelect, onNotTonight }: {
           ) : visual.isLogo ? (
             <div className="flex h-28 w-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
               <div className="flex h-20 w-[72%] items-center justify-center rounded-xl bg-[#d8d8d4] p-3 shadow-sm">
-                <img src={visual.src} alt="" className="max-h-full max-w-full object-contain" />
+                {generatedLabel ? (
+                  <span className={cn(
+                    "max-w-[92%] whitespace-pre-line break-words text-center font-sans font-extrabold leading-[0.98] tracking-[0.08em] text-balance text-[#26231f] uppercase",
+                    badgeTextSize(generatedLabel),
+                  )}>
+                    {generatedLabel}
+                  </span>
+                ) : (
+                  <img src={visual.src} alt="" className="max-h-full max-w-full object-contain" />
+                )}
               </div>
             </div>
           ) : (
