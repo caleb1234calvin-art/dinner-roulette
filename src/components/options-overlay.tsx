@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { Ban, Shuffle, Sparkles, X } from "lucide-react";
+import { Ban, Shuffle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getDateNightIcon } from "@/lib/date-night/icons";
+import type { DecoratedDateNightPlace } from "@/lib/date-night/types";
 import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
@@ -91,14 +93,18 @@ function OptionCard({
 }) {
   const openLabel = restaurant.hoursKnown ? (restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed") : null;
   const visual = restaurantVisual(restaurant.name, restaurant.photoKey);
+  const dateNightRestaurant = restaurant as DecoratedDateNightPlace;
+  const dateNightIcon = mode === "date-night"
+    ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel })
+    : null;
 
   return (
     <article className="flex flex-col overflow-hidden rounded-xl bg-surface shadow-border">
       <div className="relative">
         <button type="button" onClick={onSelect} className="block w-full text-left">
-          {mode === "date-night" ? (
-            <div className="flex h-28 w-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10">
-              <Sparkles className="size-10 text-accent" />
+          {mode === "date-night" && dateNightIcon ? (
+            <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10">
+              <img src={dateNightIcon} alt="" className="size-24 rounded-2xl object-cover shadow-sm" />
             </div>
           ) : visual.isLogo ? (
             <div className="flex h-28 w-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
