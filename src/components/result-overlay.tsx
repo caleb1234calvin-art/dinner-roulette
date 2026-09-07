@@ -1,10 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
-import { Ban, Heart, MapPinned, Phone, RotateCcw, Star, Utensils, X } from "lucide-react";
+import { Ban, ExternalLink, Heart, MapPinned, Phone, RotateCcw, Star, Utensils, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
+import {
+  lookupGoogleRestaurantReviews,
+  type GoogleRestaurantReviewData,
+} from "@/lib/restaurants/google-places";
 import { TAGLINES, type DecoratedRestaurant } from "@/lib/restaurants/types";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
@@ -56,6 +60,8 @@ export function ResultOverlay({
   const [rateOpen, setRateOpen] = useState(false);
   const [rating, setRating] = useState<number>(4);
   const [mounted, setMounted] = useState(false);
+  const [googleReviews, setGoogleReviews] = useState<GoogleRestaurantReviewData | null>(null);
+  const [googleReviewsLoading, setGoogleReviewsLoading] = useState(false);
   const tagline = useMemo(
     () => TAGLINES[Math.floor(Math.random() * TAGLINES.length)] ?? TAGLINES[0],
     [restaurant.id],
@@ -104,6 +110,36 @@ export function ResultOverlay({
     };
   }, [restaurant.id, restaurant.name, reelNames, skipSpin]);
 
+  useEffect(() => {
+    if (phase !== "result") return;
+
+    let cancelled = false;
+    setGoogleReviews(null);
+    setGoogleReviewsLoading(true);
+
+    lookupGoogleRestaurantReviews({
+      data: {
+        name: restaurant.name,
+        address: restaurant.address,
+        lat: restaurant.lat,
+        lon: restaurant.lon,
+      },
+    })
+      .then((result) => {
+        if (!cancelled) setGoogleReviews(result);
+      })
+      .catch(() => {
+        if (!cancelled) setGoogleReviews(null);
+      })
+      .finally(() => {
+        if (!cancelled) setGoogleReviewsLoading(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [phase, restaurant.id, restaurant.name, restaurant.address, restaurant.lat, restaurant.lon]);
+
   const destination = restaurant.address && restaurant.address !== "Address unavailable"
     ? restaurant.address
     : `${restaurant.lat},${restaurant.lon}`;
@@ -112,6 +148,16 @@ export function ResultOverlay({
   const grubhubUrl = grubhubSearchUrl(restaurant);
   const uberEatsUrl = uberEatsSearchUrl(restaurant.name);
   const visual = restaurantVisual(restaurant.name, restaurant.photoKey);
+  const publicRating = googleReviews?.matched && googleReviews.rating != null
+    ? googleReviews.rating
+    : restaurant.rating;
+  const publicReviewCount = googleReviews?.matched && googleReviews.reviewCount != null
+    ? googleReviews.reviewCount
+    : restaurant.reviewCount;
+  const topGoogleReview = googleReviews?.reviews.find((review) => review.text) ?? null;
+  const googlePlaceUrl = googleReviews?.placeUri ?? googleReviews?.fallbackMapsUri ?? null;
+  const googleReviewsUrl = googleReviews?.reviewsUri ?? googlePlaceUrl;
+  const googleWriteReviewUrl = googleReviews?.writeAReviewUri ?? googlePlaceUrl;
 
   function saveChoice() {
     recordVisit({
@@ -168,6 +214,48 @@ export function ResultOverlay({
             </div>
 
             <div className="result-in px-5 pt-2 pb-10">
+              <div className="mb-5 rounded-xl bg-surface px-4 py-3 shadow-border">
+                {googleReviewsLoading ? (
+                  <p className="text-sm text-subtle">Checking Google reviews…</p>
+                ) : publicRating != null ? (
+                  <>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="inline-flex items-center gap-1 text-base font-medium text-fg">
+                        <Star className="size-4 fill-fg" />
+                        {publicRating.toFixed(1)}
+                      </span>
+                      {publicReviewCount ? (
+                        <span className="text-sm text-subtle">({publicReviewCount.toLocaleString()} reviews)</span>
+                      ) : null}
+                      {googleReviews?.matched ? (
+                        <span className="ml-auto text-xs font-medium text-subtle">Google</span>
+                      ) : null}
+                    </div>
+                    {topGoogleReview ? (
+                      <div className="mt-3 border-t border-fg/10 pt-3">
+                        <p className="line-clamp-3 text-sm leading-relaxed text-muted">“{topGoogleReview.text}”</p>
+                        <p className="mt-2 text-xs text-subtle">
+                          {topGoogleReview.author.displayName}
+                          {topGoogleReview.relativePublishTimeDescription
+                            ? ` · ${topGoogleReview.relativePublishTimeDescription}`
+                            : ""}
+                        </p>
+                      </div>
+                    ) : null}
+                  </>
+                ) : googlePlaceUrl ? (
+                  <a
+                    href={googlePlaceUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-fg underline underline-offset-4"
+                  >
+                    View on Google Maps
+                    <ExternalLink className="size-3.5" />
+                  </a>
+                ) : null}
+              </div>
+
               <p className="text-kicker text-subtle">Tonight's pick</p>
               <h2 className="font-display mt-2 text-4xl leading-tight text-fg">{restaurant.name}</h2>
               <p className="mt-2 text-sm text-muted">{tagline}</p>
@@ -175,15 +263,6 @@ export function ResultOverlay({
               <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
                 <span>{restaurant.cuisineLabel}</span>
                 <span>{formatPrice(restaurant.priceLevel)}</span>
-                {restaurant.rating ? (
-                  <span className="inline-flex items-center gap-1 text-fg">
-                    <Star className="size-3.5 fill-fg" />
-                    {restaurant.rating.toFixed(1)}
-                    {restaurant.reviewCount ? (
-                      <span className="text-subtle">({restaurant.reviewCount})</span>
-                    ) : null}
-                  </span>
-                ) : null}
               </div>
 
               <p className="mt-3 text-sm text-muted">
@@ -196,6 +275,104 @@ export function ResultOverlay({
                 <p className="mt-1 text-sm text-danger">Closing soon — go now if you're in.</p>
               ) : null}
               <p className="mt-1 text-sm text-subtle">{restaurant.address}</p>
+
+              {googleReviews?.reviews.length ? (
+                <section className="mt-6">
+                  <div className="flex items-end justify-between gap-3">
+                    <div>
+                      <p className="text-kicker text-subtle">Google reviews</p>
+                      <h3 className="font-display mt-1 text-2xl text-fg">What people are saying</h3>
+                    </div>
+                    <span className="text-xs font-medium text-subtle">Google</span>
+                  </div>
+
+                  <div className="mt-3 space-y-3">
+                    {googleReviews.reviews.map((review, index) => (
+                      <article key={`${review.author.displayName}-${index}`} className="rounded-xl bg-surface p-4 shadow-border">
+                        <div className="flex items-start gap-3">
+                          {review.author.photoUri ? (
+                            <img
+                              src={review.author.photoUri}
+                              alt=""
+                              className="size-9 shrink-0 rounded-full object-cover"
+                              referrerPolicy="no-referrer"
+                            />
+                          ) : null}
+                          <div className="min-w-0 flex-1">
+                            {review.author.uri ? (
+                              <a
+                                href={review.author.uri}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-sm font-medium text-fg underline-offset-4 hover:underline"
+                              >
+                                {review.author.displayName}
+                              </a>
+                            ) : (
+                              <p className="text-sm font-medium text-fg">{review.author.displayName}</p>
+                            )}
+                            <div className="mt-1 flex items-center gap-2 text-xs text-subtle">
+                              {review.rating != null ? (
+                                <span className="inline-flex items-center gap-1 text-fg">
+                                  <Star className="size-3 fill-fg" />
+                                  {review.rating.toFixed(1)}
+                                </span>
+                              ) : null}
+                              {review.relativePublishTimeDescription ? (
+                                <span>{review.relativePublishTimeDescription}</span>
+                              ) : null}
+                            </div>
+                          </div>
+                        </div>
+                        {review.text ? <p className="mt-3 text-sm leading-relaxed text-muted">{review.text}</p> : null}
+                        {review.googleMapsUri ? (
+                          <a
+                            href={review.googleMapsUri}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-3 inline-flex items-center gap-1 text-xs text-subtle underline underline-offset-4"
+                          >
+                            View on Google Maps
+                            <ExternalLink className="size-3" />
+                          </a>
+                        ) : null}
+                      </article>
+                    ))}
+                  </div>
+
+                  <div className="mt-3 grid grid-cols-2 gap-2">
+                    {googleReviewsUrl ? (
+                      <Button variant="outline" asChild>
+                        <a href={googleReviewsUrl} target="_blank" rel="noreferrer">
+                          Read all reviews
+                        </a>
+                      </Button>
+                    ) : null}
+                    {googleWriteReviewUrl ? (
+                      <Button variant="outline" asChild>
+                        <a href={googleWriteReviewUrl} target="_blank" rel="noreferrer">
+                          Rate on Google
+                        </a>
+                      </Button>
+                    ) : null}
+                  </div>
+                </section>
+              ) : googleWriteReviewUrl ? (
+                <div className="mt-5 grid grid-cols-2 gap-2">
+                  {googlePlaceUrl ? (
+                    <Button variant="outline" asChild>
+                      <a href={googlePlaceUrl} target="_blank" rel="noreferrer">
+                        Google Maps
+                      </a>
+                    </Button>
+                  ) : null}
+                  <Button variant="outline" asChild>
+                    <a href={googleWriteReviewUrl} target="_blank" rel="noreferrer">
+                      Rate on Google
+                    </a>
+                  </Button>
+                </div>
+              ) : null}
 
               <div className="mt-6 space-y-2">
                 <Button size="lg" className="w-full" asChild>
