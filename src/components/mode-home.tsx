@@ -4,6 +4,7 @@ import { DateNightHome } from "@/components/date-night-home";
 import { ModeHint } from "@/components/mode-hint";
 import { NightlifeHome } from "@/components/nightlife-home";
 import { PickHome } from "@/components/pick-home";
+import { trackAppEvent } from "@/lib/analytics";
 import type { HomeMode } from "@/lib/nightlife/types";
 import { cn } from "@/lib/utils";
 
@@ -19,6 +20,11 @@ export function ModeHome() {
       root.classList.remove("date-night-active");
     };
   }, [mode]);
+
+  function selectMode(next: HomeMode) {
+    if (next !== mode) trackAppEvent("Mode Selected", { mode: next });
+    setMode(next);
+  }
 
   const nightlife = mode === "nightlife";
   const dateNight = mode === "date-night";
@@ -47,7 +53,7 @@ export function ModeHome() {
         <div className="grid grid-cols-3 rounded-xl bg-surface/95 p-1 shadow-border">
           <button
             type="button"
-            onClick={() => setMode("dinner")}
+            onClick={() => selectMode("dinner")}
             className={cn(
               "flex min-h-11 items-center justify-center gap-1.5 rounded-lg px-1 text-xs transition sm:text-sm",
               mode === "dinner" ? "bg-fg text-bg" : "text-muted",
@@ -59,7 +65,7 @@ export function ModeHome() {
           </button>
           <button
             type="button"
-            onClick={() => setMode("nightlife")}
+            onClick={() => selectMode("nightlife")}
             className={cn(
               "flex min-h-11 items-center justify-center gap-1.5 rounded-lg px-1 text-xs transition sm:text-sm",
               nightlife ? "bg-accent text-accent-fg" : "text-muted",
@@ -71,7 +77,7 @@ export function ModeHome() {
           </button>
           <button
             type="button"
-            onClick={() => setMode("date-night")}
+            onClick={() => selectMode("date-night")}
             className={cn(
               "flex min-h-11 items-center justify-center gap-1.5 rounded-lg px-1 text-xs transition sm:text-sm",
               dateNight ? "bg-accent text-accent-fg" : "text-muted",
