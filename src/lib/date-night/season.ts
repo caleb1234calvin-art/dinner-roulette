@@ -26,7 +26,7 @@ export const HALLOWEEN_DATE_NIGHT_CHIPS: ReadonlyArray<{
   id: DateNightTypeId;
   label: string;
 }> = [
-  { id: "haunted-house", label: "Haunted" },
+  { id: "haunted-house", label: "Haunted House" },
   { id: "corn-maze", label: "Corn Maze" },
   { id: "pumpkin-patch", label: "Pumpkin Patch" },
 ];
