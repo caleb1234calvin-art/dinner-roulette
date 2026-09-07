@@ -4,6 +4,7 @@ import { haversineMiles } from "@/lib/restaurants/geo";
 import { namesMatch } from "@/lib/utils";
 import type { PhotoKey } from "@/lib/restaurants/types";
 import { JASPER_COUNTY_DATE_NIGHT_CATALOG } from "./jasper-county-catalog";
+import { isHalloweenDateNightSeason } from "./season";
 import {
   dateNightTypeLabel,
   type ConcreteDateNightType,
@@ -18,7 +19,7 @@ const MIRRORS = [
   "https://overpass-api.de/api/interpreter",
 ];
 
-const QUERY = (lat: number, lon: number, radiusMeters: number) => `
+const QUERY = (lat: number, lon: number, radiusMeters: number, halloweenSeason: boolean) => `
 [out:json][timeout:20];
 (
   nwr["leisure"="bowling_alley"](around:${Math.round(radiusMeters)},${lat},${lon});
@@ -30,6 +31,7 @@ const QUERY = (lat: number, lon: number, radiusMeters: number) => `
   nwr["leisure"="ice_rink"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["sport"="roller_skating"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["leisure"="park"](around:${Math.round(radiusMeters)},${lat},${lon});
+  ${halloweenSeason ? `nwr["leisure"="maze"](around:${Math.round(radiusMeters)},${lat},${lon});\n  nwr["attraction"="maze"](around:${Math.round(radiusMeters)},${lat},${lon});\n  nwr["attraction"="haunted_house"](around:${Math.round(radiusMeters)},${lat},${lon});\n  nwr["attraction"="pumpkin_patch"](around:${Math.round(radiusMeters)},${lat},${lon});` : ""}
 );
 out center tags;
 `;
@@ -45,9 +47,6 @@ interface OverpassElement {
 
 const RETIRED_DATE_NIGHT_NAMES = ["powers museum"] as const;
 
-// Some live map records describe a sub-attraction rather than the destination a
-// user would actually navigate to. Keep the aliases narrowly scoped and require
-// proximity before applying them in mergeDateNight.
 const DATE_NIGHT_ALIAS_GROUPS = [
   [
     "precious moments chapel",
@@ -71,7 +70,7 @@ function dateNightNamesMatch(a: string, b: string): boolean {
   );
 }
 
-function classify(tags: Record<string, string>): ConcreteDateNightType[] {
+function classify(tags: Record<string, string>, halloweenSeason: boolean): ConcreteDateNightType[] {
   const types = new Set<ConcreteDateNightType>();
   if (tags.leisure === "bowling_alley") types.add("bowling");
   if (tags.leisure === "amusement_arcade") types.add("arcade");
@@ -81,17 +80,30 @@ function classify(tags: Record<string, string>): ConcreteDateNightType[] {
   if (tags.tourism === "museum") types.add("museum");
   if (tags.leisure === "ice_rink" || tags.sport === "roller_skating") types.add("skating");
   if (tags.leisure === "park") types.add("park");
-  if (types.size === 0) return [];
+
+  if (halloweenSeason) {
+    if (tags.attraction === "haunted_house") types.add("haunted-house");
+    if (tags.leisure === "maze" || tags.attraction === "maze") types.add("corn-maze");
+    if (tags.attraction === "pumpkin_patch") types.add("pumpkin-patch");
+
+    const name = `${tags.name ?? ""} ${tags.description ?? ""}`.toLowerCase();
+    if (name.includes("haunted") || name.includes("haunt")) types.add("haunted-house");
+    if (name.includes("corn maze") || name.includes("maize")) types.add("corn-maze");
+    if (name.includes("pumpkin patch") || name.includes("pumpkin farm")) types.add("pumpkin-patch");
+  }
+
   return [...types];
 }
 
 function moodFor(types: readonly ConcreteDateNightType[]): 1 | 2 | 3 {
+  if (types.includes("haunted-house")) return 3;
+  if (types.includes("corn-maze") || types.includes("pumpkin-patch")) return 2;
   if (types.includes("movies") || types.includes("museum") || types.includes("park")) return 1;
   if (types.includes("bowling") || types.includes("arcade") || types.includes("mini-golf")) return 2;
   return 3;
 }
 
-function elementToPlace(element: OverpassElement): DateNightPlace | null {
+function elementToPlace(element: OverpassElement, halloweenSeason: boolean): DateNightPlace | null {
   const tags = element.tags ?? {};
   const name = tags.name?.trim();
   if (!name || /closed/i.test(name) || isRetiredDateNightName(name)) return null;
@@ -102,7 +114,7 @@ function elementToPlace(element: OverpassElement): DateNightPlace | null {
   const street = tags["addr:street"] ?? "";
   const city = tags["addr:city"] ?? "";
   const address = [`${house} ${street}`.trim(), city].filter(Boolean).join(", ") || "Address unavailable";
-  const activityTypes = classify(tags);
+  const activityTypes = classify(tags, halloweenSeason);
   if (!activityTypes.length) return null;
   const brand = tags.brand ?? null;
   const isChain = isLikelyChain(name, brand);
@@ -166,13 +178,13 @@ function dedupeDateNight(places: DateNightPlace[]): DateNightPlace[] {
   return result;
 }
 
-async function queryMirror(url: string, body: string): Promise<DateNightPlace[]> {
+async function queryMirror(url: string, body: string, halloweenSeason: boolean): Promise<DateNightPlace[]> {
   const response = await fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
       Accept: "application/json",
-      "User-Agent": "DinnerRoulette/2.1 (date night discovery)",
+      "User-Agent": "DinnerRoulette/3 (date night discovery)",
     },
     body,
     signal: AbortSignal.timeout(22000),
@@ -181,7 +193,7 @@ async function queryMirror(url: string, body: string): Promise<DateNightPlace[]>
   const json = (await response.json()) as { elements?: OverpassElement[] };
   const unique = new Map<string, DateNightPlace>();
   for (const element of json.elements ?? []) {
-    const place = elementToPlace(element);
+    const place = elementToPlace(element, halloweenSeason);
     if (!place) continue;
     const key = `${place.name.toLowerCase()}-${place.lat.toFixed(4)}-${place.lon.toFixed(4)}`;
     unique.set(key, place);
@@ -240,13 +252,14 @@ export const searchDateNight = createServerFn({ method: "POST" })
   .handler(async ({ data }): Promise<DateNightSearchResponse> => {
     const fetchRadius = Math.max(data.radiusMiles, 15);
     const radiusMeters = Math.min(fetchRadius * 1609.34, 48280);
-    const body = `data=${encodeURIComponent(QUERY(data.lat, data.lon, radiusMeters))}`;
+    const halloweenSeason = isHalloweenDateNightSeason();
+    const body = `data=${encodeURIComponent(QUERY(data.lat, data.lon, radiusMeters, halloweenSeason))}`;
     const local = localWithin(data.lat, data.lon, fetchRadius);
     let lastError: unknown;
 
     for (const mirror of MIRRORS) {
       try {
-        const live = await queryMirror(mirror, body);
+        const live = await queryMirror(mirror, body, halloweenSeason);
         const venues = mergeDateNight(live, local);
         if (venues.length > 0) {
           return {
