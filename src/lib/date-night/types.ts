@@ -9,7 +9,10 @@ export type DateNightTypeId =
   | "escape-room"
   | "park"
   | "museum"
-  | "skating";
+  | "skating"
+  | "haunted-house"
+  | "corn-maze"
+  | "pumpkin-patch";
 
 export type ConcreteDateNightType = Exclude<DateNightTypeId, "anything">;
 
@@ -78,6 +81,9 @@ export function dateNightMoodLabel(value: number): string {
 }
 
 export function dateNightTypeLabel(types: readonly ConcreteDateNightType[]): string {
+  if (types.includes("haunted-house")) return "Haunted House";
+  if (types.includes("corn-maze")) return "Corn Maze";
+  if (types.includes("pumpkin-patch")) return "Pumpkin Patch";
   if (types.includes("bowling")) return "Bowling";
   if (types.includes("arcade")) return "Arcade";
   if (types.includes("movies")) return "Movies";
