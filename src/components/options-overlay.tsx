@@ -158,8 +158,8 @@ function OptionCard({ restaurant, mode, onSelect, onNotTonight }: {
                   </span>
                 </div>
               ) : (
-                <div className="flex h-20 w-[72%] items-center justify-center rounded-xl bg-[#d8d8d4] p-3 shadow-sm">
-                  <img src={visual.src} alt="" className="max-h-full max-w-full object-contain" />
+                <div className="shortlist-logo-stage flex h-20 w-[76%] items-center justify-center rounded-xl p-3">
+                  <img src={visual.src} alt="" className="shortlist-logo-image max-h-full max-w-full object-contain" />
                 </div>
               )}
             </div>
