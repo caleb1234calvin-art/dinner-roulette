@@ -4,6 +4,8 @@ import type { DateNightPlace } from "./types";
 // This list is intentionally conservative: venue identity/location must be current enough
 // to trust, while season-specific hours remain unknown unless they can be represented safely.
 // Re-audit before each season; live discovery remains the broad source of seasonal places.
+// Wolfman's House Of Screams is a strong live candidate, but stays out of this fallback
+// until its coordinate pair is re-audited from an authoritative geocode source.
 export const JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG: DateNightPlace[] = [
   {
     id: "date-night-werehouse-joplin",
@@ -19,26 +21,6 @@ export const JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG: DateNightPlace[] = [
     openingHours: "unknown",
     phone: "+1 417-396-6094",
     website: "https://thewerehouse.net/",
-    isChain: false,
-    photoKey: "cafe",
-    source: "catalog",
-    activityTypes: ["haunted-house"],
-    moodLevel: 3,
-  },
-  {
-    id: "date-night-wolfmans-house-of-screams",
-    name: "Wolfman's House Of Screams",
-    lat: 37.1467,
-    lon: -94.5487,
-    address: "26267 King Ln, Carl Junction, MO 64834",
-    cuisines: ["other"],
-    cuisineLabel: "Haunted House",
-    priceLevel: null,
-    rating: null,
-    reviewCount: null,
-    openingHours: "unknown",
-    phone: "+1 417-536-0612",
-    website: "https://www.missourihauntedhouses.com/",
     isChain: false,
     photoKey: "cafe",
     source: "catalog",
