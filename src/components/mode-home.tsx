@@ -14,6 +14,46 @@ import type { HomeMode } from "@/lib/nightlife/types";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
+const DATE_NIGHT_ICON_THEME_STYLES = `
+html.date-night-active[data-theme="light"]:not(.halloween-date-night-active) img[src*="date-night-icons"] {
+  filter:
+    saturate(0.82)
+    hue-rotate(-8deg)
+    brightness(1.03)
+    contrast(0.98)
+    drop-shadow(0 4px 12px rgba(216, 91, 159, 0.12));
+}
+
+html.date-night-active:not([data-theme="light"]):not(.halloween-date-night-active) img[src*="date-night-icons"] {
+  filter:
+    saturate(0.94)
+    hue-rotate(-34deg)
+    brightness(1.1)
+    contrast(1.02)
+    drop-shadow(0 0 10px rgba(201, 167, 255, 0.22));
+}
+
+html.halloween-date-night-active[data-theme="light"] img[src*="date-night-icons"] {
+  filter:
+    sepia(0.12)
+    saturate(1.18)
+    hue-rotate(44deg)
+    brightness(1.02)
+    contrast(0.98)
+    drop-shadow(0 4px 12px rgba(197, 106, 50, 0.14));
+}
+
+html.halloween-date-night-active:not([data-theme="light"]) img[src*="date-night-icons"] {
+  filter:
+    sepia(0.18)
+    saturate(1.42)
+    hue-rotate(48deg)
+    brightness(0.98)
+    contrast(1.06)
+    drop-shadow(0 0 10px rgba(197, 106, 50, 0.28));
+}
+`;
+
 export function ModeHome() {
   const [mode, setMode] = useState<HomeMode>("dinner");
   const dateNightFilters = useAppStore((state) => state.dateNightFilters);
@@ -68,6 +108,7 @@ export function ModeHome() {
         halloweenDateNight && "halloween-date-night-theme",
       )}
     >
+      <style>{DATE_NIGHT_ICON_THEME_STYLES}</style>
       <ModeHint />
 
       <header className="px-4 pt-8 pb-5">
