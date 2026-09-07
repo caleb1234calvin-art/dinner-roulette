@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { searchDateNight } from "@/lib/date-night/search";
+import { HALLOWEEN_DATE_NIGHT_TYPES } from "@/lib/date-night/season";
 import {
   DATE_NIGHT_TYPE_CHIPS,
   dateNightMoodLabel,
@@ -126,6 +127,7 @@ export function DateNightHome() {
   const exclusions = useAppStore((s) => s.exclusions);
   const sessionShown = useAppStore((s) => s.sessionShown);
   const filters = useAppStore((s) => s.dateNightFilters);
+  const spookySeasonEnabled = useAppStore((s) => s.spookySeasonEnabled);
   const setDateNightFilters = useAppStore((s) => s.setDateNightFilters);
   const setLocation = useAppStore((s) => s.setLocation);
   const markShown = useAppStore((s) => s.markShown);
@@ -177,6 +179,13 @@ export function DateNightHome() {
   const eligible = useMemo(() => {
     const anything = filters.activityTypes.includes("anything");
     return decorated.filter((venue) => {
+      if (
+        !spookySeasonEnabled &&
+        venue.activityTypes.length > 0 &&
+        venue.activityTypes.every((type) => HALLOWEEN_DATE_NIGHT_TYPES.includes(type))
+      ) {
+        return false;
+      }
       if (venue.distanceMiles > filters.radiusMiles + 0.05) return false;
       if (exclusions.some((item) => item.restaurantId === venue.id && item.expiresAt > Date.now())) return false;
       const pref = preferences[venue.id];
@@ -186,7 +195,7 @@ export function DateNightHome() {
       if (!anything && !venue.activityTypes.some((type) => filters.activityTypes.includes(type))) return false;
       return true;
     });
-  }, [decorated, exclusions, filters, preferences]);
+  }, [decorated, exclusions, filters, preferences, spookySeasonEnabled]);
 
   function updateFilters(patch: Partial<DateNightFilters>) {
     setDateNightFilters(patch);
