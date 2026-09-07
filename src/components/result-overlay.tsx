@@ -4,11 +4,11 @@ import { Ban, ExternalLink, Heart, MapPinned, MoonStar, Phone, RotateCcw, Sparkl
 import { Button } from "@/components/ui/button";
 import { getDateNightIcon } from "@/lib/date-night/icons";
 import { DATE_NIGHT_TAGLINES, dateNightTypeLabel, type DecoratedDateNightPlace } from "@/lib/date-night/types";
-import { restaurantVisual } from "@/lib/restaurants/image-overrides";
+import { NIGHTLIFE_TAGLINES, type DecoratedNightlifePlace } from "@/lib/nightlife/types";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
+import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { TAGLINES, type DecoratedRestaurant } from "@/lib/restaurants/types";
-import { NIGHTLIFE_TAGLINES } from "@/lib/nightlife/types";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
@@ -34,6 +34,39 @@ function grubhubSearchUrl(restaurant: DecoratedRestaurant) {
 
 function uberEatsSearchUrl(name: string) {
   return `https://www.ubereats.com/search?q=${encodeURIComponent(name)}`;
+}
+
+function levelLabel(level: number | undefined, mode: ResultMode): string | null {
+  if (!level) return null;
+  if (mode === "nightlife") return level === 1 ? "Chill vibe" : level === 2 ? "Balanced vibe" : "Lively vibe";
+  if (mode === "date-night") return level === 1 ? "Cozy mood" : level === 2 ? "Playful mood" : "Adventurous mood";
+  return null;
+}
+
+function buildWhyReasons(restaurant: DecoratedRestaurant, mode: ResultMode, favorite: boolean): string[] {
+  const reasons: string[] = [];
+
+  if (mode === "date-night") {
+    const date = restaurant as DecoratedDateNightPlace;
+    if (date.activityTypes?.length) reasons.push(dateNightTypeLabel([date.activityTypes[0]!]));
+    const mood = levelLabel(date.moodLevel, mode);
+    if (mood) reasons.push(mood);
+  } else if (mode === "nightlife") {
+    const nightlife = restaurant as DecoratedNightlifePlace;
+    reasons.push(restaurant.cuisineLabel);
+    const vibe = levelLabel(nightlife.energyLevel, mode);
+    if (vibe) reasons.push(vibe);
+  } else {
+    reasons.push(restaurant.cuisineLabel);
+    if (restaurant.priceLevel) reasons.push(`${formatPrice(restaurant.priceLevel)} budget match`);
+  }
+
+  if (favorite) reasons.push("Saved favorite");
+  if (restaurant.hoursKnown && restaurant.isOpen) reasons.push("Open now");
+  else if (!restaurant.hoursKnown) reasons.push("Hours unconfirmed");
+  reasons.push(`${formatDistance(restaurant.distanceMiles)} away`);
+
+  return [...new Set(reasons)].slice(0, 4);
 }
 
 export function ResultOverlay({
@@ -114,6 +147,7 @@ export function ResultOverlay({
     : null;
   const dateNightTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
   const websiteLabel = dateNightTypes.includes("movies") ? "Check showtimes" : "Website & info";
+  const whyReasons = buildWhyReasons(restaurant, mode, favorite);
 
   function saveChoice() {
     recordVisit({
@@ -203,6 +237,20 @@ export function ResultOverlay({
               {mode === "date-night" && !restaurant.hoursKnown ? <p className="mt-1 text-sm text-subtle">Hours unknown — check before going.</p> : null}
               {restaurant.closingSoon ? <p className="mt-1 text-sm text-danger">Closing soon — go now if you're in.</p> : null}
               <p className="mt-1 text-sm text-subtle">{restaurant.address}</p>
+
+              <div className="mt-5 rounded-xl bg-surface p-4 shadow-border">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="size-4 text-accent" />
+                  <p className="text-xs tracking-[0.18em] text-subtle uppercase">Why this pick?</p>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {whyReasons.map((reason) => (
+                    <span key={reason} className="rounded-full bg-elevated px-3 py-1.5 text-xs text-muted">
+                      {reason}
+                    </span>
+                  ))}
+                </div>
+              </div>
 
               <div className="mt-6 space-y-2">
                 <Button size="lg" className="w-full" asChild>
