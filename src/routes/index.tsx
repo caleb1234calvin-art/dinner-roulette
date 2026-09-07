@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PickHome } from "@/components/pick-home";
+import { ModeHome } from "@/components/mode-home";
 
 export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
-  return <PickHome />;
+  return <ModeHome />;
 }

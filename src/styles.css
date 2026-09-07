@@ -41,6 +41,25 @@ html[data-theme="light"] {
     0 1px 2px -1px color-mix(in oklab, var(--app-fg) 10%, transparent);
 }
 
+html.nightlife-active,
+.nightlife-theme {
+  color-scheme: dark;
+  --app-bg: #14110e;
+  --app-surface: #1d1915;
+  --app-elevated: #26211c;
+  --app-fg: #f3ead8;
+  --app-muted: #b8a994;
+  --app-subtle: #8a7d6b;
+  --app-accent: #0d8a94;
+  --app-accent-fg: #f4fffe;
+  --app-border: #3a332c;
+  --app-open: #2f8a6e;
+  --app-danger: #c45c4a;
+  --app-heart: #0d8a94;
+  --app-shadow-border: 0 0 0 1px color-mix(in oklab, var(--app-fg) 8%, transparent);
+  --app-shadow-border-hover: 0 0 0 1px color-mix(in oklab, var(--app-accent) 35%, transparent);
+}
+
 @theme {
   --font-display: "Fraunces", "Times New Roman", serif;
   --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
