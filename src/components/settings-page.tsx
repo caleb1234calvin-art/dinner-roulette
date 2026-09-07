@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Check, Download, Moon, Smartphone, Sparkles, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
-import { resetModeHints } from "@/lib/session-hints";
+import { resetHints } from "@/lib/session-hints";
 import { useAppStore } from "@/lib/store";
 import type { ThemeId } from "@/lib/theme";
 import { cn } from "@/lib/utils";
@@ -52,7 +52,7 @@ export function SettingsPage() {
   }, []);
 
   function showHintsAgain() {
-    resetModeHints();
+    resetHints();
     setHintsReset(true);
     window.setTimeout(() => setHintsReset(false), 1800);
   }
@@ -93,9 +93,9 @@ export function SettingsPage() {
               <Sparkles className="size-5" />
             </div>
             <div className="min-w-0 flex-1">
-              <p className="text-sm font-medium text-fg">Mode walkthroughs</p>
+              <p className="text-sm font-medium text-fg">Quick app tour</p>
               <p className="mt-1 text-xs leading-relaxed text-subtle">
-                Each main tab shows its quick run-through once per app session. Reset them whenever you want to see the hints again.
+                The quick tour appears once when Dinner Roulette opens, not every time you switch tabs. Reset it whenever you want to see it again.
               </p>
             </div>
           </div>
@@ -105,7 +105,7 @@ export function SettingsPage() {
             onClick={showHintsAgain}
           >
             <Sparkles className="size-4" />
-            {hintsReset ? "Hints ready" : "Show hints again"}
+            {hintsReset ? "Hint ready" : "Show hint again"}
           </Button>
         </div>
       </section>
