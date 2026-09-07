@@ -36,7 +36,13 @@ const ACTIVE_LOCAL_CATALOG: CatalogEntry[] = [
   ),
 ];
 
-const COUNTY_RETIRED_NAMES = ["gem dandy's pizza", "gem dandys pizza"];
+const COUNTY_RETIRED_NAMES = [
+  "gem dandy's pizza",
+  "gem dandys pizza",
+  "dead cow saloon and grill",
+  "dead cow saloon & grill",
+  "dead cow saloon",
+] as const;
 
 function isRetiredLocalName(name: string): boolean {
   return [...RETIRED_LOCAL_NAMES, ...COUNTY_RETIRED_NAMES].some((retired) => namesMatch(retired, name));
