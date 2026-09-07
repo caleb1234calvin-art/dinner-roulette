@@ -49,7 +49,7 @@ export const HALLOWEEN_DATE_NIGHT_PRESETS: ReadonlyArray<{
 ];
 
 /**
- * Local-calendar gate for the experimental Halloween Date Night skin.
+ * Local-calendar availability window for the experimental Halloween Date Night layer.
  * It begins in September for planning and ends after the Halloween weekend.
  */
 export function isHalloweenDateNightSeason(now = new Date()): boolean {
@@ -64,17 +64,18 @@ export function isHalloweenDateNightSeason(now = new Date()): boolean {
   return false;
 }
 
-export function dateNightChipsForNow(now = new Date()) {
-  return isHalloweenDateNightSeason(now)
+export function dateNightChipsForNow(spookySeasonEnabled: boolean, now = new Date()) {
+  return spookySeasonEnabled && isHalloweenDateNightSeason(now)
     ? [...DATE_NIGHT_TYPE_CHIPS, ...HALLOWEEN_DATE_NIGHT_CHIPS]
     : DATE_NIGHT_TYPE_CHIPS;
 }
 
 export function normalizeSeasonalDateNightFilters(
   filters: DateNightFilters,
+  spookySeasonEnabled = isHalloweenDateNightSeason(),
   now = new Date(),
 ): DateNightFilters {
-  if (isHalloweenDateNightSeason(now)) return filters;
+  if (spookySeasonEnabled && isHalloweenDateNightSeason(now)) return filters;
   const activityTypes = filters.activityTypes.filter(
     (type) => !HALLOWEEN_DATE_NIGHT_TYPES.includes(type),
   );
