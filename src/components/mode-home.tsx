@@ -15,6 +15,10 @@ import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 const DATE_NIGHT_ICON_THEME_STYLES = `
+html.halloween-date-night-active[data-theme="light"] {
+  --app-bg: #ececec !important;
+}
+
 html.date-night-active[data-theme="light"]:not(.halloween-date-night-active) img[src*="date-night-icons"] {
   filter:
     saturate(0.82)
