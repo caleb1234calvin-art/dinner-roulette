@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Heart, MoonStar, UtensilsCrossed } from "lucide-react";
-import { PickHome } from "@/components/pick-home";
-import { NightlifeHome } from "@/components/nightlife-home";
 import { DateNightHome } from "@/components/date-night-home";
-import { cn } from "@/lib/utils";
+import { ModeHint } from "@/components/mode-hint";
+import { NightlifeHome } from "@/components/nightlife-home";
+import { PickHome } from "@/components/pick-home";
 import type { HomeMode } from "@/lib/nightlife/types";
+import { cn } from "@/lib/utils";
 
 export function ModeHome() {
   const [mode, setMode] = useState<HomeMode>("dinner");
@@ -24,6 +25,8 @@ export function ModeHome() {
 
   return (
     <div className={cn("mode-home min-h-dvh", nightlife && "nightlife-theme", dateNight && "date-night-theme")}>
+      <ModeHint mode={mode} />
+
       <header className="px-4 pt-8 pb-5">
         <p className="text-kicker text-subtle">
           {nightlife ? "Dinner roulette · Nightlife" : dateNight ? "Dinner roulette · Date Night" : "Dinner roulette"}
@@ -40,7 +43,7 @@ export function ModeHome() {
         </p>
       </header>
 
-      <div className="sticky top-0 z-20 mx-auto max-w-lg px-4 py-2 bg-bg/95 backdrop-blur-sm">
+      <div className="sticky top-0 z-20 mx-auto max-w-lg bg-bg/95 px-4 py-2 backdrop-blur-sm">
         <div className="grid grid-cols-3 rounded-xl bg-surface/95 p-1 shadow-border">
           <button
             type="button"
