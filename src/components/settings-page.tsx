@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Check, Download, Moon, Smartphone, Sun } from "lucide-react";
+import { Check, Download, Moon, Smartphone, Sparkles, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
+import { resetModeHints } from "@/lib/session-hints";
 import { useAppStore } from "@/lib/store";
 import type { ThemeId } from "@/lib/theme";
 import { cn } from "@/lib/utils";
@@ -44,10 +45,17 @@ export function SettingsPage() {
   const resetAllData = useAppStore((s) => s.resetAllData);
   const activeExclusions = exclusions.filter((item) => item.expiresAt > Date.now());
   const [showAndroidDownload, setShowAndroidDownload] = useState(false);
+  const [hintsReset, setHintsReset] = useState(false);
 
   useEffect(() => {
     setShowAndroidDownload(!isRunningInNativeApp());
   }, []);
+
+  function showHintsAgain() {
+    resetModeHints();
+    setHintsReset(true);
+    window.setTimeout(() => setHintsReset(false), 1800);
+  }
 
   return (
     <main className="px-4 pt-6 pb-8">
@@ -74,6 +82,31 @@ export function SettingsPage() {
             active={theme === "light"}
             onSelect={setTheme}
           />
+        </div>
+      </section>
+
+      <section className="mt-8">
+        <h2 className="text-sm text-muted">Hints</h2>
+        <div className="mt-3 rounded-xl bg-surface p-4 shadow-border">
+          <div className="flex items-start gap-3">
+            <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+              <Sparkles className="size-5" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-medium text-fg">Mode walkthroughs</p>
+              <p className="mt-1 text-xs leading-relaxed text-subtle">
+                Each main tab shows its quick run-through once per app session. Reset them whenever you want to see the hints again.
+              </p>
+            </div>
+          </div>
+          <Button
+            type="button"
+            className="mt-4 w-full ring-2 ring-accent/35 shadow-lg shadow-accent/30 transition hover:shadow-xl hover:shadow-accent/40"
+            onClick={showHintsAgain}
+          >
+            <Sparkles className="size-4" />
+            {hintsReset ? "Hints ready" : "Show hints again"}
+          </Button>
         </div>
       </section>
 
