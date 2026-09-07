@@ -82,6 +82,10 @@ function parseRule(rule: string): TimeWindow | null {
   return { days: days && days.length > 0 ? days : "all", ranges, off: false };
 }
 
+function ruleIncludesDay(rule: TimeWindow, day: number): boolean {
+  return rule.days === "all" || rule.days.includes(day);
+}
+
 export function getOpenStatus(openingHours: string | null | undefined, now = new Date()): OpenStatus {
   if (!openingHours || openingHours.toLowerCase() === "unknown") {
     return { isOpen: true, hoursKnown: false, closesLabel: null, closingSoon: false };
@@ -101,19 +105,13 @@ export function getOpenStatus(openingHours: string | null | undefined, now = new
   }
 
   const day = now.getDay();
+  const previousDay = (day + 6) % 7;
   const minutes = minutesNow(now);
-  const matching = rules.filter((rule) => rule.days === "all" || rule.days.includes(day));
-  if (matching.length === 0) {
-    return { isOpen: false, hoursKnown: true, closesLabel: null, closingSoon: false };
-  }
-  if (matching.some((rule) => rule.off && rule.ranges.length === 0)) {
-    const hasOpenOverride = matching.some((rule) => !rule.off && rule.ranges.length > 0);
-    if (!hasOpenOverride) {
-      return { isOpen: false, hoursKnown: true, closesLabel: null, closingSoon: false };
-    }
-  }
+  const matching = rules.filter((rule) => ruleIncludesDay(rule, day));
 
   let openUntil: number | null = null;
+
+  // First, check today's normal and overnight windows.
   for (const rule of matching) {
     if (rule.off) continue;
     for (const [start, end] of rule.ranges) {
@@ -121,21 +119,42 @@ export function getOpenStatus(openingHours: string | null | undefined, now = new
         if (minutes >= start && minutes < end) {
           openUntil = openUntil == null ? end : Math.max(openUntil, end);
         }
-      } else {
-        // Overnight, e.g. 20:00-02:00
-        if (minutes >= start || minutes < end) {
-          const until = minutes >= start ? end + 24 * 60 : end;
-          openUntil = openUntil == null ? until : Math.max(openUntil, until);
-        }
+      } else if (minutes >= start) {
+        // A window such as Fr 20:00-01:30 is open late on Friday night.
+        const until = end + 24 * 60;
+        openUntil = openUntil == null ? until : Math.max(openUntil, until);
+      }
+    }
+  }
+
+  // Then check whether we are in the after-midnight tail of yesterday's
+  // overnight window. This matters heavily for nightlife: at 01:00 Saturday,
+  // a Friday 20:00-01:30 rule must still count as open.
+  for (const rule of rules) {
+    if (rule.off || !ruleIncludesDay(rule, previousDay)) continue;
+    for (const [start, end] of rule.ranges) {
+      if (end <= start && minutes < end) {
+        openUntil = openUntil == null ? end : Math.max(openUntil, end);
       }
     }
   }
 
   if (openUntil == null) {
+    const hasTodayRules = matching.length > 0;
+    if (!hasTodayRules) {
+      return { isOpen: false, hoursKnown: true, closesLabel: null, closingSoon: false };
+    }
+    if (matching.some((rule) => rule.off && rule.ranges.length === 0)) {
+      const hasOpenOverride = matching.some((rule) => !rule.off && rule.ranges.length > 0);
+      if (!hasOpenOverride) {
+        return { isOpen: false, hoursKnown: true, closesLabel: null, closingSoon: false };
+      }
+    }
     return { isOpen: false, hoursKnown: true, closesLabel: null, closingSoon: false };
   }
 
-  const remaining = openUntil - minutes;
+  const effectiveMinutes = openUntil > 24 * 60 ? minutes : minutes;
+  const remaining = openUntil > 24 * 60 ? openUntil - effectiveMinutes : openUntil - minutes;
   return {
     isOpen: true,
     hoursKnown: true,

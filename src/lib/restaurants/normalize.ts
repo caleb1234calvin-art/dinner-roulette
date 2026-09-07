@@ -1,5 +1,11 @@
 import { namesMatch } from "@/lib/utils";
 import { LOCAL_CATALOG, catalogToRestaurant, type CatalogEntry } from "./catalog";
+import { REFRESHED_LOCAL_CATALOG, REPLACED_CATALOG_IDS } from "./catalog-refresh";
+import {
+  RETIRED_LOCAL_NAMES,
+  SECOND_PASS_LOCAL_CATALOG,
+  SECOND_PASS_REPLACED_IDS,
+} from "./catalog-refresh-2";
 import { isLikelyChain, inferPriceLevel } from "./chains";
 import { cuisineLabelFor, mapOsmCuisines, photoForCuisines } from "./cuisines";
 import { haversineMiles } from "./geo";
@@ -20,12 +26,25 @@ export interface RawPlace {
   brand: string | null;
 }
 
+const ACTIVE_LOCAL_CATALOG: CatalogEntry[] = [
+  ...SECOND_PASS_LOCAL_CATALOG,
+  ...REFRESHED_LOCAL_CATALOG.filter((entry) => !SECOND_PASS_REPLACED_IDS.has(entry.id)),
+  ...LOCAL_CATALOG.filter(
+    (entry) => !REPLACED_CATALOG_IDS.has(entry.id) && !SECOND_PASS_REPLACED_IDS.has(entry.id),
+  ),
+];
+
+function isRetiredLocalName(name: string): boolean {
+  return RETIRED_LOCAL_NAMES.some((retired) => namesMatch(retired, name));
+}
+
 export function fallbackToRaw(place: FallbackPlace): RawPlace {
   return { ...place };
 }
 
 export function rawToRestaurant(place: RawPlace): Restaurant | null {
   if (!place.name || !Number.isFinite(place.lat) || !Number.isFinite(place.lon)) return null;
+  if (isRetiredLocalName(place.name)) return null;
   const cuisines = mapOsmCuisines(place.cuisine, place.amenity, place.name);
   const isChain = isLikelyChain(place.name, place.brand);
   return {
@@ -54,7 +73,7 @@ export function rawToRestaurant(place: RawPlace): Restaurant | null {
 }
 
 function findCatalogMatch(name: string, lat: number, lon: number): CatalogEntry | undefined {
-  return LOCAL_CATALOG.find((entry) => {
+  return ACTIVE_LOCAL_CATALOG.find((entry) => {
     const nameHit = entry.matchNames.some((candidate) => namesMatch(candidate, name));
     if (!nameHit) return false;
     return haversineMiles(entry.lat, entry.lon, lat, lon) < 8;
@@ -100,12 +119,14 @@ export function mergePlaces(
         ...base,
         id: overlay.id,
         name: overlay.name,
+        lat: overlay.lat,
+        lon: overlay.lon,
         address: overlay.address || base.address,
         cuisines: overlay.cuisines,
         cuisineLabel: overlay.cuisineLabel,
         priceLevel: overlay.priceLevel,
-        rating: overlay.rating,
-        reviewCount: overlay.reviewCount,
+        rating: overlay.rating || base.rating,
+        reviewCount: overlay.reviewCount || base.reviewCount,
         openingHours: overlay.openingHours || base.openingHours,
         phone: overlay.phone ?? base.phone,
         website: overlay.website ?? base.website,
@@ -118,7 +139,7 @@ export function mergePlaces(
     }
   }
 
-  for (const entry of LOCAL_CATALOG) {
+  for (const entry of ACTIVE_LOCAL_CATALOG) {
     if (usedCatalog.has(entry.id)) continue;
     if (origin && haversineMiles(origin.lat, origin.lon, entry.lat, entry.lon) > catalogRadius) {
       continue;

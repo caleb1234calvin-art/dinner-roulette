@@ -41,7 +41,7 @@ export interface DecoratedNightlifePlace extends DecoratedRestaurant {
 
 export interface NightlifeSearchResponse {
   venues: NightlifePlace[];
-  source: "live";
+  source: "live" | "merged" | "fallback";
   warning?: string;
 }
 

@@ -1,7 +1,10 @@
 import { createServerFn } from "@tanstack/react-start";
+import { namesMatch } from "@/lib/utils";
 import { isLikelyChain, inferPriceLevel } from "@/lib/restaurants/chains";
+import { haversineMiles } from "@/lib/restaurants/geo";
 import type { RawPlace } from "@/lib/restaurants/normalize";
 import type { PhotoKey } from "@/lib/restaurants/types";
+import { LOCAL_NIGHTLIFE_CATALOG } from "./catalog";
 import {
   nightlifeTypeLabel,
   type ConcreteNightlifeType,
@@ -25,6 +28,7 @@ const QUERY = (lat: number, lon: number, radiusMeters: number) => `
   nwr["amenity"="biergarten"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["craft"="brewery"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["microbrewery"="yes"](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["amenity"="restaurant"]["bar"="yes"](around:${Math.round(radiusMeters)},${lat},${lon});
 );
 out center tags;
 `;
@@ -44,16 +48,17 @@ function classify(tags: Record<string, string>, name: string): ConcreteNightlife
   const lower = name.toLowerCase();
   if (amenity === "nightclub") types.add("club");
   if (amenity === "pub") types.add("pub");
-  if (amenity === "bar") types.add("bar");
+  if (amenity === "bar" || tags.bar === "yes") types.add("bar");
   if (amenity === "biergarten" || tags.craft === "brewery" || tags.microbrewery === "yes") types.add("brewery");
-  if (/lounge|cocktail/.test(lower)) types.add("lounge");
+  if (/lounge|cocktail|wine bar/.test(lower)) types.add("lounge");
+  if (/club|dance/.test(lower) && !/country club/.test(lower)) types.add("club");
   if (types.size === 0) types.add("bar");
   return [...types];
 }
 
 function energyFor(types: readonly ConcreteNightlifeType[], tags: Record<string, string>, name: string): 1 | 2 | 3 {
   const lower = `${name} ${tags.description ?? ""}`.toLowerCase();
-  if (types.includes("club") || /dance|dj|nightclub|dancefloor/.test(lower)) return 3;
+  if (types.includes("club") || /dance|dj|nightclub|dancefloor|karaoke/.test(lower)) return 3;
   if (types.includes("lounge") || types.includes("brewery") || /wine|cocktail|speakeasy/.test(lower)) return 1;
   return 2;
 }
@@ -78,7 +83,7 @@ function elementToPlace(element: OverpassElement): NightlifePlace | null {
     lon,
     address,
     amenity: tags.amenity ?? "bar",
-    cuisine: "",
+    cuisine: tags.cuisine ?? "",
     openingHours: tags.opening_hours ?? null,
     phone: tags.phone ?? tags["contact:phone"] ?? null,
     website: tags.website ?? tags["contact:website"] ?? null,
@@ -92,7 +97,7 @@ function elementToPlace(element: OverpassElement): NightlifePlace | null {
     address,
     cuisines: ["other"],
     cuisineLabel: nightlifeTypeLabel(venueTypes),
-    priceLevel: inferPriceLevel({ amenity: raw.amenity, cuisine: "", name, isChain }),
+    priceLevel: inferPriceLevel({ amenity: raw.amenity, cuisine: raw.cuisine, name, isChain }),
     rating: null,
     reviewCount: null,
     openingHours: raw.openingHours,
@@ -129,6 +134,46 @@ async function queryMirror(url: string, body: string): Promise<NightlifePlace[]>
   return [...unique.values()];
 }
 
+function localWithin(lat: number, lon: number, radiusMiles: number): NightlifePlace[] {
+  return LOCAL_NIGHTLIFE_CATALOG.filter(
+    (place) => haversineMiles(lat, lon, place.lat, place.lon) <= radiusMiles + 1,
+  );
+}
+
+function mergeNightlife(live: NightlifePlace[], local: NightlifePlace[]): NightlifePlace[] {
+  const merged = [...local];
+  for (const place of live) {
+    const matchIndex = merged.findIndex(
+      (candidate) =>
+        namesMatch(candidate.name, place.name) &&
+        haversineMiles(candidate.lat, candidate.lon, place.lat, place.lon) < 0.35,
+    );
+    if (matchIndex >= 0) {
+      const curated = merged[matchIndex]!;
+      merged[matchIndex] = {
+        ...place,
+        id: curated.id,
+        name: curated.name,
+        address: curated.address || place.address,
+        cuisines: curated.cuisines,
+        cuisineLabel: curated.cuisineLabel,
+        priceLevel: curated.priceLevel ?? place.priceLevel,
+        rating: curated.rating ?? place.rating,
+        reviewCount: curated.reviewCount ?? place.reviewCount,
+        openingHours: curated.openingHours || place.openingHours,
+        phone: curated.phone ?? place.phone,
+        website: curated.website ?? place.website,
+        venueTypes: curated.venueTypes,
+        energyLevel: curated.energyLevel,
+        source: "merged",
+      };
+      continue;
+    }
+    merged.push(place);
+  }
+  return merged;
+}
+
 export const searchNightlife = createServerFn({ method: "POST" })
   .validator((data: { lat: number; lon: number; radiusMiles: number }) => {
     if (!Number.isFinite(data.lat) || !Number.isFinite(data.lon)) throw new Error("A location is required");
@@ -139,16 +184,33 @@ export const searchNightlife = createServerFn({ method: "POST" })
     };
   })
   .handler(async ({ data }): Promise<NightlifeSearchResponse> => {
-    const radiusMeters = Math.min(Math.max(data.radiusMiles, 15) * 1609.34, 48280);
+    const fetchRadius = Math.max(data.radiusMiles, 15);
+    const radiusMeters = Math.min(fetchRadius * 1609.34, 48280);
     const body = `data=${encodeURIComponent(QUERY(data.lat, data.lon, radiusMeters))}`;
+    const local = localWithin(data.lat, data.lon, fetchRadius);
     let lastError: unknown;
     for (const mirror of MIRRORS) {
       try {
-        const venues = await queryMirror(mirror, body);
-        if (venues.length > 0) return { venues, source: "live" };
+        const live = await queryMirror(mirror, body);
+        const venues = mergeNightlife(live, local);
+        if (venues.length > 0) {
+          return {
+            venues,
+            source: local.length ? "merged" : "live",
+          };
+        }
       } catch (error) {
         lastError = error;
       }
     }
+
+    if (local.length > 0) {
+      return {
+        venues: local,
+        source: "fallback",
+        warning: "Using saved Joplin/Carthage nightlife while the live map is unavailable.",
+      };
+    }
+
     throw lastError instanceof Error ? lastError : new Error("Could not load nightlife venues for that area.");
   });
