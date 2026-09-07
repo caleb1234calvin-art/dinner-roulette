@@ -8,7 +8,12 @@ import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { searchDateNight } from "@/lib/date-night/search";
-import { HALLOWEEN_DATE_NIGHT_TYPES } from "@/lib/date-night/season";
+import {
+  HALLOWEEN_DATE_NIGHT_TYPES,
+  HALLOWEEN_SETTLE_TYPES,
+  HALLOWEEN_THRILL_TYPES,
+  isHalloweenDateNightActive,
+} from "@/lib/date-night/season";
 import {
   DATE_NIGHT_TYPE_CHIPS,
   dateNightMoodLabel,
@@ -24,14 +29,21 @@ import { DISTANCE_OPTIONS, type DecoratedRestaurant, type Restaurant } from "@/l
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
-function venueWeightedPick(items: DecoratedDateNightPlace[], mood: number, shown: string[]) {
+function venueWeightedPick(
+  items: DecoratedDateNightPlace[],
+  mood: number,
+  shown: string[],
+  preferSeasonal = false,
+) {
   if (!items.length) return null;
   const target = 1 + (Math.min(Math.max(mood, 0), 100) / 100) * 2;
   const weights = items.map((item) => {
     const distancePenalty = 1 / (1 + item.distanceMiles * 0.04);
     const moodFit = 1 / (1 + Math.abs(item.moodLevel - target) * 0.8);
     const shownPenalty = shown.includes(item.id) ? 0.12 : 1;
-    return Math.max(0.001, distancePenalty * moodFit * shownPenalty);
+    const seasonalBoost =
+      preferSeasonal && item.activityTypes.some((type) => HALLOWEEN_DATE_NIGHT_TYPES.includes(type)) ? 1.45 : 1;
+    return Math.max(0.001, distancePenalty * moodFit * shownPenalty * seasonalBoost);
   });
   const total = weights.reduce((sum, value) => sum + value, 0);
   let cursor = Math.random() * total;
@@ -77,13 +89,14 @@ function balancedPick(
   shown: string[],
   allowedCategories?: ConcreteDateNightType[],
   avoidCategory: ConcreteDateNightType | null = null,
+  preferSeasonal = false,
 ) {
   if (!items.length) return null;
   const categories = allowedCategories ?? availableCategories(items, filters);
   const category = pickCategory(categories, filters.reduceParks, avoidCategory);
-  if (!category) return venueWeightedPick(items, filters.mood, shown);
+  if (!category) return venueWeightedPick(items, filters.mood, shown, preferSeasonal);
   const pool = items.filter((item) => item.activityTypes.includes(category));
-  return venueWeightedPick(pool.length ? pool : items, filters.mood, shown);
+  return venueWeightedPick(pool.length ? pool : items, filters.mood, shown, preferSeasonal);
 }
 
 function pickDiverseOptions(
@@ -102,7 +115,7 @@ function pickDiverseOptions(
     const categoryPool = items.filter(
       (item) => !usedIds.has(item.id) && item.activityTypes.includes(category),
     );
-    const next = venueWeightedPick(categoryPool, filters.mood, shown);
+    const next = venueWeightedPick(categoryPool, filters.mood, shown, false);
     remainingCategories.splice(remainingCategories.indexOf(category), 1);
     if (!next) continue;
     result.push(next);
@@ -146,13 +159,14 @@ export function DateNightHome() {
   const [skipSpin, setSkipSpin] = useState(false);
   const [options, setOptions] = useState<DecoratedDateNightPlace[] | null>(null);
   const [lastCategory, setLastCategory] = useState<ConcreteDateNightType | null>(null);
+  const halloweenActive = isHalloweenDateNightActive(spookySeasonEnabled);
 
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
     setError(null);
     setWarning(null);
-    searchDateNight({ data: { lat: location.lat, lon: location.lon, radiusMiles: Math.max(filters.radiusMiles, 15) } })
+    searchDateNight({ data: { lat: location.lat, lon: location.lon, radiusMiles: Math.max(filters.radiusMiles, 15), spookySeasonEnabled } })
       .then((result) => {
         if (cancelled) return;
         setVenues(result.venues);
@@ -169,7 +183,7 @@ export function DateNightHome() {
     return () => {
       cancelled = true;
     };
-  }, [location.lat, location.lon, filters.radiusMiles]);
+  }, [location.lat, location.lon, filters.radiusMiles, spookySeasonEnabled]);
 
   const decorated = useMemo(
     () => decorateAll(venues as Restaurant[], location) as DecoratedDateNightPlace[],
@@ -258,7 +272,7 @@ export function DateNightHome() {
   }
 
   function roll(pool = eligible) {
-    const chosen = balancedPick(pool, filters, sessionShown, undefined, lastCategory);
+    const chosen = balancedPick(pool, filters, sessionShown, undefined, lastCategory, halloweenActive);
     if (!chosen) return;
     markShown(chosen.id);
     setLastCategory(chosen.activityTypes[0] ?? null);
@@ -275,15 +289,30 @@ export function DateNightHome() {
     if (next.length && "vibrate" in navigator) navigator.vibrate?.(12);
   }
 
+  function planNight() {
+    const thrillPool = eligible.filter((item) => item.activityTypes.some((type) => HALLOWEEN_THRILL_TYPES.includes(type)));
+    const settlePool = eligible.filter((item) => item.activityTypes.some((type) => HALLOWEEN_SETTLE_TYPES.includes(type)));
+    const first = venueWeightedPick(thrillPool.length ? thrillPool : eligible, Math.max(filters.mood, 70), sessionShown, true);
+    if (!first) return;
+    const secondPool = (settlePool.length ? settlePool : eligible).filter((item) => item.id !== first.id);
+    const second = venueWeightedPick(secondPool, Math.min(filters.mood, 42), sessionShown, false);
+    const next = [first, second].filter((item): item is DecoratedDateNightPlace => Boolean(item));
+    next.forEach((item) => markShown(item.id));
+    setOptions(next.length ? next : null);
+    if (next.length && "vibrate" in navigator) navigator.vibrate?.(12);
+  }
+
   const radiusIndex = Math.max(0, DISTANCE_OPTIONS.indexOf(filters.radiusMiles));
 
   return (
     <main className="px-4 pb-48 pt-5">
-      <header className="mb-6">
-        <p className="text-kicker text-accent">Dinner roulette · Date Night</p>
-        <h1 className="font-display mt-1 text-4xl leading-tight text-fg">What Should We Do?</h1>
-        <p className="mt-2 max-w-sm text-sm text-muted">Set the mood. Let the app pick the date.</p>
-      </header>
+      {halloweenActive ? null : (
+        <header className="mb-6">
+          <p className="text-kicker text-accent">Dinner roulette \u00b7 Date Night</p>
+          <h1 className="font-display mt-1 text-4xl leading-tight text-fg">What Should We Do?</h1>
+          <p className="mt-2 max-w-sm text-sm text-muted">Set the mood. Let the app pick the date.</p>
+        </header>
+      )}
 
       <section className="rounded-xl bg-surface p-4 shadow-border">
         <div className="flex items-start justify-between gap-3">
@@ -301,7 +330,7 @@ export function DateNightHome() {
             <Input value={locQuery} onChange={(event) => setLocQuery(event.target.value)} placeholder="City or ZIP code" aria-label="City or ZIP code" />
             {locError ? <p className="text-sm text-danger">{locError}</p> : null}
             <div className="flex gap-2">
-              <Button type="submit" className="flex-1" disabled={locBusy}>{locBusy ? "Finding…" : "Set location"}</Button>
+              <Button type="submit" className="flex-1" disabled={locBusy}>{locBusy ? "Finding\u2026" : "Set location"}</Button>
               <Button type="button" variant="secondary" onClick={() => setLocOpen(false)}>Cancel</Button>
             </div>
           </form>
@@ -353,7 +382,7 @@ export function DateNightHome() {
         </div>
       </section>
 
-      {loading ? <DiscoveryLoading label="Finding date ideas near you…" /> : null}
+      {loading ? <DiscoveryLoading label="Finding date ideas near you\u2026" /> : null}
       {warning ? (
         <DiscoveryNotice
           tone="fallback"
@@ -368,20 +397,31 @@ export function DateNightHome() {
           body="Try again in a moment, change your location, or widen your search radius."
         />
       ) : null}
-      {!loading && !error && eligible.length === 0 ? <div className="mt-5 rounded-xl bg-surface p-4 text-sm text-muted shadow-border">Nothing matches those filters. Try increasing distance or allowing more activity types.</div> : null}
+      {!loading && !error && eligible.length === 0 ? (
+        <div className="mt-5 rounded-xl bg-surface p-4 text-sm text-muted shadow-border">
+          {halloweenActive
+            ? "Seasonal spots are still thin this early, and hours are unconfirmed. Widen the radius, keep Anything on, or mix in a regular date idea."
+            : "Nothing matches those filters. Try increasing distance or allowing more activity types."}
+        </div>
+      ) : null}
 
       <div className="fixed inset-x-0 bottom-20 z-20 mx-auto w-full max-w-lg px-4 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2">
         <div className="rounded-xl bg-bg/95 p-3 shadow-border backdrop-blur-sm">
-          <p className="mb-2 text-center text-xs text-subtle tabular-nums">{loading ? "Finding date ideas…" : `${eligible.length} activities match`}</p>
+          <p className="mb-2 text-center text-xs text-subtle tabular-nums">{loading ? "Finding date ideas\u2026" : `${eligible.length} activities match`}</p>
           <div className="grid grid-cols-2 gap-2">
             <Button size="lg" className="pick-pulse h-14 gap-1.5 px-2 font-display" onClick={() => roll()} disabled={!eligible.length || loading}><Heart className="size-4" />Pick our date</Button>
             <Button size="lg" variant="secondary" className="h-14 gap-1.5 px-2" onClick={dealOptions} disabled={!eligible.length || loading}><LayoutGrid className="size-4" />Give us options</Button>
           </div>
+          {halloweenActive ? (
+            <Button size="lg" variant="secondary" className="mt-2 h-12 w-full" onClick={planNight} disabled={!eligible.length || loading}>
+              Plan the night
+            </Button>
+          ) : null}
         </div>
       </div>
 
-      {pick ? <ResultOverlay restaurant={pick as DecoratedRestaurant} reelNames={reelNames} onClose={() => setPick(null)} onReroll={() => roll()} onNotTonight={() => { excludeTonight({ restaurantId: pick.id, name: pick.name }); setPick(null); }} skipSpin={skipSpin} mode="date-night" /> : null}
-      {options ? <OptionsOverlay restaurants={options as DecoratedRestaurant[]} onClose={() => setOptions(null)} onSelect={(restaurant) => { setOptions(null); setSkipSpin(true); setPick(restaurant as DecoratedDateNightPlace); }} onShuffle={dealOptions} onNotTonight={(restaurant) => excludeTonight({ restaurantId: restaurant.id, name: restaurant.name })} mode="date-night" /> : null}
+      {pick ? <ResultOverlay restaurant={pick as DecoratedRestaurant} reelNames={reelNames} onClose={() => setPick(null)} onReroll={() => roll()} onNotTonight={() => { excludeTonight(pick.id, pick.name); setPick(null); }} skipSpin={skipSpin} mode="date-night" /> : null}
+      {options ? <OptionsOverlay restaurants={options as DecoratedRestaurant[]} onClose={() => setOptions(null)} onSelect={(restaurant) => { setOptions(null); setSkipSpin(true); setPick(restaurant as DecoratedDateNightPlace); }} onShuffle={dealOptions} onNotTonight={(restaurant) => excludeTonight(restaurant.id, restaurant.name)} mode="date-night" /> : null}
     </main>
   );
 }
