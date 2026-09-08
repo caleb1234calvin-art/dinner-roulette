@@ -251,14 +251,14 @@ html.date-night-active[data-theme="light"] [class*="bg-[#d8d8d4]"] {
     drop-shadow(0 3px 8px rgba(0, 0, 0, 0.2));
 }
 
-/* The legacy Date Night PNGs include a bright white outer matte. In dark mode
-   crop that matte away so the colored icon tile itself sits on the normal stage. */
-html.date-night-active:not([data-theme="light"]) div:has(> img[src*="date-night-icons"]) {
+/* Only the older Date Night PNG assets need the legacy outer-matte crop.
+   Approved Grok JPG artwork is already composed correctly and must display unchanged. */
+html.date-night-active:not([data-theme="light"]) div:has(> img[src*="date-night-icons/"][src$=".png"]) {
   overflow: hidden;
   background: var(--app-elevated) !important;
 }
 
-html.date-night-active:not([data-theme="light"]) div:has(> img[src*="date-night-icons"]) > img {
+html.date-night-active:not([data-theme="light"]) div:has(> img[src*="date-night-icons/"][src$=".png"]) > img {
   clip-path: inset(8.5% round 22%);
   transform: scale(1.16);
   transform-origin: center;
