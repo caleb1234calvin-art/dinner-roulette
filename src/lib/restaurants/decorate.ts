@@ -1,3 +1,4 @@
+import { getSeasonalDateStatus, hasSeasonalAvailabilityRecord } from "@/lib/date-night/availability";
 import { haversineMiles } from "./geo";
 import { getOpenStatus } from "./hours";
 import type { DecoratedRestaurant, Restaurant, SearchLocation } from "./types";
@@ -7,7 +8,31 @@ export function decorateRestaurant(
   location: SearchLocation,
   now = new Date(),
 ): DecoratedRestaurant {
-  const status = getOpenStatus(restaurant.openingHours, now);
+  const weeklyStatus = getOpenStatus(restaurant.openingHours, now);
+  let status = weeklyStatus;
+
+  if (hasSeasonalAvailabilityRecord(restaurant.id)) {
+    const seasonalStatus = getSeasonalDateStatus(restaurant.id, now);
+
+    if (seasonalStatus === "unavailable") {
+      status = {
+        isOpen: false,
+        hoursKnown: true,
+        closesLabel: null,
+        closingSoon: false,
+      };
+    } else if (seasonalStatus === "unconfirmed") {
+      // Fail closed for Open-now filtering. An unconfirmed seasonal calendar
+      // is not proof that the venue is open at this moment.
+      status = {
+        isOpen: false,
+        hoursKnown: true,
+        closesLabel: "Schedule unconfirmed",
+        closingSoon: false,
+      };
+    }
+  }
+
   return {
     ...restaurant,
     distanceMiles: haversineMiles(location.lat, location.lon, restaurant.lat, restaurant.lon),
