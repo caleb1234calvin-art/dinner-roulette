@@ -99,13 +99,15 @@ function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { r
   const dateNightRestaurant = restaurant as DecoratedDateNightPlace;
   const dateNightIcon = mode === "date-night" ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel, halloween }) : null;
   const activityTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
+  const primaryActivity = activityTypes[0];
+  const compactIcon = primaryActivity === "arcade" || primaryActivity === "museum";
 
   return (
     <article className="flex min-h-[17rem] flex-col overflow-hidden rounded-xl bg-surface shadow-border">
       <div className="relative">
         <button type="button" onClick={onSelect} className="block w-full text-left">
           {mode === "date-night" && dateNightIcon ? (
-            <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={dateNightIcon} alt="" className={cn("size-24 rounded-2xl object-cover shadow-sm", halloween && "date-night-halloween-icon")} /></div>
+            <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={dateNightIcon} alt="" className={cn(compactIcon ? "size-20" : "size-24", "rounded-2xl object-cover shadow-sm", halloween && "date-night-halloween-icon")} /></div>
           ) : mode === "date-night" ? (
             <div className="flex h-28 w-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10"><Sparkles className="size-10 text-accent" /></div>
           ) : visual.isLogo ? (
