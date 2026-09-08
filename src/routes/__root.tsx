@@ -4,6 +4,7 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { AppShell } from "@/components/app-shell";
 import { THEME_BOOTSTRAP_SCRIPT } from "@/lib/theme";
 import appCss from "../styles.css?url";
+import dateNightBasePolishCss from "../date-night-base-polish.css?url";
 import halloweenDateNightOverridesCss from "../halloween-date-night-overrides.css?url";
 
 const APP_NAME = "Dinner Roulette";
@@ -24,6 +25,7 @@ export const Route = createRootRoute({
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "stylesheet", href: appCss },
+      { rel: "stylesheet", href: dateNightBasePolishCss },
       { rel: "stylesheet", href: halloweenDateNightOverridesCss },
       { rel: "manifest", href: "/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/favicon.svg" },
