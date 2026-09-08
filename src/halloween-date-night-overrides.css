@@ -64,3 +64,6 @@ html.halloween-date-night-active body .mode-home .shortlist-brand-stage {
     0 0 24px -12px color-mix(in oklab, var(--app-accent) 70%, transparent),
     0 16px 34px -22px color-mix(in oklab, var(--october-ember) 50%, transparent) !important;
 }
+
+/* Halloween Date Night artwork now ships with its own approved red/teal lighting.
+   Do not recolor, grayscale, blend, or overlay those image assets in CSS. */
