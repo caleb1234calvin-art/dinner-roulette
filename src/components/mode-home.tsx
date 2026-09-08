@@ -41,8 +41,9 @@ html.halloween-date-night-active[data-theme="light"] {
 }
 
 html.halloween-date-night-active[data-theme="light"] .halloween-accent-splatter {
-  opacity: 0.22;
+  opacity: 0.28;
   mix-blend-mode: multiply;
+  filter: saturate(1.08) contrast(1.03);
 }
 
 html.halloween-date-night-active:not([data-theme="light"]) .halloween-accent-splatter {
