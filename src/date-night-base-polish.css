@@ -26,3 +26,12 @@ html.date-night-active .chip[aria-pressed="false"] {
   color: var(--app-fg) !important;
   font-weight: 600 !important;
 }
+
+/* Preserve the complete approved Date Night artwork inside every icon frame.
+   These source images include their own black breathing room and neon border,
+   so contain them instead of cropping them like ordinary photos. */
+html.date-night-active img[src*="/date-night-icons/"] {
+  object-fit: contain !important;
+  box-sizing: border-box;
+  padding: 0.125rem;
+}
