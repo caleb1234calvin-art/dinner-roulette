@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { Ban, ExternalLink, Heart, MapPinned, MoonStar, Phone, RotateCcw, Sparkles, Star, Utensils, X } from "lucide-react";
+import { RideshareQuickActions } from "@/components/rideshare-quick-actions";
 import { Button } from "@/components/ui/button";
 import { getDateNightIcon } from "@/lib/date-night/icons";
 import { DATE_NIGHT_TAGLINES, dateNightTypeLabel, type DecoratedDateNightPlace } from "@/lib/date-night/types";
@@ -230,13 +231,18 @@ export function ResultOverlay({
                 </div>
               )}
 
-              <p className="mt-3 text-sm text-muted">
-                {formatDistance(restaurant.distanceMiles)}
-                {restaurant.hoursKnown ? ` · ${restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed"}` : ""}
-              </p>
-              {mode === "date-night" && !restaurant.hoursKnown ? <p className="mt-1 text-sm text-subtle">Hours unknown — check before going.</p> : null}
-              {restaurant.closingSoon ? <p className="mt-1 text-sm text-danger">Closing soon — go now if you're in.</p> : null}
-              <p className="mt-1 text-sm text-subtle">{restaurant.address}</p>
+              <div className="mt-3 grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4">
+                <div className="min-w-0">
+                  <p className="text-sm text-muted">
+                    {formatDistance(restaurant.distanceMiles)}
+                    {restaurant.hoursKnown ? ` · ${restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed"}` : ""}
+                  </p>
+                  {mode === "date-night" && !restaurant.hoursKnown ? <p className="mt-1 text-sm text-subtle">Hours unknown — check before going.</p> : null}
+                  {restaurant.closingSoon ? <p className="mt-1 text-sm text-danger">Closing soon — go now if you're in.</p> : null}
+                  <p className="mt-1 text-sm text-subtle">{restaurant.address}</p>
+                </div>
+                <RideshareQuickActions restaurant={restaurant} />
+              </div>
 
               <div className="mt-5 rounded-xl bg-surface p-4 shadow-border">
                 <div className="flex items-center gap-2">
