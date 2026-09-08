@@ -140,14 +140,17 @@ export const DATE_NIGHT_ICON_BY_TYPE: Record<ConcreteDateNightType, string> = {
 };
 
 const HALLOWEEN_DATE_NIGHT_ICON_BY_TYPE: Partial<Record<ConcreteDateNightType, string>> = {
-  park: "/date-night-icons/park.png",
-  movies: "/date-night-icons/movies.png",
-  arcade: "/date-night-icons/arcade.png",
-  bowling: "/date-night-icons/bowling.png",
-  "mini-golf": "/date-night-icons/mini-golf.png",
-  "escape-room": "/date-night-icons/escape-room.png",
-  museum: "/date-night-icons/museum.png",
-  skating: "/date-night-icons/skating.png",
+  park: "/date-night-icons/grok_1788905177823.jpg",
+  "corn-maze": "/date-night-icons/grok_1788905180227.jpg",
+  "pumpkin-patch": "/date-night-icons/grok_1788905184073.jpg",
+  "escape-room": "/date-night-icons/grok_1788905187785.jpg",
+  "mini-golf": "/date-night-icons/grok_1788905190727.jpg",
+  museum: "/date-night-icons/grok_1788905196749.jpg",
+  "haunted-house": "/date-night-icons/grok_1788905199846.jpg",
+  bowling: "/date-night-icons/grok_1788905202767.jpg",
+  skating: "/date-night-icons/grok_1788905205875.jpg",
+  arcade: "/date-night-icons/grok_1788905208616.jpg",
+  movies: "/date-night-icons/grok_1788905211949.jpg",
 };
 
 function inferTypeFromLabel(label?: string | null): ConcreteDateNightType | null {
