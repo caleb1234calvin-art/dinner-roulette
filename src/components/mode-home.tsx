@@ -79,26 +79,26 @@ html.halloween-date-night-active:not([data-theme="light"]) .halloween-accent-spl
     -2rem 1.4rem 0 -0.11rem var(--app-accent);
 }
 
-html.date-night-active[data-theme="light"]:not(.halloween-date-night-active) img[src*="date-night-icons"] {
+html.date-night-active[data-theme="light"]:not(.halloween-date-night-active) img[src*="date-night-icons"],
+html.date-night-active[data-theme="light"]:not(.halloween-date-night-active) img[src^="data:image/svg+xml"] {
   filter:
-    saturate(0.82)
-    hue-rotate(-8deg)
-    brightness(1.03)
-    contrast(0.98)
-    drop-shadow(0 4px 12px rgba(216, 91, 159, 0.12));
-}
-
-html.date-night-active:not([data-theme="light"]):not(.halloween-date-night-active) img[src*="date-night-icons"] {
-  filter:
-    saturate(0.94)
-    hue-rotate(-34deg)
-    brightness(1.1)
+    brightness(1.04)
     contrast(1.02)
-    drop-shadow(0 0 10px rgba(201, 167, 255, 0.22));
+    drop-shadow(0 0 4px rgba(216, 91, 159, 0.32))
+    drop-shadow(0 0 12px rgba(216, 91, 159, 0.42));
 }
 
-/* Halloween icon system: one design for normal Date Night PNGs and the
-   seasonal SVGs. The art keeps its luminance detail while a color layer gives
+html.date-night-active:not([data-theme="light"]):not(.halloween-date-night-active) img[src*="date-night-icons"],
+html.date-night-active:not([data-theme="light"]):not(.halloween-date-night-active) img[src^="data:image/svg+xml"] {
+  filter:
+    brightness(1.06)
+    contrast(1.04)
+    drop-shadow(0 0 5px rgba(201, 167, 255, 0.34))
+    drop-shadow(0 0 14px rgba(201, 167, 255, 0.46));
+}
+
+/* Halloween icon system: one design for normal Date Night icons and the
+   seasonal icons. The art keeps its luminance detail while a color layer gives
    it the exact wine-red / blue-green Halloween palette. */
 html.halloween-date-night-active div:has(> img[src*="date-night-icons"]),
 html.halloween-date-night-active div:has(> img[src^="data:image/svg+xml"]) {
