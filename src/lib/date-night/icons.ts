@@ -3,12 +3,15 @@ import type { ConcreteDateNightType } from "./types";
 const OPTIMIZED_ICON_WIDTH = 640;
 const OPTIMIZED_ICON_QUALITY = 90;
 
+const HALLOWEEN_WINE = "#a7343e";
+const HALLOWEEN_BLUE_GREEN = "#45a66f";
+
 function optimizedIcon(path: string): string {
   return `/_vercel/image?url=${encodeURIComponent(path)}&w=${OPTIMIZED_ICON_WIDTH}&q=${OPTIMIZED_ICON_QUALITY}`;
 }
 
 function svgIcon(body: string): string {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2d1d1c"/><stop offset="1" stop-color="#120f10"/></linearGradient><linearGradient id="ember" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0bc82"/><stop offset=".55" stop-color="#d56a2f"/><stop offset="1" stop-color="#8a3039"/></linearGradient></defs><rect width="640" height="640" rx="128" fill="url(#bg)"/><circle cx="492" cy="146" r="68" fill="#e8b975" opacity=".22"/><g fill="none" stroke="url(#ember)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">${body}</g></svg>`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#20191b"/><stop offset="1" stop-color="#101312"/></linearGradient><linearGradient id="halloween" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${HALLOWEEN_WINE}"/><stop offset=".5" stop-color="#77524f"/><stop offset="1" stop-color="${HALLOWEEN_BLUE_GREEN}"/></linearGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop stop-color="${HALLOWEEN_BLUE_GREEN}" stop-opacity=".3"/><stop offset="1" stop-color="${HALLOWEEN_WINE}" stop-opacity="0"/></radialGradient></defs><rect width="640" height="640" rx="128" fill="url(#bg)"/><circle cx="492" cy="146" r="78" fill="url(#halo)"/><g fill="none" stroke="url(#halloween)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">${body}</g></svg>`;
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
 
