@@ -97,14 +97,26 @@ html.date-night-active:not([data-theme="light"]):not(.halloween-date-night-activ
     drop-shadow(0 0 10px rgba(201, 167, 255, 0.22));
 }
 
+/* During Halloween, the normal Date Night PNGs keep their molded highlights
+   and shadows, but their old orange/pink color is replaced by the exact
+   Halloween theme pair: wine red on the left and blue-green on the right. */
 html.halloween-date-night-active div:has(> img[src*="date-night-icons"]) {
   isolation: isolate;
   background: linear-gradient(135deg, #a7343e 0%, #45a66f 100%) !important;
 }
 
 html.halloween-date-night-active img[src*="date-night-icons"] {
-  filter: grayscale(1) contrast(1.08) brightness(1.04);
-  mix-blend-mode: luminosity;
+  filter: grayscale(1) contrast(1.12) brightness(1.08);
+  mix-blend-mode: multiply;
+}
+
+/* Halloween-only SVG icons already use the same left-to-right red/green
+   gradient. Their glow follows the corresponding side of that gradient. */
+html.halloween-date-night-active img[src^="data:image/svg+xml"] {
+  filter:
+    drop-shadow(-8px 0 12px rgba(167, 52, 62, 0.55))
+    drop-shadow(8px 0 12px rgba(69, 166, 111, 0.55))
+    drop-shadow(0 5px 10px rgba(0, 0, 0, 0.32));
 }
 `;
 
