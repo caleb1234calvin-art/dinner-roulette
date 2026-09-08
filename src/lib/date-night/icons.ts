@@ -1,51 +1,152 @@
 import type { ConcreteDateNightType } from "./types";
 
-const OPTIMIZED_ICON_WIDTH = 640;
-const OPTIMIZED_ICON_QUALITY = 90;
+const WINE = "#a7343e";
+const BLUE_GREEN = "#45a66f";
 
-const HALLOWEEN_WINE = "#a7343e";
-const HALLOWEEN_BLUE_GREEN = "#45a66f";
-
-function optimizedIcon(path: string): string {
-  return `/_vercel/image?url=${encodeURIComponent(path)}&w=${OPTIMIZED_ICON_WIDTH}&q=${OPTIMIZED_ICON_QUALITY}`;
-}
-
-function svgIcon(body: string): string {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#20191b"/><stop offset="1" stop-color="#101312"/></linearGradient><linearGradient id="halloween" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${HALLOWEEN_WINE}"/><stop offset=".5" stop-color="#77524f"/><stop offset="1" stop-color="${HALLOWEEN_BLUE_GREEN}"/></linearGradient><radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop stop-color="${HALLOWEEN_BLUE_GREEN}" stop-opacity=".3"/><stop offset="1" stop-color="${HALLOWEEN_WINE}" stop-opacity="0"/></radialGradient></defs><rect width="640" height="640" rx="128" fill="url(#bg)"/><circle cx="492" cy="146" r="78" fill="url(#halo)"/><g fill="none" stroke="url(#halloween)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">${body}</g></svg>`;
+function glossyIcon(body: string): string {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#171111"/>
+      <stop offset=".52" stop-color="#111413"/>
+      <stop offset="1" stop-color="#0d1512"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="${WINE}"/>
+      <stop offset=".47" stop-color="#633b3e"/>
+      <stop offset=".53" stop-color="#315f4c"/>
+      <stop offset="1" stop-color="${BLUE_GREEN}"/>
+    </linearGradient>
+    <linearGradient id="subject" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#e66f79"/>
+      <stop offset=".25" stop-color="#a84a53"/>
+      <stop offset=".5" stop-color="#4a4545"/>
+      <stop offset=".75" stop-color="#3e8c6b"/>
+      <stop offset="1" stop-color="#78d3aa"/>
+    </linearGradient>
+    <linearGradient id="highlight" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#ffffff" stop-opacity=".72"/>
+      <stop offset=".45" stop-color="#ffffff" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="redGlow" cx="0" cy=".5" r=".8">
+      <stop stop-color="${WINE}" stop-opacity=".9"/>
+      <stop offset="1" stop-color="${WINE}" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="greenGlow" cx="1" cy=".5" r=".8">
+      <stop stop-color="${BLUE_GREEN}" stop-opacity=".9"/>
+      <stop offset="1" stop-color="${BLUE_GREEN}" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="subjectShadow" x="-35%" y="-35%" width="170%" height="170%">
+      <feDropShadow dx="-10" dy="3" stdDeviation="12" flood-color="${WINE}" flood-opacity=".5"/>
+      <feDropShadow dx="10" dy="3" stdDeviation="12" flood-color="${BLUE_GREEN}" flood-opacity=".5"/>
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity=".65"/>
+    </filter>
+  </defs>
+  <rect x="30" y="30" width="580" height="580" rx="132" fill="url(#tile)"/>
+  <rect x="42" y="42" width="556" height="556" rx="122" fill="none" stroke="url(#edge)" stroke-width="12"/>
+  <ellipse cx="130" cy="320" rx="180" ry="230" fill="url(#redGlow)" opacity=".7" filter="url(#soft)"/>
+  <ellipse cx="510" cy="320" rx="180" ry="230" fill="url(#greenGlow)" opacity=".7" filter="url(#soft)"/>
+  <g filter="url(#subjectShadow)" fill="url(#subject)" stroke="#f3eee9" stroke-opacity=".28" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">${body}</g>
+  <path d="M104 108c86-46 344-46 432 0" fill="none" stroke="url(#highlight)" stroke-width="22" stroke-linecap="round" opacity=".38"/>
+  </svg>`;
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
 
-const SPOOKY_HAUNTED_HOUSE_ICON = svgIcon(`
-  <path d="M150 500V292l170-132 170 132v208"/>
-  <path d="M225 500V368h78v132M366 328h64v70h-64zM214 282l-20-62 62 22 64-94 64 94 62-22-20 62"/>
-  <path d="M95 174c38-28 70-27 96 5 27-35 57-35 90 0 32-32 64-33 101-5-43 4-68 23-78 56-18-24-39-36-65-36-26 0-47 12-64 36-11-33-37-52-80-56Z" stroke-width="18"/>
+const PARK_ICON = glossyIcon(`
+  <path d="M190 430h260v42H190z"/>
+  <path d="M220 430v92M420 430v92" fill="none"/>
+  <path d="M160 388c0-58 38-102 90-102 6-70 54-116 116-116 61 0 106 43 114 104 46 8 80 48 80 96 0 53-41 96-92 96H244c-46 0-84-35-84-78Z"/>
+  <path d="M330 286v186" fill="none"/>
 `);
 
-const SPOOKY_CORN_MAZE_ICON = svgIcon(`
-  <path d="M164 514V178M236 514V144M308 514V192M380 514V142M452 514V184"/>
-  <path d="M164 228c-48-6-69-36-66-82 46 3 72 25 78 67M236 198c-48-6-69-36-66-82 46 3 72 25 78 67M308 242c-48-6-69-36-66-82 46 3 72 25 78 67M380 198c-48-6-69-36-66-82 46 3 72 25 78 67M452 234c-48-6-69-36-66-82 46 3 72 25 78 67" stroke-width="20"/>
-  <path d="M122 514c48-72 92-102 132-90 35 11 58 45 91 32 34-13 53-73 151-50"/>
+const MOVIES_ICON = glossyIcon(`
+  <path d="M166 284h308v224H166z"/>
+  <path d="M146 202l314-62 24 112-314 62z"/>
+  <path d="M202 191l56 94M292 174l56 94M382 156l56 94" fill="none"/>
+  <path d="M182 344h276" fill="none"/>
 `);
 
-const SPOOKY_PUMPKIN_PATCH_ICON = svgIcon(`
-  <path d="M320 208c-18-58 24-92 78-90-33 24-43 54-34 91"/>
-  <path d="M320 220c-126 0-206 78-206 174s80 142 206 142 206-46 206-142-80-174-206-174Z"/>
-  <path d="M320 224c-76 43-88 236 0 309M320 224c76 43 88 236 0 309M236 244c-53 73-48 218 0 272M404 244c53 73 48 218 0 272" stroke-width="22"/>
-  <path d="M258 370l42 26-42 24M382 370l-42 26 42 24M274 464c30 25 62 37 96 0" stroke-width="20"/>
+const ARCADE_ICON = glossyIcon(`
+  <path d="M186 304c-10 0-20 8-22 18l-28 150c-8 44 42 70 72 38l66-70h92l66 70c30 32 80 6 72-38l-28-150c-2-10-12-18-22-18H186Z"/>
+  <path d="M224 352v76M186 390h76" fill="none"/>
+  <circle cx="406" cy="370" r="18"/>
+  <circle cx="448" cy="410" r="18"/>
+`);
+
+const BOWLING_ICON = glossyIcon(`
+  <path d="M218 178c-28 44-38 92-18 140l22 46h72l22-46c20-48 10-96-18-140-10-16-28-26-40-26s-30 10-40 26Z"/>
+  <path d="M336 170c-24 42-32 86-14 130l20 44h64l20-44c18-44 10-88-14-130-10-16-24-24-38-24s-28 8-38 24Z"/>
+  <path d="M146 212c-20 40-26 78-10 116l18 40h56l18-40c16-38 10-76-10-116-8-14-22-22-32-22s-24 8-40 22Z"/>
+  <circle cx="330" cy="432" r="116"/>
+  <circle cx="292" cy="390" r="15" fill="#181615" stroke="none"/>
+  <circle cx="342" cy="374" r="15" fill="#181615" stroke="none"/>
+  <circle cx="366" cy="424" r="15" fill="#181615" stroke="none"/>
+`);
+
+const MINI_GOLF_ICON = glossyIcon(`
+  <path d="M236 150v288" fill="none"/>
+  <path d="M236 160l182 62-182 62z"/>
+  <path d="M132 494c98-52 194-42 286 18" fill="none"/>
+  <circle cx="404" cy="474" r="28"/>
+  <ellipse cx="236" cy="452" rx="62" ry="24" fill="#151816"/>
+`);
+
+const ESCAPE_ROOM_ICON = glossyIcon(`
+  <path d="M192 142h256v360H192z"/>
+  <path d="M244 196h152v250H244z" fill="#151816"/>
+  <circle cx="360" cy="326" r="20"/>
+  <path d="M360 344v52" fill="none"/>
+  <path d="M448 274h72v104h-72" fill="none"/>
+`);
+
+const MUSEUM_ICON = glossyIcon(`
+  <path d="M120 252l200-116 200 116H120Z"/>
+  <path d="M154 290h332M168 448h304M144 486h352" fill="none"/>
+  <path d="M190 288v160M260 288v160M330 288v160M400 288v160M470 288v160" fill="none"/>
+`);
+
+const SKATING_ICON = glossyIcon(`
+  <path d="M176 174h176l56 152-84 58H174l-34-58 36-152Z"/>
+  <path d="M202 214h116M220 252h116M238 290h112" fill="none"/>
+  <path d="M170 394h252c26 0 46 20 46 46H148c0-26 10-46 22-46Z"/>
+  <circle cx="214" cy="474" r="42"/>
+  <circle cx="384" cy="474" r="42"/>
+`);
+
+const HAUNTED_HOUSE_ICON = glossyIcon(`
+  <path d="M162 490V300l158-126 158 126v190H162Z"/>
+  <path d="M232 490V374h72v116M362 332h60v66h-60z" fill="#151816"/>
+  <path d="M118 198c38-30 72-28 98 6 28-36 62-36 96 0 34-34 68-36 106-6-48 6-78 26-90 60-20-24-42-36-68-36-28 0-52 12-70 36-12-34-36-54-72-60Z"/>
+`);
+
+const CORN_MAZE_ICON = glossyIcon(`
+  <path d="M162 500V184M236 500V148M310 500V196M384 500V150M458 500V188" fill="none"/>
+  <path d="M162 232c-46-6-68-34-64-80 42 2 68 24 76 64M236 204c-46-6-68-34-64-80 42 2 68 24 76 64M310 246c-46-6-68-34-64-80 42 2 68 24 76 64M384 204c-46-6-68-34-64-80 42 2 68 24 76 64M458 236c-46-6-68-34-64-80 42 2 68 24 76 64" fill="none"/>
+  <path d="M124 500c52-70 100-96 144-82 42 14 60 50 102 34 38-14 56-68 146-46" fill="none"/>
+`);
+
+const PUMPKIN_PATCH_ICON = glossyIcon(`
+  <path d="M320 218c-16-54 22-88 72-86-30 22-40 50-30 86" fill="none"/>
+  <path d="M320 224c-120 0-200 72-200 166 0 92 80 140 200 140s200-48 200-140c0-94-80-166-200-166Z"/>
+  <path d="M320 230c-72 42-82 228 0 296M320 230c72 42 82 228 0 296M238 248c-48 68-44 210 0 264M402 248c48 68 44 210 0 264" fill="none"/>
 `);
 
 export const DATE_NIGHT_ICON_BY_TYPE: Record<ConcreteDateNightType, string> = {
-  park: optimizedIcon("/date-night-icons/park.png"),
-  movies: optimizedIcon("/date-night-icons/movies.png"),
-  arcade: optimizedIcon("/date-night-icons/arcade.png"),
-  bowling: optimizedIcon("/date-night-icons/bowling.png"),
-  "mini-golf": optimizedIcon("/date-night-icons/mini-golf.png"),
-  "escape-room": optimizedIcon("/date-night-icons/escape-room.png"),
-  museum: optimizedIcon("/date-night-icons/museum.png"),
-  skating: optimizedIcon("/date-night-icons/skating.png"),
-  "haunted-house": SPOOKY_HAUNTED_HOUSE_ICON,
-  "corn-maze": SPOOKY_CORN_MAZE_ICON,
-  "pumpkin-patch": SPOOKY_PUMPKIN_PATCH_ICON,
+  park: PARK_ICON,
+  movies: MOVIES_ICON,
+  arcade: ARCADE_ICON,
+  bowling: BOWLING_ICON,
+  "mini-golf": MINI_GOLF_ICON,
+  "escape-room": ESCAPE_ROOM_ICON,
+  museum: MUSEUM_ICON,
+  skating: SKATING_ICON,
+  "haunted-house": HAUNTED_HOUSE_ICON,
+  "corn-maze": CORN_MAZE_ICON,
+  "pumpkin-patch": PUMPKIN_PATCH_ICON,
 };
 
 function inferTypeFromLabel(label?: string | null): ConcreteDateNightType | null {
