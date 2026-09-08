@@ -1,51 +1,207 @@
 import { useEffect, useState } from "react";
 import { Heart, MoonStar, UtensilsCrossed } from "lucide-react";
 import { DateNightHome } from "@/components/date-night-home";
+import { HalloweenDateNightPanel } from "@/components/halloween-date-night-panel";
 import { ModeHint } from "@/components/mode-hint";
 import { NightlifeHome } from "@/components/nightlife-home";
 import { PickHome } from "@/components/pick-home";
 import { trackAppEvent } from "@/lib/analytics";
+import {
+  isHalloweenDateNightSeason,
+  normalizeSeasonalDateNightFilters,
+} from "@/lib/date-night/season";
 import type { HomeMode } from "@/lib/nightlife/types";
+import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
+
+const DATE_NIGHT_ICON_THEME_STYLES = `
+html.halloween-date-night-active[data-theme="light"] {
+  --app-bg: #ececec !important;
+}
+
+.halloween-accent-splatter {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.2;
+  background:
+    radial-gradient(circle at 6% 4%, var(--app-accent) 0 0.38rem, transparent 0.44rem),
+    radial-gradient(circle at 11% 7%, var(--app-accent) 0 0.18rem, transparent 0.23rem),
+    radial-gradient(circle at 2.5% 10%, var(--app-accent) 0 0.24rem, transparent 0.3rem),
+    radial-gradient(ellipse at 7% 8%, var(--app-accent) 0 1.1rem, transparent 1.18rem),
+    radial-gradient(circle at 92% 5%, var(--app-accent) 0 0.3rem, transparent 0.36rem),
+    radial-gradient(circle at 96% 9%, var(--app-accent) 0 0.17rem, transparent 0.22rem),
+    radial-gradient(circle at 89% 12%, var(--app-accent) 0 0.22rem, transparent 0.28rem),
+    radial-gradient(ellipse at 94% 8%, var(--app-accent) 0 1rem, transparent 1.08rem),
+    radial-gradient(ellipse at 1% 32%, var(--app-accent) 0 0.72rem, transparent 0.8rem),
+    radial-gradient(circle at 4% 35%, var(--app-accent) 0 0.16rem, transparent 0.22rem),
+    radial-gradient(ellipse at 99% 44%, var(--app-accent) 0 0.64rem, transparent 0.72rem),
+    radial-gradient(circle at 96.5% 48%, var(--app-accent) 0 0.14rem, transparent 0.2rem);
+}
+
+html.halloween-date-night-active[data-theme="light"] .halloween-accent-splatter {
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+}
+
+html.halloween-date-night-active:not([data-theme="light"]) .halloween-accent-splatter {
+  opacity: 0.3;
+  filter: drop-shadow(0 0 10px color-mix(in oklab, var(--app-accent) 36%, transparent));
+}
+
+.halloween-accent-splatter::before,
+.halloween-accent-splatter::after {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  width: 0.28rem;
+  border-radius: 999px 999px 70% 70%;
+  background: var(--app-accent);
+}
+
+.halloween-accent-splatter::before {
+  left: 7.4%;
+  height: 3.7rem;
+  transform: rotate(-4deg);
+  box-shadow:
+    1.2rem 1rem 0 -0.07rem var(--app-accent),
+    2.1rem 0.35rem 0 -0.1rem var(--app-accent);
+}
+
+.halloween-accent-splatter::after {
+  right: 6.5%;
+  height: 2.8rem;
+  transform: rotate(5deg);
+  box-shadow:
+    -1.15rem 0.6rem 0 -0.09rem var(--app-accent),
+    -2rem 1.4rem 0 -0.11rem var(--app-accent);
+}
+
+html.date-night-active[data-theme="light"]:not(.halloween-date-night-active) img[src*="date-night-icons"] {
+  filter:
+    saturate(0.82)
+    hue-rotate(-8deg)
+    brightness(1.03)
+    contrast(0.98)
+    drop-shadow(0 4px 12px rgba(216, 91, 159, 0.12));
+}
+
+html.date-night-active:not([data-theme="light"]):not(.halloween-date-night-active) img[src*="date-night-icons"] {
+  filter:
+    saturate(0.94)
+    hue-rotate(-34deg)
+    brightness(1.1)
+    contrast(1.02)
+    drop-shadow(0 0 10px rgba(201, 167, 255, 0.22));
+}
+
+html.halloween-date-night-active[data-theme="light"] img[src*="date-night-icons"] {
+  filter:
+    sepia(0.12)
+    saturate(1.18)
+    hue-rotate(44deg)
+    brightness(1.02)
+    contrast(0.98)
+    drop-shadow(0 4px 12px rgba(197, 106, 50, 0.14));
+}
+
+html.halloween-date-night-active:not([data-theme="light"]) img[src*="date-night-icons"] {
+  filter:
+    sepia(0.18)
+    saturate(1.42)
+    hue-rotate(48deg)
+    brightness(0.98)
+    contrast(1.06)
+    drop-shadow(0 0 10px rgba(197, 106, 50, 0.28));
+}
+`;
 
 export function ModeHome() {
   const [mode, setMode] = useState<HomeMode>("dinner");
+  const dateNightFilters = useAppStore((state) => state.dateNightFilters);
+  const setDateNightFilters = useAppStore((state) => state.setDateNightFilters);
+  const spookySeasonEnabled = useAppStore((state) => state.spookySeasonEnabled);
+  const setSpookySeasonEnabled = useAppStore((state) => state.setSpookySeasonEnabled);
+  const halloweenSeason = isHalloweenDateNightSeason();
+
+  const nightlife = mode === "nightlife";
+  const dateNight = mode === "date-night";
+  const halloweenDateNight = dateNight && halloweenSeason && spookySeasonEnabled;
 
   useEffect(() => {
     const root = document.documentElement;
-    root.classList.toggle("nightlife-active", mode === "nightlife");
-    root.classList.toggle("date-night-active", mode === "date-night");
+    root.classList.toggle("nightlife-active", nightlife);
+    root.classList.toggle("date-night-active", dateNight);
+    root.classList.toggle("halloween-date-night-active", halloweenDateNight);
     return () => {
       root.classList.remove("nightlife-active");
       root.classList.remove("date-night-active");
+      root.classList.remove("halloween-date-night-active");
     };
-  }, [mode]);
+  }, [dateNight, halloweenDateNight, nightlife]);
+
+  useEffect(() => {
+    if (halloweenSeason) return;
+    if (spookySeasonEnabled) setSpookySeasonEnabled(false);
+  }, [halloweenSeason, setSpookySeasonEnabled, spookySeasonEnabled]);
+
+  useEffect(() => {
+    if (halloweenDateNight) return;
+    const normalized = normalizeSeasonalDateNightFilters(dateNightFilters, false);
+    if (
+      normalized.activityTypes.length !== dateNightFilters.activityTypes.length ||
+      normalized.activityTypes.some((type, index) => type !== dateNightFilters.activityTypes[index])
+    ) {
+      setDateNightFilters({ activityTypes: normalized.activityTypes });
+    }
+  }, [dateNightFilters, halloweenDateNight, setDateNightFilters]);
 
   function selectMode(next: HomeMode) {
     if (next !== mode) trackAppEvent("Mode Selected", { mode: next });
     setMode(next);
   }
 
-  const nightlife = mode === "nightlife";
-  const dateNight = mode === "date-night";
-
   return (
-    <div className={cn("mode-home min-h-dvh", nightlife && "nightlife-theme", dateNight && "date-night-theme")}>
+    <div
+      className={cn(
+        "mode-home min-h-dvh",
+        nightlife && "nightlife-theme",
+        dateNight && "date-night-theme",
+        halloweenDateNight && "halloween-date-night-theme",
+      )}
+    >
+      <style>{DATE_NIGHT_ICON_THEME_STYLES}</style>
+      {halloweenDateNight ? <div className="halloween-accent-splatter" aria-hidden="true" /> : null}
       <ModeHint />
 
       <header className="px-4 pt-8 pb-5">
         <p className="text-kicker text-subtle">
-          {nightlife ? "Dinner roulette · Nightlife" : dateNight ? "Dinner roulette · Date Night" : "Dinner roulette"}
+          {nightlife
+            ? "Dinner roulette · Nightlife"
+            : halloweenDateNight
+              ? "Dinner roulette · October after dark"
+              : dateNight
+                ? "Dinner roulette · Date Night"
+                : "Dinner roulette"}
         </p>
         <h1 className="font-display mt-2 text-4xl leading-tight text-fg">
-          {nightlife ? "What's the Move?" : dateNight ? "What Should We Do?" : "What's for Dinner?"}
+          {nightlife
+            ? "What's the Move?"
+            : halloweenDateNight
+              ? "Where Should the Night Take Us?"
+              : dateNight
+                ? "What Should We Do?"
+                : "What's for Dinner?"}
         </h1>
         <p className="mt-3 max-w-sm text-sm text-muted">
           {nightlife
             ? "Set the vibe. Let the app pick the place."
-            : dateNight
-              ? "Set the mood. Let the app pick the date."
-              : "You set the rules. The app helps decide."}
+            : halloweenDateNight
+              ? "Pick your poison. Set the mood. Let October decide the rest."
+              : dateNight
+                ? "Set the mood. Let the app pick the date."
+                : "You set the rules. The app helps decide."}
         </p>
       </header>
 
@@ -90,7 +246,8 @@ export function ModeHome() {
         </div>
       </div>
 
-      {mode === "dinner" ? <PickHome /> : mode === "nightlife" ? <NightlifeHome /> : <DateNightHome />}
+      {dateNight && halloweenSeason ? <HalloweenDateNightPanel /> : null}
+      {mode === "dinner" ? <PickHome /> : nightlife ? <NightlifeHome /> : <DateNightHome />}
     </div>
   );
 }

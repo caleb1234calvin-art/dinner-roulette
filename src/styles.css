@@ -82,9 +82,9 @@ html.date-night-active[data-theme="light"] {
 
 html.date-night-active:not([data-theme="light"]) {
   color-scheme: dark;
-  --app-bg: #19171d;
-  --app-surface: #232028;
-  --app-elevated: #2d2933;
+  --app-bg: #14110e;
+  --app-surface: #1d1915;
+  --app-elevated: #26211c;
   --app-fg: #f5f1f7;
   --app-muted: #c6bdcc;
   --app-subtle: #948b9c;

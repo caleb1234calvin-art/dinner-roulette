@@ -25,9 +25,11 @@ interface AppState {
   sessionShown: string[];
   sessionDate: string;
   theme: ThemeId;
+  spookySeasonEnabled: boolean;
   hydrated: boolean;
   setHydrated: (value: boolean) => void;
   setTheme: (theme: ThemeId) => void;
+  setSpookySeasonEnabled: (value: boolean) => void;
   setLocation: (location: SearchLocation) => void;
   setFilters: (patch: Partial<AppFilters>) => void;
   setDateNightFilters: (patch: Partial<DateNightFilters>) => void;
@@ -99,12 +101,14 @@ export const useAppStore = create<AppState>()(
       sessionShown: [],
       sessionDate: todayKey(),
       theme: "dark",
+      spookySeasonEnabled: false,
       hydrated: false,
       setHydrated: (value) => set({ hydrated: value }),
       setTheme: (theme) => {
         applyTheme(theme);
         set({ theme });
       },
+      setSpookySeasonEnabled: (value) => set({ spookySeasonEnabled: value }),
       setLocation: (location) => set({ location, sessionShown: [] }),
       setFilters: (patch) => set({ filters: { ...DEFAULT_FILTERS, ...get().filters, ...patch } }),
       setDateNightFilters: (patch) =>
@@ -224,6 +228,7 @@ export const useAppStore = create<AppState>()(
           exclusions: [],
           sessionShown: [],
           sessionDate: todayKey(),
+          spookySeasonEnabled: false,
         }),
     }),
     {
@@ -239,6 +244,7 @@ export const useAppStore = create<AppState>()(
         sessionShown: state.sessionShown,
         sessionDate: state.sessionDate,
         theme: state.theme,
+        spookySeasonEnabled: state.spookySeasonEnabled,
       }),
       merge: (persisted, current) => {
         const saved = (persisted ?? {}) as Partial<AppState>;
@@ -248,6 +254,10 @@ export const useAppStore = create<AppState>()(
           filters: { ...DEFAULT_FILTERS, ...saved.filters },
           dateNightFilters: { ...DEFAULT_DATE_NIGHT_FILTERS, ...saved.dateNightFilters },
           theme: isThemeId(saved.theme) ? saved.theme : current.theme,
+          spookySeasonEnabled:
+            typeof saved.spookySeasonEnabled === "boolean"
+              ? saved.spookySeasonEnabled
+              : current.spookySeasonEnabled,
         };
       },
       onRehydrateStorage: () => (state) => {
