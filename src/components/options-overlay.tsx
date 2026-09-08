@@ -15,12 +15,7 @@ import { cn } from "@/lib/utils";
 type ResultMode = "dinner" | "nightlife" | "date-night";
 
 function decodeXmlText(value: string): string {
-  return value
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&apos;/g, "'");
+  return value.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&apos;/g, "'");
 }
 
 function generatedBadgeLabel(src: string): string | null {
@@ -29,9 +24,7 @@ function generatedBadgeLabel(src: string): string | null {
     const comma = src.indexOf(",");
     if (comma < 0) return null;
     const svg = decodeURIComponent(src.slice(comma + 1));
-    const lines = [...svg.matchAll(/<text[^>]*>(.*?)<\/text>/g)]
-      .map((match) => decodeXmlText(match[1] ?? "").trim())
-      .filter(Boolean);
+    const lines = [...svg.matchAll(/<text[^>]*>(.*?)<\/text>/g)].map((match) => decodeXmlText(match[1] ?? "").trim()).filter(Boolean);
     return lines.length ? lines.join("\n") : null;
   } catch {
     return null;
@@ -74,11 +67,7 @@ export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNo
     <div className={cn("fixed inset-0 z-50 overflow-y-auto bg-bg", halloween && "date-night-halloween-options")}>
       <div className="mx-auto flex min-h-dvh max-w-lg flex-col justify-center px-4 py-6">
         <div className="flex items-start justify-between gap-3">
-          <div className="flex-1">
-            <p className="text-kicker text-subtle">{kicker}</p>
-            <h2 className="font-display mt-1 text-3xl leading-tight text-fg">Tonight's options</h2>
-            <p className="mt-1 text-sm text-muted">Pick one, or let us shuffle again.</p>
-          </div>
+          <div className="flex-1"><p className="text-kicker text-subtle">{kicker}</p><h2 className="font-display mt-1 text-3xl leading-tight text-fg">Tonight's options</h2><p className="mt-1 text-sm text-muted">Pick one, or let us shuffle again.</p></div>
           <button type="button" onClick={onClose} className="mt-2 flex size-11 shrink-0 items-center justify-center rounded-md bg-surface text-fg shadow-border" aria-label="Close options"><X className="size-5" /></button>
         </div>
         <div className={cn("mt-5 grid content-start gap-x-3 gap-y-4", restaurants.length === 1 ? "grid-cols-1" : "grid-cols-2")}>
@@ -109,12 +98,7 @@ function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { r
           ) : mode === "date-night" ? (
             <div className="flex h-28 w-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10"><Sparkles className="size-10 text-accent" /></div>
           ) : visual.isLogo ? (
-            <div className="flex h-28 w-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10">
-              <div className="shortlist-brand-stage relative flex h-20 w-[76%] items-center justify-center overflow-hidden rounded-xl p-3">
-                <div className="absolute -top-5 -left-4 size-16 rounded-full bg-accent/15 blur-sm" /><div className="absolute -right-3 -bottom-5 size-14 rounded-full bg-accent/10 blur-sm" /><Sparkles className="absolute top-2 left-2 size-3.5 text-accent/70" />
-                {displayLabel ? <span className={cn("relative z-10 max-w-[90%] whitespace-pre-line break-words text-center font-display font-semibold leading-[0.98] tracking-[0.015em] text-balance text-fg", badgeTextSize(displayLabel))}>{displayLabel}</span> : <img src={visual.src} alt="" className="shortlist-logo-image relative z-10 max-h-[78%] max-w-[78%] object-contain" />}
-              </div>
-            </div>
+            <div className="flex h-28 w-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10"><div className="shortlist-brand-stage relative flex h-20 w-[76%] items-center justify-center overflow-hidden rounded-xl p-3"><div className="absolute -top-5 -left-4 size-16 rounded-full bg-accent/15 blur-sm" /><div className="absolute -right-3 -bottom-5 size-14 rounded-full bg-accent/10 blur-sm" /><Sparkles className="absolute top-2 left-2 size-3.5 text-accent/70" />{displayLabel ? <span className={cn("relative z-10 max-w-[90%] whitespace-pre-line break-words text-center font-display font-semibold leading-[0.98] tracking-[0.015em] text-balance text-fg", badgeTextSize(displayLabel))}>{displayLabel}</span> : <img src={visual.src} alt="" className="shortlist-logo-image relative z-10 max-h-[78%] max-w-[78%] object-contain" />}</div></div>
           ) : <img src={visual.src} alt="" className="h-28 w-full object-cover outline outline-1 -outline-offset-1 outline-fg/10" />}
         </button>
         <button type="button" onClick={onNotTonight} className="absolute top-2 right-2 flex size-10 items-center justify-center rounded-md bg-bg/80 text-fg" aria-label={`Not tonight: ${restaurant.name}`}><Ban className="size-4" /></button>
