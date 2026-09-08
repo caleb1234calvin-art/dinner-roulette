@@ -65,31 +65,31 @@ const PUMPKIN_PATCH_ICON = glossyIcon(`
 `);
 
 export const DATE_NIGHT_ICON_BY_TYPE: Record<ConcreteDateNightType, string> = {
-  park: "/date-night-icons/grok_1788905528223.jpg",
-  movies: "/date-night-icons/grok_1788905549562.jpg",
-  arcade: "/date-night-icons/grok_1788905538605.jpg",
-  bowling: "/date-night-icons/grok_1788905545571.jpg",
-  "mini-golf": "/date-night-icons/grok_1788905535614.jpg",
-  "escape-room": "/date-night-icons/grok_1788905507708.jpg",
-  museum: "/date-night-icons/grok_1788905531240.jpg",
-  skating: "/date-night-icons/grok_1788905541667.jpg",
+  park: "/date-night-icons/grok_1788905545571.jpg",
+  movies: "/date-night-icons/grok_1788905507708.jpg",
+  arcade: "/date-night-icons/grok_1788905535614.jpg",
+  bowling: "/date-night-icons/grok_1788905528223.jpg",
+  "mini-golf": "/date-night-icons/grok_1788905538605.jpg",
+  "escape-room": "/date-night-icons/grok_1788905549562.jpg",
+  museum: "/date-night-icons/grok_1788905541667.jpg",
+  skating: "/date-night-icons/grok_1788905531240.jpg",
   "haunted-house": HAUNTED_HOUSE_ICON,
   "corn-maze": CORN_MAZE_ICON,
   "pumpkin-patch": PUMPKIN_PATCH_ICON,
 };
 
 const HALLOWEEN_DATE_NIGHT_ICON_BY_TYPE: Partial<Record<ConcreteDateNightType, string>> = {
-  park: "/date-night-icons/grok_1788905177823.jpg",
-  "corn-maze": "/date-night-icons/grok_1788905180227.jpg",
-  "pumpkin-patch": "/date-night-icons/grok_1788905184073.jpg",
-  "escape-room": "/date-night-icons/grok_1788905187785.jpg",
+  movies: "/date-night-icons/grok_1788905177823.jpg",
+  bowling: "/date-night-icons/grok_1788905180227.jpg",
+  skating: "/date-night-icons/grok_1788905184073.jpg",
+  arcade: "/date-night-icons/grok_1788905187785.jpg",
   "mini-golf": "/date-night-icons/grok_1788905190727.jpg",
   museum: "/date-night-icons/grok_1788905196749.jpg",
   "haunted-house": "/date-night-icons/grok_1788905199846.jpg",
-  bowling: "/date-night-icons/grok_1788905202767.jpg",
-  skating: "/date-night-icons/grok_1788905205875.jpg",
-  arcade: "/date-night-icons/grok_1788905208616.jpg",
-  movies: "/date-night-icons/grok_1788905211949.jpg",
+  "corn-maze": "/date-night-icons/grok_1788905202767.jpg",
+  "pumpkin-patch": "/date-night-icons/grok_1788905205875.jpg",
+  "escape-room": "/date-night-icons/grok_1788905208616.jpg",
+  park: "/date-night-icons/grok_1788905211949.jpg",
 };
 
 function inferTypeFromLabel(label?: string | null): ConcreteDateNightType | null {
@@ -120,6 +120,9 @@ export function getDateNightIcon(input: {
 }): string | null {
   const primary = input.activityTypes?.[0] ?? inferTypeFromLabel(input.cuisineLabel);
   if (!primary) return null;
-  if (input.halloween) return HALLOWEEN_DATE_NIGHT_ICON_BY_TYPE[primary] ?? DATE_NIGHT_ICON_BY_TYPE[primary];
+  const halloween =
+    input.halloween ??
+    (typeof document !== "undefined" && document.documentElement.classList.contains("halloween-date-night-active"));
+  if (halloween) return HALLOWEEN_DATE_NIGHT_ICON_BY_TYPE[primary] ?? DATE_NIGHT_ICON_BY_TYPE[primary];
   return DATE_NIGHT_ICON_BY_TYPE[primary];
 }
