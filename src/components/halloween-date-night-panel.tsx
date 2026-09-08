@@ -271,19 +271,13 @@ html.halloween-date-night-active .chip[aria-pressed="false"] {
   font-weight: 600 !important;
 }
 
-html.halloween-date-night-active .chip:is(
-  [class*="ring-[#d56a2f]"],
-  [class*="ring-[#f4c092]"]
-) {
+html.halloween-date-night-active .chip[class*="ring-"] {
   color: var(--app-fg) !important;
   font-weight: 700 !important;
-  text-shadow: 0 0 10px color-mix(in oklab, var(--october-ember) 34%, transparent);
+  text-shadow: 0 0 10px color-mix(in oklab, var(--october-ember) 34%, transparent) !important;
 }
 
-html.halloween-date-night-active .chip:is(
-  [class*="ring-[#d56a2f]"],
-  [class*="ring-[#f4c092]"]
-)[aria-pressed="false"] {
+html.halloween-date-night-active .chip[class*="ring-"][aria-pressed="false"] {
   background: color-mix(in oklab, var(--october-ember) 13%, transparent) !important;
   box-shadow:
     inset 0 0 0 1px color-mix(in oklab, var(--october-ember) 28%, transparent),
@@ -291,10 +285,7 @@ html.halloween-date-night-active .chip:is(
     0 8px 20px -18px color-mix(in oklab, var(--october-ember) 42%, transparent) !important;
 }
 
-html.halloween-date-night-active .chip:is(
-  [class*="ring-[#d56a2f]"],
-  [class*="ring-[#f4c092]"]
-)[aria-pressed="true"] {
+html.halloween-date-night-active .chip[class*="ring-"][aria-pressed="true"] {
   background: color-mix(in oklab, var(--october-ember) 24%, transparent) !important;
   box-shadow:
     inset 0 0 0 1px color-mix(in oklab, var(--october-ember) 44%, transparent),
