@@ -46,67 +46,6 @@ function glossyIcon(body: string): string {
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
 
-const PARK_ICON = glossyIcon(`
-  <path d="M190 430h260v42H190z"/>
-  <path d="M220 430v92M420 430v92" fill="none"/>
-  <path d="M160 388c0-58 38-102 90-102 6-70 54-116 116-116 61 0 106 43 114 104 46 8 80 48 80 96 0 53-41 96-92 96H244c-46 0-84-35-84-78Z"/>
-  <path d="M330 286v186" fill="none"/>
-`);
-
-const MOVIES_ICON = glossyIcon(`
-  <path d="M166 284h308v224H166z"/>
-  <path d="M146 202l314-62 24 112-314 62z"/>
-  <path d="M202 191l56 94M292 174l56 94M382 156l56 94" fill="none"/>
-  <path d="M182 344h276" fill="none"/>
-`);
-
-const ARCADE_ICON = glossyIcon(`
-  <path d="M186 304c-10 0-20 8-22 18l-28 150c-8 44 42 70 72 38l66-70h92l66 70c30 32 80 6 72-38l-28-150c-2-10-12-18-22-18H186Z"/>
-  <path d="M224 352v76M186 390h76" fill="none"/>
-  <circle cx="406" cy="370" r="18"/>
-  <circle cx="448" cy="410" r="18"/>
-`);
-
-const BOWLING_ICON = glossyIcon(`
-  <path d="M218 178c-28 44-38 92-18 140l22 46h72l22-46c20-48 10-96-18-140-10-16-28-26-40-26s-30 10-40 26Z"/>
-  <path d="M336 170c-24 42-32 86-14 130l20 44h64l20-44c18-44 10-88-14-130-10-16-24-24-38-24s-28 8-38 24Z"/>
-  <path d="M146 212c-20 40-26 78-10 116l18 40h56l18-40c16-38 10-76-10-116-8-14-22-22-32-22s-24 8-40 22Z"/>
-  <circle cx="330" cy="432" r="116"/>
-  <circle cx="292" cy="390" r="15" fill="#181615" stroke="none"/>
-  <circle cx="342" cy="374" r="15" fill="#181615" stroke="none"/>
-  <circle cx="366" cy="424" r="15" fill="#181615" stroke="none"/>
-`);
-
-const MINI_GOLF_ICON = glossyIcon(`
-  <path d="M236 150v288" fill="none"/>
-  <path d="M236 160l182 62-182 62z"/>
-  <path d="M132 494c98-52 194-42 286 18" fill="none"/>
-  <circle cx="404" cy="474" r="28"/>
-  <ellipse cx="236" cy="452" rx="62" ry="24" fill="#151816"/>
-`);
-
-const ESCAPE_ROOM_ICON = glossyIcon(`
-  <path d="M192 142h256v360H192z"/>
-  <path d="M244 196h152v250H244z" fill="#151816"/>
-  <circle cx="360" cy="326" r="20"/>
-  <path d="M360 344v52" fill="none"/>
-  <path d="M448 274h72v104h-72" fill="none"/>
-`);
-
-const MUSEUM_ICON = glossyIcon(`
-  <path d="M120 252l200-116 200 116H120Z"/>
-  <path d="M154 290h332M168 448h304M144 486h352" fill="none"/>
-  <path d="M190 288v160M260 288v160M330 288v160M400 288v160M470 288v160" fill="none"/>
-`);
-
-const SKATING_ICON = glossyIcon(`
-  <path d="M176 174h176l56 152-84 58H174l-34-58 36-152Z"/>
-  <path d="M202 214h116M220 252h116M238 290h112" fill="none"/>
-  <path d="M170 394h252c26 0 46 20 46 46H148c0-26 10-46 22-46Z"/>
-  <circle cx="214" cy="474" r="42"/>
-  <circle cx="384" cy="474" r="42"/>
-`);
-
 const HAUNTED_HOUSE_ICON = glossyIcon(`
   <path d="M162 490V300l158-126 158 126v190H162Z"/>
   <path d="M232 490V374h72v116M362 332h60v66h-60z" fill="#151816"/>
@@ -126,14 +65,14 @@ const PUMPKIN_PATCH_ICON = glossyIcon(`
 `);
 
 export const DATE_NIGHT_ICON_BY_TYPE: Record<ConcreteDateNightType, string> = {
-  park: PARK_ICON,
-  movies: MOVIES_ICON,
-  arcade: ARCADE_ICON,
-  bowling: BOWLING_ICON,
-  "mini-golf": MINI_GOLF_ICON,
-  "escape-room": ESCAPE_ROOM_ICON,
-  museum: MUSEUM_ICON,
-  skating: SKATING_ICON,
+  park: "/date-night-icons/grok_1788905528223.jpg",
+  movies: "/date-night-icons/grok_1788905549562.jpg",
+  arcade: "/date-night-icons/grok_1788905538605.jpg",
+  bowling: "/date-night-icons/grok_1788905545571.jpg",
+  "mini-golf": "/date-night-icons/grok_1788905535614.jpg",
+  "escape-room": "/date-night-icons/grok_1788905507708.jpg",
+  museum: "/date-night-icons/grok_1788905531240.jpg",
+  skating: "/date-night-icons/grok_1788905541667.jpg",
   "haunted-house": HAUNTED_HOUSE_ICON,
   "corn-maze": CORN_MAZE_ICON,
   "pumpkin-patch": PUMPKIN_PATCH_ICON,
