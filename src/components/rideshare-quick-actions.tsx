@@ -10,8 +10,6 @@ function uberRideUrl(restaurant: DecoratedRestaurant) {
     params.set("dropoff[formatted_address]", restaurant.address);
   }
 
-  // Uber recommends universal links for mobile web/PWA surfaces so the rider
-  // app can open when installed and the web flow can remain available otherwise.
   return `https://m.uber.com/looking?${params.toString()}`;
 }
 
@@ -21,20 +19,17 @@ function lyftRideUrl(restaurant: DecoratedRestaurant) {
   params.set("destination[latitude]", String(restaurant.lat));
   params.set("destination[longitude]", String(restaurant.lon));
 
-  // Lyft's web ride-request deep link accepts destination coordinates. Pickup
-  // is intentionally left to the Lyft app/browser so it can use current GPS.
   return `https://ride.lyft.com/u?${params.toString()}`;
 }
 
 export function RideshareQuickActions({ restaurant }: { restaurant: DecoratedRestaurant }) {
   return (
-    <div className="w-[8.5rem] shrink-0">
-      <p className="text-center text-[0.65rem] font-bold leading-[1.35] tracking-[0.1em] text-fg uppercase drop-shadow-[0_0_7px_rgba(255,255,255,0.24)]">
-        <span className="block">Drive sober.</span>
-        <span className="block">People care about you.</span>
+    <div className="w-[8.5rem] shrink-0 text-center">
+      <p className="text-[0.68rem] font-extrabold tracking-[0.12em] text-fg uppercase drop-shadow-[0_0_7px_rgba(255,255,255,0.26)]">
+        Drive sober.
       </p>
 
-      <div className="mt-2.5 flex justify-center gap-2.5">
+      <div className="mt-1 flex justify-center gap-2.5">
         <a
           href={uberRideUrl(restaurant)}
           target="_blank"
@@ -56,6 +51,10 @@ export function RideshareQuickActions({ restaurant }: { restaurant: DecoratedRes
           <span className="text-[0.75rem] font-black tracking-[-0.05em]">Lyft</span>
         </a>
       </div>
+
+      <p className="mt-1.5 text-[0.58rem] font-bold leading-[1.25] tracking-[0.08em] text-fg/90 uppercase drop-shadow-[0_0_6px_rgba(255,255,255,0.18)]">
+        People care about you.
+      </p>
     </div>
   );
 }
