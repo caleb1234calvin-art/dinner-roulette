@@ -28,16 +28,20 @@ function lyftRideUrl(restaurant: DecoratedRestaurant) {
 
 export function RideshareQuickActions({ restaurant }: { restaurant: DecoratedRestaurant }) {
   return (
-    <div className="shrink-0">
-      <p className="text-right text-[0.62rem] tracking-[0.16em] text-subtle uppercase">Need a ride?</p>
-      <div className="mt-2 flex gap-2">
+    <div className="w-[8.5rem] shrink-0">
+      <p className="text-center text-[0.65rem] font-bold leading-[1.35] tracking-[0.1em] text-fg uppercase drop-shadow-[0_0_7px_rgba(255,255,255,0.24)]">
+        <span className="block">Drive sober.</span>
+        <span className="block">People care about you.</span>
+      </p>
+
+      <div className="mt-2.5 flex justify-center gap-2.5">
         <a
           href={uberRideUrl(restaurant)}
           target="_blank"
           rel="noreferrer"
           aria-label={`Open Uber with ${restaurant.name} as the destination`}
           title="Ride with Uber"
-          className="flex size-12 items-center justify-center rounded-xl bg-[#050505] text-white shadow-[0_0_20px_-7px_rgba(255,255,255,0.72)] ring-1 ring-white/12 transition duration-150 hover:scale-[1.04] hover:shadow-[0_0_24px_-5px_rgba(255,255,255,0.82)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 active:scale-[0.97]"
+          className="flex size-12 items-center justify-center rounded-md bg-[#111111] text-white shadow-[0_0_10px_-5px_rgba(255,255,255,0.28)] ring-1 ring-white/10 transition duration-150 hover:scale-[1.03] hover:bg-[#171717] hover:shadow-[0_0_12px_-5px_rgba(255,255,255,0.34)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/55 active:scale-[0.98]"
         >
           <span className="text-[0.72rem] font-semibold tracking-[-0.03em]">Uber</span>
         </a>
@@ -47,7 +51,7 @@ export function RideshareQuickActions({ restaurant }: { restaurant: DecoratedRes
           rel="noreferrer"
           aria-label={`Open Lyft with ${restaurant.name} as the destination`}
           title="Ride with Lyft"
-          className="flex size-12 items-center justify-center rounded-xl bg-[#ff00bf] text-white shadow-[0_0_22px_-6px_rgba(255,0,191,0.78)] ring-1 ring-white/18 transition duration-150 hover:scale-[1.04] hover:shadow-[0_0_26px_-4px_rgba(255,0,191,0.9)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff8ee3] active:scale-[0.97]"
+          className="flex size-12 items-center justify-center rounded-md bg-[#b50088] text-white shadow-[0_0_10px_-5px_rgba(181,0,136,0.36)] ring-1 ring-white/10 transition duration-150 hover:scale-[1.03] hover:bg-[#c20091] hover:shadow-[0_0_12px_-5px_rgba(194,0,145,0.42)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#db64bd] active:scale-[0.98]"
         >
           <span className="text-[0.75rem] font-black tracking-[-0.05em]">Lyft</span>
         </a>
