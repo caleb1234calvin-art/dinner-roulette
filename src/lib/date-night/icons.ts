@@ -1,55 +1,45 @@
 import type { ConcreteDateNightType } from "./types";
 
-const WINE = "#a7343e";
-const BLUE_GREEN = "#45a66f";
-
 function glossyIcon(body: string): string {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
   <defs>
     <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#171111"/>
-      <stop offset=".52" stop-color="#111413"/>
-      <stop offset="1" stop-color="#0d1512"/>
+      <stop stop-color="#171717"/>
+      <stop offset=".52" stop-color="#111111"/>
+      <stop offset="1" stop-color="#0c0c0c"/>
     </linearGradient>
-    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="${WINE}"/>
-      <stop offset=".47" stop-color="#633b3e"/>
-      <stop offset=".53" stop-color="#315f4c"/>
-      <stop offset="1" stop-color="${BLUE_GREEN}"/>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#6d6d72"/>
+      <stop offset=".5" stop-color="#3b3b40"/>
+      <stop offset="1" stop-color="#77777d"/>
     </linearGradient>
-    <linearGradient id="subject" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#e66f79"/>
-      <stop offset=".25" stop-color="#a84a53"/>
-      <stop offset=".5" stop-color="#4a4545"/>
-      <stop offset=".75" stop-color="#3e8c6b"/>
-      <stop offset="1" stop-color="#78d3aa"/>
+    <linearGradient id="subject" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#d7d7dc"/>
+      <stop offset=".28" stop-color="#9a9aa1"/>
+      <stop offset=".55" stop-color="#5d5d64"/>
+      <stop offset=".78" stop-color="#8b8b92"/>
+      <stop offset="1" stop-color="#d0d0d6"/>
     </linearGradient>
     <linearGradient id="highlight" x1="0" y1="0" x2="0" y2="1">
-      <stop stop-color="#ffffff" stop-opacity=".72"/>
-      <stop offset=".45" stop-color="#ffffff" stop-opacity=".12"/>
+      <stop stop-color="#ffffff" stop-opacity=".74"/>
+      <stop offset=".45" stop-color="#ffffff" stop-opacity=".13"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="redGlow" cx="0" cy=".5" r=".8">
-      <stop stop-color="${WINE}" stop-opacity=".9"/>
-      <stop offset="1" stop-color="${WINE}" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="greenGlow" cx="1" cy=".5" r=".8">
-      <stop stop-color="${BLUE_GREEN}" stop-opacity=".9"/>
-      <stop offset="1" stop-color="${BLUE_GREEN}" stop-opacity="0"/>
+    <radialGradient id="softGlow" cx="50%" cy="50%" r="55%">
+      <stop stop-color="#ffffff" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <filter id="soft" x="-35%" y="-35%" width="170%" height="170%">
       <feGaussianBlur stdDeviation="16"/>
     </filter>
     <filter id="subjectShadow" x="-35%" y="-35%" width="170%" height="170%">
-      <feDropShadow dx="-10" dy="3" stdDeviation="12" flood-color="${WINE}" flood-opacity=".5"/>
-      <feDropShadow dx="10" dy="3" stdDeviation="12" flood-color="${BLUE_GREEN}" flood-opacity=".5"/>
-      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity=".65"/>
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity=".72"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#ffffff" flood-opacity=".12"/>
     </filter>
   </defs>
   <rect x="30" y="30" width="580" height="580" rx="132" fill="url(#tile)"/>
   <rect x="42" y="42" width="556" height="556" rx="122" fill="none" stroke="url(#edge)" stroke-width="12"/>
-  <ellipse cx="130" cy="320" rx="180" ry="230" fill="url(#redGlow)" opacity=".7" filter="url(#soft)"/>
-  <ellipse cx="510" cy="320" rx="180" ry="230" fill="url(#greenGlow)" opacity=".7" filter="url(#soft)"/>
+  <ellipse cx="320" cy="320" rx="235" ry="235" fill="url(#softGlow)" opacity=".65" filter="url(#soft)"/>
   <g filter="url(#subjectShadow)" fill="url(#subject)" stroke="#f3eee9" stroke-opacity=".28" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">${body}</g>
   <path d="M104 108c86-46 344-46 432 0" fill="none" stroke="url(#highlight)" stroke-width="22" stroke-linecap="round" opacity=".38"/>
   </svg>`;
