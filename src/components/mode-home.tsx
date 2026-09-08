@@ -97,24 +97,14 @@ html.date-night-active:not([data-theme="light"]):not(.halloween-date-night-activ
     drop-shadow(0 0 10px rgba(201, 167, 255, 0.22));
 }
 
-html.halloween-date-night-active[data-theme="light"] img[src*="date-night-icons"] {
-  filter:
-    sepia(0.12)
-    saturate(1.18)
-    hue-rotate(44deg)
-    brightness(1.02)
-    contrast(0.98)
-    drop-shadow(0 4px 12px rgba(197, 106, 50, 0.14));
+html.halloween-date-night-active div:has(> img[src*="date-night-icons"]) {
+  isolation: isolate;
+  background: linear-gradient(135deg, #a7343e 0%, #45a66f 100%) !important;
 }
 
-html.halloween-date-night-active:not([data-theme="light"]) img[src*="date-night-icons"] {
-  filter:
-    sepia(0.18)
-    saturate(1.42)
-    hue-rotate(48deg)
-    brightness(0.98)
-    contrast(1.06)
-    drop-shadow(0 0 10px rgba(197, 106, 50, 0.28));
+html.halloween-date-night-active img[src*="date-night-icons"] {
+  filter: grayscale(1) contrast(1.08) brightness(1.04);
+  mix-blend-mode: luminosity;
 }
 `;
 
