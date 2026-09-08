@@ -139,6 +139,17 @@ export const DATE_NIGHT_ICON_BY_TYPE: Record<ConcreteDateNightType, string> = {
   "pumpkin-patch": PUMPKIN_PATCH_ICON,
 };
 
+const HALLOWEEN_DATE_NIGHT_ICON_BY_TYPE: Partial<Record<ConcreteDateNightType, string>> = {
+  park: "/date-night-icons/park.png",
+  movies: "/date-night-icons/movies.png",
+  arcade: "/date-night-icons/arcade.png",
+  bowling: "/date-night-icons/bowling.png",
+  "mini-golf": "/date-night-icons/mini-golf.png",
+  "escape-room": "/date-night-icons/escape-room.png",
+  museum: "/date-night-icons/museum.png",
+  skating: "/date-night-icons/skating.png",
+};
+
 function inferTypeFromLabel(label?: string | null): ConcreteDateNightType | null {
   const value = label?.toLowerCase() ?? "";
   if (!value) return null;
@@ -163,7 +174,10 @@ export function isDateNightRecord(restaurantId?: string | null): boolean {
 export function getDateNightIcon(input: {
   activityTypes?: readonly ConcreteDateNightType[] | null;
   cuisineLabel?: string | null;
+  halloween?: boolean;
 }): string | null {
   const primary = input.activityTypes?.[0] ?? inferTypeFromLabel(input.cuisineLabel);
-  return primary ? DATE_NIGHT_ICON_BY_TYPE[primary] : null;
+  if (!primary) return null;
+  if (input.halloween) return HALLOWEEN_DATE_NIGHT_ICON_BY_TYPE[primary] ?? DATE_NIGHT_ICON_BY_TYPE[primary];
+  return DATE_NIGHT_ICON_BY_TYPE[primary];
 }
