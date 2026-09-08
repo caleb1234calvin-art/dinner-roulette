@@ -59,6 +59,7 @@ export function OptionsOverlay({
   onShuffle,
   onNotTonight,
   mode = "dinner",
+  halloween = false,
 }: {
   restaurants: DecoratedRestaurant[];
   onClose: () => void;
@@ -66,6 +67,7 @@ export function OptionsOverlay({
   onShuffle: () => void;
   onNotTonight: (restaurant: DecoratedRestaurant) => void;
   mode?: ResultMode;
+  halloween?: boolean;
 }) {
   const [mounted, setMounted] = useState(false);
 
@@ -75,10 +77,10 @@ export function OptionsOverlay({
 
   if (!mounted) return null;
 
-  const kicker = mode === "nightlife" ? "Nightlife shortlist" : mode === "date-night" ? "Date Night shortlist" : "Compressed shortlist";
+  const kicker = mode === "nightlife" ? "Nightlife shortlist" : mode === "date-night" ? (halloween ? "🎃 Date Night · Halloween" : "Date Night shortlist") : "Compressed shortlist";
 
   return createPortal(
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-bg">
+    <div className={cn("fixed inset-0 z-50 overflow-y-auto bg-bg", halloween && mode === "date-night" && "date-night-halloween-options")}>
       <div className="mx-auto flex min-h-dvh max-w-lg flex-col justify-center px-4 py-6">
         <div className="flex items-start justify-between gap-3">
           <div className="flex-1">
@@ -93,7 +95,7 @@ export function OptionsOverlay({
 
         <div className={cn("mt-5 grid content-start gap-x-3 gap-y-4", restaurants.length === 1 ? "grid-cols-1" : "grid-cols-2")}>
           {restaurants.map((restaurant) => (
-            <OptionCard key={restaurant.id} restaurant={restaurant} mode={mode} onSelect={() => onSelect(restaurant)} onNotTonight={() => onNotTonight(restaurant)} />
+            <OptionCard key={restaurant.id} restaurant={restaurant} mode={mode} halloween={halloween} onSelect={() => onSelect(restaurant)} onNotTonight={() => onNotTonight(restaurant)} />
           ))}
         </div>
 
@@ -109,9 +111,10 @@ export function OptionsOverlay({
   );
 }
 
-function OptionCard({ restaurant, mode, onSelect, onNotTonight }: {
+function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: {
   restaurant: DecoratedRestaurant;
   mode: ResultMode;
+  halloween: boolean;
   onSelect: () => void;
   onNotTonight: () => void;
 }) {
@@ -121,7 +124,7 @@ function OptionCard({ restaurant, mode, onSelect, onNotTonight }: {
   const displayLabel = generatedLabel ? badgeDisplayLabel(generatedLabel, restaurant.name) : null;
   const dateNightRestaurant = restaurant as DecoratedDateNightPlace;
   const dateNightIcon = mode === "date-night"
-    ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel })
+    ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel, halloween })
     : null;
   const activityTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
 
