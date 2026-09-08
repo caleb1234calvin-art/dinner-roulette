@@ -79,8 +79,7 @@ html.halloween-date-night-active:not([data-theme="light"]) .halloween-accent-spl
     -2rem 1.4rem 0 -0.11rem var(--app-accent);
 }
 
-html.date-night-active[data-theme="light"]:not(.halloween-date-night-active) img[src*="date-night-icons"],
-html.date-night-active[data-theme="light"]:not(.halloween-date-night-active) img[src^="data:image/svg+xml"] {
+html.date-night-active[data-theme="light"]:not(.halloween-date-night-active) img[src*="date-night-icons"] {
   filter:
     brightness(1.04)
     contrast(1.02)
@@ -88,8 +87,7 @@ html.date-night-active[data-theme="light"]:not(.halloween-date-night-active) img
     drop-shadow(0 0 12px rgba(216, 91, 159, 0.42));
 }
 
-html.date-night-active:not([data-theme="light"]):not(.halloween-date-night-active) img[src*="date-night-icons"],
-html.date-night-active:not([data-theme="light"]):not(.halloween-date-night-active) img[src^="data:image/svg+xml"] {
+html.date-night-active:not([data-theme="light"]):not(.halloween-date-night-active) img[src*="date-night-icons"] {
   filter:
     brightness(1.06)
     contrast(1.04)
@@ -97,63 +95,11 @@ html.date-night-active:not([data-theme="light"]):not(.halloween-date-night-activ
     drop-shadow(0 0 14px rgba(201, 167, 255, 0.46));
 }
 
-/* Halloween icon system: one design for normal Date Night icons and the
-   seasonal icons. The art keeps its luminance detail while a color layer gives
-   it the exact wine-red / blue-green Halloween palette. */
-html.halloween-date-night-active div:has(> img[src*="date-night-icons"]),
-html.halloween-date-night-active div:has(> img[src^="data:image/svg+xml"]) {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 18% 50%, rgba(167, 52, 62, 0.46), transparent 44%),
-    radial-gradient(circle at 82% 50%, rgba(69, 166, 111, 0.46), transparent 44%),
-    linear-gradient(135deg, #171011 0%, #101513 100%) !important;
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
-    -9px 0 24px -14px rgba(167, 52, 62, 0.72),
-    9px 0 24px -14px rgba(69, 166, 111, 0.72),
-    0 12px 24px -20px rgba(0, 0, 0, 0.92) !important;
-}
-
-html.halloween-date-night-active div:has(> img[src*="date-night-icons"])::after,
-html.halloween-date-night-active div:has(> img[src^="data:image/svg+xml"])::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  border-radius: inherit;
-  background:
-    linear-gradient(90deg, rgba(167, 52, 62, 0.96) 0%, rgba(167, 52, 62, 0.68) 38%, rgba(69, 166, 111, 0.68) 62%, rgba(69, 166, 111, 0.96) 100%);
-  mix-blend-mode: color;
-  opacity: 0.92;
-}
-
-html.halloween-date-night-active img[src*="date-night-icons"],
-html.halloween-date-night-active img[src^="data:image/svg+xml"] {
-  position: relative;
-  z-index: 1;
-  filter:
-    grayscale(1)
-    contrast(1.12)
-    brightness(1.08)
-    drop-shadow(-6px 0 10px rgba(167, 52, 62, 0.34))
-    drop-shadow(6px 0 10px rgba(69, 166, 111, 0.34));
-  mix-blend-mode: normal;
-}
-
-html.halloween-date-night-active div:has(> img[src*="date-night-icons"])::before,
-html.halloween-date-night-active div:has(> img[src^="data:image/svg+xml"])::before {
-  content: "";
-  position: absolute;
-  inset: 8%;
-  z-index: 3;
-  pointer-events: none;
-  border-radius: 24%;
-  box-shadow:
-    -18px 0 28px -20px rgba(167, 52, 62, 0.95),
-    18px 0 28px -20px rgba(69, 166, 111, 0.95);
+/* Halloween artwork already contains its red/teal lighting. Keep it untouched:
+   no extra grayscale, recolor layer, surrounding neon box, or drop-shadow. */
+html.halloween-date-night-active img[src*="date-night-icons"] {
+  filter: none !important;
+  mix-blend-mode: normal !important;
 }
 `;
 
