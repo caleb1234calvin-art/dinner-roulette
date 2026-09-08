@@ -46,6 +46,10 @@ export const SEASONAL_VENUE_AVAILABILITY: Readonly<Record<string, SeasonalVenueA
   },
 };
 
+export function hasSeasonalAvailabilityRecord(venueId: string): boolean {
+  return Boolean(SEASONAL_VENUE_AVAILABILITY[venueId]);
+}
+
 function localDateKey(now: Date): string {
   const year = now.getFullYear();
   const month = String(now.getMonth() + 1).padStart(2, "0");
