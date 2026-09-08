@@ -1,3 +1,4 @@
+import { isSeasonalFeatureEnabled } from "@/lib/seasonal-features";
 import { DATE_NIGHT_TYPE_CHIPS, type DateNightFilters, type DateNightTypeId } from "./types";
 
 export const HALLOWEEN_DATE_NIGHT_START = { month: 9, day: 1 } as const;
@@ -78,10 +79,13 @@ export const HALLOWEEN_DATE_NIGHT_TAGLINES = [
 ] as const;
 
 /**
- * Local-calendar availability window for the experimental Halloween Date Night layer.
- * It begins in September for planning and ends after the Halloween weekend.
+ * Local-calendar availability window for the Halloween Date Night layer.
+ * The master feature flag can disable the whole seasonal package without
+ * reverting any permanent Date Night polish.
  */
 export function isHalloweenDateNightSeason(now = new Date()): boolean {
+  if (!isSeasonalFeatureEnabled("halloweenDateNight")) return false;
+
   const month = now.getMonth() + 1;
   const day = now.getDate();
   const start = HALLOWEEN_DATE_NIGHT_START;
