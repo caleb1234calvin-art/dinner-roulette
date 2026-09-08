@@ -1,4 +1,4 @@
-import type { DecoratedDateNightPlace } from "./types.ts";
+import type { DecoratedDateNightPlace } from "./types";
 
 export type SeasonalDateStatus = "available" | "unavailable" | "unconfirmed";
 
