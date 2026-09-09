@@ -28,6 +28,7 @@ A jurisdiction is only marked complete when:
 | Delaware | 3 | 3 | Delaware Lottery | Complete: all 3 racetrack casinos with table games |
 | West Virginia | 5 | 5 | West Virginia Lottery | Complete: 4 racetrack casinos + Greenbrier historic-resort casino |
 | Missouri | 13 | 13 | Missouri Gaming Commission | Complete: all 13 current licensed riverboat casino properties |
+| Arkansas | 3 | 3 | Arkansas DFA / Arkansas Racing Commission | Complete: Oaklawn, Southland, and Saracen |
 
 ## Staged authoritative inventories
 
@@ -81,6 +82,9 @@ West Virginia Lottery oversight covers four racetrack casinos offering video lot
 
 ### Missouri
 The Missouri Gaming Commission's current Class A operator-license and casino-contact records reconcile 13 licensed riverboat casino properties. All 13 are activated in pass 8, including Kansas City/St. Louis metro properties and the regional casinos in Cape Girardeau, Caruthersville, Boonville, LaGrange, and St. Joseph. Missouri's regulatory framework restricts licensed gambling games to excursion gambling boats and floating facilities, so the pass follows the MGC's physical casino-license roster rather than distributed gaming locations.
+
+### Arkansas
+Arkansas Department of Finance and Administration / Racing Commission materials identify three active casino licensees under Amendment 100: Oaklawn Racing Casino Resort in Hot Springs, Southland Casino Hotel in West Memphis, and Saracen Casino Resort in Pine Bluff. All three are activated in pass 9. The Pope County casino license remains outside the active roster because the Arkansas Supreme Court voided the prior license and state materials list only the three operating licensees.
 
 ## Deployment discipline
 
