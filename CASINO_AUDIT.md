@@ -32,6 +32,7 @@ A jurisdiction is only marked complete when:
 | Rhode Island | 2 | 2 | Rhode Island Department of Business Regulation | Complete: Lincoln and Tiverton casino facilities |
 | Maine | 2 | 2 | Maine Gambling Control Unit | Complete: Hollywood Casino Bangor and Oxford Casino |
 | Kansas | 10 | 10 | Kansas Racing and Gaming Commission / NIGC | Complete: 4 state lottery casinos + 6 tribal casino venues |
+| North Carolina | 3 | 3 | NIGC / tribal operators | Complete: 2 EBCI casinos + Catawba Two Kings introductory casino |
 
 ## Staged authoritative inventories
 
@@ -97,6 +98,9 @@ The Maine Gambling Control Unit identifies two licensed casino facilities: Holly
 
 ### Kansas
 Kansas Racing and Gaming Commission materials identify four state-owned lottery gaming facilities: Hollywood Casino at Kansas Speedway, Boot Hill Casino & Resort, Kansas Star Casino, and Kansas Crossing Casino + Hotel. NIGC and tribal sources add six tribal casino venues under the app's destination-casino scope: Casino White Cloud, Golden Eagle Casino, Prairie Band Casino & Resort, Sac & Fox Casino, CrossWinds Casino, and 7th Street Casino. Convenience-style or one-stop gaming outlets are excluded so Kansas is reconciled to ten physical casino destinations.
+
+### North Carolina
+NIGC gaming-location records identify two Eastern Band of Cherokee Indians Class III casino properties in North Carolina: Harrah's Cherokee Casino Resort and Harrah's Cherokee Valley River Casino & Hotel. The Catawba Indian Nation's Catawba Two Kings Casino opened its introductory casino phase at the permanent Kings Mountain resort site on May 20, 2026, replacing the prior temporary modular casino. The audit therefore counts three current physical casino destinations and does not double-count the retired temporary Two Kings facility.
 
 ## Deployment discipline
 
