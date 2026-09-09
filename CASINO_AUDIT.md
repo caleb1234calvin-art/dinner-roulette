@@ -26,6 +26,7 @@ A jurisdiction is only marked complete when:
 | Indiana | 14 | 14 | Indiana Gaming Commission / National Indian Gaming Commission | Complete: 13 state-regulated venues + Four Winds South Bend |
 | Illinois | 17 | 17 | Illinois Gaming Board | Complete: all 17 current IGB casino venues, including Fairmount Park racino |
 | Delaware | 3 | 3 | Delaware Lottery | Complete: all 3 racetrack casinos with table games |
+| West Virginia | 5 | 5 | West Virginia Lottery | Complete: 4 racetrack casinos + Greenbrier historic-resort casino |
 
 ## Staged authoritative inventories
 
@@ -60,19 +61,22 @@ The Massachusetts Gaming Commission lists Encore Boston Harbor, MGM Springfield,
 The national seed contains Foxwoods Resort Casino and Mohegan Sun, the two currently operating tribal casino resorts represented in Connecticut gaming oversight materials.
 
 ### Michigan
-The Michigan Gaming Control Board's 2025 Tribal Gaming Annual Report lists 24 Class III tribal casino facilities. Eight tribal facilities were already represented in the seed and 16 tribal facilities were added in pass 3. The seed also contained the state's three separately regulated Detroit commercial casinos, bringing the Michigan runtime catalog to 27 physical casino facilities under the app's current scope. Small/secondary tribal properties are retained because the app scope includes physical casino venues rather than only destination resorts.
+The Michigan Gaming Control Board's 2025 Tribal Gaming Annual Report lists 24 Class III tribal casino facilities. Eight tribal properties were already represented in the seed and 16 tribal facilities were added in pass 3. Together with the state's three separately regulated Detroit commercial casinos, this brings the Michigan runtime catalog to 27 physical casino facilities under the app's current scope. Small/secondary tribal properties are retained because the app scope includes physical casino venues rather than only destination resorts.
 
 ### Ohio
 Ohio's physical casino-venue scope consists of four casinos regulated by the Ohio Casino Control Commission and seven video-lottery racinos overseen by the Ohio Lottery. All eleven were added in pass 4. Racinos are included because the national audit scope explicitly includes physical racino casino venues while excluding distributed retail gaming terminals.
 
 ### Indiana
-The Indiana Gaming Commission's casino-locations roster identifies thirteen state-regulated casino/racino properties, including the Terre Haute Casino Resort that opened in 2024. The Pokagon Band's Four Winds Casino South Bend is tribal gaming rather than an IGC-regulated casino and is reconciled separately against NIGC material. Together these produce fourteen physical casino venues under the app's national scope. The Indiana pass was published as one atomic multi-file commit after the Ohio deployment was confirmed green.
+The Indiana Gaming Commission's casino-locations roster identifies thirteen state-regulated casino/racino properties, including the Terre Haute Casino Resort that opened in 2024. The Pokagon Band's Four Winds Casino South Bend is tribal gaming rather than an IGC-regulated casino and is reconciled separately against NIGC material. Together these produce fourteen physical casino venues under the app's national scope.
 
 ### Illinois
-The Illinois Gaming Board identifies seventeen casinos in the state as of the 2026 audit. The pass includes established riverboat/land-based properties, newer venues such as Bally's Chicago, Golden Nugget Danville, Hard Rock Rockford, American Place, Walker's Bluff and Wind Creek Chicago Southland, plus Fairmount Park Casino & Racing. Fairmount Park is included because it became Illinois' first racino in April 2025 and falls within the app's physical casino-venue scope. Illinois was added to the existing pass-5 catalog so runtime wiring remained unchanged and the entire jurisdiction update could be published atomically.
+The Illinois Gaming Board identifies seventeen casinos in the state as of the 2026 audit. The pass includes established riverboat/land-based properties, newer venues, and Fairmount Park Casino & Racing, Illinois' first racino.
 
 ### Delaware
-Delaware Lottery's table-games program identifies exactly three licensed racetrack casinos: Delaware Park Casino, Bally's Dover Casino Resort, and Harrington Raceway & Casino. All three were added in pass 6. These venues fit the app's casino scope because they are full physical casino/racino properties rather than distributed retail gaming terminals.
+The Delaware Lottery identifies three racetrack casinos with table games: Delaware Park Casino, Bally's Dover Casino Resort, and Harrington Raceway & Casino. All three are activated in pass 6.
+
+### West Virginia
+West Virginia Lottery oversight covers four racetrack casinos offering video lottery/table games plus the historic-resort casino at The Greenbrier. These five destination casino properties are activated in pass 7. Distributed limited-video-lottery retail locations are excluded because the app scope is physical casino-style venues rather than bar/retail gaming terminals.
 
 ## Deployment discipline
 

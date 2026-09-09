@@ -1,18 +1,20 @@
 import fs from "node:fs";
 
-const files = [
+const catalogFiles = [
   "src/lib/nightlife/casino-catalog.ts",
   "src/lib/nightlife/casino-catalog-pass-2.ts",
   "src/lib/nightlife/casino-catalog-pass-3.ts",
   "src/lib/nightlife/casino-catalog-pass-4.ts",
   "src/lib/nightlife/casino-catalog-pass-5.ts",
   "src/lib/nightlife/casino-catalog-pass-6.ts",
+  "src/lib/nightlife/casino-catalog-pass-7.ts",
 ];
+const manifestFile = "audit/casino-sources.json";
 
 const records = [];
 const pattern = /casino\(\s*["']([^"']+)["']\s*,\s*["']([^"']+)["']\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)/g;
 
-for (const file of files) {
+for (const file of catalogFiles) {
   if (!fs.existsSync(file)) {
     console.error(`Casino catalog audit failed:\n- missing catalog file: ${file}`);
     process.exit(1);
@@ -38,24 +40,27 @@ for (const record of records) {
   if (!Number.isFinite(record.lon) || record.lon < -180 || record.lon > -60) failures.push(`implausible US longitude: ${record.name} ${record.lon}`);
 }
 
-const expectedJurisdictionCounts = {
-  "New Jersey": 9,
-  Pennsylvania: 18,
-  Maryland: 6,
-  Massachusetts: 3,
-  Connecticut: 2,
-  Michigan: 27,
-  Ohio: 11,
-  Indiana: 14,
-  Illinois: 17,
-  Delaware: 3,
-};
-
-const allSource = files.map((file) => fs.readFileSync(file, "utf8")).join("\n");
-for (const [jurisdiction, expected] of Object.entries(expectedJurisdictionCounts)) {
-  const escaped = jurisdiction.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const actual = (allSource.match(new RegExp(`\\"${escaped}\\"`, "g")) ?? []).length;
-  if (actual < expected) failures.push(`${jurisdiction}: expected at least ${expected} audited records, found ${actual}`);
+if (!fs.existsSync(manifestFile)) {
+  failures.push(`missing manifest file: ${manifestFile}`);
+} else {
+  const manifest = JSON.parse(fs.readFileSync(manifestFile, "utf8"));
+  const completeJurisdictions = Object.entries(manifest.jurisdictions ?? {}).filter(([, value]) => value?.status === "complete");
+  for (const [jurisdiction, value] of completeJurisdictions) {
+    const expected = Number(value.expectedCount);
+    if (!Number.isInteger(expected) || expected < 1) {
+      failures.push(`${jurisdiction}: invalid expectedCount in manifest`);
+      continue;
+    }
+    const actual = catalogFiles.reduce((sum, file) => {
+      const source = fs.readFileSync(file, "utf8");
+      const escaped = jurisdiction.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const helperJurisdiction = new RegExp(`jurisdiction:\\s*["']${escaped}["']`);
+      const argumentJurisdiction = new RegExp(`["']${escaped}["']`, "g");
+      if (helperJurisdiction.test(source)) return sum + [...source.matchAll(pattern)].length;
+      return sum + (source.match(argumentJurisdiction) ?? []).length;
+    }, 0);
+    if (actual < expected) failures.push(`${jurisdiction}: expected at least ${expected} audited records, found ${actual}`);
+  }
 }
 
 if (failures.length) {
@@ -63,4 +68,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Casino catalog audit passed for ${records.length} explicit curated records across ${files.length} catalog files.`);
+console.log(`Casino catalog audit passed for ${records.length} explicit curated records across ${catalogFiles.length} catalog files.`);
