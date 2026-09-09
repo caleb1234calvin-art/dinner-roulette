@@ -5,7 +5,7 @@ import { RideshareQuickActions } from "@/components/rideshare-quick-actions";
 import { Button } from "@/components/ui/button";
 import { getDateNightIcon } from "@/lib/date-night/icons";
 import { DATE_NIGHT_TAGLINES, dateNightTypeLabel, type DecoratedDateNightPlace } from "@/lib/date-night/types";
-import { NIGHTLIFE_TAGLINES, type DecoratedNightlifePlace } from "@/lib/nightlife/types";
+import { NIGHTLIFE_TAGLINES, nightlifeArtwork, type DecoratedNightlifePlace } from "@/lib/nightlife/types";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
 import { restaurantVisual } from "@/lib/restaurants/image-overrides";
@@ -17,15 +17,8 @@ const RATING_LABELS = ["Never again", "Not great", "Fine", "Really good", "Favor
 const SPIN_DELAYS = [50, 50, 55, 60, 70, 80, 95, 115, 140, 170, 210, 260, 320];
 type ResultMode = "dinner" | "nightlife" | "date-night";
 
-function doorDashSearchUrl(name: string) {
-  return `https://www.doordash.com/search/store/${encodeURIComponent(name)}`;
-}
-
-function grubhubSearchUrl(restaurant: DecoratedRestaurant) {
-  const params = new URLSearchParams({ orderMethod: "delivery", locationMode: "DELIVERY", queryText: restaurant.name, latitude: String(restaurant.lat), longitude: String(restaurant.lon), tab: "all" });
-  return `https://www.grubhub.com/search?${params.toString()}`;
-}
-
+function doorDashSearchUrl(name: string) { return `https://www.doordash.com/search/store/${encodeURIComponent(name)}`; }
+function grubhubSearchUrl(restaurant: DecoratedRestaurant) { const params = new URLSearchParams({ orderMethod: "delivery", locationMode: "DELIVERY", queryText: restaurant.name, latitude: String(restaurant.lat), longitude: String(restaurant.lon), tab: "all" }); return `https://www.grubhub.com/search?${params.toString()}`; }
 function uberEatsSearchUrl(name: string) { return `https://www.ubereats.com/search?q=${encodeURIComponent(name)}`; }
 
 function levelLabel(level: number | undefined, mode: ResultMode): string | null {
@@ -53,9 +46,7 @@ function buildWhyReasons(restaurant: DecoratedRestaurant, mode: ResultMode, favo
   return [...new Set(reasons)].slice(0, 4);
 }
 
-export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotTonight, skipSpin = false, mode = "dinner" }: {
-  restaurant: DecoratedRestaurant; reelNames: string[]; onClose: () => void; onReroll: () => void; onNotTonight: () => void; skipSpin?: boolean; mode?: ResultMode;
-}) {
+export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotTonight, skipSpin = false, mode = "dinner" }: { restaurant: DecoratedRestaurant; reelNames: string[]; onClose: () => void; onReroll: () => void; onNotTonight: () => void; skipSpin?: boolean; mode?: ResultMode; }) {
   const preferences = useAppStore((s) => s.preferences);
   const spookySeasonEnabled = useAppStore((s) => s.spookySeasonEnabled);
   const toggleFavorite = useAppStore((s) => s.toggleFavorite);
@@ -76,8 +67,7 @@ export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotT
     if (skipSpin || reduceMotion) { setPhase("result"); return; }
     setPhase("spin"); const pool = reelNames.filter(Boolean).length > 1 ? reelNames.filter(Boolean) : [restaurant.name];
     let cancelled = false; let timeout = 0; let tick = 0;
-    const step = () => { if (cancelled) return; if (tick >= SPIN_DELAYS.length) { setReel(restaurant.name); setPhase("result"); if ("vibrate" in navigator) navigator.vibrate?.(24); return; }
-      setReel(pool[Math.floor(Math.random() * pool.length)] ?? restaurant.name); timeout = window.setTimeout(step, SPIN_DELAYS[tick] ?? 80); tick += 1; };
+    const step = () => { if (cancelled) return; if (tick >= SPIN_DELAYS.length) { setReel(restaurant.name); setPhase("result"); if ("vibrate" in navigator) navigator.vibrate?.(24); return; } setReel(pool[Math.floor(Math.random() * pool.length)] ?? restaurant.name); timeout = window.setTimeout(step, SPIN_DELAYS[tick] ?? 80); tick += 1; };
     timeout = window.setTimeout(step, 40); return () => { cancelled = true; window.clearTimeout(timeout); };
   }, [restaurant.id, restaurant.name, reelNames, skipSpin]);
 
@@ -85,11 +75,11 @@ export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotT
   const destination = restaurant.address && restaurant.address !== "Address unavailable" ? restaurant.address : `${restaurant.lat},${restaurant.lon}`;
   const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
   const visual = restaurantVisual(restaurant.name, restaurant.photoKey);
+  const nightlifeRestaurant = restaurant as DecoratedNightlifePlace;
+  const nightlifeIcon = mode === "nightlife" ? nightlifeArtwork(nightlifeRestaurant.venueTypes ?? []) : null;
   const dateNightRestaurant = restaurant as DecoratedDateNightPlace;
   const dateNightIcon = mode === "date-night" ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel, halloween: spookySeasonEnabled }) : null;
   const dateNightTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
-  const primaryActivity = dateNightTypes[0];
-  const compactDateNightIcon = primaryActivity === "arcade" || primaryActivity === "museum";
   const websiteLabel = dateNightTypes.includes("movies") ? "Check showtimes" : "Website & info";
   const whyReasons = buildWhyReasons(restaurant, mode, favorite);
 
@@ -101,7 +91,7 @@ export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotT
     <div className="fixed inset-0 z-50 overflow-y-auto bg-bg"><div className="mx-auto flex min-h-dvh max-w-lg flex-col">
       {phase === "spin" ? <div className="flex flex-1 flex-col items-center justify-center px-6 text-center"><p className="text-kicker text-subtle">Choosing</p><div className="mt-6 w-full overflow-hidden rounded-xl bg-surface px-4 py-8 shadow-border"><p key={reel} className="reel-name font-display text-3xl text-fg">{reel}</p></div></div> : <>
         <div className="relative h-56 overflow-hidden">
-          {mode === "date-night" && dateNightIcon ? <div className="flex size-full items-center justify-center bg-elevated p-4 outline outline-1 -outline-offset-1 outline-fg/10"><img src={dateNightIcon} alt="" className={cn(compactDateNightIcon ? "size-36" : "size-44", "rounded-[2rem] object-cover shadow-lg")} /></div> : mode === "date-night" ? <div className="flex size-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10"><div className="flex size-28 items-center justify-center rounded-full bg-surface shadow-border"><Sparkles className="size-12 text-accent" /></div></div> : visual.isLogo ? <div className="flex size-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10"><div className="flex h-32 w-[70%] items-center justify-center rounded-2xl bg-[#d8d8d4] p-6 shadow-sm"><img src={visual.src} alt="" className="max-h-full max-w-full object-contain" /></div></div> : <><img src={visual.src} alt="" className="size-full object-cover outline outline-1 -outline-offset-1 outline-fg/10" /><div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent" /></>}
+          {mode === "nightlife" && nightlifeIcon ? <div className="flex size-full items-center justify-center bg-elevated p-4 outline outline-1 -outline-offset-1 outline-fg/10"><img src={nightlifeIcon} alt="" className="size-44 rounded-[2rem] object-cover shadow-lg" /></div> : mode === "date-night" && dateNightIcon ? <div className="flex size-full items-center justify-center bg-elevated p-4 outline outline-1 -outline-offset-1 outline-fg/10"><img src={dateNightIcon} alt="" className="size-44 rounded-[2rem] object-cover shadow-lg" /></div> : mode === "date-night" ? <div className="flex size-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10"><div className="flex size-28 items-center justify-center rounded-full bg-surface shadow-border"><Sparkles className="size-12 text-accent" /></div></div> : visual.isLogo ? <div className="flex size-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10"><div className="flex h-32 w-[70%] items-center justify-center rounded-2xl bg-[#d8d8d4] p-6 shadow-sm"><img src={visual.src} alt="" className="max-h-full max-w-full object-contain" /></div></div> : <><img src={visual.src} alt="" className="size-full object-cover outline outline-1 -outline-offset-1 outline-fg/10" /><div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent" /></>}
           <button type="button" onClick={onClose} className="absolute top-4 left-4 flex size-11 items-center justify-center rounded-md bg-bg/70 text-fg" aria-label="Close result"><X className="size-5" /></button>
         </div>
         <div className="result-in px-5 pt-2 pb-10"><p className="text-kicker text-subtle">{resultKicker}</p><h2 className="font-display mt-2 text-4xl leading-tight text-fg">{restaurant.name}</h2><p className="mt-2 text-sm text-muted">{tagline}</p>
