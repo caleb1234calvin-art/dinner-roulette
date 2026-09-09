@@ -46,6 +46,7 @@ const expectedJurisdictionCounts = {
   Michigan: 27,
   Ohio: 11,
   Indiana: 14,
+  Illinois: 17,
 };
 
 const allSource = files.map((file) => fs.readFileSync(file, "utf8")).join("\n");

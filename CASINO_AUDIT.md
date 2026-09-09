@@ -24,6 +24,7 @@ A jurisdiction is only marked complete when:
 | Michigan | 27 | 27 | Michigan Gaming Control Board | Complete: 24 tribal Class III facilities + 3 Detroit commercial casinos |
 | Ohio | 11 | 11 | Ohio Casino Control Commission / Ohio Lottery | Complete: 4 casinos + 7 VLT racinos |
 | Indiana | 14 | 14 | Indiana Gaming Commission / National Indian Gaming Commission | Complete: 13 state-regulated venues + Four Winds South Bend |
+| Illinois | 17 | 17 | Illinois Gaming Board | Complete: all 17 current IGB casino venues, including Fairmount Park racino |
 
 ## Staged authoritative inventories
 
@@ -65,6 +66,9 @@ Ohio's physical casino-venue scope consists of four casinos regulated by the Ohi
 
 ### Indiana
 The Indiana Gaming Commission's casino-locations roster identifies thirteen state-regulated casino/racino properties, including the Terre Haute Casino Resort that opened in 2024. The Pokagon Band's Four Winds Casino South Bend is tribal gaming rather than an IGC-regulated casino and is reconciled separately against NIGC material. Together these produce fourteen physical casino venues under the app's national scope. The Indiana pass was published as one atomic multi-file commit after the Ohio deployment was confirmed green.
+
+### Illinois
+The Illinois Gaming Board identifies seventeen casinos in the state as of the 2026 audit. The pass includes established riverboat/land-based properties, newer venues such as Bally's Chicago, Golden Nugget Danville, Hard Rock Rockford, American Place, Walker's Bluff and Wind Creek Chicago Southland, plus Fairmount Park Casino & Racing. Fairmount Park is included because it became Illinois' first racino in April 2025 and falls within the app's physical casino-venue scope. Illinois was added to the existing pass-5 catalog so runtime wiring remained unchanged and the entire jurisdiction update could be published atomically.
 
 ## Deployment discipline
 
