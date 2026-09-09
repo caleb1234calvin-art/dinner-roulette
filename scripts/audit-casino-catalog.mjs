@@ -5,6 +5,7 @@ const files = [
   "src/lib/nightlife/casino-catalog-pass-2.ts",
   "src/lib/nightlife/casino-catalog-pass-3.ts",
   "src/lib/nightlife/casino-catalog-pass-4.ts",
+  "src/lib/nightlife/casino-catalog-pass-5.ts",
 ];
 
 const records = [];
@@ -44,6 +45,7 @@ const expectedJurisdictionCounts = {
   Connecticut: 2,
   Michigan: 27,
   Ohio: 11,
+  Indiana: 14,
 };
 
 const allSource = files.map((file) => fs.readFileSync(file, "utf8")).join("\n");

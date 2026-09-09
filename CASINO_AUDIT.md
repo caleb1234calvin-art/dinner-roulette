@@ -23,6 +23,7 @@ A jurisdiction is only marked complete when:
 | Connecticut | 2 tribal casino resorts | 2 | Connecticut Department of Consumer Protection | Complete for currently operating casino resorts |
 | Michigan | 27 | 27 | Michigan Gaming Control Board | Complete: 24 tribal Class III facilities + 3 Detroit commercial casinos |
 | Ohio | 11 | 11 | Ohio Casino Control Commission / Ohio Lottery | Complete: 4 casinos + 7 VLT racinos |
+| Indiana | 14 | 14 | Indiana Gaming Commission / National Indian Gaming Commission | Complete: 13 state-regulated venues + Four Winds South Bend |
 
 ## Staged authoritative inventories
 
@@ -61,6 +62,9 @@ The Michigan Gaming Control Board's 2025 Tribal Gaming Annual Report lists 24 Cl
 
 ### Ohio
 Ohio's physical casino-venue scope consists of four casinos regulated by the Ohio Casino Control Commission and seven video-lottery racinos overseen by the Ohio Lottery. All eleven were added in pass 4. Racinos are included because the national audit scope explicitly includes physical racino casino venues while excluding distributed retail gaming terminals.
+
+### Indiana
+The Indiana Gaming Commission's casino-locations roster identifies thirteen state-regulated casino/racino properties, including the Terre Haute Casino Resort that opened in 2024. The Pokagon Band's Four Winds Casino South Bend is tribal gaming rather than an IGC-regulated casino and is reconciled separately against NIGC material. Together these produce fourteen physical casino venues under the app's national scope. The Indiana pass was published as one atomic multi-file commit after the Ohio deployment was confirmed green.
 
 ## Deployment discipline
 
