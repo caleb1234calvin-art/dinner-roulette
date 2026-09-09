@@ -1,6 +1,7 @@
 import type { CasinoAuditRecord } from "./casino-catalog";
 
 const MARYLAND_SOURCE = "https://www.mdgaming.com/marylands-casinos/";
+const VERIFIED_ON = "2026-09-09";
 
 const casino = (
   id: string,
@@ -10,7 +11,7 @@ const casino = (
   address: string,
   operator: string,
   website: string,
-  coordinateSource: string,
+  coordinateSource?: string,
 ): CasinoAuditRecord => ({
   id: `casino-catalog-${id}`,
   name,
@@ -31,7 +32,7 @@ const casino = (
   venueTypes: ["casino"],
   energyLevel: 2,
   audit: {
-    verifiedOn: "2026-09-08",
+    verifiedOn: VERIFIED_ON,
     jurisdiction: "Maryland",
     operator,
     identitySource: MARYLAND_SOURCE,
@@ -50,7 +51,6 @@ export const CASINO_CATALOG_PASS_2: CasinoAuditRecord[] = [
     "7002 Arundel Mills Cir, Hanover, MD 21076",
     "The Cordish Companies",
     "https://maryland.livecasinohotel.com/",
-    "https://api.nextdoor.com/pages/live-casino-hotel-hanover-md/",
   ),
   casino(
     "ocean-downs",
@@ -60,7 +60,6 @@ export const CASINO_CATALOG_PASS_2: CasinoAuditRecord[] = [
     "10218 Racetrack Road, Berlin, MD 21811",
     "Churchill Downs Incorporated",
     "https://www.oceandowns.com/",
-    "https://gist.github.com/jeremiak/9f0697e6159f5069d8e38b3c371d70da",
   ),
   casino(
     "hollywood-perryville",
@@ -80,6 +79,5 @@ export const CASINO_CATALOG_PASS_2: CasinoAuditRecord[] = [
     "16701 Lakeview Rd NE, Flintstone, MD 21530",
     "Century Casinos",
     "https://www.cnty.com/rocky-gap/",
-    "https://www.openstreetmap.org/",
   ),
 ];

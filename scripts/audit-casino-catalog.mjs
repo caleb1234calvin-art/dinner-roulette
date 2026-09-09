@@ -9,6 +9,10 @@ const records = [];
 const pattern = /casino\(\s*["']([^"']+)["']\s*,\s*["']([^"']+)["']\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)/g;
 
 for (const file of files) {
+  if (!fs.existsSync(file)) {
+    console.error(`Casino catalog audit failed:\n- missing catalog file: ${file}`);
+    process.exit(1);
+  }
   const source = fs.readFileSync(file, "utf8");
   for (const match of source.matchAll(pattern)) {
     records.push({ file, id: match[1], name: match[2], lat: Number(match[3]), lon: Number(match[4]) });
