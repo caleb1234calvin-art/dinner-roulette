@@ -31,6 +31,7 @@ A jurisdiction is only marked complete when:
 | Arkansas | 3 | 3 | Arkansas DFA / Arkansas Racing Commission | Complete: Oaklawn, Southland, and Saracen |
 | Rhode Island | 2 | 2 | Rhode Island Department of Business Regulation | Complete: Lincoln and Tiverton casino facilities |
 | Maine | 2 | 2 | Maine Gambling Control Unit | Complete: Hollywood Casino Bangor and Oxford Casino |
+| Kansas | 10 | 10 | Kansas Racing and Gaming Commission / NIGC | Complete: 4 state lottery casinos + 6 tribal casino venues |
 
 ## Staged authoritative inventories
 
@@ -93,6 +94,9 @@ Rhode Island Department of Business Regulation gaming oversight identifies two c
 
 ### Maine
 The Maine Gambling Control Unit identifies two licensed casino facilities: Hollywood Casino Bangor and Oxford Casino. Both are activated in pass 10. Maine's separate charitable gaming and advance-deposit wagering categories are outside the physical casino-venue scope.
+
+### Kansas
+Kansas Racing and Gaming Commission materials identify four state-owned lottery gaming facilities: Hollywood Casino at Kansas Speedway, Boot Hill Casino & Resort, Kansas Star Casino, and Kansas Crossing Casino + Hotel. NIGC and tribal sources add six tribal casino venues under the app's destination-casino scope: Casino White Cloud, Golden Eagle Casino, Prairie Band Casino & Resort, Sac & Fox Casino, CrossWinds Casino, and 7th Street Casino. Convenience-style or one-stop gaming outlets are excluded so Kansas is reconciled to ten physical casino destinations.
 
 ## Deployment discipline
 
