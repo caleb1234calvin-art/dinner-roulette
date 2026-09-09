@@ -59,6 +59,7 @@ const casino = (
 });
 
 const NJ_CCC_SOURCE = "https://www.nj.gov/casinos/home/info/";
+const PA_PGCB_SOURCE = "https://gamingcontrolboard.pa.gov/news-and-transparency/press-release/pa-gaming-control-board-reports-revenue-july";
 
 /**
  * National audit in progress.
@@ -87,9 +88,26 @@ export const CASINO_CATALOG: CasinoAuditRecord[] = [
   casino("resorts-ac", "Resorts Casino Hotel", 39.3580, -74.4215, "1133 Boardwalk, Atlantic City, NJ 08401", "New Jersey", "DGMB Casino, LLC", "https://resortsac.com/", NJ_CCC_SOURCE, "https://www.openstreetmap.org/"),
   casino("tropicana-ac", "Tropicana Atlantic City", 39.3530, -74.4453, "2831 Boardwalk, Atlantic City, NJ 08401", "New Jersey", "Caesars Entertainment", "https://www.caesars.com/tropicana-ac", NJ_CCC_SOURCE, "https://www.openstreetmap.org/"),
 
-  casino("parx", "Parx Casino", 40.1187, -74.9592, "2999 Street Rd, Bensalem, PA 19020", "Pennsylvania", "Greenwood Gaming and Entertainment", "https://www.parxcasino.com/"),
-  casino("wind-creek-bethlehem", "Wind Creek Bethlehem", 40.6157, -75.3592, "77 Wind Creek Blvd, Bethlehem, PA 18015", "Pennsylvania", "Wind Creek Hospitality", "https://windcreek.com/bethlehem"),
-  casino("rivers-pittsburgh", "Rivers Casino Pittsburgh", 40.4473, -80.0228, "777 Casino Dr, Pittsburgh, PA 15212", "Pennsylvania", "Rush Street Gaming", "https://www.riverscasino.com/pittsburgh"),
+  // Pennsylvania — reconciled against the PGCB July 2026 retail table-games casino list (18 properties).
+  casino("parx", "Parx Casino", 40.1187, -74.9592, "2999 Street Rd, Bensalem, PA 19020", "Pennsylvania", "Greenwood Gaming and Entertainment", "https://www.parxcasino.com/", PA_PGCB_SOURCE),
+  casino("wind-creek-bethlehem", "Wind Creek Bethlehem", 40.6157, -75.3592, "77 Wind Creek Blvd, Bethlehem, PA 18015", "Pennsylvania", "Wind Creek Hospitality", "https://windcreek.com/bethlehem", PA_PGCB_SOURCE),
+  casino("live-philadelphia", "Live! Casino & Hotel Philadelphia", 39.9099, -75.1633, "900 Packer Ave, Philadelphia, PA 19148", "Pennsylvania", "The Cordish Companies", "https://philadelphia.livecasinohotel.com/", PA_PGCB_SOURCE, "https://commons.wikimedia.org/wiki/File:Live_Casino_%26_Hotel_Philadelphia.jpg"),
+  casino("rivers-philadelphia", "Rivers Casino Philadelphia", 39.96384, -75.13234, "1001 N Delaware Ave, Philadelphia, PA 19125", "Pennsylvania", "Rush Street Gaming", "https://www.riverscasino.com/philadelphia", PA_PGCB_SOURCE, "https://www.openstreetmap.org/"),
+  casino("rivers-pittsburgh", "Rivers Casino Pittsburgh", 40.4473, -80.0228, "777 Casino Dr, Pittsburgh, PA 15212", "Pennsylvania", "Rush Street Gaming", "https://www.riverscasino.com/pittsburgh", PA_PGCB_SOURCE),
+  casino("valley-forge", "Valley Forge Casino Resort", 40.09679, -75.4158, "1160 1st Ave, King of Prussia, PA 19406", "Pennsylvania", "Boyd Gaming", "https://www.valleyforgecasino.com/", PA_PGCB_SOURCE, "https://www.openstreetmap.org/"),
+  casino("mount-airy", "Mount Airy Casino Resort", 41.11319, -75.32149, "312 Woodland Rd, Mount Pocono, PA 18344", "Pennsylvania", "Mount Airy #1, LLC", "https://mountairycasino.com/", PA_PGCB_SOURCE, "https://www.openstreetmap.org/"),
+  casino("hollywood-penn-national", "Hollywood Casino at Penn National Race Course", 40.39467, -76.66111, "777 Hollywood Blvd, Grantville, PA 17028", "Pennsylvania", "PENN Entertainment", "https://www.hollywoodpnrc.com/", PA_PGCB_SOURCE, "https://www.openstreetmap.org/"),
+  casino("mohegan-pennsylvania", "Mohegan Pennsylvania", 41.26861, -75.82216, "1280 Highway 315, Wilkes-Barre, PA 18702", "Pennsylvania", "Mohegan", "https://moheganpa.com/", PA_PGCB_SOURCE, "https://fromto.travel/en/united-states-of-america/mohegan-pennsylvania-adults-only"),
+  casino("hollywood-meadows", "Hollywood Casino at The Meadows", 40.22038, -80.20196, "210 Racetrack Rd, Washington, PA 15301", "Pennsylvania", "PENN Entertainment", "https://www.hollywoodmeadows.com/", PA_PGCB_SOURCE, "https://www.openstreetmap.org/"),
+  casino("harrahs-philadelphia", "Harrah's Philadelphia", 39.84987, -75.34762, "777 Harrah's Blvd, Chester, PA 19013", "Pennsylvania", "Caesars Entertainment", "https://www.caesars.com/harrahs-philly", PA_PGCB_SOURCE, "https://www.wikidata.org/wiki/Q5663831"),
+  casino("live-pittsburgh", "Live! Casino Pittsburgh", 40.30118, -79.50809, "5260 US-30, Greensburg, PA 15601", "Pennsylvania", "The Cordish Companies", "https://www.livech.com/pittsburgh/", PA_PGCB_SOURCE, "https://www.usgs.gov/"),
+  casino("hollywood-york", "Hollywood Casino York", 39.98914, -76.67593, "2899 Whiteford Rd, York, PA 17402", "Pennsylvania", "PENN Entertainment", "https://www.hollywoodyorkcasino.com/", PA_PGCB_SOURCE, "https://www.whereorg.com/york-vision-assoc-13619819"),
+  casino("presque-isle", "Presque Isle Downs & Casino", 42.06846, -80.03076, "8199 Perry Hwy, Erie, PA 16509", "Pennsylvania", "Churchill Downs Incorporated", "https://www.presqueisledowns.com/", PA_PGCB_SOURCE, "https://opendatany.com/"),
+  casino("hollywood-morgantown", "Hollywood Casino Morgantown", 40.16144, -75.88867, "6021 Morgantown Rd, Morgantown, PA 19543", "Pennsylvania", "PENN Entertainment", "https://www.hollywoodmorgantowncasino.com/", PA_PGCB_SOURCE, "https://www.openstreetmap.org/"),
+  casino("happy-valley", "Happy Valley Casino", 40.83187, -77.80286, "2877 E College Ave, State College, PA 16801", "Pennsylvania", "SC Gaming", "https://www.hvcasino.com/", PA_PGCB_SOURCE, "https://www.openstreetmap.org/"),
+  casino("parx-shippensburg", "Parx Casino Shippensburg", 40.06323, -77.49293, "250 S Conestoga Dr, Shippensburg, PA 17257", "Pennsylvania", "Greenwood Gaming and Entertainment", "https://www.parxcasino.com/shippensburg/", PA_PGCB_SOURCE, "https://www.openstreetmap.org/"),
+  casino("nemacolin", "The Casino at Nemacolin", 39.79475, -79.53983, "4067 National Pike, Farmington, PA 15437", "Pennsylvania", "Woodlands Fayette, LLC", "https://www.casinonemacolin.com/", PA_PGCB_SOURCE, "https://www.merchantcircle.com/pa-farmington"),
+
   casino("mgm-national-harbor", "MGM National Harbor", 38.7951, -77.0103, "101 MGM National Ave, Oxon Hill, MD 20745", "Maryland", "MGM Resorts International", "https://mgmnationalharbor.mgmresorts.com/"),
   casino("horseshoe-baltimore", "Horseshoe Casino Baltimore", 39.2715, -76.6284, "1525 Russell St, Baltimore, MD 21230", "Maryland", "Caesars Entertainment", "https://www.caesars.com/horseshoe-baltimore"),
 
@@ -134,7 +152,7 @@ export const CASINO_CATALOG_META = {
   verifiedOn: "2026-09-08",
   requirements: ["identity", "address", "coordinates"],
   activeRecords: CASINO_CATALOG.length,
-  completedJurisdictions: ["New Jersey"],
+  completedJurisdictions: ["New Jersey", "Pennsylvania"],
   coverageNote:
-    "National regulator-backed audit in progress. New Jersey is reconciled to its current casino licensee list; live OSM remains supplemental while remaining jurisdictions are audited.",
+    "National regulator-backed audit in progress. New Jersey and Pennsylvania are reconciled to current state casino lists; live OSM remains supplemental while remaining jurisdictions are audited.",
 } as const;
