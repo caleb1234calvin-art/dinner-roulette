@@ -1,0 +1,85 @@
+import type { CasinoAuditRecord } from "./casino-catalog";
+
+const MARYLAND_SOURCE = "https://www.mdgaming.com/marylands-casinos/";
+
+const casino = (
+  id: string,
+  name: string,
+  lat: number,
+  lon: number,
+  address: string,
+  operator: string,
+  website: string,
+  coordinateSource: string,
+): CasinoAuditRecord => ({
+  id: `casino-catalog-${id}`,
+  name,
+  lat,
+  lon,
+  address,
+  cuisines: ["other"],
+  cuisineLabel: "Casino",
+  priceLevel: null,
+  rating: null,
+  reviewCount: null,
+  openingHours: null,
+  phone: null,
+  website,
+  isChain: false,
+  photoKey: "cafe",
+  source: "catalog",
+  venueTypes: ["casino"],
+  energyLevel: 2,
+  audit: {
+    verifiedOn: "2026-09-08",
+    jurisdiction: "Maryland",
+    operator,
+    identitySource: MARYLAND_SOURCE,
+    coordinateSource,
+    notes: "Reconciled against Maryland Lottery and Gaming's six-casino state list.",
+  },
+});
+
+/** Maryland pass: four facilities missing from the original national seed. */
+export const CASINO_CATALOG_PASS_2: CasinoAuditRecord[] = [
+  casino(
+    "live-maryland",
+    "Live! Casino & Hotel Maryland",
+    39.157755,
+    -76.726888,
+    "7002 Arundel Mills Cir, Hanover, MD 21076",
+    "The Cordish Companies",
+    "https://maryland.livecasinohotel.com/",
+    "https://api.nextdoor.com/pages/live-casino-hotel-hanover-md/",
+  ),
+  casino(
+    "ocean-downs",
+    "Ocean Downs Casino",
+    38.35237,
+    -75.164159,
+    "10218 Racetrack Road, Berlin, MD 21811",
+    "Churchill Downs Incorporated",
+    "https://www.oceandowns.com/",
+    "https://gist.github.com/jeremiak/9f0697e6159f5069d8e38b3c371d70da",
+  ),
+  casino(
+    "hollywood-perryville",
+    "Hollywood Casino Perryville",
+    39.59575,
+    -76.07433,
+    "1201 Chesapeake Overlook Parkway, Perryville, MD 21903",
+    "PENN Entertainment",
+    "https://www.hollywoodcasinoperryville.com/",
+    "https://www.wikidata.org/wiki/Q5882634",
+  ),
+  casino(
+    "rocky-gap",
+    "Rocky Gap Casino Resort",
+    39.70005,
+    -78.6569,
+    "16701 Lakeview Rd NE, Flintstone, MD 21530",
+    "Century Casinos",
+    "https://www.cnty.com/rocky-gap/",
+    "https://www.openstreetmap.org/",
+  ),
+];
