@@ -30,6 +30,7 @@ A jurisdiction is only marked complete when:
 | Missouri | 13 | 13 | Missouri Gaming Commission | Complete: all 13 current licensed riverboat casino properties |
 | Arkansas | 3 | 3 | Arkansas DFA / Arkansas Racing Commission | Complete: Oaklawn, Southland, and Saracen |
 | Rhode Island | 2 | 2 | Rhode Island Department of Business Regulation | Complete: Lincoln and Tiverton casino facilities |
+| Maine | 2 | 2 | Maine Gambling Control Unit | Complete: Hollywood Casino Bangor and Oxford Casino |
 
 ## Staged authoritative inventories
 
@@ -89,6 +90,9 @@ Arkansas Department of Finance and Administration / Racing Commission materials 
 
 ### Rhode Island
 Rhode Island Department of Business Regulation gaming oversight identifies two casino facilities in the state: Bally's Twin River Lincoln Casino Resort and Bally's Tiverton Casino. Both are activated in pass 9. The audit treats these as the state's complete destination-casino roster rather than counting lottery retail locations or online gaming products.
+
+### Maine
+The Maine Gambling Control Unit identifies two licensed casino facilities: Hollywood Casino Bangor and Oxford Casino. Both are activated in pass 10. Maine's separate charitable gaming and advance-deposit wagering categories are outside the physical casino-venue scope.
 
 ## Deployment discipline
 
