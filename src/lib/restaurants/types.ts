@@ -1,7 +1,7 @@
 export const PRICE_LABELS = ["$", "$$", "$$$", "$$$$"] as const;
 export type PriceLevel = 1 | 2 | 3 | 4;
 
-export const DISTANCE_OPTIONS = [1, 3, 5, 10, 15, 20, 30] as const;
+export const DISTANCE_OPTIONS = [1, 3, 5, 10, 15, 20, 30, 40, 50] as const;
 export type DistanceMiles = (typeof DISTANCE_OPTIONS)[number];
 
 export type ChainPreference = "both" | "local" | "chains";

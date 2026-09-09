@@ -84,7 +84,7 @@ export async function fetchOverpassPlaces(
   lon: number,
   radiusMiles: number,
 ): Promise<RawPlace[]> {
-  const radiusMeters = Math.min(Math.max(radiusMiles, 1) * 1609.34, 48280);
+  const radiusMeters = Math.min(Math.max(radiusMiles, 1) * 1609.34, 80467);
   const body = `data=${encodeURIComponent(QUERY(lat, lon, radiusMeters))}`;
   let lastError: unknown;
   for (const mirror of MIRRORS) {

@@ -1,10 +1,17 @@
 import * as SliderPrimitive from "@radix-ui/react-slider";
 import type { ComponentProps } from "react";
+import { DISTANCE_OPTIONS } from "@/lib/restaurants/types";
 import { cn } from "@/lib/utils";
 
 function Slider({ className, ...props }: ComponentProps<typeof SliderPrimitive.Root>) {
   const thumbCount = props.value?.length ?? props.defaultValue?.length ?? 1;
-  return (
+  const distanceScale =
+    props.min === 0 &&
+    props.max === DISTANCE_OPTIONS.length - 1 &&
+    props.step === 1 &&
+    thumbCount === 1;
+
+  const control = (
     <SliderPrimitive.Root
       className={cn("relative flex w-full touch-none items-center select-none", className)}
       {...props}
@@ -19,6 +26,19 @@ function Slider({ className, ...props }: ComponentProps<typeof SliderPrimitive.R
         />
       ))}
     </SliderPrimitive.Root>
+  );
+
+  if (!distanceScale) return control;
+
+  return (
+    <>
+      {control}
+      <div className="mt-2 grid grid-cols-9 text-center text-2xs text-subtle [&+div]:hidden">
+        {DISTANCE_OPTIONS.map((miles) => (
+          <span key={miles}>{miles}</span>
+        ))}
+      </div>
+    </>
   );
 }
 

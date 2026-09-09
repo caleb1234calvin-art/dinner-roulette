@@ -248,13 +248,13 @@ export const searchDateNight = createServerFn({ method: "POST" })
     return {
       lat: data.lat,
       lon: data.lon,
-      radiusMiles: Math.min(Math.max(data.radiusMiles || 15, 1), 30),
+      radiusMiles: Math.min(Math.max(data.radiusMiles || 15, 1), 50),
       spookySeasonEnabled: Boolean(data.spookySeasonEnabled),
     };
   })
   .handler(async ({ data }): Promise<DateNightSearchResponse> => {
     const fetchRadius = Math.max(data.radiusMiles, 15);
-    const radiusMeters = Math.min(fetchRadius * 1609.34, 48280);
+    const radiusMeters = Math.min(fetchRadius * 1609.34, 80467);
     const halloweenSeason = isHalloweenDateNightActive(data.spookySeasonEnabled);
     const body = `data=${encodeURIComponent(QUERY(data.lat, data.lon, radiusMeters, halloweenSeason))}`;
     const local = localWithin(data.lat, data.lon, fetchRadius, halloweenSeason);
