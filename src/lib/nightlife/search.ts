@@ -27,6 +27,10 @@ const QUERY = (lat: number, lon: number, radiusMeters: number) => `
   nwr["amenity"="pub"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["amenity"="nightclub"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["amenity"="biergarten"](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["amenity"="casino"](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["gambling"="casino"](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["amenity"="theatre"]["theatre:genre"="comedy"](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["amenity"="arts_centre"]["genre"="comedy"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["craft"="brewery"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["microbrewery"="yes"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["amenity"="restaurant"]["bar"="yes"](around:${Math.round(radiusMeters)},${lat},${lon});
@@ -71,13 +75,15 @@ function nightlifeNamesMatch(a: string, b: string): boolean {
 function classify(tags: Record<string, string>, name: string): ConcreteNightlifeType[] {
   const types = new Set<ConcreteNightlifeType>();
   const amenity = tags.amenity ?? "";
-  const lower = name.toLowerCase();
+  const lower = `${name} ${tags.description ?? ""} ${tags["theatre:genre"] ?? ""} ${tags.genre ?? ""}`.toLowerCase();
+  if (amenity === "casino" || tags.gambling === "casino" || /\bcasino\b/.test(lower)) types.add("casino");
+  if (/comedy club|stand[ -]?up|standup|improv comedy/.test(lower)) types.add("comedy-club");
   if (amenity === "nightclub") types.add("club");
   if (amenity === "pub") types.add("pub");
   if (amenity === "bar" || tags.bar === "yes") types.add("bar");
   if (amenity === "biergarten" || tags.craft === "brewery" || tags.microbrewery === "yes") types.add("brewery");
   if (/lounge|cocktail|wine bar/.test(lower)) types.add("lounge");
-  if (/club|dance/.test(lower) && !/country club/.test(lower)) types.add("club");
+  if (/club|dance/.test(lower) && !/country club|comedy club/.test(lower)) types.add("club");
   if (types.size === 0) types.add("bar");
   return [...types];
 }
@@ -208,12 +214,12 @@ export const searchNightlife = createServerFn({ method: "POST" })
     return {
       lat: data.lat,
       lon: data.lon,
-      radiusMiles: Math.min(Math.max(data.radiusMiles || 10, 1), 30),
+      radiusMiles: Math.min(Math.max(data.radiusMiles || 10, 1), 50),
     };
   })
   .handler(async ({ data }): Promise<NightlifeSearchResponse> => {
     const fetchRadius = Math.max(data.radiusMiles, 15);
-    const radiusMeters = Math.min(fetchRadius * 1609.34, 48280);
+    const radiusMeters = Math.min(fetchRadius * 1609.34, 80467);
     const body = `data=${encodeURIComponent(QUERY(data.lat, data.lon, radiusMeters))}`;
     const local = localWithin(data.lat, data.lon, fetchRadius);
     let lastError: unknown;
