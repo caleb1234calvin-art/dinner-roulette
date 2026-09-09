@@ -29,8 +29,12 @@ const QUERY = (lat: number, lon: number, radiusMeters: number) => `
   nwr["amenity"="biergarten"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["amenity"="casino"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["gambling"="casino"](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["amenity"="theatre"]["theatre:genre"="comedy"](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["amenity"="arts_centre"]["genre"="comedy"](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["amenity"="theatre"]["theatre:genre"~"comedy|stand[_ -]?up|improv",i](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["amenity"="theatre"]["name"~"comedy|improv|stand[ -]?up",i](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["amenity"="arts_centre"]["genre"~"comedy|stand[_ -]?up|improv",i](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["amenity"="arts_centre"]["name"~"comedy|improv|stand[ -]?up",i](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["amenity"="events_venue"]["name"~"comedy|improv|stand[ -]?up",i](around:${Math.round(radiusMeters)},${lat},${lon});
+  nwr["name"~"comedy club|comedy mothership|comedy theater|comedy theatre|improv theater|improv theatre",i](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["craft"="brewery"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["microbrewery"="yes"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["amenity"="restaurant"]["bar"="yes"](around:${Math.round(radiusMeters)},${lat},${lon});
@@ -77,7 +81,7 @@ function classify(tags: Record<string, string>, name: string): ConcreteNightlife
   const amenity = tags.amenity ?? "";
   const lower = `${name} ${tags.description ?? ""} ${tags["theatre:genre"] ?? ""} ${tags.genre ?? ""}`.toLowerCase();
   if (amenity === "casino" || tags.gambling === "casino" || /\bcasino\b/.test(lower)) types.add("casino");
-  if (/comedy club|stand[ -]?up|standup|improv comedy/.test(lower)) types.add("comedy-club");
+  if (/comedy|stand[_ -]?up|standup|improv/.test(lower)) types.add("comedy-club");
   if (amenity === "nightclub") types.add("club");
   if (amenity === "pub") types.add("pub");
   if (amenity === "bar" || tags.bar === "yes") types.add("bar");
