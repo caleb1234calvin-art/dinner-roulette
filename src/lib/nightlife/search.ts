@@ -4,6 +4,7 @@ import { isLikelyChain, inferPriceLevel } from "@/lib/restaurants/chains";
 import { haversineMiles } from "@/lib/restaurants/geo";
 import type { RawPlace } from "@/lib/restaurants/normalize";
 import type { PhotoKey } from "@/lib/restaurants/types";
+import { CASINO_CATALOG } from "./casino-catalog";
 import { LOCAL_NIGHTLIFE_CATALOG } from "./catalog";
 import { JASPER_COUNTY_NIGHTLIFE_CATALOG } from "./jasper-county-catalog";
 import {
@@ -45,7 +46,11 @@ interface OverpassElement {
   tags?: Record<string, string>;
 }
 
-const ALL_LOCAL_NIGHTLIFE = [...JASPER_COUNTY_NIGHTLIFE_CATALOG, ...LOCAL_NIGHTLIFE_CATALOG];
+const ALL_CURATED_NIGHTLIFE = [
+  ...CASINO_CATALOG,
+  ...JASPER_COUNTY_NIGHTLIFE_CATALOG,
+  ...LOCAL_NIGHTLIFE_CATALOG,
+];
 const RETIRED_NIGHTLIFE_NAMES = ["dead cow saloon and grill", "dead cow saloon & grill", "dead cow saloon"] as const;
 const NIGHTLIFE_ALIAS_GROUPS = [["joe's 19th hole", "joes 19th hole", "aussie's", "aussies"]] as const;
 
@@ -110,17 +115,17 @@ async function queryMirror(url: string, body: string): Promise<NightlifePlace[]>
   return [...unique.values()];
 }
 
-function localWithin(lat: number, lon: number, radiusMiles: number): NightlifePlace[] {
-  return ALL_LOCAL_NIGHTLIFE.filter((place) => haversineMiles(lat, lon, place.lat, place.lon) <= radiusMiles + 1);
+function curatedWithin(lat: number, lon: number, radiusMiles: number): NightlifePlace[] {
+  return ALL_CURATED_NIGHTLIFE.filter((place) => haversineMiles(lat, lon, place.lat, place.lon) <= radiusMiles + 1);
 }
 
-function mergeNightlife(live: NightlifePlace[], local: NightlifePlace[]): NightlifePlace[] {
-  const merged = [...local];
+function mergeNightlife(live: NightlifePlace[], curated: NightlifePlace[]): NightlifePlace[] {
+  const merged = [...curated];
   for (const place of live) {
     const matchIndex = merged.findIndex((candidate) => nightlifeNamesMatch(candidate.name, place.name) && haversineMiles(candidate.lat, candidate.lon, place.lat, place.lon) < 0.35);
     if (matchIndex >= 0) {
-      const curated = merged[matchIndex]!;
-      merged[matchIndex] = { ...place, id: curated.id, name: curated.name, lat: curated.lat, lon: curated.lon, address: curated.address || place.address, cuisines: curated.cuisines, cuisineLabel: curated.cuisineLabel, priceLevel: curated.priceLevel ?? place.priceLevel, rating: curated.rating ?? place.rating, reviewCount: curated.reviewCount ?? place.reviewCount, openingHours: curated.openingHours || place.openingHours, phone: curated.phone ?? place.phone, website: curated.website ?? place.website, venueTypes: curated.venueTypes, energyLevel: curated.energyLevel, source: "merged" };
+      const saved = merged[matchIndex]!;
+      merged[matchIndex] = { ...place, id: saved.id, name: saved.name, lat: saved.lat, lon: saved.lon, address: saved.address || place.address, cuisines: saved.cuisines, cuisineLabel: saved.cuisineLabel, priceLevel: saved.priceLevel ?? place.priceLevel, rating: saved.rating ?? place.rating, reviewCount: saved.reviewCount ?? place.reviewCount, openingHours: saved.openingHours || place.openingHours, phone: saved.phone ?? place.phone, website: saved.website ?? place.website, venueTypes: saved.venueTypes, energyLevel: saved.energyLevel, source: "merged" };
       continue;
     }
     merged.push(place);
@@ -137,18 +142,18 @@ export const searchNightlife = createServerFn({ method: "POST" })
     const fetchRadius = Math.max(data.radiusMiles, 15);
     const radiusMeters = Math.min(fetchRadius * 1609.34, 80467);
     const body = `data=${encodeURIComponent(QUERY(data.lat, data.lon, radiusMeters))}`;
-    const local = localWithin(data.lat, data.lon, fetchRadius);
+    const curated = curatedWithin(data.lat, data.lon, fetchRadius);
     let lastError: unknown;
     for (const mirror of MIRRORS) {
       try {
         const live = await queryMirror(mirror, body);
-        const venues = mergeNightlife(live, local);
-        if (venues.length > 0) return { venues, source: local.length ? "merged" : "live" };
+        const venues = mergeNightlife(live, curated);
+        if (venues.length > 0) return { venues, source: curated.length ? "merged" : "live" };
       } catch (error) {
         lastError = error;
       }
     }
 
-    if (local.length > 0) return { venues: local, source: "fallback", warning: "Using saved Jasper County nightlife while live discovery is unavailable." };
+    if (curated.length > 0) return { venues: curated, source: "fallback", warning: "Using saved nightlife while live discovery is unavailable." };
     throw lastError instanceof Error ? lastError : new Error("Could not load nightlife venues for that area.");
   });
