@@ -14,6 +14,8 @@ export interface CasinoAuditRecord extends NightlifePlace {
     jurisdiction: string;
     operator?: string;
     notes?: string;
+    identitySource?: string;
+    coordinateSource?: string;
   };
 }
 
@@ -26,6 +28,8 @@ const casino = (
   jurisdiction: string,
   operator?: string,
   website?: string,
+  identitySource?: string,
+  coordinateSource?: string,
 ): CasinoAuditRecord => ({
   id: `casino-catalog-${id}`,
   name,
@@ -45,15 +49,24 @@ const casino = (
   source: "catalog",
   venueTypes: ["casino"],
   energyLevel: 2,
-  audit: { verifiedOn: "2026-09-08", jurisdiction, operator },
+  audit: {
+    verifiedOn: "2026-09-08",
+    jurisdiction,
+    operator,
+    identitySource,
+    coordinateSource,
+  },
 });
 
+const NJ_CCC_SOURCE = "https://www.nj.gov/casinos/home/info/";
+
 /**
- * Pass-1 verified national seed.
+ * National audit in progress.
  *
- * This is intentionally not presented as a complete census. It establishes
- * high-confidence anchors across the country while the national reconciliation
- * continues. A missing venue can still be discovered by the live OSM layer.
+ * Pass 1 established high-confidence anchors. Subsequent jurisdiction passes
+ * reconcile the curated catalog against regulator-backed facility lists. A
+ * missing venue can still be discovered by the live OSM layer while the audit
+ * is underway.
  */
 export const CASINO_CATALOG: CasinoAuditRecord[] = [
   // Northeast / Mid-Atlantic
@@ -62,10 +75,18 @@ export const CASINO_CATALOG: CasinoAuditRecord[] = [
   casino("encore-boston", "Encore Boston Harbor", 42.3942, -71.0696, "1 Broadway, Everett, MA 02149", "Massachusetts", "Wynn Resorts", "https://www.encorebostonharbor.com/"),
   casino("mgm-springfield", "MGM Springfield", 42.0997, -72.5886, "One MGM Way, Springfield, MA 01103", "Massachusetts", "MGM Resorts International", "https://mgmspringfield.mgmresorts.com/"),
   casino("plainridge", "Plainridge Park Casino", 42.0217, -71.3054, "301 Washington St, Plainville, MA 02762", "Massachusetts", "PENN Entertainment", "https://www.plainridgeparkcasino.com/"),
-  casino("borgata", "Borgata Hotel Casino & Spa", 39.3783, -74.4358, "1 Borgata Way, Atlantic City, NJ 08401", "New Jersey", "MGM Resorts International", "https://borgata.mgmresorts.com/"),
-  casino("hard-rock-ac", "Hard Rock Hotel & Casino Atlantic City", 39.3597, -74.4211, "1000 Boardwalk, Atlantic City, NJ 08401", "New Jersey", "Hard Rock International", "https://casino.hardrock.com/atlantic-city"),
-  casino("ocean-ac", "Ocean Casino Resort", 39.3618, -74.4179, "500 Boardwalk, Atlantic City, NJ 08401", "New Jersey", undefined, "https://www.theoceanac.com/"),
-  casino("caesars-ac", "Caesars Atlantic City", 39.3538, -74.4350, "2100 Pacific Ave, Atlantic City, NJ 08401", "New Jersey", "Caesars Entertainment", "https://www.caesars.com/caesars-ac"),
+
+  // New Jersey — reconciled against the NJ Casino Control Commission licensee list.
+  casino("ballys-ac", "Bally's Atlantic City", 39.3565, -74.4323, "1900 Pacific Ave, Atlantic City, NJ 08401", "New Jersey", "Bally's Corporation", "https://ballysac.com/", NJ_CCC_SOURCE, "https://www.wikidata.org/wiki/Q4852132"),
+  casino("borgata", "Borgata Hotel Casino & Spa", 39.3783, -74.4358, "1 Borgata Way, Atlantic City, NJ 08401", "New Jersey", "MGM Resorts International", "https://borgata.mgmresorts.com/", NJ_CCC_SOURCE),
+  casino("caesars-ac", "Caesars Atlantic City", 39.3538, -74.4350, "2100 Pacific Ave, Atlantic City, NJ 08401", "New Jersey", "Caesars Entertainment", "https://www.caesars.com/caesars-ac", NJ_CCC_SOURCE),
+  casino("golden-nugget-ac", "Golden Nugget Atlantic City", 39.3789, -74.4273, "Huron Ave & Brigantine Blvd, Atlantic City, NJ 08401", "New Jersey", "Golden Nugget", "https://www.goldennugget.com/atlantic-city/", NJ_CCC_SOURCE, "https://www.openstreetmap.org/"),
+  casino("hard-rock-ac", "Hard Rock Hotel & Casino Atlantic City", 39.3597, -74.4211, "1000 Boardwalk, Atlantic City, NJ 08401", "New Jersey", "Hard Rock International", "https://casino.hardrock.com/atlantic-city", NJ_CCC_SOURCE),
+  casino("harrahs-ac", "Harrah's Resort Atlantic City", 39.3845, -74.4291, "777 Harrah's Blvd, Atlantic City, NJ 08401", "New Jersey", "Caesars Entertainment", "https://www.caesars.com/harrahs-ac", NJ_CCC_SOURCE, "https://www.wikidata.org/wiki/Q3127954"),
+  casino("ocean-ac", "Ocean Casino Resort", 39.3618, -74.4179, "500 Boardwalk, Atlantic City, NJ 08401", "New Jersey", undefined, "https://www.theoceanac.com/", NJ_CCC_SOURCE),
+  casino("resorts-ac", "Resorts Casino Hotel", 39.3580, -74.4215, "1133 Boardwalk, Atlantic City, NJ 08401", "New Jersey", "DGMB Casino, LLC", "https://resortsac.com/", NJ_CCC_SOURCE, "https://www.openstreetmap.org/"),
+  casino("tropicana-ac", "Tropicana Atlantic City", 39.3530, -74.4453, "2831 Boardwalk, Atlantic City, NJ 08401", "New Jersey", "Caesars Entertainment", "https://www.caesars.com/tropicana-ac", NJ_CCC_SOURCE, "https://www.openstreetmap.org/"),
+
   casino("parx", "Parx Casino", 40.1187, -74.9592, "2999 Street Rd, Bensalem, PA 19020", "Pennsylvania", "Greenwood Gaming and Entertainment", "https://www.parxcasino.com/"),
   casino("wind-creek-bethlehem", "Wind Creek Bethlehem", 40.6157, -75.3592, "77 Wind Creek Blvd, Bethlehem, PA 18015", "Pennsylvania", "Wind Creek Hospitality", "https://windcreek.com/bethlehem"),
   casino("rivers-pittsburgh", "Rivers Casino Pittsburgh", 40.4473, -80.0228, "777 Casino Dr, Pittsburgh, PA 15212", "Pennsylvania", "Rush Street Gaming", "https://www.riverscasino.com/pittsburgh"),
@@ -108,11 +129,12 @@ export const CASINO_CATALOG: CasinoAuditRecord[] = [
 export const CASINO_CATALOG_META = {
   scope: "United States",
   strategy: "live-plus-curated",
-  status: "verified-seed-pass-1",
+  status: "national-audit-in-progress",
   startedOn: "2026-09-08",
   verifiedOn: "2026-09-08",
   requirements: ["identity", "address", "coordinates"],
   activeRecords: CASINO_CATALOG.length,
+  completedJurisdictions: ["New Jersey"],
   coverageNote:
-    "High-confidence national seed, not a complete census. Live OSM remains supplemental while additional regulator-backed records are reconciled.",
+    "National regulator-backed audit in progress. New Jersey is reconciled to its current casino licensee list; live OSM remains supplemental while remaining jurisdictions are audited.",
 } as const;
