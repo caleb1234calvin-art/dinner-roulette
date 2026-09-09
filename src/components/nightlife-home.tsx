@@ -21,7 +21,7 @@ import { decorateAll } from "@/lib/restaurants/decorate";
 import { formatPrice } from "@/lib/restaurants/hours";
 import { lookupLocation, lookupReverseLocation } from "@/lib/restaurants/search";
 import { DISTANCE_OPTIONS, type DecoratedRestaurant, type Restaurant } from "@/lib/restaurants/types";
-import { RADIUS_OPTIONS, useAppStore } from "@/lib/store";
+import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 function weightedPick(items: DecoratedNightlifePlace[], energy: number, shown: string[]) {
@@ -206,7 +206,7 @@ export function NightlifeHome() {
     if (next.length && "vibrate" in navigator) navigator.vibrate?.(12);
   }
 
-  const radiusIndex = Math.max(0, RADIUS_OPTIONS.indexOf(filters.radiusMiles));
+  const radiusIndex = Math.max(0, DISTANCE_OPTIONS.indexOf(filters.radiusMiles));
 
   return (
     <main className="px-4 pb-48 pt-5">
@@ -249,7 +249,7 @@ export function NightlifeHome() {
           <p className="text-base text-fg tabular-nums">Within {filters.radiusMiles} miles</p>
         </div>
         <Slider min={0} max={DISTANCE_OPTIONS.length - 1} step={1} value={[radiusIndex]} onValueChange={([index]) => updateFilters({ radiusMiles: DISTANCE_OPTIONS[index ?? 0] ?? 10 })} aria-label="Travel distance" />
-        <div className="mt-2 flex justify-between text-2xs text-subtle"><span>1</span><span>10</span><span>30</span></div>
+        <div className="mt-2 flex justify-between text-2xs text-subtle"><span>1</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span></div>
       </section>
 
       <section className="mt-7">
@@ -266,8 +266,20 @@ export function NightlifeHome() {
         <div className="flex flex-wrap gap-2">
           {NIGHTLIFE_TYPE_CHIPS.map((chip) => {
             const selected = chip.id === "anything" ? filters.venueTypes.includes("anything") : filters.venueTypes.includes(chip.id);
+            const featured = Boolean(chip.iconSrc);
             return (
-              <button key={chip.id} type="button" aria-pressed={selected} onClick={() => toggleVenueType(chip.id)} className={cn("chip min-h-11 rounded-full px-3 py-2 text-sm shadow-border", selected ? "bg-accent text-accent-fg" : "bg-surface text-muted")}>
+              <button
+                key={chip.id}
+                type="button"
+                aria-pressed={selected}
+                onClick={() => toggleVenueType(chip.id)}
+                className={cn(
+                  "chip min-h-11 rounded-full text-sm shadow-border transition",
+                  featured ? "flex items-center gap-2 py-1.5 pl-1.5 pr-3" : "px-3 py-2",
+                  selected ? "bg-accent text-accent-fg" : "bg-surface text-muted",
+                )}
+              >
+                {chip.iconSrc ? <img src={chip.iconSrc} alt="" className="size-9 rounded-lg object-cover" /> : null}
                 {chip.label}
               </button>
             );
