@@ -35,6 +35,10 @@ A jurisdiction is only marked complete when:
 | North Carolina | 3 | 3 | NIGC / tribal operators | Complete: 2 EBCI casinos + Catawba Two Kings introductory casino |
 | Virginia | 5 | 5 | Virginia Lottery | Complete: five current casino properties in the July 2026 reporting roster |
 | Alabama | 3 | 3 | NIGC / Poarch Band of Creek Indians | Complete: Wind Creek Atmore, Montgomery, and Wetumpka |
+| Iowa | 23 | 23 | Iowa Racing and Gaming Commission / NIGC | Complete: 19 state-licensed facilities + 4 tribal casinos |
+| Kentucky | 14 | 14 | Kentucky Horse Racing & Gaming Corporation | Complete: 14 active casino-style HHR destinations |
+| Louisiana | 24 | 24 | Louisiana State Police Gaming Operations / NIGC | Complete: 20 state-regulated properties + 4 tribal casino destinations |
+| Mississippi | 28 | 28 | Mississippi Gaming Commission / Mississippi Band of Choctaw Indians | Complete: 25 state-regulated properties + 3 MBCI casino destinations |
 
 ## Staged authoritative inventories
 
@@ -109,6 +113,18 @@ Virginia Lottery's July 2026 casino activity roster identifies five active casin
 
 ### Alabama
 NIGC gaming-location records identify three Poarch Band of Creek Indians gaming establishments in Alabama: Wind Creek Atmore, Wind Creek Montgomery, and Wind Creek Wetumpka. Current Wind Creek property pages confirm all three remain operating, and the catalog uses the current property addresses rather than the tribe's mailing address shown in older NIGC listings.
+
+### Iowa
+Iowa Racing and Gaming Commission facility-license materials identify nineteen state-licensed casino facilities. NIGC/tribal materials add Blackbird Bend Casino, Meskwaki Bingo Casino Hotel, Prairie Flower Casino, and WinnaVegas Casino Resort, producing 23 physical casino destinations under the app scope.
+
+### Kentucky
+Kentucky Horse Racing & Gaming Corporation facility and FY2026 HHR wagering materials reconcile fourteen active casino-style historical-horse-racing destinations. Sandy's Racing & Gaming is included because it appears in current wagering reports even though the facility page categorizes it under quarter-horse tracks. HHR venues are included under the audit's physical casino-style destination scope.
+
+### Louisiana
+Louisiana State Police Gaming Operations materials reconcile twenty state-regulated casino-style properties: fifteen riverboat/landside casino licenses, Caesars New Orleans, and four racetrack casinos. NIGC and tribal/operator materials add Cypress Bayou, Coushatta, Jena Choctaw Pines, and Paragon, producing 24 physical casino destinations.
+
+### Mississippi
+Mississippi Gaming Commission July 2026 property data reconciles 25 active state-regulated casino properties across the Central, Coastal, and Northern regions. Mississippi Band of Choctaw Indians / Pearl River Resort materials separately identify Silver Star Hotel & Casino, Golden Moon Hotel & Casino, and Bok Homa Casino as casino destinations, producing 28 physical casino destinations under the app scope. Crystal Sky Travel Plaza is not counted separately because it is a travel-plaza gaming amenity rather than a casino destination. The Commission property list is used to reconcile commercial property addresses; property-specific OSM coordinate sources are recorded only where directly verified.
 
 ## Deployment discipline
 
