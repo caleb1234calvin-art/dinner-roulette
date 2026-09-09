@@ -15,6 +15,7 @@ import { CASINO_CATALOG_PASS_8 } from "./casino-catalog-pass-8";
 import { CASINO_CATALOG_PASS_9 } from "./casino-catalog-pass-9";
 import { CASINO_CATALOG_PASS_10 } from "./casino-catalog-pass-10";
 import { CASINO_CATALOG_PASS_11 } from "./casino-catalog-pass-11";
+import { CASINO_CATALOG_PASS_12 } from "./casino-catalog-pass-12";
 import { LOCAL_NIGHTLIFE_CATALOG } from "./catalog";
 import { JASPER_COUNTY_NIGHTLIFE_CATALOG } from "./jasper-county-catalog";
 import {
@@ -68,6 +69,7 @@ const ALL_CURATED_NIGHTLIFE = [
   ...CASINO_CATALOG_PASS_9,
   ...CASINO_CATALOG_PASS_10,
   ...CASINO_CATALOG_PASS_11,
+  ...CASINO_CATALOG_PASS_12,
   ...JASPER_COUNTY_NIGHTLIFE_CATALOG,
   ...LOCAL_NIGHTLIFE_CATALOG,
 ];

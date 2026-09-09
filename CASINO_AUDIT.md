@@ -33,6 +33,8 @@ A jurisdiction is only marked complete when:
 | Maine | 2 | 2 | Maine Gambling Control Unit | Complete: Hollywood Casino Bangor and Oxford Casino |
 | Kansas | 10 | 10 | Kansas Racing and Gaming Commission / NIGC | Complete: 4 state lottery casinos + 6 tribal casino venues |
 | North Carolina | 3 | 3 | NIGC / tribal operators | Complete: 2 EBCI casinos + Catawba Two Kings introductory casino |
+| Virginia | 5 | 5 | Virginia Lottery | Complete: five current casino properties in the July 2026 reporting roster |
+| Alabama | 3 | 3 | NIGC / Poarch Band of Creek Indians | Complete: Wind Creek Atmore, Montgomery, and Wetumpka |
 
 ## Staged authoritative inventories
 
@@ -101,6 +103,12 @@ Kansas Racing and Gaming Commission materials identify four state-owned lottery 
 
 ### North Carolina
 NIGC gaming-location records identify two Eastern Band of Cherokee Indians Class III casino properties in North Carolina: Harrah's Cherokee Casino Resort and Harrah's Cherokee Valley River Casino & Hotel. The Catawba Indian Nation's Catawba Two Kings Casino opened its introductory casino phase at the permanent Kings Mountain resort site on May 20, 2026, replacing the prior temporary modular casino. The audit therefore counts three current physical casino destinations and does not double-count the retired temporary Two Kings facility.
+
+### Virginia
+Virginia Lottery's July 2026 casino activity roster identifies five active casino properties: Hard Rock Hotel & Casino Bristol, Rivers Casino Portsmouth, Caesars Virginia in Danville, The Interim Gaming Hall in Norfolk, and Live! Casino Virginia in Petersburg. All five are active in the curated runtime catalog.
+
+### Alabama
+NIGC gaming-location records identify three Poarch Band of Creek Indians gaming establishments in Alabama: Wind Creek Atmore, Wind Creek Montgomery, and Wind Creek Wetumpka. Current Wind Creek property pages confirm all three remain operating, and the catalog uses the current property addresses rather than the tribe's mailing address shown in older NIGC listings.
 
 ## Deployment discipline
 
