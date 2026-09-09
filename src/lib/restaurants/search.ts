@@ -20,7 +20,7 @@ export const searchRestaurants = createServerFn({ method: "POST" })
     return {
       lat: data.lat,
       lon: data.lon,
-      radiusMiles: Math.min(Math.max(data.radiusMiles || 10, 1), 30),
+      radiusMiles: Math.min(Math.max(data.radiusMiles || 10, 1), 50),
     };
   })
   .handler(async ({ data }): Promise<SearchResponse> => {
