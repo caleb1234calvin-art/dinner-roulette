@@ -5,7 +5,6 @@ import { haversineMiles } from "@/lib/restaurants/geo";
 import type { RawPlace } from "@/lib/restaurants/normalize";
 import type { PhotoKey } from "@/lib/restaurants/types";
 import { LOCAL_NIGHTLIFE_CATALOG } from "./catalog";
-import { searchComedyClubsByText } from "./comedy-search";
 import { JASPER_COUNTY_NIGHTLIFE_CATALOG } from "./jasper-county-catalog";
 import {
   nightlifeTypeLabel,
@@ -30,12 +29,6 @@ const QUERY = (lat: number, lon: number, radiusMeters: number) => `
   nwr["amenity"="biergarten"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["amenity"="casino"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["gambling"="casino"](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["amenity"="theatre"]["theatre:genre"~"comedy|stand[_ -]?up|improv",i](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["amenity"="theatre"]["name"~"comedy|improv|stand[ -]?up",i](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["amenity"="arts_centre"]["genre"~"comedy|stand[_ -]?up|improv",i](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["amenity"="arts_centre"]["name"~"comedy|improv|stand[ -]?up",i](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["amenity"="events_venue"]["name"~"comedy|improv|stand[ -]?up",i](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["name"~"comedy club|comedy mothership|comedy theater|comedy theatre|improv theater|improv theatre",i](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["craft"="brewery"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["microbrewery"="yes"](around:${Math.round(radiusMeters)},${lat},${lon});
   nwr["amenity"="restaurant"]["bar"="yes"](around:${Math.round(radiusMeters)},${lat},${lon});
@@ -68,15 +61,14 @@ function nightlifeNamesMatch(a: string, b: string): boolean {
 function classify(tags: Record<string, string>, name: string): ConcreteNightlifeType[] {
   const types = new Set<ConcreteNightlifeType>();
   const amenity = tags.amenity ?? "";
-  const lower = `${name} ${tags.description ?? ""} ${tags["theatre:genre"] ?? ""} ${tags.genre ?? ""}`.toLowerCase();
+  const lower = `${name} ${tags.description ?? ""}`.toLowerCase();
   if (amenity === "casino" || tags.gambling === "casino" || /\bcasino\b/.test(lower)) types.add("casino");
-  if (/comedy|stand[_ -]?up|standup|improv/.test(lower)) types.add("comedy-club");
   if (amenity === "nightclub") types.add("club");
   if (amenity === "pub") types.add("pub");
   if (amenity === "bar" || tags.bar === "yes") types.add("bar");
   if (amenity === "biergarten" || tags.craft === "brewery" || tags.microbrewery === "yes") types.add("brewery");
   if (/lounge|cocktail|wine bar/.test(lower)) types.add("lounge");
-  if (/club|dance/.test(lower) && !/country club|comedy club/.test(lower)) types.add("club");
+  if (/club|dance/.test(lower) && !/country club/.test(lower)) types.add("club");
   if (types.size === 0) types.add("bar");
   return [...types];
 }
@@ -136,15 +128,6 @@ function mergeNightlife(live: NightlifePlace[], local: NightlifePlace[]): Nightl
   return merged;
 }
 
-function mergeDiscovered(base: NightlifePlace[], additions: NightlifePlace[]): NightlifePlace[] {
-  const merged = [...base];
-  for (const place of additions) {
-    if (merged.some((candidate) => nightlifeNamesMatch(candidate.name, place.name) && haversineMiles(candidate.lat, candidate.lon, place.lat, place.lon) < 0.5)) continue;
-    merged.push(place);
-  }
-  return merged;
-}
-
 export const searchNightlife = createServerFn({ method: "POST" })
   .validator((data: { lat: number; lon: number; radiusMiles: number }) => {
     if (!Number.isFinite(data.lat) || !Number.isFinite(data.lon)) throw new Error("A location is required");
@@ -155,20 +138,17 @@ export const searchNightlife = createServerFn({ method: "POST" })
     const radiusMeters = Math.min(fetchRadius * 1609.34, 80467);
     const body = `data=${encodeURIComponent(QUERY(data.lat, data.lon, radiusMeters))}`;
     const local = localWithin(data.lat, data.lon, fetchRadius);
-    const comedyPromise = searchComedyClubsByText(data.lat, data.lon, fetchRadius).catch(() => [] as NightlifePlace[]);
     let lastError: unknown;
     for (const mirror of MIRRORS) {
       try {
-        const [live, comedy] = await Promise.all([queryMirror(mirror, body), comedyPromise]);
-        const venues = mergeNightlife(mergeDiscovered(live, comedy), local);
+        const live = await queryMirror(mirror, body);
+        const venues = mergeNightlife(live, local);
         if (venues.length > 0) return { venues, source: local.length ? "merged" : "live" };
       } catch (error) {
         lastError = error;
       }
     }
 
-    const comedy = await comedyPromise;
-    const fallback = mergeNightlife(comedy, local);
-    if (fallback.length > 0) return { venues: fallback, source: local.length ? "fallback" : "live", warning: local.length ? "Using saved Jasper County nightlife while part of live discovery is unavailable." : undefined };
+    if (local.length > 0) return { venues: local, source: "fallback", warning: "Using saved Jasper County nightlife while live discovery is unavailable." };
     throw lastError instanceof Error ? lastError : new Error("Could not load nightlife venues for that area.");
   });
