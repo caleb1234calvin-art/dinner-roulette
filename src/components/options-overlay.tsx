@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { getDateNightIcon } from "@/lib/date-night/icons";
 import { isHalloweenDateNightActive } from "@/lib/date-night/season";
 import { dateNightTypeLabel, type DecoratedDateNightPlace } from "@/lib/date-night/types";
+import { nightlifeArtwork, type DecoratedNightlifePlace } from "@/lib/nightlife/types";
 import { restaurantVisual } from "@/lib/restaurants/image-overrides";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
@@ -88,6 +89,8 @@ function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { r
   const dateNightRestaurant = restaurant as DecoratedDateNightPlace;
   const dateNightIcon = mode === "date-night" ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel, halloween }) : null;
   const activityTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
+  const nightlifeRestaurant = restaurant as DecoratedNightlifePlace;
+  const nightlifeIcon = mode === "nightlife" ? nightlifeArtwork(nightlifeRestaurant.venueTypes ?? []) : null;
 
   return (
     <article className="flex min-h-[17rem] flex-col overflow-hidden rounded-xl bg-surface shadow-border">
@@ -97,6 +100,8 @@ function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { r
             <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={dateNightIcon} alt="" className={cn("size-24 rounded-2xl object-cover shadow-sm", halloween && "date-night-halloween-icon")} /></div>
           ) : mode === "date-night" ? (
             <div className="flex h-28 w-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10"><Sparkles className="size-10 text-accent" /></div>
+          ) : nightlifeIcon ? (
+            <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={nightlifeIcon} alt="" className="size-24 rounded-2xl object-cover shadow-sm" /></div>
           ) : visual.isLogo ? (
             <div className="flex h-28 w-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10"><div className="shortlist-brand-stage relative flex h-20 w-[76%] items-center justify-center overflow-hidden rounded-xl p-3"><div className="absolute -top-5 -left-4 size-16 rounded-full bg-accent/15 blur-sm" /><div className="absolute -right-3 -bottom-5 size-14 rounded-full bg-accent/10 blur-sm" /><Sparkles className="absolute top-2 left-2 size-3.5 text-accent/70" />{displayLabel ? <span className={cn("relative z-10 max-w-[90%] whitespace-pre-line break-words text-center font-display font-semibold leading-[0.98] tracking-[0.015em] text-balance text-fg", badgeTextSize(displayLabel))}>{displayLabel}</span> : <img src={visual.src} alt="" className="shortlist-logo-image relative z-10 max-h-[78%] max-w-[78%] object-contain" />}</div></div>
           ) : <img src={visual.src} alt="" className="h-28 w-full object-cover outline outline-1 -outline-offset-1 outline-fg/10" />}
