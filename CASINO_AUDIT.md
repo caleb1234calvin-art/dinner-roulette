@@ -22,6 +22,7 @@ A jurisdiction is only marked complete when:
 | Massachusetts | 3 | 3 | Massachusetts Gaming Commission | Complete |
 | Connecticut | 2 tribal casino resorts | 2 | Connecticut Department of Consumer Protection | Complete for currently operating casino resorts |
 | Michigan | 27 | 27 | Michigan Gaming Control Board | Complete: 24 tribal Class III facilities + 3 Detroit commercial casinos |
+| Ohio | 11 | 11 | Ohio Casino Control Commission / Ohio Lottery | Complete: 4 casinos + 7 VLT racinos |
 
 ## Staged authoritative inventories
 
@@ -57,6 +58,9 @@ The national seed contains Foxwoods Resort Casino and Mohegan Sun, the two curre
 
 ### Michigan
 The Michigan Gaming Control Board's 2025 Tribal Gaming Annual Report lists 24 Class III tribal casino facilities. Eleven were already represented in the seed and 13 tribal facilities were added in pass 3. The pass also reconciled the state's three separately regulated Detroit commercial casinos, bringing the Michigan runtime catalog to 27 physical casino facilities under the app's current scope. Small/secondary tribal properties are retained because the app scope includes physical casino venues rather than only destination resorts.
+
+### Ohio
+Ohio's physical casino-venue scope consists of four casinos regulated by the Ohio Casino Control Commission and seven video-lottery racinos overseen by the Ohio Lottery. All eleven were added in pass 4. Racinos are included because the national audit scope explicitly includes physical racino casino venues while excluding distributed retail gaming terminals.
 
 ## Deployment discipline
 
