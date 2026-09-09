@@ -6,6 +6,7 @@ import type { RawPlace } from "@/lib/restaurants/normalize";
 import type { PhotoKey } from "@/lib/restaurants/types";
 import { CASINO_CATALOG } from "./casino-catalog";
 import { CASINO_CATALOG_PASS_2 } from "./casino-catalog-pass-2";
+import { CASINO_CATALOG_PASS_3 } from "./casino-catalog-pass-3";
 import { LOCAL_NIGHTLIFE_CATALOG } from "./catalog";
 import { JASPER_COUNTY_NIGHTLIFE_CATALOG } from "./jasper-county-catalog";
 import {
@@ -50,6 +51,7 @@ interface OverpassElement {
 const ALL_CURATED_NIGHTLIFE = [
   ...CASINO_CATALOG,
   ...CASINO_CATALOG_PASS_2,
+  ...CASINO_CATALOG_PASS_3,
   ...JASPER_COUNTY_NIGHTLIFE_CATALOG,
   ...LOCAL_NIGHTLIFE_CATALOG,
 ];

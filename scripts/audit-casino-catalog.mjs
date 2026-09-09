@@ -3,6 +3,7 @@ import fs from "node:fs";
 const files = [
   "src/lib/nightlife/casino-catalog.ts",
   "src/lib/nightlife/casino-catalog-pass-2.ts",
+  "src/lib/nightlife/casino-catalog-pass-3.ts",
 ];
 
 const records = [];
@@ -40,6 +41,7 @@ const expectedJurisdictionCounts = {
   Maryland: 6,
   Massachusetts: 3,
   Connecticut: 2,
+  Michigan: 27,
 };
 
 const allSource = files.map((file) => fs.readFileSync(file, "utf8")).join("\n");
