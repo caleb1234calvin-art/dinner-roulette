@@ -27,6 +27,7 @@ A jurisdiction is only marked complete when:
 | Illinois | 17 | 17 | Illinois Gaming Board | Complete: all 17 current IGB casino venues, including Fairmount Park racino |
 | Delaware | 3 | 3 | Delaware Lottery | Complete: all 3 racetrack casinos with table games |
 | West Virginia | 5 | 5 | West Virginia Lottery | Complete: 4 racetrack casinos + Greenbrier historic-resort casino |
+| Missouri | 13 | 13 | Missouri Gaming Commission | Complete: all 13 current licensed riverboat casino properties |
 
 ## Staged authoritative inventories
 
@@ -77,6 +78,9 @@ The Delaware Lottery identifies three racetrack casinos with table games: Delawa
 
 ### West Virginia
 West Virginia Lottery oversight covers four racetrack casinos offering video lottery/table games plus the historic-resort casino at The Greenbrier. These five destination casino properties are activated in pass 7. Distributed limited-video-lottery retail locations are excluded because the app scope is physical casino-style venues rather than bar/retail gaming terminals.
+
+### Missouri
+The Missouri Gaming Commission's current Class A operator-license and casino-contact records reconcile 13 licensed riverboat casino properties. All 13 are activated in pass 8, including Kansas City/St. Louis metro properties and the regional casinos in Cape Girardeau, Caruthersville, Boonville, LaGrange, and St. Joseph. Missouri's regulatory framework restricts licensed gambling games to excursion gambling boats and floating facilities, so the pass follows the MGC's physical casino-license roster rather than distributed gaming locations.
 
 ## Deployment discipline
 
