@@ -13,7 +13,9 @@ export type NightlifeTypeId =
   | "pub"
   | "club"
   | "lounge"
-  | "brewery";
+  | "brewery"
+  | "casino"
+  | "comedy-club";
 
 export type ConcreteNightlifeType = Exclude<NightlifeTypeId, "anything">;
 
@@ -60,6 +62,7 @@ export const DEFAULT_NIGHTLIFE_FILTERS: NightlifeFilters = {
 export const NIGHTLIFE_TYPE_CHIPS: ReadonlyArray<{
   id: NightlifeTypeId;
   label: string;
+  iconSrc?: string;
 }> = [
   { id: "anything", label: "Anything" },
   { id: "bar", label: "Bar" },
@@ -67,6 +70,8 @@ export const NIGHTLIFE_TYPE_CHIPS: ReadonlyArray<{
   { id: "club", label: "Club" },
   { id: "lounge", label: "Lounge" },
   { id: "brewery", label: "Brewery / Beer Garden" },
+  { id: "casino", label: "Casino", iconSrc: "/grok_1788913461447.jpg" },
+  { id: "comedy-club", label: "Comedy Club", iconSrc: "/grok_1788914079961.jpg" },
 ];
 
 export const NIGHTLIFE_TAGLINES = [
@@ -85,6 +90,8 @@ export function nightlifeEnergyLabel(value: number): string {
 }
 
 export function nightlifeTypeLabel(types: readonly ConcreteNightlifeType[]): string {
+  if (types.includes("casino")) return "Casino";
+  if (types.includes("comedy-club")) return "Comedy Club";
   if (types.includes("club")) return "Nightclub";
   if (types.includes("lounge")) return "Lounge";
   if (types.includes("brewery")) return "Brewery / Beer Garden";
