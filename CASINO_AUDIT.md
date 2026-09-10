@@ -43,6 +43,9 @@ A jurisdiction is only marked complete when:
 | Arizona | 26 | 26 | Arizona Department of Gaming | Complete: 26 current Class III tribal casino facilities operated by 16 tribes |
 | Wisconsin | 23 | 23 | Wisconsin DOA Division of Gaming / tribal operators | Complete: destination-style tribal gaming roster with convenience gaming excluded |
 | Idaho | 6 | 6 | NIGC / tribal operators | Complete: six tribal casino destinations after convenience/travel-center exclusions |
+| Minnesota | 19 | 19 | Minnesota House Research / tribal operators | Complete: 19 tribal casino destinations operated by Minnesota's 11 tribes |
+| Nebraska | 10 | 10 | Nebraska Racing and Gaming Commission / NIGC / tribal operators | Complete: 5 commercial racetrack casinos + 5 tribal casino destinations physically in Nebraska |
+| Wyoming | 3 | 3 | NIGC / tribal operators | Complete: Wind River, Little Wind, and Shoshone Rose |
 
 ## Staged authoritative inventories
 
@@ -141,6 +144,15 @@ Wisconsin Department of Administration gaming materials provide the state's Clas
 
 ### Idaho
 NIGC gaming-location materials identify Idaho's tribal gaming establishments. The curated destination scope retains Coeur d'Alene Casino Resort Hotel, Kootenai River Inn Casino & Spa, Clearwater River Casino & Lodge, It'se Ye-Ye Casino, Bannock Peak Casino, and Shoshone-Bannock Casino Hotel. Benewah retail/automotive gaming, Nez Perce Express convenience gaming, and Sage Hill Casino and Travel Center are excluded as convenience or travel-center gaming. Bannock Peak is retained because the Shoshone-Bannock operator presents it as a distinct named casino adjacent to, rather than merely a gaming amenity inside, its truck stop.
+
+### Minnesota
+Minnesota House Research's current tribal-gaming overview states that Minnesota's eleven federally recognized tribes operate nineteen casinos. Pass 20 activates those nineteen physical casino destinations, ranging from the Twin Cities-area Mystic Lake and Little Six properties to the northern Seven Clans, Fortune Bay, and Grand Portage facilities. The pass follows physical casino properties rather than non-casino tribal enterprises.
+
+### Nebraska
+Nebraska is reconciled as ten casino destinations under the app scope: five current commercial racetrack casinos overseen by the Nebraska Racing and Gaming Commission and five tribal casino properties physically located in Nebraska. The commercial set includes Harrah's Columbus, WarHorse Lincoln, WarHorse Omaha, Grand Island Casino Resort, and Lake Mac Casino Resort & Racetrack. Prairie Flower Casino is not counted here because its physical property is in Carter Lake, Iowa, where it is already represented in the Iowa pass. Rosebud Casino is counted in Nebraska because its current physical address is south of the South Dakota line near Valentine, Nebraska.
+
+### Wyoming
+Current NIGC gaming-location materials reconcile three Wyoming casino destinations: Wind River Hotel & Casino and Little Wind Casino, operated by the Northern Arapaho Tribe, plus Shoshone Rose Casino & Hotel, operated by the Eastern Shoshone Tribe. The older 789 Casino is not separately promoted because it is absent from the current roster.
 
 ## Deployment discipline
 
