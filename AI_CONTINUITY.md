@@ -104,6 +104,70 @@ Notes for the next session:
 5. Do not merge icon files into `main` until the compliance and casino-audit branches are reconciled and Caleb asks for the ship.
 6. Date Night and Nightlife icon systems stay separate; they already have their own palettes (magenta/lavender year-round, red/cyan Halloween, teal Nightlife).
 
+## Caleb maker's mark / startup animation checkpoint
+
+This is a separate personal brand identity that Caleb intends to reuse across apps and other things he creates. It is not a restaurant-category icon.
+
+### Canonical creature
+
+The reference artwork is a glossy black, detailed hybrid emblem: a black-mamba/snake head and long serpentine scaled body combined with symmetrical scorpion-like armored arms/pincers and a segmented tail ending in a large claw/pincer. The original still is vertically composed and heraldic. Associated motto: **Patiens sed mordax** (“patient, but biting”). Do not reinterpret the pincers as lobster branding; they are part of the snake/scorpion hybrid identity.
+
+### Brand hierarchy
+
+1. **Full detailed crest** — prominent brand presentation and app startup animation.
+2. **Simplified maker's mark** — small persistent watermark/signature, typically in a screen corner.
+3. **Tiny app/favicon icon** — heavily reduced silhouette/glyph that remains legible at very small sizes.
+
+The recurring mark should connect otherwise visually different apps as Caleb's work.
+
+### Current animation task for Grok
+
+Create a very short app-startup signature using the **full detailed creature**. The immediate task is locomotion only. **Do not add the claw snap yet.** First make the slither correct; the snap will be layered in after locomotion is approved.
+
+Desired action:
+
+1. Creature enters rapidly from one side of the screen.
+2. It reorients into the direction of travel and moves **head-first horizontally across the frame**.
+3. The head leads the path. The neck follows it, then each successive body section follows approximately the curved path previously occupied by the segment ahead, producing believable serpentine locomotion.
+4. Natural S-waves propagate down the body as a consequence of locomotion; do not merely wiggle an otherwise rigid emblem.
+5. The scorpion arms/pincers travel with the torso and remain anatomically attached and stable.
+6. The creature exits the opposite side quickly.
+7. Transition immediately into the app UI.
+
+Target total duration: roughly **0.8–1.5 seconds**. This is a boot signature, not a cinematic intro.
+
+### What previous attempts got wrong
+
+Two generated prototypes establish useful negative examples:
+
+- One kept the original upright/vertical heraldic orientation and translated the whole creature sideways while the body wiggled. It technically crossed the screen and technically made S-curves, but visually looked like an upright logo gliding sideways. **Do not repeat this.**
+- Another kept the creature facing upward, translated it vertically, then deformed/stretched the tail/body into a long tapered whip as it left frame. **Do not repeat this.**
+
+Core rule: **body deformation is not directional locomotion.** The animal must visibly travel head-first along a path, with the body following the head's trajectory. Do not preserve the vertical crest pose while translating the entire image as a rigid object.
+
+### Hard anatomy / motion constraints
+
+- Preserve the recognizable snake/scorpion hybrid; do not redesign it during animation.
+- Do not grow, delete, detach, duplicate, or transform limbs/pincers.
+- Do not turn pincers into wings, legs, tentacles, or unrelated anatomy.
+- Do not lengthen the neck/body merely to fake travel.
+- Do not taper the tail/body into a disappearing whip.
+- Do not separate the creature into pieces.
+- Do not rotate the emblem as if it were a flat card; reorient the animal anatomically into its travel direction.
+- Preserve the glossy black armored/scaled visual language.
+- Prefer a static camera. The creature moves through the frame; avoid using a camera pan to fake locomotion.
+- Avoid zooms, spins, smoke, particles, explosions, or other spectacle unless Caleb explicitly requests them.
+
+### Later claw-snap phase
+
+Only after Caleb approves the basic slither: add one quick, deliberate pincer/claw snap during the crossing, without substantially stopping the creature. The snap is punctuation, not the main event. Optional future audio could be a tiny dry click, but sound is not currently required.
+
+### Iteration protocol
+
+When Caleb supplies another generated attempt, preserve what he says worked and change the identified failure rather than reinventing the whole sequence. Add behaviors incrementally: **locomotion first → claw snap second → polish last**. Explicit negative constraints above are hard requirements.
+
+**Current next action for Grok: generate/refine only the fast, believable, head-first horizontal slither while preserving the creature's anatomy.**
+
 ## Future integration rule
 
 For any new third-party integration: check the provider's current official terms/documentation first; prefer factual text attribution and provider-supported links; avoid copied logos/content, undocumented APIs/deep links, scraped data, and implied partnerships. Record important decisions in this continuity file and the legal audit before merging.
