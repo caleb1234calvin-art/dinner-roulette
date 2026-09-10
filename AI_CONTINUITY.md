@@ -1,6 +1,6 @@
 # Dinner Roulette — AI Continuity
 
-_Last updated: September 9, 2026_
+_Last updated: September 10, 2026_
 
 ## Project state
 
@@ -8,8 +8,9 @@ _Last updated: September 9, 2026_
 - Repository: `caleb1234calvin-art/dinner-roulette`.
 - Current compliance work: `legal/third-party-compliance-pass-1`.
 - Compliance PR: #28, based on `audit/national-casino-pass-1`.
+- Restaurant icon generation: Issue #29.
 - `main` remains untouched unless Caleb explicitly requests a merge or direct change.
-- ChatGPT is the only AI authorized to directly modify this repository. Grok/SuperGrok may build or move artifacts into the workflow, but does not directly edit the repository.
+- ChatGPT is the only AI authorized to directly modify this repository unless Caleb explicitly asks another assistant to update a named file. Grok/SuperGrok may generate artwork and, when Caleb requests it, update this continuity file. Grok does not merge branches or ship icon assets to `main` without an explicit request.
 - Dinner Roulette and the Jasper County audit are interconnected projects. Audit data, methods, infrastructure, and discoveries may feed Dinner Roulette.
 
 ## National casino audit continuity
@@ -57,17 +58,51 @@ Delivery shortcuts are intentionally shallow launch links.
 
 Replace third-party restaurant logos/brand artwork with a Dinner Roulette-owned generic restaurant icon system while keeping factual restaurant names intact.
 
-Planned categories can include burger, pizza, Mexican, Chinese, Japanese/sushi, Italian, steakhouse, BBQ, chicken, cafe/bakery, dessert, seafood, buffet, diner/American, and additional categories as the catalog requires.
+Tracked as Issue #29. Artwork generation is separate from PR #28 so icons can be produced without mixing legal-code review and image work.
 
-Implementation direction:
+### Locked visual language (Issue #29, Sept 10 2026)
 
-1. Generate a coherent Dinner Roulette icon family specifically for the app rather than imitating restaurant trademarks, mascots, logos, packaging, or trade dress.
-2. Store the generated assets in the repository with clear provenance/documentation.
-3. Reuse the existing restaurant visual/photo-key mapping architecture where practical so the product structure does not need to be rebuilt.
-4. Map restaurants to generic cuisine/type artwork while continuing to display their factual business names in text.
-5. Remove legacy third-party logo assets from active app presentation once replacement coverage is sufficient.
-6. Audit fallback behavior so every restaurant receives either a suitable Dinner Roulette category icon or a neutral generic restaurant fallback.
-7. Preserve the existing Date Night and Nightlife artwork systems where those assets are original/cleared; audit their provenance separately if uncertain.
+- Same family as Date Night / Nightlife icons: dark glossy rounded-square tile, stylized toy/clay 3D object, no photoreal food photography, no text in the artwork, no logos, no mascots, no packaging, no brand marks.
+- Dinner-tab palette is not Date Night magenta/lavender and not Nightlife-only teal.
+- Dinner-tab rim uses both Dinner themes at once: teal/cyan (light Dinner sliders and Pick button) plus burnt orange/terracotta (dark Dinner sliders and Pick button). Object colors may use natural cuisine colors.
+- One dual-rim pack is intended to sit on both Dinner light and Dinner dark themes.
+- Caleb approved keeping the current generated set for now. Assets are not in `main` and are not wired into the app yet.
+
+### Generated Dinner category pack (kept, not shipped)
+
+Minimum Issue #29 categories have generated originals:
+
+- Burger — generic cheeseburger
+- Pizza — generic pepperoni slice
+- Mexican — generic hard-shell taco
+- Chinese — dumpling steamer with three buns
+- Japanese / sushi — nigiri plus a small roll
+- Italian — pasta nest with tomato and basil
+- Steakhouse — stylized grilled steak
+- BBQ — stylized ribs
+- Chicken — fried drumstick
+- Cafe / bakery — coffee cup and croissant
+- Dessert — layered cake slice with cherry
+- Seafood — stylized fish and shrimp
+- Buffet — cloche on stacked plates
+- Diner / American — pancake stack with butter
+- Neutral fallback — plate with crossed fork and knife
+
+Notes for the next session:
+
+- Chicken and diner pancakes are slightly more realistic than the rest of the clay family; keep unless Caleb asks for a restyle.
+- Mexican taco fillings are more toy-colored than the others; keep unless a more food-literal taco is requested.
+- Additional catalog categories can be added later using the same tile, clay treatment, and teal/orange rim.
+- Do not imitate restaurant trademarks. Business names stay UI text.
+
+### Still to do before Issue #29 is complete
+
+1. Store approved assets in the repo with provenance/documentation. Suggested folder: `public/dinner-icons/` with filenames matching category keys (`burger.png`, `pizza.png`, `mexican.png`, `chinese.png`, `sushi.png`, `italian.png`, `steakhouse.png`, `bbq.png`, `chicken.png`, `cafe.png`, `dessert.png`, `seafood.png`, `buffet.png`, `diner.png`, `fallback.png`). Confirm filenames against the existing photo-key map before writing files.
+2. Reuse the existing restaurant visual/photo-key mapping architecture.
+3. Map each restaurant to a generic cuisine icon or the neutral fallback.
+4. Remove legacy third-party logo assets from active presentation once coverage is sufficient.
+5. Do not merge icon files into `main` until the compliance and casino-audit branches are reconciled and Caleb asks for the ship.
+6. Date Night and Nightlife icon systems stay separate; they already have their own palettes (magenta/lavender year-round, red/cyan Halloween, teal Nightlife).
 
 ## Future integration rule
 
@@ -75,4 +110,4 @@ For any new third-party integration: check the provider's current official terms
 
 ## Merge discipline
 
-PR #28 remains the review surface for this pass. Do not merge the compliance branch into the casino-audit branch or `main` unless Caleb explicitly requests it.
+PR #28 remains the review surface for the legal/compliance pass. Issue #29 artwork is not a reason to merge that PR. Do not merge the compliance branch into the casino-audit branch or `main` unless Caleb explicitly requests it.
