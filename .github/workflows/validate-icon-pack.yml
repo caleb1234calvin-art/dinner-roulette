@@ -1,0 +1,61 @@
+name: Validate Dinner Icon Pack
+
+on:
+  push:
+    branches:
+      - feature/dinner-icon-pack-1
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build development bundle
+        run: npm run build:dev
+
+      - name: Verify Dinner icon packs
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          keys = [
+              "burger", "pizza", "mexican", "chinese", "japanese",
+              "italian", "steakhouse", "bbq", "chicken", "cafe-bakery",
+              "dessert", "seafood", "buffet", "breakfast", "fallback",
+          ]
+
+          missing = []
+          for theme in ("dark", "light"):
+              for key in keys:
+                  path = Path("public/dinner-icons") / theme / f"{key}.jpg"
+                  if not path.is_file() or path.stat().st_size == 0:
+                      missing.append(str(path))
+
+          if missing:
+              raise SystemExit("Missing Dinner icon assets:\n" + "\n".join(missing))
+
+          print("Verified 30 Dinner icon assets: 15 dark + 15 light")
+          PY
