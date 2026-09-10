@@ -17,8 +17,6 @@ const RATING_LABELS = ["Never again", "Not great", "Fine", "Really good", "Favor
 const SPIN_DELAYS = [50, 50, 55, 60, 70, 80, 95, 115, 140, 170, 210, 260, 320];
 type ResultMode = "dinner" | "nightlife" | "date-night";
 
-// Keep delivery shortcuts intentionally shallow. Dinner Roulette launches the independent
-// service and does not deep-link to a merchant, copy marketplace data, or claim availability.
 const DELIVERY_SERVICES = [
   { name: "DoorDash", href: "https://www.doordash.com/" },
   { name: "Grubhub", href: "https://www.grubhub.com/" },
@@ -53,6 +51,7 @@ function buildWhyReasons(restaurant: DecoratedRestaurant, mode: ResultMode, favo
 export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotTonight, skipSpin = false, mode = "dinner" }: { restaurant: DecoratedRestaurant; reelNames: string[]; onClose: () => void; onReroll: () => void; onNotTonight: () => void; skipSpin?: boolean; mode?: ResultMode; }) {
   const preferences = useAppStore((s) => s.preferences);
   const spookySeasonEnabled = useAppStore((s) => s.spookySeasonEnabled);
+  const theme = useAppStore((s) => s.theme);
   const toggleFavorite = useAppStore((s) => s.toggleFavorite);
   const recordVisit = useAppStore((s) => s.recordVisit);
   const favorite = Boolean(preferences[restaurant.id]?.favorite);
@@ -78,7 +77,7 @@ export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotT
   if (!mounted) return null;
   const destination = restaurant.address && restaurant.address !== "Address unavailable" ? restaurant.address : `${restaurant.lat},${restaurant.lon}`;
   const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
-  const visual = restaurantVisual(restaurant.name, restaurant.photoKey);
+  const visual = restaurantVisual(restaurant.name, restaurant.photoKey, theme, restaurant.cuisineLabel);
   const nightlifeRestaurant = restaurant as DecoratedNightlifePlace;
   const nightlifeIcon = mode === "nightlife" ? nightlifeArtwork(nightlifeRestaurant.venueTypes ?? []) : null;
   const dateNightRestaurant = restaurant as DecoratedDateNightPlace;
@@ -95,7 +94,7 @@ export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotT
     <div className="fixed inset-0 z-50 overflow-y-auto bg-bg"><div className="mx-auto flex min-h-dvh max-w-lg flex-col">
       {phase === "spin" ? <div className="flex flex-1 flex-col items-center justify-center px-6 text-center"><p className="text-kicker text-subtle">Choosing</p><div className="mt-6 w-full overflow-hidden rounded-xl bg-surface px-4 py-8 shadow-border"><p key={reel} className="reel-name font-display text-3xl text-fg">{reel}</p></div></div> : <>
         <div className="relative h-56 overflow-hidden">
-          {mode === "nightlife" && nightlifeIcon ? <div className="flex size-full items-center justify-center bg-elevated p-4 outline outline-1 -outline-offset-1 outline-fg/10"><img src={nightlifeIcon} alt="" className="size-44 rounded-[2rem] object-cover shadow-lg" /></div> : mode === "date-night" && dateNightIcon ? <div className="flex size-full items-center justify-center bg-elevated p-4 outline outline-1 -outline-offset-1 outline-fg/10"><img src={dateNightIcon} alt="" className="size-44 rounded-[2rem] object-cover shadow-lg" /></div> : mode === "date-night" ? <div className="flex size-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10"><div className="flex size-28 items-center justify-center rounded-full bg-surface shadow-border"><Sparkles className="size-12 text-accent" /></div></div> : visual.isLogo ? <div className="flex size-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10"><div className="flex h-32 w-[70%] items-center justify-center rounded-2xl bg-[#d8d8d4] p-6 shadow-sm"><img src={visual.src} alt="" className="max-h-full max-w-full object-contain" /></div></div> : <><img src={visual.src} alt="" className="size-full object-cover outline outline-1 -outline-offset-1 outline-fg/10" /><div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent" /></>}
+          {mode === "nightlife" && nightlifeIcon ? <div className="flex size-full items-center justify-center bg-elevated p-4 outline outline-1 -outline-offset-1 outline-fg/10"><img src={nightlifeIcon} alt="" className="size-44 rounded-[2rem] object-cover shadow-lg" /></div> : mode === "date-night" && dateNightIcon ? <div className="flex size-full items-center justify-center bg-elevated p-4 outline outline-1 -outline-offset-1 outline-fg/10"><img src={dateNightIcon} alt="" className="size-44 rounded-[2rem] object-cover shadow-lg" /></div> : mode === "date-night" ? <div className="flex size-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10"><div className="flex size-28 items-center justify-center rounded-full bg-surface shadow-border"><Sparkles className="size-12 text-accent" /></div></div> : <div className="flex size-full items-center justify-center bg-elevated p-4 outline outline-1 -outline-offset-1 outline-fg/10"><img src={visual.src} alt="" className="size-44 rounded-[2rem] object-cover shadow-lg" /></div>}
           <button type="button" onClick={onClose} className="absolute top-4 left-4 flex size-11 items-center justify-center rounded-md bg-bg/70 text-fg" aria-label="Close result"><X className="size-5" /></button>
         </div>
         <div className="result-in px-5 pt-2 pb-10"><p className="text-kicker text-subtle">{resultKicker}</p><h2 className="font-display mt-2 text-4xl leading-tight text-fg">{restaurant.name}</h2><p className="mt-2 text-sm text-muted">{tagline}</p>
