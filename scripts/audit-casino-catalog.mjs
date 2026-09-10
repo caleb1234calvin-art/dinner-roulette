@@ -23,8 +23,9 @@ const catalogFiles = [
   "src/lib/nightlife/casino-catalog-pass-20.ts",
   "src/lib/nightlife/casino-catalog-pass-21.ts",
   "src/lib/nightlife/casino-catalog-pass-22.ts",
+  "src/lib/nightlife/casino-catalog-pass-23.ts",
 ];
-const manifestFiles = ["audit/casino-sources.json", "audit/casino-sources-pass-21.json", "audit/casino-sources-pass-22.json"];
+const manifestFiles = ["audit/casino-sources.json", "audit/casino-sources-pass-21.json", "audit/casino-sources-pass-22.json", "audit/casino-sources-pass-23.json"];
 
 const records = [];
 const pattern = /casino\(\s*["']([^"']+)["']\s*,\s*["']([^"']+)["']\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)/g;
