@@ -20,6 +20,7 @@ const catalogFiles = [
   "src/lib/nightlife/casino-catalog-pass-17.ts",
   "src/lib/nightlife/casino-catalog-pass-18.ts",
   "src/lib/nightlife/casino-catalog-pass-19.ts",
+  "src/lib/nightlife/casino-catalog-pass-20.ts",
 ];
 const manifestFile = "audit/casino-sources.json";
 
