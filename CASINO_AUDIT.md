@@ -39,6 +39,10 @@ A jurisdiction is only marked complete when:
 | Kentucky | 14 | 14 | Kentucky Horse Racing & Gaming Corporation | Complete: 14 active casino-style HHR destinations |
 | Louisiana | 24 | 24 | Louisiana State Police Gaming Operations / NIGC | Complete: 20 state-regulated properties + 4 tribal casino destinations |
 | Mississippi | 28 | 28 | Mississippi Gaming Commission / Mississippi Band of Choctaw Indians | Complete: 25 state-regulated properties + 3 MBCI casino destinations |
+| New Mexico | 23 | 23 | New Mexico Gaming Control Board | Complete: 18 tribal casino destinations + 5 racetrack casinos |
+| Arizona | 26 | 26 | Arizona Department of Gaming | Complete: 26 current Class III tribal casino facilities operated by 16 tribes |
+| Wisconsin | 23 | 23 | Wisconsin DOA Division of Gaming / tribal operators | Complete: destination-style tribal gaming roster with convenience gaming excluded |
+| Idaho | 6 | 6 | NIGC / tribal operators | Complete: six tribal casino destinations after convenience/travel-center exclusions |
 
 ## Staged authoritative inventories
 
@@ -125,6 +129,18 @@ Louisiana State Police Gaming Operations materials reconcile twenty state-regula
 
 ### Mississippi
 Mississippi Gaming Commission July 2026 property data reconciles 25 active state-regulated casino properties across the Central, Coastal, and Northern regions. Mississippi Band of Choctaw Indians / Pearl River Resort materials separately identify Silver Star Hotel & Casino, Golden Moon Hotel & Casino, and Bok Homa Casino as casino destinations, producing 28 physical casino destinations under the app scope. Crystal Sky Travel Plaza is not counted separately because it is a travel-plaza gaming amenity rather than a casino destination. The Commission property list is used to reconcile commercial property addresses; property-specific OSM coordinate sources are recorded only where directly verified.
+
+### New Mexico
+New Mexico Gaming Control Board materials reconcile eighteen tribal casino destinations plus five racetrack casinos, producing 23 physical casino destinations under the app scope. Travel-center-only slot areas, casino-express outlets, and convenience-style gaming amenities are excluded. Apache Nugget Travel Center & Casino remains included because the regulator treats it as a distinct tribal casino with a separate casino footprint.
+
+### Arizona
+Arizona Department of Gaming's current tribal-gaming directory and status materials identify 26 Class III casino facilities operated by 16 tribes. All 26 are activated in pass 18. Event-wagering retail locations, OTBs, and online-only operators are excluded. ADG separately notes a Class II facility; it is not promoted without a matching current destination entry in the state casino directory.
+
+### Wisconsin
+Wisconsin Department of Administration gaming materials provide the state's Class III tribal-gaming backbone. Under the app's destination-casino scope, Oneida's Travel Center and One Stop Packerland are excluded because the current operator describes them as convenience stores with slot gaming. Ho-Chunk Gaming Madison is added separately because the current Ho-Chunk operator identifies it as a dedicated Class II gaming facility. The resulting curated Wisconsin pass contains 23 casino destinations, including the smaller Thunderbird mini-casino because the Menominee operator explicitly presents it as a separately named casino venue.
+
+### Idaho
+NIGC gaming-location materials identify Idaho's tribal gaming establishments. The curated destination scope retains Coeur d'Alene Casino Resort Hotel, Kootenai River Inn Casino & Spa, Clearwater River Casino & Lodge, It'se Ye-Ye Casino, Bannock Peak Casino, and Shoshone-Bannock Casino Hotel. Benewah retail/automotive gaming, Nez Perce Express convenience gaming, and Sage Hill Casino and Travel Center are excluded as convenience or travel-center gaming. Bannock Peak is retained because the Shoshone-Bannock operator presents it as a distinct named casino adjacent to, rather than merely a gaming amenity inside, its truck stop.
 
 ## Deployment discipline
 
