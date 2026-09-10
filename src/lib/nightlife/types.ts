@@ -61,6 +61,7 @@ export const DEFAULT_NIGHTLIFE_FILTERS: NightlifeFilters = {
 export const NIGHTLIFE_TYPE_CHIPS: ReadonlyArray<{
   id: NightlifeTypeId;
   label: string;
+  iconSrc?: string;
 }> = [
   { id: "anything", label: "Anything" },
   { id: "bar", label: "Bar" },
@@ -68,7 +69,7 @@ export const NIGHTLIFE_TYPE_CHIPS: ReadonlyArray<{
   { id: "club", label: "Club" },
   { id: "lounge", label: "Lounge" },
   { id: "brewery", label: "Brewery / Beer Garden" },
-  { id: "casino", label: "Casino" },
+  { id: "casino", label: "Casino", iconSrc: "/grok_1788913461447.jpg" },
 ];
 
 export const NIGHTLIFE_TAGLINES = [
