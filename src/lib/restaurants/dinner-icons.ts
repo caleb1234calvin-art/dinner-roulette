@@ -1,4 +1,5 @@
-import type { CuisineId, Restaurant } from "./types";
+import type { ThemeId } from "../theme";
+import type { CuisineId, PhotoKey, Restaurant } from "./types";
 
 export type DinnerIconKey =
   | "burger"
@@ -17,26 +18,6 @@ export type DinnerIconKey =
   | "breakfast"
   | "fallback";
 
-const DINNER_ICON_ROOT = "/dinner-icons";
-
-export const DINNER_ICON_PATHS: Record<DinnerIconKey, string> = {
-  burger: `${DINNER_ICON_ROOT}/burger.jpg`,
-  pizza: `${DINNER_ICON_ROOT}/pizza.jpg`,
-  mexican: `${DINNER_ICON_ROOT}/mexican.jpg`,
-  chinese: `${DINNER_ICON_ROOT}/chinese.jpg`,
-  japanese: `${DINNER_ICON_ROOT}/japanese.jpg`,
-  italian: `${DINNER_ICON_ROOT}/italian.jpg`,
-  steakhouse: `${DINNER_ICON_ROOT}/steakhouse.jpg`,
-  bbq: `${DINNER_ICON_ROOT}/bbq.jpg`,
-  chicken: `${DINNER_ICON_ROOT}/chicken.jpg`,
-  "cafe-bakery": `${DINNER_ICON_ROOT}/cafe-bakery.jpg`,
-  dessert: `${DINNER_ICON_ROOT}/dessert.jpg`,
-  seafood: `${DINNER_ICON_ROOT}/seafood.jpg`,
-  buffet: `${DINNER_ICON_ROOT}/buffet.jpg`,
-  breakfast: `${DINNER_ICON_ROOT}/breakfast.jpg`,
-  fallback: `${DINNER_ICON_ROOT}/fallback.jpg`,
-};
-
 const CUISINE_ICON_PRIORITY: Array<[CuisineId[], DinnerIconKey]> = [
   [["burgers", "fast_food"], "burger"],
   [["pizza"], "pizza"],
@@ -53,18 +34,12 @@ const CUISINE_ICON_PRIORITY: Array<[CuisineId[], DinnerIconKey]> = [
   [["breakfast", "brunch"], "breakfast"],
 ];
 
-function normalizedLabel(restaurant: Restaurant): string {
-  return `${restaurant.name} ${restaurant.cuisineLabel}`.toLowerCase();
+function normalizedLabel(name: string, cuisineLabel = ""): string {
+  return `${name} ${cuisineLabel}`.toLowerCase();
 }
 
-export function dinnerIconKey(restaurant: Restaurant): DinnerIconKey {
-  const cuisines = new Set(restaurant.cuisines);
-
-  for (const [candidates, icon] of CUISINE_ICON_PRIORITY) {
-    if (candidates.some((cuisine) => cuisines.has(cuisine))) return icon;
-  }
-
-  const label = normalizedLabel(restaurant);
+export function dinnerIconKeyFromVisual(name: string, photoKey: PhotoKey, cuisineLabel = ""): DinnerIconKey {
+  const label = normalizedLabel(name, cuisineLabel);
   if (label.includes("buffet") || label.includes("smorgasbord")) return "buffet";
   if (label.includes("burger")) return "burger";
   if (label.includes("pizza")) return "pizza";
@@ -80,7 +55,7 @@ export function dinnerIconKey(restaurant: Restaurant): DinnerIconKey {
   if (label.includes("seafood") || label.includes("fish")) return "seafood";
   if (label.includes("breakfast") || label.includes("brunch") || label.includes("pancake")) return "breakfast";
 
-  switch (restaurant.photoKey) {
+  switch (photoKey) {
     case "pizza": return "pizza";
     case "mexican": return "mexican";
     case "italian": return "italian";
@@ -95,6 +70,20 @@ export function dinnerIconKey(restaurant: Restaurant): DinnerIconKey {
   }
 }
 
-export function dinnerRestaurantIcon(restaurant: Restaurant): string {
-  return DINNER_ICON_PATHS[dinnerIconKey(restaurant)];
+export function dinnerIconKey(restaurant: Restaurant): DinnerIconKey {
+  const cuisines = new Set(restaurant.cuisines);
+
+  for (const [candidates, icon] of CUISINE_ICON_PRIORITY) {
+    if (candidates.some((cuisine) => cuisines.has(cuisine))) return icon;
+  }
+
+  return dinnerIconKeyFromVisual(restaurant.name, restaurant.photoKey, restaurant.cuisineLabel);
+}
+
+export function dinnerIconPath(key: DinnerIconKey, theme: ThemeId): string {
+  return `/dinner-icons/${theme}/${key}.jpg`;
+}
+
+export function dinnerRestaurantIcon(restaurant: Restaurant, theme: ThemeId): string {
+  return dinnerIconPath(dinnerIconKey(restaurant), theme);
 }
