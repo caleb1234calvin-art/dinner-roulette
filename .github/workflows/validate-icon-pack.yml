@@ -27,11 +27,10 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
-      - name: Typecheck (report inherited issues)
-        continue-on-error: true
+      - name: Typecheck
         run: npm run typecheck
 
-      - name: Existing test suite (report inherited issues)
+      - name: Existing test suite (report remaining inherited issues)
         continue-on-error: true
         run: npm test
 
