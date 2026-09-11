@@ -1,0 +1,33 @@
+{
+  "jurisdiction": "California",
+  "capturedOn": "2026-09-10",
+  "status": "final-exception-pass",
+  "purpose": "Review the remaining California exceptions after the 60-of-74 strict checkpoint. Promote only records with sufficient property evidence; classify the rest explicitly for final runtime decisions.",
+  "startingCheckpoint": {"inventory":74,"fullyReconciled":60},
+  "newlyFullyReconciled": [
+    {"license":"TRCS-000003","name":"Desert Rose Casino","address":"901 County Road 56, Alturas, CA 96101","lat":41.45549,"lon":-120.55974,"addressSource":"California EDD employer record confirms Desert Rose Casino at 901 County Road 56; current 2026 venue evidence independently reports the same address and active hours.","coordinateSource":"Current property-specific map/venue coordinate at the 901 County Road 56 casino site","status":"fully-reconciled"},
+    {"license":"TRCS-000013","name":"Red Fox Casino","address":"200 Cahto Drive, Laytonville, CA 95454","lat":39.6695138,"lon":-123.4971106,"addressSource":"Industry directory/current-location research consistently identifies 200 Cahto Drive.","coordinateSource":"Address-specific geocoded casino record for Red Fox Casino at 200 Cahto Drive","status":"fully-reconciled-with-status-caution","note":"A 2025 traveler report says the casino no longer exists while CGCC still lists the license active. Preserve for regulator reconciliation before runtime activation; coordinate/property identity itself is resolved."},
+    {"license":"TRCS-000017","name":"Cher-Ae Heights Casino","currentPropertyName":"The Heights Casino","address":"27 Scenic Drive, Trinidad, CA 95570","lat":41.0594,"lon":-124.1428,"addressSource":"Current tribal ownership/property materials place The Heights Casino in Trinidad; independent casino records identify the former Cher-Ae Heights Casino at 27 Scenic Drive and note the 2021 rename.","coordinateSource":"Property-specific Trinidad casino location at 27 Scenic Drive","status":"fully-reconciled-with-regulator-locality-caution","note":"CGCC currently displays Rohnert Park for the casino license while the owning tribe and physical casino are in Trinidad. Treat the regulator city field as a roster anomaly unless later corrected; physical property identity is sufficiently established."}
+  ],
+  "resolvedRuntimeExclusionsOrDedupes": [
+    {"license":"TRCS-000075","name":"Casino Morongo","decision":"do-not-create-second-runtime-destination","reason":"TRCS-000030 Morongo Casino Resort and Spa is already property-verified at the current Morongo campus. Until CGCC/operator evidence establishes a distinct active physical casino for TRCS-000075, representing both would risk a duplicate destination."},
+    {"license":"TRCS-000083","name":"North Fork Mono Casino","decision":"exclude-until-open","reason":"Licensed property is known, but operator materials state an October 2026 opening. It is not a currently-open destination as of this audit."},
+    {"license":"TRCS-000068","name":"Hidden Oaks Casino","decision":"hold-from-class-III-curated-runtime","reason":"Current operator describes the facility as Class II. Preserve the active CGCC record in audit evidence, but do not silently mix it into a Class III-oriented curated runtime set without an explicit scope change."}
+  ],
+  "stillPending": [
+    {"license":"TRCS-000082","name":"Acorn Ridge Casino","reason":"Current address evidence exists at 17500 CA-49, Plymouth, but no sufficiently direct property-specific coordinate source was accepted."},
+    {"license":"TRCS-000014","name":"Cahuilla Casino Hotel","reason":"Current operator identity/address are strong; exact coordinate evidence remains below strict threshold."},
+    {"license":"TRCS-000077","name":"Harrah's Northern California","reason":"Current address at 4640 Coal Mine Rd, Ione is established; strict property-specific coordinate evidence remains pending."},
+    {"license":"TRCS-000080","name":"Mechoopda Casino","reason":"CGCC lists the license active in Oroville, but direct current physical-property evidence remains insufficient for strict promotion."},
+    {"license":"TRCS-000071","name":"Winnedumah Winn's Casino","reason":"CGCC lists the license active in Independence and historical/current specialty sources support a Fort Independence casino, but sufficiently direct current physical-property evidence remains weak."},
+    {"license":"TRCS-000018","name":"Chicken Ranch Casino","reason":"Current operator presents both the new Chicken Ranch Casino Resort and original OG Casino while the staged CGCC roster exposes one casino license record. Exact license-to-physical-destination representation remains unresolved."}
+  ],
+  "accounting": {
+    "newlyFullyReconciled":3,
+    "combinedFullyReconciled":63,
+    "runtimeExclusionOrDedupeDecisions":3,
+    "stillPending":6,
+    "inventory":74,
+    "note":"The categories are not intended to sum directly to 74 because the 60-record starting checkpoint already includes the prior reconciled population. The remaining audit is now dominated by six property/coordinate/license exceptions plus final consolidation and runtime-set construction. Red Fox and Cher-Ae Heights are property-reconciled but retain status/regulator cautions that must be respected during final runtime construction."
+  }
+}
