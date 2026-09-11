@@ -104,69 +104,59 @@ Notes for the next session:
 5. Do not merge icon files into `main` until the compliance and casino-audit branches are reconciled and Caleb asks for the ship.
 6. Date Night and Nightlife icon systems stay separate; they already have their own palettes (magenta/lavender year-round, red/cyan Halloween, teal Nightlife).
 
-## Caleb maker's mark / startup animation checkpoint
+## Caleb maker's mark / startup ident — APPROVED CHECKPOINT
 
-This is a separate personal brand identity that Caleb intends to reuse across apps and other things he creates. It is not a restaurant-category icon.
+This is Caleb's reusable personal brand identity across apps and other things he creates. It is separate from Dinner Roulette's restaurant-category icon system.
 
 ### Canonical creature
 
-The reference artwork is a glossy black, detailed hybrid emblem: a black-mamba/snake head and long serpentine scaled body combined with symmetrical scorpion-like armored arms/pincers and a segmented tail ending in a large claw/pincer. The original still is vertically composed and heraldic. Associated motto: **Patiens sed mordax** (“patient, but biting”). Do not reinterpret the pincers as lobster branding; they are part of the snake/scorpion hybrid identity.
+The mark is a glossy black detailed black-mamba/snake + scorpion hybrid: central snake head and serpentine scaled body, symmetrical armored scorpion-like arms/pincers, and a segmented tail ending in a large claw/pincer. The still composition is vertical and heraldic. Associated motto: **Patiens sed mordax** (“patient, but biting”). The pincers are part of the snake/scorpion hybrid identity, not lobster branding.
 
 ### Brand hierarchy
 
-1. **Full detailed crest** — prominent brand presentation and app startup animation.
-2. **Simplified maker's mark** — small persistent watermark/signature, typically in a screen corner.
-3. **Tiny app/favicon icon** — heavily reduced silhouette/glyph that remains legible at very small sizes.
+1. **Full detailed crest** — prominent branding and startup ident.
+2. **Simplified maker's mark** — subtle persistent watermark/signature, typically in a screen corner.
+3. **Tiny app/favicon icon** — reduced silhouette/glyph optimized for very small sizes.
 
-The recurring mark should connect otherwise visually different apps as Caleb's work.
+The same maker's mark can connect otherwise visually different Caleb-built apps.
 
-### Current animation task for Grok
+### Approved startup ident
 
-Create a very short app-startup signature using the **full detailed creature**. The immediate task is locomotion only. **Do not add the claw snap yet.** First make the slither correct; the snap will be layered in after locomotion is approved.
+**The previously proposed slither animation is no longer the target. Do not regenerate or substitute it.** After many generation attempts, Caleb selected a stronger, simpler animation in which the full crest remains recognizable and the upper pincers rapidly sweep/curl inward over the head in an aggressive closing/arming gesture.
 
-Desired action:
+The approved final prototype is the user-supplied clip from Sept. 10, 2026, conversation filename/reference `8808.mp4`. Caleb manually created the final timing by repeatedly speeding up and saving the successful Grok-generated motion. That manual speed edit is intentional and is part of the approved result.
 
-1. Creature enters rapidly from one side of the screen.
-2. It reorients into the direction of travel and moves **head-first horizontally across the frame**.
-3. The head leads the path. The neck follows it, then each successive body section follows approximately the curved path previously occupied by the segment ahead, producing believable serpentine locomotion.
-4. Natural S-waves propagate down the body as a consequence of locomotion; do not merely wiggle an otherwise rigid emblem.
-5. The scorpion arms/pincers travel with the torso and remain anatomically attached and stable.
-6. The creature exits the opposite side quickly.
-7. Transition immediately into the app UI.
+Treat that clip as the **master startup-ident reference**. Preserve it. Do not ask a generative model to recreate it merely to change timing or make cosmetic edits; deterministic editing should be used where possible so the approved motion/anatomy is not lost.
 
-Target total duration: roughly **0.8–1.5 seconds**. This is a boot signature, not a cinematic intro.
+### Intended Dinner Roulette startup behavior
 
-### What previous attempts got wrong
+- On app launch, play the approved maker's-mark animation **once**.
+- Do not loop it.
+- Do not require a tap to dismiss it.
+- Keep it brief; it is a brand sting/boot signature, not a cinematic intro.
+- Load/initialize Dinner Roulette behind the ident when technically practical so the branding does not create unnecessary startup delay.
+- When the ident completes, transition immediately into the normal Dinner Roulette UI.
+- If the app is ready before the ident finishes, allow the short ident to complete. If startup genuinely takes longer, hand off cleanly to the app's normal loading state rather than looping or artificially extending the ident.
+- Keep the ident itself project-neutral so the same master animation can later identify other Caleb-built apps; project-specific branding/UI follows after it.
 
-Two generated prototypes establish useful negative examples:
+### Animation content lock
 
-- One kept the original upright/vertical heraldic orientation and translated the whole creature sideways while the body wiggled. It technically crossed the screen and technically made S-curves, but visually looked like an upright logo gliding sideways. **Do not repeat this.**
-- Another kept the creature facing upward, translated it vertically, then deformed/stretched the tail/body into a long tapered whip as it left frame. **Do not repeat this.**
+For the approved startup ident:
 
-Core rule: **body deformation is not directional locomotion.** The animal must visibly travel head-first along a path, with the body following the head's trajectory. Do not preserve the vertical crest pose while translating the entire image as a rigid object.
+- Keep the recognizable full hybrid anatomy.
+- Keep the fast inward pincer sweep/closing gesture.
+- No tongue animation; extensive attempts were discarded and the approved tongue-free version looks cleaner.
+- No slithering requirement.
+- No added smoke, particles, explosions, spins, or unrelated spectacle.
+- Do not add extra limbs or morph the pincers/anatomy.
+- Do not slow it back into the earlier ceremonial multi-second pacing.
+- Future variants should branch from this approved checkpoint rather than overwrite it.
 
-### Hard anatomy / motion constraints
+### Asset handling status
 
-- Preserve the recognizable snake/scorpion hybrid; do not redesign it during animation.
-- Do not grow, delete, detach, duplicate, or transform limbs/pincers.
-- Do not turn pincers into wings, legs, tentacles, or unrelated anatomy.
-- Do not lengthen the neck/body merely to fake travel.
-- Do not taper the tail/body into a disappearing whip.
-- Do not separate the creature into pieces.
-- Do not rotate the emblem as if it were a flat card; reorient the animal anatomically into its travel direction.
-- Preserve the glossy black armored/scaled visual language.
-- Prefer a static camera. The creature moves through the frame; avoid using a camera pan to fake locomotion.
-- Avoid zooms, spins, smoke, particles, explosions, or other spectacle unless Caleb explicitly requests them.
+The approved video currently exists as a conversation-uploaded/user-edited asset and is **not yet recorded here as a committed repository media path**. Before wiring the startup ident into Dinner Roulette, place the approved master asset into an appropriate project asset location and record the exact repo path/provenance here. Do not substitute one of the earlier failed prototypes.
 
-### Later claw-snap phase
-
-Only after Caleb approves the basic slither: add one quick, deliberate pincer/claw snap during the crossing, without substantially stopping the creature. The snap is punctuation, not the main event. Optional future audio could be a tiny dry click, but sound is not currently required.
-
-### Iteration protocol
-
-When Caleb supplies another generated attempt, preserve what he says worked and change the identified failure rather than reinventing the whole sequence. Add behaviors incrementally: **locomotion first → claw snap second → polish last**. Explicit negative constraints above are hard requirements.
-
-**Current next action for Grok: generate/refine only the fast, believable, head-first horizontal slither while preserving the creature's anatomy.**
+**Current next action when implementing branding:** use the approved `8808.mp4` startup-ident master, add it to the app's assets, wire it to play once at startup, then transition directly to Dinner Roulette. Preserve `main`/merge discipline unless Caleb explicitly authorizes shipping.
 
 ## Future integration rule
 
