@@ -1,9 +1,13 @@
-name: Validate Dinner Icon Pack
+name: Validate Dinner Integration
 
 on:
   push:
     branches:
       - feature/dinner-icon-pack-1
+      - integration/active-work-pass-1
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -29,6 +33,9 @@ jobs:
 
       - name: Typecheck
         run: npm run typecheck
+
+      - name: Audit curated casino catalog
+        run: npm run audit:casinos
 
       - name: Existing test suite (report remaining inherited issues)
         continue-on-error: true
