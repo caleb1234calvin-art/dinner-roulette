@@ -36,39 +36,30 @@ Casino catalog modules run through **Pass 28** on integration. Pass 28 is the fi
 
 Nevada's provisional audit decision universe is 174 rows, not a final runtime count. Runtime Batch NV-01 / Pass 22 contains 50 curated destinations. Remaining work includes Winnemucca/I-80, Stockmen's Fallon, Red Drag Elko, The Nevada Casino & Bar Battle Mountain, Longstreet address normalization, Buffalo Bill's/Whiskey Pete's operation state and rural completeness sweeps. Nevada progresses in parallel without blocking smaller states.
 
-## Colorado — Cripple Creek destination ambiguity resolved
+## Colorado — Cripple Creek ambiguity resolved; tribal coordinate QA complete
 
 Colorado Division of Gaming accounting is corrected to 33 commercial regulator locations: 15 Black Hawk, 6 Central City, 12 Cripple Creek, plus two tribal casino resorts. All regulator rows are accounted for. Bally's Black Hawk East/North/West remain separate physical properties; Century Casinos I/II must not create an artificial duplicate; Z Casino transitioned to Bigfoot Casino in 2026.
 
-`audit/colorado-cripple-creek-destination-reconciliation-2026-09-11.json` resolves the remaining **FHR BILLY'S** ambiguity: do **not** create a separate Dinner Roulette destination for Billy's. Current consumer-facing Full House/Chamonix material presents **Bronco Billy's** and **Chamonix** as the active connected casino experiences, while current visitor material promotes Bronco Billy's and independent casino-history evidence marks Billy's Casino closed. The FHR BILLY'S regulator row remains an accounting/evidence unit rather than a separately routable current consumer destination.
+`audit/colorado-cripple-creek-destination-reconciliation-2026-09-11.json` resolves the remaining **FHR BILLY'S** ambiguity: do **not** create a separate Dinner Roulette destination for Billy's. Current consumer-facing Full House/Chamonix material presents **Bronco Billy's** and **Chamonix** as the active connected casino experiences. The FHR BILLY'S regulator row remains an accounting/evidence unit rather than a separately routable current consumer destination. Bronco Billy's and Chamonix remain separate connected experiences. Century's two regulator licenses collapse to one consumer property. Current working Cripple Creek consumer-destination accounting from the 12 regulator rows is **10**.
 
-Bronco Billy's remains a current destination at `233 E Bennett Ave, Cripple Creek, CO 80813`. Chamonix remains a distinct connected casino experience because current first-party material explicitly describes two casinos/two distinct experiences connected under one roof and one owner. Century's two regulator licenses still collapse to one consumer property. Current working Cripple Creek consumer-destination accounting from the 12 regulator rows is therefore **10**, not 11 or 12.
+`audit/colorado-tribal-coordinate-qa-2026-09-11.json` clears both Colorado tribal resorts for the coordinate layer:
 
-Immediate Colorado action: finish address/coordinate/stable-ID QA for the consumer destination set, include Sky Ute and Ute Mountain tribal resorts, then serialize the clean Colorado runtime batch.
+- **Sky Ute Casino Resort** — current first-party address `14324 US Highway 172 North, Ignacio, CO 81137`; casino-property coordinate `37.138214,-107.6323312`. Do not substitute RV-park-only geometry.
+- **Ute Mountain Casino Hotel** — current first-party address `3 Weeminuche Drive, Towaoc, CO 81334`; casino-specific OSM geometry `37.20475,-108.68612`. Do not substitute adjacent hotel, RV park, travel center or parking geometry.
+
+The tribal portion no longer blocks Colorado serialization. Immediate Colorado action: finish commercial Black Hawk/Central City/Cripple Creek property address/coordinate/stable-ID QA, then serialize the clean Colorado runtime batch.
 
 ## Texas — 4 current destinations; 2 coordinate verified
 
 `audit/texas-casino-reconciliation-2026-09-11.json` resolves current Texas scope to four physical tribal gaming destinations: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded as travel-center gaming.
 
-`audit/texas-coordinate-qa-pass-1-2026-09-11.json` begins property-coordinate QA and verifies **2 of 4**:
+`audit/texas-coordinate-qa-pass-1-2026-09-11.json` verifies **2 of 4**: Kickapoo Lucky Eagle Casino Hotel at `28.61092,-100.44078` with current casino-facing address `794 Lucky Eagle Drive, Eagle Pass, TX 78852`, and Speaking Rock Entertainment Center at `31.690126,-106.326605` with current address `122 S Old Pueblo Rd, El Paso, TX 79907`.
 
-- **Kickapoo Lucky Eagle Casino Hotel** — `28.61092,-100.44078`, direct casino property geometry. Material address correction: the current first-party casino location page uses **794 Lucky Eagle Drive, Eagle Pass, TX 78852**. The earlier reconciliation artifact's `2212 Rosita Valley Rd` came from a July 2026 expansion announcement and should be treated as expansion/construction provenance rather than the current guest casino address unless later evidence proves otherwise.
-- **Speaking Rock Entertainment Center** — `31.690126,-106.326605`, current `122 S Old Pueblo Rd, El Paso, TX 79907` property. Older NIGC `119 S Old Pueblo Rd` remains provenance only.
-
-Still held for direct numerical property coordinates:
-
-- **Naskila Casino Livingston** — current first-party address remains `540 State Park Road 56, Livingston, TX 77351`; do not substitute nearby photo geotags or city centroids.
-- **Naskila Casino Leggett** — current first-party address remains `10314 US 59 N, Livingston, TX 77351`; opened August 25, 2026 and remains distinct from the original Livingston property while both operate.
-
-A fresh coordinate search still did not expose trustworthy numerical property pins for either Naskila site, so the holds remain rather than lowering the evidence standard. Texas is not complete until all four current destinations clear coordinate/stable-ID QA, enter runtime and validate green.
+Still held for direct numerical property coordinates: **Naskila Casino Livingston** at `540 State Park Road 56` and **Naskila Casino Leggett** at `10314 US 59 N`. Fresh searches have not exposed trustworthy numerical property pins, so the holds remain rather than lowering the evidence standard. Texas is not complete until all four current destinations clear coordinate/stable-ID QA, enter runtime and validate green.
 
 ## Oklahoma — Pass 28 green with 46 runtime records
 
-Oklahoma discovery/reconciliation artifacts include the statewide scope, major-operator passes 1–3, runtime QA passes 1–2, coordinate QA passes 1–8, duplicate-distance QA passes 1–2, and `audit/oklahoma-runtime-eligibility-pass-1-2026-09-11.json`.
-
-The Oklahoma candidate universe remains **77**. Current identity/address QA reached **54**, and property-specific coordinate QA reached **48**. Generated catalog passes 2–27 contain zero Oklahoma records, so there are no hidden Oklahoma collisions in those generated modules.
-
-Record-level runtime eligibility approved **46 of the 48 coordinate-verified records** for the first Oklahoma runtime batch. Duck Creek and Checotah remain held solely for current street-number normalization. The other six address-verified records outside Pass 28 still lack a sufficiently resolved coordinate/current-site package: Artesian, Lakecrest, Coweta, Lake Eufaula, Holdenville and Cherokee South Coffeyville. Artesian additionally retains the 1001 W 1st Street vs old 23 W Vinita lineage hold.
+Oklahoma candidate universe remains **77**. Current identity/address QA reached **54**, property-specific coordinate QA reached **48**, and record-level runtime eligibility approved **46** for Pass 28. Duck Creek and Checotah remain held for current street-number normalization; Artesian, Lakecrest, Coweta, Lake Eufaula, Holdenville and Cherokee South Coffeyville remain outside Pass 28 for coordinate/current-site or lineage holds.
 
 `src/lib/nightlife/casino-catalog-pass-28.ts` contains the 46 eligible Oklahoma destinations. `src/lib/nightlife/search.ts` imports Pass 28 and appends it to chronological `CASINO_PASSES`. The validator enumerates Pass 2 through Pass 28. WinStar preserves ID stem `winstar`; Choctaw Durant preserves `choctaw-durant`.
 
