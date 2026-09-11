@@ -40,12 +40,11 @@ A jurisdiction is only marked complete when:
 | Louisiana | 24 | 24 | Louisiana State Police Gaming Operations / NIGC | Complete: 20 state-regulated properties + 4 tribal casino destinations |
 | Mississippi | 28 | 28 | Mississippi Gaming Commission / Mississippi Band of Choctaw Indians | Complete: 25 state-regulated properties + 3 MBCI casino destinations |
 | Arizona | 26 | 26 | Arizona Department of Gaming | Complete: 26 current Class III tribal casino facilities in the regulator directory |
+| California | 69 curated destinations from 74 regulator license rows | 69 | California Gambling Control Commission | Complete: all 74 regulator IDs accounted; 69 current curated physical destinations active, 5 explicitly held/excluded/deduped |
 
 ## Staged authoritative inventories
 
-| Jurisdiction | Inventory | Activation status |
-| --- | ---: | --- |
-| California | 74 active tribal-casino licenses | Inventory captured; address/coordinate reconciliation in progress |
+No currently staged jurisdiction remains in this section after California activation.
 
 ## Audit controls
 
@@ -130,10 +129,13 @@ Mississippi Gaming Commission July 2026 property data reconciles 25 active state
 ### Arizona
 Arizona Department of Gaming's current tribal-gaming directory identifies 26 Class III casino facilities operated by 16 tribes. All 26 are active in `casino-catalog-pass-18.ts` and are wired into the runtime curated nightlife merge. Event-wagering retail locations, OTBs, and online-only operators are excluded from this physical casino-destination scope. ADG separately notes one Class II facility; it is not promoted without a matching current destination entry in the state's casino directory.
 
+### California
+The California Gambling Control Commission snapshot contains 74 active tribal-casino license rows. Full all-ID accounting proved all 74 IDs are represented in the audit decision set with no overlap or omissions. The runtime catalog intentionally activates 69 current physical destinations in `casino-catalog-pass-19.ts` rather than mechanically emitting one destination per regulator row. Red Fox is held because current operating status remains contradictory; Hidden Oaks is held from the Class III-oriented curated scope; Casino Morongo is deduped against the verified Morongo Resort campus; the temporary Mechoopda property is closed; and North Fork Mono remains excluded until its announced October 2026 opening. Chicken Ranch is represented by the current Chicken Ranch Casino Resort as the single license-backed curated destination while the still-operating OG Casino remains eligible for live discovery. The Heights is represented at its reconciled Trinidad property despite the CGCC locality mismatch, and Acorn Ridge uses an authoritative casino project-site coordinate with that provenance preserved. Pass 19 is wired into `src/lib/nightlife/search.ts` and the branch validation workflow completed successfully with TypeScript and development build gates passing.
+
 ## Deployment discipline
 
 Vercel deploys every pushed commit on this branch. Audit work should therefore be published as coherent atomic commits whenever multiple files must change together. Do not intentionally push half-wired imports, scripts, manifests, or catalog passes.
 
 ## Remaining work
 
-Continue state-by-state and tribal-jurisdiction reconciliation across the United States. California remains the next staged large-inventory pass: the regulator roster is captured, and property-specific address/coordinate reconciliation is in progress. The national audit is **not complete** until every applicable jurisdiction has been reconciled, the final cross-jurisdiction duplicate/alias/retirement pass is clean, and the release candidate passes audit, typecheck, build, tests, and deployment smoke checks.
+Continue state-by-state and tribal-jurisdiction reconciliation across the United States. California is complete and active in the curated runtime. The national audit is **not complete** until every remaining applicable jurisdiction has been reconciled, the final cross-jurisdiction duplicate/alias/retirement pass is clean, and the release candidate passes audit, typecheck, build, tests, and deployment smoke checks.
