@@ -36,7 +36,7 @@ Casino catalog modules run through **Pass 28** on integration. Pass 28 is the fi
 
 Nevada's provisional audit decision universe is 174 rows, not a final runtime count. Runtime Batch NV-01 / Pass 22 contains 50 curated destinations. Remaining work includes Winnemucca/I-80, Stockmen's Fallon, Red Drag Elko, The Nevada Casino & Bar Battle Mountain, Longstreet address normalization, Buffalo Bill's/Whiskey Pete's operation state and rural completeness sweeps. Nevada progresses in parallel without blocking smaller states.
 
-## Colorado — commercial address QA underway
+## Colorado — commercial QA advancing
 
 Colorado Division of Gaming accounting is corrected to 33 commercial regulator locations: 15 Black Hawk, 6 Central City, 12 Cripple Creek, plus two tribal casino resorts. All regulator rows are accounted for.
 
@@ -44,11 +44,13 @@ Colorado Division of Gaming accounting is corrected to 33 commercial regulator l
 
 `audit/colorado-tribal-coordinate-qa-2026-09-11.json` clears both tribal resorts: Sky Ute at `37.138214,-107.6323312` and Ute Mountain Casino at `37.20475,-108.68612`. The tribal portion no longer blocks Colorado serialization.
 
-`audit/colorado-black-hawk-address-qa-pass-1-2026-09-11.json` now clears current consumer-facing addresses for **10 Black Hawk destinations**: Ameristar, Horseshoe, Lady Luck, The Lodge, The Gilpin, Monarch, Saratoga, Sasquatch, Wild Card Saloon and Bigfoot Casino. Bigfoot is the current successor at `101 Gregory Street`; do not create a parallel current Z Casino destination.
+`audit/colorado-black-hawk-address-qa-pass-1-2026-09-11.json` clears current consumer-facing addresses for 10 Black Hawk destinations: Ameristar, Horseshoe, Lady Luck, The Lodge, The Gilpin, Monarch, Saratoga, Sasquatch, Wild Card Saloon and Bigfoot Casino. Bigfoot is the current successor at `101 Gregory Street`; do not create a parallel current Z Casino destination.
 
-Bally's remains the Black Hawk subproperty hold. Current Bally's marketing uses the complex-level `300 Main Street` address, while regulator/history evidence preserves East/North/West physical license/property distinctions. Do not collapse Bally's East/North/West solely because the current consumer site uses one complex address. Resolve current physical subproperty addresses and coordinates first.
+`audit/colorado-black-hawk-ballys-reconciliation-2026-09-11.json` now resolves Bally's Black Hawk as **three separately routable current physical subproperties**, supported by Bally's current contact material and distinct property geometry: East at `321 Main Street` (`39.79845,-105.48767`), North at `300 Main Street` (`39.79894,-105.48825`), and West at `261 Main Street` (`39.79883,-105.48885`). Do not collapse East/North/West into one destination. Their predecessor lineages are Golden Gulch, Mardi Gras and Golden Gates respectively.
 
-Immediate Colorado action: resolve Bally's East/North/West physical subproperties, collect property-specific coordinates for the 10 address-cleared Black Hawk destinations, and continue Central City/Cripple Creek address-coordinate QA. Then serialize the clean Colorado runtime batch.
+`audit/colorado-central-city-address-qa-2026-09-11.json` clears the full **six-destination Central City address layer**: Century Casino & Hotel `102 Main Street`, Dostal Alley `116 Main Street`, Easy Street `120 Main Street`, Famous Bonanza `107 Main Street`, Dragon Tiger `132 Lawrence Street`, and Grand Z `321 Gregory Street`. At this layer the six regulator locations map cleanly to six current consumer destinations; no license-row collapse is needed.
+
+A broader Black Hawk coordinate research pass has candidate property geometry for most non-Bally properties, but the attempted all-in-one artifact write was blocked by the connector safety layer and therefore is not treated as committed state. Horseshoe remains the principal Black Hawk direct-coordinate hold. Durable next action: collect/commit Central City property coordinates, retry the remaining Black Hawk coordinate artifact in smaller evidence-scoped pieces if needed, and then finish Cripple Creek address/coordinate QA. After the complete Colorado consumer set clears stable-ID/duplicate QA, serialize the Colorado runtime pass.
 
 ## Texas — 4 current destinations; 2 coordinate verified
 
