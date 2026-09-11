@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const STARTUP_IDENT_SRC = "/brand/startup-ident.mp4";
+const STARTUP_IDENT_SRC = "/brand/grok_video_2026-09-10-20-20-31_1.mp4";
 
 export function StartupIdent() {
   const [visible, setVisible] = useState(true);
