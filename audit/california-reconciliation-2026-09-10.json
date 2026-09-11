@@ -4,184 +4,52 @@
   "status": "reconciliation-in-progress",
   "authority": "California Gambling Control Commission",
   "authoritySource": "https://www.cgcc.ca.gov/?pageID=licensees&reportID=1002&sort=full_name",
-  "notes": "Property-level reconciliation for the staged 74-record California tribal-casino inventory. Fully reconciled records have regulator-backed identity plus property-specific address and plausible coordinate evidence. Address-verified records are deliberately not promoted to runtime until coordinates and same-property/alias checks are complete. Review flags preserve ambiguous or conflicting cases rather than forcing them into the catalog.",
+  "notes": "Property-level reconciliation for the staged 74-record California tribal-casino inventory. Fully reconciled records have regulator-backed identity plus property-specific address and plausible coordinate evidence. Address-verified records are deliberately not promoted to runtime until coordinates and same-property/alias checks are complete. Review flags preserve ambiguous, temporal, scope, or conflicting cases rather than forcing them into the catalog.",
   "fullyReconciledRecords": [
-    {
-      "license": "TRCS-000078",
-      "name": "Agua Caliente Casino Cathedral City",
-      "address": "68960 E Palm Canyon Dr, Cathedral City, CA 92234",
-      "lat": 33.778519,
-      "lon": -116.458294,
-      "website": "https://aguacalientecasinos.com/properties/cathedral-city/",
-      "addressSource": "https://www.aguacalientecasinos.com/hours-of-operation/",
-      "coordinateSource": "Google Maps link surfaced from the official Agua Caliente site"
-    },
-    {
-      "license": "TRCS-000001",
-      "name": "Agua Caliente Casino Palm Springs",
-      "address": "401 E Amado Rd, Palm Springs, CA 92262",
-      "lat": 33.826377,
-      "lon": -116.543105,
-      "website": "https://aguacalientecasinos.com/",
-      "addressSource": "https://www.aguacalientecasinos.com/hours-of-operation/",
-      "coordinateSource": "Property-address EV-station coordinate record at 401 E Amado Rd"
-    },
-    {
-      "license": "TRCS-000002",
-      "name": "Agua Caliente Casino Rancho Mirage",
-      "address": "32250 Bob Hope Dr, Rancho Mirage, CA 92270",
-      "lat": 33.81473,
-      "lon": -116.40911,
-      "website": "https://aguacalientecasinos.com/properties/rancho-mirage/",
-      "addressSource": "https://www.aguacalientecasinos.com/hours-of-operation/",
-      "coordinateSource": "OpenStreetMap-derived property coordinate"
-    },
-    {
-      "license": "TRCS-000004",
-      "name": "Augustine Casino",
-      "address": "84001 Avenue 54, Coachella, CA 92236",
-      "lat": 33.65576,
-      "lon": -116.19736,
-      "website": "https://www.augustinecasino.com/",
-      "addressSource": "https://www.augustinecasino.com/faqs/",
-      "coordinateSource": "OpenStreetMap-derived casino coordinate"
-    },
-    {
-      "license": "TRCS-000005",
-      "name": "Barona Resort and Casino",
-      "address": "1932 Wildcat Canyon Rd, Lakeside, CA 92040",
-      "lat": 32.93966,
-      "lon": -116.87349,
-      "website": "https://www.barona.com/",
-      "addressSource": "Property listing reconciled to Barona Resort & Casino",
-      "coordinateSource": "OpenStreetMap/Wikidata property coordinate"
-    },
-    {
-      "license": "TRCS-000061",
-      "name": "Bear River Casino Resort",
-      "address": "11 Bear Paws Way, Loleta, CA 95551",
-      "lat": 40.62726,
-      "lon": -124.20835,
-      "website": "https://bearrivercasino.com/",
-      "addressSource": "https://bearrivercasino.com/contact-us/",
-      "coordinateSource": "OpenStreetMap-derived casino coordinate"
-    },
-    {
-      "license": "TRCS-000054",
-      "name": "Black Oak Casino Resort",
-      "address": "19400 Tuolumne Rd N, Tuolumne, CA 95379",
-      "lat": 37.9725981,
-      "lon": -120.241176,
-      "website": "https://www.blackoakcasino.com/",
-      "addressSource": "https://www.blackoakcasino.com/plan/contact",
-      "coordinateSource": "Visit Tuolumne County property coordinate"
-    },
-    {
-      "license": "TRCS-000010",
-      "name": "Blue Lake Casino and Hotel",
-      "address": "777 Casino Way, Blue Lake, CA 95525",
-      "lat": 40.88554,
-      "lon": -123.99969,
-      "website": "https://www.bluelakecasino.com/",
-      "addressSource": "https://www.bluelakecasino.com/about/",
-      "coordinateSource": "OpenStreetMap-derived casino coordinate"
-    },
-    {
-      "license": "TRCS-000042",
-      "name": "Cache Creek Casino Resort",
-      "address": "14455 Highway 16, Brooks, CA 95606",
-      "lat": 38.73453,
-      "lon": -122.14245,
-      "website": "https://www.cachecreek.com/",
-      "addressSource": "https://www.cachecreek.com/contact",
-      "coordinateSource": "OpenStreetMap-derived casino coordinate"
-    },
-    {
-      "license": "TRCS-000033",
-      "name": "Casino Pauma",
-      "address": "777 Pauma Reservation Rd, Pauma Valley, CA 92061",
-      "lat": 33.33009,
-      "lon": -116.9912,
-      "website": "https://www.casinopauma.com/",
-      "addressSource": "https://www.casinopauma.com/contact/",
-      "coordinateSource": "OpenStreetMap way 545208654; California CEQAnet Pauma Casino expansion location independently corroborates the same site"
-    },
-    {
-      "license": "TRCS-000035",
-      "name": "Chukchansi Gold Resort and Casino",
-      "address": "711 Lucky Lane, Coarsegold, CA 93614",
-      "lat": 37.2116,
-      "lon": -119.69918,
-      "website": "https://chukchansigold.com/",
-      "addressSource": "https://chukchansigold.com/",
-      "coordinateSource": "OpenStreetMap way 675098646"
-    },
-    {
-      "license": "TRCS-000046",
-      "name": "Chumash Casino Resort",
-      "address": "3400 East Highway 246, Santa Ynez, CA 93460",
-      "lat": 34.60972,
-      "lon": -120.08611,
-      "website": "https://chumashcasino.com/",
-      "addressSource": "https://chumashcasino.com/contact-us",
-      "coordinateSource": "California CEQAnet Chumash Hotel Expansion Project location coordinates 34°36'35\"N 120°5'10\"W"
-    },
-    {
-      "license": "TRCS-000019",
-      "name": "Colusa Casino Resort",
-      "address": "3770 Highway 45, Colusa, CA 95932",
-      "lat": 39.25461,
-      "lon": -122.03072,
-      "website": "https://www.colusacasino.com/",
-      "addressSource": "https://www.colusacasino.com/contact/",
-      "coordinateSource": "OpenStreetMap way 1396144099"
-    }
+    {"license":"TRCS-000078","name":"Agua Caliente Casino Cathedral City","address":"68960 E Palm Canyon Dr, Cathedral City, CA 92234","lat":33.778519,"lon":-116.458294,"website":"https://aguacalientecasinos.com/properties/cathedral-city/","addressSource":"https://www.aguacalientecasinos.com/hours-of-operation/","coordinateSource":"Google Maps link surfaced from the official Agua Caliente site"},
+    {"license":"TRCS-000001","name":"Agua Caliente Casino Palm Springs","address":"401 E Amado Rd, Palm Springs, CA 92262","lat":33.826377,"lon":-116.543105,"website":"https://aguacalientecasinos.com/","addressSource":"https://www.aguacalientecasinos.com/hours-of-operation/","coordinateSource":"Property-address EV-station coordinate record at 401 E Amado Rd"},
+    {"license":"TRCS-000002","name":"Agua Caliente Casino Rancho Mirage","address":"32250 Bob Hope Dr, Rancho Mirage, CA 92270","lat":33.81473,"lon":-116.40911,"website":"https://aguacalientecasinos.com/properties/rancho-mirage/","addressSource":"https://www.aguacalientecasinos.com/hours-of-operation/","coordinateSource":"OpenStreetMap-derived property coordinate"},
+    {"license":"TRCS-000004","name":"Augustine Casino","address":"84001 Avenue 54, Coachella, CA 92236","lat":33.65576,"lon":-116.19736,"website":"https://www.augustinecasino.com/","addressSource":"https://www.augustinecasino.com/faqs/","coordinateSource":"OpenStreetMap-derived casino coordinate"},
+    {"license":"TRCS-000005","name":"Barona Resort and Casino","address":"1932 Wildcat Canyon Rd, Lakeside, CA 92040","lat":32.93966,"lon":-116.87349,"website":"https://www.barona.com/","addressSource":"Property listing reconciled to Barona Resort & Casino","coordinateSource":"OpenStreetMap/Wikidata property coordinate"},
+    {"license":"TRCS-000061","name":"Bear River Casino Resort","address":"11 Bear Paws Way, Loleta, CA 95551","lat":40.62726,"lon":-124.20835,"website":"https://bearrivercasino.com/","addressSource":"https://bearrivercasino.com/contact-us/","coordinateSource":"OpenStreetMap-derived casino coordinate"},
+    {"license":"TRCS-000054","name":"Black Oak Casino Resort","address":"19400 Tuolumne Rd N, Tuolumne, CA 95379","lat":37.9725981,"lon":-120.241176,"website":"https://www.blackoakcasino.com/","addressSource":"https://www.blackoakcasino.com/plan/contact","coordinateSource":"Visit Tuolumne County property coordinate"},
+    {"license":"TRCS-000010","name":"Blue Lake Casino and Hotel","address":"777 Casino Way, Blue Lake, CA 95525","lat":40.88554,"lon":-123.99969,"website":"https://www.bluelakecasino.com/","addressSource":"https://www.bluelakecasino.com/about/","coordinateSource":"OpenStreetMap-derived casino coordinate"},
+    {"license":"TRCS-000042","name":"Cache Creek Casino Resort","address":"14455 Highway 16, Brooks, CA 95606","lat":38.73453,"lon":-122.14245,"website":"https://www.cachecreek.com/","addressSource":"https://www.cachecreek.com/contact","coordinateSource":"OpenStreetMap-derived casino coordinate"},
+    {"license":"TRCS-000033","name":"Casino Pauma","address":"777 Pauma Reservation Rd, Pauma Valley, CA 92061","lat":33.33009,"lon":-116.9912,"website":"https://www.casinopauma.com/","addressSource":"https://www.casinopauma.com/contact/","coordinateSource":"OpenStreetMap way 545208654; California CEQAnet Pauma Casino expansion location independently corroborates the same site"},
+    {"license":"TRCS-000035","name":"Chukchansi Gold Resort and Casino","address":"711 Lucky Lane, Coarsegold, CA 93614","lat":37.2116,"lon":-119.69918,"website":"https://chukchansigold.com/","addressSource":"https://chukchansigold.com/","coordinateSource":"OpenStreetMap way 675098646"},
+    {"license":"TRCS-000046","name":"Chumash Casino Resort","address":"3400 East Highway 246, Santa Ynez, CA 93460","lat":34.60972,"lon":-120.08611,"website":"https://chumashcasino.com/","addressSource":"https://chumashcasino.com/contact-us","coordinateSource":"California CEQAnet Chumash Hotel Expansion Project location coordinates 34°36'35\"N 120°5'10\"W"},
+    {"license":"TRCS-000019","name":"Colusa Casino Resort","address":"3770 Highway 45, Colusa, CA 95932","lat":39.25461,"lon":-122.03072,"website":"https://www.colusacasino.com/","addressSource":"https://www.colusacasino.com/contact/","coordinateSource":"OpenStreetMap way 1396144099"},
+    {"license":"TRCS-000055","name":"Eagle Mountain Casino","address":"1850 West St, Porterville, CA 93257","lat":36.03148,"lon":-119.07612,"website":"https://eaglemtncasino.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap way 1396142984 via Mapcarta"},
+    {"license":"TRCS-000022","name":"Elk Valley Casino","address":"2021 Elk Ranch Road, Crescent City, CA 95531","lat":41.73936,"lon":-124.14883,"website":"https://www.elkvalleycasino.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap way 1117886562 via Mapcarta"},
+    {"license":"TRCS-000012","name":"Fantasy Springs Resort Casino","address":"84-245 Indio Springs Pkwy, Indio, CA 92203","lat":33.72106,"lon":-116.19382,"website":"https://www.fantasyspringsresort.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap way 1464202665 via Mapcarta"},
+    {"license":"TRCS-000029","name":"Feather Falls Casino & Lodge","address":"3 Alverda Drive, Oroville, CA 95966","lat":39.46709,"lon":-121.51608,"website":"https://featherfallscasino.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap way 1138558410 via Mapcarta"},
+    {"license":"TRCS-000006","name":"Gold Country Casino Resort","address":"4020 Olive Highway, Oroville, CA 95966","lat":39.5044,"lon":-121.50498,"website":"https://www.goldcountrycasino.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap way 651850129 via Mapcarta"},
+    {"license":"TRCS-000015","name":"Golden Acorn Casino & Travel Center","address":"1800 Golden Acorn Way, Campo, CA 91906","lat":32.70202,"lon":-116.35458,"website":"https://goldenacorncasino.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap way 207405584 via Mapcarta; casino geometry selected rather than travel-center geometry"},
+    {"license":"TRCS-000069","name":"Graton Resort & Casino","address":"288 Golf Course Drive West, Rohnert Park, CA 94928","lat":38.360694,"lon":-122.722194,"website":"https://www.gratonresortcasino.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"California CEQAnet Graton Resort & Casino Expansion Project coordinates 38°21'38.5\"N 122°43'19.9\"W"},
+    {"license":"TRCS-000081","name":"Hard Rock Casino Tejon","address":"1777 Garone Farm Road, Mettler, CA 93313","lat":35.06523,"lon":-118.97865,"website":"https://casino.hardrock.com/tejon/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap casino-building way 1484831336 via Mapcarta"},
+    {"license":"TRCS-000076","name":"Hard Rock Hotel & Casino Sacramento at Fire Mountain","address":"3317 Forty Mile Road, Wheatland, CA 95692","lat":39.05068,"lon":-121.51191,"website":"https://casino.hardrock.com/sacramento","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap casino-building way 944361162 via Mapcarta"},
+    {"license":"TRCS-000016","name":"Havasu Landing Resort & Casino","address":"13145 Havasu Lake Road, Havasu Lake, CA 92363","lat":34.49041,"lon":-114.40481,"website":"https://havasulandingresortcasino.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap casino-building way 1102799268 via Mapcarta"},
+    {"license":"TRCS-000025","name":"Jackson Rancheria Casino Resort","address":"12222 New York Ranch Road, Jackson, CA 95642","lat":38.38639,"lon":-120.73385,"website":"https://jacksoncasino.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap casino property geometry via Mapcarta; nearby hotel geometry checked separately"},
+    {"license":"TRCS-000073","name":"Jamul Casino Resort","address":"14145 Campo Road, Jamul, CA 91935","lat":32.70319,"lon":-116.86907,"website":"https://www.jamulcasino.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap casino way 630201983 via Mapcarta; distinct hotel geometry checked separately"},
+    {"license":"TRCS-000009","name":"Konocti Vista Casino Resort","address":"2755 Mission Rancheria Road, Lakeport, CA 95453","lat":39.02127,"lon":-122.88898,"website":"https://konocti-vista-casino.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap casino node 13295856439 via Mapcarta; distinct hotel geometry checked separately"},
+    {"license":"TRCS-000049","name":"Lucky 7 Casino","address":"350 North Indian Road, Smith River, CA 95567","lat":41.95623,"lon":-124.20306,"website":"https://lucky7casino.com/","addressSource":"Current Lucky 7 operator site confirms 350 North Indian Road","coordinateSource":"OpenStreetMap hotel/casino property way 930104128 via Mapcarta; California CEQAnet casino expansion independently places the same property at North Indian Road and US-101"},
+    {"license":"TRCS-000031","name":"Pala Casino Spa and Resort","currentPropertyName":"Pala Casino Spa Golf Resort","address":"11154 CA-76, Pala, CA 92059","lat":33.36319,"lon":-117.08465,"website":"https://www.palacasino.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap amenity=casino way 77966833 via Mapcarta; casino geometry selected over separate hotel geometries"},
+    {"license":"TRCS-000034","name":"Pechanga Resort & Casino","currentPropertyName":"Pechanga Resort Casino","address":"45000 Pechanga Parkway, Temecula, CA 92592","lat":33.45598,"lon":-117.10616,"website":"https://www.pechanga.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap building way 151311767 via Mapcarta; property map confirms casino complex"},
+    {"license":"TRCS-000036","name":"Pit River Casino","address":"20265 Tamarack Avenue, Burney, CA 96013","lat":40.87535,"lon":-121.67445,"website":"https://pitrivertribe.gov/","addressSource":"Tribal-government property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap casino-building way 299749294 via Mapcarta"},
+    {"license":"TRCS-000037","name":"Quechan Casino Resort","address":"525 Algodones Road, Winterhaven, CA 92283","lat":32.7416,"lon":-114.72266,"website":"https://playqcr.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap hotel/casino property way 411601707 via Mapcarta"},
+    {"license":"TRCS-000074","name":"Rain Rock Casino","currentPropertyName":"Rain Rock Casino Resort & Hotel","address":"777 Casino Way, Yreka, CA 96097","lat":41.71187,"lon":-122.63141,"website":"https://rainrockcasino.com/","addressSource":"Operator property address captured in accelerated California research batch","coordinateSource":"OpenStreetMap casino-building way 931636998 via Mapcarta"}
   ],
   "addressVerifiedCoordinatePending": [
-    {
-      "license": "TRCS-000014",
-      "name": "Cahuilla Casino",
-      "currentPropertyName": "Cahuilla Casino Hotel",
-      "address": "52702 CA-371, Anza, CA 92539",
-      "website": "https://cahuillacasinohotel.com/",
-      "addressSource": "https://cahuillacasinohotel.com/contact/",
-      "note": "Official property site and California EDD independently confirm the address, but no sufficiently direct property-specific coordinate source was accepted in this pass."
-    },
-    {
-      "license": "TRCS-000020",
-      "name": "Coyote Valley Casino",
-      "address": "77 Coyote Valley Blvd, Redwood Valley, CA 95470",
-      "website": "https://www.coyotevalleycasino.com/",
-      "addressSource": "https://www.coyotevalleycasino.com/contact",
-      "note": "Official property site confirms the address. Multiple nearby OpenStreetMap casino/building geometries returned materially different centroids, so coordinate promotion is deferred until the exact gaming-building geometry is reconciled."
-    }
+    {"license":"TRCS-000014","name":"Cahuilla Casino","currentPropertyName":"Cahuilla Casino Hotel","address":"52702 CA-371, Anza, CA 92539","website":"https://cahuillacasinohotel.com/","addressSource":"https://cahuillacasinohotel.com/contact/","note":"Official property site and California EDD independently confirm the address, but no sufficiently direct property-specific coordinate source was accepted in this pass."},
+    {"license":"TRCS-000020","name":"Coyote Valley Casino","address":"77 Coyote Valley Blvd, Redwood Valley, CA 95470","website":"https://www.coyotevalleycasino.com/","addressSource":"https://www.coyotevalleycasino.com/contact","note":"Official property site confirms the address. Multiple nearby OpenStreetMap casino/building geometries returned materially different centroids, so coordinate promotion is deferred until the exact gaming-building geometry is reconciled."}
   ],
   "reviewFlags": [
-    {
-      "license": "TRCS-000075",
-      "name": "Casino Morongo",
-      "issue": "Same-campus/identity reconciliation required. CGCC lists Casino Morongo separately from TRCS-000030 Morongo Casino Resort and Spa, while the current Morongo resort site centers the property at 49500 Seminole Dr. Do not collapse the two licenses or duplicate the resort until the active physical-facility relationship is confirmed."
-    },
-    {
-      "license": "TRCS-000017",
-      "name": "Cher-Ae Heights Casino",
-      "issue": "Location conflict. The CGCC roster currently displays Rohnert Park 94928 for this license, while current tribal-gaming directory material identifies the casino property in Trinidad at 27 Scenic Dr, Trinidad, CA 95570. Requires regulator/property confirmation before activation."
-    },
-    {
-      "license": "TRCS-000018",
-      "name": "Chicken Ranch Casino",
-      "issue": "Current operator materials show both the new Chicken Ranch Casino Resort at 9100 People of the Mountain Rd and the original 'OG Casino' still operating. CGCC exposes one staged license record under Chicken Ranch Casino. Confirm whether the license maps to one or both active physical gaming facilities before choosing runtime representation."
-    },
-    {
-      "license": "TRCS-000003",
-      "name": "Desert Rose Casino",
-      "issue": "CGCC confirms active identity in Alturas 96101; California EDD employer data gives 901 County Road 56, Alturas, CA 96101. No sufficiently direct current operator source was located in this pass, so address/coordinate activation remains pending."
-    }
+    {"license":"TRCS-000075","name":"Casino Morongo","issue":"Same-campus/identity reconciliation required. CGCC lists Casino Morongo separately from TRCS-000030 Morongo Casino Resort and Spa, while the current Morongo resort site centers the property at 49500 Seminole Dr. Do not collapse the two licenses or duplicate the resort until the active physical-facility relationship is confirmed."},
+    {"license":"TRCS-000017","name":"Cher-Ae Heights Casino","issue":"Location conflict. The CGCC roster currently displays Rohnert Park 94928 for this license, while current tribal-gaming directory material identifies the casino property in Trinidad at 27 Scenic Dr, Trinidad, CA 95570. Requires regulator/property confirmation before activation."},
+    {"license":"TRCS-000018","name":"Chicken Ranch Casino","issue":"Current operator materials show both the new Chicken Ranch Casino Resort at 9100 People of the Mountain Rd and the original 'OG Casino' still operating. CGCC exposes one staged license record under Chicken Ranch Casino. Confirm whether the license maps to one or both active physical gaming facilities before choosing runtime representation."},
+    {"license":"TRCS-000003","name":"Desert Rose Casino","issue":"CGCC confirms active identity in Alturas 96101; California EDD employer data gives 901 County Road 56, Alturas, CA 96101. No sufficiently direct current operator source was located in this pass, so address/coordinate activation remains pending."},
+    {"license":"TRCS-000068","name":"Hidden Oaks Casino","issue":"CGCC lists the license active and the current operator identifies the Covelo property, but the operator describes Hidden Oaks as a Class II facility. Keep out of runtime until the intended Dinner Roulette casino-destination scope is explicitly reconciled."},
+    {"license":"TRCS-000083","name":"North Fork Mono Casino","issue":"CGCC lists the license active and the current operator publishes the Madera property, but the operator site says opening October 2026. Do not expose it as an already-open destination until opening is confirmed."}
   ],
-  "progress": {
-    "inventory": 74,
-    "fullyReconciled": 13,
-    "addressVerifiedCoordinatePending": 2,
-    "flaggedForReview": 4
-  }
+  "progress": {"inventory":74,"fullyReconciled":32,"addressVerifiedCoordinatePending":2,"flaggedForReview":6}
 }
