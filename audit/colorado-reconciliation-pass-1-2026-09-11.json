@@ -1,77 +1,106 @@
 {
   "jurisdiction": "Colorado",
   "capturedOn": "2026-09-11",
-  "status": "market-roster-reconciliation-in-progress",
-  "scope": "Dinner Roulette physical casino destinations",
-  "provisionalUniverse": {
-    "commercial": 33,
-    "tribal": 2,
-    "total": 35
+  "status": "regulator-roster-accounted-destination-qa-in-progress",
+  "scope": "Dinner Roulette physical casino destinations; regulator license rows are accounting evidence and are not automatically one-to-one with consumer destinations",
+  "regulatorCommercialUniverse": {
+    "totalLicenseLocations": 33,
+    "Black Hawk": 15,
+    "Central City": 6,
+    "Cripple Creek": 12,
+    "source": "https://sbg.colorado.gov/sites/sbg/files/documents/Decemberstats2025.pdf",
+    "note": "Colorado Division of Gaming December 2025 statistics report 33 casinos: 15 Black Hawk, 6 Central City, 12 Cripple Creek. This corrects the earlier provisional 14/6/13 market split."
   },
   "marketAccounting": {
     "Black Hawk": {
-      "expectedCommercialCount": 14,
-      "currentlyVerifiedDestinationNames": [
+      "regulatorCount": 15,
+      "destinationAccounting": [
         "Ameristar Casino Resort Spa Black Hawk",
-        "Bally's Black Hawk",
-        "Bigfoot Casino",
-        "Gilpin Casino",
+        "Bally's Black Hawk East",
+        "Bally's Black Hawk North",
+        "Bally's Black Hawk West",
+        "Bigfoot Casino (current 2026 successor/rebrand of Z Casino at 101 Gregory St)",
+        "Bull Durham Saloon and Casino",
+        "The Gilpin Casino",
         "Horseshoe Black Hawk",
         "Lady Luck Casino Black Hawk",
         "The Lodge Casino",
         "Monarch Casino Resort Spa Black Hawk",
+        "Red Dolly Casino",
         "Saratoga Casino Black Hawk",
         "Sasquatch Casino",
-        "Wild Card Casino"
+        "Wild Card Saloon & Casino"
       ],
-      "verifiedCount": 11,
-      "unresolvedRosterSlots": 3,
-      "evidence": [
-        "https://visitblackhawk.org/casinos/",
-        "https://sbg.colorado.gov/sites/sbg/files/documents/Dec25.Devices.pdf"
-      ],
-      "note": "Visit Black Hawk currently exposes eleven named destination casinos. Colorado Division of Gaming reporting indicates fourteen Black Hawk commercial license locations in the recent market breakdown, so three regulator-roster rows still require exact current destination reconciliation before completion. Bally's operates three separately licensed Black Hawk casino properties but is presented by the destination site under one Bally's Black Hawk consumer-facing group; property-level regulator reconciliation is still required."
-    },
-    "Central City": {
-      "expectedCommercialCount": 6,
-      "currentlyVerifiedDestinationNames": [
-        "Dragon Tiger Casino",
-        "Grand Z Casino & Hotel",
-        "The Famous Bonanza Casino",
-        "Easy Street Casino",
-        "Dostal Alley Casino",
-        "Century Casino & Hotel Central City"
-      ],
-      "verifiedCount": 6,
+      "accountedCount": 15,
       "unresolvedRosterSlots": 0,
       "evidence": [
-        "https://www.visitcentralcity.com/casinos",
-        "https://www.visitcentralcity.com/explore",
-        "https://sbg.colorado.gov/sites/sbg/files/documents/Dec25.Devices.pdf"
+        "https://sbg.colorado.gov/sites/sbg/files/documents/Decemberstats2025.pdf",
+        "https://sbg.colorado.gov/sites/sbg/files/documents/Dec25.Devices.pdf",
+        "https://visitblackhawk.org/casinos/",
+        "https://casinos.ballys.com/black-hawk/contact-us.htm",
+        "https://www.cityofblackhawk.org/media/10141"
       ],
-      "note": "The current Central City destination roster accounts cleanly for six commercial casino destinations, matching the recent state market breakdown."
+      "note": "All 15 regulator locations are accounted for. Bally's remains three distinct physical casino locations at 321, 300 and 261 Main St. Z Casino at 101 Gregory St transferred/rebranded to Bigfoot Casino in 2026; Dinner Roulette should use current Bigfoot identity while preserving Z Casino as an alias/provenance name."
+    },
+    "Central City": {
+      "regulatorCount": 6,
+      "destinationAccounting": [
+        "Century Casino & Hotel Central City",
+        "Dostal Alley Brewpub & Casino",
+        "Dragon Tiger Casino",
+        "Easy Street Casino",
+        "The Famous Bonanza Casino",
+        "Grand Z Casino Hotel"
+      ],
+      "accountedCount": 6,
+      "unresolvedRosterSlots": 0,
+      "evidence": [
+        "https://sbg.colorado.gov/sites/sbg/files/documents/Decemberstats2025.pdf",
+        "https://www.visitcentralcity.com/casinos"
+      ]
     },
     "Cripple Creek": {
-      "expectedCommercialCount": 13,
-      "currentlyVerifiedDestinationNames": [
+      "regulatorCount": 12,
+      "licenseAccounting": [
+        "FHR Billy's",
+        "FHR Bronco Billy's",
+        "FHR Chamonix",
+        "Brass Ass",
+        "Midnight Rose",
+        "J.P. McGill's",
+        "Colorado Grande",
+        "Double Eagle",
+        "Johnny Nolon's",
+        "Golden Nugget / former Wildwood",
+        "Century Casinos I",
+        "Century Casinos II"
+      ],
+      "currentConsumerDestinationNames": [
         "The Brass Ass Casino",
         "Bronco Billy's Casino",
-        "Century Casino Cripple Creek",
-        "Chamonix Casino Hotel",
+        "Century Casino & Hotel Cripple Creek",
+        "Chamonix Casino Resort",
         "Colorado Grande Casino & Hotel",
         "Double Eagle Hotel & Casino",
         "Golden Nugget Cripple Creek",
         "Johnny Nolon's Casino",
-        "McGill's Casino & Hotel",
-        "Midnight Rose Casino & Hotel"
+        "J.P. McGill's Hotel & Casino",
+        "Midnight Rose Hotel & Casino"
       ],
-      "verifiedCount": 10,
-      "unresolvedRosterSlots": 3,
+      "accountedLicenseRows": 12,
+      "consumerDestinationCountBeforeBillyDisposition": 10,
+      "unresolvedDestinationDisposition": [
+        "FHR Billy's license / 151 E Bennett Ave: regulator row is accounted for, but current first-party consumer identity appears integrated into the broader Bronco Billy's/Chamonix campus. Decide whether it remains a separately routable Dinner Roulette destination after current property-level verification.",
+        "Century Casinos I and II are two regulator licenses controlled as the single current Century Casino & Hotel Cripple Creek consumer property. Do not create a fake duplicate destination merely to equal the regulator license count."
+      ],
       "evidence": [
-        "https://www.cityofcripplecreek.com/visit-cripple-creek/page/casinos",
-        "https://sbg.colorado.gov/sites/sbg/files/documents/Dec25.Devices.pdf"
+        "https://sbg.colorado.gov/sites/sbg/files/documents/Decemberstats2025.pdf",
+        "https://sbg.colorado.gov/sites/sbg/files/documents/Dec25.Devices.pdf",
+        "https://www.cityofcripplecreek.com/media/461",
+        "https://chamonixco.com/",
+        "https://chamonixco.com/bronco-billys-casino/"
       ],
-      "note": "The City of Cripple Creek currently exposes ten named consumer-facing casino destinations in the captured page content. The recent state market breakdown indicates thirteen commercial license locations, leaving three exact regulator-roster rows to reconcile. Chamonix and Bronco Billy's are adjacent but remain separately licensed casino operations and should not be collapsed without regulator/property evidence."
+      "note": "The former three-slot mystery was a counting-model error, not three undiscovered casinos. Cripple Creek has 12 regulator license rows, but at least one pair (Century I/II) maps to one current consumer destination. Billy's requires a final routability decision rather than blind license-to-destination expansion."
     }
   },
   "tribalDestinations": [
@@ -89,18 +118,22 @@
     }
   ],
   "currentAccounting": {
-    "commercialNamedDestinationsCaptured": 27,
-    "commercialRosterRowsStillUnresolved": 6,
-    "tribalDestinationsCaptured": 2,
-    "allDestinationNamesCapturedSoFar": 29,
-    "targetUniverse": 35
+    "commercialRegulatorRowsAccounted": 33,
+    "commercialRegulatorRowsUnexplained": 0,
+    "tribalDestinationsAccounted": 2,
+    "knownCurrentConsumerDestinations": 31,
+    "knownCurrentConsumerDestinationsIncludingTribal": 33,
+    "possibleAdditionalRoutableBillysDestination": 1,
+    "finalDinnerRouletteColoradoDestinationCount": null,
+    "note": "Do not force the final runtime count to 35. The correct final count is determined by physical/routable destination identity after collapsing same-property licensing structure and resolving Billy's current consumer status."
   },
   "hardRules": [
-    "Do not mark Colorado complete until all 33 commercial regulator rows are accounted for.",
-    "Do not silently merge separately licensed casino properties because they share a consumer-facing brand group.",
-    "Require current identity, normalized address, property-specific coordinates, stable ID, first-party/current website and duplicate/alias QA before runtime activation.",
-    "Preserve regulator property granularity where two adjacent casinos remain separately licensed physical destinations.",
-    "Treat the two tribal properties as separate additions to the 33 commercial casino universe."
+    "Account every regulator row, but do not equate every license row with a separate Dinner Roulette destination.",
+    "Preserve separately located Bally's East/North/West properties as distinct destinations despite shared branding.",
+    "Do not duplicate Century Casino Cripple Creek solely because the regulator carries Century Casinos I and II licenses.",
+    "Use Bigfoot Casino as the current 101 Gregory St identity and preserve Z Casino as an alias/history record.",
+    "Resolve Billy's current routability before runtime activation.",
+    "Require current identity, normalized address, property-specific coordinates, stable ID, current website and duplicate/alias QA before runtime activation."
   ],
-  "nextPhase": "Resolve the remaining three Black Hawk and three Cripple Creek regulator rows from the Colorado Division of Gaming property roster, then perform address/coordinate/website QA on all 35 destinations before generating the next runtime catalog pass."
+  "nextPhase": "Resolve Billy's current routability, then complete address/coordinate/website QA for the 31 confirmed commercial consumer destinations plus two tribal destinations. Generate Pass 28 only from the final physical-destination roster, not from the raw 33-license count."
 }
