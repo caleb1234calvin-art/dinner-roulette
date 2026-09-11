@@ -1,0 +1,103 @@
+{
+  "jurisdiction": "Oregon",
+  "capturedOn": "2026-09-10",
+  "status": "authoritative-inventory-staged",
+  "primaryAuthority": "Oregon State Police Tribal Gaming Section",
+  "primaryAuthoritySource": "https://www.oregon.gov/osp/programs/pages/gaming-enforcement.aspx",
+  "supportingAuthority": "National Indian Gaming Commission",
+  "supportingAuthoritySource": "https://www.nigc.gov/map/",
+  "scopeNotes": "Oregon State Police oversees Class III gaming under compacts with Oregon's nine federally recognized tribes. Current state employment/government material identifies nine operating casino locations statewide because the Burns Paiute Tribe's Old Camp Casino closed in 2012 while the Confederated Tribes of Coos, Lower Umpqua and Siuslaw operate two current locations. This staged inventory follows current physical casino destinations rather than historic tribe-by-tribe one-casino assumptions.",
+  "expectedCurrentPhysicalDestinations": 9,
+  "records": [
+    {
+      "id": "or-spirit-mountain",
+      "name": "Spirit Mountain Casino",
+      "city": "Grand Ronde",
+      "address": "27100 SW Salmon River Hwy, Grand Ronde, OR 97347",
+      "operator": "Confederated Tribes of the Grand Ronde Community of Oregon",
+      "website": "https://spiritmountain.com/",
+      "status": "current"
+    },
+    {
+      "id": "or-chinook-winds",
+      "name": "Chinook Winds Casino Resort",
+      "city": "Lincoln City",
+      "address": "1777 NW 44th Street, Lincoln City, OR 97367",
+      "operator": "Confederated Tribes of Siletz Indians of Oregon",
+      "website": "https://www.chinookwindscasino.com/",
+      "status": "current"
+    },
+    {
+      "id": "or-three-rivers-florence",
+      "name": "Three Rivers Casino Resort",
+      "city": "Florence",
+      "address": "5647 Highway 126, Florence, OR 97439",
+      "operator": "Confederated Tribes of Coos, Lower Umpqua and Siuslaw Indians",
+      "website": "https://www.threeriverscasino.com/",
+      "status": "current"
+    },
+    {
+      "id": "or-three-rivers-coos-bay",
+      "name": "Three Rivers Casino Coos Bay",
+      "city": "Coos Bay",
+      "address": "1297 Ocean Boulevard, Coos Bay, OR 97420",
+      "operator": "Confederated Tribes of Coos, Lower Umpqua and Siuslaw Indians",
+      "website": "https://www.threeriverscasino.com/coos-bay",
+      "status": "current"
+    },
+    {
+      "id": "or-kokwel-coos-bay",
+      "name": "Ko-Kwel Casino Resort | Coos Bay",
+      "formerName": "The Mill Casino",
+      "city": "North Bend",
+      "address": "3201 Tremont Avenue, North Bend, OR 97459",
+      "operator": "Coquille Indian Tribe",
+      "website": "https://www.themillcasino.com/",
+      "status": "current-renamed",
+      "note": "Oregon state government material confirms the former Mill Casino property rebranded to Ko-Kwel Casino Resort | Coos Bay in 2025 and remains open."
+    },
+    {
+      "id": "or-seven-feathers",
+      "name": "Seven Feathers Casino Resort",
+      "city": "Canyonville",
+      "address": "146 Chief Miwaleta Lane, Canyonville, OR 97417",
+      "operator": "Cow Creek Band of Umpqua Tribe of Indians",
+      "website": "https://sevenfeathers.com/",
+      "status": "current"
+    },
+    {
+      "id": "or-wildhorse",
+      "name": "Wildhorse Resort & Casino",
+      "city": "Pendleton",
+      "address": "46510 Wildhorse Blvd, Pendleton, OR 97801",
+      "operator": "Confederated Tribes of the Umatilla Indian Reservation",
+      "website": "https://www.wildhorseresort.com/",
+      "status": "current"
+    },
+    {
+      "id": "or-indian-head",
+      "name": "Indian Head Casino",
+      "city": "Warm Springs",
+      "address": "3236 Hwy 26, Warm Springs, OR 97761",
+      "operator": "Confederated Tribes of the Warm Springs Reservation of Oregon",
+      "website": "https://www.indianheadcasino.com/",
+      "status": "current"
+    },
+    {
+      "id": "or-kla-mo-ya",
+      "name": "Kla-Mo-Ya Casino",
+      "city": "Chiloquin",
+      "operator": "The Klamath Tribes",
+      "website": "https://klamoyacasino.com/",
+      "status": "current-address-coordinate-pending"
+    }
+  ],
+  "explicitHistoricalExclusion": {
+    "name": "Old Camp Casino",
+    "operator": "Burns Paiute Tribe",
+    "city": "Burns",
+    "treatment": "exclude-closed-property",
+    "reason": "Oregon government material states Old Camp Casino closed in late 2012 and no replacement gaming facility has opened."
+  },
+  "nextPhase": "Reconcile exact current address and property coordinates for all nine destinations, confirm Ko-Kwel current official website/domain and Kla-Mo-Ya exact street address, then build the Oregon runtime catalog pass."
+}
