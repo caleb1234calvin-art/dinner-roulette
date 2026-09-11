@@ -6,8 +6,8 @@ _Last updated: September 10, 2026_
 
 - Active app: Dinner Roulette V.3.
 - Repository: `caleb1234calvin-art/dinner-roulette`.
-- Current icon implementation branch: `feature/dinner-icon-pack-1`.
-- Icon branch is based on `legal/third-party-compliance-pass-1`, which is based on `audit/national-casino-pass-1`.
+- Current working branch: `feature/dinner-icon-pack-1`.
+- This branch is layered on `legal/third-party-compliance-pass-1`, which is layered on `audit/national-casino-pass-1`; it therefore contains the casino audit, legal/compliance pass, Dinner icon implementation, and subsequent maintenance work.
 - Compliance PR: #28, based on `audit/national-casino-pass-1`.
 - Restaurant icon work: Issue #29.
 - `main` remains untouched unless Caleb explicitly requests a merge or direct change.
@@ -16,7 +16,16 @@ _Last updated: September 10, 2026_
 
 ## National casino audit continuity
 
-At the start of the legal/compliance pass, the curated casino/nightlife backbone contained 22 completed jurisdictions and 232 explicit curated casino records. Preserve the audit branch/history while compliance and icon work are reviewed separately.
+The national casino audit is active again on the current stacked working branch.
+
+- Completed jurisdiction passes documented in `CASINO_AUDIT.md`: **24**.
+- The original 22-jurisdiction checkpoint contained 232 explicit curated casino records.
+- Mississippi was subsequently completed at 28 physical casino destinations.
+- Arizona is now explicitly documented complete at 26 Class III tribal casino facilities. The Arizona runtime records already existed in `casino-catalog-pass-18.ts` and are wired into `src/lib/nightlife/search.ts`; the audit documentation had simply lagged behind the implementation.
+- California is the current staged large-inventory pass. The California Gambling Control Commission inventory snapshot contains **74 active tribal-casino license records** in `audit/california-tribal-casinos-2026-09-08.json`.
+- California is **not** marked complete yet. Property-specific street-address and coordinate reconciliation remains in progress before the 74-record roster is promoted as a completed runtime jurisdiction.
+- Continue using regulator/government rosters for identity and operator/property sources for current address/name details. Do not promote uncertain records merely to inflate coverage.
+- Curated casino records remain a high-confidence backbone merged with live OSM discovery rather than a replacement for live discovery.
 
 ## Legal/compliance pass
 
@@ -124,15 +133,13 @@ Verified passing gates:
 - Repaired curated Nightlife records that were missing the required `website` field by explicitly recording `website: null` where no known site is present.
 - Restored `.grok/app-env.json` with `VITE_AUTH_ENABLED: "false"`, matching the repository's existing workspace/auth test contract.
 - That app-env repair reduced the legacy script-suite failures from 16 to 12 while preserving a passing TypeScript/build/icon gate.
+- PWA metadata tests were subsequently isolated from Dinner Roulette's real `Pick For Us` workspace identity by using explicit temporary fixtures rather than altering the production identity.
 
 ### Remaining legacy/template test debt
 
-The remaining 12 failures in the full inherited `scripts/**/*.test.mjs` suite are not currently treated as Dinner icon implementation failures. They fall into two known groups:
+The inherited `scripts/**/*.test.mjs` suite still contains Grok/template-specific documentation-contract checks that expect `.grok/skills/og/SKILL.md` and `.grok/skills/og/references/`, which are absent from this repository. Do not fabricate placeholder skill documentation merely to turn those tests green. Either restore authoritative upstream template documents or revise those tests so documentation-contract checks are conditional/self-contained.
 
-1. Grok OG documentation-coupling tests expect `.grok/skills/og/SKILL.md` and `.grok/skills/og/references/`, which are absent from this repository. Do not fabricate placeholder skill documentation merely to turn those tests green. Either restore the authoritative upstream template documents or revise the tests so documentation-contract checks are conditional/self-contained.
-2. Several generic PWA/template tests assume an untouched sample app identity or an empty workspace. Dinner Roulette intentionally has `src/lib/og/site.json` with the product identity `Pick For Us` and a custom OG card, so tests that accidentally read the real workspace can receive Dinner Roulette metadata instead of their sample `Wild Race`, `Hello World`, `Solo`, etc. Repair these tests by isolating them in temporary workspaces/explicit test fixtures rather than changing Dinner Roulette's real product metadata.
-
-The workflow currently reports the inherited full script test suite without allowing those known template-fixture failures to block the branch, while TypeScript, build, and icon validation remain strict. Before final integration, prefer making the active app-focused test gate strict and clearly separating any retained upstream-template compatibility checks.
+The workflow currently reports inherited template-suite debt without allowing it to block the strict TypeScript, build, and icon-validation gates. Before final integration, prefer making the active app-focused test gate strict and clearly separating any retained upstream-template compatibility checks.
 
 ### Dependency/tooling warnings observed
 
