@@ -3,9 +3,9 @@
   "capturedOn": "2026-09-10",
   "status": "reconciliation-in-progress",
   "authority": "California Gambling Control Commission",
-  "authoritySource": "https://www.cgcc.ca.gov/?pageid=licensees&reportid=1002",
-  "notes": "First property-level reconciliation tranche for the staged 74-record California tribal-casino inventory. These records have regulator-backed identity plus property-specific address and plausible coordinate evidence. This file is audit staging only and is not yet wired into the runtime catalog. California remains incomplete until all active records are reconciled and cross-checked.",
-  "records": [
+  "authoritySource": "https://www.cgcc.ca.gov/?pageID=licensees&reportID=1002&sort=full_name",
+  "notes": "Property-level reconciliation for the staged 74-record California tribal-casino inventory. Fully reconciled records have regulator-backed identity plus property-specific address and plausible coordinate evidence. Address-verified records are deliberately not promoted to runtime until coordinates and same-property/alias checks are complete. Review flags preserve ambiguous or conflicting cases rather than forcing them into the catalog.",
+  "fullyReconciledRecords": [
     {
       "license": "TRCS-000078",
       "name": "Agua Caliente Casino Cathedral City",
@@ -96,5 +96,78 @@
       "addressSource": "https://www.cachecreek.com/contact",
       "coordinateSource": "OpenStreetMap-derived casino coordinate"
     }
-  ]
+  ],
+  "addressVerifiedCoordinatePending": [
+    {
+      "license": "TRCS-000014",
+      "name": "Cahuilla Casino",
+      "currentPropertyName": "Cahuilla Casino Hotel",
+      "address": "52702 CA-371, Anza, CA 92539",
+      "website": "https://cahuillacasinohotel.com/",
+      "addressSource": "https://cahuillacasinohotel.com/contact/"
+    },
+    {
+      "license": "TRCS-000033",
+      "name": "Casino Pauma",
+      "address": "777 Pauma Reservation Rd, Pauma Valley, CA 92061",
+      "website": "https://www.casinopauma.com/",
+      "addressSource": "https://www.casinopauma.com/contact/"
+    },
+    {
+      "license": "TRCS-000035",
+      "name": "Chukchansi Gold Resort and Casino",
+      "address": "711 Lucky Lane, Coarsegold, CA 93614",
+      "website": "https://chukchansigold.com/",
+      "addressSource": "https://chukchansigold.com/"
+    },
+    {
+      "license": "TRCS-000046",
+      "name": "Chumash Casino Resort",
+      "address": "3400 East Highway 246, Santa Ynez, CA 93460",
+      "website": "https://chumashcasino.com/",
+      "addressSource": "https://chumashcasino.com/contact-us"
+    },
+    {
+      "license": "TRCS-000019",
+      "name": "Colusa Casino Resort",
+      "address": "3770 Highway 45, Colusa, CA 95932",
+      "website": "https://www.colusacasino.com/",
+      "addressSource": "https://www.colusacasino.com/contact/"
+    },
+    {
+      "license": "TRCS-000020",
+      "name": "Coyote Valley Casino",
+      "address": "77 Coyote Valley Blvd, Redwood Valley, CA 95470",
+      "website": "https://www.coyotevalleycasino.com/",
+      "addressSource": "https://www.coyotevalleycasino.com/contact"
+    }
+  ],
+  "reviewFlags": [
+    {
+      "license": "TRCS-000075",
+      "name": "Casino Morongo",
+      "issue": "Same-campus/identity reconciliation required. CGCC lists Casino Morongo separately from TRCS-000030 Morongo Casino Resort and Spa, while the current Morongo resort site centers the property at 49500 Seminole Dr. Do not collapse the two licenses or duplicate the resort until the active physical-facility relationship is confirmed."
+    },
+    {
+      "license": "TRCS-000017",
+      "name": "Cher-Ae Heights Casino",
+      "issue": "Location conflict. The CGCC roster currently displays Rohnert Park 94928 for this license, while current tribal-gaming directory material identifies the casino property in Trinidad at 27 Scenic Dr, Trinidad, CA 95570. Requires regulator/property confirmation before activation."
+    },
+    {
+      "license": "TRCS-000018",
+      "name": "Chicken Ranch Casino",
+      "issue": "Current operator materials show both the new Chicken Ranch Casino Resort at 9100 People of the Mountain Rd and the original 'OG Casino' still operating. CGCC exposes one staged license record under Chicken Ranch Casino. Confirm whether the license maps to one or both active physical gaming facilities before choosing runtime representation."
+    },
+    {
+      "license": "TRCS-000003",
+      "name": "Desert Rose Casino",
+      "issue": "CGCC confirms active identity in Alturas 96101; California EDD employer data gives 901 County Road 56, Alturas, CA 96101. No sufficiently direct current operator source was located in this pass, so address/coordinate activation remains pending."
+    }
+  ],
+  "progress": {
+    "inventory": 74,
+    "fullyReconciled": 9,
+    "addressVerifiedCoordinatePending": 6,
+    "flaggedForReview": 4
+  }
 }
