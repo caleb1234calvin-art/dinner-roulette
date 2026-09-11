@@ -1,0 +1,76 @@
+{
+  "jurisdiction":"Nevada",
+  "capturedOn":"2026-09-11",
+  "status":"scope-and-address-pass-4-complete",
+  "decisions":[
+    {
+      "name":"Bayshore Inn",
+      "address":"1955 W Casino Dr, Laughlin, NV 89029",
+      "decision":"exclude-curated-destination-scope",
+      "basis":[
+        "Current first-party Bayshore material describes a small casino/bar with 15 video-poker machines.",
+        "Fifteen machines falls below Nevada's 16+ slot threshold that can independently support nonrestricted status, and the property presents primarily as an extended-stay inn rather than a destination casino.",
+        "Dinner Roulette's curated casino backbone therefore excludes this small lodging/bar gaming operation; live discovery can remain supplemental."
+      ]
+    },
+    {
+      "name":"Alamo Casino Sparks Petro",
+      "address":"1950 E Greg St, Sparks, NV 89431",
+      "decision":"include-current-destination",
+      "basis":[
+        "Current first-party Alamo material identifies a dedicated casino at Sparks Petro with 151 slot machines, full-service bar, sportsbook and player club.",
+        "This is materially larger and more casino-specific than ordinary restricted retail/route gaming and meets Dinner Roulette's physical-destination scope."
+      ]
+    },
+    {
+      "name":"Red Drag Casino",
+      "address":"404 S 5th St, Elko, NV",
+      "decision":"retain-current-candidate-ngcb-match-pending",
+      "basis":[
+        "The current 2025-2026 Explore Elko visitor guide lists Red Drag Casino at 404 S 5th St among Elko casinos and gaming destinations.",
+        "Final runtime inclusion still requires active NGCB location identity and coordinate QA."
+      ]
+    },
+    {
+      "name":"Eureka Casino",
+      "city":"Eureka",
+      "decision":"exclude-erroneous-rural-candidate",
+      "basis":[
+        "Current first-party Eureka Casino material identifies Eureka Casino at 595 E Sahara Ave in Las Vegas and Eureka Casino Resort at 275 Mesa Blvd in Mesquite.",
+        "No current evidence establishes a corresponding Eureka Casino destination in the town of Eureka, Nevada.",
+        "The staged rural row is treated as a name/location conflation rather than a physical destination."
+      ]
+    },
+    {
+      "name":"Gold Dust West Winnemucca",
+      "decision":"exclude-erroneous-candidate",
+      "basis":[
+        "Current Gold Dust West first-party properties are Reno, Carson City and Elko.",
+        "Regulatory/first-party searches did not establish a Gold Dust West casino in Winnemucca.",
+        "The Winnemucca candidate is therefore an erroneous location assignment and must not be activated."
+      ]
+    }
+  ],
+  "ruralAddressQa":[
+    {"name":"Stockman's Casino","address":"1560 W Williams Ave, Fallon, NV 89406","status":"current-first-party-verified"},
+    {"name":"Bonanza Casino","address":"855 W Williams Ave, Fallon, NV 89406","status":"current-2026-corroborated"},
+    {"name":"Winnemucca Inn & Casino","address":"741 W Winnemucca Blvd, Winnemucca, NV 89445","status":"current-first-party-verified"},
+    {"name":"Model T Casino","address":"1130 W Winnemucca Blvd, Winnemucca, NV 89445","status":"current-first-party-verified"},
+    {"name":"Winners Inn & Casino","address":"185 W Winnemucca Blvd, Winnemucca, NV 89445","status":"current-first-party-verified"},
+    {"name":"Tonopah Station Hotel & Casino","address":"1137 S Main St / 1137 Erie St, Tonopah, NV 89049","status":"current-first-party-and-2026-government-corroborated","note":"Town and first-party use Main/Erie naming for the same highway corridor; normalize final geocoded street label during coordinate QA."},
+    {"name":"Hotel Nevada & Gambling Hall","address":"501 Aultman St, Ely, NV 89301","status":"current-first-party-verified"},
+    {"name":"Prospector Hotel & Gambling Hall","address":"1501 E Aultman St, Ely, NV 89301","status":"current-first-party-verified"}
+  ],
+  "setChecks":{
+    "namedScopeItemsResolved":4,
+    "erroneousRuralCandidatesRemovedFromFutureRuntime":2,
+    "existingRuralAddressesVerified":8,
+    "remainingNamedScopeItemFromPriorList":0,
+    "result":"PASS"
+  },
+  "notes":[
+    "This pass resolves the four named scope-review items carried forward from ambiguity pass 3 and also corrects the staged Gold Dust West Winnemucca error.",
+    "Red Drag remains a candidate rather than a final runtime include until NGCB matching is complete.",
+    "Coordinate QA remains a separate gate."
+  ]
+}
