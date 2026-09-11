@@ -1,0 +1,42 @@
+{
+  "jurisdiction": "California",
+  "capturedOn": "2026-09-10",
+  "batchSize": 24,
+  "status": "research-pass-complete-reconciliation-pending",
+  "authority": "California Gambling Control Commission",
+  "authoritySource": "https://www.cgcc.ca.gov/?pageID=licensees&reportID=1002&sort=full_name",
+  "notes": "Final research batch for the staged 74-license California inventory. Identity is anchored to CGCC. Current property/operator sites were preferred for street addresses; tribal-industry/government sources were used where direct operator address material was weak. Coordinates remain for the stricter reconciliation pass unless directly supplied by a current property source. This batch completes first-pass property research across the remainder of the CGCC roster but does not itself activate California at runtime.",
+  "records": [
+    {"license":"TRCS-000064","name":"Red Earth Casino","address":"3089 Norm Niver Rd, Thermal, CA 92274","website":"https://redearthcasino.com/","status":"address-verified-coordinate-pending","note":"CGCC city label is Salton Sea Beach; current operator site publishes the physical address as Thermal, CA 92274."},
+    {"license":"TRCS-000013","name":"Red Fox Casino","address":"200 Cahto Drive, Laytonville, CA 95454","website":"https://redfoxcasino.com/","status":"industry-directory-address-verified-coordinate-pending","note":"Address corroborated by California Nations Indian Gaming Association directory; retain for direct operator confirmation during final reconciliation."},
+    {"license":"TRCS-000065","name":"Red Hawk Casino","currentPropertyName":"Red Hawk Resort + Casino","address":"1 Red Hawk Parkway, Placerville, CA 95667","website":"https://www.redhawkcasino.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000072","name":"Redwood Hotel and Casino","currentPropertyName":"Redwood Hotel & Casino","address":"171 Klamath Blvd, Klamath, CA 95548","website":"https://www.redwoodhotelcasino.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000021","name":"River Rock Casino","address":"3250 Highway 128, Geyserville, CA 95441","lat":38.70302,"lon":-122.85791,"website":"https://www.riverrockcasino.com/","status":"fully-reconciled-candidate","note":"Current operator directions page supplies both the street address and GPS coordinates directly."},
+    {"license":"TRCS-000041","name":"Robinson Rancheria Resort, Casino & Bingo","currentPropertyName":"Robinson Rancheria Resort & Casino","address":"1545 State Hwy 20, Nice, CA 95464","website":"https://rrrc.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000032","name":"Rolling Hills Casino","currentPropertyName":"Rolling Hills Casino and Resort","address":"2655 Everett Freeman Way, Corning, CA 96021","website":"https://rollinghillscasino.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000067","name":"Running Creek Casino","address":"635 E Hwy 20, Upper Lake, CA 95485","website":"https://www.runningcreekcasino.com/","status":"industry-directory-address-verified-coordinate-pending","note":"Current operator confirms the Upper Lake property and Highway 20 location; California tribal-health directory provides the street number."},
+    {"license":"TRCS-000047","name":"Sherwood Valley Rancheria Casino","currentPropertyName":"Sherwood Valley Casino","address":"100 Kawi Place, Willits, CA 95490","website":"https://www.svrcasino.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000079","name":"Sky River Casino","address":"1 Sky River Parkway, Elk Grove, CA 95757","website":"https://www.skyriver.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000050","name":"Soboba Casino Resort","address":"22777 Soboba Rd, San Jacinto, CA 92583","website":"https://soboba.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000056","name":"Spotlight 29 Casino","address":"46-200 Harrison Place, Coachella, CA 92236","website":"https://spotlight29.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000052","name":"Sycuan Casino and Resort","currentPropertyName":"Sycuan Casino Resort","address":"5469 Casino Way, El Cajon, CA 92019","website":"https://www.sycuan.com/","status":"address-verified-coordinate-pending","note":"Current operator driving-directions page uses 5469 Casino Way; some industry directories still surface older Dehesa Road addressing."},
+    {"license":"TRCS-000053","name":"Table Mountain Casino Resort","address":"777 Jackpot Lane, Friant, CA 93626","website":"https://tmcasino.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000045","name":"Tachi Palace Hotel and Casino","currentPropertyName":"Tachi Palace Casino Resort","address":"17225 Jersey Avenue, Lemoore, CA 93245","website":"https://www.tachipalace.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000057","name":"Thunder Valley Casino Resort","address":"1200 Athens Avenue, Lincoln, CA 95648","website":"https://www.thundervalleyresort.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000070","name":"Tortoise Rock Casino","address":"73829 Baseline Rd, Twentynine Palms, CA 92277","website":"https://www.tortoiserockcasino.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000028","name":"Twin Pine Casino & Hotel","address":"22223 Highway 29, Middletown, CA 95461","website":"https://www.twinpine.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000044","name":"Valley View Casino & Hotel","address":"16300 Nyemii Pass Road, Valley Center, CA 92082","website":"https://valleyviewcasino.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000058","name":"Viejas Casino and Resort","currentPropertyName":"Viejas Casino & Resort","address":"5000 Willows Road, Alpine, CA 91901","website":"https://viejas.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000011","name":"Wanaaha Casino","address":"2742 North Sierra Highway, Bishop, CA 93514","website":"https://www.wanaaha.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000038","name":"Win-River Casino","currentPropertyName":"Win-River Resort & Casino","address":"2100 Redding Rancheria Rd, Redding, CA 96001","website":"https://winriver.com/","status":"address-verified-coordinate-pending"},
+    {"license":"TRCS-000071","name":"Winnedumah Winn's Casino","status":"identity-verified-property-research-pending","note":"CGCC confirms the license active in Independence 93526, but this pass did not locate sufficiently direct current operator/property evidence to accept a street address."},
+    {"license":"TRCS-000043","name":"Yaamava' Resort and Casino at San Manuel","currentPropertyName":"Yaamava' Resort & Casino at San Manuel","address":"777 San Manuel Blvd, Highland, CA 92346","website":"https://www.yaamava.com/","status":"address-verified-coordinate-pending"}
+  ],
+  "summary": {
+    "processed": 24,
+    "addressVerifiedOrStronglyCorroborated": 23,
+    "directOperatorCoordinateCandidate": 1,
+    "needsPropertyResearch": 1,
+    "runtimePromoted": 0
+  }
+}
