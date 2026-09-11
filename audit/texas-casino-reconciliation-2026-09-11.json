@@ -1,0 +1,98 @@
+{
+  "jurisdiction": "Texas",
+  "capturedOn": "2026-09-11",
+  "status": "current-destination-roster-reconciled-runtime-qa-pending",
+  "scope": "Dinner Roulette physical casino destinations; travel-center gaming and duplicate regulator rows are excluded unless they are separately routable casino destinations",
+  "primaryAuthority": "National Indian Gaming Commission",
+  "authoritySource": "https://www.nigc.gov/wp-content/uploads/2025/12/12112025TribesByStateTribeList.pdf",
+  "currentDestinationCount": 4,
+  "destinations": [
+    {
+      "name": "Kickapoo Lucky Eagle Casino Hotel",
+      "tribe": "Kickapoo Traditional Tribe of Texas",
+      "location": "Eagle Pass, Texas",
+      "address": "2212 Rosita Valley Rd, Eagle Pass, TX 78852",
+      "gamingClass": "Class II",
+      "website": "https://luckyeagletexas.com/",
+      "status": "retain",
+      "evidence": [
+        "https://www.nigc.gov/wp-content/uploads/2025/12/12112025TribesByStateTribeList.pdf",
+        "https://luckyeagletexas.com/2026/07/kickapoo-lucky-eagle-casino-hotel-breaks-ground-on-new-hotel-tower-expansion/"
+      ],
+      "note": "Current first-party July 2026 expansion announcement confirms the Eagle Pass casino hotel remains active."
+    },
+    {
+      "name": "Naskila Casino",
+      "tribe": "Alabama-Coushatta Tribe of Texas",
+      "location": "Livingston, Texas",
+      "address": "540 State Park Road 56, Livingston, TX 77351",
+      "gamingClass": "Class II",
+      "website": "https://www.naskila.com/",
+      "status": "retain",
+      "evidence": [
+        "https://www.nigc.gov/wp-content/uploads/2025/12/12112025TribesByStateTribeList.pdf",
+        "https://www.naskila.com/",
+        "https://www.naskila.com/contact/"
+      ],
+      "note": "Current first-party site identifies a 30,000-square-foot electronic gaming facility at the Livingston property. NIGC's December 2025 report contains duplicate Naskila Gaming rows; those are not treated as multiple physical destinations."
+    },
+    {
+      "name": "Naskila Casino Leggett",
+      "tribe": "Alabama-Coushatta Tribe of Texas",
+      "location": "Leggett / Livingston area, Texas",
+      "address": "10314 US 59 N, Livingston, TX 77351",
+      "gamingClass": "Class II electronic gaming",
+      "website": "https://www.naskila.com/leggett/",
+      "status": "retain-current-temporary-destination",
+      "evidence": [
+        "https://www.naskila.com/leggett/",
+        "https://www.naskila.com/press/naskila-casino-and-alabama-coushatta-tribe-of-texas-celebrate-the-grand-opening-of-naskila-casino-leggett/"
+      ],
+      "note": "Opened August 25, 2026 as a new 24-hour temporary casino at the future resort site. This post-dates the December 2025 NIGC location roster, so current first-party evidence controls the present physical-destination count. Keep separate from the original Livingston Naskila casino while both are operating."
+    },
+    {
+      "name": "Speaking Rock Entertainment Center",
+      "tribe": "Ysleta del Sur Pueblo",
+      "location": "El Paso, Texas",
+      "address": "122 S Old Pueblo Rd, El Paso, TX 79907",
+      "gamingClass": "Class II / tribal gaming operation",
+      "website": "https://www.speakingrock.com/",
+      "status": "retain",
+      "evidence": [
+        "https://www.nigc.gov/wp-content/uploads/2025/12/12112025TribesByStateTribeList.pdf",
+        "https://www.speakingrock.com/",
+        "https://www.speakingrock.com/contact-6"
+      ],
+      "note": "NIGC's December 2025 report repeats Speaking Rock rows, but the current first-party site presents one 24/7 physical entertainment/gaming destination with rewards/winnings language and responsible-gaming disclosure. Current site uses 122 S Old Pueblo Rd while the NIGC tribe report lists 119 S Old Pueblo Rd; use the current first-party public entrance/contact address for Dinner Roulette pending coordinate QA."
+    }
+  ],
+  "excludedOrCollapsed": [
+    {
+      "name": "Ischoopa Travel Center",
+      "reason": "Travel-center gaming amenity rather than a separately promoted casino destination under Dinner Roulette scope."
+    },
+    {
+      "name": "Duplicate Naskila Gaming regulator rows",
+      "reason": "NIGC roster duplication does not represent multiple physical casinos at the same Livingston address."
+    },
+    {
+      "name": "Duplicate Speaking Rock regulator rows",
+      "reason": "NIGC roster duplication does not represent multiple physical Speaking Rock destinations."
+    }
+  ],
+  "currentAccounting": {
+    "federallyListedTexasGamingTribes": 3,
+    "retainedCurrentPhysicalCasinoDestinations": 4,
+    "postRoster2026Additions": 1,
+    "postRosterAddition": "Naskila Casino Leggett",
+    "unexplainedCurrentDestinationRows": 0
+  },
+  "hardRules": [
+    "Do not duplicate a physical venue because the federal roster contains repeated rows.",
+    "Exclude travel-center gaming by default when it is not a separately promoted casino destination.",
+    "Treat Naskila Casino Leggett as a distinct current destination while the original Livingston facility also remains open.",
+    "Use current first-party address evidence when a newer public-facing address conflicts slightly with an older regulator roster, while retaining the regulator address in audit provenance.",
+    "Do not activate runtime records until property-specific coordinates and stable IDs pass duplicate QA."
+  ],
+  "nextPhase": "Perform coordinate QA for the four retained destinations, then generate the next available casino catalog pass and update the integration manifest to Texas complete only after runtime activation validates."
+}
