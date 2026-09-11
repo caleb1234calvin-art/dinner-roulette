@@ -1,0 +1,101 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-11",
+  "batch": "NV-02",
+  "segment": "Laughlin",
+  "status": "qa-cleared",
+  "primaryAuthority": "Nevada Gaming Control Board",
+  "tourismCrosscheck": "Las Vegas Convention and Visitors Authority / Visit Laughlin",
+  "coordinateMethod": "property-specific OpenStreetMap/Mapcarta or equivalent geocoded property source",
+  "recordCount": 8,
+  "records": [
+    {
+      "id": "casino-catalog-nv-aquarius-laughlin",
+      "name": "Aquarius Casino Resort",
+      "address": "1900 S Casino Dr, Laughlin, NV 89029",
+      "lat": 35.16368,
+      "lon": -114.57216,
+      "identityStatus": "current-tourism-corroborated",
+      "coordinateSource": "Mapcarta/OpenStreetMap property geometry"
+    },
+    {
+      "id": "casino-catalog-nv-riverside-laughlin",
+      "name": "Don Laughlin's Riverside Resort Hotel & Casino",
+      "address": "1650 S Casino Dr, Laughlin, NV 89029",
+      "lat": 35.16742,
+      "lon": -114.57152,
+      "identityStatus": "current-tourism-corroborated",
+      "coordinateSource": "property geocode cross-check"
+    },
+    {
+      "id": "casino-catalog-nv-edgewater-laughlin",
+      "name": "Edgewater Casino Resort",
+      "address": "2020 S Casino Dr, Laughlin, NV 89029",
+      "lat": 35.16049,
+      "lon": -114.57195,
+      "identityStatus": "current-tourism-corroborated",
+      "coordinateSource": "Mapcarta/OpenStreetMap casino geometry"
+    },
+    {
+      "id": "casino-catalog-nv-golden-nugget-laughlin",
+      "name": "Golden Nugget Laughlin",
+      "address": "2300 S Casino Dr, Laughlin, NV 89029",
+      "lat": 35.15411,
+      "lon": -114.57335,
+      "identityStatus": "current-tourism-corroborated",
+      "coordinateSource": "Mapcarta/OpenStreetMap property geometry"
+    },
+    {
+      "id": "casino-catalog-nv-harrahs-laughlin",
+      "name": "Harrah's Laughlin Beach Resort & Casino",
+      "address": "2900 S Casino Dr, Laughlin, NV 89029",
+      "lat": 35.14479,
+      "lon": -114.57676,
+      "identityStatus": "current-tourism-corroborated",
+      "coordinateSource": "property geocode cross-check"
+    },
+    {
+      "id": "casino-catalog-nv-laughlin-river-lodge",
+      "name": "Laughlin River Lodge Hotel & Casino",
+      "address": "2700 S Casino Dr, Laughlin, NV 89029",
+      "lat": 35.14971,
+      "lon": -114.57596,
+      "identityStatus": "current-tourism-corroborated",
+      "coordinateSource": "OpenStreetMap property-complex geometry"
+    },
+    {
+      "id": "casino-catalog-nv-new-pioneer",
+      "name": "The New Pioneer",
+      "address": "2200 S Casino Dr, Laughlin, NV 89029",
+      "lat": 35.15547,
+      "lon": -114.57272,
+      "identityStatus": "current-tourism-corroborated",
+      "aliases": ["Pioneer Hotel & Gambling Hall"],
+      "coordinateSource": "Mapcarta/OpenStreetMap casino geometry"
+    },
+    {
+      "id": "casino-catalog-nv-tropicana-laughlin",
+      "name": "Tropicana Laughlin",
+      "address": "2121 S Casino Dr, Laughlin, NV 89029",
+      "lat": 35.15786,
+      "lon": -114.57567,
+      "identityStatus": "current-tourism-corroborated",
+      "coordinateSource": "Mapcarta/OpenStreetMap casino geometry"
+    }
+  ],
+  "qa": {
+    "currentPhysicalOperationEvidence": 8,
+    "normalizedAddresses": 8,
+    "propertySpecificCoordinates": 8,
+    "stableIds": 8,
+    "duplicateIds": 0,
+    "knownAliasCollisions": 0,
+    "result": "PASS_FOR_NV02_SEGMENT"
+  },
+  "notes": [
+    "Visit Laughlin's current resort/casino directory continues to identify these eight major Laughlin casino destinations.",
+    "Bayshore Inn remains excluded from the curated destination-casino backbone and is not part of NV-02.",
+    "The New Pioneer retains Pioneer Hotel & Gambling Hall as an alias for dedupe protection.",
+    "This artifact clears only the Laughlin segment; NV-02 is not runtime-ready until the remaining selected records clear the same gate."
+  ]
+}
