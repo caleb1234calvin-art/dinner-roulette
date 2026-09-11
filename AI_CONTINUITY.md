@@ -42,28 +42,31 @@ Colorado Division of Gaming accounting is corrected to 33 commercial regulator l
 
 `audit/texas-casino-reconciliation-2026-09-11.json` resolves current Texas scope to four physical tribal gaming destinations pending coordinate/stable-ID QA: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded as travel-center gaming. Texas becomes complete only after runtime activation and validation.
 
-## Oklahoma — 54 address/identity verified; 16 coordinate verified
+## Oklahoma — 54 address/identity verified; 20 coordinate verified
 
-Discovery/reconciliation artifacts include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, runtime QA passes 1–2, and coordinate QA passes **1–2**.
+Discovery/reconciliation artifacts include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, runtime QA passes 1–2, and coordinate QA passes **1–3**.
 
 The Oklahoma name/scope candidate universe is **77**. Current identity, destination scope, normalized street address and provisional stable Dinner Roulette IDs are verified for **54 properties**: Chickasaw 17, Choctaw 8, Cherokee/CNE 10, Muscogee 10, Osage 7 and Citizen Potawatomi 2.
 
-**Property-specific coordinates are now verified for 16 of those 54.** Coordinate QA Pass 1 established 9: WinStar, Riverwind, Newcastle, Choctaw Durant, Choctaw Pocola, Hard Rock Tulsa, Cherokee West Siloam Springs, FireLake and Grand Casino. Coordinate QA Pass 2 added 7: Choctaw Grant, Choctaw McAlester, Choctaw Broken Bow, Choctaw Stringtown, Cherokee Roland, Cherokee Sallisaw and Cherokee Tahlequah.
+**Property-specific coordinates are now verified for 20 of those 54.** Pass 1 established 9: WinStar, Riverwind, Newcastle, Choctaw Durant, Choctaw Pocola, Hard Rock Tulsa, Cherokee West Siloam Springs, FireLake and Grand Casino. Pass 2 added 7: Choctaw Grant, Choctaw McAlester, Choctaw Broken Bow, Choctaw Stringtown, Cherokee Roland, Cherokee Sallisaw and Cherokee Tahlequah. Pass 3 added **Cherokee Grove, Cherokee Ramona, Cherokee Will Rogers Downs and Choctaw Idabel**.
 
-Coordinate evidence is property-level geometry/location evidence rather than city centroids. Runtime activation remains withheld until duplicate/alias distance QA against passes 1–27 is complete.
+Coordinate evidence must be property-specific rather than city centroids. Runtime activation remains withheld until duplicate/alias distance QA against passes 1–27 is complete.
 
 Important coordinate/separation decisions:
 
-- Riverwind uses current first-party address `1544 State Highway 9, Norman, OK 73072`; the earlier provisional ZIP 73093 is superseded.
+- Riverwind uses current first-party address `1544 State Highway 9, Norman, OK 73072`; earlier provisional ZIP 73093 is superseded.
 - Newcastle Casino is distinct from Newcastle Travel Gaming; only Newcastle Casino belongs in the destination batch.
 - Choctaw Pocola resort is distinct from nearby Choctaw Casino Too-Pocola travel-plaza gaming.
 - Choctaw Grant casino is distinct from nearby Choctaw Travel Plaza Grant.
 - Choctaw Stringtown casino is distinct from its nearby travel-plaza operation.
-- Cherokee Roland casino footprint is distinct from its adjacent hotel footprint and nearby Cherokee Travel Plaza; use the casino geometry for Dinner Roulette.
+- Cherokee Roland casino footprint is distinct from its adjacent hotel footprint and nearby Cherokee Travel Plaza; use the casino geometry.
+- Cherokee Will Rogers Downs uses the racetrack/gaming property coordinate; the casino is co-located at the same first-party address.
 - Lake Eufaula Casino Hotel at 1045 Birkes Rd remains the current Muscogee successor property; never activate the old 806 Forest Ave predecessor simultaneously.
 - Suite Shots Jenks remains staged outside the conventional casino pool.
 
-Next action: continue coordinate QA through Choctaw Hochatown/Idabel, remaining Cherokee properties, Chickasaw secondary casinos and strongest Muscogee/Osage destinations. Begin duplicate-distance checks for all 16 coordinate-verified records against existing casino catalog passes in parallel. The first Oklahoma runtime pass should contain only records clearing every gate; do not force the count.
+**Held rather than guessed:** Choctaw Hochatown, Cherokee Fort Gibson and Cherokee South Coffeyville still have verified current addresses but were not promoted in Coordinate Pass 3 because sufficiently direct property-coordinate evidence was not found in that sweep. Continue looking rather than substituting nearby POI or town coordinates.
+
+Initial repository exact-name collision searches found no existing default-branch hit for Cherokee Casino Grove or Choctaw Casino-Idabel, but this is not the final duplicate gate. Next action is to continue coordinate QA through the held properties and Chickasaw/Muscogee/Osage destinations while performing branch-aware same-ID/name and sub-0.35-mile distance QA across the 20 coordinate-verified records. The first Oklahoma runtime pass should contain only records clearing every gate; do not force the count.
 
 ## Legal/compliance continuity
 
