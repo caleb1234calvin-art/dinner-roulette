@@ -1,0 +1,155 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "major-operator-reconciliation-pass-3-expanded",
+  "scope": "Current physical casino destinations supported by current first-party operator evidence, with travel-plaza-only gaming and obsolete predecessor properties excluded or staged.",
+  "clusters": [
+    {
+      "operator": "Comanche Nation Entertainment",
+      "status": "name-scope-reconciled",
+      "retainedCurrentDestinationCandidates": [
+        "Comanche Red River Hotel Casino",
+        "Comanche Nation Casino",
+        "Comanche Spur Casino",
+        "Comanche Star Casino",
+        "Comanche War Pony Casino",
+        "Comanche Cache Casino"
+      ],
+      "retainedCount": 6,
+      "evidence": [
+        "https://comanchenationentertainment.com/index.php/about",
+        "https://comanchenationcasino.com/"
+      ],
+      "note": "Current Comanche Nation Entertainment material explicitly identifies six gaming establishments and separately distinguishes travel plazas and smoke shops. All six are retained as current casino candidates."
+    },
+    {
+      "operator": "Quapaw Nation",
+      "status": "name-scope-reconciled",
+      "retainedCurrentDestinationCandidates": [
+        "Downstream Casino Resort",
+        "Quapaw Casino"
+      ],
+      "retainedCount": 2,
+      "evidence": [
+        "https://downstreamcasino.com/",
+        "https://quapawcasino.com/"
+      ],
+      "note": "Both current first-party properties are active separately routable casino destinations."
+    },
+    {
+      "operator": "Otoe-Missouria Tribe / 7 Clans Casinos",
+      "status": "name-scope-reconciled",
+      "retainedCurrentDestinationCandidates": [
+        "7 Clans First Council Casino Hotel",
+        "7 Clans Paradise Casino",
+        "7 Clans Perry Casino",
+        "7 Clans Chilocco Gasino",
+        "7 Clans Red Rock Gasino"
+      ],
+      "retainedCount": 5,
+      "evidence": [
+        "https://www.omtribe.org/who-we-are/enterprises/gaming/",
+        "https://www.omtribe.org/who-we-are/enterprises/gaming/casino-listing/",
+        "https://sevenclans.com/about/"
+      ],
+      "note": "The tribe currently describes five gaming properties. Chilocco and Red Rock are smaller 'Gasino' properties that combine electronic gaming with service-station functions, but the tribe explicitly identifies them as casino gaming properties. Keep them in the candidate set pending final Dinner Roulette destination-scope QA rather than silently excluding them as generic travel plazas."
+    },
+    {
+      "operator": "Shawnee Tribe / Golden Mesa",
+      "status": "name-scope-reconciled",
+      "retainedCurrentDestinationCandidates": [
+        "Golden Mesa Casino & Hotel"
+      ],
+      "retainedCount": 1,
+      "evidence": [
+        "https://goldenmesa.com/"
+      ],
+      "note": "Current first-party 2026 site confirms Golden Mesa as an active Guymon casino hotel destination with 1,100+ electronic games, table games, hotel and dining."
+    },
+    {
+      "operator": "Iowa Tribe of Oklahoma / Caesars Entertainment",
+      "status": "successor-property-reconciled",
+      "retainedCurrentDestinationCandidates": [
+        "Harrah's Oklahoma"
+      ],
+      "retainedCount": 1,
+      "excludedHistoricalPredecessor": [
+        "Ioway Casino - closed March 2026 and replaced by Harrah's Oklahoma"
+      ],
+      "evidence": [
+        "https://newsroom.caesars.com/press-releases/press-release-details/2026/Harrahs-Oklahoma-Officially-Opens-in-Chandler/default.aspx"
+      ],
+      "note": "Harrah's Oklahoma officially opened April 9, 2026 in Chandler as the current Iowa Tribe/Caesars destination. Do not carry forward the closed Ioway Casino as a second active destination."
+    },
+    {
+      "operator": "Seminole Nation of Oklahoma",
+      "status": "name-scope-reconciled",
+      "retainedCurrentDestinationCandidates": [
+        "Seminole Nation Casino I-40 Exit 200",
+        "Seminole Nation Casino Konawa",
+        "Seminole Nation Casino Wewoka"
+      ],
+      "retainedCount": 3,
+      "evidence": [
+        "https://www.seminolenationcasinos.com/casinos/",
+        "https://www.sngaok.com/objective"
+      ],
+      "note": "Current operator and tribal gaming-agency pages independently identify exactly three active Seminole Nation casino properties: I-40 Exit 200, Konawa and Wewoka."
+    },
+    {
+      "operator": "Tonkawa Tribe of Oklahoma",
+      "status": "name-scope-reconciled",
+      "retainedCurrentDestinationCandidates": [
+        "Tonkawa Hotel & Casino",
+        "Native Lights Casino"
+      ],
+      "retainedCount": 2,
+      "evidence": [
+        "https://tonkawacasinos.com/",
+        "https://tonkawacasinos.com/about/"
+      ],
+      "note": "Current first-party Tonkawa Enterprises site identifies exactly two casino destinations and separately identifies the Tonkawa Travel Plaza as a gas/convenience property."
+    },
+    {
+      "operator": "Sac and Fox Nation of Oklahoma",
+      "status": "name-scope-reconciled",
+      "retainedCurrentDestinationCandidates": [
+        "The Black Hawk Casino",
+        "Sac & Fox Nation Casino"
+      ],
+      "retainedCount": 2,
+      "evidence": [
+        "https://theblackhawkcasino.com/",
+        "https://snfcasino.com/",
+        "https://www.nigc.gov/wp-content/uploads/2025/12/12112025TribesByStateTribeList.pdf"
+      ],
+      "note": "Current first-party sites confirm separate active Shawnee and Stroud casino destinations."
+    },
+    {
+      "operator": "Thlopthlocco Tribal Town",
+      "status": "name-scope-reconciled",
+      "retainedCurrentDestinationCandidates": [
+        "Golden Pony Casino"
+      ],
+      "retainedCount": 1,
+      "evidence": [
+        "https://goldenponycasino.com/"
+      ],
+      "note": "Current 2026 first-party site confirms the Okemah property as an active casino destination."
+    }
+  ],
+  "passAccounting": {
+    "newNamedCandidatesThisPass": 23,
+    "previousCleanNamedCandidates": 54,
+    "cumulativeNamedCasinoCandidates": 77,
+    "runtimeReadyCount": 0,
+    "reasonRuntimeReadyStillZero": "The name/scope universe is now broad enough, but property-specific address, coordinate, website, stable-ID and duplicate/alias QA is still required before runtime activation."
+  },
+  "importantCurrentTransitions": [
+    "Harrah's Oklahoma replaces the closed Ioway Casino in Chandler and must be treated as the current property identity.",
+    "Tonkawa Travel Plaza is not a casino destination merely because it belongs to the same enterprise as the two Tonkawa casinos.",
+    "Comanche travel plazas and smoke shops are separate from the six named gaming establishments.",
+    "7 Clans Chilocco and Red Rock Gasinos are smaller hybrid properties and need final destination-scope confirmation during property QA rather than automatic exclusion."
+  ],
+  "nextPhase": "Begin Oklahoma property-level runtime QA on the 77-candidate pool. Prioritize the largest, clearest destination casinos first and build a 50-record runtime batch only from records with verified address, property coordinates, website, stable ID and duplicate/alias clearance. Continue remaining operator discovery in parallel."
+}
