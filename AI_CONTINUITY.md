@@ -1,167 +1,290 @@
 # Dinner Roulette — AI Continuity
 
-_Last updated: September 10, 2026_
+_Last updated: September 11, 2026_
 
 ## Project state
 
 - Active app: Dinner Roulette V.3.
 - Repository: `caleb1234calvin-art/dinner-roulette`.
-- Current compliance work: `legal/third-party-compliance-pass-1`.
-- Compliance PR: #28, based on `audit/national-casino-pass-1`.
-- Restaurant icon generation: Issue #29.
+- Current compliance work: `legal/third-party-compliance-pass-1`; PR #28 is the review surface and is based on `audit/national-casino-pass-1`.
+- Restaurant icon replacement is tracked as Issue #29.
+- Startup-ident implementation branch: `brand/startup-ident-pass-1`.
+- Startup-ident preview PR #30 is DRAFT ONLY. Do not merge unless Caleb explicitly requests it.
 - `main` remains untouched unless Caleb explicitly requests a merge or direct change.
-- ChatGPT is the only AI authorized to directly modify this repository unless Caleb explicitly asks another assistant to update a named file. Grok/SuperGrok may generate artwork and, when Caleb requests it, update this continuity file. Grok does not merge branches or ship icon assets to `main` without an explicit request.
-- Dinner Roulette and the Jasper County audit are interconnected projects. Audit data, methods, infrastructure, and discoveries may feed Dinner Roulette.
+- ChatGPT is the only AI authorized to directly modify this repository unless Caleb explicitly asks another assistant to update a named file. Grok/SuperGrok may generate artwork/video and perform creative work from handoff briefs, but it is not a repository operator.
+- Dinner Roulette and the Jasper County audit are interconnected projects; audit data, methods, infrastructure, and discoveries may feed Dinner Roulette.
 
 ## National casino audit continuity
 
-At the start of this legal/compliance pass, the curated casino/nightlife backbone contained 22 completed jurisdictions and 232 explicit curated casino records. Preserve the audit branch/history while compliance work is reviewed separately.
+At the start of the legal/compliance pass, the curated casino/nightlife backbone contained 22 completed jurisdictions and 232 explicit curated casino records. Preserve the audit branch/history while compliance work is reviewed separately.
 
 ## Legal/compliance pass
 
-The goal is risk reduction while preserving Dinner Roulette's fundamental product structure. Do not describe the app as guaranteed legally compliant; legal conclusions remain attorney territory.
+Goal: reduce avoidable legal/brand risk while preserving Dinner Roulette's product structure. Do not describe the app as guaranteed legally compliant; legal conclusions remain attorney territory.
 
-Current approach:
+- Present Dinner Roulette as an independent discovery/decision tool.
+- Third-party names identify destinations/services only; do not imply affiliation, sponsorship, endorsement, or partnership.
+- Changing restaurant/venue information such as hours, prices, ratings, admission, and availability should be treated as information to verify rather than guaranteed facts.
+- Nightlife/casino functionality is discovery/trip planning only; Dinner Roulette does not accept wagers, provide gambling, sell alcohol, or guarantee admission.
+- Location, preferences, favorites, exclusions, and history disclosures must match actual behavior.
+- Central `LEGAL.md` exists and legal/privacy/third-party information is surfaced in Settings.
 
-- Dinner Roulette is presented as an independent discovery/decision tool.
-- Third-party names are used only to identify destinations/services, not to imply affiliation, sponsorship, endorsement, or partnership.
-- External links are labeled as third-party destinations and use safe external-link attributes.
-- Restaurant/venue hours, prices, ratings, admission, availability, and similar changing information should be presented as information to verify rather than guaranteed facts.
-- Nightlife/casino functionality is discovery and trip planning only. Dinner Roulette does not accept wagers, provide gambling, sell alcohol, or guarantee admission.
-- Location, preferences, favorites, exclusions, and history disclosures must match actual app behavior.
-- A central `LEGAL.md` notice exists and legal/privacy/third-party information is surfaced inside Settings.
+### Rideshare
 
-## Rideshare integration decision
+- Neutral Dinner Roulette visual treatment; do not copy Uber/Lyft logos or trade dress.
+- Keep `Drive sober` framing.
+- Uber destination-aware launch may pass the selected destination; Dinner Roulette does not request, price, book, or guarantee the ride.
+- Lyft uses the conservative public launch rather than undocumented destination parameters.
+- Make clear that services are independent third parties and availability/pricing vary.
 
-Rideshare shortcuts are safety/convenience links to independent services, not transportation supplied by Dinner Roulette.
+### Delivery
 
-- Keep the neutral Dinner Roulette visual treatment; do not copy Uber/Lyft logos or trade dress.
-- Keep the visible `Drive sober` safety framing.
-- Uber: destination-aware `m.uber.com` launch is retained because Uber provides developer support for destination-aware ride deep links. Dinner Roulette only passes the selected destination; it does not request, price, book, or guarantee the ride.
-- Lyft: use the conservative public `ride.lyft.com` launch rather than relying on undocumented destination query parameters. The user can finish destination selection inside Lyft.
-- Rideshare UI must say the services are independent third parties and that availability/pricing vary.
-- If a future official Lyft/developer integration is adopted, verify its current terms/documentation before restoring destination-aware behavior.
-
-## Delivery integration decision
-
-Delivery shortcuts are intentionally shallow launch links.
-
-- DoorDash, Grubhub, and Uber Eats buttons open the independent service home experience.
-- The user is instructed to search for the selected restaurant after opening the service.
-- Dinner Roulette must not claim that a selected restaurant is available on any delivery marketplace unless availability comes from an authorized/current integration.
-- Do not deep-link to marketplace merchant/order pages unless the provider's current terms or documented developer program clearly support that implementation.
+- DoorDash, Grubhub, and Uber Eats shortcuts are shallow launch links.
+- User searches for the selected restaurant after opening the independent service.
+- Do not claim marketplace availability without an authorized/current integration.
 - Do not scrape/copy marketplace menus, prices, fees, availability, ratings, photos, or other service content.
-- Dinner Roulette does not place/process delivery orders, set marketplace prices/fees, or guarantee delivery availability.
-- Keep service references text-only/neutral unless future brand guidelines and permission clearly support branded assets.
+- Keep references text-only/neutral unless current brand rules/permission support branded assets.
 
-## Restaurant icon replacement plan
+## Restaurant icon replacement — Issue #29
 
-Replace third-party restaurant logos/brand artwork with a Dinner Roulette-owned generic restaurant icon system while keeping factual restaurant names intact.
+Replace third-party restaurant logos/brand artwork with a Dinner Roulette-owned generic icon system while keeping factual restaurant names intact.
 
-Tracked as Issue #29. Artwork generation is separate from PR #28 so icons can be produced without mixing legal-code review and image work.
+Locked visual language: dark glossy rounded-square tile; stylized toy/clay 3D object; no photoreal food photography, text, logos, mascots, packaging, or brand marks. Dinner-tab rim combines teal/cyan with burnt orange/terracotta so one pack works across light/dark Dinner themes. Date Night and Nightlife icon systems remain separate.
 
-### Locked visual language (Issue #29, Sept 10 2026)
+Generated/kept categories: burger, pizza, Mexican taco, Chinese dumpling steamer, sushi, Italian pasta, steakhouse, BBQ ribs, chicken drumstick, cafe coffee/croissant, dessert cake, seafood fish/shrimp, buffet cloche, diner pancakes, and neutral plate/fork/knife fallback. Assets are not in `main` and are not wired into the app yet.
 
-- Same family as Date Night / Nightlife icons: dark glossy rounded-square tile, stylized toy/clay 3D object, no photoreal food photography, no text in the artwork, no logos, no mascots, no packaging, no brand marks.
-- Dinner-tab palette is not Date Night magenta/lavender and not Nightlife-only teal.
-- Dinner-tab rim uses both Dinner themes at once: teal/cyan (light Dinner sliders and Pick button) plus burnt orange/terracotta (dark Dinner sliders and Pick button). Object colors may use natural cuisine colors.
-- One dual-rim pack is intended to sit on both Dinner light and Dinner dark themes.
-- Caleb approved keeping the current generated set for now. Assets are not in `main` and are not wired into the app yet.
+Suggested eventual location: `public/dinner-icons/`. Reuse the existing restaurant visual/photo-key mapping architecture and map each restaurant to a generic cuisine icon or fallback. Do not imitate restaurant trademarks. Do not merge icon work merely because the artwork exists.
 
-### Generated Dinner category pack (kept, not shipped)
+## Future food-truck discovery — ROADMAP
 
-Minimum Issue #29 categories have generated originals:
+Caleb wants Dinner Roulette to support **food trucks in the future**. This is a planned capability, not a current implementation requirement and not authorization to begin coding it without a dedicated pass.
 
-- Burger — generic cheeseburger
-- Pizza — generic pepperoni slice
-- Mexican — generic hard-shell taco
-- Chinese — dumpling steamer with three buns
-- Japanese / sushi — nigiri plus a small roll
-- Italian — pasta nest with tomato and basil
-- Steakhouse — stylized grilled steak
-- BBQ — stylized ribs
-- Chicken — fried drumstick
-- Cafe / bakery — coffee cup and croissant
-- Dessert — layered cake slice with cherry
-- Seafood — stylized fish and shrimp
-- Buffet — cloche on stacked plates
-- Diner / American — pancake stack with butter
-- Neutral fallback — plate with crossed fork and knife
+Food trucks should be treated as a **mobile-venue subtype**, not assumed to behave like fixed-location restaurants. Existing live discovery is a useful foundation, but a truck's existence is different from knowing where it is serving right now.
 
-Notes for the next session:
+Future discovery should preserve a freshness/confidence distinction such as:
 
-- Chicken and diner pancakes are slightly more realistic than the rest of the clay family; keep unless Caleb asks for a restyle.
-- Mexican taco fillings are more toy-colored than the others; keep unless a more food-literal taco is requested.
-- Additional catalog categories can be added later using the same tile, clay treatment, and teal/orange rim.
-- Do not imitate restaurant trademarks. Business names stay UI text.
+1. **Live / serving now** — strong current evidence places the truck at a specific serving location.
+2. **Scheduled today** — a current schedule indicates where it is expected to serve, without pretending this is live GPS confirmation.
+3. **Discovered nearby** — the truck/business is known and relevant to the area, but its current serving location is not confidently established.
 
-### Still to do before Issue #29 is complete
+Do not roulette a user to a stale or merely registered business location as though the truck is confirmed there. Where practical, expose the current-information source or directions only when location confidence is sufficient. Any future third-party food-truck schedule/location source must receive the same legal/compliance review as other integrations: use authorized/current data or provider-supported links, avoid scraping or implied partnerships, and distinguish scheduled information from verified live presence.
 
-1. Store approved assets in the repo with provenance/documentation. Suggested folder: `public/dinner-icons/` with filenames matching category keys (`burger.png`, `pizza.png`, `mexican.png`, `chinese.png`, `sushi.png`, `italian.png`, `steakhouse.png`, `bbq.png`, `chicken.png`, `cafe.png`, `dessert.png`, `seafood.png`, `buffet.png`, `diner.png`, `fallback.png`). Confirm filenames against the existing photo-key map before writing files.
-2. Reuse the existing restaurant visual/photo-key mapping architecture.
-3. Map each restaurant to a generic cuisine icon or the neutral fallback.
-4. Remove legacy third-party logo assets from active presentation once coverage is sufficient.
-5. Do not merge icon files into `main` until the compliance and casino-audit branches are reconciled and Caleb asks for the ship.
-6. Date Night and Nightlife icon systems stay separate; they already have their own palettes (magenta/lavender year-round, red/cyan Halloween, teal Nightlife).
+# CAUSTIC RELAY — ACTIVE MAKER/PUBLISHER BRAND CHECKPOINT
 
-## Caleb maker's mark / startup ident — APPROVED CHECKPOINT
+## Brand decision — September 11, 2026
 
-This is Caleb's reusable personal brand identity across apps and other things he creates. It is separate from Dinner Roulette's restaurant-category icon system.
+The current working parent/maker/publisher identity is **Caustic Relay**.
 
-### Canonical creature
+Brand evolution during clearance/creative exploration:
 
-The mark is a glossy black detailed black-mamba/snake + scorpion hybrid: central snake head and serpentine scaled body, symmetrical armored scorpion-like arms/pincers, and a segmented tail ending in a large claw/pincer. The still composition is vertical and heraldic. Associated motto: **Patiens sed mordax** (“patient, but biting”). The pincers are part of the snake/scorpion hybrid identity, not lobster branding.
+`Venom Systems` → `Corrosive Systems` → **`Caustic Relay`**
+
+Venom Systems was abandoned as the preferred working name after preliminary trademark screening found material software/SaaS overlap around existing VENOM marks, including software-related uses and a snake-shaped-V stylized mark. `V3NOM SYST3MS` was considered only as a visual dodge and rejected as strategically weak; leetspeak does not reliably eliminate likelihood-of-confusion concerns.
+
+Corrosive Systems screened materially cleaner, but `Corrosive Studios LLC` and historical Corrosive Software uses created a remaining yellow flag. The name also felt more literal and less distinctive than the direction Caleb ultimately preferred.
+
+Caleb then compared names including Mordant Systems and Caustic Relay and chose **Caustic Relay as the working brand for now**. Preliminary searching did not surface an obvious exact active U.S. software/company collision for `CAUSTIC RELAY`, but `RELAY` is crowded in technology/software/communications. Therefore this is a **working brand decision, not a formal legal clearance opinion**. Before meaningful commercial investment or a federal trademark filing, the remaining likelihood-of-confusion question should receive a proper clearance review, ideally by a U.S.-licensed trademark attorney.
+
+Current intended use is primarily a reusable maker/publisher identity across Caleb-built apps and projects, not a representation that Caleb offers professional software-development services to clients. The project is currently noncommercial; lack of monetization reduces some practical exposure but does not by itself eliminate trademark/confusion risk.
+
+## Brand meaning
+
+- **Caustic** = harsh, eating away, degradation/corrosion without needing literal acid imagery.
+- **Relay** = transmission, signal, handoff, continuity.
+
+The startup ident is a causal story:
+
+**stable relay → pincer pinch → transmission rupture → signal loss → damaged relay returns → caustic degradation spreads → rendering fidelity collapses**.
+
+The pinch is the causal trigger. The signal should not randomly fail before it.
+
+## Canonical creature — HARD VISUAL LOCK
+
+The canonical mark remains the existing glossy black detailed black-mamba/snake + scorpion hybrid: central snake head and serpentine scaled body, symmetrical armored scorpion-like upper arms/pincers, and segmented lower tail ending in a claw/pincer. Composition is vertical/heraldic. Pincers are scorpion-like, not lobster branding.
+
+**Do not modify, redraw, regenerate, reinterpret, morph, replace, restyle, or otherwise alter the creature when making branding variants unless Caleb explicitly requests a redesign.** Treat approved creature footage/images as source assets. Background, signal treatment, and typography may be edited around it.
+
+The earlier motto `Patiens sed mordax` is **not part of the visible logo/ident**. Do not add it unless Caleb explicitly reverses that decision.
 
 ### Brand hierarchy
 
-1. **Full detailed crest** — prominent branding and startup ident.
-2. **Simplified maker's mark** — subtle persistent watermark/signature, typically in a screen corner.
-3. **Tiny app/favicon icon** — reduced silhouette/glyph optimized for very small sizes.
+1. Full detailed crest — prominent branding/startup ident.
+2. Simplified maker's mark — subtle persistent watermark/signature.
+3. Tiny app/favicon glyph — reduced silhouette for very small sizes.
+4. **CAUSTIC RELAY** wordmark/subtitle — subordinate to the creature in the startup ident.
 
-The same maker's mark can connect otherwise visually different Caleb-built apps.
+The same maker's mark and Caustic Relay identity may connect otherwise visually different Caleb-built apps.
 
-### Approved startup ident
+## Approved motion master
 
-**The previously proposed slither animation is no longer the target. Do not regenerate or substitute it.** After many generation attempts, Caleb selected a stronger, simpler animation in which the full crest remains recognizable and the upper pincers rapidly sweep/curl inward over the head in an aggressive closing/arming gesture.
+The old slither concept is retired. The approved motion keeps the full crest recognizable while the upper pincers rapidly sweep/curl inward over the head in an aggressive closing/arming gesture.
 
-The approved final prototype is the user-supplied clip from Sept. 10, 2026, conversation filename/reference `8808.mp4`. Caleb manually created the final timing by repeatedly speeding up and saving the successful Grok-generated motion. That manual speed edit is intentional and is part of the approved result.
+The approved clean prototype is conversation source `8808.mp4`, manually sped up by Caleb after Grok produced the successful anatomy/motion. That manual timing is intentional.
 
-Treat that clip as the **master startup-ident reference**. Preserve it. Do not ask a generative model to recreate it merely to change timing or make cosmetic edits; deterministic editing should be used where possible so the approved motion/anatomy is not lost.
+Repository clean master on `brand/startup-ident-pass-1`:
 
-### Intended Dinner Roulette startup behavior
+`public/brand/grok_video_2026-09-10-20-20-31_1.mp4`
 
-- On app launch, play the approved maker's-mark animation **once**.
-- Do not loop it.
-- Do not require a tap to dismiss it.
-- Keep it brief; it is a brand sting/boot signature, not a cinematic intro.
-- Load/initialize Dinner Roulette behind the ident when technically practical so the branding does not create unnecessary startup delay.
-- When the ident completes, transition immediately into the normal Dinner Roulette UI.
-- If the app is ready before the ident finishes, allow the short ident to complete. If startup genuinely takes longer, hand off cleanly to the app's normal loading state rather than looping or artificially extending the ident.
-- Keep the ident itself project-neutral so the same master animation can later identify other Caleb-built apps; project-specific branding/UI follows after it.
+Recorded blob SHA: `75e75b8559fed6871872667eb8e6463f2704e2d9`; H.264/yuv420p, 768×1168, 1.5 seconds, 2,101,557 bytes.
 
-### Animation content lock
+Treat this as provenance/source material. Do not destructively overwrite it when a new branded ident is approved.
 
-For the approved startup ident:
+## Static/corrosion source progression
 
-- Keep the recognizable full hybrid anatomy.
-- Keep the fast inward pincer sweep/closing gesture.
-- No tongue animation; extensive attempts were discarded and the approved tongue-free version looks cleaner.
-- No slithering requirement.
-- No added smoke, particles, explosions, spins, or unrelated spectacle.
-- Do not add extra limbs or morph the pincers/anatomy.
-- Do not slow it back into the earlier ceremonial multi-second pacing.
-- Future variants should branch from this approved checkpoint rather than overwrite it.
+- `8817.mp4`: deliberate TV-static treatment; static is intentional, not an export error.
+- `8840.mp4`: brighter static source, 1.5 sec, 24 fps, 36 frames, 768×1168. Caleb prefers using this brighter source first when solving difficult generative corrosion/transmission behavior, then applying controlled darkening afterward.
+- `8841.mp4`: later worked-on version; preserve as part of iteration history, but current strategy favors solving behavior first and accessibility/brightness second.
+- `8842.mp4`: successful intermediate where the polished creature visibly collapses toward linework/sketch fidelity while remaining recognizable. Treat the successful fidelity-collapse behavior as an approved element rather than recreating it from scratch. Remaining modifications target background darkness, pinch-synchronized rupture, brief dropout, damaged return, and wordmark readability while keeping the creature locked.
 
-### Asset handling status
+The fine analog-static texture also has a private personal layer: Caleb notes that it resembles a vastly brighter/exaggerated version of the subtle visual static he perceives in darkness. This is not intended as a literal medical visualization; publicly it remains corrupted-transmission imagery.
 
-The approved video currently exists as a conversation-uploaded/user-edited asset and is **not yet recorded here as a committed repository media path**. Before wiring the startup ident into Dinner Roulette, place the approved master asset into an appropriate project asset location and record the exact repo path/provenance here. Do not substitute one of the earlier failed prototypes.
+Do not resurrect the earlier 1-in-100 “shiny Pokémon” random startup idea unless Caleb explicitly asks; a rare corruption startup could be mistaken for app malfunction.
 
-**Current next action when implementing branding:** use the approved `8808.mp4` startup-ident master, add it to the app's assets, wire it to play once at startup, then transition directly to Dinner Roulette. Preserve `main`/merge discipline unless Caleb explicitly authorizes shipping.
+## Caustic Relay startup-ident narrative
 
-## Future integration rule
+Approximate 1.5-second structure:
 
-For any new third-party integration: check the provider's current official terms/documentation first; prefer factual text attribution and provider-supported links; avoid copied logos/content, undocumented APIs/deep links, scraped data, and implied partnerships. Record important decisions in this continuity file and the legal audit before merging.
+- `0.00–0.45`: stable/healthy relay; polished creature; relatively clean/readable CAUSTIC RELAY.
+- `~0.45–0.60`: existing pincer pinch; first major signal rupture must synchronize within only a few frames of the pinch.
+- `~0.60–0.75`: very brief transmission loss/dropout.
+- `~0.75–1.50`: signal returns permanently damaged; typography/static/rendering fidelity progressively worsen.
 
-## Merge discipline
+The corruption is directional: after the pinch, every major beat should generally be as damaged or more damaged than the previous beat. Do not repeatedly return to pristine health.
 
-PR #28 remains the review surface for the legal/compliance pass. Issue #29 artwork is not a reason to merge that PR. Do not merge the compliance branch into the casino-audit branch or `main` unless Caleb explicitly requests it.
+Typography may show controlled missing fragments, horizontal displacement, localized flicker/dropout, or one/two mirrored/reversed visual fragments while preserving the lexical spelling **CAUSTIC RELAY** and overall readability.
+
+Near the end, the polished creature may lose **rendering fidelity** toward the underlying drawing/linework. This is not anatomical morphing. Conceptually, the relay can no longer maintain the high-fidelity rendering of the same creature. The polished digital representation being stripped back toward Caleb's original hand-drawn lines is an intentional personal layer of the ident.
+
+Avoid literal acid, green slime, dripping goo, skulls, radioactive symbols, explosions, smoke, generic hacker imagery, extra limbs, tongues, slithering, spins, or anatomical mutation. The signal itself is being eaten away.
+
+## Photosensitivity / brightness finishing rule
+
+Do **not** force the hard generative corrosion pass to solve final brightness at the same time. Caleb's preferred workflow is:
+
+1. Use the brighter source to solve difficult behavior/transformation.
+2. Approve motion/effect structure.
+3. Apply a separate controlled darkening/accessibility pass afterward.
+
+Final treatment should favor a soft black overlay/dark aura/vignette on the **background/static**, strongest where static becomes excessively bright (especially bottom/edges), while keeping the static visibly alive underneath and preserving the creature itself.
+
+Avoid new full-screen white flashes, repeated black/white inversion, rapid large-area strobing, or repeated high-intensity brightness jumps. Prefer localized horizontal tears, tracking errors, dark interruptions, partial dropouts, fragmentation, and signal displacement.
+
+# Grok image-generation instruction protocol — LOCKED WORKFLOW
+
+## Core rule: approved outputs become assets
+
+Treat approved images, emblems, frames, textures, and visual states as **assets, not prompts**. Once Caleb approves a visual result, future instructions should reference/use that source and edit around it rather than asking Grok to recreate it merely because another property needs changing.
+
+For the creature specifically, preservation should be expressed positively and hierarchically:
+
+> The creature is an immutable source asset. Preserve its silhouette, anatomy, proportions, position, and approved appearance from the supplied source.
+
+Then one compact exclusion is enough:
+
+> No regeneration, redesign, or anatomical alteration of the creature.
+
+Do not rely on giant repeated `DO NOT` sections as the main preservation mechanism.
+
+## Pass-specific instruction hierarchy
+
+Each actual Grok generation/edit request should normally be concise and structured as:
+
+1. **Immutable assets** — what must remain unchanged.
+2. **Editable assets/regions** — what Grok is allowed to alter.
+3. **Required change this pass** — preferably one primary visual task.
+4. **Success condition** — what must be true in the output.
+5. **Compact exclusions** — only the most important failure modes.
+
+The long continuity document can function as a project bible for Grok Ask, but the actual generation step should receive a short, pass-specific task that survives planner compression.
+
+## One mutation opportunity at a time
+
+Do not routinely ask Grok to solve typography, anatomy preservation, composition, background, lighting, corrosion, signal effects, final grading, and timing in one generation.
+
+Default production order:
+
+1. Clean name/wordmark replacement only.
+2. Typography damage/corruption only.
+3. Background/signal treatment only.
+4. Rendering-fidelity degradation/style transition only.
+5. Video/motion work using approved visual states.
+6. Deterministic finishing for timing, brightness, vignette, accessibility, or other non-generative edits.
+
+If a pass is correct, preserve it. Do not regenerate successful anatomy/motion just to change speed or brightness.
+
+## Multi-reference strategy
+
+When Grok supports multiple image references, assign each an explicit authority role instead of expecting the model to infer which properties matter:
+
+- Reference 1 = anatomy/composition authority.
+- Reference 2 = original drawing/linework authority.
+- Reference 3 = background/static texture authority.
+- Reference 4 = typography/damage reference.
+- Reference 5 = tonal/brightness target.
+
+State which properties may transfer from each reference and which must not.
+
+For polished-to-drawing degradation, prefer supplying both the approved polished creature and the actual original drawing. Preserve anatomy/composition from the polished source while borrowing only rendering/linework qualities from the drawing. The effect is loss of rendering fidelity, not biological transformation.
+
+## Typography protocol
+
+When exact text matters:
+
+> Text reads exactly `CAUSTIC RELAY`. Preserve the spelling. Distort the visual presentation, not the lexical identity.
+
+Prefer concrete operations on a few characters/regions rather than “make some letters weird.” Keep the wordmark recognizable.
+
+## Still states before complex video
+
+For difficult animated identities, design/approve important visual states as stills before asking the video workflow to invent both design and motion simultaneously where practical:
+
+- State A = clean/stable frame.
+- State B = trigger/failure frame.
+- State C = damaged-return frame.
+- State D = final degraded frame.
+
+Then use Grok's video workflow to focus primarily on transition, timing, and temporal continuity between approved states rather than re-authoring the brand design from scratch.
+
+## Grok role distinction
+
+- **Grok Imagine** = generative image/video creation and editing path.
+- **Grok Ask** = conversational/planning/handoff layer; when it invokes generation it may rewrite/compress Caleb's request into a model-facing prompt, so immutable/editable hierarchy must survive compression.
+- Grok remains outside repository authority unless Caleb explicitly directs otherwise.
+
+## Final production principle
+
+**generative design → generative motion → deterministic finishing**
+
+The purpose is to minimize model drift, preserve successful assets, and avoid unnecessary opportunities to reinterpret anatomy/composition while solving unrelated visual problems.
+
+# Dinner Roulette startup implementation
+
+Startup implementation remains isolated on `brand/startup-ident-pass-1`.
+
+- Component: `src/components/startup-ident.tsx`.
+- Root integration: `src/routes/__root.tsx`.
+- Current implementation plays the committed clean master once at full-page startup, muted/inline, with no controls and no loop, while the app initializes behind it.
+- Draft PR #30 (`Preview startup ident`) is a preview/review surface only and must not be merged without explicit authorization.
+- Vercel preview deployment previously succeeded.
+
+Once Caleb approves a final **Caustic Relay** static/corroded wordmark video, add it as a new asset rather than destructively overwriting the clean source master, then update the startup component to point to the approved branded asset. Preserve the clean source as provenance/reference.
+
+# PR / public brand infrastructure
+
+Caleb intends the parent identity to have dedicated public-facing accounts (email/social/support) separate from his personal identity. A dedicated Grok PR assistant was originally created under the temporary Venom Systems name; the rebuilt/replacement assistant should be re-briefed for **Caustic Relay**.
+
+Intended support flow:
+
+public message/feedback → PR assistant triage/summary/draft → Caleb approval/decision → actionable bug/feature may become GitHub issue → fix → response.
+
+PR assistant should classify bugs, feature suggestions, general feedback, questions, and complaints; summarize accurately; draft responses; never fabricate facts; and never promise fixes/features without Caleb approval.
+
+Desired voice: technically capable, independent, experimental, direct, slightly unconventional, approachable without sounding corporate, confident without pretending to be a giant company; humor is welcome when appropriate.
+
+# Future integration rule
+
+For any new third-party integration, check current official terms/documentation first; prefer factual text attribution and provider-supported links; avoid copied logos/content, undocumented APIs/deep links, scraped data, and implied partnerships. Record important decisions in continuity/legal audit before merging.
+
+# Merge discipline
+
+PR #28 remains the legal/compliance review surface. Issue #29 artwork is not a reason to merge. PR #30 remains a draft startup-ident preview. Do not merge the compliance branch, startup-ident branch, casino-audit branch, or `main` into one another unless Caleb explicitly requests it.
