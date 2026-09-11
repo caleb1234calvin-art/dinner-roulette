@@ -163,6 +163,100 @@ Font is not yet locked. Current useful directions include industrial/geometric/c
 - Do not change the snake/scorpion to accommodate typography or static. Move/size the text around the existing creature instead.
 - Background/static and wordmark effects may evolve independently around the locked creature.
 
+### Grok image-generation instruction protocol — LOCKED WORKFLOW
+
+For future Grok image-generation or image-editing handoffs, ChatGPT should optimize instructions for Grok's planner + image-generator workflow rather than relying on increasingly long all-in-one prompts.
+
+Core operating rule: **treat approved outputs as assets, not prompts.** Once Caleb approves an image, emblem, frame, texture, or visual state, future Grok instructions should reference that approved source and edit around it rather than asking Grok to recreate something merely because another property needs to change.
+
+#### Instruction hierarchy
+
+Each actual generation/edit request should be pass-specific and organized in a short hierarchy that survives prompt compression:
+
+1. **Immutable assets** — what must remain visually unchanged.
+2. **Editable assets/regions** — what Grok is allowed to alter.
+3. **Required change for this pass** — ideally one primary visual task.
+4. **Success condition** — what must be true in the returned image.
+5. **Compact exclusions** — only the most important failure modes; do not bury the desired result under dozens of negative instructions.
+
+Prefer positive invariance language such as:
+
+> The creature is an immutable source asset. Preserve its silhouette, anatomy, proportions, position, and approved appearance from the supplied source.
+
+Then add only a compact prohibition such as:
+
+> No regeneration, redesign, or anatomical alteration of the creature.
+
+Do not rely on repeated `DO NOT` paragraphs as the primary preservation mechanism.
+
+#### One mutation opportunity at a time
+
+Do not routinely ask Grok to solve typography, anatomy preservation, composition, background changes, lighting, corrosion, signal effects, and final color grading in one generation.
+
+Default to sequential passes, inspecting and approving each useful output before using it as the input to the next pass. Example production order:
+
+1. Clean wordmark/name replacement only.
+2. Typography damage/corruption only.
+3. Background/signal treatment only.
+4. Rendering-fidelity degradation or style transition only.
+5. Video/motion interpolation using approved visual states.
+6. Deterministic finishing for timing, brightness, vignette, accessibility, or other edits that do not need generation.
+
+If an earlier pass is already correct, do not regenerate it merely to change timing, brightness, or another property that can be handled deterministically.
+
+#### Reference-image strategy
+
+When Grok supports multiple references, use them as explicit authorities rather than relying on prose memory. Assign a single role to each reference whenever practical, for example:
+
+- Reference 1 = anatomy/composition authority.
+- Reference 2 = original drawing/linework authority.
+- Reference 3 = background/static texture authority.
+- Reference 4 = typography/damage reference.
+- Reference 5 = tonal/brightness target.
+
+State clearly which properties may be borrowed from each reference and which properties must not transfer.
+
+For a polished-to-drawing degradation, prefer supplying both the approved polished creature and the actual original drawing. Instruct Grok to preserve the anatomy/composition of the polished source while adopting only the rendering/linework qualities of the drawing reference. The intended effect is loss of rendering fidelity, not biological/anatomical morphing.
+
+#### Typography instructions
+
+When exact text matters, always provide the exact spelling and distinguish lexical identity from visual damage.
+
+Example structure:
+
+> Text reads exactly `CAUSTIC RELAY`. Preserve the spelling. Distort the visual presentation, not the lexical identity.
+
+Prefer concrete operations on a few letters instead of vague requests such as “make some letters weird.” Examples include a specific horizontal slice, partial missing stroke, temporary mirror/reversal, localized displacement, or controlled flicker. Keep enough of the wordmark intact that the brand remains readable.
+
+#### Still-image design before video
+
+For complex animated identities, prefer designing/approving important visual states as still images before asking a video model to invent both the design and the movement simultaneously.
+
+Useful sequence:
+
+- State A = clean/stable frame.
+- State B = trigger/failure frame.
+- State C = damaged-return frame.
+- State D = final degraded/corroded frame.
+
+Then ask Grok's video workflow to animate the transition/timing between approved states where possible. The video model's job should primarily be motion/temporal continuity, not re-authoring the brand design from scratch.
+
+#### Grok product distinction
+
+Do not conflate Grok Imagine and Grok Ask:
+
+- Grok Imagine is the image-generation/editing path.
+- Grok Ask can coordinate the video workflow / act as the conversational planner for video work.
+- Grok remains outside repository authority unless Caleb explicitly directs otherwise.
+
+When handing instructions to Grok Ask, the long continuity brief may be useful as a project bible, but the actual generation step should still receive a concise, pass-specific task with explicit immutable/editable regions.
+
+#### Final principle
+
+Use **generative design → generative motion → deterministic finishing** as the default pipeline for difficult brand animation work.
+
+The aim is to reduce model drift, preserve approved assets, and avoid creating unnecessary opportunities for Grok to reinterpret anatomy or composition while solving unrelated visual problems.
+
 ### Dinner Roulette startup implementation
 
 The startup implementation is isolated on `brand/startup-ident-pass-1`. Component: `src/components/startup-ident.tsx`. Root integration: `src/routes/__root.tsx`.
