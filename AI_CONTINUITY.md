@@ -42,22 +42,24 @@ Colorado Division of Gaming accounting is corrected to 33 commercial regulator l
 
 `audit/texas-casino-reconciliation-2026-09-11.json` resolves current Texas scope to four physical tribal gaming destinations pending coordinate/stable-ID QA: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded as travel-center gaming. Texas becomes complete only after runtime activation and validation.
 
-## Oklahoma — 54 address/identity verified; 42 coordinate verified
+## Oklahoma — 54 address/identity verified; 48 coordinate verified
 
-Discovery/reconciliation artifacts include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, runtime QA passes 1–2, and coordinate QA passes **1–7**.
+Discovery/reconciliation artifacts include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, runtime QA passes 1–2, and coordinate QA passes **1–8**.
 
 The Oklahoma name/scope candidate universe is **77**. Current identity, destination scope, normalized street address and provisional stable Dinner Roulette IDs are verified for **54 properties** across Chickasaw, Choctaw, Cherokee/CNE, Muscogee, Osage and Citizen Potawatomi clusters.
 
-**Property-specific coordinates are now verified for 42 of those 54.** Pass 1 established 9; Pass 2 added 7; Pass 3 added 4; Pass 4 added 8; Pass 5 added 4; Pass 6 added 4; Pass 7 added **Muscogee Casino, Okemah Casino, Bristow Casino, Osage Casino Hotel Bartlesville, Osage Casino Hotel Skiatook and the current Osage Casino Hotel Pawhuska property**.
+**Property-specific coordinates are now verified for 48 of those 54.** Pass 1 established 9; Pass 2 added 7; Pass 3 added 4; Pass 4 added 8; Pass 5 added 4; Pass 6 added 4; Pass 7 added 6; Pass 8 added **Choctaw Hochatown, Cherokee Fort Gibson, Osage Casino Hotel Tulsa, current-site Osage Casino Hotel Ponca City, Duck Creek Casino and Checotah Casino**.
 
-Coordinate evidence must be property-specific rather than city centroids. Runtime activation remains withheld until duplicate/alias distance QA against passes 1–27 is complete.
+Coordinate evidence must be property-specific rather than city centroids. Runtime activation remains withheld until duplicate/alias distance QA against passes 1–27 is complete. Duck Creek and Checotah now have verified building geometry, but their final runtime street-number normalization remains pending.
 
 Important coordinate/separation decisions:
 
 - Riverwind uses current first-party address `1544 State Highway 9, Norman, OK 73072`; earlier provisional ZIP 73093 is superseded.
 - Newcastle Casino is distinct from Newcastle Travel Gaming.
 - Choctaw Pocola resort, Choctaw Grant casino and Choctaw Stringtown casino are distinct from nearby travel-plaza gaming operations.
+- Choctaw Hochatown / Choctaw Landing is now directly coordinate-resolved at the current Hochatown property.
 - Cherokee Roland casino footprint is distinct from its adjacent hotel footprint and nearby Cherokee Travel Plaza.
+- Cherokee Fort Gibson is now property-coordinate verified at the current 107 N Georgetown Rd site.
 - Border Casino is distinct from the nearby Chickasaw Travel Stop.
 - MegaStar Casino mapping sources may normalize locality to Kingston, but current first-party contact material uses `4350 S Hwy 377, Willis, OK 73439`; preserve first-party locality.
 - Treasure Valley Casino & Hotel is distinct from the separately mapped nearby Chickasaw Travel Stop.
@@ -67,24 +69,27 @@ Important coordinate/separation decisions:
 - One Fire Casino is clearly resolved to one Okmulgee property; current sources vary only on whether `Wood Dr` includes directional `N`, so normalize conservatively after final site QA.
 - Muscogee Casino is clearly resolved at 3420 W Peak Blvd; mapping/current sources disagree on ZIP 74401 vs 74403, so preserve the current QA address pending final normalization.
 - Okemah Casino is directly mapped; current sources vary between 1101 and older 1100/S Woody Guthrie wording, so preserve current first-party 1101 pending final normalization.
+- Duck Creek Casino has exact building geometry; current sources disagree between `10071` and `10085 Ferguson Rd`, so final street number remains a runtime hold rather than a coordinate hold.
+- Checotah Casino has exact building geometry; current sources disagree between `830` and `831 N Broadway`, so final street number remains a runtime hold rather than a coordinate hold.
 - Osage Casino Hotel Bartlesville uses the current 1803 US-60 successor property; do not revive the older Allen Road site.
-- Osage Casino Hotel Pawhuska is now resolved to the current `1421 John Dahl Ave` property. The older mapped Osage Nation Casino-Pawhuska at `2017 E 15th St` is a predecessor and must not be activated alongside it.
-- Osage Tulsa remains held because the accessible mapped feature found so far is parking rather than the casino/hotel building.
+- Osage Casino Hotel Pawhuska uses the current `1421 John Dahl Ave` property; do not activate the older `2017 E 15th St` predecessor.
+- Osage Casino Hotel Ponca City is now coordinate-resolved to the current `64464 US Highway 60` property; do not reuse old `73 N City View Rd` coordinate data.
+- Osage Casino Hotel Tulsa now uses a property geocode at the current `951 W 36th St N` address rather than the parking-only feature found in the earlier sweep.
 - Suite Shots Jenks remains staged outside the conventional casino pool.
 
 ### Material reconciliation holds
 
 **Artesian:** do not activate the earlier provisional Artesian address. Current first-party Artesian casino/hotel pages identify Artesian Casino at **1001 W 1st Street, Sulphur, OK 73086**, conflicting with the earlier provisional `23 W Vinita Ave` record. Reconcile lineage before coordinate promotion.
 
-**Duck Creek:** exact casino geometry exists, but current-address sources disagree between `10071` and `10085 Ferguson Rd`; reconcile before promotion.
+**Lake Eufaula:** current property at `1045 Birkes Rd` is verified as the successor to the closed old Forest/Forrest Avenue site, but exact current-site coordinate evidence still needs to clear the property-specific standard.
 
-**Checotah:** direct casino geometry exists, but current-address sources disagree between `830` and `831 N Broadway`; reconcile before promotion.
+**Coweta:** current identity/address is strong; exact property coordinate still needs direct evidence.
 
-**Osage Ponca City:** current first-party address is `64464 US Highway 60`; readily found older third-party coordinate data still points to `73 N City View Rd`, so do not reuse the old site.
+**Holdenville:** current identity/address is strong; exact property coordinate still needs direct evidence.
 
-Other held records include Choctaw Hochatown, Cherokee Fort Gibson and Cherokee South Coffeyville where sufficiently direct property-coordinate evidence has not yet cleared the standard.
+**Cherokee South Coffeyville:** current identity/address is strong; exact property coordinate still needs direct evidence.
 
-There are now **8 additional property coordinates needed to reach the 50-coordinate target**. Next action: prioritize Coweta, current Lake Eufaula, Duck Creek after address reconciliation, Checotah after address reconciliation, Holdenville, current Osage Ponca City, Osage Tulsa exact building and the strongest remaining held Cherokee/Choctaw/Chickasaw candidate. In parallel, perform branch-aware same-ID/name and sub-0.35-mile distance QA across all 42 coordinate-verified records. The first Oklahoma runtime pass should contain only records clearing every gate; do not force the count.
+There are now **2 additional property coordinates needed to reach the 50-coordinate target**. Next action: find two clean coordinates from Coweta, current Lake Eufaula, Holdenville, Cherokee South Coffeyville or another held current property. Then make branch-aware same-ID/name and sub-0.35-mile distance QA the primary gate across the coordinate-verified Oklahoma pool. The first Oklahoma runtime pass should contain only records clearing every gate; do not force the count.
 
 ## Legal/compliance continuity
 
