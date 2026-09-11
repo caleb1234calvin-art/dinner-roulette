@@ -16,23 +16,24 @@ _Last updated: September 10, 2026_
 
 ## National casino audit continuity
 
-The national casino audit is active again on the current stacked working branch.
+The national casino audit is active on the current stacked working branch.
 
 - Completed jurisdiction passes documented in `CASINO_AUDIT.md`: **24**.
-- The original 22-jurisdiction checkpoint contained 232 explicit curated casino records.
-- Mississippi was subsequently completed at 28 physical casino destinations.
-- Arizona is explicitly documented complete at 26 Class III tribal casino facilities. The Arizona runtime records already existed in `casino-catalog-pass-18.ts` and are wired into `src/lib/nightlife/search.ts`; the audit documentation had lagged behind the implementation.
-- California is the current staged large-inventory pass. The California Gambling Control Commission inventory snapshot contains **74 active tribal-casino license records** in `audit/california-tribal-casinos-2026-09-08.json`.
-- Property-level California work is tracked in `audit/california-reconciliation-2026-09-10.json`; the accelerated 30-record research tranche is preserved separately in `audit/california-batch-30-2026-09-10.json` so research progress is not confused with fully reconciled/runtime-ready status.
-- Strict reconciliation checkpoint remains **13 fully reconciled**, **2 address-verified/coordinate-pending**, and **4 explicitly flagged for identity/location review** in the reconciliation file.
-- A new **30-record California acceleration batch** has now been researched. Of those 30, **25 have a property/operator or government-backed physical address**, **4 still need stronger direct address/property evidence**, and **1 is an active CGCC license for a property that is not yet open**. These are research states, not runtime promotions.
-- The 30-record batch covers Diamond Mountain through Rain Rock in the staged CGCC roster, including Eagle Mountain, Fantasy Springs, Feather Falls, Garcia River, Gold Country, Golden Acorn, Graton, Hard Rock Tejon, Hard Rock Sacramento, both Harrah's properties, Havasu Landing, Hidden Oaks, Jackson Rancheria, Jamul, Konocti Vista, Lucky 7, Mono Wind, Morongo Resort, Pala, Pechanga, Pit River, Quechan, and others.
-- Important new temporal flag: **North Fork Mono Casino & Resort (TRCS-000083)** has an active CGCC license and a verified Madera property address, but its operator site says **opening October 2026**. Do not expose it as an already-open destination until opening is confirmed.
-- Morongo Casino Resort and Spa (TRCS-000030) now has a verified current property address but remains subject to the existing same-campus/license review against Casino Morongo (TRCS-000075).
-- Hidden Oaks is retained in research because CGCC lists the license active, but its operator identifies it as a Class II facility; verify that it fits the intended runtime casino-destination scope before promotion.
-- The earlier four California review flags remain deliberately unresolved rather than guessed: Casino Morongo (same-campus/license relationship), Cher-Ae Heights Casino (regulator/location conflict), Chicken Ranch Casino (new resort plus original casino relationship), and Desert Rose Casino (insufficient direct current property sourcing).
-- California is **not** marked complete and none of the staged California research/reconciliation files are wired into runtime yet. Do not promote a partial California catalog merely to increase coverage.
-- Caleb increased the working batch size to **30 casino records per research pass** to accelerate the remaining audit. Continue in batches of about 30, then perform a final reconciliation/coordinate/deduplication pass before runtime activation.
+- Arizona is explicitly documented complete at 26 Class III tribal casino facilities and is already wired into runtime via `casino-catalog-pass-18.ts` and `src/lib/nightlife/search.ts`.
+- California is the current large-inventory pass. The California Gambling Control Commission snapshot contains **74 active tribal-casino license records** in `audit/california-tribal-casinos-2026-09-08.json`.
+- Strict property reconciliation is tracked in `audit/california-reconciliation-2026-09-10.json`. It currently contains **13 fully reconciled**, **2 address-verified/coordinate-pending**, and **4 explicit review flags** from the early strict passes.
+- The first accelerated tranche is preserved in `audit/california-batch-30-2026-09-10.json`: **30 licenses researched**, with 25 property/government-backed addresses, 4 needing stronger direct property evidence, and North Fork Mono flagged as licensed but pre-opening.
+- The remaining roster is now covered by `audit/california-batch-final-24-2026-09-10.json`: **24 licenses researched**, 23 with verified or strongly corroborated physical addresses and one (Winnedumah Winn's Casino) still requiring stronger current property evidence.
+- **First-pass research now covers the entire 74-license California CGCC inventory.** This does not mean 74 runtime destinations: the final reconciliation must resolve coordinates, duplicate/same-property licenses, opening status, Class II/scope questions, and any weak-address records before a physical-destination catalog is generated.
+- River Rock Casino is a particularly strong final-batch candidate because its current operator directions page supplies both its physical address and GPS coordinates directly.
+- Important temporal flag: **North Fork Mono Casino & Resort (TRCS-000083)** has an active CGCC license and verified Madera property address, but its operator site says **opening October 2026**. Do not expose it as an already-open destination until opening is confirmed.
+- Morongo Casino Resort and Spa (TRCS-000030) has a verified current property address but remains subject to the same-campus/license review against Casino Morongo (TRCS-000075).
+- Hidden Oaks remains in research because CGCC lists its license active while its operator identifies it as a Class II facility; confirm intended runtime scope before promotion.
+- Existing deliberate review cases remain: Casino Morongo (same-campus/license relationship), Cher-Ae Heights Casino (regulator/location conflict), Chicken Ranch Casino (new resort plus original casino relationship), Desert Rose Casino (weak direct current property sourcing), and Winnedumah Winn's Casino (current property evidence still weak).
+- Address normalization also needs to preserve current operator evidence when it differs from roster locality labels or older directories. Examples discovered in research include Red Earth (operator publishes Thermal address while CGCC labels Salton Sea Beach) and Sycuan (current operator uses Casino Way while older directories may surface Dehesa Road).
+- California is **not** marked complete and none of its staged research/reconciliation files are wired into runtime yet. Do not promote a partial or unreconciled California catalog merely to increase coverage.
+- Caleb increased the working batch size to **30 casino records per research pass**. The broad California research phase is now complete; the next phase should be a consolidated reconciliation pass rather than another discovery batch.
+- Next California sequence: merge the two accelerated research files with the strict reconciliation file; obtain/validate property-specific coordinates where needed; resolve aliases/duplicates/opening/scope flags; determine the justified physical-destination count; generate `src/lib/nightlife/casino-catalog-pass-19.ts`; wire it into `search.ts`; run duplicate/audit/typecheck/tests/build checks; then update `CASINO_AUDIT.md` and this continuity file before declaring California complete.
 - Continue using regulator/government rosters for identity and operator/property sources for current address/name details. Accept coordinates only when evidence is sufficiently property-specific; conflicting or ambiguous geometry stays pending.
 - Curated casino records remain a high-confidence backbone merged with live OSM discovery rather than a replacement for live discovery.
 
@@ -75,88 +76,52 @@ Delivery shortcuts are intentionally shallow launch links.
 
 ## Restaurant icon system — implemented on feature branch
 
-Third-party restaurant logos/brand artwork are being replaced in active Dinner presentation with a Dinner Roulette-owned generic cuisine/category icon system while factual restaurant names remain intact.
+Third-party restaurant logos/brand artwork are replaced in active Dinner presentation with a Dinner Roulette-owned generic cuisine/category icon system while factual restaurant names remain intact.
 
-Tracked as Issue #29. The implementation is isolated on `feature/dinner-icon-pack-1`; it is not in `main` and has not been deployed.
+Tracked as Issue #29. The implementation is isolated on `feature/dinner-icon-pack-1`; it is not in `main`.
 
 ### Locked visual language
 
 - Dinner icons use realistic claymation / tactile miniature food objects rather than photoreal food photos.
 - Rounded-square tile construction with no text, restaurant logos, mascots, packaging, or brand marks.
 - Dinner identity uses the same cyan/teal-left and burnt-orange/terracotta-right luminous edge treatment in both themes.
-- Dark theme uses a charcoal/dark glossy tile.
-- Light theme uses a pearl/soft-gray tile.
-- Underlying object/style language stays constant across themes so the palette swap reads as theme identity rather than a different icon family.
+- Dark theme uses a charcoal/dark glossy tile; light theme uses a pearl/soft-gray tile.
+- Underlying object/style language stays constant across themes.
 
 ### Implemented Dinner category pack
 
-The branch now contains 15 semantic categories in each theme, 30 canonical assets total:
+The branch contains 15 semantic categories in each theme, 30 canonical assets total: `burger`, `pizza`, `mexican`, `chinese`, `japanese`, `italian`, `steakhouse`, `bbq`, `chicken`, `cafe-bakery`, `dessert`, `seafood`, `buffet`, `breakfast`, and `fallback`.
 
-- `burger`
-- `pizza`
-- `mexican`
-- `chinese`
-- `japanese`
-- `italian`
-- `steakhouse`
-- `bbq`
-- `chicken`
-- `cafe-bakery`
-- `dessert`
-- `seafood`
-- `buffet`
-- `breakfast`
-- `fallback`
-
-Canonical asset layout:
-
-- `public/dinner-icons/dark/<category>.jpg`
-- `public/dinner-icons/light/<category>.jpg`
-
-The original generated uploads remain preserved while canonical theme-specific copies are used by the resolver.
+Canonical asset layout is `public/dinner-icons/dark/<category>.jpg` and `public/dinner-icons/light/<category>.jpg`.
 
 ### Dinner icon resolver and UI wiring
 
 - `src/lib/restaurants/dinner-icons.ts` classifies restaurants from structured cuisines first, then name/cuisine-label/photo-key hints, with a neutral fallback.
-- Theme-aware icon paths resolve to `/dinner-icons/dark/...` or `/dinner-icons/light/...` using the app's existing theme state.
-- Dinner shortlist/options cards use the local Dinner icon resolver.
-- Final Dinner result presentation uses the local Dinner icon resolver.
-- This removes third-party restaurant-logo presentation from the active Dinner result surfaces covered by the branch.
+- Theme-aware icon paths use the app's existing theme state.
+- Dinner shortlist/options cards and final Dinner results use the local Dinner icon resolver.
 - Date Night and Nightlife artwork remain separate systems.
 
 ## Validation and maintenance status
 
 A dedicated GitHub Actions workflow exists at `.github/workflows/validate-icon-pack.yml` for `feature/dinner-icon-pack-1`.
 
-Verified passing gates:
+Verified passing gates include dependency installation, blocking TypeScript `tsc --noEmit`, development client/SSR/Nitro build, all 30 canonical Dinner icon assets, and successful branch workflow completion.
 
-- dependency installation completes;
-- TypeScript `tsc --noEmit` passes as a blocking gate;
-- development client/SSR/Nitro build completes;
-- all 30 canonical Dinner icon assets are present and non-empty;
-- branch workflow completes successfully.
-
-### Maintenance fixes completed during validation
-
-- Restored Nightlife chip artwork typing so optional chip artwork such as the casino icon is type-safe.
-- Repaired curated Nightlife records that were missing the required `website` field by explicitly recording `website: null` where no known site is present.
-- Restored `.grok/app-env.json` with `VITE_AUTH_ENABLED: "false"`, matching the repository's existing workspace/auth test contract.
-- That app-env repair reduced the legacy script-suite failures from 16 to 12 while preserving a passing TypeScript/build/icon gate.
-- PWA metadata tests were subsequently isolated from Dinner Roulette's real `Pick For Us` workspace identity by using explicit temporary fixtures rather than altering the production identity.
+Maintenance work restored Nightlife chip artwork typing, repaired curated Nightlife records missing `website`, restored `.grok/app-env.json` with `VITE_AUTH_ENABLED: \"false\"`, and isolated PWA metadata tests from the real `Pick For Us` workspace identity using temporary fixtures.
 
 ### Remaining legacy/template test debt
 
-The inherited `scripts/**/*.test.mjs` suite still contains Grok/template-specific documentation-contract checks that expect `.grok/skills/og/SKILL.md` and `.grok/skills/og/references/`, which are absent from this repository. Do not fabricate placeholder skill documentation merely to turn those tests green. Either restore authoritative upstream template documents or revise those tests so documentation-contract checks are conditional/self-contained.
+The inherited `scripts/**/*.test.mjs` suite contains Grok/template-specific documentation-contract checks expecting `.grok/skills/og/SKILL.md` and `.grok/skills/og/references/`, which are absent. Do not fabricate placeholder documentation solely to make those tests green. Restore authoritative upstream documents or make the checks conditional/self-contained.
 
-The workflow currently reports inherited template-suite debt without allowing it to block the strict TypeScript, build, and icon-validation gates. Before final integration, prefer making the active app-focused test gate strict and clearly separating any retained upstream-template compatibility checks.
+The workflow currently reports inherited template-suite debt without allowing it to block strict TypeScript, build, and icon-validation gates. Before final integration, prefer a strict active-app test gate separated from retained upstream-template compatibility checks.
 
 ### Dependency/tooling warnings observed
 
-GitHub Actions currently reports ecosystem/tooling deprecation warnings, including Recharts 2.x, ESLint 9.x, and Node-20-based internals used by current action versions. Do not perform major dependency upgrades solely to silence warnings on this feature branch. Handle upgrades as an intentional maintenance pass with regression testing.
+GitHub Actions reports ecosystem/tooling deprecation warnings including Recharts 2.x, ESLint 9.x, and Node-20-based internals in current action versions. Do not perform major upgrades solely to silence warnings on this feature branch; handle them as an intentional maintenance pass with regression testing.
 
 ## Future integration rule
 
-For any new third-party integration: check the provider's current official terms/documentation first; prefer factual text attribution and provider-supported links; avoid copied logos/content, undocumented APIs/deep links, scraped data, and implied partnerships. Record important decisions in this continuity file and the legal audit before merging.
+For any new third-party integration: check current official terms/documentation first; prefer factual text attribution and provider-supported links; avoid copied logos/content, undocumented APIs/deep links, scraped data, and implied partnerships. Record important decisions in this continuity file and the legal audit before merging.
 
 ## Merge discipline
 
@@ -166,6 +131,6 @@ Current dependency/load order:
 
 PR #28 remains the review surface for the legal/compliance pass. Issue #29 tracks the icon system. Do not merge these branches directly into `main` one-by-one without checking the current branch topology and other active updates.
 
-Preferred ship path is to create a dedicated integration/compatibility branch, assemble the intended updates there in dependency-aware order, resolve overlaps, run TypeScript/tests/build/visual checks on the combined app, and only then merge the stable assembled state into `main` after Caleb explicitly requests it.
+Preferred ship path is a dedicated integration/compatibility branch: assemble intended updates in dependency-aware order, resolve overlaps, run TypeScript/tests/build/visual checks on the combined app, and only then merge the stable assembled state into `main` after Caleb explicitly requests it.
 
 `main` remains untouched at this stage.
