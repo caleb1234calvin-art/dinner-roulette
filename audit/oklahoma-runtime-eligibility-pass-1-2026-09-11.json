@@ -1,0 +1,90 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "runtime-eligibility-pass-1",
+  "scope": "Record-level eligibility review of the 48 coordinate-verified Oklahoma destinations after generated-pass collision QA. Records pass this stage only when current identity, destination scope, usable current address, property-specific coordinate evidence and runtime lineage are all sufficiently resolved for serialization.",
+  "coordinateVerifiedPool": 48,
+  "eligibleForPass28Serialization": 46,
+  "heldFromPass28Serialization": 2,
+  "stableIdLineageOverrides": {
+    "ok-winstar-world": "winstar",
+    "ok-choctaw-durant": "choctaw-durant"
+  },
+  "eligibleRecords": [
+    "ok-winstar-world",
+    "ok-riverwind-casino",
+    "ok-newcastle-casino",
+    "ok-choctaw-durant",
+    "ok-choctaw-pocola",
+    "ok-hard-rock-tulsa",
+    "ok-cherokee-west-siloam-springs",
+    "ok-firelake-casino",
+    "ok-grand-casino-shawnee",
+    "ok-choctaw-grant",
+    "ok-choctaw-mcalester",
+    "ok-choctaw-broken-bow",
+    "ok-choctaw-stringtown",
+    "ok-cherokee-roland",
+    "ok-cherokee-sallisaw",
+    "ok-cherokee-tahlequah",
+    "ok-cherokee-grove",
+    "ok-cherokee-ramona",
+    "ok-cherokee-will-rogers-downs",
+    "ok-choctaw-idabel",
+    "ok-border-casino",
+    "ok-saltcreek-casino",
+    "ok-texoma-casino",
+    "ok-washita-casino",
+    "ok-megastar-casino",
+    "ok-west-bay-casino-resort",
+    "ok-chisholm-trail-casino",
+    "ok-treasure-valley-casino-hotel",
+    "ok-jet-stream-casino",
+    "ok-black-gold-casino",
+    "ok-gold-mountain-casino",
+    "ok-riverstar-casino",
+    "ok-muscogee-river-spirit",
+    "ok-muscogee-one-fire",
+    "ok-osage-hominy",
+    "ok-osage-sand-springs",
+    "ok-muscogee-muskogee",
+    "ok-muscogee-okemah",
+    "ok-muscogee-bristow",
+    "ok-osage-bartlesville",
+    "ok-osage-skiatook",
+    "ok-osage-pawhuska",
+    "ok-choctaw-hochatown",
+    "ok-cherokee-fort-gibson",
+    "ok-osage-tulsa",
+    "ok-osage-ponca-city"
+  ],
+  "heldRecords": [
+    {
+      "id": "ok-muscogee-duck-creek",
+      "name": "Duck Creek Casino",
+      "reason": "Exact building geometry is verified, but current address evidence still conflicts between 10071 Ferguson Rd and 10085 Ferguson Rd. Do not serialize until one current runtime address is resolved."
+    },
+    {
+      "id": "ok-muscogee-checotah",
+      "name": "Checotah Casino",
+      "reason": "Exact casino geometry is verified, but current address evidence still conflicts between 830 N Broadway and 831 N Broadway Ave. Do not serialize until one current runtime address is resolved."
+    }
+  ],
+  "normalizationDecisionsApplied": [
+    "Riverwind uses 1544 State Highway 9, Norman, OK 73072.",
+    "MegaStar preserves the current first-party Willis locality despite mapping normalization to Kingston.",
+    "Gold Mountain preserves Ardmore ZIP 73401 rather than the apparent 72401 typo on one current tourism page.",
+    "One Fire uses the current Muscogee operator form 1901 Wood Dr; directional-N variants are treated as the same property.",
+    "Muscogee Casino uses the current verified 3420 W Peak Blvd, Muskogee, OK 74401 form despite a mapping ZIP variant.",
+    "Okemah Casino uses the current verified 1101 Woody Guthrie Blvd form rather than older 1100/S variants.",
+    "Osage Bartlesville, Pawhuska and Ponca City use only their current successor properties; predecessor-site geometry is excluded.",
+    "WinStar and Choctaw Durant preserve their pre-existing runtime stable-ID lineages rather than creating Oklahoma-prefixed duplicate IDs."
+  ],
+  "collisionState": {
+    "baseCatalogSamePropertyReconciliations": 2,
+    "generatedPasses2Through27OklahomaRecords": 0,
+    "generatedPasses2Through27HardCollisions": 0
+  },
+  "pass28Decision": "Proceed with a 46-record Oklahoma Pass 28. The earlier 50-record target was a batching target, not a correctness gate. Duck Creek and Checotah remain quarantined for a later corrective/addition pass once their address normalization is settled.",
+  "nextPhase": "Serialize the 46 eligible records into casino-catalog-pass-28.ts, wire Pass 28 into nightlife search, extend the casino validator file list to include Pass 28, and run integration validation before any completeness-manifest claim."
+}
