@@ -17,14 +17,16 @@
     {"path":"audit/nevada-ambiguity-resolution-pass-2-2026-09-11.json","role":"regulatory ambiguity pass"},
     {"path":"audit/nevada-ambiguity-resolution-pass-3-2026-09-11.json","role":"core operation/rename/campus ambiguity pass"},
     {"path":"audit/nevada-scope-address-pass-4-2026-09-11.json","role":"small-scope resolution and rural address QA"},
-    {"path":"audit/nevada-rural-completeness-recovery-2026-09-11.json","role":"recovered rural candidates / completeness correction"}
+    {"path":"audit/nevada-rural-completeness-recovery-2026-09-11.json","role":"initial recovered rural candidates / completeness correction"},
+    {"path":"audit/nevada-rural-recovery-pass-5-2026-09-11.json","role":"expanded rural recovery, current-operation and regulator matching"}
   ],
   "candidateAccounting":{
     "originalCandidateAndScopeReviewRows":153,
     "newCurrentTribalDestinations":2,
     "priorExpandedDecisionUniverse":155,
-    "newRecoveredRuralCandidates":8,
-    "revisedProvisionalDecisionUniverse":163,
+    "initialRecoveredRuralCandidates":8,
+    "additionalRecoveredJackpotCandidates":2,
+    "revisedProvisionalDecisionUniverse":165,
     "runtimeDestinationCount":null,
     "result":"RECONCILIATION_IN_PROGRESS_COMPLETENESS_GATE_REOPENED"
   },
@@ -43,9 +45,17 @@
     "Moapa Paiute Travel Plaza":"include-current-tribal-destination",
     "Bayshore Inn":"exclude-curated-destination-scope",
     "Alamo Casino Sparks Petro":"include-current-destination",
-    "Red Drag Casino":"retain-current-candidate-ngcb-match-pending",
     "Eureka Casino in Eureka":"exclude-erroneous-rural-candidate",
     "Gold Dust West Winnemucca":"exclude-erroneous-location-candidate",
+    "Cactus Petes Resort Casino":"include-current-destination",
+    "Horseshu Hotel & Casino":"include-current-separate-destination",
+    "Barton's Club 93":"include-current-destination",
+    "Four Jacks Hotel & Casino":"include-current-destination",
+    "Fernley Nugget":"include-current-destination",
+    "Dini's Lucky Club":"include-current-destination",
+    "C Punch Inn & Casino":"include-current-destination",
+    "Stagecoach Hotel & Casino":"include-current-destination",
+    "El Capitan Lodge & Casino":"include-current-destination-address-normalization-pending",
     "Palms Casino Resort":"already represented; no duplicate tribal-ownership row"
   },
   "recoveredRuralCandidates":[
@@ -56,12 +66,15 @@
     "Dini's Lucky Club — Yerington",
     "C Punch Inn & Casino — Lovelock",
     "El Capitan Casino — Hawthorne",
-    "Stagecoach Hotel & Casino — Beatty"
+    "Stagecoach Hotel & Casino — Beatty",
+    "Barton's Club 93 — Jackpot",
+    "Four Jacks Hotel & Casino — Jackpot"
   ],
-  "addressQaProgress":{
-    "ruralAddressesVerifiedThisPass":8,
-    "verifiedProperties":["Stockman's Casino Fallon","Bonanza Casino Fallon","Winnemucca Inn & Casino","Model T Casino","Winners Inn & Casino","Tonopah Station","Hotel Nevada & Gambling Hall","Prospector Hotel & Gambling Hall"]
-  },
+  "stillNeedsSpecificDisposition":[
+    "Stockmen's Gambling Hall — Fallon exact current identity/scope",
+    "Red Drag Casino — Elko exact current NGCB match",
+    "additional balance-of-state omissions if found during regulator sweep"
+  ],
   "knownHistoricalOrScopeExclusions":[
     "The Mirage",
     "Tropicana Las Vegas",
@@ -74,7 +87,7 @@
     "Bayshore Inn from curated casino backbone",
     "Eureka Casino town-of-Eureka candidate",
     "Gold Dust West Winnemucca candidate",
-    "Dotty's/restricted retail-style gaming by default"
+    "Dotty's/restricted retail-style gaming by default, including Dotty's Jackpot"
   ],
   "ngcbReportInfrastructure":{
     "publicReportsBase":"https://publicreports-gcb.nv.gov/",
@@ -85,7 +98,7 @@
   },
   "mandatoryRemainingGates":[
     "Run a regulator-backed statewide completeness sweep against active NGCB nonrestricted locations, especially balance-of-state communities; do not assume the original discovery universe was complete.",
-    "Resolve all newly recovered rural candidates against current NGCB identity and destination scope.",
+    "Resolve Stockmen's Fallon, Red Drag Elko and any newly recovered rural rows.",
     "Account every surviving candidate against current NGCB identity or explicit tribal/federal exception.",
     "Normalize addresses for every retained destination.",
     "Complete property-specific coordinate QA.",
