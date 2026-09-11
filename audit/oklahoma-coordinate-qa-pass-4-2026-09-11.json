@@ -1,0 +1,109 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "coordinate-qa-pass-4",
+  "scope": "Fourth property-specific coordinate verification pass for Oklahoma runtime candidates, focused on Chickasaw Nation properties with direct casino-building or property-level geospatial evidence.",
+  "records": [
+    {
+      "id":"ok-border-casino",
+      "name":"Border Casino",
+      "address":"22953 Brown Springs Rd, Thackerville, OK 73459",
+      "lat":33.73283,
+      "lon":-97.14479,
+      "coordinateEvidence":"https://mapcarta.com/W866028567",
+      "osmFeature":"way 866028567",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Direct casino-building geometry at the verified address; nearby Chickasaw Travel Stop is a separate convenience/travel property."
+    },
+    {
+      "id":"ok-saltcreek-casino",
+      "name":"SaltCreek Casino",
+      "address":"1600 US-81, Pocasset, OK 73079",
+      "lat":35.17549,
+      "lon":-97.96517,
+      "coordinateEvidence":"https://mapcarta.com/W1010182362",
+      "osmFeature":"way 1010182362",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-texoma-casino",
+      "name":"Texoma Casino",
+      "address":"1795 US-70, Kingston, OK 73439",
+      "lat":33.99917,
+      "lon":-96.67528,
+      "coordinateEvidence":"https://mapcarta.com/W1010183973",
+      "osmFeature":"way 1010183973",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-washita-casino",
+      "name":"Washita Casino",
+      "address":"30639 OK-145, Paoli, OK 73074",
+      "lat":34.82787,
+      "lon":-97.30759,
+      "coordinateEvidence":"https://mapcarta.com/W1010187844",
+      "osmFeature":"way 1010187844",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-megastar-casino",
+      "name":"MegaStar Casino",
+      "address":"4350 S Hwy 377, Willis, OK 73439",
+      "lat":33.88736,
+      "lon":-96.83308,
+      "website":"https://megastarcasino.com/",
+      "addressEvidence":"https://megastarcasino.com/contact-us/",
+      "coordinateEvidence":"https://mapcarta.com/W1026650584",
+      "osmFeature":"way 1026650584",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Mapcarta normalizes locality to Kingston while MegaStar first-party contact material uses Willis. Preserve first-party Willis address in runtime."
+    },
+    {
+      "id":"ok-west-bay-casino-resort",
+      "name":"West Bay Casino & Resort",
+      "address":"11840 State Park Rd, Kingston, OK 73439",
+      "lat":33.99650,
+      "lon":-96.63449,
+      "coordinateEvidence":"https://mapcarta.com/es/W1549003790",
+      "osmFeature":"way 1549003790",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-chisholm-trail-casino",
+      "name":"Chisholm Trail Casino",
+      "address":"7807 N Highway 81, Duncan, OK 73533",
+      "lat":34.58484,
+      "lon":-97.96889,
+      "coordinateEvidence":"https://mapcarta.com/W1010164781",
+      "osmFeature":"way 1010164781",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-treasure-valley-casino-hotel",
+      "name":"Treasure Valley Casino & Hotel",
+      "address":"12252 Ruppe Rd, Davis, OK 73030",
+      "lat":34.50916,
+      "lon":-97.17254,
+      "coordinateEvidence":"https://mapcarta.com/W1010186171",
+      "osmFeature":"way 1010186171",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Mapped feature is categorized as hotel but names the full Treasure Valley Casino & Hotel property at the verified address; nearby Chickasaw Travel Stop is separately mapped and should remain outside this destination record."
+    }
+  ],
+  "qaAccounting": {
+    "addressIdentityVerifiedPool": 54,
+    "coordinateVerifiedPrevious": 20,
+    "coordinateVerifiedThisPass": 8,
+    "coordinateVerifiedCumulative": 28,
+    "duplicateDistanceClearedCumulative": 0,
+    "runtimeReadyCumulative": 0,
+    "remainingCoordinateTargetForFifty": 22
+  },
+  "separationAndNormalizationNotes": [
+    "Border Casino is distinct from the nearby Chickasaw Travel Stop.",
+    "MegaStar runtime locality should preserve current first-party Willis, Oklahoma wording even though mapping sources may normalize the same property to Kingston.",
+    "Treasure Valley Casino & Hotel is distinct from the separately mapped nearby Chickasaw Travel Stop.",
+    "No city-centroid coordinates were promoted in this pass."
+  ],
+  "nextPhase": "Continue with remaining Chickasaw properties including Artesian, Black Gold, RiverStar, Lakecrest, Gold Mountain and other clean candidates where direct property geometry is available; then push into Muscogee and Osage. In parallel, finish branch-aware duplicate/name/ID distance QA across all 28 coordinate-verified records."
+}
