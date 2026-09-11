@@ -1,0 +1,27 @@
+{
+  "jurisdiction":"Colorado",
+  "capturedOn":"2026-09-11",
+  "status":"cripple-creek-destination-reconciliation",
+  "scope":"Resolve the remaining Cripple Creek regulator-row versus Dinner Roulette destination ambiguity before Colorado runtime serialization.",
+  "regulatorAccounting":{"crippleCreekLicenseRows":12,"commercialStatewideRows":33},
+  "materialDecision":{
+    "fhrBillys":{"regulatorRow":"FHR BILLY'S","dinnerRouletteDestination":false,"decision":"do-not-create-separate-billys-destination","reason":"Current consumer-facing Full House/Chamonix material presents Bronco Billy's and Chamonix as the active connected casino experiences. Current Cripple Creek visitor material promotes Bronco Billy's, while independent casino-history material marks Billy's Casino closed. The FHR BILLY'S row remains a regulator/accounting unit, not a separately routable current consumer destination."},
+    "broncoBillys":{"dinnerRouletteDestination":true,"address":"233 E Bennett Ave, Cripple Creek, CO 80813","status":"retain-current"},
+    "chamonix":{"dinnerRouletteDestination":true,"status":"retain-current-distinct-connected-experience","reason":"Current first-party material explicitly describes Bronco Billy's and Chamonix as two casinos/two distinct experiences connected under one roof and one owner."}
+  },
+  "evidence":[
+    "https://chamonixco.com/bronco-billys-casino/",
+    "https://chamonixco.com/about-us/",
+    "https://www.cityofcripplecreek.com/print/pdf/node/966",
+    "https://www.colorado.com/cripple-creek/bronco-billy%27s-casino",
+    "https://chipguide.themogh.org/cg_state2.php?ct=&id=CO&s=city"
+  ],
+  "runtimeAccountingDecision":{
+    "knownConsumerDestinationsFromTwelveCrippleCreekRows":10,
+    "separateBillysDestinationAdded":false,
+    "centuryLicenseRowsCollapseToOneConsumerProperty":true,
+    "broncoBillysAndChamonixRemainSeparate":true,
+    "note":"Regulator licenses are evidence/accounting units and do not require one Dinner Roulette destination per row."
+  },
+  "nextPhase":"Finish Colorado property address/coordinate/stable-ID QA for the consumer destination set, including the two tribal resorts, then serialize the clean Colorado runtime batch."
+}
