@@ -1,19 +1,20 @@
 {
   "jurisdiction": "Washington",
   "capturedOn": "2026-09-10",
-  "status": "authoritative-inventory-staged",
+  "status": "authoritative-inventory-reconciled",
   "primaryAuthority": "Washington State Gambling Commission",
   "primaryAuthoritySource": "https://wsgc.wa.gov/tribal-partnerships/tribal-casino-locations",
   "supportingAuthority": "National Indian Gaming Commission",
   "supportingAuthoritySource": "https://www.nigc.gov/map",
-  "scopeNotes": "WSGC states that 23 tribes operate 29 casinos under compact in Washington. Its current directory surface exposes 28 results; current Shoalwater Bay Casino operator evidence confirms the missing 29th physical casino remains open at 4112 State Route 105, Tokeland. House-banked commercial card rooms are a separate WSGC category and are outside this tribal-casino pass.",
-  "expectedCurrentPhysicalDestinations": 29,
+  "scopeNotes": "WSGC's current page says 23 tribes operate 29 casinos under compact but exposes 28 directory results. Current first-party evidence separately confirms both Elwha River Casino and Shoalwater Bay Casino are operating in 2026. Because Elwha River is Class II in NIGC material and therefore not necessarily counted in WSGC's compact total, the Dinner Roulette physical-destination scope contains 30 current tribal casino destinations: the 28 visible WSGC directory properties, Shoalwater Bay as the compact-directory reconciliation exception, and Elwha River as a current Class II destination. Commercial house-banked card rooms remain outside this tribal-casino pass.",
+  "expectedCurrentPhysicalDestinations": 30,
   "records": [
-    {"id":"wa-12-tribes-lake-chelan","name":"12 Tribes Lake Chelan Casino","address":"455 Wapato Lake Road, Manson, WA 98831","status":"current"},
+    {"id":"wa-12-tribes-lake-chelan","name":"12 Tribes Lake Chelan Casino","address":"455 E Wapato Lake Road, Manson, WA 98831","status":"current"},
     {"id":"wa-12-tribes-omak","name":"12 Tribes Omak Casino Hotel","address":"28968 Highway 97, Omak, WA 98841","status":"current"},
     {"id":"wa-12-tribes-coulee-dam","name":"12 Tribes Coulee Dam Casino","address":"515 Birch Street, Coulee Dam, WA 99116","status":"current"},
     {"id":"wa-7-cedars","name":"7 Cedars Casino","address":"270756 Hwy 101, Sequim, WA 98382","status":"current"},
     {"id":"wa-angel-of-the-winds","name":"Angel of the Winds Casino Resort","address":"3438 Stoluckguamish Lane, Arlington, WA 98223","status":"current"},
+    {"id":"wa-elwha-river","name":"Elwha River Casino","address":"631 Stratton Rd, Port Angeles, WA 98363","status":"current-class-ii-first-party-confirmed","website":"https://elwharivercasino.com/","note":"Current casino and Lower Elwha Klallam Tribe sites confirm active operation in 2026; NIGC material identifies the property as Class II, so it is included as a physical casino destination without forcing it into WSGC's Class III compact count."},
     {"id":"wa-emerald-queen-fife","name":"Emerald Queen Casino & Hotel in Fife","address":"5700 Pacific Highway E, Fife, WA 98424","status":"current"},
     {"id":"wa-emerald-queen-tacoma","name":"Emerald Queen Casino & Hotel in Tacoma","address":"2024 E 29th St, Tacoma, WA 98404","status":"current"},
     {"id":"wa-ilani","name":"ilani Casino Resort","address":"1 Cowlitz Way, Ridgefield, WA 98642","status":"current"},
@@ -29,6 +30,7 @@
     {"id":"wa-quil-ceda-creek","name":"Quil Ceda Creek Casino","address":"6221 31st Avenue NE, Tulalip, WA 98271","status":"current"},
     {"id":"wa-quinault-beach","name":"Quinault Beach Resort & Casino","address":"78 State Route 115, Ocean Shores, WA 98569","status":"current"},
     {"id":"wa-red-wind","name":"Red Wind Casino","address":"12819 Yelm Hwy SE, Olympia, WA 98513","status":"current"},
+    {"id":"wa-shoalwater-bay","name":"Shoalwater Bay Casino","address":"4112 State Route 105, Tokeland, WA 98590","status":"current-first-party-confirmed","website":"https://swbcasino.com/","note":"Current operator and tribal sites confirm active 2026 operation. Preserved as the compact-directory reconciliation exception because WSGC states 29 compact casinos while its current directory surface exposes 28."},
     {"id":"wa-silver-reef","name":"Silver Reef Casino Resort","address":"4876 Haxton Way, Ferndale, WA 98248","status":"current"},
     {"id":"wa-skagit-valley","name":"Skagit Valley Casino Resort","address":"5984 N Darrk Lane, Bow, WA 98232","status":"current"},
     {"id":"wa-snoqualmie","name":"Snoqualmie Casino","address":"37500 SE North Bend Way, Snoqualmie, WA 98065","status":"current"},
@@ -36,9 +38,8 @@
     {"id":"wa-suquamish-clearwater","name":"Suquamish Clearwater Casino Resort","address":"15347 Suquamish Way NE, Suquamish, WA 98392","status":"current"},
     {"id":"wa-swinomish","name":"Swinomish Casino and Lodge","address":"12885 Casino Drive, Anacortes, WA 98221","status":"current"},
     {"id":"wa-point","name":"The Point Casino","address":"7989 Salish Ln NE, Kingston, WA 98346","status":"current"},
-    {"id":"wa-tulalip-resort","name":"Tulalip Resort Casino","address":"10200 Quil Ceda Blvd, Tulalip, WA 98271","status":"current"},
-    {"id":"wa-shoalwater-bay","name":"Shoalwater Bay Casino","address":"4112 State Route 105, Tokeland, WA 98590","status":"current-operator-confirmed","note":"Current operator site confirms active 2026 hours/events. WSGC states 29 compact casinos but its current directory surface exposes 28 results, so Shoalwater is preserved as the reconciliation exception rather than dropped."}
+    {"id":"wa-tulalip-resort","name":"Tulalip Resort Casino","address":"10200 Quil Ceda Blvd, Tulalip, WA 98271","status":"current"}
   ],
-  "setChecks":{"declaredWSGCTotal":29,"stagedRecords":29,"result":"PASS"},
-  "nextPhase":"Property-coordinate reconciliation, duplicate/alias check, then runtime activation as casino-catalog-pass-21.ts."
+  "setChecks":{"visibleWSGCDirectoryProperties":28,"declaredWSGCCompactTotal":29,"compactDirectoryExceptionCount":1,"additionalCurrentClassIIDestinationCount":1,"runtimeScopeCount":30,"result":"PASS"},
+  "nextPhase":"Reconcile property coordinates and aliases for the 30-destination scope, then activate as casino-catalog-pass-21.ts."
 }
