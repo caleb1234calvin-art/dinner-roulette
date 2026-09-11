@@ -1,0 +1,81 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "runtime-qa-pass-1-address-and-identity-verified",
+  "scope": "Property-level runtime QA for the clearest Oklahoma casino destinations. This pass verifies current identity, destination scope and normalized first-party address. Coordinates remain a separate gate before runtime activation.",
+  "verifiedClusters": [
+    {
+      "operator": "Chickasaw Nation",
+      "identitySource": "https://www.chickasaw.net/Our-Nation/Locations.aspx?searchtext=casino",
+      "records": [
+        {"id":"ok-winstar-world","name":"WinStar World Casino and Resort","address":"777 Casino Ave, Thackerville, OK 73459","status":"address-verified-coordinate-pending"},
+        {"id":"ok-artesian-casino","name":"Artesian Casino","address":"23 W Vinita Ave, Sulphur, OK 73086","status":"address-verified-coordinate-pending"},
+        {"id":"ok-border-casino","name":"Border Casino","address":"22953 Brown Springs Rd, Thackerville, OK 73459","status":"address-verified-coordinate-pending"},
+        {"id":"ok-saltcreek-casino","name":"SaltCreek Casino","address":"1600 Highway 81, Pocasset, OK 73079","status":"address-verified-coordinate-pending"},
+        {"id":"ok-texoma-casino","name":"Texoma Casino","address":"1795 Highway 70 E, Kingston, OK 73439","status":"address-verified-coordinate-pending"},
+        {"id":"ok-washita-casino","name":"Washita Casino","address":"30639 Highway 145, Paoli, OK 73074","status":"address-verified-coordinate-pending"},
+        {"id":"ok-black-gold-casino","name":"Black Gold Casino","address":"288 Mulberry Ln, Wilson, OK 73463","status":"address-verified-coordinate-pending"},
+        {"id":"ok-newcastle-casino","name":"Newcastle Casino","address":"2457 Highway 62 Service Rd, Newcastle, OK 73065","status":"address-verified-coordinate-pending"},
+        {"id":"ok-jet-stream-casino","name":"Jet Stream Casino","address":"2001 W Airline Rd, Pauls Valley, OK 73075","status":"address-verified-coordinate-pending"},
+        {"id":"ok-megastar-casino","name":"MegaStar Casino","address":"4350 S Highway 377, Willis, OK 73439","status":"address-verified-coordinate-pending"},
+        {"id":"ok-riverstar-casino","name":"RiverStar Casino","address":"11801 E 2160 Rd, Terral, OK 73569","status":"address-verified-coordinate-pending"},
+        {"id":"ok-west-bay-casino-resort","name":"West Bay Casino & Resort","address":"11840 State Park Rd, Kingston, OK 73439","status":"address-verified-coordinate-pending"},
+        {"id":"ok-lakecrest-casino-hotel","name":"Lakecrest Casino and Hotel","address":"1000 US Highway 70 E, Ardmore, OK 73401","status":"address-verified-coordinate-pending"},
+        {"id":"ok-chisholm-trail-casino","name":"Chisholm Trail Casino","address":"7807 N Highway 81, Duncan, OK 73533","status":"address-verified-coordinate-pending"},
+        {"id":"ok-gold-mountain-casino","name":"Gold Mountain Casino","address":"1410 Sam Noble Pkwy, Ardmore, OK 73401","status":"address-verified-coordinate-pending"},
+        {"id":"ok-treasure-valley-casino-hotel","name":"Treasure Valley Casino and Hotel","address":"12252 Ruppe Rd, Davis, OK 73030","status":"address-verified-coordinate-pending"},
+        {"id":"ok-riverwind-casino","name":"Riverwind Casino","address":"1544 W State Highway 9, Norman, OK 73093","status":"address-verified-coordinate-pending"}
+      ],
+      "verifiedCount": 17,
+      "notes": "Current Chickasaw Nation location pages distinguish these casinos from hotel-only, retail, gaming-commission and travel-gaming support records."
+    },
+    {
+      "operator": "Choctaw Nation of Oklahoma",
+      "identitySource": "https://www.choctawcasinos.com/locations/",
+      "records": [
+        {"id":"ok-choctaw-durant","name":"Choctaw Casino & Resort-Durant","address":"4216 S Highway 69/75, Durant, OK 74701","status":"address-verified-coordinate-pending"},
+        {"id":"ok-choctaw-pocola","name":"Choctaw Casino & Resort-Pocola","address":"3400 Choctaw Rd, Pocola, OK 74902","status":"address-verified-coordinate-pending"},
+        {"id":"ok-choctaw-grant","name":"Choctaw Casino & Resort-Grant","address":"1516 US-271, Grant, OK 74738","status":"address-verified-coordinate-pending"},
+        {"id":"ok-choctaw-hochatown","name":"Choctaw Casino & Resort-Hochatown","address":"272 N State Highway 259A, Hochatown, OK 74728","status":"address-verified-coordinate-pending"},
+        {"id":"ok-choctaw-mcalester","name":"Choctaw Casino-McAlester","address":"1638 S George Nigh Expy, McAlester, OK 74501","status":"address-verified-coordinate-pending"},
+        {"id":"ok-choctaw-broken-bow","name":"Choctaw Casino-Broken Bow","address":"1790 S Park Dr, Broken Bow, OK 74728","status":"address-verified-coordinate-pending"},
+        {"id":"ok-choctaw-idabel","name":"Choctaw Casino-Idabel","address":"1425 SE Washington St, Idabel, OK 74745","status":"address-verified-coordinate-pending"},
+        {"id":"ok-choctaw-stringtown","name":"Choctaw Casino-Stringtown","address":"893 N US-69, Stringtown, OK 74569","status":"address-verified-coordinate-pending"}
+      ],
+      "verifiedCount": 8,
+      "notes": "Choctaw's current first-party directory explicitly separates these eight destination casinos from Casino Too travel-plaza gaming locations."
+    },
+    {
+      "operator": "Cherokee Nation Entertainment",
+      "identitySource": "https://www.cherokeecasino.com/",
+      "records": [
+        {"id":"ok-cherokee-fort-gibson","name":"Cherokee Casino Fort Gibson","address":"107 N Georgetown Rd, Fort Gibson, OK 74434","status":"address-verified-coordinate-pending"},
+        {"id":"ok-cherokee-grove","name":"Cherokee Casino Grove","address":"24979 US-59, Grove, OK 74344","status":"address-verified-coordinate-pending"},
+        {"id":"ok-cherokee-ramona","name":"Cherokee Casino Ramona","address":"31501 US-75, Ramona, OK 74061","status":"address-verified-coordinate-pending"},
+        {"id":"ok-cherokee-roland","name":"Cherokee Casino & Hotel Roland","address":"109 Cherokee Blvd, Roland, OK 74954","status":"address-verified-coordinate-pending"},
+        {"id":"ok-cherokee-sallisaw","name":"Cherokee Casino Sallisaw","address":"1621 W Ruth St, Sallisaw, OK 74955","status":"address-verified-coordinate-pending"},
+        {"id":"ok-cherokee-south-coffeyville","name":"Cherokee Casino South Coffeyville","address":"1506 US-169, South Coffeyville, OK 74072","status":"address-verified-coordinate-pending"},
+        {"id":"ok-cherokee-tahlequah","name":"Cherokee Casino Tahlequah","address":"3307 Seven Clans Ave, Tahlequah, OK 74464","status":"address-verified-coordinate-pending"},
+        {"id":"ok-cherokee-west-siloam-springs","name":"Cherokee Casino & Hotel West Siloam Springs","address":"2416 US-412, West Siloam Springs, OK 74338","status":"address-verified-coordinate-pending"},
+        {"id":"ok-cherokee-will-rogers-downs","name":"Cherokee Casino Will Rogers Downs","address":"20900 S 4200 Rd, Claremore, OK 74019","status":"address-verified-coordinate-pending"},
+        {"id":"ok-hard-rock-tulsa","name":"Hard Rock Hotel & Casino Tulsa","address":"777 W Cherokee St, Catoosa, OK 74015","status":"address-verified-coordinate-pending"}
+      ],
+      "verifiedCount": 10,
+      "notes": "The Cherokee Casino first-party directory provides current street addresses for nine properties. Hard Rock Tulsa's current first-party contact page confirms 777 W Cherokee St in Catoosa."
+    }
+  ],
+  "qaAccounting": {
+    "candidateUniverse": 77,
+    "addressIdentityVerifiedThisPass": 35,
+    "stableIdsAssignedThisPass": 35,
+    "coordinateVerifiedThisPass": 0,
+    "runtimeReadyThisPass": 0,
+    "remainingUntilFiftyAddressVerified": 15,
+    "remainingUntilFiftyRuntimeReady": 50
+  },
+  "runtimeGate": {
+    "passed": ["current identity", "destination scope", "normalized first-party street address", "stable provisional Dinner Roulette ID"],
+    "pending": ["property-specific latitude/longitude", "property-specific current website URL where operator directory is not already sufficient", "duplicate/alias distance check against passes 1-27", "final CasinoAuditRecord formatting"]
+  },
+  "nextPhase": "Verify Muscogee, Osage and Citizen Potawatomi addresses next to push the address-verified pool beyond 50. Then perform coordinate QA in prioritized batches and only generate Oklahoma runtime records for destinations that clear every gate."
+}
