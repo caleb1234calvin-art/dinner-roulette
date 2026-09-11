@@ -8,11 +8,11 @@ _Last updated: September 11, 2026_
 - Repository: `caleb1234calvin-art/dinner-roulette`.
 - Current working branch: `feature/dinner-icon-pack-1`.
 - Branch stack: `audit/national-casino-pass-1` → `legal/third-party-compliance-pass-1` → `feature/dinner-icon-pack-1`.
-- Current branch therefore contains casino audit work, legal/compliance, Dinner icon implementation, California/Oregon/Washington runtime work, and Nevada Pass 22 reconciliation staging.
+- Current branch contains casino audit work, legal/compliance, Dinner icon implementation, California/Oregon/Washington runtime work, and Nevada Pass 22 reconciliation.
 - `main` remains untouched unless Caleb explicitly requests a merge/direct change.
 - ChatGPT is the only AI authorized to directly modify the repository unless Caleb explicitly authorizes another assistant for a named file.
 - Dinner Roulette and the Jasper County audit remain interconnected.
-- Compliance review surface: PR #28. Restaurant icon work: Issue #29. Startup ident remains isolated on draft PR #30 and is not part of this casino branch's release decision.
+- Compliance review surface: PR #28. Restaurant icon work: Issue #29. Startup ident remains isolated on draft PR #30.
 
 ## National casino audit
 
@@ -27,15 +27,17 @@ Validation checkpoints:
 - California wiring `468f861dc3421f708f368718b7a48c0ed93f2344` → workflow `34558916921` success.
 - Washington wiring `5eeea6d56ab8eff958513215d489cbc0b7608498` → workflow `34565739203` success.
 - Corrected Oregon + inherited Washington head `fa6fd94a2a3959aece0a9a339f6a8d58c69abaf5` → workflow `34566845887` success.
-- Blocking gates are TypeScript, development build and icon verification. Inherited npm tests remain report-only and must not be described as a strict clean test gate.
+- Blocking gates are TypeScript, development build and icon verification. Inherited npm tests remain report-only.
 
 ## Nevada — Pass 22 reconciliation in progress
 
-Nevada candidate discovery is complete and the audit has entered statewide reconciliation. **Do not create or activate `casino-catalog-pass-22.ts` until the final accounting/address/coordinate gates pass.**
+Nevada candidate discovery is complete and the audit is in statewide row-level reconciliation. **Do not create or activate `casino-catalog-pass-22.ts` until final accounting/address/coordinate gates pass.**
 
 ### Authoritative framework
 
-Primary authority is the Nevada Gaming Control Board. NGCB Statistics & Publications exposes Location Detail, Location Name and Address, Restricted/Nonrestricted Location and Nonrestricted Count reports. The public-report portal is `https://publicreports-gcb.nv.gov/`; the current nonrestricted-count workbook discovered for this audit is the June 30, 2026 report. NGCB revenue reporting provides the market segmentation used for reconciliation. NIGC and current tribal/operator evidence remain the independent cross-check for tribal/Class II destinations.
+Primary authority is the Nevada Gaming Control Board. NGCB Statistics & Publications exposes Location Detail, Location Name and Address, Restricted/Nonrestricted Location and Nonrestricted Count reports. The public-report portal is `https://publicreports-gcb.nv.gov/`; the current nonrestricted-count workbook discovered for this audit is the June 30, 2026 report. NGCB revenue reporting supplies the market segmentation used for reconciliation. NIGC/current tribal/operator evidence remains the independent tribal/Class II cross-check.
+
+A key scope rule is locked: **nonrestricted gaming status is regulatory identity evidence, not automatic Dinner Roulette destination eligibility.** NGCB's own definition includes games/tables, 16+ slots, or combinations, so an active nonrestricted record can still fail the curated physical-destination test.
 
 ### Nevada audit artifacts
 
@@ -46,39 +48,50 @@ Primary authority is the Nevada Gaming Control Board. NGCB Statistics & Publicat
 5. `audit/nevada-laughlin-ledger-2026-09-11.json` — 9 candidate/scope-review rows.
 6. `audit/nevada-northern-markets-ledger-2026-09-11.json` — 45 northern-market rows.
 7. `audit/nevada-balance-state-ledger-2026-09-11.json` — 10 conservative rural rows.
-8. `audit/nevada-statewide-candidate-accounting-2026-09-11.json` — statewide accounting, now advanced from discovery into reconciliation.
-9. `audit/nevada-tribal-crosscheck-2026-09-11.json` — first tribal/federal cross-check.
-10. `audit/nevada-reconciliation-pass-1-2026-09-11.json` — first statewide decision pass and NGCB report-infrastructure checkpoint.
+8. `audit/nevada-statewide-candidate-accounting-2026-09-11.json` — statewide accounting.
+9. `audit/nevada-tribal-crosscheck-2026-09-11.json` — tribal/federal cross-check.
+10. `audit/nevada-reconciliation-pass-1-2026-09-11.json` — first statewide decision pass / NGCB report-infrastructure checkpoint.
+11. `audit/nevada-ambiguity-resolution-pass-2-2026-09-11.json` — high-risk ambiguity decisions and current NGCB corroboration.
 
 ### Nevada accounting checkpoint
 
 - Original candidate/scope-review universe: **153 rows**.
-- Tribal cross-check adds **2 current physical destinations** that must be carried into final reconciliation: **Avi Resort & Casino** and **Moapa Paiute Travel Plaza / Moapa Tribal Casino**.
-- Expanded Nevada decision universe: **155 rows**.
-- This remains a decision universe, not the final runtime count.
-- Wa She Shu Casino remains a status hold because federal/tribal-directory evidence and current closure reports conflict; do not activate without current authoritative/first-party operation confirmation.
-- Palms Casino Resort does not receive a duplicate row merely because it is tribally owned; it remains the same physical off-Strip candidate.
-
-### Decisions already resolved
-
-- Exclude historical/closed: The Mirage, Tropicana Las Vegas, Texas Station, Fiesta Rancho, Harrah's Reno.
-- The Cromwell is alias-only; current successor identity is The Vanderpump Hotel.
-- Include in final reconciliation as current tribal destinations: Avi Resort & Casino and Moapa Paiute Travel Plaza.
-- Hold pending current-operation confirmation: Eastside Cannery and Wa She Shu Casino.
-- Bayshore Inn remains scope review.
-- Dotty's and analogous restricted/retail/route-style gaming are excluded by default from the curated destination backbone unless a distinct destination-casino case is established.
+- Tribal cross-check adds **2 current physical destinations**: **Avi Resort & Casino** and **Moapa Paiute Travel Plaza / Moapa Tribal Casino**.
+- Expanded decision universe: **155 rows**.
+- This is a decision universe, not the final runtime count.
 - Palms remains one physical destination regardless of tribal ownership.
 
-### Same-property identity rules still open
+### Decisions resolved or materially advanced
 
-- Venetian / Palazzo: retain separately during reconciliation until active NGCB identity determines whether both should remain distinct runtime destinations.
-- Wynn / Encore: same rule.
-- Reno's ROW — Eldorado / Silver Legacy / Circus Circus: connected campus does not automatically justify collapsing distinct public casino destinations; resolve against active regulatory identity.
+- Historical/closed exclusions: The Mirage, Tropicana Las Vegas, Texas Station, Fiesta Rancho, Harrah's Reno.
+- The Cromwell is alias-only under current successor The Vanderpump Hotel.
+- Tribal destinations carried forward: Avi Resort & Casino and Moapa Paiute Travel Plaza.
+- Whiskey Pete's, Primm Valley and Buffalo Bill's are retained as current-authority-corroborated Primm candidates from June 2026 Nevada Gaming Commission material.
+- Rio Hotel & Casino is retained with April 2026 NGCB nonrestricted evidence at 3700 W Flamingo Rd.
+- The Venetian Resort Las Vegas has current 2026 NGCB licensee/enforcement evidence and remains retained.
+- The Palazzo remains a separate-public-destination candidate pending exact active NGCB location-ID matching rather than being automatically merged with Venetian.
+- Wynn/Encore use the same conservative rule: no automatic merge; exact active identities still required.
+- Reno's ROW (Eldorado / Silver Legacy / Circus Circus) remains three separate public-destination candidates unless active identity evidence supports consolidation.
+- Eastside Cannery remains a current-operation hold.
+- Wa She Shu remains a current-operation hold because authoritative historical identity and current closure evidence conflict.
+- Moulin Rouge is excluded from current destination runtime: a 2026 nonrestricted slot-only licensing application at the historic address does not establish an open public casino destination.
+- Bayshore Inn, Alamo Casino, Red Drag Casino and rural Eureka ambiguity remain scope/status review.
+- Dotty's and analogous restricted/retail/route gaming remain outside the curated backbone by default.
+
+### Remaining high-risk Nevada identity work
+
+- Casino Royale active NGCB location match/current operation.
+- Palazzo exact separate active location identity.
+- Wynn and Encore exact separate active location identities.
+- Eastside Cannery current operation.
+- Wa She Shu current operation.
+- South Shore Tahoe Harveys/Caesars Republic current casino naming/identity.
+- Remaining rural/small-casino candidates and exact NGCB row matching.
 
 ### Remaining Nevada activation gates
 
 1. Resolve every candidate against current NGCB identity or an explicit tribal/federal exception.
-2. Resolve remaining status/scope rows including Casino Royale, Eastside Cannery, Whiskey Pete's, Bayshore Inn, Alamo Casino, Red Drag Casino and rural Eureka ambiguity.
+2. Finish remaining status/scope/alias decisions.
 3. Finalize multi-casino campus identity/dedupe decisions.
 4. Normalize every included physical address.
 5. Perform property-specific coordinate QA for every surviving destination.
