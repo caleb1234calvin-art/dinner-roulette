@@ -55,6 +55,20 @@ Generated/kept categories: burger, pizza, Mexican taco, Chinese dumpling steamer
 
 Suggested eventual location: `public/dinner-icons/`. Reuse the existing restaurant visual/photo-key mapping architecture and map each restaurant to a generic cuisine icon or fallback. Do not imitate restaurant trademarks. Do not merge icon work merely because the artwork exists.
 
+## Future food-truck discovery — ROADMAP
+
+Caleb wants Dinner Roulette to support **food trucks in the future**. This is a planned capability, not a current implementation requirement and not authorization to begin coding it without a dedicated pass.
+
+Food trucks should be treated as a **mobile-venue subtype**, not assumed to behave like fixed-location restaurants. Existing live discovery is a useful foundation, but a truck's existence is different from knowing where it is serving right now.
+
+Future discovery should preserve a freshness/confidence distinction such as:
+
+1. **Live / serving now** — strong current evidence places the truck at a specific serving location.
+2. **Scheduled today** — a current schedule indicates where it is expected to serve, without pretending this is live GPS confirmation.
+3. **Discovered nearby** — the truck/business is known and relevant to the area, but its current serving location is not confidently established.
+
+Do not roulette a user to a stale or merely registered business location as though the truck is confirmed there. Where practical, expose the current-information source or directions only when location confidence is sufficient. Any future third-party food-truck schedule/location source must receive the same legal/compliance review as other integrations: use authorized/current data or provider-supported links, avoid scraping or implied partnerships, and distinguish scheduled information from verified live presence.
+
 # CAUSTIC RELAY — ACTIVE MAKER/PUBLISHER BRAND CHECKPOINT
 
 ## Brand decision — September 11, 2026
@@ -75,12 +89,10 @@ Current intended use is primarily a reusable maker/publisher identity across Cal
 
 ## Brand meaning
 
-The two words intentionally support the visual identity:
-
 - **Caustic** = harsh, eating away, degradation/corrosion without needing literal acid imagery.
 - **Relay** = transmission, signal, handoff, continuity.
 
-The startup ident should therefore behave as a tiny causal story rather than a generic glitch animation:
+The startup ident is a causal story:
 
 **stable relay → pincer pinch → transmission rupture → signal loss → damaged relay returns → caustic degradation spreads → rendering fidelity collapses**.
 
@@ -120,10 +132,13 @@ Treat this as provenance/source material. Do not destructively overwrite it when
 ## Static/corrosion source progression
 
 - `8817.mp4`: deliberate TV-static treatment; static is intentional, not an export error.
-- `8840.mp4`: brighter static source, 1.5 sec, 24 fps, 36 frames, 768×1168. Caleb prefers using this brighter source first when solving the difficult generative corrosion/transmission behavior, then applying controlled darkening afterward.
-- `8841.mp4`: later worked-on version; preserve as part of the iteration history, but the current strategy favors solving behavior first and accessibility/brightness second.
+- `8840.mp4`: brighter static source, 1.5 sec, 24 fps, 36 frames, 768×1168. Caleb prefers using this brighter source first when solving difficult generative corrosion/transmission behavior, then applying controlled darkening afterward.
+- `8841.mp4`: later worked-on version; preserve as part of iteration history, but current strategy favors solving behavior first and accessibility/brightness second.
+- `8842.mp4`: successful intermediate where the polished creature visibly collapses toward linework/sketch fidelity while remaining recognizable. Treat the successful fidelity-collapse behavior as an approved element rather than recreating it from scratch. Remaining modifications target background darkness, pinch-synchronized rupture, brief dropout, damaged return, and wordmark readability while keeping the creature locked.
 
-Do not resurrect the earlier 1-in-100 “shiny Pokémon” random startup idea unless Caleb explicitly asks; the concern was that a rare corruption startup could be mistaken for an app malfunction.
+The fine analog-static texture also has a private personal layer: Caleb notes that it resembles a vastly brighter/exaggerated version of the subtle visual static he perceives in darkness. This is not intended as a literal medical visualization; publicly it remains corrupted-transmission imagery.
+
+Do not resurrect the earlier 1-in-100 “shiny Pokémon” random startup idea unless Caleb explicitly asks; a rare corruption startup could be mistaken for app malfunction.
 
 ## Caustic Relay startup-ident narrative
 
@@ -138,25 +153,23 @@ The corruption is directional: after the pinch, every major beat should generall
 
 Typography may show controlled missing fragments, horizontal displacement, localized flicker/dropout, or one/two mirrored/reversed visual fragments while preserving the lexical spelling **CAUSTIC RELAY** and overall readability.
 
-Near the end, the polished creature may lose **rendering fidelity** toward the underlying drawing/linework. This is not anatomical morphing. Conceptually, the relay can no longer maintain the high-fidelity rendering of the same creature.
+Near the end, the polished creature may lose **rendering fidelity** toward the underlying drawing/linework. This is not anatomical morphing. Conceptually, the relay can no longer maintain the high-fidelity rendering of the same creature. The polished digital representation being stripped back toward Caleb's original hand-drawn lines is an intentional personal layer of the ident.
 
 Avoid literal acid, green slime, dripping goo, skulls, radioactive symbols, explosions, smoke, generic hacker imagery, extra limbs, tongues, slithering, spins, or anatomical mutation. The signal itself is being eaten away.
 
 ## Photosensitivity / brightness finishing rule
 
-Do **not** force the hard generative corrosion pass to solve final brightness at the same time. Caleb's current preferred workflow is:
+Do **not** force the hard generative corrosion pass to solve final brightness at the same time. Caleb's preferred workflow is:
 
-1. Use the brighter source to solve the difficult behavior/transformation.
+1. Use the brighter source to solve difficult behavior/transformation.
 2. Approve motion/effect structure.
 3. Apply a separate controlled darkening/accessibility pass afterward.
 
-Final treatment should favor a soft black overlay/dark aura/vignette, strongest where static becomes excessively bright (especially bottom/edges), while keeping the static visibly alive underneath.
+Final treatment should favor a soft black overlay/dark aura/vignette on the **background/static**, strongest where static becomes excessively bright (especially bottom/edges), while keeping the static visibly alive underneath and preserving the creature itself.
 
 Avoid new full-screen white flashes, repeated black/white inversion, rapid large-area strobing, or repeated high-intensity brightness jumps. Prefer localized horizontal tears, tracking errors, dark interruptions, partial dropouts, fragmentation, and signal displacement.
 
 # Grok image-generation instruction protocol — LOCKED WORKFLOW
-
-This section defines how ChatGPT should prepare future Grok image-generation/editing instructions.
 
 ## Core rule: approved outputs become assets
 
@@ -201,7 +214,7 @@ If a pass is correct, preserve it. Do not regenerate successful anatomy/motion j
 
 ## Multi-reference strategy
 
-When Grok supports multiple image references, assign each an explicit authority role instead of expecting the model to infer which properties matter. Example:
+When Grok supports multiple image references, assign each an explicit authority role instead of expecting the model to infer which properties matter:
 
 - Reference 1 = anatomy/composition authority.
 - Reference 2 = original drawing/linework authority.
@@ -215,11 +228,11 @@ For polished-to-drawing degradation, prefer supplying both the approved polished
 
 ## Typography protocol
 
-When exact text matters, provide exact spelling and separate lexical identity from visual treatment:
+When exact text matters:
 
 > Text reads exactly `CAUSTIC RELAY`. Preserve the spelling. Distort the visual presentation, not the lexical identity.
 
-Prefer concrete operations on a few characters/regions rather than “make some letters weird.” Examples: a specific horizontal slice, partial missing stroke, temporary mirrored fragment, localized displacement, or controlled dropout. Keep the wordmark recognizable.
+Prefer concrete operations on a few characters/regions rather than “make some letters weird.” Keep the wordmark recognizable.
 
 ## Still states before complex video
 
@@ -234,19 +247,15 @@ Then use Grok's video workflow to focus primarily on transition, timing, and tem
 
 ## Grok role distinction
 
-Do not conflate the Grok paths:
-
-- **Grok Imagine** = image generation/editing path.
-- **Grok Ask** = conversational/planning path used for the video workflow and handoff coordination.
+- **Grok Imagine** = generative image/video creation and editing path.
+- **Grok Ask** = conversational/planning/handoff layer; when it invokes generation it may rewrite/compress Caleb's request into a model-facing prompt, so immutable/editable hierarchy must survive compression.
 - Grok remains outside repository authority unless Caleb explicitly directs otherwise.
 
 ## Final production principle
 
-Default to:
-
 **generative design → generative motion → deterministic finishing**
 
-The purpose is to minimize model drift, preserve successful assets, and avoid giving Grok unnecessary opportunities to reinterpret anatomy/composition while solving unrelated visual problems.
+The purpose is to minimize model drift, preserve successful assets, and avoid unnecessary opportunities to reinterpret anatomy/composition while solving unrelated visual problems.
 
 # Dinner Roulette startup implementation
 
@@ -262,7 +271,7 @@ Once Caleb approves a final **Caustic Relay** static/corroded wordmark video, ad
 
 # PR / public brand infrastructure
 
-Caleb intends the parent identity to have dedicated public-facing accounts (email/social/support) separate from his personal identity. A dedicated Grok PR assistant was originally created under the temporary Venom Systems name; once the brand infrastructure is updated, it should be renamed/re-briefed for **Caustic Relay**.
+Caleb intends the parent identity to have dedicated public-facing accounts (email/social/support) separate from his personal identity. A dedicated Grok PR assistant was originally created under the temporary Venom Systems name; the rebuilt/replacement assistant should be re-briefed for **Caustic Relay**.
 
 Intended support flow:
 
