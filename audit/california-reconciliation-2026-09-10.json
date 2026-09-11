@@ -1,0 +1,100 @@
+{
+  "jurisdiction": "California",
+  "capturedOn": "2026-09-10",
+  "status": "reconciliation-in-progress",
+  "authority": "California Gambling Control Commission",
+  "authoritySource": "https://www.cgcc.ca.gov/?pageid=licensees&reportid=1002",
+  "notes": "First property-level reconciliation tranche for the staged 74-record California tribal-casino inventory. These records have regulator-backed identity plus property-specific address and plausible coordinate evidence. This file is audit staging only and is not yet wired into the runtime catalog. California remains incomplete until all active records are reconciled and cross-checked.",
+  "records": [
+    {
+      "license": "TRCS-000078",
+      "name": "Agua Caliente Casino Cathedral City",
+      "address": "68960 E Palm Canyon Dr, Cathedral City, CA 92234",
+      "lat": 33.778519,
+      "lon": -116.458294,
+      "website": "https://aguacalientecasinos.com/properties/cathedral-city/",
+      "addressSource": "https://www.aguacalientecasinos.com/hours-of-operation/",
+      "coordinateSource": "Google Maps link surfaced from the official Agua Caliente site"
+    },
+    {
+      "license": "TRCS-000001",
+      "name": "Agua Caliente Casino Palm Springs",
+      "address": "401 E Amado Rd, Palm Springs, CA 92262",
+      "lat": 33.826377,
+      "lon": -116.543105,
+      "website": "https://aguacalientecasinos.com/",
+      "addressSource": "https://www.aguacalientecasinos.com/hours-of-operation/",
+      "coordinateSource": "Property-address EV-station coordinate record at 401 E Amado Rd"
+    },
+    {
+      "license": "TRCS-000002",
+      "name": "Agua Caliente Casino Rancho Mirage",
+      "address": "32250 Bob Hope Dr, Rancho Mirage, CA 92270",
+      "lat": 33.81473,
+      "lon": -116.40911,
+      "website": "https://aguacalientecasinos.com/properties/rancho-mirage/",
+      "addressSource": "https://www.aguacalientecasinos.com/hours-of-operation/",
+      "coordinateSource": "OpenStreetMap-derived property coordinate"
+    },
+    {
+      "license": "TRCS-000004",
+      "name": "Augustine Casino",
+      "address": "84001 Avenue 54, Coachella, CA 92236",
+      "lat": 33.65576,
+      "lon": -116.19736,
+      "website": "https://www.augustinecasino.com/",
+      "addressSource": "https://www.augustinecasino.com/faqs/",
+      "coordinateSource": "OpenStreetMap-derived casino coordinate"
+    },
+    {
+      "license": "TRCS-000005",
+      "name": "Barona Resort and Casino",
+      "address": "1932 Wildcat Canyon Rd, Lakeside, CA 92040",
+      "lat": 32.93966,
+      "lon": -116.87349,
+      "website": "https://www.barona.com/",
+      "addressSource": "Property listing reconciled to Barona Resort & Casino",
+      "coordinateSource": "OpenStreetMap/Wikidata property coordinate"
+    },
+    {
+      "license": "TRCS-000061",
+      "name": "Bear River Casino Resort",
+      "address": "11 Bear Paws Way, Loleta, CA 95551",
+      "lat": 40.62726,
+      "lon": -124.20835,
+      "website": "https://bearrivercasino.com/",
+      "addressSource": "https://bearrivercasino.com/contact-us/",
+      "coordinateSource": "OpenStreetMap-derived casino coordinate"
+    },
+    {
+      "license": "TRCS-000054",
+      "name": "Black Oak Casino Resort",
+      "address": "19400 Tuolumne Rd N, Tuolumne, CA 95379",
+      "lat": 37.9725981,
+      "lon": -120.241176,
+      "website": "https://www.blackoakcasino.com/",
+      "addressSource": "https://www.blackoakcasino.com/plan/contact",
+      "coordinateSource": "Visit Tuolumne County property coordinate"
+    },
+    {
+      "license": "TRCS-000010",
+      "name": "Blue Lake Casino and Hotel",
+      "address": "777 Casino Way, Blue Lake, CA 95525",
+      "lat": 40.88554,
+      "lon": -123.99969,
+      "website": "https://www.bluelakecasino.com/",
+      "addressSource": "https://www.bluelakecasino.com/about/",
+      "coordinateSource": "OpenStreetMap-derived casino coordinate"
+    },
+    {
+      "license": "TRCS-000042",
+      "name": "Cache Creek Casino Resort",
+      "address": "14455 Highway 16, Brooks, CA 95606",
+      "lat": 38.73453,
+      "lon": -122.14245,
+      "website": "https://www.cachecreek.com/",
+      "addressSource": "https://www.cachecreek.com/contact",
+      "coordinateSource": "OpenStreetMap-derived casino coordinate"
+    }
+  ]
+}
