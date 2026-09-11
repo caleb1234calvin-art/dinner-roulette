@@ -1,0 +1,25 @@
+{
+  "jurisdiction":"Colorado",
+  "city":"Black Hawk",
+  "capturedOn":"2026-09-11",
+  "status":"current-address-qa-pass-1",
+  "scope":"Current consumer-facing address normalization for the first Black Hawk runtime-QA group. This pass deliberately records identity/address evidence before numerical property-coordinate serialization.",
+  "records":[
+    {"id":"co-black-hawk-ameristar","name":"Ameristar Casino Resort Spa Black Hawk","address":"111 Richman Street, Black Hawk, CO 80422","status":"address-current","evidence":"https://www.ameristarblackhawk.com/casino"},
+    {"id":"co-black-hawk-horseshoe","name":"Horseshoe Black Hawk","address":"401 Main Street, Black Hawk, CO 80422","status":"address-current","evidence":"https://assets.caesars.com/m/6f1dde326d8116f6/original/1633941461-csr-report-market-sheets-ibh-black-hawk-ng-1.pdf"},
+    {"id":"co-black-hawk-lady-luck","name":"Lady Luck Casino Black Hawk","address":"340 Main Street, Black Hawk, CO 80422","status":"address-current","evidence":"https://assets.caesars.com/m/6f1dde326d8116f6/original/1633941461-csr-report-market-sheets-ibh-black-hawk-ng-1.pdf"},
+    {"id":"co-black-hawk-lodge","name":"The Lodge Casino","address":"240 Main Street, Black Hawk, CO 80422","status":"address-current","evidence":"https://thelodgecasino.com/contact-us/"},
+    {"id":"co-black-hawk-gilpin","name":"The Gilpin Casino","address":"111 Main Street, Black Hawk, CO 80422","status":"address-current","evidence":"https://thegilpincasino.com/contact-us/"},
+    {"id":"co-black-hawk-monarch","name":"Monarch Casino Resort Spa Black Hawk","address":"488 Main Street, Black Hawk, CO 80422","status":"address-current","evidence":"https://monarchblackhawk.com/contact-us"},
+    {"id":"co-black-hawk-saratoga","name":"Saratoga Casino Black Hawk","address":"101 Main Street, Black Hawk, CO 80422","status":"address-current","evidence":"https://www.saratogacasinobh.com/visit"},
+    {"id":"co-black-hawk-sasquatch","name":"Sasquatch Casino","address":"125 Gregory Street, Black Hawk, CO 80422","status":"address-current","evidence":"https://sasquatchcasino.com/contact-us/"},
+    {"id":"co-black-hawk-wild-card","name":"Wild Card Saloon","address":"120 Main Street, Black Hawk, CO 80422","status":"address-current","evidence":"https://wildcardsaloon.com/contact-us/"},
+    {"id":"co-black-hawk-bigfoot","name":"Bigfoot Casino","address":"101 Gregory Street, Black Hawk, CO 80422","status":"address-current-successor","evidence":"https://bigfootcasinoblackhawk.com/","note":"Current successor at the former Z Casino Black Hawk location. Do not create a parallel current Z Casino destination."}
+  ],
+  "specialCases":[
+    {"name":"Bally's Black Hawk","status":"physical-subproperty-address-normalization-pending","note":"Current Bally's consumer site presents the complex at 300 Main Street, while regulator/history evidence retains East/North/West physical license/property distinctions. Preserve the three-property accounting until exact current subproperty addresses and coordinates are reconciled; do not collapse them merely because the current marketing site uses one complex address."},
+    {"name":"Bigfoot Casino / Z Casino","status":"successor-lineage-resolved","note":"Bigfoot is current at 101 Gregory Street. Treat Z Casino as predecessor branding, not a second current destination."}
+  ],
+  "qaAccounting":{"addressVerifiedThisPass":10,"coordinateVerifiedThisPass":0,"blackHawkSubpropertyHolds":["Bally's Black Hawk East","Bally's Black Hawk North","Bally's Black Hawk West"]},
+  "nextPhase":"Resolve Bally's East/North/West current physical subproperty addresses and then collect property-specific coordinates for the ten address-cleared Black Hawk destinations plus the Bally's physical properties. Continue with Central City and Cripple Creek in parallel."
+}
