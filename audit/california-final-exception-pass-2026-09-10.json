@@ -1,33 +1,32 @@
 {
   "jurisdiction": "California",
   "capturedOn": "2026-09-10",
-  "status": "final-exception-pass-updated",
-  "purpose": "Resolve the remaining California exceptions after the 60-of-74 strict checkpoint. Promote only sufficiently evidenced properties and explicitly classify closures, pre-openings, scope holds, dedupes, and multi-destination license cases.",
+  "status": "research-exceptions-closed",
+  "purpose": "Resolve the remaining California exceptions after the 60-of-74 strict checkpoint. Promote sufficiently evidenced properties and explicitly classify closures, pre-openings, scope holds, dedupes, and multi-destination license cases.",
   "startingCheckpoint": {"inventory":74,"fullyReconciled":60},
   "newlyFullyReconciled": [
     {"license":"TRCS-000003","name":"Desert Rose Casino","address":"901 County Road 56, Alturas, CA 96101","lat":41.45549,"lon":-120.55974,"status":"fully-reconciled"},
     {"license":"TRCS-000013","name":"Red Fox Casino","address":"200 Cahto Drive, Laytonville, CA 95454","lat":39.6695138,"lon":-123.4971106,"status":"property-reconciled-status-caution","note":"CGCC lists the license active while secondary evidence questions current operation. Do not silently activate without final operating-status treatment."},
     {"license":"TRCS-000017","name":"Cher-Ae Heights Casino","currentPropertyName":"The Heights Casino","address":"27 Scenic Drive, Trinidad, CA 95570","lat":41.0594,"lon":-124.1428,"status":"fully-reconciled-regulator-locality-caution","note":"Physical property is Trinidad; CGCC locality display conflicts."},
-    {"license":"TRCS-000014","name":"Cahuilla Casino Hotel","address":"52702 US Highway 371, Anza, CA 92539","lat":33.53978,"lon":-116.7401,"status":"fully-reconciled","coordinateSource":"Santa Ana Watershed Project Authority feasibility report identifies Cahuilla Casino at 33°32'23.21N 116°44'24.29W; California CEQAnet independently ties the casino/hotel expansion to the same Highway 371 property."},
-    {"license":"TRCS-000077","name":"Harrah's Northern California","address":"4640 Coal Mine Road, Ione, CA 95640","lat":38.2753448,"lon":-120.9106801,"status":"fully-reconciled","coordinateSource":"Current address-specific Harrah's Northern California business map record; independent restaurant-within-property record resolves to the same coordinate."},
-    {"license":"TRCS-000071","name":"Winnedumah Winn's Casino","address":"135 South Highway 395, Independence, CA 93526","lat":36.8014642,"lon":-118.1989829,"status":"fully-reconciled","coordinateSource":"Current specialty casino listings identify the Fort Independence casino as open at 135 South Highway 395 and provide address-specific coordinates; CGCC independently lists TRCS-000071 active through 2035."}
+    {"license":"TRCS-000014","name":"Cahuilla Casino Hotel","address":"52702 US Highway 371, Anza, CA 92539","lat":33.53978,"lon":-116.7401,"status":"fully-reconciled"},
+    {"license":"TRCS-000077","name":"Harrah's Northern California","address":"4640 Coal Mine Road, Ione, CA 95640","lat":38.2753448,"lon":-120.9106801,"status":"fully-reconciled"},
+    {"license":"TRCS-000071","name":"Winnedumah Winn's Casino","address":"135 South Highway 395, Independence, CA 93526","lat":36.8014642,"lon":-118.1989829,"status":"fully-reconciled"},
+    {"license":"TRCS-000082","name":"Acorn Ridge Casino","address":"17500 State Highway 49, Plymouth, CA 95669","lat":38.4658333,"lon":-120.8525278,"website":"https://www.acornridgecasino.com/","status":"fully-reconciled","addressSource":"Current Acorn Ridge operator site confirms 17500 State Highway 49 and active September 2026 casino/event programming; February 24, 2026 opening independently confirmed by regional news.","coordinateSource":"California CEQAnet/Bureau of Indian Affairs Ione Band fee-to-trust casino project record gives 38°27'57.00N 120°51'9.10W for the 228.04-acre casino project site with State Route 49 access. Current City of Plymouth project records independently identify Acorn Ridge at 17500 CA-49 on the same tribal casino project site.","note":"Coordinate is the authoritative project-site coordinate rather than a claimed building-door centroid; suitable for destination discovery/navigation while preserving provenance."}
   ],
   "resolvedRuntimeExclusionsOrSpecialCases": [
     {"license":"TRCS-000075","name":"Casino Morongo","decision":"do-not-create-second-runtime-destination","reason":"TRCS-000030 Morongo Casino Resort and Spa already represents the verified current Morongo campus; a second destination risks duplication."},
     {"license":"TRCS-000083","name":"North Fork Mono Casino","decision":"exclude-until-open","reason":"Licensed property is known but announced opening is October 2026."},
     {"license":"TRCS-000068","name":"Hidden Oaks Casino","decision":"hold-from-class-III-curated-runtime","reason":"Operator describes the facility as Class II; preserve in audit evidence pending an explicit runtime-scope decision."},
     {"license":"TRCS-000080","name":"Mechoopda Casino","address":"149 Openshaw Rd, Oroville, CA 95965","decision":"exclude-closed-property-from-current-runtime","reason":"CGCC still lists TRCS-000080 active, but the tribe announced suspension and the temporary casino closed after January 31, 2025. Preserve the licensed property record but do not present it as a currently-open destination."},
-    {"license":"TRCS-000018","name":"Chicken Ranch Casino","decision":"represent-current-resort-as-primary-and-document-og-separately","primaryDestination":{"name":"Chicken Ranch Casino Resort","address":"9100 People of the Mountain Road, Jamestown, CA 95327"},"secondaryPhysicalVenue":{"name":"OG Casino / Chicken Ranch Casino & Bingo","address":"16929 Chicken Ranch Road, Jamestown, CA 95327"},"reason":"The operator confirms both venues are currently operating: the resort is open 24/7 and the OG Casino is open daily. The CGCC roster exposes one staged casino license record, so the curated license-backed destination should use the current resort as primary while the OG venue remains explicitly documented and can still surface through live discovery rather than being invented as a second license record."}
+    {"license":"TRCS-000018","name":"Chicken Ranch Casino","decision":"represent-current-resort-as-primary-and-document-og-separately","primaryDestination":{"name":"Chicken Ranch Casino Resort","address":"9100 People of the Mountain Road, Jamestown, CA 95327"},"secondaryPhysicalVenue":{"name":"OG Casino / Chicken Ranch Casino & Bingo","address":"16929 Chicken Ranch Road, Jamestown, CA 95327"},"reason":"The operator confirms both venues are currently operating. The CGCC roster exposes one staged casino license record, so the curated license-backed destination should use the current resort as primary while the OG venue remains explicitly documented and can surface through live discovery."}
   ],
-  "stillPending": [
-    {"license":"TRCS-000082","name":"Acorn Ridge Casino","reason":"Current operator now presents the property at 17500 State Highway 49, Plymouth, but the audit still lacks a sufficiently direct coordinate source suitable for strict catalog promotion. Operator pages also contain mixed opening-language snapshots, so current-status confirmation should be part of the final check."}
-  ],
+  "stillPending": [],
   "accounting": {
-    "newlyPropertyReconciledFrom60Checkpoint":6,
-    "combinedPropertyReconciled":66,
+    "newlyPropertyReconciledFrom60Checkpoint":7,
+    "combinedPropertyReconciled":67,
     "explicitRuntimeExclusionOrSpecialCaseDecisions":5,
-    "stillPending":1,
+    "remainingResearchExceptions":0,
     "inventory":74,
-    "note":"This file tracks the final exception work, not a simple partition of all 74 licenses. The remaining research exception is Acorn Ridge. After that, the task becomes all-ID accounting, consolidation, physical-destination derivation, runtime catalog construction, and validation."
+    "note":"Individual-property research exceptions are closed. The next phase is all-74 license-ID accounting across the staged audit files, consolidation into one authoritative reconciliation, derivation of the justified physical runtime destination set, catalog pass 19 construction, wiring, and validation. Property-reconciled count is not expected to equal runtime destination count because exclusions, dedupes, status cautions, and multi-venue cases require explicit treatment."
   }
 }
