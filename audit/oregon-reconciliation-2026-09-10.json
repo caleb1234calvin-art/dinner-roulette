@@ -1,0 +1,23 @@
+{
+  "jurisdiction":"Oregon",
+  "verifiedOn":"2026-09-10",
+  "status":"property-reconciliation",
+  "inventory":"audit/oregon-tribal-casinos-2026-09-10.json",
+  "primaryAuthority":"https://www.oregon.gov/osp/programs/pages/gaming-enforcement.aspx",
+  "supportingAuthority":"https://www.nigc.gov/wp-content/uploads/2025/12/12112025TribesByStateTribeList.pdf",
+  "records":[
+    {"id":"or-spirit-mountain","name":"Spirit Mountain Casino","address":"27100 SW Salmon River Hwy, Grand Ronde, OR 97347","lat":45.0619444,"lon":-123.5822222,"website":"https://spiritmountain.com/","coordinateTreatment":"property-geocode-corroborated"},
+    {"id":"or-chinook-winds","name":"Chinook Winds Casino Resort","address":"1777 NW 44th Street, Lincoln City, OR 97367","lat":45.017497,"lon":-124.006019,"website":"https://www.chinookwindscasino.com/","coordinateTreatment":"property-geocode-corroborated"},
+    {"id":"or-three-rivers-florence","name":"Three Rivers Casino Resort","address":"5647 Highway 126, Florence, OR 97439","lat":43.9828,"lon":-124.0797,"website":"https://www.threeriverscasino.com/florence","coordinateTreatment":"property-coordinate-corroborated"},
+    {"id":"or-three-rivers-coos-bay","name":"Three Rivers Casino Coos Bay","address":"1297 Ocean Boulevard, Coos Bay, OR 97420","lat":43.3786,"lon":-124.2378,"website":"https://www.threeriverscasino.com/coos-bay","coordinateTreatment":"property-coordinate-corroborated"},
+    {"id":"or-kokwel-coos-bay","name":"Ko-Kwel Casino Resort | Coos Bay","address":"3201 Tremont Avenue, North Bend, OR 97459","lat":43.4111,"lon":-124.2293,"website":"https://www.kokwelresorts.com/coos-bay/","coordinateTreatment":"property-coordinate-corroborated","note":"Current operator branding replaces The Mill Casino name."},
+    {"id":"or-kokwel-medford","name":"Ko-Kwel Casino Resort | Medford","address":"2375 S Pacific Hwy, Medford, OR 97501","lat":42.3043,"lon":-122.8612,"website":"https://www.kokwelresorts.com/medford/","coordinateTreatment":"address/property-map-corroborated","note":"Current Class II casino destination identified by NIGC and current operator materials."},
+    {"id":"or-seven-feathers","name":"Seven Feathers Casino Resort","address":"146 Chief Miwaleta Lane, Canyonville, OR 97417","lat":42.9392,"lon":-123.2844,"website":"https://sevenfeathers.com/","coordinateTreatment":"property-geocode-corroborated"},
+    {"id":"or-wildhorse","name":"Wildhorse Resort & Casino","address":"46510 Wildhorse Blvd, Pendleton, OR 97801","lat":45.64855,"lon":-118.67704,"website":"https://www.wildhorseresort.com/","coordinateTreatment":"property-geocode-corroborated"},
+    {"id":"or-indian-head","name":"Indian Head Casino","address":"3236 Hwy 26, Warm Springs, OR 97761","lat":44.7619,"lon":-121.2654,"website":"https://www.indianheadcasino.com/","coordinateTreatment":"property-coordinate-corroborated"},
+    {"id":"or-kla-mo-ya","name":"Kla-Mo-Ya Casino","address":"34333 US-97, Chiloquin, OR 97624","lat":42.41955,"lon":-121.81215,"website":"https://klamoyacasino.com/","coordinateTreatment":"property-geocode-corroborated"}
+  ],
+  "recordCount":10,
+  "setChecks":{"inventoryCount":10,"reconciledCount":10,"missing":[],"result":"PASS"},
+  "notes":["Coordinates are property-level discovery coordinates assembled from current property/address map evidence and are not represented as regulator-supplied front-door coordinates.","Old Camp Casino remains excluded as a historical closure.","Plateau Travel Plaza remains outside the destination-casino scope."]
+}
