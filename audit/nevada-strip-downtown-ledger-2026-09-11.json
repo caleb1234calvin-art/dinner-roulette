@@ -1,0 +1,78 @@
+{
+  "jurisdiction":"Nevada",
+  "capturedOn":"2026-09-11",
+  "status":"candidate-ledger-staged",
+  "primaryAuthority":"Nevada Gaming Control Board",
+  "currentTourismCrosscheck":"Las Vegas Convention and Visitors Authority / City of Las Vegas",
+  "segments":[
+    {
+      "id":"nv-las-vegas-strip",
+      "status":"candidate-set-needs-ngcb-row-reconciliation-and-coordinate-qa",
+      "candidates":[
+        {"name":"Mandalay Bay Resort & Casino","status":"current"},
+        {"name":"Luxor Hotel & Casino","status":"current"},
+        {"name":"Excalibur Hotel & Casino","status":"current"},
+        {"name":"New York-New York Hotel & Casino","status":"current"},
+        {"name":"MGM Grand Hotel & Casino","status":"current"},
+        {"name":"Park MGM Las Vegas","status":"current"},
+        {"name":"ARIA Resort & Casino","status":"current"},
+        {"name":"Bellagio","status":"current"},
+        {"name":"The Cosmopolitan of Las Vegas","status":"current"},
+        {"name":"Planet Hollywood Resort & Casino","status":"current"},
+        {"name":"Paris Las Vegas","status":"current"},
+        {"name":"Horseshoe Las Vegas","status":"current"},
+        {"name":"The Vanderpump Hotel","status":"current","aliases":["The Cromwell"],"note":"Cromwell rebranded; Caesars reports a 40,000-square-foot casino and June 2026 grand opening under the Vanderpump name."},
+        {"name":"Caesars Palace","status":"current"},
+        {"name":"Flamingo Las Vegas","status":"current"},
+        {"name":"The LINQ Hotel + Experience","status":"current"},
+        {"name":"Harrah's Las Vegas","status":"current"},
+        {"name":"Casino Royale","status":"needs-current-ngcb-row-confirmation"},
+        {"name":"The Venetian Resort Las Vegas","status":"current"},
+        {"name":"The Palazzo at The Venetian Resort","status":"current-separate-casino-floor-needs-ngcb-identity-check"},
+        {"name":"Treasure Island Las Vegas","status":"current"},
+        {"name":"Wynn Las Vegas","status":"current"},
+        {"name":"Encore at Wynn Las Vegas","status":"current-separate-casino-floor-needs-ngcb-identity-check"},
+        {"name":"Resorts World Las Vegas","status":"current"},
+        {"name":"Fontainebleau Las Vegas","status":"current"},
+        {"name":"Circus Circus Hotel & Casino","status":"current"},
+        {"name":"SAHARA Las Vegas","status":"current"},
+        {"name":"The STRAT Hotel, Casino & Tower","status":"current","note":"LVCVA identifies The STRAT as the northernmost major Strip hotel; City of Las Vegas also treats it as a casino destination just north of downtown."}
+      ],
+      "explicitHistoricalExclusions":[
+        {"name":"The Mirage","reason":"closed in 2024; Hard Rock replacement not yet a current casino destination in this 2026 audit window"},
+        {"name":"Tropicana Las Vegas","reason":"closed/demolished; not a current physical casino destination"},
+        {"name":"The Cromwell","reason":"rename-only alias of current The Vanderpump Hotel; do not duplicate"}
+      ]
+    },
+    {
+      "id":"nv-downtown-las-vegas",
+      "status":"candidate-set-needs-ngcb-row-reconciliation-and-coordinate-qa",
+      "candidates":[
+        {"name":"Plaza Hotel & Casino","status":"current"},
+        {"name":"Golden Gate Hotel & Casino","status":"current"},
+        {"name":"Circa Resort & Casino","status":"current"},
+        {"name":"the D Las Vegas","status":"current"},
+        {"name":"Four Queens Hotel & Casino","status":"current"},
+        {"name":"Fremont Hotel & Casino","status":"current"},
+        {"name":"Binion's Gambling Hall & Hotel","status":"current"},
+        {"name":"Golden Nugget Las Vegas","status":"current"},
+        {"name":"California Hotel & Casino","status":"current"},
+        {"name":"Main Street Station Casino Brewery Hotel","status":"current"},
+        {"name":"Downtown Grand Hotel & Casino","status":"current"},
+        {"name":"El Cortez Hotel & Casino","status":"current"}
+      ]
+    }
+  ],
+  "setChecks":{
+    "stripCandidateCount":28,
+    "downtownCandidateCount":12,
+    "combinedCandidateCount":40,
+    "finalizedCount":null,
+    "result":"STAGED"
+  },
+  "notes":[
+    "This is a conservative candidate ledger, not the final Nevada runtime set.",
+    "Every candidate must still be matched to the active NGCB nonrestricted universe or separately justified current tribal gaming evidence, assigned a current physical address, and receive coordinate QA before Pass 22 activation.",
+    "Separate casino floors within one resort complex are retained as candidates only until NGCB identity and Dinner Roulette same-property dedupe rules are applied."
+  ]
+}
