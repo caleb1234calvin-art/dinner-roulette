@@ -1,0 +1,106 @@
+{
+  "jurisdiction": "Colorado",
+  "capturedOn": "2026-09-11",
+  "status": "market-roster-reconciliation-in-progress",
+  "scope": "Dinner Roulette physical casino destinations",
+  "provisionalUniverse": {
+    "commercial": 33,
+    "tribal": 2,
+    "total": 35
+  },
+  "marketAccounting": {
+    "Black Hawk": {
+      "expectedCommercialCount": 14,
+      "currentlyVerifiedDestinationNames": [
+        "Ameristar Casino Resort Spa Black Hawk",
+        "Bally's Black Hawk",
+        "Bigfoot Casino",
+        "Gilpin Casino",
+        "Horseshoe Black Hawk",
+        "Lady Luck Casino Black Hawk",
+        "The Lodge Casino",
+        "Monarch Casino Resort Spa Black Hawk",
+        "Saratoga Casino Black Hawk",
+        "Sasquatch Casino",
+        "Wild Card Casino"
+      ],
+      "verifiedCount": 11,
+      "unresolvedRosterSlots": 3,
+      "evidence": [
+        "https://visitblackhawk.org/casinos/",
+        "https://sbg.colorado.gov/sites/sbg/files/documents/Dec25.Devices.pdf"
+      ],
+      "note": "Visit Black Hawk currently exposes eleven named destination casinos. Colorado Division of Gaming reporting indicates fourteen Black Hawk commercial license locations in the recent market breakdown, so three regulator-roster rows still require exact current destination reconciliation before completion. Bally's operates three separately licensed Black Hawk casino properties but is presented by the destination site under one Bally's Black Hawk consumer-facing group; property-level regulator reconciliation is still required."
+    },
+    "Central City": {
+      "expectedCommercialCount": 6,
+      "currentlyVerifiedDestinationNames": [
+        "Dragon Tiger Casino",
+        "Grand Z Casino & Hotel",
+        "The Famous Bonanza Casino",
+        "Easy Street Casino",
+        "Dostal Alley Casino",
+        "Century Casino & Hotel Central City"
+      ],
+      "verifiedCount": 6,
+      "unresolvedRosterSlots": 0,
+      "evidence": [
+        "https://www.visitcentralcity.com/casinos",
+        "https://www.visitcentralcity.com/explore",
+        "https://sbg.colorado.gov/sites/sbg/files/documents/Dec25.Devices.pdf"
+      ],
+      "note": "The current Central City destination roster accounts cleanly for six commercial casino destinations, matching the recent state market breakdown."
+    },
+    "Cripple Creek": {
+      "expectedCommercialCount": 13,
+      "currentlyVerifiedDestinationNames": [
+        "The Brass Ass Casino",
+        "Bronco Billy's Casino",
+        "Century Casino Cripple Creek",
+        "Chamonix Casino Hotel",
+        "Colorado Grande Casino & Hotel",
+        "Double Eagle Hotel & Casino",
+        "Golden Nugget Cripple Creek",
+        "Johnny Nolon's Casino",
+        "McGill's Casino & Hotel",
+        "Midnight Rose Casino & Hotel"
+      ],
+      "verifiedCount": 10,
+      "unresolvedRosterSlots": 3,
+      "evidence": [
+        "https://www.cityofcripplecreek.com/visit-cripple-creek/page/casinos",
+        "https://sbg.colorado.gov/sites/sbg/files/documents/Dec25.Devices.pdf"
+      ],
+      "note": "The City of Cripple Creek currently exposes ten named consumer-facing casino destinations in the captured page content. The recent state market breakdown indicates thirteen commercial license locations, leaving three exact regulator-roster rows to reconcile. Chamonix and Bronco Billy's are adjacent but remain separately licensed casino operations and should not be collapsed without regulator/property evidence."
+    }
+  },
+  "tribalDestinations": [
+    {
+      "name": "Sky Ute Casino Resort",
+      "location": "Ignacio, Colorado",
+      "tribe": "Southern Ute Indian Tribe",
+      "status": "retain-pending-address-coordinate-qa"
+    },
+    {
+      "name": "Ute Mountain Casino Hotel",
+      "location": "Towaoc, Colorado",
+      "tribe": "Ute Mountain Ute Tribe",
+      "status": "retain-pending-address-coordinate-qa"
+    }
+  ],
+  "currentAccounting": {
+    "commercialNamedDestinationsCaptured": 27,
+    "commercialRosterRowsStillUnresolved": 6,
+    "tribalDestinationsCaptured": 2,
+    "allDestinationNamesCapturedSoFar": 29,
+    "targetUniverse": 35
+  },
+  "hardRules": [
+    "Do not mark Colorado complete until all 33 commercial regulator rows are accounted for.",
+    "Do not silently merge separately licensed casino properties because they share a consumer-facing brand group.",
+    "Require current identity, normalized address, property-specific coordinates, stable ID, first-party/current website and duplicate/alias QA before runtime activation.",
+    "Preserve regulator property granularity where two adjacent casinos remain separately licensed physical destinations.",
+    "Treat the two tribal properties as separate additions to the 33 commercial casino universe."
+  ],
+  "nextPhase": "Resolve the remaining three Black Hawk and three Cripple Creek regulator rows from the Colorado Division of Gaming property roster, then perform address/coordinate/website QA on all 35 destinations before generating the next runtime catalog pass."
+}
