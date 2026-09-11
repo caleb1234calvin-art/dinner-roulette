@@ -22,7 +22,7 @@ Recent completed runtime passes: California Pass 19 (69 curated destinations fro
 
 ## Nevada — Pass 22 reconciliation / completeness correction
 
-Nevada's original candidate discovery is no longer treated as complete. The audit correctly reopened its rural/balance-of-state completeness gate after current-source review surfaced credible casino destinations absent from the original discovery ledgers. **Do not create or activate `casino-catalog-pass-22.ts` yet.**
+Nevada's original candidate discovery is no longer treated as complete. Rural/balance-of-state recovery continues to surface valid destination casinos absent from the initial market ledgers. **Do not create or activate `casino-catalog-pass-22.ts` yet.**
 
 Primary authority remains the Nevada Gaming Control Board. NGCB public reporting exposes Location Detail, Name and Address, Restricted/Nonrestricted and Nonrestricted Count reports through `https://publicreports-gcb.nv.gov/`. The June 30, 2026 nonrestricted-count workbook is the current count checkpoint found during this audit. NIGC/current tribal evidence is the separate tribal/Class II cross-check.
 
@@ -32,38 +32,43 @@ Key scope rule: nonrestricted status is regulatory identity evidence, not automa
 
 - Original discovery universe: **153 candidate/scope-review rows**.
 - Tribal reconciliation added Avi Resort & Casino and Moapa Paiute Travel Plaza, producing the prior **155-row** decision universe.
-- Rural completeness recovery has now surfaced **8 additional credible candidates**, producing a **provisional 163-row decision universe**.
-- 163 is not a final casino count and must not be represented as one. Active NGCB roster extraction may still add/remove rows.
+- Initial rural recovery surfaced 8 additional credible candidates.
+- Rural recovery Pass 5 then found two more previously unaccounted Jackpot destination casinos: **Barton's Club 93** and **Four Jacks Hotel & Casino**.
+- Current **provisional decision universe is 165 rows**.
+- 165 is not a final casino count. It is an audit accounting universe and may still change during active-NGCB completeness reconciliation.
 
-Newly recovered rural candidates requiring regulator reconciliation: Cactus Pete's Resort Casino (Jackpot), Horseshu Hotel & Casino (Jackpot), Fernley Nugget Casino, Stockmen's Gambling Hall (Fallon), Dini's Lucky Club (Yerington), C Punch Inn & Casino (Lovelock), El Capitan Casino (Hawthorne), and Stagecoach Hotel & Casino (Beatty).
+Recovered rural set now includes Cactus Pete's Resort Casino, Horseshu Hotel & Casino, Barton's Club 93 and Four Jacks in Jackpot; Fernley Nugget; Stockmen's Gambling Hall Fallon; Dini's Lucky Club Yerington; C Punch Inn Lovelock; El Capitan Hawthorne; and Stagecoach Beatty.
 
 ### Nevada audit artifacts
 
-Core ledgers remain the Strip/Downtown, outer Clark, Laughlin, northern-markets and balance-state ledgers plus tribal cross-check and statewide accounting. Reconciliation artifacts now also include:
+Core ledgers remain the Strip/Downtown, outer Clark, Laughlin, northern-markets and balance-state ledgers plus tribal cross-check and statewide accounting. Reconciliation artifacts now include:
 
 - `audit/nevada-reconciliation-pass-1-2026-09-11.json`
 - `audit/nevada-ambiguity-resolution-pass-2-2026-09-11.json`
 - `audit/nevada-ambiguity-resolution-pass-3-2026-09-11.json`
 - `audit/nevada-scope-address-pass-4-2026-09-11.json`
 - `audit/nevada-rural-completeness-recovery-2026-09-11.json`
+- `audit/nevada-rural-recovery-pass-5-2026-09-11.json`
 - `audit/nevada-statewide-candidate-accounting-2026-09-11.json`
 
 ### Major resolved Nevada decisions
 
 Current includes/retained identities include Casino Royale; Caesars Republic Lake Tahoe (Harveys alias retired); Harrah's Lake Tahoe separately; Venetian and Palazzo separately; Wynn and Encore separately; Avi; Moapa Paiute Travel Plaza; Alamo Casino at Sparks Petro; and the established major-market candidates subject to final NGCB accounting.
 
-Current exclusions/retirements include Mirage, Tropicana Las Vegas, Texas Station, Fiesta Rancho, Harrah's Reno, Eastside Cannery (closed/demolished), Wa She Shu unless reopening is authoritatively proven, Moulin Rouge current-destination claim, Bayshore Inn from the curated backbone, the erroneous town-of-Eureka `Eureka Casino` row, and erroneous `Gold Dust West Winnemucca` row. Cromwell is alias-only under The Vanderpump Hotel. Palms remains one physical destination regardless of tribal ownership.
+Rural Pass 5 materially advanced the recovered set. Cactus Pete's and Horseshu are current separate Jackpot destinations. Barton's Club 93 is current and has recent Nevada Gaming Commission identity corroboration. Four Jacks is current and appears in June 2026 Commission nonrestricted material. Fernley Nugget is reconciled to the current 1190 E Main St identity rather than stale 190 E Main tourism data. Dini's Lucky Club, C Punch Inn, Stagecoach Beatty and El Capitan Hawthorne are retained as current destination casinos with regulator/first-party corroboration. El Capitan still needs final postal/address normalization and coordinate QA.
 
-Red Drag Casino is retained as a current Elko candidate based on the current Explore Elko visitor guide but still needs exact NGCB identity matching.
+Current exclusions/retirements include Mirage, Tropicana Las Vegas, Texas Station, Fiesta Rancho, Harrah's Reno, Eastside Cannery, Wa She Shu unless reopening is authoritatively proven, Moulin Rouge current-destination claim, Bayshore Inn from the curated backbone, erroneous town-of-Eureka `Eureka Casino`, erroneous `Gold Dust West Winnemucca`, and Dotty's/ordinary retail-style gaming by default. Dotty's Jackpot was discovered but remains outside the curated backbone under that scope rule. Cromwell is alias-only under The Vanderpump Hotel. Palms remains one physical destination regardless of tribal ownership.
+
+Red Drag Casino remains a current Elko candidate needing exact NGCB matching. Stockmen's Gambling Hall Fallon also still needs exact current identity/scope disposition.
 
 ### Address QA progress
 
-Pass 4 normalized/currently corroborated rural addresses for Stockman's Casino Fallon, Bonanza Casino Fallon, Winnemucca Inn & Casino, Model T Casino, Winners Inn & Casino, Tonopah Station, Hotel Nevada & Gambling Hall, and Prospector Hotel & Gambling Hall. Coordinate QA remains pending.
+Pass 4 normalized/currently corroborated rural addresses for Stockman's Casino Fallon, Bonanza Casino Fallon, Winnemucca Inn & Casino, Model T Casino, Winners Inn & Casino, Tonopah Station, Hotel Nevada & Gambling Hall, and Prospector Hotel & Gambling Hall. Pass 5 added current/reconciled addresses for Cactus Pete's, Horseshu, Barton's Club 93, Four Jacks, Fernley Nugget, Dini's Lucky Club, C Punch Inn and Stagecoach, with El Capitan retained pending final postal normalization. Coordinate QA remains pending.
 
 ### Nevada activation gates
 
-1. Run a regulator-backed statewide completeness sweep against active NGCB nonrestricted locations, with special attention to balance-of-state/rural communities.
-2. Reconcile the 8 newly recovered rural candidates and any further omissions against active NGCB identity and Dinner Roulette destination scope.
+1. Continue regulator-backed statewide completeness sweep against active NGCB nonrestricted locations, with special attention to balance-of-state/rural communities.
+2. Resolve Stockmen's Fallon, Red Drag Elko and any further recovered rows against current NGCB identity and Dinner Roulette destination scope.
 3. Account every surviving candidate against current NGCB identity or an explicit tribal/federal exception.
 4. Normalize all retained physical addresses.
 5. Complete property-specific coordinate QA.
