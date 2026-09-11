@@ -1,0 +1,89 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "major-operator-reconciliation-pass-1",
+  "scope": "Current first-party casino destinations; travel gaming, retail/support locations and casino-too travel plazas are excluded from this pass unless separately justified later.",
+  "clusters": [
+    {
+      "operator": "Chickasaw Nation",
+      "source": "https://www.chickasaw.net/Our-Nation/Locations.aspx?searchtext=casino",
+      "retainedCurrentDestinationCandidates": [
+        "WinStar World Casino and Resort",
+        "Artesian Casino",
+        "Border Casino",
+        "Saltcreek Casino",
+        "Texoma Casino",
+        "Washita Casino",
+        "Black Gold Casino",
+        "Newcastle Casino",
+        "Jet Stream Casino",
+        "MegaStar Casino",
+        "Riverstar Casino",
+        "West Bay Casino & Resort",
+        "Lakecrest Casino and Hotel",
+        "Chisholm Trail Casino",
+        "Gold Mountain Casino",
+        "Treasure Valley Casino and Hotel",
+        "Riverwind Casino"
+      ],
+      "retainedCount": 17,
+      "explicitNonDestinationExamples": [
+        "WinStar World Casino Hotel - lodging component of WinStar destination, not separate casino",
+        "Riverwind Hotel - lodging component, not separate casino",
+        "Riverwind Retail Store - retail support location",
+        "CNOGC satellite offices - regulator offices",
+        "Newcastle Travel Gaming - separate travel-gaming format staged outside destination-casino pass",
+        "Tishomingo Tobacco and Gaming - tobacco/gaming retail format staged for scope review",
+        "Chickasaw Travel Stop gaming locations - travel-stop format staged outside destination-casino pass"
+      ],
+      "note": "Current Chickasaw Nation location pages and 2026 Programs and Services material distinguish named casinos from hotel, retail, travel-gaming and travel-stop operations. The 17 named casino destinations above form the clean first operator batch pending coordinate/site normalization."
+    },
+    {
+      "operator": "Choctaw Nation of Oklahoma",
+      "source": "https://www.choctawcasinos.com/locations/",
+      "retainedCurrentDestinationCandidates": [
+        "Choctaw Casino & Resort-Durant",
+        "Choctaw Casino & Resort-Pocola",
+        "Choctaw Casino & Resort-Grant",
+        "Choctaw Casino & Resort-Hochatown",
+        "Choctaw Casino-McAlester",
+        "Choctaw Casino-Broken Bow",
+        "Choctaw Casino-Idabel",
+        "Choctaw Casino-Stringtown"
+      ],
+      "retainedCount": 8,
+      "explicitNonDestinationExamples": [
+        "Choctaw Travel Plaza Casino Too locations - first-party site explicitly categorizes these as travel-plaza Casino Toos rather than the main Casinos & Resorts / Casinos destination set"
+      ],
+      "note": "The current first-party Choctaw locations directory cleanly separates eight casino/casino-resort destinations from its Casino Too travel-plaza network."
+    },
+    {
+      "operator": "Cherokee Nation Entertainment",
+      "source": "https://www.cherokeecasino.com/",
+      "retainedCurrentDestinationCandidates": [
+        "Cherokee Casino Fort Gibson",
+        "Cherokee Casino Grove",
+        "Cherokee Casino Ramona",
+        "Cherokee Casino & Hotel Roland"
+      ],
+      "minimumConfirmedCount": 4,
+      "status": "partial-page-capture-continue-next-pass",
+      "note": "The current first-party Cherokee casino landing page confirms at least these four locations in captured content. Continue the operator page before declaring the Cherokee cluster complete; do not infer a total from this partial capture."
+    }
+  ],
+  "currentPassAccounting": {
+    "cleanChickasawCandidates": 17,
+    "cleanChoctawCandidates": 8,
+    "minimumCherokeeCandidatesCaptured": 4,
+    "namedCandidatesCapturedThisPass": 29,
+    "clustersFullyReconciledAtNameScopeLevel": ["Chickasaw Nation", "Choctaw Nation of Oklahoma"],
+    "clustersStillOpen": ["Cherokee Nation Entertainment", "Muscogee (Creek) Nation", "Osage Nation", "Comanche Nation", "Citizen Potawatomi Nation", "remaining Oklahoma operators"]
+  },
+  "hardRules": [
+    "Do not promote hotel, retail, regulator-office or travel-stop records as duplicate casinos.",
+    "Use the operator's current consumer-facing casino grouping as the first destination-scope signal, then cross-check against NIGC/regulator evidence.",
+    "Do not infer operator completeness from a truncated search/page capture.",
+    "Require normalized address, property-specific coordinates, current website, stable ID and duplicate/alias QA before runtime activation."
+  ],
+  "nextPhase": "Finish Cherokee current locations, then reconcile Muscogee and Osage. Once 50 or more clean Oklahoma destinations have property-level QA, form the first Oklahoma runtime batch instead of waiting for statewide completion."
+}
