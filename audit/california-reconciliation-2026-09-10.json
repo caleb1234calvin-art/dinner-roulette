@@ -95,6 +95,46 @@
       "website": "https://www.cachecreek.com/",
       "addressSource": "https://www.cachecreek.com/contact",
       "coordinateSource": "OpenStreetMap-derived casino coordinate"
+    },
+    {
+      "license": "TRCS-000033",
+      "name": "Casino Pauma",
+      "address": "777 Pauma Reservation Rd, Pauma Valley, CA 92061",
+      "lat": 33.33009,
+      "lon": -116.9912,
+      "website": "https://www.casinopauma.com/",
+      "addressSource": "https://www.casinopauma.com/contact/",
+      "coordinateSource": "OpenStreetMap way 545208654; California CEQAnet Pauma Casino expansion location independently corroborates the same site"
+    },
+    {
+      "license": "TRCS-000035",
+      "name": "Chukchansi Gold Resort and Casino",
+      "address": "711 Lucky Lane, Coarsegold, CA 93614",
+      "lat": 37.2116,
+      "lon": -119.69918,
+      "website": "https://chukchansigold.com/",
+      "addressSource": "https://chukchansigold.com/",
+      "coordinateSource": "OpenStreetMap way 675098646"
+    },
+    {
+      "license": "TRCS-000046",
+      "name": "Chumash Casino Resort",
+      "address": "3400 East Highway 246, Santa Ynez, CA 93460",
+      "lat": 34.60972,
+      "lon": -120.08611,
+      "website": "https://chumashcasino.com/",
+      "addressSource": "https://chumashcasino.com/contact-us",
+      "coordinateSource": "California CEQAnet Chumash Hotel Expansion Project location coordinates 34°36'35\"N 120°5'10\"W"
+    },
+    {
+      "license": "TRCS-000019",
+      "name": "Colusa Casino Resort",
+      "address": "3770 Highway 45, Colusa, CA 95932",
+      "lat": 39.25461,
+      "lon": -122.03072,
+      "website": "https://www.colusacasino.com/",
+      "addressSource": "https://www.colusacasino.com/contact/",
+      "coordinateSource": "OpenStreetMap way 1396144099"
     }
   ],
   "addressVerifiedCoordinatePending": [
@@ -104,42 +144,16 @@
       "currentPropertyName": "Cahuilla Casino Hotel",
       "address": "52702 CA-371, Anza, CA 92539",
       "website": "https://cahuillacasinohotel.com/",
-      "addressSource": "https://cahuillacasinohotel.com/contact/"
-    },
-    {
-      "license": "TRCS-000033",
-      "name": "Casino Pauma",
-      "address": "777 Pauma Reservation Rd, Pauma Valley, CA 92061",
-      "website": "https://www.casinopauma.com/",
-      "addressSource": "https://www.casinopauma.com/contact/"
-    },
-    {
-      "license": "TRCS-000035",
-      "name": "Chukchansi Gold Resort and Casino",
-      "address": "711 Lucky Lane, Coarsegold, CA 93614",
-      "website": "https://chukchansigold.com/",
-      "addressSource": "https://chukchansigold.com/"
-    },
-    {
-      "license": "TRCS-000046",
-      "name": "Chumash Casino Resort",
-      "address": "3400 East Highway 246, Santa Ynez, CA 93460",
-      "website": "https://chumashcasino.com/",
-      "addressSource": "https://chumashcasino.com/contact-us"
-    },
-    {
-      "license": "TRCS-000019",
-      "name": "Colusa Casino Resort",
-      "address": "3770 Highway 45, Colusa, CA 95932",
-      "website": "https://www.colusacasino.com/",
-      "addressSource": "https://www.colusacasino.com/contact/"
+      "addressSource": "https://cahuillacasinohotel.com/contact/",
+      "note": "Official property site and California EDD independently confirm the address, but no sufficiently direct property-specific coordinate source was accepted in this pass."
     },
     {
       "license": "TRCS-000020",
       "name": "Coyote Valley Casino",
       "address": "77 Coyote Valley Blvd, Redwood Valley, CA 95470",
       "website": "https://www.coyotevalleycasino.com/",
-      "addressSource": "https://www.coyotevalleycasino.com/contact"
+      "addressSource": "https://www.coyotevalleycasino.com/contact",
+      "note": "Official property site confirms the address. Multiple nearby OpenStreetMap casino/building geometries returned materially different centroids, so coordinate promotion is deferred until the exact gaming-building geometry is reconciled."
     }
   ],
   "reviewFlags": [
@@ -166,8 +180,8 @@
   ],
   "progress": {
     "inventory": 74,
-    "fullyReconciled": 9,
-    "addressVerifiedCoordinatePending": 6,
+    "fullyReconciled": 13,
+    "addressVerifiedCoordinatePending": 2,
     "flaggedForReview": 4
   }
 }
