@@ -12,26 +12,53 @@ _Last updated: September 11, 2026_
 - ChatGPT is the only AI authorized to directly modify the repository unless Caleb explicitly authorizes another assistant for a named file.
 - Dinner Roulette and the Jasper County audit remain interconnected.
 
-## National casino audit
+## National casino audit — rolling implementation strategy
 
-**27 jurisdiction passes are complete and active. Nevada Pass 22 remains in reconciliation and is not active.** California Pass 19, Oregon Pass 20 and Washington Pass 21 remain the latest activated casino catalogs.
+**Caleb explicitly changed the casino-audit operating model on September 11, 2026.** We no longer require an entire state or the entire national roster to reach perfect completeness before verified casinos may enter the staged runtime catalog.
 
-## Nevada — Pass 22 completeness recovery
+Preferred cadence is now **50–100 verified casino destinations per implementation batch** whenever source quality and workload comfortably allow it:
 
-Nevada's initial discovery universe was incomplete, especially in balance-of-state communities. The audit is intentionally recovering and reconciling those omissions before any runtime dataset is generated. **Do not create or activate `casino-catalog-pass-22.ts` yet.**
+`discover → verify → batch 50–100 → implement → validate → continue discovery → re-audit prior batches → correct as needed`
 
-Primary authority remains the Nevada Gaming Control Board, with NIGC/current tribal evidence for tribal/Class II reconciliation. Current first-party/operator and government tourism sources are supporting evidence for current operation, branding and addresses. Nonrestricted status remains identity evidence rather than automatic Dinner Roulette inclusion.
+This is a living-data strategy. Completeness is approached iteratively rather than treated as a single pre-implementation finish line. Difficult/ambiguous properties must not hold up dozens of clean records. Ambiguous records remain staged/held and can be resolved in a later audit.
 
-### Accounting checkpoint
+### Minimum per-property implementation gate
+
+A casino may enter a staged runtime batch when it individually has:
+
+1. credible evidence of current physical identity/operation;
+2. qualifying Dinner Roulette destination scope;
+3. a usable normalized physical address;
+4. usable property-specific coordinates;
+5. a stable catalog ID;
+6. no known unresolved duplicate/alias collision.
+
+Regulator/government evidence remains preferred for roster and identity truth. First-party/operator sources support current operation, branding and addresses. Nonrestricted gaming status alone is not automatic inclusion. Restricted slot-only, route/distributed retail, online-only and ordinary retail gaming remain outside the curated backbone unless a distinct destination-casino justification exists.
+
+### Batch QA rule
+
+Each 50–100-property implementation batch should be validated before moving on. Later completeness sweeps must be allowed to add missing casinos and correct closures, renames, addresses, coordinates, aliases or scope decisions in earlier batches. Stable records do not need to wait for unresolved edge cases.
+
+This strategy applies to Nevada immediately and to subsequent national work, especially large tribal/regulator rosters such as Oklahoma. Batch size may shrink when a source set is unusually ambiguous, but 50–100 is the preferred normal scale.
+
+## National progress
+
+27 jurisdiction passes are already complete/active under the prior state-pass model. California Pass 19, Oregon Pass 20 and Washington Pass 21 remain the latest activated casino catalogs. Nevada is the transition point to the rolling batch model.
+
+## Nevada — rolling Pass 22 transition
+
+Nevada's initial discovery universe was incomplete, especially in balance-of-state communities. That finding remains important, but **statewide perfection is no longer a prerequisite to implementing already verified Nevada records**.
+
+Current accounting checkpoint:
 
 - Original candidate/scope-review universe: **153**.
-- Tribal additions Avi + Moapa produced **155**.
-- Initial rural recovery added **8** → 163.
-- Pass 5 recovered Barton's Club 93 + Four Jacks → **165**.
-- Pass 6 recovered/elevated **9 additional rural rows** → current **provisional decision universe 174**.
-- **174 is an audit decision universe, not a Nevada casino count or final runtime count.** It may still move as completeness work continues.
+- Tribal additions Avi + Moapa → **155**.
+- Initial rural recovery +8 → 163.
+- Pass 5 added Barton's Club 93 + Four Jacks → **165**.
+- Pass 6 recovered/elevated 9 additional rural rows → **174 provisional decision-universe rows**.
+- **174 is not a final Nevada casino count or runtime count.** It includes audit decisions and may grow/shrink through later reconciliation.
 
-### Rural recovery artifacts
+Important recovery artifacts:
 
 - `audit/nevada-scope-address-pass-4-2026-09-11.json`
 - `audit/nevada-rural-completeness-recovery-2026-09-11.json`
@@ -39,35 +66,26 @@ Primary authority remains the Nevada Gaming Control Board, with NIGC/current tri
 - `audit/nevada-rural-completeness-pass-6-2026-09-11.json`
 - `audit/nevada-statewide-candidate-accounting-2026-09-11.json`
 
-### Pass 6 additions / decisions
+### Nevada implementation approach from this point
 
-Battle Mountain was substantially undercounted. Current evidence now carries **Big Wheel Casino**, **Owl Club Casino & Restaurant**, and **Broadway Colt Inn Casino & Restaurant** as current destinations; **The Nevada Casino & Bar** is retained pending exact NGCB identity matching.
+Do not wait for every Nevada edge case before implementation. Assemble the largest clean group of individually verified Nevada destinations, preferably **50–100 at a time**, finish address/coordinate/ID/dedupe QA for that group, implement it, run blocking validation, then continue with the next group while the statewide omission sweep continues.
 
-Other recovered current destinations: **Alamo Casino at Wells Petro** in Wells; **Border Inn Casino** near Baker; **Longstreet Inn, Casino & RV Resort** in Amargosa Valley; **Copper Queen Hotel & Casino** and **Jailhouse Motel & Casino** in Ely. Longstreet has conflicting 8570/8750 address rendering on first-party pages, so exact street-number normalization remains a QA gate.
+Known unresolved Nevada records/clusters should remain outside a batch until cleared rather than blocking clean records. Current examples include the Winnemucca/I-80 review cluster, Stockmen's Gambling Hall Fallon, Red Drag Elko, The Nevada Casino & Bar Battle Mountain, Longstreet address-number normalization, and any further rural omissions discovered later.
 
-The audit also exposed a new Winnemucca/I-80 review cluster: **Winnemucca Roadhouse Casino, Pilot Casino - Winnemucca, Pete's Gambling Hall, and Alamo Casino - Mill City**. These are not automatically included; each requires destination-scope/current NGCB reconciliation.
+Previously resolved exclusions/retirements remain valid unless new evidence changes them: Mirage, Tropicana Las Vegas, Texas Station, Fiesta Rancho, Harrah's Reno, Eastside Cannery, Wa She Shu until reopening is proven, Moulin Rouge current-destination claim, Bayshore Inn from curated scope, erroneous Eureka-town `Eureka Casino`, erroneous Gold Dust West Winnemucca, and ordinary Dotty's/retail-style gaming by default. Cromwell remains alias-only under The Vanderpump Hotel. Palms remains one physical destination.
 
-Previously recovered/advanced destinations include Cactus Pete's, Horseshu, Barton's Club 93, Four Jacks, Fernley Nugget, Dini's Lucky Club, C Punch Inn, Stagecoach Beatty and El Capitan Hawthorne. Stockmen's Gambling Hall Fallon and Red Drag Elko still need exact disposition.
+### Nevada next execution
 
-### Existing important Nevada decisions
+1. Select a clean first Nevada implementation group from already verified records.
+2. Complete normalized address + property-specific coordinate + stable-ID + dedupe QA for that group.
+3. Generate/wire the staged Nevada runtime batch and run blocking validation.
+4. Continue the statewide/rural completeness sweep in parallel conceptually; unresolved records stay staged rather than blocking the implemented group.
+5. Repeat in 50–100-property groups until the Nevada decision universe is exhausted.
+6. Re-audit implemented Nevada batches after the broader roster stabilizes and correct any later-discovered changes.
 
-Includes/retained: Casino Royale; Caesars Republic Lake Tahoe with Harveys retired as alias; Harrah's Lake Tahoe separately; Venetian + Palazzo separately; Wynn + Encore separately; Avi; Moapa; Alamo Sparks Petro; current major-market candidates subject to final accounting.
+## National continuation after Nevada
 
-Exclusions/retirements include Mirage, Tropicana Las Vegas, Texas Station, Fiesta Rancho, Harrah's Reno, Eastside Cannery, Wa She Shu until reopening is proven, Moulin Rouge current-destination claim, Bayshore Inn from curated scope, erroneous Eureka-town `Eureka Casino`, erroneous Gold Dust West Winnemucca, and ordinary Dotty's/retail-style gaming by default. Cromwell is alias-only under The Vanderpump Hotel. Palms remains one physical destination.
-
-### Activation gates
-
-1. Continue statewide/rural completeness sweep; do not assume 174 is final.
-2. Reconcile Winnemucca/I-80 cluster plus Stockmen's Fallon, Red Drag Elko, Nevada Casino Battle Mountain and any further omissions against NGCB/current-operation evidence.
-3. Freeze the physical roster only after repeated omission sweeps stop surfacing credible destination casinos.
-4. Normalize every retained address, including Longstreet and El Capitan edge cases.
-5. Complete property-specific coordinate QA.
-6. Produce final all-row include/exclude/hold/alias/dedupe accounting with no unexplained rows.
-7. Only then generate Nevada runtime Pass 22, wire search, validate and mark Nevada jurisdiction #28 complete.
-
-## Casino audit operating rules
-
-Government/regulator sources are preferred for roster/identity truth; first-party property sources support current operation/branding/address. Nonrestricted gaming status alone is insufficient for curated destination scope. Restricted slot-only, route/distributed retail, online-only and ordinary retail gaming remain outside the curated backbone unless a distinct destination-casino justification exists. Explicit exclusions and uncertainty are preferable to invented certainty. Curated records supplement live OSM discovery.
+Use the same rolling ingestion model for remaining U.S. casino jurisdictions. Prefer authoritative regulator/tribal rosters and process large clean sets rather than waiting for perfect state-wide reconciliation. Large states/tribal markets may span several 50–100-property batches. Periodic re-audits are part of the design, not evidence of failure.
 
 ## Legal/compliance continuity
 
