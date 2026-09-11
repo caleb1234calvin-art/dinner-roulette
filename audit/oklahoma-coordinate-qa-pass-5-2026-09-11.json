@@ -1,0 +1,78 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "coordinate-qa-pass-5",
+  "scope": "Fifth property-specific coordinate verification pass for Oklahoma runtime candidates, focused on remaining Chickasaw destinations with sufficiently strong geospatial evidence. This pass also records a material current-address discrepancy for Artesian Casino that requires reconciliation before promotion.",
+  "records": [
+    {
+      "id":"ok-jet-stream-casino",
+      "name":"Jet Stream Casino",
+      "address":"2001 W Airline Rd, Pauls Valley, OK 73075",
+      "lat":34.70523,
+      "lon":-97.24842,
+      "website":"https://jetstreamcasino.com/",
+      "addressEvidence":"https://jetstreamcasino.com/contact-us/",
+      "coordinateEvidence":"https://mapcarta.com/W947034949",
+      "osmFeature":"way 947034949",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-black-gold-casino",
+      "name":"Black Gold Casino",
+      "address":"288 Mulberry Ln, Wilson, OK 73463",
+      "lat":34.17207,
+      "lon":-97.41381,
+      "website":"https://myblackgoldcasino.com/",
+      "addressEvidence":"https://myblackgoldcasino.com/contact-us/",
+      "coordinateEvidence":"https://www.wikidata.org/wiki/Q107107886",
+      "corroboratingCoordinateEvidence":"https://commons.wikimedia.org/wiki/File:Black_Gold_Casino_CTS.jpg",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Black Gold is co-located with a Chickasaw Travel Stop/convenience component. Preserve the casino destination record but do not create a second destination record for the travel-stop component."
+    },
+    {
+      "id":"ok-gold-mountain-casino",
+      "name":"Gold Mountain Casino",
+      "address":"1410 Sam Noble Pkwy, Ardmore, OK 73401",
+      "lat":34.18478,
+      "lon":-97.10860,
+      "coordinateEvidence":"https://gist.github.com/jeremiak/9f0697e6159f5069d8e38b3c371d70da",
+      "corroboratingCoordinateEvidence":"https://www.whereorg.com/gold-mountain-casino-22206161",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"The current Visit Ardmore page contains an apparent ZIP typo (72401); preserve the previously verified current Ardmore ZIP 73401."
+    },
+    {
+      "id":"ok-riverstar-casino",
+      "name":"RiverStar Casino",
+      "address":"11801 E 2160 Rd, Terral, OK 73569",
+      "lat":33.88333,
+      "lon":-97.93150,
+      "website":"https://www.theriverstarcasino.com/",
+      "addressEvidence":"https://www.theriverstarcasino.com/casino-map/",
+      "coordinateEvidence":"https://www.waymarking.com/waymarks/wm150FQ_Riverstar_Casino_Terral_OK",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Coordinate converted directly from the published N 33° 53.000 / W 097° 55.890 property waypoint."
+    }
+  ],
+  "qaAccounting": {
+    "addressIdentityVerifiedPool": 54,
+    "coordinateVerifiedPrevious": 28,
+    "coordinateVerifiedThisPass": 4,
+    "coordinateVerifiedCumulative": 32,
+    "duplicateDistanceClearedCumulative": 0,
+    "runtimeReadyCumulative": 0,
+    "remainingCoordinateTargetForFifty": 18
+  },
+  "materialAddressReconciliationHold": {
+    "id":"ok-artesian-casino",
+    "name":"Artesian Casino",
+    "previousProvisionalAddress":"23 W Vinita Ave, Sulphur, OK 73086",
+    "currentFirstPartyPropertyAddress":"1001 W 1st Street, Sulphur, OK 73086",
+    "currentEvidence":[
+      "https://artesian.cndcdev.com/casino/",
+      "https://www.artesianhotel.com/hotel-map/"
+    ],
+    "status":"hold-reconcile-before-coordinate-promotion",
+    "note":"Current first-party Artesian casino/hotel pages consistently identify the casino at 1001 W 1st Street. The earlier provisional 23 W Vinita Ave entry must not be activated until identity/address lineage is reconciled."
+  },
+  "nextPhase": "Continue with Lakecrest and remaining clean Chickasaw candidates only where property-specific coordinates are strong, then move into Muscogee and Osage. Resolve Artesian's address lineage before promotion. In parallel, perform branch-aware duplicate/name/ID distance QA across all 32 coordinate-verified Oklahoma records."
+}
