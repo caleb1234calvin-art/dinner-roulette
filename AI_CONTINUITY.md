@@ -24,7 +24,7 @@ Runtime casino passes are canonicalized chronologically in `src/lib/nightlife/se
 
 Preferred cadence: `discover → verify → reconcile → batch clean destinations → implement → validate → continue discovery → re-audit prior batches`.
 
-For large jurisdictions, use 50–100 verified-destination runtime batches. Statewide perfection is not required before clean records enter staged runtime, but every activated property must clear current identity/operation, Dinner Roulette destination scope, normalized address, property-specific coordinates, stable ID, current website and duplicate/alias QA. Regulator license rows are evidence/accounting units, not automatically one-to-one with Dinner Roulette destinations.
+For large jurisdictions, use 50–100 verified-destination runtime batches as a planning cadence, not a quota. Statewide perfection or an arbitrary round number is not required before a clean set enters staged runtime, but every activated property must clear current identity/operation, Dinner Roulette destination scope, normalized address, property-specific coordinates, stable ID, current website and duplicate/alias QA. Regulator license rows are evidence/accounting units, not automatically one-to-one with Dinner Roulette destinations.
 
 ## Runtime casino progress
 
@@ -42,27 +42,31 @@ Colorado Division of Gaming accounting is corrected to 33 commercial regulator l
 
 `audit/texas-casino-reconciliation-2026-09-11.json` resolves current Texas scope to four physical tribal gaming destinations pending coordinate/stable-ID QA: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded as travel-center gaming. Texas becomes complete only after runtime activation and validation.
 
-## Oklahoma — 54 address/identity verified; 48 coordinate verified; duplicate QA started
+## Oklahoma — 54 address/identity verified; 48 coordinate verified; generated-pass collision sweep clear
 
-Discovery/reconciliation artifacts include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, runtime QA passes 1–2, coordinate QA passes **1–8**, and `audit/oklahoma-duplicate-distance-qa-pass-1-2026-09-11.json`.
+Discovery/reconciliation artifacts include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, runtime QA passes 1–2, coordinate QA passes **1–8**, `audit/oklahoma-duplicate-distance-qa-pass-1-2026-09-11.json`, and `audit/oklahoma-duplicate-distance-qa-pass-2-2026-09-11.json`.
 
 The Oklahoma name/scope candidate universe is **77**. Current identity, destination scope, normalized street address and provisional stable Dinner Roulette IDs are verified for **54 properties** across Chickasaw, Choctaw, Cherokee/CNE, Muscogee, Osage and Citizen Potawatomi clusters.
 
-**Property-specific coordinates are now verified for 48 of those 54.** Pass 1 established 9; Pass 2 added 7; Pass 3 added 4; Pass 4 added 8; Pass 5 added 4; Pass 6 added 4; Pass 7 added 6; Pass 8 added Choctaw Hochatown, Cherokee Fort Gibson, Osage Casino Hotel Tulsa, current-site Osage Casino Hotel Ponca City, Duck Creek Casino and Checotah Casino.
+**Property-specific coordinates are verified for 48 of those 54.** Pass 1 established 9; Pass 2 added 7; Pass 3 added 4; Pass 4 added 8; Pass 5 added 4; Pass 6 added 4; Pass 7 added 6; Pass 8 added Choctaw Hochatown, Cherokee Fort Gibson, Osage Casino Hotel Tulsa, current-site Osage Casino Hotel Ponca City, Duck Creek Casino and Checotah Casino.
 
-Coordinate evidence must be property-specific rather than city centroids. Runtime activation remains withheld until duplicate/alias distance QA against passes 1–27 is complete. Duck Creek and Checotah now have verified building geometry, but their final runtime street-number normalization remains pending.
+Coordinate evidence must be property-specific rather than city centroids. Duck Creek and Checotah have verified building geometry, but their final runtime street-number normalization remains pending.
 
 ### Duplicate/stable-ID QA state
 
-Branch-aware duplicate QA has now begun. The base catalog already contains four Oklahoma anchors: WinStar World Casino and Resort (`casino-catalog-winstar`), Choctaw Casino & Resort - Durant (`casino-catalog-choctaw-durant`), Indigo Sky Casino and Buffalo Run Casino & Resort.
+Branch-aware duplicate QA is now substantially advanced.
 
-The first measured reconciliations are clean:
+The base catalog contains four Oklahoma anchors: WinStar World Casino and Resort (`casino-catalog-winstar`), Choctaw Casino & Resort - Durant (`casino-catalog-choctaw-durant`), Indigo Sky Casino and Buffalo Run Casino & Resort.
 
-- Current WinStar coordinate `33.75762,-97.12994` is about **0.051 mi** from the base-catalog WinStar coordinate `33.7580,-97.1307`, well inside the 0.35-mile same-property threshold. Preserve the existing runtime ID stem **`winstar`**; do not create a parallel `ok-winstar-world` runtime lineage.
-- Current Choctaw Durant coordinate `33.95116,-96.41404` is about **0.072 mi** from the base-catalog coordinate `33.9522,-96.4141`, also well inside the threshold. Preserve runtime ID stem **`choctaw-durant`** despite punctuation/spacing differences in the display name.
-- Indigo Sky and Buffalo Run remain existing runtime anchors for later northeast-Oklahoma reconciliation; when their cluster is audited, update/reconcile them rather than duplicating them.
+Duplicate QA Pass 1 measured and reconciled the two base-catalog properties already present in the current 48-coordinate pool:
 
-This first duplicate pass clears **2 explicit same-property base-catalog collisions**. It does **not** yet represent full branch-wide clearance; passes 2–27 still need to be swept for the coordinate-verified Oklahoma pool.
+- Current WinStar coordinate `33.75762,-97.12994` is about **0.051 mi** from the base-catalog WinStar coordinate `33.7580,-97.1307`, inside the 0.35-mile same-property threshold. Preserve existing runtime ID stem **`winstar`**; do not create a parallel `ok-winstar-world` runtime lineage.
+- Current Choctaw Durant coordinate `33.95116,-96.41404` is about **0.072 mi** from base coordinate `33.9522,-96.4141`, also inside threshold. Preserve runtime ID stem **`choctaw-durant`** despite punctuation/spacing differences.
+- Indigo Sky and Buffalo Run remain existing runtime anchors for later northeast-Oklahoma reconciliation; update/reconcile rather than duplicate them when their cluster is audited.
+
+**Duplicate QA Pass 2 cleared the entire generated catalog history Pass 2 through Pass 27 for Oklahoma collisions.** Those 26 generated modules cover other jurisdictions (Maryland through New York) and contain **zero Oklahoma records**, therefore zero Oklahoma same-ID, normalized-name, or distance collisions. There is no hidden Oklahoma predecessor/duplicate in generated passes 2–27.
+
+This means the collision problem for the current Oklahoma batch has narrowed to the known base-catalog lineage plus each candidate's own predecessor/address/site history. The next gate is record-level runtime eligibility, not another broad generated-pass search.
 
 Important coordinate/separation decisions:
 
@@ -101,7 +105,7 @@ Important coordinate/separation decisions:
 
 **Cherokee South Coffeyville:** current identity/address is strong; exact property coordinate still needs direct evidence.
 
-There are **2 additional property coordinates needed to reach the 50-coordinate target**. The coordinate search should continue, but duplicate/name/ID distance QA is now active in parallel and is the more important runtime gate. Continue sweeping passes 2–27, preserving established stable IDs whenever a current record resolves to the same property. The first Oklahoma runtime pass should contain only records clearing every gate; do not force the count.
+There are **2 additional property coordinates needed to reach the original 50-coordinate planning target**, but 50 is no longer a blocking quota. The immediate next action is a record-level runtime eligibility review of the 48 coordinate-verified properties. Exclude unresolved address/lineage records, preserve existing base IDs for WinStar and Choctaw Durant, and prepare **Oklahoma runtime Pass 28** from the clean subset once every included record clears its remaining gates.
 
 ## Legal/compliance continuity
 
