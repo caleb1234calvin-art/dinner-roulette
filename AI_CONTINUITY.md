@@ -7,123 +7,127 @@ _Last updated: September 11, 2026_
 - Active app: Dinner Roulette V.3.
 - Repository: `caleb1234calvin-art/dinner-roulette`.
 - Current working branch: `feature/dinner-icon-pack-1`.
-- This branch is layered on `legal/third-party-compliance-pass-1`, which is layered on `audit/national-casino-pass-1`; it therefore contains the casino audit, legal/compliance pass, Dinner icon implementation, California/Oregon/Washington runtime work, and Nevada audit staging.
-- Compliance PR: #28, based on `audit/national-casino-pass-1`.
-- Startup-ident preview remains isolated on draft PR #30 (`brand/startup-ident-pass-1`); do not merge it merely because the preview is deployable.
-- Restaurant icon work: Issue #29.
-- `main` remains untouched unless Caleb explicitly requests a merge or direct change.
-- ChatGPT is the only AI authorized to directly modify this repository unless Caleb explicitly asks another assistant to update a named file. Grok/SuperGrok may generate artwork and, when Caleb requests it, update this continuity file. Grok does not merge branches or ship assets to `main` without an explicit request.
-- Dinner Roulette and the Jasper County audit are interconnected projects. Audit data, methods, infrastructure, and discoveries may feed Dinner Roulette.
+- Branch stack: `audit/national-casino-pass-1` → `legal/third-party-compliance-pass-1` → `feature/dinner-icon-pack-1`.
+- Current branch therefore contains casino audit work, legal/compliance, Dinner icon implementation, California/Oregon/Washington runtime work, and Nevada Pass 22 reconciliation staging.
+- `main` remains untouched unless Caleb explicitly requests a merge/direct change.
+- ChatGPT is the only AI authorized to directly modify the repository unless Caleb explicitly authorizes another assistant for a named file.
+- Dinner Roulette and the Jasper County audit remain interconnected.
+- Compliance review surface: PR #28. Restaurant icon work: Issue #29. Startup ident remains isolated on draft PR #30 and is not part of this casino branch's release decision.
 
-## National casino audit continuity
+## National casino audit
 
-The national casino audit is active on the current stacked working branch.
+**27 jurisdiction passes are complete and active. Nevada is Pass 22-in-progress and is not yet active.**
 
-- **27 jurisdiction passes are complete and active** in the curated runtime, documented in `CASINO_AUDIT.md`.
-- California is Pass 19: 74 CGCC regulator IDs fully accounted, 69 curated physical destinations active, five explicitly held/excluded/deduped. Runtime: `src/lib/nightlife/casino-catalog-pass-19.ts`.
-- Oregon is Pass 20: 10 current physical destinations active, including Ko-Kwel Medford as a Class II destination in addition to the Class III-oriented compact set. Runtime: `src/lib/nightlife/casino-catalog-pass-20.ts`.
-- Washington is Pass 21: 30 current physical tribal casino destinations active: 28 visible WSGC directory properties + Shoalwater reconciliation exception + Elwha River Class II. Runtime: `src/lib/nightlife/casino-catalog-pass-21.ts`.
-- Oregon's post-implementation coordinate QA head `fa6fd94a2a3959aece0a9a339f6a8d58c69abaf5` passed branch workflow run `34566845887`; because Washington was inherited in that head, the corrected Oregon + Washington combined runtime state passed blocking typecheck/build/icon gates.
-- California wiring head `468f861dc3421f708f368718b7a48c0ed93f2344` passed run `34558916921`. Washington wiring head `5eeea6d56ab8eff958513215d489cbc0b7608498` passed run `34565739203` before the later Oregon coordinate correction.
-- The inherited npm test suite remains report-only in this workflow and must not be described as a strict clean test gate.
+Recent completed runtime passes:
+- California / Pass 19: 74 CGCC IDs accounted, 69 curated physical destinations active, five explicitly held/excluded/deduped. Runtime `src/lib/nightlife/casino-catalog-pass-19.ts`.
+- Oregon / Pass 20: 10 current physical destinations active, including Ko-Kwel Medford Class II. Runtime `src/lib/nightlife/casino-catalog-pass-20.ts`.
+- Washington / Pass 21: 30 current physical tribal casino destinations active: 28 visible WSGC directory properties + Shoalwater reconciliation exception + Elwha River Class II. Runtime `src/lib/nightlife/casino-catalog-pass-21.ts`.
 
-### Nevada — Pass 22 staged, not active
+Validation checkpoints:
+- California wiring `468f861dc3421f708f368718b7a48c0ed93f2344` → workflow `34558916921` success.
+- Washington wiring `5eeea6d56ab8eff958513215d489cbc0b7608498` → workflow `34565739203` success.
+- Corrected Oregon + inherited Washington head `fa6fd94a2a3959aece0a9a339f6a8d58c69abaf5` → workflow `34566845887` success.
+- Blocking gates are TypeScript, development build and icon verification. Inherited npm tests remain report-only and must not be described as a strict clean test gate.
 
-Nevada is the current audit jurisdiction. **Do not create or activate `casino-catalog-pass-22.ts` yet.** Nevada's licensing density and the difference between a nonrestricted gaming license and a Dinner Roulette destination casino require a statewide reconciliation before runtime activation.
+## Nevada — Pass 22 reconciliation in progress
 
-Authoritative framework:
+Nevada candidate discovery is complete and the audit has entered statewide reconciliation. **Do not create or activate `casino-catalog-pass-22.ts` until the final accounting/address/coordinate gates pass.**
 
-- Primary authority: Nevada Gaming Control Board (NGCB).
-- NGCB Statistics & Publications provides active-location reporting including Location Detail, Location Name and Address, Restricted/Nonrestricted Location, and Nonrestricted Count reports.
-- NGCB revenue reporting supplies the market segmentation used for reconciliation: Las Vegas Strip, Downtown Las Vegas, North Las Vegas, Laughlin, Boulder Strip, Balance of Clark County, Washoe County, South Lake Tahoe, Elko County, Carson Valley, and Balance of State.
-- NGCB Tax & License issues gaming licenses and monitors Indian gaming. NIGC/current tribal evidence remains a required independent cross-check so tribal/Class II destinations are not missed.
+### Authoritative framework
 
-Nevada artifacts currently staged:
+Primary authority is the Nevada Gaming Control Board. NGCB Statistics & Publications exposes Location Detail, Location Name and Address, Restricted/Nonrestricted Location and Nonrestricted Count reports. The public-report portal is `https://publicreports-gcb.nv.gov/`; the current nonrestricted-count workbook discovered for this audit is the June 30, 2026 report. NGCB revenue reporting provides the market segmentation used for reconciliation. NIGC and current tribal/operator evidence remain the independent cross-check for tribal/Class II destinations.
 
-- `audit/nevada-nonrestricted-casino-scope-2026-09-11.json` — authoritative scope and inclusion/exclusion policy.
-- `audit/nevada-reconciliation-plan-2026-09-11.json` — 12-segment market-by-market reconciliation plan.
-- `audit/nevada-strip-downtown-ledger-2026-09-11.json` — 40 Strip/Downtown candidate rows.
-- `audit/nevada-clark-outer-ledger-2026-09-11.json` — 49 Boulder/Henderson, North Las Vegas, and balance-of-Clark candidate rows.
-- `audit/nevada-laughlin-ledger-2026-09-11.json` — 9 Laughlin candidate/scope-review rows.
-- `audit/nevada-northern-markets-ledger-2026-09-11.json` — 45 Reno/Sparks, Tahoe, Carson Valley, Elko and Wendover candidate rows.
-- `audit/nevada-balance-state-ledger-2026-09-11.json` — 10 conservative rural/balance-of-state candidate rows plus mandatory tribal cross-check.
-- `audit/nevada-statewide-candidate-accounting-2026-09-11.json` — accounting checkpoint proving the discovery ledgers currently contain **153 raw candidate/scope-review rows**.
+### Nevada audit artifacts
 
-The 153 figure is deliberately an oversized discovery universe, **not the final Nevada casino count**. Known closures/aliases/holds are already being separated: Mirage, Tropicana Las Vegas, Texas Station, Fiesta Rancho and Harrah's Reno are historical exclusions; The Cromwell is an alias/rebrand case; Eastside Cannery remains an operation-status hold; Bayshore Inn and retail-style gaming such as Dotty's remain scope-review/hold cases. Multi-casino campuses such as Venetian/Palazzo, Wynn/Encore and Reno's ROW require explicit identity/dedupe decisions rather than automatic merging or duplication.
+1. `audit/nevada-nonrestricted-casino-scope-2026-09-11.json` — authoritative scope/inclusion policy.
+2. `audit/nevada-reconciliation-plan-2026-09-11.json` — 12-segment reconciliation plan.
+3. `audit/nevada-strip-downtown-ledger-2026-09-11.json` — 40 candidate rows.
+4. `audit/nevada-clark-outer-ledger-2026-09-11.json` — 49 candidate rows.
+5. `audit/nevada-laughlin-ledger-2026-09-11.json` — 9 candidate/scope-review rows.
+6. `audit/nevada-northern-markets-ledger-2026-09-11.json` — 45 northern-market rows.
+7. `audit/nevada-balance-state-ledger-2026-09-11.json` — 10 conservative rural rows.
+8. `audit/nevada-statewide-candidate-accounting-2026-09-11.json` — statewide accounting, now advanced from discovery into reconciliation.
+9. `audit/nevada-tribal-crosscheck-2026-09-11.json` — first tribal/federal cross-check.
+10. `audit/nevada-reconciliation-pass-1-2026-09-11.json` — first statewide decision pass and NGCB report-infrastructure checkpoint.
 
-Nevada activation gates:
+### Nevada accounting checkpoint
 
-1. Account the discovery universe against active NGCB nonrestricted locations.
-2. Remove restricted/retail/route/non-destination operations that do not satisfy Dinner Roulette's physical-destination scope.
-3. Reconcile current branding, aliases, closures, rebrands and same-property records.
-4. Normalize current physical addresses and property-specific coordinates for every included destination.
-5. Complete NIGC/tribal cross-check.
-6. Produce a final all-row accounting artifact with no unexplained overlap or missing decisions.
-7. Only then generate the Nevada runtime dataset, `casino-catalog-pass-22.ts`, wire search, run blocking validation and mark Nevada complete in `CASINO_AUDIT.md`.
+- Original candidate/scope-review universe: **153 rows**.
+- Tribal cross-check adds **2 current physical destinations** that must be carried into final reconciliation: **Avi Resort & Casino** and **Moapa Paiute Travel Plaza / Moapa Tribal Casino**.
+- Expanded Nevada decision universe: **155 rows**.
+- This remains a decision universe, not the final runtime count.
+- Wa She Shu Casino remains a status hold because federal/tribal-directory evidence and current closure reports conflict; do not activate without current authoritative/first-party operation confirmation.
+- Palms Casino Resort does not receive a duplicate row merely because it is tribally owned; it remains the same physical off-Strip candidate.
 
-### Casino audit operating rules
+### Decisions already resolved
 
-- Regulator/government sources are preferred for identity/roster truth; operator/property sources are secondary for current branding/address details.
-- Coordinate provenance should be property-specific where possible; uncertain points are corrected before completion rather than treated as precision.
-- Explicit exclusions, dedupes, status cautions and provenance notes are preferable to invented certainty.
-- Curated casino records are a high-confidence backbone merged with live OSM discovery, not a replacement for live discovery.
-- The national audit is not complete until all remaining applicable jurisdictions are reconciled and a final cross-jurisdiction duplicate/alias/retirement sweep passes.
+- Exclude historical/closed: The Mirage, Tropicana Las Vegas, Texas Station, Fiesta Rancho, Harrah's Reno.
+- The Cromwell is alias-only; current successor identity is The Vanderpump Hotel.
+- Include in final reconciliation as current tribal destinations: Avi Resort & Casino and Moapa Paiute Travel Plaza.
+- Hold pending current-operation confirmation: Eastside Cannery and Wa She Shu Casino.
+- Bayshore Inn remains scope review.
+- Dotty's and analogous restricted/retail/route-style gaming are excluded by default from the curated destination backbone unless a distinct destination-casino case is established.
+- Palms remains one physical destination regardless of tribal ownership.
 
-## Legal/compliance pass
+### Same-property identity rules still open
 
-The goal is risk reduction while preserving Dinner Roulette's fundamental product structure. Do not describe the app as guaranteed legally compliant; legal conclusions remain attorney territory.
+- Venetian / Palazzo: retain separately during reconciliation until active NGCB identity determines whether both should remain distinct runtime destinations.
+- Wynn / Encore: same rule.
+- Reno's ROW — Eldorado / Silver Legacy / Circus Circus: connected campus does not automatically justify collapsing distinct public casino destinations; resolve against active regulatory identity.
 
-- Dinner Roulette is presented as an independent discovery/decision tool.
-- Third-party names identify destinations/services without implying affiliation, sponsorship, endorsement or partnership.
-- External links are third-party destinations and use safe external-link behavior.
-- Changing facts such as hours, prices, ratings, admission and availability are verify-first information rather than guarantees.
-- Nightlife/casino functionality is discovery and trip planning only. Dinner Roulette does not accept wagers, provide gambling, sell alcohol or guarantee admission.
-- A central `LEGAL.md` notice exists and legal/privacy/third-party information is surfaced in Settings.
+### Remaining Nevada activation gates
 
-### Rideshare
+1. Resolve every candidate against current NGCB identity or an explicit tribal/federal exception.
+2. Resolve remaining status/scope rows including Casino Royale, Eastside Cannery, Whiskey Pete's, Bayshore Inn, Alamo Casino, Red Drag Casino and rural Eureka ambiguity.
+3. Finalize multi-casino campus identity/dedupe decisions.
+4. Normalize every included physical address.
+5. Perform property-specific coordinate QA for every surviving destination.
+6. Produce final all-row accounting with no unexplained candidates, overlaps or omissions.
+7. Generate Nevada runtime dataset and `casino-catalog-pass-22.ts`, wire `src/lib/nightlife/search.ts`, run blocking validation, then mark Nevada jurisdiction #28 complete only if all gates pass.
 
-- Keep neutral Dinner Roulette visual treatment; do not copy Uber/Lyft logos or trade dress.
-- Keep visible `Drive sober` safety framing.
-- Uber destination-aware `m.uber.com` launch is retained; Dinner Roulette passes the selected destination but does not request, price, book or guarantee a ride.
-- Lyft uses the conservative public `ride.lyft.com` launch; the user finishes destination selection inside Lyft.
-- Rideshare UI identifies services as independent third parties and notes availability/pricing vary.
+## Casino audit operating rules
 
-### Delivery
+- Government/regulator sources are preferred for roster/identity truth; operator/property sources are secondary for current branding and addresses.
+- Nonrestricted gaming status alone is insufficient for Dinner Roulette destination scope.
+- Restricted slot-only, route/distributed retail, online-only and ordinary retail gaming locations stay outside the curated backbone unless a distinct destination-casino justification exists.
+- Coordinate provenance should be property-specific where possible; provisional points are corrected before completion.
+- Explicit exclusions, dedupes, holds and uncertainty are preferable to invented certainty.
+- Curated records supplement live OSM discovery rather than replacing it.
+- National completion still requires all applicable jurisdictions plus a final cross-jurisdiction duplicate/alias/retirement sweep.
 
-- DoorDash, Grubhub and Uber Eats shortcuts open independent service home experiences.
-- User searches for the selected restaurant after launch.
-- Do not claim marketplace availability without an authorized/current integration.
-- Do not scrape/copy marketplace menus, prices, fees, availability, ratings, photos or other marketplace content.
-- Do not deep-link merchant/order pages unless current provider documentation clearly supports it.
+## Legal/compliance continuity
+
+Goal: risk reduction while preserving the product; do not describe Dinner Roulette as guaranteed legally compliant.
+
+- Independent discovery/decision tool; third-party names identify destinations/services without implying affiliation.
+- External links are third-party destinations with safe external-link behavior.
+- Hours, prices, ratings, admission and availability are verify-first facts, not guarantees.
+- Casino/nightlife is discovery/trip planning only; Dinner Roulette does not accept wagers, provide gambling, sell alcohol or guarantee admission.
+- `LEGAL.md` exists and legal/privacy/third-party information is surfaced in Settings.
+
+Rideshare: neutral Dinner Roulette treatment, no copied Uber/Lyft trade dress, visible `Drive sober`; Uber uses destination-aware `m.uber.com`; Lyft uses conservative `ride.lyft.com`; both are independent third parties.
+
+Delivery: DoorDash, Grubhub and Uber Eats shortcuts open independent service home experiences. User searches manually. Do not claim marketplace availability, scrape marketplace content or use unsupported merchant/order deep links.
 
 ## Restaurant icon system
 
-Third-party restaurant logos/brand artwork are replaced in active Dinner presentation with Dinner Roulette-owned generic cuisine/category icons while factual restaurant names remain text.
+Issue #29. Third-party restaurant logos/brand artwork are replaced in active Dinner presentation with Dinner Roulette-owned generic cuisine/category icons while factual restaurant names remain text.
 
-- Tracked as Issue #29 and isolated on `feature/dinner-icon-pack-1`.
-- Visual language: realistic claymation/tactile miniature food objects; rounded-square tiles; no text/logos/mascots/packaging/brand marks; cyan/teal-left and burnt-orange/terracotta-right luminous edge; dark charcoal tile and light pearl/soft-gray tile.
+- Visual language: realistic claymation/tactile miniature food objects, rounded-square tile, no text/logos/mascots/packaging/brand marks, cyan/teal-left + burnt-orange/terracotta-right luminous edge, charcoal dark tile / pearl light tile.
 - 15 semantic categories per theme / 30 canonical assets: `burger`, `pizza`, `mexican`, `chinese`, `japanese`, `italian`, `steakhouse`, `bbq`, `chicken`, `cafe-bakery`, `dessert`, `seafood`, `buffet`, `breakfast`, `fallback`.
-- Canonical layout: `public/dinner-icons/dark/<category>.jpg` and `public/dinner-icons/light/<category>.jpg`.
-- Resolver: `src/lib/restaurants/dinner-icons.ts`; active Dinner shortlist/options and final results use local Dinner icons. Date Night/Nightlife artwork remain separate.
+- Layout: `public/dinner-icons/dark/<category>.jpg` and `public/dinner-icons/light/<category>.jpg`.
+- Resolver: `src/lib/restaurants/dinner-icons.ts`; Dinner shortlist/options and final results use local icons. Date Night/Nightlife artwork remain separate.
 
-## Validation and maintenance
+## Validation / maintenance
 
-Workflow: `.github/workflows/validate-icon-pack.yml` on `feature/dinner-icon-pack-1`.
+Workflow `.github/workflows/validate-icon-pack.yml` runs on `feature/dinner-icon-pack-1`. Blocking gates: dependency install, `tsc --noEmit`, development client/SSR/Nitro build and 30-icon verification. `npm test` remains `continue-on-error: true` due inherited template debt.
 
-Blocking gates: dependency installation, TypeScript `tsc --noEmit`, development client/SSR/Nitro build and all 30 Dinner icon assets. The inherited `npm test` step is currently `continue-on-error: true` and therefore report-only.
-
-Known legacy/template debt includes Grok/template documentation-contract tests expecting `.grok/skills/og/SKILL.md` and `.grok/skills/og/references/`. Do not fabricate placeholder docs solely to make those tests green; restore authoritative upstream docs or make those checks conditional/self-contained. PWA metadata tests were isolated from the real Pick For Us workspace identity using temporary fixtures.
-
-Observed ecosystem/tooling warnings include Recharts 2.x, ESLint 9.x and Node-20-based internals in current action versions. Handle major upgrades as a separate regression-tested maintenance pass rather than changing them merely to silence warnings on this feature branch.
+Known template debt includes `.grok/skills/og/SKILL.md` / `.grok/skills/og/references/` documentation-contract tests. Do not fabricate placeholder docs solely to make those tests green. PWA metadata tests were isolated from the real Pick For Us identity using temporary fixtures.
 
 ## Merge discipline
 
-Dependency/load order remains:
+Dependency/load order: `audit/national-casino-pass-1` → `legal/third-party-compliance-pass-1` → `feature/dinner-icon-pack-1`.
 
-`audit/national-casino-pass-1` → `legal/third-party-compliance-pass-1` → `feature/dinner-icon-pack-1`
-
-PR #28 remains the legal/compliance review surface. Issue #29 tracks the Dinner icon system. Startup ident remains isolated on draft PR #30.
-
-Preferred ship path is a dedicated integration/compatibility branch: assemble intended updates in dependency-aware order, resolve overlaps, run TypeScript/tests/build/visual checks on the combined app, and only then merge the stable assembled state into `main` after Caleb explicitly requests it.
+Preferred ship path remains a dedicated integration/compatibility branch: assemble dependency-aware updates, resolve overlaps, run combined TypeScript/tests/build/visual checks, then merge stable assembled state into `main` only after Caleb explicitly requests it.
 
 `main` remains untouched.
