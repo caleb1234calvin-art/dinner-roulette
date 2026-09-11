@@ -42,34 +42,37 @@ Colorado Division of Gaming accounting is corrected to 33 commercial regulator l
 
 `audit/texas-casino-reconciliation-2026-09-11.json` resolves current Texas scope to four physical tribal gaming destinations pending coordinate/stable-ID QA: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded as travel-center gaming. Texas becomes complete only after runtime activation and validation.
 
-## Oklahoma — 54 address/identity verified; 28 coordinate verified
+## Oklahoma — 54 address/identity verified; 32 coordinate verified
 
-Discovery/reconciliation artifacts include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, runtime QA passes 1–2, and coordinate QA passes **1–4**.
+Discovery/reconciliation artifacts include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, runtime QA passes 1–2, and coordinate QA passes **1–5**.
 
-The Oklahoma name/scope candidate universe is **77**. Current identity, destination scope, normalized street address and provisional stable Dinner Roulette IDs are verified for **54 properties**: Chickasaw 17, Choctaw 8, Cherokee/CNE 10, Muscogee 10, Osage 7 and Citizen Potawatomi 2.
+The Oklahoma name/scope candidate universe is **77**. Current identity, destination scope, normalized street address and provisional stable Dinner Roulette IDs are verified for **54 properties** across Chickasaw, Choctaw, Cherokee/CNE, Muscogee, Osage and Citizen Potawatomi clusters.
 
-**Property-specific coordinates are now verified for 28 of those 54.** Pass 1 established 9: WinStar, Riverwind, Newcastle, Choctaw Durant, Choctaw Pocola, Hard Rock Tulsa, Cherokee West Siloam Springs, FireLake and Grand Casino. Pass 2 added 7: Choctaw Grant, Choctaw McAlester, Choctaw Broken Bow, Choctaw Stringtown, Cherokee Roland, Cherokee Sallisaw and Cherokee Tahlequah. Pass 3 added Cherokee Grove, Cherokee Ramona, Cherokee Will Rogers Downs and Choctaw Idabel. Pass 4 added **Border Casino, SaltCreek Casino, Texoma Casino, Washita Casino, MegaStar Casino, West Bay Casino & Resort, Chisholm Trail Casino and Treasure Valley Casino & Hotel**.
+**Property-specific coordinates are now verified for 32 of those 54.** Pass 1 established 9; Pass 2 added 7; Pass 3 added 4; Pass 4 added 8; Pass 5 added **Jet Stream Casino, Black Gold Casino, Gold Mountain Casino and RiverStar Casino**.
 
 Coordinate evidence must be property-specific rather than city centroids. Runtime activation remains withheld until duplicate/alias distance QA against passes 1–27 is complete.
 
 Important coordinate/separation decisions:
 
 - Riverwind uses current first-party address `1544 State Highway 9, Norman, OK 73072`; earlier provisional ZIP 73093 is superseded.
-- Newcastle Casino is distinct from Newcastle Travel Gaming; only Newcastle Casino belongs in the destination batch.
-- Choctaw Pocola resort is distinct from nearby Choctaw Casino Too-Pocola travel-plaza gaming.
-- Choctaw Grant casino is distinct from nearby Choctaw Travel Plaza Grant.
-- Choctaw Stringtown casino is distinct from its nearby travel-plaza operation.
-- Cherokee Roland casino footprint is distinct from its adjacent hotel footprint and nearby Cherokee Travel Plaza; use the casino geometry.
-- Cherokee Will Rogers Downs uses the racetrack/gaming property coordinate; the casino is co-located at the same first-party address.
+- Newcastle Casino is distinct from Newcastle Travel Gaming.
+- Choctaw Pocola resort, Choctaw Grant casino and Choctaw Stringtown casino are distinct from nearby travel-plaza gaming operations.
+- Cherokee Roland casino footprint is distinct from its adjacent hotel footprint and nearby Cherokee Travel Plaza.
 - Border Casino is distinct from the nearby Chickasaw Travel Stop.
-- MegaStar Casino mapping sources may normalize locality to Kingston, but current first-party contact material uses `4350 S Hwy 377, Willis, OK 73439`; preserve the first-party locality.
+- MegaStar Casino mapping sources may normalize locality to Kingston, but current first-party contact material uses `4350 S Hwy 377, Willis, OK 73439`; preserve first-party locality.
 - Treasure Valley Casino & Hotel is distinct from the separately mapped nearby Chickasaw Travel Stop.
+- Black Gold Casino is co-located with a Chickasaw Travel Stop/convenience component; preserve one casino destination record and do not create a second roulette destination for the travel-stop component.
+- Gold Mountain's current Visit Ardmore page appears to contain ZIP typo `72401`; preserve previously verified Ardmore ZIP `73401`.
 - Lake Eufaula Casino Hotel at 1045 Birkes Rd remains the current Muscogee successor property; never activate the old 806 Forest Ave predecessor simultaneously.
 - Suite Shots Jenks remains staged outside the conventional casino pool.
 
-**Held rather than guessed:** Choctaw Hochatown, Cherokee Fort Gibson and Cherokee South Coffeyville still have verified current addresses but were not promoted in Coordinate Pass 3 because sufficiently direct property-coordinate evidence was not found in that sweep. Continue looking rather than substituting nearby POI or town coordinates.
+### Artesian material correction hold
 
-There are now **22 additional property coordinates needed to reach the 50-coordinate target**. Next action: finish remaining strong Chickasaw candidates (Artesian, Black Gold, RiverStar, Lakecrest, Gold Mountain and any other clean direct-geometry records), then push into Muscogee and Osage. In parallel, perform branch-aware same-ID/name and sub-0.35-mile distance QA across all 28 coordinate-verified records. The first Oklahoma runtime pass should contain only records clearing every gate; do not force the count.
+**Do not activate the earlier provisional Artesian address.** Current first-party Artesian casino/hotel pages identify Artesian Casino at **1001 W 1st Street, Sulphur, OK 73086**, conflicting with the earlier provisional `23 W Vinita Ave` record. Artesian is now explicitly held for identity/address-lineage reconciliation before coordinate promotion. This is exactly the kind of changing-fact correction the runtime QA gate is intended to catch.
+
+Other held records remain Choctaw Hochatown, Cherokee Fort Gibson and Cherokee South Coffeyville where sufficiently direct property-coordinate evidence has not yet cleared the standard.
+
+There are now **18 additional property coordinates needed to reach the 50-coordinate target**. Next action: reconcile Artesian, pursue Lakecrest/remaining clean Chickasaw candidates where evidence is strong, then move aggressively through Muscogee and Osage. In parallel, perform branch-aware same-ID/name and sub-0.35-mile distance QA across all 32 coordinate-verified records. The first Oklahoma runtime pass should contain only records clearing every gate; do not force the count.
 
 ## Legal/compliance continuity
 
