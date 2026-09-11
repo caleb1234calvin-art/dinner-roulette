@@ -14,7 +14,9 @@ _Last updated: September 11, 2026_
 
 ## Active integration validation
 
-`Validate Dinner Integration` is the compatibility gate for the integration branch. It performs dependency install, TypeScript checking, casino audit, inherited tests as report-only, development build, and Dinner icon verification. Green baselines include Run 98, Run 103 after the Caustic Relay startup ident switch, and Run 107 (`34645116117`) at commit `ebe5e1268794c6d325a9ae37b685621f61f62ba6` after the casino validator was corrected to preserve legitimate distant same-name properties. A green run is required before ship/merge consideration but never authorizes a merge to `main` by itself.
+`Validate Dinner Integration` is the compatibility gate for the integration branch. It performs dependency install, TypeScript checking, casino audit, inherited tests as report-only, development build, and Dinner icon verification.
+
+**Run 148 (`34653267544`) is green at commit `9101c7547e18636e4aeabe590a551245cace6a63`, validating the Oklahoma Pass 28 runtime state.** Every job step completed successfully: install, TypeScript, curated-casino audit, inherited test-suite report, development build and Dinner icon verification. This supersedes Run 107 as the current casino/runtime validation baseline. A green run never authorizes a merge to `main` by itself.
 
 ## Casino reconciliation policy
 
@@ -28,7 +30,7 @@ For large jurisdictions, use 50–100 verified-destination runtime batches as a 
 
 ## Runtime casino progress
 
-Casino catalog modules now run through **Pass 28** on integration. Pass 28 is the first Oklahoma runtime batch and contains 46 records that cleared the first record-level eligibility review. California Pass 19, Oregon Pass 20, Washington Pass 21 and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida and New York. Nevada remains pending/rolling.
+Casino catalog modules run through **Pass 28** on integration. Pass 28 is the first Oklahoma runtime batch and contains 46 records. **Run 148 validated Pass 28 green.** California Pass 19, Oregon Pass 20, Washington Pass 21 and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida and New York. Nevada remains pending/rolling.
 
 ## Nevada
 
@@ -38,39 +40,33 @@ Nevada's provisional audit decision universe is 174 rows, not a final runtime co
 
 Colorado Division of Gaming accounting is corrected to 33 commercial regulator locations: 15 Black Hawk, 6 Central City, 12 Cripple Creek, plus two tribal casino resorts. All regulator rows are accounted for. Bally's Black Hawk East/North/West remain separate physical properties; Century Casinos I/II must not create an artificial duplicate; Z Casino transitioned to Bigfoot Casino in 2026; FHR Billy's still needs a current-routability decision. After that, finish address/coordinate/site QA and generate runtime data.
 
-## Texas
+## Texas — 4 current destinations; 2 coordinate verified
 
-`audit/texas-casino-reconciliation-2026-09-11.json` resolves current Texas scope to four physical tribal gaming destinations pending coordinate/stable-ID QA: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded as travel-center gaming. Texas becomes complete only after runtime activation and validation.
+`audit/texas-casino-reconciliation-2026-09-11.json` resolves current Texas scope to four physical tribal gaming destinations: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded as travel-center gaming.
 
-## Oklahoma — Pass 28 staged with 46 runtime records
+`audit/texas-coordinate-qa-pass-1-2026-09-11.json` begins property-coordinate QA and verifies **2 of 4**:
+
+- **Kickapoo Lucky Eagle Casino Hotel** — `28.61092,-100.44078`, direct casino property geometry. Material address correction: the current first-party casino location page uses **794 Lucky Eagle Drive, Eagle Pass, TX 78852**. The earlier reconciliation artifact's `2212 Rosita Valley Rd` came from a July 2026 expansion announcement and should be treated as expansion/construction provenance rather than the current guest casino address unless later evidence proves otherwise.
+- **Speaking Rock Entertainment Center** — `31.690126,-106.326605`, current `122 S Old Pueblo Rd, El Paso, TX 79907` property. Older NIGC `119 S Old Pueblo Rd` remains provenance only.
+
+Still held for direct numerical property coordinates:
+
+- **Naskila Casino Livingston** — current first-party address remains `540 State Park Road 56, Livingston, TX 77351`; do not substitute nearby photo geotags or city centroids.
+- **Naskila Casino Leggett** — current first-party address remains `10314 US 59 N, Livingston, TX 77351`; opened August 25, 2026 and remains distinct from the original Livingston property while both operate.
+
+Texas is not complete until all four current destinations clear coordinate/stable-ID QA, enter runtime and validate green. Immediate Texas action: find direct numerical property coordinates for both Naskila sites, then serialize the clean four-property Texas runtime pass.
+
+## Oklahoma — Pass 28 green with 46 runtime records
 
 Oklahoma discovery/reconciliation artifacts include the statewide scope, major-operator passes 1–3, runtime QA passes 1–2, coordinate QA passes 1–8, duplicate-distance QA passes 1–2, and `audit/oklahoma-runtime-eligibility-pass-1-2026-09-11.json`.
 
 The Oklahoma candidate universe remains **77**. Current identity/address QA reached **54**, and property-specific coordinate QA reached **48**. Generated catalog passes 2–27 contain zero Oklahoma records, so there are no hidden Oklahoma collisions in those generated modules.
 
-Record-level runtime eligibility review approved **46 of the 48 coordinate-verified records** for the first Oklahoma runtime batch. The two coordinate-verified records deliberately held from Pass 28 are:
+Record-level runtime eligibility approved **46 of the 48 coordinate-verified records** for the first Oklahoma runtime batch. Duck Creek and Checotah remain held solely for current street-number normalization. The other six address-verified records outside Pass 28 still lack a sufficiently resolved coordinate/current-site package: Artesian, Lakecrest, Coweta, Lake Eufaula, Holdenville and Cherokee South Coffeyville. Artesian additionally retains the 1001 W 1st Street vs old 23 W Vinita lineage hold.
 
-- **Duck Creek Casino** — building coordinate verified, but current address evidence conflicts between `10071 Ferguson Rd` and `10085 Ferguson Rd`.
-- **Checotah Casino** — building coordinate verified, but current address evidence conflicts between `830 N Broadway` and `831 N Broadway Ave`.
+`src/lib/nightlife/casino-catalog-pass-28.ts` contains the 46 eligible Oklahoma destinations. `src/lib/nightlife/search.ts` imports Pass 28 and appends it to chronological `CASINO_PASSES`. The validator enumerates Pass 2 through Pass 28. WinStar preserves ID stem `winstar`; Choctaw Durant preserves `choctaw-durant`.
 
-The other six address-verified records outside Pass 28 still lack a sufficiently resolved coordinate/current-site package, including Artesian, Lakecrest, Coweta, Lake Eufaula, Holdenville and Cherokee South Coffeyville. Artesian also retains its material address-lineage hold: current first-party property pages use `1001 W 1st Street`, not the earlier provisional `23 W Vinita Ave`.
-
-### Pass 28 implementation state
-
-`src/lib/nightlife/casino-catalog-pass-28.ts` now contains the **46 eligible Oklahoma destinations**. `src/lib/nightlife/search.ts` imports `CASINO_CATALOG_PASS_28` and appends it to the chronological `CASINO_PASSES` array, so same-property latest-wins reconciliation remains intact.
-
-Stable-ID lineage is preserved for the two existing base-catalog properties already in this batch:
-
-- WinStar uses ID stem `winstar` rather than creating `ok-winstar-world`.
-- Choctaw Durant uses ID stem `choctaw-durant` rather than creating an Oklahoma-prefixed duplicate lineage.
-
-The casino validator now enumerates **27 generated pass files**, covering Pass 2 through Pass 28. Oklahoma has **not** been marked complete in the jurisdiction manifest yet; Pass 28 is a clean first runtime batch, not a statewide completeness claim.
-
-Important runtime decisions retained in Pass 28 include current successor-only Osage Bartlesville/Pawhuska/Ponca City sites, current Riverwind ZIP/address, MegaStar's first-party Willis locality, Gold Mountain ZIP 73401, one River Spirit resort destination rather than artificial sub-casino duplicates, and exclusion of nearby/co-located travel-plaza gaming where it is not a separate Dinner Roulette destination.
-
-### Immediate next action
-
-Inspect/trigger `Validate Dinner Integration` against the Pass 28 runtime changes. If validation exposes a duplicate, TypeScript, URL or catalog-format problem, fix it on integration and re-run. If green, preserve Pass 28 and continue Oklahoma cleanup/additions separately rather than holding the clean 46 hostage to the remaining unresolved properties. Do not mark Oklahoma statewide complete until the remaining operator clusters and held records are reconciled.
+**Run 148 confirms this implementation is green.** Oklahoma remains intentionally not marked statewide complete; future cleanup/additions can proceed separately without holding the validated 46 hostage.
 
 ## Legal/compliance continuity
 
@@ -82,7 +78,7 @@ Issue #29 remains the original Dinner icon system: 15 semantic categories per th
 
 ## Caustic Relay / startup-ident continuity
 
-Caustic Relay is the active working maker/publisher brand. The canonical black-mamba/scorpion hybrid creature is immutable unless Caleb explicitly requests redesign. Current startup asset is `public/brand/CAUSTIC_RELAY_ident-2.mp4`, wired by `src/components/startup-ident.tsx`, compatibility-validated by green Run 103.
+Caustic Relay is the active working maker/publisher brand. The canonical black-mamba/scorpion hybrid creature is immutable unless Caleb explicitly requests redesign. Current startup asset is `public/brand/CAUSTIC_RELAY_ident-2.mp4`, wired by `src/components/startup-ident.tsx`, compatibility-validated by green Run 103 and still passing the current Run 148 integration build.
 
 ## Future food-truck discovery
 
