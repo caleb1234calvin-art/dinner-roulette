@@ -1,0 +1,104 @@
+{
+  "jurisdiction":"Nevada",
+  "capturedOn":"2026-09-11",
+  "status":"ambiguity-resolution-pass-3-complete",
+  "decisions":[
+    {
+      "name":"Best Western Plus Casino Royale",
+      "address":"3411 Las Vegas Blvd S, Las Vegas, NV 89109",
+      "decision":"include-current-destination",
+      "basis":[
+        "Current first-party Casino Royale site advertises active gaming including slots, roulette and blackjack.",
+        "Current first-party and Best Western booking surfaces confirm the 3411 Las Vegas Blvd S property and active hotel operation.",
+        "Historical NGCB identity at the same address is consistent with the current physical destination."
+      ]
+    },
+    {
+      "name":"Eastside Cannery Casino & Hotel",
+      "address":"5255 Boulder Hwy, Las Vegas, NV 89122",
+      "decision":"exclude-closed-demolished",
+      "basis":[
+        "Boyd's 2024 annual filing states Eastside Cannery had remained closed to the public since March 18, 2020.",
+        "Boyd officials scheduled demolition for March 5, 2026; current reporting confirms the property never reopened and the hotel-casino was demolished."
+      ],
+      "note":"This supersedes the earlier operation-status hold."
+    },
+    {
+      "name":"Caesars Republic Lake Tahoe",
+      "aliases":["Harveys Lake Tahoe"],
+      "address":"18 Hwy 50, Stateline, NV 89449",
+      "decision":"include-current-destination-rename-resolved",
+      "basis":[
+        "Caesars Entertainment confirms Harveys was transformed/rebranded into Caesars Republic Lake Tahoe and officially opened under the new identity in July 2026.",
+        "Travel Nevada lists the current property at 18 Hwy 50 with a 24/7 casino floor.",
+        "Do not retain a second Harveys runtime record."
+      ]
+    },
+    {
+      "name":"Harrah's Lake Tahoe",
+      "address":"15 Hwy 50, Stateline, NV 89449",
+      "decision":"include-current-separate-destination",
+      "basis":[
+        "Caesars current material treats Harrah's and Caesars Republic as two separate casino properties connected across the highway.",
+        "Current Caesars contact/fact-sheet material confirms Harrah's at 15 Hwy 50 and Caesars Republic at 18 Hwy 50."
+      ]
+    },
+    {
+      "name":"The Venetian Resort Hotel Casino",
+      "address":"3355 Las Vegas Blvd S, Las Vegas, NV 89109",
+      "decision":"include-current-separate-destination",
+      "basis":[
+        "Current first-party Venetian contact material lists The Venetian Resort Hotel Casino at 3355 Las Vegas Blvd S.",
+        "Current regulatory evidence establishes active Venetian gaming identity."
+      ]
+    },
+    {
+      "name":"The Palazzo Resort Hotel Casino",
+      "address":"3325 S Las Vegas Blvd, Las Vegas, NV 89109",
+      "decision":"include-current-separate-destination",
+      "basis":[
+        "Current first-party Venetian contact material separately lists The Palazzo Resort Hotel Casino at 3325 S Las Vegas Blvd.",
+        "The two branded hotel-casino destinations have distinct public addresses even though they form one integrated resort complex.",
+        "Dinner Roulette destination scope therefore retains both physical public casino destinations rather than collapsing them solely because of shared ownership/campus."
+      ]
+    },
+    {
+      "name":"Wynn Las Vegas",
+      "address":"3131 Las Vegas Blvd S, Las Vegas, NV 89109",
+      "decision":"include-current-separate-destination",
+      "basis":[
+        "March 2026 NGCB nonrestricted agenda identifies Wynn Las Vegas LLC dba Wynn Las Vegas at 3131 Las Vegas Blvd S.",
+        "Current first-party Wynn material confirms active casino operation."
+      ]
+    },
+    {
+      "name":"Encore at Wynn Las Vegas",
+      "address":"3131 Las Vegas Blvd S, Las Vegas, NV 89109",
+      "decision":"include-current-separate-destination",
+      "basis":[
+        "Current first-party Wynn casino material explicitly describes the casinos at Wynn and Encore and states both are open 24 hours daily.",
+        "Current first-party directions maintain separate Encore entrances/registration areas within the shared resort complex.",
+        "Dinner Roulette retains Encore as a separate public gaming destination within the common campus despite the shared street address."
+      ]
+    },
+    {
+      "name":"Wa She Shu Casino",
+      "address":"1003 US Hwy 395 N, Gardnerville, NV 89410",
+      "decision":"exclude-current-casino-closed-until-reopening-proven",
+      "basis":[
+        "Washoe Development Corporation announced in April 2023 that Wind Creek would surrender the Wa She Shu facility on July 1, 2023 and that the Tribe was reviewing future uses for the building.",
+        "Current third-party location surfaces report the casino permanently closed, and a 2025 on-site trip report found the casino doors locked.",
+        "A March 2026 industry directory still lists Wa She Shu, creating stale-directory conflict, but no current first-party evidence establishes reopened gaming operation."
+      ],
+      "note":"Reopen only if current Washoe Tribe/official gaming evidence later establishes active casino operation."
+    }
+  ],
+  "setChecks":{
+    "decisionsFinalizedThisPass":9,
+    "priorHoldsClosedThisPass":2,
+    "renameAliasResolved":1,
+    "campusIdentityGroupsResolved":2,
+    "remainingNamedHighRiskScopeItems":["Bayshore Inn","Alamo Casino at Petro","Red Drag Casino","Eureka rural casino ambiguity"],
+    "result":"PASS"
+  }
+}
