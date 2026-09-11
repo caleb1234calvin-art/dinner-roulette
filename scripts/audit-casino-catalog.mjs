@@ -5,10 +5,20 @@ const catalogFiles = [
   ...Array.from({ length: 26 }, (_, index) => `src/lib/nightlife/casino-catalog-pass-${index + 2}.ts`),
 ];
 const manifestFiles = ["audit/casino-sources.json", "audit/casino-sources-integration.json"];
+const SAME_PROPERTY_MILES = 0.35;
 
 const records = [];
 const casinoPattern = /casino\(\s*(["'])(.*?)\1\s*,\s*(["'])(.*?)\3\s*,\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)/g;
 const normalizeName = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+const haversineMiles = (aLat, aLon, bLat, bLon) => {
+  const toRad = (degrees) => degrees * Math.PI / 180;
+  const dLat = toRad(bLat - aLat);
+  const dLon = toRad(bLon - aLon);
+  const lat1 = toRad(aLat);
+  const lat2 = toRad(bLat);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+  return 3958.7613 * 2 * Math.asin(Math.min(1, Math.sqrt(h)));
+};
 
 for (const file of catalogFiles) {
   if (!fs.existsSync(file)) {
@@ -25,10 +35,20 @@ const failures = [];
 const duplicateWarnings = [];
 const ids = new Map();
 const names = new Map();
+function reconcileDuplicate(kind, key, record, previous) {
+  const distance = haversineMiles(previous.lat, previous.lon, record.lat, record.lon);
+  if (distance < SAME_PROPERTY_MILES) {
+    duplicateWarnings.push(`${kind}: ${record.name} (${previous.file} / ${record.file}, ${distance.toFixed(3)} mi; latest pass wins at runtime)`);
+    return;
+  }
+  failures.push(`${kind} at distinct locations: ${key} (${previous.name} / ${record.name}, ${distance.toFixed(2)} mi; ${previous.file} / ${record.file})`);
+}
 for (const record of records) {
-  if (ids.has(record.id)) duplicateWarnings.push(`duplicate id: ${record.id} (${ids.get(record.id)} / ${record.file})`); else ids.set(record.id, record.file);
+  const previousId = ids.get(record.id);
+  if (previousId) reconcileDuplicate("duplicate id", record.id, record, previousId); else ids.set(record.id, record);
   const normalizedName = normalizeName(record.name);
-  if (names.has(normalizedName)) duplicateWarnings.push(`duplicate normalized name: ${record.name}`); else names.set(normalizedName, record.file);
+  const previousName = names.get(normalizedName);
+  if (previousName) reconcileDuplicate("duplicate normalized name", normalizedName, record, previousName); else names.set(normalizedName, record);
   if (!Number.isFinite(record.lat) || record.lat < 18 || record.lat > 72) failures.push(`implausible US latitude: ${record.name} ${record.lat}`);
   if (!Number.isFinite(record.lon) || record.lon < -180 || record.lon > -60) failures.push(`implausible US longitude: ${record.name} ${record.lon}`);
 }
@@ -61,10 +81,10 @@ for (const [jurisdiction, value] of Object.entries(jurisdictions).filter(([, val
 }
 
 if (duplicateWarnings.length) {
-  console.warn("Casino catalog duplicate reconciliation warnings:\n" + duplicateWarnings.map((warning) => `- ${warning}`).join("\n"));
+  console.warn("Casino catalog same-property reconciliation warnings:\n" + duplicateWarnings.map((warning) => `- ${warning}`).join("\n"));
 }
 if (failures.length) {
   console.error("Casino catalog audit failed:\n" + failures.map((failure) => `- ${failure}`).join("\n"));
   process.exit(1);
 }
-console.log(`Casino catalog audit passed for ${records.length} explicit curated records across ${catalogFiles.length} catalog files (${duplicateWarnings.length} duplicate reconciliation warnings).`);
+console.log(`Casino catalog audit passed for ${records.length} explicit curated records across ${catalogFiles.length} catalog files (${duplicateWarnings.length} same-property reconciliation warnings).`);
