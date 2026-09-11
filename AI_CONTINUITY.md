@@ -1,6 +1,6 @@
 # Dinner Roulette — AI Continuity
 
-_Last updated: September 10, 2026_
+_Last updated: September 11, 2026_
 
 ## Project state
 
@@ -9,8 +9,10 @@ _Last updated: September 10, 2026_
 - Current compliance work: `legal/third-party-compliance-pass-1`.
 - Compliance PR: #28, based on `audit/national-casino-pass-1`.
 - Restaurant icon generation: Issue #29.
+- Startup-ident implementation branch: `brand/startup-ident-pass-1`.
+- Startup-ident preview PR: #30, DRAFT ONLY. Do not merge unless Caleb explicitly requests it.
 - `main` remains untouched unless Caleb explicitly requests a merge or direct change.
-- ChatGPT is the only AI authorized to directly modify this repository unless Caleb explicitly asks another assistant to update a named file. Grok/SuperGrok may generate artwork and, when Caleb requests it, update this continuity file. Grok does not merge branches or ship icon assets to `main` without an explicit request.
+- ChatGPT is the only AI authorized to directly modify this repository unless Caleb explicitly asks another assistant to update a named file. Grok/SuperGrok may generate artwork/video from handoff briefs, but Grok Imagine does not have repository access and must not be treated as a repo operator.
 - Dinner Roulette and the Jasper County audit are interconnected projects. Audit data, methods, infrastructure, and discoveries may feed Dinner Roulette.
 
 ## National casino audit continuity
@@ -104,59 +106,70 @@ Notes for the next session:
 5. Do not merge icon files into `main` until the compliance and casino-audit branches are reconciled and Caleb asks for the ship.
 6. Date Night and Nightlife icon systems stay separate; they already have their own palettes (magenta/lavender year-round, red/cyan Halloween, teal Nightlife).
 
-## Caleb maker's mark / startup ident — APPROVED CHECKPOINT
+## Venom Systems maker's mark / startup ident — ACTIVE BRAND CHECKPOINT
 
-This is Caleb's reusable personal brand identity across apps and other things he creates. It is separate from Dinner Roulette's restaurant-category icon system.
+This is Caleb's reusable personal brand identity across apps and other things he creates. The umbrella brand name is now **Venom Systems**. It is separate from Dinner Roulette's own product identity and restaurant-category icon system.
 
-### Canonical creature
+### Canonical creature — HARD VISUAL LOCK
 
-The mark is a glossy black detailed black-mamba/snake + scorpion hybrid: central snake head and serpentine scaled body, symmetrical armored scorpion-like arms/pincers, and a segmented tail ending in a large claw/pincer. The still composition is vertical and heraldic. Associated motto: **Patiens sed mordax** (“patient, but biting”). The pincers are part of the snake/scorpion hybrid identity, not lobster branding.
+The mark is the existing glossy black detailed black-mamba/snake + scorpion hybrid: central snake head and serpentine scaled body, symmetrical armored scorpion-like arms/pincers, and segmented lower tail ending in a claw/pincer. The still composition is vertical and heraldic. The pincers are part of the snake/scorpion hybrid identity, not lobster branding.
+
+**Do not modify, redraw, regenerate, reinterpret, morph, replace, restyle, or otherwise alter the snake/scorpion creature when making branding variants.** Any model receiving the existing animation as input must treat the creature and its existing motion as locked source material. Background and typography may be edited around it; the creature itself must remain untouched.
+
+The earlier motto `Patiens sed mordax` is **not part of the visible Venom Systems logo/ident**. Do not add it to the startup video or wordmark unless Caleb later explicitly reverses that decision.
 
 ### Brand hierarchy
 
 1. **Full detailed crest** — prominent branding and startup ident.
 2. **Simplified maker's mark** — subtle persistent watermark/signature, typically in a screen corner.
 3. **Tiny app/favicon icon** — reduced silhouette/glyph optimized for very small sizes.
+4. **VENOM SYSTEMS wordmark/subtitle** — intended to accompany the startup ident while remaining visually subordinate to the creature.
 
-The same maker's mark can connect otherwise visually different Caleb-built apps.
+The same maker's mark and Venom Systems identity can connect otherwise visually different Caleb-built apps.
 
-### Approved startup ident
+### Approved motion master
 
-**The previously proposed slither animation is no longer the target. Do not regenerate or substitute it.** After many generation attempts, Caleb selected a stronger, simpler animation in which the full crest remains recognizable and the upper pincers rapidly sweep/curl inward over the head in an aggressive closing/arming gesture.
+The previously proposed slither animation is retired. The approved motion is the fast version in which the full crest remains recognizable and the upper pincers rapidly sweep/curl inward over the head in an aggressive closing/arming gesture.
 
-The approved final prototype is the user-supplied clip from Sept. 10, 2026, conversation filename/reference `8808.mp4`. Caleb manually created the final timing by repeatedly speeding up and saving the successful Grok-generated motion. That manual speed edit is intentional and is part of the approved result.
+The approved clean prototype is the user-supplied clip from Sept. 10, 2026, conversation filename/reference `8808.mp4`. Caleb manually created the final 1.5-second timing by repeatedly speeding up and saving the successful Grok-generated motion. That manual speed edit is intentional.
 
-Treat that clip as the **master startup-ident reference**. Preserve it. Do not ask a generative model to recreate it merely to change timing or make cosmetic edits; deterministic editing should be used where possible so the approved motion/anatomy is not lost.
+The approved clean master is committed on `brand/startup-ident-pass-1` at:
+`public/brand/grok_video_2026-09-10-20-20-31_1.mp4`
 
-### Intended Dinner Roulette startup behavior
+Recorded blob SHA: `75e75b8559fed6871872667eb8e6463f2704e2d9`. It was verified against the conversation master by exact byte size (2,101,557 bytes). Format: H.264/yuv420p, 768×1168, 1.5 seconds.
 
-- On app launch, play the approved maker's-mark animation **once**.
-- Do not loop it.
-- Do not require a tap to dismiss it.
-- Keep it brief; it is a brand sting/boot signature, not a cinematic intro.
-- Load/initialize Dinner Roulette behind the ident when technically practical so the branding does not create unnecessary startup delay.
-- When the ident completes, transition immediately into the normal Dinner Roulette UI.
-- If the app is ready before the ident finishes, allow the short ident to complete. If startup genuinely takes longer, hand off cleanly to the app's normal loading state rather than looping or artificially extending the ident.
-- Keep the ident itself project-neutral so the same master animation can later identify other Caleb-built apps; project-specific branding/UI follows after it.
+Treat the creature/motion in that clip as source-locked. Do not ask a generative model to recreate it merely for cosmetic edits.
+
+### Static variant / current creative direction
+
+On Sept. 11, Caleb supplied `8817.mp4`, a deliberate TV-static treatment of the startup ident. The noisy broadcast/static background is intentional, not an export error. Caleb is currently leaning toward using the static aesthetic as the normal Venom Systems startup treatment rather than making it a rare 1-in-100 startup variant, because a rare corruption-style startup could be mistaken for an app problem.
+
+This decision is not yet a repository asset replacement. Preserve the clean master while the branded static version is being developed.
+
+### Venom Systems typography direction
+
+Current concept: add **VENOM SYSTEMS** in all caps near the bottom of the startup ident as a subordinate subtitle/wordmark. Desired behavior is a restrained signal/glitch treatment: brief horizontal tearing, flicker, displacement, or lock-in behavior is acceptable. Avoid a constant unreadable glitch or a generic overdone cyberpunk effect. The title should resolve clearly enough to read.
+
+Font is not yet locked. Current useful directions include industrial/geometric/condensed sans styles; Oxanium SemiBold and DIN Condensed Bold were discussed as starting references. Do not treat either as final until Caleb approves a rendered result.
 
 ### Animation content lock
 
-For the approved startup ident:
-
-- Keep the recognizable full hybrid anatomy.
-- Keep the fast inward pincer sweep/closing gesture.
-- No tongue animation; extensive attempts were discarded and the approved tongue-free version looks cleaner.
+- Keep the recognizable full hybrid anatomy exactly as supplied.
+- Keep the existing fast inward pincer sweep/closing gesture.
+- No tongue animation.
 - No slithering requirement.
-- No added smoke, particles, explosions, spins, or unrelated spectacle.
-- Do not add extra limbs or morph the pincers/anatomy.
-- Do not slow it back into the earlier ceremonial multi-second pacing.
-- Future variants should branch from this approved checkpoint rather than overwrite it.
+- No smoke, particles, explosions, spins, extra spectacle, extra limbs, or anatomy morphing.
+- Do not slow the approved motion.
+- Do not change the snake/scorpion to accommodate typography or static. Move/size the text around the existing creature instead.
+- Background/static and wordmark effects may evolve independently around the locked creature.
 
-### Asset handling status
+### Dinner Roulette startup implementation
 
-The approved video currently exists as a conversation-uploaded/user-edited asset and is **not yet recorded here as a committed repository media path**. Before wiring the startup ident into Dinner Roulette, place the approved master asset into an appropriate project asset location and record the exact repo path/provenance here. Do not substitute one of the earlier failed prototypes.
+The startup implementation is isolated on `brand/startup-ident-pass-1`. Component: `src/components/startup-ident.tsx`. Root integration: `src/routes/__root.tsx`.
 
-**Current next action when implementing branding:** use the approved `8808.mp4` startup-ident master, add it to the app's assets, wire it to play once at startup, then transition directly to Dinner Roulette. Preserve `main`/merge discipline unless Caleb explicitly authorizes shipping.
+Current implementation plays the committed clean master once at full-page startup, muted/inline, with no controls and no loop, while the app can initialize behind it. Draft PR #30 (`Preview startup ident`) exists only as a preview/review surface and must not be merged without explicit authorization. Vercel preview deployment has succeeded for the branch.
+
+Once Caleb approves the final Venom Systems static + wordmark video, add it as a new asset rather than destructively overwriting the clean source master, then update the startup component to point to the approved branded asset. Keep the clean source as provenance/reference.
 
 ## Future integration rule
 
@@ -164,4 +177,4 @@ For any new third-party integration: check the provider's current official terms
 
 ## Merge discipline
 
-PR #28 remains the review surface for the legal/compliance pass. Issue #29 artwork is not a reason to merge that PR. Do not merge the compliance branch into the casino-audit branch or `main` unless Caleb explicitly requests it.
+PR #28 remains the review surface for the legal/compliance pass. Issue #29 artwork is not a reason to merge that PR. PR #30 remains a draft startup-ident preview surface. Do not merge the compliance branch, startup-ident branch, or casino-audit branch into one another or into `main` unless Caleb explicitly requests it.
