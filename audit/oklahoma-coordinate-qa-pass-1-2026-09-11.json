@@ -1,0 +1,138 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "coordinate-qa-pass-1",
+  "scope": "Property-specific coordinate verification for the first Oklahoma runtime candidates using current first-party address evidence plus property-level OpenStreetMap/Mapcarta geometry or other corroborating location evidence. These records are not yet runtime-activated until duplicate-distance QA against existing casino passes is complete.",
+  "records": [
+    {
+      "id":"ok-winstar-world",
+      "name":"WinStar World Casino and Resort",
+      "address":"777 Casino Ave, Thackerville, OK 73459",
+      "lat":33.75762,
+      "lon":-97.12994,
+      "website":"https://www.winstar.com/",
+      "addressEvidence":"https://www.winstar.com/footer/directions/",
+      "coordinateEvidence":"https://mapcarta.com/es/W158650696",
+      "osmFeature":"way 158650696",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-riverwind-casino",
+      "name":"Riverwind Casino",
+      "address":"1544 State Highway 9, Norman, OK 73072",
+      "lat":35.18068,
+      "lon":-97.50033,
+      "website":"https://www.riverwind.com/",
+      "addressEvidence":"https://www.riverwind.com/footer/directions/",
+      "coordinateEvidence":"https://mapcarta.com/W171958163",
+      "osmFeature":"way 171958163",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Corrects the earlier provisional ZIP 73093 to the current first-party public-facing ZIP 73072. Mapcarta/OSM labels a nearby alternate street form, but the geometry clearly corresponds to the same Riverwind property; retain current first-party 1544 State Highway 9 as the runtime address."
+    },
+    {
+      "id":"ok-newcastle-casino",
+      "name":"Newcastle Casino",
+      "address":"2457 Highway 62 N Service Rd, Newcastle, OK 73065",
+      "lat":35.27734,
+      "lon":-97.59848,
+      "website":"https://www.newcastlecasino.com/",
+      "addressEvidence":"https://www.newcastlecasino.com/",
+      "coordinateEvidence":"https://mapcarta.com/W573340533",
+      "osmFeature":"way 573340533",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Do not confuse with separate Newcastle Travel Gaming at 235 NW 24th St, which remains excluded from the destination-casino batch."
+    },
+    {
+      "id":"ok-choctaw-durant",
+      "name":"Choctaw Casino & Resort-Durant",
+      "address":"4216 S Hwy 69/75, Durant, OK 74701",
+      "lat":33.95116,
+      "lon":-96.41404,
+      "website":"https://www.choctawcasinos.com/durant/",
+      "addressEvidence":"https://www.choctawcasinos.com/durant/",
+      "coordinateEvidence":"https://mapcarta.com/W221847047",
+      "osmFeature":"way 221847047",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-choctaw-pocola",
+      "name":"Choctaw Casino & Resort-Pocola",
+      "address":"3400 Choctaw Rd, Pocola, OK 74902",
+      "lat":35.29053,
+      "lon":-94.43634,
+      "website":"https://www.choctawcasinos.com/pocola/",
+      "addressEvidence":"https://www.choctawcasinos.com/pocola/",
+      "coordinateEvidence":"https://mapcarta.com/W1083056837",
+      "osmFeature":"way 1083056837",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Separate from nearby Choctaw Casino Too-Pocola travel-plaza gaming, which is excluded from the destination batch."
+    },
+    {
+      "id":"ok-hard-rock-tulsa",
+      "name":"Hard Rock Hotel & Casino Tulsa",
+      "address":"777 W Cherokee St, Catoosa, OK 74015",
+      "lat":36.16535,
+      "lon":-95.76476,
+      "website":"https://www.hardrockcasinotulsa.com/",
+      "addressEvidence":"https://www.hardrockcasinotulsa.com/",
+      "coordinateEvidence":"https://mapcarta.com/W195664424",
+      "osmFeature":"way 195664424",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-cherokee-west-siloam-springs",
+      "name":"Cherokee Casino & Hotel West Siloam Springs",
+      "address":"2416 US-412, West Siloam Springs, OK 74338",
+      "lat":36.17766,
+      "lon":-94.56769,
+      "website":"https://www.cherokeecasino.com/casinos/west-siloam-springs",
+      "addressEvidence":"https://www.cherokeecasino.com/casinos/west-siloam-springs",
+      "coordinateEvidence":"https://mapcarta.com/W224437020",
+      "osmFeature":"way 224437020",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-firelake-casino",
+      "name":"FireLake Casino",
+      "address":"41170 Hardesty Rd, Shawnee, OK 74801",
+      "lat":35.30360,
+      "lon":-96.92794,
+      "website":"https://www.firelakecasino.com/",
+      "addressEvidence":"https://www.firelakecasino.com/contact-9",
+      "coordinateEvidence":"https://mapcarta.com/N2131702640",
+      "osmFeature":"node 2131702640",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-grand-casino-shawnee",
+      "name":"Grand Casino Hotel & Resort",
+      "address":"777 Grand Casino Blvd, Shawnee, OK 74804",
+      "lat":35.38074,
+      "lon":-97.05920,
+      "website":"https://www.grandresortok.com/",
+      "addressEvidence":"https://www.grandresortok.com/hotel/",
+      "coordinateEvidence":"https://gist.github.com/jeremiak/9f0697e6159f5069d8e38b3c371d70da",
+      "corroboratingCoordinateEvidence":[
+        "https://www.casinocamper.com/fire-lake-grand-casino/",
+        "https://www.campendium.com/grand-casino-hotel-resort-rv-park"
+      ],
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Coordinate chosen from the property geocode at 777 Grand Casino Blvd; multiple independent location sources cluster within roughly 0.1 mile."
+    }
+  ],
+  "qaAccounting": {
+    "addressIdentityVerifiedPool": 54,
+    "coordinateVerifiedThisPass": 9,
+    "coordinateVerifiedCumulative": 9,
+    "duplicateDistanceClearedCumulative": 0,
+    "runtimeReadyCumulative": 0,
+    "remainingCoordinateTargetForFifty": 41
+  },
+  "correctionsAndSeparationRules": [
+    "Riverwind runtime address should use the current first-party 1544 State Highway 9, Norman, OK 73072 rather than the earlier provisional ZIP 73093.",
+    "Newcastle Casino and Newcastle Travel Gaming are separate physical properties; only Newcastle Casino is in this destination batch.",
+    "Choctaw Casino & Resort-Pocola and nearby Choctaw Casino Too-Pocola are separate physical operations; only the resort is in this destination batch.",
+    "Coordinate evidence must refer to the casino property itself or a clearly co-located property footprint, not a city centroid or generic tribal administrative address."
+  ],
+  "nextPhase": "Continue coordinate QA across Choctaw Grant/Hochatown/McAlester/Broken Bow/Idabel/Stringtown, remaining Cherokee properties, and the strongest Chickasaw destinations. In parallel, compare every coordinate-verified record against catalog passes 1-27 for same-ID, normalized-name and sub-0.35-mile alias collisions before any Oklahoma runtime activation."
+}
