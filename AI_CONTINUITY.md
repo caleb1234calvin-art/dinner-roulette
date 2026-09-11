@@ -15,7 +15,7 @@ _Last updated: September 11, 2026_
 
 ## Active integration validation — September 11
 
-The integration branch now contains the active casino/runtime work through **casino catalog Pass 27**, the legal/compliance layer, the Dinner icon pack, the startup-ident implementation/source asset, and current project infrastructure.
+The integration branch now contains the active casino/runtime work through **casino catalog Pass 27**, the legal/compliance layer, the Dinner icon pack, the startup-ident implementation/source assets, and current project infrastructure.
 
 Validation workflow `.github/workflows/validate-icon-pack.yml` has been repurposed as **Validate Dinner Integration**. It triggers on `integration/active-work-pass-1` and performs dependency install, TypeScript checking, the casino audit, inherited tests as report-only, development build, and verification of all 30 Dinner icon assets.
 
@@ -77,9 +77,11 @@ Issue #29 remains the original Dinner icon system: 15 semantic categories per th
 
 **Caustic Relay** is the active working maker/publisher brand. The canonical black-mamba/scorpion hybrid creature is an immutable source asset unless Caleb explicitly requests redesign. The startup-ident narrative remains stable relay → pincer pinch → rupture → brief dropout → damaged return → progressive rendering-fidelity collapse. Final treatment should darken the world/static around the creature without altering the creature itself and avoid large bright flashes/strobing.
 
-The startup-ident implementation has now been manually transplanted into `integration/active-work-pass-1` after the first combined compatibility gate went green. Integration commit `b788a8c1deee6d5d19e1096290cab4a0ce10865d` adds the preserved clean master asset `public/brand/grok_video_2026-09-10-20-20-31_1.mp4`, `src/components/startup-ident.tsx`, and the minimal `src/routes/__root.tsx` wiring. The integration continuity file was deliberately preserved instead of importing the divergent brand-branch continuity wholesale.
+The startup-ident implementation was manually transplanted into `integration/active-work-pass-1` after the first combined compatibility gate went green. Integration commit `b788a8c1deee6d5d19e1096290cab4a0ce10865d` added the preserved clean master asset `public/brand/grok_video_2026-09-10-20-20-31_1.mp4`, `src/components/startup-ident.tsx`, and the minimal `src/routes/__root.tsx` wiring. The integration continuity file was deliberately preserved instead of importing the divergent brand-branch continuity wholesale.
 
-Startup behavior: one muted inline autoplay, no controls/loop, app initializes behind it, ident removes itself on end/error, and `prefers-reduced-motion: reduce` skips it. The current source is still the clean approved master; final Caustic Relay branded/corrupted treatment remains a later asset replacement and must preserve source provenance rather than overwrite this master.
+**New approved startup video:** Caleb uploaded `public/brand/CAUSTIC_RELAY_ident-2.mp4` directly to the integration branch in commit `b16c7e6ce65117607850e1c88ffdb52cefa778c7`. It is preserved alongside the earlier clean master rather than overwriting provenance. Commit `93cc74f4c63071a91e4a9da3d2af2da23d232d9a` switches `StartupIdent` to `/brand/CAUSTIC_RELAY_ident-2.mp4`. The old clean master remains available as a historical/source asset.
+
+Startup behavior remains one muted inline autoplay, no controls/loop, app initializes behind it, ident removes itself on end/error, and `prefers-reduced-motion: reduce` skips it. After this asset switch, **Validate Dinner Integration must be green again before this head is considered compatibility-validated**.
 
 The original `brand/startup-ident-pass-1` branch remains provenance/review history and should not be raw-merged over integration because it is far behind the consolidated casino/icon state and has a divergent continuity file.
 
