@@ -1,7 +1,7 @@
 {
   "jurisdiction":"Nevada",
   "capturedOn":"2026-09-11",
-  "status":"statewide-reconciliation-in-progress-rural-completeness-reopened",
+  "status":"statewide-reconciliation-in-progress-rural-completeness-expanded",
   "primaryAuthority":"Nevada Gaming Control Board",
   "supportingFederalAuthority":"National Indian Gaming Commission",
   "sourceArtifacts":[
@@ -17,93 +17,51 @@
     {"path":"audit/nevada-ambiguity-resolution-pass-2-2026-09-11.json","role":"regulatory ambiguity pass"},
     {"path":"audit/nevada-ambiguity-resolution-pass-3-2026-09-11.json","role":"core operation/rename/campus ambiguity pass"},
     {"path":"audit/nevada-scope-address-pass-4-2026-09-11.json","role":"small-scope resolution and rural address QA"},
-    {"path":"audit/nevada-rural-completeness-recovery-2026-09-11.json","role":"initial recovered rural candidates / completeness correction"},
-    {"path":"audit/nevada-rural-recovery-pass-5-2026-09-11.json","role":"expanded rural recovery, current-operation and regulator matching"}
+    {"path":"audit/nevada-rural-completeness-recovery-2026-09-11.json","role":"initial rural recovery"},
+    {"path":"audit/nevada-rural-recovery-pass-5-2026-09-11.json","role":"expanded Jackpot/rural recovery"},
+    {"path":"audit/nevada-rural-completeness-pass-6-2026-09-11.json","role":"Battle Mountain, Wells, Baker, Amargosa and Ely recovery"}
   ],
   "candidateAccounting":{
     "originalCandidateAndScopeReviewRows":153,
-    "newCurrentTribalDestinations":2,
-    "priorExpandedDecisionUniverse":155,
-    "initialRecoveredRuralCandidates":8,
-    "additionalRecoveredJackpotCandidates":2,
-    "revisedProvisionalDecisionUniverse":165,
+    "tribalAdditions":2,
+    "priorDecisionUniverse":155,
+    "initialRuralRecoveryRows":8,
+    "additionalJackpotRows":2,
+    "pass6NewRows":9,
+    "revisedProvisionalDecisionUniverse":174,
     "runtimeDestinationCount":null,
-    "result":"RECONCILIATION_IN_PROGRESS_COMPLETENESS_GATE_REOPENED"
+    "result":"RECONCILIATION_IN_PROGRESS_COMPLETENESS_GATE_OPEN"
   },
-  "majorResolvedDecisions":{
-    "Casino Royale":"include-current-destination",
-    "Eastside Cannery":"exclude-closed-demolished",
-    "Harveys Lake Tahoe":"alias-only; current identity Caesars Republic Lake Tahoe",
-    "Caesars Republic Lake Tahoe":"include-current-destination",
-    "Harrah's Lake Tahoe":"include-current-separate-destination",
-    "Venetian":"include-current-separate-destination",
-    "Palazzo":"include-current-separate-destination",
-    "Wynn Las Vegas":"include-current-separate-destination",
-    "Encore at Wynn Las Vegas":"include-current-separate-destination",
-    "Wa She Shu Casino":"exclude-current-casino-closed-until-reopening-proven",
-    "Avi Resort & Casino":"include-current-tribal-destination",
-    "Moapa Paiute Travel Plaza":"include-current-tribal-destination",
-    "Bayshore Inn":"exclude-curated-destination-scope",
-    "Alamo Casino Sparks Petro":"include-current-destination",
-    "Eureka Casino in Eureka":"exclude-erroneous-rural-candidate",
-    "Gold Dust West Winnemucca":"exclude-erroneous-location-candidate",
-    "Cactus Petes Resort Casino":"include-current-destination",
-    "Horseshu Hotel & Casino":"include-current-separate-destination",
-    "Barton's Club 93":"include-current-destination",
-    "Four Jacks Hotel & Casino":"include-current-destination",
-    "Fernley Nugget":"include-current-destination",
-    "Dini's Lucky Club":"include-current-destination",
-    "C Punch Inn & Casino":"include-current-destination",
-    "Stagecoach Hotel & Casino":"include-current-destination",
-    "El Capitan Lodge & Casino":"include-current-destination-address-normalization-pending",
-    "Palms Casino Resort":"already represented; no duplicate tribal-ownership row"
-  },
-  "recoveredRuralCandidates":[
-    "Cactus Pete's Resort Casino — Jackpot",
-    "Horseshu Hotel & Casino — Jackpot",
-    "Fernley Nugget Casino — Fernley",
-    "Stockmen's Gambling Hall — Fallon",
-    "Dini's Lucky Club — Yerington",
-    "C Punch Inn & Casino — Lovelock",
-    "El Capitan Casino — Hawthorne",
-    "Stagecoach Hotel & Casino — Beatty",
-    "Barton's Club 93 — Jackpot",
-    "Four Jacks Hotel & Casino — Jackpot"
+  "pass6ResolvedOrElevated":[
+    "Big Wheel Casino — Battle Mountain",
+    "Owl Club Casino & Restaurant — Battle Mountain",
+    "Broadway Colt Inn Casino & Restaurant — Battle Mountain",
+    "The Nevada Casino & Bar — Battle Mountain (NGCB match pending)",
+    "Alamo Casino at Wells Petro — Wells",
+    "Border Inn Casino — Baker",
+    "Longstreet Inn, Casino & RV Resort — Amargosa Valley (address-number QA pending)",
+    "Copper Queen Hotel & Casino — Ely",
+    "Jailhouse Motel & Casino — Ely"
   ],
   "stillNeedsSpecificDisposition":[
     "Stockmen's Gambling Hall — Fallon exact current identity/scope",
     "Red Drag Casino — Elko exact current NGCB match",
-    "additional balance-of-state omissions if found during regulator sweep"
+    "The Nevada Casino & Bar — Battle Mountain exact NGCB match",
+    "Longstreet Inn address-number normalization (8570 vs 8750 on first-party pages)",
+    "Winnemucca/I-80 cluster: Winnemucca Roadhouse, Pilot Casino, Pete's Gambling Hall, Alamo Casino Mill City",
+    "additional balance-of-state omissions if found"
   ],
   "knownHistoricalOrScopeExclusions":[
-    "The Mirage",
-    "Tropicana Las Vegas",
-    "Texas Station Gambling Hall & Hotel",
-    "Fiesta Rancho",
-    "Harrah's Reno",
-    "Eastside Cannery Casino & Hotel",
-    "Wa She Shu Casino until reopening is authoritatively proven",
-    "Moulin Rouge current-destination claim",
-    "Bayshore Inn from curated casino backbone",
-    "Eureka Casino town-of-Eureka candidate",
-    "Gold Dust West Winnemucca candidate",
-    "Dotty's/restricted retail-style gaming by default, including Dotty's Jackpot"
+    "The Mirage","Tropicana Las Vegas","Texas Station Gambling Hall & Hotel","Fiesta Rancho","Harrah's Reno","Eastside Cannery Casino & Hotel","Wa She Shu Casino until reopening is authoritatively proven","Moulin Rouge current-destination claim","Bayshore Inn from curated casino backbone","Eureka Casino town-of-Eureka candidate","Gold Dust West Winnemucca candidate","Dotty's/restricted retail-style gaming by default, including Dotty's Jackpot"
   ],
-  "ngcbReportInfrastructure":{
-    "publicReportsBase":"https://publicreports-gcb.nv.gov/",
-    "locationDetail":"https://publicreports-gcb.nv.gov/Publications/LocationDetailReport",
-    "nameAndAddress":"https://publicreports-gcb.nv.gov/Publications/NameAndAddressReport",
-    "restrictedNonrestricted":"https://publicreports-gcb.nv.gov/Publications/restrictedandnonrestrictedreport",
-    "currentNonrestrictedCountWorkbook":"https://www.gaming.nv.gov/contentassets/5eb1aeae895c4ae695a96c9e5889e96c/nonrestricted-count-report--june-30-2026.xlsx"
-  },
   "mandatoryRemainingGates":[
-    "Run a regulator-backed statewide completeness sweep against active NGCB nonrestricted locations, especially balance-of-state communities; do not assume the original discovery universe was complete.",
-    "Resolve Stockmen's Fallon, Red Drag Elko and any newly recovered rural rows.",
+    "Continue regulator-backed statewide completeness sweep; rural discovery has repeatedly proven the original roster incomplete.",
+    "Resolve Winnemucca/I-80 and remaining rural clusters and exact NGCB identities.",
     "Account every surviving candidate against current NGCB identity or explicit tribal/federal exception.",
     "Normalize addresses for every retained destination.",
     "Complete property-specific coordinate QA.",
     "Produce final all-row accounting with no unexplained rows, aliases or overlaps.",
     "Generate and activate Pass 22 only after all prior gates pass."
   ],
-  "nextPhase":"Continue statewide NGCB completeness reconciliation with emphasis on rural/balance-of-state omissions, then complete address and coordinate QA for the final surviving destination set."
+  "nextPhase":"Reconcile Winnemucca/I-80 and remaining balance-state clusters, repeat omission sweep, then freeze roster and begin bulk address/coordinate QA."
 }
