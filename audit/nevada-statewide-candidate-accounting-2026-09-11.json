@@ -1,0 +1,57 @@
+{
+  "jurisdiction":"Nevada",
+  "capturedOn":"2026-09-11",
+  "status":"statewide-candidate-discovery-complete-reconciliation-pending",
+  "primaryAuthority":"Nevada Gaming Control Board",
+  "authoritySources":[
+    "https://prod.gaming.nv.gov/about-us/statistics-and-publications/",
+    "https://www.gaming.nv.gov/about-us/restricted-and-nonrestricted-locations-report/",
+    "https://www.gaming.nv.gov/about-us/abbreviated-revenue-release-arr/",
+    "https://www.gaming.nv.gov/divisions/tax-license-division/"
+  ],
+  "supportingFederalAuthority":"National Indian Gaming Commission",
+  "sourceArtifacts":[
+    {"path":"audit/nevada-nonrestricted-casino-scope-2026-09-11.json","role":"authoritative scope"},
+    {"path":"audit/nevada-reconciliation-plan-2026-09-11.json","role":"market reconciliation plan"},
+    {"path":"audit/nevada-strip-downtown-ledger-2026-09-11.json","rows":40},
+    {"path":"audit/nevada-clark-outer-ledger-2026-09-11.json","rows":49},
+    {"path":"audit/nevada-laughlin-ledger-2026-09-11.json","rows":9},
+    {"path":"audit/nevada-northern-markets-ledger-2026-09-11.json","rows":45},
+    {"path":"audit/nevada-balance-state-ledger-2026-09-11.json","rows":10}
+  ],
+  "candidateAccounting":{
+    "stripDowntownRows":40,
+    "outerClarkRows":49,
+    "laughlinRows":9,
+    "northernMarketsRows":45,
+    "balanceStateRows":10,
+    "rawCandidateAndScopeReviewRows":153,
+    "runtimeDestinationCount":null,
+    "result":"DISCOVERY_COMPLETE_RECONCILIATION_PENDING"
+  },
+  "knownNonRuntimeOrHoldExamples":[
+    {"name":"The Mirage","decision":"exclude","reason":"closed in 2024; replacement project not yet a current casino destination for this audit window"},
+    {"name":"Tropicana Las Vegas","decision":"exclude","reason":"closed/demolished"},
+    {"name":"The Cromwell","decision":"alias","reason":"rebranded; do not duplicate current successor property"},
+    {"name":"Texas Station Gambling Hall & Hotel","decision":"exclude","reason":"closed/demolished"},
+    {"name":"Fiesta Rancho","decision":"exclude","reason":"closed/demolished"},
+    {"name":"Harrah's Reno","decision":"exclude","reason":"closed in 2020"},
+    {"name":"Eastside Cannery Casino & Hotel","decision":"hold","reason":"current-operation confirmation required"},
+    {"name":"Bayshore Inn","decision":"scope-review","reason":"gambling exists, but destination-casino relevance and active NGCB identity still need confirmation"},
+    {"name":"Dotty's Elko locations","decision":"scope-hold","reason":"retail-style small-machine gaming is not automatically a curated destination casino"}
+  ],
+  "mandatoryReconciliationGates":[
+    "Extract or otherwise account against the active NGCB nonrestricted location universe rather than relying on tourism/operator candidate discovery alone.",
+    "Normalize current branding and historical aliases/closures.",
+    "Apply same-property dedupe rules to multi-casino resort campuses without collapsing genuinely separate public casino destinations.",
+    "Normalize physical addresses and obtain plausible property-specific coordinates for every final runtime record.",
+    "Cross-check NIGC and current tribal/operator evidence so Class II or tribal destinations are not missed merely because they are not represented like state nonrestricted properties.",
+    "Do not treat the raw 153-row discovery universe as the final Nevada casino count."
+  ],
+  "ngcbAuthorityNotes":[
+    "NGCB Statistics & Publications exposes Location Detail, Location Name and Address, Restricted/Nonrestricted Location, and Nonrestricted Count reporting for active Nevada gaming locations.",
+    "NGCB Abbreviated Revenue Release divides nonrestricted activity into Las Vegas Downtown, Las Vegas Strip, North Las Vegas, Laughlin, Boulder Strip, Balance of Clark County, Washoe County, South Lake Tahoe, Elko County, Carson Valley Area, and Balance of State.",
+    "NGCB Tax & License issues approved gaming licenses and monitors Indian gaming in Nevada."
+  ],
+  "nextPhase":"Convert the 153-row discovery universe into an authoritative Nevada reconciliation ledger: match active NGCB identities, remove non-destination/closed/duplicate rows, complete tribal cross-check, then generate the final runtime dataset and casino-catalog-pass-22.ts only after all set checks pass."
+}
