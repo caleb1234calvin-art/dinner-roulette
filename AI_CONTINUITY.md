@@ -19,17 +19,37 @@ The integration branch now contains the active casino/runtime work through **cas
 
 Validation workflow `.github/workflows/validate-icon-pack.yml` has been repurposed as **Validate Dinner Integration**. It triggers on `integration/active-work-pass-1` and performs dependency install, TypeScript checking, the casino audit, inherited tests as report-only, development build, and verification of all 30 Dinner icon assets.
 
-The first expanded run exposed parser/count and duplicate-reconciliation debt. The parser was repaired to understand matching quote delimiters, and duplicate findings are now surfaced as reconciliation warnings during this integration stage rather than preventing later build/icon checks.
+The first expanded run exposed parser/count and duplicate-reconciliation debt. The parser was repaired to understand matching quote delimiters. Runtime duplicate handling has now advanced beyond the temporary warning-only stage: curated casino passes are canonicalized before runtime use, and the validator distinguishes same-property overlap from dangerous distant collisions.
 
-**Run 98 (`34638556821`) at commit `8a922bca4fa1b73054533a9d7db21a86f91663f3` passed the complete integration gate:** dependency install, TypeScript, casino audit, inherited-test reporting, development build, and Dinner icon verification all completed successfully. This is the first green combined compatibility baseline for the consolidated casino/legal/icon state.
+**Run 98 (`34638556821`) at commit `8a922bca4fa1b73054533a9d7db21a86f91663f3` passed the complete integration gate:** dependency install, TypeScript, casino audit, inherited-test reporting, development build, and Dinner icon verification all completed successfully. This was the first green combined compatibility baseline for the consolidated casino/legal/icon state.
 
-Known catalog overlaps remain explicit reconciliation debt; green CI does not mean they should be forgotten. They include historical/intentional duplicate names or IDs such as Caesars New Orleans, Bellagio, Caesars Palace, Talking Stick Resort, Pechanga Resort Casino, Thunder Valley Casino Resort, Spirit Mountain Casino, and Wynn Las Vegas. Resolve canonical ownership deliberately during later catalog cleanup rather than deleting records blindly.
+**Run 103 (`34640732564`) at commit `86300e8a3729ade9557e5925c32c807b2fb931a3` also passed the complete integration gate after the new Caustic Relay startup ident was wired in.** This confirms the startup asset switch remained compatible with the consolidated casino/legal/icon stack.
 
 An integration overlay manifest exists at `audit/casino-sources-integration.json`. It records current reconciled status for California, Oregon, Washington, Wisconsin, Idaho, Minnesota, Nebraska, Wyoming, South Dakota, North Dakota, Florida, New York, and Nevada. Nevada remains explicitly pending/rolling: its 174 rows are an audit decision universe, not a claim of 174 runtime casinos.
 
 ### Current integration rule
 
 A green integration run is a prerequisite for considering a ship/merge decision, **not automatic authorization to merge**. `main` remains protected by Caleb's explicit-authorization rule.
+
+## Casino duplicate reconciliation policy
+
+The previously known overlap set included entries such as Caesars New Orleans, Bellagio, Caesars Palace, Talking Stick Resort, Pechanga Resort Casino, Thunder Valley Casino Resort, Spirit Mountain Casino, and Wynn Las Vegas.
+
+Runtime reconciliation is now implemented in `src/lib/nightlife/search.ts` as of commit `da9d5031b1be1c8faa9f2115677de9c8e700c8f2`:
+
+- Casino passes 1–27 are processed in chronological pass order.
+- If two curated casino records share the same ID or normalized name **and** resolve to the same physical property within **0.35 miles**, the later pass replaces the earlier one.
+- This gives newer verified passes precedence without deleting historical catalog files or provenance.
+- Jasper County and local nightlife catalogs are appended after casino canonicalization and are not swallowed by the casino-pass dedupe routine.
+- Curated/live OSM merge logic continues to use the same ~0.35-mile physical-property standard for name-matched venues.
+
+Validator policy was tightened in `scripts/audit-casino-catalog.mjs` as of commit `92cc1c900f5c0bce3247db22b33b695d6a32d05a`:
+
+- Same ID or normalized-name overlap within 0.35 miles is treated as a reconciliation warning / historical same-property overlap.
+- The same collision at materially different coordinates is a hard audit failure.
+- This prevents silent data loss if two distinct physical venues accidentally reuse an ID or normalized name.
+
+The runtime and validator now share the same physical-property concept instead of allowing blanket duplicate warnings. A fresh **Validate Dinner Integration** run must pass on the latest reconciliation head before this duplicate-policy work is considered fully closed.
 
 ## National casino audit — rolling implementation strategy
 
@@ -55,7 +75,7 @@ Nevada's provisional audit decision universe remains **174 rows**, not a final c
 - Runtime module: `src/lib/nightlife/casino-catalog-pass-22.ts`
 - Size: **50 curated Nevada casino destinations** before integration dedupe reconciliation.
 - Composition: **28 Las Vegas Strip + 12 Downtown Las Vegas + 10 high-confidence off-Strip/south Clark County destinations**.
-- Search integration: casino passes through Pass 27 are imported into `ALL_CURATED_NIGHTLIFE` in `src/lib/nightlife/search.ts`.
+- Search integration: casino passes through Pass 27 are imported into the casino-pass reconciliation pipeline in `src/lib/nightlife/search.ts` before entering `ALL_CURATED_NIGHTLIFE`.
 - Cromwell/The Vanderpump Hotel remains in nightlife alias matching to reduce live-OSM duplicate risk during the 2026 rename transition.
 - Batch explicitly does **not** claim Nevada statewide completeness.
 
@@ -81,7 +101,7 @@ The startup-ident implementation was manually transplanted into `integration/act
 
 **New approved startup video:** Caleb uploaded `public/brand/CAUSTIC_RELAY_ident-2.mp4` directly to the integration branch in commit `b16c7e6ce65117607850e1c88ffdb52cefa778c7`. It is preserved alongside the earlier clean master rather than overwriting provenance. Commit `93cc74f4c63071a91e4a9da3d2af2da23d232d9a` switches `StartupIdent` to `/brand/CAUSTIC_RELAY_ident-2.mp4`. The old clean master remains available as a historical/source asset.
 
-Startup behavior remains one muted inline autoplay, no controls/loop, app initializes behind it, ident removes itself on end/error, and `prefers-reduced-motion: reduce` skips it. After this asset switch, **Validate Dinner Integration must be green again before this head is considered compatibility-validated**.
+Startup behavior remains one muted inline autoplay, no controls/loop, app initializes behind it, ident removes itself on end/error, and `prefers-reduced-motion: reduce` skips it. The asset switch was compatibility-validated by green Run 103.
 
 The original `brand/startup-ident-pass-1` branch remains provenance/review history and should not be raw-merged over integration because it is far behind the consolidated casino/icon state and has a divergent continuity file.
 
