@@ -1,0 +1,70 @@
+{
+  "jurisdiction":"Nevada",
+  "capturedOn":"2026-09-11",
+  "status":"tribal-crosscheck-pass-1-complete",
+  "primaryFederalAuthority":"National Indian Gaming Commission",
+  "supportingAuthorities":[
+    "https://www.nigc.gov/downloads/gaming-locations/",
+    "https://www.nigc.gov/map/",
+    "https://dnaa.nv.gov/tribal-nations/tribal-directory/"
+  ],
+  "records":[
+    {
+      "name":"Avi Resort & Casino",
+      "tribe":"Fort Mojave Indian Tribe",
+      "address":"10000 Aha Macav Parkway, Laughlin, NV 89029",
+      "decision":"include-current-tribal-destination",
+      "evidence":[
+        "NIGC gaming-tribe materials identify Avi Casino in Nevada under the Fort Mojave Indian Tribe.",
+        "Avi's current first-party site is active in September 2026 with current casino promotions, lodging, dining and entertainment.",
+        "Current first-party contact page confirms 10000 Aha Macav Parkway, Laughlin, Nevada 89029."
+      ],
+      "website":"https://avicasino.com/",
+      "coordinateStatus":"pending-property-coordinate-qa"
+    },
+    {
+      "name":"Moapa Paiute Travel Plaza",
+      "aliases":["Moapa Tribal Casino","Moapa Travel Plaza"],
+      "tribe":"Moapa Band of Paiutes",
+      "address":"I-15 Exit 75, Valley of Fire, Moapa, NV 89025",
+      "decision":"include-current-tribal-destination",
+      "evidence":[
+        "Nevada Department of Native American Affairs lists Moapa Paiute Travel Plaza as a current tribal business.",
+        "NIGC historical compliance material identifies the Moapa Paiute Travel Plaza as a tribal gaming operation.",
+        "Current 2026 tribal-gaming directory material describes the property as a Class II/III Nevada casino with roughly 100 gaming machines."
+      ],
+      "coordinateStatus":"pending-property-coordinate-qa",
+      "scopeNote":"Although travel-plaza-led, the property contains a distinct casino operation and is therefore treated as a physical tribal gaming destination rather than a generic retail slot route."
+    },
+    {
+      "name":"Wa She Shu Casino",
+      "tribe":"Washoe Tribe of Nevada and California",
+      "address":"1003 US Highway 395 N, Gardnerville, NV 89410",
+      "decision":"status-hold",
+      "evidence":[
+        "NIGC gaming-tribe material identifies Wa She Shu Center/Casino under the Washoe Tribe.",
+        "A March 2026 tribal-gaming directory still lists Wa She Shu Casino as a Nevada tribal casino.",
+        "Current travel/review surfaces report the casino permanently closed, with multiple sources describing closure in 2023."
+      ],
+      "reason":"Current-operation evidence is contradictory. Do not activate until a current first-party tribal/operator or authoritative regulator source confirms reopening/current gaming operation.",
+      "coordinateStatus":"not-needed-until-status-resolved"
+    },
+    {
+      "name":"Palms Casino Resort",
+      "owner":"Yuhaaviatam of San Manuel Nation / San Manuel Gaming and Hospitality Authority",
+      "decision":"no-extra-tribal-row",
+      "reason":"Palms is already represented in Nevada's commercial/off-Strip candidate universe. Tribal ownership does not create a second physical destination record."
+    }
+  ],
+  "setChecks":{
+    "currentTribalDestinationsAddedToDiscoveryUniverse":2,
+    "tribalStatusHolds":1,
+    "tribalOwnedCommercialDedupeRows":1,
+    "result":"PASS_WITH_ONE_STATUS_HOLD"
+  },
+  "notes":[
+    "The tribal cross-check exists to catch physical gaming destinations that can fall outside Nevada's ordinary state nonrestricted roster logic.",
+    "Avi and Moapa should be carried into final Nevada reconciliation even if they are not represented identically to state-regulated nonrestricted casino locations.",
+    "Wa She Shu remains deliberately unresolved rather than being promoted from stale directory evidence or excluded solely from third-party closure reports."
+  ]
+}
