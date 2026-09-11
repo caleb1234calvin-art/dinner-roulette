@@ -8,95 +8,77 @@ _Last updated: September 11, 2026_
 - Repository: `caleb1234calvin-art/dinner-roulette`.
 - Current working branch: `feature/dinner-icon-pack-1`.
 - Branch stack: `audit/national-casino-pass-1` → `legal/third-party-compliance-pass-1` → `feature/dinner-icon-pack-1`.
-- Current branch contains casino audit work, legal/compliance, Dinner icon implementation, California/Oregon/Washington runtime work, and Nevada Pass 22 reconciliation.
 - `main` remains untouched unless Caleb explicitly requests a merge/direct change.
 - ChatGPT is the only AI authorized to directly modify the repository unless Caleb explicitly authorizes another assistant for a named file.
 - Dinner Roulette and the Jasper County audit remain interconnected.
-- Compliance review surface: PR #28. Restaurant icon work: Issue #29. Startup ident remains isolated on draft PR #30.
 
 ## National casino audit
 
-**27 jurisdiction passes are complete and active. Nevada Pass 22 is in reconciliation and is not active.**
+**27 jurisdiction passes are complete and active. Nevada Pass 22 remains in reconciliation and is not active.** California Pass 19, Oregon Pass 20 and Washington Pass 21 remain the latest activated casino catalogs.
 
-Recent completed runtime passes: California Pass 19 (69 curated destinations from 74 regulator IDs), Oregon Pass 20 (10 destinations), Washington Pass 21 (30 destinations). California workflow `34558916921`, Washington `34565739203`, and corrected Oregon + inherited Washington `34566845887` passed blocking TypeScript/build/icon gates. Inherited npm tests remain report-only.
+## Nevada — Pass 22 completeness recovery
 
-## Nevada — Pass 22 reconciliation / completeness correction
+Nevada's initial discovery universe was incomplete, especially in balance-of-state communities. The audit is intentionally recovering and reconciling those omissions before any runtime dataset is generated. **Do not create or activate `casino-catalog-pass-22.ts` yet.**
 
-Nevada's original candidate discovery is no longer treated as complete. Rural/balance-of-state recovery continues to surface valid destination casinos absent from the initial market ledgers. **Do not create or activate `casino-catalog-pass-22.ts` yet.**
+Primary authority remains the Nevada Gaming Control Board, with NIGC/current tribal evidence for tribal/Class II reconciliation. Current first-party/operator and government tourism sources are supporting evidence for current operation, branding and addresses. Nonrestricted status remains identity evidence rather than automatic Dinner Roulette inclusion.
 
-Primary authority remains the Nevada Gaming Control Board. NGCB public reporting exposes Location Detail, Name and Address, Restricted/Nonrestricted and Nonrestricted Count reports through `https://publicreports-gcb.nv.gov/`. The June 30, 2026 nonrestricted-count workbook is the current count checkpoint found during this audit. NIGC/current tribal evidence is the separate tribal/Class II cross-check.
+### Accounting checkpoint
 
-Key scope rule: nonrestricted status is regulatory identity evidence, not automatic Dinner Roulette destination eligibility. Small retail/route gaming can remain outside the curated backbone even when legal gaming exists.
+- Original candidate/scope-review universe: **153**.
+- Tribal additions Avi + Moapa produced **155**.
+- Initial rural recovery added **8** → 163.
+- Pass 5 recovered Barton's Club 93 + Four Jacks → **165**.
+- Pass 6 recovered/elevated **9 additional rural rows** → current **provisional decision universe 174**.
+- **174 is an audit decision universe, not a Nevada casino count or final runtime count.** It may still move as completeness work continues.
 
-### Nevada accounting
+### Rural recovery artifacts
 
-- Original discovery universe: **153 candidate/scope-review rows**.
-- Tribal reconciliation added Avi Resort & Casino and Moapa Paiute Travel Plaza, producing the prior **155-row** decision universe.
-- Initial rural recovery surfaced 8 additional credible candidates.
-- Rural recovery Pass 5 then found two more previously unaccounted Jackpot destination casinos: **Barton's Club 93** and **Four Jacks Hotel & Casino**.
-- Current **provisional decision universe is 165 rows**.
-- 165 is not a final casino count. It is an audit accounting universe and may still change during active-NGCB completeness reconciliation.
-
-Recovered rural set now includes Cactus Pete's Resort Casino, Horseshu Hotel & Casino, Barton's Club 93 and Four Jacks in Jackpot; Fernley Nugget; Stockmen's Gambling Hall Fallon; Dini's Lucky Club Yerington; C Punch Inn Lovelock; El Capitan Hawthorne; and Stagecoach Beatty.
-
-### Nevada audit artifacts
-
-Core ledgers remain the Strip/Downtown, outer Clark, Laughlin, northern-markets and balance-state ledgers plus tribal cross-check and statewide accounting. Reconciliation artifacts now include:
-
-- `audit/nevada-reconciliation-pass-1-2026-09-11.json`
-- `audit/nevada-ambiguity-resolution-pass-2-2026-09-11.json`
-- `audit/nevada-ambiguity-resolution-pass-3-2026-09-11.json`
 - `audit/nevada-scope-address-pass-4-2026-09-11.json`
 - `audit/nevada-rural-completeness-recovery-2026-09-11.json`
 - `audit/nevada-rural-recovery-pass-5-2026-09-11.json`
+- `audit/nevada-rural-completeness-pass-6-2026-09-11.json`
 - `audit/nevada-statewide-candidate-accounting-2026-09-11.json`
 
-### Major resolved Nevada decisions
+### Pass 6 additions / decisions
 
-Current includes/retained identities include Casino Royale; Caesars Republic Lake Tahoe (Harveys alias retired); Harrah's Lake Tahoe separately; Venetian and Palazzo separately; Wynn and Encore separately; Avi; Moapa Paiute Travel Plaza; Alamo Casino at Sparks Petro; and the established major-market candidates subject to final NGCB accounting.
+Battle Mountain was substantially undercounted. Current evidence now carries **Big Wheel Casino**, **Owl Club Casino & Restaurant**, and **Broadway Colt Inn Casino & Restaurant** as current destinations; **The Nevada Casino & Bar** is retained pending exact NGCB identity matching.
 
-Rural Pass 5 materially advanced the recovered set. Cactus Pete's and Horseshu are current separate Jackpot destinations. Barton's Club 93 is current and has recent Nevada Gaming Commission identity corroboration. Four Jacks is current and appears in June 2026 Commission nonrestricted material. Fernley Nugget is reconciled to the current 1190 E Main St identity rather than stale 190 E Main tourism data. Dini's Lucky Club, C Punch Inn, Stagecoach Beatty and El Capitan Hawthorne are retained as current destination casinos with regulator/first-party corroboration. El Capitan still needs final postal/address normalization and coordinate QA.
+Other recovered current destinations: **Alamo Casino at Wells Petro** in Wells; **Border Inn Casino** near Baker; **Longstreet Inn, Casino & RV Resort** in Amargosa Valley; **Copper Queen Hotel & Casino** and **Jailhouse Motel & Casino** in Ely. Longstreet has conflicting 8570/8750 address rendering on first-party pages, so exact street-number normalization remains a QA gate.
 
-Current exclusions/retirements include Mirage, Tropicana Las Vegas, Texas Station, Fiesta Rancho, Harrah's Reno, Eastside Cannery, Wa She Shu unless reopening is authoritatively proven, Moulin Rouge current-destination claim, Bayshore Inn from the curated backbone, erroneous town-of-Eureka `Eureka Casino`, erroneous `Gold Dust West Winnemucca`, and Dotty's/ordinary retail-style gaming by default. Dotty's Jackpot was discovered but remains outside the curated backbone under that scope rule. Cromwell is alias-only under The Vanderpump Hotel. Palms remains one physical destination regardless of tribal ownership.
+The audit also exposed a new Winnemucca/I-80 review cluster: **Winnemucca Roadhouse Casino, Pilot Casino - Winnemucca, Pete's Gambling Hall, and Alamo Casino - Mill City**. These are not automatically included; each requires destination-scope/current NGCB reconciliation.
 
-Red Drag Casino remains a current Elko candidate needing exact NGCB matching. Stockmen's Gambling Hall Fallon also still needs exact current identity/scope disposition.
+Previously recovered/advanced destinations include Cactus Pete's, Horseshu, Barton's Club 93, Four Jacks, Fernley Nugget, Dini's Lucky Club, C Punch Inn, Stagecoach Beatty and El Capitan Hawthorne. Stockmen's Gambling Hall Fallon and Red Drag Elko still need exact disposition.
 
-### Address QA progress
+### Existing important Nevada decisions
 
-Pass 4 normalized/currently corroborated rural addresses for Stockman's Casino Fallon, Bonanza Casino Fallon, Winnemucca Inn & Casino, Model T Casino, Winners Inn & Casino, Tonopah Station, Hotel Nevada & Gambling Hall, and Prospector Hotel & Gambling Hall. Pass 5 added current/reconciled addresses for Cactus Pete's, Horseshu, Barton's Club 93, Four Jacks, Fernley Nugget, Dini's Lucky Club, C Punch Inn and Stagecoach, with El Capitan retained pending final postal normalization. Coordinate QA remains pending.
+Includes/retained: Casino Royale; Caesars Republic Lake Tahoe with Harveys retired as alias; Harrah's Lake Tahoe separately; Venetian + Palazzo separately; Wynn + Encore separately; Avi; Moapa; Alamo Sparks Petro; current major-market candidates subject to final accounting.
 
-### Nevada activation gates
+Exclusions/retirements include Mirage, Tropicana Las Vegas, Texas Station, Fiesta Rancho, Harrah's Reno, Eastside Cannery, Wa She Shu until reopening is proven, Moulin Rouge current-destination claim, Bayshore Inn from curated scope, erroneous Eureka-town `Eureka Casino`, erroneous Gold Dust West Winnemucca, and ordinary Dotty's/retail-style gaming by default. Cromwell is alias-only under The Vanderpump Hotel. Palms remains one physical destination.
 
-1. Continue regulator-backed statewide completeness sweep against active NGCB nonrestricted locations, with special attention to balance-of-state/rural communities.
-2. Resolve Stockmen's Fallon, Red Drag Elko and any further recovered rows against current NGCB identity and Dinner Roulette destination scope.
-3. Account every surviving candidate against current NGCB identity or an explicit tribal/federal exception.
-4. Normalize all retained physical addresses.
+### Activation gates
+
+1. Continue statewide/rural completeness sweep; do not assume 174 is final.
+2. Reconcile Winnemucca/I-80 cluster plus Stockmen's Fallon, Red Drag Elko, Nevada Casino Battle Mountain and any further omissions against NGCB/current-operation evidence.
+3. Freeze the physical roster only after repeated omission sweeps stop surfacing credible destination casinos.
+4. Normalize every retained address, including Longstreet and El Capitan edge cases.
 5. Complete property-specific coordinate QA.
-6. Produce final all-row accounting with no unexplained candidates, aliases, duplicates or omissions.
-7. Only then generate the Nevada runtime dataset and `casino-catalog-pass-22.ts`, wire search, run blocking validation and mark Nevada jurisdiction #28 complete.
+6. Produce final all-row include/exclude/hold/alias/dedupe accounting with no unexplained rows.
+7. Only then generate Nevada runtime Pass 22, wire search, validate and mark Nevada jurisdiction #28 complete.
 
 ## Casino audit operating rules
 
-Government/regulator sources are preferred for roster/identity truth; operator/property sources are secondary for current branding/address. Nonrestricted gaming status alone is insufficient for destination scope. Restricted slot-only, route/distributed retail, online-only and ordinary retail gaming stay outside the curated backbone unless a distinct destination-casino justification exists. Explicit exclusions, dedupes, holds and uncertainty are preferable to invented certainty. Curated records supplement live OSM discovery rather than replacing it. National completion still requires all applicable jurisdictions and a final cross-jurisdiction duplicate/alias/retirement sweep.
+Government/regulator sources are preferred for roster/identity truth; first-party property sources support current operation/branding/address. Nonrestricted gaming status alone is insufficient for curated destination scope. Restricted slot-only, route/distributed retail, online-only and ordinary retail gaming remain outside the curated backbone unless a distinct destination-casino justification exists. Explicit exclusions and uncertainty are preferable to invented certainty. Curated records supplement live OSM discovery.
 
 ## Legal/compliance continuity
 
-Goal is risk reduction, not a guarantee of legal compliance. Dinner Roulette is an independent discovery/decision tool; third-party names identify destinations/services without implying affiliation. External links are third-party destinations. Changing facts are verify-first. Casino/nightlife is discovery/trip planning only; Dinner Roulette does not accept wagers, provide gambling, sell alcohol or guarantee admission. `LEGAL.md` exists and legal/privacy/third-party information is surfaced in Settings.
+Dinner Roulette is an independent discovery/decision tool. Third-party names identify destinations/services without implying affiliation. Casino/nightlife remains discovery/trip planning only; Dinner Roulette does not accept wagers, provide gambling, sell alcohol or guarantee admission. `LEGAL.md` and Settings carry legal/privacy/third-party information.
 
-Rideshare remains neutral Dinner Roulette treatment with no copied Uber/Lyft trade dress and visible `Drive sober`. Delivery shortcuts open independent DoorDash/Grubhub/Uber Eats home experiences; do not claim marketplace availability or scrape marketplace content.
+## Restaurant icon / validation continuity
 
-## Restaurant icon system
-
-Issue #29. Active Dinner presentation replaces third-party restaurant artwork with Dinner Roulette-owned generic cuisine/category icons while factual restaurant names remain text. There are 15 semantic categories per theme / 30 canonical assets under `public/dinner-icons/{dark,light}/`, resolved by `src/lib/restaurants/dinner-icons.ts`.
-
-## Validation / maintenance
-
-Workflow `.github/workflows/validate-icon-pack.yml` runs on `feature/dinner-icon-pack-1`. Blocking gates: dependency install, `tsc --noEmit`, development build and 30-icon verification. `npm test` remains report-only due inherited template debt. Do not fabricate `.grok/skills/og` documentation merely to green inherited documentation-contract tests.
+Issue #29 remains the original Dinner icon system: 15 semantic categories per theme / 30 canonical assets under `public/dinner-icons/{dark,light}/`, resolved by `src/lib/restaurants/dinner-icons.ts`. Workflow `.github/workflows/validate-icon-pack.yml` blocks on TypeScript, development build and icon verification; inherited npm tests remain report-only because of template debt.
 
 ## Merge discipline
 
-Dependency/load order: `audit/national-casino-pass-1` → `legal/third-party-compliance-pass-1` → `feature/dinner-icon-pack-1`.
-
-Preferred ship path remains a dedicated integration/compatibility branch with combined validation. Merge to `main` only after Caleb explicitly requests it.
+Dependency/load order remains `audit/national-casino-pass-1` → `legal/third-party-compliance-pass-1` → `feature/dinner-icon-pack-1`. Preferred ship path is a dedicated integration/compatibility branch with combined validation. Merge to `main` only after Caleb explicitly requests it.
 
 `main` remains untouched.
