@@ -21,10 +21,15 @@ The national casino audit is active again on the current stacked working branch.
 - Completed jurisdiction passes documented in `CASINO_AUDIT.md`: **24**.
 - The original 22-jurisdiction checkpoint contained 232 explicit curated casino records.
 - Mississippi was subsequently completed at 28 physical casino destinations.
-- Arizona is now explicitly documented complete at 26 Class III tribal casino facilities. The Arizona runtime records already existed in `casino-catalog-pass-18.ts` and are wired into `src/lib/nightlife/search.ts`; the audit documentation had simply lagged behind the implementation.
+- Arizona is explicitly documented complete at 26 Class III tribal casino facilities. The Arizona runtime records already existed in `casino-catalog-pass-18.ts` and are wired into `src/lib/nightlife/search.ts`; the audit documentation had lagged behind the implementation.
 - California is the current staged large-inventory pass. The California Gambling Control Commission inventory snapshot contains **74 active tribal-casino license records** in `audit/california-tribal-casinos-2026-09-08.json`.
-- California is **not** marked complete yet. Property-specific street-address and coordinate reconciliation remains in progress before the 74-record roster is promoted as a completed runtime jurisdiction.
-- Continue using regulator/government rosters for identity and operator/property sources for current address/name details. Do not promote uncertain records merely to inflate coverage.
+- Property-level California work is tracked in `audit/california-reconciliation-2026-09-10.json`.
+- Current California reconciliation checkpoint: **13 fully reconciled**, **2 address-verified/coordinate-pending**, and **4 explicitly flagged for identity/location review**. The remaining inventory has not yet reached one of those property-level states.
+- Newly promoted fully reconciled properties in the latest tranche are Casino Pauma, Chukchansi Gold Resort and Casino, Chumash Casino Resort, and Colusa Casino Resort. Their staged records now have property address plus accepted property-specific coordinate evidence.
+- Cahuilla Casino Hotel remains address-verified but coordinate-pending because no sufficiently direct coordinate source was accepted. Coyote Valley Casino remains coordinate-pending because available nearby OSM geometries produced materially different centroids and the exact gaming-building geometry needs reconciliation.
+- Four California records remain deliberately flagged rather than guessed: Casino Morongo (same-campus/license relationship with Morongo Casino Resort and Spa), Cher-Ae Heights Casino (regulator/location conflict), Chicken Ranch Casino (new resort plus original casino physical-facility relationship), and Desert Rose Casino (insufficient direct current property sourcing).
+- California is **not** marked complete and none of the staged California reconciliation file is wired into runtime yet. Do not promote a partial California catalog merely to increase coverage.
+- Continue using regulator/government rosters for identity and operator/property sources for current address/name details. Accept coordinates only when evidence is sufficiently property-specific; conflicting or ambiguous geometry stays pending.
 - Curated casino records remain a high-confidence backbone merged with live OSM discovery rather than a replacement for live discovery.
 
 ## Legal/compliance pass
