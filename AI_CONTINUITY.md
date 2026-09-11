@@ -7,112 +7,123 @@ _Last updated: September 11, 2026_
 - Active app: Dinner Roulette V.3.
 - Repository: `caleb1234calvin-art/dinner-roulette`.
 - **Current integration branch: `integration/active-work-pass-1`.**
-- The former active stack (`audit/national-casino-pass-1` → `legal/third-party-compliance-pass-1` → `feature/dinner-icon-pack-1`) has been consolidated into the integration/reconciliation surface for validation. Preserve those histories; do not treat integration as authorization to delete provenance.
 - `main` remains untouched unless Caleb explicitly requests a merge/direct change.
 - ChatGPT is the only AI authorized to directly modify the repository unless Caleb explicitly authorizes another assistant for a named file.
 - Dinner Roulette and the Jasper County audit remain interconnected.
-- Caleb wants AI continuity kept current as work proceeds; update this file when project state, validation state, architecture, branch strategy, major audit decisions, or roadmap commitments materially change.
+- Caleb explicitly wants AI continuity updated continuously while casino/audit work proceeds, not only at the end of a large phase.
 
-## Active integration validation — September 11
+## Active integration validation
 
-The integration branch now contains the active casino/runtime work through **casino catalog Pass 27**, the legal/compliance layer, the Dinner icon pack, the startup-ident implementation/source assets, and current project infrastructure.
+`Validate Dinner Integration` is the compatibility gate for the integration branch. It performs dependency install, TypeScript checking, casino audit, inherited tests as report-only, development build, and Dinner icon verification.
 
-Validation workflow `.github/workflows/validate-icon-pack.yml` has been repurposed as **Validate Dinner Integration**. It triggers on `integration/active-work-pass-1` and performs dependency install, TypeScript checking, the casino audit, inherited tests as report-only, development build, and verification of all 30 Dinner icon assets.
+Green baselines include Run 98 for the consolidated casino/legal/icon state and Run 103 after the Caustic Relay startup ident switch. **Run 107 (`34645116117`) at commit `ebe5e1268794c6d325a9ae37b685621f61f62ba6` passed after the casino validator was corrected to preserve legitimate distant same-name properties.**
 
-The first expanded run exposed parser/count and duplicate-reconciliation debt. The parser was repaired to understand matching quote delimiters. Runtime duplicate handling has now advanced beyond the temporary warning-only stage: curated casino passes are canonicalized before runtime use, and the validator distinguishes same-property overlap from dangerous distant collisions.
+A green run is required before ship/merge consideration but never authorizes a merge to `main` by itself.
 
-**Run 98 (`34638556821`) at commit `8a922bca4fa1b73054533a9d7db21a86f91663f3` passed the complete integration gate:** dependency install, TypeScript, casino audit, inherited-test reporting, development build, and Dinner icon verification all completed successfully. This was the first green combined compatibility baseline for the consolidated casino/legal/icon state.
+## Casino reconciliation policy
 
-**Run 103 (`34640732564`) at commit `86300e8a3729ade9557e5925c32c807b2fb931a3` also passed the complete integration gate after the new Caustic Relay startup ident was wired in.** This confirms the startup asset switch remained compatible with the consolidated casino/legal/icon stack.
+Runtime casino passes are canonicalized chronologically in `src/lib/nightlife/search.ts` with newer same-property records winning while historical catalog files remain preserved.
 
-An integration overlay manifest exists at `audit/casino-sources-integration.json`. It records current reconciled status for California, Oregon, Washington, Wisconsin, Idaho, Minnesota, Nebraska, Wyoming, South Dakota, North Dakota, Florida, New York, and Nevada. Nevada remains explicitly pending/rolling: its 174 rows are an audit decision universe, not a claim of 174 runtime casinos.
+Current validator/runtime policy:
 
-### Current integration rule
+- Same **ID** within 0.35 miles: reconciliation warning; latest pass wins at runtime.
+- Same **ID** at materially different locations: hard audit failure.
+- Same normalized **name** within 0.35 miles: reconciliation warning; latest pass wins at runtime.
+- Same normalized **name** at distant locations: preserve both as distinct destinations and emit an audit warning, not a failure.
+- The policy was refined after Arizona and Oregon were found to contain legitimate, unrelated properties both named **Spirit Mountain Casino**, roughly 846 miles apart.
+- Coordinate plausibility and complete-jurisdiction expected-count checks remain hard audit gates.
 
-A green integration run is a prerequisite for considering a ship/merge decision, **not automatic authorization to merge**. `main` remains protected by Caleb's explicit-authorization rule.
+This separates dangerous identity collisions from legitimate casino-name homonyms.
 
-## Casino duplicate reconciliation policy
+## National casino audit strategy
 
-The previously known overlap set included entries such as Caesars New Orleans, Bellagio, Caesars Palace, Talking Stick Resort, Pechanga Resort Casino, Thunder Valley Casino Resort, Spirit Mountain Casino, and Wynn Las Vegas.
+Preferred implementation cadence remains:
 
-Runtime reconciliation is now implemented in `src/lib/nightlife/search.ts` as of commit `da9d5031b1be1c8faa9f2115677de9c8e700c8f2`:
+`discover → verify → reconcile → batch clean destinations → implement → validate → continue discovery → re-audit prior batches`
 
-- Casino passes 1–27 are processed in chronological pass order.
-- If two curated casino records share the same ID or normalized name **and** resolve to the same physical property within **0.35 miles**, the later pass replaces the earlier one.
-- This gives newer verified passes precedence without deleting historical catalog files or provenance.
-- Jasper County and local nightlife catalogs are appended after casino canonicalization and are not swallowed by the casino-pass dedupe routine.
-- Curated/live OSM merge logic continues to use the same ~0.35-mile physical-property standard for name-matched venues.
+For large jurisdictions, use 50–100 verified-destination runtime batches. Statewide perfection is not required before clean records enter staged runtime, but each activated property must clear current identity/operation, Dinner Roulette destination scope, normalized address, property-specific coordinates, stable ID, current website and duplicate/alias QA.
 
-Validator policy was tightened in `scripts/audit-casino-catalog.mjs` as of commit `92cc1c900f5c0bce3247db22b33b695d6a32d05a`:
+**Important counting rule:** regulator license rows are evidence/accounting units, not automatically one-to-one with Dinner Roulette destinations. Separately located licensed properties remain separate; multiple licenses that represent one consumer-facing physical destination must not create fake duplicate destinations.
 
-- Same ID or normalized-name overlap within 0.35 miles is treated as a reconciliation warning / historical same-property overlap.
-- The same collision at materially different coordinates is a hard audit failure.
-- This prevents silent data loss if two distinct physical venues accidentally reuse an ID or normalized name.
+Government/regulator evidence remains preferred for roster/identity truth; current first-party property sources support branding, operation and address. Restricted slot-only, route/distributed retail, ordinary convenience gaming and online-only operators remain outside the curated backbone unless independently justified as destination casinos.
 
-The runtime and validator now share the same physical-property concept instead of allowing blanket duplicate warnings. A fresh **Validate Dinner Integration** run must pass on the latest reconciliation head before this duplicate-policy work is considered fully closed.
+## Runtime casino progress
 
-## National casino audit — rolling implementation strategy
+Casino catalog modules currently run through **Pass 27** on integration. California Pass 19, Oregon Pass 20, Washington Pass 21 and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida and New York.
 
-Preferred cadence is **50–100 verified casino destinations per implementation batch**:
+The integration overlay manifest records completed/reconciled jurisdictions separately from the historical base manifest. Nevada remains explicitly pending/rolling.
 
-`discover → verify → batch 50–100 → implement → validate → continue discovery → re-audit prior batches → correct as needed`
+## Nevada
 
-Statewide perfection is not required before clean records enter staged runtime. Each property must individually clear current identity/operation, Dinner Roulette destination scope, normalized address, property-specific coordinates, stable ID and duplicate/alias QA. Ambiguous properties remain staged instead of blocking clean records.
+Nevada's provisional audit decision universe is **174 rows**, not a final runtime casino count. Runtime Batch NV-01 / Pass 22 contains 50 curated destinations. Remaining Nevada work includes Winnemucca/I-80, Stockmen's Fallon, Red Drag Elko, The Nevada Casino & Bar Battle Mountain, Longstreet address normalization, Buffalo Bill's/Whiskey Pete's operation state and further rural completeness sweeps.
 
-Government/regulator evidence remains preferred for roster/identity truth; first-party property sources support operation/branding/address. Nonrestricted gaming status alone is not automatic inclusion. Restricted slot-only, route/distributed retail, online-only and ordinary retail gaming remain outside the curated backbone unless independently justified as destination casinos.
+Nevada is intentionally allowed to progress in parallel without blocking smaller states.
 
-## National progress
+## Colorado — reconciliation in progress
 
-Casino catalog modules now run through **Pass 27** on the integration branch. California Pass 19, Oregon Pass 20 and Washington Pass 21 remain active. Nevada began the rolling model in Pass 22; later passes add additional reconciled jurisdictions including Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida and New York.
+Colorado audit artifacts:
 
-## Nevada — rolling runtime
+- `audit/colorado-casino-inventory-2026-09-11.json`
+- `audit/colorado-reconciliation-pass-1-2026-09-11.json`
 
-Nevada's provisional audit decision universe remains **174 rows**, not a final casino count. Runtime ingestion is rolling in verified batches.
+Colorado Division of Gaming accounting was corrected to **33 commercial regulator locations: 15 Black Hawk, 6 Central City, 12 Cripple Creek**, plus two tribal casino resorts in the statewide destination review.
 
-### Nevada runtime Batch NV-01 / Pass 22
+All 33 commercial regulator rows are now accounted for, but raw license count must not be forced into runtime destination count:
 
-- Audit artifact: `audit/nevada-runtime-batch-1-2026-09-11.json`
-- Runtime module: `src/lib/nightlife/casino-catalog-pass-22.ts`
-- Size: **50 curated Nevada casino destinations** before integration dedupe reconciliation.
-- Composition: **28 Las Vegas Strip + 12 Downtown Las Vegas + 10 high-confidence off-Strip/south Clark County destinations**.
-- Search integration: casino passes through Pass 27 are imported into the casino-pass reconciliation pipeline in `src/lib/nightlife/search.ts` before entering `ALL_CURATED_NIGHTLIFE`.
-- Cromwell/The Vanderpump Hotel remains in nightlife alias matching to reduce live-OSM duplicate risk during the 2026 rename transition.
-- Batch explicitly does **not** claim Nevada statewide completeness.
+- Bally's Black Hawk East/North/West are three separately located physical casino properties and should remain separate.
+- Century Casinos I/II in Cripple Creek represent licensing structure around one current consumer property and must not create an artificial duplicate destination.
+- Z Casino at 101 Gregory St transitioned/rebranded to **Bigfoot Casino** in 2026; use current Bigfoot identity while preserving Z Casino as alias/provenance.
+- FHR Billy's requires a final current-routability decision before Colorado runtime activation.
 
-Important Nevada artifacts remain `audit/nevada-scope-address-pass-4-2026-09-11.json`, `audit/nevada-rural-completeness-recovery-2026-09-11.json`, `audit/nevada-rural-recovery-pass-5-2026-09-11.json`, `audit/nevada-rural-completeness-pass-6-2026-09-11.json`, `audit/nevada-statewide-candidate-accounting-2026-09-11.json`, and `audit/nevada-runtime-batch-1-2026-09-11.json`.
+After Billy's disposition, perform address/coordinate/site QA and generate the next runtime pass from the final physical-destination roster.
 
-Unresolved/staged Nevada work should not block clean future batches: Winnemucca/I-80 cluster, Stockmen's Gambling Hall Fallon, Red Drag Elko, The Nevada Casino & Bar Battle Mountain, Longstreet address-number normalization, Buffalo Bill's/Whiskey Pete's current-operation state, and further rural omissions found by later sweeps.
+## Texas — reconciled, runtime QA pending
+
+Artifact: `audit/texas-casino-reconciliation-2026-09-11.json`.
+
+Current Texas Dinner Roulette scope resolves to four physical tribal gaming destinations pending coordinate/stable-ID QA:
+
+1. Kickapoo Lucky Eagle Casino Hotel — Eagle Pass.
+2. Naskila Casino — Livingston.
+3. Naskila Casino Leggett — new temporary 24-hour casino opened August 25, 2026; post-dates the December 2025 NIGC roster and remains distinct while the original Naskila property is operating.
+4. Speaking Rock Entertainment Center — El Paso.
+
+Ischoopa Travel Center is excluded from the casino-destination backbone as travel-center gaming. Duplicate NIGC rows for Naskila/Speaking Rock do not create duplicate destinations. Texas should be marked complete in the integration manifest only after runtime activation and validation.
+
+## Oklahoma — statewide decomposition started
+
+Artifact: `audit/oklahoma-statewide-scope-2026-09-11.json`.
+
+Oklahoma is a large, structurally noisy tribal-gaming jurisdiction and should not be handled as a one-shot count. The NIGC roster mixes destination casinos with travel plazas, smoke-shop/trading-post gaming and smaller outlets. Audit by tribal/operator cluster, explicitly retain/review/exclude each physical operation, then activate clean properties in 50–100 destination batches.
+
+Planned cluster order begins with Chickasaw, Choctaw, Cherokee, Muscogee (Creek), Osage, Comanche and Citizen Potawatomi, followed by northeast/central/smaller operators and a final statewide duplicate/travel-plaza exclusion sweep.
+
+Known destination candidates already evidenced in the federal roster include Downstream Casino Resort, multiple Osage Casino properties, Golden Mesa Casino, Golden Pony Casino, Tonkawa Casino, Black Hawk Casino and Seminole Nation casino properties. No Oklahoma runtime records should be activated until current operator identity, destination scope, address, coordinates and duplicate QA clear.
 
 ## Legal/compliance continuity
 
-Dinner Roulette is an independent discovery/decision tool. Third-party names identify destinations/services without implying affiliation. Casino/nightlife remains discovery/trip planning only; Dinner Roulette does not accept wagers, provide gambling, sell alcohol or guarantee admission. `LEGAL.md` and Settings carry legal/privacy/third-party information.
+Dinner Roulette is an independent discovery/decision tool. Third-party names identify destinations/services without implying affiliation. Casino/nightlife is discovery/trip planning only; Dinner Roulette does not accept wagers, provide gambling, sell alcohol or guarantee admission. `LEGAL.md` and Settings carry legal/privacy/third-party information.
 
 Rideshare/delivery integrations remain neutral shallow launches unless an authorized provider integration says otherwise. Do not scrape marketplace menus/prices/availability/ratings or imply partnership.
 
 ## Restaurant icon continuity
 
-Issue #29 remains the original Dinner icon system: 15 semantic categories per theme / 30 canonical assets under `public/dinner-icons/{dark,light}/`, resolved by `src/lib/restaurants/dinner-icons.ts`. The icon assets are part of the active integration branch but their presence alone is not authorization to merge.
+Issue #29 remains the original Dinner icon system: 15 semantic categories per theme / 30 canonical assets under `public/dinner-icons/{dark,light}/`, resolved by `src/lib/restaurants/dinner-icons.ts`. The assets are part of integration but their presence alone is not authorization to merge.
 
 ## Caustic Relay / startup-ident continuity
 
-**Caustic Relay** is the active working maker/publisher brand. The canonical black-mamba/scorpion hybrid creature is an immutable source asset unless Caleb explicitly requests redesign. The startup-ident narrative remains stable relay → pincer pinch → rupture → brief dropout → damaged return → progressive rendering-fidelity collapse. Final treatment should darken the world/static around the creature without altering the creature itself and avoid large bright flashes/strobing.
+**Caustic Relay** is the active working maker/publisher brand. The canonical black-mamba/scorpion hybrid creature is an immutable source asset unless Caleb explicitly requests redesign. Startup narrative remains stable relay → pincer pinch → rupture → brief dropout → damaged return → progressive rendering-fidelity collapse. Avoid large bright flashes/strobing.
 
-The startup-ident implementation was manually transplanted into `integration/active-work-pass-1` after the first combined compatibility gate went green. Integration commit `b788a8c1deee6d5d19e1096290cab4a0ce10865d` added the preserved clean master asset `public/brand/grok_video_2026-09-10-20-20-31_1.mp4`, `src/components/startup-ident.tsx`, and the minimal `src/routes/__root.tsx` wiring. The integration continuity file was deliberately preserved instead of importing the divergent brand-branch continuity wholesale.
-
-**New approved startup video:** Caleb uploaded `public/brand/CAUSTIC_RELAY_ident-2.mp4` directly to the integration branch in commit `b16c7e6ce65117607850e1c88ffdb52cefa778c7`. It is preserved alongside the earlier clean master rather than overwriting provenance. Commit `93cc74f4c63071a91e4a9da3d2af2da23d232d9a` switches `StartupIdent` to `/brand/CAUSTIC_RELAY_ident-2.mp4`. The old clean master remains available as a historical/source asset.
-
-Startup behavior remains one muted inline autoplay, no controls/loop, app initializes behind it, ident removes itself on end/error, and `prefers-reduced-motion: reduce` skips it. The asset switch was compatibility-validated by green Run 103.
-
-The original `brand/startup-ident-pass-1` branch remains provenance/review history and should not be raw-merged over integration because it is far behind the consolidated casino/icon state and has a divergent continuity file.
+Current startup asset is `public/brand/CAUSTIC_RELAY_ident-2.mp4`, wired by `src/components/startup-ident.tsx`. The earlier clean master remains preserved as provenance. Startup behavior is muted inline autoplay, no controls/loop, app initializes behind it, ident removes itself on end/error, and reduced-motion skips it. The current asset switch was compatibility-validated by green Run 103.
 
 ## Future food-truck discovery
 
-Caleb wants food trucks supported in a future dedicated pass. Treat food trucks as a **mobile-venue subtype**, not ordinary fixed restaurants. Future states should distinguish **live/serving now**, **scheduled today**, and **discovered nearby**. Never roulette a user to a stale registered business address as though a truck is confirmed there. Use authorized/current data or provider-supported links and distinguish scheduled evidence from verified live presence.
+Food trucks remain a future dedicated mobile-venue pass. Distinguish **live/serving now**, **scheduled today**, and **discovered nearby**. Never roulette a stale registered address as though a truck is confirmed there.
 
 ## Merge discipline
 
-Current ship path is `integration/active-work-pass-1` as the compatibility/validation surface. Preserve historical feature/audit/legal/brand branches as provenance where they still exist. Do not merge the integration branch or any remaining feature branch to `main` unless Caleb explicitly requests it.
+`integration/active-work-pass-1` remains the compatibility/validation surface. Preserve historical feature/audit/legal/brand branches as provenance where they still exist. Do not merge integration or any feature branch to `main` unless Caleb explicitly requests it.
 
-After every material integration change, rerun/inspect **Validate Dinner Integration**. A green run confirms compatibility for that integration head but does not authorize production deployment.
+After material runtime/integration changes, inspect **Validate Dinner Integration**. Pure audit-ledger additions may accumulate safely before the next runtime activation, but continuity should still be kept current as decisions change.
 
 `main` remains untouched.
