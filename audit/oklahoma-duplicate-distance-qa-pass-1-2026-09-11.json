@@ -1,0 +1,96 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "duplicate-distance-qa-pass-1",
+  "scope": "First branch-aware duplicate and stable-ID reconciliation pass for the coordinate-verified Oklahoma pool. This pass checks known current Oklahoma audit records against Oklahoma anchors already present in the base casino catalog before the broader pass-2-through-pass-27 sweep.",
+  "policy": {
+    "sameIdWithinMiles": 0.35,
+    "sameIdWithinAction": "warning-latest-wins",
+    "sameIdBeyondAction": "hard-fail",
+    "sameNormalizedNameWithinMiles": 0.35,
+    "sameNormalizedNameWithinAction": "warning-latest-wins",
+    "distantSameNameAction": "preserve-distinct"
+  },
+  "baseCatalogOklahomaAnchors": [
+    {
+      "runtimeId":"casino-catalog-winstar",
+      "idStem":"winstar",
+      "name":"WinStar World Casino and Resort",
+      "lat":33.7580,
+      "lon":-97.1307,
+      "address":"777 Casino Ave, Thackerville, OK 73459",
+      "status":"reconciled-current-audit-record-exists"
+    },
+    {
+      "runtimeId":"casino-catalog-choctaw-durant",
+      "idStem":"choctaw-durant",
+      "name":"Choctaw Casino & Resort - Durant",
+      "lat":33.9522,
+      "lon":-96.4141,
+      "address":"4216 S Hwy 69/75, Durant, OK 74701",
+      "status":"reconciled-current-audit-record-exists"
+    },
+    {
+      "runtimeId":"casino-catalog-indigo-sky",
+      "idStem":"indigo-sky",
+      "name":"Indigo Sky Casino",
+      "lat":36.8278,
+      "lon":-94.6186,
+      "address":"70220 US-60, Wyandotte, OK 74370",
+      "status":"existing-runtime-anchor-future-northeast-reconciliation"
+    },
+    {
+      "runtimeId":"casino-catalog-buffalo-run",
+      "idStem":"buffalo-run",
+      "name":"Buffalo Run Casino & Resort",
+      "lat":36.8947,
+      "lon":-94.8818,
+      "address":"1000 Buffalo Run Blvd, Miami, OK 74354",
+      "status":"existing-runtime-anchor-future-northeast-reconciliation"
+    }
+  ],
+  "reconciliations": [
+    {
+      "auditProvisionalId":"ok-winstar-world",
+      "recommendedRuntimeIdStem":"winstar",
+      "existingRuntimeId":"casino-catalog-winstar",
+      "name":"WinStar World Casino and Resort",
+      "existingCoordinate":{"lat":33.7580,"lon":-97.1307},
+      "currentAuditCoordinate":{"lat":33.75762,"lon":-97.12994},
+      "distanceMiles":0.050944,
+      "thresholdMiles":0.35,
+      "decision":"same-property-preserve-existing-stable-id-latest-record-wins",
+      "runtimeReadyFromThisCheckAlone":false,
+      "note":"The current audit coordinate is substantially within the same-property threshold. Do not create a second WinStar stable ID in Pass 28; preserve the established `winstar` lineage if a newer runtime record is emitted."
+    },
+    {
+      "auditProvisionalId":"ok-choctaw-durant",
+      "recommendedRuntimeIdStem":"choctaw-durant",
+      "existingRuntimeId":"casino-catalog-choctaw-durant",
+      "name":"Choctaw Casino & Resort-Durant",
+      "existingCoordinate":{"lat":33.9522,"lon":-96.4141},
+      "currentAuditCoordinate":{"lat":33.95116,"lon":-96.41404},
+      "distanceMiles":0.071939,
+      "thresholdMiles":0.35,
+      "decision":"same-property-preserve-existing-stable-id-latest-record-wins",
+      "runtimeReadyFromThisCheckAlone":false,
+      "note":"The current audit coordinate is substantially within the same-property threshold. The existing stable ID should be reused even though punctuation/spacing differs between the old display name and current first-party naming."
+    }
+  ],
+  "qaAccounting": {
+    "coordinateVerifiedPool": 48,
+    "knownBaseOklahomaAnchors": 4,
+    "duplicateDistanceClearedThisPass": 2,
+    "duplicateDistanceClearedCumulative": 2,
+    "runtimeReadyCumulative": 0,
+    "coordinatesRemainingForInitialFiftyTarget": 2
+  },
+  "importantDecisions": [
+    "Existing stable runtime IDs outrank newly invented provisional audit IDs when they refer to the same physical property.",
+    "WinStar should use runtime ID stem `winstar`, not create a parallel `ok-winstar-world` runtime lineage.",
+    "Choctaw Durant should use runtime ID stem `choctaw-durant`, not create a parallel Oklahoma-prefixed runtime lineage.",
+    "Indigo Sky and Buffalo Run are already live Oklahoma anchors in the base catalog. When the northeast Oklahoma cluster is audited, reconcile those existing records rather than adding duplicate destinations.",
+    "This pass clears only the two explicitly measured base-catalog collisions; it is not full branch-wide duplicate clearance."
+  ],
+  "nextPhase": "Continue branch-aware duplicate/name/ID distance QA against catalog passes 2-27 for the full coordinate-verified Oklahoma pool. In parallel, locate two additional clean coordinates to reach the initial 50-coordinate threshold. Runtime Pass 28 remains blocked until each included record clears collision, lineage, current-address and site-specific coordinate gates."
+}
