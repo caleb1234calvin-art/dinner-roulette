@@ -42,13 +42,13 @@ Colorado Division of Gaming accounting is corrected to 33 commercial regulator l
 
 `audit/texas-casino-reconciliation-2026-09-11.json` resolves current Texas scope to four physical tribal gaming destinations pending coordinate/stable-ID QA: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded as travel-center gaming. Texas becomes complete only after runtime activation and validation.
 
-## Oklahoma — 54 address/identity verified; 36 coordinate verified
+## Oklahoma — 54 address/identity verified; 42 coordinate verified
 
-Discovery/reconciliation artifacts include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, runtime QA passes 1–2, and coordinate QA passes **1–6**.
+Discovery/reconciliation artifacts include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, runtime QA passes 1–2, and coordinate QA passes **1–7**.
 
 The Oklahoma name/scope candidate universe is **77**. Current identity, destination scope, normalized street address and provisional stable Dinner Roulette IDs are verified for **54 properties** across Chickasaw, Choctaw, Cherokee/CNE, Muscogee, Osage and Citizen Potawatomi clusters.
 
-**Property-specific coordinates are now verified for 36 of those 54.** Pass 1 established 9; Pass 2 added 7; Pass 3 added 4; Pass 4 added 8; Pass 5 added Jet Stream, Black Gold, Gold Mountain and RiverStar; Pass 6 added **River Spirit Casino Resort, One Fire Casino, Osage Casino Hominy and Osage Casino Sand Springs**.
+**Property-specific coordinates are now verified for 42 of those 54.** Pass 1 established 9; Pass 2 added 7; Pass 3 added 4; Pass 4 added 8; Pass 5 added 4; Pass 6 added 4; Pass 7 added **Muscogee Casino, Okemah Casino, Bristow Casino, Osage Casino Hotel Bartlesville, Osage Casino Hotel Skiatook and the current Osage Casino Hotel Pawhuska property**.
 
 Coordinate evidence must be property-specific rather than city centroids. Runtime activation remains withheld until duplicate/alias distance QA against passes 1–27 is complete.
 
@@ -63,19 +63,28 @@ Important coordinate/separation decisions:
 - Treasure Valley Casino & Hotel is distinct from the separately mapped nearby Chickasaw Travel Stop.
 - Black Gold Casino is co-located with a Chickasaw Travel Stop/convenience component; preserve one casino destination record and do not create a second roulette destination for the travel-stop component.
 - Gold Mountain's current Visit Ardmore page appears to contain ZIP typo `72401`; preserve previously verified Ardmore ZIP `73401`.
-- Lake Eufaula Casino Hotel at 1045 Birkes Rd remains the current Muscogee successor property; never activate the old 806 Forest Ave predecessor simultaneously.
+- Lake Eufaula Casino Hotel at 1045 Birkes Rd remains the current Muscogee successor property; never activate the old 806 Forest/Forrest Ave predecessor simultaneously.
 - One Fire Casino is clearly resolved to one Okmulgee property; current sources vary only on whether `Wood Dr` includes directional `N`, so normalize conservatively after final site QA.
-- Osage Tulsa remains held because the accessible mapped feature found in the latest sweep was parking rather than the casino/hotel building.
-- Osage Pawhuska remains under old-site/new-site reconciliation; current first-party address is 1421 John Dahl Ave and older 2017 E 15th St geometry must not be reused.
+- Muscogee Casino is clearly resolved at 3420 W Peak Blvd; mapping/current sources disagree on ZIP 74401 vs 74403, so preserve the current QA address pending final normalization.
+- Okemah Casino is directly mapped; current sources vary between 1101 and older 1100/S Woody Guthrie wording, so preserve current first-party 1101 pending final normalization.
+- Osage Casino Hotel Bartlesville uses the current 1803 US-60 successor property; do not revive the older Allen Road site.
+- Osage Casino Hotel Pawhuska is now resolved to the current `1421 John Dahl Ave` property. The older mapped Osage Nation Casino-Pawhuska at `2017 E 15th St` is a predecessor and must not be activated alongside it.
+- Osage Tulsa remains held because the accessible mapped feature found so far is parking rather than the casino/hotel building.
 - Suite Shots Jenks remains staged outside the conventional casino pool.
 
-### Artesian material correction hold
+### Material reconciliation holds
 
-**Do not activate the earlier provisional Artesian address.** Current first-party Artesian casino/hotel pages identify Artesian Casino at **1001 W 1st Street, Sulphur, OK 73086**, conflicting with the earlier provisional `23 W Vinita Ave` record. Artesian remains explicitly held for identity/address-lineage reconciliation before coordinate promotion.
+**Artesian:** do not activate the earlier provisional Artesian address. Current first-party Artesian casino/hotel pages identify Artesian Casino at **1001 W 1st Street, Sulphur, OK 73086**, conflicting with the earlier provisional `23 W Vinita Ave` record. Reconcile lineage before coordinate promotion.
+
+**Duck Creek:** exact casino geometry exists, but current-address sources disagree between `10071` and `10085 Ferguson Rd`; reconcile before promotion.
+
+**Checotah:** direct casino geometry exists, but current-address sources disagree between `830` and `831 N Broadway`; reconcile before promotion.
+
+**Osage Ponca City:** current first-party address is `64464 US Highway 60`; readily found older third-party coordinate data still points to `73 N City View Rd`, so do not reuse the old site.
 
 Other held records include Choctaw Hochatown, Cherokee Fort Gibson and Cherokee South Coffeyville where sufficiently direct property-coordinate evidence has not yet cleared the standard.
 
-There are now **14 additional property coordinates needed to reach the 50-coordinate target**. Next action: continue Muscogee property-coordinate QA for Coweta, Lake Eufaula, Duck Creek, Muscogee, Okemah, Holdenville, Bristow and Checotah; pursue Osage Bartlesville, Ponca City and Skiatook where property-level coordinates can be corroborated; keep Pawhuska under successor-site reconciliation and Tulsa under exact-building review. In parallel, perform branch-aware same-ID/name and sub-0.35-mile distance QA across all 36 coordinate-verified records. The first Oklahoma runtime pass should contain only records clearing every gate; do not force the count.
+There are now **8 additional property coordinates needed to reach the 50-coordinate target**. Next action: prioritize Coweta, current Lake Eufaula, Duck Creek after address reconciliation, Checotah after address reconciliation, Holdenville, current Osage Ponca City, Osage Tulsa exact building and the strongest remaining held Cherokee/Choctaw/Chickasaw candidate. In parallel, perform branch-aware same-ID/name and sub-0.35-mile distance QA across all 42 coordinate-verified records. The first Oklahoma runtime pass should contain only records clearing every gate; do not force the count.
 
 ## Legal/compliance continuity
 
