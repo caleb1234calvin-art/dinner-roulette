@@ -42,17 +42,26 @@ Colorado Division of Gaming accounting is corrected to 33 commercial regulator l
 
 `audit/texas-casino-reconciliation-2026-09-11.json` resolves current Texas scope to four physical tribal gaming destinations pending coordinate/stable-ID QA: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded as travel-center gaming. Texas becomes complete only after runtime activation and validation.
 
-## Oklahoma — runtime QA has begun
+## Oklahoma — 54 address/identity-verified, coordinate QA next
 
-Discovery/reconciliation artifacts now include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, and **`audit/oklahoma-runtime-qa-pass-1-2026-09-11.json`**.
+Discovery/reconciliation artifacts include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, `audit/oklahoma-runtime-qa-pass-1-2026-09-11.json`, and **`audit/oklahoma-runtime-qa-pass-2-2026-09-11.json`**.
 
-The Oklahoma name/scope candidate universe is currently **77**. Major reconciled clusters include Chickasaw 17, Choctaw 8, Cherokee/CNE 10, Muscogee 10 conventional casino destinations, Osage 7, Citizen Potawatomi 2, Comanche 6, Quapaw 2, Otoe-Missouria/7 Clans 5, Shawnee/Golden Mesa 1, Iowa Tribe/Caesars Harrah's Oklahoma 1, Seminole 3, Tonkawa 2, Sac and Fox 2 and Thlopthlocco/Golden Pony 1. Suite Shots Jenks remains staged outside the clean Muscogee count. Harrah's Oklahoma is the April 2026 successor to closed Ioway Casino and must not coexist with Ioway as two active records.
+The Oklahoma name/scope candidate universe remains **77**. Runtime QA has now verified current identity, destination scope, normalized street address and provisional stable Dinner Roulette IDs for **54 properties**, crossing the 50-address threshold for the first runtime batch.
 
-**Runtime QA Pass 1 has verified current identity, destination scope, normalized first-party street address and provisional stable Dinner Roulette IDs for 35 properties:** all 17 Chickasaw candidates, all 8 Choctaw destination casinos, and all 10 Cherokee/CNE Oklahoma destinations including Hard Rock Hotel & Casino Tulsa.
+Pass 1 verified 35: Chickasaw 17, Choctaw 8 and Cherokee/CNE 10. Pass 2 added 19: **Muscogee 10, Osage 7 and Citizen Potawatomi 2**.
 
-These 35 are **not yet runtime-ready** because property-specific latitude/longitude and final duplicate/alias distance QA remain pending. Do not manufacture coordinates from city centroids or broad operator addresses. The next property-level QA sweep is Muscogee + Osage + Citizen Potawatomi, which should push the address/identity-verified pool beyond 50. Then coordinate QA can promote only genuinely verified properties into Oklahoma Runtime Batch 1 / the next available casino catalog pass.
+Important Pass 2 corrections/decisions:
 
-The goal is not to force exactly 50. The 77-candidate surplus lets questionable hybrids such as 7 Clans Gasino properties or other edge cases remain staged while stronger destinations populate the runtime batch.
+- **Lake Eufaula Casino Hotel** at **1045 Birkes Rd, Eufaula** is the current Muscogee property. It replaced the former Creek Nation Eufaula Casino at 806 Forest Ave; never activate both as current destinations.
+- Suite Shots Jenks remains staged outside the conventional casino pool pending individual destination-scope review.
+- Osage current scope is seven properties: Tulsa, Bartlesville, Pawhuska, Ponca City, Skiatook, Hominy and Sand Springs. The first five include hotels; Hominy and Sand Springs are casino-only destinations.
+- Citizen Potawatomi properties are Grand Casino Hotel & Resort at 777 Grand Casino Blvd and FireLake Casino at 41170 Hardesty Rd, both separately routable Shawnee-area casinos.
+
+**The 54 are still not runtime-ready merely because addresses are verified.** The remaining hard gate is property-specific coordinates plus website normalization and duplicate/alias distance QA against catalog passes 1–27. Do not use city centroids or guessed coordinates.
+
+Next action: begin coordinate QA on the 54-property pool, prioritizing the clearest 50. Once 50 clear coordinate/site/duplicate checks, generate Oklahoma Runtime Batch 1 in the next available catalog pass, wire it into `src/lib/nightlife/search.ts`, extend `scripts/audit-casino-catalog.mjs`, update the integration manifest as appropriate, and run Validate Dinner Integration.
+
+The 77-candidate surplus means edge cases can remain staged rather than being forced into runtime merely to reach a quota.
 
 ## Legal/compliance continuity
 
