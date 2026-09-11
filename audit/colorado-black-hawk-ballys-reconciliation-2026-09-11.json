@@ -1,0 +1,47 @@
+{
+  "jurisdiction": "Colorado",
+  "city": "Black Hawk",
+  "capturedOn": "2026-09-11",
+  "status": "ballys-physical-subproperty-reconciled",
+  "scope": "Resolve Bally's Black Hawk East, North, and West as current physical subproperties before Colorado runtime serialization.",
+  "records": [
+    {
+      "id": "co-black-hawk-ballys-east",
+      "name": "Bally's Black Hawk East",
+      "address": "321 Main Street, Black Hawk, CO 80422",
+      "lat": 39.79845,
+      "lon": -105.48767,
+      "addressEvidence": "https://casinos.ballys.com/black-hawk/contact-us.htm",
+      "coordinateEvidence": "https://mapcarta.com/W574211228",
+      "status": "current-physical-subproperty"
+    },
+    {
+      "id": "co-black-hawk-ballys-north",
+      "name": "Bally's Black Hawk North",
+      "address": "300 Main Street, Black Hawk, CO 80422",
+      "lat": 39.79894,
+      "lon": -105.48825,
+      "addressEvidence": "https://casinos.ballys.com/black-hawk/contact-us.htm",
+      "coordinateEvidence": "https://mapcarta.com/W131297396",
+      "status": "current-physical-subproperty"
+    },
+    {
+      "id": "co-black-hawk-ballys-west",
+      "name": "Bally's Black Hawk West",
+      "address": "261 Main Street, Black Hawk, CO 80422",
+      "lat": 39.79883,
+      "lon": -105.48885,
+      "addressEvidence": "https://casinos.ballys.com/black-hawk/contact-us.htm",
+      "coordinateEvidence": "https://mapcarta.com/W372642965",
+      "status": "current-physical-subproperty"
+    }
+  ],
+  "lineage": {
+    "northFormerly": "Mardi Gras Casino",
+    "eastFormerly": "Golden Gulch Casino",
+    "westFormerly": "Golden Gates Casino",
+    "evidence": "https://casinos.ballys.com/black-hawk/faq.htm"
+  },
+  "decision": "Retain East, North, and West as three separately routable physical casino destinations. The complex-level 300 Main Street marketing address does not collapse the distinct subproperties because Bally's current contact page itself publishes separate current addresses for all three.",
+  "nextPhase": "Continue Black Hawk coordinate QA for the remaining non-Bally properties, then advance Central City and Cripple Creek."
+}
