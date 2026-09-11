@@ -81,33 +81,30 @@ After Billy's disposition, perform address/coordinate/site QA and generate the n
 
 Artifact: `audit/texas-casino-reconciliation-2026-09-11.json`.
 
-Current Texas Dinner Roulette scope resolves to four physical tribal gaming destinations pending coordinate/stable-ID QA:
+Current Texas Dinner Roulette scope resolves to four physical tribal gaming destinations pending coordinate/stable-ID QA: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, the August 25 2026 Naskila Casino Leggett temporary destination, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded from the casino-destination backbone as travel-center gaming. Texas becomes complete only after runtime activation and validation.
 
-1. Kickapoo Lucky Eagle Casino Hotel — Eagle Pass.
-2. Naskila Casino — Livingston.
-3. Naskila Casino Leggett — new temporary 24-hour casino opened August 25, 2026; post-dates the December 2025 NIGC roster and remains distinct while the original Naskila property is operating.
-4. Speaking Rock Entertainment Center — El Paso.
-
-Ischoopa Travel Center is excluded from the casino-destination backbone as travel-center gaming. Duplicate NIGC rows for Naskila/Speaking Rock do not create duplicate destinations. Texas should be marked complete in the integration manifest only after runtime activation and validation.
-
-## Oklahoma — major-operator reconciliation underway
+## Oklahoma — 50-candidate threshold crossed
 
 Artifacts:
 
 - `audit/oklahoma-statewide-scope-2026-09-11.json`
 - `audit/oklahoma-major-operators-pass-1-2026-09-11.json`
+- `audit/oklahoma-major-operators-pass-2-2026-09-11.json`
 
-Oklahoma is a large, structurally noisy tribal-gaming jurisdiction. The NIGC roster mixes destination casinos with travel plazas, smoke-shop/trading-post gaming and smaller outlets, so it is being audited by tribal/operator cluster rather than by blindly importing regulator rows.
+Oklahoma is being audited by tribal/operator cluster because federal rows mix true destination casinos with travel plazas, smoke-shop/trading-post gaming and smaller outlets.
 
-**Major-operator Pass 1 captured 29 named destination candidates:**
+Current clean name/scope candidate accounting is **54 destinations**, crossing the 50-record discovery threshold for a first Oklahoma runtime batch:
 
-- **Chickasaw Nation: 17 clean named casino candidates.** Current Chickasaw material distinguishes these from hotel-only, retail, regulator-office, travel-gaming, tobacco/gaming and travel-stop records. Clean names include WinStar World, Riverwind, Newcastle, Artesian, Border, Saltcreek, Texoma, Washita, Black Gold, Jet Stream, MegaStar, Riverstar, West Bay, Lakecrest, Chisholm Trail, Gold Mountain and Treasure Valley.
-- **Choctaw Nation: 8 clean casino/casino-resort candidates.** Current Choctaw first-party grouping separates Durant, Pocola, Grant, Hochatown, McAlester, Broken Bow, Idabel and Stringtown from its Casino Too travel-plaza network.
-- **Cherokee Nation Entertainment: at least 4 current candidates captured so far** — Fort Gibson, Grove, Ramona and Roland. The captured first-party page was partial, so Cherokee remains open and no total should be inferred yet.
+- Chickasaw Nation — 17.
+- Choctaw Nation — 8.
+- Cherokee Nation Entertainment Oklahoma — 10, consisting of nine current Cherokee Casino properties plus Hard Rock Hotel & Casino Tulsa.
+- Muscogee Nation Gaming Enterprises — 10 conventional casino destinations. Suite Shots Jenks remains staged for individual scope review and is not counted in the 54.
+- Osage Nation — 7 locations: Tulsa, Ponca City, Skiatook, Bartlesville, Hominy, Pawhuska and Sand Springs.
+- Citizen Potawatomi Nation — 2: Grand Casino Hotel & Resort and FireLake Casino.
 
-Current Oklahoma operator sequence continues with finishing Cherokee, then Muscogee (Creek), Osage, Comanche, Citizen Potawatomi, northeast/central/smaller operators and a final statewide duplicate/travel-plaza exclusion sweep. Once 50+ Oklahoma properties clear property-level address/coordinate/site/ID QA, form the first Oklahoma runtime batch rather than waiting for statewide perfection.
+**Crossing 50 does not make the 54 runtime-ready automatically.** The next step is property-level normalized address, coordinates, current website, stable ID and duplicate/alias QA. Promote only the subset that clears those checks. In parallel, continue discovery across Comanche, Quapaw, Sac & Fox, Seminole, Shawnee, Tonkawa, Otoe-Missouria, Iowa Tribe and remaining Oklahoma operators.
 
-Known federal-roster candidates outside the first completed clusters include Downstream Casino Resort, multiple Osage Casino properties, Golden Mesa Casino, Golden Pony Casino, Tonkawa Casino, Black Hawk Casino and Seminole Nation casino properties.
+Once a clean 50-record subset clears property-level QA, generate Oklahoma runtime batch 1 in the next available casino catalog pass, extend the catalog validator/search imports, and run Validate Dinner Integration.
 
 ## Legal/compliance continuity
 
