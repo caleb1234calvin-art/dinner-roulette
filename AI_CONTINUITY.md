@@ -36,18 +36,19 @@ Casino catalog modules run through **Pass 28** on integration. Pass 28 is the fi
 
 Nevada's provisional audit decision universe is 174 rows, not a final runtime count. Runtime Batch NV-01 / Pass 22 contains 50 curated destinations. Remaining work includes Winnemucca/I-80, Stockmen's Fallon, Red Drag Elko, The Nevada Casino & Bar Battle Mountain, Longstreet address normalization, Buffalo Bill's/Whiskey Pete's operation state and rural completeness sweeps. Nevada progresses in parallel without blocking smaller states.
 
-## Colorado — Cripple Creek ambiguity resolved; tribal coordinate QA complete
+## Colorado — commercial address QA underway
 
-Colorado Division of Gaming accounting is corrected to 33 commercial regulator locations: 15 Black Hawk, 6 Central City, 12 Cripple Creek, plus two tribal casino resorts. All regulator rows are accounted for. Bally's Black Hawk East/North/West remain separate physical properties; Century Casinos I/II must not create an artificial duplicate; Z Casino transitioned to Bigfoot Casino in 2026.
+Colorado Division of Gaming accounting is corrected to 33 commercial regulator locations: 15 Black Hawk, 6 Central City, 12 Cripple Creek, plus two tribal casino resorts. All regulator rows are accounted for.
 
-`audit/colorado-cripple-creek-destination-reconciliation-2026-09-11.json` resolves the remaining **FHR BILLY'S** ambiguity: do **not** create a separate Dinner Roulette destination for Billy's. Current consumer-facing Full House/Chamonix material presents **Bronco Billy's** and **Chamonix** as the active connected casino experiences. The FHR BILLY'S regulator row remains an accounting/evidence unit rather than a separately routable current consumer destination. Bronco Billy's and Chamonix remain separate connected experiences. Century's two regulator licenses collapse to one consumer property. Current working Cripple Creek consumer-destination accounting from the 12 regulator rows is **10**.
+`audit/colorado-cripple-creek-destination-reconciliation-2026-09-11.json` resolves FHR BILLY'S as an accounting/license row rather than a separate current Dinner Roulette destination. Bronco Billy's and Chamonix remain separate connected casino experiences. Century's two regulator licenses collapse to one consumer property. Current working Cripple Creek consumer-destination accounting from the 12 regulator rows is **10**.
 
-`audit/colorado-tribal-coordinate-qa-2026-09-11.json` clears both Colorado tribal resorts for the coordinate layer:
+`audit/colorado-tribal-coordinate-qa-2026-09-11.json` clears both tribal resorts: Sky Ute at `37.138214,-107.6323312` and Ute Mountain Casino at `37.20475,-108.68612`. The tribal portion no longer blocks Colorado serialization.
 
-- **Sky Ute Casino Resort** — current first-party address `14324 US Highway 172 North, Ignacio, CO 81137`; casino-property coordinate `37.138214,-107.6323312`. Do not substitute RV-park-only geometry.
-- **Ute Mountain Casino Hotel** — current first-party address `3 Weeminuche Drive, Towaoc, CO 81334`; casino-specific OSM geometry `37.20475,-108.68612`. Do not substitute adjacent hotel, RV park, travel center or parking geometry.
+`audit/colorado-black-hawk-address-qa-pass-1-2026-09-11.json` now clears current consumer-facing addresses for **10 Black Hawk destinations**: Ameristar, Horseshoe, Lady Luck, The Lodge, The Gilpin, Monarch, Saratoga, Sasquatch, Wild Card Saloon and Bigfoot Casino. Bigfoot is the current successor at `101 Gregory Street`; do not create a parallel current Z Casino destination.
 
-The tribal portion no longer blocks Colorado serialization. Immediate Colorado action: finish commercial Black Hawk/Central City/Cripple Creek property address/coordinate/stable-ID QA, then serialize the clean Colorado runtime batch.
+Bally's remains the Black Hawk subproperty hold. Current Bally's marketing uses the complex-level `300 Main Street` address, while regulator/history evidence preserves East/North/West physical license/property distinctions. Do not collapse Bally's East/North/West solely because the current consumer site uses one complex address. Resolve current physical subproperty addresses and coordinates first.
+
+Immediate Colorado action: resolve Bally's East/North/West physical subproperties, collect property-specific coordinates for the 10 address-cleared Black Hawk destinations, and continue Central City/Cripple Creek address-coordinate QA. Then serialize the clean Colorado runtime batch.
 
 ## Texas — 4 current destinations; 2 coordinate verified
 
