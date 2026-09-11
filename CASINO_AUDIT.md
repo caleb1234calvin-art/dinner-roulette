@@ -39,6 +39,7 @@ A jurisdiction is only marked complete when:
 | Kentucky | 14 | 14 | Kentucky Horse Racing & Gaming Corporation | Complete: 14 active casino-style HHR destinations |
 | Louisiana | 24 | 24 | Louisiana State Police Gaming Operations / NIGC | Complete: 20 state-regulated properties + 4 tribal casino destinations |
 | Mississippi | 28 | 28 | Mississippi Gaming Commission / Mississippi Band of Choctaw Indians | Complete: 25 state-regulated properties + 3 MBCI casino destinations |
+| Arizona | 26 | 26 | Arizona Department of Gaming | Complete: 26 current Class III tribal casino facilities in the regulator directory |
 
 ## Staged authoritative inventories
 
@@ -126,10 +127,13 @@ Louisiana State Police Gaming Operations materials reconcile twenty state-regula
 ### Mississippi
 Mississippi Gaming Commission July 2026 property data reconciles 25 active state-regulated casino properties across the Central, Coastal, and Northern regions. Mississippi Band of Choctaw Indians / Pearl River Resort materials separately identify Silver Star Hotel & Casino, Golden Moon Hotel & Casino, and Bok Homa Casino as casino destinations, producing 28 physical casino destinations under the app scope. Crystal Sky Travel Plaza is not counted separately because it is a travel-plaza gaming amenity rather than a casino destination. The Commission property list is used to reconcile commercial property addresses; property-specific OSM coordinate sources are recorded only where directly verified.
 
+### Arizona
+Arizona Department of Gaming's current tribal-gaming directory identifies 26 Class III casino facilities operated by 16 tribes. All 26 are active in `casino-catalog-pass-18.ts` and are wired into the runtime curated nightlife merge. Event-wagering retail locations, OTBs, and online-only operators are excluded from this physical casino-destination scope. ADG separately notes one Class II facility; it is not promoted without a matching current destination entry in the state's casino directory.
+
 ## Deployment discipline
 
 Vercel deploys every pushed commit on this branch. Audit work should therefore be published as coherent atomic commits whenever multiple files must change together. Do not intentionally push half-wired imports, scripts, manifests, or catalog passes.
 
 ## Remaining work
 
-Continue state-by-state and tribal-jurisdiction reconciliation across the United States. Priority should be given to jurisdictions with large physical casino inventories and/or substantial tribal gaming footprints. The national audit is **not complete** until every applicable jurisdiction has been reconciled, the final cross-jurisdiction duplicate/alias/retirement pass is clean, and the release candidate passes audit, typecheck, build, tests, and deployment smoke checks.
+Continue state-by-state and tribal-jurisdiction reconciliation across the United States. California remains the next staged large-inventory pass: the regulator roster is captured, and property-specific address/coordinate reconciliation is in progress. The national audit is **not complete** until every applicable jurisdiction has been reconciled, the final cross-jurisdiction duplicate/alias/retirement pass is clean, and the release candidate passes audit, typecheck, build, tests, and deployment smoke checks.
