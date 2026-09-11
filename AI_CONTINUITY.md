@@ -36,9 +36,15 @@ Casino catalog modules run through **Pass 28** on integration. Pass 28 is the fi
 
 Nevada's provisional audit decision universe is 174 rows, not a final runtime count. Runtime Batch NV-01 / Pass 22 contains 50 curated destinations. Remaining work includes Winnemucca/I-80, Stockmen's Fallon, Red Drag Elko, The Nevada Casino & Bar Battle Mountain, Longstreet address normalization, Buffalo Bill's/Whiskey Pete's operation state and rural completeness sweeps. Nevada progresses in parallel without blocking smaller states.
 
-## Colorado
+## Colorado — Cripple Creek destination ambiguity resolved
 
-Colorado Division of Gaming accounting is corrected to 33 commercial regulator locations: 15 Black Hawk, 6 Central City, 12 Cripple Creek, plus two tribal casino resorts. All regulator rows are accounted for. Bally's Black Hawk East/North/West remain separate physical properties; Century Casinos I/II must not create an artificial duplicate; Z Casino transitioned to Bigfoot Casino in 2026; FHR Billy's still needs a current-routability decision. After that, finish address/coordinate/site QA and generate runtime data.
+Colorado Division of Gaming accounting is corrected to 33 commercial regulator locations: 15 Black Hawk, 6 Central City, 12 Cripple Creek, plus two tribal casino resorts. All regulator rows are accounted for. Bally's Black Hawk East/North/West remain separate physical properties; Century Casinos I/II must not create an artificial duplicate; Z Casino transitioned to Bigfoot Casino in 2026.
+
+`audit/colorado-cripple-creek-destination-reconciliation-2026-09-11.json` resolves the remaining **FHR BILLY'S** ambiguity: do **not** create a separate Dinner Roulette destination for Billy's. Current consumer-facing Full House/Chamonix material presents **Bronco Billy's** and **Chamonix** as the active connected casino experiences, while current visitor material promotes Bronco Billy's and independent casino-history evidence marks Billy's Casino closed. The FHR BILLY'S regulator row remains an accounting/evidence unit rather than a separately routable current consumer destination.
+
+Bronco Billy's remains a current destination at `233 E Bennett Ave, Cripple Creek, CO 80813`. Chamonix remains a distinct connected casino experience because current first-party material explicitly describes two casinos/two distinct experiences connected under one roof and one owner. Century's two regulator licenses still collapse to one consumer property. Current working Cripple Creek consumer-destination accounting from the 12 regulator rows is therefore **10**, not 11 or 12.
+
+Immediate Colorado action: finish address/coordinate/stable-ID QA for the consumer destination set, include Sky Ute and Ute Mountain tribal resorts, then serialize the clean Colorado runtime batch.
 
 ## Texas — 4 current destinations; 2 coordinate verified
 
@@ -54,7 +60,7 @@ Still held for direct numerical property coordinates:
 - **Naskila Casino Livingston** — current first-party address remains `540 State Park Road 56, Livingston, TX 77351`; do not substitute nearby photo geotags or city centroids.
 - **Naskila Casino Leggett** — current first-party address remains `10314 US 59 N, Livingston, TX 77351`; opened August 25, 2026 and remains distinct from the original Livingston property while both operate.
 
-Texas is not complete until all four current destinations clear coordinate/stable-ID QA, enter runtime and validate green. Immediate Texas action: find direct numerical property coordinates for both Naskila sites, then serialize the clean four-property Texas runtime pass.
+A fresh coordinate search still did not expose trustworthy numerical property pins for either Naskila site, so the holds remain rather than lowering the evidence standard. Texas is not complete until all four current destinations clear coordinate/stable-ID QA, enter runtime and validate green.
 
 ## Oklahoma — Pass 28 green with 46 runtime records
 
