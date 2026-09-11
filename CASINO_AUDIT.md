@@ -1,6 +1,6 @@
 # National Casino Audit
 
-Audit branch: `audit/national-casino-pass-1`
+Audit branch lineage: `audit/national-casino-pass-1` → `legal/third-party-compliance-pass-1` → `feature/dinner-icon-pack-1`
 
 ## Definition of complete
 
@@ -46,7 +46,24 @@ A jurisdiction is only marked complete when:
 
 ## Staged authoritative inventories
 
-No currently staged jurisdiction remains in this section after Washington activation.
+### Nevada — Pass 22 discovery complete; reconciliation pending
+
+Nevada is staged but **not complete and not active in runtime**. NGCB is the primary authority. Its reporting distinguishes active restricted/nonrestricted gaming locations and publishes market reporting for Las Vegas Strip, Downtown Las Vegas, North Las Vegas, Laughlin, Boulder Strip, Balance of Clark County, Washoe County, South Lake Tahoe, Elko County, Carson Valley, and Balance of State. A nonrestricted license is a starting universe, not automatically a Dinner Roulette destination-casino record.
+
+Current Nevada staging artifacts:
+
+- `audit/nevada-nonrestricted-casino-scope-2026-09-11.json`
+- `audit/nevada-reconciliation-plan-2026-09-11.json`
+- `audit/nevada-strip-downtown-ledger-2026-09-11.json` — 40 raw candidate rows
+- `audit/nevada-clark-outer-ledger-2026-09-11.json` — 49 raw candidate rows
+- `audit/nevada-laughlin-ledger-2026-09-11.json` — 9 raw candidate/scope-review rows
+- `audit/nevada-northern-markets-ledger-2026-09-11.json` — 45 raw candidate rows
+- `audit/nevada-balance-state-ledger-2026-09-11.json` — 10 conservative rural candidate rows plus tribal cross-check gate
+- `audit/nevada-statewide-candidate-accounting-2026-09-11.json` — statewide discovery checkpoint
+
+The discovery ledgers currently contain **153 raw candidate/scope-review rows**. This is intentionally an oversized research universe and must not be cited as Nevada's final curated casino count. Known historical exclusions/alias/hold examples already include Mirage, Tropicana Las Vegas, Texas Station, Fiesta Rancho, Harrah's Reno, The Cromwell alias/rebrand, Eastside Cannery operation-status hold, Bayshore Inn scope review, and retail-style gaming holds.
+
+Before Pass 22 activation, every retained destination must be matched to authoritative current identity, receive a normalized physical address and plausible coordinate, survive alias/closure/same-property dedupe review, and be cross-checked against NIGC/current tribal evidence. The final Nevada accounting artifact must explain every included/excluded/held row before `casino-catalog-pass-22.ts` is created.
 
 ## Audit controls
 
@@ -74,4 +91,4 @@ Vercel deploys every pushed commit on this branch. Audit work should therefore b
 
 ## Remaining work
 
-Continue state-by-state and tribal-jurisdiction reconciliation across the United States. Twenty-seven jurisdiction passes are complete and active in the curated runtime. The national audit is **not complete** until every remaining applicable jurisdiction has been reconciled, the final cross-jurisdiction duplicate/alias/retirement pass is clean, and the release candidate passes audit, typecheck, build, tests, and deployment smoke checks.
+Twenty-seven jurisdiction passes are complete and active. Nevada Pass 22 is in statewide reconciliation after completion of candidate discovery. Continue regulator-backed reconciliation across Nevada and remaining applicable U.S. jurisdictions. The national audit is **not complete** until every remaining applicable jurisdiction has been reconciled, the final cross-jurisdiction duplicate/alias/retirement pass is clean, and the release candidate passes audit, typecheck, build, tests, and deployment smoke checks.
