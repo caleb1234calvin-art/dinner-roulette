@@ -1,0 +1,29 @@
+{
+  "jurisdiction":"Nevada",
+  "capturedOn":"2026-09-11",
+  "status":"rural-completeness-gate-reopened",
+  "reason":"Current-source review surfaced credible rural casino destinations not represented in the original 153-row discovery universe. The audit must favor completeness over preserving an earlier candidate count.",
+  "newOrRecoveredCandidates":[
+    {"name":"Cactus Pete's Resort Casino","city":"Jackpot","decision":"add-for-reconciliation","evidence":"Current first-party Boyd property; 1385 Highway 93, Jackpot, NV 89825."},
+    {"name":"Horseshu Hotel & Casino","city":"Jackpot","decision":"add-for-reconciliation","evidence":"Current Jackpot tourism/first-party ecosystem identifies Horseshu as a casino property adjacent to Cactus Pete's."},
+    {"name":"Fernley Nugget Casino","city":"Fernley","decision":"add-for-reconciliation","evidence":"Current first-party site identifies casino, sportsbook and gaming at 1130 E Main St, Fernley, NV 89408."},
+    {"name":"Stockmen's Gambling Hall","city":"Fallon","decision":"add-for-reconciliation","evidence":"Current first-party site identifies a 24/7 casino at 60 W Center St, Fallon, NV 89406."},
+    {"name":"Dini's Lucky Club","city":"Yerington","decision":"add-for-reconciliation","evidence":"Current first-party site identifies Nevada's oldest family-owned casino at 45 N Main St, Yerington, NV 89447."},
+    {"name":"C Punch Inn & Casino","city":"Lovelock","decision":"add-for-reconciliation","evidence":"Current Nevada tourism material identifies C Punch Inn & Casino at 1420 Cornell Ave, Lovelock, NV 89419."},
+    {"name":"El Capitan Casino","city":"Hawthorne","decision":"add-for-reconciliation","evidence":"Current Mineral County tourism/business material identifies El Capitan Casino at 540 F St, Hawthorne, NV 89415."},
+    {"name":"Stagecoach Hotel & Casino","city":"Beatty","decision":"add-for-reconciliation","evidence":"Current first-party Stagecoach material identifies casino gaming at 900 E Hwy 95 N, Beatty, NV 89003."}
+  ],
+  "candidateAccountingEffect":{
+    "priorExpandedDecisionUniverse":155,
+    "newRecoveredRows":8,
+    "revisedProvisionalDecisionUniverse":163,
+    "warning":"163 is provisional and must not be cited as a final Nevada casino count. Additional NGCB active-location extraction may still add or remove rows."
+  },
+  "setChecks":{
+    "ruralCompletenessPreviouslyClaimed":false,
+    "newCandidatesAddedForReview":8,
+    "runtimeActivationAllowed":false,
+    "result":"REOPENED_CORRECTLY"
+  },
+  "nextPhase":"Run a regulator-backed statewide completeness sweep against active NGCB nonrestricted locations, especially balance-of-state communities, before finalizing the Nevada roster."
+}
