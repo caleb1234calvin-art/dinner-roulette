@@ -1,0 +1,60 @@
+{
+  "jurisdiction": "California",
+  "capturedOn": "2026-09-10",
+  "status": "supplemental-reconciliation",
+  "purpose": "Adds four newly coordinate-validated properties to the California strict reconciliation set without rewriting the large primary reconciliation file. Merge these records into the primary reconciliation file during final consolidation.",
+  "records": [
+    {
+      "license": "TRCS-000079",
+      "name": "Sky River Casino",
+      "address": "1 Sky River Parkway, Elk Grove, CA 95757",
+      "lat": 38.38035,
+      "lon": -121.36948,
+      "website": "https://www.skyriver.com/",
+      "addressSource": "Current property address from first-pass California research; independently corroborated by Mapcarta/OpenStreetMap",
+      "coordinateSource": "OpenStreetMap way 1044414326 via Mapcarta; amenity=casino, building=yes",
+      "status": "fully-reconciled"
+    },
+    {
+      "license": "TRCS-000057",
+      "name": "Thunder Valley Casino Resort",
+      "address": "1200 Athens Avenue, Lincoln, CA 95648",
+      "lat": 38.8377,
+      "lon": -121.31285,
+      "website": "https://www.thundervalleyresort.com/",
+      "addressSource": "Current property address from first-pass California research",
+      "coordinateSource": "OpenStreetMap resort property way 224932934 via Mapcarta; separate hotel geometry was checked to avoid selecting the hotel centroid",
+      "status": "fully-reconciled"
+    },
+    {
+      "license": "TRCS-000058",
+      "name": "Viejas Casino and Resort",
+      "currentPropertyName": "Viejas Casino & Resort",
+      "address": "5000 Willows Road, Alpine, CA 91901",
+      "lat": 32.84226,
+      "lon": -116.70558,
+      "website": "https://viejas.com/",
+      "addressSource": "Current property address from first-pass California research; Mapcarta/OpenStreetMap independently matches the same address",
+      "coordinateSource": "OpenStreetMap way 545932069 via Mapcarta; amenity=casino, building=yes",
+      "status": "fully-reconciled"
+    },
+    {
+      "license": "TRCS-000043",
+      "name": "Yaamava' Resort and Casino at San Manuel",
+      "currentPropertyName": "Yaamava' Resort & Casino at San Manuel",
+      "address": "777 San Manuel Blvd, Highland, CA 92346",
+      "lat": 34.15064,
+      "lon": -117.22912,
+      "website": "https://www.yaamava.com/",
+      "addressSource": "Current property address from first-pass California research; Mapcarta/OpenStreetMap independently matches 777 San Manuel Boulevard",
+      "coordinateSource": "OpenStreetMap casino property way 114567772 via Mapcarta",
+      "status": "fully-reconciled"
+    }
+  ],
+  "progressImpact": {
+    "priorFullyReconciled": 32,
+    "newlyFullyReconciled": 4,
+    "combinedFullyReconciled": 36,
+    "inventory": 74
+  }
+}
