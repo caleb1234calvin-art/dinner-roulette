@@ -1,7 +1,7 @@
 {
   "jurisdiction":"Nevada",
   "capturedOn":"2026-09-11",
-  "status":"statewide-reconciliation-in-progress",
+  "status":"statewide-reconciliation-in-progress-major-ambiguities-cleared",
   "primaryAuthority":"Nevada Gaming Control Board",
   "supportingFederalAuthority":"National Indian Gaming Commission",
   "sourceArtifacts":[
@@ -13,32 +13,48 @@
     {"path":"audit/nevada-northern-markets-ledger-2026-09-11.json","rows":45},
     {"path":"audit/nevada-balance-state-ledger-2026-09-11.json","rows":10},
     {"path":"audit/nevada-tribal-crosscheck-2026-09-11.json","role":"tribal/federal cross-check"},
-    {"path":"audit/nevada-reconciliation-pass-1-2026-09-11.json","role":"first statewide decision pass"}
+    {"path":"audit/nevada-reconciliation-pass-1-2026-09-11.json","role":"first statewide decision pass"},
+    {"path":"audit/nevada-ambiguity-resolution-pass-2-2026-09-11.json","role":"regulatory ambiguity pass"},
+    {"path":"audit/nevada-ambiguity-resolution-pass-3-2026-09-11.json","role":"core operation/rename/campus ambiguity pass"}
   ],
   "candidateAccounting":{
     "originalCandidateAndScopeReviewRows":153,
     "newCurrentTribalDestinations":2,
     "expandedDecisionUniverse":155,
     "runtimeDestinationCount":null,
-    "result":"RECONCILIATION_IN_PROGRESS"
+    "result":"RECONCILIATION_IN_PROGRESS_MAJOR_AMBIGUITIES_CLEARED"
   },
-  "tribalCrosscheck":{
+  "majorResolvedDecisions":{
+    "Casino Royale":"include-current-destination",
+    "Eastside Cannery":"exclude-closed-demolished",
+    "Harveys Lake Tahoe":"alias-only; current identity Caesars Republic Lake Tahoe",
+    "Caesars Republic Lake Tahoe":"include-current-destination",
+    "Harrah's Lake Tahoe":"include-current-separate-destination",
+    "Venetian":"include-current-separate-destination",
+    "Palazzo":"include-current-separate-destination",
+    "Wynn Las Vegas":"include-current-separate-destination",
+    "Encore at Wynn Las Vegas":"include-current-separate-destination",
+    "Wa She Shu Casino":"exclude-current-casino-closed-until-reopening-proven",
     "Avi Resort & Casino":"include-current-tribal-destination",
     "Moapa Paiute Travel Plaza":"include-current-tribal-destination",
-    "Wa She Shu Casino":"status-hold",
     "Palms Casino Resort":"already represented; no duplicate tribal-ownership row"
   },
-  "knownNonRuntimeOrHoldExamples":[
-    {"name":"The Mirage","decision":"exclude","reason":"closed in 2024"},
-    {"name":"Tropicana Las Vegas","decision":"exclude","reason":"closed/demolished"},
-    {"name":"The Cromwell","decision":"alias","reason":"current successor identity is The Vanderpump Hotel"},
-    {"name":"Texas Station Gambling Hall & Hotel","decision":"exclude","reason":"closed/demolished"},
-    {"name":"Fiesta Rancho","decision":"exclude","reason":"closed/demolished"},
-    {"name":"Harrah's Reno","decision":"exclude","reason":"closed in 2020"},
-    {"name":"Eastside Cannery Casino & Hotel","decision":"hold","reason":"current-operation confirmation required"},
-    {"name":"Wa She Shu Casino","decision":"hold","reason":"current-operation evidence remains contradictory"},
-    {"name":"Bayshore Inn","decision":"scope-review"},
-    {"name":"Dotty's/restricted retail-style gaming","decision":"scope-exclude-by-default"}
+  "knownHistoricalOrScopeExclusions":[
+    "The Mirage",
+    "Tropicana Las Vegas",
+    "Texas Station Gambling Hall & Hotel",
+    "Fiesta Rancho",
+    "Harrah's Reno",
+    "Eastside Cannery Casino & Hotel",
+    "Wa She Shu Casino until reopening is authoritatively proven",
+    "Moulin Rouge current-destination claim",
+    "Dotty's/restricted retail-style gaming by default"
+  ],
+  "remainingNamedScopeOrStatusReview":[
+    "Bayshore Inn",
+    "Alamo Casino at Petro",
+    "Red Drag Casino",
+    "Eureka rural casino ambiguity"
   ],
   "ngcbReportInfrastructure":{
     "publicReportsBase":"https://publicreports-gcb.nv.gov/",
@@ -48,12 +64,11 @@
     "currentNonrestrictedCountWorkbook":"https://www.gaming.nv.gov/contentassets/5eb1aeae895c4ae695a96c9e5889e96c/nonrestricted-count-report--june-30-2026.xlsx"
   },
   "mandatoryRemainingGates":[
-    "Resolve every candidate against current NGCB identity or explicit tribal/federal exception.",
-    "Finish closure/rebrand/alias and destination-scope decisions.",
-    "Finalize same-property identity rules.",
-    "Normalize addresses and complete coordinate QA.",
-    "Produce final all-row accounting with no unexplained rows.",
+    "Finish the small/rural destination-scope exceptions and account every surviving candidate against current NGCB identity or explicit tribal/federal exception.",
+    "Normalize addresses for every retained destination.",
+    "Complete property-specific coordinate QA.",
+    "Produce final all-row accounting with no unexplained rows, aliases or overlaps.",
     "Generate and activate Pass 22 only after all prior gates pass."
   ],
-  "nextPhase":"Continue row-level statewide reconciliation using NGCB public-report infrastructure, then address and coordinate QA for the surviving physical-destination set."
+  "nextPhase":"Resolve the remaining small/rural scope set, then pivot from identity research into bulk address normalization and coordinate QA for the surviving Nevada destination set."
 }
