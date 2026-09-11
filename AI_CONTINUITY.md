@@ -18,20 +18,18 @@ _Last updated: September 10, 2026_
 
 The national casino audit is active on the current stacked working branch.
 
-- Completed jurisdiction passes documented in `CASINO_AUDIT.md`: **24**.
+- Completed jurisdiction passes documented in `CASINO_AUDIT.md`: **25**.
 - Arizona is complete at 26 Class III tribal casino facilities and is wired into runtime via `casino-catalog-pass-18.ts` and `src/lib/nightlife/search.ts`.
-- California uses a CGCC snapshot of **74 active tribal-casino license records**. First-pass research covers the full roster.
-- California progressed from 32 fully reconciled properties in the primary file, to 41 after two supplements, to 60 after the requested 30-record cleanup sweep, then through focused final-exception work.
-- Individual-property research is complete. Acorn Ridge, the final research exception, is reconciled at 17500 State Highway 49, Plymouth using current operator evidence plus California CEQAnet/BIA project-site coordinates.
-- Formal all-ID accounting recovered two staged omissions, Wanaaha Casino and Win-River Casino, and `audit/california-all-id-accounting-2026-09-10.json` proves **74/74 CGCC IDs accounted**, with zero overlap, missing IDs, or unexpected IDs.
-- The accounting basis is **69 property-reconciled IDs + 5 explicit special-case/runtime-decision IDs**.
-- `audit/california-runtime-destination-plan-2026-09-10.json` now derives the conservative current curated runtime set at **69 physical destinations**. Set check: **69 included + 5 held/excluded/deduped = all 74 regulator IDs, with zero overlap and zero missing IDs.**
-- The 69 runtime destinations include Chicken Ranch Casino Resort as the single curated destination for TRCS-000018. Its still-operating OG Casino is documented separately and remains eligible for live discovery rather than being fabricated as another regulator-backed license record.
+- **California is complete.** The California Gambling Control Commission snapshot contains 74 active tribal-casino license rows; formal all-ID accounting proves **74/74 IDs accounted**, with zero overlap, missing IDs, or unexpected IDs.
+- California's final conservative runtime set is **69 curated physical destinations** in `src/lib/nightlife/casino-catalog-pass-19.ts`, wired into `src/lib/nightlife/search.ts`.
+- The implementation source is `audit/california-runtime-dataset-2026-09-10.json`, which contains 69 records / 69 unique included license IDs.
 - Five regulator IDs are intentionally absent from the curated California runtime: **Red Fox (TRCS-000013)** status hold because current operation remains contradictory; **Hidden Oaks (TRCS-000068)** Class II scope hold; **Casino Morongo (TRCS-000075)** deduped against verified Morongo Resort TRCS-000030; **Mechoopda (TRCS-000080)** closed-property exclusion; **North Fork Mono (TRCS-000083)** pre-opening exclusion until its announced October 2026 opening.
-- The Heights/former Cher-Ae Heights remains included because the physical Trinidad property is reconciled; its CGCC locality mismatch remains documented as a regulator-data caution. Acorn Ridge remains included with its coordinate provenance explicitly identified as a casino project-site coordinate rather than a claimed front-door centroid.
-- **California research, license accounting, and runtime-set derivation are complete.** Do not start another broad research batch unless consolidation exposes contradictory evidence.
-- California is now in **implementation-data consolidation**: combine the staged property evidence for the 69 included physical destinations into one authoritative implementation-ready dataset.
-- After consolidation, generate `src/lib/nightlife/casino-catalog-pass-19.ts`, wire it into `src/lib/nightlife/search.ts`, run duplicate/audit/typecheck/tests/build checks, update `CASINO_AUDIT.md`, and only then mark California complete.
+- Chicken Ranch Casino Resort is the single curated destination for TRCS-000018. Its still-operating OG Casino is documented separately and remains eligible for live discovery rather than being fabricated as another regulator-backed license record.
+- The Heights/former Cher-Ae Heights is included at the reconciled Trinidad property; its CGCC locality mismatch remains documented as a regulator-data caution. Acorn Ridge is included with its coordinate provenance explicitly identified as a casino project-site coordinate rather than a claimed front-door centroid.
+- Formal California accounting and implementation artifacts include `audit/california-all-id-accounting-2026-09-10.json`, `audit/california-runtime-destination-plan-2026-09-10.json`, and `audit/california-runtime-dataset-2026-09-10.json`.
+- California runtime wiring commit `468f861dc3421f708f368718b7a48c0ed93f2344` triggered Validate Dinner Icon Pack run `34558916921`, which completed successfully. The workflow's blocking TypeScript check, development bundle build, and Dinner icon verification all passed. The inherited test suite remains report-only by workflow design and therefore should not be described as a strict clean test gate.
+- `CASINO_AUDIT.md` now marks California complete. Do not reopen broad California research unless a future status change, regulator update, or runtime defect requires it.
+- Next casino-audit phase: identify the remaining applicable U.S. jurisdictions, continue regulator-backed reconciliation, then perform the final national cross-jurisdiction duplicate/alias/retirement audit and release-candidate validation.
 - Continue using regulator/government rosters for identity and operator/property sources for current address/name details. Explicit exclusions, dedupes, status cautions, and provenance notes are preferable to invented precision.
 - Curated casino records remain a high-confidence backbone merged with live OSM discovery rather than a replacement for live discovery.
 
@@ -103,7 +101,7 @@ Canonical asset layout is `public/dinner-icons/dark/<category>.jpg` and `public/
 
 A dedicated GitHub Actions workflow exists at `.github/workflows/validate-icon-pack.yml` for `feature/dinner-icon-pack-1`.
 
-Verified passing gates include dependency installation, blocking TypeScript `tsc --noEmit`, development client/SSR/Nitro build, all 30 canonical Dinner icon assets, and successful branch workflow completion.
+Verified passing gates include dependency installation, blocking TypeScript `tsc --noEmit`, development client/SSR/Nitro build, all 30 canonical Dinner icon assets, and successful branch workflow completion. The California Pass 19 wiring was included in successful workflow run `34558916921`.
 
 Maintenance work restored Nightlife chip artwork typing, repaired curated Nightlife records missing `website`, restored `.grok/app-env.json` with `VITE_AUTH_ENABLED: \"false\"`, and isolated PWA metadata tests from the real `Pick For Us` workspace identity using temporary fixtures.
 
