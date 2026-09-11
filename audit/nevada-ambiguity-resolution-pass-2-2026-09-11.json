@@ -1,0 +1,26 @@
+{
+  "jurisdiction":"Nevada",
+  "capturedOn":"2026-09-11",
+  "status":"ambiguity-resolution-pass-2",
+  "primaryAuthority":"Nevada Gaming Control Board",
+  "decisions":[
+    {"name":"Whiskey Pete's Hotel & Casino","decision":"retain-current-authority-corroborated","address":"100 W Primm Blvd, Primm, NV 89019","basis":"June 2026 Nevada Gaming Commission nonrestricted agenda lists the property and an application involving its race book/sports pool and gaming revenue."},
+    {"name":"Primm Valley Resort & Casino","decision":"retain-current-authority-corroborated","address":"31900 Las Vegas Blvd S, Primm, NV 89019","basis":"June 2026 Nevada Gaming Commission nonrestricted agenda."},
+    {"name":"Buffalo Bill's Resort & Casino","decision":"retain-current-authority-corroborated","address":"31700 Las Vegas Blvd S, Primm, NV 89019","basis":"June 2026 Nevada Gaming Commission nonrestricted agenda."},
+    {"name":"Rio Hotel & Casino","decision":"retain-current-authority-corroborated","address":"3700 W Flamingo Rd, Las Vegas, NV 89103","basis":"April 2026 NGCB nonrestricted agenda identifies Dreamscape Flamingo Road Management LLC dba Rio Hotel & Casino at this address."},
+    {"name":"The Venetian Resort Las Vegas","decision":"retain-current-authority-corroborated","basis":"NGCB 2026 enforcement docket identifies Venetian Las Vegas Gaming LLC dba The Venetian Resort Las Vegas as a current respondent/licensee."},
+    {"name":"The Palazzo at The Venetian Resort","decision":"separate-public-destination-pending-location-id-match","basis":"NGCB historical regulatory material treats Venetian Resort Hotel Casino and Palazzo Resort Hotel Casino together under Venetian Casino Resort LLC. Public-facing casino floors are distinct, but final runtime treatment requires active location-ID/address matching before deciding whether to retain two destination records."},
+    {"name":"Wynn Las Vegas","decision":"retain-candidate-active-id-match-pending"},
+    {"name":"Encore at Wynn Las Vegas","decision":"separate-public-destination-pending-location-id-match","basis":"Do not collapse merely because Wynn/Encore share ownership and campus; require active NGCB location identity/address evidence."},
+    {"name":"Eastside Cannery Casino & Hotel","decision":"status-hold","basis":"No sufficiently current operation evidence established in this pass; do not activate from historical licensing evidence alone."},
+    {"name":"Wa She Shu Casino","decision":"status-hold","basis":"Historical NGCB nonrestricted records exist, but current-operation evidence remains contradictory; no activation without current authoritative/first-party confirmation."},
+    {"name":"Moulin Rouge Hotel & Casino","decision":"exclude-not-current-destination","basis":"April 2026 NGCB agenda contains a nonrestricted slot-machine-only licensing application at the historic address. A licensing/application record does not by itself establish an open public Dinner Roulette casino destination; keep outside runtime unless a current operating destination is independently established."},
+    {"name":"The ROW Reno group","members":["Eldorado Resort Casino","Silver Legacy Resort Casino","Circus Circus Reno"],"decision":"retain-as-separate-public-destination-candidates","basis":"Same ownership/connected campus is not enough to collapse three separately branded casino properties; final active NGCB location-ID matching remains required."}
+  ],
+  "policyFindings":[
+    "Nevada nonrestricted status is broader than Dinner Roulette's destination-casino scope: NGCB defines a nonrestricted license as games/tables, 16+ slots, or games/tables with slots.",
+    "Therefore a current nonrestricted application/license record is strong regulatory identity evidence but not sufficient by itself to prove a venue is an open destination casino.",
+    "Closure/changeover procedures and current operation evidence must remain part of the final inclusion test."
+  ],
+  "setChecks":{"resolvedOrAdvancedDecisions":12,"remainingHighRiskAmbiguities":["Casino Royale active location match","Palazzo separate location identity","Wynn/Encore separate location identities","Eastside Cannery operation status","Wa She Shu operation status","current Tahoe Harveys/Caesars Republic casino naming"],"result":"PASS_WITH_OPEN_ITEMS"}
+}
