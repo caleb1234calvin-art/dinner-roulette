@@ -1,0 +1,40 @@
+{
+  "jurisdiction": "California",
+  "capturedOn": "2026-09-10",
+  "status": "all-license-ids-accounted",
+  "authorityInventory": "audit/california-tribal-casinos-2026-09-08.json",
+  "inventoryCount": 74,
+  "method": "Set-reconcile every CGCC license ID against the staged strict reconciliation sets and explicit special-case/runtime-decision set. Two IDs present in the inventory but absent from the staged strict sets were recovered in audit/california-accounting-gap-recovery-2026-09-10.json.",
+  "propertyReconciled": {
+    "count": 69,
+    "ids": [
+      "TRCS-000001","TRCS-000002","TRCS-000003","TRCS-000004","TRCS-000005","TRCS-000006","TRCS-000008","TRCS-000009","TRCS-000010","TRCS-000011","TRCS-000012","TRCS-000013","TRCS-000014","TRCS-000015","TRCS-000016","TRCS-000017","TRCS-000019","TRCS-000020","TRCS-000021","TRCS-000022","TRCS-000023","TRCS-000024","TRCS-000025","TRCS-000028","TRCS-000029","TRCS-000030","TRCS-000031","TRCS-000032","TRCS-000033","TRCS-000034","TRCS-000035","TRCS-000036","TRCS-000037","TRCS-000038","TRCS-000040","TRCS-000041","TRCS-000042","TRCS-000043","TRCS-000044","TRCS-000045","TRCS-000046","TRCS-000047","TRCS-000049","TRCS-000050","TRCS-000051","TRCS-000052","TRCS-000053","TRCS-000054","TRCS-000055","TRCS-000056","TRCS-000057","TRCS-000058","TRCS-000061","TRCS-000064","TRCS-000065","TRCS-000066","TRCS-000067","TRCS-000069","TRCS-000070","TRCS-000071","TRCS-000072","TRCS-000073","TRCS-000074","TRCS-000076","TRCS-000077","TRCS-000078","TRCS-000079","TRCS-000081","TRCS-000082"
+    ]
+  },
+  "explicitSpecialCases": {
+    "count": 5,
+    "records": [
+      {"license":"TRCS-000018","name":"Chicken Ranch Casino","treatment":"current resort is primary license-backed runtime destination; OG Casino documented separately/live-discovery eligible"},
+      {"license":"TRCS-000068","name":"Hidden Oaks Casino","treatment":"hold from Class III-oriented curated runtime because operator describes Class II"},
+      {"license":"TRCS-000075","name":"Casino Morongo","treatment":"do not create second runtime destination; verified TRCS-000030 Morongo Resort represents current campus"},
+      {"license":"TRCS-000080","name":"Mechoopda Casino","treatment":"exclude closed temporary property from current runtime"},
+      {"license":"TRCS-000083","name":"North Fork Mono Casino","treatment":"exclude until announced October 2026 opening"}
+    ]
+  },
+  "cautionsWithinPropertyReconciled": [
+    {"license":"TRCS-000013","name":"Red Fox Casino","caution":"physical property reconciled but current operating status needs conservative runtime treatment"},
+    {"license":"TRCS-000017","name":"The Heights / Cher-Ae Heights","caution":"physical Trinidad property reconciled; CGCC displayed locality conflicts"},
+    {"license":"TRCS-000082","name":"Acorn Ridge Casino","caution":"coordinate is authoritative casino project-site coordinate, not claimed building-door centroid"}
+  ],
+  "setChecks": {
+    "inventoryUniqueIds": 74,
+    "propertyReconciledUniqueIds": 69,
+    "specialCaseUniqueIds": 5,
+    "overlapBetweenPropertyAndSpecialCaseSets": 0,
+    "unionCount": 74,
+    "missingFromUnion": [],
+    "unexpectedOutsideInventory": [],
+    "result": "PASS"
+  },
+  "nextPhase": "Consolidate staged reconciliation evidence into an authoritative California dataset, derive the justified current physical destination set, then construct casino-catalog-pass-19.ts and validate before runtime activation."
+}
