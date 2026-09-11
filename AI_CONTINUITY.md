@@ -42,26 +42,35 @@ Colorado Division of Gaming accounting is corrected to 33 commercial regulator l
 
 `audit/texas-casino-reconciliation-2026-09-11.json` resolves current Texas scope to four physical tribal gaming destinations pending coordinate/stable-ID QA: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded as travel-center gaming. Texas becomes complete only after runtime activation and validation.
 
-## Oklahoma — 54 address/identity-verified, coordinate QA next
+## Oklahoma — 54 address/identity verified; coordinate QA underway
 
-Discovery/reconciliation artifacts include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, `audit/oklahoma-runtime-qa-pass-1-2026-09-11.json`, and **`audit/oklahoma-runtime-qa-pass-2-2026-09-11.json`**.
+Discovery/reconciliation artifacts include `audit/oklahoma-statewide-scope-2026-09-11.json`, major-operator passes 1–3, runtime QA passes 1–2, and **`audit/oklahoma-coordinate-qa-pass-1-2026-09-11.json`**.
 
-The Oklahoma name/scope candidate universe remains **77**. Runtime QA has now verified current identity, destination scope, normalized street address and provisional stable Dinner Roulette IDs for **54 properties**, crossing the 50-address threshold for the first runtime batch.
+The Oklahoma name/scope candidate universe is **77**. Current identity, destination scope, normalized street address and provisional stable Dinner Roulette IDs are verified for **54 properties**: Chickasaw 17, Choctaw 8, Cherokee/CNE 10, Muscogee 10, Osage 7 and Citizen Potawatomi 2.
 
-Pass 1 verified 35: Chickasaw 17, Choctaw 8 and Cherokee/CNE 10. Pass 2 added 19: **Muscogee 10, Osage 7 and Citizen Potawatomi 2**.
+**Coordinate QA Pass 1 has now property-verified coordinates for 9 of those 54:**
 
-Important Pass 2 corrections/decisions:
+- WinStar World Casino and Resort — 33.75762, -97.12994.
+- Riverwind Casino — 35.18068, -97.50033.
+- Newcastle Casino — 35.27734, -97.59848.
+- Choctaw Casino & Resort-Durant — 33.95116, -96.41404.
+- Choctaw Casino & Resort-Pocola — 35.29053, -94.43634.
+- Hard Rock Hotel & Casino Tulsa — 36.16535, -95.76476.
+- Cherokee Casino & Hotel West Siloam Springs — 36.17766, -94.56769.
+- FireLake Casino — 35.30360, -96.92794.
+- Grand Casino Hotel & Resort — 35.38074, -97.05920.
 
-- **Lake Eufaula Casino Hotel** at **1045 Birkes Rd, Eufaula** is the current Muscogee property. It replaced the former Creek Nation Eufaula Casino at 806 Forest Ave; never activate both as current destinations.
-- Suite Shots Jenks remains staged outside the conventional casino pool pending individual destination-scope review.
-- Osage current scope is seven properties: Tulsa, Bartlesville, Pawhuska, Ponca City, Skiatook, Hominy and Sand Springs. The first five include hotels; Hominy and Sand Springs are casino-only destinations.
-- Citizen Potawatomi properties are Grand Casino Hotel & Resort at 777 Grand Casino Blvd and FireLake Casino at 41170 Hardesty Rd, both separately routable Shawnee-area casinos.
+Coordinate evidence is property-level geometry/location evidence rather than city centroids. Runtime activation is still withheld until duplicate/alias distance QA against passes 1–27 is complete.
 
-**The 54 are still not runtime-ready merely because addresses are verified.** The remaining hard gate is property-specific coordinates plus website normalization and duplicate/alias distance QA against catalog passes 1–27. Do not use city centroids or guessed coordinates.
+Important coordinate-pass corrections/separations:
 
-Next action: begin coordinate QA on the 54-property pool, prioritizing the clearest 50. Once 50 clear coordinate/site/duplicate checks, generate Oklahoma Runtime Batch 1 in the next available catalog pass, wire it into `src/lib/nightlife/search.ts`, extend `scripts/audit-casino-catalog.mjs`, update the integration manifest as appropriate, and run Validate Dinner Integration.
+- **Riverwind Casino** should use current first-party address `1544 State Highway 9, Norman, OK 73072`; an earlier provisional ledger used ZIP 73093. Keep the current first-party public address.
+- **Newcastle Casino** is distinct from Newcastle Travel Gaming; only the casino is in the destination batch.
+- **Choctaw Casino & Resort-Pocola** is distinct from nearby Choctaw Casino Too-Pocola travel-plaza gaming; only the resort is in the destination batch.
+- Lake Eufaula Casino Hotel at 1045 Birkes Rd remains the current Muscogee successor property; never activate the old 806 Forest Ave predecessor simultaneously.
+- Suite Shots Jenks remains staged outside the conventional casino pool.
 
-The 77-candidate surplus means edge cases can remain staged rather than being forced into runtime merely to reach a quota.
+Next action: continue coordinate QA through the remaining Choctaw properties, remaining Cherokee properties and strongest Chickasaw destinations while simultaneously checking coordinate-verified records for same-ID, normalized-name and sub-0.35-mile alias collisions against existing catalog passes. The first Oklahoma runtime pass should contain only records clearing all gates; do not force the count.
 
 ## Legal/compliance continuity
 
