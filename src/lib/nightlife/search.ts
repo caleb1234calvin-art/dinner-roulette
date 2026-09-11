@@ -22,6 +22,7 @@ import { CASINO_CATALOG_PASS_15 } from "./casino-catalog-pass-15";
 import { CASINO_CATALOG_PASS_16 } from "./casino-catalog-pass-16";
 import { CASINO_CATALOG_PASS_17 } from "./casino-catalog-pass-17";
 import { CASINO_CATALOG_PASS_18 } from "./casino-catalog-pass-18";
+import { CASINO_CATALOG_PASS_19 } from "./casino-catalog-pass-19";
 import { LOCAL_NIGHTLIFE_CATALOG } from "./catalog";
 import { JASPER_COUNTY_NIGHTLIFE_CATALOG } from "./jasper-county-catalog";
 import { nightlifeTypeLabel, type ConcreteNightlifeType, type NightlifePlace, type NightlifeSearchResponse } from "./types";
@@ -29,7 +30,7 @@ import { nightlifeTypeLabel, type ConcreteNightlifeType, type NightlifePlace, ty
 const MIRRORS = ["https://overpass.openstreetmap.fr/api/interpreter","https://overpass.private.coffee/api/interpreter","https://maps.mail.ru/osm/tools/overpass/api/interpreter","https://overpass-api.de/api/interpreter"];
 const QUERY = (lat:number,lon:number,radiusMeters:number)=>`\n[out:json][timeout:20];\n(\n  nwr["amenity"="bar"](around:${Math.round(radiusMeters)},${lat},${lon});\n  nwr["amenity"="pub"](around:${Math.round(radiusMeters)},${lat},${lon});\n  nwr["amenity"="nightclub"](around:${Math.round(radiusMeters)},${lat},${lon});\n  nwr["amenity"="biergarten"](around:${Math.round(radiusMeters)},${lat},${lon});\n  nwr["amenity"="casino"](around:${Math.round(radiusMeters)},${lat},${lon});\n  nwr["gambling"="casino"](around:${Math.round(radiusMeters)},${lat},${lon});\n  nwr["craft"="brewery"](around:${Math.round(radiusMeters)},${lat},${lon});\n  nwr["microbrewery"="yes"](around:${Math.round(radiusMeters)},${lat},${lon});\n  nwr["amenity"="restaurant"]["bar"="yes"](around:${Math.round(radiusMeters)},${lat},${lon});\n);\nout center tags;\n`;
 interface OverpassElement{type:string;id:number;lat?:number;lon?:number;center?:{lat:number;lon:number};tags?:Record<string,string>}
-const ALL_CURATED_NIGHTLIFE=[...CASINO_CATALOG,...CASINO_CATALOG_PASS_2,...CASINO_CATALOG_PASS_3,...CASINO_CATALOG_PASS_4,...CASINO_CATALOG_PASS_5,...CASINO_CATALOG_PASS_6,...CASINO_CATALOG_PASS_7,...CASINO_CATALOG_PASS_8,...CASINO_CATALOG_PASS_9,...CASINO_CATALOG_PASS_10,...CASINO_CATALOG_PASS_11,...CASINO_CATALOG_PASS_12,...CASINO_CATALOG_PASS_13,...CASINO_CATALOG_PASS_14,...CASINO_CATALOG_PASS_15,...CASINO_CATALOG_PASS_16,...CASINO_CATALOG_PASS_17,...CASINO_CATALOG_PASS_18,...JASPER_COUNTY_NIGHTLIFE_CATALOG,...LOCAL_NIGHTLIFE_CATALOG];
+const ALL_CURATED_NIGHTLIFE=[...CASINO_CATALOG,...CASINO_CATALOG_PASS_2,...CASINO_CATALOG_PASS_3,...CASINO_CATALOG_PASS_4,...CASINO_CATALOG_PASS_5,...CASINO_CATALOG_PASS_6,...CASINO_CATALOG_PASS_7,...CASINO_CATALOG_PASS_8,...CASINO_CATALOG_PASS_9,...CASINO_CATALOG_PASS_10,...CASINO_CATALOG_PASS_11,...CASINO_CATALOG_PASS_12,...CASINO_CATALOG_PASS_13,...CASINO_CATALOG_PASS_14,...CASINO_CATALOG_PASS_15,...CASINO_CATALOG_PASS_16,...CASINO_CATALOG_PASS_17,...CASINO_CATALOG_PASS_18,...CASINO_CATALOG_PASS_19,...JASPER_COUNTY_NIGHTLIFE_CATALOG,...LOCAL_NIGHTLIFE_CATALOG];
 const RETIRED_NIGHTLIFE_NAMES=["dead cow saloon and grill","dead cow saloon & grill","dead cow saloon"] as const;
 const NIGHTLIFE_ALIAS_GROUPS=[["joe's 19th hole","joes 19th hole","aussie's","aussies"]] as const;
 function isRetiredNightlifeName(name:string){return RETIRED_NIGHTLIFE_NAMES.some((retired)=>namesMatch(retired,name))}
