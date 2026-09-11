@@ -1,0 +1,54 @@
+{
+  "jurisdiction":"Nevada",
+  "capturedOn":"2026-09-11",
+  "status":"statewide-reconciliation-pass-1",
+  "primaryAuthority":"Nevada Gaming Control Board",
+  "ngcbReportInfrastructure":{
+    "publicReportsBase":"https://publicreports-gcb.nv.gov/",
+    "locationDetail":"https://publicreports-gcb.nv.gov/Publications/LocationDetailReport",
+    "nameAndAddress":"https://publicreports-gcb.nv.gov/Publications/NameAndAddressReport",
+    "restrictedNonrestricted":"https://publicreports-gcb.nv.gov/Publications/restrictedandnonrestrictedreport",
+    "latestNonrestrictedCountReport":"Nonrestricted Count Report - June 30, 2026",
+    "reportFile":"https://www.gaming.nv.gov/contentassets/5eb1aeae895c4ae695a96c9e5889e96c/nonrestricted-count-report--june-30-2026.xlsx",
+    "note":"NGCB's public report portal is dynamic; direct report infrastructure and the current June 30, 2026 nonrestricted-count workbook are authoritative reconciliation inputs even when row-level output is not exposed in ordinary indexed web text."
+  },
+  "resolvedDecisions":[
+    {"name":"The Mirage","decision":"exclude-closed"},
+    {"name":"Tropicana Las Vegas","decision":"exclude-closed-demolished"},
+    {"name":"Texas Station Gambling Hall & Hotel","decision":"exclude-closed-demolished"},
+    {"name":"Fiesta Rancho","decision":"exclude-closed-demolished"},
+    {"name":"Harrah's Reno","decision":"exclude-closed"},
+    {"name":"The Cromwell","decision":"alias-only","currentIdentity":"The Vanderpump Hotel"},
+    {"name":"Avi Resort & Casino","decision":"include-current-tribal-destination"},
+    {"name":"Moapa Paiute Travel Plaza","decision":"include-current-tribal-destination"},
+    {"name":"Palms Casino Resort","decision":"single-physical-record","note":"Do not duplicate because of tribal ownership."},
+    {"name":"Wa She Shu Casino","decision":"status-hold"},
+    {"name":"Eastside Cannery Casino & Hotel","decision":"status-hold"},
+    {"name":"Bayshore Inn","decision":"scope-review"},
+    {"name":"Dotty's retail-style locations","decision":"scope-exclude-by-default","note":"Restricted/retail/route-style gaming is outside curated destination scope absent a distinct destination-casino justification."}
+  ],
+  "samePropertyIdentityRules":[
+    {"group":"Venetian campus","members":["The Venetian Resort Las Vegas","The Palazzo at The Venetian Resort"],"decision":"retain-separate-pending-ngcb-identity-check","reason":"Distinct public casino floors may justify separate destinations; do not collapse solely because the resorts share a campus."},
+    {"group":"Wynn campus","members":["Wynn Las Vegas","Encore at Wynn Las Vegas"],"decision":"retain-separate-pending-ngcb-identity-check","reason":"Distinct public casino floors may justify separate destinations; final decision follows active regulatory identity."},
+    {"group":"The ROW Reno","members":["Eldorado Resort Casino","Silver Legacy Resort Casino","Circus Circus Reno"],"decision":"retain-separate-pending-ngcb-identity-check","reason":"Connected resort complex does not automatically make three public casino destinations one property record."}
+  ],
+  "currentWorkingAccounting":{
+    "originalDiscoveryRows":153,
+    "newTribalCurrentDestinations":2,
+    "expandedDecisionUniverse":155,
+    "explicitHistoricalOrAliasRowsAlreadyKnownNonRuntime":6,
+    "explicitStatusHolds":2,
+    "explicitRetailDefaultExclusionClass":"Dotty's/restricted retail-style gaming",
+    "finalRuntimeCount":null,
+    "result":"RECONCILIATION_IN_PROGRESS"
+  },
+  "remainingBlockingWork":[
+    "Resolve every candidate against current NGCB identity or an explicit tribal/federal exception.",
+    "Resolve Casino Royale, Eastside Cannery, Whiskey Pete's, Bayshore Inn, Alamo Casino, Red Drag Casino, rural Eureka ambiguity and other scope/status rows.",
+    "Finalize Venetian/Palazzo, Wynn/Encore and The ROW identity decisions.",
+    "Normalize every included physical address.",
+    "Perform property-coordinate QA for every included record.",
+    "Produce final all-row accounting with no unexplained candidates, overlaps or omissions.",
+    "Only after those gates pass may casino-catalog-pass-22.ts be generated."
+  ]
+}
