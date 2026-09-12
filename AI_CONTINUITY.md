@@ -16,7 +16,7 @@ _Last updated: September 12, 2026_
 
 `Validate Dinner Integration` is the compatibility gate for the integration branch. It performs dependency install, TypeScript checking, casino audit, inherited tests as report-only, development build, and Dinner icon verification.
 
-**Run 266 (`34675552971`) is green at commit `2e3412f5eadc448e00f6a84854ae6a7ac7406f19`, validating Nevada Pass 46 and the validator extension through Pass 46.** Every recorded step completed successfully: setup, checkout, Node setup, dependency install, typecheck, curated-casino audit, inherited test-suite report, development build, Dinner icon verification, and cleanup. Run 266 supersedes Run 260 as the current validated runtime baseline. A green run never authorizes a merge to `main` by itself.
+**Run 269 (`34675881452`) is green at commit `990ad82dc0b588aa85a0d2c0a864f5cf09f65d99`.** This is the current validated branch baseline and includes the Pass 46 runtime plus the later Red Dragon and Cadence evidence-only QA refinements. Runtime remains validated through Nevada Pass 46. A green run never authorizes a merge to `main` by itself.
 
 The earlier complete-Texas manifest run failed because the audit script did not yet recognize pass files that express jurisdiction through a `JURISDICTION` helper constant. Commit `17e8206` generalized that path; later runs are green. This was audit infrastructure, not a Texas data failure.
 
@@ -28,11 +28,9 @@ Preferred cadence: `discover → verify → reconcile → batch clean destinatio
 
 ## Runtime casino progress
 
-Casino runtime is **validated through Pass 46**. `src/lib/nightlife/search.ts` imports/appends through Pass 46. `scripts/audit-casino-catalog.mjs` enumerates through Pass 46. Run 266 validates the combined runtime green.
+Casino runtime is **validated through Pass 46**. `src/lib/nightlife/search.ts` imports/appends through Pass 46. `scripts/audit-casino-catalog.mjs` enumerates through Pass 46.
 
 Recent Nevada sequence: Pass 32 +15 Laughlin/Reno-Sparks; Pass 34 +7 rural; Pass 35 +10 outer-Clark/Mesquite/Primm; Pass 36 +6 Boulder Strip/Henderson; Pass 37 +4 North Las Vegas/northwest; Pass 38 Jerry's Nugget; Pass 39 Skyline + Emerald Island; Pass 40 +5 Boulder/outer-Clark; Pass 41 Club Fortune Henderson + Rainbow Club; Pass 42 Longstreet; Pass 43 Wildfire on Fremont; Pass 44 Club Fortune North; Pass 45 The Nevada Casino & Bar, Battle Mountain; **Pass 46 Bonanza Inn & Casino, Fallon.**
-
-California Pass 19, Oregon Pass 20, Washington Pass 21, and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida, New York, Oklahoma, Colorado, Nevada rolling additions, and Texas.
 
 ## Nevada — rolling, 107 active runtime destinations
 
@@ -67,12 +65,12 @@ Nevada's provisional audit decision universe remains 174 rows, not a final runti
 
 ### Pass 46 — Bonanza Inn & Casino, Fallon
 
-`audit/nevada-bonanza-fallon-coordinate-qa-pass-20-2026-09-12.json` clears **Bonanza Inn & Casino** at **855 W Williams Ave, Fallon, NV 89406**, coordinate **39.473817,-118.786436**. Current Fallon licensing, Nevada gaming, Nevada tobacco, and Wyndham/property evidence support operation and address identity. Exact-address sources produced a hotel/casino point cluster and a nearby RV/camping cluster; the hotel/casino point was retained because Dinner Roulette routes to the destination rather than the RV sites. The unrelated Reno Bonanza coordinate is explicitly excluded. `src/lib/nightlife/casino-catalog-pass-46.ts` serializes it. Run 266 validates Pass 46 green.
+`audit/nevada-bonanza-fallon-coordinate-qa-pass-20-2026-09-12.json` clears **Bonanza Inn & Casino** at **855 W Williams Ave, Fallon, NV 89406**, coordinate **39.473817,-118.786436**. Exact-address sources separate the hotel/casino point from the nearby RV/camping cluster. `src/lib/nightlife/casino-catalog-pass-46.ts` serializes it.
 
 ### Remaining Nevada holds
 
-- **Cadence Crossing:** opened March 25, 2026 and replaced Jokers Wild at 920 N Boulder Hwy, Henderson. Current operation/address is strong, but runtime remains held until a numerical point is tied directly to the new 2026 Cadence footprint rather than simply reusing legacy Jokers Wild geometry.
-- **Red Drag / Red Dragon / Dotty's, Elko:** `audit/nevada-elko-operation-qa-pass-16-2026-09-12.json` is an identity-lineage-and-coordinate hold at 404 S 5th St, Elko. Unsupported old coordinates were removed. Present consumer identity and a direct property point must both clear before serialization.
+- **Cadence Crossing Casino:** `audit/nevada-cadence-crossing-footprint-qa-pass-21-2026-09-12.json` now explicitly quarantines legacy Jokers Wild coordinate `36.052,-114.99468`. Current operation at **920 N Boulder Hwy, Henderson, NV 89011** is strong and post-opening/current inspection evidence confirms the new property, but construction evidence establishes a newly built replacement footprint. Address continuity is therefore not treated as coordinate continuity. Runtime remains held until a numerical point can be tied directly to the completed 2026 Cadence Crossing building/property.
+- **Red Dragon Sports Bar #201 / Red Dragon Casino, Elko:** `audit/nevada-elko-operation-qa-pass-16-2026-09-12.json` is now a narrower **coordinate-and-co-location hold** at **404 S 5th St, Elko, NV 89801**. Current Elko County assessment, current Nevada tobacco records, Elko city licensing, Nevada gaming lineage, current gaming-directory evidence and tourism material support Red Dragon as the operating property identity; **Red Drag Casino** is treated as a tourism/consumer alias. Current directory evidence also lists **Dotty's #214 at the identical address**, so runtime must avoid accidental duplicate emission until co-location treatment is explicit. Unsupported old coordinates remain excluded.
 - **The Pass Casino:** closure/renovation hold. Dated 2026 reporting overrides legacy current-looking pages until reopening is independently confirmed.
 - **Whiskey Pete's / Buffalo Bill's:** current closure exclusions. Primm Valley remains active separately.
 
