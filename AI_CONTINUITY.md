@@ -16,7 +16,7 @@ _Last updated: September 12, 2026_
 
 `Validate Dinner Integration` is the compatibility gate for the integration branch. It performs dependency install, TypeScript checking, casino audit, inherited tests as report-only, development build, and Dinner icon verification.
 
-**Run 251 (`34674232602`) is green at commit `5c826fc9210d2ead2b78f2611e5d6b6987dad513`, validating Nevada Pass 43 and the validator extension through Pass 43.** Every recorded step completed successfully: setup, checkout, Node setup, dependency install, typecheck, curated-casino audit, inherited test-suite report, development build, Dinner icon verification, and post-job cleanup. Run 251 supersedes Run 244 as the current validated runtime baseline. A green run never authorizes a merge to `main` by itself.
+**Run 260 (`34674733764`) is green at commit `91d6191522c071df2e6c6a04e547940d6703304f`, validating Nevada Pass 45 and the validator extension through Pass 45.** Every recorded step completed successfully: setup, checkout, Node setup, dependency install, typecheck, curated-casino audit, inherited test-suite report, development build, Dinner icon verification, and post-job cleanup. Run 260 supersedes Run 256/251 as the current validated runtime baseline. A green run never authorizes a merge to `main` by itself.
 
 The earlier complete-Texas manifest run (Run 197) failed because the audit script did not yet recognize pass files that express jurisdiction through a `JURISDICTION` helper constant. Commit `17e8206` generalized that path; later runs are green. This was audit infrastructure, not a Texas data failure.
 
@@ -32,18 +32,18 @@ For large jurisdictions, 50–100 verified-destination batches are a planning ca
 
 ## Runtime casino progress
 
-Casino runtime is **validated through Pass 43**. `src/lib/nightlife/search.ts` imports and appends through Pass 43. `scripts/audit-casino-catalog.mjs` enumerates through Pass 43 and recognizes both inline jurisdiction literals and `JURISDICTION` helper constants. Run 251 validates the combined runtime green.
+Casino runtime is **validated through Pass 45**. `src/lib/nightlife/search.ts` imports/appends through Pass 45. `scripts/audit-casino-catalog.mjs` enumerates through Pass 45 and recognizes both inline jurisdiction literals and `JURISDICTION` helper constants. Run 260 validates the combined runtime green.
 
-Recent passes: Pass 30 adds Oklahoma Duck Creek and Checotah; Pass 31 adds Artesian Casino; Pass 32 adds 15 Nevada Laughlin/Reno-Sparks destinations; Pass 33 adds the complete four-destination Texas set; Pass 34 adds seven rural Nevada destinations; Pass 35 adds ten outer-Clark/Mesquite/Primm destinations; Pass 36 adds six Boulder Strip/Henderson destinations; Pass 37 adds four North Las Vegas/northwest destinations; Pass 38 adds Jerry's Nugget; Pass 39 adds Skyline and Emerald Island; Pass 40 adds five Boulder/outer-Clark destinations; Pass 41 adds Club Fortune Henderson and Rainbow Club; Pass 42 adds Longstreet; **Pass 43 adds Wildfire on Fremont.**
+Recent passes: Pass 30 adds Oklahoma Duck Creek and Checotah; Pass 31 Artesian; Pass 32 fifteen Nevada Laughlin/Reno-Sparks destinations; Pass 33 complete Texas four; Pass 34 seven rural Nevada; Pass 35 ten outer-Clark/Mesquite/Primm; Pass 36 six Boulder Strip/Henderson; Pass 37 four North Las Vegas/northwest; Pass 38 Jerry's Nugget; Pass 39 Skyline and Emerald Island; Pass 40 five Boulder/outer-Clark; Pass 41 Club Fortune Henderson and Rainbow Club; Pass 42 Longstreet; Pass 43 Wildfire on Fremont; **Pass 44 Club Fortune North; Pass 45 The Nevada Casino & Bar in Battle Mountain.**
 
 California Pass 19, Oregon Pass 20, Washington Pass 21, and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida, New York, Oklahoma, Colorado, Nevada rolling additions, and Texas.
 
-## Nevada — rolling, 104 active runtime destinations
+## Nevada — rolling, 106 active runtime destinations
 
 Nevada's provisional audit decision universe remains 174 rows, not a final runtime count. Pass 22 contains the first 50 curated Nevada destinations. Later clean segments are added independently as evidence clears.
 
-- Pass 32: +15 Laughlin/Reno-Sparks, Nevada 50 → 65.
-- Pass 34: +7 rural destinations, 65 → 72.
+- Pass 32: +15 Laughlin/Reno-Sparks, 50 → 65.
+- Pass 34: +7 rural, 65 → 72.
 - Pass 35: +10 outer-Clark/Mesquite/Primm, 72 → 82.
 - Pass 36: +6 Boulder Strip/Henderson, 82 → 88.
 - Pass 37: +4 North Las Vegas/northwest, 88 → 92.
@@ -52,11 +52,21 @@ Nevada's provisional audit decision universe remains 174 rows, not a final runti
 - Pass 40: Longhorn, Railroad Pass, Barley's, Arizona Charlie's Decatur, Wildfire Rancho, 95 → 100.
 - Pass 41: Club Fortune Henderson + Rainbow Club, 100 → 102.
 - Pass 42: Longstreet Inn, Casino & RV Resort, 102 → 103.
-- **Pass 43: Wildfire on Fremont, 103 → 104.**
+- Pass 43: Wildfire on Fremont, 103 → 104.
+- Pass 44: Club Fortune North, 104 → 105.
+- **Pass 45: The Nevada Casino & Bar, 105 → 106.**
 
 ### Pass 43 — Wildfire on Fremont
 
-`audit/nevada-wildfire-fremont-coordinate-qa-pass-17-2026-09-12.json` clears **Wildfire on Fremont** at **2700 E Fremont St, Las Vegas, NV 89104**, coordinate **36.1556,-115.1135**. Current Wildfire/Station material identifies the property as operating, and the numerical point was resolved specifically to the canonical address rather than a city centroid or unrelated parcel. One first-party detail page has a conflicting ZIP, but the broader first-party/property-map, Station, regulator and tourism evidence supports 89104. `src/lib/nightlife/casino-catalog-pass-43.ts` serializes the property. Run 251 validates Pass 43 green.
+`audit/nevada-wildfire-fremont-coordinate-qa-pass-17-2026-09-12.json` clears **Wildfire on Fremont** at **2700 E Fremont St, Las Vegas, NV 89104**, coordinate **36.1556,-115.1135**. Current Wildfire/Station material identifies the property as operating, and the numerical point was resolved specifically to the canonical address rather than a city centroid or unrelated parcel. One first-party detail page has a conflicting ZIP, but the broader first-party/property-map, Station, regulator and tourism evidence supports 89104. `src/lib/nightlife/casino-catalog-pass-43.ts` serializes the property.
+
+### Pass 44 — Club Fortune North
+
+`audit/nevada-club-fortune-north-successor-qa-pass-18-2026-09-12.json` clears **Club Fortune North** at **2757 Las Vegas Blvd N, North Las Vegas, NV 89030**, coordinate **36.2100482,-115.107488**. Dated post-opening evidence confirms the former Poker Palace reopened in July 2026 after renovation as Club Fortune North at the same property. Reuse of the exact-property point is justified because this is an in-place successor/remodel, not a relocation. Poker Palace remains retired and must not be emitted in parallel.
+
+### Pass 45 — The Nevada Casino & Bar, Battle Mountain
+
+`audit/nevada-battle-mountain-coordinate-qa-pass-19-2026-09-12.json` clears **The Nevada Casino & Bar** at **36 E Front St, Battle Mountain, NV 89820**, coordinate **40.6420387,-116.9344845**. Current commercial-operation evidence, Lander County parcel/casino-land-use evidence, Nevada gaming evidence, and multiple exact-address point sources converge on the same property. No dedicated stable first-party consumer site was found, so the runtime record retains a current Google property destination rather than inventing a first-party URL. `src/lib/nightlife/casino-catalog-pass-45.ts` serializes the destination. Run 260 validates Pass 45 green.
 
 ### Recent Nevada reconciliation decisions
 
@@ -64,11 +74,11 @@ Nevada's provisional audit decision universe remains 174 rows, not a final runti
 
 The Jokers Wild/Cadence Crossing lineage is reconciled: **Cadence Crossing opened March 25, 2026 and replaced Jokers Wild. Jokers Wild must not be emitted as current.** Cadence Crossing is strongly confirmed current at **920 N Boulder Hwy, Henderson, NV 89011**, but remains held until a numerical point can be tied directly to the new Cadence Crossing footprint rather than simply reusing the old Jokers Wild point.
 
-**The Pass Casino** is a current closure/renovation hold. Dated 2026 reporting scheduled its August 1 closure for roughly one year, and September reporting describes it as closed. Current-looking legacy first-party pages do not override that dated closure evidence.
+**The Pass Casino** remains a current closure/renovation hold. Dated 2026 reporting scheduled its August 1 closure for roughly one year, and September reporting describes it as closed. Current-looking legacy first-party pages do not override that dated closure evidence.
 
-`audit/nevada-elko-operation-qa-pass-16-2026-09-12.json` substantially resolves **Red Drag Casino** identity/current-operation/address at **404 S 5th St, Elko, NV 89801** using current Elko tourism/property evidence, but runtime promotion remains held for a direct property-specific numerical point and clean identity-lineage reconciliation.
+`audit/nevada-elko-operation-qa-pass-16-2026-09-12.json` is now explicitly an **identity-lineage-and-coordinate hold** for **Red Drag Casino / Red Dragon Sports Bar / Dotty's** at **404 S 5th St, Elko, NV 89801**. Earlier unverified numerical coordinates were removed from the artifact. Current tourism/property/regulator evidence strongly ties gaming activity to the address, but no numerical point is considered cleared and the present consumer identity lineage still requires reconciliation before runtime serialization.
 
-Priority remaining Nevada work: Cadence Crossing direct-coordinate QA; Club Fortune North successor-state/current-operation reconciliation; Bonanza Casino Fallon casino-specific coordinate QA; Red Drag Elko final coordinate/lineage QA; The Nevada Casino & Bar Battle Mountain stable first-party-site QA. Wildfire Fremont is no longer a hold.
+Priority remaining Nevada work: Cadence Crossing direct new-footprint coordinate QA; Bonanza Casino Fallon casino-specific coordinate QA; Red Drag/Red Dragon/Dotty's final identity + coordinate reconciliation; The Pass reopening watch only when future dated evidence supports it. Club Fortune North, Wildfire Fremont, and Battle Mountain are no longer holds.
 
 Nevada remains rolling rather than statewide complete.
 
