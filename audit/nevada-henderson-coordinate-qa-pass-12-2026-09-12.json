@@ -1,0 +1,56 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "henderson-coordinate-qa-pass-12-runtime-ready",
+  "scope": "Follow-up QA for the remaining NV-02 Boulder/Henderson segment after Pass 38. Only destinations clearing current-operation, normalized-address, property-coordinate, stable-ID, current-website and duplicate/alias gates are promoted.",
+  "records": [
+    {
+      "id": "casino-catalog-nv-skyline-henderson",
+      "name": "Skyline Hotel & Casino",
+      "address": "1741 N Boulder Hwy, Henderson, NV 89011",
+      "lat": 36.06229,
+      "lon": -115.00823,
+      "website": "https://skylinehotelandcasino.com/",
+      "identityEvidence": ["https://skylinehotelandcasino.com/", "https://skylinehotelandcasino.com/contact-us/"],
+      "coordinateEvidence": "https://mapcarta.com/W1019620432",
+      "status": "runtime-ready",
+      "note": "Current first-party September 2026 site shows active casino, promotions/events and exact Henderson address. OSM way 1019620432 supplies a property-specific casino-building point."
+    },
+    {
+      "id": "casino-catalog-nv-emerald-island-henderson",
+      "name": "Emerald Island Casino",
+      "address": "120 Market St, Henderson, NV 89015",
+      "lat": 36.03251,
+      "lon": -114.98463,
+      "website": "https://emeraldislandcasino.com/",
+      "identityEvidence": ["https://emeraldislandcasino.com/contact-us/"],
+      "coordinateEvidence": "https://mapcarta.com/W265986409",
+      "status": "runtime-ready",
+      "note": "Current first-party contact material confirms the active Henderson property and exact address. OSM way 265986409 supplies a property-specific casino-building point."
+    }
+  ],
+  "holds": [
+    {
+      "candidate": "The Pass Casino",
+      "address": "140 S Water Street, Henderson, NV 89015",
+      "reason": "Current first-party pages still describe active 24/7 gaming, but July 30 2026 reporting says the property was acquired by ECL Water Street and would close for renovations. Hold until post-acquisition operating state is independently reconciled rather than relying on potentially stale first-party copy."
+    },
+    {
+      "candidate": "Rainbow Club Casino",
+      "address": "122 S Water St, Henderson, NV 89015",
+      "reason": "Current first-party identity/address is strong, but this pass stops short of promotion until a direct property-specific numerical coordinate is independently captured."
+    }
+  ],
+  "duplicateQA": {
+    "selectionSource": "audit/nevada-runtime-batch-2-selection-2026-09-11.json",
+    "result": "PASS_FOR_RUNTIME_SERIALIZATION",
+    "note": "Skyline and Emerald Island are distinct physical destinations and do not collide with prior Nevada runtime passes."
+  },
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 93,
+    "runtimeReadyThisPass": 2,
+    "projectedNevadaRuntimeAfterActivation": 95,
+    "statewideComplete": false
+  },
+  "nextPhase": "Serialize the two clean Henderson records in Pass 39, validate green, then continue the remaining Henderson succession/coordinate holds and outer-Clark/rural tail."
+}
