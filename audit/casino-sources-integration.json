@@ -1,88 +1,20 @@
 {
   "schemaVersion": 1,
-  "updatedOn": "2026-09-11",
+  "updatedOn": "2026-09-12",
   "jurisdictions": {
-    "California": {
-      "status": "complete",
-      "expectedCount": 69,
-      "authority": "California Gambling Control Commission",
-      "source": "https://www.cgcc.ca.gov/?pageID=licensees&reportID=1002&sort=full_name",
-      "note": "Integration override: all 74 regulator license rows are accounted for, with 69 current curated physical destinations active after explicit holds, exclusions and same-property deduplication."
-    },
-    "Oregon": {
-      "status": "complete",
-      "expectedCount": 10,
-      "authority": "Oregon State Police / National Indian Gaming Commission / tribal operators",
-      "source": "https://www.oregon.gov/osp/programs/pages/gaming-enforcement.aspx",
-      "note": "Ten current physical casino destinations under Dinner Roulette scope."
-    },
-    "Washington": {
-      "status": "complete",
-      "expectedCount": 30,
-      "authority": "Washington State Gambling Commission / National Indian Gaming Commission",
-      "source": "https://wsgc.wa.gov/tribal-partnerships/tribal-casino-locations",
-      "note": "Thirty current tribal casino destinations including the Shoalwater reconciliation exception and Elwha River Class II destination."
-    },
-    "Wisconsin": {
-      "status": "complete",
-      "expectedCount": 23,
-      "authority": "Wisconsin Department of Administration Division of Gaming / tribal operators",
-      "source": "https://doa.wi.gov/Pages/AboutDOA/Gaming.aspx"
-    },
-    "Idaho": {
-      "status": "complete",
-      "expectedCount": 6,
-      "authority": "National Indian Gaming Commission / tribal operators",
-      "source": "https://www.nigc.gov/downloads/gaming-locations/"
-    },
-    "Minnesota": {
-      "status": "complete",
-      "expectedCount": 19,
-      "authority": "Minnesota House Research / tribal operators",
-      "source": "https://www.house.mn.gov/hrd/pubs/indiangb.pdf"
-    },
-    "Nebraska": {
-      "status": "complete",
-      "expectedCount": 10,
-      "authority": "Nebraska Racing and Gaming Commission / National Indian Gaming Commission",
-      "source": "https://nrgc.nebraska.gov/gaming"
-    },
-    "Wyoming": {
-      "status": "complete",
-      "expectedCount": 3,
-      "authority": "National Indian Gaming Commission / tribal operators",
-      "source": "https://www.nigc.gov/downloads/gaming-locations/"
-    },
-    "South Dakota": {
-      "status": "complete",
-      "expectedCount": 26,
-      "authority": "South Dakota Department of Revenue / Deadwood Chamber / National Indian Gaming Commission",
-      "source": "https://dor.sd.gov/businesses/gaming/"
-    },
-    "North Dakota": {
-      "status": "complete",
-      "expectedCount": 5,
-      "authority": "North Dakota Attorney General / National Indian Gaming Commission",
-      "source": "https://attorneygeneral.nd.gov/licensing-and-gaming/gaming/"
-    },
-    "Florida": {
-      "status": "complete",
-      "expectedCount": 16,
-      "authority": "Florida Gaming Control Commission / National Indian Gaming Commission / tribal operators",
-      "source": "https://flgaming.gov/faq/"
-    },
-    "New York": {
-      "status": "complete",
-      "expectedCount": 20,
-      "authority": "New York State Gaming Commission / National Indian Gaming Commission",
-      "source": "https://gaming.ny.gov/system/files/documents/2025/09/annualreport_2024_final.pdf"
-    },
-    "Nevada": {
-      "status": "pending",
-      "expectedCount": 174,
-      "authority": "Nevada Gaming Control Board / National Indian Gaming Commission",
-      "source": "https://www.gaming.nv.gov/",
-      "note": "174 is the current provisional audit decision universe, not a final runtime casino count. Runtime ingestion is rolling in verified 50-100 destination batches."
-    }
+    "California": {"status":"complete","expectedCount":69,"authority":"California Gambling Control Commission","source":"https://www.cgcc.ca.gov/?pageID=licensees&reportID=1002&sort=full_name","note":"Integration override: all 74 regulator license rows are accounted for, with 69 current curated physical destinations active after explicit holds, exclusions and same-property deduplication."},
+    "Oregon": {"status":"complete","expectedCount":10,"authority":"Oregon State Police / National Indian Gaming Commission / tribal operators","source":"https://www.oregon.gov/osp/programs/pages/gaming-enforcement.aspx","note":"Ten current physical casino destinations under Dinner Roulette scope."},
+    "Washington": {"status":"complete","expectedCount":30,"authority":"Washington State Gambling Commission / National Indian Gaming Commission","source":"https://wsgc.wa.gov/tribal-partnerships/tribal-casino-locations","note":"Thirty current tribal casino destinations including the Shoalwater reconciliation exception and Elwha River Class II destination."},
+    "Wisconsin": {"status":"complete","expectedCount":23,"authority":"Wisconsin Department of Administration Division of Gaming / tribal operators","source":"https://doa.wi.gov/Pages/AboutDOA/Gaming.aspx"},
+    "Idaho": {"status":"complete","expectedCount":6,"authority":"National Indian Gaming Commission / tribal operators","source":"https://www.nigc.gov/downloads/gaming-locations/"},
+    "Minnesota": {"status":"complete","expectedCount":19,"authority":"Minnesota House Research / tribal operators","source":"https://www.house.mn.gov/hrd/pubs/indiangb.pdf"},
+    "Nebraska": {"status":"complete","expectedCount":10,"authority":"Nebraska Racing and Gaming Commission / National Indian Gaming Commission","source":"https://nrgc.nebraska.gov/gaming"},
+    "Wyoming": {"status":"complete","expectedCount":3,"authority":"National Indian Gaming Commission / tribal operators","source":"https://www.nigc.gov/downloads/gaming-locations/"},
+    "South Dakota": {"status":"complete","expectedCount":26,"authority":"South Dakota Department of Revenue / Deadwood Chamber / National Indian Gaming Commission","source":"https://dor.sd.gov/businesses/gaming/"},
+    "North Dakota": {"status":"complete","expectedCount":5,"authority":"North Dakota Attorney General / National Indian Gaming Commission","source":"https://attorneygeneral.nd.gov/licensing-and-gaming/gaming/"},
+    "Florida": {"status":"complete","expectedCount":16,"authority":"Florida Gaming Control Commission / National Indian Gaming Commission / tribal operators","source":"https://flgaming.gov/faq/"},
+    "New York": {"status":"complete","expectedCount":20,"authority":"New York State Gaming Commission / National Indian Gaming Commission","source":"https://gaming.ny.gov/system/files/documents/2025/09/annualreport_2024_final.pdf"},
+    "Texas": {"status":"complete","expectedCount":4,"authority":"National Indian Gaming Commission / tribal operators / current property evidence","source":"audit/texas-runtime-reconciliation-2026-09-12.json","note":"Four current physical tribal gaming destinations are reconciled and active. Naskila Livingston and the current temporary Naskila Leggett casino are distinct operating destinations; repeated regulator rows are collapsed by physical property. Ischoopa Travel Center is excluded from casino-destination scope."},
+    "Nevada": {"status":"pending","expectedCount":174,"authority":"Nevada Gaming Control Board / National Indian Gaming Commission","source":"https://www.gaming.nv.gov/","note":"174 is the current provisional audit decision universe, not a final runtime casino count. Runtime ingestion is rolling in verified 50-100 destination batches."}
   }
 }
