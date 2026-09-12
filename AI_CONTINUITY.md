@@ -36,29 +36,31 @@ Casino catalog modules run through **Pass 28** on integration. Pass 28 is the fi
 
 Nevada's provisional audit decision universe is 174 rows, not a final runtime count. Runtime Batch NV-01 / Pass 22 contains 50 curated destinations. Remaining work includes Winnemucca/I-80, Stockmen's Fallon, Red Drag Elko, The Nevada Casino & Bar Battle Mountain, Longstreet address normalization, Buffalo Bill's/Whiskey Pete's operation state and rural completeness sweeps. Nevada progresses in parallel without blocking smaller states.
 
-## Colorado — commercial QA advancing
+## Colorado — coordinate QA advancing
 
-Colorado Division of Gaming accounting is corrected to 33 commercial regulator locations: 15 Black Hawk, 6 Central City, 12 Cripple Creek, plus two tribal casino resorts. All regulator rows are accounted for.
+Colorado Division of Gaming accounting is corrected to 33 commercial regulator locations: 15 Black Hawk, 6 Central City, 12 Cripple Creek, plus two tribal casino resorts. Regulator rows are accounting/evidence units and do not automatically equal consumer destinations.
 
-`audit/colorado-cripple-creek-destination-reconciliation-2026-09-11.json` resolves FHR BILLY'S as an accounting/license row rather than a separate current Dinner Roulette destination. Bronco Billy's and Chamonix remain separate connected casino experiences. Century's two regulator licenses collapse to one consumer property. Current working Cripple Creek consumer-destination accounting from the 12 regulator rows is **10**.
+Cripple Creek destination reconciliation resolves FHR BILLY'S as an accounting/license row rather than a separate current Dinner Roulette destination. Bronco Billy's and Chamonix remain separate connected casino experiences; Century's two regulator licenses collapse to one consumer property. Current working Cripple Creek consumer-destination accounting from the 12 regulator rows is **10**.
 
-`audit/colorado-tribal-coordinate-qa-2026-09-11.json` clears both tribal resorts: Sky Ute at `37.138214,-107.6323312` and Ute Mountain Casino at `37.20475,-108.68612`. The tribal portion no longer blocks Colorado serialization.
+Colorado tribal QA clears both resorts: Sky Ute at `37.138214,-107.6323312` and Ute Mountain Casino at `37.20475,-108.68612`.
 
-`audit/colorado-black-hawk-address-qa-pass-1-2026-09-11.json` clears current consumer-facing addresses for 10 Black Hawk destinations: Ameristar, Horseshoe, Lady Luck, The Lodge, The Gilpin, Monarch, Saratoga, Sasquatch, Wild Card Saloon and Bigfoot Casino. Bigfoot is the current successor at `101 Gregory Street`; do not create a parallel current Z Casino destination.
+Black Hawk address QA clears Ameristar, Horseshoe, Lady Luck, The Lodge, The Gilpin, Monarch, Saratoga, Sasquatch, Wild Card and Bigfoot. Bigfoot is the current successor at the former Z Casino property; do not create a parallel current Z destination.
 
-`audit/colorado-black-hawk-ballys-reconciliation-2026-09-11.json` now resolves Bally's Black Hawk as **three separately routable current physical subproperties**, supported by Bally's current contact material and distinct property geometry: East at `321 Main Street` (`39.79845,-105.48767`), North at `300 Main Street` (`39.79894,-105.48825`), and West at `261 Main Street` (`39.79883,-105.48885`). Do not collapse East/North/West into one destination. Their predecessor lineages are Golden Gulch, Mardi Gras and Golden Gates respectively.
+Bally's Black Hawk is resolved as **three separately routable current physical subproperties**: East at `321 Main Street` (`39.79845,-105.48767`), North at `300 Main Street` (`39.79894,-105.48825`), and West at `261 Main Street` (`39.79883,-105.48885`). Do not collapse them.
 
-`audit/colorado-central-city-address-qa-2026-09-11.json` clears the full **six-destination Central City address layer**: Century Casino & Hotel `102 Main Street`, Dostal Alley `116 Main Street`, Easy Street `120 Main Street`, Famous Bonanza `107 Main Street`, Dragon Tiger `132 Lawrence Street`, and Grand Z `321 Gregory Street`. At this layer the six regulator locations map cleanly to six current consumer destinations; no license-row collapse is needed.
+The previously blocked broad Black Hawk coordinate write has now been replaced by two smaller durable artifacts. `audit/colorado-black-hawk-coordinate-qa-pass-1a-2026-09-11.json` verifies Ameristar, Lady Luck, The Lodge, The Gilpin and Monarch. `audit/colorado-black-hawk-coordinate-qa-pass-1b-2026-09-11.json` verifies Saratoga, Sasquatch, Wild Card and Bigfoot. Together with the three Bally's subproperties, **12 Black Hawk destinations now have durable property coordinates**. **Horseshoe Black Hawk remains the principal direct-coordinate hold**; do not substitute nearby restaurant/hotel geometry.
 
-A broader Black Hawk coordinate research pass has candidate property geometry for most non-Bally properties, but the attempted all-in-one artifact write was blocked by the connector safety layer and therefore is not treated as committed state. Horseshoe remains the principal Black Hawk direct-coordinate hold. Durable next action: collect/commit Central City property coordinates, retry the remaining Black Hawk coordinate artifact in smaller evidence-scoped pieces if needed, and then finish Cripple Creek address/coordinate QA. After the complete Colorado consumer set clears stable-ID/duplicate QA, serialize the Colorado runtime pass.
+Central City address QA clears all six consumer destinations. `audit/colorado-central-city-coordinate-qa-pass-1-2026-09-11.json` now verifies **4 of 6** property coordinates: Dostal Alley `39.8002,-105.51244`, Easy Street `39.7998967,-105.5124236`, Famous Bonanza `39.8005673,-105.5129721`, and Dragon Tiger `39.80085,-105.51127`. Century Central City and Grand Z remain direct-property-coordinate holds; do not use a photo camera location or generic nearby geometry merely to fill them.
+
+Immediate Colorado action: resolve direct coordinates for Horseshoe Black Hawk, Century Central City and Grand Z; then finish the ten-property Cripple Creek address/coordinate layer. After the full Colorado consumer set clears stable-ID/duplicate QA, serialize the Colorado runtime pass and validate it before marking Colorado complete.
 
 ## Texas — 4 current destinations; 2 coordinate verified
 
-`audit/texas-casino-reconciliation-2026-09-11.json` resolves current Texas scope to four physical tribal gaming destinations: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded as travel-center gaming.
+Texas scope is four physical tribal gaming destinations: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded as travel-center gaming.
 
-`audit/texas-coordinate-qa-pass-1-2026-09-11.json` verifies **2 of 4**: Kickapoo Lucky Eagle Casino Hotel at `28.61092,-100.44078` with current casino-facing address `794 Lucky Eagle Drive, Eagle Pass, TX 78852`, and Speaking Rock Entertainment Center at `31.690126,-106.326605` with current address `122 S Old Pueblo Rd, El Paso, TX 79907`.
+Coordinate QA verifies 2 of 4: Kickapoo Lucky Eagle at `28.61092,-100.44078` with current casino-facing address `794 Lucky Eagle Drive`, and Speaking Rock at `31.690126,-106.326605` with current address `122 S Old Pueblo Rd`.
 
-Still held for direct numerical property coordinates: **Naskila Casino Livingston** at `540 State Park Road 56` and **Naskila Casino Leggett** at `10314 US 59 N`. Fresh searches have not exposed trustworthy numerical property pins, so the holds remain rather than lowering the evidence standard. Texas is not complete until all four current destinations clear coordinate/stable-ID QA, enter runtime and validate green.
+Still held for direct numerical property coordinates: Naskila Livingston at `540 State Park Road 56` and Naskila Leggett at `10314 US 59 N`. Texas is not complete until all four current destinations clear coordinate/stable-ID QA, enter runtime and validate green.
 
 ## Oklahoma — Pass 28 green with 46 runtime records
 
