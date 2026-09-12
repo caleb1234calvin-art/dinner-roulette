@@ -2,18 +2,17 @@
   "jurisdiction":"Colorado",
   "city":"Central City",
   "capturedOn":"2026-09-11",
-  "status":"coordinate-qa-pass-1",
+  "status":"coordinate-qa-pass-1-complete",
   "scope":"Property-coordinate verification for the six current Central City casino destinations after address QA.",
   "verified":[
+    {"id":"co-central-city-century","name":"Century Casino & Hotel Central City","address":"102 Main Street, Central City, CO 80427","lat":39.800474,"lon":-105.512168,"coordinateEvidence":"https://www.travelmyth.ie/Central-City-Gilpin/Hotels/Century-Casino-Hotel-Central-City_tmid1112274","identityAddressEvidence":"https://www.cnty.com/central-city/","status":"coordinate-verified"},
     {"id":"co-central-city-dostal-alley","name":"Dostal Alley Casino & Brew Pub","address":"116 Main Street, Central City, CO 80427","lat":39.8002,"lon":-105.51244,"coordinateEvidence":"https://mapcarta.com/W199358516","osmFeature":"way 199358516","status":"coordinate-verified"},
     {"id":"co-central-city-easy-street","name":"Easy Street Casino","address":"120 Main Street, Central City, CO 80427","lat":39.7998967,"lon":-105.5124236,"coordinateEvidence":"https://gist.github.com/jeremiak/9f0697e6159f5069d8e38b3c371d70da","identityAddressEvidence":"https://easystreetcentralcity.com/contact-us/","status":"coordinate-verified"},
     {"id":"co-central-city-famous-bonanza","name":"The Famous Bonanza Casino","address":"107 Main Street, Central City, CO 80427","lat":39.8005673,"lon":-105.5129721,"coordinateEvidence":"https://yellowpages.swiss/location.cfm?company=Famous-Bonanza-Easy-Street&key=272012","identityEvidence":"https://famousbonanza.com/","status":"coordinate-verified"},
-    {"id":"co-central-city-dragon-tiger","name":"Dragon Tiger Casino","address":"132 Lawrence Street, Central City, CO 80427","lat":39.80085,"lon":-105.51127,"coordinateEvidence":"https://mapcarta.com/W199358411","osmFeature":"way 199358411","status":"coordinate-verified"}
+    {"id":"co-central-city-dragon-tiger","name":"Dragon Tiger Casino","address":"132 Lawrence Street, Central City, CO 80427","lat":39.80085,"lon":-105.51127,"coordinateEvidence":"https://mapcarta.com/W199358411","osmFeature":"way 199358411","status":"coordinate-verified"},
+    {"id":"co-central-city-grand-z","name":"Grand Z Casino & Hotel","address":"321 Gregory Street, Central City, CO 80427","lat":39.79999,"lon":-105.50924,"coordinateEvidence":"https://www.hotelplanner.com/Hotels/157218/Reservations-Reserve-Casino-Hotel-Central-City-321-Gregory-St-80427","identityAddressEvidence":"https://grandzcasinohotel.com/","status":"coordinate-verified"}
   ],
-  "held":[
-    {"id":"co-central-city-century","name":"Century Casino & Hotel Central City","address":"102 Main Street, Central City, CO 80427","status":"direct-property-coordinate-hold","note":"Current first-party address is verified. A nearby Wikimedia camera location is not treated as the casino centroid; wait for direct property geometry."},
-    {"id":"co-central-city-grand-z","name":"Grand Z Casino & Hotel","address":"321 Gregory Street, Central City, CO 80427","status":"direct-property-coordinate-hold","note":"Current address/identity is verified but this pass did not surface a sufficiently direct numerical property coordinate."}
-  ],
-  "qaAccounting":{"centralCityDestinations":6,"coordinateVerified":4,"coordinatePending":2},
-  "nextPhase":"Find direct property coordinates for Century Central City and Grand Z, then finish Cripple Creek coordinate QA and Colorado stable-ID/duplicate reconciliation."
+  "held":[],
+  "qaAccounting":{"centralCityDestinations":6,"coordinateVerified":6,"coordinatePending":0},
+  "nextPhase":"Central City coordinate layer is complete. Finish the remaining Black Hawk direct-coordinate hold, then complete Cripple Creek address/coordinate QA and Colorado stable-ID/duplicate reconciliation."
 }
