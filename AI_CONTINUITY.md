@@ -1,6 +1,6 @@
 # Dinner Roulette — AI Continuity
 
-_Last updated: September 11, 2026_
+_Last updated: September 12, 2026_
 
 ## Project state
 
@@ -54,13 +54,15 @@ The two tribal resorts, Sky Ute and Ute Mountain, remain coordinate-cleared.
 
 `src/lib/nightlife/casino-catalog-pass-29.ts` contains all **31 reconciled Colorado destinations**. Pass 29 is active in runtime, the casino validator includes it, and **Run 175 is green**. Colorado can now be treated as runtime-complete for this audited destination set. Future Colorado work is maintenance/re-audit rather than a blocker.
 
-## Texas — 4 current destinations; 2 coordinate verified
+## Texas — 4 current destinations; 3 coordinate verified
 
 Texas scope is four physical tribal gaming destinations: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center is excluded as travel-center gaming.
 
-Coordinate QA verifies 2 of 4: Kickapoo Lucky Eagle at `28.61092,-100.44078` with current casino-facing address `794 Lucky Eagle Drive`, and Speaking Rock at `31.690126,-106.326605` with current address `122 S Old Pueblo Rd`.
+Coordinate QA now verifies **3 of 4**. Kickapoo Lucky Eagle is `28.61092,-100.44078` with current casino-facing address `794 Lucky Eagle Drive`; Speaking Rock is `31.690126,-106.326605` with current address `122 S Old Pueblo Rd`; Naskila Livingston is now cleared at `30.7142259,-94.6746959` for the current `540 State Park Road 56` address. The Livingston resolution is durable in `audit/texas-coordinate-qa-pass-2-2026-09-12.json`.
 
-Still held for direct numerical property coordinates: Naskila Livingston at `540 State Park Road 56` and Naskila Leggett at `10314 US 59 N`. Texas is not complete until all four current destinations clear coordinate/stable-ID QA, enter runtime and validate green.
+The sole remaining Texas coordinate hold is **Naskila Casino Leggett**, current temporary casino at `10314 US 59 N, Livingston, TX 77351`. Current first-party evidence confirms it is open on the future resort site, and property records independently corroborate the 10314 parcel. Do not substitute a nearby parcel centroid, smoke-shop/rest-area point, or the broader future-resort `10450 US-59` location unless direct evidence establishes it as the operating temporary-casino point.
+
+Texas is not complete until Leggett clears direct numerical property-coordinate QA, all four destinations pass stable-ID/duplicate reconciliation, enter Pass 30/runtime, and validate green.
 
 ## Oklahoma — Pass 28 green with 46 runtime records
 
