@@ -10,97 +10,91 @@ _Last updated: September 12, 2026_
 - `main` remains untouched unless Caleb explicitly requests a merge/direct change.
 - ChatGPT is the only AI authorized to directly modify the repository unless Caleb explicitly authorizes another assistant for a named file.
 - Dinner Roulette and the Jasper County audit remain interconnected.
-- Caleb explicitly wants AI continuity updated continuously while casino/audit work proceeds, not only at the end of a large phase.
+- Keep continuity current while casino/audit work proceeds, not only at the end of a large phase.
 
 ## Active integration validation
 
 `Validate Dinner Integration` is the compatibility gate for the integration branch. It performs dependency install, TypeScript checking, casino audit, inherited tests as report-only, development build, and Dinner icon verification.
 
-**Run 244 (`34673215138`) is green at activation commit `37eaea1c44a07d78964f1b9158ba2eda0e87a814`, validating Nevada Pass 42 active.** Typecheck, curated-casino audit, inherited test-suite report, development build and Dinner icon verification all completed successfully. The validator was subsequently extended through Pass 42 at `14d90faca36fc1bdcb236e7ea2c9d02032395ab6`. Run 244 supersedes Run 240 as the current validated runtime baseline. A green run never authorizes a merge to `main` by itself.
+**Run 251 (`34674232602`) is green at commit `5c826fc9210d2ead2b78f2611e5d6b6987dad513`, validating Nevada Pass 43 and the validator extension through Pass 43.** Every recorded step completed successfully: setup, checkout, Node setup, dependency install, typecheck, curated-casino audit, inherited test-suite report, development build, Dinner icon verification, and post-job cleanup. Run 251 supersedes Run 244 as the current validated runtime baseline. A green run never authorizes a merge to `main` by itself.
 
-The earlier complete-Texas manifest run (Run 197) correctly failed because the audit script did not yet recognize pass files that express jurisdiction through a `JURISDICTION` helper constant. Commit `17e8206` generalized that audit path; subsequent runs are green. This was an audit-infrastructure issue, not a Texas data failure.
+The earlier complete-Texas manifest run (Run 197) failed because the audit script did not yet recognize pass files that express jurisdiction through a `JURISDICTION` helper constant. Commit `17e8206` generalized that path; later runs are green. This was audit infrastructure, not a Texas data failure.
 
 ## Casino reconciliation policy
 
-Runtime casino passes are canonicalized chronologically in `src/lib/nightlife/search.ts` with newer same-property records winning while historical catalog files remain preserved. Same ID within 0.35 miles is a reconciliation warning/latest wins; same ID at materially different locations is a hard failure; same normalized name within 0.35 miles is a reconciliation warning/latest wins; same normalized name at distant locations is preserved as distinct destinations with a warning. Coordinate plausibility and complete-jurisdiction expected-count checks remain hard audit gates.
+Runtime casino passes are canonicalized chronologically in `src/lib/nightlife/search.ts`, with newer same-property records winning while historical catalog files remain preserved. Same ID within 0.35 miles is a reconciliation warning/latest wins; same ID at materially different locations is a hard failure; same normalized name within 0.35 miles is a reconciliation warning/latest wins; same normalized name at distant locations is preserved as distinct destinations with a warning. Coordinate plausibility and complete-jurisdiction expected-count checks remain hard gates.
 
 ## National casino audit strategy
 
 Preferred cadence: `discover → verify → reconcile → batch clean destinations → implement → validate → continue discovery → re-audit prior batches`.
 
-For large jurisdictions, use 50–100 verified-destination runtime batches as a planning cadence, not a quota. Statewide perfection or an arbitrary round number is not required before a clean set enters staged runtime, but every activated property must clear current identity/operation, Dinner Roulette destination scope, normalized address, property-specific coordinates, stable ID, current website and duplicate/alias QA. Regulator license rows are evidence/accounting units, not automatically one-to-one with Dinner Roulette destinations.
+For large jurisdictions, 50–100 verified-destination batches are a planning cadence, not a quota. A clean set may enter staged runtime without waiting for unrelated holds, but every activated property must clear current identity/operation, Dinner Roulette destination scope, normalized address, property-specific coordinates, stable ID, current website, and duplicate/alias QA. Regulator rows are evidence/accounting units, not automatically one-to-one with consumer destinations. **Never weaken the evidence gate merely to increase the runtime count.**
 
 ## Runtime casino progress
 
-Casino runtime is **validated through Pass 42**. Pass 30 adds Oklahoma Duck Creek and Checotah; Pass 31 adds Artesian Casino; Pass 32 adds 15 Nevada NV-02 destinations from Laughlin and Reno-Sparks; Pass 33 adds the complete four-destination Texas set; Pass 34 adds seven QA-cleared rural Nevada destinations; Pass 35 adds ten QA-cleared outer-Clark/Mesquite/Primm Nevada destinations; Pass 36 adds six QA-cleared Boulder Strip/Henderson Nevada destinations; Pass 37 adds four QA-cleared North Las Vegas/northwest-valley destinations; Pass 38 adds Jerry's Nugget Casino; Pass 39 adds Skyline Hotel & Casino and Emerald Island Casino; Pass 40 adds five more Nevada destinations across Boulder/Henderson and outer Clark; Pass 41 adds Club Fortune Casino in Henderson and Rainbow Club Casino; Pass 42 adds Longstreet Inn, Casino & RV Resort after resolving its address-number conflict and property-coordinate gate. `src/lib/nightlife/search.ts` imports and appends through Pass 42. `scripts/audit-casino-catalog.mjs` enumerates through Pass 42 and recognizes both inline jurisdiction literals and `JURISDICTION` helper constants. Run 244 validates Pass 42 green.
+Casino runtime is **validated through Pass 43**. `src/lib/nightlife/search.ts` imports and appends through Pass 43. `scripts/audit-casino-catalog.mjs` enumerates through Pass 43 and recognizes both inline jurisdiction literals and `JURISDICTION` helper constants. Run 251 validates the combined runtime green.
 
-California Pass 19, Oregon Pass 20, Washington Pass 21 and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida, New York, Oklahoma, Colorado, Nevada rolling additions and Texas.
+Recent passes: Pass 30 adds Oklahoma Duck Creek and Checotah; Pass 31 adds Artesian Casino; Pass 32 adds 15 Nevada Laughlin/Reno-Sparks destinations; Pass 33 adds the complete four-destination Texas set; Pass 34 adds seven rural Nevada destinations; Pass 35 adds ten outer-Clark/Mesquite/Primm destinations; Pass 36 adds six Boulder Strip/Henderson destinations; Pass 37 adds four North Las Vegas/northwest destinations; Pass 38 adds Jerry's Nugget; Pass 39 adds Skyline and Emerald Island; Pass 40 adds five Boulder/outer-Clark destinations; Pass 41 adds Club Fortune Henderson and Rainbow Club; Pass 42 adds Longstreet; **Pass 43 adds Wildfire on Fremont.**
 
-## Nevada — rolling, 103 active runtime destinations
+California Pass 19, Oregon Pass 20, Washington Pass 21, and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida, New York, Oklahoma, Colorado, Nevada rolling additions, and Texas.
 
-Nevada's provisional audit decision universe is 174 rows, not a final runtime count. Runtime Batch NV-01 / Pass 22 contains 50 curated destinations.
+## Nevada — rolling, 104 active runtime destinations
 
-NV-02 was selected as a 50-candidate rolling batch, but clean segments may enter runtime without waiting for unrelated holds. Pass 32 activates **15 QA-cleared NV-02 destinations**: eight Laughlin destinations and seven Reno-Sparks destinations, bringing Nevada from 50 to 65 active destinations.
+Nevada's provisional audit decision universe remains 174 rows, not a final runtime count. Pass 22 contains the first 50 curated Nevada destinations. Later clean segments are added independently as evidence clears.
 
-`audit/nevada-rural-coordinate-qa-pass-7-2026-09-12.json` clears a further **seven rural destinations** after current identity/address and property-coordinate QA: **Stockman's Casino (Fallon); Winnemucca Inn & Casino, Model T Casino and Winners Inn & Casino (Winnemucca); Tonopah Station Hotel and Casino; Hotel Nevada & Gambling Hall and Prospector Hotel & Gambling Hall (Ely).** `src/lib/nightlife/casino-catalog-pass-34.ts` serializes those seven and raises Nevada active curated runtime from 65 to 72.
+- Pass 32: +15 Laughlin/Reno-Sparks, Nevada 50 → 65.
+- Pass 34: +7 rural destinations, 65 → 72.
+- Pass 35: +10 outer-Clark/Mesquite/Primm, 72 → 82.
+- Pass 36: +6 Boulder Strip/Henderson, 82 → 88.
+- Pass 37: +4 North Las Vegas/northwest, 88 → 92.
+- Pass 38: Jerry's Nugget, 92 → 93.
+- Pass 39: Skyline + Emerald Island, 93 → 95.
+- Pass 40: Longhorn, Railroad Pass, Barley's, Arizona Charlie's Decatur, Wildfire Rancho, 95 → 100.
+- Pass 41: Club Fortune Henderson + Rainbow Club, 100 → 102.
+- Pass 42: Longstreet Inn, Casino & RV Resort, 102 → 103.
+- **Pass 43: Wildfire on Fremont, 103 → 104.**
 
-`audit/nevada-outer-clark-mesquite-coordinate-qa-pass-8-2026-09-12.json` clears another **ten NV-02 outer-Clark / Mesquite / Primm destinations**: **Durango, Red Rock, Suncoast, Rampart, Palace Station, Silverton, Primm Valley Resort, CasaBlanca, Virgin River and Eureka.** `src/lib/nightlife/casino-catalog-pass-35.ts` serializes them, bringing Nevada active curated runtime from 72 to 82. Primm Valley is treated independently from Buffalo Bill's and Whiskey Pete's.
+### Pass 43 — Wildfire on Fremont
 
-`audit/nevada-boulder-henderson-coordinate-qa-pass-9-2026-09-12.json` clears **six additional Boulder Strip / Henderson destinations**: **Boulder Station Hotel & Casino, Sam's Town Hotel & Gambling Hall, Arizona Charlie's Boulder, Sunset Station Hotel & Casino, Green Valley Ranch Resort Spa Casino and Wildfire Boulder.** `src/lib/nightlife/casino-catalog-pass-36.ts` serializes those six and raises Nevada active curated runtime from 82 to 88.
+`audit/nevada-wildfire-fremont-coordinate-qa-pass-17-2026-09-12.json` clears **Wildfire on Fremont** at **2700 E Fremont St, Las Vegas, NV 89104**, coordinate **36.1556,-115.1135**. Current Wildfire/Station material identifies the property as operating, and the numerical point was resolved specifically to the canonical address rather than a city centroid or unrelated parcel. One first-party detail page has a conflicting ZIP, but the broader first-party/property-map, Station, regulator and tourism evidence supports 89104. `src/lib/nightlife/casino-catalog-pass-43.ts` serializes the property. Run 251 validates Pass 43 green.
 
-`audit/nevada-north-las-vegas-coordinate-qa-pass-10-2026-09-12.json` clears **four North Las Vegas / northwest-valley destinations**: **Bighorn Casino, Cannery Casino & Hotel, Aliante Casino + Hotel + Spa and Santa Fe Station Hotel & Casino.** `src/lib/nightlife/casino-catalog-pass-37.ts` serializes those four and raises Nevada active curated runtime from **88 to 92**. Cannery remains distinct from the closed Eastside Cannery. Historical Aliante Station naming collapses to current Aliante rather than becoming a parallel destination.
+### Recent Nevada reconciliation decisions
 
-`audit/nevada-north-las-vegas-coordinate-qa-pass-11-2026-09-12.json` clears **Jerry's Nugget Casino** at **1821 Las Vegas Blvd N, North Las Vegas, NV 89030**, property coordinate **36.1932,-115.13263**. `src/lib/nightlife/casino-catalog-pass-38.ts` serializes Jerry's Nugget and raises Nevada active curated runtime from **92 to 93**. The former Poker Palace remains retired; Club Fortune North remains a successor hold. Silver Nugget remains a closure exclusion.
+`audit/nevada-rural-operation-state-qa-pass-15-2026-09-12.json` clears Longstreet at **8570 S Nevada Highway 373, Amargosa Valley, NV 89020**, coordinate **36.41254,-116.4246**. Legacy 4400 and apparent 8750 footer variants are treated as the same physical property; canonical consumer address is 8570. The same pass makes **Whiskey Pete's** and **Buffalo Bill's** current closure exclusions after the July 2026 Primm management transition. Primm Valley itself remains active separately.
 
-`audit/nevada-henderson-coordinate-qa-pass-12-2026-09-12.json` clears **Skyline Hotel & Casino** and **Emerald Island Casino**. `src/lib/nightlife/casino-catalog-pass-39.ts` serializes both, raising Nevada active curated runtime from **93 to 95**.
+The Jokers Wild/Cadence Crossing lineage is reconciled: **Cadence Crossing opened March 25, 2026 and replaced Jokers Wild. Jokers Wild must not be emitted as current.** Cadence Crossing is strongly confirmed current at **920 N Boulder Hwy, Henderson, NV 89011**, but remains held until a numerical point can be tied directly to the new Cadence Crossing footprint rather than simply reusing the old Jokers Wild point.
 
-`audit/nevada-boulder-outer-clark-coordinate-qa-pass-13-2026-09-12.json` clears **five additional destinations**: **Longhorn Hotel & Casino, Railroad Pass Casino & Hotel, Barley's Casino & Brewery Co., Arizona Charlie's Decatur and Wildfire Rancho.** `src/lib/nightlife/casino-catalog-pass-40.ts` serializes those five and raises Nevada active curated runtime from **95 to 100**.
+**The Pass Casino** is a current closure/renovation hold. Dated 2026 reporting scheduled its August 1 closure for roughly one year, and September reporting describes it as closed. Current-looking legacy first-party pages do not override that dated closure evidence.
 
-`audit/nevada-henderson-successor-coordinate-qa-pass-14-2026-09-12.json` clears **Club Fortune Casino** at **725 S Racetrack Rd, Henderson, NV 89015**, coordinate **36.01776,-114.94821**, and **Rainbow Club Casino** at **122 S Water St, Henderson, NV 89015**, coordinate **36.03269,-114.98372**. `src/lib/nightlife/casino-catalog-pass-41.ts` serializes both and raises Nevada active curated runtime from **100 to 102**. The same QA pass explicitly reconciles the Jokers Wild/Cadence Crossing lineage: Cadence Crossing opened March 25, 2026 and replaced Jokers Wild. Jokers Wild must not be emitted as current. Cadence Crossing is current at 920 N Boulder Hwy but remains held only for a direct property-specific numerical point for the new footprint.
+`audit/nevada-elko-operation-qa-pass-16-2026-09-12.json` substantially resolves **Red Drag Casino** identity/current-operation/address at **404 S 5th St, Elko, NV 89801** using current Elko tourism/property evidence, but runtime promotion remains held for a direct property-specific numerical point and clean identity-lineage reconciliation.
 
-`audit/nevada-rural-operation-state-qa-pass-15-2026-09-12.json` clears **Longstreet Inn, Casino & RV Resort** at **8570 S Nevada Highway 373, Amargosa Valley, NV 89020**, property coordinate **36.41254,-116.4246**. Current first-party body/contact copy and current mapping corroborate 8570 despite legacy 4400 listings and an apparent 8750 footer typo; those address variants are one physical property, not parallel destinations. `src/lib/nightlife/casino-catalog-pass-42.ts` serializes Longstreet and raises Nevada active curated runtime from **102 to 103**. The same QA pass resolves two long-running Primm operation-state holds as current closure exclusions: **Whiskey Pete's remains closed** and **Buffalo Bill's remains closed**, including after Terrible's assumed Primm management in July 2026. They should not be emitted as current casino destinations unless a future re-audit confirms reopening. Run 244 validates Pass 42 green.
+Priority remaining Nevada work: Cadence Crossing direct-coordinate QA; Club Fortune North successor-state/current-operation reconciliation; Bonanza Casino Fallon casino-specific coordinate QA; Red Drag Elko final coordinate/lineage QA; The Nevada Casino & Bar Battle Mountain stable first-party-site QA. Wildfire Fremont is no longer a hold.
 
-Nevada remains pending/rolling rather than statewide complete. Priority remaining work includes Cadence Crossing direct-coordinate QA, Wildfire on Fremont coordinate QA, Club Fortune North successor-state reconciliation, Bonanza Casino Fallon casino-specific coordinate QA, Red Drag Elko first-party/coordinate QA, and The Nevada Casino & Bar Battle Mountain first-party-site QA. **The Pass Casino is now treated as a current closure/renovation hold rather than an ambiguous operation-state candidate:** 2026 reporting scheduled its August 1 closure for approximately one year of renovation and September reporting describes it as closed; current-looking legacy first-party pages must not override that dated closure evidence. Do not weaken the evidence gate merely to increase the runtime count.
+Nevada remains rolling rather than statewide complete.
 
 ## Colorado — runtime complete and green
 
-Colorado Division of Gaming accounting is 33 commercial regulator locations: 15 Black Hawk, 6 Central City and 12 Cripple Creek, plus two tribal casino resorts. Regulator rows are accounting/evidence units and do not automatically equal consumer destinations.
+Colorado's reconciled current Dinner Roulette set is **31 destinations: 13 Black Hawk + 6 Central City + 10 Cripple Creek + 2 tribal**. Address/property-coordinate QA is 31/31 and stable-ID/duplicate/alias reconciliation is complete in `audit/colorado-statewide-runtime-reconciliation-2026-09-11.json`.
 
-The reconciled current Dinner Roulette set is **31 destinations**: **13 Black Hawk + 6 Central City + 10 Cripple Creek + 2 tribal**. Address/property-coordinate QA is **31/31** and statewide stable-ID/duplicate/alias reconciliation is complete in `audit/colorado-statewide-runtime-reconciliation-2026-09-11.json`.
-
-Black Hawk is **13/13**. Bally's East/North/West remain three separately routable physical destinations. Bigfoot is the current successor at the former Z Casino property; do not emit a parallel current Z destination. Horseshoe's final coordinate hold is resolved in pass 1c.
-
-Central City is **6/6** for address and coordinate QA.
-
-Cripple Creek is **10/10** for address and coordinate QA. `audit/colorado-cripple-creek-coordinate-qa-pass-1b-2026-09-11.json` clears the final four holds: Bronco Billy's, Chamonix, McGills and Golden Nugget. Bronco Billy's and Chamonix remain separately routable despite their integrated adjoining complex. FHR BILLY'S remains a regulator/accounting row only. Century's multiple regulator rows collapse to one consumer property. Golden Nugget is the current successor at the former Wildwood casino property; do not emit Wildwood separately or substitute the adjacent hotel as another casino destination.
-
-The two tribal resorts, Sky Ute and Ute Mountain, remain coordinate-cleared.
-
-`src/lib/nightlife/casino-catalog-pass-29.ts` contains all **31 reconciled Colorado destinations**. Colorado remains runtime-complete for this audited destination set. Future Colorado work is maintenance/re-audit rather than a blocker.
+Bally's East/North/West remain separately routable. Bigfoot is the current successor at the former Z Casino property. Bronco Billy's and Chamonix remain separate adjoining destinations. FHR BILLY'S remains regulator/accounting only. Golden Nugget is the current successor at former Wildwood; do not emit Wildwood separately. `src/lib/nightlife/casino-catalog-pass-29.ts` contains the 31-destination Colorado set. Colorado is maintenance/re-audit only.
 
 ## Texas — runtime complete and green, 4 destinations
 
-Texas scope is **four current physical tribal gaming destinations**: Kickapoo Lucky Eagle Casino Hotel, Naskila Casino Livingston, Naskila Casino Leggett, and Speaking Rock Entertainment Center. Ischoopa Travel Center remains excluded as travel-center gaming rather than a separately promoted casino destination.
+Texas scope is four current physical tribal gaming destinations: Kickapoo Lucky Eagle Casino Hotel; Naskila Casino Livingston; Naskila Casino Leggett; Speaking Rock Entertainment Center. Ischoopa Travel Center remains excluded as travel-center gaming rather than a separately promoted casino destination.
 
-Coordinate QA is **4/4**. Kickapoo Lucky Eagle is `28.61092,-100.44078`; Naskila Livingston is `30.7142259,-94.6746959`; Naskila Leggett is `30.8342009,-94.8624389`; Speaking Rock is `31.690126,-106.326605`.
+Coordinate QA is 4/4: Kickapoo Lucky Eagle `28.61092,-100.44078`; Naskila Livingston `30.7142259,-94.6746959`; Naskila Leggett `30.8342009,-94.8624389`; Speaking Rock `31.690126,-106.326605`. The Leggett coordinate provenance is preserved in `audit/texas-coordinate-qa-pass-3-field-verification-2026-09-12.json` as user-assisted current map-pin verification, not misrepresented as first-party publication. Texas is maintenance/re-audit only; re-audit when the temporary Leggett operation is replaced by the permanent resort.
 
-The final Leggett hold was closed by user-assisted current map-pin verification at the operating temporary casino, `10314 US 59 N, Livingston, TX 77351`. `audit/texas-coordinate-qa-pass-3-field-verification-2026-09-12.json` preserves that provenance explicitly rather than misrepresenting the numerical point as first-party publication. Current first-party Naskila evidence establishes identity, operation and address; the user-supplied current map listing/drop pin supplies the numerical property point.
+## Oklahoma — 49 active runtime destinations, not complete
 
-`audit/texas-runtime-reconciliation-2026-09-12.json` completes stable-ID and duplicate/alias QA. Livingston and Leggett remain distinct current operating destinations. Repeated NIGC Naskila and Speaking Rock rows collapse by physical property. `src/lib/nightlife/casino-catalog-pass-33.ts` serializes all four Texas destinations, and the integration manifest marks Texas complete with expectedCount 4. Run 244 confirms the combined runtime remains green.
+Oklahoma candidate universe remains 77. Pass 28 serialized 46 runtime-eligible records. Pass 30 added Duck Creek and Checotah, bringing the runtime to 48. Pass 31 added Artesian Casino, bringing it to **49 active audited runtime destinations**.
 
-Texas is now maintenance/re-audit rather than an active blocker. When the temporary Leggett operation is replaced by the permanent resort, re-audit its current identity/address/coordinate rather than silently moving the existing record.
+Artesian's canonical casino-facing address is **23 W Vinita Ave, Sulphur, OK 73086**; the broader integrated hotel/casino complex also uses 1001 W 1st Street. These are one destination. Property coordinate is `34.507847,-96.967535`.
 
-## Oklahoma — Passes 28 + 30 + 31 green with 49 runtime records
-
-Oklahoma candidate universe remains **77**. Pass 28 serialized the first **46** runtime-eligible records. Pass 30 added Duck Creek and Checotah after resolving their final street-number normalization holds, bringing active Oklahoma runtime to 48.
-
-`audit/oklahoma-coordinate-qa-pass-9-2026-09-12.json` resolves **Artesian Casino** as the next clean destination. Canonical casino-facing address remains **23 W Vinita Ave, Sulphur, OK 73086**, while the integrated Artesian Hotel/Casino complex also uses **1001 W 1st Street** as its broader property address. These are one current destination, not two. Property-specific coordinate is **`34.507847,-96.967535`**. `src/lib/nightlife/casino-catalog-pass-31.ts` serializes Artesian; Run 244 confirms the combined runtime remains green.
-
-Oklahoma has **49 active audited runtime destinations** and **49 property-coordinate-cleared destinations** in the staged set. Oklahoma remains intentionally not marked statewide complete. Lakecrest, Coweta, Lake Eufaula, Holdenville and Cherokee South Coffeyville remain priority holds for coordinate/current-site or lineage QA. WinStar preserves ID stem `winstar`; Choctaw Durant preserves `choctaw-durant`.
+Priority Oklahoma holds remain **Lakecrest, Coweta, Lake Eufaula, Holdenville, and Cherokee South Coffeyville**. Current first-party operation/address evidence is strong for several, but no property is promoted until its direct numerical property point and any remaining lineage/site questions clear. Never substitute a city centroid, nearby parcel, or an old closed-property coordinate.
 
 ## Legal/compliance continuity
 
-Dinner Roulette is an independent discovery/decision tool. Third-party names identify destinations/services without implying affiliation. Casino/nightlife is discovery/trip planning only; Dinner Roulette does not accept wagers, provide gambling, sell alcohol or guarantee admission. `LEGAL.md` and Settings carry legal/privacy/third-party information. Rideshare/delivery integrations remain neutral shallow launches unless an authorized provider integration says otherwise.
+Dinner Roulette is an independent discovery/decision tool. Third-party names identify destinations/services without implying affiliation. Casino/nightlife is discovery/trip planning only; Dinner Roulette does not accept wagers, provide gambling, sell alcohol, or guarantee admission. `LEGAL.md` and Settings carry legal/privacy/third-party information. Rideshare/delivery integrations remain neutral shallow launches unless an authorized provider integration says otherwise.
 
 ## Restaurant icon continuity
 
