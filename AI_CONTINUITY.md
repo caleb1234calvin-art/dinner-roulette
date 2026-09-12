@@ -7,6 +7,7 @@ _Last updated: September 12, 2026_
 - Active app: Dinner Roulette V.3.
 - Repository: `caleb1234calvin-art/dinner-roulette`.
 - **Current integration branch: `integration/active-work-pass-1`.**
+- **Pass 48 candidate branch: `integration/pass-48-south-coffeyville`.**
 - `main` remains untouched unless Caleb explicitly requests a merge/direct change.
 - ChatGPT is the only AI authorized to directly modify the repository unless Caleb explicitly authorizes another assistant for a named file.
 - Dinner Roulette and the Jasper County audit remain interconnected.
@@ -17,6 +18,8 @@ _Last updated: September 12, 2026_
 `Validate Dinner Integration` is the compatibility gate for the integration branch. It performs dependency install, TypeScript checking, casino audit, inherited tests as report-only, development build, and Dinner icon verification.
 
 **Run 278 (`34711381563`) is green at commit `52320a46f2dee3b235943cd96acc4d99a7eae1d7`.** It validates the Pass 47 runtime baseline plus the evidence-only Red Dragon co-location resolution. All recorded validation stages passed. Casino runtime itself remains validated through Pass 47. A green run never authorizes a merge to `main` by itself.
+
+The Pass 48 South Coffeyville candidate is implemented on its own branch and is not yet promoted to `integration/active-work-pass-1`; treat runtime counts below as candidate counts until exact-head validation succeeds.
 
 Vercel deployment is currently externally blocked by its build-rate-limit/upgrade condition. Treat GitHub Actions as the active implementation/validation gate while that persists; do not describe new GitHub work as deployed until Vercel actually publishes it.
 
@@ -30,9 +33,9 @@ A current street address, map marker, routing destination, city centroid, nearby
 
 ## Runtime casino progress
 
-Casino runtime is **validated through Pass 47**. `src/lib/nightlife/search.ts` imports/appends through Pass 47. `scripts/audit-casino-catalog.mjs` enumerates through Pass 47.
+Validated integration runtime remains **through Pass 47**. The Pass 48 candidate branch imports/appends through Pass 48 and extends `scripts/audit-casino-catalog.mjs` through Pass 48 pending validation.
 
-Recent sequence: Pass 43 Wildfire on Fremont; Pass 44 Club Fortune North; Pass 45 The Nevada Casino & Bar, Battle Mountain; Pass 46 Bonanza Inn & Casino, Fallon; **Pass 47 Coweta Casino Hotel, Oklahoma.**
+Recent sequence: Pass 43 Wildfire on Fremont; Pass 44 Club Fortune North; Pass 45 The Nevada Casino & Bar, Battle Mountain; Pass 46 Bonanza Inn & Casino, Fallon; Pass 47 Coweta Casino Hotel, Oklahoma; **Pass 48 candidate Cherokee Casino South Coffeyville, Oklahoma.**
 
 ## Nevada — rolling, 107 active runtime destinations
 
@@ -69,34 +72,40 @@ Nevada's provisional audit decision universe remains 174 rows, not a final runti
 
 Nevada remains rolling rather than statewide complete.
 
-## Oklahoma — 50 active runtime destinations, not complete
+## Oklahoma — 50 validated active destinations; Pass 48 candidate would make 51
 
-Oklahoma candidate universe remains 77. Pass 28 serialized 46 records; Pass 30 added Duck Creek and Checotah; Pass 31 added Artesian; **overall Pass 47 added Coweta Casino Hotel**, bringing Oklahoma runtime to **50 active audited destinations**.
+Oklahoma candidate universe remains 77. Pass 28 serialized 46 records; Pass 30 added Duck Creek and Checotah; Pass 31 added Artesian; overall Pass 47 added Coweta Casino Hotel, bringing validated Oklahoma runtime to **50 active audited destinations**.
 
 ### Pass 47 — Coweta Casino Hotel
 
 `audit/oklahoma-coordinate-qa-pass-11-2026-09-12.json` clears **Coweta Casino Hotel** at **13185 Oklahoma 51, Coweta, OK 74429**, coordinate **35.97281,-95.66006**. Current first-party/post-opening lodging evidence establishes the completed operating property, and the coordinate comes from a direct current property-map marker tied to the Coweta hotel/casino listing rather than an intersection estimate, city centroid, nearby parcel, or predecessor point.
 
-`src/lib/nightlife/casino-catalog-pass-47.ts` serializes the destination; `src/lib/nightlife/search.ts` activates it; `scripts/audit-casino-catalog.mjs` covers through Pass 47. Run 276 validated the complete runtime chain; later Runs 277 and 278 also passed without runtime changes.
+### Pass 48 candidate — Cherokee Casino South Coffeyville
+
+`audit/oklahoma-coordinate-qa-pass-12-2026-09-12.json` clears **Cherokee Casino South Coffeyville** at **1506 US-169, South Coffeyville, OK 74072**, coordinate **36.9825777,-95.6283822**. Cherokee Casino's current first-party property page exposes an embedded Google Maps link containing that exact numerical point for the current destination, satisfying the direct current-property coordinate gate.
+
+`src/lib/nightlife/casino-catalog-pass-48.ts` serializes the candidate; `src/lib/nightlife/search.ts` activates it on the candidate branch; `scripts/audit-casino-catalog.mjs` covers through Pass 48. Do not promote the candidate branch until exact-head validation is green.
 
 ### Remaining Oklahoma priority holds
 
-The priority frontier is now **four** properties. Their current operation/address identities are strong; the principal gate is a direct numerical current-property point.
+The priority frontier is now **three** properties after the South Coffeyville coordinate clear. Their current operation/address identities are strong; the principal gate remains a direct numerical current-property point.
 
 - **Lakecrest Casino and Hotel** — 1000 US HW 70 E, Ardmore. Current first-party operation/address is strong. The commercial-land point near **34.172006,-97.173354** identifies adjacent development land and remains excluded.
 - **Lake Eufaula Casino Hotel** — 1045 Birkes Rd, Eufaula. Current operator and current Apple Maps identity both support the new property. The former Creek Nation Eufaula Casino at **806 W Forrest Ave** is permanently closed; never reuse its legacy point for the new casino.
 - **Creek Nation Casino Holdenville** — 211 E Willow St, Holdenville. Current first-party operation/address is strong. **35.083599,-96.401627** is a Holdenville city centroid, not the casino, and remains excluded.
-- **Cherokee Casino South Coffeyville** — 1506 US-169, South Coffeyville. Current Cherokee, Oklahoma tourism, municipal and routing evidence establish the operating destination. No direct numerical property point has yet cleared.
-
-Do not create Pass 48 until at least one remaining current-property point clears the same evidence gate used for Coweta.
 
 ## Four-state runtime snapshot
 
+Validated integration baseline:
 - Nevada: **107** active.
 - Oklahoma: **50** active.
 - Colorado: **31** active and complete.
 - Texas: **4** active and complete.
 - **Four-state total: 192 active validated destinations.**
+
+Pass 48 candidate branch:
+- Oklahoma: **51** candidate active.
+- **Four-state candidate total: 193.**
 
 ## Colorado — runtime complete and green
 
