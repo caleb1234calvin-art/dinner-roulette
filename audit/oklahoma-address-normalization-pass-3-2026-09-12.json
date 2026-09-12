@@ -1,0 +1,53 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-12",
+  "status": "address-normalization-pass-3-runtime-ready",
+  "scope": "Final street-number normalization for the two coordinate-verified Muscogee Nation casinos withheld from Pass 28 solely because current sources disagreed on their canonical runtime addresses.",
+  "records": [
+    {
+      "id": "ok-muscogee-duck-creek",
+      "name": "Duck Creek Casino",
+      "lat": 35.81431,
+      "lon": -96.01402,
+      "runtimeAddress": "10071 Ferguson Rd, Beggs, OK 74421",
+      "website": "https://creeknationcasinoduckcreek.com/",
+      "identityEvidence": "https://creeknationcasinoduckcreek.com/",
+      "preferredAddressEvidence": [
+        "https://creekcasinojobs.com/locations/",
+        "https://www.greencountryok.com/listing/duck-creek-casino/560/"
+      ],
+      "conflictingAddressEvidence": [
+        "https://www.travelok.com/listings/view.profile/id.17801"
+      ],
+      "status": "runtime-ready",
+      "decision": "Use 10071 Ferguson Rd as the canonical Dinner Roulette runtime address. The current Muscogee gaming-network location directory and Green Country Oklahoma both use 10071, while TravelOK continues to publish 10085. The verified casino-building coordinate is unchanged, so this is an address-normalization decision rather than a property-identity change."
+    },
+    {
+      "id": "ok-muscogee-checotah",
+      "name": "Checotah Casino",
+      "lat": 35.48143,
+      "lon": -95.52278,
+      "runtimeAddress": "830 N Broadway St, Checotah, OK 74426",
+      "website": "https://creeknationcasinochecotah.com/",
+      "identityEvidence": "https://creeknationcasinochecotah.com/",
+      "preferredAddressEvidence": [
+        "https://creeknationcasinochecotah.com/",
+        "https://www.travelok.com/listings/view.profile/id.17148"
+      ],
+      "conflictingAddressEvidence": [
+        "https://creekcasinojobs.com/locations/"
+      ],
+      "status": "runtime-ready",
+      "decision": "Use 830 N Broadway St as the canonical Dinner Roulette runtime address. The current casino's own FAQ and TravelOK both use 830; the broader Muscogee jobs/location directory uses 831. First-party property-specific evidence controls this normalization."
+    }
+  ],
+  "qaAccounting": {
+    "coordinateVerifiedPoolBefore": 48,
+    "runtimeEligibleBefore": 46,
+    "addressHoldsResolvedThisPass": 2,
+    "runtimeEligibleAfter": 48,
+    "remainingAddressHoldsFromPass28Quarantine": 0
+  },
+  "runtimeDecision": "Both previously quarantined records may now be serialized in the next chronological casino catalog pass. Oklahoma remains intentionally incomplete statewide; this pass only promotes the two records whose sole remaining gate was street-number normalization.",
+  "nextPhase": "Serialize Duck Creek and Checotah as the next Oklahoma runtime addition pass, wire it chronologically after Pass 29, extend the casino validator, run Validate Dinner Integration, and update continuity if green."
+}
