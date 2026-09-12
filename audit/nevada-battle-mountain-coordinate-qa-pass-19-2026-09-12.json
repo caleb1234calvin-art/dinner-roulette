@@ -1,0 +1,40 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "battle-mountain-coordinate-qa-pass-19-runtime-ready",
+  "scope": "Close The Nevada Casino & Bar Battle Mountain operation/address/property-coordinate hold using current commercial operation evidence, county parcel evidence, regulator evidence, and exact-address numerical geocoding.",
+  "runtimeReady": [
+    {
+      "id": "casino-catalog-nv-nevada-casino-bar-battle-mountain",
+      "name": "The Nevada Casino & Bar",
+      "address": "36 E Front St, Battle Mountain, NV 89820",
+      "lat": 40.6420387,
+      "lon": -116.9344845,
+      "website": "https://www.google.com/travel/hotels/entity/CgoI9r20oIDi27AeEAE",
+      "operationEvidence": [
+        "https://www.loopnet.com/Listing/Battle-Mountain-Gaming-Hospitality/37588889/",
+        "https://www.gaming.nv.gov/siteassets/content/about/detail-report-nonrestricted.pdf",
+        "https://www.google.com/travel/hotels/entity/CgoI9r20oIDi27AeEAE"
+      ],
+      "propertyEvidence": [
+        "https://lander-search.gsacorp.io/parcel/00210202",
+        "https://www.loopnet.com/property/36-e-front-st-battle-mountain-nv-89820/32015-00210202/",
+        "https://cms1files.revize.com/landercountynv/8-17-2022%20Packet.pdf"
+      ],
+      "coordinateEvidence": [
+        "https://www.hauntedplaces.org/item/nevada-hotel/",
+        "https://www.whereorg.com/nevada-hotel-grill-11081962"
+      ],
+      "status": "runtime-ready",
+      "note": "The current 2025-2026 Battle Mountain gaming portfolio offering identifies Nevada Casino & Bar at 36 E Front St as one of two licensed, cash-flowing casino operations and states the property runs 35 gaming machines. Lander County's current parcel record independently identifies 36 E Front St, parcel 002-102-02, with use code Casino or Hotel Casino; county planning material identifies the Nevada Hotel Casino and Bar on the subject parcel. Nevada Gaming Control Board detail material lists Nevada Hotel at 36 E Front St as an active nonrestricted gaming location. Multiple exact-address geocoding sources independently converge around 40.6420,-116.9345; 40.6420387,-116.9344845 is retained as the canonical point. No stable dedicated first-party consumer website was located, so the current Google property page is retained as the consumer navigation URL rather than inventing one."
+    }
+  ],
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 105,
+    "runtimeReadyThisPass": 1,
+    "projectedNevadaRuntimeActiveAfter": 106,
+    "statewideComplete": false
+  },
+  "duplicateQA": "PASS_FOR_RUNTIME_SERIALIZATION",
+  "nextPhase": "Serialize The Nevada Casino & Bar as Pass 45, validate, then continue Cadence Crossing, Bonanza Fallon, and Red Drag Elko holds without weakening the evidence gate."
+}
