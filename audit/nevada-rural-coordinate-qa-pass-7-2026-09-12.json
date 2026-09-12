@@ -1,0 +1,118 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "rural-coordinate-qa-pass-7-runtime-ready",
+  "scope": "Property-specific coordinate QA for seven current rural Nevada casino destinations whose identities and addresses were already cleared in the Nevada scope/address work. This is a rolling runtime increment and does not claim statewide completeness.",
+  "records": [
+    {
+      "id": "casino-catalog-nv-stockmans-fallon",
+      "name": "Stockman's Casino",
+      "address": "1560 W Williams Ave, Fallon, NV 89406",
+      "lat": 39.4755101,
+      "lon": -118.7945951,
+      "website": "https://stockmanscasino.com/",
+      "identityEvidence": ["https://stockmanscasino.com/", "https://stockmanscasino.com/casino/"],
+      "coordinateEvidence": "https://yellowpages.swiss/location.cfm?company=Stockmans-Casino&key=273627",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "casino-catalog-nv-winnemucca-inn",
+      "name": "Winnemucca Inn & Casino",
+      "address": "741 W Winnemucca Blvd, Winnemucca, NV 89445",
+      "lat": 40.96759,
+      "lon": -117.74107,
+      "website": "https://winnemuccainn.com/",
+      "identityEvidence": ["https://winnemuccainn.com/", "https://winnemuccainn.com/more/contact-us/"],
+      "coordinateEvidence": "https://mapcarta.com/W1099933110",
+      "osmFeature": "way 1099933110",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "casino-catalog-nv-model-t-winnemucca",
+      "name": "Model T Casino",
+      "address": "1130 W Winnemucca Blvd, Winnemucca, NV 89445",
+      "lat": 40.964722,
+      "lon": -117.744339,
+      "website": "https://modeltcasino.com/",
+      "identityEvidence": ["https://modeltcasino.com/", "https://modeltcasino.com/contact/"],
+      "coordinateEvidence": "https://www.campendium.com/model-t-casino-rv-park",
+      "coordinateCorroboration": "https://thedyrt.com/camping/nevada/model-t-casino-rv-park",
+      "status": "runtime-ready",
+      "note": "Coordinate sources converge on the current 1130 W Winnemucca Blvd property; the point is treated as property-specific rather than a generic city/postal centroid."
+    },
+    {
+      "id": "casino-catalog-nv-winners-inn-winnemucca",
+      "name": "Winners Inn & Casino",
+      "address": "185 W Winnemucca Blvd, Winnemucca, NV 89445",
+      "lat": 40.9725,
+      "lon": -117.7361,
+      "website": "https://winnersinn.com/",
+      "identityEvidence": ["https://winnersinn.com/", "https://winnersinn.com/contact-winners/"],
+      "coordinateEvidence": "https://www.impt.io/property/185-w-winnemucca-blvd-winnemucca-nv-89445/",
+      "status": "runtime-ready",
+      "note": "Prefer the current property coordinate over nearby parking/RV points surfaced by secondary map sources."
+    },
+    {
+      "id": "casino-catalog-nv-tonopah-station",
+      "name": "Tonopah Station Hotel and Casino",
+      "address": "1137 Erie Street, Tonopah, NV 89049",
+      "lat": 38.05841,
+      "lon": -117.2184,
+      "website": "https://www.tonopahstation.com/",
+      "identityEvidence": ["https://www.tonopahstation.com/", "https://www.tonopahstation.com/casino/"],
+      "coordinateEvidence": "https://mapcarta.com/W284334011",
+      "osmFeature": "way 284334011",
+      "status": "runtime-ready",
+      "note": "Normalize the Main/Erie corridor ambiguity to the current first-party 1137 Erie Street form."
+    },
+    {
+      "id": "casino-catalog-nv-hotel-nevada-ely",
+      "name": "Hotel Nevada & Gambling Hall",
+      "address": "501 Aultman St, Ely, NV 89301",
+      "lat": 39.2479193,
+      "lon": -114.892643,
+      "website": "https://www.hotelnevada.com/",
+      "identityEvidence": "https://www.hotelnevada.com/",
+      "coordinateEvidence": "https://yellowpages.swiss/location.cfm?company=Hotel-Nevada-Gambling-Hall&key=273590",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "casino-catalog-nv-prospector-ely",
+      "name": "Prospector Hotel & Gambling Hall",
+      "address": "1501 E Aultman St, Ely, NV 89301",
+      "lat": 39.258688,
+      "lon": -114.859298,
+      "website": "https://www.prospectorhotel.com/",
+      "identityEvidence": ["https://www.prospectorhotel.com/", "https://www.prospectorhotel.com/gambling-hall/"],
+      "coordinateEvidence": "https://www.travelmyth.com/Ely-White-Pine/Hotels/Prospector-Hotel-Casino_tmid511723",
+      "status": "runtime-ready"
+    }
+  ],
+  "duplicateQA": {
+    "baseCatalog": "No matching Stockman's, Winnemucca, Model T, Winners Inn or Tonopah Station records were found in the base catalog inspection. Hotel Nevada and Prospector were likewise not found as existing active Nevada catalog records.",
+    "currentNevadaPasses": "These seven rural destinations are outside the currently active Nevada Pass 22 and Pass 32 sets and use distinct stable IDs and property coordinates.",
+    "result": "PASS_FOR_RUNTIME_SERIALIZATION"
+  },
+  "holds": [
+    {
+      "name": "Bonanza Casino",
+      "city": "Fallon",
+      "address": "855 W Williams Ave, Fallon, NV 89406",
+      "status": "hold",
+      "reason": "Current address/identity is corroborated, but the numerical point surfaced in this pass is tied primarily to RV/campground-style mapping rather than a sufficiently strong casino/property coordinate. Do not promote merely to round out the Fallon pair."
+    },
+    {
+      "name": "Red Drag Casino",
+      "city": "Elko",
+      "status": "hold",
+      "reason": "Retain as a current candidate until NGCB/current-property matching and coordinate QA are both complete."
+    }
+  ],
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 65,
+    "runtimeReadyThisPass": 7,
+    "projectedNevadaRuntimeAfterActivation": 72,
+    "statewideComplete": false
+  },
+  "nextPhase": "Serialize these seven records in the next chronological catalog pass, activate them, validate green, then continue the uncleared NV-02 Clark County segments and remaining rural completeness/hold work without weakening the property-specific evidence gate."
+}
