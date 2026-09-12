@@ -1,0 +1,35 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "club-fortune-north-successor-qa-pass-18-runtime-ready",
+  "scope": "Resolve the Poker Palace to Club Fortune North successor hold using dated post-opening evidence, exact-address property evidence, and a property-specific numerical point.",
+  "runtimeReady": [
+    {
+      "id": "casino-catalog-nv-club-fortune-north-north-las-vegas",
+      "name": "Club Fortune North",
+      "address": "2757 Las Vegas Blvd N, North Las Vegas, NV 89030",
+      "lat": 36.2100482,
+      "lon": -115.107488,
+      "website": "https://clubfortunecasino.com/",
+      "operationEvidence": [
+        "https://cdcgaming.com/brief/las-vegas-former-poker-palace-patrons-praise-newly-opened-club-fortune-north/",
+        "https://www.lasvegasadvisor.com/news/2026-08-02/deep-dive-into-caesars-republic-up-at-stateline/",
+        "https://betwithboomer.com/news/"
+      ],
+      "propertyEvidence": [
+        "https://www.loopnet.com/property/2757-las-vegas-blvd-n-north-las-vegas-nv-89030/32003-13913303002/",
+        "https://www.latlong.net/poi/poker-palace-327730"
+      ],
+      "status": "runtime-ready",
+      "note": "Dated post-opening reporting confirms the former Poker Palace reopened in July 2026 as Club Fortune North after an extensive renovation, at the same 2757 Las Vegas Blvd N property. August reporting discusses the reopened property as operating, and Boomer's current news records its sportsbook at Club Fortune North. Clark County-derived 2026 parcel evidence identifies 2757 Las Vegas Blvd N as casino land use. The numerical point is tied to that exact-address Poker Palace property; reuse is justified here because this is an in-place successor/remodel at the same parcel, not a relocated casino. Historical Poker Palace must remain retired and must not be emitted as a parallel current destination. Some stale directories/property pages still describe the pre-reopening state; dated post-opening evidence controls current operation state."
+    }
+  ],
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 104,
+    "runtimeReadyThisPass": 1,
+    "projectedNevadaRuntimeActiveAfter": 105,
+    "statewideComplete": false
+  },
+  "duplicateQA": "PASS_FOR_SUCCESSOR_SERIALIZATION",
+  "nextPhase": "Serialize Club Fortune North as Pass 44, validate, then continue Cadence Crossing direct-footprint coordinate QA and rural coordinate/site holds."
+}
