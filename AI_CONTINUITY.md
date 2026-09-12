@@ -16,7 +16,7 @@ _Last updated: September 12, 2026_
 
 `Validate Dinner Integration` is the compatibility gate for the integration branch. It performs dependency install, TypeScript checking, casino audit, inherited tests as report-only, development build, and Dinner icon verification.
 
-**Run 175 (`34665141328`) is green at commit `1e9ef9f439fa61af6acf7ff905b9ef9be28b6d37`, validating Colorado Pass 29 runtime activation.** Every job step completed successfully: install, TypeScript checking, curated-casino audit, inherited test-suite report, development build and Dinner icon verification. This supersedes Run 148 as the current validated runtime baseline. A green run never authorizes a merge to `main` by itself.
+**Run 182 (`34667342671`) is green at commit `148d9878d86aa8696bde7c340b22eead27b85bf2`, validating Oklahoma Pass 30 runtime activation and casino-audit enumeration through Pass 30.** Typecheck, curated-casino audit, inherited test-suite report, development build and Dinner icon verification all completed successfully. This supersedes Run 175 as the current validated runtime baseline. A green run never authorizes a merge to `main` by itself.
 
 ## Casino reconciliation policy
 
@@ -30,9 +30,9 @@ For large jurisdictions, use 50–100 verified-destination runtime batches as a 
 
 ## Runtime casino progress
 
-Casino runtime is **validated through Pass 29**. `src/lib/nightlife/casino-catalog-pass-29.ts` contains the reconciled 31-destination Colorado set; `src/lib/nightlife/search.ts` imports and appends Pass 29 to chronological `CASINO_PASSES`; `scripts/audit-casino-catalog.mjs` enumerates catalog files through Pass 29. Run 175 validates the activated Colorado runtime state green.
+Casino runtime is **validated through Pass 30**. `src/lib/nightlife/casino-catalog-pass-30.ts` adds the two Oklahoma destinations previously held only for street-number normalization; `src/lib/nightlife/search.ts` imports and appends Pass 30 to chronological `CASINO_PASSES`; `scripts/audit-casino-catalog.mjs` enumerates catalog files through Pass 30. Run 182 validates the combined activated runtime state green.
 
-California Pass 19, Oregon Pass 20, Washington Pass 21 and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida and New York. Nevada remains pending/rolling.
+California Pass 19, Oregon Pass 20, Washington Pass 21 and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida, New York, Oklahoma and Colorado. Nevada remains pending/rolling.
 
 ## Nevada
 
@@ -52,7 +52,7 @@ Cripple Creek is **10/10** for address and coordinate QA. `audit/colorado-crippl
 
 The two tribal resorts, Sky Ute and Ute Mountain, remain coordinate-cleared.
 
-`src/lib/nightlife/casino-catalog-pass-29.ts` contains all **31 reconciled Colorado destinations**. Pass 29 is active in runtime, the casino validator includes it, and **Run 175 is green**. Colorado can now be treated as runtime-complete for this audited destination set. Future Colorado work is maintenance/re-audit rather than a blocker.
+`src/lib/nightlife/casino-catalog-pass-29.ts` contains all **31 reconciled Colorado destinations**. Pass 29 remains active and Run 182 confirms the combined runtime still validates green after Pass 30. Colorado remains runtime-complete for this audited destination set. Future Colorado work is maintenance/re-audit rather than a blocker.
 
 ## Texas — 4 current destinations; 3 coordinate verified
 
@@ -62,15 +62,17 @@ Coordinate QA now verifies **3 of 4**. Kickapoo Lucky Eagle is `28.61092,-100.44
 
 The sole remaining Texas coordinate hold is **Naskila Casino Leggett**, current temporary casino at `10314 US 59 N, Livingston, TX 77351`. Current first-party evidence confirms it is open on the future resort site, and property records independently corroborate the 10314 parcel. Do not substitute a nearby parcel centroid, smoke-shop/rest-area point, or the broader future-resort `10450 US-59` location unless direct evidence establishes it as the operating temporary-casino point.
 
-Texas is not complete until Leggett clears direct numerical property-coordinate QA, all four destinations pass stable-ID/duplicate reconciliation, enter Pass 30/runtime, and validate green.
+Texas is not complete until Leggett clears direct numerical property-coordinate QA, all four destinations pass stable-ID/duplicate reconciliation, enter a later runtime pass, and validate green. Pass 30 is now occupied by the Oklahoma additions and must not be reused for Texas.
 
-## Oklahoma — Pass 28 green with 46 runtime records
+## Oklahoma — Passes 28 + 30 green with 48 runtime records
 
-Oklahoma candidate universe remains **77**. Current identity/address QA reached **54**, property-specific coordinate QA reached **48**, and record-level runtime eligibility approved **46** for Pass 28. Duck Creek and Checotah remain held for current street-number normalization; Artesian, Lakecrest, Coweta, Lake Eufaula, Holdenville and Cherokee South Coffeyville remain outside Pass 28 for coordinate/current-site or lineage holds.
+Oklahoma candidate universe remains **77**. Current identity/address QA reached **54** and property-specific coordinate QA reached **48**. Pass 28 serialized the first **46** runtime-eligible records while Duck Creek and Checotah were quarantined solely for street-number normalization.
 
-`src/lib/nightlife/casino-catalog-pass-28.ts` contains the 46 eligible Oklahoma destinations. `src/lib/nightlife/search.ts` imports Pass 28 and appends it to chronological `CASINO_PASSES`. The validator now enumerates through Pass 29. WinStar preserves ID stem `winstar`; Choctaw Durant preserves `choctaw-durant`.
+`audit/oklahoma-address-normalization-pass-3-2026-09-12.json` resolves those final two Pass-28 quarantine holds. Duck Creek uses canonical runtime address **10071 Ferguson Rd, Beggs, OK 74421** with verified building coordinate `35.81431,-96.01402`. Checotah uses canonical runtime address **830 N Broadway St, Checotah, OK 74426** with verified building coordinate `35.48143,-95.52278`. Conflicting address variants remain preserved as provenance rather than silently discarded.
 
-**Run 148 originally confirmed the Oklahoma Pass 28 implementation green; Run 175 subsequently confirms the combined runtime remains green after Colorado Pass 29 activation.** Oklahoma remains intentionally not marked statewide complete; future cleanup/additions can proceed separately without holding the validated 46 hostage.
+`src/lib/nightlife/casino-catalog-pass-30.ts` contains Duck Creek and Checotah. `src/lib/nightlife/search.ts` activates Pass 30 and the validator enumerates through Pass 30. **Run 182 is green**, so Oklahoma now has **48 active audited runtime destinations**.
+
+Oklahoma remains intentionally not marked statewide complete. Artesian, Lakecrest, Coweta, Lake Eufaula, Holdenville and Cherokee South Coffeyville remain outside the current runtime set for coordinate/current-site or lineage holds. WinStar preserves ID stem `winstar`; Choctaw Durant preserves `choctaw-durant`.
 
 ## Legal/compliance continuity
 
@@ -82,7 +84,7 @@ Issue #29 remains the original Dinner icon system: 15 semantic categories per th
 
 ## Caustic Relay / startup-ident continuity
 
-Caustic Relay is the active working maker/publisher brand. The canonical black-mamba/scorpion hybrid creature is immutable unless Caleb explicitly requests redesign. Current startup asset is `public/brand/CAUSTIC_RELAY_ident-2.mp4`, wired by `src/components/startup-ident.tsx`, compatibility-validated by green Run 103 and still passing the current Run 175 integration build.
+Caustic Relay is the active working maker/publisher brand. The canonical black-mamba/scorpion hybrid creature is immutable unless Caleb explicitly requests redesign. Current startup asset is `public/brand/CAUSTIC_RELAY_ident-2.mp4`, wired by `src/components/startup-ident.tsx`, compatibility-validated by green Run 103 and still passing the current Run 182 integration build.
 
 ## Future food-truck discovery
 
