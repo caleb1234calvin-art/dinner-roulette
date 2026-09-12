@@ -16,7 +16,7 @@ _Last updated: September 12, 2026_
 
 `Validate Dinner Integration` is the compatibility gate for the integration branch. It performs dependency install, TypeScript checking, casino audit, inherited tests as report-only, development build, and Dinner icon verification.
 
-**Run 186 (`34667501457`) is green at commit `031510ce1c2e228b1be9783fc4435cb85e73ea5c`, validating Oklahoma Pass 31 runtime activation.** Typecheck, curated-casino audit, inherited test-suite report, development build and Dinner icon verification all completed successfully. The validator was subsequently extended through Pass 31 at commit `28cdc930d5b485f7aaa1a8f0aee48d0ae87dc6e0`; its audit logic is the same path exercised green by Run 186 with Pass 31 active. This supersedes Run 182 as the current validated runtime baseline. A green run never authorizes a merge to `main` by itself.
+**Run 190 (`34667671593`) is green at commit `59160807056f9c723fd9c8bfaa6eb9f8be1d7535`, validating Nevada Pass 32 runtime activation.** Typecheck, curated-casino audit, inherited test-suite report, development build and Dinner icon verification all completed successfully. The validator was then extended through Pass 32 at commit `70690844fda025e749adc69604465fe0a431b118`; Pass 32 itself was already exercised green in Run 190. This supersedes Run 186 as the current validated runtime baseline. A green run never authorizes a merge to `main` by itself.
 
 ## Casino reconciliation policy
 
@@ -30,13 +30,19 @@ For large jurisdictions, use 50–100 verified-destination runtime batches as a 
 
 ## Runtime casino progress
 
-Casino runtime is **validated through Pass 31**. Pass 30 adds Oklahoma Duck Creek and Checotah after address normalization; Pass 31 adds Artesian Casino after current-site lineage/address reconciliation. `src/lib/nightlife/search.ts` imports and appends through Pass 31. `scripts/audit-casino-catalog.mjs` enumerates catalog files through Pass 31. Run 186 validates Pass 31 active green.
+Casino runtime is **validated through Pass 32**. Pass 30 adds Oklahoma Duck Creek and Checotah after address normalization; Pass 31 adds Artesian Casino after current-site lineage/address reconciliation; Pass 32 adds 15 previously QA-cleared Nevada NV-02 destinations from Laughlin and Reno-Sparks. `src/lib/nightlife/search.ts` imports and appends through Pass 32. `scripts/audit-casino-catalog.mjs` enumerates catalog files through Pass 32. Run 190 validates Pass 32 active green.
 
-California Pass 19, Oregon Pass 20, Washington Pass 21 and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida, New York, Oklahoma and Colorado. Nevada remains pending/rolling.
+California Pass 19, Oregon Pass 20, Washington Pass 21 and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida, New York, Oklahoma, Colorado and Nevada NV-02 staged additions.
 
-## Nevada
+## Nevada — rolling, 65 active runtime destinations
 
-Nevada's provisional audit decision universe is 174 rows, not a final runtime count. Runtime Batch NV-01 / Pass 22 contains 50 curated destinations. Remaining work includes Winnemucca/I-80, Stockmen's Fallon, Red Drag Elko, The Nevada Casino & Bar Battle Mountain, Longstreet address normalization, Buffalo Bill's/Whiskey Pete's operation state and rural completeness sweeps. Nevada progresses in parallel without blocking smaller states.
+Nevada's provisional audit decision universe is 174 rows, not a final runtime count. Runtime Batch NV-01 / Pass 22 contains 50 curated destinations.
+
+NV-02 was selected as a 50-candidate rolling batch, but clean segments may enter runtime without waiting for unrelated holds. Two NV-02 segments had already cleared every individual gate in durable audit artifacts: **8 Laughlin destinations** in `audit/nevada-runtime-batch-2-laughlin-qa-2026-09-11.json` and **7 Reno-Sparks destinations** in `audit/nevada-runtime-batch-2-reno-sparks-qa-2026-09-11.json`.
+
+`src/lib/nightlife/casino-catalog-pass-32.ts` activates those **15 QA-cleared NV-02 destinations**, bringing Nevada's active curated runtime from **50 to 65**. The Laughlin additions are Aquarius, Riverside, Edgewater, Golden Nugget Laughlin, Harrah's Laughlin, Laughlin River Lodge, The New Pioneer and Tropicana Laughlin. The Reno-Sparks additions are Atlantis, Peppermill, Grand Sierra Resort, Nugget Casino Resort, Western Village, Alamo Sparks Petro and Bonanza Casino. The New Pioneer preserves Pioneer Hotel & Gambling Hall as an alias for dedupe protection. Run 190 validates this staged Nevada expansion green.
+
+Nevada remains pending/rolling rather than statewide complete. Remaining work includes the uncleared NV-02 Boulder/Henderson, North Las Vegas/Northwest and outer Clark/Mesquite/Primm segments plus Winnemucca/I-80, Stockmen's Fallon, Red Drag Elko, The Nevada Casino & Bar Battle Mountain, Longstreet address normalization, Buffalo Bill's/Whiskey Pete's operation state and rural completeness sweeps.
 
 ## Colorado — runtime complete and green
 
@@ -62,15 +68,15 @@ Coordinate QA verifies **3 of 4**. Kickapoo Lucky Eagle is `28.61092,-100.44078`
 
 The sole remaining Texas coordinate hold is **Naskila Casino Leggett**, current temporary casino at `10314 US 59 N, Livingston, TX 77351`. Do not substitute a nearby parcel centroid, smoke-shop/rest-area point, or broader future-resort `10450 US-59` location unless direct evidence establishes it as the operating temporary-casino point.
 
-Texas is not complete until Leggett clears direct numerical property-coordinate QA, all four destinations pass stable-ID/duplicate reconciliation, enter a later runtime pass, and validate green. Passes 30 and 31 are occupied by Oklahoma additions and must not be reused for Texas.
+Texas is not complete until Leggett clears direct numerical property-coordinate QA, all four destinations pass stable-ID/duplicate reconciliation, enter a later runtime pass, and validate green. Passes 30–32 are occupied and must not be reused for Texas.
 
 ## Oklahoma — Passes 28 + 30 + 31 green with 49 runtime records
 
 Oklahoma candidate universe remains **77**. Pass 28 serialized the first **46** runtime-eligible records. Pass 30 added Duck Creek and Checotah after resolving their final street-number normalization holds, bringing active Oklahoma runtime to 48.
 
-`audit/oklahoma-coordinate-qa-pass-9-2026-09-12.json` resolves **Artesian Casino** as the next clean destination. Canonical casino-facing address remains **23 W Vinita Ave, Sulphur, OK 73086**, while the integrated Artesian Hotel/Casino complex also uses **1001 W 1st Street** as its broader property address. These are one current destination, not two. Property-specific coordinate is **`34.507847,-96.967535`**. `src/lib/nightlife/casino-catalog-pass-31.ts` serializes Artesian and Run 186 validates Pass 31 active green.
+`audit/oklahoma-coordinate-qa-pass-9-2026-09-12.json` resolves **Artesian Casino** as the next clean destination. Canonical casino-facing address remains **23 W Vinita Ave, Sulphur, OK 73086**, while the integrated Artesian Hotel/Casino complex also uses **1001 W 1st Street** as its broader property address. These are one current destination, not two. Property-specific coordinate is **`34.507847,-96.967535`**. `src/lib/nightlife/casino-catalog-pass-31.ts` serializes Artesian and Run 186 validated Pass 31 active green; Run 190 confirms the combined runtime remains green after Nevada Pass 32.
 
-Oklahoma now has **49 active audited runtime destinations** and **49 property-coordinate-cleared destinations** in the staged set. Oklahoma remains intentionally not marked statewide complete. Lakecrest, Coweta, Lake Eufaula, Holdenville and Cherokee South Coffeyville remain priority holds for coordinate/current-site or lineage QA; other statewide candidates remain subject to the same evidence gates. WinStar preserves ID stem `winstar`; Choctaw Durant preserves `choctaw-durant`.
+Oklahoma has **49 active audited runtime destinations** and **49 property-coordinate-cleared destinations** in the staged set. Oklahoma remains intentionally not marked statewide complete. Lakecrest, Coweta, Lake Eufaula, Holdenville and Cherokee South Coffeyville remain priority holds for coordinate/current-site or lineage QA; a September 12 re-search did not surface sufficiently strong new property-specific numerical evidence to lower those holds. WinStar preserves ID stem `winstar`; Choctaw Durant preserves `choctaw-durant`.
 
 ## Legal/compliance continuity
 
