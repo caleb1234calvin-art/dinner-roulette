@@ -16,7 +16,7 @@ _Last updated: September 11, 2026_
 
 `Validate Dinner Integration` is the compatibility gate for the integration branch. It performs dependency install, TypeScript checking, casino audit, inherited tests as report-only, development build, and Dinner icon verification.
 
-**Run 148 (`34653267544`) is green at commit `9101c7547e18636e4aeabe590a551245cace6a63`, validating the Oklahoma Pass 28 runtime state.** Every job step completed successfully: install, TypeScript checking, curated-casino audit, inherited test-suite report, development build and Dinner icon verification. This remains the current validated runtime baseline. A green run never authorizes a merge to `main` by itself.
+**Run 175 (`34665141328`) is green at commit `1e9ef9f439fa61af6acf7ff905b9ef9be28b6d37`, validating Colorado Pass 29 runtime activation.** Every job step completed successfully: install, TypeScript checking, curated-casino audit, inherited test-suite report, development build and Dinner icon verification. This supersedes Run 148 as the current validated runtime baseline. A green run never authorizes a merge to `main` by itself.
 
 ## Casino reconciliation policy
 
@@ -30,7 +30,7 @@ For large jurisdictions, use 50–100 verified-destination runtime batches as a 
 
 ## Runtime casino progress
 
-Casino runtime is **validated through Pass 28**. `src/lib/nightlife/casino-catalog-pass-29.ts` now stages the reconciled 31-destination Colorado set, but Pass 29 is **not active yet**: `src/lib/nightlife/search.ts` still ends at Pass 28 and `scripts/audit-casino-catalog.mjs` still enumerates catalog files only through Pass 28. Do not call Colorado runtime-complete until Pass 29 is wired, the validator is extended, and Validate Dinner Integration is green.
+Casino runtime is **validated through Pass 29**. `src/lib/nightlife/casino-catalog-pass-29.ts` contains the reconciled 31-destination Colorado set; `src/lib/nightlife/search.ts` imports and appends Pass 29 to chronological `CASINO_PASSES`; `scripts/audit-casino-catalog.mjs` enumerates catalog files through Pass 29. Run 175 validates the activated Colorado runtime state green.
 
 California Pass 19, Oregon Pass 20, Washington Pass 21 and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida and New York. Nevada remains pending/rolling.
 
@@ -38,7 +38,7 @@ California Pass 19, Oregon Pass 20, Washington Pass 21 and Nevada Pass 22 remain
 
 Nevada's provisional audit decision universe is 174 rows, not a final runtime count. Runtime Batch NV-01 / Pass 22 contains 50 curated destinations. Remaining work includes Winnemucca/I-80, Stockmen's Fallon, Red Drag Elko, The Nevada Casino & Bar Battle Mountain, Longstreet address normalization, Buffalo Bill's/Whiskey Pete's operation state and rural completeness sweeps. Nevada progresses in parallel without blocking smaller states.
 
-## Colorado — statewide QA complete; Pass 29 staged
+## Colorado — runtime complete and green
 
 Colorado Division of Gaming accounting is 33 commercial regulator locations: 15 Black Hawk, 6 Central City and 12 Cripple Creek, plus two tribal casino resorts. Regulator rows are accounting/evidence units and do not automatically equal consumer destinations.
 
@@ -52,7 +52,7 @@ Cripple Creek is **10/10** for address and coordinate QA. `audit/colorado-crippl
 
 The two tribal resorts, Sky Ute and Ute Mountain, remain coordinate-cleared.
 
-`src/lib/nightlife/casino-catalog-pass-29.ts` contains all **31 reconciled Colorado destinations**. Immediate Colorado action is now implementation-only: import Pass 29 into `src/lib/nightlife/search.ts`, append it to chronological `CASINO_PASSES`, extend `scripts/audit-casino-catalog.mjs` through Pass 29, run Validate Dinner Integration, inspect reconciliation warnings/errors, and only then mark Colorado runtime complete.
+`src/lib/nightlife/casino-catalog-pass-29.ts` contains all **31 reconciled Colorado destinations**. Pass 29 is active in runtime, the casino validator includes it, and **Run 175 is green**. Colorado can now be treated as runtime-complete for this audited destination set. Future Colorado work is maintenance/re-audit rather than a blocker.
 
 ## Texas — 4 current destinations; 2 coordinate verified
 
@@ -66,9 +66,9 @@ Still held for direct numerical property coordinates: Naskila Livingston at `540
 
 Oklahoma candidate universe remains **77**. Current identity/address QA reached **54**, property-specific coordinate QA reached **48**, and record-level runtime eligibility approved **46** for Pass 28. Duck Creek and Checotah remain held for current street-number normalization; Artesian, Lakecrest, Coweta, Lake Eufaula, Holdenville and Cherokee South Coffeyville remain outside Pass 28 for coordinate/current-site or lineage holds.
 
-`src/lib/nightlife/casino-catalog-pass-28.ts` contains the 46 eligible Oklahoma destinations. `src/lib/nightlife/search.ts` imports Pass 28 and appends it to chronological `CASINO_PASSES`. The validator currently enumerates Pass 2 through Pass 28. WinStar preserves ID stem `winstar`; Choctaw Durant preserves `choctaw-durant`.
+`src/lib/nightlife/casino-catalog-pass-28.ts` contains the 46 eligible Oklahoma destinations. `src/lib/nightlife/search.ts` imports Pass 28 and appends it to chronological `CASINO_PASSES`. The validator now enumerates through Pass 29. WinStar preserves ID stem `winstar`; Choctaw Durant preserves `choctaw-durant`.
 
-**Run 148 confirms this implementation is green.** Oklahoma remains intentionally not marked statewide complete; future cleanup/additions can proceed separately without holding the validated 46 hostage.
+**Run 148 originally confirmed the Oklahoma Pass 28 implementation green; Run 175 subsequently confirms the combined runtime remains green after Colorado Pass 29 activation.** Oklahoma remains intentionally not marked statewide complete; future cleanup/additions can proceed separately without holding the validated 46 hostage.
 
 ## Legal/compliance continuity
 
@@ -80,7 +80,7 @@ Issue #29 remains the original Dinner icon system: 15 semantic categories per th
 
 ## Caustic Relay / startup-ident continuity
 
-Caustic Relay is the active working maker/publisher brand. The canonical black-mamba/scorpion hybrid creature is immutable unless Caleb explicitly requests redesign. Current startup asset is `public/brand/CAUSTIC_RELAY_ident-2.mp4`, wired by `src/components/startup-ident.tsx`, compatibility-validated by green Run 103 and still passing the current Run 148 integration build.
+Caustic Relay is the active working maker/publisher brand. The canonical black-mamba/scorpion hybrid creature is immutable unless Caleb explicitly requests redesign. Current startup asset is `public/brand/CAUSTIC_RELAY_ident-2.mp4`, wired by `src/components/startup-ident.tsx`, compatibility-validated by green Run 103 and still passing the current Run 175 integration build.
 
 ## Future food-truck discovery
 
