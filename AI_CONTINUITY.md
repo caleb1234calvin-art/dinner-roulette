@@ -36,7 +36,7 @@ Casino catalog modules run through **Pass 28** on integration. Pass 28 is the fi
 
 Nevada's provisional audit decision universe is 174 rows, not a final runtime count. Runtime Batch NV-01 / Pass 22 contains 50 curated destinations. Remaining work includes Winnemucca/I-80, Stockmen's Fallon, Red Drag Elko, The Nevada Casino & Bar Battle Mountain, Longstreet address normalization, Buffalo Bill's/Whiskey Pete's operation state and rural completeness sweeps. Nevada progresses in parallel without blocking smaller states.
 
-## Colorado — coordinate QA advancing
+## Colorado — Cripple Creek coordinate QA underway
 
 Colorado Division of Gaming accounting is corrected to 33 commercial regulator locations: 15 Black Hawk, 6 Central City, 12 Cripple Creek, plus two tribal casino resorts. Regulator rows are accounting/evidence units and do not automatically equal consumer destinations.
 
@@ -44,15 +44,15 @@ Cripple Creek destination reconciliation resolves FHR BILLY'S as an accounting/l
 
 Colorado tribal QA clears both resorts: Sky Ute at `37.138214,-107.6323312` and Ute Mountain Casino at `37.20475,-108.68612`.
 
-Black Hawk address QA clears Ameristar, Horseshoe, Lady Luck, The Lodge, The Gilpin, Monarch, Saratoga, Sasquatch, Wild Card and Bigfoot. Bigfoot is the current successor at the former Z Casino property; do not create a parallel current Z destination.
+Black Hawk address QA clears Ameristar, Horseshoe, Lady Luck, The Lodge, The Gilpin, Monarch, Saratoga, Sasquatch, Wild Card and Bigfoot. Bigfoot is the current successor at the former Z Casino property; do not create a parallel current Z destination. Bally's Black Hawk remains three separately routable current physical subproperties: East, North and West; do not collapse them.
 
-Bally's Black Hawk is resolved as **three separately routable current physical subproperties**: East at `321 Main Street` (`39.79845,-105.48767`), North at `300 Main Street` (`39.79894,-105.48825`), and West at `261 Main Street` (`39.79883,-105.48885`). Do not collapse them.
+Black Hawk coordinate QA is now **13/13 complete**. The earlier pass-1a/pass-1b artifacts plus Bally's cleared 12 destinations, and `audit/colorado-black-hawk-coordinate-qa-pass-1c-2026-09-11.json` resolves the final Horseshoe Black Hawk hold at `39.7980972,-105.4834834` using an exact `401 Main Street` geocode paired with current Horseshoe identity/address evidence. Do not substitute nearby restaurant/hotel geometry.
 
-The previously blocked broad Black Hawk coordinate write has now been replaced by two smaller durable artifacts. `audit/colorado-black-hawk-coordinate-qa-pass-1a-2026-09-11.json` verifies Ameristar, Lady Luck, The Lodge, The Gilpin and Monarch. `audit/colorado-black-hawk-coordinate-qa-pass-1b-2026-09-11.json` verifies Saratoga, Sasquatch, Wild Card and Bigfoot. Together with the three Bally's subproperties, **12 Black Hawk destinations now have durable property coordinates**. **Horseshoe Black Hawk remains the principal direct-coordinate hold**; do not substitute nearby restaurant/hotel geometry.
+Central City address and coordinate QA are **6/6 complete**. `audit/colorado-central-city-coordinate-qa-pass-1-2026-09-11.json` includes Century Casino & Hotel Central City at `39.800474,-105.512168` and Grand Z Casino & Hotel at `39.79999,-105.50924` along with the four previously verified destinations.
 
-Central City address QA clears all six consumer destinations. `audit/colorado-central-city-coordinate-qa-pass-1-2026-09-11.json` now verifies **6 of 6** property coordinates. The final two holds are cleared: Century Casino & Hotel Central City at `39.800474,-105.512168` and Grand Z Casino & Hotel at `39.79999,-105.50924`. Central City coordinate QA is complete.
+Cripple Creek address QA is now **10/10 complete** in `audit/colorado-cripple-creek-address-qa-pass-1-2026-09-11.json`. `audit/colorado-cripple-creek-coordinate-qa-pass-1a-2026-09-11.json` verifies **6/10** direct property coordinates: Century, Colorado Grande, Johnny Nolon's, Midnight Rose, Brass Ass and Double Eagle. Remaining direct-property-coordinate holds are **Bronco Billy's, Chamonix, McGills and Golden Nugget**. Keep Bronco Billy's and Chamonix separately routable despite their integrated adjoining complex; do not substitute Golden Nugget's adjacent hotel coordinate for the casino at 119 Carbonate Street.
 
-Immediate Colorado action: resolve the remaining direct coordinate for Horseshoe Black Hawk, then finish the ten-property Cripple Creek address/coordinate layer. After the full Colorado consumer set clears stable-ID/duplicate QA, serialize the Colorado runtime pass and validate it before marking Colorado complete.
+Immediate Colorado action: resolve those four Cripple Creek coordinate holds. Then run full Colorado stable-ID/duplicate/alias reconciliation, serialize the Colorado runtime pass, and validate it before marking Colorado complete.
 
 ## Texas — 4 current destinations; 2 coordinate verified
 
