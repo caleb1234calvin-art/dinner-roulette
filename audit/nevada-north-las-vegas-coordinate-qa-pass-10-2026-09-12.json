@@ -1,0 +1,91 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "north-las-vegas-northwest-coordinate-qa-pass-10-runtime-ready",
+  "scope": "Rolling QA for four current NV-02 North Las Vegas / northwest-valley destinations. The pass preserves current-operation, normalized-address, property-coordinate, stable-ID, website and duplicate/alias gates and does not claim statewide completeness.",
+  "records": [
+    {
+      "id": "casino-catalog-nv-bighorn-north-las-vegas",
+      "name": "Bighorn Casino",
+      "address": "3016 E Lake Mead Blvd, North Las Vegas, NV 89030",
+      "lat": 36.196354,
+      "lon": -115.106376,
+      "website": "https://www.bighorncasino.com/",
+      "identityEvidence": "https://www.gaming.nv.gov/contentassets/aa7619241e334b1cb1d9ad662d0945d1/june-2026-ngc-agenda.pdf",
+      "coordinateEvidence": "https://github.com/microsoft/WhatTheHack/blob/master/004-HotelCaliVegasDevHack/Student/Resources/LasVegasHotelList.json",
+      "status": "runtime-ready",
+      "note": "June 2026 Nevada Gaming Commission agenda independently confirms current Bighorn Casino identity and 3016 E Lake Mead Blvd address."
+    },
+    {
+      "id": "casino-catalog-nv-cannery-north-las-vegas",
+      "name": "Cannery Casino & Hotel",
+      "address": "2121 E Craig Rd, North Las Vegas, NV 89030",
+      "lat": 36.2393063,
+      "lon": -115.1229429,
+      "website": "https://www.cannerycasino.com/",
+      "identityEvidence": ["https://www.gaming.nv.gov/siteassets/content/about/agenda-disposition/prior-years/history-agenda-20025.pdf", "https://www.booking.com/hotel/us/po-cannery-casino-and-hotel.html"],
+      "coordinateEvidence": "https://www.casinocamper.com/cannery-casino-north/",
+      "status": "runtime-ready",
+      "note": "Do not confuse the active North Las Vegas Cannery with the separately closed Eastside Cannery on Boulder Highway."
+    },
+    {
+      "id": "casino-catalog-nv-aliante",
+      "name": "Aliante Casino + Hotel + Spa",
+      "address": "7300 N Aliante Pkwy, North Las Vegas, NV 89084",
+      "lat": 36.2919823,
+      "lon": -115.184763,
+      "website": "https://www.aliantegaming.com/",
+      "identityEvidence": ["https://www.gaming.nv.gov/siteassets/content/about/agenda-disposition/prior-years/history-agenda-20025.pdf", "https://www.linkedin.com/company/aliante-casino-hotel"],
+      "coordinateEvidence": "https://gist.github.com/jeremiak/9f0697e6159f5069d8e38b3c371d70da",
+      "status": "runtime-ready",
+      "note": "Use current Aliante naming at the 7300 N Aliante Pkwy property; historical Aliante Station naming is an alias, not a second destination."
+    },
+    {
+      "id": "casino-catalog-nv-santa-fe-station",
+      "name": "Santa Fe Station Hotel & Casino",
+      "address": "4949 N Rancho Dr, Las Vegas, NV 89130",
+      "lat": 36.2498453,
+      "lon": -115.2442324,
+      "website": "https://santafestation.com/",
+      "identityEvidence": ["https://www.gaming.nv.gov/siteassets/content/about/orders-of-registration/order-station-casinos-inc-34-twentieth-revised-order-of-registration-09-26-01.pdf", "https://www.gaming.nv.gov/siteassets/content/about/abstract/abstract-fy-2025.pdf"],
+      "coordinateEvidence": "https://www.clarkcountynv.gov/adobe/assets/urn%3Aaaid%3Aaem%3A0c60028b-bd31-4fa9-bfd0-8f72d80a1bde/original/as/20200901-2015-o3-ei-es-sip-appendix-a.pdf",
+      "status": "runtime-ready",
+      "note": "Clark County facility inventory directly supplies the property address and numerical facility coordinate; current Nevada Gaming Control Board abstract lists Santa Fe Station among current Red Rock Resorts casino operations."
+    }
+  ],
+  "duplicateQA": {
+    "selectionSource": "audit/nevada-runtime-batch-2-selection-2026-09-11.json",
+    "samePropertyAliasNotes": [
+      "Aliante Station Casino + Hotel is historical naming for the current Aliante Casino + Hotel + Spa property and must not become a parallel destination.",
+      "Cannery Casino & Hotel at 2121 E Craig Rd is distinct from the closed Eastside Cannery property at 5255 Boulder Hwy.",
+      "Bighorn Casino is distinct from Longhorn Casino despite common 2026 DeSimone licensing evidence."
+    ],
+    "result": "PASS_FOR_RUNTIME_SERIALIZATION"
+  },
+  "holds": [
+    {
+      "name": "Jerry's Nugget Casino",
+      "address": "1821 Las Vegas Blvd N, North Las Vegas, NV 89030",
+      "status": "hold",
+      "reason": "Current operation/address is strongly corroborated by September 2026 Nevada employment data sourced from Jerry's Nugget, but a numerical property point at the same standard was not accepted in this pass."
+    },
+    {
+      "name": "Poker Palace Casino",
+      "address": "2757 Las Vegas Blvd N, North Las Vegas, NV 89030",
+      "status": "hold",
+      "reason": "Nevada regulatory evidence establishes the property identity/address, but final current-operation and numerical property-coordinate QA remain incomplete."
+    },
+    {
+      "name": "Silver Nugget Casino",
+      "status": "hold",
+      "reason": "Retain until current identity/operation and property-coordinate QA are independently reconciled."
+    }
+  ],
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 88,
+    "runtimeReadyThisPass": 4,
+    "projectedNevadaRuntimeAfterActivation": 92,
+    "statewideComplete": false
+  },
+  "nextPhase": "Serialize these four records in Pass 37, validate green, then continue the remaining North Las Vegas and Boulder/Henderson holds without weakening the property-coordinate gate."
+}
