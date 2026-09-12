@@ -1,0 +1,93 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "henderson-successor-coordinate-qa-pass-14-runtime-ready",
+  "scope": "Follow-up QA for the remaining Henderson segment after Pass 40, including explicit Jokers Wild/Cadence Crossing succession reconciliation. Only destinations clearing current-operation, normalized-address, property-coordinate, stable-ID, current-website and duplicate/alias gates are promoted.",
+  "records": [
+    {
+      "id": "casino-catalog-nv-club-fortune-henderson",
+      "name": "Club Fortune Casino",
+      "address": "725 S Racetrack Rd, Henderson, NV 89015",
+      "lat": 36.01776,
+      "lon": -114.94821,
+      "website": "https://clubfortunecasino.com/",
+      "identityEvidence": [
+        "https://clubfortunecasino.com/",
+        "https://clubfortunecasino.com/promotion/bonus-sundays-vip-2/2026-06-07/",
+        "https://www.gaming.nv.gov/uploadedFiles/gamingnvgov/content/about/agenda-disposition/2025Jul-gcb-agenda.pdf"
+      ],
+      "coordinateEvidence": "https://mapcarta.com/W222428373",
+      "status": "runtime-ready",
+      "note": "Current first-party September 2026 site presents Henderson as an operating Club Fortune location, and current first-party promotion material uses the exact 725 S Racetrack Rd address. Nevada Gaming Control Board material also identifies the licensed Henderson property. OSM way 222428373 is the casino building itself."
+    },
+    {
+      "id": "casino-catalog-nv-rainbow-club-henderson",
+      "name": "Rainbow Club Casino",
+      "address": "122 S Water St, Henderson, NV 89015",
+      "lat": 36.03269,
+      "lon": -114.98372,
+      "website": "https://rainbowhenderson.com/",
+      "identityEvidence": [
+        "https://rainbowhenderson.com/",
+        "https://rainbowhenderson.com/about-rainbow-club-casino/",
+        "https://rainbowhenderson.com/gaming/"
+      ],
+      "coordinateEvidence": "https://mapcarta.com/es/W265984806",
+      "status": "runtime-ready",
+      "note": "Current first-party site confirms the operating Water Street casino, exact 122 S Water St address and active gaming/dining. OSM way 265984806 supplies a property-specific casino-building point."
+    }
+  ],
+  "successionReconciliation": [
+    {
+      "retired": "Jokers Wild Casino",
+      "successor": "Cadence Crossing Casino",
+      "address": "920 N Boulder Hwy, Henderson, NV 89011",
+      "operationStatus": "successor-current-retired-predecessor",
+      "evidence": [
+        "https://www.sec.gov/Archives/edgar/data/906553/000143774926025062/bgc20260602_10q.htm",
+        "https://lasvegassun.com/news/2026/mar/26/in-henderson-boyd-gaming-swaps-old-favorite-for-a/",
+        "https://www.clarkcountynv.gov/assets/documents/government/departments/environment_and_sustainability/division_of_air_quality/dcop/dcopsbyarea-february-02-2026.pdf"
+      ],
+      "runtimeDecision": "hold-successor-coordinate",
+      "note": "Boyd's 2026 SEC filing says Cadence Crossing opened March 25, 2026 and replaced Jokers Wild; demolition of Jokers Wild began in Q1 2026. Current government and opening coverage fix the successor at 920 N Boulder Hwy. Do not emit Jokers Wild. Cadence Crossing remains held only until a direct property-specific numerical point for the new casino footprint is independently captured; do not silently reuse a predecessor building point."
+    }
+  ],
+  "holds": [
+    {
+      "candidate": "Cadence Crossing Casino",
+      "address": "920 N Boulder Hwy, Henderson, NV 89011",
+      "reason": "Current operation and exact address are resolved, but a direct numerical property point for the new casino footprint has not yet cleared the coordinate-evidence gate."
+    },
+    {
+      "candidate": "The Pass Casino",
+      "address": "140 S Water St, Henderson, NV 89015",
+      "reason": "Operation-state conflict remains between current-looking first-party copy and 2026 acquisition/renovation reporting."
+    },
+    {
+      "candidate": "Club Fortune North",
+      "address": "2757 Las Vegas Blvd N, North Las Vegas, NV",
+      "reason": "Current first-party Club Fortune site still labels the North Las Vegas successor location as coming soon/under renovation, so the project continues to defer activation despite outside post-opening signals."
+    },
+    {
+      "candidate": "Wildfire on Fremont",
+      "address": "2700 E Fremont St, Las Vegas, NV 89104",
+      "reason": "Current first-party identity/address is strong, but the direct numerical point found in this pass is address-geocoded rather than a sufficiently strong property-specific casino feature."
+    },
+    {
+      "candidate": "The Nevada Casino & Bar",
+      "address": "36 E Front St, Battle Mountain, NV 89820",
+      "reason": "Current 2026 operation and a direct OSM casino point are available, but a stable current first-party property website has not been established; keep staged rather than lowering the website/identity standard."
+    }
+  ],
+  "duplicateQA": {
+    "result": "PASS_FOR_RUNTIME_SERIALIZATION",
+    "note": "Club Fortune Henderson is distinct from the not-yet-promoted Club Fortune North successor property. Rainbow Club is distinct from adjacent Emerald Island and The Pass. Jokers Wild is explicitly retired in favor of Cadence Crossing rather than emitted in parallel."
+  },
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 100,
+    "runtimeReadyThisPass": 2,
+    "projectedNevadaRuntimeAfterActivation": 102,
+    "statewideComplete": false
+  },
+  "nextPhase": "Serialize Club Fortune Henderson and Rainbow Club in Pass 41, validate green, then continue Cadence Crossing coordinate QA plus Wildfire Fremont and rural/operation-state holds without weakening the evidence gate."
+}
