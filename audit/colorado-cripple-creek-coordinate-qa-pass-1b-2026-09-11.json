@@ -1,0 +1,16 @@
+{
+  "jurisdiction":"Colorado",
+  "city":"Cripple Creek",
+  "capturedOn":"2026-09-11",
+  "status":"coordinate-qa-pass-1b-complete",
+  "scope":"Resolve the four remaining Cripple Creek direct-property coordinate holds after pass 1a.",
+  "verified":[
+    {"id":"co-cripple-creek-bronco-billys","name":"Bronco Billy's Casino","address":"233 E Bennett Ave, Cripple Creek, CO 80813","lat":38.7469187,"lon":-105.1773835,"coordinateEvidence":"https://gist.github.com/jeremiak/9f0697e6159f5069d8e38b3c371d70da","identityAddressEvidence":"https://chamonixco.com/bronco-billys-casino/","status":"coordinate-verified-exact-address"},
+    {"id":"co-cripple-creek-chamonix","name":"Chamonix Casino Hotel","address":"201 E Bennett Ave, Cripple Creek, CO 80813","lat":38.74678,"lon":-105.17815,"coordinateEvidence":"https://www.gujjutours.com/en/hotels/cripple-creek-7634/chamonix-casino-hotel-6674","identityAddressEvidence":"https://chamonixco.com/","status":"coordinate-verified","note":"Kept separate from Bronco Billy's despite the integrated adjoining complex."},
+    {"id":"co-cripple-creek-mcgills","name":"McGills Hotel and Casino","address":"232 E Bennett Ave, Cripple Creek, CO 80813","lat":38.7465374,"lon":-105.1774336,"coordinateEvidence":"https://gist.github.com/jeremiak/9f0697e6159f5069d8e38b3c371d70da","identityAddressEvidence":"https://www.triplecrowncasinos.com/contact/","status":"coordinate-verified-exact-address","note":"The city visitor page exposes an older 337 E Bennett variant; current Triple Crown/Google-facing identity controls for runtime address QA at 232 E Bennett."},
+    {"id":"co-cripple-creek-golden-nugget","name":"Golden Nugget Cripple Creek","address":"119 Carbonate Street, Cripple Creek, CO 80813","lat":38.75031,"lon":-105.17353,"coordinateEvidence":"https://mapcarta.com/W95047396","osmFeature":"way 95047396","identityAddressEvidence":"https://www.goldennugget.com/cripple-creek/contact-us/","status":"coordinate-verified-successor-lineage","note":"Map geometry is the same 119 Carbonate Street casino building under its prior Wildwood identity; current Golden Nugget first-party material confirms the casino at 119 Carbonate Street. Do not substitute the adjacent hotel at 421 Pikes Peak Avenue."}
+  ],
+  "held":[],
+  "qaAccounting":{"crippleCreekDestinations":10,"coordinateVerifiedPass1a":6,"coordinateVerifiedPass1b":4,"coordinateVerifiedTotal":10,"coordinatePending":0},
+  "nextPhase":"Cripple Creek address and coordinate QA are complete. Run statewide Colorado stable-ID/duplicate reconciliation, then serialize the clean runtime batch."
+}
