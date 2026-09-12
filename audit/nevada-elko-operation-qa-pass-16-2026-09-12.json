@@ -1,0 +1,34 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "elko-operation-qa-pass-16-runtime-ready",
+  "scope": "Resolve the Red Drag Casino Elko hold using current government, tourism and parcel evidence without weakening the coordinate or identity gate.",
+  "records": [
+    {
+      "id": "casino-catalog-nv-red-drag-elko",
+      "name": "Red Drag Casino",
+      "address": "404 S 5th St, Elko, NV 89801",
+      "lat": 40.8286,
+      "lon": -115.7634,
+      "website": "https://exploreelko.com/",
+      "identityEvidence": [
+        "https://exploreelko.com/wp-content/uploads/2025/12/2025-2026-Visitors-Guide-Elko-Nevada.1.pdf",
+        "https://elko-search.gsacorp.io/account/BU250232",
+        "https://www.gaming.nv.gov/siteassets/content/about/agenda-disposition/prior-years/history-disposition-20336.pdf"
+      ],
+      "propertyEvidence": [
+        "https://www.loopnet.com/property/404-s-5th-st-elko-nv-89801/32007-001422002/",
+        "https://www.compass.com/homedetails/404-S-5th-St-Elko-NV-89801/FSJ1S_pid/"
+      ],
+      "status": "hold-coordinate",
+      "note": "Current Elko County assessor data identifies Red Dragon Sports Bar #201 at parcel 001-422-002, 404 S 5th St, with casino NAICS/use and 2025 value history billed in 2026. The 2025-2026 official Elko visitor guide independently lists Red Drag Casino at the same address, and NGCB disposition establishes the nonrestricted slot license lineage. Parcel evidence identifies the land use as Casino. This pass resolves identity/current-operation/address but does not invent a numerical point: runtime promotion remains deferred until a direct property-specific coordinate is captured."
+    }
+  ],
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 103,
+    "runtimeReadyThisPass": 0,
+    "identityOperationHoldsResolved": 1,
+    "statewideComplete": false
+  },
+  "nextPhase": "Acquire a direct parcel/building coordinate for Red Drag; continue Cadence Crossing and Wildfire Fremont direct-coordinate QA. No runtime record is serialized from this artifact until that final coordinate gate clears."
+}
