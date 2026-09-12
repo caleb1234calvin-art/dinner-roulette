@@ -1,8 +1,8 @@
 {
   "jurisdiction": "Nevada",
   "capturedOn": "2026-09-12",
-  "status": "elko-operation-qa-pass-16-coordinate-and-co-location-hold",
-  "scope": "Preserve current government, tourism, property and casino-directory evidence for the active gaming property at 404 S 5th St, Elko. The operating Red Dragon identity is now well supported; runtime remains held on direct numerical property coordinates and final co-location handling for the Dotty's #214 listing at the same address.",
+  "status": "elko-operation-qa-pass-16-coordinate-only-hold",
+  "scope": "Preserve current government, tourism, property and casino-directory evidence for the active gaming property at 404 S 5th St, Elko. The operating identity and same-property duplicate treatment are now sufficiently resolved; runtime remains held only on a direct numerical property coordinate.",
   "records": [
     {
       "id": "casino-catalog-nv-red-dragon-elko",
@@ -23,15 +23,24 @@
         "https://www.compass.com/homedetails/404-S-5th-St-Elko-NV-89801/FSJ1S_pid/",
         "https://elko-search.gsacorp.io/account/BU250318"
       ],
-      "status": "coordinate-and-co-location-hold",
-      "note": "The identity question is materially narrower than the earlier artifact stated. Elko County currently assesses RED DRAGON SPORTS BAR #201 at parcel 001-422-002, 404 S 5th St, with casino NAICS/use and 2025 value history billed in 2026. Nevada's current tobacco-retail list independently carries RED DRAGON SPORTS BAR #201 at the same address. Elko City Council minutes show the regular retail liquor license issued to the DBA Red Dragon Sports Bar #201 and state that the project was open; Nevada Gaming Commission disposition approved the nonrestricted slot-machine license for that same DBA/address. The 2025-2026 official Elko visitor guide markets the same address as Red Drag Casino, while current casino-directory material identifies Red Dragon Sports Bar #201 and also lists Dotty's #214 at the identical address. That pattern supports Red Dragon as the operating property identity and Red Drag as a consumer/tourism alias; Dotty's appears to be a co-located Nevada Restaurant Services concept rather than evidence that Red Dragon ceased operating. No numerical coordinate has yet cleared the direct parcel/building-point gate, and runtime should also avoid accidental duplicate emission of co-located concepts until the intended destination treatment is explicit. The previously recorded 40.8286,-115.7634 values remain excluded as unsupported."
+      "coLocationEvidence": [
+        "https://ob.elkocitynv.gov/OnBaseAgendaOnline/Documents/DownloadFileBytes/Regular_Meeting_504_Minutes_4_25_2023_4_00_00_PM.pdf?documentType=2&meetingId=504",
+        "https://www.ziprecruiter.com/Jobs/Dragon",
+        "https://www.gamingdirectory.com/smokefree/owner/nevada-restaurant-services/",
+        "https://www.casinocity.com/nevada/elko/gold-dust-west-elko/map/nearest/"
+      ],
+      "status": "coordinate-only-hold",
+      "destinationTreatment": "Represent 404 S 5th St as one physical Dinner Roulette destination under the current consumer-facing Red Dragon identity. Treat Dotty's #214 as a co-located Nevada Restaurant Services concept/license at the same routable property rather than a second physical destination for roulette purposes. Do not emit both records at the identical property.",
+      "note": "Elko County currently assesses RED DRAGON SPORTS BAR #201 at parcel 001-422-002, 404 S 5th St, with casino NAICS/use and 2025 value history billed in 2026. Nevada's current tobacco-retail list independently carries RED DRAGON SPORTS BAR #201 at the same address. Elko City Council minutes and Nevada gaming records support the Red Dragon #201 operation, while the official 2025-2026 Elko visitor guide markets the property as Red Drag Casino. The co-location question is now resolved by additional evidence: Elko City records show the same 404 S 5th parcel was developed as a Dotty's Casino project; current Nevada Restaurant Services hiring material groups Red Dragon #201 and Dotty's #214 under the same management assignment and lists both at 404 S 5th; current gaming-directory and CasinoCity material also list Dotty's #214 at that exact address. For Dinner Roulette's physical-destination model, these are not two independently routable places and should not be duplicated. Red Dragon remains the canonical current consumer-facing identity because current county assessment, licensing/tourism evidence, and the public Elko guide all support it. No direct numerical coordinate has yet cleared the parcel/building-point gate. The previously recorded 40.8286,-115.7634 values remain excluded as unsupported."
     }
   ],
   "qaAccounting": {
     "nevadaRuntimeActiveAtOriginalReview": 103,
     "nevadaRuntimeActiveAtCurrentReview": 107,
     "runtimeReadyThisPass": 0,
+    "coLocationGateResolved": true,
+    "coordinateGateResolved": false,
     "statewideComplete": false
   },
-  "nextPhase": "Capture a direct numerical parcel/building point for 404 S 5th St and decide whether Red Dragon / Dotty's #214 should be represented as one routable property destination or separately named co-located destinations under the catalog's duplicate policy. Do not serialize until both questions are cleared."
+  "nextPhase": "Capture a direct numerical parcel/building point for 404 S 5th St. If that point clears, serialize one Red Dragon destination and suppress Dotty's #214 as a same-property duplicate rather than creating two routable runtime records."
 }
