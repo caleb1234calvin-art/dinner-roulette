@@ -1,0 +1,120 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "boulder-outer-clark-coordinate-qa-pass-13-runtime-ready",
+  "scope": "Rolling QA across remaining Boulder/Henderson and outer-Clark NV-02 holds. Only destinations independently clearing current-operation, normalized-address, property-coordinate, stable-ID, current-website and duplicate/alias gates are promoted.",
+  "records": [
+    {
+      "id": "casino-catalog-nv-longhorn-las-vegas",
+      "name": "Longhorn Hotel & Casino",
+      "address": "5288 Boulder Hwy, Las Vegas, NV 89122",
+      "lat": 36.10709,
+      "lon": -115.05915,
+      "website": "https://www.longhornhotelcasino.vegas/",
+      "identityEvidence": [
+        "https://www.longhornhotelcasino.vegas/",
+        "https://www.longhornhotelcasino.vegas/games/",
+        "https://www.longhornhotelcasino.vegas/casino-promotions/"
+      ],
+      "coordinateEvidence": "https://mapcarta.com/W248694487",
+      "status": "runtime-ready",
+      "note": "Current first-party site identifies the active 24-hour Boulder Highway casino and current June 2026 promotions. OSM way 248694487 supplies a property-specific casino-building point."
+    },
+    {
+      "id": "casino-catalog-nv-railroad-pass",
+      "name": "Railroad Pass Casino & Hotel",
+      "address": "1500 Railroad Pass Casino Rd, Henderson, NV 89002",
+      "lat": 35.97253,
+      "lon": -114.91195,
+      "website": "https://www.railroadpass.com/",
+      "identityEvidence": [
+        "https://www.railroadpass.com/",
+        "https://www.railroadpass.com/stay"
+      ],
+      "coordinateEvidence": "https://mapcarta.com/W817915717",
+      "status": "runtime-ready",
+      "note": "Current first-party site confirms active 24/7 casino operation and exact Henderson address. OSM way 817915717 is the casino building itself, distinct from the nearby travel-center and trailhead points."
+    },
+    {
+      "id": "casino-catalog-nv-barleys-henderson",
+      "name": "Barley's Casino & Brewery Co.",
+      "address": "4500 E Sunset Rd #30, Henderson, NV 89014",
+      "lat": 36.0718506,
+      "lon": -115.0753146,
+      "website": "https://wildfiregaming.com/barleys/",
+      "identityEvidence": [
+        "https://wildfiregaming.com/barleys/",
+        "https://wildfiregaming.com/contact/",
+        "https://stationcasinos.com/property-map/"
+      ],
+      "coordinateEvidence": "https://yellowpages.swiss/location.cfm?company=Barley-s-Casino-und-Brewing-Co.&key=272481",
+      "status": "runtime-ready",
+      "note": "Current Wildfire/Station first-party material confirms 24/7 gaming and exact Suite 30 address. The numerical point is a business/property coordinate at the same normalized address."
+    },
+    {
+      "id": "casino-catalog-nv-arizona-charlies-decatur",
+      "name": "Arizona Charlie's Decatur",
+      "address": "740 S Decatur Blvd, Las Vegas, NV 89107",
+      "lat": 36.1634312,
+      "lon": -115.2072287,
+      "website": "https://arizonacharliesdecatur.com/",
+      "identityEvidence": [
+        "https://arizonacharliesdecatur.com/",
+        "https://arizonacharliesdecatur.com/contact",
+        "https://arizonacharliesdecatur.com/events"
+      ],
+      "coordinateEvidence": "https://www.whereorg.com/noble-romans-inc-11027657",
+      "status": "runtime-ready",
+      "note": "Current first-party 2026 site confirms active casino/hotel operation, exact address and September/October 2026 events. Coordinate source resolves the same 740 S Decatur Blvd property parcel and is consistent with Mapcarta's Arizona Charlie's Decatur property point."
+    },
+    {
+      "id": "casino-catalog-nv-wildfire-rancho",
+      "name": "Wildfire Rancho",
+      "address": "1901 N Rancho Dr, Las Vegas, NV 89106",
+      "lat": 36.19449,
+      "lon": -115.19197,
+      "website": "https://wildfiregaming.com/wildfires/wildfire-rancho/",
+      "identityEvidence": [
+        "https://stationcasinos.com/casinos/",
+        "https://wildfiregaming.com/contact/",
+        "https://stationcasinos.com/property-map/"
+      ],
+      "coordinateEvidence": "https://mapcarta.com/W698198605",
+      "status": "runtime-ready",
+      "note": "Current Station/Wildfire first-party material confirms the active Rancho property and exact address. OSM way 698198605 supplies a property-specific commercial/hotel footprint at the same site."
+    }
+  ],
+  "duplicateQA": {
+    "selectionSource": "audit/nevada-runtime-batch-2-selection-2026-09-11.json",
+    "result": "PASS_FOR_RUNTIME_SERIALIZATION",
+    "samePropertyAliasNotes": [
+      "Arizona Charlie's Decatur is a separate physical property from Arizona Charlie's Boulder and uses a Decatur-specific stable ID.",
+      "Wildfire Rancho is a separate physical property from Wildfire Boulder and Wildfire on Fremont and uses a Rancho-specific stable ID.",
+      "Railroad Pass Casino is serialized from the casino-building point, not the adjacent travel-center or trailhead coordinates."
+    ]
+  },
+  "holds": [
+    {
+      "candidate": "Rainbow Club Casino",
+      "address": "122 S Water St, Henderson, NV 89015",
+      "reason": "Current operation/address remains strong, but a direct numerical property point has not yet cleared the same coordinate-evidence threshold."
+    },
+    {
+      "candidate": "The Pass Casino",
+      "address": "140 S Water St, Henderson, NV 89015",
+      "reason": "Current first-party site still reads active, but 2026 acquisition/renovation reporting creates an operation-state conflict; continue hold until independently reconciled."
+    },
+    {
+      "candidate": "Wildfire on Fremont",
+      "address": "2700 E Fremont St, Las Vegas, NV 89104",
+      "reason": "Current first-party and government address/operation evidence is strong, but this pass stops before accepting a weaker inferred numerical property point."
+    }
+  ],
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 95,
+    "runtimeReadyThisPass": 5,
+    "projectedNevadaRuntimeAfterActivation": 100,
+    "statewideComplete": false
+  },
+  "nextPhase": "Serialize these five records in Pass 40, validate green, then continue the Henderson succession/coordinate holds, Wildfire Fremont, and remaining rural/operation-state tail without weakening the evidence gate."
+}
