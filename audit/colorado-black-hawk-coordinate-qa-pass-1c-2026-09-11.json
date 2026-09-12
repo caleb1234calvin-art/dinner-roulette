@@ -1,0 +1,23 @@
+{
+  "jurisdiction":"Colorado",
+  "city":"Black Hawk",
+  "capturedOn":"2026-09-11",
+  "status":"coordinate-qa-pass-1c",
+  "scope":"Resolve the final Black Hawk direct-coordinate hold after address QA.",
+  "records":[
+    {
+      "id":"co-black-hawk-horseshoe",
+      "name":"Horseshoe Black Hawk",
+      "address":"401 Main Street, Black Hawk, CO 80422",
+      "lat":39.7980972,
+      "lon":-105.4834834,
+      "coordinateEvidence":"https://www.coordinatesfinder.com/coordinates/935505-401-main-street-black-hawk-co",
+      "identityAddressEvidence":"https://www.caesars.com/horseshoe-black-hawk",
+      "corroboratingAddressEvidence":"https://www.colorado.com/black-hawk/attractions-entertainment/casinos/horseshoe-black-hawk",
+      "status":"coordinate-verified-exact-address-geocode",
+      "note":"The coordinate is an exact 401 Main Street geocode paired with current Horseshoe identity/address evidence; it is not borrowed from a nearby restaurant or hotel POI."
+    }
+  ],
+  "qaAccounting":{"coordinateVerifiedThisPass":1,"coordinateVerifiedBlackHawkDurableIncludingBallysPass1aPass1bPass1c":13,"coordinatePending":0},
+  "nextPhase":"Black Hawk coordinate layer is complete. Finish Cripple Creek address/coordinate QA, then Colorado stable-ID/duplicate reconciliation and runtime serialization."
+}
