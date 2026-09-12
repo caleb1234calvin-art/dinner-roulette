@@ -2,7 +2,7 @@ import fs from "node:fs";
 
 const catalogFiles = [
   "src/lib/nightlife/casino-catalog.ts",
-  ...Array.from({ length: 34 }, (_, index) => `src/lib/nightlife/casino-catalog-pass-${index + 2}.ts`),
+  ...Array.from({ length: 35 }, (_, index) => `src/lib/nightlife/casino-catalog-pass-${index + 2}.ts`),
 ];
 const manifestFiles = ["audit/casino-sources.json", "audit/casino-sources-integration.json"];
 const SAME_PROPERTY_MILES = 0.35;
