@@ -1,0 +1,35 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "north-las-vegas-followup-reconciliation",
+  "scope": "Follow-up reconciliation immediately after Pass 37 research. This artifact records a newly clear candidate, a renamed successor property, and a closure exclusion without prematurely changing runtime while the Pass 37 validation gate is still running.",
+  "decisions": [
+    {
+      "name": "Jerry's Nugget Casino",
+      "address": "1821 Las Vegas Blvd North, North Las Vegas, NV 89030",
+      "lat": 36.1932,
+      "lon": -115.13263,
+      "website": "https://www.jerrysnugget.com/",
+      "decision": "runtime-ready-next-pass",
+      "evidence": ["https://www.jerrysnugget.com/", "https://mapcarta.com/W501387177"],
+      "note": "Current first-party site advertises active gaming and current September promotions and supplies the address. Mapcarta/OpenStreetMap way 501387177 supplies a property-specific casino coordinate."
+    },
+    {
+      "name": "Poker Palace Casino",
+      "address": "2757 Las Vegas Blvd N, North Las Vegas, NV 89030",
+      "decision": "retired-name-do-not-serialize",
+      "successor": "Club Fortune North",
+      "successorStatus": "current-operation-confirmed-coordinate-pending",
+      "evidence": ["https://cdcgaming.com/brief/las-vegas-former-poker-palace-patrons-praise-newly-opened-club-fortune-north/", "https://clubfortunecasino.com/"],
+      "note": "Poker Palace closed in October 2025 and the same physical property reopened in July 2026 as Club Fortune North. Any future runtime record must use the successor identity and collapse the Poker Palace alias rather than creating two destinations."
+    },
+    {
+      "name": "Silver Nugget Casino",
+      "address": "2140 Las Vegas Blvd N, North Las Vegas, NV 89030",
+      "decision": "exclude-closed",
+      "evidence": ["https://vegasadvantage.com/silver-nugget-closed/", "https://www.tripadvisor.co.uk/Attraction_Review-g45981-d271184-Reviews-Silver_Nugget_Casino-North_Las_Vegas_Nevada.html"],
+      "note": "Casino closed in 2023 and remains reported permanently closed in current 2026 listings. Do not serialize as a current Dinner Roulette casino destination."
+    }
+  ],
+  "nextPhase": "After Pass 37 is green, Jerry's Nugget may be serialized in the next Nevada runtime increment. Continue coordinate QA for Club Fortune North under its current successor identity."
+}
