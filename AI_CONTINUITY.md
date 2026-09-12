@@ -50,9 +50,9 @@ Bally's Black Hawk is resolved as **three separately routable current physical s
 
 The previously blocked broad Black Hawk coordinate write has now been replaced by two smaller durable artifacts. `audit/colorado-black-hawk-coordinate-qa-pass-1a-2026-09-11.json` verifies Ameristar, Lady Luck, The Lodge, The Gilpin and Monarch. `audit/colorado-black-hawk-coordinate-qa-pass-1b-2026-09-11.json` verifies Saratoga, Sasquatch, Wild Card and Bigfoot. Together with the three Bally's subproperties, **12 Black Hawk destinations now have durable property coordinates**. **Horseshoe Black Hawk remains the principal direct-coordinate hold**; do not substitute nearby restaurant/hotel geometry.
 
-Central City address QA clears all six consumer destinations. `audit/colorado-central-city-coordinate-qa-pass-1-2026-09-11.json` now verifies **4 of 6** property coordinates: Dostal Alley `39.8002,-105.51244`, Easy Street `39.7998967,-105.5124236`, Famous Bonanza `39.8005673,-105.5129721`, and Dragon Tiger `39.80085,-105.51127`. Century Central City and Grand Z remain direct-property-coordinate holds; do not use a photo camera location or generic nearby geometry merely to fill them.
+Central City address QA clears all six consumer destinations. `audit/colorado-central-city-coordinate-qa-pass-1-2026-09-11.json` now verifies **6 of 6** property coordinates. The final two holds are cleared: Century Casino & Hotel Central City at `39.800474,-105.512168` and Grand Z Casino & Hotel at `39.79999,-105.50924`. Central City coordinate QA is complete.
 
-Immediate Colorado action: resolve direct coordinates for Horseshoe Black Hawk, Century Central City and Grand Z; then finish the ten-property Cripple Creek address/coordinate layer. After the full Colorado consumer set clears stable-ID/duplicate QA, serialize the Colorado runtime pass and validate it before marking Colorado complete.
+Immediate Colorado action: resolve the remaining direct coordinate for Horseshoe Black Hawk, then finish the ten-property Cripple Creek address/coordinate layer. After the full Colorado consumer set clears stable-ID/duplicate QA, serialize the Colorado runtime pass and validate it before marking Colorado complete.
 
 ## Texas — 4 current destinations; 2 coordinate verified
 
