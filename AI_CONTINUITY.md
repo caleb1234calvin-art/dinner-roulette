@@ -16,7 +16,7 @@ _Last updated: September 11, 2026_
 
 `Validate Dinner Integration` is the compatibility gate for the integration branch. It performs dependency install, TypeScript checking, casino audit, inherited tests as report-only, development build, and Dinner icon verification.
 
-**Run 148 (`34653267544`) is green at commit `9101c7547e18636e4aeabe590a551245cace6a63`, validating the Oklahoma Pass 28 runtime state.** Every job step completed successfully: install, TypeScript, curated-casino audit, inherited test-suite report, development build and Dinner icon verification. This supersedes Run 107 as the current casino/runtime validation baseline. A green run never authorizes a merge to `main` by itself.
+**Run 148 (`34653267544`) is green at commit `9101c7547e18636e4aeabe590a551245cace6a63`, validating the Oklahoma Pass 28 runtime state.** Every job step completed successfully: install, TypeScript checking, curated-casino audit, inherited test-suite report, development build and Dinner icon verification. This remains the current validated runtime baseline. A green run never authorizes a merge to `main` by itself.
 
 ## Casino reconciliation policy
 
@@ -30,29 +30,29 @@ For large jurisdictions, use 50–100 verified-destination runtime batches as a 
 
 ## Runtime casino progress
 
-Casino catalog modules run through **Pass 28** on integration. Pass 28 is the first Oklahoma runtime batch and contains 46 records. **Run 148 validated Pass 28 green.** California Pass 19, Oregon Pass 20, Washington Pass 21 and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida and New York. Nevada remains pending/rolling.
+Casino runtime is **validated through Pass 28**. `src/lib/nightlife/casino-catalog-pass-29.ts` now stages the reconciled 31-destination Colorado set, but Pass 29 is **not active yet**: `src/lib/nightlife/search.ts` still ends at Pass 28 and `scripts/audit-casino-catalog.mjs` still enumerates catalog files only through Pass 28. Do not call Colorado runtime-complete until Pass 29 is wired, the validator is extended, and Validate Dinner Integration is green.
+
+California Pass 19, Oregon Pass 20, Washington Pass 21 and Nevada Pass 22 remain active. Later passes include Wisconsin/Idaho, Minnesota/Nebraska/Wyoming, South Dakota/North Dakota, Florida and New York. Nevada remains pending/rolling.
 
 ## Nevada
 
 Nevada's provisional audit decision universe is 174 rows, not a final runtime count. Runtime Batch NV-01 / Pass 22 contains 50 curated destinations. Remaining work includes Winnemucca/I-80, Stockmen's Fallon, Red Drag Elko, The Nevada Casino & Bar Battle Mountain, Longstreet address normalization, Buffalo Bill's/Whiskey Pete's operation state and rural completeness sweeps. Nevada progresses in parallel without blocking smaller states.
 
-## Colorado — Cripple Creek coordinate QA underway
+## Colorado — statewide QA complete; Pass 29 staged
 
-Colorado Division of Gaming accounting is corrected to 33 commercial regulator locations: 15 Black Hawk, 6 Central City, 12 Cripple Creek, plus two tribal casino resorts. Regulator rows are accounting/evidence units and do not automatically equal consumer destinations.
+Colorado Division of Gaming accounting is 33 commercial regulator locations: 15 Black Hawk, 6 Central City and 12 Cripple Creek, plus two tribal casino resorts. Regulator rows are accounting/evidence units and do not automatically equal consumer destinations.
 
-Cripple Creek destination reconciliation resolves FHR BILLY'S as an accounting/license row rather than a separate current Dinner Roulette destination. Bronco Billy's and Chamonix remain separate connected casino experiences; Century's two regulator licenses collapse to one consumer property. Current working Cripple Creek consumer-destination accounting from the 12 regulator rows is **10**.
+The reconciled current Dinner Roulette set is **31 destinations**: **13 Black Hawk + 6 Central City + 10 Cripple Creek + 2 tribal**. Address/property-coordinate QA is **31/31** and statewide stable-ID/duplicate/alias reconciliation is complete in `audit/colorado-statewide-runtime-reconciliation-2026-09-11.json`.
 
-Colorado tribal QA clears both resorts: Sky Ute at `37.138214,-107.6323312` and Ute Mountain Casino at `37.20475,-108.68612`.
+Black Hawk is **13/13**. Bally's East/North/West remain three separately routable physical destinations. Bigfoot is the current successor at the former Z Casino property; do not emit a parallel current Z destination. Horseshoe's final coordinate hold is resolved in pass 1c.
 
-Black Hawk address QA clears Ameristar, Horseshoe, Lady Luck, The Lodge, The Gilpin, Monarch, Saratoga, Sasquatch, Wild Card and Bigfoot. Bigfoot is the current successor at the former Z Casino property; do not create a parallel current Z destination. Bally's Black Hawk remains three separately routable current physical subproperties: East, North and West; do not collapse them.
+Central City is **6/6** for address and coordinate QA.
 
-Black Hawk coordinate QA is now **13/13 complete**. The earlier pass-1a/pass-1b artifacts plus Bally's cleared 12 destinations, and `audit/colorado-black-hawk-coordinate-qa-pass-1c-2026-09-11.json` resolves the final Horseshoe Black Hawk hold at `39.7980972,-105.4834834` using an exact `401 Main Street` geocode paired with current Horseshoe identity/address evidence. Do not substitute nearby restaurant/hotel geometry.
+Cripple Creek is **10/10** for address and coordinate QA. `audit/colorado-cripple-creek-coordinate-qa-pass-1b-2026-09-11.json` clears the final four holds: Bronco Billy's, Chamonix, McGills and Golden Nugget. Bronco Billy's and Chamonix remain separately routable despite their integrated adjoining complex. FHR BILLY'S remains a regulator/accounting row only. Century's multiple regulator rows collapse to one consumer property. Golden Nugget is the current successor at the former Wildwood casino property; do not emit Wildwood separately or substitute the adjacent hotel as another casino destination.
 
-Central City address and coordinate QA are **6/6 complete**. `audit/colorado-central-city-coordinate-qa-pass-1-2026-09-11.json` includes Century Casino & Hotel Central City at `39.800474,-105.512168` and Grand Z Casino & Hotel at `39.79999,-105.50924` along with the four previously verified destinations.
+The two tribal resorts, Sky Ute and Ute Mountain, remain coordinate-cleared.
 
-Cripple Creek address QA is now **10/10 complete** in `audit/colorado-cripple-creek-address-qa-pass-1-2026-09-11.json`. `audit/colorado-cripple-creek-coordinate-qa-pass-1a-2026-09-11.json` verifies **6/10** direct property coordinates: Century, Colorado Grande, Johnny Nolon's, Midnight Rose, Brass Ass and Double Eagle. Remaining direct-property-coordinate holds are **Bronco Billy's, Chamonix, McGills and Golden Nugget**. Keep Bronco Billy's and Chamonix separately routable despite their integrated adjoining complex; do not substitute Golden Nugget's adjacent hotel coordinate for the casino at 119 Carbonate Street.
-
-Immediate Colorado action: resolve those four Cripple Creek coordinate holds. Then run full Colorado stable-ID/duplicate/alias reconciliation, serialize the Colorado runtime pass, and validate it before marking Colorado complete.
+`src/lib/nightlife/casino-catalog-pass-29.ts` contains all **31 reconciled Colorado destinations**. Immediate Colorado action is now implementation-only: import Pass 29 into `src/lib/nightlife/search.ts`, append it to chronological `CASINO_PASSES`, extend `scripts/audit-casino-catalog.mjs` through Pass 29, run Validate Dinner Integration, inspect reconciliation warnings/errors, and only then mark Colorado runtime complete.
 
 ## Texas — 4 current destinations; 2 coordinate verified
 
@@ -66,7 +66,7 @@ Still held for direct numerical property coordinates: Naskila Livingston at `540
 
 Oklahoma candidate universe remains **77**. Current identity/address QA reached **54**, property-specific coordinate QA reached **48**, and record-level runtime eligibility approved **46** for Pass 28. Duck Creek and Checotah remain held for current street-number normalization; Artesian, Lakecrest, Coweta, Lake Eufaula, Holdenville and Cherokee South Coffeyville remain outside Pass 28 for coordinate/current-site or lineage holds.
 
-`src/lib/nightlife/casino-catalog-pass-28.ts` contains the 46 eligible Oklahoma destinations. `src/lib/nightlife/search.ts` imports Pass 28 and appends it to chronological `CASINO_PASSES`. The validator enumerates Pass 2 through Pass 28. WinStar preserves ID stem `winstar`; Choctaw Durant preserves `choctaw-durant`.
+`src/lib/nightlife/casino-catalog-pass-28.ts` contains the 46 eligible Oklahoma destinations. `src/lib/nightlife/search.ts` imports Pass 28 and appends it to chronological `CASINO_PASSES`. The validator currently enumerates Pass 2 through Pass 28. WinStar preserves ID stem `winstar`; Choctaw Durant preserves `choctaw-durant`.
 
 **Run 148 confirms this implementation is green.** Oklahoma remains intentionally not marked statewide complete; future cleanup/additions can proceed separately without holding the validated 46 hostage.
 
