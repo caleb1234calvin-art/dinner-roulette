@@ -16,9 +16,9 @@ _Last updated: September 12, 2026_
 
 `Validate Dinner Integration` is the compatibility gate for the integration branch. It performs dependency install, TypeScript checking, casino audit, inherited tests as report-only, development build, and Dinner icon verification.
 
-**Run 276 (`34676594421`) is green at commit `c6324087f7f9cad352ce21bc0c38b44a51165d70`.** This is the current validated runtime baseline. It includes casino runtime and validator coverage through **Pass 47**, including Coweta Casino Hotel. All recorded validation stages passed. A green run never authorizes a merge to `main` by itself.
+**Run 278 (`34711381563`) is green at commit `52320a46f2dee3b235943cd96acc4d99a7eae1d7`.** It validates the Pass 47 runtime baseline plus the evidence-only Red Dragon co-location resolution. All recorded validation stages passed. Casino runtime itself remains validated through Pass 47. A green run never authorizes a merge to `main` by itself.
 
-The subsequent continuity-only commit may trigger another validation run; continuity updates do not change the validated casino runtime unless they explicitly modify runtime/search/validator files.
+Vercel deployment is currently externally blocked by its build-rate-limit/upgrade condition. Treat GitHub Actions as the active implementation/validation gate while that persists; do not describe new GitHub work as deployed until Vercel actually publishes it.
 
 ## Casino reconciliation policy
 
@@ -63,7 +63,7 @@ Nevada's provisional audit decision universe remains 174 rows, not a final runti
 ### Remaining Nevada holds
 
 - **Cadence Crossing Casino:** `audit/nevada-cadence-crossing-footprint-qa-pass-21-2026-09-12.json` quarantines legacy Jokers Wild coordinate `36.052,-114.99468`. Current operation at **920 N Boulder Hwy, Henderson, NV 89011** is strong, but the completed 2026 property needs its own direct numerical point.
-- **Red Dragon Sports Bar #201 / Red Dragon Casino, Elko:** `audit/nevada-elko-operation-qa-pass-16-2026-09-12.json` remains a **coordinate-and-co-location hold** at **404 S 5th St, Elko, NV 89801**. Current evidence supports Red Dragon as the operating identity and Red Drag Casino as an alias, while Dotty's #214 is also listed at the same address. Runtime must avoid accidental duplicate emission until a direct point and co-location treatment are clear.
+- **Red Dragon Sports Bar #201 / Red Dragon Casino, Elko:** `audit/nevada-elko-operation-qa-pass-16-2026-09-12.json` is now a **coordinate-only hold** at **404 S 5th St, Elko, NV 89801**. Current county, licensing, tourism and directory evidence supports Red Dragon as the canonical current consumer-facing identity. Dotty's #214 is a co-located Nevada Restaurant Services concept/license at the same physical property and should not be emitted as a second routable Dinner Roulette destination. Once a direct numerical parcel/building point clears, serialize one Red Dragon destination and suppress the same-property Dotty's duplicate.
 - **The Pass Casino:** closure/renovation hold until reopening is independently confirmed.
 - **Whiskey Pete's / Buffalo Bill's:** current closure exclusions. Primm Valley remains active separately.
 
@@ -77,7 +77,7 @@ Oklahoma candidate universe remains 77. Pass 28 serialized 46 records; Pass 30 a
 
 `audit/oklahoma-coordinate-qa-pass-11-2026-09-12.json` clears **Coweta Casino Hotel** at **13185 Oklahoma 51, Coweta, OK 74429**, coordinate **35.97281,-95.66006**. Current first-party/post-opening lodging evidence establishes the completed operating property, and the coordinate comes from a direct current property-map marker tied to the Coweta hotel/casino listing rather than an intersection estimate, city centroid, nearby parcel, or predecessor point.
 
-`src/lib/nightlife/casino-catalog-pass-47.ts` serializes the destination; `src/lib/nightlife/search.ts` activates it; `scripts/audit-casino-catalog.mjs` covers through Pass 47. Run 276 validates the complete chain.
+`src/lib/nightlife/casino-catalog-pass-47.ts` serializes the destination; `src/lib/nightlife/search.ts` activates it; `scripts/audit-casino-catalog.mjs` covers through Pass 47. Run 276 validated the complete runtime chain; later Runs 277 and 278 also passed without runtime changes.
 
 ### Remaining Oklahoma priority holds
 
