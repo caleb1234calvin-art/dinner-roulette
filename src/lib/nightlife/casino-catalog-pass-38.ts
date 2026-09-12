@@ -23,7 +23,7 @@ const casino = (
   website,
   isChain: false,
   photoKey: "cafe",
-  source: "curated",
+  source: "catalog",
   venueTypes: ["casino"],
   energyLevel: 2,
 });
