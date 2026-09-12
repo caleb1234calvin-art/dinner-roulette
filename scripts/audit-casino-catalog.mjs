@@ -2,7 +2,7 @@ import fs from "node:fs";
 
 const catalogFiles = [
   "src/lib/nightlife/casino-catalog.ts",
-  ...Array.from({ length: 31 }, (_, index) => `src/lib/nightlife/casino-catalog-pass-${index + 2}.ts`),
+  ...Array.from({ length: 32 }, (_, index) => `src/lib/nightlife/casino-catalog-pass-${index + 2}.ts`),
 ];
 const manifestFiles = ["audit/casino-sources.json", "audit/casino-sources-integration.json"];
 const SAME_PROPERTY_MILES = 0.35;
@@ -71,20 +71,22 @@ for (const manifestFile of manifestFiles) {
   Object.assign(jurisdictions, manifest.jurisdictions ?? {});
 }
 
+function countJurisdictionRecords(source, jurisdiction) {
+  const escaped = jurisdiction.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const helperJurisdiction = new RegExp(`jurisdiction:\\s*["']${escaped}["']`);
+  const helperConstant = source.match(/const\s+JURISDICTION\s*=\s*["']([^"']+)["']/)?.[1];
+  if (helperJurisdiction.test(source) || helperConstant === jurisdiction) return [...source.matchAll(casinoPattern)].length;
+  const argumentJurisdiction = new RegExp(`["']${escaped}["']`, "g");
+  return (source.match(argumentJurisdiction) ?? []).length;
+}
+
 for (const [jurisdiction, value] of Object.entries(jurisdictions).filter(([, value]) => value?.status === "complete")) {
   const expected = Number(value.expectedCount);
   if (!Number.isInteger(expected) || expected < 1) {
     failures.push(`${jurisdiction}: invalid expectedCount in manifest`);
     continue;
   }
-  const actual = catalogFiles.reduce((sum, file) => {
-    const source = fs.readFileSync(file, "utf8");
-    const escaped = jurisdiction.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const helperJurisdiction = new RegExp(`jurisdiction:\\s*["']${escaped}["']`);
-    const argumentJurisdiction = new RegExp(`["']${escaped}["']`, "g");
-    if (helperJurisdiction.test(source)) return sum + [...source.matchAll(casinoPattern)].length;
-    return sum + (source.match(argumentJurisdiction) ?? []).length;
-  }, 0);
+  const actual = catalogFiles.reduce((sum, file) => sum + countJurisdictionRecords(fs.readFileSync(file, "utf8"), jurisdiction), 0);
   if (actual < expected) failures.push(`${jurisdiction}: expected at least ${expected} audited records, found ${actual}`);
 }
 
