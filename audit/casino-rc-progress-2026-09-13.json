@@ -1,0 +1,84 @@
+{
+  "capturedOn": "2026-09-13",
+  "status": "IN_PROGRESS_NOT_RELEASE_READY",
+  "base": "877ff08c300a9d149aa174e9c47471d57bc98ccd",
+  "branch": "integration/casino-release-candidate-2026-09-13",
+  "pr": 38,
+  "confirmedCatalog": {
+    "nationwide": 731,
+    "Nevada": 109,
+    "Oklahoma": 56,
+    "Colorado": 31,
+    "Texas": 4
+  },
+  "completed": [
+    "Runtime-driven catalog loader and six regression tests",
+    "Strict open-now and unique option selection with seven meaningful tests",
+    "All 103 existing audit JSON files inspected; 102 parse successfully"
+  ],
+  "validation": [
+    {
+      "head": "4546f0d15ff4b9208a893bb85891aaa421755ac8",
+      "run": 34734575621,
+      "repositoryPassed": 225,
+      "applicationPassed": 51,
+      "documentationSkipped": 4,
+      "result": "all existing gates green"
+    },
+    {
+      "head": "868317483be056bb8b52eea2d28705517f289226",
+      "run": 34734893631,
+      "repositoryPassed": 232,
+      "applicationPassed": 51,
+      "documentationSkipped": 4,
+      "result": "tests, typecheck, casino audits and development build green; newly added production-mode command failed to locate vite because invoked outside npm PATH; browser steps therefore did not run"
+    }
+  ],
+  "documentationSkips": {
+    "classification": "B: intentionally external workspace documentation contract; A in a clean repository-only checkout",
+    "files": [
+      "scripts/brand-check.test.mjs (3)",
+      "scripts/write-atomic.test.mjs (1)"
+    ],
+    "reason": "External .grok/skills/og documentation is absent and intentionally excluded from git. Installed/required-documentation tests retain original assertions; REQUIRE_WORKSPACE_DOCS=1 fails if missing. No application tests are optional."
+  },
+  "findings": [
+    {
+      "issue": "Truncated northern Nevada ledger",
+      "path": "audit/nevada-northern-markets-ledger-2026-09-11.json",
+      "bytes": 379,
+      "decision": "Preserve damaged text, repair JSON with explicit incomplete status, rebuild current roster; original claim of 45 rows cannot be substantiated."
+    },
+    {
+      "issue": "Stale Comanche portfolio includes closed War Pony",
+      "sources": [
+        "https://comanchenationentertainment.com/index.php/about",
+        "https://www.kswo.com/2025/08/29/comanche-nation-entertainment-close-casino-near-devol",
+        "https://www.swoknews.com/news/comanche-war-pony-casino-closed/article_23ca962b-2aa8-5138-bd14-862250f96ff7.html"
+      ],
+      "decision": "Exclude/monitor War Pony. KSWO explicitly corrected its initial Sept 24 announcement to actual closure Aug 24, 2025; SWOK independently matches. Secondary 500Nations/CDC copy retains superseded September date. No reopening confirmation."
+    },
+    {
+      "issue": "NIGC map marker REST endpoint requires authentication",
+      "url": "https://www.nigc.gov/wp-json/wpgmza/v1/markers?map_id=6",
+      "result": "401; do not bypass. Continue public operator/regulator sources."
+    },
+    {
+      "issue": "Dependency lock mismatch",
+      "decision": "Capture npm-generated lock from CI, preserve unchanged package entries, enforce npm ci. Existing manifest requires eslint-plugin-react-hooks ^6.0.0 but lock pinned 5.2.0; CI had already resolved 6.1.1."
+    },
+    {
+      "issue": "Held/closed casinos may reenter live OSM results; live coordinates lack range checks; name-only casino classification permits unrelated businesses",
+      "status": "needs repair and regression tests"
+    },
+    {
+      "issue": "18 recent records lack inline audit metadata; 390 lack at least one inline source URL",
+      "decision": "Existing sidecar evidence is not the same as absent evidence; attach/validate provenance references before making support claims."
+    }
+  ],
+  "next": "Complete data and live-discovery repairs, run browser and full exact-head validation, adversarial audit, release and continuity docs.",
+  "production": "untouched",
+  "main": "untouched",
+  "vercel": "no deployment",
+  "authorization": "No main merge, production changes or deployment; no recurring monitoring."
+}

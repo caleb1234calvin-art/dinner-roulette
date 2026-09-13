@@ -35,10 +35,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install --no-audit --no-fund
-
-      - name: Record resolved dependency lock
-        run: node -e 'console.log("VALIDATED_PACKAGE_LOCK " + JSON.stringify(JSON.parse(require("fs").readFileSync("package-lock.json", "utf8"))))'
+        run: npm ci --no-audit --no-fund
 
       - name: Typecheck
         run: npm run typecheck
@@ -58,7 +55,7 @@ jobs:
         run: npm run build:dev
 
       - name: Build production-mode bundle without database migrations
-        run: node scripts/with-app-env.mjs vite build --mode production
+        run: node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
 
       - name: Install Chromium for disposable local browser validation
         run: npx playwright install --with-deps chromium
