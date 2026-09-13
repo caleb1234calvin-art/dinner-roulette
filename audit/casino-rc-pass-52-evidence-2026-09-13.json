@@ -1,0 +1,815 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "pass": 52,
+  "status": "implemented-pending-exact-head-CI",
+  "result": {
+    "newDestinations": 31,
+    "NevadaAdded": 19,
+    "OklahomaAdded": 12,
+    "canonical": 786,
+    "Nevada": 134,
+    "Oklahoma": 86,
+    "Colorado": 31,
+    "Texas": 4,
+    "fourState": 255
+  },
+  "records": [
+    {
+      "address": "444 Vine St, Reno, NV 89503",
+      "coordinateEvidence": {
+        "fields": {
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Reno",
+            "addressRegion": "NV",
+            "postalCode": "89503",
+            "streetAddress": "444 Vine St"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.528908,
+            "longitude": -119.824815
+          },
+          "name": "Gold Dust West Casino Reno",
+          "telephone": "+17753232211",
+          "type": "LocalBusiness"
+        },
+        "latitude": 39.528908,
+        "longitude": -119.824815,
+        "method": "named-mapquest-jsonld"
+      },
+      "coordinateSource": "https://www.mapquest.com/us/nevada/gold-dust-west-casino-reno-10716693",
+      "decision": "Current operator address and phone match named casino JSON-LD. Operator embedded map names the same entity; its viewport is not used.",
+      "id": "casino-catalog-nv-gold-dust-west-reno",
+      "identitySource": "https://www.gdwcasino.com/home/contact",
+      "jurisdiction": "Nevada",
+      "lat": 39.528908,
+      "lon": -119.824815,
+      "name": "Gold Dust West Reno",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "2171 E William St, Carson City, NV 89701",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Gold+Dust+West-Carson+City/@39.1728498,-119.7436939,17z/data=!3m1!4b1!4m9!3m8!1s0x80990a7df78d12ab:0xe0f83b88f913bf60!5m2!4m1!1i2!8m2!3d39.1728498!4d-119.7436939!16s%2Fm%2F0dd99hz?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 39.1728498,
+        "longitude": -119.7436939,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=16210772318200512352",
+      "decision": "Operator-embedded current casino/hotel entity. Nearby MapQuest casino point agrees within 20 m. Bowling center and hotel are not additional casino destinations.",
+      "id": "casino-catalog-nv-gold-dust-west-carson",
+      "identitySource": "https://www.gdwcasino.com/home/contact",
+      "jurisdiction": "Nevada",
+      "lat": 39.1728498,
+      "lon": -119.7436939,
+      "name": "Gold Dust West Carson City",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "1660 Mountain City Hwy, Elko, NV 89801",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Gold+Dust+West+Elko/@40.8328496,-115.7846074,17z/data=!3m1!4b1!4m6!3m5!1s0x80a60718fce019ad:0x5dedfd139da2127e!8m2!3d40.8328496!4d-115.7846074!16s%2Fg%2F1v1tnbcw?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 40.8328496,
+        "longitude": -115.7846074,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=6768344075698573950",
+      "decision": "Operator-embedded named current casino entity. The Grille and a generic duplicate listing at 674 Cimarron Way are not additional destinations.",
+      "id": "casino-catalog-nv-gold-dust-west-elko",
+      "identitySource": "https://www.gdwcasino.com/home/contact",
+      "jurisdiction": "Nevada",
+      "lat": 40.8328496,
+      "lon": -115.7846074,
+      "name": "Gold Dust West Elko",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "5650 S Carson St, Carson City, NV 89701",
+      "coordinateEvidence": {
+        "fields": {
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Carson City",
+            "addressRegion": "NV",
+            "postalCode": "89701-6703",
+            "streetAddress": "5650 S Carson St"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.116203,
+            "longitude": -119.773709
+          },
+          "name": "Bodines Casino",
+          "telephone": "+17758857777",
+          "type": "LocalBusiness"
+        },
+        "latitude": 39.116203,
+        "longitude": -119.773709,
+        "method": "named-mapquest-jsonld"
+      },
+      "coordinateSource": "https://www.mapquest.com/us/nevada/bodines-casino-42890449",
+      "decision": "Current operator describes 30,000 square feet of casino gaming with restaurant and sportsbook. Named mapping record phone matches operator; current tourism also lists this destination.",
+      "id": "casino-catalog-nv-bodines-carson",
+      "identitySource": "https://www.bodinescarson.com",
+      "jurisdiction": "Nevada",
+      "lat": 39.116203,
+      "lon": -119.773709,
+      "name": "Bodines Casino",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://visitcarsoncity.com/food-and-drink/bodines"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "18 Highway 50, Stateline, NV 89449",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Caesars+Republic+Lake+Tahoe+-+A+Caesars+Rewards+Destination/@38.9593885,-119.942143,17z/data=!3m1!4b1!4m9!3m8!1s0x80999a9d9ebd9c09:0x15167260fd498c0a!5m2!4m1!1i2!8m2!3d38.9593885!4d-119.942143!16zL20vMGJuX2oz?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 38.9593885,
+        "longitude": -119.942143,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Caesars%20Republic%20Lake%20Tahoe%20-%20A%20Caesars%20Rewards%20Destination",
+      "decision": "Current operator and dated opening announcement confirm Harveys successor at the same property. Actual current named Google destination supersedes conflicting MapQuest point. Harrah's is a distinct casino across the road, despite a connector.",
+      "id": "casino-catalog-nv-caesars-republic-tahoe",
+      "identitySource": "https://www.caesars.com/caesars-republic-lake-tahoe",
+      "jurisdiction": "Nevada",
+      "lat": 38.9593885,
+      "lon": -119.942143,
+      "name": "Caesars Republic Lake Tahoe",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://investor.caesars.com/news-releases/news-release-details/caesars-republic-lake-tahoe-officially-open-debuting-bold-new"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "15 Highway 50, Stateline, NV 89449",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Harrah's+Lake+Tahoe+-+A+Caesars+Rewards+Destination/@38.9595009,-119.9413874,17z/data=!3m1!4b1!4m9!3m8!1s0x80999077fae8ed69:0xc6595f0f8c160e59!5m2!4m1!1i2!8m2!3d38.9595009!4d-119.9413874!16zL20vMDc4MzNn?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 38.9595009,
+        "longitude": -119.9413874,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Harrah's%20Lake%20Tahoe%20Hotel%20Casino",
+      "decision": "Current separately branded casino. Named Google destination agrees with current named MapQuest resort within a metre. Generic historical hotel labels are not property coordinates.",
+      "id": "casino-catalog-nv-harrahs-tahoe",
+      "identitySource": "https://www.caesars.com/lake-tahoe",
+      "jurisdiction": "Nevada",
+      "lat": 38.9595009,
+      "lon": -119.9413874,
+      "name": "Harrah's Lake Tahoe",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://www.mapquest.com/us/nevada/harrahs-lake-tahoe-a-caesars-rewards-destination-358795620"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "55 Highway 50, Stateline, NV 89449",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Bally's+Lake+Tahoe/@38.961544,-119.939331,17z/data=!3m1!4b1!4m9!3m8!1s0x80999a82c3f76a5d:0x81982e3b96d3fe64!5m2!4m1!1i2!8m2!3d38.961544!4d-119.939331!16zL20vMDhiZzl4?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 38.961544,
+        "longitude": -119.939331,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Bally's%20Lake%20Tahoe%20Casino%20Resort",
+      "decision": "Current operator casino and address; old MontBleu identity is a same-property alias, not another destination.",
+      "id": "casino-catalog-nv-ballys-tahoe",
+      "identitySource": "https://casinos.ballys.com/lake-tahoe/",
+      "jurisdiction": "Nevada",
+      "lat": 38.961544,
+      "lon": -119.939331,
+      "name": "Bally's Lake Tahoe Casino Resort",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "50 Highway 50, Stateline, NV 89449",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/dir//50+Hwy+50,+Stateline,+NV+89449/@38.9629362,-119.9469363,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x80999a9c8b6c8577:0x3d27f6ce4bfab999!2m2!1d-119.9417864!2d38.962928?entry=ttu38.96295968136281,-119.94147905959996",
+        "latitude": 38.962928,
+        "longitude": -119.9417864,
+        "method": "operator-published-map-directions-endpoint"
+      },
+      "coordinateSource": "https://www.google.com/maps/dir//50+Hwy+50,+Stateline,+NV+89449/@38.9629362,-119.9469363,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x80999a9c8b6c8577:0x3d27f6ce4bfab999!2m2!1d-119.9417864!2d38.962928?entry=ttu38.96295968136281,-119.94147905959996",
+      "decision": "Operator directions explicitly target the 50 Highway 50 building; resolving its entity lists the current Golden Nugget on floor 1. Select destination !1d/!2d, not viewport. Hard Rock Lake Tahoe is the predecessor alias.",
+      "id": "casino-catalog-nv-golden-nugget-tahoe",
+      "identitySource": "https://www.goldennugget.com/lake-tahoe/",
+      "jurisdiction": "Nevada",
+      "lat": 38.962928,
+      "lon": -119.9417864,
+      "name": "Golden Nugget Lake Tahoe Hotel & Casino",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://www.google.com/maps?cid=4406762126303738265"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "2065 Idaho St, Elko, NV 89801",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Maverick+Hotel+%26+Casino/@40.8496295,-115.7469895,17z/data=!3m1!4b1!4m9!3m8!1s0x80a601a410a8eaef:0xab0120789db2b3b2!5m2!4m1!1i2!8m2!3d40.8496295!4d-115.7469895!16s%2Fg%2F11nns7h1xr?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 40.8496295,
+        "longitude": -115.7469895,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Maverick%20Hotel%20Casino%20Elko",
+      "decision": "Operator confirms current 17,000-square-foot casino at 2065 Idaho Street. Separate from neighboring Gold Country; restaurant and hotel components stay one destination.",
+      "id": "casino-catalog-nv-maverick-elko",
+      "identitySource": "https://maverickelko.com/",
+      "jurisdiction": "Nevada",
+      "lat": 40.8496295,
+      "lon": -115.7469895,
+      "name": "Maverick Hotel & Casino",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "1627 US Highway 395 N, Minden, NV 89423",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Carson+Valley+Inn+Casino/@38.9561283,-119.7677706,17z/data=!3m1!4b1!4m9!3m8!1s0x8099bd9667e48c65:0x9690453d8ab305a2!5m2!4m1!1i2!8m2!3d38.9561283!4d-119.7677706!16s%2Fm%2F0105n2j3?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 38.9561283,
+        "longitude": -119.7677706,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Carson%20Valley%20Inn%20Casino%20Minden",
+      "decision": "Current casino/resort corroborated by Carson Valley chamber address roster. Motor lodge, suites and RV park do not become separate casinos.",
+      "id": "casino-catalog-nv-carson-valley-inn",
+      "identitySource": "https://www.carsonvalleyinn.com/",
+      "jurisdiction": "Nevada",
+      "lat": 38.9561283,
+      "lon": -119.7677706,
+      "name": "Carson Valley Inn Casino",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://business.carsonvalleynv.org/list/category/casinos-26"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "1440 US Highway 395 N, Gardnerville, NV 89410",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Sharkey's+Casino/@38.9412303,-119.7494294,17z/data=!3m1!4b1!4m6!3m5!1s0x8099bdd6b7e52ea7:0x1b8628f8fc189441!8m2!3d38.9412303!4d-119.7494294!16s%2Fg%2F1vxvj2_g?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 38.9412303,
+        "longitude": -119.7494294,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Sharkey's%20Casino%20Gardnerville",
+      "decision": "Current 300-game casino with restaurant and sportsbook. Operator identity corroborated by Carson Valley chamber physical address.",
+      "id": "casino-catalog-nv-sharkeys-gardnerville",
+      "identitySource": "https://www.sharkeyscasino.com/",
+      "jurisdiction": "Nevada",
+      "lat": 38.9412303,
+      "lon": -119.7494294,
+      "name": "Sharkey's Casino",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://business.carsonvalleynv.org/list/category/casinos-26"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "865 S Rock Blvd, Sparks, NV 89431",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Baldini's+Sports+Casino+and+Restaurant/@39.526658,-119.767225,17z/data=!3m1!4b1!4m6!3m5!1s0x80993f476c2f6bf3:0x1a0231bb3698f6e!8m2!3d39.526658!4d-119.767225!16s%2Fg%2F1tct8zkx?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 39.526658,
+        "longitude": -119.767225,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Baldini's%20Casino%20Sparks",
+      "decision": "Named current casino point agrees exactly with operator map location and same entity CID 117132192192761710. Empire Diner and sportsbook are internal components.",
+      "id": "casino-catalog-nv-baldinis-sparks",
+      "identitySource": "https://baldinis.com/contact-us/",
+      "jurisdiction": "Nevada",
+      "lat": 39.526658,
+      "lon": -119.767225,
+      "name": "Baldini's Sports Casino",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "2121 Victorian Ave, Sparks, NV 89431",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/2121+Victorian+Ave,+Sparks,+NV+89431/@39.5349353,-119.7725679,1187m/data=!3m2!1e3!4b1!4m6!3m5!1s0x80993f4c6e94f9b1:0xfc31448e26fde16!8m2!3d39.5349353!4d-119.7725679!16s%2Fg%2F11b8v5yvrm?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 39.5349353,
+        "longitude": -119.7725679,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://maps.app.goo.gl/wr8SrtqFbqGPZ2ZT8",
+      "decision": "Operator-published building destination explicitly lists Rail City Casino on floor 1. Ale House and William Hill sportsbook are not extra destinations.",
+      "id": "casino-catalog-nv-rail-city-sparks",
+      "identitySource": "https://railcity.com/contact-us/",
+      "jurisdiction": "Nevada",
+      "lat": 39.5349353,
+      "lon": -119.7725679,
+      "name": "Rail City Casino",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "680 Wendover Blvd, West Wendover, NV 89883",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Peppermill+Hotel+Casino+:+Wendover/@40.7380149,-114.0564792,17z/data=!3m1!4b1!4m9!3m8!1s0x80ac28a91456b479:0x18bd6f93092c0d02!5m2!4m1!1i2!8m2!3d40.7380149!4d-114.0564792!16s%2Fm%2F06_vnmj?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 40.7380149,
+        "longitude": -114.0564792,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Peppermill%20Hotel%20Casino%20680%20Wendover%20Boulevard",
+      "decision": "One of three separately located current operator resorts. Street address agrees with operator site footer and named mapping destination. Do not reuse umbrella directions to Wendover Boulevard itself.",
+      "id": "casino-catalog-nv-peppermill-wendover",
+      "identitySource": "https://wendoverfun.com/resort",
+      "jurisdiction": "Nevada",
+      "lat": 40.7380149,
+      "lon": -114.0564792,
+      "name": "Peppermill Hotel Casino Wendover",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "1045 W Wendover Blvd, West Wendover, NV 89883",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Rainbow+Hotel+Casino/@40.7376747,-114.0627288,17z/data=!3m1!4b1!4m9!3m8!1s0x80ac28a91456b479:0x9c6a8105b5fccd90!5m2!4m1!1i2!8m2!3d40.7376747!4d-114.0627288!16s%2Fm%2F06_xl47?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 40.7376747,
+        "longitude": -114.0627288,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Rainbow%20Hotel%20Casino%201045%20Wendover%20Boulevard",
+      "decision": "Current operator roster and official tourism confirm distinct casino at 1045 W Wendover Boulevard; no umbrella fourth destination.",
+      "id": "casino-catalog-nv-rainbow-wendover",
+      "identitySource": "https://travelnevada.com/hotels/rainbow-hotel-casino/",
+      "jurisdiction": "Nevada",
+      "lat": 40.7376747,
+      "lon": -114.0627288,
+      "name": "Rainbow Hotel Casino",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://wendoverfun.com/resort"
+      ],
+      "verifiedOn": "2026-09-13",
+      "website": "https://wendoverfun.com/resort"
+    },
+    {
+      "address": "1385 Highway 93, Jackpot, NV 89825",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Cactus+Petes+Resort+Casino/@41.9853842,-114.6728792,17z/data=!4m8!3m7!1s0x80a9b0694469e91d:0x3593f6120b7cbc80!5m2!4m1!1i2!8m2!3d41.9853802!4d-114.6706905?shorturl=1",
+        "latitude": 41.9853802,
+        "longitude": -114.6706905,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://goo.gl/maps/kF5sHU6cDpmU5mYW6",
+      "decision": "Operator-published casino point. Independent current named point differs by about 9 m. Horseshu hotel is not automatically promoted as a second casino; separate current gaming-floor evidence remains required.",
+      "id": "casino-catalog-nv-cactus-petes-jackpot",
+      "identitySource": "https://www.cactuspetes.com/visit",
+      "jurisdiction": "Nevada",
+      "lat": 41.9853802,
+      "lon": -114.6706905,
+      "name": "Cactus Petes Resort Casino",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "1002 US Highway 93, Jackpot, NV 89825",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Barton's+Club+93/@41.9875221,-114.6722335,17z/data=!3m1!4b1!4m9!3m8!1s0x80a9c7a05fac330f:0x32f3e9962b1c80ac!5m2!4m1!1i2!8m2!3d41.9875221!4d-114.6722335!16s%2Fm%2F04gkpkk?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 41.9875221,
+        "longitude": -114.6722335,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Barton's%20Club%2093%20Jackpot",
+      "decision": "Current operator advertises substantial casino, table games and hotel. Physical address is corroborated by the preserved town/NGC rural audit; use current named destination point.",
+      "id": "casino-catalog-nv-bartons-jackpot",
+      "identitySource": "https://bartonsclub93.com/",
+      "jurisdiction": "Nevada",
+      "lat": 41.9875221,
+      "lon": -114.6722335,
+      "name": "Barton's Club 93",
+      "status": "verified-ready",
+      "supportingSources": [
+        "audit/nevada-rural-recovery-pass-5-2026-09-11.json"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "2050 Idaho St, Elko, NV 89801",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Gold+Country+Inn+and+Casino+by+Red+Lion+Hotels/@40.848391,-115.7462775,17z/data=!4m9!3m8!1s0x80a60128172ef135:0x63692c59c822c6ad!5m2!4m1!1i2!8m2!3d40.848391!4d-115.7462775!16s%2Fg%2F1tcy4kjn?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 40.848391,
+        "longitude": -115.7462775,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Gold%20Country%20Inn%20and%20Casino%202050%20Idaho%20Street%20Elko",
+      "decision": "Operator explicitly confirms casino play and current address. Independently listed by Elko tourism; distinct from Maverick across the road. Dead legacy Maverick Gold Country subpage is not operating evidence.",
+      "id": "casino-catalog-nv-gold-country-elko",
+      "identitySource": "https://www.sonesta.com/red-lion-hotels/nv/elko/gold-country-inn-and-casino-red-lion-hotels",
+      "jurisdiction": "Nevada",
+      "lat": 40.848391,
+      "lon": -115.7462775,
+      "name": "Gold Country Inn & Casino",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://exploreelko.com/lodging/casino-hotels"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "340 Commercial St, Elko, NV 89801",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Ramada+by+Wyndham+Elko+Hotel+at+Stockmen's+Casino/@40.8306167,-115.7628276,17z/data=!3m1!4b1!4m9!3m8!1s0x80a60733e3709607:0x169f571627ccca04!5m2!4m1!1i2!8m2!3d40.8306167!4d-115.7628276!16s%2Fg%2F1vtqwb_j?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 40.8306167,
+        "longitude": -115.7628276,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Stockmen's%20Hotel%20Casino%20Elko",
+      "decision": "Current operator advertises more than 150 slot machines; Elko tourism links this property. Stockman's Fallon is a different city/property, retained separately.",
+      "id": "casino-catalog-nv-stockmens-elko",
+      "identitySource": "https://stockmenscasinoelko.com/",
+      "jurisdiction": "Nevada",
+      "lat": 40.8306167,
+      "lon": -115.7628276,
+      "name": "Stockmen's Casino and Ramada Hotel",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://exploreelko.com/lodging/casino-hotels"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "15700 OK-9, Norman, OK 73026",
+      "coordinateEvidence": {
+        "fields": {
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Norman",
+            "addressRegion": "OK",
+            "postalCode": "73026",
+            "streetAddress": "15700 OK-9"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 35.230944,
+            "longitude": -97.2075553
+          },
+          "name": "HTV | Thunderbird Entertainment Center Inc",
+          "telephone": "14053609270",
+          "type": "LocalBusiness"
+        },
+        "latitude": 35.230944,
+        "longitude": -97.2075553,
+        "method": "operator-jsonld"
+      },
+      "coordinateSource": "https://playthunderbird.com/",
+      "decision": "Operator LocalBusiness JSON-LD matches Norman casino location, tribal roster and named MapQuest geo. Distinct from Shawnee; provider business entity text is not the consumer-facing name.",
+      "id": "casino-catalog-ok-thunderbird-norman",
+      "identitySource": "https://www.astribe.com/casinos",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.230944,
+      "lon": -97.2075553,
+      "name": "Thunderbird Casino Norman",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13",
+      "website": "https://playthunderbird.com/"
+    },
+    {
+      "address": "2051 S Gordon Cooper Dr, Shawnee, OK 74801",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Thunderbird+Casino+Shawnee/@35.2945158,-96.9255181,17z/data=!3m1!4b1!4m6!3m5!1s0x87b3b752f55916c9:0xed2bfeb334d1278a!8m2!3d35.2945158!4d-96.9255181!16s%2Fg%2F11b75jcz5f?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.2945158,
+        "longitude": -96.9255181,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Thunderbird%20Casino%20Shawnee",
+      "decision": "Tribal and operator FAQ agree on 2051 S Gordon Cooper Drive. Current named mapping destination links operator; reject the unrelated Norman/100 Breakwater Dr MapQuest listing.",
+      "id": "casino-catalog-ok-thunderbird-shawnee",
+      "identitySource": "https://www.astribe.com/casinos",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.2945158,
+      "lon": -96.9255181,
+      "name": "Thunderbird Casino Shawnee",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://playthunderbird.com/faq"
+      ],
+      "verifiedOn": "2026-09-13",
+      "website": "https://playthunderbird.com/"
+    },
+    {
+      "address": "25230 E Highway 62, Harrah, OK 73045",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Kickapoo+Casino+Harrah/@35.4940197,-97.0836642,17z/data=!4m5!3m4!1s0x87b3cb52b896f477:0x64276b7252b49ae3!8m2!3d35.4932845!4d-97.0833812?shorturl=1",
+        "latitude": 35.4932845,
+        "longitude": -97.0833812,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://goo.gl/maps/R5LHRzDe84BQQ43D6",
+      "decision": "Operator confirms 500-game casino with dining/table games. Named operator map controls; separate Travel Plaza at 25200 US-62 is excluded.",
+      "id": "casino-catalog-ok-kickapoo-harrah",
+      "identitySource": "https://www.kickapoo-casino.com/contact-harrah",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.4932845,
+      "lon": -97.0833812,
+      "name": "Kickapoo Casino Harrah",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://www.kickapoo-casino.com/about"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "38900 W MacArthur Dr, Shawnee, OK 74804",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Kickapoo+Casino+Shawnee/@35.3636156,-96.9679742,17z/data=!4m5!3m4!1s0x87b3b62ba89aca7b:0x2a5288862e4ba64e!8m2!3d35.3634421!4d-96.9680795?shorturl=1",
+        "latitude": 35.3634421,
+        "longitude": -96.9680795,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://goo.gl/maps/5b6wLDPmnfvr6fx39",
+      "decision": "Current operator 300-game casino. Current named operator map supersedes nearby differently placed MapQuest points.",
+      "id": "casino-catalog-ok-kickapoo-shawnee",
+      "identitySource": "https://www.kickapoo-casino.com/contact-shawnee",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.3634421,
+      "lon": -96.9680795,
+      "name": "Kickapoo Casino Shawnee",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://www.kickapoo-casino.com/about"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "2315 E Gore Blvd, Lawton, OK 73501",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Apache+Casino+Hotel/@34.6069743,-98.3602121,17z/data=!3m1!4b1!4m9!3m8!1s0x87ad18f075d8c89f:0x7e87fde400b9c78c!5m2!4m1!1i2!8m2!3d34.6069743!4d-98.3602121!16s%2Fg%2F1tgnml5c?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 34.6069743,
+        "longitude": -98.3602121,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=9117535126341404556",
+      "decision": "Operator directions entity resolves to current named casino/hotel. Do not add the Fort Sill Apache former-name listing or Comancheria hotel as extra casinos.",
+      "id": "casino-catalog-ok-apache-lawton",
+      "identitySource": "https://www.apachecasinohotel.com/",
+      "jurisdiction": "Oklahoma",
+      "lat": 34.6069743,
+      "lon": -98.3602121,
+      "name": "Apache Casino Hotel",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "198131 Highway 36, Devol, OK 73531",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Kiowa+Casino+%26+Hotel/@34.143151,-98.525413,17z/data=!3m1!4b1!4m9!3m8!1s0x86532b73b5ff0c1b:0x4ddd9030a76eb0d8!5m2!4m1!1i2!8m2!3d34.143151!4d-98.525413!16s%2Fg%2F1tffzxwv?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 34.143151,
+        "longitude": -98.525413,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=5610799249415385304",
+      "decision": "Operator directions and current named casino entity agree exactly. Distinct from Comanche Red River north of it.",
+      "id": "casino-catalog-ok-kiowa-devol",
+      "identitySource": "https://kiowacasino.com/contact",
+      "jurisdiction": "Oklahoma",
+      "lat": 34.143151,
+      "lon": -98.525413,
+      "name": "Kiowa Casino & Hotel",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "514 OK-9, Carnegie, OK 73015",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/dir//Kiowa+Casino+Carnegie,+514+OK-9,+Carnegie,+OK+73015/@35.1030889,-98.5937448,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87ac4e15f4070971:0x4a6f83816baf56e0!2m2!1d-98.5949474!2d35.102526?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.102526,
+        "longitude": -98.5949474,
+        "method": "operator-published-map-directions-endpoint"
+      },
+      "coordinateSource": "https://www.google.com/maps/dir//Kiowa+Casino%2FCarnegie,+514+OK-9,+Carnegie,+OK+73015/@35.1030889,-98.5937448,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x87ac4e15f4070971:0x4a6f83816baf56e0!2m2!1d-98.5937448!2d35.1030889",
+      "decision": "Operator-published named casino route now resolves to destination 35.102526,-98.5949474, superseding its embedded older endpoint and a vague MapQuest Highway 9 point. Use final destination !1d/!2d; current name/site also verified via CID.",
+      "id": "casino-catalog-ok-kiowa-carnegie",
+      "identitySource": "https://kiowacasino.com/contact",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.102526,
+      "lon": -98.5949474,
+      "name": "Kiowa Casino Carnegie",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://www.google.com/maps?cid=5363650273102223072"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "13765 US-183, Hobart, OK 73651",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Elk+Creek+Kiowa+Casino/@35.0199634,-99.0662101,17z/data=!3m1!4b1!4m6!3m5!1s0x87ac7befea54f6a7:0xcd6974edb5084782!8m2!3d35.0199635!4d-99.0613392!16s%2Fg%2F11s90x474_?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.0199635,
+        "longitude": -99.0613392,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/place/Elk+Creek+Kiowa+Casino/@35.0199634,-99.0662101,17z/data=!3m1!4b1!4m6!3m5!1s0x87ac7befea54f6a7:0xcd6974edb5084782!8m2!3d35.0199635!4d-99.0613392!16s%2Fg%2F11s90x474_?entry=ttu&g_ep=EgoyMDI1MDcxMy4wIKXMDSoASAFQAw%3D%3D",
+      "decision": "Current dedicated 250-game casino is explicitly NOW OPEN, with current hours and table games. Parent contact page incorrectly repeats Carnegie address/old Summer 2025 teaser; current property site and its named map supersede that stale copy.",
+      "id": "casino-catalog-ok-kiowa-elk-creek",
+      "identitySource": "https://elkcreekcasino.com/",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.0199635,
+      "lon": -99.0613392,
+      "name": "Elk Creek Kiowa Casino",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "356120 E 926 Rd, Stroud, OK 74079",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Sac+and+Fox+Nation+Casino/@35.672381,-96.660182,17z/data=!3m1!4b1!4m6!3m5!1s0x87b158b6a3cea605:0x5846210f901ed7cb!8m2!3d35.672381!4d-96.660182!16s%2Fg%2F1tvgvvrm?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.672381,
+        "longitude": -96.660182,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=6360807874433570763",
+      "decision": "Operator confirms 150-game casino and restaurant. Its published casino map entity resolves current point. Black Hawk is a separately located destination.",
+      "id": "casino-catalog-ok-sac-fox-stroud",
+      "identitySource": "https://snfcasino.com/contact",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.672381,
+      "lon": -96.660182,
+      "name": "Sac and Fox Nation Casino Stroud",
+      "status": "verified-ready",
+      "supportingSources": [
+        "https://snfcasino.com/about/"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "42008 Westech Rd, Shawnee, OK 74804",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/The+Black+Hawk+Casino/@35.3920224,-96.9097231,17z/data=!3m1!4b1!4m6!3m5!1s0x87b3c7dd4995df73:0x22bf3890df6088bc!8m2!3d35.3920224!4d-96.9097231!16s%2Fg%2F1td3r_tj?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.3920224,
+        "longitude": -96.9097231,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=2503782112715376828",
+      "decision": "Current point resolves the operator-published entity, about 17 m from older published endpoint. Conflicting MapQuest location is rejected; old Sac & Fox name is not a second Shawnee casino.",
+      "id": "casino-catalog-ok-black-hawk-shawnee",
+      "identitySource": "https://theblackhawkcasino.com/contact/",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.3920224,
+      "lon": -96.9097231,
+      "name": "The Black Hawk Casino",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "11267 Interstate 40, Seminole, OK 74868",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Seminole+Nation+Casino/@35.3819761,-96.672584,17z/data=!3m1!4b1!4m6!3m5!1s0x87b396ce5a341c99:0x15d3b9dce2814618!8m2!3d35.3819761!4d-96.672584!16s%2Fg%2F1tj2chxz?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.3819761,
+        "longitude": -96.672584,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=1572805053226501656",
+      "decision": "Operator confirms 425-game standalone casino next to the gas station at I-40 Exit 200. Its embedded entity resolves correct point; two named MapQuest records near Seminole city are over 10 miles wrong and rejected.",
+      "id": "casino-catalog-ok-seminole-i40",
+      "identitySource": "https://www.seminolenationcasinos.com/casinos/i-40/",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.3819761,
+      "lon": -96.672584,
+      "name": "Seminole Nation Casino I-40",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "36625 US-270 BUS, Wewoka, OK 74884",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Seminole+Nation+Trading+Post+Casino/@35.1296099,-96.491768,17z/data=!3m1!4b1!4m6!3m5!1s0x87b384f7f56ac71d:0xa6ee9a6249a66df6!8m2!3d35.1296099!4d-96.491768!16s%2Fg%2F11c75vk691?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.1296099,
+        "longitude": -96.491768,
+        "method": "named-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Seminole%20Nation%20Casino%20Wewoka",
+      "decision": "Operator explicitly distinguishes the 122-slot casino next to the trading post and advertises it as one of three casinos. One physical casino destination with Trading Post Casino alias; store is not an extra record. Current Google destination corroborates property.",
+      "id": "casino-catalog-ok-seminole-wewoka",
+      "identitySource": "https://www.seminolenationcasinos.com/casinos/wewoka/",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.1296099,
+      "lon": -96.491768,
+      "name": "Seminole Nation Casino Wewoka",
+      "status": "verified-ready",
+      "supportingSources": [],
+      "verifiedOn": "2026-09-13"
+    }
+  ],
+  "sourceConflicts": [
+    {
+      "property": "Caesars Republic Lake Tahoe",
+      "reason": "Conflicts with the current named resort destination (38.9593885,-119.942143); selected verified current Google destination and current operator identity.",
+      "rejectedPoint": [
+        38.96251,
+        -119.940822
+      ],
+      "rejectedSource": "https://www.mapquest.com/us/nevada/caesars-republic-778761856"
+    },
+    {
+      "property": "Seminole Nation Casino I-40",
+      "reason": "City-area point is about 10.7 miles from the operator-published I-40 casino entity.",
+      "rejectedPoint": [
+        35.22789,
+        -96.6475
+      ],
+      "rejectedSource": "https://www.mapquest.com/us/oklahoma/seminole-nation-casino-363120380"
+    },
+    {
+      "property": "Seminole Nation Casino I-40",
+      "reason": "A second named listing with the current address still points about 10 miles south of the actual casino. Rejected despite parseable JSON-LD.",
+      "rejectedPoint": [
+        35.233084,
+        -96.660073
+      ],
+      "rejectedSource": "https://www.mapquest.com/us/oklahoma/seminole-nation-casino-i-40-364237566"
+    },
+    {
+      "property": "Kickapoo Casino Harrah",
+      "reason": "Operator-published current named casino !3d/!4d takes precedence; travel-plaza entity separately excluded.",
+      "rejectedPoint": [
+        35.498122,
+        -97.080982
+      ],
+      "rejectedSource": "https://www.mapquest.com/us/oklahoma/kickapoo-casino-8794071"
+    },
+    {
+      "property": "The Black Hawk Casino",
+      "reason": "Operator-published casino point differs materially; generic former-name MapQuest URL is not an identity/pin authority.",
+      "rejectedPoint": [
+        35.399109,
+        -96.908225
+      ],
+      "rejectedSource": "https://www.mapquest.com/us/oklahoma/sac-fox-casino-8939793"
+    },
+    {
+      "property": "Kiowa Casino Carnegie",
+      "reason": "Operator publishes a distinct named casino direction endpoint. Do not use a vague Highway 9 map listing.",
+      "rejectedPoint": [
+        35.1069,
+        -98.59076
+      ],
+      "rejectedSource": "https://www.mapquest.com/us/oklahoma/kiowa-casino-carnegie-421401724"
+    },
+    {
+      "property": "Seminole Nation Casino Konawa",
+      "reason": "Contradicts operator-embedded Rivermist casino entity near 34.9833; current entity resolution controls.",
+      "rejectedPoint": [
+        34.946242,
+        -96.681691
+      ],
+      "rejectedSource": "https://www.mapquest.com/us/oklahoma/seminole-nation-river-mist-casino-351935472"
+    }
+  ],
+  "heldCandidates": [
+    {
+      "name": "Seminole Nation Casino Konawa / Rivermist",
+      "reason": "Current operator identity and address verified, but named MapQuest points conflict by miles and the operator's embedded Google entity no longer resolves. Current Google search returns the named venue without numerical destination fields. Do not promote the viewport or either MapQuest point.",
+      "sources": [
+        "https://www.seminolenationcasinos.com/casinos/konawa/",
+        "https://www.mapquest.com/us/oklahoma/rivermist-casino-476618319",
+        "https://www.google.com/maps?cid=17997204520136767972"
+      ]
+    },
+    {
+      "name": "Montego Bay Casino Resort",
+      "reason": "Current casino identity and named map point verified. Physical-address discrepancy: operator umbrella and Travel Nevada list 680 Wendover Boulevard; distinct resort is also listed as 100 Wendover Boulevard. Do not route to Peppermill via shared administrative address; reconcile physical casino address.",
+      "sources": [
+        "https://wendoverfun.com/rooms/montego-bay/",
+        "https://travelnevada.com/resorts-casinos/montego-bay-casino-resort"
+      ]
+    },
+    {
+      "name": "Horseshu",
+      "reason": "Current operator refers to Horseshu Hotel; older town/tourism records call it a casino. Require current distinct operating casino-floor evidence before treating it as a second destination.",
+      "sources": [
+        "https://www.cactuspetes.com/",
+        "audit/nevada-rural-recovery-pass-5-2026-09-11.json"
+      ]
+    }
+  ]
+}

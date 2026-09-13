@@ -1,20 +1,26 @@
 {
   "capturedOn": "2026-09-13",
-  "status": "IN_PROGRESS_NOT_RELEASE_READY",
+  "status": "IN_PROGRESS_EXACT_HEAD_CI_QUEUED_COVERAGE_PENDING",
   "base": "877ff08c300a9d149aa174e9c47471d57bc98ccd",
   "branch": "integration/casino-release-candidate-2026-09-13",
   "pr": 38,
   "confirmedCatalog": {
-    "nationwide": 731,
-    "Nevada": 109,
-    "Oklahoma": 56,
+    "nationwide": 786,
+    "Nevada": 134,
+    "Oklahoma": 86,
     "Colorado": 31,
-    "Texas": 4
+    "Texas": 4,
+    "fourState": 255,
+    "method": "CI-recovered canonical baseline plus source-linked Pass 51/52 serialization, counted with repository audit logic; latest complete CI applies to pre-expansion 731 baseline."
   },
   "completed": [
-    "Runtime-driven catalog loader and six regression tests",
-    "Strict open-now and unique option selection with seven meaningful tests",
-    "All 103 existing audit JSON files inspected; 102 parse successfully"
+    "Recovered draft PR 38 and respected unchanged main/integration branches.",
+    "Production-mode preview browser automation passed desktop and mobile in Run 303 at 28c5f9699250700c99b7e184bf13629b361c53c5.",
+    "Pass 51 implements 24 additions plus two stable-ID Oneida pin corrections; Pass 52 implements 31 additional current properties.",
+    "Numeric source fields and rejected mapping conflicts are preserved in both RC pass evidence artifacts.",
+    "Four optional external documentation skips are understood and remain legitimate.",
+    "Prepared live provider field and URL sanitization, nonempty name matching, successor alias handling and three additional Oklahoma closure holds with four regression tests.",
+    "Historical truncated Nevada ledger repaired without fabricating its missing 45 rows; speculative Nevada expected count removed."
   ],
   "validation": [
     {
@@ -32,6 +38,22 @@
       "applicationPassed": 51,
       "documentationSkipped": 4,
       "result": "tests, typecheck, casino audits and development build green; newly added production-mode command failed to locate vite because invoked outside npm PATH; browser steps therefore did not run"
+    },
+    {
+      "head": "28c5f9699250700c99b7e184bf13629b361c53c5",
+      "run": 34736662895,
+      "runNumber": 303,
+      "repositoryPassed": 247,
+      "applicationPassed": 51,
+      "documentationSkipped": 4,
+      "uniquePassed": 298,
+      "result": "All required gates including two safe builds and production-preview Chromium smoke succeeded."
+    },
+    {
+      "head": "8651dcb850cbb17183419c35381f8edd80d82102",
+      "run": 34737413958,
+      "runNumber": 304,
+      "result": "Queued since 04:14 UTC, no job steps executed as of 04:40 UTC. Do not report new records tested."
     }
   ],
   "documentationSkips": {
@@ -76,9 +98,63 @@
       "decision": "Existing sidecar evidence is not the same as absent evidence; attach/validate provenance references before making support claims."
     }
   ],
-  "next": "Complete data and live-discovery repairs, run browser and full exact-head validation, adversarial audit, release and continuity docs.",
+  "next": "Run full exact-head CI when runner becomes available; finish coverage/hold reconciliation and full adversarial release-readiness and continuity documentation.",
   "production": "untouched",
   "main": "untouched",
   "vercel": "no deployment",
-  "authorization": "No main merge, production changes or deployment; no recurring monitoring."
+  "authorization": "No main merge, production changes or deployment; no recurring monitoring.",
+  "supplementalAudit": {
+    "auditFailures": [],
+    "canonical": 786,
+    "counts": {
+      "Alabama": 3,
+      "Arizona": 26,
+      "Arkansas": 3,
+      "California": 69,
+      "Colorado": 31,
+      "Connecticut": 2,
+      "Delaware": 3,
+      "Florida": 16,
+      "Idaho": 6,
+      "Illinois": 17,
+      "Indiana": 14,
+      "Iowa": 23,
+      "Kansas": 10,
+      "Kentucky": 14,
+      "Louisiana": 24,
+      "Maine": 2,
+      "Maryland": 6,
+      "Massachusetts": 3,
+      "Michigan": 27,
+      "Minnesota": 19,
+      "Mississippi": 28,
+      "Missouri": 13,
+      "Nebraska": 10,
+      "Nevada": 134,
+      "New Jersey": 9,
+      "New Mexico": 23,
+      "New York": 20,
+      "North Carolina": 3,
+      "North Dakota": 5,
+      "Ohio": 11,
+      "Oklahoma": 86,
+      "Oregon": 10,
+      "Pennsylvania": 18,
+      "Rhode Island": 2,
+      "South Dakota": 26,
+      "Texas": 4,
+      "Virginia": 5,
+      "Washington": 30,
+      "West Virginia": 5,
+      "Wisconsin": 23,
+      "Wyoming": 3
+    },
+    "schemaAttempt": {
+      "reason": "The orchestration V8 isolate has no WHATWG URL global; schema webUrl catches ReferenceError and therefore reports every URL invalid. This result is not an application schema failure or a schema pass. Unmodified schema must run in Node CI.",
+      "status": "environment-blocked"
+    },
+    "scope": "Actual repository auditCasinoRecords executed in orchestration V8 against CI-recovered canonical baseline and exact Pass 51/52 JSON records. Full TypeScript export loading, Node suite and builds are still required.",
+    "time": "2026-09-13T04:40:05.550Z"
+  },
+  "updatedOn": "2026-09-13"
 }

@@ -14,8 +14,11 @@ const normalized = (name: string) => name.normalize("NFKD").toLowerCase()
   .replace(/[^a-z0-9]+/g, " ").trim();
 
 export function casinoIdentityName(name: string) {
-  return normalized(name).replace(/\b(?:the|hotel|casino|resort|spa|and|gambling|hall)\b/g, "")
+  const full = normalized(name);
+  const identity = full.replace(/\b(?:the|hotel|casino|resort|spa|and|gambling|hall)\b/g, "")
     .replace(/\s+/g, " ").trim();
+  return identity || full;
+
 }
 
 // Broad address areas are exclusion scopes, NOT routing pins. Matching is exact
@@ -32,6 +35,9 @@ export const CASINO_STATUS_HOLDS = [
   { names: ["Harrah's Reno", "Harrah's Reno Hotel & Casino"], bounds: [39.50, 39.56, -119.85, -119.78], reason: "Closed casino; redevelopment is not operating casino evidence" },
   { names: ["Wa She Shu Casino", "Wa She Shu Casino & Travel Plaza"], bounds: [38.82, 38.98, -119.79, -119.64], reason: "Casino closure; travel plaza alone does not clear reopening gate" },
   { names: ["Comanche War Pony Casino", "War Pony Casino"], bounds: [34.10, 34.23, -98.62, -98.45], reason: "Closed Aug 24, 2025; stale operator roster contradicted by corrected dated reporting" },
+  {"names":["Ioway Casino"],"bounds":[35.65,35.75,-97.04,-96.93],"reason":"Permanently closed predecessor of Harrah's Oklahoma; new Chandler site is distinct"},
+  {"names":["Kiowa Casino Verden","Kiowa Casino - Verden"],"bounds":[35.04,35.14,-98.16,-98.04],"reason":"Closed October 31, 2023; current Kiowa portfolio is Devol, Carnegie and Elk Creek"},
+  {"names":["Creek Nation Casino Eufaula","Creek Nation Casino - Eufaula"],"bounds":[35.25,35.35,-95.64,-95.54],"reason":"Retired 806 W Forrest Ave predecessor; current Lake Eufaula Casino Hotel is at 1045 Birkes Rd"},
 ] as const;
 
 export function heldCasino(name: string, lat: number, lon: number) {
@@ -49,4 +55,40 @@ export function inactivePlace(tags: Record<string, string>) {
   // A current bar may legitimately retain a disused:amenity=casino history.
   return !tags.amenity && ["disused:amenity", "abandoned:amenity", "demolished:amenity", "construction:amenity"]
     .some((key) => Boolean(tags[key]));
+}
+
+/** Discard malformed optional provider fields without losing valid neighboring records. */
+export function nightlifeTags(value: unknown): Record<string, string> {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  return Object.fromEntries(Object.entries(value)
+    .filter((entry): entry is [string, string] => typeof entry[1] === "string")
+    .map(([key, text]) => [key, text.trim()]));
+}
+
+export function nightlifeWebsite(value: string | undefined): string | null {
+  if (!value) return null;
+  try {
+    const url = new URL(value);
+    if (!["https:", "http:"].includes(url.protocol) || url.username || url.password) return null;
+    return url.href;
+  } catch { return null; }
+}
+
+// Reviewed same-property aliases. The caller must also require physical proximity.
+const CASINO_ALIAS_GROUPS = [
+  ["The Vanderpump Hotel", "The Cromwell"],
+  ["J Resort", "Sands Regency", "Sands Regency Casino Hotel"],
+  ["Caesars Republic Lake Tahoe", "Harveys Lake Tahoe"],
+  ["Golden Nugget Lake Tahoe", "Hard Rock Hotel & Casino Lake Tahoe"],
+  ["Bally's Lake Tahoe", "MontBleu Resort Casino & Spa"],
+] as const;
+
+export function casinoNamesMatch(a: string, b: string) {
+  const left = casinoIdentityName(a);
+  const right = casinoIdentityName(b);
+  if (!left || !right) return false;
+  if (left === right) return true;
+  return CASINO_ALIAS_GROUPS.some(group =>
+    group.some(alias => casinoIdentityName(alias) === left)
+    && group.some(alias => casinoIdentityName(alias) === right));
 }

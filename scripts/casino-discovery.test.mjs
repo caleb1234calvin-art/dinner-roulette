@@ -76,3 +76,65 @@ test("provider outages preserve the complete local canonical casino pool", async
     assert.match(result.warning, /saved nightlife/);
   } finally { globalThis.fetch = original; }
 });
+
+test("malformed optional fields cannot poison a provider response or create unsafe actions", async () => {
+  const original = globalThis.fetch;
+  try {
+    globalThis.fetch = async () => Response.json({ elements: [
+      element({ tags: { name: "Valid Casino", amenity: "casino", brand: 42, website: { href: "bad" }, phone: 123 } }),
+      element({ id: 2, tags: { name: "Unsafe Casino", amenity: "casino", website: "javascript:alert(1)" } }),
+      element({ id: 3, tags: { name: "Good Casino", amenity: "casino", website: "https://example.com/casino" } }),
+    ] });
+    const venues = await queryMirror("https://example.com", "");
+    assert.equal(venues.length, 3);
+    assert.equal(venues[0].website, null);
+    assert.equal(venues[0].phone, null);
+    assert.equal(venues[1].website, null);
+    assert.equal(venues[2].website, "https://example.com/casino");
+    for (const website of ["data:text/html,bad", "https://user:secret@example.com", "/relative"]) {
+      assert.equal(elementToPlace(element({ tags: { name: "Casino", amenity: "casino", website } })).website, null);
+    }
+  } finally { globalThis.fetch = original; }
+});
+
+test("generic casino names cannot collapse distinct nearby properties into an empty identity", () => {
+  const base = elementToPlace(element());
+  const curated = { ...base, id: "one", name: "Casino" };
+  const live = { ...base, id: "two", name: "Hotel & Casino", lat: base.lat + 0.001 };
+  assert.equal(mergeNightlife([live], [curated]).length, 2);
+});
+
+test("reviewed predecessor names merge only into the same nearby current property", () => {
+  const base = elementToPlace(element());
+  for (const [name, former] of [
+    ["J Resort", "Sands Regency Casino Hotel"],
+    ["Caesars Republic Lake Tahoe", "Harveys Lake Tahoe"],
+    ["Golden Nugget Lake Tahoe Hotel & Casino", "Hard Rock Hotel & Casino Lake Tahoe"],
+    ["Bally’s Lake Tahoe Casino Resort", "MontBleu Resort Casino & Spa"],
+  ]) {
+    const saved = { ...base, id: "stable", name };
+    const live = { ...base, id: "old", name: former, phone: "123", lat: base.lat + 0.001 };
+    const merged = mergeNightlife([live], [saved]);
+    assert.equal(merged.length, 1, name);
+    assert.equal(merged[0].id, saved.id);
+    assert.equal(merged[0].name, name);
+    assert.equal(merged[0].phone, "123");
+    assert.equal(mergeNightlife([{ ...live, lat: base.lat + 1 }], [saved]).length, 2);
+  }
+});
+
+test("closed Oklahoma predecessors stay excluded without suppressing operating successors", () => {
+  for (const [name, lat, lon] of [
+    ["Ioway Casino", 35.70, -96.98],
+    ["Kiowa Casino Verden", 35.09, -98.10],
+    ["Creek Nation Casino Eufaula", 35.29, -95.59],
+  ]) {
+    assert.ok(heldCasino(name, lat, lon));
+    assert.equal(elementToPlace(element({ lat, lon, tags: { name, amenity: "casino" } })), null);
+  }
+  for (const [name, lat, lon] of [
+    ["Harrah's Oklahoma", 35.6933941, -96.9757739],
+    ["Lake Eufaula Casino Hotel", 35.3000591, -95.5921671],
+    ["Elk Creek Kiowa Casino", 35.0199635, -99.0613392],
+  ]) assert.equal(heldCasino(name, lat, lon), undefined);
+});
