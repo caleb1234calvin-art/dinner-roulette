@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { Ban, Beer, Club, Dices, Martini, Shuffle, Sparkles, Wine, X } from "lucide-react";
+import { Ban, Shuffle, Sparkles, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getDateNightIcon } from "@/lib/date-night/icons";
 import { isHalloweenDateNightActive } from "@/lib/date-night/season";
 import { dateNightTypeLabel, type DecoratedDateNightPlace } from "@/lib/date-night/types";
-import { nightlifeArtwork, type ConcreteNightlifeType, type DecoratedNightlifePlace } from "@/lib/nightlife/types";
+import { nightlifeArtwork, type DecoratedNightlifePlace } from "@/lib/nightlife/types";
 import { dinnerRestaurantIcon } from "@/lib/restaurants/dinner-icons";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
@@ -49,16 +49,6 @@ export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNo
   );
 }
 
-function NightlifeGlyph({ types }: { types: readonly ConcreteNightlifeType[] }) {
-  const Icon = types.includes("casino") ? Dices
-    : types.includes("club") ? Club
-    : types.includes("brewery") ? Beer
-    : types.includes("lounge") ? Martini
-    : types.includes("pub") ? Beer
-    : Wine;
-  return <Icon className="size-12 text-accent" aria-hidden="true" />;
-}
-
 function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { restaurant: DecoratedRestaurant; mode: ResultMode; halloween: boolean; onSelect: () => void; onNotTonight: () => void; }) {
   const openLabel = restaurant.hoursKnown ? (restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed") : null;
   const theme = useAppStore((s) => s.theme);
@@ -67,8 +57,7 @@ function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { r
   const dateNightIcon = mode === "date-night" ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel, halloween }) : null;
   const activityTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
   const nightlifeRestaurant = restaurant as DecoratedNightlifePlace;
-  const nightlifeTypes = mode === "nightlife" ? nightlifeRestaurant.venueTypes ?? [] : [];
-  const nightlifeIcon = mode === "nightlife" ? nightlifeArtwork(nightlifeTypes) : null;
+  const nightlifeIcon = mode === "nightlife" ? nightlifeArtwork(nightlifeRestaurant.venueTypes ?? []) : null;
 
   return (
     <article className="flex min-h-[17rem] flex-col overflow-hidden rounded-xl bg-surface shadow-border">
@@ -81,7 +70,7 @@ function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { r
           ) : mode === "nightlife" && nightlifeIcon ? (
             <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={nightlifeIcon} alt="" className="size-24 rounded-2xl object-cover shadow-sm" /></div>
           ) : mode === "nightlife" ? (
-            <div className="flex h-28 w-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10"><NightlifeGlyph types={nightlifeTypes} /></div>
+            <div className="h-28 w-full bg-elevated outline outline-1 -outline-offset-1 outline-fg/10" aria-hidden="true" />
           ) : (
             <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={visualSrc} alt="" className="size-24 rounded-2xl object-cover shadow-sm" /></div>
           )}
