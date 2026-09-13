@@ -1,5 +1,29 @@
 # Dinner Roulette / Pick For Me — AI Continuity
 
+## Current authoritative status — September 13, 2026
+
+Work stays on `integration/active-work-pass-1`. Do not modify or merge to `main`; do not deploy to Vercel. Integration branch Git deployments are disabled in vercel.json. Main baseline: `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
+
+| Promoted work | PR | Exact-head validation | Integration merge |
+| --- | --- | --- | --- |
+| Corrected Pass 49, manifest audit and legacy ID reconciliation | #33 | Run 286, `25b2e0cd53049a6066d613d5ccfe6a63ee57dcd0` | `6563c1eec00cc44a004f4a7cbbfbd18739b952fc` |
+| Pass 50: Red Dragon, Lakecrest, Lake Eufaula, Holdenville | #34 | Run 288, `b8d4295c8b863a8193f63e51dea77d77e63000da` | `a7d894c9fde4391216378c49d6832097fc47fff8` |
+| Required portable repository/application test gate | #35 | Run 290, `a76ffbe7975f667dd808886462571ec0ba79934b` | `376a97bfd3601110ea63f4af9bfd82b30fe242f5` |
+
+Run 290 passed 215 repository tests and 51 application tests, zero failures. Four external OG documentation checks were explicitly skipped because the package is absent and gitignored; the original assertions still run when installed (or fail closed when REQUIRE_WORKSPACE_DOCS=1). Both suites now run and are required, even if the first fails.
+
+Confirmed runtime: 744 serialized records, 731 canonical national destinations. Nevada 109, Oklahoma 56, Colorado 31, Texas 4 = 200. Prior 194/198 totals are superseded; Oklahoma's earlier manual totals omitted two backbone destinations.
+
+Current manifest-reconciliation candidate: Colorado and Oklahoma were active but absent from the national manifest. Add Colorado complete at 31 using the existing statewide QA, and Oklahoma explicitly pending with unknown statewide total. Require every runtime jurisdiction to have a manifest entry. Complete-state equality is not relaxed. Expected national status after validation: 39 complete jurisdictions, two pending (Nevada and Oklahoma).
+
+All four named coordinate holds from the handoff are cleared, recorded and promoted. The Pass, Whiskey Pete's and Buffalo Bill's remain closure holds; no unsupported reopening is inferred. Nevada/Oklahoma broader scope is still unfinished, especially remaining Oklahoma tribal/operator clusters.
+
+Local execution remains unavailable, so no interactive local-browser smoke test or hosted acceptance test has been claimed. GitHub Actions ran exact-head typechecking, all required tests, audits, development builds and 30 Dinner icons. No deployed/production readiness claim follows automatically.
+
+Next: exact-head validate this manifest-coverage candidate, promote only if green, and record its validation. Continue remaining operator-scope research and browser validation when execution is restored; do not treat statewide pending as complete.
+
+## Earlier session checkpoints (superseded by current status)
+
 ## Latest status — Pass 50 promoted; test-gate hardening candidate
 
 - Pass 50 was promoted in PR #34 at integration merge `a7d894c9fde4391216378c49d6832097fc47fff8`.

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { auditCasinoRecords, mergeJurisdictions } from "./casino-audit.mjs";
+import { auditCasinoRecords, auditManifestCoverage, mergeJurisdictions, validateJurisdictionMetadata } from "./casino-audit.mjs";
 
 const venue = (overrides = {}) => ({
   file: "pass-1.ts",
@@ -120,4 +120,41 @@ test("missing identities cannot silently disappear from the audit", () => {
   for (const bad of [{ id: "" }, { name: null }]) {
     assert.match(auditCasinoRecords([venue(bad)], {}).failures.join("\n"), /invalid casino identity/);
   }
+});
+
+test("every active jurisdiction needs an explicit manifest status", () => {
+  assert.deepEqual(auditManifestCoverage({ Colorado: 31, Oklahoma: 56 }, {
+    Colorado: { status: "complete", expectedCount: 31 },
+  }), ["runtime jurisdiction missing from manifest: Oklahoma"]);
+  assert.deepEqual(auditManifestCoverage({ Oklahoma: 56 }, {
+    Oklahoma: { status: "pending", expectedCount: null },
+  }), []);
+});
+
+test("unknown totals are allowed only for explicitly pending jurisdictions", () => {
+  const source = "https://example.com/authority";
+  assert.deepEqual(validateJurisdictionMetadata({
+    Oklahoma: { status: "pending", expectedCount: null, source },
+  }), []);
+  for (const status of ["complete", "inventory"]) {
+    assert.match(validateJurisdictionMetadata({
+      Colorado: { status, expectedCount: null, source },
+    }).join("\n"), /invalid expectedCount/);
+  }
+});
+
+test("a supplied pending count must still be a positive integer", () => {
+  for (const expectedCount of [0, -1, "56", 1.5]) {
+    assert.match(validateJurisdictionMetadata({
+      Oklahoma: { status: "pending", expectedCount, source: "https://example.com/authority" },
+    }).join("\n"), /invalid expectedCount/);
+  }
+});
+
+test("authoritative sources and allowed status values remain required", () => {
+  const failures = validateJurisdictionMetadata({
+    Colorado: { status: "guessed", expectedCount: 31, source: "" },
+  });
+  assert.match(failures.join("\n"), /missing authoritative source/);
+  assert.match(failures.join("\n"), /invalid status guessed/);
 });
