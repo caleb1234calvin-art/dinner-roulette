@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "FIRST_COMPLETE_GREEN_COMBINED_CANDIDATE",
+  "status": "COMBINED_RELEASE_CANDIDATE_READY_FOR_NONPRODUCTION_INTEGRATION",
   "branch": "integration/casino-location-reconciliation-2026-09-13",
   "casinoCounts": {
     "canonical": 883,
@@ -100,7 +100,7 @@
     "safeAuthEnabledProductionBuild": "PASS after performance fix, auth=true, direct Vite, no migration",
     "deterministicBrowsers": "PASS 30 groups: 16 casino + 14 location",
     "realProviderBrowsers": "PASS: six casino regions + Toronto/Vancouver/Montr\u00e9al/London",
-    "adversarialReview": "FINAL FOCUSED REVIEW PENDING",
+    "adversarialReview": "PASS targeted integration review; no unresolved implementation finding",
     "combinedCI": "PASS Run 337 at bdc05dee1bb15807c0f70d25e48c12fb37eea8f0",
     "dinnerIcons": "PASS all 30"
   },
@@ -159,8 +159,61 @@
     "files": 363
   },
   "remainingBeforeIntegration": [
-    "Final focused adversarial review and scope check",
-    "Review exact candidate/head CI; merge only PR #42 into non-production integration",
-    "Verify integration revision/CI and update existing shared AI continuity"
-  ]
+    "Verify final candidate exact-head CI",
+    "Merge only PR #42 into integration/active-work-pass-1",
+    "Verify integration revision/CI and existing shared continuity"
+  ],
+  "remainingReleaseOnly": [
+    "Physical-phone GPS and OS permission dialogs, including permission revocation behavior.",
+    "Installed PWA, authorized hosted/account sessions and external Maps app navigation."
+  ],
+  "scopeProof": {
+    "changedFiles": [
+      ".github/workflows/validate-icon-pack.yml",
+      "AI_CONTINUITY.md",
+      "LOCATION_HANDOFF.md",
+      "audit/casino-location-reconciliation-attempts-2026-09-13.json",
+      "audit/casino-location-reconciliation-baseline-2026-09-13.json",
+      "audit/casino-location-reconciliation-browser-2026-09-13.json",
+      "audit/casino-location-reconciliation-performance-2026-09-13.json",
+      "audit/casino-location-reconciliation-plan-2026-09-13.md",
+      "audit/casino-location-reconciliation-validation-2026-09-13.json",
+      "audit/location-architecture-2026-09-13.md",
+      "audit/location-validation-2026-09-13.json",
+      "scripts/browser-build-proof.mjs",
+      "scripts/browser-build-proof.test.mjs",
+      "scripts/casino-browser-live-check.mjs",
+      "scripts/casino-browser-smoke.mjs",
+      "scripts/casino-location-integration.test.mjs",
+      "scripts/location-browser-live.mjs",
+      "scripts/location-browser.mjs",
+      "scripts/location-discovery.test.mjs",
+      "scripts/location-normalization.test.mjs",
+      "scripts/test-runner.mjs",
+      "scripts/test-support/load-app-module.mjs",
+      "scripts/test-support/location-provider-fixtures.mjs",
+      "src/components/date-night-home.tsx",
+      "src/components/date-night-plan-overlay.tsx",
+      "src/components/location-control.tsx",
+      "src/components/nightlife-home.tsx",
+      "src/components/pick-home.tsx",
+      "src/components/result-overlay.tsx",
+      "src/lib/date-night/search.ts",
+      "src/lib/error-component.tsx",
+      "src/lib/location/controller.ts",
+      "src/lib/location/location.test.ts",
+      "src/lib/location/maps.ts",
+      "src/lib/location/model.ts",
+      "src/lib/nightlife/search.ts",
+      "src/lib/restaurants/geocode.ts",
+      "src/lib/restaurants/normalize.ts",
+      "src/lib/restaurants/overpass.ts",
+      "src/lib/restaurants/search.ts",
+      "src/lib/restaurants/types.ts",
+      "src/lib/store.ts"
+    ],
+    "unexpected": [],
+    "protectedFilesUnchanged": 78,
+    "originalTestFilesUnchanged": 30
+  }
 }
