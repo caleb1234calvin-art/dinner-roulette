@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "status": "implementation-promoted-integration-only",
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "branch": "integration/active-work-pass-1",
+  "latestImplementationMerge": "ea82bb1f2fe67cc9493eea190c7e82dc298c5276",
+  "mainBaseline": "c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5",
+  "promotions": [
+    {
+      "pr": 33,
+      "work": "Pass 49 audit repair, Cadence correction and legacy-ID reconciliation",
+      "head": "25b2e0cd53049a6066d613d5ccfe6a63ee57dcd0",
+      "run": 34732399513,
+      "runNumber": 286,
+      "merge": "6563c1eec00cc44a004f4a7cbbfbd18739b952fc",
+      "casinoTests": 14,
+      "repositoryTests": {
+        "passed": 205,
+        "failed": 4,
+        "skipped": 0,
+        "reportOnly": true
+      },
+      "applicationTests": {
+        "status": "not-run-after-script-failure"
+      }
+    },
+    {
+      "pr": 34,
+      "work": "Pass 50 four current-property coordinate holds",
+      "head": "b8d4295c8b863a8193f63e51dea77d77e63000da",
+      "run": 34732655250,
+      "runNumber": 288,
+      "merge": "a7d894c9fde4391216378c49d6832097fc47fff8",
+      "casinoTests": 17,
+      "repositoryTests": {
+        "passed": 208,
+        "failed": 4,
+        "skipped": 0,
+        "reportOnly": true
+      },
+      "applicationTests": {
+        "status": "not-run-after-script-failure"
+      }
+    },
+    {
+      "pr": 35,
+      "work": "Required portable repository/application test gate",
+      "head": "a76ffbe7975f667dd808886462571ec0ba79934b",
+      "run": 34732944855,
+      "runNumber": 290,
+      "merge": "376a97bfd3601110ea63f4af9bfd82b30fe242f5",
+      "casinoTests": 17,
+      "repositoryTests": {
+        "passed": 215,
+        "failed": 0,
+        "skipped": 4,
+        "reportOnly": false
+      },
+      "applicationTests": {
+        "passed": 51,
+        "failed": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "pr": 36,
+      "work": "Complete manifest coverage for every active jurisdiction",
+      "head": "e04a76475885093e54cb1e8a241bbf487cfb591a",
+      "run": 34733191269,
+      "runNumber": 292,
+      "merge": "ea82bb1f2fe67cc9493eea190c7e82dc298c5276",
+      "casinoTests": 21,
+      "repositoryTests": {
+        "passed": 219,
+        "failed": 0,
+        "skipped": 4,
+        "reportOnly": false
+      },
+      "applicationTests": {
+        "passed": 51,
+        "failed": 0,
+        "skipped": 0
+      }
+    }
+  ],
+  "latestVerifiedCounts": {
+    "serializedRows": 744,
+    "canonicalNationalDestinations": 731,
+    "catalogPasses": 50,
+    "Nevada": 109,
+    "Oklahoma": 56,
+    "Colorado": 31,
+    "Texas": 4,
+    "fourStateTotal": 200,
+    "completeJurisdictions": 39,
+    "pendingJurisdictions": 2,
+    "activeJurisdictions": 41
+  },
+  "testAccounting": {
+    "uniquePassed": 270,
+    "failed": 0,
+    "externalDocumentationSkipped": 4,
+    "casinoTestsIncludedInRepositoryTotal": true
+  },
+  "verificationLimits": [
+    "Local interactive/browser smoke tests not run: execution environment failed.",
+    "No hosted acceptance or production-deployment claim.",
+    "Nevada and Oklahoma statewide discovery/scope remain pending."
+  ],
+  "deployment": {
+    "authorized": false,
+    "automaticIntegrationDeploymentsDisabled": true,
+    "mainChanged": false
+  }
+}

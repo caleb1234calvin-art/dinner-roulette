@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "capturedOn": "2026-09-13",
-  "status": "candidate-awaiting-exact-head-validation",
+  "status": "validated-and-promoted-integration-only",
   "evidence": {
     "pass49Run": 34732399513,
     "pass50Run": 34732655250,
@@ -22,5 +22,12 @@
     "No brand assets or actual brand-check/atomic-write behavior changed.",
     "No application assertion removed, no secrets fetched, no external assistant instructions fabricated.",
     "No main changes, no deployment."
-  ]
+  ],
+  "validation": {
+    "pr": 35,
+    "exactHead": "a76ffbe7975f667dd808886462571ec0ba79934b",
+    "runId": 34732944855,
+    "runNumber": 290,
+    "integrationMerge": "376a97bfd3601110ea63f4af9bfd82b30fe242f5"
+  }
 }

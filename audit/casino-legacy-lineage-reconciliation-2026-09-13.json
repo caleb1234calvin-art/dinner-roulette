@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "verifiedOn": "2026-09-13",
-  "status": "candidate-fix-awaiting-exact-head-validation",
+  "status": "validated-and-promoted-integration-only",
   "discoveredBy": {
     "runId": 34732178642,
     "runNumber": 285,
@@ -74,5 +74,12 @@
     "texas": 4,
     "expectedFourStateTotal": 196,
     "warning": "These are expected post-fix counts until exact-head CI confirms them. Oklahoma/Nevada remain incomplete; no pending universe was converted into an exact quota."
+  },
+  "validation": {
+    "pr": 33,
+    "exactHead": "25b2e0cd53049a6066d613d5ccfe6a63ee57dcd0",
+    "runId": 34732399513,
+    "runNumber": 286,
+    "integrationMerge": "6563c1eec00cc44a004f4a7cbbfbd18739b952fc"
   }
 }

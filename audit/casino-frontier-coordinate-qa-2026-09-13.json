@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "capturedOn": "2026-09-13",
-  "status": "pass-50-candidate-awaiting-exact-head-validation",
+  "status": "validated-and-promoted-integration-only",
   "priorValidatedPass": {
     "pass": 49,
     "head": "25b2e0cd53049a6066d613d5ccfe6a63ee57dcd0",
@@ -216,5 +216,12 @@
     "mainChangesAuthorized": false,
     "vercelDeploymentAuthorized": false
   },
-  "nextSteps": "Run the full exact-head integration workflow. Promote only the candidate that passes. Preserve all historical rejected points and audit files as provenance."
+  "nextSteps": "Four former coordinate holds are promoted on integration. Continue unresolved statewide scope and closure maintenance; no Vercel deployment is authorized.",
+  "validation": {
+    "pr": 34,
+    "exactHead": "b8d4295c8b863a8193f63e51dea77d77e63000da",
+    "runId": 34732655250,
+    "runNumber": 288,
+    "integrationMerge": "a7d894c9fde4391216378c49d6832097fc47fff8"
+  }
 }

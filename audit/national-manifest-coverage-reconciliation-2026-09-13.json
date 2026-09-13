@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "capturedOn": "2026-09-13",
-  "status": "candidate-awaiting-exact-head-validation",
+  "status": "validated-and-promoted-integration-only",
   "discoveredBy": {
     "exactHead": "a76ffbe7975f667dd808886462571ec0ba79934b",
     "runId": 34732944855,
@@ -38,5 +38,12 @@
     "Nevada pending scope and closure-status maintenance.",
     "Oklahoma remaining tribal/operator clusters beyond the four coordinate holds cleared in Pass 50.",
     "Interactive browser/runtime smoke checks have not run in the failed local execution environment; no hosted deployment is authorized."
-  ]
+  ],
+  "validation": {
+    "pr": 36,
+    "exactHead": "e04a76475885093e54cb1e8a241bbf487cfb591a",
+    "runId": 34733191269,
+    "runNumber": 292,
+    "integrationMerge": "ea82bb1f2fe67cc9493eea190c7e82dc298c5276"
+  }
 }
