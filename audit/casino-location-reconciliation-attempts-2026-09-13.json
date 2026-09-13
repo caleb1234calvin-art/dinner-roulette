@@ -154,6 +154,216 @@
       "phase": "first international live runner",
       "result": "INTERRUPTED_UNBOUNDED_BROWSER_WAIT",
       "decision": "No city result or successful validation was produced. Interrupted the disposable runner; add bounded page/action timeouts and stage logging before retry. No provider or app success claimed."
+    },
+    {
+      "phase": "bounded international live run before performance fix",
+      "result": "FAILED_COMPLETED_BEFORE_STOP_REQUEST",
+      "cityResults": [
+        {
+          "query": "Toronto, Ontario, Canada",
+          "passed": false,
+          "error": "locator.waitFor: Timeout 110000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('status').filter({ hasText: 'Finding restaurants near you' }) to be hidden\u001b[22m\n\u001b[2m    218 \u00d7 locator resolved to visible <div role=\"status\" aria-live=\"polite\" class=\"mt-5 rounded-xl bg-surface p-4 shadow-border\">\u2026</div>\u001b[22m\n"
+        },
+        {
+          "query": "Vancouver, British Columbia, Canada",
+          "location": {
+            "lat": 49.2608724,
+            "lon": -123.113952,
+            "label": "Vancouver, British Columbia, Canada",
+            "locality": "Vancouver",
+            "region": "British Columbia",
+            "country": "Canada",
+            "countryCode": "CA",
+            "source": "manual"
+          },
+          "eligible": 393,
+          "selectedName": "King's Wok",
+          "directions": "https://www.google.com/maps/dir/?api=1&destination=49.2607016%2C-123.1161661",
+          "source": "live",
+          "passed": true
+        },
+        {
+          "query": "Montr\u00e9al, Qu\u00e9bec, Canada",
+          "passed": false,
+          "error": "locator.waitFor: Timeout 110000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('status').filter({ hasText: 'Finding restaurants near you' }) to be hidden\u001b[22m\n\u001b[2m    219 \u00d7 locator resolved to visible <div role=\"status\" aria-live=\"polite\" class=\"mt-5 rounded-xl bg-surface p-4 shadow-border\">\u2026</div>\u001b[22m\n"
+        },
+        {
+          "query": "London, United Kingdom",
+          "passed": false,
+          "error": "locator.waitFor: Timeout 110000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('status').filter({ hasText: 'Finding restaurants near you' }) to be hidden\u001b[22m\n\u001b[2m    219 \u00d7 locator resolved to visible <div role=\"status\" aria-live=\"polite\" class=\"mt-5 rounded-xl bg-surface p-4 shadow-border\">\u2026</div>\u001b[22m\n"
+        }
+      ],
+      "stages": [
+        "opening app",
+        "hydrated controls",
+        "manual Toronto, Ontario, Canada",
+        "resolved Toronto, Ontario, Canada",
+        "manual Vancouver, British Columbia, Canada",
+        "resolved Vancouver, British Columbia, Canada",
+        "manual Montr\u00e9al, Qu\u00e9bec, Canada",
+        "resolved Montr\u00e9al, Qu\u00e9bec, Canada",
+        "manual London, United Kingdom",
+        "resolved London, United Kingdom"
+      ],
+      "decision": "The bounded run completed with failures before the stop request. Preserve its actual verdict. Revalidate every international case after the normalizer fix.",
+      "evidence": {
+        "testedAt": "2026-09-13T19:38:40.673Z",
+        "origin": "http://127.0.0.1:8093",
+        "buildProof": {
+          "schemaVersion": 1,
+          "status": "BUILT",
+          "authFlag": "true",
+          "source": {
+            "sha256": "4b7bdfcd9698303209543f20ef2408be3f1d1be242b6a730da8df8c30257018f",
+            "files": 362
+          },
+          "startedAt": "2026-09-13T19:38:21.502Z",
+          "output": {
+            "sha256": "f53f73df80f87246801a851731a91106e333147814091f0d875c761fd8d2aad0",
+            "files": 182
+          },
+          "completedAt": "2026-09-13T19:38:29.536Z"
+        },
+        "mode": "Actual manual Nominatim and restaurant Overpass through the combined local app/RPC; no provider mocks; no GPS request",
+        "cities": [
+          {
+            "query": "Toronto, Ontario, Canada",
+            "passed": false,
+            "error": "locator.waitFor: Timeout 110000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('status').filter({ hasText: 'Finding restaurants near you' }) to be hidden\u001b[22m\n\u001b[2m    218 \u00d7 locator resolved to visible <div role=\"status\" aria-live=\"polite\" class=\"mt-5 rounded-xl bg-surface p-4 shadow-border\">\u2026</div>\u001b[22m\n"
+          },
+          {
+            "query": "Vancouver, British Columbia, Canada",
+            "location": {
+              "lat": 49.2608724,
+              "lon": -123.113952,
+              "label": "Vancouver, British Columbia, Canada",
+              "locality": "Vancouver",
+              "region": "British Columbia",
+              "country": "Canada",
+              "countryCode": "CA",
+              "source": "manual"
+            },
+            "eligible": 393,
+            "selectedName": "King's Wok",
+            "directions": "https://www.google.com/maps/dir/?api=1&destination=49.2607016%2C-123.1161661",
+            "source": "live",
+            "passed": true
+          },
+          {
+            "query": "Montr\u00e9al, Qu\u00e9bec, Canada",
+            "passed": false,
+            "error": "locator.waitFor: Timeout 110000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('status').filter({ hasText: 'Finding restaurants near you' }) to be hidden\u001b[22m\n\u001b[2m    219 \u00d7 locator resolved to visible <div role=\"status\" aria-live=\"polite\" class=\"mt-5 rounded-xl bg-surface p-4 shadow-border\">\u2026</div>\u001b[22m\n"
+          },
+          {
+            "query": "London, United Kingdom",
+            "passed": false,
+            "error": "locator.waitFor: Timeout 110000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('status').filter({ hasText: 'Finding restaurants near you' }) to be hidden\u001b[22m\n\u001b[2m    219 \u00d7 locator resolved to visible <div role=\"status\" aria-live=\"polite\" class=\"mt-5 rounded-xl bg-surface p-4 shadow-border\">\u2026</div>\u001b[22m\n"
+          }
+        ],
+        "pageErrors": [],
+        "errors": [
+          "Toronto, Ontario, Canada: locator.waitFor: Timeout 110000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('status').filter({ hasText: 'Finding restaurants near you' }) to be hidden\u001b[22m\n\u001b[2m    218 \u00d7 locator resolved to visible <div role=\"status\" aria-live=\"polite\" class=\"mt-5 rounded-xl bg-surface p-4 shadow-border\">\u2026</div>\u001b[22m\n",
+          "Montr\u00e9al, Qu\u00e9bec, Canada: locator.waitFor: Timeout 110000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('status').filter({ hasText: 'Finding restaurants near you' }) to be hidden\u001b[22m\n\u001b[2m    219 \u00d7 locator resolved to visible <div role=\"status\" aria-live=\"polite\" class=\"mt-5 rounded-xl bg-surface p-4 shadow-border\">\u2026</div>\u001b[22m\n",
+          "London, United Kingdom: locator.waitFor: Timeout 110000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('status').filter({ hasText: 'Finding restaurants near you' }) to be hidden\u001b[22m\n\u001b[2m    219 \u00d7 locator resolved to visible <div role=\"status\" aria-live=\"polite\" class=\"mt-5 rounded-xl bg-surface p-4 shadow-border\">\u2026</div>\u001b[22m\n"
+        ],
+        "reloadWithoutGps": true,
+        "providers": [
+          {
+            "host": "nominatim.openstreetmap.org",
+            "status": 200,
+            "elapsedMs": 7394
+          },
+          {
+            "host": "overpass.openstreetmap.fr",
+            "status": 200,
+            "elapsedMs": 7949
+          },
+          {
+            "host": "overpass.openstreetmap.fr",
+            "status": 200,
+            "elapsedMs": 13801
+          },
+          {
+            "host": "overpass.openstreetmap.fr",
+            "elapsedMs": 109742,
+            "error": "TimeoutError",
+            "code": 23
+          },
+          {
+            "host": "nominatim.openstreetmap.org",
+            "status": 200,
+            "elapsedMs": 6641
+          },
+          {
+            "host": "overpass.openstreetmap.fr",
+            "status": 200,
+            "elapsedMs": 11300
+          },
+          {
+            "host": "overpass.private.coffee",
+            "elapsedMs": 52658,
+            "error": "TimeoutError",
+            "code": 23
+          },
+          {
+            "host": "nominatim.openstreetmap.org",
+            "status": 200,
+            "elapsedMs": 6207
+          },
+          {
+            "host": "maps.mail.ru",
+            "status": 200,
+            "elapsedMs": 13373
+          },
+          {
+            "host": "overpass.openstreetmap.fr",
+            "elapsedMs": 91036,
+            "error": "TimeoutError",
+            "code": 23
+          },
+          {
+            "host": "overpass.private.coffee",
+            "elapsedMs": 22005,
+            "error": "TimeoutError",
+            "code": 23
+          },
+          {
+            "host": "nominatim.openstreetmap.org",
+            "status": 200,
+            "elapsedMs": 6452
+          },
+          {
+            "host": "maps.mail.ru",
+            "status": 200,
+            "elapsedMs": 10011
+          },
+          {
+            "host": "overpass.openstreetmap.fr",
+            "elapsedMs": 45100,
+            "error": "TimeoutError",
+            "code": 23
+          },
+          {
+            "host": "overpass.private.coffee",
+            "elapsedMs": 22002,
+            "error": "TimeoutError",
+            "code": 23
+          },
+          {
+            "host": "maps.mail.ru",
+            "elapsedMs": 22005,
+            "error": "TimeoutError",
+            "code": 23
+          },
+          {
+            "host": "overpass-api.de",
+            "elapsedMs": 22002,
+            "error": "TimeoutError",
+            "code": 23
+          }
+        ],
+        "passed": false
+      }
     }
   ],
   "nativePermissionProbe": {

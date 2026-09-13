@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "COMBINED_TEST_STRUCTURE_GREEN_BROWSER_BUILD_GATES_PENDING",
+  "status": "PERFORMANCE_FIX_AUTOMATED_GREEN_LIVE_RECHECK_PENDING",
   "branch": "integration/casino-location-reconciliation-2026-09-13",
   "casinoCounts": {
     "canonical": 883,
@@ -12,21 +12,22 @@
     "Texas": 4
   },
   "tests": {
-    "repositoryPassed": 293,
+    "repositoryPassed": 296,
     "applicationPassed": 71,
-    "uniquePassed": 364,
+    "uniquePassed": 367,
     "failed": 0,
     "skipped": 4,
-    "registeredIncludingSkips": 368,
+    "registeredIncludingSkips": 371,
     "casinoSubsetPassed": 83,
     "locationUnitSubsetPassed": 20,
     "sourceLocationTestsRetained": 28,
-    "newIntegrationTests": 7,
+    "newIntegrationTests": 10,
     "independentSourceTotalsAdded": false,
     "newIntegrationBreakdown": {
       "locationController": 2,
       "combinedProviderMaps": 3,
-      "browserBuildGuards": 2
+      "browserBuildGuards": 2,
+      "denseCityNormalization": 3
     }
   },
   "testInventory": {
@@ -92,15 +93,15 @@
     "weakened": false
   },
   "currentGates": {
-    "typecheck": "PASS final combined source",
-    "catalogSchemaIdsChronologyManifest": "PASS",
-    "targetedLint": "PASS all 30 changed code files",
-    "safeDevelopmentBuild": "PASS",
-    "safeAuthEnabledProductionBuild": "PASS: direct Vite, no migration",
-    "deterministicBrowsers": "PASS: 16 casino + 14 location groups; 12 original location groups retained, 2 added",
-    "realProviderBrowsers": "CASINO PASS six regions; international Toronto timed out at 110s, Vancouver passed; performance diagnosis in progress",
+    "typecheck": "PASS after performance fix",
+    "catalogSchemaIdsChronologyManifest": "PASS 883/899/60 after performance fix",
+    "targetedLint": "PASS",
+    "safeDevelopmentBuild": "PENDING rebuild after performance fix",
+    "safeAuthEnabledProductionBuild": "PENDING rebuild after performance fix",
+    "deterministicBrowsers": "30 groups passed before performance fix; rerun on final build",
+    "realProviderBrowsers": "Six casino regions passed before performance fix; international Toronto/Montr\u00e9al/London timed out on old normalizer. Final recheck required.",
     "adversarialReview": "PENDING",
-    "combinedCI": "PENDING",
+    "combinedCI": "Run 335 PASS at d46154381cbdc8a6de4af78f9b696384b330c388 before performance fix",
     "dinnerIcons": "PASS all 30"
   },
   "notes": [

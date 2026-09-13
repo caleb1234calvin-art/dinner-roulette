@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "BLOCKING_PERFORMANCE_INVESTIGATION",
+  "status": "TARGETED_FIX_VALIDATED_LIVE_RECHECK_PENDING",
   "observation": "Actual Toronto manual geocoding succeeded, but the combined Dinner UI remained loading beyond the 110-second browser gate. Vancouver live discovery passed with 393 eligible one-mile restaurants.",
   "codeFinding": "The application prefetches at least 15 miles, including for a one-mile display radius. Restaurant deduplication compares every candidate to every retained row and repeatedly normalizes names; dense international cities expose quadratic work.",
   "beforeBenchmark": [
@@ -22,5 +22,54 @@
   ],
   "benchmarkScope": "Synthetic distinct restaurant names and Toronto-area points through the actual mergePlaces implementation; no live candidate inventory is inferred.",
   "next": "Replace only the all-pairs duplicate lookup with a bounded spatial candidate index, preserve exact name/distance/rank rules, prove parity on adversarial boundary fixtures, and rerun large-city actual browser acceptance.",
-  "productionBehaviorChangeAuthorized": "Performance correction on the affected international discovery path only; no category/radius/filter/selection semantics or casino data changes."
+  "productionBehaviorChangeAuthorized": "Performance correction on the affected international discovery path only; no category/radius/filter/selection semantics or casino data changes.",
+  "afterBenchmark": [
+    {
+      "input": 500,
+      "output": 500,
+      "elapsedMs": 69
+    },
+    {
+      "input": 1000,
+      "output": 1000,
+      "elapsedMs": 81
+    },
+    {
+      "input": 2000,
+      "output": 2000,
+      "elapsedMs": 111
+    },
+    {
+      "input": 8000,
+      "output": 8000,
+      "elapsedMs": 386
+    },
+    {
+      "input": 16000,
+      "output": 16000,
+      "elapsedMs": 936
+    }
+  ],
+  "implementation": "Use Earth-centered Cartesian cells to find only spatially nearby kept candidates; retain exact namesMatch and strict haversine <0.2 rules, source sorting and output order. Geographically reject impossible local-catalog overlays before expensive namesMatch calls.",
+  "targetedTests": {
+    "passed": 16,
+    "failed": 0,
+    "newTests": 3,
+    "scope": [
+      "legacy algorithm parity, priority/order and strict radius boundaries",
+      "antimeridian and north/south polar duplicates",
+      "8000 distinct rows plus duplicates preserved"
+    ]
+  },
+  "limitations": "Synthetic benchmark timings are local observations, not hosted performance guarantees. Real dense-city acceptance is pending.",
+  "additionalObservation": "Completed old-normalizer live run: Toronto, Montr\u00e9al and London each remained loading beyond 110 seconds; Vancouver passed. All four manual geocoders resolved. Some provider timeout callbacks were delayed beyond their 22-second deadlines, consistent with synchronous server work blocking the event loop.",
+  "fullSuiteAfterFix": {
+    "repositoryPassed": 296,
+    "applicationPassed": 71,
+    "uniquePassed": 367,
+    "failures": 0,
+    "externalDocumentationSkips": 4
+  },
+  "typecheck": "PASS",
+  "targetedLint": "PASS"
 }
