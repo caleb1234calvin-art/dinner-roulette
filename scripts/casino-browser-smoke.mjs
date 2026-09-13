@@ -14,7 +14,7 @@ mkdirSync(output, { recursive: true });
 const preload = pathToFileURL(resolve("scripts/casino-smoke-network.mjs")).href;
 const server = spawn(process.execPath, [
   "scripts/with-app-env.mjs", process.execPath, "--import=" + preload,
-  "node_modules/vite/bin/vite.js", "dev", "--host", "127.0.0.1", "--port", "8080",
+  "node_modules/vite/bin/vite.js", "preview", "--host", "127.0.0.1", "--port", "8080",
 ], { env: { ...process.env, CASINO_BROWSER_SMOKE: "1" }, stdio: ["ignore", "pipe", "pipe"] });
 let serverLog = "";
 server.stdout.on("data", (data) => { serverLog += data; });
@@ -40,7 +40,7 @@ async function assertDirections(page, expectedState) {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
   return record;
 }
-const verdict = { origin, fixtures: "Server-side Overpass outage; Nominatim deterministic locations. Actual app, server functions and catalog.", checks: [], errors: [] };
+const verdict = { origin, fixtures: "Server-side Overpass outage; Nominatim deterministic locations. Production-mode local preview, actual server functions and catalog.", checks: [], errors: [] };
 let browser;
 let currentPage;
 const browserConsole = [];
