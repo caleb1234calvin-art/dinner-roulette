@@ -15,7 +15,9 @@ Updated September 13, 2026 after the final casino hold-resolution/coverage pass.
 
 ## Latest verified checkpoint
 
-Non-production integration passed [CI Run 324](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34775743815) at `b7b9be79ef7476a5b9497c67e624533fefec1e42`. Its tree equals the validated casino candidate. The following continuity-only checkpoint records that result; its own commit/CI is subsequent, so verify the current remote ref when resuming.
+The shared casino handoff at **`3049c28781bd63559c85df6e45d42d071c4a5258`** passed [CI Run 325](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34775943185): **329 unique tests passed, zero failures, four understood external-documentation skips**, plus typecheck, casino/schema/manifest audits, both safe builds, all **16 browser check groups** and **30 Dinner icon assets**. The working tree was clean and matched the published shared revision. The casino implementation was merged through [PR #41](https://github.com/caleb1234calvin-art/dinner-roulette/pull/41); its integration merge `b7b9be79ef7476a5b9497c67e624533fefec1e42` passed Run 324 and has the same tree as the validated candidate.
+
+At Caleb’s request, this subsequent refresh updates **only this existing shared `AI_CONTINUITY.md` on `integration/active-work-pass-1`** to record the completed final checkpoint. Casino data, application code and the separate location/international candidate are unchanged. This refresh follows Run 325; its own documentation commit/CI is subsequent, so verify the current shared ref and Actions result when resuming.
 
 
 Updated September 13, 2026. **883 canonical destinations / 899 serialized rows / 60 passes.** Nevada **204**, Oklahoma **113**, Colorado **31**, Texas **4**; four-state total **352**. **26 additions in this completion pass** (23 NV + 3 OK), **152 additions from the original 731 baseline**. The 16 superseded historical rows remain preserved.
@@ -37,7 +39,7 @@ The finite reviewed casino queue is exhausted under currently available evidence
 
 All **16 deterministic local Chromium check groups** passed against the current production-mode build with sign-in rendering enabled. The real-provider browser check passed **six regions** (Reno, Newkirk, Ardmore, Chandler, Pahrump and Pawnee), with **0 final errors and 0 final findings**. Transport recorded 24 Overpass HTTP 200 responses, 2 Nominatim HTTP 200 responses and 12 provider timeouts; honest fallback remains part of the tested behavior. Desktop 1280×800 and mobile viewport 390×844 were exercised. Physical GPS, hosted acceptance, authenticated sessions and external Maps-app launch remain unverified.
 
-Non-production integration passed [CI Run 324](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34775743815) at `b7b9be79ef7476a5b9497c67e624533fefec1e42`. Its tree equals the validated casino candidate. The following continuity-only checkpoint records that result; its own commit/CI is subsequent, so verify the current remote ref when resuming.
+Candidate CI Run 323, integration CI Run 324 and shared-handoff CI Run 325 all passed. The latest exact checkpoint and Run 325 link are recorded above. Supporting release artifacts retain the runtime/integration evidence; this shared root file records the later handoff verification.
 
 The first final-pass live run passed its mechanical UI assertions but manual review found stale/duplicate provider names. It is preserved as a diagnostic attempt, not the accepted final browser gate. Captured public OSM entities are replayed by a regression test; the reviewed Newkirk/Pahrump/Pawnee pools have explicit live-browser count checks. Newly appearing live inventory in those finite reviewed pools requires investigation rather than automatic acceptance.
 
