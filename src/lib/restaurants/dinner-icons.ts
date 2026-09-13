@@ -18,11 +18,6 @@ export type DinnerIconKey =
   | "breakfast"
   | "fallback";
 
-/**
- * Specific cuisines must win over broad provider tags such as fast_food or
- * american. Providers commonly return both (for example dessert + fast_food),
- * and the broad tag previously forced obviously wrong artwork.
- */
 const CUISINE_ICON_PRIORITY: Array<[CuisineId[], DinnerIconKey]> = [
   [["pizza"], "pizza"],
   [["mexican", "tex-mex"], "mexican"],
@@ -41,28 +36,27 @@ const CUISINE_ICON_PRIORITY: Array<[CuisineId[], DinnerIconKey]> = [
 ];
 
 /**
- * The generated image pack was saved under semantic filenames in a different
- * order from the actual objects. Map semantic intent to the object that is
- * visibly present in the current pack. When the pack has no trustworthy match
- * (burger/sandwich/general restaurant), prefer the neutral covered-dish tile
- * rather than showing a confidently wrong food.
+ * Verified by visually inspecting the existing dark Dinner asset pack on the
+ * hosted preview. These filenames were historically organized under labels
+ * that do not match the object actually depicted, so semantic intent is mapped
+ * to the verified artwork here without replacing any user-owned images.
  */
 const ICON_ASSET_KEY: Record<DinnerIconKey, DinnerIconKey> = {
-  burger: "seafood",       // neutral covered dish
-  pizza: "burger",         // pizza slice
-  mexican: "fallback",     // taco
-  chinese: "pizza",        // dumplings
-  japanese: "pizza",       // neutral Asian dumplings
-  italian: "mexican",      // pasta
-  steakhouse: "chinese",   // steak
-  bbq: "chicken",          // ribs
-  chicken: "japanese",     // fried chicken
-  "cafe-bakery": "cafe-bakery", // cake / cafe-adjacent
-  dessert: "cafe-bakery",  // cake
-  seafood: "dessert",      // fish / shellfish
-  buffet: "buffet",
-  breakfast: "breakfast",
-  fallback: "seafood",     // neutral covered dish
+  burger: "bbq",            // burger
+  pizza: "burger",          // pizza slice
+  mexican: "fallback",      // taco
+  chinese: "pizza",         // dumplings
+  japanese: "breakfast",    // sushi
+  italian: "mexican",       // pasta
+  steakhouse: "chinese",    // steak
+  bbq: "chicken",           // ribs
+  chicken: "japanese",      // fried chicken
+  "cafe-bakery": "italian", // coffee + croissant
+  dessert: "cafe-bakery",   // cake
+  seafood: "dessert",       // fish / shellfish
+  buffet: "seafood",        // neutral covered dish
+  breakfast: "buffet",      // pancakes
+  fallback: "seafood",      // neutral covered dish
 };
 
 function normalizedLabel(name: string, cuisineLabel = ""): string {
@@ -82,7 +76,7 @@ export function dinnerIconKeyFromVisual(name: string, photoKey: PhotoKey, cuisin
   if (label.includes("chicken") || label.includes("wing")) return "chicken";
   if (label.includes("coffee") || label.includes("cafe") || label.includes("bakery")) return "cafe-bakery";
   if (label.includes("dessert") || label.includes("custard") || label.includes("ice cream") || label.includes("donut")) return "dessert";
-  if (label.includes("seafood") || label.includes("fish") || label.includes("crab") || label.includes("sushi")) return "seafood";
+  if (label.includes("seafood") || label.includes("fish") || label.includes("crab")) return "seafood";
   if (label.includes("breakfast") || label.includes("brunch") || label.includes("pancake")) return "breakfast";
   if (label.includes("burger")) return "burger";
   if (label.includes("sandwich") || label.includes("subway") || label.includes("deli")) return "fallback";
