@@ -1,5 +1,18 @@
 # Dinner Roulette / Pick For Me — AI Continuity
 
+## Latest status — Pass 49 promoted; Pass 50 candidate
+
+- PR #33 was promoted to integration only at merge `6563c1eec00cc44a004f4a7cbbfbd18739b952fc`.
+- Exact-head Run 286 (`34732399513`) validated `25b2e0cd53049a6066d613d5ccfe6a63ee57dcd0`: typecheck, 14 required casino regressions, both casino audits, development build and 30 Dinner icons passed.
+- The inherited report-only suite was NOT fully green: 205/209 script tests passed; four failed because external .grok/skills/og documentation is absent. The package's && also prevented later application tests from running after that failure. Investigate the harness without inventing missing assistant instructions or hiding app failures.
+- Validated Pass 49 runtime: 740 serialized records, 727 canonical national destinations. Nevada 108, Oklahoma 53, Colorado 31, Texas 4 = 196. Earlier totals omitted two Oklahoma backbone destinations; the lineage reconciliation artifact explains this.
+- Pass 50 adds Red Dragon Elko, Lakecrest, Lake Eufaula and Creek Nation Casino Holdenville, with provenance in audit/casino-frontier-coordinate-qa-2026-09-13.json. Runtime and audit are extended through Pass 50; three further required regressions protect evidence/coordinate serialization.
+- Expected Pass 50 totals pending exact-head validation: Nevada 109, Oklahoma 56, Colorado 31, Texas 4 = 200; national canonical total 731.
+- Dotty's #214 remains a co-located Red Dragon alias, not a second destination. Lakecrest's alternate MapQuest point is recorded but not selected. Lake Eufaula uses the destination point, not the map viewport or closed predecessor. Holdenville's city centroid remains excluded.
+- The Pass, Whiskey Pete's and Buffalo Bill's remain unactivated closure holds. Primm Valley has separate July 22 reopening evidence.
+- Main was rechecked unchanged at c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5. No Vercel deployment is authorized; the integration/** guard stays active.
+- Next: exact-head validate and promote Pass 50 only if the required gate is green, then fix the inherited test-harness portability and application-test execution gaps.
+
 ## Current recovery — September 13, 2026
 
 ### Exact-head Run 285 findings and follow-up

@@ -4,7 +4,7 @@ import { auditCasinoRecords, mergeJurisdictions } from "./casino-audit.mjs";
 
 const catalogFiles = [
   "src/lib/nightlife/casino-catalog.ts",
-  ...Array.from({ length: 48 }, (_, index) => `src/lib/nightlife/casino-catalog-pass-${index + 2}.ts`),
+  ...Array.from({ length: 49 }, (_, index) => `src/lib/nightlife/casino-catalog-pass-${index + 2}.ts`),
 ];
 const manifestFiles = ["audit/casino-sources.json", "audit/casino-sources-integration.json"];
 
