@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "status": "candidate-awaiting-exact-head-validation",
+  "evidence": {
+    "pass49Run": 34732399513,
+    "pass50Run": 34732655250,
+    "pass50ScriptTests": {
+      "passed": 208,
+      "failed": 4
+    },
+    "rootCause": "Four scaffold documentation contracts read an external OG skill package and AGENTS.md, both intentionally gitignored. npm test used &&, so their failure prevented the application suite from executing."
+  },
+  "changes": [
+    "Explicit skip reason only when the external package is absent; existing assertions are unchanged when present.",
+    "REQUIRE_WORKSPACE_DOCS=1 can require external contracts and fail on missing files.",
+    "Always run both repository and application suites; combine failures into a nonzero exit.",
+    "Make Repository and application tests a required GitHub integration gate.",
+    "Add three skip-policy and four test-runner regression cases."
+  ],
+  "nonChanges": [
+    "No brand assets or actual brand-check/atomic-write behavior changed.",
+    "No application assertion removed, no secrets fetched, no external assistant instructions fabricated.",
+    "No main changes, no deployment."
+  ]
+}
