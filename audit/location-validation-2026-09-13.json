@@ -289,5 +289,14 @@
   },
   "physicalDevicesTested": false,
   "noExaUsed": true,
-  "noDeployment": true
+  "noDeployment": true,
+  "reviewUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/pull/39",
+  "ciHistory": [
+    {
+      "run": 311,
+      "runId": 34742332367,
+      "head": "469b5d88afceee81293203cfc5545611a3a96485",
+      "result": "Location browser harness waited for networkidle and timed out before interaction; all previous gates, including both builds and casino browser smoke, passed. Replaced global network-idle readiness with hydrated controls and isolated external font/analytics requests. Require complete current-head CI before promotion."
+    }
+  ]
 }

@@ -15,6 +15,8 @@ Updated September 13, 2026 after non-production integration of the validated cas
 
 ## Location and international discovery update — September 13
 
+The location review is [PR #39](https://github.com/caleb1234calvin-art/dinner-roulette/pull/39), targeting non-production integration. Check its current exact-head Actions status before any promotion. First Run 311 passed all preceding gates, including both builds and casino browser smoke, but the location harness waited for global network idle and timed out. Its readiness check was corrected without removing app assertions.
+
 The focused location release source is `integration/location-international-2026-09-13`, based on casino integration checkpoint `a6d38616fe4490ff46b87232cbc7abb82f176926`. Read [LOCATION_HANDOFF.md](LOCATION_HANDOFF.md) for completed work, live Canada evidence, precise browser limits, validation commands, file changes and the physical-device checklist. The pre-edit trace is in `audit/location-architecture-2026-09-13.md`; final evidence is in `audit/location-validation-2026-09-13.json`.
 
 - **COMPLETED:** shared explicit-action GPS control; immediate coordinate use; visible progress/errors; manual override/race protection; optional country/code, region and locality metadata; removal of the U.S.-only geocoder filter; international address preservation; coordinate Maps destinations; geographically scoped local closure exclusions. Legacy U.S. locations, filters and bounded fallback remain compatible.

@@ -71,6 +71,8 @@ After rebasing onto the current casino integration:
 
 The initial older checkout had a stale lockfile; the newer casino integration supplied its corrected lockfile, and the final clean install succeeded. A one-line `unknown` error guard in `AppErrorComponent` was necessary for typechecking against the installed router types. No dependency upgrade was introduced by the location work.
 
+The review candidate is [PR #39](https://github.com/caleb1234calvin-art/dinner-roulette/pull/39), targeting non-production integration. First CI Run 311 passed tests, audits, both builds and casino browser checks, then its new location harness timed out waiting for global network idle. The harness now waits for interactive hydrated controls and isolates unrelated external fonts/analytics; app assertions were retained. The current exact-head Actions status is available on the PR and must be green before any promotion.
+
 ## BLOCKED
 
 No remaining structural implementation blocker is known. Physical-phone GPS hardware, actual Android/iOS permission dialogs, installed PWA behavior and hosted acceptance cannot be certified by this local Chromium environment. These remain unverified, not passed.

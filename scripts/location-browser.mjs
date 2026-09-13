@@ -64,6 +64,10 @@ try {
     permissions: ["geolocation"],
     reducedMotion: "reduce",
   });
+  await context.route("**/_vercel/insights/**", (route) =>
+    route.fulfill({ status: 200, body: "" }),
+  );
+  await context.route(/^https:\/\/fonts\.(googleapis|gstatic)\.com\//, (route) => route.abort());
   await context.addInitScript(() => {
     window.__locationCalls = 0;
     const original = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
@@ -75,7 +79,13 @@ try {
   const page = await context.newPage();
   const pageErrors = [];
   page.on("pageerror", (error) => pageErrors.push(error.message));
-  await page.goto("http://127.0.0.1:8080", { waitUntil: "networkidle" });
+  await page.goto("http://127.0.0.1:8080", { waitUntil: "domcontentloaded" });
+  // A dev connection or an external font must not define app readiness.
+  await page.waitForFunction(() =>
+    Object.keys(document.querySelector('[aria-label="Use my location"]') ?? {}).some((key) =>
+      key.startsWith("__reactProps"),
+    ),
+  );
   await page.getByRole("button", { name: "Close hints", exact: true }).click();
   const section = page.getByRole("region", { name: "Search location" });
   await section.getByRole("button", { name: "Use my location", exact: true }).waitFor();
@@ -119,7 +129,7 @@ try {
   assert.equal(manualState.location.source, "manual");
   assert.equal(manualState.location.region, "British Columbia");
   assert.deepEqual(manualState.filters, acquired.filters);
-  await page.reload({ waitUntil: "networkidle" });
+  await page.reload({ waitUntil: "domcontentloaded" });
   assert.equal((await state()).location.countryCode, "CA");
   assert.equal(await page.evaluate(() => window.__locationCalls), 0);
   await section.getByText("Vancouver, British Columbia, Canada", { exact: true }).waitFor();
@@ -240,6 +250,21 @@ try {
     resolve(output, "result.json"),
     JSON.stringify({ passed: false, checks: results, error: error.stack }, null, 2),
   );
+  if (browser) {
+    const current = browser
+      .contexts()
+      .flatMap((context) => context.pages())
+      .at(-1);
+    if (current) {
+      await current
+        .screenshot({ path: resolve(output, "failure.png"), fullPage: true })
+        .catch(() => {});
+      await writeFile(
+        resolve(output, "failure.html"),
+        await current.content().catch(() => "Page unavailable"),
+      );
+    }
+  }
   console.error(error);
   process.exitCode = 1;
 } finally {
