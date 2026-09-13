@@ -888,24 +888,24 @@
       "Elko/Jackpot current resort casinos",
       "Avi tribal property coordinate hold",
       "11 individually verified Nugget Group casino destinations (Pass 55)",
-      "Nine rural casino destinations plus Diamond\u2019s, Pete\u2019s and Alamo Mill City (Pass 57)",
-      "All five Alamo and ten current Pilot/Roadhouse/Lucky\u2019s operator casino locations represented (Pass 58)"
+      "Nine rural casino destinations plus Diamond’s, Pete’s and Alamo Mill City (Pass 57)",
+      "All five Alamo and ten current Pilot/Roadhouse/Lucky’s operator casino locations represented (Pass 58)"
     ],
     "currentFrontier": [
       {
         "cluster": "Named queues investigated; remaining point/scope holds",
         "candidates": [
-          "Wigwam \u2014 Fernley",
-          "Broadway Colt \u2014 Battle Mountain",
-          "Border Inn \u2014 Baker",
-          "C Punch / Lovelock Junction \u2014 Lovelock"
+          "Wigwam — Fernley",
+          "Broadway Colt — Battle Mountain",
+          "Border Inn — Baker",
+          "C Punch / Lovelock Junction — Lovelock"
         ],
         "decision": "Casino/status identities and conflicting map evidence preserved in Pass 55/57 and status watchlist. No weak routing pin or uncertain operating floor promoted."
       },
       {
         "cluster": "Further statewide reconciliation",
         "candidates": [
-          "Big Wheel \u2014 Lovelock (separate from the added Battle Mountain property)",
+          "Big Wheel — Lovelock (separate from the added Battle Mountain property)",
           "Remaining NGCB nonrestricted roster and small independent properties beyond the completed operator rosters"
         ],
         "decision": "Optional continuing coverage work; Nevada is not relabeled complete. A current map hit alone is not a promoted record."
@@ -913,7 +913,7 @@
     ],
     "blockedCandidates": [
       {
-        "name": "Horseshu \u2014 Jackpot",
+        "name": "Horseshu — Jackpot",
         "reason": "Current operator calls it a hotel; historical tourism calls it a casino. Need current separate operating gaming-floor evidence."
       },
       {
@@ -979,13 +979,13 @@
       "Old Creek Nation Casino Eufaula",
       "Golden Pony closure hold",
       "SouthWind Newkirk",
-      "Prairie Sun \u2014 operator announced closure effective May 14, 2023",
-      "Historical SouthWind Kaw City \u2014 casino guide reports ceased operations; no current operator property established"
+      "Prairie Sun — operator announced closure effective May 14, 2023",
+      "Historical SouthWind Kaw City — casino guide reports ceased operations; no current operator property established"
     ],
     "authorityBoundary": "NIGC's public marker REST endpoint returned 401. Authentication was not bypassed; current public operator, tribal, tourism and map sources were used instead."
   },
   "nationwideAudit": "Actual exported catalog/schema, unique-ID, chronological reconciliation, manifest accounting and close/same-name/address pairs were audited nationwide. Three WI/MI point/address corrections were made. The 39 complete manifest jurisdictions retain their existing scope status; this is not a fresh independent survey of every casino in those states.",
-  "releaseImplication": "The implemented catalog is locally validated; existing pending Nevada/Oklahoma scope status remains honest. Remaining unresolved properties are held outside the curated pool. CI, final browser evidence and controlled-release authorization are recorded separately in the release-readiness record.",
+  "releaseImplication": "The implemented 857-destination catalog is locally and CI validated and merged only into non-production integration. NV/OK statewide completeness remains explicitly pending. Unresolved properties stay outside the curated pool. Controlled main/hosted release and its remaining device/account/Maps acceptance require separate authorization.",
   "continuationBaseline": {
     "canonical": 808,
     "Nevada": 146,

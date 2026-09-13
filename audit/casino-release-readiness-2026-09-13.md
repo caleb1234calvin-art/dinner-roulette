@@ -1,10 +1,10 @@
 # Pick For Me casino release readiness
 
-Updated September 13, 2026 after Caleb resumed the paused casino work. **Locally validated; exact-head CI and non-production promotion pending.** Main, production and Vercel remain untouched.
+Updated September 13, 2026 after Caleb resumed the paused casino work. **Validated and promoted to non-production integration.** Main, production and Vercel remain untouched.
 
 ## Candidate
 
-Repository: caleb1234calvin-art/dinner-roulette. Working branch: `integration/casino-continuation-2026-09-13`, based on `2fd976a4f34f8bbe28db1075a264693d691b8253`. Target is only `integration/active-work-pass-1`. Main remains `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
+Repository: caleb1234calvin-art/dinner-roulette. Current branch: `integration/active-work-pass-1`. Candidate `integration/casino-continuation-2026-09-13` is preserved at `a3cffc654924596fe23a9d0050ac1a056b6751a5`, based on `2fd976a4f34f8bbe28db1075a264693d691b8253`. Main remains `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
 
 | Scope | Canonical destinations |
 | --- | ---: |
@@ -18,6 +18,12 @@ Repository: caleb1234calvin-art/dinner-roulette. Working branch: `integration/ca
 873 serialized rows across 58 registered passes resolve to 857 unique active destinations. The 16 historical superseded rows are retained and reconciled by the established latest-pass rule. Nevada and Oklahoma remain pending statewide completeness, with no speculative expected count. The other 39 manifest jurisdictions retain their prior scope status; this session did not independently re-survey every property in those states.
 
 This continuation adds **49 destinations**: Pass 55 adds 11 NV; Pass 56 adds 12 OK; Pass 57 adds 12 NV; Pass 58 adds 12 NV and 2 OK. Since the original 731 baseline, the RC adds 126 destinations. This continuation removes, merges or renames **zero existing canonical records** and makes no existing pin correction. Earlier passes 51–54 retain their three pin and two address corrections.
+
+## Validated integration
+
+[PR #40](https://github.com/caleb1234calvin-art/dinner-roulette/pull/40) was merged only into `integration/active-work-pass-1` as `264bb678362a5e281f16411ef9a7b98bce85a12e`. Candidate `a3cffc654924596fe23a9d0050ac1a056b6751a5` passed [Run 317](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768716664); the identical integration tree passed [Run 318](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768849482). Both ran 322 unique tests with zero failures and four understood documentation skips, plus typecheck, catalog audits, both safe builds, 16 browser check groups and 30 icon assets. This following checkpoint updates documentation only; inspect the current ref’s CI result before release. It does not claim its own future commit SHA or run ID.
+
+The continuation diff contains 27 expected paths, with no unexpected or deleted files. The final checkpoint changes only handoff/audit evidence. CI’s initial colored-log startup failure is resolved and recorded in the progress history.
 
 ## Data and evidence
 
@@ -68,9 +74,8 @@ Exact evidence: `audit/casino-continuation-browser-evidence-2026-09-13.json`. Ge
 
 ## Remaining release steps
 
-1. Obtain successful CI for the exact candidate head, recheck the target ref, then promote only into non-production integration.
-2. A controlled release to main/production requires Caleb’s separate explicit authorization. No deployment or migration command is authorized here.
-3. During the separately authorized release, verify the served revision, hosted environment, fresh/existing storage, casino flow, real external Maps navigation and representative physical mobile behavior. No hosted, physical-device, authenticated-account or external Maps-app validation is claimed by the local checks.
+1. A controlled release to main/production requires Caleb’s separate explicit authorization. No deployment or migration command is authorized here.
+2. During the separately authorized release, verify the served revision, hosted environment, fresh/existing storage, casino flow, real external Maps navigation and representative physical mobile behavior. No hosted, physical-device, authenticated-account or external Maps-app validation is claimed by the local checks.
 
 There is no known blocker in the validated casino code/data. Uncertain held destinations and further statewide completeness work remain documented, outside the curated pool. The separate location/international branch is preserved and unmerged; when that work replaces Nightlife’s location control, retain the visible-error behavior covered here.
 

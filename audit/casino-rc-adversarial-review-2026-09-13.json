@@ -134,7 +134,7 @@
     "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34741023078"
   },
   "validation": {
-    "status": "local-passed-CI-pending",
+    "status": "local-and-exact-head-CI-passed",
     "uniquePassed": 322,
     "repository": {
       "passed": 271,
@@ -156,7 +156,23 @@
     "browserEvidence": "audit/casino-continuation-browser-evidence-2026-09-13.json",
     "build": "development and explicit-auth production passed without migration",
     "lint": "All 11 relevant changed JS/TS/TSX files passed after fixing empty startup catches and unsafe cleanup throws",
-    "dependencies": "npm ci and npm ls passed; npm audit --omit=dev reported zero vulnerabilities"
+    "dependencies": "npm ci and npm ls passed; npm audit --omit=dev reported zero vulnerabilities",
+    "candidate": {
+      "head": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
+      "run": 34768716664,
+      "runNumber": 317,
+      "job": 103754260940,
+      "conclusion": "success",
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768716664"
+    },
+    "integration": {
+      "head": "264bb678362a5e281f16411ef9a7b98bce85a12e",
+      "run": 34768849482,
+      "runNumber": 318,
+      "job": 103754608346,
+      "conclusion": "success",
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768849482"
+    }
   },
   "continuationFindings": [
     {
@@ -190,6 +206,15 @@
     {
       "finding": "Local default sign-in flag differs from production",
       "resolution": "Explicit true build and real browser checks passed. CI production build/browser steps now set VITE_AUTH_ENABLED=true; application defaults and development settings were preserved."
+    },
+    {
+      "finding": "CI ANSI formatting caused a false preview-readiness timeout.",
+      "resolution": "Strip terminal control sequences in both owned-server log checks; keep strict-port/process/catalog guards. Local actual-color smoke plus candidate/integration CI passed.",
+      "initialRun": 34768414589,
+      "resolvedRuns": [
+        34768716664,
+        34768849482
+      ]
     }
   ],
   "continuationClosePairReview": {
@@ -1070,9 +1095,10 @@
     "mainUnchangedAt": "c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5"
   },
   "integration": {
-    "status": "pending continuation CI and non-production promotion",
-    "targetBranch": "integration/active-work-pass-1",
-    "base": "2fd976a4f34f8bbe28db1075a264693d691b8253",
+    "mergeCommit": "264bb678362a5e281f16411ef9a7b98bce85a12e",
+    "candidateHead": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
+    "tree": "cde1ced3c80936915a36a040619bbb974d7c8dcc",
+    "treeEqualsCandidate": true,
     "mainUnchangedAt": "c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5"
   }
 }

@@ -2,20 +2,22 @@
 
 Updated September 13, 2026 after Caleb’s instruction **“Let’s continue what we were doing now.”** The earlier stop is lifted. This checkpoint supersedes the paused 808-destination state. The exact paused continuity is preserved in `audit/ai-continuity-before-casino-continuation-2026-09-13.md`; earlier history remains in the other continuity archives.
 
-**Current status: 857 destinations, locally validated; exact-head CI and non-production integration promotion pending.** No main promotion, deployment, database migration or recurring monitoring has occurred in this continuation.
+**Current status: 857 destinations, validated and promoted to non-production integration.** No main promotion, deployment, database migration or recurring monitoring has occurred in this continuation.
 
 ## Working state and authority
 
 - Repository: `caleb1234calvin-art/dinner-roulette`.
 - Isolated checkout: `/workspace/scratch/60ab73826fd9/pick-for-me-casino`.
-- Candidate branch: `integration/casino-continuation-2026-09-13`, based on `2fd976a4f34f8bbe28db1075a264693d691b8253`.
-- Authorized integration target only: `integration/active-work-pass-1`, last read at that same base. The next step is exact-head CI, then a reviewed expected-head merge into this target.
+- Current working branch: `integration/active-work-pass-1`. Preserved candidate branch: `integration/casino-continuation-2026-09-13` at `a3cffc654924596fe23a9d0050ac1a056b6751a5`, based on `2fd976a4f34f8bbe28db1075a264693d691b8253`.
+- Non-production merge completed as `264bb678362a5e281f16411ef9a7b98bce85a12e` using the expected candidate SHA. Its tree exactly matches the validated candidate. PR #40 is already merged; do not merge it again.
 - Main last read unchanged at `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
 - Preserve separate `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839` and its checkout. Its LocationControl work is not merged here. When integrating it later, preserve equivalent visible location-error/manual recovery.
 - Earlier RC branch `integration/casino-release-candidate-2026-09-13` and PR #38 remain historical and already integrated. Do not merge them again.
 - Broad reversible predeployment work and non-production integration are authorized. Main, production, Vercel/other hosted deployment, migrations, secrets and recurring automation require separate explicit authorization. `vercel.json` still disables Git deployments for `integration/**`.
 
 ## COMPLETED
+
+[PR #40](https://github.com/caleb1234calvin-art/dinner-roulette/pull/40) was merged only into `integration/active-work-pass-1` as `264bb678362a5e281f16411ef9a7b98bce85a12e`. Candidate `a3cffc654924596fe23a9d0050ac1a056b6751a5` passed [Run 317](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768716664); the identical integration tree passed [Run 318](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768849482). Both ran 322 unique tests with zero failures and four understood documentation skips, plus typecheck, catalog audits, both safe builds, 16 browser check groups and 30 icon assets. This following checkpoint updates documentation only; inspect the current ref’s CI result before release. It does not claim its own future commit SHA or run ID.
 
 Catalog: **857 canonical destinations from 873 serialized rows across 58 registered passes**. NV **181**, OK **110**, CO **31**, TX **4**; four-state total **326**. The 16 superseded historical rows are deliberately preserved and reconciled. Nevada/Oklahoma remain pending statewide completeness with expected counts null; the 39 other manifest jurisdictions retain prior scope classifications, not a new exhaustive survey.
 
@@ -98,13 +100,19 @@ Agent-browser Chromium installation failed with UnknownIssuer and its daemon fai
 
 A standalone auth probe without its required local dev endpoint was indeterminate, not a pass. Subsequent probes against the owned dev server passed with auth disabled and enabled. Initial targeted lint reported two harness issues; both were fixed and final targeted lint passed. The baseline live-browser hidden-location-error finding was fixed and final updated-build runs passed. Busy-port failure was an intentional negative test, not an unexplained release failure.
 
+CI Run 316 at `146d8cbfc6440e76b2b26c83bce3567fd3a487e8` passed tests/audits/builds, but its browser did not run: ANSI terminal formatting split the owned preview URL and caused a false startup timeout. Both harnesses now strip that formatting. A local smoke with `NO_COLOR` unset and `FORCE_COLOR=1` confirmed actual ANSI output and all 16 groups passed; subsequent exact-head Runs 317 and 318 passed. The failed attempt is preserved, not counted as a browser pass.
+
+Direct Git push lacked CLI credentials. The existing authorized GitHub connector published the exact validated file tree; no credentials were read or modified. The original local commit was preserved and the checkout reconciled to the published history.
+
 Some research sources failed or returned stale/conflicting addresses, including the Jailhouse direct page, a parked Border Casino domain and inaccurate operator map/address fields. Sidecars retain sufficient alternate current primary/local evidence or a hold. No provider/authentication boundary was bypassed.
 
 ## Exact next action and recovery
 
-Finish current documentation, verify changed-file scope, commit/publish the isolated continuation branch, obtain successful exact-head CI, then merge only into `integration/active-work-pass-1` using the expected candidate SHA after re-reading target/main refs. Record CI, PR and resulting integration SHA in this handoff and release progress. Preserve the separate location/international work.
+The casino continuation is complete in non-production integration. Read the current integration ref and its latest CI result before any further action; this handoff follows the successful candidate/integration runs and changes documentation only. Preserve the separate location/international work. The exact remaining work is a separately authorized controlled main/hosted release and the served-revision, physical-device, authenticated-account and external Maps acceptance checklist. Further statewide coverage is optional expansion of the explicitly partial scope, not a claim already completed.
 
-After successful non-production integration, the meaningful release work is controlled main/hosted release plus its acceptance checklist. **Main promotion, any hosted/Vercel deployment, production writes/migrations and recurring monitoring require Caleb’s separate explicit authorization.**
+## REQUIRES USER AUTHORIZATION
+
+**Main promotion, any hosted/Vercel deployment, production writes/migrations and recurring monitoring require Caleb’s separate explicit authorization.** No such action was taken. The local browser and CI gates described above are complete; unavailable hosted/device/account/Maps checks remain explicitly unclaimed.
 
 Recovery is a reviewed revert of this continuation or restoration of validated non-production base `2fd976a4f34f8bbe28db1075a264693d691b8253`. Preserve branches/history/evidence. No database rollback is needed.
 

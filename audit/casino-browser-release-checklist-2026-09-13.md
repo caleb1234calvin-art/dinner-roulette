@@ -1,6 +1,6 @@
 # Pick For Me casino browser release checklist
 
-Updated September 13, 2026 for the **857-destination** continuation. Local production-preview browser validation is completed with `VITE_AUTH_ENABLED=true`; exact candidate CI remains pending. Evidence: `audit/casino-continuation-browser-evidence-2026-09-13.json`. Always run against the intended release revision.
+Updated September 13, 2026 for the **857-destination** continuation. Local production-preview browser validation is completed with `VITE_AUTH_ENABLED=true`; exact candidate [Run 317](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768716664) and integration [Run 318](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768849482) both passed the same 16-group smoke. Browser evidence artifact retention is 14 days. Evidence: `audit/casino-continuation-browser-evidence-2026-09-13.json`. Always run against the intended release revision.
 
 ## Completed locally
 
