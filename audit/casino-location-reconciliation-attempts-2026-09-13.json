@@ -75,6 +75,102 @@
         "failureBody": "DINNER ROULETTE \u00b7 NIGHTLIFE\n\nWhat's the Move?\n\nSet the vibe. Let the app pick the place.\n\nDinner\nNightlife\nDate Night\n\nSearching near\n\nReno, Nevada, United States\n\nLocation acquired. Searching near you.\n\nHow far?\n\nWithin 10 miles\n\n1\n3\n5\n10\n15\n20\n30\n40\n50\nBudget\n\n$ \u2014 $$$$\n\n$\n$$\n$$$\n$$$$\nWhat kind of place?\nAnything\nBar\nPub\nClub\nLounge\nBrewery / Beer Garden\nCasino\nWhat's the vibe?\n\nBalanced\n\nChill\nLively\n\nOpen now only\n\nOnly places with confirmed open hours\n\nFavorites only\n\nPick from nightlife spots you've saved\n\nLive discovery is taking the night off\n\nDinner Roulette is using verified saved local nightlife instead, so you can keep picking without interruption.\n\n19 venues match\n\nPICK FOR US\nGIVE US OPTIONS\nPick\nFavorites\nHistory\nSettings",
         "providerCasinos": []
       }
+    },
+    {
+      "phase": "explicit permission-revocation retry",
+      "result": "FAILED_NATIVE_CHROMIUM_CACHE_ASSUMPTION",
+      "evidence": {
+        "buildProof": {
+          "schemaVersion": 1,
+          "status": "BUILT",
+          "authFlag": "true",
+          "source": {
+            "sha256": "a6c931708f580cf049b19354ef6b76a3afd71b1de283a09ba3ca96c8d2bb29a9",
+            "files": 362
+          },
+          "startedAt": "2026-09-13T19:32:36.946Z",
+          "output": {
+            "sha256": "3b7a64be2b86e57cf60071ad7f195a83cea83f7641602bd54650dbac59eade39",
+            "files": 182
+          },
+          "completedAt": "2026-09-13T19:32:44.828Z"
+        },
+        "capturedAt": "2026-09-13T19:34:26.863Z",
+        "origin": "http://127.0.0.1:8092",
+        "network": "Actual provider requests; no mocked provider responses or geocoder results",
+        "geolocation": "Chromium permission and coordinate emulation; not a physical-device GPS test",
+        "canonicalDestinations": 883,
+        "requestedAuthFlag": "true",
+        "regions": [],
+        "findings": [],
+        "errors": [
+          "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'Location permission was denied. You can enter a location manually.' }) to be visible\u001b[22m\n\n    at /workspace/scratch/60ab73826fd9/pick-for-me-casino/scripts/casino-browser-live-check.mjs:117:127"
+        ],
+        "providers": [
+          {
+            "host": "overpass.openstreetmap.fr",
+            "status": 200,
+            "elapsedMs": 8265
+          },
+          {
+            "host": "overpass.openstreetmap.fr",
+            "elapsedMs": 8014,
+            "error": "TimeoutError",
+            "code": 23
+          },
+          {
+            "host": "overpass.openstreetmap.fr",
+            "status": 200,
+            "elapsedMs": 11729
+          },
+          {
+            "host": "overpass.private.coffee",
+            "elapsedMs": 8003,
+            "error": "TimeoutError",
+            "code": 23
+          },
+          {
+            "host": "maps.mail.ru",
+            "elapsedMs": 3983,
+            "error": "TimeoutError",
+            "code": 23
+          },
+          {
+            "host": "nominatim.openstreetmap.org",
+            "status": 200,
+            "elapsedMs": 5101
+          },
+          {
+            "host": "nominatim.openstreetmap.org",
+            "status": 200,
+            "elapsedMs": 23
+          }
+        ],
+        "failureBody": "DINNER ROULETTE \u00b7 NIGHTLIFE\n\nWhat's the Move?\n\nSet the vibe. Let the app pick the place.\n\nDinner\nNightlife\nDate Night\n\nSearching near\n\nReno, Nevada, United States\n\nLocation acquired. Searching near you.\n\nHow far?\n\nWithin 10 miles\n\n1\n3\n5\n10\n15\n20\n30\n40\n50\nBudget\n\n$ \u2014 $$$$\n\n$\n$$\n$$$\n$$$$\nWhat kind of place?\nAnything\nBar\nPub\nClub\nLounge\nBrewery / Beer Garden\nCasino\nWhat's the vibe?\n\nBalanced\n\nChill\nLively\n\nOpen now only\n\nOnly places with confirmed open hours\n\nFavorites only\n\nPick from nightlife spots you've saved\n\nLive discovery is taking the night off\n\nDinner Roulette is using verified saved local nightlife instead, so you can keep picking without interruption.\n\n19 venues match\n\nPICK FOR US\nGIVE US OPTIONS\nPick\nFavorites\nHistory\nSettings",
+        "providerCasinos": []
+      }
+    },
+    {
+      "phase": "first international live runner",
+      "result": "INTERRUPTED_UNBOUNDED_BROWSER_WAIT",
+      "decision": "No city result or successful validation was produced. Interrupted the disposable runner; add bounded page/action timeouts and stage logging before retry. No provider or app success claimed."
     }
-  ]
+  ],
+  "nativePermissionProbe": {
+    "probe": "Native Chromium only, no app code or providers",
+    "granted": {
+      "result": "coordinates",
+      "lat": 39.529
+    },
+    "permissionAfterRevocation": "denied",
+    "sameDocumentAfterRevocation": {
+      "result": "coordinates",
+      "lat": 39.529
+    },
+    "freshDeniedDocument": {
+      "result": "error",
+      "code": 1
+    }
+  },
+  "resolution": "Confirmed outside the app: same-document Chromium returns a cached position after permission revocation, despite permission state denied. A fresh explicitly denied context returns native code 1. Test grant and denial in separate fresh contexts; do not change product permission logic or weaken recovery assertions."
 }

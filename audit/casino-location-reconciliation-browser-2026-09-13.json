@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "DETERMINISTIC_COMBINED_PASS",
+  "status": "CASINO_LIVE_PASS_INTERNATIONAL_PERFORMANCE_INVESTIGATION",
   "build": {
     "schemaVersion": 1,
     "status": "BUILT",
@@ -102,9 +102,508 @@
     "390px Date Night shared location and status text remain visible and fit without horizontal overflow.",
     "Desktop casino options retain canonical names and selection controls."
   ],
-  "liveProviders": "PENDING combined real-network run",
+  "liveProviders": "Six casino regions pass; Toronto international search exceeded 110 seconds, Vancouver live search passed; remaining run in progress.",
   "limitations": [
     "Native coordinates/permissions are simulated; provider fixtures are deterministic.",
     "Physical GPS, installed PWA, hosted/account sessions and external Maps app navigation are unverified."
-  ]
+  ],
+  "casinoRealProviders": {
+    "buildProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "4b7bdfcd9698303209543f20ef2408be3f1d1be242b6a730da8df8c30257018f",
+        "files": 362
+      },
+      "startedAt": "2026-09-13T19:38:21.502Z",
+      "output": {
+        "sha256": "f53f73df80f87246801a851731a91106e333147814091f0d875c761fd8d2aad0",
+        "files": 182
+      },
+      "completedAt": "2026-09-13T19:38:29.536Z"
+    },
+    "capturedAt": "2026-09-13T19:38:43.623Z",
+    "origin": "http://127.0.0.1:8092",
+    "network": "Actual provider requests; no mocked provider responses or geocoder results",
+    "geolocation": "Chromium permission and coordinate emulation; not a physical-device GPS test",
+    "canonicalDestinations": 883,
+    "requestedAuthFlag": "true",
+    "regions": [
+      {
+        "name": "Reno",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "eligible": 19,
+        "expectedSavedCount": 19,
+        "source": "fallback",
+        "names": [
+          "Peppermill Resort Spa Casino",
+          "Western Village Inn & Casino",
+          "Gold Dust West Reno",
+          "Nugget Casino Resort"
+        ],
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=39.49732%2C-119.80139",
+        "pageErrors": []
+      },
+      {
+        "name": "Newkirk",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "eligible": 3,
+        "expectedSavedCount": 3,
+        "source": "fallback",
+        "names": [
+          "7 Clans Chilocco Gasino",
+          "7 Clans First Council Casino Hotel",
+          "Native Lights Casino"
+        ],
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=36.984497%2C-97.0420055",
+        "pageErrors": []
+      },
+      {
+        "name": "Ardmore",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "eligible": 2,
+        "expectedSavedCount": 2,
+        "source": "live-or-merged",
+        "names": [
+          "Gold Mountain Casino",
+          "Lakecrest Casino and Hotel"
+        ],
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=34.18478%2C-97.1086",
+        "pageErrors": []
+      },
+      {
+        "name": "Chandler",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "eligible": 1,
+        "expectedSavedCount": 1,
+        "source": "live-or-merged",
+        "names": [
+          "Harrah's Oklahoma"
+        ],
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=35.6933941%2C-96.9757739",
+        "pageErrors": []
+      },
+      {
+        "name": "Pahrump",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "eligible": 5,
+        "expectedSavedCount": 5,
+        "source": "live-or-merged",
+        "names": [
+          "Terrible's Road House Pahrump",
+          "Jackpot Joanie's Casino Pahrump",
+          "Pahrump Nugget Hotel & Casino",
+          "Lakeside Casino & RV Park"
+        ],
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=36.1935966%2C-115.9903118",
+        "pageErrors": []
+      },
+      {
+        "name": "Pawnee",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "eligible": 2,
+        "expectedSavedCount": 2,
+        "source": "live-or-merged",
+        "names": [
+          "StoneWolf Casino",
+          "Pawnee Nation Trading Post Casino"
+        ],
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=36.2275217%2C-96.785345",
+        "pageErrors": []
+      }
+    ],
+    "findings": [],
+    "errors": [],
+    "providers": [
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 7247
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "elapsedMs": 8008,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 9689
+      },
+      {
+        "host": "overpass.private.coffee",
+        "elapsedMs": 8005,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "maps.mail.ru",
+        "elapsedMs": 3987,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "nominatim.openstreetmap.org",
+        "status": 200,
+        "elapsedMs": 5513
+      },
+      {
+        "host": "nominatim.openstreetmap.org",
+        "status": 200,
+        "elapsedMs": 2933
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "elapsedMs": 8002,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "elapsedMs": 8001,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 503,
+        "elapsedMs": 4657
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 5324
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 15644
+      },
+      {
+        "host": "overpass.private.coffee",
+        "elapsedMs": 8767,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "elapsedMs": 8701,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 12879
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 18140
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 13961
+      },
+      {
+        "host": "overpass.private.coffee",
+        "elapsedMs": 8001,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "maps.mail.ru",
+        "elapsedMs": 3233,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "maps.mail.ru",
+        "elapsedMs": 3996,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.private.coffee",
+        "elapsedMs": 8004,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "maps.mail.ru",
+        "elapsedMs": 3294,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.private.coffee",
+        "elapsedMs": 22003,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 7099
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 4898
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 8889
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 7021
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 7161
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 1460
+      },
+      {
+        "host": "maps.mail.ru",
+        "status": 200,
+        "elapsedMs": 9284
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 1098
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 5466
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 6946
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 10451
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 1195
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 1029
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 2030
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 7010
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 4976
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 1226
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 1202
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 6379
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 4281
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 5670
+      }
+    ],
+    "nativePermissionRecovery": {
+      "freshDeniedContext": true,
+      "permissionState": "denied",
+      "visibleError": true,
+      "realManualGeocoder": true
+    },
+    "providerCasinos": [
+      {
+        "type": "way",
+        "id": 865243899,
+        "lat": 34.1847897,
+        "lon": -97.1086335,
+        "tags": {
+          "addr:city": "Ardmore",
+          "addr:housenumber": "1410",
+          "addr:postcode": "73401",
+          "addr:state": "OK",
+          "addr:street": "Sam Noble Parkway",
+          "amenity": "casino",
+          "name": "Gold Mountain Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1246182211,
+        "lat": 35.6723965,
+        "lon": -96.6601799,
+        "tags": {
+          "amenity": "casino"
+        }
+      },
+      {
+        "type": "node",
+        "id": 9419682759,
+        "lat": 36.1326498,
+        "lon": -115.9584618,
+        "tags": {
+          "amenity": "casino",
+          "name": "Lakeside Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 239380384,
+        "lat": 36.2109618,
+        "lon": -115.9841737,
+        "tags": {
+          "addr:city": "Pahrump",
+          "addr:housenumber": "681",
+          "addr:postcode": "89048",
+          "addr:state": "NV",
+          "addr:street": "South Highway 160",
+          "amenity": "casino",
+          "name": "Pahrump Nugget Hotel and Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 575029679,
+        "lat": 36.2091081,
+        "lon": -115.9832142,
+        "tags": {
+          "amenity": "casino",
+          "name": "Gold Town Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 575873265,
+        "lat": 36.2012933,
+        "lon": -115.9766887,
+        "tags": {
+          "addr:city": "Pahrump",
+          "addr:housenumber": "1220",
+          "addr:postcode": "89048",
+          "addr:state": "NV",
+          "addr:street": "State Route 160",
+          "amenity": "casino",
+          "name": "Saddle West Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 682672701,
+        "lat": 36.1937715,
+        "lon": -115.9904878,
+        "tags": {
+          "addr:city": "Pahrump",
+          "addr:housenumber": "1750",
+          "addr:postcode": "89048",
+          "addr:state": "NV",
+          "addr:street": "Pahrump Valley Boulevard",
+          "amenity": "casino",
+          "name": "Terrible's Roadhouse Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1126484584,
+        "lat": 36.2079351,
+        "lon": -115.9921447,
+        "tags": {
+          "amenity": "casino",
+          "name": "Irene's Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 247781762,
+        "lat": 36.337592,
+        "lon": -96.7938685,
+        "tags": {
+          "addr:city": "Pawnee",
+          "addr:country": "US",
+          "addr:housenumber": "291",
+          "addr:postcode": "74056",
+          "addr:street": "Agency Road",
+          "amenity": "casino",
+          "name": "Pawnee Trading Post and Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1517858495,
+        "lat": 36.2274547,
+        "lon": -96.7854963,
+        "tags": {
+          "addr:city": "Pawnee",
+          "addr:housenumber": "54251",
+          "addr:postcode": "74058",
+          "addr:state": "OK",
+          "addr:street": "South 34900 Road",
+          "amenity": "casino",
+          "name": "StoneWolf Casino"
+        }
+      }
+    ]
+  }
 }

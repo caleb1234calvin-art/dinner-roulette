@@ -98,7 +98,7 @@
     "safeDevelopmentBuild": "PASS",
     "safeAuthEnabledProductionBuild": "PASS: direct Vite, no migration",
     "deterministicBrowsers": "PASS: 16 casino + 14 location groups; 12 original location groups retained, 2 added",
-    "realProviderBrowsers": "IN_PROGRESS; first casino run rejected a permission-reset harness assumption; explicit-denial retry prepared",
+    "realProviderBrowsers": "CASINO PASS six regions; international Toronto timed out at 110s, Vancouver passed; performance diagnosis in progress",
     "adversarialReview": "PENDING",
     "combinedCI": "PENDING",
     "dinnerIcons": "PASS all 30"

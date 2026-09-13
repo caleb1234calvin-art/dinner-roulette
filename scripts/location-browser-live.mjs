@@ -38,6 +38,8 @@ try {
   }
   browser = await chromium.launch(launch);
   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: "reduce" });
+  context.setDefaultTimeout(20000);
+  context.setDefaultNavigationTimeout(30000);
   page = await context.newPage();
   page.on("pageerror", error => verdict.pageErrors.push(error.message));
   await page.addInitScript(() => {
@@ -49,8 +51,10 @@ try {
     const getPosition = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
     navigator.geolocation.getCurrentPosition = (...args) => { window.__liveGpsCalls++; return getPosition(...args); };
   });
+  console.log("LOCATION_LIVE_STAGE opening app");
   await page.goto(origin, { waitUntil: "domcontentloaded" });
   await page.waitForFunction(() => Object.keys(document.querySelector('[aria-label="Use my location"]') ?? {}).some(key => key.startsWith("__reactProps")));
+  console.log("LOCATION_LIVE_STAGE hydrated controls");
   await page.getByRole("button", { name: "Close hints", exact: true }).click();
   const section = page.getByRole("region", { name: "Search location" });
   for (const [query, country, locality] of [
@@ -60,11 +64,13 @@ try {
     ["London, United Kingdom", "GB", "London"],
   ]) {
     try {
+      console.log("LOCATION_LIVE_STAGE manual " + query);
       const toggle = section.getByRole("button", { name: "Change location" });
       if (await toggle.getAttribute("aria-expanded") !== "true") await toggle.click();
       await section.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill(query);
       await section.getByRole("button", { name: "Set location", exact: true }).click();
       await section.getByRole("status").filter({ hasText: "Location set to" }).waitFor({ timeout: 20000 });
+      console.log("LOCATION_LIVE_STAGE resolved " + query);
       const location = await page.evaluate(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location);
       assert.equal(location.countryCode, country); assert.match(location.label, new RegExp(locality, "i"));
       assert.equal(location.source, "manual");
@@ -90,6 +96,7 @@ try {
     } catch (error) {
       verdict.cities.push({ query, passed: false, error: error.message });
       verdict.errors.push(query + ": " + error.message);
+      console.log("LOCATION_LIVE_CITY " + JSON.stringify({ query, passed: false, error: error.message }));
       await page.screenshot({ path: output + "/failure-" + country + ".png", fullPage: true }).catch(() => {});
       const close = page.getByRole("button", { name: "Close result", exact: true });
       if (await close.isVisible()) await close.click();

@@ -109,17 +109,30 @@ try {
       await page.waitForFunction(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location.source === "geo", null, { timeout: 25000 });
       const saved = await page.evaluate(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location);
       assert.equal(saved.lat, location.lat); assert.equal(saved.lon, location.lon);
-      // An empty explicit grant denies this origin; clearPermissions alone can
-      // retain a successful cached/default permission path in Chromium.
-      await context.grantPermissions([], { origin });
-      assert.equal(await page.evaluate(async () => (await navigator.permissions.query({ name: "geolocation" })).state), "denied");
-      await page.getByRole("button", { name: "Use my location", exact: true }).click();
-      await page.getByRole("alert").filter({ hasText: "Location permission was denied. You can enter a location manually." }).waitFor({ timeout: 15000 });
-      await page.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill("Reno, Nevada");
-      await page.getByRole("button", { name: "Set location", exact: true }).click();
-      await page.waitForFunction(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location.source === "manual", null, { timeout: 25000 }).catch(() => {});
-      const after = await page.evaluate(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location);
-      if (after.source !== "manual") verdict.findings.push("Real manual Nominatim lookup did not complete successfully; previous location is preserved. See provider transport evidence.");
+      // Native Chromium can return a cached point after same-document revocation.
+      // A fresh explicitly denied context tests an actual native code-1 callback.
+      const deniedContext = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: "reduce" });
+      try {
+        await deniedContext.grantPermissions([], { origin });
+        const deniedPage = await deniedContext.newPage();
+        deniedPage.on("pageerror", error => errors.push(error.message));
+        await deniedPage.addInitScript(loc => localStorage.setItem("pick-for-us-v1", JSON.stringify({
+          state: { location: { lat: loc.lat, lon: loc.lon, label: loc.name, source: "manual" } }, version: 0,
+        })), location);
+        await deniedPage.goto(origin, { waitUntil: "domcontentloaded" });
+        await deniedPage.waitForFunction(() => Object.keys(document.querySelector('[aria-label="Use my location"]') ?? {}).some(key => key.startsWith("__reactProps")));
+        await deniedPage.getByRole("button", { name: "Close hints", exact: true }).click();
+        await deniedPage.getByRole("button", { name: "Nightlife", exact: true }).click();
+        assert.equal(await deniedPage.evaluate(async () => (await navigator.permissions.query({ name: "geolocation" })).state), "denied");
+        await deniedPage.getByRole("button", { name: "Use my location", exact: true }).click();
+        await deniedPage.getByRole("alert").filter({ hasText: "Location permission was denied. You can enter a location manually." }).waitFor({ timeout: 15000 });
+        await deniedPage.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill("Reno, Nevada");
+        await deniedPage.getByRole("button", { name: "Set location", exact: true }).click();
+        await deniedPage.getByRole("status").filter({ hasText: "Location set to" }).waitFor({ timeout: 20000 });
+        const after = await deniedPage.evaluate(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location);
+        assert.equal(after.source, "manual"); assert.equal(after.countryCode, "US");
+        verdict.nativePermissionRecovery = { freshDeniedContext: true, permissionState: "denied", visibleError: true, realManualGeocoder: true };
+      } finally { await deniedContext.close(); }
     }
     await page.getByRole("button", { name: "Dinner", exact: true }).click();
     await page.getByRole("button", { name: "Date Night", exact: true }).click();

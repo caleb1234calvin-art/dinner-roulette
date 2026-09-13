@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "status": "BLOCKING_PERFORMANCE_INVESTIGATION",
+  "observation": "Actual Toronto manual geocoding succeeded, but the combined Dinner UI remained loading beyond the 110-second browser gate. Vancouver live discovery passed with 393 eligible one-mile restaurants.",
+  "codeFinding": "The application prefetches at least 15 miles, including for a one-mile display radius. Restaurant deduplication compares every candidate to every retained row and repeatedly normalizes names; dense international cities expose quadratic work.",
+  "beforeBenchmark": [
+    {
+      "input": 500,
+      "output": 500,
+      "elapsedMs": 435
+    },
+    {
+      "input": 1000,
+      "output": 1000,
+      "elapsedMs": 1202
+    },
+    {
+      "input": 2000,
+      "output": 2000,
+      "elapsedMs": 4062
+    }
+  ],
+  "benchmarkScope": "Synthetic distinct restaurant names and Toronto-area points through the actual mergePlaces implementation; no live candidate inventory is inferred.",
+  "next": "Replace only the all-pairs duplicate lookup with a bounded spatial candidate index, preserve exact name/distance/rank rules, prove parity on adversarial boundary fixtures, and rerun large-city actual browser acceptance.",
+  "productionBehaviorChangeAuthorized": "Performance correction on the affected international discovery path only; no category/radius/filter/selection semantics or casino data changes."
+}
