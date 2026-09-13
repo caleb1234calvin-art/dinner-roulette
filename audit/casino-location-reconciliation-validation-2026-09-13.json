@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "status": "COMBINED_TEST_STRUCTURE_GREEN_BROWSER_BUILD_GATES_PENDING",
+  "branch": "integration/casino-location-reconciliation-2026-09-13",
+  "casinoCounts": {
+    "canonical": 883,
+    "serialized": 899,
+    "passes": 60,
+    "Nevada": 204,
+    "Oklahoma": 113,
+    "Colorado": 31,
+    "Texas": 4
+  },
+  "tests": {
+    "repositoryPassed": 291,
+    "applicationPassed": 71,
+    "uniquePassed": 362,
+    "failed": 0,
+    "skipped": 4,
+    "registeredIncludingSkips": 366,
+    "casinoSubsetPassed": 83,
+    "locationUnitSubsetPassed": 20,
+    "sourceLocationTestsRetained": 28,
+    "newIntegrationTests": 5,
+    "independentSourceTotalsAdded": false
+  },
+  "testInventory": {
+    "casinoTestFilesRetainedUnchanged": [
+      "scripts/brand-check.test.mjs",
+      "scripts/browser-smoke-verdict.test.mjs",
+      "scripts/casino-audit-artifacts.test.mjs",
+      "scripts/casino-audit.test.mjs",
+      "scripts/casino-catalog-lineage.test.mjs",
+      "scripts/casino-catalog-loader.test.mjs",
+      "scripts/casino-continuation.test.mjs",
+      "scripts/casino-discovery.test.mjs",
+      "scripts/casino-freeze.test.mjs",
+      "scripts/casino-frontier.test.mjs",
+      "scripts/casino-rc-conflicts.test.mjs",
+      "scripts/casino-rc-evidence.test.mjs",
+      "scripts/casino-rc-final.test.mjs",
+      "scripts/casino-rc-frontier.test.mjs",
+      "scripts/casino-recent-provenance.test.mjs",
+      "scripts/casino-schema.test.mjs",
+      "scripts/casino-selection.test.mjs",
+      "scripts/check-auth-invariant.test.mjs",
+      "scripts/grok-pwa-plugin.test.mjs",
+      "scripts/migration-plan.test.mjs",
+      "scripts/optional-workspace-docs.test.mjs",
+      "scripts/preview.test.mjs",
+      "scripts/sign-out-plan.test.mjs",
+      "scripts/test-runner.test.mjs",
+      "scripts/with-app-env.test.mjs",
+      "scripts/write-atomic.test.mjs",
+      "src/lib/app-data/app-data.test.ts",
+      "src/lib/auth/gate-identity.test.ts",
+      "src/lib/auth/sign-in-gate.test.ts",
+      "src/lib/date-night/availability.test.ts"
+    ],
+    "locationTestFilesAdded": [
+      "scripts/location-discovery.test.mjs",
+      "src/lib/location/location.test.ts"
+    ],
+    "missingTestFiles": []
+  },
+  "locationAssertions": [
+    {
+      "path": "scripts/location-discovery.test.mjs",
+      "sourceTestDeclarations": 6,
+      "combinedTestDeclarations": 6,
+      "allOriginalAssertionsRetained": true
+    },
+    {
+      "path": "src/lib/location/location.test.ts",
+      "sourceTestDeclarations": 14,
+      "combinedTestDeclarations": 16,
+      "allOriginalAssertionsRetained": true
+    }
+  ],
+  "documentationSkips": {
+    "classification": "B intentionally external / A absent in clean repository",
+    "files": [
+      "scripts/brand-check.test.mjs (3)",
+      "scripts/write-atomic.test.mjs (1)"
+    ],
+    "reason": "External OG assistant docs not installed; REQUIRE_WORKSPACE_DOCS=1 fails closed. Exact names remain in AI_CONTINUITY.md.",
+    "weakened": false
+  },
+  "currentGates": {
+    "typecheck": "PASS",
+    "catalogSchemaIdsChronologyManifest": "PASS",
+    "targetedLint": "PASS for controls/providers/new tests",
+    "safeDevelopmentBuild": "PENDING on combined candidate",
+    "safeAuthEnabledProductionBuild": "PENDING on combined candidate",
+    "deterministicBrowsers": "PENDING harness reconciliation",
+    "realProviderBrowsers": "PENDING",
+    "adversarialReview": "PENDING",
+    "combinedCI": "PENDING"
+  },
+  "notes": [
+    "All 30 pre-existing casino-branch test files are byte-identical. Both location files retain every original test assertion (AST comparison); loops expand to 28 imported tests.",
+    "No tests were dropped or skipped to make integration pass. Five new integration tests protect duplicate/cancelled GPS and geocoder-to-current-casino-provider/Maps behavior."
+  ]
+}
