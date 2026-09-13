@@ -63,6 +63,20 @@ jobs:
       - name: Exercise casino experience in local Chromium
         run: node scripts/casino-browser-smoke.mjs
 
+      - name: Exercise country-aware location flow in local Chromium
+        run: node scripts/location-browser.mjs
+        env:
+          LOCATION_BROWSER_OUTPUT: audit/location-browser-results
+
+      - name: Preserve location browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: location-browser-evidence
+          path: audit/location-browser-results/
+          if-no-files-found: warn
+          retention-days: 14
+
       - name: Preserve browser evidence
         if: always()
         uses: actions/upload-artifact@v4

@@ -11,6 +11,7 @@ export const TEST_SUITES = [
       "src/lib/auth/gate-identity.test.ts",
       "src/lib/auth/sign-in-gate.test.ts",
       "src/lib/date-night/availability.test.ts",
+      "src/lib/location/location.test.ts",
     ],
   },
 ];

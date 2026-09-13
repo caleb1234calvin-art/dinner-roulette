@@ -1,17 +1,31 @@
 # Dinner Roulette / Pick For Me — AI Continuity
 
-Updated September 13, 2026 after non-production integration of the validated casino RC through Pass 54. This file supersedes earlier current-count/browser claims. Prior continuity is preserved verbatim in `audit/ai-continuity-before-casino-rc-2026-09-13.md`; older pre-Astra history remains in `audit/ai-continuity-handoff-2026-09-12.md`.
+Updated September 13, 2026 for the focused location review, after non-production integration of the validated casino RC through Pass 54. This file supersedes earlier current-count/browser claims. Prior continuity is preserved verbatim in `audit/ai-continuity-before-casino-rc-2026-09-13.md`; older pre-Astra history remains in `audit/ai-continuity-handoff-2026-09-12.md`.
 
 ## Working state and authority
 
 - Repository: `caleb1234calvin-art/dinner-roulette`.
-- Current working branch: `integration/active-work-pass-1`. [PR #38](https://github.com/caleb1234calvin-art/dinner-roulette/pull/38) was merged there as `6c1d5829f7f3e76946e20211b60525f9836b1227`; the RC branch `integration/casino-release-candidate-2026-09-13` remains preserved at `61cb2fe047a80fc4a67931ea3b24040e75dcd367`.
+- Location review branch: `integration/location-international-2026-09-13`. Integration base: `integration/active-work-pass-1`. [PR #38](https://github.com/caleb1234calvin-art/dinner-roulette/pull/38) was merged there as `6c1d5829f7f3e76946e20211b60525f9836b1227`; the RC branch `integration/casino-release-candidate-2026-09-13` remains preserved at `61cb2fe047a80fc4a67931ea3b24040e75dcd367`.
 - Validated integration merge: `6c1d5829f7f3e76946e20211b60525f9836b1227`, [Run 309](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34741023078). Its tree exactly equals RC head `61cb2fe047a80fc4a67931ea3b24040e75dcd367`, validated by [Run 308](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34740777237). The runtime/data revision is `243082896d6b774dde9bbb44c44f71e02824aaa3`. This following checkpoint changes documentation only; inspect the latest branch Actions run before any later release.
 - Pre-RC integration head: `877ff08c300a9d149aa174e9c47471d57bc98ccd`. Main remains `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
 - Broad reversible non-production research, code, tests, audits, documentation and integration preparation/promotion are authorized. **Main, production, Vercel/hosted deployment, irreversible external changes, secrets and recurring monitoring are not authorized.**
 - No Vercel deployment, production write or database migration occurred. `vercel.json` disables Git deployments for `integration/**`.
 - Do not delegate to another agent unless Caleb explicitly requests it. Preserve user edits and historical evidence.
 - Before non-production promotion, re-read PR/base refs and exact-head CI. Use expected head SHA. Do not merge to main.
+
+## Location and international discovery update — September 13
+
+The location review is [PR #39](https://github.com/caleb1234calvin-art/dinner-roulette/pull/39), targeting non-production integration. [Run 313](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34742834501) passed every gate at runtime/test revision `3560e130a26d3d287aa07ee8b014e54d2448bae6`, including both builds and both Chromium suites. This following checkpoint records the results in documentation only. Check its current exact-head Actions status before any promotion. First Run 311 passed all preceding gates, including both builds and casino browser smoke, but the location harness waited for global network idle and timed out. Its readiness check was corrected without removing app assertions. Run 312 then reached GPS acquisition but its call counter reset to zero, consistent with a development-page reload; location CI now uses the built preview with all assertions preserved.
+
+The focused location release source is `integration/location-international-2026-09-13`, based on casino integration checkpoint `a6d38616fe4490ff46b87232cbc7abb82f176926`. Read [LOCATION_HANDOFF.md](LOCATION_HANDOFF.md) for completed work, live Canada evidence, precise browser limits, validation commands, file changes and the physical-device checklist. The pre-edit trace is in `audit/location-architecture-2026-09-13.md`; final evidence is in `audit/location-validation-2026-09-13.json`.
+
+- **COMPLETED:** shared explicit-action GPS control; immediate coordinate use; visible progress/errors; manual override/race protection; optional country/code, region and locality metadata; removal of the U.S.-only geocoder filter; international address preservation; coordinate Maps destinations; geographically scoped local closure exclusions. Legacy U.S. locations, filters and bounded fallback remain compatible.
+- **VALIDATED:** live geocoding of U.S./Canada/U.K. examples, including Joplin ZIP 64801; actual restaurant provider results in Toronto/Vancouver/Montréal; 342 tests passed, zero failures, four inherited documentation skips; typecheck, clean install and casino audits passed. Development and safe production-mode builds passed; no migration or deployment ran. Local Chromium passed 12 location checks in development and built-preview modes using simulated coordinates and deterministic provider fixtures through the real app/RPC.
+- **REQUIRES DEVICE VALIDATION:** physical GPS, Android/iOS permission dialogs, installed PWA and real hosted/external Maps acceptance. Do not describe these as passed. The detailed handoff distinguishes native browser geolocation with simulated coordinates from explicitly mocked error callbacks and live provider calls.
+- **DEFERRED:** main/production deployment; destination-timezone Open-now correctness, metric/currency/localized UI and broader country coverage projects. Casino expansion remains separate.
+- **TOOLS:** no Exa. The current location work order explicitly excludes it; historical reserve-tool wording is not authorization.
+
+The location branch preserves the independently completed 808-destination casino catalog, all 54 passes, closure holds, provider normalization and selection hardening. No casino data was added, removed or rewritten by the location update. The inherited casino browser test was adjusted only for the new location field label and coordinate Maps links. The integration workflow now also exercises the location smoke; no deployment stage was added.
 
 ## Current release facts
 
@@ -69,7 +83,7 @@ Do not fake these files, remove the skips cosmetically or count them as casino/a
 
 ## BLOCKED
 
-- Local exec-server handshake failed; no local shell or reachable authorized interactive preview was available. CI execution succeeded. Live-provider success, physical-device geolocation/Maps and hosted acceptance are **NOT RUN**.
+- During the separate casino phase, the local exec-server handshake failed and CI execution succeeded. The later location phase recovered local Chromium and validated live location/restaurant providers as recorded above. Physical-device geolocation/Maps and hosted acceptance remain **NOT RUN**.
 - Konawa/Rivermist is operating by current operator evidence, but property numerical coordinates remain conflicting/unextracted. Keep the curated coordinate hold.
 - Horseshu requires current separate casino-floor confirmation; Moapa's current tribal page confirms a travel plaza but not gaming. The old moapapaiutes.com redirects to an unrelated forms site.
 - NIGC marker endpoint returned 401. Other sources sometimes required login, rate-limited or omitted numerical points. No authentication/provider boundary was bypassed; alternate sources were used when sufficient.
@@ -90,7 +104,7 @@ Next: use the current non-production integration branch, verify its latest docum
 
 Safe commands: `npm ci --no-audit --no-fund`, `npm run typecheck`, `npm test`, `node --test scripts/casino-*.test.mjs`, `npm run audit:casinos`, `npm run build:dev`, and `node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`. **Do not use `npm run build`: it chains database migrations.**
 
-If local execution returns, inspect the existing dirty checkout before editing. Do not overwrite it or confuse it with the validated remote state. Browser instructions and precise limits are in `audit/casino-browser-release-checklist-2026-09-13.md`. Revert a non-production integration merge through review if recovery is needed; preserve evidence/history and avoid force-pushing shared branches.
+Local execution was available for the subsequent location update, including its scoped Chromium checks. Inspect any existing dirty checkout before editing. Do not overwrite it or confuse it with the validated remote state. Browser instructions and precise limits are in `audit/casino-browser-release-checklist-2026-09-13.md`. Revert a non-production integration merge through review if recovery is needed; preserve evidence/history and avoid force-pushing shared branches.
 
 ## Preserve product behavior and identity
 
