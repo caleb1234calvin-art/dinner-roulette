@@ -1,58 +1,43 @@
 # Dinner Roulette / Pick For Me — AI Continuity
 
-Updated September 13, 2026. **Casino + location/international reconciliation is now authorized in non-production.** This existing shared file on integration/active-work-pass-1 is the authoritative handoff.
+Updated September 13, 2026. **The combined casino + location/international candidate is integrated and validated in non-production.** This existing shared file on integration/active-work-pass-1 is the authoritative handoff.
 
 ## Latest meaningful checkpoint
 
-The validated combined candidate has been merged through PR #42 into integration/active-work-pass-1. This shared integration now contains both the frozen 883-casino implementation and GPS/international discovery. Integration verification is in progress.
+COMPLETED: PR #42 intentionally reconciled both workstreams into integration/active-work-pass-1. This shared branch is the latest authoritative non-production release candidate. Merge commit 189c46bfee0ac0983ea9100eae90e92ee58915b7 contains the validated combined runtime. Final readiness commit 890cca11efdd7f132648d3451a86404d9badbcf6 records merged-tree identity and successful integration CI. No implementation blocker remains.
 
-Work branch: `integration/active-work-pass-1`. Work commit: **`189c46bfee0ac0983ea9100eae90e92ee58915b7`** — **Integrate frozen casinos with validated GPS and international discovery**.
+Work branch: `integration/active-work-pass-1`. Work commit: **`890cca11efdd7f132648d3451a86404d9badbcf6`** — **Finalize validated casino and international integration release record**.
 
-Current working branch: `integration/active-work-pass-1`. Frozen starting integration: `183d3e1d71355a27e4bc35a2969d73037c9e6e33`. Preserved location source: `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839`, draft PR #39. Main baseline: `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
+Current working branch: `integration/combined-release-handoff-2026-09-13`. Frozen starting integration: `183d3e1d71355a27e4bc35a2969d73037c9e6e33`. Preserved location source: `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839`, draft PR #39. Main baseline: `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
 
 ## COMPLETED in this reconciliation
 
-- Read both pinned source branches and required handoff/evidence records.
-- Classified all five overlapping paths and all 30 location paths; current casino integration is the source of truth for all frozen data and newer browser/provider guards.
-- Published audit/casino-location-reconciliation-plan-2026-09-13.md with intended resolution and safety/validation sequence.
-- Created the candidate from shared checkpoint 0874f0b; baseline audit records protected file Git blobs and both source test-file inventories. All protected casino data, closure policy and freeze evidence match the current freeze.
-- Forwarded general location model, explicit-action GPS/controller, global geocoder dependencies and compatible persistence. Coordinates activate before reverse enrichment; manual editing/cancel/unmount invalidate stale callbacks.
-- Preserved casino automatic manual recovery on errors and disabled GPS during any busy request. Added controller-level duplicate-request suppression plus cancellation/retry regressions.
-- Resolved an inherited location model lint error with equivalent control-character validation; no input check weakened.
-- Applied only the location delta to current Nightlife search: all Pass 55–60 registrations remain; current closure/alias policy and canonical routing metadata are unchanged.
-- Forwarded international addresses, exact-coordinate Maps links, geographically bounded Joplin exclusions and valid-empty versus malformed/incomplete provider handling across all discovery categories.
-- Imported all ten location discovery/persistence/Maps regression groups and their real application-module loader/fixtures.
-- Verified all 30 existing test files unchanged and all original location assertions retained by AST comparison; no test file or assertion silently disappeared.
-- Added three combined geocoder-to-casino-server-to-Maps regressions, in addition to the two controller race/request tests. Ran the actual complete test runner.
-- Reconciled casino harness input/Maps assertions while retaining all 16 groups, canonical counts, strict ports, owned process cleanup and live semantic pool guards.
-- Location harness retains all 12 original behavior groups and adds two for immediate coordinate/progress and repeated-request prevention; errors now prove automatic manual recovery.
-- Added source/output build fingerprints, auth-enabled checks and two guard regression tests. An actual occupied-port negative check confirmed the location harness refuses an unrelated preview.
-- Both safe builds passed; inspected mobile location and desktop casino screenshots. CI now runs both guarded browser suites after the same direct migration-free production build.
-- Final full test runner: 293 repository + 71 application = 364 passed; zero failures and four understood documentation skips. All 30 changed code files pass lint; typecheck, catalog/manifest audits and 30 Dinner icons pass.
-- Reverified 78 protected frozen files byte-for-byte and unchanged dependency manifest/lockfile, Vite configuration and integration deployment exclusion. Main c187d5 and original location source 4a93870 remain unchanged.
-- Added actual four-city international browser acceptance (Toronto, Vancouver, Montréal, London), using the combined app/RPC and real Nominatim/Overpass without provider mocks.
-- Preserved failed first casino live attempt: clearPermissions did not establish denial. Harness now explicitly denies and verifies browser permission before testing recovery; semantic findings now make the real runner fail.
-- Actual casino browser PASS in Reno/Newkirk/Ardmore/Chandler/Pahrump/Pawnee with pools 19/3/2/1/5/2, zero errors/findings and successful real manual geocoding. Native denial/recovery passes in a fresh explicitly denied context.
-- Isolated Chromium probe proves same-document cached positions can survive emulated permission revocation; fresh denied contexts deliver native code 1. No product permission rule was changed.
-- Actual Toronto geocoding succeeds but restaurant discovery exceeded 110 seconds; Vancouver live discovery passed with 393 eligible one-mile restaurants. A benchmark of the actual normalizer measured 435/1202/4062ms for 500/1000/2000 distinct rows, confirming quadratic duplicate work.
-- PR #42 is open for non-production integration only. This work checkpoint also reconciles the known shared-document ancestry; no runtime/data content was taken from the old location base.
-- Completed the old-normalizer international run: Toronto, Montréal and London each exceeded 110 seconds; Vancouver passed. All four real manual geocoders resolved. Failed results are preserved.
-- Replaced only the all-pairs restaurant duplicate candidate scan with Earth-centered spatial cells, retaining namesMatch, strict 0.2-mile haversine threshold, source priority and output order. Local overlay eligibility remains the exact same <8-mile rule.
-- New regressions prove legacy parity, source/order/boundaries, antimeridian/polar behavior and 8000-row retention. Actual normalizer benchmark: 2000 rows 4062ms before / 111ms after; 16000 rows 936ms locally. No filter, radius, selection or casino rule changed.
-- PR #42 CI Run 335 passed at d46154381cbdc8a6de4af78f9b696384b330c388 before this fix; its result is not claimed for the newer head.
-- Fresh post-fix development and auth-enabled production builds pass without migrations. Both deterministic browser suites pass against that exact source/output fingerprint: 16 casino + 14 location groups.
-- Actual post-fix international app/RPC acceptance passes Toronto 1623, Vancouver 393, Montréal 1010 and London 2176 eligible one-mile restaurants, exact Maps points, country/region metadata and persisted reload without GPS. Counts are observations with open-now disabled, not complete inventories.
-- Final actual-provider casino acceptance passes all six regions with zero findings/errors and native denial/manual recovery; provider timeouts are honestly handled.
-- Exact runtime/test head bdc05dee1bb15807c0f70d25e48c12fb37eea8f0 passed CI Run 337 (34778760104, job 103781770405): clean install, 367 tests, typecheck, audits, both builds, both browser suites and 30 icons. CI/local source fingerprint matches.
-- Final adversarial review found no remaining integration defect: frozen file/registry identity, original assertions, exact location-source paths, closure/alias/Maps behavior, global fallback geography, spatial parity, auth-enabled guarded CI and changed-file scope all verified.
-- No unrelated changes, dependency/config drift or high-confidence secret-pattern hits were found. Failed attempts and known physical/provider/timezone limitations remain explicit.
-- The candidate contains the frozen 883-casino implementation and the full intended GPS/international architecture. Remaining steps are exact candidate CI, non-production PR #42 integration, integration CI and final shared handoff.
-- Final candidate d44de898fc6420e18ad83dc0a7aa753fbd19bc5b passed exact-head CI Run 341 (34779162559), including clean install, tests, audits, both safe builds, both guarded browser suites and icons.
-- Merged only PR #42 into integration/active-work-pass-1 at 189c46bfee0ac0983ea9100eae90e92ee58915b7 with expected-head SHA protection. The original location candidate and main remain unchanged.
+- Read both source branches and all required handoffs/evidence before editing. Classified five overlapping paths and 30 location paths; the frozen casino integration was the authoritative base.
+- Preserved 883 canonical casinos, 899 serialized rows, 60 passes, all 78 protected data/policy/evidence files, closure rules, aliases, routing, seven holds and original history. No casino was added, removed or re-researched during reconciliation.
+- Reconciled shared explicit-action GPS across Dinner, Nightlife/Casino and Date Night. Valid coordinates activate immediately; reverse geocoding only enriches labels. Visible progress/success/errors, automatic manual recovery, cancellation, stale-callback invalidation, busy guards, manual override and persistence remain.
+- Retained the general country/region/locality model, global manual Nominatim queries, Canada/U.K. support, international addresses and exact-coordinate Maps destinations. No automatic GPS occurs on reload.
+- Preserved current casino fallbacks, geographically bounded closure/retired-name suppression, aliases and valid-empty versus malformed provider distinctions while applying only the intended location changes.
+- Retained all 30 pre-existing test files unchanged and every original location test assertion. Imported 28 location tests and added ten meaningful integration regressions; actual combined result is 367 unique passes, not a sum of independent branch totals.
+- Combined strict-port owned preview processes, source/output fingerprints, auth-enabled production checks, deterministic outage coverage, actual-provider semantic checks and mobile location behavior. Negative stale-build/auth/occupied-port checks prevent false greens.
+- Actual international browser testing exposed quadratic duplicate work at the app's 15-mile prefetch radius. Replaced candidate lookup with a spatial index that preserves name, distance, source-rank and output-order rules; parity, boundary, antimeridian/pole and 8000-row tests pass.
+- Fresh safe development and auth-enabled migration-free production builds passed. Local and CI builds share source fingerprint bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61 (363 input files).
+- All 30 deterministic browser groups passed: 16 casino and 14 location. Actual provider acceptance passed six casino regions and Toronto, Vancouver, Montréal and London. Native coordinates/permissions are simulated; real-provider runs have no provider mocks.
+- Preserved failed attempts and their resolutions, including dense-city stalls and Chromium same-document cached coordinates after emulated permission revocation. Fresh native denial and manual recovery pass; no product permission rule was bypassed.
+- Primary and targeted adversarial reviews passed. No frozen data regression, lost test, unrelated change or dependency/configuration drift remains. Only CI acceptance configuration changed; no package, lockfile, Vite or deployment exclusion change.
+- Final candidate d44de898fc6420e18ad83dc0a7aa753fbd19bc5b passed CI Run 341. PR #42 merged with expected-head protection at 189c46bfee0ac0983ea9100eae90e92ee58915b7. The merge differs from the validated candidate only in the newer AI_CONTINUITY.md.
+- Merged integration CI Run 343 (34779345531, job 103783374402) passed clean installation, 367 tests, typecheck, audits, both safe builds, 16+14 browser groups and 30 icons. Shared checkpoint 6b4e1a0701ec377cf4272118a76c79c2911fa0ab also passed CI Run 344 (34779368173).
+- The 43 changed paths are limited to source location functionality, required reconciliation/performance/tests/browser/CI changes and audit/continuity records. Final readiness artifacts are saved at 890cca11efdd7f132648d3451a86404d9badbcf6.
+- Main remains c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5. Original location branch remains 4a93870c05ec53bd49fae5143df420c301696839; old PR #39 was not merged wholesale. No production change, Vercel deployment, migration, secret modification, recurring monitoring or Exa use occurred.
 
 ## Validation of the combined work
 
-367 unique tests PASS (296 repository + 71 application); 0 failures; 4 explained external-documentation skips. Typecheck, changed-code lint, schema/ID/chronology/manifest audits, safe development and auth-enabled migration-free production builds, 30 icons, 16 casino + 14 location deterministic browser groups, six actual casino provider regions and four actual international cities PASS. Primary and adversarial reviews PASS. Runtime CI Run 337 and final candidate CI Run 341 PASS. Merged integration CI is pending; its result is not yet claimed.
+**367 unique tests PASS = 296 repository + 71 application; 0 failures; 4 understood external-documentation skips.** The 83 casino and 20 location unit subsets are included, not additional totals. Typecheck, changed-code lint, casino/schema/ID/chronology/manifest audits, safe development build, auth-enabled direct-Vite production build and all 30 Dinner icons PASS.
+
+**Browsers: 30 deterministic groups PASS (16 casino + 14 location); six actual casino-provider regions and four actual international cities PASS.** Casino pools: Reno 19, Newkirk 3, Ardmore 2, Chandler 1, Pahrump 5, Pawnee 2. International one-mile eligible restaurant observations: Toronto 1623, Vancouver 393, Montréal 1010, London 2176; open-now deliberately disabled. Provider transport recorded 40 HTTP 200 responses and 16 timeouts; fallbacks/recovery were honest. Counts are observations, not complete inventories or proof of current opening hours.
+
+**CI:** runtime Run 337, final candidate Run 341, merged integration Run 343 and shared checkpoint Run 344 PASS. Readiness/continuity commits after 6b4e1a0 change documentation only; the runtime is identical to the merged, CI-validated source. Inspect Actions for any later documentation-head run rather than assuming its result. Primary and adversarial reviews PASS.
+
+Evidence: audit/casino-location-reconciliation-validation-2026-09-13.json, -browser-, -attempts-, -performance- and -adversarial- artifacts. The validation record contains CI IDs/log totals, source fingerprint, exact file scope and merge proof.
 
 Independent baselines are historical, not a combined result: casino freeze 329 passed (278 repository + 51 application), four skips, 16 browser groups; location source 342 passed (273 repository + 69 application), four skips, 12 location checks. Casino CI Run 325 and location CI Run 314 passed separately. Never add those totals together.
 
@@ -84,11 +69,11 @@ All four are **B: intentionally external by design / A: unavailable in a clean r
 
 ## BLOCKED / current integration gates
 
-No known implementation defect. Merged-tree comparison and integration CI remain to be verified. Physical-device/hosted/account/Maps-app acceptance remains deferred.
+None for the combined non-production candidate. Physical-device GPS/OS permission behavior, installed PWA, authenticated hosted sessions and external Maps app navigation remain explicit later acceptance checks; they are not claimed complete. Public-provider availability remains best effort. Existing opening-hours evaluation uses the viewer timezone rather than the destination timezone; international live acceptance used open-now off.
 
 ## Exact next action
 
-Compare merge 189c46bfee0ac0983ea9100eae90e92ee58915b7 with validated candidate d44de898fc6420e18ad83dc0a7aa753fbd19bc5b; only newer shared continuity should differ. Verify protected files and source fingerprint, inspect integration CI, then finalize this same shared handoff.
+Return control to Caleb. Keep the combined candidate on integration/active-work-pass-1 frozen for release review. Do not re-merge old PR #39 or restore its 808-casino base. After separate authorization, perform controlled main/hosted release and the documented physical-device, PWA, account and external Maps acceptance. Before any new work, read this same shared file and inspect the current branch SHA/CI. No further casino discovery or location integration is required for this candidate.
 
 ## DEFERRED
 
@@ -108,28 +93,30 @@ Local checkout: /workspace/scratch/60ab73826fd9/pick-for-me-casino. Inspect bran
 
 ## Chronological reconciliation commits
 
-- `bdf63c056dfb3d8c52830b425a3aed12e46a1a8c` | `integration/active-work-pass-1` | Document casino and location reconciliation source-of-truth plan
-- `0874f0ba42490370ba1704d96b3252adabf92f49` | `integration/active-work-pass-1` | Update shared continuity: reconciliation plan verified
-- `17ff681c7e99f2814d2bd9ccdda9e14b39b0e44a` | `integration/casino-location-reconciliation-2026-09-13` | Checkpoint frozen 883-casino base for location reconciliation
-- `198ccc91bc2f6169e86fe0c664916cfeb55f324b` | `integration/active-work-pass-1` | Update shared continuity: casino-based combined branch established
-- `b8ce7f85960fd36be60a2df75595d8a003104e52` | `integration/casino-location-reconciliation-2026-09-13` | Reconcile shared location controls with visible recovery and request guards
-- `1d7834ef2771395c2c0f3cecd23d4373deedb396` | `integration/active-work-pass-1` | Update shared continuity: shared location controls validated
-- `0c11bb2d5ad2b74389f2b61f4098d5b53fb8c9f2` | `integration/casino-location-reconciliation-2026-09-13` | Reconcile international discovery while preserving frozen casino safeguards
-- `5a7431175b39d401974c414586520fa57f024c8f` | `integration/active-work-pass-1` | Update shared continuity: international and casino provider paths validated
-- `f67cd8aee3e10396824782530bee8cae5e058331` | `integration/casino-location-reconciliation-2026-09-13` | Preserve both test suites and add combined casino location regressions
-- `a454f9977c7feb2d39c64594b62c6ebc02207d7c` | `integration/active-work-pass-1` | Update shared continuity: combined 362-test suite verified
-- `b53165392f3aa0861f43aa3a618bd443534e1b6a` | `integration/casino-location-reconciliation-2026-09-13` | Combine guarded casino and location browser acceptance
-- `36053a8a00c5d0d76e83d64431916d90607ecd74` | `integration/active-work-pass-1` | Update shared continuity: combined browser harnesses validated
-- `08555508f736e7d42fe559e7abf8276defe92061` | `integration/casino-location-reconciliation-2026-09-13` | Prepare real-provider acceptance and record 364 passing combined tests
-- `c03142d010658bff131568408cbf2a407f3ef101` | `integration/active-work-pass-1` | Update shared continuity: final automated gates and live retry checkpoint
-- `d46154381cbdc8a6de4af78f9b696384b330c388` | `integration/casino-location-reconciliation-2026-09-13` | Validate live casino recovery and record dense-city discovery bottleneck
-- `aecebb37ed26fc862484a23c97c79e921b6e48b2` | `integration/active-work-pass-1` | Update shared continuity: live casino green and dense-city blocker recorded
-- `bdc05dee1bb15807c0f70d25e48c12fb37eea8f0` | `integration/casino-location-reconciliation-2026-09-13` | Bound restaurant duplicate searches for dense international cities
-- `2f1fe9b47b5cf211db318ce88102efb7ed0b5615` | `integration/active-work-pass-1` | Update shared continuity: dense-city fix passes 367 combined tests
-- `13a40902ac2610112862e665571d4ba1cf0d2222` | `integration/casino-location-reconciliation-2026-09-13` | Record first fully green combined casino and international candidate
-- `85731db50103ae6929c934a8fa2cea3f1a0a01a7` | `integration/active-work-pass-1` | Update shared continuity: first complete green combined validation
-- `d44de898fc6420e18ad83dc0a7aa753fbd19bc5b` | `integration/casino-location-reconciliation-2026-09-13` | Complete adversarial review of the combined non-production candidate
-- `02bee60bfe7ea03879d5173352d08ee63e792c97` | `integration/active-work-pass-1` | Update shared continuity: adversarial review complete and candidate ready
-- `189c46bfee0ac0983ea9100eae90e92ee58915b7` | `integration/active-work-pass-1` | Integrate frozen casinos with validated GPS and international discovery
+- `bdf63c056dfb3d8c52830b425a3aed12e46a1a8c` | `integration/active-work-pass-1` | Document casino and location reconciliation source-of-truth plan — Records source ownership and intentional overlap resolutions.
+- `0874f0ba42490370ba1704d96b3252adabf92f49` | `integration/active-work-pass-1` | Update shared continuity: reconciliation plan verified — Saves and verifies the corresponding checkpoint in the existing shared AI continuity.
+- `17ff681c7e99f2814d2bd9ccdda9e14b39b0e44a` | `integration/casino-location-reconciliation-2026-09-13` | Checkpoint frozen 883-casino base for location reconciliation — Pins the frozen casino base and protected-file/test inventories.
+- `198ccc91bc2f6169e86fe0c664916cfeb55f324b` | `integration/active-work-pass-1` | Update shared continuity: casino-based combined branch established — Saves and verifies the corresponding checkpoint in the existing shared AI continuity.
+- `b8ce7f85960fd36be60a2df75595d8a003104e52` | `integration/casino-location-reconciliation-2026-09-13` | Reconcile shared location controls with visible recovery and request guards — Adds shared location controls while preserving visible recovery and request guards.
+- `1d7834ef2771395c2c0f3cecd23d4373deedb396` | `integration/active-work-pass-1` | Update shared continuity: shared location controls validated — Saves and verifies the corresponding checkpoint in the existing shared AI continuity.
+- `0c11bb2d5ad2b74389f2b61f4098d5b53fb8c9f2` | `integration/casino-location-reconciliation-2026-09-13` | Reconcile international discovery while preserving frozen casino safeguards — Combines global discovery and exact Maps routing with current casino protections.
+- `5a7431175b39d401974c414586520fa57f024c8f` | `integration/active-work-pass-1` | Update shared continuity: international and casino provider paths validated — Saves and verifies the corresponding checkpoint in the existing shared AI continuity.
+- `f67cd8aee3e10396824782530bee8cae5e058331` | `integration/casino-location-reconciliation-2026-09-13` | Preserve both test suites and add combined casino location regressions — Retains both test suites and adds combined provider/location regressions.
+- `a454f9977c7feb2d39c64594b62c6ebc02207d7c` | `integration/active-work-pass-1` | Update shared continuity: combined 362-test suite verified — Saves and verifies the corresponding checkpoint in the existing shared AI continuity.
+- `b53165392f3aa0861f43aa3a618bd443534e1b6a` | `integration/casino-location-reconciliation-2026-09-13` | Combine guarded casino and location browser acceptance — Combines owned, strict-port, auth-enabled browser suites with stale-build guards.
+- `36053a8a00c5d0d76e83d64431916d90607ecd74` | `integration/active-work-pass-1` | Update shared continuity: combined browser harnesses validated — Saves and verifies the corresponding checkpoint in the existing shared AI continuity.
+- `08555508f736e7d42fe559e7abf8276defe92061` | `integration/casino-location-reconciliation-2026-09-13` | Prepare real-provider acceptance and record 364 passing combined tests — Records automated validation and prepares actual-provider acceptance.
+- `c03142d010658bff131568408cbf2a407f3ef101` | `integration/active-work-pass-1` | Update shared continuity: final automated gates and live retry checkpoint — Saves and verifies the corresponding checkpoint in the existing shared AI continuity.
+- `d46154381cbdc8a6de4af78f9b696384b330c388` | `integration/casino-location-reconciliation-2026-09-13` | Validate live casino recovery and record dense-city discovery bottleneck — Preserves live casino success and the discovered dense-city blocker.
+- `aecebb37ed26fc862484a23c97c79e921b6e48b2` | `integration/active-work-pass-1` | Update shared continuity: live casino green and dense-city blocker recorded — Saves and verifies the corresponding checkpoint in the existing shared AI continuity.
+- `bdc05dee1bb15807c0f70d25e48c12fb37eea8f0` | `integration/casino-location-reconciliation-2026-09-13` | Bound restaurant duplicate searches for dense international cities — Fixes dense-city duplicate-search cost while preserving matching semantics.
+- `2f1fe9b47b5cf211db318ce88102efb7ed0b5615` | `integration/active-work-pass-1` | Update shared continuity: dense-city fix passes 367 combined tests — Saves and verifies the corresponding checkpoint in the existing shared AI continuity.
+- `13a40902ac2610112862e665571d4ba1cf0d2222` | `integration/casino-location-reconciliation-2026-09-13` | Record first fully green combined casino and international candidate — Records the first complete green deterministic and actual-provider validation.
+- `85731db50103ae6929c934a8fa2cea3f1a0a01a7` | `integration/active-work-pass-1` | Update shared continuity: first complete green combined validation — Saves and verifies the corresponding checkpoint in the existing shared AI continuity.
+- `d44de898fc6420e18ad83dc0a7aa753fbd19bc5b` | `integration/casino-location-reconciliation-2026-09-13` | Complete adversarial review of the combined non-production candidate — Records adversarial checks, test retention and protected-file identity.
+- `02bee60bfe7ea03879d5173352d08ee63e792c97` | `integration/active-work-pass-1` | Update shared continuity: adversarial review complete and candidate ready — Saves and verifies the corresponding checkpoint in the existing shared AI continuity.
+- `189c46bfee0ac0983ea9100eae90e92ee58915b7` | `integration/active-work-pass-1` | Integrate frozen casinos with validated GPS and international discovery — Merges validated PR #42 into non-production integration.
+- `6b4e1a0701ec377cf4272118a76c79c2911fa0ab` | `integration/active-work-pass-1` | Update shared continuity: combined candidate integrated; integration CI pending — Saves and verifies the corresponding checkpoint in the existing shared AI continuity.
+- `890cca11efdd7f132648d3451a86404d9badbcf6` | `integration/active-work-pass-1` | Finalize validated casino and international integration release record — Records merged-tree identity, successful integration CI and final release readiness.
 
 This update records already-known work commits. Its own immutable documentation commit SHA is subsequent; inspect the current shared GitHub ref and Actions status. Every major checkpoint is saved and read back from GitHub before the next phase.
