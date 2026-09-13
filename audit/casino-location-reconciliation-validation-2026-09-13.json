@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "PERFORMANCE_FIX_AUTOMATED_GREEN_LIVE_RECHECK_PENDING",
+  "status": "FIRST_COMPLETE_GREEN_COMBINED_CANDIDATE",
   "branch": "integration/casino-location-reconciliation-2026-09-13",
   "casinoCounts": {
     "canonical": 883,
@@ -96,12 +96,12 @@
     "typecheck": "PASS after performance fix",
     "catalogSchemaIdsChronologyManifest": "PASS 883/899/60 after performance fix",
     "targetedLint": "PASS",
-    "safeDevelopmentBuild": "PENDING rebuild after performance fix",
-    "safeAuthEnabledProductionBuild": "PENDING rebuild after performance fix",
-    "deterministicBrowsers": "30 groups passed before performance fix; rerun on final build",
-    "realProviderBrowsers": "Six casino regions passed before performance fix; international Toronto/Montr\u00e9al/London timed out on old normalizer. Final recheck required.",
-    "adversarialReview": "PENDING",
-    "combinedCI": "Run 335 PASS at d46154381cbdc8a6de4af78f9b696384b330c388 before performance fix",
+    "safeDevelopmentBuild": "PASS after performance fix",
+    "safeAuthEnabledProductionBuild": "PASS after performance fix, auth=true, direct Vite, no migration",
+    "deterministicBrowsers": "PASS 30 groups: 16 casino + 14 location",
+    "realProviderBrowsers": "PASS: six casino regions + Toronto/Vancouver/Montr\u00e9al/London",
+    "adversarialReview": "FINAL FOCUSED REVIEW PENDING",
+    "combinedCI": "PASS Run 337 at bdc05dee1bb15807c0f70d25e48c12fb37eea8f0",
     "dinnerIcons": "PASS all 30"
   },
   "notes": [
@@ -124,5 +124,43 @@
   "freezeIdentityProof": {
     "protectedFilesUnchanged": 78,
     "manifestLockfileViteConfigDeploymentExclusionUnchanged": true
-  }
+  },
+  "ci": {
+    "conclusion": "success",
+    "head": "bdc05dee1bb15807c0f70d25e48c12fb37eea8f0",
+    "id": 34778760104,
+    "number": 337,
+    "status": "completed",
+    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34778760104",
+    "job": 103781770405,
+    "verifiedLogLines": [
+      "2026-09-13T19:48:03.1444299Z # tests 83",
+      "2026-09-13T19:48:03.1444721Z # pass 83",
+      "2026-09-13T19:48:03.1444910Z # fail 0",
+      "2026-09-13T19:48:03.1445309Z # skipped 0",
+      "2026-09-13T19:48:04.8675863Z Casino catalog audit passed: 899 serialized records, 883 canonical destinations across 60 catalog files.",
+      "2026-09-13T19:48:04.8676794Z National coverage audit passed: 39 complete jurisdictions, 0 authoritative inventories staged, 2 pending jurisdictions.",
+      "2026-09-13T19:48:15.1125760Z # tests 300",
+      "2026-09-13T19:48:15.1126390Z # pass 296",
+      "2026-09-13T19:48:15.1126705Z # fail 0",
+      "2026-09-13T19:48:15.1127342Z # skipped 4",
+      "2026-09-13T19:48:15.7418035Z # tests 71",
+      "2026-09-13T19:48:15.7419014Z # pass 71",
+      "2026-09-13T19:48:15.7419382Z # fail 0",
+      "2026-09-13T19:48:15.7420271Z # skipped 0",
+      "2026-09-13T19:48:53.1454113Z CASINO_BROWSER_VERDICT {\"origin\":\"http://127.0.0.1:8080\",\"buildProof\":{\"schemaVersion\":1,\"status\":\"BUILT\",\"authFlag\":\"true\",\"source\":{\"sha256\":\"bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61\",\"files\":363},\"startedAt\":\"2026-09-13T19:48:19.003Z\",\"output\":{\"sha256\":\"054d7d16a2d814a5063a5286c8164fdab0f3b3d520b37b27b5f1b5000e6f99a9\",\"files\":182},\"completedAt\":\"2026-09-13T19:48:21.940Z\"},\"fixtures\":\"Server-side Overpass outage; Nominatim deterministic locations. Production-mode local preview, actual server functions and catalog.\",\"checks\":[\"desktop: completed the four-step first-run tour\",\"desktop: casino filter and saved-catalog outage fallback\",\"desktop: strict open-now excludes unknown hours; empty state disables selection\",\"desktop: compiled fallback matches 19 current canonical casinos\",\"desktop: unique canonical options, option selection, map destination, reroll and persisted exclusion\",\"desktop: denied geolocation opens a visible error and manual recovery form\",\"desktop: manual location, no-catalog/provider failure and favorites empty states\",\"desktop: non-casino navigation, settings and no horizontal overflow or page errors\",\"mobile: completed the four-step first-run tour\",\"mobile: casino filter and saved-catalog outage fallback\",\"mobile: strict open-now excludes unknown hours; empty state disables selection\",\"mobile: compiled fallback matches 3 current canonical casinos\",\"mobile: unique canonical options, option selection, map destination, reroll and persisted exclusion\",\"mobile: denied geolocation opens a visible error and manual recovery form\",\"mobile: manual location, no-catalog/provider failure and favorites empty states\",\"mobile: non-casino navigation, settings and no horizontal overflow or page errors\"],\"errors\":[]}",
+      "2026-09-13T19:49:01.6233758Z \u001b[36;1mprint(\"Verified 30 Dinner icon assets: 15 dark + 15 light\")\u001b[0m",
+      "2026-09-13T19:49:01.6546833Z Verified 30 Dinner icon assets: 15 dark + 15 light"
+    ]
+  },
+  "runtimeValidatedCommit": "bdc05dee1bb15807c0f70d25e48c12fb37eea8f0",
+  "sourceFingerprint": {
+    "sha256": "bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61",
+    "files": 363
+  },
+  "remainingBeforeIntegration": [
+    "Final focused adversarial review and scope check",
+    "Review exact candidate/head CI; merge only PR #42 into non-production integration",
+    "Verify integration revision/CI and update existing shared AI continuity"
+  ]
 }

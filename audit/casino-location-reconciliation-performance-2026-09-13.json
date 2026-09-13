@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "TARGETED_FIX_VALIDATED_LIVE_RECHECK_PENDING",
+  "status": "RESOLVED_REAL_BROWSER_RECHECK_PASS",
   "observation": "Actual Toronto manual geocoding succeeded, but the combined Dinner UI remained loading beyond the 110-second browser gate. Vancouver live discovery passed with 393 eligible one-mile restaurants.",
   "codeFinding": "The application prefetches at least 15 miles, including for a one-mile display radius. Restaurant deduplication compares every candidate to every retained row and repeatedly normalizes names; dense international cities expose quadratic work.",
   "beforeBenchmark": [
@@ -71,5 +71,28 @@
     "externalDocumentationSkips": 4
   },
   "typecheck": "PASS",
-  "targetedLint": "PASS"
+  "targetedLint": "PASS",
+  "actualAfterFix": [
+    {
+      "query": "Toronto, Ontario, Canada",
+      "eligible": 1623,
+      "passed": true
+    },
+    {
+      "query": "Vancouver, British Columbia, Canada",
+      "eligible": 393,
+      "passed": true
+    },
+    {
+      "query": "Montr\u00e9al, Qu\u00e9bec, Canada",
+      "eligible": 1010,
+      "passed": true
+    },
+    {
+      "query": "London, United Kingdom",
+      "eligible": 2176,
+      "passed": true
+    }
+  ],
+  "finalResult": "All four real manual geocoders and restaurant discovery paths passed through the actual combined browser/app/RPC after the spatial candidate optimization. No provider data was mocked; count is observed eligible results with open-now disabled, not a complete city inventory."
 }

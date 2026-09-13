@@ -4,9 +4,9 @@ Updated September 13, 2026. **Casino + location/international reconciliation is 
 
 ## Latest meaningful checkpoint
 
-Six-region casino live acceptance is green. International live validation exposed a dense-city performance blocker; combined release is not yet green.
+Dense-city normalization fix passes automated and parity validation; fresh builds and real-browser rechecks are pending.
 
-Work branch: `integration/casino-location-reconciliation-2026-09-13`. Work commit: **`d46154381cbdc8a6de4af78f9b696384b330c388`** — **Validate live casino recovery and record dense-city discovery bottleneck**.
+Work branch: `integration/casino-location-reconciliation-2026-09-13`. Work commit: **`bdc05dee1bb15807c0f70d25e48c12fb37eea8f0`** — **Bound restaurant duplicate searches for dense international cities**.
 
 Current working branch: `integration/casino-location-reconciliation-2026-09-13`. Frozen starting integration: `183d3e1d71355a27e4bc35a2969d73037c9e6e33`. Preserved location source: `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839`, draft PR #39. Main baseline: `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
 
@@ -36,10 +36,14 @@ Current working branch: `integration/casino-location-reconciliation-2026-09-13`.
 - Isolated Chromium probe proves same-document cached positions can survive emulated permission revocation; fresh denied contexts deliver native code 1. No product permission rule was changed.
 - Actual Toronto geocoding succeeds but restaurant discovery exceeded 110 seconds; Vancouver live discovery passed with 393 eligible one-mile restaurants. A benchmark of the actual normalizer measured 435/1202/4062ms for 500/1000/2000 distinct rows, confirming quadratic duplicate work.
 - PR #42 is open for non-production integration only. This work checkpoint also reconciles the known shared-document ancestry; no runtime/data content was taken from the old location base.
+- Completed the old-normalizer international run: Toronto, Montréal and London each exceeded 110 seconds; Vancouver passed. All four real manual geocoders resolved. Failed results are preserved.
+- Replaced only the all-pairs restaurant duplicate candidate scan with Earth-centered spatial cells, retaining namesMatch, strict 0.2-mile haversine threshold, source priority and output order. Local overlay eligibility remains the exact same <8-mile rule.
+- New regressions prove legacy parity, source/order/boundaries, antimeridian/polar behavior and 8000-row retention. Actual normalizer benchmark: 2000 rows 4062ms before / 111ms after; 16000 rows 936ms locally. No filter, radius, selection or casino rule changed.
+- PR #42 CI Run 335 passed at d46154381cbdc8a6de4af78f9b696384b330c388 before this fix; its result is not claimed for the newer head.
 
 ## Validation of the combined work
 
-364 tests, typecheck/lint/audits/icons/safe builds and 30 deterministic browser groups remain green. Six casino real-provider regions PASS; 30 HTTP200 observations, 13 timeouts and one503 were handled honestly. International acceptance is NOT green: Toronto timed out, Vancouver passed, remaining cities still in progress. Main/location source unchanged.
+Full suite after fix: 296 repository + 71 application = 367 unique passed, zero failures, four external-documentation skips. Three new normalizer regressions; total 10 integration-specific tests above the preserved two workstreams. Typecheck, targeted lint and catalog/manifest audits pass. Earlier builds/browsers apply to pre-fix runtime and must be refreshed.
 
 Independent baselines are historical, not a combined result: casino freeze 329 passed (278 repository + 51 application), four skips, 16 browser groups; location source 342 passed (273 repository + 69 application), four skips, 12 location checks. Casino CI Run 325 and location CI Run 314 passed separately. Never add those totals together.
 
@@ -71,11 +75,11 @@ All four are **B: intentionally external by design / A: unavailable in a clean r
 
 ## BLOCKED / current integration gates
 
-Dense international restaurant pools exercise an existing all-pairs normalizer through the newly enabled global location flow. Fix and prove behavior parity, then rerun actual Toronto/other-city acceptance. Combined CI and final adversarial review remain.
+Fresh safe builds, deterministic suites and actual dense-city acceptance must validate the performance fix. Then final adversarial review, exact-head CI and non-production integration remain.
 
 ## Exact next action
 
-Optimize only restaurant duplicate candidate lookup with a spatial index while preserving namesMatch, 0.2-mile threshold, source priority and ordering. Add parity/boundary/large-pool regressions. Revalidate affected gates and complete real international acceptance before integrating PR #42.
+Run both safe builds without migrations, record build proof, then rerun deterministic casino/location suites and actual four-city international acceptance. Refresh casino real-provider confirmation on the final build as needed. Publish the first completely green combined checkpoint immediately.
 
 ## DEFERRED
 
@@ -110,5 +114,7 @@ Local checkout: /workspace/scratch/60ab73826fd9/pick-for-me-casino. Inspect bran
 - `08555508f736e7d42fe559e7abf8276defe92061` | `integration/casino-location-reconciliation-2026-09-13` | Prepare real-provider acceptance and record 364 passing combined tests
 - `c03142d010658bff131568408cbf2a407f3ef101` | `integration/active-work-pass-1` | Update shared continuity: final automated gates and live retry checkpoint
 - `d46154381cbdc8a6de4af78f9b696384b330c388` | `integration/casino-location-reconciliation-2026-09-13` | Validate live casino recovery and record dense-city discovery bottleneck
+- `aecebb37ed26fc862484a23c97c79e921b6e48b2` | `integration/active-work-pass-1` | Update shared continuity: live casino green and dense-city blocker recorded
+- `bdc05dee1bb15807c0f70d25e48c12fb37eea8f0` | `integration/casino-location-reconciliation-2026-09-13` | Bound restaurant duplicate searches for dense international cities
 
 This update records already-known work commits. Its own immutable documentation commit SHA is subsequent; inspect the current shared GitHub ref and Actions status. Every major checkpoint is saved and read back from GitHub before the next phase.
