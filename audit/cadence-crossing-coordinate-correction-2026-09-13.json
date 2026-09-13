@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "verifiedOn": "2026-09-13",
-  "status": "corrected-candidate-awaiting-exact-head-validation",
+  "status": "validated-and-promoted-integration-only",
   "property": {
     "id": "casino-catalog-nv-cadence-crossing",
     "name": "Cadence Crossing Casino",
@@ -69,5 +69,12 @@
       "reason": "Quarantined predecessor Jokers Wild point; not a current-property coordinate source."
     }
   ],
-  "deployment": "No Vercel deployment authorized. Candidate must pass the entire integration workflow before promotion; main stays untouched."
+  "deployment": "No Vercel deployment authorized. Candidate must pass the entire integration workflow before promotion; main stays untouched.",
+  "validation": {
+    "pr": 33,
+    "exactHead": "25b2e0cd53049a6066d613d5ccfe6a63ee57dcd0",
+    "runId": 34732399513,
+    "runNumber": 286,
+    "integrationMerge": "6563c1eec00cc44a004f4a7cbbfbd18739b952fc"
+  }
 }
