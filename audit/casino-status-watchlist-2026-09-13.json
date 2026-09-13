@@ -5,7 +5,7 @@
   "recurringMonitoringCreated": false,
   "recurringMonitoringAuthorized": false,
   "description": "Future review inputs. Runtime closure exclusions are distinct from curated coordinate/scope holds. Alias rule count is not a count of physical casinos; Texas Station/Fiesta Rancho share one rule.",
-  "runtimeClosureRuleGroups": 16,
+  "runtimeClosureRuleGroups": 17,
   "records": [
     {
       "property": "The Pass Casino",
@@ -421,7 +421,7 @@
       "recheckTrigger": "Operator/current named casino numerical destination or independently matching property geometry, resolving the conflicting MapQuest city-area points."
     },
     {
-      "property": "Horseshu — Jackpot",
+      "property": "Horseshu \u2014 Jackpot",
       "status": "held-gaming-scope",
       "monitorRecommended": true,
       "lastReviewedOn": "2026-09-13",
@@ -440,6 +440,94 @@
       ],
       "decision": "Operating travel plaza is established, current casino-floor scope is not. Old moapapaiutes.com redirects to an unrelated site.",
       "recheckTrigger": "Current tribal/operator evidence describing a separately qualifying operating casino floor, followed by property pin QA."
+    },
+    {
+      "property": "Prairie Sun Casino",
+      "aliases": [
+        "Prairie Sun Casino",
+        "Prairie Sun"
+      ],
+      "status": "closed-operator-confirmed",
+      "monitorRecommended": false,
+      "runtimeRule": {
+        "bounds": [
+          36.88,
+          36.95,
+          -94.92,
+          -94.87
+        ],
+        "scopeCoordinatesAreNotRoutingPins": true
+      },
+      "sources": [
+        "https://cat-oleander-lr2g.squarespace.com/s/MNE-March-2023-Press-Release.pdf",
+        "https://www.google.com/maps/search/?api=1&query=Prairie+Sun+Casino+Miami+Oklahoma"
+      ],
+      "decision": "March 14, 2023 operator announcement gives May 14, 2023 closure. Current map permanently closed. Stale tourism listings do not outweigh this; active Prairie Moon is a different site.",
+      "lastReviewedOn": "2026-09-13",
+      "recheckTrigger": "Revisit only upon credible new operating/reopening evidence; do not schedule routine checks of a confirmed retired site."
+    },
+    {
+      "property": "Wigwam Restaurant & Casino \u2014 Fernley",
+      "status": "coordinate-and-floor-hold",
+      "monitorRecommended": true,
+      "sources": [
+        "https://www.nuggetcasinos.com/locations/",
+        "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1"
+      ],
+      "decision": "Current operator roster supports 255 W Main; its point differs from the currently mapped restaurant/building by roughly 400 feet. Need casino-floor/entrance confirmation.",
+      "lastReviewedOn": "2026-09-13",
+      "recheckTrigger": "New dated operator evidence resolving the specific operating-floor, address, footprint or point ambiguity; verify before activation. No recurring job is authorized."
+    },
+    {
+      "property": "Broadway Colt Inn Casino \u2014 Battle Mountain",
+      "status": "coordinate-and-routing-address-hold",
+      "monitorRecommended": true,
+      "sources": [
+        "https://travelnevada.com/resorts-casinos/broadway-colt-inn-casino-restaurant/",
+        "https://www.google.com/maps/search/?api=1&query=654+W+Front+St+Battle+Mountain",
+        "https://www.mapquest.com/us/nevada/broadway-colt-inn-casino-and-restaurant-372623772"
+      ],
+      "decision": "State tourism point/address targets the RV park; named casino and two street-address points disagree across a large travel-center campus. Current operation likely; casino routing entrance/address needs reconciliation.",
+      "lastReviewedOn": "2026-09-13",
+      "recheckTrigger": "New dated operator evidence resolving the specific operating-floor, address, footprint or point ambiguity; verify before activation. No recurring job is authorized."
+    },
+    {
+      "property": "C Punch / Lovelock Junction \u2014 Lovelock",
+      "status": "rebranding-and-operating-floor-unconfirmed",
+      "monitorRecommended": true,
+      "sources": [
+        "https://lovelockjunctionhotel.com/",
+        "https://www.google.com/maps/search/?api=1&query=Lovelock+Junction+Casino+1420+Cornell",
+        "https://www.bestwestern.com/en_US/book/hotels-in-lovelock/surestay-by-best-western-lovelock/propertyCode.52143.html"
+      ],
+      "decision": "Legacy C Punch and Sturgeon's Inn maps permanently closed, Lovelock Junction website advertises renamed hotel/casino, current SureStay operator confirms hotel but casino operation is unclear. No closure rule or new casino promoted without resolving operating floor.",
+      "lastReviewedOn": "2026-09-13",
+      "recheckTrigger": "New dated operator evidence resolving the specific operating-floor, address, footprint or point ambiguity; verify before activation. No recurring job is authorized."
+    },
+    {
+      "property": "Border Inn Casino \u2014 Baker",
+      "status": "casino-floor-coordinate-hold",
+      "monitorRecommended": true,
+      "sources": [
+        "https://borderinncasino.com/",
+        "https://www.google.com/maps/search/?api=1&query=Border+Inn+Casino+Baker+Nevada"
+      ],
+      "decision": "Active operator casino supported; complex straddles Nevada/Utah. Named hotel point is east of the boundary area. Casino-floor point needs confirmation; do not turn hotel pin into Nevada gaming-floor evidence.",
+      "lastReviewedOn": "2026-09-13",
+      "recheckTrigger": "New dated operator evidence resolving the specific operating-floor, address, footprint or point ambiguity; verify before activation. No recurring job is authorized."
+    },
+    {
+      "property": "Chickasaw Travel Stop Thackerville",
+      "status": "separate-gaming-room-scope-hold",
+      "monitorRecommended": true,
+      "sources": [
+        "https://chickasawtravelstop.com/locations/thackerville/",
+        "https://chickasawtravelstop.com/gaming/",
+        "https://www.casinocity.com/oklahoma/thackerville/chickasaw-travel-stop-thackerville"
+      ],
+      "decision": "Current casino next-door versus a distinct internal gaming room is unresolved; do not duplicate existing Border Casino.",
+      "lastReviewedOn": "2026-09-13",
+      "recheckTrigger": "New dated operator evidence resolving the specific operating-floor, address, footprint or point ambiguity; verify before activation. No recurring job is authorized."
     }
   ],
   "optionalFutureScopes": [

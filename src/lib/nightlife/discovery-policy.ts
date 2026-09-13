@@ -24,6 +24,7 @@ export function casinoIdentityName(name: string) {
 // Broad address areas are exclusion scopes, NOT routing pins. Matching is exact
 // against reviewed aliases, so unrelated same-name casinos elsewhere survive.
 export const CASINO_STATUS_HOLDS = [
+  { names: ["Prairie Sun Casino", "Prairie Sun"], bounds: [36.88, 36.95, -94.92, -94.87], reason: "Operator announced closure effective May 14, 2023; Prairie Moon is a different active property" },
   { names: ["The Pass Casino", "Pass Casino"], bounds: [35.98, 36.08, -115.03, -114.93], reason: "Renovation closure; current reopening evidence required" },
   { names: ["Jokers Wild Casino", "Joker's Wild Casino"], bounds: [35.99, 36.12, -115.06, -114.93], reason: "Retired predecessor of Cadence Crossing; do not revive old footprint" },
   { names: ["Whiskey Pete's", "Whiskey Pete's Hotel & Casino", "Whiskey Pete's Casino"], bounds: [35.5, 35.7, -115.5, -115.3], reason: "Main resort closed; license-preserving annex is not a reopened resort" },
@@ -78,6 +79,15 @@ export function nightlifeWebsite(value: string | undefined): string | null {
 
 // Reviewed same-property aliases. The caller must also require physical proximity.
 const CASINO_ALIAS_GROUPS = [
+  ["Big Wheel Casino", "Big Wheel Casino Battle Mountain"],
+  ["Alamo Casino", "Alamo Casino Sparks Petro", "Alamo Casino Wells Petro", "Alamo Casino Mill City TA", "Alamo Casino North Las Vegas Petro", "Alamo Casino at North LV Petro", "Alamo Casino Las Vegas TA"],
+  ["Fernley Lucky's Casino", "4 Way Casino"],
+  ["Winnemucca Roadhouse Casino", "Winger's Roadhouse Casino"],
+  ["Cactus Jack's Senator Club", "Cactus Jack's Casino"],
+  ["COD Casino", "C.O.D. Casino", "C.O.D. Garage"],
+  ["Comstock Casino", "Comstock Casino Carson City", "Comstock Casino Fallon"],
+  ["Jackpot Crossing", "Jackpot Crossing Casino", "Jackpot Crossing Casino Carson City", "Jackpot Crossing Casino Fernley"],
+  ["7 Clans Red Rock Gasino", "Lil Bit of Paradise Casino 2"],
   ["The Vanderpump Hotel", "The Cromwell"],
   ["Crystal Bay Casino", "Crystal Bay Club Casino"],
   ["Boomtown Casino Resort", "Best Western Plus Boomtown Casino Hotel"],

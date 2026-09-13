@@ -3,7 +3,10 @@ import { spawn } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
+import { stripVTControlCharacters } from "node:util";
 import { chromium } from "playwright";
+import { createTsTestLoader } from "./ts-test-loader.mjs";
+const { haversineMiles } = createTsTestLoader()("src/lib/restaurants/geo.ts");
 import { loadCasinoCatalogs } from "./casino-catalog-loader.mjs";
 import { auditCasinoRecords } from "./casino-audit.mjs";
 
@@ -14,8 +17,8 @@ mkdirSync(output, { recursive: true });
 const preload = pathToFileURL(resolve("scripts/casino-smoke-network.mjs")).href;
 const server = spawn(process.execPath, [
   "scripts/with-app-env.mjs", process.execPath, "--import=" + preload,
-  "node_modules/vite/bin/vite.js", "preview", "--host", "127.0.0.1", "--port", "8080",
-], { env: { ...process.env, CASINO_BROWSER_SMOKE: "1" }, stdio: ["ignore", "pipe", "pipe"] });
+  "node_modules/vite/bin/vite.js", "preview", "--host", "127.0.0.1", "--port", "8080", "--strictPort",
+], { env: { ...process.env, CASINO_BROWSER_SMOKE: "1" }, detached: process.platform !== "win32", stdio: ["ignore", "pipe", "pipe"] });
 let serverLog = "";
 server.stdout.on("data", (data) => { serverLog += data; });
 server.stderr.on("data", (data) => { serverLog += data; });
@@ -47,13 +50,20 @@ const browserConsole = [];
 try {
   const deadline = Date.now() + 90000;
   while (true) {
-    try { if ((await fetch(origin)).ok) break; } catch {}
+    try { if (server.exitCode === null && stripVTControlCharacters(serverLog).includes(origin) && (await fetch(origin)).ok) break; } catch { /* The owned preview may still be starting. */ }
     if (server.exitCode != null || Date.now() > deadline) throw new Error("Local smoke server did not become ready");
     await new Promise((resolve) => setTimeout(resolve, 500));
   }
-  browser = await chromium.launch();
+  const launch = { headless: true };
+  if (process.env.CASINO_BROWSER_EXECUTABLE_PATH) {
+    launch.executablePath = process.env.CASINO_BROWSER_EXECUTABLE_PATH;
+    launch.args = ["--no-sandbox", "--disable-dev-shm-usage", "--no-zygote", "--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader"];
+  }
+  browser = await chromium.launch(launch);
   for (const viewport of [{ width: 1280, height: 800 }, { width: 390, height: 844 }]) {
     const label = viewport.width === 390 ? "mobile" : "desktop";
+    const location = label === "mobile" ? { lat: 36.977, lon: -97.045, label: "Newkirk, Oklahoma" }
+      : { lat: 39.529, lon: -119.816, label: "Reno, Nevada" };
     const context = await browser.newContext({ viewport, reducedMotion: "reduce" });
     const page = await context.newPage();
     currentPage = page;
@@ -66,8 +76,7 @@ try {
       localStorage.setItem("pick-for-us-v1", JSON.stringify({
         state: { location: { lat, lon, label, source: "manual" } }, version: 0,
       }));
-    }, label === "mobile" ? { lat: 36.977, lon: -97.045, label: "Newkirk, Oklahoma" }
-      : { lat: 39.529, lon: -119.816, label: "Reno, Nevada" });
+    }, location);
     await page.goto(origin, { waitUntil: "domcontentloaded" });
     // Visible SSR buttons can precede React event attachment on a cold preview server.
     await page.waitForFunction(() => [...document.querySelectorAll("button")].some((button) =>
@@ -94,6 +103,9 @@ try {
     const expectedState = label === "mobile" ? "Oklahoma" : "Nevada";
     const matched = (await page.locator("body").innerText()).match(/(\d+) venues? match/);
     assert.ok(matched, "Show the actual eligible destination count");
+    const expectedCount = canonical.filter(row => haversineMiles(location.lat, location.lon, row.lat, row.lon) <= 10.05).length;
+    assert.equal(Number(matched[1]), expectedCount, "Built fallback must contain the current canonical pool, not a stale build");
+    verdict.checks.push(label + ": compiled fallback matches " + expectedCount + " current canonical casinos");
     const expectedOptions = Math.min(4, Number(matched[1]));
     await page.getByRole("button", { name: "Give us options", exact: true }).click();
     await page.getByRole("heading", { name: "Tonight's options", exact: true }).waitFor();
@@ -123,7 +135,10 @@ try {
     await page.getByText("Nothing matches those filters.", { exact: false }).waitFor();
     assert.equal(await pick.isDisabled(), true);
     await page.getByRole("switch", { name: "Favorites only", exact: true }).click();
-    await page.getByRole("button", { name: "Change location", exact: true }).click();
+    await page.getByRole("button", { name: "Use current location", exact: true }).click();
+    await page.getByRole("alert").filter({ hasText: "Location permission denied. Enter a city or ZIP instead." }).waitFor();
+    await page.getByRole("textbox", { name: "City or ZIP code", exact: true }).waitFor();
+    verdict.checks.push(label + ": denied geolocation opens a visible error and manual recovery form");
     await page.getByRole("textbox", { name: "City or ZIP code", exact: true }).fill("Empty Test");
     await page.getByRole("button", { name: "Set location", exact: true }).click();
     await page.getByText("We couldn't refresh nightlife right now", { exact: true }).waitFor();
@@ -147,7 +162,12 @@ try {
   process.exitCode = 1;
 } finally {
   await browser?.close();
-  server.kill("SIGTERM");
+  try {
+    if (process.platform === "win32") server.kill("SIGTERM");
+    else process.kill(-server.pid, "SIGTERM");
+  } catch (error) {
+    if (error.code !== "ESRCH") { verdict.errors.push("Preview cleanup: " + error.message); process.exitCode = 1; }
+  }
   writeFileSync(output + "/server.log", serverLog);
   writeFileSync(output + "/verdict.json", JSON.stringify(verdict, null, 2) + "\n");
   console.log("CASINO_BROWSER_VERDICT " + JSON.stringify(verdict));

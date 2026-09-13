@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "reviewedOn": "2026-09-13",
   "status": "VALIDATED_PARTIAL_STATEWIDE_COVERAGE",
-  "scope": "Existing physical casino destination policy. This release freezes verified additions; neither Nevada nor Oklahoma is declared complete. Remaining named candidates are preserved and must clear the same current-operation, physical destination, address and numerical property-point gates.",
+  "scope": "Existing physical casino destination policy. All named prior frontier groups and newly discovered relevant operator rosters were investigated. 49 additions in this continuation are supported; neither Nevada nor Oklahoma is declared statewide complete. Remaining holds require current operating-floor or exact property-point evidence.",
   "runtimeCounts": {
     "Alabama": 3,
     "Arizona": 26,
@@ -27,14 +27,14 @@
     "Mississippi": 28,
     "Missouri": 13,
     "Nebraska": 10,
-    "Nevada": 146,
+    "Nevada": 181,
     "New Jersey": 9,
     "New Mexico": 23,
     "New York": 20,
     "North Carolina": 3,
     "North Dakota": 5,
     "Ohio": 11,
-    "Oklahoma": 96,
+    "Oklahoma": 110,
     "Oregon": 10,
     "Pennsylvania": 18,
     "Rhode Island": 2,
@@ -55,14 +55,14 @@
     "fourState": 200
   },
   "current": {
-    "canonical": 808,
-    "Nevada": 146,
-    "Oklahoma": 96,
+    "canonical": 857,
+    "Nevada": 181,
+    "Oklahoma": 110,
     "Colorado": 31,
     "Texas": 4,
-    "fourState": 277,
-    "serializedRows": 824,
-    "passes": 54
+    "fourState": 326,
+    "serializedRows": 873,
+    "passes": 58
   },
   "addedDestinations": [
     {
@@ -526,6 +526,300 @@
       "name": "StoneWolf Casino",
       "state": "Oklahoma",
       "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-cactus-jacks",
+      "name": "Cactus Jack's Senator Club",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-cod-minden",
+      "name": "COD Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-jackpot-crossing-carson",
+      "name": "Jackpot Crossing Casino Carson City",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-lucky-strike-carson",
+      "name": "Lucky Strike Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-comstock-carson",
+      "name": "Comstock Casino Carson City",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-tahoe-nugget",
+      "name": "Tahoe Nugget Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-comstock-fallon",
+      "name": "Comstock Casino Fallon",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-fallon-nugget",
+      "name": "Fallon Nugget",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-fernley-nugget",
+      "name": "Fernley Nugget",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-jackpot-crossing-fernley",
+      "name": "Jackpot Crossing Casino Fernley",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-silver-springs-nugget",
+      "name": "Silver Springs Nugget Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-seven-clans-perry",
+      "name": "7 Clans Perry Casino",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-seven-clans-chilocco",
+      "name": "7 Clans Chilocco Gasino",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-seven-clans-red-rock",
+      "name": "7 Clans Red Rock Gasino",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-prairie-moon",
+      "name": "Prairie Moon Casino",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-outpost",
+      "name": "Outpost Casino",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-apache-lonestar",
+      "name": "Apache Lonestar Casino",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-warm-springs",
+      "name": "Warm Springs Casino",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-golden-eagle-apache",
+      "name": "Golden Eagle Casino",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-ada-gaming",
+      "name": "Ada Gaming Center",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-goldsby-gaming",
+      "name": "Goldsby Gaming Center",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-madill-gaming",
+      "name": "Madill Gaming Center",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-casino-oklahoma",
+      "name": "Casino Oklahoma",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-big-wheel-battle-mountain",
+      "name": "Big Wheel Casino Battle Mountain",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-owl-club",
+      "name": "Owl Club Casino & Restaurant",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-alamo-wells",
+      "name": "Alamo Casino Wells Petro",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-copper-queen-ely",
+      "name": "Copper Queen Hotel & Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-jailhouse-ely",
+      "name": "Jailhouse Motel & Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-dinis-yerington",
+      "name": "Dini's Lucky Club Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-stagecoach-beatty",
+      "name": "Stagecoach Hotel & Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-el-capitan-hawthorne",
+      "name": "El Capitan Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-four-jacks-jackpot",
+      "name": "Four Jacks Hotel & Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-diamonds-reno",
+      "name": "Diamond's Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-petes-winnemucca",
+      "name": "Pete's Gambling Hall",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-alamo-mill-city",
+      "name": "Alamo Casino Mill City TA",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-luckys-usa-parkway",
+      "name": "USA Parkway Lucky's Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-pilot-fernley",
+      "name": "Pilot Casino Fernley",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-luckys-fernley",
+      "name": "Fernley Lucky's Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-pilot-winnemucca",
+      "name": "Pilot Casino Winnemucca",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-roadhouse-winnemucca",
+      "name": "Winnemucca Roadhouse Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-pilot-carlin",
+      "name": "Pilot Casino Carlin",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-roadhouse-elko",
+      "name": "Elko Roadhouse Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-luckys-wells",
+      "name": "Wells Lucky's Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-luckys-ely",
+      "name": "Ely Lucky's Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-pilot-wendover",
+      "name": "Pilot Casino Wendover",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-alamo-north-las-vegas",
+      "name": "Alamo Casino North Las Vegas Petro",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-alamo-las-vegas-ta",
+      "name": "Alamo Casino Las Vegas TA",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-davis-west-gaming",
+      "name": "Davis Gaming - Chickasaw Travel Stop",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-ada-west-gaming",
+      "name": "Chickasaw Travel Stop Ada West",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
     }
   ],
   "removedExistingDestinations": [],
@@ -592,67 +886,34 @@
       "Carson Valley and Tahoe major hotel/casino properties",
       "West Wendover five principal resort casinos",
       "Elko/Jackpot current resort casinos",
-      "Avi tribal property coordinate hold"
+      "Avi tribal property coordinate hold",
+      "11 individually verified Nugget Group casino destinations (Pass 55)",
+      "Nine rural casino destinations plus Diamond\u2019s, Pete\u2019s and Alamo Mill City (Pass 57)",
+      "All five Alamo and ten current Pilot/Roadhouse/Lucky\u2019s operator casino locations represented (Pass 58)"
     ],
     "currentFrontier": [
       {
-        "cluster": "Nugget Casino Group: current roster recovered; individual scope and coordinates still pending",
-        "source": "https://www.nuggetcasinos.com/locations/",
+        "cluster": "Named queues investigated; remaining point/scope holds",
         "candidates": [
-          "Cactus Jack's Senator Club — Carson City",
-          "COD Casino — Minden",
-          "Comstock Casino — Carson City",
-          "Jackpot Crossing — Carson City",
-          "Lucky Strike — Carson City",
-          "Tahoe Nugget — Stateline",
-          "Comstock Casino — Fallon",
-          "Fallon Nugget — Fallon",
-          "Fernley Nugget — Fernley",
-          "Jackpot Crossing — Fernley",
-          "Silver Springs Nugget — Silver Springs",
-          "Wigwam Restaurant & Casino — Fernley"
+          "Wigwam \u2014 Fernley",
+          "Broadway Colt \u2014 Battle Mountain",
+          "Border Inn \u2014 Baker",
+          "C Punch / Lovelock Junction \u2014 Lovelock"
         ],
-        "decision": "Portfolio name/address membership is supported, but no automatic promotion of small gaming outlets without destination/operating-floor and property-point QA. Current Fernley Nugget roster uses 1190 E Main St; older evidence used 1130. Preserve the address conflict."
+        "decision": "Casino/status identities and conflicting map evidence preserved in Pass 55/57 and status watchlist. No weak routing pin or uncertain operating floor promoted."
       },
       {
-        "cluster": "Rural properties carried forward with explicit coordinate/scope work",
-        "sourceArtifacts": [
-          "audit/nevada-rural-completeness-recovery-2026-09-11.json",
-          "audit/nevada-rural-completeness-pass-6-2026-09-11.json",
-          "audit/nevada-rural-recovery-pass-5-2026-09-11.json"
-        ],
+        "cluster": "Further statewide reconciliation",
         "candidates": [
-          "Big Wheel Casino — Battle Mountain",
-          "Owl Club Casino & Restaurant — Battle Mountain",
-          "Broadway Colt Inn Casino & Restaurant — Battle Mountain",
-          "Alamo Casino at Wells Petro — Wells",
-          "Border Inn Casino — Baker",
-          "Copper Queen Hotel & Casino — Ely",
-          "Jailhouse Motel & Casino — Ely",
-          "Dini's Lucky Club — Yerington",
-          "C Punch Inn & Casino — Lovelock",
-          "Stagecoach Hotel & Casino — Beatty",
-          "El Capitan Casino — Hawthorne",
-          "Four Jacks — Jackpot"
+          "Big Wheel \u2014 Lovelock (separate from the added Battle Mountain property)",
+          "Remaining NGCB nonrestricted roster and small independent properties beyond the completed operator rosters"
         ],
-        "decision": "Historical discovery evidence is retained. Each current destination identity and property point must be independently cleared before addition."
-      },
-      {
-        "cluster": "Remaining small-property discovery/scope",
-        "candidates": [
-          "Diamond's Casino — Reno",
-          "Winnemucca Roadhouse",
-          "Pilot Casino — Winnemucca",
-          "Pete's Gambling Hall",
-          "Alamo Casino — Mill City",
-          "Stockmen's Gambling Hall — Fallon"
-        ],
-        "decision": "Research/scope backlog, not claimed current, closed or duplicate. Stockmen's Gambling Hall must be distinguished from already active Stockman's Casino."
+        "decision": "Optional continuing coverage work; Nevada is not relabeled complete. A current map hit alone is not a promoted record."
       }
     ],
     "blockedCandidates": [
       {
-        "name": "Horseshu — Jackpot",
+        "name": "Horseshu \u2014 Jackpot",
         "reason": "Current operator calls it a hotel; historical tourism calls it a casino. Need current separate operating gaming-floor evidence."
       },
       {
@@ -685,54 +946,30 @@
       "Sac & Fox and two of three Seminole Nation locations",
       "Grand Lake/High Winds/Stables/River Bend northeast properties",
       "Cimarron, Sugar Creek, Gold River, StoneWolf and Remington Park",
-      "Rock & Brews Braman; SouthWind Newkirk closed exclusion"
+      "Rock & Brews Braman; SouthWind Newkirk closed exclusion",
+      "All five 7 Clans/Otoe-Missouria properties including Perry, Chilocco and Red Rock",
+      "Prairie Moon and Outpost; Prairie Sun closed exclusion",
+      "Casino Oklahoma point/address conflict resolved; Apache Lonestar, Warm Springs and Golden Eagle Apache",
+      "Ada, Goldsby, Madill, Davis West and Ada West gaming; all eight CTS gaming roster entries individually reconciled"
     ],
     "blockedCandidates": [
       {
         "name": "Seminole Nation Casino Konawa / Rivermist",
         "address": "14313 Old Highway 99, Konawa, OK 74849",
-        "reason": "Current casino identity supported, but two named MapQuest points conflict by miles with the operator map area. Operator CID/current searches do not expose a trustworthy numerical destination. Viewport centre is not a property point.",
+        "reason": "Current operator identity supported. Fresh named Google Rivermist point at 34.939424,-96.683884 conflicts by miles with operator area/14313 Old Highway 99 address. Operator viewport is not a destination and its CID resolves incorrectly. Hold retained.",
         "source": "https://www.seminolenationcasinos.com/casinos/konawa/",
         "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
       }
     ],
     "remainingScope": [
       {
-        "cluster": "Northeast small tribal locations",
-        "candidates": [
-          "Prairie Sun — Miami",
-          "Prairie Moon — Miami",
-          "Outpost Casino"
-        ],
-        "decision": "Current operator/closure status, destination scope and exact property coordinates remain to be reconciled; no current operation claim from historical names."
-      },
-      {
-        "cluster": "Otoe-Missouria",
-        "candidates": [
-          "7 Clans Perry",
-          "7 Clans Chilocco Gasino",
-          "7 Clans Red Rock Gasino"
-        ],
+        "name": "CTS Thackerville separate gaming room",
         "sources": [
-          "https://www.omtribe.org/who-we-are/enterprises/gaming/",
-          "https://www.omtribe.org/who-we-are/enterprises/gaming/casino-listing/"
+          "https://chickasawtravelstop.com/locations/thackerville/",
+          "https://chickasawtravelstop.com/gaming/",
+          "https://www.casinocity.com/oklahoma/thackerville/chickasaw-travel-stop-thackerville"
         ],
-        "decision": "Tribe identifies five gaming properties. First Council and Paradise are active in this RC; smaller gasinos require explicit casino destination scope, not a silent blanket exclusion."
-      },
-      {
-        "cluster": "Other operator/casino versus retail scope",
-        "candidates": [
-          "Casino Oklahoma — Hinton",
-          "Apache Lonestar",
-          "Golden Eagle",
-          "Warm Springs",
-          "Ada Gaming Center",
-          "Goldsby Gaming Center",
-          "Madill Gaming Center",
-          "Davis Trading Post gaming",
-          "Kaw City historic Southwind listing"
-        ],
-        "decision": "Do not infer current casino operation, closure or equivalence from names alone. Casino Oklahoma is linked by Gold River's current operator but is a separate property candidate. Remaining tribal/trading-post sites require current identity/scope and pin QA."
+        "decision": "Operator roster includes dedicated rooms OR neighboring casinos. Current review identifies casino next door; older directory describes a 34-machine room. Existing Border Casino is independently confirmed at 22953 Brown Springs. Need current separate-floor evidence at CTS 22983 before adding another destination."
       }
     ],
     "closedOrRetired": [
@@ -741,10 +978,19 @@
       "Kiowa Verden",
       "Old Creek Nation Casino Eufaula",
       "Golden Pony closure hold",
-      "SouthWind Newkirk"
+      "SouthWind Newkirk",
+      "Prairie Sun \u2014 operator announced closure effective May 14, 2023",
+      "Historical SouthWind Kaw City \u2014 casino guide reports ceased operations; no current operator property established"
     ],
     "authorityBoundary": "NIGC's public marker REST endpoint returned 401. Authentication was not bypassed; current public operator, tribal, tourism and map sources were used instead."
   },
   "nationwideAudit": "Actual exported catalog/schema, unique-ID, chronological reconciliation, manifest accounting and close/same-name/address pairs were audited nationwide. Three WI/MI point/address corrections were made. The 39 complete manifest jurisdictions retain their existing scope status; this is not a fresh independent survey of every casino in those states.",
-  "releaseImplication": "The implemented additions are validated and integration-ready. A claim of statewide Nevada/Oklahoma completeness remains blocked by the explicitly named scope/status/coordinate work above. Controlled release may retain the existing pending coverage status; do not relabel those states complete to make a gate green."
+  "releaseImplication": "The implemented catalog is locally validated; existing pending Nevada/Oklahoma scope status remains honest. Remaining unresolved properties are held outside the curated pool. CI, final browser evidence and controlled-release authorization are recorded separately in the release-readiness record.",
+  "continuationBaseline": {
+    "canonical": 808,
+    "Nevada": 146,
+    "Oklahoma": 96,
+    "fourState": 277,
+    "sha": "2fd976a4f34f8bbe28db1075a264693d691b8253"
+  }
 }
