@@ -86,10 +86,10 @@
     },
     "Nevada": {
       "status": "pending",
-      "expectedCount": 174,
+      "expectedCount": null,
       "authority": "Nevada Gaming Control Board / National Indian Gaming Commission",
       "source": "https://www.gaming.nv.gov/",
-      "note": "174 is the current provisional audit decision universe, not a final runtime casino count. Runtime ingestion is rolling in verified 50-100 destination batches."
+      "note": "115 current canonical destinations after Pass 51. Statewide coverage remains pending. The historical 174 decision-universe claim included 45 rows from a truncated ledger that cannot be recovered; retain historical evidence but do not publish it as an expected runtime total."
     },
     "Colorado": {
       "status": "complete",
@@ -104,7 +104,7 @@
       "authority": "National Indian Gaming Commission / current tribal and operator evidence",
       "source": "https://www.nigc.gov/wp-content/uploads/2025/12/12112025TribesByStateTribeList.pdf",
       "scopeSource": "audit/oklahoma-statewide-scope-2026-09-11.json",
-      "note": "56 current canonical runtime destinations were verified in exact-head Run 288 and revalidated in Run 290. Statewide scope and remaining operator clusters are incomplete; the final destination total is unknown. Null expectedCount means no speculative statewide quota, not permission to mark the state complete."
+      "note": "74 current canonical destinations after Pass 51. Statewide operator and scope reconciliation remains pending; unknown expectedCount is not permission to declare completeness."
     }
   }
 }

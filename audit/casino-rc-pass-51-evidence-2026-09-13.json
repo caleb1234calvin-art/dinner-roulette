@@ -1,0 +1,713 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "branch": "integration/casino-release-candidate-2026-09-13",
+  "pass": 51,
+  "scope": "Current separately routable casino destinations, excluding ordinary convenience gaming and duplicate casino/hotel components.",
+  "baseline": {
+    "canonical": 731,
+    "Nevada": 109,
+    "Oklahoma": 56,
+    "Colorado": 31,
+    "Texas": 4,
+    "Wisconsin": 23
+  },
+  "result": {
+    "newDestinations": 24,
+    "coordinateCorrections": 2,
+    "canonical": 755,
+    "Nevada": 115,
+    "Oklahoma": 74,
+    "Colorado": 31,
+    "Texas": 4,
+    "Wisconsin": 23,
+    "fourState": 224
+  },
+  "researchMethods": [
+    "TinyFish operator pages and rendered map destinations",
+    "Tavily and Parallel independent roster and property discovery",
+    "Firecrawl named source JSON-LD and feature metadata"
+  ],
+  "limitations": [
+    "Online current operator and mapping evidence; no physical site inspection or phone confirmation.",
+    "Source property points are not survey-grade entrance or parcel coordinates.",
+    "Hours remain unknown in new records; no invented round-the-clock availability.",
+    "Nevada and Oklahoma remain pending, with an explicit follow-on coverage ledger required.",
+    "Google viewport centres and hotel/restaurant component points are not substituted for named casino points."
+  ],
+  "records": [
+    {
+      "address": "345 N Virginia St, Reno, NV",
+      "coordinateEvidence": {
+        "latitude": 39.529219,
+        "longitude": -119.814891,
+        "method": "named-OSM-feature-meta"
+      },
+      "coordinateSource": "https://mapcarta.com/N14063988023",
+      "decision": "Current separately branded casino at The ROW. Shared resort marketing is not a fourth destination. Operator page displays inconsistent ZIP 89051; omit ZIP pending reconciliation, retain verified street/city/state. Mapcarta point is the named current casino OSM node.",
+      "id": "casino-catalog-nv-eldorado-reno",
+      "identitySource": "https://www.caesars.com/eldorado-reno",
+      "jurisdiction": "Nevada",
+      "lat": 39.529219,
+      "lon": -119.814891,
+      "name": "Eldorado Resort Casino",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "407 N Virginia St, Reno, NV 89501",
+      "coordinateEvidence": {
+        "latitude": 39.53041,
+        "longitude": -119.815758,
+        "method": "named-OSM-feature-meta"
+      },
+      "coordinateSource": "https://mapcarta.com/W377056531",
+      "decision": "Distinct casino building in The ROW. Official postal code 89501 supersedes Mapcarta's 89503. Coordinates are the casino OSM way, not nearby hotel listings.",
+      "id": "casino-catalog-nv-silver-legacy-reno",
+      "identitySource": "https://www.caesars.com/silver-legacy-reno",
+      "jurisdiction": "Nevada",
+      "lat": 39.53041,
+      "lon": -119.815758,
+      "name": "Silver Legacy Resort & Casino",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "500 N Sierra St, Reno, NV 89501",
+      "coordinateEvidence": {
+        "latitude": 39.5317,
+        "longitude": -119.815519,
+        "method": "named-OSM-feature-meta"
+      },
+      "coordinateSource": "https://mapcarta.com/W377056523",
+      "decision": "Distinct Reno casino building; not Circus Circus Las Vegas and not a second record for The ROW umbrella.",
+      "id": "casino-catalog-nv-circus-circus-reno",
+      "identitySource": "https://www.caesars.com/circus-circus-reno",
+      "jurisdiction": "Nevada",
+      "lat": 39.5317,
+      "lon": -119.815519,
+      "name": "Circus Circus Reno",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "3800 S Carson St, Carson City, NV 89701",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Casino+Fandango/@39.1316995,-119.771595,17z/data=!3m1!4b1!4m6!3m5!1s0x8099a03a02a68a57:0xed5503444a2a568f!8m2!3d39.1316995!4d-119.771595!16s%2Fm%2F0dd8h_q?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 39.1316995,
+        "longitude": -119.771595,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://g.page/CasinoFandango?share",
+      "decision": "Operator contact page publishes this named Google Maps destination. !3d/!4d point agrees with Mapcarta casino building within about 22 metres. Adjacent Courtyard hotel is not an additional casino.",
+      "id": "casino-catalog-nv-casino-fandango",
+      "identitySource": "https://casinofandango.com/",
+      "jurisdiction": "Nevada",
+      "lat": 39.1316995,
+      "lon": -119.771595,
+      "name": "Casino Fandango",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "2469 Mile 28 Rd, Guymon, OK 73942",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Golden+Mesa+Casino+%26+Hotel/@36.6501617,-101.5247268,17z/data=!3m1!4b1!4m9!3m8!1s0x8706258458c0476b:0x7b573a6d1c5a0527!5m2!4m1!1i2!8m2!3d36.6501617!4d-101.5247268!16s%2Fg%2F11rgx18gn2?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 36.6501617,
+        "longitude": -101.5247268,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://maps.app.goo.gl/jVDfD88JSg4tgDoH6",
+      "decision": "Current operator-published named casino destination. Separate operator link Jm5cQDxrMwn896xe6 targets the hotel at 36.6509453,-101.5232822 and is not selected as the casino point.",
+      "id": "casino-catalog-ok-golden-mesa",
+      "identitySource": "https://goldenmesa.com/",
+      "jurisdiction": "Oklahoma",
+      "lat": 36.6501617,
+      "lon": -101.5247268,
+      "name": "Golden Mesa Casino & Hotel",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "12375 N Highway 77, Newkirk, OK 74647",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Native+Lights+Casino/@36.9738637,-97.0471022,17z/data=!4m5!3m4!1s0x87b086e410310557:0xd3a23d53c70d8733!8m2!3d36.9739983!4d-97.0451874?shorturl=1",
+        "latitude": 36.9739983,
+        "longitude": -97.0451874,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://goo.gl/maps/yupiVq9eULxaMoaw5",
+      "decision": "Operator-published named casino map destination !3d/!4d; address from operator contact page. Distinct from nearby First Council.",
+      "id": "casino-catalog-ok-native-lights",
+      "identitySource": "https://tonkawacasinos.com/native-lights-casino/",
+      "jurisdiction": "Oklahoma",
+      "lat": 36.9739983,
+      "lon": -97.0451874,
+      "name": "Native Lights Casino",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "16601 W South Ave, Tonkawa, OK 74653",
+      "coordinateEvidence": {
+        "fields": {
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Tonkawa",
+            "addressRegion": "OK",
+            "postalCode": "74653",
+            "streetAddress": "16601 W South Ave"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 36.69393113683454,
+            "longitude": -97.34816511753773
+          },
+          "name": "Tonkawa Hotel And Casino",
+          "telephone": "+1 580-628-2624",
+          "type": "Casino"
+        },
+        "latitude": 36.69393113683454,
+        "longitude": -97.34816511753773,
+        "method": "operator-casino-jsonld"
+      },
+      "coordinateSource": "https://tonkawacasinos.com/tonkawa-hotel-casino/",
+      "decision": "Operator Casino JSON-LD geo. Independently resolving operator @id cid=10101010513238252667 gives 36.693931,-97.3481577, agreeing within a metre. Generic map embed q=36.6947167,-97.3499256 is not selected. The HUB and travel plaza are not extra casino destinations.",
+      "id": "casino-catalog-ok-tonkawa",
+      "identitySource": "https://tonkawacasinos.com/tonkawa-hotel-casino/",
+      "jurisdiction": "Oklahoma",
+      "lat": 36.69393113683454,
+      "lon": -97.34816511753773,
+      "name": "Tonkawa Hotel & Casino",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "338438 US Rte 66, Chandler, OK 74834",
+      "coordinateEvidence": {
+        "fields": {
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Chandler",
+            "addressRegion": "OK",
+            "postalCode": "74834",
+            "streetAddress": "338438 E Highway 66"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 35.6933941,
+            "longitude": -96.9757739
+          },
+          "name": "Harrah's Oklahoma",
+          "telephone": "+18887117568",
+          "type": "LocalBusiness"
+        },
+        "latitude": 35.6933941,
+        "longitude": -96.9757739,
+        "method": "named-mapquest-jsonld"
+      },
+      "coordinateSource": "https://www.mapquest.com/us/oklahoma/harrahs-oklahoma-810366849",
+      "decision": "April 9, 2026 actual opening confirmed by Caesars investor announcement. Named MapQuest LocalBusiness geo matches current property street, phone and operator identity. Never reuse old Ioway site.",
+      "id": "casino-catalog-ok-harrahs-chandler",
+      "identitySource": "https://www.caesars.com/harrahs-oklahoma",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.6933941,
+      "lon": -96.9757739,
+      "name": "Harrah's Oklahoma",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "6530 S 580 Rd, Miami, OK 74354",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Quapaw+Casino/@36.9200698,-94.8413449,17z/data=!3m1!4b1!4m6!3m5!1s0x87c816e83d470af5:0x7142af38e00ac532!8m2!3d36.9200698!4d-94.8413449!16s%2Fg%2F1tk_pt3_?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 36.9200698,
+        "longitude": -94.8413449,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=8161278133560591666",
+      "decision": "New February 2026 facility. Operator contact page embeds entity 0x7142af38e00ac532; cid resolves to named current Quapaw Casino and operator website. Use destination !3d/!4d, not embed viewport 36.9209535,-94.841907. Legacy 58100 E 64th Rd is excluded.",
+      "id": "casino-catalog-ok-quapaw-miami",
+      "identitySource": "https://quapawcasino.com/",
+      "jurisdiction": "Oklahoma",
+      "lat": 36.9200698,
+      "lon": -94.8413449,
+      "name": "Quapaw Casino",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "69300 E Nee Rd, Quapaw, OK 74363",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Downstream+Casino+Resort/@36.997879,-94.6264801,17z/data=!3m1!4b1!4m9!3m8!1s0x87c86e5eb2b14cf3:0x447eb6fffa7062d9!5m2!4m1!1i2!8m2!3d36.997879!4d-94.6264801!16s%2Fg%2F1tk1zks9?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 36.997879,
+        "longitude": -94.6264801,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=4935583452179227353",
+      "decision": "Operator directions iframe names casino entity 0x447eb6fffa7062d9 and its embedded place record gives matching 69300 E Nee Rd and point. This destination is in Oklahoma; hotel-adjacent Kansas Mapcarta label and distant viewport 36.9878105,-94.6486646 are not selected.",
+      "id": "casino-catalog-ok-downstream",
+      "identitySource": "https://downstreamcasino.com/",
+      "jurisdiction": "Oklahoma",
+      "lat": 36.997879,
+      "lon": -94.6264801,
+      "name": "Downstream Casino Resort",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "402 SE Interstate Dr, Lawton, OK 73501",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Comanche+Nation+Casino/@34.6038636,-98.3776653,17z/data=!4m5!3m4!1s0x87ad18c3b3a23dbb:0x9428cbc18b1d4501!8m2!3d34.6044481!4d-98.3755725?shorturl=1",
+        "latitude": 34.6044481,
+        "longitude": -98.3755725,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://goo.gl/maps/qjNCbhPPswMG2RKG6",
+      "decision": "Operator-published named casino destination !3d/!4d, matching current property website. Administrative building at the complex is not separate.",
+      "id": "casino-catalog-ok-comanche-nation",
+      "identitySource": "https://comanchenationcasino.com/",
+      "jurisdiction": "Oklahoma",
+      "lat": 34.6044481,
+      "lon": -98.3755725,
+      "name": "Comanche Nation Casino",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "196747 Highway 36, Devol, OK 73531",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/196747+OK-36,+Devol,+OK+73531/@34.1633245,-98.5238935,18z/data=!3m1!4b1!4m6!3m5!1s0x86532a5412b94853:0x5fcbadb772b931cd!8m2!3d34.1633858!4d-98.5237001!16s%2Fg%2F11bw4b9nrx?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 34.1633858,
+        "longitude": -98.5237001,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://goo.gl/maps/mmEPEk8xFEPdviuS9",
+      "decision": "Operator-published address building explicitly lists Comanche Red River Hotel Casino on floor 1. Destination !3d/!4d; not viewport. Closed War Pony is separate and excluded.",
+      "id": "casino-catalog-ok-comanche-red-river",
+      "identitySource": "https://www.comancheredrivercasino.com/",
+      "jurisdiction": "Oklahoma",
+      "lat": 34.1633858,
+      "lon": -98.5237001,
+      "name": "Comanche Red River Hotel Casino",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "263171 Highway 53, Walters, OK 73572",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Comanche+Star+Casino/@34.3627298,-98.2939496,18z/data=!4m5!3m4!1s0x87ad2e2a837dbc45:0x5a107b90010b49b0!8m2!3d34.3627298!4d-98.2928553?shorturl=1",
+        "latitude": 34.3627298,
+        "longitude": -98.2928553,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://goo.gl/maps/cqvpRuhthjHoSh119",
+      "decision": "Operator-published named casino destination !3d/!4d.",
+      "id": "casino-catalog-ok-comanche-star",
+      "identitySource": "https://comanchestarcasino.com/",
+      "jurisdiction": "Oklahoma",
+      "lat": 34.3627298,
+      "lon": -98.2928553,
+      "name": "Comanche Star Casino",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "16193 OK-115, Cache, OK 73527",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/16193+OK-115,+Cache,+OK+73527/@34.642673,-98.635566,17z/data=!3m1!4b1!4m5!3m4!1s0x87ace675cff45a51:0x89963575bdd38620!8m2!3d34.642673!4d-98.6333773?shorturl=1",
+        "latitude": 34.642673,
+        "longitude": -98.6333773,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://goo.gl/maps/iew5FMG1s8Gq8ZuE7",
+      "decision": "Current destination casino with 330+ games. Operator map building explicitly lists casino on floor 1. Wahlburgers and adjacent travel store/gas station are not separate casinos.",
+      "id": "casino-catalog-ok-comanche-cache",
+      "identitySource": "https://comanchecachecasino.com/",
+      "jurisdiction": "Oklahoma",
+      "lat": 34.642673,
+      "lon": -98.6333773,
+      "name": "Comanche Cache Casino",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "9047 US Highway 62, Elgin, OK 73538",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Comanche+Spur+Casino/@34.7426092,-98.3964147,17z/data=!4m6!3m5!1s0x87ad1b5666facecd:0xeed17263d7e75c4a!8m2!3d34.7396313!4d-98.3946067!16s%2Fg%2F1tjfhbvp?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 34.7396313,
+        "longitude": -98.3946067,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://goo.gl/maps/S85vurENuWZxfo6o9",
+      "decision": "Operator-published named casino point. Viewport 34.7426092,-98.3964147 is different and rejected.",
+      "id": "casino-catalog-ok-comanche-spur",
+      "identitySource": "https://comanchespurcasino.com/",
+      "jurisdiction": "Oklahoma",
+      "lat": 34.7396313,
+      "lon": -98.3946067,
+      "name": "Comanche Spur Casino",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "7777 US-81, El Reno, OK 73036",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Lucky+Star+Casino+-+Concho/@35.6018285,-97.9634645,17z/data=!3m1!4b1!4m6!3m5!1s0x87974e0e2d8d3e37:0x6817e409a3d9df54!8m2!3d35.6018285!4d-97.9634645!16s%2Fg%2F1jmcr8m27?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.6018285,
+        "longitude": -97.9634645,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://g.page/luckystarcasinoconcho?share",
+      "decision": "Current operator casino page and locations roster; operator map resolves to named casino and matching address. Concho is the brand/locality label; operator postal city is El Reno. Concho Travel Center is separate and excluded.",
+      "id": "casino-catalog-ok-lucky-star-concho",
+      "identitySource": "https://www.luckystarcasino.org/concho/",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.6018285,
+      "lon": -97.9634645,
+      "name": "Lucky Star Casino Concho",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "10347 N 2274 Rd, Clinton, OK 73601",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Lucky+Star+Casino+-+Clinton/@35.5163656,-98.9345196,17z/data=!3m1!4b1!4m6!3m5!1s0x87ac1c3d48bbc84b:0x9510ef6c154ec0f7!8m2!3d35.5163656!4d-98.9345196!16s%2Fg%2F1yl45lt96?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.5163656,
+        "longitude": -98.9345196,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=10741348358771622135",
+      "decision": "Operator g.page/luckystarcasinoclinton?share identifies entity 0x9510ef6c154ec0f7; resolving cid exposes named casino destination !3d/!4d. Current address from operator roster.",
+      "id": "casino-catalog-ok-lucky-star-clinton",
+      "identitySource": "https://www.luckystarcasino.org/clinton/",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.5163656,
+      "lon": -98.9345196,
+      "name": "Lucky Star Casino Clinton",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "12875 N Highway 77, Newkirk, OK 74647",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/12875+US-77,+Newkirk,+OK+74647/@36.9831099,-97.0443445,17z/data=!3m1!4b1!4m6!3m5!1s0x87b086ddda24407b:0xa6bcbb27ba830c3!8m2!3d36.9831099!4d-97.0443445!16s%2Fg%2F11bw42vy0s?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 36.9831099,
+        "longitude": -97.0443445,
+        "method": "operator-published-map-destination"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=12875%20North%20Highway%2077%2074647%20Newkirk%20OK",
+      "decision": "Operator directions resolves to 12875 US-77 building explicitly listing current First Council and 7 Clans Casino on floor 1; one property, not two names. Native Lights and Chilocco Gasino are separate.",
+      "id": "casino-catalog-ok-seven-clans-first-council",
+      "identitySource": "https://sevenclans.com/first-council-casino-hotel/",
+      "jurisdiction": "Oklahoma",
+      "lat": 36.9831099,
+      "lon": -97.0443445,
+      "name": "7 Clans First Council Casino Hotel",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "345 N Arlington Ave, Reno, NV 89501",
+      "coordinateEvidence": {
+        "fields": {
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Reno",
+            "addressRegion": "NV",
+            "postalCode": "89501",
+            "streetAddress": "345 N Arlington Ave"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.52819,
+            "longitude": -119.818941
+          },
+          "name": "J Resort",
+          "telephone": "+17752099039",
+          "type": "Place"
+        },
+        "latitude": 39.52819,
+        "longitude": -119.818941,
+        "method": "named-mapquest-jsonld"
+      },
+      "coordinateSource": "https://www.mapquest.com/us/nevada/j-resort-10709147",
+      "decision": "Current operator casino and contact address match named MapQuest Place geo. Glow Plaza, fitness center and casino restaurants are components, not additional casino destinations.",
+      "id": "casino-catalog-nv-j-resort-reno",
+      "identitySource": "https://www.jresortreno.com/",
+      "jurisdiction": "Nevada",
+      "lat": 39.52819,
+      "lon": -119.818941,
+      "name": "J Resort",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "100 Legends Bay Dr, Sparks, NV 89434",
+      "coordinateEvidence": {
+        "fields": {
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Sparks",
+            "addressRegion": "NV",
+            "postalCode": "89434",
+            "streetAddress": "100 Legends Bay Dr"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.53344117,
+            "longitude": -119.72392026
+          },
+          "name": "Legends Bay Casino",
+          "telephone": "+17754738000",
+          "type": "LocalBusiness"
+        },
+        "latitude": 39.53344117,
+        "longitude": -119.72392026,
+        "method": "named-mapquest-jsonld"
+      },
+      "coordinateSource": "https://www.mapquest.com/us/nevada/legends-bay-casino-521700692",
+      "decision": "Current operator identity and address match named MapQuest LocalBusiness geo. Circa Sportsbook, Craft 55 and Food Truck Hall are components, not additional casino destinations. Do not infer hours/amenities from inconsistent generic site JSON-LD.",
+      "id": "casino-catalog-nv-legends-bay-sparks",
+      "identitySource": "https://legendsbaycasino.com/",
+      "jurisdiction": "Nevada",
+      "lat": 39.53344117,
+      "lon": -119.72392026,
+      "name": "Legends Bay Casino",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "1407 S Clarence Nash Blvd, Watonga, OK 73772",
+      "coordinateEvidence": {
+        "fields": {
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Watonga",
+            "addressRegion": "OK",
+            "postalCode": "73772",
+            "streetAddress": "1407 S Clarence Nash Blvd"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 35.828799,
+            "longitude": -98.41849
+          },
+          "name": "Lucky Star Casino",
+          "telephone": "+15806237333",
+          "type": "Place"
+        },
+        "latitude": 35.828799,
+        "longitude": -98.41849,
+        "method": "named-mapquest-jsonld"
+      },
+      "coordinateSource": "https://www.mapquest.com/us/oklahoma/lucky-star-casino-354756557",
+      "decision": "Operator confirms integrated casino/hotel/convention complex with 414 games. Named casino MapQuest geo matches operator roster street and phone. One destination; no separate hotel or deli record.",
+      "id": "casino-catalog-ok-lucky-star-watonga",
+      "identitySource": "https://www.luckystarcasino.org/watonga/",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.828799,
+      "lon": -98.41849,
+      "name": "Lucky Star Casino Hotel & Convention Center Watonga",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "301 Lake Rd, Canton, OK 73724",
+      "coordinateEvidence": {
+        "fields": {
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Canton",
+            "addressRegion": "OK",
+            "postalCode": "73724",
+            "streetAddress": "301 NW Lake Rd"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 36.06769495,
+            "longitude": -98.60185504
+          },
+          "name": "Lucky Star Casino",
+          "telephone": "+15808862490",
+          "type": "LocalBusiness"
+        },
+        "latitude": 36.06769495,
+        "longitude": -98.60185504,
+        "method": "named-mapquest-jsonld"
+      },
+      "coordinateSource": "https://www.mapquest.com/us/oklahoma/lucky-star-casino-346571047",
+      "decision": "Operator confirms 564 games and restaurant. Named casino MapQuest geo matches operator street/phone, using its NW Lake Rd street variant. A second generic Longdale/OK-58A listing is not another property and is not used.",
+      "id": "casino-catalog-ok-lucky-star-canton",
+      "identitySource": "https://www.luckystarcasino.org/canton/",
+      "jurisdiction": "Oklahoma",
+      "lat": 36.06769495,
+      "lon": -98.60185504,
+      "name": "Lucky Star Casino Canton",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "20413 OK-33, Hammon, OK 73650",
+      "coordinateEvidence": {
+        "fields": {
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Hammon",
+            "addressRegion": "OK",
+            "postalCode": "73650",
+            "streetAddress": "20413 Highway 33"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 35.63927167,
+            "longitude": -99.35816522
+          },
+          "name": "Lucky Star Casino Hammon",
+          "telephone": "+15804732010",
+          "type": "LocalBusiness"
+        },
+        "latitude": 35.63927167,
+        "longitude": -99.35816522,
+        "method": "named-mapquest-jsonld"
+      },
+      "coordinateSource": "https://www.mapquest.com/us/oklahoma/lucky-star-casino-hammon-421075191",
+      "decision": "Operator explicitly distinguishes a 364-game casino/restaurant from the unattached travel center in front. Named casino MapQuest geo matches address/phone. Do not add the travel plaza or duplicate TripAdvisor-derived MapQuest listing.",
+      "id": "casino-catalog-ok-lucky-star-hammon",
+      "identitySource": "https://www.luckystarcasino.org/hammon/",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.63927167,
+      "lon": -99.35816522,
+      "name": "Lucky Star Casino Hammon",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "7500 Highway 177, Red Rock, OK 74651",
+      "coordinateEvidence": {
+        "fields": {
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Red Rock",
+            "addressRegion": "OK",
+            "postalCode": "74651",
+            "streetAddress": "7500 Hwy 177"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 36.499194,
+            "longitude": -97.071325
+          },
+          "name": "7 Clans Paradise Casino",
+          "telephone": "+18667234005",
+          "type": "LocalBusiness"
+        },
+        "latitude": 36.499194,
+        "longitude": -97.071325,
+        "method": "named-mapquest-jsonld"
+      },
+      "coordinateSource": "https://www.mapquest.com/us/oklahoma/7-clans-paradise-casino-303096380",
+      "decision": "Operator confirms 450+ machines, full-service bar/dining and current hours. Named MapQuest casino point matches exact operator address/phone. Red Rock Gasino is a separate convenience gaming outlet and not added.",
+      "id": "casino-catalog-ok-seven-clans-paradise",
+      "identitySource": "https://sevenclans.com/paradise-casino/",
+      "jurisdiction": "Oklahoma",
+      "lat": 36.499194,
+      "lon": -97.071325,
+      "name": "7 Clans Paradise Casino",
+      "status": "verified-ready",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "2040 Airport Dr, Green Bay, WI 54313",
+      "coordinateEvidence": {
+        "fields": {
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Green Bay",
+            "addressRegion": "WI",
+            "postalCode": "54313",
+            "streetAddress": "2020 Airport Dr"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.497535,
+            "longitude": -88.122424
+          },
+          "name": "Oneida Casino",
+          "telephone": "+19204944500",
+          "type": "LocalBusiness"
+        },
+        "latitude": 44.497535,
+        "longitude": -88.122424,
+        "method": "named-mapquest-jsonld"
+      },
+      "coordinateSource": "https://www.mapquest.com/us/wisconsin/oneida-casino-6997161",
+      "decision": "Current operator publishes 2040 Airport Dr for the connected casino/hotel campus. Named casino MapQuest point uses the historical casino entrance address 2020 Airport Dr; retain that as an address alias, not a second destination.",
+      "id": "casino-catalog-wi-oneida-airport",
+      "identitySource": "https://oneidacasinohotel.com/locations/",
+      "jurisdiction": "Wisconsin",
+      "lat": 44.497535,
+      "lon": -88.122424,
+      "name": "Oneida Casino - Airport Drive",
+      "previous": {
+        "address": "2020 Airport Dr, Green Bay, WI 54313",
+        "file": "src/lib/nightlife/casino-catalog-pass-23.ts",
+        "lat": 44.4984,
+        "lon": -88.1212
+      },
+      "status": "correction",
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "2100 Airport Dr, Green Bay, WI 54313",
+      "coordinateEvidence": {
+        "fields": {
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Green Bay",
+            "addressRegion": "WI",
+            "postalCode": "54313",
+            "streetAddress": "2100 Airport Dr"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 44.497146,
+            "longitude": -88.126045
+          },
+          "name": "Irene Moore Activity Center",
+          "telephone": "+19204293173",
+          "type": "LocalBusiness"
+        },
+        "latitude": 44.497146,
+        "longitude": -88.126045,
+        "method": "named-mapquest-jsonld"
+      },
+      "coordinateSource": "https://www.mapquest.com/us/wisconsin/irene-moore-activity-center-352637958",
+      "decision": "Separate slot/bingo and dining venue at 2100 Airport Dr, explicitly retained by the operator. Old point incorrectly nearly duplicated Airport Drive; correction uses named activity-center geo. Do not merge the distinct venues.",
+      "id": "casino-catalog-wi-oneida-imac",
+      "identitySource": "https://oneidacasinohotel.com/locations/",
+      "jurisdiction": "Wisconsin",
+      "lat": 44.497146,
+      "lon": -88.126045,
+      "name": "Oneida Casino - Irene Moore Activity Center",
+      "previous": {
+        "address": "2100 Airport Dr, Green Bay, WI 54313",
+        "file": "src/lib/nightlife/casino-catalog-pass-23.ts",
+        "lat": 44.4983,
+        "lon": -88.1211
+      },
+      "status": "correction",
+      "verifiedOn": "2026-09-13"
+    }
+  ]
+}
