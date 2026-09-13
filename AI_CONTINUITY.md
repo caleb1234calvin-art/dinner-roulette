@@ -1,8 +1,8 @@
 # Dinner Roulette / Pick For Me — AI Continuity
 
-Updated September 13, 2026 at Caleb’s request **“Update the AI continuity that we have been using”**, after completion of the resumed casino continuation and successful validation of the previous continuity update. This refresh changes only `AI_CONTINUITY.md`; it records the final verified state without restarting research, changing application code/data, merging separate work or deploying. The earlier stop was lifted by “Let’s continue what we were doing now.” The exact paused 808-destination continuity is preserved in `audit/ai-continuity-before-casino-continuation-2026-09-13.md`; earlier history remains in the other continuity archives.
+Updated September 13, 2026 at Caleb’s request to add the completed location/international update to **the AI continuity we have been using**. This refresh changes only this shared `AI_CONTINUITY.md`. It preserves the newer casino continuation and records the separately validated location candidate, exact evidence and remaining integration/device work. The earlier casino stop was lifted by “Let’s continue what we were doing now.” The paused 808-destination continuity is preserved in `audit/ai-continuity-before-casino-continuation-2026-09-13.md`; earlier history remains in the other continuity archives.
 
-**Current status: 857 destinations, validated and promoted to non-production integration.** No main promotion, deployment, database migration or recurring monitoring has occurred in this continuation.
+**Current status: the 857-destination casino continuation is validated in non-production integration; the location/international update is validated separately in draft PR #39 and has not been merged.** This documentation sync does not combine their application code. No main promotion, deployment, database migration or recurring monitoring occurred.
 
 ## Shared handoff location
 
@@ -10,7 +10,7 @@ The active shared handoff is this existing root file: **`caleb1234calvin-art/din
 
 ## Latest verified checkpoint
 
-The latest completed checkpoint is **`c0847e265985565b88bae980f412385cd2c2502d`** on `integration/active-work-pass-1`. [CI Run 320](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34771586726) succeeded at that exact revision: **322 unique tests passed, zero failures, four understood documentation skips**, plus typecheck, catalog audits, both safe builds, all **16 browser check groups** and **30 Dinner icon assets**. Run 320 validates the preceding continuity-only update. The earlier seven-document release handoff at `c7cb8d08d785a689316ec39370b7212dd9071b9b` passed [Run 319](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34769203422).
+This sync starts from shared integration continuity revision **`8f6996322e25f51dabe2abd712ba6503fa899c58`**. The most recent casino checkpoint with a CI result recorded in this handoff is **`c0847e265985565b88bae980f412385cd2c2502d`** on `integration/active-work-pass-1`. [CI Run 320](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34771586726) succeeded at that exact revision: **322 unique tests passed, zero failures, four understood documentation skips**, plus typecheck, catalog audits, both safe builds, all **16 browser check groups** and **30 Dinner icon assets**. Run 320 validates the preceding continuity-only update. The earlier seven-document release handoff at `c7cb8d08d785a689316ec39370b7212dd9071b9b` passed [Run 319](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34769203422).
 
 The persisted continuation diff against `2fd976a4f34f8bbe28db1075a264693d691b8253` contains **27 expected paths, zero unexpected paths and zero deleted files**. The isolated checkout was clean and matched the published integration revision when this refresh began. Main and the separate location/international branch were re-read unchanged. No production/Vercel deployment, migration or recurring monitoring occurred.
 
@@ -19,13 +19,51 @@ This requested continuity refresh follows Run 320 and preserves all application/
 ## Working state and authority
 
 - Repository: `caleb1234calvin-art/dinner-roulette`.
-- Isolated checkout: `/workspace/scratch/60ab73826fd9/pick-for-me-casino`.
+- Casino implementation checkout: `/workspace/scratch/60ab73826fd9/pick-for-me-casino`. This shared-continuity-only sync uses `/workspace/scratch/4f145fb168ea/pick-for-me-continuity`; the separate location checkout remains `/workspace/scratch/4f145fb168ea/pick-for-me`. Check the current branch and dirty state before editing any checkout.
 - Current working branch: `integration/active-work-pass-1`. Preserved candidate branch: `integration/casino-continuation-2026-09-13` at `a3cffc654924596fe23a9d0050ac1a056b6751a5`, based on `2fd976a4f34f8bbe28db1075a264693d691b8253`.
 - Non-production merge completed as `264bb678362a5e281f16411ef9a7b98bce85a12e` using the expected candidate SHA. Its tree exactly matches the validated candidate. PR #40 is already merged; do not merge it again.
 - Main last read unchanged at `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
-- Preserve separate `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839` and its checkout. Its LocationControl work is not merged here. When integrating it later, preserve equivalent visible location-error/manual recovery.
+- Preserve separate `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839` and its checkout. [PR #39](https://github.com/caleb1234calvin-art/dinner-roulette/pull/39) is open, draft and unmerged; GitHub reported it non-mergeable at this sync. Its LocationControl work is not merged here. Future integration must reconcile the newer casino changes, preserve visible error/manual recovery and rerun the combined gates.
 - Earlier RC branch `integration/casino-release-candidate-2026-09-13` and PR #38 remain historical and already integrated. Do not merge them again.
+- Do not use Exa unless Caleb explicitly authorizes it in a later task. No Exa was used for the location work.
 - Broad reversible predeployment work and non-production integration are authorized. Main, production, Vercel/other hosted deployment, migrations, secrets and recurring automation require separate explicit authorization. `vercel.json` still disables Git deployments for `integration/**`.
+
+## Location and international discovery — validated separate candidate
+
+**COMPLETED on `integration/location-international-2026-09-13`:** the focused pre-deployment location work is saved in draft PR #39 at `4a93870c05ec53bd49fae5143df420c301696839`. Its original integration base was `a6d38616fe4490ff46b87232cbc7abb82f176926`, with 808 casinos through Pass 54. The later 857-destination/Pass 58 casino continuation is a different validated state. Do not replace the current casino data with that older base or add the two test counts together.
+
+The pre-change audit found that the location button did request coordinates, but discovery waited for reverse lookup and progress/errors were poorly exposed. Dinner also requested GPS automatically on default-location load. Manual Nominatim lookup imposed `countrycodes=us`; the business-provider queries already used worldwide coordinates/radius. There was no provider-level Canada-only blocker to work around.
+
+The candidate implements:
+
+- Shared `LocationControl` for Dinner, Nightlife/casino and Date Night. Geolocation is accessed only after **Use my location** is clicked; valid coordinates immediately become the active persisted origin without manual typing.
+- Reverse geocoding enriches the label/metadata while retaining the device point. Failed reverse lookup leaves usable coordinates. Visible progress/success and distinct denied/unavailable/timeout/unsupported errors accompany manual entry and Cancel.
+- Newer manual edits, requests, cancellation or unmount invalidate late callbacks. Manual choices and filters persist across reloads; no automatic GPS request is made on reload. Legacy saved U.S. locations remain compatible.
+- A general location model with latitude/longitude, label and optional country, ISO country code, region and locality. No required U.S. state/ZIP format or Canada-specific mode. Manual free text is resolved globally without the U.S. filter or an appended U.S. suffix; ambiguous cities/postal codes can include region and country.
+- International OSM address fields and coordinate Maps destinations. Existing coordinate/radius discovery and bounded U.S. fallbacks remain. Joplin-only retired-name exclusions are geographically bounded; malformed/provider-error responses are distinguished from legitimate empty results.
+
+**VALIDATED:** [Run 313](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34742834501) passed at runtime/test revision `3560e130a26d3d287aa07ee8b014e54d2448bae6`. The final candidate documentation checkpoint `4a93870c05ec53bd49fae5143df420c301696839` also passed every gate in [Run 314](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34742970533), rechecked during this shared-continuity sync.
+
+- **342 unique tests passed: 273 repository + 69 application; zero failures; four inherited external-documentation skips.** The location work added 28 meaningful tests. These results apply to the location candidate, while the 322-test results below apply to the newer casino integration; combined behavior remains to be validated.
+- Clean install, typecheck, casino/national audits, development build, production-mode build without migrations, the inherited casino Chromium suite, all 12 location Chromium checks and all 30 Dinner icons passed.
+- Nine actual live Nominatim cases resolved: Joplin/Missouri/USA, ZIP 64801, Portland/Oregon/USA, Toronto/Ontario with and without Canada, Vancouver/British Columbia with and without Canada, Montréal/Québec/Canada and London/United Kingdom.
+- The existing restaurant Overpass adapter returned live results in Toronto, Vancouver and Montréal. Provider observations at a one-mile radius were 1,671, 360 and 1,014 normalized rows respectively, each HTTP 200 from the first configured mirror. These are observed OSM rows, not complete inventories, filtered eligible counts or proof that every business is open.
+- Regression coverage includes U.S./Canadian/U.K. inputs, province/country handling, missing regions, invalid locations, international addresses, provider errors/empty results/fallbacks, maps, filters, persistence and all three discovery categories.
+- Actual local Chromium used the real app/RPC, simulated native coordinates and deterministic provider fixtures. The 12 checks covered explicit-action GPS, immediate origin use in discovery, manual override/races, persistence, all three modes, maps, error feedback and 390px layout with no uncaught page errors. Error callbacks were explicitly mocked. Both local development and built-preview modes passed; CI uses the built preview.
+
+**BLOCKED / REQUIRES BROWSER OR DEVICE VALIDATION:** physical-phone GPS, actual Android/iOS permission dialogs, installed PWA, hosted acceptance and external Maps-app navigation are unverified. Native Chromium geolocation with simulated coordinates is not physical-device proof. The exact ten-step device checklist is in the pinned location handoff below.
+
+**DEFERRED:** PR #39 needs reconciliation with the newer Pass 55–58 integration and its sign-in-enabled, owned-preview browser safeguards. The old candidate's green CI does not establish combined compatibility. Preserve both sets of tests and the newer casino data/closure rules; resolve overlaps in location controls, discovery, browser harnesses, workflow and continuity, then rerun relevant tests/builds/browser gates before any non-production promotion. This continuity request does not perform that integration. Main/hosted/production deployment remains separately unauthorized.
+
+**OPTIONAL / FUTURE:** destination-timezone-aware Open now, localized labels, metric/currency preferences, ambiguous-result selection and additional country coverage. The existing opening-hours evaluator uses the viewer's browser timezone, so remote searches do not guarantee destination-local Open now correctness. Public Nominatim/Overpass availability remains best effort; provider caching/request coordination can be considered later. No background polling or recurring automation was added.
+
+Pinned records from the validated location candidate (these files are not yet present on integration):
+
+- [LOCATION_HANDOFF.md](https://github.com/caleb1234calvin-art/dinner-roulette/blob/4a93870c05ec53bd49fae5143df420c301696839/LOCATION_HANDOFF.md): complete architecture changes, limits, validation commands, all 30 changed paths and the device checklist.
+- [Original location architecture audit](https://github.com/caleb1234calvin-art/dinner-roulette/blob/4a93870c05ec53bd49fae5143df420c301696839/audit/location-architecture-2026-09-13.md): actual pre-edit flow and geographic assumptions.
+- [Location validation evidence](https://github.com/caleb1234calvin-art/dinner-roulette/blob/4a93870c05ec53bd49fae5143df420c301696839/audit/location-validation-2026-09-13.json): live-provider samples, exact tests, browser limits and CI history. Runs 311/312 exposed harness-readiness issues; they are not counted as passes. The built-preview correction retained all assertions, and Runs 313/314 passed.
+
+This shared root file remains the first read for future sessions. The location branch's older AI continuity is historical context for that candidate and must not supersede this newer combined handoff.
 
 ## COMPLETED
 
@@ -134,7 +172,7 @@ Those supporting records retain the validated casino implementation and merge ev
 
 ## Exact next action and recovery
 
-The casino continuation is complete in non-production integration. Read the current integration ref and its latest CI result before any further action; this continuity-only refresh follows successful Run 320 at `c0847e265985565b88bae980f412385cd2c2502d`. Preserve the separate location/international work. The exact remaining work is a separately authorized controlled main/hosted release and the served-revision, physical-device, authenticated-account and external Maps acceptance checklist. Further statewide coverage is optional expansion of the explicitly partial scope, not a claim already completed.
+The casino continuation is complete in non-production integration. Read the current integration ref and its latest CI result before any further action; this continuity-only refresh follows successful Run 320 at `c0847e265985565b88bae980f412385cd2c2502d`. Preserve the separate location/international work. If the next release includes the location update, first reconcile draft PR #39 with the newer casino integration and validate the combined result. A separately authorized controlled main/hosted release and the served-revision, physical-device, authenticated-account and external Maps acceptance checklist follow that preparation. Further statewide coverage is optional expansion of the explicitly partial scope, not a claim already completed.
 
 ## REQUIRES USER AUTHORIZATION
 
