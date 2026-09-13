@@ -44,7 +44,9 @@ jobs:
         run: node --test scripts/casino-*.test.mjs
 
       - name: Audit curated casino catalog
-        run: npm run audit:casinos
+        run: |
+          node scripts/audit-casino-catalog.mjs --inventory
+          node scripts/audit-national-coverage.mjs
 
       - name: Repository and application tests
         run: npm test
