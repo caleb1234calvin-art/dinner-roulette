@@ -46,8 +46,7 @@ jobs:
       - name: Audit curated casino catalog
         run: npm run audit:casinos
 
-      - name: Existing test suite (report remaining inherited issues)
-        continue-on-error: true
+      - name: Repository and application tests
         run: npm test
 
       - name: Build development bundle

@@ -1,5 +1,16 @@
 # Dinner Roulette / Pick For Me — AI Continuity
 
+## Latest status — Pass 50 promoted; test-gate hardening candidate
+
+- Pass 50 was promoted in PR #34 at integration merge `a7d894c9fde4391216378c49d6832097fc47fff8`.
+- Run 288 (34732655250) validated exact head `b8d4295c8b863a8193f63e51dea77d77e63000da`: all 17 casino regressions, typecheck, both audits, development build and 30 icons passed.
+- Confirmed runtime: 744 serialized records, 731 canonical national destinations; NV 109 / OK 56 / CO 31 / TX 4 = 200. Red Dragon, Lakecrest, Lake Eufaula and Holdenville are active on integration, not deployed.
+- The inherited documentation failures were caused by `.grok/skills/og` and AGENTS.md being deliberately excluded by .gitignore. No missing assistant instructions have been fabricated or added to the repository.
+- The test-gate candidate explicitly skips only four external documentation integration checks when the external OG package is absent. If the package is installed, all existing assertions still run; REQUIRE_WORKSPACE_DOCS=1 also makes absence fail closed.
+- A new runner executes repository and application suites even if the first fails, preserving a nonzero combined result. Seven new helper/runner regressions guard skip boundaries and failure propagation.
+- The workflow changes the former report-only suite into required "Repository and application tests". This strengthening is pending full exact-head validation; do not claim application tests pass until logs confirm them.
+- Main and deployment constraints remain unchanged. After green validation, promote this harness fix into integration and record the final run/merge evidence.
+
 ## Latest status — Pass 49 promoted; Pass 50 candidate
 
 - PR #33 was promoted to integration only at merge `6563c1eec00cc44a004f4a7cbbfbd18739b952fc`.
