@@ -66,10 +66,10 @@ try {
       localStorage.setItem("pick-for-us-v1", JSON.stringify({
         state: { location: { lat, lon, label, source: "manual" } }, version: 0,
       }));
-    }, label === "mobile" ? { lat: 34.1743, lon: -97.1436, label: "Ardmore, Oklahoma" }
-      : { lat: 36.1164, lon: -115.174, label: "Las Vegas, Nevada" });
+    }, label === "mobile" ? { lat: 36.977, lon: -97.045, label: "Newkirk, Oklahoma" }
+      : { lat: 39.529, lon: -119.816, label: "Reno, Nevada" });
     await page.goto(origin, { waitUntil: "domcontentloaded" });
-    // Visible SSR buttons can precede React event attachment on a cold dev server.
+    // Visible SSR buttons can precede React event attachment on a cold preview server.
     await page.waitForFunction(() => [...document.querySelectorAll("button")].some((button) =>
       button.textContent?.trim() === "Nightlife" && Object.keys(button).some((key) =>
         key.startsWith("__reactProps$") && typeof button[key]?.onClick === "function")));

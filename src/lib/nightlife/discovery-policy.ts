@@ -38,6 +38,7 @@ export const CASINO_STATUS_HOLDS = [
   {"names":["Ioway Casino"],"bounds":[35.65,35.75,-97.04,-96.93],"reason":"Permanently closed predecessor of Harrah's Oklahoma; new Chandler site is distinct"},
   {"names":["Kiowa Casino Verden","Kiowa Casino - Verden"],"bounds":[35.04,35.14,-98.16,-98.04],"reason":"Closed October 31, 2023; current Kiowa portfolio is Devol, Carnegie and Elk Creek"},
   {"names":["Creek Nation Casino Eufaula","Creek Nation Casino - Eufaula"],"bounds":[35.25,35.35,-95.64,-95.54],"reason":"Retired 806 W Forrest Ave predecessor; current Lake Eufaula Casino Hotel is at 1045 Birkes Rd"},
+  { names: ["Golden Pony Casino"], bounds: [35.2, 35.65, -96.7, -95.8], reason: "Closure reported in late 2025; a 2020 reopening result and generic hours do not establish subsequent reopening" },
 ] as const;
 
 export function heldCasino(name: string, lat: number, lon: number) {

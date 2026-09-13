@@ -13,6 +13,8 @@ globalThis.fetch = async (input, init) => {
     const q = (url.searchParams.get("q") ?? "").toLowerCase();
     const point = q.includes("empty") ? [0, 0, "Empty Test"]
       : q.includes("ardmore") ? [34.1743, -97.1436, "Ardmore, Oklahoma"]
+      : q.includes("reno") ? [39.529, -119.816, "Reno, Nevada"]
+      : q.includes("newkirk") ? [36.977, -97.045, "Newkirk, Oklahoma"]
       : [36.1164, -115.174, "Las Vegas, Nevada"];
     return Response.json([{ lat: String(point[0]), lon: String(point[1]), display_name: point[2], type: "city", class: "place", importance: 1 }]);
   }

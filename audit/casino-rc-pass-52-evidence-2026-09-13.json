@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "capturedOn": "2026-09-13",
   "pass": 52,
-  "status": "implemented-pending-exact-head-CI",
+  "status": "implemented-and-CI-validated",
   "result": {
     "newDestinations": 31,
     "NevadaAdded": 19,
@@ -811,5 +811,16 @@
         "audit/nevada-rural-recovery-pass-5-2026-09-11.json"
       ]
     }
-  ]
+  ],
+  "validation": {
+    "head": "02057073c38fc4533ee9d0b6fdd6e6b91d51652d",
+    "run": 34738515765,
+    "result": "Full required gates passed; historical batch counts remain the snapshot after this pass."
+  },
+  "laterResolution": {
+    "pass": 53,
+    "property": "Montego Bay",
+    "evidence": "audit/casino-rc-pass-53-evidence-2026-09-13.json",
+    "decision": "Address hold resolved after this historical snapshot."
+  }
 }

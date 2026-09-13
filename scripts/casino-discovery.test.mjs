@@ -138,3 +138,10 @@ test("closed Oklahoma predecessors stay excluded without suppressing operating s
     ["Elk Creek Kiowa Casino", 35.0199635, -99.0613392],
   ]) assert.equal(heldCasino(name, lat, lon), undefined);
 });
+
+test("Golden Pony closure cannot be revived by stale live tags or suppress unrelated places", () => {
+  const tags = { name: "Golden Pony Casino", amenity: "casino", opening_hours: "24/7" };
+  assert.equal(elementToPlace(element({ lat: 35.4, lon: -96.3, tags })), null);
+  assert.equal(heldCasino(tags.name, 36.2, -115.1), undefined);
+  assert.ok(elementToPlace(element({ lat: 35.4, lon: -96.3, tags: { ...tags, name: "Golden Pony Bar", amenity: "bar" } })));
+});

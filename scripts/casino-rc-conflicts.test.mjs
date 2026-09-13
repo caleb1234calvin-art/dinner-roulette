@@ -38,7 +38,7 @@ test("rejected map centres cannot silently replace verified casino points", () =
   }
   const i40 = active.find(r => r.id === "casino-catalog-ok-seminole-i40");
   assert.ok(i40.lat > 35.35, "city-centre listings about ten miles south are not the casino");
-  assert.equal(active.some(r => /rivermist|river mist|montego bay|horseshu/i.test(r.name)), false, "documented coordinate/address/scope holds stay out");
+  assert.equal(active.some(r => /rivermist|river mist|horseshu/i.test(r.name)), false, "unresolved coordinate/scope holds stay out; Montego Bay was cleared in Pass 53");
 });
 
 test("current casinos survive while all reviewed closure aliases remain out of the curated catalog", () => {

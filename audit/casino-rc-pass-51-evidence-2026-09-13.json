@@ -709,5 +709,11 @@
       "status": "correction",
       "verifiedOn": "2026-09-13"
     }
-  ]
+  ],
+  "status": "implemented-and-CI-validated",
+  "validation": {
+    "head": "02057073c38fc4533ee9d0b6fdd6e6b91d51652d",
+    "run": 34738515765,
+    "result": "Full required gates passed; historical batch counts remain the snapshot after this pass."
+  }
 }
