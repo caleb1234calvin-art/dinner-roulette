@@ -198,7 +198,7 @@
   },
   "remainingBeforeIntegration": [],
   "remainingReleaseOnly": [
-    "Verify the actual hosted project repository/branch/effective build command and confirm a migration-free release path before any main promotion or deployment. Connected Vercel list_teams returned [] and no local project-link metadata exists; no hosted setting was changed.",
+    "Restore read-only access to Vercel team minions-9e2c / project dinner-roulette, then verify its effective build/Git settings and a migration-free release path before any main promotion or deployment. Existing GitHub deployment status identified the project; get_project returned 403 Forbidden. No hosted setting changed.",
     "Obtain separate authorization for main promotion, deployment and any required project configuration change. The integration/** exclusion does not establish that a main merge is non-deploying.",
     "Physical-phone GPS and OS permission dialogs, including permission revocation and approximate location.",
     "Installed PWA, authorized hosted/account sessions, served-cache acceptance and external Maps app navigation."
@@ -386,7 +386,7 @@
     "CI adds combined location browser acceptance, build/source/output guards and evidence retention. No dependency, package, lockfile, Vite or deployment exclusion changes."
   ],
   "recovery": "Preserve the validated candidate and frozen casino baseline. Any rollback should be a reviewed revert on non-production integration; do not reset main or discard casino history. No database changes require rollback.",
-  "exactNextAction": "Keep the combined candidate frozen. Restore read-only access to the correct Vercel project or provide its effective build/Git settings, then verify that the release path cannot implicitly migrate. Obtain separate release authorization before main promotion or deployment; use the updated existing release checklist for device/hosted acceptance.",
+  "exactNextAction": "Keep the combined candidate frozen. Restore read-only access to Vercel team minions-9e2c / project dinner-roulette (get_project returned 403), or provide its effective build/Git settings, then verify that release cannot implicitly migrate. Obtain separate release authorization before main promotion/deployment; use the updated checklist for device/hosted acceptance.",
   "releaseHandoffFollowup": {
     "validatedRuntimeAndPriorHandoff": "40f9fb8d162caac061fcf7927894bd2107b434ad",
     "validatedRuntimeCI": {
@@ -406,7 +406,7 @@
       "configClaims": "PASS",
       "diffCheck": "PASS",
       "protectedFilesUnchanged": 78,
-      "providerSettingsCheck": "UNAVAILABLE: Vercel list_teams returned [] and no local project metadata",
+      "providerSettingsCheck": "UNAVAILABLE: Vercel list_teams returned []; linked team/project discovered from existing GitHub status; observed-slug get_project returned 403 Forbidden.",
       "runtimeChanged": false,
       "scriptPaths": "PASS",
       "shellBlocks": 3,
@@ -421,6 +421,16 @@
     "additionalScopePath": "audit/casino-browser-release-checklist-2026-09-13.md",
     "newLocalFullSuiteRun": false,
     "newLocalBuildRun": false,
-    "reasonFullLocalGatesNotRepeated": "Only documentation changed; existing source/output proof matches the green runtime. Automatic CI results for new commits must be checked separately."
+    "reasonFullLocalGatesNotRepeated": "Only documentation changed; existing source/output proof matches the green runtime. Automatic CI results for new commits must be checked separately.",
+    "projectAccessFollowup": {
+      "discoverySource": "Existing successful Vercel GitHub status on main c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5",
+      "teamSlug": "minions-9e2c",
+      "projectSlug": "dinner-roulette",
+      "readOnlyLookup": "get_project",
+      "result": "403 Forbidden",
+      "settingsRead": false,
+      "settingsChanged": false,
+      "credentialsRequested": false
+    }
   }
 }

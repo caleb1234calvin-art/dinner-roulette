@@ -51,6 +51,8 @@ Validation performed for this documentation-only change: all three shell blocks 
 
 Read-only Vercel project inspection could not proceed: the connected `list_teams` returned an empty list, and this checkout has no project-link metadata. No team/project was guessed, no credentials were requested and no setting was changed. The repository's `build` script chains `db:migrate`; `vercel.json` has no build-command override. Whether a hosted project-level override exists remains **unverified**. This is a release-execution gate, not a failure of the successful direct-Vite local/CI builds.
 
+A second read-only route identified the linked project from GitHub's successful Vercel status on unchanged main c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5: team **minions-9e2c**, project **dinner-roulette**. The connected Vercel get_project call using those observed slugs returned **403 Forbidden**. This confirms an access boundary; it was not a failed deployment, an automatic approval-review rejection or evidence that the project is missing. No settings or secrets were read or changed. Restore read access to this project, or provide its effective build/Git settings, before release.
+
 Work commit: `222b37bbabad06d4782d0eab3cd022ae7cd3be59` — **Refresh combined release checklist and document migration gate**, branch `integration/active-work-pass-1`. It changes only the existing browser release checklist and the reconciliation validation record. The current total scope is 44 paths versus the frozen casino base (43 at the original combined validation plus the updated checklist). The application, tests, dependencies, configuration, casino data and historical freeze evidence remain unchanged.
 
 ## Frozen casino invariant
@@ -81,13 +83,13 @@ All four are **B: intentionally external by design / A: unavailable in a clean r
 
 ## BLOCKED / remaining release-execution gates
 
-No known implementation blocker remains for the combined non-production candidate. The effective hosted build/Git configuration is unverified because the current Vercel connection lists no accessible teams. Resolve that read-only access/configuration check before any main merge or deployment: the repository's ordinary build chains migrations, and main promotion may start a hosted build.
+No known implementation blocker remains for the combined non-production candidate. The effective hosted build/Git configuration is unverified because the current Vercel connection lists no teams and the observed linked project lookup returned 403 Forbidden. Resolve that read-only access/configuration check before any main merge or deployment: the repository's ordinary build chains migrations, and main promotion may start a hosted build.
 
 Physical-device GPS/OS permission behavior, installed PWA, authenticated hosted sessions and external Maps navigation remain unverified. Public-provider availability is best effort. Existing opening-hours evaluation uses the viewer timezone rather than destination timezone; the international live acceptance used open-now off.
 
 ## Exact next action
 
-Keep the combined candidate frozen. Restore read-only access to the correct Vercel project, or provide the effective hosted build command and Git/production-branch settings, so the migration-free release path can be verified. Main promotion may trigger deployment; do not assume the integration/** exclusion applies to main. Then obtain separate explicit authorization for the concrete main/hosted release and any required configuration change. Migrations, secrets and recurring monitoring remain excluded. Use the updated existing browser checklist for later device/hosted acceptance. No further casino research or location integration is needed.
+Keep the combined candidate frozen. Restore read-only access to Vercel team minions-9e2c / project dinner-roulette (get_project returned 403 Forbidden), or provide the effective hosted build command and Git/production-branch settings, so the migration-free release path can be verified. Main promotion may trigger deployment; do not assume the integration/** exclusion applies to main. Then obtain separate explicit authorization for the concrete main/hosted release and any required configuration change. Migrations, secrets and recurring monitoring remain excluded. Use the updated existing browser checklist for later device/hosted acceptance. No further casino research or location integration is needed.
 
 ## DEFERRED
 
@@ -135,5 +137,7 @@ Local checkout: /workspace/scratch/60ab73826fd9/pick-for-me-casino. Inspect bran
 
 - `40f9fb8d162caac061fcf7927894bd2107b434ad` | `integration/active-work-pass-1` | Update shared continuity: combined integration complete and release candidate ready — Saved the final combined handoff; exact-head CI Run 346 passed.
 - `222b37bbabad06d4782d0eab3cd022ae7cd3be59` | `integration/active-work-pass-1` | Refresh combined release checklist and document migration gate — Updated the existing combined browser/release checklist and recorded the unresolved hosted build configuration gate.
+
+- `3920620eb2cc79b4eae798b76c981b3a75f2a9b2` | `integration/active-work-pass-1` | Update shared continuity: release checklist corrected and hosted build gate recorded — Saved and verified the documentation follow-up before the final read-only project lookup.
 
 This update records already-known work commits. Its own immutable documentation commit SHA is subsequent; inspect the current shared GitHub ref and Actions status. Every major checkpoint is saved and read back from GitHub before the next phase.
