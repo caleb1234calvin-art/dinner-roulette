@@ -1,14 +1,24 @@
 # Dinner Roulette / Pick For Me — AI Continuity
 
-Updated September 13, 2026 after non-production integration of the validated casino RC through Pass 54. This file supersedes earlier current-count/browser claims. Prior continuity is preserved verbatim in `audit/ai-continuity-before-casino-rc-2026-09-13.md`; older pre-Astra history remains in `audit/ai-continuity-handoff-2026-09-12.md`.
+Updated September 13, 2026 at Caleb's explicit stop request, after non-production integration and final validation of the casino RC through Pass 54. This file supersedes earlier current-count/browser claims. Prior continuity is preserved verbatim in `audit/ai-continuity-before-casino-rc-2026-09-13.md`; older pre-Astra history remains in `audit/ai-continuity-handoff-2026-09-12.md`.
+
+## STOPPED — user-requested handoff
+
+Caleb's latest instruction is **“Stop and update the ai continuity.”** Casino research, code/data changes, additional validation and release activity are paused. This instruction supersedes the earlier autonomous-continuation brief. This update changes only this continuity document; it does not resume implementation or initiate deployment. Wait for Caleb to request further project work.
+
+The final validated integration checkpoint before this stop update is `a6d38616fe4490ff46b87232cbc7abb82f176926`. [Run 310](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34741156629) completed successfully at that exact head: **314 unique tests passed, 0 failed, 4 understood documentation skips**; typecheck, catalog audits, both safe builds, desktop/mobile-viewport Chromium checks and 30 icon assets passed. This stop-note commit follows that validated checkpoint and makes no runtime changes; no fresh test run is claimed for the stop note.
+
+PR #38 is already merged into non-production integration. The full release diff before this note was checked against the pre-RC integration baseline: **43 expected files, no unexpected or deleted files**. The candidate branch/history remains preserved. Main was re-read at `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`; production remains untouched and no Vercel deployment or recurring monitoring was performed.
+
+The implemented 808-destination catalog is validated within the recorded scope. Remaining live-service, physical-device and hosted acceptance checks are not completed; Nevada/Oklahoma coverage remains partial, and coordinate/scope holds remain explicit. The sections below retain the full completed/blocked/deferred/optional/authorization handoff.
 
 ## Working state and authority
 
 - Repository: `caleb1234calvin-art/dinner-roulette`.
 - Current working branch: `integration/active-work-pass-1`. [PR #38](https://github.com/caleb1234calvin-art/dinner-roulette/pull/38) was merged there as `6c1d5829f7f3e76946e20211b60525f9836b1227`; the RC branch `integration/casino-release-candidate-2026-09-13` remains preserved at `61cb2fe047a80fc4a67931ea3b24040e75dcd367`.
-- Validated integration merge: `6c1d5829f7f3e76946e20211b60525f9836b1227`, [Run 309](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34741023078). Its tree exactly equals RC head `61cb2fe047a80fc4a67931ea3b24040e75dcd367`, validated by [Run 308](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34740777237). The runtime/data revision is `243082896d6b774dde9bbb44c44f71e02824aaa3`. This following checkpoint changes documentation only; inspect the latest branch Actions run before any later release.
+- Validated integration merge: `6c1d5829f7f3e76946e20211b60525f9836b1227`, [Run 309](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34741023078). Its tree exactly equals RC head `61cb2fe047a80fc4a67931ea3b24040e75dcd367`, validated by [Run 308](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34740777237). The runtime/data revision is `243082896d6b774dde9bbb44c44f71e02824aaa3`. The subsequent documentation checkpoint `a6d38616fe4490ff46b87232cbc7abb82f176926` passed Run 310. The present stop update changes only AI_CONTINUITY.md; verify the latest remote ref before any future work.
 - Pre-RC integration head: `877ff08c300a9d149aa174e9c47471d57bc98ccd`. Main remains `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
-- Broad reversible non-production research, code, tests, audits, documentation and integration preparation/promotion are authorized. **Main, production, Vercel/hosted deployment, irreversible external changes, secrets and recurring monitoring are not authorized.**
+- The earlier brief authorized broad reversible non-production work. **The current stop instruction pauses further casino execution; resume only when Caleb requests it.** **Main, production, Vercel/hosted deployment, irreversible external changes, secrets and recurring monitoring are not authorized.**
 - No Vercel deployment, production write or database migration occurred. `vercel.json` disables Git deployments for `integration/**`.
 - Do not delegate to another agent unless Caleb explicitly requests it. Preserve user edits and historical evidence.
 - Before non-production promotion, re-read PR/base refs and exact-head CI. Use expected head SHA. Do not merge to main.
@@ -26,7 +36,7 @@ Updated September 13, 2026 after non-production integration of the validated cas
 
 824 serialized rows across 54 passes become 808 active destinations. 41 manifest jurisdictions: 39 retain their prior complete status and two remain pending. **77 additions** relative to the 731 baseline; no existing destination removal, merge or rename in this RC. Three pins and two addresses corrected with stable IDs/history retained.
 
-Runs 307, 308 and integration Run 309 passed **263 repository + 51 application = 314 unique tests**, zero failures and four explicit external-documentation skips. The **65 casino tests are included** in the repository total. Clean install, typecheck, export/schema and national audits, development build, production-mode build without migrations, Chromium smoke and all 30 Dinner icons passed.
+Runs 307, 308, integration Run 309 and final checkpoint Run 310 passed **263 repository + 51 application = 314 unique tests**, zero failures and four explicit external-documentation skips. The **65 casino tests are included** in the repository total. Clean install, typecheck, export/schema and national audits, development build, production-mode build without migrations, Chromium smoke and all 30 Dinner icons passed.
 
 ## COMPLETED
 
@@ -69,7 +79,7 @@ Do not fake these files, remove the skips cosmetically or count them as casino/a
 
 ## BLOCKED
 
-- Local exec-server handshake failed; no local shell or reachable authorized interactive preview was available. CI execution succeeded. Live-provider success, physical-device geolocation/Maps and hosted acceptance are **NOT RUN**.
+- During RC execution, the local exec-server handshake failed; no local shell or reachable authorized interactive preview was available. CI execution succeeded. Local availability was not re-tested during this stop-only update. Live-provider success, physical-device geolocation/Maps and hosted acceptance are **NOT RUN**.
 - Konawa/Rivermist is operating by current operator evidence, but property numerical coordinates remain conflicting/unextracted. Keep the curated coordinate hold.
 - Horseshu requires current separate casino-floor confirmation; Moapa's current tribal page confirms a travel plaza but not gaming. The old moapapaiutes.com redirects to an unrelated forms site.
 - NIGC marker endpoint returned 401. Other sources sometimes required login, rate-limited or omitted numerical points. No authentication/provider boundary was bypassed; alternate sources were used when sufficient.
@@ -86,7 +96,7 @@ NV/OK are not statewide-complete. The exhaustive named remaining queue and scope
 
 Earlier browser attempts failed on an incorrect Maps expectation, ambiguous locator and development Vite reload. They were fixed; Runs 303, 305, 306 and 307 passed at their respective revisions. Run 304 was observed queued without steps and is not counted as success/failure. An isolated V8 schema attempt lacked WHATWG URL; actual unmodified Node schema later passed. Exact history is in `audit/casino-rc-progress-2026-09-13.json`.
 
-Next: use the current non-production integration branch, verify its latest documentation-only checkpoint workflow, and perform the prepared live acceptance checklist when a permitted target is available. Review the documented partial Nevada/Oklahoma coverage before release; complete the named frontier if exhaustive scope is required. PR #38 is already merged into integration and must not be promoted again. **Any main promotion or hosted deployment requires Caleb's separate explicit authorization.**
+Next: **wait for Caleb's next work instruction.** When he asks to resume, read the current integration refs and this continuity before changing anything; preserve any work from other sessions. Run 310 already validated the final pre-stop checkpoint. Perform the prepared live acceptance checklist when resumed and a permitted target is available. Review the documented partial Nevada/Oklahoma coverage before release; complete the named frontier if exhaustive scope is required. PR #38 is already merged into integration and must not be promoted again. **Any main promotion or hosted deployment requires Caleb's separate explicit authorization.**
 
 Safe commands: `npm ci --no-audit --no-fund`, `npm run typecheck`, `npm test`, `node --test scripts/casino-*.test.mjs`, `npm run audit:casinos`, `npm run build:dev`, and `node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`. **Do not use `npm run build`: it chains database migrations.**
 
