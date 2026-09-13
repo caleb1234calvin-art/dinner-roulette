@@ -1,0 +1,399 @@
+{
+  "schemaVersion": 1,
+  "casinoBase": "183d3e1d71355a27e4bc35a2969d73037c9e6e33",
+  "branch": "integration/casino-location-reconciliation-2026-09-13",
+  "createdFrom": "0874f0ba42490370ba1704d96b3252adabf92f49",
+  "locationSource": "4a93870c05ec53bd49fae5143df420c301696839",
+  "commonAncestor": "a6d38616fe4490ff46b87232cbc7abb82f176926",
+  "counts": {
+    "canonical": 883,
+    "serialized": 899,
+    "passes": 60,
+    "Nevada": 204,
+    "Oklahoma": 113,
+    "Colorado": 31,
+    "Texas": 4
+  },
+  "audits": "PASS: catalog/schema/IDs/chronology and national manifest; no changes to frozen files",
+  "protectedFiles": [
+    {
+      "path": "audit/casino-final-freeze-2026-09-13.json",
+      "blob": "968660b84ccf6ad3c828cb2e972ed9e8e75e773e"
+    },
+    {
+      "path": "audit/casino-final-freeze-baseline-2026-09-13.json",
+      "blob": "b027340d86020c0eeb7d522471e55f81ac7c788e"
+    },
+    {
+      "path": "audit/casino-final-freeze-research-2026-09-13.json",
+      "blob": "1600d9382f1e1f8b3f0777875eeae1d52bb1d4ae"
+    },
+    {
+      "path": "audit/casino-freeze-adversarial-2026-09-13.json",
+      "blob": "15c284a48acde6686ad3837d98ad245de81b0156"
+    },
+    {
+      "path": "audit/casino-freeze-browser-evidence-2026-09-13.json",
+      "blob": "6e797e0799d26eb158ed4d79ece6ac2b4a05e8e7"
+    },
+    {
+      "path": "audit/casino-freeze-live-provider-findings-2026-09-13.json",
+      "blob": "8f6a0f26104977a6b72acfcb0bb8b788523d2082"
+    },
+    {
+      "path": "audit/casino-rc-pass-51-evidence-2026-09-13.json",
+      "blob": "49f5d8bf951c758c3f5e575bbd0093480b000524"
+    },
+    {
+      "path": "audit/casino-rc-pass-52-evidence-2026-09-13.json",
+      "blob": "da37dbf4402d9f2a9989040ff11cc0af6efba079"
+    },
+    {
+      "path": "audit/casino-rc-pass-53-evidence-2026-09-13.json",
+      "blob": "7003bc3782209a5eba1851fcca888f218d5ae139"
+    },
+    {
+      "path": "audit/casino-rc-pass-54-evidence-2026-09-13.json",
+      "blob": "3b1fe03c652b5ab83ebf1c11457ba80d3ea68783"
+    },
+    {
+      "path": "audit/casino-rc-pass-55-evidence-2026-09-13.json",
+      "blob": "30b0435f86fb537fa1e6b206ef22e864b72aae77"
+    },
+    {
+      "path": "audit/casino-rc-pass-56-evidence-2026-09-13.json",
+      "blob": "9a528c97182c3a860ecf36891e2738ea71d5a251"
+    },
+    {
+      "path": "audit/casino-rc-pass-57-evidence-2026-09-13.json",
+      "blob": "d9ab86ffc3f92444c05a27169123944e42aa0668"
+    },
+    {
+      "path": "audit/casino-rc-pass-58-evidence-2026-09-13.json",
+      "blob": "a396adf08c2b207f3da8c8479efe513421ccba25"
+    },
+    {
+      "path": "audit/casino-rc-pass-59-evidence-2026-09-13.json",
+      "blob": "82c1948ea52f52d3e9e69174ba9688b2b1f8d09b"
+    },
+    {
+      "path": "audit/casino-rc-pass-60-evidence-2026-09-13.json",
+      "blob": "b4b34bf1726272081a51edaf270c5ca4863ea378"
+    },
+    {
+      "path": "audit/casino-status-watchlist-2026-09-13.json",
+      "blob": "06bac10ef8bfcd54aae080131c92dd7eb2340f37"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-10.ts",
+      "blob": "3531813a8fd9685fe70f657437156aa5c828b4e9"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-11.ts",
+      "blob": "fd3395859a4db55c4e671a3959db2db5a0adfcb2"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-12.ts",
+      "blob": "b3c46ae371ba6733d02427b35576cf35706ab830"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-13.ts",
+      "blob": "b72f51c29f0bbeeb9cc673aa74d962f3f8a309c6"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-14.ts",
+      "blob": "d41c3e5a489b59327ca683cb9417039e1a08a891"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-15.ts",
+      "blob": "80f25d9e42ee4515b7d19432d69ccaec6071c0a0"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-16.ts",
+      "blob": "542fd95a15bac3a00094c41d13e60c2d23456c5f"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-17.ts",
+      "blob": "f02b2d13e573bb1e395146682342446e1c7401af"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-18.ts",
+      "blob": "56aadd0b2b9c936dea7881fffd475a65df55efad"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-19.ts",
+      "blob": "c377a1719cf7077f214ad1cd25ff1058052c234c"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-2.ts",
+      "blob": "0ee9cf6c640c3719b308d6424f05b92eb7b608dd"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-20.ts",
+      "blob": "953a38a8bad4222a95120f92880bd6bf7462c8f9"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-21.ts",
+      "blob": "c0f0757ae643548578083124b5c06131eb1922c5"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-22.ts",
+      "blob": "aa561504bde7b1b63e79675a833c21a3ca12436a"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-23.ts",
+      "blob": "691521af6c2d4bb3ecdd127094ebca3ecc456a2e"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-24.ts",
+      "blob": "e0e4817f07ba028e03e28555405766f33a680eb5"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-25.ts",
+      "blob": "efe8d00113d2b9e97e62a30f3d371fa0785cb013"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-26.ts",
+      "blob": "fb93fdbe7399a1851966c145687f2b71f1968558"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-27.ts",
+      "blob": "c660c45fda8f2668ec49b5c0da99f62aa1dc8b7b"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-28.ts",
+      "blob": "7ef387dddcd24d40941d2ecd50601430a6c4b138"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-29.ts",
+      "blob": "26a905fbb3384c5359cc763bd22b4a3395ff8c42"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-3.ts",
+      "blob": "e50ede3b2d0ce32b29b326a98c31cb86c121da0a"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-30.ts",
+      "blob": "faf5f6b8f27d5ba5b181cfeb7558a86d48d1bd9e"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-31.ts",
+      "blob": "384d7190b97cc3be249947d5e9ad9b719a077571"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-32.ts",
+      "blob": "b8c294c558dd09631a688b45f56815d72ddd639c"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-33.ts",
+      "blob": "ceea283ff17128602164caf9581d22b4e66985ea"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-34.ts",
+      "blob": "b3a8903ef32486d51b66826c06d5567aa01998a6"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-35.ts",
+      "blob": "7db547cc239e1f0d54582b238c43f9f7aefbc75a"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-36.ts",
+      "blob": "b894f2b5030c2dcff1f86e99630d2056ef007cc0"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-37.ts",
+      "blob": "086d3688b6964239e0988eceae19c461644e4f9f"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-38.ts",
+      "blob": "745cc4c196bdb0fbec9896be8384a9384daf37fc"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-39.ts",
+      "blob": "a750bd29b7adf6c72ade0d826dc02f2be7dc770a"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-4.ts",
+      "blob": "0ddf0c83fea203bddffd10ec7a453c855f898ffe"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-40.ts",
+      "blob": "a2d290f89e0f5bd2bd20ccaf49c78b16b7da84f1"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-41.ts",
+      "blob": "ccb4f1a136f654a525a028bb8dae817be88d9850"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-42.ts",
+      "blob": "2f66b874531e184272c996989d1a832dd7cb8777"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-43.ts",
+      "blob": "6675e20de25c45d0b5a4d966fb2b6429fca74b5b"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-44.ts",
+      "blob": "5b9dda441bdda8f229df3a2992aa53d960bbdd2d"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-45.ts",
+      "blob": "4a0219e673a7fdcfd2da5b9455feda585d882e7d"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-46.ts",
+      "blob": "0047b5aab86d855e258bd3d206e6fbc246933978"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-47.ts",
+      "blob": "0b39e6d02ae12b704ecfdc550c9b6c0ef7e1c43e"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-48.ts",
+      "blob": "8c18ed41342d2337fe8e35fde08c2c08c120c7e2"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-49.ts",
+      "blob": "0e9ed792b53e4860aa256ff3e7f1c74addaa0111"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-5.ts",
+      "blob": "0cc6018c537290a8852290fdf3345796986cce1a"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-50.ts",
+      "blob": "edb0ab3f2268ec5d490b2313096c4e835275ec7f"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-51.ts",
+      "blob": "dcc4283c5ea7ad3af6178fdd3555793ae9f3bb8a"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-52.ts",
+      "blob": "9f05ceacb17cef12fe2317bb9ffaafe4f4135f8d"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-53.ts",
+      "blob": "aba78ca22b0340e303f2a067b91844c82945141a"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-54.ts",
+      "blob": "ff2ee89c61b99c671753e1c3e9b66b6e8abf6370"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-55.ts",
+      "blob": "9db3c1c79422ba18892f0119356d4cff35f54c5c"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-56.ts",
+      "blob": "4fc569080f9fad58b22283d12b24248192463eeb"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-57.ts",
+      "blob": "12c272b0738e0c812bb9b1cde1e83c87fac10936"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-58.ts",
+      "blob": "926588e8303a18be3a04a70860e389cecd4bfeff"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-59.ts",
+      "blob": "9c1d009803c90f5d32094a570d30dd6da40d09fe"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-6.ts",
+      "blob": "4cf2c48dc135e8ca5220a9a964eb9de75bbdf0ad"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-60.ts",
+      "blob": "fee3081ad938438cfceb8ccb6c7d44b6eed18c2e"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-7.ts",
+      "blob": "0e09aae4feb8cba51bbb0c3553724d3637755aa0"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-8.ts",
+      "blob": "4dda1b284bf30114812dd3f13705245e77b05612"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-9.ts",
+      "blob": "2aa60f28f2dead9e22a2fdc64c095757a87d8c03"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog.ts",
+      "blob": "e988a1a0b1f39acd726dcaa4d6de9bc5fabb5142"
+    },
+    {
+      "path": "src/lib/nightlife/discovery-policy.ts",
+      "blob": "56395ff3e9449f97d6d9901fa12a680e83eed452"
+    }
+  ],
+  "testInventory": {
+    "casino": [
+      "scripts/brand-check.test.mjs",
+      "scripts/browser-smoke-verdict.test.mjs",
+      "scripts/casino-audit-artifacts.test.mjs",
+      "scripts/casino-audit.test.mjs",
+      "scripts/casino-catalog-lineage.test.mjs",
+      "scripts/casino-catalog-loader.test.mjs",
+      "scripts/casino-continuation.test.mjs",
+      "scripts/casino-discovery.test.mjs",
+      "scripts/casino-freeze.test.mjs",
+      "scripts/casino-frontier.test.mjs",
+      "scripts/casino-rc-conflicts.test.mjs",
+      "scripts/casino-rc-evidence.test.mjs",
+      "scripts/casino-rc-final.test.mjs",
+      "scripts/casino-rc-frontier.test.mjs",
+      "scripts/casino-recent-provenance.test.mjs",
+      "scripts/casino-schema.test.mjs",
+      "scripts/casino-selection.test.mjs",
+      "scripts/check-auth-invariant.test.mjs",
+      "scripts/grok-pwa-plugin.test.mjs",
+      "scripts/migration-plan.test.mjs",
+      "scripts/optional-workspace-docs.test.mjs",
+      "scripts/preview.test.mjs",
+      "scripts/sign-out-plan.test.mjs",
+      "scripts/test-runner.test.mjs",
+      "scripts/with-app-env.test.mjs",
+      "scripts/write-atomic.test.mjs",
+      "src/lib/app-data/app-data.test.ts",
+      "src/lib/auth/gate-identity.test.ts",
+      "src/lib/auth/sign-in-gate.test.ts",
+      "src/lib/date-night/availability.test.ts"
+    ],
+    "location": [
+      "scripts/brand-check.test.mjs",
+      "scripts/browser-smoke-verdict.test.mjs",
+      "scripts/casino-audit-artifacts.test.mjs",
+      "scripts/casino-audit.test.mjs",
+      "scripts/casino-catalog-lineage.test.mjs",
+      "scripts/casino-catalog-loader.test.mjs",
+      "scripts/casino-discovery.test.mjs",
+      "scripts/casino-frontier.test.mjs",
+      "scripts/casino-rc-conflicts.test.mjs",
+      "scripts/casino-rc-evidence.test.mjs",
+      "scripts/casino-rc-final.test.mjs",
+      "scripts/casino-rc-frontier.test.mjs",
+      "scripts/casino-recent-provenance.test.mjs",
+      "scripts/casino-schema.test.mjs",
+      "scripts/casino-selection.test.mjs",
+      "scripts/check-auth-invariant.test.mjs",
+      "scripts/grok-pwa-plugin.test.mjs",
+      "scripts/location-discovery.test.mjs",
+      "scripts/migration-plan.test.mjs",
+      "scripts/optional-workspace-docs.test.mjs",
+      "scripts/preview.test.mjs",
+      "scripts/sign-out-plan.test.mjs",
+      "scripts/test-runner.test.mjs",
+      "scripts/with-app-env.test.mjs",
+      "scripts/write-atomic.test.mjs",
+      "src/lib/app-data/app-data.test.ts",
+      "src/lib/auth/gate-identity.test.ts",
+      "src/lib/auth/sign-in-gate.test.ts",
+      "src/lib/date-night/availability.test.ts",
+      "src/lib/location/location.test.ts"
+    ]
+  },
+  "combinedValidation": "PENDING"
+}
