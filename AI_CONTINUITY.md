@@ -6,6 +6,7 @@ Updated September 13, 2026 after the final casino hold-resolution/coverage pass.
 
 - Read this exact existing file on **caleb1234calvin-art/dinner-roulette → integration/active-work-pass-1 → AI_CONTINUITY.md**. Main intentionally lacks unreleased integration work.
 - Local casino checkout: `/workspace/scratch/60ab73826fd9/pick-for-me-casino`; isolated candidate `integration/casino-final-freeze-2026-09-13`, based on `f2fd0f7f4737278126d72b0cc043c79db7652236`. Inspect current branch and dirty state before editing.
+- Current local working branch: `integration/casino-freeze-handoff-2026-09-13`. The validated casino candidate branch is preserved.
 - Main baseline remains `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
 - Preserve `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839`, draft PR #39. Do not replace current casinos with its older 808-record base.
 - Prior casino PRs #38/#40 are historical and already merged into non-production integration; do not merge them again.
@@ -14,7 +15,7 @@ Updated September 13, 2026 after the final casino hold-resolution/coverage pass.
 
 ## Latest verified checkpoint
 
-CI publication is pending; no success is inferred.
+Non-production integration passed [CI Run 324](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34775743815) at `b7b9be79ef7476a5b9497c67e624533fefec1e42`. Its tree equals the validated casino candidate. The following continuity-only checkpoint records that result; its own commit/CI is subsequent, so verify the current remote ref when resuming.
 
 
 Updated September 13, 2026. **883 canonical destinations / 899 serialized rows / 60 passes.** Nevada **204**, Oklahoma **113**, Colorado **31**, Texas **4**; four-state total **352**. **26 additions in this completion pass** (23 NV + 3 OK), **152 additions from the original 731 baseline**. The 16 superseded historical rows remain preserved.
@@ -36,7 +37,7 @@ The finite reviewed casino queue is exhausted under currently available evidence
 
 All **16 deterministic local Chromium check groups** passed against the current production-mode build with sign-in rendering enabled. The real-provider browser check passed **six regions** (Reno, Newkirk, Ardmore, Chandler, Pahrump and Pawnee), with **0 final errors and 0 final findings**. Transport recorded 24 Overpass HTTP 200 responses, 2 Nominatim HTTP 200 responses and 12 provider timeouts; honest fallback remains part of the tested behavior. Desktop 1280×800 and mobile viewport 390×844 were exercised. Physical GPS, hosted acceptance, authenticated sessions and external Maps-app launch remain unverified.
 
-CI publication is pending; no success is inferred.
+Non-production integration passed [CI Run 324](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34775743815) at `b7b9be79ef7476a5b9497c67e624533fefec1e42`. Its tree equals the validated casino candidate. The following continuity-only checkpoint records that result; its own commit/CI is subsequent, so verify the current remote ref when resuming.
 
 The first final-pass live run passed its mechanical UI assertions but manual review found stale/duplicate provider names. It is preserved as a diagnostic attempt, not the accepted final browser gate. Captured public OSM entities are replayed by a regression test; the reviewed Newkirk/Pahrump/Pawnee pools have explicit live-browser count checks. Newly appearing live inventory in those finite reviewed pools requires investigation rather than automatic acceptance.
 
@@ -67,7 +68,7 @@ Location/international PR #39 stays separate and unmerged. Physical-phone GPS, i
 
 ## Exact next action
 
-Publish the casino candidate, require green CI, merge only into integration/active-work-pass-1 and record its CI before handoff.
+Casino work is frozen in non-production integration. The next task is to reconcile draft location/international PR #39 with Pass 55–60 and the current discovery/browser safeguards in a separate working branch, then validate the combined result. Do not restore the location candidate’s older 808-casino data or add the two independent test totals together. No location merge is part of this casino task.
 
 ## REQUIRES USER AUTHORIZATION
 
