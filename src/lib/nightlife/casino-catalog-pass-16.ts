@@ -13,7 +13,8 @@ export const CASINO_CATALOG_PASS_16: CasinoAuditRecord[] = [
 casino("ms-1st-jackpot","1st Jackpot Casino Tunica",34.8435037,-90.3246841,"1450 Jackpot Blvd, Tunica Resorts, MS 38664","Bally's Corporation","https://www.1stjackpot.com/",MGC_PROPERTY_SOURCE,COMMERCIAL_NOTES),
 casino("ms-ameristar-vicksburg","Ameristar Casino Hotel Vicksburg",32.315941,-90.900318,"4116 Washington St, Vicksburg, MS 39180","PENN Entertainment","https://www.ameristarvicksburg.com/",MGC_PROPERTY_SOURCE,COMMERCIAL_NOTES,"https://www.openstreetmap.org/way/680903034"),
 casino("ms-ballys-vicksburg","Bally's Vicksburg",32.2948687,-90.9152365,"1380 Warrenton Rd, Vicksburg, MS 39180","Bally's Corporation","https://casinos.ballys.com/vicksburg/",MGC_PROPERTY_SOURCE,COMMERCIAL_NOTES),
-casino("ms-beau-rivage","Beau Rivage Casino",30.3924332,-88.8914837,"875 Beach Blvd, Biloxi, MS 39533","MGM Resorts International","https://www.beaurivage.com/",MGC_PROPERTY_SOURCE,COMMERCIAL_NOTES),
+// Preserve the backbone stable ID so the renamed record reconciles once.
+casino("beau-rivage","Beau Rivage Casino",30.3924332,-88.8914837,"875 Beach Blvd, Biloxi, MS 39533","MGM Resorts International","https://www.beaurivage.com/",MGC_PROPERTY_SOURCE,COMMERCIAL_NOTES),
 casino("ms-boomtown-biloxi","Boomtown Casino Biloxi",30.4127434,-88.8851559,"676 Bayview Ave, Biloxi, MS 39530","PENN Entertainment","https://www.boomtownbiloxi.com/",MGC_PROPERTY_SOURCE,COMMERCIAL_NOTES),
 casino("ms-fitz-tunica","Fitz Casino & Hotel Tunica",34.8397282,-90.3583129,"711 Lucky Ln, Tunica Resorts, MS 38664","Foundation Gaming Group","https://www.fitzgeraldstunica.com/",MGC_PROPERTY_SOURCE,COMMERCIAL_NOTES),
 casino("ms-gold-strike","Gold Strike Casino Resort",34.8464545,-90.332583,"1010 Casino Center Dr, Tunica Resorts, MS 38664","Cherokee Nation Businesses","https://goldstrike.com/",MGC_PROPERTY_SOURCE,COMMERCIAL_NOTES),

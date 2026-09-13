@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-09-13",
+  "status": "candidate-fix-awaiting-exact-head-validation",
+  "discoveredBy": {
+    "runId": 34732178642,
+    "runNumber": 285,
+    "head": "ffe7089358c909ee4e171815897a91ee402ab74f",
+    "result": "Typecheck and all 12 audit tests passed. Runtime-equivalent audit caught Mississippi expected 28, found 29."
+  },
+  "policy": "Keep all historical records, preserve backbone stable IDs for same-property aliases, retain latest property metadata, and leave runtime dedupe algorithm and complete-state expected counts unchanged.",
+  "reconciliations": [
+    {
+      "property": "Beau Rivage",
+      "jurisdiction": "Mississippi",
+      "stableId": "casino-catalog-beau-rivage",
+      "supersededAliasId": "casino-catalog-ms-beau-rivage",
+      "files": [
+        "src/lib/nightlife/casino-catalog.ts",
+        "src/lib/nightlife/casino-catalog-pass-16.ts"
+      ],
+      "names": [
+        "Beau Rivage Resort & Casino",
+        "Beau Rivage Casino"
+      ],
+      "streetAddress": "875 Beach Blvd, Biloxi, MS",
+      "distanceMiles": 0.01188148,
+      "action": "Pass 16 now preserves the backbone stable ID. The existing runtime same-ID rule reconciles one destination with latest metadata.",
+      "identitySource": "https://beaurivage.mgmresorts.com/en.html",
+      "expectedCountUnchanged": 28
+    },
+    {
+      "property": "MGM Grand Las Vegas",
+      "jurisdiction": "Nevada",
+      "stableId": "casino-catalog-mgm-grand-las-vegas",
+      "supersededAliasId": "casino-catalog-nv-mgm-grand",
+      "files": [
+        "src/lib/nightlife/casino-catalog.ts",
+        "src/lib/nightlife/casino-catalog-pass-22.ts"
+      ],
+      "names": [
+        "MGM Grand",
+        "MGM Grand Hotel & Casino"
+      ],
+      "streetAddress": "3799 S Las Vegas Blvd, Las Vegas, NV 89109",
+      "distanceMiles": 0.04439802,
+      "action": "Pass 22 uses an explicit stable-ID argument for MGM Grand; all other generated IDs are unchanged.",
+      "identitySource": "https://mgmgrand.mgmresorts.com/en.html"
+    }
+  ],
+  "accountingCorrection": {
+    "nevada": {
+      "observedBeforeReconciliation": 109,
+      "expectedAfterReconciliation": 108
+    },
+    "oklahoma": {
+      "historicalHandoffClaim": 51,
+      "actualExportedCanonicalCount": 53,
+      "explanation": "The handoff omitted two distinct backbone destinations, Indigo Sky Casino and Buffalo Run Casino & Resort, from its rolling-batch total. Both remain in runtime; neither has a duplicate in later passes.",
+      "preservedBackboneRecords": [
+        {
+          "id": "casino-catalog-indigo-sky",
+          "address": "70220 US-60, Wyandotte, OK 74370",
+          "identitySource": "https://indigoskycasino.com/"
+        },
+        {
+          "id": "casino-catalog-buffalo-run",
+          "address": "1000 Buffalo Run Blvd, Miami, OK 74354",
+          "identitySource": "https://buffalorun.com/"
+        }
+      ]
+    },
+    "colorado": 31,
+    "texas": 4,
+    "expectedFourStateTotal": 196,
+    "warning": "These are expected post-fix counts until exact-head CI confirms them. Oklahoma/Nevada remain incomplete; no pending universe was converted into an exact quota."
+  }
+}

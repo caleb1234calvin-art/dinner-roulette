@@ -2,6 +2,12 @@
 
 ## Current recovery — September 13, 2026
 
+### Exact-head Run 285 findings and follow-up
+
+Run 285 checked `ffe7089358c909ee4e171815897a91ee402ab74f`: TypeScript and all 12 focused tests passed. The now-working audit correctly failed Mississippi (29 versus 28) and exposed a Nevada alias duplicate. Pass 16 Beau Rivage and Pass 22 MGM Grand now preserve their original backbone stable IDs; two real-export lineage regression tests protect this. No expected-count assertion or runtime reconciliation algorithm was relaxed. See `audit/casino-legacy-lineage-reconciliation-2026-09-13.json`.
+
+The handoff's Oklahoma count of 51 omitted two distinct backbone records (Indigo Sky and Buffalo Run). Actual exported runtime counting yields 53, not 51. After the two alias fixes, expected Pass 49 four-state accounting is Nevada 108, Oklahoma 53, Colorado 31, Texas 4 = 196, pending a fresh full exact-head validation. Earlier 194 claims are superseded. These two Oklahoma destinations are not new additions.
+
 This section supersedes conflicting historical handoff claims below. Historical evidence files and the original handoff are retained for provenance.
 
 - Continue integration-only development. Do not change or merge to `main` and do not deploy to Vercel.
