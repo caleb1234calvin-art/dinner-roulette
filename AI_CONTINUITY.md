@@ -1,12 +1,12 @@
 # Dinner Roulette / Pick For Me — AI Continuity
 
-Updated September 13, 2026 for the validated casino RC through Pass 54. This file supersedes earlier current-count/browser claims. Prior continuity is preserved verbatim in `audit/ai-continuity-before-casino-rc-2026-09-13.md`; older pre-Astra history remains in `audit/ai-continuity-handoff-2026-09-12.md`.
+Updated September 13, 2026 after non-production integration of the validated casino RC through Pass 54. This file supersedes earlier current-count/browser claims. Prior continuity is preserved verbatim in `audit/ai-continuity-before-casino-rc-2026-09-13.md`; older pre-Astra history remains in `audit/ai-continuity-handoff-2026-09-12.md`.
 
 ## Working state and authority
 
 - Repository: `caleb1234calvin-art/dinner-roulette`.
-- RC branch: `integration/casino-release-candidate-2026-09-13`; [PR #38](https://github.com/caleb1234calvin-art/dinner-roulette/pull/38) targets **only** `integration/active-work-pass-1`.
-- Current validated runtime/data head: `243082896d6b774dde9bbb44c44f71e02824aaa3`, [Run 307](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34739926534). Documentation checkpoints follow; verify their exact head before promotion.
+- Current working branch: `integration/active-work-pass-1`. [PR #38](https://github.com/caleb1234calvin-art/dinner-roulette/pull/38) was merged there as `6c1d5829f7f3e76946e20211b60525f9836b1227`; the RC branch `integration/casino-release-candidate-2026-09-13` remains preserved at `61cb2fe047a80fc4a67931ea3b24040e75dcd367`.
+- Validated integration merge: `6c1d5829f7f3e76946e20211b60525f9836b1227`, [Run 309](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34741023078). Its tree exactly equals RC head `61cb2fe047a80fc4a67931ea3b24040e75dcd367`, validated by [Run 308](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34740777237). The runtime/data revision is `243082896d6b774dde9bbb44c44f71e02824aaa3`. This following checkpoint changes documentation only; inspect the latest branch Actions run before any later release.
 - Pre-RC integration head: `877ff08c300a9d149aa174e9c47471d57bc98ccd`. Main remains `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
 - Broad reversible non-production research, code, tests, audits, documentation and integration preparation/promotion are authorized. **Main, production, Vercel/hosted deployment, irreversible external changes, secrets and recurring monitoring are not authorized.**
 - No Vercel deployment, production write or database migration occurred. `vercel.json` disables Git deployments for `integration/**`.
@@ -26,10 +26,11 @@ Updated September 13, 2026 for the validated casino RC through Pass 54. This fil
 
 824 serialized rows across 54 passes become 808 active destinations. 41 manifest jurisdictions: 39 retain their prior complete status and two remain pending. **77 additions** relative to the 731 baseline; no existing destination removal, merge or rename in this RC. Three pins and two addresses corrected with stable IDs/history retained.
 
-Run 307 passed **263 repository + 51 application = 314 unique tests**, zero failures and four explicit external-documentation skips. The **65 casino tests are included** in the repository total. Clean install, typecheck, export/schema and national audits, development build, production-mode build without migrations, Chromium smoke and all 30 Dinner icons passed.
+Runs 307, 308 and integration Run 309 passed **263 repository + 51 application = 314 unique tests**, zero failures and four explicit external-documentation skips. The **65 casino tests are included** in the repository total. Clean install, typecheck, export/schema and national audits, development build, production-mode build without migrations, Chromium smoke and all 30 Dinner icons passed.
 
 ## COMPLETED
 
+- PR #38 promoted only into non-production integration with the exact expected head SHA. The merge preserved the validated RC tree and passed its push-triggered CI. Main remains at its recorded baseline; no deployment or migration occurred.
 - Pass 51: 24 NV/OK additions and Oneida Airport/IMAC pin corrections.
 - Pass 52: 31 additions; rejected conflicting named map points, including Seminole I-40 city-area markers, Tahoe/Harrah/Black Hawk/Kiowa discrepancies.
 - Pass 53: Club Cal Neva, Montego Bay and Remington Park; Slot Palace address/point correction; Golden Pony closure hold.
@@ -85,7 +86,7 @@ NV/OK are not statewide-complete. The exhaustive named remaining queue and scope
 
 Earlier browser attempts failed on an incorrect Maps expectation, ambiguous locator and development Vite reload. They were fixed; Runs 303, 305, 306 and 307 passed at their respective revisions. Run 304 was observed queued without steps and is not counted as success/failure. An isolated V8 schema attempt lacked WHATWG URL; actual unmodified Node schema later passed. Exact history is in `audit/casino-rc-progress-2026-09-13.json`.
 
-Next: validate the final documentation head, promote PR #38 **only into non-production integration** using its expected head SHA, verify the integration workflow and record the merge. Then perform the prepared live acceptance checklist when a permitted target is available. Complete additional coverage if exhaustive scope is required. **Any main promotion or hosted deployment requires Caleb's separate explicit authorization.**
+Next: use the current non-production integration branch, verify its latest documentation-only checkpoint workflow, and perform the prepared live acceptance checklist when a permitted target is available. Review the documented partial Nevada/Oklahoma coverage before release; complete the named frontier if exhaustive scope is required. PR #38 is already merged into integration and must not be promoted again. **Any main promotion or hosted deployment requires Caleb's separate explicit authorization.**
 
 Safe commands: `npm ci --no-audit --no-fund`, `npm run typecheck`, `npm test`, `node --test scripts/casino-*.test.mjs`, `npm run audit:casinos`, `npm run build:dev`, and `node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`. **Do not use `npm run build`: it chains database migrations.**
 

@@ -1,8 +1,8 @@
 # Pick For Me casino release readiness
 
-Updated September 13, 2026. **Validated release candidate; statewide Nevada/Oklahoma scope remains partial.** [PR #38](https://github.com/caleb1234calvin-art/dinner-roulette/pull/38) targets only `integration/active-work-pass-1`. No main merge, production change, migration or Vercel deployment has occurred.
+Updated September 13, 2026. **Validated and promoted to non-production integration; statewide Nevada/Oklahoma scope remains partial.** [PR #38](https://github.com/caleb1234calvin-art/dinner-roulette/pull/38) merged only into `integration/active-work-pass-1` as `6c1d5829f7f3e76946e20211b60525f9836b1227`. No main merge, production change, migration or Vercel deployment has occurred.
 
-The current runtime/data revision is `243082896d6b774dde9bbb44c44f71e02824aaa3`, validated by [Run 307](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34739926534). The final documentation checkpoint is validated separately before non-production integration promotion.
+The current runtime/data revision is `243082896d6b774dde9bbb44c44f71e02824aaa3`, validated by [Run 307](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34739926534). The complete RC documentation head `61cb2fe047a80fc4a67931ea3b24040e75dcd367` passed [Run 308](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34740777237). The integration merge passed [Run 309](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34741023078) with the identical validated tree. This following handoff checkpoint changes documentation only; its latest Actions run is the final current-ref check.
 
 ## Release inventory
 
@@ -75,7 +75,7 @@ Historical reconciliation warnings account for superseded rows and do not mean d
 
 ## Remaining gates and boundaries
 
-**COMPLETED:** Evidence-backed additions, integrity/schema review, meaningful test expansion, full automated validation, safe builds, CI browser smoke, adversarial review, source/hold reconciliation, release records and continuity preparation.
+**COMPLETED:** Evidence-backed additions, integrity/schema review, meaningful test expansion, full automated validation, safe builds, CI browser smoke, adversarial review, source/hold reconciliation, release records, continuity and exact-head non-production integration validation.
 
 **BLOCKED:** No working local exec-server or reachable authorized interactive preview. Live services, physical devices and hosted acceptance remain NOT RUN. Konawa's numerical point and Horseshu/Moapa's current casino-floor scope remain unconfirmed. NIGC's marker endpoint returned 401; login, bot, rate and incomplete-extraction boundaries on other sources were respected and alternate sources used.
 
@@ -85,12 +85,12 @@ Historical reconciliation warnings account for superseded rows and do not mean d
 
 **REQUIRES USER AUTHORIZATION:** Any main promotion/merge, any Vercel or other hosted deployment, production write/migration, irreversible external change or recurring monitoring.
 
-Before controlled release, confirm acceptance of the documented coverage scope (or complete the named frontier if exhaustive coverage is required), finish the live acceptance checklist on an available permitted target, inspect current refs and exact revision validation, and obtain explicit release authorization. Non-production integration promotion is reversible and uses only the established integration branch.
+Before controlled release, confirm acceptance of the documented coverage scope (or complete the named frontier if exhaustive coverage is required), finish the live acceptance checklist on an available permitted target, inspect current refs and exact revision validation, and obtain explicit release authorization. Non-production integration promotion is completed and reversible; main promotion and controlled deployment remain unperformed.
 
 After separately authorized deployment, verify the served revision/cache and repeat hosted navigation, casino selection, live-provider/fallback, real Maps and mobile checks. No production verification is claimed here.
 
 ## Recovery
 
-Pre-RC integration revision: `877ff08c300a9d149aa174e9c47471d57bc98ccd`. Main baseline: `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`. Preserve the RC branch and evidence. If rollback is needed, revert the integration merge through normal review; avoid force-pushing shared branches or deleting history. No database change was introduced, and no production rollback is needed for this work.
+Pre-RC integration revision: `877ff08c300a9d149aa174e9c47471d57bc98ccd`. Main baseline: `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`. Preserve the RC branch and evidence. If rollback is needed, revert integration merge `6c1d5829f7f3e76946e20211b60525f9836b1227` through normal review; avoid force-pushing shared branches or deleting history. No database change was introduced, and no production rollback is needed for this work.
 
 **Do not run `npm run build` casually:** it chains `db:migrate`. Safe production bundling is `node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`. Vercel's `integration/**` Git deployments remain disabled.

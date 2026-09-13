@@ -52,19 +52,19 @@
       "Chromium production-preview smoke at desktop and mobile sizes",
       "30 Dinner icon files"
     ],
-    "head": "243082896d6b774dde9bbb44c44f71e02824aaa3",
-    "job": 103677792014,
+    "head": "6c1d5829f7f3e76946e20211b60525f9836b1227",
+    "job": 103680636366,
     "repository": {
       "failed": 0,
       "passed": 263,
       "skipped": 4
     },
     "result": "success",
-    "run": 34739926534,
-    "runNumber": 307,
+    "run": 34741023078,
+    "runNumber": 309,
     "skipped": 4,
     "uniquePassed": 314,
-    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34739926534"
+    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34741023078"
   },
   "scope": [
     "All 824 serialized exported rows, all 808 canonical records and every registered pass",
@@ -793,5 +793,11 @@
   ],
   "productionUntouched": true,
   "vercelDeploymentPerformed": false,
-  "mainUntouched": true
+  "mainUntouched": true,
+  "integration": {
+    "mergeCommit": "6c1d5829f7f3e76946e20211b60525f9836b1227",
+    "candidateHead": "61cb2fe047a80fc4a67931ea3b24040e75dcd367",
+    "treeEqualsCandidate": true,
+    "mainUnchangedAt": "c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5"
+  }
 }

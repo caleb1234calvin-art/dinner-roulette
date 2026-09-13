@@ -1,6 +1,6 @@
 # Pick For Me casino browser release checklist
 
-Prepared September 13, 2026. Automated browser evidence is available in [Run 307](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34739926534), artifact `casino-browser-evidence` (14-day retention). Run at the exact release revision.
+Prepared September 13, 2026. Automated browser evidence is available in [integration Run 309](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34741023078), artifact `casino-browser-evidence` (14-day retention). Run at the exact release revision.
 
 ## Completed in disposable CI
 
