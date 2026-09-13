@@ -34,6 +34,30 @@ const CUISINE_ICON_PRIORITY: Array<[CuisineId[], DinnerIconKey]> = [
   [["breakfast", "brunch"], "breakfast"],
 ];
 
+/**
+ * The generated light/dark image packs were organized under semantic filenames
+ * after generation, but the source image order did not match those names. Keep
+ * the public files stable and correct the semantic-to-asset permutation here.
+ * This preserves the matched light/dark artwork without rewriting binary assets.
+ */
+const ICON_ASSET_KEY: Record<DinnerIconKey, DinnerIconKey> = {
+  burger: "mexican",
+  pizza: "burger",
+  mexican: "fallback",
+  chinese: "pizza",
+  japanese: "chinese",
+  italian: "italian",
+  steakhouse: "steakhouse",
+  bbq: "bbq",
+  chicken: "japanese",
+  "cafe-bakery": "chicken",
+  dessert: "cafe-bakery",
+  seafood: "dessert",
+  buffet: "buffet",
+  breakfast: "breakfast",
+  fallback: "seafood",
+};
+
 function normalizedLabel(name: string, cuisineLabel = ""): string {
   return `${name} ${cuisineLabel}`.toLowerCase();
 }
@@ -81,7 +105,7 @@ export function dinnerIconKey(restaurant: Restaurant): DinnerIconKey {
 }
 
 export function dinnerIconPath(key: DinnerIconKey, theme: ThemeId): string {
-  return `/dinner-icons/${theme}/${key}.jpg`;
+  return `/dinner-icons/${theme}/${ICON_ASSET_KEY[key]}.jpg`;
 }
 
 export function dinnerRestaurantIcon(restaurant: Restaurant, theme: ThemeId): string {
