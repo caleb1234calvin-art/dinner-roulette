@@ -54,6 +54,10 @@ try {
     await page.waitForFunction(() => [...document.querySelectorAll("button")].some((button) =>
       button.textContent?.trim() === "Nightlife" && Object.keys(button).some((key) =>
         key.startsWith("__reactProps$") && typeof button[key]?.onClick === "function")));
+    await page.getByRole("heading", { name: "Dinner Roulette in 30 seconds", exact: true }).waitFor();
+    for (let step = 0; step < 3; step += 1) await page.getByRole("button", { name: "Next", exact: true }).click();
+    await page.getByRole("button", { name: "Got it", exact: true }).click();
+    verdict.checks.push(label + ": completed the four-step first-run tour");
     await page.getByRole("button", { name: "Nightlife", exact: true }).click();
     await page.getByRole("button", { name: "Casino", exact: true }).click();
     const open = page.getByRole("switch", { name: "Open now only", exact: true });
