@@ -1,154 +1,359 @@
-# Dinner Roulette — AI Continuity
+# Dinner Roulette / Pick For Me — AI Continuity
 
-_Last updated: September 12, 2026_
+_Last updated: September 12, 2026, immediately before handoff to GPT-6 Astra_
 
-## Project state
+## Handoff purpose
 
-- Active app: Dinner Roulette V.3.
+This document is the authoritative continuity handoff for ongoing Pick For Me / Dinner Roulette development. The user is moving active development into GPT-6 Astra after a long casino-audit and pre-deployment preparation session. Read this before changing repository state.
+
+The guiding operating instruction for the current phase is:
+
+- Continue as much work as possible without requiring or triggering a Vercel deployment.
+- Work directly on research, data gathering, casino discovery, source verification, duplicate elimination, normalization, code changes, UI logic, data structures, configuration, cleanup, documentation, testing, local/development build validation, and future-update preparation.
+- Use connected discovery tools aggressively where useful: TinyFish for routine search/fetch, Tavily for broader research, Parallel Search for independent discovery/extraction, Firecrawl for crawling/structured extraction, and Exa only as reserve if the other sources leave meaningful gaps.
+- Batch related reversible changes when practical.
+- Preserve existing app behavior unless an intentional update requires change.
+- Do not stop merely because Vercel is blocked. Stop only when meaningful remaining work genuinely requires live deployment or another inaccessible capability.
+- Never lower the casino evidence standard simply to increase destination count.
+
+## Project identity and repository discipline
+
+- Active app: Dinner Roulette V.3, moving conceptually toward the broader **Pick For Me** identity because the app now extends beyond dinner into nightlife, dates, seasonal activities, casinos, and future food-truck discovery.
 - Repository: `caleb1234calvin-art/dinner-roulette`.
-- **Current integration branch: `integration/active-work-pass-1`.**
-- **Pass 48 candidate branch: `integration/pass-48-south-coffeyville`.**
-- **Draft integration PR: #32, `Validate Pass 48 South Coffeyville`, targeting `integration/active-work-pass-1`.**
-- `main` remains untouched unless Caleb explicitly requests a merge/direct change.
-- ChatGPT is the only AI authorized to directly modify the repository unless Caleb explicitly authorizes another assistant for a named file.
-- Dinner Roulette and the Jasper County audit remain interconnected.
-- Keep continuity current while casino/audit work proceeds, not only at the end of a large phase.
+- Active integration branch: `integration/active-work-pass-1`.
+- Current casino candidate branch: `integration/pass-49-cadence-crossing`.
+- `main` remains untouched unless Caleb explicitly requests a merge or direct change.
+- ChatGPT is the only AI authorized to directly modify the repository unless Caleb explicitly authorizes another assistant for a named file or task.
+- Dinner Roulette / Pick For Me and the Jasper County audit remain interconnected; prior audit tooling, evidence habits, and source-verification practices may feed directly into app discovery work.
+- Historical branches and audit artifacts are provenance. Do not casually rewrite or delete them.
 
-## Active integration validation
+## Major repository event: Pass 48 promoted
 
-`Validate Dinner Integration` is the compatibility gate. It performs dependency install, TypeScript checking, casino audit, inherited tests as report-only, development build, and Dinner icon verification.
+Pass 48 added **Cherokee Casino South Coffeyville** after a direct current-property numerical point was recovered from the official Cherokee Casino property page.
 
-**Pass 47 baseline:** Run 278 (`34711381563`) is green at commit `52320a46f2dee3b235943cd96acc4d99a7eae1d7`, validating the Pass 47 runtime baseline plus the evidence-only Red Dragon co-location resolution.
+Property:
+- Name: Cherokee Casino South Coffeyville
+- Address: `1506 US-169, South Coffeyville, OK 74072`
+- Coordinate: `36.9825777,-95.6283822`
+- Current first-party page: `https://cherokeecasino.com/casinos/south-coffeyville`
+- Evidence reason: the current first-party property page exposed an embedded Google Maps destination containing the exact numerical point, rather than a city centroid, predecessor coordinate, generic street geocode, or inferred parcel.
 
-**Pass 48 candidate:** Run 280 (`34727233333`) is green at exact implementation/workflow head `be8d6e44520d0f647cb74611716d446a32f2e112` on `integration/pass-48-south-coffeyville`. All validation stages passed: dependency install, TypeScript, curated casino audit, inherited test report, development bundle build, and Dinner icon verification. This is the first exact-head green evidence for Pass 48. The present continuity-only commit follows that validated implementation head and does not alter runtime code.
+Pass 48 implementation files include:
+- `audit/oklahoma-coordinate-qa-pass-12-2026-09-12.json`
+- `src/lib/nightlife/casino-catalog-pass-48.ts`
+- `src/lib/nightlife/search.ts`
+- `scripts/audit-casino-catalog.mjs`
+- `.github/workflows/validate-icon-pack.yml`
+- `AI_CONTINUITY.md`
 
-PR #32 is open, draft, mergeable, and targets `integration/active-work-pass-1`; `main` is not involved. Do not treat a green integration run as authorization to merge to `main`.
+Validation history:
+- Run 280 (`34727233333`) passed on implementation/workflow head `be8d6e44520d0f647cb74611716d446a32f2e112`.
+- A later continuity-only update produced candidate head `c82c10117804180e46d7d1c965cb8069d9dbe976`.
+- Run 281 (`34727712643`) also completed successfully after that update, with dependency installation, TypeScript, curated casino audit, inherited-test reporting, development bundle build, and Dinner icon verification all passing.
 
-The candidate also fixes validation trigger scope in `.github/workflows/validate-icon-pack.yml`: pull requests targeting either `main` or `integration/active-work-pass-1` can invoke `Validate Dinner Integration`. Validation steps themselves were not weakened or removed.
+PR #32, `Validate Pass 48 South Coffeyville`, was changed from draft to ready only after green validation and then merged into `integration/active-work-pass-1`.
 
-## Deployment status and decision
+Pass 48 merge commit on active integration:
+- `29a778fca910d1fd5f112f5ac139f4f7d1ac7ccf`
 
-Vercel is externally blocked by its build-rate-limit/upgrade condition. This is a hosting/deployment limitation, not a failed Dinner Roulette validation. GitHub Actions remains the active implementation/compatibility gate while the block persists.
+This promotion did **not** touch `main`.
 
-**Do not upgrade Vercel solely to remove this development bottleneck.** Current casino/catalog work can continue through branch development, audits, typechecking, tests and development builds without a hosted deployment. Deploy only when a hosted preview/release is materially useful. Never describe un-published GitHub work as deployed.
+## Validation workflow improvement completed during Pass 48
 
-## Casino reconciliation policy
+The integration validation workflow was extended so pull requests targeting either:
+- `main`, or
+- `integration/active-work-pass-1`
 
-Runtime casino passes are canonicalized chronologically in `src/lib/nightlife/search.ts`, with newer same-property records winning while historical catalog files remain preserved. Same ID within 0.35 miles is a reconciliation warning/latest wins; same ID at materially different locations is a hard failure; same normalized name within 0.35 miles is a reconciliation warning/latest wins; same normalized name at distant locations is preserved as distinct destinations with a warning. Coordinate plausibility and complete-jurisdiction expected-count checks remain hard gates.
+can invoke `Validate Dinner Integration`.
 
-Preferred cadence: `discover → verify → reconcile → batch clean destinations → implement → validate → continue discovery → re-audit prior batches`. Batches are planning units, not quotas. **Never weaken the evidence gate merely to increase runtime count.**
+This corrected a previous blind spot where integration-targeted PRs did not naturally trigger the same validation gate. Validation steps themselves were not weakened.
 
-A current street address, generic map marker, routing destination, city centroid, nearby parcel, adjacent development parcel, or predecessor coordinate is not itself enough to authorize a numerical runtime point. Numerical coordinates must be traceable to the current destination/property.
+`Validate Dinner Integration` currently checks:
+- dependency installation,
+- TypeScript typecheck,
+- curated casino catalog audit,
+- inherited test suite as report-only,
+- development bundle build,
+- Dinner icon-pack verification.
 
-## Runtime casino progress
+A green integration run is evidence of compatibility; it is never permission by itself to merge to `main`.
 
-Validated integration branch remains through Pass 47 until PR #32 is promoted, but **Pass 48 implementation itself now has exact-head green validation evidence**. The Pass 48 candidate imports/appends through Pass 48 and extends `scripts/audit-casino-catalog.mjs` through Pass 48.
+## Vercel status and development strategy
 
-Recent sequence: Pass 43 Wildfire on Fremont; Pass 44 Club Fortune North; Pass 45 The Nevada Casino & Bar, Battle Mountain; Pass 46 Bonanza Inn & Casino, Fallon; Pass 47 Coweta Casino Hotel, Oklahoma; **Pass 48 Cherokee Casino South Coffeyville, Oklahoma, candidate validated by Run 280.**
+Vercel is externally blocked by its current build-rate-limit / upgrade condition. The user explicitly decided **not to pay for Vercel Pro merely to bypass this development bottleneck**.
 
-Across the current four-state audit scope, roughly 286 candidate records have been considered: Nevada universe 174, Oklahoma universe 77, Colorado runtime-complete 31, Texas runtime-complete 4. The difference between candidate-universe size and runtime count is mostly closures, duplicates, successors, nonqualifying records and already-resolved exclusions; it is not a queue of ~90 untouched casinos.
+Therefore:
+- treat Vercel as one unavailable pipeline stage, not as a stop condition;
+- continue all research, code, QA, integration, and development-build work that does not require hosted publication;
+- use GitHub Actions as the main pre-deployment compatibility gate while the block persists;
+- do not call GitHub-only work "deployed";
+- do not trigger Vercel unless the user later explicitly wants deployment or the block clears and hosted verification is actually needed.
 
-## Nevada — rolling, 107 active runtime destinations
+The user specifically observed that this change in working style greatly increased productivity because deployment stopped acting as an artificial wall.
 
-Nevada's provisional audit decision universe remains 174 rows, not a final runtime count. Pass 22 contains the first 50 curated Nevada destinations. Later clean segments are added independently as evidence clears.
+## Casino evidence and reconciliation policy
 
-- Pass 32: +15, 50 → 65.
-- Pass 34: +7, 65 → 72.
-- Pass 35: +10, 72 → 82.
-- Pass 36: +6, 82 → 88.
-- Pass 37: +4, 88 → 92.
-- Pass 38: +1, 92 → 93.
-- Pass 39: +2, 93 → 95.
-- Pass 40: +5, 95 → 100.
-- Pass 41: +2, 100 → 102.
-- Pass 42: Longstreet, 102 → 103.
-- Pass 43: Wildfire on Fremont, 103 → 104.
-- Pass 44: Club Fortune North, 104 → 105.
-- Pass 45: The Nevada Casino & Bar, 105 → 106.
-- Pass 46: Bonanza Inn & Casino, Fallon, 106 → 107.
+Runtime casino passes are canonicalized chronologically in `src/lib/nightlife/search.ts`.
 
-### Recent Nevada clears
+Current reconciliation rules:
+- newer same-property records win while older historical catalog files remain preserved;
+- same ID within 0.35 miles => reconciliation warning, latest pass wins at runtime;
+- same ID at materially different locations => hard failure;
+- same normalized name within 0.35 miles => reconciliation warning, latest pass wins;
+- same normalized name at distant locations => preserve both as distinct destinations, with warning when appropriate;
+- coordinate plausibility and complete-jurisdiction count checks remain hard gates.
 
-- `audit/nevada-wildfire-fremont-coordinate-qa-pass-17-2026-09-12.json` clears **Wildfire on Fremont**, 2700 E Fremont St, Las Vegas, at **36.1556,-115.1135**.
-- `audit/nevada-club-fortune-north-successor-qa-pass-18-2026-09-12.json` clears **Club Fortune North**, 2757 Las Vegas Blvd N, North Las Vegas, at **36.2100482,-115.107488**. Poker Palace remains retired.
-- `audit/nevada-battle-mountain-coordinate-qa-pass-19-2026-09-12.json` clears **The Nevada Casino & Bar**, 36 E Front St, Battle Mountain, at **40.6420387,-116.9344845**.
-- `audit/nevada-bonanza-fallon-coordinate-qa-pass-20-2026-09-12.json` clears **Bonanza Inn & Casino**, 855 W Williams Ave, Fallon, at **39.473817,-118.786436**.
+Preferred work cadence:
+`discover → verify → reconcile → batch clean destinations → implement → validate → continue discovery → re-audit prior batches`
 
-### Remaining Nevada frontier
+Evidence rule:
+A current street address, generic map result, routing destination, city centroid, nearby parcel, adjacent development land, predecessor casino point, or historical map marker is not enough by itself. A numerical runtime coordinate must be traceable to the current destination/property.
 
-- **Cadence Crossing Casino:** `audit/nevada-cadence-crossing-footprint-qa-pass-21-2026-09-12.json` quarantines legacy Jokers Wild coordinate `36.052,-114.99468`. Current operation at **920 N Boulder Hwy, Henderson, NV 89011** is strong. Nevada licensed-retailer evidence and current property reporting reinforce the operation/address, but the completed 2026 property still needs its own direct numerical point. Do not recycle a construction/legacy footprint merely because it routes nearby.
-- **Red Dragon Sports Bar #201 / Red Dragon Casino, Elko:** `audit/nevada-elko-operation-qa-pass-16-2026-09-12.json` is a **coordinate-only hold** at **404 S 5th St, Elko, NV 89801**. Current county, licensing, tourism and directory evidence supports Red Dragon as the canonical current consumer-facing identity. Elko County assessor evidence associates the property with parcel `001-422-002` and casino use. Dotty's #214 is a co-located Nevada Restaurant Services concept/license at the same physical property and should not be emitted as a second routable destination. Still require a direct numerical parcel/building point before serialization.
-- **The Pass Casino:** closure/renovation hold until reopening is independently confirmed.
-- **Whiskey Pete's / Buffalo Bill's:** current closure exclusions. Primm Valley remains active separately. These may remain exclusions rather than become runtime additions.
+Never guess coordinates to clear a hold.
 
-Nevada remains rolling rather than statewide complete.
+## Current casino counts
 
-## Oklahoma — 50 on active integration; Pass 48 validated candidate makes 51
+After Pass 48 was promoted to active integration:
+- Nevada: **107 active**
+- Oklahoma: **51 active**
+- Colorado: **31 active and complete**
+- Texas: **4 active and complete**
+- **Four-state active integration total: 193**
 
-Oklahoma candidate universe remains 77. Pass 28 serialized 46 records; Pass 30 added Duck Creek and Checotah; Pass 31 added Artesian; overall Pass 47 added Coweta Casino Hotel, bringing the active integration runtime to **50 active audited destinations**.
+Pass 49 candidate adds one Nevada casino:
+- Nevada candidate: **108**
+- Oklahoma: **51**
+- Colorado: **31**
+- Texas: **4**
+- **Four-state Pass 49 candidate total: 194**
 
-### Pass 47 — Coweta Casino Hotel
+The broader candidate/audit universes are much larger than runtime counts because they include closures, duplicates, predecessor properties, aliases, nonqualifying outlets, and unresolved cases. Rough working scope remains about 286 candidate records across the four-state audit universe; this does not mean ~90 casinos remain to be added.
 
-`audit/oklahoma-coordinate-qa-pass-11-2026-09-12.json` clears **Coweta Casino Hotel** at **13185 Oklahoma 51, Coweta, OK 74429**, coordinate **35.97281,-95.66006**. Current first-party/post-opening lodging evidence establishes the completed operating property, and the coordinate comes from a direct current property-map marker tied to the Coweta hotel/casino listing rather than an intersection estimate, city centroid, nearby parcel, or predecessor point.
+## Pass 49 candidate — Cadence Crossing Casino
 
-### Pass 48 — Cherokee Casino South Coffeyville
+A meaningful Nevada hold was cleared during the new no-deployment workflow.
 
-`audit/oklahoma-coordinate-qa-pass-12-2026-09-12.json` clears **Cherokee Casino South Coffeyville** at **1506 US-169, South Coffeyville, OK 74072**, coordinate **36.9825777,-95.6283822**. Cherokee Casino's current first-party property page exposes an embedded Google Maps link containing that exact numerical point for the current destination, satisfying the direct current-property coordinate gate.
+Property:
+- Name: **Cadence Crossing Casino**
+- Address: `920 N Boulder Hwy, Henderson, NV 89011`
+- Candidate coordinate: **`36.08622,-115.03321`**
+- Current operator/property: Boyd Gaming / Cadence Crossing
+- Current site: `https://cadencecrossing.boydgaming.com/`
 
-`src/lib/nightlife/casino-catalog-pass-48.ts` serializes it; `src/lib/nightlife/search.ts` activates it on the candidate branch; `scripts/audit-casino-catalog.mjs` covers through Pass 48. Run 280 validates the exact implementation/workflow head. Promotion to `integration/active-work-pass-1` remains a separate repository action; `main` remains untouched.
+Evidence chain used in the research sweep:
+- Nevada licensed-retailer evidence confirms current Cadence Crossing Casino at 920 N Boulder Hwy.
+- Contemporary current-property reporting confirms the completed casino opened in March 2026 and replaced Jokers Wild.
+- Firecrawl recovered a current MapQuest place entity for Cadence Crossing Casino at the exact current address and returned the explicit numerical point `36.08622,-115.03321`.
+- The historical Jokers Wild coordinate `36.052,-114.99468` remains quarantined and must not be reused as though it represents the completed Cadence Crossing property.
 
-### Remaining Oklahoma priority holds
+Pass 49 candidate work already created:
+- branch `integration/pass-49-cadence-crossing`
+- `src/lib/nightlife/casino-catalog-pass-49.ts`
+- new Pass 49 QA/audit evidence artifact for Cadence Crossing
+- `src/lib/nightlife/search.ts` import/runtime activation through Pass 49
+- `scripts/audit-casino-catalog.mjs` extended through Pass 49
+- draft PR #33, `Validate Pass 49 Cadence Crossing`, targeting `integration/active-work-pass-1`
 
-The priority frontier is **three** properties. Repeated evidence sweeps have strengthened current operation/address identity, but have not yet produced acceptable direct numerical current-property coordinates. Do not convert that stronger identity evidence into guessed coordinates.
+PR #33 current metadata before this continuity update:
+- state: open
+- draft: true
+- mergeable: true
+- base: `integration/active-work-pass-1`
+- base SHA: `29a778fca910d1fd5f112f5ac139f4f7d1ac7ccf`
+- head before this continuity update: `83825237cba4e7ad7cf23552379d685d5e5a8abe`
+- `main` is not involved.
 
-- **Lakecrest Casino and Hotel** — **1000 US HW 70 E, Ardmore**. Current first-party operation/address remains strong. The commercial-land point near **34.172006,-97.173354** identifies adjacent development land and remains excluded.
-- **Lake Eufaula Casino Hotel** — **1045 Birkes Rd, Eufaula**. Current operator/current mapping identity and post-opening evidence support the new property. The former Creek Nation Eufaula Casino at **806 W Forrest Ave** is permanently closed; never reuse its legacy point for the new casino.
-- **Creek Nation Casino Holdenville** — **211 E Willow St, Holdenville**. Current first-party operation/address remains strong. **35.083599,-96.401627** is a Holdenville city centroid, not the casino, and remains excluded.
+## IMPORTANT: Pass 49 validation currently fails for an audit-script data-shape bug, not a casino-data failure
 
-## Four-state runtime snapshot
+Run 283 (`34729326135`) ran against PR #33 and failed.
 
-Active integration baseline before PR #32 promotion:
-- Nevada: **107** active.
-- Oklahoma: **50** active.
-- Colorado: **31** active and complete.
-- Texas: **4** active and complete.
-- **Four-state total: 192 active destinations.**
+What passed before the failure:
+- checkout/setup succeeded;
+- dependency installation succeeded;
+- **TypeScript typecheck succeeded**.
 
-Pass 48 candidate with exact-head green implementation validation:
-- Nevada: **107**.
-- Oklahoma: **51**.
-- Colorado: **31**.
-- Texas: **4**.
-- **Four-state candidate total: 193.**
+Failure occurred at:
+- step: `Audit curated casino catalog`
+- command: `npm run audit:casinos`
+- file: `scripts/audit-casino-catalog.mjs`
+- line around 69
+- error: `TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator))`
+- failing expression: `for (const jurisdiction of manifest.jurisdictions ?? [])`
 
-The unresolved working frontier is approximately seven named Nevada/Oklahoma cases, not dozens of untouched casinos. Several Nevada cases are closure/exclusion decisions and may never add to runtime. Colorado and Texas are maintenance/re-audit only.
+Root cause visible from the current manifest:
+- `audit/casino-sources.json` stores `jurisdictions` as an **object keyed by jurisdiction name**, e.g. `"New Jersey": {...}`, `"Pennsylvania": {...}`, etc.
+- the audit script is trying to iterate it as if it were an array.
 
-## Colorado — runtime complete and green
+This failure therefore does **not** currently establish that Cadence Crossing is bad data, that Pass 49's coordinate is wrong, or that TypeScript/runtime wiring is broken. It is an audit-script compatibility bug introduced/exposed by the current manifest shape.
 
-Colorado's reconciled current Dinner Roulette set is **31 destinations: 13 Black Hawk + 6 Central City + 10 Cripple Creek + 2 tribal**. Address/property-coordinate QA and duplicate/alias reconciliation are complete in `audit/colorado-statewide-runtime-reconciliation-2026-09-11.json`. Colorado is maintenance/re-audit only.
+Because the audit step failed early, later workflow stages were skipped:
+- inherited test report,
+- development bundle build,
+- Dinner icon verification.
 
-## Texas — runtime complete and green, 4 destinations
+Do **not** merge PR #33 until the audit script is corrected, exact-head validation reruns, and the full gate returns green.
 
-Texas scope is four current physical tribal gaming destinations: Kickapoo Lucky Eagle Casino Hotel; Naskila Casino Livingston; Naskila Casino Leggett; Speaking Rock Entertainment Center. Coordinate QA is 4/4. The Leggett coordinate provenance is preserved as user-assisted current map-pin verification rather than misrepresented as first-party publication. Texas is maintenance/re-audit only.
+Likely next fix:
+- update `scripts/audit-casino-catalog.mjs` so it supports the actual manifest object shape, probably by iterating `Object.entries(manifest.jurisdictions ?? {})` or `Object.values(...)` depending on how jurisdiction names are needed downstream;
+- inspect both `audit/casino-sources.json` and `audit/casino-sources-integration.json` before implementing so the parser safely supports both shapes if they differ;
+- rerun validation on the exact candidate head;
+- only after green validation should PR #33 be promoted into active integration.
+
+## Remaining Nevada frontier after the Cadence Crossing candidate
+
+### Red Dragon Sports Bar #201 / Red Dragon Casino — Elko
+- Address: `404 S 5th St, Elko, NV 89801`
+- Status: coordinate-only hold.
+- Elko County, licensing, tourism, and directory evidence strongly support Red Dragon as the current canonical consumer-facing identity.
+- Elko County assessor evidence associates the property with parcel `001-422-002` and casino use.
+- Dotty's #214 is a co-located Nevada Restaurant Services concept/license at the same physical property and should **not** become a second routable Dinner Roulette destination.
+- Still missing: direct numerical parcel/building point traceable to the current property.
+- Do not substitute a generic geocode or nearby parcel centroid.
+
+### The Pass Casino — Henderson
+- Status: closure/renovation hold.
+- Do not restore to runtime until reopening is independently confirmed as current.
+
+### Whiskey Pete's / Buffalo Bill's — Primm
+- Current working status: closure exclusions.
+- Primm Valley remains active separately.
+- These may remain exclusions permanently rather than become additions.
+
+Nevada therefore has fewer true add-candidates than raw unresolved names suggest.
+
+## Remaining Oklahoma priority frontier
+
+Three Oklahoma properties remain high-priority coordinate holds. Their current operation/address identity is strong; the problem is direct numerical current-property coordinates.
+
+### Lakecrest Casino and Hotel
+- Address: `1000 US HW 70 E, Ardmore, OK 73401`
+- Current first-party and Chickasaw Nation evidence strongly confirms the operating property and address.
+- Tavily also recovered current property/contact evidence and official tourism references.
+- Waze/third-party route references exist.
+- **Do not use** `34.172006,-97.173354`; that point was identified as adjacent development/commercial land and remains excluded.
+
+### Lake Eufaula Casino Hotel
+- Address: `1045 Birkes Rd, Eufaula, OK 74432`
+- Current first-party Muscogee Nation property pages confirm the current operation, hotel, 24/7 status, address, and phone.
+- Independent research confirms the new property replaced the old Creek Nation Eufaula casino.
+- The old property at `806 W Forrest Ave` is permanently closed.
+- Never reuse the predecessor coordinate for the new casino.
+- TinyFish, Parallel Search, and prior mapping checks strengthened identity evidence but did not yet yield an acceptable current-property numerical point.
+
+### Creek Nation Casino Holdenville
+- Address: `211 E Willow St, Holdenville, OK 74848`
+- Current official site confirms the operation and long-running property.
+- Independent search/map sources also confirm address identity.
+- `35.083599,-96.401627` is a Holdenville city centroid, not the casino, and remains excluded.
+- Still needs a direct numerical current-property point.
+
+## Discovery-stack results from the latest no-deployment sweep
+
+The user explicitly requested aggressive use of the connected discovery stack.
+
+Tools used in the latest pass:
+- **TinyFish**: routine searches for Lake Eufaula and Holdenville current identity/map evidence.
+- **Tavily**: broader Lakecrest research, surfacing Chickasaw Nation, Lakecrest first-party, tourism, MapQuest/Waze, and related references.
+- **Parallel Search**: independent confirmation for Lake Eufaula current first-party pages, opening/replacement context, Holdenville operation, and Lakecrest mapping references.
+- **Firecrawl**: decisive current-property Cadence Crossing discovery; returned a current MapQuest entity with direct numerical coordinates and current-property metadata.
+- **Exa**: not needed in this sweep because the primary stack produced enough useful evidence to clear Cadence Crossing and reinforce the Oklahoma holds without lowering standards.
+
+General lesson from this pass: multiple free discovery sources are useful not because any one is authoritative for everything, but because they can triangulate identity, operation, replacement history, address, and coordinate provenance while preserving the evidence gate.
+
+## Colorado status
+
+Colorado is runtime-complete and green at **31 destinations**:
+- 13 Black Hawk
+- 6 Central City
+- 10 Cripple Creek
+- 2 tribal
+
+Address/property-coordinate QA and duplicate/alias reconciliation are complete in `audit/colorado-statewide-runtime-reconciliation-2026-09-11.json`.
+
+Colorado is maintenance/re-audit only unless new evidence or openings appear.
+
+## Texas status
+
+Texas is runtime-complete and green at **4 destinations**:
+- Kickapoo Lucky Eagle Casino Hotel
+- Naskila Casino Livingston
+- Naskila Casino Leggett
+- Speaking Rock Entertainment Center
+
+Coordinate QA is 4/4. Naskila Leggett provenance is intentionally documented as user-assisted current map-pin verification rather than falsely described as first-party coordinate publication.
+
+Texas is maintenance/re-audit only.
+
+## App behavior and architecture that must remain stable
+
+Nightlife search uses:
+- curated casino passes,
+- Jasper County nightlife catalog,
+- local nightlife catalog,
+- live Overpass discovery with multiple mirrors,
+- runtime merging/deduplication based on name matching and geospatial proximity.
+
+`src/lib/nightlife/search.ts` currently imports casino catalogs sequentially and `dedupeCuratedCasinosLatestWins()` canonicalizes same-property records while preserving historical source files.
+
+Do not casually change this behavior while doing casino cleanup. If broader restructuring becomes desirable, preserve routing behavior, latest-pass precedence, IDs where possible, and auditability.
 
 ## Legal/compliance continuity
 
-Dinner Roulette is an independent discovery/decision tool. Third-party names identify destinations/services without implying affiliation. Casino/nightlife is discovery/trip planning only; Dinner Roulette does not accept wagers, provide gambling, sell alcohol, or guarantee admission. `LEGAL.md` and Settings carry legal/privacy/third-party information.
+Pick For Me / Dinner Roulette is an independent discovery/decision tool.
+- Third-party names identify destinations/services without implying affiliation.
+- Casino/nightlife features are discovery/trip-planning only.
+- The app does not accept wagers, provide gambling, sell alcohol, or guarantee admission.
+- `LEGAL.md` and Settings carry legal/privacy/third-party disclosures.
 
 ## Restaurant icon continuity
 
-Issue #29 remains the original Dinner icon system: 15 semantic categories per theme / 30 canonical assets under `public/dinner-icons/{dark,light}/`, resolved by `src/lib/restaurants/dinner-icons.ts`.
+Issue #29 remains the original Dinner icon system:
+- 15 semantic categories per theme,
+- 30 canonical assets under `public/dinner-icons/{dark,light}/`,
+- resolution through `src/lib/restaurants/dinner-icons.ts`.
+
+Preserve this unless the user explicitly requests a redesign.
 
 ## Caustic Relay / startup-ident continuity
 
-Caustic Relay is the active working maker/publisher brand. The canonical black-mamba/scorpion hybrid creature is immutable unless Caleb explicitly requests redesign. Current startup asset is `public/brand/CAUSTIC_RELAY_ident-2.mp4`, wired by `src/components/startup-ident.tsx`.
+Caustic Relay is the active working maker/publisher brand.
+
+The canonical black-mamba/scorpion hybrid creature is immutable unless Caleb explicitly requests a redesign. Current startup asset:
+- `public/brand/CAUSTIC_RELAY_ident-2.mp4`
+- wired through `src/components/startup-ident.tsx`.
+
+Mordax / Caustic Relay mythology is conceptually connected to user choice and non-coercive intervention, but app engineering should not silently alter the visual identity based on mythology alone.
 
 ## Future food-truck discovery
 
-Food trucks remain a future dedicated mobile-venue pass. Distinguish live/serving now, scheduled today, and discovered nearby. Never roulette a stale registered address as though a truck is confirmed there.
+Food trucks remain a planned dedicated mobile-venue discovery pass.
+
+Important design rule:
+- distinguish **live/serving now**, **scheduled today**, and **discovered nearby**;
+- never roulette a stale registered business address as if a mobile truck is confirmed there.
+
+This feature is one reason the user wants stronger live-discovery infrastructure.
+
+## Immediate next steps for Astra
+
+1. Read this file and inspect PR #33 before making changes.
+2. Fix the `manifest.jurisdictions` iteration bug in `scripts/audit-casino-catalog.mjs` after checking both manifest shapes.
+3. Keep the fix narrow; do not weaken audit assertions.
+4. Trigger/observe exact-head `Validate Dinner Integration` for PR #33.
+5. If the full workflow is green, promote Pass 49 into `integration/active-work-pass-1`; do **not** merge to `main`.
+6. Update continuity immediately after promotion with the exact merge SHA and validated four-state total of 194.
+7. Continue direct-point research on Red Dragon, Lakecrest, Lake Eufaula, and Holdenville using TinyFish → Tavily/Parallel → Firecrawl escalation, with Exa only if the primary stack leaves a meaningful gap.
+8. Re-check The Pass, Whiskey Pete's, and Buffalo Bill's for current operating status before deciding whether they remain exclusions.
+9. Continue all non-deployment cleanup, tests, data prep, UI/data-structure work, and documentation that can be completed while Vercel is blocked.
+10. Only stop when the remaining meaningful tasks truly require live hosted verification/deployment or an inaccessible capability.
 
 ## Merge discipline
 
-`integration/active-work-pass-1` remains the compatibility/validation surface. Preserve historical branches as provenance. Do not merge integration or any feature branch to `main` unless Caleb explicitly requests it. After material runtime/integration changes, inspect `Validate Dinner Integration`. Continuity must remain current.
+- `integration/active-work-pass-1` is the compatibility/integration surface.
+- Feature/candidate branches should validate before promotion.
+- Preserve historical branches and audit artifacts as provenance.
+- Do not merge integration or feature work to `main` unless Caleb explicitly requests it.
+- Do not merge PR #33 while Run 283 is red.
+- After any material runtime/integration change, inspect `Validate Dinner Integration` and update this continuity file.
 
 `main` remains untouched.
