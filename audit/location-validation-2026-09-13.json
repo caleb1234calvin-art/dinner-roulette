@@ -297,6 +297,33 @@
       "runId": 34742332367,
       "head": "469b5d88afceee81293203cfc5545611a3a96485",
       "result": "Location browser harness waited for networkidle and timed out before interaction; all previous gates, including both builds and casino browser smoke, passed. Replaced global network-idle readiness with hydrated controls and isolated external font/analytics requests. Require complete current-head CI before promotion."
+    },
+    {
+      "run": 312,
+      "runId": 34742543436,
+      "head": "93bbd18d6c3babb73053a4547b455f2ed2f28557",
+      "result": "Both builds, tests and casino browser checks passed; location acquisition succeeded, but the window call counter was reset to zero, consistent with development Vite reload. CI location acceptance now uses the built preview, preserving the GPS call-count and all behavior assertions."
     }
-  ]
+  ],
+  "localBuiltPreviewBrowser": {
+    "testedAt": "2026-09-13T06:24:46.246Z",
+    "browser": "Chromium",
+    "mode": "Real local app/RPC; simulated native geolocation coordinates and provider fixtures; error callbacks explicitly mocked",
+    "serverMode": "built preview",
+    "passed": true,
+    "checks": [
+      "No geolocation access on initial load",
+      "Native Chromium geolocation with granted permission sets and persists simulated Toronto coordinates",
+      "GPS coordinates reach restaurant discovery and exact Google Maps destination",
+      "Manual international choice overrides GPS, preserves filters and survives reload without GPS access",
+      "Location is shared across Dinner, Nightlife/casino and Date Night; manual U.K. choice works",
+      "390px mobile layout fits without horizontal overflow",
+      "No-result feedback leaves the last valid location active and manual entry available",
+      "Simulated permission denied, unavailable and timeout errors are visible with the manual form closed",
+      "Unsupported geolocation still permits manual Montréal entry",
+      "Late browser position callback cannot replace a newer manual choice",
+      "No uncaught browser page errors",
+      "Actual server requests use the selected coordinates for all three discovery categories"
+    ]
+  }
 }

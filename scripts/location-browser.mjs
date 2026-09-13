@@ -14,13 +14,14 @@ const output =
 await mkdir(output, { recursive: true });
 const requestLog = resolve(output, "requests.jsonl");
 await writeFile(requestLog, "");
+const useBuiltPreview = process.env.CI === "true" || process.env.LOCATION_BROWSER_PREVIEW === "1";
 const server = spawn(
   process.execPath,
   [
     "--import",
     resolve("scripts/test-support/location-provider-fixtures.mjs"),
     "node_modules/vite/bin/vite.js",
-    "dev",
+    useBuiltPreview ? "preview" : "dev",
     "--host",
     "127.0.0.1",
     "--port",
@@ -237,6 +238,7 @@ try {
         testedAt: new Date().toISOString(),
         browser: "Chromium",
         mode: "Real local app/RPC; simulated native geolocation coordinates and provider fixtures; error callbacks explicitly mocked",
+        serverMode: useBuiltPreview ? "built preview" : "development",
         passed: true,
         checks: results,
       },
@@ -265,6 +267,7 @@ try {
       );
     }
   }
+  console.error(serverLog);
   console.error(error);
   process.exitCode = 1;
 } finally {
