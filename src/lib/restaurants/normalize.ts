@@ -11,7 +11,7 @@ import { isLikelyChain, inferPriceLevel } from "./chains";
 import { cuisineLabelFor, mapOsmCuisines, photoForCuisines } from "./cuisines";
 import { haversineMiles } from "./geo";
 import type { FallbackPlace } from "./fallback-data";
-import type { Restaurant } from "./types";
+import { DEFAULT_LOCATION, type Restaurant } from "./types";
 
 export interface RawPlace {
   id: string;
@@ -58,7 +58,7 @@ export function fallbackToRaw(place: FallbackPlace): RawPlace {
 
 export function rawToRestaurant(place: RawPlace): Restaurant | null {
   if (!place.name || !Number.isFinite(place.lat) || !Number.isFinite(place.lon)) return null;
-  if (isRetiredLocalName(place.name)) return null;
+  if (haversineMiles(place.lat, place.lon, DEFAULT_LOCATION.lat, DEFAULT_LOCATION.lon) <= 40 && isRetiredLocalName(place.name)) return null;
   const cuisines = mapOsmCuisines(place.cuisine, place.amenity, place.name);
   const isChain = isLikelyChain(place.name, place.brand);
   return {

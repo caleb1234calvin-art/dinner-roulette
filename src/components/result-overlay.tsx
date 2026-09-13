@@ -1,3 +1,4 @@
+import { directionsUrl } from "@/lib/location/maps";
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { Ban, ExternalLink, Heart, MapPinned, MoonStar, Phone, RotateCcw, Sparkles, Star, Utensils, X } from "lucide-react";
@@ -75,8 +76,7 @@ export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotT
   }, [restaurant.id, restaurant.name, reelNames, skipSpin]);
 
   if (!mounted) return null;
-  const destination = restaurant.address && restaurant.address !== "Address unavailable" ? restaurant.address : `${restaurant.lat},${restaurant.lon}`;
-  const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
+  const mapsUrl = directionsUrl(restaurant) ?? undefined;
   const visual = restaurantVisual(restaurant.name, restaurant.photoKey, theme, restaurant.cuisineLabel);
   const nightlifeRestaurant = restaurant as DecoratedNightlifePlace;
   const nightlifeIcon = mode === "nightlife" ? nightlifeArtwork(nightlifeRestaurant.venueTypes ?? []) : null;
