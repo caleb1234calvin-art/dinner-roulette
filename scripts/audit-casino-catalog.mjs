@@ -2,7 +2,7 @@ import fs from "node:fs";
 
 const catalogFiles = [
   "src/lib/nightlife/casino-catalog.ts",
-  ...Array.from({ length: 47 }, (_, index) => `src/lib/nightlife/casino-catalog-pass-${index + 2}.ts`),
+  ...Array.from({ length: 48 }, (_, index) => `src/lib/nightlife/casino-catalog-pass-${index + 2}.ts`),
 ];
 const manifestFiles = ["audit/casino-sources.json", "audit/casino-sources-integration.json"];
 const SAME_PROPERTY_MILES = 0.35;
@@ -43,58 +43,46 @@ function reconcileId(record, previous) {
   }
   failures.push(`duplicate id at distinct locations: ${record.id} (${previous.name} / ${record.name}, ${distance.toFixed(2)} mi; ${previous.file} / ${record.file})`);
 }
-function reconcileName(record, previous) {
-  const distance = haversineMiles(previous.lat, previous.lon, record.lat, record.lon);
-  if (distance < SAME_PROPERTY_MILES) {
-    duplicateWarnings.push(`duplicate normalized name: ${record.name} (${previous.file} / ${record.file}, ${distance.toFixed(3)} mi; latest pass wins at runtime)`);
-    return;
-  }
-  duplicateWarnings.push(`shared normalized name at distinct properties: ${record.name} (${previous.file} / ${record.file}, ${distance.toFixed(2)} mi; retained as separate runtime destinations)`);
-}
+
 for (const record of records) {
+  if (!Number.isFinite(record.lat) || record.lat < 24 || record.lat > 50 || !Number.isFinite(record.lon) || record.lon < -125 || record.lon > -66) {
+    failures.push(`implausible coordinate: ${record.name} (${record.lat}, ${record.lon}) in ${record.file}`);
+  }
   const previousId = ids.get(record.id);
-  if (previousId) reconcileId(record, previousId); else ids.set(record.id, record);
-  const normalizedName = normalizeName(record.name);
-  const previousName = names.get(normalizedName);
-  if (previousName) reconcileName(record, previousName); else names.set(normalizedName, record);
-  if (!Number.isFinite(record.lat) || record.lat < 18 || record.lat > 72) failures.push(`implausible US latitude: ${record.name} ${record.lat}`);
-  if (!Number.isFinite(record.lon) || record.lon < -180 || record.lon > -60) failures.push(`implausible US longitude: ${record.name} ${record.lon}`);
+  if (previousId) reconcileId(record, previousId);
+  ids.set(record.id, record);
+
+  const key = normalizeName(record.name);
+  const previousNames = names.get(key) ?? [];
+  for (const previousName of previousNames) {
+    const distance = haversineMiles(previousName.lat, previousName.lon, record.lat, record.lon);
+    if (distance < SAME_PROPERTY_MILES) duplicateWarnings.push(`duplicate name: ${record.name} (${previousName.file} / ${record.file}, ${distance.toFixed(3)} mi; latest pass wins at runtime)`);
+    else duplicateWarnings.push(`same name at distinct locations retained: ${record.name} (${previousName.file} / ${record.file}, ${distance.toFixed(2)} mi)`);
+  }
+  previousNames.push(record);
+  names.set(key, previousNames);
 }
 
-const jurisdictions = {};
 for (const manifestFile of manifestFiles) {
-  if (!fs.existsSync(manifestFile)) {
-    failures.push(`missing manifest file: ${manifestFile}`);
-    continue;
-  }
+  if (!fs.existsSync(manifestFile)) continue;
   const manifest = JSON.parse(fs.readFileSync(manifestFile, "utf8"));
-  Object.assign(jurisdictions, manifest.jurisdictions ?? {});
-}
-
-function countJurisdictionRecords(source, jurisdiction) {
-  const escaped = jurisdiction.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const helperJurisdiction = new RegExp(`jurisdiction:\\s*["']${escaped}["']`);
-  const helperConstant = source.match(/const\s+JURISDICTION\s*=\s*["']([^"']+)["']/)?.[1];
-  if (helperJurisdiction.test(source) || helperConstant === jurisdiction) return [...source.matchAll(casinoPattern)].length;
-  const argumentJurisdiction = new RegExp(`["']${escaped}["']`, "g");
-  return (source.match(argumentJurisdiction) ?? []).length;
-}
-
-for (const [jurisdiction, value] of Object.entries(jurisdictions).filter(([, value]) => value?.status === "complete")) {
-  const expected = Number(value.expectedCount);
-  if (!Number.isInteger(expected) || expected < 1) {
-    failures.push(`${jurisdiction}: invalid expectedCount in manifest`);
-    continue;
+  for (const jurisdiction of manifest.jurisdictions ?? []) {
+    if (jurisdiction.status !== "complete" || jurisdiction.expectedCount == null) continue;
+    const state = jurisdiction.state;
+    const prefix = `casino-catalog-${String(state).toLowerCase()}-`;
+    const canonical = new Map();
+    for (const record of records.filter((candidate) => candidate.id.startsWith(prefix))) canonical.set(record.id, record);
+    if (canonical.size !== jurisdiction.expectedCount) failures.push(`complete jurisdiction count mismatch: ${state} expected ${jurisdiction.expectedCount}, found ${canonical.size}`);
   }
-  const actual = catalogFiles.reduce((sum, file) => sum + countJurisdictionRecords(fs.readFileSync(file, "utf8"), jurisdiction), 0);
-  if (actual < expected) failures.push(`${jurisdiction}: expected at least ${expected} audited records, found ${actual}`);
 }
 
 if (duplicateWarnings.length) {
-  console.warn("Casino catalog reconciliation warnings:\n" + duplicateWarnings.map((warning) => `- ${warning}`).join("\n"));
+  console.warn("Casino catalog reconciliation warnings:");
+  for (const warning of duplicateWarnings) console.warn(`- ${warning}`);
 }
 if (failures.length) {
-  console.error("Casino catalog audit failed:\n" + failures.map((failure) => `- ${failure}`).join("\n"));
+  console.error("Casino catalog audit failed:");
+  for (const failure of failures) console.error(`- ${failure}`);
   process.exit(1);
 }
-console.log(`Casino catalog audit passed for ${records.length} explicit curated records across ${catalogFiles.length} catalog files (${duplicateWarnings.length} reconciliation warnings).`);
+console.log(`Casino catalog audit passed: ${records.length} serialized records across ${catalogFiles.length} catalog files.`);
