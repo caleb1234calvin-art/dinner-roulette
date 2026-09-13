@@ -23,6 +23,8 @@ const { records } = await loadCasinoCatalogs();
 const { canonical } = auditCasinoRecords(records, {});
 const verdict = { origin, fixtures: "Server-side Overpass outage; Nominatim deterministic locations. Actual app, server functions and catalog.", checks: [], errors: [] };
 let browser;
+let currentPage;
+const browserConsole = [];
 try {
   const deadline = Date.now() + 90000;
   while (true) {
@@ -35,6 +37,8 @@ try {
     const label = viewport.width === 390 ? "mobile" : "desktop";
     const context = await browser.newContext({ viewport, reducedMotion: "reduce" });
     const page = await context.newPage();
+    currentPage = page;
+    page.on('console', (message) => { if (message.type() === 'error') browserConsole.push(message.text()); });
     const pageErrors = [];
     page.on("pageerror", (error) => pageErrors.push(error.message));
     // Analytics/fonts are external to this local functional gate.
@@ -46,6 +50,10 @@ try {
     }, label === "mobile" ? { lat: 34.1743, lon: -97.1436, label: "Ardmore, Oklahoma" }
       : { lat: 36.1164, lon: -115.174, label: "Las Vegas, Nevada" });
     await page.goto(origin, { waitUntil: "domcontentloaded" });
+    // Visible SSR buttons can precede React event attachment on a cold dev server.
+    await page.waitForFunction(() => [...document.querySelectorAll("button")].some((button) =>
+      button.textContent?.trim() === "Nightlife" && Object.keys(button).some((key) =>
+        key.startsWith("__reactProps$") && typeof button[key]?.onClick === "function")));
     await page.getByRole("button", { name: "Nightlife", exact: true }).click();
     await page.getByRole("button", { name: "Casino", exact: true }).click();
     const open = page.getByRole("switch", { name: "Open now only", exact: true });
@@ -98,6 +106,10 @@ try {
   }
 } catch (error) {
   verdict.errors.push(error.stack ?? String(error));
+  verdict.browserConsole = browserConsole;
+  verdict.failureBody = await currentPage?.locator("body").innerText().catch(() => "");
+  await currentPage?.screenshot({ path: output + "/failure.png", fullPage: true }).catch(() => {});
+  console.log("CASINO_SMOKE_SERVER_LOG " + serverLog);
   process.exitCode = 1;
 } finally {
   await browser?.close();
