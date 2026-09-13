@@ -288,6 +288,13 @@
     {
       "attempt": "busy-port negative test",
       "result": "Expected nonzero exit when unrelated server occupied 8080; harness failed closed. Successful final verdict preserved separately."
+    },
+    {
+      "attempt": "CI Run 316",
+      "run": 34768414589,
+      "job": 103753445285,
+      "head": "146d8cbfc6440e76b2b26c83bce3567fd3a487e8",
+      "result": "Tests/typecheck/catalog audits/both builds passed. Browser did not run: ANSI color sequences split the owned-server URL in its startup log, causing a false readiness timeout. Both harnesses now strip terminal control sequences before matching. Full local 16-group smoke passed with FORCE_COLOR=1; exact-head CI retry pending."
     }
   ],
   "validation": {

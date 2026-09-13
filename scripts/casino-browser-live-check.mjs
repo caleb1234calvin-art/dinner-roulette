@@ -3,6 +3,7 @@ import { spawn } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
+import { stripVTControlCharacters } from "node:util";
 import { chromium } from "playwright";
 import { loadCasinoCatalogs } from "./casino-catalog-loader.mjs";
 import { auditCasinoRecords } from "./casino-audit.mjs";
@@ -37,7 +38,7 @@ async function settled(page) {
 try {
   const deadline = Date.now() + 60000;
   for (;;) {
-    try { if (server.exitCode === null && serverLog.includes(origin) && (await fetch(origin)).ok) break; } catch { /* The owned preview may still be starting. */ }
+    try { if (server.exitCode === null && stripVTControlCharacters(serverLog).includes(origin) && (await fetch(origin)).ok) break; } catch { /* The owned preview may still be starting. */ }
     if (server.exitCode !== null || Date.now() > deadline) throw new Error("Local preview failed to start");
     await new Promise(r => setTimeout(r, 500));
   }

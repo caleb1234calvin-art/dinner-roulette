@@ -3,6 +3,7 @@ import { spawn } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
+import { stripVTControlCharacters } from "node:util";
 import { chromium } from "playwright";
 import { createTsTestLoader } from "./ts-test-loader.mjs";
 const { haversineMiles } = createTsTestLoader()("src/lib/restaurants/geo.ts");
@@ -49,7 +50,7 @@ const browserConsole = [];
 try {
   const deadline = Date.now() + 90000;
   while (true) {
-    try { if (server.exitCode === null && serverLog.includes(origin) && (await fetch(origin)).ok) break; } catch { /* The owned preview may still be starting. */ }
+    try { if (server.exitCode === null && stripVTControlCharacters(serverLog).includes(origin) && (await fetch(origin)).ok) break; } catch { /* The owned preview may still be starting. */ }
     if (server.exitCode != null || Date.now() > deadline) throw new Error("Local smoke server did not become ready");
     await new Promise((resolve) => setTimeout(resolve, 500));
   }
