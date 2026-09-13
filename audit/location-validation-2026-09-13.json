@@ -303,6 +303,15 @@
       "runId": 34742543436,
       "head": "93bbd18d6c3babb73053a4547b455f2ed2f28557",
       "result": "Both builds, tests and casino browser checks passed; location acquisition succeeded, but the window call counter was reset to zero, consistent with development Vite reload. CI location acceptance now uses the built preview, preserving the GPS call-count and all behavior assertions."
+    },
+    {
+      "run": 313,
+      "runId": 34742834501,
+      "head": "3560e130a26d3d287aa07ee8b014e54d2448bae6",
+      "conclusion": "success",
+      "result": "Clean install, typecheck, all 342 unique tests, casino/national audits, development build, production-mode build without migrations, casino browser acceptance, all 12 location browser checks and 30 Dinner icons passed. This following checkpoint changes documentation only.",
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34742834501",
+      "locationBrowserArtifact": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34742834501/artifacts/10312532427"
     }
   ],
   "localBuiltPreviewBrowser": {
@@ -325,5 +334,19 @@
       "No uncaught browser page errors",
       "Actual server requests use the selected coordinates for all three discovery categories"
     ]
+  },
+  "validatedRuntimeRevision": "3560e130a26d3d287aa07ee8b014e54d2448bae6",
+  "releaseGate": {
+    "implementation": "completed",
+    "tests": "passed",
+    "builds": "development and production-mode passed; no migrations",
+    "browser": "passed with simulated coordinates and deterministic provider fixtures; physical device/PWA/hosted behavior unverified",
+    "liveCanada": "Toronto, Vancouver and Montréal geocoding and restaurant provider returned successfully",
+    "main": "unchanged: c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5",
+    "integrationBase": "unchanged: a6d38616fe4490ff46b87232cbc7abb82f176926",
+    "production": "untouched",
+    "vercelDeployment": false,
+    "mergePerformed": false,
+    "exaUsed": false
   }
 }
