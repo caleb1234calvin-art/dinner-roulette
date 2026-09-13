@@ -12,17 +12,22 @@
     "Texas": 4
   },
   "tests": {
-    "repositoryPassed": 291,
+    "repositoryPassed": 293,
     "applicationPassed": 71,
-    "uniquePassed": 362,
+    "uniquePassed": 364,
     "failed": 0,
     "skipped": 4,
-    "registeredIncludingSkips": 366,
+    "registeredIncludingSkips": 368,
     "casinoSubsetPassed": 83,
     "locationUnitSubsetPassed": 20,
     "sourceLocationTestsRetained": 28,
-    "newIntegrationTests": 5,
-    "independentSourceTotalsAdded": false
+    "newIntegrationTests": 7,
+    "independentSourceTotalsAdded": false,
+    "newIntegrationBreakdown": {
+      "locationController": 2,
+      "combinedProviderMaps": 3,
+      "browserBuildGuards": 2
+    }
   },
   "testInventory": {
     "casinoTestFilesRetainedUnchanged": [
@@ -87,15 +92,16 @@
     "weakened": false
   },
   "currentGates": {
-    "typecheck": "PASS",
+    "typecheck": "PASS final combined source",
     "catalogSchemaIdsChronologyManifest": "PASS",
-    "targetedLint": "PASS for controls/providers/new tests",
+    "targetedLint": "PASS all 30 changed code files",
     "safeDevelopmentBuild": "PASS",
     "safeAuthEnabledProductionBuild": "PASS: direct Vite, no migration",
     "deterministicBrowsers": "PASS: 16 casino + 14 location groups; 12 original location groups retained, 2 added",
-    "realProviderBrowsers": "PENDING",
+    "realProviderBrowsers": "IN_PROGRESS; first casino run rejected a permission-reset harness assumption; explicit-denial retry prepared",
     "adversarialReview": "PENDING",
-    "combinedCI": "PENDING"
+    "combinedCI": "PENDING",
+    "dinnerIcons": "PASS all 30"
   },
   "notes": [
     "All 30 pre-existing casino-branch test files are byte-identical. Both location files retain every original test assertion (AST comparison); loops expand to 28 imported tests.",
@@ -113,5 +119,9 @@
     "occupiedPortNegativeTest": "PASS",
     "guardUnitTests": 2,
     "includedInNextFullSuite": true
+  },
+  "freezeIdentityProof": {
+    "protectedFilesUnchanged": 78,
+    "manifestLockfileViteConfigDeploymentExclusionUnchanged": true
   }
 }

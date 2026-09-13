@@ -4,9 +4,9 @@ Updated September 13, 2026. **Casino + location/international reconciliation is 
 
 ## Latest meaningful checkpoint
 
-Actual combined automated suite is green: 362 unique tests passed. Browser/build acceptance is still pending and is not implied by unit results.
+Both deterministic browser suites pass against the same fingerprinted, auth-enabled production bundle.
 
-Work branch: `integration/casino-location-reconciliation-2026-09-13`. Work commit: **`f67cd8aee3e10396824782530bee8cae5e058331`** — **Preserve both test suites and add combined casino location regressions**.
+Work branch: `integration/casino-location-reconciliation-2026-09-13`. Work commit: **`b53165392f3aa0861f43aa3a618bd443534e1b6a`** — **Combine guarded casino and location browser acceptance**.
 
 Current working branch: `integration/casino-location-reconciliation-2026-09-13`. Frozen starting integration: `183d3e1d71355a27e4bc35a2969d73037c9e6e33`. Preserved location source: `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839`, draft PR #39. Main baseline: `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
 
@@ -24,10 +24,14 @@ Current working branch: `integration/casino-location-reconciliation-2026-09-13`.
 - Imported all ten location discovery/persistence/Maps regression groups and their real application-module loader/fixtures.
 - Verified all 30 existing test files unchanged and all original location assertions retained by AST comparison; no test file or assertion silently disappeared.
 - Added three combined geocoder-to-casino-server-to-Maps regressions, in addition to the two controller race/request tests. Ran the actual complete test runner.
+- Reconciled casino harness input/Maps assertions while retaining all 16 groups, canonical counts, strict ports, owned process cleanup and live semantic pool guards.
+- Location harness retains all 12 original behavior groups and adds two for immediate coordinate/progress and repeated-request prevention; errors now prove automatic manual recovery.
+- Added source/output build fingerprints, auth-enabled checks and two guard regression tests. An actual occupied-port negative check confirmed the location harness refuses an unrelated preview.
+- Both safe builds passed; inspected mobile location and desktop casino screenshots. CI now runs both guarded browser suites after the same direct migration-free production build.
 
 ## Validation of the combined work
 
-npm test: 291 repository + 71 application = 362 unique passed; zero failures; four inherited external-documentation skips (366 registered including skips). Casino subset is 83, location unit subset 20, included in those totals. Typecheck/catalog/manifest and targeted changed-code lint pass. Fresh combined builds/browser gates and CI are still pending.
+Deterministic browsers PASS: 16 casino + 14 location = 30 groups; zero page errors. Owned-port negative check PASS. Two new build-guard tests PASS; full suite was previously 362 and will be rerun to count these additions. Safe development and auth-enabled production builds PASS. Source/output fingerprints verified; targeted browser lint PASS. Real providers and combined CI remain pending.
 
 Independent baselines are historical, not a combined result: casino freeze 329 passed (278 repository + 51 application), four skips, 16 browser groups; location source 342 passed (273 repository + 69 application), four skips, 12 location checks. Casino CI Run 325 and location CI Run 314 passed separately. Never add those totals together.
 
@@ -59,11 +63,11 @@ All four are **B: intentionally external by design / A: unavailable in a clean r
 
 ## BLOCKED / current integration gates
 
-No automated-test failure. Browser harness adaptation and guards, auth-enabled combined builds, real providers, final CI and adversarial integration review remain.
+No deterministic browser defect remains. Full final suite with build-guard tests, real-provider browser validation, icons, adversarial review and combined CI remain.
 
 ## Exact next action
 
-Reconcile current casino browser safeguards and the 12-check location harness, including owned detached process, strict port, correct-build evidence, auth-enabled rendering, new control labels and coordinate Maps destinations. Build a fresh safe production bundle and run both deterministic suites.
+Run final combined automated gates and real-provider browsers. Validate actual international manual geocoding/discovery alongside six casino regions. Record honest provider failures/fallbacks, then checkpoint the first fully green combined state immediately.
 
 ## DEFERRED
 
@@ -92,5 +96,7 @@ Local checkout: /workspace/scratch/60ab73826fd9/pick-for-me-casino. Inspect bran
 - `0c11bb2d5ad2b74389f2b61f4098d5b53fb8c9f2` | `integration/casino-location-reconciliation-2026-09-13` | Reconcile international discovery while preserving frozen casino safeguards
 - `5a7431175b39d401974c414586520fa57f024c8f` | `integration/active-work-pass-1` | Update shared continuity: international and casino provider paths validated
 - `f67cd8aee3e10396824782530bee8cae5e058331` | `integration/casino-location-reconciliation-2026-09-13` | Preserve both test suites and add combined casino location regressions
+- `a454f9977c7feb2d39c64594b62c6ebc02207d7c` | `integration/active-work-pass-1` | Update shared continuity: combined 362-test suite verified
+- `b53165392f3aa0861f43aa3a618bd443534e1b6a` | `integration/casino-location-reconciliation-2026-09-13` | Combine guarded casino and location browser acceptance
 
 This update records already-known work commits. Its own immutable documentation commit SHA is subsequent; inspect the current shared GitHub ref and Actions status. Every major checkpoint is saved and read back from GitHub before the next phase.

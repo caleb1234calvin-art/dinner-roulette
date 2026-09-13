@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "attempts": [
+    {
+      "phase": "combined real casino browser",
+      "result": "FAILED_HARNESS_PERMISSION_ASSUMPTION",
+      "finding": "clearPermissions returned the context to its default permission handling; the next request succeeded instead of rejecting. The test must explicitly deny geolocation and verify the permission state before asserting denial recovery. No product failure is inferred from this attempt.",
+      "evidence": {
+        "buildProof": {
+          "schemaVersion": 1,
+          "status": "BUILT",
+          "authFlag": "true",
+          "source": {
+            "sha256": "45d2cbe02a163079d6dbc9e1144bfb109ce264808df26a4da3d1643a3300c74a",
+            "files": 362
+          },
+          "startedAt": "2026-09-13T19:30:13.574Z",
+          "output": {
+            "sha256": "db20657ccb7f9560f05709dad74d128100ad94c8d1af680c4e0373e40a2a271a",
+            "files": 182
+          },
+          "completedAt": "2026-09-13T19:30:30.403Z"
+        },
+        "capturedAt": "2026-09-13T19:30:50.932Z",
+        "origin": "http://127.0.0.1:8092",
+        "network": "Actual provider requests; no mocked provider responses or geocoder results",
+        "geolocation": "Chromium permission and coordinate emulation; not a physical-device GPS test",
+        "canonicalDestinations": 883,
+        "requestedAuthFlag": "true",
+        "regions": [],
+        "findings": [],
+        "errors": [
+          "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: 'Location permission was denied. You can enter a location manually.' }) to be visible\u001b[22m\n\n    at /workspace/scratch/60ab73826fd9/pick-for-me-casino/scripts/casino-browser-live-check.mjs:114:127"
+        ],
+        "providers": [
+          {
+            "host": "overpass.openstreetmap.fr",
+            "status": 200,
+            "elapsedMs": 9457
+          },
+          {
+            "host": "overpass.openstreetmap.fr",
+            "elapsedMs": 8018,
+            "error": "TimeoutError",
+            "code": 23
+          },
+          {
+            "host": "overpass.openstreetmap.fr",
+            "status": 200,
+            "elapsedMs": 10575
+          },
+          {
+            "host": "overpass.private.coffee",
+            "elapsedMs": 8004,
+            "error": "TimeoutError",
+            "code": 23
+          },
+          {
+            "host": "maps.mail.ru",
+            "elapsedMs": 3978,
+            "error": "TimeoutError",
+            "code": 23
+          },
+          {
+            "host": "nominatim.openstreetmap.org",
+            "status": 200,
+            "elapsedMs": 5837
+          },
+          {
+            "host": "nominatim.openstreetmap.org",
+            "status": 200,
+            "elapsedMs": 20
+          }
+        ],
+        "failureBody": "DINNER ROULETTE \u00b7 NIGHTLIFE\n\nWhat's the Move?\n\nSet the vibe. Let the app pick the place.\n\nDinner\nNightlife\nDate Night\n\nSearching near\n\nReno, Nevada, United States\n\nLocation acquired. Searching near you.\n\nHow far?\n\nWithin 10 miles\n\n1\n3\n5\n10\n15\n20\n30\n40\n50\nBudget\n\n$ \u2014 $$$$\n\n$\n$$\n$$$\n$$$$\nWhat kind of place?\nAnything\nBar\nPub\nClub\nLounge\nBrewery / Beer Garden\nCasino\nWhat's the vibe?\n\nBalanced\n\nChill\nLively\n\nOpen now only\n\nOnly places with confirmed open hours\n\nFavorites only\n\nPick from nightlife spots you've saved\n\nLive discovery is taking the night off\n\nDinner Roulette is using verified saved local nightlife instead, so you can keep picking without interruption.\n\n19 venues match\n\nPICK FOR US\nGIVE US OPTIONS\nPick\nFavorites\nHistory\nSettings",
+        "providerCasinos": []
+      }
+    }
+  ]
+}

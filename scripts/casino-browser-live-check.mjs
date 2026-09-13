@@ -109,7 +109,10 @@ try {
       await page.waitForFunction(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location.source === "geo", null, { timeout: 25000 });
       const saved = await page.evaluate(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location);
       assert.equal(saved.lat, location.lat); assert.equal(saved.lon, location.lon);
-      await context.clearPermissions();
+      // An empty explicit grant denies this origin; clearPermissions alone can
+      // retain a successful cached/default permission path in Chromium.
+      await context.grantPermissions([], { origin });
+      assert.equal(await page.evaluate(async () => (await navigator.permissions.query({ name: "geolocation" })).state), "denied");
       await page.getByRole("button", { name: "Use my location", exact: true }).click();
       await page.getByRole("alert").filter({ hasText: "Location permission was denied. You can enter a location manually." }).waitFor({ timeout: 15000 });
       await page.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill("Reno, Nevada");
@@ -141,6 +144,7 @@ try {
   verdict.providers = serverLog.split("\n").filter(x => x.startsWith("CASINO_LIVE_PROVIDER ")).map(x => JSON.parse(x.slice("CASINO_LIVE_PROVIDER ".length)));
   verdict.providerCasinos = [...new Map(serverLog.split("\n").filter(x => x.startsWith("CASINO_LIVE_ENTITIES "))
     .flatMap(x => JSON.parse(x.slice("CASINO_LIVE_ENTITIES ".length))).map(row => [row.type + "/" + row.id, row])).values()];
+  if (verdict.findings.length || verdict.errors.length) process.exitCode = 1;
   writeFileSync(output + "/verdict.json", JSON.stringify(verdict, null, 2) + "\n");
   console.log("CASINO_LIVE_VERDICT " + JSON.stringify(verdict));
 }
