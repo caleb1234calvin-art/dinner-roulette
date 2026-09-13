@@ -110,7 +110,7 @@ try {
     await page.getByRole("button", { name: "Close options", exact: true }).click();
     await pick.click();
     const firstPick = await assertDirections(page, expectedState);
-    await page.getByText("Hours unconfirmed", { exact: false }).waitFor();
+    await page.getByText("Hours unconfirmed — verify before going.", { exact: true }).waitFor();
     await page.screenshot({ path: output + "/" + label + "-result.png", fullPage: true });
     await page.getByRole("button", { name: "Reroll", exact: true }).click();
     const secondPick = await assertDirections(page, expectedState);
