@@ -10,6 +10,17 @@ import {
 import { lookupLocation, lookupReverseLocation } from "@/lib/restaurants/search";
 import { useAppStore } from "@/lib/store";
 
+function visibleLocationLabel(label: string, source?: string) {
+  if (source === "geo" && label.startsWith("Current location (")) return "Near you";
+  return label;
+}
+
+function visibleStatusMessage(message: string | null) {
+  if (message === "Location acquired. Finding the place name…") return "Finding your area name…";
+  if (message === "Location acquired. Searching near you.") return "Searching near you.";
+  return message;
+}
+
 export function LocationControl() {
   const location = useAppStore((state) => state.location);
   const setLocation = useAppStore((state) => state.setLocation);
@@ -49,12 +60,15 @@ export function LocationControl() {
     void controller.manual(query);
   }
 
+  const displayLabel = visibleLocationLabel(location.label, location.source);
+  const displayStatus = visibleStatusMessage(status.message);
+
   return (
     <section className="rounded-xl bg-surface p-4 shadow-border" aria-label="Search location">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-xs text-subtle">Searching near</p>
-          <p className="break-words text-base text-fg">{location.label}</p>
+          <p className="break-words text-base text-fg">{displayLabel}</p>
         </div>
         <div className="flex shrink-0 gap-1">
           <Button
@@ -85,9 +99,9 @@ export function LocationControl() {
           </Button>
         </div>
       </div>
-      {status.message ? (
+      {displayStatus ? (
         <p role="status" className="mt-2 text-sm text-muted">
-          {status.message}
+          {displayStatus}
         </p>
       ) : null}
       {status.error ? (
