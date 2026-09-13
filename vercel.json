@@ -1,5 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "git": {
+    "deploymentEnabled": {
+      "integration/**": false
+    }
+  },
   "images": {
     "sizes": [640],
     "localPatterns": [

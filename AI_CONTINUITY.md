@@ -1,5 +1,24 @@
 # Dinner Roulette / Pick For Me — AI Continuity
 
+## Current recovery — September 13, 2026
+
+This section supersedes conflicting historical handoff claims below. Historical evidence files and the original handoff are retained for provenance.
+
+- Continue integration-only development. Do not change or merge to `main` and do not deploy to Vercel.
+- The starting PR #33 head is `f0d31d0438f5e89a6264ea3329754d71049f2ba7`; active integration remains `29a778fca910d1fd5f112f5ac139f4f7d1ac7ccf`. Main was checked at `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
+- The audit now merges keyed jurisdiction objects in base-then-integration order and loads the actual exported catalog records with the existing TypeScript dependency. Factory-added IDs and jurisdiction metadata are preserved.
+- Canonical counts follow the existing chronological runtime reconciliation rules. Complete-state exact-count assertions, same-ID distinct-location failures and coordinate plausibility remain hard gates. No runtime reconciliation behavior was changed.
+- Twelve pure audit regression cases are added as a required workflow step. The workflow explicitly checks out and prints the exact PR head; the inherited general test suite retains its existing report-only setting.
+- Integration branch automatic deployments are disabled in vercel.json via git.deploymentEnabled for integration/**, following https://vercel.com/docs/project-configuration/git-configuration. Do not rely on historical Vercel rate limits to prevent deployment.
+- CRITICAL CORRECTION: Cadence Crossing's handoff point 36.08622,-115.03321 is unsupported. Raw named MapQuest LocalBusiness fields put the current property at 36.052633,-114.994834, about 3.159 miles away. See audit/cadence-crossing-coordinate-correction-2026-09-13.json. The official directions page still links to a legacy Jokers Wild marker; that marker is not the current coordinate source. Prior ready-to-promote claims are superseded.
+- The local execution environment is unavailable after its connection failed. Pure helper checks are not a substitute for full GitHub validation. This commit is a candidate, not evidence of a green workflow or promotion.
+- Follow-up research has recovered current-property numerical evidence for Red Dragon Elko, Lakecrest, Lake Eufaula and Holdenville. Keep those additions separate from Pass 49 promotion until evidence is recorded and their own exact-head validation passes.
+- The Pass, Whiskey Pete's and Buffalo Bill's remain closure/renovation holds without confirmed current daily gaming. Primm Valley is separate and has July 22, 2026 reopening evidence.
+- Next: validate corrected Pass 49; resolve any genuine discrepancies without relaxing the gate; promote PR #33 only when green; record exact validated/merge SHAs; then prepare and validate the four follow-up destinations.
+- Earlier save attempts timed out in automatic permission review. Caleb explicitly approved retrying. No approval is implied for main changes or deployment.
+
+## Historical handoff (superseded where noted above)
+
 _Last updated: September 12, 2026, immediately before handoff to GPT-6 Astra_
 
 ## Handoff purpose

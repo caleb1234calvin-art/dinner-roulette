@@ -32,8 +32,8 @@ export const CASINO_CATALOG_PASS_49: NightlifePlace[] = [
   casino(
     "casino-catalog-nv-cadence-crossing",
     "Cadence Crossing Casino",
-    36.08622,
-    -115.03321,
+    36.052633,
+    -114.994834,
     "920 N Boulder Hwy, Henderson, NV 89011",
     "https://cadencecrossing.boydgaming.com/",
   ),
