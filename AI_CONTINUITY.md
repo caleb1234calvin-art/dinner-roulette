@@ -13,6 +13,18 @@ Updated September 13, 2026 after non-production integration of the validated cas
 - Do not delegate to another agent unless Caleb explicitly requests it. Preserve user edits and historical evidence.
 - Before non-production promotion, re-read PR/base refs and exact-head CI. Use expected head SHA. Do not merge to main.
 
+## Location and international discovery update — September 13
+
+The focused location release source is `integration/location-international-2026-09-13`, based on casino integration checkpoint `a6d38616fe4490ff46b87232cbc7abb82f176926`. Read [LOCATION_HANDOFF.md](LOCATION_HANDOFF.md) for completed work, live Canada evidence, precise browser limits, validation commands, file changes and the physical-device checklist. The pre-edit trace is in `audit/location-architecture-2026-09-13.md`; final evidence is in `audit/location-validation-2026-09-13.json`.
+
+- **COMPLETED:** shared explicit-action GPS control; immediate coordinate use; visible progress/errors; manual override/race protection; optional country/code, region and locality metadata; removal of the U.S.-only geocoder filter; international address preservation; coordinate Maps destinations; geographically scoped local closure exclusions. Legacy U.S. locations, filters and bounded fallback remain compatible.
+- **VALIDATED:** live geocoding of U.S./Canada/U.K. examples, including Joplin ZIP 64801; actual restaurant provider results in Toronto/Vancouver/Montréal; 342 tests passed, zero failures, four inherited documentation skips; typecheck, clean install and casino audits passed. The development build generated local artifacts. Local Chromium passed 12 location checks using simulated coordinates and deterministic provider fixtures through the real app/RPC.
+- **REQUIRES DEVICE VALIDATION:** physical GPS, Android/iOS permission dialogs, installed PWA and real hosted/external Maps acceptance. Do not describe these as passed. The detailed handoff distinguishes native browser geolocation with simulated coordinates from explicitly mocked error callbacks and live provider calls.
+- **DEFERRED:** main/production deployment; destination-timezone Open-now correctness, metric/currency/localized UI and broader country coverage projects. Casino expansion remains separate.
+- **TOOLS:** no Exa. The current location work order explicitly excludes it; historical reserve-tool wording is not authorization.
+
+The location branch preserves the independently completed 808-destination casino catalog, all 54 passes, closure holds, provider normalization and selection hardening. No casino data was added, removed or rewritten by the location update. The inherited casino browser test was adjusted only for the new location field label and coordinate Maps links. The integration workflow now also exercises the location smoke; no deployment stage was added.
+
 ## Current release facts
 
 | Scope | Canonical destinations |
@@ -90,7 +102,7 @@ Next: use the current non-production integration branch, verify its latest docum
 
 Safe commands: `npm ci --no-audit --no-fund`, `npm run typecheck`, `npm test`, `node --test scripts/casino-*.test.mjs`, `npm run audit:casinos`, `npm run build:dev`, and `node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`. **Do not use `npm run build`: it chains database migrations.**
 
-If local execution returns, inspect the existing dirty checkout before editing. Do not overwrite it or confuse it with the validated remote state. Browser instructions and precise limits are in `audit/casino-browser-release-checklist-2026-09-13.md`. Revert a non-production integration merge through review if recovery is needed; preserve evidence/history and avoid force-pushing shared branches.
+Local execution was available for the subsequent location update, including its scoped Chromium checks. Inspect any existing dirty checkout before editing. Do not overwrite it or confuse it with the validated remote state. Browser instructions and precise limits are in `audit/casino-browser-release-checklist-2026-09-13.md`. Revert a non-production integration merge through review if recovery is needed; preserve evidence/history and avoid force-pushing shared branches.
 
 ## Preserve product behavior and identity
 

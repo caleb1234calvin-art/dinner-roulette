@@ -1,0 +1,293 @@
+{
+  "scope": "Location/international candidate; no deployment",
+  "originalBase": "877ff08c300a9d149aa174e9c47471d57bc98ccd",
+  "validatedBase": "a6d38616fe4490ff46b87232cbc7abb82f176926",
+  "branch": "integration/location-international-2026-09-13",
+  "liveGeocoding": {
+    "testedAt": "2026-09-13T05:48:15.880Z",
+    "results": [
+      {
+        "query": "Joplin, Missouri, USA",
+        "location": {
+          "lat": 37.0841838,
+          "lon": -94.5133385,
+          "label": "Joplin, Missouri, United States",
+          "locality": "Joplin",
+          "region": "Missouri",
+          "country": "United States",
+          "countryCode": "US"
+        }
+      },
+      {
+        "query": "Toronto, Ontario, Canada",
+        "location": {
+          "lat": 43.6534817,
+          "lon": -79.3839347,
+          "label": "Toronto, Ontario, Canada",
+          "locality": "Toronto",
+          "region": "Ontario",
+          "country": "Canada",
+          "countryCode": "CA"
+        }
+      },
+      {
+        "query": "Vancouver, British Columbia, Canada",
+        "location": {
+          "lat": 49.2608724,
+          "lon": -123.113952,
+          "label": "Vancouver, British Columbia, Canada",
+          "locality": "Vancouver",
+          "region": "British Columbia",
+          "country": "Canada",
+          "countryCode": "CA"
+        }
+      },
+      {
+        "query": "Montréal, Québec, Canada",
+        "location": {
+          "lat": 45.5031824,
+          "lon": -73.5698065,
+          "label": "Montréal, Québec, Canada",
+          "locality": "Montréal",
+          "region": "Québec",
+          "country": "Canada",
+          "countryCode": "CA"
+        }
+      },
+      {
+        "query": "London, United Kingdom",
+        "location": {
+          "lat": 51.5074456,
+          "lon": -0.1277653,
+          "label": "Greater London, England, United Kingdom",
+          "locality": "Greater London",
+          "region": "England",
+          "country": "United Kingdom",
+          "countryCode": "GB"
+        }
+      },
+      {
+        "query": "Portland, Oregon, USA",
+        "location": {
+          "lat": 45.5202471,
+          "lon": -122.674194,
+          "label": "Portland, Oregon, United States",
+          "locality": "Portland",
+          "region": "Oregon",
+          "country": "United States",
+          "countryCode": "US"
+        }
+      },
+      {
+        "query": "64801",
+        "location": {
+          "lat": 37.0955858,
+          "lon": -94.5001409,
+          "label": "Joplin, Missouri, United States",
+          "locality": "Joplin",
+          "region": "Missouri",
+          "country": "United States",
+          "countryCode": "US"
+        }
+      },
+      {
+        "query": "Toronto, Ontario",
+        "location": {
+          "lat": 43.6534817,
+          "lon": -79.3839347,
+          "label": "Toronto, Ontario, Canada",
+          "locality": "Toronto",
+          "region": "Ontario",
+          "country": "Canada",
+          "countryCode": "CA"
+        }
+      },
+      {
+        "query": "Vancouver, British Columbia",
+        "location": {
+          "lat": 49.2608724,
+          "lon": -123.113952,
+          "label": "Vancouver, British Columbia, Canada",
+          "locality": "Vancouver",
+          "region": "British Columbia",
+          "country": "Canada",
+          "countryCode": "CA"
+        }
+      }
+    ]
+  },
+  "liveBusinesses": {
+    "testedAt": "2026-09-13T05:53:46.685Z",
+    "radiusMiles": 1,
+    "results": [
+      {
+        "query": "Toronto, Ontario, Canada",
+        "location": {
+          "lat": 43.6534817,
+          "lon": -79.3839347,
+          "label": "Toronto, Ontario, Canada",
+          "locality": "Toronto",
+          "region": "Ontario",
+          "country": "Canada",
+          "countryCode": "CA"
+        },
+        "count": 1671,
+        "examples": [
+          {
+            "id": "osm-node-42395700",
+            "name": "Burger King",
+            "lat": 43.6577736,
+            "lon": -79.3996819,
+            "address": "267 College Street, Toronto"
+          },
+          {
+            "id": "osm-node-42606718",
+            "name": "McDonald's",
+            "lat": 43.6536955,
+            "lon": -79.3909786,
+            "address": "109 McCaul Street, Toronto, M5T 3K5"
+          },
+          {
+            "id": "osm-node-53542349",
+            "name": "Nord Lyon Cafe",
+            "lat": 43.6500196,
+            "lon": -79.3909545,
+            "address": "250 Queen Street West, Toronto"
+          }
+        ],
+        "requests": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "status": 200,
+            "durationMs": 6421
+          }
+        ]
+      },
+      {
+        "query": "Vancouver, British Columbia, Canada",
+        "location": {
+          "lat": 49.2608724,
+          "lon": -123.113952,
+          "label": "Vancouver, British Columbia, Canada",
+          "locality": "Vancouver",
+          "region": "British Columbia",
+          "country": "Canada",
+          "countryCode": "CA"
+        },
+        "count": 360,
+        "examples": [
+          {
+            "id": "osm-node-444150756",
+            "name": "Waves Coffee House",
+            "lat": 49.2635825,
+            "lon": -123.128836,
+            "address": "1095 West Broadway"
+          },
+          {
+            "id": "osm-node-502425631",
+            "name": "Starbucks",
+            "lat": 49.2733859,
+            "lon": -123.1200283,
+            "address": "125 Davie Street, Vancouver, BC"
+          },
+          {
+            "id": "osm-node-567142934",
+            "name": "Elysian Coffee Roasters",
+            "lat": 49.2631012,
+            "lon": -123.1172946,
+            "address": "590 West Broadway"
+          }
+        ],
+        "requests": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "status": 200,
+            "durationMs": 1545
+          }
+        ]
+      },
+      {
+        "query": "Montréal, Québec, Canada",
+        "location": {
+          "lat": 45.5031824,
+          "lon": -73.5698065,
+          "label": "Montréal, Québec, Canada",
+          "locality": "Montréal",
+          "region": "Québec",
+          "country": "Canada",
+          "countryCode": "CA"
+        },
+        "count": 1014,
+        "examples": [
+          {
+            "id": "osm-node-237575895",
+            "name": "Noodles Star",
+            "lat": 45.493071,
+            "lon": -73.5804177,
+            "address": "1871 Rue Sainte-Catherine Ouest, Montréal, QC, H3H 1M1"
+          },
+          {
+            "id": "osm-node-237584792",
+            "name": "Frite Alors!",
+            "lat": 45.513161,
+            "lon": -73.5706145,
+            "address": ""
+          },
+          {
+            "id": "osm-node-245512739",
+            "name": "3 Brasseurs",
+            "lat": 45.497185,
+            "lon": -73.5754903,
+            "address": "1356 Rue Sainte-Catherine Ouest, Montréal, Québec, H3G 1P6"
+          }
+        ],
+        "requests": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "status": 200,
+            "durationMs": 1569
+          }
+        ]
+      }
+    ]
+  },
+  "businessEvidenceLimit": "Observed normalized OpenStreetMap results through the existing restaurant provider at one-mile radius; not a complete city inventory or verification of individual venue opening status.",
+  "browser": {
+    "testedAt": "2026-09-13T06:06:04.645Z",
+    "browser": "Chromium",
+    "mode": "Real local app/RPC; simulated native geolocation coordinates and provider fixtures; error callbacks explicitly mocked",
+    "passed": true,
+    "checks": [
+      "No geolocation access on initial load",
+      "Native Chromium geolocation with granted permission sets and persists simulated Toronto coordinates",
+      "GPS coordinates reach restaurant discovery and exact Google Maps destination",
+      "Manual international choice overrides GPS, preserves filters and survives reload without GPS access",
+      "Location is shared across Dinner, Nightlife/casino and Date Night; manual U.K. choice works",
+      "390px mobile layout fits without horizontal overflow",
+      "No-result feedback leaves the last valid location active and manual entry available",
+      "Simulated permission denied, unavailable and timeout errors are visible with the manual form closed",
+      "Unsupported geolocation still permits manual Montréal entry",
+      "Late browser position callback cannot replace a newer manual choice",
+      "No uncaught browser page errors",
+      "Actual server requests use the selected coordinates for all three discovery categories"
+    ]
+  },
+  "tests": {
+    "repositoryPassed": 273,
+    "applicationPassed": 69,
+    "totalPassed": 342,
+    "failed": 0,
+    "externalDocumentationSkipped": 4,
+    "newLocationTests": 28,
+    "browserChecks": 12
+  },
+  "catalogRegression": {
+    "serializedRows": 824,
+    "canonicalDestinations": 808,
+    "passes": 54,
+    "casinoDataChangedByLocationWork": false
+  },
+  "physicalDevicesTested": false,
+  "noExaUsed": true,
+  "noDeployment": true
+}

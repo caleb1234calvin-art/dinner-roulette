@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useState, type FormEvent } from "react";
-import { LayoutGrid, LocateFixed, MapPin, Shuffle } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { LayoutGrid, Shuffle } from "lucide-react";
 import { DiscoveryLoading, DiscoveryNotice } from "@/components/discovery-status";
 import { OptionsOverlay } from "@/components/options-overlay";
 import { ResultOverlay } from "@/components/result-overlay";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { LocationControl } from "@/components/location-control";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { weightedPick, pickOptions, eligibleNightlife } from "@/lib/nightlife/selection";
@@ -20,7 +20,6 @@ import {
 } from "@/lib/nightlife/types";
 import { decorateAll } from "@/lib/restaurants/decorate";
 import { formatPrice } from "@/lib/restaurants/hours";
-import { lookupLocation, lookupReverseLocation } from "@/lib/restaurants/search";
 import { DISTANCE_OPTIONS, type DecoratedRestaurant, type Restaurant } from "@/lib/restaurants/types";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
@@ -30,7 +29,6 @@ export function NightlifeHome() {
   const preferences = useAppStore((s) => s.preferences);
   const exclusions = useAppStore((s) => s.exclusions);
   const sessionShown = useAppStore((s) => s.sessionShown);
-  const setLocation = useAppStore((s) => s.setLocation);
   const markShown = useAppStore((s) => s.markShown);
   const excludeTonight = useAppStore((s) => s.excludeTonight);
 
@@ -39,10 +37,6 @@ export function NightlifeHome() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [warning, setWarning] = useState<string | null>(null);
-  const [locOpen, setLocOpen] = useState(false);
-  const [locQuery, setLocQuery] = useState("");
-  const [locBusy, setLocBusy] = useState(false);
-  const [locError, setLocError] = useState<string | null>(null);
   const [pick, setPick] = useState<DecoratedNightlifePlace | null>(null);
   const [reelNames, setReelNames] = useState<string[]>([]);
   const [skipSpin, setSkipSpin] = useState(false);
@@ -102,52 +96,6 @@ export function NightlifeHome() {
     updateFilters({ venueTypes: next.length ? next : ["anything"] });
   }
 
-  async function useDeviceLocation() {
-    setLocBusy(true);
-    setLocError(null);
-    if (!navigator.geolocation) {
-      setLocError("Location isn't available in this browser.");
-      setLocBusy(false);
-      return;
-    }
-    navigator.geolocation.getCurrentPosition(
-      async (pos) => {
-        try {
-          const result = await lookupReverseLocation({ data: { lat: pos.coords.latitude, lon: pos.coords.longitude } });
-          setLocation({ ...result, source: "geo" });
-          setLocOpen(false);
-        } catch {
-          setLocation({ lat: pos.coords.latitude, lon: pos.coords.longitude, label: "Current location", source: "geo" });
-          setLocOpen(false);
-        } finally {
-          setLocBusy(false);
-        }
-      },
-      () => {
-        setLocError("Location permission denied. Enter a city or ZIP instead.");
-        setLocBusy(false);
-      },
-      { enableHighAccuracy: true, timeout: 10000 },
-    );
-  }
-
-  async function searchManualLocation(event: FormEvent) {
-    event.preventDefault();
-    if (!locQuery.trim()) return;
-    setLocBusy(true);
-    setLocError(null);
-    try {
-      const result = await lookupLocation({ data: { query: locQuery } });
-      setLocation({ ...result, source: "manual" });
-      setLocOpen(false);
-      setLocQuery("");
-    } catch (err) {
-      setLocError(err instanceof Error ? err.message : "Couldn't find that place");
-    } finally {
-      setLocBusy(false);
-    }
-  }
-
   function roll(pool = eligible) {
     const chosen = weightedPick(pool, filters.energy, sessionShown);
     if (!chosen) return;
@@ -175,32 +123,7 @@ export function NightlifeHome() {
         <p className="mt-2 max-w-sm text-sm text-muted">Set the vibe. Let the app pick the place.</p>
       </header>
 
-      <section className="rounded-xl bg-surface p-4 shadow-border">
-        <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <p className="text-xs text-subtle">Searching near</p>
-            <p className="truncate text-base text-fg">{location.label}</p>
-          </div>
-          <div className="flex gap-1">
-            <Button variant="ghost" size="icon" aria-label="Use current location" onClick={useDeviceLocation}>
-              <LocateFixed className="size-5" />
-            </Button>
-            <Button variant="ghost" size="icon" aria-label="Change location" onClick={() => setLocOpen((value) => !value)}>
-              <MapPin className="size-5" />
-            </Button>
-          </div>
-        </div>
-        {locOpen ? (
-          <form className="mt-4 space-y-3" onSubmit={searchManualLocation}>
-            <Input value={locQuery} onChange={(event) => setLocQuery(event.target.value)} placeholder="City or ZIP code" aria-label="City or ZIP code" />
-            {locError ? <p className="text-sm text-danger">{locError}</p> : null}
-            <div className="flex gap-2">
-              <Button type="submit" className="flex-1" disabled={locBusy}>{locBusy ? "Finding…" : "Set location"}</Button>
-              <Button type="button" variant="secondary" onClick={() => setLocOpen(false)}>Cancel</Button>
-            </div>
-          </form>
-        ) : null}
-      </section>
+      <LocationControl />
 
       <section className="mt-6">
         <div className="mb-3 flex items-end justify-between">

@@ -1,3 +1,4 @@
+import { formatOsmAddress, requireCoordinates } from "../location/model";
 import type { RawPlace } from "./normalize";
 
 const MIRRORS = [
@@ -36,10 +37,7 @@ function elementToRaw(element: OverpassElement): RawPlace | null {
   const lat = element.lat ?? element.center?.lat;
   const lon = element.lon ?? element.center?.lon;
   if (lat == null || lon == null) return null;
-  const house = tags["addr:housenumber"] ?? "";
-  const street = tags["addr:street"] ?? "";
-  const city = tags["addr:city"] ?? "";
-  const address = [ `${house} ${street}`.trim(), city ].filter(Boolean).join(", ");
+  const address = formatOsmAddress(tags);
   return {
     id: `osm-${element.type}-${element.id}`,
     name,
@@ -69,7 +67,8 @@ async function queryMirror(url: string, body: string): Promise<RawPlace[]> {
   if (!response.ok) {
     throw new Error(`Overpass ${response.status}`);
   }
-  const json = (await response.json()) as { elements?: OverpassElement[] };
+  const json = (await response.json()) as { elements?: OverpassElement[]; remark?: string };
+  if (!Array.isArray(json?.elements) || json.remark) throw new Error("Live discovery returned an incomplete response. Please try again.");
   const unique = new Map<string, RawPlace>();
   for (const element of json.elements ?? []) {
     const raw = elementToRaw(element);
@@ -84,16 +83,20 @@ export async function fetchOverpassPlaces(
   lon: number,
   radiusMiles: number,
 ): Promise<RawPlace[]> {
+  requireCoordinates({ lat, lon });
   const radiusMeters = Math.min(Math.max(radiusMiles, 1) * 1609.34, 80467);
   const body = `data=${encodeURIComponent(QUERY(lat, lon, radiusMeters))}`;
   let lastError: unknown;
+  let hadSuccessfulResponse = false;
   for (const mirror of MIRRORS) {
     try {
       const places = await queryMirror(mirror, body);
+      hadSuccessfulResponse = true;
       if (places.length > 0) return places;
     } catch (error) {
       lastError = error;
     }
   }
+  if (hadSuccessfulResponse) return [];
   throw lastError instanceof Error ? lastError : new Error("Restaurant search failed");
 }

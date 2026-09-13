@@ -1,17 +1,17 @@
-import { useEffect, useMemo, useState, type FormEvent } from "react";
-import { ChevronDown, LayoutGrid, LocateFixed, MapPin, Shuffle, SlidersHorizontal } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { ChevronDown, LayoutGrid, Shuffle, SlidersHorizontal } from "lucide-react";
 import { DiscoveryLoading, DiscoveryNotice } from "@/components/discovery-status";
 import { OptionsOverlay } from "@/components/options-overlay";
 import { ResultOverlay } from "@/components/result-overlay";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { LocationControl } from "@/components/location-control";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { PRESETS } from "@/lib/presets";
 import { CUISINE_CHIPS, PRIMARY_CUISINES, isAnythingSelected } from "@/lib/restaurants/cuisines";
 import { decorateAll } from "@/lib/restaurants/decorate";
 import { formatPrice } from "@/lib/restaurants/hours";
-import { lookupLocation, lookupReverseLocation, searchRestaurants } from "@/lib/restaurants/search";
+import { searchRestaurants } from "@/lib/restaurants/search";
 import { DISTANCE_OPTIONS, type CuisineId, type DecoratedRestaurant, type Restaurant } from "@/lib/restaurants/types";
 import {
   applyHardFilters,
@@ -37,7 +37,6 @@ export function PickHome() {
   const visits = useAppStore((s) => s.visits);
   const exclusions = useAppStore((s) => s.exclusions);
   const sessionShown = useAppStore((s) => s.sessionShown);
-  const setLocation = useAppStore((s) => s.setLocation);
   const setFilters = useAppStore((s) => s.setFilters);
   const toggleCuisine = useAppStore((s) => s.toggleCuisine);
   const applyPreset = useAppStore((s) => s.applyPreset);
@@ -51,10 +50,6 @@ export function PickHome() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [warning, setWarning] = useState<string | null>(null);
-  const [locOpen, setLocOpen] = useState(false);
-  const [locQuery, setLocQuery] = useState("");
-  const [locBusy, setLocBusy] = useState(false);
-  const [locError, setLocError] = useState<string | null>(null);
   const [pick, setPick] = useState<DecoratedRestaurant | null>(null);
   const [reelNames, setReelNames] = useState<string[]>([]);
   const [skipSpin, setSkipSpin] = useState(false);
@@ -70,32 +65,6 @@ export function PickHome() {
   useEffect(() => {
     setOptionHistory([]);
   }, [location.lat, location.lon, filters]);
-
-  useEffect(() => {
-    if (location.source !== "default") return;
-    if (!navigator.geolocation) return;
-    navigator.geolocation.getCurrentPosition(
-      async (pos) => {
-        try {
-          const result = await lookupReverseLocation({
-            data: { lat: pos.coords.latitude, lon: pos.coords.longitude },
-          });
-          setLocation({ ...result, source: "geo" });
-        } catch {
-          setLocation({
-            lat: pos.coords.latitude,
-            lon: pos.coords.longitude,
-            label: "Current location",
-            source: "geo",
-          });
-        }
-      },
-      () => {
-        // Keep Joplin default when permission is denied.
-      },
-      { enableHighAccuracy: false, timeout: 8000, maximumAge: 300000 },
-    );
-  }, [location.source, setLocation]);
 
   useEffect(() => {
     let cancelled = false;
@@ -142,59 +111,6 @@ export function PickHome() {
   );
 
   const eligible = useMemo(() => applyHardFilters(decorated, ctx), [decorated, ctx]);
-
-  async function useDeviceLocation() {
-    setLocBusy(true);
-    setLocError(null);
-    if (!navigator.geolocation) {
-      setLocError("Location isn't available in this browser.");
-      setLocBusy(false);
-      return;
-    }
-    navigator.geolocation.getCurrentPosition(
-      async (pos) => {
-        try {
-          const result = await lookupReverseLocation({
-            data: { lat: pos.coords.latitude, lon: pos.coords.longitude },
-          });
-          setLocation({ ...result, source: "geo" });
-          setLocOpen(false);
-        } catch {
-          setLocation({
-            lat: pos.coords.latitude,
-            lon: pos.coords.longitude,
-            label: "Current location",
-            source: "geo",
-          });
-          setLocOpen(false);
-        } finally {
-          setLocBusy(false);
-        }
-      },
-      () => {
-        setLocError("Location permission denied. Enter a city or ZIP instead.");
-        setLocBusy(false);
-      },
-      { enableHighAccuracy: true, timeout: 10000 },
-    );
-  }
-
-  async function searchManualLocation(event: FormEvent) {
-    event.preventDefault();
-    if (!locQuery.trim()) return;
-    setLocBusy(true);
-    setLocError(null);
-    try {
-      const result = await lookupLocation({ data: { query: locQuery } });
-      setLocation({ ...result, source: "manual" });
-      setLocOpen(false);
-      setLocQuery("");
-    } catch (err) {
-      setLocError(err instanceof Error ? err.message : "Couldn't find that place");
-    } finally {
-      setLocBusy(false);
-    }
-  }
 
   function eligiblePool(): DecoratedRestaurant[] {
     if (eligible.length > 0) return eligible;
@@ -284,46 +200,7 @@ export function PickHome() {
         <p className="mt-2 max-w-sm text-sm text-muted">You set the rules. The app helps decide.</p>
       </header>
 
-      <section className="rounded-xl bg-surface p-4 shadow-border">
-        <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <p className="text-xs text-subtle">Searching near</p>
-            <p className="truncate text-base text-fg">{location.label}</p>
-          </div>
-          <div className="flex gap-1">
-            <Button variant="ghost" size="icon" aria-label="Use current location" onClick={useDeviceLocation}>
-              <LocateFixed className="size-5" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              aria-label="Change location"
-              onClick={() => setLocOpen((value) => !value)}
-            >
-              <MapPin className="size-5" />
-            </Button>
-          </div>
-        </div>
-        {locOpen ? (
-          <form className="mt-4 space-y-3" onSubmit={searchManualLocation}>
-            <Input
-              value={locQuery}
-              onChange={(event) => setLocQuery(event.target.value)}
-              placeholder="City or ZIP code"
-              aria-label="City or ZIP code"
-            />
-            {locError ? <p className="text-sm text-danger">{locError}</p> : null}
-            <div className="flex gap-2">
-              <Button type="submit" className="flex-1" disabled={locBusy}>
-                {locBusy ? "Finding…" : "Set location"}
-              </Button>
-              <Button type="button" variant="secondary" onClick={() => setLocOpen(false)}>
-                Cancel
-              </Button>
-            </div>
-          </form>
-        ) : null}
-      </section>
+      <LocationControl />
 
       <section className="mt-5">
         <div className="flex gap-2 overflow-x-auto pb-1">

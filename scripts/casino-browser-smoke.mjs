@@ -32,8 +32,7 @@ async function assertDirections(page, expectedState) {
   assert.equal(url.origin, "https://www.google.com");
   assert.equal(url.pathname, "/maps/dir/");
   assert.equal(url.searchParams.get("api"), "1");
-  const expected = record.address && record.address !== "Address unavailable"
-    ? record.address : `${record.lat},${record.lon}`;
+  const expected = `${record.lat},${record.lon}`;
   assert.equal(url.searchParams.get("destination"), expected, "Directions must target the displayed canonical property");
   assert.equal(await link.getAttribute("target"), "_blank");
   assert.match(await link.getAttribute("rel"), /noopener/);
@@ -124,7 +123,7 @@ try {
     assert.equal(await pick.isDisabled(), true);
     await page.getByRole("switch", { name: "Favorites only", exact: true }).click();
     await page.getByRole("button", { name: "Change location", exact: true }).click();
-    await page.getByRole("textbox", { name: "City or ZIP code", exact: true }).fill("Empty Test");
+    await page.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill("Empty Test");
     await page.getByRole("button", { name: "Set location", exact: true }).click();
     await page.getByText("We couldn't refresh nightlife right now", { exact: true }).waitFor();
     assert.equal(await pick.isDisabled(), true);
