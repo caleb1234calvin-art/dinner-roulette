@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { casinoSchemaFailures } from "./casino-schema.mjs";
 import { loadCasinoCatalogs } from "./casino-catalog-loader.mjs";
 import { auditCasinoRecords, auditManifestCoverage, mergeJurisdictions } from "./casino-audit.mjs";
 
@@ -11,7 +12,7 @@ try {
     path, data: JSON.parse(fs.readFileSync(path, "utf8")),
   })));
   const { failures, warnings, canonical, counts } = auditCasinoRecords(records, jurisdictions);
-  failures.push(...auditManifestCoverage(counts, jurisdictions));
+  failures.push(...auditManifestCoverage(counts, jurisdictions), ...casinoSchemaFailures(records));
   if (warnings.length) {
     console.warn("Casino catalog reconciliation warnings:\n" + warnings.map((warning) => "- " + warning).join("\n"));
   }

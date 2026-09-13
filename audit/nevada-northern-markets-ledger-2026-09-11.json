@@ -1,10 +1,16 @@
 {
-  "jurisdiction":"Nevada",
-  "capturedOn":"2026-09-11",
-  "status":"candidate-ledger-staged",
-  "primaryAuthority":"Nevada Gaming Control Board",
-  "supportingSources":[
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-11",
+  "recoveredOn": "2026-09-13",
+  "status": "incomplete-damaged-source-preserved",
+  "originalBytes": 379,
+  "originalText": "{\n  \"jurisdiction\":\"Nevada\",\n  \"capturedOn\":\"2026-09-11\",\n  \"status\":\"candidate-ledger-staged\",\n  \"primaryAuthority\":\"Nevada Gaming Control Board\",\n  \"supportingSources\":[\n    \"https://www.gaming.nv.gov/\",\n    \"https://www.visitrenotahoe.com/things-to-do/nightlife/casinos\",\n    \"https://visitcarsoncity.com/things-to-do/gaming/\",\n    \"https://exploreelko.com/things-to-do/gaming",
+  "claimedRowsInStatewideAccounting": 45,
+  "verifiedRowsInThisFile": 0,
+  "note": "The committed original was truncated during a URL. No missing rows have been invented. Historical statewide totals depending on its 45 claimed rows remain unverified. Current coverage is rebuilt in the release-candidate evidence ledger.",
+  "supportingSources": [
     "https://www.gaming.nv.gov/",
     "https://www.visitrenotahoe.com/things-to-do/nightlife/casinos",
-    "https://visitcarsoncity.com/things-to-do/gaming/",
-    "https://exploreelko.com/things-to-do/gaming
+    "https://visitcarsoncity.com/things-to-do/gaming/"
+  ]
+}
