@@ -1,3 +1,4 @@
+import { directionsUrl } from "@/lib/location/maps";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { ArrowDown, ExternalLink, MapPinned, RotateCcw, Sparkles, X } from "lucide-react";
@@ -8,11 +9,7 @@ import { dateNightTypeLabel, type DecoratedDateNightPlace } from "@/lib/date-nig
 import { formatDistance } from "@/lib/restaurants/geo";
 
 function mapsUrl(place: DecoratedDateNightPlace) {
-  const destination =
-    place.address && place.address !== "Address unavailable"
-      ? place.address
-      : `${place.lat},${place.lon}`;
-  return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
+  return directionsUrl(place) ?? undefined;
 }
 
 function isValidHalloweenPlan(plan: DecoratedDateNightPlace[]) {

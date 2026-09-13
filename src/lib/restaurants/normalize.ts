@@ -11,7 +11,7 @@ import { isLikelyChain, inferPriceLevel } from "./chains";
 import { cuisineLabelFor, mapOsmCuisines, photoForCuisines } from "./cuisines";
 import { haversineMiles } from "./geo";
 import type { FallbackPlace } from "./fallback-data";
-import type { Restaurant } from "./types";
+import { DEFAULT_LOCATION, type Restaurant } from "./types";
 
 export interface RawPlace {
   id: string;
@@ -58,7 +58,7 @@ export function fallbackToRaw(place: FallbackPlace): RawPlace {
 
 export function rawToRestaurant(place: RawPlace): Restaurant | null {
   if (!place.name || !Number.isFinite(place.lat) || !Number.isFinite(place.lon)) return null;
-  if (isRetiredLocalName(place.name)) return null;
+  if (haversineMiles(place.lat, place.lon, DEFAULT_LOCATION.lat, DEFAULT_LOCATION.lon) <= 40 && isRetiredLocalName(place.name)) return null;
   const cuisines = mapOsmCuisines(place.cuisine, place.amenity, place.name);
   const isChain = isLikelyChain(place.name, place.brand);
   return {
@@ -88,9 +88,8 @@ export function rawToRestaurant(place: RawPlace): Restaurant | null {
 
 function findCatalogMatch(name: string, lat: number, lon: number): CatalogEntry | undefined {
   return ACTIVE_LOCAL_CATALOG.find((entry) => {
-    const nameHit = entry.matchNames.some((candidate) => namesMatch(candidate, name));
-    if (!nameHit) return false;
-    return haversineMiles(entry.lat, entry.lon, lat, lon) < 8;
+    return haversineMiles(entry.lat, entry.lon, lat, lon) < 8 &&
+      entry.matchNames.some((candidate) => namesMatch(candidate, name));
   });
 }
 
@@ -103,14 +102,35 @@ function sourceRank(source: Restaurant["source"]): number {
 function dedupeRestaurants(restaurants: Restaurant[]): Restaurant[] {
   const sorted = [...restaurants].sort((a, b) => sourceRank(b.source) - sourceRank(a.source));
   const kept: Restaurant[] = [];
+  const cells = new Map<string, Restaurant[]>();
+  const radius = 0.2;
+  // Cartesian Earth cells avoid longitude wrap and polar special cases. A pair
+  // within the existing 0.2-mile surface distance also has a shorter chord,
+  // so it must occupy the same or adjacent cells on all three axes.
+  const scale = 3958.8 / radius; // Same Earth radius as haversineMiles.
   for (const restaurant of sorted) {
-    const duplicate = kept.find(
-      (item) =>
-        namesMatch(item.name, restaurant.name) &&
-        haversineMiles(item.lat, item.lon, restaurant.lat, restaurant.lon) < 0.2,
-    );
+    const lat = restaurant.lat * Math.PI / 180;
+    const lon = restaurant.lon * Math.PI / 180;
+    const x = Math.floor(scale * Math.cos(lat) * Math.cos(lon));
+    const y = Math.floor(scale * Math.cos(lat) * Math.sin(lon));
+    const z = Math.floor(scale * Math.sin(lat));
+    let duplicate = false;
+    for (let dx = -1; dx <= 1 && !duplicate; dx++) {
+      for (let dy = -1; dy <= 1 && !duplicate; dy++) {
+        for (let dz = -1; dz <= 1 && !duplicate; dz++) {
+          duplicate = (cells.get(`${x + dx},${y + dy},${z + dz}`) ?? []).some(
+            (item) => namesMatch(item.name, restaurant.name) &&
+              haversineMiles(item.lat, item.lon, restaurant.lat, restaurant.lon) < radius,
+          );
+        }
+      }
+    }
     if (duplicate) continue;
     kept.push(restaurant);
+    const key = `${x},${y},${z}`;
+    const bucket = cells.get(key);
+    if (bucket) bucket.push(restaurant);
+    else cells.set(key, [restaurant]);
   }
   return kept;
 }

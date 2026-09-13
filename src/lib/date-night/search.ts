@@ -1,3 +1,5 @@
+import { DEFAULT_LOCATION } from "../restaurants/types";
+import { formatOsmAddress, requireCoordinates } from "../location/model";
 import { createServerFn } from "@tanstack/react-start";
 import { isLikelyChain } from "@/lib/restaurants/chains";
 import { haversineMiles } from "@/lib/restaurants/geo";
@@ -107,14 +109,12 @@ function moodFor(types: readonly ConcreteDateNightType[]): 1 | 2 | 3 {
 function elementToPlace(element: OverpassElement, halloweenSeason: boolean): DateNightPlace | null {
   const tags = element.tags ?? {};
   const name = tags.name?.trim();
-  if (!name || /closed/i.test(name) || isRetiredDateNightName(name)) return null;
+  if (!name || /closed/i.test(name)) return null;
   const lat = element.lat ?? element.center?.lat;
   const lon = element.lon ?? element.center?.lon;
   if (lat == null || lon == null) return null;
-  const house = tags["addr:housenumber"] ?? "";
-  const street = tags["addr:street"] ?? "";
-  const city = tags["addr:city"] ?? "";
-  const address = [`${house} ${street}`.trim(), city].filter(Boolean).join(", ") || "Address unavailable";
+  if (haversineMiles(lat, lon, DEFAULT_LOCATION.lat, DEFAULT_LOCATION.lon) <= 40 && isRetiredDateNightName(name)) return null;
+  const address = formatOsmAddress(tags) || "Address unavailable";
   const activityTypes = classify(tags, halloweenSeason);
   if (!activityTypes.length) return null;
   const brand = tags.brand ?? null;
@@ -191,7 +191,8 @@ async function queryMirror(url: string, body: string, halloweenSeason: boolean):
     signal: AbortSignal.timeout(22000),
   });
   if (!response.ok) throw new Error(`Overpass ${response.status}`);
-  const json = (await response.json()) as { elements?: OverpassElement[] };
+  const json = (await response.json()) as { elements?: OverpassElement[]; remark?: string };
+  if (!Array.isArray(json?.elements) || json.remark) throw new Error("Live discovery returned an incomplete response. Please try again.");
   const unique = new Map<string, DateNightPlace>();
   for (const element of json.elements ?? []) {
     const place = elementToPlace(element, halloweenSeason);
@@ -244,7 +245,7 @@ function mergeDateNight(live: DateNightPlace[], local: DateNightPlace[]): DateNi
 
 export const searchDateNight = createServerFn({ method: "POST" })
   .validator((data: { lat: number; lon: number; radiusMiles: number; spookySeasonEnabled?: boolean }) => {
-    if (!Number.isFinite(data.lat) || !Number.isFinite(data.lon)) throw new Error("A location is required");
+    requireCoordinates(data);
     return {
       lat: data.lat,
       lon: data.lon,
@@ -259,10 +260,12 @@ export const searchDateNight = createServerFn({ method: "POST" })
     const body = `data=${encodeURIComponent(QUERY(data.lat, data.lon, radiusMeters, halloweenSeason))}`;
     const local = localWithin(data.lat, data.lon, fetchRadius, halloweenSeason);
     let lastError: unknown;
+    let hadSuccessfulResponse = false;
 
     for (const mirror of MIRRORS) {
       try {
         const live = await queryMirror(mirror, body, halloweenSeason);
+        hadSuccessfulResponse = true;
         const venues = mergeDateNight(live, local);
         if (venues.length > 0) {
           return {
@@ -283,5 +286,6 @@ export const searchDateNight = createServerFn({ method: "POST" })
       };
     }
 
+    if (hadSuccessfulResponse) return { venues: [], source: "live" };
     throw lastError instanceof Error ? lastError : new Error("Could not load date-night activities for that area.");
   });

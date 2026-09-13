@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "status": "COMBINED_RELEASE_CANDIDATE_READY_FOR_NONPRODUCTION_INTEGRATION",
+  "branch": "integration/casino-location-reconciliation-2026-09-13",
+  "casinoCounts": {
+    "canonical": 883,
+    "serialized": 899,
+    "passes": 60,
+    "Nevada": 204,
+    "Oklahoma": 113,
+    "Colorado": 31,
+    "Texas": 4
+  },
+  "tests": {
+    "repositoryPassed": 296,
+    "applicationPassed": 71,
+    "uniquePassed": 367,
+    "failed": 0,
+    "skipped": 4,
+    "registeredIncludingSkips": 371,
+    "casinoSubsetPassed": 83,
+    "locationUnitSubsetPassed": 20,
+    "sourceLocationTestsRetained": 28,
+    "newIntegrationTests": 10,
+    "independentSourceTotalsAdded": false,
+    "newIntegrationBreakdown": {
+      "locationController": 2,
+      "combinedProviderMaps": 3,
+      "browserBuildGuards": 2,
+      "denseCityNormalization": 3
+    }
+  },
+  "testInventory": {
+    "casinoTestFilesRetainedUnchanged": [
+      "scripts/brand-check.test.mjs",
+      "scripts/browser-smoke-verdict.test.mjs",
+      "scripts/casino-audit-artifacts.test.mjs",
+      "scripts/casino-audit.test.mjs",
+      "scripts/casino-catalog-lineage.test.mjs",
+      "scripts/casino-catalog-loader.test.mjs",
+      "scripts/casino-continuation.test.mjs",
+      "scripts/casino-discovery.test.mjs",
+      "scripts/casino-freeze.test.mjs",
+      "scripts/casino-frontier.test.mjs",
+      "scripts/casino-rc-conflicts.test.mjs",
+      "scripts/casino-rc-evidence.test.mjs",
+      "scripts/casino-rc-final.test.mjs",
+      "scripts/casino-rc-frontier.test.mjs",
+      "scripts/casino-recent-provenance.test.mjs",
+      "scripts/casino-schema.test.mjs",
+      "scripts/casino-selection.test.mjs",
+      "scripts/check-auth-invariant.test.mjs",
+      "scripts/grok-pwa-plugin.test.mjs",
+      "scripts/migration-plan.test.mjs",
+      "scripts/optional-workspace-docs.test.mjs",
+      "scripts/preview.test.mjs",
+      "scripts/sign-out-plan.test.mjs",
+      "scripts/test-runner.test.mjs",
+      "scripts/with-app-env.test.mjs",
+      "scripts/write-atomic.test.mjs",
+      "src/lib/app-data/app-data.test.ts",
+      "src/lib/auth/gate-identity.test.ts",
+      "src/lib/auth/sign-in-gate.test.ts",
+      "src/lib/date-night/availability.test.ts"
+    ],
+    "locationTestFilesAdded": [
+      "scripts/location-discovery.test.mjs",
+      "src/lib/location/location.test.ts"
+    ],
+    "missingTestFiles": []
+  },
+  "locationAssertions": [
+    {
+      "path": "scripts/location-discovery.test.mjs",
+      "sourceTestDeclarations": 6,
+      "combinedTestDeclarations": 6,
+      "allOriginalAssertionsRetained": true
+    },
+    {
+      "path": "src/lib/location/location.test.ts",
+      "sourceTestDeclarations": 14,
+      "combinedTestDeclarations": 16,
+      "allOriginalAssertionsRetained": true
+    }
+  ],
+  "documentationSkips": {
+    "classification": "B intentionally external / A absent in clean repository",
+    "files": [
+      "scripts/brand-check.test.mjs (3)",
+      "scripts/write-atomic.test.mjs (1)"
+    ],
+    "reason": "External OG assistant docs not installed; REQUIRE_WORKSPACE_DOCS=1 fails closed. Exact names remain in AI_CONTINUITY.md.",
+    "weakened": false
+  },
+  "currentGates": {
+    "typecheck": "PASS after performance fix",
+    "catalogSchemaIdsChronologyManifest": "PASS 883/899/60 after performance fix",
+    "targetedLint": "PASS",
+    "safeDevelopmentBuild": "PASS after performance fix",
+    "safeAuthEnabledProductionBuild": "PASS after performance fix, auth=true, direct Vite, no migration",
+    "deterministicBrowsers": "PASS 30 groups: 16 casino + 14 location",
+    "realProviderBrowsers": "PASS: six casino regions + Toronto/Vancouver/Montr\u00e9al/London",
+    "adversarialReview": "PASS targeted integration review; no unresolved implementation finding",
+    "combinedCI": "PASS Run 337 at bdc05dee1bb15807c0f70d25e48c12fb37eea8f0",
+    "dinnerIcons": "PASS all 30"
+  },
+  "notes": [
+    "All 30 pre-existing casino-branch test files are byte-identical. Both location files retain every original test assertion (AST comparison); loops expand to 28 imported tests.",
+    "No tests were dropped or skipped to make integration pass. Five new integration tests protect duplicate/cancelled GPS and geocoder-to-current-casino-provider/Maps behavior."
+  ],
+  "browserBuildSafeguards": {
+    "authEnabled": true,
+    "ownedDetachedPreviews": true,
+    "strictPorts": [
+      8080,
+      8082,
+      8092
+    ],
+    "sourceAndOutputFingerprints": true,
+    "occupiedPortNegativeTest": "PASS",
+    "guardUnitTests": 2,
+    "includedInNextFullSuite": true
+  },
+  "freezeIdentityProof": {
+    "protectedFilesUnchanged": 78,
+    "manifestLockfileViteConfigDeploymentExclusionUnchanged": true
+  },
+  "ci": {
+    "conclusion": "success",
+    "head": "bdc05dee1bb15807c0f70d25e48c12fb37eea8f0",
+    "id": 34778760104,
+    "number": 337,
+    "status": "completed",
+    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34778760104",
+    "job": 103781770405,
+    "verifiedLogLines": [
+      "2026-09-13T19:48:03.1444299Z # tests 83",
+      "2026-09-13T19:48:03.1444721Z # pass 83",
+      "2026-09-13T19:48:03.1444910Z # fail 0",
+      "2026-09-13T19:48:03.1445309Z # skipped 0",
+      "2026-09-13T19:48:04.8675863Z Casino catalog audit passed: 899 serialized records, 883 canonical destinations across 60 catalog files.",
+      "2026-09-13T19:48:04.8676794Z National coverage audit passed: 39 complete jurisdictions, 0 authoritative inventories staged, 2 pending jurisdictions.",
+      "2026-09-13T19:48:15.1125760Z # tests 300",
+      "2026-09-13T19:48:15.1126390Z # pass 296",
+      "2026-09-13T19:48:15.1126705Z # fail 0",
+      "2026-09-13T19:48:15.1127342Z # skipped 4",
+      "2026-09-13T19:48:15.7418035Z # tests 71",
+      "2026-09-13T19:48:15.7419014Z # pass 71",
+      "2026-09-13T19:48:15.7419382Z # fail 0",
+      "2026-09-13T19:48:15.7420271Z # skipped 0",
+      "2026-09-13T19:48:53.1454113Z CASINO_BROWSER_VERDICT {\"origin\":\"http://127.0.0.1:8080\",\"buildProof\":{\"schemaVersion\":1,\"status\":\"BUILT\",\"authFlag\":\"true\",\"source\":{\"sha256\":\"bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61\",\"files\":363},\"startedAt\":\"2026-09-13T19:48:19.003Z\",\"output\":{\"sha256\":\"054d7d16a2d814a5063a5286c8164fdab0f3b3d520b37b27b5f1b5000e6f99a9\",\"files\":182},\"completedAt\":\"2026-09-13T19:48:21.940Z\"},\"fixtures\":\"Server-side Overpass outage; Nominatim deterministic locations. Production-mode local preview, actual server functions and catalog.\",\"checks\":[\"desktop: completed the four-step first-run tour\",\"desktop: casino filter and saved-catalog outage fallback\",\"desktop: strict open-now excludes unknown hours; empty state disables selection\",\"desktop: compiled fallback matches 19 current canonical casinos\",\"desktop: unique canonical options, option selection, map destination, reroll and persisted exclusion\",\"desktop: denied geolocation opens a visible error and manual recovery form\",\"desktop: manual location, no-catalog/provider failure and favorites empty states\",\"desktop: non-casino navigation, settings and no horizontal overflow or page errors\",\"mobile: completed the four-step first-run tour\",\"mobile: casino filter and saved-catalog outage fallback\",\"mobile: strict open-now excludes unknown hours; empty state disables selection\",\"mobile: compiled fallback matches 3 current canonical casinos\",\"mobile: unique canonical options, option selection, map destination, reroll and persisted exclusion\",\"mobile: denied geolocation opens a visible error and manual recovery form\",\"mobile: manual location, no-catalog/provider failure and favorites empty states\",\"mobile: non-casino navigation, settings and no horizontal overflow or page errors\"],\"errors\":[]}",
+      "2026-09-13T19:49:01.6233758Z \u001b[36;1mprint(\"Verified 30 Dinner icon assets: 15 dark + 15 light\")\u001b[0m",
+      "2026-09-13T19:49:01.6546833Z Verified 30 Dinner icon assets: 15 dark + 15 light"
+    ]
+  },
+  "runtimeValidatedCommit": "bdc05dee1bb15807c0f70d25e48c12fb37eea8f0",
+  "sourceFingerprint": {
+    "sha256": "bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61",
+    "files": 363
+  },
+  "remainingBeforeIntegration": [
+    "Verify final candidate exact-head CI",
+    "Merge only PR #42 into integration/active-work-pass-1",
+    "Verify integration revision/CI and existing shared continuity"
+  ],
+  "remainingReleaseOnly": [
+    "Physical-phone GPS and OS permission dialogs, including permission revocation behavior.",
+    "Installed PWA, authorized hosted/account sessions and external Maps app navigation."
+  ],
+  "scopeProof": {
+    "changedFiles": [
+      ".github/workflows/validate-icon-pack.yml",
+      "AI_CONTINUITY.md",
+      "LOCATION_HANDOFF.md",
+      "audit/casino-location-reconciliation-attempts-2026-09-13.json",
+      "audit/casino-location-reconciliation-baseline-2026-09-13.json",
+      "audit/casino-location-reconciliation-browser-2026-09-13.json",
+      "audit/casino-location-reconciliation-performance-2026-09-13.json",
+      "audit/casino-location-reconciliation-plan-2026-09-13.md",
+      "audit/casino-location-reconciliation-validation-2026-09-13.json",
+      "audit/location-architecture-2026-09-13.md",
+      "audit/location-validation-2026-09-13.json",
+      "scripts/browser-build-proof.mjs",
+      "scripts/browser-build-proof.test.mjs",
+      "scripts/casino-browser-live-check.mjs",
+      "scripts/casino-browser-smoke.mjs",
+      "scripts/casino-location-integration.test.mjs",
+      "scripts/location-browser-live.mjs",
+      "scripts/location-browser.mjs",
+      "scripts/location-discovery.test.mjs",
+      "scripts/location-normalization.test.mjs",
+      "scripts/test-runner.mjs",
+      "scripts/test-support/load-app-module.mjs",
+      "scripts/test-support/location-provider-fixtures.mjs",
+      "src/components/date-night-home.tsx",
+      "src/components/date-night-plan-overlay.tsx",
+      "src/components/location-control.tsx",
+      "src/components/nightlife-home.tsx",
+      "src/components/pick-home.tsx",
+      "src/components/result-overlay.tsx",
+      "src/lib/date-night/search.ts",
+      "src/lib/error-component.tsx",
+      "src/lib/location/controller.ts",
+      "src/lib/location/location.test.ts",
+      "src/lib/location/maps.ts",
+      "src/lib/location/model.ts",
+      "src/lib/nightlife/search.ts",
+      "src/lib/restaurants/geocode.ts",
+      "src/lib/restaurants/normalize.ts",
+      "src/lib/restaurants/overpass.ts",
+      "src/lib/restaurants/search.ts",
+      "src/lib/restaurants/types.ts",
+      "src/lib/store.ts"
+    ],
+    "unexpected": [],
+    "protectedFilesUnchanged": 78,
+    "originalTestFilesUnchanged": 30
+  }
+}
