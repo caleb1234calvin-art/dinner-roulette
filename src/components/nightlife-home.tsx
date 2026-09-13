@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
+import { weightedPick, pickOptions, eligibleNightlife } from "@/lib/nightlife/selection";
 import { searchNightlife } from "@/lib/nightlife/search";
 import {
   DEFAULT_NIGHTLIFE_FILTERS,
@@ -23,36 +24,6 @@ import { lookupLocation, lookupReverseLocation } from "@/lib/restaurants/search"
 import { DISTANCE_OPTIONS, type DecoratedRestaurant, type Restaurant } from "@/lib/restaurants/types";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
-
-function weightedPick(items: DecoratedNightlifePlace[], energy: number, shown: string[]) {
-  if (!items.length) return null;
-  const target = 1 + (Math.min(Math.max(energy, 0), 100) / 100) * 2;
-  const weights = items.map((item) => {
-    const distancePenalty = 1 / (1 + item.distanceMiles * 0.04);
-    const energyFit = 1 / (1 + Math.abs(item.energyLevel - target) * 0.8);
-    const shownPenalty = shown.includes(item.id) ? 0.12 : 1;
-    return Math.max(0.001, distancePenalty * energyFit * shownPenalty);
-  });
-  const total = weights.reduce((sum, value) => sum + value, 0);
-  let cursor = Math.random() * total;
-  for (let i = 0; i < items.length; i += 1) {
-    cursor -= weights[i] ?? 0;
-    if (cursor <= 0) return items[i] ?? items[0];
-  }
-  return items[items.length - 1] ?? null;
-}
-
-function pickOptions(items: DecoratedNightlifePlace[], energy: number, shown: string[], count = 4) {
-  const remaining = [...items];
-  const result: DecoratedNightlifePlace[] = [];
-  while (remaining.length && result.length < count) {
-    const next = weightedPick(remaining, energy, shown);
-    if (!next) break;
-    result.push(next);
-    remaining.splice(remaining.findIndex((item) => item.id === next.id), 1);
-  }
-  return result;
-}
 
 export function NightlifeHome() {
   const location = useAppStore((s) => s.location);
@@ -112,22 +83,10 @@ export function NightlifeHome() {
     [venues, location],
   );
 
-  const eligible = useMemo(() => {
-    const anything = filters.venueTypes.includes("anything");
-    return decorated.filter((venue) => {
-      if (venue.distanceMiles > filters.radiusMiles + 0.05) return false;
-      if (exclusions.some((item) => item.restaurantId === venue.id && item.expiresAt > Date.now())) return false;
-      const pref = preferences[venue.id];
-      if (pref?.neverRecommend) return false;
-      if (filters.favoritesOnly && !pref?.favorite) return false;
-      if (filters.openNowOnly && venue.hoursKnown && !venue.isOpen) return false;
-      if (venue.priceLevel == null) {
-        if (!filters.includeUnknownPrice) return false;
-      } else if (venue.priceLevel < filters.minPrice || venue.priceLevel > filters.maxPrice) return false;
-      if (!anything && !venue.venueTypes.some((type) => filters.venueTypes.includes(type))) return false;
-      return true;
-    });
-  }, [decorated, exclusions, filters, preferences]);
+  const eligible = useMemo(
+    () => eligibleNightlife(decorated, filters, preferences, exclusions),
+    [decorated, exclusions, filters, preferences],
+  );
 
   function updateFilters(patch: Partial<NightlifeFilters>) {
     setFilters((current) => ({ ...current, ...patch }));
@@ -298,7 +257,7 @@ export function NightlifeHome() {
 
       <section className="mt-7 space-y-2">
         <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">
-          <div><p className="text-sm text-fg">Open now only</p><p className="text-xs text-subtle">Skip places that have already closed</p></div>
+          <div><p className="text-sm text-fg">Open now only</p><p className="text-xs text-subtle">Only places with confirmed open hours</p></div>
           <Switch checked={filters.openNowOnly} onCheckedChange={(checked) => updateFilters({ openNowOnly: checked })} aria-label="Open now only" />
         </div>
         <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">

@@ -1,0 +1,509 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "pass": 54,
+  "status": "implemented-and-CI-validated",
+  "result": {
+    "newDestinations": 19,
+    "canonical": 808,
+    "Nevada": 146,
+    "Oklahoma": 96,
+    "Colorado": 31,
+    "Texas": 4,
+    "fourState": 277
+  },
+  "records": [
+    {
+      "id": "casino-catalog-nv-boomtown",
+      "name": "Boomtown Casino Resort",
+      "jurisdiction": "Nevada",
+      "address": "2100 Boomtown Garson Rd, Verdi, NV 89439",
+      "lat": 39.5118458,
+      "lon": -119.9626907,
+      "identitySource": "https://www.boomtownreno.com/faq",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Boomtown%20Casino%20Resort%20Reno%20Nevada",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Best+Western+Plus+Boomtown+Casino+Resort/@39.5118458,-119.9626907,17z/data=!3m1!4b1!4m9!3m8!1s0x80995b3353a16b23:0xadfaa3b29aedb07a!5m2!4m1!1i2!8m2!3d39.5118458!4d-119.9626907!16zL20vMDYzOG56?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 39.5118458,
+        "longitude": -119.9626907
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator FAQ identifies the operating casino resort; its own directions link supplies the same destination point and Verdi address. Reno in the FAQ is the regional marketing city. Hotel, sportsbook and KOA campground are not additional casinos.",
+      "supportingSources": [
+        "https://www.boomtownreno.com/faq"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-gold-ranch",
+      "name": "Gold Ranch Casino & RV Resort",
+      "jurisdiction": "Nevada",
+      "address": "350 Gold Ranch Rd, Verdi, NV 89439",
+      "lat": 39.5023566,
+      "lon": -120.0000155,
+      "identitySource": "https://goldranchrvcasino.com/home/contact-us",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Gold%20Ranch%20Casino%20Verdi%20Nevada",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Gold+Ranch+Casino/@39.5023566,-120.0000155,17z/data=!3m1!4b1!4m6!3m5!1s0x80995b4f7c7863b3:0xaa7dcc807ccef947!8m2!3d39.5023566!4d-120.0000155!16s%2Fg%2F11s_p1f9px?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 39.5023566,
+        "longitude": -120.0000155
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator contact page explicitly confirms casino operation at 350 Gold Ranch Rd. The named casino point is distinct from the RV resort; the nearby California lottery shop must not create a casino destination.",
+      "supportingSources": [
+        "https://goldranchrvcasino.com/home/contact-us"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-carson-nugget",
+      "name": "Carson Nugget",
+      "jurisdiction": "Nevada",
+      "address": "507 N Carson St, Carson City, NV 89701",
+      "lat": 39.166715,
+      "lon": -119.766261,
+      "identitySource": "https://ccnugget.com/contact/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Carson+Nugget+507+N+Carson+St",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Carson+Nugget/@39.166715,-119.766261,17z/data=!3m1!4b1!4m6!3m5!1s0x80990aa2684f008d:0xa83c0172c1e3b67e!8m2!3d39.166715!4d-119.766261!16s%2Fm%2F0ddd46k?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 39.166715,
+        "longitude": -119.766261
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current contact page confirms 507 N Carson St and casino identity; current named map and operator event/playing material corroborate operation. Unrelated template filler on the operator home page is not treated as gaming or status evidence.",
+      "supportingSources": [
+        "https://ccnugget.com/"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-max-carson",
+      "name": "Max Casino",
+      "jurisdiction": "Nevada",
+      "address": "900 S Carson St, Carson City, NV 89701",
+      "lat": 39.1584546,
+      "lon": -119.7676293,
+      "identitySource": "https://www.maxcasinocc.com",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Max+Casino+900+S+Carson+St",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/The+Federal+Hotel+Downtown+Carson+City,+an+Ascend+Collection+Hotel/@39.1584546,-119.7676293,17z/data=!3m1!4b1!4m9!3m8!1s0x8099a00addb0019f:0x573dbc07bd403d6a!5m2!4m1!1i2!8m2!3d39.1584546!4d-119.7676293!16s%2Fm%2F0ddfyw5?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 39.1584546,
+        "longitude": -119.7676293
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator identifies Max Casino inside The Federal Hotel. The named Google hotel destination explicitly lists Max Casino on Floor 1; casino and hotel form one destination. Historical Carson Station is an alias, not an additional current property.",
+      "supportingSources": [
+        "https://www.maxcasinocc.com"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-crystal-bay",
+      "name": "Crystal Bay Casino",
+      "jurisdiction": "Nevada",
+      "address": "14 State Highway 28, Crystal Bay, NV 89402",
+      "lat": 39.2275693,
+      "lon": -120.0045958,
+      "identitySource": "https://www.crystalbaycasino.com/contact-us",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Crystal%20Bay%20Casino%20Nevada",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Crystal+Bay+Casino/@39.2275693,-120.0045958,17z/data=!3m1!4b1!4m6!3m5!1s0x80997ac26a589563:0xb692537c4550!8m2!3d39.2275693!4d-120.0045958!16s%2Fg%2F1v46_ltx?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 39.2275693,
+        "longitude": -120.0045958
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Operator current gaming page confirms slots and table games at 14 State Highway 28. Crystal Bay Club is an alias of this current casino; the Border House hotel is not a second casino.",
+      "supportingSources": [
+        "https://www.crystalbaycasino.com/contact-us",
+        "https://www.crystalbaycasino.com/gaming/"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-grand-lodge",
+      "name": "Grand Lodge Casino",
+      "jurisdiction": "Nevada",
+      "address": "111 Country Club Dr, Incline Village, NV 89451",
+      "lat": 39.2401975,
+      "lon": -119.9426097,
+      "identitySource": "https://grandlodgecasino.com/contact-us",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Grand%20Lodge%20Casino%20Incline%20Village%20Nevada",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Grand+Lodge+Casino+at+Hyatt+Regency+Lake+Tahoe/@39.2401975,-119.9426097,17z/data=!3m1!4b1!4m6!3m5!1s0x80997046914794f5:0xdc920cde0515e15!8m2!3d39.2401975!4d-119.9426097!16s%2Fg%2F1tnqh794?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 39.2401975,
+        "longitude": -119.9426097
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator contact HTML supplies 111 Country Club Drive, Incline Village; the page describes active slots/table-game rewards. Google names the Grand Lodge Casino at Hyatt Regency, distinguishing the casino from separately named restaurants in the resort.",
+      "supportingSources": [
+        "https://grandlodgecasino.com/contact-us"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-topaz-lodge",
+      "name": "Topaz Lodge Casino",
+      "jurisdiction": "Nevada",
+      "address": "1979 US-395, Gardnerville, NV 89410",
+      "lat": 38.6948796,
+      "lon": -119.5481193,
+      "identitySource": "https://topazlodge.com",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Topaz%20Lodge%20Casino%20Nevada",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Topaz+Lodge/@38.6948796,-119.5481193,17z/data=!3m1!4b1!4m9!3m8!1s0x8099d12fa1326d57:0x8037e31acf58ec27!5m2!4m1!1i2!8m2!3d38.6948796!4d-119.5481193!16s%2Fg%2F11cmck78xj?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 38.6948796,
+        "longitude": -119.5481193
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator advertises September 2026 promotions, casino games and the exact US-395 address. The resort, casino and RV park form one destination near the Nevada/California border.",
+      "supportingSources": [
+        "https://topazlodge.com"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-red-garter",
+      "name": "Red Garter Hotel & Casino",
+      "jurisdiction": "Nevada",
+      "address": "1225 W Wendover Rd, West Wendover, NV 89883",
+      "lat": 40.7381941,
+      "lon": -114.0663038,
+      "identitySource": "https://www.sonesta.com/red-lion-hotels/nv/west-wendover/red-garter-hotel-casino-red-lion-hotels",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Red%20Garter%20Hotel%20Casino%20West%20Wendover%20Nevada",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Red+Garter+Hotel+%26+Casino+by+Red+Lion+Hotels/@40.7381941,-114.0663038,17z/data=!4m9!3m8!1s0x80ac28a735154b1f:0x190a96cb4f755973!5m2!4m1!1i2!8m2!3d40.7381941!4d-114.0663038!16s%2Fm%2F06_wcs2?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 40.7381941,
+        "longitude": -114.0663038
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current Sonesta property page explicitly describes the operating casino and publishes a map link for 1225 W Wendover Rd. The named Google destination agrees. Red Lion/Red Garter hotel branding is one physical property.",
+      "supportingSources": [
+        "https://www.sonesta.com/red-lion-hotels/nv/west-wendover/red-garter-hotel-casino-red-lion-hotels"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-wendover-nugget",
+      "name": "Wendover Nugget Hotel & Casino",
+      "jurisdiction": "Nevada",
+      "address": "101 Wendover Blvd, West Wendover, NV 89883",
+      "lat": 40.735073,
+      "lon": -114.0441513,
+      "identitySource": "https://wendovernuggetcasinohotel.com",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Wendover%20Nugget%20Hotel%20Casino%20Nevada",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Wendover+Nugget+Hotel+%26+Casino/@40.735073,-114.0441513,17z/data=!4m9!3m8!1s0x80ac2f521bcc9437:0x9a949b1637603a3f!5m2!4m1!1i2!8m2!3d40.735073!4d-114.0441513!16s%2Fg%2F1q5gp1zyz?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 40.735073,
+        "longitude": -114.0441513
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator supplies the casino identity, gaming pages and 101 Wendover Blvd. This is across the road from Montego Bay at 100; the old Montego Bay 101-address listing is not used.",
+      "supportingSources": [
+        "https://wendovernuggetcasinohotel.com"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-avi",
+      "name": "Avi Resort & Casino",
+      "jurisdiction": "Nevada",
+      "address": "10000 Aha Macav Pkwy, Laughlin, NV 89029",
+      "lat": 35.0158012,
+      "lon": -114.6405985,
+      "identitySource": "https://www.avicasino.com/contact",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Avi%20Resort%20Casino%20Laughlin%20Nevada",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Avi+Resort+%26+Casino/@35.0158012,-114.6405985,17z/data=!3m1!4b1!4m9!3m8!1s0x80ce3897c3441343:0x688fdc85b7cf7e7f!5m2!4m1!1i2!8m2!3d35.0158012!4d-114.6405985!16zL20vMDkyenk5?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.0158012,
+        "longitude": -114.6405985
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator contact and casino navigation identify the Nevada tribal casino resort at 10000 Aha Macav Parkway. Current named destination resolves the old latitude-only/viewport ambiguity. Casino, hotel and RV park are one property; this point is in Nevada.",
+      "supportingSources": [
+        "https://www.avicasino.com/contact"
+      ]
+    },
+    {
+      "id": "casino-catalog-ok-grand-lake",
+      "name": "Grand Lake Casino",
+      "jurisdiction": "Oklahoma",
+      "address": "24701 S 655 Rd, Grove, OK 74344",
+      "lat": 36.6578147,
+      "lon": -94.7078271,
+      "identitySource": "https://www.grandlakecasino.com/contact",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Grand+Lake+Casino+24701+S+655+Rd",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Grand+Lake+Casino/@36.6578147,-94.7078271,17z/data=!3m1!4b1!4m6!3m5!1s0x87c84847f9e4f5b1:0xa0dbec89305abecf!8m2!3d36.6578147!4d-94.7078271!16s%2Fg%2F1tcyf_cc?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 36.6578147,
+        "longitude": -94.7078271
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator contact explicitly distinguishes the casino at 24701 S 655 Rd from its lodge at 26301. Use the named casino point, not the separate lodge's map location. Operator's older casino destination differs by only about two metres.",
+      "supportingSources": [
+        "https://www.grandlakecasino.com/contact"
+      ]
+    },
+    {
+      "id": "casino-catalog-ok-high-winds",
+      "name": "High Winds Casino",
+      "jurisdiction": "Oklahoma",
+      "address": "61475 E 100 Rd, Miami, OK 74354",
+      "lat": 36.8707211,
+      "lon": -94.7796866,
+      "identitySource": "https://www.highwindscasino.com/faq.html",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=High%20Winds%20Casino%20Miami%20Oklahoma",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/High+Winds+Casino/@36.8707211,-94.7796866,17z/data=!3m1!4b1!4m6!3m5!1s0x87c8159a8ef89cc9:0x1f25b5c4000c5ae9!8m2!3d36.8707211!4d-94.7796866!16s%2Fg%2F1v4k70ys?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 36.8707211,
+        "longitude": -94.7796866
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator FAQ confirms operating casino, exact Miami address and current promotions. The named Google destination agrees with operator identity.",
+      "supportingSources": [
+        "https://www.highwindscasino.com/faq.html"
+      ]
+    },
+    {
+      "id": "casino-catalog-ok-stables",
+      "name": "The Stables Casino",
+      "jurisdiction": "Oklahoma",
+      "address": "530 H St SE, Miami, OK 74354",
+      "lat": 36.867407,
+      "lon": -94.8697699,
+      "identitySource": "https://thestablescasino.com",
+      "coordinateSource": "https://maps.app.goo.gl/9KH3JzhoWrXcwEx66",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/The+Stables+Casino/@36.867407,-94.8697699,16z/data=!3m1!4b1!4m6!3m5!1s0x87c817c30b6a7277:0x525af64960b4ae12!8m2!3d36.867407!4d-94.8697699!16s%2Fg%2F1tjbsprj?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 36.867407,
+        "longitude": -94.8697699
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator advertises casino promotions and publishes the resolved Google property map. The 530 H St SE address is independently corroborated by current named Waze/Yelp listings. Restaurant and casino are one property.",
+      "supportingSources": [
+        "https://thestablescasino.com",
+        "https://www.waze.com/en/live-map/directions/the-stables-casino-h-st-se-530-miami?to=place.w.173736305.1737559655.1307938"
+      ]
+    },
+    {
+      "id": "casino-catalog-ok-river-bend",
+      "name": "River Bend Casino & Hotel",
+      "jurisdiction": "Oklahoma",
+      "address": "100 Jackpot Pl, Wyandotte, OK 74370",
+      "lat": 36.803013,
+      "lon": -94.7291405,
+      "identitySource": "https://riverbendcasino.com",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=River%20Bend%20Casino%20Hotel%20Wyandotte%20Oklahoma",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/River+Bend+Casino+And+Hotel/@36.803013,-94.7291405,17z/data=!4m9!3m8!1s0x87c83f62580e9937:0x1c617b2f46a6d37f!5m2!4m1!1i2!8m2!3d36.803013!4d-94.7291405!16s%2Fg%2F1thhl0tk?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 36.803013,
+        "longitude": -94.7291405
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator casino/slots navigation and published contact address establish 100 Jackpot Place, Wyandotte. The named Google resort point identifies the integrated casino/hotel, not a separate golf or bowling destination.",
+      "supportingSources": [
+        "https://riverbendcasino.com"
+      ]
+    },
+    {
+      "id": "casino-catalog-ok-rock-brews-braman",
+      "name": "Rock & Brews Casino Braman",
+      "jurisdiction": "Oklahoma",
+      "address": "9525 US-177, Braman, OK 74632",
+      "lat": 36.938205,
+      "lon": -97.345861,
+      "identitySource": "https://www.rockandbrewscasinobraman.com/contact",
+      "coordinateSource": "https://www.rockandbrewscasinobraman.com/contact",
+      "coordinateEvidence": {
+        "method": "operator-named-jsonld",
+        "fields": {
+          "name": "ROCK & BREWS CASINO BRAMAN",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 36.938205,
+            "longitude": -97.345861
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "9525 US-177",
+            "addressLocality": "Braman",
+            "addressRegion": "OK",
+            "postalCode": "74632",
+            "addressCountry": "US"
+          },
+          "type": "Restaurant",
+          "telephone": "+1 580-385-2440"
+        },
+        "latitude": 36.938205,
+        "longitude": -97.345861,
+        "independentDestination": "https://www.google.com/maps/place/ROCK+%26+BREWS+CASINO+BRAMAN/@36.9382047,-97.3458607,17z/data=!3m1!4b1!4m6!3m5!1s0x87b071825967a8f3:0x616f5b0557c921ed!8m2!3d36.9382047!4d-97.3458607!16s%2Fg%2F11by_kc5nf?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator raw named JSON-LD supplies the exact Braman address and numerical point; Google independently agrees to sub-metre precision and displays current owner gaming promotions. The template's Restaurant schema type does not turn this independently established casino into a restaurant-only record. Closed Newkirk Southwind is a different site.",
+      "supportingSources": [
+        "https://www.rockandbrewscasinobraman.com"
+      ]
+    },
+    {
+      "id": "casino-catalog-ok-cimarron",
+      "name": "Cimarron Casino",
+      "jurisdiction": "Oklahoma",
+      "address": "821 W Freeman Ave, Perkins, OK 74059",
+      "lat": 35.9779414,
+      "lon": -97.044129,
+      "identitySource": "https://cimarroncasino.com/about-us/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Cimarron%20Casino%20Perkins%20Oklahoma",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Cimarron+Casino/@35.9779414,-97.044129,17z/data=!3m1!4b1!4m6!3m5!1s0x87b1742e5eb1bcd9:0x7a9b33592ecb082a!8m2!3d35.9779414!4d-97.044129!16s%2Fg%2F1tdd5s5k?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.9779414,
+        "longitude": -97.044129
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator September promotions and 600-game casino page corroborate Perkins operation; its About page supplies 821 W Freeman. The About page still lists closed Ioway as well: that stale portfolio row is explicitly rejected, not promoted.",
+      "supportingSources": [
+        "https://www.cimarroncasino.com"
+      ]
+    },
+    {
+      "id": "casino-catalog-ok-sugar-creek",
+      "name": "Sugar Creek Casino",
+      "jurisdiction": "Oklahoma",
+      "address": "5304 N Broadway Ave, Hinton, OK 73047",
+      "lat": 35.5232529,
+      "lon": -98.351455,
+      "identitySource": "https://www.sugarcreekcasino.com/contact",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Sugar%20Creek%20Casino%20Hinton%20Oklahoma",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Sugar+Creek+Casino/@35.5232529,-98.351455,17z/data=!3m1!4b1!4m6!3m5!1s0x87add1ca7d3f1dc7:0xe1b12ee8f7f840ed!8m2!3d35.5232529!4d-98.351455!16s%2Fg%2F1w4f8m1_?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.5232529,
+        "longitude": -98.351455
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator confirms 800+ slots, table games and exact Hinton address. Named casino destination is selected; the operator DMS point and map-direction point differ by tens of metres within the same property and are retained as alternate entrance/footprint points, not silently substituted.",
+      "supportingSources": [
+        "https://www.sugarcreekcasino.com/contact"
+      ],
+      "alternateOperatorPoints": {
+        "url": "https://www.sugarcreekcasino.com/contact",
+        "publishedDMS": "35°31’23.3″N 98°21’02.2″W",
+        "publishedDirections": "http://maps.google.com/maps?daddr=35.523254,%20-98.350951&ll=",
+        "decision": "Same-property sources retained; selected current named casino destination."
+      }
+    },
+    {
+      "id": "casino-catalog-ok-gold-river",
+      "name": "Gold River Casino",
+      "jurisdiction": "Oklahoma",
+      "address": "31064 S Highway 281, Anadarko, OK 73005",
+      "lat": 35.11166,
+      "lon": -98.2517318,
+      "identitySource": "https://goldriverok.com/contact/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Gold+River+Casino+31064+S+Highway+281",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Gold+River+Casino/@35.11166,-98.2517318,17z/data=!3m1!4b1!4m6!3m5!1s0x87ada4f34e4e626b:0x2d3a2e76f21a474a!8m2!3d35.11166!4d-98.2517318!16s%2Fg%2F12614v2nn?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.11166,
+        "longitude": -98.2517318
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator redirected from goldrivercasino.com to goldriverok.com and advertises September 2026 anniversary gaming promotions. Contact confirms 31064 S Highway 281. Use Gold River, not the related separately located Casino Oklahoma in Hinton.",
+      "supportingSources": [
+        "https://goldrivercasino.com"
+      ]
+    },
+    {
+      "id": "casino-catalog-ok-stonewolf",
+      "name": "StoneWolf Casino",
+      "jurisdiction": "Oklahoma",
+      "address": "54251 S 349 Rd, Pawnee, OK 74058",
+      "lat": 36.2275217,
+      "lon": -96.785345,
+      "identitySource": "https://stonewolfcasino.com",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=StoneWolf+Casino+54251+S+349+Rd",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/StoneWolf+Casino/@36.2275217,-96.785345,17z/data=!3m1!4b1!4m6!3m5!1s0x87b1179e62770605:0x60627d0ff7cc1e90!8m2!3d36.2275217!4d-96.785345!16s%2Fg%2F1264gqgbh?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 36.2275217,
+        "longitude": -96.785345
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator and Oklahoma tourism establish a substantial independently marketed casino at 54251 S 349 Rd; the travel plaza is part of this single destination. Future StoneWolf Park development is not an extra open casino.",
+      "supportingSources": [
+        "https://www.travelok.com/listings/view.profile/id.17817"
+      ]
+    }
+  ],
+  "closureFinding": {
+    "aliases": [
+      "Southwind Casino",
+      "Southwind Casino Newkirk",
+      "Kaw Southwind Casino Newkirk"
+    ],
+    "bounds": [
+      36.84,
+      36.91,
+      -97.08,
+      -96.98
+    ],
+    "closedOn": "2022-01-01",
+    "decision": "Dated local reporting quotes Kaw Gaming's closure decision, effective January 1, 2022. Current named map says permanently closed; old operator domain redirects to Braman. Newkirk is not a current additional Kaw casino. Rock & Brews Braman remains separate and active.",
+    "jurisdiction": "Oklahoma",
+    "lastReviewedOn": "2026-09-13",
+    "name": "SouthWind Casino Newkirk",
+    "recheckTrigger": "Explicit current casino reopening evidence at the Newkirk site.",
+    "scopeCoordinatesAreNotRoutingPins": true,
+    "sources": [
+      "https://www.ctnewsonline.com/news/article_d861fe66-4744-11ec-af92-bf8fedbf42d5.html",
+      "https://www.google.com/maps/search/?api=1&query=Southwind%20Casino%20Newkirk%20Oklahoma",
+      "https://southwindcasino.com"
+    ],
+    "status": "held-closed"
+  },
+  "remainingReviewedScope": [
+    {
+      "name": "Moapa Paiute Travel Plaza",
+      "status": "held-current-gaming-scope",
+      "sources": [
+        "https://www.moapabandofpaiutes.com/travel-plaza",
+        "https://www.500nations.com/casinos/nvMoapa.asp"
+      ],
+      "decision": "Current tribal page confirms operating travel plaza but does not confirm current gaming. Legacy moapapaiutes.com redirects to an unrelated forms site and cannot serve as current tribal authority. Historical casino directories conflict in emphasis; no casino promotion without current gaming-floor confirmation."
+    },
+    {
+      "name": "Northern Nevada Nugget Casino Group remaining locations",
+      "status": "coordinate-and-destination-scope-pending",
+      "source": "https://www.nuggetcasinos.com/locations/",
+      "decision": "Current operator roster recovered, including Carson/Churchill/Lyon locations. Keep the individually named locations in the release coverage ledger; license class/current casino floor scope and property numerical points must clear before promotion. Portfolio membership alone is insufficient."
+    }
+  ],
+  "validation": {
+    "head": "243082896d6b774dde9bbb44c44f71e02824aaa3",
+    "run": 34739926534,
+    "result": "Full required gates passed; historical batch counts remain the snapshot after this pass."
+  }
+}

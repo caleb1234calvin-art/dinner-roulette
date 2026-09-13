@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 2,
+  "capturedOn": "2026-09-13",
+  "status": "VALIDATED_RC_AWAITING_NONPRODUCTION_INTEGRATION",
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "branch": "integration/casino-release-candidate-2026-09-13",
+  "pr": 38,
+  "base": "877ff08c300a9d149aa174e9c47471d57bc98ccd",
+  "runtimeHead": "243082896d6b774dde9bbb44c44f71e02824aaa3",
+  "mainBaseline": "c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5",
+  "catalog": {
+    "canonical": 808,
+    "serialized": 824,
+    "passes": 54,
+    "Nevada": 146,
+    "Oklahoma": 96,
+    "Colorado": 31,
+    "Texas": 4,
+    "fourState": 277,
+    "added": 77,
+    "existingRemoved": 0,
+    "existingMerged": 0,
+    "existingRenamed": 0,
+    "coordinateCorrections": 3,
+    "addressCorrections": 2,
+    "manifestJurisdictions": 41,
+    "manifestComplete": 39,
+    "manifestPending": [
+      "Nevada",
+      "Oklahoma"
+    ]
+  },
+  "validation": {
+    "application": {
+      "failed": 0,
+      "passed": 51,
+      "skipped": 0
+    },
+    "browser": {
+      "artifactRetentionDays": 14,
+      "checks": 12,
+      "desktop": {
+        "height": 800,
+        "location": "Reno, Nevada",
+        "width": 1280
+      },
+      "evidenceArtifact": "casino-browser-evidence",
+      "limits": [
+        "No hosted acceptance test",
+        "No physical iOS/Android validation",
+        "No successful live-provider discovery or real geolocation acceptance claimed",
+        "External Google Maps app navigation not opened; exact href destination and security attributes asserted"
+      ],
+      "mobile": {
+        "height": 844,
+        "location": "Newkirk, Oklahoma",
+        "width": 390
+      },
+      "network": "Deterministic server-side Overpass outage and Nominatim location fixtures; actual server functions, canonical data, production-mode bundle and browser DOM.",
+      "pageErrors": 0,
+      "status": "passed-in-disposable-CI"
+    },
+    "casinoSubsetIncludedInRepositoryTotal": true,
+    "casinoSubsetPassed": 65,
+    "catalog": {
+      "canonical": 808,
+      "passes": 54,
+      "serialized": 824
+    },
+    "failed": 0,
+    "gates": [
+      "npm ci",
+      "typecheck",
+      "65 casino regressions",
+      "full repository and application suite",
+      "actual TypeScript casino export/schema audit",
+      "national manifest audit",
+      "development build",
+      "production-mode build without migrations",
+      "Chromium production-preview smoke at desktop and mobile sizes",
+      "30 Dinner icon files"
+    ],
+    "head": "243082896d6b774dde9bbb44c44f71e02824aaa3",
+    "job": 103677792014,
+    "repository": {
+      "failed": 0,
+      "passed": 263,
+      "skipped": 4
+    },
+    "result": "success",
+    "run": 34739926534,
+    "runNumber": 307,
+    "skipped": 4,
+    "uniquePassed": 314,
+    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34739926534"
+  },
+  "documentationSkips": [
+    {
+      "file": "scripts/brand-check.test.mjs",
+      "name": "SKILL.md and AGENTS.md name the marker path and bound this script uses",
+      "classification": [
+        "B: intentionally external by design",
+        "A: unavailable in a clean repository-only checkout"
+      ],
+      "reason": "External OG assistant documentation package (.grok/skills/og and workspace AGENTS.md) is intentionally gitignored and absent. Original assertions run when installed; REQUIRE_WORKSPACE_DOCS=1 makes absence fail closed. Not a casino/application check."
+    },
+    {
+      "file": "scripts/brand-check.test.mjs",
+      "name": "the sections that own the brand-task prohibition never affirm a wait",
+      "classification": [
+        "B: intentionally external by design",
+        "A: unavailable in a clean repository-only checkout"
+      ],
+      "reason": "External OG assistant documentation package (.grok/skills/og and workspace AGENTS.md) is intentionally gitignored and absent. Original assertions run when installed; REQUIRE_WORKSPACE_DOCS=1 makes absence fail closed. Not a casino/application check."
+    },
+    {
+      "file": "scripts/brand-check.test.mjs",
+      "name": "SKILL.md tells the pass to self-check with the flag this CLI accepts",
+      "classification": [
+        "B: intentionally external by design",
+        "A: unavailable in a clean repository-only checkout"
+      ],
+      "reason": "External OG assistant documentation package (.grok/skills/og and workspace AGENTS.md) is intentionally gitignored and absent. Original assertions run when installed; REQUIRE_WORKSPACE_DOCS=1 makes absence fail closed. Not a casino/application check."
+    },
+    {
+      "file": "scripts/write-atomic.test.mjs",
+      "name": "every hand-over the og skill prints is one this script accepts",
+      "classification": [
+        "B: intentionally external by design",
+        "A: unavailable in a clean repository-only checkout"
+      ],
+      "reason": "External OG assistant documentation package (.grok/skills/og and workspace AGENTS.md) is intentionally gitignored and absent. Original assertions run when installed; REQUIRE_WORKSPACE_DOCS=1 makes absence fail closed. Not a casino/application check."
+    }
+  ],
+  "completed": [
+    "77 evidence-backed destinations added through passes 51–54; current location/status/source conflicts explicitly reconciled.",
+    "Three existing pins and two addresses corrected with stable IDs and historical records preserved.",
+    "All registered TypeScript exports/schema, chronological reconciliation, manifests and 78 very close pairs reviewed.",
+    "44 additional meaningful repository tests relative to integration baseline; 65 casino regressions are a subset, not extra unique tests.",
+    "Live input/tag/website validation, strict Open now, unique options and reviewed alias/closure handling hardened.",
+    "Full clean dependency install, typecheck, all available unit tests, two safe builds and production-preview Chromium smoke passed.",
+    "18 recent inline-provenance gaps linked to surviving sidecars and protected by a real-export regression.",
+    "Primary and adversarial audits completed; changed-file scope and targeted secret scan reviewed.",
+    "Coverage ledger, status watchlist, exact browser checklist and release/AI continuity records prepared."
+  ],
+  "blocked": [
+    "No working local exec-server or reachable authorized interactive preview; live-provider/physical-device/hosted acceptance remains NOT RUN.",
+    "Konawa/Rivermist property numerical point unresolved despite independent conflicting sources.",
+    "Horseshu current separate casino-floor scope and Moapa current gaming-floor scope remain unconfirmed.",
+    "NIGC marker endpoint returned 401; no authentication bypass. Some public sources returned login-required, 429, 404, bot blocks or extraction without a destination point; alternate sources were used where sufficient."
+  ],
+  "deferred": [
+    "Remaining named Nevada rural/small-operator and Oklahoma gasino/trading-post/operator scope candidates remain explicitly pending in audit/casino-rc-coverage-2026-09-13.json. No completeness claim.",
+    "Full repository-history secret scanning, exhaustive all-property fresh geocoding and all-dependency vulnerability remediation were outside this focused release audit."
+  ],
+  "optionalFuture": [
+    "Use audit/casino-status-watchlist-2026-09-13.json as input for separately authorized monitoring; no recurring tasks created.",
+    "Routine CI action-runtime deprecation maintenance; no known failing gate."
+  ],
+  "requiresUserAuthorization": [
+    "Any merge/promotion into main",
+    "Any Vercel or other hosted deployment",
+    "Production writes, migrations or irreversible external changes",
+    "Recurring status-monitor automation"
+  ],
+  "filesChanged": [
+    ".github/workflows/validate-icon-pack.yml",
+    "AI_CONTINUITY.md",
+    "audit/ai-continuity-before-casino-rc-2026-09-13.md",
+    "audit/casino-browser-release-checklist-2026-09-13.md",
+    "audit/casino-rc-adversarial-review-2026-09-13.json",
+    "audit/casino-rc-coverage-2026-09-13.json",
+    "audit/casino-rc-pass-51-evidence-2026-09-13.json",
+    "audit/casino-rc-pass-52-evidence-2026-09-13.json",
+    "audit/casino-rc-pass-53-evidence-2026-09-13.json",
+    "audit/casino-rc-pass-54-evidence-2026-09-13.json",
+    "audit/casino-rc-progress-2026-09-13.json",
+    "audit/casino-recent-provenance-index-2026-09-13.json",
+    "audit/casino-release-readiness-2026-09-13.md",
+    "audit/casino-sources-integration.json",
+    "audit/casino-status-watchlist-2026-09-13.json",
+    "audit/nevada-northern-markets-ledger-2026-09-11.json",
+    "package-lock.json",
+    "scripts/audit-casino-catalog.mjs",
+    "scripts/casino-audit-artifacts.test.mjs",
+    "scripts/casino-audit.mjs",
+    "scripts/casino-browser-smoke.mjs",
+    "scripts/casino-catalog-loader.mjs",
+    "scripts/casino-catalog-loader.test.mjs",
+    "scripts/casino-discovery.test.mjs",
+    "scripts/casino-rc-conflicts.test.mjs",
+    "scripts/casino-rc-evidence.test.mjs",
+    "scripts/casino-rc-final.test.mjs",
+    "scripts/casino-rc-frontier.test.mjs",
+    "scripts/casino-recent-provenance.test.mjs",
+    "scripts/casino-schema.mjs",
+    "scripts/casino-schema.test.mjs",
+    "scripts/casino-selection.test.mjs",
+    "scripts/casino-smoke-network.mjs",
+    "scripts/ts-test-loader.mjs",
+    "src/components/nightlife-home.tsx",
+    "src/lib/nightlife/casino-catalog-pass-51.ts",
+    "src/lib/nightlife/casino-catalog-pass-52.ts",
+    "src/lib/nightlife/casino-catalog-pass-53.ts",
+    "src/lib/nightlife/casino-catalog-pass-54.ts",
+    "src/lib/nightlife/discovery-policy.ts",
+    "src/lib/nightlife/search.ts",
+    "src/lib/nightlife/selection.ts",
+    "src/lib/nightlife/types.ts"
+  ],
+  "configurationChanges": [
+    "CI requires actual-export casino inventory, production-mode build without migrations and guarded Chromium smoke with artifacts.",
+    "Nevada pending expectedCount changed from speculative 174 to null. No new production environment variables or migration files."
+  ],
+  "dependencyChanges": {
+    "packageManifestChanged": false,
+    "lockRepair": "eslint-plugin-react-hooks 6.1.1 and required lock entries satisfy the existing ^6.0.0 manifest range. npm ci passes.",
+    "otherUpgrades": "none"
+  },
+  "targetedSecretScan": {
+    "findings": [],
+    "missing": [],
+    "scanned": 36,
+    "scope": "Current changed text files only; no secret values printed or accessed from environment. Not a repository-history scan."
+  },
+  "historicalAttempts": [
+    {
+      "head": "868317483be056bb8b52eea2d28705517f289226",
+      "run": 34734893631,
+      "result": "Production command could not locate Vite outside npm PATH; corrected to node node_modules/vite/bin/vite.js. Browser did not run in this failed attempt."
+    },
+    {
+      "runs": [
+        300,
+        301,
+        302
+      ],
+      "result": "Browser harness assumptions failed: address-versus-coordinate Maps assertion, ambiguous hours locator and development Vite optimization reload. Corrected test assumptions and moved to production preview; later browser runs passed."
+    },
+    {
+      "head": "28c5f9699250700c99b7e184bf13629b361c53c5",
+      "run": 34736662895,
+      "runNumber": 303,
+      "uniquePassed": 298,
+      "result": "All required gates passed at pre-expansion catalog; superseded by later exact-head validations."
+    },
+    {
+      "head": "8651dcb850cbb17183419c35381f8edd80d82102",
+      "run": 34737413958,
+      "runNumber": 304,
+      "result": "Observed queued with no job steps; not counted as a pass or failure. Later complete runs validate the superseding state."
+    },
+    {
+      "head": "02057073c38fc4533ee9d0b6fdd6e6b91d51652d",
+      "run": 34738515765,
+      "runNumber": 305,
+      "uniquePassed": 308,
+      "result": "All gates passed for passes 51/52."
+    },
+    {
+      "head": "328bb374dff956962bfadc67c57e62c05a13c7b1",
+      "run": 34739322991,
+      "runNumber": 306,
+      "uniquePassed": 312,
+      "result": "All gates passed for pass 53 and Reno/Newkirk browser geographies."
+    }
+  ],
+  "supplementalV8Attempt": "Audit logic succeeded, but isolated V8 lacked WHATWG URL and could not execute the Node schema faithfully. This was an environment limitation, not a schema pass or application failure. Full unmodified Node schema subsequently passed in CI.",
+  "releaseGate": {
+    "data": "PASS for implemented records; PARTIAL statewide Nevada/Oklahoma completeness",
+    "code": "PASS; no known release-blocking defect",
+    "testing": "PASS 314 unique, 0 failed, 4 understood external skips",
+    "build": "PASS development and production mode without migrations",
+    "audit": "PASS primary and adversarial within documented scope",
+    "browser": "PASS automated CI; live services/physical devices/hosted acceptance NOT RUN",
+    "documentation": "Prepared; final documentation commit must pass exact-head CI",
+    "production": "untouched",
+    "vercel": "no deployment",
+    "main": "untouched"
+  },
+  "next": "Validate the documentation head, promote only to integration/active-work-pass-1 with expected head SHA, verify its workflow, and record the integration merge. Live acceptance and remaining coverage constraints must be reviewed before any separately authorized controlled release.",
+  "recovery": "Non-production merge is reversible by reverting its merge commit or restoring the recorded pre-RC integration revision through a reviewed revert. Preserve branch/history and audit evidence; do not force-push main. No database schema/data change or production rollback is needed for work performed here."
+}

@@ -1,6 +1,6 @@
 // Keep canonicalization aligned with src/lib/nightlife/search.ts.
 const SAME_PROPERTY_MILES = 0.35;
-const STATE_NAMES = {
+export const STATE_NAMES = {
   AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas",
   CA: "California", CO: "Colorado", CT: "Connecticut", DE: "Delaware",
   FL: "Florida", GA: "Georgia", HI: "Hawaii", ID: "Idaho",

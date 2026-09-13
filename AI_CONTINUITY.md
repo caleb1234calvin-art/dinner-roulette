@@ -1,114 +1,100 @@
 # Dinner Roulette / Pick For Me — AI Continuity
 
-_Updated September 13, 2026 after validated integration promotions through PR #36._
+Updated September 13, 2026 for the validated casino RC through Pass 54. This file supersedes earlier current-count/browser claims. Prior continuity is preserved verbatim in `audit/ai-continuity-before-casino-rc-2026-09-13.md`; older pre-Astra history remains in `audit/ai-continuity-handoff-2026-09-12.md`.
 
-## Current state and authority
+## Working state and authority
 
-- Repository: `caleb1234calvin-art/dinner-roulette`; active development/integration branch: `integration/active-work-pass-1`.
-- Latest promoted implementation merge: `ea82bb1f2fe67cc9493eea190c7e82dc298c5276` (PR #36). Documentation checkpoints may follow without changing runtime.
-- `main` baseline was repeatedly verified unchanged at `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`. Do not modify or merge to main unless Caleb explicitly authorizes it.
-- No Vercel deployment is authorized. `vercel.json` disables automatic Git deployments for `integration/**`. Do not rely on the historical Vercel rate-limit condition. ChatGPT subscription upgrades do not change this deployment restriction.
-- Continue research, source verification, code, tests, data structures, cleanup and development-build validation without hosted publication. Never call GitHub integration work deployed.
-- Do not delegate to another agent/assistant unless Caleb explicitly requests it. Preserve unrelated user edits and historical evidence.
+- Repository: `caleb1234calvin-art/dinner-roulette`.
+- RC branch: `integration/casino-release-candidate-2026-09-13`; [PR #38](https://github.com/caleb1234calvin-art/dinner-roulette/pull/38) targets **only** `integration/active-work-pass-1`.
+- Current validated runtime/data head: `243082896d6b774dde9bbb44c44f71e02824aaa3`, [Run 307](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34739926534). Documentation checkpoints follow; verify their exact head before promotion.
+- Pre-RC integration head: `877ff08c300a9d149aa174e9c47471d57bc98ccd`. Main remains `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
+- Broad reversible non-production research, code, tests, audits, documentation and integration preparation/promotion are authorized. **Main, production, Vercel/hosted deployment, irreversible external changes, secrets and recurring monitoring are not authorized.**
+- No Vercel deployment, production write or database migration occurred. `vercel.json` disables Git deployments for `integration/**`.
+- Do not delegate to another agent unless Caleb explicitly requests it. Preserve user edits and historical evidence.
+- Before non-production promotion, re-read PR/base refs and exact-head CI. Use expected head SHA. Do not merge to main.
 
-## Verified promotions
+## Current release facts
 
-| Work | PR | Validated exact head | Run | Integration merge |
-| --- | --- | --- | --- | --- |
-| Pass 49 audit repair, Cadence correction and legacy-ID reconciliation | [#33](https://github.com/caleb1234calvin-art/dinner-roulette/pull/33) | `25b2e0cd53049a6066d613d5ccfe6a63ee57dcd0` | [286](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34732399513) | `6563c1eec00cc44a004f4a7cbbfbd18739b952fc` |
-| Pass 50 four current-property coordinate holds | [#34](https://github.com/caleb1234calvin-art/dinner-roulette/pull/34) | `b8d4295c8b863a8193f63e51dea77d77e63000da` | [288](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34732655250) | `a7d894c9fde4391216378c49d6832097fc47fff8` |
-| Required portable repository/application test gate | [#35](https://github.com/caleb1234calvin-art/dinner-roulette/pull/35) | `a76ffbe7975f667dd808886462571ec0ba79934b` | [290](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34732944855) | `376a97bfd3601110ea63f4af9bfd82b30fe242f5` |
-| Complete manifest coverage for every active jurisdiction | [#36](https://github.com/caleb1234calvin-art/dinner-roulette/pull/36) | `e04a76475885093e54cb1e8a241bbf487cfb591a` | [292](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34733191269) | `ea82bb1f2fe67cc9493eea190c7e82dc298c5276` |
+| Scope | Canonical destinations |
+| --- | ---: |
+| Nationwide | **808** |
+| Nevada | **146** — pending statewide scope |
+| Oklahoma | **96** — pending statewide scope |
+| Colorado | **31** |
+| Texas | **4** |
+| Four-state focus | **277** |
 
-Run 292 passed the complete required workflow: dependency installation, typecheck, 21 casino regression tests, curated and national casino audits, repository/application tests, development bundle and all 30 Dinner icon assets.
+824 serialized rows across 54 passes become 808 active destinations. 41 manifest jurisdictions: 39 retain their prior complete status and two remain pending. **77 additions** relative to the 731 baseline; no existing destination removal, merge or rename in this RC. Three pins and two addresses corrected with stable IDs/history retained.
 
-- Repository suite: **219 passed, zero failed, four explicit skips**.
-- Application suite: **51 passed, zero failed, zero skipped**.
-- The 21 casino regressions are included in repository tests and are also run as a dedicated required step; do not double-count them as additional unique tests.
-- The four skipped checks validate an external OG assistant documentation package. `.grok/` and AGENTS.md are intentionally gitignored and absent from a clean checkout. Existing assertions still execute when that external package is installed; `REQUIRE_WORKSPACE_DOCS=1` also makes absence fail closed.
-- `npm test` now uses `scripts/test-runner.mjs`: both suites execute even if the first fails, and any failure makes the combined command fail. The workflow no longer treats the general test suite as report-only.
-- Earlier Runs 286/288 passed their then-required gates but had four report-only documentation failures and did not reach application tests. Those limitations were resolved by PR #35; do not rewrite the historical results.
+Run 307 passed **263 repository + 51 application = 314 unique tests**, zero failures and four explicit external-documentation skips. The **65 casino tests are included** in the repository total. Clean install, typecheck, export/schema and national audits, development build, production-mode build without migrations, Chromium smoke and all 30 Dinner icons passed.
 
-## Casino catalog accounting
+## COMPLETED
 
-| Scope | Current canonical destinations | Status |
-| --- | ---: | --- |
-| Nevada | 109 | Pending statewide scope/reconciliation |
-| Oklahoma | 56 | Pending remaining operator/scope work |
-| Colorado | 31 | Complete under current physical-destination scope |
-| Texas | 4 | Complete under current physical-destination scope |
-| Four-state focus | 200 | Not a claim of Nevada/Oklahoma completeness |
-| National casino catalog | 731 | 744 serialized historical rows across 50 passes |
+- Pass 51: 24 NV/OK additions and Oneida Airport/IMAC pin corrections.
+- Pass 52: 31 additions; rejected conflicting named map points, including Seminole I-40 city-area markers, Tahoe/Harrah/Black Hawk/Kiowa discrepancies.
+- Pass 53: Club Cal Neva, Montego Bay and Remington Park; Slot Palace address/point correction; Golden Pony closure hold.
+- Pass 54: 19 northern Nevada/Oklahoma destinations, including Avi, Carson Nugget, Verdi/Tahoe/Wendover, Grand Lake/High Winds/Stables/River Bend, Braman/Cimarron/Sugar Creek/Gold River/StoneWolf; closed SouthWind Newkirk excluded.
+- All new records have identity source, numerical point source, date and scope decision. Unknown hours stay null.
+- Source lineage repaired for 18 recent records missing inline fields; latest sidecar identity/address/coordinates protected by a real-export test.
+- Audit loader follows actual registered TypeScript exports and requires every chronological pass. Schema, duplicate/legacy-ID, source, location and manifest checks pass.
+- Live discovery validates queries/coordinates/IDs/lifecycle, strips malformed optional fields, rejects unsafe website URLs, handles reviewed near-property aliases and excludes 16 bounded closure alias groups.
+- Strict Open now requires known-open; default is off. Options deduplicate stable IDs. Filter/weighted selection tests include empty/singleton/10,000-item and Unicode cases.
+- Primary and adversarial reviews completed. 78 pairs within 0.075 miles reviewed; active IDs unique; separate supported floors/campuses retained.
+- Actual **production-preview Chromium** passed at Reno desktop 1280×800 and Newkirk mobile viewport 390×844. Tour, casino filters, outage fallback, strict-open empty state, options/pick/reroll/maps href/exclusions, location error/Favorites empty state and non-casino navigation covered. Nominatim and Overpass were deterministic server-side fixtures. No hosted/live-service/physical-device claim.
+- Dependency lock mismatch repaired to eslint-plugin-react-hooks 6.1.1 satisfying the existing ^6.0.0 manifest. Required `npm ci` passes; no package-manifest change.
 
-All 41 active jurisdictions are now represented in the manifests: 39 complete and two pending. Complete-state runtime counts are exact hard gates. Unknown statewide totals may be null only for pending jurisdictions; any supplied count must still be a positive integer. Every active jurisdiction must have a manifest record.
+## Decisions to preserve
 
-The old Oklahoma count of 51 omitted two already-active backbone properties, Indigo Sky and Buffalo Run. Those were not new additions. The prior 194/198 four-state projections are superseded by the exact exported counts above.
+- Cadence Crossing remains **36.052633,-114.994834**. Its old **36.08622,-115.03321** was unsupported; the operator's old Jokers Wild map is not its point source.
+- Beau Rivage/MGM Grand retain reconciled stable backbone IDs from earlier integration work. Latest-pass history is intentional; do not delete old rows to hide warnings.
+- Oneida Airport: **44.497535,-88.122424**, current operator campus address **2040 Airport Dr**; legacy 2020 entrance alias retained in evidence. IMAC: **44.497146,-88.126045**, **2100 Airport Dr**. They are separate venues.
+- Soaring Eagle Slot Palace: **43.6061056,-84.7052673**, **7566 Ogemaw Dr #7076**. Operator directions/building occupant resolve the shared 6800 resort-address conflict.
+- Quapaw uses the new February 2026 facility at **6530 S 580 Rd**. Lake Eufaula uses **1045 Birkes Rd**, not old 806 W Forrest Ave. Grand Lake's **24701 S 655 Rd** casino is not the off-site lodge.
+- Montego Bay **100 Wendover Blvd** and Wendover Nugget **101** are distinct. Shared operator/tourism address variants do not control routing.
+- War Pony closure is **August 24, 2025**, not the superseded September date. Golden Pony remains held after late-2025 closure; the widely returned reopening article is **May 14, 2020**. SouthWind Newkirk closed **January 1, 2022**; Rock & Brews Braman is separate and active.
+- The northern Nevada ledger was a truncated 379-byte file. Original bytes are preserved; its claimed 45 rows were not fabricated. Nevada expected count is null, not the speculative 174 decision universe.
+- Preserve property destination `!3d/!4d` or final route endpoint semantics. A Maps viewport, adjacent business, city centroid or copied hotel/corporate address cannot clear a point hold.
 
-## Repairs that matter
+## Four legitimate skips
 
-1. `audit/casino-sources*.json` jurisdictions are keyed objects, not arrays. Merge base then integration overrides. Audit actual exported TypeScript catalog records, preserving factory-generated IDs and audit metadata; do not return to regex-only argument counting.
-2. Canonicalization stays chronological and matches `src/lib/nightlife/search.ts`: same ID or exact normalized name within 0.35 miles, latest record wins. Same ID at a distinct location is a hard failure, compared against every prior occurrence. Same name at distant locations remains distinct.
-3. Beau Rivage and MGM Grand were duplicated through changed IDs and names. Later Pass 16/22 records now retain their original backbone stable IDs. Dedicated real-export lineage tests protect this; historical rows and original coordinates were not deleted.
-4. Cadence Crossing's handoff coordinate **36.08622,-115.03321 was unsupported**. The corrected current named MapQuest LocalBusiness point is **36.052633,-114.994834**, about 3.159 miles away. Its official directions page still points to legacy Jokers Wild; that old map link is not the current coordinate source.
+External OG documentation is intentionally absent from clean Git checkouts (`.grok/skills/og` and workspace AGENTS.md). Classification **B by design / A in repository-only CI**. Installed docs retain assertions; `REQUIRE_WORKSPACE_DOCS=1` fails closed.
 
-Key repair evidence:
+1. `brand-check.test.mjs`: “SKILL.md and AGENTS.md name the marker path and bound this script uses”.
+2. Same file: “the sections that own the brand-task prohibition never affirm a wait”.
+3. Same file: “SKILL.md tells the pass to self-check with the flag this CLI accepts”.
+4. `write-atomic.test.mjs`: “every hand-over the og skill prints is one this script accepts”.
 
-- `audit/cadence-crossing-coordinate-correction-2026-09-13.json`
-- `audit/casino-legacy-lineage-reconciliation-2026-09-13.json`
-- `audit/integration-test-gate-recovery-2026-09-13.json`
-- `audit/national-manifest-coverage-reconciliation-2026-09-13.json`
-- `audit/integration-validation-summary-2026-09-13.json`
+Do not fake these files, remove the skips cosmetically or count them as casino/application tests.
 
-## Pass 50: four former coordinate holds promoted
+## BLOCKED
 
-| Destination | Coordinate | Current-property evidence |
-| --- | --- | --- |
-| Red Dragon Casino, Elko | 40.82809,-115.75709 | Raw named MapQuest LocalBusiness geo at 404 S 5th St, corroborated current county/operation identity |
-| Lakecrest Casino and Hotel | 34.1348459,-97.1167007 | Operator-published Google Maps current named property destination |
-| Lake Eufaula Casino Hotel | 35.3000591,-95.5921671 | Operator-published 1045 Birkes Rd building destination explicitly listing the current casino |
-| Creek Nation Casino Holdenville | 35.0912327,-96.4034396 | Operator-published 211 E Willow St building listing the casino; independent MapQuest point agrees closely |
+- Local exec-server handshake failed; no local shell or reachable authorized interactive preview was available. CI execution succeeded. Live-provider success, physical-device geolocation/Maps and hosted acceptance are **NOT RUN**.
+- Konawa/Rivermist is operating by current operator evidence, but property numerical coordinates remain conflicting/unextracted. Keep the curated coordinate hold.
+- Horseshu requires current separate casino-floor confirmation; Moapa's current tribal page confirms a travel plaza but not gaming. The old moapapaiutes.com redirects to an unrelated forms site.
+- NIGC marker endpoint returned 401. Other sources sometimes required login, rate-limited or omitted numerical points. No authentication/provider boundary was bypassed; alternate sources were used when sufficient.
 
-Full links, source fields, conflicts, raw-source retrieval references and rejected points are in `audit/casino-frontier-coordinate-qa-2026-09-13.json`. `scripts/casino-frontier.test.mjs` guards serialization against those source fields.
+## DEFERRED
 
-- Red Dragon and co-located Dotty's #214 are one routable property, not two roulette destinations.
-- Lakecrest's differing MapQuest point is retained as a discrepancy, not selected or misrepresented as operator-supplied.
-- Lake Eufaula uses destination `!3d/!4d`, not the Google Maps viewport longitude. The old 806 W Forrest Ave casino stays excluded; use operator address 1045 Birkes Rd.
-- Holdenville's earlier city centroid remains excluded. No predecessor, city centroid, nearby development or guessed coordinate may clear a hold.
-- Cadence's quarantined Jokers Wild points remain excluded as coordinate sources.
+NV/OK are not statewide-complete. The exhaustive named remaining queue and scope distinctions are in `audit/casino-rc-coverage-2026-09-13.json`: Nevada rural/small-operator locations, Nugget Group's newly recovered portfolio, Oklahoma smaller gasinos/trading-post/other operator properties. Do not silently exclude them or promote them from portfolio membership alone. The implemented catalog may be released as the established partial scope; an exhaustive coverage promise requires more work.
 
-## Remaining work, not deployment blockers
+## OPTIONAL / FUTURE
 
-All four named coordinate holds from the handoff are cleared, but statewide Nevada/Oklahoma coverage is not complete.
+`audit/casino-status-watchlist-2026-09-13.json` contains 16 runtime rule groups plus three curated scope/coordinate holds; 10 entries merit future monitoring. **No recurring task was created.** Demolished/retired predecessors should not receive pointless periodic reopening checks. CI action-runtime/deprecation maintenance can follow separately.
 
-- The Pass Casino, Whiskey Pete's and Buffalo Bill's remain closure/renovation holds without confirmed current daily-gaming reopening. Ownership sales or historical hours alone are not reopening evidence.
-- Primm Valley is a separate active destination with July 22, 2026 reopening evidence. Do not infer that the other Primm casinos reopened.
-- Oklahoma's current 56 is a partial verified runtime set, not a statewide inventory total. Continue the planned clusters in `audit/oklahoma-statewide-scope-2026-09-11.json`: Quapaw/northeast, Sac & Fox/Seminole/Shawnee, Comanche and remaining tribal/rural properties, after checking which existing ledgers already cover each.
-- Nevada's 174 pending manifest figure is a provisional decision universe including exclusions/aliases, not a runtime target. Continue scope maintenance, closure checks and independent property QA.
-- Colorado remains maintenance at 31 (13 Black Hawk, 6 Central City, 10 Cripple Creek, 2 tribal); Texas remains maintenance at four.
-- Naskila Leggett's coordinate provenance is user-assisted map-pin verification, not first-party numerical publication. Preserve that distinction.
+## Execution history and safe next action
 
-Use the connected research stack as relevant (TinyFish, Tavily/Parallel, Firecrawl; Exa only if meaningful gaps remain). The cadence is discover → verify → reconcile → implement → exact-head validate → promote → re-audit. Never reduce the evidence standard to increase counts.
+Earlier browser attempts failed on an incorrect Maps expectation, ambiguous locator and development Vite reload. They were fixed; Runs 303, 305, 306 and 307 passed at their respective revisions. Run 304 was observed queued without steps and is not counted as success/failure. An isolated V8 schema attempt lacked WHATWG URL; actual unmodified Node schema later passed. Exact history is in `audit/casino-rc-progress-2026-09-13.json`.
 
-## Execution and verification limits
+Next: validate the final documentation head, promote PR #38 **only into non-production integration** using its expected head SHA, verify the integration workflow and record the merge. Then perform the prepared live acceptance checklist when a permitted target is available. Complete additional coverage if exhaustive scope is required. **Any main promotion or hosted deployment requires Caleb's separate explicit authorization.**
 
-The local execution environment failed its exec-server handshake. Repository work and full CI succeeded through GitHub, but no interactive local-browser smoke test or hosted acceptance test has been claimed.
+Safe commands: `npm ci --no-audit --no-fund`, `npm run typecheck`, `npm test`, `node --test scripts/casino-*.test.mjs`, `npm run audit:casinos`, `npm run build:dev`, and `node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`. **Do not use `npm run build`: it chains database migrations.**
 
-Safe validation commands are `npm run typecheck`, `npm test`, `npm run audit:casinos`, and `npm run build:dev`. Do not casually use `npm run build`: its production command also runs database migrations.
+If local execution returns, inspect the existing dirty checkout before editing. Do not overwrite it or confuse it with the validated remote state. Browser instructions and precise limits are in `audit/casino-browser-release-checklist-2026-09-13.md`. Revert a non-production integration merge through review if recovery is needed; preserve evidence/history and avoid force-pushing shared branches.
 
-When execution is restored, inspect the existing dirty local checkout before editing. Verify local browser routing, distance filtering, mobile layout and integrations without deploying. A green CI bundle does not prove those interactive behaviors or production readiness.
+## Preserve product behavior and identity
 
-Before any promotion, inspect the current PR/base refs and exact-head workflow. Only `integration/active-work-pass-1` is the promotion target. Use expected head SHA, and revalidate if code or the validated head changes.
+Dinner, Nightlife, Date Night and seasonal discovery remain separate features. Preserve curated casino passes, local/Jasper County catalogs, live mirrors and honest fallback. Preserve LEGAL.md and Settings disclosures: this is an independent discovery tool, not a wagering service or guaranteed admission.
 
-## Preserve app behavior and identity
+Preserve all 30 Dinner icon assets and semantic resolver. Caustic Relay/Mordax identity is immutable without a requested redesign; preserve `public/brand/CAUSTIC_RELAY_ident-2.mp4` and `src/components/startup-ident.tsx`. Future food-truck work must distinguish serving now, scheduled today and discovered nearby; stale business addresses are not current truck locations.
 
-- Dinner Roulette V.3 is moving toward Pick For Me: dinner, nightlife, date-night and seasonal discovery remain distinct app behaviors.
-- Preserve curated casino passes, Jasper County/local catalogs, live Overpass mirrors and merge/fallback behavior. A broader dedupe refactor requires explicit regression protection.
-- The app is an independent discovery/decision tool; preserve LEGAL.md and Settings disclosures. No wagers, gambling service, alcohol sales or guaranteed admission are offered.
-- Preserve all 30 Dinner icons under `public/dinner-icons/{dark,light}/` and the semantic resolver.
-- Caustic Relay/Mordax visual identity is immutable unless Caleb requests a redesign. Preserve `public/brand/CAUSTIC_RELAY_ident-2.mp4` and `src/components/startup-ident.tsx`.
-- Future food-truck discovery must distinguish serving now, scheduled today and discovered nearby. A stale registered business address must not be treated as confirmed current truck location.
-- The Jasper County audit remains useful provenance and discovery context, not permission to conflate separate app features or source standards.
-
-## Historical handoff
-
-The original pre-Astra continuity is preserved verbatim at `audit/ai-continuity-handoff-2026-09-12.md`. Its old coordinate/count/gate claims are superseded by this file and dated correction artifacts. Earlier session checkpoints remain available in Git history. Preserve historical audit artifacts as provenance.
+The detailed release gate, changed paths, sources, tests, warnings and rollback notes are in `audit/casino-release-readiness-2026-09-13.md`, `audit/casino-rc-progress-2026-09-13.json`, and `audit/casino-rc-adversarial-review-2026-09-13.json`.

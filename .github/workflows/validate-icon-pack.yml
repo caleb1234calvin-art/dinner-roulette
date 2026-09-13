@@ -35,7 +35,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
 
       - name: Typecheck
         run: npm run typecheck
@@ -44,13 +44,33 @@ jobs:
         run: node --test scripts/casino-*.test.mjs
 
       - name: Audit curated casino catalog
-        run: npm run audit:casinos
+        run: |
+          node scripts/audit-casino-catalog.mjs --inventory
+          node scripts/audit-national-coverage.mjs
 
       - name: Repository and application tests
         run: npm test
 
       - name: Build development bundle
         run: npm run build:dev
+
+      - name: Build production-mode bundle without database migrations
+        run: node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
+
+      - name: Install Chromium for disposable local browser validation
+        run: npx playwright install --with-deps chromium
+
+      - name: Exercise casino experience in local Chromium
+        run: node scripts/casino-browser-smoke.mjs
+
+      - name: Preserve browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: casino-browser-evidence
+          path: audit/browser-results/
+          if-no-files-found: warn
+          retention-days: 14
 
       - name: Verify Dinner icon packs
         run: |

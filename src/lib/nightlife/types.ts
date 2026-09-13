@@ -52,7 +52,8 @@ export const DEFAULT_NIGHTLIFE_FILTERS: NightlifeFilters = {
   maxPrice: 4,
   venueTypes: ["anything"],
   energy: 50,
-  openNowOnly: true,
+  // Saved casinos often have unconfirmed hours; strict Open now is opt-in.
+  openNowOnly: false,
   includeUnknownPrice: true,
   stretchRadius: false,
   favoritesOnly: false,
