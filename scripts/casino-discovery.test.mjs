@@ -108,6 +108,9 @@ test("reviewed predecessor names merge only into the same nearby current propert
   const base = elementToPlace(element());
   for (const [name, former] of [
     ["J Resort", "Sands Regency Casino Hotel"],
+    ["Crystal Bay Casino", "Crystal Bay Club Casino"],
+    ["Boomtown Casino Resort", "Best Western Plus Boomtown Casino Hotel"],
+    ["Red Garter Hotel & Casino", "Red Garter Hotel & Casino by Red Lion Hotels"],
     ["Caesars Republic Lake Tahoe", "Harveys Lake Tahoe"],
     ["Golden Nugget Lake Tahoe Hotel & Casino", "Hard Rock Hotel & Casino Lake Tahoe"],
     ["Bally’s Lake Tahoe Casino Resort", "MontBleu Resort Casino & Spa"],
@@ -126,6 +129,7 @@ test("reviewed predecessor names merge only into the same nearby current propert
 test("closed Oklahoma predecessors stay excluded without suppressing operating successors", () => {
   for (const [name, lat, lon] of [
     ["Ioway Casino", 35.70, -96.98],
+    ["Kaw Southwind Casino Newkirk", 36.877795, -97.0303071],
     ["Kiowa Casino Verden", 35.09, -98.10],
     ["Creek Nation Casino Eufaula", 35.29, -95.59],
   ]) {
