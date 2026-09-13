@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Heart, MoonStar, UtensilsCrossed } from "lucide-react";
 import { DateNightHome } from "@/components/date-night-home";
 import { HalloweenDateNightPanel } from "@/components/halloween-date-night-panel";
@@ -95,8 +95,6 @@ html.date-night-active:not([data-theme="light"]):not(.halloween-date-night-activ
     drop-shadow(0 0 14px rgba(201, 167, 255, 0.46));
 }
 
-/* Halloween artwork already contains its red/teal lighting. Keep it untouched:
-   no extra grayscale, recolor layer, surrounding neon box, or drop-shadow. */
 html.halloween-date-night-active img[src*="date-night-icons"] {
   filter: none !important;
   mix-blend-mode: normal !important;
@@ -104,7 +102,8 @@ html.halloween-date-night-active img[src*="date-night-icons"] {
 `;
 
 export function ModeHome() {
-  const [mode, setMode] = useState<HomeMode>("dinner");
+  const mode = useAppStore((state) => state.homeMode);
+  const setMode = useAppStore((state) => state.setHomeMode);
   const dateNightFilters = useAppStore((state) => state.dateNightFilters);
   const setDateNightFilters = useAppStore((state) => state.setDateNightFilters);
   const spookySeasonEnabled = useAppStore((state) => state.spookySeasonEnabled);
