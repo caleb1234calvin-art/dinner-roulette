@@ -18,8 +18,12 @@ export type DinnerIconKey =
   | "breakfast"
   | "fallback";
 
+/**
+ * Specific cuisines must win over broad provider tags such as fast_food or
+ * american. Providers commonly return both (for example dessert + fast_food),
+ * and the broad tag previously forced obviously wrong artwork.
+ */
 const CUISINE_ICON_PRIORITY: Array<[CuisineId[], DinnerIconKey]> = [
-  [["burgers", "fast_food"], "burger"],
   [["pizza"], "pizza"],
   [["mexican", "tex-mex"], "mexican"],
   [["chinese"], "chinese"],
@@ -32,30 +36,33 @@ const CUISINE_ICON_PRIORITY: Array<[CuisineId[], DinnerIconKey]> = [
   [["dessert", "ice_cream"], "dessert"],
   [["seafood", "cajun"], "seafood"],
   [["breakfast", "brunch"], "breakfast"],
+  [["burgers"], "burger"],
+  [["sandwiches", "deli", "fast_food", "american", "healthy", "vegetarian", "international", "other"], "fallback"],
 ];
 
 /**
- * The generated light/dark image packs were organized under semantic filenames
- * after generation, but the source image order did not match those names. Keep
- * the public files stable and correct the semantic-to-asset permutation here.
- * This preserves the matched light/dark artwork without rewriting binary assets.
+ * The generated image pack was saved under semantic filenames in a different
+ * order from the actual objects. Map semantic intent to the object that is
+ * visibly present in the current pack. When the pack has no trustworthy match
+ * (burger/sandwich/general restaurant), prefer the neutral covered-dish tile
+ * rather than showing a confidently wrong food.
  */
 const ICON_ASSET_KEY: Record<DinnerIconKey, DinnerIconKey> = {
-  burger: "mexican",
-  pizza: "burger",
-  mexican: "fallback",
-  chinese: "pizza",
-  japanese: "chinese",
-  italian: "italian",
-  steakhouse: "steakhouse",
-  bbq: "bbq",
-  chicken: "japanese",
-  "cafe-bakery": "chicken",
-  dessert: "cafe-bakery",
-  seafood: "dessert",
+  burger: "seafood",       // neutral covered dish
+  pizza: "burger",         // pizza slice
+  mexican: "fallback",     // taco
+  chinese: "pizza",        // dumplings
+  japanese: "pizza",       // neutral Asian dumplings
+  italian: "mexican",      // pasta
+  steakhouse: "chinese",   // steak
+  bbq: "chicken",          // ribs
+  chicken: "japanese",     // fried chicken
+  "cafe-bakery": "cafe-bakery", // cake / cafe-adjacent
+  dessert: "cafe-bakery",  // cake
+  seafood: "dessert",      // fish / shellfish
   buffet: "buffet",
   breakfast: "breakfast",
-  fallback: "seafood",
+  fallback: "seafood",     // neutral covered dish
 };
 
 function normalizedLabel(name: string, cuisineLabel = ""): string {
@@ -64,11 +71,10 @@ function normalizedLabel(name: string, cuisineLabel = ""): string {
 
 export function dinnerIconKeyFromVisual(name: string, photoKey: PhotoKey, cuisineLabel = ""): DinnerIconKey {
   const label = normalizedLabel(name, cuisineLabel);
-  if (label.includes("buffet") || label.includes("smorgasbord")) return "buffet";
-  if (label.includes("burger")) return "burger";
+  if (label.includes("golden corral") || label.includes("buffet") || label.includes("smorgasbord")) return "buffet";
   if (label.includes("pizza")) return "pizza";
   if (label.includes("taco") || label.includes("mexican")) return "mexican";
-  if (label.includes("sushi") || label.includes("japanese")) return "japanese";
+  if (label.includes("sushi") || label.includes("japanese") || label.includes("thai") || label.includes("noodle")) return "japanese";
   if (label.includes("chinese")) return "chinese";
   if (label.includes("italian") || label.includes("pasta")) return "italian";
   if (label.includes("steak")) return "steakhouse";
@@ -76,8 +82,10 @@ export function dinnerIconKeyFromVisual(name: string, photoKey: PhotoKey, cuisin
   if (label.includes("chicken") || label.includes("wing")) return "chicken";
   if (label.includes("coffee") || label.includes("cafe") || label.includes("bakery")) return "cafe-bakery";
   if (label.includes("dessert") || label.includes("custard") || label.includes("ice cream") || label.includes("donut")) return "dessert";
-  if (label.includes("seafood") || label.includes("fish")) return "seafood";
+  if (label.includes("seafood") || label.includes("fish") || label.includes("crab") || label.includes("sushi")) return "seafood";
   if (label.includes("breakfast") || label.includes("brunch") || label.includes("pancake")) return "breakfast";
+  if (label.includes("burger")) return "burger";
+  if (label.includes("sandwich") || label.includes("subway") || label.includes("deli")) return "fallback";
 
   switch (photoKey) {
     case "pizza": return "pizza";
