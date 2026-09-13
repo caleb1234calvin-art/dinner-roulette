@@ -4,9 +4,9 @@ Updated September 13, 2026. **Casino + location/international reconciliation is 
 
 ## Latest meaningful checkpoint
 
-FIRST COMPLETE GREEN COMBINED CANDIDATE. Frozen casinos and international/GPS behavior now pass all available automated, build and actual-provider browser gates together.
+Combined release candidate is ready for controlled non-production integration. Primary, actual-provider and adversarial reviews are complete.
 
-Work branch: `integration/casino-location-reconciliation-2026-09-13`. Work commit: **`13a40902ac2610112862e665571d4ba1cf0d2222`** — **Record first fully green combined casino and international candidate**.
+Work branch: `integration/casino-location-reconciliation-2026-09-13`. Work commit: **`d44de898fc6420e18ad83dc0a7aa753fbd19bc5b`** — **Complete adversarial review of the combined non-production candidate**.
 
 Current working branch: `integration/casino-location-reconciliation-2026-09-13`. Frozen starting integration: `183d3e1d71355a27e4bc35a2969d73037c9e6e33`. Preserved location source: `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839`, draft PR #39. Main baseline: `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
 
@@ -44,10 +44,13 @@ Current working branch: `integration/casino-location-reconciliation-2026-09-13`.
 - Actual post-fix international app/RPC acceptance passes Toronto 1623, Vancouver 393, Montréal 1010 and London 2176 eligible one-mile restaurants, exact Maps points, country/region metadata and persisted reload without GPS. Counts are observations with open-now disabled, not complete inventories.
 - Final actual-provider casino acceptance passes all six regions with zero findings/errors and native denial/manual recovery; provider timeouts are honestly handled.
 - Exact runtime/test head bdc05dee1bb15807c0f70d25e48c12fb37eea8f0 passed CI Run 337 (34778760104, job 103781770405): clean install, 367 tests, typecheck, audits, both builds, both browser suites and 30 icons. CI/local source fingerprint matches.
+- Final adversarial review found no remaining integration defect: frozen file/registry identity, original assertions, exact location-source paths, closure/alias/Maps behavior, global fallback geography, spatial parity, auth-enabled guarded CI and changed-file scope all verified.
+- No unrelated changes, dependency/config drift or high-confidence secret-pattern hits were found. Failed attempts and known physical/provider/timezone limitations remain explicit.
+- The candidate contains the frozen 883-casino implementation and the full intended GPS/international architecture. Remaining steps are exact candidate CI, non-production PR #42 integration, integration CI and final shared handoff.
 
 ## Validation of the combined work
 
-367 unique tests PASS (296 repository + 71 application), 0 failures, 4 understood external-doc skips. Typecheck/lint/schema/ID/chronology/manifest audits and 30 icons PASS. Safe dev and auth-enabled production builds PASS. 30 deterministic browser groups PASS; real-provider casino 6/6 regions and international 4/4 cities PASS. Exact runtime CI Run 337 PASS.
+367 unique tests PASS; 0 failures; 4 explained external-doc skips. Typecheck, changed-code lint, schema/ID/chronology/manifest audits, both migration-free builds, 30 Dinner icons, 30 deterministic browser groups, six casino and four international real-provider cases PASS. Focused adversarial review PASS. Runtime CI Run 337 PASS; inspect the final documentation candidate head CI before merging.
 
 Independent baselines are historical, not a combined result: casino freeze 329 passed (278 repository + 51 application), four skips, 16 browser groups; location source 342 passed (273 repository + 69 application), four skips, 12 location checks. Casino CI Run 325 and location CI Run 314 passed separately. Never add those totals together.
 
@@ -79,11 +82,11 @@ All four are **B: intentionally external by design / A: unavailable in a clean r
 
 ## BLOCKED / current integration gates
 
-No known implementation or available-validation blocker remains. Final focused adversarial review/scope check and controlled non-production PR #42 integration remain. Physical-device/hosted/account/Maps-app checks remain unverified later release acceptance.
+No known implementation blocker. Waiting only for the final candidate CI/integration checkpoint; physical-device/hosted/account/Maps-app acceptance is separately deferred, not claimed complete.
 
 ## Exact next action
 
-Perform the final adversarial review of only reconciliation changes, freeze-file/test retention and browser/CI safeguards. Publish its result, then verify exact candidate CI and integrate PR #42 into integration/active-work-pass-1 only. Verify resulting integration CI and update this same shared continuity with final commit details.
+Verify final candidate exact-head CI and PR #42 base/head. Merge only into integration/active-work-pass-1 with expected-head guard. Compare integration code/data with the validated candidate (only the newer shared handoff may differ), verify integration CI, and update this same shared continuity with the final integration SHA/message.
 
 ## DEFERRED
 
@@ -122,5 +125,7 @@ Local checkout: /workspace/scratch/60ab73826fd9/pick-for-me-casino. Inspect bran
 - `bdc05dee1bb15807c0f70d25e48c12fb37eea8f0` | `integration/casino-location-reconciliation-2026-09-13` | Bound restaurant duplicate searches for dense international cities
 - `2f1fe9b47b5cf211db318ce88102efb7ed0b5615` | `integration/active-work-pass-1` | Update shared continuity: dense-city fix passes 367 combined tests
 - `13a40902ac2610112862e665571d4ba1cf0d2222` | `integration/casino-location-reconciliation-2026-09-13` | Record first fully green combined casino and international candidate
+- `85731db50103ae6929c934a8fa2cea3f1a0a01a7` | `integration/active-work-pass-1` | Update shared continuity: first complete green combined validation
+- `d44de898fc6420e18ad83dc0a7aa753fbd19bc5b` | `integration/casino-location-reconciliation-2026-09-13` | Complete adversarial review of the combined non-production candidate
 
 This update records already-known work commits. Its own immutable documentation commit SHA is subsequent; inspect the current shared GitHub ref and Actions status. Every major checkpoint is saved and read back from GitHub before the next phase.
