@@ -1,0 +1,582 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "status": "research-history-one-provisional-record-rejected-before-freeze",
+  "base": "f2fd0f7f4737278126d72b0cc043c79db7652236",
+  "records": [
+    {
+      "id": "casino-catalog-nv-pioneer-crossing-dayton",
+      "name": "Pioneer Crossing Casino Dayton",
+      "address": "4 Pine Cone Rd, Dayton, NV 89403",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://pioneercrossingcasino.com/dayton/contact-us/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+in+Dayton+Nevada",
+      "lat": 39.2626388,
+      "lon": -119.5830216,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Pioneer+Crossing/data=!4m7!3m6!1s0x80990700415b79c3:0x1942eea9f0a8a9ae!8m2!3d39.2626388!4d-119.5830216!16s%2Fg%2F11zcfgrpzl!19sChIJw3lbQQAHmYARrqmo8KnuQhk"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Current operator roster and location page confirm gaming. Named 4 Pine Cone destination, not the S Main Street/Yerington result. Operator footer spells Pine Cone correctly; FAQ's Pine Cond is a typo.",
+      "supportingSources": [
+        "https://truckeegaming.com/"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-pioneer-crossing-fernley",
+      "name": "Pioneer Crossing Casino Fernley",
+      "address": "1705 US-50 ALT, Fernley, NV 89408",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://pioneercrossingcasino.com/fernley/contact/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+in+Fernley+Nevada",
+      "lat": 39.599258,
+      "lon": -119.2122351,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Pioneer+Crossing+Casino/data=!4m7!3m6!1s0x8098f08ff12716ef:0xdaa060dcf1d2398f!8m2!3d39.599258!4d-119.2122351!16s%2Fg%2F113f6dyhz!19sChIJ7xYn8Y_wmIARjznS8dxgoNo"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator confirms gaming at 1705 US-50 ALT. Google casino and Apple place agree within ten metres. Reject MapQuest's 39.60856,-119.26502 point several miles west.",
+      "supportingSources": [
+        "https://truckeegaming.com/",
+        "https://maps.apple.com/place?place-id=IB737570A92138394",
+        "https://www.mapquest.com/us/nevada/pioneer-crossing-casino-422762931"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-pioneer-crossing-yerington",
+      "name": "Pioneer Crossing Casino Yerington",
+      "address": "11 N Main St, Yerington, NV 89447",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://pioneercrossingcasino.com/yerington/contact-us/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Pioneer%20Crossing%20Casino%20Yerington%20Nevada",
+      "lat": 38.9873329,
+      "lon": -119.1634762,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Pioneer+Crossing+Casino/data=!4m7!3m6!1s0x809838e093eebfc1:0xadaf9f1943020c1d!8m2!3d38.9873329!4d-119.1634762!16s%2Fg%2F11x98lfys!19sChIJwb_uk-A4mIARHQwCQxmfr60"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator confirms operating casino at 11 N Main. Reject unmatched S Main pin. May 2026 chip redemption does not close the slots casino. Nearby Dini's is distinct.",
+      "supportingSources": [
+        "https://truckeegaming.com/",
+        "https://pioneercrossingcasino.com/yerington/",
+        "https://www.mapquest.com/us/nevada/pioneer-crossing-casino-10706988"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-carson-plains-dayton",
+      "name": "Carson Plains Casino",
+      "address": "6996 US-50 E, Dayton, NV 89403",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://carsonplainscasino.net/contact/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+in+Dayton+Nevada",
+      "lat": 39.3085071,
+      "lon": -119.5080471,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Carson+Plains+Casino/data=!4m7!3m6!1s0x809901557860479d:0x38aab6326871160!8m2!3d39.3085071!4d-119.5080471!16s%2Fg%2F11bwyw84m5!19sChIJnUdgeFUBmYARYBGHJmOrigM"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Current casino and address supported by operator. Named Google destination agrees with MapQuest property point; operator embed's west-offset viewport is not a routing point.",
+      "supportingSources": [
+        "https://carsonplainscasino.net/",
+        "https://www.mapquest.com/us/nevada/carson-plains-casino-269953800"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-gold-ranch-dayton",
+      "name": "Gold Ranch Casino Dayton",
+      "address": "755 Old US Hwy 50, Dayton, NV 89403",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://goldranchdayton.com/home/contact-us/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+in+Dayton+Nevada",
+      "lat": 39.243896,
+      "lon": -119.589419,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Gold+Ranch+Casino/data=!4m7!3m6!1s0x809907cdd1a66989:0xa91e67c00cdbcb96!8m2!3d39.243896!4d-119.589419!16s%2Fg%2F11bxflrhnh!19sChIJiWmm0c0HmYARlsvbDMBnHqk"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Current Truckee roster confirms separate Dayton floor. Named map and MapQuest agree at this property. Not Gold Ranch Verdi.",
+      "supportingSources": [
+        "https://truckeegaming.com/",
+        "https://www.mapquest.com/us/nevada/gold-ranch-casino-dayton-346066694"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-silverado-fernley",
+      "name": "Silverado Casino",
+      "address": "1380 W Newlands Dr, Fernley, NV 89408",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://silveradocasinonv.com/home/contact/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+in+Fernley+Nevada",
+      "lat": 39.6103922,
+      "lon": -119.2199776,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Silverado+Casino/data=!4m7!3m6!1s0x8098e81b4f1f3251:0x31b47861057ac2c6!8m2!3d39.6103922!4d-119.2199776!16s%2Fg%2F1tj806t1!19sChIJUTIfTxvomIARxsJ6BWF4tDE"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator confirms current casino and postal address. Named map agrees with MapQuest. Distinct from Silverado Franklin in South Dakota and other Fernley casinos.",
+      "supportingSources": [
+        "https://truckeegaming.com/",
+        "https://www.mapquest.com/us/nevada/silverado-casino-10699090"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-silver-strike-silver-springs",
+      "name": "Silver Strike Casino",
+      "address": "1190 US-50, Silver Springs, NV 89429",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://silverstrikecasino.net/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+in+Fernley+Nevada",
+      "lat": 39.4159678,
+      "lon": -119.2269958,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Silver+Strike+Casino/data=!4m7!3m6!1s0x8098f0f3aec7467b:0xc6f541f3254aafc9!8m2!3d39.4159678!4d-119.2269958!16s%2Fg%2F1tds6yql!19sChIJe0bHrvPwmIARya9KJfNB9cY"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator confirms current casino, bingo and street address. Google agrees with MapQuest. Silver Springs Nugget is a separate nearby floor.",
+      "supportingSources": [
+        "https://truckeegaming.com/",
+        "https://www.mapquest.com/us/nevada/silver-strike-casino-303908570"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-pahrump-nugget",
+      "name": "Pahrump Nugget Hotel & Casino",
+      "address": "681 S Highway 160, Pahrump, NV 89048",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://goldencasinogroup.com/contact",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+in+Pahrump+Nevada",
+      "lat": 36.210893,
+      "lon": -115.984157,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Pahrump+Nugget+Hotel+and+Casino/data=!4m7!3m6!1s0x80c6377af0c79b57:0x5c942dd37b8f7814!8m2!3d36.210893!4d-115.984157!16s%2Fg%2F113f2lwcs!19sChIJV5vH8Ho3xoARFHiPe9MtlFw"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator confirms table games and slots at this named property. Golden Casino Group is a same-site administrative alias. Closed Gold Town across the road is distinct.",
+      "supportingSources": [
+        "https://goldencasinogroup.com/casino",
+        "https://goldencasinogroup.com/media-and-press/pahrump-nugget"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-lakeside-pahrump",
+      "name": "Lakeside Casino & RV Park",
+      "address": "5870 S Homestead Rd, Pahrump, NV 89048",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://goldencasinogroup.com/contact",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Lakeside+Sports+Grill+Lakeside+Bingo+Pahrump",
+      "lat": 36.1324784,
+      "lon": -115.9584802,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Lakeside+Sports+Grill/data=!4m7!3m6!1s0x80c63951fdc40721:0xe1b4576b3f6e8fd5!8m2!3d36.1324784!4d-115.9584802!16s%2Fg%2F11ggnqdd1z!19sChIJIQfE_VE5xoAR1Y9uP2tXtOE"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator places Sports Grill and Dockside gaming bar inside Lakeside Casino. Use named restaurant/casino building corroborated by adjacent Lakeside Bingo, not RV park's west-side point. Reject copied 681 Highway 160 listing for Pahrump Nugget.",
+      "supportingSources": [
+        "https://goldencasinogroup.com/restaurants",
+        "https://goldencasinogroup.com/media-and-press/pahrump-nugget"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-saddle-west-pahrump",
+      "name": "Saddle West Hotel Casino & RV Resort",
+      "address": "1220 S Highway 160, Pahrump, NV 89048",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://www.saddlewest.com/casino",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+in+Pahrump+Nevada",
+      "lat": 36.2013929,
+      "lon": -115.9763035,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Saddle+West/data=!4m7!3m6!1s0x80c639ded55c143b:0xf6116190c803a443!8m2!3d36.2013929!4d-115.9763035!16s%2Fg%2F11h5kn45mz!19sChIJOxRc1d45xoARQ6QDyJBhEfY"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator confirms over 220 slots. Named casino-building entrance is mapped at 1230 NV-160 within the hotel/casino property. One resort destination, not separate hotel, casino and RV records.",
+      "supportingSources": [
+        "https://saddlewest.com"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-terribles-pahrump",
+      "name": "Terrible's Road House Pahrump",
+      "address": "1750 Pahrump Valley Blvd, Pahrump, NV 89048",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://www.terriblespahrump.com",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+in+Pahrump+Nevada",
+      "lat": 36.1935966,
+      "lon": -115.9903118,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Terrible%27s+Roadhouse+Pahrump/data=!4m7!3m6!1s0x80c639d3b164679f:0xeb137d57a6cbbca5!8m2!3d36.1935966!4d-115.9903118!16s%2Fg%2F11by_c3l01!19sChIJn2dksdM5xoARpbzLpld9E-s"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator confirms address and slots casino. Mountain View Casino is the old same-site name. Do not confuse with closed Terrible's/Gold Strike in Jean.",
+      "supportingSources": [
+        "https://www.terriblespahrump.com/amenities/"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-jackpot-joanies-pahrump",
+      "name": "Jackpot Joanie's Casino Pahrump",
+      "address": "820 East St, Pahrump, NV 89048",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://www.jackpotjoanies.com/pahrump-home",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+in+Pahrump+Nevada",
+      "lat": 36.2079288,
+      "lon": -115.9921588,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Jackpot+Joanie%27s+Casino/data=!4m7!3m6!1s0x80c6377858d63313:0x9d230f595f99dc43!8m2!3d36.2079288!4d-115.9921588!16s%2Fg%2F1tscp8rv!19sChIJEzPWWHg3xoARQ9yZX1kPI50"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator confirms renamed casino and slots. October 2025 reporting identifies Irene's as predecessor and expanded/non-smoking gaming. Irene's Corner Cafe is a component.",
+      "supportingSources": [
+        "https://www.yogonet.com/international/news/2025/10/23/115966-former-irenes-casino-in-pahrump-reopens-as-jackpot-joanies-after-rebrand"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-terribles-roadhouse-searchlight",
+      "name": "Terrible's Road House Searchlight",
+      "address": "100 US-95, Searchlight, NV 89046",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://www.terriblessearchlight.com",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+Searchlight+Nevada",
+      "lat": 35.4660881,
+      "lon": -114.9197756,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Terrible%27s+Roadhouse+Searchlight/data=!4m7!3m6!1s0x80cf1d4cf729005f:0xdcf2343b7620e530!8m2!3d35.4660881!4d-114.9197756!16s%2Fg%2F1tdn8z4k!19sChIJXwAp90wdz4ARMOUgdjs08tw"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator separately lists 57-machine Road House at 100 US-95 and 70-machine casino at 670 US-95. Distinct named points: do not merge.",
+      "supportingSources": [],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-terribles-casino-searchlight",
+      "name": "Terrible's Casino Searchlight",
+      "address": "670 US-95, Searchlight, NV 89046",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://www.terriblessearchlight.com",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+Searchlight+Nevada",
+      "lat": 35.4611508,
+      "lon": -114.9186242,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Terrible%27s+Casino+Searchlight/data=!4m7!3m6!1s0x80cf02b025001e6b:0x6ab43e9fb1543d63!8m2!3d35.4611508!4d-114.9186242!16s%2Fg%2F1tcwrd_j!19sChIJax4AJbACz4ARYz1UsZ8-tGo"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator explicitly supports separate 70-machine casino at gas-station property, apart from Road House. Operator-linked destination agrees with named current map.",
+      "supportingSources": [],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-wildfire-lanes",
+      "name": "Wildfire Casino & Lanes",
+      "address": "4451 E Sunset Rd Suite #1, Henderson, NV 89014",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://wildfiregaming.com/wildfires/wildfire-lanes/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Wildfire+casinos+Henderson+Nevada",
+      "lat": 36.0695855,
+      "lon": -115.0741223,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Wildfire+Casino/data=!4m7!3m6!1s0x80c8d013957651a9:0x2dc61a84c52a9a2!8m2!3d36.0695855!4d-115.0741223!16s%2Fg%2F1wg5y8sb!19sChIJqVF2lRPQyIARoqlSTKhh3AI"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator confirms current casino with over 180 machines plus bowling. Not Wildfire Sunset at 1195 W Sunset Road.",
+      "supportingSources": [],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-wildfire-sunset",
+      "name": "Wildfire Sunset",
+      "address": "1195 W Sunset Rd, Henderson, NV 89014",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://wildfiregaming.com/wildfires/wildfire-sunset/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Wildfire+casinos+Henderson+Nevada",
+      "lat": 36.063185,
+      "lon": -115.0368655,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Wildfire+Sunset/data=!4m7!3m6!1s0x80c8d0f043183a31:0x2a897b9dd9dec8b9!8m2!3d36.063185!4d-115.0368655!16s%2Fg%2F1pzx_ycdb!19sChIJMToYQ_DQyIARucje2Z17iSo"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator confirms current floor with over 130 machines. Separate from Wildfire Casino & Lanes despite both using Sunset Road.",
+      "supportingSources": [],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-wildfire-lake-mead",
+      "name": "Wildfire Lake Mead",
+      "address": "846 E Lake Mead Pkwy, Henderson, NV 89015",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://wildfiregaming.com/wildfires/wildfire-lake-mead/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Wildfire+casinos+Henderson+Nevada",
+      "lat": 36.0528691,
+      "lon": -114.9680482,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Wildfire+Lake+Mead/data=!4m7!3m6!1s0x80c8d6eec0175d17:0x5da1de58edbda9bb!8m2!3d36.0528691!4d-114.9680482!16s%2Fg%2F11b7q30p_q!19sChIJF10XwO7WyIARu6m97VjeoV0"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Current operator identifies separate slots casino, cage, gaming promotions and address.",
+      "supportingSources": [],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-wildfire-anthem",
+      "name": "Wildfire Anthem",
+      "address": "2551 Anthem Village Dr, Henderson, NV 89052",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://wildfiregaming.com/wildfires/wildfire-anthem",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Wildfire+Anthem+Valley+View+Las+Vegas",
+      "lat": 35.9798095,
+      "lon": -115.0991304,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Wildfire+Anthem/data=!4m7!3m6!1s0x80c8cdf46fad2029:0xb5ec050ab2a54c2d!8m2!3d35.9798095!4d-115.0991304!16s%2Fg%2F11b708l4hk!19sChIJKSCtb_TNyIARLUylsgoF7LU"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator explicitly describes current neighborhood casino and slot/video-poker gaming. Named destination matches its property address.",
+      "supportingSources": [],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-wildfire-valley-view",
+      "name": "Wildfire Valley View",
+      "address": "3045 S Valley View Blvd, Las Vegas, NV 89102",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://wildfiregaming.com/wildfires/wildfire-valley-view/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Wildfire+Anthem+Valley+View+Las+Vegas",
+      "lat": 36.1350118,
+      "lon": -115.190649,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Wildfire+Valley+View/data=!4m7!3m6!1s0x1525c5aafbb77259:0x43b21edb2fe5b0a7!8m2!3d36.1350118!4d-115.190649!16s%2Fg%2F11b6mqxbtz!19sChIJWXK3-6rFJRURp7DlL9seskM"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Use property-specific address and named map, corroborated by Casino City. Reject copied Barley's introduction and roster's erroneous 1901 Valley View wording; not Wildfire Rancho.",
+      "supportingSources": [
+        "https://www.casinocity.com/nevada/las-vegas/wildfire-valley-view-casino"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-greens-henderson",
+      "name": "The Greens Gaming and Dining",
+      "address": "2241 N Green Valley Pkwy, Henderson, NV 89014",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://wildfiregaming.com/the-greens/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Greens+Barleys+casino+Henderson",
+      "lat": 36.0538661,
+      "lon": -115.0840838,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/The+Greens+Gaming+and+Dining/data=!4m7!3m6!1s0x80c8d024eaa314a9:0x4ad4ba857274410d!8m2!3d36.0538661!4d-115.0840838!16s%2Fg%2F1tp08d6q!19sChIJqRSj6iTQyIARDUF0coW61Eo"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator identifies this gaming destination, slots and 17 video poker machines. Separate Wildfire property, not Barley's or Green Valley Ranch.",
+      "supportingSources": [],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-nevada-nugget-dayton",
+      "name": "Nevada Nugget",
+      "address": "6 Retail Rd, Dayton, NV 89403",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://nvnugget.com/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+in+Dayton+Nevada",
+      "lat": 39.2649509,
+      "lon": -119.580777,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Nevada+Nugget/data=!4m7!3m6!1s0x8099063f535a2acd:0x7cdedfc838052eea!8m2!3d39.2649509!4d-119.580777!16s%2Fg%2F1thd6y2v!19sChIJzSpaUz8GmYAR6i4FOMjf3nw"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Operator website links exact named point. State tourism and local reporting support casino identity/address. Separate from Carson Nugget and nearby Pioneer Crossing.",
+      "supportingSources": [
+        "https://travelnevada.com/nevada-magazine/nevada-nuggets",
+        "https://www.nevadaappeal.com/news/2018/sep/26/carson-nugget-owner-expands-into-dayton"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-big-wheel-lovelock",
+      "name": "Big Wheel Casino Lovelock",
+      "address": "163 E Main St, Lovelock, NV 89419",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://www.facebook.com/BigWheelCasino",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+in+Lovelock+Nevada",
+      "lat": 40.1771044,
+      "lon": -118.4693194,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Big+Wheel+Casino/data=!4m7!3m6!1s0x80a1f7166873b181:0x84fb6519a2a658e4!8m2!3d40.1771044!4d-118.4693194!16s%2Fg%2F11g0vy6mw0!19sChIJgbFzaBb3oYAR5Fimohll-4Q"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Current named map and indexed operator page establish active Lovelock casino; industry directory confirms dedicated floor. Not Big Wheel Battle Mountain. Facebook body required login; indexed operator description and independent sources used.",
+      "supportingSources": [
+        "https://www.worldcasinodirectory.com/casino/big-wheel-casino",
+        "https://www.mapquest.com/us/nevada/big-wheel-casino-375177261"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-nv-colt-battle-mountain",
+      "name": "Broadway Colt Inn Casino",
+      "address": "654 W Front St, Battle Mountain, NV 89820",
+      "jurisdiction": "Nevada",
+      "identitySource": "https://travelnevada.com/resorts-casinos/broadway-colt-inn-casino-restaurant/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Broadway+Colt+Casino+Battle+Mountain",
+      "lat": 40.6483306,
+      "lon": -116.9434661,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Colt+Casino/data=!4m7!3m6!1s0x80a6a5221771b80b:0xeb4c2255bdc32a9b!8m2!3d40.6483306!4d-116.9434661!16s%2Fg%2F1tzvwtp3!19sChIJC7hxFyKlpoARmyrDvVUiTOs"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Hold resolved: explicit casino and diner entity points agree on one building, separate from RV park. Tourism and indexed operator identity support casino. Use casino entrance 654 W Front; 650 identifies diner. Reject tourism RV and offset MapQuest points.",
+      "supportingSources": [
+        "https://m.facebook.com/100057218299642/about",
+        "https://www.mapquest.com/us/nevada/broadway-colt-inn-casino-and-restaurant-372623772"
+      ],
+      "pass": 59
+    },
+    {
+      "id": "casino-catalog-ok-konawa-rivermist",
+      "name": "Seminole Nation Casino Konawa",
+      "address": "14313 Old Hwy 99, Konawa, OK 74849",
+      "jurisdiction": "Oklahoma",
+      "identitySource": "https://www.seminolenationcasinos.com/casinos/konawa/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casino+Konawa+Rivermist+Phillips+66",
+      "lat": 34.939424,
+      "lon": -96.683884,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Rivermist+Casino/data=!4m7!3m6!1s0x87b374c5ed7e0ea7:0x1f1164fb47fb428b!8m2!3d34.939424!4d-96.683884!16s%2Fg%2F1txc7k0f!19sChIJpw5-7cV0s4cRi0L7R_tkER8"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Hold resolved: Apple casino metadata and Google casino destination agree within metres with operator address/phone. Konawa and Rivermist are one property, not nearby retail. Reject tourism's 34.968872,-96.738022 metadata and operator's conflicting viewport/intersection wording.",
+      "supportingSources": [
+        "https://maps.apple.com/place?place-id=I95F11539FB3FB20E",
+        "https://www.travelok.com/listings/view.profile/id.17815"
+      ],
+      "pass": 60
+    },
+    {
+      "id": "casino-catalog-ok-pawnee-trading-post",
+      "name": "Pawnee Nation Trading Post Casino",
+      "address": "291 Agency Rd, Pawnee, OK 74058",
+      "jurisdiction": "Oklahoma",
+      "identitySource": "https://www.pawneetdc.com/subsidiaries",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+Pawnee+Yale+Oklahoma",
+      "lat": 36.3376159,
+      "lon": -96.7938385,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Pawnee+Nation+Trading+Post+%26+Casino+%28StoneWolf+Casino+Pawnee%29/data=!4m7!3m6!1s0x87b11ed0e1bf918d:0xd4bbb31815f2d698!8m2!3d36.3376159!4d-96.7938385!16s%2Fg%2F1tg8k725!19sChIJjZG_4dAesYcRmNbyFRizu9Q"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Tribal development roster lists separate gaming operation from StoneWolf at turnpike and TeePee in Yale. Named casino confirms address. StoneWolf Casino Pawnee is an alias, not main turnpike casino.",
+      "supportingSources": [
+        "https://www.casinocity.com/oklahoma/pawnee/trading-post-casino"
+      ],
+      "pass": 60
+    },
+    {
+      "id": "casino-catalog-ok-teepee-yale",
+      "name": "TeePee Casino & Smoke Shop",
+      "address": "28314 E 6th St, Yale, OK 74085",
+      "jurisdiction": "Oklahoma",
+      "identitySource": "https://www.pawneetdc.com/subsidiaries",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+Pawnee+Yale+Oklahoma",
+      "lat": 36.1170468,
+      "lon": -96.6450674,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Tee+Pee+Casino+%28StoneWolf+Casino+Yale%29/data=!4m7!3m6!1s0x87b138de74915383:0xdde9cdb2f332b93a!8m2!3d36.1170468!4d-96.6450674!16s%2Fg%2F1tgwn61m!19sChIJg1ORdN44sYcROrky87LN6d0"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "evidence-reviewed-validation-pending",
+      "decision": "Tribal roster confirms casino with pay-at-pump gas at distinct Yale property. Named map and industry directory agree. StoneWolf Casino Yale is an alias, not main Pawnee turnpike casino.",
+      "supportingSources": [
+        "https://www.casinocity.com/oklahoma/yale/teepee-casino-and-smoke-shop",
+        "https://www.mapquest.com/us/oklahoma/tee-pee-casino-355860361"
+      ],
+      "pass": 60
+    },
+    {
+      "id": "casino-catalog-ok-cts-thackerville-gaming",
+      "name": "Chickasaw Travel Stop Thackerville Gaming",
+      "address": "22983 Brown Springs Rd, Thackerville, OK 73459",
+      "jurisdiction": "Oklahoma",
+      "identitySource": "https://chickasawtravelstop.com/locations/thackerville/",
+      "coordinateSource": "https://goo.gl/maps/SwWEcNryw9oZR91Y9",
+      "lat": 33.7361191,
+      "lon": -97.1441414,
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Chickasaw+Travel+Stop/@33.7363575,-97.1453556,18.09z/data=!4m5!3m4!1s0x864d03102803f3bf:0x9a77e3f43fab456c!8m2!3d33.7361191!4d-97.1441414"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "REJECTED-PROVISIONAL-PROMOTION-HOLD-RETAINED",
+      "decision": "Hold resolved via state tourism's explicit on-site slots, tribal tourism Casino amenity and independent small-room listing, alongside operator gaming roster. Use operator's 22983 address and linked building point; reject TravelOK 33983 typo and tribal-tourism distant pin. Border Casino at 22953 is a separate large building south.",
+      "supportingSources": [
+        "https://chickasawtravelstop.com/gaming/",
+        "https://www.chickasawcountry.com/travel-stops-tourism-centers/chickasaw-travel-stop-thackerville",
+        "https://www.travelok.com/listings/view.profile/id.28775",
+        "https://www.casinocity.com/oklahoma/thackerville/chickasaw-travel-stop-thackerville",
+        "https://fsb-ae.com/project/border-casino"
+      ],
+      "pass": 60,
+      "finalDecision": "See casino-final-freeze-2026-09-13.json: undated separate-room evidence does not clear current scope hold."
+    }
+  ],
+  "note": "27 provisional candidates were prepared; CTS Thackerville was rejected by adversarial review and is not in the 26 promoted records."
+}

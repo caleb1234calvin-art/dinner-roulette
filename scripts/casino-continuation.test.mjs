@@ -18,7 +18,7 @@ const get = suffix => {
 
 test("resumed additions preserve explicit point evidence, casino schema and active canonical identity", () => {
   assert.deepEqual(failures, []);
-  for (const pass of [55, 56, 57, 58]) {
+  for (const pass of [55, 56, 57, 58, 59, 60]) {
     const proof = JSON.parse(fs.readFileSync("audit/casino-rc-pass-" + pass + "-evidence-2026-09-13.json", "utf8"));
     const batch = records.filter(r => r.file.endsWith("/casino-catalog-pass-" + pass + ".ts"));
     assert.equal(batch.length, proof.records.length);

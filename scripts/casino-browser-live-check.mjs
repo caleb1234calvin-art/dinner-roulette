@@ -50,9 +50,11 @@ try {
   browser = await chromium.launch(launch);
   for (const location of [
     { name: "Reno", lat: 39.529, lon: -119.816, width: 1280, height: 800 },
-    { name: "Newkirk", lat: 36.977, lon: -97.045, width: 390, height: 844 },
+    { name: "Newkirk", lat: 36.977, lon: -97.045, width: 390, height: 844, reviewedPoolOnly: true },
     { name: "Ardmore", lat: 34.174, lon: -97.143, width: 1280, height: 800 },
     { name: "Chandler", lat: 35.702, lon: -96.881, width: 390, height: 844 },
+    { name: "Pahrump", lat: 36.208, lon: -115.983, width: 1280, height: 800, reviewedPoolOnly: true },
+    { name: "Pawnee", lat: 36.338, lon: -96.804, width: 390, height: 844, reviewedPoolOnly: true },
   ]) {
     const context = await browser.newContext({ viewport: { width: location.width, height: location.height }, reducedMotion: "reduce" });
     const page = await context.newPage(); activePage = page;
@@ -75,6 +77,9 @@ try {
     const expectedSavedCount = canonical.filter(row => haversineMiles(location.lat, location.lon, row.lat, row.lon) <= 10.05).length;
     assert.ok(count >= expectedSavedCount, "Built results must retain every eligible current canonical casino");
     if (fallback) assert.equal(count, expectedSavedCount);
+    // These finite provider pools were inspected during the freeze. Extra live
+    // inventory requires review; it is not automatically a valid new casino.
+    if (location.reviewedPoolOnly) assert.equal(count, expectedSavedCount, location.name + ": investigate unreviewed live casino, closed alias or duplicate");
     await page.getByRole("button", { name: "Give us options", exact: true }).click();
     await page.getByRole("heading", { name: "Tonight's options", exact: true }).waitFor();
     const names = await page.locator("article h3").allTextContents();
@@ -130,6 +135,8 @@ try {
     if (error.code !== "ESRCH") { verdict.errors.push("Preview cleanup: " + error.message); process.exitCode = 1; }
   }
   verdict.providers = serverLog.split("\n").filter(x => x.startsWith("CASINO_LIVE_PROVIDER ")).map(x => JSON.parse(x.slice("CASINO_LIVE_PROVIDER ".length)));
+  verdict.providerCasinos = [...new Map(serverLog.split("\n").filter(x => x.startsWith("CASINO_LIVE_ENTITIES "))
+    .flatMap(x => JSON.parse(x.slice("CASINO_LIVE_ENTITIES ".length))).map(row => [row.type + "/" + row.id, row])).values()];
   writeFileSync(output + "/verdict.json", JSON.stringify(verdict, null, 2) + "\n");
   console.log("CASINO_LIVE_VERDICT " + JSON.stringify(verdict));
 }

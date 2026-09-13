@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-09-13",
-  "status": "VALIDATED_PARTIAL_STATEWIDE_COVERAGE",
-  "scope": "Existing physical casino destination policy. All named prior frontier groups and newly discovered relevant operator rosters were investigated. 49 additions in this continuation are supported; neither Nevada nor Oklahoma is declared statewide complete. Remaining holds require current operating-floor or exact property-point evidence.",
+  "status": "FROZEN_VALIDATED_PARTIAL_STATEWIDE_COVERAGE",
+  "scope": "Final finite casino queue investigated: 26 evidence-backed additions in Pass 59/60, two original holds resolved, seven unresolved candidate holds with explicit triggers. Neither Nevada nor Oklahoma is asserted statewide exhaustive. Existing historical evidence is preserved.",
   "runtimeCounts": {
     "Alabama": 3,
     "Arizona": 26,
@@ -27,14 +27,14 @@
     "Mississippi": 28,
     "Missouri": 13,
     "Nebraska": 10,
-    "Nevada": 181,
+    "Nevada": 204,
     "New Jersey": 9,
     "New Mexico": 23,
     "New York": 20,
     "North Carolina": 3,
     "North Dakota": 5,
     "Ohio": 11,
-    "Oklahoma": 110,
+    "Oklahoma": 113,
     "Oregon": 10,
     "Pennsylvania": 18,
     "Rhode Island": 2,
@@ -55,14 +55,14 @@
     "fourState": 200
   },
   "current": {
-    "canonical": 857,
-    "Nevada": 181,
-    "Oklahoma": 110,
+    "canonical": 883,
+    "serializedRows": 899,
+    "passes": 60,
+    "Nevada": 204,
+    "Oklahoma": 113,
     "Colorado": 31,
     "Texas": 4,
-    "fourState": 326,
-    "serializedRows": 873,
-    "passes": 58
+    "fourState": 352
   },
   "addedDestinations": [
     {
@@ -820,6 +820,162 @@
       "name": "Chickasaw Travel Stop Ada West",
       "state": "Oklahoma",
       "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-pioneer-crossing-dayton",
+      "name": "Pioneer Crossing Casino Dayton",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-pioneer-crossing-fernley",
+      "name": "Pioneer Crossing Casino Fernley",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-pioneer-crossing-yerington",
+      "name": "Pioneer Crossing Casino Yerington",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-carson-plains-dayton",
+      "name": "Carson Plains Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-gold-ranch-dayton",
+      "name": "Gold Ranch Casino Dayton",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-silverado-fernley",
+      "name": "Silverado Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-silver-strike-silver-springs",
+      "name": "Silver Strike Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-pahrump-nugget",
+      "name": "Pahrump Nugget Hotel & Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-lakeside-pahrump",
+      "name": "Lakeside Casino & RV Park",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-saddle-west-pahrump",
+      "name": "Saddle West Hotel Casino & RV Resort",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-terribles-pahrump",
+      "name": "Terrible's Road House Pahrump",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-jackpot-joanies-pahrump",
+      "name": "Jackpot Joanie's Casino Pahrump",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-terribles-roadhouse-searchlight",
+      "name": "Terrible's Road House Searchlight",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-terribles-casino-searchlight",
+      "name": "Terrible's Casino Searchlight",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-wildfire-lanes",
+      "name": "Wildfire Casino & Lanes",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-wildfire-sunset",
+      "name": "Wildfire Sunset",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-wildfire-lake-mead",
+      "name": "Wildfire Lake Mead",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-wildfire-anthem",
+      "name": "Wildfire Anthem",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-wildfire-valley-view",
+      "name": "Wildfire Valley View",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-greens-henderson",
+      "name": "The Greens Gaming and Dining",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-nevada-nugget-dayton",
+      "name": "Nevada Nugget",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-big-wheel-lovelock",
+      "name": "Big Wheel Casino Lovelock",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-nv-colt-battle-mountain",
+      "name": "Broadway Colt Inn Casino",
+      "state": "Nevada",
+      "evidence": "audit/casino-rc-pass-59-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-konawa-rivermist",
+      "name": "Seminole Nation Casino Konawa",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-60-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-pawnee-trading-post",
+      "name": "Pawnee Nation Trading Post Casino",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-60-evidence-2026-09-13.json"
+    },
+    {
+      "id": "casino-catalog-ok-teepee-yale",
+      "name": "TeePee Casino & Smoke Shop",
+      "state": "Oklahoma",
+      "evidence": "audit/casino-rc-pass-60-evidence-2026-09-13.json"
     }
   ],
   "removedExistingDestinations": [],
@@ -889,40 +1045,93 @@
       "Avi tribal property coordinate hold",
       "11 individually verified Nugget Group casino destinations (Pass 55)",
       "Nine rural casino destinations plus Diamond’s, Pete’s and Alamo Mill City (Pass 57)",
-      "All five Alamo and ten current Pilot/Roadhouse/Lucky’s operator casino locations represented (Pass 58)"
+      "All five Alamo and ten current Pilot/Roadhouse/Lucky’s operator casino locations represented (Pass 58)",
+      "Truckee Gaming Pioneer Crossing Dayton/Fernley/Yerington, Carson Plains, Gold Ranch Dayton, Silverado and Silver Strike",
+      "Pahrump Nugget, Lakeside, Saddle West, Terrible's Road House and Jackpot Joanie's dedicated casinos; Gold Town closure excluded",
+      "Two separate Searchlight Terrible's casinos; five previously missing Wildfire floors and The Greens",
+      "Nevada Nugget Dayton; separate Big Wheel Lovelock; Broadway Colt casino building hold resolved"
     ],
     "currentFrontier": [
       {
-        "cluster": "Named queues investigated; remaining point/scope holds",
-        "candidates": [
-          "Wigwam — Fernley",
-          "Broadway Colt — Battle Mountain",
-          "Border Inn — Baker",
-          "C Punch / Lovelock Junction — Lovelock"
-        ],
-        "decision": "Casino/status identities and conflicting map evidence preserved in Pass 55/57 and status watchlist. No weak routing pin or uncertain operating floor promoted."
-      },
-      {
-        "cluster": "Further statewide reconciliation",
-        "candidates": [
-          "Big Wheel — Lovelock (separate from the added Battle Mountain property)",
-          "Remaining NGCB nonrestricted roster and small independent properties beyond the completed operator rosters"
-        ],
-        "decision": "Optional continuing coverage work; Nevada is not relabeled complete. A current map hit alone is not a promoted record."
+        "cluster": "Finite casino completion queue exhausted",
+        "candidates": [],
+        "decision": "No unprocessed strong candidate from reviewed rosters/holds. Remaining cases require new evidence; future statewide roster work is optional and completeness is not asserted."
       }
     ],
     "blockedCandidates": [
       {
-        "name": "Horseshu — Jackpot",
-        "reason": "Current operator calls it a hotel; historical tourism calls it a casino. Need current separate operating gaming-floor evidence."
+        "property": "Horseshu — Jackpot",
+        "classification": "HOLD",
+        "uncertainty": "separate-floor-scope",
+        "decision": "Current Cactus Petes operator describes Horseshu hotel rooms. Historical tourism casino wording and corporate subsidiary naming do not demonstrate a currently operating separate Horseshu gaming floor. The hotel component belongs to the combined Cactus Petes operation; a second casino is unproven.",
+        "sources": [
+          "https://www.cactuspetes.com/hotel",
+          "https://travelnevada.com/resorts-casinos/horseshu-hotel-casino/",
+          "https://www.tripadvisor.com/Hotel_Review-g45958-d575558-Reviews-Horseshu_Hotel_and_Casino-Jackpot_Nevada.html"
+        ],
+        "recheckTrigger": "Current operator statement or dated floor-specific evidence confirming public gaming at Horseshu itself, plus a named building point; historical hotel/casino labels do not qualify."
       },
       {
-        "name": "Moapa Paiute Travel Plaza",
-        "reason": "Current tribal page confirms travel plaza but does not confirm gaming. Historical casino directories alone do not establish current scope.",
+        "property": "Moapa Paiute Travel Plaza",
+        "classification": "HOLD",
+        "uncertainty": "current-gaming-status-and-scope",
+        "decision": "Current tribe confirms the operating travel plaza but does not describe gaming. Industry directory describes a small gaming area while Yelp marks the casino listing closed. Neither a directory refresh date nor an old tribal compact resolves present floor operation.",
         "sources": [
           "https://www.moapabandofpaiutes.com/travel-plaza",
-          "https://www.500nations.com/casinos/nvMoapa.asp"
-        ]
+          "https://igamingbusiness.com/directory/moapa-tribal-casino",
+          "https://www.yelp.com/biz/moapa-paiute-travel-plaza-casino-moapa"
+        ],
+        "recheckTrigger": "Dated tribal/operator confirmation that a public dedicated casino floor is operating, resolving the closed casino listing; then verify the floor's property point."
+      },
+      {
+        "property": "Wigwam Restaurant & Casino — Fernley",
+        "classification": "HOLD",
+        "uncertainty": "floor-location-and-address",
+        "decision": "Operator roster lists casino at 255 W Main; its named KML point is 39.6077442,-119.2557446. Apple Wigwam restaurant point 39.6074984,-119.2542905 instead says 265 W Main. Google restaurant says 255. Same phone supports identity but does not resolve the roughly 400-foot casino-point discrepancy. Do not route to an unconfirmed entrance.",
+        "sources": [
+          "https://www.nuggetcasinos.com/locations/",
+          "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+          "https://maps.apple.com/place?place-id=I54D9B738579DC67F",
+          "https://www.google.com/maps?q=Mary+Moes+Wigwam+Fernley"
+        ],
+        "recheckTrigger": "Operator-confirmed casino building/entrance geometry tying 255/265 W Main and the KML point to the operating floor."
+      },
+      {
+        "property": "Border Inn Casino — Baker",
+        "classification": "HOLD",
+        "uncertainty": "casino-side-boundary-location",
+        "decision": "Operator confirms casino floor at the NV/UT border. Current named Google entity is a hotel at 39.056507,-114.0491242; operator contact directions use 39.0565772,-114.0489053. Neither is floor-specific boundary evidence. No arbitrary westward pin adjustment was made.",
+        "sources": [
+          "https://borderinncasino.com/casino/",
+          "https://borderinncasino.com/contact-us/",
+          "https://www.google.com/maps/search/?api=1&query=Border+Inn+casino+bar+Baker+Nevada"
+        ],
+        "recheckTrigger": "Casino-building or entrance coordinates with reliable boundary/parcel geometry proving the Nevada gaming side, independently of hotel/RV points."
+      },
+      {
+        "property": "C Punch / Lovelock Junction — Lovelock",
+        "classification": "HOLD",
+        "uncertainty": "rebrand-and-current-gaming-floor",
+        "decision": "Lovelock Junction website advertises hotel/casino; Casino City lists machines, but legacy C Punch map remains permanently closed and SureStay confirms hotel only. The 2025 Off the Rails case concerns 150 Main Street, not this Cornell Avenue property, so it cannot clear the gaming hold.",
+        "sources": [
+          "https://lovelockjunctionhotel.com/",
+          "https://www.casinocity.com/nevada/lovelock/lovelock-junction-hotel-and-casino",
+          "https://www.google.com/maps/search/?api=1&query=casinos+in+Lovelock+Nevada",
+          "https://www.gaming.nv.gov/uploadedFiles/gamingnvgov/content/gaming/complaints/NGC-25-01-Complaint.pdf"
+        ],
+        "recheckTrigger": "Current operator or floor-specific evidence of active public casino gaming at 1420/1440 Cornell, with renamed identity and property point reconciled."
+      },
+      {
+        "property": "Off the Rails Casino — Lovelock",
+        "classification": "HOLD",
+        "uncertainty": "current-identity-and-property-point",
+        "decision": "June 2025 NGCB complaint establishes a nonrestricted slots casino operated by SRY Industries at 150 Main Street. Settlement retains a conditioned license. Current map query returns only Lovelock city, not a casino entity. No numerical property point/current public operating identity was established; do not assign the city-center result or conflate with Cornell Avenue Lovelock Junction.",
+        "sources": [
+          "https://www.gaming.nv.gov/uploadedFiles/gamingnvgov/content/gaming/complaints/NGC-25-01-Complaint.pdf",
+          "https://www.gaming.nv.gov/uploadedFiles/gamingnvgov/content/gaming/complaints/Stipulation%2025-01.pdf",
+          "https://www.google.com/maps/search/?api=1&query=Off+the+Rails+casino+150+Main+Lovelock"
+        ],
+        "recheckTrigger": "Current operator identity and a named casino/building point at 150 Main, or a documented successor/closure; reject generic Lovelock coordinates."
       }
     ],
     "reconstruction": "The old 174 decision universe includes exclusions/aliases and depends on 45 unsubstantiated rows in a truncated ledger. It is not a destination target. Damaged bytes are preserved in the repaired ledger; no missing rows were invented.",
@@ -932,6 +1141,19 @@
       "Eureka town name must not be confused with Eureka Casino Mesquite",
       "Dotty's #214 is co-located with Red Dragon, not an extra destination",
       "Moulin Rouge license-preserving sessions are not regular destination operation"
+    ],
+    "closedInFinalPass": [
+      {
+        "property": "Gold Town Casino — Pahrump",
+        "effectiveOn": "2026-05-24",
+        "reason": "Operator lease not renewed; current map also says permanently closed. Future operator/reopening unknown, so do not claim irreversible retirement of the building.",
+        "sources": [
+          "https://pvtimes.com/news/gold-town-casino-closes-in-pahrump-186430",
+          "https://goldencasinogroup.com/contact",
+          "https://www.google.com/maps/search/?api=1&query=casinos+in+Pahrump+Nevada"
+        ],
+        "recheckTrigger": "Dated successor/operator announcement plus confirmation public gaming has resumed."
+      }
     ]
   },
   "oklahoma": {
@@ -943,33 +1165,48 @@
       "Tonkawa/Native Lights",
       "Lucky Star portfolio",
       "Kickapoo/Thunderbird/Apache/Kiowa",
-      "Sac & Fox and two of three Seminole Nation locations",
+      "Sac & Fox and all three Seminole Nation locations (Konawa hold resolved in Pass 60)",
       "Grand Lake/High Winds/Stables/River Bend northeast properties",
       "Cimarron, Sugar Creek, Gold River, StoneWolf and Remington Park",
       "Rock & Brews Braman; SouthWind Newkirk closed exclusion",
       "All five 7 Clans/Otoe-Missouria properties including Perry, Chilocco and Red Rock",
       "Prairie Moon and Outpost; Prairie Sun closed exclusion",
       "Casino Oklahoma point/address conflict resolved; Apache Lonestar, Warm Springs and Golden Eagle Apache",
-      "Ada, Goldsby, Madill, Davis West and Ada West gaming; all eight CTS gaming roster entries individually reconciled"
+      "Ada, Goldsby, Madill, Davis West and Ada West gaming; all eight CTS gaming roster entries individually reconciled",
+      "Pawnee tribal roster: main StoneWolf retained; Pawnee Trading Post and TeePee Yale added as distinct gaming floors"
     ],
     "blockedCandidates": [
       {
-        "name": "Seminole Nation Casino Konawa / Rivermist",
-        "address": "14313 Old Highway 99, Konawa, OK 74849",
-        "reason": "Current operator identity supported. Fresh named Google Rivermist point at 34.939424,-96.683884 conflicts by miles with operator area/14313 Old Highway 99 address. Operator viewport is not a destination and its CID resolves incorrectly. Hold retained.",
-        "source": "https://www.seminolenationcasinos.com/casinos/konawa/",
-        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+        "property": "Chickasaw Travel Stop Thackerville",
+        "classification": "HOLD",
+        "uncertainty": "current-separate-gaming-room-scope",
+        "decision": "Adversarial review rejected provisional promotion: TravelOK describes on-site slots but is undated and has an incorrect street number; tribal tourism's Casino amenity and operator's 'room or next-door casino' wording do not establish the old 34-machine room still operates separately after Border Casino's expansion. Indexed Yelp/PlugShare room comments could not be dated; fetched 2026 PlugShare check-ins discuss chargers only. Operator property point 33.7361191,-97.1441414 is resolved, but current separate floor remains unproven.",
+        "sources": [
+          "https://chickasawtravelstop.com/locations/thackerville/",
+          "https://chickasawtravelstop.com/gaming/",
+          "https://www.travelok.com/listings/view.profile/id.28775",
+          "https://www.chickasawcountry.com/travel-stops-tourism-centers/chickasaw-travel-stop-thackerville",
+          "https://www.casinocity.com/oklahoma/thackerville/chickasaw-travel-stop-thackerville",
+          "https://goo.gl/maps/SwWEcNryw9oZR91Y9",
+          "https://fsb-ae.com/project/border-casino"
+        ],
+        "recheckTrigger": "Dated operator confirmation or verifiable current on-site evidence of a separate internal CTS gaming room after the Border Casino expansion, with identity and address distinct from Border Casino."
       }
     ],
     "remainingScope": [
       {
         "name": "CTS Thackerville separate gaming room",
+        "decision": "Adversarial review rejected provisional promotion: TravelOK describes on-site slots but is undated and has an incorrect street number; tribal tourism's Casino amenity and operator's 'room or next-door casino' wording do not establish the old 34-machine room still operates separately after Border Casino's expansion. Indexed Yelp/PlugShare room comments could not be dated; fetched 2026 PlugShare check-ins discuss chargers only. Operator property point 33.7361191,-97.1441414 is resolved, but current separate floor remains unproven.",
+        "recheckTrigger": "Dated operator confirmation or verifiable current on-site evidence of a separate internal CTS gaming room after the Border Casino expansion, with identity and address distinct from Border Casino.",
         "sources": [
           "https://chickasawtravelstop.com/locations/thackerville/",
           "https://chickasawtravelstop.com/gaming/",
-          "https://www.casinocity.com/oklahoma/thackerville/chickasaw-travel-stop-thackerville"
-        ],
-        "decision": "Operator roster includes dedicated rooms OR neighboring casinos. Current review identifies casino next door; older directory describes a 34-machine room. Existing Border Casino is independently confirmed at 22953 Brown Springs. Need current separate-floor evidence at CTS 22983 before adding another destination."
+          "https://www.travelok.com/listings/view.profile/id.28775",
+          "https://www.chickasawcountry.com/travel-stops-tourism-centers/chickasaw-travel-stop-thackerville",
+          "https://www.casinocity.com/oklahoma/thackerville/chickasaw-travel-stop-thackerville",
+          "https://goo.gl/maps/SwWEcNryw9oZR91Y9",
+          "https://fsb-ae.com/project/border-casino"
+        ]
       }
     ],
     "closedOrRetired": [
@@ -985,12 +1222,36 @@
     "authorityBoundary": "NIGC's public marker REST endpoint returned 401. Authentication was not bypassed; current public operator, tribal, tourism and map sources were used instead."
   },
   "nationwideAudit": "Actual exported catalog/schema, unique-ID, chronological reconciliation, manifest accounting and close/same-name/address pairs were audited nationwide. Three WI/MI point/address corrections were made. The 39 complete manifest jurisdictions retain their existing scope status; this is not a fresh independent survey of every casino in those states.",
-  "releaseImplication": "The implemented 857-destination catalog is locally and CI validated and merged only into non-production integration. NV/OK statewide completeness remains explicitly pending. Unresolved properties stay outside the curated pool. Controlled main/hosted release and its remaining device/account/Maps acceptance require separate authorization.",
+  "releaseImplication": "Reasonable exhaustive effort under the current finite evidence queue is complete. Freeze 883 destinations before separately reconciling location/international PR #39. Remaining holds require new evidence rather than speculative additions; hosted/device/account/Maps acceptance still belongs to a separately authorized release.",
   "continuationBaseline": {
     "canonical": 808,
     "Nevada": 146,
     "Oklahoma": 96,
     "fourState": 277,
     "sha": "2fd976a4f34f8bbe28db1075a264693d691b8253"
-  }
+  },
+  "finalFreezeBaseline": {
+    "canonical": 857,
+    "serialized": 873,
+    "Nevada": 181,
+    "Oklahoma": 110,
+    "Colorado": 31,
+    "Texas": 4,
+    "fourState": 326,
+    "passes": 58,
+    "sha": "f2fd0f7f4737278126d72b0cc043c79db7652236"
+  },
+  "nationalLimitedCheck": [
+    {
+      "property": "North Fork Mono Casino & Resort — Madera, California",
+      "status": "preopening-not-active",
+      "reason": "Current operator social profiles say opening October 2026. Do not promote an announced opening before actual public operation.",
+      "sources": [
+        "https://www.instagram.com/northforkcasinoresort?hl=en",
+        "https://x.com/NorthForkCasino?lang=en"
+      ],
+      "recheckTrigger": "Confirmed actual public opening, current operator identity/address and property-point verification."
+    }
+  ],
+  "finalFreezeEvidence": "audit/casino-final-freeze-2026-09-13.json"
 }

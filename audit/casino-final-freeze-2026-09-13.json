@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "status": "FROZEN_LOCALLY_VALIDATED_CI_PENDING",
+  "base": "f2fd0f7f4737278126d72b0cc043c79db7652236",
+  "branch": "integration/casino-final-freeze-2026-09-13",
+  "counts": {
+    "canonical": 883,
+    "serialized": 899,
+    "passes": 60,
+    "Nevada": 204,
+    "Oklahoma": 113,
+    "Colorado": 31,
+    "Texas": 4,
+    "focusTotal": 352,
+    "addedFrom731": 152,
+    "addedThisCompletion": 26,
+    "originalHoldsReviewed": 8,
+    "originalHoldsResolved": 2,
+    "originalHoldsRemaining": 6,
+    "newUnresolvedHolds": 1,
+    "totalUnresolvedCandidateHolds": 7,
+    "exclusions": 2,
+    "closedResolutions": 1,
+    "preopeningDeferred": 1
+  },
+  "changes": {
+    "addedIds": [
+      "casino-catalog-nv-pioneer-crossing-dayton",
+      "casino-catalog-nv-pioneer-crossing-fernley",
+      "casino-catalog-nv-pioneer-crossing-yerington",
+      "casino-catalog-nv-carson-plains-dayton",
+      "casino-catalog-nv-gold-ranch-dayton",
+      "casino-catalog-nv-silverado-fernley",
+      "casino-catalog-nv-silver-strike-silver-springs",
+      "casino-catalog-nv-pahrump-nugget",
+      "casino-catalog-nv-lakeside-pahrump",
+      "casino-catalog-nv-saddle-west-pahrump",
+      "casino-catalog-nv-terribles-pahrump",
+      "casino-catalog-nv-jackpot-joanies-pahrump",
+      "casino-catalog-nv-terribles-roadhouse-searchlight",
+      "casino-catalog-nv-terribles-casino-searchlight",
+      "casino-catalog-nv-wildfire-lanes",
+      "casino-catalog-nv-wildfire-sunset",
+      "casino-catalog-nv-wildfire-lake-mead",
+      "casino-catalog-nv-wildfire-anthem",
+      "casino-catalog-nv-wildfire-valley-view",
+      "casino-catalog-nv-greens-henderson",
+      "casino-catalog-nv-nevada-nugget-dayton",
+      "casino-catalog-nv-big-wheel-lovelock",
+      "casino-catalog-nv-colt-battle-mountain",
+      "casino-catalog-ok-konawa-rivermist",
+      "casino-catalog-ok-pawnee-trading-post",
+      "casino-catalog-ok-teepee-yale"
+    ],
+    "removed": [],
+    "mergedExisting": [],
+    "renamedExisting": [],
+    "repinnedExisting": [],
+    "historicalSupersededRowsRetained": 16,
+    "newClosure": "Gold Town Casino; closed May 24, 2026",
+    "newRuntimeClosureGroups": 18,
+    "configurationChanges": [],
+    "dependencyChanges": [],
+    "liveProviderCorrections": [
+      "Kaw Southwind Casino added to the existing geographically bounded Newkirk closure aliases.",
+      "Pawnee Trading Post and Casino reconciled to its canonical Pawnee property.",
+      "Terrible's Roadhouse Casino reconciled to its canonical Pahrump property."
+    ],
+    "filesChanged": [
+      "AI_CONTINUITY.md",
+      "audit/ai-continuity-before-casino-freeze-2026-09-13.md",
+      "audit/casino-final-freeze-2026-09-13.json",
+      "audit/casino-final-freeze-baseline-2026-09-13.json",
+      "audit/casino-final-freeze-research-2026-09-13.json",
+      "audit/casino-freeze-adversarial-2026-09-13.json",
+      "audit/casino-freeze-browser-evidence-2026-09-13.json",
+      "audit/casino-freeze-live-provider-findings-2026-09-13.json",
+      "audit/casino-rc-coverage-2026-09-13.json",
+      "audit/casino-rc-pass-59-evidence-2026-09-13.json",
+      "audit/casino-rc-pass-60-evidence-2026-09-13.json",
+      "audit/casino-rc-progress-2026-09-13.json",
+      "audit/casino-release-readiness-2026-09-13.md",
+      "audit/casino-sources-integration.json",
+      "audit/casino-status-watchlist-2026-09-13.json",
+      "audit/national-manifest-coverage-reconciliation-2026-09-13.json",
+      "scripts/casino-browser-live-check.mjs",
+      "scripts/casino-continuation.test.mjs",
+      "scripts/casino-freeze.test.mjs",
+      "scripts/casino-live-network-log.mjs",
+      "src/lib/nightlife/casino-catalog-pass-59.ts",
+      "src/lib/nightlife/casino-catalog-pass-60.ts",
+      "src/lib/nightlife/discovery-policy.ts",
+      "src/lib/nightlife/search.ts"
+    ]
+  },
+  "originalHoldDecisions": [
+    {
+      "property": "Seminole Nation Casino Konawa / Rivermist",
+      "classification": "PROMOTE",
+      "uncertainty": "resolved-location",
+      "canonicalId": "casino-catalog-ok-konawa-rivermist",
+      "decision": "Independent Apple named-casino metadata (34.9394807,-96.6838545) and Google Rivermist entity (34.939424,-96.683884) agree with operator name/address/phone. Rejected tourism city-area point, operator viewport/intersection wording and nearby retail point.",
+      "sources": [
+        "https://www.seminolenationcasinos.com/casinos/konawa/",
+        "https://maps.apple.com/place?place-id=I95F11539FB3FB20E",
+        "https://www.google.com/maps/search/?api=1&query=casino+Konawa+Rivermist+Phillips+66"
+      ],
+      "recheckTrigger": "Only a credible relocation or status change; preserve Konawa/Rivermist as one casino."
+    },
+    {
+      "property": "Horseshu — Jackpot",
+      "classification": "HOLD",
+      "uncertainty": "separate-floor-scope",
+      "decision": "Current Cactus Petes operator describes Horseshu hotel rooms. Historical tourism casino wording and corporate subsidiary naming do not demonstrate a currently operating separate Horseshu gaming floor. The hotel component belongs to the combined Cactus Petes operation; a second casino is unproven.",
+      "sources": [
+        "https://www.cactuspetes.com/hotel",
+        "https://travelnevada.com/resorts-casinos/horseshu-hotel-casino/",
+        "https://www.tripadvisor.com/Hotel_Review-g45958-d575558-Reviews-Horseshu_Hotel_and_Casino-Jackpot_Nevada.html"
+      ],
+      "recheckTrigger": "Current operator statement or dated floor-specific evidence confirming public gaming at Horseshu itself, plus a named building point; historical hotel/casino labels do not qualify."
+    },
+    {
+      "property": "Moapa Paiute Travel Plaza",
+      "classification": "HOLD",
+      "uncertainty": "current-gaming-status-and-scope",
+      "decision": "Current tribe confirms the operating travel plaza but does not describe gaming. Industry directory describes a small gaming area while Yelp marks the casino listing closed. Neither a directory refresh date nor an old tribal compact resolves present floor operation.",
+      "sources": [
+        "https://www.moapabandofpaiutes.com/travel-plaza",
+        "https://igamingbusiness.com/directory/moapa-tribal-casino",
+        "https://www.yelp.com/biz/moapa-paiute-travel-plaza-casino-moapa"
+      ],
+      "recheckTrigger": "Dated tribal/operator confirmation that a public dedicated casino floor is operating, resolving the closed casino listing; then verify the floor's property point."
+    },
+    {
+      "property": "Wigwam Restaurant & Casino — Fernley",
+      "classification": "HOLD",
+      "uncertainty": "floor-location-and-address",
+      "decision": "Operator roster lists casino at 255 W Main; its named KML point is 39.6077442,-119.2557446. Apple Wigwam restaurant point 39.6074984,-119.2542905 instead says 265 W Main. Google restaurant says 255. Same phone supports identity but does not resolve the roughly 400-foot casino-point discrepancy. Do not route to an unconfirmed entrance.",
+      "sources": [
+        "https://www.nuggetcasinos.com/locations/",
+        "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+        "https://maps.apple.com/place?place-id=I54D9B738579DC67F",
+        "https://www.google.com/maps?q=Mary+Moes+Wigwam+Fernley"
+      ],
+      "recheckTrigger": "Operator-confirmed casino building/entrance geometry tying 255/265 W Main and the KML point to the operating floor."
+    },
+    {
+      "property": "Broadway Colt Inn Casino — Battle Mountain",
+      "classification": "PROMOTE",
+      "uncertainty": "resolved-location",
+      "canonicalId": "casino-catalog-nv-colt-battle-mountain",
+      "decision": "Named Colt Casino point 40.6483306,-116.9434661 and Broadway Diner point 40.6483607,-116.9435101 agree on the same building. Separately mapped RV park 40.6494114,-116.9461713 is rejected. Casino entry is 654 W Front, diner 650; tourism and indexed operator identity support the property.",
+      "sources": [
+        "https://travelnevada.com/resorts-casinos/broadway-colt-inn-casino-restaurant/",
+        "https://m.facebook.com/100057218299642/about",
+        "https://www.google.com/maps/search/?api=1&query=Broadway+Colt+Casino+Battle+Mountain"
+      ],
+      "recheckTrigger": "Only credible relocation/rebranding/status change; retain casino building point and do not substitute RV point."
+    },
+    {
+      "property": "Border Inn Casino — Baker",
+      "classification": "HOLD",
+      "uncertainty": "casino-side-boundary-location",
+      "decision": "Operator confirms casino floor at the NV/UT border. Current named Google entity is a hotel at 39.056507,-114.0491242; operator contact directions use 39.0565772,-114.0489053. Neither is floor-specific boundary evidence. No arbitrary westward pin adjustment was made.",
+      "sources": [
+        "https://borderinncasino.com/casino/",
+        "https://borderinncasino.com/contact-us/",
+        "https://www.google.com/maps/search/?api=1&query=Border+Inn+casino+bar+Baker+Nevada"
+      ],
+      "recheckTrigger": "Casino-building or entrance coordinates with reliable boundary/parcel geometry proving the Nevada gaming side, independently of hotel/RV points."
+    },
+    {
+      "property": "C Punch / Lovelock Junction — Lovelock",
+      "classification": "HOLD",
+      "uncertainty": "rebrand-and-current-gaming-floor",
+      "decision": "Lovelock Junction website advertises hotel/casino; Casino City lists machines, but legacy C Punch map remains permanently closed and SureStay confirms hotel only. The 2025 Off the Rails case concerns 150 Main Street, not this Cornell Avenue property, so it cannot clear the gaming hold.",
+      "sources": [
+        "https://lovelockjunctionhotel.com/",
+        "https://www.casinocity.com/nevada/lovelock/lovelock-junction-hotel-and-casino",
+        "https://www.google.com/maps/search/?api=1&query=casinos+in+Lovelock+Nevada",
+        "https://www.gaming.nv.gov/uploadedFiles/gamingnvgov/content/gaming/complaints/NGC-25-01-Complaint.pdf"
+      ],
+      "recheckTrigger": "Current operator or floor-specific evidence of active public casino gaming at 1420/1440 Cornell, with renamed identity and property point reconciled."
+    },
+    {
+      "property": "Chickasaw Travel Stop Thackerville",
+      "classification": "HOLD",
+      "uncertainty": "current-separate-gaming-room-scope",
+      "decision": "Adversarial review rejected provisional promotion: TravelOK describes on-site slots but is undated and has an incorrect street number; tribal tourism's Casino amenity and operator's 'room or next-door casino' wording do not establish the old 34-machine room still operates separately after Border Casino's expansion. Indexed Yelp/PlugShare room comments could not be dated; fetched 2026 PlugShare check-ins discuss chargers only. Operator property point 33.7361191,-97.1441414 is resolved, but current separate floor remains unproven.",
+      "sources": [
+        "https://chickasawtravelstop.com/locations/thackerville/",
+        "https://chickasawtravelstop.com/gaming/",
+        "https://www.travelok.com/listings/view.profile/id.28775",
+        "https://www.chickasawcountry.com/travel-stops-tourism-centers/chickasaw-travel-stop-thackerville",
+        "https://www.casinocity.com/oklahoma/thackerville/chickasaw-travel-stop-thackerville",
+        "https://goo.gl/maps/SwWEcNryw9oZR91Y9",
+        "https://fsb-ae.com/project/border-casino"
+      ],
+      "recheckTrigger": "Dated operator confirmation or verifiable current on-site evidence of a separate internal CTS gaming room after the Border Casino expansion, with identity and address distinct from Border Casino."
+    }
+  ],
+  "additionalHolds": [
+    {
+      "property": "Off the Rails Casino — Lovelock",
+      "classification": "HOLD",
+      "uncertainty": "current-identity-and-property-point",
+      "decision": "June 2025 NGCB complaint establishes a nonrestricted slots casino operated by SRY Industries at 150 Main Street. Settlement retains a conditioned license. Current map query returns only Lovelock city, not a casino entity. No numerical property point/current public operating identity was established; do not assign the city-center result or conflate with Cornell Avenue Lovelock Junction.",
+      "sources": [
+        "https://www.gaming.nv.gov/uploadedFiles/gamingnvgov/content/gaming/complaints/NGC-25-01-Complaint.pdf",
+        "https://www.gaming.nv.gov/uploadedFiles/gamingnvgov/content/gaming/complaints/Stipulation%2025-01.pdf",
+        "https://www.google.com/maps/search/?api=1&query=Off+the+Rails+casino+150+Main+Lovelock"
+      ],
+      "recheckTrigger": "Current operator identity and a named casino/building point at 150 Main, or a documented successor/closure; reject generic Lovelock coordinates."
+    }
+  ],
+  "exclusions": [
+    {
+      "property": "Seminole Nation Rivermist Retail",
+      "reason": "Separate retail entity beside Konawa; no distinct casino floor established. Casino is already represented by the promoted Konawa/Rivermist record.",
+      "sources": [
+        "https://www.google.com/maps/search/?api=1&query=casino+Konawa+Rivermist+Phillips+66"
+      ]
+    },
+    {
+      "property": "O-Gah-Pah Convenience Store",
+      "reason": "Current Quapaw business roster identifies convenience/fuel services, not a separate casino floor. Quapaw Casino and Downstream already represented.",
+      "sources": [
+        "https://www.quapawtribe.com/35/Business"
+      ]
+    }
+  ],
+  "closed": [
+    {
+      "property": "Gold Town Casino — Pahrump",
+      "effectiveOn": "2026-05-24",
+      "reason": "Operator lease not renewed; current map also says permanently closed. Future operator/reopening unknown, so do not claim irreversible retirement of the building.",
+      "sources": [
+        "https://pvtimes.com/news/gold-town-casino-closes-in-pahrump-186430",
+        "https://goldencasinogroup.com/contact",
+        "https://www.google.com/maps/search/?api=1&query=casinos+in+Pahrump+Nevada"
+      ],
+      "recheckTrigger": "Dated successor/operator announcement plus confirmation public gaming has resumed."
+    }
+  ],
+  "deferred": [
+    {
+      "property": "North Fork Mono Casino & Resort — Madera, California",
+      "status": "preopening-not-active",
+      "reason": "Current operator social profiles say opening October 2026. Do not promote an announced opening before actual public operation.",
+      "sources": [
+        "https://www.instagram.com/northforkcasinoresort?hl=en",
+        "https://x.com/NorthForkCasino?lang=en"
+      ],
+      "recheckTrigger": "Confirmed actual public opening, current operator identity/address and property-point verification."
+    }
+  ],
+  "scope": {
+    "Nevada": "Concrete Truckee, Golden Pahrump, Terrible's Searchlight/Pahrump, Wildfire, independent Lovelock/Dayton and held-property gaps investigated. Substantially expanded, not proven statewide exhaustive.",
+    "Oklahoma": "Pawnee operator's three floors reconciled; Konawa and CTS scope/point evidence reviewed; Quapaw retail roster checked. Other established operator reconciliations retained. Not proven statewide exhaustive.",
+    "nationwide": "Limited newly surfaced North Fork opening check only; no new nationwide re-survey.",
+    "remainingStrongCandidate": "No unprocessed strong candidate from the finite reviewed queue. Remaining properties require the explicit new evidence described in holds."
+  },
+  "validation": {
+    "status": "passed-local-gates-ci-pending",
+    "tests": {
+      "uniquePassed": 329,
+      "failed": 0,
+      "skipped": 4,
+      "repository": {
+        "passed": 278,
+        "failed": 0,
+        "skipped": 4
+      },
+      "application": {
+        "passed": 51,
+        "failed": 0,
+        "skipped": 0
+      },
+      "casinoSubsetPassed": 80,
+      "casinoSubsetIncludedInRepositoryTotal": true,
+      "newMeaningfulTests": 7,
+      "command": "npm test",
+      "skipDetails": "audit/casino-rc-progress-2026-09-13.json#documentationSkips"
+    },
+    "typecheck": {
+      "command": "npm run typecheck",
+      "status": "passed"
+    },
+    "catalogAudits": {
+      "command": "npm run audit:casinos",
+      "status": "passed",
+      "canonical": 883,
+      "serialized": 899,
+      "passes": 60,
+      "completeJurisdictions": 39,
+      "pendingJurisdictions": 2,
+      "newDuplicateCollisions": 0
+    },
+    "lint": {
+      "status": "passed",
+      "scope": "All eight changed/new code files; zero errors or warnings."
+    },
+    "builds": {
+      "development": {
+        "command": "npm run build:dev",
+        "status": "passed"
+      },
+      "production": {
+        "command": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production",
+        "status": "passed"
+      },
+      "migrationsRun": false,
+      "deployed": false
+    },
+    "dinnerIcons": {
+      "passed": 30,
+      "missingOrEmpty": 0
+    },
+    "browser": {
+      "status": "passed-local-rebuilt-candidate",
+      "deterministicCheckGroups": 16,
+      "realProviderRegions": 6,
+      "errors": 0,
+      "findings": 0,
+      "reviewedPools": {
+        "Newkirk": 3,
+        "Pahrump": 5,
+        "Pawnee": 2
+      },
+      "evidence": "audit/casino-freeze-browser-evidence-2026-09-13.json",
+      "successfulOverpassResponses": 24,
+      "successfulNominatimResponses": 2,
+      "providerTimeouts": 12
+    },
+    "ci": {
+      "status": "pending-publication"
+    }
+  },
+  "safety": {
+    "mainModified": false,
+    "productionModified": false,
+    "deployed": false,
+    "vercelDeployed": false,
+    "migrationsRun": false,
+    "locationBranchMerged": false,
+    "recurringMonitoringCreated": false,
+    "exaUsed": false
+  },
+  "limitations": [
+    "Facebook/Yelp bodies were login-required or HTTP 403 where recorded; indexed excerpts were not treated as a direct page read.",
+    "Some Firecrawl calls returned INVALID_ARGUMENT; named map retrieval continued through TinyFish. Regulator PDF retrieval failed through TinyFish but succeeded through Parallel.",
+    "Search returned a 2015 NGCB nonrestricted report; it was not treated as a current statewide roster.",
+    "Physical-device, hosted/account and external Maps-app acceptance are unclaimed."
+  ],
+  "adversarialDraftRejections": [
+    {
+      "id": "casino-catalog-ok-cts-thackerville-gaming",
+      "decision": "Provisional record rejected before commit/freeze; current separate-room evidence insufficient. Original proposed record retained in research checkpoint. Existing Border Casino untouched."
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "initial final-pass live UI assertions",
+      "result": "Mechanical UI assertions passed, but manual review found a closed alias, two duplicate aliases and affected counts. Not accepted as final clean browser validation.",
+      "evidence": "audit/casino-freeze-live-provider-findings-2026-09-13.json"
+    },
+    {
+      "stage": "captured provider regression before Pahrump alias fix",
+      "result": "6 passed, 1 failed as expected; assertion identified duplicate nightlife-osm-way-682672701. Alias corrected; full gates rerun. No unresolved failure suppressed."
+    },
+    {
+      "stage": "standalone direct Overpass probe",
+      "result": "HTTP 403. Not treated as verification; actual permitted application response observation used."
+    }
+  ],
+  "publication": {},
+  "freezeDecision": {
+    "classification": "A",
+    "decision": "No meaningful casino work remains from the finite current evidence queue before separate location integration. Remaining holds require new evidence explicitly specified in this record. NV/OK are substantially expanded, not proven statewide exhaustive.",
+    "next": "Reconcile the separate location/international candidate in a later task; preserve this casino freeze. No location merge was performed here."
+  },
+  "scopeAudit": {
+    "expectedChangedFiles": 24,
+    "unexpected": [],
+    "deleted": [],
+    "result": "passed",
+    "base": "f2fd0f7f4737278126d72b0cc043c79db7652236"
+  },
+  "targetedSecretScan": {
+    "scope": "All 24 changed/new files: private-key blocks, GitHub tokens, AWS access keys and live payment keys; no environment/credential files changed. Not a full historical secret scan.",
+    "findings": []
+  }
+}

@@ -24,6 +24,7 @@ export function casinoIdentityName(name: string) {
 // Broad address areas are exclusion scopes, NOT routing pins. Matching is exact
 // against reviewed aliases, so unrelated same-name casinos elsewhere survive.
 export const CASINO_STATUS_HOLDS = [
+  { names: ["Gold Town Casino", "Gold Town", "Terrible's Town Casino"], bounds: [36.20, 36.22, -115.99, -115.975], reason: "Closed May 24, 2026 after operator lease nonrenewal; Pahrump Nugget and Lakeside remain separate active casinos" },
   { names: ["Prairie Sun Casino", "Prairie Sun"], bounds: [36.88, 36.95, -94.92, -94.87], reason: "Operator announced closure effective May 14, 2023; Prairie Moon is a different active property" },
   { names: ["The Pass Casino", "Pass Casino"], bounds: [35.98, 36.08, -115.03, -114.93], reason: "Renovation closure; current reopening evidence required" },
   { names: ["Jokers Wild Casino", "Joker's Wild Casino"], bounds: [35.99, 36.12, -115.06, -114.93], reason: "Retired predecessor of Cadence Crossing; do not revive old footprint" },
@@ -40,7 +41,7 @@ export const CASINO_STATUS_HOLDS = [
   {"names":["Kiowa Casino Verden","Kiowa Casino - Verden"],"bounds":[35.04,35.14,-98.16,-98.04],"reason":"Closed October 31, 2023; current Kiowa portfolio is Devol, Carnegie and Elk Creek"},
   {"names":["Creek Nation Casino Eufaula","Creek Nation Casino - Eufaula"],"bounds":[35.25,35.35,-95.64,-95.54],"reason":"Retired 806 W Forrest Ave predecessor; current Lake Eufaula Casino Hotel is at 1045 Birkes Rd"},
   { names: ["Golden Pony Casino"], bounds: [35.2, 35.65, -96.7, -95.8], reason: "Closure reported in late 2025; a 2020 reopening result and generic hours do not establish subsequent reopening" },
-  { names: ["Southwind Casino", "Southwind Casino Newkirk", "Kaw Southwind Casino Newkirk"], bounds: [36.84, 36.91, -97.08, -96.98], reason: "Newkirk closed January 1, 2022; current Rock & Brews at Braman is a different site" },
+  { names: ["Southwind Casino", "Southwind Casino Newkirk", "Kaw Southwind Casino", "Kaw Southwind Casino Newkirk"], bounds: [36.84, 36.91, -97.08, -96.98], reason: "Newkirk closed January 1, 2022; current Rock & Brews at Braman is a different site" },
 ] as const;
 
 export function heldCasino(name: string, lat: number, lon: number) {
@@ -79,7 +80,21 @@ export function nightlifeWebsite(value: string | undefined): string | null {
 
 // Reviewed same-property aliases. The caller must also require physical proximity.
 const CASINO_ALIAS_GROUPS = [
-  ["Big Wheel Casino", "Big Wheel Casino Battle Mountain"],
+  ["Big Wheel Casino", "Big Wheel Casino Battle Mountain", "Big Wheel Casino Lovelock"],
+  ["Pioneer Crossing", "Pioneer Crossing Casino Dayton", "Pioneer Crossing Casino Fernley", "Pioneer Crossing Casino Yerington"],
+  ["Gold Ranch Casino", "Gold Ranch Casino Dayton"],
+  ["Pahrump Nugget Hotel & Casino", "Golden Casino Group"],
+  ["Lakeside Casino & RV Park", "Lakeside Casino", "Terrible's Lakeside Casino"],
+  ["Saddle West Hotel Casino & RV Resort", "Saddle West"],
+  ["Terrible's Road House Pahrump", "Terrible's Roadhouse Pahrump", "Terrible's Roadhouse Casino", "Mountain View Casino"],
+  ["Terrible's Road House Searchlight", "Terrible's Roadhouse Searchlight", "Searchlight Nugget"],
+  ["Jackpot Joanie's Casino Pahrump", "Jackpot Joanie's Casino", "Irene's Casino"],
+  ["Wildfire Casino & Lanes", "Wildfire Casino"],
+  ["The Greens Gaming and Dining", "The Greens"],
+  ["Broadway Colt Inn Casino", "Colt Casino", "Broadway Colt Inn Casino & Restaurant"],
+  ["Seminole Nation Casino Konawa", "Rivermist Casino", "Seminole Nation Casino"],
+  ["Pawnee Nation Trading Post Casino", "Pawnee Nation Trading Post & Casino (StoneWolf Casino Pawnee)", "Pawnee Trading Post and Casino", "StoneWolf Casino Pawnee", "Trading Post Casino"],
+  ["TeePee Casino & Smoke Shop", "Tee Pee Casino (StoneWolf Casino Yale)", "Tee Pee Casino", "StoneWolf Casino Yale"],
   ["Alamo Casino", "Alamo Casino Sparks Petro", "Alamo Casino Wells Petro", "Alamo Casino Mill City TA", "Alamo Casino North Las Vegas Petro", "Alamo Casino at North LV Petro", "Alamo Casino Las Vegas TA"],
   ["Fernley Lucky's Casino", "4 Way Casino"],
   ["Winnemucca Roadhouse Casino", "Winger's Roadhouse Casino"],

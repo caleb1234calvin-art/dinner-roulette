@@ -10,6 +10,15 @@ globalThis.fetch = async (input, init) => {
     if (watched) console.log("CASINO_LIVE_PROVIDER " + JSON.stringify({
       host: url.hostname, status: response.status, elapsedMs: Date.now() - start,
     }));
+    if (response.ok && /overpass|maps\.mail\.ru/.test(url.hostname)) {
+      // Public casino entities only; retain the response consumed by the app.
+      const body = await response.clone().json().catch(() => null);
+      const casinos = body?.elements?.filter(row => row.tags?.amenity === "casino" || row.tags?.gambling === "casino") ?? [];
+      if (casinos.length) console.log("CASINO_LIVE_ENTITIES " + JSON.stringify(casinos.map(row => ({
+        type: row.type, id: row.id, lat: row.lat ?? row.center?.lat, lon: row.lon ?? row.center?.lon,
+        tags: Object.fromEntries(Object.entries(row.tags).filter(([key]) => ["name", "amenity", "gambling"].includes(key) || key.startsWith("addr:"))),
+      }))));
+    }
     return response;
   } catch (error) {
     if (watched) console.log("CASINO_LIVE_PROVIDER " + JSON.stringify({
