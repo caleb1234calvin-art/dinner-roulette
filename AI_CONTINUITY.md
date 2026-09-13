@@ -4,11 +4,11 @@ Updated September 13, 2026. **The combined casino + location/international candi
 
 ## Latest meaningful checkpoint
 
-COMPLETED: PR #42 intentionally reconciled both workstreams into integration/active-work-pass-1. This shared branch is the latest authoritative non-production release candidate. Merge commit 189c46bfee0ac0983ea9100eae90e92ee58915b7 contains the validated combined runtime. Final readiness commit 890cca11efdd7f132648d3451a86404d9badbcf6 records merged-tree identity and successful integration CI. No implementation blocker remains.
+The combined 883-casino + location/international candidate remains integrated and validated on integration/active-work-pass-1. PR #42 merge 189c46bfee0ac0983ea9100eae90e92ee58915b7 contains the combined runtime; exact-head CI Run 346 passed at 40f9fb8d162caac061fcf7927894bd2107b434ad. The latest continuation corrected release documentation without changing that runtime.
 
-Work branch: `integration/active-work-pass-1`. Work commit: **`890cca11efdd7f132648d3451a86404d9badbcf6`** — **Finalize validated casino and international integration release record**.
+Work branch: `integration/active-work-pass-1`. Work commit: **`222b37bbabad06d4782d0eab3cd022ae7cd3be59`** — **Refresh combined release checklist and document migration gate**.
 
-Current working branch: `integration/combined-release-handoff-2026-09-13`. Frozen starting integration: `183d3e1d71355a27e4bc35a2969d73037c9e6e33`. Preserved location source: `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839`, draft PR #39. Main baseline: `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
+Current local working branch: `integration/combined-release-handoff-2026-09-13`. Frozen casino base: `183d3e1d71355a27e4bc35a2969d73037c9e6e33`. Preserved location source: `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839`; PR #39 was not merged wholesale. Main remains `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
 
 ## COMPLETED in this reconciliation
 
@@ -35,11 +35,23 @@ Current working branch: `integration/combined-release-handoff-2026-09-13`. Froze
 
 **Browsers: 30 deterministic groups PASS (16 casino + 14 location); six actual casino-provider regions and four actual international cities PASS.** Casino pools: Reno 19, Newkirk 3, Ardmore 2, Chandler 1, Pahrump 5, Pawnee 2. International one-mile eligible restaurant observations: Toronto 1623, Vancouver 393, Montréal 1010, London 2176; open-now deliberately disabled. Provider transport recorded 40 HTTP 200 responses and 16 timeouts; fallbacks/recovery were honest. Counts are observations, not complete inventories or proof of current opening hours.
 
-**CI:** runtime Run 337, final candidate Run 341, merged integration Run 343 and shared checkpoint Run 344 PASS. Readiness/continuity commits after 6b4e1a0 change documentation only; the runtime is identical to the merged, CI-validated source. Inspect Actions for any later documentation-head run rather than assuming its result. Primary and adversarial reviews PASS.
+**CI:** runtime Run 337, final candidate Run 341, merged integration Run 343, shared checkpoint Run 344 and final combined handoff Run 346 at 40f9fb8d162caac061fcf7927894bd2107b434ad PASS. This continuation changes documentation only; the application/source build proof remains identical. CI for later documentation commits is subsequent: inspect their exact-head Actions results rather than assuming them. Primary and adversarial implementation reviews remain PASS.
 
 Evidence: audit/casino-location-reconciliation-validation-2026-09-13.json, -browser-, -attempts-, -performance- and -adversarial- artifacts. The validation record contains CI IDs/log totals, source fingerprint, exact file scope and merge proof.
 
 Independent baselines are historical, not a combined result: casino freeze 329 passed (278 repository + 51 application), four skips, 16 browser groups; location source 342 passed (273 repository + 69 application), four skips, 12 location checks. Casino CI Run 325 and location CI Run 314 passed separately. Never add those totals together.
+
+## Release-readiness continuation
+
+The user asked to continue after reconciliation was complete. Read the shared GitHub continuity/ref and confirmed exact-head CI Run 346 at `40f9fb8d162caac061fcf7927894bd2107b434ad` remained green; the checkout was clean.
+
+Found and corrected a concrete documentation gap: the browser checklist still described the older 857-casino state and omitted the build-proof capture/completion required by current browser guards. Updated the same `audit/casino-browser-release-checklist-2026-09-13.md` to the combined 883-casino / 367-test / 30-browser state, all four guarded harnesses, both executable overrides, fail-fast safe build commands, physical-device acceptance and the controlled release/rollback sequence.
+
+Validation performed for this documentation-only change: all three shell blocks parse with `bash -n`; script references and capture/build/complete/verify ordering match implementation; no migration-triggering command appears in an executable block; repository configuration claims match the files; `git diff --check` passes. Existing auth-enabled source/output build proof verifies unchanged. All 78 protected frozen file hashes match. No new tests, local full-suite rerun or local rebuild was needed or claimed; automatic CI for each new commit is separate.
+
+Read-only Vercel project inspection could not proceed: the connected `list_teams` returned an empty list, and this checkout has no project-link metadata. No team/project was guessed, no credentials were requested and no setting was changed. The repository's `build` script chains `db:migrate`; `vercel.json` has no build-command override. Whether a hosted project-level override exists remains **unverified**. This is a release-execution gate, not a failure of the successful direct-Vite local/CI builds.
+
+Work commit: `222b37bbabad06d4782d0eab3cd022ae7cd3be59` — **Refresh combined release checklist and document migration gate**, branch `integration/active-work-pass-1`. It changes only the existing browser release checklist and the reconciliation validation record. The current total scope is 44 paths versus the frozen casino base (43 at the original combined validation plus the updated checklist). The application, tests, dependencies, configuration, casino data and historical freeze evidence remain unchanged.
 
 ## Frozen casino invariant
 
@@ -67,13 +79,15 @@ All four are **B: intentionally external by design / A: unavailable in a clean r
 4. `scripts/write-atomic.test.mjs`: “every hand-over the og skill prints is one this script accepts”.
 
 
-## BLOCKED / current integration gates
+## BLOCKED / remaining release-execution gates
 
-None for the combined non-production candidate. Physical-device GPS/OS permission behavior, installed PWA, authenticated hosted sessions and external Maps app navigation remain explicit later acceptance checks; they are not claimed complete. Public-provider availability remains best effort. Existing opening-hours evaluation uses the viewer timezone rather than the destination timezone; international live acceptance used open-now off.
+No known implementation blocker remains for the combined non-production candidate. The effective hosted build/Git configuration is unverified because the current Vercel connection lists no accessible teams. Resolve that read-only access/configuration check before any main merge or deployment: the repository's ordinary build chains migrations, and main promotion may start a hosted build.
+
+Physical-device GPS/OS permission behavior, installed PWA, authenticated hosted sessions and external Maps navigation remain unverified. Public-provider availability is best effort. Existing opening-hours evaluation uses the viewer timezone rather than destination timezone; the international live acceptance used open-now off.
 
 ## Exact next action
 
-Return control to Caleb. Keep the combined candidate on integration/active-work-pass-1 frozen for release review. Do not re-merge old PR #39 or restore its 808-casino base. After separate authorization, perform controlled main/hosted release and the documented physical-device, PWA, account and external Maps acceptance. Before any new work, read this same shared file and inspect the current branch SHA/CI. No further casino discovery or location integration is required for this candidate.
+Keep the combined candidate frozen. Restore read-only access to the correct Vercel project, or provide the effective hosted build command and Git/production-branch settings, so the migration-free release path can be verified. Main promotion may trigger deployment; do not assume the integration/** exclusion applies to main. Then obtain separate explicit authorization for the concrete main/hosted release and any required configuration change. Migrations, secrets and recurring monitoring remain excluded. Use the updated existing browser checklist for later device/hosted acceptance. No further casino research or location integration is needed.
 
 ## DEFERRED
 
@@ -118,5 +132,8 @@ Local checkout: /workspace/scratch/60ab73826fd9/pick-for-me-casino. Inspect bran
 - `189c46bfee0ac0983ea9100eae90e92ee58915b7` | `integration/active-work-pass-1` | Integrate frozen casinos with validated GPS and international discovery — Merges validated PR #42 into non-production integration.
 - `6b4e1a0701ec377cf4272118a76c79c2911fa0ab` | `integration/active-work-pass-1` | Update shared continuity: combined candidate integrated; integration CI pending — Saves and verifies the corresponding checkpoint in the existing shared AI continuity.
 - `890cca11efdd7f132648d3451a86404d9badbcf6` | `integration/active-work-pass-1` | Finalize validated casino and international integration release record — Records merged-tree identity, successful integration CI and final release readiness.
+
+- `40f9fb8d162caac061fcf7927894bd2107b434ad` | `integration/active-work-pass-1` | Update shared continuity: combined integration complete and release candidate ready — Saved the final combined handoff; exact-head CI Run 346 passed.
+- `222b37bbabad06d4782d0eab3cd022ae7cd3be59` | `integration/active-work-pass-1` | Refresh combined release checklist and document migration gate — Updated the existing combined browser/release checklist and recorded the unresolved hosted build configuration gate.
 
 This update records already-known work commits. Its own immutable documentation commit SHA is subsequent; inspect the current shared GitHub ref and Actions status. Every major checkpoint is saved and read back from GitHub before the next phase.
