@@ -6,7 +6,7 @@ import { getDateNightIcon } from "@/lib/date-night/icons";
 import { isHalloweenDateNightActive } from "@/lib/date-night/season";
 import { dateNightTypeLabel, type DecoratedDateNightPlace } from "@/lib/date-night/types";
 import { nightlifeArtwork, type DecoratedNightlifePlace } from "@/lib/nightlife/types";
-import { restaurantVisual } from "@/lib/restaurants/image-overrides";
+import { dinnerIconPath, dinnerRestaurantIcon } from "@/lib/restaurants/dinner-icons";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
 import type { DecoratedRestaurant } from "@/lib/restaurants/types";
@@ -52,7 +52,9 @@ export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNo
 function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { restaurant: DecoratedRestaurant; mode: ResultMode; halloween: boolean; onSelect: () => void; onNotTonight: () => void; }) {
   const openLabel = restaurant.hoursKnown ? (restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed") : null;
   const theme = useAppStore((s) => s.theme);
-  const visual = restaurantVisual(restaurant.name, restaurant.photoKey, theme, restaurant.cuisineLabel);
+  const visualSrc = mode === "nightlife"
+    ? dinnerIconPath("fallback", theme)
+    : dinnerRestaurantIcon(restaurant, theme);
   const dateNightRestaurant = restaurant as DecoratedDateNightPlace;
   const dateNightIcon = mode === "date-night" ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel, halloween }) : null;
   const activityTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
@@ -70,7 +72,7 @@ function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { r
           ) : nightlifeIcon ? (
             <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={nightlifeIcon} alt="" className="size-24 rounded-2xl object-cover shadow-sm" /></div>
           ) : (
-            <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={visual.src} alt="" className="size-24 rounded-2xl object-cover shadow-sm" /></div>
+            <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={visualSrc} alt="" className="size-24 rounded-2xl object-cover shadow-sm" /></div>
           )}
         </button>
         <button type="button" onClick={onNotTonight} className="absolute top-2 right-2 flex size-10 items-center justify-center rounded-md bg-bg/80 text-fg" aria-label={`Not tonight: ${restaurant.name}`}><Ban className="size-4" /></button>
