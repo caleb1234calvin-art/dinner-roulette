@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import ts from "typescript";
-import { auditCasinoRecords, mergeJurisdictions } from "./casino-audit.mjs";
+import { auditCasinoRecords, auditManifestCoverage, mergeJurisdictions } from "./casino-audit.mjs";
 
 const catalogFiles = [
   "src/lib/nightlife/casino-catalog.ts",
@@ -33,6 +33,7 @@ try {
     path, data: JSON.parse(fs.readFileSync(path, "utf8")),
   })));
   const { failures, warnings, canonical, counts } = auditCasinoRecords(records, jurisdictions);
+  failures.push(...auditManifestCoverage(counts, jurisdictions));
   if (warnings.length) {
     console.warn("Casino catalog reconciliation warnings:\n" + warnings.map((warning) => "- " + warning).join("\n"));
   }

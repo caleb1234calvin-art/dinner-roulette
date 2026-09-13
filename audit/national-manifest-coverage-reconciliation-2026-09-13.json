@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "status": "candidate-awaiting-exact-head-validation",
+  "discoveredBy": {
+    "exactHead": "a76ffbe7975f667dd808886462571ec0ba79934b",
+    "runId": 34732944855,
+    "manifestJurisdictions": 39,
+    "runtimeJurisdictions": 41,
+    "missingManifestStates": [
+      "Colorado",
+      "Oklahoma"
+    ]
+  },
+  "reconciliation": {
+    "Colorado": {
+      "status": "complete",
+      "expectedCount": 31,
+      "evidence": "audit/colorado-statewide-runtime-reconciliation-2026-09-11.json"
+    },
+    "Oklahoma": {
+      "status": "pending",
+      "expectedCount": null,
+      "verifiedRuntimeCount": 56,
+      "scopeEvidence": "audit/oklahoma-statewide-scope-2026-09-11.json",
+      "reason": "Remaining operator/scope work is incomplete; do not invent a statewide destination total."
+    }
+  },
+  "newGate": "Every active exported jurisdiction must have an explicit manifest record. Complete/inventory counts remain required positive integers; complete counts must match canonical runtime exactly. Pending totals may be unknown, but any supplied count must still be a positive integer.",
+  "expectedAccounting": {
+    "completeJurisdictions": 39,
+    "pendingJurisdictions": 2,
+    "manifestJurisdictions": 41,
+    "canonicalNationalDestinations": 731,
+    "fourStateTotal": 200
+  },
+  "remainingWork": [
+    "Nevada pending scope and closure-status maintenance.",
+    "Oklahoma remaining tribal/operator clusters beyond the four coordinate holds cleared in Pass 50.",
+    "Interactive browser/runtime smoke checks have not run in the failed local execution environment; no hosted deployment is authorized."
+  ]
+}

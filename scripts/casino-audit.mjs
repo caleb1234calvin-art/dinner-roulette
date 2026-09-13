@@ -116,3 +116,29 @@ export function auditCasinoRecords(records, jurisdictions) {
   }
   return { failures, warnings, canonical, counts };
 }
+
+export function auditManifestCoverage(counts, jurisdictions) {
+  return Object.keys(counts)
+    .filter((jurisdiction) => !Object.hasOwn(jurisdictions, jurisdiction))
+    .map((jurisdiction) => "runtime jurisdiction missing from manifest: " + jurisdiction);
+}
+
+export function validateJurisdictionMetadata(jurisdictions) {
+  const failures = [];
+  for (const [jurisdiction, info] of Object.entries(jurisdictions)) {
+    if (typeof info.source !== "string" || !info.source.trim()) {
+      failures.push(jurisdiction + ": missing authoritative source");
+    }
+    if (!["complete", "inventory", "pending"].includes(info.status)) {
+      failures.push(jurisdiction + ": invalid status " + info.status);
+    }
+    // Pending scope may genuinely have no known statewide total. A supplied
+    // count must still be valid; complete/inventory records always need one.
+    if (info.status !== "pending" || info.expectedCount != null) {
+      if (!Number.isInteger(info.expectedCount) || info.expectedCount < 1) {
+        failures.push(jurisdiction + ": invalid expectedCount");
+      }
+    }
+  }
+  return failures;
+}

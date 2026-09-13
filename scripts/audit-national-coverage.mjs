@@ -1,16 +1,13 @@
 import fs from "node:fs";
+import { mergeJurisdictions, validateJurisdictionMetadata } from "./casino-audit.mjs";
 
 const manifestPaths = ["audit/casino-sources.json", "audit/casino-sources-integration.json"];
 const manifests = manifestPaths.map((path) => ({ path, data: JSON.parse(fs.readFileSync(path, "utf8")) }));
 const baseManifest = manifests[0].data;
-const jurisdictions = {};
-for (const { data } of manifests) Object.assign(jurisdictions, data.jurisdictions ?? {});
-const failures = [];
+const jurisdictions = mergeJurisdictions(manifests);
+const failures = validateJurisdictionMetadata(jurisdictions);
 
 for (const [jurisdiction, info] of Object.entries(jurisdictions)) {
-  if (!info.source) failures.push(`${jurisdiction}: missing authoritative source`);
-  if (!Number.isInteger(info.expectedCount) || info.expectedCount < 1) failures.push(`${jurisdiction}: invalid expectedCount`);
-  if (!["complete", "inventory", "pending"].includes(info.status)) failures.push(`${jurisdiction}: invalid status ${info.status}`);
 
   if (info.snapshot) {
     if (!fs.existsSync(info.snapshot)) {
