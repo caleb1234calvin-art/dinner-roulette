@@ -59,18 +59,27 @@ export const DEFAULT_NIGHTLIFE_FILTERS: NightlifeFilters = {
   favoritesOnly: false,
 };
 
+const NIGHTLIFE_ARTWORK: Record<ConcreteNightlifeType, string> = {
+  bar: "/grok_1789341445435.jpg",
+  pub: "/grok_1789340964876.jpg",
+  club: "/grok_1789340968434.jpg",
+  lounge: "/grok_1789340971434.jpg",
+  brewery: "/grok_1789340974874.jpg",
+  casino: "/grok_1788913461447.jpg",
+};
+
 export const NIGHTLIFE_TYPE_CHIPS: ReadonlyArray<{
   id: NightlifeTypeId;
   label: string;
   iconSrc?: string;
 }> = [
   { id: "anything", label: "Anything" },
-  { id: "bar", label: "Bar" },
-  { id: "pub", label: "Pub" },
-  { id: "club", label: "Club" },
-  { id: "lounge", label: "Lounge" },
-  { id: "brewery", label: "Brewery / Beer Garden" },
-  { id: "casino", label: "Casino", iconSrc: "/grok_1788913461447.jpg" },
+  { id: "bar", label: "Bar", iconSrc: NIGHTLIFE_ARTWORK.bar },
+  { id: "pub", label: "Pub", iconSrc: NIGHTLIFE_ARTWORK.pub },
+  { id: "club", label: "Club", iconSrc: NIGHTLIFE_ARTWORK.club },
+  { id: "lounge", label: "Lounge", iconSrc: NIGHTLIFE_ARTWORK.lounge },
+  { id: "brewery", label: "Brewery / Beer Garden", iconSrc: NIGHTLIFE_ARTWORK.brewery },
+  { id: "casino", label: "Casino", iconSrc: NIGHTLIFE_ARTWORK.casino },
 ];
 
 export const NIGHTLIFE_TAGLINES = [
@@ -98,6 +107,11 @@ export function nightlifeTypeLabel(types: readonly ConcreteNightlifeType[]): str
 }
 
 export function nightlifeArtwork(types: readonly ConcreteNightlifeType[]): string | null {
-  if (types.includes("casino")) return "/grok_1788913461447.jpg";
+  if (types.includes("casino")) return NIGHTLIFE_ARTWORK.casino;
+  if (types.includes("club")) return NIGHTLIFE_ARTWORK.club;
+  if (types.includes("lounge")) return NIGHTLIFE_ARTWORK.lounge;
+  if (types.includes("brewery")) return NIGHTLIFE_ARTWORK.brewery;
+  if (types.includes("pub")) return NIGHTLIFE_ARTWORK.pub;
+  if (types.includes("bar")) return NIGHTLIFE_ARTWORK.bar;
   return null;
 }
