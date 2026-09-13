@@ -157,11 +157,11 @@ export function NightlifeHome() {
                 onClick={() => toggleVenueType(chip.id)}
                 className={cn(
                   "chip min-h-11 rounded-full text-sm shadow-border transition",
-                  featured ? "flex items-center gap-2 py-1.5 pl-1.5 pr-3" : "px-3 py-2",
+                  featured ? "flex items-center gap-1.5 px-3 py-2" : "px-3 py-2",
                   selected ? "bg-accent text-accent-fg" : "bg-surface text-muted",
                 )}
               >
-                {chip.iconSrc ? <img src={chip.iconSrc} alt="" className="size-9 rounded-lg object-cover" /> : null}
+                {chip.iconSrc ? <img src={chip.iconSrc} alt="" className="size-6 rounded-md object-cover" /> : null}
                 {chip.label}
               </button>
             );
