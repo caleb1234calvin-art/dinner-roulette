@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "status": "pass-50-candidate-awaiting-exact-head-validation",
+  "priorValidatedPass": {
+    "pass": 49,
+    "head": "25b2e0cd53049a6066d613d5ccfe6a63ee57dcd0",
+    "runId": 34732399513,
+    "integrationMerge": "6563c1eec00cc44a004f4a7cbbfbd18739b952fc",
+    "canonicalNationalCount": 727,
+    "counts": {
+      "Colorado": 31,
+      "Nevada": 108,
+      "Oklahoma": 53,
+      "Texas": 4
+    }
+  },
+  "policy": "Current-property numerical evidence is required. Do not substitute city centroids, predecessor casinos, viewport centres or adjacent development. Operator-published building links require the current casino explicitly listed at that building.",
+  "records": [
+    {
+      "address": "404 S 5th St, Elko, NV 89801",
+      "coordinateEvidence": {
+        "capturedAt": "2026-09-13T01:11:45.784Z",
+        "fields": {
+          "@type": "LocalBusiness",
+          "address": {
+            "addressLocality": "Elko",
+            "addressRegion": "NV",
+            "postalCode": "89801",
+            "streetAddress": "404 S 5th St"
+          },
+          "geo": {
+            "latitude": 40.82809,
+            "longitude": -115.75709
+          },
+          "name": "Red Dragon Casino"
+        },
+        "method": "raw-html-json-ld-current-named-place",
+        "scrapeId": "01a09853-2e92-767d-a05e-5dcb0d1a03dc"
+      },
+      "coordinateSource": "https://www.mapquest.com/us/nevada/red-dragon-casino-790465354",
+      "excluded": [
+        {
+          "lat": 40.8286,
+          "lon": -115.7634,
+          "reason": "Prior unsupported point remains excluded."
+        },
+        {
+          "name": "Dotty's #214",
+          "reason": "Co-located license/concept, not a second physical destination."
+        }
+      ],
+      "id": "casino-catalog-nv-red-dragon-elko",
+      "identitySource": "https://elko-search.gsacorp.io/account/BU250232",
+      "jurisdiction": "Nevada",
+      "lat": 40.82809,
+      "lon": -115.75709,
+      "name": "Red Dragon Casino",
+      "notes": "One physical property: Red Dragon is the canonical consumer-facing identity at parcel 001-422-002. Co-located Dotty's #214 is not a separate routable destination. The numerical point is from raw named MapQuest LocalBusiness.geo, not the formerly unsupported point.",
+      "supportingSources": [
+        "audit/nevada-elko-operation-qa-pass-16-2026-09-12.json",
+        "https://maps.roadtrippers.com/us/elko-nv/entertainment/red-dragon-casino-elko-nv--0"
+      ],
+      "website": null
+    },
+    {
+      "address": "1000 US HW 70 E, Ardmore, OK 73401",
+      "alternatePoint": {
+        "decision": "Not selected: prefer the operator-linked current-property entity. Approximate 0.187-mile discrepancy is retained; no inference about exact campus geometry is claimed.",
+        "lat": 34.13215939,
+        "lon": -97.11714609,
+        "scrapeId": "01a09853-2e67-7223-bf88-d70c9d35862c",
+        "source": "https://www.mapquest.com/us/oklahoma/lakecrest-casino-hotel-702135358"
+      },
+      "coordinateEvidence": {
+        "entityName": "Lakecrest Casino and Hotel",
+        "finalUrl": "https://www.google.com/maps/place/Chickasaw+LakeCrest+Casino/@34.1348459,-97.1167007,15z/data=!4m6!3m5!1s0x864d2956d81ce46b:0x1eee902bce27d346!8m2!3d34.1348459!4d-97.1167007!16s%2Fg%2F11l5r4ljxd?entry=tts",
+        "matchingFields": [
+          "1000 US HW 70 E, Ardmore, OK 73401",
+          "lakecrestcasino.com",
+          "+1 580-222-2910"
+        ],
+        "method": "operator-linked-current-property-map-destination",
+        "operatorPage": "https://lakecrestcasino.com/",
+        "publishedLink": "https://maps.app.goo.gl/TVoPubraC3WPcrpr6"
+      },
+      "coordinateSource": "https://maps.app.goo.gl/TVoPubraC3WPcrpr6",
+      "excluded": [
+        {
+          "lat": 34.172006,
+          "lon": -97.173354,
+          "reason": "Prior adjacent development/commercial-land point remains excluded."
+        }
+      ],
+      "id": "casino-catalog-ok-lakecrest",
+      "identitySource": "https://lakecrestcasino.com/",
+      "jurisdiction": "Oklahoma",
+      "lat": 34.1348459,
+      "lon": -97.1167007,
+      "name": "Lakecrest Casino and Hotel",
+      "notes": "Point extracted from the destination !3d/!4d fields of the operator-published Google Maps link. Named map entity resolves to the current Lakecrest casino/hotel with matching address, official website and phone. Alternate MapQuest point is documented but not substituted.",
+      "supportingSources": [
+        "https://www.exploreardmore.com/attraction/lakecrest-casino-and-hotel"
+      ],
+      "website": "https://lakecrestcasino.com/"
+    },
+    {
+      "address": "1045 Birkes Rd, Eufaula, OK 74432",
+      "coordinateEvidence": {
+        "currentOccupant": "Lake Eufaula Casino Hotel",
+        "entityAddress": "1045 Birkes Rd, Eufaula, OK 74432",
+        "extraction": "Destination !3d35.3000591!4d-95.5921671, not viewport @35.3000591,-95.594742",
+        "finalUrl": "https://www.google.com/maps/place/1045+Birkes+Rd,+Eufaula,+OK+74432/@35.3000591,-95.594742,17z/data=!3m1!4b1!4m6!3m5!1s0x87b5b1626d711065:0x88dd10ac1eb67944!8m2!3d35.3000591!4d-95.5921671!16s%2Fg%2F11whn2lpy_",
+        "method": "operator-linked-building-with-current-casino-occupant",
+        "operatorPage": "https://lakeeufaulacasinohotel.com/",
+        "otherOccupant": "Northfork Bar & Grill",
+        "publishedLink": "https://maps.app.goo.gl/gAwG8Q5zwU9EqNPG6"
+      },
+      "coordinateSource": "https://maps.app.goo.gl/gAwG8Q5zwU9EqNPG6",
+      "excluded": [
+        {
+          "address": "806 W Forrest Ave, Eufaula, OK",
+          "reason": "Permanently closed predecessor property."
+        },
+        {
+          "address": "1065 Birkes Rd",
+          "reason": "Conflicting third-party hotel listing address; use operator's 1045 Birkes Rd."
+        }
+      ],
+      "id": "casino-catalog-ok-lake-eufaula",
+      "identitySource": "https://lakeeufaulacasinohotel.com/",
+      "jurisdiction": "Oklahoma",
+      "lat": 35.3000591,
+      "lon": -95.5921671,
+      "name": "Lake Eufaula Casino Hotel",
+      "notes": "Operator-published Google Maps destination at 1045 Birkes Rd explicitly lists Lake Eufaula Casino Hotel at this place. Use destination !3d/!4d values, not the map viewport longitude. The predecessor at 806 W Forrest Ave stays excluded.",
+      "supportingSources": [
+        "https://lakeeufaulacasinohotel.com/lake-eufaula-casino-hotel-information"
+      ],
+      "website": "https://lakeeufaulacasinohotel.com/"
+    },
+    {
+      "address": "211 E Willow St, Holdenville, OK 74848",
+      "coordinateEvidence": {
+        "currentOccupant": "Creek Nation Casino Holdenville",
+        "entityAddress": "211 E Willow St, Holdenville, OK 74848",
+        "finalUrl": "https://www.google.com/maps/place/211+E+Willow+St,+Holdenville,+OK+74848/@35.0912327,-96.4034396,17z/data=!3m1!4b1!4m6!3m5!1s0x87b47f7f47344307:0xea8468bb52723056!8m2!3d35.0912327!4d-96.4034396!16s%2Fg%2F11b8v5f6t0",
+        "floor": "1",
+        "method": "operator-linked-building-with-current-casino-occupant",
+        "operatorPage": "https://creeknationcasinoholdenville.com/",
+        "publishedLink": "https://maps.app.goo.gl/iPDfyNyLtW9t5XzG9"
+      },
+      "coordinateSource": "https://maps.app.goo.gl/iPDfyNyLtW9t5XzG9",
+      "excluded": [
+        {
+          "lat": 35.083599,
+          "lon": -96.401627,
+          "reason": "City centroid, not casino geometry."
+        }
+      ],
+      "id": "casino-catalog-ok-creek-nation-holdenville",
+      "identitySource": "https://creeknationcasinoholdenville.com/",
+      "independentPoint": {
+        "lat": 35.091242,
+        "lon": -96.403402,
+        "method": "raw-html-json-ld-current-named-place",
+        "scrapeId": "01a09853-2eda-77ee-adee-757a354c5c1b",
+        "source": "https://www.mapquest.com/us/oklahoma/creek-nation-casino-holdenville-42854428"
+      },
+      "jurisdiction": "Oklahoma",
+      "lat": 35.0912327,
+      "lon": -96.4034396,
+      "name": "Creek Nation Casino Holdenville",
+      "notes": "Operator-published Google Maps building destination at 211 E Willow St explicitly lists the casino on floor 1. Destination !3d/!4d values independently agree with raw named MapQuest geo within approximately 4 metres. The city centroid remains excluded.",
+      "website": "https://creeknationcasinoholdenville.com/"
+    }
+  ],
+  "expectedAfterActivation": {
+    "Nevada": 109,
+    "Oklahoma": 56,
+    "Colorado": 31,
+    "Texas": 4,
+    "fourStateTotal": 200,
+    "canonicalNationalCount": 731
+  },
+  "closureReview": [
+    {
+      "property": "The Pass Casino, Henderson",
+      "status": "closure-renovation-hold",
+      "decision": "No current daily-gaming reopening confirmed. Ownership sale alone is not reopening evidence.",
+      "source": "https://www.yelp.com/biz/the-pass-casino-henderson",
+      "limitation": "Directory closed flag is corroboration, not proof of a fresh on-site observation."
+    },
+    {
+      "property": "Whiskey Pete's",
+      "status": "closure-exclusion",
+      "decision": "No confirmed current daily-gaming reopening; not activated."
+    },
+    {
+      "property": "Buffalo Bill's",
+      "status": "closure-exclusion",
+      "decision": "No confirmed current daily-gaming reopening; not activated."
+    },
+    {
+      "property": "Primm Valley",
+      "status": "active-separate-destination",
+      "reopenedOn": "2026-07-22",
+      "decision": "July reopening supersedes older May/June closure reports; does not establish reopening of other Primm properties.",
+      "sources": [
+        "https://www.reviewjournal.com/business/casinos-gaming/primm-valley-casino-back-in-business-after-17-day-shutdown-watch-live-3853602",
+        "https://news3lv.com/news/local/terribles-reopening-primm-valley-casino-wednesday-july-22-2026-gaming-nevada-i-15-las-vegas-travel-rest-stop"
+      ]
+    }
+  ],
+  "safety": {
+    "mainChangesAuthorized": false,
+    "vercelDeploymentAuthorized": false
+  },
+  "nextSteps": "Run the full exact-head integration workflow. Promote only the candidate that passes. Preserve all historical rejected points and audit files as provenance."
+}

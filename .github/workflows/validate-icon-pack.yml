@@ -41,7 +41,7 @@ jobs:
         run: npm run typecheck
 
       - name: Casino audit regression tests
-        run: node --test scripts/casino-audit.test.mjs scripts/casino-catalog-lineage.test.mjs
+        run: node --test scripts/casino-*.test.mjs
 
       - name: Audit curated casino catalog
         run: npm run audit:casinos
