@@ -1,0 +1,41 @@
+{
+  "status": "coordinate-qa-pass-22-cadence-crossing-runtime-ready",
+  "date": "2026-09-12",
+  "candidate": {
+    "id": "casino-catalog-nv-cadence-crossing",
+    "name": "Cadence Crossing Casino",
+    "operator": "Boyd Gaming",
+    "address": "920 N Boulder Hwy, Henderson, NV 89011",
+    "lat": 36.08622,
+    "lon": -115.03321,
+    "website": "https://cadencecrossing.boydgaming.com/"
+  },
+  "evidence": {
+    "operation": [
+      "Boyd Gaming current Cadence Crossing property website",
+      "Nevada Department of Taxation licensed-retailer record: CADENCE CROSSING CASINO, 920 N BOULDER HWY, HENDERSON NV 89011",
+      "Post-opening reporting confirms Cadence Crossing opened March 25, 2026 and replaced Jokers Wild"
+    ],
+    "coordinate": [
+      "Current MapQuest Cadence Crossing Casino entity at 920 N Boulder Hwy exposes the numerical property point 36.08622,-115.03321 and links to the current Boyd Gaming property website."
+    ]
+  },
+  "decision": "Runtime-ready. The numerical point is attached to a current named Cadence Crossing Casino map entity with the exact current street address and current Boyd property link. It is not the quarantined legacy Jokers Wild coordinate, a city centroid, an adjacent parcel, or an inferred address geocode.",
+  "legacyCoordinateQuarantine": {
+    "lat": 36.052,
+    "lon": -114.99468,
+    "reason": "Legacy Jokers Wild coordinate previously rejected for the completed 2026 Cadence Crossing property."
+  },
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 107,
+    "runtimeReadyThisPass": 1,
+    "projectedNevadaRuntimeActive": 108,
+    "statewideComplete": false
+  },
+  "remainingNevadaFrontier": [
+    "Red Dragon Sports Bar #201 / Red Dragon Casino — coordinate-only hold",
+    "The Pass Casino — closure/renovation hold until reopening is independently confirmed",
+    "Whiskey Pete's / Buffalo Bill's — current closure exclusions"
+  ],
+  "nextPhase": "Serialize as overall Pass 49, activate in chronological runtime canonicalization, extend validator, exact-head CI, then continue remaining Nevada and Oklahoma holds."
+}

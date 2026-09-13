@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "verifiedOn": "2026-09-13",
+  "status": "corrected-candidate-awaiting-exact-head-validation",
+  "property": {
+    "id": "casino-catalog-nv-cadence-crossing",
+    "name": "Cadence Crossing Casino",
+    "address": "920 N Boulder Hwy, Henderson, NV 89011",
+    "website": "https://cadencecrossing.boydgaming.com/"
+  },
+  "supersedes": "audit/nevada-cadence-crossing-coordinate-qa-pass-22-2026-09-12.json",
+  "correction": {
+    "previousPoint": {
+      "lat": 36.08622,
+      "lon": -115.03321
+    },
+    "currentPoint": {
+      "lat": 36.052633,
+      "lon": -114.994834
+    },
+    "distanceMiles": 3.159,
+    "reason": "Rechecked raw current-property MapQuest LocalBusiness structured data exposes a different numerical point; the historical handoff value is unsupported and must not be used."
+  },
+  "evidence": [
+    {
+      "url": "https://www.mapquest.com/us/nevada/cadence-crossing-casino-810072928",
+      "kind": "raw-html-json-ld-current-named-place",
+      "retrievedOn": "2026-09-13",
+      "scrapeId": "01a0985e-c6b7-7058-a5a2-d0f891762a3f",
+      "fields": {
+        "@type": "LocalBusiness",
+        "name": "Cadence Crossing Casino",
+        "geo": {
+          "latitude": 36.052633,
+          "longitude": -114.994834
+        },
+        "address": {
+          "streetAddress": "920 N Boulder Hwy",
+          "addressLocality": "Henderson",
+          "addressRegion": "NV",
+          "postalCode": "89011"
+        }
+      }
+    },
+    {
+      "url": "https://cadencecrossing.boydgaming.com/explore/directions",
+      "kind": "official-current-address",
+      "warning": "The embedded directions link still labels the legacy Jokers Wild property and points to 36.052169,-114.9949597. It is NOT the coordinate source for the current casino."
+    },
+    {
+      "url": "https://media.boydgaming.com/press-releases?item=123078",
+      "kind": "official-opening",
+      "openedOn": "2026-03-25"
+    },
+    {
+      "url": "https://www.reviewjournal.com/business/casinos-gaming/boyd-gaming-opens-doors-of-this-new-henderson-casino-watch-live-3729386",
+      "kind": "post-opening-footprint",
+      "finding": "New casino built next door to Jokers Wild; predecessor footprint intended for parking."
+    },
+    {
+      "url": "https://news3lv.com/news/local/new-henderson-cadence-crossing-casino-opening-march-2026-boyd-gaming-slots-jokers-wild-las-vegas-nevada",
+      "kind": "independent-replacement-context"
+    }
+  ],
+  "excluded": [
+    {
+      "lat": 36.052,
+      "lon": -114.99468,
+      "reason": "Quarantined predecessor Jokers Wild point; not a current-property coordinate source."
+    }
+  ],
+  "deployment": "No Vercel deployment authorized. Candidate must pass the entire integration workflow before promotion; main stays untouched."
+}
