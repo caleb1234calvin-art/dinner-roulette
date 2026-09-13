@@ -1,0 +1,1505 @@
+{
+  "schemaVersion": 1,
+  "status": "HISTORICAL_PRE_FREEZE_SNAPSHOT",
+  "base": "f2fd0f7f4737278126d72b0cc043c79db7652236",
+  "note": "Unmodified baseline release records before Pass 59/60. Counts and candidate/CI/hold statements in this snapshot are historical, not the final freeze.",
+  "progress": {
+    "schemaVersion": 3,
+    "capturedOn": "2026-09-13",
+    "repository": "caleb1234calvin-art/dinner-roulette",
+    "status": "VALIDATED_NONPRODUCTION_INTEGRATION",
+    "branch": "integration/active-work-pass-1",
+    "base": "2fd976a4f34f8bbe28db1075a264693d691b8253",
+    "integrationTarget": "integration/active-work-pass-1",
+    "mainBaseline": "c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5",
+    "separateWorkPreserved": {
+      "branch": "integration/location-international-2026-09-13",
+      "head": "4a93870c05ec53bd49fae5143df420c301696839",
+      "mergedHere": false
+    },
+    "previousCheckpoint": {
+      "canonical": 808,
+      "validatedHead": "a6d38616fe4490ff46b87232cbc7abb82f176926",
+      "run": 34741156629,
+      "runNumber": 310,
+      "uniquePassed": 314,
+      "pauseHead": "2fd976a4f34f8bbe28db1075a264693d691b8253",
+      "integration": {
+        "branch": "integration/active-work-pass-1",
+        "mergeCommit": "6c1d5829f7f3e76946e20211b60525f9836b1227",
+        "pr": 38,
+        "merged": true,
+        "preMergeHead": "877ff08c300a9d149aa174e9c47471d57bc98ccd",
+        "expectedCandidateHead": "61cb2fe047a80fc4a67931ea3b24040e75dcd367",
+        "tree": "5408249f8b7a89c256ac3b9213c19c616e6db103",
+        "treeEqualsValidatedCandidate": true,
+        "validationRun": 34741023078,
+        "validationRunNumber": 309
+      },
+      "documentationCheckpoint": {
+        "scope": "Documentation only after successful integration Run 309; runtime/code/data remain unchanged.",
+        "validatedCandidateHead": "61cb2fe047a80fc4a67931ea3b24040e75dcd367",
+        "validatedCandidateRun": 34740777237,
+        "validatedIntegrationMerge": "6c1d5829f7f3e76946e20211b60525f9836b1227",
+        "validatedIntegrationRun": 34741023078,
+        "currentRefValidation": "Inspect the latest integration/active-work-pass-1 Actions run; the checkpoint cannot embed its own future commit SHA."
+      },
+      "filesChanged": [
+        ".github/workflows/validate-icon-pack.yml",
+        "AI_CONTINUITY.md",
+        "audit/ai-continuity-before-casino-rc-2026-09-13.md",
+        "audit/casino-browser-release-checklist-2026-09-13.md",
+        "audit/casino-rc-adversarial-review-2026-09-13.json",
+        "audit/casino-rc-coverage-2026-09-13.json",
+        "audit/casino-rc-pass-51-evidence-2026-09-13.json",
+        "audit/casino-rc-pass-52-evidence-2026-09-13.json",
+        "audit/casino-rc-pass-53-evidence-2026-09-13.json",
+        "audit/casino-rc-pass-54-evidence-2026-09-13.json",
+        "audit/casino-rc-progress-2026-09-13.json",
+        "audit/casino-recent-provenance-index-2026-09-13.json",
+        "audit/casino-release-readiness-2026-09-13.md",
+        "audit/casino-sources-integration.json",
+        "audit/casino-status-watchlist-2026-09-13.json",
+        "audit/nevada-northern-markets-ledger-2026-09-11.json",
+        "package-lock.json",
+        "scripts/audit-casino-catalog.mjs",
+        "scripts/casino-audit-artifacts.test.mjs",
+        "scripts/casino-audit.mjs",
+        "scripts/casino-browser-smoke.mjs",
+        "scripts/casino-catalog-loader.mjs",
+        "scripts/casino-catalog-loader.test.mjs",
+        "scripts/casino-discovery.test.mjs",
+        "scripts/casino-rc-conflicts.test.mjs",
+        "scripts/casino-rc-evidence.test.mjs",
+        "scripts/casino-rc-final.test.mjs",
+        "scripts/casino-rc-frontier.test.mjs",
+        "scripts/casino-recent-provenance.test.mjs",
+        "scripts/casino-schema.mjs",
+        "scripts/casino-schema.test.mjs",
+        "scripts/casino-selection.test.mjs",
+        "scripts/casino-smoke-network.mjs",
+        "scripts/ts-test-loader.mjs",
+        "src/components/nightlife-home.tsx",
+        "src/lib/nightlife/casino-catalog-pass-51.ts",
+        "src/lib/nightlife/casino-catalog-pass-52.ts",
+        "src/lib/nightlife/casino-catalog-pass-53.ts",
+        "src/lib/nightlife/casino-catalog-pass-54.ts",
+        "src/lib/nightlife/discovery-policy.ts",
+        "src/lib/nightlife/search.ts",
+        "src/lib/nightlife/selection.ts",
+        "src/lib/nightlife/types.ts"
+      ]
+    },
+    "catalog": {
+      "Colorado": 31,
+      "Nevada": 181,
+      "Oklahoma": 110,
+      "Texas": 4,
+      "added": 126,
+      "addressCorrections": 2,
+      "canonical": 857,
+      "coordinateCorrections": 3,
+      "existingMerged": 0,
+      "existingRemoved": 0,
+      "existingRenamed": 0,
+      "fourState": 326,
+      "manifestComplete": 39,
+      "manifestJurisdictions": 41,
+      "manifestPending": [
+        "Nevada",
+        "Oklahoma"
+      ],
+      "passes": 58,
+      "serialized": 873,
+      "continuationAdded": 49,
+      "continuationExistingRemoved": 0,
+      "continuationExistingMerged": 0,
+      "continuationExistingRenamed": 0,
+      "continuationExistingCoordinateCorrections": 0,
+      "continuationExistingAddressCorrections": 0
+    },
+    "completed": [
+      "49 evidence-backed destinations added in passes 55–58; identity/status/address/property-point evidence and rejected conflicts preserved.",
+      "Nugget Group, Alamo, Pilot/Roadhouse/Luckys, 7 Clans and relevant Chickasaw rosters reconciled; existing casino components not duplicated.",
+      "Prairie Sun operator-confirmed 2023 closure bounded in runtime policy; 17 runtime closure groups and 25 prepared watchlist entries.",
+      "All registered exports/schema/IDs/state/chronological/manifest audits passed; 81 very close pairs and all 16 new-involved pairs within 0.35 miles reviewed with no canonical alias collision.",
+      "Eight new meaningful tests; 322 unique tests passed with zero failures and four understood external documentation skips.",
+      "Clean dependency install/tree, typecheck, changed-code lint, 30 icons, development and production-mode builds passed; no migrations.",
+      "Auth-enabled production build/browser checks passed; owned dev/build auth checks passed both false and true; CI production steps explicitly enable sign-in.",
+      "Fixed visible geolocation error/manual recovery found by the initial real-browser check; guarded harnesses fail closed on stale build or occupied port.",
+      "Final updated-build desktop/mobile deterministic smoke and localhost real-provider checks passed. Hosted/physical/authenticated-account/external-Maps acceptance is not claimed.",
+      "Primary/adversarial audit, coverage, watchlist, release readiness, exact browser checklist and AI continuity updated; prior pause preserved.",
+      "Main, production, Vercel, database and separate location/international work remain untouched.",
+      "PR #40 expected-head merged only into non-production integration; candidate Run 317 and identical merge tree Run 318 passed all required gates. Main and separate location/international branch were re-read unchanged."
+    ],
+    "blocked": [
+      "Held outside curated pool: Konawa/Rivermist point; Horseshu separate floor; Moapa gaming scope; Wigwam point/floor; Broadway Colt point; Border Inn casino-side boundary point; C Punch/Lovelock Junction floor status; CTS Thackerville separate-room scope.",
+      "Hosted deployment/acceptance is not authorized here. Physical-device GPS/Maps and authenticated-account acceptance are unavailable/not run."
+    ],
+    "deferred": [
+      "NV/OK remain pending statewide completeness; current named clusters are resolved or held explicitly. Further regulatory-roster reconciliation and Big Wheel Lovelock verification are future scope.",
+      "Full repository-history secret scanning, fresh geocoding of every nationwide property and unrelated dependency upgrades are outside this focused continuation."
+    ],
+    "configurationChanges": [
+      "Existing CI production build and browser smoke steps explicitly set VITE_AUTH_ENABLED=true; tracked development default unchanged.",
+      "Generated audit/browser-results directory is Git-ignored; durable final verdicts and boundaries are committed separately.",
+      "NV/OK manifest counts/notes updated to 181/110 while preserving pending status and null expectedCount."
+    ],
+    "dependencyChanges": {
+      "packageManifestChanged": false,
+      "lockfileChanged": false,
+      "upgrades": "none in this continuation",
+      "priorLockRepair": "eslint-plugin-react-hooks 6.1.1 and required lock entries satisfy the existing ^6.0.0 manifest range. npm ci passes."
+    },
+    "documentationSkips": [
+      {
+        "classification": [
+          "B: intentionally external by design",
+          "A: unavailable in a clean repository-only checkout"
+        ],
+        "file": "scripts/brand-check.test.mjs",
+        "name": "SKILL.md and AGENTS.md name the marker path and bound this script uses",
+        "reason": "External OG assistant documentation package (.grok/skills/og and workspace AGENTS.md) is intentionally gitignored and absent. Original assertions run when installed; REQUIRE_WORKSPACE_DOCS=1 makes absence fail closed. Not a casino/application check."
+      },
+      {
+        "classification": [
+          "B: intentionally external by design",
+          "A: unavailable in a clean repository-only checkout"
+        ],
+        "file": "scripts/brand-check.test.mjs",
+        "name": "the sections that own the brand-task prohibition never affirm a wait",
+        "reason": "External OG assistant documentation package (.grok/skills/og and workspace AGENTS.md) is intentionally gitignored and absent. Original assertions run when installed; REQUIRE_WORKSPACE_DOCS=1 makes absence fail closed. Not a casino/application check."
+      },
+      {
+        "classification": [
+          "B: intentionally external by design",
+          "A: unavailable in a clean repository-only checkout"
+        ],
+        "file": "scripts/brand-check.test.mjs",
+        "name": "SKILL.md tells the pass to self-check with the flag this CLI accepts",
+        "reason": "External OG assistant documentation package (.grok/skills/og and workspace AGENTS.md) is intentionally gitignored and absent. Original assertions run when installed; REQUIRE_WORKSPACE_DOCS=1 makes absence fail closed. Not a casino/application check."
+      },
+      {
+        "classification": [
+          "B: intentionally external by design",
+          "A: unavailable in a clean repository-only checkout"
+        ],
+        "file": "scripts/write-atomic.test.mjs",
+        "name": "every hand-over the og skill prints is one this script accepts",
+        "reason": "External OG assistant documentation package (.grok/skills/og and workspace AGENTS.md) is intentionally gitignored and absent. Original assertions run when installed; REQUIRE_WORKSPACE_DOCS=1 makes absence fail closed. Not a casino/application check."
+      }
+    ],
+    "filesChanged": [
+      ".github/workflows/validate-icon-pack.yml",
+      ".gitignore",
+      "AI_CONTINUITY.md",
+      "audit/ai-continuity-before-casino-continuation-2026-09-13.md",
+      "audit/casino-browser-release-checklist-2026-09-13.md",
+      "audit/casino-continuation-browser-evidence-2026-09-13.json",
+      "audit/casino-rc-adversarial-review-2026-09-13.json",
+      "audit/casino-rc-coverage-2026-09-13.json",
+      "audit/casino-rc-pass-55-evidence-2026-09-13.json",
+      "audit/casino-rc-pass-56-evidence-2026-09-13.json",
+      "audit/casino-rc-pass-57-evidence-2026-09-13.json",
+      "audit/casino-rc-pass-58-evidence-2026-09-13.json",
+      "audit/casino-rc-progress-2026-09-13.json",
+      "audit/casino-release-readiness-2026-09-13.md",
+      "audit/casino-sources-integration.json",
+      "audit/casino-status-watchlist-2026-09-13.json",
+      "scripts/casino-browser-live-check.mjs",
+      "scripts/casino-browser-smoke.mjs",
+      "scripts/casino-continuation.test.mjs",
+      "scripts/casino-live-network-log.mjs",
+      "src/components/nightlife-home.tsx",
+      "src/lib/nightlife/casino-catalog-pass-55.ts",
+      "src/lib/nightlife/casino-catalog-pass-56.ts",
+      "src/lib/nightlife/casino-catalog-pass-57.ts",
+      "src/lib/nightlife/casino-catalog-pass-58.ts",
+      "src/lib/nightlife/discovery-policy.ts",
+      "src/lib/nightlife/search.ts"
+    ],
+    "historicalAttempts": [
+      {
+        "head": "868317483be056bb8b52eea2d28705517f289226",
+        "result": "Production command could not locate Vite outside npm PATH; corrected to node node_modules/vite/bin/vite.js. Browser did not run in this failed attempt.",
+        "run": 34734893631
+      },
+      {
+        "result": "Browser harness assumptions failed: address-versus-coordinate Maps assertion, ambiguous hours locator and development Vite optimization reload. Corrected test assumptions and moved to production preview; later browser runs passed.",
+        "runs": [
+          300,
+          301,
+          302
+        ]
+      },
+      {
+        "head": "28c5f9699250700c99b7e184bf13629b361c53c5",
+        "result": "All required gates passed at pre-expansion catalog; superseded by later exact-head validations.",
+        "run": 34736662895,
+        "runNumber": 303,
+        "uniquePassed": 298
+      },
+      {
+        "head": "8651dcb850cbb17183419c35381f8edd80d82102",
+        "result": "Observed queued with no job steps; not counted as a pass or failure. Later complete runs validate the superseding state.",
+        "run": 34737413958,
+        "runNumber": 304
+      },
+      {
+        "head": "02057073c38fc4533ee9d0b6fdd6e6b91d51652d",
+        "result": "All gates passed for passes 51/52.",
+        "run": 34738515765,
+        "runNumber": 305,
+        "uniquePassed": 308
+      },
+      {
+        "head": "328bb374dff956962bfadc67c57e62c05a13c7b1",
+        "result": "All gates passed for pass 53 and Reno/Newkirk browser geographies.",
+        "run": 34739322991,
+        "runNumber": 306,
+        "uniquePassed": 312
+      },
+      {
+        "head": "243082896d6b774dde9bbb44c44f71e02824aaa3",
+        "run": 34739926534,
+        "runNumber": 307,
+        "result": "All runtime/data gates passed for the complete 808-destination candidate.",
+        "uniquePassed": 314
+      },
+      {
+        "head": "61cb2fe047a80fc4a67931ea3b24040e75dcd367",
+        "run": 34740777237,
+        "runNumber": 308,
+        "result": "Final pre-promotion documentation head passed all gates before the expected-head integration merge.",
+        "uniquePassed": 314
+      }
+    ],
+    "continuationAttempts": [
+      {
+        "attempt": "agent-browser install/daemon",
+        "result": "UnknownIssuer install failure and daemon startup failures. TLS checks preserved; existing trusted Chromium used successfully through Playwright."
+      },
+      {
+        "attempt": "initial 808 baseline real-browser run",
+        "result": "Found hidden geolocation-denial recovery; code fixed and final 857 build rerun successfully."
+      },
+      {
+        "attempt": "standalone auth probe",
+        "result": "Indeterminate without required dev endpoint; subsequently passed with owned dev server for both auth values."
+      },
+      {
+        "attempt": "initial targeted lint",
+        "result": "Two browser-harness issues fixed; final targeted lint passed."
+      },
+      {
+        "attempt": "busy-port negative test",
+        "result": "Expected nonzero exit when unrelated server occupied 8080; harness failed closed. Successful final verdict preserved separately."
+      },
+      {
+        "attempt": "CI Run 316",
+        "run": 34768414589,
+        "job": 103753445285,
+        "head": "146d8cbfc6440e76b2b26c83bce3567fd3a487e8",
+        "result": "Tests/typecheck/catalog audits/both builds passed; browser did not run because ANSI color sequences split the owned-server URL. Both harnesses now strip terminal formatting while retaining process/strict-port guards. Actual ANSI local smoke and subsequent exact-head Runs 317/318 passed."
+      },
+      {
+        "attempt": "direct Git push",
+        "result": "CLI credentials unavailable; exact local tree was published through the existing authorized GitHub connector. No credentials read or changed; local history preserved."
+      }
+    ],
+    "validation": {
+      "result": "success",
+      "uniquePassed": 322,
+      "failed": 0,
+      "skipped": 4,
+      "repository": {
+        "passed": 271,
+        "failed": 0,
+        "skipped": 4
+      },
+      "application": {
+        "passed": 51,
+        "failed": 0,
+        "skipped": 0
+      },
+      "casinoSubsetPassed": 73,
+      "casinoSubsetIncludedInRepositoryTotal": true,
+      "catalog": {
+        "canonical": 857,
+        "serialized": 873,
+        "passes": 58
+      },
+      "gates": [
+        "npm ci",
+        "typecheck",
+        "full repository and application suite",
+        "73 included casino regressions",
+        "actual export/schema and manifest audits",
+        "targeted ESLint of all 11 changed code files",
+        "dependency tree",
+        "production dependency audit: zero known vulnerabilities",
+        "30 Dinner icons",
+        "development build",
+        "production build with auth enabled without migrations",
+        "dev/build auth invariants with auth false and true",
+        "16-group desktop/mobile deterministic browser smoke",
+        "four-geography localhost real-provider browser validation",
+        "strict-port negative check"
+      ],
+      "browser": {
+        "status": "passed-local-and-exact-head-CI",
+        "evidence": "audit/casino-continuation-browser-evidence-2026-09-13.json",
+        "deterministicCheckGroups": 16,
+        "realNetworkFindings": 0,
+        "realNetworkErrors": 0,
+        "locations": [
+          "Reno NV",
+          "Newkirk OK",
+          "Ardmore OK",
+          "Chandler OK"
+        ],
+        "successfulOverpassResponses": 16,
+        "successfulNominatimResponses": 2,
+        "providerTimeouts": 9,
+        "limits": [
+          "No hosted acceptance",
+          "No physical iOS/Android GPS",
+          "No authenticated-account acceptance",
+          "External Maps app not opened; exact destination href/security checked"
+        ],
+        "ciArtifactRetentionDays": 14
+      },
+      "head": "264bb678362a5e281f16411ef9a7b98bce85a12e",
+      "run": 34768849482,
+      "runNumber": 318,
+      "job": 103754608346,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768849482",
+      "candidate": {
+        "head": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
+        "run": 34768716664,
+        "runNumber": 317,
+        "job": 103754260940,
+        "conclusion": "success",
+        "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768716664"
+      }
+    },
+    "targetedSecretScan": {
+      "scope": "Changed text files only; not repository history. No environment credentials read or printed.",
+      "findings": []
+    },
+    "releaseGate": {
+      "data": "PASS implemented records; PARTIAL statewide NV/OK completeness with explicit holds",
+      "code": "PASS relevant integration/aliases/selection/location recovery; no known blocker",
+      "testing": "PASS exact-head CI and local: 322 unique tests, zero failures, four understood external documentation skips",
+      "build": "PASS development and auth-enabled production mode without migrations",
+      "audit": "PASS primary and adversarial within recorded scope",
+      "browser": "PASS local deterministic and real-provider desktop/mobile viewport; hosted/physical/account/external Maps not run",
+      "documentation": "PASS: current handoff records exact successful candidate/integration runs, merge, scopes and remaining gates; following checkpoint changes documentation only",
+      "main": "untouched",
+      "production": "untouched",
+      "vercel": "no deployment"
+    },
+    "optionalFuture": [
+      "Use audit/casino-status-watchlist-2026-09-13.json as input for separately authorized monitoring; no recurring tasks created.",
+      "Routine CI action-runtime deprecation maintenance; no known failing gate."
+    ],
+    "requiresUserAuthorization": [
+      "Any merge/promotion into main",
+      "Any Vercel or other hosted deployment",
+      "Production writes, migrations or irreversible external changes",
+      "Recurring status-monitor automation"
+    ],
+    "next": "Casino continuation is complete in non-production integration. Inspect the current ref/latest CI, then obtain separate explicit authorization for controlled main/hosted release and perform its served-revision, physical-device, authenticated-account and external Maps acceptance checklist. Preserve separate location/international work. NV/OK statewide completeness is not asserted.",
+    "recovery": "Reviewed revert of non-production merge 264bb678362a5e281f16411ef9a7b98bce85a12e and following documentation checkpoint, or restore base 2fd976a4f34f8bbe28db1075a264693d691b8253. Preserve candidate branches/history/evidence. No database change/rollback, production write or force-push is needed.",
+    "scopeAudit": {
+      "expectedChangedFiles": 27,
+      "unexpected": [],
+      "deleted": [],
+      "result": "passed"
+    },
+    "candidateBranch": "integration/casino-continuation-2026-09-13",
+    "candidateHead": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
+    "runtimeHead": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
+    "pr": 40,
+    "integration": {
+      "head": "264bb678362a5e281f16411ef9a7b98bce85a12e",
+      "run": 34768849482,
+      "runNumber": 318,
+      "job": 103754608346,
+      "conclusion": "success",
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768849482",
+      "branch": "integration/active-work-pass-1",
+      "mergeCommit": "264bb678362a5e281f16411ef9a7b98bce85a12e",
+      "expectedCandidateHead": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
+      "tree": "cde1ced3c80936915a36a040619bbb974d7c8dcc",
+      "treeEqualsValidatedCandidate": true,
+      "pr": 40,
+      "merged": true,
+      "preMergeHead": "2fd976a4f34f8bbe28db1075a264693d691b8253"
+    },
+    "documentationCheckpoint": {
+      "scope": "Documentation only after successful integration Run 318; runtime/data unchanged.",
+      "validatedCandidateHead": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
+      "validatedCandidateRun": 34768716664,
+      "validatedIntegrationMerge": "264bb678362a5e281f16411ef9a7b98bce85a12e",
+      "validatedIntegrationRun": 34768849482,
+      "currentRefValidation": "Inspect latest integration/active-work-pass-1 Actions result; this checkpoint cannot embed its own future SHA/run ID.",
+      "filesChanged": [
+        "AI_CONTINUITY.md",
+        "audit/casino-browser-release-checklist-2026-09-13.md",
+        "audit/casino-continuation-browser-evidence-2026-09-13.json",
+        "audit/casino-rc-adversarial-review-2026-09-13.json",
+        "audit/casino-rc-coverage-2026-09-13.json",
+        "audit/casino-rc-progress-2026-09-13.json",
+        "audit/casino-release-readiness-2026-09-13.md"
+      ],
+      "unexpectedFiles": [],
+      "runtimeChanges": false
+    }
+  },
+  "coverage": {
+    "schemaVersion": 1,
+    "reviewedOn": "2026-09-13",
+    "status": "VALIDATED_PARTIAL_STATEWIDE_COVERAGE",
+    "scope": "Existing physical casino destination policy. All named prior frontier groups and newly discovered relevant operator rosters were investigated. 49 additions in this continuation are supported; neither Nevada nor Oklahoma is declared statewide complete. Remaining holds require current operating-floor or exact property-point evidence.",
+    "runtimeCounts": {
+      "Alabama": 3,
+      "Arizona": 26,
+      "Arkansas": 3,
+      "California": 69,
+      "Colorado": 31,
+      "Connecticut": 2,
+      "Delaware": 3,
+      "Florida": 16,
+      "Idaho": 6,
+      "Illinois": 17,
+      "Indiana": 14,
+      "Iowa": 23,
+      "Kansas": 10,
+      "Kentucky": 14,
+      "Louisiana": 24,
+      "Maine": 2,
+      "Maryland": 6,
+      "Massachusetts": 3,
+      "Michigan": 27,
+      "Minnesota": 19,
+      "Mississippi": 28,
+      "Missouri": 13,
+      "Nebraska": 10,
+      "Nevada": 181,
+      "New Jersey": 9,
+      "New Mexico": 23,
+      "New York": 20,
+      "North Carolina": 3,
+      "North Dakota": 5,
+      "Ohio": 11,
+      "Oklahoma": 110,
+      "Oregon": 10,
+      "Pennsylvania": 18,
+      "Rhode Island": 2,
+      "South Dakota": 26,
+      "Texas": 4,
+      "Virginia": 5,
+      "Washington": 30,
+      "West Virginia": 5,
+      "Wisconsin": 23,
+      "Wyoming": 3
+    },
+    "baseline": {
+      "canonical": 731,
+      "Nevada": 109,
+      "Oklahoma": 56,
+      "Colorado": 31,
+      "Texas": 4,
+      "fourState": 200
+    },
+    "current": {
+      "canonical": 857,
+      "Nevada": 181,
+      "Oklahoma": 110,
+      "Colorado": 31,
+      "Texas": 4,
+      "fourState": 326,
+      "serializedRows": 873,
+      "passes": 58
+    },
+    "addedDestinations": [
+      {
+        "id": "casino-catalog-nv-eldorado-reno",
+        "name": "Eldorado Resort Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-silver-legacy-reno",
+        "name": "Silver Legacy Resort & Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-circus-circus-reno",
+        "name": "Circus Circus Reno",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-casino-fandango",
+        "name": "Casino Fandango",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-golden-mesa",
+        "name": "Golden Mesa Casino & Hotel",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-native-lights",
+        "name": "Native Lights Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-tonkawa",
+        "name": "Tonkawa Hotel & Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-harrahs-chandler",
+        "name": "Harrah's Oklahoma",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-quapaw-miami",
+        "name": "Quapaw Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-downstream",
+        "name": "Downstream Casino Resort",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-comanche-nation",
+        "name": "Comanche Nation Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-comanche-red-river",
+        "name": "Comanche Red River Hotel Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-comanche-star",
+        "name": "Comanche Star Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-comanche-cache",
+        "name": "Comanche Cache Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-comanche-spur",
+        "name": "Comanche Spur Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-lucky-star-concho",
+        "name": "Lucky Star Casino Concho",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-lucky-star-clinton",
+        "name": "Lucky Star Casino Clinton",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-seven-clans-first-council",
+        "name": "7 Clans First Council Casino Hotel",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-j-resort-reno",
+        "name": "J Resort",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-legends-bay-sparks",
+        "name": "Legends Bay Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-lucky-star-watonga",
+        "name": "Lucky Star Casino Hotel & Convention Center Watonga",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-lucky-star-canton",
+        "name": "Lucky Star Casino Canton",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-lucky-star-hammon",
+        "name": "Lucky Star Casino Hammon",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-seven-clans-paradise",
+        "name": "7 Clans Paradise Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-51-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-gold-dust-west-reno",
+        "name": "Gold Dust West Reno",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-gold-dust-west-carson",
+        "name": "Gold Dust West Carson City",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-gold-dust-west-elko",
+        "name": "Gold Dust West Elko",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-bodines-carson",
+        "name": "Bodines Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-caesars-republic-tahoe",
+        "name": "Caesars Republic Lake Tahoe",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-harrahs-tahoe",
+        "name": "Harrah's Lake Tahoe",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-ballys-tahoe",
+        "name": "Bally's Lake Tahoe Casino Resort",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-golden-nugget-tahoe",
+        "name": "Golden Nugget Lake Tahoe Hotel & Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-maverick-elko",
+        "name": "Maverick Hotel & Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-carson-valley-inn",
+        "name": "Carson Valley Inn Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-sharkeys-gardnerville",
+        "name": "Sharkey's Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-baldinis-sparks",
+        "name": "Baldini's Sports Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-rail-city-sparks",
+        "name": "Rail City Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-peppermill-wendover",
+        "name": "Peppermill Hotel Casino Wendover",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-rainbow-wendover",
+        "name": "Rainbow Hotel Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-cactus-petes-jackpot",
+        "name": "Cactus Petes Resort Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-bartons-jackpot",
+        "name": "Barton's Club 93",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-gold-country-elko",
+        "name": "Gold Country Inn & Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-stockmens-elko",
+        "name": "Stockmen's Casino and Ramada Hotel",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-thunderbird-norman",
+        "name": "Thunderbird Casino Norman",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-thunderbird-shawnee",
+        "name": "Thunderbird Casino Shawnee",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-kickapoo-harrah",
+        "name": "Kickapoo Casino Harrah",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-kickapoo-shawnee",
+        "name": "Kickapoo Casino Shawnee",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-apache-lawton",
+        "name": "Apache Casino Hotel",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-kiowa-devol",
+        "name": "Kiowa Casino & Hotel",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-kiowa-carnegie",
+        "name": "Kiowa Casino Carnegie",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-kiowa-elk-creek",
+        "name": "Elk Creek Kiowa Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-sac-fox-stroud",
+        "name": "Sac and Fox Nation Casino Stroud",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-black-hawk-shawnee",
+        "name": "The Black Hawk Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-seminole-i40",
+        "name": "Seminole Nation Casino I-40",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-seminole-wewoka",
+        "name": "Seminole Nation Casino Wewoka",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-club-cal-neva",
+        "name": "Club Cal Neva",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-53-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-montego-bay-wendover",
+        "name": "Montego Bay Hotel Casino Resort",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-53-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-remington-park",
+        "name": "Remington Park Racing & Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-53-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-boomtown",
+        "name": "Boomtown Casino Resort",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-gold-ranch",
+        "name": "Gold Ranch Casino & RV Resort",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-carson-nugget",
+        "name": "Carson Nugget",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-max-carson",
+        "name": "Max Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-crystal-bay",
+        "name": "Crystal Bay Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-grand-lodge",
+        "name": "Grand Lodge Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-topaz-lodge",
+        "name": "Topaz Lodge Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-red-garter",
+        "name": "Red Garter Hotel & Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-wendover-nugget",
+        "name": "Wendover Nugget Hotel & Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-avi",
+        "name": "Avi Resort & Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-grand-lake",
+        "name": "Grand Lake Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-high-winds",
+        "name": "High Winds Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-stables",
+        "name": "The Stables Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-river-bend",
+        "name": "River Bend Casino & Hotel",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-rock-brews-braman",
+        "name": "Rock & Brews Casino Braman",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-cimarron",
+        "name": "Cimarron Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-sugar-creek",
+        "name": "Sugar Creek Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-gold-river",
+        "name": "Gold River Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-stonewolf",
+        "name": "StoneWolf Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-54-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-cactus-jacks",
+        "name": "Cactus Jack's Senator Club",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-cod-minden",
+        "name": "COD Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-jackpot-crossing-carson",
+        "name": "Jackpot Crossing Casino Carson City",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-lucky-strike-carson",
+        "name": "Lucky Strike Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-comstock-carson",
+        "name": "Comstock Casino Carson City",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-tahoe-nugget",
+        "name": "Tahoe Nugget Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-comstock-fallon",
+        "name": "Comstock Casino Fallon",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-fallon-nugget",
+        "name": "Fallon Nugget",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-fernley-nugget",
+        "name": "Fernley Nugget",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-jackpot-crossing-fernley",
+        "name": "Jackpot Crossing Casino Fernley",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-silver-springs-nugget",
+        "name": "Silver Springs Nugget Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-55-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-seven-clans-perry",
+        "name": "7 Clans Perry Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-seven-clans-chilocco",
+        "name": "7 Clans Chilocco Gasino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-seven-clans-red-rock",
+        "name": "7 Clans Red Rock Gasino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-prairie-moon",
+        "name": "Prairie Moon Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-outpost",
+        "name": "Outpost Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-apache-lonestar",
+        "name": "Apache Lonestar Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-warm-springs",
+        "name": "Warm Springs Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-golden-eagle-apache",
+        "name": "Golden Eagle Casino",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-ada-gaming",
+        "name": "Ada Gaming Center",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-goldsby-gaming",
+        "name": "Goldsby Gaming Center",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-madill-gaming",
+        "name": "Madill Gaming Center",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-casino-oklahoma",
+        "name": "Casino Oklahoma",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-56-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-big-wheel-battle-mountain",
+        "name": "Big Wheel Casino Battle Mountain",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-owl-club",
+        "name": "Owl Club Casino & Restaurant",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-alamo-wells",
+        "name": "Alamo Casino Wells Petro",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-copper-queen-ely",
+        "name": "Copper Queen Hotel & Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-jailhouse-ely",
+        "name": "Jailhouse Motel & Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-dinis-yerington",
+        "name": "Dini's Lucky Club Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-stagecoach-beatty",
+        "name": "Stagecoach Hotel & Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-el-capitan-hawthorne",
+        "name": "El Capitan Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-four-jacks-jackpot",
+        "name": "Four Jacks Hotel & Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-diamonds-reno",
+        "name": "Diamond's Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-petes-winnemucca",
+        "name": "Pete's Gambling Hall",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-alamo-mill-city",
+        "name": "Alamo Casino Mill City TA",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-57-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-luckys-usa-parkway",
+        "name": "USA Parkway Lucky's Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-pilot-fernley",
+        "name": "Pilot Casino Fernley",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-luckys-fernley",
+        "name": "Fernley Lucky's Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-pilot-winnemucca",
+        "name": "Pilot Casino Winnemucca",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-roadhouse-winnemucca",
+        "name": "Winnemucca Roadhouse Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-pilot-carlin",
+        "name": "Pilot Casino Carlin",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-roadhouse-elko",
+        "name": "Elko Roadhouse Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-luckys-wells",
+        "name": "Wells Lucky's Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-luckys-ely",
+        "name": "Ely Lucky's Casino",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-pilot-wendover",
+        "name": "Pilot Casino Wendover",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-alamo-north-las-vegas",
+        "name": "Alamo Casino North Las Vegas Petro",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-nv-alamo-las-vegas-ta",
+        "name": "Alamo Casino Las Vegas TA",
+        "state": "Nevada",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-davis-west-gaming",
+        "name": "Davis Gaming - Chickasaw Travel Stop",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      },
+      {
+        "id": "casino-catalog-ok-ada-west-gaming",
+        "name": "Chickasaw Travel Stop Ada West",
+        "state": "Oklahoma",
+        "evidence": "audit/casino-rc-pass-58-evidence-2026-09-13.json"
+      }
+    ],
+    "removedExistingDestinations": [],
+    "mergedExistingDestinations": [],
+    "renamedExistingDestinations": [],
+    "correctedExistingDestinations": [
+      {
+        "id": "casino-catalog-wi-oneida-airport",
+        "name": "Oneida Casino - Airport Drive",
+        "previous": {
+          "address": "2020 Airport Dr, Green Bay, WI 54313",
+          "file": "src/lib/nightlife/casino-catalog-pass-23.ts",
+          "lat": 44.4984,
+          "lon": -88.1212
+        },
+        "current": {
+          "lat": 44.497535,
+          "lon": -88.122424,
+          "address": "2040 Airport Dr, Green Bay, WI 54313"
+        },
+        "identitySource": "https://oneidacasinohotel.com/locations/",
+        "coordinateSource": "https://www.mapquest.com/us/wisconsin/oneida-casino-6997161"
+      },
+      {
+        "id": "casino-catalog-wi-oneida-imac",
+        "name": "Oneida Casino - Irene Moore Activity Center",
+        "previous": {
+          "address": "2100 Airport Dr, Green Bay, WI 54313",
+          "file": "src/lib/nightlife/casino-catalog-pass-23.ts",
+          "lat": 44.4983,
+          "lon": -88.1211
+        },
+        "current": {
+          "lat": 44.497146,
+          "lon": -88.126045,
+          "address": "2100 Airport Dr, Green Bay, WI 54313"
+        },
+        "identitySource": "https://oneidacasinohotel.com/locations/",
+        "coordinateSource": "https://www.mapquest.com/us/wisconsin/irene-moore-activity-center-352637958"
+      },
+      {
+        "id": "casino-catalog-soaring-eagle-slot-palace",
+        "name": "Soaring Eagle Slot Palace",
+        "previous": {
+          "address": "6800 Soaring Eagle Blvd, Mount Pleasant, MI 48858",
+          "file": "src/lib/nightlife/casino-catalog-pass-3.ts",
+          "lat": 43.60596,
+          "lon": -84.70535
+        },
+        "current": {
+          "lat": 43.6061056,
+          "lon": -84.7052673,
+          "address": "7566 Ogemaw Dr #7076, Mount Pleasant, MI 48858"
+        },
+        "identitySource": "https://soaringeaglecasino.com/slot-palace",
+        "coordinateSource": "https://www.google.com/maps/search/?api=1&query=7566+Ogemaw+Dr+Mt+Pleasant"
+      }
+    ],
+    "nevada": {
+      "status": "pending",
+      "expectedCount": null,
+      "completedClusters": [
+        "Reno ROW/J Resort/Legends Bay and other current northern operators",
+        "Carson Valley and Tahoe major hotel/casino properties",
+        "West Wendover five principal resort casinos",
+        "Elko/Jackpot current resort casinos",
+        "Avi tribal property coordinate hold",
+        "11 individually verified Nugget Group casino destinations (Pass 55)",
+        "Nine rural casino destinations plus Diamond’s, Pete’s and Alamo Mill City (Pass 57)",
+        "All five Alamo and ten current Pilot/Roadhouse/Lucky’s operator casino locations represented (Pass 58)"
+      ],
+      "currentFrontier": [
+        {
+          "cluster": "Named queues investigated; remaining point/scope holds",
+          "candidates": [
+            "Wigwam — Fernley",
+            "Broadway Colt — Battle Mountain",
+            "Border Inn — Baker",
+            "C Punch / Lovelock Junction — Lovelock"
+          ],
+          "decision": "Casino/status identities and conflicting map evidence preserved in Pass 55/57 and status watchlist. No weak routing pin or uncertain operating floor promoted."
+        },
+        {
+          "cluster": "Further statewide reconciliation",
+          "candidates": [
+            "Big Wheel — Lovelock (separate from the added Battle Mountain property)",
+            "Remaining NGCB nonrestricted roster and small independent properties beyond the completed operator rosters"
+          ],
+          "decision": "Optional continuing coverage work; Nevada is not relabeled complete. A current map hit alone is not a promoted record."
+        }
+      ],
+      "blockedCandidates": [
+        {
+          "name": "Horseshu — Jackpot",
+          "reason": "Current operator calls it a hotel; historical tourism calls it a casino. Need current separate operating gaming-floor evidence."
+        },
+        {
+          "name": "Moapa Paiute Travel Plaza",
+          "reason": "Current tribal page confirms travel plaza but does not confirm gaming. Historical casino directories alone do not establish current scope.",
+          "sources": [
+            "https://www.moapabandofpaiutes.com/travel-plaza",
+            "https://www.500nations.com/casinos/nvMoapa.asp"
+          ]
+        }
+      ],
+      "reconstruction": "The old 174 decision universe includes exclusions/aliases and depends on 45 unsubstantiated rows in a truncated ledger. It is not a destination target. Damaged bytes are preserved in the repaired ledger; no missing rows were invented.",
+      "exclusionsPreserved": [
+        "Generic restricted/retail slot routes and online gambling businesses",
+        "Gold Dust West Winnemucca has no established operator property",
+        "Eureka town name must not be confused with Eureka Casino Mesquite",
+        "Dotty's #214 is co-located with Red Dragon, not an extra destination",
+        "Moulin Rouge license-preserving sessions are not regular destination operation"
+      ]
+    },
+    "oklahoma": {
+      "status": "pending",
+      "expectedCount": null,
+      "completedClusters": [
+        "Current Comanche destinations; War Pony closed exclusion",
+        "Quapaw new property and Downstream",
+        "Tonkawa/Native Lights",
+        "Lucky Star portfolio",
+        "Kickapoo/Thunderbird/Apache/Kiowa",
+        "Sac & Fox and two of three Seminole Nation locations",
+        "Grand Lake/High Winds/Stables/River Bend northeast properties",
+        "Cimarron, Sugar Creek, Gold River, StoneWolf and Remington Park",
+        "Rock & Brews Braman; SouthWind Newkirk closed exclusion",
+        "All five 7 Clans/Otoe-Missouria properties including Perry, Chilocco and Red Rock",
+        "Prairie Moon and Outpost; Prairie Sun closed exclusion",
+        "Casino Oklahoma point/address conflict resolved; Apache Lonestar, Warm Springs and Golden Eagle Apache",
+        "Ada, Goldsby, Madill, Davis West and Ada West gaming; all eight CTS gaming roster entries individually reconciled"
+      ],
+      "blockedCandidates": [
+        {
+          "name": "Seminole Nation Casino Konawa / Rivermist",
+          "address": "14313 Old Highway 99, Konawa, OK 74849",
+          "reason": "Current operator identity supported. Fresh named Google Rivermist point at 34.939424,-96.683884 conflicts by miles with operator area/14313 Old Highway 99 address. Operator viewport is not a destination and its CID resolves incorrectly. Hold retained.",
+          "source": "https://www.seminolenationcasinos.com/casinos/konawa/",
+          "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+        }
+      ],
+      "remainingScope": [
+        {
+          "name": "CTS Thackerville separate gaming room",
+          "sources": [
+            "https://chickasawtravelstop.com/locations/thackerville/",
+            "https://chickasawtravelstop.com/gaming/",
+            "https://www.casinocity.com/oklahoma/thackerville/chickasaw-travel-stop-thackerville"
+          ],
+          "decision": "Operator roster includes dedicated rooms OR neighboring casinos. Current review identifies casino next door; older directory describes a 34-machine room. Existing Border Casino is independently confirmed at 22953 Brown Springs. Need current separate-floor evidence at CTS 22983 before adding another destination."
+        }
+      ],
+      "closedOrRetired": [
+        "Comanche War Pony",
+        "Ioway",
+        "Kiowa Verden",
+        "Old Creek Nation Casino Eufaula",
+        "Golden Pony closure hold",
+        "SouthWind Newkirk",
+        "Prairie Sun — operator announced closure effective May 14, 2023",
+        "Historical SouthWind Kaw City — casino guide reports ceased operations; no current operator property established"
+      ],
+      "authorityBoundary": "NIGC's public marker REST endpoint returned 401. Authentication was not bypassed; current public operator, tribal, tourism and map sources were used instead."
+    },
+    "nationwideAudit": "Actual exported catalog/schema, unique-ID, chronological reconciliation, manifest accounting and close/same-name/address pairs were audited nationwide. Three WI/MI point/address corrections were made. The 39 complete manifest jurisdictions retain their existing scope status; this is not a fresh independent survey of every casino in those states.",
+    "releaseImplication": "The implemented 857-destination catalog is locally and CI validated and merged only into non-production integration. NV/OK statewide completeness remains explicitly pending. Unresolved properties stay outside the curated pool. Controlled main/hosted release and its remaining device/account/Maps acceptance require separate authorization.",
+    "continuationBaseline": {
+      "canonical": 808,
+      "Nevada": 146,
+      "Oklahoma": 96,
+      "fourState": 277,
+      "sha": "2fd976a4f34f8bbe28db1075a264693d691b8253"
+    }
+  },
+  "manifestReconciliation": {
+    "schemaVersion": 1,
+    "capturedOn": "2026-09-13",
+    "status": "validated-and-promoted-integration-only",
+    "discoveredBy": {
+      "exactHead": "a76ffbe7975f667dd808886462571ec0ba79934b",
+      "runId": 34732944855,
+      "manifestJurisdictions": 39,
+      "runtimeJurisdictions": 41,
+      "missingManifestStates": [
+        "Colorado",
+        "Oklahoma"
+      ]
+    },
+    "reconciliation": {
+      "Colorado": {
+        "status": "complete",
+        "expectedCount": 31,
+        "evidence": "audit/colorado-statewide-runtime-reconciliation-2026-09-11.json"
+      },
+      "Oklahoma": {
+        "status": "pending",
+        "expectedCount": null,
+        "verifiedRuntimeCount": 56,
+        "scopeEvidence": "audit/oklahoma-statewide-scope-2026-09-11.json",
+        "reason": "Remaining operator/scope work is incomplete; do not invent a statewide destination total."
+      }
+    },
+    "newGate": "Every active exported jurisdiction must have an explicit manifest record. Complete/inventory counts remain required positive integers; complete counts must match canonical runtime exactly. Pending totals may be unknown, but any supplied count must still be a positive integer.",
+    "expectedAccounting": {
+      "completeJurisdictions": 39,
+      "pendingJurisdictions": 2,
+      "manifestJurisdictions": 41,
+      "canonicalNationalDestinations": 731,
+      "fourStateTotal": 200
+    },
+    "remainingWork": [
+      "Nevada pending scope and closure-status maintenance.",
+      "Oklahoma remaining tribal/operator clusters beyond the four coordinate holds cleared in Pass 50.",
+      "Interactive browser/runtime smoke checks have not run in the failed local execution environment; no hosted deployment is authorized."
+    ],
+    "validation": {
+      "pr": 36,
+      "exactHead": "e04a76475885093e54cb1e8a241bbf487cfb591a",
+      "runId": 34733191269,
+      "runNumber": 292,
+      "integrationMerge": "ea82bb1f2fe67cc9493eea190c7e82dc298c5276"
+    }
+  }
+}

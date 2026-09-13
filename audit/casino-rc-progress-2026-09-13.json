@@ -1,150 +1,149 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "capturedOn": "2026-09-13",
   "repository": "caleb1234calvin-art/dinner-roulette",
-  "status": "VALIDATED_NONPRODUCTION_INTEGRATION",
-  "branch": "integration/active-work-pass-1",
-  "base": "2fd976a4f34f8bbe28db1075a264693d691b8253",
+  "status": "FROZEN_LOCALLY_VALIDATED_CI_PENDING",
+  "branch": "integration/casino-final-freeze-2026-09-13",
+  "candidateBranch": "integration/casino-final-freeze-2026-09-13",
+  "base": "f2fd0f7f4737278126d72b0cc043c79db7652236",
   "integrationTarget": "integration/active-work-pass-1",
   "mainBaseline": "c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5",
   "separateWorkPreserved": {
     "branch": "integration/location-international-2026-09-13",
     "head": "4a93870c05ec53bd49fae5143df420c301696839",
+    "pr": 39,
     "mergedHere": false
   },
   "previousCheckpoint": {
-    "canonical": 808,
-    "validatedHead": "a6d38616fe4490ff46b87232cbc7abb82f176926",
-    "run": 34741156629,
-    "runNumber": 310,
-    "uniquePassed": 314,
-    "pauseHead": "2fd976a4f34f8bbe28db1075a264693d691b8253",
-    "integration": {
-      "branch": "integration/active-work-pass-1",
-      "mergeCommit": "6c1d5829f7f3e76946e20211b60525f9836b1227",
-      "pr": 38,
-      "merged": true,
-      "preMergeHead": "877ff08c300a9d149aa174e9c47471d57bc98ccd",
-      "expectedCandidateHead": "61cb2fe047a80fc4a67931ea3b24040e75dcd367",
-      "tree": "5408249f8b7a89c256ac3b9213c19c616e6db103",
-      "treeEqualsValidatedCandidate": true,
-      "validationRun": 34741023078,
-      "validationRunNumber": 309
-    },
-    "documentationCheckpoint": {
-      "scope": "Documentation only after successful integration Run 309; runtime/code/data remain unchanged.",
-      "validatedCandidateHead": "61cb2fe047a80fc4a67931ea3b24040e75dcd367",
-      "validatedCandidateRun": 34740777237,
-      "validatedIntegrationMerge": "6c1d5829f7f3e76946e20211b60525f9836b1227",
-      "validatedIntegrationRun": 34741023078,
-      "currentRefValidation": "Inspect the latest integration/active-work-pass-1 Actions run; the checkpoint cannot embed its own future commit SHA."
-    },
+    "canonical": 857,
+    "serialized": 873,
+    "passes": 58,
+    "sharedHead": "f2fd0f7f4737278126d72b0cc043c79db7652236",
+    "historicalProgressAndAttempts": "audit/casino-final-freeze-baseline-2026-09-13.json",
+    "continuityArchive": "audit/ai-continuity-before-casino-freeze-2026-09-13.md"
+  },
+  "catalog": {
+    "canonical": 883,
+    "serialized": 899,
+    "passes": 60,
+    "Nevada": 204,
+    "Oklahoma": 113,
+    "Colorado": 31,
+    "Texas": 4,
+    "focusTotal": 352,
+    "addedFrom731": 152,
+    "addedThisCompletion": 26,
+    "originalHoldsReviewed": 8,
+    "originalHoldsResolved": 2,
+    "originalHoldsRemaining": 6,
+    "newUnresolvedHolds": 1,
+    "totalUnresolvedCandidateHolds": 7,
+    "exclusions": 2,
+    "closedResolutions": 1,
+    "preopeningDeferred": 1
+  },
+  "changes": {
+    "addedIds": [
+      "casino-catalog-nv-pioneer-crossing-dayton",
+      "casino-catalog-nv-pioneer-crossing-fernley",
+      "casino-catalog-nv-pioneer-crossing-yerington",
+      "casino-catalog-nv-carson-plains-dayton",
+      "casino-catalog-nv-gold-ranch-dayton",
+      "casino-catalog-nv-silverado-fernley",
+      "casino-catalog-nv-silver-strike-silver-springs",
+      "casino-catalog-nv-pahrump-nugget",
+      "casino-catalog-nv-lakeside-pahrump",
+      "casino-catalog-nv-saddle-west-pahrump",
+      "casino-catalog-nv-terribles-pahrump",
+      "casino-catalog-nv-jackpot-joanies-pahrump",
+      "casino-catalog-nv-terribles-roadhouse-searchlight",
+      "casino-catalog-nv-terribles-casino-searchlight",
+      "casino-catalog-nv-wildfire-lanes",
+      "casino-catalog-nv-wildfire-sunset",
+      "casino-catalog-nv-wildfire-lake-mead",
+      "casino-catalog-nv-wildfire-anthem",
+      "casino-catalog-nv-wildfire-valley-view",
+      "casino-catalog-nv-greens-henderson",
+      "casino-catalog-nv-nevada-nugget-dayton",
+      "casino-catalog-nv-big-wheel-lovelock",
+      "casino-catalog-nv-colt-battle-mountain",
+      "casino-catalog-ok-konawa-rivermist",
+      "casino-catalog-ok-pawnee-trading-post",
+      "casino-catalog-ok-teepee-yale"
+    ],
+    "removed": [],
+    "mergedExisting": [],
+    "renamedExisting": [],
+    "repinnedExisting": [],
+    "historicalSupersededRowsRetained": 16,
+    "newClosure": "Gold Town Casino; closed May 24, 2026",
+    "newRuntimeClosureGroups": 18,
+    "configurationChanges": [],
+    "dependencyChanges": [],
+    "liveProviderCorrections": [
+      "Kaw Southwind Casino added to the existing geographically bounded Newkirk closure aliases.",
+      "Pawnee Trading Post and Casino reconciled to its canonical Pawnee property.",
+      "Terrible's Roadhouse Casino reconciled to its canonical Pahrump property."
+    ],
     "filesChanged": [
-      ".github/workflows/validate-icon-pack.yml",
       "AI_CONTINUITY.md",
-      "audit/ai-continuity-before-casino-rc-2026-09-13.md",
-      "audit/casino-browser-release-checklist-2026-09-13.md",
-      "audit/casino-rc-adversarial-review-2026-09-13.json",
+      "audit/ai-continuity-before-casino-freeze-2026-09-13.md",
+      "audit/casino-final-freeze-2026-09-13.json",
+      "audit/casino-final-freeze-baseline-2026-09-13.json",
+      "audit/casino-final-freeze-research-2026-09-13.json",
+      "audit/casino-freeze-adversarial-2026-09-13.json",
+      "audit/casino-freeze-browser-evidence-2026-09-13.json",
+      "audit/casino-freeze-live-provider-findings-2026-09-13.json",
       "audit/casino-rc-coverage-2026-09-13.json",
-      "audit/casino-rc-pass-51-evidence-2026-09-13.json",
-      "audit/casino-rc-pass-52-evidence-2026-09-13.json",
-      "audit/casino-rc-pass-53-evidence-2026-09-13.json",
-      "audit/casino-rc-pass-54-evidence-2026-09-13.json",
+      "audit/casino-rc-pass-59-evidence-2026-09-13.json",
+      "audit/casino-rc-pass-60-evidence-2026-09-13.json",
       "audit/casino-rc-progress-2026-09-13.json",
-      "audit/casino-recent-provenance-index-2026-09-13.json",
       "audit/casino-release-readiness-2026-09-13.md",
       "audit/casino-sources-integration.json",
       "audit/casino-status-watchlist-2026-09-13.json",
-      "audit/nevada-northern-markets-ledger-2026-09-11.json",
-      "package-lock.json",
-      "scripts/audit-casino-catalog.mjs",
-      "scripts/casino-audit-artifacts.test.mjs",
-      "scripts/casino-audit.mjs",
-      "scripts/casino-browser-smoke.mjs",
-      "scripts/casino-catalog-loader.mjs",
-      "scripts/casino-catalog-loader.test.mjs",
-      "scripts/casino-discovery.test.mjs",
-      "scripts/casino-rc-conflicts.test.mjs",
-      "scripts/casino-rc-evidence.test.mjs",
-      "scripts/casino-rc-final.test.mjs",
-      "scripts/casino-rc-frontier.test.mjs",
-      "scripts/casino-recent-provenance.test.mjs",
-      "scripts/casino-schema.mjs",
-      "scripts/casino-schema.test.mjs",
-      "scripts/casino-selection.test.mjs",
-      "scripts/casino-smoke-network.mjs",
-      "scripts/ts-test-loader.mjs",
-      "src/components/nightlife-home.tsx",
-      "src/lib/nightlife/casino-catalog-pass-51.ts",
-      "src/lib/nightlife/casino-catalog-pass-52.ts",
-      "src/lib/nightlife/casino-catalog-pass-53.ts",
-      "src/lib/nightlife/casino-catalog-pass-54.ts",
+      "audit/national-manifest-coverage-reconciliation-2026-09-13.json",
+      "scripts/casino-browser-live-check.mjs",
+      "scripts/casino-continuation.test.mjs",
+      "scripts/casino-freeze.test.mjs",
+      "scripts/casino-live-network-log.mjs",
+      "src/lib/nightlife/casino-catalog-pass-59.ts",
+      "src/lib/nightlife/casino-catalog-pass-60.ts",
       "src/lib/nightlife/discovery-policy.ts",
-      "src/lib/nightlife/search.ts",
-      "src/lib/nightlife/selection.ts",
-      "src/lib/nightlife/types.ts"
+      "src/lib/nightlife/search.ts"
     ]
   },
-  "catalog": {
-    "Colorado": 31,
-    "Nevada": 181,
-    "Oklahoma": 110,
-    "Texas": 4,
-    "added": 126,
-    "addressCorrections": 2,
-    "canonical": 857,
-    "coordinateCorrections": 3,
-    "existingMerged": 0,
-    "existingRemoved": 0,
-    "existingRenamed": 0,
-    "fourState": 326,
-    "manifestComplete": 39,
-    "manifestJurisdictions": 41,
-    "manifestPending": [
-      "Nevada",
-      "Oklahoma"
-    ],
-    "passes": 58,
-    "serialized": 873,
-    "continuationAdded": 49,
-    "continuationExistingRemoved": 0,
-    "continuationExistingMerged": 0,
-    "continuationExistingRenamed": 0,
-    "continuationExistingCoordinateCorrections": 0,
-    "continuationExistingAddressCorrections": 0
-  },
   "completed": [
-    "49 evidence-backed destinations added in passes 55–58; identity/status/address/property-point evidence and rejected conflicts preserved.",
-    "Nugget Group, Alamo, Pilot/Roadhouse/Luckys, 7 Clans and relevant Chickasaw rosters reconciled; existing casino components not duplicated.",
-    "Prairie Sun operator-confirmed 2023 closure bounded in runtime policy; 17 runtime closure groups and 25 prepared watchlist entries.",
-    "All registered exports/schema/IDs/state/chronological/manifest audits passed; 81 very close pairs and all 16 new-involved pairs within 0.35 miles reviewed with no canonical alias collision.",
-    "Eight new meaningful tests; 322 unique tests passed with zero failures and four understood external documentation skips.",
-    "Clean dependency install/tree, typecheck, changed-code lint, 30 icons, development and production-mode builds passed; no migrations.",
-    "Auth-enabled production build/browser checks passed; owned dev/build auth checks passed both false and true; CI production steps explicitly enable sign-in.",
-    "Fixed visible geolocation error/manual recovery found by the initial real-browser check; guarded harnesses fail closed on stale build or occupied port.",
-    "Final updated-build desktop/mobile deterministic smoke and localhost real-provider checks passed. Hosted/physical/authenticated-account/external-Maps acceptance is not claimed.",
-    "Primary/adversarial audit, coverage, watchlist, release readiness, exact browser checklist and AI continuity updated; prior pause preserved.",
-    "Main, production, Vercel, database and separate location/international work remain untouched.",
-    "PR #40 expected-head merged only into non-production integration; candidate Run 317 and identical merge tree Run 318 passed all required gates. Main and separate location/international branch were re-read unchanged."
+    "Finite original eight-hold review and targeted NV/OK operator/independent coverage pass.",
+    "26 additions: 23 Nevada and 3 Oklahoma, with property-point/source evidence.",
+    "Konawa/Rivermist and Broadway Colt original holds resolved; all other original holds retain precise triggers.",
+    "CTS provisional draft promotion reversed by adversarial review; rejected record preserved.",
+    "Gold Town closure guard added; real-provider alias/closure findings corrected.",
+    "Final primary and targeted adversarial audits, local tests/typecheck/lint/catalog audits, both safe builds and browser checks completed.",
+    "Casino freeze and shared handoff prepared; separate location candidate preserved."
   ],
   "blocked": [
-    "Held outside curated pool: Konawa/Rivermist point; Horseshu separate floor; Moapa gaming scope; Wigwam point/floor; Broadway Colt point; Border Inn casino-side boundary point; C Punch/Lovelock Junction floor status; CTS Thackerville separate-room scope.",
-    "Hosted deployment/acceptance is not authorized here. Physical-device GPS/Maps and authenticated-account acceptance are unavailable/not run."
+    "Horseshu — Jackpot: Current operator statement or dated floor-specific evidence confirming public gaming at Horseshu itself, plus a named building point; historical hotel/casino labels do not qualify.",
+    "Moapa Paiute Travel Plaza: Dated tribal/operator confirmation that a public dedicated casino floor is operating, resolving the closed casino listing; then verify the floor's property point.",
+    "Wigwam Restaurant & Casino — Fernley: Operator-confirmed casino building/entrance geometry tying 255/265 W Main and the KML point to the operating floor.",
+    "Border Inn Casino — Baker: Casino-building or entrance coordinates with reliable boundary/parcel geometry proving the Nevada gaming side, independently of hotel/RV points.",
+    "C Punch / Lovelock Junction — Lovelock: Current operator or floor-specific evidence of active public casino gaming at 1420/1440 Cornell, with renamed identity and property point reconciled.",
+    "Chickasaw Travel Stop Thackerville: Dated operator confirmation or verifiable current on-site evidence of a separate internal CTS gaming room after the Border Casino expansion, with identity and address distinct from Border Casino.",
+    "Off the Rails Casino — Lovelock: Current operator identity and a named casino/building point at 150 Main, or a documented successor/closure; reject generic Lovelock coordinates.",
+    "Hosted, physical-device, authenticated-account and external Maps-app acceptance unclaimed."
   ],
   "deferred": [
-    "NV/OK remain pending statewide completeness; current named clusters are resolved or held explicitly. Further regulatory-roster reconciliation and Big Wheel Lovelock verification are future scope.",
-    "Full repository-history secret scanning, fresh geocoding of every nationwide property and unrelated dependency upgrades are outside this focused continuation."
+    "Separate location/international reconciliation belongs to the next task.",
+    "North Fork Mono is preopening; activate only after actual opening and property verification."
   ],
-  "configurationChanges": [
-    "Existing CI production build and browser smoke steps explicitly set VITE_AUTH_ENABLED=true; tracked development default unchanged.",
-    "Generated audit/browser-results directory is Git-ignored; durable final verdicts and boundaries are committed separately.",
-    "NV/OK manifest counts/notes updated to 181/110 while preserving pending status and null expectedCount."
+  "optionalFuture": [
+    "Further NV/OK regulatory-roster work may expand scope; no statewide completeness claim.",
+    "Watchlist holds and closure/reopening checks are prepared inputs, not recurring automation."
   ],
+  "configurationChanges": [],
   "dependencyChanges": {
     "packageManifestChanged": false,
     "lockfileChanged": false,
-    "upgrades": "none in this continuation",
-    "priorLockRepair": "eslint-plugin-react-hooks 6.1.1 and required lock entries satisfy the existing ^6.0.0 manifest range. npm ci passes."
+    "upgrades": []
   },
   "documentationSkips": [
     {
@@ -185,270 +184,157 @@
     }
   ],
   "filesChanged": [
-    ".github/workflows/validate-icon-pack.yml",
-    ".gitignore",
     "AI_CONTINUITY.md",
-    "audit/ai-continuity-before-casino-continuation-2026-09-13.md",
-    "audit/casino-browser-release-checklist-2026-09-13.md",
-    "audit/casino-continuation-browser-evidence-2026-09-13.json",
-    "audit/casino-rc-adversarial-review-2026-09-13.json",
+    "audit/ai-continuity-before-casino-freeze-2026-09-13.md",
+    "audit/casino-final-freeze-2026-09-13.json",
+    "audit/casino-final-freeze-baseline-2026-09-13.json",
+    "audit/casino-final-freeze-research-2026-09-13.json",
+    "audit/casino-freeze-adversarial-2026-09-13.json",
+    "audit/casino-freeze-browser-evidence-2026-09-13.json",
+    "audit/casino-freeze-live-provider-findings-2026-09-13.json",
     "audit/casino-rc-coverage-2026-09-13.json",
-    "audit/casino-rc-pass-55-evidence-2026-09-13.json",
-    "audit/casino-rc-pass-56-evidence-2026-09-13.json",
-    "audit/casino-rc-pass-57-evidence-2026-09-13.json",
-    "audit/casino-rc-pass-58-evidence-2026-09-13.json",
+    "audit/casino-rc-pass-59-evidence-2026-09-13.json",
+    "audit/casino-rc-pass-60-evidence-2026-09-13.json",
     "audit/casino-rc-progress-2026-09-13.json",
     "audit/casino-release-readiness-2026-09-13.md",
     "audit/casino-sources-integration.json",
     "audit/casino-status-watchlist-2026-09-13.json",
+    "audit/national-manifest-coverage-reconciliation-2026-09-13.json",
     "scripts/casino-browser-live-check.mjs",
-    "scripts/casino-browser-smoke.mjs",
     "scripts/casino-continuation.test.mjs",
+    "scripts/casino-freeze.test.mjs",
     "scripts/casino-live-network-log.mjs",
-    "src/components/nightlife-home.tsx",
-    "src/lib/nightlife/casino-catalog-pass-55.ts",
-    "src/lib/nightlife/casino-catalog-pass-56.ts",
-    "src/lib/nightlife/casino-catalog-pass-57.ts",
-    "src/lib/nightlife/casino-catalog-pass-58.ts",
+    "src/lib/nightlife/casino-catalog-pass-59.ts",
+    "src/lib/nightlife/casino-catalog-pass-60.ts",
     "src/lib/nightlife/discovery-policy.ts",
     "src/lib/nightlife/search.ts"
   ],
-  "historicalAttempts": [
-    {
-      "head": "868317483be056bb8b52eea2d28705517f289226",
-      "result": "Production command could not locate Vite outside npm PATH; corrected to node node_modules/vite/bin/vite.js. Browser did not run in this failed attempt.",
-      "run": 34734893631
-    },
-    {
-      "result": "Browser harness assumptions failed: address-versus-coordinate Maps assertion, ambiguous hours locator and development Vite optimization reload. Corrected test assumptions and moved to production preview; later browser runs passed.",
-      "runs": [
-        300,
-        301,
-        302
-      ]
-    },
-    {
-      "head": "28c5f9699250700c99b7e184bf13629b361c53c5",
-      "result": "All required gates passed at pre-expansion catalog; superseded by later exact-head validations.",
-      "run": 34736662895,
-      "runNumber": 303,
-      "uniquePassed": 298
-    },
-    {
-      "head": "8651dcb850cbb17183419c35381f8edd80d82102",
-      "result": "Observed queued with no job steps; not counted as a pass or failure. Later complete runs validate the superseding state.",
-      "run": 34737413958,
-      "runNumber": 304
-    },
-    {
-      "head": "02057073c38fc4533ee9d0b6fdd6e6b91d51652d",
-      "result": "All gates passed for passes 51/52.",
-      "run": 34738515765,
-      "runNumber": 305,
-      "uniquePassed": 308
-    },
-    {
-      "head": "328bb374dff956962bfadc67c57e62c05a13c7b1",
-      "result": "All gates passed for pass 53 and Reno/Newkirk browser geographies.",
-      "run": 34739322991,
-      "runNumber": 306,
-      "uniquePassed": 312
-    },
-    {
-      "head": "243082896d6b774dde9bbb44c44f71e02824aaa3",
-      "run": 34739926534,
-      "runNumber": 307,
-      "result": "All runtime/data gates passed for the complete 808-destination candidate.",
-      "uniquePassed": 314
-    },
-    {
-      "head": "61cb2fe047a80fc4a67931ea3b24040e75dcd367",
-      "run": 34740777237,
-      "runNumber": 308,
-      "result": "Final pre-promotion documentation head passed all gates before the expected-head integration merge.",
-      "uniquePassed": 314
-    }
-  ],
-  "continuationAttempts": [
-    {
-      "attempt": "agent-browser install/daemon",
-      "result": "UnknownIssuer install failure and daemon startup failures. TLS checks preserved; existing trusted Chromium used successfully through Playwright."
-    },
-    {
-      "attempt": "initial 808 baseline real-browser run",
-      "result": "Found hidden geolocation-denial recovery; code fixed and final 857 build rerun successfully."
-    },
-    {
-      "attempt": "standalone auth probe",
-      "result": "Indeterminate without required dev endpoint; subsequently passed with owned dev server for both auth values."
-    },
-    {
-      "attempt": "initial targeted lint",
-      "result": "Two browser-harness issues fixed; final targeted lint passed."
-    },
-    {
-      "attempt": "busy-port negative test",
-      "result": "Expected nonzero exit when unrelated server occupied 8080; harness failed closed. Successful final verdict preserved separately."
-    },
-    {
-      "attempt": "CI Run 316",
-      "run": 34768414589,
-      "job": 103753445285,
-      "head": "146d8cbfc6440e76b2b26c83bce3567fd3a487e8",
-      "result": "Tests/typecheck/catalog audits/both builds passed; browser did not run because ANSI color sequences split the owned-server URL. Both harnesses now strip terminal formatting while retaining process/strict-port guards. Actual ANSI local smoke and subsequent exact-head Runs 317/318 passed."
-    },
-    {
-      "attempt": "direct Git push",
-      "result": "CLI credentials unavailable; exact local tree was published through the existing authorized GitHub connector. No credentials read or changed; local history preserved."
-    }
-  ],
   "validation": {
-    "result": "success",
-    "uniquePassed": 322,
-    "failed": 0,
-    "skipped": 4,
-    "repository": {
-      "passed": 271,
+    "status": "passed-local-gates-ci-pending",
+    "tests": {
+      "uniquePassed": 329,
       "failed": 0,
-      "skipped": 4
+      "skipped": 4,
+      "repository": {
+        "passed": 278,
+        "failed": 0,
+        "skipped": 4
+      },
+      "application": {
+        "passed": 51,
+        "failed": 0,
+        "skipped": 0
+      },
+      "casinoSubsetPassed": 80,
+      "casinoSubsetIncludedInRepositoryTotal": true,
+      "newMeaningfulTests": 7,
+      "command": "npm test",
+      "skipDetails": "audit/casino-rc-progress-2026-09-13.json#documentationSkips"
     },
-    "application": {
-      "passed": 51,
-      "failed": 0,
-      "skipped": 0
+    "typecheck": {
+      "command": "npm run typecheck",
+      "status": "passed"
     },
-    "casinoSubsetPassed": 73,
-    "casinoSubsetIncludedInRepositoryTotal": true,
-    "catalog": {
-      "canonical": 857,
-      "serialized": 873,
-      "passes": 58
+    "catalogAudits": {
+      "command": "npm run audit:casinos",
+      "status": "passed",
+      "canonical": 883,
+      "serialized": 899,
+      "passes": 60,
+      "completeJurisdictions": 39,
+      "pendingJurisdictions": 2,
+      "newDuplicateCollisions": 0
     },
-    "gates": [
-      "npm ci",
-      "typecheck",
-      "full repository and application suite",
-      "73 included casino regressions",
-      "actual export/schema and manifest audits",
-      "targeted ESLint of all 11 changed code files",
-      "dependency tree",
-      "production dependency audit: zero known vulnerabilities",
-      "30 Dinner icons",
-      "development build",
-      "production build with auth enabled without migrations",
-      "dev/build auth invariants with auth false and true",
-      "16-group desktop/mobile deterministic browser smoke",
-      "four-geography localhost real-provider browser validation",
-      "strict-port negative check"
-    ],
+    "lint": {
+      "status": "passed",
+      "scope": "All eight changed/new code files; zero errors or warnings."
+    },
+    "builds": {
+      "development": {
+        "command": "npm run build:dev",
+        "status": "passed"
+      },
+      "production": {
+        "command": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production",
+        "status": "passed"
+      },
+      "migrationsRun": false,
+      "deployed": false
+    },
+    "dinnerIcons": {
+      "passed": 30,
+      "missingOrEmpty": 0
+    },
     "browser": {
-      "status": "passed-local-and-exact-head-CI",
-      "evidence": "audit/casino-continuation-browser-evidence-2026-09-13.json",
+      "status": "passed-local-rebuilt-candidate",
       "deterministicCheckGroups": 16,
-      "realNetworkFindings": 0,
-      "realNetworkErrors": 0,
-      "locations": [
-        "Reno NV",
-        "Newkirk OK",
-        "Ardmore OK",
-        "Chandler OK"
-      ],
-      "successfulOverpassResponses": 16,
+      "realProviderRegions": 6,
+      "errors": 0,
+      "findings": 0,
+      "reviewedPools": {
+        "Newkirk": 3,
+        "Pahrump": 5,
+        "Pawnee": 2
+      },
+      "evidence": "audit/casino-freeze-browser-evidence-2026-09-13.json",
+      "successfulOverpassResponses": 24,
       "successfulNominatimResponses": 2,
-      "providerTimeouts": 9,
-      "limits": [
-        "No hosted acceptance",
-        "No physical iOS/Android GPS",
-        "No authenticated-account acceptance",
-        "External Maps app not opened; exact destination href/security checked"
-      ],
-      "ciArtifactRetentionDays": 14
+      "providerTimeouts": 12
     },
-    "head": "264bb678362a5e281f16411ef9a7b98bce85a12e",
-    "run": 34768849482,
-    "runNumber": 318,
-    "job": 103754608346,
-    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768849482",
-    "candidate": {
-      "head": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
-      "run": 34768716664,
-      "runNumber": 317,
-      "job": 103754260940,
-      "conclusion": "success",
-      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768716664"
+    "ci": {
+      "status": "pending-publication"
     }
   },
-  "targetedSecretScan": {
-    "scope": "Changed text files only; not repository history. No environment credentials read or printed.",
-    "findings": []
-  },
-  "releaseGate": {
-    "data": "PASS implemented records; PARTIAL statewide NV/OK completeness with explicit holds",
-    "code": "PASS relevant integration/aliases/selection/location recovery; no known blocker",
-    "testing": "PASS exact-head CI and local: 322 unique tests, zero failures, four understood external documentation skips",
-    "build": "PASS development and auth-enabled production mode without migrations",
-    "audit": "PASS primary and adversarial within recorded scope",
-    "browser": "PASS local deterministic and real-provider desktop/mobile viewport; hosted/physical/account/external Maps not run",
-    "documentation": "PASS: current handoff records exact successful candidate/integration runs, merge, scopes and remaining gates; following checkpoint changes documentation only",
-    "main": "untouched",
-    "production": "untouched",
-    "vercel": "no deployment"
-  },
-  "optionalFuture": [
-    "Use audit/casino-status-watchlist-2026-09-13.json as input for separately authorized monitoring; no recurring tasks created.",
-    "Routine CI action-runtime deprecation maintenance; no known failing gate."
-  ],
-  "requiresUserAuthorization": [
-    "Any merge/promotion into main",
-    "Any Vercel or other hosted deployment",
-    "Production writes, migrations or irreversible external changes",
-    "Recurring status-monitor automation"
-  ],
-  "next": "Casino continuation is complete in non-production integration. Inspect the current ref/latest CI, then obtain separate explicit authorization for controlled main/hosted release and perform its served-revision, physical-device, authenticated-account and external Maps acceptance checklist. Preserve separate location/international work. NV/OK statewide completeness is not asserted.",
-  "recovery": "Reviewed revert of non-production merge 264bb678362a5e281f16411ef9a7b98bce85a12e and following documentation checkpoint, or restore base 2fd976a4f34f8bbe28db1075a264693d691b8253. Preserve candidate branches/history/evidence. No database change/rollback, production write or force-push is needed.",
+  "publication": {},
+  "browserEvidence": "audit/casino-freeze-browser-evidence-2026-09-13.json",
   "scopeAudit": {
-    "expectedChangedFiles": 27,
+    "expectedChangedFiles": 24,
     "unexpected": [],
     "deleted": [],
-    "result": "passed"
+    "result": "passed",
+    "base": "f2fd0f7f4737278126d72b0cc043c79db7652236"
   },
-  "candidateBranch": "integration/casino-continuation-2026-09-13",
-  "candidateHead": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
-  "runtimeHead": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
-  "pr": 40,
-  "integration": {
-    "head": "264bb678362a5e281f16411ef9a7b98bce85a12e",
-    "run": 34768849482,
-    "runNumber": 318,
-    "job": 103754608346,
-    "conclusion": "success",
-    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768849482",
-    "branch": "integration/active-work-pass-1",
-    "mergeCommit": "264bb678362a5e281f16411ef9a7b98bce85a12e",
-    "expectedCandidateHead": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
-    "tree": "cde1ced3c80936915a36a040619bbb974d7c8dcc",
-    "treeEqualsValidatedCandidate": true,
-    "pr": 40,
-    "merged": true,
-    "preMergeHead": "2fd976a4f34f8bbe28db1075a264693d691b8253"
+  "targetedSecretScan": {
+    "scope": "All 24 changed/new files: private-key blocks, GitHub tokens, AWS access keys and live payment keys; no environment/credential files changed. Not a full historical secret scan.",
+    "findings": []
   },
-  "documentationCheckpoint": {
-    "scope": "Documentation only after successful integration Run 318; runtime/data unchanged.",
-    "validatedCandidateHead": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
-    "validatedCandidateRun": 34768716664,
-    "validatedIntegrationMerge": "264bb678362a5e281f16411ef9a7b98bce85a12e",
-    "validatedIntegrationRun": 34768849482,
-    "currentRefValidation": "Inspect latest integration/active-work-pass-1 Actions result; this checkpoint cannot embed its own future SHA/run ID.",
-    "filesChanged": [
-      "AI_CONTINUITY.md",
-      "audit/casino-browser-release-checklist-2026-09-13.md",
-      "audit/casino-continuation-browser-evidence-2026-09-13.json",
-      "audit/casino-rc-adversarial-review-2026-09-13.json",
-      "audit/casino-rc-coverage-2026-09-13.json",
-      "audit/casino-rc-progress-2026-09-13.json",
-      "audit/casino-release-readiness-2026-09-13.md"
-    ],
-    "unexpectedFiles": [],
-    "runtimeChanges": false
-  }
+  "attempts": [
+    {
+      "stage": "initial final-pass live UI assertions",
+      "result": "Mechanical UI assertions passed, but manual review found a closed alias, two duplicate aliases and affected counts. Not accepted as final clean browser validation.",
+      "evidence": "audit/casino-freeze-live-provider-findings-2026-09-13.json"
+    },
+    {
+      "stage": "captured provider regression before Pahrump alias fix",
+      "result": "6 passed, 1 failed as expected; assertion identified duplicate nightlife-osm-way-682672701. Alias corrected; full gates rerun. No unresolved failure suppressed."
+    },
+    {
+      "stage": "standalone direct Overpass probe",
+      "result": "HTTP 403. Not treated as verification; actual permitted application response observation used."
+    }
+  ],
+  "limitations": [
+    "Facebook/Yelp bodies were login-required or HTTP 403 where recorded; indexed excerpts were not treated as a direct page read.",
+    "Some Firecrawl calls returned INVALID_ARGUMENT; named map retrieval continued through TinyFish. Regulator PDF retrieval failed through TinyFish but succeeded through Parallel.",
+    "Search returned a 2015 NGCB nonrestricted report; it was not treated as a current statewide roster.",
+    "Physical-device, hosted/account and external Maps-app acceptance are unclaimed."
+  ],
+  "safety": {
+    "mainModified": false,
+    "productionModified": false,
+    "deployed": false,
+    "vercelDeployed": false,
+    "migrationsRun": false,
+    "locationBranchMerged": false,
+    "recurringMonitoringCreated": false,
+    "exaUsed": false
+  },
+  "requiresUserAuthorization": [
+    "Any merge/promotion to main",
+    "Any Vercel or other hosted/production deployment or write",
+    "Any database migration or secret/credential change",
+    "Recurring monitoring"
+  ],
+  "next": "Publish the casino candidate, require green CI, merge only into integration/active-work-pass-1 and record its CI before handoff.",
+  "recovery": "Reviewed non-production revert of this casino completion or restoration of base f2fd0f7f4737278126d72b0cc043c79db7652236. Preserve candidate branches, historical records, rejected draft evidence and the separate location branch. No database rollback is needed."
 }
