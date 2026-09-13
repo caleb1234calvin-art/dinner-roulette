@@ -45,6 +45,11 @@
       "question": "Did configuration, dependencies, secrets or unrelated features change?",
       "result": "PASS",
       "evidence": "Manifest, lockfile, Vite configuration and deployment exclusion are unchanged. CI adds only guarded combined acceptance. Scope matches location source paths, required reconciliation browser/tests and audit docs. Limited high-confidence secret scan found no hits; no credential values were printed."
+    },
+    {
+      "question": "Did the final non-production merge differ from the validated candidate?",
+      "result": "PASS",
+      "evidence": "Git tree comparison finds only the newer AI_CONTINUITY.md. All 78 protected files match their frozen Git blobs. The merged source fingerprint equals the local/CI runtime fingerprint. Merge CI Run 343 and shared checkpoint Run 344 pass."
     }
   ],
   "findingsResolved": [
@@ -59,6 +64,7 @@
       ".github/workflows/validate-icon-pack.yml",
       "AI_CONTINUITY.md",
       "LOCATION_HANDOFF.md",
+      "audit/casino-location-reconciliation-adversarial-2026-09-13.json",
       "audit/casino-location-reconciliation-attempts-2026-09-13.json",
       "audit/casino-location-reconciliation-baseline-2026-09-13.json",
       "audit/casino-location-reconciliation-browser-2026-09-13.json",
@@ -101,7 +107,8 @@
     ],
     "unexpected": [],
     "protectedFilesUnchanged": 78,
-    "originalTestFilesUnchanged": 30
+    "originalTestFilesUnchanged": 30,
+    "changedFileCount": 43
   },
   "unresolvedImplementationFindings": [],
   "remainingReleaseChecks": [
@@ -123,5 +130,28 @@
     "exaUsed": false,
     "originalLocationSourcePreserved": true
   },
-  "next": "Verify exact final candidate CI, merge only PR #42 into non-production integration, compare result to the validated source and verify integration CI/shared continuity."
+  "next": "Return control. Use the combined integration as the release candidate; separately authorize main promotion/hosted release, then complete the documented physical-device, PWA, account and external Maps acceptance.",
+  "integration": {
+    "pullRequest": 42,
+    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/pull/42",
+    "candidateBranch": "integration/casino-location-reconciliation-2026-09-13",
+    "candidateSha": "d44de898fc6420e18ad83dc0a7aa753fbd19bc5b",
+    "candidateMessage": "Complete adversarial review of the combined non-production candidate",
+    "baseBranch": "integration/active-work-pass-1",
+    "mergeSha": "189c46bfee0ac0983ea9100eae90e92ee58915b7",
+    "mergeMessage": "Integrate frozen casinos with validated GPS and international discovery",
+    "mergeParents": [
+      "02bee60bfe7ea03879d5173352d08ee63e792c97",
+      "d44de898fc6420e18ad83dc0a7aa753fbd19bc5b"
+    ],
+    "onlyMergeDeltaFromValidatedCandidate": [
+      "AI_CONTINUITY.md"
+    ],
+    "runtimeTestsConfigByteIdenticalToCandidate": true,
+    "protectedFrozenFilesUnchanged": 78,
+    "sourceFingerprintMatchesLocalAndCI": true,
+    "sharedCheckpointAtVerification": "6b4e1a0701ec377cf4272118a76c79c2911fa0ab",
+    "originalLocationRefUnchanged": "4a93870c05ec53bd49fae5143df420c301696839",
+    "mainRefUnchanged": "c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5"
+  }
 }

@@ -85,7 +85,7 @@
       "390px mobile layout fits without horizontal overflow",
       "No-result feedback leaves the last valid location active and manual entry available",
       "Simulated permission denied, unavailable and timeout errors are visible from the closed control and automatically expose manual recovery",
-      "Unsupported geolocation still permits manual Montr\u00e9al entry",
+      "Unsupported geolocation still permits manual Montréal entry",
       "Repeated location actions cannot issue duplicate native requests while busy",
       "Late browser position callback cannot replace a newer manual choice",
       "No uncaught browser page errors",
@@ -105,8 +105,10 @@
   ],
   "liveProviders": "PASS six casino regions and four actual international manual/discovery cases; zero findings/page errors",
   "limitations": [
-    "Native coordinates/permissions are simulated; provider fixtures are deterministic.",
-    "Physical GPS, installed PWA, hosted/account sessions and external Maps app navigation are unverified."
+    "Native coordinates/permissions are simulated; only deterministic suites use provider fixtures. The separately recorded real-provider runs use actual Nominatim/Overpass with no provider mocks.",
+    "Physical GPS, installed PWA, hosted/account sessions and external Maps app navigation remain unverified.",
+    "Open-now was disabled for dense-city discovery acceptance; destination-timezone correctness was not newly validated.",
+    "Provider timeouts were observed and honestly handled; provider availability is not guaranteed."
   ],
   "casinoRealProviders": {
     "buildProof": {
@@ -650,13 +652,13 @@
         "passed": true
       },
       {
-        "query": "Montr\u00e9al, Qu\u00e9bec, Canada",
+        "query": "Montréal, Québec, Canada",
         "location": {
           "lat": 45.5031824,
           "lon": -73.5698065,
-          "label": "Montr\u00e9al, Qu\u00e9bec, Canada",
-          "locality": "Montr\u00e9al",
-          "region": "Qu\u00e9bec",
+          "label": "Montréal, Québec, Canada",
+          "locality": "Montréal",
+          "region": "Québec",
           "country": "Canada",
           "countryCode": "CA",
           "source": "manual"
@@ -792,5 +794,64 @@
       "2026-09-13T19:49:01.6233758Z \u001b[36;1mprint(\"Verified 30 Dinner icon assets: 15 dark + 15 light\")\u001b[0m",
       "2026-09-13T19:49:01.6546833Z Verified 30 Dinner icon assets: 15 dark + 15 light"
     ]
-  }
+  },
+  "integrationCI": {
+    "applicationPassed": 71,
+    "casinoBrowserGroups": 16,
+    "conclusion": "success",
+    "failed": 0,
+    "head": "189c46bfee0ac0983ea9100eae90e92ee58915b7",
+    "icons": 30,
+    "id": 34779345531,
+    "job": 103783374402,
+    "locationBrowserGroups": 14,
+    "locationVerdict": {
+      "checks": [
+        "No geolocation access on initial load",
+        "GPS coordinates persist before delayed reverse enrichment, with visible progress and busy protection",
+        "Native Chromium geolocation with granted permission sets and persists simulated Toronto coordinates",
+        "GPS coordinates reach restaurant discovery and exact Google Maps destination",
+        "Manual international choice overrides GPS, preserves filters and survives reload without GPS access",
+        "Location is shared across Dinner, Nightlife/casino and Date Night; manual U.K. choice works",
+        "390px mobile layout fits without horizontal overflow",
+        "No-result feedback leaves the last valid location active and manual entry available",
+        "Simulated permission denied, unavailable and timeout errors are visible from the closed control and automatically expose manual recovery",
+        "Unsupported geolocation still permits manual Montréal entry",
+        "Repeated location actions cannot issue duplicate native requests while busy",
+        "Late browser position callback cannot replace a newer manual choice",
+        "No uncaught browser page errors",
+        "Actual server requests use the selected coordinates for all three discovery categories"
+      ],
+      "output": "audit/browser-results/location",
+      "passed": true
+    },
+    "number": 343,
+    "repositoryPassed": 296,
+    "skipped": 4,
+    "sourceSha256": "bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61",
+    "status": "completed",
+    "uniquePassed": 367,
+    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34779345531",
+    "verifiedLogLines": [
+      "2026-09-13T19:59:58.8299812Z # tests 83",
+      "2026-09-13T19:59:58.8300222Z # pass 83",
+      "2026-09-13T19:59:58.8300423Z # fail 0",
+      "2026-09-13T19:59:58.8300845Z # skipped 0",
+      "2026-09-13T20:00:00.5484615Z Casino catalog audit passed: 899 serialized records, 883 canonical destinations across 60 catalog files.",
+      "2026-09-13T20:00:00.5485515Z National coverage audit passed: 39 complete jurisdictions, 0 authoritative inventories staged, 2 pending jurisdictions.",
+      "2026-09-13T20:00:10.8948780Z # tests 300",
+      "2026-09-13T20:00:10.8949175Z # pass 296",
+      "2026-09-13T20:00:10.8949430Z # fail 0",
+      "2026-09-13T20:00:10.8950090Z # skipped 4",
+      "2026-09-13T20:00:11.4964977Z # tests 71",
+      "2026-09-13T20:00:11.4966108Z # pass 71",
+      "2026-09-13T20:00:11.4966510Z # fail 0",
+      "2026-09-13T20:00:11.4967254Z # skipped 0",
+      "2026-09-13T20:00:46.8530860Z CASINO_BROWSER_VERDICT {\"origin\":\"http://127.0.0.1:8080\",\"buildProof\":{\"schemaVersion\":1,\"status\":\"BUILT\",\"authFlag\":\"true\",\"source\":{\"sha256\":\"bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61\",\"files\":363},\"startedAt\":\"2026-09-13T20:00:14.751Z\",\"output\":{\"sha256\":\"17907ba307c1af6ee239be3da248a740396223ad60945ec7e547d2ac08774222\",\"files\":182},\"completedAt\":\"2026-09-13T20:00:17.690Z\"},\"fixtures\":\"Server-side Overpass outage; Nominatim deterministic locations. Production-mode local preview, actual server functions and catalog.\",\"checks\":[\"desktop: completed the four-step first-run tour\",\"desktop: casino filter and saved-catalog outage fallback\",\"desktop: strict open-now excludes unknown hours; empty state disables selection\",\"desktop: compiled fallback matches 19 current canonical casinos\",\"desktop: unique canonical options, option selection, map destination, reroll and persisted exclusion\",\"desktop: denied geolocation opens a visible error and manual recovery form\",\"desktop: manual location, no-catalog/provider failure and favorites empty states\",\"desktop: non-casino navigation, settings and no horizontal overflow or page errors\",\"mobile: completed the four-step first-run tour\",\"mobile: casino filter and saved-catalog outage fallback\",\"mobile: strict open-now excludes unknown hours; empty state disables selection\",\"mobile: compiled fallback matches 3 current canonical casinos\",\"mobile: unique canonical options, option selection, map destination, reroll and persisted exclusion\",\"mobile: denied geolocation opens a visible error and manual recovery form\",\"mobile: manual location, no-catalog/provider failure and favorites empty states\",\"mobile: non-casino navigation, settings and no horizontal overflow or page errors\"],\"errors\":[]}",
+      "2026-09-13T20:00:46.9047598Z   LOCATION_BROWSER_OUTPUT: audit/browser-results/location",
+      "2026-09-13T20:00:55.1545761Z \u001b[36;1mprint(\"Verified 30 Dinner icon assets: 15 dark + 15 light\")\u001b[0m",
+      "2026-09-13T20:00:55.1866124Z Verified 30 Dinner icon assets: 15 dark + 15 light"
+    ]
+  },
+  "integrationSourceIdentity": "Merged application/tests/configuration are byte-identical to the validated candidate; only the shared handoff differed."
 }

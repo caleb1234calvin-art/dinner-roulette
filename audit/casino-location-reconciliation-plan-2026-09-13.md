@@ -1,6 +1,6 @@
 # Casino + location reconciliation plan
 
-Status: architecture inspection completed; combined runtime not yet validated.
+Historical architecture plan, now completed. The combined candidate was validated and merged through PR #42 into non-production integration at 189c46bfee0ac0983ea9100eae90e92ee58915b7. See the existing shared AI_CONTINUITY.md and reconciliation validation evidence for the final state.
 
 Authoritative casino base: `integration/active-work-pass-1` at `183d3e1d71355a27e4bc35a2969d73037c9e6e33`.
 Location source: `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839` (draft PR #39).
