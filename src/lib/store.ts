@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { isGeographicLocation } from "./location/model";
 import { persist } from "zustand/middleware";
 import { DEFAULT_DATE_NIGHT_FILTERS, type DateNightFilters } from "./date-night/types";
 import { applyTheme, isThemeId, type ThemeId } from "./theme";
@@ -251,6 +252,8 @@ export const useAppStore = create<AppState>()(
         return {
           ...current,
           ...saved,
+          location: isGeographicLocation(saved.location) && ["geo", "manual", "default"].includes(saved.location.source)
+            ? saved.location : current.location,
           filters: { ...DEFAULT_FILTERS, ...saved.filters },
           dateNightFilters: { ...DEFAULT_DATE_NIGHT_FILTERS, ...saved.dateNightFilters },
           theme: isThemeId(saved.theme) ? saved.theme : current.theme,

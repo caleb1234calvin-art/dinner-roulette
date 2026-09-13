@@ -4,21 +4,22 @@ Updated September 13, 2026. **Casino + location/international reconciliation is 
 
 ## Latest meaningful checkpoint
 
-Architecture/reconciliation plan published. No combined runtime edits yet.
+Dedicated combined candidate established from the latest 883-casino integration, before location code is imported.
 
-Work branch: `integration/active-work-pass-1`. Work commit: **`bdf63c056dfb3d8c52830b425a3aed12e46a1a8c`** — **Document casino and location reconciliation source-of-truth plan**.
+Work branch: `integration/casino-location-reconciliation-2026-09-13`. Work commit: **`17ff681c7e99f2814d2bd9ccdda9e14b39b0e44a`** — **Checkpoint frozen 883-casino base for location reconciliation**.
 
-Current working branch: `integration/casino-freeze-handoff-2026-09-13`. Frozen starting integration: `183d3e1d71355a27e4bc35a2969d73037c9e6e33`. Preserved location source: `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839`, draft PR #39. Main baseline: `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
+Current working branch: `integration/casino-location-reconciliation-2026-09-13`. Frozen starting integration: `183d3e1d71355a27e4bc35a2969d73037c9e6e33`. Preserved location source: `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839`, draft PR #39. Main baseline: `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
 
 ## COMPLETED in this reconciliation
 
 - Read both pinned source branches and required handoff/evidence records.
 - Classified all five overlapping paths and all 30 location paths; current casino integration is the source of truth for all frozen data and newer browser/provider guards.
 - Published audit/casino-location-reconciliation-plan-2026-09-13.md with intended resolution and safety/validation sequence.
+- Created the candidate from shared checkpoint 0874f0b; baseline audit records protected file Git blobs and both source test-file inventories. All protected casino data, closure policy and freeze evidence match the current freeze.
 
 ## Validation of the combined work
 
-Read-only branch comparison and overlap inventory completed. Combined tests/builds/browser validation have not yet run.
+Baseline catalog and national audits pass: 883 canonical / 899 serialized / 60 passes, NV204 / OK113 / CO31 / TX4. Combined runtime validation remains pending.
 
 Independent baselines are historical, not a combined result: casino freeze 329 passed (278 repository + 51 application), four skips, 16 browser groups; location source 342 passed (273 repository + 69 application), four skips, 12 location checks. Casino CI Run 325 and location CI Run 314 passed separately. Never add those totals together.
 
@@ -54,7 +55,7 @@ No environmental blocker identified. Implementation, combined validation and adv
 
 ## Exact next action
 
-Create integration/casino-location-reconciliation-2026-09-13 from the latest shared integration checkpoint; verify 883/899/60, NV204/OK113 and freeze-file identity, then publish baseline checkpoint before importing location code.
+Bring forward the shared LocationControl, controller/model, persisted-location guards and necessary geocoder/types dependencies. Reconcile visible recovery and busy handling; run location unit tests and typecheck before the next checkpoint.
 
 ## DEFERRED
 
@@ -75,5 +76,7 @@ Local checkout: /workspace/scratch/60ab73826fd9/pick-for-me-casino. Inspect bran
 ## Chronological reconciliation commits
 
 - `bdf63c056dfb3d8c52830b425a3aed12e46a1a8c` | `integration/active-work-pass-1` | Document casino and location reconciliation source-of-truth plan
+- `0874f0ba42490370ba1704d96b3252adabf92f49` | `integration/active-work-pass-1` | Update shared continuity: reconciliation plan verified
+- `17ff681c7e99f2814d2bd9ccdda9e14b39b0e44a` | `integration/casino-location-reconciliation-2026-09-13` | Checkpoint frozen 883-casino base for location reconciliation
 
 This update records already-known work commits. Its own immutable documentation commit SHA is subsequent; inspect the current shared GitHub ref and Actions status. Every major checkpoint is saved and read back from GitHub before the next phase.

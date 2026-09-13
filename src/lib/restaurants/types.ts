@@ -1,3 +1,5 @@
+import type { GeographicLocation } from "../location/model";
+
 export const PRICE_LABELS = ["$", "$$", "$$$", "$$$$"] as const;
 export type PriceLevel = 1 | 2 | 3 | 4;
 
@@ -85,10 +87,7 @@ export interface DecoratedRestaurant extends Restaurant {
   closingSoon: boolean;
 }
 
-export interface SearchLocation {
-  lat: number;
-  lon: number;
-  label: string;
+export interface SearchLocation extends GeographicLocation {
   source: "geo" | "manual" | "default";
 }
 
@@ -104,11 +103,7 @@ export interface SearchResponse {
   warning?: string;
 }
 
-export interface GeocodeResult {
-  lat: number;
-  lon: number;
-  label: string;
-}
+export type GeocodeResult = GeographicLocation;
 
 export interface RestaurantPreference {
   restaurantId: string;
@@ -160,7 +155,11 @@ export interface AppFilters {
 export const DEFAULT_LOCATION: SearchLocation = {
   lat: 37.084184,
   lon: -94.513339,
-  label: "Joplin, Missouri",
+  label: "Joplin, Missouri, United States",
+  country: "United States",
+  countryCode: "US",
+  region: "Missouri",
+  locality: "Joplin",
   source: "default",
 };
 
