@@ -37,6 +37,9 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
+      - name: Record resolved dependency lock
+        run: node -e 'console.log("VALIDATED_PACKAGE_LOCK " + JSON.stringify(JSON.parse(require("fs").readFileSync("package-lock.json", "utf8"))))'
+
       - name: Typecheck
         run: npm run typecheck
 
@@ -53,6 +56,24 @@ jobs:
 
       - name: Build development bundle
         run: npm run build:dev
+
+      - name: Build production-mode bundle without database migrations
+        run: node scripts/with-app-env.mjs vite build --mode production
+
+      - name: Install Chromium for disposable local browser validation
+        run: npx playwright install --with-deps chromium
+
+      - name: Exercise casino experience in local Chromium
+        run: node scripts/casino-browser-smoke.mjs
+
+      - name: Preserve browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: casino-browser-evidence
+          path: audit/browser-results/
+          if-no-files-found: warn
+          retention-days: 14
 
       - name: Verify Dinner icon packs
         run: |
