@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "pass": 58,
+  "status": "validated-local-data-and-tests",
+  "records": [
+    {
+      "id": "casino-catalog-nv-luckys-usa-parkway",
+      "name": "USA Parkway Lucky's Casino",
+      "address": "400 USA Pkwy #439, Sparks, NV 89437",
+      "lat": 39.5590145,
+      "lon": -119.4898624,
+      "jurisdiction": "Nevada",
+      "identitySource": "https://pilotcasinos.com/locations/usa-parkway-luckys/",
+      "coordinateSource": "https://pilotcasinos.com/locations/usa-parkway-luckys/",
+      "coordinateEvidence": {
+        "cid": "6901650688170528586",
+        "latitude": 39.5590145,
+        "longitude": -119.4898624,
+        "method": "operator-embedded-named-building-destination",
+        "operatorPage": "https://pilotcasinos.com/locations/usa-parkway-luckys/",
+        "placeId": "0x8099217c0597a721:0x5fc796bc003c0f4a",
+        "placeLabel": "ONE9 Travel Center, 400 USA Pkwy #439, Sparks, NV 89437"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Operator explicitly locates the casino inside ONE9 at USA Parkway/McCarran. Use its named building destination and postal address, not the broad search returning unrelated Las Vegas/Carson casinos. The page inconsistently says Fernley in a heading; the mapped property is Sparks/McCarran.",
+      "supportingSources": [
+        "https://pilotcasinos.com/locations/"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-pilot-fernley",
+      "name": "Pilot Casino Fernley",
+      "address": "465 Pilot Rd, Fernley, NV 89408",
+      "lat": 39.6138045,
+      "lon": -119.2662816,
+      "jurisdiction": "Nevada",
+      "identitySource": "https://pilotcasinos.com/locations/fernley-pilot/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Pilot%20Casino%20Fernley%20Nevada",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Pilot+Casino+Fernley/@39.6138045,-119.2662816,17z/data=!3m1!4b1!4m6!3m5!1s0x8098dd71415e60c3:0x24fe1f408c9ac259!8m2!3d39.6138045!4d-119.2662816!16s%2Fg%2F1260ct8qp?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Operator confirms a dedicated casino with over 60 machines; named casino point agrees with its mapped travel-center building.",
+      "supportingSources": [
+        "https://pilotcasinos.com/locations/"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-luckys-fernley",
+      "name": "Fernley Lucky's Casino",
+      "address": "825 Commerce Center Dr, Fernley, NV 89408",
+      "lat": 39.6179521,
+      "lon": -119.2666145,
+      "jurisdiction": "Nevada",
+      "identitySource": "https://pilotcasinos.com/locations/fernley-luckys/",
+      "coordinateSource": "https://pilotcasinos.com/locations/fernley-luckys/",
+      "coordinateEvidence": {
+        "cid": "6358109798387628295",
+        "latitude": 39.6179521,
+        "longitude": -119.2666145,
+        "method": "operator-embedded-named-building-destination",
+        "operatorPage": "https://pilotcasinos.com/locations/fernley-luckys/",
+        "placeId": "0x8098dd7209104ad3:0x583c8b2cc7d33907",
+        "placeLabel": "Love's Travel Stop, 825 Commerce Center Dr, Fernley, NV 89408"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Operator confirms the renovated 60-machine casino inside Love's. A current map still names 4 Way Casino at the same address. The casino is one destination; no separate travel-stop record.",
+      "supportingSources": [
+        "https://pilotcasinos.com/locations/"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-pilot-winnemucca",
+      "name": "Pilot Casino Winnemucca",
+      "address": "5625 W Winnemucca Blvd, Winnemucca, NV 89445",
+      "lat": 40.9311507,
+      "lon": -117.8043148,
+      "jurisdiction": "Nevada",
+      "identitySource": "https://pilotcasinos.com/locations/winnemucca-pilot/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Pilot+Casino+Winnemucca+property",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Pilot+Casino+Winnemucca/@40.9311507,-117.8043148,17z/data=!3m1!4b1!4m6!3m5!1s0x80a0fcd95e6dc447:0x889d8edb43ee0435!8m2!3d40.9311507!4d-117.8043148!16s%2Fg%2F1thvsz2_?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator confirms 70+ gaming machines at I-80 Exit 176. Distinct from Roadhouse at Exit 180; some Roadhouse searches incorrectly resolve here.",
+      "supportingSources": [
+        "https://pilotcasinos.com/locations/"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-roadhouse-winnemucca",
+      "name": "Winnemucca Roadhouse Casino",
+      "address": "4400 Rim Rock Rd, Winnemucca, NV 89445",
+      "lat": 40.982876,
+      "lon": -117.699209,
+      "jurisdiction": "Nevada",
+      "identitySource": "https://pilotcasinos.com/locations/winnemucca-roadhouse/",
+      "coordinateSource": "https://www.mapquest.com/us/nevada/roadhouse-casino-363074340",
+      "coordinateEvidence": {
+        "method": "named-LocalBusiness-GeoCoordinates",
+        "fields": {
+          "name": "Roadhouse Casino",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Winnemucca",
+            "addressRegion": "NV",
+            "postalCode": "89445-3039",
+            "streetAddress": "4400 Rim Rock Rd"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.982876,
+            "longitude": -117.699209
+          }
+        }
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Operator confirms 55-machine casino at Exit 180. Its map names the WINGERS building; a separate named Casino MapQuest point agrees with that building. Reject search results that resolve to Pilot at Exit 176.",
+      "supportingSources": [
+        "https://pilotcasinos.com/locations/"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-pilot-carlin",
+      "name": "Pilot Casino Carlin",
+      "address": "791 10th St, Carlin, NV 89822",
+      "lat": 40.719615,
+      "lon": -116.105794,
+      "jurisdiction": "Nevada",
+      "identitySource": "https://pilotcasinos.com/locations/carlin-pilot/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Pilot+Casino+791+10th+St+Carlin+Nevada",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Pilot+Casino+Carlin/@40.719615,-116.105794,17z/data=!3m1!4b1!4m6!3m5!1s0x80a5df63fac2c371:0x824cb8134c143425!8m2!3d40.719615!4d-116.105794!16s%2Fg%2F1wb8tyzf?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Operator confirms 60+ slot machines and the address. Named casino map supports the distinct Carlin property; a failed raw scrape was not treated as evidence.",
+      "supportingSources": [
+        "https://pilotcasinos.com/locations/"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-roadhouse-elko",
+      "name": "Elko Roadhouse Casino",
+      "address": "1165 E Jennings Way #102, Elko, NV 89801",
+      "lat": 40.8530921,
+      "lon": -115.7489166,
+      "jurisdiction": "Nevada",
+      "identitySource": "https://pilotcasinos.com/locations/elko-roadhouse/",
+      "coordinateSource": "https://pilotcasinos.com/locations/elko-roadhouse/",
+      "coordinateEvidence": {
+        "cid": "10600771184668148462",
+        "latitude": 40.8530921,
+        "longitude": -115.7489166,
+        "method": "operator-embedded-named-building-destination",
+        "operatorPage": "https://pilotcasinos.com/locations/elko-roadhouse/",
+        "placeId": "0x80a6012ee8096e95:0x931d813a275782ee",
+        "placeLabel": "WINGERS Restaurant & Alehouse, 1165 E Jennings Way, Elko, NV 89801"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Operator confirms a 45-machine casino; its embedded named building point uses 1165 E Jennings Way, independently corroborated by Casino City suite 102 and Explore Elko's gaming roster. Reject the operator directory's copied 4400 Rim Rock Road address, which belongs to Winnemucca.",
+      "supportingSources": [
+        "https://pilotcasinos.com/locations/",
+        "https://www.casinocity.com/nevada/elko/elko-roadhouse-casino",
+        "https://exploreelko.com/things-to-do/gaming-nightlife"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-luckys-wells",
+      "name": "Wells Lucky's Casino",
+      "address": "157 US-93, Wells, NV 89835",
+      "lat": 41.0989963,
+      "lon": -114.9601064,
+      "jurisdiction": "Nevada",
+      "identitySource": "https://pilotcasinos.com/locations/wells-luckys/",
+      "coordinateSource": "https://pilotcasinos.com/locations/wells-luckys/",
+      "coordinateEvidence": {
+        "cid": "12882072727442491010",
+        "latitude": 41.0989963,
+        "longitude": -114.9601064,
+        "method": "operator-embedded-named-building-destination",
+        "operatorPage": "https://pilotcasinos.com/locations/wells-luckys/",
+        "placeId": "0x80a91987d6d443a3:0xb2c650e4b9f50682",
+        "placeLabel": "Love's Travel Stop, 157 US-93, Wells, NV 89835"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Operator confirms a renovated 50-machine casino inside the mapped Love's Travel Stop. Distinct from Alamo Wells at 1440 6th Street; a timed-out broad map query is not positive verification.",
+      "supportingSources": [
+        "https://pilotcasinos.com/locations/"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-luckys-ely",
+      "name": "Ely Lucky's Casino",
+      "address": "1701 Great Basin Blvd, Ely, NV 89301",
+      "lat": 39.2421535,
+      "lon": -114.8692334,
+      "jurisdiction": "Nevada",
+      "identitySource": "https://pilotcasinos.com/locations/ely-luckys/",
+      "coordinateSource": "https://pilotcasinos.com/locations/ely-luckys/",
+      "coordinateEvidence": {
+        "cid": "10197822760946605260",
+        "latitude": 39.2421535,
+        "longitude": -114.8692334,
+        "method": "operator-embedded-named-building-destination",
+        "operatorPage": "https://pilotcasinos.com/locations/ely-luckys/",
+        "placeId": "0x80b1ab62d6683ed7:0x8d85f1c54c9d9ccc",
+        "placeLabel": "Love's Travel Stop, 1701 Great Basin Blvd, Ely, NV 89301"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Operator confirms a renovated 50-machine casino inside this mapped Love's Travel Stop. Broad Lucky's queries returned unrelated Las Vegas businesses and were rejected.",
+      "supportingSources": [
+        "https://pilotcasinos.com/locations/"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-pilot-wendover",
+      "name": "Pilot Casino Wendover",
+      "address": "1200 Wendover Blvd, West Wendover, NV 89883",
+      "lat": 40.7394238,
+      "lon": -114.0667009,
+      "jurisdiction": "Nevada",
+      "identitySource": "https://pilotcasinos.com/locations/wendover-pilot/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Pilot%20Casino%20Wendover%20Nevada",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Pilot+Casino+Wendover/@40.7394238,-114.0667009,17z/data=!3m1!4b1!4m6!3m5!1s0x80ac272c66b84d63:0xff4d4e2c5e88d4ac!8m2!3d40.7394238!4d-114.0667009!16s%2Fg%2F11fm3ly4tr?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Operator confirms a 90+ machine casino; current named map and gaming reviews include a bubble-craps machine. West Wendover, Nevada property is distinct from resort casinos and Utah.",
+      "supportingSources": [
+        "https://pilotcasinos.com/locations/"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-alamo-north-las-vegas",
+      "name": "Alamo Casino North Las Vegas Petro",
+      "address": "6595 N Hollywood Blvd, North Las Vegas, NV 89115",
+      "lat": 36.2798376,
+      "lon": -115.0260116,
+      "jurisdiction": "Nevada",
+      "identitySource": "https://www.thealamo.com/alamo-casino-las-vegas-petro/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Alamo+Casino+Las+Vegas+Petro",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Alamo+Casino+at+North+LV+Petro/@36.2798376,-115.0260116,17z/data=!3m1!4b1!4m6!3m5!1s0x80c8e714d95290b5:0xf4f8e87c072f34f6!8m2!3d36.2798376!4d-115.0260116!16s%2Fg%2F1th1c_px?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Operator explicitly confirms video poker/reel gaming at North LV Petro, separate from Las Vegas TA and all other Alamo casinos."
+    },
+    {
+      "id": "casino-catalog-nv-alamo-las-vegas-ta",
+      "name": "Alamo Casino Las Vegas TA",
+      "address": "8050 Dean Martin Dr, Las Vegas, NV 89139",
+      "lat": 36.043592,
+      "lon": -115.1868317,
+      "jurisdiction": "Nevada",
+      "identitySource": "https://www.thealamo.com/alamo-casino-las-vegas-ta/casino",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Alamo+Casino+8050+Dean+Martin+Drive",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Alamo+Casino/@36.043592,-115.1868317,17z/data=!3m1!4b1!4m6!3m5!1s0x80c8cf4b5efd66d9:0x9aab8369b1f691f2!8m2!3d36.043592!4d-115.1868317!16s%2Fg%2F11h002lt9n?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Operator casino page confirms slots, video poker and table games at TA. Named casino point is not the nearby Silverton resort."
+    },
+    {
+      "id": "casino-catalog-ok-davis-west-gaming",
+      "name": "Davis Gaming - Chickasaw Travel Stop",
+      "address": "33967 N County Rd, Davis, OK 73030",
+      "lat": 34.507499,
+      "lon": -97.1771913,
+      "jurisdiction": "Oklahoma",
+      "identitySource": "https://chickasawtravelstop.com/locations/davis-west/",
+      "coordinateSource": "https://goo.gl/maps/KGaxMbWDirN6U1o46",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Chickasaw+Travel+Stop/@34.5075313,-97.1814062,17z/data=!4m5!3m4!1s0x87b2d9887ac75ddb:0xee8130643eb96227!8m2!3d34.507499!4d-97.1771913?coh=164777&entry=tt&shorturl=1"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator explicitly lists Casino at Davis West; Chickasaw Country names the small Davis Gaming casino housed there. Operator directions resolve to the west-side travel-stop property. Distinct from Treasure Valley east of I-35. Old Davis East/12218 Highway 7 directory address is not used.",
+      "supportingSources": [
+        "https://www.chickasawcountry.com/travel-stops-tourism-centers/chickasaw-travel-stop-davis-gaming"
+      ]
+    },
+    {
+      "id": "casino-catalog-ok-ada-west-gaming",
+      "name": "Chickasaw Travel Stop Ada West",
+      "jurisdiction": "Oklahoma",
+      "address": "201 Latta Rd, Ada, OK 74820",
+      "lat": 34.7734017,
+      "lon": -96.6980885,
+      "identitySource": "https://chickasawtravelstop.com/locations/ada-west/",
+      "coordinateSource": "https://goo.gl/maps/bcaDyDp9m1tyZMjCA",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Chickasaw+Travel+Stop/@34.7734489,-96.7003808,17z/data=!4m5!3m4!1s0x87b36c7a6b99098b:0xe33f9f35dbf01dcf!8m2!3d34.7734017!4d-96.6980885?coh=164777&entry=tt&shorturl=1"
+      },
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator lists casino gaming at Ada West, and current Chickasaw Country identifies it as a gaming destination. This is separate from Ada Gaming Center/CTS Ada East. Current 201 Latta Road address supersedes legacy 14565 County Road 3544; operator directions resolve to 201 Latta.",
+      "supportingSources": [
+        "https://www.chickasawcountry.com/travel-stops-tourism-centers/chickasaw-travel-stop-ada-west",
+        "https://www.casinocity.com/oklahoma/ada/chickasaw-travel-stop-ada-west"
+      ]
+    }
+  ],
+  "scope": "Named casino floors explicitly operated as casino destinations, with property/building points from named destinations. No generic gas-station record is itself classified as a casino without independent operator casino-floor evidence.",
+  "hours": "All null. Group directory and individual pages disagree; snapshot hours are not normalized into unverified operating schedules.",
+  "reconciledWithoutAddition": [
+    {
+      "name": "Stockmen's Gambling Hall \u2014 Fallon",
+      "decision": "Current exact-name searches and operator sources resolve to existing Stockman's Casino. No independent additional property supported.",
+      "sources": [
+        "https://stockmanscasino.com/casino",
+        "https://www.google.com/maps/search/?api=1&query=Stockmens%20Gambling%20Hall%20Fallon%20Nevada"
+      ]
+    },
+    {
+      "name": "SouthWind Kaw City",
+      "decision": "Casino guide explicitly reports ceased operations; no current operator property established. Do not infer reopening from 2020 Braman/Newkirk stories.",
+      "source": "https://www.americancasinoguidebook.com/oklahoma/southwind-casino-kaw-city.html"
+    }
+  ],
+  "additionalRetailScope": {
+    "source": "https://chickasawtravelstop.com/gaming/",
+    "locations": [
+      "Ada East",
+      "Ada West",
+      "Kingston",
+      "Paoli",
+      "Thackerville",
+      "Willis",
+      "Wilson"
+    ],
+    "decision": "All eight operator gaming locations investigated. Ada East is Ada Gaming Center; Kingston explicitly names Texoma, Paoli Washita, Willis MegaStar and Wilson Black Gold, all already represented. Davis West and Ada West are distinct gaming destinations added. Thackerville remains a scope hold: current page only says Casino and the shared gaming page includes casinos next door; current map review identifies a neighboring casino, while Casino City lists an old 34-machine room. A separate currently operating gaming room at CTS has not been established."
+  }
+}

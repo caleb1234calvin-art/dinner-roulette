@@ -1,53 +1,64 @@
 # Pick For Me casino browser release checklist
 
-Prepared September 13, 2026. Automated browser evidence is available in [integration Run 309](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34741023078), artifact `casino-browser-evidence` (14-day retention). Run at the exact release revision.
+Updated September 13, 2026 for the **857-destination** continuation. Local production-preview browser validation is completed with `VITE_AUTH_ENABLED=true`; exact candidate CI remains pending. Evidence: `audit/casino-continuation-browser-evidence-2026-09-13.json`. Always run against the intended release revision.
 
-## Completed in disposable CI
+## Completed locally
 
-Chromium loaded the **production-mode Vite preview** and actual server functions/catalog at `http://127.0.0.1:8080`. Desktop: 1280×800, Reno. Mobile viewport: 390×844, Newkirk. All 12 check groups passed with zero page errors:
+Chromium 153.0.8010.0 / Playwright loaded the production-mode Vite preview and actual server functions/catalog. Desktop: 1280×800 Reno. Mobile viewport: 390×844 Newkirk. **16 deterministic-outage check groups passed with zero page errors**, including:
 
-- Complete the four-step first-run tour and switch to Nightlife → Casino.
-- Retrieve the saved casino pool during a deterministic server-side Overpass outage.
-- Enable **Open now only**: unknown-hours records are excluded; an empty result disables picking. Disable it to restore eligible destinations.
-- Request options: up to four distinct canonical destinations, bounded by the eligible count. Select one, check its details and exact Google Maps directions destination.
-- Reroll to a different available destination; use **Not tonight** and verify its persisted exclusion.
-- Exercise Favorites-only empty state, manual empty-location/provider-failure state, Dinner/Date Night/Settings navigation, and no horizontal overflow.
+- Four-step tour and Nightlife → Casino.
+- Compiled saved pools: Reno 19, Newkirk 3; stale builds fail the count check.
+- Open now only excludes unknown hours and disables picking on empty; disabling restores eligible destinations.
+- Up to four distinct options, selection, current property details, exact Google Maps destination/security attributes, reroll and persisted Not tonight exclusion.
+- Visible geolocation-denial/manual recovery, manual empty-location/provider-failure state, Favorites empty state, Dinner/Date Night/Settings and no horizontal overflow.
 
-Nominatim locations were deterministic fixtures. Analytics/fonts were outside this functional gate. The external Maps app was not opened; the expected address (or coordinate fallback), `_blank` and `noopener` attributes were asserted. These results do not claim real device geolocation, live-provider success or hosted acceptance.
+The separate localhost-only real-network harness passed Reno, Newkirk, Ardmore and Chandler with **zero findings/errors**. Reno/Newkirk used fallback; Ardmore/Chandler returned live/merged results. Native Chromium permission/coordinate emulation covered grant/denial and manual Nominatim lookup succeeded. Transport recorded 16 Overpass HTTP 200s, two Nominatim HTTP 200s and nine provider timeouts. No provider success is inferred from a fallback alone.
 
-Reproduce the automated check in a disposable clean checkout with Node 22:
+Both harnesses require their own strict-port preview process and verify current catalog counts. An unrelated-server busy-port negative check failed closed. Desktop result/mobile options screenshots were visually inspected.
+
+These results do not claim physical GPS, hosted acceptance, an authenticated account, or opening the external Maps app. Browser dimensions emulate a mobile viewport, not Safari/iOS hardware.
+
+## Reproduce safely
+
+Use Node 22 and a permitted disposable checkout. If Playwright Chromium is already installed, use its supported executable override; do not bypass TLS errors to install a browser.
 
 ```sh
 npm ci --no-audit --no-fund
-node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
+VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
 npx playwright install --with-deps chromium
-CI=true node scripts/casino-browser-smoke.mjs
+VITE_AUTH_ENABLED=true CI=true node scripts/casino-browser-smoke.mjs
+VITE_AUTH_ENABLED=true CASINO_BROWSER_LOCAL=1 node scripts/casino-browser-live-check.mjs
 ```
 
-The network preload fails unless both its smoke flag and CI guard are set. It is never imported by application code. Do not point this script at production. **Do not run `npm run build` during this handoff: it chains database migrations.**
+For this workspace, both scripts accept `CASINO_BROWSER_EXECUTABLE_PATH=/workspace/scratch/60ab73826fd9/browser-engine/chromium`. The deterministic network preload is CI-guarded; the real-network observer is local-only, records host/status/timing without request bodies/credentials and does not mock responses. Neither is imported by application code. Both preview targets are localhost only.
 
-## Remaining live acceptance gate
+Generated screenshots/logs under `audit/browser-results/` are ignored. CI retains the deterministic smoke artifact separately. **Do not run `npm run build`: it chains database migrations. No preview deployment is authorized by this checklist.**
 
-Use a restored local execution environment or an already authorized non-production preview of the release revision. No preview deployment is authorized by this checklist. If no such target is available, leave these checks **NOT RUN**.
+## Controlled-release acceptance matrix
 
-| Route / action | Expected behavior |
+The local evidence above covers representative flows. The following matrix specifies the expected behavior to verify on a separately authorized served revision; remaining hosted/device/account/Maps checks are **NOT RUN**, not passes.
+
+| Route / action | Expected behavior and present coverage |
 | --- | --- |
-| `/` → Nightlife → Casino; first visit and reload | Tour works once; location and exclusions persist; casino flow remains reachable. |
-| Grant, deny and unavailable geolocation; manual city/ZIP | Success uses the requested location; denial/failure offers manual recovery without trapping the user. |
-| Live discovery in Reno, Newkirk, Ardmore and Chandler | Fresh results merge with the curated pool. Correct current names/IDs/addresses survive; nearby predecessor aliases do not create duplicates. Record provider success/outage explicitly. |
-| Radius, venue type, price/unknown price, Favorites, Not tonight, never recommend | Every displayed option satisfies the current filters; expired exclusions stop applying; empty sets show recovery actions and disable picking. |
-| Open now only with known and unknown hours | Only known-open venues qualify. An active property with unknown hours is not represented as currently open. |
-| Repeated single picks and options | Alternatives appear when available; no duplicate IDs in one options set; no crash with one/zero eligible destination. |
-| Google Maps directions and website buttons | Open the actual selected destination. Check desktop browser and a physical mobile Maps app; record the resolved place/entrance. |
-| Reno ROW and J Resort; Tahoe successors | Separate gaming properties remain distinct; Sands Regency/Harveys/MontBleu/Hard Rock Tahoe aliases merge only near their current replacements. |
-| Quapaw new casino, Harrah's Oklahoma, Cadence Crossing | Current property/footprint is selected. Former Quapaw, Ioway and Jokers Wild data cannot be mistaken for current directions. |
-| Oneida Airport/IMAC and Soaring Eagle Slot Palace | Separate floors across the campus/street route to their current distinct destinations. Slot Palace uses 7566 Ogemaw Dr; Oneida IMAC uses 2100 Airport Dr. |
-| Grand Lake Casino / lodge; Montego Bay / Wendover Nugget | Casino uses 24701 S 655 Rd, not the off-site lodge. Montego Bay uses 100 Wendover Blvd; Wendover Nugget uses 101. |
-| Provider timeout, malformed response and offline transition | Honest fallback notice; saved casinos remain usable; no fabricated live/open status. |
-| Dinner, Date Night, Settings and representative mobile navigation | Existing navigation, disclosures and icon packs remain intact; overlays scroll and close; no horizontal overflow. |
+| `/` → Nightlife → Casino; first visit/reload | Tour once, saved preferences and exclusions persist. Representative local checks passed; hosted fresh/existing storage remains. |
+| Grant/deny/unavailable geolocation; city/ZIP | Requested location used; visible error and manual recovery. Local native permission/coordinate emulation and live manual lookup passed; physical GPS remains. |
+| Live discovery: Reno/Newkirk/Ardmore/Chandler | Fresh records merge with canonical pool; provider outage is disclosed. Local real-network checks passed with the recorded successes/timeouts. |
+| Radius, type, price/unknown price, Favorites, exclusions | Displayed options satisfy filters; expired exclusions stop applying; empty sets offer recovery and disable picking. Unit coverage plus representative local browser checks; repeat hosted acceptance. |
+| Open now with known/unknown hours | Only known-open qualifies; active unknown hours does not mean open now. Automated filtering and local empty-state checks passed. |
+| Repeated picks/options and one/zero eligible | Unique IDs/options, alternatives when available, no crash. Unit and representative local browser checks passed. |
+| Maps directions / website | Selected current property opens. Exact href/security checked locally; external navigation and physical mobile Maps resolution remain. |
+| Reno ROW/J Resort; Tahoe successors | Separate floors remain distinct; reviewed predecessors merge only nearby. Automated catalog/alias coverage; inspect selected hosted details. |
+| Quapaw replacement/Harrah’s OK/Cadence | Correct current property/footprint and predecessor handling. Automated data/policy coverage; physical destination acceptance remains. |
+| First Council/Chilocco; Davis West/Treasure Valley; Wells floors | Distinct properties remain selectable, with correct addresses. Newkirk three-option browser check and near-pair regressions passed. |
+| Casino Oklahoma / Elko Roadhouse / Diamond’s | Hinton Cummins property; 1165 E Jennings #102; 1010 E 6th. Evidence and routing regressions passed; inspect opened external destination during acceptance. |
+| Oneida Airport/IMAC and Soaring Eagle Slot Palace | Separate floors route distinctly; Slot Palace 7566 Ogemaw, IMAC 2100 Airport. Automated evidence coverage; external routing remains. |
+| Grand Lake / lodge; Montego Bay / Wendover Nugget | Casino 24701 S 655, not lodge; distinct 100/101 Wendover. Automated evidence coverage; external routing remains. |
+| Timeout/malformed response/offline transition | Honest fallback and usable saved data, no fabricated live/open status. Unit, deterministic outage and real timeout checks passed; hosted offline transition remains. |
+| Sign-in / account state | Auth-enabled build renders and invariants pass. Real authenticated account acceptance remains. |
+| Dinner/Date Night/Settings/mobile | Existing navigation/disclosures/icons intact; overlays scroll/close, no overflow. Representative local checks passed; physical browser checks remain. |
 
-Record revision, URL, browser/device, time, locations, screenshots, provider outcome and actual failures. An unavailable check is not a pass.
+Record revision, URL, browser/device, time, location, screenshots, provider outcome and actual failures. Do not mark an unavailable check as successful.
 
 ## After separately authorized release
 
-Repeat the hosted subset on the released revision: initial load/reload, fresh and existing storage, casino pick/options, real map navigation, provider fallback, mobile behavior and existing non-casino navigation. Verify the served revision/cache reflects the intended release. Use the established reversible release rollback process if a material regression appears; no database migration was introduced by this casino update.
+Verify the served revision/cache, first load/reload, fresh and existing storage, casino pick/options, real Maps navigation, provider fallback, physical mobile behavior and existing non-casino navigation. Verify any authenticated-account path using an authorized account. Follow the established reversible release rollback process if a material regression appears; no database migration was introduced by this casino continuation.

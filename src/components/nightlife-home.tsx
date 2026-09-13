@@ -106,7 +106,8 @@ export function NightlifeHome() {
     setLocBusy(true);
     setLocError(null);
     if (!navigator.geolocation) {
-      setLocError("Location isn't available in this browser.");
+      setLocError("Location isn't available in this browser. Enter a city or ZIP instead.");
+      setLocOpen(true);
       setLocBusy(false);
       return;
     }
@@ -123,8 +124,11 @@ export function NightlifeHome() {
           setLocBusy(false);
         }
       },
-      () => {
-        setLocError("Location permission denied. Enter a city or ZIP instead.");
+      (error) => {
+        setLocError(error.code === 1
+          ? "Location permission denied. Enter a city or ZIP instead."
+          : "Couldn't get your current location. Try again or enter a city or ZIP.");
+        setLocOpen(true);
         setLocBusy(false);
       },
       { enableHighAccuracy: true, timeout: 10000 },
@@ -182,7 +186,7 @@ export function NightlifeHome() {
             <p className="truncate text-base text-fg">{location.label}</p>
           </div>
           <div className="flex gap-1">
-            <Button variant="ghost" size="icon" aria-label="Use current location" onClick={useDeviceLocation}>
+            <Button variant="ghost" size="icon" aria-label="Use current location" disabled={locBusy} onClick={useDeviceLocation}>
               <LocateFixed className="size-5" />
             </Button>
             <Button variant="ghost" size="icon" aria-label="Change location" onClick={() => setLocOpen((value) => !value)}>
@@ -193,7 +197,7 @@ export function NightlifeHome() {
         {locOpen ? (
           <form className="mt-4 space-y-3" onSubmit={searchManualLocation}>
             <Input value={locQuery} onChange={(event) => setLocQuery(event.target.value)} placeholder="City or ZIP code" aria-label="City or ZIP code" />
-            {locError ? <p className="text-sm text-danger">{locError}</p> : null}
+            {locError ? <p role="alert" className="text-sm text-danger">{locError}</p> : null}
             <div className="flex gap-2">
               <Button type="submit" className="flex-1" disabled={locBusy}>{locBusy ? "Finding…" : "Set location"}</Button>
               <Button type="button" variant="secondary" onClick={() => setLocOpen(false)}>Cancel</Button>

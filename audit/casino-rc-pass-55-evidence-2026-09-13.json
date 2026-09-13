@@ -1,0 +1,439 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "pass": 55,
+  "status": "validated-local-data-and-tests",
+  "records": [
+    {
+      "id": "casino-catalog-nv-cactus-jacks",
+      "name": "Cactus Jack's Senator Club",
+      "jurisdiction": "Nevada",
+      "address": "420 N Carson St, Carson City, NV",
+      "lat": 39.166284,
+      "lon": -119.767213,
+      "identitySource": "https://www.nuggetcasinos.com/locations/",
+      "coordinateSource": "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator roster/map and casino social page identify the active Senator Club. A broad Google search returning other Carson casinos is not its point source.",
+      "supportingSources": [
+        "https://www.nuggetcasinos.com/",
+        "https://www.facebook.com/CactusJacksCasino/"
+      ],
+      "coordinateEvidence": {
+        "method": "operator-linked-public-KML-Placemark-Point",
+        "operatorPage": "https://www.nuggetcasinos.com/locations/",
+        "embedUrl": "https://www.google.com/maps/d/u/0/embed?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&ehbc=2E312F",
+        "placemarkName": "Cactus Jack's Senator Club",
+        "coordinateOrder": "longitude,latitude,altitude",
+        "coordinates": [
+          -119.767213,
+          39.166284,
+          0
+        ]
+      }
+    },
+    {
+      "id": "casino-catalog-nv-cod-minden",
+      "name": "COD Casino",
+      "jurisdiction": "Nevada",
+      "address": "1593 Esmeralda Ave, Minden, NV",
+      "lat": 38.953418,
+      "lon": -119.762996,
+      "identitySource": "https://www.nuggetcasinos.com/locations/",
+      "coordinateSource": "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "The dedicated casino in the former COD garage remains an operator-listed gaming property; C.O.D. Garage is an alias, not an extra venue.",
+      "supportingSources": [
+        "https://www.nuggetcasinos.com/"
+      ],
+      "coordinateEvidence": {
+        "method": "operator-linked-public-KML-Placemark-Point",
+        "operatorPage": "https://www.nuggetcasinos.com/locations/",
+        "embedUrl": "https://www.google.com/maps/d/u/0/embed?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&ehbc=2E312F",
+        "placemarkName": "COD Casino",
+        "coordinateOrder": "longitude,latitude,altitude",
+        "coordinates": [
+          -119.762996,
+          38.953418,
+          0
+        ]
+      }
+    },
+    {
+      "id": "casino-catalog-nv-jackpot-crossing-carson",
+      "name": "Jackpot Crossing Casino Carson City",
+      "jurisdiction": "Nevada",
+      "address": "1897 N Edmonds Dr, Carson City, NV",
+      "lat": 39.178194,
+      "lon": -119.724188,
+      "identitySource": "https://www.nuggetcasinos.com/locations/",
+      "coordinateSource": "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "The operator map identifies the Carson City property, distinct from the Fernley casino of the same brand. MapQuest includes a dated May 2026 casino review at the same address.",
+      "supportingSources": [
+        "https://www.nuggetcasinos.com/",
+        "https://www.mapquest.com/us/nevada/jackpot-crossing-casino-10724859"
+      ],
+      "coordinateEvidence": {
+        "method": "operator-linked-public-KML-Placemark-Point",
+        "operatorPage": "https://www.nuggetcasinos.com/locations/",
+        "embedUrl": "https://www.google.com/maps/d/u/0/embed?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&ehbc=2E312F",
+        "placemarkName": "Jackpot Crossing",
+        "coordinateOrder": "longitude,latitude,altitude",
+        "coordinates": [
+          -119.724188,
+          39.178194,
+          0
+        ]
+      }
+    },
+    {
+      "id": "casino-catalog-nv-lucky-strike-carson",
+      "name": "Lucky Strike Casino",
+      "jurisdiction": "Nevada",
+      "address": "2811 S Carson St, Carson City, NV",
+      "lat": 39.1415853,
+      "lon": -119.767567,
+      "identitySource": "https://www.nuggetcasinos.com/locations/",
+      "coordinateSource": "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current named Google casino destination exactly matches the operator point. Lucky Strike Tavern elsewhere in Carson City is not this casino.",
+      "supportingSources": [
+        "https://www.nuggetcasinos.com/",
+        "https://www.google.com/maps/search/?api=1&query=Lucky%20Strike%20Casino%202811%20South%20Carson%20Street"
+      ],
+      "coordinateEvidence": {
+        "method": "operator-linked-public-KML-Placemark-Point",
+        "operatorPage": "https://www.nuggetcasinos.com/locations/",
+        "embedUrl": "https://www.google.com/maps/d/u/0/embed?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&ehbc=2E312F",
+        "placemarkName": "Lucky Strike Casino",
+        "coordinateOrder": "longitude,latitude,altitude",
+        "coordinates": [
+          -119.767567,
+          39.1415853,
+          0
+        ]
+      }
+    },
+    {
+      "id": "casino-catalog-nv-comstock-carson",
+      "name": "Comstock Casino Carson City",
+      "jurisdiction": "Nevada",
+      "address": "3680 Goni Rd, Carson City, NV",
+      "lat": 39.192113,
+      "lon": -119.747548,
+      "identitySource": "https://www.nuggetcasinos.com/locations/",
+      "coordinateSource": "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current named casino map/category and the operator roster confirm the Goni Road casino; the Fallon Comstock is a separate property.",
+      "supportingSources": [
+        "https://www.nuggetcasinos.com/",
+        "https://www.google.com/maps/search/?api=1&query=Comstock%20Casino%203680%20Goni%20Road%20Carson%20City"
+      ],
+      "coordinateEvidence": {
+        "method": "operator-linked-public-KML-Placemark-Point",
+        "operatorPage": "https://www.nuggetcasinos.com/locations/",
+        "embedUrl": "https://www.google.com/maps/d/u/0/embed?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&ehbc=2E312F",
+        "placemarkName": "Comstock Casino",
+        "coordinateOrder": "longitude,latitude,altitude",
+        "coordinates": [
+          -119.747548,
+          39.192113,
+          0
+        ]
+      }
+    },
+    {
+      "id": "casino-catalog-nv-tahoe-nugget",
+      "name": "Tahoe Nugget Casino",
+      "jurisdiction": "Nevada",
+      "address": "177 US-50, Stateline, NV 89449",
+      "lat": 38.9712547,
+      "lon": -119.9345298,
+      "identitySource": "https://www.nuggetcasinos.com/locations/",
+      "coordinateSource": "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current casino map identity links back to the operator; official named KML marker supplies the property point and address.",
+      "supportingSources": [
+        "https://www.nuggetcasinos.com/",
+        "https://www.google.com/maps/search/?api=1&query=Tahoe%20Nugget%20Casino%20177%20Highway%2050"
+      ],
+      "coordinateEvidence": {
+        "method": "operator-linked-public-KML-Placemark-Point",
+        "operatorPage": "https://www.nuggetcasinos.com/locations/",
+        "embedUrl": "https://www.google.com/maps/d/u/0/embed?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&ehbc=2E312F",
+        "placemarkName": "Tahoe Nugget",
+        "coordinateOrder": "longitude,latitude,altitude",
+        "coordinates": [
+          -119.9345298,
+          38.9712547,
+          0
+        ]
+      }
+    },
+    {
+      "id": "casino-catalog-nv-comstock-fallon",
+      "name": "Comstock Casino Fallon",
+      "jurisdiction": "Nevada",
+      "address": "1975 S Taylor St, Fallon, NV",
+      "lat": 39.460789,
+      "lon": -118.781128,
+      "identitySource": "https://www.nuggetcasinos.com/locations/",
+      "coordinateSource": "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current named Google place and operator roster/map identify the Fallon casino, distinct from Comstock in Carson City and retired Reno hotel branding.",
+      "supportingSources": [
+        "https://www.nuggetcasinos.com/",
+        "https://www.google.com/maps/search/?api=1&query=Comstock%20Casino%201975%20South%20Taylor%20Fallon"
+      ],
+      "coordinateEvidence": {
+        "method": "operator-linked-public-KML-Placemark-Point",
+        "operatorPage": "https://www.nuggetcasinos.com/locations/",
+        "embedUrl": "https://www.google.com/maps/d/u/0/embed?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&ehbc=2E312F",
+        "placemarkName": "Comstock Casino",
+        "coordinateOrder": "longitude,latitude,altitude",
+        "coordinates": [
+          -118.781128,
+          39.460789,
+          0
+        ]
+      }
+    },
+    {
+      "id": "casino-catalog-nv-fallon-nugget",
+      "name": "Fallon Nugget",
+      "jurisdiction": "Nevada",
+      "address": "70 S Maine St, Fallon, NV 89406",
+      "lat": 39.474099,
+      "lon": -118.777416,
+      "identitySource": "https://www.nuggetcasinos.com/locations/",
+      "coordinateSource": "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current Google casino listing supplies the same address, operator and phone; hotel/restaurant components are one casino destination.",
+      "supportingSources": [
+        "https://www.nuggetcasinos.com/",
+        "https://www.google.com/maps/search/?api=1&query=Fallon%20Nugget%2070%20South%20Maine%20Street"
+      ],
+      "coordinateEvidence": {
+        "method": "operator-linked-public-KML-Placemark-Point",
+        "operatorPage": "https://www.nuggetcasinos.com/locations/",
+        "embedUrl": "https://www.google.com/maps/d/u/0/embed?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&ehbc=2E312F",
+        "placemarkName": "Fallon Nugget",
+        "coordinateOrder": "longitude,latitude,altitude",
+        "coordinates": [
+          -118.777416,
+          39.474099,
+          0
+        ]
+      }
+    },
+    {
+      "id": "casino-catalog-nv-fernley-nugget",
+      "name": "Fernley Nugget",
+      "jurisdiction": "Nevada",
+      "address": "1190 E Main St, Fernley, NV 89408",
+      "lat": 39.604948,
+      "lon": -119.231413,
+      "identitySource": "https://www.nuggetcasinos.com/locations/",
+      "coordinateSource": "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator roster plus MapQuest/Yelp and poker-room directory agree on 1190 E Main; the older 1130 claim is rejected rather than copied into routing.",
+      "supportingSources": [
+        "https://www.nuggetcasinos.com/",
+        "https://www.mapquest.com/us/nevada/fernley-nugget-304749273"
+      ],
+      "coordinateEvidence": {
+        "method": "operator-linked-public-KML-Placemark-Point",
+        "operatorPage": "https://www.nuggetcasinos.com/locations/",
+        "embedUrl": "https://www.google.com/maps/d/u/0/embed?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&ehbc=2E312F",
+        "placemarkName": "Fernley Nugget",
+        "coordinateOrder": "longitude,latitude,altitude",
+        "coordinates": [
+          -119.231413,
+          39.604948,
+          0
+        ]
+      }
+    },
+    {
+      "id": "casino-catalog-nv-jackpot-crossing-fernley",
+      "name": "Jackpot Crossing Casino Fernley",
+      "jurisdiction": "Nevada",
+      "address": "206 Logan Ln, Fernley, NV",
+      "lat": 39.6140714,
+      "lon": -119.2640531,
+      "identitySource": "https://www.nuggetcasinos.com/locations/",
+      "coordinateSource": "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current named Google casino is at 206 Logan Lane and agrees with the operator marker. It is separate from Carson City Jackpot Crossing.",
+      "supportingSources": [
+        "https://www.nuggetcasinos.com/",
+        "https://www.google.com/maps/search/?api=1&query=Jackpot%20Crossing%201897%20Edmonds%20Carson%20City"
+      ],
+      "coordinateEvidence": {
+        "method": "operator-linked-public-KML-Placemark-Point",
+        "operatorPage": "https://www.nuggetcasinos.com/locations/",
+        "embedUrl": "https://www.google.com/maps/d/u/0/embed?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&ehbc=2E312F",
+        "placemarkName": "Jackpot Crossing",
+        "coordinateOrder": "longitude,latitude,altitude",
+        "coordinates": [
+          -119.2640531,
+          39.6140714,
+          0
+        ]
+      }
+    },
+    {
+      "id": "casino-catalog-nv-silver-springs-nugget",
+      "name": "Silver Springs Nugget Casino",
+      "jurisdiction": "Nevada",
+      "address": "1280 US Highway 95A N, Silver Springs, NV",
+      "lat": 39.417566,
+      "lon": -119.225033,
+      "identitySource": "https://www.nuggetcasinos.com/locations/",
+      "coordinateSource": "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current named casino links to the operator and confirms ongoing gaming; operator address and named marker determine routing.",
+      "supportingSources": [
+        "https://www.nuggetcasinos.com/",
+        "https://www.google.com/maps/search/?api=1&query=Silver%20Springs%20Nugget%20Casino"
+      ],
+      "coordinateEvidence": {
+        "method": "operator-linked-public-KML-Placemark-Point",
+        "operatorPage": "https://www.nuggetcasinos.com/locations/",
+        "embedUrl": "https://www.google.com/maps/d/u/0/embed?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&ehbc=2E312F",
+        "placemarkName": "Silver Springs Nugget Casino",
+        "coordinateOrder": "longitude,latitude,altitude",
+        "coordinates": [
+          -119.225033,
+          39.417566,
+          0
+        ]
+      }
+    }
+  ],
+  "operatorMap": {
+    "source": "https://www.google.com/maps/d/kml?mid=1HmuYuOSwmi_CP8ID4ZbBaxNVdI0Mlos&forcekml=1",
+    "placemarks": [
+      {
+        "name": "Cactus Jack's Senator Club",
+        "lat": 39.166284,
+        "lon": -119.767213
+      },
+      {
+        "name": "COD Casino",
+        "lat": 38.953418,
+        "lon": -119.762996
+      },
+      {
+        "name": "Jackpot Crossing",
+        "lat": 39.178194,
+        "lon": -119.724188
+      },
+      {
+        "name": "Lucky Strike Casino",
+        "lat": 39.1415853,
+        "lon": -119.767567
+      },
+      {
+        "name": "Comstock Casino",
+        "lat": 39.192113,
+        "lon": -119.747548
+      },
+      {
+        "name": "Tahoe Nugget",
+        "lat": 38.9712547,
+        "lon": -119.9345298
+      },
+      {
+        "name": "Bonanza Inn & Casino",
+        "lat": 39.4743293,
+        "lon": -118.7872972
+      },
+      {
+        "name": "Comstock Casino",
+        "lat": 39.460789,
+        "lon": -118.781128
+      },
+      {
+        "name": "Fallon Nugget",
+        "lat": 39.474099,
+        "lon": -118.777416
+      },
+      {
+        "name": "Fernley Nugget",
+        "lat": 39.604948,
+        "lon": -119.231413
+      },
+      {
+        "name": "Jackpot Crossing",
+        "lat": 39.6140714,
+        "lon": -119.2640531
+      },
+      {
+        "name": "Silver Springs Nugget Casino",
+        "lat": 39.417566,
+        "lon": -119.225033
+      },
+      {
+        "name": "Wigwam Restaurant & Casino",
+        "lat": 39.6077442,
+        "lon": -119.2557446
+      },
+      {
+        "name": "Hangar Tavern",
+        "lat": 39.1784266,
+        "lon": -119.732808
+      },
+      {
+        "name": "Lucky Strike Tavern",
+        "lat": 39.1707339,
+        "lon": -119.7635214
+      },
+      {
+        "name": "Woody's\u00a0",
+        "lat": 39.1789844,
+        "lon": -119.7665897
+      },
+      {
+        "name": "Bob & Lucy's- Oddie",
+        "lat": 39.5449176,
+        "lon": -119.7624134
+      },
+      {
+        "name": "Bob & Lucy's- Sun Valley",
+        "lat": 39.5765877,
+        "lon": -119.7814491
+      }
+    ],
+    "excludedFromAddition": [
+      "Bonanza Inn & Casino already represented",
+      "Wigwam retains property/gaming-floor point reconciliation hold",
+      "Hangar Tavern, Lucky Strike Tavern, Woody's and both Bob & Lucy's properties are not promoted from mixed operator-map membership"
+    ]
+  },
+  "remainingHold": {
+    "name": "Wigwam Restaurant & Casino",
+    "operatorPoint": [
+      39.6077442,
+      -119.2557446
+    ],
+    "currentAddressPoint": [
+      39.6074364,
+      -119.2543242
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=255+W+Main+St+Fernley+NV",
+    "reason": "Operator marker differs from current address/restaurant building by roughly 400 feet. Keep the casino-floor scope and exact point hold; do not silently substitute the restaurant."
+  }
+}

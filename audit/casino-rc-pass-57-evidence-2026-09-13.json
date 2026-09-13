@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "pass": 57,
+  "status": "validated-local-data-and-tests",
+  "records": [
+    {
+      "id": "casino-catalog-nv-big-wheel-battle-mountain",
+      "name": "Big Wheel Casino Battle Mountain",
+      "jurisdiction": "Nevada",
+      "address": "725 Hilltop Rd, Battle Mountain, NV 89820",
+      "lat": 40.61979,
+      "lon": -116.915238,
+      "identitySource": "https://docu.team/mtiodew/index.php?v=lp&store=96277",
+      "coordinateSource": "https://www.mapquest.com/us/nevada/big-wheel-casino-799222125",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current Battle Mountain Chamber member/operator profile confirms a casino floor and promotions at 725 Hilltop Road. Named MapQuest point agrees with the exact-address Google building within about 50 feet. A broad named Google result is a different Big Wheel in Lovelock and was rejected.",
+      "coordinateEvidence": {
+        "method": "named-LocalBusiness-GeoCoordinates",
+        "fields": {
+          "name": "Big Wheel Casino",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "Battle Mountain",
+            "addressRegion": "NV",
+            "postalCode": "89820-2445",
+            "streetAddress": "725 Hilltop Rd"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.61979,
+            "longitude": -116.915238
+          }
+        }
+      }
+    },
+    {
+      "id": "casino-catalog-nv-owl-club",
+      "name": "Owl Club Casino & Restaurant",
+      "jurisdiction": "Nevada",
+      "address": "72 E Front St, Battle Mountain, NV 89820",
+      "lat": 40.6414608,
+      "lon": -116.9342599,
+      "identitySource": "https://travelnevada.com/motels/owl-club-casino-restaurant-motel",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Owl%20Club%20Casino%20Battle%20Mountain%20Nevada",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current state tourism listing and named property map identify the casino/restaurant/motel. Recent map review describes separate casino and restaurant rooms in the same building; one destination.",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Owl+Club+Casino+%26+Restaurant/@40.6414608,-116.9342599,17z/data=!3m1!4b1!4m6!3m5!1s0x80a6a4fcc663432d:0x92a69a0595b50bba!8m2!3d40.6414608!4d-116.9342599!16s%2Fg%2F1tj3lb8_?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "id": "casino-catalog-nv-alamo-wells",
+      "name": "Alamo Casino Wells Petro",
+      "jurisdiction": "Nevada",
+      "address": "1440 6th St, Wells, NV 89835",
+      "lat": 41.1009333,
+      "lon": -114.955475,
+      "identitySource": "https://www.thealamo.com/alamo-casino-wells/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Alamo%20Casino%20Wells%20Nevada",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator explicitly advertises the Wells casino floor, slot machines and sportsbook kiosk at Wells Petro. Distinct from Alamo Sparks and other Alamo properties.",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Alamo+Casino/@41.1009333,-114.955475,17z/data=!3m1!4b1!4m6!3m5!1s0x80a8d6f9c7cb2bc3:0x90c42f9d6efe5551!8m2!3d41.1009333!4d-114.955475!16s%2Fg%2F11ghtdw6dh?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "id": "casino-catalog-nv-copper-queen-ely",
+      "name": "Copper Queen Hotel & Casino",
+      "jurisdiction": "Nevada",
+      "address": "805 Great Basin Blvd, Ely, NV 89301",
+      "lat": 39.2507455,
+      "lon": -114.8731841,
+      "identitySource": "https://copperqueenely.com/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Copper%20Queen%20Casino%20Ely%20Nevada",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator advertises Copper Queen Casino gaming, player rewards and drawing nights. Ramada Inn/Copper Queen is the former hotel branding of this same destination, not another casino.",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Copper+Queen+Hotel+%26+Casino/@39.2507455,-114.8731841,17z/data=!3m1!4b1!4m9!3m8!1s0x80b1ac9bb66743e7:0xc0d9d9461e0da7da!5m2!4m1!1i2!8m2!3d39.2507455!4d-114.8731841!16s%2Fg%2F11yhs6x144?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "id": "casino-catalog-nv-jailhouse-ely",
+      "name": "Jailhouse Motel & Casino",
+      "jurisdiction": "Nevada",
+      "address": "211 5th St, Ely, NV 89301",
+      "lat": 39.248564,
+      "lon": -114.892898,
+      "identitySource": "https://elynevada.net/gaming/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Jailhouse%20Casino%20Ely%20Nevada",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current local tourism gaming roster and named hotel/casino map support the property across from Hotel Nevada. Operator casino page remains indexed with gaming details, but direct fetch returned 404/unreachable; no successful operator fetch is claimed.",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Jailhouse+Motel+%26+Casino/@39.248564,-114.892898,17z/data=!3m1!4b1!4m9!3m8!1s0x80b1acafe2a91985:0x7f9bf5a5f9117ef1!5m2!4m1!1i2!8m2!3d39.248564!4d-114.892898!16s%2Fg%2F1td6ycfb?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "id": "casino-catalog-nv-dinis-yerington",
+      "name": "Dini's Lucky Club Casino",
+      "jurisdiction": "Nevada",
+      "address": "45 N Main St, Yerington, NV 89447",
+      "lat": 38.9885871,
+      "lon": -119.1635774,
+      "identitySource": "https://dinisluckyclub.com/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Dini%27s+Lucky+Club+45+N+Main+St+Yerington",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current first-party casino page gives casino gaming, address, distinct restaurant hours and a June 2026 event. Named address-qualified destination supplies the point; the restaurant and Cellar are components, not extra casinos.",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Dini's+Lucky+Club+Casino/@38.9885871,-119.1635774,17z/data=!3m1!4b1!4m6!3m5!1s0x809838e0b695f4dd:0x22a3cf0d95a7cc46!8m2!3d38.9885871!4d-119.1635774!16s%2Fm%2F05f9gzl?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "id": "casino-catalog-nv-stagecoach-beatty",
+      "name": "Stagecoach Hotel & Casino",
+      "jurisdiction": "Nevada",
+      "address": "900 US-95, Beatty, NV 89003",
+      "lat": 36.9148712,
+      "lon": -116.7532043,
+      "identitySource": "https://stagecoachhotelandcasino.com/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Stagecoach%20Casino%20Beatty%20Nevada",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator explicitly advertises a 24-hour on-site casino; the named resort point is supported. Hotel, casino, bar and Denny's are one destination.",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/StageCoach+Hotel+%26+Casino/@36.9148712,-116.7532043,17z/data=!3m1!4b1!4m9!3m8!1s0x80b898d77750cb8b:0xe3066e0b0af74677!5m2!4m1!1i2!8m2!3d36.9148712!4d-116.7532043!16zL20vMDg3dDJq?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "id": "casino-catalog-nv-el-capitan-hawthorne",
+      "name": "El Capitan Casino",
+      "jurisdiction": "Nevada",
+      "address": "540 F St, Hawthorne, NV 89415",
+      "lat": 38.5251403,
+      "lon": -118.6237899,
+      "identitySource": "https://elcapcasino.com/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=El%20Capitan%20Casino%20Hawthorne%20Nevada",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator confirms redesigned casino gaming floor, slots, video poker and promotions. Named casino point is distinct from hotel/parking components. El Capitan Lodge/Resort casino names refer to this destination.",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/El+Capitan+Casino/@38.5251403,-118.6237899,17z/data=!3m1!4b1!4m6!3m5!1s0x80bd614aa77df891:0xfc5d63fb7ad29567!8m2!3d38.5251403!4d-118.6237899!16s%2Fg%2F11t7tbmb2c?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "id": "casino-catalog-nv-four-jacks-jackpot",
+      "name": "Four Jacks Hotel & Casino",
+      "jurisdiction": "Nevada",
+      "address": "1702 US-93, Jackpot, NV 89825",
+      "lat": 41.9814376,
+      "lon": -114.6740951,
+      "identitySource": "https://www.gaming.nv.gov/contentassets/aa7619241e334b1cb1d9ad662d0945d1/june-2026-ngc-disposition.pdf",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Four%20Jacks%20Casino%20Jackpot%20Nevada",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "June 2026 Gaming Commission disposition identifies Four Jacks and its gaming revenue/sportsbook arrangements at 1702 US Highway 93. Current town directory, hotel/casino map and casino-floor reviews corroborate the operating destination; sportsbook and hotel are not extra records.",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Four+Jacks+Hotel+and+Casino/@41.9814376,-114.6740951,17z/data=!3m1!4b1!4m9!3m8!1s0x80a9afc8c99401c5:0x66ee23eed3434cc5!5m2!4m1!1i2!8m2!3d41.9814376!4d-114.6740951!16s%2Fg%2F1tnjjv2k?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "id": "casino-catalog-nv-diamonds-reno",
+      "name": "Diamond's Casino",
+      "jurisdiction": "Nevada",
+      "address": "1010 E 6th St, Reno, NV 89512",
+      "lat": 39.5340412,
+      "lon": -119.7994381,
+      "identitySource": "https://diamondscasinoreno.com/casino",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Diamonds%20Casino%20Reno%20Nevada",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator advertises slots, player rewards and casino events. Named casino map links to the same operator; hotel/restaurant components remain one property. Current operator contact address is 1010 E 6th St; an unconfirmed 4th Street draft address was corrected before validation/promotion.",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Diamond's+Casino/@39.5340412,-119.7994381,17z/data=!3m1!4b1!4m6!3m5!1s0x8099474dfc2292f7:0x636b5b3950209557!8m2!3d39.5340412!4d-119.7994381!16s%2Fg%2F1hc776shw?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      },
+      "supportingSources": [
+        "https://diamondscasinoreno.com/contact/"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-petes-winnemucca",
+      "name": "Pete's Gambling Hall",
+      "jurisdiction": "Nevada",
+      "address": "1985 W Winnemucca Blvd, Winnemucca, NV 89445",
+      "lat": 40.9585483,
+      "lon": -117.7472749,
+      "identitySource": "https://petesgamblinghall.com/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Petes%20Gambling%20Hall%20Winnemucca%20Nevada",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator confirms a dedicated gaming floor with over 60 machines and a sportsbook. Attached Holiday Inn Express is the same destination; Winners Inn and Sundance are separate properties.",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Pete%E2%80%99s+Gambling+Hall/@40.9585483,-117.7472749,17z/data=!3m1!4b1!4m6!3m5!1s0x80a0fcd083121481:0xfb1c00b8c9a153e7!8m2!3d40.9585483!4d-117.7472749!16s%2Fg%2F1ptx72t3c?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    },
+    {
+      "id": "casino-catalog-nv-alamo-mill-city",
+      "name": "Alamo Casino Mill City TA",
+      "jurisdiction": "Nevada",
+      "address": "6000 E Frontage Rd, Mill City, NV 89418",
+      "lat": 40.6931532,
+      "lon": -118.0560235,
+      "identitySource": "https://www.thealamo.com/alamo-casino-mill-city-ta/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Alamo%20Casino%20Mill%20City%20Nevada",
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator portfolio and Mill City pages identify the casino at 6000 E Frontage Road; named casino destination supplies the point. Distinct from Wells and Sparks Alamo floors.",
+      "coordinateEvidence": {
+        "method": "explicit-destination-not-viewport",
+        "finalUrl": "https://www.google.com/maps/place/Alamo+Casino/@40.6931532,-118.0560235,17z/data=!3m1!4b1!4m6!3m5!1s0x80a1af7f9de1f649:0x9bde84de0dd2293e!8m2!3d40.6931532!4d-118.0560235!16s%2Fg%2F1hbpwrvtn?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+      }
+    }
+  ],
+  "held": [
+    {
+      "name": "Broadway Colt Inn Casino",
+      "sources": [
+        "https://travelnevada.com/resorts-casinos/broadway-colt-inn-casino-restaurant/",
+        "https://www.google.com/maps/search/?api=1&query=654+W+Front+St+Battle+Mountain",
+        "https://www.mapquest.com/us/nevada/broadway-colt-inn-casino-and-restaurant-372623772"
+      ],
+      "reason": "State tourism point/address targets the RV park; named casino and two street-address points disagree across a large travel-center campus. Current operation likely; casino routing entrance/address needs reconciliation."
+    },
+    {
+      "name": "C Punch / Lovelock Junction",
+      "sources": [
+        "https://lovelockjunctionhotel.com/",
+        "https://www.google.com/maps/search/?api=1&query=Lovelock+Junction+Casino+1420+Cornell",
+        "https://www.bestwestern.com/en_US/book/hotels-in-lovelock/surestay-by-best-western-lovelock/propertyCode.52143.html"
+      ],
+      "reason": "Legacy C Punch and Sturgeon's Inn maps permanently closed, Lovelock Junction website advertises renamed hotel/casino, current SureStay operator confirms hotel but casino operation is unclear. No closure rule or new casino promoted without resolving operating floor."
+    },
+    {
+      "name": "Border Inn Casino",
+      "sources": [
+        "https://borderinncasino.com/",
+        "https://www.google.com/maps/search/?api=1&query=Border+Inn+Casino+Baker+Nevada"
+      ],
+      "reason": "Active operator casino supported; complex straddles Nevada/Utah. Named hotel point is east of the boundary area. Casino-floor point needs confirmation; do not turn hotel pin into Nevada gaming-floor evidence."
+    }
+  ],
+  "excludedPoint": {
+    "property": "Big Wheel Casino Battle Mountain",
+    "point": [
+      40.1771044,
+      -118.4693194
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=Big+Wheel+Casino+725+Hill+Top+Rd+Nevada",
+    "reason": "Different same-name casino in Lovelock. Selected Battle Mountain point agrees with operator street address."
+  }
+}
