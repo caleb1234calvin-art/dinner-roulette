@@ -1,16 +1,20 @@
 # Dinner Roulette / Pick For Me — AI Continuity
 
-Updated September 13, 2026 at Caleb’s request **“Lets update the AI continuity”**, after completion of the resumed casino continuation. This refresh changes only `AI_CONTINUITY.md`; it records the final verified state without restarting research, changing application code/data, merging separate work or deploying. The earlier stop was lifted by “Let’s continue what we were doing now.” The exact paused 808-destination continuity is preserved in `audit/ai-continuity-before-casino-continuation-2026-09-13.md`; earlier history remains in the other continuity archives.
+Updated September 13, 2026 at Caleb’s request **“Update the AI continuity that we have been using”**, after completion of the resumed casino continuation and successful validation of the previous continuity update. This refresh changes only `AI_CONTINUITY.md`; it records the final verified state without restarting research, changing application code/data, merging separate work or deploying. The earlier stop was lifted by “Let’s continue what we were doing now.” The exact paused 808-destination continuity is preserved in `audit/ai-continuity-before-casino-continuation-2026-09-13.md`; earlier history remains in the other continuity archives.
 
 **Current status: 857 destinations, validated and promoted to non-production integration.** No main promotion, deployment, database migration or recurring monitoring has occurred in this continuation.
 
+## Shared handoff location
+
+The active shared handoff is this existing root file: **`caleb1234calvin-art/dinner-roulette` → `integration/active-work-pass-1` → `AI_CONTINUITY.md`**. Future sessions should read it with that branch explicitly selected. Main intentionally does not contain these unreleased integration updates. The `audit/ai-continuity-*.md` files are historical snapshots; preserve them as history.
+
 ## Latest verified checkpoint
 
-The latest completed checkpoint is **`c7cb8d08d785a689316ec39370b7212dd9071b9b`** on `integration/active-work-pass-1`. [CI Run 319](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34769203422) succeeded at that exact revision: **322 unique tests passed, zero failures, four understood documentation skips**, plus typecheck, catalog audits, both safe builds, all **16 browser check groups** and **30 Dinner icon assets**. Run 319 validates the final seven-document handoff checkpoint following the already validated casino merge.
+The latest completed checkpoint is **`c0847e265985565b88bae980f412385cd2c2502d`** on `integration/active-work-pass-1`. [CI Run 320](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34771586726) succeeded at that exact revision: **322 unique tests passed, zero failures, four understood documentation skips**, plus typecheck, catalog audits, both safe builds, all **16 browser check groups** and **30 Dinner icon assets**. Run 320 validates the preceding continuity-only update. The earlier seven-document release handoff at `c7cb8d08d785a689316ec39370b7212dd9071b9b` passed [Run 319](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34769203422).
 
 The persisted continuation diff against `2fd976a4f34f8bbe28db1075a264693d691b8253` contains **27 expected paths, zero unexpected paths and zero deleted files**. The isolated checkout was clean and matched the published integration revision when this refresh began. Main and the separate location/international branch were re-read unchanged. No production/Vercel deployment, migration or recurring monitoring occurred.
 
-This requested continuity refresh follows Run 319 and preserves all application/data/configuration/dependency files. No new live-provider or physical-device validation is claimed for this refresh. Its own documentation commit and CI result are subsequent to the checkpoint above; verify the latest remote ref and Actions result when resuming.
+This requested continuity refresh follows Run 320 and preserves all application/data/configuration/dependency files. No new live-provider or physical-device validation is claimed for this refresh. Its own documentation commit and CI result are subsequent to the checkpoint above; verify the latest remote ref and Actions result when resuming.
 
 ## Working state and authority
 
@@ -109,15 +113,28 @@ Agent-browser Chromium installation failed with UnknownIssuer and its daemon fai
 
 A standalone auth probe without its required local dev endpoint was indeterminate, not a pass. Subsequent probes against the owned dev server passed with auth disabled and enabled. Initial targeted lint reported two harness issues; both were fixed and final targeted lint passed. The baseline live-browser hidden-location-error finding was fixed and final updated-build runs passed. Busy-port failure was an intentional negative test, not an unexplained release failure.
 
-CI Run 316 at `146d8cbfc6440e76b2b26c83bce3567fd3a487e8` passed tests/audits/builds, but its browser did not run: ANSI terminal formatting split the owned preview URL and caused a false startup timeout. Both harnesses now strip that formatting. A local smoke with `NO_COLOR` unset and `FORCE_COLOR=1` confirmed actual ANSI output and all 16 groups passed; subsequent exact-head Runs 317, 318 and 319 passed. The failed attempt is preserved, not counted as a browser pass.
+CI Run 316 at `146d8cbfc6440e76b2b26c83bce3567fd3a487e8` passed tests/audits/builds, but its browser did not run: ANSI terminal formatting split the owned preview URL and caused a false startup timeout. Both harnesses now strip that formatting. A local smoke with `NO_COLOR` unset and `FORCE_COLOR=1` confirmed actual ANSI output and all 16 groups passed; subsequent exact-head Runs 317, 318, 319 and 320 passed. The failed attempt is preserved, not counted as a browser pass.
 
 Direct Git push lacked CLI credentials. The existing authorized GitHub connector published the exact validated file tree; no credentials were read or modified. The original local commit was preserved and the checkout reconciled to the published history.
 
 Some research sources failed or returned stale/conflicting addresses, including the Jailhouse direct page, a parked Border Casino domain and inaccurate operator map/address fields. Sidecars retain sufficient alternate current primary/local evidence or a hold. No provider/authentication boundary was bypassed.
 
+## Supporting release records
+
+Read these existing files from the same integration branch when details are needed:
+
+- `audit/casino-release-readiness-2026-09-13.md`: release gate, validated scope and recovery guidance.
+- `audit/casino-rc-progress-2026-09-13.json`: changes, exact test/skip reasons, earlier CI attempts and the validated integration merge.
+- `audit/casino-rc-coverage-2026-09-13.json`: Nevada/Oklahoma decisions and remaining coverage scope.
+- `audit/casino-status-watchlist-2026-09-13.json`: all 25 prepared status/hold records and recheck triggers; no recurring monitoring.
+- `audit/casino-continuation-browser-evidence-2026-09-13.json`: actual local/CI browser evidence and limits.
+- `audit/casino-browser-release-checklist-2026-09-13.md`: the exact hosted/device/account/Maps checks still required during an authorized release.
+
+Those supporting records retain the validated casino implementation and merge evidence. This continuity file records the subsequent documentation checkpoints; no new application changes are implied by those later CI runs.
+
 ## Exact next action and recovery
 
-The casino continuation is complete in non-production integration. Read the current integration ref and its latest CI result before any further action; this continuity-only refresh follows successful Run 319 at `c7cb8d08d785a689316ec39370b7212dd9071b9b`. Preserve the separate location/international work. The exact remaining work is a separately authorized controlled main/hosted release and the served-revision, physical-device, authenticated-account and external Maps acceptance checklist. Further statewide coverage is optional expansion of the explicitly partial scope, not a claim already completed.
+The casino continuation is complete in non-production integration. Read the current integration ref and its latest CI result before any further action; this continuity-only refresh follows successful Run 320 at `c0847e265985565b88bae980f412385cd2c2502d`. Preserve the separate location/international work. The exact remaining work is a separately authorized controlled main/hosted release and the served-revision, physical-device, authenticated-account and external Maps acceptance checklist. Further statewide coverage is optional expansion of the explicitly partial scope, not a claim already completed.
 
 ## REQUIRES USER AUTHORIZATION
 
