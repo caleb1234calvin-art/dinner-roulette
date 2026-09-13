@@ -198,8 +198,10 @@
   },
   "remainingBeforeIntegration": [],
   "remainingReleaseOnly": [
-    "Physical-phone GPS and OS permission dialogs, including permission revocation behavior.",
-    "Installed PWA, authorized hosted/account sessions and external Maps app navigation."
+    "Verify the actual hosted project repository/branch/effective build command and confirm a migration-free release path before any main promotion or deployment. Connected Vercel list_teams returned [] and no local project-link metadata exists; no hosted setting was changed.",
+    "Obtain separate authorization for main promotion, deployment and any required project configuration change. The integration/** exclusion does not establish that a main merge is non-deploying.",
+    "Physical-phone GPS and OS permission dialogs, including permission revocation and approximate location.",
+    "Installed PWA, authorized hosted/account sessions, served-cache acceptance and external Maps app navigation."
   ],
   "scopeProof": {
     "changedFiles": [
@@ -384,5 +386,41 @@
     "CI adds combined location browser acceptance, build/source/output guards and evidence retention. No dependency, package, lockfile, Vite or deployment exclusion changes."
   ],
   "recovery": "Preserve the validated candidate and frozen casino baseline. Any rollback should be a reviewed revert on non-production integration; do not reset main or discard casino history. No database changes require rollback.",
-  "exactNextAction": "Return control. Use the combined integration as the release candidate; separately authorize main promotion/hosted release, then complete the documented physical-device, PWA, account and external Maps acceptance."
+  "exactNextAction": "Keep the combined candidate frozen. Restore read-only access to the correct Vercel project or provide its effective build/Git settings, then verify that the release path cannot implicitly migrate. Obtain separate release authorization before main promotion or deployment; use the updated existing release checklist for device/hosted acceptance.",
+  "releaseHandoffFollowup": {
+    "validatedRuntimeAndPriorHandoff": "40f9fb8d162caac061fcf7927894bd2107b434ad",
+    "validatedRuntimeCI": {
+      "number": 346,
+      "id": 34779588384,
+      "conclusion": "success",
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34779588384"
+    },
+    "reason": "The referenced browser release checklist still described 857 casinos and omitted the source/output proof capture and completion required by the current harnesses.",
+    "changed": [
+      "Updated the existing release checklist to 883 casinos and 30 combined browser groups.",
+      "Documented fail-fast migration-free build commands, both executable overrides, all four harnesses, physical-device/hosted acceptance and controlled rollback.",
+      "Recorded unavailable Vercel project inspection rather than assuming a migration-free hosted build."
+    ],
+    "validation": {
+      "buildProofOrder": "PASS",
+      "configClaims": "PASS",
+      "diffCheck": "PASS",
+      "protectedFilesUnchanged": 78,
+      "providerSettingsCheck": "UNAVAILABLE: Vercel list_teams returned [] and no local project metadata",
+      "runtimeChanged": false,
+      "scriptPaths": "PASS",
+      "shellBlocks": 3,
+      "sourceProof": "PASS",
+      "unsafeCommands": 0
+    },
+    "implementationChanged": false,
+    "casinoDataChanged": false,
+    "newTestsAdded": 0,
+    "priorScopeFiles": 43,
+    "currentScopeFiles": 44,
+    "additionalScopePath": "audit/casino-browser-release-checklist-2026-09-13.md",
+    "newLocalFullSuiteRun": false,
+    "newLocalBuildRun": false,
+    "reasonFullLocalGatesNotRepeated": "Only documentation changed; existing source/output proof matches the green runtime. Automatic CI results for new commits must be checked separately."
+  }
 }
