@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "capturedOn": "2026-09-13",
   "pass": 54,
-  "status": "implemented-pending-exact-head-CI",
+  "status": "implemented-and-CI-validated",
   "result": {
     "newDestinations": 19,
     "canonical": 808,
@@ -500,5 +500,10 @@
       "source": "https://www.nuggetcasinos.com/locations/",
       "decision": "Current operator roster recovered, including Carson/Churchill/Lyon locations. Keep the individually named locations in the release coverage ledger; license class/current casino floor scope and property numerical points must clear before promotion. Portfolio membership alone is insufficient."
     }
-  ]
+  ],
+  "validation": {
+    "head": "243082896d6b774dde9bbb44c44f71e02824aaa3",
+    "run": 34739926534,
+    "result": "Full required gates passed; historical batch counts remain the snapshot after this pass."
+  }
 }

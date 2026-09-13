@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "capturedOn": "2026-09-13",
   "pass": 53,
-  "status": "implemented-pending-exact-head-CI",
+  "status": "implemented-and-CI-validated",
   "result": {
     "newDestinations": 3,
     "coordinateAndAddressCorrections": 1,
@@ -169,5 +169,10 @@
     "file": "audit/casino-rc-pass-52-evidence-2026-09-13.json",
     "property": "Montego Bay",
     "resolution": "Current physical address established; historical conflicting shared addresses preserved above."
+  },
+  "validation": {
+    "head": "243082896d6b774dde9bbb44c44f71e02824aaa3",
+    "run": 34739926534,
+    "result": "Full required gates passed; historical batch counts remain the snapshot after this pass."
   }
 }
