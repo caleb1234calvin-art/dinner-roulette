@@ -63,10 +63,12 @@ globalThis.fetch = async (input, options) => {
   const url = new URL(String(input));
   if (url.hostname === "nominatim.openstreetmap.org") {
     log({ kind: "geocode", url: String(url) });
-    if (url.pathname === "/reverse")
+    if (url.pathname === "/reverse") {
+      await new Promise(resolve => setTimeout(resolve, 750));
       return Response.json(
         geocode(nearest(Number(url.searchParams.get("lat")), Number(url.searchParams.get("lon")))),
       );
+    }
     const query = url.searchParams.get("q");
     const city = cities.find((city) => query?.toLowerCase().includes(city.name.toLowerCase()));
     return Response.json(city ? [geocode(city)] : []);

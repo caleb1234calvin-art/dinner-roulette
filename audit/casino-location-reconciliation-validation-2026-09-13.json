@@ -90,9 +90,9 @@
     "typecheck": "PASS",
     "catalogSchemaIdsChronologyManifest": "PASS",
     "targetedLint": "PASS for controls/providers/new tests",
-    "safeDevelopmentBuild": "PENDING on combined candidate",
-    "safeAuthEnabledProductionBuild": "PENDING on combined candidate",
-    "deterministicBrowsers": "PENDING harness reconciliation",
+    "safeDevelopmentBuild": "PASS",
+    "safeAuthEnabledProductionBuild": "PASS: direct Vite, no migration",
+    "deterministicBrowsers": "PASS: 16 casino + 14 location groups; 12 original location groups retained, 2 added",
     "realProviderBrowsers": "PENDING",
     "adversarialReview": "PENDING",
     "combinedCI": "PENDING"
@@ -100,5 +100,18 @@
   "notes": [
     "All 30 pre-existing casino-branch test files are byte-identical. Both location files retain every original test assertion (AST comparison); loops expand to 28 imported tests.",
     "No tests were dropped or skipped to make integration pass. Five new integration tests protect duplicate/cancelled GPS and geocoder-to-current-casino-provider/Maps behavior."
-  ]
+  ],
+  "browserBuildSafeguards": {
+    "authEnabled": true,
+    "ownedDetachedPreviews": true,
+    "strictPorts": [
+      8080,
+      8082,
+      8092
+    ],
+    "sourceAndOutputFingerprints": true,
+    "occupiedPortNegativeTest": "PASS",
+    "guardUnitTests": 2,
+    "includedInNextFullSuite": true
+  }
 }

@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "status": "DETERMINISTIC_COMBINED_PASS",
+  "build": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "c00c1c01b33c044ce0bc5907e25d58418f753077d8f19d9af8f2e9785dcdf28f",
+      "files": 361
+    },
+    "startedAt": "2026-09-13T19:26:06.055Z",
+    "output": {
+      "sha256": "a21f88ed34caf0d536f8fee0a3b1d0dda969749039f61f3fef5f4fb32f382268",
+      "files": 204
+    },
+    "completedAt": "2026-09-13T19:26:14.786Z"
+  },
+  "casino": {
+    "origin": "http://127.0.0.1:8080",
+    "buildProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "c00c1c01b33c044ce0bc5907e25d58418f753077d8f19d9af8f2e9785dcdf28f",
+        "files": 361
+      },
+      "startedAt": "2026-09-13T19:26:06.055Z",
+      "output": {
+        "sha256": "a21f88ed34caf0d536f8fee0a3b1d0dda969749039f61f3fef5f4fb32f382268",
+        "files": 204
+      },
+      "completedAt": "2026-09-13T19:26:14.786Z"
+    },
+    "fixtures": "Server-side Overpass outage; Nominatim deterministic locations. Production-mode local preview, actual server functions and catalog.",
+    "checks": [
+      "desktop: completed the four-step first-run tour",
+      "desktop: casino filter and saved-catalog outage fallback",
+      "desktop: strict open-now excludes unknown hours; empty state disables selection",
+      "desktop: compiled fallback matches 19 current canonical casinos",
+      "desktop: unique canonical options, option selection, map destination, reroll and persisted exclusion",
+      "desktop: denied geolocation opens a visible error and manual recovery form",
+      "desktop: manual location, no-catalog/provider failure and favorites empty states",
+      "desktop: non-casino navigation, settings and no horizontal overflow or page errors",
+      "mobile: completed the four-step first-run tour",
+      "mobile: casino filter and saved-catalog outage fallback",
+      "mobile: strict open-now excludes unknown hours; empty state disables selection",
+      "mobile: compiled fallback matches 3 current canonical casinos",
+      "mobile: unique canonical options, option selection, map destination, reroll and persisted exclusion",
+      "mobile: denied geolocation opens a visible error and manual recovery form",
+      "mobile: manual location, no-catalog/provider failure and favorites empty states",
+      "mobile: non-casino navigation, settings and no horizontal overflow or page errors"
+    ],
+    "errors": []
+  },
+  "location": {
+    "testedAt": "2026-09-13T19:27:15.612Z",
+    "browser": "Chromium",
+    "buildProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "c00c1c01b33c044ce0bc5907e25d58418f753077d8f19d9af8f2e9785dcdf28f",
+        "files": 361
+      },
+      "startedAt": "2026-09-13T19:26:06.055Z",
+      "output": {
+        "sha256": "a21f88ed34caf0d536f8fee0a3b1d0dda969749039f61f3fef5f4fb32f382268",
+        "files": 204
+      },
+      "completedAt": "2026-09-13T19:26:14.786Z"
+    },
+    "mode": "Real local app/RPC; simulated native geolocation coordinates and provider fixtures; error callbacks explicitly mocked",
+    "serverMode": "built preview",
+    "passed": true,
+    "checks": [
+      "No geolocation access on initial load",
+      "GPS coordinates persist before delayed reverse enrichment, with visible progress and busy protection",
+      "Native Chromium geolocation with granted permission sets and persists simulated Toronto coordinates",
+      "GPS coordinates reach restaurant discovery and exact Google Maps destination",
+      "Manual international choice overrides GPS, preserves filters and survives reload without GPS access",
+      "Location is shared across Dinner, Nightlife/casino and Date Night; manual U.K. choice works",
+      "390px mobile layout fits without horizontal overflow",
+      "No-result feedback leaves the last valid location active and manual entry available",
+      "Simulated permission denied, unavailable and timeout errors are visible from the closed control and automatically expose manual recovery",
+      "Unsupported geolocation still permits manual Montr\u00e9al entry",
+      "Repeated location actions cannot issue duplicate native requests while busy",
+      "Late browser position callback cannot replace a newer manual choice",
+      "No uncaught browser page errors",
+      "Actual server requests use the selected coordinates for all three discovery categories"
+    ]
+  },
+  "occupiedPortNegativeCheck": {
+    "passed": true,
+    "guard": "Occupied port must not substitute another preview",
+    "exitCode": 1,
+    "elapsedMs": 4174
+  },
+  "visualReview": [
+    "390px Date Night shared location and status text remain visible and fit without horizontal overflow.",
+    "Desktop casino options retain canonical names and selection controls."
+  ],
+  "liveProviders": "PENDING combined real-network run",
+  "limitations": [
+    "Native coordinates/permissions are simulated; provider fixtures are deterministic.",
+    "Physical GPS, installed PWA, hosted/account sessions and external Maps app navigation are unverified."
+  ]
+}

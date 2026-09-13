@@ -1,3 +1,4 @@
+import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
@@ -15,6 +16,7 @@ const origin = "http://127.0.0.1:8080";
 const output = "audit/browser-results";
 mkdirSync(output, { recursive: true });
 const preload = pathToFileURL(resolve("scripts/casino-smoke-network.mjs")).href;
+const buildProof = assertBrowserBuild();
 const server = spawn(process.execPath, [
   "scripts/with-app-env.mjs", process.execPath, "--import=" + preload,
   "node_modules/vite/bin/vite.js", "preview", "--host", "127.0.0.1", "--port", "8080", "--strictPort",
@@ -35,15 +37,14 @@ async function assertDirections(page, expectedState) {
   assert.equal(url.origin, "https://www.google.com");
   assert.equal(url.pathname, "/maps/dir/");
   assert.equal(url.searchParams.get("api"), "1");
-  const expected = record.address && record.address !== "Address unavailable"
-    ? record.address : `${record.lat},${record.lon}`;
+  const expected = `${record.lat},${record.lon}`;
   assert.equal(url.searchParams.get("destination"), expected, "Directions must target the displayed canonical property");
   assert.equal(await link.getAttribute("target"), "_blank");
   assert.match(await link.getAttribute("rel"), /noopener/);
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
   return record;
 }
-const verdict = { origin, fixtures: "Server-side Overpass outage; Nominatim deterministic locations. Production-mode local preview, actual server functions and catalog.", checks: [], errors: [] };
+const verdict = { origin, buildProof, fixtures: "Server-side Overpass outage; Nominatim deterministic locations. Production-mode local preview, actual server functions and catalog.", checks: [], errors: [] };
 let browser;
 let currentPage;
 const browserConsole = [];
@@ -135,11 +136,11 @@ try {
     await page.getByText("Nothing matches those filters.", { exact: false }).waitFor();
     assert.equal(await pick.isDisabled(), true);
     await page.getByRole("switch", { name: "Favorites only", exact: true }).click();
-    await page.getByRole("button", { name: "Use current location", exact: true }).click();
-    await page.getByRole("alert").filter({ hasText: "Location permission denied. Enter a city or ZIP instead." }).waitFor();
-    await page.getByRole("textbox", { name: "City or ZIP code", exact: true }).waitFor();
+    await page.getByRole("button", { name: "Use my location", exact: true }).click();
+    await page.getByRole("alert").filter({ hasText: "Location permission was denied. You can enter a location manually." }).waitFor();
+    await page.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).waitFor();
     verdict.checks.push(label + ": denied geolocation opens a visible error and manual recovery form");
-    await page.getByRole("textbox", { name: "City or ZIP code", exact: true }).fill("Empty Test");
+    await page.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill("Empty Test");
     await page.getByRole("button", { name: "Set location", exact: true }).click();
     await page.getByText("We couldn't refresh nightlife right now", { exact: true }).waitFor();
     assert.equal(await pick.isDisabled(), true);

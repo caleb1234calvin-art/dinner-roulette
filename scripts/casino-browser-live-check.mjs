@@ -1,3 +1,4 @@
+import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
@@ -18,6 +19,7 @@ const origin = "http://127.0.0.1:8092";
 const output = "audit/browser-results/live-local";
 mkdirSync(output, { recursive: true });
 const preload = pathToFileURL(resolve("scripts/casino-live-network-log.mjs")).href;
+const buildProof = assertBrowserBuild();
 const server = spawn(process.execPath, ["scripts/with-app-env.mjs", process.execPath,
   "--import=" + preload, "node_modules/vite/bin/vite.js", "preview",
   "--host", "127.0.0.1", "--port", "8092", "--strictPort"],
@@ -25,7 +27,7 @@ const server = spawn(process.execPath, ["scripts/with-app-env.mjs", process.exec
 let serverLog = "";
 server.stdout.on("data", x => { serverLog += x; });
 server.stderr.on("data", x => { serverLog += x; });
-const verdict = { capturedAt: new Date().toISOString(), origin,
+const verdict = { buildProof, capturedAt: new Date().toISOString(), origin,
   network: "Actual provider requests; no mocked provider responses or geocoder results",
   geolocation: "Chromium permission and coordinate emulation; not a physical-device GPS test",
   canonicalDestinations: canonical.length, requestedAuthFlag: process.env.VITE_AUTH_ENABLED ?? "unspecified", regions: [], findings: [], errors: [], providers: [] };
@@ -89,7 +91,9 @@ try {
     const maps = page.getByRole("link", { name: /Directions.*Google Maps/ }); await maps.waitFor();
     const directions = await maps.getAttribute("href");
     assert.equal(new URL(directions).origin, "https://www.google.com");
-    assert.ok(new URL(directions).searchParams.get("destination"));
+    const displayed = canonical.find(row => row.name === names[0]);
+    if (displayed) assert.equal(new URL(directions).searchParams.get("destination"), `${displayed.lat},${displayed.lon}`);
+    else assert.match(new URL(directions).searchParams.get("destination"), /^-?[\d.]+,-?[\d.]+$/);
     await page.screenshot({ path: `${output}/${location.name.toLowerCase()}-result.png`, fullPage: true });
     await page.getByRole("button", { name: "Close result", exact: true }).click();
     await page.getByRole("button", { name: "Close options", exact: true }).click();
@@ -101,14 +105,14 @@ try {
     if (location.name === "Reno") {
       await context.setGeolocation({ latitude: location.lat, longitude: location.lon });
       await context.grantPermissions(["geolocation"]);
-      await page.getByRole("button", { name: "Use current location", exact: true }).click();
+      await page.getByRole("button", { name: "Use my location", exact: true }).click();
       await page.waitForFunction(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location.source === "geo", null, { timeout: 25000 });
       const saved = await page.evaluate(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location);
       assert.equal(saved.lat, location.lat); assert.equal(saved.lon, location.lon);
       await context.clearPermissions();
-      await page.getByRole("button", { name: "Use current location", exact: true }).click();
-      await page.getByRole("alert").filter({ hasText: "Location permission denied. Enter a city or ZIP instead." }).waitFor({ timeout: 15000 });
-      await page.getByRole("textbox", { name: "City or ZIP code", exact: true }).fill("Reno, Nevada");
+      await page.getByRole("button", { name: "Use my location", exact: true }).click();
+      await page.getByRole("alert").filter({ hasText: "Location permission was denied. You can enter a location manually." }).waitFor({ timeout: 15000 });
+      await page.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill("Reno, Nevada");
       await page.getByRole("button", { name: "Set location", exact: true }).click();
       await page.waitForFunction(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location.source === "manual", null, { timeout: 25000 }).catch(() => {});
       const after = await page.evaluate(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location);

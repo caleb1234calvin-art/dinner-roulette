@@ -57,7 +57,10 @@ jobs:
       - name: Build production-mode bundle without database migrations
         env:
           VITE_AUTH_ENABLED: "true"
-        run: node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
+        run: |
+          node scripts/browser-build-proof.mjs capture
+          node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
+          node scripts/browser-build-proof.mjs complete
 
       - name: Install Chromium for disposable local browser validation
         run: npx playwright install --with-deps chromium
@@ -66,6 +69,12 @@ jobs:
         env:
           VITE_AUTH_ENABLED: "true"
         run: node scripts/casino-browser-smoke.mjs
+
+      - name: Exercise country-aware location flow in local Chromium
+        env:
+          VITE_AUTH_ENABLED: "true"
+          LOCATION_BROWSER_OUTPUT: audit/browser-results/location
+        run: node scripts/location-browser.mjs
 
       - name: Preserve browser evidence
         if: always()
