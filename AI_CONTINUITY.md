@@ -4,9 +4,9 @@ Updated September 13, 2026. **Casino + location/international reconciliation is 
 
 ## Latest meaningful checkpoint
 
-Final automated gates pass with 364 unique tests; actual live-provider acceptance remains in progress.
+Six-region casino live acceptance is green. International live validation exposed a dense-city performance blocker; combined release is not yet green.
 
-Work branch: `integration/casino-location-reconciliation-2026-09-13`. Work commit: **`08555508f736e7d42fe559e7abf8276defe92061`** — **Prepare real-provider acceptance and record 364 passing combined tests**.
+Work branch: `integration/casino-location-reconciliation-2026-09-13`. Work commit: **`d46154381cbdc8a6de4af78f9b696384b330c388`** — **Validate live casino recovery and record dense-city discovery bottleneck**.
 
 Current working branch: `integration/casino-location-reconciliation-2026-09-13`. Frozen starting integration: `183d3e1d71355a27e4bc35a2969d73037c9e6e33`. Preserved location source: `integration/location-international-2026-09-13` at `4a93870c05ec53bd49fae5143df420c301696839`, draft PR #39. Main baseline: `c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5`.
 
@@ -32,10 +32,14 @@ Current working branch: `integration/casino-location-reconciliation-2026-09-13`.
 - Reverified 78 protected frozen files byte-for-byte and unchanged dependency manifest/lockfile, Vite configuration and integration deployment exclusion. Main c187d5 and original location source 4a93870 remain unchanged.
 - Added actual four-city international browser acceptance (Toronto, Vancouver, Montréal, London), using the combined app/RPC and real Nominatim/Overpass without provider mocks.
 - Preserved failed first casino live attempt: clearPermissions did not establish denial. Harness now explicitly denies and verifies browser permission before testing recovery; semantic findings now make the real runner fail.
+- Actual casino browser PASS in Reno/Newkirk/Ardmore/Chandler/Pahrump/Pawnee with pools 19/3/2/1/5/2, zero errors/findings and successful real manual geocoding. Native denial/recovery passes in a fresh explicitly denied context.
+- Isolated Chromium probe proves same-document cached positions can survive emulated permission revocation; fresh denied contexts deliver native code 1. No product permission rule was changed.
+- Actual Toronto geocoding succeeds but restaurant discovery exceeded 110 seconds; Vancouver live discovery passed with 393 eligible one-mile restaurants. A benchmark of the actual normalizer measured 435/1202/4062ms for 500/1000/2000 distinct rows, confirming quadratic duplicate work.
+- PR #42 is open for non-production integration only. This work checkpoint also reconciles the known shared-document ancestry; no runtime/data content was taken from the old location base.
 
 ## Validation of the combined work
 
-364 unique tests PASS (293 repository + 71 application), 0 failures, 4 external-doc skips. Casino subset 83 and location subset 20 are included. Both safe builds, typecheck, all changed-code lint, casino/schema/ID/chronology/manifest audits, 30 icons, 16 casino + 14 location deterministic browser groups PASS. Real-provider retry and four-city acceptance remain pending; no live success claimed yet.
+364 tests, typecheck/lint/audits/icons/safe builds and 30 deterministic browser groups remain green. Six casino real-provider regions PASS; 30 HTTP200 observations, 13 timeouts and one503 were handled honestly. International acceptance is NOT green: Toronto timed out, Vancouver passed, remaining cities still in progress. Main/location source unchanged.
 
 Independent baselines are historical, not a combined result: casino freeze 329 passed (278 repository + 51 application), four skips, 16 browser groups; location source 342 passed (273 repository + 69 application), four skips, 12 location checks. Casino CI Run 325 and location CI Run 314 passed separately. Never add those totals together.
 
@@ -67,11 +71,11 @@ All four are **B: intentionally external by design / A: unavailable in a clean r
 
 ## BLOCKED / current integration gates
 
-First live attempt failed a harness permission-reset assumption, not established product behavior. Explicit-denial retry is prepared. Actual live acceptance, combined PR CI and adversarial review remain.
+Dense international restaurant pools exercise an existing all-pairs normalizer through the newly enabled global location flow. Fix and prove behavior parity, then rerun actual Toronto/other-city acceptance. Combined CI and final adversarial review remain.
 
 ## Exact next action
 
-Run the explicit-denial casino live retry and international live harness against the fresh verified build. Inspect actual results/transport/semantic pools, finish the complete-green checkpoint, then focused adversarial review and non-production integration.
+Optimize only restaurant duplicate candidate lookup with a spatial index while preserving namesMatch, 0.2-mile threshold, source priority and ordering. Add parity/boundary/large-pool regressions. Revalidate affected gates and complete real international acceptance before integrating PR #42.
 
 ## DEFERRED
 
@@ -104,5 +108,7 @@ Local checkout: /workspace/scratch/60ab73826fd9/pick-for-me-casino. Inspect bran
 - `b53165392f3aa0861f43aa3a618bd443534e1b6a` | `integration/casino-location-reconciliation-2026-09-13` | Combine guarded casino and location browser acceptance
 - `36053a8a00c5d0d76e83d64431916d90607ecd74` | `integration/active-work-pass-1` | Update shared continuity: combined browser harnesses validated
 - `08555508f736e7d42fe559e7abf8276defe92061` | `integration/casino-location-reconciliation-2026-09-13` | Prepare real-provider acceptance and record 364 passing combined tests
+- `c03142d010658bff131568408cbf2a407f3ef101` | `integration/active-work-pass-1` | Update shared continuity: final automated gates and live retry checkpoint
+- `d46154381cbdc8a6de4af78f9b696384b330c388` | `integration/casino-location-reconciliation-2026-09-13` | Validate live casino recovery and record dense-city discovery bottleneck
 
 This update records already-known work commits. Its own immutable documentation commit SHA is subsequent; inspect the current shared GitHub ref and Actions status. Every major checkpoint is saved and read back from GitHub before the next phase.
