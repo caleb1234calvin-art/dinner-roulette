@@ -411,10 +411,10 @@ export function PickHome() {
         <div className="rounded-xl bg-bg/95 p-3 shadow-border backdrop-blur-sm">
           <p className="mb-2 text-center text-xs text-subtle tabular-nums">
             {loading
-              ? "Finding restaurants…"
+              ? "Finding places…"
               : eligible.length === 1
-                ? "Only one restaurant matches"
-                : `${eligible.length} restaurants match`}
+                ? "Only one place matches"
+                : `${eligible.length} places match`}
           </p>
           <div className="grid grid-cols-2 gap-2">
             <Button
@@ -511,7 +511,7 @@ function EmptyPool({
         <div>
           <p className="text-sm text-fg">Nothing matches those filters.</p>
           <p className="mt-1 text-sm text-muted">
-            {count === 0 ? "Try loosening one of these:" : `${count} restaurants match now.`}
+            {count === 0 ? "Try loosening one of these:" : `${count} places match now.`}
           </p>
         </div>
       </div>
