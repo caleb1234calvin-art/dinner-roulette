@@ -78,7 +78,7 @@ try {
       const body = await page.locator("body").innerText();
       assert.ok(!body.includes("We couldn't refresh restaurants right now"), "Real discovery failed; do not treat unavailable as empty/pass");
       assert.ok(!/Using saved|verified saved/i.test(body), "No U.S. saved pool may substitute for international discovery");
-      const count = Number(body.match(/(\d+) restaurants? match/)?.[1] ?? (body.includes("Only one restaurant matches") ? 1 : 0));
+      const count = Number(body.match(/(\d+) places match/)?.[1] ?? (body.includes("Only one place matches") ? 1 : 0));
       assert.ok(count > 0, "Expect an actual eligible live restaurant pool in this city");
       await page.getByRole("button", { name: "Pick for us", exact: true }).click();
       const maps = page.getByRole("link", { name: /Directions.*Google Maps/ }); await maps.waitFor();

@@ -85,22 +85,27 @@ try {
     };
   });
   const page = await context.newPage();
+  async function hydrated() {
+    await page.waitForFunction(() =>
+      Object.keys(document.querySelector('[aria-label="Use my location"]') ?? {}).some((key) =>
+        key.startsWith("__reactProps"),
+      ),
+    );
+  }
   const pageErrors = [];
   page.on("pageerror", (error) => pageErrors.push(error.message));
   await page.goto("http://127.0.0.1:8082", { waitUntil: "domcontentloaded" });
   // A dev connection or an external font must not define app readiness.
-  await page.waitForFunction(() =>
-    Object.keys(document.querySelector('[aria-label="Use my location"]') ?? {}).some((key) =>
-      key.startsWith("__reactProps"),
-    ),
-  );
+  await hydrated();
   await page.getByRole("button", { name: "Close hints", exact: true }).click();
   const section = page.getByRole("region", { name: "Search location" });
   await section.getByRole("button", { name: "Use my location", exact: true }).waitFor();
   assert.equal(await page.evaluate(() => window.__locationCalls), 0);
   results.push("No geolocation access on initial load");
   await section.getByRole("button", { name: "Use my location", exact: true }).click();
-  await section.getByRole("status").filter({ hasText: "Location acquired. Finding the place name" }).waitFor();
+  await section.getByRole("status").filter({ hasText: "Finding your area name…" }).waitFor();
+  assert.ok(await section.getByText("Near you", { exact: true }).isVisible());
+  assert.doesNotMatch(await section.innerText(), /Location acquired|Current location \(|43\.65348|-79\.38393/);
   assert.equal(await section.getByRole("button", { name: "Use my location", exact: true }).isDisabled(), true);
   const immediate = await page.evaluate(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location);
   assert.equal(immediate.lat, 43.65348);
@@ -145,6 +150,7 @@ try {
   assert.equal(manualState.location.region, "British Columbia");
   assert.deepEqual(manualState.filters, acquired.filters);
   await page.reload({ waitUntil: "domcontentloaded" });
+  await hydrated();
   assert.equal((await state()).location.countryCode, "CA");
   assert.equal(await page.evaluate(() => window.__locationCalls), 0);
   await section.getByText("Vancouver, British Columbia, Canada", { exact: true }).waitFor();
@@ -225,6 +231,86 @@ try {
   assert.equal((await state()).location.locality, "Toronto");
   assert.equal((await state()).location.source, "manual");
   results.push("Late browser position callback cannot replace a newer manual choice");
+
+  // Accepted polish: every home mode survives navigation and reload.
+  for (const [label, mode] of [["Dinner", "dinner"], ["Nightlife", "nightlife"], ["Date Night", "date-night"]]) {
+    await page.getByRole("button", { name: label, exact: true }).click();
+    await waitFor(async () => (await state()).homeMode === mode, `${label} did not activate before navigation`);
+    for (const route of ["Settings", "Favorites", "History"]) {
+      await page.getByRole("link", { name: route, exact: true }).click();
+      await page.waitForURL(`**/${route.toLowerCase()}`);
+      await page.getByRole("link", { name: "Pick", exact: true }).click();
+      await waitFor(async () => (await page.getByRole("button", { name: label, exact: true }).getAttribute("aria-pressed")) === "true", `${label} was lost after ${route}`);
+      assert.equal((await state()).homeMode, mode);
+    }
+    await page.reload({ waitUntil: "domcontentloaded" });
+    await hydrated();
+    await waitFor(async () => (await page.getByRole("button", { name: label, exact: true }).getAttribute("aria-pressed")) === "true", `${label} was lost on reload`);
+    assert.equal(await page.evaluate(() => window.__locationCalls), 0);
+  }
+  results.push("Dinner, Nightlife and Date Night persist through Settings, Favorites, History and reload without automatic GPS");
+
+  // Real result and option components must use the theme's correct pizza art.
+  await page.getByRole("button", { name: "Dinner", exact: true }).click();
+  for (const [theme, asset] of [["Light", "pizza"], ["Dark", "burger"]]) {
+    await page.getByRole("link", { name: "Settings", exact: true }).click();
+    await page.getByRole("button", { name: new RegExp(`^${theme} `) }).click();
+    await page.getByRole("link", { name: "Pick", exact: true }).click();
+    await page.getByText("Only one place matches", { exact: true }).waitFor();
+    const image = page.locator(`img[src="/dinner-icons/${theme.toLowerCase()}/${asset}.jpg"]`);
+    await page.getByRole("button", { name: "Give us options", exact: true }).click();
+    await image.waitFor();
+    await waitFor(() => image.evaluate(img => img.complete && img.naturalWidth > 0), `${theme} Dinner option artwork did not decode`);
+    await page.getByRole("button", { name: "Close options", exact: true }).click();
+    await page.getByRole("button", { name: "Pick for us", exact: true }).click();
+    await image.waitFor();
+    await waitFor(() => image.evaluate(img => img.complete && img.naturalWidth > 0), `${theme} Dinner result artwork did not decode`);
+    await page.screenshot({ path: resolve(output, `dinner-${theme.toLowerCase()}-result.png`), fullPage: true });
+    await page.getByRole("button", { name: "Close result", exact: true }).click();
+  }
+  results.push("Dinner options and picked results show correct artwork in both themes and use broad places-match wording");
+
+  await page.getByRole("button", { name: "Nightlife", exact: true }).click();
+  for (const [label, fixture, asset] of [
+    ["Bar", "bar", "grok_1789341445435.jpg"], ["Pub", "pub", "grok_1789340964876.jpg"],
+    ["Club", "club", "grok_1789340968434.jpg"], ["Lounge", "lounge", "grok_1789340971434.jpg"],
+    ["Brewery / Beer Garden", "brewery", "grok_1789340974874.jpg"], ["Casino", "casino", "grok_1788913461447.jpg"],
+  ]) {
+    const chip = page.getByRole("button", { name: label, exact: true });
+    assert.equal(await chip.locator("img").count(), 0);
+    await page.getByRole("button", { name: "Anything", exact: true }).click();
+    await chip.click();
+    // A lounge can also be a bar. Select the named option rather than asserting
+    // that random selection must prefer the bar-only venue in an overlapping pool.
+    await page.getByRole("button", { name: "Give us options", exact: true }).click();
+    await page.getByRole("heading", { name: `Toronto test ${fixture}`, exact: true }).click();
+    const art = page.locator(`div.relative:has(> button[aria-label="Close result"]) img[src="/${asset}"]`);
+    await art.waitFor();
+    await waitFor(() => art.evaluate(img => img.complete && img.naturalWidth > 0), `${label} result artwork did not decode`);
+    assert.equal(await page.locator('img[src*="/dinner-icons/"]').count(), 0);
+    await page.getByRole("button", { name: "Close result", exact: true }).click();
+    await page.getByRole("button", { name: "Close options", exact: true }).click();
+  }
+  results.push("All six Nightlife categories keep text-only filter chips and render their approved result artwork without Dinner images");
+
+  await page.getByRole("button", { name: "Date Night", exact: true }).click();
+  await page.getByRole("button", { name: "Pick our date", exact: true }).click();
+  await page.getByText("Toronto test museum", { exact: true }).waitFor();
+  assert.equal(await page.locator('img[src*="/dinner-icons/"]').count(), 0);
+  await page.getByRole("button", { name: "Close result", exact: true }).click();
+  results.push("Date Night still selects the international museum fixture without Dinner artwork leaking into its result");
+
+  await page.evaluate(() => {
+    const saved = JSON.parse(localStorage.getItem("pick-for-us-v1"));
+    saved.state.homeMode = "unsupported-old-value";
+    localStorage.setItem("pick-for-us-v1", JSON.stringify(saved));
+  });
+  await page.reload({ waitUntil: "domcontentloaded" });
+  await hydrated();
+  await waitFor(async () => (await page.getByRole("button", { name: "Dinner", exact: true }).getAttribute("aria-pressed")) === "true", "Invalid saved mode did not recover to Dinner");
+  await section.getByText("Toronto, Ontario, Canada", { exact: true }).waitFor();
+  assert.equal(await page.evaluate(() => window.__locationCalls), 0);
+  results.push("Invalid stored home mode recovers to Dinner while preserving the manual international location");
   assert.deepEqual(pageErrors, []);
   results.push("No uncaught browser page errors");
   const requests = (await readFile(requestLog, "utf8"))

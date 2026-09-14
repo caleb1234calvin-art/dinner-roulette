@@ -107,7 +107,8 @@ export function dinnerIconKey(restaurant: Restaurant): DinnerIconKey {
 }
 
 export function dinnerIconPath(key: DinnerIconKey, theme: ThemeId): string {
-  return `/dinner-icons/${theme}/${ICON_ASSET_KEY[key]}.jpg`;
+  // Only the dark pack has displaced filenames; light assets are named semantically.
+  return `/dinner-icons/${theme}/${theme === "dark" ? ICON_ASSET_KEY[key] : key}.jpg`;
 }
 
 export function dinnerRestaurantIcon(restaurant: Restaurant, theme: ThemeId): string {

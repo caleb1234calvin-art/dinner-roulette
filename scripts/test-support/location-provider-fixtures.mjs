@@ -109,6 +109,16 @@ globalThis.fetch = async (input, options) => {
             "addr:country": city.code.toUpperCase(),
           },
         },
+        ...(category === "casino" ? [
+          { amenity: "bar", name: "bar" },
+          { amenity: "pub", name: "pub" },
+          { amenity: "nightclub", name: "club" },
+          { amenity: "bar", name: "lounge" },
+          { amenity: "biergarten", name: "brewery" },
+        ].map((venue, index) => ({
+          type: "node", id: 12346 + index, lat: Number(lat), lon: Number(lon),
+          tags: { amenity: venue.amenity, name: `${city.name} test ${venue.name}` },
+        })) : []),
       ],
     });
   }
