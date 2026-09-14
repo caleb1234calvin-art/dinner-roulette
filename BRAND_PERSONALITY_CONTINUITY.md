@@ -84,6 +84,49 @@ Possible destination content:
 - moderation-first publishing for any public signatures or names
 - optional subtle app-specific identifier or artifact so dedicated players can compare discoveries across apps
 
+## Deferred Mordax minigame concept
+A later hidden-game stage may contain a very small 2D minigame. This is explicitly **deferred**, not current implementation work.
+
+Intended aesthetic:
+- rough, primitive 2D presentation inspired by the emotional language of early retro-horror minigames rather than copying any specific game's assets/layout
+- liminal/backrooms atmosphere
+- visually disturbing but alluring
+- sparse, empty, slightly wrong spaces
+- should feel like the player reached a part of the app they were not supposed to see, but the system is not ejecting them
+- tone is **tolerated trespass**, not overt hostility
+- minimal explanation, no conventional celebratory game framing
+
+Possible mechanics:
+- one very small maze or Galaga-like interaction
+- roughly 20–45 seconds when played successfully
+- one mechanic only; forgiving difficulty and immediate restart
+- completion advances the hidden progression rather than awarding score/loot
+- a maze is philosophically attractive because each fork literalizes choice
+- a simple arcade interaction is attractive because its abrupt presence inside a polished utility app creates an intentional “what is this?” rupture
+
+### Mordax sprite
+Possible sprite treatment:
+- approximately 4–6 frames
+- one normal Mordax pose, one inverted/mirrored pose, with transitional stages between them
+- deliberately simple frame animation creates a slithering motion
+- movement can be slightly stiff/unnatural rather than perfectly smooth
+- sprite frames could later be reused for hidden transitions, error pages, background sightings or other manifestations
+
+### Proposed technical architecture
+The minigame does not require treating Dinner Roulette as a conventional game project.
+
+Current conceptual model:
+- add a hidden app navigation/render state analogous to another tab, but expose **no normal tab button**
+- the secret input/page sequence unlocks or routes into this hidden state
+- once inside, progression state determines what that hidden surface renders
+- example progression: hidden entry → liminal page → minigame → next page → Mordax chamber/creed → finder page
+- the minigame is therefore one stage rendered inside a contained hidden surface rather than a separate application
+- normal Dinner/Nightlife/Date Night functionality remains independent and unaffected
+
+Possible persistence policy can be chosen later: session-only reset, remembered discovery, remembered stage progression, or an easier return path after the user has already found Mordax once.
+
+The user initially found the idea of adding a game intimidating, then quickly reframed it as an existing navigation/state problem plus a few new game-specific mechanisms. This is a future challenge the user expects to be technically feasible with current resources, but it should not displace nearer-term work.
+
 ## Puzzle structure and failure states
 The hidden layer can support multiple outcomes instead of simple success/failure:
 - full correct sequence → Mordax chamber / creed
