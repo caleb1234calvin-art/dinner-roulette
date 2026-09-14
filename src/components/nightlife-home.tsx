@@ -148,7 +148,6 @@ export function NightlifeHome() {
         <div className="flex flex-wrap gap-2">
           {NIGHTLIFE_TYPE_CHIPS.map((chip) => {
             const selected = chip.id === "anything" ? filters.venueTypes.includes("anything") : filters.venueTypes.includes(chip.id);
-            const featured = Boolean(chip.iconSrc);
             return (
               <button
                 key={chip.id}
@@ -156,12 +155,10 @@ export function NightlifeHome() {
                 aria-pressed={selected}
                 onClick={() => toggleVenueType(chip.id)}
                 className={cn(
-                  "chip min-h-11 rounded-full text-sm shadow-border transition",
-                  featured ? "flex items-center gap-1.5 px-3 py-2" : "px-3 py-2",
+                  "chip min-h-11 rounded-full px-3 py-2 text-sm shadow-border transition",
                   selected ? "bg-accent text-accent-fg" : "bg-surface text-muted",
                 )}
               >
-                {chip.iconSrc ? <img src={chip.iconSrc} alt="" className="size-6 rounded-md object-cover" /> : null}
                 {chip.label}
               </button>
             );
