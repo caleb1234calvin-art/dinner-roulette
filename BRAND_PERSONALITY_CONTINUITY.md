@@ -14,12 +14,55 @@ Mordax is no longer only a mascot/logo concept. He is becoming the connective na
 
 Core philosophy:
 - Mordax appears where meaningful choice exists.
-- He represents agency, consequence, restrained volatility and non-interference.
+- He represents chaos, choice, restraint, and consequence in full combination.
 - The hidden-story framing should reinforce that the user reaches Mordax through deliberate choices.
 - A key narrative idea is: the user did not merely discover Mordax; by making the required sequence of choices, they **created the conditions for Mordax to appear**.
 - Conceptually: “You are here because you chose to be.” / “You did not discover me. You assembled the conditions in which I could appear.”
 
 The startup ident still uses Mordax as a brief brand animation, but the mythology can extend far beyond ordinary feature UI.
+
+## Mordax manifestation model
+Mordax's degree of existence scales with chosen attention and commitment.
+
+Progression:
+- **Passive user:** Mordax appears briefly in the startup ident, roughly 1.5 seconds.
+- **Curious user:** Mordax persists longer because the user deliberately looks for him.
+- **Committed participant:** Mordax occupies a dedicated hidden chamber/page with creed, philosophy, lore, and acknowledgement.
+- **Physical commitment:** the user can acquire a physical manifestation through merchandise.
+
+Core rule:
+**The more you choose Mordax, the more he exists.**
+
+Narratively, this behaves like a technological ritual or summoning structure without requiring literal supernatural claims:
+**attention → repeated choice → prescribed sequence → threshold → manifestation**
+
+The ritual itself is built from UX and agency rather than occult props. Choice is the summoning mechanism.
+
+## Physical manifestation / merch canon
+Physical merchandise changes Mordax's canonical containment state.
+
+Before physical merch exists, `contained` can serve as the normal status because Mordax exists only inside software/fiction.
+
+The first merch release can be announced as:
+`Mordax has breached containment.`
+
+Once physical Mordax objects exist in the real world, the default state should shift toward:
+`Mordax has been accounted for this update.`
+
+Reason: Mordax is no longer fully containable if physical instances are circulating outside the software.
+
+Possible real-event status mappings:
+- `Mordax has breached containment.` — first physical merch release
+- `Mordax has been sighted elsewhere.` — hidden page moved or new app/site manifestation
+- `Mordax is not currently accounted for.` — secret route changed / temporary unknown state
+- `Additional instances have been identified.` — new merch batch or new physical manifestations
+- `Mordax activity has increased.` — lore expansion / increased manifestations
+- `Containment is no longer considered viable.` — major public expansion
+- `Mordax has appeared in an unauthorized location.` — surprise Easter egg or unexpected brand placement
+- `Mordax has been accounted for. No further action required.` — stable post-merch default
+
+Long-term rule:
+**If Mordax's status changes, something changed somewhere in the ecosystem.**
 
 ## Hidden-game / secret-layer concept
 The brand may contain a completely optional hidden game/ARG-like layer inside otherwise normal, useful apps.
