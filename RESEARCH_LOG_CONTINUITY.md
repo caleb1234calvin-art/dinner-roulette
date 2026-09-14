@@ -29,18 +29,36 @@ Operating principle:
 
 The September 14 cleanup formalized that principle by replacing many one-off task branches with five durable master continuity branches and pruning the superseded refs after consolidation.
 
+## Mordax distributed-narrative research concept
+A new creative direction treats the brand's collection of useful apps as a possible storytelling medium for an optional hidden Mordax game.
+
+The core model is not “install every app or the story is incomplete.” Instead:
+**Different apps. Different paths. Same thing waiting at the bottom.**
+
+Each app can remain independently useful while containing a different hidden sequence of ordinary in-app choices that leads to a shared Mordax chamber/creed. Optional app-specific artifacts, failure pages and cross-app redirects can encourage community comparison without forcing unrelated downloads.
+
+The concept creates multiple overlapping audiences:
+- utility users who may never encounter the hidden layer
+- puzzle/ARG/lore users who deliberately search for it
+- brand/social followers attracted by the strange developer persona and recurring Mordax references
+
+The puzzle mechanics themselves can embody the Mordax philosophy: choice creates consequence, and the user reaches Mordax specifically because they repeatedly chose the conditions that allow him to appear. The brand/personality master contains the detailed implementation/lore rules.
+
+Recurring bureaucratic patch-note language can imply an off-screen tangible Mordax containment story without explicit exposition. The intended effect is an eerie institutional narrative that users reconstruct collaboratively from small wording changes.
+
 ## Research concepts worth preserving outside runtime work
 - The Crumb Protocol: recursive AI-relay method for synthetic serendipity
-- Mordax mythology/choice philosophy (brand details live primarily in `continuity/brand-personality`)
+- Mordax mythology / choice philosophy / distributed hidden-game concept (details primarily in `continuity/brand-personality`)
 - broader AI relay / multi-model delegation workflow
 - prediction/coincidence logging as a separate observational record
+- real utility software as a potential medium for optional distributed narrative/ARG design
 
 ## Continuity topology
 - `continuity/core` — top-level project state
 - `continuity/discovery` — discovery/casino/location
 - `continuity/release` — CI/Vercel/release safety
-- `continuity/brand-personality` — visual identity, Mordax and marketing voice
-- `continuity/research-logs` — this branch; research methods and observational logs
+- `continuity/brand-personality` — visual identity, Mordax, hidden-game design and marketing voice
+- `continuity/research-logs` — this branch; research methods and observational/conceptual logs
 
 ## Future rule
 Keep speculative/research material out of `main` unless it becomes actual product functionality. Update this branch for durable research continuity and logs rather than using production branches as notebooks. Temporary experimental branches should be pruned after useful conclusions are captured here.
