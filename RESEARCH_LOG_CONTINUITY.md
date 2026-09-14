@@ -46,9 +46,47 @@ The puzzle mechanics themselves can embody the Mordax philosophy: choice creates
 
 Recurring bureaucratic patch-note language can imply an off-screen tangible Mordax containment story without explicit exposition. The intended effect is an eerie institutional narrative that users reconstruct collaboratively from small wording changes.
 
+## Techno-mysticism four-force framework
+A recurring conceptual structure now connects several of the user's techno-mysticism ideas.
+
+The four forces are:
+- **Chaos** — unpredictability, emergence, uncontrolled possibility
+- **Choice** — agency, intentional selection, participation
+- **Restraint** — boundaries, refusal, containment, non-interference
+- **Consequence** — the result produced by interaction with the system
+
+Current mapping:
+- **Technological divination** — chaos + restraint + consequence
+- **Technological lich** — choice + restraint + consequence
+- **Chaos magic by software** — chaos + choice + consequence
+- **Mordax summoning** — chaos + choice + restraint + consequence
+
+Interpretive synthesis:
+**Chaos creates possibility. Choice selects. Restraint limits. Consequence makes it real.**
+
+Mordax is the only concept currently expressing all four forces at once, making him a potential synthesis or emblem of the broader techno-mysticism framework rather than merely one additional example.
+
+## Mordax manifestation / ritual interpretation
+Mordax's narrative presence scales with intentional participation:
+- passive encounter → brief startup appearance
+- deliberate seeking → longer digital presence
+- full hidden-path completion → dedicated lore/chamber encounter
+- physical purchase/merch → physical manifestation
+
+This can be interpreted symbolically as a technological ritual structure:
+**attention → repeated choice → prescribed sequence → threshold → manifestation**
+
+No literal supernatural claim is intended. The significance is that software UX itself can function as ritualized interaction within the fiction.
+
+Core narrative line:
+**The more you choose Mordax, the more he exists.**
+
+Physical merch then becomes a canonical “containment breach,” because the entity has moved from software into physical artifacts carried through the real world. After merch exists, “accounted for” becomes more coherent than “contained” as a recurring status.
+
 ## Research concepts worth preserving outside runtime work
 - The Crumb Protocol: recursive AI-relay method for synthetic serendipity
 - Mordax mythology / choice philosophy / distributed hidden-game concept (details primarily in `continuity/brand-personality`)
+- techno-mysticism four-force framework: chaos, choice, restraint, consequence
 - broader AI relay / multi-model delegation workflow
 - prediction/coincidence logging as a separate observational record
 - real utility software as a potential medium for optional distributed narrative/ARG design
