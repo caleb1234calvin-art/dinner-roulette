@@ -1,12 +1,13 @@
-import { useEffect, useMemo, useState, type FormEvent } from "react";
-import { LayoutGrid, LocateFixed, MapPin, Shuffle } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { LayoutGrid, Shuffle } from "lucide-react";
 import { DiscoveryLoading, DiscoveryNotice } from "@/components/discovery-status";
 import { OptionsOverlay } from "@/components/options-overlay";
 import { ResultOverlay } from "@/components/result-overlay";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { LocationControl } from "@/components/location-control";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
+import { weightedPick, pickOptions, eligibleNightlife } from "@/lib/nightlife/selection";
 import { searchNightlife } from "@/lib/nightlife/search";
 import {
   DEFAULT_NIGHTLIFE_FILTERS,
@@ -19,47 +20,15 @@ import {
 } from "@/lib/nightlife/types";
 import { decorateAll } from "@/lib/restaurants/decorate";
 import { formatPrice } from "@/lib/restaurants/hours";
-import { lookupLocation, lookupReverseLocation } from "@/lib/restaurants/search";
 import { DISTANCE_OPTIONS, type DecoratedRestaurant, type Restaurant } from "@/lib/restaurants/types";
-import { RADIUS_OPTIONS, useAppStore } from "@/lib/store";
+import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
-
-function weightedPick(items: DecoratedNightlifePlace[], energy: number, shown: string[]) {
-  if (!items.length) return null;
-  const target = 1 + (Math.min(Math.max(energy, 0), 100) / 100) * 2;
-  const weights = items.map((item) => {
-    const distancePenalty = 1 / (1 + item.distanceMiles * 0.04);
-    const energyFit = 1 / (1 + Math.abs(item.energyLevel - target) * 0.8);
-    const shownPenalty = shown.includes(item.id) ? 0.12 : 1;
-    return Math.max(0.001, distancePenalty * energyFit * shownPenalty);
-  });
-  const total = weights.reduce((sum, value) => sum + value, 0);
-  let cursor = Math.random() * total;
-  for (let i = 0; i < items.length; i += 1) {
-    cursor -= weights[i] ?? 0;
-    if (cursor <= 0) return items[i] ?? items[0];
-  }
-  return items[items.length - 1] ?? null;
-}
-
-function pickOptions(items: DecoratedNightlifePlace[], energy: number, shown: string[], count = 4) {
-  const remaining = [...items];
-  const result: DecoratedNightlifePlace[] = [];
-  while (remaining.length && result.length < count) {
-    const next = weightedPick(remaining, energy, shown);
-    if (!next) break;
-    result.push(next);
-    remaining.splice(remaining.findIndex((item) => item.id === next.id), 1);
-  }
-  return result;
-}
 
 export function NightlifeHome() {
   const location = useAppStore((s) => s.location);
   const preferences = useAppStore((s) => s.preferences);
   const exclusions = useAppStore((s) => s.exclusions);
   const sessionShown = useAppStore((s) => s.sessionShown);
-  const setLocation = useAppStore((s) => s.setLocation);
   const markShown = useAppStore((s) => s.markShown);
   const excludeTonight = useAppStore((s) => s.excludeTonight);
 
@@ -68,10 +37,6 @@ export function NightlifeHome() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [warning, setWarning] = useState<string | null>(null);
-  const [locOpen, setLocOpen] = useState(false);
-  const [locQuery, setLocQuery] = useState("");
-  const [locBusy, setLocBusy] = useState(false);
-  const [locError, setLocError] = useState<string | null>(null);
   const [pick, setPick] = useState<DecoratedNightlifePlace | null>(null);
   const [reelNames, setReelNames] = useState<string[]>([]);
   const [skipSpin, setSkipSpin] = useState(false);
@@ -112,22 +77,10 @@ export function NightlifeHome() {
     [venues, location],
   );
 
-  const eligible = useMemo(() => {
-    const anything = filters.venueTypes.includes("anything");
-    return decorated.filter((venue) => {
-      if (venue.distanceMiles > filters.radiusMiles + 0.05) return false;
-      if (exclusions.some((item) => item.restaurantId === venue.id && item.expiresAt > Date.now())) return false;
-      const pref = preferences[venue.id];
-      if (pref?.neverRecommend) return false;
-      if (filters.favoritesOnly && !pref?.favorite) return false;
-      if (filters.openNowOnly && venue.hoursKnown && !venue.isOpen) return false;
-      if (venue.priceLevel == null) {
-        if (!filters.includeUnknownPrice) return false;
-      } else if (venue.priceLevel < filters.minPrice || venue.priceLevel > filters.maxPrice) return false;
-      if (!anything && !venue.venueTypes.some((type) => filters.venueTypes.includes(type))) return false;
-      return true;
-    });
-  }, [decorated, exclusions, filters, preferences]);
+  const eligible = useMemo(
+    () => eligibleNightlife(decorated, filters, preferences, exclusions),
+    [decorated, exclusions, filters, preferences],
+  );
 
   function updateFilters(patch: Partial<NightlifeFilters>) {
     setFilters((current) => ({ ...current, ...patch }));
@@ -141,52 +94,6 @@ export function NightlifeHome() {
     const current = filters.venueTypes.filter((item) => item !== "anything");
     const next = current.includes(id) ? current.filter((item) => item !== id) : [...current, id];
     updateFilters({ venueTypes: next.length ? next : ["anything"] });
-  }
-
-  async function useDeviceLocation() {
-    setLocBusy(true);
-    setLocError(null);
-    if (!navigator.geolocation) {
-      setLocError("Location isn't available in this browser.");
-      setLocBusy(false);
-      return;
-    }
-    navigator.geolocation.getCurrentPosition(
-      async (pos) => {
-        try {
-          const result = await lookupReverseLocation({ data: { lat: pos.coords.latitude, lon: pos.coords.longitude } });
-          setLocation({ ...result, source: "geo" });
-          setLocOpen(false);
-        } catch {
-          setLocation({ lat: pos.coords.latitude, lon: pos.coords.longitude, label: "Current location", source: "geo" });
-          setLocOpen(false);
-        } finally {
-          setLocBusy(false);
-        }
-      },
-      () => {
-        setLocError("Location permission denied. Enter a city or ZIP instead.");
-        setLocBusy(false);
-      },
-      { enableHighAccuracy: true, timeout: 10000 },
-    );
-  }
-
-  async function searchManualLocation(event: FormEvent) {
-    event.preventDefault();
-    if (!locQuery.trim()) return;
-    setLocBusy(true);
-    setLocError(null);
-    try {
-      const result = await lookupLocation({ data: { query: locQuery } });
-      setLocation({ ...result, source: "manual" });
-      setLocOpen(false);
-      setLocQuery("");
-    } catch (err) {
-      setLocError(err instanceof Error ? err.message : "Couldn't find that place");
-    } finally {
-      setLocBusy(false);
-    }
   }
 
   function roll(pool = eligible) {
@@ -206,7 +113,7 @@ export function NightlifeHome() {
     if (next.length && "vibrate" in navigator) navigator.vibrate?.(12);
   }
 
-  const radiusIndex = Math.max(0, RADIUS_OPTIONS.indexOf(filters.radiusMiles));
+  const radiusIndex = Math.max(0, DISTANCE_OPTIONS.indexOf(filters.radiusMiles));
 
   return (
     <main className="px-4 pb-48 pt-5">
@@ -216,32 +123,7 @@ export function NightlifeHome() {
         <p className="mt-2 max-w-sm text-sm text-muted">Set the vibe. Let the app pick the place.</p>
       </header>
 
-      <section className="rounded-xl bg-surface p-4 shadow-border">
-        <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <p className="text-xs text-subtle">Searching near</p>
-            <p className="truncate text-base text-fg">{location.label}</p>
-          </div>
-          <div className="flex gap-1">
-            <Button variant="ghost" size="icon" aria-label="Use current location" onClick={useDeviceLocation}>
-              <LocateFixed className="size-5" />
-            </Button>
-            <Button variant="ghost" size="icon" aria-label="Change location" onClick={() => setLocOpen((value) => !value)}>
-              <MapPin className="size-5" />
-            </Button>
-          </div>
-        </div>
-        {locOpen ? (
-          <form className="mt-4 space-y-3" onSubmit={searchManualLocation}>
-            <Input value={locQuery} onChange={(event) => setLocQuery(event.target.value)} placeholder="City or ZIP code" aria-label="City or ZIP code" />
-            {locError ? <p className="text-sm text-danger">{locError}</p> : null}
-            <div className="flex gap-2">
-              <Button type="submit" className="flex-1" disabled={locBusy}>{locBusy ? "Finding…" : "Set location"}</Button>
-              <Button type="button" variant="secondary" onClick={() => setLocOpen(false)}>Cancel</Button>
-            </div>
-          </form>
-        ) : null}
-      </section>
+      <LocationControl />
 
       <section className="mt-6">
         <div className="mb-3 flex items-end justify-between">
@@ -249,7 +131,7 @@ export function NightlifeHome() {
           <p className="text-base text-fg tabular-nums">Within {filters.radiusMiles} miles</p>
         </div>
         <Slider min={0} max={DISTANCE_OPTIONS.length - 1} step={1} value={[radiusIndex]} onValueChange={([index]) => updateFilters({ radiusMiles: DISTANCE_OPTIONS[index ?? 0] ?? 10 })} aria-label="Travel distance" />
-        <div className="mt-2 flex justify-between text-2xs text-subtle"><span>1</span><span>10</span><span>30</span></div>
+        <div className="mt-2 flex justify-between text-2xs text-subtle"><span>1</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span></div>
       </section>
 
       <section className="mt-7">
@@ -267,7 +149,16 @@ export function NightlifeHome() {
           {NIGHTLIFE_TYPE_CHIPS.map((chip) => {
             const selected = chip.id === "anything" ? filters.venueTypes.includes("anything") : filters.venueTypes.includes(chip.id);
             return (
-              <button key={chip.id} type="button" aria-pressed={selected} onClick={() => toggleVenueType(chip.id)} className={cn("chip min-h-11 rounded-full px-3 py-2 text-sm shadow-border", selected ? "bg-accent text-accent-fg" : "bg-surface text-muted")}>
+              <button
+                key={chip.id}
+                type="button"
+                aria-pressed={selected}
+                onClick={() => toggleVenueType(chip.id)}
+                className={cn(
+                  "chip min-h-11 rounded-full px-3 py-2 text-sm shadow-border transition",
+                  selected ? "bg-accent text-accent-fg" : "bg-surface text-muted",
+                )}
+              >
                 {chip.label}
               </button>
             );
@@ -286,7 +177,7 @@ export function NightlifeHome() {
 
       <section className="mt-7 space-y-2">
         <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">
-          <div><p className="text-sm text-fg">Open now only</p><p className="text-xs text-subtle">Skip places that have already closed</p></div>
+          <div><p className="text-sm text-fg">Open now only</p><p className="text-xs text-subtle">Only places with confirmed open hours</p></div>
           <Switch checked={filters.openNowOnly} onCheckedChange={(checked) => updateFilters({ openNowOnly: checked })} aria-label="Open now only" />
         </div>
         <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">

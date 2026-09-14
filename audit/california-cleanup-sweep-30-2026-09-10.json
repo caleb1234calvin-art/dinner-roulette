@@ -1,0 +1,50 @@
+{
+  "jurisdiction": "California",
+  "capturedOn": "2026-09-10",
+  "status": "30-record-cleanup-sweep",
+  "purpose": "Large cleanup sweep over 30 California records that were not in the 41-record fully reconciled checkpoint. Clean evidence is promoted; unresolved identity, scope, temporal, address, or geometry cases remain explicit rather than being forced into runtime.",
+  "startingCheckpoint": {"inventory":74,"fullyReconciled":41},
+  "fullyReconciledInSweep": [
+    {"license":"TRCS-000020","name":"Coyote Valley Casino","address":"77 Coyote Valley Blvd, Redwood Valley, CA 95470","lat":39.25305,"lon":-123.20778,"website":"https://www.coyotevalleycasino.com/","coordinateSource":"OpenStreetMap way 720081616 via Mapcarta","note":"Official operator address matches the casino complex. The previously conflicting way 943422895 is materially east of the operator-addressed complex; way 720081616 aligns with current operator directions and an independent legacy GPS point near the same site."},
+    {"license":"TRCS-000051","name":"Diamond Mountain Casino & Hotel","address":"900 Skyline Drive, Susanville, CA 96130","lat":40.4307112,"lon":-120.6574965,"website":"https://dmcah.com/","coordinateSource":"Address-specific geocoded property listing for 900 Skyline Drive"},
+    {"license":"TRCS-000066","name":"Garcia River Casino","address":"22215 Windy Hollow Road, Point Arena, CA 95468","lat":38.9383,"lon":-123.688449,"website":"https://garciariver.casino/","coordinateSource":"Address-specific casino GPS listing matching 22215 Windy Hollow Road"},
+    {"license":"TRCS-000040","name":"Harrah's Resort Southern California","address":"777 Harrah's Rincon Way, Valley Center, CA 92082","lat":33.267416,"lon":-116.955525,"website":"https://www.caesars.com/harrahs-socal","coordinateSource":"Wikidata/Wikipedia property coordinate tied to Harrah's Resort Southern California; official Caesars site confirms current property identity"},
+    {"license":"TRCS-000024","name":"Hopland Sho-Ka-Wah Casino","address":"13101 Nokomis Road, Hopland, CA 95449","lat":38.982764,"lon":-123.05721,"website":"https://www.shokawah.com/","coordinateSource":"Address-specific geocoded property listing; tribal/property identity independently corroborated"},
+    {"license":"TRCS-000023","name":"Lucky Bear Casino","address":"12510 CA-96, Hoopa, CA 95546","lat":41.0626,"lon":-123.68693,"coordinateSource":"OpenStreetMap node 4270192574 via Mapcarta; amenity=casino; independent geocoded casino listing matches the same Highway 96 property"},
+    {"license":"TRCS-000008","name":"Mono Wind Casino","address":"37302 Rancheria Lane, Auberry, CA 93602","lat":37.0839609,"lon":-119.4653252,"website":"https://monowind.com/","addressSource":"Current Mono Wind directions page confirms 37302 Rancheria Lane","coordinateSource":"Address-specific geocoded property listing matching the operator address"},
+    {"license":"TRCS-000030","name":"Morongo Casino Resort and Spa","address":"49500 Seminole Drive, Cabazon, CA 92230","lat":33.924027,"lon":-116.803322,"website":"https://www.morongocasinoresort.com/","coordinateSource":"U.S. EPA Region 9 Morongo source application gives the exact physical address and coordinates","note":"The resort property itself is now coordinate-verified. TRCS-000075 Casino Morongo remains a separate alias/license review and must not create a duplicate runtime destination."},
+    {"license":"TRCS-000064","name":"Red Earth Casino","address":"3089 Norm Niver Rd, Thermal, CA 92274","lat":33.35237,"lon":-116.01967,"website":"https://redearthcasino.com/","coordinateSource":"OpenStreetMap way 403661766 via Mapcarta; casino building geometry"},
+    {"license":"TRCS-000065","name":"Red Hawk Casino","currentPropertyName":"Red Hawk Resort + Casino","address":"1 Red Hawk Parkway, Placerville, CA 95667","lat":38.6954,"lon":-120.90845,"website":"https://www.redhawkcasino.com/","addressSource":"Current Red Hawk directions page confirms 1 Red Hawk Parkway","coordinateSource":"OpenStreetMap casino-building way 172049147 via Mapcarta; casino geometry selected instead of resort/hotel geometry"},
+    {"license":"TRCS-000072","name":"Redwood Hotel and Casino","currentPropertyName":"Redwood Hotel & Casino","address":"171 Klamath Blvd, Klamath, CA 95548","lat":41.529547,"lon":-124.039168,"website":"https://www.redwoodhotelcasino.com/","coordinateSource":"Address-specific geocoded property listing matching 171 Klamath Blvd"},
+    {"license":"TRCS-000021","name":"River Rock Casino","address":"3250 Highway 128, Geyserville, CA 95441","lat":38.70302,"lon":-122.85791,"website":"https://www.riverrockcasino.com/","coordinateSource":"Current River Rock operator directions page directly publishes GPS N 38.70302 W -122.85791"},
+    {"license":"TRCS-000041","name":"Robinson Rancheria Resort, Casino & Bingo","currentPropertyName":"Robinson Rancheria Resort & Casino","address":"1545 State Hwy 20, Nice, CA 95464","lat":39.1426337,"lon":-122.8819655,"website":"https://rrrc.com/","coordinateSource":"Address-specific constructed-property site record for 1545 E Highway 20"},
+    {"license":"TRCS-000032","name":"Rolling Hills Casino","currentPropertyName":"Rolling Hills Casino and Resort","address":"2655 Everett Freeman Way, Corning, CA 96021","lat":39.874167,"lon":-122.202222,"website":"https://rollinghillscasino.com/","addressSource":"Current Rolling Hills operator directions page confirms 2655 Everett Freeman Way","coordinateSource":"California CEQAnet Rolling Hills Casino construction project coordinates 39°52′27″N 122°12′08″W; government project record tied to the same address"},
+    {"license":"TRCS-000067","name":"Running Creek Casino","address":"635 E Hwy 20, Upper Lake, CA 95485","lat":39.16067,"lon":-122.90402,"website":"https://www.runningcreekcasino.com/","coordinateSource":"OpenStreetMap way 944870290 via Mapcarta; amenity=casino"},
+    {"license":"TRCS-000047","name":"Sherwood Valley Rancheria Casino","currentPropertyName":"Sherwood Valley Casino","address":"100 Kawi Place, Willits, CA 95490","lat":39.3929,"lon":-123.36282,"website":"https://www.svrcasino.com/","coordinateSource":"OpenStreetMap casino-building way 1295087174 via Mapcarta; address matches 100 Kawi Place"},
+    {"license":"TRCS-000070","name":"Tortoise Rock Casino","address":"73829 Baseline Rd, Twentynine Palms, CA 92277","lat":34.11958,"lon":-116.05162,"website":"https://www.tortoiserockcasino.com/","coordinateSource":"OpenStreetMap casino-building way 1115762782 via Mapcarta"},
+    {"license":"TRCS-000028","name":"Twin Pine Casino & Hotel","address":"22223 Highway 29, Middletown, CA 95461","lat":38.73266,"lon":-122.62461,"website":"https://www.twinpine.com/","coordinateSource":"OpenStreetMap casino-building way 371270035 via Mapcarta; same address as current property"},
+    {"license":"TRCS-000044","name":"Valley View Casino & Hotel","address":"16300 Nyemii Pass Road, Valley Center, CA 92082","lat":33.2191188,"lon":-116.9732279,"website":"https://valleyviewcasino.com/","coordinateSource":"Property-specific Valley View Casino geolocation matching Nyemii Pass site"}
+  ],
+  "reviewedNotPromoted": [
+    {"license":"TRCS-000082","name":"Acorn Ridge Casino","reason":"Current operator and government address are established at 17500 CA-49, Plymouth, but this sweep did not obtain sufficiently direct property-specific coordinate evidence."},
+    {"license":"TRCS-000014","name":"Cahuilla Casino Hotel","reason":"Address remains verified; coordinate evidence was not strong enough in this sweep to promote."},
+    {"license":"TRCS-000077","name":"Harrah's Northern California","reason":"Address is established at 4640 Coal Mine Rd, Ione; no sufficiently strong property-specific coordinate source was accepted in this sweep."},
+    {"license":"TRCS-000068","name":"Hidden Oaks Casino","reason":"Property/address evidence exists, but operator describes the facility as Class II. Runtime-scope decision remains unresolved."},
+    {"license":"TRCS-000080","name":"Mechoopda Casino","reason":"CGCC active identity remains clear, but direct current physical-property evidence remains insufficient for strict promotion."},
+    {"license":"TRCS-000075","name":"Casino Morongo","reason":"TRCS-000030 Morongo Resort is now coordinate-verified from a U.S. EPA government record. This separate CGCC license still requires same-campus/license relationship resolution to avoid duplicate runtime representation."},
+    {"license":"TRCS-000013","name":"Red Fox Casino","reason":"Address has secondary/industry corroboration, but direct current operator/property evidence remains weaker than the strict threshold."},
+    {"license":"TRCS-000071","name":"Winnedumah Winn's Casino","reason":"CGCC confirms active identity in Independence, but current physical-property evidence remains insufficient."},
+    {"license":"TRCS-000083","name":"North Fork Mono Casino","reason":"Active license and physical property are known, but operator states opening October 2026; remains intentionally excluded from currently-open destinations."},
+    {"license":"TRCS-000017","name":"Cher-Ae Heights Casino","reason":"CGCC city display conflicts with current Trinidad property evidence; regulator/property reconciliation still required."},
+    {"license":"TRCS-000018","name":"Chicken Ranch Casino","reason":"Operator presents both new resort and original OG Casino while CGCC exposes one staged license record; physical-destination representation remains unresolved."}
+  ],
+  "summary": {
+    "recordsReviewed": 30,
+    "newlyFullyReconciled": 19,
+    "reviewedNotPromoted": 11,
+    "combinedFullyReconciledAfterSweep": 60,
+    "inventory": 74,
+    "strictReconciliationPercent": 81.1,
+    "runtimePromoted": 0
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "jurisdiction": "California",
+  "capturedOn": "2026-09-10",
+  "status": "supplemental-reconciliation",
+  "purpose": "Adds five additional coordinate-validated California properties to the strict reconciliation set. Merge with the primary reconciliation and earlier supplement during final consolidation.",
+  "records": [
+    {
+      "license": "TRCS-000052",
+      "name": "Sycuan Casino and Resort",
+      "currentPropertyName": "Sycuan Casino Resort",
+      "address": "5469 Casino Way, El Cajon, CA 92019",
+      "lat": 32.7858,
+      "lon": -116.8303,
+      "website": "https://www.sycuan.com/",
+      "addressSource": "Current Sycuan property materials confirm 5469 Casino Way; current player-portal contact page independently confirms the same casino address.",
+      "coordinateSource": "OpenStreetMap way 1068607108 via Mapcarta; casino geometry at the current Casino Way property.",
+      "status": "fully-reconciled"
+    },
+    {
+      "license": "TRCS-000050",
+      "name": "Soboba Casino Resort",
+      "address": "22777 Soboba Rd, San Jacinto, CA 92583",
+      "lat": 33.79176,
+      "lon": -116.9298,
+      "website": "https://soboba.com/",
+      "addressSource": "Current Soboba Casino Resort contact page confirms 22777 Soboba Rd.",
+      "coordinateSource": "OpenStreetMap way 555787831 via Mapcarta; current Soboba Casino Resort casino geometry.",
+      "status": "fully-reconciled"
+    },
+    {
+      "license": "TRCS-000056",
+      "name": "Spotlight 29 Casino",
+      "address": "46-200 Harrison Place, Coachella, CA 92236",
+      "lat": 33.71257,
+      "lon": -116.18333,
+      "website": "https://spotlight29.com/",
+      "addressSource": "Current Spotlight 29 operator site confirms 46-200 Harrison Place.",
+      "coordinateSource": "OpenStreetMap way 181692780 via Mapcarta; amenity=casino and building=commercial, independently consistent with Wikidata property coordinates.",
+      "status": "fully-reconciled"
+    },
+    {
+      "license": "TRCS-000053",
+      "name": "Table Mountain Casino Resort",
+      "address": "777 Jackpot Lane, Friant, CA 93626",
+      "lat": 36.985,
+      "lon": -119.63583,
+      "website": "https://tmcasino.com/",
+      "addressSource": "Current Table Mountain Casino Resort directions/contact pages confirm 777 Jackpot Lane.",
+      "coordinateSource": "Published Table Mountain Rancheria/casino location coordinates 36°59′06″N 119°38′09″W; current operator directions confirm the same Friant property.",
+      "status": "fully-reconciled"
+    },
+    {
+      "license": "TRCS-000045",
+      "name": "Tachi Palace Hotel and Casino",
+      "currentPropertyName": "Tachi Palace Casino Resort",
+      "address": "17225 Jersey Avenue, Lemoore, CA 93245",
+      "lat": 36.23772,
+      "lon": -119.76539,
+      "website": "https://www.tachipalace.com/",
+      "addressSource": "Current property address from the California first-pass research set.",
+      "coordinateSource": "California CEQAnet Tachi Palace Casino Resort Expansion Project location 36°14′15.8″N 119°45′55.4″W, tied to the Jersey Avenue/17th Avenue casino project site.",
+      "status": "fully-reconciled"
+    }
+  ],
+  "progressImpact": {
+    "priorCombinedFullyReconciled": 36,
+    "newlyFullyReconciled": 5,
+    "combinedFullyReconciled": 41,
+    "inventory": 74
+  }
+}

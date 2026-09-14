@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_NO_UNRESOLVED_INTEGRATION_DEFECT",
+  "scope": "Only combined reconciliation changes and the dense-city fix exposed by actual browser validation; no casino research or full historical manual reaudit.",
+  "casinoBase": "183d3e1d71355a27e4bc35a2969d73037c9e6e33",
+  "locationSource": "4a93870c05ec53bd49fae5143df420c301696839",
+  "validatedRuntime": "bdc05dee1bb15807c0f70d25e48c12fb37eea8f0",
+  "checks": [
+    {
+      "question": "Did the old location branch restore stale casinos or closure policy?",
+      "result": "PASS",
+      "evidence": "All 78 protected data/policy/evidence files and the exact 60-pass runtime registry match the frozen base. Audits remain 883/899/60, NV204/OK113. Seven holds and all history are unchanged."
+    },
+    {
+      "question": "Did source selection lose international functionality or persistence?",
+      "result": "PASS",
+      "evidence": "13 core location paths remain byte-identical to the validated source. Additional differences are intentional auto-recovery/busy guards, equivalent input-control validation, and the parity-tested restaurant performance correction. Actual Canada/UK/manual/GPS/race/persistence checks passed."
+    },
+    {
+      "question": "Did any test disappear or get weakened?",
+      "result": "PASS",
+      "evidence": "All 30 existing test files byte-identical; every original location test assertion retained by AST comparison. 367 actual unique passes, four original external-doc skips; ten meaningful integration regressions added."
+    },
+    {
+      "question": "Did broad name suppression, aliases, old fallback counts or wrong Maps destinations return?",
+      "result": "PASS",
+      "evidence": "83 casino regressions, global discovery fixtures and actual six-region provider pools pass. Bounded closure policy is byte-identical. Exact canonical and international coordinate destinations are exercised."
+    },
+    {
+      "question": "Can a wrong/stale/auth-disabled preview generate false green results?",
+      "result": "PASS",
+      "evidence": "All harnesses assert current source/output fingerprints and auth=true, own strict-port preview processes and clean up their groups. Two negative guard tests and an actual occupied-port failure passed. CI uses PR head and both guarded suites after direct safe production build."
+    },
+    {
+      "question": "Did the performance correction change duplicate semantics or nearby identity?",
+      "result": "PASS",
+      "evidence": "Legacy comparison tests preserve exact namesMatch, source rank, stable ordering and strict <0.2 miles. Cartesian neighbor proof handles antimeridian/poles. 8000 unique rows plus duplicates retain expected identities. All four actual international cities pass after the fix."
+    },
+    {
+      "question": "Were observed browser failures hidden?",
+      "result": "PASS",
+      "evidence": "Failed attempts are preserved, including native cached-permission behavior and pre-fix 110-second city stalls. Fresh native denial is verified; real runner findings cause failure. No unavailable provider/physical/hosted validation is called successful."
+    },
+    {
+      "question": "Did configuration, dependencies, secrets or unrelated features change?",
+      "result": "PASS",
+      "evidence": "Manifest, lockfile, Vite configuration and deployment exclusion are unchanged. CI adds only guarded combined acceptance. Scope matches location source paths, required reconciliation browser/tests and audit docs. Limited high-confidence secret scan found no hits; no credential values were printed."
+    },
+    {
+      "question": "Did the final non-production merge differ from the validated candidate?",
+      "result": "PASS",
+      "evidence": "Git tree comparison finds only the newer AI_CONTINUITY.md. All 78 protected files match their frozen Git blobs. The merged source fingerprint equals the local/CI runtime fingerprint. Merge CI Run 343 and shared checkpoint Run 344 pass."
+    }
+  ],
+  "findingsResolved": [
+    "Preserved casino auto-open manual recovery and busy requests when adopting shared control.",
+    "Preserved current casino registry/closure/alias logic while applying only provider delta.",
+    "Replaced unsafe location preview ownership/readiness with strict owned preview and fingerprints.",
+    "Verified Chromium cached-permission behavior outside the app; native denied recovery uses a fresh denied context.",
+    "Actual dense-city searches exposed an all-pairs duplicate bottleneck missed by independent fixtures; bounded spatial lookup fixes it without changing selection/radius/duplicate rules."
+  ],
+  "scopeProof": {
+    "changedFiles": [
+      ".github/workflows/validate-icon-pack.yml",
+      "AI_CONTINUITY.md",
+      "LOCATION_HANDOFF.md",
+      "audit/casino-location-reconciliation-adversarial-2026-09-13.json",
+      "audit/casino-location-reconciliation-attempts-2026-09-13.json",
+      "audit/casino-location-reconciliation-baseline-2026-09-13.json",
+      "audit/casino-location-reconciliation-browser-2026-09-13.json",
+      "audit/casino-location-reconciliation-performance-2026-09-13.json",
+      "audit/casino-location-reconciliation-plan-2026-09-13.md",
+      "audit/casino-location-reconciliation-validation-2026-09-13.json",
+      "audit/location-architecture-2026-09-13.md",
+      "audit/location-validation-2026-09-13.json",
+      "scripts/browser-build-proof.mjs",
+      "scripts/browser-build-proof.test.mjs",
+      "scripts/casino-browser-live-check.mjs",
+      "scripts/casino-browser-smoke.mjs",
+      "scripts/casino-location-integration.test.mjs",
+      "scripts/location-browser-live.mjs",
+      "scripts/location-browser.mjs",
+      "scripts/location-discovery.test.mjs",
+      "scripts/location-normalization.test.mjs",
+      "scripts/test-runner.mjs",
+      "scripts/test-support/load-app-module.mjs",
+      "scripts/test-support/location-provider-fixtures.mjs",
+      "src/components/date-night-home.tsx",
+      "src/components/date-night-plan-overlay.tsx",
+      "src/components/location-control.tsx",
+      "src/components/nightlife-home.tsx",
+      "src/components/pick-home.tsx",
+      "src/components/result-overlay.tsx",
+      "src/lib/date-night/search.ts",
+      "src/lib/error-component.tsx",
+      "src/lib/location/controller.ts",
+      "src/lib/location/location.test.ts",
+      "src/lib/location/maps.ts",
+      "src/lib/location/model.ts",
+      "src/lib/nightlife/search.ts",
+      "src/lib/restaurants/geocode.ts",
+      "src/lib/restaurants/normalize.ts",
+      "src/lib/restaurants/overpass.ts",
+      "src/lib/restaurants/search.ts",
+      "src/lib/restaurants/types.ts",
+      "src/lib/store.ts"
+    ],
+    "unexpected": [],
+    "protectedFilesUnchanged": 78,
+    "originalTestFilesUnchanged": 30,
+    "changedFileCount": 43
+  },
+  "unresolvedImplementationFindings": [],
+  "remainingReleaseChecks": [
+    "Physical-phone GPS and OS permission dialogs, including permission revocation behavior.",
+    "Installed PWA, authorized hosted/account sessions and external Maps app navigation."
+  ],
+  "nonBlockingLimitations": [
+    "Public provider availability/timeouts remain best effort; observed counts are not city inventories.",
+    "Existing opening-hours evaluator uses viewer timezone, not destination timezone.",
+    "Seven frozen evidence-gated casino holds are future maintenance."
+  ],
+  "safety": {
+    "mainModified": false,
+    "productionModified": false,
+    "vercelDeployed": false,
+    "databaseMigration": false,
+    "recurringMonitoring": false,
+    "secretsModified": false,
+    "exaUsed": false,
+    "originalLocationSourcePreserved": true
+  },
+  "next": "Return control. Use the combined integration as the release candidate; separately authorize main promotion/hosted release, then complete the documented physical-device, PWA, account and external Maps acceptance.",
+  "integration": {
+    "pullRequest": 42,
+    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/pull/42",
+    "candidateBranch": "integration/casino-location-reconciliation-2026-09-13",
+    "candidateSha": "d44de898fc6420e18ad83dc0a7aa753fbd19bc5b",
+    "candidateMessage": "Complete adversarial review of the combined non-production candidate",
+    "baseBranch": "integration/active-work-pass-1",
+    "mergeSha": "189c46bfee0ac0983ea9100eae90e92ee58915b7",
+    "mergeMessage": "Integrate frozen casinos with validated GPS and international discovery",
+    "mergeParents": [
+      "02bee60bfe7ea03879d5173352d08ee63e792c97",
+      "d44de898fc6420e18ad83dc0a7aa753fbd19bc5b"
+    ],
+    "onlyMergeDeltaFromValidatedCandidate": [
+      "AI_CONTINUITY.md"
+    ],
+    "runtimeTestsConfigByteIdenticalToCandidate": true,
+    "protectedFrozenFilesUnchanged": 78,
+    "sourceFingerprintMatchesLocalAndCI": true,
+    "sharedCheckpointAtVerification": "6b4e1a0701ec377cf4272118a76c79c2911fa0ab",
+    "originalLocationRefUnchanged": "4a93870c05ec53bd49fae5143df420c301696839",
+    "mainRefUnchanged": "c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5"
+  }
+}

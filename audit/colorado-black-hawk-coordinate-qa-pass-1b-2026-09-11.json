@@ -1,0 +1,18 @@
+{
+  "jurisdiction":"Colorado",
+  "city":"Black Hawk",
+  "capturedOn":"2026-09-11",
+  "status":"coordinate-qa-pass-1b",
+  "scope":"Second small evidence-scoped Black Hawk property-coordinate checkpoint.",
+  "records":[
+    {"id":"co-black-hawk-saratoga","name":"Saratoga Casino Black Hawk","address":"101 Main Street, Black Hawk, CO 80422","lat":39.80134,"lon":-105.49411,"coordinateEvidence":"https://mapcarta.com/W328261711","status":"coordinate-verified"},
+    {"id":"co-black-hawk-sasquatch","name":"Sasquatch Casino","address":"125 Gregory Street, Black Hawk, CO 80422","lat":39.80184,"lon":-105.49444,"coordinateEvidence":"https://mapcarta.com/W131297386","status":"coordinate-verified"},
+    {"id":"co-black-hawk-wild-card","name":"Wild Card Saloon","address":"120 Main Street, Black Hawk, CO 80422","lat":39.801582,"lon":-105.493541,"coordinateEvidence":"https://nextdoor.com/pages/the-wild-card-saloon-black-hawk-co/","status":"coordinate-verified","note":"Current address QA controls over older directory variants."},
+    {"id":"co-black-hawk-bigfoot","name":"Bigfoot Casino","address":"101 Gregory Street, Black Hawk, CO 80422","lat":39.8018751,"lon":-105.4945333,"coordinateEvidence":"https://www.merchantcircle.com/co-black-hawk/food-and-dining/restaurants/restaurants","identityEvidence":"https://bigfootcasinoblackhawk.com/","status":"coordinate-verified-successor-lineage","note":"Current Bigfoot uses the former Z Casino property; do not create a parallel current Z destination."}
+  ],
+  "heldRecords":[
+    {"id":"co-black-hawk-horseshoe","name":"Horseshoe Black Hawk","address":"401 Main Street, Black Hawk, CO 80422","status":"direct-coordinate-hold","note":"Do not substitute nearby hotel/restaurant geometry."}
+  ],
+  "qaAccounting":{"coordinateVerifiedThisPass":4,"coordinateVerifiedBlackHawkDurableIncludingBallysAndPass1a":12,"principalCoordinateHold":"Horseshoe Black Hawk"},
+  "nextPhase":"Advance Central City coordinate QA and continue searching for a direct Horseshoe casino-property coordinate."
+}

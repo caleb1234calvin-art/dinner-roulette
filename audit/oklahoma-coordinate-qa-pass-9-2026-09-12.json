@@ -1,0 +1,40 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-12",
+  "status": "coordinate-qa-pass-9-artesian-resolved",
+  "scope": "Resolve the remaining Artesian Casino lineage/address ambiguity and promote a property-specific coordinate for runtime use without conflating the casino listing with the hotel mailing address.",
+  "records": [
+    {
+      "id": "ok-artesian-casino",
+      "name": "Artesian Casino",
+      "operator": "Chickasaw Nation",
+      "runtimeAddress": "23 W Vinita Ave, Sulphur, OK 73086",
+      "hotelComplexAddress": "1001 W 1st Street, Sulphur, OK 73086",
+      "lat": 34.507847,
+      "lon": -96.967535,
+      "website": "https://www.artesianhotel.com/casino/",
+      "casinoAddressEvidence": [
+        "https://www.chickasaw.net/Our-Nation/Locations.aspx?searchtext=casino",
+        "https://www.artesianhotel.com/directory/"
+      ],
+      "integratedComplexEvidence": [
+        "https://www.artesianhotel.com/casino/",
+        "https://www.artesianhotel.com/"
+      ],
+      "coordinateEvidence": "https://www.merchantcircle.com/ok-sulphur/travel-and-lodging/hotels-and-lodging/casinos",
+      "coordinateEvidenceLegacyName": "Cash Springs Gaming Ctr",
+      "status": "runtime-ready",
+      "decision": "Preserve 23 W Vinita Ave as the canonical casino-facing runtime address because the current Chickasaw Nation casino directory and the Artesian's own directory use that address for the casino. The Artesian Hotel/Casino complex website uses 1001 W 1st Street as the integrated property mailing/directions address. These are treated as two address faces of the same current destination, not separate Dinner Roulette destinations. The property-specific business geocode at 23 W Vinita uses the same casino phone number and resolves to 34.507847,-96.967535."
+    }
+  ],
+  "qaAccounting": {
+    "coordinateVerifiedBefore": 48,
+    "coordinateVerifiedThisPass": 1,
+    "coordinateVerifiedAfter": 49,
+    "runtimeActiveBefore": 48,
+    "runtimeReadyThisPass": 1,
+    "projectedRuntimeActiveAfterActivation": 49
+  },
+  "lineageDecision": "Do not create separate Artesian Casino and Artesian Hotel Casino destinations. The Chickasaw casino directory's 23 W Vinita listing and the integrated hotel's 1001 W 1st address refer to one current Artesian casino destination.",
+  "nextPhase": "Serialize Artesian Casino as the next chronological Oklahoma runtime addition, validate green, then continue direct coordinate work on Coweta, Lake Eufaula, Holdenville and Cherokee South Coffeyville while leaving Lakecrest and any unresolved site-lineage cases quarantined."
+}

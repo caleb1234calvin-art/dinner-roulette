@@ -1,0 +1,36 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "wildfire-fremont-coordinate-qa-pass-17-runtime-ready",
+  "scope": "Close the remaining Wildfire on Fremont coordinate hold using current first-party operation/address evidence plus a numerical point resolved specifically to the canonical street address.",
+  "runtimeReady": [
+    {
+      "id": "casino-catalog-nv-wildfire-fremont-las-vegas",
+      "name": "Wildfire on Fremont",
+      "address": "2700 E Fremont St, Las Vegas, NV 89104",
+      "lat": 36.1556,
+      "lon": -115.1135,
+      "website": "https://wildfiregaming.com/wildfires/wildfire-on-fremont/",
+      "operationEvidence": [
+        "https://wildfiregaming.com/",
+        "https://wildfiregaming.com/wildfires/",
+        "https://wildfiregaming.com/property-map/",
+        "https://stationcasinos.com/casinos/",
+        "https://www.gaming.nv.gov/siteassets/content/about/agenda-disposition/2025nov-ngc-agenda.pdf"
+      ],
+      "coordinateEvidence": [
+        "https://www.distancesfrom.com/2700-E-Fremont-St-latitude-longitude-2700-E-Fremont-St-latitude-2700-E-Fremont-St-longitude/LatLongHistory/14422354.aspx"
+      ],
+      "status": "runtime-ready",
+      "note": "Current first-party Wildfire and Station Casinos pages independently identify Wildfire on Fremont at 2700 E Fremont St and describe the casino as operating; Wildfire's property map explicitly marks it Now Open. Nevada Gaming Control Board material independently ties Wildfire Fremont to the same address. The numerical point is returned for the exact canonical address rather than a city centroid or neighboring parcel. One first-party detail page currently prints ZIP 89014, but Wildfire's contact/property-map pages, Station Casinos, NGCB and Las Vegas tourism material use 89104; canonical runtime address therefore remains 89104."
+    }
+  ],
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 103,
+    "runtimeReadyThisPass": 1,
+    "projectedNevadaRuntimeActiveAfter": 104,
+    "statewideComplete": false
+  },
+  "duplicateQA": "PASS_FOR_RUNTIME_SERIALIZATION",
+  "nextPhase": "Serialize Wildfire on Fremont as casino catalog Pass 43, validate, then continue Cadence Crossing direct-coordinate QA and remaining rural/successor-state holds without weakening the evidence gate."
+}

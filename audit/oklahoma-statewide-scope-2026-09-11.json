@@ -1,0 +1,56 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "statewide-scope-decomposition-started",
+  "scope": "Dinner Roulette physical casino destinations; destination-scale tribal casinos are in scope, while ordinary travel plazas, smoke shops, convenience outlets and duplicated regulator rows require explicit exclusion or separate destination justification",
+  "primaryAuthority": "National Indian Gaming Commission",
+  "primarySource": "https://www.nigc.gov/wp-content/uploads/2025/12/12112025TribesByStateTribeList.pdf",
+  "supportingSource": "https://www.nigc.gov/map/",
+  "auditDecision": "Oklahoma is too large and structurally noisy for a one-shot catalog pass. Audit by tribal/operator cluster, preserve regulator rows as evidence, and only promote separately routable destination casinos after scope, identity, address and coordinate QA.",
+  "knownStructuralIssues": [
+    "The federal gaming roster mixes destination casinos with travel plazas, smoke-shop casinos, trading-post gaming and other smaller gaming outlets.",
+    "Some tribes operate multiple casino brands and multiple separately located properties under the same brand family.",
+    "The same physical address or tribal administrative address may appear across more than one federal roster row; regulator-row count must not be treated as runtime destination count.",
+    "Current branding can differ from historical federal roster naming, so current tribal/operator first-party sources are required before runtime activation.",
+    "Class II-only properties can still qualify when they are clearly promoted and operated as destination casinos; gaming class alone is not the Dinner Roulette scope test."
+  ],
+  "confirmedExamplesFromCurrentFederalRoster": [
+    {"tribe":"Quapaw Nation","property":"Downstream Casino Resort","scope":"destination candidate"},
+    {"tribe":"Sac & Fox Nation","property":"Black Hawk Casino","scope":"destination candidate"},
+    {"tribe":"Sac & Fox Nation","property":"Sac and Fox Nation Casino - Stroud","scope":"destination candidate"},
+    {"tribe":"Seminole Nation of Oklahoma","property":"Seminole Nation Rivermist Casino","scope":"destination candidate"},
+    {"tribe":"Seminole Nation of Oklahoma","property":"Wewoka Trading Post","scope":"requires destination-scope review"},
+    {"tribe":"Seminole Nation of Oklahoma","property":"Seminole Nation Casino","scope":"destination candidate"},
+    {"tribe":"Shawnee Tribe","property":"Golden Mesa Casino","scope":"destination candidate"},
+    {"tribe":"Osage Nation","property":"Osage Casino Ponca City","scope":"destination candidate"},
+    {"tribe":"Osage Nation","property":"Osage Casino Skiatook","scope":"destination candidate"},
+    {"tribe":"Osage Nation","property":"Osage Casino Tulsa","scope":"destination candidate"},
+    {"tribe":"Osage Nation","property":"Osage Casino Bartlesville","scope":"destination candidate"},
+    {"tribe":"Osage Nation","property":"Osage Casino Hominy","scope":"destination candidate"},
+    {"tribe":"Osage Nation","property":"Osage Casino Pawhuska","scope":"destination candidate"},
+    {"tribe":"Osage Nation","property":"Osage Casino Sand Springs","scope":"destination candidate"},
+    {"tribe":"Thlopthlocco Tribal Town","property":"Golden Pony Casino","scope":"destination candidate"},
+    {"tribe":"Tonkawa Tribe","property":"Tonkawa Casino","scope":"destination candidate"}
+  ],
+  "plannedClusterOrder": [
+    "Chickasaw Nation",
+    "Choctaw Nation of Oklahoma",
+    "Cherokee Nation",
+    "Muscogee (Creek) Nation",
+    "Osage Nation",
+    "Comanche Nation",
+    "Citizen Potawatomi Nation",
+    "Quapaw / northeast Oklahoma cluster",
+    "Sac & Fox / Seminole / Shawnee / smaller central-eastern operators",
+    "remaining tribes and rural properties",
+    "statewide duplicate, travel-plaza and convenience-gaming exclusion sweep"
+  ],
+  "promotionRequirements": [
+    "Current operating identity verified against NIGC plus current tribal/operator evidence.",
+    "Clearly routable physical casino destination rather than generic travel-plaza or convenience gaming.",
+    "Normalized street address and property-specific coordinates.",
+    "Stable Dinner Roulette ID and current website.",
+    "Duplicate/alias QA against earlier catalog passes and other Oklahoma operator rows."
+  ],
+  "nextPhase": "Begin with the largest operator clusters, build explicit retain/review/exclude ledgers, then activate Oklahoma in 50-100 verified-destination runtime batches instead of waiting for perfect statewide closure."
+}

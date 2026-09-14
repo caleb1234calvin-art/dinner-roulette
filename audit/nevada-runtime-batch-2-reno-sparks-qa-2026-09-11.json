@@ -1,0 +1,89 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-11",
+  "batch": "NV-02",
+  "segment": "Reno-Sparks",
+  "status": "qa-cleared",
+  "primaryAuthority": "Nevada Gaming Control Board",
+  "recordCount": 7,
+  "records": [
+    {
+      "id": "casino-catalog-nv-atlantis-reno",
+      "name": "Atlantis Casino Resort Spa",
+      "address": "3800 S Virginia St, Reno, NV 89502",
+      "lat": 39.4888,
+      "lon": -119.7951,
+      "identityEvidence": "current first-party Atlantis site",
+      "coordinateEvidence": "Mapcarta/GeoNames property point"
+    },
+    {
+      "id": "casino-catalog-nv-peppermill-reno",
+      "name": "Peppermill Resort Spa Casino",
+      "address": "2707 S Virginia St, Reno, NV 89502",
+      "lat": 39.49732,
+      "lon": -119.80139,
+      "identityEvidence": "current first-party Peppermill site",
+      "coordinateEvidence": "Mapcarta/OpenStreetMap casino building way"
+    },
+    {
+      "id": "casino-catalog-nv-grand-sierra-resort",
+      "name": "Grand Sierra Resort and Casino",
+      "address": "2500 E 2nd St, Reno, NV 89595",
+      "lat": 39.52357,
+      "lon": -119.77888,
+      "identityEvidence": "current first-party Grand Sierra Resort site",
+      "coordinateEvidence": "Mapcarta/OpenStreetMap casino building way"
+    },
+    {
+      "id": "casino-catalog-nv-nugget-sparks",
+      "name": "Nugget Casino Resort",
+      "address": "1100 Nugget Ave, Sparks, NV 89431",
+      "lat": 39.53438,
+      "lon": -119.75784,
+      "identityEvidence": "current business listing and active resort property",
+      "coordinateEvidence": "Mapcarta/OpenStreetMap casino property way"
+    },
+    {
+      "id": "casino-catalog-nv-western-village-sparks",
+      "name": "Western Village Inn & Casino",
+      "address": "815 Nichols Blvd, Sparks, NV 89434",
+      "lat": 39.53436,
+      "lon": -119.73436,
+      "identityEvidence": "current first-party Western Village site",
+      "coordinateEvidence": "Mapcarta/OpenStreetMap casino building way"
+    },
+    {
+      "id": "casino-catalog-nv-alamo-sparks-petro",
+      "name": "Alamo Casino Sparks Petro",
+      "address": "1950 E Greg St, Sparks, NV 89431",
+      "lat": 39.523855,
+      "lon": -119.708235,
+      "identityEvidence": "current first-party Alamo site; NGCB historical nonrestricted identity corroboration",
+      "coordinateEvidence": "address-specific geocode for 1950 E Greg St"
+    },
+    {
+      "id": "casino-catalog-nv-bonanza-reno",
+      "name": "Bonanza Casino",
+      "address": "4720 N Virginia St, Reno, NV 89506",
+      "lat": 39.57111,
+      "lon": -119.82561,
+      "identityEvidence": "current first-party Bonanza site and 2026 property materials",
+      "coordinateEvidence": "Mapcarta/OpenStreetMap casino building way"
+    }
+  ],
+  "qa": {
+    "currentPhysicalOperationEvidence": 7,
+    "normalizedAddresses": 7,
+    "propertySpecificCoordinates": 7,
+    "stableIds": 7,
+    "duplicateIds": 0,
+    "knownAliasCollisions": 0,
+    "result": "PASS_FOR_NV02_SEGMENT"
+  },
+  "notes": [
+    "Coordinates prefer property/building geometry where available rather than broad postal centroids.",
+    "Alamo Sparks uses an address-specific geocode because a clean property-way coordinate was not surfaced during this pass; the coordinate remains tied to the verified 1950 E Greg St casino parcel.",
+    "This artifact clears only the selected seven Reno-Sparks properties; additional Reno/Sparks casinos may enter later Nevada batches after separate QA.",
+    "NV-02 is not runtime-ready until all selected records clear the same individual gate."
+  ]
+}

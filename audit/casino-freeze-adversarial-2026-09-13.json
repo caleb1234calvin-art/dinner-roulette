@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "scope": "Only pairs involving 26 Pass 59/60 additions; historical canonical catalog is reference context, not freshly re-researched.",
+  "canonical": 883,
+  "serialized": 899,
+  "passes": 60,
+  "newIds": 26,
+  "nearbyPairs": 6,
+  "newNearbyAliasCollisions": 0,
+  "newPairsBelow075Miles": 0,
+  "pairs": [
+    {
+      "a": {
+        "id": "casino-catalog-lakeside-osceola",
+        "name": "Lakeside Hotel Casino",
+        "address": "777 Casino Dr, Osceola, IA 50213",
+        "lat": 41.0372987,
+        "lon": -93.8006325
+      },
+      "b": {
+        "id": "casino-catalog-nv-lakeside-pahrump",
+        "name": "Lakeside Casino & RV Park",
+        "address": "5870 S Homestead Rd, Pahrump, NV 89048",
+        "lat": 36.1324784,
+        "lon": -115.9584802
+      },
+      "miles": 1239.958938253416,
+      "aliasMatch": true,
+      "decision": "Same-brand distinct properties outside the alias proximity threshold"
+    },
+    {
+      "a": {
+        "id": "casino-catalog-nv-sunset-station",
+        "name": "Sunset Station Hotel & Casino",
+        "address": "1301 W Sunset Rd, Henderson, NV 89014",
+        "lat": 36.0629,
+        "lon": -115.0404
+      },
+      "b": {
+        "id": "casino-catalog-nv-wildfire-sunset",
+        "name": "Wildfire Sunset",
+        "address": "1195 W Sunset Rd, Henderson, NV 89014",
+        "lat": 36.063185,
+        "lon": -115.0368655
+      },
+      "miles": 0.19839415220209858,
+      "aliasMatch": false,
+      "decision": "Distinct named floors at separately reviewed addresses; runtime merge regression preserves both"
+    },
+    {
+      "a": {
+        "id": "casino-catalog-nv-barleys-henderson",
+        "name": "Barley's Casino & Brewery Co.",
+        "address": "4500 E Sunset Rd #30, Henderson, NV 89014",
+        "lat": 36.0718506,
+        "lon": -115.0753146
+      },
+      "b": {
+        "id": "casino-catalog-nv-wildfire-lanes",
+        "name": "Wildfire Casino & Lanes",
+        "address": "4451 E Sunset Rd Suite #1, Henderson, NV 89014",
+        "lat": 36.0695855,
+        "lon": -115.0741223
+      },
+      "miles": 0.17008159873483894,
+      "aliasMatch": false,
+      "decision": "Distinct named floors at separately reviewed addresses; runtime merge regression preserves both"
+    },
+    {
+      "a": {
+        "id": "casino-catalog-nv-silver-springs-nugget",
+        "name": "Silver Springs Nugget Casino",
+        "address": "1280 US Highway 95A N, Silver Springs, NV",
+        "lat": 39.417566,
+        "lon": -119.225033
+      },
+      "b": {
+        "id": "casino-catalog-nv-silver-strike-silver-springs",
+        "name": "Silver Strike Casino",
+        "address": "1190 US-50, Silver Springs, NV 89429",
+        "lat": 39.4159678,
+        "lon": -119.2269958
+      },
+      "miles": 0.1522201269561194,
+      "aliasMatch": false,
+      "decision": "Distinct named floors at separately reviewed addresses; runtime merge regression preserves both"
+    },
+    {
+      "a": {
+        "id": "casino-catalog-nv-big-wheel-battle-mountain",
+        "name": "Big Wheel Casino Battle Mountain",
+        "address": "725 Hilltop Rd, Battle Mountain, NV 89820",
+        "lat": 40.61979,
+        "lon": -116.915238
+      },
+      "b": {
+        "id": "casino-catalog-nv-big-wheel-lovelock",
+        "name": "Big Wheel Casino Lovelock",
+        "address": "163 E Main St, Lovelock, NV 89419",
+        "lat": 40.1771044,
+        "lon": -118.4693194
+      },
+      "miles": 87.30583653459293,
+      "aliasMatch": true,
+      "decision": "Same-brand distinct properties outside the alias proximity threshold"
+    },
+    {
+      "a": {
+        "id": "casino-catalog-nv-dinis-yerington",
+        "name": "Dini's Lucky Club Casino",
+        "address": "45 N Main St, Yerington, NV 89447",
+        "lat": 38.9885871,
+        "lon": -119.1635774
+      },
+      "b": {
+        "id": "casino-catalog-nv-pioneer-crossing-yerington",
+        "name": "Pioneer Crossing Casino Yerington",
+        "address": "11 N Main St, Yerington, NV 89447",
+        "lat": 38.9873329,
+        "lon": -119.1634762
+      },
+      "miles": 0.08682808069893666,
+      "aliasMatch": false,
+      "decision": "Distinct named floors at separately reviewed addresses; runtime merge regression preserves both"
+    },
+    {
+      "a": {
+        "id": "casino-catalog-nv-pioneer-crossing-dayton",
+        "name": "Pioneer Crossing Casino Dayton",
+        "address": "4 Pine Cone Rd, Dayton, NV 89403",
+        "lat": 39.2626388,
+        "lon": -119.5830216
+      },
+      "b": {
+        "id": "casino-catalog-nv-pioneer-crossing-fernley",
+        "name": "Pioneer Crossing Casino Fernley",
+        "address": "1705 US-50 ALT, Fernley, NV 89408",
+        "lat": 39.599258,
+        "lon": -119.2122351
+      },
+      "miles": 30.5370915988931,
+      "aliasMatch": true,
+      "decision": "Same-brand distinct properties outside the alias proximity threshold"
+    },
+    {
+      "a": {
+        "id": "casino-catalog-nv-pioneer-crossing-dayton",
+        "name": "Pioneer Crossing Casino Dayton",
+        "address": "4 Pine Cone Rd, Dayton, NV 89403",
+        "lat": 39.2626388,
+        "lon": -119.5830216
+      },
+      "b": {
+        "id": "casino-catalog-nv-pioneer-crossing-yerington",
+        "name": "Pioneer Crossing Casino Yerington",
+        "address": "11 N Main St, Yerington, NV 89447",
+        "lat": 38.9873329,
+        "lon": -119.1634762
+      },
+      "miles": 29.45419715014825,
+      "aliasMatch": true,
+      "decision": "Same-brand distinct properties outside the alias proximity threshold"
+    },
+    {
+      "a": {
+        "id": "casino-catalog-nv-pioneer-crossing-dayton",
+        "name": "Pioneer Crossing Casino Dayton",
+        "address": "4 Pine Cone Rd, Dayton, NV 89403",
+        "lat": 39.2626388,
+        "lon": -119.5830216
+      },
+      "b": {
+        "id": "casino-catalog-nv-nevada-nugget-dayton",
+        "name": "Nevada Nugget",
+        "address": "6 Retail Rd, Dayton, NV 89403",
+        "lat": 39.2649509,
+        "lon": -119.580777
+      },
+      "miles": 0.1998475814824519,
+      "aliasMatch": false,
+      "decision": "Distinct named floors at separately reviewed addresses; runtime merge regression preserves both"
+    },
+    {
+      "a": {
+        "id": "casino-catalog-nv-pioneer-crossing-fernley",
+        "name": "Pioneer Crossing Casino Fernley",
+        "address": "1705 US-50 ALT, Fernley, NV 89408",
+        "lat": 39.599258,
+        "lon": -119.2122351
+      },
+      "b": {
+        "id": "casino-catalog-nv-pioneer-crossing-yerington",
+        "name": "Pioneer Crossing Casino Yerington",
+        "address": "11 N Main St, Yerington, NV 89447",
+        "lat": 38.9873329,
+        "lon": -119.1634762
+      },
+      "miles": 42.36072284184035,
+      "aliasMatch": true,
+      "decision": "Same-brand distinct properties outside the alias proximity threshold"
+    },
+    {
+      "a": {
+        "id": "casino-catalog-nv-terribles-roadhouse-searchlight",
+        "name": "Terrible's Road House Searchlight",
+        "address": "100 US-95, Searchlight, NV 89046",
+        "lat": 35.4660881,
+        "lon": -114.9197756
+      },
+      "b": {
+        "id": "casino-catalog-nv-terribles-casino-searchlight",
+        "name": "Terrible's Casino Searchlight",
+        "address": "670 US-95, Searchlight, NV 89046",
+        "lat": 35.4611508,
+        "lon": -114.9186242
+      },
+      "miles": 0.3472374873314585,
+      "aliasMatch": false,
+      "decision": "Distinct named floors at separately reviewed addresses; runtime merge regression preserves both"
+    }
+  ],
+  "adversarialCorrections": [
+    {
+      "id": "casino-catalog-ok-cts-thackerville-gaming",
+      "decision": "Provisional record rejected before commit/freeze; current separate-room evidence insufficient. Original proposed record retained in research checkpoint. Existing Border Casino untouched."
+    },
+    {
+      "property": "Saddle West",
+      "decision": "Published resort address 1220 and named casino entrance address 1230 are the same property; one destination. Specific corroboration added to Pass 59 evidence."
+    },
+    {
+      "property": "Terrible's Road House Searchlight",
+      "decision": "Searchlight Nugget historical alias verified at 100 US-95; separate 670 US-95 casino remains distinct even within 0.35 miles."
+    }
+  ],
+  "rejectedPinsDocumented": "Pass 59/60 sidecars retain Fernley west-town, Yerington south-Main, Lakeside RV/copied office, Colt RV, Konawa retail/tourism/viewport and Wildfire copied-address conflicts.",
+  "existingHistoricalRowsPreserved": 16,
+  "result": "passed",
+  "additionalBrowserFindings": [
+    "Exact Kaw Southwind Casino name bypassed existing Newkirk closure guard; same bounded rule now covers it.",
+    "Pawnee Trading Post and Casino and Terrible's Roadhouse Casino were same-property live alias duplicates; canonical counts/points unchanged."
+  ],
+  "regressionEvidence": "Captured provider replay initially failed on the Pahrump duplicate. After three alias/closure corrections, full tests and audits passed. Final rebuilt browser verdict is recorded separately in casino-freeze-browser-evidence.",
+  "providerEvidence": "audit/casino-freeze-live-provider-findings-2026-09-13.json"
+}

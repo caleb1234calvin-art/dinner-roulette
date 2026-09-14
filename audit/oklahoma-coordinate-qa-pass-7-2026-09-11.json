@@ -1,0 +1,98 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "coordinate-qa-pass-7",
+  "scope": "Seventh property-specific coordinate verification pass for Oklahoma runtime candidates, adding Muscogee and Osage properties where current property identity/address and geospatial evidence align.",
+  "records": [
+    {
+      "id":"ok-muscogee-muskogee",
+      "name":"Muscogee Casino",
+      "address":"3420 W Peak Blvd, Muskogee, OK 74401",
+      "lat":35.71352,
+      "lon":-95.40620,
+      "website":"https://creeknationcasinomuscogee.com/",
+      "coordinateEvidence":"https://mapcarta.com/W1173504403",
+      "osmFeature":"way 1173504403",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Mapcarta/OSM currently labels the same property with ZIP 74403 while a separate geocoded source resolves 3420 W Peak Blvd as 74401. Preserve current first-party/QA address until final normalization is reconciled."
+    },
+    {
+      "id":"ok-muscogee-okemah",
+      "name":"Okemah Casino",
+      "address":"1101 Woody Guthrie Blvd, Okemah, OK 74859",
+      "lat":35.41935,
+      "lon":-96.30037,
+      "coordinateEvidence":"https://mapcarta.com/N10013813752",
+      "osmFeature":"node 10013813752",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Direct OSM casino node. Current first-party jobs/location material uses 1101 Woody Guthrie Blvd; older sources sometimes use 1100/S Woody Guthrie, so final street normalization remains a separate QA task."
+    },
+    {
+      "id":"ok-muscogee-bristow",
+      "name":"Bristow Casino",
+      "address":"121 W Lincoln Ave, Bristow, OK 74010",
+      "lat":35.82650,
+      "lon":-96.39170,
+      "website":"https://creeknationcasinobristow.com/",
+      "addressEvidence":"https://creeknationcasinobristow.com/",
+      "coordinateEvidence":"https://www.merchantcircle.com/ok-bristow/travel-and-lodging",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Property-level business geocode matches the current first-party address."
+    },
+    {
+      "id":"ok-osage-bartlesville",
+      "name":"Osage Casino Hotel Bartlesville",
+      "address":"1803 US-60, Bartlesville, OK 74003",
+      "lat":36.75100,
+      "lon":-96.03454,
+      "website":"https://osagecasino.com/",
+      "addressEvidence":"https://osagecasino.com/gaming/",
+      "coordinateEvidence":"https://mapcarta.com/N12618783082",
+      "osmFeature":"node 12618783082",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Current 1803 US-60 property opened as the successor to the older Allen Road site; do not revive the closed predecessor."
+    },
+    {
+      "id":"ok-osage-skiatook",
+      "name":"Osage Casino Hotel Skiatook",
+      "address":"5591 W Rogers Blvd, Skiatook, OK 74070",
+      "lat":36.3696996,
+      "lon":-96.0516333,
+      "website":"https://osagecasino.com/",
+      "addressEvidence":"https://osagecasino.com/locations-maps/",
+      "coordinateEvidence":"https://yellowpages.swiss/location.cfm?company=Osage-Casino-Skiatook&key=272281",
+      "corroboratingEvidence":"https://maps.apple.com/place?place-id=I5676CB0D51116794",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-osage-pawhuska",
+      "name":"Osage Casino Hotel Pawhuska",
+      "address":"1421 John Dahl Ave, Pawhuska, OK 74056",
+      "lat":36.67034,
+      "lon":-96.31188,
+      "website":"https://osagecasino.com/",
+      "addressEvidence":"https://osagecasino.com/hotel2/pawhuska-hotel/",
+      "coordinateEvidence":"https://mapcarta.com/W1383033672",
+      "osmFeature":"way 1383033672",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"This is the current John Dahl Avenue hotel/casino property. A separate old Osage Nation Casino-Pawhuska node remains mapped at 2017 E 15th St; that older predecessor must not be activated alongside the current property."
+    }
+  ],
+  "qaAccounting": {
+    "addressIdentityVerifiedPool": 54,
+    "coordinateVerifiedPrevious": 36,
+    "coordinateVerifiedThisPass": 6,
+    "coordinateVerifiedCumulative": 42,
+    "duplicateDistanceClearedCumulative": 0,
+    "runtimeReadyCumulative": 0,
+    "remainingCoordinateTargetForFifty": 8
+  },
+  "holdsAndNormalizationNotes": [
+    "Duck Creek exact casino geometry is available, but current-address sources disagree between 10071 and 10085 Ferguson Rd; reconcile the address before promotion.",
+    "Checotah direct casino geometry is available, but current-address sources disagree between 830 and 831 N Broadway; reconcile before promotion.",
+    "Lake Eufaula current property is 1045 Birkes Rd and the old 806 W Forest/Forrest Ave property is closed; do not use old coordinates.",
+    "Osage Ponca City current first-party address is 64464 US Highway 60. A readily found third-party coordinate source still points to an older 73 N City View Rd location, so hold until current-site coordinates are verified.",
+    "Osage Tulsa remains held until a casino/hotel-building coordinate is found rather than a parking feature."
+  ],
+  "nextPhase": "Find 8 more strong property coordinates to cross the 50-coordinate threshold, prioritizing Coweta, Lake Eufaula current site, Duck Creek after address reconciliation, Checotah after address reconciliation, Holdenville, Osage Ponca City current site, Osage Tulsa exact building, and remaining held Cherokee/Choctaw/Chickasaw candidates. Start branch-aware duplicate-distance QA in earnest before runtime activation."
+}

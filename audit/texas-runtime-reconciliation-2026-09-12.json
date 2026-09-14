@@ -1,0 +1,65 @@
+{
+  "jurisdiction": "Texas",
+  "capturedOn": "2026-09-12",
+  "status": "runtime-reconciled-ready-for-activation",
+  "scope": "Final stable-ID, duplicate/alias and coordinate reconciliation for the four current Texas Dinner Roulette casino destinations.",
+  "destinations": [
+    {
+      "id": "tx-kickapoo-lucky-eagle",
+      "name": "Kickapoo Lucky Eagle Casino Hotel",
+      "address": "794 Lucky Eagle Drive, Eagle Pass, TX 78852",
+      "lat": 28.61092,
+      "lon": -100.44078,
+      "website": "https://luckyeagletexas.com/",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "tx-naskila-livingston",
+      "name": "Naskila Casino",
+      "address": "540 State Park Road 56, Livingston, TX 77351",
+      "lat": 30.7142259,
+      "lon": -94.6746959,
+      "website": "https://www.naskila.com/",
+      "status": "runtime-ready",
+      "aliases": ["Naskila Gaming"]
+    },
+    {
+      "id": "tx-naskila-leggett",
+      "name": "Naskila Casino Leggett",
+      "address": "10314 US 59 N, Livingston, TX 77351",
+      "lat": 30.8342009,
+      "lon": -94.8624389,
+      "website": "https://www.naskila.com/leggett/",
+      "status": "runtime-ready-current-temporary-destination"
+    },
+    {
+      "id": "tx-speaking-rock",
+      "name": "Speaking Rock Entertainment Center",
+      "address": "122 S Old Pueblo Rd, El Paso, TX 79907",
+      "lat": 31.690126,
+      "lon": -106.326605,
+      "website": "https://www.speakingrock.com/",
+      "status": "runtime-ready"
+    }
+  ],
+  "duplicateQA": {
+    "generatedCatalogSearch": "No existing generated catalog match surfaced for Kickapoo Lucky Eagle, Naskila or Speaking Rock before activation.",
+    "naskilaDecision": "Livingston and Leggett are intentionally separate destinations. They have distinct current addresses and property coordinates and both are operating; the Leggett temporary casino is a post-2025 expansion, not a duplicate regulator row.",
+    "regulatorDuplicateDecision": "Repeated NIGC Naskila Gaming and Speaking Rock rows remain collapsed to one physical destination per property.",
+    "ischoopaDecision": "Ischoopa Travel Center remains excluded as travel-center gaming rather than a separately promoted casino destination."
+  },
+  "qaAccounting": {
+    "currentPhysicalDestinations": 4,
+    "coordinateVerified": 4,
+    "stableIdsVerified": 4,
+    "runtimeReady": 4,
+    "unresolvedRuntimeHolds": 0
+  },
+  "completionRule": "Texas may be marked complete only after all four records are serialized, activated in nightlife search, covered by the casino validator and a green Validate Dinner Integration run.",
+  "sourceArtifacts": [
+    "audit/texas-casino-reconciliation-2026-09-11.json",
+    "audit/texas-coordinate-qa-pass-1-2026-09-11.json",
+    "audit/texas-coordinate-qa-pass-2-2026-09-12.json",
+    "audit/texas-coordinate-qa-pass-3-field-verification-2026-09-12.json"
+  ]
+}

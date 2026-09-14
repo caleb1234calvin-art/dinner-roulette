@@ -1,0 +1,101 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "coordinate-qa-pass-8",
+  "scope": "Eighth property-specific coordinate verification pass. This pass promotes coordinates where the current property can be cleanly distinguished from predecessor sites, parking-only features, or nearby travel/gaming operations. Address normalization remains a separate runtime gate where noted.",
+  "records": [
+    {
+      "id":"ok-choctaw-hochatown",
+      "name":"Choctaw Casino & Resort-Hochatown",
+      "address":"272 N State Highway 259A, Hochatown, OK 74728",
+      "lat":34.14258,
+      "lon":-94.74290,
+      "website":"https://choctawlanding.com/",
+      "addressEvidence":"https://www.choctawcasinos.com/contact-us/",
+      "coordinateEvidence":"https://mapcarta.com/N12008273455",
+      "osmFeature":"node 12008273455",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Direct current casino node for Choctaw Landing/Hochatown."
+    },
+    {
+      "id":"ok-cherokee-fort-gibson",
+      "name":"Cherokee Casino Fort Gibson",
+      "address":"107 N Georgetown Rd, Fort Gibson, OK 74434",
+      "lat":35.7712679,
+      "lon":-95.2698870,
+      "website":"https://www.cherokeecasino.com/casinos/fort-gibson",
+      "addressEvidence":"https://www.cherokeecasino.com/casinos/fort-gibson",
+      "coordinateEvidence":"https://www.merchantcircle.com/ok-fort-gibson/travel-and-lodging/hotels-and-lodging",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Property-specific business geocode matches current first-party address."
+    },
+    {
+      "id":"ok-osage-tulsa",
+      "name":"Osage Casino Hotel Tulsa",
+      "address":"951 W 36th St N, Tulsa, OK 74127",
+      "lat":36.20507,
+      "lon":-96.0101453,
+      "website":"https://osagecasino.com/tulsa/",
+      "addressEvidence":"https://osagecasino.com/locations-maps/",
+      "coordinateEvidence":"https://yellowpages.swiss/location.cfm?company=Osage-Casino-Tulsa&key=272280",
+      "corroboratingEvidence":"https://www.google.com/maps/search/Skyline%2BEvent%2BCenter%2BOsage%2BCasino%2BTulsa%2B-%2Brestauranger",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Earlier sweep found only parking geometry; this pass uses a property geocode corroborated to the exact current first-party address rather than the parking feature."
+    },
+    {
+      "id":"ok-osage-ponca-city",
+      "name":"Osage Casino Hotel Ponca City",
+      "address":"64464 US Highway 60, Ponca City, OK 74604",
+      "lat":36.681126,
+      "lon":-97.042300,
+      "website":"https://osagecasino.com/hotel-ponca-city/",
+      "addressEvidence":"https://osagecasino.com/locations-maps/",
+      "coordinateEvidence":"https://www.hotelplanner.com/Hotels/258434/Reservations-Osage-Hotel-Casino-Pc-Ponca-City-64464-State-Highway-60-74604",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Coordinate resolves the current 64464 US Highway 60 property. Do not reuse older 73 N City View Rd coordinate data."
+    },
+    {
+      "id":"ok-muscogee-duck-creek",
+      "name":"Duck Creek Casino",
+      "addressForCoordinateQA":"Ferguson Rd, Beggs, OK 74421",
+      "runtimeAddressHold":["10071 Ferguson Rd","10085 Ferguson Rd"],
+      "lat":35.81431,
+      "lon":-96.01402,
+      "coordinateEvidence":"https://mapcarta.com/W220670639",
+      "osmFeature":"way 220670639",
+      "corroboratingEvidence":"https://mapcarta.com/N12806219189",
+      "status":"coordinate-verified-address-normalization-pending-duplicate-qa",
+      "note":"Exact casino-building geometry is verified. Current sources disagree only on the street number, so coordinate verification is separated from final runtime-address normalization."
+    },
+    {
+      "id":"ok-muscogee-checotah",
+      "name":"Checotah Casino",
+      "addressForCoordinateQA":"N Broadway, Checotah, OK 74426",
+      "runtimeAddressHold":["830 N Broadway","831 N Broadway Ave"],
+      "lat":35.48143,
+      "lon":-95.52278,
+      "coordinateEvidence":"https://mapcarta.com/W1020170806",
+      "osmFeature":"way 1020170806",
+      "corroboratingEvidence":"https://yellowpages.swiss/location.cfm?company=Checotah-Indian-Community-Bingo&key=272019",
+      "status":"coordinate-verified-address-normalization-pending-duplicate-qa",
+      "note":"Direct casino-building geometry is verified. Current/legacy sources disagree by one street number; preserve address hold until runtime normalization."
+    }
+  ],
+  "qaAccounting": {
+    "addressIdentityVerifiedPool": 54,
+    "coordinateVerifiedPrevious": 42,
+    "coordinateVerifiedThisPass": 6,
+    "coordinateVerifiedCumulative": 48,
+    "duplicateDistanceClearedCumulative": 0,
+    "runtimeReadyCumulative": 0,
+    "remainingCoordinateTargetForFifty": 2
+  },
+  "holdsAndNextCandidates": [
+    "Coweta Casino Hotel — identity/address current and strong; exact coordinate still needs a direct property-level source before promotion.",
+    "Lake Eufaula Casino Hotel — current 1045 Birkes Rd successor property is confirmed; exact current-site coordinate still needs a sufficiently direct coordinate source. Never reuse closed 806 W Forrest/Forest Ave geometry.",
+    "Holdenville Casino — current address is solid, but no sufficiently direct property coordinate was found in this sweep.",
+    "Cherokee Casino South Coffeyville — current address and routability are solid; exact coordinate still needs direct evidence.",
+    "Artesian Casino — current first-party address correction to 1001 W 1st Street remains under lineage reconciliation."
+  ],
+  "nextPhase": "Find two more strong property coordinates to reach the 50-coordinate threshold, then make duplicate/name/ID distance QA the primary gate. Do not activate Duck Creek or Checotah until final street-number normalization is resolved."
+}

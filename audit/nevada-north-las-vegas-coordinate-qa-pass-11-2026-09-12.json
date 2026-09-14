@@ -1,0 +1,49 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "north-las-vegas-coordinate-qa-pass-11-runtime-ready",
+  "scope": "Follow-up QA for the remaining NV-02 North Las Vegas / northwest segment after Pass 37. This artifact promotes only the record that independently clears current-operation, normalized-address, property-coordinate, stable-ID, current-website and duplicate/alias gates.",
+  "records": [
+    {
+      "id": "casino-catalog-nv-jerrys-nugget",
+      "name": "Jerry's Nugget Casino",
+      "address": "1821 Las Vegas Blvd N, North Las Vegas, NV 89030",
+      "lat": 36.1932,
+      "lon": -115.13263,
+      "website": "https://www.jerrysnugget.com/",
+      "identityEvidence": [
+        "https://employnv.gov/",
+        "https://www.jerrysnugget.com/"
+      ],
+      "coordinateEvidence": "https://mapcarta.com/W501387177",
+      "status": "runtime-ready",
+      "note": "September 2026 Nevada employment data identifies Jerry's Nugget casino work at 1821 Las Vegas Blvd N and traces the posting to the current first-party site. OSM way 501387177 supplies a property-specific casino point at 36.1932,-115.13263."
+    }
+  ],
+  "reconciliations": [
+    {
+      "selectedCandidate": "Poker Palace Casino",
+      "currentDisposition": "successor-not-yet-promoted",
+      "successor": "Club Fortune North",
+      "address": "2757 Las Vegas Blvd N, North Las Vegas, NV 89030",
+      "reason": "Poker Palace closed under its old identity. Current first-party Club Fortune material describes the North Las Vegas successor location as undergoing renovation/coming soon, while July 2026 reporting described a planned July opening. Do not emit retired Poker Palace or promote Club Fortune North until current first-party operation is unambiguous."
+    },
+    {
+      "selectedCandidate": "Silver Nugget Casino",
+      "currentDisposition": "closure-exclusion",
+      "reason": "Retain outside current Dinner Roulette runtime unless a new independently operating successor casino at the property is verified."
+    }
+  ],
+  "duplicateQA": {
+    "selectionSource": "audit/nevada-runtime-batch-2-selection-2026-09-11.json",
+    "result": "PASS_FOR_RUNTIME_SERIALIZATION",
+    "note": "Jerry's Nugget has a property-specific stable ID and does not collide with Pass 37 Bighorn, Cannery, Aliante or Santa Fe Station."
+  },
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 92,
+    "runtimeReadyThisPass": 1,
+    "projectedNevadaRuntimeAfterActivation": 93,
+    "statewideComplete": false
+  },
+  "nextPhase": "Serialize Jerry's Nugget in Pass 38, validate green, then continue Boulder/Henderson and outer-Clark holds. Club Fortune North remains a successor-operation hold rather than an inferred current destination."
+}

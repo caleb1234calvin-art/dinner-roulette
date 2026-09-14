@@ -1,0 +1,37 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-12",
+  "status": "coordinate-qa-pass-12-south-coffeyville-runtime-ready",
+  "scope": "Promote Cherokee Casino South Coffeyville after recovering a direct numerical map point from Cherokee Casino's current first-party property page, while preserving the remaining Oklahoma coordinate-only holds.",
+  "records": [
+    {
+      "id": "casino-catalog-ok-cherokee-south-coffeyville",
+      "name": "Cherokee Casino South Coffeyville",
+      "operator": "Cherokee Nation Entertainment",
+      "address": "1506 US-169, South Coffeyville, OK 74072",
+      "lat": 36.9825777,
+      "lon": -95.6283822,
+      "website": "https://cherokeecasino.com/casinos/south-coffeyville",
+      "operationEvidence": [
+        "https://cherokeecasino.com/casinos/south-coffeyville",
+        "https://mail.tribalgovernmentgaming.com/article/tribal-gaming-directory/"
+      ],
+      "coordinateEvidence": "https://www.google.com/maps?output=embed&q=36.9825777%2C-95.6283822&z=14",
+      "coordinateMarkerSource": "Current Cherokee Casino South Coffeyville first-party property page embedded map, which links the displayed 1506 US-169 destination directly to 36.9825777,-95.6283822",
+      "status": "runtime-ready",
+      "decision": "Cherokee Casino's current first-party South Coffeyville page identifies the operating property at 1506 US-169 and exposes its embedded map as the explicit numerical point 36.9825777,-95.6283822. Because the coordinate is supplied by the operator's current property page for that exact destination rather than a city centroid, generic address geocode, adjacent parcel, or inferred point, the property clears the runtime coordinate gate."
+    }
+  ],
+  "qaAccounting": {
+    "runtimeActiveBefore": 50,
+    "runtimeReadyThisPass": 1,
+    "projectedRuntimeActiveAfterActivation": 51,
+    "statewideComplete": false
+  },
+  "remainingPriorityHolds": [
+    "Lakecrest Casino and Hotel — 1000 US HW 70 E, Ardmore",
+    "Lake Eufaula Casino Hotel — 1045 Birkes Rd, Eufaula",
+    "Creek Nation Casino Holdenville — 211 E Willow St, Holdenville"
+  ],
+  "nextPhase": "Serialize Cherokee Casino South Coffeyville as overall casino catalog Pass 48, activate it in nightlife search, extend the validator through Pass 48, verify exact-head CI, then continue direct numerical-point work on the three remaining Oklahoma priority holds."
+}

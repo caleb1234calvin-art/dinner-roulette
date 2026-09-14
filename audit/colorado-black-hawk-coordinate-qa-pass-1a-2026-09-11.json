@@ -1,0 +1,16 @@
+{
+  "jurisdiction":"Colorado",
+  "city":"Black Hawk",
+  "capturedOn":"2026-09-11",
+  "status":"coordinate-qa-pass-1a",
+  "scope":"Small evidence-scoped property-coordinate checkpoint for current Black Hawk destinations. This replaces the previously blocked attempt to write one large coordinate artifact.",
+  "records":[
+    {"id":"co-black-hawk-ameristar","name":"Ameristar Casino Resort Spa Black Hawk","address":"111 Richman Street, Black Hawk, CO 80422","lat":39.80015,"lon":-105.48935,"coordinateEvidence":"https://mapcarta.com/W826341429","status":"coordinate-verified"},
+    {"id":"co-black-hawk-lady-luck","name":"Lady Luck Casino Black Hawk","address":"340 Main Street, Black Hawk, CO 80422","lat":39.79877,"lon":-105.48655,"coordinateEvidence":"https://mapcarta.com/W596243426","status":"coordinate-verified"},
+    {"id":"co-black-hawk-lodge","name":"The Lodge Casino","address":"240 Main Street, Black Hawk, CO 80422","lat":39.79967,"lon":-105.49008,"coordinateEvidence":"https://mapcarta.com/W131297397","status":"coordinate-verified"},
+    {"id":"co-black-hawk-gilpin","name":"The Gilpin Casino","address":"111 Main Street, Black Hawk, CO 80422","lat":39.80084,"lon":-105.49301,"coordinateEvidence":"https://mapcarta.com/W328261721","status":"coordinate-verified"},
+    {"id":"co-black-hawk-monarch","name":"Monarch Casino Resort Spa Black Hawk","address":"488 Main Street, Black Hawk, CO 80422","lat":39.79860,"lon":-105.48341,"coordinateEvidence":"https://mapcarta.com/W131297391","status":"coordinate-verified","note":"Casino-building geometry; do not substitute separate hotel geometry."}
+  ],
+  "qaAccounting":{"coordinateVerifiedThisPass":5,"coordinateVerifiedBlackHawkDurableIncludingBallys":8},
+  "nextPhase":"Commit the second small Black Hawk coordinate group, keep Horseshoe held until a sufficiently direct property coordinate is established, then continue Central City coordinate QA."
+}

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "pass": 60,
+  "status": "evidence-reviewed-and-validated",
+  "records": [
+    {
+      "address": "14313 Old Hwy 99, Konawa, OK 74849",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Rivermist+Casino/data=!4m7!3m6!1s0x87b374c5ed7e0ea7:0x1f1164fb47fb428b!8m2!3d34.939424!4d-96.683884!16s%2Fg%2F1txc7k0f!19sChIJpw5-7cV0s4cRi0L7R_tkER8",
+        "method": "explicit-destination-not-viewport"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casino+Konawa+Rivermist+Phillips+66",
+      "decision": "Hold resolved: Apple casino metadata and Google casino destination agree within metres with operator address/phone. Konawa and Rivermist are one property, not nearby retail. Reject tourism's 34.968872,-96.738022 metadata and operator's conflicting viewport/intersection wording.",
+      "id": "casino-catalog-ok-konawa-rivermist",
+      "identitySource": "https://www.seminolenationcasinos.com/casinos/konawa/",
+      "jurisdiction": "Oklahoma",
+      "lat": 34.939424,
+      "lon": -96.683884,
+      "name": "Seminole Nation Casino Konawa",
+      "status": "evidence-reviewed-validation-pending",
+      "supportingSources": [
+        "https://maps.apple.com/place?place-id=I95F11539FB3FB20E",
+        "https://www.travelok.com/listings/view.profile/id.17815"
+      ],
+      "verifiedOn": "2026-09-13"
+    },
+    {
+      "address": "291 Agency Rd, Pawnee, OK 74058",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Pawnee+Nation+Trading+Post+%26+Casino+%28StoneWolf+Casino+Pawnee%29/data=!4m7!3m6!1s0x87b11ed0e1bf918d:0xd4bbb31815f2d698!8m2!3d36.3376159!4d-96.7938385!16s%2Fg%2F1tg8k725!19sChIJjZG_4dAesYcRmNbyFRizu9Q",
+        "method": "explicit-destination-not-viewport"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+Pawnee+Yale+Oklahoma",
+      "decision": "Tribal development roster lists separate gaming operation from StoneWolf at turnpike and TeePee in Yale. Named casino confirms address. StoneWolf Casino Pawnee is an alias, not main turnpike casino.",
+      "id": "casino-catalog-ok-pawnee-trading-post",
+      "identitySource": "https://www.pawneetdc.com/subsidiaries",
+      "jurisdiction": "Oklahoma",
+      "lat": 36.3376159,
+      "lon": -96.7938385,
+      "name": "Pawnee Nation Trading Post Casino",
+      "status": "evidence-reviewed-validation-pending",
+      "supportingSources": [
+        "https://www.casinocity.com/oklahoma/pawnee/trading-post-casino"
+      ],
+      "verifiedOn": "2026-09-13",
+      "liveProviderAlias": "Pawnee Trading Post and Casino",
+      "liveProviderReconciliation": "Actual local browser/provider response exposed this alias alongside the canonical record. Reconcile only within the established same-property radius; main StoneWolf and Yale remain separate."
+    },
+    {
+      "address": "28314 E 6th St, Yale, OK 74085",
+      "coordinateEvidence": {
+        "finalUrl": "https://www.google.com/maps/place/Tee+Pee+Casino+%28StoneWolf+Casino+Yale%29/data=!4m7!3m6!1s0x87b138de74915383:0xdde9cdb2f332b93a!8m2!3d36.1170468!4d-96.6450674!16s%2Fg%2F1tgwn61m!19sChIJg1ORdN44sYcROrky87LN6d0",
+        "method": "explicit-destination-not-viewport"
+      },
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=casinos+Pawnee+Yale+Oklahoma",
+      "decision": "Tribal roster confirms casino with pay-at-pump gas at distinct Yale property. Named map and industry directory agree. StoneWolf Casino Yale is an alias, not main Pawnee turnpike casino.",
+      "id": "casino-catalog-ok-teepee-yale",
+      "identitySource": "https://www.pawneetdc.com/subsidiaries",
+      "jurisdiction": "Oklahoma",
+      "lat": 36.1170468,
+      "lon": -96.6450674,
+      "name": "TeePee Casino & Smoke Shop",
+      "status": "evidence-reviewed-validation-pending",
+      "supportingSources": [
+        "https://www.casinocity.com/oklahoma/yale/teepee-casino-and-smoke-shop",
+        "https://www.mapquest.com/us/oklahoma/tee-pee-casino-355860361"
+      ],
+      "verifiedOn": "2026-09-13"
+    }
+  ],
+  "scope": "Named physical gaming destinations; property-specific evidence and numerical destination points. No statewide completeness claim. Unknown hours remain null."
+}

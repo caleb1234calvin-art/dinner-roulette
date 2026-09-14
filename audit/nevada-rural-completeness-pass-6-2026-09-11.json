@@ -1,0 +1,30 @@
+{
+  "jurisdiction":"Nevada",
+  "capturedOn":"2026-09-11",
+  "status":"rural-completeness-pass-6-expanded",
+  "newlyRecoveredCurrentDestinations":[
+    {"name":"Big Wheel Casino","city":"Battle Mountain","address":"725 Hilltop Rd, Battle Mountain, NV 89820","decision":"include-current-destination","basis":"March 2026 NGCB nonrestricted agenda indexes Big Wheel Casino Battle Mountain; current Battle Mountain Chamber member material lists casino/slots at 725 Hilltop Rd."},
+    {"name":"Owl Club Casino & Restaurant","city":"Battle Mountain","address":"72 E Front St, Battle Mountain, NV 89820","decision":"include-current-destination","basis":"Current Battle Mountain business/ordering surfaces identify Owl Club Casino & Restaurant at 72 E Front St."},
+    {"name":"Broadway Colt Inn Casino & Restaurant","city":"Battle Mountain","address":"654 W Front St, Battle Mountain, NV 89820","decision":"include-current-destination","basis":"Current Travel Nevada destination listing identifies Broadway Colt Inn Casino & Restaurant at 654 W Front St."},
+    {"name":"The Nevada Casino & Bar","city":"Battle Mountain","address":"36 E Front St, Battle Mountain, NV 89820","decision":"retain-current-candidate-ngcb-match-pending","basis":"Current directory evidence identifies an operating casino/bar at this address; exact current NGCB identity remains a final matching gate."},
+    {"name":"Alamo Casino at Wells Petro","city":"Wells","address":"1440 6th St, Wells, NV 89835","decision":"include-current-destination","basis":"Current first-party Alamo site advertises active casino gaming, sportsbook kiosk, bar and dining; historical NGCB nonrestricted identity establishes the Wells operation. Current first-party address supersedes older Highway 93-only regulator formatting."},
+    {"name":"Border Inn Casino","city":"Baker","address":"3777 E US Hwy 50, Baker, NV 89311","decision":"include-current-destination","basis":"Current first-party 2026 site identifies an active motel/casino complex with 30+ slot machines, restaurant, bar and RV park."},
+    {"name":"Longstreet Inn, Casino & RV Resort","city":"Amargosa Valley","address":"8570 S Nevada Hwy 373, Amargosa Valley, NV 89020","decision":"include-current-destination-address-number-qa-pending","basis":"Current first-party site advertises a 24/7 2,500-square-foot casino with 60 gaming machines. First-party pages inconsistently render 8570 and 8750; final geocode/address QA must resolve the number before runtime."},
+    {"name":"Copper Queen Hotel & Casino","city":"Ely","address":"805 Great Basin Blvd, Ely, NV 89301","decision":"include-current-destination","basis":"Current first-party site advertises active casino gaming and identifies 805 Great Basin Blvd."},
+    {"name":"Jailhouse Motel & Casino","city":"Ely","address":"211 5th St, Ely, NV 89301","decision":"include-current-destination","basis":"Current 2026 lodging evidence confirms operating casino/hotel; NGCB nonrestricted history identifies the same property and address."}
+  ],
+  "additionalCompletenessFlags":[
+    {"market":"Winnemucca / I-80","names":["Winnemucca Roadhouse Casino","Pilot Casino - Winnemucca","Pete's Gambling Hall","Alamo Casino - Mill City"],"status":"review-required","reason":"Current casino directories expose additional gaming properties absent from the original curated ledger; destination-scope and NGCB matching required."},
+    {"market":"Ely","names":["Jailhouse Motel & Casino","Copper Queen Hotel & Casino"],"status":"recovered-this-pass"},
+    {"market":"Battle Mountain","names":["Big Wheel Casino","Owl Club Casino & Restaurant","Broadway Colt Inn Casino & Restaurant","The Nevada Casino & Bar"],"status":"recovered-this-pass"},
+    {"market":"Wells/Baker","names":["Alamo Casino at Wells Petro","Border Inn Casino"],"status":"recovered-this-pass"}
+  ],
+  "scopeNotes":[
+    "Current first-party evidence can establish physical destination/current operation while NGCB matching remains the regulator identity gate.",
+    "Travel-center casinos are not automatically excluded: properties with a distinct substantial casino operation can qualify, as with Alamo Wells and previously Alamo Sparks.",
+    "Small route/retail gaming remains excluded by default.",
+    "Do not freeze Nevada roster yet: this pass found multiple additional rural destinations, proving further statewide reconciliation is still necessary."
+  ],
+  "setChecks":{"newlyRecoveredOrElevatedRows":9,"marketsWithNewOmissionsFound":4,"rosterCompleteness":"OPEN","result":"PASS_WITH_FURTHER_RECOVERY_REQUIRED"},
+  "next":"Reconcile Winnemucca/I-80 and other unreviewed rural clusters, then repeat statewide omission sweep before roster freeze and coordinate QA."
+}

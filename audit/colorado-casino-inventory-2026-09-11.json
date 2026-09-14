@@ -1,0 +1,64 @@
+{
+  "jurisdiction": "Colorado",
+  "capturedOn": "2026-09-11",
+  "status": "inventory-reconciliation-started",
+  "scope": "Dinner Roulette physical casino destinations",
+  "authorities": [
+    {
+      "name": "Colorado Division of Gaming",
+      "role": "commercial casino regulator",
+      "source": "https://sbg.colorado.gov/sites/sbg/files/documents/Dec25.Devices.pdf"
+    },
+    {
+      "name": "Colorado Division of Gaming Fact Book & Abstract",
+      "role": "state tribal-gaming compact cross-check",
+      "source": "https://spl.cde.state.co.us/artemis/revserials/rev1011internet/rev10112024internet.pdf"
+    },
+    {
+      "name": "National Indian Gaming Commission",
+      "role": "tribal gaming cross-check",
+      "source": "https://www.nigc.gov/downloads/gaming-locations/"
+    }
+  ],
+  "inventoryBenchmark": {
+    "commercialCasinos": 33,
+    "commercialMarkets": ["Black Hawk", "Central City", "Cripple Creek"],
+    "tribalCasinoDestinations": 2,
+    "tribalProperties": [
+      {
+        "name": "Sky Ute Casino Resort",
+        "location": "Ignacio",
+        "tribe": "Southern Ute Indian Tribe"
+      },
+      {
+        "name": "Ute Mountain Casino Hotel",
+        "location": "Towaoc",
+        "tribe": "Ute Mountain Ute Tribe"
+      }
+    ],
+    "provisionalPhysicalDestinationCount": 35
+  },
+  "commercialEvidence": {
+    "currentOpenCasinoCount": 33,
+    "note": "Colorado Division of Gaming 2026 commission materials report 33 open commercial casinos. The December 31, 2025 device roster remains the current named-property inventory source captured for reconciliation.",
+    "recentMarketBreakdownCrossCheck": {
+      "Black Hawk": 14,
+      "Cripple Creek": 13,
+      "Central City": 6,
+      "total": 33,
+      "note": "Recent state reporting cross-check. Exact current property-level reconciliation remains required before completion."
+    }
+  },
+  "tribalEvidence": {
+    "count": 2,
+    "note": "Colorado state tribal-gaming materials identify compacts with the Southern Ute and Ute Mountain Ute tribes and identify their casino establishments in Ignacio and near Towaoc. Both remain physical casino destinations under Dinner Roulette scope."
+  },
+  "currentDecision": "Treat Colorado as a 35-destination provisional universe: 33 regulated commercial casinos plus two tribal casino resorts. Do not mark complete until every commercial property is reconciled to current identity, address, property-specific coordinates, website, stable ID and duplicate/alias QA.",
+  "nextSteps": [
+    "Extract and reconcile all 33 current commercial property names from the Division of Gaming device roster.",
+    "Verify current branding and closures/renames against regulator and first-party property sources.",
+    "Normalize addresses and property-specific coordinates for all retained destinations.",
+    "Add the two tribal casino resorts with NIGC/state/tribal first-party verification.",
+    "Generate the next casino catalog pass only after the 35-destination accounting closes without unexplained rows."
+  ]
+}

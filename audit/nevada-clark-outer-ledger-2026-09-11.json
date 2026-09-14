@@ -1,0 +1,86 @@
+{
+  "jurisdiction":"Nevada",
+  "capturedOn":"2026-09-11",
+  "status":"candidate-ledger-staged",
+  "primaryAuthority":"Nevada Gaming Control Board",
+  "authoritySources":["https://www.gaming.nv.gov/about-us/statistics-and-publications/","https://www.gaming.nv.gov/about-us/restricted-and-nonrestricted-locations-report/","https://www.gaming.nv.gov/about-us/abbreviated-revenue-release-arr/"],
+  "segments":[
+    {
+      "id":"nv-boulder-strip",
+      "label":"Boulder Strip / Henderson corridor",
+      "candidates":[
+        {"name":"Boulder Station Hotel & Casino","address":"4111 S Boulder Hwy, Las Vegas, NV","status":"current-candidate"},
+        {"name":"Sam's Town Hotel & Gambling Hall","status":"current-candidate"},
+        {"name":"Arizona Charlie's Boulder","status":"current-candidate"},
+        {"name":"Longhorn Casino & Hotel","address":"5288 Boulder Hwy, Las Vegas, NV 89122","status":"current-authority-corroborated","evidence":"June 2026 NGCB/NGC nonrestricted agenda"},
+        {"name":"Eastside Cannery Casino & Hotel","status":"closure-hold","note":"Do not activate without current-operation confirmation; long-term closure history requires explicit reconciliation."},
+        {"name":"Skyline Hotel & Casino","status":"current-candidate"},
+        {"name":"Jokers Wild Casino","status":"current-candidate"},
+        {"name":"Club Fortune Casino","status":"current-candidate"},
+        {"name":"Rainbow Club Casino","status":"current-candidate"},
+        {"name":"Emerald Island Casino","status":"current-candidate"},
+        {"name":"Pass Casino","status":"current-candidate"},
+        {"name":"Railroad Pass Hotel & Casino","status":"current-candidate"},
+        {"name":"Sunset Station Hotel & Casino","address":"1301 W Sunset Rd, Henderson, NV","status":"current-candidate"},
+        {"name":"Green Valley Ranch Resort Spa & Casino","status":"current-candidate"},
+        {"name":"Barley's Casino & Brewing Company","address":"4500 E Sunset Rd, Henderson, NV","status":"current-authority-corroborated"},
+        {"name":"Wildfire Casino - Boulder","address":"2000 S Boulder Hwy, Henderson, NV","status":"current-authority-corroborated"}
+      ]
+    },
+    {
+      "id":"nv-north-las-vegas",
+      "label":"North Las Vegas",
+      "candidates":[
+        {"name":"Bighorn Casino","address":"3016 E Lake Mead Blvd, North Las Vegas, NV 89030","status":"current-authority-corroborated","evidence":"June 2026 NGCB/NGC nonrestricted agenda"},
+        {"name":"Cannery Casino & Hotel","status":"current-candidate"},
+        {"name":"Jerry's Nugget Casino","status":"current-candidate"},
+        {"name":"Poker Palace Casino","status":"current-candidate"},
+        {"name":"Silver Nugget Casino","status":"current-candidate"},
+        {"name":"Aliante Casino + Hotel + Spa","status":"current-candidate"},
+        {"name":"Santa Fe Station Hotel & Casino","status":"market-boundary-review","note":"Physical Las Vegas address but often grouped with northwest valley rather than municipal North Las Vegas; classify by NGCB market rather than colloquial geography."}
+      ],
+      "historicalExclusions":[
+        {"name":"Texas Station Gambling Hall & Hotel","reason":"closed and demolished; historical regulatory records must not be treated as current"},
+        {"name":"Fiesta Rancho","reason":"closed and demolished; historical property only"}
+      ]
+    },
+    {
+      "id":"nv-clark-balance",
+      "label":"Balance of Clark County / off-Strip / Primm / Mesquite",
+      "candidates":[
+        {"name":"Palms Casino Resort","status":"current-candidate"},
+        {"name":"Gold Coast Hotel & Casino","status":"current-candidate"},
+        {"name":"Orleans Hotel & Casino","status":"current-candidate"},
+        {"name":"Rio Hotel & Casino","status":"current-candidate"},
+        {"name":"Virgin Hotels Las Vegas Casino","status":"current-candidate"},
+        {"name":"Ellis Island Hotel, Casino & Brewery","status":"current-candidate"},
+        {"name":"Silver Sevens Hotel & Casino","status":"current-candidate"},
+        {"name":"OYO Hotel & Casino Las Vegas","status":"current-candidate"},
+        {"name":"South Point Hotel Casino & Spa","status":"current-candidate"},
+        {"name":"M Resort Spa Casino","status":"current-candidate"},
+        {"name":"Durango Casino & Resort","status":"current-candidate"},
+        {"name":"Red Rock Casino Resort & Spa","status":"current-candidate"},
+        {"name":"Suncoast Hotel & Casino","status":"current-candidate"},
+        {"name":"Rampart Casino","status":"current-candidate"},
+        {"name":"Palace Station Hotel & Casino","status":"current-candidate"},
+        {"name":"Arizona Charlie's Decatur","status":"current-candidate"},
+        {"name":"Wildfire Casino","address":"1901 N Rancho Dr, Las Vegas, NV","status":"current-authority-corroborated"},
+        {"name":"Wildfire Fremont","address":"2700 E Fremont St, Las Vegas, NV","status":"current-authority-corroborated"},
+        {"name":"Silverton Casino Lodge","status":"current-candidate"},
+        {"name":"Buffalo Bill's Resort & Casino","address":"31700 Las Vegas Blvd S, Primm, NV 89019","status":"current-authority-corroborated"},
+        {"name":"Primm Valley Resort & Casino","address":"31900 Las Vegas Blvd S, Primm, NV 89019","status":"current-authority-corroborated"},
+        {"name":"Whiskey Pete's Hotel & Casino","address":"100 W Primm Blvd, Primm, NV 89019","status":"current-authority-corroborated-needs-operating-state-review"},
+        {"name":"CasaBlanca Resort & Casino","status":"current-candidate"},
+        {"name":"Virgin River Hotel Casino & Bingo","status":"current-candidate"},
+        {"name":"Eureka Casino Resort","status":"current-candidate"},
+        {"name":"Stateline Casino","status":"name-ambiguity-review","note":"Do not activate until exact Clark County property identity/current status is resolved."}
+      ]
+    }
+  ],
+  "setChecks":{"boulderStripCandidates":16,"northLasVegasCandidates":7,"clarkBalanceCandidates":26,"combinedCandidateRows":49,"finalizedCount":null,"result":"STAGED"},
+  "notes":[
+    "NGCB defines nonrestricted gaming broadly enough to include operations that are not necessarily Dinner Roulette destination casinos, so these rows remain candidates until the active location universe, current-operation status, address and coordinate QA are reconciled.",
+    "Current 2026 NGCB agenda evidence directly corroborates Bighorn Casino and Longhorn Casino as nonrestricted locations.",
+    "Historical corporate orders are useful for addresses and aliases but are not accepted alone as proof of current operation; closed properties are explicitly held/excluded."
+  ]
+}

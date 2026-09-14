@@ -1,0 +1,26 @@
+{
+  "jurisdiction":"Nevada",
+  "capturedOn":"2026-09-11",
+  "status":"rural-recovery-pass-5-complete-roster-still-open",
+  "findings":[
+    {"name":"Cactus Petes Resort Casino","address":"1385 Highway 93, Jackpot, NV 89825","decision":"include-current-destination","evidence":"Current first-party resort site describes a 26,000+ sq ft casino with roughly 600 slots and 20 table games; current Town of Jackpot directory also lists the property."},
+    {"name":"Horseshu Hotel & Casino","address":"1220 US Hwy 93, Jackpot, NV 89825","decision":"include-current-separate-destination","evidence":"Current Travel Nevada and Town of Jackpot surfaces identify Horseshu as a casino property across from Cactus Petes."},
+    {"name":"Barton's Club 93","address":"1002 US Hwy 93, Jackpot, NV 89825","decision":"include-current-destination","evidence":"Current Town of Jackpot casino directory lists the property; November 2024 Nevada Gaming Commission material identifies GLM Gaming LLC dba Barton's Club 93 at the same address."},
+    {"name":"Four Jacks Hotel & Casino","address":"1702 Highway 93, Jackpot, NV 89825","decision":"include-current-destination","evidence":"Current Town of Jackpot directory lists Four Jacks; June 2026 Nevada Gaming Commission agenda indexes Four Jacks Hotel and Casino as nonrestricted."},
+    {"name":"Dotty's Casino Jackpot","address":"81 US Hwy 93, Jackpot, NV 89825","decision":"scope-exclude-by-default","evidence":"Town directory lists the current property, but it remains within the audit's Dotty's/retail-style exclusion policy absent a distinct destination-casino justification."},
+    {"name":"Fernley Nugget","address":"1190 E Main St, Fernley, NV 89408","decision":"include-current-destination","evidence":"December 2024 Nevada Gaming Commission agenda records Fernley Nugget Casino Corporation dba Fernley Nugget at 1190 E Main St applying for a nonrestricted gaming license; disposition conditions allow gaming devices plus live table games. The older Travel Nevada 190 E Main listing is treated as stale address data."},
+    {"name":"Dini's Lucky Club","address":"45 N Main St, Yerington, NV 89447","decision":"include-current-destination","evidence":"Current first-party site advertises active casino hours and gaming and identifies 45 N Main St; historical NGCB nonrestricted detail also identifies Lucky Club as active at this address."},
+    {"name":"C Punch Inn & Casino","address":"1420 Cornell Ave, Lovelock, NV 89419","decision":"include-current-destination","evidence":"Current first-party site advertises an operating hotel/casino; NGCB nonrestricted detail identifies C Punch Casino at 1420 Cornell."},
+    {"name":"Stagecoach Hotel & Casino","address":"900 US-95, Beatty, NV 89003","decision":"include-current-destination","evidence":"Current first-party site advertises a 24-hour on-site casino; current Beatty Chamber/town directory independently identifies Stagecoach as Beatty's casino hotel."},
+    {"name":"El Capitan Lodge & Casino","address":"540 F St, Hawthorne, NV","decision":"include-current-destination-address-normalization-pending","evidence":"Current first-party El Capitan site is active; NGCB regulatory material identifies El Capitan Club as nonrestricted at 540 F Street. Final postal normalization/ZIP and coordinate QA remain."}
+  ],
+  "newCompletenessDiscovery":[
+    {"name":"Barton's Club 93","city":"Jackpot","reason":"Current town casino directory plus recent NGCB corroboration; missing from prior recovery set."},
+    {"name":"Four Jacks Hotel & Casino","city":"Jackpot","reason":"Current town casino directory plus June 2026 NGC nonrestricted agenda; missing from prior recovery set."}
+  ],
+  "possibleFurtherJackpotReview":[
+    {"name":"Dotty's Casino Jackpot","decision":"not-added-to-curated-backbone-under-current-scope-policy"}
+  ],
+  "setChecks":{"recoveredOrConfirmedCurrentDestinations":9,"newPreviouslyUnaccountedDestinationCandidates":2,"scopeExclusions":1,"rosterCompleteness":"OPEN","result":"PASS_WITH_COMPLETENESS_GATE_OPEN"},
+  "next":"Continue market-by-market regulator reconciliation, especially rural/balance-state, before freezing the Nevada roster. Do not start Pass 22 runtime yet."
+}

@@ -1,6 +1,8 @@
 import { create } from "zustand";
+import { isGeographicLocation } from "./location/model";
 import { persist } from "zustand/middleware";
 import { DEFAULT_DATE_NIGHT_FILTERS, type DateNightFilters } from "./date-night/types";
+import type { HomeMode } from "./nightlife/types";
 import { applyTheme, isThemeId, type ThemeId } from "./theme";
 import { startOfTomorrow, todayKey } from "./utils";
 import {
@@ -19,6 +21,7 @@ interface AppState {
   location: SearchLocation;
   filters: AppFilters;
   dateNightFilters: DateNightFilters;
+  homeMode: HomeMode;
   preferences: Record<string, RestaurantPreference>;
   visits: VisitRecord[];
   exclusions: TemporaryExclusion[];
@@ -29,6 +32,7 @@ interface AppState {
   hydrated: boolean;
   setHydrated: (value: boolean) => void;
   setTheme: (theme: ThemeId) => void;
+  setHomeMode: (mode: HomeMode) => void;
   setSpookySeasonEnabled: (value: boolean) => void;
   setLocation: (location: SearchLocation) => void;
   setFilters: (patch: Partial<AppFilters>) => void;
@@ -66,6 +70,10 @@ function pruneList(exclusions: TemporaryExclusion[], now = Date.now()): Temporar
   return exclusions.filter((item) => item.expiresAt > now);
 }
 
+function isHomeMode(value: unknown): value is HomeMode {
+  return value === "dinner" || value === "nightlife" || value === "date-night";
+}
+
 function upsertPref(
   map: Record<string, RestaurantPreference>,
   patch: Partial<RestaurantPreference> & { restaurantId: string; name: string },
@@ -95,6 +103,7 @@ export const useAppStore = create<AppState>()(
       location: DEFAULT_LOCATION,
       filters: DEFAULT_FILTERS,
       dateNightFilters: DEFAULT_DATE_NIGHT_FILTERS,
+      homeMode: "dinner",
       preferences: {},
       visits: [],
       exclusions: [],
@@ -108,6 +117,7 @@ export const useAppStore = create<AppState>()(
         applyTheme(theme);
         set({ theme });
       },
+      setHomeMode: (mode) => set({ homeMode: mode }),
       setSpookySeasonEnabled: (value) => set({ spookySeasonEnabled: value }),
       setLocation: (location) => set({ location, sessionShown: [] }),
       setFilters: (patch) => set({ filters: { ...DEFAULT_FILTERS, ...get().filters, ...patch } }),
@@ -223,6 +233,7 @@ export const useAppStore = create<AppState>()(
         set({
           filters: DEFAULT_FILTERS,
           dateNightFilters: DEFAULT_DATE_NIGHT_FILTERS,
+          homeMode: "dinner",
           preferences: {},
           visits: [],
           exclusions: [],
@@ -238,6 +249,7 @@ export const useAppStore = create<AppState>()(
         location: state.location,
         filters: state.filters,
         dateNightFilters: state.dateNightFilters,
+        homeMode: state.homeMode,
         preferences: state.preferences,
         visits: state.visits,
         exclusions: state.exclusions,
@@ -251,8 +263,11 @@ export const useAppStore = create<AppState>()(
         return {
           ...current,
           ...saved,
+          location: isGeographicLocation(saved.location) && ["geo", "manual", "default"].includes(saved.location.source)
+            ? saved.location : current.location,
           filters: { ...DEFAULT_FILTERS, ...saved.filters },
           dateNightFilters: { ...DEFAULT_DATE_NIGHT_FILTERS, ...saved.dateNightFilters },
+          homeMode: isHomeMode(saved.homeMode) ? saved.homeMode : current.homeMode,
           theme: isThemeId(saved.theme) ? saved.theme : current.theme,
           spookySeasonEnabled:
             typeof saved.spookySeasonEnabled === "boolean"
@@ -277,4 +292,4 @@ export function useFavoriteIds(): string[] {
   );
 }
 
-export const RADIUS_OPTIONS: DistanceMiles[] = [1, 3, 5, 10, 15, 20, 30];
+export const RADIUS_OPTIONS: DistanceMiles[] = [1, 3, 5, 10, 15, 20, 30, 40, 50];

@@ -1,0 +1,63 @@
+{
+  "jurisdiction": "Texas",
+  "capturedOn": "2026-09-11",
+  "status": "coordinate-qa-pass-1",
+  "scope": "First property-specific coordinate QA pass for the four retained Texas tribal casino destinations.",
+  "records": [
+    {
+      "id": "tx-kickapoo-lucky-eagle",
+      "name": "Kickapoo Lucky Eagle Casino Hotel",
+      "address": "794 Lucky Eagle Drive, Eagle Pass, TX 78852",
+      "lat": 28.61092,
+      "lon": -100.44078,
+      "website": "https://luckyeagletexas.com/",
+      "addressEvidence": "https://luckyeagletexas.com/mapa-del-casino/",
+      "coordinateEvidence": "https://mapcarta.com/es/W544765130",
+      "osmFeature": "way 544765130",
+      "status": "coordinate-verified-address-correction-pending-runtime",
+      "note": "Current first-party casino-location page uses 794 Lucky Eagle Drive. The earlier Texas reconciliation artifact used 2212 Rosita Valley Rd from a July 2026 expansion announcement; treat that as an expansion/construction address rather than the current public casino entrance unless later evidence proves otherwise. Runtime should use 794 Lucky Eagle Drive."
+    },
+    {
+      "id": "tx-speaking-rock",
+      "name": "Speaking Rock Entertainment Center",
+      "address": "122 S Old Pueblo Rd, El Paso, TX 79907",
+      "lat": 31.690126,
+      "lon": -106.326605,
+      "website": "https://www.speakingrock.com/",
+      "coordinateEvidence": "https://gist.github.com/jeremiak/9f0697e6159f5069d8e38b3c371d70da",
+      "corroboratingEvidence": "https://opengovny.com/place/ChIJAWub-dxC54YRrnz6K-wflUA",
+      "status": "coordinate-verified-duplicate-qa-pending",
+      "note": "Coordinate resolves the current 122 S Old Pueblo Rd public-facing property address. Older NIGC material using 119 S Old Pueblo Rd should remain provenance only."
+    }
+  ],
+  "holds": [
+    {
+      "id": "tx-naskila-livingston",
+      "name": "Naskila Casino",
+      "address": "540 State Park Road 56, Livingston, TX 77351",
+      "status": "address-current-coordinate-hold",
+      "note": "Current first-party and Apple Maps identity/address evidence is strong. Available search evidence this pass did not expose a sufficiently direct numerical property coordinate; a nearby Wikimedia photo geotag is not being substituted for the casino centroid."
+    },
+    {
+      "id": "tx-naskila-leggett",
+      "name": "Naskila Casino Leggett",
+      "address": "10314 US 59 N, Livingston, TX 77351",
+      "status": "address-current-coordinate-hold",
+      "note": "Opened August 25, 2026 and remains a distinct current temporary casino while Livingston stays open. Current first-party address is verified, but a trustworthy numerical property coordinate was not exposed in this pass."
+    }
+  ],
+  "qaAccounting": {
+    "retainedTexasDestinations": 4,
+    "coordinateVerifiedThisPass": 2,
+    "coordinateVerifiedCumulative": 2,
+    "coordinatePending": 2,
+    "runtimeReadyCumulative": 0
+  },
+  "materialCorrection": {
+    "property": "Kickapoo Lucky Eagle Casino Hotel",
+    "previousArtifactAddress": "2212 Rosita Valley Rd, Eagle Pass, TX 78852",
+    "currentFirstPartyCasinoAddress": "794 Lucky Eagle Drive, Eagle Pass, TX 78852",
+    "decision": "Use 794 Lucky Eagle Drive for Dinner Roulette runtime unless stronger current first-party evidence later identifies a different guest entrance. Preserve 2212 Rosita Valley Rd only as provenance tied to the 2026 expansion announcement."
+  },
+  "nextPhase": "Find direct numerical property coordinates for Naskila Livingston and Naskila Leggett, then perform stable-ID/duplicate QA and serialize a Texas runtime pass. Do not mark Texas complete until all four current destinations are runtime-activated and validation is green."
+}

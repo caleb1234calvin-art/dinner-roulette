@@ -1,0 +1,38 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "cadence-crossing-new-footprint-coordinate-hold",
+  "scope": "Preserve current-operation and new-construction evidence for Cadence Crossing Casino while explicitly refusing to recycle legacy Jokers Wild geometry without a numerical point tied to the 2026 Cadence Crossing building footprint.",
+  "records": [
+    {
+      "id": "casino-catalog-nv-cadence-crossing-henderson",
+      "name": "Cadence Crossing Casino",
+      "address": "920 N Boulder Hwy, Henderson, NV 89011",
+      "website": "https://cadencecrossing.boydgaming.com/",
+      "operationEvidence": [
+        "https://www.waze.com/live-map/directions/cadence-crossing-casino-n-boulder-hwy-920-henderson?to=place.w.160563561.1605701141.264632",
+        "https://vegaschanges.com/2026/02/18/cadence-crossing-casino/",
+        "https://media.boydgaming.com/cadence-crossing?l=5",
+        "https://www.americancasinoguidebook.com/nevada/cadence-crossing-casino.html"
+      ],
+      "footprintEvidence": [
+        "https://vegaschanges.com/2026/02/18/cadence-crossing-casino/",
+        "https://www.casinos.com/us/news/boyd-gaming-builds-one-casino-in-vegas-tears-down-another",
+        "https://www.fox5vegas.com/2024/07/26/new-casino-take-place-jokers-wild-cadence-community/"
+      ],
+      "legacyJokersWildCoordinate": {
+        "lat": 36.052,
+        "lon": -114.99468,
+        "status": "excluded-from-runtime-reuse"
+      },
+      "status": "new-footprint-coordinate-hold",
+      "note": "Current sources consistently identify Cadence Crossing Casino as operating at 920 N Boulder Hwy, Henderson, and post-opening coverage says it opened March 25, 2026 and replaced Jokers Wild on the same overall plot. Construction reporting describes a newly built replacement property rather than a simple rename or in-place remodel. A current Waze destination and other current directories establish the operating address, but the evidence captured in this pass does not expose a defensible numerical point tied specifically to the completed 2026 Cadence Crossing building. The historical Jokers Wild point 36.052,-114.99468 therefore remains excluded from runtime reuse. Address continuity is not treated as building-coordinate continuity when the successor footprint is newly constructed."
+    }
+  ],
+  "qaAccounting": {
+    "nevadaRuntimeActiveAtCurrentReview": 107,
+    "runtimeReadyThisPass": 0,
+    "statewideComplete": false
+  },
+  "nextPhase": "Capture a numerical point from a source that identifies the completed Cadence Crossing building/property itself, then compare it against the legacy Jokers Wild point before considering runtime serialization."
+}

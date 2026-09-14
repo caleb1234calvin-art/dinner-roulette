@@ -1,0 +1,110 @@
+name: Validate Dinner Integration
+
+on:
+  push:
+    branches:
+      - feature/dinner-icon-pack-1
+      - integration/active-work-pass-1
+  pull_request:
+    branches:
+      - main
+      - integration/active-work-pass-1
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Record validated commit
+        run: git rev-parse HEAD
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Casino audit regression tests
+        run: node --test scripts/casino-*.test.mjs
+
+      - name: Audit curated casino catalog
+        run: |
+          node scripts/audit-casino-catalog.mjs --inventory
+          node scripts/audit-national-coverage.mjs
+
+      - name: Repository and application tests
+        run: npm test
+
+      - name: Build development bundle
+        run: npm run build:dev
+
+      - name: Build production-mode bundle without database migrations
+        env:
+          VITE_AUTH_ENABLED: "true"
+        run: |
+          node scripts/browser-build-proof.mjs capture
+          node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
+          node scripts/browser-build-proof.mjs complete
+
+      - name: Install Chromium for disposable local browser validation
+        run: npx playwright install --with-deps chromium
+
+      - name: Exercise casino experience in local Chromium
+        env:
+          VITE_AUTH_ENABLED: "true"
+        run: node scripts/casino-browser-smoke.mjs
+
+      - name: Exercise country-aware location flow in local Chromium
+        env:
+          VITE_AUTH_ENABLED: "true"
+          LOCATION_BROWSER_OUTPUT: audit/browser-results/location
+        run: node scripts/location-browser.mjs
+
+      - name: Preserve browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: casino-browser-evidence
+          path: audit/browser-results/
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Verify Dinner icon packs
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          keys = [
+              "burger", "pizza", "mexican", "chinese", "japanese",
+              "italian", "steakhouse", "bbq", "chicken", "cafe-bakery",
+              "dessert", "seafood", "buffet", "breakfast", "fallback",
+          ]
+
+          missing = []
+          for theme in ("dark", "light"):
+              for key in keys:
+                  path = Path("public/dinner-icons") / theme / f"{key}.jpg"
+                  if not path.is_file() or path.stat().st_size == 0:
+                      missing.append(str(path))
+
+          if missing:
+              raise SystemExit("Missing Dinner icon assets:\n" + "\n".join(missing))
+
+          print("Verified 30 Dinner icon assets: 15 dark + 15 light")
+          PY

@@ -1,0 +1,27 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-11",
+  "status": "authoritative-scope-staged",
+  "primaryAuthority": "Nevada Gaming Control Board",
+  "primaryAuthoritySource": "https://www.gaming.nv.gov/about-us/statistics-and-publications/",
+  "rosterSource": "https://www.gaming.nv.gov/about-us/restricted-and-nonrestricted-locations-report/",
+  "scopePolicy": "Use NGCB active nonrestricted gaming locations as the authoritative starting universe for Nevada casino-destination reconciliation. Restricted slot-only locations, route locations, online-only operators, and distributed retail gaming are outside Dinner Roulette's destination-casino scope. Nonrestricted locations still require property-by-property destination review because the regulatory class can include gaming operations that are not necessarily destination casinos.",
+  "authorityFindings": [
+    "NGCB's Statistics & Publications page provides a Location Name and Address List by licensed type, a Restricted and Nonrestricted Locations Report, and a Nonrestricted Count Report.",
+    "NGCB describes the Restricted and Nonrestricted Locations Report as containing names and addresses of all restricted and nonrestricted locations.",
+    "NGCB Tax & License issues gaming licenses and monitors Indian gaming in Nevada.",
+    "Nevada requires a larger property-level reconciliation than prior jurisdictions; a raw nonrestricted license count must not be treated as a curated casino count."
+  ],
+  "knownCurrentLicenseEvidence": [
+    {"name":"Buffalo Bill's Resort & Casino","address":"31700 Las Vegas Blvd S, Primm, NV 89019","evidence":"June 2026 Nevada Gaming Commission nonrestricted agenda"},
+    {"name":"Primm Valley Resort & Casino","address":"31900 Las Vegas Blvd S, Primm, NV 89019","evidence":"June 2026 Nevada Gaming Commission nonrestricted agenda"},
+    {"name":"Whiskey Pete's Hotel & Casino","address":"100 W Primm Blvd, Primm, NV 89019","evidence":"June 2026 Nevada Gaming Commission nonrestricted agenda"},
+    {"name":"Bally's Lake Tahoe Casino Resort","address":"55 Hwy 50, Stateline, NV 89449","evidence":"March 2026 Nevada Gaming Control Board nonrestricted agenda"}
+  ],
+  "setChecks": {
+    "authoritativeStartingUniverseEstablished": true,
+    "curatedDestinationCount": null,
+    "result": "STAGED"
+  },
+  "nextPhase": "Extract the current NGCB nonrestricted location roster, remove non-destination operations under the explicit scope policy, reconcile active names/addresses/coordinates and tribal facilities, then activate the justified physical-destination set as casino-catalog-pass-22.ts."
+}

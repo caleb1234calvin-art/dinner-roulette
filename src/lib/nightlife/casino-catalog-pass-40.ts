@@ -1,0 +1,72 @@
+import type { NightlifePlace } from "./types";
+
+const casino = (
+  id: string,
+  name: string,
+  lat: number,
+  lon: number,
+  address: string,
+  website: string,
+): NightlifePlace => ({
+  id,
+  name,
+  lat,
+  lon,
+  address,
+  cuisines: ["other"],
+  cuisineLabel: "Casino",
+  priceLevel: null,
+  rating: null,
+  reviewCount: null,
+  openingHours: null,
+  phone: null,
+  website,
+  isChain: false,
+  photoKey: "cafe",
+  source: "catalog",
+  venueTypes: ["casino"],
+  energyLevel: 2,
+});
+
+export const CASINO_CATALOG_PASS_40: NightlifePlace[] = [
+  casino(
+    "casino-catalog-nv-longhorn-las-vegas",
+    "Longhorn Hotel & Casino",
+    36.10709,
+    -115.05915,
+    "5288 Boulder Hwy, Las Vegas, NV 89122",
+    "https://www.longhornhotelcasino.vegas/",
+  ),
+  casino(
+    "casino-catalog-nv-railroad-pass",
+    "Railroad Pass Casino & Hotel",
+    35.97253,
+    -114.91195,
+    "1500 Railroad Pass Casino Rd, Henderson, NV 89002",
+    "https://www.railroadpass.com/",
+  ),
+  casino(
+    "casino-catalog-nv-barleys-henderson",
+    "Barley's Casino & Brewery Co.",
+    36.0718506,
+    -115.0753146,
+    "4500 E Sunset Rd #30, Henderson, NV 89014",
+    "https://wildfiregaming.com/barleys/",
+  ),
+  casino(
+    "casino-catalog-nv-arizona-charlies-decatur",
+    "Arizona Charlie's Decatur",
+    36.1634312,
+    -115.2072287,
+    "740 S Decatur Blvd, Las Vegas, NV 89107",
+    "https://arizonacharliesdecatur.com/",
+  ),
+  casino(
+    "casino-catalog-nv-wildfire-rancho",
+    "Wildfire Rancho",
+    36.19449,
+    -115.19197,
+    "1901 N Rancho Dr, Las Vegas, NV 89106",
+    "https://wildfiregaming.com/wildfires/wildfire-rancho/",
+  ),
+];

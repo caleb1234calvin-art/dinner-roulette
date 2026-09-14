@@ -1,0 +1,81 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "runtime-qa-pass-2-address-threshold-crossed",
+  "scope": "Property-level runtime QA extending the verified Oklahoma pool past 50 records. This pass verifies current identity, destination scope, normalized street address and provisional stable Dinner Roulette ID. Coordinates remain a separate gate before runtime activation.",
+  "verifiedClusters": [
+    {
+      "operator": "Muscogee Nation Gaming Enterprises",
+      "records": [
+        {"id":"ok-muscogee-bristow","name":"Bristow Casino","address":"121 W Lincoln Ave, Bristow, OK 74010","status":"address-verified-coordinate-pending"},
+        {"id":"ok-muscogee-checotah","name":"Checotah Casino","address":"831 N Broadway Ave, Checotah, OK 74426","status":"address-verified-coordinate-pending"},
+        {"id":"ok-muscogee-coweta","name":"Coweta Casino Hotel","address":"13185 OK-51, Coweta, OK 74429","status":"address-verified-coordinate-pending"},
+        {"id":"ok-muscogee-duck-creek","name":"Duck Creek Casino","address":"10071 Ferguson Rd, Beggs, OK 74421","status":"address-verified-coordinate-pending"},
+        {"id":"ok-muscogee-holdenville","name":"Holdenville Casino","address":"211 E Willow St, Holdenville, OK 74848","status":"address-verified-coordinate-pending"},
+        {"id":"ok-muscogee-lake-eufaula","name":"Lake Eufaula Casino Hotel","address":"1045 Birkes Rd, Eufaula, OK 74432","status":"address-verified-coordinate-pending"},
+        {"id":"ok-muscogee-muskogee","name":"Muscogee Casino","address":"3420 W Peak Blvd, Muskogee, OK 74401","status":"address-verified-coordinate-pending"},
+        {"id":"ok-muscogee-okemah","name":"Okemah Casino","address":"1101 Woody Guthrie Blvd, Okemah, OK 74859","status":"address-verified-coordinate-pending"},
+        {"id":"ok-muscogee-one-fire","name":"One Fire Casino","address":"1901 Wood Dr, Okmulgee, OK 74447","status":"address-verified-coordinate-pending"},
+        {"id":"ok-muscogee-river-spirit","name":"River Spirit Casino Resort","address":"8330 Riverside Pkwy, Tulsa, OK 74137","status":"address-verified-coordinate-pending"}
+      ],
+      "verifiedCount": 10,
+      "evidence": [
+        "https://creekcasinojobs.com/locations/",
+        "https://lakeeufaulahotelcasino.com/",
+        "https://www.riverspirittulsa.com/about-us/directions/"
+      ],
+      "notes": "Current MNGE location material identifies these ten conventional casino destinations. Lake Eufaula Casino Hotel at 1045 Birkes Rd replaced the former Creek Nation Eufaula Casino at 806 Forest Ave, so the obsolete predecessor must not survive as a duplicate runtime record. Suite Shots Jenks remains staged outside this clean casino batch pending individual scope review."
+    },
+    {
+      "operator": "Osage Nation",
+      "records": [
+        {"id":"ok-osage-tulsa","name":"Osage Casino Hotel Tulsa","address":"951 W 36th St N, Tulsa, OK 74127","status":"address-verified-coordinate-pending"},
+        {"id":"ok-osage-bartlesville","name":"Osage Casino Hotel Bartlesville","address":"1803 US-60, Bartlesville, OK 74003","status":"address-verified-coordinate-pending"},
+        {"id":"ok-osage-pawhuska","name":"Osage Casino Hotel Pawhuska","address":"1421 John Dahl Ave, Pawhuska, OK 74056","status":"address-verified-coordinate-pending"},
+        {"id":"ok-osage-ponca-city","name":"Osage Casino Hotel Ponca City","address":"64464 US Highway 60, Ponca City, OK 74604","status":"address-verified-coordinate-pending"},
+        {"id":"ok-osage-skiatook","name":"Osage Casino Hotel Skiatook","address":"5591 W Rogers Blvd, Skiatook, OK 74070","status":"address-verified-coordinate-pending"},
+        {"id":"ok-osage-hominy","name":"Osage Casino Hominy","address":"39 Deer Ave, Hominy, OK 74035","status":"address-verified-coordinate-pending"},
+        {"id":"ok-osage-sand-springs","name":"Osage Casino Sand Springs","address":"301 Blackjack Dr, Sand Springs, OK 74063","status":"address-verified-coordinate-pending"}
+      ],
+      "verifiedCount": 7,
+      "evidence": [
+        "https://osagecasino.com/locations-maps/"
+      ],
+      "notes": "Current Osage Casino location directory explicitly confirms seven casino destinations and distinguishes five hotel properties from the two casino-only locations at Hominy and Sand Springs."
+    },
+    {
+      "operator": "Citizen Potawatomi Nation",
+      "records": [
+        {"id":"ok-grand-casino-shawnee","name":"Grand Casino Hotel & Resort","address":"777 Grand Casino Blvd, Shawnee, OK 74804","status":"address-verified-coordinate-pending"},
+        {"id":"ok-firelake-casino","name":"FireLake Casino","address":"41170 Hardesty Rd, Shawnee, OK 74801","status":"address-verified-coordinate-pending"}
+      ],
+      "verifiedCount": 2,
+      "evidence": [
+        "https://www.grandresortok.com/contact/",
+        "https://www.firelakecasino.com/contact-9"
+      ],
+      "notes": "Both first-party sites confirm separately routable Shawnee-area casino destinations with distinct street addresses."
+    }
+  ],
+  "qaAccounting": {
+    "candidateUniverse": 77,
+    "previousAddressIdentityVerified": 35,
+    "newAddressIdentityVerifiedThisPass": 19,
+    "cumulativeAddressIdentityVerified": 54,
+    "stableIdsAssignedCumulative": 54,
+    "coordinateVerifiedCumulative": 0,
+    "runtimeReadyCumulative": 0,
+    "addressThresholdForFirstBatch": 50,
+    "addressThresholdStatus": "CROSSED"
+  },
+  "importantCorrections": [
+    "Lake Eufaula Casino Hotel at 1045 Birkes Rd is the current property and replaced the old Creek Nation Eufaula Casino at 806 Forest Ave; do not duplicate both.",
+    "Suite Shots Jenks remains staged and excluded from the 54 address-verified conventional-casino pool.",
+    "Osage has seven current casino locations; Hominy and Sand Springs are casino-only while Tulsa, Bartlesville, Pawhuska, Ponca City and Skiatook include hotel accommodations."
+  ],
+  "runtimeGate": {
+    "passedFor54": ["current identity", "destination scope", "normalized street address", "provisional stable Dinner Roulette ID"],
+    "pendingForRuntime": ["property-specific latitude/longitude", "current website URL normalization", "duplicate/alias distance check against passes 1-27", "final CasinoAuditRecord formatting"]
+  },
+  "nextPhase": "Begin coordinate QA now that 54 records have crossed the address threshold. Prioritize the clearest 50 properties, compare coordinates and aliases against existing casino catalog passes, and generate the first Oklahoma runtime catalog pass only from records that clear all remaining gates."
+}

@@ -1,0 +1,119 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "major-operator-reconciliation-pass-2-threshold-crossed",
+  "scope": "Current consumer-facing physical casino destinations; operator marketing groups are cross-checked against current first-party pages and regulator evidence before runtime activation.",
+  "clusters": [
+    {
+      "operator": "Cherokee Nation Entertainment",
+      "status": "name-scope-reconciled",
+      "retainedCurrentDestinationCandidates": [
+        "Cherokee Casino Fort Gibson",
+        "Cherokee Casino Grove",
+        "Cherokee Casino Ramona",
+        "Cherokee Casino & Hotel Roland",
+        "Cherokee Casino Sallisaw",
+        "Cherokee Casino South Coffeyville",
+        "Cherokee Casino Tahlequah",
+        "Cherokee Casino & Hotel West Siloam Springs",
+        "Cherokee Casino Will Rogers Downs",
+        "Hard Rock Hotel & Casino Tulsa"
+      ],
+      "retainedCount": 10,
+      "evidence": [
+        "https://www.cherokeecasino.com/casinos",
+        "https://www.cherokeecasino.com/",
+        "https://www.hardrockcasinotulsa.com/contact",
+        "https://cherokeenationbusinesses.com/company/hospitality/"
+      ],
+      "note": "Current Cherokee Casino first-party directory exposes nine Oklahoma Cherokee Casino properties. Hard Rock Hotel & Casino Tulsa is a separate current CNE-operated Oklahoma casino destination and is retained in addition to those nine. Gold Strike Tunica is outside Oklahoma and excluded from this state pass."
+    },
+    {
+      "operator": "Muscogee Nation Gaming Enterprises",
+      "status": "name-scope-reconciled-with-one-staged-edge-case",
+      "retainedCurrentDestinationCandidates": [
+        "Bristow Casino",
+        "Checotah Casino",
+        "Coweta Casino Hotel",
+        "Duck Creek Casino",
+        "Holdenville Casino",
+        "Lake Eufaula Casino Hotel",
+        "Muscogee Casino",
+        "Okemah Casino",
+        "One Fire Casino",
+        "River Spirit Casino Resort"
+      ],
+      "retainedCount": 10,
+      "stagedForScopeReview": [
+        "Suite Shots Jenks"
+      ],
+      "evidence": [
+        "https://creeknationcasinos.com/",
+        "https://creeknationcasinoholdenville.com/",
+        "https://creeknationcasinoonefire.com/",
+        "https://www.riverspirittulsa.com/responsible-gaming/"
+      ],
+      "note": "Current MNGE first-party pages describe eleven gaming properties, but Suite Shots Jenks is staged rather than counted as a clean casino destination until its gaming-versus-golf-entertainment role is individually verified. Ten conventional casino properties are retained cleanly now."
+    },
+    {
+      "operator": "Osage Nation",
+      "status": "name-scope-reconciled",
+      "retainedCurrentDestinationCandidates": [
+        "Osage Casino Hotel Tulsa",
+        "Osage Casino Hotel Ponca City",
+        "Osage Casino Hotel Skiatook",
+        "Osage Casino Bartlesville",
+        "Osage Casino Hominy",
+        "Osage Casino Pawhuska",
+        "Osage Casino Sand Springs"
+      ],
+      "retainedCount": 7,
+      "evidence": [
+        "https://osagecasinos.com/wp-content/uploads/2021/10/Production-Enhancement-RFP-10-2021.pdf"
+      ],
+      "note": "Osage Casino enterprise documentation identifies seven Oklahoma casino locations: Tulsa, Sand Springs, Bartlesville, Hominy, Pawhuska, Skiatook and Ponca City. Current property-level site/address QA remains required before runtime activation."
+    },
+    {
+      "operator": "Citizen Potawatomi Nation",
+      "status": "name-scope-reconciled",
+      "retainedCurrentDestinationCandidates": [
+        "Grand Casino Hotel & Resort",
+        "FireLake Casino"
+      ],
+      "retainedCount": 2,
+      "evidence": [
+        "https://www.grandresortok.com/",
+        "https://www.firelakecasino.com/",
+        "https://www.firelakecasino.com/contact-9"
+      ],
+      "note": "Both Shawnee-area properties are current separately routable casino destinations with active first-party casino pages."
+    }
+  ],
+  "cumulativeCleanNameScopeAccounting": {
+    "ChickasawNation": 17,
+    "ChoctawNation": 8,
+    "CherokeeNationEntertainmentOklahoma": 10,
+    "MuscogeeNationGamingEnterprises": 10,
+    "OsageNation": 7,
+    "CitizenPotawatomiNation": 2,
+    "cleanNamedDestinationCandidates": 54,
+    "stagedEdgeCasesNotCounted": [
+      "Suite Shots Jenks"
+    ],
+    "runtimeBatchThreshold": 50,
+    "thresholdStatus": "CROSSED"
+  },
+  "runtimeReadinessDecision": "Oklahoma has crossed the 50-destination discovery threshold, but these 54 records are not yet runtime-ready as a batch. Begin property-level address, coordinate, website, stable-ID and duplicate/alias QA. Promote only records that clear that QA; do not force all 54 into Pass 28 at once if any remain ambiguous.",
+  "nextOperators": [
+    "Comanche Nation",
+    "Quapaw Nation",
+    "Sac & Fox Nation",
+    "Seminole Nation of Oklahoma",
+    "Shawnee Tribe",
+    "Tonkawa Tribe",
+    "Otoe-Missouria Tribe",
+    "Iowa Tribe of Oklahoma",
+    "remaining Oklahoma tribal operators"
+  ],
+  "nextPhase": "Run property-level QA over the 54 clean named candidates while continuing operator discovery in parallel. Once a clean 50-record subset clears address/coordinate/site/ID QA, generate Oklahoma runtime batch 1 in the next available catalog pass and validate the integration branch."
+}

@@ -1,0 +1,73 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "coordinate-qa-pass-3",
+  "scope": "Third property-specific coordinate verification pass for Oklahoma runtime candidates. Coordinates must correspond to the actual casino/racetrack property or a property-specific geocode, not a city centroid.",
+  "records": [
+    {
+      "id": "ok-cherokee-grove",
+      "name": "Cherokee Casino Grove",
+      "address": "24979 US-59, Grove, OK 74344",
+      "lat": 36.65732,
+      "lon": -94.83043,
+      "website": "https://www.cherokeecasino.com/casinos/grove",
+      "coordinateEvidence": "https://mapcarta.com/W560305539",
+      "osmFeature": "way 560305539",
+      "status": "coordinate-verified-duplicate-qa-pending",
+      "note": "Mapcarta classifies the mapped footprint oddly as farmyard landuse, but the named feature is Cherokee Casino Grove and the current first-party site independently confirms the exact US-59 property address."
+    },
+    {
+      "id": "ok-cherokee-ramona",
+      "name": "Cherokee Casino Ramona",
+      "address": "31501 US-75, Ramona, OK 74061",
+      "lat": 36.56442,
+      "lon": -95.93067,
+      "website": "https://www.cherokeecasino.com/casinos/ramona",
+      "coordinateEvidence": "https://mapcarta.com/W309115844",
+      "osmFeature": "way 309115844",
+      "status": "coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id": "ok-cherokee-will-rogers-downs",
+      "name": "Cherokee Casino Will Rogers Downs",
+      "address": "20900 S 4200 Rd, Claremore, OK 74019",
+      "lat": 36.31121,
+      "lon": -95.53248,
+      "website": "https://www.cherokeecasino.com/casinos/will-rogers-downs",
+      "coordinateEvidence": "https://mapcarta.com/21457092",
+      "status": "coordinate-verified-duplicate-qa-pending",
+      "note": "Coordinate evidence resolves the Will Rogers Downs racetrack/gaming property as a whole. First-party Cherokee material confirms the casino operates at the same 20900 S 4200 Rd property."
+    },
+    {
+      "id": "ok-choctaw-idabel",
+      "name": "Choctaw Casino-Idabel",
+      "address": "1425 SE Washington St, Idabel, OK 74745",
+      "lat": 33.89708,
+      "lon": -94.81007,
+      "website": "https://www.choctawcasinos.com/idabel/",
+      "coordinateEvidence": "https://usearch.com/company/choctaw-casinos-%26-resorts/overview",
+      "corroboratingEvidence": [
+        "https://www.choctawcasinos.com/idabel/",
+        "https://mapcarta.com/N10229549058"
+      ],
+      "status": "coordinate-verified-duplicate-qa-pending",
+      "note": "A property-specific business geocode at the current first-party address is corroborated by nearby OSM/Mapcarta features placing Choctaw Casino immediately adjacent to the same 1425-address complex."
+    }
+  ],
+  "qaAccounting": {
+    "addressIdentityVerifiedPool": 54,
+    "coordinateVerifiedPrevious": 16,
+    "coordinateVerifiedThisPass": 4,
+    "coordinateVerifiedCumulative": 20,
+    "duplicateDistanceClearedCumulative": 0,
+    "runtimeReadyCumulative": 0,
+    "remainingCoordinateTargetForFifty": 30
+  },
+  "heldForStrongerEvidence": [
+    "Choctaw Casino & Resort-Hochatown — current first-party address confirmed, but this pass did not find sufficiently strong property-coordinate evidence to promote it yet.",
+    "Cherokee Casino Fort Gibson — current first-party address confirmed, but available search results only provided nearby-feature geometry rather than the casino's own footprint.",
+    "Cherokee Casino South Coffeyville — current first-party address confirmed, but exact property-coordinate evidence still needs a clean direct source."
+  ],
+  "duplicateSearchNote": "Repository code search on the default branch found no existing exact-name hit for Cherokee Casino Grove or Choctaw Casino-Idabel. This is only an initial collision screen; branch-aware/full-pass distance QA is still required before runtime activation.",
+  "nextPhase": "Continue coordinate QA with stronger property-level evidence for Hochatown, Fort Gibson, South Coffeyville and Chickasaw/Muscogee/Osage candidates. In parallel, perform branch-aware duplicate/name/ID distance QA over the 20 coordinate-verified records before creating Oklahoma runtime records."
+}

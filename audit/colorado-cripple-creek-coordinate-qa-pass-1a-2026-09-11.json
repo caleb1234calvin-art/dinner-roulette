@@ -1,0 +1,23 @@
+{
+  "jurisdiction":"Colorado",
+  "city":"Cripple Creek",
+  "capturedOn":"2026-09-11",
+  "status":"coordinate-qa-pass-1a",
+  "scope":"First evidence-scoped Cripple Creek property-coordinate checkpoint after 10/10 address QA.",
+  "verified":[
+    {"id":"co-cripple-creek-century","name":"Century Casino & Hotel Cripple Creek","address":"200-220 E Bennett Ave, Cripple Creek, CO 80813","lat":38.746535,"lon":-105.17802,"coordinateEvidence":"https://www.travelmyth.co.uk/Cripple-Creek/Hotels/Century-Casino-Hotel-Cripple-Creek_tmid889056","identityAddressEvidence":"https://www.cnty.com/cripple-creek/","status":"coordinate-verified"},
+    {"id":"co-cripple-creek-colorado-grande","name":"Colorado Grande Casino & Hotel","address":"300 E Bennett Ave, Cripple Creek, CO 80813","lat":38.7465306,"lon":-105.1761483,"coordinateEvidence":"https://yellowpages.swiss/location.cfm?company=Colorado-Grande-Casino&key=271940","identityAddressEvidence":"https://cogrande.com/","status":"coordinate-verified"},
+    {"id":"co-cripple-creek-johnny-nolons","name":"Johnny Nolon's Casino","address":"301 E Bennett Ave, Cripple Creek, CO 80813","lat":38.74684,"lon":-105.17619,"coordinateEvidence":"https://mapcarta.com/N3540330369","osmFeature":"node 3540330369","identityAddressEvidence":"https://johnnynolonscasino.com/","status":"coordinate-verified"},
+    {"id":"co-cripple-creek-midnight-rose","name":"Midnight Rose Hotel & Casino","address":"256 E Bennett Ave, Cripple Creek, CO 80813","lat":38.74639,"lon":-105.17691,"coordinateEvidence":"https://mapcarta.com/W163738605","osmFeature":"way 163738605","identityAddressEvidence":"https://www.triplecrowncasinos.com/contact/","status":"coordinate-verified"},
+    {"id":"co-cripple-creek-brass-ass","name":"The Brass Ass Casino","address":"264 E Bennett Ave, Cripple Creek, CO 80813","lat":38.7465484,"lon":-105.1764874,"coordinateEvidence":"https://yellowpages.swiss/location.cfm?company=Brass-Ass-Casino&key=271964","identityAddressEvidence":"https://www.triplecrowncasinos.com/contact/","status":"coordinate-verified"},
+    {"id":"co-cripple-creek-double-eagle","name":"Double Eagle Hotel & Casino","address":"442 E Bennett Ave, Cripple Creek, CO 80813","lat":38.74653,"lon":-105.17336,"coordinateEvidence":"https://mapcarta.com/W95047684","osmFeature":"way 95047684","identityAddressEvidence":"https://www.decasino.com/contact/","status":"coordinate-verified"}
+  ],
+  "held":[
+    {"id":"co-cripple-creek-bronco-billys","name":"Bronco Billy's Casino","address":"233 E Bennett Ave, Cripple Creek, CO 80813","status":"direct-property-coordinate-hold"},
+    {"id":"co-cripple-creek-chamonix","name":"Chamonix Casino Hotel","address":"201 E Bennett Ave, Cripple Creek, CO 80813","status":"direct-property-coordinate-hold","note":"Keep separate from Bronco Billy's despite integrated adjoining complex."},
+    {"id":"co-cripple-creek-mcgills","name":"McGills Hotel and Casino","address":"232 E Bennett Ave, Cripple Creek, CO 80813","status":"direct-property-coordinate-hold"},
+    {"id":"co-cripple-creek-golden-nugget","name":"Golden Nugget Cripple Creek","address":"119 Carbonate Street, Cripple Creek, CO 80813","status":"direct-property-coordinate-hold","note":"Do not substitute adjacent hotel coordinate at 421 Pikes Peak Avenue."}
+  ],
+  "qaAccounting":{"crippleCreekDestinations":10,"coordinateVerified":6,"coordinatePending":4},
+  "nextPhase":"Resolve direct property coordinates for Bronco Billy's, Chamonix, McGills and Golden Nugget; then run Colorado stable-ID/duplicate reconciliation."
+}

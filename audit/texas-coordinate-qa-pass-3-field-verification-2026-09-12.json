@@ -1,0 +1,31 @@
+{
+  "jurisdiction": "Texas",
+  "capturedOn": "2026-09-12",
+  "status": "coordinate-qa-complete-4-of-4",
+  "scope": "Final property-specific coordinate QA for Naskila Casino Leggett, closing the sole remaining Texas coordinate hold with user-assisted current map-pin verification.",
+  "record": {
+    "id": "tx-naskila-leggett",
+    "name": "Naskila Casino Leggett",
+    "address": "10314 US 59 N, Livingston, TX 77351",
+    "lat": 30.8342009,
+    "lon": -94.8624389,
+    "website": "https://www.naskila.com/leggett/",
+    "status": "coordinate-verified-user-assisted-current-map-pin",
+    "evidence": [
+      "User-supplied Google Maps listing screenshot identifies the current open destination as Naskila Casino - Leggett at 10314 US-59, Livingston, TX 77351.",
+      "User-supplied dropped-pin screenshot at the casino address exposes numerical coordinates 30.8342009,-94.8624389 and labels the point near Naskila Casino - Leggett / 10314 US-59.",
+      "https://www.naskila.com/leggett/",
+      "https://www.naskila.com/press/naskila-casino-and-alabama-coushatta-tribe-of-texas-celebrate-the-grand-opening-of-naskila-casino-leggett/"
+    ],
+    "note": "The operating temporary casino opened August 25, 2026. This point is tied directly to the current public casino/address and is not a substituted parcel centroid, nearby smoke-shop/rest-area point, or the broader future-resort 10450 US-59 address."
+  },
+  "qaAccounting": {
+    "retainedTexasDestinations": 4,
+    "coordinateVerifiedBefore": 3,
+    "coordinateVerifiedThisPass": 1,
+    "coordinateVerifiedAfter": 4,
+    "coordinatePending": 0
+  },
+  "provenancePolicy": "User-assisted map-pin verification is preserved explicitly as provenance rather than represented as first-party coordinate publication. Current first-party Naskila evidence establishes identity, operation and address; the current map listing/drop pin supplies the numerical property point.",
+  "nextPhase": "Perform final four-property stable-ID/duplicate reconciliation, serialize the four Texas destinations in the next available casino pass, activate runtime, validate green, then mark Texas complete."
+}

@@ -1,0 +1,67 @@
+{
+  "jurisdiction":"Nevada",
+  "capturedOn":"2026-09-11",
+  "status":"statewide-reconciliation-in-progress-rural-completeness-expanded",
+  "primaryAuthority":"Nevada Gaming Control Board",
+  "supportingFederalAuthority":"National Indian Gaming Commission",
+  "sourceArtifacts":[
+    {"path":"audit/nevada-nonrestricted-casino-scope-2026-09-11.json","role":"authoritative scope"},
+    {"path":"audit/nevada-reconciliation-plan-2026-09-11.json","role":"market reconciliation plan"},
+    {"path":"audit/nevada-strip-downtown-ledger-2026-09-11.json","rows":40},
+    {"path":"audit/nevada-clark-outer-ledger-2026-09-11.json","rows":49},
+    {"path":"audit/nevada-laughlin-ledger-2026-09-11.json","rows":9},
+    {"path":"audit/nevada-northern-markets-ledger-2026-09-11.json","rows":45},
+    {"path":"audit/nevada-balance-state-ledger-2026-09-11.json","rows":10},
+    {"path":"audit/nevada-tribal-crosscheck-2026-09-11.json","role":"tribal/federal cross-check"},
+    {"path":"audit/nevada-reconciliation-pass-1-2026-09-11.json","role":"first statewide decision pass"},
+    {"path":"audit/nevada-ambiguity-resolution-pass-2-2026-09-11.json","role":"regulatory ambiguity pass"},
+    {"path":"audit/nevada-ambiguity-resolution-pass-3-2026-09-11.json","role":"core operation/rename/campus ambiguity pass"},
+    {"path":"audit/nevada-scope-address-pass-4-2026-09-11.json","role":"small-scope resolution and rural address QA"},
+    {"path":"audit/nevada-rural-completeness-recovery-2026-09-11.json","role":"initial rural recovery"},
+    {"path":"audit/nevada-rural-recovery-pass-5-2026-09-11.json","role":"expanded Jackpot/rural recovery"},
+    {"path":"audit/nevada-rural-completeness-pass-6-2026-09-11.json","role":"Battle Mountain, Wells, Baker, Amargosa and Ely recovery"}
+  ],
+  "candidateAccounting":{
+    "originalCandidateAndScopeReviewRows":153,
+    "tribalAdditions":2,
+    "priorDecisionUniverse":155,
+    "initialRuralRecoveryRows":8,
+    "additionalJackpotRows":2,
+    "pass6NewRows":9,
+    "revisedProvisionalDecisionUniverse":174,
+    "runtimeDestinationCount":null,
+    "result":"RECONCILIATION_IN_PROGRESS_COMPLETENESS_GATE_OPEN"
+  },
+  "pass6ResolvedOrElevated":[
+    "Big Wheel Casino — Battle Mountain",
+    "Owl Club Casino & Restaurant — Battle Mountain",
+    "Broadway Colt Inn Casino & Restaurant — Battle Mountain",
+    "The Nevada Casino & Bar — Battle Mountain (NGCB match pending)",
+    "Alamo Casino at Wells Petro — Wells",
+    "Border Inn Casino — Baker",
+    "Longstreet Inn, Casino & RV Resort — Amargosa Valley (address-number QA pending)",
+    "Copper Queen Hotel & Casino — Ely",
+    "Jailhouse Motel & Casino — Ely"
+  ],
+  "stillNeedsSpecificDisposition":[
+    "Stockmen's Gambling Hall — Fallon exact current identity/scope",
+    "Red Drag Casino — Elko exact current NGCB match",
+    "The Nevada Casino & Bar — Battle Mountain exact NGCB match",
+    "Longstreet Inn address-number normalization (8570 vs 8750 on first-party pages)",
+    "Winnemucca/I-80 cluster: Winnemucca Roadhouse, Pilot Casino, Pete's Gambling Hall, Alamo Casino Mill City",
+    "additional balance-of-state omissions if found"
+  ],
+  "knownHistoricalOrScopeExclusions":[
+    "The Mirage","Tropicana Las Vegas","Texas Station Gambling Hall & Hotel","Fiesta Rancho","Harrah's Reno","Eastside Cannery Casino & Hotel","Wa She Shu Casino until reopening is authoritatively proven","Moulin Rouge current-destination claim","Bayshore Inn from curated casino backbone","Eureka Casino town-of-Eureka candidate","Gold Dust West Winnemucca candidate","Dotty's/restricted retail-style gaming by default, including Dotty's Jackpot"
+  ],
+  "mandatoryRemainingGates":[
+    "Continue regulator-backed statewide completeness sweep; rural discovery has repeatedly proven the original roster incomplete.",
+    "Resolve Winnemucca/I-80 and remaining rural clusters and exact NGCB identities.",
+    "Account every surviving candidate against current NGCB identity or explicit tribal/federal exception.",
+    "Normalize addresses for every retained destination.",
+    "Complete property-specific coordinate QA.",
+    "Produce final all-row accounting with no unexplained rows, aliases or overlaps.",
+    "Generate and activate Pass 22 only after all prior gates pass."
+  ],
+  "nextPhase":"Reconcile Winnemucca/I-80 and remaining balance-state clusters, repeat omission sweep, then freeze roster and begin bulk address/coordinate QA."
+}

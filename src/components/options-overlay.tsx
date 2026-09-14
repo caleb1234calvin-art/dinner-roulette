@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { getDateNightIcon } from "@/lib/date-night/icons";
 import { isHalloweenDateNightActive } from "@/lib/date-night/season";
 import { dateNightTypeLabel, type DecoratedDateNightPlace } from "@/lib/date-night/types";
-import { restaurantVisual } from "@/lib/restaurants/image-overrides";
+import { nightlifeArtwork, type DecoratedNightlifePlace } from "@/lib/nightlife/types";
+import { dinnerRestaurantIcon } from "@/lib/restaurants/dinner-icons";
 import { formatDistance } from "@/lib/restaurants/geo";
 import { formatPrice } from "@/lib/restaurants/hours";
 import type { DecoratedRestaurant } from "@/lib/restaurants/types";
@@ -13,38 +14,6 @@ import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 type ResultMode = "dinner" | "nightlife" | "date-night";
-
-function decodeXmlText(value: string): string {
-  return value.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&apos;/g, "'");
-}
-
-function generatedBadgeLabel(src: string): string | null {
-  if (!src.startsWith("data:image/svg+xml")) return null;
-  try {
-    const comma = src.indexOf(",");
-    if (comma < 0) return null;
-    const svg = decodeURIComponent(src.slice(comma + 1));
-    const lines = [...svg.matchAll(/<text[^>]*>(.*?)<\/text>/g)].map((match) => decodeXmlText(match[1] ?? "").trim()).filter(Boolean);
-    return lines.length ? lines.join("\n") : null;
-  } catch {
-    return null;
-  }
-}
-
-function badgeDisplayLabel(generatedLabel: string, restaurantName: string): string {
-  const generatedWords = generatedLabel.replace(/\n/g, " ").replace(/\s+/g, " ").trim();
-  const sourceWords = restaurantName.replace(/\s+/g, " ").trim();
-  return generatedWords === sourceWords.toUpperCase() ? sourceWords : generatedLabel;
-}
-
-function badgeTextSize(label: string): string {
-  const longestLine = Math.max(...label.split("\n").map((line) => line.length));
-  if (longestLine > 20) return "text-[12px]";
-  if (longestLine > 16) return "text-[13px]";
-  if (longestLine > 13) return "text-sm";
-  if (longestLine > 9) return "text-base";
-  return "text-lg";
-}
 
 export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNotTonight, mode = "dinner" }: {
   restaurants: DecoratedRestaurant[];
@@ -82,12 +51,13 @@ export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNo
 
 function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { restaurant: DecoratedRestaurant; mode: ResultMode; halloween: boolean; onSelect: () => void; onNotTonight: () => void; }) {
   const openLabel = restaurant.hoursKnown ? (restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed") : null;
-  const visual = restaurantVisual(restaurant.name, restaurant.photoKey);
-  const generatedLabel = visual.isLogo ? generatedBadgeLabel(visual.src) : null;
-  const displayLabel = generatedLabel ? badgeDisplayLabel(generatedLabel, restaurant.name) : null;
+  const theme = useAppStore((s) => s.theme);
+  const visualSrc = dinnerRestaurantIcon(restaurant, theme);
   const dateNightRestaurant = restaurant as DecoratedDateNightPlace;
   const dateNightIcon = mode === "date-night" ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel, halloween }) : null;
   const activityTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
+  const nightlifeRestaurant = restaurant as DecoratedNightlifePlace;
+  const nightlifeIcon = mode === "nightlife" ? nightlifeArtwork(nightlifeRestaurant.venueTypes ?? []) : null;
 
   return (
     <article className="flex min-h-[17rem] flex-col overflow-hidden rounded-xl bg-surface shadow-border">
@@ -97,9 +67,13 @@ function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { r
             <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={dateNightIcon} alt="" className={cn("size-24 rounded-2xl object-cover shadow-sm", halloween && "date-night-halloween-icon")} /></div>
           ) : mode === "date-night" ? (
             <div className="flex h-28 w-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10"><Sparkles className="size-10 text-accent" /></div>
-          ) : visual.isLogo ? (
-            <div className="flex h-28 w-full items-center justify-center bg-surface outline outline-1 -outline-offset-1 outline-fg/10"><div className="shortlist-brand-stage relative flex h-20 w-[76%] items-center justify-center overflow-hidden rounded-xl p-3"><div className="absolute -top-5 -left-4 size-16 rounded-full bg-accent/15 blur-sm" /><div className="absolute -right-3 -bottom-5 size-14 rounded-full bg-accent/10 blur-sm" /><Sparkles className="absolute top-2 left-2 size-3.5 text-accent/70" />{displayLabel ? <span className={cn("relative z-10 max-w-[90%] whitespace-pre-line break-words text-center font-display font-semibold leading-[0.98] tracking-[0.015em] text-balance text-fg", badgeTextSize(displayLabel))}>{displayLabel}</span> : <img src={visual.src} alt="" className="shortlist-logo-image relative z-10 max-h-[78%] max-w-[78%] object-contain" />}</div></div>
-          ) : <img src={visual.src} alt="" className="h-28 w-full object-cover outline outline-1 -outline-offset-1 outline-fg/10" />}
+          ) : mode === "nightlife" && nightlifeIcon ? (
+            <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={nightlifeIcon} alt="" className="size-24 rounded-2xl object-cover shadow-sm" /></div>
+          ) : mode === "nightlife" ? (
+            <div className="h-28 w-full bg-elevated outline outline-1 -outline-offset-1 outline-fg/10" aria-hidden="true" />
+          ) : (
+            <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={visualSrc} alt="" className="size-24 rounded-2xl object-cover shadow-sm" /></div>
+          )}
         </button>
         <button type="button" onClick={onNotTonight} className="absolute top-2 right-2 flex size-10 items-center justify-center rounded-md bg-bg/80 text-fg" aria-label={`Not tonight: ${restaurant.name}`}><Ban className="size-4" /></button>
       </div>

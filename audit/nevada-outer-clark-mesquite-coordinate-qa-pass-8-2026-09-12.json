@@ -1,0 +1,167 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "outer-clark-mesquite-coordinate-qa-pass-8-runtime-ready",
+  "scope": "Rolling QA for ten current NV-02 outer-Clark / Mesquite / Primm destinations. This pass applies the same conservative runtime gate as prior Nevada work and does not claim statewide completeness.",
+  "records": [
+    {
+      "id": "casino-catalog-nv-durango-resort",
+      "name": "Durango Casino & Resort",
+      "address": "6915 S Durango Dr, Las Vegas, NV 89113",
+      "lat": 36.06391,
+      "lon": -115.28266,
+      "website": "https://durangoresort.com/",
+      "identityEvidence": "https://durangoresort.com/",
+      "coordinateEvidence": "https://mapcarta.com/W1170364751",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "casino-catalog-nv-red-rock-resort",
+      "name": "Red Rock Casino Resort & Spa",
+      "address": "11011 W Charleston Blvd, Las Vegas, NV 89135",
+      "lat": 36.1561,
+      "lon": -115.33357,
+      "website": "https://redrockresort.com/",
+      "identityEvidence": ["https://redrockresort.com/", "https://redrockresort.com/contact/", "https://redrockresort.com/play/"],
+      "coordinateEvidence": "https://mapcarta.com/W316302054",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "casino-catalog-nv-suncoast",
+      "name": "Suncoast Hotel & Casino",
+      "address": "9090 Alta Drive, Las Vegas, NV 89145",
+      "lat": 36.1691,
+      "lon": -115.29128,
+      "website": "https://suncoast.boydgaming.com/",
+      "identityEvidence": ["https://suncoast.boydgaming.com/contact-us", "https://suncoast.boydgaming.com/play", "https://www.boydgaming.com/locations/las-vegas"],
+      "coordinateEvidence": "https://mapcarta.com/31685374",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "casino-catalog-nv-rampart",
+      "name": "Rampart Casino",
+      "address": "221 N Rampart Blvd, Las Vegas, NV 89145",
+      "lat": 36.17607,
+      "lon": -115.2915,
+      "website": "https://theresortatsummerlin.com/",
+      "identityEvidence": ["https://theresortatsummerlin.com/", "https://rampartrewards.com/", "https://investor.caesars.com/news-releases/news-release-details/caesars-sportsbook-coming-rampart-casino-summerlin-through-new"],
+      "coordinateEvidence": "https://mapcarta.com/W135562000",
+      "status": "runtime-ready",
+      "note": "Rampart Casino is the casino within The Resort at Summerlin complex; current casino identity is distinct from the JW Marriott hotel brand at the same resort complex."
+    },
+    {
+      "id": "casino-catalog-nv-palace-station",
+      "name": "Palace Station Hotel & Casino",
+      "address": "2411 W Sahara Ave, Las Vegas, NV 89102",
+      "lat": 36.14246,
+      "lon": -115.17497,
+      "website": "https://palacestation.com/",
+      "identityEvidence": ["https://palacestation.com/", "https://palacestation.com/contact/", "https://palacestation.com/play/keno/"],
+      "coordinateEvidence": "https://mapcarta.com/W698199401",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "casino-catalog-nv-silverton",
+      "name": "Silverton Casino Lodge",
+      "address": "3333 Blue Diamond Road, Las Vegas, NV 89139",
+      "lat": 36.04162,
+      "lon": -115.18384,
+      "website": "https://silvertoncasino.com/",
+      "identityEvidence": ["https://silvertoncasino.com/", "https://silvertoncasino.com/contact-us/", "https://silvertoncasino.com/casino/"],
+      "coordinateEvidence": "https://mapcarta.com/W196508099",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "casino-catalog-nv-primm-valley-resort",
+      "name": "Primm Valley Resort & Casino",
+      "address": "31900 Las Vegas Blvd S, Primm, NV 89019",
+      "lat": 35.6113,
+      "lon": -115.3871,
+      "website": "https://primmvalleyresorts.com/",
+      "identityEvidence": ["https://primmvalleyresorts.com/", "https://primmvalleyresorts.com/casino/"],
+      "coordinateEvidence": "https://mapcarta.com/25271798",
+      "status": "runtime-ready",
+      "note": "Current first-party site explicitly states the resort is back and advertises active casino gaming at 31900 Las Vegas Blvd South. Buffalo Bill's and Whiskey Pete's remain separate operation-state reviews and are not inferred from this record."
+    },
+    {
+      "id": "casino-catalog-nv-casablanca-mesquite",
+      "name": "CasaBlanca Resort & Casino",
+      "address": "950 W Mesquite Blvd, Mesquite, NV 89027",
+      "lat": 36.802662,
+      "lon": -114.100662,
+      "website": "https://casablancaresort.com/",
+      "identityEvidence": ["https://casablancaresort.com/casino/", "https://casablanca.playmesquite.com/", "https://travelnevada.com/resorts-casinos/casablanca-resort-casino/"],
+      "coordinateEvidence": "https://maps.roadtrippers.com/us/mesquite-nv/accommodation/casablanca-resort-casino-golf-spa-mesquite-nv--0",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "casino-catalog-nv-virgin-river-mesquite",
+      "name": "Virgin River Casino & Lodge",
+      "address": "100 E Pioneer Blvd, Mesquite, NV 89027",
+      "lat": 36.81519,
+      "lon": -114.06604,
+      "website": "https://virginriver.com/",
+      "identityEvidence": ["https://virginriver.playmesquite.com/", "https://virginriver.playmesquite.com/contact-us/", "https://virginriver.playmesquite.com/casino/"],
+      "coordinateEvidence": "https://www.bowlingtournament.net/bowl-centers/virgin-river-casino-lodge-mesquite-nv",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "casino-catalog-nv-eureka-mesquite",
+      "name": "Eureka Casino Resort",
+      "address": "275 Mesa Blvd, Mesquite, NV 89027",
+      "lat": 36.817637,
+      "lon": -114.063413,
+      "website": "https://www.eurekamesquite.com/",
+      "identityEvidence": ["https://www.eurekamesquite.com/", "https://www.eurekamesquite.com/contact", "https://www.eurekamesquite.com/casino/sportsbook"],
+      "coordinateEvidence": "https://kiwix.drnathanhutchins.com/content/wikipedia_en_all_maxi_2026-02/Eureka_%28hotel_and_casino%29",
+      "coordinateCorroboration": "https://www.casinocamper.com/eureka-resort-and-casino/",
+      "status": "runtime-ready"
+    }
+  ],
+  "duplicateQA": {
+    "selectionSource": "audit/nevada-runtime-batch-2-selection-2026-09-11.json",
+    "basis": "All ten properties were selected as NV-02 candidates outside the original Nevada NV-01 runtime set. Stable IDs are property-specific and preserve distinct Mesquite, Summerlin, southwest-valley and Primm destinations.",
+    "samePropertyAliasNotes": [
+      "Red Rock Resort aliases collapse to the Red Rock Casino Resort & Spa record.",
+      "Silverton / Silverton Casino Hotel / Silverton Lodge aliases collapse to Silverton Casino Lodge.",
+      "Casa Blanca / CasaBlanca naming variants collapse to CasaBlanca Resort & Casino.",
+      "Virgin River Hotel & Casino / Virgin River Casino & Lodge naming variants collapse to one current Mesquite property."
+    ],
+    "result": "PASS_FOR_RUNTIME_SERIALIZATION"
+  },
+  "holds": [
+    {
+      "name": "Buffalo Bill's Resort & Casino",
+      "status": "hold",
+      "reason": "Do not infer current operation from the active Primm Valley property; current operation state requires its own reconciliation."
+    },
+    {
+      "name": "Whiskey Pete's Hotel & Casino",
+      "status": "hold",
+      "reason": "Current-operation state remains under explicit review."
+    },
+    {
+      "name": "Wildfire Casino",
+      "address": "1901 N Rancho Dr, Las Vegas, NV",
+      "status": "hold",
+      "reason": "Keep separate until Rancho naming/coordinate QA is completed without colliding with other Wildfire properties."
+    },
+    {
+      "name": "Wildfire Fremont",
+      "status": "hold",
+      "reason": "Keep separate until final property-coordinate and collision QA is complete."
+    },
+    {
+      "name": "Arizona Charlie's Decatur",
+      "status": "hold",
+      "reason": "Not promoted in this pass because the current pass intentionally stops at the ten fully cross-checked records rather than lowering evidence standards."
+    }
+  ],
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 72,
+    "runtimeReadyThisPass": 10,
+    "projectedNevadaRuntimeAfterActivation": 82,
+    "statewideComplete": false
+  },
+  "nextPhase": "Serialize these ten records in Pass 35, validate green, then continue the remaining Boulder/Henderson, North Las Vegas/Northwest and outer-Clark hold set under the same current-operation and property-coordinate gates."
+}

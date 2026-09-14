@@ -1,0 +1,41 @@
+{
+  "jurisdiction": "California",
+  "capturedOn": "2026-09-10",
+  "status": "accounting-gap-recovery",
+  "purpose": "Resolve two license IDs that were present in the 74-record CGCC inventory and first-pass research but were not represented in the staged strict-reconciliation/special-case sets during all-ID accounting.",
+  "records": [
+    {
+      "license": "TRCS-000011",
+      "name": "Wanaaha Casino",
+      "address": "2742 North Sierra Highway, Bishop, CA 93514",
+      "lat": 37.3754366,
+      "lon": -118.4261615,
+      "website": "https://www.wanaaha.com/",
+      "status": "fully-reconciled",
+      "addressSource": "Current Wanaaha operator site confirms 2742 North Sierra Highway and states the casino is open 24 hours daily; California EDD independently lists the same employer address.",
+      "coordinateSource": "Address-specific geocoded Bishop Paiute Gaming/Wanaaha property listing for 2742 N Sierra Hwy.",
+      "note": "NIGC materials independently identify Wanaaha (formerly Paiute Palace) as Bishop Paiute Class II & III gaming."
+    },
+    {
+      "license": "TRCS-000038",
+      "name": "Win-River Casino",
+      "currentPropertyName": "Win-River Resort & Casino",
+      "address": "2100 Redding Rancheria Road, Redding, CA 96001",
+      "lat": 40.507317,
+      "lon": -122.382547,
+      "website": "https://winriver.com/",
+      "status": "fully-reconciled",
+      "addressSource": "Current Win-River operator site and Redding Rancheria facility directory both confirm 2100 Redding Rancheria Road.",
+      "coordinateSource": "Shasta County destination record supplies property coordinates 40.507317, -122.382547; an independent address-geocoded casino dataset places the same property within tens of meters.",
+      "note": "Use current property name in runtime while retaining CGCC inventory identity for audit traceability."
+    }
+  ],
+  "impact": {
+    "previousPropertyReconciled": 67,
+    "newlyRecovered": 2,
+    "propertyReconciledAfterRecovery": 69,
+    "specialCaseOrExplicitRuntimeDecisionIds": 5,
+    "accountedLicenseIds": 74,
+    "inventory": 74
+  }
+}

@@ -1,0 +1,1104 @@
+{
+  "schemaVersion": 2,
+  "reviewedOn": "2026-09-13",
+  "perspective": "Assume both prior and current audit decisions are wrong; falsify them before accepting the release candidate.",
+  "scope": [
+    "All 873 actual exported rows and 857 canonical destinations across 58 passes",
+    "All continuation code, data, test, workflow and documentation changes",
+    "All 81 pairs under 0.075 miles, plus all 16 new-involved pairs under 0.35 miles",
+    "Every new casino’s current identity, property point, address, alias and held-status behavior",
+    "Real-provider and fixture browser flows at desktop/mobile viewport sizes with production auth flag enabled"
+  ],
+  "sameAddressGroups": [
+    [
+      {
+        "id": "casino-catalog-nv-wynn",
+        "name": "Wynn Las Vegas",
+        "state": "Nevada",
+        "address": "3131 S Las Vegas Blvd, Las Vegas, NV 89109"
+      },
+      {
+        "id": "casino-catalog-nv-encore",
+        "name": "Encore at Wynn Las Vegas",
+        "state": "Nevada",
+        "address": "3131 S Las Vegas Blvd, Las Vegas, NV 89109"
+      }
+    ]
+  ],
+  "sameNameGroups": [
+    [
+      {
+        "id": "casino-catalog-golden-eagle-kansas",
+        "name": "Golden Eagle Casino",
+        "state": "Kansas",
+        "address": "1121 Goldfinch Rd, Horton, KS 66439"
+      },
+      {
+        "id": "casino-catalog-ok-golden-eagle-apache",
+        "name": "Golden Eagle Casino",
+        "state": "Oklahoma",
+        "address": "115 W Evans Ave, Apache, OK 73006"
+      }
+    ],
+    [
+      {
+        "id": "casino-catalog-az-spirit-mountain",
+        "name": "Spirit Mountain Casino",
+        "state": "Arizona",
+        "address": "8555 AZ-95, Mohave Valley, AZ 86440"
+      },
+      {
+        "id": "casino-catalog-or-spirit-mountain",
+        "name": "Spirit Mountain Casino",
+        "state": "Oregon",
+        "address": "27100 SW Salmon River Hwy, Grand Ronde, OR 97347"
+      }
+    ]
+  ],
+  "duplicateCanonicalIds": [],
+  "boundsOfClaim": [
+    "No fresh physical survey or independent geocoding of all 857 nationwide destinations was performed.",
+    "NV/OK manifests remain pending; specific unresolved point/floor holds and future coverage scope are documented.",
+    "All 39 other complete manifest counts match exports; these retained labels are not a new nationwide survey.",
+    "Local real-provider discovery and native Chromium geolocation emulation passed. Hosted, physical-device, authenticated-account and external Maps-app acceptance remain not run."
+  ],
+  "nonBlockingWarnings": [
+    "Historical latest-pass reconciliation warnings intentionally preserve 16 superseded serialized rows; these are not duplicate active IDs.",
+    "GitHub action Node-runtime deprecation notices and dependency/MockTimers deprecation warnings did not fail any gate. No unrelated action/dependency upgrade was introduced."
+  ],
+  "productionUntouched": true,
+  "vercelDeploymentPerformed": false,
+  "mainUntouched": true,
+  "priorValidation": {
+    "application": {
+      "failed": 0,
+      "passed": 51,
+      "skipped": 0
+    },
+    "browser": {
+      "artifactRetentionDays": 14,
+      "checks": 12,
+      "desktop": {
+        "height": 800,
+        "location": "Reno, Nevada",
+        "width": 1280
+      },
+      "evidenceArtifact": "casino-browser-evidence",
+      "limits": [
+        "No hosted acceptance test",
+        "No physical iOS/Android validation",
+        "No successful live-provider discovery or real geolocation acceptance claimed",
+        "External Google Maps app navigation not opened; exact href destination and security attributes asserted"
+      ],
+      "mobile": {
+        "height": 844,
+        "location": "Newkirk, Oklahoma",
+        "width": 390
+      },
+      "network": "Deterministic server-side Overpass outage and Nominatim location fixtures; actual server functions, canonical data, production-mode bundle and browser DOM.",
+      "pageErrors": 0,
+      "status": "passed-in-disposable-CI"
+    },
+    "casinoSubsetIncludedInRepositoryTotal": true,
+    "casinoSubsetPassed": 65,
+    "catalog": {
+      "canonical": 808,
+      "passes": 54,
+      "serialized": 824
+    },
+    "failed": 0,
+    "gates": [
+      "npm ci",
+      "typecheck",
+      "65 casino regressions",
+      "full repository and application suite",
+      "actual TypeScript casino export/schema audit",
+      "national manifest audit",
+      "development build",
+      "production-mode build without migrations",
+      "Chromium production-preview smoke at desktop and mobile sizes",
+      "30 Dinner icon files"
+    ],
+    "head": "6c1d5829f7f3e76946e20211b60525f9836b1227",
+    "job": 103680636366,
+    "repository": {
+      "failed": 0,
+      "passed": 263,
+      "skipped": 4
+    },
+    "result": "success",
+    "run": 34741023078,
+    "runNumber": 309,
+    "skipped": 4,
+    "uniquePassed": 314,
+    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34741023078"
+  },
+  "validation": {
+    "status": "local-and-exact-head-CI-passed",
+    "uniquePassed": 322,
+    "repository": {
+      "passed": 271,
+      "failed": 0,
+      "skipped": 4
+    },
+    "application": {
+      "passed": 51,
+      "failed": 0,
+      "skipped": 0
+    },
+    "casinoSubsetPassed": 73,
+    "casinoSubsetIncludedInRepositoryTotal": true,
+    "catalog": {
+      "canonical": 857,
+      "serialized": 873,
+      "passes": 58
+    },
+    "browserEvidence": "audit/casino-continuation-browser-evidence-2026-09-13.json",
+    "build": "development and explicit-auth production passed without migration",
+    "lint": "All 11 relevant changed JS/TS/TSX files passed after fixing empty startup catches and unsafe cleanup throws",
+    "dependencies": "npm ci and npm ls passed; npm audit --omit=dev reported zero vulnerabilities",
+    "candidate": {
+      "head": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
+      "run": 34768716664,
+      "runNumber": 317,
+      "job": 103754260940,
+      "conclusion": "success",
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768716664"
+    },
+    "integration": {
+      "head": "264bb678362a5e281f16411ef9a7b98bce85a12e",
+      "run": 34768849482,
+      "runNumber": 318,
+      "job": 103754608346,
+      "conclusion": "success",
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34768849482"
+    }
+  },
+  "continuationFindings": [
+    {
+      "finding": "Wrong properties can satisfy broad map searches",
+      "resolution": "Rejected Big Wheel Lovelock as Battle Mountain; rejected Pilot Winnemucca for Roadhouse, distant Lucky’s results, and unqualified Davis query in Florida."
+    },
+    {
+      "finding": "Some first-party maps and directory addresses are wrong",
+      "resolution": "Casino Oklahoma viewport and downtown pin rejected; current named destination and Cummins Street building agree. Elko Roadhouse uses confirmed 1165 E Jennings Way suite 102, not the copied Winnemucca 4400 Rim Rock address."
+    },
+    {
+      "finding": "A draft address from unconfirmed context was not authoritative",
+      "resolution": "Diamond’s draft 4th Street address was corrected to operator-confirmed 1010 E 6th Street before validation/promotion. Regression protects this."
+    },
+    {
+      "finding": "Current casino labels can coexist with old closure records",
+      "resolution": "Prairie Sun operator closure outweighs stale directories; Prairie Moon remains active. C Punch/Lovelock Junction retained as operating-floor hold rather than assuming closure or reopening."
+    },
+    {
+      "finding": "Travel-stop roster entries are not automatically separate casinos",
+      "resolution": "CTS Kingston/Paoli/Willis/Wilson/Ada East reconcile to existing properties. Ada West and Davis West are separately supported; Thackerville scope is held."
+    },
+    {
+      "finding": "Location denial was invisible with collapsed form",
+      "resolution": "Real-browser finding fixed in Nightlife only. Future location/international branch replaces this area with LocationControl; preserve equivalent recovery behavior when that separate work is integrated."
+    },
+    {
+      "finding": "Browser harness could accept another server or stale bundle",
+      "resolution": "Strict ports, own-process readiness, scoped process cleanup and current catalog pool counts added. Occupied-port negative check fails as expected."
+    },
+    {
+      "finding": "Local default sign-in flag differs from production",
+      "resolution": "Explicit true build and real browser checks passed. CI production build/browser steps now set VITE_AUTH_ENABLED=true; application defaults and development settings were preserved."
+    },
+    {
+      "finding": "CI ANSI formatting caused a false preview-readiness timeout.",
+      "resolution": "Strip terminal control sequences in both owned-server log checks; keep strict-port/process/catalog guards. Local actual-color smoke plus candidate/integration CI passed.",
+      "initialRun": 34768414589,
+      "resolvedRuns": [
+        34768716664,
+        34768849482
+      ]
+    }
+  ],
+  "continuationClosePairReview": {
+    "canonical": 857,
+    "serialized": 873,
+    "passes": 58,
+    "counts": {
+      "Connecticut": 2,
+      "Massachusetts": 3,
+      "New Jersey": 9,
+      "Pennsylvania": 18,
+      "Maryland": 6,
+      "Michigan": 27,
+      "Mississippi": 28,
+      "Louisiana": 24,
+      "Oklahoma": 110,
+      "Arizona": 26,
+      "Nevada": 181,
+      "California": 69,
+      "Ohio": 11,
+      "Indiana": 14,
+      "Illinois": 17,
+      "Delaware": 3,
+      "West Virginia": 5,
+      "Missouri": 13,
+      "Arkansas": 3,
+      "Rhode Island": 2,
+      "Maine": 2,
+      "Kansas": 10,
+      "North Carolina": 3,
+      "Virginia": 5,
+      "Alabama": 3,
+      "Iowa": 23,
+      "Kentucky": 14,
+      "New Mexico": 23,
+      "Oregon": 10,
+      "Washington": 30,
+      "Wisconsin": 23,
+      "Idaho": 6,
+      "Minnesota": 19,
+      "Nebraska": 10,
+      "Wyoming": 3,
+      "South Dakota": 26,
+      "North Dakota": 5,
+      "Florida": 16,
+      "New York": 20,
+      "Colorado": 31,
+      "Texas": 4
+    },
+    "failures": [],
+    "nearCount": 81,
+    "newNear": [
+      {
+        "left": "casino-catalog-ok-treasure-valley-casino-hotel",
+        "leftName": "Treasure Valley Casino & Hotel",
+        "right": "casino-catalog-ok-davis-west-gaming",
+        "rightName": "Davis Gaming - Chickasaw Travel Stop",
+        "miles": 0.288627,
+        "state": "Oklahoma"
+      },
+      {
+        "left": "casino-catalog-nv-hotel-nevada-ely",
+        "leftName": "Hotel Nevada & Gambling Hall",
+        "right": "casino-catalog-nv-jailhouse-ely",
+        "rightName": "Jailhouse Motel & Casino",
+        "miles": 0.046588,
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-silverton",
+        "leftName": "Silverton Casino Lodge",
+        "right": "casino-catalog-nv-alamo-las-vegas-ta",
+        "rightName": "Alamo Casino Las Vegas TA",
+        "miles": 0.215641,
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-nevada-casino-bar-battle-mountain",
+        "leftName": "The Nevada Casino & Bar",
+        "right": "casino-catalog-nv-owl-club",
+        "rightName": "Owl Club Casino & Restaurant",
+        "miles": 0.04163,
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-ok-seven-clans-first-council",
+        "leftName": "7 Clans First Council Casino Hotel",
+        "right": "casino-catalog-ok-seven-clans-chilocco",
+        "rightName": "7 Clans Chilocco Gasino",
+        "miles": 0.160783,
+        "state": "Oklahoma"
+      },
+      {
+        "left": "casino-catalog-nv-maverick-elko",
+        "leftName": "Maverick Hotel & Casino",
+        "right": "casino-catalog-nv-roadhouse-elko",
+        "rightName": "Elko Roadhouse Casino",
+        "miles": 0.259581,
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-carson-valley-inn",
+        "leftName": "Carson Valley Inn Casino",
+        "right": "casino-catalog-nv-cod-minden",
+        "rightName": "COD Casino",
+        "miles": 0.317619,
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-rainbow-wendover",
+        "leftName": "Rainbow Hotel Casino",
+        "right": "casino-catalog-nv-pilot-wendover",
+        "rightName": "Pilot Casino Wendover",
+        "miles": 0.240516,
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-cactus-petes-jackpot",
+        "leftName": "Cactus Petes Resort Casino",
+        "right": "casino-catalog-nv-four-jacks-jackpot",
+        "rightName": "Four Jacks Hotel & Casino",
+        "miles": 0.323703,
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-carson-nugget",
+        "leftName": "Carson Nugget",
+        "right": "casino-catalog-nv-cactus-jacks",
+        "rightName": "Cactus Jack's Senator Club",
+        "miles": 0.059056,
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-red-garter",
+        "leftName": "Red Garter Hotel & Casino",
+        "right": "casino-catalog-nv-pilot-wendover",
+        "rightName": "Pilot Casino Wendover",
+        "miles": 0.087471,
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-ok-sugar-creek",
+        "leftName": "Sugar Creek Casino",
+        "right": "casino-catalog-ok-casino-oklahoma",
+        "rightName": "Casino Oklahoma",
+        "miles": 0.180596,
+        "state": "Oklahoma"
+      },
+      {
+        "left": "casino-catalog-nv-jackpot-crossing-fernley",
+        "leftName": "Jackpot Crossing Casino Fernley",
+        "right": "casino-catalog-nv-pilot-fernley",
+        "rightName": "Pilot Casino Fernley",
+        "miles": 0.120042,
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-jackpot-crossing-fernley",
+        "leftName": "Jackpot Crossing Casino Fernley",
+        "right": "casino-catalog-nv-luckys-fernley",
+        "rightName": "Fernley Lucky's Casino",
+        "miles": 0.300802,
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-alamo-wells",
+        "leftName": "Alamo Casino Wells Petro",
+        "right": "casino-catalog-nv-luckys-wells",
+        "rightName": "Wells Lucky's Casino",
+        "miles": 0.275792,
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-pilot-fernley",
+        "leftName": "Pilot Casino Fernley",
+        "right": "casino-catalog-nv-luckys-fernley",
+        "rightName": "Fernley Lucky's Casino",
+        "miles": 0.287122,
+        "state": "Nevada"
+      }
+    ],
+    "aliasPairs": [],
+    "decision": "All 16 new-involved pairs below merge radius are separate supported casino floors or properties. No canonical pair within 0.35 miles matches the reviewed alias policy. The three additional very-close pairs are Hotel Nevada/Jailhouse, Nevada Casino/Owl Club, and Carson Nugget/Cactus Jack’s."
+  },
+  "priorFindings": [
+    {
+      "finding": "Historical northern Nevada ledger was truncated; 174 target was not reliable",
+      "resolution": "Preserved original 379 bytes, repaired parseable structure with explicit zero recovered rows; pending Nevada expected count is null. Rebuilt current northern operator additions with explicit sources.",
+      "evidence": "audit/nevada-northern-markets-ledger-2026-09-11.json"
+    },
+    {
+      "finding": "Name-only casino classification and malformed live provider fields could leak unrelated/unsafe records",
+      "resolution": "Require actual casino tags, validate query/coordinates/element IDs/lifecycle, sanitize optional fields and HTTP(S) website URLs; regression coverage includes malformed neighbors and provider outage."
+    },
+    {
+      "finding": "Known closed properties could re-enter via live OSM",
+      "resolution": "16 geographically bounded exact-alias groups exclude reviewed closures. Golden Pony's old 2020 reopening and SouthWind Newkirk's old roster were rejected. Current successors remain eligible.",
+      "evidence": "audit/casino-status-watchlist-2026-09-13.json"
+    },
+    {
+      "finding": "Generic casino words could normalize to an empty identity; successor aliases could duplicate current destinations",
+      "resolution": "Nonempty normalized fallback plus reviewed near-property alias groups; tests ensure unrelated/distant names survive."
+    },
+    {
+      "finding": "Strict Open now filter treated unknown opening hours too leniently",
+      "resolution": "Require known-open when enabled; default the filter off so verified saved casinos with unknown hours remain accessible without claiming they are open. Tests cover preference, exclusion, type, price and radius branches plus empty pools."
+    },
+    {
+      "finding": "Options could repeat IDs from an expanded/merged pool",
+      "resolution": "Deduplicate eligible options by stable ID; preserve weighted energy/distance/repetition selection. Tests include 10,000 records, Unicode names, singleton and empty pools."
+    },
+    {
+      "finding": "Oneida Airport and IMAC appeared almost co-pinned; deleting one would lose a real casino",
+      "resolution": "Operator confirms two venues. Corrected both points with stable IDs/history preserved and updated Airport campus address."
+    },
+    {
+      "finding": "Soaring Eagle Slot Palace repeated the main resort address despite being across the street",
+      "resolution": "Operator directions and Google building occupant identify 7566 Ogemaw Dr #7076. Corrected routing address/point while retaining stable ID and separate main resort."
+    },
+    {
+      "finding": "Several plausible named MapQuest points were far from the casino",
+      "resolution": "Rejected points for Caesars Republic, Seminole I-40, Kickapoo Harrah, Black Hawk and Kiowa Carnegie; held unresolved Rivermist. Source fields and rejected coordinates are preserved, not silently replaced.",
+      "evidence": "audit/casino-rc-pass-52-evidence-2026-09-13.json"
+    },
+    {
+      "finding": "Montego Bay used conflicting shared addresses; Grand Lake lodge was a separate map point",
+      "resolution": "Montego Bay's 100 Wendover address cleared the hold; Nugget at 101 is distinct. Grand Lake casino uses 24701 S 655 Rd rather than its off-site lodge at 26301."
+    },
+    {
+      "finding": "18 recent records lacked inline audit fields",
+      "resolution": "All mapped to their latest surviving evidence with source identity/address/coordinate pointers. A real-export regression protects the references. This does not imply missing inline fields in every older record mean missing evidence.",
+      "evidence": "audit/casino-recent-provenance-index-2026-09-13.json"
+    },
+    {
+      "finding": "Browser test assumptions did not match actual map routing and strict locators",
+      "resolution": "Early smoke failures were investigated and repaired. Production preview replaced development Vite optimization reloads. Final CI actually passed; historical failures are not rewritten as successes."
+    },
+    {
+      "finding": "Required lock range and pinned eslint-plugin-react-hooks disagreed",
+      "resolution": "Lock repaired to 6.1.1 satisfying existing ^6.0.0; npm ci is required and passes. No manifest dependency changes."
+    }
+  ],
+  "priorClosePairReview": {
+    "thresholdMiles": 0.075,
+    "count": 78,
+    "decisions": "Reviewed dense Colorado/Deadwood/Las Vegas neighbors and connected resorts. Proximity alone is not a duplicate. Same address alone is not a duplicate. No unexplained active-ID duplicate remains.",
+    "pairs": [
+      {
+        "left": "casino-catalog-nv-linq",
+        "leftName": "The LINQ Hotel + Experience",
+        "miles": 0.067769,
+        "right": "casino-catalog-nv-harrahs-las-vegas",
+        "rightName": "Harrah's Las Vegas",
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-plaza",
+        "leftName": "Plaza Hotel & Casino",
+        "miles": 0.057329,
+        "right": "casino-catalog-nv-golden-gate",
+        "rightName": "Golden Gate Hotel & Casino",
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-golden-gate",
+        "leftName": "Golden Gate Hotel & Casino",
+        "miles": 0.0721,
+        "right": "casino-catalog-nv-circa",
+        "rightName": "Circa Resort & Casino",
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-circa",
+        "leftName": "Circa Resort & Casino",
+        "miles": 0.070235,
+        "right": "casino-catalog-nv-binions",
+        "rightName": "Binion's Gambling Hall & Hotel",
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-the-d",
+        "leftName": "the D Las Vegas",
+        "miles": 0.060518,
+        "right": "casino-catalog-nv-four-queens",
+        "rightName": "Four Queens Hotel & Casino",
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-fremont",
+        "leftName": "Fremont Hotel & Casino",
+        "miles": 0.072529,
+        "right": "casino-catalog-nv-binions",
+        "rightName": "Binion's Gambling Hall & Hotel",
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-sd-777-deadwood",
+        "leftName": "777 Casino at the Holiday Inn Express",
+        "miles": 0.027962,
+        "right": "casino-catalog-sd-buffalo-bodega",
+        "rightName": "Buffalo-Bodega Gaming Complex",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-777-deadwood",
+        "leftName": "777 Casino at the Holiday Inn Express",
+        "miles": 0.065185,
+        "right": "casino-catalog-sd-celebrity",
+        "rightName": "Celebrity Hotel Museum & Gaming",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-777-deadwood",
+        "leftName": "777 Casino at the Holiday Inn Express",
+        "miles": 0.048593,
+        "right": "casino-catalog-sd-mountain-grand",
+        "rightName": "Deadwood Mountain Grand Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-777-deadwood",
+        "leftName": "777 Casino at the Holiday Inn Express",
+        "miles": 0.066389,
+        "right": "casino-catalog-sd-gold-dust",
+        "rightName": "Gold Dust Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-777-deadwood",
+        "leftName": "777 Casino at the Holiday Inn Express",
+        "miles": 0.045437,
+        "right": "casino-catalog-sd-bullock",
+        "rightName": "Historic Bullock Hotel Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-777-deadwood",
+        "leftName": "777 Casino at the Holiday Inn Express",
+        "miles": 0.036837,
+        "right": "casino-catalog-sd-midnight-star",
+        "rightName": "Midnight Star Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-777-deadwood",
+        "leftName": "777 Casino at the Holiday Inn Express",
+        "miles": 0.067661,
+        "right": "casino-catalog-sd-saloon-10",
+        "rightName": "Saloon No. 10 Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-buffalo-bodega",
+        "leftName": "Buffalo-Bodega Gaming Complex",
+        "miles": 0.038467,
+        "right": "casino-catalog-sd-mountain-grand",
+        "rightName": "Deadwood Mountain Grand Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-buffalo-bodega",
+        "leftName": "Buffalo-Bodega Gaming Complex",
+        "miles": 0.038643,
+        "right": "casino-catalog-sd-gold-dust",
+        "rightName": "Gold Dust Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-buffalo-bodega",
+        "leftName": "Buffalo-Bodega Gaming Complex",
+        "miles": 0.073141,
+        "right": "casino-catalog-sd-bullock",
+        "rightName": "Historic Bullock Hotel Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-buffalo-bodega",
+        "leftName": "Buffalo-Bodega Gaming Complex",
+        "miles": 0.011647,
+        "right": "casino-catalog-sd-midnight-star",
+        "rightName": "Midnight Star Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-buffalo-bodega",
+        "leftName": "Buffalo-Bodega Gaming Complex",
+        "miles": 0.058663,
+        "right": "casino-catalog-sd-rocksino",
+        "rightName": "Rocksino by Hard Rock Deadwood",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-celebrity",
+        "leftName": "Celebrity Hotel Museum & Gaming",
+        "miles": 0.020214,
+        "right": "casino-catalog-sd-bullock",
+        "rightName": "Historic Bullock Hotel Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-celebrity",
+        "leftName": "Celebrity Hotel Museum & Gaming",
+        "miles": 0.027205,
+        "right": "casino-catalog-sd-mineral-palace",
+        "rightName": "Mineral Palace Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-celebrity",
+        "leftName": "Celebrity Hotel Museum & Gaming",
+        "miles": 0.032316,
+        "right": "casino-catalog-sd-saloon-10",
+        "rightName": "Saloon No. 10 Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-mountain-grand",
+        "leftName": "Deadwood Mountain Grand Casino",
+        "miles": 0.05762,
+        "right": "casino-catalog-sd-gold-dust",
+        "rightName": "Gold Dust Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-mountain-grand",
+        "leftName": "Deadwood Mountain Grand Casino",
+        "miles": 0.03044,
+        "right": "casino-catalog-sd-midnight-star",
+        "rightName": "Midnight Star Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-mountain-grand",
+        "leftName": "Deadwood Mountain Grand Casino",
+        "miles": 0.061339,
+        "right": "casino-catalog-sd-rocksino",
+        "rightName": "Rocksino by Hard Rock Deadwood",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-gold-dust",
+        "leftName": "Gold Dust Casino",
+        "miles": 0.033732,
+        "right": "casino-catalog-sd-midnight-star",
+        "rightName": "Midnight Star Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-gold-dust",
+        "leftName": "Gold Dust Casino",
+        "miles": 0.026806,
+        "right": "casino-catalog-sd-rocksino",
+        "rightName": "Rocksino by Hard Rock Deadwood",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-gold-dust",
+        "leftName": "Gold Dust Casino",
+        "miles": 0.055384,
+        "right": "casino-catalog-sd-silverado-franklin",
+        "rightName": "Silverado Franklin Historic Hotel & Gaming Complex",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-bullock",
+        "leftName": "Historic Bullock Hotel Casino",
+        "miles": 0.047123,
+        "right": "casino-catalog-sd-mineral-palace",
+        "rightName": "Mineral Palace Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-bullock",
+        "leftName": "Historic Bullock Hotel Casino",
+        "miles": 0.038262,
+        "right": "casino-catalog-sd-saloon-10",
+        "rightName": "Saloon No. 10 Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-midnight-star",
+        "leftName": "Midnight Star Casino",
+        "miles": 0.049624,
+        "right": "casino-catalog-sd-rocksino",
+        "rightName": "Rocksino by Hard Rock Deadwood",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-mineral-palace",
+        "leftName": "Mineral Palace Casino",
+        "miles": 0.037093,
+        "right": "casino-catalog-sd-saloon-10",
+        "rightName": "Saloon No. 10 Casino",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-mr-wus",
+        "leftName": "Mr Wu's Casino",
+        "miles": 0.029919,
+        "right": "casino-catalog-sd-tin-lizzie",
+        "rightName": "Tin Lizzie Gaming Resort",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-sd-rocksino",
+        "leftName": "Rocksino by Hard Rock Deadwood",
+        "miles": 0.035674,
+        "right": "casino-catalog-sd-silverado-franklin",
+        "rightName": "Silverado Franklin Historic Hotel & Gaming Complex",
+        "state": "South Dakota"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-ameristar",
+        "leftName": "Ameristar Casino Resort Spa Black Hawk",
+        "miles": 0.051005,
+        "right": "casino-catalog-co-black-hawk-lodge",
+        "rightName": "The Lodge Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-horseshoe",
+        "leftName": "Horseshoe Black Hawk",
+        "miles": 0.034958,
+        "right": "casino-catalog-co-black-hawk-monarch",
+        "rightName": "Monarch Casino Resort Spa Black Hawk",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-lady-luck",
+        "leftName": "Lady Luck Casino Black Hawk",
+        "miles": 0.063433,
+        "right": "casino-catalog-co-black-hawk-ballys-east",
+        "rightName": "Bally's Black Hawk East",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-gilpin",
+        "leftName": "The Gilpin Casino",
+        "miles": 0.067845,
+        "right": "casino-catalog-co-black-hawk-saratoga",
+        "rightName": "Saratoga Casino Black Hawk",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-gilpin",
+        "leftName": "The Gilpin Casino",
+        "miles": 0.058505,
+        "right": "casino-catalog-co-black-hawk-wild-card",
+        "rightName": "Wild Card Saloon",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-saratoga",
+        "leftName": "Saratoga Casino Black Hawk",
+        "miles": 0.038734,
+        "right": "casino-catalog-co-black-hawk-sasquatch",
+        "rightName": "Sasquatch Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-saratoga",
+        "leftName": "Saratoga Casino Black Hawk",
+        "miles": 0.034523,
+        "right": "casino-catalog-co-black-hawk-wild-card",
+        "rightName": "Wild Card Saloon",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-saratoga",
+        "leftName": "Saratoga Casino Black Hawk",
+        "miles": 0.043264,
+        "right": "casino-catalog-co-black-hawk-bigfoot",
+        "rightName": "Bigfoot Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-sasquatch",
+        "leftName": "Sasquatch Casino",
+        "miles": 0.050942,
+        "right": "casino-catalog-co-black-hawk-wild-card",
+        "rightName": "Wild Card Saloon",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-sasquatch",
+        "leftName": "Sasquatch Casino",
+        "miles": 0.005514,
+        "right": "casino-catalog-co-black-hawk-bigfoot",
+        "rightName": "Bigfoot Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-wild-card",
+        "leftName": "Wild Card Saloon",
+        "miles": 0.056432,
+        "right": "casino-catalog-co-black-hawk-bigfoot",
+        "rightName": "Bigfoot Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-ballys-east",
+        "leftName": "Bally's Black Hawk East",
+        "miles": 0.045762,
+        "right": "casino-catalog-co-black-hawk-ballys-north",
+        "rightName": "Bally's Black Hawk North",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-ballys-east",
+        "leftName": "Bally's Black Hawk East",
+        "miles": 0.06792,
+        "right": "casino-catalog-co-black-hawk-ballys-west",
+        "rightName": "Bally's Black Hawk West",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-black-hawk-ballys-north",
+        "leftName": "Bally's Black Hawk North",
+        "miles": 0.032745,
+        "right": "casino-catalog-co-black-hawk-ballys-west",
+        "rightName": "Bally's Black Hawk West",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-central-city-century",
+        "leftName": "Century Casino & Hotel Central City",
+        "miles": 0.023809,
+        "right": "casino-catalog-co-central-city-dostal-alley",
+        "rightName": "Dostal Alley Casino & Brew Pub",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-central-city-century",
+        "leftName": "Century Casino & Hotel Central City",
+        "miles": 0.042132,
+        "right": "casino-catalog-co-central-city-easy-street",
+        "rightName": "Easy Street Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-central-city-century",
+        "leftName": "Century Casino & Hotel Central City",
+        "miles": 0.043168,
+        "right": "casino-catalog-co-central-city-famous-bonanza",
+        "rightName": "The Famous Bonanza Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-central-city-century",
+        "leftName": "Century Casino & Hotel Central City",
+        "miles": 0.054288,
+        "right": "casino-catalog-co-central-city-dragon-tiger",
+        "rightName": "Dragon Tiger Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-central-city-dostal-alley",
+        "leftName": "Dostal Alley Casino & Brew Pub",
+        "miles": 0.020974,
+        "right": "casino-catalog-co-central-city-easy-street",
+        "rightName": "Easy Street Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-central-city-dostal-alley",
+        "leftName": "Dostal Alley Casino & Brew Pub",
+        "miles": 0.037972,
+        "right": "casino-catalog-co-central-city-famous-bonanza",
+        "rightName": "The Famous Bonanza Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-central-city-easy-street",
+        "leftName": "Easy Street Casino",
+        "miles": 0.054723,
+        "right": "casino-catalog-co-central-city-famous-bonanza",
+        "rightName": "The Famous Bonanza Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-bronco-billys",
+        "leftName": "Bronco Billy's Casino",
+        "miles": 0.042402,
+        "right": "casino-catalog-co-cripple-creek-chamonix",
+        "rightName": "Chamonix Casino Hotel",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-bronco-billys",
+        "leftName": "Bronco Billy's Casino",
+        "miles": 0.043351,
+        "right": "casino-catalog-co-cripple-creek-century",
+        "rightName": "Century Casino & Hotel Cripple Creek",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-bronco-billys",
+        "leftName": "Bronco Billy's Casino",
+        "miles": 0.07176,
+        "right": "casino-catalog-co-cripple-creek-colorado-grande",
+        "rightName": "Colorado Grande Casino & Hotel",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-bronco-billys",
+        "leftName": "Bronco Billy's Casino",
+        "miles": 0.064544,
+        "right": "casino-catalog-co-cripple-creek-johnny-nolons",
+        "rightName": "Johnny Nolon's Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-bronco-billys",
+        "leftName": "Bronco Billy's Casino",
+        "miles": 0.044559,
+        "right": "casino-catalog-co-cripple-creek-midnight-rose",
+        "rightName": "Midnight Rose Hotel & Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-bronco-billys",
+        "leftName": "Bronco Billy's Casino",
+        "miles": 0.026483,
+        "right": "casino-catalog-co-cripple-creek-mcgills",
+        "rightName": "McGills Hotel and Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-bronco-billys",
+        "leftName": "Bronco Billy's Casino",
+        "miles": 0.054648,
+        "right": "casino-catalog-co-cripple-creek-brass-ass",
+        "rightName": "The Brass Ass Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-chamonix",
+        "leftName": "Chamonix Casino Hotel",
+        "miles": 0.01832,
+        "right": "casino-catalog-co-cripple-creek-century",
+        "rightName": "Century Casino & Hotel Cripple Creek",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-chamonix",
+        "leftName": "Chamonix Casino Hotel",
+        "miles": 0.072049,
+        "right": "casino-catalog-co-cripple-creek-midnight-rose",
+        "rightName": "Midnight Rose Hotel & Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-chamonix",
+        "leftName": "Chamonix Casino Hotel",
+        "miles": 0.042087,
+        "right": "casino-catalog-co-cripple-creek-mcgills",
+        "rightName": "McGills Hotel and Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-century",
+        "leftName": "Century Casino & Hotel Cripple Creek",
+        "miles": 0.060648,
+        "right": "casino-catalog-co-cripple-creek-midnight-rose",
+        "rightName": "Midnight Rose Hotel & Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-century",
+        "leftName": "Century Casino & Hotel Cripple Creek",
+        "miles": 0.0316,
+        "right": "casino-catalog-co-cripple-creek-mcgills",
+        "rightName": "McGills Hotel and Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-colorado-grande",
+        "leftName": "Colorado Grande Casino & Hotel",
+        "miles": 0.021495,
+        "right": "casino-catalog-co-cripple-creek-johnny-nolons",
+        "rightName": "Johnny Nolon's Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-colorado-grande",
+        "leftName": "Colorado Grande Casino & Hotel",
+        "miles": 0.04218,
+        "right": "casino-catalog-co-cripple-creek-midnight-rose",
+        "rightName": "Midnight Rose Hotel & Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-colorado-grande",
+        "leftName": "Colorado Grande Casino & Hotel",
+        "miles": 0.069263,
+        "right": "casino-catalog-co-cripple-creek-mcgills",
+        "rightName": "McGills Hotel and Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-colorado-grande",
+        "leftName": "Colorado Grande Casino & Hotel",
+        "miles": 0.018315,
+        "right": "casino-catalog-co-cripple-creek-brass-ass",
+        "rightName": "The Brass Ass Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-johnny-nolons",
+        "leftName": "Johnny Nolon's Casino",
+        "miles": 0.04972,
+        "right": "casino-catalog-co-cripple-creek-midnight-rose",
+        "rightName": "Midnight Rose Hotel & Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-johnny-nolons",
+        "leftName": "Johnny Nolon's Casino",
+        "miles": 0.0702,
+        "right": "casino-catalog-co-cripple-creek-mcgills",
+        "rightName": "McGills Hotel and Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-johnny-nolons",
+        "leftName": "Johnny Nolon's Casino",
+        "miles": 0.025744,
+        "right": "casino-catalog-co-cripple-creek-brass-ass",
+        "rightName": "The Brass Ass Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-midnight-rose",
+        "leftName": "Midnight Rose Hotel & Casino",
+        "miles": 0.029997,
+        "right": "casino-catalog-co-cripple-creek-mcgills",
+        "rightName": "McGills Hotel and Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-midnight-rose",
+        "leftName": "Midnight Rose Hotel & Casino",
+        "miles": 0.025266,
+        "right": "casino-catalog-co-cripple-creek-brass-ass",
+        "rightName": "The Brass Ass Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-co-cripple-creek-mcgills",
+        "leftName": "McGills Hotel and Casino",
+        "miles": 0.050994,
+        "right": "casino-catalog-co-cripple-creek-brass-ass",
+        "rightName": "The Brass Ass Casino",
+        "state": "Colorado"
+      },
+      {
+        "left": "casino-catalog-nv-emerald-island-henderson",
+        "leftName": "Emerald Island Casino",
+        "miles": 0.052345,
+        "right": "casino-catalog-nv-rainbow-club-henderson",
+        "rightName": "Rainbow Club Casino",
+        "state": "Nevada"
+      },
+      {
+        "left": "casino-catalog-nv-caesars-republic-tahoe",
+        "leftName": "Caesars Republic Lake Tahoe",
+        "miles": 0.041332,
+        "right": "casino-catalog-nv-harrahs-tahoe",
+        "rightName": "Harrah's Lake Tahoe",
+        "state": "Nevada"
+      }
+    ]
+  },
+  "priorIntegration": {
+    "mergeCommit": "6c1d5829f7f3e76946e20211b60525f9836b1227",
+    "candidateHead": "61cb2fe047a80fc4a67931ea3b24040e75dcd367",
+    "treeEqualsCandidate": true,
+    "mainUnchangedAt": "c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5"
+  },
+  "integration": {
+    "mergeCommit": "264bb678362a5e281f16411ef9a7b98bce85a12e",
+    "candidateHead": "a3cffc654924596fe23a9d0050ac1a056b6751a5",
+    "tree": "cde1ced3c80936915a36a040619bbb974d7c8dcc",
+    "treeEqualsCandidate": true,
+    "mainUnchangedAt": "c187d518cf8b0c8b9202ee0ae6493667eb4c0ab5"
+  }
+}

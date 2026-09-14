@@ -1,0 +1,102 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "rural-operation-state-qa-pass-15-runtime-ready",
+  "scope": "Follow-up QA across the remaining rural and operation-state tail after Pass 41. Promotion remains evidence-gated; explicit closure exclusions are recorded rather than left indefinitely ambiguous.",
+  "records": [
+    {
+      "id": "casino-catalog-nv-longstreet-amargosa-valley",
+      "name": "Longstreet Inn, Casino & RV Resort",
+      "address": "8570 S Nevada Highway 373, Amargosa Valley, NV 89020",
+      "lat": 36.41254,
+      "lon": -116.4246,
+      "website": "https://www.longstreetcasino.com/",
+      "identityEvidence": [
+        "https://www.longstreetcasino.com/",
+        "https://www.longstreetcasino.com/casino/",
+        "https://www.longstreetcasino.com/contact-us/"
+      ],
+      "coordinateEvidence": "https://mapcarta.com/W896401439",
+      "addressReconciliationEvidence": [
+        "https://maps.apple.com/place?place-id=I941B060736FF555",
+        "https://www.longstreetcasino.com/contact-us/"
+      ],
+      "status": "runtime-ready",
+      "note": "Current first-party site confirms an operating 24/7 casino resort and consistently uses 8570 S Nevada Highway 373 in the main property/contact copy. Some legacy mapping sources still retain 4400 S Highway 373 and the site's footer image contains an 8750 typo; Apple Maps and the current first-party body copy resolve the consumer-facing address to 8570. OSM way 896401439 marks the actual hotel/casino building with amenity=casino and tourism=hotel, supplying a property-specific point rather than an RV-only coordinate."
+    }
+  ],
+  "closureExclusions": [
+    {
+      "candidate": "Whiskey Pete's Hotel & Casino",
+      "address": "100 W Primm Blvd, Primm, NV 89019",
+      "status": "exclude-currently-closed",
+      "evidence": [
+        "https://www.fox5vegas.com/2026/07/05/terribles-takes-over-primm-casino-operations-after-affinity-interactive-exit/",
+        "https://www.fox5vegas.com/2026/07/07/terribles-takes-over-primm-operations-ahead-july-4-weekend/",
+        "https://vegasadvantage.com/primm-autopsy-how-a-nevada-casino-border-town-failed/"
+      ],
+      "note": "Whiskey Pete's closed under the prior operator in 2024 and remained closed when Terrible's assumed management in July 2026. Management transfer alone is not treated as reopening."
+    },
+    {
+      "candidate": "Buffalo Bill's Resort & Casino",
+      "status": "exclude-currently-closed",
+      "evidence": [
+        "https://www.fox5vegas.com/2026/07/05/terribles-takes-over-primm-casino-operations-after-affinity-interactive-exit/",
+        "https://www.fox5vegas.com/2026/07/07/terribles-takes-over-primm-operations-ahead-july-4-weekend/",
+        "https://vegasadvantage.com/buffalo-bills-casino-in-primm-closing/"
+      ],
+      "note": "Buffalo Bill's ended regular casino operations in 2025 and remained closed when Terrible's took management in July 2026. Occasional event use does not satisfy Dinner Roulette's current casino-destination gate."
+    }
+  ],
+  "holds": [
+    {
+      "candidate": "Cadence Crossing Casino",
+      "address": "920 N Boulder Hwy, Henderson, NV 89011",
+      "reason": "Current operation, successor lineage and address are now exceptionally strong, including current Boyd, SEC, Nevada tax and dated opening evidence. A direct numerical point for the new casino footprint still has not cleared the project's property-coordinate threshold, so the old Jokers Wild point is not reused."
+    },
+    {
+      "candidate": "The Pass Casino",
+      "address": "140 S Water St, Henderson, NV 89015",
+      "reason": "June 2026 reporting scheduled an August 1 closure for approximately one year of renovation; September 2026 local reports describe the casino as closed. Current-looking legacy first-party pages are therefore treated as stale until reopening is independently confirmed."
+    },
+    {
+      "candidate": "Club Fortune North",
+      "address": "2757 Las Vegas Blvd N, North Las Vegas, NV",
+      "reason": "External July opening reports exist, but the current first-party property site still describes the successor location as coming soon/under renovation. Continue hold until first-party/operator state is reconciled."
+    },
+    {
+      "candidate": "Wildfire on Fremont",
+      "address": "2700 E Fremont St, Las Vegas, NV 89104",
+      "reason": "Current identity/address evidence is strong, but the available numerical location evidence remains weaker than the property-specific casino-coordinate standard."
+    },
+    {
+      "candidate": "The Nevada Casino & Bar",
+      "address": "36 E Front St, Battle Mountain, NV 89820",
+      "lat": 40.64181,
+      "lon": -116.93445,
+      "reason": "Current OSM casino point and recent operation evidence are available, but a stable current first-party property website has not been established."
+    },
+    {
+      "candidate": "Bonanza Casino Fallon",
+      "address": "855 W Williams Ave, Fallon, NV 89406",
+      "reason": "Current Wyndham property evidence confirms a 24/7 casino bar at the address, but the numerical point currently captured is an RV/campground/property point rather than a directly identified casino-building point."
+    },
+    {
+      "candidate": "Red Drag Casino",
+      "address": "404 S 5th St, Elko, NV",
+      "reason": "Current Elko tourism material supports operation/address, but first-party web identity and property-specific coordinate QA remain incomplete."
+    }
+  ],
+  "duplicateQA": {
+    "result": "PASS_FOR_RUNTIME_SERIALIZATION",
+    "note": "Longstreet is a unique Amargosa Valley destination. Address aliases 4400/8570/8750 are reconciled to one physical property, not separate destinations."
+  },
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 102,
+    "runtimeReadyThisPass": 1,
+    "projectedNevadaRuntimeAfterActivation": 103,
+    "newClosureExclusionsResolved": 2,
+    "statewideComplete": false
+  },
+  "nextPhase": "Serialize Longstreet in Pass 42, validate green, then continue direct-coordinate acquisition for Cadence Crossing and Wildfire Fremont while keeping stale/closed properties out of runtime."
+}

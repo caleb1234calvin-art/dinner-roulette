@@ -2,6 +2,7 @@ import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-r
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { AppShell } from "@/components/app-shell";
+import { StartupIdent } from "@/components/startup-ident";
 import { THEME_BOOTSTRAP_SCRIPT } from "@/lib/theme";
 import appCss from "../styles.css?url";
 import dateNightBasePolishCss from "../date-night-base-polish.css?url";
@@ -46,6 +47,7 @@ export const Route = createRootRoute({
       <body>
         <PreviewHostBridge />
         <AuthProvider>
+          <StartupIdent />
           <AppShell>
             <Outlet />
           </AppShell>

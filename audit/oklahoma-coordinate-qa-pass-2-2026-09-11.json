@@ -1,0 +1,93 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "coordinate-qa-pass-2",
+  "scope": "Second property-specific coordinate verification pass for Oklahoma runtime candidates. Coordinates are taken from property-level OpenStreetMap/Mapcarta geometry and are kept separate from final duplicate-distance QA and runtime activation.",
+  "records": [
+    {
+      "id":"ok-choctaw-grant",
+      "name":"Choctaw Casino & Resort-Grant",
+      "address":"1516 US-271, Grant, OK 74738",
+      "lat":33.93549,
+      "lon":-95.52671,
+      "coordinateEvidence":"https://mapcarta.com/W1111225431",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-choctaw-mcalester",
+      "name":"Choctaw Casino-McAlester",
+      "address":"1638 S George Nigh Expy, McAlester, OK 74501",
+      "lat":34.88696,
+      "lon":-95.78531,
+      "coordinateEvidence":"https://mapcarta.com/W436282568",
+      "osmFeature":"way 436282568",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-choctaw-broken-bow",
+      "name":"Choctaw Casino-Broken Bow",
+      "address":"1790 S Park Dr, Broken Bow, OK 74728",
+      "lat":34.00569,
+      "lon":-94.74117,
+      "coordinateEvidence":"https://mapcarta.com/W966040468",
+      "osmFeature":"way 966040468",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-choctaw-stringtown",
+      "name":"Choctaw Casino-Stringtown",
+      "address":"893 N US-69, Stringtown, OK 74569",
+      "lat":34.48713,
+      "lon":-96.05020,
+      "coordinateEvidence":"https://mapcarta.com/N13716552622",
+      "osmFeature":"node 13716552622",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-cherokee-roland",
+      "name":"Cherokee Casino & Hotel Roland",
+      "address":"109 Cherokee Blvd, Roland, OK 74954",
+      "lat":35.40791,
+      "lon":-94.52864,
+      "coordinateEvidence":"https://mapcarta.com/W592893783",
+      "osmFeature":"way 592893783",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Casino footprint is distinct from the adjacent hotel footprint and nearby Cherokee Travel Plaza; use the casino geometry for Dinner Roulette."
+    },
+    {
+      "id":"ok-cherokee-sallisaw",
+      "name":"Cherokee Casino Sallisaw",
+      "address":"1621 W Ruth St, Sallisaw, OK 74955",
+      "lat":35.44958,
+      "lon":-94.80742,
+      "coordinateEvidence":"https://mapcarta.com/W552288641",
+      "osmFeature":"way 552288641",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    },
+    {
+      "id":"ok-cherokee-tahlequah",
+      "name":"Cherokee Casino Tahlequah",
+      "address":"3307 Seven Clans Ave, Tahlequah, OK 74464",
+      "lat":35.87730,
+      "lon":-94.97161,
+      "coordinateEvidence":"https://mapcarta.com/W967595543",
+      "osmFeature":"way 967595543",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    }
+  ],
+  "qaAccounting": {
+    "addressIdentityVerifiedPool": 54,
+    "coordinateVerifiedPrevious": 9,
+    "coordinateVerifiedThisPass": 7,
+    "coordinateVerifiedCumulative": 16,
+    "duplicateDistanceClearedCumulative": 0,
+    "runtimeReadyCumulative": 0,
+    "remainingCoordinateTargetForFifty": 34
+  },
+  "separationRulesConfirmed": [
+    "Cherokee Roland casino footprint is separate from its hotel footprint and nearby Cherokee Travel Plaza; only the casino destination record belongs in the casino catalog.",
+    "Choctaw Grant's casino is distinct from nearby Choctaw Travel Plaza Grant.",
+    "Choctaw Stringtown's casino is distinct from the nearby travel-plaza operation."
+  ],
+  "nextPhase": "Continue property coordinate QA across Choctaw Hochatown/Idabel, remaining Cherokee properties, Chickasaw secondary casinos and the strongest Muscogee/Osage properties. Begin duplicate-distance checks for all 16 coordinate-verified records against catalog passes 1-27 in parallel."
+}

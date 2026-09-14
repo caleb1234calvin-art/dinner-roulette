@@ -1,0 +1,38 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "bonanza-fallon-coordinate-qa-pass-20-runtime-ready",
+  "scope": "Resolve Bonanza Inn & Casino Fallon using current government/regulator operation evidence and multiple exact-address numerical point sources, while distinguishing the integrated hotel/casino property point from the adjacent RV-site point.",
+  "runtimeReady": [
+    {
+      "id": "casino-catalog-nv-bonanza-inn-casino-fallon",
+      "name": "Bonanza Inn & Casino",
+      "address": "855 W Williams Ave, Fallon, NV 89406",
+      "lat": 39.473817,
+      "lon": -118.786436,
+      "website": "https://www.wyndhamhotels.com/super-8/fallon-nevada/super-8-fallon/overview",
+      "operationEvidence": [
+        "https://mccmeetings.blob.core.usgovcloudapi.net/fallonnv-pubu/MEET-Packet-9b6ea337c1a14c24bfd215722c58ba22.pdf",
+        "https://www.gaming.nv.gov/uploadedFiles/gamingnvgov/content/about/detail-report-nonrestricted.pdf",
+        "https://tax.nv.gov/wp-content/uploads/2025/11/Licensed-Tobacco-Retail.pdf",
+        "https://www.wyndhamhotels.com/super-8/fallon-nevada/super-8-fallon/overview"
+      ],
+      "coordinateEvidence": [
+        "https://www.merchantcircle.com/nv-fallon/travel-and-lodging/hotels-and-lodging",
+        "https://mapcarta.com/25270928",
+        "https://thedyrt.com/camping/nevada/bonanza-inn-and-casino",
+        "https://www.campendium.com/bonanza-inn-and-casino"
+      ],
+      "status": "runtime-ready",
+      "note": "Fallon city licensing material identifies Fallon Bonanza Corporation dba Bonanza Inn & Casino at 855 W Williams Ave and its non-restricted gaming application; Nevada gaming material independently lists Bonanza Inn and Casino active at the same address. Current Nevada tobacco licensing and Wyndham/property material support continuing operation/address identity. Exact-address sources produce two tight point clusters: approximately 39.473817,-118.786436 for the integrated hotel/casino listing and approximately 39.474139,-118.786494 for the RV/camping area. The former is retained because Dinner Roulette routes to the casino/hotel destination rather than the RV sites. The unrelated Reno Bonanza coordinate is explicitly excluded."
+    }
+  ],
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 106,
+    "runtimeReadyThisPass": 1,
+    "projectedNevadaRuntimeActiveAfter": 107,
+    "statewideComplete": false
+  },
+  "duplicateQA": "PASS_FOR_RUNTIME_SERIALIZATION",
+  "nextPhase": "Serialize Bonanza Inn & Casino Fallon as Pass 46, validate, then continue Cadence Crossing and Red Drag Elko without weakening the direct-footprint/identity gates."
+}

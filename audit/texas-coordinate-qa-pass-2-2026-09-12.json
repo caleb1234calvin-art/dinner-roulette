@@ -1,0 +1,44 @@
+{
+  "jurisdiction": "Texas",
+  "capturedOn": "2026-09-12",
+  "status": "coordinate-qa-pass-2",
+  "scope": "Second property-specific coordinate QA pass for the four retained Texas tribal casino destinations, focused on the two Naskila holds from pass 1.",
+  "records": [
+    {
+      "id": "tx-naskila-livingston",
+      "name": "Naskila Casino",
+      "address": "540 State Park Road 56, Livingston, TX 77351",
+      "lat": 30.7142259,
+      "lon": -94.6746959,
+      "website": "https://www.naskila.com/",
+      "addressEvidence": "https://www.naskila.com/contact/",
+      "coordinateEvidence": "https://gist.github.com/jeremiak/9f0697e6159f5069d8e38b3c371d70da?short_path=6c24908",
+      "status": "coordinate-verified-current-address-crosscheck",
+      "note": "The geocoded casino dataset resolves Naskila Gaming at the exact current 540 State Park Rd 56 address. Current first-party Naskila contact material independently confirms that address, so the older coordinate can be retained as property-specific geometry rather than a nearby photo or generic locality point."
+    }
+  ],
+  "holds": [
+    {
+      "id": "tx-naskila-leggett",
+      "name": "Naskila Casino Leggett",
+      "address": "10314 US 59 N, Livingston, TX 77351",
+      "website": "https://www.naskila.com/leggett/",
+      "status": "current-property-coordinate-hold",
+      "note": "Current first-party evidence confirms the temporary casino is open at 10314 US 59 N on the future resort site. HAR/Realtor property records independently identify the 10314 address and its approximately 93-acre parcel, while resort reporting also references the broader development at 10450 US-59. This pass still did not surface a sufficiently direct numerical point for the operating temporary casino itself, so no nearby parcel, smoke-shop, rest-area, or future-resort coordinate is substituted."
+    }
+  ],
+  "qaAccounting": {
+    "retainedTexasDestinations": 4,
+    "coordinateVerifiedThisPass": 1,
+    "coordinateVerifiedCumulative": 3,
+    "coordinatePending": 1,
+    "runtimeReadyCumulative": 0
+  },
+  "evidenceNotes": [
+    "Naskila Casino Leggett first-party page: https://www.naskila.com/leggett/",
+    "Naskila Casino Leggett grand-opening release: https://www.naskila.com/press/naskila-casino-and-alabama-coushatta-tribe-of-texas-celebrate-the-grand-opening-of-naskila-casino-leggett/",
+    "10314 parcel record: https://www.har.com/homedetail/10314-us-hwy-59-n-livingston-tx-77351/5656074",
+    "Future resort reporting identifies the broader development site at 10450 US-59; retain as contextual provenance only, not as the temporary-casino coordinate."
+  ],
+  "nextPhase": "Resolve a direct numerical property coordinate for Naskila Casino Leggett. Once Texas reaches 4/4, perform stable-ID/duplicate QA, serialize Pass 30, wire runtime/validator/manifest, validate green, and only then mark Texas complete."
+}

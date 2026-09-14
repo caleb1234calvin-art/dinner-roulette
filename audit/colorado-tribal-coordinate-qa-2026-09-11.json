@@ -1,0 +1,44 @@
+{
+  "jurisdiction":"Colorado",
+  "capturedOn":"2026-09-11",
+  "status":"tribal-coordinate-qa-complete",
+  "scope":"Property identity, current address and coordinate QA for Colorado's two tribal casino resorts before statewide runtime serialization.",
+  "records":[
+    {
+      "id":"co-sky-ute-casino-resort",
+      "name":"Sky Ute Casino Resort",
+      "operator":"Southern Ute Indian Tribe",
+      "address":"14324 US Highway 172 North, Ignacio, CO 81137",
+      "lat":37.138214,
+      "lon":-107.6323312,
+      "website":"https://www.skyutecasino.com/",
+      "identityAddressEvidence":"https://www.skyutecasino.com/wp-content/uploads/2022/08/BearClubBrochure.pdf",
+      "coordinateEvidence":"https://gist.github.com/jeremiak/9f0697e6159f5069d8e38b3c371d70da",
+      "corroboration":"https://www.aztecnm.com/cultural/casinos.html",
+      "status":"runtime-coordinate-eligible",
+      "note":"Current first-party materials preserve the 14324 US Highway 172 North public address. Independent current/local tourism and geocoded casino evidence converge on the casino property around 37.138,-107.632. Do not substitute RV-park-only coordinates farther north/east."
+    },
+    {
+      "id":"co-ute-mountain-casino",
+      "name":"Ute Mountain Casino Hotel",
+      "operator":"Ute Mountain Ute Tribe",
+      "address":"3 Weeminuche Drive, Towaoc, CO 81334",
+      "lat":37.20475,
+      "lon":-108.68612,
+      "website":"https://utemountaincasino.com/",
+      "identityAddressEvidence":"https://utemountaincasino.com/contact-us/",
+      "coordinateEvidence":"https://mapcarta.com/W185014426",
+      "osmFeature":"way 185014426",
+      "corroboration":"https://gist.github.com/jeremiak/9f0697e6159f5069d8e38b3c371d70da",
+      "status":"runtime-coordinate-eligible",
+      "note":"Use the casino geometry, not the adjacent hotel-only geometry, RV park, travel center or parking coordinate. Current first-party contact material confirms 3 Weeminuche Drive."
+    }
+  ],
+  "qaAccounting":{"tribalDestinations":2,"identityAddressVerified":2,"coordinateVerified":2,"coordinatePending":0},
+  "importantDecisions":[
+    "Sky Ute and Ute Mountain are distinct tribal casino destinations outside Colorado's 33 commercial regulator rows.",
+    "For Ute Mountain, casino-specific OSM way 185014426 controls over nearby hotel/RV/travel-center features.",
+    "For Sky Ute, preserve the current first-party 14324 US Highway 172 North address and use the casino-property coordinate rather than RV-park-only coordinates."
+  ],
+  "nextPhase":"Continue commercial Colorado address/coordinate/stable-ID QA. The tribal portion no longer blocks Colorado runtime serialization."
+}

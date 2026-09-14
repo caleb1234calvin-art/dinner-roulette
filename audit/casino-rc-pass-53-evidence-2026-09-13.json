@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-09-13",
+  "pass": 53,
+  "status": "implemented-and-CI-validated",
+  "result": {
+    "newDestinations": 3,
+    "coordinateAndAddressCorrections": 1,
+    "canonical": 789,
+    "Nevada": 136,
+    "Oklahoma": 87,
+    "Colorado": 31,
+    "Texas": 4,
+    "fourState": 258
+  },
+  "records": [
+    {
+      "id": "casino-catalog-nv-club-cal-neva",
+      "name": "Club Cal Neva",
+      "jurisdiction": "Nevada",
+      "address": "38 E 2nd St, Reno, NV 89501",
+      "identitySource": "https://clubcalneva.com/contact-us",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Club+Cal+Neva+38+East+2nd+St+Reno+NV",
+      "lat": 39.5267274,
+      "lon": -119.8126797,
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Operator contact and current gaming pages confirm the operating Reno casino. Its published Google map names the same current casino; the resolved named destination agrees. Former hotel towers and the internal sportsbook are components, not extra casino destinations.",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Club+Cal+Neva/@39.5267274,-119.8126797,17z/data=!3m1!4b1!4m6!3m5!1s0x809940cab1a19793:0xabb0c08782c449cc!8m2!3d39.5267274!4d-119.8126797!16s%2Fm%2F02pwb_m?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 39.5267274,
+        "longitude": -119.8126797
+      },
+      "supportingSources": [
+        "https://clubcalneva.com/gaming"
+      ]
+    },
+    {
+      "id": "casino-catalog-nv-montego-bay-wendover",
+      "name": "Montego Bay Hotel Casino Resort",
+      "jurisdiction": "Nevada",
+      "address": "100 Wendover Blvd, West Wendover, NV 89883",
+      "identitySource": "https://wendoverfun.com/rooms/montego-bay/",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Montego+Bay+100+Wendover+Blvd",
+      "lat": 40.7363114,
+      "lon": -114.0445266,
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Resolved the Pass 52 address hold: the property's official indexed profile and independent named lodging/MapQuest listings use 100 Wendover Blvd; an exact-address Google query resolves the same Montego Bay entity. The operator's umbrella contact address 1045 and tourism listing 6800 are shared/other-property addresses and must not control routing. Casino and hotel form one destination.",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Montego+Bay+Hotel+Casino+Resort/@40.7363114,-114.0445266,17z/data=!3m1!4b1!4m9!3m8!1s0x80ac2f5270f49e0b:0xe0ec24a55c415a08!5m2!4m1!1i2!8m2!3d40.7363114!4d-114.0445266!16s%2Fg%2F11c59lhvqh?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 40.7363114,
+        "longitude": -114.0445266
+      },
+      "supportingSources": [
+        "https://www.facebook.com/MontegoBayHotelCasinoResort",
+        "https://www.mapquest.com/us/nevada/montego-bay-hotel-and-casino-452030029",
+        "https://www.expedia.com/West-Wendover-Hotels-Montego-Bay-Casino-Resort.h113576987.Hotel-Information",
+        "https://wendoverfun.com/resort/contact-us/"
+      ],
+      "sourceLimitations": [
+        "Official Facebook property address observed in indexed result; full page requires login and was not accessed.",
+        "Expedia address observed in indexed result; full fetch returned HTTP 429. MapQuest and Google provide independent current property identity/address corroboration."
+      ],
+      "addressCorroboration": {
+        "url": "https://www.mapquest.com/us/nevada/montego-bay-hotel-and-casino-452030029",
+        "retrieval": "Raw named LocalBusiness JSON-LD",
+        "fields": {
+          "name": "Montego Bay Hotel and Casino",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.73657,
+            "longitude": -114.04614
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressLocality": "West Wendover",
+            "addressRegion": "NV",
+            "postalCode": "89883",
+            "streetAddress": "100 W Wendover Blvd"
+          },
+          "type": "LocalBusiness",
+          "telephone": "+17756644800"
+        },
+        "decision": "100 W Wendover Blvd independently matches property identity. Its west-campus point is not substituted for the current named Google destination."
+      }
+    },
+    {
+      "id": "casino-catalog-ok-remington-park",
+      "name": "Remington Park Racing & Casino",
+      "jurisdiction": "Oklahoma",
+      "address": "1 Remington Place, Oklahoma City, OK 73111",
+      "identitySource": "https://www.remingtonpark.com/casino",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=Remington+Park",
+      "lat": 35.52789,
+      "lon": -97.471225,
+      "verifiedOn": "2026-09-13",
+      "status": "verified-ready",
+      "decision": "Current operator casino page describes a 750-machine gaming floor; current contact page supplies One Remington Place. Named property destination marks the integrated casino/racing building rather than the racetrack infield or Oklahoma City centre. One physical destination.",
+      "coordinateEvidence": {
+        "method": "current-named-google-destination",
+        "finalUrl": "https://www.google.com/maps/place/Remington+Park/@35.52789,-97.471225,17z/data=!3m1!4b1!4m6!3m5!1s0x87b21837baaf3943:0x1b40105eb44bafae!8m2!3d35.52789!4d-97.471225!16s%2Fm%2F02rc26g?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 35.52789,
+        "longitude": -97.471225
+      },
+      "supportingSources": [
+        "https://www.remingtonpark.com/contact"
+      ]
+    },
+    {
+      "id": "casino-catalog-soaring-eagle-slot-palace",
+      "name": "Soaring Eagle Slot Palace",
+      "jurisdiction": "Michigan",
+      "address": "7566 Ogemaw Dr #7076, Mount Pleasant, MI 48858",
+      "identitySource": "https://soaringeaglecasino.com/slot-palace",
+      "coordinateSource": "https://www.google.com/maps/search/?api=1&query=7566+Ogemaw+Dr+Mt+Pleasant",
+      "lat": 43.6061056,
+      "lon": -84.7052673,
+      "verifiedOn": "2026-09-13",
+      "status": "correction",
+      "decision": "The operator's body repeats the main resort address 6800 Soaring Eagle Blvd, but its actual directions link explicitly routes to 7566 Ogemaw Dr #7076. Google identifies that building as the Slot Palace on Floor 1. Use the routable building address and numerical building destination, approximately 17 metres from the existing OSM casino footprint point. Preserve the stable ID and separate casino across the street.",
+      "coordinateEvidence": {
+        "method": "operator-address-current-building-destination",
+        "finalUrl": "https://www.google.com/maps/place/7566+Ogemaw+Dr,+Mt+Pleasant,+MI+48858/@43.6061056,-84.7052673,17z/data=!3m1!4b1!4m6!3m5!1s0x88221c13fd2773cf:0x73d8e9edf1a300ee!8m2!3d43.6061056!4d-84.7052673!16s%2Fg%2F11cnd7w_6n?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D",
+        "latitude": 43.6061056,
+        "longitude": -84.7052673
+      },
+      "operatorDirectionsUrl": "https://www.google.com/maps?sca_esv=461cceef532bce02&sxsrf=ANbL-n6qCEoWA9JsM0g4-3ygBJByAGxVwg:1777319681299&biw=1280&bih=712&uact=5&gs_lp=Egxnd3Mtd2l6LXNlcnAiIVNvYXJpbmcgRWFnbGUgc2xvdCBwYWxhY2UgYWRkcmVzc0iSFlCgAVjjFHACeAKQAQCYAd8BoAGlCqoBBTEuNy4xuAEDyAEA-AEBmAIFoAK1AsICBBAAGEfCAhAQLhiABBiKBRhDGMcBGK8BwgIFEAAYgATCAgQQABgewgIGEAAYCBgewgILEAAYgAQYigUYhgPCAh8QLhiABBiKBRhDGMcBGK8BGJcFGNwEGN4EGOAE2AEBwgIKEAAYRxjWBBiwA8ICDhAAGOQCGNYEGLAD2AEBwgIXEC4Y2AIYuAYY2gYY3AYYyAMYsAPYAQHCAhcQLhjcBhi4BhjaBhjYAhjIAxiwA9gBAcICBhAAGBYYHsICCBAAGIkFGKIEmAMAiAYBkAYPugYGCAEQARgUkgcDMy4yoAeeErIHAzAuMrgHlgLCBwUyLTMuMsgHJIAIAQ&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KXF1tf8THCKIMUOeUJctQy0R&daddr=7566+Ogemaw+Dr+%237076,+Mt+Pleasant,+MI+48858",
+      "previous": {
+        "file": "src/lib/nightlife/casino-catalog-pass-3.ts",
+        "address": "6800 Soaring Eagle Blvd, Mount Pleasant, MI 48858",
+        "lat": 43.60596,
+        "lon": -84.70535
+      },
+      "supportingSources": [
+        "https://www.openstreetmap.org/way/328099893",
+        "https://reviews.birdeye.com/soaring-eagle-slot-palace-170399583753908"
+      ]
+    }
+  ],
+  "closureFinding": {
+    "bounds": [
+      35.2,
+      35.65,
+      -96.7,
+      -95.8
+    ],
+    "closedPeriod": "late October / early November 2025; sources disagree on exact final operating day",
+    "decision": "Dated tribal/local reporting establishes closure. Generic operator hours and newly crawled directory copy do not establish post-closure reopening. The prominent midnight-reopening search result is dated May 14, 2020 and cannot clear the 2025 closure. Hold pending explicit post-closure current casino operation evidence; do not characterize as permanently closed.",
+    "jurisdiction": "Oklahoma",
+    "lastReviewedOn": "2026-09-13",
+    "name": "Golden Pony Casino",
+    "recheckTrigger": "Dated reopening announcement followed by evidence that ordinary public casino gaming actually resumed.",
+    "scopeCoordinatesAreNotRoutingPins": true,
+    "sources": [
+      "https://www.mvskokemedia.com/attempted-break-in-at-golden-pony-shuts-down-operations-mcn-lighthorse-and-bia-investigates",
+      "https://www.oklahoman.com/story/news/tribes/2025/12/14/golden-pony-casino-shutdown-oklahoma-tribal-government-thlopthlocco-tribal-town-dispute/87685318007",
+      "https://www.casino.org/news/golden-pony-casino-power-struggle-heads-to-okla-supreme-court/",
+      "https://goldenponycasino.com/contacts",
+      "https://www.casinocitytimes.com/news/article/golden-pony-casino-to-reopen-at-midnight-235210"
+    ],
+    "status": "held-closure-reopening-unconfirmed",
+    "supersedes": "audit/oklahoma-major-operators-pass-3-2026-09-11.json retained-current Golden Pony assertion"
+  },
+  "resolvedPriorHold": {
+    "file": "audit/casino-rc-pass-52-evidence-2026-09-13.json",
+    "property": "Montego Bay",
+    "resolution": "Current physical address established; historical conflicting shared addresses preserved above."
+  },
+  "validation": {
+    "head": "243082896d6b774dde9bbb44c44f71e02824aaa3",
+    "run": 34739926534,
+    "result": "Full required gates passed; historical batch counts remain the snapshot after this pass."
+  }
+}

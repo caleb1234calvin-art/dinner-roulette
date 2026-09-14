@@ -1,0 +1,19 @@
+{
+  "jurisdiction":"Colorado",
+  "capturedOn":"2026-09-11",
+  "status":"statewide-runtime-reconciliation-complete",
+  "scope":"Stable-ID, consumer-destination accounting and duplicate/alias reconciliation for the complete Colorado casino set after address and coordinate QA.",
+  "accounting":{"blackHawkDestinations":13,"centralCityDestinations":6,"crippleCreekDestinations":10,"tribalDestinations":2,"runtimeDestinations":31,"commercialRegulatorRows":33},
+  "decisions":[
+    {"case":"Bally's Black Hawk","decision":"retain-three-physical-destinations","ids":["co-black-hawk-ballys-east","co-black-hawk-ballys-north","co-black-hawk-ballys-west"],"reason":"Current Bally's material and distinct property geometry support three separately routable physical subproperties."},
+    {"case":"Bigfoot / Z Casino Black Hawk","decision":"retain-current-successor-only","runtimeId":"co-black-hawk-bigfoot","excludedAlias":"Z Casino","reason":"Bigfoot is the current successor at the former Z Casino property; a parallel current Z destination would duplicate the same physical property."},
+    {"case":"Cripple Creek FHR BILLY'S","decision":"no-separate-runtime-destination","reason":"The regulator row is an accounting/license unit rather than a separate current consumer destination."},
+    {"case":"Bronco Billy's / Chamonix","decision":"retain-two-destinations","ids":["co-cripple-creek-bronco-billys","co-cripple-creek-chamonix"],"reason":"Current first-party material presents two distinct casino experiences despite their integrated adjoining complex."},
+    {"case":"Century Cripple Creek license rows","decision":"collapse-to-one-consumer-destination","runtimeId":"co-cripple-creek-century","reason":"Multiple regulator rows represent one current consumer property."},
+    {"case":"Golden Nugget Cripple Creek / Wildwood","decision":"retain-current-successor-only","runtimeId":"co-cripple-creek-golden-nugget","excludedAlias":"Wildwood Casino","reason":"Golden Nugget is the current casino identity at the same 119 Carbonate Street property."}
+  ],
+  "stableIdPolicy":"Preserve the audited co-* stable IDs from the Colorado QA artifacts. Historical predecessor names remain provenance/lineage only and are not emitted as parallel current runtime destinations.",
+  "duplicateQa":{"knownSamePropertyAliasesResolved":true,"knownLicenseRowCollapsesResolved":true,"distinctAdjoiningExperiencesPreserved":true,"unresolvedDuplicateHolds":0},
+  "coordinateQa":{"blackHawk":"13/13","centralCity":"6/6","crippleCreek":"10/10","tribal":"2/2","statewide":"31/31"},
+  "nextPhase":"Serialize these 31 reconciled destinations into the next chronological casino runtime pass, append it to CASINO_PASSES, extend validator enumeration, and run Validate Dinner Integration before marking Colorado complete."
+}

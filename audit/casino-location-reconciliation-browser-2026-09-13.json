@@ -1,0 +1,857 @@
+{
+  "schemaVersion": 1,
+  "status": "ALL_COMBINED_BROWSER_GATES_PASS",
+  "build": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61",
+      "files": 363
+    },
+    "startedAt": "2026-09-13T19:48:22.050Z",
+    "output": {
+      "sha256": "0b60f965320a10562a21392bd0a5712afffca9e1d72f94f90b8ab28deb7936f7",
+      "files": 183
+    },
+    "completedAt": "2026-09-13T19:48:30.716Z"
+  },
+  "casino": {
+    "origin": "http://127.0.0.1:8080",
+    "buildProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61",
+        "files": 363
+      },
+      "startedAt": "2026-09-13T19:48:22.050Z",
+      "output": {
+        "sha256": "0b60f965320a10562a21392bd0a5712afffca9e1d72f94f90b8ab28deb7936f7",
+        "files": 183
+      },
+      "completedAt": "2026-09-13T19:48:30.716Z"
+    },
+    "fixtures": "Server-side Overpass outage; Nominatim deterministic locations. Production-mode local preview, actual server functions and catalog.",
+    "checks": [
+      "desktop: completed the four-step first-run tour",
+      "desktop: casino filter and saved-catalog outage fallback",
+      "desktop: strict open-now excludes unknown hours; empty state disables selection",
+      "desktop: compiled fallback matches 19 current canonical casinos",
+      "desktop: unique canonical options, option selection, map destination, reroll and persisted exclusion",
+      "desktop: denied geolocation opens a visible error and manual recovery form",
+      "desktop: manual location, no-catalog/provider failure and favorites empty states",
+      "desktop: non-casino navigation, settings and no horizontal overflow or page errors",
+      "mobile: completed the four-step first-run tour",
+      "mobile: casino filter and saved-catalog outage fallback",
+      "mobile: strict open-now excludes unknown hours; empty state disables selection",
+      "mobile: compiled fallback matches 3 current canonical casinos",
+      "mobile: unique canonical options, option selection, map destination, reroll and persisted exclusion",
+      "mobile: denied geolocation opens a visible error and manual recovery form",
+      "mobile: manual location, no-catalog/provider failure and favorites empty states",
+      "mobile: non-casino navigation, settings and no horizontal overflow or page errors"
+    ],
+    "errors": []
+  },
+  "location": {
+    "testedAt": "2026-09-13T19:49:11.449Z",
+    "browser": "Chromium",
+    "buildProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61",
+        "files": 363
+      },
+      "startedAt": "2026-09-13T19:48:22.050Z",
+      "output": {
+        "sha256": "0b60f965320a10562a21392bd0a5712afffca9e1d72f94f90b8ab28deb7936f7",
+        "files": 183
+      },
+      "completedAt": "2026-09-13T19:48:30.716Z"
+    },
+    "mode": "Real local app/RPC; simulated native geolocation coordinates and provider fixtures; error callbacks explicitly mocked",
+    "serverMode": "built preview",
+    "passed": true,
+    "checks": [
+      "No geolocation access on initial load",
+      "GPS coordinates persist before delayed reverse enrichment, with visible progress and busy protection",
+      "Native Chromium geolocation with granted permission sets and persists simulated Toronto coordinates",
+      "GPS coordinates reach restaurant discovery and exact Google Maps destination",
+      "Manual international choice overrides GPS, preserves filters and survives reload without GPS access",
+      "Location is shared across Dinner, Nightlife/casino and Date Night; manual U.K. choice works",
+      "390px mobile layout fits without horizontal overflow",
+      "No-result feedback leaves the last valid location active and manual entry available",
+      "Simulated permission denied, unavailable and timeout errors are visible from the closed control and automatically expose manual recovery",
+      "Unsupported geolocation still permits manual Montréal entry",
+      "Repeated location actions cannot issue duplicate native requests while busy",
+      "Late browser position callback cannot replace a newer manual choice",
+      "No uncaught browser page errors",
+      "Actual server requests use the selected coordinates for all three discovery categories"
+    ]
+  },
+  "occupiedPortNegativeCheck": {
+    "passed": true,
+    "guard": "Occupied port must not substitute another preview",
+    "exitCode": 1,
+    "elapsedMs": 4174
+  },
+  "visualReview": [
+    "390px Date Night shared location and status text remain visible and fit without horizontal overflow.",
+    "Desktop casino options retain canonical names and selection controls.",
+    "Final real Toronto mobile result: selected name, available international address, one-mile distance and Maps action visible; open-now deliberately disabled for discovery acceptance."
+  ],
+  "liveProviders": "PASS six casino regions and four actual international manual/discovery cases; zero findings/page errors",
+  "limitations": [
+    "Native coordinates/permissions are simulated; only deterministic suites use provider fixtures. The separately recorded real-provider runs use actual Nominatim/Overpass with no provider mocks.",
+    "Physical GPS, installed PWA, hosted/account sessions and external Maps app navigation remain unverified.",
+    "Open-now was disabled for dense-city discovery acceptance; destination-timezone correctness was not newly validated.",
+    "Provider timeouts were observed and honestly handled; provider availability is not guaranteed."
+  ],
+  "casinoRealProviders": {
+    "buildProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61",
+        "files": 363
+      },
+      "startedAt": "2026-09-13T19:48:22.050Z",
+      "output": {
+        "sha256": "0b60f965320a10562a21392bd0a5712afffca9e1d72f94f90b8ab28deb7936f7",
+        "files": 183
+      },
+      "completedAt": "2026-09-13T19:48:30.716Z"
+    },
+    "capturedAt": "2026-09-13T19:49:45.410Z",
+    "origin": "http://127.0.0.1:8092",
+    "network": "Actual provider requests; no mocked provider responses or geocoder results",
+    "geolocation": "Chromium permission and coordinate emulation; not a physical-device GPS test",
+    "canonicalDestinations": 883,
+    "requestedAuthFlag": "true",
+    "regions": [
+      {
+        "name": "Reno",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "eligible": 19,
+        "expectedSavedCount": 19,
+        "source": "fallback",
+        "names": [
+          "Peppermill Resort Spa Casino",
+          "Legends Bay Casino",
+          "Eldorado Resort Casino",
+          "Western Village Inn & Casino"
+        ],
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=39.49732%2C-119.80139",
+        "pageErrors": []
+      },
+      {
+        "name": "Newkirk",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "eligible": 3,
+        "expectedSavedCount": 3,
+        "source": "fallback",
+        "names": [
+          "7 Clans First Council Casino Hotel",
+          "7 Clans Chilocco Gasino",
+          "Native Lights Casino"
+        ],
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=36.9831099%2C-97.0443445",
+        "pageErrors": []
+      },
+      {
+        "name": "Ardmore",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "eligible": 2,
+        "expectedSavedCount": 2,
+        "source": "fallback",
+        "names": [
+          "Lakecrest Casino and Hotel",
+          "Gold Mountain Casino"
+        ],
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=34.1348459%2C-97.1167007",
+        "pageErrors": []
+      },
+      {
+        "name": "Chandler",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "eligible": 1,
+        "expectedSavedCount": 1,
+        "source": "live-or-merged",
+        "names": [
+          "Harrah's Oklahoma"
+        ],
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=35.6933941%2C-96.9757739",
+        "pageErrors": []
+      },
+      {
+        "name": "Pahrump",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "eligible": 5,
+        "expectedSavedCount": 5,
+        "source": "live-or-merged",
+        "names": [
+          "Lakeside Casino & RV Park",
+          "Terrible's Road House Pahrump",
+          "Pahrump Nugget Hotel & Casino",
+          "Saddle West Hotel Casino & RV Resort"
+        ],
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=36.1324784%2C-115.9584802",
+        "pageErrors": []
+      },
+      {
+        "name": "Pawnee",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "eligible": 2,
+        "expectedSavedCount": 2,
+        "source": "live-or-merged",
+        "names": [
+          "Pawnee Nation Trading Post Casino",
+          "StoneWolf Casino"
+        ],
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=36.3376159%2C-96.7938385",
+        "pageErrors": []
+      }
+    ],
+    "findings": [],
+    "errors": [],
+    "providers": [
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 8375
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "elapsedMs": 8012,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 9666
+      },
+      {
+        "host": "overpass.private.coffee",
+        "elapsedMs": 8002,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "maps.mail.ru",
+        "elapsedMs": 3988,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "nominatim.openstreetmap.org",
+        "status": 200,
+        "elapsedMs": 3282
+      },
+      {
+        "host": "nominatim.openstreetmap.org",
+        "status": 200,
+        "elapsedMs": 6438
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "elapsedMs": 8003,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 11658
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 7986
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 12397
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 11777
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "elapsedMs": 8003,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.private.coffee",
+        "elapsedMs": 8002,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 12085
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 10194
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 10603
+      },
+      {
+        "host": "overpass.private.coffee",
+        "elapsedMs": 8002,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "maps.mail.ru",
+        "elapsedMs": 3994,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "maps.mail.ru",
+        "elapsedMs": 3992,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.private.coffee",
+        "elapsedMs": 8000,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "maps.mail.ru",
+        "elapsedMs": 3997,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 7583
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 7938
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 6976
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 7463
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "elapsedMs": 8001,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.private.coffee",
+        "elapsedMs": 8003,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "maps.mail.ru",
+        "elapsedMs": 3995,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 6167
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 4461
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 7851
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 6455
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 7446
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 1251
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 1420
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 3645
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 8065
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 6063
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 2489
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 1276
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 2024
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 6735
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 3882
+      }
+    ],
+    "nativePermissionRecovery": {
+      "freshDeniedContext": true,
+      "permissionState": "denied",
+      "visibleError": true,
+      "realManualGeocoder": true
+    },
+    "providerCasinos": [
+      {
+        "type": "way",
+        "id": 1246182211,
+        "lat": 35.6723965,
+        "lon": -96.6601799,
+        "tags": {
+          "amenity": "casino"
+        }
+      },
+      {
+        "type": "node",
+        "id": 9419682759,
+        "lat": 36.1326498,
+        "lon": -115.9584618,
+        "tags": {
+          "amenity": "casino",
+          "name": "Lakeside Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 239380384,
+        "lat": 36.2109618,
+        "lon": -115.9841737,
+        "tags": {
+          "addr:city": "Pahrump",
+          "addr:housenumber": "681",
+          "addr:postcode": "89048",
+          "addr:state": "NV",
+          "addr:street": "South Highway 160",
+          "amenity": "casino",
+          "name": "Pahrump Nugget Hotel and Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 575029679,
+        "lat": 36.2091081,
+        "lon": -115.9832142,
+        "tags": {
+          "amenity": "casino",
+          "name": "Gold Town Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 575873265,
+        "lat": 36.2012933,
+        "lon": -115.9766887,
+        "tags": {
+          "addr:city": "Pahrump",
+          "addr:housenumber": "1220",
+          "addr:postcode": "89048",
+          "addr:state": "NV",
+          "addr:street": "State Route 160",
+          "amenity": "casino",
+          "name": "Saddle West Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 682672701,
+        "lat": 36.1937715,
+        "lon": -115.9904878,
+        "tags": {
+          "addr:city": "Pahrump",
+          "addr:housenumber": "1750",
+          "addr:postcode": "89048",
+          "addr:state": "NV",
+          "addr:street": "Pahrump Valley Boulevard",
+          "amenity": "casino",
+          "name": "Terrible's Roadhouse Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1126484584,
+        "lat": 36.2079351,
+        "lon": -115.9921447,
+        "tags": {
+          "amenity": "casino",
+          "name": "Irene's Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 247781762,
+        "lat": 36.337592,
+        "lon": -96.7938685,
+        "tags": {
+          "addr:city": "Pawnee",
+          "addr:country": "US",
+          "addr:housenumber": "291",
+          "addr:postcode": "74056",
+          "addr:street": "Agency Road",
+          "amenity": "casino",
+          "name": "Pawnee Trading Post and Casino"
+        }
+      },
+      {
+        "type": "way",
+        "id": 1517858495,
+        "lat": 36.2274547,
+        "lon": -96.7854963,
+        "tags": {
+          "addr:city": "Pawnee",
+          "addr:housenumber": "54251",
+          "addr:postcode": "74058",
+          "addr:state": "OK",
+          "addr:street": "South 34900 Road",
+          "amenity": "casino",
+          "name": "StoneWolf Casino"
+        }
+      }
+    ]
+  },
+  "internationalRealProviders": {
+    "testedAt": "2026-09-13T19:48:58.234Z",
+    "origin": "http://127.0.0.1:8093",
+    "buildProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61",
+        "files": 363
+      },
+      "startedAt": "2026-09-13T19:48:22.050Z",
+      "output": {
+        "sha256": "0b60f965320a10562a21392bd0a5712afffca9e1d72f94f90b8ab28deb7936f7",
+        "files": 183
+      },
+      "completedAt": "2026-09-13T19:48:30.716Z"
+    },
+    "mode": "Actual manual Nominatim and restaurant Overpass through the combined local app/RPC; no provider mocks; no GPS request",
+    "cities": [
+      {
+        "query": "Toronto, Ontario, Canada",
+        "location": {
+          "lat": 43.6534817,
+          "lon": -79.3839347,
+          "label": "Toronto, Ontario, Canada",
+          "locality": "Toronto",
+          "region": "Ontario",
+          "country": "Canada",
+          "countryCode": "CA",
+          "source": "manual"
+        },
+        "eligible": 1623,
+        "selectedName": "6ixdonutz",
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=43.6441184%2C-79.3997701",
+        "source": "live",
+        "passed": true
+      },
+      {
+        "query": "Vancouver, British Columbia, Canada",
+        "location": {
+          "lat": 49.2608724,
+          "lon": -123.113952,
+          "label": "Vancouver, British Columbia, Canada",
+          "locality": "Vancouver",
+          "region": "British Columbia",
+          "country": "Canada",
+          "countryCode": "CA",
+          "source": "manual"
+        },
+        "eligible": 393,
+        "selectedName": "Pizza Rubato Napoletana",
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=49.263412%2C-123.1169982",
+        "source": "live",
+        "passed": true
+      },
+      {
+        "query": "Montréal, Québec, Canada",
+        "location": {
+          "lat": 45.5031824,
+          "lon": -73.5698065,
+          "label": "Montréal, Québec, Canada",
+          "locality": "Montréal",
+          "region": "Québec",
+          "country": "Canada",
+          "countryCode": "CA",
+          "source": "manual"
+        },
+        "eligible": 1010,
+        "selectedName": "Tim Hortons",
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=45.512661%2C-73.5702494",
+        "source": "live",
+        "passed": true
+      },
+      {
+        "query": "London, United Kingdom",
+        "location": {
+          "lat": 51.5074456,
+          "lon": -0.1277653,
+          "label": "Greater London, England, United Kingdom",
+          "locality": "Greater London",
+          "region": "England",
+          "country": "United Kingdom",
+          "countryCode": "GB",
+          "source": "manual"
+        },
+        "eligible": 2176,
+        "selectedName": "Ciao Italian Kitchen",
+        "directions": "https://www.google.com/maps/dir/?api=1&destination=51.512784%2C-0.1422947",
+        "source": "live",
+        "passed": true
+      }
+    ],
+    "pageErrors": [],
+    "errors": [],
+    "reloadWithoutGps": true,
+    "providers": [
+      {
+        "host": "nominatim.openstreetmap.org",
+        "status": 200,
+        "elapsedMs": 6250
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 7667
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 13582
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 11189
+      },
+      {
+        "host": "nominatim.openstreetmap.org",
+        "status": 200,
+        "elapsedMs": 5410
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 12144
+      },
+      {
+        "host": "nominatim.openstreetmap.org",
+        "status": 200,
+        "elapsedMs": 5555
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "status": 200,
+        "elapsedMs": 13759
+      },
+      {
+        "host": "nominatim.openstreetmap.org",
+        "status": 200,
+        "elapsedMs": 6085
+      },
+      {
+        "host": "overpass.openstreetmap.fr",
+        "elapsedMs": 22009,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "overpass.private.coffee",
+        "elapsedMs": 22001,
+        "error": "TimeoutError",
+        "code": 23
+      },
+      {
+        "host": "maps.mail.ru",
+        "status": 200,
+        "elapsedMs": 17612
+      }
+    ],
+    "passed": true
+  },
+  "providerTransport": {
+    "casino": {
+      "200": 30,
+      "TimeoutError": 14
+    },
+    "international": {
+      "200": 10,
+      "TimeoutError": 2
+    }
+  },
+  "ci": {
+    "conclusion": "success",
+    "head": "bdc05dee1bb15807c0f70d25e48c12fb37eea8f0",
+    "id": 34778760104,
+    "number": 337,
+    "status": "completed",
+    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34778760104",
+    "job": 103781770405,
+    "verifiedLogLines": [
+      "2026-09-13T19:48:03.1444299Z # tests 83",
+      "2026-09-13T19:48:03.1444721Z # pass 83",
+      "2026-09-13T19:48:03.1444910Z # fail 0",
+      "2026-09-13T19:48:03.1445309Z # skipped 0",
+      "2026-09-13T19:48:04.8675863Z Casino catalog audit passed: 899 serialized records, 883 canonical destinations across 60 catalog files.",
+      "2026-09-13T19:48:04.8676794Z National coverage audit passed: 39 complete jurisdictions, 0 authoritative inventories staged, 2 pending jurisdictions.",
+      "2026-09-13T19:48:15.1125760Z # tests 300",
+      "2026-09-13T19:48:15.1126390Z # pass 296",
+      "2026-09-13T19:48:15.1126705Z # fail 0",
+      "2026-09-13T19:48:15.1127342Z # skipped 4",
+      "2026-09-13T19:48:15.7418035Z # tests 71",
+      "2026-09-13T19:48:15.7419014Z # pass 71",
+      "2026-09-13T19:48:15.7419382Z # fail 0",
+      "2026-09-13T19:48:15.7420271Z # skipped 0",
+      "2026-09-13T19:48:53.1454113Z CASINO_BROWSER_VERDICT {\"origin\":\"http://127.0.0.1:8080\",\"buildProof\":{\"schemaVersion\":1,\"status\":\"BUILT\",\"authFlag\":\"true\",\"source\":{\"sha256\":\"bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61\",\"files\":363},\"startedAt\":\"2026-09-13T19:48:19.003Z\",\"output\":{\"sha256\":\"054d7d16a2d814a5063a5286c8164fdab0f3b3d520b37b27b5f1b5000e6f99a9\",\"files\":182},\"completedAt\":\"2026-09-13T19:48:21.940Z\"},\"fixtures\":\"Server-side Overpass outage; Nominatim deterministic locations. Production-mode local preview, actual server functions and catalog.\",\"checks\":[\"desktop: completed the four-step first-run tour\",\"desktop: casino filter and saved-catalog outage fallback\",\"desktop: strict open-now excludes unknown hours; empty state disables selection\",\"desktop: compiled fallback matches 19 current canonical casinos\",\"desktop: unique canonical options, option selection, map destination, reroll and persisted exclusion\",\"desktop: denied geolocation opens a visible error and manual recovery form\",\"desktop: manual location, no-catalog/provider failure and favorites empty states\",\"desktop: non-casino navigation, settings and no horizontal overflow or page errors\",\"mobile: completed the four-step first-run tour\",\"mobile: casino filter and saved-catalog outage fallback\",\"mobile: strict open-now excludes unknown hours; empty state disables selection\",\"mobile: compiled fallback matches 3 current canonical casinos\",\"mobile: unique canonical options, option selection, map destination, reroll and persisted exclusion\",\"mobile: denied geolocation opens a visible error and manual recovery form\",\"mobile: manual location, no-catalog/provider failure and favorites empty states\",\"mobile: non-casino navigation, settings and no horizontal overflow or page errors\"],\"errors\":[]}",
+      "2026-09-13T19:49:01.6233758Z \u001b[36;1mprint(\"Verified 30 Dinner icon assets: 15 dark + 15 light\")\u001b[0m",
+      "2026-09-13T19:49:01.6546833Z Verified 30 Dinner icon assets: 15 dark + 15 light"
+    ]
+  },
+  "integrationCI": {
+    "applicationPassed": 71,
+    "casinoBrowserGroups": 16,
+    "conclusion": "success",
+    "failed": 0,
+    "head": "189c46bfee0ac0983ea9100eae90e92ee58915b7",
+    "icons": 30,
+    "id": 34779345531,
+    "job": 103783374402,
+    "locationBrowserGroups": 14,
+    "locationVerdict": {
+      "checks": [
+        "No geolocation access on initial load",
+        "GPS coordinates persist before delayed reverse enrichment, with visible progress and busy protection",
+        "Native Chromium geolocation with granted permission sets and persists simulated Toronto coordinates",
+        "GPS coordinates reach restaurant discovery and exact Google Maps destination",
+        "Manual international choice overrides GPS, preserves filters and survives reload without GPS access",
+        "Location is shared across Dinner, Nightlife/casino and Date Night; manual U.K. choice works",
+        "390px mobile layout fits without horizontal overflow",
+        "No-result feedback leaves the last valid location active and manual entry available",
+        "Simulated permission denied, unavailable and timeout errors are visible from the closed control and automatically expose manual recovery",
+        "Unsupported geolocation still permits manual Montréal entry",
+        "Repeated location actions cannot issue duplicate native requests while busy",
+        "Late browser position callback cannot replace a newer manual choice",
+        "No uncaught browser page errors",
+        "Actual server requests use the selected coordinates for all three discovery categories"
+      ],
+      "output": "audit/browser-results/location",
+      "passed": true
+    },
+    "number": 343,
+    "repositoryPassed": 296,
+    "skipped": 4,
+    "sourceSha256": "bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61",
+    "status": "completed",
+    "uniquePassed": 367,
+    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/34779345531",
+    "verifiedLogLines": [
+      "2026-09-13T19:59:58.8299812Z # tests 83",
+      "2026-09-13T19:59:58.8300222Z # pass 83",
+      "2026-09-13T19:59:58.8300423Z # fail 0",
+      "2026-09-13T19:59:58.8300845Z # skipped 0",
+      "2026-09-13T20:00:00.5484615Z Casino catalog audit passed: 899 serialized records, 883 canonical destinations across 60 catalog files.",
+      "2026-09-13T20:00:00.5485515Z National coverage audit passed: 39 complete jurisdictions, 0 authoritative inventories staged, 2 pending jurisdictions.",
+      "2026-09-13T20:00:10.8948780Z # tests 300",
+      "2026-09-13T20:00:10.8949175Z # pass 296",
+      "2026-09-13T20:00:10.8949430Z # fail 0",
+      "2026-09-13T20:00:10.8950090Z # skipped 4",
+      "2026-09-13T20:00:11.4964977Z # tests 71",
+      "2026-09-13T20:00:11.4966108Z # pass 71",
+      "2026-09-13T20:00:11.4966510Z # fail 0",
+      "2026-09-13T20:00:11.4967254Z # skipped 0",
+      "2026-09-13T20:00:46.8530860Z CASINO_BROWSER_VERDICT {\"origin\":\"http://127.0.0.1:8080\",\"buildProof\":{\"schemaVersion\":1,\"status\":\"BUILT\",\"authFlag\":\"true\",\"source\":{\"sha256\":\"bc47c54850ec80e6a6460a1aee6c4478a65d35bcba4d86eca619b9a99733dc61\",\"files\":363},\"startedAt\":\"2026-09-13T20:00:14.751Z\",\"output\":{\"sha256\":\"17907ba307c1af6ee239be3da248a740396223ad60945ec7e547d2ac08774222\",\"files\":182},\"completedAt\":\"2026-09-13T20:00:17.690Z\"},\"fixtures\":\"Server-side Overpass outage; Nominatim deterministic locations. Production-mode local preview, actual server functions and catalog.\",\"checks\":[\"desktop: completed the four-step first-run tour\",\"desktop: casino filter and saved-catalog outage fallback\",\"desktop: strict open-now excludes unknown hours; empty state disables selection\",\"desktop: compiled fallback matches 19 current canonical casinos\",\"desktop: unique canonical options, option selection, map destination, reroll and persisted exclusion\",\"desktop: denied geolocation opens a visible error and manual recovery form\",\"desktop: manual location, no-catalog/provider failure and favorites empty states\",\"desktop: non-casino navigation, settings and no horizontal overflow or page errors\",\"mobile: completed the four-step first-run tour\",\"mobile: casino filter and saved-catalog outage fallback\",\"mobile: strict open-now excludes unknown hours; empty state disables selection\",\"mobile: compiled fallback matches 3 current canonical casinos\",\"mobile: unique canonical options, option selection, map destination, reroll and persisted exclusion\",\"mobile: denied geolocation opens a visible error and manual recovery form\",\"mobile: manual location, no-catalog/provider failure and favorites empty states\",\"mobile: non-casino navigation, settings and no horizontal overflow or page errors\"],\"errors\":[]}",
+      "2026-09-13T20:00:46.9047598Z   LOCATION_BROWSER_OUTPUT: audit/browser-results/location",
+      "2026-09-13T20:00:55.1545761Z \u001b[36;1mprint(\"Verified 30 Dinner icon assets: 15 dark + 15 light\")\u001b[0m",
+      "2026-09-13T20:00:55.1866124Z Verified 30 Dinner icon assets: 15 dark + 15 light"
+    ]
+  },
+  "integrationSourceIdentity": "Merged application/tests/configuration are byte-identical to the validated candidate; only the shared handoff differed."
+}

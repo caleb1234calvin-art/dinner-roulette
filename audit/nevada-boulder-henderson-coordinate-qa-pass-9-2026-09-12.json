@@ -1,0 +1,137 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-12",
+  "status": "boulder-henderson-coordinate-qa-pass-9-runtime-ready",
+  "scope": "Rolling QA for six current NV-02 Boulder Strip / Henderson destinations. This pass preserves the same current-operation, normalized-address, property-coordinate, stable-ID, website and duplicate/alias gates used by prior Nevada runtime increments.",
+  "records": [
+    {
+      "id": "casino-catalog-nv-boulder-station",
+      "name": "Boulder Station Hotel & Casino",
+      "address": "4111 Boulder Highway, Las Vegas, NV 89121",
+      "lat": 36.13379,
+      "lon": -115.08525,
+      "website": "https://boulderstation.com/",
+      "identityEvidence": ["https://boulderstation.com/", "https://stationcasinos.com/property-map/"],
+      "coordinateEvidence": "https://mapcarta.com/W88930441",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "casino-catalog-nv-sams-town-las-vegas",
+      "name": "Sam's Town Hotel & Gambling Hall",
+      "address": "5111 Boulder Highway, Las Vegas, NV 89122",
+      "lat": 36.11298,
+      "lon": -115.06238,
+      "website": "https://samstownlv.boydgaming.com/",
+      "identityEvidence": ["https://samstownlv.boydgaming.com/", "https://samstownlv.boydgaming.com/explore/directions", "https://samstownlv.boydgaming.com/play"],
+      "coordinateEvidence": "https://mapcarta.com/25288736",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "casino-catalog-nv-arizona-charlies-boulder",
+      "name": "Arizona Charlie's Boulder",
+      "address": "4575 Boulder Highway, Las Vegas, NV 89121",
+      "lat": 36.1240958,
+      "lon": -115.0755858,
+      "website": "https://arizonacharliesboulder.com/",
+      "identityEvidence": ["https://arizonacharliesboulder.com/site", "https://arizonacharliesboulder.com/casino"],
+      "coordinateEvidence": "https://yellowpages.swiss/location.cfm?company=Arizona-Charlie-s-Boulder-Casino-Hotel-und-RV-Park&key=293215",
+      "coordinateCorroboration": "https://mapcarta.com/25290136",
+      "status": "runtime-ready",
+      "note": "Use the casino/hotel property coordinate rather than the separately mapped adjacent RV park coordinate."
+    },
+    {
+      "id": "casino-catalog-nv-sunset-station",
+      "name": "Sunset Station Hotel & Casino",
+      "address": "1301 W Sunset Rd, Henderson, NV 89014",
+      "lat": 36.0629,
+      "lon": -115.0404,
+      "website": "https://sunsetstation.com/",
+      "identityEvidence": ["https://sunsetstation.com/contact/", "https://stationcasinos.com/property-map/", "https://travelnevada.com/resorts-casinos/sunset-station-hotel-casino/"],
+      "coordinateEvidence": "https://mapcarta.com/25319472",
+      "status": "runtime-ready"
+    },
+    {
+      "id": "casino-catalog-nv-green-valley-ranch",
+      "name": "Green Valley Ranch Resort Spa Casino",
+      "address": "2300 Paseo Verde Parkway, Henderson, NV 89052",
+      "lat": 36.02068,
+      "lon": -115.08966,
+      "website": "https://greenvalleyranch.com/",
+      "identityEvidence": ["https://stationcasinos.com/property-map/", "https://greenvalleyranch.com/wp-content/uploads/2025/09/Green-Valley-Ranch-Sales-Kit-09162025.pdf"],
+      "coordinateEvidence": "https://mapcarta.com/W341326765",
+      "status": "runtime-ready",
+      "note": "Use the casino-building OSM feature rather than nearby hotel/resort centroid variants."
+    },
+    {
+      "id": "casino-catalog-nv-wildfire-boulder",
+      "name": "Wildfire Boulder",
+      "address": "2000 S Boulder Hwy, Henderson, NV 89002",
+      "lat": 36.004894,
+      "lon": -114.941267,
+      "website": "https://wildfiregaming.com/wildfires/wildfire-boulder/",
+      "identityEvidence": ["https://wildfiregaming.com/wildfires/wildfire-boulder/", "https://wildfiregaming.com/property-map/", "https://wildfiregaming.com/contact/"],
+      "coordinateEvidence": "https://yellowpages.swiss/location.cfm?company=Wildfire-Boulder&key=272676",
+      "status": "runtime-ready",
+      "note": "Stable ID explicitly includes Boulder to prevent collision with Rancho, Fremont and other Wildfire properties."
+    }
+  ],
+  "duplicateQA": {
+    "selectionSource": "audit/nevada-runtime-batch-2-selection-2026-09-11.json",
+    "basis": "All six were selected outside NV-01 and remain distinct physical properties. Arizona Charlie's Boulder remains distinct from Arizona Charlie's Decatur. Wildfire Boulder is explicitly namespaced away from other Wildfire properties.",
+    "result": "PASS_FOR_RUNTIME_SERIALIZATION"
+  },
+  "holds": [
+    {
+      "name": "Longhorn Casino & Hotel",
+      "status": "hold",
+      "reason": "Current address/operation is well corroborated, but this increment stops before accepting a coordinate source that is weaker than the six promoted records."
+    },
+    {
+      "name": "Skyline Hotel & Casino",
+      "status": "hold",
+      "reason": "Current property remains staged for final coordinate and duplicate QA."
+    },
+    {
+      "name": "Jokers Wild Casino",
+      "status": "hold",
+      "reason": "Current property remains staged for final coordinate and current-site QA."
+    },
+    {
+      "name": "Club Fortune Casino",
+      "status": "hold",
+      "reason": "Current property remains staged for final coordinate and current-site QA."
+    },
+    {
+      "name": "Rainbow Club Casino",
+      "status": "hold",
+      "reason": "Current property remains staged for final coordinate and current-site QA."
+    },
+    {
+      "name": "Emerald Island Casino",
+      "status": "hold",
+      "reason": "Current property remains staged for final coordinate and current-site QA."
+    },
+    {
+      "name": "Pass Casino",
+      "status": "hold",
+      "reason": "Current property remains staged for final coordinate and current-site QA."
+    },
+    {
+      "name": "Railroad Pass Hotel & Casino",
+      "status": "hold",
+      "reason": "Current property remains staged for final coordinate and current-site QA."
+    },
+    {
+      "name": "Barley's Casino & Brewing Company",
+      "status": "hold",
+      "reason": "Current operation/address is strong, but this pass stops at six records rather than lowering coordinate-source quality."
+    }
+  ],
+  "qaAccounting": {
+    "nevadaRuntimeActiveBefore": 82,
+    "runtimeReadyThisPass": 6,
+    "projectedNevadaRuntimeAfterActivation": 88,
+    "statewideComplete": false
+  },
+  "nextPhase": "Serialize these six records in Pass 36, validate green, then continue the remaining Boulder/Henderson and North Las Vegas/Northwest candidates under the same evidence gate."
+}

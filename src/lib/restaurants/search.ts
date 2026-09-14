@@ -1,4 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
+import { normalizeLocationQuery, requireCoordinates } from "../location/model";
 import { JOPLIN_FALLBACK } from "./fallback-data";
 import { reverseGeocode, geocodeQuery } from "./geocode";
 import { haversineMiles } from "./geo";
@@ -14,13 +15,11 @@ function withinJoplinArea(lat: number, lon: number): boolean {
 
 export const searchRestaurants = createServerFn({ method: "POST" })
   .validator((data: SearchQuery) => {
-    if (!Number.isFinite(data.lat) || !Number.isFinite(data.lon)) {
-      throw new Error("A location is required");
-    }
+    requireCoordinates(data);
     return {
       lat: data.lat,
       lon: data.lon,
-      radiusMiles: Math.min(Math.max(data.radiusMiles || 10, 1), 30),
+      radiusMiles: Math.min(Math.max(data.radiusMiles || 10, 1), 50),
     };
   })
   .handler(async ({ data }): Promise<SearchResponse> => {
@@ -49,18 +48,14 @@ export const searchRestaurants = createServerFn({ method: "POST" })
 
 export const lookupLocation = createServerFn({ method: "POST" })
   .validator((data: { query: string }) => {
-    if (!data.query?.trim()) throw new Error("Enter a city or ZIP code");
-    return { query: data.query.trim() };
+    return { query: normalizeLocationQuery(data?.query) };
   })
   .handler(async ({ data }) => {
     const result = await geocodeQuery(data.query);
-    if (!result) throw new Error("Couldn't find that place");
+    if (!result) throw new Error("Couldn't find that place. Try adding the region and country.");
     return result;
   });
 
 export const lookupReverseLocation = createServerFn({ method: "POST" })
-  .validator((data: { lat: number; lon: number }) => data)
-  .handler(async ({ data }) => {
-    const label = await reverseGeocode(data.lat, data.lon);
-    return { lat: data.lat, lon: data.lon, label };
-  });
+  .validator((data: { lat: number; lon: number }) => requireCoordinates(data))
+  .handler(async ({ data }) => reverseGeocode(data.lat, data.lon));

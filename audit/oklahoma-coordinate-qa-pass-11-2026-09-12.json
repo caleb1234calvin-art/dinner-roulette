@@ -1,0 +1,39 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-12",
+  "status": "coordinate-qa-pass-11-coweta-runtime-ready",
+  "scope": "Promote Coweta Casino Hotel after recovering a direct numerical property marker tied to the current 13185 Oklahoma 51 hotel/casino listing, while preserving the remaining Oklahoma coordinate-only holds.",
+  "records": [
+    {
+      "id": "casino-catalog-ok-coweta-casino-hotel",
+      "name": "Coweta Casino Hotel",
+      "operator": "Muscogee Nation Gaming Enterprises",
+      "address": "13185 Oklahoma 51, Coweta, OK 74429",
+      "lat": 35.97281,
+      "lon": -95.66006,
+      "website": "https://cowetacasinohotel.com/",
+      "operationEvidence": [
+        "https://cowetacasinohotel.com/",
+        "https://www.google.com/travel/hotels/entity/CgoI7tev-cOyx989EAE",
+        "https://www.500nations.com/casinos/ok-coweta-casino-hotel.asp"
+      ],
+      "coordinateEvidence": "https://www.expedia.com/Coweta-Hotels-Coweta-Casino-Hotel.h125048153.Hotel-Information",
+      "coordinateMarkerSource": "Expedia property-map static marker for Coweta Casino Hotel at 13185 Oklahoma 51",
+      "status": "runtime-ready",
+      "decision": "Current first-party and post-opening lodging evidence establish Coweta Casino Hotel as the completed operating property at 13185 Oklahoma 51. Expedia's current property page embeds a static property-map marker at 35.97281,-95.66006 for that exact listing. This is a direct numerical destination marker rather than a Coweta city centroid, intersection estimate, nearby parcel, predecessor point, or inferred geocode, so the property clears the runtime coordinate gate."
+    }
+  ],
+  "qaAccounting": {
+    "runtimeActiveBefore": 49,
+    "runtimeReadyThisPass": 1,
+    "projectedRuntimeActiveAfterActivation": 50,
+    "statewideComplete": false
+  },
+  "remainingPriorityHolds": [
+    "Lakecrest Casino and Hotel — 1000 US HW 70 E, Ardmore",
+    "Lake Eufaula Casino Hotel — 1045 Birkes Rd, Eufaula",
+    "Creek Nation Casino Holdenville — 211 E Willow St, Holdenville",
+    "Cherokee Casino South Coffeyville — 1506 US-169, South Coffeyville"
+  ],
+  "nextPhase": "Serialize Coweta Casino Hotel as overall casino catalog Pass 47, activate it in nightlife search, extend the validator through Pass 47, verify exact-head CI, then continue direct numerical-point work on the four remaining Oklahoma priority holds."
+}

@@ -1,0 +1,75 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-11",
+  "status": "coordinate-qa-pass-6",
+  "scope": "Sixth property-specific coordinate verification pass for Oklahoma runtime candidates, focused on strong Muscogee and Osage properties with current first-party identity/address evidence and property-level coordinate evidence.",
+  "records": [
+    {
+      "id":"ok-muscogee-river-spirit",
+      "name":"River Spirit Casino Resort",
+      "address":"8330 Riverside Pkwy, Tulsa, OK 74137",
+      "lat":36.04121,
+      "lon":-95.96420,
+      "website":"https://www.riverspirittulsa.com/",
+      "addressEvidence":"https://www.riverspirittulsa.com/about-us/directions/",
+      "coordinateEvidence":"https://mapcarta.com/W526896034",
+      "osmFeature":"way 526896034",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Coordinate is the mapped resort/hotel building within the River Spirit gaming complex. First-party directions confirm the exact current property address."
+    },
+    {
+      "id":"ok-muscogee-one-fire",
+      "name":"One Fire Casino",
+      "address":"1901 Wood Dr, Okmulgee, OK 74447",
+      "lat":35.63958,
+      "lon":-95.96130,
+      "website":"https://creeknationcasinoonefire.com/",
+      "addressEvidence":"https://creekcasinojobs.com/locations/",
+      "coordinateEvidence":"https://mapcarta.com/es/W1316074089",
+      "osmFeature":"way 1316074089",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Current Muscogee location material omits the directional N from Wood Dr while other current/local references use N Wood Dr. Treat as the same property; normalize final runtime address conservatively after map corroboration."
+    },
+    {
+      "id":"ok-osage-hominy",
+      "name":"Osage Casino Hominy",
+      "address":"39 Deer Ave, Hominy, OK 74035",
+      "lat":36.4325815,
+      "lon":-96.3896826,
+      "website":"https://osagecasino.com/",
+      "addressEvidence":"https://osagecasino.com/gaming/",
+      "coordinateEvidence":"https://yellowpages.swiss/location.cfm?company=Osage-Casino-Hominy&key=272277",
+      "corroboratingEvidence":"https://www.waze.com/live-map/directions/osage-casino-hominy-deer-ave-39?to=place.w.172753261.1727598142.6703755",
+      "status":"coordinate-verified-duplicate-qa-pending",
+      "note":"Current Osage first-party gaming page confirms the 39 Deer Ave location; two independent mapping/business sources place the casino at the same property."
+    },
+    {
+      "id":"ok-osage-sand-springs",
+      "name":"Osage Casino Sand Springs",
+      "address":"301 Blackjack Dr, Sand Springs, OK 74063",
+      "lat":36.16280,
+      "lon":-96.1231616,
+      "website":"https://osagecasino.com/",
+      "addressEvidence":"https://osagecasino.com/locations-maps/",
+      "coordinateEvidence":"https://yellowpages.swiss/location.cfm?company=Osage-Casino-Sand-Springs&key=272286",
+      "corroboratingEvidence":"https://www.waze.com/live-map/directions/osage-casino-sand-springs-blackjack-dr-301?to=place.w.172949866.1729367584.1953111",
+      "status":"coordinate-verified-duplicate-qa-pending"
+    }
+  ],
+  "qaAccounting": {
+    "addressIdentityVerifiedPool": 54,
+    "coordinateVerifiedPrevious": 32,
+    "coordinateVerifiedThisPass": 4,
+    "coordinateVerifiedCumulative": 36,
+    "duplicateDistanceClearedCumulative": 0,
+    "runtimeReadyCumulative": 0,
+    "remainingCoordinateTargetForFifty": 14
+  },
+  "holdsAndCautions": [
+    "Osage Tulsa currently has strong first-party identity/address evidence, but the most accessible mapped result in this sweep was a parking feature, not the casino/hotel building; do not promote that parking coordinate.",
+    "Osage Pawhuska has an old-property/new-property succession problem. Current first-party address is 1421 John Dahl Ave; do not reuse older 2017 E 15th St geometry.",
+    "Muscogee smaller-location searches frequently return city centroids instead of casino footprints; continue holding those until property-level geometry is found.",
+    "One Fire directional-address wording should be normalized only after final duplicate/site QA; current evidence clearly resolves one property."
+  ],
+  "nextPhase": "Continue Muscogee property-coordinate QA for Coweta, Lake Eufaula, Duck Creek, Muscogee, Okemah, Holdenville, Bristow and Checotah, plus Osage Bartlesville, Ponca City and Skiatook where property-level coordinates can be corroborated. Keep Pawhuska under successor-site reconciliation and Tulsa under exact-building-coordinate review. Begin branch-aware duplicate/name/ID distance QA across all 36 coordinate-verified Oklahoma records in parallel."
+}

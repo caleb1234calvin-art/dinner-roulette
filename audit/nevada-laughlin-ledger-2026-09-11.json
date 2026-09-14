@@ -1,0 +1,25 @@
+{
+  "jurisdiction":"Nevada",
+  "capturedOn":"2026-09-11",
+  "status":"candidate-ledger-staged",
+  "segment":"nv-laughlin",
+  "primaryAuthority":"Nevada Gaming Control Board",
+  "tourismCrosscheck":"Las Vegas Convention and Visitors Authority / Visit Laughlin",
+  "candidates":[
+    {"name":"Aquarius Casino Resort","address":"1900 S Casino Dr, Laughlin, NV","status":"current-tourism-corroborated"},
+    {"name":"Don Laughlin's Riverside Resort Hotel & Casino","address":"1650 S Casino Dr, Laughlin, NV","status":"current-tourism-corroborated"},
+    {"name":"Edgewater Casino Resort","address":"2020 S Casino Dr, Laughlin, NV","status":"current-tourism-corroborated"},
+    {"name":"Golden Nugget Laughlin","address":"2300 S Casino Dr, Laughlin, NV","status":"current-tourism-corroborated"},
+    {"name":"Harrah's Laughlin Beach Resort & Casino","address":"2900 S Casino Dr, Laughlin, NV","status":"current-tourism-corroborated"},
+    {"name":"Laughlin River Lodge Hotel & Casino","address":"2700 S Casino Dr, Laughlin, NV","status":"current-tourism-corroborated"},
+    {"name":"The New Pioneer","address":"2200 S Casino Dr, Laughlin, NV","status":"current-tourism-corroborated","aliases":["Pioneer Hotel & Gambling Hall"]},
+    {"name":"Tropicana Laughlin","address":"2121 S Casino Dr, Laughlin, NV","status":"current-tourism-corroborated"},
+    {"name":"Bayshore Inn","address":"1955 W Casino Dr, Laughlin, NV","status":"scope-review","note":"Official Laughlin tourism material says on-site gambling is available, but Dinner Roulette inclusion depends on confirming current NGCB nonrestricted identity and destination-level casino relevance."}
+  ],
+  "setChecks":{"majorCasinoResortCandidates":8,"scopeReviewCandidates":1,"finalizedCount":null,"result":"STAGED"},
+  "notes":[
+    "Visit Laughlin's current resort directory identifies eight major casino-resort/hotel properties: Aquarius, Riverside, Edgewater, Golden Nugget, Harrah's, Laughlin River Lodge, The New Pioneer, and Tropicana Laughlin.",
+    "Bayshore Inn is retained only as a scope-review row because the tourism directory notes gambling but does not by itself establish that it belongs in Dinner Roulette's curated destination-casino backbone.",
+    "Final activation still requires NGCB active-license matching, alias/closure review, and coordinate QA."
+  ]
+}

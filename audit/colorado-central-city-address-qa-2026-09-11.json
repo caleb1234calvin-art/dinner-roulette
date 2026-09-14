@@ -1,0 +1,18 @@
+{
+  "jurisdiction":"Colorado",
+  "city":"Central City",
+  "capturedOn":"2026-09-11",
+  "status":"current-address-qa-complete",
+  "scope":"Normalize the six current Central City casino destinations against current operator and city visitor evidence before property-coordinate QA.",
+  "records":[
+    {"id":"co-central-city-century","name":"Century Casino & Hotel Central City","address":"102 Main Street, Central City, CO 80427","evidence":"https://www.cnty.com/central-city/","status":"address-current"},
+    {"id":"co-central-city-dostal-alley","name":"Dostal Alley Casino","address":"116 Main Street, Central City, CO 80427","evidence":"https://www.visitcentralcity.com/explore","status":"address-current"},
+    {"id":"co-central-city-easy-street","name":"Easy Street Casino","address":"120 Main Street, Central City, CO 80427","evidence":"https://easystreetcentralcity.com/contact-us/","status":"address-current"},
+    {"id":"co-central-city-famous-bonanza","name":"The Famous Bonanza Casino","address":"107 Main Street, Central City, CO 80427","evidence":"https://www.visitcentralcity.com/casinos","status":"address-current"},
+    {"id":"co-central-city-dragon-tiger","name":"Dragon Tiger Casino","address":"132 Lawrence Street, Central City, CO 80427","evidence":"https://dragontigercasinos.com/","status":"address-current"},
+    {"id":"co-central-city-grand-z","name":"Grand Z Casino Hotel","address":"321 Gregory Street, Central City, CO 80427","evidence":"https://www.maverickgaming.com/grand-z-casino-hotel/contact-us/","status":"address-current"}
+  ],
+  "qaAccounting":{"regulatorRows":6,"currentConsumerDestinations":6,"addressVerified":6,"coordinatePending":6},
+  "decision":"Central City's six commercial regulator locations map cleanly to six current consumer-facing casino destinations; no license-row collapse or successor-brand exclusion is required at this layer.",
+  "nextPhase":"Collect property-specific coordinates for all six Central City destinations, then run duplicate/stable-ID QA alongside Black Hawk and Cripple Creek."
+}

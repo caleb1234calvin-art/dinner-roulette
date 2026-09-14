@@ -1,0 +1,48 @@
+{
+  "jurisdiction": "Nevada",
+  "capturedOn": "2026-09-11",
+  "status": "reconciliation-plan-staged",
+  "primaryAuthority": "Nevada Gaming Control Board",
+  "primaryAuthoritySources": [
+    "https://www.gaming.nv.gov/about-us/statistics-and-publications/",
+    "https://www.gaming.nv.gov/about-us/restricted-and-nonrestricted-locations-report/",
+    "https://www.gaming.nv.gov/about-us/location-name-and-address-list/",
+    "https://www.gaming.nv.gov/about-us/abbreviated-revenue-release-arr/"
+  ],
+  "authoritativeFacts": [
+    "NGCB publishes names and addresses for restricted and nonrestricted locations.",
+    "NGCB's Nonrestricted Count Report records device and table-game counts by nonrestricted location.",
+    "NGCB monthly revenue reporting groups nonrestricted gaming activity into established Nevada markets, including Las Vegas Strip, Downtown Las Vegas, North Las Vegas, Laughlin, Boulder Strip, Balance of Clark County, Washoe County, South Lake Tahoe, Elko County, Carson Valley Area, and Balance of State.",
+    "NGCB Tax & License is responsible for issuing gaming licenses approved by the Nevada Gaming Commission and monitoring Indian gaming in Nevada."
+  ],
+  "reconciliationSegments": [
+    {"id":"nv-las-vegas-strip","label":"Las Vegas Strip","priority":1},
+    {"id":"nv-downtown-las-vegas","label":"Downtown Las Vegas","priority":2},
+    {"id":"nv-boulder-strip","label":"Boulder Strip / Henderson corridor","priority":3},
+    {"id":"nv-north-las-vegas","label":"North Las Vegas","priority":4},
+    {"id":"nv-clark-balance","label":"Balance of Clark County, including off-Strip Las Vegas and Primm","priority":5},
+    {"id":"nv-laughlin","label":"Laughlin","priority":6},
+    {"id":"nv-washoe","label":"Washoe County / Reno-Sparks","priority":7},
+    {"id":"nv-south-lake-tahoe","label":"South Lake Tahoe / Stateline","priority":8},
+    {"id":"nv-carson-valley","label":"Carson Valley / Carson City-Minden-Gardnerville area","priority":9},
+    {"id":"nv-elko","label":"Elko County","priority":10},
+    {"id":"nv-balance-state","label":"Balance of State","priority":11},
+    {"id":"nv-tribal-crosscheck","label":"Nevada tribal-gaming cross-check","priority":12}
+  ],
+  "inclusionRules": [
+    "Include a current physical gaming property when it functions as a casino or casino-style destination within Dinner Roulette's nightlife scope.",
+    "Do not promote a location merely because it holds a nonrestricted license; use property identity, gaming configuration, and current operation to determine destination relevance.",
+    "Exclude restricted slot-only bars, taverns, convenience stores, route locations, supermarkets, pharmacies, airports, and distributed retail gaming unless a distinct casino destination is independently established.",
+    "Reconcile renamed, closed, rebranded, and same-campus records to one current physical destination unless separate public casino destinations genuinely exist.",
+    "Use NGCB for regulatory identity; current operator/property sources for branding and addresses; property-map evidence for coordinates."
+  ],
+  "activationGate": {
+    "requiresCompleteNonrestrictedRosterExtraction": true,
+    "requiresDestinationClassification": true,
+    "requiresAliasAndClosureSweep": true,
+    "requiresCoordinateQA": true,
+    "requiresTribalCrosscheck": true,
+    "runtimeFile": "src/lib/nightlife/casino-catalog-pass-22.ts"
+  },
+  "nextPhase": "Build the Nevada property ledger segment-by-segment against NGCB's active nonrestricted universe, starting with Las Vegas Strip and Downtown, then reconcile the statewide remainder before runtime activation."
+}

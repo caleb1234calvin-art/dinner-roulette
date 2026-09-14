@@ -1,0 +1,74 @@
+{
+  "jurisdiction": "Oklahoma",
+  "capturedOn": "2026-09-12",
+  "status": "coordinate-qa-pass-10-no-new-runtime-ready",
+  "scope": "Refresh current operation, address and lineage evidence for the five priority Oklahoma holds after Artesian activation. Preserve only defensible current-site facts, explicitly quarantine stale or non-property coordinates, and leave runtime count unchanged until direct numerical destination points clear.",
+  "records": [
+    {
+      "id": "ok-lakecrest-casino-hotel",
+      "name": "Lakecrest Casino and Hotel",
+      "operator": "Chickasaw Nation",
+      "address": "1000 US HW 70 E, Ardmore, OK 73401",
+      "website": "https://lakecrestcasino.com/",
+      "operationEvidence": [
+        "https://lakecrestcasino.com/",
+        "https://lakecrestcasino.com/contact-us/",
+        "https://lakecrestcasino.com/gaming/"
+      ],
+      "status": "coordinate-hold",
+      "decision": "Current first-party pages confirm an operating casino/hotel at 1000 US HW 70 E with more than 1,000 electronic games and table games. The official site exposes a Get Directions destination but no numerical point was recovered from the evidence captured in this pass. Previously discovered commercial-land coordinates near 34.172006,-97.173354 identify land adjacent to Lakecrest rather than the casino property and remain excluded. Do not infer a casino point from the neighboring parcel."
+    },
+    {
+      "id": "ok-coweta-casino-hotel",
+      "name": "Coweta Casino Hotel",
+      "operator": "Muscogee Nation Gaming Enterprises",
+      "address": "13185 Oklahoma 51, Coweta, OK 74429",
+      "status": "coordinate-hold",
+      "decision": "Current 2026 lodging and opening evidence converges on the new Coweta Casino Hotel at 13185 Oklahoma 51, associated with the Highway 51 / East 131st Street South site. The property is treated as current and its site identity is no longer the primary question. No numerical point tied directly to the completed casino/hotel building cleared this pass, so runtime promotion remains deferred."
+    },
+    {
+      "id": "ok-lake-eufaula-casino-hotel",
+      "name": "Lake Eufaula Casino Hotel",
+      "operator": "Muscogee Nation Gaming Enterprises",
+      "address": "1045 Birkes Rd, Eufaula, OK 74432",
+      "status": "coordinate-hold-old-site-excluded",
+      "decision": "Current operator and directory evidence support the new Lake Eufaula Casino Hotel at 1045 Birkes Rd. Operator material explicitly distinguishes the new property from the former Creek Nation Eufaula Casino farther south. The former 806 W Forrest Ave site is permanently closed and must never donate its coordinate to the new property. No direct numerical point for 1045 Birkes Rd cleared this pass."
+    },
+    {
+      "id": "ok-creek-nation-casino-holdenville",
+      "name": "Creek Nation Casino Holdenville",
+      "operator": "Muscogee Nation Gaming Enterprises",
+      "address": "211 E Willow St, Holdenville, OK 74848",
+      "website": "https://creeknationcasinoholdenville.com/",
+      "operationEvidence": [
+        "https://creeknationcasinoholdenville.com/",
+        "https://www.travelok.com/listings/view.profile/id.24731"
+      ],
+      "status": "coordinate-hold",
+      "decision": "The current first-party casino site and Oklahoma tourism listing independently confirm operation at 211 E Willow St. The available Holdenville coordinate 35.083599,-96.401627 is a city-level centroid rather than a destination point and remains excluded. No building/property coordinate cleared this pass."
+    },
+    {
+      "id": "ok-cherokee-casino-south-coffeyville",
+      "name": "Cherokee Casino South Coffeyville",
+      "operator": "Cherokee Nation Entertainment",
+      "address": "1506 US-169, South Coffeyville, OK 74072",
+      "website": "https://cherokeecasino.com/casinos/south-coffeyville",
+      "operationEvidence": [
+        "https://cherokeecasino.com/casinos/south-coffeyville",
+        "https://web2.travelok.com/listings/view.profile/id.23892",
+        "https://www.waze.com/live-map/directions/cherokee-casino-south-coffeyville-us-169-1506?to=place.w.173277554.1732578930.4877400"
+      ],
+      "status": "coordinate-hold",
+      "decision": "Current first-party Cherokee, Oklahoma tourism, municipal-directory and routing evidence converge on an operating casino at 1506 US-169. The address/operation gate is strong. The map/routing pages inspected here do not expose a defensible numerical property point in the captured text, so no coordinate is promoted by inference."
+    }
+  ],
+  "qaAccounting": {
+    "runtimeActiveBefore": 49,
+    "runtimeReadyThisPass": 0,
+    "runtimeActiveAfter": 49,
+    "priorityHoldsReviewed": 5,
+    "statewideComplete": false
+  },
+  "coordinatePolicy": "A current street address, map marker, routing destination or nearby parcel does not by itself authorize an inferred latitude/longitude. Promote only a numerical point traceable to the current destination/property. Never reuse the permanently closed 806 W Forrest Lake Eufaula site, the adjacent Lakecrest land parcel, or the Holdenville city centroid.",
+  "nextPhase": "Continue direct numerical-point work on Lakecrest, Coweta, Lake Eufaula, Holdenville and Cherokee South Coffeyville. Current operation/address evidence is now strong enough that coordinate verification is the principal gate for all five; preserve any additional site-lineage caveat if new evidence contradicts that assessment."
+}
