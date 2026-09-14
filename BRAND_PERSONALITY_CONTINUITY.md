@@ -9,35 +9,108 @@ The broader product direction/name is **Pick For Me**, reflecting expansion beyo
 
 Public-facing material should continue using **Dinner Roulette** until the app itself is deliberately rebranded. The user explicitly wants to avoid audience confusion caused by marketing changing names before the product does.
 
-## Mordax
-Mordax is the project mascot/logo mythology: a biting/caustic protective creature associated with choice, restrained volatility and non-interference. The startup ident uses Mordax as a brief brand animation. Preserve the distinction between Mordax mythology and ordinary feature UI.
+## Mordax — current mythology
+Mordax is no longer only a mascot/logo concept. He is becoming the connective narrative figure for the entire app/brand ecosystem.
 
-## Artwork state — released
-- Dinner category artwork uses visually verified semantic mappings rather than trusting misleading historical filenames.
-- Specific cuisine semantics outrank broad provider tags for artwork selection.
-- Nightlife has approved custom artwork for Bar, Pub, Club, Lounge, Brewery / Beer Garden and Casino presentation.
-- Nightlife category FILTER CHIPS are intentionally text-only.
-- Nightlife RESULT CARDS may use approved artwork.
-- Casino artwork remains approved.
-- These accepted presentation changes were included in frozen candidate `1c4b2b73d1f23bb184f34e5b7360144378757bc4`, subsequently merged into `main` through PR #44.
+Core philosophy:
+- Mordax appears where meaningful choice exists.
+- He represents agency, consequence, restrained volatility and non-interference.
+- The hidden-story framing should reinforce that the user reaches Mordax through deliberate choices.
+- A key narrative idea is: the user did not merely discover Mordax; by making the required sequence of choices, they **created the conditions for Mordax to appear**.
+- Conceptually: “You are here because you chose to be.” / “You did not discover me. You assembled the conditions in which I could appear.”
+
+The startup ident still uses Mordax as a brief brand animation, but the mythology can extend far beyond ordinary feature UI.
+
+## Hidden-game / secret-layer concept
+The brand may contain a completely optional hidden game/ARG-like layer inside otherwise normal, useful apps.
+
+Design principles:
+- Every app remains fully usable for its intended utility without engaging with the hidden game.
+- The hidden layer is entirely contained within normal app interactions; no invasive permissions, real-world stalking, unsafe behavior or forced external participation.
+- Users intentionally reach the hidden content through specific sequences of buttons/pages/choices.
+- Different apps may contain **different sequences / different locks leading to the same Mordax destination**.
+- This allows every app to stand alone while still participating in the same hidden narrative.
+- The intended experience should be more satisfying than simply reading source code, even though technically source inspection could reveal implementation details.
+
+Possible destination content:
+- Mordax image or video
+- full Mordax creed / philosophy
+- congratulations / acknowledgement page
+- about-the-developer section
+- optional finder registry / guestbook
+- moderation-first publishing for any public signatures or names
+- optional subtle app-specific identifier or artifact so dedicated players can compare discoveries across apps
+
+## Puzzle structure and failure states
+The hidden layer can support multiple outcomes instead of simple success/failure:
+- full correct sequence → Mordax chamber / creed
+- near miss → alternate page
+- comedic failure → Rickroll-style fakeout or “YOU LOST THE GAME” reference
+- cryptic failure → short message such as “Not yet.” or “Wrong door.”
+- some failure pages may deliberately redirect users to another owned app or website as part of the puzzle ecosystem
+
+Cross-app redirects should feel like puzzle consequences rather than deceptive advertising. Normal app navigation must remain predictable for users who are not intentionally engaging with the hidden layer.
+
+## Distributed brand-story architecture
+The long-term concept is a **fictional universe delivered through real utility software**.
+
+Layers:
+1. Surface layer — useful standalone apps
+2. Brand layer — shared visual identity/personality
+3. Hidden layer — Mordax puzzles, lore, secret pages, alternate states
+4. Meta layer — users realize the apps themselves are part of the storytelling medium
+
+Each app can expose the same Mordax story through a different sequence rather than forcing users to install every app to understand the narrative. Dedicated players can still compare paths, app-specific clues, failure states and subtle differences.
+
+This gives the brand a second audience beyond normal utility users: puzzle/ARG/lore communities, while also creating cross-promotion among the apps without making the utility layer dependent on the game.
+
+## Recurring Mordax patch-note/status device
+A recurring patch-note line can imply Mordax is a tangible contained subject somewhere behind the public-facing software.
+
+Canonical progression concept:
+1. `Mordax has been contained in this update.`
+2. `Mordax has been contained in this update.`
+3. `Mordax has been contained in this update.`
+4. `Mordax is under maintenance, no further action required.`
+5. `Mordax has been accounted for this update.`
+6. `Mordax has been accounted for this update.`
+7. `Unable to locate Mordax at this time.`
+8. `Mordax has been contained this update, containment procedures have been revised.`
+
+Narrative implication:
+- “contained” establishes routine control
+- “under maintenance” implies Mordax is tangible/experimental and can be worked on
+- “accounted for” is intentionally weaker than “contained”
+- “unable to locate” implies an escape or loss of control without explicitly saying so
+- “containment procedures have been revised” implies recapture and a prior containment failure
+
+Important tone rule: keep these lines bureaucratically calm and visually ordinary. Do not use obvious horror styling, warning colors or explicit exposition. The audience should infer the incident themselves.
+
+After a major anomalous line, return to mundane normal wording for several updates so future deviations regain significance.
 
 ## Marketing personality
 Current audience-facing direction: competent/polished product paired with an intentionally questionable, dark, deadpan social voice.
 
-Desired audience reaction: it should be slightly ambiguous whether the person running the account has a horrible personality or simply a very funny dark sense of humor.
+Desired audience reaction: it should be slightly ambiguous whether the person running the account has a horrible personality or simply a very funny dark sense of humor. The broader target is a persona that can read as either absolutely mad or immensely clever, with an eerie/uncomfortable undertone.
 
 Voice principles:
 - deadpan
-- mildly confrontational in an obviously comedic/absurd way
+- dark/absurd humor
+- mildly confrontational in an obviously comedic way
+- occasionally unsettling precision
 - self-aware indie-builder energy
 - product remains trustworthy even when marketing sounds unhinged
 - avoid genuine cruelty toward users or statements that make privacy/safety feel questionable
 - contrast polished app presentation with irreverent copy
+- do not explain every joke or lore implication
 
 Recent accepted example direction:
 `Nobody asked for it and I dont care!`
 followed by legitimate patch notes and:
 `Try it you'll like it.`
+
+Additional tone example:
+`I built this to keep myself busy and out of jail, come check it out!!`
 
 This is preferable to generic corporate language such as “We’re excited to announce...”
 
@@ -64,4 +137,4 @@ When the in-app rename is ready, coordinate product and marketing together. A su
 The old brand/icon task branches were intentionally pruned after this master was established. Draft preview PR #30 was obsolete preview infrastructure and closed as part of branch cleanup.
 
 ## Future rule
-Update this master when branding, voice, personality, icon semantics or naming policy changes. Temporary artwork branches are fine during implementation, but do not keep a permanent branch for every individual artwork or marketing pass.
+Update this master whenever Mordax mythology, hidden-game structure, branding, voice, personality, icon semantics or naming policy changes. Temporary implementation branches are fine during active work, but durable lore and design decisions belong here rather than in one-off task branches.
