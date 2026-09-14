@@ -4,7 +4,9 @@ Updated: September 14, 2026
 
 Purpose: durable history and handoff for live discovery, casino, location, international support, search range and provider fallback behavior.
 
-## Current discovery state
+## Current discovery state — released to main
+The validated discovery/casino/location update is incorporated into `main` through merge commit `6b811ae427339902f456c2706330689c2d6ad54b` from frozen candidate `1c4b2b73d1f23bb184f34e5b7360144378757bc4`.
+
 - Dinner and Nightlife support live nearby discovery.
 - Current-location/GPS behavior uses privacy-friendly user-facing language rather than displaying raw coordinates or tracking-sounding confirmation.
 - Manual/international location architecture supports non-U.S. discovery; Toronto, Vancouver, Montréal and London were exercised during release validation.
@@ -24,7 +26,7 @@ Purpose: durable history and handoff for live discovery, casino, location, inter
 - +152 destinations from original 731 baseline
 - Six release-validation casino regions passed acceptance; some exercised saved-catalog fallback after provider timeout.
 
-## Historical source branches
+## Historical source branches — consolidated and pruned
 - `audit/national-casino-pass-1` @ `c813616ddd2cd726cc845597e0f3f9a03eb04536`
 - `integration/casino-continuation-2026-09-13` @ `a3cffc654924596fe23a9d0050ac1a056b6751a5`
 - `integration/casino-final-freeze-2026-09-13` @ `b595050b04c49dd13d842778ebd79b0d73b6343f`
@@ -37,8 +39,10 @@ Purpose: durable history and handoff for live discovery, casino, location, inter
 - `integration/pass-50-frontier-coordinates` @ `b8d4295c8b863a8193f63e51dea77d77e63000da`
 - `feature/nightlife-casino-comedy-radius` @ `5b6319eff830b4dafeee7d54ecd9762fe180db57`
 
+Those task branches were intentionally deleted after consolidation. Their names/SHAs remain here for provenance; completed work must not be reopened simply because the refs were pruned.
+
 ## Preserved repository evidence
-The merged project history contains the casino audit artifacts, location handoff material, provider/browser evidence and release-validation evidence. Historical branch names above are retained here as provenance even after branch cleanup.
+The merged project history contains casino audit artifacts, location handoff material, provider/browser evidence and release-validation evidence. The frozen RC milestone `integration/rc-validation-2026-09-14` is retained.
 
 ## Future rule
-Extend discovery from this consolidated state. Do not reopen completed casino/location passes merely because their task branches no longer exist. New research should produce evidence in the repository and update this master rather than spawning a permanent branch per pass.
+Extend discovery from this consolidated released state. New discovery work should use temporary implementation branches as needed, produce evidence, then update this master. Do not accumulate a permanent branch per casino/location pass.
