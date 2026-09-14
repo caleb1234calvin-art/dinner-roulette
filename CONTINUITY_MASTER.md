@@ -10,7 +10,8 @@ Purpose: durable top-level AI handoff for the project. This branch replaces task
 - Current merged main checkpoint: `6b811ae427339902f456c2706330689c2d6ad54b`
 - Validated release candidate incorporated into main: `1c4b2b73d1f23bb184f34e5b7360144378757bc4`
 - Release merge commit: `Merge validated Pick For Me release candidate`
-- User completed hands-on hosted prototype acceptance before merge.
+- PR #44 merged the frozen candidate into `main`.
+- User completed hands-on hosted prototype acceptance before merge and reported the app starts after cleanup.
 
 ## Current product identity
 The app is still publicly branded Dinner Roulette until the in-app rebrand is deliberately shipped. The broader product direction/name is Pick For Me. Do not prematurely create public-facing naming mismatches.
@@ -43,12 +44,19 @@ Do not run migrations, modify secrets, or change hosted build settings casually.
 - `continuity/brand-personality` — branding, artwork, voice, Mordax/personality and marketing continuity
 - `continuity/research-logs` — prediction/coincidence log and experimental/research continuity
 
+## Permanent milestone branch
+- `integration/rc-validation-2026-09-14` — frozen release-candidate milestone retained intentionally.
+
+## Branch cleanup status
+Post-release branch consolidation and pruning are complete. The repository was reduced from the prior task-branch sprawl to the durable continuity structure above, `main`, and the frozen RC milestone. Historical branches were deleted only after their important continuity/provenance was consolidated.
+
+Deleted task branches remain traceable through Git history and provenance references inside the specialized continuity masters. Do not recreate them merely to recover context.
+
 ## Historical source branches absorbed into this continuity system
-The following historical branches remain traceable by name/SHA in Git history and were reviewed before consolidation:
 - `integration/active-work-pass-1` @ `91c2d121b3be47705b86f0fe37226bfd465479d4`
 - `integration/validated-handoff-2026-09-13` @ `f9f708665ca6af25fa872e33345b52472f2bf837`
 - `integration/required-test-gate-recovery` @ `a76ffbe7975f667dd808886462571ec0ba79934b`
 - `integration/rc-validation-2026-09-14` @ `1c4b2b73d1f23bb184f34e5b7360144378757bc4`
 
 ## Operating rule
-Future AI workers should read `continuity/core` first, then only the specialized continuity branch relevant to the task. Do not recreate one-off handoff branches unless a genuinely isolated release or risky migration requires it.
+Future AI workers should read `continuity/core` first, then only the specialized continuity branch relevant to the task. Update the appropriate master continuity after meaningful work. Do not recreate one-off handoff branches unless a genuinely isolated release or risky migration requires it.
