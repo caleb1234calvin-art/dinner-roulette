@@ -16,7 +16,7 @@ export function StartupIdent() {
   return (
     <div
       aria-hidden="true"
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-white pointer-events-none"
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black pointer-events-none"
     >
       <video
         autoPlay
@@ -26,7 +26,7 @@ export function StartupIdent() {
         src={STARTUP_IDENT_SRC}
         onEnded={() => setVisible(false)}
         onError={() => setVisible(false)}
-        className="h-full w-full object-contain"
+        className="h-full w-full object-contain bg-black"
       />
     </div>
   );
