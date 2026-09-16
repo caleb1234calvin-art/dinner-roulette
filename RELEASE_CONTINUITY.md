@@ -1,6 +1,6 @@
 # Pick For Me — Release Continuity Master
 
-Updated: September 14, 2026
+Updated: September 15, 2026
 
 Purpose: durable release, validation, CI, Vercel and build-safety history.
 
@@ -42,6 +42,34 @@ Preview URL:
 State: READY
 Exact candidate SHA: `1c4b2b73d1f23bb184f34e5b7360144378757bc4`
 HTTP fetch returned 200 after deployment. This closed the exact-SHA hosted-preview gate before the merge decision.
+
+## Pre-Google Play polish pass — active
+A dedicated non-production polish branch is now authoritative for final user-facing refinements before Google Play packaging/submission:
+
+`polish/pre-google-play-pass-1`
+
+Starting/accepted commit:
+`719ad257638de45529a0cb6e7eb5d26eb162d060`
+
+This branch was created from the earlier temporary branch `fix/startup-ident-black-letterbox`. The old branch should be deleted after confirming the new branch exists; all further polish work belongs on `polish/pre-google-play-pass-1`.
+
+### Accepted startup-ident polish
+The Mordax/Caustic Relay startup ident remains fully contained rather than cropped or stretched. The unused portrait-screen letterbox region now renders a subdued broadcast/test-pattern color-bar treatment behind the video instead of plain white/black space. This turns aspect-ratio dead space into intentional brand presentation while leaving the source video untouched.
+
+Accepted commit:
+`719ad257638de45529a0cb6e7eb5d26eb162d060` — `Add broadcast color bars to startup ident letterbox`
+
+Vercel automatically produced a non-production preview from the branch and reported it READY. The user inspected the preview on a phone and explicitly accepted the treatment.
+
+Workflow for this pass:
+`main` remains stable → polish changes accumulate on `polish/pre-google-play-pass-1` → individual changes are previewed/accepted → final regression/release audit → merge only after explicit user authorization.
+
+Purpose: polish the current application for Google Play readiness without turning each small UX/visual fix into a separate branch or destabilizing production.
+
+## Google Play distribution state
+On September 15, 2026, the user created and paid for a Google Play developer account. Address verification remains an administrative gate before uploads can proceed. Google Play preparation is therefore an active distribution track rather than a hypothetical future task.
+
+Near-term sequence after polish: resolve developer-account verification → audit Android/Play packaging requirements → prepare signed Play-ready Android App Bundle and store materials → testing/review gates → production submission when authorized.
 
 ## Vercel identity
 - Team: Minions / `minions-9e2c`
