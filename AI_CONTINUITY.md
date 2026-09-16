@@ -1,3 +1,33 @@
+# Pick For Us — Android Phase B (2026-09-16)
+
+This current checkpoint supersedes the historical resume instructions below for this task. Work only on `polish/pre-google-play-pass-1`. The former `integration/active-work-pass-1` ref returned GitHub 404 on 2026-09-16; it was not recreated. Preserve this file and historical evidence on the requested active branch.
+
+## Audit checkpoint — implementation next
+
+- Starting branch/SHA: `polish/pre-google-play-pass-1` / `9b3439c484108bfbf168fbef4eb3680ee28cadaf` (`rename visible home identity to Pick For Us`). Clean isolated worktree.
+- Main read-only baseline this session: `6b811ae427339902f456c2706330689c2d6ad54b`. Prior historical main values below are not current.
+- Public identity: **Pick For Us**. Approved master: `public/brand/grok_1789541884918.jpg`, 1408×1408, SHA-256 `5d823a5c4ef6cc0a76ffc8926f83f0eaae85cb8b59cdcd280d9b8d148f99500a`. Visually inspected; preserve original and make only padding/resizing derivatives.
+- Existing Android workflow dynamically installs Capacitor 7, regenerates Android, builds a debug APK, and publicly overwrites a GitHub release on main. No persistent Android project, pinned Capacitor dependencies, release signing, or AAB workflow exists.
+- Existing GitHub `android-latest` release contains `DinnerRoulette.apk` (prototype, 4,274,125 bytes). Do not delete or overwrite it. New package will install separately; old package-local favorites/settings cannot automatically transfer.
+- Package decision: adopt user-authorized `com.calebcalvin.pickforus`. Repository inspection found no tracked signing key, service configuration, assetlinks, app-link registration, or Play publishing setup binding the old ID. Public searches found no matching Play listing, which does NOT establish absence of a private Play Console registration. Owner must confirm Console identity before the first upload. No concrete technical blocker was found.
+- API 36 is required for new ordinary Android apps/updates from 2026-08-31. Capacitor 8 supports SDK 36; Capacitor 7 officially targets 35. Pin a coherent Capacitor 8 toolchain. Minimum SDK increase from the Capacitor 7 default 23 to the Capacitor 8 required 24 is justified by that compatibility requirement.
+- Keep existing hosted URL `https://dinner-roulette-chi.vercel.app` unchanged. Current wrapper loads that remote web app, not a bundled copy of this branch's React application; do not claim the AAB freezes hosted content or works offline.
+- Concrete inherited issue: Settings now links `/downloads/PickForUs.apk` while Vercel only rewrites `/downloads/DinnerRoulette.apk`. Do not advertise a nonexistent release artifact.
+- `npm run build` still chains `db:migrate`. Use only `VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production` for web production validation.
+- Validation so far: fresh remote refs, clean branch checkout, Android/config/workflow/source inspection, release metadata, approved image inspection, primary Google/Capacitor requirements. No Phase B build/test success is claimed yet.
+
+COMPLETED: bounded Android architecture/identity audit and toolchain plan.
+BLOCKED: signing credentials, Play Console ownership/registration, and physical-device acceptance are not available.
+DEFERRED: Play upload/publication and any production change; none authorized.
+NEXT ACTION: persist Android; pin SDK-compatible dependencies; derive launcher resources; add unsigned/signed bundle paths and artifact-only CI; run web and Android validation.
+REQUIRES USER AUTHORIZATION: main merge, production deployment, any Play upload/publication. No credentials will be generated or committed.
+
+Primary references: [Google Play API policy](https://support.google.com/googleplay/android-developer/answer/11926878?hl=en), [Capacitor 8 upgrade](https://capacitorjs.com/docs/updating/8-0), [Capacitor SDK matrix](https://capacitorjs.com/docs/android/setting-target-sdk), [Android adaptive icons](https://developer.android.com/develop/ui/compose/system/icon_design_adaptive).
+
+---
+
+## Historical continuity retained below
+
 # Dinner Roulette / Pick For Me — AI Continuity
 
 Updated September 13, 2026. **The combined casino + location/international candidate is integrated and validated in non-production.** This existing shared file on integration/active-work-pass-1 is the authoritative handoff.
