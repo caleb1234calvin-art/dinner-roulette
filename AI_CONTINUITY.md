@@ -2,6 +2,19 @@
 
 This current checkpoint supersedes the historical resume instructions below for this task. Work only on `polish/pre-google-play-pass-1`. The former `integration/active-work-pass-1` ref returned GitHub 404 on 2026-09-16; it was not recreated. Preserve this file and historical evidence on the requested active branch.
 
+## Implementation checkpoint — native compilation in progress
+
+- Prior audit commit: `58b48d308f6782240d27266835d507eb301fa188` — `Record Pick For Us Android Phase B audit and identity decision`; GitHub readback verified.
+- Persistent Android source generated once using pinned Capacitor core/Android/CLI 8.5.2. API min/compile/target 24/36/36; build-tools 36.0.0; AGP 8.13.0; checksum-pinned Gradle 8.14.3; Java 21. Package locked to `com.calebcalvin.pickforus`, label Pick For Us, initial Play version 1/1.0.0.
+- Added release signing inputs and fail-closed default; explicit unsigned validation builds are separate from upload-signed builds. No upload key exists or was generated. Added artifact-only CI and optional manual protected-environment signing job; no Play/public GitHub release action remains.
+- Fifteen deterministic launcher resources derive only from the approved unchanged master. Static circle/squircle/safe-circle preview reviewed; full art survives. No fabricated monochrome redesign. Native foreground GPS permissions and offline retry page added; HTTPS runtime unchanged; native insets handling selected.
+- Fixed inherited broken APK promotion: Settings shows release-preparation text instead of a nonexistent PickForUs.apk download. No discovery, seasonal, theme, analytics, Mordax or navigation behavior was changed.
+- Validation completed: clean `npm ci` (507 packages); Capacitor sync; source/identity/version/icon/wrapper checks; typecheck; targeted lint; **376 tests passed (305 repository + 71 application), 0 failures, 4 inherited external-documentation skips**; casino audits 883 canonical / 899 rows / 60 passes; migration-free auth-enabled web production build passed.
+- Full repository lint reports one pre-existing `no-empty` error in unchanged `src/lib/app-data/client.server.ts:214` and four warnings. Changed-code lint passes. No unrelated auth code cleanup applied.
+- Local Chromium attempt failed before any browser check (engine SIGSEGV); do not report browser success. Device/WebView checks remain NOT VERIFIED.
+- Local SDK setup: newest CLI downloader failed, then pinned CLI 19.0 required the workspace proxy trust store. Official Temurin JDK 21 and Gradle checksums verified; native compilation is now being attempted. Do not treat a pending native build or signed bundle as passed.
+- Next: finish Gradle/bundle/lint verification, inspect compiled package/SDK/resources/signing, test missing-signing guard, review full diff, then save final results and human gates. Full procedure is in ANDROID_RELEASE.md.
+
 ## Audit checkpoint — implementation next
 
 - Starting branch/SHA: `polish/pre-google-play-pass-1` / `9b3439c484108bfbf168fbef4eb3680ee28cadaf` (`rename visible home identity to Pick For Us`). Clean isolated worktree.

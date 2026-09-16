@@ -1,0 +1,43 @@
+// Upload-key inputs only. Google Play owns the separate distribution signing key.
+// Use environment variables or the ignored android/keystore.properties file.
+def localSigning = new Properties()
+def localSigningFile = rootProject.file('keystore.properties')
+if (localSigningFile.exists()) {
+    localSigningFile.withInputStream { localSigning.load(it) }
+}
+def signingInputs = [
+    storeFile: 'PICKFORUS_UPLOAD_STORE_FILE',
+    storePassword: 'PICKFORUS_UPLOAD_STORE_PASSWORD',
+    keyAlias: 'PICKFORUS_UPLOAD_KEY_ALIAS',
+    keyPassword: 'PICKFORUS_UPLOAD_KEY_PASSWORD'
+].collectEntries { key, envName -> [(key): System.getenv(envName) ?: localSigning.getProperty(key)] }
+def present = signingInputs.values().count { it != null && !it.isEmpty() }
+if (present != 0 && present != 4) {
+    throw new GradleException('Incomplete upload signing configuration; provide all four inputs or none. Values are never logged.')
+}
+ext.hasUploadSigning = present == 4
+if (hasUploadSigning) {
+    def uploadStore = rootProject.file(signingInputs.storeFile)
+    if (!uploadStore.isFile()) {
+        throw new GradleException('Configured upload keystore is not a readable file.')
+    }
+    android.signingConfigs.create('upload') {
+        storeFile = uploadStore
+        storePassword = signingInputs.storePassword
+        keyAlias = signingInputs.keyAlias
+        keyPassword = signingInputs.keyPassword
+    }
+    android.buildTypes.release.signingConfig = android.signingConfigs.upload
+}
+
+// An unsigned release is explicitly for validation, never silently upload-ready.
+def signingGate = tasks.register('requireReleaseSigning') {
+    doLast {
+        if (!hasUploadSigning && !providers.gradleProperty('allowUnsignedRelease').map { it == 'true' }.getOrElse(false)) {
+            throw new GradleException('Release signing is missing. Supply the upload key, or use -PallowUnsignedRelease=true ONLY for an unsigned validation bundle.')
+        }
+    }
+}
+tasks.configureEach {
+    if (name == 'preReleaseBuild') dependsOn(signingGate)
+}

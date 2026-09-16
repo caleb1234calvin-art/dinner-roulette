@@ -1,114 +1,169 @@
-name: Build Android APK
+name: Pick For Us Android Release Readiness
 
 on:
   workflow_dispatch:
+    inputs:
+      sign_release:
+        description: Build an upload-key-signed bundle (requires protected signing environment)
+        type: boolean
+        default: false
   push:
-    branches:
-      - main
-      - "feature/android-*"
+    branches: [polish/pre-google-play-pass-1, "feature/android-*"]
+    paths:
+      - "android/**"
+      - "native-android/**"
+      - "native-web/**"
+      - "capacitor.config.json"
+      - "package*.json"
+      - "src/**"
+      - "scripts/**"
+      - "public/**"
+      - ".github/workflows/android-apk.yml"
+  pull_request:
+    paths:
+      - "android/**"
+      - "native-android/**"
+      - "native-web/**"
+      - "capacitor.config.json"
+      - "package*.json"
+      - "src/**"
+      - "scripts/**"
+      - "public/**"
+      - ".github/workflows/android-apk.yml"
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: android-readiness-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build-apk:
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-
+  validate-android:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
         with:
-          node-version: 22
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Record source revision
+        run: git rev-parse HEAD
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
           cache: npm
-
-      - name: Set up Java
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "21"
-
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Install project dependencies
-        run: npm install --no-audit --no-fund
-
-      - name: Install Capacitor Android tooling
-        run: npm install --no-save --no-audit --no-fund @capacitor/core@7 @capacitor/cli@7 @capacitor/android@7
-
-      - name: Generate Android project
-        run: npx cap add android
-
-      - name: Generate Dinner Roulette launcher icons
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: android-actions/setup-android@v3
+        with:
+          cmdline-tools-version: 13114758
+          packages: "platform-tools platforms;android-36 build-tools;36.0.0"
+          log-accepted-android-sdk-licenses: false
+      - name: Install locked dependencies
         run: |
-          python3 -m pip install --quiet pillow
-          python3 - <<'PY'
-          from pathlib import Path
-          from PIL import Image, ImageOps
-
-          source = Image.open("native-android/icon.jpg").convert("RGB")
-          source = ImageOps.fit(source, (512, 512), method=Image.Resampling.LANCZOS)
-
-          launcher_sizes = {
-              "mdpi": 48,
-              "hdpi": 72,
-              "xhdpi": 96,
-              "xxhdpi": 144,
-              "xxxhdpi": 192,
-          }
-
-          foreground_sizes = {
-              "mdpi": 108,
-              "hdpi": 162,
-              "xhdpi": 216,
-              "xxhdpi": 324,
-              "xxxhdpi": 432,
-          }
-
-          for density, size in launcher_sizes.items():
-              folder = Path(f"android/app/src/main/res/mipmap-{density}")
-              folder.mkdir(parents=True, exist_ok=True)
-              icon = source.resize((size, size), Image.Resampling.LANCZOS)
-              icon.save(folder / "ic_launcher.png", format="PNG", optimize=True)
-              icon.save(folder / "ic_launcher_round.png", format="PNG", optimize=True)
-
-          for density, size in foreground_sizes.items():
-              folder = Path(f"android/app/src/main/res/mipmap-{density}")
-              folder.mkdir(parents=True, exist_ok=True)
-              foreground = source.resize((size, size), Image.Resampling.LANCZOS)
-              foreground.save(folder / "ic_launcher_foreground.png", format="PNG", optimize=True)
-          PY
-
-      - name: Build debug APK
+          npm ci --no-audit --no-fund
+          python3 -m pip install -r native-android/requirements.txt
+      - name: Validate source, identity, icons, and regressions
+        run: |
+          npm run typecheck
+          npm test
+          npm run audit:casinos
+          npm run android:check
+          npx eslint scripts/check-android.mjs scripts/android-release.test.mjs src/components/settings-page.tsx
+      - name: Validate web production compilation without migrations
+        env:
+          VITE_AUTH_ENABLED: "true"
+        run: node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
+      - name: Sync committed native project
+        run: |
+          npm run android:sync
+          git diff --exit-code -- android capacitor.config.json
+      - name: Validate Gradle and generate release bundle plus development APK
         working-directory: android
-        run: ./gradlew assembleDebug
-
-      - name: Stage APK
+        run: ./gradlew --no-daemon lintRelease testReleaseUnitTest bundleRelease assembleDebug -PallowUnsignedRelease=true
+      - name: Inspect unsigned release bundle
         run: |
           mkdir -p artifacts
-          cp android/app/build/outputs/apk/debug/app-debug.apk artifacts/DinnerRoulette.apk
-
-      - name: Upload APK artifact
+          python3 scripts/verify-android-bundle.py android/app/build/outputs/bundle/release/app-release.aab --expect unsigned --output artifacts/android-bundle-verification.json
+          cp android/app/build/outputs/bundle/release/app-release.aab artifacts/PickForUs-unsigned.aab
+          cp android/app/build/outputs/apk/debug/app-debug.apk artifacts/PickForUs-debug.apk
+          git rev-parse HEAD > artifacts/source-revision.txt
+          sha256sum artifacts/*.aab artifacts/*.apk > artifacts/SHA256SUMS
+      - name: Preserve build artifacts (no public release or Play upload)
         uses: actions/upload-artifact@v4
         with:
-          name: DinnerRoulette-Android
-          path: artifacts/DinnerRoulette.apk
+          name: PickForUs-Android-validation-${{ github.sha }}
+          path: artifacts/
           if-no-files-found: error
-          retention-days: 30
+          retention-days: 14
+      - name: Preserve Android lint results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PickForUs-Android-lint-${{ github.sha }}
+          path: android/app/build/reports/
+          if-no-files-found: warn
+          retention-days: 14
 
-      - name: Publish direct-download APK
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/feature/android-direct-download'
+  # This job NEVER runs on a push or pull request. No publishing permissions exist.
+  sign-upload-bundle:
+    if: github.event_name == 'workflow_dispatch' && inputs.sign_release
+    needs: validate-android
+    environment: android-upload-signing
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: android-actions/setup-android@v3
+        with:
+          cmdline-tools-version: 13114758
+          packages: "platform-tools platforms;android-36 build-tools;36.0.0"
+          log-accepted-android-sdk-licenses: false
+      - run: npm ci --no-audit --no-fund
+      - run: npm run android:sync
+      - name: Build with protected upload key and remove temporary key
         env:
-          GH_TOKEN: ${{ github.token }}
+          PICKFORUS_UPLOAD_KEYSTORE_BASE64: ${{ secrets.PICKFORUS_UPLOAD_KEYSTORE_BASE64 }}
+          PICKFORUS_UPLOAD_STORE_PASSWORD: ${{ secrets.PICKFORUS_UPLOAD_STORE_PASSWORD }}
+          PICKFORUS_UPLOAD_KEY_ALIAS: ${{ secrets.PICKFORUS_UPLOAD_KEY_ALIAS }}
+          PICKFORUS_UPLOAD_KEY_PASSWORD: ${{ secrets.PICKFORUS_UPLOAD_KEY_PASSWORD }}
+        shell: bash
         run: |
-          if ! gh release view android-latest >/dev/null 2>&1; then
-            gh release create android-latest \
-              --target "$GITHUB_SHA" \
-              --title "Dinner Roulette for Android" \
-              --notes "Direct Android download for Dinner Roulette."
-          fi
-          gh release upload android-latest artifacts/DinnerRoulette.apk --clobber
+          set -euo pipefail
+          test -n "$PICKFORUS_UPLOAD_KEYSTORE_BASE64"
+          test -n "$PICKFORUS_UPLOAD_STORE_PASSWORD"
+          test -n "$PICKFORUS_UPLOAD_KEY_ALIAS"
+          test -n "$PICKFORUS_UPLOAD_KEY_PASSWORD"
+          umask 077
+          export PICKFORUS_UPLOAD_STORE_FILE
+          PICKFORUS_UPLOAD_STORE_FILE="$(mktemp "$RUNNER_TEMP/pickforus-upload-XXXXXX.jks")"
+          trap 'rm -f "$PICKFORUS_UPLOAD_STORE_FILE"' EXIT
+          printf '%s' "$PICKFORUS_UPLOAD_KEYSTORE_BASE64" | base64 --decode > "$PICKFORUS_UPLOAD_STORE_FILE"
+          cd android
+          ./gradlew --no-daemon bundleRelease
+      - name: Verify signed bundle without uploading
+        run: |
+          mkdir -p artifacts
+          python3 scripts/verify-android-bundle.py android/app/build/outputs/bundle/release/app-release.aab --expect signed --output artifacts/android-bundle-verification.json
+          cp android/app/build/outputs/bundle/release/app-release.aab artifacts/PickForUs-upload-signed.aab
+          git rev-parse HEAD > artifacts/source-revision.txt
+          sha256sum artifacts/*.aab > artifacts/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PickForUs-upload-signed-${{ github.sha }}
+          path: artifacts/
+          if-no-files-found: error
+          retention-days: 7

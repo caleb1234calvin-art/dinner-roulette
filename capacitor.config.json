@@ -1,9 +1,19 @@
 {
-  "appId": "com.calebcalvin.dinnerroulette",
+  "appId": "com.calebcalvin.pickforus",
   "appName": "Pick For Us",
   "webDir": "native-web",
   "server": {
     "url": "https://dinner-roulette-chi.vercel.app",
-    "cleartext": false
+    "cleartext": false,
+    "errorPath": "index.html"
+  },
+  "android": {
+    "allowMixedContent": false,
+    "webContentsDebuggingEnabled": false
+  },
+  "plugins": {
+    "SystemBars": {
+      "insetsHandling": "native"
+    }
   }
 }

@@ -16,3 +16,15 @@ startup.sh
 
 # Generated local/CI browser screenshots and transient verdicts
 audit/browser-results/
+
+# Native signing material is supplied outside Git, never bundled with the app.
+*.jks
+*.keystore
+*.p12
+keystore.properties
+signing.properties
+google-services.json
+
+# Generated web/native build output
+dist/
+.output/
