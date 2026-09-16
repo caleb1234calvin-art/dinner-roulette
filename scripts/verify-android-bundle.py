@@ -20,6 +20,22 @@ def run(*args):
     return subprocess.run(args, check=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout
 
 
+def verify_permissions(manifest):
+    permissions = sorted(e.attrib[ANDROID + "name"] for e in manifest.findall("uses-permission"))
+    receiver = "com.calebcalvin.pickforus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    expected = {
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        receiver,
+    }
+    assert set(permissions) == expected, f"Unexpected compiled permissions: {permissions}"
+    declarations = [e for e in manifest.findall("permission") if e.attrib.get(ANDROID + "name") == receiver]
+    assert len(declarations) == 1, "Missing or duplicate AndroidX receiver permission declaration"
+    assert declarations[0].attrib.get(ANDROID + "protectionLevel") == "signature", "AndroidX receiver permission must remain signature-only"
+    return permissions
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("bundle", type=Path)
@@ -38,7 +54,10 @@ def main():
     java = str(Path(os.environ["JAVA_HOME"]) / "bin/java") if "JAVA_HOME" in os.environ else "java"
     run(java, "-jar", str(jar), "validate", f"--bundle={args.bundle}")
     manifest_text = run(java, "-jar", str(jar), "dump", "manifest", f"--bundle={args.bundle}", "--module=base")
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.with_suffix(".manifest.xml").write_text(manifest_text)
     manifest = ET.fromstring(manifest_text)
+    print("Compiled manifest attributes:", json.dumps(manifest.attrib, sort_keys=True))
     sdk = manifest.find("uses-sdk")
     application = manifest.find("application")
     version = dict(line.split("=", 1) for line in (ROOT / "android/version.properties").read_text().splitlines() if line and not line.startswith("#"))
@@ -47,10 +66,16 @@ def main():
     assert manifest.attrib[ANDROID + "versionName"] == version["versionName"]
     assert sdk.attrib[ANDROID + "minSdkVersion"] == "24"
     assert sdk.attrib[ANDROID + "targetSdkVersion"] == "36"
+    compile_sdk = manifest.attrib.get(ANDROID + "compileSdkVersion", manifest.attrib.get("platformBuildVersionCode"))
+    assert compile_sdk == "36", f"Unexpected compiled SDK: {compile_sdk}"
+    label_dump = run(java, "-jar", str(jar), "dump", "resources", f"--bundle={args.bundle}", "--resource=string/app_name", "--values")
+    print("Compiled app label:", label_dump)
+    assert "Pick For Us" in label_dump and "string/app_name" in label_dump
     assert application.attrib.get(ANDROID + "debuggable", "false") == "false"
     assert application.attrib.get(ANDROID + "usesCleartextTraffic") == "false"
-    permissions = sorted(e.attrib[ANDROID + "name"] for e in manifest.findall("uses-permission"))
-    assert set(permissions) == {"android.permission.INTERNET", "android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION"}
+    assert application.attrib.get(ANDROID + "allowBackup") == "false"
+    permissions = verify_permissions(manifest)
+    print("Compiled permissions:", json.dumps(permissions))
     with zipfile.ZipFile(args.bundle) as bundle:
         names = bundle.namelist()
         assert bundle.testzip() is None
@@ -61,7 +86,10 @@ def main():
         assert not native_libraries, "New native libraries require a fresh ABI/16KB alignment audit"
         signed = any(name.startswith("META-INF/") and name.endswith((".RSA", ".DSA", ".EC")) for name in names)
         assert signed == (args.expect == "signed"), "Bundle signing state does not match the requested artifact type"
-        assert any("ic_launcher_foreground" in name for name in names)
+        launcher_images = sorted(name for name in names if name.startswith("base/res/mipmap-") and Path(name).name in {"ic_launcher.png", "ic_launcher_round.png", "ic_launcher_foreground.png"})
+        assert len(launcher_images) == 15, f"Expected 15 density-specific launcher images, got {launcher_images}"
+        adaptive_icons = sorted(name for name in names if name.startswith("base/res/mipmap-anydpi-v26/") and Path(name).name in {"ic_launcher.xml", "ic_launcher_round.xml"})
+        assert len(adaptive_icons) == 2, f"Missing adaptive launcher resources: {adaptive_icons}"
         assert bundle.read("base/assets/public/index.html") == (ROOT / "native-web/index.html").read_bytes()
     if signed:
         jarsigner = str(Path(os.environ["JAVA_HOME"]) / "bin/jarsigner") if "JAVA_HOME" in os.environ else "jarsigner"
@@ -71,7 +99,9 @@ def main():
         "artifact": args.bundle.name, "sha256": hashlib.sha256(args.bundle.read_bytes()).hexdigest(),
         "bytes": args.bundle.stat().st_size, "package": manifest.attrib["package"],
         "versionCode": int(version["versionCode"]), "versionName": version["versionName"],
-        "minSdk": 24, "targetSdk": 36, "debuggable": False,
+        "minSdk": 24, "compileSdk": int(compile_sdk), "targetSdk": 36, "debuggable": False,
+        "appLabel": "Pick For Us", "allowBackup": False, "cleartextTraffic": False,
+        "launcherImages": launcher_images, "adaptiveIcons": adaptive_icons,
         "bundletool": BUNDLETOOL_VERSION, "bundletoolValidation": "PASS",
         "signing": args.expect, "permissions": permissions, "nativeLibraries": native_libraries,
         "pageSizeAssessment": "No packaged native .so libraries; no ELF alignment requirement applies",

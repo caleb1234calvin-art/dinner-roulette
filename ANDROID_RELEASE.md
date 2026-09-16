@@ -11,7 +11,7 @@ authorize a main merge, Vercel deployment, Play upload, or publication.
 | Public label | Pick For Us |
 | First Play version | `versionName=1.0.0`, `versionCode=1` |
 | Minimum / compile / target SDK | 24 / 36 / 36 |
-| Android build tools | 36.0.0 |
+| Android build tools | app 36.0.0; Capacitor library modules use AGP default 35.0.0 |
 | Capacitor core / Android / CLI | 8.5.2, exact versions in npm lockfile |
 | Android Gradle Plugin | 8.13.0 |
 | Gradle wrapper | 8.14.3, distribution and wrapper SHA-256 verified |
@@ -53,7 +53,10 @@ The hosted revision must be explicitly accepted before Play testing. The bundled
 
 Only the configured origin is bridged; no wildcard navigation is allowed.
 Cleartext, mixed content, release debugging, and Android cloud backup are disabled.
-Only Internet and foreground coarse/fine location permissions are declared.
+The app declares Internet and foreground coarse/fine location permissions. AndroidX
+also merges its package-local `DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION` with
+signature-only protection. The compiled-bundle verifier requires exactly these
+four permissions and rejects background location or weakened receiver protection.
 Capacitor's WebView permission handler runs when the existing web location action
 requests GPS; no startup or background location request was added. Approximate
 location remains supported. Native SystemBars handling accommodates system/keyboard
@@ -67,7 +70,9 @@ files remain untouched; no build uses the old icons.
 
 ## Local unsigned validation
 
-Install JDK 21, Android SDK platform 36 and build-tools 36.0.0. Point `ANDROID_HOME`
+Install JDK 21, Android SDK platform 36 and build-tools 35.0.0 plus 36.0.0.
+The app pins 36.0.0; Capacitor library modules use AGP's 35.0.0 default. Installing
+both avoids an implicit build-time SDK download without changing API targets. Point `ANDROID_HOME`
 to the SDK (or use ignored `android/local.properties`). The pinned CLI tools used
 in CI are build 13114758 / 19.0. Then:
 
@@ -75,6 +80,7 @@ in CI are build 13114758 / 19.0. Then:
 npm ci --no-audit --no-fund
 python3 -m pip install -r native-android/requirements.txt
 npm run android:check
+python3 -m unittest discover -s native-android -p 'test_*.py'
 npm run typecheck
 npm test
 npm run audit:casinos
@@ -126,10 +132,13 @@ certificate fingerprint against the intended upload certificate before upload.
 The existing `.github/workflows/android-apk.yml` path is retained, but the workflow
 is now **Pick For Us Android Release Readiness**. It installs locked dependencies,
 checks regressions/identity/icons, compiles web source without migrations, syncs
-the committed native project, runs Android lint, and builds an unsigned release
+the committed native project, proves that a normal release fails without its upload
+key, runs Android lint, and builds an unsigned release
 AAB plus debug APK. It verifies the compiled AAB using checksum-pinned Google's
 bundletool 1.18.3 (SDK/package/version/signing/config/permissions/native-library
-checks), then uploads authenticated Actions artifacts with revision and checksums.
+checks), then uploads Actions artifacts with revision and checksums. Three Python
+permission-verifier regression tests are separate from the 376 JavaScript project
+tests. The downloaded verifier tool itself is excluded from artifact uploads.
 There is no GitHub public-release step, Play publisher, production deployment,
 credential generation, or write permission to repository contents.
 

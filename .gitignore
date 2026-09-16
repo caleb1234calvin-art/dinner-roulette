@@ -28,3 +28,7 @@ google-services.json
 # Generated web/native build output
 dist/
 .output/
+
+# Python validation cache
+__pycache__/
+*.pyc

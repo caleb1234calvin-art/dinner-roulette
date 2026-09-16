@@ -62,7 +62,7 @@ jobs:
       - uses: android-actions/setup-android@v3
         with:
           cmdline-tools-version: 13114758
-          packages: "platform-tools platforms;android-36 build-tools;36.0.0"
+          packages: "platform-tools platforms;android-36 build-tools;35.0.0 build-tools;36.0.0"
           log-accepted-android-sdk-licenses: false
       - name: Install locked dependencies
         run: |
@@ -74,6 +74,7 @@ jobs:
           npm test
           npm run audit:casinos
           npm run android:check
+          python3 -m unittest discover -s native-android -p 'test_*.py'
           npx eslint scripts/check-android.mjs scripts/android-release.test.mjs src/components/settings-page.tsx
       - name: Validate web production compilation without migrations
         env:
@@ -83,6 +84,17 @@ jobs:
         run: |
           npm run android:sync
           git diff --exit-code -- android capacitor.config.json
+      - name: Verify missing upload key fails closed
+        working-directory: android
+        shell: bash
+        run: |
+          set +e
+          ./gradlew --no-daemon :app:bundleRelease > signing-guard.log 2>&1
+          result=$?
+          set -e
+          test "$result" -ne 0
+          grep -F 'Release signing is missing.' signing-guard.log
+          echo 'PASS: unsigned normal release was rejected by the signing guard'
       - name: Validate Gradle and generate release bundle plus development APK
         working-directory: android
         run: ./gradlew --no-daemon lintRelease testReleaseUnitTest bundleRelease assembleDebug -PallowUnsignedRelease=true
@@ -90,15 +102,33 @@ jobs:
         run: |
           mkdir -p artifacts
           python3 scripts/verify-android-bundle.py android/app/build/outputs/bundle/release/app-release.aab --expect unsigned --output artifacts/android-bundle-verification.json
+          cp android/signing-guard.log artifacts/signing-guard.log
           cp android/app/build/outputs/bundle/release/app-release.aab artifacts/PickForUs-unsigned.aab
           cp android/app/build/outputs/apk/debug/app-debug.apk artifacts/PickForUs-debug.apk
           git rev-parse HEAD > artifacts/source-revision.txt
           sha256sum artifacts/*.aab artifacts/*.apk > artifacts/SHA256SUMS
+          cat artifacts/SHA256SUMS
+          python3 - <<'PY'
+          import collections, json, xml.etree.ElementTree as ET
+          report = ET.parse("android/app/build/reports/lint-results-release.xml").getroot()
+          issues = [{"id": issue.get("id"), "severity": issue.get("severity"), "message": issue.get("message")} for issue in report.findall("issue")]
+          summary = {"counts": dict(collections.Counter(issue["severity"] for issue in issues)), "issues": issues}
+          print("Android app lint summary:", json.dumps(summary, indent=2))
+          with open("artifacts/android-lint-summary.json", "w") as output:
+              json.dump(summary, output, indent=2)
+          PY
       - name: Preserve build artifacts (no public release or Play upload)
         uses: actions/upload-artifact@v4
         with:
           name: PickForUs-Android-validation-${{ github.sha }}
-          path: artifacts/
+          path: |
+            artifacts/*.aab
+            artifacts/*.apk
+            artifacts/*.json
+            artifacts/*.manifest.xml
+            artifacts/signing-guard.log
+            artifacts/source-revision.txt
+            artifacts/SHA256SUMS
           if-no-files-found: error
           retention-days: 14
       - name: Preserve Android lint results
@@ -130,7 +160,7 @@ jobs:
       - uses: android-actions/setup-android@v3
         with:
           cmdline-tools-version: 13114758
-          packages: "platform-tools platforms;android-36 build-tools;36.0.0"
+          packages: "platform-tools platforms;android-36 build-tools;35.0.0 build-tools;36.0.0"
           log-accepted-android-sdk-licenses: false
       - run: npm ci --no-audit --no-fund
       - run: npm run android:sync
@@ -164,6 +194,13 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: PickForUs-upload-signed-${{ github.sha }}
-          path: artifacts/
+          path: |
+            artifacts/*.aab
+            artifacts/*.apk
+            artifacts/*.json
+            artifacts/*.manifest.xml
+            artifacts/signing-guard.log
+            artifacts/source-revision.txt
+            artifacts/SHA256SUMS
           if-no-files-found: error
           retention-days: 7
