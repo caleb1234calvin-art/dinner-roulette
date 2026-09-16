@@ -8,7 +8,7 @@ import appCss from "../styles.css?url";
 import dateNightBasePolishCss from "../date-night-base-polish.css?url";
 import halloweenDateNightOverridesCss from "../halloween-date-night-overrides.css?url";
 
-const APP_NAME = "Dinner Roulette";
+const APP_NAME = "Pick For Us";
 const VERCEL_ANALYTICS_BOOTSTRAP_SCRIPT =
   "window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};";
 
@@ -18,7 +18,7 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: APP_NAME },
-      { name: "description", content: "Can't decide where to eat? Set the rules. Dinner Roulette chooses." },
+      { name: "description", content: "Can't decide what to do? Set the rules. Pick For Us helps choose." },
       { name: "theme-color", content: "#14110e" },
       { name: "application-name", content: APP_NAME },
       { name: "apple-mobile-web-app-title", content: APP_NAME },
