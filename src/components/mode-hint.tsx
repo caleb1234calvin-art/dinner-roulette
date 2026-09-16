@@ -5,12 +5,12 @@ import { HINTS_RESET_EVENT, hasSeenHint, markHintSeen } from "@/lib/session-hint
 
 const STEPS = [
   {
-    title: "Choose the kind of night",
+    title: "Choose what you're picking",
     body: "Use Dinner, Nightlife, or Date Night at the top. Each mode has its own filters and personality.",
   },
   {
     title: "Set the rules",
-    body: "Choose things like distance, budget, cuisine, venue type, activity, and mood. The app only picks from places that fit.",
+    body: "Choose things like distance, budget, cuisine, venue type, activity, and mood. Pick For Us only chooses from places that fit.",
   },
   {
     title: "Pick or browse",
@@ -56,7 +56,7 @@ export function ModeHint() {
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-kicker text-accent">Quick tour</p>
-            <h2 className="font-display mt-1 text-2xl text-fg">Dinner Roulette in 30 seconds</h2>
+            <h2 className="font-display mt-1 text-2xl text-fg">Pick For Us in 30 seconds</h2>
           </div>
           <button
             type="button"
