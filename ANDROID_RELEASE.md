@@ -3,6 +3,42 @@
 Phase B prepares buildable native source and release artifacts. It does **not**
 authorize a main merge, Vercel deployment, Play upload, or publication.
 
+## Validated Phase B result — 2026-09-21
+
+Unsigned native validation is complete at **`5aee90acbb44ab5d48b25cb1dac39db84cefcfbf`**.
+[Android CI Run 35 passed](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/35654077135):
+376 JavaScript tests (305 repository + 71 application), zero failures, four inherited
+external-documentation skips; three Python verifier tests; typecheck, changed-code
+lint, audits, clean sync, safe web build, native lint/build and compiled AAB inspection.
+Normal release correctly fails without the upload key; the explicit unsigned path passes.
+
+The [retained validation artifact](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/35654077135/artifacts/10663661233)
+contains `PickForUs-unsigned.aab` (**3,103,779 bytes**), development APK, manifest,
+source revision, verification/lint reports, signing guard and checksums. Retention
+expires **2026-10-05**. AAB SHA-256:
+`16bc0fc6e2606bd64f927981b1811f4256144851bebd24a33c1f035ac38c6057`.
+The connector's local export returned HTTP 403; use normal authorized GitHub artifact
+access. Build and inspection were completed in CI, not on a physical phone.
+
+Compiled ID/label/version/SDK are `com.calebcalvin.pickforus` / Pick For Us /
+1 (1.0.0) / 24-36-36. Release debugging and cleartext are disabled; all 15 launcher
+images and both adaptive icons are present. No upload signature or native `.so`
+libraries are packaged. This is **not a signed Play-upload candidate**.
+
+Android app lint passes with **14 warnings, no errors**: manifest order (1), newer
+Gradle suggestion (1), data-extraction rules (1), unused template/sync resources (4),
+opaque legacy icon shape (5), absent monochrome icon (2). None was suppressed to
+obtain a pass. Capacitor's existing dependency lint baseline remains unchanged;
+CI reports six filtered dependency errors. Keep the approved icon and pinned toolchain.
+Explicit Android 12+ transfer rules, OEM backup behavior and themed launcher results
+remain future/device review. Full web lint's existing no-empty error and four warnings
+remain outside this Android change; changed-code lint passes.
+
+Browser validation is **NOT VERIFIED** (prior Chromium crash before checks).
+Physical Android/WebView acceptance and real upload-key signing are **NOT VERIFIED**.
+See the next-phase gates below; no main merge, deployment, migration, public release
+or Play upload has occurred.
+
 ## Locked identity and compatibility
 
 | Setting | Value |
@@ -176,5 +212,5 @@ casino/alcohol discovery declarations, screenshots, testing requirements, and
 review of the hosted-web model. The app does not provide wagering; do not describe
 it as a gambling service. No Play approval is implied by a successful bundle build.
 
-See `AI_CONTINUITY.md` and `audit/android-phase-b-validation-2026-09-16.json` for
+See `AI_CONTINUITY.md` and `audit/android-phase-b-validation-2026-09-21.json` for
 actual results, warnings, exact revisions and any remaining build boundaries.

@@ -1,0 +1,453 @@
+{
+  "date": "2026-09-21",
+  "branch": "polish/pre-google-play-pass-1",
+  "originalPhaseBStart": "9b3439c484108bfbf168fbef4eb3680ee28cadaf",
+  "priorNativeResume": "ed33a703feadf5ac7975f0b879ecb78d8f4c6dbb",
+  "resumedStart": "decf2828cff3f0dd3181c0615deb8909a6e80944",
+  "candidate": "5aee90acbb44ab5d48b25cb1dac39db84cefcfbf",
+  "status": "PASS_UNSIGNED_NATIVE_VALIDATION",
+  "ci": {
+    "id": 35654077135,
+    "runNumber": 35,
+    "jobId": 106513238201,
+    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/35654077135",
+    "status": "PASS",
+    "conclusion": "success",
+    "validatedSha": "5aee90acbb44ab5d48b25cb1dac39db84cefcfbf",
+    "completedAt": "2026-09-21T20:58:42Z",
+    "optionalSignedJob": "SKIPPED by design: no manual signing request or credentials"
+  },
+  "identity": {
+    "applicationId": "com.calebcalvin.pickforus",
+    "appName": "Pick For Us",
+    "versionCode": 1,
+    "versionName": "1.0.0"
+  },
+  "toolchain": {
+    "capacitor": "8.5.2",
+    "minSdk": 24,
+    "compileSdk": 36,
+    "targetSdk": 36,
+    "appBuildTools": "36.0.0",
+    "libraryBuildTools": "35.0.0",
+    "androidGradlePlugin": "8.13.0",
+    "gradle": "8.14.3",
+    "javaMajor": 21,
+    "nodeMajor": 24
+  },
+  "icon": {
+    "master": "public/brand/grok_1789541884918.jpg",
+    "sha256": "5d823a5c4ef6cc0a76ffc8926f83f0eaae85cb8b59cdcd280d9b8d148f99500a",
+    "size": [
+      1408,
+      1408
+    ],
+    "unchanged": true,
+    "densityResources": 15,
+    "adaptiveResources": 2,
+    "staticMasks": "PASS (previously reviewed)",
+    "physicalLauncher": "NOT VERIFIED"
+  },
+  "diffReview": {
+    "base": "9b3439c484108bfbf168fbef4eb3680ee28cadaf",
+    "paths": [
+      ".gitattributes",
+      ".github/workflows/android-apk.yml",
+      ".gitignore",
+      "AI_CONTINUITY.md",
+      "ANDROID_RELEASE.md",
+      "android/.gitignore",
+      "android/app/.gitignore",
+      "android/app/build.gradle",
+      "android/app/capacitor.build.gradle",
+      "android/app/proguard-rules.pro",
+      "android/app/src/main/AndroidManifest.xml",
+      "android/app/src/main/java/com/calebcalvin/pickforus/MainActivity.java",
+      "android/app/src/main/res/layout/activity_main.xml",
+      "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+      "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+      "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+      "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+      "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+      "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+      "android/app/src/main/res/values/ic_launcher_background.xml",
+      "android/app/src/main/res/values/strings.xml",
+      "android/app/src/main/res/values/styles.xml",
+      "android/app/src/main/res/xml/file_paths.xml",
+      "android/build.gradle",
+      "android/capacitor.settings.gradle",
+      "android/gradle.properties",
+      "android/gradle/wrapper/gradle-wrapper.jar",
+      "android/gradle/wrapper/gradle-wrapper.properties",
+      "android/gradlew",
+      "android/gradlew.bat",
+      "android/settings.gradle",
+      "android/signing.gradle",
+      "android/variables.gradle",
+      "android/version.properties",
+      "audit/android-phase-b-icon-masks.png",
+      "capacitor.config.json",
+      "eslint.config.mjs",
+      "native-android/README.md",
+      "native-android/requirements.txt",
+      "native-android/test_bundle_inspection.py",
+      "native-web/index.html",
+      "package-lock.json",
+      "package.json",
+      "scripts/android-icons.py",
+      "scripts/android-release.test.mjs",
+      "scripts/check-android.mjs",
+      "scripts/verify-android-bundle.py",
+      "src/components/settings-page.tsx"
+    ],
+    "unexplained": [],
+    "unrelatedWebChanges": [],
+    "webSourceChange": "Settings broken-download link replaced by release-preparation text",
+    "trackedBuildOutputsOrSigningSecrets": [],
+    "priorHistoryRestoredFrom": "9ea03d0ce6d3bf1c455f6cb4104afc0c2c556811",
+    "deferredMordaxConceptPreserved": true
+  },
+  "runtime": {
+    "url": "https://dinner-roulette-chi.vercel.app",
+    "unchanged": true,
+    "branchWebAppEmbedded": false,
+    "fullOfflineApp": false,
+    "bundledFallback": "Connection error and retry page only"
+  },
+  "boundaries": {
+    "main": "6b811ae427339902f456c2706330689c2d6ad54b",
+    "mainUnchanged": true,
+    "productionChanges": false,
+    "migrationsRun": false,
+    "playUploads": false,
+    "publicGithubReleaseCreated": false,
+    "historicalAndroidReleaseUnchanged": true,
+    "uploadKeyGenerated": false,
+    "secretsCommitted": false,
+    "signedUploadCandidateExists": false,
+    "exaUsed": false
+  },
+  "localFocusedValidation": {
+    "pythonPermissionTests": {
+      "passed": 3,
+      "failed": 0
+    },
+    "androidNodeTests": {
+      "passed": 5,
+      "failed": 0
+    },
+    "gitDiffCheck": "PASS"
+  },
+  "humanGates": [
+    "Confirm private Play Console registration/ownership for com.calebcalvin.pickforus",
+    "Create/select, securely back up and configure a real upload key after authorization",
+    "Configure Play App Signing and verify upload certificate",
+    "Approve intended hosted runtime revision",
+    "Physical Android/WebView functional acceptance",
+    "Later Play policy/store/testing preparation and separately authorized upload"
+  ],
+  "browser": "NOT VERIFIED: previous Chromium SIGSEGV before any check; no successful rerun claimed",
+  "physicalAndroid": "NOT VERIFIED: no physical device acceptance performed",
+  "knownPreExistingWebLint": {
+    "errors": 1,
+    "warnings": 4,
+    "location": "src/lib/app-data/client.server.ts:214",
+    "rule": "no-empty",
+    "changedCodeLint": "PASS in final CI Run 35",
+    "scope": "Unchanged pre-existing issue; not cleaned up"
+  },
+  "compiledArtifact": {
+    "artifact": "app-release.aab",
+    "sha256": "16bc0fc6e2606bd64f927981b1811f4256144851bebd24a33c1f035ac38c6057",
+    "bytes": 3103779,
+    "package": "com.calebcalvin.pickforus",
+    "versionCode": 1,
+    "versionName": "1.0.0",
+    "minSdk": 24,
+    "compileSdk": 36,
+    "targetSdk": 36,
+    "debuggable": false,
+    "appLabel": "Pick For Us",
+    "allowBackup": false,
+    "cleartextTraffic": false,
+    "launcherImages": [
+      "base/res/mipmap-hdpi-v4/ic_launcher.png",
+      "base/res/mipmap-hdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-hdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher_round.png"
+    ],
+    "adaptiveIcons": [
+      "base/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "base/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    ],
+    "bundletool": "1.18.3",
+    "bundletoolValidation": "PASS",
+    "signing": "unsigned",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.INTERNET",
+      "com.calebcalvin.pickforus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "nativeLibraries": [],
+    "pageSizeAssessment": "No packaged native .so libraries; no ELF alignment requirement applies",
+    "runtime": "Remote HTTPS app; not a snapshot of branch web content",
+    "uploadSignatureVerified": false,
+    "playConsoleAcceptance": "NOT VERIFIED",
+    "buildPath": "android/app/build/outputs/bundle/release/app-release.aab",
+    "stagedPath": "artifacts/PickForUs-unsigned.aab",
+    "receiverProtectionLevel": "0x00000002",
+    "artifactLocations": "GitHub Actions runner and retained workflow artifact; not successfully downloaded to this scratch workspace"
+  },
+  "artifacts": [
+    {
+      "id": 10663820927,
+      "name": "PickForUs-Android-lint-5aee90acbb44ab5d48b25cb1dac39db84cefcfbf",
+      "bytes": 24069,
+      "sha256": "sha256:1445ef50f188b2cd4c0ccdf3922c71077db05ba32d0bf8b764c8960d75e9c53e",
+      "expires": "2026-10-05T20:58:38Z",
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/35654077135/artifacts/10663820927"
+    },
+    {
+      "id": 10663661233,
+      "name": "PickForUs-Android-validation-5aee90acbb44ab5d48b25cb1dac39db84cefcfbf",
+      "bytes": 6866742,
+      "sha256": "sha256:86050ca3a0df299d6c6a34dbdeb90d558edd1eba0fd1da6ed9cc3a8b4efbb79c",
+      "expires": "2026-10-05T20:58:37Z",
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/35654077135/artifacts/10663661233"
+    }
+  ],
+  "localArtifactDownload": {
+    "status": "BLOCKED",
+    "reason": "Authorized connector export URL returned HTTP 403; no bypass attempted. CI artifact creation, inspection, hash, upload and metadata remain verified."
+  },
+  "androidLint": {
+    "result": "PASS",
+    "errors": 0,
+    "warnings": 14,
+    "details": [
+      {
+        "id": "ManifestOrder",
+        "severity": "Warning",
+        "message": "`<uses-permission>` tag appears after `<application>` tag"
+      },
+      {
+        "id": "AndroidGradlePluginVersion",
+        "severity": "Warning",
+        "message": "A newer version of Gradle than 8.14.3 is available: 8.14.5"
+      },
+      {
+        "id": "DataExtractionRules",
+        "severity": "Warning",
+        "message": "The attribute `android:allowBackup` is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute `android:dataExtractionRules` specifying an `@xml` resource which configures cloud backups and device transfers on Android 12 and higher."
+      },
+      {
+        "id": "UnusedResources",
+        "severity": "Warning",
+        "message": "The resource `R.layout.activity_main` appears to be unused"
+      },
+      {
+        "id": "UnusedResources",
+        "severity": "Warning",
+        "message": "The resource `R.xml.config` appears to be unused"
+      },
+      {
+        "id": "UnusedResources",
+        "severity": "Warning",
+        "message": "The resource `R.string.package_name` appears to be unused"
+      },
+      {
+        "id": "UnusedResources",
+        "severity": "Warning",
+        "message": "The resource `R.string.custom_url_scheme` appears to be unused"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "MonochromeLauncherIcon",
+        "severity": "Warning",
+        "message": "The application adaptive icon is missing a monochrome tag"
+      },
+      {
+        "id": "MonochromeLauncherIcon",
+        "severity": "Warning",
+        "message": "The application adaptive roundIcon is missing a monochrome tag"
+      }
+    ],
+    "policy": "No app lint baseline or new suppression added; no warning-driven toolchain upgrade or artwork redesign.",
+    "vendorBaseline": "Capacitor 8.5.2 ships a lint baseline; CI reports 6 dependency errors filtered and 6 baseline entries not reproduced. No new dependency lint issue; baseline unchanged."
+  },
+  "warningAssessment": {
+    "ManifestOrder": "Non-blocking XML order recommendation; manifest compiles and permission checks pass.",
+    "AndroidGradlePluginVersion": "Gradle 8.14.5 available; pinned compatible 8.14.3 intentionally retained.",
+    "DataExtractionRules": "allowBackup=false verified in compiled manifest. Explicit Android 12+ transfer rules and OEM/device backup behavior remain future/device review; no all-device transfer guarantee.",
+    "UnusedResources": "Four Capacitor/template/sync resources retained; no unrelated template cleanup.",
+    "IconLauncherShape": "Five legacy opaque-square resource warnings; padding preserves approved art and adaptive masking. Device launcher acceptance remains pending.",
+    "MonochromeLauncherIcon": "Two missing monochrome tags; no redesign of approved photographic art. Themed launcher acceptance remains pending.",
+    "Other": "Capacitor flatDir/unchecked Java notices; Actions Node 20 target forced to Node 24, setup-java v4 deprecation; npm uuid/recharts/eslint deprecation notices. All executed gates pass; no unrelated dependency upgrades."
+  },
+  "tests": {
+    "javascriptPassed": 376,
+    "repositoryPassed": 305,
+    "applicationPassed": 71,
+    "failed": 0,
+    "documentationSkipped": 4,
+    "documentationSkipNames": [
+      "SKILL.md and AGENTS.md name the marker path and bound this script uses",
+      "the sections that own the brand-task prohibition never affirm a wait",
+      "SKILL.md tells the pass to self-check with the flag this CLI accepts",
+      "every hand-over the og skill prints is one this script accepts"
+    ],
+    "documentationSkipReason": "External workspace OG documentation package absent; inherited assertions retained and REQUIRE_WORKSPACE_DOCS=1 remains fail-closed.",
+    "pythonVerifierPassed": 3,
+    "pythonVerifierFailed": 0,
+    "countPolicy": "Five Android Node tests are included within 305 repository passes. Three Python tests are reported separately, not added to historical JavaScript totals.",
+    "nativeUnitTests": "NO-SOURCE; not counted as executed native behavioral tests."
+  },
+  "validationCommands": [
+    {
+      "command": "npm ci --no-audit --no-fund",
+      "result": "PASS; 507 packages"
+    },
+    {
+      "command": "python3 -m pip install -r native-android/requirements.txt",
+      "result": "PASS; Pillow 12.3.0"
+    },
+    {
+      "command": "npm run typecheck",
+      "result": "PASS"
+    },
+    {
+      "command": "npm test",
+      "result": "PASS; 305 repository + 71 application, 0 failures, 4 inherited documentation skips"
+    },
+    {
+      "command": "npm run audit:casinos",
+      "result": "PASS; 883 canonical / 899 serialized / 60 passes"
+    },
+    {
+      "command": "npm run android:check",
+      "result": "PASS; identity, SDK, versions, wrapper/master hashes and 15 deterministic launcher resources"
+    },
+    {
+      "command": "python3 -m unittest discover -s native-android -p 'test_*.py'",
+      "result": "PASS; 3 tests, including symbolic/decimal/hex signature encoding and negative permissions"
+    },
+    {
+      "command": "npx eslint scripts/check-android.mjs scripts/android-release.test.mjs src/components/settings-page.tsx",
+      "result": "PASS"
+    },
+    {
+      "command": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production",
+      "result": "PASS; no migrations"
+    },
+    {
+      "command": "npm run android:sync",
+      "result": "PASS; persistent project synchronized"
+    },
+    {
+      "command": "git diff --exit-code -- android capacitor.config.json",
+      "result": "PASS; clean sync"
+    },
+    {
+      "command": "cd android && ./gradlew --no-daemon :app:bundleRelease",
+      "result": "EXPECTED FAILURE; missing upload key rejected with exact Release signing is missing message; CI guard PASS"
+    },
+    {
+      "command": "cd android && ./gradlew --no-daemon lintRelease testReleaseUnitTest bundleRelease assembleDebug -PallowUnsignedRelease=true",
+      "result": "PASS; BUILD SUCCESSFUL in 1m36s, 233 tasks executed"
+    },
+    {
+      "command": "python3 scripts/verify-android-bundle.py android/app/build/outputs/bundle/release/app-release.aab --expect unsigned --output artifacts/android-bundle-verification.json",
+      "result": "PASS; checksum-pinned bundletool 1.18.3 validate, compiled manifest/label/resources/config/signing/archive checks"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS; focused local correction and final documentation"
+    }
+  ],
+  "retainedCasinoInvariant": {
+    "canonical": 883,
+    "serialized": 899,
+    "passes": 60,
+    "NV": 204,
+    "OK": 113,
+    "CO": 31,
+    "TX": 4
+  },
+  "attempts": [
+    {
+      "run": 33,
+      "sha": "ed33a703feadf5ac7975f0b879ecb78d8f4c6dbb",
+      "native": "PASS",
+      "overall": "FAIL",
+      "reason": "Verifier omitted AndroidX package-local receiver permission; corrected strict four-permission verification."
+    },
+    {
+      "run": 34,
+      "sha": "9ea03d0ce6d3bf1c455f6cb4104afc0c2c556811",
+      "native": "PASS",
+      "guard": "PASS",
+      "overall": "FAIL",
+      "reason": "Verifier expected literal signature instead of compiled integer encoding; fixed interpretation, not permission policy."
+    },
+    {
+      "run": 35,
+      "sha": "5aee90acbb44ab5d48b25cb1dac39db84cefcfbf",
+      "native": "PASS",
+      "guard": "PASS",
+      "overall": "PASS",
+      "reason": "All required unsigned native/compiled artifact gates completed."
+    }
+  ],
+  "phaseBTechnicallyComplete": true,
+  "signedPlayUploadCandidateExists": false,
+  "readyForNextPreparationPhase": true,
+  "nextAction": "Owner confirms Play Console identity and intended hosted runtime, then performs physical Android acceptance using the retained development artifact; separately authorize secure upload-key setup and signed validation. No upload/publication is authorized.",
+  "documentationCommitNote": "Final evidence/continuity commit is documentation-only after the validated candidate. Obtain its exact SHA from git log -1 for this file or the branch; executable code is pinned to candidate above."
+}
