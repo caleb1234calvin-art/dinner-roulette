@@ -26,14 +26,16 @@ def manifest(protection="signature", extra=None):
 
 class BundlePermissionTests(unittest.TestCase):
     def test_accepts_androidx_signature_only_receiver_permission(self):
-        self.assertIn(RECEIVER, verifier.verify_permissions(manifest()))
+        for protection in ["signature", "2", "0x2", "0x00000002"]:
+            with self.subTest(protection=protection):
+                self.assertIn(RECEIVER, verifier.verify_permissions(manifest(protection=protection)))
 
     def test_rejects_unexpected_background_location(self):
         with self.assertRaises(AssertionError):
             verifier.verify_permissions(manifest(extra="android.permission.ACCESS_BACKGROUND_LOCATION"))
 
     def test_rejects_missing_or_weakened_receiver_protection(self):
-        for protection in [None, "normal", "dangerous"]:
+        for protection in [None, "", "normal", "dangerous", "0", "1", "3", "0x12", "signature|privileged", "invalid"]:
             with self.subTest(protection=protection), self.assertRaises(AssertionError):
                 verifier.verify_permissions(manifest(protection=protection))
 

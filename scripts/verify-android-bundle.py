@@ -32,7 +32,14 @@ def verify_permissions(manifest):
     assert set(permissions) == expected, f"Unexpected compiled permissions: {permissions}"
     declarations = [e for e in manifest.findall("permission") if e.attrib.get(ANDROID + "name") == receiver]
     assert len(declarations) == 1, "Missing or duplicate AndroidX receiver permission declaration"
-    assert declarations[0].attrib.get(ANDROID + "protectionLevel") == "signature", "AndroidX receiver permission must remain signature-only"
+    protection = declarations[0].attrib.get(ANDROID + "protectionLevel", "")
+    # Compiled manifests encode PROTECTION_SIGNATURE as integer 2 (often 0x2).
+    # Compare the complete value: extra protection flags are not accepted.
+    try:
+        protection_value = 2 if protection == "signature" else int(protection, 0)
+    except ValueError:
+        protection_value = None
+    assert protection_value == 2, f"AndroidX receiver permission must remain signature-only, got {protection!r}"
     return permissions
 
 
@@ -74,6 +81,7 @@ def main():
     assert application.attrib.get(ANDROID + "debuggable", "false") == "false"
     assert application.attrib.get(ANDROID + "usesCleartextTraffic") == "false"
     assert application.attrib.get(ANDROID + "allowBackup") == "false"
+    print("Compiled permission declarations:", json.dumps([e.attrib for e in manifest.findall("permission")], sort_keys=True))
     permissions = verify_permissions(manifest)
     print("Compiled permissions:", json.dumps(permissions))
     with zipfile.ZipFile(args.bundle) as bundle:
