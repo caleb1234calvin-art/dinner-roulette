@@ -357,7 +357,7 @@ export function PickHome() {
         <DiscoveryNotice
           tone="fallback"
           title="Live discovery is temporarily unavailable"
-          body="Dinner Roulette is using verified saved local restaurants so you can keep deciding normally."
+          body="Pick For Us is using verified saved local restaurants so you can keep deciding normally."
         />
       ) : null}
       {error ? (

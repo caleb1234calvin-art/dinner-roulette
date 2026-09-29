@@ -191,7 +191,7 @@ export function NightlifeHome() {
         <DiscoveryNotice
           tone="fallback"
           title="Live discovery is taking the night off"
-          body="Dinner Roulette is using verified saved local nightlife instead, so you can keep picking without interruption."
+          body="Pick For Us is using verified saved local nightlife instead, so you can keep picking without interruption."
         />
       ) : null}
       {error ? (

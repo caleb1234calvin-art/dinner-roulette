@@ -67,7 +67,7 @@ try {
     await page.goto(origin, { waitUntil: "domcontentloaded" });
     await page.waitForFunction(() => [...document.querySelectorAll("button")].some(b =>
       b.textContent?.trim() === "Nightlife" && Object.keys(b).some(k => k.startsWith("__reactProps$") && typeof b[k]?.onClick === "function")));
-    await page.getByRole("heading", { name: "Dinner Roulette in 30 seconds", exact: true }).waitFor();
+    await page.getByRole("heading", { name: "Pick For Us in 30 seconds", exact: true }).waitFor();
     for (let i = 0; i < 3; i++) await page.getByRole("button", { name: "Next", exact: true }).click();
     await page.getByRole("button", { name: "Got it", exact: true }).click();
     await page.getByRole("button", { name: "Nightlife", exact: true }).click();

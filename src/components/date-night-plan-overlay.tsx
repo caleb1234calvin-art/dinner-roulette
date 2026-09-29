@@ -52,7 +52,7 @@ export function DateNightPlanOverlay({
             <p className="mt-2 text-sm leading-relaxed text-muted">
               {validPlan
                 ? "Start with the sharper thrill, then land somewhere calmer. Both stops are the plan—not competing options."
-                : "Dinner Roulette only labels a stop Scare or Settle when a real matching venue exists. Widen the radius or relax your filters and try again."}
+                : "Pick For Us only labels a stop Scare or Settle when a real matching venue exists. Widen the radius or relax your filters and try again."}
             </p>
           </div>
           <button

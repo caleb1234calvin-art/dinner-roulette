@@ -1,0 +1,901 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-29",
+  "status": "REMEDIATED_AWAITING_INDEPENDENT_VERIFICATION",
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "branch": "polish/pre-google-play-pass-1",
+  "authority": {
+    "handoff": "docs/handoffs/active/pre-merge-baseline-remediation-1.md",
+    "handoffCommit": "9a33daa692b8408395b1198f30e8a30932bace92",
+    "handoffBlob": "9079c883aeb20f5484f2d8a48747d374734d196d",
+    "auditArtifactsSha256": {
+      "pick-for-us-pre-merge-baseline-audit-2026-09-29.md": "02b011df4166f1518041f3d6320216e9954043cb83672f9676c98e171a46824c",
+      "pick-for-us-pre-merge-baseline-audit-evidence-2026-09-29.zip": "ab867a77801f67ec1e316b9aa09a94d22fe18752fe62df03445f3cbdeb58d5e7"
+    },
+    "artifactAccess": "Exact report and evidence ZIP retained from the independent audit; report read in full and raw F01/F02/F03 evidence assessed before modifications."
+  },
+  "auditedBaseCandidate": "d5eba7d4829622435cbb097f38f2f98af572b5b7",
+  "actualRemediationStartingSha": "9a33daa692b8408395b1198f30e8a30932bace92",
+  "mainAtStart": "6b811ae427339902f456c2706330689c2d6ad54b",
+  "startingIntegrity": {
+    "clean": true,
+    "auditedCheckpointIsAncestor": true,
+    "laterCommits": [
+      {
+        "sha": "9a33daa692b8408395b1198f30e8a30932bace92",
+        "changedPaths": [
+          "docs/handoffs/active/pre-merge-baseline-remediation-1.md"
+        ]
+      }
+    ],
+    "remediationSurfacesChangedByLaterCommits": false
+  },
+  "changedPaths": [
+    "AI_CONTINUITY.md",
+    "audit/pick-for-us-pre-merge-baseline-remediation-1-2026-09-29.json",
+    "package-lock.json",
+    "package.json",
+    "scripts/casino-browser-live-check.mjs",
+    "scripts/casino-browser-smoke.mjs",
+    "src/components/date-night-home.tsx",
+    "src/components/date-night-plan-overlay.tsx",
+    "src/components/nightlife-home.tsx",
+    "src/components/pick-home.tsx",
+    "src/components/result-overlay.tsx"
+  ],
+  "validatedSourceSha256": {
+    "package-lock.json": "ea8c4910e82ebe30a03d01b41d689ad33dacc834cc65d28f765d78854eac9811",
+    "package.json": "e1ec12c80a6f7a7b451444b30101a1b312cbf94709ab1de5f6b466b99729171b",
+    "scripts/casino-browser-live-check.mjs": "ee30abe213d0ea9ee2de62529cb3be1368210bb98f538bd6bd2551428088bf43",
+    "scripts/casino-browser-smoke.mjs": "f488e9742fd990592a1375ca9a1858a171fb90c5967a0baee0fe8e657106f819",
+    "src/components/date-night-home.tsx": "c461424ec67b4a6c4a0136761970152db7bf7c64d053043cd240502c53e4d861",
+    "src/components/date-night-plan-overlay.tsx": "2fed35b80a1e1cb2c0d1068bbe4ee0e655919a2325405d120db3b4ae9d17bfd2",
+    "src/components/nightlife-home.tsx": "7b293a2f2e2b3db75963fc6140294fc931830be4a2806a0d431773f6178f332b",
+    "src/components/pick-home.tsx": "3bb43c0365106cf928acc36088ebf33083a6be75c01565b931d49160146f63cd",
+    "src/components/result-overlay.tsx": "788ff3be05f1b154320ced677c7021ad19819d510a018583ad5a5cc4b952eb09"
+  },
+  "findings": {
+    "F01": {
+      "status": "REMEDIATED",
+      "paths": [
+        "scripts/casino-browser-smoke.mjs",
+        "scripts/casino-browser-live-check.mjs"
+      ],
+      "oldExactHeading": "Dinner Roulette in 30 seconds",
+      "newExactHeading": "Pick For Us in 30 seconds",
+      "assertionPreserved": "Exact heading visibility followed by all four tour steps; no groups skipped, assertions weakened, or casino behavior modified.",
+      "deterministicGroupsPassed": 16,
+      "mainPrEquivalent": "PASS on Node 22.23.3 with the documented workspace-only warning adjustment",
+      "liveProviderHarness": "Corrected locator statically verified; no live-provider run claimed."
+    },
+    "F02": {
+      "status": "REMEDIATED",
+      "replacement": {
+        "before": "Dinner Roulette",
+        "after": "Pick For Us"
+      },
+      "locations": [
+        {
+          "path": "src/components/pick-home.tsx",
+          "line": 360,
+          "surface": "Dinner provider fallback"
+        },
+        {
+          "path": "src/components/nightlife-home.tsx",
+          "line": 194,
+          "surface": "Nightlife/casino provider fallback"
+        },
+        {
+          "path": "src/components/date-night-home.tsx",
+          "line": 356,
+          "surface": "Seasonal Date Night fallback"
+        },
+        {
+          "path": "src/components/date-night-home.tsx",
+          "line": 357,
+          "surface": "Normal Date Night fallback"
+        },
+        {
+          "path": "src/components/result-overlay.tsx",
+          "line": 109,
+          "surface": "Dinner external-delivery disclosure"
+        },
+        {
+          "path": "src/components/result-overlay.tsx",
+          "line": 110,
+          "surface": "Nightlife/casino discovery disclosure"
+        },
+        {
+          "path": "src/components/date-night-plan-overlay.tsx",
+          "line": 55,
+          "surface": "Incomplete seasonal-plan explanation"
+        }
+      ],
+      "scope": "Only these seven public copy replacements; all other component bytes preserved.",
+      "browser": {
+        "buildProof": {
+          "schemaVersion": 1,
+          "status": "BUILT",
+          "authFlag": "true",
+          "source": {
+            "sha256": "9d9f0d2812593c7814e92f17ff1264ccbee7d2386bbb69fd1cda6d8563c76c6a",
+            "files": 376
+          },
+          "startedAt": "2026-09-29T21:50:06.041Z",
+          "output": {
+            "sha256": "e4f2714c5972dc36d999fc1f9a8b8a8888166f5bf4320281064031628b4bb37c",
+            "files": 189
+          },
+          "completedAt": "2026-09-29T21:50:09.203Z"
+        },
+        "checks": [
+          {
+            "id": "F02-1-dinner-fallback",
+            "text": "Pick For Us is using verified saved local restaurants so you can keep deciding normally.",
+            "visibleOldBrand": false
+          },
+          {
+            "id": "F02-5-dinner-disclosure",
+            "text": "Open an independent delivery service, then search for Old Chicago. Pick For Us does not place orders, copy marketplace listings, or claim that this restaurant is available on any service.",
+            "visibleOldBrand": false
+          },
+          {
+            "id": "F02-2-nightlife-fallback",
+            "text": "Pick For Us is using verified saved local nightlife instead, so you can keep picking without interruption.",
+            "visibleOldBrand": false
+          },
+          {
+            "id": "F02-6-nightlife-disclosure",
+            "text": "Verify admission, age rules, hours, and local requirements directly with the venue. Pick For Us does not sell alcohol, accept wagers, or provide gambling services.",
+            "visibleOldBrand": false
+          },
+          {
+            "id": "F02-4-date-night-fallback",
+            "text": "Pick For Us is using verified saved local date ideas so the roulette can keep working.",
+            "visibleOldBrand": false
+          },
+          {
+            "id": "F02-3-seasonal-fallback",
+            "text": "Pick For Us is using saved seasonal anchors with unconfirmed hours. Check each stop before you leave.",
+            "visibleOldBrand": false
+          },
+          {
+            "id": "F02-7-incomplete-seasonal-plan",
+            "text": "Pick For Us only labels a stop Scare or Settle when a real matching venue exists. Widen the radius or relax your filters and try again.",
+            "visibleOldBrand": false
+          }
+        ],
+        "errors": [],
+        "fixtures": "Actual saved catalogs under the repository Overpass-outage fixture; simulated manual coordinates; reduced motion."
+      },
+      "retainedOldNames": {
+        "pattern": "dinner[ _-]?roulette|pick[ _-]?for[ _-]?me",
+        "hits": [
+          {
+            "path": "capacitor.config.json",
+            "line": 6,
+            "text": "\"url\": \"https://dinner-roulette-chi.vercel.app\",",
+            "classification": "Established hosted runtime URL; technical identity intentionally preserved."
+          },
+          {
+            "path": "native-web/index.html",
+            "line": 12,
+            "text": "<a href=\"https://dinner-roulette-chi.vercel.app\" style=\"display:inline-block;padding:1rem;color:#ffd0a6\">Try again</a>",
+            "classification": "Established hosted runtime URL; technical identity intentionally preserved."
+          },
+          {
+            "path": "public/dinner-icons/dark/README.md",
+            "line": 1,
+            "text": "# Dinner Roulette \u2014 Dark Dinner Icon Pack",
+            "classification": "Historical artwork provenance documentation; not rendered app UI."
+          },
+          {
+            "path": "src/components/date-night-home.tsx",
+            "line": 279,
+            "text": "<p className=\"text-kicker text-accent\">Dinner roulette \u00b7 Date Night</p>",
+            "classification": "Nested historical component header suppressed by .mode-home > main > header { display: none }; absent from visible browser innerText."
+          },
+          {
+            "path": "src/lib/restaurants/image-overrides.ts",
+            "line": 11,
+            "text": "* Dinner mode intentionally uses Dinner Roulette-owned category artwork instead",
+            "classification": "Source comment describing historical artwork, catalog, or integration; not runtime UI."
+          },
+          {
+            "path": "src/lib/session-hints.ts",
+            "line": 1,
+            "text": "const HINT_SEEN_KEY = \"dinner-roulette-hint-seen\";",
+            "classification": "Persisted storage key or internal reset event; preserving compatibility."
+          },
+          {
+            "path": "src/lib/session-hints.ts",
+            "line": 2,
+            "text": "export const HINTS_RESET_EVENT = \"dinner-roulette:hints-reset\";",
+            "classification": "Persisted storage key or internal reset event; preserving compatibility."
+          },
+          {
+            "path": "src/components/nightlife-home.tsx",
+            "line": 121,
+            "text": "<p className=\"text-kicker text-accent\">Dinner roulette \u00b7 Nightlife</p>",
+            "classification": "Nested historical component header suppressed by .mode-home > main > header { display: none }; absent from visible browser innerText."
+          },
+          {
+            "path": "src/components/rideshare-quick-actions.tsx",
+            "line": 4,
+            "text": "// opening Uber with a destination; Dinner Roulette does not request, price, or provide rides.",
+            "classification": "Source comment describing historical artwork, catalog, or integration; not runtime UI."
+          },
+          {
+            "path": "src/components/pick-home.tsx",
+            "line": 198,
+            "text": "<p className=\"text-kicker text-subtle\">Dinner roulette</p>",
+            "classification": "Nested historical component header suppressed by .mode-home > main > header { display: none }; absent from visible browser innerText."
+          },
+          {
+            "path": "src/lib/nightlife/casino-catalog.ts",
+            "line": 8,
+            "text": "* Dinner Roulette's distance calculations. Live OSM discovery remains the",
+            "classification": "Source comment describing historical artwork, catalog, or integration; not runtime UI."
+          },
+          {
+            "path": "src/lib/nightlife/casino-catalog-pass-33.ts",
+            "line": 8,
+            "text": "/** Texas Pass 33: complete reconciled current Dinner Roulette casino destination set. */",
+            "classification": "Source comment describing historical artwork, catalog, or integration; not runtime UI."
+          },
+          {
+            "path": "public/dinner-icons/README.md",
+            "line": 1,
+            "text": "# Dinner Roulette \u2014 Dinner icon pack",
+            "classification": "Historical artwork provenance documentation; not rendered app UI."
+          },
+          {
+            "path": "public/dinner-icons/README.md",
+            "line": 5,
+            "text": "Visual direction: original Dinner Roulette artwork using realistic claymation-style food forms on soft dark rounded tiles, with the Dinner tab's cyan/teal left rim and orange/terracotta right rim glow.",
+            "classification": "Historical artwork provenance documentation; not rendered app UI."
+          },
+          {
+            "path": "public/dinner-icons/README.md",
+            "line": 25,
+            "text": "The assets are original Dinner Roulette category artwork, not restaurant logos. Restaurant names remain factual UI text. Keep future Dinner icons consistent with the same soft realistic-clay material, centered composition, dark tile, and cyan-left/orange-right glow language.",
+            "classification": "Historical artwork provenance documentation; not rendered app UI."
+          },
+          {
+            "path": "src/lib/nightlife/CASINO_AUDIT.md",
+            "line": 7,
+            "text": "Build a conservative U.S. casino catalog for Dinner Roulette. A curated venue is activated only after its identity, physical address, and coordinates are sufficiently trusted for distance calculations. Live OpenStreetMap discovery remains supplemental.",
+            "classification": "Historical casino audit documentation; not rendered app UI."
+          },
+          {
+            "path": "src/lib/date-night/search.ts",
+            "line": 188,
+            "text": "\"User-Agent\": \"DinnerRoulette/3 (date night discovery)\",",
+            "classification": "Provider request User-Agent identifier; internal transport identity, not UI copy."
+          }
+        ],
+        "allClassified": true,
+        "blindGlobalReplacement": false
+      }
+    },
+    "F03": {
+      "status": "REMEDIATED",
+      "choice": "Pin existing lru-cache 11.5.2 as an explicit development dependency to supply Nitro/unstorage optional peer ^11.2.6.",
+      "resolution": "Root lru-cache becomes 11.5.2. Babel helper-compilation-targets retains its exact 5.1.1 package under its own node_modules. Path-scurry deduplicates its existing 11.5.2 copy to root. Both package versions, tarball URLs and integrity hashes already existed; only placement and explicit peer provisioning change.",
+      "whyExplicit": "An optional peer may be omitted by npm, but an incompatible ancestor package is still resolvable. The explicit exact pin makes the compatible root resolution deterministic, rather than retaining an extraneous nested entry.",
+      "directResolution": {
+        "required": "^11.2.6",
+        "version": "11.5.2",
+        "resolved": "/workspace/scratch/ef62df5bd332/remediation/node_modules/lru-cache/dist/commonjs/node/index.min.js",
+        "namedExport": "function",
+        "cacheSetGetEviction": "PASS",
+        "babelResolution": "/workspace/scratch/ef62df5bd332/remediation/node_modules/@babel/helper-compilation-targets/node_modules/lru-cache/index.js",
+        "babelLegacyConstructor": "function"
+      },
+      "lockEntriesChanged": [
+        "",
+        "node_modules/lru-cache",
+        "node_modules/@babel/helper-compilation-targets/node_modules/lru-cache",
+        "node_modules/path-scurry/node_modules/lru-cache"
+      ],
+      "unrelatedDirectDependencyDrift": false,
+      "unrelatedLockEntryDrift": false,
+      "capacitorPins": "8.5.2 preserved for core/Android/CLI",
+      "cleanInstall": {
+        "exit": 0,
+        "packagesAdded": 507,
+        "lockfileUnchanged": true,
+        "nodeVersions": [
+          "24.19.0",
+          "22.23.3"
+        ],
+        "npmVersion": "11.9.0"
+      },
+      "completeNpmLs": {
+        "exit": 0,
+        "problems": [],
+        "onBothNodeVersions": true
+      },
+      "lockfileUpdateNote": "npm package-lock-only proposed six unrelated bundled Tailwind metadata entries; they were excluded. Clean npm ci accepts the narrowly scoped final lock without mutation. No force/legacy-peer flags or broad upgrades used."
+    }
+  },
+  "freshValidation": {
+    "node24": [
+      {
+        "name": "android-check",
+        "command": [
+          "npm",
+          "run",
+          "android:check"
+        ],
+        "exit": 0,
+        "seconds": 0.98,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": null
+        }
+      },
+      {
+        "name": "branding-browser",
+        "command": [
+          "node",
+          "../remediation-evidence/branding-browser.mjs"
+        ],
+        "exit": 0,
+        "seconds": 9.95,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": "true"
+        }
+      },
+      {
+        "name": "capacitor-sync",
+        "command": [
+          "npm",
+          "run",
+          "android:sync"
+        ],
+        "exit": 0,
+        "seconds": 0.93,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": null
+        }
+      },
+      {
+        "name": "casino-browser",
+        "command": [
+          "node",
+          "scripts/casino-browser-smoke.mjs"
+        ],
+        "exit": 0,
+        "seconds": 17.93,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": "true"
+        }
+      },
+      {
+        "name": "casino-inventory",
+        "command": [
+          "node",
+          "scripts/audit-casino-catalog.mjs",
+          "--inventory"
+        ],
+        "exit": 0,
+        "seconds": 0.9,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": null
+        }
+      },
+      {
+        "name": "casino-national",
+        "command": [
+          "node",
+          "scripts/audit-national-coverage.mjs"
+        ],
+        "exit": 0,
+        "seconds": 0.07,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": null
+        }
+      },
+      {
+        "name": "casino-unit",
+        "command": [
+          "node",
+          "--test",
+          "scripts/casino-audit-artifacts.test.mjs",
+          "scripts/casino-audit.test.mjs",
+          "scripts/casino-catalog-lineage.test.mjs",
+          "scripts/casino-catalog-loader.test.mjs",
+          "scripts/casino-continuation.test.mjs",
+          "scripts/casino-discovery.test.mjs",
+          "scripts/casino-freeze.test.mjs",
+          "scripts/casino-frontier.test.mjs",
+          "scripts/casino-location-integration.test.mjs",
+          "scripts/casino-rc-conflicts.test.mjs",
+          "scripts/casino-rc-evidence.test.mjs",
+          "scripts/casino-rc-final.test.mjs",
+          "scripts/casino-rc-frontier.test.mjs",
+          "scripts/casino-recent-provenance.test.mjs",
+          "scripts/casino-schema.test.mjs",
+          "scripts/casino-selection.test.mjs"
+        ],
+        "exit": 0,
+        "seconds": 3.86,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": null
+        }
+      },
+      {
+        "name": "changed-lint",
+        "command": [
+          "node",
+          "node_modules/eslint/bin/eslint.js",
+          "scripts/casino-browser-smoke.mjs",
+          "scripts/casino-browser-live-check.mjs",
+          "src/components/pick-home.tsx",
+          "src/components/nightlife-home.tsx",
+          "src/components/date-night-home.tsx",
+          "src/components/result-overlay.tsx",
+          "src/components/date-night-plan-overlay.tsx"
+        ],
+        "exit": 0,
+        "seconds": 1.99,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": null
+        }
+      },
+      {
+        "name": "development-build",
+        "command": [
+          "npm",
+          "run",
+          "build:dev"
+        ],
+        "exit": 0,
+        "seconds": 3.98,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": null
+        }
+      },
+      {
+        "name": "location-browser",
+        "command": [
+          "node",
+          "scripts/location-browser.mjs"
+        ],
+        "exit": 0,
+        "seconds": 25.72,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": "true"
+        }
+      },
+      {
+        "name": "production-build",
+        "command": [
+          "node",
+          "scripts/with-app-env.mjs",
+          "node",
+          "node_modules/vite/bin/vite.js",
+          "build",
+          "--mode",
+          "production"
+        ],
+        "exit": 0,
+        "seconds": 2.84,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": "true"
+        }
+      },
+      {
+        "name": "production-capture",
+        "command": [
+          "node",
+          "scripts/browser-build-proof.mjs",
+          "capture"
+        ],
+        "exit": 0,
+        "seconds": 0.2,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": "true"
+        }
+      },
+      {
+        "name": "production-complete",
+        "command": [
+          "node",
+          "scripts/browser-build-proof.mjs",
+          "complete"
+        ],
+        "exit": 0,
+        "seconds": 0.24,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": "true"
+        }
+      },
+      {
+        "name": "python-tests",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "native-android",
+          "-p",
+          "test_*.py"
+        ],
+        "exit": 0,
+        "seconds": 0.09,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": null
+        }
+      },
+      {
+        "name": "tests",
+        "command": [
+          "npm",
+          "test"
+        ],
+        "exit": 0,
+        "seconds": 7.81,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": null
+        }
+      },
+      {
+        "name": "typecheck",
+        "command": [
+          "npm",
+          "run",
+          "typecheck"
+        ],
+        "exit": 0,
+        "seconds": 9.6,
+        "environment": {
+          "node": "24.19.0",
+          "npm": "11.9.0",
+          "VITE_AUTH_ENABLED": null
+        }
+      }
+    ],
+    "node22MainPrEquivalent": {
+      "node": "v22.23.3",
+      "npm": "11.9.0",
+      "workflow": ".github/workflows/validate-icon-pack.yml",
+      "results": [
+        {
+          "name": "npm-ci",
+          "command": [
+            "npm",
+            "ci",
+            "--no-audit",
+            "--no-fund"
+          ],
+          "environment": {},
+          "exit": 0,
+          "seconds": 14.1
+        },
+        {
+          "name": "npm-ls",
+          "command": [
+            "npm",
+            "ls",
+            "--all",
+            "--json"
+          ],
+          "environment": {},
+          "exit": 0,
+          "seconds": 0.7
+        },
+        {
+          "name": "typecheck",
+          "command": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "environment": {},
+          "exit": 0,
+          "seconds": 6.32
+        },
+        {
+          "name": "casino-unit",
+          "command": [
+            "node",
+            "--test",
+            "scripts/casino-audit-artifacts.test.mjs",
+            "scripts/casino-audit.test.mjs",
+            "scripts/casino-catalog-lineage.test.mjs",
+            "scripts/casino-catalog-loader.test.mjs",
+            "scripts/casino-continuation.test.mjs",
+            "scripts/casino-discovery.test.mjs",
+            "scripts/casino-freeze.test.mjs",
+            "scripts/casino-frontier.test.mjs",
+            "scripts/casino-location-integration.test.mjs",
+            "scripts/casino-rc-conflicts.test.mjs",
+            "scripts/casino-rc-evidence.test.mjs",
+            "scripts/casino-rc-final.test.mjs",
+            "scripts/casino-rc-frontier.test.mjs",
+            "scripts/casino-recent-provenance.test.mjs",
+            "scripts/casino-schema.test.mjs",
+            "scripts/casino-selection.test.mjs"
+          ],
+          "environment": {},
+          "exit": 0,
+          "seconds": 4.88
+        },
+        {
+          "name": "casino-inventory",
+          "command": [
+            "node",
+            "scripts/audit-casino-catalog.mjs",
+            "--inventory"
+          ],
+          "environment": {},
+          "exit": 0,
+          "seconds": 1.14
+        },
+        {
+          "name": "casino-national",
+          "command": [
+            "node",
+            "scripts/audit-national-coverage.mjs"
+          ],
+          "environment": {},
+          "exit": 0,
+          "seconds": 0.07
+        },
+        {
+          "name": "tests",
+          "command": [
+            "npm",
+            "test"
+          ],
+          "environment": {},
+          "exit": 0,
+          "seconds": 6.85,
+          "workspaceOnlyWarningFilter": "--disable-warning=UNDICI-EHPA; other warnings and existing preload preserved"
+        },
+        {
+          "name": "development-build",
+          "command": [
+            "npm",
+            "run",
+            "build:dev"
+          ],
+          "environment": {},
+          "exit": 0,
+          "seconds": 3.6
+        },
+        {
+          "name": "production-capture",
+          "command": [
+            "node",
+            "scripts/browser-build-proof.mjs",
+            "capture"
+          ],
+          "environment": {
+            "VITE_AUTH_ENABLED": "true"
+          },
+          "exit": 0,
+          "seconds": 0.15
+        },
+        {
+          "name": "production-build",
+          "command": [
+            "node",
+            "scripts/with-app-env.mjs",
+            "node",
+            "node_modules/vite/bin/vite.js",
+            "build",
+            "--mode",
+            "production"
+          ],
+          "environment": {
+            "VITE_AUTH_ENABLED": "true"
+          },
+          "exit": 0,
+          "seconds": 2.94
+        },
+        {
+          "name": "production-complete",
+          "command": [
+            "node",
+            "scripts/browser-build-proof.mjs",
+            "complete"
+          ],
+          "environment": {
+            "VITE_AUTH_ENABLED": "true"
+          },
+          "exit": 0,
+          "seconds": 0.22
+        },
+        {
+          "name": "casino-browser",
+          "command": [
+            "node",
+            "scripts/casino-browser-smoke.mjs"
+          ],
+          "environment": {
+            "CI": "true",
+            "VITE_AUTH_ENABLED": "true",
+            "CASINO_BROWSER_EXECUTABLE_PATH": "/workspace/scratch/a924cc3a1bb5/remediation-verification/engine/chromium"
+          },
+          "exit": 0,
+          "seconds": 14.39
+        },
+        {
+          "name": "location-browser",
+          "command": [
+            "node",
+            "scripts/location-browser.mjs"
+          ],
+          "environment": {
+            "VITE_AUTH_ENABLED": "true",
+            "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH": "/workspace/scratch/a924cc3a1bb5/remediation-verification/engine/chromium",
+            "LOCATION_BROWSER_OUTPUT": "/workspace/scratch/ef62df5bd332/remediation-evidence/location-browser-node22"
+          },
+          "exit": 0,
+          "seconds": 20.28
+        },
+        {
+          "name": "dinner-icons-and-lock-stability",
+          "exit": 0,
+          "dinnerIcons": 30,
+          "lockUnchanged": true,
+          "npmLsProblems": []
+        }
+      ],
+      "status": "PASS",
+      "limitations": [
+        "Local execution of workflow commands; existing Chromium executable substituted for Playwright download; npm 11.9.0; no GitHub workflow dispatch or artifact upload.",
+        "The full-test command filters only the workspace-injected UNDICI-EHPA warning so CLI stderr remains JSON. Empty Node program reproduces it; original failed run and focused isolation are retained. No repository test change or skip."
+      ]
+    },
+    "fullJavaScriptTests": {
+      "repositoryPassed": 305,
+      "applicationPassed": 71,
+      "totalPassed": 376,
+      "failed": 0,
+      "inheritedExternalDocumentationSkips": 4,
+      "passedOnNode22And24": true
+    },
+    "casinoUnitSubset": {
+      "passed": 83,
+      "alreadyIncludedInFullSuite": true
+    },
+    "pythonVerifierTests": {
+      "passed": 3
+    },
+    "casinoInvariants": {
+      "canonical": 883,
+      "serialized": 899,
+      "catalogPasses": 60,
+      "NV": 204,
+      "OK": 113,
+      "CO": 31,
+      "TX": 4
+    },
+    "browserScenarioTotals": {
+      "casino": 16,
+      "location": 19,
+      "correctedBrandingSurfaces": 7,
+      "fixtureBased": true
+    },
+    "dinnerIconAssets": 30,
+    "androidLauncherDerivatives": 15,
+    "sync": {
+      "trackedFiles": 580,
+      "drift": []
+    },
+    "finalProductionBuildProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "9d9f0d2812593c7814e92f17ff1264ccbee7d2386bbb69fd1cda6d8563c76c6a",
+        "files": 376
+      },
+      "startedAt": "2026-09-29T21:56:00.810Z",
+      "output": {
+        "sha256": "ce8668afe2780266ac465088f94add360cb6a27c794c627d5b8e245074c8a577",
+        "files": 189
+      },
+      "completedAt": "2026-09-29T21:56:03.979Z"
+    },
+    "migrationFree": true,
+    "ordinaryBuildNotInvoked": true,
+    "gitDiffCheck": {
+      "command": "git diff --check",
+      "exit": 0
+    },
+    "sanity": {
+      "nativeComparedTo": "5aee90acbb44ab5d48b25cb1dac39db84cefcfbf",
+      "nativeAndWorkflowDrift": [],
+      "deferredF04F05Unchanged": true,
+      "approvedMasterSha256": "5d823a5c4ef6cc0a76ffc8926f83f0eaae85cb8b59cdcd280d9b8d148f99500a",
+      "changedTextCommonSecretSignatures": [],
+      "trackedGeneratedOrSigningJunk": [],
+      "scope": "Changed text common signatures plus complete diff/manual review; no secret values printed."
+    }
+  },
+  "attemptsAndLimitations": [
+    {
+      "attempt": "Initial targeted branding probe",
+      "result": "6 of 7 surfaces passed, then setup timed out with Plan the night disabled.",
+      "classification": "Probe retained default Open now only, correctly excluding the Tuesday closed/unconfirmed haunt fixtures. Corrected only the external probe to disable that filter via UI. All seven then passed. Failed attempt, screenshot and script preserved."
+    },
+    {
+      "attempt": "Initial Node 22 main-PR equivalent",
+      "result": "Install, dependency tree, typecheck, 83 casino tests and both audits passed. Full suite had 304 repository passes, one failure, four skips; all 71 application tests passed.",
+      "classification": "Workspace-injected UNDICI-EHPA warning polluted brand-check CLI stderr JSON. An empty Node 22 program reproduced the warning. Appending only --disable-warning=UNDICI-EHPA to the test command NODE_OPTIONS makes the unchanged focused test and full suite pass. Network preload and all other warnings remain; no repository test change/skip. Original logs and isolation evidence retained."
+    },
+    {
+      "limitation": "Main-PR command path executed locally with Node 22.23.3/npm 11.9.0 and an available Chromium 153.0.8010.0 executable. Browser download/Actions artifact-upload steps substituted or omitted; no workflow dispatch. This is not a claim of completed remote exact-commit CI."
+    },
+    {
+      "limitation": "Desktop/headless browser fixture acceptance does not establish physical Android/WebView, live-provider service availability, production analytics delivery, signed AAB, private Console identity, Play upload/testing or publication."
+    },
+    {
+      "limitation": "Full-project lint retains its historical auth no-empty issue; only required changed-code lint was rerun. No unrelated repair."
+    }
+  ],
+  "existingNativeEvidence": {
+    "reliedUpon": true,
+    "validatedExecutableSha": "5aee90acbb44ab5d48b25cb1dac39db84cefcfbf",
+    "workflowRunId": 35654077135,
+    "nativeInputsAndWorkflowUnchanged": true,
+    "capacitorAndNativeDependencyPackageBytesUnchanged": true,
+    "lruRelocationNativeEffect": "Capacitor CLI path-scurry still resolves the exact same 11.5.2 package bytes. The explicit pin repairs Nitro web tooling resolution.",
+    "freshNativeGradleOrAabRerun": false,
+    "scope": "Prior unsigned bundle identity/resources/permissions verification, Gradle lint/build and missing-signing guard. Fresh structural/icons/Python/sync checks passed; prior AAB is not represented as a new remediation build."
+  },
+  "deferred": {
+    "F04": "Root duplicate approved icon master unchanged; no deletion.",
+    "F05": "startup-ident.tsx unchanged; inherited immediate media-failure weakness remains deferred."
+  },
+  "releaseBoundaries": {
+    "mainNotMerged": true,
+    "deploymentNotRequestedOrPerformed": true,
+    "publicationNotRequestedOrPerformed": true,
+    "signingCredentialsNotCreatedOrUsed": true,
+    "productionBuildAndGitSettings": "Remain UNVERIFIED from independent audit; separate owner release gate.",
+    "existingAndroidPushWorkflow": "The authorized branch push may run unchanged artifact-only unsigned/debug validation. It cannot publish a public release or Play upload; manual signing is not triggered."
+  },
+  "checkpointLinkage": {
+    "strategy": "This immutable record is introduced by the single remediation commit whose sole parent is actualRemediationStartingSha. It cannot embed its own commit SHA. Resolve the introducing commit from Git history and confirm its sole parent and these source hashes; the exact resulting SHA is reported after commit/push. No second evidence-only commit or amend is required.",
+    "command": "git log --diff-filter=A --format=%H -- audit/pick-for-us-pre-merge-baseline-remediation-1-2026-09-29.json",
+    "requiredSoleParent": "9a33daa692b8408395b1198f30e8a30932bace92",
+    "subject": "Remediate pre-merge baseline findings F01-F03"
+  },
+  "nextAction": "STOP after the checkpoint is committed and pushed. A fresh independent worker must verify it; this task does not declare merge readiness."
+}

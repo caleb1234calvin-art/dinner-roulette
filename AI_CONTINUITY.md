@@ -1,3 +1,21 @@
+# Pick For Us — current pre-merge remediation checkpoint (2026-09-29)
+
+This TOP section supersedes prior next-action/resume instructions below. Work remains on `polish/pre-google-play-pass-1`; no main merge or release is authorized by this checkpoint.
+
+## CURRENT — REMEDIATED_AWAITING_INDEPENDENT_VERIFICATION
+
+- Authority: `docs/handoffs/active/pre-merge-baseline-remediation-1.md`, the independent September 29 audit and its exact evidence bundle. Audited candidate: `d5eba7d4829622435cbb097f38f2f98af572b5b7`. Actual starting HEAD: `9a33daa692b8408395b1198f30e8a30932bace92`; its only change after the audit was that handoff. Main remains `6b811ae427339902f456c2706330689c2d6ad54b`.
+- Remediated only F01/F02/F03: both casino harnesses assert the exact Pick For Us tour title; seven audited current public copy strings use Pick For Us; an exact `lru-cache` 11.5.2 development pin supplies Nitro/unstorage's compatible optional peer while Babel retains 5.1.1. No unrelated dependency version/integrity change or runtime behavior edit.
+- Fresh validation: clean install and complete dependency tree pass on Node 24.19.0 and Node 22.23.3 (npm 11.9.0); direct LRU resolution/API verified; typecheck, changed-code lint, 376 JavaScript passes (305 repository + 71 application, four inherited documentation skips), three Python verifier tests, Android identity/icons, clean tracked-byte Capacitor sync, 883/899/60 casino invariants, safe development and auth-enabled migration-free production builds pass. All 16 casino groups, 19 location checks and seven corrected branding surfaces pass. The complete relevant main-PR command path passes locally on Node 22.
+- Evidence transparently retains two probe/environment attempts: default open-now correctly excluded closed/unconfirmed haunts until the external probe disabled it; Node 22's workspace-injected UNDICI-EHPA warning polluted a CLI JSON assertion until that warning alone was filtered for tests. Tests/assertions and network preload remain unchanged. Local acceptance is not a completed remote exact-head CI claim.
+- Record: `audit/pick-for-us-pre-merge-baseline-remediation-1-2026-09-29.json`. The single commit introducing that record is the remediation checkpoint and has sole parent `9a33daa692b8408395b1198f30e8a30932bace92`; use its documented Git-history linkage to recover the exact SHA without a self-referential evidence amend.
+- Android source/configuration/workflows and Capacitor 8.5.2 remain unchanged; native Gradle/AAB/signing-guard evidence still belongs to validated executable `5aee90acbb44ab5d48b25cb1dac39db84cefcfbf`, not a fresh native rebuild here. Hosted runtime, package/version/SDKs, approved master/derivatives and artifact-only release boundaries are preserved.
+- F04 (unused root icon duplicate) and F05 (inherited immediate Mordax media-error resilience) are explicitly deferred and untouched. All 17 retained old-brand source hits are classified in the evidence as hidden headers, internal identifiers, comments or historical provenance.
+- **EXACT NEXT ACTION:** after this one authorized remediation commit is pushed, STOP. A fresh independent worker must verify the exact checkpoint before any merge decision. Do not declare merge readiness from this remediation task.
+- Private Console identity, real upload signing/certificate, physical Android/WebView and Play gates remain outstanding. Main/Vercel production promotion, the effective hosted build/Git settings, migrations, signing and publication require separate owner decisions; none is authorized by this checkpoint.
+
+## Prior Android Phase B and historical continuity — preserved verbatim
+
 # Pick For Us — Android Phase B (current recovery 2026-09-21)
 
 This current checkpoint supersedes the historical resume instructions below for this task. Work only on `polish/pre-google-play-pass-1`. The former `integration/active-work-pass-1` ref returned GitHub 404 on 2026-09-16; it was not recreated. Preserve this file and historical evidence on the requested active branch.

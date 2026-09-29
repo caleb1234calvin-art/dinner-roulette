@@ -353,8 +353,8 @@ export function DateNightHome() {
           tone="fallback"
           title="Live discovery is temporarily unavailable"
           body={halloweenActive
-            ? "Dinner Roulette is using saved seasonal anchors with unconfirmed hours. Check each stop before you leave."
-            : "Dinner Roulette is using verified saved local date ideas so the roulette can keep working."}
+            ? "Pick For Us is using saved seasonal anchors with unconfirmed hours. Check each stop before you leave."
+            : "Pick For Us is using verified saved local date ideas so the roulette can keep working."}
         />
       ) : null}
       {error ? (
