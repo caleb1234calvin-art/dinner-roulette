@@ -1,3 +1,18 @@
+# Pick For Us — Production Loading Hang Remediation #1 (2026-09-30)
+
+This TOP entry supersedes earlier next actions. Historical continuity below is preserved verbatim.
+
+## CURRENT — PRODUCTION LOADING HANG REMEDIATED — AWAITING INDEPENDENT VERIFICATION
+
+- Branch `audit/production-loading-hang-1`; starting SHA/sole parent `6cc0a2b76613c52dbf4a6ea4e9a55494287cb057`, tree `9e8bec1ee5b33237a015e1d0d9c41b5ac090be45`. Frozen main remains `66eed1409e1076bcea388f36891c31fa7fa3eb84`; audit `6959ac4712bac0b26bca32879cce473e66b6eef3` is in ancestry. Only documentation preceded implementation.
+- Exactly PLH-F01/F02/F03 remediated: shared 20s provider budget / <=8s attempts; shared 25s client watchdog with explicit UI settlement, RPC signal, cleanup/replacement abort, stale guards and retry; bounded privacy-conscious logs and 95 permanent regressions. No query/ranking, mirror, radius, catalog or saved-coverage changes.
+- Final gates: 488 JavaScript passes / 4 inherited documentation skips, all 17 seasonal groups, typecheck/lint, complete dependencies/clean install, 3 Python, availability/location subsets, 883/899/60 casino invariants, Android/15 icons, byte-stable Capacitor sync and migration-free production build pass. Native all-stall handlers return fallback in ~20.023s; fake clocks prove 20s server and 25s client bounds.
+- Original audit report/JSON and original 47-member evidence ZIP are preserved unchanged under `audit/`. Separate remediation report/JSON and evidence directory record commands, source hashes, original integrity, before-fix failures, timing and limitations. Resolve the single commit introducing `audit/production-loading-hang-remediation-1-2026-09-30.json` to obtain the immutable checkpoint without a self-referential amend.
+- Browser unavailable (Chromium installation / browser-daemon startup failed); no browser/device acceptance claimed. Effective hosted maxDuration unavailable; no platform-margin value invented. RPC transport abort is proven; immediate server cancellation on browser disconnect is not claimed for the pinned handler API.
+- **NEXT:** after the authorized checkpoint push, STOP. A fresh independent Astra must verify the exact SHA/tree/sole parent before any main promotion. No merge, deployment command, settings change, migration, signing or Android/Play publication.
+
+## Prior continuity — preserved verbatim
+
 # Pick For Us — V-F03-01 targeted remediation (2026-09-29)
 
 This TOP entry supersedes earlier next actions. Historical continuity below is preserved verbatim.

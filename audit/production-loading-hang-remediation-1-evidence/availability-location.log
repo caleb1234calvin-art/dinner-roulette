@@ -1,0 +1,36 @@
+▶ seasonal date-night availability
+  ✔ keeps The Werehouse closed before its verified 2026 season starts (1.259992ms)
+  ✔ allows The Werehouse during the conservative verified season window (0.174193ms)
+  ✔ closes The Werehouse after the conservative verified window (0.189496ms)
+  ✔ uses Myer's retained operator 2026 calendar (0.195685ms)
+  ✔ fails closed for Open now when hours or the seasonal date are not confirmed (0.349328ms)
+  ✔ requires different real venues for a Scare/Settle pair (0.2183ms)
+✔ seasonal date-night availability (3.76209ms)
+✔ global manual resolution preserves Joplin, Missouri, USA (4.974761ms)
+✔ global manual resolution preserves Toronto, Ontario, Canada (1.683371ms)
+✔ global manual resolution preserves Vancouver, British Columbia, Canada (0.561027ms)
+✔ global manual resolution preserves Montréal, Québec, Canada (0.439113ms)
+✔ global manual resolution preserves London, United Kingdom (0.500706ms)
+✔ countries without regions and provider province/locality variants remain valid (0.154884ms)
+✔ invalid coordinates and malformed geocoder hits cannot become active locations (0.200913ms)
+✔ manual input preserves international addresses and postal codes without a U.S. parser (0.333594ms)
+✔ no-result, provider errors and malformed payloads are distinct from valid places (1.328486ms)
+✔ reverse lookup enriches metadata while preserving the original GPS coordinates (0.643682ms)
+✔ all reverse failures retain a usable coordinate location; invalid input never fetches (0.911356ms)
+✔ international business addresses retain province, postcode, country and full-address tags (0.177107ms)
+✔ native geolocation is opt-in, bounded, and reports each failure accurately (0.579194ms)
+✔ GPS commits before reverse resolves and preserves exact coordinates even if the label point differs (0.31095ms)
+✔ reverse failure retains coordinates and reports success; GPS failure leaves the old location alone (0.351271ms)
+✔ a newer manual choice wins over a delayed GPS callback (0.220252ms)
+✔ manual editing and unmount invalidate stale reverse and manual completions (0.243338ms)
+✔ manual no-result and invalid input retain active location and allow retry (0.171309ms)
+✔ combined control suppresses repeated GPS calls through reverse enrichment (0.156346ms)
+✔ cancelling a pending GPS request permits retry without reviving stale callbacks (0.168034ms)
+ℹ tests 26
+ℹ suites 1
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 173.067618

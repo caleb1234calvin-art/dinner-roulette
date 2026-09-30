@@ -1,0 +1,93 @@
+[
+  {
+    "gate": "install",
+    "command": "npm ci --no-audit --no-fund",
+    "exit_code": 0,
+    "result": "507 packages; clean install passed",
+    "log": "audit/production-loading-hang-remediation-1-evidence/npm-ci.log"
+  },
+  {
+    "gate": "dependency-tree",
+    "command": "npm ls --all",
+    "exit_code": 0,
+    "result": "complete tree, exit 0",
+    "log": "audit/production-loading-hang-remediation-1-evidence/dependency-tree.log"
+  },
+  {
+    "gate": "typecheck",
+    "command": "npm run typecheck",
+    "exit_code": 0,
+    "result": "passed",
+    "log": "audit/production-loading-hang-remediation-1-evidence/typecheck.log"
+  },
+  {
+    "gate": "javascript",
+    "command": "npm test",
+    "exit_code": 0,
+    "result": "488 passed; 4 inherited external-documentation skips; 0 failed (417 scripts + 71 application)",
+    "log": "audit/production-loading-hang-remediation-1-evidence/full-javascript.log"
+  },
+  {
+    "gate": "targeted",
+    "command": "node --test scripts/discovery-provider-deadlines.test.mjs scripts/discovery-client-lifecycle.test.mjs scripts/seasonal-discovery.test.mjs scripts/location-discovery.test.mjs",
+    "exit_code": 0,
+    "result": "122 passed; all also rerun in final full suite",
+    "log": "audit/production-loading-hang-remediation-1-evidence/targeted-regressions.log"
+  },
+  {
+    "gate": "availability-location",
+    "command": "node --experimental-strip-types --test src/lib/date-night/availability.test.ts src/lib/location/location.test.ts",
+    "exit_code": 0,
+    "result": "26 passed: 6 availability + 20 location; rerun in final full suite",
+    "log": "audit/production-loading-hang-remediation-1-evidence/availability-location.log"
+  },
+  {
+    "gate": "python",
+    "command": "python3 -m unittest discover -s native-android -p 'test_*.py'",
+    "exit_code": 0,
+    "result": "3 passed",
+    "log": "audit/production-loading-hang-remediation-1-evidence/python-verifier.log"
+  },
+  {
+    "gate": "lint",
+    "command": "npx eslint scripts/discovery-client-lifecycle.test.mjs scripts/discovery-provider-deadlines.test.mjs scripts/test-support/discovery-clock.mjs scripts/test-support/discovery-component-harness.mjs src/components/date-night-home.tsx src/components/discovery-status.tsx src/components/nightlife-home.tsx src/components/pick-home.tsx src/lib/date-night/search.ts src/lib/discovery/client-request.ts src/lib/discovery/provider-chain.ts src/lib/nightlife/search.ts src/lib/restaurants/overpass.ts src/lib/restaurants/search.ts audit/production-loading-hang-remediation-1-evidence/native-timing.mjs",
+    "exit_code": 0,
+    "result": "passed; no errors or warnings",
+    "log": "audit/production-loading-hang-remediation-1-evidence/changed-code-lint.log"
+  },
+  {
+    "gate": "casinos",
+    "command": "npm run audit:casinos",
+    "exit_code": 0,
+    "result": "899 serialized / 883 canonical / 60 catalog files; national coverage passed",
+    "log": "audit/production-loading-hang-remediation-1-evidence/casino-invariants.log"
+  },
+  {
+    "gate": "android",
+    "command": "npm run android:check",
+    "exit_code": 0,
+    "result": "structure/identity passed; 15 launcher resources; approved master unchanged",
+    "log": "audit/production-loading-hang-remediation-1-evidence/android-check.log"
+  },
+  {
+    "gate": "capacitor",
+    "command": "npm run android:sync",
+    "exit_code": 0,
+    "result": "sync passed; all 40 tracked Android/config files byte-identical",
+    "log": "audit/production-loading-hang-remediation-1-evidence/capacitor-sync.log"
+  },
+  {
+    "gate": "build",
+    "command": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production",
+    "exit_code": 0,
+    "result": "passed; no migration command invoked",
+    "log": "audit/production-loading-hang-remediation-1-evidence/production-build.log"
+  },
+  {
+    "gate": "native-timing",
+    "command": "node audit/production-loading-hang-remediation-1-evidence/native-timing.mjs",
+    "exit_code": 0,
+    "result": "three parallel native-clock all-stall handlers returned fallback within 20.5s tolerance",
+    "log": "audit/production-loading-hang-remediation-1-evidence/native-timing.log"
+  }
+]

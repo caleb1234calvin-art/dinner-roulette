@@ -1,0 +1,150 @@
+✔ dinner: success settles active UI and clears watchdog before deadline (348.599669ms)
+✔ dinner: fallback settles active UI and clears watchdog before deadline (4.097717ms)
+✔ dinner: error settles active UI and clears watchdog before deadline (2.461778ms)
+✔ dinner: AbortError settles active UI and clears watchdog before deadline (2.714519ms)
+✔ dinner: never-settling/abort-ignoring RPC exits loading at 25s (6.714599ms)
+✔ dinner: abort-compliant RPC exits loading at 25s (5.279403ms)
+✖ dinner: late post-timeout success cannot overwrite timeout or a successful retry (8.473895ms)
+✖ dinner: late post-timeout rejection cannot overwrite timeout or a successful retry (10.983225ms)
+✔ dinner: replacement aborts old success; old settles first (9.758014ms)
+✔ dinner: replacement aborts old success; new settles first (7.756703ms)
+✔ dinner: replacement aborts old rejection; old settles first (13.668859ms)
+✔ dinner: replacement aborts old rejection; new settles first (9.306133ms)
+✔ dinner: unmount aborts/cleans up; success cannot write after unmount (4.717584ms)
+✔ dinner: unmount aborts/cleans up; rejection cannot write after unmount (4.630076ms)
+✔ dinner: unmount aborts/cleans up; pending cannot write after unmount (4.491493ms)
+✔ dinner: radius replacement cancels transport; normal filters/options/pick still work (10.661508ms)
+✔ dinner: timeout then retry success remains current when the first RPC finally resolves (5.238931ms)
+✔ date-night: success settles active UI and clears watchdog before deadline (42.594228ms)
+✔ date-night: fallback settles active UI and clears watchdog before deadline (3.711034ms)
+✔ date-night: error settles active UI and clears watchdog before deadline (2.355247ms)
+✔ date-night: AbortError settles active UI and clears watchdog before deadline (2.21173ms)
+✔ date-night: never-settling/abort-ignoring RPC exits loading at 25s (5.720989ms)
+✔ date-night: abort-compliant RPC exits loading at 25s (4.315246ms)
+✔ date-night: late post-timeout success cannot overwrite timeout or a successful retry (6.140953ms)
+✔ date-night: late post-timeout rejection cannot overwrite timeout or a successful retry (6.132911ms)
+✔ date-night: replacement aborts old success; old settles first (6.90683ms)
+✔ date-night: replacement aborts old success; new settles first (6.060251ms)
+✔ date-night: replacement aborts old rejection; old settles first (6.88124ms)
+✔ date-night: replacement aborts old rejection; new settles first (5.926889ms)
+✔ date-night: unmount aborts/cleans up; success cannot write after unmount (4.283428ms)
+✔ date-night: unmount aborts/cleans up; rejection cannot write after unmount (4.124017ms)
+✔ date-night: unmount aborts/cleans up; pending cannot write after unmount (4.162495ms)
+✔ date-night: radius replacement cancels transport; normal filters/options/pick still work (13.226742ms)
+✔ date-night: timeout then retry success remains current when the first RPC finally resolves (4.996885ms)
+✔ nightlife: success settles active UI and clears watchdog before deadline (43.441622ms)
+✔ nightlife: fallback settles active UI and clears watchdog before deadline (2.56958ms)
+✔ nightlife: error settles active UI and clears watchdog before deadline (1.275426ms)
+✔ nightlife: AbortError settles active UI and clears watchdog before deadline (1.061393ms)
+✔ nightlife: never-settling/abort-ignoring RPC exits loading at 25s (1.545854ms)
+✔ nightlife: abort-compliant RPC exits loading at 25s (1.358762ms)
+✔ nightlife: late post-timeout success cannot overwrite timeout or a successful retry (1.705235ms)
+✔ nightlife: late post-timeout rejection cannot overwrite timeout or a successful retry (1.437771ms)
+✔ nightlife: replacement aborts old success; old settles first (2.080722ms)
+✔ nightlife: replacement aborts old success; new settles first (1.495268ms)
+✔ nightlife: replacement aborts old rejection; old settles first (1.523921ms)
+✔ nightlife: replacement aborts old rejection; new settles first (1.417641ms)
+✔ nightlife: unmount aborts/cleans up; success cannot write after unmount (1.405623ms)
+✔ nightlife: unmount aborts/cleans up; rejection cannot write after unmount (1.375748ms)
+✔ nightlife: unmount aborts/cleans up; pending cannot write after unmount (1.319572ms)
+✔ nightlife: radius replacement cancels transport; normal filters/options/pick still work (2.071478ms)
+✔ nightlife: timeout then retry success remains current when the first RPC finally resolves (1.274345ms)
+✔ Date Night: seasonal dependency replacement aborts the previous request (5.030756ms)
+✖ pinned TanStack RPC forwards the exact controller signal to fetch and settles on abort (22.054112ms)
+✔ shared lifecycle also settles synchronous RPC throws without leaving a watchdog (3.803273ms)
+✔ dinner: headers stalls settle fallback at 20s; no fourth mirror (26.296678ms)
+✔ dinner: headers stalls settle error at 20s; no fourth mirror (1.681719ms)
+✔ dinner: body stalls settle fallback at 20s; no fourth mirror (14.871266ms)
+✔ dinner: body stalls settle error at 20s; no fourth mirror (0.782101ms)
+✔ dinner: first timeout then second success returns at 8s and clears timers (3.899779ms)
+✔ dinner: immediate 429 advances without delay; saved coverage and terminal error preserved (8.827769ms)
+✔ dinner: immediate 500 advances without delay; saved coverage and terminal error preserved (7.95356ms)
+✔ dinner: immediate 504 advances without delay; saved coverage and terminal error preserved (8.292422ms)
+✔ dinner: immediate missing-elements advances without delay; saved coverage and terminal error preserved (8.766738ms)
+✔ dinner: immediate remark advances without delay; saved coverage and terminal error preserved (8.518072ms)
+✔ dinner: immediate invalid-json advances without delay; saved coverage and terminal error preserved (8.32457ms)
+✔ dinner: valid empty results retain mode-specific mirror and source semantics (1.824655ms)
+✔ dinner: normal first success is quiet, abort errors categorized, raw exceptions never logged (8.513606ms)
+✔ date-night: headers stalls settle fallback at 20s; no fourth mirror (2.51684ms)
+✔ date-night: headers stalls settle error at 20s; no fourth mirror (0.707528ms)
+✔ date-night: body stalls settle fallback at 20s; no fourth mirror (0.841611ms)
+✔ date-night: body stalls settle error at 20s; no fourth mirror (0.507657ms)
+✔ date-night: first timeout then second success returns at 8s and clears timers (1.983695ms)
+✔ date-night: immediate 429 advances without delay; saved coverage and terminal error preserved (0.818065ms)
+✔ date-night: immediate 500 advances without delay; saved coverage and terminal error preserved (0.682871ms)
+✔ date-night: immediate 504 advances without delay; saved coverage and terminal error preserved (1.236377ms)
+✔ date-night: immediate missing-elements advances without delay; saved coverage and terminal error preserved (1.308015ms)
+✔ date-night: immediate remark advances without delay; saved coverage and terminal error preserved (1.127252ms)
+✔ date-night: immediate invalid-json advances without delay; saved coverage and terminal error preserved (1.070106ms)
+✔ date-night: valid empty results retain mode-specific mirror and source semantics (0.414736ms)
+✔ date-night: normal first success is quiet, abort errors categorized, raw exceptions never logged (0.613076ms)
+✔ nightlife: headers stalls settle fallback at 20s; no fourth mirror (1.98062ms)
+✔ nightlife: headers stalls settle error at 20s; no fourth mirror (0.930214ms)
+✔ nightlife: body stalls settle fallback at 20s; no fourth mirror (0.848651ms)
+✔ nightlife: body stalls settle error at 20s; no fourth mirror (0.62957ms)
+✔ nightlife: first timeout then second success returns at 8s and clears timers (1.673327ms)
+✔ nightlife: immediate 429 advances without delay; saved coverage and terminal error preserved (0.792047ms)
+✔ nightlife: immediate 500 advances without delay; saved coverage and terminal error preserved (0.742571ms)
+✔ nightlife: immediate 504 advances without delay; saved coverage and terminal error preserved (0.70878ms)
+✔ nightlife: immediate missing-elements advances without delay; saved coverage and terminal error preserved (0.861712ms)
+✔ nightlife: immediate remark advances without delay; saved coverage and terminal error preserved (0.993531ms)
+✔ nightlife: immediate invalid-json advances without delay; saved coverage and terminal error preserved (0.910104ms)
+✔ nightlife: valid empty results retain mode-specific mirror and source semantics (0.411882ms)
+✔ nightlife: normal first success is quiet, abort errors categorized, raw exceptions never logged (0.750393ms)
+✔ Dinner retains successful-empty precedence when subsequent mirrors exhaust the budget (1.658995ms)
+✔ shared provider attempt uses native timer and real fetch body abort (109.956634ms)
+ℹ tests 95
+ℹ suites 0
+ℹ pass 92
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1163.405839
+
+✖ failing tests:
+
+test at scripts/discovery-client-lifecycle.test.mjs:65:5
+✖ dinner: late post-timeout success cannot overwrite timeout or a successful retry (8.473895ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /1 (places|place|activities|venues)/. Input:
+
+  "Dinner rouletteWhat's for Dinner?You set the rules. The app helps decide.Cheap NightKeep it easyDate NightA little nicerFast Food RunIn and outTry Something NewAdventure onFavorites OnlyPlaces we loveHow far?Within 10 miles11030Budget$ — $$$$$$$$$$$$$$What sounds good?AnythingAmericanBurgersPizzaMexicanItalianChineseThaiBBQSteakhouseBreakfastFast FoodCafeMore (23)Tonight's moodBalancedFamiliarAdventurousOpen now onlySkip places that have already closedFavorites onlyPick from places we already likeOnly one place matchesPick for usGive us options"
+
+      at TestContext.<anonymous> (file:///workspace/scratch/ec56a2f5f2c6/dinner-roulette/scripts/discovery-client-lifecycle.test.mjs:85:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: "Dinner rouletteWhat's for Dinner?You set the rules. The app helps decide.Cheap NightKeep it easyDate NightA little nicerFast Food RunIn and outTry Something NewAdventure onFavorites OnlyPlaces we loveHow far?Within 10 miles11030Budget$ — $$$$$$$$$$$$$$What sounds good?AnythingAmericanBurgersPizzaMexicanItalianChineseThaiBBQSteakhouseBreakfastFast FoodCafeMore (23)Tonight's moodBalancedFamiliarAdventurousOpen now onlySkip places that have already closedFavorites onlyPick from places we already likeOnly one place matchesPick for usGive us options",
+    expected: /1 (places|place|activities|venues)/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at scripts/discovery-client-lifecycle.test.mjs:65:5
+✖ dinner: late post-timeout rejection cannot overwrite timeout or a successful retry (10.983225ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /1 (places|place|activities|venues)/. Input:
+
+  "Dinner rouletteWhat's for Dinner?You set the rules. The app helps decide.Cheap NightKeep it easyDate NightA little nicerFast Food RunIn and outTry Something NewAdventure onFavorites OnlyPlaces we loveHow far?Within 10 miles11030Budget$ — $$$$$$$$$$$$$$What sounds good?AnythingAmericanBurgersPizzaMexicanItalianChineseThaiBBQSteakhouseBreakfastFast FoodCafeMore (23)Tonight's moodBalancedFamiliarAdventurousOpen now onlySkip places that have already closedFavorites onlyPick from places we already likeOnly one place matchesPick for usGive us options"
+
+      at TestContext.<anonymous> (file:///workspace/scratch/ec56a2f5f2c6/dinner-roulette/scripts/discovery-client-lifecycle.test.mjs:85:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: "Dinner rouletteWhat's for Dinner?You set the rules. The app helps decide.Cheap NightKeep it easyDate NightA little nicerFast Food RunIn and outTry Something NewAdventure onFavorites OnlyPlaces we loveHow far?Within 10 miles11030Budget$ — $$$$$$$$$$$$$$What sounds good?AnythingAmericanBurgersPizzaMexicanItalianChineseThaiBBQSteakhouseBreakfastFast FoodCafeMore (23)Tonight's moodBalancedFamiliarAdventurousOpen now onlySkip places that have already closedFavorites onlyPick from places we already likeOnly one place matchesPick for usGive us options",
+    expected: /1 (places|place|activities|venues)/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at scripts/discovery-client-lifecycle.test.mjs:182:1
+✖ pinned TanStack RPC forwards the exact controller signal to fetch and settles on abort (22.054112ms)
+  Error: No Start context found in AsyncLocalStorage. Make sure you are using the function within the server runtime.
+      at getStartContext (file:///workspace/scratch/ec56a2f5f2c6/dinner-roulette/node_modules/@tanstack/start-storage-context/dist/esm/async-local-storage.js:12:57)
+      at file:///workspace/scratch/ec56a2f5f2c6/dinner-roulette/node_modules/@tanstack/start-client-core/dist/esm/getStartOptions.js:4:100
+      at getDefaultSerovalPlugins (file:///workspace/scratch/ec56a2f5f2c6/dinner-roulette/node_modules/@tanstack/start-client-core/dist/esm/getDefaultSerovalPlugins.js:5:14)
+      at serverFnFetcher (file:///workspace/scratch/ec56a2f5f2c6/dinner-roulette/node_modules/@tanstack/start-client-core/dist/esm/client-rpc/serverFnFetcher.js:62:40)
+      at TestContext.<anonymous> (file:///workspace/scratch/ec56a2f5f2c6/dinner-roulette/scripts/discovery-client-lifecycle.test.mjs:187:19)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)

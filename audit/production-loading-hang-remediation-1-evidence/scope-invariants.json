@@ -1,0 +1,67 @@
+{
+  "queriesMirrorsAndNormalizersUnchanged": [
+    {
+      "file": "src/lib/restaurants/overpass.ts",
+      "unchangedDeclarations": [
+        "MIRRORS",
+        "QUERY",
+        "elementToRaw"
+      ]
+    },
+    {
+      "file": "src/lib/date-night/search.ts",
+      "unchangedDeclarations": [
+        "MIRRORS",
+        "QUERY",
+        "isRetiredDateNightName",
+        "dateNightNamesMatch",
+        "classify",
+        "moodFor",
+        "elementToPlace",
+        "combineTypes",
+        "evidenceFor",
+        "mergeIdentity",
+        "dedupeDateNight",
+        "localWithin",
+        "mergeDateNight"
+      ]
+    },
+    {
+      "file": "src/lib/nightlife/search.ts",
+      "unchangedDeclarations": [
+        "MIRRORS",
+        "QUERY",
+        "normalizedNightlifeName",
+        "dedupeCuratedCasinosLatestWins",
+        "isRetiredNightlifeName",
+        "nightlifeNamesMatch",
+        "classify",
+        "energyFor",
+        "elementToPlace",
+        "curatedWithin",
+        "mergeNightlife"
+      ]
+    }
+  ],
+  "protectedPathsUnchanged": [
+    "package.json",
+    "package-lock.json",
+    "vercel.json",
+    "vite.config.ts",
+    "capacitor.config.ts",
+    "android",
+    "src/lib/location",
+    "src/components/location-control.tsx",
+    "src/lib/restaurants/geocode.ts",
+    "src/lib/restaurants/weighting.ts",
+    "src/lib/nightlife/selection.ts",
+    "src/lib/store.ts",
+    "src/lib/date-night/availability.ts",
+    "src/lib/date-night/eligibility.ts",
+    "src/lib/date-night/coverage.ts",
+    "src/lib/date-night/provider-evidence.ts",
+    "src/lib/date-night/seasonal-catalog.ts"
+  ],
+  "catalogFilesUnchanged": 69,
+  "passed": true
+}

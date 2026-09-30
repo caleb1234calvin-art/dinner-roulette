@@ -1,0 +1,2019 @@
+{
+  "audit": "production-loading-hang-audit-1",
+  "date": "2026-09-30",
+  "timestamps_timezone": "UTC",
+  "user_timezone": "America/Chicago",
+  "created_at": "2026-09-30T20:06:24.472548+00:00",
+  "authority": "docs/handoffs/active/production-loading-hang-audit-1.md",
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "branch": "audit/production-loading-hang-1",
+  "main_sha": "66eed1409e1076bcea388f36891c31fa7fa3eb84",
+  "main_tree": "c016f0f8ac934adb0494cfa479012993972011fc",
+  "previous_main_sha": "0a8f30dc57fcc1156342d1bfc8a07524f3125e3b",
+  "audit_head": "6959ac4712bac0b26bca32879cce473e66b6eef3",
+  "audit_tree": "63ad41ee6a2b25a3af02b2fb1333f994a5554292",
+  "audit_parent": "66eed1409e1076bcea388f36891c31fa7fa3eb84",
+  "production": {
+    "url": "https://dinner-roulette-chi.vercel.app/",
+    "deployment_id": "dpl_Bd4mLsVSBtaYi5THxgdo1VqCs4qm",
+    "state": "READY",
+    "source": "git",
+    "branch": "main",
+    "revision": "66eed1409e1076bcea388f36891c31fa7fa3eb84",
+    "effective_max_duration_ms": null,
+    "persistent_site_wide_unusable_demonstrated": false
+  },
+  "preflight": {
+    "fresh_refs": true,
+    "main_frozen": true,
+    "audit_branch_only_handoff_above_frozen": true,
+    "clean_checkout_before_audit": true,
+    "production_alias_matches": true,
+    "prior_promotion_configuration_read": true,
+    "top_continuity_read": true
+  },
+  "audit_bounds": {
+    "ux_review_ms": 30000,
+    "single_live_observation_cap_ms": 100000,
+    "product_published_sla_found": false
+  },
+  "reproduction": {
+    "dinner_original_owner_hang": "not reproduced or traced",
+    "current_location": "existing Carthage browser preference; no GPS permission or device coordinates requested",
+    "dinner_current_10mi_open_on": {
+      "start": "2026-09-30T19:48:28.267Z",
+      "settled_by": "2026-09-30T19:49:51.162Z",
+      "elapsed_upper_ms": 82895,
+      "long_wait_proven": false,
+      "count": 66,
+      "fallback_notice": false,
+      "loading_cleared": true
+    },
+    "dinner_current_open_off": {
+      "count": 71,
+      "new_provider_request": false,
+      "loading_cleared": true
+    },
+    "manual_carthage_lookup": {
+      "start": "2026-09-30T19:50:36.865Z",
+      "settled_observed_by": "2026-09-30T19:51:43.723Z",
+      "elapsed_observation_upper_ms": 66858,
+      "actual_response_duration_unknown": true,
+      "success": true
+    },
+    "dinner_manual_5mi_open_off": {
+      "start": "2026-09-30T19:52:03.920Z",
+      "settled_by": "2026-09-30T19:52:05.660Z",
+      "elapsed_upper_ms": 1740,
+      "count": 44,
+      "fallback_notice": false,
+      "loading_cleared": true
+    },
+    "dinner_manual_5mi_open_on": {
+      "count": 42,
+      "new_provider_request": false,
+      "loading_cleared": true
+    },
+    "date_night_ordinary_50mi_open_off": {
+      "start": "2026-09-30T19:52:35.741Z",
+      "elapsed_upper_ms_approx": 3800,
+      "count": 238,
+      "spooky": false,
+      "fallback_notice": false,
+      "loading_cleared": true
+    },
+    "nightlife_10mi_open_off": {
+      "start": "2026-09-30T19:53:53.151Z",
+      "elapsed_lower_ms": 3264,
+      "elapsed_upper_ms_approx": 41200,
+      "count": 7,
+      "fallback_notice": false,
+      "loading_cleared": true
+    },
+    "seasonal_repeat_50mi_open_off": {
+      "start": "2026-09-30T19:55:26.143Z",
+      "categories": [
+        "haunted-house",
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "spooky": true,
+      "loading_lower_ms": 80456,
+      "settled_upper_ms": 90571,
+      "count": 2,
+      "source": "fallback",
+      "loading_cleared": true
+    },
+    "raw_browser_records": [
+      {
+        "case": "seasonal-existing-session",
+        "firstVisible": "2026-09-30T19:46:37.086Z",
+        "lastLoading": "2026-09-30T19:47:52.455Z",
+        "settledBy": "2026-09-30T19:48:17.143Z",
+        "result": "fallback",
+        "count": 2,
+        "note": "Navigation preceded first visible sample; duration is interval-censored."
+      },
+      {
+        "case": "dinner-current-location",
+        "start": "2026-09-30T19:48:28.267Z",
+        "settledObservedAt": "2026-09-30T19:49:51.162Z",
+        "elapsedUpperMs": 82895
+      },
+      {
+        "case": "dinner-manual-carthage-5mi-open-off",
+        "start": "2026-09-30T19:52:03.920Z",
+        "settledAt": "2026-09-30T19:52:05.660Z",
+        "elapsedMs": 1740
+      },
+      {
+        "case": "ordinary-date-night-carthage-50mi-open-off",
+        "start": "2026-09-30T19:52:35.741Z",
+        "settledBy": "2026-09-30T19:52:39.024Z",
+        "elapsedUpperMs": 3283,
+        "result": "no fallback notice; 238 activities",
+        "note": "Locator wait errored before snapshot confirmed settlement; use observation upper bound."
+      },
+      {
+        "case": "nightlife-carthage-10mi-open-off",
+        "start": "2026-09-30T19:53:53.151Z",
+        "observedAt": "2026-09-30T19:53:56.457Z",
+        "elapsedUpperMs": 3306
+      },
+      {
+        "case": "nightlife-carthage-10mi-open-off-final",
+        "start": "2026-09-30T19:53:53.151Z",
+        "lastLoading": "2026-09-30T19:53:56.415Z",
+        "settledBy": "2026-09-30T19:54:33.855Z",
+        "result": "7 venues; no fallback notice"
+      },
+      {
+        "case": "seasonal-repeat-carthage-50mi-three-categories-open-off",
+        "start": "2026-09-30T19:55:26.143Z",
+        "lastLoading": "2026-09-30T19:56:46.599Z",
+        "lastLoadingElapsedMs": 80456,
+        "settledBy": "2026-09-30T19:56:56.714Z",
+        "elapsedUpperMs": 90571,
+        "result": "fallback",
+        "count": 2
+      }
+    ],
+    "timing_caveat": "Raw ordinary and Nightlife timestamps were taken immediately before final AX snapshot; conservative rounded bounds include snapshot overhead. Initial polls are not precise response latencies; browser network durations unavailable."
+  },
+  "rpc_paths": {
+    "dinner": "/_serverFn/98643e628e23400f0229d25a4e6b98ee2ba6cb3e2d9b5a7d0d1cf9f1a3f0571a",
+    "date_night": "/_serverFn/608c34308c11ff23ec95123e13645a3f5e73aa32bd73cdd2742409e0d31b0253",
+    "nightlife": "/_serverFn/19f4a1d3d706509159de41d77dab873c4c976e6d810eeb0596ed0165be4cdde7"
+  },
+  "timeout_accounting": {
+    "dinner_provider_attempts_ms": [
+      22000,
+      22000,
+      22000,
+      22000
+    ],
+    "date_night_provider_attempts_ms": [
+      22000,
+      22000,
+      22000,
+      22000
+    ],
+    "nightlife_all_stall_attempts_ms": [
+      8000,
+      8000,
+      4000
+    ],
+    "provider_backoff_ms": 0,
+    "additional_retries": 0,
+    "manual_geocoder_ms": 12000,
+    "geolocation_ms": 10000,
+    "client_deadline_ms": null,
+    "server_platform_effective_deadline_ms": null,
+    "normal_abort_required_for_provider_bounds": true,
+    "synchronous_processing_not_preempted": true
+  },
+  "provider_probes": {
+    "records": [
+      {
+        "mode": "Dinner",
+        "scenario": "abort-at-timeout",
+        "logicalElapsedMs": 88000,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 22000,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 44000,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 66000,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 133,
+        "settled": true
+      },
+      {
+        "mode": "Dinner",
+        "scenario": "429",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 133,
+        "settled": true
+      },
+      {
+        "mode": "Dinner",
+        "scenario": "500",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 133,
+        "settled": true
+      },
+      {
+        "mode": "Dinner",
+        "scenario": "504",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 133,
+        "settled": true
+      },
+      {
+        "mode": "Dinner",
+        "scenario": "malformed",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 133,
+        "settled": true
+      },
+      {
+        "mode": "Dinner",
+        "scenario": "invalid-json",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 133,
+        "settled": true
+      },
+      {
+        "mode": "Dinner",
+        "scenario": "body-until-abort",
+        "logicalElapsedMs": 88000,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 22000,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 44000,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 66000,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 133,
+        "settled": true
+      },
+      {
+        "mode": "Dinner",
+        "scenario": "first-timeout-second-success",
+        "logicalElapsedMs": 22000,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 22000,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "live",
+        "count": 54,
+        "settled": true
+      },
+      {
+        "mode": "Dinner",
+        "scenario": "empty-success",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "live",
+        "count": 53,
+        "settled": true
+      },
+      {
+        "mode": "Dinner",
+        "scenario": "outage-outside-saved-coverage",
+        "settled": true,
+        "result": "rejected error"
+      },
+      {
+        "mode": "Date Night",
+        "scenario": "abort-at-timeout",
+        "logicalElapsedMs": 88000,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 22000,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 44000,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 66000,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 15,
+        "settled": true
+      },
+      {
+        "mode": "Date Night",
+        "scenario": "429",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 15,
+        "settled": true
+      },
+      {
+        "mode": "Date Night",
+        "scenario": "500",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 15,
+        "settled": true
+      },
+      {
+        "mode": "Date Night",
+        "scenario": "504",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 15,
+        "settled": true
+      },
+      {
+        "mode": "Date Night",
+        "scenario": "malformed",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 15,
+        "settled": true
+      },
+      {
+        "mode": "Date Night",
+        "scenario": "invalid-json",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 15,
+        "settled": true
+      },
+      {
+        "mode": "Date Night",
+        "scenario": "body-until-abort",
+        "logicalElapsedMs": 88000,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 22000,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 44000,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 66000,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "fallback",
+        "count": 15,
+        "settled": true
+      },
+      {
+        "mode": "Date Night",
+        "scenario": "first-timeout-second-success",
+        "logicalElapsedMs": 22000,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 22000,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "merged",
+        "count": 16,
+        "settled": true
+      },
+      {
+        "mode": "Date Night",
+        "scenario": "empty-success",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 22000
+          }
+        ],
+        "source": "merged",
+        "count": 15,
+        "settled": true
+      },
+      {
+        "mode": "Date Night",
+        "scenario": "outage-outside-saved-coverage",
+        "settled": true,
+        "result": "rejected error"
+      },
+      {
+        "mode": "Nightlife",
+        "scenario": "abort-at-timeout",
+        "logicalElapsedMs": 20000,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 8000,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 16000,
+            "timeoutMs": 4000
+          }
+        ],
+        "source": "fallback",
+        "count": 18,
+        "settled": true
+      },
+      {
+        "mode": "Nightlife",
+        "scenario": "429",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          }
+        ],
+        "source": "fallback",
+        "count": 18,
+        "settled": true
+      },
+      {
+        "mode": "Nightlife",
+        "scenario": "500",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          }
+        ],
+        "source": "fallback",
+        "count": 18,
+        "settled": true
+      },
+      {
+        "mode": "Nightlife",
+        "scenario": "504",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          }
+        ],
+        "source": "fallback",
+        "count": 18,
+        "settled": true
+      },
+      {
+        "mode": "Nightlife",
+        "scenario": "malformed",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          }
+        ],
+        "source": "fallback",
+        "count": 18,
+        "settled": true
+      },
+      {
+        "mode": "Nightlife",
+        "scenario": "invalid-json",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://overpass-api.de/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          }
+        ],
+        "source": "fallback",
+        "count": 18,
+        "settled": true
+      },
+      {
+        "mode": "Nightlife",
+        "scenario": "body-until-abort",
+        "logicalElapsedMs": 20000,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 8000,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+            "startMs": 16000,
+            "timeoutMs": 4000
+          }
+        ],
+        "source": "fallback",
+        "count": 18,
+        "settled": true
+      },
+      {
+        "mode": "Nightlife",
+        "scenario": "first-timeout-second-success",
+        "logicalElapsedMs": 8000,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          },
+          {
+            "url": "https://overpass.private.coffee/api/interpreter",
+            "startMs": 8000,
+            "timeoutMs": 8000
+          }
+        ],
+        "source": "merged",
+        "count": 19,
+        "settled": true
+      },
+      {
+        "mode": "Nightlife",
+        "scenario": "empty-success",
+        "logicalElapsedMs": 0,
+        "calls": [
+          {
+            "url": "https://overpass.openstreetmap.fr/api/interpreter",
+            "startMs": 0,
+            "timeoutMs": 8000
+          }
+        ],
+        "source": "merged",
+        "count": 18,
+        "settled": true
+      },
+      {
+        "mode": "Nightlife",
+        "scenario": "outage-outside-saved-coverage",
+        "settled": true,
+        "result": "rejected error"
+      },
+      {
+        "mode": "Nightlife",
+        "scenario": "native-real-time-all-mirrors-abort",
+        "elapsedMs": 20001.301962999998,
+        "source": "fallback",
+        "count": 18
+      },
+      {
+        "mode": "Dinner",
+        "scenario": "native-real-time-all-mirrors-abort",
+        "elapsedMs": 88010.998968,
+        "source": "fallback",
+        "count": 133
+      },
+      {
+        "mode": "Date Night",
+        "scenario": "native-real-time-all-mirrors-abort",
+        "elapsedMs": 88012.380825,
+        "source": "fallback",
+        "count": 15
+      }
+    ],
+    "timingCalls": [
+      {
+        "url": "https://overpass.openstreetmap.fr/api/interpreter",
+        "start": "2026-09-30T19:49:44.521Z",
+        "body": "\n[out:json][timeout:20];\n(\n  nwr[\"amenity\"=\"restaurant\"](around:24140,37.176447,-94.310223);\n  nwr[\"amenity\"=\"fast_food\"](around:2",
+        "abortedAt": "2026-09-30T19:50:06.521Z"
+      },
+      {
+        "url": "https://overpass.openstreetmap.fr/api/interpreter",
+        "start": "2026-09-30T19:49:44.522Z",
+        "body": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:24140,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"",
+        "abortedAt": "2026-09-30T19:50:06.523Z"
+      },
+      {
+        "url": "https://overpass.openstreetmap.fr/api/interpreter",
+        "start": "2026-09-30T19:49:44.522Z",
+        "body": "\n[out:json][timeout:20];\n(\n  nwr[\"amenity\"=\"bar\"](around:24140,37.176447,-94.310223);\n  nwr[\"amenity\"=\"pub\"](around:24140,37.17644",
+        "abortedAt": "2026-09-30T19:49:52.523Z"
+      },
+      {
+        "url": "https://overpass.private.coffee/api/interpreter",
+        "start": "2026-09-30T19:49:52.523Z",
+        "body": "\n[out:json][timeout:20];\n(\n  nwr[\"amenity\"=\"bar\"](around:24140,37.176447,-94.310223);\n  nwr[\"amenity\"=\"pub\"](around:24140,37.17644",
+        "abortedAt": "2026-09-30T19:50:00.525Z"
+      },
+      {
+        "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+        "start": "2026-09-30T19:50:00.525Z",
+        "body": "\n[out:json][timeout:20];\n(\n  nwr[\"amenity\"=\"bar\"](around:24140,37.176447,-94.310223);\n  nwr[\"amenity\"=\"pub\"](around:24140,37.17644",
+        "abortedAt": "2026-09-30T19:50:04.523Z"
+      },
+      {
+        "url": "https://overpass.private.coffee/api/interpreter",
+        "start": "2026-09-30T19:50:06.521Z",
+        "body": "\n[out:json][timeout:20];\n(\n  nwr[\"amenity\"=\"restaurant\"](around:24140,37.176447,-94.310223);\n  nwr[\"amenity\"=\"fast_food\"](around:2",
+        "abortedAt": "2026-09-30T19:50:28.522Z"
+      },
+      {
+        "url": "https://overpass.private.coffee/api/interpreter",
+        "start": "2026-09-30T19:50:06.523Z",
+        "body": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:24140,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"",
+        "abortedAt": "2026-09-30T19:50:28.523Z"
+      },
+      {
+        "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+        "start": "2026-09-30T19:50:28.522Z",
+        "body": "\n[out:json][timeout:20];\n(\n  nwr[\"amenity\"=\"restaurant\"](around:24140,37.176447,-94.310223);\n  nwr[\"amenity\"=\"fast_food\"](around:2",
+        "abortedAt": "2026-09-30T19:50:50.524Z"
+      },
+      {
+        "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+        "start": "2026-09-30T19:50:28.523Z",
+        "body": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:24140,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"",
+        "abortedAt": "2026-09-30T19:50:50.524Z"
+      },
+      {
+        "url": "https://overpass-api.de/api/interpreter",
+        "start": "2026-09-30T19:50:50.524Z",
+        "body": "\n[out:json][timeout:20];\n(\n  nwr[\"amenity\"=\"restaurant\"](around:24140,37.176447,-94.310223);\n  nwr[\"amenity\"=\"fast_food\"](around:2",
+        "abortedAt": "2026-09-30T19:51:12.525Z"
+      },
+      {
+        "url": "https://overpass-api.de/api/interpreter",
+        "start": "2026-09-30T19:50:50.524Z",
+        "body": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:24140,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"",
+        "abortedAt": "2026-09-30T19:51:12.534Z"
+      }
+    ]
+  },
+  "component_probes": [
+    {
+      "mode": "Dinner",
+      "scenario": "success",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 7,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "fallback",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "fallback",
+            "title": "Live discovery is temporarily unavailable"
+          }
+        ],
+        "writes": 7,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "error",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "error",
+            "title": "We couldn't refresh restaurants right now"
+          }
+        ],
+        "writes": 7,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "abort-rejection",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "error",
+            "title": "We couldn't refresh restaurants right now"
+          }
+        ],
+        "writes": 7,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "pending-transport",
+      "passed": true,
+      "after": {
+        "loading": true,
+        "notices": [],
+        "writes": 4,
+        "requestCount": 1,
+        "watchdogTimersRegistered": 0
+      },
+      "requestSignalProvided": false,
+      "note": "Unresolved RPC stays loading after virtual timers advance 10 minutes; no client watchdog timer exists. Not a claim about a real browser TCP connection."
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "stale-resolves-after-new",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 11,
+        "requestCount": 2
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "stale-rejects-before-new",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 11,
+        "requestCount": 2
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "navigation",
+      "passed": true,
+      "after": {
+        "loading": true,
+        "notices": [],
+        "writes": 4,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false,
+      "note": "Unmounted closure suppresses state writes, but does not abort RPC. Remount with settled RPC succeeds."
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "success",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 7,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "fallback",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "fallback",
+            "title": "Live discovery is temporarily unavailable"
+          }
+        ],
+        "writes": 7,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "error",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "error",
+            "title": "We couldn't refresh date ideas right now"
+          }
+        ],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "abort-rejection",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "error",
+            "title": "We couldn't refresh date ideas right now"
+          }
+        ],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "pending-transport",
+      "passed": true,
+      "after": {
+        "loading": true,
+        "notices": [],
+        "writes": 3,
+        "requestCount": 1,
+        "watchdogTimersRegistered": 0
+      },
+      "requestSignalProvided": false,
+      "note": "Unresolved RPC stays loading after virtual timers advance 10 minutes; no client watchdog timer exists. Not a claim about a real browser TCP connection."
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "stale-resolves-after-new",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 10,
+        "requestCount": 2
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "stale-rejects-before-new",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 10,
+        "requestCount": 2
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "navigation",
+      "passed": true,
+      "after": {
+        "loading": true,
+        "notices": [],
+        "writes": 3,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false,
+      "note": "Unmounted closure suppresses state writes, but does not abort RPC. Remount with settled RPC succeeds."
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "success",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "fallback",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "fallback",
+            "title": "Live discovery is taking the night off"
+          }
+        ],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "error",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "error",
+            "title": "We couldn't refresh nightlife right now"
+          }
+        ],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "abort-rejection",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "error",
+            "title": "We couldn't refresh nightlife right now"
+          }
+        ],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "pending-transport",
+      "passed": true,
+      "after": {
+        "loading": true,
+        "notices": [],
+        "writes": 3,
+        "requestCount": 1,
+        "watchdogTimersRegistered": 0
+      },
+      "requestSignalProvided": false,
+      "note": "Unresolved RPC stays loading after virtual timers advance 10 minutes; no client watchdog timer exists. Not a claim about a real browser TCP connection."
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "stale-resolves-after-new",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 9,
+        "requestCount": 2
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "stale-rejects-before-new",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 9,
+        "requestCount": 2
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "navigation",
+      "passed": true,
+      "after": {
+        "loading": true,
+        "notices": [],
+        "writes": 3,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false,
+      "note": "Unmounted closure suppresses state writes, but does not abort RPC. Remount with settled RPC succeeds."
+    }
+  ],
+  "previous_provider_probes": [
+    {
+      "mode": "Dinner",
+      "logicalElapsedMs": 88000,
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "timeoutMs": 22000
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "timeoutMs": 22000
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "timeoutMs": 22000
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "timeoutMs": 22000
+        }
+      ],
+      "source": "fallback",
+      "count": 133
+    },
+    {
+      "mode": "Date Night",
+      "logicalElapsedMs": 88000,
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "timeoutMs": 22000
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "timeoutMs": 22000
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "timeoutMs": 22000
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "timeoutMs": 22000
+        }
+      ],
+      "source": "fallback",
+      "count": 15
+    },
+    {
+      "mode": "Nightlife",
+      "logicalElapsedMs": 20000,
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "timeoutMs": 8000
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "timeoutMs": 8000
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "timeoutMs": 4000
+        }
+      ],
+      "source": "fallback",
+      "count": 18
+    }
+  ],
+  "previous_component_probes": [
+    {
+      "mode": "Dinner",
+      "scenario": "success",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 7,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "fallback",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "fallback",
+            "title": "Live discovery is temporarily unavailable"
+          }
+        ],
+        "writes": 7,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "error",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "error",
+            "title": "We couldn't refresh restaurants right now"
+          }
+        ],
+        "writes": 7,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "abort-rejection",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "error",
+            "title": "We couldn't refresh restaurants right now"
+          }
+        ],
+        "writes": 7,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "pending-transport",
+      "passed": true,
+      "after": {
+        "loading": true,
+        "notices": [],
+        "writes": 4,
+        "requestCount": 1,
+        "watchdogTimersRegistered": 0
+      },
+      "requestSignalProvided": false,
+      "note": "Unresolved RPC stays loading after virtual timers advance 10 minutes; no client watchdog timer exists. Not a claim about a real browser TCP connection."
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "stale-resolves-after-new",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 11,
+        "requestCount": 2
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "stale-rejects-before-new",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 11,
+        "requestCount": 2
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Dinner",
+      "scenario": "navigation",
+      "passed": true,
+      "after": {
+        "loading": true,
+        "notices": [],
+        "writes": 4,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false,
+      "note": "Unmounted closure suppresses state writes, but does not abort RPC. Remount with settled RPC succeeds."
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "success",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "fallback",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "fallback",
+            "title": "Live discovery is temporarily unavailable"
+          }
+        ],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "error",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "error",
+            "title": "We couldn't refresh date ideas right now"
+          }
+        ],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "abort-rejection",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "error",
+            "title": "We couldn't refresh date ideas right now"
+          }
+        ],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "pending-transport",
+      "passed": true,
+      "after": {
+        "loading": true,
+        "notices": [],
+        "writes": 3,
+        "requestCount": 1,
+        "watchdogTimersRegistered": 0
+      },
+      "requestSignalProvided": false,
+      "note": "Unresolved RPC stays loading after virtual timers advance 10 minutes; no client watchdog timer exists. Not a claim about a real browser TCP connection."
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "stale-resolves-after-new",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 9,
+        "requestCount": 2
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "stale-rejects-before-new",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 9,
+        "requestCount": 2
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Date Night",
+      "scenario": "navigation",
+      "passed": true,
+      "after": {
+        "loading": true,
+        "notices": [],
+        "writes": 3,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false,
+      "note": "Unmounted closure suppresses state writes, but does not abort RPC. Remount with settled RPC succeeds."
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "success",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "fallback",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "fallback",
+            "title": "Live discovery is taking the night off"
+          }
+        ],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "error",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "error",
+            "title": "We couldn't refresh nightlife right now"
+          }
+        ],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "abort-rejection",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [
+          {
+            "tone": "error",
+            "title": "We couldn't refresh nightlife right now"
+          }
+        ],
+        "writes": 6,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "pending-transport",
+      "passed": true,
+      "after": {
+        "loading": true,
+        "notices": [],
+        "writes": 3,
+        "requestCount": 1,
+        "watchdogTimersRegistered": 0
+      },
+      "requestSignalProvided": false,
+      "note": "Unresolved RPC stays loading after virtual timers advance 10 minutes; no client watchdog timer exists. Not a claim about a real browser TCP connection."
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "stale-resolves-after-new",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 9,
+        "requestCount": 2
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "stale-rejects-before-new",
+      "passed": true,
+      "after": {
+        "loading": false,
+        "notices": [],
+        "writes": 9,
+        "requestCount": 2
+      },
+      "requestSignalProvided": false
+    },
+    {
+      "mode": "Nightlife",
+      "scenario": "navigation",
+      "passed": true,
+      "after": {
+        "loading": true,
+        "notices": [],
+        "writes": 3,
+        "requestCount": 1
+      },
+      "requestSignalProvided": false,
+      "note": "Unmounted closure suppresses state writes, but does not abort RPC. Remount with settled RPC succeeds."
+    }
+  ],
+  "audit_scenario_groups": 84,
+  "existing_targeted_tests": {
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0,
+    "suites": [
+      "scripts/location-discovery.test.mjs",
+      "scripts/seasonal-discovery.test.mjs",
+      "scripts/casino-discovery.test.mjs"
+    ]
+  },
+  "source_comparison": {
+    "previousMain": "0a8f30dc57fcc1156342d1bfc8a07524f3125e3b",
+    "currentMain": "66eed1409e1076bcea388f36891c31fa7fa3eb84",
+    "files": [
+      {
+        "file": "src/components/pick-home.tsx",
+        "previousBlob": "e1d5a453a578e130361303e86df9750c1c1c10b8",
+        "currentBlob": "e1d5a453a578e130361303e86df9750c1c1c10b8",
+        "identical": true
+      },
+      {
+        "file": "src/lib/restaurants/search.ts",
+        "previousBlob": "bfb0a075170c5783f4a279b8beaa20e106e4c17d",
+        "currentBlob": "bfb0a075170c5783f4a279b8beaa20e106e4c17d",
+        "identical": true
+      },
+      {
+        "file": "src/lib/restaurants/overpass.ts",
+        "previousBlob": "0968d9b36eaf92170e1700a0ea2b0ab5c7245171",
+        "currentBlob": "0968d9b36eaf92170e1700a0ea2b0ab5c7245171",
+        "identical": true
+      },
+      {
+        "file": "src/lib/restaurants/geocode.ts",
+        "previousBlob": "fea1a4e87672830dd3ec6d9309489eb0eeb167ab",
+        "currentBlob": "fea1a4e87672830dd3ec6d9309489eb0eeb167ab",
+        "identical": true
+      },
+      {
+        "file": "src/components/nightlife-home.tsx",
+        "previousBlob": "c33905e2eb0151570c647cdec1f355c5367c83cf",
+        "currentBlob": "c33905e2eb0151570c647cdec1f355c5367c83cf",
+        "identical": true
+      },
+      {
+        "file": "src/lib/nightlife/search.ts",
+        "previousBlob": "2f8c7a68c7908be52124ec90a4805bad0621ca4d",
+        "currentBlob": "2f8c7a68c7908be52124ec90a4805bad0621ca4d",
+        "identical": true
+      },
+      {
+        "file": "src/components/discovery-status.tsx",
+        "previousBlob": "33b0823df84717b5c5f957df7f125d818a5eba51",
+        "currentBlob": "33b0823df84717b5c5f957df7f125d818a5eba51",
+        "identical": true
+      },
+      {
+        "file": "src/lib/store.ts",
+        "previousBlob": "08f91a7f16eb2044d430b12edc676229287ecee3",
+        "currentBlob": "08f91a7f16eb2044d430b12edc676229287ecee3",
+        "identical": true
+      },
+      {
+        "file": "src/components/location-control.tsx",
+        "previousBlob": "b8cdacd19239b1713e87e3f87ed12f842bef6be0",
+        "currentBlob": "b8cdacd19239b1713e87e3f87ed12f842bef6be0",
+        "identical": true
+      },
+      {
+        "file": "src/lib/location/controller.ts",
+        "previousBlob": "9b2f993ae373b4680beb88ac977800d0c65813e1",
+        "currentBlob": "9b2f993ae373b4680beb88ac977800d0c65813e1",
+        "identical": true
+      },
+      {
+        "file": "package.json",
+        "previousBlob": "30d96b3783fb76560e17215b37cef564be46c51d",
+        "currentBlob": "30d96b3783fb76560e17215b37cef564be46c51d",
+        "identical": true
+      },
+      {
+        "file": "package-lock.json",
+        "previousBlob": "5d584829ffdf9909d0fea0998e28c2e0183184fa",
+        "currentBlob": "5d584829ffdf9909d0fea0998e28c2e0183184fa",
+        "identical": true
+      },
+      {
+        "file": "vite.config.ts",
+        "previousBlob": "f0aa67ddb6b5067c5aece4678259caa57638aa5a",
+        "currentBlob": "f0aa67ddb6b5067c5aece4678259caa57638aa5a",
+        "identical": true
+      },
+      {
+        "file": "vercel.json",
+        "previousBlob": "65925d91f882a10433e3eb43f53ed802914c969b",
+        "currentBlob": "65925d91f882a10433e3eb43f53ed802914c969b",
+        "identical": true
+      },
+      {
+        "file": "src/components/date-night-home.tsx",
+        "previousBlob": "9fcbdc23ad759e16593971915209228424ae99cc",
+        "currentBlob": "890e6989c9df7d57ab05d321d9df74228af73f68",
+        "identical": false
+      },
+      {
+        "file": "src/lib/date-night/search.ts",
+        "previousBlob": "ed93d4bd030b4a1d61ea09a98bb0887a70f62b1b",
+        "currentBlob": "6d54b169ca0ed5c443f17e6c3ddd03a995f620a6",
+        "identical": false
+      },
+      {
+        "file": "src/components/mode-home.tsx",
+        "previousBlob": "fd6af58a3ed366040b2ccf367d7fe633179b4819",
+        "currentBlob": "204f77ecf59fc821c5ceba964d8300790ca3ca6c",
+        "identical": false
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "PLH-F01",
+      "severity": "IMPORTANT",
+      "title": "Inherited excessive aggregate provider wait",
+      "modes": [
+        "Dinner",
+        "Date Night"
+      ],
+      "root_cause": "Four sequential independent 22000-ms provider requests; existing fallback withheld until all fail.",
+      "live_evidence": {
+        "case": "seasonal-repeat",
+        "loading_lower_bound_ms": 80456,
+        "settled_upper_bound_ms": 90571
+      },
+      "deterministic_evidence": {
+        "dinner_ms": 88010.998968,
+        "date_night_ms": 88012.380825,
+        "nightlife_control_ms": 20001.301962999998
+      },
+      "introduced_by_seasonal_release": false,
+      "remediation": "Shared 20000-ms aggregate provider budget, each attempt <= min(8000, remaining); preserve fallback and response semantics."
+    },
+    {
+      "id": "PLH-F02",
+      "severity": "IMPORTANT",
+      "title": "No client RPC deadline or transport cancellation",
+      "modes": [
+        "Dinner",
+        "Date Night",
+        "Nightlife"
+      ],
+      "root_cause": "Loading clears only on RPC settlement; no signal or watchdog; cleanup only suppresses writes.",
+      "deterministic_evidence": {
+        "virtual_advance_ms": 600000,
+        "loading_after_advance": true,
+        "watchdog_timers_registered": 0,
+        "rpc_signal_provided": false
+      },
+      "live_indefinite_hang_reproduced": false,
+      "introduced_by_seasonal_release": false,
+      "remediation": "25000-ms client watchdog with explicit UI settlement, RPC AbortController and abort on cleanup/replacement; retain stale guards."
+    },
+    {
+      "id": "PLH-F03",
+      "severity": "NON-BLOCKING",
+      "title": "Missing cumulative-timeout and cross-mode lifecycle tests; missing mirror observability",
+      "root_cause": "Existing outage tests reject immediately and do not enforce elapsed budgets or discovery RPC liveness; mirror errors swallowed without timing logs.",
+      "remediation": "Permanent slow/abort/body/transport/lifecycle regressions and bounded structured provider/source/outcome telemetry."
+    }
+  ],
+  "severity_counts": {
+    "BLOCKER": 0,
+    "IMPORTANT": 2,
+    "NON-BLOCKING": 1
+  },
+  "rollback_relevance": "rollback would not remove implicated inherited/shared path",
+  "upstream_outage_proven": false,
+  "specific_owner_incident_root_cause_confirmed": false,
+  "client_spinner_surviving_settled_active_request_found": false,
+  "logs": {
+    "available": true,
+    "successful_browser_rpcs_observed": true,
+    "returned_5xx_logs": 0,
+    "returned_429_logs": 0,
+    "runtime_errors_returned": 0,
+    "upstream_statuses_available": false,
+    "request_durations_available": false,
+    "auxiliary_audit_rpc_403_count": 4,
+    "auxiliary_403_attribution": "audit CLI requests, not owner incident or provider outage"
+  },
+  "limitations": [
+    "Original owner device/network event uninstrumented",
+    "No browser response bodies or per-request network timing",
+    "No server per-mirror telemetry",
+    "Effective hosted maxDuration not exposed",
+    "No physical Android/WebView or device GPS test",
+    "Existing-session current Carthage path used; no fresh-storage default-Joplin browser run",
+    "Command-line RPC auxiliary capture returned403; no bypass/retry to evade protection",
+    "Deterministic component hooks/RPC/leaf controls modeled; no HTTP serialization acceptance implied",
+    "Targeted tests only; no fresh full build, full suite or clean install"
+  ],
+  "mutations": {
+    "product_code": false,
+    "catalogs": false,
+    "commit": false,
+    "push": false,
+    "merge": false,
+    "deployment": false,
+    "settings": false,
+    "migration": false,
+    "rollback": false,
+    "publish": false,
+    "audit_artifacts_only": true
+  },
+  "final_state": "PRODUCTION LOADING INCIDENT \u2014 REMEDIATION RECOMMENDED"
+}

@@ -1,0 +1,19 @@
+{
+  "start_sha": "6cc0a2b76613c52dbf4a6ea4e9a55494287cb057",
+  "start_tree": "9e8bec1ee5b33237a015e1d0d9c41b5ac090be45",
+  "frozen_main": "66eed1409e1076bcea388f36891c31fa7fa3eb84",
+  "frozen_main_tree": "c016f0f8ac934adb0494cfa479012993972011fc",
+  "audit_checkpoint": "6959ac4712bac0b26bca32879cce473e66b6eef3",
+  "audit_tree": "63ad41ee6a2b25a3af02b2fb1333f994a5554292",
+  "branch": "audit/production-loading-hang-1",
+  "clean_isolated_checkout_at_start": true,
+  "fresh_refs_at_start_and_before_commit": true,
+  "docs_only_descendants": [
+    "docs/handoffs/active/production-loading-hang-remediation-1.md"
+  ],
+  "audit_artifact_integrity": "original-audit-integrity.json",
+  "executable_changes_since_frozen_base_before_remediation": false,
+  "head_before_commit": "6cc0a2b76613c52dbf4a6ea4e9a55494287cb057",
+  "remote_branch_before_commit": "6cc0a2b76613c52dbf4a6ea4e9a55494287cb057",
+  "remote_main_before_commit": "66eed1409e1076bcea388f36891c31fa7fa3eb84"
+}

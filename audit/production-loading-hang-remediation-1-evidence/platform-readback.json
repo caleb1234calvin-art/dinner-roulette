@@ -1,0 +1,30 @@
+{
+  "deployment": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_Bd4mLsVSBtaYi5THxgdo1VqCs4qm\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-8k8g1b5dr-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1790792367178,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"66eed1409e1076bcea388f36891c31fa7fa3eb84\",\n        \"githubCommitMessage\": \"Add seasonal discovery controlled main promotion handoff\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"dinner-roulette-chi.vercel.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1790792368320,\n      \"ready\": 1790792382918,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  "project": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Input validation error: Invalid arguments for tool get_project: idOrName: Invalid input: expected string, received undefined"
+        }
+      ],
+      "structuredContent": {
+        "error_code": "INVALID_ARGUMENT"
+      },
+      "isError": true
+    }
+  },
+  "effectiveMaxDuration": null
+}

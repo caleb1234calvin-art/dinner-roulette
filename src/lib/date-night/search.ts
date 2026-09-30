@@ -1,3 +1,4 @@
+import { createProviderChain, ProviderResponseError } from "../discovery/provider-chain";
 import { DEFAULT_LOCATION } from "../restaurants/types";
 import { formatOsmAddress, requireCoordinates } from "../location/model";
 import { createServerFn } from "@tanstack/react-start";
@@ -206,7 +207,7 @@ function dedupeDateNight(places: DateNightPlace[]): DateNightPlace[] {
   return result;
 }
 
-async function queryMirror(url: string, body: string, halloweenSeason: boolean): Promise<DateNightPlace[]> {
+async function queryMirror(url: string, body: string, halloweenSeason: boolean, signal: AbortSignal): Promise<DateNightPlace[]> {
   const response = await fetch(url, {
     method: "POST",
     headers: {
@@ -215,11 +216,11 @@ async function queryMirror(url: string, body: string, halloweenSeason: boolean):
       "User-Agent": "DinnerRoulette/3 (date night discovery)",
     },
     body,
-    signal: AbortSignal.timeout(22000),
+    signal,
   });
-  if (!response.ok) throw new Error(`Overpass ${response.status}`);
+  if (!response.ok) throw new ProviderResponseError(`Overpass ${response.status}`, "http-error", response.status);
   const json = (await response.json()) as { elements?: OverpassElement[]; remark?: string };
-  if (!Array.isArray(json?.elements) || json.remark) throw new Error("Live discovery returned an incomplete response. Please try again.");
+  if (!Array.isArray(json?.elements) || json.remark) throw new ProviderResponseError("Live discovery returned an incomplete response. Please try again.", "malformed");
   const unique = new Map<string, DateNightPlace>();
   for (const element of json.elements.slice().sort((a, b) => `${a.type}-${a.id}`.localeCompare(`${b.type}-${b.id}`))) {
     const place = elementToPlace(element, halloweenSeason);
@@ -271,19 +272,20 @@ export const searchDateNight = createServerFn({ method: "POST" })
     const halloweenSeason = isHalloweenDateNightActive(data.spookySeasonEnabled);
     const body = `data=${encodeURIComponent(QUERY(data.lat, data.lon, radiusMeters, halloweenSeason))}`;
     const local = localWithin(data.lat, data.lon, fetchRadius, halloweenSeason);
+    const chain = createProviderChain("date-night");
     let lastError: unknown;
-
-    for (const mirror of MIRRORS) {
-      try {
-        const live = await queryMirror(mirror, body, halloweenSeason);
-        const venues = mergeDateNight(live, local);
-        return { venues, source: local.length ? "merged" : "live" };
-      } catch (error) {
-        lastError = error;
-      }
+    try {
+      const live = await chain.run(MIRRORS, (mirror, signal) => queryMirror(mirror, body, halloweenSeason, signal));
+      const venues = mergeDateNight(live, local);
+      const source = local.length ? "merged" : "live";
+      chain.finish(source);
+      return { venues, source };
+    } catch (error) {
+      lastError = error;
     }
 
     if (local.length > 0) {
+      chain.finish("fallback");
       return {
         venues: dedupeDateNight(local),
         source: "fallback",
@@ -291,5 +293,6 @@ export const searchDateNight = createServerFn({ method: "POST" })
       };
     }
 
+    chain.finish("error");
     throw lastError instanceof Error ? lastError : new Error("Could not load date-night activities for that area.");
   });

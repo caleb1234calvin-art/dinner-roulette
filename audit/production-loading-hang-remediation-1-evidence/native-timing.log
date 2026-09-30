@@ -1,0 +1,53 @@
+[discovery] provider-chain {
+  mode: 'dinner',
+  source: 'fallback',
+  durationMs: 20005,
+  budgetExhausted: true,
+  attempts: [
+    { mirror: 1, durationMs: 8010, outcome: 'timeout' },
+    { mirror: 2, durationMs: 8008, outcome: 'timeout' },
+    { mirror: 3, durationMs: 3987, outcome: 'timeout' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'fallback',
+  durationMs: 20022,
+  budgetExhausted: true,
+  attempts: [
+    { mirror: 1, durationMs: 8009, outcome: 'timeout' },
+    { mirror: 2, durationMs: 8008, outcome: 'timeout' },
+    { mirror: 3, durationMs: 4005, outcome: 'timeout' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'fallback',
+  durationMs: 20017,
+  budgetExhausted: true,
+  attempts: [
+    { mirror: 1, durationMs: 8003, outcome: 'timeout' },
+    { mirror: 2, durationMs: 8008, outcome: 'timeout' },
+    { mirror: 3, durationMs: 4005, outcome: 'timeout' }
+  ]
+}
+[
+  {
+    "mode": "dinner",
+    "elapsedMs": 20023.006863,
+    "source": "fallback",
+    "withinTolerance": true
+  },
+  {
+    "mode": "date-night",
+    "elapsedMs": 20022.843666,
+    "source": "fallback",
+    "withinTolerance": true
+  },
+  {
+    "mode": "nightlife",
+    "elapsedMs": 20022.631033999998,
+    "source": "fallback",
+    "withinTolerance": true
+  }
+]

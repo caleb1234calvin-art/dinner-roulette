@@ -1,0 +1,396 @@
+{
+  "remediation": "production-loading-hang-remediation-1",
+  "date": "2026-09-30",
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "branch": "audit/production-loading-hang-1",
+  "authority": "docs/handoffs/active/production-loading-hang-remediation-1.md",
+  "preflight": {
+    "start_sha": "6cc0a2b76613c52dbf4a6ea4e9a55494287cb057",
+    "start_tree": "9e8bec1ee5b33237a015e1d0d9c41b5ac090be45",
+    "frozen_main": "66eed1409e1076bcea388f36891c31fa7fa3eb84",
+    "frozen_main_tree": "c016f0f8ac934adb0494cfa479012993972011fc",
+    "audit_checkpoint": "6959ac4712bac0b26bca32879cce473e66b6eef3",
+    "audit_tree": "63ad41ee6a2b25a3af02b2fb1333f994a5554292",
+    "branch": "audit/production-loading-hang-1",
+    "clean_isolated_checkout_at_start": true,
+    "fresh_refs_at_start_and_before_commit": true,
+    "docs_only_descendants": [
+      "docs/handoffs/active/production-loading-hang-remediation-1.md"
+    ],
+    "audit_artifact_integrity": "original-audit-integrity.json",
+    "executable_changes_since_frozen_base_before_remediation": false,
+    "head_before_commit": "6cc0a2b76613c52dbf4a6ea4e9a55494287cb057",
+    "remote_branch_before_commit": "6cc0a2b76613c52dbf4a6ea4e9a55494287cb057",
+    "remote_main_before_commit": "66eed1409e1076bcea388f36891c31fa7fa3eb84"
+  },
+  "findings": [
+    {
+      "id": "PLH-F01",
+      "state": "remediated-awaiting-independent-verification",
+      "implementation": "Shared monotonic 20000 ms aggregate budget, min(8000 ms, remaining) attempt timers through fetch/body/normalization, no mirror starts after expiry. Timers cleared and controllers aborted after each attempt; existing mode-specific empty/fallback/error/source semantics retained.",
+      "paths": [
+        "src/lib/discovery/provider-chain.ts",
+        "src/lib/restaurants/overpass.ts",
+        "src/lib/restaurants/search.ts",
+        "src/lib/date-night/search.ts",
+        "src/lib/nightlife/search.ts"
+      ]
+    },
+    {
+      "id": "PLH-F02",
+      "state": "remediated-awaiting-independent-verification",
+      "implementation": "Shared effect-owned 25000 ms watchdog, one AbortController per request, TanStack top-level signal, explicit UI error/loading settlement independent of abort cooperation, invalidate-before-abort on timeout/cleanup/replacement, late promise callbacks ignored. Same-location retry exposed in existing notice.",
+      "paths": [
+        "src/lib/discovery/client-request.ts",
+        "src/components/pick-home.tsx",
+        "src/components/date-night-home.tsx",
+        "src/components/nightlife-home.tsx",
+        "src/components/discovery-status.tsx"
+      ]
+    },
+    {
+      "id": "PLH-F03",
+      "state": "remediated-awaiting-independent-verification",
+      "implementation": "41 provider and 54 client/transport scenario groups (95 permanent tests), baseline controls, native timing and response-body abort integration. One bounded structured provider record for degraded/empty requests, no ordinary first-success log; one client timeout event. No raw errors, coordinates, addresses, identities, queries or secrets.",
+      "paths": [
+        "scripts/discovery-provider-deadlines.test.mjs",
+        "scripts/discovery-client-lifecycle.test.mjs",
+        "scripts/test-support/discovery-clock.mjs",
+        "scripts/test-support/discovery-component-harness.mjs",
+        "src/lib/discovery/provider-chain.ts",
+        "src/lib/discovery/client-request.ts"
+      ]
+    }
+  ],
+  "policy": {
+    "aggregate_provider_ms": 20000,
+    "maximum_attempt_ms": 8000,
+    "client_deadline_ms": 25000,
+    "normal_all_stall_attempts_ms": [
+      8000,
+      8000,
+      4000
+    ],
+    "provider_bounds_require_abort_compliance": true,
+    "client_settlement_requires_abort_compliance": false,
+    "uses_monotonic_provider_clock": true
+  },
+  "performance": {
+    "deterministic_all_stall_ms": {
+      "dinner": 20000,
+      "date-night": 20000,
+      "nightlife": 20000
+    },
+    "deterministic_unresolved_ui_ms": {
+      "dinner": 25000,
+      "date-night": 25000,
+      "nightlife": 25000
+    },
+    "first_timeout_second_success_ms": 8000,
+    "fallback_before_watchdog_preserved": true,
+    "late_settlement_ignored": true,
+    "replacement_and_unmount_cancel": true,
+    "native_provider_measurements": [
+      {
+        "mode": "dinner",
+        "elapsedMs": 20023.006863,
+        "source": "fallback",
+        "withinTolerance": true
+      },
+      {
+        "mode": "date-night",
+        "elapsedMs": 20022.843666,
+        "source": "fallback",
+        "withinTolerance": true
+      },
+      {
+        "mode": "nightlife",
+        "elapsedMs": 20022.631033999998,
+        "source": "fallback",
+        "withinTolerance": true
+      }
+    ],
+    "native_tolerance_ms": 500
+  },
+  "validation": [
+    {
+      "gate": "install",
+      "command": "npm ci --no-audit --no-fund",
+      "exit_code": 0,
+      "result": "507 packages; clean install passed",
+      "log": "audit/production-loading-hang-remediation-1-evidence/npm-ci.log"
+    },
+    {
+      "gate": "dependency-tree",
+      "command": "npm ls --all",
+      "exit_code": 0,
+      "result": "complete tree, exit 0",
+      "log": "audit/production-loading-hang-remediation-1-evidence/dependency-tree.log"
+    },
+    {
+      "gate": "typecheck",
+      "command": "npm run typecheck",
+      "exit_code": 0,
+      "result": "passed",
+      "log": "audit/production-loading-hang-remediation-1-evidence/typecheck.log"
+    },
+    {
+      "gate": "javascript",
+      "command": "npm test",
+      "exit_code": 0,
+      "result": "488 passed; 4 inherited external-documentation skips; 0 failed (417 scripts + 71 application)",
+      "log": "audit/production-loading-hang-remediation-1-evidence/full-javascript.log"
+    },
+    {
+      "gate": "targeted",
+      "command": "node --test scripts/discovery-provider-deadlines.test.mjs scripts/discovery-client-lifecycle.test.mjs scripts/seasonal-discovery.test.mjs scripts/location-discovery.test.mjs",
+      "exit_code": 0,
+      "result": "122 passed; all also rerun in final full suite",
+      "log": "audit/production-loading-hang-remediation-1-evidence/targeted-regressions.log"
+    },
+    {
+      "gate": "availability-location",
+      "command": "node --experimental-strip-types --test src/lib/date-night/availability.test.ts src/lib/location/location.test.ts",
+      "exit_code": 0,
+      "result": "26 passed: 6 availability + 20 location; rerun in final full suite",
+      "log": "audit/production-loading-hang-remediation-1-evidence/availability-location.log"
+    },
+    {
+      "gate": "python",
+      "command": "python3 -m unittest discover -s native-android -p 'test_*.py'",
+      "exit_code": 0,
+      "result": "3 passed",
+      "log": "audit/production-loading-hang-remediation-1-evidence/python-verifier.log"
+    },
+    {
+      "gate": "lint",
+      "command": "npx eslint scripts/discovery-client-lifecycle.test.mjs scripts/discovery-provider-deadlines.test.mjs scripts/test-support/discovery-clock.mjs scripts/test-support/discovery-component-harness.mjs src/components/date-night-home.tsx src/components/discovery-status.tsx src/components/nightlife-home.tsx src/components/pick-home.tsx src/lib/date-night/search.ts src/lib/discovery/client-request.ts src/lib/discovery/provider-chain.ts src/lib/nightlife/search.ts src/lib/restaurants/overpass.ts src/lib/restaurants/search.ts audit/production-loading-hang-remediation-1-evidence/native-timing.mjs",
+      "exit_code": 0,
+      "result": "passed; no errors or warnings",
+      "log": "audit/production-loading-hang-remediation-1-evidence/changed-code-lint.log"
+    },
+    {
+      "gate": "casinos",
+      "command": "npm run audit:casinos",
+      "exit_code": 0,
+      "result": "899 serialized / 883 canonical / 60 catalog files; national coverage passed",
+      "log": "audit/production-loading-hang-remediation-1-evidence/casino-invariants.log"
+    },
+    {
+      "gate": "android",
+      "command": "npm run android:check",
+      "exit_code": 0,
+      "result": "structure/identity passed; 15 launcher resources; approved master unchanged",
+      "log": "audit/production-loading-hang-remediation-1-evidence/android-check.log"
+    },
+    {
+      "gate": "capacitor",
+      "command": "npm run android:sync",
+      "exit_code": 0,
+      "result": "sync passed; all 40 tracked Android/config files byte-identical",
+      "log": "audit/production-loading-hang-remediation-1-evidence/capacitor-sync.log"
+    },
+    {
+      "gate": "build",
+      "command": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production",
+      "exit_code": 0,
+      "result": "passed; no migration command invoked",
+      "log": "audit/production-loading-hang-remediation-1-evidence/production-build.log"
+    },
+    {
+      "gate": "native-timing",
+      "command": "node audit/production-loading-hang-remediation-1-evidence/native-timing.mjs",
+      "exit_code": 0,
+      "result": "three parallel native-clock all-stall handlers returned fallback within 20.5s tolerance",
+      "log": "audit/production-loading-hang-remediation-1-evidence/native-timing.log"
+    }
+  ],
+  "test_counts": {
+    "new_provider": 41,
+    "new_client_transport": 54,
+    "new_total": 95,
+    "seasonal_groups": 17,
+    "location_discovery": 10,
+    "availability": 6,
+    "location_model_controller": 20,
+    "full_scripts_passed": 417,
+    "full_application_passed": 71,
+    "full_total_passed": 488,
+    "full_inherited_skips": 4,
+    "full_failed": 0,
+    "python_passed": 3
+  },
+  "negative_control": {
+    "target": "6cc0a2b76613c52dbf4a6ea4e9a55494287cb057",
+    "selected_tests": 6,
+    "expected_failures": 6,
+    "interpretation": "Dinner/Date Night provider timing fails; all three client watchdogs fail; Nightlife retained 20s bound but lacks required telemetry. Baseline was extracted separately without modifying the remediation worktree."
+  },
+  "original_audit": {
+    "report_sha256": "25e70c91bc986a8fa0c18cbfbf1d033f53416f191e6b2b500462b90e6d296864",
+    "json_sha256": "03d6ade45704f1f53fb0cde3ed642af0bd77bcbcc09066c2e2d20b877122e313",
+    "archive": "audit/production-loading-hang-audit-1-evidence-2026-09-30.zip",
+    "archive_sha256": "261893fe60427cfe8ad475f85d9d1845cc73c2f11594bb278779a4d1d8fd1f6b",
+    "archive_members": 47,
+    "original_manifest_entries_verified": 44,
+    "preserved_unchanged": true,
+    "integrity_manifest": "audit/production-loading-hang-remediation-1-evidence/original-audit-integrity.json"
+  },
+  "source_hashes": [
+    {
+      "path": "scripts/discovery-client-lifecycle.test.mjs",
+      "sha256": "5b24779f62932dd9ad327bc63786c103c83fe1be130ae9cf4f65231718f2009f"
+    },
+    {
+      "path": "scripts/discovery-provider-deadlines.test.mjs",
+      "sha256": "f71872e3fb3f3e5ca5b8056d1b177f4e21036180882dc90df5ab52fd9288489e"
+    },
+    {
+      "path": "scripts/test-support/discovery-clock.mjs",
+      "sha256": "c6c307bd3350dc856112f65dc2d6d4b727dbbc1d001a03f4e7cedddb492679d6"
+    },
+    {
+      "path": "scripts/test-support/discovery-component-harness.mjs",
+      "sha256": "b800517acfcea137dbca11e0c553f12f322a0a76a2e55f7388d915a99b4e50a0"
+    },
+    {
+      "path": "src/components/date-night-home.tsx",
+      "sha256": "5e47dc4fdd676dfa38c47e2611324b84a8dca7827ac39e7fd72d5db0bd01285d"
+    },
+    {
+      "path": "src/components/discovery-status.tsx",
+      "sha256": "0af74d7fc2888cd3ac42ed1772b2ea38f9de944d40075492cfacef09d2fff5c6"
+    },
+    {
+      "path": "src/components/nightlife-home.tsx",
+      "sha256": "84680a951e7266263467d55099f7ac5dc3572a4b8774d4c92870bcce1319d352"
+    },
+    {
+      "path": "src/components/pick-home.tsx",
+      "sha256": "4996846980f4535a862fa6b84d10137d1b7b11149621a6c17b41db85abbf89a5"
+    },
+    {
+      "path": "src/lib/date-night/search.ts",
+      "sha256": "5448d4416ddebc960830b04cbbe070c401f7736269c91559dc46a009f9737b4f"
+    },
+    {
+      "path": "src/lib/discovery/client-request.ts",
+      "sha256": "88eb962d39fab52460eb41bfe0b268fcf93e6f4dfc276380d62fd04eb838a861"
+    },
+    {
+      "path": "src/lib/discovery/provider-chain.ts",
+      "sha256": "e223716101651d19b1ac8b466d966691334fced3ad932d6058870eb5f58386bf"
+    },
+    {
+      "path": "src/lib/nightlife/search.ts",
+      "sha256": "b7061b1ebc8ba0c6a897bab31b9914c3a11cebe21bc286666760eb795e9bc2d2"
+    },
+    {
+      "path": "src/lib/restaurants/overpass.ts",
+      "sha256": "55c0755a6ac3540323c368693e968c7157737d0627824c12f68d713d7a61d07c"
+    },
+    {
+      "path": "src/lib/restaurants/search.ts",
+      "sha256": "f52368b9bbca1ec79a30ec1a16964190118cdbee679f1d3c6bb32a91a01f3b65"
+    }
+  ],
+  "source_invariants": {
+    "queriesMirrorsAndNormalizersUnchanged": [
+      {
+        "file": "src/lib/restaurants/overpass.ts",
+        "unchangedDeclarations": [
+          "MIRRORS",
+          "QUERY",
+          "elementToRaw"
+        ]
+      },
+      {
+        "file": "src/lib/date-night/search.ts",
+        "unchangedDeclarations": [
+          "MIRRORS",
+          "QUERY",
+          "isRetiredDateNightName",
+          "dateNightNamesMatch",
+          "classify",
+          "moodFor",
+          "elementToPlace",
+          "combineTypes",
+          "evidenceFor",
+          "mergeIdentity",
+          "dedupeDateNight",
+          "localWithin",
+          "mergeDateNight"
+        ]
+      },
+      {
+        "file": "src/lib/nightlife/search.ts",
+        "unchangedDeclarations": [
+          "MIRRORS",
+          "QUERY",
+          "normalizedNightlifeName",
+          "dedupeCuratedCasinosLatestWins",
+          "isRetiredNightlifeName",
+          "nightlifeNamesMatch",
+          "classify",
+          "energyFor",
+          "elementToPlace",
+          "curatedWithin",
+          "mergeNightlife"
+        ]
+      }
+    ],
+    "protectedPathsUnchanged": [
+      "package.json",
+      "package-lock.json",
+      "vercel.json",
+      "vite.config.ts",
+      "capacitor.config.ts",
+      "android",
+      "src/lib/location",
+      "src/components/location-control.tsx",
+      "src/lib/restaurants/geocode.ts",
+      "src/lib/restaurants/weighting.ts",
+      "src/lib/nightlife/selection.ts",
+      "src/lib/store.ts",
+      "src/lib/date-night/availability.ts",
+      "src/lib/date-night/eligibility.ts",
+      "src/lib/date-night/coverage.ts",
+      "src/lib/date-night/provider-evidence.ts",
+      "src/lib/date-night/seasonal-catalog.ts"
+    ],
+    "catalogFilesUnchanged": 69,
+    "passed": true
+  },
+  "limitations": [
+    "Browser acceptance unavailable: Chromium download/extraction failed; agent-browser daemon failed startup. No browser hydration/layout, real hosted RPC, or physical Android/WebView/GPS acceptance claimed.",
+    "Effective hosted maxDuration not exposed. Deployment readback verified frozen production; get_project returned connector schema error. Repository and fresh generated Vercel function config contain no maxDuration. Meaningful platform margin cannot be verified; no setting changed.",
+    "Client signal reaches pinned TanStack fetch. Pinned ServerFnCtx/handler does not expose that signal; immediate server/provider cancellation on browser disconnect is not claimed. Independently bounded provider work may continue until its 20-second budget.",
+    "Provider timings assume normal AbortSignal-compliant fetch/body reads; synchronous processing and event-loop/browser suspension cannot be preempted. Client watchdog explicitly settles under a responsive JS scheduler even if transport ignores abort.",
+    "Four inherited tests skip absent external workspace OG documentation; no new skips. No fresh native compilation/signing or remote CI pass claim."
+  ],
+  "implementation_attempts": [
+    "Initial 95-test run had 3 harness failures: Dinner singular-count wording (two cases) and missing TanStack test runtime context (one). Corrected harness assertions/context; later runs pass. Logs retained unchanged.",
+    "Final review added controller abort after every provider attempt to release unread HTTP-error bodies; final full suite/typecheck/lint/build/native timing rerun passed.",
+    "First staged whitespace check flagged raw test-output whitespace/terminal blank lines. Preserved byte-exact raw logs in raw-validation-logs.zip, normalized trailing whitespace only in readable log copies, and reran the final gate. No assertion/result text changed."
+  ],
+  "checkpoint": {
+    "definition": "The unique commit introducing audit/production-loading-hang-remediation-1-2026-09-30.json",
+    "sole_parent": "6cc0a2b76613c52dbf4a6ea4e9a55494287cb057",
+    "resolve_commit_command": "git log --diff-filter=A --format=%H -- audit/production-loading-hang-remediation-1-2026-09-30.json",
+    "resolve_tree_parent_command": "git show -s --format=\"%H %T %P\" <resolved-commit>",
+    "note": "Exact resulting SHA/tree/sole parent reported after authorized push; avoids a self-referential amended evidence commit."
+  },
+  "prohibited_actions": {
+    "main_ref_change": false,
+    "merge": false,
+    "deployment_command": false,
+    "vercel_settings_change": false,
+    "migration": false,
+    "catalog_change": false,
+    "query_or_ranking_change": false,
+    "provider_change": false,
+    "android_or_play_publication": false
+  },
+  "final_state": "PRODUCTION LOADING HANG REMEDIATED \u2014 AWAITING INDEPENDENT VERIFICATION",
+  "raw_log_integrity": "audit/production-loading-hang-remediation-1-evidence/raw-log-integrity.json"
+}

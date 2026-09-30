@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { AlertTriangle, CloudOff, LoaderCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -5,10 +6,12 @@ export function DiscoveryNotice({
   tone,
   title,
   body,
+  onRetry,
 }: {
   tone: "fallback" | "error";
   title: string;
   body: string;
+  onRetry?: () => void;
 }) {
   const Icon = tone === "fallback" ? CloudOff : AlertTriangle;
   return (
@@ -27,6 +30,7 @@ export function DiscoveryNotice({
       <div>
         <p className="text-sm font-medium text-fg">{title}</p>
         <p className="mt-1 text-xs leading-relaxed text-subtle">{body}</p>
+        {onRetry ? <Button type="button" size="sm" variant="secondary" className="mt-3" onClick={onRetry}>Try again</Button> : null}
       </div>
     </div>
   );

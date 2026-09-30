@@ -1,0 +1,122 @@
+✖ dinner: never-settling/abort-ignoring RPC exits loading at 25s (261.561578ms)
+✖ date-night: never-settling/abort-ignoring RPC exits loading at 25s (62.829466ms)
+✖ nightlife: never-settling/abort-ignoring RPC exits loading at 25s (35.336699ms)
+✖ dinner: headers stalls settle fallback at 20s; no fourth mirror (4.900578ms)
+✖ date-night: headers stalls settle fallback at 20s; no fourth mirror (1.473024ms)
+✖ nightlife: headers stalls settle fallback at 20s; no fourth mirror (2.807548ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1026.515952
+
+✖ failing tests:
+
+test at scripts/discovery-client-lifecycle.test.mjs:37:5
+✖ dinner: never-settling/abort-ignoring RPC exits loading at 25s (261.561578ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  true !== false
+
+      at TestContext.<anonymous> (file:///workspace/scratch/ec56a2f5f2c6/baseline/scripts/discovery-client-lifecycle.test.mjs:47:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/discovery-client-lifecycle.test.mjs:37:5
+✖ date-night: never-settling/abort-ignoring RPC exits loading at 25s (62.829466ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  true !== false
+
+      at TestContext.<anonymous> (file:///workspace/scratch/ec56a2f5f2c6/baseline/scripts/discovery-client-lifecycle.test.mjs:47:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/discovery-client-lifecycle.test.mjs:37:5
+✖ nightlife: never-settling/abort-ignoring RPC exits loading at 25s (35.336699ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  true !== false
+
+      at TestContext.<anonymous> (file:///workspace/scratch/ec56a2f5f2c6/baseline/scripts/discovery-client-lifecycle.test.mjs:47:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/discovery-provider-deadlines.test.mjs:25:7
+✖ dinner: headers stalls settle fallback at 20s; no fourth mirror (4.900578ms)
+  AssertionError [ERR_ASSERTION]: active chain must settle by aggregate budget
+  + actual - expected
+
+  + undefined
+  - 20000
+
+      at TestContext.<anonymous> (file:///workspace/scratch/ec56a2f5f2c6/baseline/scripts/discovery-provider-deadlines.test.mjs:37:16)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 20000,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/discovery-provider-deadlines.test.mjs:25:7
+✖ date-night: headers stalls settle fallback at 20s; no fourth mirror (1.473024ms)
+  AssertionError [ERR_ASSERTION]: active chain must settle by aggregate budget
+  + actual - expected
+
+  + undefined
+  - 20000
+
+      at TestContext.<anonymous> (file:///workspace/scratch/ec56a2f5f2c6/baseline/scripts/discovery-provider-deadlines.test.mjs:37:16)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 20000,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/discovery-provider-deadlines.test.mjs:25:7
+✖ nightlife: headers stalls settle fallback at 20s; no fourth mirror (2.807548ms)
+  AssertionError [ERR_ASSERTION]: one bounded summary per degraded search
+
+  0 !== 1
+
+      at TestContext.<anonymous> (file:///workspace/scratch/ec56a2f5f2c6/baseline/scripts/discovery-provider-deadlines.test.mjs:51:16)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

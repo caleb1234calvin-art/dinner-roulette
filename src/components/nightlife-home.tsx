@@ -1,3 +1,4 @@
+import { DISCOVERY_TIMEOUT_MESSAGE, startDiscoveryRequest } from "@/lib/discovery/client-request";
 import { useEffect, useMemo, useState } from "react";
 import { LayoutGrid, Shuffle } from "lucide-react";
 import { DiscoveryLoading, DiscoveryNotice } from "@/components/discovery-status";
@@ -37,40 +38,37 @@ export function NightlifeHome() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [warning, setWarning] = useState<string | null>(null);
+  const [requestVersion, setRequestVersion] = useState(0);
   const [pick, setPick] = useState<DecoratedNightlifePlace | null>(null);
   const [reelNames, setReelNames] = useState<string[]>([]);
   const [skipSpin, setSkipSpin] = useState(false);
   const [options, setOptions] = useState<DecoratedNightlifePlace[] | null>(null);
 
   useEffect(() => {
-    let cancelled = false;
     setLoading(true);
     setError(null);
     setWarning(null);
-    searchNightlife({
-      data: {
-        lat: location.lat,
-        lon: location.lon,
-        radiusMiles: Math.max(filters.radiusMiles, 15),
-      },
-    })
-      .then((result) => {
-        if (cancelled) return;
+    return startDiscoveryRequest({
+      mode: "nightlife",
+      request: (signal) => searchNightlife({
+        data: {
+          lat: location.lat,
+          lon: location.lon,
+          radiusMiles: Math.max(filters.radiusMiles, 15),
+        },
+        signal,
+      }),
+      onSuccess: (result) => {
         setVenues(result.venues);
         setWarning(result.warning ?? null);
-      })
-      .catch((err: unknown) => {
-        if (cancelled) return;
+      },
+      onError: (err) => {
         setVenues([]);
         setError(err instanceof Error ? err.message : "Could not load nightlife venues");
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [location.lat, location.lon, filters.radiusMiles]);
+      },
+      onSettled: () => setLoading(false),
+    });
+  }, [location.lat, location.lon, filters.radiusMiles, requestVersion]);
 
   const decorated = useMemo(
     () => decorateAll(venues as Restaurant[], location) as DecoratedNightlifePlace[],
@@ -197,8 +195,11 @@ export function NightlifeHome() {
       {error ? (
         <DiscoveryNotice
           tone="error"
-          title="We couldn't refresh nightlife right now"
-          body="Try again in a moment, change your location, or widen your search radius."
+          title={error === DISCOVERY_TIMEOUT_MESSAGE ? "Nightlife search timed out" : "We couldn't refresh nightlife right now"}
+          body={error === DISCOVERY_TIMEOUT_MESSAGE
+            ? "The search took too long. Check your connection and try again."
+            : "Try again in a moment, change your location, or widen your search radius."}
+          onRetry={() => setRequestVersion((version) => version + 1)}
         />
       ) : null}
       {!loading && !error && eligible.length === 0 ? (

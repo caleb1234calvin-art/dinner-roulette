@@ -1,3 +1,4 @@
+import { createProviderChain, ProviderResponseError } from "../discovery/provider-chain";
 import { formatOsmAddress, requireCoordinates } from "../location/model";
 import type { RawPlace } from "./normalize";
 
@@ -53,7 +54,7 @@ function elementToRaw(element: OverpassElement): RawPlace | null {
   };
 }
 
-async function queryMirror(url: string, body: string): Promise<RawPlace[]> {
+async function queryMirror(url: string, body: string, signal: AbortSignal): Promise<RawPlace[]> {
   const response = await fetch(url, {
     method: "POST",
     headers: {
@@ -62,13 +63,13 @@ async function queryMirror(url: string, body: string): Promise<RawPlace[]> {
       "User-Agent": "PickForUs/1.0 (couple restaurant roulette)",
     },
     body,
-    signal: AbortSignal.timeout(22000),
+    signal,
   });
   if (!response.ok) {
-    throw new Error(`Overpass ${response.status}`);
+    throw new ProviderResponseError(`Overpass ${response.status}`, "http-error", response.status);
   }
   const json = (await response.json()) as { elements?: OverpassElement[]; remark?: string };
-  if (!Array.isArray(json?.elements) || json.remark) throw new Error("Live discovery returned an incomplete response. Please try again.");
+  if (!Array.isArray(json?.elements) || json.remark) throw new ProviderResponseError("Live discovery returned an incomplete response. Please try again.", "malformed");
   const unique = new Map<string, RawPlace>();
   for (const element of json.elements ?? []) {
     const raw = elementToRaw(element);
@@ -82,21 +83,10 @@ export async function fetchOverpassPlaces(
   lat: number,
   lon: number,
   radiusMiles: number,
+  chain = createProviderChain("dinner"),
 ): Promise<RawPlace[]> {
   requireCoordinates({ lat, lon });
   const radiusMeters = Math.min(Math.max(radiusMiles, 1) * 1609.34, 80467);
   const body = `data=${encodeURIComponent(QUERY(lat, lon, radiusMeters))}`;
-  let lastError: unknown;
-  let hadSuccessfulResponse = false;
-  for (const mirror of MIRRORS) {
-    try {
-      const places = await queryMirror(mirror, body);
-      hadSuccessfulResponse = true;
-      if (places.length > 0) return places;
-    } catch (error) {
-      lastError = error;
-    }
-  }
-  if (hadSuccessfulResponse) return [];
-  throw lastError instanceof Error ? lastError : new Error("Restaurant search failed");
+  return chain.run(MIRRORS, (mirror, signal) => queryMirror(mirror, body, signal), true);
 }

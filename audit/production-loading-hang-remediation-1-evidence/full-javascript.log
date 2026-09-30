@@ -1,0 +1,815 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> test
+> node scripts/test-runner.mjs
+
+✔ persistent Android identity, SDK, lockfile and approved artwork agree (12.883635ms)
+✔ native audit rejects package drift, insecure content and exposed WebView debugging (3.785439ms)
+✔ Android version parser accepts future releases and rejects invalid Play codes (1.551515ms)
+✔ Android workflow is artifact-only and does not regenerate the project or migrate (1.010326ms)
+✔ Settings does not advertise an Android artifact that has not been published (1.51625ms)
+✔ non-canvas app with no custom card gets a soft BRAND NOTE (utility exception) (10.68251ms)
+✔ non-canvas app with a compliant card is silent (5.859312ms)
+✔ card file without site.json card=custom warns (0.975925ms)
+✔ card file with missing site.json warns for card=custom (0.720629ms)
+✔ card file with invalid site.json warns for card=custom (0.700098ms)
+✔ oversized card warns for non-canvas apps too (3.599969ms)
+✔ canvas app with no card warns 'missing' and missing og:type (2.207916ms)
+✔ canvas card without type still warns for og:type (0.788241ms)
+✔ oversized card warns on the scraper budget (jpg and legacy png) (3.417053ms)
+✔ compliant game (custom card + site.json type + x-banner) is silent (1.442961ms)
+✔ __root.tsx og:type no longer satisfies the canvas gate (1.23762ms)
+✔ oversized x-banner warns on the same scraper budget as og.jpg (1.259542ms)
+✔ legacy png + site.json type still needs the X feed card (0.693808ms)
+✔ siteDeclaresOgTypeGame reads the site contract (0.16508ms)
+✔ a fresh og-pending marker silences the whole gate view (0.540457ms)
+✔ a stale og-pending marker is ignored and the warnings return (0.428558ms)
+✔ the marker goes stale on the clock, not on the file (0.559235ms)
+✔ no marker means nothing is in flight (0.434847ms)
+✔ parseBrandCheckArgs takes --game, --placeholder-ok and --root, and rejects the rest (0.391611ms)
+✔ cli: a game missing its card reports JSON and exits 1 (149.503048ms)
+✔ cli: a compliant game passes (162.762646ms)
+✔ cli: the task's own marker is reported, not honoured (175.162986ms)
+✔ cli: a bad argument fails with JSON on stderr (180.917791ms)
+✔ cli: a non-game with no card fails too — the pass exists to produce one (161.662024ms)
+✔ cli: --placeholder-ok is how a plain-utility pass reports no card as expected (334.627625ms)
+✔ cli: a non-game with a compliant card passes (207.884681ms)
+﹣ SKILL.md and AGENTS.md name the marker path and bound this script uses (0.128384ms) # External workspace OG documentation package is not installed in this checkout
+﹣ the sections that own the brand-task prohibition never affirm a wait (0.062945ms) # External workspace OG documentation package is not installed in this checkout
+﹣ SKILL.md tells the pass to self-check with the flag this CLI accepts (0.051929ms) # External workspace OG documentation package is not installed in this checkout
+✔ browser acceptance rejects source/output drift and auth-disabled previews (9.929882ms)
+✔ unfinished builds and sources changed during compilation cannot be blessed (9.391509ms)
+✔ normalizes whitespace before hashing (2.240415ms)
+✔ nullish and blank body text normalize to the empty string (1.306213ms)
+✔ body text prefix is normalized and capped (0.237719ms)
+✔ identical runs do not diverge (1.033041ms)
+✔ status change diverges (0.408978ms)
+✔ title change diverges (0.245471ms)
+✔ title comparison is skipped when either side lacks one (0.2049ms)
+✔ canvas disappearing diverges; canvas appearing does not (0.253693ms)
+✔ horizontal overflow appearing diverges; clearing does not (0.276197ms)
+✔ new console errors diverge (0.286553ms)
+✔ errors already present in the baseline do not re-diverge (0.206402ms)
+✔ body text collapse diverges (1.778918ms)
+✔ body text dropping to zero reports collapse (0.322828ms)
+✔ zero-length baseline reports growth via the hash branch, not collapse (0.746588ms)
+✔ hash mismatch with a trivial length delta and same page start is tolerated (0.114182ms)
+✔ hash mismatch with a trivial length delta but changed page start diverges (0.123657ms)
+✔ prefix check is skipped when either side lacks a prefix (0.193192ms)
+✔ length-delta tolerance boundary: 50 tolerated, 51 diverges (500-char baseline) (0.124688ms)
+✔ length-delta floor dominates small baselines: 20 tolerated, 21 diverges (100-char baseline) (0.106661ms)
+✔ collapse boundary: exactly half is 'changed', one below is 'collapsed' (0.134102ms)
+✔ missing baseline viewport diverges (0.129366ms)
+✔ empty or null baseline diverges for every viewport (0.153101ms)
+✔ degenerate current verdict fails closed (0.353684ms)
+✔ multiple signals across viewports all accumulate (0.139721ms)
+✔ baselineComparison round-trips a valid baseline (0.235596ms)
+✔ baselineComparison fails closed on malformed or wrong-shape baselines (0.363389ms)
+✔ parseSmokeArgs defaults (0.207173ms)
+✔ parseSmokeArgs consumes --baseline without shifting positionals (0.111989ms)
+✔ parseSmokeArgs rejects a trailing --baseline flag (0.105629ms)
+✔ parseSmokeArgs supports the --baseline= form (0.106521ms)
+✔ parseSmokeArgs rejects unknown flags instead of treating them as positionals (0.126922ms)
+✔ parseSmokeArgs env fallback and flag precedence (0.148284ms)
+✔ derivedPaths handles .png, .PNG, and extensionless inputs (2.622693ms)
+✔ exitCodeFor: clean run exits 0 (0.236728ms)
+✔ exitCodeFor: errors in any single viewport exit 2 (0.162476ms)
+✔ exitCodeFor: navigation failure in any viewport exits 1, beating errors (0.182095ms)
+✔ exitCodeFor: 4xx boundary and missing status (0.129726ms)
+✔ exitCodeFor: no viewport data is a failure (0.099991ms)
+✔ browser-smoke wires the guard and verdict helpers (0.42348ms)
+✔ browser-smoke file I/O only touches guarded paths (0.56908ms)
+✔ casino evidence JSON is parseable; truncated ledgers cannot masquerade as complete (33.995331ms)
+✔ keyed manifests preserve state names and integration override precedence (5.079274ms)
+✔ missing or malformed jurisdiction objects fail closed (1.901924ms)
+✔ nearby same-name rows reconcile once with latest ID and metadata (4.003689ms)
+✔ same ID at distinct locations remains a hard failure (1.662542ms)
+✔ small successive moves cannot conceal a distant same-ID conflict (0.391462ms)
+✔ distant same-name destinations with distinct IDs are retained (0.296017ms)
+✔ complete jurisdiction counts reject both missing and excess destinations (0.281585ms)
+✔ legacy IDs use exported jurisdiction metadata rather than ID prefixes (3.760121ms)
+✔ invalid coordinates, jurisdictions and complete-count values fail closed (0.488448ms)
+✔ pending decision universes are not treated as runtime quotas (0.372824ms)
+✔ nearby same-ID records with a renamed property use latest metadata (0.424792ms)
+✔ missing identities cannot silently disappear from the audit (3.098392ms)
+✔ every active jurisdiction needs an explicit manifest status (0.448107ms)
+✔ unknown totals are allowed only for explicitly pending jurisdictions (0.359613ms)
+✔ a supplied pending count must still be a positive integer (0.25829ms)
+✔ authoritative sources and allowed status values remain required (0.187203ms)
+✔ Beau Rivage keeps its original stable ID and one latest-property destination (191.453604ms)
+✔ MGM Grand Las Vegas keeps its original stable ID and one latest-property destination (52.210006ms)
+✔ audit follows runtime registration, including renamed imports (23.168073ms)
+✔ unregistered imports and unknown runtime arrays fail closed (3.606629ms)
+✔ duplicate, skipped and out-of-order passes cannot change audit precedence (1.557203ms)
+✔ empty or missing runtime registration cannot pass validation (0.927982ms)
+✔ real exported factory IDs and metadata survive loading (64.818522ms)
+✔ missing or empty module exports fail instead of undercounting (12.183387ms)
+✔ resumed additions preserve explicit point evidence, casino schema and active canonical identity (28.716542ms)
+✔ local operator aliases merge without losing canonical points or merging distant same-brand casinos (4.2634ms)
+✔ neighboring Otoe-Missouria casino floors and related travel components retain separate identity (1.33089ms)
+✔ Casino Oklahoma uses its named casino point and routing street, separately from Sugar Creek (1.296348ms)
+✔ Golden Eagle casinos in Oklahoma and Kansas survive identical names across states (0.380104ms)
+✔ Prairie Sun closure cannot be revived by stale live tags or suppress current Prairie Moon (5.054926ms)
+✔ new operator aliases cannot merge nearby independently operated casino floors (1.604103ms)
+✔ reconciled travel-center destinations use the right city and current postal identity (0.701329ms)
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'live',
+  durationMs: 12,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 4, outcome: 'empty' } ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'fallback',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'network-error' },
+    { mirror: 2, durationMs: 1, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+✔ invalid query coordinates and nonfinite radii cannot reach providers (1.78718ms)
+✔ malformed provider records are discarded individually (1.226002ms)
+✔ casino words in an unrelated bar name do not satisfy the casino filter (0.315687ms)
+✔ closed property holds are geographically scoped and cannot suppress successors (0.399894ms)
+✔ lifecycle tags exclude inactive venues but preserve a current repurposed bar (0.146371ms)
+✔ same-brand neighboring casino floors do not borrow each other's live metadata (13.870822ms)
+✔ canonical casino location and identity survive live merging (0.396609ms)
+✔ valid empty responses remain empty results; invalid JSON shape falls back (17.885066ms)
+✔ provider outages preserve the complete local canonical casino pool (2.845148ms)
+✔ malformed optional fields cannot poison a provider response or create unsafe actions (7.51368ms)
+✔ generic casino names cannot collapse distinct nearby properties into an empty identity (0.457191ms)
+✔ reviewed predecessor names merge only into the same nearby current property (6.40178ms)
+✔ closed Oklahoma predecessors stay excluded without suppressing operating successors (0.31142ms)
+✔ Golden Pony closure cannot be revived by stale live tags or suppress unrelated places (0.608639ms)
+✔ final casino aliases preserve canonical routing and do not absorb distant same-name properties (4.895686ms)
+✔ nearby final-pass casinos remain distinct even inside the alias distance threshold (2.040432ms)
+✔ same-brand town names and Pawnee satellite aliases cannot redirect live details to another casino (1.099771ms)
+✔ Gold Town closure rejects stale casino tags while nearby Pahrump properties survive (1.954422ms)
+✔ conflicting casino map metadata cannot replace the reviewed property or component point (0.573807ms)
+✔ freeze accounting preserves resolved holds, unresolved candidates and historical rows honestly (2.288297ms)
+✔ captured live casino responses exclude closed aliases and reconcile the reviewed regional pools (5.844609ms)
+✔ Pass 50 has exactly four distinct evidence-backed physical destinations (1.775823ms)
+✔ runtime points use source destination fields, never map viewport centres (1.496851ms)
+✔ Cadence Crossing remains tied to corrected named-property evidence (23.070635ms)
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'fallback',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 1, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 0, outcome: 'malformed' },
+    { mirror: 4, durationMs: 0, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'error',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 0, outcome: 'malformed' },
+    { mirror: 4, durationMs: 0, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'live',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 0, outcome: 'empty' } ]
+}
+✔ global manual origins retain final-pass casino identities and routing through actual discovery handlers (19.026876ms)
+✔ switching a casino origin internationally keeps bounded closures local and preserves exact GPS coordinates (2.373565ms)
+✔ incomplete provider replies retain honest casino fallback and international errors while valid empty replies stay empty (6.116058ms)
+✔ current RC points match observed destination or named source fields (12.74366ms)
+✔ rejected map centres cannot silently replace verified casino points (2.058699ms)
+✔ current casinos survive while all reviewed closure aliases remain out of the curated catalog (8.680632ms)
+✔ newly registered destinations preserve numerical property evidence and scope decisions (2.073692ms)
+✔ additions enter once while pin corrections retain IDs and historical evidence (2.978939ms)
+✔ nearby branded buildings and separately operated Oneida venues survive canonicalization (0.896174ms)
+✔ final adversarial additions and correction preserve observed property destinations (7.758991ms)
+✔ Slot Palace routing uses its operator directions address and preserves the separate resort (1.810965ms)
+✔ final frontier destinations retain property evidence and survive all closure scopes (5.530545ms)
+✔ casino floors remain distinct from nearby casino properties, off-site lodges and closed predecessors (0.845798ms)
+✔ recent legacy exports retain their latest source identity and property point (9.309141ms)
+✔ every serialized runtime casino satisfies the application data schema (11.958905ms)
+✔ missing required fields, duplicate type tags, wrong categories and malformed nulls fail (0.684223ms)
+✔ coordinate range, state leakage and jurisdiction disagreement are rejected (0.263569ms)
+✔ new passes cannot activate without identity and coordinate evidence (0.669271ms)
+✔ unsafe website schemes cannot enter destination actions (0.507416ms)
+✔ strict open-now requires known open hours; default exposes saved destinations honestly (14.359421ms)
+✔ casino type, radius and known/unknown price filters compose (0.313634ms)
+✔ favorites, permanent exclusions and expiring exclusions protect selection (0.300124ms)
+✔ empty and singleton pools terminate with correct option counts (0.38415ms)
+✔ options never return duplicate identifiers or mutate the input (0.209957ms)
+✔ energy and repeat penalties influence weighted picks without excluding all shown places (4.530964ms)
+✔ large catalog sampling retains Unicode names and distinct options (32.847878ms)
+✔ the flag predicate matches src/lib/auth (1.424181ms)
+✔ reads the value a live dev server resolved (0.399393ms)
+✔ a server started without the flag reads as sign-in on (0.177919ms)
+✔ agreement passes (0.228275ms)
+✔ divergence fails in either direction (0.310709ms)
+✔ an unobservable dev server is indeterminate, not agreement (0.136286ms)
+✔ a dev server that cannot be reached probes as null (0.247384ms)
+✔ a server without the endpoint probes as null, not as agreement (0.304841ms)
+✔ only a divergence warns the smoke verdict (0.950135ms)
+✔ the build side resolves the template's shipped app-env (0.593467ms)
+✔ the CLI reports rather than silently passing when run via a symlink (165.125277ms)
+✔ dinner: success settles active UI and clears watchdog before deadline (891.024491ms)
+✔ dinner: fallback settles active UI and clears watchdog before deadline (25.956227ms)
+✔ dinner: error settles active UI and clears watchdog before deadline (7.743617ms)
+✔ dinner: AbortError settles active UI and clears watchdog before deadline (7.599609ms)
+✔ dinner: never-settling/abort-ignoring RPC exits loading at 25s (14.50442ms)
+✔ dinner: abort-compliant RPC exits loading at 25s (20.462799ms)
+✔ dinner: late post-timeout success cannot overwrite timeout or a successful retry (23.906211ms)
+✔ dinner: late post-timeout rejection cannot overwrite timeout or a successful retry (31.429225ms)
+✔ dinner: replacement aborts old success; old settles first (11.873115ms)
+✔ dinner: replacement aborts old success; new settles first (11.853585ms)
+✔ dinner: replacement aborts old rejection; old settles first (30.528364ms)
+✔ dinner: replacement aborts old rejection; new settles first (28.168209ms)
+✔ dinner: unmount aborts/cleans up; success cannot write after unmount (10.021388ms)
+✔ dinner: unmount aborts/cleans up; rejection cannot write after unmount (9.734544ms)
+✔ dinner: unmount aborts/cleans up; pending cannot write after unmount (4.478875ms)
+✔ dinner: radius replacement cancels transport; normal filters/options/pick still work (23.485445ms)
+✔ dinner: timeout then retry success remains current when the first RPC finally resolves (10.37989ms)
+✔ date-night: success settles active UI and clears watchdog before deadline (179.105594ms)
+✔ date-night: fallback settles active UI and clears watchdog before deadline (12.462565ms)
+✔ date-night: error settles active UI and clears watchdog before deadline (2.562301ms)
+✔ date-night: AbortError settles active UI and clears watchdog before deadline (6.7394ms)
+✔ date-night: never-settling/abort-ignoring RPC exits loading at 25s (7.246296ms)
+✔ date-night: abort-compliant RPC exits loading at 25s (8.790328ms)
+✔ date-night: late post-timeout success cannot overwrite timeout or a successful retry (13.88951ms)
+✔ date-night: late post-timeout rejection cannot overwrite timeout or a successful retry (14.108592ms)
+✔ date-night: replacement aborts old success; old settles first (19.080803ms)
+✔ date-night: replacement aborts old success; new settles first (11.503165ms)
+✔ date-night: replacement aborts old rejection; old settles first (16.255224ms)
+✔ date-night: replacement aborts old rejection; new settles first (15.281363ms)
+✔ date-night: unmount aborts/cleans up; success cannot write after unmount (10.58555ms)
+✔ date-night: unmount aborts/cleans up; rejection cannot write after unmount (5.317712ms)
+✔ date-night: unmount aborts/cleans up; pending cannot write after unmount (7.250743ms)
+✔ date-night: radius replacement cancels transport; normal filters/options/pick still work (17.954511ms)
+✔ date-night: timeout then retry success remains current when the first RPC finally resolves (6.003498ms)
+✔ nightlife: success settles active UI and clears watchdog before deadline (46.210558ms)
+✔ nightlife: fallback settles active UI and clears watchdog before deadline (2.404692ms)
+✔ nightlife: error settles active UI and clears watchdog before deadline (3.844467ms)
+✔ nightlife: AbortError settles active UI and clears watchdog before deadline (1.037988ms)
+✔ nightlife: never-settling/abort-ignoring RPC exits loading at 25s (1.259162ms)
+✔ nightlife: abort-compliant RPC exits loading at 25s (1.691825ms)
+✔ nightlife: late post-timeout success cannot overwrite timeout or a successful retry (1.348177ms)
+✔ nightlife: late post-timeout rejection cannot overwrite timeout or a successful retry (1.373124ms)
+✔ nightlife: replacement aborts old success; old settles first (1.400636ms)
+✔ nightlife: replacement aborts old success; new settles first (3.033953ms)
+✔ nightlife: replacement aborts old rejection; old settles first (1.611584ms)
+✔ nightlife: replacement aborts old rejection; new settles first (1.193553ms)
+✔ nightlife: unmount aborts/cleans up; success cannot write after unmount (2.445745ms)
+✔ nightlife: unmount aborts/cleans up; rejection cannot write after unmount (4.994364ms)
+✔ nightlife: unmount aborts/cleans up; pending cannot write after unmount (3.719613ms)
+✔ nightlife: radius replacement cancels transport; normal filters/options/pick still work (3.381177ms)
+✔ nightlife: timeout then retry success remains current when the first RPC finally resolves (1.99255ms)
+✔ Date Night: seasonal dependency replacement aborts the previous request (3.113553ms)
+✔ pinned TanStack RPC forwards the exact controller signal to fetch and settles on abort (27.048828ms)
+✔ shared lifecycle also settles synchronous RPC throws without leaving a watchdog (4.347157ms)
+✔ dinner: headers stalls settle fallback at 20s; no fourth mirror (62.601151ms)
+✔ dinner: headers stalls settle error at 20s; no fourth mirror (10.043361ms)
+✔ dinner: body stalls settle fallback at 20s; no fourth mirror (40.765949ms)
+✔ dinner: body stalls settle error at 20s; no fourth mirror (1.459755ms)
+✔ dinner: first timeout then second success returns at 8s and clears timers (9.686541ms)
+✔ dinner: immediate 429 advances without delay; saved coverage and terminal error preserved (33.825305ms)
+✔ dinner: immediate 500 advances without delay; saved coverage and terminal error preserved (29.145775ms)
+✔ dinner: immediate 504 advances without delay; saved coverage and terminal error preserved (9.980866ms)
+✔ dinner: immediate missing-elements advances without delay; saved coverage and terminal error preserved (12.213199ms)
+✔ dinner: immediate remark advances without delay; saved coverage and terminal error preserved (12.689328ms)
+✔ dinner: immediate invalid-json advances without delay; saved coverage and terminal error preserved (14.116083ms)
+✔ dinner: valid empty results retain mode-specific mirror and source semantics (8.468607ms)
+✔ dinner: normal first success is quiet, abort errors categorized, raw exceptions never logged (20.132571ms)
+✔ date-night: headers stalls settle fallback at 20s; no fourth mirror (4.356792ms)
+✔ date-night: headers stalls settle error at 20s; no fourth mirror (0.680599ms)
+✔ date-night: body stalls settle fallback at 20s; no fourth mirror (2.669502ms)
+✔ date-night: body stalls settle error at 20s; no fourth mirror (1.010457ms)
+✔ date-night: first timeout then second success returns at 8s and clears timers (2.8334ms)
+✔ date-night: immediate 429 advances without delay; saved coverage and terminal error preserved (1.505524ms)
+✔ date-night: immediate 500 advances without delay; saved coverage and terminal error preserved (1.309398ms)
+✔ date-night: immediate 504 advances without delay; saved coverage and terminal error preserved (2.876325ms)
+✔ date-night: immediate missing-elements advances without delay; saved coverage and terminal error preserved (1.775452ms)
+✔ date-night: immediate remark advances without delay; saved coverage and terminal error preserved (1.758316ms)
+✔ date-night: immediate invalid-json advances without delay; saved coverage and terminal error preserved (2.623924ms)
+✔ date-night: valid empty results retain mode-specific mirror and source semantics (0.764965ms)
+✔ date-night: normal first success is quiet, abort errors categorized, raw exceptions never logged (1.049134ms)
+✔ nightlife: headers stalls settle fallback at 20s; no fourth mirror (2.825027ms)
+✔ nightlife: headers stalls settle error at 20s; no fourth mirror (1.100883ms)
+✔ nightlife: body stalls settle fallback at 20s; no fourth mirror (1.690684ms)
+✔ nightlife: body stalls settle error at 20s; no fourth mirror (2.387096ms)
+✔ nightlife: first timeout then second success returns at 8s and clears timers (2.127344ms)
+✔ nightlife: immediate 429 advances without delay; saved coverage and terminal error preserved (1.751546ms)
+✔ nightlife: immediate 500 advances without delay; saved coverage and terminal error preserved (1.134424ms)
+✔ nightlife: immediate 504 advances without delay; saved coverage and terminal error preserved (2.866429ms)
+✔ nightlife: immediate missing-elements advances without delay; saved coverage and terminal error preserved (1.735993ms)
+✔ nightlife: immediate remark advances without delay; saved coverage and terminal error preserved (1.553427ms)
+✔ nightlife: immediate invalid-json advances without delay; saved coverage and terminal error preserved (1.33055ms)
+✔ nightlife: valid empty results retain mode-specific mirror and source semantics (0.659776ms)
+✔ nightlife: normal first success is quiet, abort errors categorized, raw exceptions never logged (1.115325ms)
+✔ Dinner retains successful-empty precedence when subsequent mirrors exhaust the budget (2.943947ms)
+✔ shared provider attempt uses native timer and real fetch body abort (116.546988ms)
+✔ injects before </head> (4.021104ms)
+✔ injects the extensions script without a project id (0.581709ms)
+✔ injects project id on the script and meta when provided (0.802682ms)
+✔ does not duplicate grok:app_id (2.09839ms)
+✔ omits x:creator tags without both creator values (0.889894ms)
+✔ injects x:creator tags when both creator values are set (0.272732ms)
+✔ escapes x:creator values (3.36307ms)
+✔ does not duplicate x:creator tags (0.54977ms)
+✔ platform chrome overwrites share-card metas and always sets og:title (0.441457ms)
+✔ does not duplicate twitter:card or og:title (1.046962ms)
+✔ a baked site.image is treated as a custom card (1.046471ms)
+✔ baked identity does not need a workspace filesystem (0.670593ms)
+✔ a public card file wins over a baked site without card=custom (0.707619ms)
+✔ public/og.png wins when jpg is absent (0.341886ms)
+✔ resolveOgCardAsset: disk file, then bake, then empty (placeholder) (2.453577ms)
+✔ snapshotOgIdentity stamps card=custom from a public card file (0.566726ms)
+✔ snapshotOgIdentity stamps banner from public/x-banner.jpg (0.649531ms)
+✔ emits x:game:image for a public host when site.banner is set (1.847631ms)
+✔ does not emit x:game:image without a public host or banner (0.303047ms)
+✔ site title Grok App is a real name, not a sentinel (0.330409ms)
+✔ published grok.me slug is still a title fallback (0.348857ms)
+✔ rejects Vercel system hosts as og:image origins (0.113571ms)
+✔ published VITE_PUBLIC_HOSTNAME wins over request Host for og:image (0.340635ms)
+✔ vercel Host without a public hostname emits no og:image (0.210718ms)
+✔ emits og:image for a public host and prefers a custom card (0.25797ms)
+✔ placeholder og:image appends site.color when it is 6-digit hex (0.288676ms)
+✔ document title entities are not double-escaped on og:title (0.189636ms)
+✔ site.json title wins over the host slug (0.169706ms)
+✔ injects into documents with no head element (0.294495ms)
+✔ streaming injector matches </HEAD> case-insensitively (0.528348ms)
+✔ does not duplicate the extensions script (0.326433ms)
+✔ is idempotent (1.507117ms)
+✔ uses the app name in the injected title tag (0.22515ms)
+✔ streaming injector handles </head> split across chunks (4.343591ms)
+✔ streaming injector passes post-head chunks through untouched (2.069656ms)
+✔ streaming injector falls back when no </head> is seen (0.345132ms)
+✔ detects install query (0.25156ms)
+✔ filters non-document paths (0.732897ms)
+✔ strips install params from the app link (1.040402ms)
+✔ names the install page from host slug (0.384561ms)
+✔ rejects hosts that are not plain slugs (0.096546ms)
+✔ renders install page markup (0.316778ms)
+✔ escapes host-derived values in the install page (0.145209ms)
+✔ renders the manifest with the per-app name (0.181484ms)
+✔ vite config keeps the nitro serverDir wiring (4.207586ms)
+✔ nitro middleware and its bundled assets exist (0.558724ms)
+✔ vite plugin bakes og identity as a virtual module (0.247374ms)
+[discovery] provider-chain {
+  mode: 'dinner',
+  source: 'live',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'empty' },
+    { mirror: 2, durationMs: 0, outcome: 'empty' },
+    { mirror: 3, durationMs: 0, outcome: 'empty' },
+    { mirror: 4, durationMs: 0, outcome: 'empty' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'dinner',
+  source: 'error',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 1, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 0, outcome: 'malformed' },
+    { mirror: 4, durationMs: 0, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'dinner',
+  source: 'error',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 0, outcome: 'malformed' },
+    { mirror: 4, durationMs: 0, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'dinner',
+  source: 'error',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 1, outcome: 'network-error' },
+    { mirror: 2, durationMs: 0, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'dinner',
+  source: 'fallback',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'network-error' },
+    { mirror: 2, durationMs: 0, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'live',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 0, outcome: 'empty' } ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'error',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 0, outcome: 'malformed' },
+    { mirror: 4, durationMs: 0, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'error',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 0, outcome: 'malformed' },
+    { mirror: 4, durationMs: 0, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'error',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'network-error' },
+    { mirror: 2, durationMs: 0, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'fallback',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'network-error' },
+    { mirror: 2, durationMs: 0, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'live',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 0, outcome: 'empty' } ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'error',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 0, outcome: 'malformed' },
+    { mirror: 4, durationMs: 0, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'error',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 0, outcome: 'malformed' },
+    { mirror: 4, durationMs: 0, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'error',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'network-error' },
+    { mirror: 2, durationMs: 0, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'fallback',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'network-error' },
+    { mirror: 2, durationMs: 0, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 1, outcome: 'empty' } ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 0, outcome: 'empty' } ]
+}
+✔ restaurants: six locations reach the real coordinate query and normalize local results (11.212707ms)
+✔ restaurants: valid empty areas, all-mirror outage, and coordinate validation remain distinct (30.719382ms)
+✔ nightlife and casinos: six locations reach the real coordinate query and normalize local results (6.663845ms)
+✔ nightlife and casinos: valid empty areas, all-mirror outage, and coordinate validation remain distinct (7.449393ms)
+✔ date night: six locations reach the real coordinate query and normalize local results (4.963107ms)
+✔ date night: valid empty areas, all-mirror outage, and coordinate validation remain distinct (4.102657ms)
+✔ restaurant distance, cuisine and price filters behave with Canadian results (1.599496ms)
+✔ local closure exclusions do not hide same-named international businesses (6.036428ms)
+✔ Maps destinations preserve exact Canadian/U.S. points and encode legacy international addresses (0.771104ms)
+✔ stored legacy U.S. locations and country metadata survive hydration; corrupt coordinates fall back (46.181258ms)
+✔ spatial restaurant dedupe exactly preserves name rules, source priority, ordering and radius boundaries (12.162683ms)
+✔ spatial restaurant candidates preserve duplicates across the antimeridian and near both poles (4.821312ms)
+✔ dense international pools preserve thousands of distinct restaurants and duplicate identities (222.294417ms)
+✔ _migrations keys on basename, not path (0.78102ms)
+✔ a file already applied from another directory does not re-apply (0.653177ms)
+✔ pending migrations are returned in name order (16.692114ms)
+✔ non-.sql entries are dropped (readdir also yields the auth/ directory) (0.194314ms)
+✔ the auth schema ships outside the globbed directory (0.374315ms)
+✔ this workspace's auth schema copy is byte-identical to its source (0.296848ms)
+✔ the copy check reads both files and catches an edit (0.798426ms)
+✔ absent external workspace package gets an explicit skip reason (1.450291ms)
+✔ installed documentation contracts are not skipped (0.190437ms)
+✔ required documentation cannot be skipped even when absent (0.195134ms)
+✔ parsePreviewArgs accepts the two actions (6.314078ms)
+✔ parsePreviewArgs rejects missing, unknown and extra arguments (4.231416ms)
+✔ parsePid reads a pidfile and rejects junk (0.365722ms)
+✔ parsePgid reads the pgrp field past a comm containing spaces (0.321416ms)
+✔ parseListenerInodes picks LISTEN sockets on the wanted port only (0.415137ms)
+✔ parseListenerInodes reads the tcp6 dump the same way (0.245431ms)
+✔ looksLikePreviewProcess matches the npm wrapper and its vite child (0.373804ms)
+✔ looksLikePreviewProcess spares the sibling scripts and re-used pids (0.245191ms)
+✔ previewOwners trusts port owners and dedupes the pidfile pid (0.237569ms)
+✔ previewOwners adds a pidfile pid whose command line is still the preview (0.267294ms)
+✔ previewOwners drops a stale pidfile pid re-used by another process (2.095305ms)
+✔ previewOwners drops a pidfile pid that no longer exists (0.252411ms)
+✔ previewOwners on a free port with no pidfile signals nothing (0.129956ms)
+✔ stopOutcome fails when a pid survives or the port is still held (0.239202ms)
+✔ stopOutcome reports a verified free port (0.212401ms)
+✔ stopOutcome fails on a listener whose owner cannot be attributed (0.230077ms)
+✔ terminatePids SIGTERMs live pids and skips dead ones (12.514208ms)
+✔ terminatePids escalates to SIGKILL when SIGTERM is ignored (0.833619ms)
+✔ terminatePids reports a pid that survives SIGKILL as stubborn (0.574378ms)
+✔ terminatePids on a free port signals nothing (0.110247ms)
+✔ light Dinner artwork retains the visually correct cuisine in its own asset pack (1.345412ms)
+✔ dark Dinner artwork preserves the accepted visually verified mapping (0.287554ms)
+✔ specific Dinner cuisines outrank broad provider categories without guessing food for generic venues (0.352061ms)
+✔ Nightlife result artwork covers all approved categories and preserves Casino precedence (8.940935ms)
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 0, outcome: 'empty' } ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'fallback',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'network-error' },
+    { mirror: 2, durationMs: 0, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'live',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 0, outcome: 'empty' } ]
+}
+✔ Exeter's actual theme-park record is acquired by the real seasonal query and reaches the eligible pool (13.486252ms)
+✔ precise activity evidence admits corn, pumpkin and haunted trail without admitting generic places (8.859262ms)
+✔ same identity preserves C/P, provenance, stable ID and representative metadata in either provider order (5.346095ms)
+✔ structured lifecycle cannot survive eligibility or be resurrected by an active duplicate (1.328367ms)
+✔ all availability states share one OFF/ON policy, including expiry and next-year revalidation (2.542391ms)
+✔ all seven seasonal selections preserve union and the radius boundary (5.855605ms)
+✔ saved-only successful sparse coverage, missing categories and provider outage remain distinct (5.161156ms)
+✔ per-category provenance never labels a saved haunt as live because its ordinary park duplicate is live (3.552752ms)
+✔ ordinary Date Night and seasonal toggle still work internationally; unknown hours fail strict ON (1.786068ms)
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 1, outcome: 'empty' } ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'merged',
+  durationMs: 2,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 1, outcome: 'empty' } ]
+}
+✔ actual component: handler → count/options/pick/plan and all seven category combinations (312.198881ms)
+✔ actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dependent pool/overlay refresh (209.845649ms)
+✔ actual component displays schedule uncertainty distinctly for live weekly-hours-only venues (129.058787ms)
+✔ V-F03-01 actual component: not-operating stays excluded before and after revalidation expiry (137.64716ms)
+✔ V-F03-01 actual component: an expired negative cannot fill a plan until stored positive evidence replaces it (331.679738ms)
+✔ V-F03-01 control: positive calendar expiry remains uncertain OFF and refreshes ON result/options/plan (112.805307ms)
+✔ real clock hook refreshes at minute boundaries and focus/visibility resume, then cleans up (10.71642ms)
+✔ retained regional provider captures replay through the new handler without generic-maze false positives (1925.244519ms)
+✔ preview: a successful sign-out clears the token, then redirects (2.627579ms)
+✔ preview: a rejected sign-out still clears the token and redirects (0.33786ms)
+✔ preview: a sign-out that throws synchronously still clears and redirects (2.896505ms)
+✔ preview: a sign-out that never settles clears and redirects once the wait expires (9.852282ms)
+✔ preview: no bearer means nothing to invalidate, so no request is made (1.177819ms)
+✔ preview: a stored bearer is still invalidated server-side (0.246021ms)
+✔ deployed: a confirmed sign-out clears the token, then redirects (0.49661ms)
+✔ deployed: a sign-out that never settles throws and does NOT redirect (22.58169ms)
+✔ deployed: a rejected sign-out throws and does NOT redirect (1.047573ms)
+✔ deployed: the timeout is distinguishable from a rejection (21.002145ms)
+✔ settleWithin reports the outcome and never rejects (24.169038ms)
+✔ settleWithin waits its full window, then gives up rather than hanging (0.690964ms)
+✔ pre-sign-in: the preview clear gives up at the preview bound (0.652375ms)
+✔ pre-sign-in: a deployed session gets the deployed window, not the preview one (2.990046ms)
+✔ pre-sign-in: a failed clear never blocks sign-in (0.278721ms)
+✔ pre-sign-in: the preview skips the request when there is no bearer (0.108935ms)
+✔ every sign-out bound comes from one rule (0.062514ms)
+✔ the defaults are bounded, and deployed waits longer than preview (0.207283ms)
+✔ both suites execute with the current Node and success exits zero (1.756973ms)
+✔ script failure cannot suppress application tests or become success (1.756523ms)
+✔ application failures make the overall command fail (0.266042ms)
+✔ spawn errors and terminated children are failures, not false greens (1.237058ms)
+✔ keeps VITE_-prefixed string entries (1.797245ms)
+✔ drops non-VITE keys, non-string values and malformed documents (0.262616ms)
+✔ a missing app-env.json is a clean no-op (0.451672ms)
+✔ reads the app env from a workspace (0.317941ms)
+✔ an explicit process-env override wins over the file (0.182746ms)
+✔ the template ships auth off (0.21847ms)
+✔ vite loadEnv resolves the wrapped value (0.352963ms)
+✔ the wrapped command runs with the app env applied (199.821492ms)
+✔ the wrapped command sees an explicit override, not the file value (180.058364ms)
+✔ the wrapper propagates the command's exit code (202.724532ms)
+✔ a signal-killed command is never reported as success (144.431458ms)
+✔ the CLI still runs when invoked through a symlinked path (178.613331ms)
+✔ parseWriteAtomicArgs needs exactly a staged file and a target (5.040243ms)
+✔ stagingError refuses a temp inside public/ and a no-op move (0.235005ms)
+✔ handOver replaces the target and clears the staged file (0.818015ms)
+✔ handOver creates a missing target directory (0.45664ms)
+✔ an interrupted pass leaves the target on its old bytes, temp-free (0.968994ms)
+✔ a failed hand-over creates no directory for the target it never wrote (0.283519ms)
+✔ a staged file on another filesystem is refused, not copied (0.466485ms)
+✔ cli: hands the file over, and refuses a temp staged in public/ (175.88191ms)
+✔ cli: relative paths follow the script's root, not the caller's cwd (110.812461ms)
+﹣ every hand-over the og skill prints is one this script accepts (0.28413ms) # External workspace OG documentation package is not installed in this checkout
+✔ cli: a missing staged file fails without touching the target (87.910716ms)
+ℹ tests 421
+ℹ suites 0
+ℹ pass 417
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 4
+ℹ todo 0
+ℹ duration_ms 9364.504935
+▶ callTool failure memo
+  ✔ replays an identical failure within the memo window without refetching (4.045209ms)
+  ✔ keys by token identity so a reminted token shares the memo entry (1.25788ms)
+  ✔ sweeps expired entries on write so unique keys do not accumulate (1.665886ms)
+  ✔ never memoizes login-required 401s (1.013781ms)
+✔ callTool failure memo (8.879651ms)
+▶ callTool
+  ✔ resolves ok:false for non-serializable args instead of rejecting (0.491613ms)
+✔ callTool (0.606416ms)
+▶ isLoginRequired
+  ✔ is true only for login-required failures (0.188795ms)
+✔ isLoginRequired (0.301265ms)
+▶ redirectToLoginIfRequired
+  ✔ no-ops when login is not required (0.403239ms)
+  ✔ navigates to the server-built loginUrl in the browser (0.139651ms)
+  ✔ opens a new tab instead of navigating when framed (0.183237ms)
+  ✔ falls back to navigation when framed and the popup is blocked (0.282797ms)
+  ✔ returns false when the result has no loginUrl (0.161674ms)
+  ✔ returns false on the server (no window) (0.078749ms)
+✔ redirectToLoginIfRequired (1.546976ms)
+▶ classifyCallToolError
+  ✔ returns null for successful results (0.142395ms)
+  ✔ classifies login-required before message matching (0.080462ms)
+  ✔ classifies not_connected and failed_precondition (0.076646ms)
+  ✔ classifies scope_denied without claiming a missing grant (0.078629ms)
+  ✔ classifies access_denied (0.060772ms)
+  ✔ falls back to a generic error with the raw message (0.070176ms)
+✔ classifyCallToolError (0.685345ms)
+▶ verifyGateIdentityToken
+  ✔ returns the identity for a valid token (13.032798ms)
+  ✔ omits optional claims as nulls (1.630923ms)
+  ✔ rejects a wrong audience (1.432934ms)
+  ✔ rejects a wrong issuer (1.194314ms)
+  ✔ rejects an expired token (1.301205ms)
+  ✔ rejects a token without exp (0.909123ms)
+  ✔ rejects a token signed by a different key with the same kid (1.077998ms)
+  ✔ refetches the JWKS when the kid rotates (1.819257ms)
+✔ verifyGateIdentityToken (23.896595ms)
+▶ gateIdentityFromHeaders
+  ✔ verifies the header token end to end and fails closed without it (3.62191ms)
+  ✔ activates on a deployed-shaped request without GROK_GATE_ORIGIN (2.2248ms)
+  ✔ verifies a preview-audience token with no gate env vars via the loopback default (1.323709ms)
+  ✔ rejects a wrong-issuer token in the loopback default mode (0.986079ms)
+  ✔ verifies a preview-audience token when only GROK_GATE_ORIGIN is set (1.04636ms)
+  ✔ rejects a preview-audience token when GROK_PROJECT_ID is set (0.976074ms)
+  ✔ rejects an app-audience token in preview mode (3.023797ms)
+✔ gateIdentityFromHeaders (13.715945ms)
+▶ gateIdentityEnabled
+  ✔ is enabled by default with no gate env vars (0.109335ms)
+  ✔ is disabled when VITE_AUTH_ENABLED is false (0.082114ms)
+✔ gateIdentityEnabled (0.292312ms)
+▶ gateTokenAudience
+  ✔ pins app:<id> when GROK_PROJECT_ID is set, even alongside GROK_GATE_ORIGIN (0.126891ms)
+  ✔ pins preview when GROK_PROJECT_ID is unset (0.068163ms)
+✔ gateTokenAudience (0.260614ms)
+▶ gateIdentityUserInfo
+  ✔ falls back to a synthetic email and name for sub-only claims (0.116045ms)
+  ✔ keeps real claims, lowercasing the email and marking it verified (0.211198ms)
+✔ gateIdentityUserInfo (0.401366ms)
+▶ sessionBoundToGateIdentity
+  ✔ keeps the session when it is bound to the same gate sub (0.122635ms)
+  ✔ rotates when the session belongs to a different gate sub (0.055053ms)
+  ✔ rotates when the session user has no gate-bound account (0.090657ms)
+✔ sessionBoundToGateIdentity (0.352752ms)
+▶ resolveSignInGateState
+  ✔ is pending while the session check is in flight, user or not (0.821781ms)
+  ✔ is signed_in once a user is present (0.115574ms)
+  ✔ is signed_out only after the check resolved with no user (0.0926ms)
+✔ resolveSignInGateState (2.068063ms)
+▶ seasonal date-night availability
+  ✔ keeps The Werehouse closed before its verified 2026 season starts (1.012619ms)
+  ✔ allows The Werehouse during the conservative verified season window (0.136516ms)
+  ✔ closes The Werehouse after the conservative verified window (0.106802ms)
+  ✔ uses Myer's retained operator 2026 calendar (0.133902ms)
+  ✔ fails closed for Open now when hours or the seasonal date are not confirmed (0.400605ms)
+  ✔ requires different real venues for a Scare/Settle pair (0.187954ms)
+✔ seasonal date-night availability (3.228135ms)
+✔ global manual resolution preserves Joplin, Missouri, USA (5.271902ms)
+✔ global manual resolution preserves Toronto, Ontario, Canada (0.580317ms)
+✔ global manual resolution preserves Vancouver, British Columbia, Canada (5.823395ms)
+✔ global manual resolution preserves Montréal, Québec, Canada (0.654799ms)
+✔ global manual resolution preserves London, United Kingdom (0.362017ms)
+✔ countries without regions and provider province/locality variants remain valid (0.229687ms)
+✔ invalid coordinates and malformed geocoder hits cannot become active locations (0.195615ms)
+✔ manual input preserves international addresses and postal codes without a U.S. parser (0.332412ms)
+✔ no-result, provider errors and malformed payloads are distinct from valid places (1.898898ms)
+✔ reverse lookup enriches metadata while preserving the original GPS coordinates (0.617683ms)
+✔ all reverse failures retain a usable coordinate location; invalid input never fetches (0.976194ms)
+✔ international business addresses retain province, postcode, country and full-address tags (0.171539ms)
+✔ native geolocation is opt-in, bounded, and reports each failure accurately (0.565784ms)
+✔ GPS commits before reverse resolves and preserves exact coordinates even if the label point differs (0.498774ms)
+✔ reverse failure retains coordinates and reports success; GPS failure leaves the old location alone (0.360564ms)
+✔ a newer manual choice wins over a delayed GPS callback (0.196197ms)
+✔ manual editing and unmount invalidate stale reverse and manual completions (0.206742ms)
+✔ manual no-result and invalid input retain active location and allow retry (0.168174ms)
+✔ combined control suppresses repeated GPS calls through reverse enrichment (0.206422ms)
+✔ cancelling a pending GPS request permits retry without reviving stale callbacks (1.00003ms)
+ℹ tests 71
+ℹ suites 13
+ℹ pass 71
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 282.238974
+[test-runner] repository scripts: passed
+[test-runner] application: passed

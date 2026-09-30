@@ -1,3 +1,4 @@
+import { createProviderChain } from "../discovery/provider-chain";
 import { createServerFn } from "@tanstack/react-start";
 import { normalizeLocationQuery, requireCoordinates } from "../location/model";
 import { JOPLIN_FALLBACK } from "./fallback-data";
@@ -25,14 +26,18 @@ export const searchRestaurants = createServerFn({ method: "POST" })
   .handler(async ({ data }): Promise<SearchResponse> => {
     const fetchRadius = Math.max(data.radiusMiles, 15);
     const origin = { lat: data.lat, lon: data.lon, radiusMiles: fetchRadius };
+    const chain = createProviderChain("dinner");
     try {
-      const live = await fetchOverpassPlaces(data.lat, data.lon, fetchRadius);
+      const live = await fetchOverpassPlaces(data.lat, data.lon, fetchRadius, chain);
+      const restaurants = mergePlaces(live, origin);
+      chain.finish("live");
       return {
-        restaurants: mergePlaces(live, origin),
+        restaurants,
         source: "live",
       };
     } catch (error) {
       if (withinJoplinArea(data.lat, data.lon)) {
+        chain.finish("fallback");
         return {
           restaurants: mergePlaces(JOPLIN_FALLBACK.map(fallbackToRaw), origin),
           source: "fallback",
@@ -42,6 +47,7 @@ export const searchRestaurants = createServerFn({ method: "POST" })
               : undefined,
         };
       }
+      chain.finish("error");
       throw new Error("Could not load restaurants for that area. Try again in a moment.");
     }
   });

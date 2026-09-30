@@ -1,3 +1,4 @@
+import { DISCOVERY_TIMEOUT_MESSAGE, startDiscoveryRequest } from "@/lib/discovery/client-request";
 import { useEffect, useMemo, useState } from "react";
 import { Heart, LayoutGrid } from "lucide-react";
 import { DateNightPlanOverlay } from "@/components/date-night-plan-overlay";
@@ -152,6 +153,7 @@ export function DateNightHome() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [warning, setWarning] = useState<string | null>(null);
+  const [requestVersion, setRequestVersion] = useState(0);
   const [pick, setPick] = useState<DecoratedDateNightPlace | null>(null);
   const [reelNames, setReelNames] = useState<string[]>([]);
   const [skipSpin, setSkipSpin] = useState(false);
@@ -164,36 +166,32 @@ export function DateNightHome() {
   const activityChips = dateNightChipsForNow(spookySeasonEnabled, now);
 
   useEffect(() => {
-    let cancelled = false;
     setLoading(true);
     setError(null);
     setWarning(null);
-    searchDateNight({
-      data: {
-        lat: location.lat,
-        lon: location.lon,
-        radiusMiles: Math.max(filters.radiusMiles, 15),
-        spookySeasonEnabled,
-      },
-    })
-      .then((result) => {
-        if (cancelled) return;
+    return startDiscoveryRequest({
+      mode: "date-night",
+      request: (signal) => searchDateNight({
+        data: {
+          lat: location.lat,
+          lon: location.lon,
+          radiusMiles: Math.max(filters.radiusMiles, 15),
+          spookySeasonEnabled,
+        },
+        signal,
+      }),
+      onSuccess: (result) => {
         setVenues(result.venues);
         setSource(result.source);
         setWarning(result.warning ?? null);
-      })
-      .catch((err: unknown) => {
-        if (cancelled) return;
+      },
+      onError: (err) => {
         setVenues([]);
         setError(err instanceof Error ? err.message : "Could not load date-night activities");
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [location.lat, location.lon, filters.radiusMiles, spookySeasonEnabled, halloweenActive]);
+      },
+      onSettled: () => setLoading(false),
+    });
+  }, [location.lat, location.lon, filters.radiusMiles, spookySeasonEnabled, halloweenActive, requestVersion]);
 
   const decorated = useMemo(() => decorateDateNight(venues, location, now), [venues, location, now]);
   const eligible = useMemo(
@@ -354,8 +352,11 @@ export function DateNightHome() {
       {error ? (
         <DiscoveryNotice
           tone="error"
-          title="We couldn't refresh date ideas right now"
-          body="Try again in a moment, change your location, or widen your search radius."
+          title={error === DISCOVERY_TIMEOUT_MESSAGE ? "Date idea search timed out" : "We couldn't refresh date ideas right now"}
+          body={error === DISCOVERY_TIMEOUT_MESSAGE
+            ? "The search took too long. Check your connection and try again."
+            : "Try again in a moment, change your location, or widen your search radius."}
+          onRetry={() => setRequestVersion((version) => version + 1)}
         />
       ) : null}
       {!loading && !error && eligible.length === 0 ? (

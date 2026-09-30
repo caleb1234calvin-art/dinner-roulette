@@ -1,0 +1,160 @@
+✔ dinner: success settles active UI and clears watchdog before deadline (293.230751ms)
+✔ dinner: fallback settles active UI and clears watchdog before deadline (3.711823ms)
+✔ dinner: error settles active UI and clears watchdog before deadline (2.73582ms)
+✔ dinner: AbortError settles active UI and clears watchdog before deadline (2.038397ms)
+✔ dinner: never-settling/abort-ignoring RPC exits loading at 25s (4.05376ms)
+✔ dinner: abort-compliant RPC exits loading at 25s (5.64401ms)
+✔ dinner: late post-timeout success cannot overwrite timeout or a successful retry (12.030826ms)
+✔ dinner: late post-timeout rejection cannot overwrite timeout or a successful retry (8.959049ms)
+✔ dinner: replacement aborts old success; old settles first (9.886255ms)
+✔ dinner: replacement aborts old success; new settles first (11.300625ms)
+✔ dinner: replacement aborts old rejection; old settles first (8.757891ms)
+✔ dinner: replacement aborts old rejection; new settles first (7.448835ms)
+✔ dinner: unmount aborts/cleans up; success cannot write after unmount (4.593905ms)
+✔ dinner: unmount aborts/cleans up; rejection cannot write after unmount (4.43166ms)
+✔ dinner: unmount aborts/cleans up; pending cannot write after unmount (4.741589ms)
+✔ dinner: radius replacement cancels transport; normal filters/options/pick still work (11.67207ms)
+✔ dinner: timeout then retry success remains current when the first RPC finally resolves (5.708227ms)
+✔ date-night: success settles active UI and clears watchdog before deadline (65.302636ms)
+✔ date-night: fallback settles active UI and clears watchdog before deadline (3.08041ms)
+✔ date-night: error settles active UI and clears watchdog before deadline (1.981151ms)
+✔ date-night: AbortError settles active UI and clears watchdog before deadline (2.041311ms)
+✔ date-night: never-settling/abort-ignoring RPC exits loading at 25s (2.306462ms)
+✔ date-night: abort-compliant RPC exits loading at 25s (2.648328ms)
+✔ date-night: late post-timeout success cannot overwrite timeout or a successful retry (7.705662ms)
+✔ date-night: late post-timeout rejection cannot overwrite timeout or a successful retry (5.153359ms)
+✔ date-night: replacement aborts old success; old settles first (5.540994ms)
+✔ date-night: replacement aborts old success; new settles first (4.654336ms)
+✔ date-night: replacement aborts old rejection; old settles first (5.741066ms)
+✔ date-night: replacement aborts old rejection; new settles first (6.420843ms)
+✔ date-night: unmount aborts/cleans up; success cannot write after unmount (4.563619ms)
+✔ date-night: unmount aborts/cleans up; rejection cannot write after unmount (3.536749ms)
+✔ date-night: unmount aborts/cleans up; pending cannot write after unmount (3.496679ms)
+✔ date-night: radius replacement cancels transport; normal filters/options/pick still work (8.697309ms)
+✔ date-night: timeout then retry success remains current when the first RPC finally resolves (4.250857ms)
+✔ nightlife: success settles active UI and clears watchdog before deadline (33.942991ms)
+✔ nightlife: fallback settles active UI and clears watchdog before deadline (2.117577ms)
+✔ nightlife: error settles active UI and clears watchdog before deadline (1.396938ms)
+✔ nightlife: AbortError settles active UI and clears watchdog before deadline (0.983585ms)
+✔ nightlife: never-settling/abort-ignoring RPC exits loading at 25s (1.363789ms)
+✔ nightlife: abort-compliant RPC exits loading at 25s (1.191519ms)
+✔ nightlife: late post-timeout success cannot overwrite timeout or a successful retry (3.896553ms)
+✔ nightlife: late post-timeout rejection cannot overwrite timeout or a successful retry (1.570961ms)
+✔ nightlife: replacement aborts old success; old settles first (1.925702ms)
+✔ nightlife: replacement aborts old success; new settles first (1.617532ms)
+✔ nightlife: replacement aborts old rejection; old settles first (1.850043ms)
+✔ nightlife: replacement aborts old rejection; new settles first (1.376017ms)
+✔ nightlife: unmount aborts/cleans up; success cannot write after unmount (1.265771ms)
+✔ nightlife: unmount aborts/cleans up; rejection cannot write after unmount (1.315666ms)
+✔ nightlife: unmount aborts/cleans up; pending cannot write after unmount (1.21184ms)
+✔ nightlife: radius replacement cancels transport; normal filters/options/pick still work (2.141563ms)
+✔ nightlife: timeout then retry success remains current when the first RPC finally resolves (1.334364ms)
+✔ Date Night: seasonal dependency replacement aborts the previous request (2.14582ms)
+✔ pinned TanStack RPC forwards the exact controller signal to fetch and settles on abort (23.970435ms)
+✔ shared lifecycle also settles synchronous RPC throws without leaving a watchdog (3.707607ms)
+✔ dinner: headers stalls settle fallback at 20s; no fourth mirror (31.588972ms)
+✔ dinner: headers stalls settle error at 20s; no fourth mirror (1.463689ms)
+✔ dinner: body stalls settle fallback at 20s; no fourth mirror (20.62137ms)
+✔ dinner: body stalls settle error at 20s; no fourth mirror (0.835952ms)
+✔ dinner: first timeout then second success returns at 8s and clears timers (5.10123ms)
+✔ dinner: immediate 429 advances without delay; saved coverage and terminal error preserved (10.405408ms)
+✔ dinner: immediate 500 advances without delay; saved coverage and terminal error preserved (9.272809ms)
+✔ dinner: immediate 504 advances without delay; saved coverage and terminal error preserved (11.234169ms)
+✔ dinner: immediate missing-elements advances without delay; saved coverage and terminal error preserved (11.590617ms)
+✔ dinner: immediate remark advances without delay; saved coverage and terminal error preserved (9.234399ms)
+✔ dinner: immediate invalid-json advances without delay; saved coverage and terminal error preserved (11.668174ms)
+✔ dinner: valid empty results retain mode-specific mirror and source semantics (2.006049ms)
+✔ dinner: normal first success is quiet, abort errors categorized, raw exceptions never logged (11.24149ms)
+✔ date-night: headers stalls settle fallback at 20s; no fourth mirror (3.594526ms)
+✔ date-night: headers stalls settle error at 20s; no fourth mirror (0.804825ms)
+✔ date-night: body stalls settle fallback at 20s; no fourth mirror (0.93386ms)
+✔ date-night: body stalls settle error at 20s; no fourth mirror (0.530481ms)
+✔ date-night: first timeout then second success returns at 8s and clears timers (2.045338ms)
+✔ date-night: immediate 429 advances without delay; saved coverage and terminal error preserved (1.147052ms)
+✔ date-night: immediate 500 advances without delay; saved coverage and terminal error preserved (0.806698ms)
+✔ date-night: immediate 504 advances without delay; saved coverage and terminal error preserved (3.532202ms)
+✔ date-night: immediate missing-elements advances without delay; saved coverage and terminal error preserved (1.836121ms)
+✔ date-night: immediate remark advances without delay; saved coverage and terminal error preserved (1.068713ms)
+✔ date-night: immediate invalid-json advances without delay; saved coverage and terminal error preserved (1.097016ms)
+✔ date-night: valid empty results retain mode-specific mirror and source semantics (0.717563ms)
+✔ date-night: normal first success is quiet, abort errors categorized, raw exceptions never logged (0.902413ms)
+✔ nightlife: headers stalls settle fallback at 20s; no fourth mirror (2.911956ms)
+✔ nightlife: headers stalls settle error at 20s; no fourth mirror (0.915903ms)
+✔ nightlife: body stalls settle fallback at 20s; no fourth mirror (0.736512ms)
+✔ nightlife: body stalls settle error at 20s; no fourth mirror (0.628239ms)
+✔ nightlife: first timeout then second success returns at 8s and clears timers (1.931415ms)
+✔ nightlife: immediate 429 advances without delay; saved coverage and terminal error preserved (0.94739ms)
+✔ nightlife: immediate 500 advances without delay; saved coverage and terminal error preserved (0.759296ms)
+✔ nightlife: immediate 504 advances without delay; saved coverage and terminal error preserved (0.718024ms)
+✔ nightlife: immediate missing-elements advances without delay; saved coverage and terminal error preserved (0.996865ms)
+✔ nightlife: immediate remark advances without delay; saved coverage and terminal error preserved (0.87487ms)
+✔ nightlife: immediate invalid-json advances without delay; saved coverage and terminal error preserved (1.017215ms)
+✔ nightlife: valid empty results retain mode-specific mirror and source semantics (0.472934ms)
+✔ nightlife: normal first success is quiet, abort errors categorized, raw exceptions never logged (0.659285ms)
+✔ Dinner retains successful-empty precedence when subsequent mirrors exhaust the budget (1.912447ms)
+✔ shared provider attempt uses native timer and real fetch body abort (110.21164ms)
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 0, outcome: 'empty' } ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'fallback',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'network-error' },
+    { mirror: 2, durationMs: 0, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'live',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 0, outcome: 'empty' } ]
+}
+✔ Exeter's actual theme-park record is acquired by the real seasonal query and reaches the eligible pool (17.064991ms)
+✔ precise activity evidence admits corn, pumpkin and haunted trail without admitting generic places (10.458107ms)
+✔ same identity preserves C/P, provenance, stable ID and representative metadata in either provider order (6.37588ms)
+✔ structured lifecycle cannot survive eligibility or be resurrected by an active duplicate (1.051648ms)
+✔ all availability states share one OFF/ON policy, including expiry and next-year revalidation (1.226642ms)
+✔ all seven seasonal selections preserve union and the radius boundary (4.044315ms)
+✔ saved-only successful sparse coverage, missing categories and provider outage remain distinct (5.857242ms)
+✔ per-category provenance never labels a saved haunt as live because its ordinary park duplicate is live (1.718855ms)
+✔ ordinary Date Night and seasonal toggle still work internationally; unknown hours fail strict ON (1.543379ms)
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 1, outcome: 'empty' } ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  source: 'merged',
+  durationMs: 2,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 1, outcome: 'empty' } ]
+}
+✔ actual component: handler → count/options/pick/plan and all seven category combinations (283.345162ms)
+✔ actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dependent pool/overlay refresh (177.38869ms)
+✔ actual component displays schedule uncertainty distinctly for live weekly-hours-only venues (101.545318ms)
+✔ V-F03-01 actual component: not-operating stays excluded before and after revalidation expiry (124.046895ms)
+✔ V-F03-01 actual component: an expired negative cannot fill a plan until stored positive evidence replaces it (315.308509ms)
+✔ V-F03-01 control: positive calendar expiry remains uncertain OFF and refreshes ON result/options/plan (99.726587ms)
+✔ real clock hook refreshes at minute boundaries and focus/visibility resume, then cleans up (10.303564ms)
+✔ retained regional provider captures replay through the new handler without generic-maze false positives (1860.791306ms)
+ℹ tests 112
+ℹ suites 0
+ℹ pass 112
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3620.29147
