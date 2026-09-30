@@ -1,0 +1,19 @@
+[
+  {
+    "name": "broad-seasonal-name-and-theme-park-110km",
+    "query": "[out:json][timeout:30];(nwr[\"name\"~\"haunt|maze|maize|pumpkin|pickin|cadaver|wolfman|myer|werehouse|thistleknot|fun.farm\",i](around:110000,37.176447,-94.310223);nwr[\"tourism\"=\"theme_park\"](around:110000,37.176447,-94.310223););out center tags;",
+    "url": "https://overpass.openstreetmap.fr/api/interpreter",
+    "startedAt": "2026-09-30T01:47:51.491Z",
+    "status": 403,
+    "body": "This service is only available to white-listed usages",
+    "finishedAt": "2026-09-30T01:47:57.771Z"
+  },
+  {
+    "name": "broad-seasonal-name-and-theme-park-110km",
+    "query": "[out:json][timeout:30];(nwr[\"name\"~\"haunt|maze|maize|pumpkin|pickin|cadaver|wolfman|myer|werehouse|thistleknot|fun.farm\",i](around:110000,37.176447,-94.310223);nwr[\"tourism\"=\"theme_park\"](around:110000,37.176447,-94.310223););out center tags;",
+    "url": "https://overpass.private.coffee/api/interpreter",
+    "startedAt": "2026-09-30T01:49:03.636Z",
+    "error": "The operation was aborted due to timeout",
+    "finishedAt": "2026-09-30T01:49:38.649Z"
+  }
+]

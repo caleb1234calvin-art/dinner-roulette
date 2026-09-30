@@ -1,0 +1,244 @@
+{
+  "scenarios": [
+    {
+      "name": "valid empty live provider",
+      "origin": "Carthage city-center audit origin (not recovered production GPS)",
+      "source": "merged",
+      "count": 17,
+      "eligible": 2,
+      "calls": 1,
+      "error": null
+    },
+    {
+      "name": "all four providers fail",
+      "origin": "Carthage city-center audit origin (not recovered production GPS)",
+      "source": "fallback",
+      "count": 17,
+      "eligible": 2,
+      "calls": 4,
+      "error": null
+    },
+    {
+      "name": "query-realistic fixture",
+      "origin": "Carthage city-center audit origin (not recovered production GPS)",
+      "source": "merged",
+      "count": 24,
+      "eligible": 9,
+      "calls": 1,
+      "error": null
+    },
+    {
+      "name": "control empty provider",
+      "origin": "Joplin",
+      "source": "merged",
+      "count": 17,
+      "eligible": 2,
+      "calls": 1,
+      "error": null
+    },
+    {
+      "name": "control provider outage",
+      "origin": "Joplin",
+      "source": "fallback",
+      "count": 17,
+      "eligible": 2,
+      "calls": 4,
+      "error": null
+    },
+    {
+      "name": "control empty provider",
+      "origin": "Springfield",
+      "source": "merged",
+      "count": 1,
+      "eligible": 0,
+      "calls": 1,
+      "error": null
+    },
+    {
+      "name": "control provider outage",
+      "origin": "Springfield",
+      "source": "fallback",
+      "count": 1,
+      "eligible": 0,
+      "calls": 4,
+      "error": null
+    },
+    {
+      "name": "control empty provider",
+      "origin": "Lockwood rural",
+      "source": "merged",
+      "count": 17,
+      "eligible": 2,
+      "calls": 1,
+      "error": null
+    },
+    {
+      "name": "control provider outage",
+      "origin": "Lockwood rural",
+      "source": "fallback",
+      "count": 17,
+      "eligible": 2,
+      "calls": 4,
+      "error": null
+    },
+    {
+      "name": "control empty provider",
+      "origin": "Aurora regional seasonal cluster",
+      "source": "merged",
+      "count": 17,
+      "eligible": 2,
+      "calls": 1,
+      "error": null
+    },
+    {
+      "name": "control provider outage",
+      "origin": "Aurora regional seasonal cluster",
+      "source": "fallback",
+      "count": 17,
+      "eligible": 2,
+      "calls": 4,
+      "error": null
+    },
+    {
+      "name": "same-coordinate multi-category duplicate transport",
+      "origin": "Carthage city-center audit origin (not recovered production GPS)",
+      "source": "merged",
+      "count": 18,
+      "eligible": 3,
+      "calls": 1,
+      "error": null
+    },
+    {
+      "name": "same-coordinate multi-category duplicate transport reversed",
+      "origin": "Carthage city-center audit origin (not recovered production GPS)",
+      "source": "merged",
+      "count": 18,
+      "eligible": 3,
+      "calls": 1,
+      "error": null
+    }
+  ],
+  "combinations": [
+    {
+      "categories": [
+        "haunted-house"
+      ],
+      "anchorCount": 2,
+      "fixtureCount": 2
+    },
+    {
+      "categories": [
+        "corn-maze"
+      ],
+      "anchorCount": 0,
+      "fixtureCount": 4
+    },
+    {
+      "categories": [
+        "haunted-house",
+        "corn-maze"
+      ],
+      "anchorCount": 2,
+      "fixtureCount": 6
+    },
+    {
+      "categories": [
+        "pumpkin-patch"
+      ],
+      "anchorCount": 0,
+      "fixtureCount": 2
+    },
+    {
+      "categories": [
+        "haunted-house",
+        "pumpkin-patch"
+      ],
+      "anchorCount": 2,
+      "fixtureCount": 4
+    },
+    {
+      "categories": [
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "anchorCount": 0,
+      "fixtureCount": 5
+    },
+    {
+      "categories": [
+        "haunted-house",
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "anchorCount": 2,
+      "fixtureCount": 7
+    }
+  ],
+  "radius": [
+    {
+      "requestedDistance": 0,
+      "computedDistance": 0,
+      "eligible": true,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 49.9,
+      "computedDistance": 49.90000000000016,
+      "eligible": true,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 50,
+      "computedDistance": 50.00000000000001,
+      "eligible": true,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 50.049,
+      "computedDistance": 50.04900000000011,
+      "eligible": true,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 50.05,
+      "computedDistance": 50.05000000000018,
+      "eligible": false,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 50.051,
+      "computedDistance": 50.05100000000024,
+      "eligible": false,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 51,
+      "computedDistance": 50.99999999999993,
+      "eligible": false,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 60,
+      "computedDistance": 60.00000000000021,
+      "eligible": false,
+      "providerRadiusMeters": 80467
+    }
+  ],
+  "hours": [
+    {
+      "on": false,
+      "anchorCount": 2,
+      "fixtureCount": 7
+    },
+    {
+      "on": true,
+      "anchorCount": 0,
+      "fixtureCount": 5
+    },
+    {
+      "on": false,
+      "anchorCount": 2,
+      "fixtureCount": 7
+    }
+  ]
+}

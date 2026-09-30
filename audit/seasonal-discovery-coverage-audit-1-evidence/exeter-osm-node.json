@@ -1,0 +1,30 @@
+{
+  "label": "exeter-osm-node",
+  "url": "https://api.openstreetmap.org/api/0.6/node/12298081054.json",
+  "startedAt": "2026-09-30T01:53:34.302Z",
+  "status": 200,
+  "response": {
+    "version": "0.6",
+    "generator": "openstreetmap-cgimap 2.1.0 (3498750 spike-06.openstreetmap.org)",
+    "copyright": "OpenStreetMap and contributors",
+    "attribution": "http://www.openstreetmap.org/copyright",
+    "license": "http://opendatacommons.org/licenses/odbl/1-0/",
+    "elements": [
+      {
+        "type": "node",
+        "id": 12298081054,
+        "lat": 36.6355091,
+        "lon": -93.9609468,
+        "timestamp": "2024-10-29T23:26:34Z",
+        "version": 1,
+        "changeset": 158520483,
+        "user": "TheCoGuards256",
+        "uid": 9212279,
+        "tags": {
+          "name": "Exeter Corn Maze",
+          "tourism": "theme_park"
+        }
+      }
+    ]
+  }
+}

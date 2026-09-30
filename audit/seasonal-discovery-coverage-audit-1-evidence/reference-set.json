@@ -1,0 +1,854 @@
+{
+  "generatedAt": "2026-09-30T02:04:18.443Z",
+  "origin": {
+    "label": "Carthage city-center audit origin (not recovered production GPS)",
+    "lat": 37.176447,
+    "lon": -94.310223
+  },
+  "method": "Operator or municipal 2026 evidence preferred; regional tourism/directory claims labeled; provider captures kept distinct from reference expectations; no venue added to product.",
+  "coordinatePolicy": "Haversine using unchanged product geo.ts. Catalog and directory coordinates are not surveyed entrances. Null means reliable attraction coordinate not obtained.",
+  "candidates": [
+    {
+      "id": "myers-inn",
+      "name": "Myer's Inn Haunt",
+      "locality": "Carthage, MO",
+      "address": "529 W Airport Dr",
+      "coordinates": {
+        "lat": 37.1475746,
+        "lon": -94.3173348,
+        "confidence": "product catalog point; independent directory near the same address",
+        "provenance": "src/lib/date-night/seasonal-catalog.ts",
+        "alternative": {
+          "lat": 37.147525,
+          "lon": -94.318027,
+          "distanceMiles": 2.044019056534544
+        }
+      },
+      "categories": [
+        "haunted-house"
+      ],
+      "season2026": "Operator October 2026 calendar marks Fridays/Saturdays Oct 2–31; direct fetch supersedes stale indexed 2025 content and the catalog note.",
+      "dates": "2026-10-02/2026-10-31",
+      "hours": "Friday/Saturday 19:00; last ticket midnight",
+      "eligibleOpenOff": "Yes: upcoming confirmed season can be browsed; actual app retains its unconfirmed record.",
+      "providerPresence": "Absent from all five captured raw provider returns; catalog anchor present.",
+      "classification": [
+        "haunted-house"
+      ],
+      "finalDisposition": "Included, 2.03 mi; app status unconfirmed but rendered Closed.",
+      "rootCause": "No missing-candidate gap; stale availability and PRESENTATION / COUNT GAP in status label, not count.",
+      "sources": [
+        {
+          "url": "https://www.myersinnhaunt.com/",
+          "kind": "operator",
+          "facts": "Direct response contains October 2026 calendar with ten active dates and Friday/Saturday evening hours.",
+          "notes": "Search-index snapshots were stale; parsed direct calendar in reference-event-metadata.json.",
+          "retrieval": {
+            "url": "https://www.myersinnhaunt.com/",
+            "startedAt": "2026-09-30T01:58:58.690Z",
+            "status": 200,
+            "finalUrl": "https://www.myersinnhaunt.com/",
+            "bytes": 33175,
+            "sha256": "2b25c79c02d7d7294f1e0b4725bb7c73596867ef1c92e1e8d8c0e8260f93b7a2",
+            "title": "RIP at Myer&#39;s Inn",
+            "has2026String": true,
+            "geoMetadata": [],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:05.664Z"
+          }
+        },
+        {
+          "url": "https://www.missourihauntedhouses.com/halloween/rip-at-myers-inn.html",
+          "kind": "directory",
+          "facts": "2026 event metadata Oct 2–31; same address; independent nearby coordinate.",
+          "notes": "",
+          "retrieval": {
+            "url": "https://www.missourihauntedhouses.com/halloween/rip-at-myers-inn.html",
+            "startedAt": "2026-09-30T01:58:58.703Z",
+            "status": 200,
+            "finalUrl": "https://www.missourihauntedhouses.com/halloween/rip-at-myers-inn.html",
+            "bytes": 265604,
+            "sha256": "948e483b2c30e53c56341a918c20ede783570a8334138e8eb7385aeed0fc13c0",
+            "title": "Myer&#x27;s Inn Haunt - Missouri Haunted Houses",
+            "has2026String": true,
+            "geoMetadata": [
+              {
+                "axis": "latitude",
+                "value": "37.147525"
+              },
+              {
+                "axis": "longitude",
+                "value": "-94.318027"
+              }
+            ],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:06.587Z"
+          }
+        }
+      ],
+      "distanceMiles": 2.0329841506408552,
+      "insideCarthageRadius": true,
+      "controlDistances": {
+        "Carthage": 2.0329841506408552,
+        "Joplin": 11.653597925574143,
+        "Springfield": 56.588484213568826,
+        "Lockwood rural": 25.919508853467317,
+        "Aurora": 35.22990482597511
+      }
+    },
+    {
+      "id": "werehouse",
+      "name": "The Werehouse",
+      "locality": "Joplin, MO",
+      "address": "3819 E 20th St",
+      "coordinates": {
+        "lat": 37.0694258,
+        "lon": -94.4688601,
+        "confidence": "product catalog point; independent directory about 0.25 mi away, both safely inside",
+        "provenance": "src/lib/date-night/seasonal-catalog.ts",
+        "alternative": {
+          "lat": 37.070679,
+          "lon": -94.464649,
+          "distanceMiles": 11.215335491039221
+        }
+      },
+      "categories": [
+        "haunted-house"
+      ],
+      "season2026": "2026 directory event metadata Sep 25–Oct 31 corroborates the frozen availability record; operator confirms weekly evening hours.",
+      "dates": "2026-09-25/2026-10-31",
+      "hours": "Friday/Saturday 19:00–midnight",
+      "eligibleOpenOff": "Yes, even though Tuesday evening is closed.",
+      "providerPresence": "Absent from all five captured raw provider returns; catalog anchor present.",
+      "classification": [
+        "haunted-house"
+      ],
+      "finalDisposition": "Included, 11.45 mi; closed now.",
+      "rootCause": "No missing-candidate gap; EXPECTED INCLUSION.",
+      "sources": [
+        {
+          "url": "https://thewerehouse.net/",
+          "kind": "operator",
+          "facts": "Haunted attraction at the Joplin address with Friday/Saturday evening operation.",
+          "notes": "",
+          "retrieval": {
+            "url": "https://thewerehouse.net/",
+            "startedAt": "2026-09-30T01:58:58.705Z",
+            "status": 200,
+            "finalUrl": "https://thewerehouse.net/",
+            "bytes": 141526,
+            "sha256": "e1902f166b5f934472aeb1f4df109b7de58a28f5f285ca005e8aaaccf6001cef",
+            "title": "Spook House",
+            "has2026String": false,
+            "geoMetadata": [],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:06.391Z"
+          }
+        },
+        {
+          "url": "https://www.missourihauntedhouses.com/halloween/haunted-house-joplin.html",
+          "kind": "directory",
+          "facts": "Structured 2026 event dates Sep 25–Oct 31; Joplin address and coordinate.",
+          "notes": "",
+          "retrieval": {
+            "url": "https://www.missourihauntedhouses.com/halloween/haunted-house-joplin.html",
+            "startedAt": "2026-09-30T01:59:06.587Z",
+            "status": 200,
+            "finalUrl": "https://www.missourihauntedhouses.com/halloween/haunted-house-joplin.html",
+            "bytes": 242854,
+            "sha256": "541724ab5e4f20d1bb5811dc34d894c450a6ce161ce46d54b74ab2388e243b0a",
+            "title": "The Werehouse - Missouri Haunted Houses",
+            "has2026String": true,
+            "geoMetadata": [
+              {
+                "axis": "latitude",
+                "value": "37.070679"
+              },
+              {
+                "axis": "longitude",
+                "value": "-94.464649"
+              }
+            ],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:06.805Z"
+          }
+        }
+      ],
+      "distanceMiles": 11.44811300482452,
+      "insideCarthageRadius": true,
+      "controlDistances": {
+        "Carthage": 11.44811300482452,
+        "Joplin": 2.6554948140484402,
+        "Springfield": 65.51750588745003,
+        "Lockwood rural": 35.81438338912894,
+        "Aurora": 41.979013765682566
+      }
+    },
+    {
+      "id": "myers-forest",
+      "name": "Myers Forest of Fears",
+      "locality": "Carthage, MO",
+      "address": "3935 S Garrison Ave",
+      "coordinates": {
+        "lat": 37.119659,
+        "lon": -94.312243,
+        "confidence": "secondary directory coordinate, approximate",
+        "provenance": "https://www.missourihauntedhouses.com/halloween/myers-forest-of-fears-mo.html"
+      },
+      "categories": [
+        "haunted-house"
+      ],
+      "season2026": "Fresh operator HTML lists active Friday/Saturday dates Oct 2–31, 2026. Prose still refers to 2023; indexed copy showed 2024; catalog comments report conflicting closure data. Published 2026 schedule exists, but operational conflict remains unresolved.",
+      "dates": "Published 2026-10-02/2026-10-31; operation not independently resolved",
+      "hours": null,
+      "eligibleOpenOff": "Conditionally yes if current operation is confirmed; do not count as a firm expected active result while closure evidence conflicts.",
+      "providerPresence": "Absent from captured raw returns and catalog; mentioned only in catalog comments.",
+      "classification": null,
+      "finalDisposition": "Absent; never reaches filtering or UI.",
+      "rootCause": "SOURCE COVERAGE GAP at product-input boundary; operational status unresolved, not a proven erroneous exclusion.",
+      "sources": [
+        {
+          "url": "https://www.myersforestoffears.com/",
+          "kind": "operator",
+          "facts": "Haunted forest at this address; direct calendar marks ten October 2026 dates, alongside stale 2023 prose.",
+          "notes": "Do not equate a schedule page with resolution of conflicting closure reports.",
+          "retrieval": {
+            "url": "https://www.myersforestoffears.com/",
+            "startedAt": "2026-09-30T01:59:06.588Z",
+            "status": 200,
+            "finalUrl": "https://www.myersforestoffears.com/",
+            "bytes": 28508,
+            "sha256": "d63a2575baa58c53b8e3fba3ea656f53f3f07bb118dbd6827a45b6e5f799424c",
+            "title": "Myers Forest of Fears",
+            "has2026String": true,
+            "geoMetadata": [],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:12.994Z"
+          }
+        },
+        {
+          "url": "https://www.missourihauntedhouses.com/halloween/myers-forest-of-fears-mo.html",
+          "kind": "directory",
+          "facts": "Coordinate metadata for the listed address.",
+          "notes": "",
+          "retrieval": null
+        }
+      ],
+      "distanceMiles": 3.9252922144320848,
+      "insideCarthageRadius": true,
+      "controlDistances": {
+        "Carthage": 3.9252922144320848,
+        "Joplin": 11.349619753748028,
+        "Springfield": 56.497302296941704,
+        "Lockwood rural": 26.981263375038317,
+        "Aurora": 34.34664658909717
+      }
+    },
+    {
+      "id": "cadaver-zone",
+      "name": "The Cadaver Zone Spook House",
+      "locality": "Webb City, MO",
+      "address": "25088 Kafir Rd",
+      "coordinates": null,
+      "categories": [
+        "haunted-house"
+      ],
+      "season2026": "No verified 2026 dates found. Indexed directory says upcoming dates/hours have not been loaded; direct retrieval returned a Site Unavailable page with HTTP 200.",
+      "dates": null,
+      "hours": null,
+      "eligibleOpenOff": "Unresolved: plausible regional haunt, but current season and precise coordinate not established. Not counted as a required missing active venue.",
+      "providerPresence": "Absent from captured raw returns and catalog; mentioned only in catalog comments.",
+      "classification": null,
+      "finalDisposition": "Absent; cannot assign a reliable attraction-level distance.",
+      "rootCause": "SOURCE COVERAGE GAP at product-input boundary; current operation/radius not fully verified.",
+      "sources": [
+        {
+          "url": "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+          "kind": "directory, indexed content",
+          "facts": "Name/address and haunted-house classification; no upcoming dates loaded.",
+          "notes": "Indexed source retrieved via web source turn17view0 (crawl about three weeks old); direct HTTP 200 is Site Unavailable and is not successful content retrieval.",
+          "retrieval": {
+            "url": "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+            "startedAt": "2026-09-30T01:59:06.589Z",
+            "status": 200,
+            "finalUrl": "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+            "bytes": 195,
+            "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+            "title": "Site Unavailable",
+            "has2026String": false,
+            "geoMetadata": [],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:11.488Z"
+          }
+        },
+        {
+          "url": "https://www.facebook.com/cadaverzone/",
+          "kind": "operator social lead",
+          "facts": "Could not independently retrieve current posts.",
+          "notes": "No 2026 claim derived from this inaccessible source.",
+          "retrieval": null
+        }
+      ],
+      "distanceMiles": null,
+      "insideCarthageRadius": null,
+      "controlDistances": null
+    },
+    {
+      "id": "wolfmans",
+      "name": "Wolfmans House Of Screams",
+      "locality": "Carl Junction, MO",
+      "address": "26267 King Ln",
+      "coordinates": {
+        "lat": 37.203407,
+        "lon": -94.532039,
+        "confidence": "secondary directory coordinate, approximate; safely inside",
+        "provenance": "https://www.missourihauntedhouses.com/halloween/wolfmans-housescreams-mo.html"
+      },
+      "categories": [
+        "haunted-house"
+      ],
+      "season2026": "Current directory event metadata schedules Oct 3–31, 2026. Operator social posts not independently verified.",
+      "dates": "2026-10-03/2026-10-31 (secondary listing)",
+      "hours": "Directory says Friday/Saturday from 19:00",
+      "eligibleOpenOff": "Yes provisionally based on current directory, including before opening; lower confidence than operator confirmation.",
+      "providerPresence": "Absent from captured raw returns and catalog; comment lead only.",
+      "classification": null,
+      "finalDisposition": "Missing at source-input stage, 12.35 mi.",
+      "rootCause": "SOURCE COVERAGE GAP; query-vs-upstream absence not isolated for this venue.",
+      "sources": [
+        {
+          "url": "https://www.missourihauntedhouses.com/halloween/wolfmans-housescreams-mo.html",
+          "kind": "directory",
+          "facts": "Current 2026 event metadata, category, address and coordinate; October 3 start.",
+          "notes": "",
+          "retrieval": {
+            "url": "https://www.missourihauntedhouses.com/halloween/wolfmans-housescreams-mo.html",
+            "startedAt": "2026-09-30T01:59:12.994Z",
+            "status": 200,
+            "finalUrl": "https://www.missourihauntedhouses.com/halloween/wolfmans-housescreams-mo.html",
+            "bytes": 240329,
+            "sha256": "a435e2da292537572dc490a4729490f2aff75f45574fe34ef96554792447e3d8",
+            "title": "Wolfmans House Of Screams - Missouri Haunted Houses",
+            "has2026String": true,
+            "geoMetadata": [
+              {
+                "axis": "latitude",
+                "value": "37.203407"
+              },
+              {
+                "axis": "longitude",
+                "value": "-94.532039"
+              }
+            ],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:18.470Z"
+          }
+        }
+      ],
+      "distanceMiles": 12.350667018969192,
+      "insideCarthageRadius": true,
+      "controlDistances": {
+        "Carthage": 12.350667018969192,
+        "Joplin": 8.301740439375251,
+        "Springfield": 68.2247300752333,
+        "Lockwood rural": 34.22675352298917,
+        "Aurora": 47.65832934374897
+      }
+    },
+    {
+      "id": "aurora-maize",
+      "name": "Aurora Maize at Adventure Farm",
+      "aliases": [
+        "Verona Corn Maze",
+        "Verona MAiZE"
+      ],
+      "locality": "Aurora, MO",
+      "address": "20701 Lawrence 2200",
+      "coordinates": {
+        "lat": 36.9808456,
+        "lon": -93.6877871,
+        "confidence": "operator-embedded map pin; preferred over conflicting old directory point",
+        "provenance": "https://auroramaize.com/find-the-farm/",
+        "mapUrl": "https://www.google.com/maps/d/embed?mid=1r3gzFPM4zv8RVTvb5uD9ouIY6uALIFRs",
+        "alternative": {
+          "lat": 36.984159,
+          "lon": -93.743216,
+          "distanceMiles": 33.961486025823696
+        }
+      },
+      "categories": [
+        "corn-maze",
+        "haunted-house"
+      ],
+      "categoryNote": "Corn maze certain; seasonal haunted/zombie attraction is a reasonable Haunted House semantic mapping, not a separate venue.",
+      "season2026": "Operator explicitly announces 2026 opening and season dates.",
+      "dates": "2026-09-19/2026-10-31",
+      "hours": "Wed 17:00–20:30 starting Oct 7; Fri 17:00–22:00; Sat 16:00–22:00",
+      "eligibleOpenOff": "Yes; inside radius and current advertised season, irrespective of Tuesday closure.",
+      "providerPresence": "Absent from all five captured raw returns and catalogs.",
+      "classification": null,
+      "finalDisposition": "Missing before normalization. Historical Verona lead resolved to this current Aurora attraction; counted once.",
+      "rootCause": "SOURCE COVERAGE GAP; exact OSM absence versus unqueried tagging remains unresolved.",
+      "sources": [
+        {
+          "url": "https://auroramaize.com/",
+          "kind": "operator",
+          "facts": "2026 opening announcement and current Adventure Farm address.",
+          "notes": "",
+          "retrieval": {
+            "url": "https://auroramaize.com/",
+            "startedAt": "2026-09-30T01:59:12.995Z",
+            "status": 200,
+            "finalUrl": "https://auroramaize.com/",
+            "bytes": 34757,
+            "sha256": "68207bea1926d26be1ebf0b7121d6191649ac016ac325e4f3ef04c9e1134a597",
+            "title": "Welcome - Aurora Maize",
+            "has2026String": true,
+            "geoMetadata": [],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:18.432Z"
+          }
+        },
+        {
+          "url": "https://auroramaize.com/hourstickets/",
+          "kind": "operator",
+          "facts": "2026 season range, weekday hours and maze/zombie offerings.",
+          "notes": "",
+          "retrieval": {
+            "url": "https://auroramaize.com/hourstickets/",
+            "startedAt": "2026-09-30T01:59:12.996Z",
+            "status": 200,
+            "finalUrl": "https://auroramaize.com/hourstickets/",
+            "bytes": 19238,
+            "sha256": "039dd4c1b070b8d732e1e43c3829d25b72620f68adf82de8402ba6749f9d7f52",
+            "title": "Plan Your Visit to Aurora Maize - Aurora Maize",
+            "has2026String": true,
+            "geoMetadata": [],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:18.239Z"
+          }
+        },
+        {
+          "url": "https://auroramaize.com/find-the-farm/",
+          "kind": "operator",
+          "facts": "Embedded map supplies current named attraction point; older footer address differs.",
+          "notes": "",
+          "retrieval": {
+            "url": "https://auroramaize.com/find-the-farm/",
+            "startedAt": "2026-09-30T01:59:18.470Z",
+            "status": 200,
+            "finalUrl": "https://auroramaize.com/find-the-farm/",
+            "bytes": 15517,
+            "sha256": "9470f1d1339c5ab7efd41e63aeaa5e0e163f913f63ba5c1d8a586fd93050455f",
+            "title": "Find the Farm - Aurora Maize",
+            "has2026String": false,
+            "geoMetadata": [],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:19.516Z"
+          }
+        },
+        {
+          "url": "https://www.abilitiesfirst.net/wp-content/uploads/2019/08/Sept-Family-2019.pdf",
+          "kind": "historical regional nonprofit newsletter",
+          "facts": "2019 account identifies relocation of Verona MAiZE to Aurora at 20701 Lawrence 2200.",
+          "notes": "Used only for identity continuity, not 2026 operation.",
+          "retrieval": null
+        }
+      ],
+      "distanceMiles": 36.876755617897096,
+      "insideCarthageRadius": true,
+      "controlDistances": {
+        "Carthage": 36.876755617897096,
+        "Joplin": 46.09152483352033,
+        "Springfield": 26.89765848089143,
+        "Lockwood rural": 31.54748820096937,
+        "Aurora": 1.8029020662512658
+      }
+    },
+    {
+      "id": "pickin-patch",
+      "name": "Pickin' Patch Farm",
+      "locality": "Marionville, MO",
+      "address": "22813 Hwy ZZ",
+      "coordinates": {
+        "lat": 37.00037,
+        "lon": -93.65215,
+        "confidence": "secondary directory coordinate, approximate; safely inside",
+        "provenance": "https://www.pumpkinpatches.com/pickapumpkin248"
+      },
+      "categories": [
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "season2026": "Regional tourism article published Sep 9, 2026 explicitly supplies 2026 dates and both activities; operator page not independently accessible.",
+      "dates": "2026-09-18/2026-10-31",
+      "hours": null,
+      "eligibleOpenOff": "Yes on documented 2026 tourism evidence; weekly hours unknown does not exclude browsing.",
+      "providerPresence": "Absent from all five captured raw returns and catalogs.",
+      "classification": null,
+      "finalDisposition": "Missing before normalization, 38.26 mi.",
+      "rootCause": "SOURCE COVERAGE GAP; query-vs-upstream absence not isolated.",
+      "sources": [
+        {
+          "url": "https://www.springfieldmo.org/blog/post/visit-these-pumpkin-patches-around-springfield/",
+          "kind": "regional tourism authority",
+          "facts": "Dated 2026 article lists this farm, address, corn maze, pumpkin picking and Sep 18–Oct 31 dates.",
+          "notes": "",
+          "retrieval": {
+            "url": "https://www.springfieldmo.org/blog/post/visit-these-pumpkin-patches-around-springfield/",
+            "startedAt": "2026-09-30T01:59:18.471Z",
+            "status": 200,
+            "finalUrl": "https://www.springfieldmo.org/blog/post/visit-these-pumpkin-patches-around-springfield/",
+            "bytes": 174649,
+            "sha256": "2ac458044a0a9845211d7a02f042e882596ff7512e2bf4c880e6512d48ea61ea",
+            "title": "Visit These Pumpkin Patches Around Springfield | Springfield, Missouri",
+            "has2026String": true,
+            "geoMetadata": [],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:23.076Z"
+          }
+        },
+        {
+          "url": "https://www.pumpkinpatches.com/pickapumpkin248",
+          "kind": "directory",
+          "facts": "Matching name/address and coordinate metadata.",
+          "notes": "Undated directory is used for location, not current season confirmation.",
+          "retrieval": {
+            "url": "https://www.pumpkinpatches.com/pickapumpkin248",
+            "startedAt": "2026-09-30T01:59:18.471Z",
+            "status": 200,
+            "finalUrl": "https://www.pumpkinpatches.com/pickapumpkin248",
+            "bytes": 71363,
+            "sha256": "d09289d2d8deb1acfc5b9e739969279cec2d03ca86ca9507734a5030678553a0",
+            "title": "Pickin' Patch Farm - Marionville, MO",
+            "has2026String": true,
+            "geoMetadata": [
+              {
+                "axis": "latitude",
+                "value": "37.00037"
+              },
+              {
+                "axis": "longitude",
+                "value": "-93.65215"
+              }
+            ],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:27.095Z"
+          }
+        }
+      ],
+      "distanceMiles": 38.25670847500849,
+      "insideCarthageRadius": true,
+      "controlDistances": {
+        "Carthage": 38.25670847500849,
+        "Joplin": 47.846408874131996,
+        "Springfield": 24.513663371883798,
+        "Lockwood rural": 31.347527864457984,
+        "Aurora": 4.165185356350719
+      }
+    },
+    {
+      "id": "exeter",
+      "name": "Exeter Corn Maze",
+      "locality": "Exeter, MO",
+      "address": "20946 FR 1057",
+      "coordinates": {
+        "lat": 36.6355091,
+        "lon": -93.9609468,
+        "confidence": "named OSM node with official attraction address corroboration; not surveyed entrance",
+        "provenance": "https://api.openstreetmap.org/api/0.6/node/12298081054.json"
+      },
+      "categories": [
+        "corn-maze",
+        "pumpkin-patch",
+        "haunted-house"
+      ],
+      "season2026": "Operator explicitly advertises 2026 season, pumpkin patch and haunted activities.",
+      "dates": "2026-09-12/2026-11-01",
+      "hours": "Haunted farmhouse Fri/Sat/Sun from 18:00; farm schedules vary",
+      "eligibleOpenOff": "Yes, 42.06 mi and active advertised 2026 season.",
+      "providerPresence": "OSM node 12298081054 exists, tagged tourism=theme_park. Absent from captured product returns and catalogs because query does not request that tag.",
+      "classification": null,
+      "classificationIfSupplied": [
+        "corn-maze"
+      ],
+      "finalDisposition": "Not queried; same raw OSM record, when passed to unchanged normalizer/predicate in an evidence-only probe, is eligible as corn-maze.",
+      "rootCause": "SOURCE COVERAGE GAP — proven product query construction miss. Additional pumpkin/haunt activities require source enrichment; absent raw metadata cannot classify them.",
+      "sources": [
+        {
+          "url": "https://www.exetercornmaze.com/",
+          "kind": "operator",
+          "facts": "2026 dates and current address; site advertises corn maze and pumpkin patch.",
+          "notes": "",
+          "retrieval": {
+            "url": "https://www.exetercornmaze.com/",
+            "startedAt": "2026-09-30T01:59:27.096Z",
+            "status": 200,
+            "finalUrl": "https://www.exetercornmaze.com/",
+            "bytes": 787616,
+            "sha256": "cea6579a02a219295013e7b0754c0d5050c3f8f7d971611693ca88a81a954223",
+            "title": "Exeter Corn Maze",
+            "has2026String": true,
+            "geoMetadata": [],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:33.041Z"
+          }
+        },
+        {
+          "url": "https://www.exetercornmaze.com/about-3",
+          "kind": "operator",
+          "facts": "Farmhouse and bunker haunted activities, with seasonal schedule details.",
+          "notes": "",
+          "retrieval": {
+            "url": "https://www.exetercornmaze.com/about-3",
+            "startedAt": "2026-09-30T01:59:27.096Z",
+            "status": 200,
+            "finalUrl": "https://www.exetercornmaze.com/about-3",
+            "bytes": 645490,
+            "sha256": "5b5a30a58a652bbd37ff464d61867c10ab7761f6de6298e89ad7a13e6803329a",
+            "title": "Haunt | My Vxw Site 5cmknl 1",
+            "has2026String": true,
+            "geoMetadata": [],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:32.944Z"
+          }
+        },
+        {
+          "url": "https://api.openstreetmap.org/api/0.6/node/12298081054.json",
+          "kind": "primary provider record",
+          "facts": "Named node, coordinate and tourism=theme_park; current retrieval retained separately.",
+          "notes": "",
+          "retrieval": null
+        }
+      ],
+      "distanceMiles": 42.06318148648897,
+      "insideCarthageRadius": true,
+      "controlDistances": {
+        "Carthage": 42.06318148648897,
+        "Joplin": 43.51529918249458,
+        "Springfield": 54.16643284638547,
+        "Lockwood rural": 51.82870600341925,
+        "Aurora": 26.789269637896304
+      }
+    },
+    {
+      "id": "campbells",
+      "name": "Campbell's Maze Daze & Pumpkin Patch",
+      "locality": "Clever, MO",
+      "address": "177 Carob Rd",
+      "coordinates": {
+        "lat": 36.993237,
+        "lon": -93.407991,
+        "confidence": "two directory coordinates differ; both outside Carthage 50.05 mi cutoff",
+        "provenance": "https://www.missourihauntedhouses.com/halloween/campbells-maze-daze-pumpkin-patch-mo.html",
+        "alternative": {
+          "lat": 36.99419,
+          "lon": -93.41841,
+          "provenance": "https://nextdoor.com/pages/campbells-maze-daze-clever-mo/",
+          "distanceMiles": 50.743034960290416
+        }
+      },
+      "categories": [
+        "corn-maze",
+        "pumpkin-patch",
+        "haunted-house"
+      ],
+      "season2026": "Operator announces Sep 26–Oct 31, 2026 and seasonal maze/pumpkin/haunted offerings.",
+      "dates": "2026-09-26/2026-10-31",
+      "hours": "General admission hours vary by day; haunted maze evening operation",
+      "eligibleOpenOff": "No from Carthage audit origin: 50.74–51.32 mi. Yes in nearer Aurora/Springfield controls on advertised category/season evidence.",
+      "providerPresence": "Absent from all captured raw returns and catalogs, including nearer control searches.",
+      "classification": null,
+      "finalDisposition": "Expected outside Carthage; control-location source gap.",
+      "rootCause": "EXPECTED EXCLUSION for primary radius; SOURCE COVERAGE GAP in nearer controls.",
+      "sources": [
+        {
+          "url": "https://www.campbellsmazedaze.com/general-admission",
+          "kind": "operator",
+          "facts": "Explicit 2026 season and admission schedule.",
+          "notes": "",
+          "retrieval": {
+            "url": "https://www.campbellsmazedaze.com/general-admission",
+            "startedAt": "2026-09-30T01:59:27.097Z",
+            "status": 200,
+            "finalUrl": "https://www.campbellsmazedaze.com/general-admission",
+            "bytes": 101466,
+            "sha256": "a56de637186c0749fa6344a5e839b0580d21831a9df034613c415ef86809bccc",
+            "title": "Farm near Clever, MO - Campbell&#39;s Maze Daze &amp; Pumpkin Patch",
+            "has2026String": true,
+            "geoMetadata": [],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:33.381Z"
+          }
+        },
+        {
+          "url": "https://www.campbellsmazedaze.com/",
+          "kind": "operator",
+          "facts": "Corn maze, pumpkin patch and haunted maze offerings.",
+          "notes": "",
+          "retrieval": null
+        },
+        {
+          "url": "https://www.missourihauntedhouses.com/halloween/campbells-maze-daze-pumpkin-patch-mo.html",
+          "kind": "directory",
+          "facts": "Coordinate metadata.",
+          "notes": "",
+          "retrieval": {
+            "url": "https://www.missourihauntedhouses.com/halloween/campbells-maze-daze-pumpkin-patch-mo.html",
+            "startedAt": "2026-09-30T01:59:33.381Z",
+            "status": 200,
+            "finalUrl": "https://www.missourihauntedhouses.com/halloween/campbells-maze-daze-pumpkin-patch-mo.html",
+            "bytes": 256485,
+            "sha256": "95b7e3ef2772ba83298f7dc658a269f133a533d5ab927c9a2c56848afc521b98",
+            "title": "Campbell&#x27;s Maze Daze Haunted Corn Maze - Missouri Haunted Houses",
+            "has2026String": true,
+            "geoMetadata": [
+              {
+                "axis": "latitude",
+                "value": "36.993237"
+              },
+              {
+                "axis": "longitude",
+                "value": "-93.407991"
+              }
+            ],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:38.432Z"
+          }
+        },
+        {
+          "url": "https://nextdoor.com/pages/campbells-maze-daze-clever-mo/",
+          "kind": "directory",
+          "facts": "Alternate point for same address; coordinate uncertainty does not cross the audit cutoff.",
+          "notes": "",
+          "retrieval": null
+        }
+      ],
+      "distanceMiles": 51.31605149408748,
+      "insideCarthageRadius": false,
+      "controlDistances": {
+        "Carthage": 51.31605149408748,
+        "Joplin": 61.28578654703567,
+        "Springfield": 16.211269436853982,
+        "Lockwood rural": 40.43366734644164,
+        "Aurora": 17.178997172035498
+      }
+    },
+    {
+      "id": "rutledge-wilson",
+      "name": "Rutledge-Wilson Farm Park",
+      "locality": "Springfield, MO",
+      "address": "3825 W Farm Rd 146",
+      "coordinates": {
+        "lat": 37.1921975,
+        "lon": -93.35973,
+        "confidence": "actual captured OSM way center",
+        "provenance": "OSM way 502193872, live-provider-observations.json"
+      },
+      "categories": [
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "season2026": "Municipal Harvest Fest page gives Oct 3–25 corn maze and Sep 29–Oct 25 pumpkin patch; municipal 2026 calendar corroborates the year.",
+      "dates": "Corn maze Oct 3–25; pumpkin patch Sep 29–Oct 25, 2026",
+      "hours": "Corn maze Sat 11:00–18:00, Sun 12:00–18:00; patch closed Mondays",
+      "eligibleOpenOff": "No from Carthage: 52.33 mi. Yes from Springfield/Aurora controls; upcoming maze and current pumpkin patch qualify for browsing.",
+      "providerPresence": "Absent in Carthage (outside); actual raw way present in Springfield, Lockwood and Aurora, leisure=park with no seasonal activity metadata; not a catalog anchor.",
+      "classification": [
+        "park"
+      ],
+      "finalDisposition": "Excluded by seasonal-category selection in controls; received park metadata cannot establish event activities.",
+      "rootCause": "EXPECTED EXCLUSION in Carthage; SOURCE COVERAGE GAP in activity metadata/complementary event sourcing for controls, not loss of a supplied seasonal tag.",
+      "sources": [
+        {
+          "url": "https://www.parkboard.org/harvestfest",
+          "kind": "municipal operator",
+          "facts": "Publicly advertised corn maze and pumpkin patch dates and hours.",
+          "notes": "",
+          "retrieval": {
+            "url": "https://www.parkboard.org/harvestfest",
+            "startedAt": "2026-09-30T01:59:33.382Z",
+            "status": 200,
+            "finalUrl": "https://www.parkboard.org/harvestfest",
+            "bytes": 117256,
+            "sha256": "8163c71517f016970b415663c0624fc950e5dab79b1379eeebc2343ba6dfa99f",
+            "title": "Harvest Fest presented by vital farms | Springfield-Greene County Park Board",
+            "has2026String": false,
+            "geoMetadata": [],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:38.511Z"
+          }
+        },
+        {
+          "url": "https://www.parkboard.org/calendar.aspx?CID=14%2C26%2C22%2C23&view=month",
+          "kind": "municipal operator calendar",
+          "facts": "2026 calendar lists seasonal farm events; used to corroborate year.",
+          "notes": "",
+          "retrieval": null
+        }
+      ],
+      "distanceMiles": 52.33282989551638,
+      "insideCarthageRadius": false,
+      "controlDistances": {
+        "Carthage": 52.33282989551638,
+        "Joplin": 63.9777782081083,
+        "Springfield": 3.887540729364858,
+        "Lockwood rural": 35.24390848265502,
+        "Aurora": 24.97535866645756
+      }
+    },
+    {
+      "id": "turtle-moon",
+      "name": "Turtle Moon Labyrinth",
+      "locality": "Eureka Springs, AR",
+      "address": "637 County Rd 111 (historic operator release)",
+      "coordinates": {
+        "lat": 36.4600896,
+        "lon": -93.8407795,
+        "confidence": "actual captured OSM node",
+        "provenance": "OSM node 3388827330, live-provider-observations.json"
+      },
+      "categories": [],
+      "season2026": "No qualifying 2026 corn-maze or pumpkin/haunt evidence. Historical operator release describes a meditation labyrinth.",
+      "dates": null,
+      "hours": null,
+      "eligibleOpenOff": "No seasonal qualification established. Also outside Carthage at 55.89 mi; inside Aurora at 35.94 mi.",
+      "providerPresence": "Raw Aurora node attraction=maze; not a catalog anchor.",
+      "classification": [
+        "corn-maze"
+      ],
+      "finalDisposition": "Incorrectly retained in Aurora seasonal pool, including Open Now ON despite unknown hours.",
+      "rootCause": "INGESTION / CLASSIFICATION GAP — false positive; FILTERING / ELIGIBILITY GAP for strict Open Now. EXPECTED EXCLUSION from Carthage radius.",
+      "sources": [
+        {
+          "url": "https://www.prlog.org/11064027-retreat-at-sky-ridge-opens-new-community-labyrinth-on-nov-19-at-5-pm.html",
+          "kind": "operator press release, 2010",
+          "facts": "Describes a seven-circuit meditation labyrinth at Retreat at Sky Ridge.",
+          "notes": "Used only to establish attraction kind; does not establish 2026 operation.",
+          "retrieval": {
+            "url": "https://www.prlog.org/11064027-retreat-at-sky-ridge-opens-new-community-labyrinth-on-nov-19-at-5-pm.html",
+            "startedAt": "2026-09-30T01:59:33.382Z",
+            "status": 200,
+            "finalUrl": "https://www.prlog.org/11064027-retreat-at-sky-ridge-opens-new-community-labyrinth-on-nov-19-at-5-pm.html",
+            "bytes": 37052,
+            "sha256": "71df1a0f71161506153803c5f43a6e03a9eb8ff35e099f9948039984cd2f4b0c",
+            "title": "Retreat At Sky Ridge Opens New Community Labyrinth On Nov. 19 At 5 pm -- Eric Studer | PRLog",
+            "has2026String": true,
+            "geoMetadata": [],
+            "note": "A 200 status or 2026 string alone does not verify current operation; see reference-set.json for reviewed facts and confidence.",
+            "finishedAt": "2026-09-30T01:59:38.416Z"
+          }
+        }
+      ],
+      "distanceMiles": 55.89343716495697,
+      "insideCarthageRadius": false,
+      "controlDistances": {
+        "Carthage": 55.89343716495697,
+        "Joplin": 56.96474856687989,
+        "Springfield": 59.97687838146484,
+        "Lockwood rural": 64.24701858869692,
+        "Aurora": 35.94274902705453
+      }
+    }
+  ]
+}

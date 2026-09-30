@@ -1,0 +1,77 @@
+[
+  {
+    "q": "Exeter Corn Maze, Missouri",
+    "url": "https://nominatim.openstreetmap.org/search?q=Exeter+Corn+Maze%2C+Missouri&format=jsonv2&addressdetails=1&limit=3",
+    "startedAt": "2026-09-30T01:51:59.730Z",
+    "status": 200,
+    "data": [
+      {
+        "place_id": 336028526,
+        "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+        "osm_type": "node",
+        "osm_id": 12298081054,
+        "lat": "36.6355091",
+        "lon": "-93.9609468",
+        "category": "tourism",
+        "type": "theme_park",
+        "place_rank": 30,
+        "importance": 0.00003500190737769158,
+        "addresstype": "tourism",
+        "name": "Exeter Corn Maze",
+        "display_name": "Exeter Corn Maze, Farm Road 1065, Wayne, Barry County, Missouri, 65772, United States",
+        "address": {
+          "tourism": "Exeter Corn Maze",
+          "road": "Farm Road 1065",
+          "hamlet": "Wayne",
+          "county": "Barry County",
+          "state": "Missouri",
+          "ISO3166-2-lvl4": "US-MO",
+          "postcode": "65772",
+          "country": "United States",
+          "country_code": "us"
+        },
+        "boundingbox": [
+          "36.6354591",
+          "36.6355591",
+          "-93.9609968",
+          "-93.9608968"
+        ]
+      }
+    ]
+  },
+  {
+    "q": "Aurora Maize, Missouri",
+    "url": "https://nominatim.openstreetmap.org/search?q=Aurora+Maize%2C+Missouri&format=jsonv2&addressdetails=1&limit=3",
+    "startedAt": "2026-09-30T01:52:05.808Z",
+    "status": 200,
+    "data": []
+  },
+  {
+    "q": "Campbells Maze Daze, Clever, Missouri",
+    "url": "https://nominatim.openstreetmap.org/search?q=Campbells+Maze+Daze%2C+Clever%2C+Missouri&format=jsonv2&addressdetails=1&limit=3",
+    "startedAt": "2026-09-30T01:52:07.414Z",
+    "status": 200,
+    "data": []
+  },
+  {
+    "q": "Pickin Patch Farm, Marionville, Missouri",
+    "url": "https://nominatim.openstreetmap.org/search?q=Pickin+Patch+Farm%2C+Marionville%2C+Missouri&format=jsonv2&addressdetails=1&limit=3",
+    "startedAt": "2026-09-30T01:52:08.682Z",
+    "status": 200,
+    "data": []
+  },
+  {
+    "q": "Cadaver Zone, Missouri",
+    "url": "https://nominatim.openstreetmap.org/search?q=Cadaver+Zone%2C+Missouri&format=jsonv2&addressdetails=1&limit=3",
+    "startedAt": "2026-09-30T01:52:09.982Z",
+    "status": 200,
+    "data": []
+  },
+  {
+    "q": "Myers Forest of Fears, Missouri",
+    "url": "https://nominatim.openstreetmap.org/search?q=Myers+Forest+of+Fears%2C+Missouri&format=jsonv2&addressdetails=1&limit=3",
+    "startedAt": "2026-09-30T01:52:11.185Z",
+    "status": 200,
+    "data": []
+  }
+]

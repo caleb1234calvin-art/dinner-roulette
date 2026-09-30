@@ -1,0 +1,5532 @@
+{
+  "generatedAt": "2026-09-30T01:59:39.356Z",
+  "frozenClientTime": "2026-09-30T01:41:35.000Z",
+  "timezone": "America/Chicago",
+  "origin": {
+    "label": "Carthage city-center audit origin (not recovered production GPS)",
+    "lat": 37.176447,
+    "lon": -94.310223
+  },
+  "filters": {
+    "radiusMiles": 50,
+    "activityTypes": [
+      "haunted-house",
+      "corn-maze",
+      "pumpkin-patch"
+    ],
+    "mood": 50,
+    "openNowOnly": false,
+    "favoritesOnly": false,
+    "reduceParks": true
+  },
+  "method": "actual search/decoration modules; exact TypeScript-AST-extracted UI predicate and picker functions; transport only stubbed; no product writes",
+  "liveReplay": [
+    {
+      "origin": {
+        "label": "Carthage",
+        "lat": 37.176447,
+        "lon": -94.310223
+      },
+      "rawCount": 281,
+      "normalizedCount": 245,
+      "classifiedLiveSeasonal": [],
+      "firstMapCount": 245,
+      "dedupedLiveCount": 232,
+      "localCount": 17,
+      "mergedCount": 240,
+      "withinDistanceCount": 239,
+      "finalOff": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "finalOn": [],
+      "options": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "serializationRoundTripCount": 2,
+      "removedBeforeNormalization": [
+        {
+          "type": "node",
+          "id": 13168091526,
+          "lat": 37.396617,
+          "lon": -94.7151213,
+          "tags": {
+            "addr:city": "Pittsburg",
+            "addr:state": "KS",
+            "leisure": "park",
+            "operator": "City of Pittsburg",
+            "operator:type": "government"
+          }
+        },
+        {
+          "type": "way",
+          "id": 25941974,
+          "center": {
+            "lat": 37.0692454,
+            "lon": -94.1164844
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 269115547,
+          "center": {
+            "lat": 37.2135101,
+            "lon": -93.4060405
+          },
+          "tags": {
+            "leisure": "park",
+            "source": "Bing"
+          }
+        },
+        {
+          "type": "way",
+          "id": 269728699,
+          "center": {
+            "lat": 37.1880512,
+            "lon": -93.4365029
+          },
+          "tags": {
+            "leisure": "park",
+            "source": "Bing"
+          }
+        },
+        {
+          "type": "way",
+          "id": 376515548,
+          "center": {
+            "lat": 37.8534604,
+            "lon": -94.3457112
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 377316484,
+          "center": {
+            "lat": 37.1776426,
+            "lon": -94.5598647
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 377406704,
+          "center": {
+            "lat": 37.1083374,
+            "lon": -94.4756285
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 377743930,
+          "center": {
+            "lat": 36.8687479,
+            "lon": -94.3628705
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 378185563,
+          "center": {
+            "lat": 36.5503138,
+            "lon": -94.4935007
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 395702139,
+          "center": {
+            "lat": 36.6499613,
+            "lon": -94.4457424
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 437139999,
+          "center": {
+            "lat": 37.0885136,
+            "lon": -94.530254
+          },
+          "tags": {
+            "building": "yes",
+            "leisure": "bowling_alley"
+          }
+        },
+        {
+          "type": "way",
+          "id": 554590899,
+          "center": {
+            "lat": 37.1624554,
+            "lon": -94.4606127
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 559579113,
+          "center": {
+            "lat": 36.4830635,
+            "lon": -94.2597187
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 598999388,
+          "center": {
+            "lat": 36.6024308,
+            "lon": -93.8576867
+          },
+          "tags": {
+            "access": "no",
+            "description": "Private Park",
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 659237201,
+          "center": {
+            "lat": 37.1455058,
+            "lon": -94.4633507
+          },
+          "tags": {
+            "amenity": "cinema",
+            "building": "yes",
+            "wikidata": "Q42893556"
+          }
+        },
+        {
+          "type": "way",
+          "id": 663702806,
+          "center": {
+            "lat": 37.0863777,
+            "lon": -94.6162877
+          },
+          "tags": {
+            "building": "yes",
+            "leisure": "bowling_alley"
+          }
+        },
+        {
+          "type": "way",
+          "id": 663708835,
+          "center": {
+            "lat": 37.0760253,
+            "lon": -94.6395317
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 663711980,
+          "center": {
+            "lat": 37.0747808,
+            "lon": -94.6395411
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 663712004,
+          "center": {
+            "lat": 37.0753392,
+            "lon": -94.6421087
+          },
+          "tags": {
+            "building": "yes",
+            "tourism": "museum"
+          }
+        },
+        {
+          "type": "way",
+          "id": 676665021,
+          "center": {
+            "lat": 36.8788049,
+            "lon": -94.8766947
+          },
+          "tags": {
+            "amenity": "cinema",
+            "building": "yes",
+            "wikidata": "Q43193356"
+          }
+        },
+        {
+          "type": "way",
+          "id": 840592105,
+          "center": {
+            "lat": 37.274164,
+            "lon": -94.6029733
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 850345182,
+          "center": {
+            "lat": 37.1711781,
+            "lon": -94.8447212
+          },
+          "tags": {
+            "addr:city": "Columbus",
+            "addr:housenumber": "239",
+            "addr:postcode": "66725",
+            "addr:state": "KS",
+            "addr:street": "West Maple Street",
+            "building": "yes",
+            "leisure": "bowling_alley",
+            "source": "esri_USDOT_Kansas",
+            "sport": "10pin"
+          }
+        },
+        {
+          "type": "way",
+          "id": 915124077,
+          "center": {
+            "lat": 36.6965523,
+            "lon": -94.9593129
+          },
+          "tags": {
+            "leisure": "park",
+            "operator": "Town of Afton"
+          }
+        },
+        {
+          "type": "way",
+          "id": 992408630,
+          "center": {
+            "lat": 37.3888027,
+            "lon": -94.7002789
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1055273351,
+          "center": {
+            "lat": 37.4300362,
+            "lon": -94.703862
+          },
+          "tags": {
+            "building": "yes",
+            "leisure": "bowling_alley"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1182396708,
+          "center": {
+            "lat": 36.8165726,
+            "lon": -93.9207672
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1272650920,
+          "center": {
+            "lat": 37.1694496,
+            "lon": -94.8422293
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1272650933,
+          "center": {
+            "lat": 37.1696359,
+            "lon": -94.842183
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1311146879,
+          "center": {
+            "lat": 37.1643927,
+            "lon": -94.8353397
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1327911084,
+          "center": {
+            "lat": 36.882131,
+            "lon": -94.8845574
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1390120851,
+          "center": {
+            "lat": 37.4572601,
+            "lon": -94.6802535
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1482726172,
+          "center": {
+            "lat": 37.0725323,
+            "lon": -94.6459805
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1527321533,
+          "center": {
+            "lat": 36.9948191,
+            "lon": -94.3145013
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1528260451,
+          "center": {
+            "lat": 37.0051352,
+            "lon": -93.6358671
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1545148198,
+          "center": {
+            "lat": 36.8412337,
+            "lon": -94.6115662
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "relation",
+          "id": 18878745,
+          "center": {
+            "lat": 37.0891462,
+            "lon": -94.4988857
+          },
+          "tags": {
+            "leisure": "park",
+            "operator": "Joplin Parks and Recreation",
+            "operator:type": "public",
+            "type": "multipolygon",
+            "website": "https://www.joplinmo.org/Facilities/Facility/Details/Joe-Becker-Stadium-31"
+          }
+        }
+      ]
+    },
+    {
+      "origin": {
+        "label": "Joplin",
+        "lat": 37.084184,
+        "lon": -94.513339
+      },
+      "rawCount": 280,
+      "normalizedCount": 242,
+      "classifiedLiveSeasonal": [],
+      "firstMapCount": 242,
+      "dedupedLiveCount": 228,
+      "localCount": 17,
+      "mergedCount": 236,
+      "withinDistanceCount": 233,
+      "finalOff": [
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.6554948140484402,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.653597925574143,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        }
+      ],
+      "finalOn": [],
+      "options": [
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.6554948140484402,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.653597925574143,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        }
+      ],
+      "serializationRoundTripCount": 2,
+      "removedBeforeNormalization": [
+        {
+          "type": "node",
+          "id": 13168091526,
+          "lat": 37.396617,
+          "lon": -94.7151213,
+          "tags": {
+            "addr:city": "Pittsburg",
+            "addr:state": "KS",
+            "leisure": "park",
+            "operator": "City of Pittsburg",
+            "operator:type": "government"
+          }
+        },
+        {
+          "type": "way",
+          "id": 25941974,
+          "center": {
+            "lat": 37.0692454,
+            "lon": -94.1164844
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 152537552,
+          "center": {
+            "lat": 37.3373467,
+            "lon": -95.2464453
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 152539456,
+          "center": {
+            "lat": 37.3235834,
+            "lon": -95.2542704
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 377316484,
+          "center": {
+            "lat": 37.1776426,
+            "lon": -94.5598647
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 377406704,
+          "center": {
+            "lat": 37.1083374,
+            "lon": -94.4756285
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 377743930,
+          "center": {
+            "lat": 36.8687479,
+            "lon": -94.3628705
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 378185563,
+          "center": {
+            "lat": 36.5503138,
+            "lon": -94.4935007
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 395702139,
+          "center": {
+            "lat": 36.6499613,
+            "lon": -94.4457424
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 437139999,
+          "center": {
+            "lat": 37.0885136,
+            "lon": -94.530254
+          },
+          "tags": {
+            "building": "yes",
+            "leisure": "bowling_alley"
+          }
+        },
+        {
+          "type": "way",
+          "id": 554590899,
+          "center": {
+            "lat": 37.1624554,
+            "lon": -94.4606127
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 558310302,
+          "center": {
+            "lat": 36.4521907,
+            "lon": -94.1836432
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 559579113,
+          "center": {
+            "lat": 36.4830635,
+            "lon": -94.2597187
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 598999388,
+          "center": {
+            "lat": 36.6024308,
+            "lon": -93.8576867
+          },
+          "tags": {
+            "access": "no",
+            "description": "Private Park",
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 659237201,
+          "center": {
+            "lat": 37.1455058,
+            "lon": -94.4633507
+          },
+          "tags": {
+            "amenity": "cinema",
+            "building": "yes",
+            "wikidata": "Q42893556"
+          }
+        },
+        {
+          "type": "way",
+          "id": 663702806,
+          "center": {
+            "lat": 37.0863777,
+            "lon": -94.6162877
+          },
+          "tags": {
+            "building": "yes",
+            "leisure": "bowling_alley"
+          }
+        },
+        {
+          "type": "way",
+          "id": 663708835,
+          "center": {
+            "lat": 37.0760253,
+            "lon": -94.6395317
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 663711980,
+          "center": {
+            "lat": 37.0747808,
+            "lon": -94.6395411
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 663712004,
+          "center": {
+            "lat": 37.0753392,
+            "lon": -94.6421087
+          },
+          "tags": {
+            "building": "yes",
+            "tourism": "museum"
+          }
+        },
+        {
+          "type": "way",
+          "id": 676665021,
+          "center": {
+            "lat": 36.8788049,
+            "lon": -94.8766947
+          },
+          "tags": {
+            "amenity": "cinema",
+            "building": "yes",
+            "wikidata": "Q43193356"
+          }
+        },
+        {
+          "type": "way",
+          "id": 840592105,
+          "center": {
+            "lat": 37.274164,
+            "lon": -94.6029733
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 850345182,
+          "center": {
+            "lat": 37.1711781,
+            "lon": -94.8447212
+          },
+          "tags": {
+            "addr:city": "Columbus",
+            "addr:housenumber": "239",
+            "addr:postcode": "66725",
+            "addr:state": "KS",
+            "addr:street": "West Maple Street",
+            "building": "yes",
+            "leisure": "bowling_alley",
+            "source": "esri_USDOT_Kansas",
+            "sport": "10pin"
+          }
+        },
+        {
+          "type": "way",
+          "id": 914324296,
+          "center": {
+            "lat": 36.6858734,
+            "lon": -94.9828081
+          },
+          "tags": {
+            "leisure": "park",
+            "operator": "Town of Afton"
+          }
+        },
+        {
+          "type": "way",
+          "id": 915124077,
+          "center": {
+            "lat": 36.6965523,
+            "lon": -94.9593129
+          },
+          "tags": {
+            "leisure": "park",
+            "operator": "Town of Afton"
+          }
+        },
+        {
+          "type": "way",
+          "id": 992408630,
+          "center": {
+            "lat": 37.3888027,
+            "lon": -94.7002789
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1055273351,
+          "center": {
+            "lat": 37.4300362,
+            "lon": -94.703862
+          },
+          "tags": {
+            "building": "yes",
+            "leisure": "bowling_alley"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1182396708,
+          "center": {
+            "lat": 36.8165726,
+            "lon": -93.9207672
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1224904950,
+          "center": {
+            "lat": 36.4304797,
+            "lon": -94.3309285
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1272650920,
+          "center": {
+            "lat": 37.1694496,
+            "lon": -94.8422293
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1272650933,
+          "center": {
+            "lat": 37.1696359,
+            "lon": -94.842183
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1311146879,
+          "center": {
+            "lat": 37.1643927,
+            "lon": -94.8353397
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1327911084,
+          "center": {
+            "lat": 36.882131,
+            "lon": -94.8845574
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1390120851,
+          "center": {
+            "lat": 37.4572601,
+            "lon": -94.6802535
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1482726172,
+          "center": {
+            "lat": 37.0725323,
+            "lon": -94.6459805
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1527321533,
+          "center": {
+            "lat": 36.9948191,
+            "lon": -94.3145013
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1528260451,
+          "center": {
+            "lat": 37.0051352,
+            "lon": -93.6358671
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1545148198,
+          "center": {
+            "lat": 36.8412337,
+            "lon": -94.6115662
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "relation",
+          "id": 18878745,
+          "center": {
+            "lat": 37.0891462,
+            "lon": -94.4988857
+          },
+          "tags": {
+            "leisure": "park",
+            "operator": "Joplin Parks and Recreation",
+            "operator:type": "public",
+            "type": "multipolygon",
+            "website": "https://www.joplinmo.org/Facilities/Facility/Details/Joe-Becker-Stadium-31"
+          }
+        }
+      ]
+    },
+    {
+      "origin": {
+        "label": "Springfield",
+        "lat": 37.208957,
+        "lon": -93.292299
+      },
+      "rawCount": 356,
+      "normalizedCount": 323,
+      "classifiedLiveSeasonal": [],
+      "firstMapCount": 323,
+      "dedupedLiveCount": 307,
+      "localCount": 1,
+      "mergedCount": 308,
+      "withinDistanceCount": 308,
+      "finalOff": [],
+      "finalOn": [],
+      "options": [],
+      "serializationRoundTripCount": 0,
+      "removedBeforeNormalization": [
+        {
+          "type": "node",
+          "id": 4915119698,
+          "lat": 37.2083701,
+          "lon": -93.2947415,
+          "tags": {
+            "name:signed": "no",
+            "tourism": "museum"
+          }
+        },
+        {
+          "type": "node",
+          "id": 4915659320,
+          "lat": 37.2181576,
+          "lon": -93.31631,
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "node",
+          "id": 8575640906,
+          "lat": 37.6356469,
+          "lon": -93.1048888,
+          "tags": {
+            "addr:city": "Buffalo",
+            "addr:postcode": "65622",
+            "addr:state": "MO",
+            "addr:street": "S Ash St",
+            "leisure": "bowling_alley"
+          }
+        },
+        {
+          "type": "way",
+          "id": 25941974,
+          "center": {
+            "lat": 37.0692454,
+            "lon": -94.1164844
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 263782786,
+          "center": {
+            "lat": 36.6575516,
+            "lon": -93.2873805
+          },
+          "tags": {
+            "leisure": "miniature_golf",
+            "source": "Bing"
+          }
+        },
+        {
+          "type": "way",
+          "id": 269115547,
+          "center": {
+            "lat": 37.2135101,
+            "lon": -93.4060405
+          },
+          "tags": {
+            "leisure": "park",
+            "source": "Bing"
+          }
+        },
+        {
+          "type": "way",
+          "id": 269728699,
+          "center": {
+            "lat": 37.1880512,
+            "lon": -93.4365029
+          },
+          "tags": {
+            "leisure": "park",
+            "source": "Bing"
+          }
+        },
+        {
+          "type": "way",
+          "id": 398278084,
+          "center": {
+            "lat": 37.0912891,
+            "lon": -93.2990269
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 398438926,
+          "center": {
+            "lat": 37.1466846,
+            "lon": -92.7688459
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 428319459,
+          "center": {
+            "lat": 37.2092904,
+            "lon": -93.2896614
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 429231756,
+          "center": {
+            "lat": 37.2094932,
+            "lon": -93.2837841
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 468763822,
+          "center": {
+            "lat": 37.1663198,
+            "lon": -93.3154358
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 468764608,
+          "center": {
+            "lat": 37.1171096,
+            "lon": -93.3009952
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 469891901,
+          "center": {
+            "lat": 37.2524631,
+            "lon": -93.3062105
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 492870721,
+          "center": {
+            "lat": 37.1829034,
+            "lon": -93.3106628
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 492870953,
+          "center": {
+            "lat": 37.1833333,
+            "lon": -93.31156
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 509085484,
+          "center": {
+            "lat": 37.2418781,
+            "lon": -93.3081381
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 510031224,
+          "center": {
+            "lat": 37.2104814,
+            "lon": -93.289101
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 525483762,
+          "center": {
+            "lat": 37.2151731,
+            "lon": -93.3156086
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 658691166,
+          "center": {
+            "lat": 36.9517489,
+            "lon": -92.6578973
+          },
+          "tags": {
+            "building": "yes",
+            "tourism": "museum"
+          }
+        },
+        {
+          "type": "way",
+          "id": 658691277,
+          "center": {
+            "lat": 36.9530235,
+            "lon": -92.6605967
+          },
+          "tags": {
+            "building": "commercial",
+            "leisure": "amusement_arcade"
+          }
+        },
+        {
+          "type": "way",
+          "id": 703506295,
+          "center": {
+            "lat": 37.2018598,
+            "lon": -93.2790167
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 806670585,
+          "center": {
+            "lat": 37.6799539,
+            "lon": -92.6724224
+          },
+          "tags": {
+            "description": "Gasconade park",
+            "leisure": "park",
+            "wheelchair": "yes"
+          }
+        },
+        {
+          "type": "way",
+          "id": 906364207,
+          "center": {
+            "lat": 36.5447776,
+            "lon": -93.2916854
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1182396708,
+          "center": {
+            "lat": 36.8165726,
+            "lon": -93.9207672
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1209677262,
+          "center": {
+            "lat": 37.2439162,
+            "lon": -92.5062055
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1254653380,
+          "center": {
+            "lat": 37.118459,
+            "lon": -93.2749806
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1254653381,
+          "center": {
+            "lat": 37.1220287,
+            "lon": -93.2694702
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1254653382,
+          "center": {
+            "lat": 37.1220535,
+            "lon": -93.2748321
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1295963741,
+          "center": {
+            "lat": 36.5195211,
+            "lon": -93.298445
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1314290871,
+          "center": {
+            "lat": 37.1634776,
+            "lon": -93.3044244
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1465137555,
+          "center": {
+            "lat": 37.0609501,
+            "lon": -93.2879388
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1528260451,
+          "center": {
+            "lat": 37.0051352,
+            "lon": -93.6358671
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        }
+      ]
+    },
+    {
+      "origin": {
+        "label": "Lockwood rural",
+        "lat": 37.3856,
+        "lon": -93.953
+      },
+      "rawCount": 367,
+      "normalizedCount": 323,
+      "classifiedLiveSeasonal": [],
+      "firstMapCount": 323,
+      "dedupedLiveCount": 309,
+      "localCount": 17,
+      "mergedCount": 317,
+      "withinDistanceCount": 314,
+      "finalOff": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 25.919508853467317,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.81438338912894,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "finalOn": [],
+      "options": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 25.919508853467317,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.81438338912894,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "serializationRoundTripCount": 2,
+      "removedBeforeNormalization": [
+        {
+          "type": "node",
+          "id": 4915119698,
+          "lat": 37.2083701,
+          "lon": -93.2947415,
+          "tags": {
+            "name:signed": "no",
+            "tourism": "museum"
+          }
+        },
+        {
+          "type": "node",
+          "id": 4915659320,
+          "lat": 37.2181576,
+          "lon": -93.31631,
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "node",
+          "id": 8575640906,
+          "lat": 37.6356469,
+          "lon": -93.1048888,
+          "tags": {
+            "addr:city": "Buffalo",
+            "addr:postcode": "65622",
+            "addr:state": "MO",
+            "addr:street": "S Ash St",
+            "leisure": "bowling_alley"
+          }
+        },
+        {
+          "type": "node",
+          "id": 13168091526,
+          "lat": 37.396617,
+          "lon": -94.7151213,
+          "tags": {
+            "addr:city": "Pittsburg",
+            "addr:state": "KS",
+            "leisure": "park",
+            "operator": "City of Pittsburg",
+            "operator:type": "government"
+          }
+        },
+        {
+          "type": "way",
+          "id": 25941974,
+          "center": {
+            "lat": 37.0692454,
+            "lon": -94.1164844
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 269115547,
+          "center": {
+            "lat": 37.2135101,
+            "lon": -93.4060405
+          },
+          "tags": {
+            "leisure": "park",
+            "source": "Bing"
+          }
+        },
+        {
+          "type": "way",
+          "id": 269728699,
+          "center": {
+            "lat": 37.1880512,
+            "lon": -93.4365029
+          },
+          "tags": {
+            "leisure": "park",
+            "source": "Bing"
+          }
+        },
+        {
+          "type": "way",
+          "id": 376515548,
+          "center": {
+            "lat": 37.8534604,
+            "lon": -94.3457112
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 377316484,
+          "center": {
+            "lat": 37.1776426,
+            "lon": -94.5598647
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 377406704,
+          "center": {
+            "lat": 37.1083374,
+            "lon": -94.4756285
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 377743930,
+          "center": {
+            "lat": 36.8687479,
+            "lon": -94.3628705
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 398278084,
+          "center": {
+            "lat": 37.0912891,
+            "lon": -93.2990269
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 428319459,
+          "center": {
+            "lat": 37.2092904,
+            "lon": -93.2896614
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 429231756,
+          "center": {
+            "lat": 37.2094932,
+            "lon": -93.2837841
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 437139999,
+          "center": {
+            "lat": 37.0885136,
+            "lon": -94.530254
+          },
+          "tags": {
+            "building": "yes",
+            "leisure": "bowling_alley"
+          }
+        },
+        {
+          "type": "way",
+          "id": 468763822,
+          "center": {
+            "lat": 37.1663198,
+            "lon": -93.3154358
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 468764608,
+          "center": {
+            "lat": 37.1171096,
+            "lon": -93.3009952
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 469891901,
+          "center": {
+            "lat": 37.2524631,
+            "lon": -93.3062105
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 492870721,
+          "center": {
+            "lat": 37.1829034,
+            "lon": -93.3106628
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 492870953,
+          "center": {
+            "lat": 37.1833333,
+            "lon": -93.31156
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 509085484,
+          "center": {
+            "lat": 37.2418781,
+            "lon": -93.3081381
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 510031224,
+          "center": {
+            "lat": 37.2104814,
+            "lon": -93.289101
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 525483762,
+          "center": {
+            "lat": 37.2151731,
+            "lon": -93.3156086
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 554590899,
+          "center": {
+            "lat": 37.1624554,
+            "lon": -94.4606127
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 659237201,
+          "center": {
+            "lat": 37.1455058,
+            "lon": -94.4633507
+          },
+          "tags": {
+            "amenity": "cinema",
+            "building": "yes",
+            "wikidata": "Q42893556"
+          }
+        },
+        {
+          "type": "way",
+          "id": 663702806,
+          "center": {
+            "lat": 37.0863777,
+            "lon": -94.6162877
+          },
+          "tags": {
+            "building": "yes",
+            "leisure": "bowling_alley"
+          }
+        },
+        {
+          "type": "way",
+          "id": 663708835,
+          "center": {
+            "lat": 37.0760253,
+            "lon": -94.6395317
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 663711980,
+          "center": {
+            "lat": 37.0747808,
+            "lon": -94.6395411
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 663712004,
+          "center": {
+            "lat": 37.0753392,
+            "lon": -94.6421087
+          },
+          "tags": {
+            "building": "yes",
+            "tourism": "museum"
+          }
+        },
+        {
+          "type": "way",
+          "id": 703506295,
+          "center": {
+            "lat": 37.2018598,
+            "lon": -93.2790167
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 840592105,
+          "center": {
+            "lat": 37.274164,
+            "lon": -94.6029733
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 992408630,
+          "center": {
+            "lat": 37.3888027,
+            "lon": -94.7002789
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1055273351,
+          "center": {
+            "lat": 37.4300362,
+            "lon": -94.703862
+          },
+          "tags": {
+            "building": "yes",
+            "leisure": "bowling_alley"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1182396708,
+          "center": {
+            "lat": 36.8165726,
+            "lon": -93.9207672
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1254653380,
+          "center": {
+            "lat": 37.118459,
+            "lon": -93.2749806
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1254653381,
+          "center": {
+            "lat": 37.1220287,
+            "lon": -93.2694702
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1254653382,
+          "center": {
+            "lat": 37.1220535,
+            "lon": -93.2748321
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1314290871,
+          "center": {
+            "lat": 37.1634776,
+            "lon": -93.3044244
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1390120851,
+          "center": {
+            "lat": 37.4572601,
+            "lon": -94.6802535
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1465137555,
+          "center": {
+            "lat": 37.0609501,
+            "lon": -93.2879388
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1482726172,
+          "center": {
+            "lat": 37.0725323,
+            "lon": -94.6459805
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1527321533,
+          "center": {
+            "lat": 36.9948191,
+            "lon": -94.3145013
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1528260451,
+          "center": {
+            "lat": 37.0051352,
+            "lon": -93.6358671
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "relation",
+          "id": 18878745,
+          "center": {
+            "lat": 37.0891462,
+            "lon": -94.4988857
+          },
+          "tags": {
+            "leisure": "park",
+            "operator": "Joplin Parks and Recreation",
+            "operator:type": "public",
+            "type": "multipolygon",
+            "website": "https://www.joplinmo.org/Facilities/Facility/Details/Joe-Becker-Stadium-31"
+          }
+        }
+      ]
+    },
+    {
+      "origin": {
+        "label": "Aurora",
+        "lat": 36.970891,
+        "lon": -93.717979
+      },
+      "rawCount": 495,
+      "normalizedCount": 449,
+      "classifiedLiveSeasonal": [
+        {
+          "id": "date-night-osm-node-3388827330",
+          "name": "Turtle Moon Labyrinth",
+          "types": [
+            "corn-maze"
+          ],
+          "source": "osm"
+        }
+      ],
+      "firstMapCount": 449,
+      "dedupedLiveCount": 427,
+      "localCount": 17,
+      "mergedCount": 435,
+      "withinDistanceCount": 434,
+      "finalOff": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.22990482597511,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-osm-node-3388827330",
+          "name": "Turtle Moon Labyrinth",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 35.94274902705453,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 41.979013765682566,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "finalOn": [
+        {
+          "id": "date-night-osm-node-3388827330",
+          "name": "Turtle Moon Labyrinth",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 35.94274902705453,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        }
+      ],
+      "options": [
+        {
+          "id": "date-night-osm-node-3388827330",
+          "name": "Turtle Moon Labyrinth",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 35.94274902705453,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.22990482597511,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 41.979013765682566,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "serializationRoundTripCount": 3,
+      "removedBeforeNormalization": [
+        {
+          "type": "node",
+          "id": 4915119698,
+          "lat": 37.2083701,
+          "lon": -93.2947415,
+          "tags": {
+            "name:signed": "no",
+            "tourism": "museum"
+          }
+        },
+        {
+          "type": "node",
+          "id": 4915659320,
+          "lat": 37.2181576,
+          "lon": -93.31631,
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 25941974,
+          "center": {
+            "lat": 37.0692454,
+            "lon": -94.1164844
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 159809389,
+          "center": {
+            "lat": 36.4070367,
+            "lon": -93.7368709
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 263782786,
+          "center": {
+            "lat": 36.6575516,
+            "lon": -93.2873805
+          },
+          "tags": {
+            "leisure": "miniature_golf",
+            "source": "Bing"
+          }
+        },
+        {
+          "type": "way",
+          "id": 269115547,
+          "center": {
+            "lat": 37.2135101,
+            "lon": -93.4060405
+          },
+          "tags": {
+            "leisure": "park",
+            "source": "Bing"
+          }
+        },
+        {
+          "type": "way",
+          "id": 269728699,
+          "center": {
+            "lat": 37.1880512,
+            "lon": -93.4365029
+          },
+          "tags": {
+            "leisure": "park",
+            "source": "Bing"
+          }
+        },
+        {
+          "type": "way",
+          "id": 377316484,
+          "center": {
+            "lat": 37.1776426,
+            "lon": -94.5598647
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 377406704,
+          "center": {
+            "lat": 37.1083374,
+            "lon": -94.4756285
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 377743930,
+          "center": {
+            "lat": 36.8687479,
+            "lon": -94.3628705
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 395702139,
+          "center": {
+            "lat": 36.6499613,
+            "lon": -94.4457424
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 398278084,
+          "center": {
+            "lat": 37.0912891,
+            "lon": -93.2990269
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 428319459,
+          "center": {
+            "lat": 37.2092904,
+            "lon": -93.2896614
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 429231756,
+          "center": {
+            "lat": 37.2094932,
+            "lon": -93.2837841
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 437139999,
+          "center": {
+            "lat": 37.0885136,
+            "lon": -94.530254
+          },
+          "tags": {
+            "building": "yes",
+            "leisure": "bowling_alley"
+          }
+        },
+        {
+          "type": "way",
+          "id": 468763822,
+          "center": {
+            "lat": 37.1663198,
+            "lon": -93.3154358
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 468764608,
+          "center": {
+            "lat": 37.1171096,
+            "lon": -93.3009952
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 469891901,
+          "center": {
+            "lat": 37.2524631,
+            "lon": -93.3062105
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 492870721,
+          "center": {
+            "lat": 37.1829034,
+            "lon": -93.3106628
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 492870953,
+          "center": {
+            "lat": 37.1833333,
+            "lon": -93.31156
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 509085484,
+          "center": {
+            "lat": 37.2418781,
+            "lon": -93.3081381
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 510031224,
+          "center": {
+            "lat": 37.2104814,
+            "lon": -93.289101
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 525483762,
+          "center": {
+            "lat": 37.2151731,
+            "lon": -93.3156086
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 554590899,
+          "center": {
+            "lat": 37.1624554,
+            "lon": -94.4606127
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 558310302,
+          "center": {
+            "lat": 36.4521907,
+            "lon": -94.1836432
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 559579113,
+          "center": {
+            "lat": 36.4830635,
+            "lon": -94.2597187
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 598999388,
+          "center": {
+            "lat": 36.6024308,
+            "lon": -93.8576867
+          },
+          "tags": {
+            "access": "no",
+            "description": "Private Park",
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 659237201,
+          "center": {
+            "lat": 37.1455058,
+            "lon": -94.4633507
+          },
+          "tags": {
+            "amenity": "cinema",
+            "building": "yes",
+            "wikidata": "Q42893556"
+          }
+        },
+        {
+          "type": "way",
+          "id": 703506295,
+          "center": {
+            "lat": 37.2018598,
+            "lon": -93.2790167
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 709237293,
+          "center": {
+            "lat": 36.3929069,
+            "lon": -93.7470685
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 906364207,
+          "center": {
+            "lat": 36.5447776,
+            "lon": -93.2916854
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 952113075,
+          "center": {
+            "lat": 36.3538145,
+            "lon": -94.1827855
+          },
+          "tags": {
+            "building": "yes",
+            "leisure": "sports_hall",
+            "source": "microsoft/BuildingFootprints",
+            "sport": "roller_skating"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1182396708,
+          "center": {
+            "lat": 36.8165726,
+            "lon": -93.9207672
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1254653380,
+          "center": {
+            "lat": 37.118459,
+            "lon": -93.2749806
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1254653381,
+          "center": {
+            "lat": 37.1220287,
+            "lon": -93.2694702
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1254653382,
+          "center": {
+            "lat": 37.1220535,
+            "lon": -93.2748321
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1295963741,
+          "center": {
+            "lat": 36.5195211,
+            "lon": -93.298445
+          },
+          "tags": {
+            "leisure": "miniature_golf"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1314290871,
+          "center": {
+            "lat": 37.1634776,
+            "lon": -93.3044244
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1428395493,
+          "center": {
+            "lat": 36.3924188,
+            "lon": -94.1993831
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1465137555,
+          "center": {
+            "lat": 37.0609501,
+            "lon": -93.2879388
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1493282521,
+          "center": {
+            "lat": 36.3646855,
+            "lon": -93.5671871
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1493282544,
+          "center": {
+            "lat": 36.3645724,
+            "lon": -93.5675328
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1527321533,
+          "center": {
+            "lat": 36.9948191,
+            "lon": -94.3145013
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1528260451,
+          "center": {
+            "lat": 37.0051352,
+            "lon": -93.6358671
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "way",
+          "id": 1533763647,
+          "center": {
+            "lat": 36.5255213,
+            "lon": -93.7277456
+          },
+          "tags": {
+            "leisure": "park"
+          }
+        },
+        {
+          "type": "relation",
+          "id": 18878745,
+          "center": {
+            "lat": 37.0891462,
+            "lon": -94.4988857
+          },
+          "tags": {
+            "leisure": "park",
+            "operator": "Joplin Parks and Recreation",
+            "operator:type": "public",
+            "type": "multipolygon",
+            "website": "https://www.joplinmo.org/Facilities/Facility/Details/Joe-Becker-Stadium-31"
+          }
+        }
+      ]
+    }
+  ],
+  "verifiedOsmQueryMiss": {
+    "raw": {
+      "type": "node",
+      "id": 12298081054,
+      "lat": 36.6355091,
+      "lon": -93.9609468,
+      "timestamp": "2024-10-29T23:26:34Z",
+      "version": 1,
+      "changeset": 158520483,
+      "user": "TheCoGuards256",
+      "uid": 9212279,
+      "tags": {
+        "name": "Exeter Corn Maze",
+        "tourism": "theme_park"
+      }
+    },
+    "selectedByActualQuery": false,
+    "normalizedIfSupplied": {
+      "id": "date-night-osm-node-12298081054",
+      "name": "Exeter Corn Maze",
+      "lat": 36.6355091,
+      "lon": -93.9609468,
+      "address": "Address unavailable",
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Corn Maze",
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "openingHours": null,
+      "phone": null,
+      "website": null,
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "osm",
+      "activityTypes": [
+        "corn-maze"
+      ],
+      "moodLevel": 2
+    },
+    "distanceMiles": 42.06318148648897,
+    "eligibleIfSuppliedOpenOff": [
+      {
+        "id": "date-night-osm-node-12298081054",
+        "name": "Exeter Corn Maze",
+        "types": [
+          "corn-maze"
+        ],
+        "distanceMiles": 42.06318148648897,
+        "hoursKnown": false,
+        "isOpen": true,
+        "closesLabel": null,
+        "source": "osm"
+      }
+    ],
+    "note": "Evidence-only direct OSM read. Not supplied to live search or added to catalogs."
+  },
+  "referenceBoundary": [
+    {
+      "name": "Campbell Maze Daze directory point",
+      "lat": 36.993237,
+      "lon": -93.407991,
+      "distanceMiles": 51.31605149408748,
+      "passesActualRadiusAndCategoryPredicate": false,
+      "note": "Coordinate-only boundary probe with a qualifying test category, not a claim this attraction has that category."
+    },
+    {
+      "name": "Campbell Maze Daze second directory point",
+      "lat": 36.99419,
+      "lon": -93.41841,
+      "distanceMiles": 50.743034960290416,
+      "passesActualRadiusAndCategoryPredicate": false,
+      "note": "Coordinate-only boundary probe with a qualifying test category, not a claim this attraction has that category."
+    },
+    {
+      "name": "Rutledge-Wilson Farm Park OSM center",
+      "lat": 37.1921975,
+      "lon": -93.35973,
+      "distanceMiles": 52.33282989551638,
+      "passesActualRadiusAndCategoryPredicate": false,
+      "note": "Coordinate-only boundary probe with a qualifying test category, not a claim this attraction has that category."
+    },
+    {
+      "name": "Turtle Moon Labyrinth OSM node",
+      "lat": 36.4600896,
+      "lon": -93.8407795,
+      "distanceMiles": 55.89343716495697,
+      "passesActualRadiusAndCategoryPredicate": false,
+      "note": "Coordinate-only boundary probe with a qualifying test category, not a claim this attraction has that category."
+    }
+  ],
+  "fixtureOptions": [
+    {
+      "id": "date-night-osm-node-3",
+      "name": "Audit Haunted House",
+      "types": [
+        "haunted-house"
+      ],
+      "distanceMiles": 0.999999999999922,
+      "hoursKnown": true,
+      "isOpen": true,
+      "closesLabel": "Open until 12 AM",
+      "source": "osm"
+    },
+    {
+      "id": "date-night-osm-node-4",
+      "name": "Audit Harvest Adventure",
+      "types": [
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "distanceMiles": 1.9999999999998435,
+      "hoursKnown": true,
+      "isOpen": true,
+      "closesLabel": "Open until 12 AM",
+      "source": "osm"
+    },
+    {
+      "id": "date-night-osm-node-11",
+      "name": "Audit Corn Maze",
+      "types": [
+        "corn-maze"
+      ],
+      "distanceMiles": 7.999999999999865,
+      "hoursKnown": false,
+      "isOpen": true,
+      "closesLabel": null,
+      "source": "osm"
+    },
+    {
+      "id": "date-night-osm-node-2",
+      "name": "Audit Pumpkin Patch",
+      "types": [
+        "pumpkin-patch"
+      ],
+      "distanceMiles": 0.999999999999922,
+      "hoursKnown": false,
+      "isOpen": true,
+      "closesLabel": null,
+      "source": "osm"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "valid empty live provider",
+      "origin": {
+        "label": "Carthage city-center audit origin (not recovered production GPS)",
+        "lat": 37.176447,
+        "lon": -94.310223
+      },
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "status": 200,
+          "error": null,
+          "rawCandidateCount": 0
+        }
+      ],
+      "serverSource": "merged",
+      "warning": null,
+      "error": null,
+      "serverCount": 17,
+      "eligible": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "options": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ]
+    },
+    {
+      "name": "all four providers fail",
+      "origin": {
+        "label": "Carthage city-center audit origin (not recovered production GPS)",
+        "lat": 37.176447,
+        "lon": -94.310223
+      },
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        }
+      ],
+      "serverSource": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "error": null,
+      "serverCount": 17,
+      "eligible": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "options": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ]
+    },
+    {
+      "name": "query-realistic fixture",
+      "origin": {
+        "label": "Carthage city-center audit origin (not recovered production GPS)",
+        "lat": 37.176447,
+        "lon": -94.310223
+      },
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "status": 200,
+          "error": null,
+          "rawCandidateCount": 11
+        }
+      ],
+      "serverSource": "merged",
+      "warning": null,
+      "error": null,
+      "serverCount": 24,
+      "eligible": [
+        {
+          "id": "date-night-osm-node-5",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-2",
+          "name": "Audit Pumpkin Patch",
+          "types": [
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-3",
+          "name": "Audit Haunted House",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-4",
+          "name": "Audit Harvest Adventure",
+          "types": [
+            "corn-maze",
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 1.9999999999998435,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-osm-node-6",
+          "name": "Audit Hedge Labyrinth",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 2.9999999999997655,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-11",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 7.999999999999865,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-12",
+          "name": "Audit Haunt Permanently Gone",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 8.999999999999789,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "options": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-osm-node-4",
+          "name": "Audit Harvest Adventure",
+          "types": [
+            "corn-maze",
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 1.9999999999998435,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-11",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 7.999999999999865,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-12",
+          "name": "Audit Haunt Permanently Gone",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 8.999999999999789,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        }
+      ]
+    },
+    {
+      "name": "control empty provider",
+      "origin": {
+        "label": "Joplin",
+        "lat": 37.084184,
+        "lon": -94.513339
+      },
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.084184,-94.513339);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.084184,-94.513339);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.084184,-94.513339);\n);\nout center tags;\n",
+          "status": 200,
+          "error": null,
+          "rawCandidateCount": 0
+        }
+      ],
+      "serverSource": "merged",
+      "warning": null,
+      "error": null,
+      "serverCount": 17,
+      "eligible": [
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.6554948140484402,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.653597925574143,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        }
+      ],
+      "options": [
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.6554948140484402,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.653597925574143,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        }
+      ]
+    },
+    {
+      "name": "control provider outage",
+      "origin": {
+        "label": "Joplin",
+        "lat": 37.084184,
+        "lon": -94.513339
+      },
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.084184,-94.513339);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.084184,-94.513339);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.084184,-94.513339);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.084184,-94.513339);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.084184,-94.513339);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.084184,-94.513339);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.084184,-94.513339);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.084184,-94.513339);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.084184,-94.513339);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.084184,-94.513339);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.084184,-94.513339);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.084184,-94.513339);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        }
+      ],
+      "serverSource": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "error": null,
+      "serverCount": 17,
+      "eligible": [
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.6554948140484402,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.653597925574143,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        }
+      ],
+      "options": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.653597925574143,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.6554948140484402,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ]
+    },
+    {
+      "name": "control empty provider",
+      "origin": {
+        "label": "Springfield",
+        "lat": 37.208957,
+        "lon": -93.292299
+      },
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.208957,-93.292299);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.208957,-93.292299);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.208957,-93.292299);\n);\nout center tags;\n",
+          "status": 200,
+          "error": null,
+          "rawCandidateCount": 0
+        }
+      ],
+      "serverSource": "merged",
+      "warning": null,
+      "error": null,
+      "serverCount": 1,
+      "eligible": [],
+      "options": []
+    },
+    {
+      "name": "control provider outage",
+      "origin": {
+        "label": "Springfield",
+        "lat": 37.208957,
+        "lon": -93.292299
+      },
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.208957,-93.292299);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.208957,-93.292299);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.208957,-93.292299);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.208957,-93.292299);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.208957,-93.292299);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.208957,-93.292299);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.208957,-93.292299);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.208957,-93.292299);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.208957,-93.292299);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.208957,-93.292299);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.208957,-93.292299);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.208957,-93.292299);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        }
+      ],
+      "serverSource": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "error": null,
+      "serverCount": 1,
+      "eligible": [],
+      "options": []
+    },
+    {
+      "name": "control empty provider",
+      "origin": {
+        "label": "Lockwood rural",
+        "lat": 37.3856,
+        "lon": -93.953
+      },
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.3856,-93.953);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.3856,-93.953);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.3856,-93.953);\n);\nout center tags;\n",
+          "status": 200,
+          "error": null,
+          "rawCandidateCount": 0
+        }
+      ],
+      "serverSource": "merged",
+      "warning": null,
+      "error": null,
+      "serverCount": 17,
+      "eligible": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 25.919508853467317,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.81438338912894,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "options": [
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.81438338912894,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 25.919508853467317,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        }
+      ]
+    },
+    {
+      "name": "control provider outage",
+      "origin": {
+        "label": "Lockwood rural",
+        "lat": 37.3856,
+        "lon": -93.953
+      },
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.3856,-93.953);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.3856,-93.953);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.3856,-93.953);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.3856,-93.953);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.3856,-93.953);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.3856,-93.953);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.3856,-93.953);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.3856,-93.953);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.3856,-93.953);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.3856,-93.953);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.3856,-93.953);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.3856,-93.953);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        }
+      ],
+      "serverSource": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "error": null,
+      "serverCount": 17,
+      "eligible": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 25.919508853467317,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.81438338912894,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "options": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 25.919508853467317,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.81438338912894,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ]
+    },
+    {
+      "name": "control empty provider",
+      "origin": {
+        "label": "Aurora regional seasonal cluster",
+        "lat": 36.970891,
+        "lon": -93.717979
+      },
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,36.970891,-93.717979);\n  nwr[\"amenity\"=\"cinema\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"museum\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,36.970891,-93.717979);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,36.970891,-93.717979);\n);\nout center tags;\n",
+          "status": 200,
+          "error": null,
+          "rawCandidateCount": 0
+        }
+      ],
+      "serverSource": "merged",
+      "warning": null,
+      "error": null,
+      "serverCount": 17,
+      "eligible": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.22990482597511,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 41.979013765682566,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "options": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.22990482597511,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 41.979013765682566,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ]
+    },
+    {
+      "name": "control provider outage",
+      "origin": {
+        "label": "Aurora regional seasonal cluster",
+        "lat": 36.970891,
+        "lon": -93.717979
+      },
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,36.970891,-93.717979);\n  nwr[\"amenity\"=\"cinema\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"museum\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,36.970891,-93.717979);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,36.970891,-93.717979);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,36.970891,-93.717979);\n  nwr[\"amenity\"=\"cinema\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"museum\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,36.970891,-93.717979);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,36.970891,-93.717979);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,36.970891,-93.717979);\n  nwr[\"amenity\"=\"cinema\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"museum\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,36.970891,-93.717979);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,36.970891,-93.717979);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,36.970891,-93.717979);\n  nwr[\"amenity\"=\"cinema\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"museum\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,36.970891,-93.717979);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,36.970891,-93.717979);\n);\nout center tags;\n",
+          "status": null,
+          "error": "audit injected provider outage",
+          "rawCandidateCount": null
+        }
+      ],
+      "serverSource": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "error": null,
+      "serverCount": 17,
+      "eligible": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.22990482597511,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 41.979013765682566,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "options": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.22990482597511,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 41.979013765682566,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ]
+    },
+    {
+      "name": "same-coordinate multi-category duplicate transport",
+      "origin": {
+        "label": "Carthage city-center audit origin (not recovered production GPS)",
+        "lat": 37.176447,
+        "lon": -94.310223
+      },
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "status": 200,
+          "error": null,
+          "rawCandidateCount": 2
+        }
+      ],
+      "serverSource": "merged",
+      "warning": null,
+      "error": null,
+      "serverCount": 18,
+      "eligible": [
+        {
+          "id": "date-night-osm-node-102",
+          "name": "Same Harvest Farm",
+          "types": [
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "options": [
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-osm-node-102",
+          "name": "Same Harvest Farm",
+          "types": [
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        }
+      ]
+    },
+    {
+      "name": "same-coordinate multi-category duplicate transport reversed",
+      "origin": {
+        "label": "Carthage city-center audit origin (not recovered production GPS)",
+        "lat": 37.176447,
+        "lon": -94.310223
+      },
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"haunted_house\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"pumpkin_patch\"](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "status": 200,
+          "error": null,
+          "rawCandidateCount": 2
+        }
+      ],
+      "serverSource": "merged",
+      "warning": null,
+      "error": null,
+      "serverCount": 18,
+      "eligible": [
+        {
+          "id": "date-night-osm-node-101",
+          "name": "Same Harvest Farm",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "options": [
+        {
+          "id": "date-night-osm-node-101",
+          "name": "Same Harvest Farm",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        }
+      ]
+    }
+  ],
+  "classification": [
+    {
+      "raw": {
+        "type": "node",
+        "id": 1,
+        "lat": 37.19092001695289,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Audit Corn Maze",
+          "leisure": "maze",
+          "opening_hours": "closed"
+        }
+      },
+      "selectedByProviderQuery": true,
+      "normalized": {
+        "id": "date-night-osm-node-1",
+        "name": "Audit Corn Maze",
+        "lat": 37.19092001695289,
+        "lon": -94.310223,
+        "address": "Address unavailable",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Corn Maze",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": "closed",
+        "phone": null,
+        "website": null,
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "osm",
+        "activityTypes": [
+          "corn-maze"
+        ],
+        "moodLevel": 2
+      },
+      "rootCause": null
+    },
+    {
+      "raw": {
+        "type": "node",
+        "id": 2,
+        "lat": 37.19092001695289,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Audit Pumpkin Patch",
+          "attraction": "pumpkin_patch"
+        }
+      },
+      "selectedByProviderQuery": true,
+      "normalized": {
+        "id": "date-night-osm-node-2",
+        "name": "Audit Pumpkin Patch",
+        "lat": 37.19092001695289,
+        "lon": -94.310223,
+        "address": "Address unavailable",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Pumpkin Patch",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": null,
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "osm",
+        "activityTypes": [
+          "pumpkin-patch"
+        ],
+        "moodLevel": 2
+      },
+      "rootCause": null
+    },
+    {
+      "raw": {
+        "type": "node",
+        "id": 3,
+        "lat": 37.19092001695289,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Audit Haunted House",
+          "attraction": "haunted_house",
+          "opening_hours": "24/7"
+        }
+      },
+      "selectedByProviderQuery": true,
+      "normalized": {
+        "id": "date-night-osm-node-3",
+        "name": "Audit Haunted House",
+        "lat": 37.19092001695289,
+        "lon": -94.310223,
+        "address": "Address unavailable",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": "24/7",
+        "phone": null,
+        "website": null,
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "osm",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 3
+      },
+      "rootCause": null
+    },
+    {
+      "raw": {
+        "type": "node",
+        "id": 4,
+        "lat": 37.20539303390577,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Audit Harvest Adventure",
+          "leisure": "maze",
+          "description": "corn maze and pumpkin patch",
+          "opening_hours": "24/7"
+        }
+      },
+      "selectedByProviderQuery": true,
+      "normalized": {
+        "id": "date-night-osm-node-4",
+        "name": "Audit Harvest Adventure",
+        "lat": 37.20539303390577,
+        "lon": -94.310223,
+        "address": "Address unavailable",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Corn Maze",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": "24/7",
+        "phone": null,
+        "website": null,
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "osm",
+        "activityTypes": [
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "moodLevel": 2
+      },
+      "rootCause": null
+    },
+    {
+      "raw": {
+        "type": "node",
+        "id": 5,
+        "lat": 37.19092001695289,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Audit Corn Maze",
+          "leisure": "maze",
+          "opening_hours": "closed"
+        }
+      },
+      "selectedByProviderQuery": true,
+      "normalized": {
+        "id": "date-night-osm-node-5",
+        "name": "Audit Corn Maze",
+        "lat": 37.19092001695289,
+        "lon": -94.310223,
+        "address": "Address unavailable",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Corn Maze",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": "closed",
+        "phone": null,
+        "website": null,
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "osm",
+        "activityTypes": [
+          "corn-maze"
+        ],
+        "moodLevel": 2
+      },
+      "rootCause": null
+    },
+    {
+      "raw": {
+        "type": "node",
+        "id": 6,
+        "lat": 37.219866050858656,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Audit Hedge Labyrinth",
+          "leisure": "maze"
+        }
+      },
+      "selectedByProviderQuery": true,
+      "normalized": {
+        "id": "date-night-osm-node-6",
+        "name": "Audit Hedge Labyrinth",
+        "lat": 37.219866050858656,
+        "lon": -94.310223,
+        "address": "Address unavailable",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Corn Maze",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": null,
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "osm",
+        "activityTypes": [
+          "corn-maze"
+        ],
+        "moodLevel": 2
+      },
+      "rootCause": null
+    },
+    {
+      "raw": {
+        "type": "node",
+        "id": 7,
+        "lat": 37.23433906781155,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Audit Harvest Farm",
+          "landuse": "farmland",
+          "crop": "pumpkin"
+        }
+      },
+      "selectedByProviderQuery": false,
+      "normalized": null,
+      "rootCause": "SOURCE COVERAGE GAP: query vocabulary"
+    },
+    {
+      "raw": {
+        "type": "node",
+        "id": 8,
+        "lat": 37.24881208476443,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Audit Pumpkin Patch",
+          "tourism": "attraction"
+        }
+      },
+      "selectedByProviderQuery": false,
+      "normalized": {
+        "id": "date-night-osm-node-8",
+        "name": "Audit Pumpkin Patch",
+        "lat": 37.24881208476443,
+        "lon": -94.310223,
+        "address": "Address unavailable",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Pumpkin Patch",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": null,
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "osm",
+        "activityTypes": [
+          "pumpkin-patch"
+        ],
+        "moodLevel": 2
+      },
+      "rootCause": "SOURCE COVERAGE GAP: query vocabulary"
+    },
+    {
+      "raw": {
+        "type": "node",
+        "id": 9,
+        "lat": 37.263285101717315,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Audit Timber Terror",
+          "attraction": "haunted_trail"
+        }
+      },
+      "selectedByProviderQuery": false,
+      "normalized": null,
+      "rootCause": "SOURCE COVERAGE GAP: query vocabulary"
+    },
+    {
+      "raw": {
+        "type": "node",
+        "id": 10,
+        "lat": 37.2777581186702,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Audit Pumpkin Shop",
+          "shop": "farm",
+          "description": "pumpkin patch"
+        }
+      },
+      "selectedByProviderQuery": false,
+      "normalized": {
+        "id": "date-night-osm-node-10",
+        "name": "Audit Pumpkin Shop",
+        "lat": 37.2777581186702,
+        "lon": -94.310223,
+        "address": "Address unavailable",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Pumpkin Patch",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": null,
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "osm",
+        "activityTypes": [
+          "pumpkin-patch"
+        ],
+        "moodLevel": 2
+      },
+      "rootCause": "SOURCE COVERAGE GAP: query vocabulary"
+    },
+    {
+      "raw": {
+        "type": "node",
+        "id": 11,
+        "lat": 37.292231135623084,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Audit Corn Maze",
+          "leisure": "maze",
+          "disused": "yes"
+        }
+      },
+      "selectedByProviderQuery": true,
+      "normalized": {
+        "id": "date-night-osm-node-11",
+        "name": "Audit Corn Maze",
+        "lat": 37.292231135623084,
+        "lon": -94.310223,
+        "address": "Address unavailable",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Corn Maze",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": null,
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "osm",
+        "activityTypes": [
+          "corn-maze"
+        ],
+        "moodLevel": 2
+      },
+      "rootCause": null
+    },
+    {
+      "raw": {
+        "type": "node",
+        "id": 12,
+        "lat": 37.30670415257597,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Audit Haunt Permanently Gone",
+          "attraction": "haunted_house",
+          "opening_hours": "closed",
+          "disused": "yes"
+        }
+      },
+      "selectedByProviderQuery": true,
+      "normalized": {
+        "id": "date-night-osm-node-12",
+        "name": "Audit Haunt Permanently Gone",
+        "lat": 37.30670415257597,
+        "lon": -94.310223,
+        "address": "Address unavailable",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": "closed",
+        "phone": null,
+        "website": null,
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "osm",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 3
+      },
+      "rootCause": null
+    },
+    {
+      "raw": {
+        "type": "node",
+        "id": 13,
+        "lat": 37.32117716952886,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Audit Closed Corn Maze",
+          "leisure": "maze"
+        }
+      },
+      "selectedByProviderQuery": true,
+      "normalized": null,
+      "rootCause": "INGESTION / CLASSIFICATION GAP or explicit input validation"
+    },
+    {
+      "raw": {
+        "type": "node",
+        "id": 14,
+        "lat": 37.176447,
+        "lon": -94.310223,
+        "tags": {
+          "leisure": "maze"
+        }
+      },
+      "selectedByProviderQuery": true,
+      "normalized": null,
+      "rootCause": "INGESTION / CLASSIFICATION GAP or explicit input validation"
+    },
+    {
+      "raw": {
+        "type": "way",
+        "id": 15,
+        "tags": {
+          "name": "Audit Corn Maze",
+          "leisure": "maze"
+        }
+      },
+      "selectedByProviderQuery": true,
+      "normalized": null,
+      "rootCause": "INGESTION / CLASSIFICATION GAP or explicit input validation"
+    }
+  ],
+  "stages": {
+    "raw": 11,
+    "normalized": 8,
+    "deduped": 7,
+    "final": [
+      {
+        "id": "date-night-osm-node-1",
+        "name": "Audit Corn Maze",
+        "types": [
+          "corn-maze"
+        ],
+        "distanceMiles": 0.999999999999922,
+        "hoursKnown": true,
+        "isOpen": false,
+        "closesLabel": null,
+        "source": "osm"
+      },
+      {
+        "id": "date-night-osm-node-2",
+        "name": "Audit Pumpkin Patch",
+        "types": [
+          "pumpkin-patch"
+        ],
+        "distanceMiles": 0.999999999999922,
+        "hoursKnown": false,
+        "isOpen": true,
+        "closesLabel": null,
+        "source": "osm"
+      },
+      {
+        "id": "date-night-osm-node-3",
+        "name": "Audit Haunted House",
+        "types": [
+          "haunted-house"
+        ],
+        "distanceMiles": 0.999999999999922,
+        "hoursKnown": true,
+        "isOpen": true,
+        "closesLabel": "Open until 12 AM",
+        "source": "osm"
+      },
+      {
+        "id": "date-night-osm-node-4",
+        "name": "Audit Harvest Adventure",
+        "types": [
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "distanceMiles": 1.9999999999998435,
+        "hoursKnown": true,
+        "isOpen": true,
+        "closesLabel": "Open until 12 AM",
+        "source": "osm"
+      },
+      {
+        "id": "date-night-osm-node-6",
+        "name": "Audit Hedge Labyrinth",
+        "types": [
+          "corn-maze"
+        ],
+        "distanceMiles": 2.9999999999997655,
+        "hoursKnown": false,
+        "isOpen": true,
+        "closesLabel": null,
+        "source": "osm"
+      },
+      {
+        "id": "date-night-osm-node-11",
+        "name": "Audit Corn Maze",
+        "types": [
+          "corn-maze"
+        ],
+        "distanceMiles": 7.999999999999865,
+        "hoursKnown": false,
+        "isOpen": true,
+        "closesLabel": null,
+        "source": "osm"
+      },
+      {
+        "id": "date-night-osm-node-12",
+        "name": "Audit Haunt Permanently Gone",
+        "types": [
+          "haunted-house"
+        ],
+        "distanceMiles": 8.999999999999789,
+        "hoursKnown": true,
+        "isOpen": false,
+        "closesLabel": null,
+        "source": "osm"
+      }
+    ]
+  },
+  "combinations": [
+    {
+      "categories": [
+        "haunted-house"
+      ],
+      "anchorOnly": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "fixtureOnly": [
+        {
+          "id": "date-night-osm-node-3",
+          "name": "Audit Haunted House",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-12",
+          "name": "Audit Haunt Permanently Gone",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 8.999999999999789,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "corn-maze"
+      ],
+      "anchorOnly": [],
+      "fixtureOnly": [
+        {
+          "id": "date-night-osm-node-1",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-4",
+          "name": "Audit Harvest Adventure",
+          "types": [
+            "corn-maze",
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 1.9999999999998435,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-6",
+          "name": "Audit Hedge Labyrinth",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 2.9999999999997655,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-11",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 7.999999999999865,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "haunted-house",
+        "corn-maze"
+      ],
+      "anchorOnly": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "fixtureOnly": [
+        {
+          "id": "date-night-osm-node-1",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-3",
+          "name": "Audit Haunted House",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-4",
+          "name": "Audit Harvest Adventure",
+          "types": [
+            "corn-maze",
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 1.9999999999998435,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-6",
+          "name": "Audit Hedge Labyrinth",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 2.9999999999997655,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-11",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 7.999999999999865,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-12",
+          "name": "Audit Haunt Permanently Gone",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 8.999999999999789,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "pumpkin-patch"
+      ],
+      "anchorOnly": [],
+      "fixtureOnly": [
+        {
+          "id": "date-night-osm-node-2",
+          "name": "Audit Pumpkin Patch",
+          "types": [
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-4",
+          "name": "Audit Harvest Adventure",
+          "types": [
+            "corn-maze",
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 1.9999999999998435,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "haunted-house",
+        "pumpkin-patch"
+      ],
+      "anchorOnly": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "fixtureOnly": [
+        {
+          "id": "date-night-osm-node-2",
+          "name": "Audit Pumpkin Patch",
+          "types": [
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-3",
+          "name": "Audit Haunted House",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-4",
+          "name": "Audit Harvest Adventure",
+          "types": [
+            "corn-maze",
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 1.9999999999998435,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-12",
+          "name": "Audit Haunt Permanently Gone",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 8.999999999999789,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "anchorOnly": [],
+      "fixtureOnly": [
+        {
+          "id": "date-night-osm-node-1",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-2",
+          "name": "Audit Pumpkin Patch",
+          "types": [
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-4",
+          "name": "Audit Harvest Adventure",
+          "types": [
+            "corn-maze",
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 1.9999999999998435,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-6",
+          "name": "Audit Hedge Labyrinth",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 2.9999999999997655,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-11",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 7.999999999999865,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "haunted-house",
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "anchorOnly": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "fixtureOnly": [
+        {
+          "id": "date-night-osm-node-1",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-2",
+          "name": "Audit Pumpkin Patch",
+          "types": [
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-3",
+          "name": "Audit Haunted House",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-4",
+          "name": "Audit Harvest Adventure",
+          "types": [
+            "corn-maze",
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 1.9999999999998435,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-6",
+          "name": "Audit Hedge Labyrinth",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 2.9999999999997655,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-11",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 7.999999999999865,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-12",
+          "name": "Audit Haunt Permanently Gone",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 8.999999999999789,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        }
+      ]
+    }
+  ],
+  "radius": [
+    {
+      "requestedDistance": 0,
+      "computedDistance": 0,
+      "eligible": true,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 49.9,
+      "computedDistance": 49.90000000000016,
+      "eligible": true,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 50,
+      "computedDistance": 50.00000000000001,
+      "eligible": true,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 50.049,
+      "computedDistance": 50.04900000000011,
+      "eligible": true,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 50.05,
+      "computedDistance": 50.05000000000018,
+      "eligible": false,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 50.051,
+      "computedDistance": 50.05100000000024,
+      "eligible": false,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 51,
+      "computedDistance": 50.99999999999993,
+      "eligible": false,
+      "providerRadiusMeters": 80467
+    },
+    {
+      "requestedDistance": 60,
+      "computedDistance": 60.00000000000021,
+      "eligible": false,
+      "providerRadiusMeters": 80467
+    }
+  ],
+  "hours": [
+    {
+      "openNowOnly": false,
+      "anchors": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "fixtures": [
+        {
+          "id": "date-night-osm-node-1",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-2",
+          "name": "Audit Pumpkin Patch",
+          "types": [
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-3",
+          "name": "Audit Haunted House",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-4",
+          "name": "Audit Harvest Adventure",
+          "types": [
+            "corn-maze",
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 1.9999999999998435,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-6",
+          "name": "Audit Hedge Labyrinth",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 2.9999999999997655,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-11",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 7.999999999999865,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-12",
+          "name": "Audit Haunt Permanently Gone",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 8.999999999999789,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        }
+      ]
+    },
+    {
+      "openNowOnly": true,
+      "anchors": [],
+      "fixtures": [
+        {
+          "id": "date-night-osm-node-2",
+          "name": "Audit Pumpkin Patch",
+          "types": [
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-3",
+          "name": "Audit Haunted House",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-4",
+          "name": "Audit Harvest Adventure",
+          "types": [
+            "corn-maze",
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 1.9999999999998435,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-6",
+          "name": "Audit Hedge Labyrinth",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 2.9999999999997655,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-11",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 7.999999999999865,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        }
+      ]
+    },
+    {
+      "openNowOnly": false,
+      "anchors": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "fixtures": [
+        {
+          "id": "date-night-osm-node-1",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-2",
+          "name": "Audit Pumpkin Patch",
+          "types": [
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-3",
+          "name": "Audit Haunted House",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 0.999999999999922,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-4",
+          "name": "Audit Harvest Adventure",
+          "types": [
+            "corn-maze",
+            "pumpkin-patch"
+          ],
+          "distanceMiles": 1.9999999999998435,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-6",
+          "name": "Audit Hedge Labyrinth",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 2.9999999999997655,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-11",
+          "name": "Audit Corn Maze",
+          "types": [
+            "corn-maze"
+          ],
+          "distanceMiles": 7.999999999999865,
+          "hoursKnown": false,
+          "isOpen": true,
+          "closesLabel": null,
+          "source": "osm"
+        },
+        {
+          "id": "date-night-osm-node-12",
+          "name": "Audit Haunt Permanently Gone",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 8.999999999999789,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "osm"
+        }
+      ]
+    }
+  ],
+  "seasonDates": [
+    {
+      "iso": "2026-09-24T20:00:00-05:00",
+      "anchorsOff": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "anchorsOn": [],
+      "selectableHelper": false
+    },
+    {
+      "iso": "2026-09-25T20:00:00-05:00",
+      "anchorsOff": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "catalog"
+        }
+      ],
+      "anchorsOn": [
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": true,
+          "closesLabel": "Open until 12 AM",
+          "source": "catalog"
+        }
+      ],
+      "selectableHelper": true
+    },
+    {
+      "iso": "2026-11-01T20:00:00-06:00",
+      "anchorsOff": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": "Schedule unconfirmed",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "types": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "hoursKnown": true,
+          "isOpen": false,
+          "closesLabel": null,
+          "source": "catalog"
+        }
+      ],
+      "anchorsOn": [],
+      "selectableHelper": false
+    }
+  ],
+  "duplicateMultiActivity": {
+    "before": [
+      {
+        "type": "node",
+        "id": 101,
+        "lat": 37.19092001695289,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Same Harvest Farm",
+          "leisure": "maze"
+        }
+      },
+      {
+        "type": "node",
+        "id": 102,
+        "lat": 37.19092001695289,
+        "lon": -94.310223,
+        "tags": {
+          "name": "Same Harvest Farm",
+          "attraction": "pumpkin_patch"
+        }
+      }
+    ],
+    "afterDirectDedupe": [
+      {
+        "id": "date-night-osm-node-101",
+        "name": "Same Harvest Farm",
+        "lat": 37.19092001695289,
+        "lon": -94.310223,
+        "address": "Address unavailable",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Corn Maze",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": null,
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "osm",
+        "activityTypes": [
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "moodLevel": 2
+      }
+    ],
+    "afterActualTransport": [
+      {
+        "id": "date-night-osm-node-102",
+        "name": "Same Harvest Farm",
+        "lat": 37.19092001695289,
+        "lon": -94.310223,
+        "address": "Address unavailable",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Pumpkin Patch",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": null,
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "osm",
+        "activityTypes": [
+          "pumpkin-patch"
+        ],
+        "moodLevel": 2
+      }
+    ],
+    "afterReversedTransport": [
+      {
+        "id": "date-night-osm-node-101",
+        "name": "Same Harvest Farm",
+        "lat": 37.19092001695289,
+        "lon": -94.310223,
+        "address": "Address unavailable",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Corn Maze",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": null,
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "osm",
+        "activityTypes": [
+          "corn-maze"
+        ],
+        "moodLevel": 2
+      }
+    ]
+  }
+}
