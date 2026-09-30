@@ -25,8 +25,10 @@ import {
   type DateNightTypeId,
   type DecoratedDateNightPlace,
 } from "@/lib/date-night/types";
-import { decorateAll } from "@/lib/restaurants/decorate";
-import { DISTANCE_OPTIONS, type DecoratedRestaurant, type Restaurant } from "@/lib/restaurants/types";
+import { decorateDateNight, eligibleDateNight } from "@/lib/date-night/eligibility";
+import { seasonalCoverage } from "@/lib/date-night/coverage";
+import { useDateNightClock } from "@/lib/date-night/use-clock";
+import { DISTANCE_OPTIONS, type DecoratedRestaurant } from "@/lib/restaurants/types";
 import { useAppStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
@@ -156,8 +158,10 @@ export function DateNightHome() {
   const [options, setOptions] = useState<DecoratedDateNightPlace[] | null>(null);
   const [nightPlan, setNightPlan] = useState<DecoratedDateNightPlace[] | null>(null);
   const [lastCategory, setLastCategory] = useState<ConcreteDateNightType | null>(null);
-  const halloweenActive = isHalloweenDateNightActive(spookySeasonEnabled);
-  const activityChips = dateNightChipsForNow(spookySeasonEnabled);
+  const now = useDateNightClock();
+  const [source, setSource] = useState<"live" | "merged" | "fallback">("live");
+  const halloweenActive = isHalloweenDateNightActive(spookySeasonEnabled, now);
+  const activityChips = dateNightChipsForNow(spookySeasonEnabled, now);
 
   useEffect(() => {
     let cancelled = false;
@@ -175,6 +179,7 @@ export function DateNightHome() {
       .then((result) => {
         if (cancelled) return;
         setVenues(result.venues);
+        setSource(result.source);
         setWarning(result.warning ?? null);
       })
       .catch((err: unknown) => {
@@ -188,33 +193,18 @@ export function DateNightHome() {
     return () => {
       cancelled = true;
     };
-  }, [location.lat, location.lon, filters.radiusMiles, spookySeasonEnabled]);
+  }, [location.lat, location.lon, filters.radiusMiles, spookySeasonEnabled, halloweenActive]);
 
-  const decorated = useMemo(
-    () => decorateAll(venues as Restaurant[], location) as DecoratedDateNightPlace[],
-    [venues, location],
+  const decorated = useMemo(() => decorateDateNight(venues, location, now), [venues, location, now]);
+  const eligible = useMemo(
+    () => eligibleDateNight(decorated, filters, halloweenActive, preferences, exclusions, now.getTime()),
+    [decorated, exclusions, filters, halloweenActive, preferences, now],
   );
-
-  const eligible = useMemo(() => {
-    const anything = filters.activityTypes.includes("anything");
-    return decorated.filter((venue) => {
-      if (
-        !halloweenActive &&
-        venue.activityTypes.length > 0 &&
-        venue.activityTypes.every((type) => HALLOWEEN_DATE_NIGHT_TYPES.includes(type))
-      ) {
-        return false;
-      }
-      if (venue.distanceMiles > filters.radiusMiles + 0.05) return false;
-      if (exclusions.some((item) => item.restaurantId === venue.id && item.expiresAt > Date.now())) return false;
-      const pref = preferences[venue.id];
-      if (pref?.neverRecommend) return false;
-      if (filters.favoritesOnly && !pref?.favorite) return false;
-      if (filters.openNowOnly && venue.hoursKnown && !venue.isOpen) return false;
-      if (!anything && !venue.activityTypes.some((type) => filters.activityTypes.includes(type))) return false;
-      return true;
-    });
-  }, [decorated, exclusions, filters, halloweenActive, preferences]);
+  const coverage = seasonalCoverage(decorated, filters, source, halloweenActive);
+  // Open overlays receive refreshed status/eligibility, too, including on resume.
+  const currentPick = pick ? eligible.find((venue) => venue.id === pick.id) : null;
+  const currentOptions = options?.map((item) => eligible.find((venue) => venue.id === item.id)).filter((item): item is DecoratedDateNightPlace => Boolean(item));
+  const currentPlan = nightPlan?.map((item) => eligible.find((venue) => venue.id === item.id)).filter((item): item is DecoratedDateNightPlace => Boolean(item));
 
   function updateFilters(patch: Partial<DateNightFilters>) {
     setDateNightFilters(patch);
@@ -255,8 +245,9 @@ export function DateNightHome() {
     const settlePool = eligible.filter((item) =>
       item.activityTypes.some((type) => HALLOWEEN_SETTLE_TYPES.includes(type)),
     );
+    const pairableThrills = thrillPool.filter((thrill) => settlePool.some((settle) => settle.id !== thrill.id));
     const first = venueWeightedPick(
-      thrillPool.length ? thrillPool : eligible,
+      pairableThrills.length ? pairableThrills : thrillPool.length ? thrillPool : eligible,
       Math.max(filters.mood, 70),
       sessionShown,
       true,
@@ -334,7 +325,7 @@ export function DateNightHome() {
 
       <section className="mt-7 space-y-2">
         <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">
-          <div><p className="text-sm text-fg">Open now only</p><p className="text-xs text-subtle">Skip activities that have already closed</p></div>
+          <div><p className="text-sm text-fg">Open now only</p><p className="text-xs text-subtle">Only activities with confirmed open hours</p></div>
           <Switch checked={filters.openNowOnly} onCheckedChange={(checked) => updateFilters({ openNowOnly: checked })} aria-label="Open now only" />
         </div>
         <div className="flex items-center justify-between rounded-xl bg-surface px-4 py-3 shadow-border">
@@ -348,14 +339,17 @@ export function DateNightHome() {
       </section>
 
       {loading ? <DiscoveryLoading label="Finding date ideas near you…" /> : null}
-      {warning ? (
+      {warning && !coverage ? (
         <DiscoveryNotice
           tone="fallback"
           title="Live discovery is temporarily unavailable"
           body={halloweenActive
-            ? "Pick For Us is using saved seasonal anchors with unconfirmed hours. Check each stop before you leave."
+            ? "Pick For Us is using saved seasonal anchors. Check each stop before you leave."
             : "Pick For Us is using verified saved local date ideas so the roulette can keep working."}
         />
+      ) : null}
+      {!loading && !error && coverage ? (
+        <p role="status" className="mt-5 rounded-xl bg-surface p-4 text-xs leading-relaxed text-muted shadow-border">{coverage.text}</p>
       ) : null}
       {error ? (
         <DiscoveryNotice
@@ -367,7 +361,9 @@ export function DateNightHome() {
       {!loading && !error && eligible.length === 0 ? (
         <div className="mt-5 rounded-xl bg-surface p-4 text-sm text-muted shadow-border">
           {halloweenActive
-            ? "Seasonal spots are still thin this early, and hours are unconfirmed. Widen the radius, keep Anything on, or mix in a regular date idea."
+            ? filters.openNowOnly
+              ? "No activities match these filters. Turn off Open now to browse upcoming or unconfirmed schedules, or try other activities."
+              : "No activities match these filters. Try a wider radius or mix in another activity."
             : "Nothing matches those filters. Try increasing distance or allowing more activity types."}
         </div>
       ) : null}
@@ -387,9 +383,9 @@ export function DateNightHome() {
         </div>
       </div>
 
-      {pick ? <ResultOverlay restaurant={pick as DecoratedRestaurant} reelNames={reelNames} onClose={() => setPick(null)} onReroll={() => roll()} onNotTonight={() => { excludeTonight(pick.id, pick.name); setPick(null); }} skipSpin={skipSpin} mode="date-night" /> : null}
-      {options ? <OptionsOverlay restaurants={options as DecoratedRestaurant[]} onClose={() => setOptions(null)} onSelect={(restaurant) => { setOptions(null); setSkipSpin(true); setPick(restaurant as DecoratedDateNightPlace); }} onShuffle={dealOptions} onNotTonight={(restaurant) => excludeTonight(restaurant.id, restaurant.name)} mode="date-night" /> : null}
-      {nightPlan ? <DateNightPlanOverlay plan={nightPlan} onClose={() => setNightPlan(null)} onReplan={planNight} /> : null}
+      {currentPick ? <ResultOverlay restaurant={currentPick as DecoratedRestaurant} reelNames={reelNames} onClose={() => setPick(null)} onReroll={() => roll()} onNotTonight={() => { excludeTonight(currentPick.id, currentPick.name); setPick(null); }} skipSpin={skipSpin} mode="date-night" /> : null}
+      {currentOptions?.length ? <OptionsOverlay restaurants={currentOptions as DecoratedRestaurant[]} onClose={() => setOptions(null)} onSelect={(restaurant) => { setOptions(null); setSkipSpin(true); setPick(restaurant as DecoratedDateNightPlace); }} onShuffle={dealOptions} onNotTonight={(restaurant) => excludeTonight(restaurant.id, restaurant.name)} mode="date-night" /> : null}
+      {currentPlan?.length ? <DateNightPlanOverlay plan={currentPlan} onClose={() => setNightPlan(null)} onReplan={planNight} /> : null}
     </main>
   );
 }

@@ -1,0 +1,36 @@
+✔ Exeter's actual theme-park record is acquired by the real seasonal query and reaches the eligible pool (13.673943ms)
+✔ precise activity evidence admits corn, pumpkin and haunted trail without admitting generic places (12.632307ms)
+✔ same identity preserves C/P, provenance, stable ID and representative metadata in either provider order (3.294679ms)
+✔ structured lifecycle cannot survive eligibility or be resurrected by an active duplicate (1.448399ms)
+✔ all availability states share one OFF/ON policy, including expiry and next-year revalidation (1.397646ms)
+✔ all seven seasonal selections preserve union and the radius boundary (4.362915ms)
+✔ saved-only successful sparse coverage, missing categories and provider outage remain distinct (2.867838ms)
+✔ per-category provenance never labels a saved haunt as live because its ordinary park duplicate is live (1.878259ms)
+✔ ordinary Date Night and seasonal toggle still work internationally; unknown hours fail strict ON (1.449815ms)
+✖ actual component: handler → count/options/pick/plan and all seven category combinations (282.23807ms)
+✔ actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dependent pool/overlay refresh (209.649806ms)
+✔ actual component displays schedule uncertainty distinctly for live weekly-hours-only venues (132.70196ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 11
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1380.082847
+
+✖ failing tests:
+
+test at scripts/seasonal-discovery.test.mjs:179:1
+✖ actual component: handler → count/options/pick/plan and all seven category combinations (282.23807ms)
+  TypeError: Cannot read properties of undefined (reading 'classList')
+      at getDateNightIcon (eval at load (file:///workspace/scratch/fed6bfa5deac/repository/scripts/test-support/load-app-module.mjs:51:5), <anonymous>:85:103)
+      at eval (eval at load (file:///workspace/scratch/fed6bfa5deac/repository/scripts/test-support/date-night-component-harness.mjs:58:5), <anonymous>:38:67)
+      at Array.map (<anonymous>)
+      at DateNightPlanOverlay (eval at load (file:///workspace/scratch/fed6bfa5deac/repository/scripts/test-support/date-night-component-harness.mjs:58:5), <anonymous>:37:617)
+      at Object.react_stack_bottom_frame (/workspace/scratch/fed6bfa5deac/repository/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:9808:18)
+      at renderWithHooks (/workspace/scratch/fed6bfa5deac/repository/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:5062:19)
+      at renderElement (/workspace/scratch/fed6bfa5deac/repository/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:5497:23)
+      at retryNode (/workspace/scratch/fed6bfa5deac/repository/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6417:31)
+      at renderNodeDestructive (/workspace/scratch/fed6bfa5deac/repository/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6367:11)
+      at renderNode (/workspace/scratch/fed6bfa5deac/repository/node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6905:18)

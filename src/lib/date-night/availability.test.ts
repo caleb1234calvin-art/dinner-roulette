@@ -33,11 +33,11 @@ describe("seasonal date-night availability", () => {
     );
   });
 
-  it("keeps Myer's Inn unconfirmed until a 2026 calendar is verified", () => {
+  it("uses Myer's retained operator 2026 calendar", () => {
     assert.equal(hasSeasonalAvailabilityRecord("date-night-myers-inn-carthage"), true);
     assert.equal(
       getSeasonalDateStatus("date-night-myers-inn-carthage", new Date(2026, 9, 10, 20, 0)),
-      "unconfirmed",
+      "available",
     );
   });
 

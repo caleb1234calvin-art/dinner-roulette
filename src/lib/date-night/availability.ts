@@ -1,98 +1,133 @@
-import type { DecoratedDateNightPlace } from "./types";
+import type { DateNightPlace, DecoratedDateNightPlace } from "./types";
 
 export type SeasonalDateStatus = "available" | "unavailable" | "unconfirmed";
+export type SeasonalVenueAvailability = {
+  status: "confirmed" | "unconfirmed" | "not-operating";
+  activeFrom?: string;
+  activeUntil?: string;
+  activeDates?: readonly string[];
+  checkedAt: string;
+  revalidateAfter?: string;
+  sourceUrls?: readonly string[];
+  note?: string;
+};
 
-export type SeasonalVenueAvailability =
-  | {
-      status: "confirmed";
-      activeFrom?: string;
-      activeUntil?: string;
-      activeDates?: readonly string[];
-      checkedAt: string;
-      note?: string;
-    }
-  | {
-      status: "unconfirmed";
-      checkedAt: string;
-      note?: string;
-    };
-
-/**
- * Curated seasonal availability is intentionally separate from weekly opening
- * hours. A weekly "Fr-Sa 19:00-24:00" rule must not make a haunt look open
- * before its season starts.
- *
- * The Werehouse window is deliberately conservative: current 2026 listings
- * identify Sep 25 as the first open date, while the venue's own site confirms
- * Friday/Saturday 7 PM-midnight hours. We stop the trusted window at Oct 31
- * rather than guessing any special post-Halloween date.
- *
- * Myer's Inn remains unconfirmed because its own site still publishes 2025
- * calendar dates. It may be shown when Open now is disabled, but it must never
- * be represented as open-now until the 2026 schedule is confirmed.
+/** Existing anchors only. Evidence: original audit reference-event-metadata.json
+ * and reference-source-retrievals.json, fetched 2026-09-30 UTC / Sep 29 Chicago.
+ * Dates expire after this season; never roll a past calendar into a new year.
+ * Recheck operator calendars before each season and when revalidateAfter passes.
  */
 export const SEASONAL_VENUE_AVAILABILITY: Readonly<Record<string, SeasonalVenueAvailability>> = {
   "date-night-werehouse-joplin": {
-    status: "confirmed",
-    activeFrom: "2026-09-25",
-    activeUntil: "2026-10-31",
-    checkedAt: "2026-09-07",
-    note: "2026 season begins Sep 25; venue hours are Friday-Saturday 7 PM-midnight.",
+    status: "confirmed", activeFrom: "2026-09-25", activeUntil: "2026-10-31",
+    checkedAt: "2026-09-29", revalidateAfter: "2026-10-31",
+    sourceUrls: ["https://thewerehouse.net/", "https://www.missourihauntedhouses.com/halloween/haunted-house-joplin.html"],
+    note: "Operator weekly hours and current directory season corroborated by the retained audit retrievals.",
   },
   "date-night-myers-inn-carthage": {
-    status: "unconfirmed",
-    checkedAt: "2026-09-07",
-    note: "Official site still publishes 2025 dates; confirm the 2026 schedule before travel.",
+    status: "confirmed", activeFrom: "2026-10-02", activeUntil: "2026-10-31",
+    activeDates: ["2026-10-02", "2026-10-03", "2026-10-09", "2026-10-10", "2026-10-16", "2026-10-17", "2026-10-23", "2026-10-24", "2026-10-30", "2026-10-31"],
+    checkedAt: "2026-09-29", revalidateAfter: "2026-10-31",
+    sourceUrls: ["https://www.myersinnhaunt.com/"],
+    note: "Ten October 2026 dates in the operator calendar, retained in original audit evidence. Verify changes before travel.",
   },
 };
+
+export type DateNightAvailabilityStatus = "open-now" | "closed-now" | "hours-unknown" |
+  "schedule-unconfirmed" | "upcoming-season" | "finished-season" | "not-operating-season" |
+  "permanently-closed" | "disused";
+export interface DateNightAvailability {
+  status: DateNightAvailabilityStatus;
+  season: "ordinary" | "unconfirmed" | "upcoming" | "active" | "finished" | "not-operating";
+  label: string;
+  browseEligible: boolean;
+  openNowEligible: boolean;
+  checkedAt?: string;
+  revalidationDue: boolean;
+}
 
 export function hasSeasonalAvailabilityRecord(venueId: string): boolean {
   return Boolean(SEASONAL_VENUE_AVAILABILITY[venueId]);
 }
 
 function localDateKey(now: Date): string {
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, "0");
-  const day = String(now.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+}
+
+function calendarState(record: SeasonalVenueAvailability | undefined, now: Date) {
+  const today = localDateKey(now);
+  const dates = record?.activeDates?.slice().sort();
+  const from = record?.activeFrom ?? dates?.[0];
+  const until = record?.activeUntil ?? dates?.[dates.length - 1];
+  const priorYear = Boolean(until && until.slice(0, 4) < today.slice(0, 4));
+  const expired = Boolean(record?.revalidateAfter && today > record.revalidateAfter);
+  const due = !record || priorYear || expired || record.checkedAt.slice(0, 4) !== today.slice(0, 4);
+  // A known ended season remains ended for its year; next year needs new evidence.
+  if (record?.status === "confirmed" && until && today > until && !priorYear) return { season: "finished" as const, dateOpen: false, due };
+  if (due || !record || record.status === "unconfirmed") return { season: "unconfirmed" as const, dateOpen: false, due };
+  if (record.status === "not-operating") return { season: "not-operating" as const, dateOpen: false, due };
+  // Both ends (or explicit dates) are required; generic opening/start dates do not
+  // establish a current seasonal calendar.
+  if (!from || !until) return { season: "unconfirmed" as const, dateOpen: false, due: true };
+  if (today < from) return { season: "upcoming" as const, dateOpen: false, due };
+  return { season: "active" as const, dateOpen: !dates?.length || dates.includes(today), due };
 }
 
 export function getSeasonalDateStatus(venueId: string, now = new Date()): SeasonalDateStatus {
-  const availability = SEASONAL_VENUE_AVAILABILITY[venueId];
-  if (!availability || availability.status === "unconfirmed") return "unconfirmed";
-
-  const today = localDateKey(now);
-  if (availability.activeDates?.length) {
-    return availability.activeDates.includes(today) ? "available" : "unavailable";
-  }
-
-  if (!availability.activeFrom && !availability.activeUntil) return "unconfirmed";
-  if (availability.activeFrom && today < availability.activeFrom) return "unavailable";
-  if (availability.activeUntil && today > availability.activeUntil) return "unavailable";
-  return "available";
+  const state = calendarState(SEASONAL_VENUE_AVAILABILITY[venueId], now);
+  if (state.season === "unconfirmed") return "unconfirmed";
+  return state.season === "active" && state.dateOpen ? "available" : "unavailable";
 }
 
-/**
- * Closed-for-season is always excluded. An unconfirmed seasonal calendar may
- * still be browsed when Open now is off so users can inspect it and verify the
- * schedule themselves.
- */
+/** OFF retains upcoming, closed-today and unknown schedules, never ended or disused. */
 export function isSeasonalDateSelectable(venueId: string, now = new Date()): boolean {
-  return getSeasonalDateStatus(venueId, now) !== "unavailable";
+  const { season } = calendarState(SEASONAL_VENUE_AVAILABILITY[venueId], now);
+  return season !== "finished" && season !== "not-operating";
 }
 
-/**
- * "Open now" is a strict promise: unknown weekly hours fail closed, and a
- * seasonal venue additionally needs a confirmed active date.
- */
+export function getDateNightAvailability(
+  venue: Pick<DateNightPlace, "id"> & Partial<Pick<DateNightPlace, "activityTypes" | "lifecycle" | "seasonalAvailability">> &
+    Pick<DecoratedDateNightPlace, "hoursKnown" | "isOpen">,
+  now = new Date(),
+): DateNightAvailability {
+  const seasonal = venue.activityTypes?.some((type) => ["haunted-house", "corn-maze", "pumpkin-patch"].includes(type)) ?? false;
+  const record = venue.seasonalAvailability ?? SEASONAL_VENUE_AVAILABILITY[venue.id];
+  const calendar = calendarState(record, now);
+  const season = seasonal ? calendar.season : "ordinary";
+  let status: DateNightAvailabilityStatus;
+  if (venue.lifecycle) status = venue.lifecycle;
+  else if (season === "finished") status = "finished-season";
+  else if (season === "not-operating") status = "not-operating-season";
+  else if (season === "upcoming") status = "upcoming-season";
+  else if (season === "unconfirmed") status = "schedule-unconfirmed";
+  else if (seasonal && !calendar.dateOpen) status = "closed-now";
+  else if (!venue.hoursKnown) status = "hours-unknown";
+  else status = venue.isOpen ? "open-now" : "closed-now";
+  const labels: Record<DateNightAvailabilityStatus, string> = {
+    "open-now": "Open now", "closed-now": "Closed now", "hours-unknown": "Hours unknown",
+    "schedule-unconfirmed": "Schedule unconfirmed", "upcoming-season": "Season upcoming",
+    "finished-season": "Season ended", "not-operating-season": "Not operating this season",
+    "permanently-closed": "Permanently closed", disused: "No longer operating",
+  };
+  return {
+    status, season, label: labels[status],
+    browseEligible: !["finished-season", "not-operating-season", "permanently-closed", "disused"].includes(status),
+    openNowEligible: status === "open-now", checkedAt: seasonal ? record?.checkedAt : undefined,
+    revalidationDue: seasonal && calendar.due,
+  };
+}
+
+/** Strict ON requires known hours AND a confirmed active seasonal date. */
 export function isDateNightOpenNowEligible(
-  venue: Pick<DecoratedDateNightPlace, "id" | "hoursKnown" | "isOpen">,
+  venue: Pick<DecoratedDateNightPlace, "id" | "hoursKnown" | "isOpen"> & Partial<Pick<DateNightPlace, "lifecycle" | "seasonalAvailability">>,
   seasonal: boolean,
   now = new Date(),
 ): boolean {
-  if (!venue.hoursKnown || !venue.isOpen) return false;
-  if (!seasonal) return true;
-  return getSeasonalDateStatus(venue.id, now) === "available";
+  return getDateNightAvailability({ ...venue, activityTypes: seasonal ? ["haunted-house"] : [] }, now).openNowEligible;
+}
+
+export function dateNightStatusLabel(venue: DecoratedDateNightPlace): string {
+  return venue.availability?.label ?? (venue.hoursKnown ? venue.isOpen ? "Open now" : "Closed now" : "Hours unknown");
 }
 
 /** A two-stop Halloween plan must contain two different real venues. */

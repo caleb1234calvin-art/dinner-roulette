@@ -1,3 +1,20 @@
+# Pick For Us — Seasonal Discovery Remediation #1 (2026-09-29)
+
+This TOP section supersedes earlier next-action instructions; historical continuity below is preserved verbatim.
+
+## CURRENT — SEASONAL DISCOVERY REMEDIATED — AWAITING INDEPENDENT VERIFICATION
+
+- Branch: `audit/seasonal-discovery-coverage-1`. Frozen main: `0a8f30dc57fcc1156342d1bfc8a07524f3125e3b`. Audited checkpoint: `4f6bf5fde5ffb1f4e99b34584ebd4e767ba39ac3`. Actual start: `c6509784ea2efff247a75fc5d855c0d8c39be3bc`, whose only post-audit change was the remediation handoff.
+- Preserved all 36 original audit artifacts unchanged before implementation at `7550ef672509752802e45a5b994b9a3fbd5ac5c1`, tree `dab568789aebe02e8160daf2aee45263f57024eb`; original manifest hashes match. Authenticated GitHub transfer recreated that identical tree as remote parent `c8a67a07053f76db140287727672e83954c586b3` after command-line push lacked credentials.
+- F01–F06 implemented: bounded complementary seasonal queries and positive classification; generic-maze rejection; actual visible strict availability/lifecycle policy; deterministic category/provenance merging; explicit status and dated/expiring anchor calendars; concise per-category source disclosure. No venue insertion or audit-reference catalog patch.
+- Fresh local gates pass: clean npm install/complete dependency tree, typecheck, 390 JavaScript tests (14 new seasonal groups included; four inherited documentation skips), three Python verifier tests, changed-code lint, 883/899/60 casino invariants, Android structural/icons, unchanged tracked-byte Capacitor sync, auth-enabled migration-free production build, diff/integrity/sanity checks.
+- Browser unavailable: Chromium install failed with an invalid/truncated ZIP. Real-component/handler/clock harness passes; browser/RPC/layout/device acceptance is not claimed. Five fresh regional controls attempted, all 20 provider requests timed out; honest fallback observed. Five original regional captures replayed separately through final code. No fresh live acquisition recall claim.
+- Report and machine evidence: `audit/seasonal-discovery-remediation-1-2026-09-29.md` / `.json`; logs and provider observations under `audit/seasonal-discovery-remediation-1-evidence/`. The commit introducing the JSON is the remediation checkpoint, with sole parent `c8a67a07053f76db140287727672e83954c586b3`; recover its exact SHA/tree using the linkage commands in the report.
+- **NEXT:** stop after this authorized remediation checkpoint is pushed. A fresh Astra must independently verify the exact checkpoint from a repository handoff. This task does not declare merge readiness.
+- No merge, deployment, migration, Vercel settings change, Android signing/publication or Play upload. Existing production/native boundaries and deferred work remain unchanged.
+
+## Prior continuity — preserved verbatim
+
 # Pick For Us — current pre-merge remediation checkpoint (2026-09-29)
 
 This TOP section supersedes prior next-action/resume instructions below. Work remains on `polish/pre-google-play-pass-1`; no main merge or release is authorized by this checkpoint.

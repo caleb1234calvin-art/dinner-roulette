@@ -1,3 +1,4 @@
+import { dateNightStatusLabel } from "@/lib/date-night/availability";
 import { directionsUrl } from "@/lib/location/maps";
 import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
@@ -44,7 +45,8 @@ function buildWhyReasons(restaurant: DecoratedRestaurant, mode: ResultMode, favo
     reasons.push(restaurant.cuisineLabel); if (restaurant.priceLevel) reasons.push(`${formatPrice(restaurant.priceLevel)} budget match`);
   }
   if (favorite) reasons.push("Saved favorite");
-  if (restaurant.hoursKnown && restaurant.isOpen) reasons.push("Open now"); else if (!restaurant.hoursKnown) reasons.push("Hours unconfirmed");
+  if (mode === "date-night") reasons.push(dateNightStatusLabel(restaurant as DecoratedDateNightPlace));
+  else if (restaurant.hoursKnown && restaurant.isOpen) reasons.push("Open now"); else if (!restaurant.hoursKnown) reasons.push("Hours unconfirmed");
   reasons.push(`${formatDistance(restaurant.distanceMiles)} away`);
   return [...new Set(reasons)].slice(0, 4);
 }
@@ -99,7 +101,7 @@ export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotT
         </div>
         <div className="result-in px-5 pt-2 pb-10"><p className="text-kicker text-subtle">{resultKicker}</p><h2 className="font-display mt-2 text-4xl leading-tight text-fg">{restaurant.name}</h2><p className="mt-2 text-sm text-muted">{tagline}</p>
           {mode === "date-night" && dateNightTypes.length ? <div className="mt-4 flex flex-wrap gap-2">{dateNightTypes.map((type) => <span key={type} className="rounded-full bg-elevated px-3 py-1.5 text-xs tracking-wide text-muted uppercase shadow-border">{dateNightTypeLabel([type])}</span>)}</div> : <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted"><span>{restaurant.cuisineLabel}</span>{restaurant.priceLevel ? <span>{formatPrice(restaurant.priceLevel)}</span> : null}{restaurant.rating ? <span className="inline-flex items-center gap-1 text-fg"><Star className="size-3.5 fill-fg" />{restaurant.rating.toFixed(1)}{restaurant.reviewCount ? <span className="text-subtle">({restaurant.reviewCount})</span> : null}</span> : null}</div>}
-          <div className="mt-3 grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4"><div className="min-w-0"><p className="text-sm text-muted">{formatDistance(restaurant.distanceMiles)}{restaurant.hoursKnown ? ` · ${restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed"}` : ""}</p>{!restaurant.hoursKnown ? <p className="mt-1 text-sm text-subtle">Hours unconfirmed — verify before going.</p> : null}{restaurant.closingSoon ? <p className="mt-1 text-sm text-danger">Closing soon — verify before making the trip.</p> : null}<p className="mt-1 text-sm text-subtle">{restaurant.address}</p></div><RideshareQuickActions restaurant={restaurant} /></div>
+          <div className="mt-3 grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4"><div className="min-w-0"><p className="text-sm text-muted">{formatDistance(restaurant.distanceMiles)}{mode === "date-night" ? ` · ${dateNightStatusLabel(dateNightRestaurant)}` : restaurant.hoursKnown ? ` · ${restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed"}` : ""}</p>{!restaurant.hoursKnown ? <p className="mt-1 text-sm text-subtle">Hours unconfirmed — verify before going.</p> : null}{restaurant.closingSoon ? <p className="mt-1 text-sm text-danger">Closing soon — verify before making the trip.</p> : null}<p className="mt-1 text-sm text-subtle">{restaurant.address}</p></div><RideshareQuickActions restaurant={restaurant} /></div>
           <div className="mt-5 rounded-xl bg-surface p-4 shadow-border"><div className="flex items-center gap-2"><Sparkles className="size-4 text-accent" /><p className="text-xs tracking-[0.18em] text-subtle uppercase">Why this pick?</p></div><div className="mt-3 flex flex-wrap gap-2">{whyReasons.map((reason) => <span key={reason} className="rounded-full bg-elevated px-3 py-1.5 text-xs text-muted">{reason}</span>)}</div></div>
           <div className="mt-6 space-y-2"><Button size="lg" className="w-full" asChild><a href={mapsUrl} target="_blank" rel="noopener noreferrer"><MapPinned className="size-5" /><span className="tracking-kicker uppercase">Directions · Google Maps ↗</span></a></Button>
             <p className="px-2 text-center text-[11px] leading-relaxed text-subtle">Directions open an independent third-party mapping service. Verify destination details before travel.</p>

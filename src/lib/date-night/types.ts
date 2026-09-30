@@ -1,3 +1,4 @@
+import type { SeasonalVenueAvailability, DateNightAvailability } from "./availability";
 import type { DecoratedRestaurant, DistanceMiles, Restaurant } from "@/lib/restaurants/types";
 
 export type DateNightTypeId =
@@ -25,12 +26,27 @@ export interface DateNightFilters {
   reduceParks: boolean;
 }
 
+export type DateNightLifecycle = "disused" | "permanently-closed";
+
+export interface DateNightEvidence {
+  id: string;
+  source: "osm" | "catalog";
+  activityTypes: ConcreteDateNightType[];
+  openingHours: string | null;
+  website: string | null;
+  lifecycle?: DateNightLifecycle;
+}
+
 export interface DateNightPlace extends Restaurant {
+  lifecycle?: DateNightLifecycle;
+  discoveryEvidence?: DateNightEvidence[];
+  seasonalAvailability?: SeasonalVenueAvailability;
   activityTypes: ConcreteDateNightType[];
   moodLevel: 1 | 2 | 3;
 }
 
-export interface DecoratedDateNightPlace extends DecoratedRestaurant {
+export interface DecoratedDateNightPlace extends DecoratedRestaurant, DateNightPlace {
+  availability: DateNightAvailability;
   activityTypes: ConcreteDateNightType[];
   moodLevel: 1 | 2 | 3;
 }

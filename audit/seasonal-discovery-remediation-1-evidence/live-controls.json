@@ -1,0 +1,2067 @@
+{
+  "timezone": "America/Chicago",
+  "completeInventory": false,
+  "deterministic": false,
+  "runs": [
+    {
+      "origin": {
+        "label": "Carthage",
+        "lat": 37.176447,
+        "lon": -94.310223
+      },
+      "startedAt": "2026-09-30T02:48:24.590Z",
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "startedAt": "2026-09-30T02:48:24.591Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:48:46.596Z"
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "startedAt": "2026-09-30T02:48:46.596Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:49:08.598Z"
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "startedAt": "2026-09-30T02:49:08.598Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:49:30.600Z"
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "startedAt": "2026-09-30T02:49:30.600Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:49:52.602Z"
+        }
+      ],
+      "source": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "venues": [
+        {
+          "id": "date-night-tilt-studio-joplin",
+          "name": "Tilt Studio Joplin",
+          "lat": 37.0907455,
+          "lon": -94.4752036,
+          "address": "101 N Rangeline Rd, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Arcade / Mini Golf",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo-Sa 10:00-20:00; Su 12:00-18:00",
+          "phone": "+1 417-553-7902",
+          "website": "https://tiltstudio.com/joplin/",
+          "isChain": true,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "arcade",
+            "mini-golf",
+            "bowling"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-fourth-street-bowl-joplin",
+          "name": "Carl Richard's 4th Street Bowl",
+          "lat": 37.0885665,
+          "lon": -94.5301335,
+          "address": "1419 W 4th St, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Bowling / Arcade",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo 11:00-22:00; Tu 16:00-22:00; We 11:00-22:00; Th 12:00-22:00; Fr 11:00-23:00; Sa 09:00-23:00; Su 16:00-22:00",
+          "phone": "+1 417-624-5681",
+          "website": "https://www.carlrichardsbowl.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "bowling",
+            "arcade"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-roller-city-joplin",
+          "name": "Roller City Entertainment",
+          "lat": 37.063706,
+          "lon": -94.483519,
+          "address": "2800 E 24th St, Joplin, MO 64804",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Skating / Arcade",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo-Tu off; We-Th 16:00-20:00; Fr 16:00-21:00; Sa 12:00-22:00; Su 12:00-19:00",
+          "phone": "+1 417-781-4033",
+          "website": "https://rollercitymo.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "skating",
+            "arcade"
+          ],
+          "moodLevel": 3
+        },
+        {
+          "id": "date-night-rangeline-golf-joplin",
+          "name": "Rangeline Golf Center",
+          "lat": 37.108371,
+          "lon": -94.476249,
+          "address": "2001 N Range Line Rd, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Mini Golf / Games",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Su-Th 08:00-21:00; Fr-Sa 08:00-22:00",
+          "phone": "+1 417-624-0400",
+          "website": "https://rangelinegolf.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "mini-golf",
+            "arcade"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-route-66-theater-webb-city",
+          "name": "Route 66 Theater",
+          "lat": 37.14,
+          "lon": -94.46298,
+          "address": "24 S Main St, Webb City, MO 64870",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Movies",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": "+1 417-317-1414",
+          "website": "https://route66movietheater.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "movies"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-66-drive-in-carthage",
+          "name": "66 Drive-In Theatre",
+          "lat": 37.173404,
+          "lon": -94.368582,
+          "address": "17231 Old 66 Blvd, Carthage, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Drive-In Movies",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": "+1 417-359-5959",
+          "website": "https://66drivein.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "movies"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-precious-moments-chapel",
+          "name": "Precious Moments Chapel",
+          "lat": 37.11183,
+          "lon": -94.34532,
+          "address": "4321 Chapel Road, Carthage, MO 64836",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Chapel / Museum / Gardens",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo-Su 09:00-17:00",
+          "phone": "+1 800-543-7975",
+          "website": "https://preciousmomentschapel.org/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "museum"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-battle-of-carthage-museum",
+          "name": "Battle of Carthage Civil War Museum",
+          "lat": 37.177569,
+          "lon": -94.309858,
+          "address": "205 Grant St, Carthage, MO 64836",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Museum",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo off; Tu-Sa 08:30-17:00; Su 13:00-17:00",
+          "phone": "+1 417-237-7060",
+          "website": "https://www.carthagemo.gov/page/civil-war-museum",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "museum"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-joplin-museum",
+          "name": "Joplin History & Mineral Museum",
+          "lat": 37.08767,
+          "lon": -94.55045,
+          "address": "504 S Schifferdecker Ave, Joplin, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Museum",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo off; Tu-Sa 10:00-17:00; Su off",
+          "phone": "+1 417-623-1180",
+          "website": "https://www.joplin-museum.org/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "museum"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-schifferdecker-park-joplin",
+          "name": "Schifferdecker Park",
+          "lat": 37.088672,
+          "lon": -94.553559,
+          "address": "Schifferdecker Ave, Joplin, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "07:00-23:00",
+          "phone": null,
+          "website": "https://www.joplinmo.org/Facilities",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-cunningham-park-joplin",
+          "name": "Cunningham Park",
+          "lat": 37.0645056,
+          "lon": -94.5313362,
+          "address": "W 26th St & S Maiden Ln, Joplin, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "07:00-23:00",
+          "phone": null,
+          "website": "https://www.joplinmo.org/Facilities",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-hatten-park-webb-city",
+          "name": "Hatten Park",
+          "lat": 37.1486696,
+          "lon": -94.4824485,
+          "address": "354 N College Ave, Webb City, MO 64870",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": "https://www.webbcitymo.org/parks-recreation",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-king-jack-park-webb-city",
+          "name": "King Jack Park",
+          "lat": 37.1352,
+          "lon": -94.4641,
+          "address": "555 S Main St, Webb City, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": "https://webbcityrec.com/KingJack.aspx",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-kellogg-lake-park-carthage",
+          "name": "Kellogg Lake Park",
+          "lat": 37.18728,
+          "lon": -94.294667,
+          "address": "Jiminy Ln, Carthage, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park / Disc Golf",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": null,
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-stebbins-park-sarcoxie",
+          "name": "Stebbins Memorial Park",
+          "lat": 37.0692,
+          "lon": -94.1290167,
+          "address": "Center St & Clarence St, Sarcoxie, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": "https://www.sarcoxiemo.gov/parks",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "lat": 37.0694258,
+          "lon": -94.4688601,
+          "address": "3819 E 20th St, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Haunted House",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Fr-Sa 19:00-24:00",
+          "phone": "+1 417-396-6094",
+          "website": "https://thewerehouse.net/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "moodLevel": 3
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "lat": 37.1475746,
+          "lon": -94.3173348,
+          "address": "529 W Airport Dr, Carthage, MO 64836",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Haunted House",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Fr-Sa 19:00-24:00",
+          "phone": "+1 417-313-2223",
+          "website": "https://www.myersinnhaunt.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "moodLevel": 3
+        }
+      ],
+      "evaluatedAt": "2026-09-30T02:49:52.603Z",
+      "off": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "status": "upcoming-season",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "status": "closed-now",
+          "source": "catalog"
+        }
+      ],
+      "on": [],
+      "coverage": {
+        "live": [],
+        "savedOnly": [
+          "haunted-house"
+        ],
+        "missing": [
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "outage": true,
+        "sparse": false,
+        "text": "Live map unavailable; using saved places. Saved places only: Haunted House. No places found: Corn Maze, Pumpkin Patch. Coverage may be incomplete; check schedules before going."
+      },
+      "finishedAt": "2026-09-30T02:49:52.607Z"
+    },
+    {
+      "origin": {
+        "label": "Joplin",
+        "lat": 37.084184,
+        "lon": -94.513339
+      },
+      "startedAt": "2026-09-30T02:49:52.608Z",
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "startedAt": "2026-09-30T02:49:52.608Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.084184,-94.513339);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.084184,-94.513339);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:50:14.634Z"
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "startedAt": "2026-09-30T02:50:14.635Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.084184,-94.513339);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.084184,-94.513339);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:50:36.653Z"
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "startedAt": "2026-09-30T02:50:36.654Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.084184,-94.513339);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.084184,-94.513339);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:50:58.672Z"
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "startedAt": "2026-09-30T02:50:58.673Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.084184,-94.513339);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.084184,-94.513339);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:51:20.673Z"
+        }
+      ],
+      "source": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "venues": [
+        {
+          "id": "date-night-tilt-studio-joplin",
+          "name": "Tilt Studio Joplin",
+          "lat": 37.0907455,
+          "lon": -94.4752036,
+          "address": "101 N Rangeline Rd, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Arcade / Mini Golf",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo-Sa 10:00-20:00; Su 12:00-18:00",
+          "phone": "+1 417-553-7902",
+          "website": "https://tiltstudio.com/joplin/",
+          "isChain": true,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "arcade",
+            "mini-golf",
+            "bowling"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-fourth-street-bowl-joplin",
+          "name": "Carl Richard's 4th Street Bowl",
+          "lat": 37.0885665,
+          "lon": -94.5301335,
+          "address": "1419 W 4th St, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Bowling / Arcade",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo 11:00-22:00; Tu 16:00-22:00; We 11:00-22:00; Th 12:00-22:00; Fr 11:00-23:00; Sa 09:00-23:00; Su 16:00-22:00",
+          "phone": "+1 417-624-5681",
+          "website": "https://www.carlrichardsbowl.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "bowling",
+            "arcade"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-roller-city-joplin",
+          "name": "Roller City Entertainment",
+          "lat": 37.063706,
+          "lon": -94.483519,
+          "address": "2800 E 24th St, Joplin, MO 64804",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Skating / Arcade",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo-Tu off; We-Th 16:00-20:00; Fr 16:00-21:00; Sa 12:00-22:00; Su 12:00-19:00",
+          "phone": "+1 417-781-4033",
+          "website": "https://rollercitymo.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "skating",
+            "arcade"
+          ],
+          "moodLevel": 3
+        },
+        {
+          "id": "date-night-rangeline-golf-joplin",
+          "name": "Rangeline Golf Center",
+          "lat": 37.108371,
+          "lon": -94.476249,
+          "address": "2001 N Range Line Rd, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Mini Golf / Games",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Su-Th 08:00-21:00; Fr-Sa 08:00-22:00",
+          "phone": "+1 417-624-0400",
+          "website": "https://rangelinegolf.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "mini-golf",
+            "arcade"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-route-66-theater-webb-city",
+          "name": "Route 66 Theater",
+          "lat": 37.14,
+          "lon": -94.46298,
+          "address": "24 S Main St, Webb City, MO 64870",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Movies",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": "+1 417-317-1414",
+          "website": "https://route66movietheater.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "movies"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-66-drive-in-carthage",
+          "name": "66 Drive-In Theatre",
+          "lat": 37.173404,
+          "lon": -94.368582,
+          "address": "17231 Old 66 Blvd, Carthage, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Drive-In Movies",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": "+1 417-359-5959",
+          "website": "https://66drivein.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "movies"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-precious-moments-chapel",
+          "name": "Precious Moments Chapel",
+          "lat": 37.11183,
+          "lon": -94.34532,
+          "address": "4321 Chapel Road, Carthage, MO 64836",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Chapel / Museum / Gardens",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo-Su 09:00-17:00",
+          "phone": "+1 800-543-7975",
+          "website": "https://preciousmomentschapel.org/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "museum"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-battle-of-carthage-museum",
+          "name": "Battle of Carthage Civil War Museum",
+          "lat": 37.177569,
+          "lon": -94.309858,
+          "address": "205 Grant St, Carthage, MO 64836",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Museum",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo off; Tu-Sa 08:30-17:00; Su 13:00-17:00",
+          "phone": "+1 417-237-7060",
+          "website": "https://www.carthagemo.gov/page/civil-war-museum",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "museum"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-joplin-museum",
+          "name": "Joplin History & Mineral Museum",
+          "lat": 37.08767,
+          "lon": -94.55045,
+          "address": "504 S Schifferdecker Ave, Joplin, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Museum",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo off; Tu-Sa 10:00-17:00; Su off",
+          "phone": "+1 417-623-1180",
+          "website": "https://www.joplin-museum.org/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "museum"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-schifferdecker-park-joplin",
+          "name": "Schifferdecker Park",
+          "lat": 37.088672,
+          "lon": -94.553559,
+          "address": "Schifferdecker Ave, Joplin, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "07:00-23:00",
+          "phone": null,
+          "website": "https://www.joplinmo.org/Facilities",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-cunningham-park-joplin",
+          "name": "Cunningham Park",
+          "lat": 37.0645056,
+          "lon": -94.5313362,
+          "address": "W 26th St & S Maiden Ln, Joplin, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "07:00-23:00",
+          "phone": null,
+          "website": "https://www.joplinmo.org/Facilities",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-hatten-park-webb-city",
+          "name": "Hatten Park",
+          "lat": 37.1486696,
+          "lon": -94.4824485,
+          "address": "354 N College Ave, Webb City, MO 64870",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": "https://www.webbcitymo.org/parks-recreation",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-king-jack-park-webb-city",
+          "name": "King Jack Park",
+          "lat": 37.1352,
+          "lon": -94.4641,
+          "address": "555 S Main St, Webb City, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": "https://webbcityrec.com/KingJack.aspx",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-kellogg-lake-park-carthage",
+          "name": "Kellogg Lake Park",
+          "lat": 37.18728,
+          "lon": -94.294667,
+          "address": "Jiminy Ln, Carthage, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park / Disc Golf",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": null,
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-stebbins-park-sarcoxie",
+          "name": "Stebbins Memorial Park",
+          "lat": 37.0692,
+          "lon": -94.1290167,
+          "address": "Center St & Clarence St, Sarcoxie, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": "https://www.sarcoxiemo.gov/parks",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "lat": 37.0694258,
+          "lon": -94.4688601,
+          "address": "3819 E 20th St, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Haunted House",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Fr-Sa 19:00-24:00",
+          "phone": "+1 417-396-6094",
+          "website": "https://thewerehouse.net/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "moodLevel": 3
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "lat": 37.1475746,
+          "lon": -94.3173348,
+          "address": "529 W Airport Dr, Carthage, MO 64836",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Haunted House",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Fr-Sa 19:00-24:00",
+          "phone": "+1 417-313-2223",
+          "website": "https://www.myersinnhaunt.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "moodLevel": 3
+        }
+      ],
+      "evaluatedAt": "2026-09-30T02:51:20.674Z",
+      "off": [
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.6554948140484402,
+          "status": "closed-now",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.653597925574143,
+          "status": "upcoming-season",
+          "source": "catalog"
+        }
+      ],
+      "on": [],
+      "coverage": {
+        "live": [],
+        "savedOnly": [
+          "haunted-house"
+        ],
+        "missing": [
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "outage": true,
+        "sparse": false,
+        "text": "Live map unavailable; using saved places. Saved places only: Haunted House. No places found: Corn Maze, Pumpkin Patch. Coverage may be incomplete; check schedules before going."
+      },
+      "finishedAt": "2026-09-30T02:51:20.675Z"
+    },
+    {
+      "origin": {
+        "label": "Springfield",
+        "lat": 37.208957,
+        "lon": -93.292299
+      },
+      "startedAt": "2026-09-30T02:51:20.676Z",
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "startedAt": "2026-09-30T02:51:20.676Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.208957,-93.292299);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.208957,-93.292299);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:51:42.678Z"
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "startedAt": "2026-09-30T02:51:42.678Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.208957,-93.292299);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.208957,-93.292299);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:52:04.680Z"
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "startedAt": "2026-09-30T02:52:04.680Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.208957,-93.292299);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.208957,-93.292299);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n);\nout center tags;\n",
+          "status": 504,
+          "sha256": "c9c89d274726b86306e1c97d80360f820bce86042c34c9bb2487aac4ada6d606",
+          "body": "<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n",
+          "rawCount": null,
+          "finishedAt": "2026-09-30T02:52:11.136Z"
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "startedAt": "2026-09-30T02:52:11.136Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.208957,-93.292299);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.208957,-93.292299);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n);\nout center tags;\n",
+          "status": 504,
+          "sha256": "9e8d149c02b9ab7719f9e6cfdf696730c39abead6f27e39eb13793b7d2adbb82",
+          "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\n    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n  <meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" lang=\"en\"/>\n  <title>OSM3S Response</title>\n</head>\n<body>\n\n<p>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</p>\n<p><strong style=\"color:#FF0000\">Error</strong>: runtime error: open64: 0 Success /osm3s_osm_base Dispatcher_Client::request_read_and_idx::timeout. The server is probably too busy to handle your request. </p>\n\n</body>\n</html>\n",
+          "rawCount": null,
+          "finishedAt": "2026-09-30T02:52:26.595Z"
+        }
+      ],
+      "source": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "venues": [
+        {
+          "id": "date-night-stebbins-park-sarcoxie",
+          "name": "Stebbins Memorial Park",
+          "lat": 37.0692,
+          "lon": -94.1290167,
+          "address": "Center St & Clarence St, Sarcoxie, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": "https://www.sarcoxiemo.gov/parks",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        }
+      ],
+      "evaluatedAt": "2026-09-30T02:52:26.595Z",
+      "off": [],
+      "on": [],
+      "coverage": {
+        "live": [],
+        "savedOnly": [],
+        "missing": [
+          "haunted-house",
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "outage": true,
+        "sparse": false,
+        "text": "Live map unavailable; using saved places. No places found: Haunted House, Corn Maze, Pumpkin Patch. Coverage may be incomplete; check schedules before going."
+      },
+      "finishedAt": "2026-09-30T02:52:26.595Z"
+    },
+    {
+      "origin": {
+        "label": "Lockwood rural",
+        "lat": 37.3856,
+        "lon": -93.953
+      },
+      "startedAt": "2026-09-30T02:52:26.596Z",
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "startedAt": "2026-09-30T02:52:26.597Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.3856,-93.953);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.3856,-93.953);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:52:48.598Z"
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "startedAt": "2026-09-30T02:52:48.598Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.3856,-93.953);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.3856,-93.953);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:53:10.600Z"
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "startedAt": "2026-09-30T02:53:10.600Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.3856,-93.953);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.3856,-93.953);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:53:32.602Z"
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "startedAt": "2026-09-30T02:53:32.602Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.3856,-93.953);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.3856,-93.953);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:53:54.626Z"
+        }
+      ],
+      "source": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "venues": [
+        {
+          "id": "date-night-tilt-studio-joplin",
+          "name": "Tilt Studio Joplin",
+          "lat": 37.0907455,
+          "lon": -94.4752036,
+          "address": "101 N Rangeline Rd, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Arcade / Mini Golf",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo-Sa 10:00-20:00; Su 12:00-18:00",
+          "phone": "+1 417-553-7902",
+          "website": "https://tiltstudio.com/joplin/",
+          "isChain": true,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "arcade",
+            "mini-golf",
+            "bowling"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-fourth-street-bowl-joplin",
+          "name": "Carl Richard's 4th Street Bowl",
+          "lat": 37.0885665,
+          "lon": -94.5301335,
+          "address": "1419 W 4th St, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Bowling / Arcade",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo 11:00-22:00; Tu 16:00-22:00; We 11:00-22:00; Th 12:00-22:00; Fr 11:00-23:00; Sa 09:00-23:00; Su 16:00-22:00",
+          "phone": "+1 417-624-5681",
+          "website": "https://www.carlrichardsbowl.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "bowling",
+            "arcade"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-roller-city-joplin",
+          "name": "Roller City Entertainment",
+          "lat": 37.063706,
+          "lon": -94.483519,
+          "address": "2800 E 24th St, Joplin, MO 64804",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Skating / Arcade",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo-Tu off; We-Th 16:00-20:00; Fr 16:00-21:00; Sa 12:00-22:00; Su 12:00-19:00",
+          "phone": "+1 417-781-4033",
+          "website": "https://rollercitymo.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "skating",
+            "arcade"
+          ],
+          "moodLevel": 3
+        },
+        {
+          "id": "date-night-rangeline-golf-joplin",
+          "name": "Rangeline Golf Center",
+          "lat": 37.108371,
+          "lon": -94.476249,
+          "address": "2001 N Range Line Rd, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Mini Golf / Games",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Su-Th 08:00-21:00; Fr-Sa 08:00-22:00",
+          "phone": "+1 417-624-0400",
+          "website": "https://rangelinegolf.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "mini-golf",
+            "arcade"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-route-66-theater-webb-city",
+          "name": "Route 66 Theater",
+          "lat": 37.14,
+          "lon": -94.46298,
+          "address": "24 S Main St, Webb City, MO 64870",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Movies",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": "+1 417-317-1414",
+          "website": "https://route66movietheater.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "movies"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-66-drive-in-carthage",
+          "name": "66 Drive-In Theatre",
+          "lat": 37.173404,
+          "lon": -94.368582,
+          "address": "17231 Old 66 Blvd, Carthage, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Drive-In Movies",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": "+1 417-359-5959",
+          "website": "https://66drivein.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "movies"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-precious-moments-chapel",
+          "name": "Precious Moments Chapel",
+          "lat": 37.11183,
+          "lon": -94.34532,
+          "address": "4321 Chapel Road, Carthage, MO 64836",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Chapel / Museum / Gardens",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo-Su 09:00-17:00",
+          "phone": "+1 800-543-7975",
+          "website": "https://preciousmomentschapel.org/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "museum"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-battle-of-carthage-museum",
+          "name": "Battle of Carthage Civil War Museum",
+          "lat": 37.177569,
+          "lon": -94.309858,
+          "address": "205 Grant St, Carthage, MO 64836",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Museum",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo off; Tu-Sa 08:30-17:00; Su 13:00-17:00",
+          "phone": "+1 417-237-7060",
+          "website": "https://www.carthagemo.gov/page/civil-war-museum",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "museum"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-joplin-museum",
+          "name": "Joplin History & Mineral Museum",
+          "lat": 37.08767,
+          "lon": -94.55045,
+          "address": "504 S Schifferdecker Ave, Joplin, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Museum",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo off; Tu-Sa 10:00-17:00; Su off",
+          "phone": "+1 417-623-1180",
+          "website": "https://www.joplin-museum.org/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "museum"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-schifferdecker-park-joplin",
+          "name": "Schifferdecker Park",
+          "lat": 37.088672,
+          "lon": -94.553559,
+          "address": "Schifferdecker Ave, Joplin, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "07:00-23:00",
+          "phone": null,
+          "website": "https://www.joplinmo.org/Facilities",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-cunningham-park-joplin",
+          "name": "Cunningham Park",
+          "lat": 37.0645056,
+          "lon": -94.5313362,
+          "address": "W 26th St & S Maiden Ln, Joplin, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "07:00-23:00",
+          "phone": null,
+          "website": "https://www.joplinmo.org/Facilities",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-hatten-park-webb-city",
+          "name": "Hatten Park",
+          "lat": 37.1486696,
+          "lon": -94.4824485,
+          "address": "354 N College Ave, Webb City, MO 64870",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": "https://www.webbcitymo.org/parks-recreation",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-king-jack-park-webb-city",
+          "name": "King Jack Park",
+          "lat": 37.1352,
+          "lon": -94.4641,
+          "address": "555 S Main St, Webb City, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": "https://webbcityrec.com/KingJack.aspx",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-kellogg-lake-park-carthage",
+          "name": "Kellogg Lake Park",
+          "lat": 37.18728,
+          "lon": -94.294667,
+          "address": "Jiminy Ln, Carthage, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park / Disc Golf",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": null,
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-stebbins-park-sarcoxie",
+          "name": "Stebbins Memorial Park",
+          "lat": 37.0692,
+          "lon": -94.1290167,
+          "address": "Center St & Clarence St, Sarcoxie, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": "https://www.sarcoxiemo.gov/parks",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "lat": 37.0694258,
+          "lon": -94.4688601,
+          "address": "3819 E 20th St, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Haunted House",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Fr-Sa 19:00-24:00",
+          "phone": "+1 417-396-6094",
+          "website": "https://thewerehouse.net/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "moodLevel": 3
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "lat": 37.1475746,
+          "lon": -94.3173348,
+          "address": "529 W Airport Dr, Carthage, MO 64836",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Haunted House",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Fr-Sa 19:00-24:00",
+          "phone": "+1 417-313-2223",
+          "website": "https://www.myersinnhaunt.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "moodLevel": 3
+        }
+      ],
+      "evaluatedAt": "2026-09-30T02:53:54.631Z",
+      "off": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 25.919508853467317,
+          "status": "upcoming-season",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.81438338912894,
+          "status": "closed-now",
+          "source": "catalog"
+        }
+      ],
+      "on": [],
+      "coverage": {
+        "live": [],
+        "savedOnly": [
+          "haunted-house"
+        ],
+        "missing": [
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "outage": true,
+        "sparse": false,
+        "text": "Live map unavailable; using saved places. Saved places only: Haunted House. No places found: Corn Maze, Pumpkin Patch. Coverage may be incomplete; check schedules before going."
+      },
+      "finishedAt": "2026-09-30T02:53:54.634Z"
+    },
+    {
+      "origin": {
+        "label": "Aurora",
+        "lat": 36.970891,
+        "lon": -93.717979
+      },
+      "startedAt": "2026-09-30T02:53:54.638Z",
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "startedAt": "2026-09-30T02:53:54.638Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,36.970891,-93.717979);\n  nwr[\"amenity\"=\"cinema\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"museum\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,36.970891,-93.717979);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:54:16.656Z"
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "startedAt": "2026-09-30T02:54:16.657Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,36.970891,-93.717979);\n  nwr[\"amenity\"=\"cinema\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"museum\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,36.970891,-93.717979);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:54:38.659Z"
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "startedAt": "2026-09-30T02:54:38.659Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,36.970891,-93.717979);\n  nwr[\"amenity\"=\"cinema\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"museum\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,36.970891,-93.717979);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:55:00.682Z"
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "startedAt": "2026-09-30T02:55:00.683Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,36.970891,-93.717979);\n  nwr[\"amenity\"=\"cinema\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"museum\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,36.970891,-93.717979);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:55:22.702Z"
+        }
+      ],
+      "source": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "venues": [
+        {
+          "id": "date-night-tilt-studio-joplin",
+          "name": "Tilt Studio Joplin",
+          "lat": 37.0907455,
+          "lon": -94.4752036,
+          "address": "101 N Rangeline Rd, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Arcade / Mini Golf",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo-Sa 10:00-20:00; Su 12:00-18:00",
+          "phone": "+1 417-553-7902",
+          "website": "https://tiltstudio.com/joplin/",
+          "isChain": true,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "arcade",
+            "mini-golf",
+            "bowling"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-fourth-street-bowl-joplin",
+          "name": "Carl Richard's 4th Street Bowl",
+          "lat": 37.0885665,
+          "lon": -94.5301335,
+          "address": "1419 W 4th St, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Bowling / Arcade",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo 11:00-22:00; Tu 16:00-22:00; We 11:00-22:00; Th 12:00-22:00; Fr 11:00-23:00; Sa 09:00-23:00; Su 16:00-22:00",
+          "phone": "+1 417-624-5681",
+          "website": "https://www.carlrichardsbowl.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "bowling",
+            "arcade"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-roller-city-joplin",
+          "name": "Roller City Entertainment",
+          "lat": 37.063706,
+          "lon": -94.483519,
+          "address": "2800 E 24th St, Joplin, MO 64804",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Skating / Arcade",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo-Tu off; We-Th 16:00-20:00; Fr 16:00-21:00; Sa 12:00-22:00; Su 12:00-19:00",
+          "phone": "+1 417-781-4033",
+          "website": "https://rollercitymo.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "skating",
+            "arcade"
+          ],
+          "moodLevel": 3
+        },
+        {
+          "id": "date-night-rangeline-golf-joplin",
+          "name": "Rangeline Golf Center",
+          "lat": 37.108371,
+          "lon": -94.476249,
+          "address": "2001 N Range Line Rd, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Mini Golf / Games",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Su-Th 08:00-21:00; Fr-Sa 08:00-22:00",
+          "phone": "+1 417-624-0400",
+          "website": "https://rangelinegolf.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "mini-golf",
+            "arcade"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-route-66-theater-webb-city",
+          "name": "Route 66 Theater",
+          "lat": 37.14,
+          "lon": -94.46298,
+          "address": "24 S Main St, Webb City, MO 64870",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Movies",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": "+1 417-317-1414",
+          "website": "https://route66movietheater.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "movies"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-66-drive-in-carthage",
+          "name": "66 Drive-In Theatre",
+          "lat": 37.173404,
+          "lon": -94.368582,
+          "address": "17231 Old 66 Blvd, Carthage, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Drive-In Movies",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": "+1 417-359-5959",
+          "website": "https://66drivein.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "movies"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-precious-moments-chapel",
+          "name": "Precious Moments Chapel",
+          "lat": 37.11183,
+          "lon": -94.34532,
+          "address": "4321 Chapel Road, Carthage, MO 64836",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Chapel / Museum / Gardens",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo-Su 09:00-17:00",
+          "phone": "+1 800-543-7975",
+          "website": "https://preciousmomentschapel.org/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "museum"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-battle-of-carthage-museum",
+          "name": "Battle of Carthage Civil War Museum",
+          "lat": 37.177569,
+          "lon": -94.309858,
+          "address": "205 Grant St, Carthage, MO 64836",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Museum",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo off; Tu-Sa 08:30-17:00; Su 13:00-17:00",
+          "phone": "+1 417-237-7060",
+          "website": "https://www.carthagemo.gov/page/civil-war-museum",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "museum"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-joplin-museum",
+          "name": "Joplin History & Mineral Museum",
+          "lat": 37.08767,
+          "lon": -94.55045,
+          "address": "504 S Schifferdecker Ave, Joplin, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Museum",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Mo off; Tu-Sa 10:00-17:00; Su off",
+          "phone": "+1 417-623-1180",
+          "website": "https://www.joplin-museum.org/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "museum"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-schifferdecker-park-joplin",
+          "name": "Schifferdecker Park",
+          "lat": 37.088672,
+          "lon": -94.553559,
+          "address": "Schifferdecker Ave, Joplin, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "07:00-23:00",
+          "phone": null,
+          "website": "https://www.joplinmo.org/Facilities",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-cunningham-park-joplin",
+          "name": "Cunningham Park",
+          "lat": 37.0645056,
+          "lon": -94.5313362,
+          "address": "W 26th St & S Maiden Ln, Joplin, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "07:00-23:00",
+          "phone": null,
+          "website": "https://www.joplinmo.org/Facilities",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-hatten-park-webb-city",
+          "name": "Hatten Park",
+          "lat": 37.1486696,
+          "lon": -94.4824485,
+          "address": "354 N College Ave, Webb City, MO 64870",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": "https://www.webbcitymo.org/parks-recreation",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-king-jack-park-webb-city",
+          "name": "King Jack Park",
+          "lat": 37.1352,
+          "lon": -94.4641,
+          "address": "555 S Main St, Webb City, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": "https://webbcityrec.com/KingJack.aspx",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-kellogg-lake-park-carthage",
+          "name": "Kellogg Lake Park",
+          "lat": 37.18728,
+          "lon": -94.294667,
+          "address": "Jiminy Ln, Carthage, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park / Disc Golf",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": null,
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 2
+        },
+        {
+          "id": "date-night-stebbins-park-sarcoxie",
+          "name": "Stebbins Memorial Park",
+          "lat": 37.0692,
+          "lon": -94.1290167,
+          "address": "Center St & Clarence St, Sarcoxie, MO",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Park",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "unknown",
+          "phone": null,
+          "website": "https://www.sarcoxiemo.gov/parks",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "park"
+          ],
+          "moodLevel": 1
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "lat": 37.0694258,
+          "lon": -94.4688601,
+          "address": "3819 E 20th St, Joplin, MO 64801",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Haunted House",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Fr-Sa 19:00-24:00",
+          "phone": "+1 417-396-6094",
+          "website": "https://thewerehouse.net/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "moodLevel": 3
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "lat": 37.1475746,
+          "lon": -94.3173348,
+          "address": "529 W Airport Dr, Carthage, MO 64836",
+          "cuisines": [
+            "other"
+          ],
+          "cuisineLabel": "Haunted House",
+          "priceLevel": null,
+          "rating": null,
+          "reviewCount": null,
+          "openingHours": "Fr-Sa 19:00-24:00",
+          "phone": "+1 417-313-2223",
+          "website": "https://www.myersinnhaunt.com/",
+          "isChain": false,
+          "photoKey": "cafe",
+          "source": "catalog",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "moodLevel": 3
+        }
+      ],
+      "evaluatedAt": "2026-09-30T02:55:22.711Z",
+      "off": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.22990482597511,
+          "status": "upcoming-season",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 41.979013765682566,
+          "status": "closed-now",
+          "source": "catalog"
+        }
+      ],
+      "on": [],
+      "coverage": {
+        "live": [],
+        "savedOnly": [
+          "haunted-house"
+        ],
+        "missing": [
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "outage": true,
+        "sparse": false,
+        "text": "Live map unavailable; using saved places. Saved places only: Haunted House. No places found: Corn Maze, Pumpkin Patch. Coverage may be incomplete; check schedules before going."
+      },
+      "finishedAt": "2026-09-30T02:55:22.713Z"
+    }
+  ]
+}

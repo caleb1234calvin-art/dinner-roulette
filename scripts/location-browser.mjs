@@ -294,6 +294,13 @@ try {
   results.push("All six Nightlife categories keep text-only filter chips and render their approved result artwork without Dinner images");
 
   await page.getByRole("button", { name: "Date Night", exact: true }).click();
+  // The museum fixture deliberately has unknown hours: strict Open Now must
+  // exclude it, while OFF preserves ordinary Date Night browsing.
+  await page.getByText("0 activities match", { exact: true }).waitFor();
+  assert.equal(await page.getByRole("button", { name: "Pick our date", exact: true }).isDisabled(), true);
+  const dateOpenNow = page.getByRole("switch", { name: "Open now only", exact: true });
+  assert.equal(await dateOpenNow.isChecked(), true);
+  await dateOpenNow.click();
   await page.getByRole("button", { name: "Pick our date", exact: true }).click();
   await page.getByText("Toronto test museum", { exact: true }).waitFor();
   assert.equal(await page.locator('img[src*="/dinner-icons/"]').count(), 0);

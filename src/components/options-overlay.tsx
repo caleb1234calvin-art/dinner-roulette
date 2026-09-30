@@ -1,3 +1,4 @@
+import { dateNightStatusLabel } from "@/lib/date-night/availability";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { Ban, Shuffle, Sparkles, X } from "lucide-react";
@@ -50,7 +51,7 @@ export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNo
 }
 
 function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { restaurant: DecoratedRestaurant; mode: ResultMode; halloween: boolean; onSelect: () => void; onNotTonight: () => void; }) {
-  const openLabel = restaurant.hoursKnown ? (restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed") : null;
+  const openLabel = mode === "date-night" ? dateNightStatusLabel(restaurant as DecoratedDateNightPlace) : restaurant.hoursKnown ? (restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed") : null;
   const theme = useAppStore((s) => s.theme);
   const visualSrc = dinnerRestaurantIcon(restaurant, theme);
   const dateNightRestaurant = restaurant as DecoratedDateNightPlace;

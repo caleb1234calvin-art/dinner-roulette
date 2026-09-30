@@ -1,3 +1,4 @@
+import { dateNightStatusLabel } from "@/lib/date-night/availability";
 import { directionsUrl } from "@/lib/location/maps";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
@@ -90,6 +91,7 @@ export function DateNightPlanOverlay({
                         <p className="mt-1 text-xs text-muted">
                           {dateNightTypeLabel(place.activityTypes)} · {formatDistance(place.distanceMiles)}
                         </p>
+                        <p className="mt-1 text-xs text-subtle">{dateNightStatusLabel(place)}</p>
                         {!place.hoursKnown ? (
                           <p className="mt-1 text-xs text-subtle">Hours unconfirmed — check before going.</p>
                         ) : null}

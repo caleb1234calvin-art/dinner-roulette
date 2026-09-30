@@ -1,3 +1,4 @@
+import { useDateNightClock } from "@/lib/date-night/use-clock";
 import { useEffect } from "react";
 import { Heart, MoonStar, UtensilsCrossed } from "lucide-react";
 import { DateNightHome } from "@/components/date-night-home";
@@ -31,7 +32,8 @@ export function ModeHome() {
   const setDateNightFilters = useAppStore((state) => state.setDateNightFilters);
   const spookySeasonEnabled = useAppStore((state) => state.spookySeasonEnabled);
   const setSpookySeasonEnabled = useAppStore((state) => state.setSpookySeasonEnabled);
-  const halloweenSeason = isHalloweenDateNightSeason();
+  const now = useDateNightClock();
+  const halloweenSeason = isHalloweenDateNightSeason(now);
   const nightlife = mode === "nightlife";
   const dateNight = mode === "date-night";
   const halloweenDateNight = dateNight && halloweenSeason && spookySeasonEnabled;

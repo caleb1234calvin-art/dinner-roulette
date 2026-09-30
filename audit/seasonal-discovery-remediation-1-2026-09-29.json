@@ -1,0 +1,867 @@
+{
+  "title": "Pick For Us — Seasonal Discovery Remediation #1",
+  "artifactDate": "2026-09-29",
+  "executionTimezone": "America/Chicago",
+  "recordedAt": "2026-09-30T02:58:37.808244+00:00",
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "branch": "audit/seasonal-discovery-coverage-1",
+  "startingSha": "c6509784ea2efff247a75fc5d855c0d8c39be3bc",
+  "startingTree": "24e1cab36b10e9458e29a52f9e0eee73f01b8bbc",
+  "frozenMain": "0a8f30dc57fcc1156342d1bfc8a07524f3125e3b",
+  "auditedSha": "4f6bf5fde5ffb1f4e99b34584ebd4e767ba39ac3",
+  "auditedTree": "3e288318f159873b81c31d0cc994d1ca7e6291f9",
+  "preflight": {
+    "freshRefs": true,
+    "auditAncestor": true,
+    "onlyPostAuditChange": "docs/handoffs/active/seasonal-discovery-remediation-1.md",
+    "cleanIsolatedCheckoutBeforeImplementation": true,
+    "originalArtifactsAvailable": true,
+    "originalArtifactsOriginallyUncommitted": true
+  },
+  "auditPersistence": {
+    "sha": "c8a67a07053f76db140287727672e83954c586b3",
+    "tree": "dab568789aebe02e8160daf2aee45263f57024eb",
+    "files": [
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-2026-09-29.md",
+        "bytes": 42703,
+        "sha256": "800bafee5197e44ded6a1017bda87468d53a0716ef7d2adcc6e0787913e7a213"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-2026-09-29.json",
+        "bytes": 115097,
+        "sha256": "d133ce1059d200ac340bd0a9ffdcb6a72a0b5287b0c26d802223772ad95848a0"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/assemble-audit.mjs",
+        "bytes": 15085,
+        "sha256": "4a6e500054a8865983bad6abd7ee0f8b09fa24861c194f962541be92bf34d0a9"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/aurora-official-map.json",
+        "bytes": 798,
+        "sha256": "6fd63db8fc328e841f857261d353dc69499fa0e7c286f77a94e2636ab092b305"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/browser-install.log",
+        "bytes": 5152,
+        "sha256": "2d0f6a221c605699c69d59d5f283874c8396f5f0753d61e13d9626cd1e0cdde1"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/build-reference-set.mjs",
+        "bytes": 17869,
+        "sha256": "0c8c4320eea0c848a98ba8ef9544d7e81ec7a1ecada280359b239e93716be017"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/carthage-query.overpassql",
+        "bytes": 908,
+        "sha256": "4584d47ccf217d2e947134584122c5b3f1f2026c5e7d92b3b3fd554da8a21140"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/deterministic-probes.json",
+        "bytes": 163640,
+        "sha256": "cf25e585d8a1e337859b0755e38db3921b40f62d677fd645433f2289d86a99ca"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/diagnostic-provider-query.json",
+        "bytes": 1118,
+        "sha256": "02a3bd26edc41b6619e7f8ace64d5d8880dbff9a728a5eb7a9a6dc30d3083d74"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/exeter-osm-node.json",
+        "bytes": 870,
+        "sha256": "97af2ba436ec27efc140a6855e2039763e6887408e1ca260463f9659d6ab1974"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/existing-availability-tests.log",
+        "bytes": 702,
+        "sha256": "783b57e23cf9a938ab059aa9a8477bfe75ada69cf4f7f371269fcd2111022522"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/existing-location-tests.log",
+        "bytes": 1193,
+        "sha256": "48d02aed5997ed3f571fcf55901ebcd6a837895c0749bdfd70badb0b16a7af2f"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/home-render-0.html",
+        "bytes": 5285,
+        "sha256": "a1e9ab3592ba78b87bdbbfb0787465b2b63eb351c3ad8dca1e2c5c289bb8fb12"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/home-render-1.html",
+        "bytes": 5503,
+        "sha256": "ee27f48828168e832cd49eb5c8d82650dd35440ef2479c0132b38811d086419a"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/home-render-2.html",
+        "bytes": 5285,
+        "sha256": "a1e9ab3592ba78b87bdbbfb0787465b2b63eb351c3ad8dca1e2c5c289bb8fb12"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/live-probe.log",
+        "bytes": 530,
+        "sha256": "f965bd01116d1bfff2138c1c80e09875bf4fcfaec1e64a1f93dabd4b2e883141"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/live-probe.mjs",
+        "bytes": 2073,
+        "sha256": "1eefe9565c2107bce04881201488309576d8ee1de89962229d64d094d22a788a"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/live-provider-observations.json",
+        "bytes": 2817267,
+        "sha256": "78581c862aab0c56b348b96dc6f6972c2ac4ac5a784913a87d29899d6dd81d7b"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/options-render-0.html",
+        "bytes": 4398,
+        "sha256": "259af319709e608fe08b586aad04395cd107230063b40132112f9c5e705b6ab5"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/options-render-2.html",
+        "bytes": 4398,
+        "sha256": "eba0adf6d80f2440064f18063449c18af79922141151cde3bc06b2655d33d762"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/plan-render-0.html",
+        "bytes": 2513,
+        "sha256": "cfc03a13ba679f3d46d72f893e9dbaf42b0cf433a01a50c827668344efc71b36"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/plan-render-2.html",
+        "bytes": 2513,
+        "sha256": "cfc03a13ba679f3d46d72f893e9dbaf42b0cf433a01a50c827668344efc71b36"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/probe-summary.log",
+        "bytes": 5264,
+        "sha256": "5c2335e9ee4a1049d6b92db08b55984cf3d5b83217cadd2b0e77f0a3c2894123"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/probe.mjs",
+        "bytes": 12627,
+        "sha256": "dae8c281f318404f6e2b55bb28569696005e836b9966f8dd20eae476cd176f98"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/react-render-evidence.json",
+        "bytes": 3290,
+        "sha256": "d1fcbdb88ce60276c49d4f93cac8a17e3e2f1fefd9bde8cc4a2a83be828a8ea3"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-coordinate-extracts.json",
+        "bytes": 1471,
+        "sha256": "564913b15dbe295748bea4d3897910a4aec2468fe333d78a8b503ecfd5f4afc9"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-event-metadata.json",
+        "bytes": 2121,
+        "sha256": "9a3947534a19dd837d4d2dea44a5a7c3f54ff30819b962a0739e3f5275d6e252"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-geocoding.json",
+        "bytes": 2627,
+        "sha256": "467237b8a3360addf5dc13dd47f759779414b63b7dc7d75ab632e03ad1001ee2"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-set.json",
+        "bytes": 39783,
+        "sha256": "1ec3df40dd2e2866a1db11355d2409d10cbb1a44192d1ba470e724623379c2b5"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-source-probe.mjs",
+        "bytes": 2635,
+        "sha256": "1b9bb1228ad2eeaba67b5440978b6d8778150ecb23aac00103ba10b5e5967924"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-source-retrievals.json",
+        "bytes": 11841,
+        "sha256": "5163dbd009548296d5d1e87dfd6ceb1257fa7808e59e520e4749176c06754024"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/render-probe.mjs",
+        "bytes": 5673,
+        "sha256": "097b09b0d0adbfac7dfc853a1a5e8e35bcb28eb877444be341a812dd4066ca61"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/render-summary.log",
+        "bytes": 2835,
+        "sha256": "e39223bd615a9ec02a0d3aefc1b22cf6d15a966bd30716793f4e7a457d3ebdd5"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/repository-verification.json",
+        "bytes": 3431,
+        "sha256": "da3dbb2106ea6b3e9c08b9ff28f89a68be052fb43674520671039b3986152b6d"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/source-probe.mjs",
+        "bytes": 1373,
+        "sha256": "82683ed2f2e1d9f8a86bb7a7d6e1db93ad5c51cf96ec4e75d33de3d4a310f960"
+      },
+      {
+        "path": "audit/seasonal-discovery-coverage-audit-1-evidence/evidence-manifest.json",
+        "sha256": "6b21c0d6e820a8998c8f0cc010f8c13e2abf010eaa27c965f7414f891fe344d6"
+      }
+    ],
+    "unchanged": true,
+    "localPreImplementationSha": "7550ef672509752802e45a5b994b9a3fbd5ac5c1",
+    "transportNote": "Original artifacts were committed locally before implementation. Authenticated GitHub Git-data transfer recreated that identical tree as the remote parent; commit metadata and SHA differ, artifact bytes do not."
+  },
+  "implementationPaths": [
+    "scripts/location-browser.mjs",
+    "scripts/seasonal-discovery.test.mjs",
+    "scripts/test-support/date-night-component-harness.mjs",
+    "src/components/date-night-home.tsx",
+    "src/components/date-night-plan-overlay.tsx",
+    "src/components/mode-home.tsx",
+    "src/components/options-overlay.tsx",
+    "src/components/result-overlay.tsx",
+    "src/lib/date-night/availability.test.ts",
+    "src/lib/date-night/availability.ts",
+    "src/lib/date-night/coverage.ts",
+    "src/lib/date-night/eligibility.ts",
+    "src/lib/date-night/provider-evidence.ts",
+    "src/lib/date-night/search.ts",
+    "src/lib/date-night/seasonal-catalog.ts",
+    "src/lib/date-night/types.ts",
+    "src/lib/date-night/use-clock.ts"
+  ],
+  "implementationSha256": {
+    "scripts/location-browser.mjs": "d11b0d414af3969a17bcffe28dc90ddc7cb64f354da6fa9590b6e7ee40157a0c",
+    "scripts/seasonal-discovery.test.mjs": "3dd1190b285e48811913a90918b5a398b952e45e39434256784e10250448aa94",
+    "scripts/test-support/date-night-component-harness.mjs": "2a92fd09b7768da41bc8d41a87c649a09a9366158647c525ea4babd5c1c0385d",
+    "src/components/date-night-home.tsx": "d4dceb84c1b54cd6d4a3f1669f1452e9ae83b5cd7383d6552ce889d56dadd4ce",
+    "src/components/date-night-plan-overlay.tsx": "928e8b9a5431206dcb8cf53eed8d15267bb7a2024e01a082c7e1a75b2c47a4ba",
+    "src/components/mode-home.tsx": "7b618b46f890fbe1063c968439aa90f344549f38f911b3154881ae4653951288",
+    "src/components/options-overlay.tsx": "3c9985687e50c8997f1a09106911410347249fe398b2e2340c98ce24578eba31",
+    "src/components/result-overlay.tsx": "7f5d8ed2d89e6e951cb9de5347990dc47d2d778d0b24d581a0a7af180abb82d4",
+    "src/lib/date-night/availability.test.ts": "6c1ab9e6d9c6eb3a47e480eeae292cb1a30748002526b7eed83116fc67eaeeee",
+    "src/lib/date-night/availability.ts": "af8fc8e732c65e03c502b3724e018e5829a6264d2668943705fb10ddcffdb204",
+    "src/lib/date-night/coverage.ts": "5cd1c8e9b61dc49d7c656eb3e809c4780947575ab9893aae3ab13e7a9472e2e1",
+    "src/lib/date-night/eligibility.ts": "7d7badb3eeb1f7f7e0f2987dd0622d406a884251028f16cca751212e1a45f94f",
+    "src/lib/date-night/provider-evidence.ts": "6fa9f01f369332af9730a22c3caddf034c4e88b6d7936d8ee80a791b1183306d",
+    "src/lib/date-night/search.ts": "69d05131450a46691f4f693f6ad5e7c5194675f5ff454fd3df1ad5caacd8e2d7",
+    "src/lib/date-night/seasonal-catalog.ts": "86c2c0bad9c0f0fa7ab51ecab680f713654795108ced696581d4e6576a01a751",
+    "src/lib/date-night/types.ts": "7b03bf2baecbd99115282ea4bbc35ac3bed9abcb23714db86bfce966a270e1bf",
+    "src/lib/date-night/use-clock.ts": "7413ca99b6c4d5a11cacbad94ebb50c4c9f8c5ce9bf0708137d2eb696aa16add"
+  },
+  "findings": {
+    "F01": "Bounded complementary theme-park, explicit attraction, qualified farm/attraction/park description queries; positive seasonal evidence required. Exeter actual retained node is reachable without catalog insertion. No new operator/event scraping platform.",
+    "F02": "Generic/meditation/hedge mazes rejected; explicit corn/maize maze or structural maze plus corn/maize evidence accepted. Name evidence requires supported place context; negative/historical prose rejected.",
+    "F03": "Actual DateNightHome calls coherent decoration/eligibility model; OFF permits closed/upcoming/unconfirmed, excludes ended/not-operating/disused/permanent. ON requires positively open known hours and confirmed active season. Minute/focus/visibility refresh also refreshes overlays and Halloween activation.",
+    "F04": "Deterministic first-stage merge and stable representative ID/coordinates; category union and per-source activity/hours/lifecycle evidence retained. Conflicting live hours become unknown. Existing nearby dedupe distance rules unchanged. Plan selection preserves a distinct settle stop when available.",
+    "F05": "Explicit uncertainty/upcoming/ended/closure labels across options/result/plan. Existing Myer calendar/hours refreshed from retained same-day primary audit evidence, with sources and checked date. Both anchor calendars expire after 2026-10-31; next season requires revalidation.",
+    "F06": "Selected seasonal coverage derived per category from source evidence in browseable radius pool, before personal/Open-now filters. Distinguishes live contribution, saved-only, missing categories, sparse success and outage; eligible count unchanged in meaning."
+  },
+  "regressionCoverage": [
+    {
+      "requirements": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "tests": "Exeter real node and precise positive/negative provider fixtures through real query/handler"
+    },
+    {
+      "requirements": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "tests": "10 availability state/date cases plus structural lifecycle duplicates and actual component OFF/ON/OFF"
+    },
+    {
+      "requirements": [
+        10,
+        11,
+        12
+      ],
+      "tests": "Seven union combinations, C/P order equivalence, source evidence, unique options and real component actions"
+    },
+    {
+      "requirements": [
+        13
+      ],
+      "tests": "Seven radius probes through real handler and eligibility; retained five-region replay"
+    },
+    {
+      "requirements": [
+        14,
+        15,
+        16
+      ],
+      "tests": "Valid empty vs four-mirror failures; per-category merged provenance; actual component match count and disclosure"
+    },
+    {
+      "requirements": [
+        17
+      ],
+      "tests": "Real component complete/incomplete plans; prevents using the sole settle option as first thrill"
+    },
+    {
+      "requirements": [
+        18
+      ],
+      "tests": "Known-open/unknown-hours international museum/bowling, toggle OFF and five retained regional captures"
+    },
+    {
+      "additional": "Real clock hook minute timer, focus/visibility resume, cleanup; actual overlay eligibility refresh"
+    }
+  ],
+  "validation": {
+    "runtime": {
+      "node": "24.19.0",
+      "npm": "11.9.0"
+    },
+    "commands": [
+      {
+        "command": "npm ci --no-audit --no-fund",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/npm-ci.log",
+        "result": "507 packages; lockfile unchanged"
+      },
+      {
+        "command": "npm ls --all",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/npm-ls-all.log",
+        "result": "complete tree; exit 0"
+      },
+      {
+        "command": "npm run typecheck",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/typecheck-final.log",
+        "result": "pass"
+      },
+      {
+        "command": "npm test",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/tests-final.log",
+        "result": "390 passes: 319 repository + 71 application; four inherited external-documentation skips"
+      },
+      {
+        "command": "python3 -m unittest discover -s native-android -p 'test_*.py'",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/python.log",
+        "result": "3 passes"
+      },
+      {
+        "command": "node --test scripts/seasonal-discovery.test.mjs",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/seasonal-final.log",
+        "result": "14 regression groups pass"
+      },
+      {
+        "command": "node --experimental-strip-types --test src/lib/date-night/availability.test.ts",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/availability.log",
+        "result": "6 passes"
+      },
+      {
+        "command": "node --test scripts/location-discovery.test.mjs",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/location-discovery.log",
+        "result": "10 passes"
+      },
+      {
+        "command": "node node_modules/eslint/bin/eslint.js src/components/date-night-home.tsx src/components/date-night-plan-overlay.tsx src/components/mode-home.tsx src/components/options-overlay.tsx src/components/result-overlay.tsx src/lib/date-night/{availability.ts,availability.test.ts,search.ts,seasonal-catalog.ts,types.ts,provider-evidence.ts,eligibility.ts,coverage.ts,use-clock.ts} scripts/seasonal-discovery.test.mjs scripts/test-support/date-night-component-harness.mjs",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/lint-final.log",
+        "result": "pass; exact path list recorded below"
+      },
+      {
+        "command": "node node_modules/eslint/bin/eslint.js scripts/location-browser.mjs audit/seasonal-discovery-remediation-1-evidence/live-controls.mjs",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/harness-lint.log",
+        "result": "pass"
+      },
+      {
+        "command": "npm run audit:casinos",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/casino.log",
+        "result": "883 canonical / 899 serialized / 60 catalogs; 39 complete jurisdictions"
+      },
+      {
+        "command": "npm run android:check",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/android.log",
+        "result": "structural checks and 15 launcher resources; approved master unchanged"
+      },
+      {
+        "command": "npm run android:sync",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/capacitor-sync.log",
+        "result": "pass"
+      },
+      {
+        "command": "git diff --exit-code -- android capacitor.config.ts",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/capacitor-tracked-byte.log",
+        "result": "no tracked-byte changes"
+      },
+      {
+        "command": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/production-build-final.log",
+        "result": "pass; no migrations"
+      },
+      {
+        "command": "git diff --exit-code 7550ef672509752802e45a5b994b9a3fbd5ac5c1 -- package.json package-lock.json android capacitor.config.ts native-web vercel.json vite.config.ts src/lib/nightlife src/lib/restaurants src/lib/location src/lib/store.ts src/lib/seasonal-features.ts src/lib/date-night/season.ts",
+        "exitCode": 0,
+        "log": "audit/seasonal-discovery-remediation-1-evidence/preserved-invariants.log",
+        "result": "protected paths unchanged"
+      },
+      {
+        "command": "git diff --cached --check",
+        "exitCode": 0,
+        "result": "PASS after normalizing whitespace in new copied logs; original audit bytes untouched"
+      }
+    ],
+    "changedLintPaths": [
+      "scripts/location-browser.mjs",
+      "scripts/seasonal-discovery.test.mjs",
+      "scripts/test-support/date-night-component-harness.mjs",
+      "src/components/date-night-home.tsx",
+      "src/components/date-night-plan-overlay.tsx",
+      "src/components/mode-home.tsx",
+      "src/components/options-overlay.tsx",
+      "src/components/result-overlay.tsx",
+      "src/lib/date-night/availability.test.ts",
+      "src/lib/date-night/availability.ts",
+      "src/lib/date-night/coverage.ts",
+      "src/lib/date-night/eligibility.ts",
+      "src/lib/date-night/provider-evidence.ts",
+      "src/lib/date-night/search.ts",
+      "src/lib/date-night/seasonal-catalog.ts",
+      "src/lib/date-night/types.ts",
+      "src/lib/date-night/use-clock.ts"
+    ],
+    "gitDiffCheck": "PASS",
+    "secretGeneratedJunkSanity": "PASS; private-key/token/key literal patterns and generated-path review; not a claim of exhaustive secret detection"
+  },
+  "liveControls": [
+    {
+      "origin": {
+        "label": "Carthage",
+        "lat": 37.176447,
+        "lon": -94.310223
+      },
+      "startedAt": "2026-09-30T02:48:24.590Z",
+      "source": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "evaluatedAt": "2026-09-30T02:49:52.603Z",
+      "off": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.0329841506408552,
+          "status": "upcoming-season",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.44811300482452,
+          "status": "closed-now",
+          "source": "catalog"
+        }
+      ],
+      "on": [],
+      "coverage": {
+        "live": [],
+        "savedOnly": [
+          "haunted-house"
+        ],
+        "missing": [
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "outage": true,
+        "sparse": false,
+        "text": "Live map unavailable; using saved places. Saved places only: Haunted House. No places found: Corn Maze, Pumpkin Patch. Coverage may be incomplete; check schedules before going."
+      },
+      "finishedAt": "2026-09-30T02:49:52.607Z",
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "startedAt": "2026-09-30T02:48:24.591Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:48:46.596Z"
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "startedAt": "2026-09-30T02:48:46.596Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:49:08.598Z"
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "startedAt": "2026-09-30T02:49:08.598Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:49:30.600Z"
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "startedAt": "2026-09-30T02:49:30.600Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.176447,-94.310223);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.176447,-94.310223);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.176447,-94.310223);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.176447,-94.310223);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.176447,-94.310223);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:49:52.602Z"
+        }
+      ]
+    },
+    {
+      "origin": {
+        "label": "Joplin",
+        "lat": 37.084184,
+        "lon": -94.513339
+      },
+      "startedAt": "2026-09-30T02:49:52.608Z",
+      "source": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "evaluatedAt": "2026-09-30T02:51:20.674Z",
+      "off": [
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 2.6554948140484402,
+          "status": "closed-now",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 11.653597925574143,
+          "status": "upcoming-season",
+          "source": "catalog"
+        }
+      ],
+      "on": [],
+      "coverage": {
+        "live": [],
+        "savedOnly": [
+          "haunted-house"
+        ],
+        "missing": [
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "outage": true,
+        "sparse": false,
+        "text": "Live map unavailable; using saved places. Saved places only: Haunted House. No places found: Corn Maze, Pumpkin Patch. Coverage may be incomplete; check schedules before going."
+      },
+      "finishedAt": "2026-09-30T02:51:20.675Z",
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "startedAt": "2026-09-30T02:49:52.608Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.084184,-94.513339);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.084184,-94.513339);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:50:14.634Z"
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "startedAt": "2026-09-30T02:50:14.635Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.084184,-94.513339);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.084184,-94.513339);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:50:36.653Z"
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "startedAt": "2026-09-30T02:50:36.654Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.084184,-94.513339);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.084184,-94.513339);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:50:58.672Z"
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "startedAt": "2026-09-30T02:50:58.673Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.084184,-94.513339);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.084184,-94.513339);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.084184,-94.513339);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.084184,-94.513339);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.084184,-94.513339);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:51:20.673Z"
+        }
+      ]
+    },
+    {
+      "origin": {
+        "label": "Springfield",
+        "lat": 37.208957,
+        "lon": -93.292299
+      },
+      "startedAt": "2026-09-30T02:51:20.676Z",
+      "source": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "evaluatedAt": "2026-09-30T02:52:26.595Z",
+      "off": [],
+      "on": [],
+      "coverage": {
+        "live": [],
+        "savedOnly": [],
+        "missing": [
+          "haunted-house",
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "outage": true,
+        "sparse": false,
+        "text": "Live map unavailable; using saved places. No places found: Haunted House, Corn Maze, Pumpkin Patch. Coverage may be incomplete; check schedules before going."
+      },
+      "finishedAt": "2026-09-30T02:52:26.595Z",
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "startedAt": "2026-09-30T02:51:20.676Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.208957,-93.292299);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.208957,-93.292299);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:51:42.678Z"
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "startedAt": "2026-09-30T02:51:42.678Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.208957,-93.292299);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.208957,-93.292299);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:52:04.680Z"
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "startedAt": "2026-09-30T02:52:04.680Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.208957,-93.292299);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.208957,-93.292299);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n);\nout center tags;\n",
+          "status": 504,
+          "sha256": "c9c89d274726b86306e1c97d80360f820bce86042c34c9bb2487aac4ada6d606",
+          "rawCount": null,
+          "finishedAt": "2026-09-30T02:52:11.136Z"
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "startedAt": "2026-09-30T02:52:11.136Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.208957,-93.292299);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.208957,-93.292299);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.208957,-93.292299);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.208957,-93.292299);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.208957,-93.292299);\n);\nout center tags;\n",
+          "status": 504,
+          "sha256": "9e8d149c02b9ab7719f9e6cfdf696730c39abead6f27e39eb13793b7d2adbb82",
+          "rawCount": null,
+          "finishedAt": "2026-09-30T02:52:26.595Z"
+        }
+      ]
+    },
+    {
+      "origin": {
+        "label": "Lockwood rural",
+        "lat": 37.3856,
+        "lon": -93.953
+      },
+      "startedAt": "2026-09-30T02:52:26.596Z",
+      "source": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "evaluatedAt": "2026-09-30T02:53:54.631Z",
+      "off": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 25.919508853467317,
+          "status": "upcoming-season",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.81438338912894,
+          "status": "closed-now",
+          "source": "catalog"
+        }
+      ],
+      "on": [],
+      "coverage": {
+        "live": [],
+        "savedOnly": [
+          "haunted-house"
+        ],
+        "missing": [
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "outage": true,
+        "sparse": false,
+        "text": "Live map unavailable; using saved places. Saved places only: Haunted House. No places found: Corn Maze, Pumpkin Patch. Coverage may be incomplete; check schedules before going."
+      },
+      "finishedAt": "2026-09-30T02:53:54.634Z",
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "startedAt": "2026-09-30T02:52:26.597Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.3856,-93.953);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.3856,-93.953);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:52:48.598Z"
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "startedAt": "2026-09-30T02:52:48.598Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.3856,-93.953);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.3856,-93.953);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:53:10.600Z"
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "startedAt": "2026-09-30T02:53:10.600Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.3856,-93.953);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.3856,-93.953);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:53:32.602Z"
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "startedAt": "2026-09-30T02:53:32.602Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,37.3856,-93.953);\n  nwr[\"amenity\"=\"cinema\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"museum\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,37.3856,-93.953);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"=\"maze\"](around:80467,37.3856,-93.953);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,37.3856,-93.953);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,37.3856,-93.953);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:53:54.626Z"
+        }
+      ]
+    },
+    {
+      "origin": {
+        "label": "Aurora",
+        "lat": 36.970891,
+        "lon": -93.717979
+      },
+      "startedAt": "2026-09-30T02:53:54.638Z",
+      "source": "fallback",
+      "warning": "Using saved Jasper County Date Night places while the live map is unavailable.",
+      "evaluatedAt": "2026-09-30T02:55:22.711Z",
+      "off": [
+        {
+          "id": "date-night-myers-inn-carthage",
+          "name": "Myer's Inn Haunt",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 35.22990482597511,
+          "status": "upcoming-season",
+          "source": "catalog"
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "name": "The Werehouse",
+          "activityTypes": [
+            "haunted-house"
+          ],
+          "distanceMiles": 41.979013765682566,
+          "status": "closed-now",
+          "source": "catalog"
+        }
+      ],
+      "on": [],
+      "coverage": {
+        "live": [],
+        "savedOnly": [
+          "haunted-house"
+        ],
+        "missing": [
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "outage": true,
+        "sparse": false,
+        "text": "Live map unavailable; using saved places. Saved places only: Haunted House. No places found: Corn Maze, Pumpkin Patch. Coverage may be incomplete; check schedules before going."
+      },
+      "finishedAt": "2026-09-30T02:55:22.713Z",
+      "calls": [
+        {
+          "url": "https://overpass.openstreetmap.fr/api/interpreter",
+          "startedAt": "2026-09-30T02:53:54.638Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,36.970891,-93.717979);\n  nwr[\"amenity\"=\"cinema\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"museum\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,36.970891,-93.717979);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:54:16.656Z"
+        },
+        {
+          "url": "https://overpass.private.coffee/api/interpreter",
+          "startedAt": "2026-09-30T02:54:16.657Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,36.970891,-93.717979);\n  nwr[\"amenity\"=\"cinema\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"museum\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,36.970891,-93.717979);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:54:38.659Z"
+        },
+        {
+          "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+          "startedAt": "2026-09-30T02:54:38.659Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,36.970891,-93.717979);\n  nwr[\"amenity\"=\"cinema\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"museum\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,36.970891,-93.717979);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:55:00.682Z"
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "startedAt": "2026-09-30T02:55:00.683Z",
+          "query": "\n[out:json][timeout:20];\n(\n  nwr[\"leisure\"=\"bowling_alley\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"amusement_arcade\"](around:80467,36.970891,-93.717979);\n  nwr[\"amenity\"=\"cinema\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"miniature_golf\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"escape_game\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"museum\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"ice_rink\"](around:80467,36.970891,-93.717979);\n  nwr[\"sport\"=\"roller_skating\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"=\"maze\"](around:80467,36.970891,-93.717979);\n  nwr[\"attraction\"~\"^(corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction)$\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"=\"theme_park\"](around:80467,36.970891,-93.717979);\n  nwr[\"tourism\"~\"^(attraction|farm)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"leisure\"=\"park\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n  nwr[\"landuse\"~\"^(farmyard|farmland)$\"][~\"^(name|description|seasonal:description|seasonal:activities)$\"~\"corn[ -]maze|maize[ -]maze|pumpkin[ -](patch|picking)|haunted[ -](house|trail|forest|attraction)\",i](around:80467,36.970891,-93.717979);\n);\nout center tags;\n",
+          "error": "The operation was aborted due to timeout",
+          "finishedAt": "2026-09-30T02:55:22.702Z"
+        }
+      ]
+    }
+  ],
+  "liveLimitations": "All 20 mirror attempts timed out in this environment. No fresh provider inventory or recall improvement measured. Requests began before a final delimiter-tolerance adjustment (underscore seasonal metadata); recorded queries are exact. Final-tree deterministic tests verify that adjustment. Captured original regional inputs were separately replayed successfully.",
+  "browser": {
+    "available": false,
+    "attempt": "npx playwright install chromium",
+    "exitCode": 1,
+    "log": "audit/seasonal-discovery-remediation-1-evidence/browser-install.log",
+    "reason": "Chromium absent; installation downloads invalid/truncated ZIP",
+    "componentRuntimeAcceptance": true,
+    "browserRpcHydrationCssAcceptance": false,
+    "existingBrowserHarnessUpdated": true,
+    "existingBrowserHarnessExecuted": false
+  },
+  "attempts": [
+    "Initial component tests failed because test document stub was absent, then lacked documentElement.classList; corrected harness only.",
+    "Multi-activity plan test exposed selection of the only settle venue as first thrill; fixed within required plan/category regression scope.",
+    "Initial implementation had 13 new groups and 389 total passes; adding five-region snapshot replay produces final 14 groups and 390 total passes.",
+    "Direct Myer web retrieval unavailable; refreshed only from authoritative immutable same-day operator/calendar evidence preserved by the original audit. No new operator retrieval success claimed."
+  ],
+  "limitations": [
+    "No maintained complementary event/operator source exists in the bounded current architecture; map metadata and two sparse anchors remain incomplete. No hard-coded audit reference venues added.",
+    "Live weekly hours alone cannot confirm a current seasonal schedule; unconfirmed seasonal live venues are intentionally OFF-only.",
+    "Calendar and weekly-hour evaluation preserve viewer-local timezone semantics; destination-timezone and complex provider-hours expansion remain outside scope.",
+    "No fresh native Gradle/AAB/device acceptance, signing or Play operation. Android structural/sync confidence only.",
+    "Same implementing assistant performed these checks; independent verification is still required."
+  ],
+  "commitLinkage": {
+    "strategy": "The commit introducing this JSON record is the remediation checkpoint; it has sole parent c8a67a07053f76db140287727672e83954c586b3. Resolve without self-referential amend.",
+    "command": "git log --diff-filter=A --format=%H -1 -- audit/seasonal-discovery-remediation-1-2026-09-29.json",
+    "treeCommand": "git show -s --format=%T <resolved-checkpoint>"
+  },
+  "scope": {
+    "venuesAdded": 0,
+    "merged": false,
+    "deployed": false,
+    "migrationsRun": false,
+    "published": false,
+    "vercelSettingsChanged": false,
+    "androidSigned": false
+  },
+  "finalState": "SEASONAL DISCOVERY REMEDIATED — AWAITING INDEPENDENT VERIFICATION",
+  "evidenceLogFormatting": "New remediation logs have trailing whitespace and final blank lines removed for git diff --check; source logs remain in scratch. Original audit files, including original logs, were not normalized.",
+  "commitTransport": {
+    "initialLocalCheckpoint": "13922c899b691d9a6aefd9f9aaa0f3c5dcea0125",
+    "initialLocalTree": "18c5b0fde025c310c9c73a760b2db266f75f6286",
+    "gitPushCommand": "git push origin HEAD:refs/heads/audit/seasonal-discovery-coverage-1",
+    "gitPushExitCode": 128,
+    "gitPushError": "fatal: could not read Username for 'https://github.com': No such device or address",
+    "fallback": "Authenticated GitHub app Git-data operations; original audit tree verified identical, checkpoint tree verified against git write-tree before non-forced requested branch ref update. Fetch and align local branch to the resulting remote checkpoint only after tree equality verification.",
+    "validationImpact": "Only remediation report, JSON, evidence manifest and current continuity transport/linkage were updated after validation; all 17 implementation path hashes remain unchanged."
+  }
+}

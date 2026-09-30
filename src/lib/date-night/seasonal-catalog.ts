@@ -58,7 +58,7 @@ export const JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG: DateNightPlace[] = [
     priceLevel: null,
     rating: null,
     reviewCount: null,
-    openingHours: "unknown",
+    openingHours: "Fr-Sa 19:00-24:00",
     phone: "+1 417-313-2223",
     website: "https://www.myersinnhaunt.com/",
     isChain: false,

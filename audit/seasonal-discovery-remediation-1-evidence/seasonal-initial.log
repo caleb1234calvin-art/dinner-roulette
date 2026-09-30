@@ -1,0 +1,70 @@
+✔ Exeter's actual theme-park record is acquired by the real seasonal query and reaches the eligible pool (12.084173ms)
+✔ precise activity evidence admits corn, pumpkin and haunted trail without admitting generic places (11.243275ms)
+✔ same identity preserves C/P, provenance, stable ID and representative metadata in either provider order (4.486115ms)
+✔ structured lifecycle cannot survive eligibility or be resurrected by an active duplicate (2.324274ms)
+✔ all availability states share one OFF/ON policy, including expiry and next-year revalidation (2.08158ms)
+✔ all seven seasonal selections preserve union and the radius boundary (5.675571ms)
+✔ saved-only successful sparse coverage, missing categories and provider outage remain distinct (3.335109ms)
+✔ per-category provenance never labels a saved haunt as live because its ordinary park duplicate is live (1.949764ms)
+✔ ordinary Date Night and seasonal toggle still work internationally; unknown hours fail strict ON (1.151781ms)
+✖ actual component: handler → count/options/pick/plan and all seven category combinations (1.278971ms)
+✖ actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dependent pool/overlay refresh (0.701391ms)
+✖ actual component displays schedule uncertainty distinctly for live weekly-hours-only venues (0.256181ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 9
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 800.823732
+
+✖ failing tests:
+
+test at scripts/seasonal-discovery.test.mjs:176:1
+✖ actual component: handler → count/options/pick/plan and all seven category combinations (1.278971ms)
+  TypeError [ERR_INVALID_ARG_VALUE]: The argument 'propertyName' is not a property of the object. Received 'document'
+      at new MockPropertyContext (node:internal/test_runner/mock/mock:312:13)
+      at MockTracker.property (node:internal/test_runner/mock/mock:719:7)
+      at browserGlobals (file:///workspace/scratch/fed6bfa5deac/repository/scripts/seasonal-discovery.test.mjs:174:37)
+      at TestContext.<anonymous> (file:///workspace/scratch/fed6bfa5deac/repository/scripts/seasonal-discovery.test.mjs:177:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    code: 'ERR_INVALID_ARG_VALUE'
+  }
+
+test at scripts/seasonal-discovery.test.mjs:208:1
+✖ actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dependent pool/overlay refresh (0.701391ms)
+  TypeError [ERR_INVALID_ARG_VALUE]: The argument 'propertyName' is not a property of the object. Received 'document'
+      at new MockPropertyContext (node:internal/test_runner/mock/mock:312:13)
+      at MockTracker.property (node:internal/test_runner/mock/mock:719:7)
+      at browserGlobals (file:///workspace/scratch/fed6bfa5deac/repository/scripts/seasonal-discovery.test.mjs:174:37)
+      at TestContext.<anonymous> (file:///workspace/scratch/fed6bfa5deac/repository/scripts/seasonal-discovery.test.mjs:209:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    code: 'ERR_INVALID_ARG_VALUE'
+  }
+
+test at scripts/seasonal-discovery.test.mjs:228:1
+✖ actual component displays schedule uncertainty distinctly for live weekly-hours-only venues (0.256181ms)
+  TypeError [ERR_INVALID_ARG_VALUE]: The argument 'propertyName' is not a property of the object. Received 'document'
+      at new MockPropertyContext (node:internal/test_runner/mock/mock:312:13)
+      at MockTracker.property (node:internal/test_runner/mock/mock:719:7)
+      at browserGlobals (file:///workspace/scratch/fed6bfa5deac/repository/scripts/seasonal-discovery.test.mjs:174:37)
+      at TestContext.<anonymous> (file:///workspace/scratch/fed6bfa5deac/repository/scripts/seasonal-discovery.test.mjs:229:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    code: 'ERR_INVALID_ARG_VALUE'
+  }

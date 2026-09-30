@@ -1,0 +1,16 @@
+▶ seasonal date-night availability
+  ✔ keeps The Werehouse closed before its verified 2026 season starts (1.109496ms)
+  ✔ allows The Werehouse during the conservative verified season window (0.189779ms)
+  ✔ closes The Werehouse after the conservative verified window (0.142845ms)
+  ✔ uses Myer's retained operator 2026 calendar (0.151191ms)
+  ✔ fails closed for Open now when hours or the seasonal date are not confirmed (0.33968ms)
+  ✔ requires different real venues for a Scare/Settle pair (0.202772ms)
+✔ seasonal date-night availability (3.729314ms)
+ℹ tests 6
+ℹ suites 1
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 161.478049
