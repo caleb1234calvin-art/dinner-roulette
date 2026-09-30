@@ -1,0 +1,18 @@
+✔ restaurants: six locations reach the real coordinate query and normalize local results (46.984006ms)
+✔ restaurants: valid empty areas, all-mirror outage, and coordinate validation remain distinct (65.865459ms)
+✔ nightlife and casinos: six locations reach the real coordinate query and normalize local results (18.44763ms)
+✔ nightlife and casinos: valid empty areas, all-mirror outage, and coordinate validation remain distinct (8.14901ms)
+✔ date night: six locations reach the real coordinate query and normalize local results (10.782182ms)
+✔ date night: valid empty areas, all-mirror outage, and coordinate validation remain distinct (7.827893ms)
+✔ restaurant distance, cuisine and price filters behave with Canadian results (5.586012ms)
+✔ local closure exclusions do not hide same-named international businesses (3.965936ms)
+✔ Maps destinations preserve exact Canadian/U.S. points and encode legacy international addresses (1.189483ms)
+✔ stored legacy U.S. locations and country metadata survive hydration; corrupt coordinates fall back (180.229764ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2931.723556

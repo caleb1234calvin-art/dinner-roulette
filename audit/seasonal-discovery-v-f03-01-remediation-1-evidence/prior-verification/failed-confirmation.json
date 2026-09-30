@@ -1,0 +1,81 @@
+[
+  {
+    "group": "not-operating-expiry",
+    "input": {
+      "id": "date-night-osm-node-700",
+      "name": "Independent 700",
+      "lat": 43.667953016952886,
+      "lon": -79.38393,
+      "address": "Address unavailable",
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Pumpkin Patch",
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "openingHours": "24/7",
+      "phone": null,
+      "website": null,
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "osm",
+      "activityTypes": [
+        "pumpkin-patch"
+      ],
+      "discoveryEvidence": [
+        {
+          "id": "date-night-osm-node-700",
+          "source": "osm",
+          "activityTypes": [
+            "pumpkin-patch"
+          ],
+          "openingHours": "24/7",
+          "website": null
+        }
+      ],
+      "moodLevel": 2,
+      "seasonalAvailability": {
+        "status": "not-operating",
+        "activeFrom": "2026-10-02",
+        "activeUntil": "2026-10-31",
+        "checkedAt": "2026-09-29",
+        "revalidateAfter": "2026-10-09"
+      }
+    },
+    "expected": {
+      "offCount": 0,
+      "browseEligible": false
+    },
+    "before": {
+      "status": "not-operating-season",
+      "season": "not-operating",
+      "label": "Not operating this season",
+      "browseEligible": false,
+      "openNowEligible": false,
+      "checkedAt": "2026-09-29",
+      "revalidationDue": false
+    },
+    "actual": {
+      "text": "How far?Within 50 miles11030What sounds fun?AnythingBowlingArcadeMoviesMini GolfEscape RoomParksMuseumSkatingHaunted HouseCorn MazePumpkin PatchWhat's the mood?PlayfulCozyPlayfulAdventurousOpen now onlyOnly activities with confirmed open hoursFavorites onlyPick from date spots you've savedFewer parksKeep parks available, but make the park category much less likelyLive seasonal results included. No places found: Haunted House, Corn Maze. Coverage may be incomplete; check schedules before going.1 activities matchPick our dateGive us optionsPlan the night",
+      "availability": {
+        "status": "schedule-unconfirmed",
+        "season": "unconfirmed",
+        "label": "Schedule unconfirmed",
+        "browseEligible": true,
+        "openNowEligible": false,
+        "checkedAt": "2026-09-29",
+        "revalidationDue": true
+      },
+      "options": [
+        {
+          "id": "date-night-osm-node-700",
+          "name": "Independent 700",
+          "status": "schedule-unconfirmed"
+        }
+      ],
+      "pick": "date-night-osm-node-700",
+      "onCount": 0
+    }
+  }
+]

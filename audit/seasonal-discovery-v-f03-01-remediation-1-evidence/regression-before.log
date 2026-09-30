@@ -1,0 +1,46 @@
+✖ V-F03-01 actual component: not-operating stays excluded before and after revalidation expiry (366.06452ms)
+✖ V-F03-01 actual component: an expired negative cannot fill a plan until stored positive evidence replaces it (203.413035ms)
+✖ V-F03-01 control: positive calendar expiry remains uncertain OFF and refreshes ON result/options/plan (188.720085ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1582.834227
+
+✖ failing tests:
+
+test at scripts/seasonal-discovery.test.mjs:443:1
+✖ V-F03-01 actual component: not-operating stays excluded before and after revalidation expiry (366.06452ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 'schedule-unconfirmed'
+  - 'not-operating-season'
+
+      at TestContext.<anonymous> (file:///workspace/scratch/bedb4d26be6d/repository/scripts/seasonal-discovery.test.mjs:458:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'schedule-unconfirmed',
+    expected: 'not-operating-season',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/seasonal-discovery.test.mjs:480:1
+✖ V-F03-01 actual component: an expired negative cannot fill a plan until stored positive evidence replaces it (203.413035ms)
+  TypeError: Cannot read properties of undefined (reading 'map')
+      at TestContext.<anonymous> (file:///workspace/scratch/bedb4d26be6d/repository/scripts/seasonal-discovery.test.mjs:512:82)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at scripts/seasonal-discovery.test.mjs:518:1
+✖ V-F03-01 control: positive calendar expiry remains uncertain OFF and refreshes ON result/options/plan (188.720085ms)
+  TypeError: Cannot read properties of undefined (reading 'map')
+      at TestContext.<anonymous> (file:///workspace/scratch/bedb4d26be6d/repository/scripts/seasonal-discovery.test.mjs:546:78)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)

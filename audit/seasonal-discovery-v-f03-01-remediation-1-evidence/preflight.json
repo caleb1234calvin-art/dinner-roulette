@@ -1,0 +1,36 @@
+{
+  "startingSha": "c7fa7a87109624212379270df8f52ddd4c334eb9",
+  "startingTree": "a68f9754183a001bba4af2365dd9a550ed6b9e8d",
+  "branch": "audit/seasonal-discovery-coverage-1",
+  "failedTarget": "e7ad24dda7272843ca41e010de1444de365d9537",
+  "failedTree": "60fd8520c685edfb4449ee089b208000880bf743",
+  "failedSoleParent": "c8a67a07053f76db140287727672e83954c586b3",
+  "main": "0a8f30dc57fcc1156342d1bfc8a07524f3125e3b",
+  "cleanBefore": true,
+  "documentationOnlyDescendants": [
+    {
+      "sha": "478eab0744af523d570783e56eb68ca1ee9bb3fb",
+      "paths": [
+        "docs/handoffs/active/seasonal-discovery-remediation-1-verification.md"
+      ]
+    },
+    {
+      "sha": "c7fa7a87109624212379270df8f52ddd4c334eb9",
+      "paths": [
+        "docs/handoffs/active/seasonal-discovery-remediation-1-verification-finding-1.md"
+      ]
+    }
+  ],
+  "evidenceManifests": [
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/evidence-manifest.json",
+      "entries": 32,
+      "allMatch": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/evidence-manifest.json",
+      "entries": 35,
+      "allMatch": true
+    }
+  ]
+}

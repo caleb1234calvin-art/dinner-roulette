@@ -1,0 +1,49 @@
+✖ V-F03-01 actual component: not-operating stays excluded before and after revalidation expiry (311.513072ms)
+✖ V-F03-01 actual component: an expired negative cannot fill a plan until stored positive evidence replaces it (370.963421ms)
+✔ V-F03-01 control: positive calendar expiry remains uncertain OFF and refreshes ON result/options/plan (161.972153ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 1
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1606.071897
+
+✖ failing tests:
+
+test at scripts/seasonal-discovery.test.mjs:443:1
+✖ V-F03-01 actual component: not-operating stays excluded before and after revalidation expiry (311.513072ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 'schedule-unconfirmed'
+  - 'not-operating-season'
+
+      at TestContext.<anonymous> (file:///workspace/scratch/bedb4d26be6d/repository/scripts/seasonal-discovery.test.mjs:458:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'schedule-unconfirmed',
+    expected: 'not-operating-season',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/seasonal-discovery.test.mjs:480:1
+✖ V-F03-01 actual component: an expired negative cannot fill a plan until stored positive evidence replaces it (370.963421ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /1 activities match/. Input:
+
+  "How far?Within 50 miles11030What sounds fun?AnythingBowlingArcadeMoviesMini GolfEscape RoomParksMuseumSkatingHaunted HouseCorn MazePumpkin PatchWhat's the mood?PlayfulCozyPlayfulAdventurousOpen now onlyOnly activities with confirmed open hoursFavorites onlyPick from date spots you've savedFewer parksKeep parks available, but make the park category much less likelyLive seasonal results included. No places found: Corn Maze. Coverage may be incomplete; check schedules before going.2 activities matchPick our dateGive us optionsPlan the night"
+
+      at TestContext.<anonymous> (file:///workspace/scratch/bedb4d26be6d/repository/scripts/seasonal-discovery.test.mjs:503:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: "How far?Within 50 miles11030What sounds fun?AnythingBowlingArcadeMoviesMini GolfEscape RoomParksMuseumSkatingHaunted HouseCorn MazePumpkin PatchWhat's the mood?PlayfulCozyPlayfulAdventurousOpen now onlyOnly activities with confirmed open hoursFavorites onlyPick from date spots you've savedFewer parksKeep parks available, but make the park category much less likelyLive seasonal results included. No places found: Corn Maze. Coverage may be incomplete; check schedules before going.2 activities matchPick our dateGive us optionsPlan the night",
+    expected: /1 activities match/,
+    operator: 'match',
+    diff: 'simple'
+  }

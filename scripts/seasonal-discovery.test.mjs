@@ -440,6 +440,166 @@ test("actual component displays schedule uncertainty distinctly for live weekly-
   assert.match(textOf(tree), /0 activities match/);
 });
 
+test("V-F03-01 actual component: not-operating stays excluded before and after revalidation expiry", async (t) => {
+  freeze(t);
+  browserGlobals(t);
+  const result = await search(t, [
+    element(700, { attraction: "pumpkin_patch", opening_hours: "24/7" }, 1),
+  ]);
+  result.venues[0].seasonalAvailability = {
+    ...record,
+    status: "not-operating",
+    revalidateAfter: "2026-10-09",
+  };
+  const store = storeFor(international),
+    clock = { value: new Date(2026, 9, 9, 20) };
+  const harness = dateNightComponentHarness({ store, now: clock, search: async () => result });
+  t.after(() => harness.dispose());
+  harness.render();
+  await harness.settle();
+  for (const at of [
+    new Date(2026, 9, 9, 20),
+    new Date(2026, 9, 9, 23, 59),
+    new Date(2026, 9, 10, 0),
+    now,
+  ]) {
+    clock.value = at;
+    const availability = decorateDateNight(result.venues, international, at)[0].availability;
+    assert.equal(availability.status, "not-operating-season");
+    assert.equal(availability.season, "not-operating");
+    assert.equal(availability.browseEligible, false);
+    assert.equal(availability.openNowEligible, false);
+    assert.equal(availability.revalidationDue, at.getDate() === 10);
+    for (const openNowOnly of [false, true, false]) {
+      store.dateNightFilters.openNowOnly = openNowOnly;
+      let tree = harness.render();
+      assert.match(textOf(tree), /0 activities match/);
+      for (const label of ["Give us options", "Pick our date", "Plan the night"]) {
+        const button = harness.button(tree, label);
+        assert.equal(button.props.disabled, true, label);
+        // Even direct callback execution cannot bypass the empty eligible pool.
+        button.props.onClick();
+        tree = harness.render();
+      }
+      for (const overlay of ["OptionsOverlay", "ResultOverlay", "DateNightPlanOverlay"])
+        assert.equal(harness.overlay(tree, overlay), null, overlay);
+    }
+  }
+});
+
+test("V-F03-01 actual component: an expired negative cannot fill a plan until stored positive evidence replaces it", async (t) => {
+  freeze(t);
+  browserGlobals(t);
+  const result = await search(t, [
+    element(701, { attraction: "haunted_house", opening_hours: "24/7" }, 1),
+    element(702, { attraction: "pumpkin_patch", opening_hours: "24/7" }, 2),
+  ]);
+  for (const [at, positive] of [
+    [new Date(2026, 9, 9, 20), false],
+    [now, false],
+    [now, true],
+  ]) {
+    const venues = result.venues.map((venue, index) => ({
+      ...venue,
+      seasonalAvailability:
+        index === 0
+          ? record
+          : positive
+            ? { ...record, checkedAt: "2026-10-10" }
+            : { ...record, status: "not-operating", revalidateAfter: "2026-10-09" },
+    }));
+    const store = storeFor(international),
+      clock = { value: at };
+    const harness = dateNightComponentHarness({
+      store,
+      now: clock,
+      search: async () => ({ ...result, venues }),
+    });
+    t.after(() => harness.dispose());
+    harness.render();
+    await harness.settle();
+    for (const openNowOnly of [false, true]) {
+      store.dateNightFilters.openNowOnly = openNowOnly;
+      let tree = harness.render();
+      const expected = positive ? venues.map((venue) => venue.id) : [venues[0].id];
+      assert.match(textOf(tree), new RegExp(`${expected.length} activities match`));
+      harness.button(tree, "Give us options").props.onClick();
+      tree = harness.render();
+      assert.deepEqual(
+        harness
+          .overlay(tree, "OptionsOverlay")
+          .props.restaurants.map((venue) => venue.id)
+          .sort(),
+        [...expected].sort(),
+      );
+      harness.button(tree, "Pick our date").props.onClick();
+      tree = harness.render();
+      assert.ok(expected.includes(harness.overlay(tree, "ResultOverlay").props.restaurant.id));
+      harness.button(tree, "Plan the night").props.onClick();
+      tree = harness.render();
+      assert.deepEqual(
+        harness
+          .overlay(tree, "DateNightPlanOverlay")
+          .props.plan.map((venue) => venue.id)
+          .sort(),
+        [...expected].sort(),
+      );
+      assert.match(
+        harness.html(tree),
+        positive ? /Your night has an arc/ : /No complete seasonal pair yet/,
+      );
+    }
+  }
+});
+
+test("V-F03-01 control: positive calendar expiry remains uncertain OFF and refreshes ON result/options/plan", async (t) => {
+  freeze(t);
+  browserGlobals(t);
+  const result = await search(t, [
+    element(703, { attraction: "haunted_house", opening_hours: "24/7" }, 1),
+    element(704, { attraction: "pumpkin_patch", opening_hours: "24/7" }, 2),
+  ]);
+  result.venues[0].seasonalAvailability = { ...record, revalidateAfter: "2026-10-09" };
+  result.venues[1].seasonalAvailability = record;
+  const store = storeFor(international),
+    clock = { value: new Date(2026, 9, 9, 23, 59) };
+  store.dateNightFilters.openNowOnly = true;
+  t.mock.method(Math, "random", () => 0);
+  const harness = dateNightComponentHarness({ store, now: clock, search: async () => result });
+  t.after(() => harness.dispose());
+  harness.render();
+  let tree = await harness.settle();
+  assert.match(textOf(tree), /2 activities match/);
+  for (const label of ["Give us options", "Pick our date", "Plan the night"]) {
+    harness.button(tree, label).props.onClick();
+    tree = harness.render();
+  }
+  assert.equal(harness.overlay(tree, "ResultOverlay").props.restaurant.id, result.venues[0].id);
+  assert.match(harness.html(tree), /Your night has an arc/);
+  clock.value = new Date(2026, 9, 10, 0);
+  tree = harness.render();
+  assert.match(textOf(tree), /1 activities match/);
+  assert.equal(harness.overlay(tree, "ResultOverlay"), null);
+  assert.deepEqual(
+    harness.overlay(tree, "OptionsOverlay").props.restaurants.map((venue) => venue.id),
+    [result.venues[1].id],
+  );
+  assert.deepEqual(
+    harness.overlay(tree, "DateNightPlanOverlay").props.plan.map((venue) => venue.id),
+    [result.venues[1].id],
+  );
+  assert.match(harness.html(tree), /No complete seasonal pair yet/);
+  store.dateNightFilters.openNowOnly = false;
+  tree = harness.render();
+  assert.match(textOf(tree), /2 activities match/);
+  assert.match(harness.html(tree), /Schedule unconfirmed/);
+  const availability = decorateDateNight(result.venues, international, clock.value)[0].availability;
+  assert.equal(availability.status, "schedule-unconfirmed");
+  assert.equal(availability.browseEligible, true);
+  assert.equal(availability.openNowEligible, false);
+  assert.equal(availability.revalidationDue, true);
+});
+
 test("real clock hook refreshes at minute boundaries and focus/visibility resume, then cleans up", async (t) => {
   const ts = await import("typescript");
   const listeners = new Map();

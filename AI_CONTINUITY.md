@@ -1,3 +1,19 @@
+# Pick For Us — V-F03-01 targeted remediation (2026-09-29)
+
+This TOP entry supersedes earlier next actions. Historical continuity below is preserved verbatim.
+
+## CURRENT — V-F03-01 REMEDIATED — AWAITING INDEPENDENT VERIFICATION
+
+- Branch `audit/seasonal-discovery-coverage-1`; sole parent/start `c7fa7a87109624212379270df8f52ddd4c334eb9`, tree `a68f9754183a001bba4af2365dd9a550ed6b9e8d`. Failed checkpoint `e7ad24dda7272843ca41e010de1444de365d9537` remains in ancestry; its only later pre-implementation descendants are documentation-only. Main remains `0a8f30dc57fcc1156342d1bfc8a07524f3125e3b`.
+- Remediated only V-F03-01: explicit not-operating calendar state precedes expiry/unconfirmed handling, while revalidationDue still updates. No other passed finding reopened, no venue added, no catalog/query/classification/dedupe/source-disclosure changes.
+- Three new permanent actual-component groups prove before/after expiry exclusion from count/options/pick/plan; exclusion in a mixed real pair until explicit positive replacement; and preserved positive-expiry behavior with overlay refresh. Corrected regressions fail twice before and pass all three after the narrow fix.
+- Gates: clean install/dependency tree, typecheck/lint, 393 JavaScript passes with four inherited skips (17 seasonal groups included), 3 Python, 6 availability and 10 location subsets, 883/899/60 casino invariants, Android structure/15 launcher images, byte-stable Capacitor sync and migration-free production build pass. Browser unavailable: missing Chromium; no browser/RPC/device acceptance claimed.
+- Report/machine evidence: `audit/seasonal-discovery-v-f03-01-remediation-1-2026-09-29.md` / `.json`; separate logs/integrity and unchanged copies of the failed verification case under `audit/seasonal-discovery-v-f03-01-remediation-1-evidence/`.
+- Immutable checkpoint is the single commit introducing `audit/seasonal-discovery-v-f03-01-remediation-1-2026-09-29.json`, with the stated sole parent. Resolve SHA/tree with the report's Git-history commands. After its authorized push, STOP. **NEXT: fresh independent Astra verification of the exact immutable checkpoint before merge review.**
+- No merge, deployment, migration, Vercel setting change, signing, publication or Play upload. Production and native boundaries unchanged.
+
+## Prior continuity — preserved verbatim
+
 # Pick For Us — Seasonal Discovery Remediation #1 (2026-09-29)
 
 This TOP section supersedes earlier next-action instructions; historical continuity below is preserved verbatim.

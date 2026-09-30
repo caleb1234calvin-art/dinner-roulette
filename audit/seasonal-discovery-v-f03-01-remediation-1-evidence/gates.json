@@ -1,0 +1,99 @@
+[
+  {
+    "id": "clean-install",
+    "command": "npm ci --no-audit --no-fund",
+    "exitCode": 0,
+    "log": "npm-ci.log"
+  },
+  {
+    "id": "dependency-tree",
+    "command": "npm ls --all",
+    "exitCode": 0,
+    "log": "dependency-tree.log"
+  },
+  {
+    "id": "typecheck",
+    "command": "npm run typecheck",
+    "exitCode": 0,
+    "log": "typecheck.log"
+  },
+  {
+    "id": "javascript",
+    "command": "TZ=America/Chicago npm test",
+    "exitCode": 0,
+    "log": "javascript.log"
+  },
+  {
+    "id": "seasonal",
+    "command": "TZ=America/Chicago node --test scripts/seasonal-discovery.test.mjs",
+    "exitCode": 0,
+    "log": "seasonal.log"
+  },
+  {
+    "id": "availability",
+    "command": "TZ=America/Chicago node --experimental-strip-types --test src/lib/date-night/availability.test.ts",
+    "exitCode": 0,
+    "log": "availability.log"
+  },
+  {
+    "id": "location",
+    "command": "node --test scripts/location-discovery.test.mjs",
+    "exitCode": 0,
+    "log": "location.log"
+  },
+  {
+    "id": "python",
+    "command": "python3 -m unittest discover -s native-android -p 'test_*.py'",
+    "exitCode": 0,
+    "log": "python.log"
+  },
+  {
+    "id": "lint",
+    "command": "node node_modules/eslint/bin/eslint.js src/lib/date-night/availability.ts scripts/seasonal-discovery.test.mjs",
+    "exitCode": 0,
+    "log": "lint.log"
+  },
+  {
+    "id": "casino",
+    "command": "npm run audit:casinos",
+    "exitCode": 0,
+    "log": "casino.log"
+  },
+  {
+    "id": "component-regression",
+    "command": "TZ=America/Chicago node --test --test-reporter=tap --test-name-pattern='V-F03-01' scripts/seasonal-discovery.test.mjs",
+    "exitCode": 0,
+    "log": "regression-after.log"
+  },
+  {
+    "id": "android",
+    "command": "npm run android:check",
+    "exitCode": 0,
+    "log": "android.log"
+  },
+  {
+    "id": "capacitor-sync",
+    "command": "npm run android:sync",
+    "exitCode": 0,
+    "log": "capacitor-sync.log"
+  },
+  {
+    "id": "capacitor-bytes",
+    "command": "git diff --exit-code -- android capacitor.config.ts",
+    "exitCode": 0,
+    "log": "capacitor-bytes.log"
+  },
+  {
+    "id": "production-build",
+    "command": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production",
+    "exitCode": 0,
+    "log": "production-build.log"
+  },
+  {
+    "id": "browser",
+    "command": "Playwright chromium.launch({headless:true})",
+    "exitCode": 1,
+    "result": "UNAVAILABLE: missing executable",
+    "log": "browser-capability.log"
+  }
+]

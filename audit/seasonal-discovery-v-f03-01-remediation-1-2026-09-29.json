@@ -1,0 +1,531 @@
+{
+  "finding": "V-F03-01",
+  "artifactDate": "2026-09-29",
+  "generatedAt": "2026-09-30T04:01:21.612548+00:00",
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "startingSha": "c7fa7a87109624212379270df8f52ddd4c334eb9",
+  "startingTree": "a68f9754183a001bba4af2365dd9a550ed6b9e8d",
+  "branch": "audit/seasonal-discovery-coverage-1",
+  "failedTarget": "e7ad24dda7272843ca41e010de1444de365d9537",
+  "failedTree": "60fd8520c685edfb4449ee089b208000880bf743",
+  "failedSoleParent": "c8a67a07053f76db140287727672e83954c586b3",
+  "main": "0a8f30dc57fcc1156342d1bfc8a07524f3125e3b",
+  "cleanBefore": true,
+  "documentationOnlyDescendants": [
+    {
+      "sha": "478eab0744af523d570783e56eb68ca1ee9bb3fb",
+      "paths": [
+        "docs/handoffs/active/seasonal-discovery-remediation-1-verification.md"
+      ]
+    },
+    {
+      "sha": "c7fa7a87109624212379270df8f52ddd4c334eb9",
+      "paths": [
+        "docs/handoffs/active/seasonal-discovery-remediation-1-verification-finding-1.md"
+      ]
+    }
+  ],
+  "evidenceManifests": [
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/evidence-manifest.json",
+      "entries": 32,
+      "allMatch": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/evidence-manifest.json",
+      "entries": 35,
+      "allMatch": true
+    }
+  ],
+  "authority": "docs/handoffs/active/seasonal-discovery-remediation-1-verification-finding-1.md",
+  "implementationPaths": [
+    "src/lib/date-night/availability.ts",
+    "scripts/seasonal-discovery.test.mjs"
+  ],
+  "implementationSha256": {
+    "src/lib/date-night/availability.ts": "58f9b4be9b60e9e9c60297318bd0712a6c62a5b8fc488f36f2d282817dc70073",
+    "scripts/seasonal-discovery.test.mjs": "3eb75121ff843207ec7dc353ac002ed82e805c610a00563520d145486632ee8e"
+  },
+  "exactChange": "calendarState checks explicit not-operating before the due/unconfirmed branch. The due flag is still computed and returned; expiry never supplies positive evidence. Confirmed/unconfirmed paths and anchor records are unchanged.",
+  "regressions": [
+    {
+      "name": "V-F03-01 actual component: not-operating stays excluded before and after revalidation expiry",
+      "checks": "Real handler-normalized pumpkin fixture with controlled model calendar. Oct 9 20:00 and 23:59, Oct 10 00:00 and 20:00 viewer-local Chicago; OFF/ON/OFF each time. Status/season remain negative, both eligibility flags false, count 0, buttons disabled, no options/result/plan even via direct callback. revalidationDue flips false to true."
+    },
+    {
+      "name": "V-F03-01 actual component: an expired negative cannot fill a plan until stored positive evidence replaces it",
+      "checks": "Known-open haunt plus not-operating pumpkin. Before and after expiry OFF/ON count 1, options/pick/plan contain only haunt, plan incomplete. Separately loaded positive replacement with refreshed checkedAt and confirmed calendar restores OFF/ON count 2 and a complete distinct pair."
+    },
+    {
+      "name": "V-F03-01 control: positive calendar expiry remains uncertain OFF and refreshes ON result/options/plan",
+      "checks": "Positive expiring haunt plus confirmed pumpkin. Across midnight ON count 2 to 1, selected haunt result disappears, options/plan retain only pumpkin, plan becomes incomplete. OFF restores count 2 with Schedule unconfirmed; browse remains true, ON false, due true."
+    }
+  ],
+  "preservedRegressionCoverage": {
+    "ordinaryExpiredOrUnknown": "Existing availability matrix and component uncertainty group; new positive-expiry control",
+    "upcomingKnownOpenClosedNowFinished": "Existing availability matrix, Myer/Werehouse component OFF/ON/OFF and refresh",
+    "permanentDisused": "Existing structured lifecycle actual-handler eligibility group",
+    "myersCalendar": "Existing six availability tests and saved-anchor component group; anchor bytes unchanged",
+    "minuteFocusVisibility": "Existing actual clock-hook timer/event/cleanup group unchanged",
+    "countOptionsResultPlan": "Three new component groups plus existing component actions and overlays"
+  },
+  "baselineProof": {
+    "correctedRegressionBefore": {
+      "pass": 1,
+      "fail": 2,
+      "log": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/regression-before-corrected.log"
+    },
+    "after": {
+      "pass": 3,
+      "fail": 0,
+      "log": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/regression-after.log",
+      "captureNote": "Focused check rerun with TAP reporter after the earlier saved spec log was found incomplete; full seasonal/full-suite logs also show all three groups passing."
+    },
+    "initialHarnessAttempt": "First run used props.venues instead of the existing plan prop in two new assertions. Corrected tests only before production change; original attempt retained in regression-before.log."
+  },
+  "gates": [
+    {
+      "id": "clean-install",
+      "command": "npm ci --no-audit --no-fund",
+      "exitCode": 0,
+      "log": "npm-ci.log"
+    },
+    {
+      "id": "dependency-tree",
+      "command": "npm ls --all",
+      "exitCode": 0,
+      "log": "dependency-tree.log"
+    },
+    {
+      "id": "typecheck",
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "log": "typecheck.log"
+    },
+    {
+      "id": "javascript",
+      "command": "TZ=America/Chicago npm test",
+      "exitCode": 0,
+      "log": "javascript.log"
+    },
+    {
+      "id": "seasonal",
+      "command": "TZ=America/Chicago node --test scripts/seasonal-discovery.test.mjs",
+      "exitCode": 0,
+      "log": "seasonal.log"
+    },
+    {
+      "id": "availability",
+      "command": "TZ=America/Chicago node --experimental-strip-types --test src/lib/date-night/availability.test.ts",
+      "exitCode": 0,
+      "log": "availability.log"
+    },
+    {
+      "id": "location",
+      "command": "node --test scripts/location-discovery.test.mjs",
+      "exitCode": 0,
+      "log": "location.log"
+    },
+    {
+      "id": "python",
+      "command": "python3 -m unittest discover -s native-android -p 'test_*.py'",
+      "exitCode": 0,
+      "log": "python.log"
+    },
+    {
+      "id": "lint",
+      "command": "node node_modules/eslint/bin/eslint.js src/lib/date-night/availability.ts scripts/seasonal-discovery.test.mjs",
+      "exitCode": 0,
+      "log": "lint.log"
+    },
+    {
+      "id": "casino",
+      "command": "npm run audit:casinos",
+      "exitCode": 0,
+      "log": "casino.log"
+    },
+    {
+      "id": "component-regression",
+      "command": "TZ=America/Chicago node --test --test-reporter=tap --test-name-pattern='V-F03-01' scripts/seasonal-discovery.test.mjs",
+      "exitCode": 0,
+      "log": "regression-after.log"
+    },
+    {
+      "id": "android",
+      "command": "npm run android:check",
+      "exitCode": 0,
+      "log": "android.log"
+    },
+    {
+      "id": "capacitor-sync",
+      "command": "npm run android:sync",
+      "exitCode": 0,
+      "log": "capacitor-sync.log"
+    },
+    {
+      "id": "capacitor-bytes",
+      "command": "git diff --exit-code -- android capacitor.config.ts",
+      "exitCode": 0,
+      "log": "capacitor-bytes.log"
+    },
+    {
+      "id": "production-build",
+      "command": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production",
+      "exitCode": 0,
+      "log": "production-build.log"
+    },
+    {
+      "id": "browser",
+      "command": "Playwright chromium.launch({headless:true})",
+      "exitCode": 1,
+      "result": "UNAVAILABLE: missing executable",
+      "log": "browser-capability.log"
+    }
+  ],
+  "testCounts": {
+    "javascriptPassed": 393,
+    "javascriptFailed": 0,
+    "javascriptInheritedSkipped": 4,
+    "repositoryPassed": 322,
+    "applicationPassed": 71,
+    "seasonalSubset": 17,
+    "newComponentSubset": 3,
+    "availabilitySubset": 6,
+    "locationSubset": 10,
+    "pythonSeparate": 3,
+    "subsetsAreNotAdditive": true
+  },
+  "casino": {
+    "canonical": 883,
+    "serialized": 899,
+    "catalogs": 60,
+    "completeJurisdictions": 39
+  },
+  "android": {
+    "launcherResources": 15,
+    "trackedBytesUnchanged": true,
+    "nativeBuildOrDeviceAcceptance": false
+  },
+  "priorVerificationRetainedUnchanged": [
+    {
+      "source": "/workspace/scratch/686e5b96b3b4/seasonal-discovery-remediation-1-verification-2026-09-29.md",
+      "retainedPath": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/prior-verification/failed-verification-report.md",
+      "sha256": "ef603a001271fb2f6e53e0f962a6b36edd8e603690307cb93674058454d817db",
+      "bytes": 16330
+    },
+    {
+      "source": "/workspace/scratch/686e5b96b3b4/verification-evidence/not-operating-confirmation.json",
+      "retainedPath": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/prior-verification/failed-confirmation.json",
+      "sha256": "142dacc4ab293b82e4e92d857ffec2fffc04c68c81586162b6e328619b528cd0",
+      "bytes": 2561
+    },
+    {
+      "source": "/workspace/scratch/686e5b96b3b4/verification-evidence/not-operating-confirmation.log",
+      "retainedPath": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/prior-verification/failed-confirmation.log",
+      "sha256": "391535003a320b142a7938a8898380b94c80ee5ea1092259e292740271dc7fb3",
+      "bytes": 956
+    }
+  ],
+  "originalEvidenceHashes": [
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-2026-09-29.json",
+      "sha256": "d133ce1059d200ac340bd0a9ffdcb6a72a0b5287b0c26d802223772ad95848a0"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-2026-09-29.md",
+      "sha256": "800bafee5197e44ded6a1017bda87468d53a0716ef7d2adcc6e0787913e7a213"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/assemble-audit.mjs",
+      "sha256": "4a6e500054a8865983bad6abd7ee0f8b09fa24861c194f962541be92bf34d0a9"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/aurora-official-map.json",
+      "sha256": "6fd63db8fc328e841f857261d353dc69499fa0e7c286f77a94e2636ab092b305"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/browser-install.log",
+      "sha256": "2d0f6a221c605699c69d59d5f283874c8396f5f0753d61e13d9626cd1e0cdde1"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/build-reference-set.mjs",
+      "sha256": "0c8c4320eea0c848a98ba8ef9544d7e81ec7a1ecada280359b239e93716be017"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/carthage-query.overpassql",
+      "sha256": "4584d47ccf217d2e947134584122c5b3f1f2026c5e7d92b3b3fd554da8a21140"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/deterministic-probes.json",
+      "sha256": "cf25e585d8a1e337859b0755e38db3921b40f62d677fd645433f2289d86a99ca"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/diagnostic-provider-query.json",
+      "sha256": "02a3bd26edc41b6619e7f8ace64d5d8880dbff9a728a5eb7a9a6dc30d3083d74"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/evidence-manifest.json",
+      "sha256": "6b21c0d6e820a8998c8f0cc010f8c13e2abf010eaa27c965f7414f891fe344d6"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/exeter-osm-node.json",
+      "sha256": "97af2ba436ec27efc140a6855e2039763e6887408e1ca260463f9659d6ab1974"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/existing-availability-tests.log",
+      "sha256": "783b57e23cf9a938ab059aa9a8477bfe75ada69cf4f7f371269fcd2111022522"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/existing-location-tests.log",
+      "sha256": "48d02aed5997ed3f571fcf55901ebcd6a837895c0749bdfd70badb0b16a7af2f"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/home-render-0.html",
+      "sha256": "a1e9ab3592ba78b87bdbbfb0787465b2b63eb351c3ad8dca1e2c5c289bb8fb12"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/home-render-1.html",
+      "sha256": "ee27f48828168e832cd49eb5c8d82650dd35440ef2479c0132b38811d086419a"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/home-render-2.html",
+      "sha256": "a1e9ab3592ba78b87bdbbfb0787465b2b63eb351c3ad8dca1e2c5c289bb8fb12"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/live-probe.log",
+      "sha256": "f965bd01116d1bfff2138c1c80e09875bf4fcfaec1e64a1f93dabd4b2e883141"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/live-probe.mjs",
+      "sha256": "1eefe9565c2107bce04881201488309576d8ee1de89962229d64d094d22a788a"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/live-provider-observations.json",
+      "sha256": "78581c862aab0c56b348b96dc6f6972c2ac4ac5a784913a87d29899d6dd81d7b"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/options-render-0.html",
+      "sha256": "259af319709e608fe08b586aad04395cd107230063b40132112f9c5e705b6ab5"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/options-render-2.html",
+      "sha256": "eba0adf6d80f2440064f18063449c18af79922141151cde3bc06b2655d33d762"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/plan-render-0.html",
+      "sha256": "cfc03a13ba679f3d46d72f893e9dbaf42b0cf433a01a50c827668344efc71b36"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/plan-render-2.html",
+      "sha256": "cfc03a13ba679f3d46d72f893e9dbaf42b0cf433a01a50c827668344efc71b36"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/probe-summary.log",
+      "sha256": "5c2335e9ee4a1049d6b92db08b55984cf3d5b83217cadd2b0e77f0a3c2894123"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/probe.mjs",
+      "sha256": "dae8c281f318404f6e2b55bb28569696005e836b9966f8dd20eae476cd176f98"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/react-render-evidence.json",
+      "sha256": "d1fcbdb88ce60276c49d4f93cac8a17e3e2f1fefd9bde8cc4a2a83be828a8ea3"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-coordinate-extracts.json",
+      "sha256": "564913b15dbe295748bea4d3897910a4aec2468fe333d78a8b503ecfd5f4afc9"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-event-metadata.json",
+      "sha256": "9a3947534a19dd837d4d2dea44a5a7c3f54ff30819b962a0739e3f5275d6e252"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-geocoding.json",
+      "sha256": "467237b8a3360addf5dc13dd47f759779414b63b7dc7d75ab632e03ad1001ee2"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-set.json",
+      "sha256": "1ec3df40dd2e2866a1db11355d2409d10cbb1a44192d1ba470e724623379c2b5"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-source-probe.mjs",
+      "sha256": "1b9bb1228ad2eeaba67b5440978b6d8778150ecb23aac00103ba10b5e5967924"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-source-retrievals.json",
+      "sha256": "5163dbd009548296d5d1e87dfd6ceb1257fa7808e59e520e4749176c06754024"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/render-probe.mjs",
+      "sha256": "097b09b0d0adbfac7dfc853a1a5e8e35bcb28eb877444be341a812dd4066ca61"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/render-summary.log",
+      "sha256": "e39223bd615a9ec02a0d3aefc1b22cf6d15a966bd30716793f4e7a457d3ebdd5"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/repository-verification.json",
+      "sha256": "da3dbb2106ea6b3e9c08b9ff28f89a68be052fb43674520671039b3986152b6d"
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/source-probe.mjs",
+      "sha256": "82683ed2f2e1d9f8a86bb7a7d6e1db93ad5c51cf96ec4e75d33de3d4a310f960"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-2026-09-29.json",
+      "sha256": "63dba7031d3eb9bf469fa68d0aa845787460da237c035035213b843dcad967a6"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-2026-09-29.md",
+      "sha256": "394242a165a99d054c732c3ba229fc799362e0d43f08ff7cc1e19fb5be72e067"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/android.log",
+      "sha256": "e04c378c5f9d9bbbd4fb2e4dcd70351a25984fd0c18f2547a5f6e94b9ce703bb"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/availability.log",
+      "sha256": "af1986aa2231c38a44730f501615e01493eeaf880b755eda9b877a732f792b49"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/browser-install.log",
+      "sha256": "f7ec157d08e96ae2ad816f4c66f26871fd1c226532057d4da0b86cdbca90ac85"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/capacitor-sync.log",
+      "sha256": "51e4f6741aa1fd0c16a1395c1526d15516f6304eec3a0e68dd788b7928777e32"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/capacitor-tracked-byte.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/casino.log",
+      "sha256": "2d0803767ef2020413d2ab49d14b9ed18486816127b5ab7f357f2bd3dcb944d1"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/evidence-manifest.json",
+      "sha256": "4ef215878b5c1638e8839548e3ed84cb97b58400018348f5805d1ec6e10a99d9"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/format.log",
+      "sha256": "3fc7072aea4a215f6cbaa41a2da2e73ed6085874464940ebfe9b45583989eb08"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/harness-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/lint-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/live-controls.json",
+      "sha256": "f24c35d153f415e6e08daafd774a7a85e92506560be245ea905cad7ea7349ce1"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/live-controls.log",
+      "sha256": "89a9f0db2d12b1bd78acae4335ae6aadd0b936c0c23278dea3a0f5887ca09e2d"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/live-controls.mjs",
+      "sha256": "c4559369e52902b6756b24b47db4658318de4aa091c67952c82f8b6fe9efbf61"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/location-discovery.log",
+      "sha256": "169b6b5a947b08afc816fe260dc87fe68454e48777422bc3dd3bee0460576686"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/npm-ci.log",
+      "sha256": "636edd308af195922f3fb5bc0dfbd58c06c3a670c78d1d6ea77130f9da127070"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/npm-ls-all.log",
+      "sha256": "176d174e0015e1f24a1360566eadb2b3c35b24d5489df56d6dc895cabb4e22eb"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/preserved-invariants.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/production-build-final.log",
+      "sha256": "19cb581531696fc0dfb62120e425014f3bed6adc6f18fb0ef015ab290c7acff2"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/production-build.log",
+      "sha256": "07e164b7ddd1d8213c5ad14190ad86071bdc0ac404a46a936d0cccc5b2d89193"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/python.log",
+      "sha256": "33060fd73862c5e1af97335504d5b45211fce6d229657f556d8deceeadc52ce4"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/seasonal-final.log",
+      "sha256": "30997eed71cd5d5b02c85d6b65c2c65be4711af441c8b773c327597685613c9c"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/seasonal-fourth.log",
+      "sha256": "959a200b0502bfea645a0487c3c1cdaf4a5fb32ad71a60ee45e6a58f780a3cc2"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/seasonal-initial.log",
+      "sha256": "b00f6b6657e10836ab2dc72c997ef3e2b42fec95a0898fc1c7e0e666209401d9"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/seasonal-second.log",
+      "sha256": "ae1e1ffaae1ab7c5869cddeabb0b29aca6d03d4ca4677373929092e8349e80bc"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/seasonal-third.log",
+      "sha256": "1b3b4a212d3e17afa2907a63c80468bf6691505e6344e6d61cfdc1aa32736e50"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/tests-final.log",
+      "sha256": "844a8c09ce468a0fbd47480e52360bf8761cb61664ff119c7e1de02f844669e3"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/tests.log",
+      "sha256": "cfb02ddc4c7cdc5740c364a745c312915c56b1f141259a192ab4e9cd1c01b4d3"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/typecheck-final.log",
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/typecheck-initial.log",
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4"
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/typecheck.log",
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4"
+    }
+  ],
+  "limitations": [
+    "Same implementing assistant ran remediation checks; fresh independent Astra verification required.",
+    "Chromium executable absent. Component/hooks/SSR are not browser/RPC/hydration/CSS acceptance. No browser install was attempted in this task.",
+    "No live provider requests required or made; provider fixtures and retained captures exercise regression behavior.",
+    "Viewer-local date/hour semantics preserved. No native Gradle or device acceptance, production smoke, migration, deployment or publication."
+  ],
+  "scope": {
+    "onlyFinding": "V-F03-01",
+    "otherPassedFindingsReopened": false,
+    "venuesAdded": 0,
+    "mainChanged": false,
+    "merged": false,
+    "deployed": false,
+    "migrationsRun": false,
+    "published": false,
+    "packagesOrLockfileChanged": false
+  },
+  "commitLinkage": {
+    "strategy": "Single commit introducing this JSON is the remediation checkpoint. Its sole parent is startingSha. Resolve immutable SHA/tree after authorized push; avoids self-referential amend.",
+    "command": "git log --diff-filter=A --format=%H -1 -- audit/seasonal-discovery-v-f03-01-remediation-1-2026-09-29.json",
+    "expectedSoleParent": "c7fa7a87109624212379270df8f52ddd4c334eb9"
+  },
+  "finalState": "V-F03-01 REMEDIATED — AWAITING INDEPENDENT VERIFICATION",
+  "logFormatting": "New gate log copies strip trailing whitespace/final blank lines; raw logs remain in scratch. Prior verification copies and all original audit/remediation artifacts remain byte-identical."
+}

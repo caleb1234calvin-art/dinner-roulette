@@ -1,0 +1,25 @@
+✖ not-operating current season remains excluded after revalidation date passes (295.558423ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1033.797108
+
+✖ failing tests:
+
+test at ../verification-evidence/independent-probes.test.mjs:152:1
+✖ not-operating current season remains excluded after revalidation date passes (295.558423ms)
+  AssertionError [ERR_ASSERTION]: explicit current-season not-operating status must not become a selectable venue because revalidation is due
+      at TestContext.<anonymous> (file:///workspace/scratch/686e5b96b3b4/verification-evidence/independent-probes.test.mjs:167:9)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -64,8 +64,9 @@ function calendarState(record: SeasonalVenueAvailability | undefined, now: Date)
   const due = !record || priorYear || expired || record.checkedAt.slice(0, 4) !== today.slice(0, 4);
   // A known ended season remains ended for its year; next year needs new evidence.
   if (record?.status === "confirmed" && until && today > until && !priorYear) return { season: "finished" as const, dateOpen: false, due };
+  // Revalidation can become due without supplying evidence of renewed operation.
+  if (record?.status === "not-operating") return { season: "not-operating" as const, dateOpen: false, due };
   if (due || !record || record.status === "unconfirmed") return { season: "unconfirmed" as const, dateOpen: false, due };
-  if (record.status === "not-operating") return { season: "not-operating" as const, dateOpen: false, due };
   // Both ends (or explicit dates) are required; generic opening/start dates do not
   // establish a current seasonal calendar.
   if (!from || !until) return { season: "unconfirmed" as const, dateOpen: false, due: true };
