@@ -5,8 +5,9 @@
  */
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { CANONICAL_ORIGIN, MANIFEST_PATH, TOUCH_ICON_PATH, pickForUsHead } from "../src/lib/og/metadata.mjs";
 
-export const DEFAULT_APP_NAME = "Grok App";
+export const DEFAULT_APP_NAME = "Pick For Us";
 export const OG_SERVICE_URL_DEFAULT = "https://og.grok.me";
 export const OG_SITE_REL_PATH = "src/lib/og/site.json";
 
@@ -151,43 +152,28 @@ export function stripInstallParams(url) {
   return rest ? `${path}?${rest}` : path;
 }
 
-export function renderInstallPageHtml(template, { host, url } = {}) {
+export function renderInstallPageHtml(template, { url } = {}) {
   return String(template)
-    .replaceAll("{{APP_NAME}}", escapeHtml(appNameFromHost(host)))
+    .replaceAll("{{APP_NAME}}", escapeHtml(DEFAULT_APP_NAME))
     .replaceAll("{{APP_URL}}", escapeHtml(stripInstallParams(url)));
 }
 
-export function renderWebManifest(hostHeader) {
-  const name = appNameFromHost(hostHeader);
-  return JSON.stringify(
-    {
-      name,
-      short_name: name,
-      id: "/",
-      start_url: "/",
-      scope: "/",
-      display: "standalone",
-      background_color: "#000000",
-      theme_color: "#000000",
-      icons: [
-        {
-          src: "/__grok/icon-180.png",
-          sizes: "180x180",
-          type: "image/png",
-        },
-      ],
-    },
-    null,
-    2,
-  );
+export function readWebManifest(cwd = process.cwd()) {
+  return JSON.parse(readFileSync(join(cwd, "public/manifest.webmanifest"), "utf8"));
+}
+
+// Compatibility endpoints serve the same manifest as the public static URL.
+// Nitro passes the build snapshot because public/ is absent in its function.
+export function renderWebManifest(_hostHeader, manifest = readWebManifest()) {
+  return JSON.stringify(manifest, null, 2);
 }
 
 export function grokPwaHeadTags(appName = DEFAULT_APP_NAME) {
   return [
     // Standalone display comes from the manifest ("display": "standalone");
     // the legacy *-web-app-capable metas it replaces are deliberately absent.
-    ["manifest", '<link rel="manifest" href="/__grok/manifest.webmanifest">'],
-    ["apple-touch-icon", '<link rel="apple-touch-icon" href="/__grok/icon-180.png">'],
+    ["manifest", `<link rel="manifest" href="${MANIFEST_PATH}">`],
+    ["apple-touch-icon", `<link rel="apple-touch-icon" href="${TOUCH_ICON_PATH}">`],
     [
       "apple-mobile-web-app-title",
       `<meta name="apple-mobile-web-app-title" content="${escapeHtml(appName)}">`,
@@ -280,7 +266,8 @@ export function snapshotOgIdentity(cwd = process.cwd()) {
   if (existsSync(join(cwd, "public/x-banner.jpg"))) {
     site.banner = site.banner || "/x-banner.jpg";
   }
-  return { site };
+  const manifest = existsSync(join(cwd, "public/manifest.webmanifest")) ? readWebManifest(cwd) : null;
+  return { site, manifest };
 }
 
 export function customOgAssetPath(cwd = process.cwd()) {
@@ -417,6 +404,7 @@ export function normalizeHeadContext(ctx = {}) {
     creator: ctx.creator ?? readXCreator(),
     creatorId: ctx.creatorId ?? readXCreatorId(),
     host: ctx.host ?? "",
+    url: ctx.url ?? "/",
     cwd,
     site,
   };
@@ -424,7 +412,7 @@ export function normalizeHeadContext(ctx = {}) {
 
 export function injectGrokPwaHead(html, ctx = {}) {
   if (typeof html !== "string") return html;
-  const { site, projectId, creator, creatorId, host, cwd } = normalizeHeadContext(ctx);
+  const { site, projectId, creator, creatorId, host, url, cwd } = normalizeHeadContext(ctx);
   const documentTitle = titleFromDocument(html);
   const appName = resolveOgTitle(
     site,
@@ -434,17 +422,39 @@ export function injectGrokPwaHead(html, ctx = {}) {
   );
   let next = stripShareMetaTags(html);
 
-  const missing = grokPwaHeadTags(appName)
+  // Normalize by rel, not by a specific href: earlier React/platform output
+  // may have different values or quoting. Repeated injection stays idempotent.
+  next = next.replace(/<link\b[^>]*>/gi, (tag) =>
+    /\brel\s*=\s*["'](?:manifest|apple-touch-icon(?:-precomposed)?)["']/i.test(tag) ? "" : tag,
+  );
+  let identityTags;
+  if (site.canonicalOrigin === CANONICAL_ORIGIN) {
+    next = next
+      .replace(/<title\b[^>]*>[^<]*<\/title>/gi, "")
+      .replace(/<link\b[^>]*>/gi, (tag) => /\brel\s*=\s*["']canonical["']/i.test(tag) ? "" : tag)
+      .replace(/<meta\b[^>]*>/gi, (tag) => /\bname\s*=\s*["'](?:robots|description)["']/i.test(tag) ? "" : tag);
+    const identity = pickForUsHead(host, url);
+    identityTags = [
+      ...identity.meta.map(({ title, name, property, content }) => title
+        ? `<title>${escapeHtml(title)}</title>`
+        : `<meta ${property ? "property" : "name"}="${property ?? name}" content="${escapeHtml(content)}">`),
+      ...identity.links.map(({ rel, href }) => `<link rel="${rel}" href="${escapeHtml(href)}">`),
+    ];
+  } else {
+    identityTags = grokOgHeadTags({ host, appName, site, documentTitle, cwd });
+  }
+
+  const pwaTags = grokPwaHeadTags(appName);
+  const installLinks = pwaTags.slice(0, 2).map(([, tag]) => tag);
+  const missing = pwaTags.slice(2)
     .filter(([key]) => {
-      if (key === "manifest") return !next.includes('href="/__grok/manifest.webmanifest"');
-      if (key === "apple-touch-icon") return !next.includes('href="/__grok/icon-180.png"');
       return !next.includes(`name="${key}"`);
     })
     .map(([, tag]) => tag);
 
   next = insertAfterHeadOpen(
     next,
-    grokOgHeadTags({ host, appName, site, documentTitle, cwd }).join(""),
+    [...identityTags, ...installLinks].join(""),
   );
 
   if (!next.includes("/grok-app-builder/extensions.js")) {
@@ -496,6 +506,7 @@ export function createHeadInjector(ctx = {}) {
       creator: normalized.creator,
       creatorId: normalized.creatorId,
       host: normalized.host,
+      url: normalized.url,
       cwd: normalized.cwd,
       site: normalized.site,
     });

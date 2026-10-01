@@ -1,4 +1,7 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
+import { createIsomorphicFn } from "@tanstack/react-start";
+import { getRequestHeader } from "@tanstack/react-start/server";
+import { MANIFEST_PATH, TOUCH_ICON_PATH, pickForUsHead } from "@/lib/og/metadata.mjs";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { AppShell } from "@/components/app-shell";
@@ -9,35 +12,41 @@ import dateNightBasePolishCss from "../date-night-base-polish.css?url";
 import halloweenDateNightOverridesCss from "../halloween-date-night-overrides.css?url";
 
 const APP_NAME = "Pick For Us";
+const metadataHost = createIsomorphicFn()
+  .server(() => getRequestHeader("x-forwarded-host") ?? getRequestHeader("host") ?? "")
+  .client(() => window.location.host);
 const VERCEL_ANALYTICS_BOOTSTRAP_SCRIPT =
   "window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};";
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: APP_NAME },
-      { name: "description", content: "Can't decide what to do? Set the rules. Pick For Us helps choose." },
-      { name: "theme-color", content: "#14110e" },
-      { name: "application-name", content: APP_NAME },
-      { name: "apple-mobile-web-app-title", content: APP_NAME },
-    ],
-    links: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-      { rel: "stylesheet", href: appCss },
-      { rel: "stylesheet", href: dateNightBasePolishCss },
-      { rel: "stylesheet", href: halloweenDateNightOverridesCss },
-      { rel: "manifest", href: "/manifest.webmanifest" },
-      { rel: "apple-touch-icon", href: "/favicon.svg" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600&display=swap",
-      },
-    ],
-  }),
+  head: ({ matches }) => {
+    const identity = pickForUsHead(metadataHost(), matches.at(-1)?.pathname ?? "/");
+    return {
+      meta: [
+        { charSet: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        ...identity.meta,
+        { name: "theme-color", content: "#14110e" },
+        { name: "application-name", content: APP_NAME },
+        { name: "apple-mobile-web-app-title", content: APP_NAME },
+      ],
+      links: [
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        { rel: "stylesheet", href: appCss },
+        { rel: "stylesheet", href: dateNightBasePolishCss },
+        { rel: "stylesheet", href: halloweenDateNightOverridesCss },
+        ...identity.links,
+        { rel: "manifest", href: MANIFEST_PATH },
+        { rel: "apple-touch-icon", href: TOUCH_ICON_PATH },
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600&display=swap",
+        },
+      ],
+    };
+  },
   component: () => (
     <html lang="en" className="antialiased" suppressHydrationWarning>
       <head>

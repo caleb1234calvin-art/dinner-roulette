@@ -1,5 +1,6 @@
 declare module "virtual:grok-og-identity" {
   export const grokOgIdentity: {
+    manifest: Record<string, unknown>;
     site: {
       title?: string;
       description?: string;
@@ -8,6 +9,7 @@ declare module "virtual:grok-og-identity" {
       image?: string;
       banner?: string;
       color?: string;
+      canonicalOrigin?: string;
     };
   };
 }

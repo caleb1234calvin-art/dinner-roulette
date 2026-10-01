@@ -1,13 +1,19 @@
 {
   "name": "Pick For Us",
   "short_name": "Pick For Us",
-  "description": "Can't decide what to do? Set the rules. Pick For Us helps choose.",
+  "description": "Can't decide what to do? Set the rules. Pick For Us helps choose food, date nights, and nightlife.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#14110e",
   "theme_color": "#14110e",
   "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "/favicon.svg",
       "sizes": "any",

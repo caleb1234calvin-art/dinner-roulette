@@ -13,7 +13,8 @@ export declare function renderInstallPageHtml(
   template: string,
   context?: { host?: string | null; url?: string | null },
 ): string;
-export declare function renderWebManifest(hostHeader: string | null | undefined): string;
+export declare function readWebManifest(cwd?: string): Record<string, unknown>;
+export declare function renderWebManifest(hostHeader: string | null | undefined, manifest?: Record<string, unknown>): string;
 export declare function grokPwaHeadTags(appName?: string): Array<[string, string]>;
 export declare const GROK_EXTENSIONS_SCRIPT_SRC: string;
 export declare function readGrokProjectId(): string;
@@ -30,6 +31,7 @@ export type OgSite = {
   image?: string;
   banner?: string;
   color?: string;
+  canonicalOrigin?: string;
 };
 
 export type GrokHeadContext = {
@@ -38,13 +40,14 @@ export type GrokHeadContext = {
   creator?: string;
   creatorId?: string;
   host?: string | null;
+  url?: string;
   cwd?: string;
   site?: OgSite;
 };
 
 export declare function readOgSite(cwd?: string): OgSite;
 export declare function ogCardPublicPath(cwd?: string): string;
-export declare function snapshotOgIdentity(cwd?: string): { site: OgSite };
+export declare function snapshotOgIdentity(cwd?: string): { site: OgSite; manifest: Record<string, unknown> | null };
 export declare function customOgAssetPath(cwd?: string): string;
 export declare function resolveOgCardAsset(site?: OgSite, cwd?: string): string;
 export declare function ogServiceUrl(): string;
@@ -70,6 +73,7 @@ export declare function normalizeHeadContext(ctx?: GrokHeadContext): {
   creator: string;
   creatorId: string;
   host: string;
+  url: string;
   cwd: string;
   site: OgSite;
 };
