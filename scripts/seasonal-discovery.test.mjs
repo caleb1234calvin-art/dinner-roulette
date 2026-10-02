@@ -2,7 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import fs from "node:fs";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
-import { dateNightComponentHarness, textOf } from "./test-support/date-night-component-harness.mjs";
+import { dateNightComponentHarness, findNode, textOf } from "./test-support/date-night-component-harness.mjs";
+import { discoveryComponentHarness, discoveryModes, discoveryPayload } from "./test-support/discovery-component-harness.mjs";
 const load = appModuleLoader();
 const { searchDateNight } = load("src/lib/date-night/search.ts");
 const { decorateDateNight, eligibleDateNight } = load("src/lib/date-night/eligibility.ts");
@@ -332,6 +333,110 @@ function browserGlobals(t) {
   t.after(() => {
     if (previous) Object.defineProperty(globalThis, "document", previous);
     else delete globalThis.document;
+  });
+}
+
+const halloweenCaution =
+  "Seasonal listings can change quickly. Double-check the location, dates, and hours before you go.";
+const fallbackDisclosure =
+  "Pick For Us is using saved seasonal anchors. Check each stop before you leave.";
+
+function assertHalloweenActionCard(harness, tree, disabled) {
+  const card = findNode(tree, (node) => node.props?.className?.includes("fixed inset-x-0"));
+  assert.ok(card, "sticky action card remains");
+  const note = findNode(card, (node) => node.props?.role === "note");
+  assert.equal(textOf(note), halloweenCaution);
+  assert.match(harness.html(note), /role="note"/);
+  assert.equal(findNode(note, (node) => node.props?.onClick || node.props?.role === "alert"), null);
+  assert.ok(textOf(card).indexOf(halloweenCaution) < textOf(card).indexOf("Pick our date"));
+  for (const label of ["Pick our date", "Give us options", "Plan the night"]) {
+    assert.equal(harness.button(card, label)?.props.disabled, disabled, label);
+  }
+}
+
+for (const source of ["live", "merged", "fallback"]) {
+  test(`Halloween caution: ${source} loading/settlement retains controls, counts and selections`, async (t) => {
+    freeze(t);
+    browserGlobals(t);
+    const result = await search(t, [
+      element(801, { attraction: "haunted_house" }, 1),
+      element(802, { attraction: "pumpkin_patch" }, 2),
+      element(803, { amenity: "cinema" }, 3),
+    ]);
+    const store = storeFor(international);
+    let resolveSearch;
+    const pending = new Promise((resolve) => { resolveSearch = resolve; });
+    const harness = dateNightComponentHarness({ store, now: { value: now }, search: () => pending });
+    t.after(() => harness.dispose());
+    let tree = harness.render();
+    assert.match(textOf(tree), /Finding date ideas/);
+    assertHalloweenActionCard(harness, tree, true);
+    resolveSearch({ ...result, source, warning: source === "fallback" ? "Provider unavailable" : undefined });
+    tree = await harness.settle();
+    assertHalloweenActionCard(harness, tree, false);
+    assert.match(textOf(tree), /2 activities match/);
+    t.mock.method(Math, "random", () => 0);
+    const expected = eligible(result.venues).map((venue) => venue.id);
+    harness.button(tree, "Give us options").props.onClick();
+    tree = harness.render();
+    assert.deepEqual(harness.overlay(tree, "OptionsOverlay").props.restaurants.map((venue) => venue.id), expected);
+    harness.button(tree, "Pick our date").props.onClick();
+    tree = harness.render();
+    assert.equal(harness.overlay(tree, "ResultOverlay").props.restaurant.id, expected[0]);
+    harness.button(tree, "Plan the night").props.onClick();
+    tree = harness.render();
+    assert.deepEqual(harness.overlay(tree, "DateNightPlanOverlay").props.plan.map((venue) => venue.id), expected);
+    assert.match(textOf(tree), /2 activities match/);
+    assertHalloweenActionCard(harness, tree, false);
+    if (source === "fallback") {
+      assert.match(textOf(tree), /Live map unavailable; using saved places/);
+      // The existing generic fallback disclosure is used when no seasonal
+      // categories are selected; category-specific coverage otherwise stays.
+      store.dateNightFilters.activityTypes = ["movies"];
+      tree = harness.render();
+      assert.equal(findNode(tree, (node) => node.props?.body === fallbackDisclosure)?.props.body, fallbackDisclosure);
+      assertHalloweenActionCard(harness, tree, false);
+      assert.match(textOf(tree), /1 activities match/);
+    }
+  });
+}
+
+for (const [label, spookySeasonEnabled, at] of [
+  ["seasonal toggle off", false, now],
+  ["outside Halloween season", true, new Date(2026, 6, 10, 20)],
+]) {
+  test(`ordinary Date Night caution absent: ${label}; controls/count/selection remain`, async (t) => {
+    freeze(t);
+    browserGlobals(t);
+    const result = await search(t, [element(804, { amenity: "cinema" }, 1)]);
+    const store = storeFor(international);
+    store.spookySeasonEnabled = spookySeasonEnabled;
+    store.dateNightFilters.activityTypes = ["movies"];
+    const harness = dateNightComponentHarness({ store, now: { value: at }, search: async () => result });
+    t.after(() => harness.dispose());
+    assert.equal(textOf(harness.render()).includes(halloweenCaution), false);
+    let tree = await harness.settle();
+    assert.equal(harness.html(tree).includes(halloweenCaution), false);
+    assert.equal(harness.button(tree, "Plan the night"), null);
+    assert.match(textOf(tree), /1 activities match/);
+    for (const action of ["Pick our date", "Give us options"]) {
+      assert.equal(harness.button(tree, action)?.props.disabled, false);
+      harness.button(tree, action).props.onClick();
+      tree = harness.render();
+    }
+    assert.equal(harness.overlay(tree, "ResultOverlay").props.restaurant.id, result.venues[0].id);
+    assert.deepEqual(harness.overlay(tree, "OptionsOverlay").props.restaurants.map((venue) => venue.id), [result.venues[0].id]);
+  });
+}
+
+for (const config of discoveryModes.filter(({ mode }) => mode !== "date-night")) {
+  test(`${config.mode}: Halloween caution remains absent during loading and after settlement`, async (t) => {
+    const harness = discoveryComponentHarness(config);
+    t.after(() => harness.dispose());
+    harness.store.spookySeasonEnabled = true;
+    assert.equal(textOf(harness.render()).includes(halloweenCaution), false);
+    harness.requests[0].resolve(discoveryPayload(config));
+    assert.equal(textOf((await harness.settle()).tree).includes(halloweenCaution), false);
   });
 }
 

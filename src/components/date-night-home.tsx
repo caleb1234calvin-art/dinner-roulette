@@ -372,6 +372,11 @@ export function DateNightHome() {
       <div className="fixed inset-x-0 bottom-20 z-20 mx-auto w-full max-w-lg px-4 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2">
         <div className="rounded-xl bg-bg/95 p-3 shadow-border backdrop-blur-sm">
           <p className="mb-2 text-center text-xs text-subtle tabular-nums">{loading ? "Finding date ideas…" : `${eligible.length} activities match`}</p>
+          {halloweenActive ? (
+            <p role="note" className="mb-2 text-center text-xs leading-relaxed text-muted">
+              Seasonal listings can change quickly. Double-check the location, dates, and hours before you go.
+            </p>
+          ) : null}
           <div className="grid grid-cols-2 gap-2">
             <Button size="lg" className="pick-pulse h-14 gap-1.5 px-2 font-display" onClick={() => roll()} disabled={!eligible.length || loading}><Heart className="size-4" />Pick our date</Button>
             <Button size="lg" variant="secondary" className="h-14 gap-1.5 px-2" onClick={dealOptions} disabled={!eligible.length || loading}><LayoutGrid className="size-4" />Give us options</Button>
