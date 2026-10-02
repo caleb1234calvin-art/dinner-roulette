@@ -53,8 +53,9 @@ export function checkAndroid() {
     assert.equal(pkg.dependencies?.[name] ?? pkg.devDependencies?.[name], "8.5.2");
     assert.equal(lock.packages[`node_modules/${name}`].version, "8.5.2");
   }
-  const master = readFileSync(resolve(root, "public/brand/grok_1789541884918.jpg"));
-  assert.equal(createHash("sha256").update(master).digest("hex"), "5d823a5c4ef6cc0a76ffc8926f83f0eaae85cb8b59cdcd280d9b8d148f99500a");
+  const master = readFileSync(resolve(root, "public/brand/pick-for-us-icon-master.jpg"));
+  assert.equal(master.length, 494490);
+  assert.equal(createHash("sha256").update(master).digest("hex"), "12afcedace4aacb19109e561fc70af76076ece7d4997348021422a9396e865d5");
   const wrapper = readFileSync(resolve(root, "android/gradle/wrapper/gradle-wrapper.jar"));
   assert.equal(createHash("sha256").update(wrapper).digest("hex"), "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172");
   return { appId: APP_ID, appName: APP_NAME, ...parseAndroidVersion(read("android/version.properties")), minSdk: 24, targetSdk: 36, compileSdk: 36, capacitor: "8.5.2" };

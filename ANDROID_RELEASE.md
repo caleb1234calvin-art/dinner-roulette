@@ -52,7 +52,15 @@ or Play upload has occurred.
 | Android Gradle Plugin | 8.13.0 |
 | Gradle wrapper | 8.14.3, distribution and wrapper SHA-256 verified |
 | Java / Node | JDK 21 / Node 24 in CI (Capacitor requires Node 22+) |
-| Icon master | `public/brand/grok_1789541884918.jpg` |
+| Icon master | `public/brand/pick-for-us-icon-master.jpg` |
+
+Current icon source — 2026-10-02: the approved 1536x1536 RGB JPEG is shared by
+web/PWA and all 15 Android launcher derivatives. SHA-256:
+`12afcedace4aacb19109e561fc70af76076ece7d4997348021422a9396e865d5`.
+`python3 scripts/android-icons.py --check` verifies all committed outputs. The
+previous master is retained as historical material; Phase B artifact evidence
+above continues to describe its original revision. No new native bundle or
+signing/publication result is implied by the icon refresh.
 
 [Google Play requires API 36 for new ordinary Android apps and updates from
 August 31, 2026](https://support.google.com/googleplay/android-developer/answer/11926878?hl=en).

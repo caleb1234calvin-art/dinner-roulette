@@ -31,7 +31,7 @@ export const Route = createRootRoute({
         { name: "apple-mobile-web-app-title", content: APP_NAME },
       ],
       links: [
-        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        { rel: "icon", type: "image/png", sizes: "64x64", href: "/favicon.png" },
         { rel: "stylesheet", href: appCss },
         { rel: "stylesheet", href: dateNightBasePolishCss },
         { rel: "stylesheet", href: halloweenDateNightOverridesCss },
