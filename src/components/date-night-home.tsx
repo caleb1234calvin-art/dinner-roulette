@@ -262,7 +262,7 @@ export function DateNightHome() {
   const radiusIndex = Math.max(0, DISTANCE_OPTIONS.indexOf(filters.radiusMiles));
 
   return (
-    <main className="px-4 pb-48 pt-5">
+    <main className={cn("px-4 pt-5", halloweenActive ? "pb-56" : "pb-48")}>
       {halloweenActive ? null : (
         <header className="mb-6">
           <p className="text-kicker text-accent">Dinner roulette · Date Night</p>
