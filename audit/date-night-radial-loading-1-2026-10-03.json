@@ -1,0 +1,358 @@
+{
+  "status": "DATE NIGHT RADIAL LOADING INCOMPLETE \u2014 REVIEW REQUIRED",
+  "date": "2026-10-03",
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "branch": "feature/date-night-radial-loading-1",
+  "authority": {
+    "commit": "04a3ac240760fc025c62d487eeb7970c70620fb9",
+    "path": "docs/handoffs/active/date-night-radial-loading-1.md",
+    "laterInstructionBranchTip": "9cb2a35609590bddd385a245b03155ba89c6c080",
+    "handoffBytesUnchanged": true
+  },
+  "base": {
+    "sha": "d9cc8bdde2e531af6f029d3d558d25f4f7bb4ab5",
+    "tree": "f9f46d16c876b4d608ab836d57a411a607e6f8fa",
+    "soleParent": "8e67d959f5b19cb00c22533a6eb27a1b2e1bfb2f"
+  },
+  "latestPublishedBeforeFinalSave": {
+    "sha": "95bee7379490c959bcaeaa78691cbecdbe53a899",
+    "tree": "193a746f4d5b85037b1cb7f2b04120e58966a1b2",
+    "soleParent": "b270e725baff0047cbaa3385515b24e911ba0bbe"
+  },
+  "finalSaveIdentity": "Resolve the unique commit introducing this JSON; do not amend for a self hash. This is an incomplete preservation checkpoint, not a successful candidate freeze.",
+  "implementation": {
+    "geometryVersion": "radial-v1",
+    "coreMiles": 15,
+    "outerBands": [
+      {
+        "throughMiles": 20,
+        "sectors": 4
+      },
+      {
+        "throughMiles": 30,
+        "sectors": 7
+      },
+      {
+        "throughMiles": 40,
+        "sectors": 9
+      },
+      {
+        "throughMiles": 50,
+        "sectors": 11
+      }
+    ],
+    "maxPatches": 32,
+    "maxQueryCircleRadiusMilesExclusive": 15.1,
+    "logicalOwnership": "one fixed core/sector owner, with overlap retained for negative evidence",
+    "coverage": "retained per-patch/per-category success; continuous inner conjunction; no coverage from failure/fallback/late/cancelled responses",
+    "cache": {
+      "ttlMinutes": 10,
+      "maxEntries": 128,
+      "maxRawVenues": 20000
+    },
+    "interaction": "separate initial/background loading; future selection pool merges; existing overlays keep selected identities"
+  },
+  "budget": {
+    "maxInFlightRpc": 1,
+    "outerPacingMs": 1000,
+    "maxRpcPerPass": 32,
+    "maxAutomaticAttemptsPerPatchCategoryPerPass": 1,
+    "consecutiveDegradedPatchStop": 3,
+    "mirrors": 4,
+    "groups": 4,
+    "attemptDeadlineMs": 8000,
+    "providerDeadlineMs": 20000,
+    "clientWatchdogMs": 25000,
+    "fullPassTheoreticalProviderAttemptCap": 512,
+    "liveRpcCap": 3,
+    "liveTheoreticalProviderAttemptCap": 48,
+    "automaticRetry": false
+  },
+  "validation": {
+    "javascript": {
+      "passed": 729,
+      "repositoryPassed": 658,
+      "applicationPassed": 71,
+      "skipped": 4,
+      "failed": 0
+    },
+    "compiledSecurityPassed": 14,
+    "focusedPassedNotDoubleCounted": 294,
+    "gates": [
+      {
+        "gate": "build-proof-capture",
+        "command": [
+          "node",
+          "scripts/browser-build-proof.mjs",
+          "capture"
+        ],
+        "exitCode": 0,
+        "seconds": 0.258,
+        "authEnabled": true,
+        "log": "build-proof-capture.log"
+      },
+      {
+        "gate": "build-proof-complete",
+        "command": [
+          "node",
+          "scripts/browser-build-proof.mjs",
+          "complete"
+        ],
+        "exitCode": 0,
+        "seconds": 0.214,
+        "authEnabled": true,
+        "log": "build-proof-complete.log"
+      },
+      {
+        "gate": "build-proof-verify",
+        "command": [
+          "node",
+          "scripts/browser-build-proof.mjs",
+          "verify"
+        ],
+        "exitCode": 0,
+        "seconds": 0.228,
+        "authEnabled": true,
+        "log": "build-proof-verify.log"
+      },
+      {
+        "gate": "full-android",
+        "command": [
+          "npm",
+          "run",
+          "android:check"
+        ],
+        "exitCode": 0,
+        "seconds": 1.953,
+        "authEnabled": false,
+        "log": "full-android.log"
+      },
+      {
+        "gate": "full-build",
+        "command": [
+          "node",
+          "scripts/with-app-env.mjs",
+          "node",
+          "node_modules/vite/bin/vite.js",
+          "build",
+          "--mode",
+          "production"
+        ],
+        "exitCode": 0,
+        "seconds": 3.767,
+        "authEnabled": true,
+        "log": "full-build.log"
+      },
+      {
+        "gate": "full-casino",
+        "command": [
+          "npm",
+          "run",
+          "audit:casinos"
+        ],
+        "exitCode": 0,
+        "seconds": 1.959,
+        "authEnabled": false,
+        "log": "full-casino.log"
+      },
+      {
+        "gate": "full-dependencies",
+        "command": [
+          "npm",
+          "ls",
+          "--all"
+        ],
+        "exitCode": 0,
+        "seconds": 1.157,
+        "authEnabled": false,
+        "log": "full-dependencies.log"
+      },
+      {
+        "gate": "full-lint",
+        "command": [
+          "npx",
+          "eslint",
+          "src/lib/date-night/cache.ts",
+          "src/lib/date-night/radial-plan.ts",
+          "src/lib/date-night/radial-cache.ts",
+          "src/lib/date-night/radial-session.ts",
+          "src/lib/date-night/search.ts",
+          "src/lib/date-night/types.ts",
+          "src/components/date-night-home.tsx",
+          "scripts/date-night-radial-plan.test.mjs",
+          "scripts/date-night-radial-search.test.mjs",
+          "scripts/date-night-radial-cache.test.mjs",
+          "scripts/date-night-radial-session.test.mjs",
+          "scripts/date-night-radial-browser.mjs",
+          "scripts/date-night-radial-live.mjs",
+          "scripts/date-night-cache.test.mjs",
+          "scripts/discovery-client-lifecycle.test.mjs",
+          "scripts/test-support/load-app-module.mjs",
+          "scripts/test-support/date-night-radial-preload.mjs"
+        ],
+        "exitCode": 0,
+        "seconds": 2.985,
+        "authEnabled": false,
+        "log": "full-lint.log"
+      },
+      {
+        "gate": "full-python",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "native-android",
+          "-p",
+          "test_*.py"
+        ],
+        "exitCode": 0,
+        "seconds": 0.141,
+        "authEnabled": false,
+        "log": "full-python.log"
+      },
+      {
+        "gate": "full-security",
+        "command": [
+          "node",
+          "--test",
+          "scripts/tanstack-security.test.mjs"
+        ],
+        "exitCode": 0,
+        "seconds": 4.069,
+        "authEnabled": true,
+        "log": "full-security.log"
+      },
+      {
+        "gate": "full-test-auth-override",
+        "command": [
+          "npm",
+          "test"
+        ],
+        "exitCode": 1,
+        "seconds": 20.325,
+        "authEnabled": true,
+        "log": "full-test-auth-override.log"
+      },
+      {
+        "gate": "full-test",
+        "command": [
+          "npm",
+          "test"
+        ],
+        "exitCode": 0,
+        "seconds": 21.143,
+        "authEnabled": false,
+        "log": "full-test.log"
+      },
+      {
+        "gate": "full-typecheck",
+        "command": [
+          "npm",
+          "run",
+          "typecheck"
+        ],
+        "exitCode": 0,
+        "seconds": 6.563,
+        "authEnabled": false,
+        "log": "full-typecheck.log"
+      }
+    ],
+    "buildProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "0c0aa41c7b76c4b52b5ba9598766a1935e871f1e07f4ab3821773a65876ab3bc",
+        "files": 424
+      },
+      "startedAt": "2026-10-03T19:53:21.781Z",
+      "output": {
+        "sha256": "43b8c4b90f62972eadf84c271b64a6be398ea216b4e7189a9de249cd9a8ae433",
+        "files": 194
+      },
+      "completedAt": "2026-10-03T19:53:25.838Z"
+    },
+    "retainedFailures": [
+      "Full test with build-only VITE_AUTH_ENABLED=true override: two wrapper environment-default assertions failed. Unchanged suite passed in normal test environment."
+    ]
+  },
+  "controlledBrowser": {
+    "status": "BLOCKED_BEFORE_FIRST_PAGE",
+    "executedScenarios": 0,
+    "requiredScenarios": 10,
+    "publicProviderCalls": 0,
+    "launchReason": "Chromium process_singleton socket() failed: Operation not permitted",
+    "escalation": "REJECTED_BEFORE_EXECUTION: sandbox_approval:false",
+    "screenshots": []
+  },
+  "liveAcceptance": {
+    "status": "NOT_RUN",
+    "reason": "Controlled browser prerequisite not met",
+    "publicRpcCount": 0,
+    "productUsability": "NOT_ESTABLISHED",
+    "completeMaximumRadiusCoverage": "NOT_ESTABLISHED",
+    "preview": {
+      "id": "dpl_HviVcpJT1dNBQg54n3Sx2b5ZeDsA",
+      "url": "https://dinner-roulette-1xc11et6w-minions-9e2c.vercel.app",
+      "sha": "b270e725baff0047cbaa3385515b24e911ba0bbe",
+      "state": "READY",
+      "target": null,
+      "accepted": false
+    }
+  },
+  "production": {
+    "sha": "4d937e58d2a65567b54ac5271915bc85b498898b",
+    "deployment": "dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL",
+    "unchanged": true
+  },
+  "successfulImmutableCandidateFreeze": false,
+  "promoted": false,
+  "migrationsRun": false,
+  "remainingGates": [
+    "10 controlled browser scenarios and screenshot review in an authorized browser-capable runner",
+    "Bounded exact non-production Preview acceptance, only after controlled passes",
+    "Fresh protected-scope/ref/production readback",
+    "Successful immutable candidate freeze and independent verification"
+  ],
+  "nextAction": "Resume from the final incomplete save in an authorized browser-capable runner; verify refs, source/build proof and exact Preview identity, then run controlled browser before any public-provider request.",
+  "safeToResume": true,
+  "finalScope": {
+    "base": "d9cc8bdde2e531af6f029d3d558d25f4f7bb4ab5",
+    "headBeforeFinalSave": "95bee7379490c959bcaeaa78691cbecdbe53a899",
+    "protectedBaseGitBlobsByteIdentical": 1095,
+    "comparison": "Git canonical blob bytes after repository attributes; android/gradlew.bat worktree CRLF is mandated by existing eol:crlf and is not a tracked change. Initial raw-worktree comparison rejected this normal checkout conversion; no native file was modified.",
+    "changedExistingPaths": [
+      "AI_CONTINUITY.md",
+      "scripts/date-night-cache.test.mjs",
+      "scripts/discovery-client-lifecycle.test.mjs",
+      "scripts/test-support/load-app-module.mjs",
+      "src/components/date-night-home.tsx",
+      "src/lib/date-night/cache.ts",
+      "src/lib/date-night/search.ts",
+      "src/lib/date-night/types.ts"
+    ],
+    "priorContinuityPreservedVerbatim": true,
+    "priorTimeoutEvidenceUnchanged": true,
+    "runtimeUnchangedSinceCheckpoint4": true,
+    "controllingHandoffUnchanged": true,
+    "secretsFound": [],
+    "generatedJunkFound": [],
+    "postBaseMerges": [],
+    "mainSha": "4d937e58d2a65567b54ac5271915bc85b498898b",
+    "publicProviderCalls": 0
+  },
+  "finalBuildProof": {
+    "gate": "final-build-proof",
+    "command": [
+      "node",
+      "scripts/browser-build-proof.mjs",
+      "verify"
+    ],
+    "exitCode": 0,
+    "seconds": 0.812,
+    "authEnabled": true,
+    "log": "final-build-proof.log"
+  }
+}

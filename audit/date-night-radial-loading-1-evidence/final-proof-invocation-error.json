@@ -1,0 +1,6 @@
+{
+  "gate": "final-build-proof-invocation-omitted-auth",
+  "status": "INVOCATION_ERROR",
+  "reason": "An initial final proof verification omitted VITE_AUTH_ENABLED=true; the proof guard correctly rejected undefined versus true before checking hashes. Repeated with the required auth flag; no source/output changed.",
+  "sourceOrOutputChange": false
+}

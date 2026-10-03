@@ -1,0 +1,15 @@
+{
+  "status": "PASS_FOR_INCOMPLETE_PRESERVATION_SAVE",
+  "branch": "feature/date-night-radial-loading-1",
+  "parentBeforeFinalSave": "95bee7379490c959bcaeaa78691cbecdbe53a899",
+  "main": "4d937e58d2a65567b54ac5271915bc85b498898b",
+  "diffCheck": "PASS",
+  "buildProof": "PASS; source and output identical to checkpoint7 proof",
+  "scope": "PASS; see final-scope-review.json",
+  "production": "READY dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL at frozen main, freshly reread",
+  "controlledBrowser": "BLOCKED before first page; permission escalation rejected",
+  "liveAcceptance": "NOT_RUN",
+  "successfulCandidateFreeze": false,
+  "publicProviderCalls": 0,
+  "note": "This file records pre-publication validation. Final published SHA/tree/sole-parent and clean remote readback are reported without a self-referential amend."
+}

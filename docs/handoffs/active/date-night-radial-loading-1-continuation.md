@@ -102,3 +102,15 @@ SAFE TO RESUME FROM THIS CHECKPOINT.
 - Exact next action now: publish this blocked checkpoint, write final INCOMPLETE radial MD/JSON and top continuity preserving all older evidence, verify scope/build/ref integrity, publish/read back the final incomplete save. Resume execution only in an authorized browser-capable runner; do not promote.
 
 SAFE TO RESUME FROM THIS CHECKPOINT.
+
+## Final preservation save — INCOMPLETE; stages9–10 withheld
+
+- Status: **DATE NIGHT RADIAL LOADING INCOMPLETE — REVIEW REQUIRED**. Branch/base unchanged. Latest pushed `95bee7379490c959bcaeaa78691cbecdbe53a899`, tree `193a746f4d5b85037b1cb7f2b04120e58966a1b2`, sole parent `b270e725baff0047cbaa3385515b24e911ba0bbe`. Resolve this save's immutable identity from the unique commit introducing the final radial JSON. Do not amend for a self hash; this is not a successful candidate freeze.
+- Changed paths: new final radial MD/JSON; top AI_CONTINUITY entry with old contents verbatim; this continuation; dedicated deployment/final-scope/proof evidence; one server-log trailing-space normalization. No application or test/harness changes since the earlier validated checkpoints.
+- Tests/results: full729+compiledsecurity14 and all checkpoint7 gates remain GREEN; fresh final build-proof and diff/scope results are in final-integrity evidence. Browser0/10executed, launchblocked; sandbox escalation rejected before execution. Live0RPC/NOTRUN. No mobile screenshot or live usability/completeness claim.
+- Geometry/model/budget unchanged: core15 +4/7/9/11sectors,32patches,circles<15.1mi; retained patch/category continuous coverage with valid-empty and missing-on-eviction semantics;1inflight/1second pacing/32RPCpass/3consecutive-failure stop;4groups4mirrors8s20s25s. Prepared live limit3RPC/48theoretical attempts. Main/production unchanged at frozen4d937e58 and READY dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL.
+- Preview identity remains metadata-only READY/nonproduction dpl_HviVcpJT1dNBQg54n3Sx2b5ZeDsA at exactb270e725baff0047cbaa3385515b24e911ba0bbe, URL above; untested. Later automatically built evidence-only Previews are not acceptance.
+- Remaining gates: controlled browser ten scenarios plus screenshot inspection; bounded verified exactPreview product acceptance (separate complete-radius disclosure); renewed final integrity; successful immutable freeze and independent verification. Public-provider acceptance is prohibited until controlled gates pass. No promotion.
+- Exact next action after this save: use an authorized browser-capable runner; fetch/verify final identity/main/production and read the final report's numbered continuation. Verify or safely rebuild compiled output, then run `CI=true VITE_AUTH_ENABLED=true PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/absolute/path/to/chrome DATE_NIGHT_RADIAL_OUTPUT=/tmp/pfu-radial-browser-resume node scripts/date-night-radial-browser.mjs` with external interception intact. Preserve every failure. No more provider probing or speculative runtime changes in this blocked runner.
+
+SAFE TO RESUME FROM THIS CHECKPOINT.
