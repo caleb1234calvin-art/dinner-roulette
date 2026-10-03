@@ -41,3 +41,13 @@ SAFE TO RESUME FROM THIS CHECKPOINT
 - Exact next action: push/readback this preservation checkpoint, then separate prefull continuity save before clean install and migration-free build/full gates. No public-provider calls or browser acceptance yet.
 
 SAFE TO RESUME FROM THIS CHECKPOINT
+
+## Save 4 — BEFORE FULL VALIDATION / BUILD / BROWSER
+
+- Latest pushed0effd48efda91b30e0ca19b43abf8bdc3bb6e255, treec1a37e3a455d57e7b5b470406e040c52232b79e0, sole parentbf5f01a. Branch/base unchanged; clean worktree verified. This save changes continuation only; runtime/tests remain focused GREEN atbf5f01a.
+- RED preserved; complete lifecycle audit/zero remaining tested gaps. Query metrics unchanged:Anything170selectors/19166bytes,seasonal53/5747;4groups/4mirrors/max16. V-DR-02 PRESERVED,cache source byte-identical,162preservation tests pass;100lifecycle-focused tests pass. No temporary application instrumentation.
+- Exact next sequence: npm ci --ignore-scripts --no-audit --no-fund; npm ls --all/typecheck/changedlint/casino/Android/Python; VITE_AUTH_ENABLED=true node scripts/browser-build-proof.mjs capture; VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production; complete/verify proof; node scripts/tanstack-security.test.mjs; full npm test in capable runner. Record actual totals without double-counting. Never npm run build or migration. Then protected-scope/privacy and checkpoint before browser.
+- No build/security/full-suite success claimed yet. Later gates:controlled4then boundedexactPreview15/50Anything+localreuse,finalevidence/freeze. Browser/live waits for deterministic/security/build pass. Current READY Previewbf5f01a/dpl_8kcGVXx6MtnbQWqjDYSirRD8Edpy above may be used after exact identity confirmation.
+- Main/production untouched, read-only production identity confirmed Save3. No public-provider calls. SAFE TO RESUME state preserves all evidence and next commands.
+
+SAFE TO RESUME FROM THIS CHECKPOINT
