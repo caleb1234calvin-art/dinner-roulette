@@ -1,0 +1,334 @@
+TAP version 13
+# Subtest: dinner: success settles active UI and clears watchdog before deadline
+ok 1 - dinner: success settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 460.394132
+  type: 'test'
+  ...
+# Subtest: dinner: fallback settles active UI and clears watchdog before deadline
+ok 2 - dinner: fallback settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 5.563795
+  type: 'test'
+  ...
+# Subtest: dinner: error settles active UI and clears watchdog before deadline
+ok 3 - dinner: error settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 3.919421
+  type: 'test'
+  ...
+# Subtest: dinner: AbortError settles active UI and clears watchdog before deadline
+ok 4 - dinner: AbortError settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 3.162825
+  type: 'test'
+  ...
+# Subtest: dinner: never-settling/abort-ignoring RPC exits loading at 25s
+ok 5 - dinner: never-settling/abort-ignoring RPC exits loading at 25s
+  ---
+  duration_ms: 8.229947
+  type: 'test'
+  ...
+# Subtest: dinner: abort-compliant RPC exits loading at 25s
+ok 6 - dinner: abort-compliant RPC exits loading at 25s
+  ---
+  duration_ms: 9.064121
+  type: 'test'
+  ...
+# Subtest: dinner: late post-timeout success cannot overwrite timeout or a successful retry
+ok 7 - dinner: late post-timeout success cannot overwrite timeout or a successful retry
+  ---
+  duration_ms: 13.020247
+  type: 'test'
+  ...
+# Subtest: dinner: late post-timeout rejection cannot overwrite timeout or a successful retry
+ok 8 - dinner: late post-timeout rejection cannot overwrite timeout or a successful retry
+  ---
+  duration_ms: 9.592394
+  type: 'test'
+  ...
+# Subtest: dinner: replacement aborts old success; old settles first
+ok 9 - dinner: replacement aborts old success; old settles first
+  ---
+  duration_ms: 12.003927
+  type: 'test'
+  ...
+# Subtest: dinner: replacement aborts old success; new settles first
+ok 10 - dinner: replacement aborts old success; new settles first
+  ---
+  duration_ms: 9.827694
+  type: 'test'
+  ...
+# Subtest: dinner: replacement aborts old rejection; old settles first
+ok 11 - dinner: replacement aborts old rejection; old settles first
+  ---
+  duration_ms: 16.262854
+  type: 'test'
+  ...
+# Subtest: dinner: replacement aborts old rejection; new settles first
+ok 12 - dinner: replacement aborts old rejection; new settles first
+  ---
+  duration_ms: 10.072287
+  type: 'test'
+  ...
+# Subtest: dinner: unmount aborts/cleans up; success cannot write after unmount
+ok 13 - dinner: unmount aborts/cleans up; success cannot write after unmount
+  ---
+  duration_ms: 6.394558
+  type: 'test'
+  ...
+# Subtest: dinner: unmount aborts/cleans up; rejection cannot write after unmount
+ok 14 - dinner: unmount aborts/cleans up; rejection cannot write after unmount
+  ---
+  duration_ms: 6.230833
+  type: 'test'
+  ...
+# Subtest: dinner: unmount aborts/cleans up; pending cannot write after unmount
+ok 15 - dinner: unmount aborts/cleans up; pending cannot write after unmount
+  ---
+  duration_ms: 6.349511
+  type: 'test'
+  ...
+# Subtest: dinner: radius replacement cancels transport; normal filters/options/pick still work
+ok 16 - dinner: radius replacement cancels transport; normal filters/options/pick still work
+  ---
+  duration_ms: 15.325711
+  type: 'test'
+  ...
+# Subtest: dinner: timeout then retry success remains current when the first RPC finally resolves
+ok 17 - dinner: timeout then retry success remains current when the first RPC finally resolves
+  ---
+  duration_ms: 7.382958
+  type: 'test'
+  ...
+# Subtest: date-night: success settles active UI and clears watchdog before deadline
+ok 18 - date-night: success settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 150.669358
+  type: 'test'
+  ...
+# Subtest: date-night: fallback settles active UI and clears watchdog before deadline
+ok 19 - date-night: fallback settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 5.706674
+  type: 'test'
+  ...
+# Subtest: date-night: error settles active UI and clears watchdog before deadline
+ok 20 - date-night: error settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 6.847196
+  type: 'test'
+  ...
+# Subtest: date-night: AbortError settles active UI and clears watchdog before deadline
+ok 21 - date-night: AbortError settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 3.634055
+  type: 'test'
+  ...
+# Subtest: date-night: never-settling/abort-ignoring RPC exits loading at 25s
+ok 22 - date-night: never-settling/abort-ignoring RPC exits loading at 25s
+  ---
+  duration_ms: 4.267915
+  type: 'test'
+  ...
+# Subtest: date-night: abort-compliant RPC exits loading at 25s
+ok 23 - date-night: abort-compliant RPC exits loading at 25s
+  ---
+  duration_ms: 5.86309
+  type: 'test'
+  ...
+# Subtest: date-night: late post-timeout success cannot overwrite timeout or a successful retry
+ok 24 - date-night: late post-timeout success cannot overwrite timeout or a successful retry
+  ---
+  duration_ms: 6.993655
+  type: 'test'
+  ...
+# Subtest: date-night: late post-timeout rejection cannot overwrite timeout or a successful retry
+ok 25 - date-night: late post-timeout rejection cannot overwrite timeout or a successful retry
+  ---
+  duration_ms: 7.590278
+  type: 'test'
+  ...
+# Subtest: date-night: replacement aborts old success; old settles first
+ok 26 - date-night: replacement aborts old success; old settles first
+  ---
+  duration_ms: 7.919391
+  type: 'test'
+  ...
+# Subtest: date-night: replacement aborts old success; new settles first
+ok 27 - date-night: replacement aborts old success; new settles first
+  ---
+  duration_ms: 6.942094
+  type: 'test'
+  ...
+# Subtest: date-night: replacement aborts old rejection; old settles first
+ok 28 - date-night: replacement aborts old rejection; old settles first
+  ---
+  duration_ms: 8.255089
+  type: 'test'
+  ...
+# Subtest: date-night: replacement aborts old rejection; new settles first
+ok 29 - date-night: replacement aborts old rejection; new settles first
+  ---
+  duration_ms: 7.997244
+  type: 'test'
+  ...
+# Subtest: date-night: unmount aborts/cleans up; success cannot write after unmount
+ok 30 - date-night: unmount aborts/cleans up; success cannot write after unmount
+  ---
+  duration_ms: 7.369101
+  type: 'test'
+  ...
+# Subtest: date-night: unmount aborts/cleans up; rejection cannot write after unmount
+ok 31 - date-night: unmount aborts/cleans up; rejection cannot write after unmount
+  ---
+  duration_ms: 6.106008
+  type: 'test'
+  ...
+# Subtest: date-night: unmount aborts/cleans up; pending cannot write after unmount
+ok 32 - date-night: unmount aborts/cleans up; pending cannot write after unmount
+  ---
+  duration_ms: 6.512912
+  type: 'test'
+  ...
+# Subtest: date-night: radius replacement cancels transport; normal filters/options/pick still work
+ok 33 - date-night: radius replacement cancels transport; normal filters/options/pick still work
+  ---
+  duration_ms: 11.38217
+  type: 'test'
+  ...
+# Subtest: date-night: timeout then retry success remains current when the first RPC finally resolves
+ok 34 - date-night: timeout then retry success remains current when the first RPC finally resolves
+  ---
+  duration_ms: 8.850513
+  type: 'test'
+  ...
+# Subtest: nightlife: success settles active UI and clears watchdog before deadline
+ok 35 - nightlife: success settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 57.626708
+  type: 'test'
+  ...
+# Subtest: nightlife: fallback settles active UI and clears watchdog before deadline
+ok 36 - nightlife: fallback settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 2.733267
+  type: 'test'
+  ...
+# Subtest: nightlife: error settles active UI and clears watchdog before deadline
+ok 37 - nightlife: error settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 2.26983
+  type: 'test'
+  ...
+# Subtest: nightlife: AbortError settles active UI and clears watchdog before deadline
+ok 38 - nightlife: AbortError settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 1.705463
+  type: 'test'
+  ...
+# Subtest: nightlife: never-settling/abort-ignoring RPC exits loading at 25s
+ok 39 - nightlife: never-settling/abort-ignoring RPC exits loading at 25s
+  ---
+  duration_ms: 2.719857
+  type: 'test'
+  ...
+# Subtest: nightlife: abort-compliant RPC exits loading at 25s
+ok 40 - nightlife: abort-compliant RPC exits loading at 25s
+  ---
+  duration_ms: 2.862847
+  type: 'test'
+  ...
+# Subtest: nightlife: late post-timeout success cannot overwrite timeout or a successful retry
+ok 41 - nightlife: late post-timeout success cannot overwrite timeout or a successful retry
+  ---
+  duration_ms: 3.560188
+  type: 'test'
+  ...
+# Subtest: nightlife: late post-timeout rejection cannot overwrite timeout or a successful retry
+ok 42 - nightlife: late post-timeout rejection cannot overwrite timeout or a successful retry
+  ---
+  duration_ms: 4.601201
+  type: 'test'
+  ...
+# Subtest: nightlife: replacement aborts old success; old settles first
+ok 43 - nightlife: replacement aborts old success; old settles first
+  ---
+  duration_ms: 9.489825
+  type: 'test'
+  ...
+# Subtest: nightlife: replacement aborts old success; new settles first
+ok 44 - nightlife: replacement aborts old success; new settles first
+  ---
+  duration_ms: 2.047661
+  type: 'test'
+  ...
+# Subtest: nightlife: replacement aborts old rejection; old settles first
+ok 45 - nightlife: replacement aborts old rejection; old settles first
+  ---
+  duration_ms: 2.131282
+  type: 'test'
+  ...
+# Subtest: nightlife: replacement aborts old rejection; new settles first
+ok 46 - nightlife: replacement aborts old rejection; new settles first
+  ---
+  duration_ms: 2.15212
+  type: 'test'
+  ...
+# Subtest: nightlife: unmount aborts/cleans up; success cannot write after unmount
+ok 47 - nightlife: unmount aborts/cleans up; success cannot write after unmount
+  ---
+  duration_ms: 1.673219
+  type: 'test'
+  ...
+# Subtest: nightlife: unmount aborts/cleans up; rejection cannot write after unmount
+ok 48 - nightlife: unmount aborts/cleans up; rejection cannot write after unmount
+  ---
+  duration_ms: 1.481034
+  type: 'test'
+  ...
+# Subtest: nightlife: unmount aborts/cleans up; pending cannot write after unmount
+ok 49 - nightlife: unmount aborts/cleans up; pending cannot write after unmount
+  ---
+  duration_ms: 1.345666
+  type: 'test'
+  ...
+# Subtest: nightlife: radius replacement cancels transport; normal filters/options/pick still work
+ok 50 - nightlife: radius replacement cancels transport; normal filters/options/pick still work
+  ---
+  duration_ms: 2.744787
+  type: 'test'
+  ...
+# Subtest: nightlife: timeout then retry success remains current when the first RPC finally resolves
+ok 51 - nightlife: timeout then retry success remains current when the first RPC finally resolves
+  ---
+  duration_ms: 1.402331
+  type: 'test'
+  ...
+# Subtest: Date Night: seasonal dependency replacement aborts the previous request
+ok 52 - Date Night: seasonal dependency replacement aborts the previous request
+  ---
+  duration_ms: 5.340019
+  type: 'test'
+  ...
+# Subtest: pinned TanStack RPC forwards the exact controller signal to fetch and settles on abort
+ok 53 - pinned TanStack RPC forwards the exact controller signal to fetch and settles on abort
+  ---
+  duration_ms: 61.371358
+  type: 'test'
+  ...
+# Subtest: shared lifecycle also settles synchronous RPC throws without leaving a watchdog
+ok 54 - shared lifecycle also settles synchronous RPC throws without leaving a watchdog
+  ---
+  duration_ms: 6.184976
+  type: 'test'
+  ...
+1..54
+# tests 54
+# suites 0
+# pass 54
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1056.752152

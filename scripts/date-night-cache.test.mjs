@@ -303,6 +303,27 @@ test("V-DR-02: partial success supersedes only its successful categories", () =>
   assert.deepEqual(cache.read(query(["movies"])).response.venues, []);
 });
 
+test("V-DR-02: an entry with all coverage superseded retains terminal identity evidence until TTL", () => {
+  let now = 0;
+  const cache = createDateNightDiscoveryCache({ now: () => now, ttlMs: 100 });
+  const active = venue("cross-category-identity", ["corn-maze", "movies"]);
+  const corn = query(["corn-maze"]), movies = query(["movies"]);
+  cache.store(corn, response(corn, [{ ...active, lifecycle: "permanently-closed" }]));
+  now = 10;
+  cache.store(corn, response(corn, []));
+  now = 20;
+  cache.store(movies, response(movies, [active]));
+  const protectedHit = cache.read(movies);
+  assert.equal(protectedHit.response.venues.length, 1);
+  assert.equal(protectedHit.response.venues[0].lifecycle, "permanently-closed",
+    "superseding the negative entry's last category must not discard its identity evidence");
+  assert.deepEqual(protectedHit.response.discovery.groups.flatMap((group) => group.activityTypes), ["movies"]);
+  assert.equal(cache.read(corn).response.discovery.groups[0].originOutcome, "succeeded-empty");
+  now = 100;
+  assert.equal(cache.read(movies).response.venues[0].lifecycle, undefined,
+    "retained negative evidence follows its original TTL, not the replacement acquisition TTL");
+});
+
 test("LRU entry and aggregate raw-venue caps evict whole entries without truncated coverage", () => {
   const cache = createDateNightDiscoveryCache({ maxEntries: 2, maxVenues: 3 });
   const a = query(["movies"]), b = query(["movies"], { lat: 38 }), c = query(["movies"], { lat: 39 });

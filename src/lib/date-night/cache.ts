@@ -171,6 +171,19 @@ export function createDateNightDiscoveryCache({
         ...group, activityTypes: group.activityTypes.filter((type) => requested.includes(type)),
       })).filter((group) => group.activityTypes.length > 0);
       if (!groups.length) return false;
+      // Successful coverage retires older authority before ordinary LRU eviction.
+      // Otherwise evicting a newer empty snapshot could restore an older superset.
+      // Invalidate across radii for the same signature: a narrower refresh may
+      // require a later wider refetch, but can never make old coverage fresh again.
+      const superseded = new Set(groups.flatMap((group) => group.activityTypes));
+      for (const entry of entries) {
+        if (!sameSignature(entry, query)) continue;
+        entry.groups = entry.groups.map((group) => ({
+          ...group, activityTypes: group.activityTypes.filter((type) => !superseded.has(type)),
+        })).filter((group) => group.activityTypes.length > 0);
+        // Raw identities stay intact for any still-covered category; even entries
+        // with no coverage retain protective negative evidence until TTL/eviction.
+      }
       const admitted = ++sequence;
       entries.push({ acquisition: { ...query, activityTypes: [...query.activityTypes] },
         venues: response.venues, groups, acquiredAt: at, admitted, used: admitted });

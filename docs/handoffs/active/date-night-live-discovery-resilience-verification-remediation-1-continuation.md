@@ -33,3 +33,15 @@ SAFE TO RESUME FROM THIS CHECKPOINT
 - Main/production untouched. No browser/live acceptance or public-provider acquisitions. No migration/deployment/settings changes. Worktree contains only the scoped lifecycle/tests/evidence changes for this save.
 
 SAFE TO RESUME FROM THIS CHECKPOINT
+
+## Save 3 — BOTH BLOCKERS FOCUSED GREEN
+
+- Latest pushed checkpoint: `9b57e9d5a69fe0b6b1123c7ca37bec45907581f7`, tree `1ece861860d0934bd6d469bbacc6a3774464c2cd`, sole parent `37528081f01fea9224d2bcde04f41c6f0333f95a`. Same branch and failed-candidate base; this save is its direct child.
+- V-DR-02 changes only `cache.ts`: successful admission removes newly covered categories from older same-location/season/semantic-version entries before normal eviction. Across all radii this conservatively requires refetch instead of claiming stale/wider coverage. No tombstone collection, pinned entries or increased bounds.
+- Full raw identity/classification/evidence, original TTL and unrelated successful categories remain unchanged. Entries with no positive coverage still contribute lifecycle-negative evidence until their original TTL/normal eviction. Failed/fallback/cancelled/late/cache-assembly/oversized responses cannot establish supersession.
+- Cache suite 46/46 PASS (20 new regressions); client lifecycle 54/54 PASS; typecheck and cache/test lint PASS; diff-check PASS. Original cache RED37pass/8fail evidence remains untouched. New group-empty evidence test proves negative preservation and original TTL.
+- Changed in this save: cache source/test, cache GREEN/client/typecheck/lint evidence and continuation. Lifecycle source remains its published GREEN state.
+- Next: publish separate pre-validation save, then all required focused/full/security/preservation/build gates. Safe build uses direct Vite through environment wrapper with auth enabled; never migration-chaining npm build. Compiled transport/full tests follow fresh build. Browser/Preview only after deterministic/build gates pass.
+- Main/production untouched; no merge/promotion/configuration/migration/native changes. No live-provider requests or browser acceptance yet. No temporary runtime instrumentation.
+
+SAFE TO RESUME FROM THIS CHECKPOINT
