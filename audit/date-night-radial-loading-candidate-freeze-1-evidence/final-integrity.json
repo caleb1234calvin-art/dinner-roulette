@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-10-03T22:52:47.065474+00:00",
+  "base": "f94484e920ed18b93b54cbb5f0e48d1845fadb51",
+  "baseIdentityVerified": true,
+  "directBranchBaseVerified": true,
+  "main": "4d937e58d2a65567b54ac5271915bc85b498898b",
+  "postMainMergeCount": 0,
+  "initialWorktreeClean": true,
+  "productPathsByteIdentical": 385,
+  "allOtherBasePathsUnchanged": 1231,
+  "allHistoricalAuditPathsUnchanged": 720,
+  "exactHarnessCorrection": true,
+  "oldContinuityBytesPreserved": true,
+  "temporaryAcceptanceWorkflowAbsent": true,
+  "existingWorkflowsUnchanged": true,
+  "allowedPaths": [
+    "AI_CONTINUITY.md",
+    "audit/date-night-radial-loading-candidate-freeze-1-2026-10-03.json",
+    "audit/date-night-radial-loading-candidate-freeze-1-2026-10-03.md",
+    "audit/date-night-radial-loading-candidate-freeze-1-evidence/artifact-manifest.json",
+    "audit/date-night-radial-loading-candidate-freeze-1-evidence/build-proof.json",
+    "audit/date-night-radial-loading-candidate-freeze-1-evidence/final-integrity.json",
+    "audit/date-night-radial-loading-candidate-freeze-1-evidence/fresh-validation.json",
+    "audit/date-night-radial-loading-candidate-freeze-1-evidence/live-artifact-11287166057.zip",
+    "audit/date-night-radial-loading-candidate-freeze-1-evidence/live-partial-radial.png",
+    "audit/date-night-radial-loading-candidate-freeze-1-evidence/live-verdict.json",
+    "audit/date-night-radial-loading-candidate-freeze-1-evidence/platform-readbacks.json",
+    "docs/handoffs/active/date-night-radial-loading-1-continuation.md",
+    "docs/handoffs/active/date-night-radial-loading-browser-acceptance-remediation-1-continuation.md",
+    "docs/handoffs/active/date-night-radial-loading-candidate-freeze-1.md",
+    "docs/handoffs/active/date-night-radial-loading-live-acceptance-remediation-1.md",
+    "scripts/date-night-radial-live.mjs"
+  ],
+  "secretScan": {
+    "patterns": [
+      "private-key",
+      "github-token",
+      "aws-access-key",
+      "credential-assignment",
+      "signed-artifact-url"
+    ],
+    "findings": [],
+    "review": "Added/changed text only; original artifact ZIP integrity and masked screenshot reviewed."
+  },
+  "generatedJunkInCandidate": [],
+  "artifactDigestAndMembersVerified": true,
+  "noNewPublicProviderTraffic": {
+    "rpc": 0,
+    "physicalAttempts": 0,
+    "basis": "No browser/live harness/application navigation/dispatch; current branch does not match existing live workflow triggers."
+  },
+  "freshBuildInputsMatchAcceptedLiveRun": true,
+  "selfTests": "No dedicated harness self-test present; exact accepted patch, syntax/lint and retained live verdict verified.",
+  "rawBlobComparisonNote": "Initial raw Android gradlew.bat mismatch was required CRLF checkout rendering; accepted/base blobs and both checkout bytes identical. No runtime drift.",
+  "publication": "Final SHA/tree/sole parent, remote match and clean worktree are verified after creating the one commit; no self-referential amend."
+}

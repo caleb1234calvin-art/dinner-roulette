@@ -1,0 +1,42 @@
+{
+  "artifactId": 11287166057,
+  "runId": 37158788361,
+  "jobId": 111307641260,
+  "workflowHead": "761832d58c75f9cda857886ead908e58f4d02a56",
+  "expectedArchiveSha256": "85c68bb9c95c99d21593f2b1e2013f96bc6613c6bb0d478cbc1a893e5f8a8b34",
+  "archiveDigestVerified": true,
+  "screenshotVisuallyReviewed": true,
+  "screenshotObservation": "53 activities; enabled Pick; selected maximum 50 miles; truthful continuous 15-mile partial coverage; no visible horizontal overflow; location region masked by original harness.",
+  "files": [
+    {
+      "path": "build-proof.json",
+      "bytes": 392,
+      "sha256": "cc356493e7732c0846aca3abf7a43acc63328ce790c4ec07eead6f11caf98381"
+    },
+    {
+      "path": "fresh-validation.json",
+      "bytes": 13106,
+      "sha256": "80fe47b63a5b18c0811f020828545f0cdc66e3f9de15708323159e04b552b599"
+    },
+    {
+      "path": "live-artifact-11287166057.zip",
+      "bytes": 333860,
+      "sha256": "85c68bb9c95c99d21593f2b1e2013f96bc6613c6bb0d478cbc1a893e5f8a8b34"
+    },
+    {
+      "path": "live-partial-radial.png",
+      "bytes": 334792,
+      "sha256": "5c34e03c681dcd8c790c29273146dd67a84081b38613c512429d86377c13f80b"
+    },
+    {
+      "path": "live-verdict.json",
+      "bytes": 4493,
+      "sha256": "549695fa339ad2bcec00231880fdbdd5e975b95102ac67c0510cd44248e02a25"
+    },
+    {
+      "path": "platform-readbacks.json",
+      "bytes": 6809,
+      "sha256": "b3ab74cb2f4d36d0205d0be0ef23c713deb23a8ac4a7206222da57320a88848d"
+    }
+  ]
+}

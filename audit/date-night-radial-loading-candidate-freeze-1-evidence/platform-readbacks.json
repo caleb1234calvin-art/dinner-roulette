@@ -1,0 +1,142 @@
+{
+  "retrievedAt": "2026-10-03T22:45:14.364Z",
+  "artifact": {
+    "artifacts": [
+      {
+        "id": 11287166057,
+        "name": "radial-live-acceptance-remediation",
+        "size_in_bytes": 333860,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/11287166057",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/11287166057/zip",
+        "expired": false,
+        "created_at": "2026-10-03T22:33:38Z",
+        "expires_at": "2026-10-10T22:33:37Z",
+        "updated_at": "2026-10-03T22:33:38Z",
+        "digest": "sha256:85c68bb9c95c99d21593f2b1e2013f96bc6613c6bb0d478cbc1a893e5f8a8b34",
+        "workflow_run": {
+          "id": 37158788361,
+          "repository_id": 1358593705,
+          "head_repository_id": 1358593705,
+          "head_branch": "acceptance/date-night-radial-loading-live-acceptance-remediation-1",
+          "head_sha": "761832d58c75f9cda857886ead908e58f4d02a56"
+        }
+      }
+    ]
+  },
+  "jobs": {
+    "jobs": [
+      {
+        "id": 111307641260,
+        "name": "Bounded radial live acceptance",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 37158788361,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Checkout acceptance snapshot",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Setup Node 22",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Install locked dependencies without lifecycle scripts",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Install Chromium for Playwright",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Resolve Chromium executable",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Capture browser build proof",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Safe auth-enabled production build",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Complete and verify browser build proof",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Run one bounded exact-Preview live acceptance",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Upload live evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11
+          },
+          {
+            "name": "Post Setup Node 22",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 21
+          },
+          {
+            "name": "Post Checkout acceptance snapshot",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 22
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 23
+          }
+        ]
+      }
+    ]
+  },
+  "preview": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_C692yUYPVQW4UbTKRwUzA1eMyj48\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-jdys9liwl-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1791065037071,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"fix/date-night-radial-loading-browser-acceptance-remediation-1\",\n        \"githubCommitSha\": \"abaaf680e9e54838e7002ce79f04166c4ebefedf\",\n        \"githubCommitMessage\": \"test(date-night): preserve slider RED GREEN and rerun controlled radial acceptance\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"dinner-roulette-git-fix-date-night-radial-l-ece8f9-minions-9e2c.vercel.app\"\n      ],\n      \"target\": null,\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1791065038296,\n      \"ready\": 1791065053044,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+      }
+    ],
+    "isError": false
+  },
+  "production": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-o4fv4tqev-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1790985175870,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"4d937e58d2a65567b54ac5271915bc85b498898b\",\n        \"githubCommitMessage\": \"Fix Halloween notice mobile scroll clearance\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"pickforus.app\",\n        \"dinner-roulette-chi.vercel.app\",\n        \"www.pickforus.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1790985177037,\n      \"ready\": 1790985190558,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+      }
+    ],
+    "isError": false
+  }
+}
