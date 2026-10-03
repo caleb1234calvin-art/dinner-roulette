@@ -1,0 +1,40 @@
+{
+  "testedAt": "2026-10-03T00:49:12.660Z",
+  "previewOrigin": "https://dinner-roulette-mmfo9oxhy-minions-9e2c.vercel.app",
+  "previewDeploymentId": "dpl_JBCV767umF9iMBsVoRQQMJQrBkDc",
+  "candidate": "966447ed9d43157876f1a83293148e1e00ca44ce",
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "81b6c351ef88bb112b9ca831d44594bb79de1f460221f63ff823ba3e3964dfae",
+      "files": 411
+    },
+    "startedAt": "2026-10-03T00:46:23.937Z",
+    "output": {
+      "sha256": "7a6167688d6b0364e0c8aca9e7e8384f49792a8f384c2ad60e8a02fa3ec18a42",
+      "files": 194
+    },
+    "completedAt": "2026-10-03T00:46:27.500Z"
+  },
+  "rows": [],
+  "rpc": [],
+  "localOnly": [],
+  "pageErrors": [],
+  "errors": [
+    {
+      "phase": "15:anything:off",
+      "check": "startup",
+      "kind": "environment-or-browser-error"
+    }
+  ],
+  "passed": false,
+  "liveContributionObserved": false,
+  "limitations": [
+    "Venue counts are observations, not invariants.",
+    "No duplicate real request is made to decode captured RPC data.",
+    "Source summaries describe transport responses; UI may combine cached coverage.",
+    "Successful provider recall cannot be established when every live attempt fails."
+  ]
+}

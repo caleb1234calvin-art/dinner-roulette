@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "testedAt": "2026-10-03T00:48:38.595Z",
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "81b6c351ef88bb112b9ca831d44594bb79de1f460221f63ff823ba3e3964dfae",
+      "files": 411
+    },
+    "startedAt": "2026-10-03T00:46:23.937Z",
+    "output": {
+      "sha256": "7a6167688d6b0364e0c8aca9e7e8384f49792a8f384c2ad60e8a02fa3ec18a42",
+      "files": 194
+    },
+    "completedAt": "2026-10-03T00:46:27.500Z"
+  },
+  "mode": "Production-built local Preview; real browser and TanStack RPC; disposable synthetic provider failures. No live public-provider calls.",
+  "checks": [
+    "second-mirror: actual browser/RPC, bounded spinner, truthful source, expected provider timing/cancellation, local Open Now reuse, mobile layout",
+    "third-mirror: actual browser/RPC, bounded spinner, truthful source, expected provider timing/cancellation, local Open Now reuse, mobile layout",
+    "partial-groups: actual browser/RPC, bounded spinner, truthful source, expected provider timing/cancellation, local Open Now reuse, mobile layout",
+    "all-stall: actual browser/RPC, bounded spinner, truthful source, expected provider timing/cancellation, local Open Now reuse, mobile layout"
+  ],
+  "scenarios": [
+    {
+      "scenario": "second-mirror",
+      "passed": true,
+      "visibleLoadingMs": 1806,
+      "providerDurationMs": 1583,
+      "source": "merged",
+      "partial": false,
+      "attempts": 2,
+      "seasonalOffsets": [
+        {
+          "mirror": 1,
+          "offsetMs": 0
+        },
+        {
+          "mirror": 2,
+          "offsetMs": 1500
+        }
+      ],
+      "noOpenNowRefetch": true,
+      "cancelledLosers": 1
+    },
+    {
+      "scenario": "third-mirror",
+      "passed": true,
+      "visibleLoadingMs": 3319,
+      "providerDurationMs": 3080,
+      "source": "merged",
+      "partial": false,
+      "attempts": 3,
+      "seasonalOffsets": [
+        {
+          "mirror": 1,
+          "offsetMs": 0
+        },
+        {
+          "mirror": 2,
+          "offsetMs": 1500
+        },
+        {
+          "mirror": 3,
+          "offsetMs": 3001
+        }
+      ],
+      "noOpenNowRefetch": true,
+      "cancelledLosers": 2
+    },
+    {
+      "scenario": "partial-groups",
+      "passed": true,
+      "visibleLoadingMs": 12454,
+      "providerDurationMs": 12541,
+      "source": "merged",
+      "partial": true,
+      "attempts": 5,
+      "seasonalOffsets": [
+        {
+          "mirror": 1,
+          "offsetMs": 0
+        }
+      ],
+      "noOpenNowRefetch": true,
+      "cancelledLosers": 0
+    },
+    {
+      "scenario": "all-stall",
+      "passed": true,
+      "visibleLoadingMs": 12434,
+      "providerDurationMs": 12506,
+      "source": "fallback",
+      "partial": false,
+      "attempts": 16,
+      "seasonalOffsets": [
+        {
+          "mirror": 1,
+          "offsetMs": 0
+        },
+        {
+          "mirror": 2,
+          "offsetMs": 1498
+        },
+        {
+          "mirror": 3,
+          "offsetMs": 3000
+        },
+        {
+          "mirror": 4,
+          "offsetMs": 4500
+        }
+      ],
+      "noOpenNowRefetch": true,
+      "cancelledLosers": 0
+    }
+  ],
+  "errors": []
+}

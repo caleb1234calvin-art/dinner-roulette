@@ -165,4 +165,16 @@ Migration-free production build later: `VITE_AUTH_ENABLED=true node scripts/with
 - Production/main untouched: production still `dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL` at frozen base. No merge/promotion/deployment command/configuration/database change.
 - Resume status: DETERMINISTIC VALIDATION PASSED — PREVIEW/BROWSER/LIVE ACCEPTANCE PENDING.
 
-SAFE TO RESUME FROM THIS CHECKPOINT
+## Save 7 — controlled browser acceptance passed; Preview access diagnosis
+
+- Repository/branch/frozen base unchanged. Latest pushed checkpoint `966447ed9d43157876f1a83293148e1e00ca44ce`, tree `f3e568607d8cc32096b3c91f0d1ae8094c25635e`, sole parent `d6ca8517144bd1e1e16d8479ff4ada221059e122`. This save is its direct sole-parent descendant; no merge.
+- Completed0–5 and controlled M6 scenarios A–D PASS4/4 against auth-enabled production-built local Preview, real Chromium/TanStack RPC, synthetic public-provider failures only. Provider/visible-spinner durations: second winner1583/1806ms, third3080/3319ms, partial12541/12454ms, all-stall12506/12434ms. Mirror2/3 started1500/3001ms; losers aborted. Partial seasonal success survived parks failure; all4groups16attempt outage showed honest fallback. Open Now no-refetch, selectable live fixture, no page errors/horizontal overflow. Owned local server/browser cleaned up.
+- Actual Preview attempt1 targeted verified READY non-production `dpl_JBCV767umF9iMBsVoRQQMJQrBkDc`, https://dinner-roulette-mmfo9oxhy-minions-9e2c.vercel.app, exact966447e. Failed during initial browser navigation/environment before ANY Date Night RPC:0rows/0requests. No live-provider success/failure claim from this attempt. Privacy-safe failure log lacks network reason, so next step is a navigation-only diagnosis with no provider calls.
+- Changed this save: controlled JSON/events/log, failed live-attempt JSON/log and continuation only. Screenshots remain in `/tmp/pfu-date-night-controlled/` for final evidence transfer; no temporary application instrumentation. Application/harness code unchanged; clean tree before evidence collection, coherent evidence-only state for publication.
+- Exact next action: diagnose Preview navigation using fresh browser with JavaScript disabled, record only bounded network error codes/status. If harness needs environment flags or diagnostics, amend harness only, validate/rebuild fingerprint, then rerun actual12-row matrix. Do not repeatedly retry public providers blindly.
+- Resume: inspect M6 evidence; `git status --short`; `VITE_AUTH_ENABLED=true node scripts/browser-build-proof.mjs verify`; same real Preview command from Save6 with deployment/URL above. Preserve each materially changed diagnostic attempt.
+- Blocker: real browser navigation failed before RPC; root cause not yet known. Remaining M6 real matrix and M7 final freeze pending. All deterministic/security/native/build gates remain passed;20s/25s unchanged.
+- Main/production untouched. No merge/promotion/migration/settings change. Non-production automatic Previews only. New live-provider observations: none yet.
+- Resume status: CONTROLLED BROWSER PASSED — REAL PREVIEW ACCESS DIAGNOSIS REQUIRED.
+
+CHECKPOINT INCOMPLETE — READ BLOCKERS BEFORE CONTINUING
