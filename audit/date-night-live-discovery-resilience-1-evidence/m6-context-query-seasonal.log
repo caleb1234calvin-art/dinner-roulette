@@ -1,0 +1,290 @@
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 4,
+  successfulGroups: 4,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'entertainment',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'outdoor',
+      outcome: 'empty',
+      durationMs: 0,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    },
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'fallback',
+  durationMs: 0,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 0,
+  failedGroups: 1,
+  partial: false,
+  groups: [ { group: 'seasonal', outcome: 'failed', durationMs: 0 } ],
+  attempts: [
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'seasonal',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'seasonal',
+      mirror: 3,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'seasonal',
+      mirror: 4,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 3,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'entertainment',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'outdoor',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    }
+  ]
+}
+✔ Exeter's actual theme-park record is acquired by the real seasonal query and reaches the eligible pool (44.546981ms)
+✔ precise activity evidence admits corn, pumpkin and haunted trail without admitting generic places (10.1754ms)
+✔ same identity preserves C/P, provenance, stable ID and representative metadata in either provider order (5.717508ms)
+✔ structured lifecycle cannot survive eligibility or be resurrected by an active duplicate (2.617703ms)
+✔ all availability states share one OFF/ON policy, including expiry and next-year revalidation (1.895618ms)
+✔ all seven seasonal selections preserve union and the radius boundary (9.490373ms)
+✔ saved-only successful sparse coverage, missing categories and provider outage remain distinct (4.778982ms)
+✔ per-category provenance never labels a saved haunt as live because its ordinary park duplicate is live (2.996828ms)
+✔ ordinary Date Night and seasonal toggle still work internationally; unknown hours fail strict ON (2.493072ms)
+✔ Halloween caution: live loading/settlement retains controls, counts and selections (260.998229ms)
+✔ Halloween caution: merged loading/settlement retains controls, counts and selections (175.860665ms)
+✔ Halloween caution: fallback loading/settlement retains controls, counts and selections (140.837596ms)
+✔ ordinary Date Night caution absent: seasonal toggle off; controls/count/selection remain (137.015653ms)
+✔ ordinary Date Night caution absent: outside Halloween season; controls/count/selection remain (133.360067ms)
+✔ dinner: Halloween caution remains absent during loading and after settlement (53.725821ms)
+✔ nightlife: Halloween caution remains absent during loading and after settlement (16.438759ms)
+✔ actual component: handler → count/options/pick/plan and all seven category combinations (181.781882ms)
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 4,
+  successfulGroups: 4,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'entertainment',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'outdoor',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 2,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    }
+  ]
+}
+✔ actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dependent pool/overlay refresh (146.534956ms)
+✔ actual component displays schedule uncertainty distinctly for live weekly-hours-only venues (133.292149ms)
+✔ V-F03-01 actual component: not-operating stays excluded before and after revalidation expiry (162.475426ms)
+✔ V-F03-01 actual component: an expired negative cannot fill a plan until stored positive evidence replaces it (377.766708ms)
+✔ V-F03-01 control: positive calendar expiry remains uncertain OFF and refreshes ON result/options/plan (129.73968ms)
+✔ real clock hook refreshes at minute boundaries and focus/visibility resume, then cleans up (11.601351ms)
+✔ retained regional provider captures replay through the new handler without generic-maze false positives (10099.305361ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12287.105537

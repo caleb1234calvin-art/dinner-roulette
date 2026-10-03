@@ -238,4 +238,16 @@ Migration-free production build later: `VITE_AUTH_ENABLED=true node scripts/with
 - Blockers: seasonal query still misses bounded execution window;50mi/fullmatrix unresolved. Main/production untouched, no migrations/settings/promotion/merge. Tested Preview `dpl_DrhrHmWGmYaV4wAt99skKzUBVtNm`, https://dinner-roulette-epqwevkv8-minions-9e2c.vercel.app, exactf050854.20s/25s preserved.
 - Resume status: PARTIAL LIVE/CLIENT REUSE VERIFIED — SEASONAL CONTEXT QUERY OPTIMIZATION REQUIRED.
 
+## Save 13 — bounded seasonal context query implemented
+
+- Repository/branch/frozen base unchanged. Latest pushed `668bd9b50e83b60a457a778f1d311a8e58b7b195`, tree `e9c96e9a7ff19b96487ffd962528f95a8e6b365d`, sole parent `50e677f9262d5ff9069aefc65a6b86188ed73738`. This save directly descends from it.
+- Implemented bounded eight-context prelude into `.seasonal_context`, outside final output union; four exact prose filters consume it. Precise attraction/agricultural and lifecycle selectors stay independently radius-bounded. No all-elements scan or generic context passthrough. Haunted statements32→20, allseasonal57→45, prose scans24→4. Same categories/groups/coverage semantics/mirror bounds/deadlines.
+- Strict fixture interpreter now separates input membership from output and rejects missing/unknown sets, unbounded selectors and unfiltered context leakage. Retained6167equivalence comparisons, added direct context-only and lifecycle-independent guards. Query22/22, seasonal24/24, typecheck, three-filelint, diffcheck PASS. Independent read-only cache/seasonal review found no blocker; real speed remains unproven.
+- Changed only `provider-evidence.ts`, `query-plan.ts`, `date-night-query-plan.test.mjs`, focused logs, continuation. Worktree coherent for checkpoint; no other source edits or temporary application instrumentation.
+- Next action: safe auth build/proof and fullsuite on this exactsource; push results; then one15mi Anything pilot against exactnew Preview. If seasonal succeeds, proceed full15/50matrix. If not, preserve measured outcome and investigate before repeating any public load.
+- Resume commands: query/seasonal/typecheck as above; capture/build/complete safe sequence; `npm test`; livepilot flags from Save11 with newlyverified deployment ID/URL/commit. No `npm run build`/migration.
+- Blockers/unresolved: real seasonal throughput and50mi/fullmatrix still pending. Previous exact-key pilot partialonly result preserved.607passes applies to prior source; fresh complete suite pending this refactor.20s provider/25s watchdog/8s attempts unchanged.
+- Main/production untouched; automatic non-production Preview only. Last measured publicproviderdata remains f050854/dpl_DrhrHmWGmYaV4wAt99skKzUBVtNm; no new probes during implementation. No migration/settings/merge/promotion.
+- Resume status: BOUNDED CONTEXT QUERY IMPLEMENTED — FULL VALIDATION AND PILOT PENDING.
+
 CHECKPOINT INCOMPLETE — READ BLOCKERS BEFORE CONTINUING

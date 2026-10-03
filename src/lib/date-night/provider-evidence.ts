@@ -7,6 +7,24 @@ const SEASONAL_SELECTORS: Partial<Record<ConcreteDateNightType, { values: string
   "pumpkin-patch": { values: "pumpkin_patch", words: "pumpkin[ _-]+(patch|picking)" },
   "haunted-house": { values: "haunted_house|haunted_trail|haunted_forest|haunted_attraction", words: "haunted[ _-]+(house|trail|forest|attraction)" },
 };
+
+/** Materialize only classifier-supported, spatially bounded contexts before
+ * applying prose predicates. This set is input to the final union, never output
+ * itself: a generic farm, maze or park is not a seasonal result. */
+export function seasonalQueryPrelude(around: string): string {
+  const contexts = [
+    '["leisure"="maze"]',
+    '["attraction"="maze"]',
+    '["tourism"="theme_park"]',
+    '["tourism"="attraction"]',
+    '["tourism"="farm"]',
+    '["leisure"="park"]',
+    '["landuse"="farmyard"]',
+    '["landuse"="farmland"]',
+  ];
+  return `(\n  ${contexts.map((context) => `nwr${context}${around};`).join("\n  ")}\n)->.seasonal_context;\n`;
+}
+
 export function seasonalQueryClauses(around: string, selected: readonly ConcreteDateNightType[] = ["haunted-house", "corn-maze", "pumpkin-patch"]): string {
   const selectors = selected.flatMap((type) => SEASONAL_SELECTORS[type] ? [SEASONAL_SELECTORS[type]!] : []);
   if (!selectors.length) return "";
@@ -14,22 +32,12 @@ export function seasonalQueryClauses(around: string, selected: readonly Concrete
     `["attraction"~"^(${selectors.map((selector) => selector.values).join("|")})$"]`,
     ...(selected.includes("corn-maze") ? ['["leisure"="maze"]', '["attraction"="maze"]'].flatMap((maze) =>
       [`${maze}["maze:type"~"^(corn|maize)$"]`, `${maze}["crop"~"^(corn|maize)$"]`]) : []),
-    ...[
-      '["leisure"="maze"]',
-      '["attraction"="maze"]',
-      '["tourism"="theme_park"]',
-      '["tourism"~"^(attraction|farm)$"]',
-      '["leisure"="park"]',
-      '["landuse"~"^(farmyard|farmland)$"]',
-    ].flatMap(
-      (context) =>
-        // These keys are finite and classifier-owned. Fixed keys avoid regex-key
-        // lookups while preserving case-insensitive matching of their values.
-        ["name", "description", "seasonal:description", "seasonal:activities"].map((key) =>
-          `${context}["${key}"~"${selectors.map((selector) => selector.words).join("|")}",i]`),
-    ),
   ];
-  return clauses.map((clause) => `nwr${clause}${around};`).join("\n  ");
+  // Exact classifier-owned keys retain case-insensitive values. The named set
+  // restricts each prose filter to the context pool acquired in the prelude.
+  const prose = ["name", "description", "seasonal:description", "seasonal:activities"].map((key) =>
+    `nwr.seasonal_context["${key}"~"${selectors.map((selector) => selector.words).join("|")}",i];`);
+  return [...clauses.map((clause) => `nwr${clause}${around};`), ...prose].join("\n  ");
 }
 
 /** Negative evidence must remain discoverable when active tags were removed.

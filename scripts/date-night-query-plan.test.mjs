@@ -32,12 +32,59 @@ function acquisitionClauses(query) {
 }
 
 function acquired(query, tags) {
-  return acquisitionClauses(query).some((line) => {
-    const selectors = line.slice(3, line.indexOf("(around:"));
+  const lines = query.split("\n").map((line) => line.trim()).filter(Boolean);
+  assert.equal(lines.shift(), "[out:json][timeout:20];", "Expected bounded JSON query header");
+  const sets = new Map();
+  let block = null, result, printed = false;
+  for (const [index, line] of lines.entries()) {
+    if (line === "(") {
+      assert.equal(block, null, "Nested unions are outside the fixture grammar");
+      block = [];
+      continue;
+    }
+    if (line === ");" || line === ")->.seasonal_context;") {
+      assert.ok(block?.length, "Only a populated query union may be closed");
+      if (line === ");") {
+        assert.equal(result, undefined, "The fixture expects exactly one final output union");
+        result = block.some(Boolean);
+      } else {
+        assert.equal(result, undefined, "Context preselection must precede the output union");
+        assert.equal(sets.has("seasonal_context"), false, "Do not overwrite a named context set");
+        sets.set("seasonal_context", block.some(Boolean));
+      }
+      block = null;
+      continue;
+    }
+    if (line === "out center tags;") {
+      assert.equal(block, null);
+      assert.equal(typeof result, "boolean", "Output must come from the final union");
+      assert.equal(index, lines.length - 1, "Output must be the final statement");
+      printed = true;
+      continue;
+    }
+    assert.ok(block, `Query selectors must be inside a union: ${line}`);
+    const statement = line.match(/^nwr(?:\.([a-z_]+))?(.+);$/);
+    assert.ok(statement, `Unrecognized query statement: ${line}`);
+    const [, inputSet, filters] = statement;
+    let selectors = filters;
+    let member = true;
+    if (inputSet) {
+      assert.equal(inputSet, "seasonal_context", "Only the server-owned context set is supported");
+      assert.ok(sets.has(inputSet), "A named input set must be declared before use");
+      member = sets.get(inputSet);
+    } else {
+      const geographic = filters.match(/\(around:([0-9]+),(-?[0-9.]+(?:e[+-]?[0-9]+)?),(-?[0-9.]+(?:e[+-]?[0-9]+)?)\)$/i);
+      assert.ok(geographic, `Every database selection must be spatially bounded: ${line}`);
+      const [, radius, lat, lon] = geographic;
+      assert.ok(Number(radius) > 0 && Number(radius) <= 80467);
+      assert.ok(Number.isFinite(Number(lat)) && Math.abs(Number(lat)) <= 90);
+      assert.ok(Number.isFinite(Number(lon)) && Math.abs(Number(lon)) <= 180);
+      selectors = filters.slice(0, -geographic[0].length);
+    }
     const parsed = [...selectors.matchAll(/\[(~?"(?:\\.|[^"\\])*")(=|~)("(?:\\.|[^"\\])*")(,i)?\]/g)];
     assert.ok(parsed.length, `Expected whitelisted predicates: ${line}`);
     assert.equal(parsed.map((match) => match[0]).join(""), selectors, `Unrecognized predicate grammar: ${line}`);
-    return parsed.every(([, rawKey, operation, rawValue, ignoreCase]) => {
+    const predicatesMatch = parsed.every(([, rawKey, operation, rawValue, ignoreCase]) => {
       const keyPattern = rawKey.startsWith("~");
       const key = JSON.parse(keyPattern ? rawKey.slice(1) : rawKey);
       const value = JSON.parse(rawValue);
@@ -48,12 +95,16 @@ function acquired(query, tags) {
         ? candidate === value
         : new RegExp(value, ignoreCase ? "i" : "").test(candidate));
     });
-  });
+    block.push(member && predicatesMatch);
+  }
+  assert.equal(printed, true, "The fixture must evaluate an explicit output statement");
+  return result;
 }
 
 // Frozen pre-refinement predicate control from checkpoint 9f90f689. This is
 // intentionally independent of the current builder: compare semantic reachability
-// while changing only regex keys into finite, exact-key alternatives.
+// while changing regex keys into finite, exact-key alternatives and evaluating
+// prose against a named, bounded set of the same supported contexts.
 function previousSeasonalQuery(selected) {
   const selectors = {
     "haunted-house": { values: "haunted_house|haunted_trail|haunted_forest|haunted_attraction", words: "haunted[ _-]+(house|trail|forest|attraction)" },
@@ -77,7 +128,7 @@ function previousSeasonalQuery(selected) {
     ...selected.flatMap((type) => lifecycle[type]).map(([key, values]) =>
       `[~"^(disused|abandoned|was|demolished|removed|razed|destroyed):${key}$"~"^(${values})$"]`),
   ];
-  return clauses.map((clause) => `nwr${clause}(around:80467,37.176447,-94.310223);`).join("\n");
+  return `[out:json][timeout:20];\n(\n${clauses.map((clause) => `nwr${clause}(around:80467,37.176447,-94.310223);`).join("\n")}\n);\nout center tags;`;
 }
 
 function classifiedAcquisition(query, rawTags) {
@@ -97,10 +148,10 @@ test("all Date Night category plans use exact keys, including every seasonal sub
     const query = queryFor(selected);
     assert.doesNotMatch(query, /\[~/, selected.join(","));
     assert.match(query, /\[timeout:20\]/);
-    assert.ok(acquisitionClauses(query).every((line) => line.endsWith("(around:80467,37.176447,-94.310223);")));
+    assert.ok(acquisitionClauses(query).every((line) => line.startsWith("nwr.seasonal_context[") || line.endsWith("(around:80467,37.176447,-94.310223);")));
   }
-  assert.equal(acquisitionClauses(queryFor(["haunted-house"])).length, 32);
-  assert.equal(acquisitionClauses(queryFor(seasonal)).length, 57);
+  assert.equal(acquisitionClauses(queryFor(["haunted-house"])).length, 20);
+  assert.equal(acquisitionClauses(queryFor(seasonal)).length, 45);
 });
 
 test("exact-key refinement preserves canonical reachability/classification for all seven subsets, contexts, fields and lifecycle prefixes", () => {
@@ -133,13 +184,62 @@ test("exact-key refinement preserves canonical reachability/classification for a
     }
   }
   fixtures.push({ name: "Haunted House Pizza", amenity: "restaurant" }, { name: "Pumpkin Patch Shop", shop: "farm" });
+  let compared = 0;
   for (let mask = 1; mask < 8; mask++) {
     const selected = seasonal.filter((_, index) => mask & (1 << index));
     const current = queryFor(selected), previous = previousSeasonalQuery(selected);
     for (const tags of fixtures) {
       assert.deepEqual(classifiedAcquisition(current, tags), classifiedAcquisition(previous, tags), `${selected}: ${JSON.stringify(tags)}`);
+      compared++;
     }
   }
+  assert.equal(compared, 6167, "Retain the complete frozen-control equivalence matrix");
+});
+
+test("bounded context preselection never leaks generic places into seasonal output", () => {
+  const contexts = [
+    { leisure: "maze" }, { attraction: "maze" }, { tourism: "theme_park" },
+    { tourism: "attraction" }, { tourism: "farm" }, { leisure: "park" },
+    { landuse: "farmyard" }, { landuse: "farmland" },
+  ];
+  for (const selected of [["haunted-house"], ["corn-maze"], ["pumpkin-patch"], seasonal]) {
+    const query = queryFor(selected);
+    assert.equal(query.match(/\)->\.seasonal_context;/g)?.length, 1);
+    assert.equal(acquisitionClauses(query).filter((line) => line.startsWith("nwr.seasonal_context[")).length, 4);
+    assert.doesNotMatch(query, /nwr\(around:/, "Never materialize all map elements in the radius");
+    for (const context of contexts) {
+      assert.equal(acquired(query, { name: "Ordinary venue", ...context }), false);
+      assert.equal(acquired(query, { name: "Ordinary venue", ...context, "name:en": "Haunted House Corn Maze Pumpkin Patch" }), false);
+    }
+    for (const context of [{ tourism: "museum" }, { amenity: "restaurant" }, { shop: "farm" }, {}]) {
+      assert.equal(acquired(query, { ...context, name: "Haunted House Corn Maze Pumpkin Patch" }), false, "Prose still requires a supported context");
+    }
+  }
+});
+
+test("precise and lifecycle selectors stay independent of the active context set", () => {
+  for (const [type, attraction] of [["haunted-house", "haunted_house"], ["corn-maze", "corn_maze"], ["pumpkin-patch", "pumpkin_patch"]]) {
+    const query = queryFor([type]);
+    assert.equal(acquired(query, { name: "Field activity", attraction }), true);
+    for (const prefix of ["disused", "abandoned", "was", "demolished", "removed", "razed", "destroyed"]) {
+      const tags = { name: "Field activity", [`${prefix}:attraction`]: attraction };
+      assert.equal(acquired(query, tags), true);
+      assert.deepEqual(classifiedAcquisition(query, tags), classifiedAcquisition(previousSeasonalQuery([type]), tags));
+    }
+  }
+});
+
+test("query fixture interpreter rejects missing/unknown sets, unbounded selectors and unexpected output grammar", () => {
+  const query = queryFor(["haunted-house"]);
+  const mutations = [
+    query.replaceAll("nwr.seasonal_context", "nwr.untrusted"),
+    query.replace(/\n\([\s\S]*?\)->\.seasonal_context;\n/, "\n"),
+    query.replace('(around:80467,37.176447,-94.310223)', ""),
+    query.replace("out center tags;", ".seasonal_context out center tags;"),
+    query.replace("nwr.seasonal_context", "nwr"),
+    query.replace("out center tags;", "out center tags;\nout center tags;"),
+  ];
+  for (const mutation of mutations) assert.throws(() => acquired(mutation, { tourism: "farm", name: "Haunted House" }));
 });
 
 test("exact text keys preserve classifier key casing while still matching case-insensitive values", () => {
