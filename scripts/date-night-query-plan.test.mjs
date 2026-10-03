@@ -31,6 +31,10 @@ function acquisitionClauses(query) {
   return query.split("\n").map((line) => line.trim()).filter((line) => line.startsWith("nwr"));
 }
 
+function affirmativeClauses(query) {
+  return acquisitionClauses(query).filter((line) => !/^nwr\["(disused|abandoned|was|demolished|removed|razed|destroyed):/.test(line));
+}
+
 function acquired(query, tags) {
   const lines = query.split("\n").map((line) => line.trim()).filter(Boolean);
   assert.equal(lines.shift(), "[out:json][timeout:20];", "Expected bounded JSON query header");
@@ -150,11 +154,11 @@ test("all Date Night category plans use exact keys, including every seasonal sub
     assert.match(query, /\[timeout:20\]/);
     assert.ok(acquisitionClauses(query).every((line) => line.startsWith("nwr.seasonal_context[") || line.endsWith("(around:80467,37.176447,-94.310223);")));
   }
-  assert.equal(acquisitionClauses(queryFor(["haunted-house"])).length, 20);
+  assert.equal(acquisitionClauses(queryFor(["haunted-house"])).length, 41);
   assert.equal(acquisitionClauses(queryFor(seasonal)).length, 45);
 });
 
-test("exact-key refinement preserves canonical reachability/classification for all seven subsets, contexts, fields and lifecycle prefixes", () => {
+test("all 6167 canonical fixtures preserve selected positive semantics and broad identity-negative lifecycle acquisition", () => {
   const contexts = [
     { leisure: "maze" }, { attraction: "maze" }, { tourism: "theme_park" },
     { tourism: "attraction" }, { tourism: "farm" }, { leisure: "park" },
@@ -184,16 +188,25 @@ test("exact-key refinement preserves canonical reachability/classification for a
     }
   }
   fixtures.push({ name: "Haunted House Pizza", amenity: "restaurant" }, { name: "Pumpkin Patch Shop", shop: "farm" });
-  let compared = 0;
+  let compared = 0, expandedNegative = 0;
   for (let mask = 1; mask < 8; mask++) {
     const selected = seasonal.filter((_, index) => mask & (1 << index));
     const current = queryFor(selected), previous = previousSeasonalQuery(selected);
     for (const tags of fixtures) {
-      assert.deepEqual(classifiedAcquisition(current, tags), classifiedAcquisition(previous, tags), `${selected}: ${JSON.stringify(tags)}`);
+      const selectedControl = classifiedAcquisition(previous, tags);
+      // V-DR-01 intentionally broadens negative reachability, not positives.
+      // The frozen all-seasonal query is an independent oracle for companions;
+      // every non-lifecycle fixture retains its exact selected-query expectation.
+      const expected = providerLifecycle(tags)
+        ? classifiedAcquisition(previousSeasonalQuery(seasonal), tags)
+        : selectedControl;
+      assert.deepEqual(classifiedAcquisition(current, tags), expected, `${selected}: ${JSON.stringify(tags)}`);
+      if (!selectedControl && expected) expandedNegative++;
       compared++;
     }
   }
   assert.equal(compared, 6167, "Retain the complete frozen-control equivalence matrix");
+  assert.ok(expandedNegative > 0, "The matrix must exercise newly reachable lifecycle evidence");
 });
 
 test("bounded context preselection never leaks generic places into seasonal output", () => {
@@ -298,7 +311,7 @@ test("Halloween OFF strips stale seasonal selections and preserves existing Anyt
   assert.deepEqual(sorted(normalizeDateNightActivityTypes(seasonal, false)), sorted(ordinary));
   assert.deepEqual(ids(buildDateNightQueryPlan(seasonal, false)), ["entertainment", "culture", "outdoor"]);
   const query = queryFor(seasonal, false);
-  assert.doesNotMatch(query, /haunted|pumpkin|corn|maize|theme_park|seasonal:/);
+  assert.doesNotMatch(affirmativeClauses(query).join("\n"), /haunted|pumpkin|corn|maize|theme_park|seasonal:/);
 });
 
 test("activity validation rejects malformed, inherited, unknown and query-injection inputs", () => {
@@ -322,7 +335,7 @@ test("activity validation rejects malformed, inherited, unknown and query-inject
   assert.deepEqual(validateDateNightActivityTypes(["movies"]), ["movies"]);
 });
 
-test("every ordinary category owns its exact active clauses and only relevant lifecycle companions", () => {
+test("every ordinary category owns exact active clauses and shares supported identity-negative companions", () => {
   const expected = {
     bowling: ['["leisure"="bowling_alley"]'],
     arcade: ['["leisure"="amusement_arcade"]'],
@@ -335,17 +348,17 @@ test("every ordinary category owns its exact active clauses and only relevant li
   };
   for (const [type, clauses] of Object.entries(expected)) {
     const query = queryFor([type]);
-    const activeClauses = acquisitionClauses(query).filter((line) => !/^nwr\["(disused|abandoned|was|demolished|removed|razed|destroyed):/.test(line));
+    const activeClauses = affirmativeClauses(query);
     assert.deepEqual(sorted(activeClauses), sorted(clauses.map((clause) => `nwr${clause}(around:80467,37.176447,-94.310223);`)), type);
     assert.match(query, /\[out:json\]\[timeout:20\]/);
     assert.match(query, /out center tags;/);
-    assert.doesNotMatch(query, /haunted|pumpkin|corn|maize|seasonal:|theme_park/);
-    for (const [candidateType, candidateClauses] of Object.entries(expected)) {
+    assert.doesNotMatch(activeClauses.join("\n"), /haunted|pumpkin|corn|maize|seasonal:|theme_park/);
+    for (const candidateClauses of Object.values(expected)) {
       for (const clause of candidateClauses) {
         const [, key, value] = clause.match(/^\["([^"]+)"="([^"]+)"\]$/);
         for (const prefix of ["disused", "abandoned", "was", "demolished", "removed", "razed", "destroyed"]) {
           // The preserved normalizer reconstructs these four keys, not sport.
-          const expectedAcquisition = candidateType === type && key !== "sport";
+          const expectedAcquisition = key !== "sport";
           assert.equal(acquired(query, { [`${prefix}:${key}`]: value }), expectedAcquisition, `${type}/${prefix}:${key}=${value}`);
         }
       }
@@ -567,6 +580,27 @@ test("V-DR-01 ordinary Movies narrowing retains matching Museum demolition with 
   }
 });
 
+test("V-DR-01 Halloween OFF preserves the same seasonal-classification boundary for Anything and narrowed ordinary queries", async (t) => {
+  const state = installLifecycleProvider(t);
+  state.elements = [
+    lifecycleElement(125, { name: "Current Screen", amenity: "cinema" }),
+    lifecycleElement(126, { name: "Current Screen", "demolished:attraction": "pumpkin_patch" }),
+    lifecycleElement(127, { name: "Active Harvest", attraction: "corn_maze" }, -0.02),
+  ];
+  const { result, pool } = await lifecycleSearch(["movies"], false);
+  const broad = await lifecycleSearch(["anything"], false);
+  // The unchanged OFF classifier cannot materialize a purely seasonal record,
+  // including a negative one. Narrowing must match Anything at this boundary;
+  // ordinary-to-ordinary negative protection is covered separately above.
+  assert.deepEqual(result.venues, broad.result.venues);
+  assert.deepEqual(pool, broad.pool);
+  assert.deepEqual(result.venues.map((place) => place.name), ["Current Screen"]);
+  assert.deepEqual(pool.map((place) => place.name), ["Current Screen"]);
+  assert.ok(state.queries.every((query) => acquired(query, state.elements[1].tags)));
+  assert.ok(state.queries.every((query) => !acquired(query, state.elements[2].tags)));
+  assert.ok(state.queries.every((query) => !/haunted|pumpkin|corn|maize|seasonal:/.test(affirmativeClauses(query).join("\n"))));
+});
+
 test("V-DR-01 unrelated negatives cannot suppress an active identity or leak into eligible positive results", async (t) => {
   const state = installLifecycleProvider(t);
   state.elements = [
@@ -577,6 +611,7 @@ test("V-DR-01 unrelated negatives cannot suppress an active identity or leak int
     lifecycleElement(135, { name: "Unrelated Park", leisure: "park" }, -0.04),
     lifecycleElement(136, { name: "Unrelated Attraction", tourism: "attraction" }, 0.06),
     lifecycleElement(137, { name: "Hedge Labyrinth", leisure: "maze" }, -0.06),
+    lifecycleElement(138, { name: "Neighbor Attraction", "demolished:attraction": "pumpkin_patch" }),
   ];
   const { result, pool } = await lifecycleSearch(["corn-maze"]);
   assert.deepEqual(pool.map((place) => place.name), ["Living Harvest"]);

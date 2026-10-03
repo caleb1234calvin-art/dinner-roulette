@@ -142,8 +142,10 @@ test("Date Night seasonal on/off survives real transport with a fixed October da
   const on = await rpc(app, "searchDateNight", { ...location, spookySeasonEnabled: true });
   assert.ok(!off.venues.some((place) => place.activityTypes.includes("haunted-house")));
   assert.ok(on.venues.some((place) => place.activityTypes.includes("haunted-house")));
-  assert.ok(calls.slice(0, offCalls).every((call) => !decodeURIComponent(call.body).includes("haunted_house")));
-  assert.ok(calls.slice(offCalls).some((call) => decodeURIComponent(call.body).includes("haunted_house")));
+  const affirmativeQuery = (call) => new URLSearchParams(call.body).get("data").split("\n")
+    .filter((line) => !/^\s*nwr\["(disused|abandoned|was|demolished|removed|razed|destroyed):/.test(line)).join("\n");
+  assert.ok(calls.slice(0, offCalls).every((call) => !affirmativeQuery(call).includes("haunted_house")));
+  assert.ok(calls.slice(offCalls).some((call) => affirmativeQuery(call).includes("haunted_house")));
   assert.equal(off.discovery.groups.length, 3);
   assert.equal(on.discovery.groups.length, 4);
 });

@@ -20,3 +20,16 @@ Authority: `5940e83ff4089a5259bfbcf5f2857310b0858dff`, `docs/handoffs/active/dat
 - No temporary runtime instrumentation. Resume by fetching this branch, confirming identities, inspecting RED logs and running focused tests above.
 
 SAFE TO RESUME FROM THIS CHECKPOINT
+
+## Save 2 — V-DR-01 LIFECYCLE GREEN; V-DR-02 STILL RED
+
+- Latest pushed checkpoint: `37528081f01fea9224d2bcde04f41c6f0333f95a`, tree `d3b7dfc45bc51be47adccc84decaa399266d1d54`, sole parent failed candidate. This save is its direct child on the same required branch/base.
+- Lifecycle runtime changes only `provider-evidence.ts` and the call in `query-plan.ts`: shared 28-clause negative vocabulary, selected positive acquisition unchanged. Maximum query group has 45 selectors, still at most four groups/four mirrors. Deadlines/provider list unchanged.
+- Query/lifecycle 32/32, seasonal/component/lifecycle 24/24 and partial results 12/12 PASS; typecheck and changed-code lint PASS. The full 6,167-fixture matrix preserves positive semantics and explicitly expects broader negative reachability.
+- Necessary supporting fixture changes: query, seasonal, partial-results, compiled transport test and controlled-browser preload now identify affirmative clauses separately from shared negative companions. They preserve output/security/fallback assertions. A seasonal OFF test expectation initially failed and was corrected; final GREEN and rationale retained separately from original RED.
+- Halloween OFF preserves inherited classifier behavior: pure seasonal-only lifecycle records are discarded equally by broad/narrow queries; ordinary cross-category protection works OFF/ON. No universal inactive-season identity-protection claim. Explicit boundary regression added.
+- Measured shape: Anything 110→138 selectors; full seasonal remains 45. Construction microbenchmark and exact byte measurements are in `lifecycle-query-comparison.json`; live runtime remains to be measured.
+- Current cache source is still identical to failed candidate; cache RED8 expected failures remain unresolved. Next: implement coverage-only supersession invalidation, run cache/client preservation tests, publish separate GREEN checkpoint.
+- Main/production untouched. No browser/live acceptance or public-provider acquisitions. No migration/deployment/settings changes. Worktree contains only the scoped lifecycle/tests/evidence changes for this save.
+
+SAFE TO RESUME FROM THIS CHECKPOINT

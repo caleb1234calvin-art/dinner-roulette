@@ -40,24 +40,21 @@ export function seasonalQueryClauses(around: string, selected: readonly Concrete
   return [...clauses.map((clause) => `nwr${clause}${around};`), ...prose].join("\n  ");
 }
 
-/** Negative evidence must remain discoverable when active tags were removed.
- * Otherwise a narrower query can resurrect a duplicate still carrying active tags.
- * Values are category-owned; lifecycle/classification precedence stays below. */
-export function lifecycleQueryClauses(around: string, selected: readonly ConcreteDateNightType[]): string[] {
-  const tags: Record<ConcreteDateNightType, readonly [string, string][]> = {
-    bowling: [["leisure", "bowling_alley"]],
-    arcade: [["leisure", "amusement_arcade"]],
-    movies: [["amenity", "cinema"]],
-    "mini-golf": [["leisure", "miniature_golf"]],
-    "escape-room": [["leisure", "escape_game"]],
-    museum: [["tourism", "museum"]],
-    skating: [["leisure", "ice_rink"]],
-    park: [["leisure", "park"]],
-    "haunted-house": [["attraction", "haunted_house|haunted_trail|haunted_forest|haunted_attraction"]],
-    "corn-maze": [["attraction", "corn_maze|maize_maze|maze"], ["leisure", "maze"]],
-    "pumpkin-patch": [["attraction", "pumpkin_patch"]],
-  };
-  return selected.flatMap((type) => tags[type]).flatMap(([key, values]) =>
+// The same identity can have active and lifecycle-only representations classified
+// under different activities. Keep negative acquisition independent of selection,
+// using only the existing supported tag/value vocabulary. Aggregating by exact
+// key bounds this to 4 keys × 7 prefixes, instead of one clause per category.
+const LIFECYCLE_TAG_VALUES = {
+  leisure: "bowling_alley|amusement_arcade|miniature_golf|escape_game|ice_rink|park|maze",
+  amenity: "cinema",
+  tourism: "museum",
+  attraction: "haunted_house|haunted_trail|haunted_forest|haunted_attraction|corn_maze|maize_maze|maze|pumpkin_patch",
+};
+
+/** Shared identity-negative companions; affirmative acquisition stays selected.
+ * Existing classification, lifecycle precedence and eligibility remain decisive. */
+export function lifecycleQueryClauses(around: string): string[] {
+  return Object.entries(LIFECYCLE_TAG_VALUES).flatMap(([key, values]) =>
     ["disused", "abandoned", "was", "demolished", "removed", "razed", "destroyed"].map((prefix) =>
       `nwr["${prefix}:${key}"~"^(${values})$"]${around};`));
 }

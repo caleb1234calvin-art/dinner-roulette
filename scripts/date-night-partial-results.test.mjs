@@ -11,7 +11,10 @@ const local = { lat: 37.176447, lon: -94.310223, radiusMiles: 15, spookySeasonEn
 const remote = { lat: 43.65348, lon: -79.38393, radiusMiles: 15, spookySeasonEnabled: true };
 const element = (id, tags, location = remote) => ({ type: "node", id, lat: location.lat, lon: location.lon, tags: { name: `Partial fixture ${id}`, ...tags } });
 const queryGroup = (options) => {
-  const query = new URLSearchParams(options.body).get("data");
+  // Lifecycle companions are deliberately shared across every activity group.
+  // Identify the requested group from affirmative clauses only.
+  const query = new URLSearchParams(options.body).get("data").split("\n")
+    .filter((line) => !/^\s*nwr\["(disused|abandoned|was|demolished|removed|razed|destroyed):/.test(line)).join("\n");
   if (/haunted_house|corn_maze|pumpkin_patch/.test(query)) return "seasonal";
   if (/bowling_alley|amusement_arcade|miniature_golf|escape_game|roller_skating/.test(query)) return "entertainment";
   if (/cinema|museum/.test(query)) return "culture";

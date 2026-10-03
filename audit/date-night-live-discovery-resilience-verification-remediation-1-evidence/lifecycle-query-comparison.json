@@ -1,0 +1,197 @@
+{
+  "method": "Same process-level Node fixture loader, 1000 warmups + 10000 measured plan builds per selection; construction benchmark only, not provider latency. Spatial cap remains80467m; 4exact keys x7prefixes=28shared negative clauses/group. No added groups/mirrors/deadlines.",
+  "before": [
+    {
+      "selection": [
+        "corn-maze"
+      ],
+      "iterations": 10000,
+      "meanPlanBuildMs": 0.009732339200000007,
+      "groupCount": 1,
+      "totalBytes": 2463,
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 2463,
+          "clauses": 31
+        }
+      ]
+    },
+    {
+      "selection": [
+        "pumpkin-patch"
+      ],
+      "iterations": 10000,
+      "meanPlanBuildMs": 0.0056043198999999955,
+      "groupCount": 1,
+      "totalBytes": 1535,
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 1535,
+          "clauses": 20
+        }
+      ]
+    },
+    {
+      "selection": [
+        "haunted-house"
+      ],
+      "iterations": 10000,
+      "meanPlanBuildMs": 0.006983015599999999,
+      "groupCount": 1,
+      "totalBytes": 1983,
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 1983,
+          "clauses": 20
+        }
+      ]
+    },
+    {
+      "selection": [
+        "movies"
+      ],
+      "iterations": 10000,
+      "meanPlanBuildMs": 0.003014704799999993,
+      "groupCount": 1,
+      "totalBytes": 626,
+      "groups": [
+        {
+          "id": "culture",
+          "bytes": 626,
+          "clauses": 8
+        }
+      ]
+    },
+    {
+      "selection": [
+        "anything"
+      ],
+      "iterations": 10000,
+      "meanPlanBuildMs": 0.029093792000000007,
+      "groupCount": 4,
+      "totalBytes": 9440,
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 4349,
+          "clauses": 45
+        },
+        {
+          "id": "entertainment",
+          "bytes": 3274,
+          "clauses": 41
+        },
+        {
+          "id": "culture",
+          "bytes": 1207,
+          "clauses": 16
+        },
+        {
+          "id": "outdoor",
+          "bytes": 610,
+          "clauses": 8
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "selection": [
+        "corn-maze"
+      ],
+      "iterations": 10000,
+      "meanPlanBuildMs": 0.0117851969,
+      "groupCount": 1,
+      "totalBytes": 4537,
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 4537,
+          "clauses": 45
+        }
+      ]
+    },
+    {
+      "selection": [
+        "pumpkin-patch"
+      ],
+      "iterations": 10000,
+      "meanPlanBuildMs": 0.010358658000000003,
+      "groupCount": 1,
+      "totalBytes": 4198,
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 4198,
+          "clauses": 41
+        }
+      ]
+    },
+    {
+      "selection": [
+        "haunted-house"
+      ],
+      "iterations": 10000,
+      "meanPlanBuildMs": 0.009940229799999997,
+      "groupCount": 1,
+      "totalBytes": 4310,
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 4310,
+          "clauses": 41
+        }
+      ]
+    },
+    {
+      "selection": [
+        "movies"
+      ],
+      "iterations": 10000,
+      "meanPlanBuildMs": 0.007911073199999999,
+      "groupCount": 1,
+      "totalBytes": 3359,
+      "groups": [
+        {
+          "id": "culture",
+          "bytes": 3359,
+          "clauses": 29
+        }
+      ]
+    },
+    {
+      "selection": [
+        "anything"
+      ],
+      "iterations": 10000,
+      "meanPlanBuildMs": 0.03581797280000001,
+      "groupCount": 4,
+      "totalBytes": 15394,
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 4909,
+          "clauses": 45
+        },
+        {
+          "id": "entertainment",
+          "bytes": 3707,
+          "clauses": 34
+        },
+        {
+          "id": "culture",
+          "bytes": 3421,
+          "clauses": 30
+        },
+        {
+          "id": "outdoor",
+          "bytes": 3357,
+          "clauses": 29
+        }
+      ]
+    }
+  ]
+}

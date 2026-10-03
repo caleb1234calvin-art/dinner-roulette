@@ -32,7 +32,7 @@ function freeze(t, at = now) {
 async function search(t, elements, location = international, inspect = () => {}) {
   t.mock.method(globalThis, "fetch", async (_url, options) => {
     const query = new URLSearchParams(options.body).get("data");
-    if (query.includes("haunted_house")) inspect(query);
+    if (query.includes(")->.seasonal_context;")) inspect(query);
     return Response.json({ elements });
   });
   return searchDateNight({ data: { ...location, radiusMiles: 50, spookySeasonEnabled: true } });
@@ -297,16 +297,20 @@ test("ordinary Date Night and seasonal toggle still work internationally; unknow
     1,
   );
   assert.equal(eligible(result.venues, { activityTypes: ["anything"] }).length, 2);
-  let query;
+  const queries = [];
   t.mock.method(globalThis, "fetch", async (_url, options) => {
-    query = new URLSearchParams(options.body).get("data");
+    queries.push(new URLSearchParams(options.body).get("data"));
     return Response.json({ elements: [element(3, { attraction: "corn_maze" })] });
   });
   const inactive = await searchDateNight({
     data: { ...international, radiusMiles: 50, spookySeasonEnabled: false },
   });
   assert.deepEqual(inactive.venues, []);
-  assert.doesNotMatch(query, /theme_park|haunted_trail/);
+  for (const query of queries) {
+    const affirmative = query.split("\n")
+      .filter((line) => !/^\s*nwr\["(disused|abandoned|was|demolished|removed|razed|destroyed):/.test(line)).join("\n");
+    assert.doesNotMatch(affirmative, /theme_park|haunted_trail/);
+  }
 });
 
 function storeFor(location = origin) {

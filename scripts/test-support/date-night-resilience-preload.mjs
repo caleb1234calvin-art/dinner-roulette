@@ -36,7 +36,9 @@ globalThis.fetch = async (input, init) => {
   if (["127.0.0.1", "localhost", "[::1]"].includes(url.hostname)) return originalFetch(input, init);
   const index = mirrors.indexOf(url.hostname);
   if (index < 0) throw new Error("External network disabled in Date Night acceptance fixture");
-  const query = new URLSearchParams(init?.body).get("data") ?? "";
+  // Shared lifecycle-negative companions do not identify the positive group.
+  const query = (new URLSearchParams(init?.body).get("data") ?? "").split("\n")
+    .filter((line) => !/^\s*nwr\["(disused|abandoned|was|demolished|removed|razed|destroyed):/.test(line)).join("\n");
   const group = /haunted_house|corn_maze|pumpkin_patch/.test(query) ? "seasonal"
     : /bowling_alley|amusement_arcade|miniature_golf|escape_game|roller_skating/.test(query) ? "entertainment"
       : /cinema|museum/.test(query) ? "culture"
