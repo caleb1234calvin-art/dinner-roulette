@@ -1,0 +1,88 @@
+{
+  "head_at_start": "9e7b1da5b1e8dfdfdcb9c914e961dad2d108d21a",
+  "worktree_at_start": "",
+  "validation": [
+    {
+      "name": "npm-ls",
+      "command": [
+        "npm",
+        "ls",
+        "--all"
+      ],
+      "exit_code": 0,
+      "log": "/workspace/scratch/c31e06475fc4/m5-npm-ls.log",
+      "elapsed_seconds": 0.716
+    },
+    {
+      "name": "casino-audit",
+      "command": [
+        "npm",
+        "run",
+        "audit:casinos"
+      ],
+      "exit_code": 0,
+      "log": "/workspace/scratch/c31e06475fc4/m5-casino-audit.log",
+      "elapsed_seconds": 1.068
+    },
+    {
+      "name": "android-check",
+      "command": [
+        "npm",
+        "run",
+        "android:check"
+      ],
+      "exit_code": 0,
+      "log": "/workspace/scratch/c31e06475fc4/m5-android-check.log",
+      "elapsed_seconds": 1.468
+    },
+    {
+      "name": "python-native",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "native-android",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0,
+      "log": "/workspace/scratch/c31e06475fc4/m5-python-native.log",
+      "elapsed_seconds": 0.114
+    },
+    {
+      "name": "android-sync",
+      "command": [
+        "npm",
+        "run",
+        "android:sync"
+      ],
+      "exit_code": 0,
+      "log": "/workspace/scratch/c31e06475fc4/m5-android-sync.log",
+      "elapsed_seconds": 0.667
+    },
+    {
+      "name": "android-tracked-diff",
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "--",
+        "android",
+        "capacitor.config.json"
+      ],
+      "exit_code": 0,
+      "log": "/workspace/scratch/c31e06475fc4/m5-android-tracked-diff.log",
+      "elapsed_seconds": 0.008
+    }
+  ],
+  "native_stability": {
+    "tracked_files": 41,
+    "changed": [],
+    "passed": true
+  },
+  "head_at_end": "9e7b1da5b1e8dfdfdcb9c914e961dad2d108d21a",
+  "worktree_at_end": "",
+  "passed": true
+}

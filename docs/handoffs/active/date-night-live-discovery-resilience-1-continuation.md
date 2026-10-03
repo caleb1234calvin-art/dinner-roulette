@@ -135,4 +135,18 @@ Migration-free production build later: `VITE_AUTH_ENABLED=true node scripts/with
 - Main/production untouched; last observed production `dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL` at frozen base. Automatic non-production branch Previews only; last inspected baseline Preview `dpl_Eq2Wfikqc38EK6tzDydK3jESDh2N`, https://dinner-roulette-jxe3rkc30-minions-9e2c.vercel.app. No new live-provider observations.
 - Resume status: DATE NIGHT DISCOVERY RESILIENCE FEATURE-COMPLETE — VALIDATION PENDING.
 
+## Save 5 — preservation checks and browser harness preparation
+
+- Repository/implementation branch/frozen base unchanged. Latest pushed checkpoint `9e7b1da5b1e8dfdfdcb9c914e961dad2d108d21a`, tree `46c281288de15d06a74c32ac56d81c6b37054dea`, sole parent `c0fc72d4f09f6c530f8b0c213fc657fc8452b2da`. This save is its sole-parent descendant; no merge.
+- Completed milestones0–4; M5 in progress. `npm ls --all`, `npm run audit:casinos` (883 canonical/899 serialized/60 catalogs), `npm run android:check` (15 launcher resources/4 web icons), Python native verifier3/3, `npm run android:sync` all PASS. All41 tracked Android/configuration files have identical before/after SHA-256 and empty Git diff. Native preservation began and ended with clean worktree.
+- `node --experimental-strip-types --test src/lib/date-night/availability.test.ts src/lib/location/location.test.ts` PASS (runner reports two file-level groups); `npm run typecheck` PASS;16 changed implementation/test files ESLint PASS. Focused M4 independent read-only review found no remaining blocker.
+- Added controlled browser harness and disposable CI-only provider preload plus real Preview matrix harness. These are test tooling only, never application imports. No browser acceptance run yet; sources are prepared before production-build fingerprint capture. Preservation logs/hashes and previously locally retained M1–M3 logs explicitly added despite repository global log-ignore rule.
+- Worktree consists only of coherent new acceptance scripts and evidence/continuation. No executable application change after M4.
+- Next action: migration-free auth-enabled build with capture/complete proof, then authoritative `npm test` including current TanStack transport security. Do not run browser/live phase until these pass. If any stall/failure, retain logs and checkpoint before retrying a changed diagnostic approach.
+- Resume commands: `git status --short`; `git log -1 --format='%H %T %P'`; safe build sequence from Save4; `npm test`; `node scripts/tanstack-security.test.mjs`. Native result details in `m5-preservation-results.json`.
+- Blockers/unresolved: full-suite/build/security and M6 acceptance pending; no new implementation blocker. Original server HTTP-disconnect propagation remains unproven; client RPC signal forwarding, loser cancellation and hard deadlines are proven. Do not overclaim server disconnect cancellation.
+- Temporary diagnostics: CI-only fixture scripts retained as permanent tests; no application instrumentation.20s/25s deadlines unchanged.
+- Main/production untouched. Latest automatic Preview inspected READY, target null, exact9e7b1da: `dpl_G3ve8wbkGQeNMwSNMDwKyFYos3DZ`, https://dinner-roulette-noex2wc8d-minions-9e2c.vercel.app. No live-provider/browser acceptance performed yet.
+- Resume status: FEATURE COMPLETE — FULL DETERMINISTIC VALIDATION IN PROGRESS.
+
 SAFE TO RESUME FROM THIS CHECKPOINT

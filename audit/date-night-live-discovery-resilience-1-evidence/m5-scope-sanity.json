@@ -1,0 +1,4243 @@
+{
+  "generated_at_utc": "2026-10-03T00:43:39.309401+00:00",
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "frozen_base": "4d937e58d2a65567b54ac5271915bc85b498898b",
+  "review_head": "9e7b1da5b1e8dfdfdcb9c914e961dad2d108d21a",
+  "scope": "Preparatory snapshot; browser scripts/evidence still arriving. No claim about later additions.",
+  "worktree_status": " M docs/handoffs/active/date-night-live-discovery-resilience-1-continuation.md\n?? audit/date-night-live-discovery-resilience-1-evidence/deterministic-test-map.md\n?? scripts/date-night-resilience-browser.mjs\n?? scripts/date-night-resilience-live.mjs\n?? scripts/test-support/date-night-resilience-preload.mjs\n",
+  "diff_stat": " .../baseline-client-seasonal.tap                   |  22 +\n .../baseline-provider.tap                          | 256 ++++++++++++\n .../m3-seasonal.tap                                | 451 +++++++++++++++++++++\n .../m4-cache.log                                   |  33 ++\n .../m4-seasonal.log                                | 290 +++++++++++++\n .../mandatory-read-manifest.md                     |  89 ++++\n ...ght-live-discovery-resilience-1-continuation.md | 152 +++++++\n scripts/date-night-cache.test.mjs                  | 323 +++++++++++++++\n scripts/date-night-hedged-provider.test.mjs        | 201 +++++++++\n scripts/date-night-partial-results.test.mjs        | 241 +++++++++++\n scripts/date-night-partial-ui.test.mjs             |  34 ++\n scripts/date-night-query-plan.test.mjs             | 327 +++++++++++++++\n scripts/discovery-provider-deadlines.test.mjs      |  21 +-\n scripts/seasonal-discovery.test.mjs                |  14 +-\n scripts/tanstack-security.test.mjs                 |  16 +-\n src/components/date-night-home.tsx                 |  49 ++-\n src/lib/date-night/cache.ts                        | 180 ++++++++\n src/lib/date-night/identity.ts                     | 107 +++++\n src/lib/date-night/provider-evidence.ts            |  46 ++-\n src/lib/date-night/query-plan.ts                   |  73 ++++\n src/lib/date-night/search.ts                       | 169 ++------\n src/lib/date-night/types.ts                        |  11 +\n src/lib/discovery/hedged-provider.ts               | 164 ++++++++\n 23 files changed, 3093 insertions(+), 176 deletions(-)\n",
+  "tracked_changed_paths": [
+    "audit/date-night-live-discovery-resilience-1-evidence/baseline-client-seasonal.tap",
+    "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+    "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+    "audit/date-night-live-discovery-resilience-1-evidence/m4-cache.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m4-seasonal.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/mandatory-read-manifest.md",
+    "docs/handoffs/active/date-night-live-discovery-resilience-1-continuation.md",
+    "scripts/date-night-cache.test.mjs",
+    "scripts/date-night-hedged-provider.test.mjs",
+    "scripts/date-night-partial-results.test.mjs",
+    "scripts/date-night-partial-ui.test.mjs",
+    "scripts/date-night-query-plan.test.mjs",
+    "scripts/discovery-provider-deadlines.test.mjs",
+    "scripts/seasonal-discovery.test.mjs",
+    "scripts/tanstack-security.test.mjs",
+    "src/components/date-night-home.tsx",
+    "src/lib/date-night/cache.ts",
+    "src/lib/date-night/identity.ts",
+    "src/lib/date-night/provider-evidence.ts",
+    "src/lib/date-night/query-plan.ts",
+    "src/lib/date-night/search.ts",
+    "src/lib/date-night/types.ts",
+    "src/lib/discovery/hedged-provider.ts"
+  ],
+  "untracked_paths": [
+    "audit/date-night-live-discovery-resilience-1-evidence/deterministic-test-map.md",
+    "scripts/date-night-resilience-browser.mjs",
+    "scripts/date-night-resilience-live.mjs",
+    "scripts/test-support/date-night-resilience-preload.mjs"
+  ],
+  "protected_counts": {
+    "configuration_auth_migrations": 25,
+    "native": 47,
+    "original_audits": 282,
+    "security_dependencies": 2,
+    "nightlife_and_casinos": 68,
+    "dinner": 19,
+    "date_night_semantics_catalogs": 9,
+    "shared_provider_and_client": 2
+  },
+  "protected_file_count": 454,
+  "protected_unchanged": true,
+  "protected_hashes": [
+    {
+      "path": ".github/workflows/android-apk.yml",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "8c727ca1c95f3536ce36ef0bc978d9c38fbd3474",
+      "worktree_git_blob": "8c727ca1c95f3536ce36ef0bc978d9c38fbd3474",
+      "sha256": "1365c4fdf0e392cd307fbd0b773f587dcda8703ca6fbf3125004bbce80253fd2",
+      "unchanged": true
+    },
+    {
+      "path": ".github/workflows/validate-icon-pack.yml",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "981c4c1f17970c6f25ad2969c217bc2021282690",
+      "worktree_git_blob": "981c4c1f17970c6f25ad2969c217bc2021282690",
+      "sha256": "efae64695e43c805842604c98e4caac20685583165bc12362d6ada6b858aa493",
+      "unchanged": true
+    },
+    {
+      "path": "android/.gitignore",
+      "category": "native",
+      "base_git_blob": "48354a3dfc4ad41c5c7af1451315d335cda7d611",
+      "worktree_git_blob": "48354a3dfc4ad41c5c7af1451315d335cda7d611",
+      "sha256": "065e4a92a240fe11a0ea230491ad9dabef143f5fd5a3e6884ad6f0395666a971",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/.gitignore",
+      "category": "native",
+      "base_git_blob": "043df802a29f1f386a23cba600c84be8eee2a0c6",
+      "worktree_git_blob": "043df802a29f1f386a23cba600c84be8eee2a0c6",
+      "sha256": "99c54e51ee601a60fbde8016b2cbf717483bc2e92773be86c9247d02a7fa6ea4",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/build.gradle",
+      "category": "native",
+      "base_git_blob": "2bd47ef74ef465baf96a5969650c59a163b123bf",
+      "worktree_git_blob": "2bd47ef74ef465baf96a5969650c59a163b123bf",
+      "sha256": "cd8225c795820fadf71ddee3dcdc5f3b3a7996f3deafa3eda399a81044860c21",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/capacitor.build.gradle",
+      "category": "native",
+      "base_git_blob": "bbfb44fad11c913927ea1a9851a85b82bbd9814a",
+      "worktree_git_blob": "bbfb44fad11c913927ea1a9851a85b82bbd9814a",
+      "sha256": "7051cadfdbc532197d2cfd4f8a11684d81367f23cf7952e5a208f7b6aa0833e0",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/proguard-rules.pro",
+      "category": "native",
+      "base_git_blob": "f1b424510da51fd82143bc74a0a801ae5a1e2fcd",
+      "worktree_git_blob": "f1b424510da51fd82143bc74a0a801ae5a1e2fcd",
+      "sha256": "1cf8c57e8f79c250b0af9c1a5a4edad71a5c348a79ab70243b6bae086c150ad2",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "category": "native",
+      "base_git_blob": "c23fca393793616af379946ff30d5aa93a53e0ad",
+      "worktree_git_blob": "c23fca393793616af379946ff30d5aa93a53e0ad",
+      "sha256": "9e1637c9853ada5c684463dec0d6c4361b55cd3842104d1c35e81bec4afcb9a5",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/java/com/calebcalvin/pickforus/MainActivity.java",
+      "category": "native",
+      "base_git_blob": "abfd626964051d71a978c4e1a87cdae21576f81b",
+      "worktree_git_blob": "abfd626964051d71a978c4e1a87cdae21576f81b",
+      "sha256": "53b26f09f5a827c77b50dab17e36049d4b344ddacb92083b0adef1597c79739c",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/layout/activity_main.xml",
+      "category": "native",
+      "base_git_blob": "b5ad1387011da0894cc1d91f44f3bd77f5403f5d",
+      "worktree_git_blob": "b5ad1387011da0894cc1d91f44f3bd77f5403f5d",
+      "sha256": "5d770feb791313b947020cbfc57e5c733c556dac5e9e49261a1190e527073253",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "category": "native",
+      "base_git_blob": "be438580f7f9f25a62c9e3e448de0338b63a8e18",
+      "worktree_git_blob": "be438580f7f9f25a62c9e3e448de0338b63a8e18",
+      "sha256": "5056b7226b3f58e65a61739e8ab6f5c52099fccee3ae9aad0e8856f31709e3fa",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "category": "native",
+      "base_git_blob": "be438580f7f9f25a62c9e3e448de0338b63a8e18",
+      "worktree_git_blob": "be438580f7f9f25a62c9e3e448de0338b63a8e18",
+      "sha256": "5056b7226b3f58e65a61739e8ab6f5c52099fccee3ae9aad0e8856f31709e3fa",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "category": "native",
+      "base_git_blob": "c14cc6d1fee4779ce4633e1df4abc43e894426ff",
+      "worktree_git_blob": "c14cc6d1fee4779ce4633e1df4abc43e894426ff",
+      "sha256": "078fc529212f00a892b79173c615b896c12d7164459c20dbf1901de963e0051b",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "category": "native",
+      "base_git_blob": "0153837193fbcef4e4f228cb8f04c687e0ea1697",
+      "worktree_git_blob": "0153837193fbcef4e4f228cb8f04c687e0ea1697",
+      "sha256": "984a0f9e7458310e7af93ff7fd598b58a3d80fa31b7737deb96dbbd84df1d90f",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+      "category": "native",
+      "base_git_blob": "be21282d25d67178932f27ab955fb108c9f9c5ef",
+      "worktree_git_blob": "be21282d25d67178932f27ab955fb108c9f9c5ef",
+      "sha256": "9a7d52cb75c4da83045bcbb7a0c86294e3c8d88313bdf4f1c72a862eea55d6ad",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "category": "native",
+      "base_git_blob": "3e68dbbbf9788898701d3d5caf20bdb9e4d25c0e",
+      "worktree_git_blob": "3e68dbbbf9788898701d3d5caf20bdb9e4d25c0e",
+      "sha256": "8e9c58591bac7c9b451e7401201e642a3653eda475a146c7f71d0d963a55d963",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+      "category": "native",
+      "base_git_blob": "659254ce36dae6cbc37b25db8f812646875e34a7",
+      "worktree_git_blob": "659254ce36dae6cbc37b25db8f812646875e34a7",
+      "sha256": "b70684782801b4d3b43aa92829ff39660d0ac81a965faf9ade67fad15250ef4e",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+      "category": "native",
+      "base_git_blob": "c97044eb80961b99f241309acc2f715a8ba2b2df",
+      "worktree_git_blob": "c97044eb80961b99f241309acc2f715a8ba2b2df",
+      "sha256": "7f7ef595ade6b812bb3ad6ca8c79780881822e89a3efd8d1c549e8e92ce5dbf4",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "category": "native",
+      "base_git_blob": "e9749b7c034b398c708bac2249de26ee6b11b8ef",
+      "worktree_git_blob": "e9749b7c034b398c708bac2249de26ee6b11b8ef",
+      "sha256": "139dda1e90f52af384caf7356e1c8584f431bae6f46dde96dedbdbedc9f8ea7b",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "category": "native",
+      "base_git_blob": "07addefef337c4859a4ffeae29fcce49747acde2",
+      "worktree_git_blob": "07addefef337c4859a4ffeae29fcce49747acde2",
+      "sha256": "05b710da36dd4a40566648fe04622c0de7cd0b34f98d19b010ba24b84dc8dd5a",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+      "category": "native",
+      "base_git_blob": "2675ea118cd858ad26562596cd65be022d4f84d7",
+      "worktree_git_blob": "2675ea118cd858ad26562596cd65be022d4f84d7",
+      "sha256": "7bd0be656a70b7c342ea633eb3929800201ac388e01efaa239f15bbb143f5525",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "category": "native",
+      "base_git_blob": "6b719fa41137e864f88295e76c535967b735787b",
+      "worktree_git_blob": "6b719fa41137e864f88295e76c535967b735787b",
+      "sha256": "ec715c7ec1612911c8ca1d650447cfb89e4bbf1ddae51efe196a1274f6b53d16",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "category": "native",
+      "base_git_blob": "1b57502643517671c630534aa379b6776432e42c",
+      "worktree_git_blob": "1b57502643517671c630534aa379b6776432e42c",
+      "sha256": "218c23ccf44eddfbb77500af7ae9805a5241e7de4be82156f60554b7218fe418",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+      "category": "native",
+      "base_git_blob": "ec65c3f822cb87be7a0e4e06ec47c7aa5c70489b",
+      "worktree_git_blob": "ec65c3f822cb87be7a0e4e06ec47c7aa5c70489b",
+      "sha256": "a2bcaaeb07dd6ee5b4eb1d12cdeccde5485e997271dffb8fd7aa08bd938311e7",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "category": "native",
+      "base_git_blob": "41f18b15ff78aa130512041a7531d4ee98b74a0e",
+      "worktree_git_blob": "41f18b15ff78aa130512041a7531d4ee98b74a0e",
+      "sha256": "99877ec24a597c68df9169fbbf45cf69cfb7706a681754346d43297b13ff9ac0",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "category": "native",
+      "base_git_blob": "7e5204437e713eeb86231b91a37384fcda8b6c20",
+      "worktree_git_blob": "7e5204437e713eeb86231b91a37384fcda8b6c20",
+      "sha256": "b588d848f1c4de1bf3be6d55da185c02a5ef4724ae8c17c2de4fd0b57cdfb247",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+      "category": "native",
+      "base_git_blob": "4958d35e7c1c3364df96c8331e2e2ce61bf58262",
+      "worktree_git_blob": "4958d35e7c1c3364df96c8331e2e2ce61bf58262",
+      "sha256": "45f191292d06f8216d890343a086ef9434d9fb1840756bfbf5c4f8f79d6944bc",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/values/ic_launcher_background.xml",
+      "category": "native",
+      "base_git_blob": "12851d5a582fbdae7892c037f3f13977ed2a1182",
+      "worktree_git_blob": "12851d5a582fbdae7892c037f3f13977ed2a1182",
+      "sha256": "7f880bab6c056eb0974409ec083a1576b3ae3a3a433c7c70e7086f128200f0b1",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/values/strings.xml",
+      "category": "native",
+      "base_git_blob": "73f6424b32a20b7eede3cb334ca243225b054efd",
+      "worktree_git_blob": "73f6424b32a20b7eede3cb334ca243225b054efd",
+      "sha256": "f5636fca22eda5124eefbafa11348d35d0e76c3a77e199014a8bbac03812b191",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/values/styles.xml",
+      "category": "native",
+      "base_git_blob": "4bcd1a2127e5ced7c6668a38a0da75ceab89e18e",
+      "worktree_git_blob": "4bcd1a2127e5ced7c6668a38a0da75ceab89e18e",
+      "sha256": "1ad3d3fb1042b88063027b7aeaddb1b9e2bd4e7eef1d33d7666fe98f8dca0362",
+      "unchanged": true
+    },
+    {
+      "path": "android/app/src/main/res/xml/file_paths.xml",
+      "category": "native",
+      "base_git_blob": "bd0c4d80d0473953333d5adb0d38ac713d0d648b",
+      "worktree_git_blob": "bd0c4d80d0473953333d5adb0d38ac713d0d648b",
+      "sha256": "a46ed43ef65c90cb6778f4581decf3556e3f0055aad8f36d69dae16f9a0e99aa",
+      "unchanged": true
+    },
+    {
+      "path": "android/build.gradle",
+      "category": "native",
+      "base_git_blob": "f5a03243af718a30aead5be40b29b15aad6cb97e",
+      "worktree_git_blob": "f5a03243af718a30aead5be40b29b15aad6cb97e",
+      "sha256": "694a806557cdc878a36c2c208b3f76322d1698e9a7e3749e62a9c078cf5f02b5",
+      "unchanged": true
+    },
+    {
+      "path": "android/capacitor.settings.gradle",
+      "category": "native",
+      "base_git_blob": "9a5fa872e75f3ac9cb82951943ec4ce0ba50005e",
+      "worktree_git_blob": "9a5fa872e75f3ac9cb82951943ec4ce0ba50005e",
+      "sha256": "b488e162f552d6efb8286793c7871bbc1061c9bf5ca3a6a495fdeb8988a541c7",
+      "unchanged": true
+    },
+    {
+      "path": "android/gradle.properties",
+      "category": "native",
+      "base_git_blob": "2e87c52f83c298527b1d1c747d496227dc0c6e71",
+      "worktree_git_blob": "2e87c52f83c298527b1d1c747d496227dc0c6e71",
+      "sha256": "3bab15c5b8bc4c2f4b6cf525497d15ad4abca53a460e6dd2eb0f0135817d31e6",
+      "unchanged": true
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.jar",
+      "category": "native",
+      "base_git_blob": "1b33c55baabb587c669f562ae36f953de2481846",
+      "worktree_git_blob": "1b33c55baabb587c669f562ae36f953de2481846",
+      "sha256": "7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172",
+      "unchanged": true
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "category": "native",
+      "base_git_blob": "9cd375732640bf2137b785006653553cad19b0ff",
+      "worktree_git_blob": "9cd375732640bf2137b785006653553cad19b0ff",
+      "sha256": "30a334bb3269975c707a7004c2217ed8ea3bbbe121b2826248e41b44f62147d4",
+      "unchanged": true
+    },
+    {
+      "path": "android/gradlew",
+      "category": "native",
+      "base_git_blob": "23d15a9367071145e9c79bb4ddf879d1fbe78b5d",
+      "worktree_git_blob": "23d15a9367071145e9c79bb4ddf879d1fbe78b5d",
+      "sha256": "b187b4c52e749f5760afdd6fadc31b2a98ad35fb249bf0dff03b72650f320409",
+      "unchanged": true
+    },
+    {
+      "path": "android/gradlew.bat",
+      "category": "native",
+      "base_git_blob": "db3a6ac207e507b0bc1635a9f2c18d3b174e682e",
+      "worktree_git_blob": "5eed7ee8452842305a18a4eb967442683808226a",
+      "sha256": "1d297e00bd21de3ace22b4d7f2de1f9dfa858883d66bbf7c1ccbecccec8f4f3b",
+      "unchanged": true,
+      "raw_worktree_matches_git_blob": false,
+      "normalized_git_blob": "db3a6ac207e507b0bc1635a9f2c18d3b174e682e",
+      "normalization": ".gitattributes text eol=crlf: 94 CRLF in worktree, 94 LF in frozen Git blob; exact equality after mandated CRLF normalization.",
+      "frozen_git_blob_sha256": "94102713eb8fb22d032397924c0f38ab2da783ba60d07054339f1190a0c4e2cd",
+      "pre_sync_worktree_sha256": "1d297e00bd21de3ace22b4d7f2de1f9dfa858883d66bbf7c1ccbecccec8f4f3b",
+      "post_sync_worktree_sha256": "1d297e00bd21de3ace22b4d7f2de1f9dfa858883d66bbf7c1ccbecccec8f4f3b"
+    },
+    {
+      "path": "android/settings.gradle",
+      "category": "native",
+      "base_git_blob": "3b4431d7724bd82d1aeb2ce59e7a0504b8869f81",
+      "worktree_git_blob": "3b4431d7724bd82d1aeb2ce59e7a0504b8869f81",
+      "sha256": "6ce098d15ebd69b44c4ecd786bca1bdc366340d2459b2af4d7bb0ab317aa9669",
+      "unchanged": true
+    },
+    {
+      "path": "android/signing.gradle",
+      "category": "native",
+      "base_git_blob": "c71040698da63220a0f23fd14052e1b2e0291be7",
+      "worktree_git_blob": "c71040698da63220a0f23fd14052e1b2e0291be7",
+      "sha256": "5225ae45ced4370dbf95e1eacd8c14b9699d9bb39f1dfafd20194ad8aa58e827",
+      "unchanged": true
+    },
+    {
+      "path": "android/variables.gradle",
+      "category": "native",
+      "base_git_blob": "ee4ba41c46f546910a153b2938cad859cd7cd86e",
+      "worktree_git_blob": "ee4ba41c46f546910a153b2938cad859cd7cd86e",
+      "sha256": "83d502c9ed8fcf1dd4791482067abeedbebae49fafe9cd14a8a1f5891deb0d88",
+      "unchanged": true
+    },
+    {
+      "path": "android/version.properties",
+      "category": "native",
+      "base_git_blob": "cb6f9727a673d2ce08c74439aad3e1181f1b0f86",
+      "worktree_git_blob": "cb6f9727a673d2ce08c74439aad3e1181f1b0f86",
+      "sha256": "ff2318c74b691337f9362664a824e4e7050ce4302610534075273c3671649a71",
+      "unchanged": true
+    },
+    {
+      "path": "audit/ai-continuity-before-casino-continuation-2026-09-13.md",
+      "category": "original_audits",
+      "base_git_blob": "53983365c0e77019b7927126dd2cd20ac53707cd",
+      "worktree_git_blob": "53983365c0e77019b7927126dd2cd20ac53707cd",
+      "sha256": "46f565b6decd3e7e61fb0e5471ca3155c1bf9bbb33914d0dc2bd0bd3d15ff5c9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/ai-continuity-before-casino-freeze-2026-09-13.md",
+      "category": "original_audits",
+      "base_git_blob": "1acfd1a0906b1e5f950fd5c11133a897438cc129",
+      "worktree_git_blob": "1acfd1a0906b1e5f950fd5c11133a897438cc129",
+      "sha256": "0365b05b02a6e2a463c996a449930eeda5af11bfae0a5fc20aa9d3b7cb9d771a",
+      "unchanged": true
+    },
+    {
+      "path": "audit/ai-continuity-before-casino-rc-2026-09-13.md",
+      "category": "original_audits",
+      "base_git_blob": "d5e1d79dec6e805400007a464a12cf97cba36202",
+      "worktree_git_blob": "d5e1d79dec6e805400007a464a12cf97cba36202",
+      "sha256": "66d1e70033183c8895a26e2e8e77855b99798cc5eb90c6ce2323b3ad3ed889f5",
+      "unchanged": true
+    },
+    {
+      "path": "audit/ai-continuity-handoff-2026-09-12.md",
+      "category": "original_audits",
+      "base_git_blob": "1d1e13067eeec6223dd68df1051fcca03354180e",
+      "worktree_git_blob": "1d1e13067eeec6223dd68df1051fcca03354180e",
+      "sha256": "ab914850ea4662a08aef02fb8f7716b534a949432a7fe5426703f1ecc171d5e6",
+      "unchanged": true
+    },
+    {
+      "path": "audit/android-phase-b-icon-masks.png",
+      "category": "original_audits",
+      "base_git_blob": "d962f172393f6dc8461a4d75c4c5d906cb3d9f47",
+      "worktree_git_blob": "d962f172393f6dc8461a4d75c4c5d906cb3d9f47",
+      "sha256": "2179fd6d9aba3ad2686b82360dbbe8b3ef4290df519308b0e4ee1c929c4af417",
+      "unchanged": true
+    },
+    {
+      "path": "audit/android-phase-b-validation-2026-09-21.json",
+      "category": "original_audits",
+      "base_git_blob": "3b6a4800604225dfed640ae4fa733b76b000f4a7",
+      "worktree_git_blob": "3b6a4800604225dfed640ae4fa733b76b000f4a7",
+      "sha256": "e3d6dc3c646b6a1510fa72fef6c55c1e4c3a7e36aa202b5d85589dd638e127d6",
+      "unchanged": true
+    },
+    {
+      "path": "audit/cadence-crossing-coordinate-correction-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "533612e7058d1db73d725f287be363123cccee5a",
+      "worktree_git_blob": "533612e7058d1db73d725f287be363123cccee5a",
+      "sha256": "af291cb67aa51fcaa7dd11b0c5fdf799f9ee7f5ec1e21342ef9bb8465feeae4b",
+      "unchanged": true
+    },
+    {
+      "path": "audit/california-accounting-gap-recovery-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "f00342f8a6aa7287cb0236fe1c0da0f1a1560489",
+      "worktree_git_blob": "f00342f8a6aa7287cb0236fe1c0da0f1a1560489",
+      "sha256": "5c561e6582c0c3c460e04eb650448861d3babef92995f090bb9fea5b268d69bd",
+      "unchanged": true
+    },
+    {
+      "path": "audit/california-all-id-accounting-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "cad01f35c33a5abebf05f30f80969dbc0b8def50",
+      "worktree_git_blob": "cad01f35c33a5abebf05f30f80969dbc0b8def50",
+      "sha256": "26f8d35469be6b87d5e7203203453bb693ba82ea24cbe5050e493a66fd99e036",
+      "unchanged": true
+    },
+    {
+      "path": "audit/california-batch-30-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "55013eba710fb7183a2bf6f8957390a523765322",
+      "worktree_git_blob": "55013eba710fb7183a2bf6f8957390a523765322",
+      "sha256": "682580702edd017cfef4b168a0e747afb4a9a812490a28b4881c72c87c74ef87",
+      "unchanged": true
+    },
+    {
+      "path": "audit/california-batch-final-24-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "99217c453d6a4b5e9d07de2984aa10743cd02f40",
+      "worktree_git_blob": "99217c453d6a4b5e9d07de2984aa10743cd02f40",
+      "sha256": "d043ea227572b159c1288965a4e7d9b08e1acb27ad7a6d6e751a61e1770541c4",
+      "unchanged": true
+    },
+    {
+      "path": "audit/california-cleanup-sweep-30-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "f69a85f71c1fdd518408b1081eccfdaee74c8805",
+      "worktree_git_blob": "f69a85f71c1fdd518408b1081eccfdaee74c8805",
+      "sha256": "9d694800390db6b1039167e2f15b3a387e9318a88060fd446d8fe8f2991257cf",
+      "unchanged": true
+    },
+    {
+      "path": "audit/california-final-exception-pass-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "d396f9e3f19bf014438a73ebdc0fc87a95772cb7",
+      "worktree_git_blob": "d396f9e3f19bf014438a73ebdc0fc87a95772cb7",
+      "sha256": "0397c22ba32cd24f7bb0f2fc64c5acfe444f43e6e89a2874aed420c07b04109c",
+      "unchanged": true
+    },
+    {
+      "path": "audit/california-reconciliation-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "e0860f321d95db6ef223bbeb813be9dc774746e0",
+      "worktree_git_blob": "e0860f321d95db6ef223bbeb813be9dc774746e0",
+      "sha256": "3d75c831403fcf8716571d32632f8f8959b5c9c1436d85dd4a3cedbc8575c6f6",
+      "unchanged": true
+    },
+    {
+      "path": "audit/california-reconciliation-supplement-2-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "7e9cc60eb200d5240d4f63888412a017cd7385e1",
+      "worktree_git_blob": "7e9cc60eb200d5240d4f63888412a017cd7385e1",
+      "sha256": "78c6950e4e0e7308b11c721639e40b60ca9a816b5285db595c9b9d8f910426ef",
+      "unchanged": true
+    },
+    {
+      "path": "audit/california-reconciliation-supplement-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "a885fda9d11674736b0c24ba97c776a03ddd907c",
+      "worktree_git_blob": "a885fda9d11674736b0c24ba97c776a03ddd907c",
+      "sha256": "3f81c065f25f44cc00ed8564c9df91cce328d65b18c82ebc165c2a132259bb33",
+      "unchanged": true
+    },
+    {
+      "path": "audit/california-runtime-dataset-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "4e680711687cfb0da226cea7bb77b7c8749f9eb8",
+      "worktree_git_blob": "4e680711687cfb0da226cea7bb77b7c8749f9eb8",
+      "sha256": "dd9d799a11da3463497e70136a562e43ee0b1efe9a3d16890dcf18cb3a040cee",
+      "unchanged": true
+    },
+    {
+      "path": "audit/california-runtime-destination-plan-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "c14c1a41b4f13d3c985073c6709e7e9372e930c0",
+      "worktree_git_blob": "c14c1a41b4f13d3c985073c6709e7e9372e930c0",
+      "sha256": "2752fa4c3b8553cec77edb50ea9a45847220d6dd705c87605fd9cadb45e25c8e",
+      "unchanged": true
+    },
+    {
+      "path": "audit/california-tribal-casinos-2026-09-08.json",
+      "category": "original_audits",
+      "base_git_blob": "0cd9f453ff61f4b6ae7dfc57cc3acf62145945a0",
+      "worktree_git_blob": "0cd9f453ff61f4b6ae7dfc57cc3acf62145945a0",
+      "sha256": "21c73792fd6da522301264ba358e4320525e78941a8027b14e9582bc568b978d",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-browser-release-checklist-2026-09-13.md",
+      "category": "original_audits",
+      "base_git_blob": "2217866df0f7f235345e9cdbd9e6231531b99013",
+      "worktree_git_blob": "2217866df0f7f235345e9cdbd9e6231531b99013",
+      "sha256": "73291e12786d9966eccd12452547e4add9769992dd83a82a77f8d3cf7ad43cf0",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-continuation-browser-evidence-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "365c94c2b98a4cf70d3de7169c920648759bc0ba",
+      "worktree_git_blob": "365c94c2b98a4cf70d3de7169c920648759bc0ba",
+      "sha256": "27583b3f0415e91081b7657753d4923d9458131858576965364610bcf6bb665f",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-final-freeze-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "968660b84ccf6ad3c828cb2e972ed9e8e75e773e",
+      "worktree_git_blob": "968660b84ccf6ad3c828cb2e972ed9e8e75e773e",
+      "sha256": "295153abef498050613defea6a2fd437089ef449b4a269b5c2d019e477a70eab",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-final-freeze-baseline-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "b027340d86020c0eeb7d522471e55f81ac7c788e",
+      "worktree_git_blob": "b027340d86020c0eeb7d522471e55f81ac7c788e",
+      "sha256": "f6628e33d6fa59a1a7c617d9d4c4682d580a39def0c91e427479c55c27030e3f",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-final-freeze-research-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "1600d9382f1e1f8b3f0777875eeae1d52bb1d4ae",
+      "worktree_git_blob": "1600d9382f1e1f8b3f0777875eeae1d52bb1d4ae",
+      "sha256": "d00dff02bc6d6b360c1fce3c019510dca25c7780771dffce426320d0544db5d9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-freeze-adversarial-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "15c284a48acde6686ad3837d98ad245de81b0156",
+      "worktree_git_blob": "15c284a48acde6686ad3837d98ad245de81b0156",
+      "sha256": "e05fbce7df1304c3a0ad452c3ed8e99f6f74cee83b3de48a31c0e86d5499dace",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-freeze-browser-evidence-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "6e797e0799d26eb158ed4d79ece6ac2b4a05e8e7",
+      "worktree_git_blob": "6e797e0799d26eb158ed4d79ece6ac2b4a05e8e7",
+      "sha256": "6dc24a030d1dec0903edfa16f65bf27777139cd7989870a89646190a4531a581",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-freeze-live-provider-findings-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "8f6a0f26104977a6b72acfcb0bb8b788523d2082",
+      "worktree_git_blob": "8f6a0f26104977a6b72acfcb0bb8b788523d2082",
+      "sha256": "94b128ed74ced49a39229ff97bc465a379e25e6143ebaa112b7df8663a7fcfb8",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-frontier-coordinate-qa-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "47e4211079961410ce264830fdeae7953c8ea06c",
+      "worktree_git_blob": "47e4211079961410ce264830fdeae7953c8ea06c",
+      "sha256": "84fd78db6fb0a15b72a56f6241a73240642906ecc16af47709d284ca40f67491",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-legacy-lineage-reconciliation-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "3e11f5bb3667f2753fc502f65c69db5bd378f5b4",
+      "worktree_git_blob": "3e11f5bb3667f2753fc502f65c69db5bd378f5b4",
+      "sha256": "f7ade2974238f8ad38b505f76cdea453f8dd2dbd4c4701cb4c494b5bdbd7548b",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-location-reconciliation-adversarial-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "0886e4c24cbd70f2ad82ae439f4146dc33dcb03b",
+      "worktree_git_blob": "0886e4c24cbd70f2ad82ae439f4146dc33dcb03b",
+      "sha256": "c5ff43ba78fae207a96ec5fcf6df099be5a248e925e1795f353f3c6d5c4dfc25",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-location-reconciliation-attempts-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "b2f3f9a7764942e583415d9cb2af595587f3a022",
+      "worktree_git_blob": "b2f3f9a7764942e583415d9cb2af595587f3a022",
+      "sha256": "341f13d75d1dcf8fb48cf07f044cc78818e5c6dee24f68e12f4592a1dcdad08e",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-location-reconciliation-baseline-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "e350f23d67fc07542e5fa6dff4e8b0cf9bd57f0e",
+      "worktree_git_blob": "e350f23d67fc07542e5fa6dff4e8b0cf9bd57f0e",
+      "sha256": "f15cbb95f441acd95cb43c3f0051b06e4f308dec39f5ef55ff371a4f88b71e99",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-location-reconciliation-browser-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "1777c542243865140b6892f3ce2464cd80e44443",
+      "worktree_git_blob": "1777c542243865140b6892f3ce2464cd80e44443",
+      "sha256": "fb002b435f33e776614a6b88ad87baa4eb3a28ba0a4ccbdc0a20c082d029b0d9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-location-reconciliation-performance-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "8b4a14aca093b13fb9754526031b4953e251dcd2",
+      "worktree_git_blob": "8b4a14aca093b13fb9754526031b4953e251dcd2",
+      "sha256": "7ed8181493aa4c3b9b5f5f6884d51b64a78483d9eb8d59b28321f73665117c1b",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-location-reconciliation-plan-2026-09-13.md",
+      "category": "original_audits",
+      "base_git_blob": "964c604fb59b2143e46081e3490f93db3262a70e",
+      "worktree_git_blob": "964c604fb59b2143e46081e3490f93db3262a70e",
+      "sha256": "cdd0bd4f7573550e82984745070b73fee6b8777ca1249a125fb93b6a0116d1bc",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-location-reconciliation-validation-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "812e7b5b53c6fb7e585797eb44a85f53009c52eb",
+      "worktree_git_blob": "812e7b5b53c6fb7e585797eb44a85f53009c52eb",
+      "sha256": "6e4299c05bc560d2dfbf7667d24dc73eb879cd6ba8afa22f9acab262385864dc",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-rc-adversarial-review-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "8ad39b21241a6da2fca2328c3c596936e8bf8809",
+      "worktree_git_blob": "8ad39b21241a6da2fca2328c3c596936e8bf8809",
+      "sha256": "c3d4cdc9f827d0b233792db77f7d2af04b6bf28df87471811972f8953fc9cefb",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-rc-coverage-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "732d89f93385f469a6bd626cd0c105e3a3245fdb",
+      "worktree_git_blob": "732d89f93385f469a6bd626cd0c105e3a3245fdb",
+      "sha256": "eb09d30e48cff9fe7a2724a9e6e69e366546747b4b6ff850b5d0edee58412315",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-rc-pass-51-evidence-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "49f5d8bf951c758c3f5e575bbd0093480b000524",
+      "worktree_git_blob": "49f5d8bf951c758c3f5e575bbd0093480b000524",
+      "sha256": "86c3aae7755c820cdef4daf3852b5e3ab9dc98f6e859ffd3caddb3cc040b4baf",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-rc-pass-52-evidence-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "da37dbf4402d9f2a9989040ff11cc0af6efba079",
+      "worktree_git_blob": "da37dbf4402d9f2a9989040ff11cc0af6efba079",
+      "sha256": "212f809b72c80ce6f4529fbb74951ba571593124d7c9aa710ed94e185b8ad0c7",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-rc-pass-53-evidence-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "7003bc3782209a5eba1851fcca888f218d5ae139",
+      "worktree_git_blob": "7003bc3782209a5eba1851fcca888f218d5ae139",
+      "sha256": "f08c6342e34968c47b7004aad2ae9415fe08e246f6d15b39664738c9cdfa4456",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-rc-pass-54-evidence-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "3b1fe03c652b5ab83ebf1c11457ba80d3ea68783",
+      "worktree_git_blob": "3b1fe03c652b5ab83ebf1c11457ba80d3ea68783",
+      "sha256": "d2c164c97f56dd8ee5b7da28492203819a814c90bb904e229b692f8ab768ebf4",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-rc-pass-55-evidence-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "30b0435f86fb537fa1e6b206ef22e864b72aae77",
+      "worktree_git_blob": "30b0435f86fb537fa1e6b206ef22e864b72aae77",
+      "sha256": "d8d12bb5ce7e3491d2ad9f8e2ac805abe237382b310f894239b04d4a681e99c8",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-rc-pass-56-evidence-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "9a528c97182c3a860ecf36891e2738ea71d5a251",
+      "worktree_git_blob": "9a528c97182c3a860ecf36891e2738ea71d5a251",
+      "sha256": "35b07fd1124ab6f205323e0a55d6dfd20646ce0e4049685ae50de234f64fb3b6",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-rc-pass-57-evidence-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "d9ab86ffc3f92444c05a27169123944e42aa0668",
+      "worktree_git_blob": "d9ab86ffc3f92444c05a27169123944e42aa0668",
+      "sha256": "afdccc599c1123a72c5f6b738437369ae7cb024f15c27fe9f7dfffb915b01e19",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-rc-pass-58-evidence-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "a396adf08c2b207f3da8c8479efe513421ccba25",
+      "worktree_git_blob": "a396adf08c2b207f3da8c8479efe513421ccba25",
+      "sha256": "33669e97991d948fd3771f0dff268c0ed3e2f45719b258332cb4f4a2dcd1c2c1",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-rc-pass-59-evidence-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "82c1948ea52f52d3e9e69174ba9688b2b1f8d09b",
+      "worktree_git_blob": "82c1948ea52f52d3e9e69174ba9688b2b1f8d09b",
+      "sha256": "04248525f20b7aea02206dceec0c9a34ce363600fa42ecfccb2326a8e457e45f",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-rc-pass-60-evidence-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "b4b34bf1726272081a51edaf270c5ca4863ea378",
+      "worktree_git_blob": "b4b34bf1726272081a51edaf270c5ca4863ea378",
+      "sha256": "7a4d71407b70b97e1fa36ac27788063092e49739f0987d6a9509378e392cc327",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-rc-progress-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "b6f2d6b4d818e761106f83a1fe4b3d7bf86ad3a9",
+      "worktree_git_blob": "b6f2d6b4d818e761106f83a1fe4b3d7bf86ad3a9",
+      "sha256": "27fad1083397a48e5bfb8dd93c3a1e0206fa13479dc242abd2e8663c1549c99d",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-recent-provenance-index-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "0e78d9276432b94920d0e37fdb9ff02804bc38d8",
+      "worktree_git_blob": "0e78d9276432b94920d0e37fdb9ff02804bc38d8",
+      "sha256": "0cca9e22a33fbc05ddd40256bbdfb7ccb514ca95c1298190858ca68d1d8ca4c1",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-release-readiness-2026-09-13.md",
+      "category": "original_audits",
+      "base_git_blob": "ab27387f98186b4dc4469ff20be2aee490265204",
+      "worktree_git_blob": "ab27387f98186b4dc4469ff20be2aee490265204",
+      "sha256": "f396092d697eec0b05cff66fef22e16c24aa113512be1ba543bede1c7b46c6c8",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-sources-integration.json",
+      "category": "original_audits",
+      "base_git_blob": "350e6b876e7d9339766b6c8252ca4823b4b367a9",
+      "worktree_git_blob": "350e6b876e7d9339766b6c8252ca4823b4b367a9",
+      "sha256": "842580f0e9c0cb17cd9e9d7acc52117e3bf3a91ea17a7f7a5a54f26b8c139787",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-sources.json",
+      "category": "original_audits",
+      "base_git_blob": "0322b8c328e1b97edc710d920898a38645b067d2",
+      "worktree_git_blob": "0322b8c328e1b97edc710d920898a38645b067d2",
+      "sha256": "c0a42a26580acb6ed344b4a7be22d7a123f7b7a37741256917c4f043342c3da5",
+      "unchanged": true
+    },
+    {
+      "path": "audit/casino-status-watchlist-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "06bac10ef8bfcd54aae080131c92dd7eb2340f37",
+      "worktree_git_blob": "06bac10ef8bfcd54aae080131c92dd7eb2340f37",
+      "sha256": "e1e489fc650e18aec88a9bdc962a93ee9eef5802a5f2f8db07a92c604da4db8d",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-black-hawk-address-qa-pass-1-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "0c555a5312805da4fc85df4dc167c5bb8d2ec7b5",
+      "worktree_git_blob": "0c555a5312805da4fc85df4dc167c5bb8d2ec7b5",
+      "sha256": "fdaf36efea2d777a69a0922e33af5650e1ab6f058dfe766b1d79df3fed1c0edb",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-black-hawk-ballys-reconciliation-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "ec0f459662153afb0f278d17d9e73543830dfb81",
+      "worktree_git_blob": "ec0f459662153afb0f278d17d9e73543830dfb81",
+      "sha256": "e713ad021aa6d7e2969a11707fefba751c5817b145d42fd078c313f71805ae98",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-black-hawk-coordinate-qa-pass-1a-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "9ed76e35e207cca6027d3bb8d01319ac5fe34a61",
+      "worktree_git_blob": "9ed76e35e207cca6027d3bb8d01319ac5fe34a61",
+      "sha256": "a064c5c86ab632ea8abbc3750ee1976dbd107145304198f4555ea3da32209194",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-black-hawk-coordinate-qa-pass-1b-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "2fd5273469afb11d5099ec0d6c47d2270ee76608",
+      "worktree_git_blob": "2fd5273469afb11d5099ec0d6c47d2270ee76608",
+      "sha256": "3a5a845ec5ba43cd64905679d5d683b14b4f256b96a0d25a7a1066bbf5c27b43",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-black-hawk-coordinate-qa-pass-1c-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "affe7e9dc7ca03ab8f076b4ed59a3eb9d6cb4f94",
+      "worktree_git_blob": "affe7e9dc7ca03ab8f076b4ed59a3eb9d6cb4f94",
+      "sha256": "d5b97becd6d31e9304ce81b9f4267fe0a996394923888932b6caad8afdf82fe9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-casino-inventory-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "fe63a8ea036b028824388428723a2427e8bcd7b4",
+      "worktree_git_blob": "fe63a8ea036b028824388428723a2427e8bcd7b4",
+      "sha256": "9bd8c282a784ecd21754d621194da1c9e90f5075e5f0229370497c7457a9b85b",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-central-city-address-qa-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "8c43415d5a47f7cc6a9ce664fbf7b7e7942ac4ec",
+      "worktree_git_blob": "8c43415d5a47f7cc6a9ce664fbf7b7e7942ac4ec",
+      "sha256": "700ebcfc7af76eb36dc8eb26eaa9dceeafa3dccab04690a96905f897a4076de8",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-central-city-coordinate-qa-pass-1-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "87662b40eabd512f3ae494956c95aeb6aa0f130e",
+      "worktree_git_blob": "87662b40eabd512f3ae494956c95aeb6aa0f130e",
+      "sha256": "1315edc2a91ac1ea33be73bbe4e6027d051af84a2d4141ac4f6e55d95b949c0f",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-cripple-creek-address-qa-pass-1-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "e8e3e17842c6312025b9af641e5292f3d0285273",
+      "worktree_git_blob": "e8e3e17842c6312025b9af641e5292f3d0285273",
+      "sha256": "cff532189a437d82ccc34abaa1c89c604e7fef7c4f20b710a359ca284389619e",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-cripple-creek-coordinate-qa-pass-1a-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "69514ed08857d0514b0dee40710cba33c5054d28",
+      "worktree_git_blob": "69514ed08857d0514b0dee40710cba33c5054d28",
+      "sha256": "b3a1bb32a5d4620976a9c09958dc60b11c8d146e97a409a7fbec4b23d937f101",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-cripple-creek-coordinate-qa-pass-1b-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "d89b7e96913e10ee4697aff6dc1e200e236c43ad",
+      "worktree_git_blob": "d89b7e96913e10ee4697aff6dc1e200e236c43ad",
+      "sha256": "c1571f71f03f39d557361acdabec901c95320c129944530500d8636031660ed9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-cripple-creek-destination-reconciliation-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "f6edabb3d81cc7fb41e5e51e6af541987b40ecb4",
+      "worktree_git_blob": "f6edabb3d81cc7fb41e5e51e6af541987b40ecb4",
+      "sha256": "6977ebda6b8ccfea7b9f7a525c5dddc12b5e23f72da7743249d8f3e813fa4f00",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-reconciliation-pass-1-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "46e2ddb586ccc23aaedbe38699f575371bb27b8e",
+      "worktree_git_blob": "46e2ddb586ccc23aaedbe38699f575371bb27b8e",
+      "sha256": "be39c049d4fde3e121e3c96159d85d862b9ced95f2c0488b8f4592a0c7bcd483",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-statewide-runtime-reconciliation-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "7f3ce399da10d222bce4f419e3957114f50992fe",
+      "worktree_git_blob": "7f3ce399da10d222bce4f419e3957114f50992fe",
+      "sha256": "e51d311f33cdeb342ec5de01cb1db5efa95033274233471295b855b802cfe33a",
+      "unchanged": true
+    },
+    {
+      "path": "audit/colorado-tribal-coordinate-qa-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "02f4c7a2d7bd3997bdf963abbcac955d4bcd795f",
+      "worktree_git_blob": "02f4c7a2d7bd3997bdf963abbcac955d4bcd795f",
+      "sha256": "e1dfb17179841809e23e5bf8604cc54e7f09f9ee3d40fd3c64d47c49f68df0b1",
+      "unchanged": true
+    },
+    {
+      "path": "audit/integration-test-gate-recovery-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "874258f07e0212952142b57cb4aff4d9857b5905",
+      "worktree_git_blob": "874258f07e0212952142b57cb4aff4d9857b5905",
+      "sha256": "fe436e3d2ca6fd7c95f90a6c142944492dd4582313bb82ec54568b280216b0a0",
+      "unchanged": true
+    },
+    {
+      "path": "audit/integration-validation-summary-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "75b206044dcc37e3e95da712096e74d5db6532d4",
+      "worktree_git_blob": "75b206044dcc37e3e95da712096e74d5db6532d4",
+      "sha256": "bdb2505c432320d58ffee7d4b9e7313845711726a2ed6ed81b87b2d07b6da322",
+      "unchanged": true
+    },
+    {
+      "path": "audit/location-architecture-2026-09-13.md",
+      "category": "original_audits",
+      "base_git_blob": "c96a489ac50c338531292647287bf16dd60b111c",
+      "worktree_git_blob": "c96a489ac50c338531292647287bf16dd60b111c",
+      "sha256": "22f06871569a3f0acc14ca693001fb2620cbc1f5b21b2b4672d00654a1c3dec6",
+      "unchanged": true
+    },
+    {
+      "path": "audit/location-validation-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "ffae5e5d006e604a03fc864501a820a53d7b9ad4",
+      "worktree_git_blob": "ffae5e5d006e604a03fc864501a820a53d7b9ad4",
+      "sha256": "b12bd0c5afd57b9c233c8a47bf0f348b5b64c6435d6c5425f06d5dd31433dbe1",
+      "unchanged": true
+    },
+    {
+      "path": "audit/national-manifest-coverage-reconciliation-2026-09-13.json",
+      "category": "original_audits",
+      "base_git_blob": "f2f534b725704fb28bd31909ab73f840afb47ee1",
+      "worktree_git_blob": "f2f534b725704fb28bd31909ab73f840afb47ee1",
+      "sha256": "dfcf2d6f3b647acb28c97bee5540359f7d207671550689bfdc26f1d4a5fc7ec5",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-ambiguity-resolution-pass-2-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "a12bc19ede9daa299727fa00090d557031aa4b35",
+      "worktree_git_blob": "a12bc19ede9daa299727fa00090d557031aa4b35",
+      "sha256": "6490e54df7a68d19f5d221585297e2398ea7574af4a04c08db2e64e8b3a2fd5d",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-ambiguity-resolution-pass-3-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "dc1b008c8c7250f2c5a260b36e0b7e4a4a1d166e",
+      "worktree_git_blob": "dc1b008c8c7250f2c5a260b36e0b7e4a4a1d166e",
+      "sha256": "aa45564a05debebc06aabb7efed5d199a44799ff2d89d29d311580ff75dcce01",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-balance-state-ledger-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "b570a7ae707a29b490821e95401e3bf431fbba29",
+      "worktree_git_blob": "b570a7ae707a29b490821e95401e3bf431fbba29",
+      "sha256": "0afc99fe6cb22d6eaab4c9dbfc4693ba3643f387c33f5b28e6c0db4b9047da50",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-battle-mountain-coordinate-qa-pass-19-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "c78358490d36816c34d08e02aa18c6dd02530aec",
+      "worktree_git_blob": "c78358490d36816c34d08e02aa18c6dd02530aec",
+      "sha256": "4adff0f3e05bf014a4deb9829640c8e5a863f55c8c84362e111f299690beed42",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-bonanza-fallon-coordinate-qa-pass-20-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "18522e23b9b216d3cceb6d80e382eb1f8bb12833",
+      "worktree_git_blob": "18522e23b9b216d3cceb6d80e382eb1f8bb12833",
+      "sha256": "6d6760be70153cc2394d59575daa9117c65cd0e5accc3e5d039ff7ba773198b6",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-boulder-henderson-coordinate-qa-pass-9-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "65e547a0eed684d73d810f059bb6bbc2ec124f96",
+      "worktree_git_blob": "65e547a0eed684d73d810f059bb6bbc2ec124f96",
+      "sha256": "bed56dd1d18a9b09573f442903e58178d3fbce5032d1b4443b3903fb2ef936fb",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-boulder-outer-clark-coordinate-qa-pass-13-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "28798f5062630720fb4b316516444a55581859e9",
+      "worktree_git_blob": "28798f5062630720fb4b316516444a55581859e9",
+      "sha256": "dee63edac7c6ff021cc5038eae86edc19ff53baabea5a68ce9ac830eb69b8359",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-cadence-crossing-coordinate-qa-pass-22-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "c5562e1ce408045d9a71da06deb4bb281cddac1f",
+      "worktree_git_blob": "c5562e1ce408045d9a71da06deb4bb281cddac1f",
+      "sha256": "bae2c1f48d257f5c2dc810463690a0f23f3aeb2b5f256c337de7c0855ffd4e50",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-cadence-crossing-footprint-qa-pass-21-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "084db24df9c5a56e797360bf6f7bb84b8b34c572",
+      "worktree_git_blob": "084db24df9c5a56e797360bf6f7bb84b8b34c572",
+      "sha256": "ec61e8ace36fa7883d27567c1ae491116d170aeb153439cd6a03a82a7828fc49",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-clark-outer-ledger-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "2c4f820700e6128c5e4ed101f58bec5c8aa74d74",
+      "worktree_git_blob": "2c4f820700e6128c5e4ed101f58bec5c8aa74d74",
+      "sha256": "3e68fba0340ed5df04844bb6fc064639639f4a85b164e1c56a0af5a8c5fcba0c",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-club-fortune-north-successor-qa-pass-18-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "e6e3c3268db80a45860d4cef302eba682f4413f2",
+      "worktree_git_blob": "e6e3c3268db80a45860d4cef302eba682f4413f2",
+      "sha256": "40e18979f8b8c20112af2000476c68eac66223d3ddb642908f6c0ff379160110",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-elko-operation-qa-pass-16-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "0ed0e43a496a400849a0de34b4474fc09e563902",
+      "worktree_git_blob": "0ed0e43a496a400849a0de34b4474fc09e563902",
+      "sha256": "4c62003196ec6f2a18366b72870aefba119edd0b045a977f63c897333060cfe5",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-henderson-coordinate-qa-pass-12-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "5135be955782b28913ef9a1789e664e58444f561",
+      "worktree_git_blob": "5135be955782b28913ef9a1789e664e58444f561",
+      "sha256": "cd5172476eee9353c4fb86d3c21da52e612053463d341861886965251df7e1d4",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-henderson-successor-coordinate-qa-pass-14-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "5ebb2a108e154090358e7251d82d7733d364f7be",
+      "worktree_git_blob": "5ebb2a108e154090358e7251d82d7733d364f7be",
+      "sha256": "6f7cdaf48b0de2a14e998bc0ecb4dbc499b590ba5310309dc0791fbc67383e5e",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-laughlin-ledger-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "49c5b4bc511d4e995dd1d5c32ab6cfcfb6460aa4",
+      "worktree_git_blob": "49c5b4bc511d4e995dd1d5c32ab6cfcfb6460aa4",
+      "sha256": "59dbb5de97926a70e5e261fe58b98467f6263987355365a840313c8364359fdd",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-nonrestricted-casino-scope-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "39ec9ebc76390ad7c789f92978ec89587a11a41f",
+      "worktree_git_blob": "39ec9ebc76390ad7c789f92978ec89587a11a41f",
+      "sha256": "dd13336911a22d9b63c7be1a078cf4e5618fc188dde657c5a1b7b51c89e0e8f2",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-north-las-vegas-coordinate-qa-pass-10-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "b9eddb97834fd88cc992bfe8104230e707e16e35",
+      "worktree_git_blob": "b9eddb97834fd88cc992bfe8104230e707e16e35",
+      "sha256": "9a040026510b516bd8c89faa30de00c6eb1b0e9488b2a638d8faedc1cd7059c6",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-north-las-vegas-coordinate-qa-pass-11-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "043a6db792160216f31575243530b180eb4c6c81",
+      "worktree_git_blob": "043a6db792160216f31575243530b180eb4c6c81",
+      "sha256": "8c30d3f0aad23fa237d26a3df1ea4303dfa99cdc950df4f620ce6f1fd3d46b4e",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-north-las-vegas-followup-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "d3add1eb0c5f789dcc5afd78cd83c00d36297a7f",
+      "worktree_git_blob": "d3add1eb0c5f789dcc5afd78cd83c00d36297a7f",
+      "sha256": "216c26ed91ad00ee6c9b93faaf9e720fa72b6745584339094a0d8e489c71859d",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-northern-markets-ledger-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "5863323b69375f3ccbf2d921edf2f416e6a02495",
+      "worktree_git_blob": "5863323b69375f3ccbf2d921edf2f416e6a02495",
+      "sha256": "74fbc11f3f94d5fd4da5a2cd913f8624303d725e33431940caa15a78e71ddabf",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-outer-clark-mesquite-coordinate-qa-pass-8-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "ee80ee3bfa8cc7980f74dc4309bcd578dfe01dc5",
+      "worktree_git_blob": "ee80ee3bfa8cc7980f74dc4309bcd578dfe01dc5",
+      "sha256": "a7bf42969be42dc4d680bad70678913c258406419bf03d24e4dd938ed72c8974",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-reconciliation-pass-1-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "e95ae28eea332e3e9b346cdb1f6d5d03ae40fff1",
+      "worktree_git_blob": "e95ae28eea332e3e9b346cdb1f6d5d03ae40fff1",
+      "sha256": "2c995edecea4f5af2e9105a6670f6869eed4a19abb7a7c10e9abeeaca947f037",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-reconciliation-plan-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "f7c843bad43f37d8b86f8267d8ff1676a7822683",
+      "worktree_git_blob": "f7c843bad43f37d8b86f8267d8ff1676a7822683",
+      "sha256": "149caccdf42c2a37b69090f8e387ac558898d19c1438a9a936e0a384577a6a75",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-runtime-batch-1-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "919aa5560857d1a6ce9145030c6a63f0c708d516",
+      "worktree_git_blob": "919aa5560857d1a6ce9145030c6a63f0c708d516",
+      "sha256": "91730f9e96d675e0cf53345d343388bdea556cbfc5caf9c8f025d7ed143a594c",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-runtime-batch-2-laughlin-qa-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "58e15935fa5ec41d72f09b52b7fb0d532650a7eb",
+      "worktree_git_blob": "58e15935fa5ec41d72f09b52b7fb0d532650a7eb",
+      "sha256": "ca62fc716ac855191908254e90d279bacd18f162dc71e4d8ff4f6acee0bfac3d",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-runtime-batch-2-reno-sparks-qa-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "936eeb597cdb968781b6894a8c1583ac0953aef5",
+      "worktree_git_blob": "936eeb597cdb968781b6894a8c1583ac0953aef5",
+      "sha256": "df2b03df501c32eb089081fc628c74b90e087da2ff59f3ac17327062249cae1a",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-runtime-batch-2-selection-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "d3c0a7a1e442c12bdee0ff36b7b94333a9f562e7",
+      "worktree_git_blob": "d3c0a7a1e442c12bdee0ff36b7b94333a9f562e7",
+      "sha256": "02232793065dfd70ee6e4f75ae0ce80f4bbeae2e975f7f92df97619bb7280a94",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-rural-completeness-pass-6-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "68f5f68ca00589cb1a32350626b9a908c7462e22",
+      "worktree_git_blob": "68f5f68ca00589cb1a32350626b9a908c7462e22",
+      "sha256": "0402354027f5e81307168d07ea2358f576f129c90d79a8223811b3f57cda235f",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-rural-completeness-recovery-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "229b4cc30a31983c75033935e793a1ae84afad95",
+      "worktree_git_blob": "229b4cc30a31983c75033935e793a1ae84afad95",
+      "sha256": "f531bf8cd39bfa99ec011286e51ca0dbe1e37a40e144b9d128198ea88026d321",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-rural-coordinate-qa-pass-7-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "1a4b6b8147dd19dfec89e98b9932799d2d438088",
+      "worktree_git_blob": "1a4b6b8147dd19dfec89e98b9932799d2d438088",
+      "sha256": "71419894af5396d21d68db65fc4d020081a8d1836ea6db9ca5bb18beafb9ae95",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-rural-operation-state-qa-pass-15-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "df58163ef2785f126ab310c25b6be014d0398e29",
+      "worktree_git_blob": "df58163ef2785f126ab310c25b6be014d0398e29",
+      "sha256": "5f75f80571d0987924ff90e5622a46862d9ffa0bbc999014794272e56c409c96",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-rural-recovery-pass-5-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "96d8fc714a15f6832ecbbdc3f15186f339222847",
+      "worktree_git_blob": "96d8fc714a15f6832ecbbdc3f15186f339222847",
+      "sha256": "6f286fcb63e28714b294030356a12bbbf086ff6a37d9709388b9bd4e23bffa56",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-scope-address-pass-4-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "192bb313e502f9cd41daa17207fd9c2affb0dcfc",
+      "worktree_git_blob": "192bb313e502f9cd41daa17207fd9c2affb0dcfc",
+      "sha256": "fd520b4456cd661a16115bd9877b81769dfcb8169dad889e1156c440e1d47a71",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-statewide-candidate-accounting-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "1afa0f5c9ee91bb8531398159c8ae0ce8403420e",
+      "worktree_git_blob": "1afa0f5c9ee91bb8531398159c8ae0ce8403420e",
+      "sha256": "b9060882e50d1d00026c6c4c70d35e5e9dbdff9b9ab6be0fe939ab5b3c24c2b4",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-strip-downtown-ledger-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "800d30c6186d91fc5edd4441c49b90974147abe8",
+      "worktree_git_blob": "800d30c6186d91fc5edd4441c49b90974147abe8",
+      "sha256": "eb71cf468250bff61f4591c239e76b4a45c7164205cc6b6f3bbcb99c3c7f34f6",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-tribal-crosscheck-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "29352d38230a20ff66cc91f840ffe6d738c999f8",
+      "worktree_git_blob": "29352d38230a20ff66cc91f840ffe6d738c999f8",
+      "sha256": "cf59e93fe65cb1b8858cc9febd304d1025fdc8e7c7e5762387773cd5558117a9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/nevada-wildfire-fremont-coordinate-qa-pass-17-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "56a1d91fbfa6a35c6e0e44536e388d891ccde343",
+      "worktree_git_blob": "56a1d91fbfa6a35c6e0e44536e388d891ccde343",
+      "sha256": "a3003837fe300cd51dd76aaff3e0c3e3d4966568fde6f26c3e2278944f94d9d5",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-address-normalization-pass-3-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "e8c3a0b9b0957a3bf0662c9a71a3e2c26581e1da",
+      "worktree_git_blob": "e8c3a0b9b0957a3bf0662c9a71a3e2c26581e1da",
+      "sha256": "1cccadb898283caf94f6c4f3385378d10013d1f9e36c777fecebd791f0b9eb51",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-coordinate-qa-pass-1-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "cb0f517b67c46456e35c7bc85c61704431e3ffc8",
+      "worktree_git_blob": "cb0f517b67c46456e35c7bc85c61704431e3ffc8",
+      "sha256": "4f3326cbb84718c5e4131276833639e81ce3e5bfadbb6a59dcd8cffd5989d0e0",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-coordinate-qa-pass-10-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "a76e910d139d1cf9eb4630933609c81472e45cc0",
+      "worktree_git_blob": "a76e910d139d1cf9eb4630933609c81472e45cc0",
+      "sha256": "d7513ef79f6bcf66e96f9dbe6dac8e56b99859610431feef069c6cba758a069c",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-coordinate-qa-pass-11-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "f84e0b819d6198e12ed53be6b187441c340dbf9a",
+      "worktree_git_blob": "f84e0b819d6198e12ed53be6b187441c340dbf9a",
+      "sha256": "90a416db04ff53e7cd2c90fca673b0594cb10a69db480cff11c4ac50c5968ed4",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-coordinate-qa-pass-12-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "f74dd05d46b951f0bb726fd0ec697f4558a58735",
+      "worktree_git_blob": "f74dd05d46b951f0bb726fd0ec697f4558a58735",
+      "sha256": "0fef34b2938af27f5eee236456736d42120cda7c67d9a83dddf50eccff12acf7",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-coordinate-qa-pass-2-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "56476264dfb387cb49fe254f1e18fb12e08a7469",
+      "worktree_git_blob": "56476264dfb387cb49fe254f1e18fb12e08a7469",
+      "sha256": "1615c63cd86f1419ed14028967e2eb4769aa9025abf0ce85edcb512f4b2f6ef8",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-coordinate-qa-pass-3-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "bddd6f64b7bb6ebb8bf4e8d998e4488f356a7cbf",
+      "worktree_git_blob": "bddd6f64b7bb6ebb8bf4e8d998e4488f356a7cbf",
+      "sha256": "0679c819270036dbb5cadbecdd01846aa37e7dc8724c72977374a0676ee28302",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-coordinate-qa-pass-4-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "c720ab249ddf0387dbe474a1509cccab2477e48d",
+      "worktree_git_blob": "c720ab249ddf0387dbe474a1509cccab2477e48d",
+      "sha256": "d66b21af97556f5258d60d76f9efdab64591f872dcc00630bf7e199a9fcb1b7c",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-coordinate-qa-pass-5-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "518bdb43700735e2c03308f0b983d0f19c2fa250",
+      "worktree_git_blob": "518bdb43700735e2c03308f0b983d0f19c2fa250",
+      "sha256": "02029bf7739f57466c58b2395bc75e3f50f60bf89374fb76084aa074a2fa88b7",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-coordinate-qa-pass-6-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "f80661510532983da56f8ef1363bd127428653e5",
+      "worktree_git_blob": "f80661510532983da56f8ef1363bd127428653e5",
+      "sha256": "d00f79218c0d28bc9f3a26da04004b8493519b5765f14c29c329284e406f5a10",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-coordinate-qa-pass-7-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "96fac613d3448faf15849320b61cc0ed5138dcec",
+      "worktree_git_blob": "96fac613d3448faf15849320b61cc0ed5138dcec",
+      "sha256": "c6a2b74c11b762a703effa5df13cbce9d181de47673370e25b9d5eef8fee973d",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-coordinate-qa-pass-8-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "a16c37b61861c610ec5d0183e45d09eeb8d84b21",
+      "worktree_git_blob": "a16c37b61861c610ec5d0183e45d09eeb8d84b21",
+      "sha256": "275a08ad8237bc5e1d66ecbef5360b6185df2246e12fd373f5f16b4372020cf9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-coordinate-qa-pass-9-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "695695cdc88810e9cc1c68ed9a8f19fddcbc0b1a",
+      "worktree_git_blob": "695695cdc88810e9cc1c68ed9a8f19fddcbc0b1a",
+      "sha256": "2237295f99b5a855ac1c2e1a4de4db3ade53941fafcf2a16f1ea70974af77648",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-duplicate-distance-qa-pass-1-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "d86613380fbf100e269fa4e2754f9a0b700536ff",
+      "worktree_git_blob": "d86613380fbf100e269fa4e2754f9a0b700536ff",
+      "sha256": "daf5b6f01d94be81a85b19697aaaa227e090722bcea3be0f4b3fc0fe94530d3e",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-duplicate-distance-qa-pass-2-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "421a1f97cef9b8fd2307773ed4e7e19826722a90",
+      "worktree_git_blob": "421a1f97cef9b8fd2307773ed4e7e19826722a90",
+      "sha256": "d046d23b13107e3bffede99b1008165f9e7dd34367fa88a244d99e2812943c38",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-major-operators-pass-1-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "5de4ecd2dcf294ea5a81e09f67ee8e23b0f2ed93",
+      "worktree_git_blob": "5de4ecd2dcf294ea5a81e09f67ee8e23b0f2ed93",
+      "sha256": "82ea46a9c9fcf76d5ae2b68f768667e6cf3ab07178cf70a28d68111583c6b1a5",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-major-operators-pass-2-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "808acf5de92ad165f6c961f0bb65f519ebe5c9e5",
+      "worktree_git_blob": "808acf5de92ad165f6c961f0bb65f519ebe5c9e5",
+      "sha256": "56931af2ab826ded902aa1e6c2c3e50c302612eeb191e3bf95bc0d82559edb41",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-major-operators-pass-3-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "9f19cebd7b6239fe7ab3d062000043b39b84f706",
+      "worktree_git_blob": "9f19cebd7b6239fe7ab3d062000043b39b84f706",
+      "sha256": "3cc9b95e41777451e871007fc71467ae3e09cf0e321f9889318dbd54c7887188",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-runtime-eligibility-pass-1-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "7487b9fa78739759b8bf6e048b44a3ab4e001ad5",
+      "worktree_git_blob": "7487b9fa78739759b8bf6e048b44a3ab4e001ad5",
+      "sha256": "28b387e8611ea6eb110e6e35646008f2bb0994214248497d9737ca4d23063ae9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-runtime-qa-pass-1-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "0706e7e496f30a9b6a772c59c196edfa7848fa86",
+      "worktree_git_blob": "0706e7e496f30a9b6a772c59c196edfa7848fa86",
+      "sha256": "fbefe11c6c074480a7ee64d5caad382bda67f304619d3026fcce93c9ae7d920c",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-runtime-qa-pass-2-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "e65d3968a824dd5b7ea61f4b469f628673afa59f",
+      "worktree_git_blob": "e65d3968a824dd5b7ea61f4b469f628673afa59f",
+      "sha256": "279be026a2c175fa4a3ae5dcabc7c415d113413eb458196744ddd3193b9a5914",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oklahoma-statewide-scope-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "ff29e55ed289555d44e543844ae2438b20322be9",
+      "worktree_git_blob": "ff29e55ed289555d44e543844ae2438b20322be9",
+      "sha256": "1d6d420fd0055aeee7c8516db9b3466500fa2a3f9846e38963289b954fde5b19",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oregon-reconciliation-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "b187d05b1a3283861c36efd6a245f98d419d77c0",
+      "worktree_git_blob": "b187d05b1a3283861c36efd6a245f98d419d77c0",
+      "sha256": "3ee73d86603049e11aa59bb0000e2e5e855f83ff1aa7f723abcb6509fc3a1d85",
+      "unchanged": true
+    },
+    {
+      "path": "audit/oregon-tribal-casinos-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "f9e71312bd15bee181b7fbcfd19a83b8afe2404a",
+      "worktree_git_blob": "f9e71312bd15bee181b7fbcfd19a83b8afe2404a",
+      "sha256": "02568d4950f211279da139bca0142528829625deb84df8a37f1ffe22d1963e2a",
+      "unchanged": true
+    },
+    {
+      "path": "audit/pick-for-us-pre-merge-baseline-remediation-1-2026-09-29.json",
+      "category": "original_audits",
+      "base_git_blob": "5a949ff6f42578bcc26cd76e468731cda7bdd8ce",
+      "worktree_git_blob": "5a949ff6f42578bcc26cd76e468731cda7bdd8ce",
+      "sha256": "8f82958eefa92b8e42c08897531713448b131af57ab4adfc8c832a5da8f199bd",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-audit-1-2026-09-30.json",
+      "category": "original_audits",
+      "base_git_blob": "5ff0b77b12849f2aaf4a22fa02979e485e5632d9",
+      "worktree_git_blob": "5ff0b77b12849f2aaf4a22fa02979e485e5632d9",
+      "sha256": "03d6ade45704f1f53fb0cde3ed642af0bd77bcbcc09066c2e2d20b877122e313",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-audit-1-2026-09-30.md",
+      "category": "original_audits",
+      "base_git_blob": "e0ecfea5717c97c5fc8b65d04a5f88e8f706d3a4",
+      "worktree_git_blob": "e0ecfea5717c97c5fc8b65d04a5f88e8f706d3a4",
+      "sha256": "25e70c91bc986a8fa0c18cbfbf1d033f53416f191e6b2b500462b90e6d296864",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-audit-1-evidence-2026-09-30.zip",
+      "category": "original_audits",
+      "base_git_blob": "c2e03a73125f76dceffb601d2710c4733b113230",
+      "worktree_git_blob": "c2e03a73125f76dceffb601d2710c4733b113230",
+      "sha256": "261893fe60427cfe8ad475f85d9d1845cc73c2f11594bb278779a4d1d8fd1f6b",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-2026-09-30.json",
+      "category": "original_audits",
+      "base_git_blob": "01d51e787cac860fc1e320dd59ef9ab9f19d8326",
+      "worktree_git_blob": "01d51e787cac860fc1e320dd59ef9ab9f19d8326",
+      "sha256": "806d750ee16b3414b838541599786f23802bbea29732022c7b3af3309f450075",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-2026-09-30.md",
+      "category": "original_audits",
+      "base_git_blob": "889fdfa05d924f5e7bbbe486f75aa1ffc4bfb935",
+      "worktree_git_blob": "889fdfa05d924f5e7bbbe486f75aa1ffc4bfb935",
+      "sha256": "3aede0591168ff354f6767c4dc3f1f4694cb21d865d6f9755591ea14a9f42d7b",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/android-check.log",
+      "category": "original_audits",
+      "base_git_blob": "628139fa3bc54d1b07afff37ac625dd31bcaadb0",
+      "worktree_git_blob": "628139fa3bc54d1b07afff37ac625dd31bcaadb0",
+      "sha256": "e04c378c5f9d9bbbd4fb2e4dcd70351a25984fd0c18f2547a5f6e94b9ce703bb",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/availability-location.log",
+      "category": "original_audits",
+      "base_git_blob": "66798f9fc0658e3a5630fa0487e58c3a51941cbb",
+      "worktree_git_blob": "66798f9fc0658e3a5630fa0487e58c3a51941cbb",
+      "sha256": "38bbd362210b5fc4bf27e9b4356663c31cf5842f9a06b43897bc8b4e4bd9b179",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/baseline-negative-control.log",
+      "category": "original_audits",
+      "base_git_blob": "d9719cb9b84dbcce8a023285cd41964bb5ae1f45",
+      "worktree_git_blob": "d9719cb9b84dbcce8a023285cd41964bb5ae1f45",
+      "sha256": "b342ce9131191d1fddd6804cdccfe8cc378d8436d92409245f8d8b55301e0b25",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/browser-capability.log",
+      "category": "original_audits",
+      "base_git_blob": "888405552d2d94d22d2c157deda351d3b1a7e447",
+      "worktree_git_blob": "888405552d2d94d22d2c157deda351d3b1a7e447",
+      "sha256": "a12f3d5ded431f2d138285e3966642126b358cc3512b6c3402c872c75d18706d",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/browser-install.log",
+      "category": "original_audits",
+      "base_git_blob": "e6292dcaaed9d42c72b660cdcb42f660fdf0a6d2",
+      "worktree_git_blob": "e6292dcaaed9d42c72b660cdcb42f660fdf0a6d2",
+      "sha256": "5b25a0141f79e07e506cd9cb13286f756e2110e276bb98b8f45d482bcf20d173",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/built-function-config.json",
+      "category": "original_audits",
+      "base_git_blob": "db0c124ec5036cb1e3d62887d213842cdcca7e5c",
+      "worktree_git_blob": "db0c124ec5036cb1e3d62887d213842cdcca7e5c",
+      "sha256": "e8c730c7d784950236a1798979632f8be360ac421a0c762743e2e63b3c79b3e7",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/capacitor-before.json",
+      "category": "original_audits",
+      "base_git_blob": "1e9a4d69d01571bf4eeebd9eccb09bd8a6ffe0bc",
+      "worktree_git_blob": "1e9a4d69d01571bf4eeebd9eccb09bd8a6ffe0bc",
+      "sha256": "c29e134b70675ba302bcbb8fd5a5466f477839cbf3bffd9ac885307c99f9ed9c",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/capacitor-stability.json",
+      "category": "original_audits",
+      "base_git_blob": "0bd7a3699ac8a10fa2ddcd4486966e7cf3e51779",
+      "worktree_git_blob": "0bd7a3699ac8a10fa2ddcd4486966e7cf3e51779",
+      "sha256": "4f06d90edb294df7bbd25dab5dab78bdd11ceb57f7bfd58c43e0e5b9f9e7fa7b",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/capacitor-sync.log",
+      "category": "original_audits",
+      "base_git_blob": "ad5438c9443f790eba5ab5664028524eb7a4445f",
+      "worktree_git_blob": "ad5438c9443f790eba5ab5664028524eb7a4445f",
+      "sha256": "736adc60bcad6ba5c30483ddbc9ffe042cb21d2d9f070976a9756492c1472ce8",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/casino-invariants.log",
+      "category": "original_audits",
+      "base_git_blob": "afad659507c0c1f24d378d60ec54275d759d0aca",
+      "worktree_git_blob": "afad659507c0c1f24d378d60ec54275d759d0aca",
+      "sha256": "2d0803767ef2020413d2ab49d14b9ed18486816127b5ab7f357f2bd3dcb944d1",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/changed-code-lint.log",
+      "category": "original_audits",
+      "base_git_blob": "83b5f9d4df0d01aa0059b4e2ce67617225986b34",
+      "worktree_git_blob": "83b5f9d4df0d01aa0059b4e2ce67617225986b34",
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/deadlines-initial.log",
+      "category": "original_audits",
+      "base_git_blob": "4c6d57c3bdfc4fee717a87012cc0ceb6d31e88e4",
+      "worktree_git_blob": "4c6d57c3bdfc4fee717a87012cc0ceb6d31e88e4",
+      "sha256": "31e7b30260a379e56f0e84937d1fd9d69a3ecf748c5694e040629aac140880d2",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/deadlines-seasonal.log",
+      "category": "original_audits",
+      "base_git_blob": "3cd635c642d61ccf639803faeef0e0395a5aa322",
+      "worktree_git_blob": "3cd635c642d61ccf639803faeef0e0395a5aa322",
+      "sha256": "7b4a17f5dcd2db6a145a2f5a763ae17974d441a98521dfc530138860aed47251",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/dependency-tree.log",
+      "category": "original_audits",
+      "base_git_blob": "c5f4ea32f229cbbd4f7d9c6fa2cf64aef3230aba",
+      "worktree_git_blob": "c5f4ea32f229cbbd4f7d9c6fa2cf64aef3230aba",
+      "sha256": "fa6bde09e862cd868aa54ddc74d0a10c9cec89d8b5cf2158fee0bcf902f50a36",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/diff-check-final.log",
+      "category": "original_audits",
+      "base_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "worktree_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/diff-check-initial.log",
+      "category": "original_audits",
+      "base_git_blob": "afa8d0c032ff4f577df56b026d89774f739beb07",
+      "worktree_git_blob": "afa8d0c032ff4f577df56b026d89774f739beb07",
+      "sha256": "42f6961c5e30c6645176d596b17a041f311b14fda233977b34f8c3471cdf97fc",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/evidence-manifest.json",
+      "category": "original_audits",
+      "base_git_blob": "f6d4e71dd8596db656b4d7aaf0d7d838490f0436",
+      "worktree_git_blob": "f6d4e71dd8596db656b4d7aaf0d7d838490f0436",
+      "sha256": "0b20bd5a4bef63a2f4952e12ad4a6ce0e8bda4637f96a7088f33ff7d4a30f86a",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/final-fetch.log",
+      "category": "original_audits",
+      "base_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "worktree_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/final-sanity.json",
+      "category": "original_audits",
+      "base_git_blob": "6b5b1d9857244ae04c1f4d64a24e8d548fcbfb82",
+      "worktree_git_blob": "6b5b1d9857244ae04c1f4d64a24e8d548fcbfb82",
+      "sha256": "3a4b27253b9642ec0298fe4170c9b23d145a0211c8b5be0f4c230d1387593dcd",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/format.log",
+      "category": "original_audits",
+      "base_git_blob": "83b5f9d4df0d01aa0059b4e2ce67617225986b34",
+      "worktree_git_blob": "83b5f9d4df0d01aa0059b4e2ce67617225986b34",
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/full-javascript.log",
+      "category": "original_audits",
+      "base_git_blob": "b945196a7107f00e52d9c14a5db37de7eb5868aa",
+      "worktree_git_blob": "b945196a7107f00e52d9c14a5db37de7eb5868aa",
+      "sha256": "53e3e8e1c08149ea1d5bffbc5de50a250242a900a16d21b5253fa97a0922db2f",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/native-provider-timing.json",
+      "category": "original_audits",
+      "base_git_blob": "4e4ec9e1de9f0e5772f8135003c1c3fa7427f8c8",
+      "worktree_git_blob": "4e4ec9e1de9f0e5772f8135003c1c3fa7427f8c8",
+      "sha256": "f96d6f36f428c6471f4e994c3f374a9387b06265b5b5c6af4f1dd179e2d56b81",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/native-timing.log",
+      "category": "original_audits",
+      "base_git_blob": "451c944a7871ac8c5f80ad178a188be485bd1649",
+      "worktree_git_blob": "451c944a7871ac8c5f80ad178a188be485bd1649",
+      "sha256": "a33105c226f86ace8b9aa71206f307cb7c0877ced2ce660b01e29710947cfb59",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/native-timing.mjs",
+      "category": "original_audits",
+      "base_git_blob": "fec92e9fc052ebb78d512f7e3212e153d9459d32",
+      "worktree_git_blob": "fec92e9fc052ebb78d512f7e3212e153d9459d32",
+      "sha256": "20023d9b0f809fdeeac5e711a4836b1c358f82470b29ddc185599ccad61ecd04",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/npm-ci.log",
+      "category": "original_audits",
+      "base_git_blob": "bd17657366c1dcf72b1e2a87f2476246b7c138e7",
+      "worktree_git_blob": "bd17657366c1dcf72b1e2a87f2476246b7c138e7",
+      "sha256": "ca6c2b2d37c0608674a9c5d6a896cd0efa5efd738eb52c68c4f0dc2d3485cd00",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/original-audit-integrity.json",
+      "category": "original_audits",
+      "base_git_blob": "0374ed6c6213d04af36604dde9372ad604e92672",
+      "worktree_git_blob": "0374ed6c6213d04af36604dde9372ad604e92672",
+      "sha256": "c775c5abf94cadcbacacd19dea8a630049b6fc5c32ccd4b4b13ba0a40e99e5cb",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/platform-readback.json",
+      "category": "original_audits",
+      "base_git_blob": "d4be13decff12e54a48fa1aaea7339d57d18c563",
+      "worktree_git_blob": "d4be13decff12e54a48fa1aaea7339d57d18c563",
+      "sha256": "cf744fda51e159833ff3cba7bd041d665b8fcf1b4fe2813ca461746b78c9daea",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/preflight.json",
+      "category": "original_audits",
+      "base_git_blob": "067ce329405c0dc196c8af27201664c50e3fb6b9",
+      "worktree_git_blob": "067ce329405c0dc196c8af27201664c50e3fb6b9",
+      "sha256": "7a1a4d2c21eff5c516ba8f49ea5fe7ae5be867ddaf2014ff8fca46d392e3daa6",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/production-build.log",
+      "category": "original_audits",
+      "base_git_blob": "eae1eb424d7a578215c8adf580ef75d44d8bf262",
+      "worktree_git_blob": "eae1eb424d7a578215c8adf580ef75d44d8bf262",
+      "sha256": "3d5a6b8b9c49010bff3c230cb152dc65a3581c86c051491fe0c504e2518d60f9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/python-verifier.log",
+      "category": "original_audits",
+      "base_git_blob": "24da48e77ede684a36fa7f5f3fc13379d2b6313d",
+      "worktree_git_blob": "24da48e77ede684a36fa7f5f3fc13379d2b6313d",
+      "sha256": "921b60a7fd52e978fbb551cacd29df2d6708879400278e1fcc70fceeb0c6f8e0",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/raw-log-integrity.json",
+      "category": "original_audits",
+      "base_git_blob": "58b16c79619599147f3522516c9ec88fd3f08fa2",
+      "worktree_git_blob": "58b16c79619599147f3522516c9ec88fd3f08fa2",
+      "sha256": "b58b5917d99bd5a2f6c2693c34e9b0017228a4d742a8575299e32307df37953a",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/raw-validation-logs.zip",
+      "category": "original_audits",
+      "base_git_blob": "fa2fee18bdb364f033cd2bdd676ffbd9a8bbb882",
+      "worktree_git_blob": "fa2fee18bdb364f033cd2bdd676ffbd9a8bbb882",
+      "sha256": "35d4bd3b3fe7eabb5f1881e7785997962732ca538e8c329685884f0556075bc3",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/scope-invariants.json",
+      "category": "original_audits",
+      "base_git_blob": "fa1c56ba412e9b2a8180ff2a1dac06ec0cc9dfbe",
+      "worktree_git_blob": "fa1c56ba412e9b2a8180ff2a1dac06ec0cc9dfbe",
+      "sha256": "5a5ed0a076664b9785dede7cc5796e18ad4af7ad35312075f5bd424d6121bab1",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/source-hashes.json",
+      "category": "original_audits",
+      "base_git_blob": "efc64fa73645022b8e0452a4881a7813d63cd828",
+      "worktree_git_blob": "efc64fa73645022b8e0452a4881a7813d63cd828",
+      "sha256": "e7944b31b3148e956df0f7007927f3ae709579129580a58e421f6f7f892de88e",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/targeted-regressions.log",
+      "category": "original_audits",
+      "base_git_blob": "c85a9e1cabf6542966c3aa7691c716495b2fbc03",
+      "worktree_git_blob": "c85a9e1cabf6542966c3aa7691c716495b2fbc03",
+      "sha256": "05e1f3cefef89b44688cc7113326065327974a25780d33a3bff9e9a8efd64b6a",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/typecheck-initial.log",
+      "category": "original_audits",
+      "base_git_blob": "95625be53383435b9f306b9d247500d3a86920c5",
+      "worktree_git_blob": "95625be53383435b9f306b9d247500d3a86920c5",
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/typecheck.log",
+      "category": "original_audits",
+      "base_git_blob": "95625be53383435b9f306b9d247500d3a86920c5",
+      "worktree_git_blob": "95625be53383435b9f306b9d247500d3a86920c5",
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4",
+      "unchanged": true
+    },
+    {
+      "path": "audit/production-loading-hang-remediation-1-evidence/validation.json",
+      "category": "original_audits",
+      "base_git_blob": "5f54439890dbe01ee3baff0dc9e000c7230ba267",
+      "worktree_git_blob": "5f54439890dbe01ee3baff0dc9e000c7230ba267",
+      "sha256": "5609842ff40c6ffdff4199b9d95cb61d89e7fc7c049c04dd33823fe715004e06",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-2026-09-29.json",
+      "category": "original_audits",
+      "base_git_blob": "d9d6ff2d04aafdecf0bb61e74c11dcdd4f1a9c0c",
+      "worktree_git_blob": "d9d6ff2d04aafdecf0bb61e74c11dcdd4f1a9c0c",
+      "sha256": "d133ce1059d200ac340bd0a9ffdcb6a72a0b5287b0c26d802223772ad95848a0",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-2026-09-29.md",
+      "category": "original_audits",
+      "base_git_blob": "4f958609585d6bf30ccd71a40dab7a6214231256",
+      "worktree_git_blob": "4f958609585d6bf30ccd71a40dab7a6214231256",
+      "sha256": "800bafee5197e44ded6a1017bda87468d53a0716ef7d2adcc6e0787913e7a213",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/assemble-audit.mjs",
+      "category": "original_audits",
+      "base_git_blob": "1c6949b8a4f05a78f448900be0cc5b7d8b1b9021",
+      "worktree_git_blob": "1c6949b8a4f05a78f448900be0cc5b7d8b1b9021",
+      "sha256": "4a6e500054a8865983bad6abd7ee0f8b09fa24861c194f962541be92bf34d0a9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/aurora-official-map.json",
+      "category": "original_audits",
+      "base_git_blob": "7c63d73b72bb3c53d6826f8394df00e071a596c9",
+      "worktree_git_blob": "7c63d73b72bb3c53d6826f8394df00e071a596c9",
+      "sha256": "6fd63db8fc328e841f857261d353dc69499fa0e7c286f77a94e2636ab092b305",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/browser-install.log",
+      "category": "original_audits",
+      "base_git_blob": "b9824d636997d493a3cb4281df9da0cc3f9bf7e9",
+      "worktree_git_blob": "b9824d636997d493a3cb4281df9da0cc3f9bf7e9",
+      "sha256": "2d0f6a221c605699c69d59d5f283874c8396f5f0753d61e13d9626cd1e0cdde1",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/build-reference-set.mjs",
+      "category": "original_audits",
+      "base_git_blob": "77c8e328ff9c8f75949d47e4c474368fab83eb8c",
+      "worktree_git_blob": "77c8e328ff9c8f75949d47e4c474368fab83eb8c",
+      "sha256": "0c8c4320eea0c848a98ba8ef9544d7e81ec7a1ecada280359b239e93716be017",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/carthage-query.overpassql",
+      "category": "original_audits",
+      "base_git_blob": "5f8b31fd4ed833f7681e897c48f0d4d4c7fb85d9",
+      "worktree_git_blob": "5f8b31fd4ed833f7681e897c48f0d4d4c7fb85d9",
+      "sha256": "4584d47ccf217d2e947134584122c5b3f1f2026c5e7d92b3b3fd554da8a21140",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/deterministic-probes.json",
+      "category": "original_audits",
+      "base_git_blob": "0c07579282ffabc0026d1dab3ce076fb019b2e21",
+      "worktree_git_blob": "0c07579282ffabc0026d1dab3ce076fb019b2e21",
+      "sha256": "cf25e585d8a1e337859b0755e38db3921b40f62d677fd645433f2289d86a99ca",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/diagnostic-provider-query.json",
+      "category": "original_audits",
+      "base_git_blob": "9e409137a301fa5d29685a07a48cfe81476d8e2f",
+      "worktree_git_blob": "9e409137a301fa5d29685a07a48cfe81476d8e2f",
+      "sha256": "02a3bd26edc41b6619e7f8ace64d5d8880dbff9a728a5eb7a9a6dc30d3083d74",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/evidence-manifest.json",
+      "category": "original_audits",
+      "base_git_blob": "8d49824eedf6dc926a37ce03b3b1645c11fc155d",
+      "worktree_git_blob": "8d49824eedf6dc926a37ce03b3b1645c11fc155d",
+      "sha256": "6b21c0d6e820a8998c8f0cc010f8c13e2abf010eaa27c965f7414f891fe344d6",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/exeter-osm-node.json",
+      "category": "original_audits",
+      "base_git_blob": "85d386b2026e007ef20874f319c9460680cced76",
+      "worktree_git_blob": "85d386b2026e007ef20874f319c9460680cced76",
+      "sha256": "97af2ba436ec27efc140a6855e2039763e6887408e1ca260463f9659d6ab1974",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/existing-availability-tests.log",
+      "category": "original_audits",
+      "base_git_blob": "c5071a13990fb9e1d6a6ab79f0f4694a7a9b3f66",
+      "worktree_git_blob": "c5071a13990fb9e1d6a6ab79f0f4694a7a9b3f66",
+      "sha256": "783b57e23cf9a938ab059aa9a8477bfe75ada69cf4f7f371269fcd2111022522",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/existing-location-tests.log",
+      "category": "original_audits",
+      "base_git_blob": "5bdbcd3d658bcb5c90eca07569e1d7113a9c8131",
+      "worktree_git_blob": "5bdbcd3d658bcb5c90eca07569e1d7113a9c8131",
+      "sha256": "48d02aed5997ed3f571fcf55901ebcd6a837895c0749bdfd70badb0b16a7af2f",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/home-render-0.html",
+      "category": "original_audits",
+      "base_git_blob": "270f85d5c4d3ced7494dee262b7b75451c4f30cf",
+      "worktree_git_blob": "270f85d5c4d3ced7494dee262b7b75451c4f30cf",
+      "sha256": "a1e9ab3592ba78b87bdbbfb0787465b2b63eb351c3ad8dca1e2c5c289bb8fb12",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/home-render-1.html",
+      "category": "original_audits",
+      "base_git_blob": "e26150d8bb2a6d44a9ffad2b0f11f0d56d595566",
+      "worktree_git_blob": "e26150d8bb2a6d44a9ffad2b0f11f0d56d595566",
+      "sha256": "ee27f48828168e832cd49eb5c8d82650dd35440ef2479c0132b38811d086419a",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/home-render-2.html",
+      "category": "original_audits",
+      "base_git_blob": "270f85d5c4d3ced7494dee262b7b75451c4f30cf",
+      "worktree_git_blob": "270f85d5c4d3ced7494dee262b7b75451c4f30cf",
+      "sha256": "a1e9ab3592ba78b87bdbbfb0787465b2b63eb351c3ad8dca1e2c5c289bb8fb12",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/live-probe.log",
+      "category": "original_audits",
+      "base_git_blob": "b9685c101a7e4f73d3b263da825a1c16b3d35aba",
+      "worktree_git_blob": "b9685c101a7e4f73d3b263da825a1c16b3d35aba",
+      "sha256": "f965bd01116d1bfff2138c1c80e09875bf4fcfaec1e64a1f93dabd4b2e883141",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/live-probe.mjs",
+      "category": "original_audits",
+      "base_git_blob": "60aa96c7ec8148aca37dbc4a8c76706affbbbdab",
+      "worktree_git_blob": "60aa96c7ec8148aca37dbc4a8c76706affbbbdab",
+      "sha256": "1eefe9565c2107bce04881201488309576d8ee1de89962229d64d094d22a788a",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/live-provider-observations.json",
+      "category": "original_audits",
+      "base_git_blob": "a38aebf34b4a7db4746746fc5b8772306c508b0e",
+      "worktree_git_blob": "a38aebf34b4a7db4746746fc5b8772306c508b0e",
+      "sha256": "78581c862aab0c56b348b96dc6f6972c2ac4ac5a784913a87d29899d6dd81d7b",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/options-render-0.html",
+      "category": "original_audits",
+      "base_git_blob": "9f82df461dfc5f7fdfe44ee1fe80054bf6229407",
+      "worktree_git_blob": "9f82df461dfc5f7fdfe44ee1fe80054bf6229407",
+      "sha256": "259af319709e608fe08b586aad04395cd107230063b40132112f9c5e705b6ab5",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/options-render-2.html",
+      "category": "original_audits",
+      "base_git_blob": "246d91e677244be9778ae59c07e4d6fa1cb20343",
+      "worktree_git_blob": "246d91e677244be9778ae59c07e4d6fa1cb20343",
+      "sha256": "eba0adf6d80f2440064f18063449c18af79922141151cde3bc06b2655d33d762",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/plan-render-0.html",
+      "category": "original_audits",
+      "base_git_blob": "6919edb1ec6e16a806ae9e1e733e35d8a17ef120",
+      "worktree_git_blob": "6919edb1ec6e16a806ae9e1e733e35d8a17ef120",
+      "sha256": "cfc03a13ba679f3d46d72f893e9dbaf42b0cf433a01a50c827668344efc71b36",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/plan-render-2.html",
+      "category": "original_audits",
+      "base_git_blob": "6919edb1ec6e16a806ae9e1e733e35d8a17ef120",
+      "worktree_git_blob": "6919edb1ec6e16a806ae9e1e733e35d8a17ef120",
+      "sha256": "cfc03a13ba679f3d46d72f893e9dbaf42b0cf433a01a50c827668344efc71b36",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/probe-summary.log",
+      "category": "original_audits",
+      "base_git_blob": "2ab505412add0a4106bf97a7e0e9c968c9ae335e",
+      "worktree_git_blob": "2ab505412add0a4106bf97a7e0e9c968c9ae335e",
+      "sha256": "5c2335e9ee4a1049d6b92db08b55984cf3d5b83217cadd2b0e77f0a3c2894123",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/probe.mjs",
+      "category": "original_audits",
+      "base_git_blob": "0b5b6bda679da6c76512cd029ac359a5d7926abe",
+      "worktree_git_blob": "0b5b6bda679da6c76512cd029ac359a5d7926abe",
+      "sha256": "dae8c281f318404f6e2b55bb28569696005e836b9966f8dd20eae476cd176f98",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/react-render-evidence.json",
+      "category": "original_audits",
+      "base_git_blob": "10c9bf695612c6949a081da5986592eb14906e1a",
+      "worktree_git_blob": "10c9bf695612c6949a081da5986592eb14906e1a",
+      "sha256": "d1fcbdb88ce60276c49d4f93cac8a17e3e2f1fefd9bde8cc4a2a83be828a8ea3",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-coordinate-extracts.json",
+      "category": "original_audits",
+      "base_git_blob": "36a9ff5ad767b2ca92ed72a526569d69518f0d1a",
+      "worktree_git_blob": "36a9ff5ad767b2ca92ed72a526569d69518f0d1a",
+      "sha256": "564913b15dbe295748bea4d3897910a4aec2468fe333d78a8b503ecfd5f4afc9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-event-metadata.json",
+      "category": "original_audits",
+      "base_git_blob": "4d1286366d9168a2c9b21c4a0ff0096969727855",
+      "worktree_git_blob": "4d1286366d9168a2c9b21c4a0ff0096969727855",
+      "sha256": "9a3947534a19dd837d4d2dea44a5a7c3f54ff30819b962a0739e3f5275d6e252",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-geocoding.json",
+      "category": "original_audits",
+      "base_git_blob": "b5f85258e95b98cb563e2f750f6dcdb959ce9d7d",
+      "worktree_git_blob": "b5f85258e95b98cb563e2f750f6dcdb959ce9d7d",
+      "sha256": "467237b8a3360addf5dc13dd47f759779414b63b7dc7d75ab632e03ad1001ee2",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-set.json",
+      "category": "original_audits",
+      "base_git_blob": "f0a3364f01bf20212ea27f448179f2f704251ea9",
+      "worktree_git_blob": "f0a3364f01bf20212ea27f448179f2f704251ea9",
+      "sha256": "1ec3df40dd2e2866a1db11355d2409d10cbb1a44192d1ba470e724623379c2b5",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-source-probe.mjs",
+      "category": "original_audits",
+      "base_git_blob": "f853614e997858fc6d64aa86816a01a7e940bdb7",
+      "worktree_git_blob": "f853614e997858fc6d64aa86816a01a7e940bdb7",
+      "sha256": "1b9bb1228ad2eeaba67b5440978b6d8778150ecb23aac00103ba10b5e5967924",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/reference-source-retrievals.json",
+      "category": "original_audits",
+      "base_git_blob": "b8f5e6889f0139d5e5e197cf2dde0cba8d7788e1",
+      "worktree_git_blob": "b8f5e6889f0139d5e5e197cf2dde0cba8d7788e1",
+      "sha256": "5163dbd009548296d5d1e87dfd6ceb1257fa7808e59e520e4749176c06754024",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/render-probe.mjs",
+      "category": "original_audits",
+      "base_git_blob": "d6a2dd20467ff70c12c640c70aec17c56372fd72",
+      "worktree_git_blob": "d6a2dd20467ff70c12c640c70aec17c56372fd72",
+      "sha256": "097b09b0d0adbfac7dfc853a1a5e8e35bcb28eb877444be341a812dd4066ca61",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/render-summary.log",
+      "category": "original_audits",
+      "base_git_blob": "d51776c1684d0eabce98df7c4164c8fd4dfb67e4",
+      "worktree_git_blob": "d51776c1684d0eabce98df7c4164c8fd4dfb67e4",
+      "sha256": "e39223bd615a9ec02a0d3aefc1b22cf6d15a966bd30716793f4e7a457d3ebdd5",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/repository-verification.json",
+      "category": "original_audits",
+      "base_git_blob": "98f8547ac19a612d163ec38e980898e6d4f00600",
+      "worktree_git_blob": "98f8547ac19a612d163ec38e980898e6d4f00600",
+      "sha256": "da3dbb2106ea6b3e9c08b9ff28f89a68be052fb43674520671039b3986152b6d",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-coverage-audit-1-evidence/source-probe.mjs",
+      "category": "original_audits",
+      "base_git_blob": "00469dbb9a2a8c7589736b2b90eeb947c353ce9c",
+      "worktree_git_blob": "00469dbb9a2a8c7589736b2b90eeb947c353ce9c",
+      "sha256": "82683ed2f2e1d9f8a86bb7a7d6e1db93ad5c51cf96ec4e75d33de3d4a310f960",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-2026-09-29.json",
+      "category": "original_audits",
+      "base_git_blob": "cdb08ce7a0dde0707492d131a98eba0b7cb733b5",
+      "worktree_git_blob": "cdb08ce7a0dde0707492d131a98eba0b7cb733b5",
+      "sha256": "63dba7031d3eb9bf469fa68d0aa845787460da237c035035213b843dcad967a6",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-2026-09-29.md",
+      "category": "original_audits",
+      "base_git_blob": "4af235abb9be19547e1e8ebb57af4c36767cae7f",
+      "worktree_git_blob": "4af235abb9be19547e1e8ebb57af4c36767cae7f",
+      "sha256": "394242a165a99d054c732c3ba229fc799362e0d43f08ff7cc1e19fb5be72e067",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/android.log",
+      "category": "original_audits",
+      "base_git_blob": "628139fa3bc54d1b07afff37ac625dd31bcaadb0",
+      "worktree_git_blob": "628139fa3bc54d1b07afff37ac625dd31bcaadb0",
+      "sha256": "e04c378c5f9d9bbbd4fb2e4dcd70351a25984fd0c18f2547a5f6e94b9ce703bb",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/availability.log",
+      "category": "original_audits",
+      "base_git_blob": "43d2bd583a9e193c0f7fc8d478ad9e9c1a57f2ff",
+      "worktree_git_blob": "43d2bd583a9e193c0f7fc8d478ad9e9c1a57f2ff",
+      "sha256": "af1986aa2231c38a44730f501615e01493eeaf880b755eda9b877a732f792b49",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/browser-install.log",
+      "category": "original_audits",
+      "base_git_blob": "281d6aa9897e4cf97bf020a5f4ec8f2cad9e5432",
+      "worktree_git_blob": "281d6aa9897e4cf97bf020a5f4ec8f2cad9e5432",
+      "sha256": "f7ec157d08e96ae2ad816f4c66f26871fd1c226532057d4da0b86cdbca90ac85",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/capacitor-sync.log",
+      "category": "original_audits",
+      "base_git_blob": "4c14d41a52e8a6d9c5928bbd42903a5a21036182",
+      "worktree_git_blob": "4c14d41a52e8a6d9c5928bbd42903a5a21036182",
+      "sha256": "51e4f6741aa1fd0c16a1395c1526d15516f6304eec3a0e68dd788b7928777e32",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/capacitor-tracked-byte.log",
+      "category": "original_audits",
+      "base_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "worktree_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/casino.log",
+      "category": "original_audits",
+      "base_git_blob": "afad659507c0c1f24d378d60ec54275d759d0aca",
+      "worktree_git_blob": "afad659507c0c1f24d378d60ec54275d759d0aca",
+      "sha256": "2d0803767ef2020413d2ab49d14b9ed18486816127b5ab7f357f2bd3dcb944d1",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/evidence-manifest.json",
+      "category": "original_audits",
+      "base_git_blob": "dd35488a63a31a34dc43be3d576df39a07513dfd",
+      "worktree_git_blob": "dd35488a63a31a34dc43be3d576df39a07513dfd",
+      "sha256": "4ef215878b5c1638e8839548e3ed84cb97b58400018348f5805d1ec6e10a99d9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/format.log",
+      "category": "original_audits",
+      "base_git_blob": "d1b85841905a88f4b43d4bfa36247e93eeef0cf4",
+      "worktree_git_blob": "d1b85841905a88f4b43d4bfa36247e93eeef0cf4",
+      "sha256": "3fc7072aea4a215f6cbaa41a2da2e73ed6085874464940ebfe9b45583989eb08",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/harness-lint.log",
+      "category": "original_audits",
+      "base_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "worktree_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/lint-final.log",
+      "category": "original_audits",
+      "base_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "worktree_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/lint.log",
+      "category": "original_audits",
+      "base_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "worktree_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/live-controls.json",
+      "category": "original_audits",
+      "base_git_blob": "0f17629e2a510ce07d8b34410b1bd6a7fb8bf143",
+      "worktree_git_blob": "0f17629e2a510ce07d8b34410b1bd6a7fb8bf143",
+      "sha256": "f24c35d153f415e6e08daafd774a7a85e92506560be245ea905cad7ea7349ce1",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/live-controls.log",
+      "category": "original_audits",
+      "base_git_blob": "07064beedf5e12b2ca8637038820902d80822b35",
+      "worktree_git_blob": "07064beedf5e12b2ca8637038820902d80822b35",
+      "sha256": "89a9f0db2d12b1bd78acae4335ae6aadd0b936c0c23278dea3a0f5887ca09e2d",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/live-controls.mjs",
+      "category": "original_audits",
+      "base_git_blob": "63d7cac27b4e9fde91a53025386b63630d07e08b",
+      "worktree_git_blob": "63d7cac27b4e9fde91a53025386b63630d07e08b",
+      "sha256": "c4559369e52902b6756b24b47db4658318de4aa091c67952c82f8b6fe9efbf61",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/location-discovery.log",
+      "category": "original_audits",
+      "base_git_blob": "0a02acabff9efd070902fbe2a656f89728316783",
+      "worktree_git_blob": "0a02acabff9efd070902fbe2a656f89728316783",
+      "sha256": "169b6b5a947b08afc816fe260dc87fe68454e48777422bc3dd3bee0460576686",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/npm-ci.log",
+      "category": "original_audits",
+      "base_git_blob": "b97167578907c6f1b0be103931b4d1372952bffb",
+      "worktree_git_blob": "b97167578907c6f1b0be103931b4d1372952bffb",
+      "sha256": "636edd308af195922f3fb5bc0dfbd58c06c3a670c78d1d6ea77130f9da127070",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/npm-ls-all.log",
+      "category": "original_audits",
+      "base_git_blob": "50467a01d4c8502d4da69961e54f20b97a549041",
+      "worktree_git_blob": "50467a01d4c8502d4da69961e54f20b97a549041",
+      "sha256": "176d174e0015e1f24a1360566eadb2b3c35b24d5489df56d6dc895cabb4e22eb",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/preserved-invariants.log",
+      "category": "original_audits",
+      "base_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "worktree_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/production-build-final.log",
+      "category": "original_audits",
+      "base_git_blob": "55412c72f3545741a106c8585f307fc6fb38cd88",
+      "worktree_git_blob": "55412c72f3545741a106c8585f307fc6fb38cd88",
+      "sha256": "19cb581531696fc0dfb62120e425014f3bed6adc6f18fb0ef015ab290c7acff2",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/production-build.log",
+      "category": "original_audits",
+      "base_git_blob": "c6bea52f2f4138ab2a00dc707ceafce61da5fec6",
+      "worktree_git_blob": "c6bea52f2f4138ab2a00dc707ceafce61da5fec6",
+      "sha256": "07e164b7ddd1d8213c5ad14190ad86071bdc0ac404a46a936d0cccc5b2d89193",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/python.log",
+      "category": "original_audits",
+      "base_git_blob": "f207dee3297bc7c151fae1b4ef3443925350ba42",
+      "worktree_git_blob": "f207dee3297bc7c151fae1b4ef3443925350ba42",
+      "sha256": "33060fd73862c5e1af97335504d5b45211fce6d229657f556d8deceeadc52ce4",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/seasonal-final.log",
+      "category": "original_audits",
+      "base_git_blob": "26c02a73cfe97fc6b9979b50e6b78c43e936a695",
+      "worktree_git_blob": "26c02a73cfe97fc6b9979b50e6b78c43e936a695",
+      "sha256": "30997eed71cd5d5b02c85d6b65c2c65be4711af441c8b773c327597685613c9c",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/seasonal-fourth.log",
+      "category": "original_audits",
+      "base_git_blob": "5f4418a931acfb0ac784e715e8abad95ef0152b0",
+      "worktree_git_blob": "5f4418a931acfb0ac784e715e8abad95ef0152b0",
+      "sha256": "959a200b0502bfea645a0487c3c1cdaf4a5fb32ad71a60ee45e6a58f780a3cc2",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/seasonal-initial.log",
+      "category": "original_audits",
+      "base_git_blob": "213cf99c1391f3ced3edeb948be2474fa98b755b",
+      "worktree_git_blob": "213cf99c1391f3ced3edeb948be2474fa98b755b",
+      "sha256": "b00f6b6657e10836ab2dc72c997ef3e2b42fec95a0898fc1c7e0e666209401d9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/seasonal-second.log",
+      "category": "original_audits",
+      "base_git_blob": "32e2d25906ab55a54be2fa4a485af76264707730",
+      "worktree_git_blob": "32e2d25906ab55a54be2fa4a485af76264707730",
+      "sha256": "ae1e1ffaae1ab7c5869cddeabb0b29aca6d03d4ca4677373929092e8349e80bc",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/seasonal-third.log",
+      "category": "original_audits",
+      "base_git_blob": "be914373e1a6e4b6baad6ad0ef0352852453f0ed",
+      "worktree_git_blob": "be914373e1a6e4b6baad6ad0ef0352852453f0ed",
+      "sha256": "1b3b4a212d3e17afa2907a63c80468bf6691505e6344e6d61cfdc1aa32736e50",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/tests-final.log",
+      "category": "original_audits",
+      "base_git_blob": "7929f6b7eb18b4f92d5b286d6327781fe9883fd9",
+      "worktree_git_blob": "7929f6b7eb18b4f92d5b286d6327781fe9883fd9",
+      "sha256": "844a8c09ce468a0fbd47480e52360bf8761cb61664ff119c7e1de02f844669e3",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/tests.log",
+      "category": "original_audits",
+      "base_git_blob": "d9ba0015b4864dd7ad9fee4695adefeca5dffb8c",
+      "worktree_git_blob": "d9ba0015b4864dd7ad9fee4695adefeca5dffb8c",
+      "sha256": "cfb02ddc4c7cdc5740c364a745c312915c56b1f141259a192ab4e9cd1c01b4d3",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/typecheck-final.log",
+      "category": "original_audits",
+      "base_git_blob": "95625be53383435b9f306b9d247500d3a86920c5",
+      "worktree_git_blob": "95625be53383435b9f306b9d247500d3a86920c5",
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/typecheck-initial.log",
+      "category": "original_audits",
+      "base_git_blob": "95625be53383435b9f306b9d247500d3a86920c5",
+      "worktree_git_blob": "95625be53383435b9f306b9d247500d3a86920c5",
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-remediation-1-evidence/typecheck.log",
+      "category": "original_audits",
+      "base_git_blob": "95625be53383435b9f306b9d247500d3a86920c5",
+      "worktree_git_blob": "95625be53383435b9f306b9d247500d3a86920c5",
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-2026-09-29.json",
+      "category": "original_audits",
+      "base_git_blob": "e288b148b8a700ba87c9007e7e51101d9d2f10f6",
+      "worktree_git_blob": "e288b148b8a700ba87c9007e7e51101d9d2f10f6",
+      "sha256": "a92294d9a095cf161956fa2c0bebb13c6fba5fb1d2a95bd009d598cad6af43cc",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-2026-09-29.md",
+      "category": "original_audits",
+      "base_git_blob": "31d90b2a097c1e4c81d2fc20cf4ab2747ba9f011",
+      "worktree_git_blob": "31d90b2a097c1e4c81d2fc20cf4ab2747ba9f011",
+      "sha256": "91d606000384915196edf60fc855b2f1c929c5cadc90444e78783e1d7fddb0ca",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/android.log",
+      "category": "original_audits",
+      "base_git_blob": "628139fa3bc54d1b07afff37ac625dd31bcaadb0",
+      "worktree_git_blob": "628139fa3bc54d1b07afff37ac625dd31bcaadb0",
+      "sha256": "e04c378c5f9d9bbbd4fb2e4dcd70351a25984fd0c18f2547a5f6e94b9ce703bb",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/availability.log",
+      "category": "original_audits",
+      "base_git_blob": "658e04b2713d3914bab3d1739031c0d608584811",
+      "worktree_git_blob": "658e04b2713d3914bab3d1739031c0d608584811",
+      "sha256": "344040917c2a437ce6e04f344ff817a27419cf1e71670ba65832a6cf79602bd0",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/browser-capability.log",
+      "category": "original_audits",
+      "base_git_blob": "ccf065c0e40d4aea0cd47092609f09c888e1e2e0",
+      "worktree_git_blob": "ccf065c0e40d4aea0cd47092609f09c888e1e2e0",
+      "sha256": "3c4f42f1a1a341ec9a9fd1020a0cfaeba3eb847f5e94401b74c8b9ef4b8c55c4",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/capacitor-bytes.log",
+      "category": "original_audits",
+      "base_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "worktree_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/capacitor-sync.log",
+      "category": "original_audits",
+      "base_git_blob": "b497b007a88687d76cbd3bcbfaae8ec9f5764ed1",
+      "worktree_git_blob": "b497b007a88687d76cbd3bcbfaae8ec9f5764ed1",
+      "sha256": "152bad5477f2fad3bfea26bf97f1a0803e0c6b0704d9fc6ad37d785549a971d9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/casino.log",
+      "category": "original_audits",
+      "base_git_blob": "afad659507c0c1f24d378d60ec54275d759d0aca",
+      "worktree_git_blob": "afad659507c0c1f24d378d60ec54275d759d0aca",
+      "sha256": "2d0803767ef2020413d2ab49d14b9ed18486816127b5ab7f357f2bd3dcb944d1",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/dependency-tree.log",
+      "category": "original_audits",
+      "base_git_blob": "ee5f909eb83309dee7c077f7428912a63f9628b6",
+      "worktree_git_blob": "ee5f909eb83309dee7c077f7428912a63f9628b6",
+      "sha256": "3d4e34dc4a66cfb9e845917b4148cfd02db2cd43de34e21df1e83c3db7f2300b",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/evidence-manifest.json",
+      "category": "original_audits",
+      "base_git_blob": "0ed007caac8694c3fd4e7affa3c136fc77e147f8",
+      "worktree_git_blob": "0ed007caac8694c3fd4e7affa3c136fc77e147f8",
+      "sha256": "078c3ff216fadf5bf8d4b4a84b45ca189fcea951d4be64c6b46eb083eac2368a",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/final-sanity.json",
+      "category": "original_audits",
+      "base_git_blob": "ff0fec78f66fb2fff1861a0e143b607b61d91540",
+      "worktree_git_blob": "ff0fec78f66fb2fff1861a0e143b607b61d91540",
+      "sha256": "f92acd66f5fc6407c79328eb7b2d9d0af31fa624dc55e1c68654cbccfacf700a",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/gates.json",
+      "category": "original_audits",
+      "base_git_blob": "5c8c37b4218acb42b1c3efff26fceddf0b6f26d3",
+      "worktree_git_blob": "5c8c37b4218acb42b1c3efff26fceddf0b6f26d3",
+      "sha256": "648e5d18825dd0b3772736ea69cab2ce27b7febbca4fc723ac8d23ff8aa14246",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/javascript.log",
+      "category": "original_audits",
+      "base_git_blob": "3266a725336ba06644ebea3c105e51de6d6b7d16",
+      "worktree_git_blob": "3266a725336ba06644ebea3c105e51de6d6b7d16",
+      "sha256": "8a31bcf727c01f9773be16eb1509beaec3f1ad399da8162e9ca0c44a64356f3d",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/lint.log",
+      "category": "original_audits",
+      "base_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "worktree_git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/location.log",
+      "category": "original_audits",
+      "base_git_blob": "4bbe233eb04312eafaedf096bef80cd8c043f03f",
+      "worktree_git_blob": "4bbe233eb04312eafaedf096bef80cd8c043f03f",
+      "sha256": "8a1b36409cc7a526fda7e28fd493ad59b598e2897d8658353a1e2cb28f0553c5",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/npm-ci.log",
+      "category": "original_audits",
+      "base_git_blob": "c544eadc63ff8bbefe4aaf6b55e0076c9d0083d3",
+      "worktree_git_blob": "c544eadc63ff8bbefe4aaf6b55e0076c9d0083d3",
+      "sha256": "7bad06242ab041d2ca06544cbeda8421e3c45cf5e2781e3e2fe4f782a9c3e9cc",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/preflight.json",
+      "category": "original_audits",
+      "base_git_blob": "c7d6b7347a100e3cd3a0948bd5e65abaf85566f2",
+      "worktree_git_blob": "c7d6b7347a100e3cd3a0948bd5e65abaf85566f2",
+      "sha256": "1e4c0441aa10591b2ef8e51025d6580035667c135ba56a1b6d89eed505b07c75",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/prior-verification/failed-confirmation.json",
+      "category": "original_audits",
+      "base_git_blob": "a37833f34bfa971d454304fd7bb19d7711366d6d",
+      "worktree_git_blob": "a37833f34bfa971d454304fd7bb19d7711366d6d",
+      "sha256": "142dacc4ab293b82e4e92d857ffec2fffc04c68c81586162b6e328619b528cd0",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/prior-verification/failed-confirmation.log",
+      "category": "original_audits",
+      "base_git_blob": "5741187b4a31f5fe350cab974c2d7142b2ed7360",
+      "worktree_git_blob": "5741187b4a31f5fe350cab974c2d7142b2ed7360",
+      "sha256": "391535003a320b142a7938a8898380b94c80ee5ea1092259e292740271dc7fb3",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/prior-verification/failed-verification-report.md",
+      "category": "original_audits",
+      "base_git_blob": "a71b8943b66d0ff4a5795822a9fd2ae5ef90262a",
+      "worktree_git_blob": "a71b8943b66d0ff4a5795822a9fd2ae5ef90262a",
+      "sha256": "ef603a001271fb2f6e53e0f962a6b36edd8e603690307cb93674058454d817db",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/production-build.log",
+      "category": "original_audits",
+      "base_git_blob": "19ec6824b7360b68e8282a744b94853a0eb11564",
+      "worktree_git_blob": "19ec6824b7360b68e8282a744b94853a0eb11564",
+      "sha256": "69c37c684eae6fa09d1b244c9c5cd43857c626cfdb344daeadf559ca8f775124",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/python.log",
+      "category": "original_audits",
+      "base_git_blob": "24da48e77ede684a36fa7f5f3fc13379d2b6313d",
+      "worktree_git_blob": "24da48e77ede684a36fa7f5f3fc13379d2b6313d",
+      "sha256": "921b60a7fd52e978fbb551cacd29df2d6708879400278e1fcc70fceeb0c6f8e0",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/regression-after.log",
+      "category": "original_audits",
+      "base_git_blob": "90c57f4c0152d0a4c97aed0c59aef54c009261e1",
+      "worktree_git_blob": "90c57f4c0152d0a4c97aed0c59aef54c009261e1",
+      "sha256": "04c10eed19b1e026106074f66dcc399cee12683eedc41a9c11d32d2777fc8ca0",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/regression-before-corrected.log",
+      "category": "original_audits",
+      "base_git_blob": "a4d3117a4486e965b4458e138d2104c9a6ad45c0",
+      "worktree_git_blob": "a4d3117a4486e965b4458e138d2104c9a6ad45c0",
+      "sha256": "4a7ee6f46626ce7c084fbdb4dc74afdebce7a5096f5b14b531520332e89a21a5",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/regression-before.log",
+      "category": "original_audits",
+      "base_git_blob": "03ea5a9c84e7b8b5d3c45c257321953d6872bdc3",
+      "worktree_git_blob": "03ea5a9c84e7b8b5d3c45c257321953d6872bdc3",
+      "sha256": "257d3437f7fcf0867991dee074ab5038cc5509c7f279259b836c8e85a4955fac",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/seasonal.log",
+      "category": "original_audits",
+      "base_git_blob": "ebc21c67b362cca50ddbc516b17a4dab102643ae",
+      "worktree_git_blob": "ebc21c67b362cca50ddbc516b17a4dab102643ae",
+      "sha256": "4dae2c412ff147ff929088e347197e6cdd43ea57b8f8183d11f51b3d4bc5e6f6",
+      "unchanged": true
+    },
+    {
+      "path": "audit/seasonal-discovery-v-f03-01-remediation-1-evidence/typecheck.log",
+      "category": "original_audits",
+      "base_git_blob": "95625be53383435b9f306b9d247500d3a86920c5",
+      "worktree_git_blob": "95625be53383435b9f306b9d247500d3a86920c5",
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4",
+      "unchanged": true
+    },
+    {
+      "path": "audit/texas-casino-reconciliation-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "66f64cf88fc10b63435fd67da2ea0238ad51f786",
+      "worktree_git_blob": "66f64cf88fc10b63435fd67da2ea0238ad51f786",
+      "sha256": "cd5488dcc302859ad31a357f03f2598ec60aecc80779de882507e880cf20b7b9",
+      "unchanged": true
+    },
+    {
+      "path": "audit/texas-coordinate-qa-pass-1-2026-09-11.json",
+      "category": "original_audits",
+      "base_git_blob": "2b91b6da50ebf84e50d970d30965f65c7780f857",
+      "worktree_git_blob": "2b91b6da50ebf84e50d970d30965f65c7780f857",
+      "sha256": "a1576b6eaf30c03ed61d78da75584b1e347b90c638cf9402d8282e717425ce08",
+      "unchanged": true
+    },
+    {
+      "path": "audit/texas-coordinate-qa-pass-2-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "74b25b6a3e86cfd7dce9be8e85a4ce10ae59a899",
+      "worktree_git_blob": "74b25b6a3e86cfd7dce9be8e85a4ce10ae59a899",
+      "sha256": "14412098ad9c87d83487b16b0774d62b0a136ab8e504c3e3cb9a5933366fb889",
+      "unchanged": true
+    },
+    {
+      "path": "audit/texas-coordinate-qa-pass-3-field-verification-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "9b46e66fc34a435dc4f2b8fef0536ffed2372108",
+      "worktree_git_blob": "9b46e66fc34a435dc4f2b8fef0536ffed2372108",
+      "sha256": "7fec0acd9af200895afe4adc8cf9bb721e2545b52cef3dc2ff9b2c3bc2f18fa8",
+      "unchanged": true
+    },
+    {
+      "path": "audit/texas-runtime-reconciliation-2026-09-12.json",
+      "category": "original_audits",
+      "base_git_blob": "9eea3270d0fa0c9b8de1aae5d2753ca33a775011",
+      "worktree_git_blob": "9eea3270d0fa0c9b8de1aae5d2753ca33a775011",
+      "sha256": "c18e6b74cd23e3bce4d7e78bb74c49309f1526c2cefbd6cad13939c09c17f9dd",
+      "unchanged": true
+    },
+    {
+      "path": "audit/washington-reconciliation-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "393969c1fb2fcf25e02a4887c85d16bd5ddb3b4d",
+      "worktree_git_blob": "393969c1fb2fcf25e02a4887c85d16bd5ddb3b4d",
+      "sha256": "b6ef6b5c2487d6d042252e56b3ce0b3e306f682d6d77e705f5afb55b76a17d4a",
+      "unchanged": true
+    },
+    {
+      "path": "audit/washington-tribal-casinos-2026-09-10.json",
+      "category": "original_audits",
+      "base_git_blob": "da94ed245349c18aa8811daf5b22c69412180ed2",
+      "worktree_git_blob": "da94ed245349c18aa8811daf5b22c69412180ed2",
+      "sha256": "1b8f8f715cacf8e5f2d09630987a4d90adbccbc1e94fc090f9979f3fe03ede9a",
+      "unchanged": true
+    },
+    {
+      "path": "capacitor.config.json",
+      "category": "native",
+      "base_git_blob": "14b8a3eef4ce8e418e80243723b3b07ac91739ea",
+      "worktree_git_blob": "14b8a3eef4ce8e418e80243723b3b07ac91739ea",
+      "sha256": "344a3fb58f0ff52777fb6037bd1f2afaaf13951d6f42809f51ed2f035d2b9a78",
+      "unchanged": true
+    },
+    {
+      "path": "migrations/auth/0001_auth.sql",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "08c6b01fef9b46e72470fb66ea967d5f84e9bdb5",
+      "worktree_git_blob": "08c6b01fef9b46e72470fb66ea967d5f84e9bdb5",
+      "sha256": "f953cacc448c0c81ae4fe63e66b0e59569e840782ad279fdee201dff529363e9",
+      "unchanged": true
+    },
+    {
+      "path": "native-android/README.md",
+      "category": "native",
+      "base_git_blob": "eaaf60e27227a5998d2cebf3a4aa558a4b468262",
+      "worktree_git_blob": "eaaf60e27227a5998d2cebf3a4aa558a4b468262",
+      "sha256": "65a4258303d206ab0ae5664ba442825d76632fb58a30ac508edbc634ec961f14",
+      "unchanged": true
+    },
+    {
+      "path": "native-android/icon-fixed.jpg",
+      "category": "native",
+      "base_git_blob": "b3a425249b207819e63bf9a2716fd16f63b0f7b7",
+      "worktree_git_blob": "b3a425249b207819e63bf9a2716fd16f63b0f7b7",
+      "sha256": "4097889236a2af26c293033feb964c4cf118c0224e0d063fec0a89e9d0569ef2",
+      "unchanged": true
+    },
+    {
+      "path": "native-android/icon.jpg",
+      "category": "native",
+      "base_git_blob": "085870237b0fe6228e619ab4ee3940c02385c79a",
+      "worktree_git_blob": "085870237b0fe6228e619ab4ee3940c02385c79a",
+      "sha256": "715ae0cb2dda12bedd1a5bfb75a472e81e108a2b078f6e5dd87bca418afa3ec1",
+      "unchanged": true
+    },
+    {
+      "path": "native-android/requirements.txt",
+      "category": "native",
+      "base_git_blob": "1bb1b73fd5b858c0e7b830a9b928394d33139a0d",
+      "worktree_git_blob": "1bb1b73fd5b858c0e7b830a9b928394d33139a0d",
+      "sha256": "3df19d06ec9cf350b8240b3312f96071169ce2fb6c63df4d675f5baf9ee5ef61",
+      "unchanged": true
+    },
+    {
+      "path": "native-android/test_bundle_inspection.py",
+      "category": "native",
+      "base_git_blob": "97b57ac0af6fe380a984e0ded98a102abddb1770",
+      "worktree_git_blob": "97b57ac0af6fe380a984e0ded98a102abddb1770",
+      "sha256": "7171ffd5e3b3f838035ea8894772f32f6f85e091be629b5d38a0cc9d68314b03",
+      "unchanged": true
+    },
+    {
+      "path": "native-web/index.html",
+      "category": "native",
+      "base_git_blob": "eb4ea32962c1e3785982105b5711a089fb7a9eea",
+      "worktree_git_blob": "eb4ea32962c1e3785982105b5711a089fb7a9eea",
+      "sha256": "bbbb4470354e0191642e4701caf872de76cc14e9566705fe4edc591fb6b877ac",
+      "unchanged": true
+    },
+    {
+      "path": "package-lock.json",
+      "category": "security_dependencies",
+      "base_git_blob": "1eaa6a78dc119ae889ca371632fa91136be1139a",
+      "worktree_git_blob": "1eaa6a78dc119ae889ca371632fa91136be1139a",
+      "sha256": "462f09bd3fda35cf30646b2f343cd8d2a65340a63b59222b5f9d57084d9aa4b3",
+      "unchanged": true
+    },
+    {
+      "path": "package.json",
+      "category": "security_dependencies",
+      "base_git_blob": "e49aaca989bf9fafed68714fdb7f036785c1a226",
+      "worktree_git_blob": "e49aaca989bf9fafed68714fdb7f036785c1a226",
+      "sha256": "6d966eda6ff732719e17862d97ca822a8574926f2fbe5edaaae1cf45607aebf0",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/with-app-env.mjs",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "e48dfafa69fa33d5288269ce939236956ff75e9c",
+      "worktree_git_blob": "e48dfafa69fa33d5288269ce939236956ff75e9c",
+      "sha256": "a846b68bd3645299c23eef965d9ef226df3a500d345d7576c23f7a2b2ff643c7",
+      "unchanged": true
+    },
+    {
+      "path": "src/components/nightlife-home.tsx",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "211981dfef0e87ab4c096435fce00475cb4c9e6c",
+      "worktree_git_blob": "211981dfef0e87ab4c096435fce00475cb4c9e6c",
+      "sha256": "84680a951e7266263467d55099f7ac5dc3572a4b8774d4c92870bcce1319d352",
+      "unchanged": true
+    },
+    {
+      "path": "src/components/pick-home.tsx",
+      "category": "dinner",
+      "base_git_blob": "9020e5947a773413b00edc6b7c226f898f2cd2ae",
+      "worktree_git_blob": "9020e5947a773413b00edc6b7c226f898f2cd2ae",
+      "sha256": "4996846980f4535a862fa6b84d10137d1b7b11149621a6c17b41db85abbf89a5",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/client.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "d3b267d3de8b9d5e31545ee56ed7a3ff240c601d",
+      "worktree_git_blob": "d3b267d3de8b9d5e31545ee56ed7a3ff240c601d",
+      "sha256": "4bca649afb627b11231a7b31acfcffe9323efddebc05944b2d769d2b8589294f",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/email-password.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "3abb01461af8b6c8293e9a996ec639b7009843a8",
+      "worktree_git_blob": "3abb01461af8b6c8293e9a996ec639b7009843a8",
+      "sha256": "9b1da7c786e48adfa9a6f7c485bcf5817cf2075a601d8726a965f11171910354",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/gate-identity.server.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "8371ca6f0a05fa1cb280db8329833d444bae23a1",
+      "worktree_git_blob": "8371ca6f0a05fa1cb280db8329833d444bae23a1",
+      "sha256": "af3dc9e48dd8b9a0745490bc4a1b62f10b11cb600f3e946e26248e8fcdf21253",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/gate-identity.test.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "02cf0269fe3cdbcba3d96be110264f94e0cdea13",
+      "worktree_git_blob": "02cf0269fe3cdbcba3d96be110264f94e0cdea13",
+      "sha256": "21202fb2b56ffd10cb9b5bb7d9f305be88cce3902b858f73cea914df05ce2652",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/gate-session-marker.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "4ae838d57956d66ed2f67c8d202636880e0423c2",
+      "worktree_git_blob": "4ae838d57956d66ed2f67c8d202636880e0423c2",
+      "sha256": "3dbf8cb789b0288f9d5c53b1515a3e87d265fcb22e11fe28dc3289c4bd7c06eb",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/gate-session.server.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "224c9653923daaca70dbec5a53fc51a3ef62ed97",
+      "worktree_git_blob": "224c9653923daaca70dbec5a53fc51a3ef62ed97",
+      "sha256": "68aa500523ca2f0ad5c7ba34372c10aa1851a9774f8567c6b7781af5dd6cf204",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/gates.tsx",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "ede7bcdd2e3901d565a2eb128c978dca9aa847e5",
+      "worktree_git_blob": "ede7bcdd2e3901d565a2eb128c978dca9aa847e5",
+      "sha256": "39950c211bd4ad4f7129082bf5a43a42ff23975e681b99fd7cfbce372f83a5be",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/isolation.server.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "f070e0801221046b3a1c26954cc714250addecff",
+      "worktree_git_blob": "f070e0801221046b3a1c26954cc714250addecff",
+      "sha256": "a4adf6a5d548e70a0be52d7efdc7433126028908072b47bf9f92135d9ee558a0",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/middleware.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "c6a734242f2a63c02e365eb7303a0238b3b5bf5c",
+      "worktree_git_blob": "c6a734242f2a63c02e365eb7303a0238b3b5bf5c",
+      "sha256": "8dc37c4e9bd583f175402330d0952ef4d584c7410723cc2649c4046d5084bd80",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/pglite-dialect.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "e23357c3a027360d55ad37c018883111976687d9",
+      "worktree_git_blob": "e23357c3a027360d55ad37c018883111976687d9",
+      "sha256": "bd66925574245cd47cdd98b5c068dd7b4ee4a51c9439e8421dc54c62fe7c4f50",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/popup.server.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "9e686ae29e2b0463b7868ce755dd066479ebe8a3",
+      "worktree_git_blob": "9e686ae29e2b0463b7868ce755dd066479ebe8a3",
+      "sha256": "81f8833d9ab639f76b86f4bb23fed42a04cec4b0c6d90b7a67425a9232c9bb4a",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/preview.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "b8822e87c83be13fb834714f53fb5a09d07588cd",
+      "worktree_git_blob": "b8822e87c83be13fb834714f53fb5a09d07588cd",
+      "sha256": "d52a3654a5cef7e841cbca789fd106dc464ea55db574f02aa5d295b7350f8664",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/provider.tsx",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "4dd72618670f44c166ff93da6020a71ab8046f05",
+      "worktree_git_blob": "4dd72618670f44c166ff93da6020a71ab8046f05",
+      "sha256": "4cbbc7f8cc1765788ad65455a33f64dcdafc6fe4ed1d13f90ccfa0ba4c13d1f3",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/providers.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "cd53b6faf1bf1ba4cef1193c42e533401bec4e65",
+      "worktree_git_blob": "cd53b6faf1bf1ba4cef1193c42e533401bec4e65",
+      "sha256": "4acefac17931529bdeab053588a917b06e44abdb67a275a2ca1c7841080c6a78",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/server.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "66d94be9eb10e78fe46e2da2e7d950eef82580d0",
+      "worktree_git_blob": "66d94be9eb10e78fe46e2da2e7d950eef82580d0",
+      "sha256": "e0544cadbfa1a09c3cb4cf2a0ec187dbbb2831aebf7de887a3c858abdd72ca43",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/sign-in-gate.test.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "6b66a33ea9a0856c23661099dfc7d368dc022dff",
+      "worktree_git_blob": "6b66a33ea9a0856c23661099dfc7d368dc022dff",
+      "sha256": "2c352588cb6a8f58faf3aecc1d1f418ae827ddbb6a5eca8e56668ec72cd328d2",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/sign-in-gate.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "636893c147464d35caac3982dad48f53694dc63e",
+      "worktree_git_blob": "636893c147464d35caac3982dad48f53694dc63e",
+      "sha256": "d2c65c20ab50ae41657ceecd61ded005fac29315deace9fc4d966cf56300754c",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/use-current-user.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "bf9d3affa6417e89b36785a567a6ac05ddcf8429",
+      "worktree_git_blob": "bf9d3affa6417e89b36785a567a6ac05ddcf8429",
+      "sha256": "a0cc4bd74b6da5b346b6bafc1aec58b9bf5cc0278264379b737b79a5cff1e482",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/verify.server.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "2bf5acc72dd13134b1ec86781aa7591e1b2dca5c",
+      "worktree_git_blob": "2bf5acc72dd13134b1ec86781aa7591e1b2dca5c",
+      "sha256": "42a7d5c1b17027ba004d6524a7f7bb4827b908d75ee3c3aefc940fa9c891c2ee",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/date-night/availability.test.ts",
+      "category": "date_night_semantics_catalogs",
+      "base_git_blob": "3be9be19b3708efa03183c50c91d60b7e4928207",
+      "worktree_git_blob": "3be9be19b3708efa03183c50c91d60b7e4928207",
+      "sha256": "6c1ab9e6d9c6eb3a47e480eeae292cb1a30748002526b7eed83116fc67eaeeee",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/date-night/availability.ts",
+      "category": "date_night_semantics_catalogs",
+      "base_git_blob": "ee3400797fe30831cb2d0141e2c3c17f9e7dafad",
+      "worktree_git_blob": "ee3400797fe30831cb2d0141e2c3c17f9e7dafad",
+      "sha256": "58f9b4be9b60e9e9c60297318bd0712a6c62a5b8fc488f36f2d282817dc70073",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/date-night/coverage.ts",
+      "category": "date_night_semantics_catalogs",
+      "base_git_blob": "6bef5919e5acf7169987813940f2430f06d1189a",
+      "worktree_git_blob": "6bef5919e5acf7169987813940f2430f06d1189a",
+      "sha256": "5cd1c8e9b61dc49d7c656eb3e809c4780947575ab9893aae3ab13e7a9472e2e1",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/date-night/eligibility.ts",
+      "category": "date_night_semantics_catalogs",
+      "base_git_blob": "b90864e7c1f09ae3798db1c0ad85d6d0baea4280",
+      "worktree_git_blob": "b90864e7c1f09ae3798db1c0ad85d6d0baea4280",
+      "sha256": "7d7badb3eeb1f7f7e0f2987dd0622d406a884251028f16cca751212e1a45f94f",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/date-night/icons.ts",
+      "category": "date_night_semantics_catalogs",
+      "base_git_blob": "1ab175e9d4006b4dbdd8a4070ec7cbbc14c3d932",
+      "worktree_git_blob": "1ab175e9d4006b4dbdd8a4070ec7cbbc14c3d932",
+      "sha256": "89c1316d0709b7f03c51f57cf6c6c0891d4e21884f0f5b9f2931f18ce57d149c",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/date-night/jasper-county-catalog.ts",
+      "category": "date_night_semantics_catalogs",
+      "base_git_blob": "eaa69a1f6bbe698de92764d0e528ceec36ac7160",
+      "worktree_git_blob": "eaa69a1f6bbe698de92764d0e528ceec36ac7160",
+      "sha256": "d2396061d33e211c0ac51ed4880130c926db1bcb5b28344a7ef61c8d97612ca1",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/date-night/season.ts",
+      "category": "date_night_semantics_catalogs",
+      "base_git_blob": "7e33e9c1d17dba13b342aa251885b3fc38cfa99e",
+      "worktree_git_blob": "7e33e9c1d17dba13b342aa251885b3fc38cfa99e",
+      "sha256": "9f23a5e4f4d2f53859e16f30ad91bc6d6db51aff2795bdaa06d7ffbb9ea9bc2b",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/date-night/seasonal-catalog.ts",
+      "category": "date_night_semantics_catalogs",
+      "base_git_blob": "acaff71d74b56eb7f180f4cd1450434d4d13391c",
+      "worktree_git_blob": "acaff71d74b56eb7f180f4cd1450434d4d13391c",
+      "sha256": "86c2c0bad9c0f0fa7ab51ecab680f713654795108ced696581d4e6576a01a751",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/date-night/use-clock.ts",
+      "category": "date_night_semantics_catalogs",
+      "base_git_blob": "e46005bf49b4656c1fcee4a5e4af74d5d5934ef2",
+      "worktree_git_blob": "e46005bf49b4656c1fcee4a5e4af74d5d5934ef2",
+      "sha256": "7413ca99b6c4d5a11cacbad94ebb50c4c9f8c5ce9bf0708137d2eb696aa16add",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/discovery/client-request.ts",
+      "category": "shared_provider_and_client",
+      "base_git_blob": "2c57aa5c915e7b20494f6c9142a060832eae12ee",
+      "worktree_git_blob": "2c57aa5c915e7b20494f6c9142a060832eae12ee",
+      "sha256": "88eb962d39fab52460eb41bfe0b268fcf93e6f4dfc276380d62fd04eb838a861",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/discovery/provider-chain.ts",
+      "category": "shared_provider_and_client",
+      "base_git_blob": "cf5b200e3dec9e802ae5b825fbf516fb576cc7bf",
+      "worktree_git_blob": "cf5b200e3dec9e802ae5b825fbf516fb576cc7bf",
+      "sha256": "e223716101651d19b1ac8b466d966691334fced3ad932d6058870eb5f58386bf",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/CASINO_AUDIT.md",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "08fd02dc0c66361f3345c1ebe75af269d2304ee0",
+      "worktree_git_blob": "08fd02dc0c66361f3345c1ebe75af269d2304ee0",
+      "sha256": "f03ff77f8d4609005e7186cda929bfe0742b1426ce6d02fac2950d8481a34b13",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-10.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "3531813a8fd9685fe70f657437156aa5c828b4e9",
+      "worktree_git_blob": "3531813a8fd9685fe70f657437156aa5c828b4e9",
+      "sha256": "8fbdd3f0537a25b1b6b9adf0da2a3504e9c6462fc9eb3a2cc129714ae7e787fc",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-11.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "fd3395859a4db55c4e671a3959db2db5a0adfcb2",
+      "worktree_git_blob": "fd3395859a4db55c4e671a3959db2db5a0adfcb2",
+      "sha256": "c606887c98e6d365a82b90f6b904244ad85608a66cbf9e4c25dd8b59f26fd4f0",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-12.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "b3c46ae371ba6733d02427b35576cf35706ab830",
+      "worktree_git_blob": "b3c46ae371ba6733d02427b35576cf35706ab830",
+      "sha256": "3d5c751c1c1d06d60e5c1d813d204145a33d520fc620df2769987801c4319fb2",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-13.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "b72f51c29f0bbeeb9cc673aa74d962f3f8a309c6",
+      "worktree_git_blob": "b72f51c29f0bbeeb9cc673aa74d962f3f8a309c6",
+      "sha256": "b6fc2f9dbef01ef06af56fe1eee84d9b2dc927cf3c02815c34a8dd1be96ded4f",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-14.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "d41c3e5a489b59327ca683cb9417039e1a08a891",
+      "worktree_git_blob": "d41c3e5a489b59327ca683cb9417039e1a08a891",
+      "sha256": "2f2292b650bc9464f127077e11c4eed40140be8feafd83d4cd1c24234f102e6f",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-15.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "80f25d9e42ee4515b7d19432d69ccaec6071c0a0",
+      "worktree_git_blob": "80f25d9e42ee4515b7d19432d69ccaec6071c0a0",
+      "sha256": "f7714358470385ce327fa230b642d44cbb686b7f7d236c2c64b0e5f36ae7aec4",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-16.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "542fd95a15bac3a00094c41d13e60c2d23456c5f",
+      "worktree_git_blob": "542fd95a15bac3a00094c41d13e60c2d23456c5f",
+      "sha256": "796fd03b3c07ae8b1d0ca2c8b37a32a8a75b4c80dd7300a363365fb219cdf6bd",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-17.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "f02b2d13e573bb1e395146682342446e1c7401af",
+      "worktree_git_blob": "f02b2d13e573bb1e395146682342446e1c7401af",
+      "sha256": "4c7135eb3df4cfa7745341c6c46fd8992237ab5cb0faa6b2a03bc7aaae485d5c",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-18.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "56aadd0b2b9c936dea7881fffd475a65df55efad",
+      "worktree_git_blob": "56aadd0b2b9c936dea7881fffd475a65df55efad",
+      "sha256": "f2145b5a3dd645cba1cbc907b3ce32441fa79cd64c99beb38c389afcd07ee535",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-19.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "c377a1719cf7077f214ad1cd25ff1058052c234c",
+      "worktree_git_blob": "c377a1719cf7077f214ad1cd25ff1058052c234c",
+      "sha256": "af3adbc12671472dc9b22911e0bb84276ab638b5501b0bdc77b398a0ecfb2c97",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-2.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "0ee9cf6c640c3719b308d6424f05b92eb7b608dd",
+      "worktree_git_blob": "0ee9cf6c640c3719b308d6424f05b92eb7b608dd",
+      "sha256": "39148f0d3a9753b8fbdc843ef4d7c39959f94aca53ed0465db84f123a66984f4",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-20.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "953a38a8bad4222a95120f92880bd6bf7462c8f9",
+      "worktree_git_blob": "953a38a8bad4222a95120f92880bd6bf7462c8f9",
+      "sha256": "17b3cc633618af1fa03a1104d44df2c306bc60a1dfb749f913606c42eb1f75b6",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-21.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "c0f0757ae643548578083124b5c06131eb1922c5",
+      "worktree_git_blob": "c0f0757ae643548578083124b5c06131eb1922c5",
+      "sha256": "31c157eeaf6a7864f625e4432c47fe9fc15b97c02981f7178d70e321167ca97c",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-22.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "aa561504bde7b1b63e79675a833c21a3ca12436a",
+      "worktree_git_blob": "aa561504bde7b1b63e79675a833c21a3ca12436a",
+      "sha256": "f99d3e63eb0db94f1d0b547afd43e5ba7aede220db7f362a45eee5136da97e14",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-23.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "691521af6c2d4bb3ecdd127094ebca3ecc456a2e",
+      "worktree_git_blob": "691521af6c2d4bb3ecdd127094ebca3ecc456a2e",
+      "sha256": "a89105d8b0d2f7d71cabfadfafb9d87a6ff3907bc2a49682b16560183964abd8",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-24.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "e0e4817f07ba028e03e28555405766f33a680eb5",
+      "worktree_git_blob": "e0e4817f07ba028e03e28555405766f33a680eb5",
+      "sha256": "f5a2c15bcb695aa56ca30f80959f7e4f049377c1ac2629679c0dfdf793e0c99f",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-25.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "efe8d00113d2b9e97e62a30f3d371fa0785cb013",
+      "worktree_git_blob": "efe8d00113d2b9e97e62a30f3d371fa0785cb013",
+      "sha256": "38e7dc81e1e72260376047bf38968d6fb78ec96b19ca37f9f44834f1f6727746",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-26.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "fb93fdbe7399a1851966c145687f2b71f1968558",
+      "worktree_git_blob": "fb93fdbe7399a1851966c145687f2b71f1968558",
+      "sha256": "4984d042f27b8b98070052b7d7fd46babae2afcca1e4e743a3707f5ec84fa5ed",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-27.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "c660c45fda8f2668ec49b5c0da99f62aa1dc8b7b",
+      "worktree_git_blob": "c660c45fda8f2668ec49b5c0da99f62aa1dc8b7b",
+      "sha256": "474ff40aae008960f9edae090e6df3dee861e8657e540be31142715390bd5c7b",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-28.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "7ef387dddcd24d40941d2ecd50601430a6c4b138",
+      "worktree_git_blob": "7ef387dddcd24d40941d2ecd50601430a6c4b138",
+      "sha256": "12128b9946d1da369eeedd02f22d515b9ac89a70cb6ac07c5120b0c413dcdae3",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-29.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "26a905fbb3384c5359cc763bd22b4a3395ff8c42",
+      "worktree_git_blob": "26a905fbb3384c5359cc763bd22b4a3395ff8c42",
+      "sha256": "2fb00edabfdcb581a833682a6700f9178c7297a65457da78b5b22da79fbfc2f7",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-3.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "e50ede3b2d0ce32b29b326a98c31cb86c121da0a",
+      "worktree_git_blob": "e50ede3b2d0ce32b29b326a98c31cb86c121da0a",
+      "sha256": "bcd6efacae81928b08009c392758e311cac76e39239098592414c5eb8305cd62",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-30.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "faf5f6b8f27d5ba5b181cfeb7558a86d48d1bd9e",
+      "worktree_git_blob": "faf5f6b8f27d5ba5b181cfeb7558a86d48d1bd9e",
+      "sha256": "de6202d6c4b0ff29b914b9136ff87e7412f9a1d267c702132eb5a395e1316823",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-31.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "384d7190b97cc3be249947d5e9ad9b719a077571",
+      "worktree_git_blob": "384d7190b97cc3be249947d5e9ad9b719a077571",
+      "sha256": "f944170c54fd86099eaff074553c773e98c8947d999fd99c05f5ace9850eea32",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-32.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "b8c294c558dd09631a688b45f56815d72ddd639c",
+      "worktree_git_blob": "b8c294c558dd09631a688b45f56815d72ddd639c",
+      "sha256": "a01451c937fafef4652dae955602ed342e41b0f6121605664eee2e07bd2adb80",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-33.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "ceea283ff17128602164caf9581d22b4e66985ea",
+      "worktree_git_blob": "ceea283ff17128602164caf9581d22b4e66985ea",
+      "sha256": "4c65a7fb83cf1c248fb501d8f1b87e10f077a5313b8ddbca3eaf2c204f9f65ed",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-34.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "b3a8903ef32486d51b66826c06d5567aa01998a6",
+      "worktree_git_blob": "b3a8903ef32486d51b66826c06d5567aa01998a6",
+      "sha256": "2d13fa313d736fa7b4e4fb42f96d4998562b4a871251ad7f6c202c37e49ebc30",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-35.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "7db547cc239e1f0d54582b238c43f9f7aefbc75a",
+      "worktree_git_blob": "7db547cc239e1f0d54582b238c43f9f7aefbc75a",
+      "sha256": "4c4c274e29ed28544e8dc151340f8a3b54b9c9a3750fb25af23604b7e7feae48",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-36.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "b894f2b5030c2dcff1f86e99630d2056ef007cc0",
+      "worktree_git_blob": "b894f2b5030c2dcff1f86e99630d2056ef007cc0",
+      "sha256": "6b0583c9dcd4f7535f85faacf3c0a60bf83f1d718eb9cc1e269a7d0d232ceefa",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-37.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "086d3688b6964239e0988eceae19c461644e4f9f",
+      "worktree_git_blob": "086d3688b6964239e0988eceae19c461644e4f9f",
+      "sha256": "1d37078f0e656e8db0e02f731dfb42ac7234866fb153b41cb7ef5ffd0fb5b721",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-38.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "745cc4c196bdb0fbec9896be8384a9384daf37fc",
+      "worktree_git_blob": "745cc4c196bdb0fbec9896be8384a9384daf37fc",
+      "sha256": "aaf1cc6050efaeb3827db2c58ad768e23bfa0442a647c8fd5384cae37d6c2d94",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-39.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "a750bd29b7adf6c72ade0d826dc02f2be7dc770a",
+      "worktree_git_blob": "a750bd29b7adf6c72ade0d826dc02f2be7dc770a",
+      "sha256": "ae7dbbbadcaef0f5b0d95772ed74679abf3c91e253e427e0823a50bc4c7061c6",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-4.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "0ddf0c83fea203bddffd10ec7a453c855f898ffe",
+      "worktree_git_blob": "0ddf0c83fea203bddffd10ec7a453c855f898ffe",
+      "sha256": "e23f5eedc15f2d1a2bc6703473c94eb374e2a02c6fc5d2f00dfcde8ca8b472c2",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-40.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "a2d290f89e0f5bd2bd20ccaf49c78b16b7da84f1",
+      "worktree_git_blob": "a2d290f89e0f5bd2bd20ccaf49c78b16b7da84f1",
+      "sha256": "9eb72cda1894900016b3b9635bc1ab70e1effd9338c6b17f843169d728e0d2a0",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-41.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "ccb4f1a136f654a525a028bb8dae817be88d9850",
+      "worktree_git_blob": "ccb4f1a136f654a525a028bb8dae817be88d9850",
+      "sha256": "13b527b3a544e239725a9380e115cf540912d6f391290f0e8c37c8f74d859d97",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-42.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "2f66b874531e184272c996989d1a832dd7cb8777",
+      "worktree_git_blob": "2f66b874531e184272c996989d1a832dd7cb8777",
+      "sha256": "f18f5e5093ab8d112b295beac1f426a84ad519067c88ec82ebbca27742243cab",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-43.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "6675e20de25c45d0b5a4d966fb2b6429fca74b5b",
+      "worktree_git_blob": "6675e20de25c45d0b5a4d966fb2b6429fca74b5b",
+      "sha256": "55131dae84cc05a76b3a865059944f509fc71445c02185b99dc87f71213f057a",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-44.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "5b9dda441bdda8f229df3a2992aa53d960bbdd2d",
+      "worktree_git_blob": "5b9dda441bdda8f229df3a2992aa53d960bbdd2d",
+      "sha256": "22dd97e49b61b564e65506bed874c26bd237af26f1ff2ceca915816da689cf85",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-45.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "4a0219e673a7fdcfd2da5b9455feda585d882e7d",
+      "worktree_git_blob": "4a0219e673a7fdcfd2da5b9455feda585d882e7d",
+      "sha256": "fcf840454bd0099edc580d27f6168a87b6f0794739dbbff919a9fc8d8dae2fef",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-46.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "0047b5aab86d855e258bd3d206e6fbc246933978",
+      "worktree_git_blob": "0047b5aab86d855e258bd3d206e6fbc246933978",
+      "sha256": "285425e5ba5c5a550ba7747c430f94fb10505335ba458f4d3b5ad564b9fd0c0e",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-47.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "0b39e6d02ae12b704ecfdc550c9b6c0ef7e1c43e",
+      "worktree_git_blob": "0b39e6d02ae12b704ecfdc550c9b6c0ef7e1c43e",
+      "sha256": "abefac9a6413f815452ab2e6c8f7ea1f9cfbf9041b13e856f7ecc5d849a7cd53",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-48.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "8c18ed41342d2337fe8e35fde08c2c08c120c7e2",
+      "worktree_git_blob": "8c18ed41342d2337fe8e35fde08c2c08c120c7e2",
+      "sha256": "3ee0c3fc49da973a5b4bb4c1e040cbae03b7c5602863d28bc79589cd18fc8311",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-49.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "0e9ed792b53e4860aa256ff3e7f1c74addaa0111",
+      "worktree_git_blob": "0e9ed792b53e4860aa256ff3e7f1c74addaa0111",
+      "sha256": "333c775b5a261c815e6941a4be829a916f5f3a0007adad322981f69950017538",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-5.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "0cc6018c537290a8852290fdf3345796986cce1a",
+      "worktree_git_blob": "0cc6018c537290a8852290fdf3345796986cce1a",
+      "sha256": "0e881f784b79d868c575869aaeb395a5c03adc62e302bd662fc6540f0ea12296",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-50.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "edb0ab3f2268ec5d490b2313096c4e835275ec7f",
+      "worktree_git_blob": "edb0ab3f2268ec5d490b2313096c4e835275ec7f",
+      "sha256": "5d34d049bddee81ff49ccc52b3668eaa9f8b2ca637be754f91505eef8720a693",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-51.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "dcc4283c5ea7ad3af6178fdd3555793ae9f3bb8a",
+      "worktree_git_blob": "dcc4283c5ea7ad3af6178fdd3555793ae9f3bb8a",
+      "sha256": "d50c1dc3c9896f54a01e8f29af3378e83797ffd6a100ca94c5ad0bbac879986f",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-52.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "9f05ceacb17cef12fe2317bb9ffaafe4f4135f8d",
+      "worktree_git_blob": "9f05ceacb17cef12fe2317bb9ffaafe4f4135f8d",
+      "sha256": "88f52138995d4c2aa29c437bc3a3663604cb267dabfaae937e43fa87e3ea7738",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-53.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "aba78ca22b0340e303f2a067b91844c82945141a",
+      "worktree_git_blob": "aba78ca22b0340e303f2a067b91844c82945141a",
+      "sha256": "141c585bc9f69d9fe560fc194bbe4a3e56d1d34e152b671f443ddc3039431349",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-54.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "ff2ee89c61b99c671753e1c3e9b66b6e8abf6370",
+      "worktree_git_blob": "ff2ee89c61b99c671753e1c3e9b66b6e8abf6370",
+      "sha256": "3e9eb56069516b7eb31fdb5099040defae855dad5fb8c27f3fd83aa0a52ecdda",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-55.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "9db3c1c79422ba18892f0119356d4cff35f54c5c",
+      "worktree_git_blob": "9db3c1c79422ba18892f0119356d4cff35f54c5c",
+      "sha256": "2235aa89ef1bfe130491e0b98bd794a877eb7409d3c880435187b32dfae2307f",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-56.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "4fc569080f9fad58b22283d12b24248192463eeb",
+      "worktree_git_blob": "4fc569080f9fad58b22283d12b24248192463eeb",
+      "sha256": "4fcab40975b593bfb42d28d49cb5aa6a400268d6835daff62c9b03199d9f6b2c",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-57.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "12c272b0738e0c812bb9b1cde1e83c87fac10936",
+      "worktree_git_blob": "12c272b0738e0c812bb9b1cde1e83c87fac10936",
+      "sha256": "56b272e2e6287e45867f3b54f8f41968af62a5b469febd3cdb5395cc1feb0cb8",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-58.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "926588e8303a18be3a04a70860e389cecd4bfeff",
+      "worktree_git_blob": "926588e8303a18be3a04a70860e389cecd4bfeff",
+      "sha256": "379e80888f58de89228557df8bc94dfc45f06f062ec4a87f5da5604e90780d38",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-59.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "9c1d009803c90f5d32094a570d30dd6da40d09fe",
+      "worktree_git_blob": "9c1d009803c90f5d32094a570d30dd6da40d09fe",
+      "sha256": "d28d93044fa650646fd9f277cc2367b57b1722cb50bc4bbf84c1c16ac7e4c870",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-6.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "4cf2c48dc135e8ca5220a9a964eb9de75bbdf0ad",
+      "worktree_git_blob": "4cf2c48dc135e8ca5220a9a964eb9de75bbdf0ad",
+      "sha256": "dd0887f27562065baa2b20e16328ca6bd50448480213f067a9a11a85a1fb5f69",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-60.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "fee3081ad938438cfceb8ccb6c7d44b6eed18c2e",
+      "worktree_git_blob": "fee3081ad938438cfceb8ccb6c7d44b6eed18c2e",
+      "sha256": "46cab82475b137b95bb06b7ff7225b6c8908a4c5205d3093ad1238ad30b8abe5",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-7.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "0e09aae4feb8cba51bbb0c3553724d3637755aa0",
+      "worktree_git_blob": "0e09aae4feb8cba51bbb0c3553724d3637755aa0",
+      "sha256": "d40b89ff5efd9d5c08cd5ca96dfe5b2da985ec8c25d4a779ea538f4c87179966",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-8.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "4dda1b284bf30114812dd3f13705245e77b05612",
+      "worktree_git_blob": "4dda1b284bf30114812dd3f13705245e77b05612",
+      "sha256": "50368538a465d245a1e99b91a9d815ad6a402dbb3290881422d10486a62ec256",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-9.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "2aa60f28f2dead9e22a2fdc64c095757a87d8c03",
+      "worktree_git_blob": "2aa60f28f2dead9e22a2fdc64c095757a87d8c03",
+      "sha256": "c7bbcb1f2240b6e39ac5c9004e7ce7bd2e50efd27043eba24095424156f0ad04",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "e988a1a0b1f39acd726dcaa4d6de9bc5fabb5142",
+      "worktree_git_blob": "e988a1a0b1f39acd726dcaa4d6de9bc5fabb5142",
+      "sha256": "84d83a91bdae6cba79af9fde6228479349ffc67f9470b0069a422114b2a89d3d",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/catalog.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "d4a9b90b3b63812482febd93acd34c9cdea1e00f",
+      "worktree_git_blob": "d4a9b90b3b63812482febd93acd34c9cdea1e00f",
+      "sha256": "a395fd2836c3f5b76268709b55581fd29afe7fc4432617bffa13d0235223b96b",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/discovery-policy.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "56395ff3e9449f97d6d9901fa12a680e83eed452",
+      "worktree_git_blob": "56395ff3e9449f97d6d9901fa12a680e83eed452",
+      "sha256": "2c67b9f9312044e3d6594b6ea3f1a341c791eb15344265b1f26d14688aa3d931",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/jasper-county-catalog.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "1f7c21c09fefba67c9a7c94a107ef6274231720c",
+      "worktree_git_blob": "1f7c21c09fefba67c9a7c94a107ef6274231720c",
+      "sha256": "919e2a20a460ec09b048110dcc5b1a43658032e4d13e5c68cd227558a3ab1ec3",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/search.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "0e033e71d63391bc9d3c9f1bab9d82dcbdc1297d",
+      "worktree_git_blob": "0e033e71d63391bc9d3c9f1bab9d82dcbdc1297d",
+      "sha256": "b7061b1ebc8ba0c6a897bab31b9914c3a11cebe21bc286666760eb795e9bc2d2",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/selection.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "daea97300c2443e181885a1ea953b71fcf6a0ddb",
+      "worktree_git_blob": "daea97300c2443e181885a1ea953b71fcf6a0ddb",
+      "sha256": "6c0db123211087ffc1e48488f98ab6b526c6876b79d653a3776f17631bb61dab",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/nightlife/types.ts",
+      "category": "nightlife_and_casinos",
+      "base_git_blob": "1fc24a2fa3fac96029e6469955a85ed4f7abe058",
+      "worktree_git_blob": "1fc24a2fa3fac96029e6469955a85ed4f7abe058",
+      "sha256": "8651c123e5b1334c1f52c952a06c6884c10fb76ca662dc207f0b15fdb76ea8a8",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/catalog-refresh-2.ts",
+      "category": "dinner",
+      "base_git_blob": "28252e773ad1a5d8a9b8ac89bd4fb27fa2a88200",
+      "worktree_git_blob": "28252e773ad1a5d8a9b8ac89bd4fb27fa2a88200",
+      "sha256": "51c0dbb6bad9b99ad8e3292731087624ffaa4fab0967df73a4c548020cebc5d7",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/catalog-refresh.ts",
+      "category": "dinner",
+      "base_git_blob": "39858faf0c73ef51696e2ccf94de7f9b4b0763d9",
+      "worktree_git_blob": "39858faf0c73ef51696e2ccf94de7f9b4b0763d9",
+      "sha256": "b00de4ae90a989a3df58bae386acbe6750579d03665cb2e35b774583c2670baa",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/catalog.ts",
+      "category": "dinner",
+      "base_git_blob": "1b3111c485aca2191b25ee81c9672f7b4f385087",
+      "worktree_git_blob": "1b3111c485aca2191b25ee81c9672f7b4f385087",
+      "sha256": "9916301223c08efbd348eac2df45157eb8f9ef55e723d5455c09290db98ce595",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/chains.ts",
+      "category": "dinner",
+      "base_git_blob": "d2bceddc953d0251d215156a2b6cf9e5ed24e6f8",
+      "worktree_git_blob": "d2bceddc953d0251d215156a2b6cf9e5ed24e6f8",
+      "sha256": "dc6b872e0a9c2edb6b75563e8cb41860651ca1ae08d2717993e6dc90858a9578",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/cuisines.ts",
+      "category": "dinner",
+      "base_git_blob": "494a76994c1ed8660f321e86d98c4a01da22a32a",
+      "worktree_git_blob": "494a76994c1ed8660f321e86d98c4a01da22a32a",
+      "sha256": "33d25144107888a3213e9acf106d7f12588d46079a5b543f8a8dfd1b8c19d4aa",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/decorate.ts",
+      "category": "dinner",
+      "base_git_blob": "83db449f359625edf1cb87a522d29c28000a5db7",
+      "worktree_git_blob": "83db449f359625edf1cb87a522d29c28000a5db7",
+      "sha256": "cd6a998d6a58bde4b3e493d0f3e5eed2e1722812fb774aa49d596ddcb0c6a47e",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/dinner-icons.ts",
+      "category": "dinner",
+      "base_git_blob": "fd44c43b9cb1dbb90f7f4f43c650d862029fc49a",
+      "worktree_git_blob": "fd44c43b9cb1dbb90f7f4f43c650d862029fc49a",
+      "sha256": "99298fbed3f9dd61d3fdd5c8f0bf3b8bb5e41ef324a9698fdb923532afa28136",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/fallback-data.ts",
+      "category": "dinner",
+      "base_git_blob": "a4de947cce573684cf13db856646d9cc8606f621",
+      "worktree_git_blob": "a4de947cce573684cf13db856646d9cc8606f621",
+      "sha256": "92e766081e9a63b2c02ab0c973902ac6231126a217dbed3f83ac67d929b374db",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/geo.ts",
+      "category": "dinner",
+      "base_git_blob": "3739d89ed531e568522d9b8f042326edad4687a2",
+      "worktree_git_blob": "3739d89ed531e568522d9b8f042326edad4687a2",
+      "sha256": "a54927bd8cc9ff1132ddb99eebf2766dcf0cd06067256da1355195fbd36546b6",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/geocode.ts",
+      "category": "dinner",
+      "base_git_blob": "fea1a4e87672830dd3ec6d9309489eb0eeb167ab",
+      "worktree_git_blob": "fea1a4e87672830dd3ec6d9309489eb0eeb167ab",
+      "sha256": "3df3d5b1062870ff5c12c52a1fc597b11282ea3a6ffaf559c626e0dfc9d84f0e",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/hours.ts",
+      "category": "dinner",
+      "base_git_blob": "4cc79152f00915f4274bbfeaf32b595cd753c021",
+      "worktree_git_blob": "4cc79152f00915f4274bbfeaf32b595cd753c021",
+      "sha256": "9e30d379dd4f1cafe722adff749caaa097b42e3bd6b1e332c2d15891aabbbc7d",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/image-overrides.ts",
+      "category": "dinner",
+      "base_git_blob": "5bf4b9c3cb83e4394f3733dfd82e5ae613e026c9",
+      "worktree_git_blob": "5bf4b9c3cb83e4394f3733dfd82e5ae613e026c9",
+      "sha256": "cbaca65fd866311fec24493b48949173abca34b1103c0e30f5305d03d8dfc297",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/jasper-county-catalog.ts",
+      "category": "dinner",
+      "base_git_blob": "f53530a1363ac921df27e28d9311146a82221c5c",
+      "worktree_git_blob": "f53530a1363ac921df27e28d9311146a82221c5c",
+      "sha256": "7e4ad1fa48eed0e0929fa398de36e7af945f9e3e38525590159189c312f1499d",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/normalize.ts",
+      "category": "dinner",
+      "base_git_blob": "54e3b4aa27f12ff338f6791e657878822fbb1352",
+      "worktree_git_blob": "54e3b4aa27f12ff338f6791e657878822fbb1352",
+      "sha256": "4f1c0474a86923d4cde286350b08023b9c358060a57ca40ae23ed95ff9cd4fca",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/overpass.ts",
+      "category": "dinner",
+      "base_git_blob": "19ebddf6276d9509ec7e7de8f8ccd27f238a98df",
+      "worktree_git_blob": "19ebddf6276d9509ec7e7de8f8ccd27f238a98df",
+      "sha256": "55c0755a6ac3540323c368693e968c7157737d0627824c12f68d713d7a61d07c",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/search.ts",
+      "category": "dinner",
+      "base_git_blob": "a2b17f32b8c3143c48305bb999688487314ab5ca",
+      "worktree_git_blob": "a2b17f32b8c3143c48305bb999688487314ab5ca",
+      "sha256": "f52368b9bbca1ec79a30ec1a16964190118cdbee679f1d3c6bb32a91a01f3b65",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/types.ts",
+      "category": "dinner",
+      "base_git_blob": "23d7613a539aad07cd27cd174383edbfb73ea3a2",
+      "worktree_git_blob": "23d7613a539aad07cd27cd174383edbfb73ea3a2",
+      "sha256": "f0733c28a6d34bb70fbf8f8f249373aa642660b2ac09d6319a134ac63b175a4f",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/weighting.ts",
+      "category": "dinner",
+      "base_git_blob": "fa6be28edcb555c8e6ac5a355ec99b223fc55446",
+      "worktree_git_blob": "fa6be28edcb555c8e6ac5a355ec99b223fc55446",
+      "sha256": "8c48fd9858848186466c7b24a559d7a27705aea98fe311fda0746cd2b6ea6050",
+      "unchanged": true
+    },
+    {
+      "path": "vercel.json",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "65925d91f882a10433e3eb43f53ed802914c969b",
+      "worktree_git_blob": "65925d91f882a10433e3eb43f53ed802914c969b",
+      "sha256": "b6cb6dbc8995fe4637bd63f7201389987e27762c2a0ce494506e2db1ceae82e3",
+      "unchanged": true
+    },
+    {
+      "path": "vite.config.ts",
+      "category": "configuration_auth_migrations",
+      "base_git_blob": "f0aa67ddb6b5067c5aece4678259caa57638aa5a",
+      "worktree_git_blob": "f0aa67ddb6b5067c5aece4678259caa57638aa5a",
+      "sha256": "5451c22b17e7d8408674909b3d231f0ae4a4d017b740491ce7df008d961a7eee",
+      "unchanged": true
+    }
+  ],
+  "evidence_inventory": [
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-client-seasonal.tap",
+      "bytes": 423,
+      "sha256": "11d1814622aeae3badbe010e1972e7a4b32272ab12dc6741a6b028b0aa95434a"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "bytes": 9798,
+      "sha256": "36490198a0d735494ccd285f854fbfad10571b764e6c40a43ec9015d73e76a61"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/deterministic-test-map.md",
+      "bytes": 2291,
+      "sha256": "b4f374528f41b6b37bd57101c8aed46db4128233b6c1fe7d44737aabbe941d4b"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m1-hedged-tests.log",
+      "bytes": 1947,
+      "sha256": "0aeaf2f1ed4c70c7b71ad253f82bd78601c088a8c34280134ad8a2eaeb13aae0"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m1-provider-deadlines.log",
+      "bytes": 4237,
+      "sha256": "12e3f44cfb2ec7493290f9cff2ca0f4062284d152268a8929ead5f17ac4ee34c"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m1-typecheck.log",
+      "bytes": 29,
+      "sha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m2-query-tests.log",
+      "bytes": 3184,
+      "sha256": "55c075b815074f9f02312118d4b16875f8024504a1b03d25a62ff242a9fbd685"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m2-seasonal.log",
+      "bytes": 5361,
+      "sha256": "5f886887bd19af15dc7a18a62f78c267656a07f944bdffefc1fe65bbcb24f9d4"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-client-lifecycle.log",
+      "bytes": 4922,
+      "sha256": "df85e8c3571d8b7cfcac236e8bd4a29fd4f6ba886cd0c04ed87750b30f6db10b"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-partial-results.log",
+      "bytes": 1339,
+      "sha256": "a3143682eefb5a92a6fab91fc67bb3bd611a7bfe377f645b07e3dc5dffe9dc15"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-partial-ui.log",
+      "bytes": 311,
+      "sha256": "78bf5781125ceb9bced942e7d1ac429ea34fff46a97f60b82d78af7e49d8dfe2"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-provider-deadlines.log",
+      "bytes": 4233,
+      "sha256": "e8f58f08abbb4d6e841e7f61692b482170b76dd854097638308ed234b825ffd0"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "bytes": 12158,
+      "sha256": "802f822caebddbf778ae723f90f81b7325840c9343a84746dd05e232778b6052"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m4-cache.log",
+      "bytes": 2715,
+      "sha256": "f9cbc2ef3814169a3fac982d3aa1cbae54dff25bf31e168a9babb4b11f4d759c"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m4-seasonal.log",
+      "bytes": 7383,
+      "sha256": "9c126c94ee21ebfd05e625917325fa9b1dcf799c7987fb321b9b0c6fb186553f"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/mandatory-read-manifest.md",
+      "bytes": 7916,
+      "sha256": "77456c8c32c42f83e6127bf6f47be744d9a0d8fce131faf399c58e9f112a5a7d"
+    }
+  ],
+  "evidence_findings": [],
+  "classified_scan_hits": [
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 5,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 11,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 17,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 23,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 29,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 35,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 41,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 47,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 53,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 59,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 65,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 71,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 77,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 83,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 89,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 95,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 101,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 107,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 113,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 119,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 125,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 131,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 137,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 143,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 149,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 155,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 161,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 167,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 173,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 179,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 185,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 191,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 197,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 203,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 209,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 215,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 221,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 227,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 233,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 239,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "line": 245,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m1-hedged-tests.log",
+      "line": 27,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m1-provider-deadlines.log",
+      "line": 49,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m2-query-tests.log",
+      "line": 93,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-client-lifecycle.log",
+      "line": 62,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-partial-results.log",
+      "line": 20,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-partial-ui.log",
+      "line": 10,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-provider-deadlines.log",
+      "line": 49,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 168,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 174,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 180,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 186,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 192,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 198,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 204,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 210,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 216,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 222,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 228,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 234,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 240,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 246,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 252,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 258,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 398,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 404,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 410,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 416,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 422,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 428,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "line": 434,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m4-cache.log",
+      "line": 33,
+      "category": "precise_coordinate_candidate",
+      "classification": "test_runner_duration_not_coordinate"
+    }
+  ],
+  "runtime_logging_review": {
+    "file": "src/lib/discovery/hedged-provider.ts",
+    "fields": [
+      "mode",
+      "strategy",
+      "source",
+      "durationMs",
+      "budgetExhausted",
+      "requestedGroups",
+      "successfulGroups",
+      "failedGroups",
+      "partial",
+      "groups (group/outcome/winnerMirror/durationMs)",
+      "attempts (group/mirror/hedgeOffsetMs/durationMs/outcome/status)"
+    ],
+    "max_groups": 4,
+    "max_mirrors_per_group": 4,
+    "logs_query_or_location_or_exception": false,
+    "cache_logs_precise_location": false,
+    "note": "Single bounded structured summary; IDs internal whitelisted, numeric status only. No raw exceptions or query/URL/location fields."
+  },
+  "test_scope_review": {
+    "dinner_nightlife_deadline_assertions": "Unchanged expected 3 starts at 0/8000/16000 and 20s settlement via Date Night-only conditional branches.",
+    "tanstack_security": "Only Date Night query shape/provider-count assumptions intentionally updated; hostile new category input checks added. Existing internal marker, serialization, CSRF/method and real Response assertions unchanged.",
+    "dependency_versions": "Package and lock blobs identical to frozen base."
+  },
+  "sanity_passed": true,
+  "limitations": [
+    "Evidence regex scan plus manual runtime logger review is bounded, not a general secret-scanner guarantee.",
+    "New browser harnesses and subsequent M5/Preview logs require scan when finalized.",
+    "Test-runner timing decimals are not coordinates and are classified separately.",
+    "One expected checkout transformation: android/gradlew.bat uses mandated CRLF worktree bytes versus LF Git blob. Normalized bytes match frozen base; raw working bytes also match pre/post M5 sync hashes exactly. This is not a source or sync mutation."
+  ],
+  "mutations": "Only this scratch JSON created; no repository edits or commits."
+}

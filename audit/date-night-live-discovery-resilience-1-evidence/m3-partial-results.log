@@ -1,0 +1,20 @@
+✔ seasonal live success survives stalled parks and merges saved coverage with honest partial metadata (159.859668ms)
+✔ entertainment survives seasonal HTTP failure with selected failed coverage retained (5.829377ms)
+✔ valid empty requested group is successful coverage, distinct from missing venues and failed acquisition (7.252517ms)
+✔ valid empty success with a failed sibling remains partial live, not fallback or terminal error (13.317919ms)
+✔ cross-group equal OSM identity unions disjoint classifications despite changed provider name (18.58106ms)
+✔ identical cross-group evidence is deduplicated and permanently closed evidence dominates active siblings (39.189616ms)
+✔ malformed missing-elements sibling cannot erase valid seasonal live response (2.671965ms)
+✔ malformed remark sibling cannot erase valid seasonal live response (5.597809ms)
+✔ malformed invalid-json sibling cannot erase valid seasonal live response (9.539544ms)
+✔ all four groups/mirrors stalled settle honest saved fallback at 12.5s (82.456234ms)
+✔ all four groups/mirrors stalled settle terminal error at 12.5s (9.256974ms)
+✔ all valid-empty groups are live coverage rather than outage even with zero venues (4.322171ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 422.187636

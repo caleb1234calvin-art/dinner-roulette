@@ -1,0 +1,93 @@
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 2,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    { group: 'all', outcome: 'empty', durationMs: 1, winnerMirror: 1 }
+  ],
+  attempts: [
+    {
+      group: 'all',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    { group: 'all', outcome: 'empty', durationMs: 1, winnerMirror: 1 }
+  ],
+  attempts: [
+    {
+      group: 'all',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    { group: 'all', outcome: 'empty', durationMs: 0, winnerMirror: 1 }
+  ],
+  attempts: [
+    {
+      group: 'all',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    }
+  ]
+}
+✔ Anything, omitted and empty category input produce all and only active query groups (2.550037ms)
+✔ specific categories plan only required groups and combine selected siblings (0.347924ms)
+✔ query plans and normalized coverage signatures are deterministic without mutating caller input (0.215587ms)
+✔ Halloween OFF strips stale seasonal selections and preserves existing Anything fallback (0.828344ms)
+✔ activity validation rejects malformed, inherited, unknown and query-injection inputs (0.707805ms)
+✔ every ordinary category owns its exact active clauses and only relevant lifecycle companions (7.133339ms)
+✔ query construction independently enforces concrete whitelist input, finite coordinates and capped radius (0.635376ms)
+✔ seasonal-only queries do not acquire unrelated ordinary or seasonal offerings (2.570794ms)
+✔ precise seasonal attraction and agricultural maze representations remain reachable (2.364536ms)
+✔ selected seasonal metadata remains reachable across every supported context, field and separator (13.486846ms)
+✔ retained Exeter theme-park record remains acquired by a Corn Maze-only plan (0.638596ms)
+✔ narrowed seasonal acquisition retains lifecycle-only evidence previously reached through broad contexts (2.646548ms)
+✔ real selected query cannot resurrect an active duplicate by dropping its lifecycle-only theme-park record (37.691713ms)
+✔ narrowed acquisition never turns generic, negative or unrelated evidence into seasonal classification (2.073333ms)
+✔ real server validator rejects hostile category input before any provider request (0.744611ms)
+✔ real server request uses validated selected clauses, normalizes inactive seasonal input and preserves radius cap (5.57306ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 89.367246
