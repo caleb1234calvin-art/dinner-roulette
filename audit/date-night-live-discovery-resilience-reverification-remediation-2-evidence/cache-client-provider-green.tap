@@ -1,0 +1,982 @@
+TAP version 13
+# Subtest: Anything coverage satisfies every later category and subset without acquiring again
+ok 1 - Anything coverage satisfies every later category and subset without acquiring again
+  ---
+  duration_ms: 8.271104
+  type: 'test'
+  ...
+# Subtest: coverage is category-specific within a group; only missing types are requested
+ok 2 - coverage is category-specific within a group; only missing types are requested
+  ---
+  duration_ms: 14.218411
+  type: 'test'
+  ...
+# Subtest: valid-empty coverage is reusable and preserves its origin; failed/cancelled categories stay missing
+ok 3 - valid-empty coverage is reusable and preserves its origin; failed/cancelled categories stay missing
+  ---
+  duration_ms: 0.884435
+  type: 'test'
+  ...
+# Subtest: complete fallback and legacy missing metadata never establish reusable live coverage
+ok 4 - complete fallback and legacy missing metadata never establish reusable live coverage
+  ---
+  duration_ms: 0.467416
+  type: 'test'
+  ...
+# Subtest: cached successes plus fresh failure preserve partial live data and disjoint category outcomes
+ok 5 - cached successes plus fresh failure preserve partial live data and disjoint category outcomes
+  ---
+  duration_ms: 1.803753
+  type: 'test'
+  ...
+# Subtest: cached live success survives missing-category transport failure without asserting coverage
+ok 6 - cached live success survives missing-category transport failure without asserting coverage
+  ---
+  duration_ms: 1.007391
+  type: 'test'
+  ...
+# Subtest: radius narrowing reuses larger coverage but widening cannot use a narrower entry
+ok 7 - radius narrowing reuses larger coverage but widening cannot use a narrower entry
+  ---
+  duration_ms: 1.759876
+  type: 'test'
+  ...
+# Subtest: latitude separates incompatible cache coverage
+ok 8 - latitude separates incompatible cache coverage
+  ---
+  duration_ms: 0.538082
+  type: 'test'
+  ...
+# Subtest: longitude separates incompatible cache coverage
+ok 9 - longitude separates incompatible cache coverage
+  ---
+  duration_ms: 1.59993
+  type: 'test'
+  ...
+# Subtest: Halloween activation separates incompatible cache coverage
+ok 10 - Halloween activation separates incompatible cache coverage
+  ---
+  duration_ms: 0.639255
+  type: 'test'
+  ...
+# Subtest: semantic version separates incompatible cache coverage
+ok 11 - semantic version separates incompatible cache coverage
+  ---
+  duration_ms: 0.638374
+  type: 'test'
+  ...
+# Subtest: TTL expires exactly at bound; reads and fresh missing-category combinations never rejuvenate old coverage
+ok 12 - TTL expires exactly at bound; reads and fresh missing-category combinations never rejuvenate old coverage
+  ---
+  duration_ms: 0.737162
+  type: 'test'
+  ...
+# Subtest: new valid-empty category coverage cannot resurrect old venues through a reused superset
+ok 13 - new valid-empty category coverage cannot resurrect old venues through a reused superset
+  ---
+  duration_ms: 1.208023
+  type: 'test'
+  ...
+# Subtest: equal-timestamp freshness uses admission order even after an older superset becomes most recently used
+ok 14 - equal-timestamp freshness uses admission order even after an older superset becomes most recently used
+  ---
+  duration_ms: 0.590011
+  type: 'test'
+  ...
+# Subtest: V-DR-02: maxEntries eviction cannot resurrect superseded Corn (increasing timestamps)
+ok 15 - V-DR-02: maxEntries eviction cannot resurrect superseded Corn (increasing timestamps)
+  ---
+  duration_ms: 3.077766
+  type: 'test'
+  ...
+# Subtest: V-DR-02: maxEntries eviction cannot resurrect superseded Corn (equal timestamps)
+ok 16 - V-DR-02: maxEntries eviction cannot resurrect superseded Corn (equal timestamps)
+  ---
+  duration_ms: 0.72168
+  type: 'test'
+  ...
+# Subtest: V-DR-02: maxVenues eviction cannot resurrect superseded Corn (increasing timestamps)
+ok 17 - V-DR-02: maxVenues eviction cannot resurrect superseded Corn (increasing timestamps)
+  ---
+  duration_ms: 3.895564
+  type: 'test'
+  ...
+# Subtest: V-DR-02: maxVenues eviction cannot resurrect superseded Corn (equal timestamps)
+ok 18 - V-DR-02: maxVenues eviction cannot resurrect superseded Corn (equal timestamps)
+  ---
+  duration_ms: 1.432241
+  type: 'test'
+  ...
+# Subtest: V-DR-02: radius 50→15 supersession is durable and never claims wider coverage
+ok 19 - V-DR-02: radius 50→15 supersession is durable and never claims wider coverage
+  ---
+  duration_ms: 1.191959
+  type: 'test'
+  ...
+# Subtest: V-DR-02: radius 15→50 supersession is durable and never claims wider coverage
+ok 20 - V-DR-02: radius 15→50 supersession is durable and never claims wider coverage
+  ---
+  duration_ms: 1.720067
+  type: 'test'
+  ...
+# Subtest: V-DR-02: supersession lasts through the old TTL and never rejuvenates unaffected Movies
+ok 21 - V-DR-02: supersession lasts through the old TTL and never rejuvenates unaffected Movies
+  ---
+  duration_ms: 0.760057
+  type: 'test'
+  ...
+# Subtest: V-DR-02: successful coverage for another latitude cannot supersede this signature
+ok 22 - V-DR-02: successful coverage for another latitude cannot supersede this signature
+  ---
+  duration_ms: 0.441666
+  type: 'test'
+  ...
+# Subtest: V-DR-02: successful coverage for another longitude cannot supersede this signature
+ok 23 - V-DR-02: successful coverage for another longitude cannot supersede this signature
+  ---
+  duration_ms: 1.474345
+  type: 'test'
+  ...
+# Subtest: V-DR-02: successful coverage for another Halloween activation cannot supersede this signature
+ok 24 - V-DR-02: successful coverage for another Halloween activation cannot supersede this signature
+  ---
+  duration_ms: 1.213231
+  type: 'test'
+  ...
+# Subtest: V-DR-02: successful coverage for another semantic version cannot supersede this signature
+ok 25 - V-DR-02: successful coverage for another semantic version cannot supersede this signature
+  ---
+  duration_ms: 0.445964
+  type: 'test'
+  ...
+# Subtest: V-DR-02: valid-empty supersession retains full classification and evidence for an identity still reused through Movies
+ok 26 - V-DR-02: valid-empty supersession retains full classification and evidence for an identity still reused through Movies
+  ---
+  duration_ms: 1.377109
+  type: 'test'
+  ...
+# Subtest: V-DR-02: rejected fallback response cannot supersede successful older coverage
+ok 27 - V-DR-02: rejected fallback response cannot supersede successful older coverage
+  ---
+  duration_ms: 0.5564
+  type: 'test'
+  ...
+# Subtest: V-DR-02: rejected failed response cannot supersede successful older coverage
+ok 28 - V-DR-02: rejected failed response cannot supersede successful older coverage
+  ---
+  duration_ms: 0.36473
+  type: 'test'
+  ...
+# Subtest: V-DR-02: rejected cancelled response cannot supersede successful older coverage
+ok 29 - V-DR-02: rejected cancelled response cannot supersede successful older coverage
+  ---
+  duration_ms: 0.50359
+  type: 'test'
+  ...
+# Subtest: V-DR-02: rejected cache-hit response cannot supersede successful older coverage
+ok 30 - V-DR-02: rejected cache-hit response cannot supersede successful older coverage
+  ---
+  duration_ms: 0.338351
+  type: 'test'
+  ...
+# Subtest: V-DR-02: rejected legacy response cannot supersede successful older coverage
+ok 31 - V-DR-02: rejected legacy response cannot supersede successful older coverage
+  ---
+  duration_ms: 0.315697
+  type: 'test'
+  ...
+# Subtest: V-DR-02: rejected oversize response cannot supersede successful older coverage
+ok 32 - V-DR-02: rejected oversize response cannot supersede successful older coverage
+  ---
+  duration_ms: 0.608939
+  type: 'test'
+  ...
+# Subtest: V-DR-02: partial success supersedes only its successful categories
+ok 33 - V-DR-02: partial success supersedes only its successful categories
+  ---
+  duration_ms: 0.914481
+  type: 'test'
+  ...
+# Subtest: V-DR-02: an entry with all coverage superseded retains terminal identity evidence until TTL
+ok 34 - V-DR-02: an entry with all coverage superseded retains terminal identity evidence until TTL
+  ---
+  duration_ms: 2.145688
+  type: 'test'
+  ...
+# Subtest: LRU entry and aggregate raw-venue caps evict whole entries without truncated coverage
+ok 35 - LRU entry and aggregate raw-venue caps evict whole entries without truncated coverage
+  ---
+  duration_ms: 2.390688
+  type: 'test'
+  ...
+# Subtest: cache assembly preserves catalog aliases, full evidence, hours precedence and lifecycle in either insertion order
+ok 36 - cache assembly preserves catalog aliases, full evidence, hours precedence and lifecycle in either insertion order
+  ---
+  duration_ms: 2.623621
+  type: 'test'
+  ...
+# Subtest: fresh cross-category lifecycle evidence suppresses an older cached active identity without adding coverage
+ok 37 - fresh cross-category lifecycle evidence suppresses an older cached active identity without adding coverage
+  ---
+  duration_ms: 1.540105
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: Anything→subsets and every local-only filter reuse data without network
+ok 38 - actual DateNightHome: Anything→subsets and every local-only filter reuse data without network
+  ---
+  duration_ms: 481.488139
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: stale persisted unknown categories recover to Anything without weakening RPC validation
+ok 39 - actual DateNightHome: stale persisted unknown categories recover to Anything without weakening RPC validation
+  ---
+  duration_ms: 9.857047
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: subset then mixed selection fetches only missing categories
+ok 40 - actual DateNightHome: subset then mixed selection fetches only missing categories
+  ---
+  duration_ms: 5.661556
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: bounded missing-category timeout preserves cached live contribution and partial warning
+ok 41 - actual DateNightHome: bounded missing-category timeout preserves cached live contribution and partial warning
+  ---
+  duration_ms: 8.222611
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: TTL refreshes on next category acquisition, not local-only toggles or elapsed time
+ok 42 - actual DateNightHome: TTL refreshes on next category acquisition, not local-only toggles or elapsed time
+  ---
+  duration_ms: 6.494913
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: radius narrows from acquired 50 mi without RPC; widening 15→50 acquires
+ok 43 - actual DateNightHome: radius narrows from acquired 50 mi without RPC; widening 15→50 acquires
+  ---
+  duration_ms: 9.105533
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: late replacement response cannot seed reusable cache
+ok 44 - actual DateNightHome: late replacement response cannot seed reusable cache
+  ---
+  duration_ms: 8.478187
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: late timeout response cannot seed reusable cache
+ok 45 - actual DateNightHome: late timeout response cannot seed reusable cache
+  ---
+  duration_ms: 7.092455
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: component cache lifetime does not survive unmount or contaminate another session
+ok 46 - actual DateNightHome: component cache lifetime does not survive unmount or contaminate another session
+  ---
+  duration_ms: 8.266121
+  type: 'test'
+  ...
+# Subtest: Date Night hedge mirror 2 wins at 1500ms and cancels losing attempts
+ok 47 - Date Night hedge mirror 2 wins at 1500ms and cancels losing attempts
+  ---
+  duration_ms: 33.094652
+  type: 'test'
+  ...
+# Subtest: Date Night hedge mirror 3 wins at 3000ms and cancels losing attempts
+ok 48 - Date Night hedge mirror 3 wins at 3000ms and cancels losing attempts
+  ---
+  duration_ms: 2.144236
+  type: 'test'
+  ...
+# Subtest: Date Night hedge mirror 4 wins at 4500ms and cancels losing attempts
+ok 49 - Date Night hedge mirror 4 wins at 4500ms and cancels losing attempts
+  ---
+  duration_ms: 3.950514
+  type: 'test'
+  ...
+# Subtest: Date Night all fetch stalls settle by 12.5s even when abort is honored
+ok 50 - Date Night all fetch stalls settle by 12.5s even when abort is honored
+  ---
+  duration_ms: 3.708347
+  type: 'test'
+  ...
+# Subtest: Date Night all fetch stalls settle by 12.5s even when abort is ignored
+ok 51 - Date Night all fetch stalls settle by 12.5s even when abort is ignored
+  ---
+  duration_ms: 2.922571
+  type: 'test'
+  ...
+# Subtest: Date Night all body stalls settle by 12.5s even when abort is honored
+ok 52 - Date Night all body stalls settle by 12.5s even when abort is honored
+  ---
+  duration_ms: 1.422687
+  type: 'test'
+  ...
+# Subtest: Date Night all body stalls settle by 12.5s even when abort is ignored
+ok 53 - Date Night all body stalls settle by 12.5s even when abort is ignored
+  ---
+  duration_ms: 1.360343
+  type: 'test'
+  ...
+# Subtest: Date Night groups share the unchanged absolute 20s deadline, including abort-ignoring work
+ok 54 - Date Night groups share the unchanged absolute 20s deadline, including abort-ignoring work
+  ---
+  duration_ms: 1.941481
+  type: 'test'
+  ...
+# Subtest: Date Night immediate 429 advances immediately and preserves normalized failure
+ok 55 - Date Night immediate 429 advances immediately and preserves normalized failure
+  ---
+  duration_ms: 1.996604
+  type: 'test'
+  ...
+# Subtest: Date Night immediate 500 advances immediately and preserves normalized failure
+ok 56 - Date Night immediate 500 advances immediately and preserves normalized failure
+  ---
+  duration_ms: 0.844545
+  type: 'test'
+  ...
+# Subtest: Date Night immediate 504 advances immediately and preserves normalized failure
+ok 57 - Date Night immediate 504 advances immediately and preserves normalized failure
+  ---
+  duration_ms: 1.370238
+  type: 'test'
+  ...
+# Subtest: Date Night immediate malformed advances immediately and preserves normalized failure
+ok 58 - Date Night immediate malformed advances immediately and preserves normalized failure
+  ---
+  duration_ms: 0.58271
+  type: 'test'
+  ...
+# Subtest: Date Night immediate invalid-json advances immediately and preserves normalized failure
+ok 59 - Date Night immediate invalid-json advances immediately and preserves normalized failure
+  ---
+  duration_ms: 1.213521
+  type: 'test'
+  ...
+# Subtest: Date Night immediate abort advances immediately and preserves normalized failure
+ok 60 - Date Night immediate abort advances immediately and preserves normalized failure
+  ---
+  duration_ms: 0.635289
+  type: 'test'
+  ...
+# Subtest: Date Night immediate network-error advances immediately and preserves normalized failure
+ok 61 - Date Night immediate network-error advances immediately and preserves normalized failure
+  ---
+  duration_ms: 3.673044
+  type: 'test'
+  ...
+# Subtest: Date Night valid empty wins and differs from failure
+ok 62 - Date Night valid empty wins and differs from failure
+  ---
+  duration_ms: 0.60951
+  type: 'test'
+  ...
+# Subtest: Date Night late loser success/rejection cannot replace winner or mutate recorded outcome
+ok 63 - Date Night late loser success/rejection cannot replace winner or mutate recorded outcome
+  ---
+  duration_ms: 17.112855
+  type: 'test'
+  ...
+# Subtest: Date Night cancellation aborts active attempts, stops scheduled hedges and records cancelled group
+ok 64 - Date Night cancellation aborts active attempts, stops scheduled hedges and records cancelled group
+  ---
+  duration_ms: 1.887579
+  type: 'test'
+  ...
+# Subtest: Date Night four groups never exceed sixteen fixed-mirror attempts and reject duplicate/untrusted group IDs
+ok 65 - Date Night four groups never exceed sixteen fixed-mirror attempts and reject duplicate/untrusted group IDs
+  ---
+  duration_ms: 9.572408
+  type: 'test'
+  ...
+# Subtest: Date Night ordinary partial UI preserves live picks and discloses failed groups
+ok 66 - Date Night ordinary partial UI preserves live picks and discloses failed groups
+  ---
+  duration_ms: 974.043109
+  type: 'test'
+  ...
+# Subtest: Date Night seasonal partial UI preserves live picks and discloses failed groups
+ok 67 - Date Night seasonal partial UI preserves live picks and discloses failed groups
+  ---
+  duration_ms: 8.285055
+  type: 'test'
+  ...
+# Subtest: dinner: success settles active UI and clears watchdog before deadline
+ok 68 - dinner: success settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 736.734882
+  type: 'test'
+  ...
+# Subtest: dinner: fallback settles active UI and clears watchdog before deadline
+ok 69 - dinner: fallback settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 6.583071
+  type: 'test'
+  ...
+# Subtest: dinner: error settles active UI and clears watchdog before deadline
+ok 70 - dinner: error settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 3.871744
+  type: 'test'
+  ...
+# Subtest: dinner: AbortError settles active UI and clears watchdog before deadline
+ok 71 - dinner: AbortError settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 7.792997
+  type: 'test'
+  ...
+# Subtest: dinner: never-settling/abort-ignoring RPC exits loading at 25s
+ok 72 - dinner: never-settling/abort-ignoring RPC exits loading at 25s
+  ---
+  duration_ms: 6.44665
+  type: 'test'
+  ...
+# Subtest: dinner: abort-compliant RPC exits loading at 25s
+ok 73 - dinner: abort-compliant RPC exits loading at 25s
+  ---
+  duration_ms: 6.947366
+  type: 'test'
+  ...
+# Subtest: dinner: late post-timeout success cannot overwrite timeout or a successful retry
+ok 74 - dinner: late post-timeout success cannot overwrite timeout or a successful retry
+  ---
+  duration_ms: 9.71251
+  type: 'test'
+  ...
+# Subtest: dinner: late post-timeout rejection cannot overwrite timeout or a successful retry
+ok 75 - dinner: late post-timeout rejection cannot overwrite timeout or a successful retry
+  ---
+  duration_ms: 7.845952
+  type: 'test'
+  ...
+# Subtest: dinner: replacement aborts old success; old settles first
+ok 76 - dinner: replacement aborts old success; old settles first
+  ---
+  duration_ms: 10.360588
+  type: 'test'
+  ...
+# Subtest: dinner: replacement aborts old success; new settles first
+ok 77 - dinner: replacement aborts old success; new settles first
+  ---
+  duration_ms: 8.084392
+  type: 'test'
+  ...
+# Subtest: dinner: replacement aborts old rejection; old settles first
+ok 78 - dinner: replacement aborts old rejection; old settles first
+  ---
+  duration_ms: 16.559965
+  type: 'test'
+  ...
+# Subtest: dinner: replacement aborts old rejection; new settles first
+ok 79 - dinner: replacement aborts old rejection; new settles first
+  ---
+  duration_ms: 11.521454
+  type: 'test'
+  ...
+# Subtest: dinner: unmount aborts/cleans up; success cannot write after unmount
+ok 80 - dinner: unmount aborts/cleans up; success cannot write after unmount
+  ---
+  duration_ms: 6.133998
+  type: 'test'
+  ...
+# Subtest: dinner: unmount aborts/cleans up; rejection cannot write after unmount
+ok 81 - dinner: unmount aborts/cleans up; rejection cannot write after unmount
+  ---
+  duration_ms: 6.434672
+  type: 'test'
+  ...
+# Subtest: dinner: unmount aborts/cleans up; pending cannot write after unmount
+ok 82 - dinner: unmount aborts/cleans up; pending cannot write after unmount
+  ---
+  duration_ms: 6.013737
+  type: 'test'
+  ...
+# Subtest: dinner: radius replacement cancels transport; normal filters/options/pick still work
+ok 83 - dinner: radius replacement cancels transport; normal filters/options/pick still work
+  ---
+  duration_ms: 14.366414
+  type: 'test'
+  ...
+# Subtest: dinner: timeout then retry success remains current when the first RPC finally resolves
+ok 84 - dinner: timeout then retry success remains current when the first RPC finally resolves
+  ---
+  duration_ms: 7.693372
+  type: 'test'
+  ...
+# Subtest: date-night: success settles active UI and clears watchdog before deadline
+ok 85 - date-night: success settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 143.366836
+  type: 'test'
+  ...
+# Subtest: date-night: fallback settles active UI and clears watchdog before deadline
+ok 86 - date-night: fallback settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 2.977224
+  type: 'test'
+  ...
+# Subtest: date-night: error settles active UI and clears watchdog before deadline
+ok 87 - date-night: error settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 2.068252
+  type: 'test'
+  ...
+# Subtest: date-night: AbortError settles active UI and clears watchdog before deadline
+ok 88 - date-night: AbortError settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 1.751764
+  type: 'test'
+  ...
+# Subtest: date-night: never-settling/abort-ignoring RPC exits loading at 25s
+ok 89 - date-night: never-settling/abort-ignoring RPC exits loading at 25s
+  ---
+  duration_ms: 17.916518
+  type: 'test'
+  ...
+# Subtest: date-night: abort-compliant RPC exits loading at 25s
+ok 90 - date-night: abort-compliant RPC exits loading at 25s
+  ---
+  duration_ms: 5.755187
+  type: 'test'
+  ...
+# Subtest: date-night: late post-timeout success cannot overwrite timeout or a successful retry
+ok 91 - date-night: late post-timeout success cannot overwrite timeout or a successful retry
+  ---
+  duration_ms: 7.017142
+  type: 'test'
+  ...
+# Subtest: date-night: late post-timeout rejection cannot overwrite timeout or a successful retry
+ok 92 - date-night: late post-timeout rejection cannot overwrite timeout or a successful retry
+  ---
+  duration_ms: 12.088491
+  type: 'test'
+  ...
+# Subtest: date-night: replacement aborts old success; old settles first
+ok 93 - date-night: replacement aborts old success; old settles first
+  ---
+  duration_ms: 7.973014
+  type: 'test'
+  ...
+# Subtest: date-night: replacement aborts old success; new settles first
+ok 94 - date-night: replacement aborts old success; new settles first
+  ---
+  duration_ms: 6.760304
+  type: 'test'
+  ...
+# Subtest: date-night: replacement aborts old rejection; old settles first
+ok 95 - date-night: replacement aborts old rejection; old settles first
+  ---
+  duration_ms: 7.648565
+  type: 'test'
+  ...
+# Subtest: date-night: replacement aborts old rejection; new settles first
+ok 96 - date-night: replacement aborts old rejection; new settles first
+  ---
+  duration_ms: 5.802448
+  type: 'test'
+  ...
+# Subtest: date-night: unmount aborts/cleans up; success cannot write after unmount
+ok 97 - date-night: unmount aborts/cleans up; success cannot write after unmount
+  ---
+  duration_ms: 4.383276
+  type: 'test'
+  ...
+# Subtest: date-night: unmount aborts/cleans up; rejection cannot write after unmount
+ok 98 - date-night: unmount aborts/cleans up; rejection cannot write after unmount
+  ---
+  duration_ms: 4.296956
+  type: 'test'
+  ...
+# Subtest: date-night: unmount aborts/cleans up; pending cannot write after unmount
+ok 99 - date-night: unmount aborts/cleans up; pending cannot write after unmount
+  ---
+  duration_ms: 5.52534
+  type: 'test'
+  ...
+# Subtest: date-night: radius replacement cancels transport; normal filters/options/pick still work
+ok 100 - date-night: radius replacement cancels transport; normal filters/options/pick still work
+  ---
+  duration_ms: 9.286347
+  type: 'test'
+  ...
+# Subtest: date-night: timeout then retry success remains current when the first RPC finally resolves
+ok 101 - date-night: timeout then retry success remains current when the first RPC finally resolves
+  ---
+  duration_ms: 8.550986
+  type: 'test'
+  ...
+# Subtest: nightlife: success settles active UI and clears watchdog before deadline
+ok 102 - nightlife: success settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 91.591309
+  type: 'test'
+  ...
+# Subtest: nightlife: fallback settles active UI and clears watchdog before deadline
+ok 103 - nightlife: fallback settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 3.088572
+  type: 'test'
+  ...
+# Subtest: nightlife: error settles active UI and clears watchdog before deadline
+ok 104 - nightlife: error settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 1.86173
+  type: 'test'
+  ...
+# Subtest: nightlife: AbortError settles active UI and clears watchdog before deadline
+ok 105 - nightlife: AbortError settles active UI and clears watchdog before deadline
+  ---
+  duration_ms: 1.662058
+  type: 'test'
+  ...
+# Subtest: nightlife: never-settling/abort-ignoring RPC exits loading at 25s
+ok 106 - nightlife: never-settling/abort-ignoring RPC exits loading at 25s
+  ---
+  duration_ms: 2.607877
+  type: 'test'
+  ...
+# Subtest: nightlife: abort-compliant RPC exits loading at 25s
+ok 107 - nightlife: abort-compliant RPC exits loading at 25s
+  ---
+  duration_ms: 2.321895
+  type: 'test'
+  ...
+# Subtest: nightlife: late post-timeout success cannot overwrite timeout or a successful retry
+ok 108 - nightlife: late post-timeout success cannot overwrite timeout or a successful retry
+  ---
+  duration_ms: 2.572773
+  type: 'test'
+  ...
+# Subtest: nightlife: late post-timeout rejection cannot overwrite timeout or a successful retry
+ok 109 - nightlife: late post-timeout rejection cannot overwrite timeout or a successful retry
+  ---
+  duration_ms: 2.551631
+  type: 'test'
+  ...
+# Subtest: nightlife: replacement aborts old success; old settles first
+ok 110 - nightlife: replacement aborts old success; old settles first
+  ---
+  duration_ms: 2.697401
+  type: 'test'
+  ...
+# Subtest: nightlife: replacement aborts old success; new settles first
+ok 111 - nightlife: replacement aborts old success; new settles first
+  ---
+  duration_ms: 2.283306
+  type: 'test'
+  ...
+# Subtest: nightlife: replacement aborts old rejection; old settles first
+ok 112 - nightlife: replacement aborts old rejection; old settles first
+  ---
+  duration_ms: 2.560695
+  type: 'test'
+  ...
+# Subtest: nightlife: replacement aborts old rejection; new settles first
+ok 113 - nightlife: replacement aborts old rejection; new settles first
+  ---
+  duration_ms: 2.348525
+  type: 'test'
+  ...
+# Subtest: nightlife: unmount aborts/cleans up; success cannot write after unmount
+ok 114 - nightlife: unmount aborts/cleans up; success cannot write after unmount
+  ---
+  duration_ms: 2.490409
+  type: 'test'
+  ...
+# Subtest: nightlife: unmount aborts/cleans up; rejection cannot write after unmount
+ok 115 - nightlife: unmount aborts/cleans up; rejection cannot write after unmount
+  ---
+  duration_ms: 1.912748
+  type: 'test'
+  ...
+# Subtest: nightlife: unmount aborts/cleans up; pending cannot write after unmount
+ok 116 - nightlife: unmount aborts/cleans up; pending cannot write after unmount
+  ---
+  duration_ms: 2.158889
+  type: 'test'
+  ...
+# Subtest: nightlife: radius replacement cancels transport; normal filters/options/pick still work
+ok 117 - nightlife: radius replacement cancels transport; normal filters/options/pick still work
+  ---
+  duration_ms: 3.448846
+  type: 'test'
+  ...
+# Subtest: nightlife: timeout then retry success remains current when the first RPC finally resolves
+ok 118 - nightlife: timeout then retry success remains current when the first RPC finally resolves
+  ---
+  duration_ms: 2.244959
+  type: 'test'
+  ...
+# Subtest: Date Night: seasonal dependency replacement aborts the previous request
+ok 119 - Date Night: seasonal dependency replacement aborts the previous request
+  ---
+  duration_ms: 3.185558
+  type: 'test'
+  ...
+# Subtest: pinned TanStack RPC forwards the exact controller signal to fetch and settles on abort
+ok 120 - pinned TanStack RPC forwards the exact controller signal to fetch and settles on abort
+  ---
+  duration_ms: 75.836645
+  type: 'test'
+  ...
+# Subtest: shared lifecycle also settles synchronous RPC throws without leaving a watchdog
+ok 121 - shared lifecycle also settles synchronous RPC throws without leaving a watchdog
+  ---
+  duration_ms: 5.169793
+  type: 'test'
+  ...
+# Subtest: dinner: headers stalls settle fallback within the provider bound
+ok 122 - dinner: headers stalls settle fallback within the provider bound
+  ---
+  duration_ms: 24.544636
+  type: 'test'
+  ...
+# Subtest: dinner: headers stalls settle error within the provider bound
+ok 123 - dinner: headers stalls settle error within the provider bound
+  ---
+  duration_ms: 1.841209
+  type: 'test'
+  ...
+# Subtest: dinner: body stalls settle fallback within the provider bound
+ok 124 - dinner: body stalls settle fallback within the provider bound
+  ---
+  duration_ms: 16.034491
+  type: 'test'
+  ...
+# Subtest: dinner: body stalls settle error within the provider bound
+ok 125 - dinner: body stalls settle error within the provider bound
+  ---
+  duration_ms: 1.254764
+  type: 'test'
+  ...
+# Subtest: dinner: first stall then second success returns at 8s and clears timers
+ok 126 - dinner: first stall then second success returns at 8s and clears timers
+  ---
+  duration_ms: 35.230485
+  type: 'test'
+  ...
+# Subtest: dinner: immediate 429 advances without delay; saved coverage and terminal error preserved
+ok 127 - dinner: immediate 429 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 17.719324
+  type: 'test'
+  ...
+# Subtest: dinner: immediate 500 advances without delay; saved coverage and terminal error preserved
+ok 128 - dinner: immediate 500 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 13.811797
+  type: 'test'
+  ...
+# Subtest: dinner: immediate 504 advances without delay; saved coverage and terminal error preserved
+ok 129 - dinner: immediate 504 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 12.395594
+  type: 'test'
+  ...
+# Subtest: dinner: immediate missing-elements advances without delay; saved coverage and terminal error preserved
+ok 130 - dinner: immediate missing-elements advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 10.101006
+  type: 'test'
+  ...
+# Subtest: dinner: immediate remark advances without delay; saved coverage and terminal error preserved
+ok 131 - dinner: immediate remark advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 10.788233
+  type: 'test'
+  ...
+# Subtest: dinner: immediate invalid-json advances without delay; saved coverage and terminal error preserved
+ok 132 - dinner: immediate invalid-json advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 14.051389
+  type: 'test'
+  ...
+# Subtest: dinner: valid empty results retain mode-specific mirror and source semantics
+ok 133 - dinner: valid empty results retain mode-specific mirror and source semantics
+  ---
+  duration_ms: 2.627547
+  type: 'test'
+  ...
+# Subtest: dinner: normal first success is quiet, abort errors categorized, raw exceptions never logged
+ok 134 - dinner: normal first success is quiet, abort errors categorized, raw exceptions never logged
+  ---
+  duration_ms: 10.108628
+  type: 'test'
+  ...
+# Subtest: date-night: headers stalls settle fallback within the provider bound
+ok 135 - date-night: headers stalls settle fallback within the provider bound
+  ---
+  duration_ms: 97.839634
+  type: 'test'
+  ...
+# Subtest: date-night: headers stalls settle error within the provider bound
+ok 136 - date-night: headers stalls settle error within the provider bound
+  ---
+  duration_ms: 1.447264
+  type: 'test'
+  ...
+# Subtest: date-night: body stalls settle fallback within the provider bound
+ok 137 - date-night: body stalls settle fallback within the provider bound
+  ---
+  duration_ms: 1.520925
+  type: 'test'
+  ...
+# Subtest: date-night: body stalls settle error within the provider bound
+ok 138 - date-night: body stalls settle error within the provider bound
+  ---
+  duration_ms: 1.127652
+  type: 'test'
+  ...
+# Subtest: date-night: first stall then second success returns at 1.5s and clears timers
+ok 139 - date-night: first stall then second success returns at 1.5s and clears timers
+  ---
+  duration_ms: 2.620015
+  type: 'test'
+  ...
+# Subtest: date-night: immediate 429 advances without delay; saved coverage and terminal error preserved
+ok 140 - date-night: immediate 429 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.963213
+  type: 'test'
+  ...
+# Subtest: date-night: immediate 500 advances without delay; saved coverage and terminal error preserved
+ok 141 - date-night: immediate 500 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.587857
+  type: 'test'
+  ...
+# Subtest: date-night: immediate 504 advances without delay; saved coverage and terminal error preserved
+ok 142 - date-night: immediate 504 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.707627
+  type: 'test'
+  ...
+# Subtest: date-night: immediate missing-elements advances without delay; saved coverage and terminal error preserved
+ok 143 - date-night: immediate missing-elements advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.9547
+  type: 'test'
+  ...
+# Subtest: date-night: immediate remark advances without delay; saved coverage and terminal error preserved
+ok 144 - date-night: immediate remark advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 2.105478
+  type: 'test'
+  ...
+# Subtest: date-night: immediate invalid-json advances without delay; saved coverage and terminal error preserved
+ok 145 - date-night: immediate invalid-json advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.945347
+  type: 'test'
+  ...
+# Subtest: date-night: valid empty results retain mode-specific mirror and source semantics
+ok 146 - date-night: valid empty results retain mode-specific mirror and source semantics
+  ---
+  duration_ms: 1.038307
+  type: 'test'
+  ...
+# Subtest: date-night: normal first success is quiet, abort errors categorized, raw exceptions never logged
+ok 147 - date-night: normal first success is quiet, abort errors categorized, raw exceptions never logged
+  ---
+  duration_ms: 1.289747
+  type: 'test'
+  ...
+# Subtest: nightlife: headers stalls settle fallback within the provider bound
+ok 148 - nightlife: headers stalls settle fallback within the provider bound
+  ---
+  duration_ms: 2.844593
+  type: 'test'
+  ...
+# Subtest: nightlife: headers stalls settle error within the provider bound
+ok 149 - nightlife: headers stalls settle error within the provider bound
+  ---
+  duration_ms: 1.000821
+  type: 'test'
+  ...
+# Subtest: nightlife: body stalls settle fallback within the provider bound
+ok 150 - nightlife: body stalls settle fallback within the provider bound
+  ---
+  duration_ms: 0.909272
+  type: 'test'
+  ...
+# Subtest: nightlife: body stalls settle error within the provider bound
+ok 151 - nightlife: body stalls settle error within the provider bound
+  ---
+  duration_ms: 0.836312
+  type: 'test'
+  ...
+# Subtest: nightlife: first stall then second success returns at 8s and clears timers
+ok 152 - nightlife: first stall then second success returns at 8s and clears timers
+  ---
+  duration_ms: 2.037285
+  type: 'test'
+  ...
+# Subtest: nightlife: immediate 429 advances without delay; saved coverage and terminal error preserved
+ok 153 - nightlife: immediate 429 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.267043
+  type: 'test'
+  ...
+# Subtest: nightlife: immediate 500 advances without delay; saved coverage and terminal error preserved
+ok 154 - nightlife: immediate 500 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.024146
+  type: 'test'
+  ...
+# Subtest: nightlife: immediate 504 advances without delay; saved coverage and terminal error preserved
+ok 155 - nightlife: immediate 504 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.119199
+  type: 'test'
+  ...
+# Subtest: nightlife: immediate missing-elements advances without delay; saved coverage and terminal error preserved
+ok 156 - nightlife: immediate missing-elements advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.317588
+  type: 'test'
+  ...
+# Subtest: nightlife: immediate remark advances without delay; saved coverage and terminal error preserved
+ok 157 - nightlife: immediate remark advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.527536
+  type: 'test'
+  ...
+# Subtest: nightlife: immediate invalid-json advances without delay; saved coverage and terminal error preserved
+ok 158 - nightlife: immediate invalid-json advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.336627
+  type: 'test'
+  ...
+# Subtest: nightlife: valid empty results retain mode-specific mirror and source semantics
+ok 159 - nightlife: valid empty results retain mode-specific mirror and source semantics
+  ---
+  duration_ms: 0.639896
+  type: 'test'
+  ...
+# Subtest: nightlife: normal first success is quiet, abort errors categorized, raw exceptions never logged
+ok 160 - nightlife: normal first success is quiet, abort errors categorized, raw exceptions never logged
+  ---
+  duration_ms: 1.074742
+  type: 'test'
+  ...
+# Subtest: Dinner retains successful-empty precedence when subsequent mirrors exhaust the budget
+ok 161 - Dinner retains successful-empty precedence when subsequent mirrors exhaust the budget
+  ---
+  duration_ms: 2.35826
+  type: 'test'
+  ...
+# Subtest: shared provider attempt uses native timer and real fetch body abort
+ok 162 - shared provider attempt uses native timer and real fetch body abort
+  ---
+  duration_ms: 114.96407
+  type: 'test'
+  ...
+1..162
+# tests 162
+# suites 0
+# pass 162
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2614.015987

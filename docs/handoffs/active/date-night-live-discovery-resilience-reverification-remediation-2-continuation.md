@@ -30,3 +30,14 @@ SAFE TO RESUME FROM THIS CHECKPOINT
 - Exact next action: confirm checkpoint pushed/clean, run cache46/client54 plus partialUI/hedge/provider suites, verify cache byte identity, and checkpoint preservation. Compiled security requires fresh safe production build; do not claim it passed before that build.
 
 SAFE TO RESUME FROM THIS CHECKPOINT
+
+## Save 3 — V-DR-02 and broader focused preservation GREEN
+
+- Latest pushedbf5f01a98a972583fc4f05d22a51bd5e1e042b7b, tree4fcee6fddcea51d626ae574d0ccdfcd9c6ff0bd5, sole parent00e7ce6. Same branch/base; this save evidence-only.
+- Cache46/client-session54/partialUI2/hedges19/provider-deadlines41 PASS162/162, zero failures. Cache implementation byte-identical SHA256 and results recorded in cache-preservation.json. V-DR-02 PRESERVED; no newly reproduced cache defect. Earlier focused lifecycle100/100 unchanged, RED retained,154-row parity audit complete/zero post-fix gaps.
+- Query/performance remains Save2:Anything170selectors/19166bytes,seasonal53/5747;fourgroups/fourmirrors,8s/20s/25s unchanged. No new runtime/test changes; only preservation evidence and continuation.
+- Read-only Vercel production check confirms READY dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL at frozen4d937e58 with production aliases intact. Main/production untouched. Get-project connector schema failed; get-deployment/list-deployments succeeded. Preview READY/nonproduction exactbf5f01a: dpl_8kcGVXx6MtnbQWqjDYSirRD8Edpy, https://dinner-roulette-h3f2zwmwq-minions-9e2c.vercel.app (not yet accepted).
+- Remaining: pre-full checkpoint; fresh clean install/dependencies/typecheck/fullJS/changedlint/compiledsecurity/casino/Android/Python/safe authbuild/proof/scope; controlled4; boundedlive;freeze.
+- Exact next action: push/readback this preservation checkpoint, then separate prefull continuity save before clean install and migration-free build/full gates. No public-provider calls or browser acceptance yet.
+
+SAFE TO RESUME FROM THIS CHECKPOINT
