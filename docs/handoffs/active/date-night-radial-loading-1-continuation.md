@@ -54,3 +54,14 @@ SAFE TO RESUME FROM THIS CHECKPOINT.
 - Exact next action: publish/read back UI checkpoint, run all focused patch/cache/lifecycle/query/client/provider suites and typecheck/lint/diff check, checkpoint focused GREEN, then checkpoint BEFORE full validation.
 
 SAFE TO RESUME FROM THIS CHECKPOINT.
+
+## Checkpoint 5 — combined focused GREEN
+
+- Branch/base unchanged. Latest published `5ffd73baa1d0fcab594dd65936efff4783705111`, tree `bd3b892d87b531842630fb277088bc7e50261006`, sole parent `11516b22f936288433da4727413bc60952d4fd6c`.
+- Changed paths: dedicated combined focused log and continuation only. Application/test source unchanged since checkpoint4.
+- Combined focused 294/294 PASS: patch planner/search/cache/session, all existing cache/V-DR-02, lifecycle parity/query/cost, partial results/UI, client lifecycle and provider hedge/deadline suites. Canonical lifecycle154 audit cases/111 authoritative negatives/zero gaps retained. Typecheck, all changed executable-file lint and diff check PASS. These totals are not added to later full-suite totals.
+- Geometry32/core+sectors and spatial/category proof unchanged. Budget one patch in flight, one-second spacing,32RPC/pass,3 consecutive failures stop,4groups/4mirrors/8s20s25s. Main/production untouched at frozen4d937e58/READY dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL; no accepted Preview; public-provider calls0.
+- Remaining gates: prepare permanent controlled/live harnesses, pre-full checkpoint, full validation/security/build/native/scope, ten controlled scenarios, bounded exact Preview and immutable freeze.
+- Exact next action: publish/read back focused GREEN; add deterministic browser harness with external-fetch blockade and bounded live harness; checkpoint BEFORE running full validation/build. No promotion.
+
+SAFE TO RESUME FROM THIS CHECKPOINT.
