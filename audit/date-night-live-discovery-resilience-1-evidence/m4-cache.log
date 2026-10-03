@@ -1,0 +1,33 @@
+✔ Anything coverage satisfies every later category and subset without acquiring again (4.853846ms)
+✔ coverage is category-specific within a group; only missing types are requested (11.30239ms)
+✔ valid-empty coverage is reusable and preserves its origin; failed/cancelled categories stay missing (0.43717ms)
+✔ complete fallback and legacy missing metadata never establish reusable live coverage (0.485579ms)
+✔ cached successes plus fresh failure preserve partial live data and disjoint category outcomes (1.536722ms)
+✔ cached live success survives missing-category transport failure without asserting coverage (0.532415ms)
+✔ radius narrowing reuses larger coverage but widening cannot use a narrower entry (1.297438ms)
+✔ latitude separates incompatible cache coverage (0.350627ms)
+✔ longitude separates incompatible cache coverage (0.469485ms)
+✔ Halloween activation separates incompatible cache coverage (0.790636ms)
+✔ semantic version separates incompatible cache coverage (0.27377ms)
+✔ TTL expires exactly at bound; reads and fresh missing-category combinations never rejuvenate old coverage (0.5663ms)
+✔ new valid-empty category coverage cannot resurrect old venues through a reused superset (0.580436ms)
+✔ LRU entry and aggregate raw-venue caps evict whole entries without truncated coverage (1.931866ms)
+✔ cache assembly preserves catalog aliases, full evidence, hours precedence and lifecycle in either insertion order (1.241405ms)
+✔ fresh cross-category lifecycle evidence suppresses an older cached active identity without adding coverage (1.151738ms)
+✔ actual DateNightHome: Anything→subsets and every local-only filter reuse data without network (352.103958ms)
+✔ actual DateNightHome: stale persisted unknown categories recover to Anything without weakening RPC validation (7.579161ms)
+✔ actual DateNightHome: subset then mixed selection fetches only missing categories (7.38618ms)
+✔ actual DateNightHome: bounded missing-category timeout preserves cached live contribution and partial warning (14.534564ms)
+✔ actual DateNightHome: TTL refreshes on next category acquisition, not local-only toggles or elapsed time (12.069302ms)
+✔ actual DateNightHome: radius narrows from acquired 50 mi without RPC; widening 15→50 acquires (17.442851ms)
+✔ actual DateNightHome: late replacement response cannot seed reusable cache (11.009169ms)
+✔ actual DateNightHome: late timeout response cannot seed reusable cache (7.325854ms)
+✔ actual DateNightHome: component cache lifetime does not survive unmount or contaminate another session (8.366434ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 477.824266

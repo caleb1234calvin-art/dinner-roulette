@@ -460,7 +460,8 @@ test("actual component: handler → count/options/pick/plan and all seven catego
   let tree = await harness.settle();
   for (let mask = 1; mask < 8; mask++) {
     store.dateNightFilters.activityTypes = selected.filter((_, i) => mask & (1 << i));
-    tree = harness.render();
+    harness.render();
+    tree = await harness.settle();
     const pool = eligible(result.venues, store.dateNightFilters);
     assert.match(textOf(tree), new RegExp(`${pool.length} activities match`));
     harness.button(tree, "Give us options").props.onClick();
@@ -477,13 +478,15 @@ test("actual component: handler → count/options/pick/plan and all seven catego
     );
   }
   store.dateNightFilters.activityTypes = selected;
-  tree = harness.render();
+  harness.render();
+  tree = await harness.settle();
   t.mock.method(Math, "random", () => 0.99); // Previously consumed the only settle venue as the thrill.
   harness.button(tree, "Plan the night").props.onClick();
   tree = harness.render();
   assert.match(harness.html(tree), /Your night has an arc/);
   store.dateNightFilters.activityTypes = ["haunted-house"];
-  tree = harness.render();
+  harness.render();
+  tree = await harness.settle();
   harness.button(tree, "Plan the night").props.onClick();
   tree = harness.render();
   assert.match(harness.html(tree), /No complete seasonal pair yet/);

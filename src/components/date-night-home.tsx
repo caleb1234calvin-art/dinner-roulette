@@ -10,6 +10,7 @@ import { LocationControl } from "@/components/location-control";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { searchDateNight } from "@/lib/date-night/search";
+import { combineDateNightDiscovery, createDateNightDiscoveryCache, failedDateNightAcquisition, normalizeDateNightClientActivityTypes, sanitizeDateNightClientActivityTypes } from "@/lib/date-night/cache";
 import {
   dateNightChipsForNow,
   HALLOWEEN_DATE_NIGHT_TYPES,
@@ -144,7 +145,8 @@ export function DateNightHome() {
   const preferences = useAppStore((s) => s.preferences);
   const exclusions = useAppStore((s) => s.exclusions);
   const sessionShown = useAppStore((s) => s.sessionShown);
-  const filters = useAppStore((s) => s.dateNightFilters);
+  const savedFilters = useAppStore((s) => s.dateNightFilters);
+  const filters = { ...savedFilters, activityTypes: sanitizeDateNightClientActivityTypes(savedFilters.activityTypes) };
   const spookySeasonEnabled = useAppStore((s) => s.spookySeasonEnabled);
   const setDateNightFilters = useAppStore((s) => s.setDateNightFilters);
   const markShown = useAppStore((s) => s.markShown);
@@ -164,12 +166,31 @@ export function DateNightHome() {
   const now = useDateNightClock();
   const [source, setSource] = useState<"live" | "merged" | "fallback">("live");
   const [discovery, setDiscovery] = useState<DateNightSearchResponse["discovery"]>();
+  const [discoveryCache] = useState(createDateNightDiscoveryCache);
   const halloweenActive = isHalloweenDateNightActive(spookySeasonEnabled, now);
   const activityChips = dateNightChipsForNow(spookySeasonEnabled, now);
+  const acquisitionSignature = normalizeDateNightClientActivityTypes(filters.activityTypes, halloweenActive).join(",");
 
   useEffect(() => {
-    setLoading(true);
     setError(null);
+    const acquisition = {
+      lat: location.lat, lon: location.lon, radiusMiles: Math.max(filters.radiusMiles, 15),
+      halloweenActive, activityTypes: acquisitionSignature.split(",") as ConcreteDateNightType[],
+    };
+    const snapshot = discoveryCache.read(acquisition);
+    const apply = (result: DateNightSearchResponse) => {
+      setVenues(result.venues);
+      setSource(result.source);
+      setWarning(result.warning ?? null);
+      setDiscovery(result.discovery);
+    };
+    if (!snapshot.missingActivityTypes.length && snapshot.response) {
+      apply(snapshot.response);
+      setLoading(false);
+      return;
+    }
+    const missing = { ...acquisition, activityTypes: snapshot.missingActivityTypes };
+    setLoading(true);
     setWarning(null);
     setDiscovery(undefined);
     return startDiscoveryRequest({
@@ -180,22 +201,27 @@ export function DateNightHome() {
           lon: location.lon,
           radiusMiles: Math.max(filters.radiusMiles, 15),
           spookySeasonEnabled,
+          activityTypes: missing.activityTypes,
         },
         signal,
       }),
       onSuccess: (result) => {
-        setVenues(result.venues);
-        setSource(result.source);
-        setWarning(result.warning ?? null);
-        setDiscovery(result.discovery);
+        // Only this lifecycle-guarded callback may admit a network result.
+        // Aborted/replaced/timed-out RPCs therefore cannot seed future reuse.
+        discoveryCache.store(missing, result);
+        apply(combineDateNightDiscovery(snapshot, result));
       },
       onError: (err) => {
+        if (snapshot.response) {
+          apply(combineDateNightDiscovery(snapshot, failedDateNightAcquisition(missing)));
+          return;
+        }
         setVenues([]);
         setError(err instanceof Error ? err.message : "Could not load date-night activities");
       },
       onSettled: () => setLoading(false),
     });
-  }, [location.lat, location.lon, filters.radiusMiles, spookySeasonEnabled, halloweenActive, requestVersion]);
+  }, [location.lat, location.lon, filters.radiusMiles, spookySeasonEnabled, halloweenActive, acquisitionSignature, discoveryCache, requestVersion]);
 
   const decorated = useMemo(() => decorateDateNight(venues, location, now), [venues, location, now]);
   const eligible = useMemo(
@@ -348,6 +374,7 @@ export function DateNightHome() {
           body={discovery?.partial ? warning : halloweenActive
             ? "Pick For Us is using saved seasonal anchors. Check each stop before you leave."
             : "Pick For Us is using verified saved local date ideas so the roulette can keep working."}
+          onRetry={discovery?.partial ? () => setRequestVersion((version) => version + 1) : undefined}
         />
       ) : null}
       {!loading && !error && coverage ? (
