@@ -41,8 +41,16 @@ jobs:
           echo "CHROME_PATH=$CHROME_PATH" >> "$GITHUB_ENV"
           echo "Using Chromium: $CHROME_PATH"
 
+      - name: Capture browser build proof
+        run: VITE_AUTH_ENABLED=true node scripts/browser-build-proof.mjs capture
+
       - name: Safe auth-enabled production build
         run: VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
+
+      - name: Complete and verify browser build proof
+        run: |
+          VITE_AUTH_ENABLED=true node scripts/browser-build-proof.mjs complete
+          VITE_AUTH_ENABLED=true node scripts/browser-build-proof.mjs verify
 
       - name: Run controlled radial browser acceptance
         env:
