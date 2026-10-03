@@ -89,3 +89,16 @@ SAFE TO RESUME FROM THIS CHECKPOINT.
 - Exact next action: publish/read back this full-GREEN checkpoint; run `CI=true VITE_AUTH_ENABLED=true PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/tmp/pfu-rv2-browser/chrome-linux64/chrome node scripts/date-night-radial-browser.mjs`; inspect screenshots and results; save checkpoint8. Do not contact public providers until controlled gates pass.
 
 SAFE TO RESUME FROM THIS CHECKPOINT.
+
+## Checkpoint 8 — controlled browser BLOCKED; acceptance not established
+
+- Branch `feature/date-night-radial-loading-1`; preserved base `d9cc8bdde2e531af6f029d3d558d25f4f7bb4ab5`. Latest published `b270e725baff0047cbaa3385515b24e911ba0bbe`, tree `8dd7f3f29c4a8e0aa443bfe673cbb1bfae2321a2`, sole parent `23881d97e9e17a488d18ff2a2fd74cbf7641e178`. This save adds only browser failure evidence and continuation; application/harness/build source unchanged.
+- Controlled harness started its local production preview, but Chromium failed before creating a page: `process_singleton_posix.cc:297: socket() failed: Operation not permitted (1)`. Exit1 after8.24s; zero scenarios executed, zero public-provider calls, empty intercepted-provider event log. Retained full verdict, launch log, server log and structured exit. No screenshots or mobile/browser acceptance exist.
+- A request to run the same externally blocked harness with sandbox escalation was rejected BEFORE EXECUTION by the automatic approval policy (`sandbox_approval:false`). No permission bypass or substitute live probe attempted. The request and rejection are separately recorded in `controlled-browser-permission-rejection.json`.
+- Full deterministic/build/security gates remain GREEN729 JavaScript,14 compiled security,294 focused (not additive), all other checkpoint7 gates. Geometry32/core+4/7/9/11sectors, circles<15.1mi; retained patch/category coverage and provider budget unchanged:1inflight,1second outer pacing,32RPC/pass,3consecutive-failure stop,4groups/4mirrors/8s20s25s.
+- Fresh refs: main remains frozen `4d937e58d2a65567b54ac5271915bc85b498898b`; production alias remains READY `dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL` at frozen main. Instruction branch advanced to `9cb2a35609590bddd385a245b03155ba89c6c080` with a continuity update; the controlling handoff file is byte-identical to pinned `04a3ac240760fc025c62d487eeb7970c70620fb9`. No main/production changes.
+- Metadata-only Preview readback: READY/non-production `dpl_HviVcpJT1dNBQg54n3Sx2b5ZeDsA`, `https://dinner-roulette-1xc11et6w-minions-9e2c.vercel.app`, exact `b270e725baff0047cbaa3385515b24e911ba0bbe`. This Preview has NOT been browser tested or live accepted. Automatic Preview creation is not acceptance.
+- Remaining gates: all10 controlled browser scenarios; only after they pass, bounded actual progressive Preview acceptance; final review and successful immutable candidate freeze. Stage9 live acceptance NOT RUN; stage10 successful freeze WITHHELD. Product live usability and complete50-mile coverage both unestablished. Public-provider traffic remains0.
+- Exact next action now: publish this blocked checkpoint, write final INCOMPLETE radial MD/JSON and top continuity preserving all older evidence, verify scope/build/ref integrity, publish/read back the final incomplete save. Resume execution only in an authorized browser-capable runner; do not promote.
+
+SAFE TO RESUME FROM THIS CHECKPOINT.

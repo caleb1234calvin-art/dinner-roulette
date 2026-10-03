@@ -1,0 +1,9 @@
+{
+  "gate": "controlled-browser-capable",
+  "status": "REJECTED_BEFORE_EXECUTION",
+  "requestedAction": "Run the existing local controlled browser harness with sandbox escalation; all external fetches remain intercepted.",
+  "reason": "Approval policy is Granular with sandbox_approval:false. The tool rejected the command because escalated permissions cannot be requested in this session.",
+  "executionStarted": false,
+  "publicProviderCalls": 0,
+  "consequence": "No controlled browser acceptance, no live provider acceptance, no successful immutable candidate freeze. Do not bypass the denied permission."
+}
