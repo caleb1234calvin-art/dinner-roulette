@@ -1,0 +1,64 @@
+✔ dinner: headers stalls settle fallback within the provider bound (22.15891ms)
+✔ dinner: headers stalls settle error within the provider bound (1.253301ms)
+✔ dinner: body stalls settle fallback within the provider bound (15.504344ms)
+✔ dinner: body stalls settle error within the provider bound (1.23365ms)
+✔ dinner: first stall then second success returns at 8s and clears timers (24.107658ms)
+✔ dinner: immediate 429 advances without delay; saved coverage and terminal error preserved (16.472955ms)
+✔ dinner: immediate 500 advances without delay; saved coverage and terminal error preserved (10.4481ms)
+✔ dinner: immediate 504 advances without delay; saved coverage and terminal error preserved (13.253359ms)
+✔ dinner: immediate missing-elements advances without delay; saved coverage and terminal error preserved (11.334258ms)
+✔ dinner: immediate remark advances without delay; saved coverage and terminal error preserved (10.440196ms)
+✔ dinner: immediate invalid-json advances without delay; saved coverage and terminal error preserved (12.41579ms)
+✔ dinner: valid empty results retain mode-specific mirror and source semantics (2.233357ms)
+✔ dinner: normal first success is quiet, abort errors categorized, raw exceptions never logged (10.203584ms)
+✔ date-night: headers stalls settle fallback within the provider bound (85.553989ms)
+✔ date-night: headers stalls settle error within the provider bound (1.003994ms)
+✔ date-night: body stalls settle fallback within the provider bound (1.142396ms)
+✔ date-night: body stalls settle error within the provider bound (0.999508ms)
+✔ date-night: first stall then second success returns at 1.5s and clears timers (2.648555ms)
+✔ date-night: immediate 429 advances without delay; saved coverage and terminal error preserved (1.769946ms)
+✔ date-night: immediate 500 advances without delay; saved coverage and terminal error preserved (1.630772ms)
+✔ date-night: immediate 504 advances without delay; saved coverage and terminal error preserved (1.591129ms)
+✔ date-night: immediate missing-elements advances without delay; saved coverage and terminal error preserved (1.713589ms)
+✔ date-night: immediate remark advances without delay; saved coverage and terminal error preserved (1.686875ms)
+✔ date-night: immediate invalid-json advances without delay; saved coverage and terminal error preserved (1.806155ms)
+✔ date-night: valid empty results retain mode-specific mirror and source semantics (1.459399ms)
+✔ date-night: normal first success is quiet, abort errors categorized, raw exceptions never logged (1.25718ms)
+✔ nightlife: headers stalls settle fallback within the provider bound (1.429724ms)
+✔ nightlife: headers stalls settle error within the provider bound (0.911697ms)
+✔ nightlife: body stalls settle fallback within the provider bound (0.660644ms)
+✔ nightlife: body stalls settle error within the provider bound (0.663256ms)
+✔ nightlife: first stall then second success returns at 8s and clears timers (1.727063ms)
+✔ nightlife: immediate 429 advances without delay; saved coverage and terminal error preserved (0.994729ms)
+✔ nightlife: immediate 500 advances without delay; saved coverage and terminal error preserved (1.075661ms)
+✔ nightlife: immediate 504 advances without delay; saved coverage and terminal error preserved (0.847312ms)
+✔ nightlife: immediate missing-elements advances without delay; saved coverage and terminal error preserved (1.208493ms)
+✔ nightlife: immediate remark advances without delay; saved coverage and terminal error preserved (1.166909ms)
+✔ nightlife: immediate invalid-json advances without delay; saved coverage and terminal error preserved (1.340539ms)
+✔ nightlife: valid empty results retain mode-specific mirror and source semantics (0.582139ms)
+✔ nightlife: normal first success is quiet, abort errors categorized, raw exceptions never logged (2.225122ms)
+✔ Dinner retains successful-empty precedence when subsequent mirrors exhaust the budget (1.024895ms)
+✖ shared provider attempt uses native timer and real fetch body abort (6.527348ms)
+ℹ tests 41
+ℹ suites 0
+ℹ pass 40
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 289.923666
+
+✖ failing tests:
+
+test at scripts/discovery-provider-deadlines.test.mjs:242:1
+✖ shared provider attempt uses native timer and real fetch body abort (6.527348ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }

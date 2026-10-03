@@ -297,4 +297,14 @@ Migration-free production build later: `VITE_AUTH_ENABLED=true node scripts/with
 - Fresh main fetch still exactly frozen base; latest production deployment still `dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL` at that base. Main/production untouched; no merge/promotion/migration/settings change. Automatic branch Previews only.
 - Resume status: CACHE TIE CORRECTION VERIFIED — FINAL SOURCE VALIDATION PENDING.
 
-SAFE TO RESUME FROM THIS CHECKPOINT
+## Save 18 — final safe build passed; loopback-capable test rerun required
+
+- Repository/implementation/frozenbase unchanged. Latest pushed `ce632d5d973396df92a74d36d57125e0fd7423fc`, tree `aa5c6af95dba32fc9cee84bf1292d8c52b4d2bf5`, sole parent `6f9598dfbdce79d4dd2f7210d15c58f75d1c231e`. This save directly descends from it. Worktree evidence-only, source clean.
+- Fresh auth-enabled migration-free capture/build/complete PASS on cache-tie-corrected source; source hash `7d311336c539bc24576983dd91103f048e1bb8db950e9372f7f7fb18629a0177`, output `9673833b98a32d7816eaab21154133d6605c80fd7bf95ed94136b557835c1186`. Typecheck, all19changed-codefiles ESLint, dependency tree, casino883canonical/899serialized/60catalogs, Android15launcher+4webicons, Python3/3 PASS. No migration/native source change.
+- First final `npm test` was accidentally invoked in the restricted runner. Repository file-level36pass/7fail; app5file-levelpass. No complete test success claimed. Small direct provider-suite diagnosis proved40/41pass with final native HTTP listener failing `listen EPERM 127.0.0.1`, exactly the loopback environment restriction documented in Save0. Preserve failed log and diagnosis; rerun authoritative suite with loopback-capable execution, without changing tests/source. Other six file failures remain in the raw restricted-run log and will be resolved/diagnosed by that authorized rerun.
+- Changed only final build/check/failure logs, continuation, and trailing-space normalization of the intentional RED cache-test log (no result text altered). Source diff checks passed; copied RED log contained two blank lines with spaces in Save17, now removed. No temporary application instrumentation.
+- Exact next action: `timeout 300s npm test > ../m7-full-suite.log 2>&1` in loopback-capable execution. If PASS, checkpoint before final controlledbrowser+real2RPC matrix against exactcachefixed Preview; if failure persists, diagnose it without weakening assertions.
+- Verified finalsource Preview READY/non-production: `dpl_4aJAVbUh9jjEdP7bsz5n3ep2ypo6`, https://dinner-roulette-7umkzl8qi-minions-9e2c.vercel.app, exact `ce632d5d973396df92a74d36d57125e0fd7423fc`. Previous fullreal12/12 and4controlled facts remain pinned to pre-tie source.20s/25s/8s bounds unchanged.
+- Main/production untouched and freshly verified frozen in Save17; no migrations/settings/merge/promotion. Current blocker is final fullsuite runner capability, not established application regression. Resume status: FINAL BUILD/PRESERVATION PASSED — LOOPBACK-CAPABLE FULLSUITE RERUN NEXT.
+
+CHECKPOINT INCOMPLETE — READ BLOCKERS BEFORE CONTINUING

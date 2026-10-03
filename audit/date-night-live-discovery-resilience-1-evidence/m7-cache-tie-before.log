@@ -39,7 +39,7 @@ test at scripts/date-night-cache.test.mjs:142:1
 ✖ equal-timestamp freshness uses admission order even after an older superset becomes most recently used (2.212388ms)
   AssertionError [ERR_ASSERTION]: an LRU read must not make an older acquisition newer
   + actual - expected
-  
+
   + [
   +   {
   +     activityTypes: [
@@ -71,7 +71,7 @@ test at scripts/date-night-cache.test.mjs:142:1
   +   }
   + ]
   - []
-  
+
       at TestContext.<anonymous> (file:///workspace/scratch/c31e06475fc4/dinner-roulette/scripts/date-night-cache.test.mjs:149:10)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1382:25)

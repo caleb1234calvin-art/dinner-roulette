@@ -1,0 +1,101 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> test
+> node scripts/test-runner.mjs
+
+✔ scripts/android-release.test.mjs (105.194466ms)
+✖ scripts/brand-check.test.mjs (497.054333ms)
+✔ scripts/browser-build-proof.test.mjs (145.879554ms)
+✔ scripts/browser-smoke-verdict.test.mjs (136.625429ms)
+✔ scripts/casino-audit-artifacts.test.mjs (95.344711ms)
+✔ scripts/casino-audit.test.mjs (125.937722ms)
+✔ scripts/casino-catalog-lineage.test.mjs (737.361247ms)
+✔ scripts/casino-catalog-loader.test.mjs (521.040672ms)
+✔ scripts/casino-continuation.test.mjs (3100.36128ms)
+✔ scripts/casino-discovery.test.mjs (2265.588932ms)
+✔ scripts/casino-freeze.test.mjs (3027.535309ms)
+✔ scripts/casino-frontier.test.mjs (609.429069ms)
+✔ scripts/casino-location-integration.test.mjs (2443.527464ms)
+✔ scripts/casino-rc-conflicts.test.mjs (2161.953112ms)
+✔ scripts/casino-rc-evidence.test.mjs (2353.20072ms)
+✔ scripts/casino-rc-final.test.mjs (2195.076259ms)
+✔ scripts/casino-rc-frontier.test.mjs (1687.602306ms)
+✔ scripts/casino-recent-provenance.test.mjs (2397.467562ms)
+✔ scripts/casino-schema.test.mjs (1712.204578ms)
+✔ scripts/casino-selection.test.mjs (1116.012612ms)
+✖ scripts/check-auth-invariant.test.mjs (324.692138ms)
+✔ scripts/date-night-cache.test.mjs (2310.009523ms)
+✔ scripts/date-night-hedged-provider.test.mjs (962.500336ms)
+✔ scripts/date-night-partial-results.test.mjs (2013.108514ms)
+✔ scripts/date-night-partial-ui.test.mjs (1606.189371ms)
+✔ scripts/date-night-query-plan.test.mjs (3595.006632ms)
+✔ scripts/discovery-client-lifecycle.test.mjs (2908.828481ms)
+✖ scripts/discovery-provider-deadlines.test.mjs (3506.879025ms)
+✖ scripts/domain-readiness.test.mjs (1047.589117ms)
+✔ scripts/grok-pwa-plugin.test.mjs (298.087819ms)
+✔ scripts/icon-refresh.test.mjs (165.060068ms)
+✔ scripts/location-discovery.test.mjs (3020.720979ms)
+✔ scripts/location-normalization.test.mjs (1629.256212ms)
+✔ scripts/migration-plan.test.mjs (171.753715ms)
+✔ scripts/optional-workspace-docs.test.mjs (131.978954ms)
+✔ scripts/preview.test.mjs (190.430322ms)
+✔ scripts/release-polish.test.mjs (929.029135ms)
+✔ scripts/seasonal-discovery.test.mjs (14642.638911ms)
+✔ scripts/sign-out-plan.test.mjs (308.324281ms)
+✖ scripts/tanstack-security.test.mjs (2422.806019ms)
+✔ scripts/test-runner.test.mjs (184.819303ms)
+✖ scripts/with-app-env.test.mjs (913.523213ms)
+✖ scripts/write-atomic.test.mjs (544.83211ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 36
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20899.878683
+
+✖ failing tests:
+
+test at scripts/brand-check.test.mjs:1:1
+✖ scripts/brand-check.test.mjs (497.054333ms)
+  'test failed'
+
+test at scripts/check-auth-invariant.test.mjs:1:1
+✖ scripts/check-auth-invariant.test.mjs (324.692138ms)
+  'test failed'
+
+test at scripts/discovery-provider-deadlines.test.mjs:1:1
+✖ scripts/discovery-provider-deadlines.test.mjs (3506.879025ms)
+  'test failed'
+
+test at scripts/domain-readiness.test.mjs:1:1
+✖ scripts/domain-readiness.test.mjs (1047.589117ms)
+  'test failed'
+
+test at scripts/tanstack-security.test.mjs:1:1
+✖ scripts/tanstack-security.test.mjs (2422.806019ms)
+  'test failed'
+
+test at scripts/with-app-env.test.mjs:1:1
+✖ scripts/with-app-env.test.mjs (913.523213ms)
+  'test failed'
+
+test at scripts/write-atomic.test.mjs:1:1
+✖ scripts/write-atomic.test.mjs (544.83211ms)
+  'test failed'
+✔ src/lib/app-data/app-data.test.ts (411.603545ms)
+✔ src/lib/auth/gate-identity.test.ts (322.506336ms)
+✔ src/lib/auth/sign-in-gate.test.ts (147.604425ms)
+✔ src/lib/date-night/availability.test.ts (158.203608ms)
+✔ src/lib/location/location.test.ts (213.753208ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 423.450161
+[test-runner] repository scripts: FAILED
+[test-runner] application: passed
