@@ -1,3 +1,23 @@
+# Pick For Us — Date Night Radial Loading #1 (2026-10-03)
+
+## CURRENT — MONOLITHIC 50-MILE STRATEGY RETIRED; RADIAL LOADING IMPLEMENTATION AUTHORIZED
+
+This TOP entry supersedes historical next actions. All prior continuity below is preserved verbatim.
+
+- Product decision: stop treating the selected Date Night radius as one monolithic live acquisition. Introduce **Radial Loading**: the selected distance is the maximum area Pick For Us may progressively discover, while nearby/core coverage becomes usable first and outer coverage loads in bounded patches in the background.
+- Radial Loading authority: branch `handoff/date-night-radial-loading-1`, handoff `docs/handoffs/active/date-night-radial-loading-1.md`, commit `04a3ac240760fc025c62d487eeb7970c70620fb9`. Required implementation branch: `feature/date-night-radial-loading-1`.
+- Radial implementation starts directly from preserved incomplete checkpoint `d9cc8bdde2e531af6f029d3d558d25f4f7bb4ab5`, tree `f9f46d16c876b4d608ab836d57a411a607e6f8fa`, sole parent `8e67d959f5b19cb00c22533a6eb27a1b2e1bfb2f`. Frozen production main remains `4d937e58d2a65567b54ac5271915bc85b498898b`.
+- Why the strategy changed: lifecycle/query correctness is now strong (686 JavaScript passes, 4 inherited skips, 0 failures; compiled security 14/14; lifecycle parity 154/111/zero gaps; V-DR-02 preserved; controlled browser 4/4), and 15-mile live discovery succeeds, but repeated 50-mile monolithic attempts fail all four groups around the bounded timeout window. A fresh 50-mile canary also failed all four groups. No single new radius-specific application defect was isolated; live 50-mile scalability remains unaccepted.
+- The prior exact-value carrier remediation remains preserved history, not a successful candidate. Its runtime change is limited to `src/lib/date-night/lifecycle.ts`; cache remains byte-identical. Do not revert lifecycle parity/query correctness to regain speed.
+- The separate offline-query-profile idea exists as branch `handoff/date-night-live-discovery-resilience-offline-query-profile-1` / commit `803f4d152353d7f456dbef87a0fe4fa27359548d`, but it is **superseded by the current product decision** unless explicitly resumed. Do not spend more usage trying to rescue the monolithic 50-mile design by default.
+- Radial Loading requirements: deterministic bounded geographic patches; truthful complete/loading/failed coverage; nearby/core first; background expansion; successful inner coverage survives outer failure; no giant final 50-mile query; no provider hammer; local-only filters remain local; open pick/options/plan overlays remain stable while new venues join future selection pools; server-owned validated patch geometry; lifecycle-negative evidence and V-DR-02 semantics preserved across patches.
+- Suggested product milestones are `0–15 → 15–20 → 20–30 → 30–40 → 40–50`, but provider geometry may use bounded circles/sectors/tiles rather than literal annuli. “Loaded through X miles” is only truthful when continuous required coverage from origin through X is actually complete.
+- Radial Loading must make selected max radius a **progressive coverage budget**, not a blocking transaction. For a 50-mile selection, the app should be usable once nearby coverage exists and may show status such as “Loaded through 15 miles · searching farther…”.
+- Mandatory workflow: document current acquisition/cache/UI state machine; design and RED-test deterministic patch geometry/coverage before runtime changes; checkpoint continuously; then implement patch acquisition, patch-aware coverage/cache, progressive UI, focused/full validation, controlled browser, bounded live Preview acceptance, and freeze only if all gates pass.
+- **NEXT:** fresh Astra/Work implementation on `feature/date-night-radial-loading-1` from exact `d9cc8bd...`. Treat the radial handoff as controlling authority. No main/production promotion is authorized.
+
+## Prior continuity — preserved verbatim
+
 # Pick For Us — Date Night Live Timeout Remediation #1 (2026-10-03)
 
 ## CURRENT — DATE NIGHT LIVE DISCOVERY RESILIENCE LIVE TIMEOUT REMEDIATION INCOMPLETE — REVIEW REQUIRED
