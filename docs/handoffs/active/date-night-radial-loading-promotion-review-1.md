@@ -13,7 +13,7 @@ Expected tree:
 `3211b4df4eccb638a8c492da047eac3b24abb600`
 
 Expected sole parent:
-`f94484e920ed18b93b54ac5271915bc85b498898b`
+`f94484e920ed18b93b54cbb5f0e48d1845fadb51`
 
 Candidate branch:
 `finalize/date-night-radial-loading-candidate-1`
@@ -74,7 +74,7 @@ Freshly verify:
 2. tree:
    `3211b4df4eccb638a8c492da047eac3b24abb600`
 3. sole parent:
-   `f94484e920ed18b93b54ac5271915bc85b498898b`
+   `f94484e920ed18b93b54cbb5f0e48d1845fadb51`
 4. main still resolves to:
    `4d937e58d2a65567b54ac5271915bc85b498898b`
    or STOP/report movement
