@@ -1,0 +1,256 @@
+TAP version 13
+# Subtest: dinner: headers stalls settle fallback at 20s; no fourth mirror
+ok 1 - dinner: headers stalls settle fallback at 20s; no fourth mirror
+  ---
+  duration_ms: 30.390747
+  type: 'test'
+  ...
+# Subtest: dinner: headers stalls settle error at 20s; no fourth mirror
+ok 2 - dinner: headers stalls settle error at 20s; no fourth mirror
+  ---
+  duration_ms: 2.573889
+  type: 'test'
+  ...
+# Subtest: dinner: body stalls settle fallback at 20s; no fourth mirror
+ok 3 - dinner: body stalls settle fallback at 20s; no fourth mirror
+  ---
+  duration_ms: 18.424385
+  type: 'test'
+  ...
+# Subtest: dinner: body stalls settle error at 20s; no fourth mirror
+ok 4 - dinner: body stalls settle error at 20s; no fourth mirror
+  ---
+  duration_ms: 1.045181
+  type: 'test'
+  ...
+# Subtest: dinner: first timeout then second success returns at 8s and clears timers
+ok 5 - dinner: first timeout then second success returns at 8s and clears timers
+  ---
+  duration_ms: 24.09896
+  type: 'test'
+  ...
+# Subtest: dinner: immediate 429 advances without delay; saved coverage and terminal error preserved
+ok 6 - dinner: immediate 429 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 13.386857
+  type: 'test'
+  ...
+# Subtest: dinner: immediate 500 advances without delay; saved coverage and terminal error preserved
+ok 7 - dinner: immediate 500 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 11.76845
+  type: 'test'
+  ...
+# Subtest: dinner: immediate 504 advances without delay; saved coverage and terminal error preserved
+ok 8 - dinner: immediate 504 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 11.719273
+  type: 'test'
+  ...
+# Subtest: dinner: immediate missing-elements advances without delay; saved coverage and terminal error preserved
+ok 9 - dinner: immediate missing-elements advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 12.29707
+  type: 'test'
+  ...
+# Subtest: dinner: immediate remark advances without delay; saved coverage and terminal error preserved
+ok 10 - dinner: immediate remark advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 10.740546
+  type: 'test'
+  ...
+# Subtest: dinner: immediate invalid-json advances without delay; saved coverage and terminal error preserved
+ok 11 - dinner: immediate invalid-json advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 10.358827
+  type: 'test'
+  ...
+# Subtest: dinner: valid empty results retain mode-specific mirror and source semantics
+ok 12 - dinner: valid empty results retain mode-specific mirror and source semantics
+  ---
+  duration_ms: 2.331721
+  type: 'test'
+  ...
+# Subtest: dinner: normal first success is quiet, abort errors categorized, raw exceptions never logged
+ok 13 - dinner: normal first success is quiet, abort errors categorized, raw exceptions never logged
+  ---
+  duration_ms: 10.951554
+  type: 'test'
+  ...
+# Subtest: date-night: headers stalls settle fallback at 20s; no fourth mirror
+ok 14 - date-night: headers stalls settle fallback at 20s; no fourth mirror
+  ---
+  duration_ms: 5.568227
+  type: 'test'
+  ...
+# Subtest: date-night: headers stalls settle error at 20s; no fourth mirror
+ok 15 - date-night: headers stalls settle error at 20s; no fourth mirror
+  ---
+  duration_ms: 0.861274
+  type: 'test'
+  ...
+# Subtest: date-night: body stalls settle fallback at 20s; no fourth mirror
+ok 16 - date-night: body stalls settle fallback at 20s; no fourth mirror
+  ---
+  duration_ms: 1.61203
+  type: 'test'
+  ...
+# Subtest: date-night: body stalls settle error at 20s; no fourth mirror
+ok 17 - date-night: body stalls settle error at 20s; no fourth mirror
+  ---
+  duration_ms: 1.25487
+  type: 'test'
+  ...
+# Subtest: date-night: first timeout then second success returns at 8s and clears timers
+ok 18 - date-night: first timeout then second success returns at 8s and clears timers
+  ---
+  duration_ms: 3.245018
+  type: 'test'
+  ...
+# Subtest: date-night: immediate 429 advances without delay; saved coverage and terminal error preserved
+ok 19 - date-night: immediate 429 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.370485
+  type: 'test'
+  ...
+# Subtest: date-night: immediate 500 advances without delay; saved coverage and terminal error preserved
+ok 20 - date-night: immediate 500 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.740478
+  type: 'test'
+  ...
+# Subtest: date-night: immediate 504 advances without delay; saved coverage and terminal error preserved
+ok 21 - date-night: immediate 504 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.859398
+  type: 'test'
+  ...
+# Subtest: date-night: immediate missing-elements advances without delay; saved coverage and terminal error preserved
+ok 22 - date-night: immediate missing-elements advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.526263
+  type: 'test'
+  ...
+# Subtest: date-night: immediate remark advances without delay; saved coverage and terminal error preserved
+ok 23 - date-night: immediate remark advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.408693
+  type: 'test'
+  ...
+# Subtest: date-night: immediate invalid-json advances without delay; saved coverage and terminal error preserved
+ok 24 - date-night: immediate invalid-json advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.328291
+  type: 'test'
+  ...
+# Subtest: date-night: valid empty results retain mode-specific mirror and source semantics
+ok 25 - date-night: valid empty results retain mode-specific mirror and source semantics
+  ---
+  duration_ms: 0.510587
+  type: 'test'
+  ...
+# Subtest: date-night: normal first success is quiet, abort errors categorized, raw exceptions never logged
+ok 26 - date-night: normal first success is quiet, abort errors categorized, raw exceptions never logged
+  ---
+  duration_ms: 1.438517
+  type: 'test'
+  ...
+# Subtest: nightlife: headers stalls settle fallback at 20s; no fourth mirror
+ok 27 - nightlife: headers stalls settle fallback at 20s; no fourth mirror
+  ---
+  duration_ms: 2.903839
+  type: 'test'
+  ...
+# Subtest: nightlife: headers stalls settle error at 20s; no fourth mirror
+ok 28 - nightlife: headers stalls settle error at 20s; no fourth mirror
+  ---
+  duration_ms: 1.465611
+  type: 'test'
+  ...
+# Subtest: nightlife: body stalls settle fallback at 20s; no fourth mirror
+ok 29 - nightlife: body stalls settle fallback at 20s; no fourth mirror
+  ---
+  duration_ms: 0.871305
+  type: 'test'
+  ...
+# Subtest: nightlife: body stalls settle error at 20s; no fourth mirror
+ok 30 - nightlife: body stalls settle error at 20s; no fourth mirror
+  ---
+  duration_ms: 0.995781
+  type: 'test'
+  ...
+# Subtest: nightlife: first timeout then second success returns at 8s and clears timers
+ok 31 - nightlife: first timeout then second success returns at 8s and clears timers
+  ---
+  duration_ms: 2.098892
+  type: 'test'
+  ...
+# Subtest: nightlife: immediate 429 advances without delay; saved coverage and terminal error preserved
+ok 32 - nightlife: immediate 429 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.045684
+  type: 'test'
+  ...
+# Subtest: nightlife: immediate 500 advances without delay; saved coverage and terminal error preserved
+ok 33 - nightlife: immediate 500 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 0.859245
+  type: 'test'
+  ...
+# Subtest: nightlife: immediate 504 advances without delay; saved coverage and terminal error preserved
+ok 34 - nightlife: immediate 504 advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 0.730409
+  type: 'test'
+  ...
+# Subtest: nightlife: immediate missing-elements advances without delay; saved coverage and terminal error preserved
+ok 35 - nightlife: immediate missing-elements advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.603781
+  type: 'test'
+  ...
+# Subtest: nightlife: immediate remark advances without delay; saved coverage and terminal error preserved
+ok 36 - nightlife: immediate remark advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.14722
+  type: 'test'
+  ...
+# Subtest: nightlife: immediate invalid-json advances without delay; saved coverage and terminal error preserved
+ok 37 - nightlife: immediate invalid-json advances without delay; saved coverage and terminal error preserved
+  ---
+  duration_ms: 1.127024
+  type: 'test'
+  ...
+# Subtest: nightlife: valid empty results retain mode-specific mirror and source semantics
+ok 38 - nightlife: valid empty results retain mode-specific mirror and source semantics
+  ---
+  duration_ms: 0.502518
+  type: 'test'
+  ...
+# Subtest: nightlife: normal first success is quiet, abort errors categorized, raw exceptions never logged
+ok 39 - nightlife: normal first success is quiet, abort errors categorized, raw exceptions never logged
+  ---
+  duration_ms: 0.871538
+  type: 'test'
+  ...
+# Subtest: Dinner retains successful-empty precedence when subsequent mirrors exhaust the budget
+ok 40 - Dinner retains successful-empty precedence when subsequent mirrors exhaust the budget
+  ---
+  duration_ms: 2.288144
+  type: 'test'
+  ...
+# Subtest: shared provider attempt uses native timer and real fetch body abort
+ok 41 - shared provider attempt uses native timer and real fetch body abort
+  ---
+  duration_ms: 113.461202
+  type: 'test'
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1640.652364
