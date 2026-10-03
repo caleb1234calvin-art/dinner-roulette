@@ -64,3 +64,14 @@ SAFE TO RESUME FROM THIS CHECKPOINT.
 - Exact next action: push/readback Save5, verify clean/proof, run established controlled4scenarios, save6; only then exact READY newPreview bounded15mile canary and if clean50mile/full12rowmatrix with max2RPC. Final freeze only if all gates pass.
 
 SAFE TO RESUME FROM THIS CHECKPOINT.
+
+## Save 6 — controlled browser 4/4 GREEN
+
+- Same branch/base. Latest pushedce7d9df74cfda9d6ac1473a7392b8f089d87fc80, tree0277bffa7f414a851ebc51bae7d6ec193606d118, sole parenta1babf8. This save adds controlled JSON/events/log/continuation only. Runtime/tests unchanged since4f6a6e5; build proof verified against current414source files and194output files.
+- Established actual browser/TanStack RPC controlled4/4PASS. Provider/visible ms: second mirror1581/1804; third3082/3335; partial12507/12475; all-stall12504/12527. Truthful merged/partial/fallback state, expected1/2cancelled losers, all16timeouts in all-stall, Open Now zero refetch, no page errors/mobile horizontal overflow. No public-provider calls: browser external routes blocked, server external fetch intercepted by unchanged fixture. Inspected partial screenshot; mobile horizontal bounds retained. Screenshots remain scratch; portable verdict/log/event evidence preserved here.
+- Full validation remains686JS/4skips/0fail;compiledsecurity14;parity154/111/0;focused113+162;V-DR-02/cache byte-identical. Cost remains170→238selectors/19166→21942bytes,96→0targeted active regex across4×4;28prefixed and2predicates pergroup unchanged. No test/source change since full validation.
+- Known exact READY nonproduction Preview for validated checkpointce7d9df: dpl_7kz238n3Fp2rNYGjvFDuHK18YKYk, https://dinner-roulette-ijp958pl9-minions-9e2c.vercel.app. Fresh detailed identity readback required immediately before live. Main/production untouched; frozen4d937e58/productiondpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL. Public discoveryRPCs0.
+- Exact next action: push/readback Save6; verify Preview identity exactce7d9df/READY/targetnull and production unchanged; run established live harness with max2RPC, radii15,50 and full selections. It automatically runs15Anything first and stops on incomplete coverage BEFORE subset/50requests. Known disposable browser CA limitation permits explicit harness-only TLS tolerance; no app/platform TLS change. If first canary repeats all-group timeouts STOP without another rewrite/request.
+- Remaining gates: bounded live15/50matrix/localreuse, save7, final evidence/scope/clean/preservation and immutable successful freeze only if all pass. No promotion.
+
+SAFE TO RESUME FROM THIS CHECKPOINT.
