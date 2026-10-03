@@ -1,0 +1,31 @@
+name: Radial slider remediation
+on:
+  push:
+    branches: [fix/date-night-radial-loading-browser-acceptance-remediation-1]
+    paths:
+      - src/components/ui/slider.tsx
+      - scripts/slider-accessibility-browser.mjs
+      - scripts/test-support/slider-accessibility-fixture.tsx
+      - .github/workflows/date-night-radial-remediation.yml
+permissions:
+  contents: read
+jobs:
+  slider:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - name: Shared Slider accessibility regression
+        run: node scripts/slider-accessibility-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: slider-accessibility
+          path: /tmp/pfu-slider-accessibility
+          retention-days: 7
