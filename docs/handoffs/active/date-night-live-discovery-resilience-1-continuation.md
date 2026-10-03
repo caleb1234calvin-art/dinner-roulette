@@ -189,4 +189,18 @@ Migration-free production build later: `VITE_AUTH_ENABLED=true node scripts/with
 - Main/production remain untouched. Current known Preview above, production frozen deployment unchanged. No merge/promotion/migration/settings change.
 - Resume status: CONTROLLED BROWSER PASSED — REAL PREVIEW MATRIX READY TO RETRY.
 
-SAFE TO RESUME FROM THIS CHECKPOINT
+## Save 9 — real seasonal bottleneck measured; query refinement required
+
+- Repository/branch/frozen base unchanged. Latest pushed `a18152108f2746eeadc508e1a4c8a1b839a492ae`, tree `a196207b908cf419cc2e98fa5de42a3cd8577150`, sole parent `7552fb6c16f6df49e87f7f75c847816f676e24ab`. This save directly descends from it.
+- Real Preview attempt2 navigated successfully using the disclosed disposable TLS option. Six15mi rows completed before a harness local-filter locator failure prevented50mi. Actual Anything returned53 raw/eligible places,45 live identities: entertainment/culture/outdoor succeeded; seasonal failed. Correct partial warning and saved-only/missing seasonal coverage visible. Haunted/mixed showed2 saved eligible anchors; Corn/Pumpkin0; ONmixed2, no refetch. These counts are observations, not invariants.
+- Hosted runtime confirms ordinary groups won mirror1 around1830/4297/1912ms. Seasonal all4 mirrors started0/1500/3000/4500ms and each received8000ms before timeout; aggregate12500ms, budgetExhausted false. This proves serial starvation is fixed but a remaining seasonal query cost/provider issue must be investigated before claiming final success. No deadline extension justified.
+- Harness ended after sixrows/eightRPCs at local-only controls, not an app crash; safe phase logging is coarse. Source review found the mood aria-label belongs to the Slider root while its thumb owns role slider; target child slider in test. No application UI change planned. Rapid chip switching produced cancelled intermediate RPCs (bounded but may still execute server work); avoid unnecessary repeated provider probes while refining query.
+- Changed this save: real attempt2 JSON/log, bounded hosted runtime excerpt and continuation only. App/harness remains as saved8; clean tree before evidence copy. All604 deterministic tests and4controlled browser cases passed, but real seasonal acquisition NOT accepted.
+- Next action: refine seasonal query execution while preserving identical whitelist/reachability/classification/lifecycle. Current hypothesis: repeated regex-key metadata scans; Overpass official manual says named sets can reduce repeated work and simple filter reordering has no semantic/ordering benefit. Read-only reviewer proposes exact finite keys/prefixes first, with bounded named-set filtering if necessary. Checkpoint is before executable refinement.
+- Primary references reviewed: https://dev.overpass-api.de/overpass-doc/en/criteria/union.html and https://dev.overpass-api.de/overpass-doc/en/criteria/per_tag.html. Treat performance cause as hypothesis until a focused live measurement, not established fact.
+- Resume commands: inspect m6-live-attempt-2.json/runtime observations; `git status --short`; focused query/seasonal regressions after refinement; rebuild safe auth bundle and fullsuite before renewed browser/Preview gate. Reuse retained failed query evidence rather than repeatedly querying the same stalled public endpoints.
+- Blockers: seasonal real queries still all-mirror timeout;50mi matrix not yet reached; harness mood locator needs correction. No temporary application instrumentation.20s/25s and fixed4mirror/4group bounds intact.
+- Preview tested: `dpl_JBCV767umF9iMBsVoRQQMJQrBkDc` / https://dinner-roulette-mmfo9oxhy-minions-9e2c.vercel.app /966447e (same app code as a181521). Main/production untouched; frozen deployment unchanged. No migration/settings/merge/promotion.
+- Resume status: REAL PARTIAL SUCCESS CONFIRMED — SEASONAL QUERY REFINEMENT REQUIRED, DO NOT PROMOTE.
+
+CHECKPOINT INCOMPLETE — READ BLOCKERS BEFORE CONTINUING

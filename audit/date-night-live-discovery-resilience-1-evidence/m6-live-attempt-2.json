@@ -1,0 +1,737 @@
+{
+  "testedAt": "2026-10-03T00:54:40.070Z",
+  "previewOrigin": "https://dinner-roulette-mmfo9oxhy-minions-9e2c.vercel.app",
+  "previewDeploymentId": "dpl_JBCV767umF9iMBsVoRQQMJQrBkDc",
+  "candidate": "966447ed9d43157876f1a83293148e1e00ca44ce",
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "b1ffd34633a0d8404d311977fb5f6d79bca6706d195dac297c1f33b57a59fd09",
+      "files": 411
+    },
+    "startedAt": "2026-10-03T00:51:33.339Z",
+    "output": {
+      "sha256": "811fb2af1f12550653b6862d637db498a1345688b9e411e72c7df2780b7faa92",
+      "files": 194
+    },
+    "completedAt": "2026-10-03T00:51:36.727Z"
+  },
+  "browserTlsVerificationBypassed": true,
+  "rows": [
+    {
+      "radiusMiles": 15,
+      "activityTypes": [
+        "anything"
+      ],
+      "openNow": false,
+      "elapsedMs": 13798,
+      "eligibleCount": 53,
+      "requestCount": 1,
+      "responses": [
+        {
+          "outcome": "decoded",
+          "durationMs": 12719,
+          "response": {
+            "source": "merged",
+            "venues": 53,
+            "liveVenues": 45,
+            "byType": {
+              "haunted-house": 2,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 3,
+              "arcade": 5,
+              "mini-golf": 2,
+              "escape-room": 0,
+              "skating": 2,
+              "movies": 4,
+              "museum": 3,
+              "park": 37
+            },
+            "liveByType": {
+              "haunted-house": 0,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 1,
+              "arcade": 1,
+              "mini-golf": 0,
+              "escape-room": 0,
+              "skating": 1,
+              "movies": 3,
+              "museum": 3,
+              "park": 36
+            },
+            "partial": true,
+            "groups": [
+              {
+                "id": "seasonal",
+                "activityTypes": [
+                  "haunted-house",
+                  "corn-maze",
+                  "pumpkin-patch"
+                ],
+                "outcome": "failed"
+              },
+              {
+                "id": "entertainment",
+                "activityTypes": [
+                  "bowling",
+                  "arcade",
+                  "mini-golf",
+                  "escape-room",
+                  "skating"
+                ],
+                "outcome": "succeeded-nonempty"
+              },
+              {
+                "id": "culture",
+                "activityTypes": [
+                  "movies",
+                  "museum"
+                ],
+                "outcome": "succeeded-nonempty"
+              },
+              {
+                "id": "outdoor",
+                "activityTypes": [
+                  "park"
+                ],
+                "outcome": "succeeded-nonempty"
+              }
+            ],
+            "warningPresent": true
+          }
+        }
+      ],
+      "liveSeasonalDisclosure": false,
+      "savedOnlyDisclosure": true,
+      "missingCategoryDisclosure": true,
+      "completeOutageDisclosure": false,
+      "partialDisclosure": true,
+      "terminalError": false,
+      "spinnerSettled": true,
+      "noRefetchExpectedFromSuccessfulSuperset": false,
+      "lastNetworkSource": "merged",
+      "lastNetworkSourceMeaning": "network response; UI may also merge prior cached coverage",
+      "screenshot": "15-anything-off.png"
+    },
+    {
+      "radiusMiles": 15,
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "openNow": false,
+      "elapsedMs": 12733,
+      "eligibleCount": 2,
+      "requestCount": 1,
+      "responses": [
+        {
+          "outcome": "decoded",
+          "durationMs": 12664,
+          "response": {
+            "source": "fallback",
+            "venues": 17,
+            "liveVenues": 0,
+            "byType": {
+              "haunted-house": 2,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 2,
+              "arcade": 4,
+              "mini-golf": 2,
+              "escape-room": 0,
+              "skating": 1,
+              "movies": 2,
+              "museum": 3,
+              "park": 6
+            },
+            "liveByType": {
+              "haunted-house": 0,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 0,
+              "arcade": 0,
+              "mini-golf": 0,
+              "escape-room": 0,
+              "skating": 0,
+              "movies": 0,
+              "museum": 0,
+              "park": 0
+            },
+            "partial": false,
+            "groups": [
+              {
+                "id": "seasonal",
+                "activityTypes": [
+                  "haunted-house"
+                ],
+                "outcome": "failed"
+              }
+            ],
+            "warningPresent": true
+          }
+        }
+      ],
+      "liveSeasonalDisclosure": false,
+      "savedOnlyDisclosure": true,
+      "missingCategoryDisclosure": false,
+      "completeOutageDisclosure": true,
+      "partialDisclosure": false,
+      "terminalError": false,
+      "spinnerSettled": true,
+      "noRefetchExpectedFromSuccessfulSuperset": false,
+      "lastNetworkSource": "fallback",
+      "lastNetworkSourceMeaning": "network response; UI may also merge prior cached coverage",
+      "screenshot": "15-haunted-house-off.png"
+    },
+    {
+      "radiusMiles": 15,
+      "activityTypes": [
+        "corn-maze"
+      ],
+      "openNow": false,
+      "elapsedMs": 12146,
+      "eligibleCount": 0,
+      "requestCount": 2,
+      "responses": [
+        {
+          "outcome": "transport-failed-or-cancelled",
+          "durationMs": 123
+        },
+        {
+          "outcome": "decoded",
+          "durationMs": 11947,
+          "response": {
+            "source": "fallback",
+            "venues": 17,
+            "liveVenues": 0,
+            "byType": {
+              "haunted-house": 2,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 2,
+              "arcade": 4,
+              "mini-golf": 2,
+              "escape-room": 0,
+              "skating": 1,
+              "movies": 2,
+              "museum": 3,
+              "park": 6
+            },
+            "liveByType": {
+              "haunted-house": 0,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 0,
+              "arcade": 0,
+              "mini-golf": 0,
+              "escape-room": 0,
+              "skating": 0,
+              "movies": 0,
+              "museum": 0,
+              "park": 0
+            },
+            "partial": false,
+            "groups": [
+              {
+                "id": "seasonal",
+                "activityTypes": [
+                  "corn-maze"
+                ],
+                "outcome": "failed"
+              }
+            ],
+            "warningPresent": true
+          }
+        }
+      ],
+      "liveSeasonalDisclosure": false,
+      "savedOnlyDisclosure": false,
+      "missingCategoryDisclosure": true,
+      "completeOutageDisclosure": true,
+      "partialDisclosure": false,
+      "terminalError": false,
+      "spinnerSettled": true,
+      "noRefetchExpectedFromSuccessfulSuperset": false,
+      "lastNetworkSource": "fallback",
+      "lastNetworkSourceMeaning": "network response; UI may also merge prior cached coverage",
+      "screenshot": "15-corn-maze-off.png"
+    },
+    {
+      "radiusMiles": 15,
+      "activityTypes": [
+        "pumpkin-patch"
+      ],
+      "openNow": false,
+      "elapsedMs": 12995,
+      "eligibleCount": 0,
+      "requestCount": 2,
+      "responses": [
+        {
+          "outcome": "transport-failed-or-cancelled",
+          "durationMs": 256
+        },
+        {
+          "outcome": "decoded",
+          "durationMs": 12684,
+          "response": {
+            "source": "fallback",
+            "venues": 17,
+            "liveVenues": 0,
+            "byType": {
+              "haunted-house": 2,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 2,
+              "arcade": 4,
+              "mini-golf": 2,
+              "escape-room": 0,
+              "skating": 1,
+              "movies": 2,
+              "museum": 3,
+              "park": 6
+            },
+            "liveByType": {
+              "haunted-house": 0,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 0,
+              "arcade": 0,
+              "mini-golf": 0,
+              "escape-room": 0,
+              "skating": 0,
+              "movies": 0,
+              "museum": 0,
+              "park": 0
+            },
+            "partial": false,
+            "groups": [
+              {
+                "id": "seasonal",
+                "activityTypes": [
+                  "pumpkin-patch"
+                ],
+                "outcome": "failed"
+              }
+            ],
+            "warningPresent": true
+          }
+        }
+      ],
+      "liveSeasonalDisclosure": false,
+      "savedOnlyDisclosure": false,
+      "missingCategoryDisclosure": true,
+      "completeOutageDisclosure": true,
+      "partialDisclosure": false,
+      "terminalError": false,
+      "spinnerSettled": true,
+      "noRefetchExpectedFromSuccessfulSuperset": false,
+      "lastNetworkSource": "fallback",
+      "lastNetworkSourceMeaning": "network response; UI may also merge prior cached coverage",
+      "screenshot": "15-pumpkin-patch-off.png"
+    },
+    {
+      "radiusMiles": 15,
+      "activityTypes": [
+        "haunted-house",
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "openNow": false,
+      "elapsedMs": 12878,
+      "eligibleCount": 2,
+      "requestCount": 2,
+      "responses": [
+        {
+          "outcome": "transport-failed-or-cancelled",
+          "durationMs": 127
+        },
+        {
+          "outcome": "decoded",
+          "durationMs": 12687,
+          "response": {
+            "source": "fallback",
+            "venues": 17,
+            "liveVenues": 0,
+            "byType": {
+              "haunted-house": 2,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 2,
+              "arcade": 4,
+              "mini-golf": 2,
+              "escape-room": 0,
+              "skating": 1,
+              "movies": 2,
+              "museum": 3,
+              "park": 6
+            },
+            "liveByType": {
+              "haunted-house": 0,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 0,
+              "arcade": 0,
+              "mini-golf": 0,
+              "escape-room": 0,
+              "skating": 0,
+              "movies": 0,
+              "museum": 0,
+              "park": 0
+            },
+            "partial": false,
+            "groups": [
+              {
+                "id": "seasonal",
+                "activityTypes": [
+                  "haunted-house",
+                  "corn-maze",
+                  "pumpkin-patch"
+                ],
+                "outcome": "failed"
+              }
+            ],
+            "warningPresent": true
+          }
+        }
+      ],
+      "liveSeasonalDisclosure": false,
+      "savedOnlyDisclosure": true,
+      "missingCategoryDisclosure": true,
+      "completeOutageDisclosure": true,
+      "partialDisclosure": false,
+      "terminalError": false,
+      "spinnerSettled": true,
+      "noRefetchExpectedFromSuccessfulSuperset": false,
+      "lastNetworkSource": "fallback",
+      "lastNetworkSourceMeaning": "network response; UI may also merge prior cached coverage",
+      "screenshot": "15-haunted-house_corn-maze_pumpkin-patch-off.png"
+    },
+    {
+      "radiusMiles": 15,
+      "activityTypes": [
+        "haunted-house",
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "openNow": true,
+      "elapsedMs": 270,
+      "eligibleCount": 2,
+      "requestCount": 0,
+      "responses": [],
+      "liveSeasonalDisclosure": false,
+      "savedOnlyDisclosure": true,
+      "missingCategoryDisclosure": true,
+      "completeOutageDisclosure": true,
+      "partialDisclosure": false,
+      "terminalError": false,
+      "spinnerSettled": true,
+      "noRefetchExpectedFromSuccessfulSuperset": false,
+      "lastNetworkSource": "fallback",
+      "lastNetworkSourceMeaning": "prior acquisition reused; source disclosure checked separately",
+      "screenshot": "15-haunted-house_corn-maze_pumpkin-patch-on.png"
+    }
+  ],
+  "rpc": [
+    {
+      "phase": "15:anything:off",
+      "outcome": "decoded",
+      "response": {
+        "source": "merged",
+        "venues": 53,
+        "liveVenues": 45,
+        "byType": {
+          "haunted-house": 2,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 3,
+          "arcade": 5,
+          "mini-golf": 2,
+          "escape-room": 0,
+          "skating": 2,
+          "movies": 4,
+          "museum": 3,
+          "park": 37
+        },
+        "liveByType": {
+          "haunted-house": 0,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 1,
+          "arcade": 1,
+          "mini-golf": 0,
+          "escape-room": 0,
+          "skating": 1,
+          "movies": 3,
+          "museum": 3,
+          "park": 36
+        },
+        "partial": true,
+        "groups": [
+          {
+            "id": "seasonal",
+            "activityTypes": [
+              "haunted-house",
+              "corn-maze",
+              "pumpkin-patch"
+            ],
+            "outcome": "failed"
+          },
+          {
+            "id": "entertainment",
+            "activityTypes": [
+              "bowling",
+              "arcade",
+              "mini-golf",
+              "escape-room",
+              "skating"
+            ],
+            "outcome": "succeeded-nonempty"
+          },
+          {
+            "id": "culture",
+            "activityTypes": [
+              "movies",
+              "museum"
+            ],
+            "outcome": "succeeded-nonempty"
+          },
+          {
+            "id": "outdoor",
+            "activityTypes": [
+              "park"
+            ],
+            "outcome": "succeeded-nonempty"
+          }
+        ],
+        "warningPresent": true
+      },
+      "durationMs": 12719
+    },
+    {
+      "phase": "15:haunted-house:off",
+      "outcome": "decoded",
+      "response": {
+        "source": "fallback",
+        "venues": 17,
+        "liveVenues": 0,
+        "byType": {
+          "haunted-house": 2,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 2,
+          "arcade": 4,
+          "mini-golf": 2,
+          "escape-room": 0,
+          "skating": 1,
+          "movies": 2,
+          "museum": 3,
+          "park": 6
+        },
+        "liveByType": {
+          "haunted-house": 0,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 0,
+          "arcade": 0,
+          "mini-golf": 0,
+          "escape-room": 0,
+          "skating": 0,
+          "movies": 0,
+          "museum": 0,
+          "park": 0
+        },
+        "partial": false,
+        "groups": [
+          {
+            "id": "seasonal",
+            "activityTypes": [
+              "haunted-house"
+            ],
+            "outcome": "failed"
+          }
+        ],
+        "warningPresent": true
+      },
+      "durationMs": 12664
+    },
+    {
+      "phase": "15:corn-maze:off",
+      "outcome": "transport-failed-or-cancelled",
+      "durationMs": 123
+    },
+    {
+      "phase": "15:corn-maze:off",
+      "outcome": "decoded",
+      "response": {
+        "source": "fallback",
+        "venues": 17,
+        "liveVenues": 0,
+        "byType": {
+          "haunted-house": 2,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 2,
+          "arcade": 4,
+          "mini-golf": 2,
+          "escape-room": 0,
+          "skating": 1,
+          "movies": 2,
+          "museum": 3,
+          "park": 6
+        },
+        "liveByType": {
+          "haunted-house": 0,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 0,
+          "arcade": 0,
+          "mini-golf": 0,
+          "escape-room": 0,
+          "skating": 0,
+          "movies": 0,
+          "museum": 0,
+          "park": 0
+        },
+        "partial": false,
+        "groups": [
+          {
+            "id": "seasonal",
+            "activityTypes": [
+              "corn-maze"
+            ],
+            "outcome": "failed"
+          }
+        ],
+        "warningPresent": true
+      },
+      "durationMs": 11947
+    },
+    {
+      "phase": "15:pumpkin-patch:off",
+      "outcome": "transport-failed-or-cancelled",
+      "durationMs": 256
+    },
+    {
+      "phase": "15:pumpkin-patch:off",
+      "outcome": "decoded",
+      "response": {
+        "source": "fallback",
+        "venues": 17,
+        "liveVenues": 0,
+        "byType": {
+          "haunted-house": 2,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 2,
+          "arcade": 4,
+          "mini-golf": 2,
+          "escape-room": 0,
+          "skating": 1,
+          "movies": 2,
+          "museum": 3,
+          "park": 6
+        },
+        "liveByType": {
+          "haunted-house": 0,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 0,
+          "arcade": 0,
+          "mini-golf": 0,
+          "escape-room": 0,
+          "skating": 0,
+          "movies": 0,
+          "museum": 0,
+          "park": 0
+        },
+        "partial": false,
+        "groups": [
+          {
+            "id": "seasonal",
+            "activityTypes": [
+              "pumpkin-patch"
+            ],
+            "outcome": "failed"
+          }
+        ],
+        "warningPresent": true
+      },
+      "durationMs": 12684
+    },
+    {
+      "phase": "15:haunted-house+corn-maze+pumpkin-patch:off",
+      "outcome": "transport-failed-or-cancelled",
+      "durationMs": 127
+    },
+    {
+      "phase": "15:haunted-house+corn-maze+pumpkin-patch:off",
+      "outcome": "decoded",
+      "response": {
+        "source": "fallback",
+        "venues": 17,
+        "liveVenues": 0,
+        "byType": {
+          "haunted-house": 2,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 2,
+          "arcade": 4,
+          "mini-golf": 2,
+          "escape-room": 0,
+          "skating": 1,
+          "movies": 2,
+          "museum": 3,
+          "park": 6
+        },
+        "liveByType": {
+          "haunted-house": 0,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 0,
+          "arcade": 0,
+          "mini-golf": 0,
+          "escape-room": 0,
+          "skating": 0,
+          "movies": 0,
+          "museum": 0,
+          "park": 0
+        },
+        "partial": false,
+        "groups": [
+          {
+            "id": "seasonal",
+            "activityTypes": [
+              "haunted-house",
+              "corn-maze",
+              "pumpkin-patch"
+            ],
+            "outcome": "failed"
+          }
+        ],
+        "warningPresent": true
+      },
+      "durationMs": 12687
+    }
+  ],
+  "localOnly": [],
+  "pageErrors": [],
+  "errors": [
+    {
+      "phase": "15:mixed:on",
+      "check": "open-now-eligibility-subset",
+      "kind": "environment-or-browser-error",
+      "networkCode": null
+    }
+  ],
+  "passed": false,
+  "liveContributionObserved": true,
+  "limitations": [
+    "Venue counts are observations, not invariants.",
+    "No duplicate real request is made to decode captured RPC data.",
+    "Source summaries describe transport responses; UI may combine cached coverage.",
+    "Successful provider recall cannot be established when every live attempt fails."
+  ]
+}
