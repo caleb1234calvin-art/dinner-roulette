@@ -40,3 +40,17 @@ SAFE TO RESUME FROM THIS CHECKPOINT.
 - Exact next action: publish/read back this checkpoint, implement one-in-flight progressive controller with missing-only retry and separate foreground/background state, then connect DateNightHome without changing selection setters or eligibility policy.
 
 SAFE TO RESUME FROM THIS CHECKPOINT.
+
+## Checkpoint 4 — progressive controller and UI
+
+- Branch/base unchanged. Latest published `11516b22f936288433da4727413bc60952d4fd6c`, tree `fa36015f64d6406ef94b6453f6a37e8eb9454c14`, sole parent `7ae42cdccd286bc742c2108b6b555ba9aef93b34`.
+- Changed paths: radial-session.ts, DateNightHome, new radial-session.test.mjs, two existing test fixtures/assertions reflecting patch semantics, separate UI logs, continuation. No pick/options/plan setter is called by background completion. Existing selected IDs and refreshed eligibility/status remain intact.
+- Controller: one in-flight patch, core first, 1-second outer pacing, at most32 requests/pass, no auto-retry, stop on incomplete core or3 consecutive degraded patches. Attempts are per patch/category and bounded by32×11; retry consults retained cache and requests only missing work. Radius decreases retain needed core/inner requests and cancel unnecessary outer work. Late completions cannot seed cache. Local-only filters are not acquisition dependencies.
+- Focused controller/actual-UI 13/13 GREEN: readiness before full coverage, all three overlays stable and next selections include new venues, middle/outer failure preservation, complete40 surviving failed50, bounded3failure stop, increase/missing-only scheduling, shrink cancellation/late rejection, necessary core retention, zero local-filter refetch, location replacement, watchdog/error/retry and usable truthful saved fallback.
+- Existing cache/client/partial UI 102/102 GREEN after fixture metadata alignment. The old Date Night radius test now explicitly asserts outer patch scheduling, and the cross-mode radius test asserts retaining the same necessary core on shrink; Dinner/Nightlife cancellation expectations remain unchanged. All V-DR-02 assertions retained. Initial3 failures retained in ui-initial.log (two due absent new fixture metadata, one intentionally obsolete monolithic cancellation assumption).
+- Typecheck passed. Changed-code lint found one unused ternary expression in new controller; replaced with explicit if/else. Fresh combined focused/typecheck/lint verification is the next gate, not claimed yet.
+- Geometry/coverage unchanged (32 bounded core/sectors, per-category retained proof; max query<15.1mi). Budgets4groups/4mirrors/8s20s25s unchanged. No public-provider calls; no accepted Preview. Main/production untouched at last frozen readback.
+- Remaining gates: combined focused GREEN, pre-full checkpoint, full tests/dependency/security/native/build/proof/scope, ten controlled browser scenarios, bounded exact Preview, immutable freeze.
+- Exact next action: publish/read back UI checkpoint, run all focused patch/cache/lifecycle/query/client/provider suites and typecheck/lint/diff check, checkpoint focused GREEN, then checkpoint BEFORE full validation.
+
+SAFE TO RESUME FROM THIS CHECKPOINT.

@@ -1,4 +1,4 @@
-import { DISCOVERY_TIMEOUT_MESSAGE, startDiscoveryRequest } from "@/lib/discovery/client-request";
+import { DISCOVERY_TIMEOUT_MESSAGE } from "@/lib/discovery/client-request";
 import { useEffect, useMemo, useState } from "react";
 import { Heart, LayoutGrid } from "lucide-react";
 import { DateNightPlanOverlay } from "@/components/date-night-plan-overlay";
@@ -10,7 +10,9 @@ import { LocationControl } from "@/components/location-control";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { searchDateNight } from "@/lib/date-night/search";
-import { combineDateNightDiscovery, createDateNightDiscoveryCache, failedDateNightAcquisition, normalizeDateNightClientActivityTypes, sanitizeDateNightClientActivityTypes } from "@/lib/date-night/cache";
+import { normalizeDateNightClientActivityTypes, sanitizeDateNightClientActivityTypes } from "@/lib/date-night/cache";
+import { createDateNightRadialSession, dateNightRadialProgress } from "@/lib/date-night/radial-session";
+import type { DateNightCoverageState } from "@/lib/date-night/radial-plan";
 import {
   dateNightChipsForNow,
   HALLOWEEN_DATE_NIGHT_TYPES,
@@ -166,62 +168,39 @@ export function DateNightHome() {
   const now = useDateNightClock();
   const [source, setSource] = useState<"live" | "merged" | "fallback">("live");
   const [discovery, setDiscovery] = useState<DateNightSearchResponse["discovery"]>();
-  const [discoveryCache] = useState(createDateNightDiscoveryCache);
+  const [radialSession] = useState(createDateNightRadialSession);
+  const [radialCoverage, setRadialCoverage] = useState<DateNightCoverageState>();
+  const [expanding, setExpanding] = useState(false);
   const halloweenActive = isHalloweenDateNightActive(spookySeasonEnabled, now);
   const activityChips = dateNightChipsForNow(spookySeasonEnabled, now);
   const acquisitionSignature = normalizeDateNightClientActivityTypes(filters.activityTypes, halloweenActive).join(",");
 
   useEffect(() => {
-    setError(null);
-    const acquisition = {
-      lat: location.lat, lon: location.lon, radiusMiles: Math.max(filters.radiusMiles, 15),
+    radialSession.update({
+      lat: location.lat, lon: location.lon, radiusMiles: filters.radiusMiles,
       halloweenActive, activityTypes: acquisitionSignature.split(",") as ConcreteDateNightType[],
-    };
-    const snapshot = discoveryCache.read(acquisition);
-    const apply = (result: DateNightSearchResponse) => {
-      setVenues(result.venues);
-      setSource(result.source);
-      setWarning(result.warning ?? null);
-      setDiscovery(result.discovery);
-    };
-    if (!snapshot.missingActivityTypes.length && snapshot.response) {
-      apply(snapshot.response);
-      setLoading(false);
-      return;
-    }
-    const missing = { ...acquisition, activityTypes: snapshot.missingActivityTypes };
-    setLoading(true);
-    setWarning(null);
-    setDiscovery(undefined);
-    return startDiscoveryRequest({
-      mode: "date-night",
-      request: (signal) => searchDateNight({
+    }, {
+      retryVersion: requestVersion,
+      request: (acquisition, signal) => searchDateNight({
         data: {
-          lat: location.lat,
-          lon: location.lon,
-          radiusMiles: Math.max(filters.radiusMiles, 15),
-          spookySeasonEnabled,
-          activityTypes: missing.activityTypes,
+          lat: acquisition.lat, lon: acquisition.lon, radiusMiles: acquisition.radiusMiles,
+          spookySeasonEnabled, activityTypes: acquisition.activityTypes, patchId: acquisition.patchId,
         },
         signal,
       }),
-      onSuccess: (result) => {
-        // Only this lifecycle-guarded callback may admit a network result.
-        // Aborted/replaced/timed-out RPCs therefore cannot seed future reuse.
-        discoveryCache.store(missing, result);
-        apply(combineDateNightDiscovery(snapshot, result));
+      onChange: ({ response, coverage: nextCoverage, loading: foreground, expanding: background, error: failure }) => {
+        setVenues(response?.venues ?? []);
+        setSource(response?.source ?? "live");
+        setWarning(response?.warning ?? null);
+        setDiscovery(response?.discovery);
+        setError(failure);
+        setLoading(foreground);
+        setExpanding(background);
+        setRadialCoverage(nextCoverage);
       },
-      onError: (err) => {
-        if (snapshot.response) {
-          apply(combineDateNightDiscovery(snapshot, failedDateNightAcquisition(missing)));
-          return;
-        }
-        setVenues([]);
-        setError(err instanceof Error ? err.message : "Could not load date-night activities");
-      },
-      onSettled: () => setLoading(false),
     });
-  }, [location.lat, location.lon, filters.radiusMiles, spookySeasonEnabled, halloweenActive, acquisitionSignature, discoveryCache, requestVersion]);
+  }, [location.lat, location.lon, filters.radiusMiles, spookySeasonEnabled, halloweenActive, acquisitionSignature, radialSession, requestVersion]);
+  useEffect(() => () => radialSession.dispose(), [radialSession]);
 
   const decorated = useMemo(() => decorateDateNight(venues, location, now), [venues, location, now]);
   const eligible = useMemo(
@@ -367,6 +346,14 @@ export function DateNightHome() {
       </section>
 
       {loading ? <DiscoveryLoading label="Finding date ideas near you…" /> : null}
+      {!loading && radialCoverage ? (
+        <div className="mt-5 rounded-xl bg-surface p-4 text-xs leading-relaxed text-muted shadow-border">
+          <p role="status" data-radial-progress>{dateNightRadialProgress(radialCoverage, expanding)}</p>
+          {!expanding && !radialCoverage.complete && !error && !discovery?.partial ? (
+            <button type="button" className="mt-2 min-h-11 text-accent underline" onClick={() => setRequestVersion(version => version + 1)}>Retry missing areas</button>
+          ) : null}
+        </div>
+      ) : null}
       {warning && (!coverage || discovery?.partial) ? (
         <DiscoveryNotice
           tone="fallback"

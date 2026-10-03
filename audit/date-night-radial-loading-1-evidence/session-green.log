@@ -1,0 +1,21 @@
+✔ actual UI: core completes first, actions enable before maximum coverage and outer work continues serially (379.5739ms)
+✔ actual UI: open ResultOverlay stays stable when outer venues arrive; next action uses fresh pool (14.515962ms)
+✔ actual UI: open OptionsOverlay stays stable when outer venues arrive; next action uses fresh pool (15.037519ms)
+✔ actual UI: open DateNightPlanOverlay stays stable when outer venues arrive; next action uses fresh pool (25.969921ms)
+✔ middle failure leaves a truthful gap, retains nearby picks, and retry targets only the failed sector (54.312178ms)
+✔ outermost failure preserves complete 0–40 and no failure triggers runaway auto-retry (582.237024ms)
+✔ three consecutive degraded outer patches stop the bounded pass and preserve inner results (19.219962ms)
+✔ 15→50 schedules only missing outer work; decreasing cancels obsolete work without refetch or late admission (11.898982ms)
+✔ shrinking while core is in flight retains the necessary core request and strictly clips future venues (9.85145ms)
+✔ all local-only filters cause zero RPCs and do not cancel background expansion (14.018411ms)
+✔ location changes invalidate incompatible coverage and late outer responses cannot mutate new origin (10.007717ms)
+✔ all-stall core settles by watchdog, does not expand, and explicit retry reacquires only core (9.412257ms)
+✔ saved core fallback remains usable and exposes an explicit missing-area retry without false coverage (10.485567ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2005.996509

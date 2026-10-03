@@ -19,7 +19,7 @@ function response(q, venues = [venue()], outcomes = {}) {
     ...group, outcome: outcomes[group.id] ?? (venues.length ? "succeeded-nonempty" : "succeeded-empty"),
   }));
   const success = groups.some((group) => group.outcome.startsWith("succeeded-"));
-  return { venues, source: success ? "live" : "fallback", discovery: {
+  return { venues, source: success ? "live" : "fallback", ...(q.patchId ? { patch: { id: q.patchId, version: "radial-v1" } } : {}), discovery: {
     groups, partial: success && groups.some((group) => group.outcome === "failed" || group.outcome === "cancelled"),
   } };
 }
@@ -463,11 +463,13 @@ test("actual DateNightHome: TTL refreshes on next category acquisition, not loca
   assert.deepEqual(h.requests[1].args.data.activityTypes, ["movies"]);
 });
 
-test("actual DateNightHome: radius narrows from acquired 50 mi without RPC; widening 15→50 acquires", async (t) => {
+test("actual DateNightHome: radius widening schedules an outer patch; narrowing reuses core without RPC", async (t) => {
   const { h } = setup(t, ["movies"]);
   resolveRequest(h); await h.settle();
   h.store.setDateNightFilters({ radiusMiles: 50 }); h.render();
   assert.equal(h.requests.length, 2);
+  assert.equal(h.requests[1].args.data.patchId, "radial-v1:20:0");
+  assert.notEqual(h.requests[1].args.data.patchId, h.requests[0].args.data.patchId);
   resolveRequest(h); await h.settle();
   h.store.setDateNightFilters({ radiusMiles: 15 }); h.render();
   assert.equal(h.requests.length, 2);

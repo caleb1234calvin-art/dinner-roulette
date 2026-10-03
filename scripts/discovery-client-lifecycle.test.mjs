@@ -163,15 +163,16 @@ for (const config of discoveryModes) {
     });
   }
 
-  test(`${mode}: radius replacement cancels transport; normal filters/options/pick still work`, async (t) => {
+  test(`${mode}: radius update cancels obsolete transport or retains still-needed core; normal selection works`, async (t) => {
     const { clock, h } = setup(t),
       old = h.requests[0];
     const slider = h.control(h.render(), "Travel distance");
     slider.props.onValueChange([0]);
     h.render();
-    assert.equal(old.args.signal.aborted, true);
-    assert.equal(h.requests.length, 2);
-    h.requests[1].resolve(discoveryPayload(config));
+    const expectedRequests = mode === "date-night" ? 1 : 2;
+    assert.equal(old.args.signal.aborted, mode !== "date-night", "a smaller radius still needs the same bounded Date Night core");
+    assert.equal(h.requests.length, expectedRequests);
+    h.requests.at(-1).resolve(discoveryPayload(config));
     let status = await h.settle();
     h.button(status.tree, "Give us options").props.onClick();
     let tree = h.render();
@@ -182,7 +183,7 @@ for (const config of discoveryModes) {
     h.control(tree, "Favorites only").props.onCheckedChange(true);
     status = h.status();
     assert.match(textOf(status.tree), /0 (places|activities|venues)/);
-    assert.equal(h.requests.length, 2, "local filters must not restart discovery");
+    assert.equal(h.requests.length, expectedRequests, "local filters must not restart discovery");
     assert.equal(clock.pending, 0);
   });
 
