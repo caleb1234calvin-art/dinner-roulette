@@ -1,0 +1,13 @@
+{
+  "gate": "full-diff-check-passed",
+  "command": [
+    "git",
+    "diff",
+    "--check",
+    "e8730f7e44ba48a78a3335657190f7e5aaf82d7b"
+  ],
+  "authEnabled": false,
+  "exitCode": 0,
+  "seconds": 0.009,
+  "log": "full-diff-check-passed.log"
+}

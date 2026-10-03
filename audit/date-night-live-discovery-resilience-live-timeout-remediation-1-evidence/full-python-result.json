@@ -1,0 +1,17 @@
+{
+  "gate": "full-python",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "native-android",
+    "-p",
+    "test_*.py"
+  ],
+  "authEnabled": false,
+  "exitCode": 0,
+  "seconds": 0.073,
+  "log": "full-python.log"
+}

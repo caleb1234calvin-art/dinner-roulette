@@ -1,0 +1,12 @@
+{
+  "gate": "build-complete",
+  "command": [
+    "node",
+    "scripts/browser-build-proof.mjs",
+    "complete"
+  ],
+  "authEnabled": true,
+  "exitCode": 0,
+  "seconds": 0.175,
+  "log": "build-complete.log"
+}

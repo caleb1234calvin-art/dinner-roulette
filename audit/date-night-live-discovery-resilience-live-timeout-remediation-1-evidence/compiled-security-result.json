@@ -1,0 +1,13 @@
+{
+  "gate": "compiled-security",
+  "command": [
+    "node",
+    "--test",
+    "--test-reporter=tap",
+    "scripts/tanstack-security.test.mjs"
+  ],
+  "authEnabled": true,
+  "exitCode": 0,
+  "seconds": 1.92,
+  "log": "compiled-security.log"
+}

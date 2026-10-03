@@ -1,0 +1,15 @@
+{
+  "gate": "full-lint",
+  "command": [
+    "node",
+    "node_modules/eslint/bin/eslint.js",
+    "src/lib/date-night/lifecycle.ts",
+    "scripts/date-night-query-cost.test.mjs",
+    "scripts/date-night-query-plan.test.mjs",
+    "audit/date-night-live-discovery-resilience-live-timeout-remediation-1-evidence/measure-cost.mjs"
+  ],
+  "authEnabled": false,
+  "exitCode": 0,
+  "seconds": 1.087,
+  "log": "full-lint.log"
+}

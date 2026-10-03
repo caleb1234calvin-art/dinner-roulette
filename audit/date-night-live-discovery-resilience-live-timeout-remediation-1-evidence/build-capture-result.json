@@ -1,0 +1,12 @@
+{
+  "gate": "build-capture",
+  "command": [
+    "node",
+    "scripts/browser-build-proof.mjs",
+    "capture"
+  ],
+  "authEnabled": true,
+  "exitCode": 0,
+  "seconds": 0.405,
+  "log": "build-capture.log"
+}

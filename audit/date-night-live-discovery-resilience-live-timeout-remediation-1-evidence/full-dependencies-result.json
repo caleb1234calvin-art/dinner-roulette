@@ -1,0 +1,12 @@
+{
+  "gate": "full-dependencies",
+  "command": [
+    "npm",
+    "ls",
+    "--all"
+  ],
+  "authEnabled": false,
+  "exitCode": 0,
+  "seconds": 0.64,
+  "log": "full-dependencies.log"
+}

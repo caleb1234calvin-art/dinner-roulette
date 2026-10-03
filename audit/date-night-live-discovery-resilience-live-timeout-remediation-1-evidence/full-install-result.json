@@ -1,0 +1,14 @@
+{
+  "gate": "full-install",
+  "command": [
+    "npm",
+    "ci",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "authEnabled": false,
+  "exitCode": 0,
+  "seconds": 8.772,
+  "log": "full-install.log"
+}

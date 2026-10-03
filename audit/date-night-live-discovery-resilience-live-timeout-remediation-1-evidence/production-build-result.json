@@ -1,0 +1,16 @@
+{
+  "gate": "production-build",
+  "command": [
+    "node",
+    "scripts/with-app-env.mjs",
+    "node",
+    "node_modules/vite/bin/vite.js",
+    "build",
+    "--mode",
+    "production"
+  ],
+  "authEnabled": true,
+  "exitCode": 0,
+  "seconds": 3.646,
+  "log": "production-build.log"
+}
