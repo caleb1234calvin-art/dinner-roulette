@@ -17,3 +17,21 @@ Focused183 (not additive); full729=658repository+71application,4inherited skips,
 A branch-scoped read-only GitHub Actions workflow runs the permanent slider regression. This checkpoint adds the unchanged controlled radial harness after a fresh safe build/proof. No public providers can run in this workflow. Live remains prohibited until controlled10/10 succeeds and screenshots are reviewed. No successful freeze yet.
 
 NEXT: inspect fresh controlled run from scenario1. Stop/preserve any new concrete product defect. Only after10/10, verify exact READY non-production Preview and run unchanged bounded live harness (core,20:0,20:1;3RPC/48theoretical attempts). Report product usability separately from maximum completeness. Main/production unchanged; no promotion. SAFE TO RESUME.
+
+## Fresh controlled browser acceptance — 10/10 PASS
+
+Exact source abaaf680e9e54838e7002ce79f04166c4ebefedf, tree a16848f0cbe6b11e19fc4fdfcda6e4a69f584e93, sole parent 1e140777a8ea1107ad8dcfdc8b01821197e6af79. GitHub run37157157228/job111302786155 restarted all ten scenarios and passed every one. Zero public provider calls, no page errors/overflow, truthful15/20/40-mile progress, stable options/future venues, cancellation in both radius scenarios, no local-filter RPCs, bounded all-stall fallback. All screenshots reviewed in overview; mobile320px and outermost failure reviewed full-size. Exact artifact11285874117 (ZIP SHA256 b5eab8fc73be6e9a034c0ddd968852b86a17c47ea8ad1361e9c53790c0d047f3) downloaded and verified.
+
+Fresh clean hosted build source5388b042e42301bd45a418cd1ec28cdf2856422578c83d6c64a1719fb7cf27bd/426files matches a clean local rebuild. The first local proof included an ignored Python bytecode file; it was moved out before a direct migration-free rebuild. Both proofs retained; no tracked source changed. Compiled output fingerprints differ per environment/build and are independently verified.
+
+Verified exact READY/non-production Preview dpl_C692yUYPVQW4UbTKRwUzA1eMyj48 at abaaf680e9e54838e7002ce79f04166c4ebefedf: https://dinner-roulette-jdys9liwl-minions-9e2c.vercel.app. The live workflow checks out this exact source, builds/proves it again and runs the unchanged capped harness. First launch(run37157445101/job111303674772) correctly stopped at external-host opt-in guard, before browser/RPC/traffic. Workflow81194da07b7d6c2da93e39c0735ee498cc149379 supplies the documented BROWSER_ALLOW_EXTERNAL_HOST=1 for this authorized Preview; no guard/harness source was changed. Do not rerun live after its bounded attempt without reviewing results and remaining budget.
+
+## Final live outcome — INCOMPLETE, stop for review
+
+Actual bounded run37157564340/job111304053048 failed only the required nonempty outer-merge assertion. Core all-groups success:53total/45live, UI usable7629ms, RPC5995ms. Patches20:0 and20:1 each all-groups success but zero returned eligible/live venues (5601/5391ms). Exactly3 public patch RPCs;48 theoretical physical-attempt cap;3 later outer requests deliberately blocked. No monolithic50-mile request; no retry. Both tested source and Preview remain exactabaaf680.
+
+Product: nearby usability observed, full live usability acceptance unpassed; later live filter/refetch/overflow assertions not reached. Page errors empty; failure screenshot shows53 activities and truthful continuous15-mile partial coverage for selected50. Maximum50 completeness unproven. Successful empty patches do not establish a new product defect. Do not speculate a fix or weaken the live assertion.
+
+Final report/JSON and dedicated evidence preserve all results, raw artifact hashes and screenshots. Raw combined ZIP saved separately under date-night-radial-remediation-1-browser-evidence-2026-10-03.zip. Final incomplete save's sole parent81194da07b7d6c2da93e39c0735ee498cc149379; recover literal SHA/tree from the commit introducing final remediation JSON. Not a successful freeze. Main4d937e58 and READY productiondpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL freshly unchanged. No promotion/migrations.
+
+NEXT: STOP for review of unmet live outer-merge demonstration. Public budget exhausted. Preserve9/9 slider,729 deterministic,14security and10/10controlled successes. Any new live test or radial change requires a subsequent scoped decision. SAFE TO RESUME — DATE NIGHT RADIAL LOADING INCOMPLETE — REVIEW REQUIRED.

@@ -1,0 +1,65 @@
+{
+  "run": 37157157228,
+  "artifact": 11285874117,
+  "zipSha256": "b5eab8fc73be6e9a034c0ddd968852b86a17c47ea8ad1361e9c53790c0d047f3",
+  "files": {
+    "verdict.json": {
+      "bytes": 3933,
+      "sha256": "c2378ca644e7ce9fc592d0c091b43212f54d40b1810da45b6f5710a43875c811"
+    },
+    "outermost-failure.png": {
+      "bytes": 319968,
+      "sha256": "162d14ca968d38a9fd3c295142c642546ac44d7b93907618cf53617c48522ab9"
+    },
+    "radius-increase.png": {
+      "bytes": 273964,
+      "sha256": "009bcb743e8c5d96cbedf860af77f226b9ea5bcce312e6e95b00299092913aec"
+    },
+    "progressive-success.png": {
+      "bytes": 281250,
+      "sha256": "5ed648bf63861762aec46f20316245648bcc8d2f0d7a5feb71dedf8fbbf2868a"
+    },
+    "server.log": {
+      "bytes": 9225,
+      "sha256": "14f9af203bcec403926f88358ead6838e62680d8045bfc9047edf7d2d7d92fd3"
+    },
+    "future-pick.png": {
+      "bytes": 293017,
+      "sha256": "76666f470549fa8d7a352ca63e53f28c946638797fcf9bc9588a48a4039abf5d"
+    },
+    "middle-failure.png": {
+      "bytes": 319836,
+      "sha256": "dce679a78a956784b7a7dab4fe37b2b050d2364e35f093d774755a982b7c1913"
+    },
+    "control.json": {
+      "bytes": 32,
+      "sha256": "bc30486dce5c471493860600c69c8f9fddfab744e92047c81487d994329f0d85"
+    },
+    "mobile-progress.png": {
+      "bytes": 279091,
+      "sha256": "373494e009087023942fd370bdfd2871457bf4c57053d71edf5c0c2b96dacb0b"
+    },
+    "local-filters.png": {
+      "bytes": 322244,
+      "sha256": "9befdb2eb3f61d80fc56b7ba9ea87b447150daee0451ca8b7091452c20f28cd5"
+    },
+    "events.jsonl": {
+      "bytes": 15661,
+      "sha256": "2769b44404ae38f9219d7c0b9c3bba865bd4fd7b2ca623f30235d67f7db7bf87"
+    },
+    "radius-decrease.png": {
+      "bytes": 273964,
+      "sha256": "009bcb743e8c5d96cbedf860af77f226b9ea5bcce312e6e95b00299092913aec"
+    },
+    "options-stable.png": {
+      "bytes": 292807,
+      "sha256": "ed809599284b7e4b64017fe34eb8b93054143c1924a6e84ccb0e786e0d383e53"
+    },
+    "all-stall.png": {
+      "bytes": 315282,
+      "sha256": "450d50a390b1204aba89e6acb2d78072df1571e81061ae5f086b1738b9385e27"
+    }
+  },
+  "visualReview": "All ten screenshots inspected in overview; mobile-progress 320px and outermost-failure inspected full-size. Progress wraps within width, tick labels retained, 40-mile inner coverage disclosed after failed outermost patch; no clipping or horizontal overflow observed.",
+  "sourceProofMatchesCleanLocal": true
+}

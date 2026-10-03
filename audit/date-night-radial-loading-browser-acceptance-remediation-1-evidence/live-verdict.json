@@ -1,0 +1,194 @@
+{
+  "run": 37157564340,
+  "job": 111304053048,
+  "workflowSha": "81194da07b7d6c2da93e39c0735ee498cc149379",
+  "testedSource": "abaaf680e9e54838e7002ce79f04166c4ebefedf",
+  "preview": "dpl_C692yUYPVQW4UbTKRwUzA1eMyj48",
+  "verdict": {
+    "passed": false,
+    "proof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "5388b042e42301bd45a418cd1ec28cdf2856422578c83d6c64a1719fb7cf27bd",
+        "files": 426
+      },
+      "startedAt": "2026-10-03T22:12:05.471Z",
+      "output": {
+        "sha256": "76e1362427947fdee361aa23cc4a015fd2bf97f09444227a1caa475870875cd8",
+        "files": 194
+      },
+      "completedAt": "2026-10-03T22:12:08.859Z"
+    },
+    "publicRpcCap": 3,
+    "theoreticalPhysicalAttemptCap": 48,
+    "productUsability": false,
+    "completeMaximumCoverage": false,
+    "partialCoverageMeaning": "Live traffic deliberately capped. Blocked outer transport failures are controlled, not observed provider failures.",
+    "events": [
+      {
+        "patchId": "radial-v1:core",
+        "patch": {
+          "id": "radial-v1:core",
+          "version": "radial-v1"
+        },
+        "source": "merged",
+        "groups": [
+          {
+            "id": "seasonal",
+            "activityTypes": [
+              "haunted-house",
+              "corn-maze",
+              "pumpkin-patch"
+            ],
+            "outcome": "succeeded-empty"
+          },
+          {
+            "id": "entertainment",
+            "activityTypes": [
+              "bowling",
+              "arcade",
+              "mini-golf",
+              "escape-room",
+              "skating"
+            ],
+            "outcome": "succeeded-nonempty"
+          },
+          {
+            "id": "culture",
+            "activityTypes": [
+              "movies",
+              "museum"
+            ],
+            "outcome": "succeeded-nonempty"
+          },
+          {
+            "id": "outdoor",
+            "activityTypes": [
+              "park"
+            ],
+            "outcome": "succeeded-nonempty"
+          }
+        ],
+        "venues": 53,
+        "liveVenues": 45,
+        "lifecycleVenues": 0,
+        "success": true,
+        "elapsedMs": 5995
+      },
+      {
+        "patchId": "radial-v1:20:0",
+        "patch": {
+          "id": "radial-v1:20:0",
+          "version": "radial-v1"
+        },
+        "source": "live",
+        "groups": [
+          {
+            "id": "seasonal",
+            "activityTypes": [
+              "haunted-house",
+              "corn-maze",
+              "pumpkin-patch"
+            ],
+            "outcome": "succeeded-empty"
+          },
+          {
+            "id": "entertainment",
+            "activityTypes": [
+              "bowling",
+              "arcade",
+              "mini-golf",
+              "escape-room",
+              "skating"
+            ],
+            "outcome": "succeeded-empty"
+          },
+          {
+            "id": "culture",
+            "activityTypes": [
+              "movies",
+              "museum"
+            ],
+            "outcome": "succeeded-nonempty"
+          },
+          {
+            "id": "outdoor",
+            "activityTypes": [
+              "park"
+            ],
+            "outcome": "succeeded-nonempty"
+          }
+        ],
+        "venues": 0,
+        "liveVenues": 0,
+        "lifecycleVenues": 0,
+        "success": true,
+        "elapsedMs": 5601
+      },
+      {
+        "patchId": "radial-v1:20:1",
+        "patch": {
+          "id": "radial-v1:20:1",
+          "version": "radial-v1"
+        },
+        "source": "live",
+        "groups": [
+          {
+            "id": "seasonal",
+            "activityTypes": [
+              "haunted-house",
+              "corn-maze",
+              "pumpkin-patch"
+            ],
+            "outcome": "succeeded-empty"
+          },
+          {
+            "id": "entertainment",
+            "activityTypes": [
+              "bowling",
+              "arcade",
+              "mini-golf",
+              "escape-room",
+              "skating"
+            ],
+            "outcome": "succeeded-empty"
+          },
+          {
+            "id": "culture",
+            "activityTypes": [
+              "movies",
+              "museum"
+            ],
+            "outcome": "succeeded-nonempty"
+          },
+          {
+            "id": "outdoor",
+            "activityTypes": [
+              "park"
+            ],
+            "outcome": "succeeded-nonempty"
+          }
+        ],
+        "venues": 0,
+        "liveVenues": 0,
+        "lifecycleVenues": 0,
+        "success": true,
+        "elapsedMs": 5391
+      }
+    ],
+    "errors": [
+      {
+        "name": "AssertionError",
+        "message": "At least one real outer patch must merge live venues"
+      }
+    ],
+    "pageErrors": [],
+    "coreUsableMs": 7629,
+    "initialProgress": "Loaded through 15 miles · expanding toward 50 miles…",
+    "coreEligibleCount": 53,
+    "forwardedPublicRpcs": 3,
+    "blockedOuterRpcs": 3
+  }
+}

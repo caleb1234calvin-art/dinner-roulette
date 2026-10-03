@@ -1,3 +1,21 @@
+# Pick For Us — Radial Browser Acceptance Remediation #1 (2026-10-03)
+
+## CURRENT — DATE NIGHT RADIAL LOADING INCOMPLETE — REVIEW REQUIRED
+
+This top entry supersedes historical next actions; all prior continuity is preserved verbatim.
+
+- Required fix branch created directly from7b33c6a. Full authoritya1a6a2d read first. Shared Slider alone changed runtime: accessible naming reaches actual Radix Thumb; single labels and Root behavior preserved; existing price-range thumbs get distinct names. No radial/cache/provider/session/caller/dependency/config/native/catalog change.
+- Real Chromium RED before runtime:8failed/1passed atd02e9a0, run37156707435. Narrow fix1e140777; fresh9/9GREEN run37156889299 proves all supplied names, external labels, range behavior, Home/End/arrows and ticks. Setup-only Vite array failure retained separately.
+- Full fresh gates pass:729JavaScript=658repository+71application,4inherited skips,0failures;14compiledsecurity;183focused not additive; lifecycle154/111/zero gaps;46cache/V-DR-02; typecheck/lint/dependency/casino883/899/60/Android15+4/Python3; safe auth-enabled migration-free build/proof and protected-scope/secret/junk checks.
+- Fresh unchanged controlled harness10/10PASS, run37157157228/job111302786155, exactabaaf680e9e54838e7002ce79f04166c4ebefedf. Zero public-provider traffic, no page errors/overflow, truthful progress, stable options/future venues, radius cancellation and local filters pass. Screenshots reviewed. Historical firstfive passes not counted.
+- Bounded live run37157564340/job111304053048 on exact READY Previewdpl_C692yUYPVQW4UbTKRwUzA1eMyj48 FAILED required nonempty outer-merge demonstration. Core53total/45live, usable7.629s. Both allowed20-mile sectors succeed with0eligible venues. Exactly3publicRPCs,48theoreticalphysicalattemptcap;3furtherouterRPCs deliberately blocked. No extra traffic/retry. A prior launch-guard configuration failure made0RPC and is retained.
+- Product: nearby usability observed, full live acceptance unpassed. Final live filters/overflow assertions not reached; pageErrors empty. Selected50, continuous15, max50completenessunproven. Empty outer successes do not establish a product defect. No speculative fix or assertion weakening.
+- Final incomplete preservation sole parent81194da07b7d6c2da93e39c0735ee498cc149379; resolve own identity from the unique commit adding audit/date-night-radial-loading-browser-acceptance-remediation-1-2026-10-03.json. No successful candidate freeze or verification-readiness claim.
+- Main frozen4d937e58d2a65567b54ac5271915bc85b498898b; productionREADYdpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL unchanged. No promotion/merge/migration. Final report, continuation, exact evidence and raw browser ZIP retained.
+- **NEXT: STOP for review of unmet live outer-merge criterion. Public budget exhausted. Preserve slider/controlled successes; any new live validation or radial diagnosis needs a subsequent scoped decision.** SAFE TO RESUME.
+
+## Prior continuity — preserved verbatim
+
 # Pick For Us — Date Night Radial Loading #1 (2026-10-03)
 
 ## CURRENT — DATE NIGHT RADIAL LOADING INCOMPLETE — REVIEW REQUIRED
