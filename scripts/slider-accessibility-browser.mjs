@@ -25,7 +25,8 @@ const check = async (name, fn) => {
 const slider = name => page.getByRole("slider", { name, exact: true });
 try {
   await page.setContent('<div id="root"></div>');
-  await page.addScriptTag({ content: bundle.output.find(item => item.type === "chunk").code });
+  const chunks = [bundle].flat().flatMap(result => result.output);
+  await page.addScriptTag({ content: chunks.find(item => item.type === "chunk").code });
   await page.getByTestId("distance").waitFor();
   for (const name of ["Travel distance", "Cozy to adventurous", "Familiar to adventurous", "Chill to lively"]) {
     await check(`role=slider named ${name}`, async () => assert.equal(await slider(name).count(), 1));
