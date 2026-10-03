@@ -1,0 +1,11 @@
+{
+  "javascript_disabled": true,
+  "discovery_requests": 0,
+  "default_chromium_navigation": "net::ERR_CERT_AUTHORITY_INVALID",
+  "disposable_browser_ignore_https_errors": {
+    "http_status": 200,
+    "title": "Pick For Us"
+  },
+  "scope": "test browser only; application and hosting TLS settings unchanged",
+  "interpretation": "Browser certificate trust blocked navigation; not a measured provider failure"
+}

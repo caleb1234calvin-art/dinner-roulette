@@ -20,6 +20,9 @@ assert.equal(targetUrl.username + targetUrl.password, "", "Credentials must not 
 const output = checkedOutputPath(process.argv[3] ?? "audit/browser-results/date-night-resilience-live",
   [resolve("audit/browser-results"), "/tmp"], "acceptance output");
 const buildProof = assertBrowserBuild();
+// Disposable browser only: some verification containers terminate HTTPS through
+// a CA that Chromium does not trust. Never change application/platform TLS.
+const ignoreHTTPSErrors = process.env.PFU_BROWSER_IGNORE_HTTPS_ERRORS === "1";
 const manifest = readFileSync(".vercel/output/functions/__server.func/_ssr/ssr.mjs", "utf8");
 const rpcId = [...manifest.matchAll(/"([a-f0-9]{64})": \{\s*functionName: "([^"]+)"/g)]
   .find((match) => match[2] === "searchDateNight_createServerFn_handler")?.[1];
@@ -177,7 +180,7 @@ try {
     executablePath: process.env.PFU_BROWSER_EXECUTABLE_PATH ?? "/tmp/pfu-halloween-browser/chrome-linux64/chrome",
     args: ["--no-sandbox", "--disable-dev-shm-usage", "--no-zygote"] });
   for (const radius of [15, 50]) {
-    const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: "reduce", timezoneId: "America/Chicago" });
+    const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: "reduce", timezoneId: "America/Chicago", ignoreHTTPSErrors });
     context.setDefaultTimeout(10_000);
     context.setDefaultNavigationTimeout(30_000);
     await context.route("**/*", (route) => {
@@ -259,7 +262,8 @@ try {
   assert.equal(rows.length, 12);
 } catch (error) {
   // Error text can include DOM/provider details; only a bounded type/phase is saved.
-  errors.push({ phase: currentPhase, check: checkPhase, kind: error?.name === "AssertionError" ? "acceptance-assertion" : "environment-or-browser-error" });
+  errors.push({ phase: currentPhase, check: checkPhase, kind: error?.name === "AssertionError" ? "acceptance-assertion" : "environment-or-browser-error",
+    networkCode: error?.message?.match(/net::ERR_[A-Z_]+/)?.[0] ?? null });
   console.error("DATE_NIGHT_LIVE_FAILURE " + JSON.stringify(errors.at(-1)));
   process.exitCode = 1;
 } finally {
@@ -267,7 +271,7 @@ try {
   const verdict = { testedAt: new Date().toISOString(), previewOrigin: targetUrl.origin,
     previewDeploymentId: process.env.PFU_PREVIEW_DEPLOYMENT_ID ?? null,
     candidate: process.env.PFU_CANDIDATE_SHA ?? null,
-    buildProof, rows, rpc, localOnly, pageErrors, errors,
+    buildProof, browserTlsVerificationBypassed: ignoreHTTPSErrors, rows, rpc, localOnly, pageErrors, errors,
     passed: errors.length === 0 && rows.length === 12,
     liveContributionObserved: rpc.some((event) => event.response?.liveVenues > 0),
     limitations: ["Venue counts are observations, not invariants.", "No duplicate real request is made to decode captured RPC data.", "Source summaries describe transport responses; UI may combine cached coverage.", "Successful provider recall cannot be established when every live attempt fails."] };

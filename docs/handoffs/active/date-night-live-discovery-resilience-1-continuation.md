@@ -177,4 +177,16 @@ Migration-free production build later: `VITE_AUTH_ENABLED=true node scripts/with
 - Main/production untouched. No merge/promotion/migration/settings change. Non-production automatic Previews only. New live-provider observations: none yet.
 - Resume status: CONTROLLED BROWSER PASSED — REAL PREVIEW ACCESS DIAGNOSIS REQUIRED.
 
-CHECKPOINT INCOMPLETE — READ BLOCKERS BEFORE CONTINUING
+## Save 8 — disposable browser TLS diagnosis resolved
+
+- Repository/branch/frozen base unchanged. Latest pushed `7552fb6c16f6df49e87f7f75c847816f676e24ab`, tree `a84d5e08d1a846de788844bf0fdd19ae792c2f1c`, sole parent `966447ed9d43157876f1a83293148e1e00ca44ce`. This save is its direct sole-parent descendant.
+- M6 navigation-only diagnosis (JavaScript disabled,0 discovery calls) isolated Chromium `net::ERR_CERT_AUTHORITY_INVALID`. Disposable context `ignoreHTTPSErrors:true` returned200/title Pick For Us. Added explicit opt-in `PFU_BROWSER_IGNORE_HTTPS_ERRORS=1` to live harness and bounded normalized network-code capture. No app or platform TLS changes. This exception is recorded in live verdict, never silently applied by default.
+- Changed only `scripts/date-night-resilience-live.mjs`, diagnosis/build logs and continuation. ESLint/diff check PASS. Fresh auth-enabled migration-free build and capture/complete PASS after harness fingerprint change; previous604 deterministic passes still apply to unchanged application code. All4 controlled browser scenarios passed as Save7; screenshots pending final transfer.
+- Worktree coherent with one harness-only change plus evidence before publication; no temporary application instrumentation.20s provider/25s watchdog unchanged.
+- Next action: actual Preview12-row matrix using explicit disposable TLS flag and verified non-production Preview; inspect source/coverage/eligibility/request counts, checkpoint result, then final validation/evidence/freeze.
+- Resume: `VITE_AUTH_ENABLED=true node scripts/browser-build-proof.mjs verify`; `VITE_AUTH_ENABLED=true BROWSER_ALLOW_EXTERNAL_HOST=1 PFU_BROWSER_IGNORE_HTTPS_ERRORS=1 PFU_PREVIEW_DEPLOYMENT_ID=dpl_JBCV767umF9iMBsVoRQQMJQrBkDc PFU_CANDIDATE_SHA=966447ed9d43157876f1a83293148e1e00ca44ce node scripts/date-night-resilience-live.mjs https://dinner-roulette-mmfo9oxhy-minions-9e2c.vercel.app /tmp/pfu-date-night-live-attempt-2`. This Preview has identical application source to newer evidence/harness checkpoints; verify final candidate Preview separately.
+- Blocker resolved for navigation; actual live-provider availability still unmeasured. No public-provider call during diagnosis. No permission/login bypass occurred; Preview is public and non-production.
+- Main/production remain untouched. Current known Preview above, production frozen deployment unchanged. No merge/promotion/migration/settings change.
+- Resume status: CONTROLLED BROWSER PASSED — REAL PREVIEW MATRIX READY TO RETRY.
+
+SAFE TO RESUME FROM THIS CHECKPOINT
