@@ -67,19 +67,25 @@ export function normalizeLifecycleTags(rawTags: Record<string, string>): Record<
 // Necessary carrier contexts for the unchanged classifier. These are acquisition
 // hints only: generic farms/parks/mazes cannot pass through the set unfiltered.
 const CLASSIFICATION_CONTEXTS = {
-  leisure: "bowling_alley|amusement_arcade|miniature_golf|escape_game|ice_rink|park|maze",
-  amenity: "cinema",
-  tourism: "museum|theme_park|attraction|farm",
-  attraction: "haunted_house|haunted_trail|haunted_forest|haunted_attraction|corn_maze|maize_maze|maze|pumpkin_patch",
-  sport: "roller_skating",
-  landuse: "farmyard|farmland",
-};
+  leisure: ["bowling_alley", "amusement_arcade", "miniature_golf", "escape_game", "ice_rink", "park", "maze"],
+  amenity: ["cinema"],
+  tourism: ["museum", "theme_park", "attraction", "farm"],
+  attraction: ["haunted_house", "haunted_trail", "haunted_forest", "haunted_attraction", "corn_maze", "maize_maze", "maze", "pumpkin_patch"],
+  sport: ["roller_skating"],
+  landuse: ["farmyard", "farmland"],
+} as const;
 
 export function lifecycleQueryPrelude(around: string): string {
   const selectors = Object.entries(CLASSIFICATION_CONTEXTS).flatMap(([key, values]) => {
-    const keys = [key, ...(LIFECYCLE_CLASSIFICATION_KEYS.some((candidate) => candidate === key)
-      ? ALL_PREFIXES.map((prefix) => `${prefix}:${key}`) : [])];
-    return keys.map((name) => `nwr["${name}"~"^(${values})$"]${around};`);
+    // Equality selects a key/value index range; a value regex on common active
+    // keys can enumerate the whole key before applying the spatial constraint.
+    const active = values.map((value) => `nwr["${key}"="${value}"]${around};`);
+    // Keep compact acquisition for the specific reconstructable namespaces.
+    // Arbitrary permanent suffixes are still handled by the set predicates below.
+    const prefixed = LIFECYCLE_CLASSIFICATION_KEYS.some((candidate) => candidate === key)
+      ? ALL_PREFIXES.map((prefix) => `nwr["${prefix}:${key}"~"^(${values.join("|")})$"]${around};`)
+      : [];
+    return [...active, ...prefixed];
   });
   return `(\n  ${selectors.join("\n  ")}\n)->.lifecycle_context;\n`;
 }

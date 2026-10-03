@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: query cost: leisure uses the complete finite exact-value carrier in every independent group
+ok 1 - query cost: leisure uses the complete finite exact-value carrier in every independent group
+  ---
+  duration_ms: 3.791132
+  type: 'test'
+  ...
+# Subtest: query cost: amenity uses the complete finite exact-value carrier in every independent group
+ok 2 - query cost: amenity uses the complete finite exact-value carrier in every independent group
+  ---
+  duration_ms: 1.19299
+  type: 'test'
+  ...
+# Subtest: query cost: tourism uses the complete finite exact-value carrier in every independent group
+ok 3 - query cost: tourism uses the complete finite exact-value carrier in every independent group
+  ---
+  duration_ms: 1.465282
+  type: 'test'
+  ...
+# Subtest: query cost: attraction uses the complete finite exact-value carrier in every independent group
+ok 4 - query cost: attraction uses the complete finite exact-value carrier in every independent group
+  ---
+  duration_ms: 1.693977
+  type: 'test'
+  ...
+# Subtest: query cost: sport uses the complete finite exact-value carrier in every independent group
+ok 5 - query cost: sport uses the complete finite exact-value carrier in every independent group
+  ---
+  duration_ms: 1.743151
+  type: 'test'
+  ...
+# Subtest: query cost: landuse uses the complete finite exact-value carrier in every independent group
+ok 6 - query cost: landuse uses the complete finite exact-value carrier in every independent group
+  ---
+  duration_ms: 1.652654
+  type: 'test'
+  ...
+# Subtest: query cost: exact acquisition has no extra keys, duplicate clauses or unbounded selectors
+ok 7 - query cost: exact acquisition has no extra keys, duplicate clauses or unbounded selectors
+  ---
+  duration_ms: 2.732104
+  type: 'test'
+  ...
+# Subtest: query cost: the structure guard rejects the diagnosed cinema regex even when shorter
+ok 8 - query cost: the structure guard rejects the diagnosed cinema regex even when shorter
+  ---
+  duration_ms: 1.969573
+  type: 'test'
+  ...
+# Subtest: query cost: positive query statements and prefixed carrier statements remain unchanged for every measured plan
+ok 9 - query cost: positive query statements and prefixed carrier statements remain unchanged for every measured plan
+  ---
+  duration_ms: 5.03503
+  type: 'test'
+  ...
+# Subtest: query cost: all 154 audited interpretations and all 111 negative acquisitions survive every requested group
+ok 10 - query cost: all 154 audited interpretations and all 111 negative acquisitions survive every requested group
+  ---
+  duration_ms: 268.609297
+  type: 'test'
+  ...
+# Subtest: query cost: arbitrary permanent suffixes and non-finite lifecycle values remain set-bounded and reachable
+ok 11 - query cost: arbitrary permanent suffixes and non-finite lifecycle values remain set-bounded and reachable
+  ---
+  duration_ms: 14.873018
+  type: 'test'
+  ...
+# Subtest: query cost: equality preserves old acquisition for finite values and near misses, with and without lifecycle flags
+ok 12 - query cost: equality preserves old acquisition for finite values and near misses, with and without lifecycle flags
+  ---
+  duration_ms: 489.236295
+  type: 'test'
+  ...
+# Subtest: query cost: four independent groups and the four fixed mirrors remain unchanged
+ok 13 - query cost: four independent groups and the four fixed mirrors remain unchanged
+  ---
+  duration_ms: 0.488177
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1496.948711

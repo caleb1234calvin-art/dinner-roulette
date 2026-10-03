@@ -75,8 +75,8 @@ test("all Date Night database selectors use exact keys; lifecycle regex keys are
     assert.match(query, /\[timeout:20\]/);
     assert.ok(acquisitionClauses(query).every((line) => /^nwr\.(seasonal|lifecycle)_context\[/.test(line) || line.endsWith("(around:80467,37.176447,-94.310223);")));
   }
-  assert.equal(acquisitionClauses(queryFor(["haunted-house"])).length, 49);
-  assert.equal(acquisitionClauses(queryFor(seasonal)).length, 53);
+  assert.equal(acquisitionClauses(queryFor(["haunted-house"])).length, 66);
+  assert.equal(acquisitionClauses(queryFor(seasonal)).length, 70);
 });
 
 test("all 6167 canonical fixtures preserve selected positive semantics and broad identity-negative lifecycle acquisition", () => {

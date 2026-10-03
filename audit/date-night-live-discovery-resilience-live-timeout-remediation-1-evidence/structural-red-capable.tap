@@ -1,0 +1,238 @@
+TAP version 13
+# Subtest: query cost: leisure uses the complete finite exact-value carrier in every independent group
+not ok 1 - query cost: leisure uses the complete finite exact-value carrier in every independent group
+  ---
+  duration_ms: 2.765984
+  type: 'test'
+  location: '/workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:41:3'
+  failureType: 'testCodeFailure'
+  error: 'Finite active carrier must use exact key/value index acquisition: nwr["leisure"~"^(bowling_alley|amusement_arcade|miniature_golf|escape_game|ice_rink|park|maze)$"](around:80467,43,-79);'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: ~
+  operator: '=='
+  stack: |-
+    file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:35:12
+    Array.map (<anonymous>)
+    exactActive (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:33:17)
+    TestContext.<anonymous> (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:44:22)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.start (node:internal/test_runner/test:1242:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: query cost: amenity uses the complete finite exact-value carrier in every independent group
+not ok 2 - query cost: amenity uses the complete finite exact-value carrier in every independent group
+  ---
+  duration_ms: 0.279311
+  type: 'test'
+  location: '/workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:41:3'
+  failureType: 'testCodeFailure'
+  error: 'Finite active carrier must use exact key/value index acquisition: nwr["leisure"~"^(bowling_alley|amusement_arcade|miniature_golf|escape_game|ice_rink|park|maze)$"](around:80467,43,-79);'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: ~
+  operator: '=='
+  stack: |-
+    file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:35:12
+    Array.map (<anonymous>)
+    exactActive (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:33:17)
+    TestContext.<anonymous> (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:44:22)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: query cost: tourism uses the complete finite exact-value carrier in every independent group
+not ok 3 - query cost: tourism uses the complete finite exact-value carrier in every independent group
+  ---
+  duration_ms: 0.208645
+  type: 'test'
+  location: '/workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:41:3'
+  failureType: 'testCodeFailure'
+  error: 'Finite active carrier must use exact key/value index acquisition: nwr["leisure"~"^(bowling_alley|amusement_arcade|miniature_golf|escape_game|ice_rink|park|maze)$"](around:80467,43,-79);'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: ~
+  operator: '=='
+  stack: |-
+    file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:35:12
+    Array.map (<anonymous>)
+    exactActive (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:33:17)
+    TestContext.<anonymous> (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:44:22)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: query cost: attraction uses the complete finite exact-value carrier in every independent group
+not ok 4 - query cost: attraction uses the complete finite exact-value carrier in every independent group
+  ---
+  duration_ms: 0.182445
+  type: 'test'
+  location: '/workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:41:3'
+  failureType: 'testCodeFailure'
+  error: 'Finite active carrier must use exact key/value index acquisition: nwr["leisure"~"^(bowling_alley|amusement_arcade|miniature_golf|escape_game|ice_rink|park|maze)$"](around:80467,43,-79);'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: ~
+  operator: '=='
+  stack: |-
+    file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:35:12
+    Array.map (<anonymous>)
+    exactActive (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:33:17)
+    TestContext.<anonymous> (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:44:22)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: query cost: sport uses the complete finite exact-value carrier in every independent group
+not ok 5 - query cost: sport uses the complete finite exact-value carrier in every independent group
+  ---
+  duration_ms: 0.182045
+  type: 'test'
+  location: '/workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:41:3'
+  failureType: 'testCodeFailure'
+  error: 'Finite active carrier must use exact key/value index acquisition: nwr["leisure"~"^(bowling_alley|amusement_arcade|miniature_golf|escape_game|ice_rink|park|maze)$"](around:80467,43,-79);'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: ~
+  operator: '=='
+  stack: |-
+    file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:35:12
+    Array.map (<anonymous>)
+    exactActive (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:33:17)
+    TestContext.<anonymous> (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:44:22)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: query cost: landuse uses the complete finite exact-value carrier in every independent group
+not ok 6 - query cost: landuse uses the complete finite exact-value carrier in every independent group
+  ---
+  duration_ms: 0.347294
+  type: 'test'
+  location: '/workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:41:3'
+  failureType: 'testCodeFailure'
+  error: 'Finite active carrier must use exact key/value index acquisition: nwr["leisure"~"^(bowling_alley|amusement_arcade|miniature_golf|escape_game|ice_rink|park|maze)$"](around:80467,43,-79);'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: ~
+  operator: '=='
+  stack: |-
+    file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:35:12
+    Array.map (<anonymous>)
+    exactActive (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:33:17)
+    TestContext.<anonymous> (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:44:22)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: query cost: exact acquisition has no extra keys, duplicate clauses or unbounded selectors
+not ok 7 - query cost: exact acquisition has no extra keys, duplicate clauses or unbounded selectors
+  ---
+  duration_ms: 0.432874
+  type: 'test'
+  location: '/workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:51:1'
+  failureType: 'testCodeFailure'
+  error: 'Finite active carrier must use exact key/value index acquisition: nwr["leisure"~"^(bowling_alley|amusement_arcade|miniature_golf|escape_game|ice_rink|park|maze)$"](around:80467,43,-79);'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: ~
+  operator: '=='
+  stack: |-
+    file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:35:12
+    Array.map (<anonymous>)
+    exactActive (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:33:17)
+    TestContext.<anonymous> (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:53:20)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: query cost: the structure guard rejects the diagnosed cinema regex even when shorter
+not ok 8 - query cost: the structure guard rejects the diagnosed cinema regex even when shorter
+  ---
+  duration_ms: 0.583711
+  type: 'test'
+  location: '/workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:63:1'
+  failureType: 'testCodeFailure'
+  error: 'Finite active carrier must use exact key/value index acquisition: nwr["leisure"~"^(bowling_alley|amusement_arcade|miniature_golf|escape_game|ice_rink|park|maze)$"](around:80467,43,-79);'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: ~
+  operator: '=='
+  stack: |-
+    file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:35:12
+    Array.map (<anonymous>)
+    exactActive (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:33:17)
+    TestContext.<anonymous> (file:///workspace/scratch/e566fa94f5af/dinner-roulette/scripts/date-night-query-cost.test.mjs:65:3)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: query cost: positive query statements and prefixed carrier statements remain unchanged for every measured plan
+ok 9 - query cost: positive query statements and prefixed carrier statements remain unchanged for every measured plan
+  ---
+  duration_ms: 5.081489
+  type: 'test'
+  ...
+# Subtest: query cost: all 154 audited interpretations and all 111 negative acquisitions survive every requested group
+ok 10 - query cost: all 154 audited interpretations and all 111 negative acquisitions survive every requested group
+  ---
+  duration_ms: 225.899959
+  type: 'test'
+  ...
+# Subtest: query cost: arbitrary permanent suffixes and non-finite lifecycle values remain set-bounded and reachable
+ok 11 - query cost: arbitrary permanent suffixes and non-finite lifecycle values remain set-bounded and reachable
+  ---
+  duration_ms: 12.740899
+  type: 'test'
+  ...
+# Subtest: query cost: equality preserves old acquisition for finite values and near misses, with and without lifecycle flags
+ok 12 - query cost: equality preserves old acquisition for finite values and near misses, with and without lifecycle flags
+  ---
+  duration_ms: 461.743354
+  type: 'test'
+  ...
+# Subtest: query cost: four independent groups and the four fixed mirrors remain unchanged
+ok 13 - query cost: four independent groups and the four fixed mirrors remain unchanged
+  ---
+  duration_ms: 0.602439
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 5
+# fail 8
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1487.419996
