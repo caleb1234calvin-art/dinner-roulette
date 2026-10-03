@@ -1,3 +1,23 @@
+# Pick For Us — Date Night Live Discovery Resilience Verification Remediation #1 (2026-10-02)
+
+This TOP entry supersedes the prior Date Night resilience next action. Historical continuity below is preserved verbatim.
+
+## CURRENT — DATE NIGHT LIVE DISCOVERY RESILIENCE VERIFICATION REMEDIATED — AWAITING INDEPENDENT REVERIFICATION
+
+- Failed immutable candidate `e84acc471f57dff430f73368390442e585f93637` remains preserved as failed independent-verification history. Verification reproduced two blockers: category-limited lifecycle companions could resurrect a closed seasonal identity, and LRU eviction could restore superseded Corn coverage.
+- Remediation branch `fix/date-night-live-discovery-resilience-verification-remediation-1` was created directly from that failed candidate. Runtime remediation is limited to `src/lib/date-night/provider-evidence.ts`, `src/lib/date-night/query-plan.ts`, and `src/lib/date-night/cache.ts`; supporting tests/harness fixtures and separate evidence were added. Provider list, hedge schedule, 8s attempt cap, 20s provider deadline, 25s client watchdog, saved catalogs, Dinner, Nightlife, package/lock, auth/database, Vercel configuration and Android/native product behavior remain unchanged.
+- V-DR-01 is closed by category-independent bounded lifecycle-negative companion acquisition while affirmative category queries stay narrow. The real query path was reproduced RED first, then query/lifecycle **32/32**, seasonal **24/24**, and partial-results **12/12** passed. Positive seasonal semantics retain the 6,167 fixture comparisons.
+- V-DR-02 is closed by successful-admission supersession invalidation: newly successful category coverage removes that category from older compatible cache entries before normal LRU/aggregate eviction. This prevents evicted valid-empty coverage from exposing older superseded Corn data while preserving unrelated coverage and lifecycle-negative evidence. Cache **46/46** and client lifecycle **54/54** passed after retained RED evidence.
+- Full corrected validation passed: **641 JavaScript = 570 repository + 71 application, 4 inherited skips, 0 failures**; compiled TanStack security **14/14**; typecheck; changed-code lint; diff check; dependencies; casino **883 canonical / 899 serialized / 60 catalogs**; Android **15 launcher / 4 web icons**; Python **3/3**; protected-scope/secret/generated-junk checks; and the auth-enabled migration-free production build/proof.
+- Controlled real-browser/RPC acceptance passed **4/4**: second-mirror win, third-mirror win, partial groups and all-stall fallback, with bounded loading, truthful source/partial state, expected cancellation, Open Now reuse and no mobile overflow.
+- Bounded live Preview acceptance passed the full **12-row 15/50-mile matrix with exactly two discovery RPCs** on validated checkpoint `32e00be55c2cff6a5528d8a506d9dc3b1058821d`. All four groups succeeded at both radii; 15-mile seasonal was valid-empty and 50-mile seasonal was nonempty with one observed live Corn Maze. Counts are observations, not invariants. Seasonal subsets/Open Now/mood/favorites/Fewer Parks caused zero additional RPCs.
+- Validated Preview: `dpl_2StAVNmaECY6k3HKiaeXdTyFoQVv`, `https://dinner-roulette-4kk3544xy-minions-9e2c.vercel.app`, READY/non-production/exact `32e00be...`. Later evidence-only checkpoint Preview `dpl_7QHUdUNmBVAtJqcEkfR8zgiM7TUi` is READY/non-production/exact `444a68dd17e058e11778f805311a768986481c0c`. Disposable Chromium required explicit HTTPS-error tolerance because of its CA trust; application/Vercel TLS was not changed.
+- Main remains frozen at `4d937e58d2a65567b54ac5271915bc85b498898b`; production remains `dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL` at that SHA. No merge, promotion, production deployment, migration or settings mutation occurred.
+- Final evidence: `audit/date-night-live-discovery-resilience-verification-remediation-1-2026-10-02.md` / `.json`, plus the dedicated evidence directory and continuation. The immutable candidate is the unique commit introducing the final remediation JSON with sole parent `444a68dd17e058e11778f805311a768986481c0c`; resolve its literal SHA/tree from Git history and report them without amending the commit.
+- **NEXT: STOP. A fresh independent reverifier must verify the new immutable SHA/tree/sole parent before any main/production decision.** This checkpoint does not authorize merge, promotion, deployment, migration, signing or publication.
+
+## Prior continuity — preserved verbatim
+
 # Pick For Us — Date Night Live Discovery Resilience Remediation #1 (2026-10-02)
 
 This TOP entry supersedes earlier next actions. Historical continuity below is preserved verbatim.

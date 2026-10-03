@@ -73,3 +73,18 @@ SAFE TO RESUME FROM THIS CHECKPOINT
 - Next: publish/read back this validation checkpoint, write separate final MD/JSON and current AI continuity entry, refresh final scope/privacy/diff/proof checks, freeze new immutable candidate and STOP for independent reverification. No additional source changes or live tests needed absent a concrete new failure.
 
 SAFE TO RESUME FROM THIS CHECKPOINT
+
+
+## Save 6 — FINAL EVIDENCE FREEZE PREPARED
+
+- Parent validation checkpoint before final freeze: `444a68dd17e058e11778f805311a768986481c0c`, tree `892f33c418d071d06f90c4e52f9f913667a38283`, sole parent `32e00be55c2cff6a5528d8a506d9dc3b1058821d`. Branch readback was identical to this checkpoint before finalization.
+- Finalization added only the remediation MD/JSON, a TOP AI continuity entry, this continuation save, and a machine-readable finalization readback. No runtime/test/build configuration source changed after the validated checkpoint.
+- Scope readback from failed candidate through the validation checkpoint confirms only three runtime files changed: `provider-evidence.ts`, `query-plan.ts`, and `cache.ts`; the remaining differences are focused tests/harness fixtures, evidence and continuity. The remediation branch is linear and remains ahead of the failed candidate with no merge.
+- Existing completed validation remains authoritative: 641 JS / 4 inherited skips / 0 failures; security14; focused query32, seasonal24, cache46, partial12, partial-UI2, client54, hedge19, provider41; typecheck/lint/diff/build/dependency/casino/Android/Python/protected-scope all PASS.
+- Existing completed browser acceptance remains authoritative: controlled4/4 and live12/12 with two public discovery RPCs. No additional public-provider calls were made during finalization.
+- Fresh finalization readback confirmed main still `4d937e58d2a65567b54ac5271915bc85b498898b`, production still READY at `dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL` / frozen main, and the latest evidence-only branch Preview `dpl_7QHUdUNmBVAtJqcEkfR8zgiM7TUi` READY/non-production/exact `444a68dd...`.
+- Final report intentionally does not embed its own future commit/tree hash. The unique commit introducing `audit/date-night-live-discovery-resilience-verification-remediation-1-2026-10-02.json` is the immutable reverification target; its literal SHA/tree/sole parent are read back after publication and reported externally without amendment.
+- Main/production untouched. No merge/promotion/manual deployment/settings change/migration. No further implementation or live-provider probing is authorized absent a new independently reproduced defect.
+- Final resume state: `DATE NIGHT LIVE DISCOVERY RESILIENCE VERIFICATION REMEDIATED — AWAITING INDEPENDENT REVERIFICATION`.
+
+SAFE TO RESUME FROM THIS CHECKPOINT

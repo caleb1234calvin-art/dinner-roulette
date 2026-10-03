@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "checked_against_parent": "444a68dd17e058e11778f805311a768986481c0c",
+  "branch_head_before_freeze": "444a68dd17e058e11778f805311a768986481c0c",
+  "branch_head_match": true,
+  "parent_tree": "892f33c418d071d06f90c4e52f9f913667a38283",
+  "failed_candidate": "e84acc471f57dff430f73368390442e585f93637",
+  "failed_to_parent_commits_ahead": 5,
+  "failed_to_parent_behind": 0,
+  "runtime_changed_paths": [
+    "src/lib/date-night/cache.ts",
+    "src/lib/date-night/provider-evidence.ts",
+    "src/lib/date-night/query-plan.ts"
+  ],
+  "main_sha": "4d937e58d2a65567b54ac5271915bc85b498898b",
+  "production": {
+    "deployment_id": "dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL",
+    "sha": "4d937e58d2a65567b54ac5271915bc85b498898b",
+    "state": "READY",
+    "target": "production"
+  },
+  "evidence_only_preview": {
+    "deployment_id": "dpl_7QHUdUNmBVAtJqcEkfR8zgiM7TUi",
+    "sha": "444a68dd17e058e11778f805311a768986481c0c",
+    "state": "READY",
+    "target": null
+  },
+  "prior_validation": {
+    "javascript_passed": 641,
+    "failed": 0,
+    "inherited_skips": 4,
+    "controlled_browser": "4/4 PASS",
+    "live_matrix": "12/12 PASS with 2 discovery RPCs",
+    "protected_scope": "PASS",
+    "secrets_generated_junk": "PASS",
+    "build_proof": "PASS"
+  },
+  "finalization_mutations": "Documentation/evidence/continuity only. No additional runtime code, tests, providers, catalogs, configuration, production, migration or public-provider calls."
+}

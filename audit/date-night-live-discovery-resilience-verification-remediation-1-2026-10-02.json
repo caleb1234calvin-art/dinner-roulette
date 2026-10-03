@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "report_kind": "verification-remediation-final-evidence",
+  "status": "DATE NIGHT LIVE DISCOVERY RESILIENCE VERIFICATION REMEDIATED — AWAITING INDEPENDENT REVERIFICATION",
+  "promotion_authorized": false,
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "branch": "fix/date-night-live-discovery-resilience-verification-remediation-1",
+  "instruction": {
+    "branch": "handoff/date-night-live-discovery-resilience-verification-remediation-1",
+    "commit": "5940e83ff4089a5259bfbcf5f2857310b0858dff",
+    "path": "docs/handoffs/active/date-night-live-discovery-resilience-verification-remediation-1.md"
+  },
+  "frozen_main": "4d937e58d2a65567b54ac5271915bc85b498898b",
+  "failed_candidate": {
+    "sha": "e84acc471f57dff430f73368390442e585f93637",
+    "tree": "098458ffbd62234fa4575313d1c6e3d1afd00ec9",
+    "sole_parent": "b7487e8832e6f4a0b8ec5a8352c9db31586324c4",
+    "verification_state": "FAILED"
+  },
+  "blockers": {
+    "V-DR-01": {
+      "title": "Cross-category lifecycle evidence omitted by narrowed acquisition",
+      "reproduced_red": true,
+      "fixed": true,
+      "fix": "Category-independent bounded lifecycle-negative companion acquisition while affirmative clauses remain selected-category-specific.",
+      "runtime_paths": [
+        "src/lib/date-night/provider-evidence.ts",
+        "src/lib/date-night/query-plan.ts"
+      ],
+      "green": {
+        "query_lifecycle": 32,
+        "seasonal": 24,
+        "partial_results": 12,
+        "semantic_comparisons": 6167
+      }
+    },
+    "V-DR-02": {
+      "title": "Superseded cache coverage restored after LRU eviction",
+      "reproduced_red": true,
+      "fixed": true,
+      "fix": "Successful admission removes newly covered categories from older compatible cache entries before ordinary eviction; conservative refetch replaces stale resurrection.",
+      "runtime_paths": [
+        "src/lib/date-night/cache.ts"
+      ],
+      "green": {
+        "cache": 46,
+        "client_lifecycle": 54
+      }
+    }
+  },
+  "runtime_scope": [
+    "src/lib/date-night/provider-evidence.ts",
+    "src/lib/date-night/query-plan.ts",
+    "src/lib/date-night/cache.ts"
+  ],
+  "unchanged_boundaries": {
+    "provider_list": true,
+    "hedge_offsets_ms": [
+      0,
+      1500,
+      3000,
+      4500
+    ],
+    "attempt_deadline_ms": 8000,
+    "provider_deadline_ms": 20000,
+    "client_watchdog_ms": 25000,
+    "saved_catalogs": true,
+    "dinner": true,
+    "nightlife": true,
+    "package_lock": true,
+    "auth_database": true,
+    "vercel_configuration": true,
+    "android_native_product_behavior": true
+  },
+  "validated_checkpoint": {
+    "sha": "32e00be55c2cff6a5528d8a506d9dc3b1058821d",
+    "tree": "e4ee1be81538257836eed65d1e9c009f84d14a3b",
+    "validation": {
+      "javascript_passed": 641,
+      "repository_passed": 570,
+      "application_passed": 71,
+      "inherited_skips": 4,
+      "failed": 0,
+      "security_passed": 14,
+      "query": 32,
+      "seasonal": 24,
+      "cache": 46,
+      "partial_results": 12,
+      "partial_ui": 2,
+      "client_lifecycle": 54,
+      "hedged_provider": 19,
+      "provider_deadlines": 41,
+      "typecheck": "PASS",
+      "lint": "PASS",
+      "diff_check": "PASS",
+      "dependencies": "PASS",
+      "casino": {
+        "canonical": 883,
+        "serialized": 899,
+        "catalogs": 60
+      },
+      "android": {
+        "launcher_resources": 15,
+        "web_icons": 4
+      },
+      "python_native": {
+        "passed": 3,
+        "failed": 0
+      },
+      "protected_scope_secret_junk": "PASS",
+      "migration_free_auth_build": "PASS"
+    },
+    "build_proof": {
+      "source_sha256": "e4bda69121b000a0a6f89dbd119c53a68c7a5756b5db6fc06c0e2cadce157cad",
+      "output_sha256": "1af3eb20a0674cc21d9247af9f6b86256c82213acfa7161dea45bc80f659f270"
+    }
+  },
+  "controlled_browser": {
+    "passed": true,
+    "scenarios": 4,
+    "second_mirror_ms": 1582,
+    "third_mirror_ms": 3091,
+    "partial_groups_ms": 12508,
+    "all_stall_ms": 12504,
+    "public_provider_calls": 0
+  },
+  "real_preview_acceptance": {
+    "passed": true,
+    "deployment_id": "dpl_2StAVNmaECY6k3HKiaeXdTyFoQVv",
+    "url": "https://dinner-roulette-4kk3544xy-minions-9e2c.vercel.app",
+    "commit": "32e00be55c2cff6a5528d8a506d9dc3b1058821d",
+    "rows": 12,
+    "discovery_rpcs": 2,
+    "fifteen_miles": {
+      "live_identities_observed": 45,
+      "seasonal": "succeeded-empty",
+      "all_groups_successful": true,
+      "rpc_ms": 4227
+    },
+    "fifty_miles": {
+      "live_identities_observed": 235,
+      "seasonal": "succeeded-nonempty",
+      "live_corn_maze_observed": 1,
+      "all_groups_successful": true,
+      "rpc_ms": 7842
+    },
+    "counts_are_observations_not_invariants": true,
+    "local_subset_filter_refetches": 0,
+    "normal_test_chromium_tls_failure": "ERR_CERT_AUTHORITY_INVALID before discovery; accepted run used explicit disposable-browser HTTPS-error tolerance only"
+  },
+  "validation_evidence_checkpoint": {
+    "sha": "444a68dd17e058e11778f805311a768986481c0c",
+    "tree": "892f33c418d071d06f90c4e52f9f913667a38283",
+    "sole_parent": "32e00be55c2cff6a5528d8a506d9dc3b1058821d",
+    "role": "Evidence/continuity-only checkpoint after completed validation"
+  },
+  "final_candidate": {
+    "sha": null,
+    "tree": null,
+    "sole_parent": "444a68dd17e058e11778f805311a768986481c0c",
+    "identity": "Unique commit introducing this JSON; resolve after publication without amendment."
+  },
+  "production_boundary": {
+    "main_sha": "4d937e58d2a65567b54ac5271915bc85b498898b",
+    "production_deployment_id": "dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL",
+    "production_sha": "4d937e58d2a65567b54ac5271915bc85b498898b",
+    "production_state": "READY",
+    "changed": false,
+    "merge": false,
+    "promotion": false,
+    "migration": false,
+    "settings_change": false
+  },
+  "latest_evidence_only_preview": {
+    "deployment_id": "dpl_7QHUdUNmBVAtJqcEkfR8zgiM7TUi",
+    "sha": "444a68dd17e058e11778f805311a768986481c0c",
+    "state": "READY",
+    "target": null
+  },
+  "evidence_paths": {
+    "continuation": "docs/handoffs/active/date-night-live-discovery-resilience-verification-remediation-1-continuation.md",
+    "validation_results": "audit/date-night-live-discovery-resilience-verification-remediation-1-evidence/validation-results.json",
+    "structural_results": "audit/date-night-live-discovery-resilience-verification-remediation-1-evidence/structural-validation-results.json",
+    "controlled_browser": "audit/date-night-live-discovery-resilience-verification-remediation-1-evidence/controlled-browser.json",
+    "live_browser": "audit/date-night-live-discovery-resilience-verification-remediation-1-evidence/live-browser-accepted.json"
+  },
+  "limitations": [
+    "Public-provider counts are volatile observations, not completeness guarantees.",
+    "Accepted browser used explicit disposable test-only HTTPS-error tolerance after Chromium CA trust failure; application/Vercel TLS was unchanged.",
+    "No further public-provider probes were made during finalization.",
+    "Fresh independent reverification is required before any main/production decision."
+  ],
+  "next_action": "STOP for fresh independent reverification; no merge, promotion, deployment or migration authorized."
+}
