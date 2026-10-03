@@ -1,0 +1,47 @@
+✔ radial IDs and geometry are deterministic; larger plans preserve the exact inner prefix (6.772196ms)
+✔ radial partition has no sampled holes or double owners at 37.176447,-94.310223 (174.006299ms)
+✔ radial partition has no sampled holes or double owners at 0,179.99 (105.774888ms)
+✔ radial partition has no sampled holes or double owners at 80,-179.99 (131.134863ms)
+✔ radial partition has no sampled holes or double owners at -80,30 (115.424015ms)
+✔ every sector corner fits its bounded circle; no patch approaches a 50-mile monolith (0.527457ms)
+✔ exact poles have a deterministic bearing frame and complete bounded coverage (3.66949ms)
+✔ out-of-radius points have no logical owner and overlap maps to only one patch (0.391641ms)
+✔ server resolves only enumerated patch IDs and rejects arbitrary geometry and hostile inputs (0.760308ms)
+✔ continuous coverage requires every inner patch and requested category; outer success cannot fill a gap (2.523029ms)
+✔ eviction/removal of a required proof makes continuous coverage incomplete; smaller maximum clips the claim (0.535999ms)
+✖ actual patch RPC derives bounded geometry on the server and clips overlapping positive rows (19.487604ms)
+✔ patch RPC rejects geometry/query injection, unknown IDs, and unauthorized outer patches before fetch (2.643121ms)
+✔ patch group valid-empty remains authoritative and is not saved fallback (2.049294ms)
+✔ patch provider cancellation forwards request signal, aborts attempts and stops hedges (199.792157ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 14
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1292.04373
+
+✖ failing tests:
+
+test at scripts/date-night-radial-search.test.mjs:13:1
+✖ actual patch RPC derives bounded geometry on the server and clips overlapping positive rows (19.487604ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    [
+      'date-night-osm-node-1',
+  +   'date-night-osm-node-2'
+  -   'date-night-osm-node-3'
+    ]
+
+      at TestContext.<anonymous> (file:///workspace/scratch/3701dbff1050/dinner-roulette/scripts/date-night-radial-search.test.mjs:29:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'date-night-osm-node-1', 'date-night-osm-node-2' ],
+    expected: [ 'date-night-osm-node-1', 'date-night-osm-node-3' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

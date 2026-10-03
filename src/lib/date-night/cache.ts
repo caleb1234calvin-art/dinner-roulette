@@ -1,5 +1,6 @@
 import { mergeDateNight } from "./identity";
 import { buildDateNightQueryPlan, normalizeDateNightActivityTypes } from "./query-plan";
+import { DATE_NIGHT_RADIAL_VERSION, dateNightPatchOwns, resolveDateNightPatch } from "./radial-plan";
 import type {
   ConcreteDateNightType,
   DateNightGroupCoverage,
@@ -21,12 +22,15 @@ export interface DateNightAcquisition {
   halloweenActive: boolean;
   activityTypes: readonly DateNightTypeId[];
   semanticVersion?: string;
+  /** Logical positive authority; legacy disk authority is a separate namespace. */
+  patchId?: string;
 }
 
 export interface DateNightCacheSnapshot {
   response: DateNightSearchResponse | null;
   missingActivityTypes: ConcreteDateNightType[];
   negativeEvidence?: DateNightPlace[];
+  acquiredAt?: number;
 }
 
 /** Persisted UI settings can outlive category names. Recover locally without
@@ -107,6 +111,21 @@ export function createDateNightDiscoveryCache({
 }: { now?: () => number; ttlMs?: number; maxEntries?: number; maxVenues?: number } = {}) {
   let entries: CacheEntry[] = [];
   let sequence = 0;
+  // If a spatial negative is evicted, retire conflicting older positives before
+  // removing its proof. Eviction must not turn a known closed venue back on.
+  // Expiry retains the legacy freshness policy; a newer acquisition can refresh
+  // a venue after old evidence expires. This is destructive retirement, no
+  // unbounded tombstone registry or rejuvenated negative TTL.
+  const retireEvictedNegative = (removed: CacheEntry) => {
+    if (!removed.acquisition.patchId) return;
+    const negatives = removed.venues.filter(place => place.lifecycle);
+    if (!negatives.length) return;
+    for (const entry of entries) {
+      if (entry === removed || !sameSignature(entry, removed.acquisition)) continue;
+      entry.venues = entry.venues.filter(place => place.lifecycle ||
+        !negatives.some(negative => mergeDateNight([place], [negative]).length === 1));
+    }
+  };
   const prune = (at: number) => {
     entries = entries.filter((entry) => at >= entry.acquiredAt && at - entry.acquiredAt < ttlMs);
   };
@@ -118,7 +137,8 @@ export function createDateNightDiscoveryCache({
         (query.semanticVersion ?? DATE_NIGHT_ACQUISITION_VERSION);
   };
   const compatible = (entry: CacheEntry, query: DateNightAcquisition) =>
-    sameSignature(entry, query) && entry.acquisition.radiusMiles >= query.radiusMiles;
+    sameSignature(entry, query) && entry.acquisition.patchId === query.patchId &&
+      (Boolean(query.patchId) || entry.acquisition.radiusMiles >= query.radiusMiles);
   return {
     read(query: DateNightAcquisition): DateNightCacheSnapshot {
       prune(now());
@@ -158,7 +178,9 @@ export function createDateNightDiscoveryCache({
         // full provenance/classification on every included identity.
         return entry.venues.filter((place) => place.activityTypes.some((type) => covered.includes(type)));
       }), ...negativeEvidence]);
-      return { missingActivityTypes, negativeEvidence, response: { venues, source: liveSource(venues), discovery: { groups, partial: false } } };
+      return { missingActivityTypes, negativeEvidence,
+        acquiredAt: Math.min(...usedEntries.map(entry => entry.acquiredAt)),
+        response: { venues, source: liveSource(venues), discovery: { groups, partial: false } } };
     },
     store(query: DateNightAcquisition, response: DateNightSearchResponse): boolean {
       const at = now();
@@ -166,6 +188,8 @@ export function createDateNightDiscoveryCache({
       // Missing metadata, complete fallback and prior cache assemblies cannot
       // become proof that a provider acquired a category.
       if (response.source === "fallback" || !response.discovery || response.venues.length > maxVenues) return false;
+      const patch = query.patchId ? resolveDateNightPatch(query, query.radiusMiles, query.patchId) : undefined;
+      if (patch && (response.patch?.id !== patch.id || response.patch.version !== DATE_NIGHT_RADIAL_VERSION)) return false;
       const requested = normalizeDateNightActivityTypes(query.activityTypes, query.halloweenActive);
       const groups = response.discovery.groups.filter(succeeded).map((group) => ({
         ...group, activityTypes: group.activityTypes.filter((type) => requested.includes(type)),
@@ -177,7 +201,7 @@ export function createDateNightDiscoveryCache({
       // require a later wider refetch, but can never make old coverage fresh again.
       const superseded = new Set(groups.flatMap((group) => group.activityTypes));
       for (const entry of entries) {
-        if (!sameSignature(entry, query)) continue;
+        if (!sameSignature(entry, query) || entry.acquisition.patchId !== query.patchId) continue;
         entry.groups = entry.groups.map((group) => ({
           ...group, activityTypes: group.activityTypes.filter((type) => !superseded.has(type)),
         })).filter((group) => group.activityTypes.length > 0);
@@ -186,9 +210,11 @@ export function createDateNightDiscoveryCache({
       }
       const admitted = ++sequence;
       entries.push({ acquisition: { ...query, activityTypes: [...query.activityTypes] },
-        venues: response.venues, groups, acquiredAt: at, admitted, used: admitted });
+        venues: patch ? response.venues.filter(place => place.lifecycle || dateNightPatchOwns(query, patch, place)) : response.venues,
+        groups, acquiredAt: at, admitted, used: admitted });
       while (entries.length > maxEntries || entries.reduce((sum, entry) => sum + entry.venues.length, 0) > maxVenues) {
         const oldest = entries.reduce((a, b) => a.used < b.used ? a : b);
+        retireEvictedNegative(oldest);
         entries.splice(entries.indexOf(oldest), 1);
       }
       return true;

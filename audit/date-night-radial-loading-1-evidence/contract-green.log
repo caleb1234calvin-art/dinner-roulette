@@ -1,0 +1,23 @@
+✔ radial IDs and geometry are deterministic; larger plans preserve the exact inner prefix (3.211498ms)
+✔ radial partition has no sampled holes or double owners at 37.176447,-94.310223 (161.132484ms)
+✔ radial partition has no sampled holes or double owners at 0,179.99 (97.475816ms)
+✔ radial partition has no sampled holes or double owners at 80,-179.99 (124.990039ms)
+✔ radial partition has no sampled holes or double owners at -80,30 (103.718486ms)
+✔ every sector corner fits its bounded circle; no patch approaches a 50-mile monolith (0.492454ms)
+✔ exact poles have a deterministic bearing frame and complete bounded coverage (3.65642ms)
+✔ out-of-radius points have no logical owner and overlap maps to only one patch (0.375657ms)
+✔ server resolves only enumerated patch IDs and rejects arbitrary geometry and hostile inputs (0.671925ms)
+✔ continuous coverage requires every inner patch and requested category; outer success cannot fill a gap (2.373303ms)
+✔ eviction/removal of a required proof makes continuous coverage incomplete; smaller maximum clips the claim (0.350429ms)
+✔ actual patch RPC derives bounded geometry on the server and clips overlapping positive rows (20.801469ms)
+✔ patch RPC rejects geometry/query injection, unknown IDs, and unauthorized outer patches before fetch (2.991706ms)
+✔ patch group valid-empty remains authoritative and is not saved fallback (2.223947ms)
+✔ patch provider cancellation forwards request signal, aborts attempts and stops hedges (172.510121ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1101.282018

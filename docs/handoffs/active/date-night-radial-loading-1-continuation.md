@@ -28,3 +28,15 @@ SAFE TO RESUME FROM THIS CHECKPOINT.
 - Exact next action: publish/read back this checkpoint, extend the cache with isolated patch authority while preserving legacy V-DR-02 tests, add the coverage projection and patch/cache regressions before UI wiring.
 
 SAFE TO RESUME FROM THIS CHECKPOINT.
+
+## Checkpoint 3 — patch-aware cache and coverage
+
+- Branch/base unchanged. Latest published `7ae42cdccd286bc742c2108b6b555ba9aef93b34`, tree `4f8733f1e7336cd3486651a8eb0ce7b06e56cd46`, sole parent `d3111611794328ad084134134f80115161920e3b`.
+- Changed paths: cache.ts extension, new radial-cache.ts, radial-cache.test.mjs, dedicated cache log, this continuation. DateNightHome still unchanged. Legacy cache API preserved; optional patch namespace isolates positive coverage/supersession by fixed logical patch, while signature-compatible negative evidence crosses patches/categories. Radial wrapper bounds 128 entries/20,000 raw venues/10 minutes, strictly clips visible radius and derives coverage from currently retained entries. Negative eviction destructively retires conflicting retained positive identities before removing evidence; no immortal tombstones.
+- Focused GREEN 61/61 = 46 existing cache/component cases + 15 new radial cases. All existing V-DR-02 regressions pass unchanged. Typecheck PASS. New tests prove empty success, partial categories, 40-mile completeness surviving a failed 50-mile patch, missing-only retry accounting, invalid admission, cross-patch lifecycle suppression, negative eviction, category/entry/venue supersession, overlap ownership, full classification preservation, location/season/version isolation, TTL and radius clipping.
+- Geometry/model unchanged: 32 fixed sectors/core, query circles <15.1 miles; continuous radius is per-requested-category conjunction over retained inner patch authority. Provider budget unchanged; scheduler not wired yet. No progressive UI or full-validation claim.
+- Main/production untouched; last verified frozen4d937e58/READY dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL. Preview none accepted; public-provider calls0. Prior evidence unchanged.
+- Remaining gates: serial scheduler/UI, permanent progressive/overlay/filter/cancellation tests; focused GREEN; pre-full/full validation/security/build; ten controlled scenarios; bounded Preview; final freeze.
+- Exact next action: publish/read back this checkpoint, implement one-in-flight progressive controller with missing-only retry and separate foreground/background state, then connect DateNightHome without changing selection setters or eligibility policy.
+
+SAFE TO RESUME FROM THIS CHECKPOINT.
