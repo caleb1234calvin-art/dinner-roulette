@@ -1,0 +1,2270 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> test
+> node scripts/test-runner.mjs
+
+✔ persistent Android identity, SDK, lockfile and approved artwork agree (12.256072ms)
+✔ native audit rejects package drift, insecure content and exposed WebView debugging (4.032889ms)
+✔ Android version parser accepts future releases and rejects invalid Play codes (1.878302ms)
+✔ Android workflow is artifact-only and does not regenerate the project or migrate (0.433748ms)
+✔ Settings does not advertise an Android artifact that has not been published (0.676692ms)
+✔ non-canvas app with no custom card gets a soft BRAND NOTE (utility exception) (2.967433ms)
+✔ non-canvas app with a compliant card is silent (2.156046ms)
+✔ card file without site.json card=custom warns (1.368286ms)
+✔ card file with missing site.json warns for card=custom (2.456452ms)
+✔ card file with invalid site.json warns for card=custom (1.229929ms)
+✔ oversized card warns for non-canvas apps too (1.494362ms)
+✔ canvas app with no card warns 'missing' and missing og:type (1.259085ms)
+✔ canvas card without type still warns for og:type (1.174003ms)
+✔ oversized card warns on the scraper budget (jpg and legacy png) (4.954696ms)
+✔ compliant game (custom card + site.json type + x-banner) is silent (1.307285ms)
+✔ __root.tsx og:type no longer satisfies the canvas gate (1.404232ms)
+✔ oversized x-banner warns on the same scraper budget as og.jpg (1.474775ms)
+✔ legacy png + site.json type still needs the X feed card (0.991108ms)
+✔ siteDeclaresOgTypeGame reads the site contract (0.21116ms)
+✔ a fresh og-pending marker silences the whole gate view (0.636064ms)
+✔ a stale og-pending marker is ignored and the warnings return (0.581462ms)
+✔ the marker goes stale on the clock, not on the file (0.877158ms)
+✔ no marker means nothing is in flight (0.650782ms)
+✔ parseBrandCheckArgs takes --game, --placeholder-ok and --root, and rejects the rest (0.429944ms)
+✔ cli: a game missing its card reports JSON and exits 1 (72.495127ms)
+✔ cli: a compliant game passes (58.648905ms)
+✔ cli: the task's own marker is reported, not honoured (57.743402ms)
+✔ cli: a bad argument fails with JSON on stderr (57.320246ms)
+✔ cli: a non-game with no card fails too — the pass exists to produce one (86.520213ms)
+✔ cli: --placeholder-ok is how a plain-utility pass reports no card as expected (187.864018ms)
+✔ cli: a non-game with a compliant card passes (67.938595ms)
+﹣ SKILL.md and AGENTS.md name the marker path and bound this script uses (0.315003ms) # External workspace OG documentation package is not installed in this checkout
+﹣ the sections that own the brand-task prohibition never affirm a wait (0.126762ms) # External workspace OG documentation package is not installed in this checkout
+﹣ SKILL.md tells the pass to self-check with the flag this CLI accepts (0.081134ms) # External workspace OG documentation package is not installed in this checkout
+✔ browser acceptance rejects source/output drift and auth-disabled previews (15.369579ms)
+✔ unfinished builds and sources changed during compilation cannot be blessed (14.070517ms)
+✔ normalizes whitespace before hashing (3.490984ms)
+✔ nullish and blank body text normalize to the empty string (0.292057ms)
+✔ body text prefix is normalized and capped (0.206215ms)
+✔ identical runs do not diverge (1.38977ms)
+✔ status change diverges (0.687017ms)
+✔ title change diverges (0.279007ms)
+✔ title comparison is skipped when either side lacks one (0.828557ms)
+✔ canvas disappearing diverges; canvas appearing does not (0.364491ms)
+✔ horizontal overflow appearing diverges; clearing does not (0.394442ms)
+✔ new console errors diverge (0.451045ms)
+✔ errors already present in the baseline do not re-diverge (0.305641ms)
+✔ body text collapse diverges (0.202105ms)
+✔ body text dropping to zero reports collapse (3.741179ms)
+✔ zero-length baseline reports growth via the hash branch, not collapse (0.195072ms)
+✔ hash mismatch with a trivial length delta and same page start is tolerated (0.10209ms)
+✔ hash mismatch with a trivial length delta but changed page start diverges (0.095604ms)
+✔ prefix check is skipped when either side lacks a prefix (0.167177ms)
+✔ length-delta tolerance boundary: 50 tolerated, 51 diverges (500-char baseline) (0.084349ms)
+✔ length-delta floor dominates small baselines: 20 tolerated, 21 diverges (100-char baseline) (0.057845ms)
+✔ collapse boundary: exactly half is 'changed', one below is 'collapsed' (0.061057ms)
+✔ missing baseline viewport diverges (0.097293ms)
+✔ empty or null baseline diverges for every viewport (0.090569ms)
+✔ degenerate current verdict fails closed (0.185362ms)
+✔ multiple signals across viewports all accumulate (0.084944ms)
+✔ baselineComparison round-trips a valid baseline (0.203992ms)
+✔ baselineComparison fails closed on malformed or wrong-shape baselines (0.244687ms)
+✔ parseSmokeArgs defaults (0.161705ms)
+✔ parseSmokeArgs consumes --baseline without shifting positionals (0.066349ms)
+✔ parseSmokeArgs rejects a trailing --baseline flag (0.056488ms)
+✔ parseSmokeArgs supports the --baseline= form (0.057656ms)
+✔ parseSmokeArgs rejects unknown flags instead of treating them as positionals (0.053971ms)
+✔ parseSmokeArgs env fallback and flag precedence (0.060188ms)
+✔ derivedPaths handles .png, .PNG, and extensionless inputs (0.354706ms)
+✔ exitCodeFor: clean run exits 0 (0.208716ms)
+✔ exitCodeFor: errors in any single viewport exit 2 (0.131447ms)
+✔ exitCodeFor: navigation failure in any viewport exits 1, beating errors (0.175073ms)
+✔ exitCodeFor: 4xx boundary and missing status (0.127407ms)
+✔ exitCodeFor: no viewport data is a failure (0.594806ms)
+✔ browser-smoke wires the guard and verdict helpers (0.526775ms)
+✔ browser-smoke file I/O only touches guarded paths (0.535665ms)
+✔ casino evidence JSON is parseable; truncated ledgers cannot masquerade as complete (22.300094ms)
+✔ keyed manifests preserve state names and integration override precedence (6.358971ms)
+✔ missing or malformed jurisdiction objects fail closed (0.561997ms)
+✔ nearby same-name rows reconcile once with latest ID and metadata (1.265736ms)
+✔ same ID at distinct locations remains a hard failure (0.224685ms)
+✔ small successive moves cannot conceal a distant same-ID conflict (0.318822ms)
+✔ distant same-name destinations with distinct IDs are retained (0.402256ms)
+✔ complete jurisdiction counts reject both missing and excess destinations (0.368987ms)
+✔ legacy IDs use exported jurisdiction metadata rather than ID prefixes (0.496076ms)
+✔ invalid coordinates, jurisdictions and complete-count values fail closed (0.368783ms)
+✔ pending decision universes are not treated as runtime quotas (0.379498ms)
+✔ nearby same-ID records with a renamed property use latest metadata (0.621517ms)
+✔ missing identities cannot silently disappear from the audit (0.19578ms)
+✔ every active jurisdiction needs an explicit manifest status (0.355879ms)
+✔ unknown totals are allowed only for explicitly pending jurisdictions (0.429272ms)
+✔ a supplied pending count must still be a positive integer (0.314087ms)
+✔ authoritative sources and allowed status values remain required (0.201676ms)
+✔ Beau Rivage keeps its original stable ID and one latest-property destination (126.956439ms)
+✔ MGM Grand Las Vegas keeps its original stable ID and one latest-property destination (34.015453ms)
+✔ audit follows runtime registration, including renamed imports (14.457798ms)
+✔ unregistered imports and unknown runtime arrays fail closed (5.629547ms)
+✔ duplicate, skipped and out-of-order passes cannot change audit precedence (4.246868ms)
+✔ empty or missing runtime registration cannot pass validation (1.025533ms)
+✔ real exported factory IDs and metadata survive loading (69.377463ms)
+✔ missing or empty module exports fail instead of undercounting (13.031335ms)
+✔ resumed additions preserve explicit point evidence, casino schema and active canonical identity (9.549519ms)
+✔ local operator aliases merge without losing canonical points or merging distant same-brand casinos (5.162602ms)
+✔ neighboring Otoe-Missouria casino floors and related travel components retain separate identity (1.533888ms)
+✔ Casino Oklahoma uses its named casino point and routing street, separately from Sugar Creek (1.198536ms)
+✔ Golden Eagle casinos in Oklahoma and Kansas survive identical names across states (0.675412ms)
+✔ Prairie Sun closure cannot be revived by stale live tags or suppress current Prairie Moon (2.209233ms)
+✔ new operator aliases cannot merge nearby independently operated casino floors (3.087887ms)
+✔ reconciled travel-center destinations use the right city and current postal identity (1.018553ms)
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'live',
+  durationMs: 52,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 51, outcome: 'empty' } ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'fallback',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'network-error' },
+    { mirror: 2, durationMs: 0, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+✔ invalid query coordinates and nonfinite radii cannot reach providers (2.493694ms)
+✔ malformed provider records are discarded individually (1.903487ms)
+✔ casino words in an unrelated bar name do not satisfy the casino filter (0.649294ms)
+✔ closed property holds are geographically scoped and cannot suppress successors (0.365732ms)
+✔ lifecycle tags exclude inactive venues but preserve a current repurposed bar (0.240734ms)
+✔ same-brand neighboring casino floors do not borrow each other's live metadata (1.193554ms)
+✔ canonical casino location and identity survive live merging (0.402196ms)
+✔ valid empty responses remain empty results; invalid JSON shape falls back (58.320093ms)
+✔ provider outages preserve the complete local canonical casino pool (2.058875ms)
+✔ malformed optional fields cannot poison a provider response or create unsafe actions (3.479154ms)
+✔ generic casino names cannot collapse distinct nearby properties into an empty identity (0.635009ms)
+✔ reviewed predecessor names merge only into the same nearby current property (3.859321ms)
+✔ closed Oklahoma predecessors stay excluded without suppressing operating successors (0.513604ms)
+✔ Golden Pony closure cannot be revived by stale live tags or suppress unrelated places (0.364099ms)
+✔ final casino aliases preserve canonical routing and do not absorb distant same-name properties (8.450119ms)
+✔ nearby final-pass casinos remain distinct even inside the alias distance threshold (2.879669ms)
+✔ same-brand town names and Pawnee satellite aliases cannot redirect live details to another casino (1.40256ms)
+✔ Gold Town closure rejects stale casino tags while nearby Pahrump properties survive (2.816762ms)
+✔ conflicting casino map metadata cannot replace the reviewed property or component point (0.883743ms)
+✔ freeze accounting preserves resolved holds, unresolved candidates and historical rows honestly (3.336612ms)
+✔ captured live casino responses exclude closed aliases and reconcile the reviewed regional pools (7.548397ms)
+✔ Pass 50 has exactly four distinct evidence-backed physical destinations (1.447176ms)
+✔ runtime points use source destination fields, never map viewport centres (1.477303ms)
+✔ Cadence Crossing remains tied to corrected named-property evidence (16.806929ms)
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'fallback',
+  durationMs: 6,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 1, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 4, outcome: 'malformed' },
+    { mirror: 4, durationMs: 1, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'error',
+  durationMs: 2,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 1, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 0, outcome: 'malformed' },
+    { mirror: 4, durationMs: 1, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'live',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 0, outcome: 'empty' } ]
+}
+✔ global manual origins retain final-pass casino identities and routing through actual discovery handlers (48.439281ms)
+✔ switching a casino origin internationally keeps bounded closures local and preserves exact GPS coordinates (2.540443ms)
+✔ incomplete provider replies retain honest casino fallback and international errors while valid empty replies stay empty (12.381605ms)
+✔ current RC points match observed destination or named source fields (5.043123ms)
+✔ rejected map centres cannot silently replace verified casino points (4.246966ms)
+✔ current casinos survive while all reviewed closure aliases remain out of the curated catalog (5.742045ms)
+✔ newly registered destinations preserve numerical property evidence and scope decisions (2.450333ms)
+✔ additions enter once while pin corrections retain IDs and historical evidence (5.954346ms)
+✔ nearby branded buildings and separately operated Oneida venues survive canonicalization (1.068155ms)
+✔ final adversarial additions and correction preserve observed property destinations (3.158491ms)
+✔ Slot Palace routing uses its operator directions address and preserves the separate resort (0.900317ms)
+✔ final frontier destinations retain property evidence and survive all closure scopes (4.454577ms)
+✔ casino floors remain distinct from nearby casino properties, off-site lodges and closed predecessors (1.364596ms)
+✔ recent legacy exports retain their latest source identity and property point (5.516609ms)
+✔ every serialized runtime casino satisfies the application data schema (12.477936ms)
+✔ missing required fields, duplicate type tags, wrong categories and malformed nulls fail (8.182684ms)
+✔ coordinate range, state leakage and jurisdiction disagreement are rejected (0.334971ms)
+✔ new passes cannot activate without identity and coordinate evidence (0.575615ms)
+✔ unsafe website schemes cannot enter destination actions (0.299123ms)
+✔ strict open-now requires known open hours; default exposes saved destinations honestly (2.784956ms)
+✔ casino type, radius and known/unknown price filters compose (0.263044ms)
+✔ favorites, permanent exclusions and expiring exclusions protect selection (0.339565ms)
+✔ empty and singleton pools terminate with correct option counts (0.430431ms)
+✔ options never return duplicate identifiers or mutate the input (0.405635ms)
+✔ energy and repeat penalties influence weighted picks without excluding all shown places (0.333593ms)
+✔ large catalog sampling retains Unicode names and distinct options (41.296991ms)
+✔ the flag predicate matches src/lib/auth (7.614157ms)
+✔ reads the value a live dev server resolved (3.333991ms)
+✔ a server started without the flag reads as sign-in on (0.195758ms)
+✔ agreement passes (0.229606ms)
+✔ divergence fails in either direction (0.326543ms)
+✔ an unobservable dev server is indeterminate, not agreement (0.151908ms)
+✔ a dev server that cannot be reached probes as null (0.236366ms)
+✔ a server without the endpoint probes as null, not as agreement (0.649857ms)
+✔ only a divergence warns the smoke verdict (1.638538ms)
+✔ the build side resolves the template's shipped app-env (0.891697ms)
+✔ the CLI reports rather than silently passing when run via a symlink (131.725793ms)
+✔ Anything coverage satisfies every later category and subset without acquiring again (4.332153ms)
+✔ coverage is category-specific within a group; only missing types are requested (18.194599ms)
+✔ valid-empty coverage is reusable and preserves its origin; failed/cancelled categories stay missing (0.535078ms)
+✔ complete fallback and legacy missing metadata never establish reusable live coverage (0.349901ms)
+✔ cached successes plus fresh failure preserve partial live data and disjoint category outcomes (2.401543ms)
+✔ cached live success survives missing-category transport failure without asserting coverage (0.398477ms)
+✔ radius narrowing reuses larger coverage but widening cannot use a narrower entry (0.589147ms)
+✔ latitude separates incompatible cache coverage (0.316276ms)
+✔ longitude separates incompatible cache coverage (0.25693ms)
+✔ Halloween activation separates incompatible cache coverage (2.785798ms)
+✔ semantic version separates incompatible cache coverage (0.208024ms)
+✔ TTL expires exactly at bound; reads and fresh missing-category combinations never rejuvenate old coverage (0.307461ms)
+✔ new valid-empty category coverage cannot resurrect old venues through a reused superset (0.379569ms)
+✔ LRU entry and aggregate raw-venue caps evict whole entries without truncated coverage (0.768123ms)
+✔ cache assembly preserves catalog aliases, full evidence, hours precedence and lifecycle in either insertion order (1.037898ms)
+✔ fresh cross-category lifecycle evidence suppresses an older cached active identity without adding coverage (0.722309ms)
+✔ actual DateNightHome: Anything→subsets and every local-only filter reuse data without network (413.830179ms)
+✔ actual DateNightHome: stale persisted unknown categories recover to Anything without weakening RPC validation (7.225002ms)
+✔ actual DateNightHome: subset then mixed selection fetches only missing categories (14.751716ms)
+✔ actual DateNightHome: bounded missing-category timeout preserves cached live contribution and partial warning (17.303047ms)
+✔ actual DateNightHome: TTL refreshes on next category acquisition, not local-only toggles or elapsed time (8.968996ms)
+✔ actual DateNightHome: radius narrows from acquired 50 mi without RPC; widening 15→50 acquires (9.587312ms)
+✔ actual DateNightHome: late replacement response cannot seed reusable cache (8.307637ms)
+✔ actual DateNightHome: late timeout response cannot seed reusable cache (9.910261ms)
+✔ actual DateNightHome: component cache lifetime does not survive unmount or contaminate another session (7.625507ms)
+✔ Date Night hedge mirror 2 wins at 1500ms and cancels losing attempts (49.534855ms)
+✔ Date Night hedge mirror 3 wins at 3000ms and cancels losing attempts (3.255315ms)
+✔ Date Night hedge mirror 4 wins at 4500ms and cancels losing attempts (4.738517ms)
+✔ Date Night all fetch stalls settle by 12.5s even when abort is honored (2.1611ms)
+✔ Date Night all fetch stalls settle by 12.5s even when abort is ignored (3.293797ms)
+✔ Date Night all body stalls settle by 12.5s even when abort is honored (2.779776ms)
+✔ Date Night all body stalls settle by 12.5s even when abort is ignored (2.560605ms)
+✔ Date Night groups share the unchanged absolute 20s deadline, including abort-ignoring work (1.885418ms)
+✔ Date Night immediate 429 advances immediately and preserves normalized failure (3.619754ms)
+✔ Date Night immediate 500 advances immediately and preserves normalized failure (1.484673ms)
+✔ Date Night immediate 504 advances immediately and preserves normalized failure (1.053216ms)
+✔ Date Night immediate malformed advances immediately and preserves normalized failure (0.937546ms)
+✔ Date Night immediate invalid-json advances immediately and preserves normalized failure (2.372881ms)
+✔ Date Night immediate abort advances immediately and preserves normalized failure (0.813396ms)
+✔ Date Night immediate network-error advances immediately and preserves normalized failure (1.001918ms)
+✔ Date Night valid empty wins and differs from failure (0.606411ms)
+✔ Date Night late loser success/rejection cannot replace winner or mutate recorded outcome (14.557557ms)
+✔ Date Night cancellation aborts active attempts, stops scheduled hedges and records cancelled group (2.038388ms)
+✔ Date Night four groups never exceed sixteen fixed-mirror attempts and reject duplicate/untrusted group IDs (9.486983ms)
+✔ seasonal live success survives stalled parks and merges saved coverage with honest partial metadata (58.816911ms)
+✔ entertainment survives seasonal HTTP failure with selected failed coverage retained (13.553749ms)
+✔ valid empty requested group is successful coverage, distinct from missing venues and failed acquisition (2.030955ms)
+✔ valid empty success with a failed sibling remains partial live, not fallback or terminal error (4.410863ms)
+✔ cross-group equal OSM identity unions disjoint classifications despite changed provider name (2.434658ms)
+✔ identical cross-group evidence is deduplicated and permanently closed evidence dominates active siblings (11.255017ms)
+✔ malformed missing-elements sibling cannot erase valid seasonal live response (2.826928ms)
+✔ malformed remark sibling cannot erase valid seasonal live response (1.935617ms)
+✔ malformed invalid-json sibling cannot erase valid seasonal live response (7.610582ms)
+✔ all four groups/mirrors stalled settle honest saved fallback at 12.5s (14.635488ms)
+✔ all four groups/mirrors stalled settle terminal error at 12.5s (4.146654ms)
+✔ all valid-empty groups are live coverage rather than outage even with zero venues (3.417788ms)
+✔ Date Night ordinary partial UI preserves live picks and discloses failed groups (776.572161ms)
+✔ Date Night seasonal partial UI preserves live picks and discloses failed groups (12.440952ms)
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 4,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 3,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 3,
+      outcome: 'empty'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 2,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 2,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    }
+  ]
+}
+✔ all Date Night category plans use exact keys, including every seasonal subset and lifecycle prefix (7.103441ms)
+✔ exact-key refinement preserves canonical reachability/classification for all seven subsets, contexts, fields and lifecycle prefixes (967.148085ms)
+✔ exact text keys preserve classifier key casing while still matching case-insensitive values (6.867339ms)
+✔ Anything, omitted and empty category input produce all and only active query groups (1.006353ms)
+✔ specific categories plan only required groups and combine selected siblings (0.471718ms)
+✔ query plans and normalized coverage signatures are deterministic without mutating caller input (0.479465ms)
+✔ Halloween OFF strips stale seasonal selections and preserves existing Anything fallback (0.475019ms)
+✔ activity validation rejects malformed, inherited, unknown and query-injection inputs (1.195926ms)
+✔ every ordinary category owns its exact active clauses and only relevant lifecycle companions (11.618494ms)
+✔ query construction independently enforces concrete whitelist input, finite coordinates and capped radius (0.783715ms)
+✔ seasonal-only queries do not acquire unrelated ordinary or seasonal offerings (2.455693ms)
+✔ precise seasonal attraction and agricultural maze representations remain reachable (1.461203ms)
+✔ selected seasonal metadata remains reachable across every supported context, field and separator (23.439989ms)
+✔ retained Exeter theme-park record remains acquired by a Corn Maze-only plan (0.561432ms)
+✔ narrowed seasonal acquisition retains lifecycle-only evidence previously reached through broad contexts (9.620186ms)
+✔ real selected query cannot resurrect an active duplicate by dropping its lifecycle-only theme-park record (55.442612ms)
+✔ narrowed acquisition never turns generic, negative or unrelated evidence into seasonal classification (4.073527ms)
+✔ real server validator rejects hostile category input before any provider request (2.146146ms)
+✔ real server request uses validated selected clauses, normalizes inactive seasonal input and preserves radius cap (11.467487ms)
+✔ dinner: success settles active UI and clears watchdog before deadline (430.859018ms)
+✔ dinner: fallback settles active UI and clears watchdog before deadline (15.391672ms)
+✔ dinner: error settles active UI and clears watchdog before deadline (2.525837ms)
+✔ dinner: AbortError settles active UI and clears watchdog before deadline (7.725653ms)
+✔ dinner: never-settling/abort-ignoring RPC exits loading at 25s (6.663173ms)
+✔ dinner: abort-compliant RPC exits loading at 25s (6.608656ms)
+✔ dinner: late post-timeout success cannot overwrite timeout or a successful retry (11.386894ms)
+✔ dinner: late post-timeout rejection cannot overwrite timeout or a successful retry (11.71499ms)
+✔ dinner: replacement aborts old success; old settles first (14.185724ms)
+✔ dinner: replacement aborts old success; new settles first (13.836368ms)
+✔ dinner: replacement aborts old rejection; old settles first (18.546508ms)
+✔ dinner: replacement aborts old rejection; new settles first (16.255449ms)
+✔ dinner: unmount aborts/cleans up; success cannot write after unmount (6.664363ms)
+✔ dinner: unmount aborts/cleans up; rejection cannot write after unmount (6.16721ms)
+✔ dinner: unmount aborts/cleans up; pending cannot write after unmount (5.628877ms)
+✔ dinner: radius replacement cancels transport; normal filters/options/pick still work (17.004271ms)
+✔ dinner: timeout then retry success remains current when the first RPC finally resolves (8.639797ms)
+✔ date-night: success settles active UI and clears watchdog before deadline (179.061356ms)
+✔ date-night: fallback settles active UI and clears watchdog before deadline (12.920925ms)
+✔ date-night: error settles active UI and clears watchdog before deadline (3.458089ms)
+✔ date-night: AbortError settles active UI and clears watchdog before deadline (3.436222ms)
+✔ date-night: never-settling/abort-ignoring RPC exits loading at 25s (4.326897ms)
+✔ date-night: abort-compliant RPC exits loading at 25s (5.697465ms)
+✔ date-night: late post-timeout success cannot overwrite timeout or a successful retry (26.929699ms)
+✔ date-night: late post-timeout rejection cannot overwrite timeout or a successful retry (20.976252ms)
+✔ date-night: replacement aborts old success; old settles first (31.378144ms)
+✔ date-night: replacement aborts old success; new settles first (12.066037ms)
+✔ date-night: replacement aborts old rejection; old settles first (10.662529ms)
+✔ date-night: replacement aborts old rejection; new settles first (8.853065ms)
+✔ date-night: unmount aborts/cleans up; success cannot write after unmount (5.483701ms)
+✔ date-night: unmount aborts/cleans up; rejection cannot write after unmount (5.641374ms)
+✔ date-night: unmount aborts/cleans up; pending cannot write after unmount (4.951633ms)
+✔ date-night: radius replacement cancels transport; normal filters/options/pick still work (12.173212ms)
+✔ date-night: timeout then retry success remains current when the first RPC finally resolves (6.7333ms)
+✔ nightlife: success settles active UI and clears watchdog before deadline (103.062707ms)
+✔ nightlife: fallback settles active UI and clears watchdog before deadline (8.866207ms)
+✔ nightlife: error settles active UI and clears watchdog before deadline (2.066249ms)
+✔ nightlife: AbortError settles active UI and clears watchdog before deadline (9.982299ms)
+✔ nightlife: never-settling/abort-ignoring RPC exits loading at 25s (2.635687ms)
+✔ nightlife: abort-compliant RPC exits loading at 25s (2.842704ms)
+✔ nightlife: late post-timeout success cannot overwrite timeout or a successful retry (8.108408ms)
+✔ nightlife: late post-timeout rejection cannot overwrite timeout or a successful retry (7.546123ms)
+✔ nightlife: replacement aborts old success; old settles first (7.561212ms)
+✔ nightlife: replacement aborts old success; new settles first (7.311827ms)
+✔ nightlife: replacement aborts old rejection; old settles first (10.914197ms)
+✔ nightlife: replacement aborts old rejection; new settles first (7.312003ms)
+✔ nightlife: unmount aborts/cleans up; success cannot write after unmount (5.078017ms)
+✔ nightlife: unmount aborts/cleans up; rejection cannot write after unmount (3.790352ms)
+✔ nightlife: unmount aborts/cleans up; pending cannot write after unmount (3.188027ms)
+✔ nightlife: radius replacement cancels transport; normal filters/options/pick still work (5.209355ms)
+✔ nightlife: timeout then retry success remains current when the first RPC finally resolves (3.076936ms)
+✔ Date Night: seasonal dependency replacement aborts the previous request (9.805961ms)
+✔ pinned TanStack RPC forwards the exact controller signal to fetch and settles on abort (84.665191ms)
+✔ shared lifecycle also settles synchronous RPC throws without leaving a watchdog (10.18541ms)
+✔ dinner: headers stalls settle fallback within the provider bound (41.909301ms)
+✔ dinner: headers stalls settle error within the provider bound (1.66817ms)
+✔ dinner: body stalls settle fallback within the provider bound (12.52041ms)
+✔ dinner: body stalls settle error within the provider bound (0.991166ms)
+✔ dinner: first stall then second success returns at 8s and clears timers (28.475495ms)
+✔ dinner: immediate 429 advances without delay; saved coverage and terminal error preserved (15.771298ms)
+✔ dinner: immediate 500 advances without delay; saved coverage and terminal error preserved (13.651244ms)
+✔ dinner: immediate 504 advances without delay; saved coverage and terminal error preserved (14.506782ms)
+✔ dinner: immediate missing-elements advances without delay; saved coverage and terminal error preserved (18.913177ms)
+✔ dinner: immediate remark advances without delay; saved coverage and terminal error preserved (18.179384ms)
+✔ dinner: immediate invalid-json advances without delay; saved coverage and terminal error preserved (13.843944ms)
+✔ dinner: valid empty results retain mode-specific mirror and source semantics (4.93763ms)
+✔ dinner: normal first success is quiet, abort errors categorized, raw exceptions never logged (14.643018ms)
+✔ date-night: headers stalls settle fallback within the provider bound (113.778158ms)
+✔ date-night: headers stalls settle error within the provider bound (1.188943ms)
+✔ date-night: body stalls settle fallback within the provider bound (1.631686ms)
+✔ date-night: body stalls settle error within the provider bound (0.985297ms)
+✔ date-night: first stall then second success returns at 1.5s and clears timers (7.235066ms)
+✔ date-night: immediate 429 advances without delay; saved coverage and terminal error preserved (2.091878ms)
+✔ date-night: immediate 500 advances without delay; saved coverage and terminal error preserved (1.813309ms)
+✔ date-night: immediate 504 advances without delay; saved coverage and terminal error preserved (1.899747ms)
+✔ date-night: immediate missing-elements advances without delay; saved coverage and terminal error preserved (2.056809ms)
+✔ date-night: immediate remark advances without delay; saved coverage and terminal error preserved (2.255286ms)
+✔ date-night: immediate invalid-json advances without delay; saved coverage and terminal error preserved (5.851902ms)
+✔ date-night: valid empty results retain mode-specific mirror and source semantics (1.066198ms)
+✔ date-night: normal first success is quiet, abort errors categorized, raw exceptions never logged (1.154592ms)
+✔ nightlife: headers stalls settle fallback within the provider bound (3.743219ms)
+✔ nightlife: headers stalls settle error within the provider bound (1.30941ms)
+✔ nightlife: body stalls settle fallback within the provider bound (1.349401ms)
+✔ nightlife: body stalls settle error within the provider bound (1.145061ms)
+✔ nightlife: first stall then second success returns at 8s and clears timers (2.80965ms)
+✔ nightlife: immediate 429 advances without delay; saved coverage and terminal error preserved (1.50985ms)
+✔ nightlife: immediate 500 advances without delay; saved coverage and terminal error preserved (1.411805ms)
+✔ nightlife: immediate 504 advances without delay; saved coverage and terminal error preserved (1.662975ms)
+✔ nightlife: immediate missing-elements advances without delay; saved coverage and terminal error preserved (2.165053ms)
+✔ nightlife: immediate remark advances without delay; saved coverage and terminal error preserved (2.057669ms)
+✔ nightlife: immediate invalid-json advances without delay; saved coverage and terminal error preserved (1.715711ms)
+✔ nightlife: valid empty results retain mode-specific mirror and source semantics (0.678407ms)
+✔ nightlife: normal first success is quiet, abort errors categorized, raw exceptions never logged (1.352472ms)
+✔ Dinner retains successful-empty precedence when subsequent mirrors exhaust the budget (3.161126ms)
+✔ shared provider attempt uses native timer and real fetch body abort (115.822968ms)
+✔ Nitro final streaming head: pickforus.app/ (34.156199ms)
+✔ Nitro final streaming head: pickforus.app/settings (7.053015ms)
+✔ Nitro final streaming head: pickforus.app/history (15.04188ms)
+✔ Nitro final streaming head: pickforus.app/favorites (9.426879ms)
+✔ Nitro final streaming head: dinner-roulette-chi.vercel.app/ (7.021339ms)
+✔ Nitro final streaming head: dinner-roulette-chi.vercel.app/settings (6.806285ms)
+✔ Nitro final streaming head: dinner-roulette-chi.vercel.app/history (7.862089ms)
+✔ Nitro final streaming head: dinner-roulette-chi.vercel.app/favorites (4.601059ms)
+✔ Nitro final streaming head: dinner-roulette-candidate-minions.vercel.app/ (4.736077ms)
+✔ Nitro final streaming head: dinner-roulette-candidate-minions.vercel.app/settings (3.960857ms)
+✔ Nitro final streaming head: dinner-roulette-candidate-minions.vercel.app/history (6.5401ms)
+✔ Nitro final streaming head: dinner-roulette-candidate-minions.vercel.app/favorites (6.938259ms)
+✔ canonical authority ignores stale public-host env and strips query/hash/trailing slash (1.662472ms)
+✔ unknown/system/local hosts cannot become indexable canonical origins (2.187275ms)
+✔ Nitro compatibility manifests match static public manifest without a workspace filesystem (7.819602ms)
+✔ Nitro install tutorial has coherent identity, relative app link and noindex (2.011635ms)
+✔ Nitro preserves non-document, non-GET and encoded responses (0.835591ms)
+✔ Vite dev final response and installation endpoints (162.49693ms)
+✔ Vite preview final response and installation endpoints (125.784323ms)
+✔ injects before </head> (7.474856ms)
+✔ injects the extensions script without a project id (1.58058ms)
+✔ injects project id on the script and meta when provided (0.840945ms)
+✔ does not duplicate grok:app_id (2.597002ms)
+✔ omits x:creator tags without both creator values (1.977497ms)
+✔ injects x:creator tags when both creator values are set (2.564782ms)
+✔ escapes x:creator values (0.374678ms)
+✔ does not duplicate x:creator tags (1.003828ms)
+✔ platform chrome overwrites share-card metas and always sets og:title (1.353782ms)
+✔ does not duplicate twitter:card or og:title (1.028009ms)
+✔ a baked site.image is treated as a custom card (0.988612ms)
+✔ baked identity does not need a workspace filesystem (0.655766ms)
+✔ a public card file wins over a baked site without card=custom (0.761793ms)
+✔ public/og.png wins when jpg is absent (0.730159ms)
+✔ resolveOgCardAsset: disk file, then bake, then empty (placeholder) (0.730044ms)
+✔ snapshotOgIdentity stamps card=custom from a public card file (3.290994ms)
+✔ snapshotOgIdentity stamps banner from public/x-banner.jpg (0.89995ms)
+✔ emits x:game:image for a public host when site.banner is set (0.408867ms)
+✔ does not emit x:game:image without a public host or banner (0.390584ms)
+✔ site title Grok App is a real name, not a sentinel (0.511852ms)
+✔ published grok.me slug is still a title fallback (1.036419ms)
+✔ rejects Vercel system hosts as og:image origins (0.213172ms)
+✔ published VITE_PUBLIC_HOSTNAME wins over request Host for og:image (0.695643ms)
+✔ vercel Host without a public hostname emits no og:image (0.310689ms)
+✔ emits og:image for a public host and prefers a custom card (0.427588ms)
+✔ placeholder og:image appends site.color when it is 6-digit hex (0.406667ms)
+✔ document title entities are not double-escaped on og:title (0.325093ms)
+✔ site.json title wins over the host slug (0.260218ms)
+✔ injects into documents with no head element (0.425918ms)
+✔ streaming injector matches </HEAD> case-insensitively (1.397927ms)
+✔ does not duplicate the extensions script (0.484683ms)
+✔ is idempotent (1.861699ms)
+✔ uses the app name in the injected title tag (0.365804ms)
+✔ streaming injector handles </head> split across chunks (0.566113ms)
+✔ streaming injector passes post-head chunks through untouched (0.959568ms)
+✔ streaming injector falls back when no </head> is seen (0.604903ms)
+✔ detects install query (0.450031ms)
+✔ filters non-document paths (0.523385ms)
+✔ strips install params from the app link (0.239695ms)
+✔ uses product identity as the host-name fallback (0.176826ms)
+✔ rejects hosts that are not plain slugs (0.145306ms)
+✔ renders install page markup (0.770237ms)
+✔ escapes host-derived values in the install page (0.265839ms)
+✔ renders the compatibility manifest with the product identity (0.340879ms)
+✔ vite config keeps the nitro serverDir wiring (0.341935ms)
+✔ nitro middleware and its bundled assets exist (2.076124ms)
+✔ vite plugin bakes og identity as a virtual module (0.305682ms)
+✔ live favicon metadata uses the approved PNG with MIME and size (1.388739ms)
+✔ public manifest has the exact unified PNG icon set (1.924883ms)
+[discovery] provider-chain {
+  mode: 'dinner',
+  source: 'live',
+  durationMs: 4,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'empty' },
+    { mirror: 2, durationMs: 0, outcome: 'empty' },
+    { mirror: 3, durationMs: 3, outcome: 'empty' },
+    { mirror: 4, durationMs: 0, outcome: 'empty' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'dinner',
+  source: 'error',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 1, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 0, outcome: 'malformed' },
+    { mirror: 4, durationMs: 0, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'dinner',
+  source: 'error',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 0, outcome: 'malformed' },
+    { mirror: 4, durationMs: 0, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'dinner',
+  source: 'error',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'network-error' },
+    { mirror: 2, durationMs: 0, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'dinner',
+  source: 'fallback',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'network-error' },
+    { mirror: 2, durationMs: 0, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'live',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 0, outcome: 'empty' } ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'error',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 0, outcome: 'malformed' },
+    { mirror: 4, durationMs: 0, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'error',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'malformed' },
+    { mirror: 2, durationMs: 0, outcome: 'malformed' },
+    { mirror: 3, durationMs: 0, outcome: 'malformed' },
+    { mirror: 4, durationMs: 0, outcome: 'malformed' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'error',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'network-error' },
+    { mirror: 2, durationMs: 0, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'fallback',
+  durationMs: 1,
+  budgetExhausted: false,
+  attempts: [
+    { mirror: 1, durationMs: 0, outcome: 'network-error' },
+    { mirror: 2, durationMs: 0, outcome: 'network-error' },
+    { mirror: 3, durationMs: 0, outcome: 'network-error' },
+    { mirror: 4, durationMs: 0, outcome: 'network-error' }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 12,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 1,
+  failedGroups: 2,
+  partial: true,
+  groups: [
+    { group: 'entertainment', outcome: 'failed', durationMs: 10 },
+    {
+      group: 'culture',
+      outcome: 'success',
+      durationMs: 7,
+      winnerMirror: 1
+    },
+    { group: 'outdoor', outcome: 'failed', durationMs: 10 }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 7,
+      outcome: 'success'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 5,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 2,
+      hedgeOffsetMs: 5,
+      durationMs: 2,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 3,
+      hedgeOffsetMs: 7,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 4,
+      hedgeOffsetMs: 8,
+      durationMs: 2,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 5,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 2,
+      hedgeOffsetMs: 5,
+      durationMs: 2,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 3,
+      hedgeOffsetMs: 7,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 4,
+      hedgeOffsetMs: 9,
+      durationMs: 1,
+      outcome: 'network-error'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 2,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 1,
+  failedGroups: 2,
+  partial: true,
+  groups: [
+    { group: 'entertainment', outcome: 'failed', durationMs: 2 },
+    {
+      group: 'culture',
+      outcome: 'success',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    { group: 'outdoor', outcome: 'failed', durationMs: 2 }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'success'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 3,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 4,
+      hedgeOffsetMs: 2,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 3,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 4,
+      hedgeOffsetMs: 2,
+      durationMs: 0,
+      outcome: 'network-error'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 2,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 1,
+  failedGroups: 2,
+  partial: true,
+  groups: [
+    { group: 'entertainment', outcome: 'failed', durationMs: 2 },
+    {
+      group: 'culture',
+      outcome: 'success',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    { group: 'outdoor', outcome: 'failed', durationMs: 2 }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'success'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 3,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 4,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 3,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 4,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 3,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 1,
+  failedGroups: 2,
+  partial: true,
+  groups: [
+    { group: 'entertainment', outcome: 'failed', durationMs: 2 },
+    {
+      group: 'culture',
+      outcome: 'success',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    { group: 'outdoor', outcome: 'failed', durationMs: 2 }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'success'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 3,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 4,
+      hedgeOffsetMs: 2,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 3,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 4,
+      hedgeOffsetMs: 2,
+      durationMs: 1,
+      outcome: 'network-error'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 4,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 1,
+  failedGroups: 2,
+  partial: true,
+  groups: [
+    { group: 'entertainment', outcome: 'failed', durationMs: 3 },
+    {
+      group: 'culture',
+      outcome: 'success',
+      durationMs: 2,
+      winnerMirror: 1
+    },
+    { group: 'outdoor', outcome: 'failed', durationMs: 2 }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 2,
+      outcome: 'success'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 3,
+      hedgeOffsetMs: 2,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 4,
+      hedgeOffsetMs: 2,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 3,
+      hedgeOffsetMs: 2,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 4,
+      hedgeOffsetMs: 2,
+      durationMs: 0,
+      outcome: 'network-error'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 11,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 1,
+  failedGroups: 2,
+  partial: true,
+  groups: [
+    { group: 'entertainment', outcome: 'failed', durationMs: 9 },
+    {
+      group: 'culture',
+      outcome: 'success',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    { group: 'outdoor', outcome: 'failed', durationMs: 9 }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'success'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 3,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 4,
+      hedgeOffsetMs: 1,
+      durationMs: 8,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 3,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 4,
+      hedgeOffsetMs: 1,
+      durationMs: 8,
+      outcome: 'network-error'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 0,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 3,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'entertainment',
+      outcome: 'empty',
+      durationMs: 0,
+      winnerMirror: 1
+    },
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 0,
+      winnerMirror: 1
+    },
+    {
+      group: 'outdoor',
+      outcome: 'empty',
+      durationMs: 0,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'error',
+  durationMs: 2,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 0,
+  failedGroups: 3,
+  partial: false,
+  groups: [
+    { group: 'entertainment', outcome: 'failed', durationMs: 2 },
+    { group: 'culture', outcome: 'failed', durationMs: 1 },
+    { group: 'outdoor', outcome: 'failed', durationMs: 1 }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'culture',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'malformed'
+    },
+    {
+      group: 'culture',
+      mirror: 3,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'culture',
+      mirror: 4,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'entertainment',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'malformed'
+    },
+    {
+      group: 'entertainment',
+      mirror: 3,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'entertainment',
+      mirror: 4,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'outdoor',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'malformed'
+    },
+    {
+      group: 'outdoor',
+      mirror: 3,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'outdoor',
+      mirror: 4,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'malformed'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'error',
+  durationMs: 8,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 0,
+  failedGroups: 3,
+  partial: false,
+  groups: [
+    { group: 'entertainment', outcome: 'failed', durationMs: 7 },
+    { group: 'culture', outcome: 'failed', durationMs: 7 },
+    { group: 'outdoor', outcome: 'failed', durationMs: 7 }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'culture',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 7,
+      outcome: 'malformed'
+    },
+    {
+      group: 'culture',
+      mirror: 3,
+      hedgeOffsetMs: 7,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'culture',
+      mirror: 4,
+      hedgeOffsetMs: 7,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'entertainment',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'entertainment',
+      mirror: 3,
+      hedgeOffsetMs: 7,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'entertainment',
+      mirror: 4,
+      hedgeOffsetMs: 7,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'outdoor',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 7,
+      outcome: 'malformed'
+    },
+    {
+      group: 'outdoor',
+      mirror: 3,
+      hedgeOffsetMs: 7,
+      durationMs: 0,
+      outcome: 'malformed'
+    },
+    {
+      group: 'outdoor',
+      mirror: 4,
+      hedgeOffsetMs: 7,
+      durationMs: 0,
+      outcome: 'malformed'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'error',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 0,
+  failedGroups: 3,
+  partial: false,
+  groups: [
+    { group: 'entertainment', outcome: 'failed', durationMs: 1 },
+    { group: 'culture', outcome: 'failed', durationMs: 0 },
+    { group: 'outdoor', outcome: 'failed', durationMs: 0 }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'culture',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'culture',
+      mirror: 3,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'culture',
+      mirror: 4,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 3,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 4,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 3,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 4,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'fallback',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 0,
+  failedGroups: 3,
+  partial: false,
+  groups: [
+    { group: 'entertainment', outcome: 'failed', durationMs: 1 },
+    { group: 'culture', outcome: 'failed', durationMs: 1 },
+    { group: 'outdoor', outcome: 'failed', durationMs: 1 }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'culture',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'culture',
+      mirror: 3,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'culture',
+      mirror: 4,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 3,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'entertainment',
+      mirror: 4,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 3,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'outdoor',
+      mirror: 4,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'merged',
+  durationMs: 0,
+  budgetExhausted: false,
+  attempts: [ { mirror: 1, durationMs: 0, outcome: 'empty' } ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 3,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'entertainment',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'outdoor',
+      outcome: 'empty',
+      durationMs: 0,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    }
+  ]
+}
+✔ restaurants: six locations reach the real coordinate query and normalize local results (103.65563ms)
+✔ restaurants: valid empty areas, all-mirror outage, and coordinate validation remain distinct (32.913048ms)
+✔ nightlife and casinos: six locations reach the real coordinate query and normalize local results (8.146113ms)
+✔ nightlife and casinos: valid empty areas, all-mirror outage, and coordinate validation remain distinct (4.333368ms)
+✔ date night: six locations reach the real coordinate query and normalize local results (44.833734ms)
+✔ date night: valid empty areas, all-mirror outage, and coordinate validation remain distinct (17.647747ms)
+✔ restaurant distance, cuisine and price filters behave with Canadian results (1.673819ms)
+✔ local closure exclusions do not hide same-named international businesses (7.249606ms)
+✔ Maps destinations preserve exact Canadian/U.S. points and encode legacy international addresses (1.102471ms)
+✔ stored legacy U.S. locations and country metadata survive hydration; corrupt coordinates fall back (45.581408ms)
+✔ spatial restaurant dedupe exactly preserves name rules, source priority, ordering and radius boundaries (15.181778ms)
+✔ spatial restaurant candidates preserve duplicates across the antimeridian and near both poles (0.457114ms)
+✔ dense international pools preserve thousands of distinct restaurants and duplicate identities (278.377782ms)
+✔ _migrations keys on basename, not path (3.091527ms)
+✔ a file already applied from another directory does not re-apply (0.784239ms)
+✔ pending migrations are returned in name order (9.789319ms)
+✔ non-.sql entries are dropped (readdir also yields the auth/ directory) (0.26287ms)
+✔ the auth schema ships outside the globbed directory (0.584225ms)
+✔ this workspace's auth schema copy is byte-identical to its source (0.506454ms)
+✔ the copy check reads both files and catches an edit (1.241594ms)
+✔ absent external workspace package gets an explicit skip reason (1.00064ms)
+✔ installed documentation contracts are not skipped (0.16145ms)
+✔ required documentation cannot be skipped even when absent (0.105729ms)
+✔ parsePreviewArgs accepts the two actions (5.68982ms)
+✔ parsePreviewArgs rejects missing, unknown and extra arguments (5.368153ms)
+✔ parsePid reads a pidfile and rejects junk (0.480178ms)
+✔ parsePgid reads the pgrp field past a comm containing spaces (0.474417ms)
+✔ parseListenerInodes picks LISTEN sockets on the wanted port only (0.621413ms)
+✔ parseListenerInodes reads the tcp6 dump the same way (0.734759ms)
+✔ looksLikePreviewProcess matches the npm wrapper and its vite child (0.572897ms)
+✔ looksLikePreviewProcess spares the sibling scripts and re-used pids (0.383026ms)
+✔ previewOwners trusts port owners and dedupes the pidfile pid (0.570164ms)
+✔ previewOwners adds a pidfile pid whose command line is still the preview (0.426888ms)
+✔ previewOwners drops a stale pidfile pid re-used by another process (0.329003ms)
+✔ previewOwners drops a pidfile pid that no longer exists (0.281775ms)
+✔ previewOwners on a free port with no pidfile signals nothing (0.152249ms)
+✔ stopOutcome fails when a pid survives or the port is still held (0.354333ms)
+✔ stopOutcome reports a verified free port (3.826611ms)
+✔ stopOutcome fails on a listener whose owner cannot be attributed (0.709563ms)
+✔ terminatePids SIGTERMs live pids and skips dead ones (0.923893ms)
+✔ terminatePids escalates to SIGKILL when SIGTERM is ignored (0.739603ms)
+✔ terminatePids reports a pid that survives SIGKILL as stubborn (1.303153ms)
+✔ terminatePids on a free port signals nothing (0.317108ms)
+✔ light Dinner artwork retains the visually correct cuisine in its own asset pack (1.217223ms)
+✔ dark Dinner artwork preserves the accepted visually verified mapping (0.347824ms)
+✔ specific Dinner cuisines outrank broad provider categories without guessing food for generic venues (0.27165ms)
+✔ Nightlife result artwork covers all approved categories and preserves Casino precedence (0.194934ms)
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 4,
+  successfulGroups: 4,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'entertainment',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 0,
+      winnerMirror: 1
+    },
+    {
+      group: 'outdoor',
+      outcome: 'empty',
+      durationMs: 0,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    },
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'fallback',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 0,
+  failedGroups: 1,
+  partial: false,
+  groups: [ { group: 'seasonal', outcome: 'failed', durationMs: 1 } ],
+  attempts: [
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'seasonal',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'seasonal',
+      mirror: 3,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'network-error'
+    },
+    {
+      group: 'seasonal',
+      mirror: 4,
+      hedgeOffsetMs: 1,
+      durationMs: 0,
+      outcome: 'network-error'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 3,
+  successfulGroups: 3,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'entertainment',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'outdoor',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    }
+  ]
+}
+✔ Exeter's actual theme-park record is acquired by the real seasonal query and reaches the eligible pool (50.575339ms)
+✔ precise activity evidence admits corn, pumpkin and haunted trail without admitting generic places (14.639491ms)
+✔ same identity preserves C/P, provenance, stable ID and representative metadata in either provider order (6.514358ms)
+✔ structured lifecycle cannot survive eligibility or be resurrected by an active duplicate (8.338171ms)
+✔ all availability states share one OFF/ON policy, including expiry and next-year revalidation (2.324317ms)
+✔ all seven seasonal selections preserve union and the radius boundary (11.792628ms)
+✔ saved-only successful sparse coverage, missing categories and provider outage remain distinct (5.481069ms)
+✔ per-category provenance never labels a saved haunt as live because its ordinary park duplicate is live (3.50248ms)
+✔ ordinary Date Night and seasonal toggle still work internationally; unknown hours fail strict ON (2.821819ms)
+✔ Halloween caution: live loading/settlement retains controls, counts and selections (352.911485ms)
+✔ Halloween caution: merged loading/settlement retains controls, counts and selections (250.941992ms)
+✔ Halloween caution: fallback loading/settlement retains controls, counts and selections (206.961058ms)
+✔ ordinary Date Night caution absent: seasonal toggle off; controls/count/selection remain (204.754533ms)
+✔ ordinary Date Night caution absent: outside Halloween season; controls/count/selection remain (191.912926ms)
+✔ dinner: Halloween caution remains absent during loading and after settlement (60.62789ms)
+✔ nightlife: Halloween caution remains absent during loading and after settlement (18.141702ms)
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 4,
+  successfulGroups: 4,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'entertainment',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'outdoor',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 2,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'empty',
+      durationMs: 2,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    }
+  ]
+}
+✔ actual component: handler → count/options/pick/plan and all seven category combinations (195.631776ms)
+✔ actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dependent pool/overlay refresh (154.469792ms)
+✔ actual component displays schedule uncertainty distinctly for live weekly-hours-only venues (134.661226ms)
+✔ V-F03-01 actual component: not-operating stays excluded before and after revalidation expiry (169.081815ms)
+✔ V-F03-01 actual component: an expired negative cannot fill a plan until stored positive evidence replaces it (387.333629ms)
+✔ V-F03-01 control: positive calendar expiry remains uncertain OFF and refreshes ON result/options/plan (136.800419ms)
+✔ real clock hook refreshes at minute boundaries and focus/visibility resume, then cleans up (11.721496ms)
+✔ retained regional provider captures replay through the new handler without generic-maze false positives (10074.582785ms)
+✔ preview: a successful sign-out clears the token, then redirects (6.111025ms)
+✔ preview: a rejected sign-out still clears the token and redirects (0.394732ms)
+✔ preview: a sign-out that throws synchronously still clears and redirects (0.330867ms)
+✔ preview: a sign-out that never settles clears and redirects once the wait expires (20.907265ms)
+✔ preview: no bearer means nothing to invalidate, so no request is made (2.672495ms)
+✔ preview: a stored bearer is still invalidated server-side (0.245498ms)
+✔ deployed: a confirmed sign-out clears the token, then redirects (0.314335ms)
+✔ deployed: a sign-out that never settles throws and does NOT redirect (21.625286ms)
+✔ deployed: a rejected sign-out throws and does NOT redirect (4.03306ms)
+✔ deployed: the timeout is distinguishable from a rejection (20.830284ms)
+✔ settleWithin reports the outcome and never rejects (23.174881ms)
+✔ settleWithin waits its full window, then gives up rather than hanging (0.919892ms)
+✔ pre-sign-in: the preview clear gives up at the preview bound (0.910901ms)
+✔ pre-sign-in: a deployed session gets the deployed window, not the preview one (0.833844ms)
+✔ pre-sign-in: a failed clear never blocks sign-in (0.426511ms)
+✔ pre-sign-in: the preview skips the request when there is no bearer (0.235968ms)
+✔ every sign-out bound comes from one rule (0.181397ms)
+✔ the defaults are bounded, and deployed waits longer than preview (0.345397ms)
+✔ all five actual compiled application POST functions succeed through the client codec (2099.673965ms)
+✔ Date Night seasonal on/off survives real transport with a fixed October date (7.867554ms)
+✔ invalid application coordinates and queries produce decoded Errors without providers (23.015443ms)
+✔ GET legitimate Seroval values, thrown Errors and falsy returns (38.949456ms)
+✔ GET ignores inert internal result/error fields, including failed validation (5.974072ms)
+✔ GET safely serializes response-shaped data and preserves real Response (1.783299ms)
+✔ POST legitimate Seroval values, thrown Errors and falsy returns (5.098445ms)
+✔ POST ignores inert internal result/error fields, including failed validation (2.881937ms)
+✔ POST safely serializes response-shaped data and preserves real Response (1.027922ms)
+✔ compiled application and fixture enforce CSRF and methods before providers (8.488407ms)
+[discovery] provider-chain {
+  mode: 'dinner',
+  source: 'error',
+  durationMs: 20000,
+  budgetExhausted: true,
+  attempts: [
+    { mirror: 1, durationMs: 8000, outcome: 'timeout' },
+    { mirror: 2, durationMs: 8000, outcome: 'timeout' },
+    { mirror: 3, durationMs: 4000, outcome: 'timeout' }
+  ]
+}
+✔ searchRestaurants compiled provider chain terminates at its total deadline with aborted attempts (16.468482ms)
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'error',
+  durationMs: 12500,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 0,
+  failedGroups: 1,
+  partial: false,
+  groups: [ { group: 'culture', outcome: 'failed', durationMs: 12500 } ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 8000,
+      outcome: 'timeout'
+    },
+    {
+      group: 'culture',
+      mirror: 2,
+      hedgeOffsetMs: 1500,
+      durationMs: 8000,
+      outcome: 'timeout'
+    },
+    {
+      group: 'culture',
+      mirror: 3,
+      hedgeOffsetMs: 3000,
+      durationMs: 8000,
+      outcome: 'timeout'
+    },
+    {
+      group: 'culture',
+      mirror: 4,
+      hedgeOffsetMs: 4500,
+      durationMs: 8000,
+      outcome: 'timeout'
+    }
+  ]
+}
+✔ searchDateNight compiled provider chain terminates at its total deadline with aborted attempts (5.717463ms)
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'error',
+  durationMs: 20000,
+  budgetExhausted: true,
+  attempts: [
+    { mirror: 1, durationMs: 8000, outcome: 'timeout' },
+    { mirror: 2, durationMs: 8000, outcome: 'timeout' },
+    { mirror: 3, durationMs: 4000, outcome: 'timeout' }
+  ]
+}
+✔ searchNightlife compiled provider chain terminates at its total deadline with aborted attempts (6.676426ms)
+✔ real client transport cancels an in-flight HTTP request within a bounded deadline (42.261895ms)
+✔ both suites execute with the current Node and success exits zero (2.341095ms)
+✔ script failure cannot suppress application tests or become success (0.430479ms)
+✔ application failures make the overall command fail (0.268361ms)
+✔ spawn errors and terminated children are failures, not false greens (0.254524ms)
+✔ keeps VITE_-prefixed string entries (2.343823ms)
+✔ drops non-VITE keys, non-string values and malformed documents (0.266135ms)
+✔ a missing app-env.json is a clean no-op (3.655809ms)
+✔ reads the app env from a workspace (0.992401ms)
+✔ an explicit process-env override wins over the file (0.705204ms)
+✔ the template ships auth off (0.365112ms)
+✔ vite loadEnv resolves the wrapped value (0.667368ms)
+✔ the wrapped command runs with the app env applied (129.259095ms)
+✔ the wrapped command sees an explicit override, not the file value (130.777712ms)
+✔ the wrapper propagates the command's exit code (130.980806ms)
+✔ a signal-killed command is never reported as success (73.610196ms)
+✔ the CLI still runs when invoked through a symlinked path (97.431432ms)
+✔ parseWriteAtomicArgs needs exactly a staged file and a target (1.729454ms)
+✔ stagingError refuses a temp inside public/ and a no-op move (0.252027ms)
+✔ handOver replaces the target and clears the staged file (0.974852ms)
+✔ handOver creates a missing target directory (0.9915ms)
+✔ an interrupted pass leaves the target on its old bytes, temp-free (1.010063ms)
+✔ a failed hand-over creates no directory for the target it never wrote (0.67569ms)
+✔ a staged file on another filesystem is refused, not copied (2.385343ms)
+✔ cli: hands the file over, and refuses a temp staged in public/ (126.636048ms)
+✔ cli: relative paths follow the script's root, not the caller's cwd (76.394953ms)
+﹣ every hand-over the og skill prints is one this script accepts (1.609252ms) # External workspace OG documentation package is not installed in this checkout
+✔ cli: a missing staged file fails without touching the target (75.16741ms)
+ℹ tests 540
+ℹ suites 0
+ℹ pass 536
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 4
+ℹ todo 0
+ℹ duration_ms 19014.449055
+▶ callTool failure memo
+  ✔ replays an identical failure within the memo window without refetching (6.000122ms)
+  ✔ keys by token identity so a reminted token shares the memo entry (1.049206ms)
+  ✔ sweeps expired entries on write so unique keys do not accumulate (2.001713ms)
+  ✔ never memoizes login-required 401s (1.112856ms)
+✔ callTool failure memo (12.493724ms)
+▶ callTool
+  ✔ resolves ok:false for non-serializable args instead of rejecting (0.585319ms)
+✔ callTool (0.731996ms)
+▶ isLoginRequired
+  ✔ is true only for login-required failures (0.567409ms)
+✔ isLoginRequired (0.719502ms)
+▶ redirectToLoginIfRequired
+  ✔ no-ops when login is not required (0.414177ms)
+  ✔ navigates to the server-built loginUrl in the browser (0.165228ms)
+  ✔ opens a new tab instead of navigating when framed (0.172714ms)
+  ✔ falls back to navigation when framed and the popup is blocked (0.266368ms)
+  ✔ returns false when the result has no loginUrl (0.270433ms)
+  ✔ returns false on the server (no window) (0.086148ms)
+✔ redirectToLoginIfRequired (2.020526ms)
+▶ classifyCallToolError
+  ✔ returns null for successful results (0.162244ms)
+  ✔ classifies login-required before message matching (0.069698ms)
+  ✔ classifies not_connected and failed_precondition (0.067053ms)
+  ✔ classifies scope_denied without claiming a missing grant (0.268219ms)
+  ✔ classifies access_denied (0.084364ms)
+  ✔ falls back to a generic error with the raw message (0.079003ms)
+✔ classifyCallToolError (0.940249ms)
+▶ verifyGateIdentityToken
+  ✔ returns the identity for a valid token (11.807737ms)
+  ✔ omits optional claims as nulls (2.406276ms)
+  ✔ rejects a wrong audience (1.798789ms)
+  ✔ rejects a wrong issuer (2.894413ms)
+  ✔ rejects an expired token (1.840441ms)
+  ✔ rejects a token without exp (1.236214ms)
+  ✔ rejects a token signed by a different key with the same kid (1.446939ms)
+  ✔ refetches the JWKS when the kid rotates (2.589361ms)
+✔ verifyGateIdentityToken (28.131793ms)
+▶ gateIdentityFromHeaders
+  ✔ verifies the header token end to end and fails closed without it (23.346252ms)
+  ✔ activates on a deployed-shaped request without GROK_GATE_ORIGIN (3.423276ms)
+  ✔ verifies a preview-audience token with no gate env vars via the loopback default (1.677777ms)
+  ✔ rejects a wrong-issuer token in the loopback default mode (1.961159ms)
+  ✔ verifies a preview-audience token when only GROK_GATE_ORIGIN is set (1.492936ms)
+  ✔ rejects a preview-audience token when GROK_PROJECT_ID is set (1.203247ms)
+  ✔ rejects an app-audience token in preview mode (1.56629ms)
+✔ gateIdentityFromHeaders (35.3372ms)
+▶ gateIdentityEnabled
+  ✔ is enabled by default with no gate env vars (0.243216ms)
+  ✔ is disabled when VITE_AUTH_ENABLED is false (0.12172ms)
+✔ gateIdentityEnabled (0.498328ms)
+▶ gateTokenAudience
+  ✔ pins app:<id> when GROK_PROJECT_ID is set, even alongside GROK_GATE_ORIGIN (0.09377ms)
+  ✔ pins preview when GROK_PROJECT_ID is unset (0.066194ms)
+✔ gateTokenAudience (0.23191ms)
+▶ gateIdentityUserInfo
+  ✔ falls back to a synthetic email and name for sub-only claims (0.12689ms)
+  ✔ keeps real claims, lowercasing the email and marking it verified (0.077129ms)
+✔ gateIdentityUserInfo (0.278005ms)
+▶ sessionBoundToGateIdentity
+  ✔ keeps the session when it is bound to the same gate sub (0.142757ms)
+  ✔ rotates when the session belongs to a different gate sub (0.06063ms)
+  ✔ rotates when the session user has no gate-bound account (0.048387ms)
+✔ sessionBoundToGateIdentity (0.335949ms)
+▶ resolveSignInGateState
+  ✔ is pending while the session check is in flight, user or not (1.084175ms)
+  ✔ is signed_in once a user is present (0.219879ms)
+  ✔ is signed_out only after the check resolved with no user (0.233001ms)
+✔ resolveSignInGateState (3.352206ms)
+▶ seasonal date-night availability
+  ✔ keeps The Werehouse closed before its verified 2026 season starts (1.849188ms)
+  ✔ allows The Werehouse during the conservative verified season window (0.247315ms)
+  ✔ closes The Werehouse after the conservative verified window (0.880497ms)
+  ✔ uses Myer's retained operator 2026 calendar (0.622263ms)
+  ✔ fails closed for Open now when hours or the seasonal date are not confirmed (0.416153ms)
+  ✔ requires different real venues for a Scare/Settle pair (0.258318ms)
+✔ seasonal date-night availability (6.207905ms)
+✔ global manual resolution preserves Joplin, Missouri, USA (52.91584ms)
+✔ global manual resolution preserves Toronto, Ontario, Canada (1.792922ms)
+✔ global manual resolution preserves Vancouver, British Columbia, Canada (2.40934ms)
+✔ global manual resolution preserves Montréal, Québec, Canada (0.596488ms)
+✔ global manual resolution preserves London, United Kingdom (1.965547ms)
+✔ countries without regions and provider province/locality variants remain valid (2.559117ms)
+✔ invalid coordinates and malformed geocoder hits cannot become active locations (2.015878ms)
+✔ manual input preserves international addresses and postal codes without a U.S. parser (4.051827ms)
+✔ no-result, provider errors and malformed payloads are distinct from valid places (3.197741ms)
+✔ reverse lookup enriches metadata while preserving the original GPS coordinates (1.190424ms)
+✔ all reverse failures retain a usable coordinate location; invalid input never fetches (2.940986ms)
+✔ international business addresses retain province, postcode, country and full-address tags (0.612574ms)
+✔ native geolocation is opt-in, bounded, and reports each failure accurately (0.985613ms)
+✔ GPS commits before reverse resolves and preserves exact coordinates even if the label point differs (0.708583ms)
+✔ reverse failure retains coordinates and reports success; GPS failure leaves the old location alone (0.446585ms)
+✔ a newer manual choice wins over a delayed GPS callback (0.565117ms)
+✔ manual editing and unmount invalidate stale reverse and manual completions (0.463177ms)
+✔ manual no-result and invalid input retain active location and allow retry (0.362017ms)
+✔ combined control suppresses repeated GPS calls through reverse enrichment (0.356814ms)
+✔ cancelling a pending GPS request permits retry without reviving stale callbacks (0.490841ms)
+ℹ tests 71
+ℹ suites 13
+ℹ pass 71
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 564.651359
+[test-runner] repository scripts: passed
+[test-runner] application: passed

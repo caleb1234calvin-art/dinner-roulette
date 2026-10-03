@@ -216,4 +216,14 @@ Migration-free production build later: `VITE_AUTH_ENABLED=true node scripts/with
 - Blockers: refined-query real seasonal performance unresolved;50mi acceptance pending. No deadline extension warranted. Main/production unchanged; automatic non-production Preview only, last actually tested966447/dpl_JBCV767umF9iMBsVoRQQMJQrBkDc. No migration/configuration/promotion/merge.
 - Resume status: QUERY EXECUTION REFINED — FRESH VALIDATION AND LOW-LOAD LIVE PILOT PENDING.
 
+## Save 11 — refined full suite passed; low-load Preview pilot gate
+
+- Repository/branch/frozen base unchanged. Latest pushed `f0508548ea1483fd4f4aeac4a68efb219fdc61b8`, tree `02daf9901a6791be9507d53939ebdbc53d737fe9`, sole parent `9f90f689dcd7327e2c802bd0913327951441969a`. This save directly descends from it.
+- Refined full deterministic/security suite PASS:536 repository +71 app =607 JavaScript passes,4 inherited skips,0 failures. Safe auth-enabled build and proof PASS: source `bdc8ad9d9191eb259ff5a2183621a42a5e2dea17d17a84a689d603fd4cfc63f2`, output `bfde903316781d41827e5db0eab7b094716d6618901f89a5ad091c15e607694b`. No migration. Focused19query/24seasonal/typecheck/lint above remain passed.
+- Changed only fresh logs, six representative unedited PNGs (four controlled scenarios plus initial live Anything/Haunted), and continuation. Immutable PNG blobs uploaded with exact Git SHA verification before tree publication. No code change after Save10, clean tree before evidence copy.
+- Next action: one initial15mi Anything discovery plus local ON/filter checks using pilot flags against READY non-production exactf050854 Preview `dpl_DrhrHmWGmYaV4wAt99skKzUBVtNm`, https://dinner-roulette-epqwevkv8-minions-9e2c.vercel.app. Confirm allgroup outcomes explicitly; a functional pilot pass alone does not prove seasonal acquisition succeeded.
+- Resume: `VITE_AUTH_ENABLED=true node scripts/browser-build-proof.mjs verify`; run live harness with `PFU_LIVE_RADII=15 PFU_LIVE_SELECTIONS=anything PFU_BROWSER_IGNORE_HTTPS_ERRORS=1 BROWSER_ALLOW_EXTERNAL_HOST=1 VITE_AUTH_ENABLED=true PFU_PREVIEW_DEPLOYMENT_ID=dpl_DrhrHmWGmYaV4wAt99skKzUBVtNm PFU_CANDIDATE_SHA=f0508548ea1483fd4f4aeac4a68efb219fdc61b8`, targetURL above/output `/tmp/pfu-date-night-exact-key-pilot`. If seasonal still fails, preserve evidence before named-set refinement, no repeated fullmatrix hammering.
+- Blockers: real seasonal success and full50mi acceptance unresolved. Prior fifteen-mile failure evidence preserved; no public call after it yet. Query equivalence proven but speed remains a measurement question. Deadline constants unchanged; no application diagnostics.
+- Main/production untouched, no migration/settings/merge/promotion. Automatic non-production previews only. Resume status:607 DETERMINISTIC PASSES — REFINED QUERY LIVE PILOT PENDING.
+
 CHECKPOINT INCOMPLETE — READ BLOCKERS BEFORE CONTINUING
