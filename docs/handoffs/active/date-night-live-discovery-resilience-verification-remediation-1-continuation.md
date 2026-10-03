@@ -45,3 +45,15 @@ SAFE TO RESUME FROM THIS CHECKPOINT
 - Main/production untouched; no merge/promotion/configuration/migration/native changes. No live-provider requests or browser acceptance yet. No temporary runtime instrumentation.
 
 SAFE TO RESUME FROM THIS CHECKPOINT
+
+## Save 4 — BEFORE FULL VALIDATION / BUILD / BROWSER
+
+- Latest pushed checkpoint: `2da807b747dbe7a6ac06e666142b8cff72c3b4f0`; resolve its tree/sole parent with Git. Runtime is frozen for the full validation phase, with both focused blockers GREEN. This separate save changes evidence/continuity only.
+- All current runtime edits are restricted to `provider-evidence.ts`, `query-plan.ts`, `cache.ts`. Supporting test/harness expansion is documented under Save2. Read-only second review found no blocking defect in this scope.
+- Cache typecheck log had an extra trailing blank line detected when staging evidence; this save normalizes that presentation whitespace. It does not change the successful command/result. Final source/evidence diff-check will be rerun.
+- Exact next commands: repeat query/seasonal/cache/partial/client/hedge/provider focused suites, typecheck and actual changed-file lint; capture build proof, direct auth-enabled Vite production build without migration, complete/verify proof; compiled TanStack security and full npm test in a loopback-capable runner. Run dependency graph, casino, Android structural/icons, Python native and protected-scope/secret/junk checks in parallel where independent.
+- Only after those pass: four controlled real-RPC browser scenarios, then confirmed non-production Preview with one15-mile and one50-mile Anything acquisition plus local Corn/seasonal/filter reuse. Keep provider calls bounded; record counts as observations.
+- Main/production remain untouched. No manual deploy, migration, settings change, browser acceptance or live acquisition yet. Existing Git-created Preview identity will be checked before use. No temporary runtime instrumentation.
+- Resume: fetch required branch; inspect latest Git identity and this section; verify both RED/GREEN evidence; continue gates without modifying source unless a concrete failure is reproduced. Publish after validation and again at final immutable freeze; STOP for independent reverification.
+
+SAFE TO RESUME FROM THIS CHECKPOINT
