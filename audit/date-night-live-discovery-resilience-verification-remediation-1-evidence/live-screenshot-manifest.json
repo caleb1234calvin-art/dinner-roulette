@@ -1,0 +1,94 @@
+{
+  "scope": "Representative final live screenshots only; complete 12-row verdict retained separately.",
+  "selection": [
+    "15-mile Anything; Open Now off",
+    "15-mile Corn Maze subset; Open Now off",
+    "50-mile Anything; Open Now off",
+    "50-mile Corn Maze subset; Open Now off"
+  ],
+  "privacy": "Location controls were deliberately masked magenta by the existing browser harness. Originals copied without alteration. No exposed location label, precise coordinates, address, account identifiers, or credentials found in visual review.",
+  "visual_review": {
+    "total_rows": 12,
+    "reviewed_by_root": 3,
+    "remaining_reviewed_by_cache_agent": 9,
+    "result": "No obvious mobile horizontal overflow, clipped critical caution text, or new visual regression observed. Fixed bars occur at capture scroll position in these full-page screenshots; this evidence does not imply all document content is simultaneously visible in a viewport.",
+    "all_filenames": [
+      "15-anything-off.png",
+      "15-corn-maze-off.png",
+      "15-haunted-house-off.png",
+      "15-haunted-house_corn-maze_pumpkin-patch-off.png",
+      "15-haunted-house_corn-maze_pumpkin-patch-on.png",
+      "15-pumpkin-patch-off.png",
+      "50-anything-off.png",
+      "50-corn-maze-off.png",
+      "50-haunted-house-off.png",
+      "50-haunted-house_corn-maze_pumpkin-patch-off.png",
+      "50-haunted-house_corn-maze_pumpkin-patch-on.png",
+      "50-pumpkin-patch-off.png"
+    ]
+  },
+  "files": [
+    {
+      "path": "audit/date-night-live-discovery-resilience-verification-remediation-1-evidence/screenshots/live-15-anything-off.png",
+      "source_filename": "15-anything-off.png",
+      "bytes": 280362,
+      "sha256": "96bde8899570fe93d4ddfee247c14752084ed9cc7ea25a2dff48479dbb1604e1",
+      "git_blob": "f20cb7b8e144f595558090467e5ccca7266d7ec2",
+      "width": 390,
+      "height": 2101,
+      "existing_committed_paths": [
+        "audit/date-night-live-discovery-resilience-1-evidence/screenshots/final-live-15-anything-off.png"
+      ],
+      "publication_method": "Reuse existing published ancestor blob",
+      "remote_git_blob": "f20cb7b8e144f595558090467e5ccca7266d7ec2",
+      "remote_matches_local": true
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-verification-remediation-1-evidence/screenshots/live-15-corn-maze-off.png",
+      "source_filename": "15-corn-maze-off.png",
+      "bytes": 278825,
+      "sha256": "06e222612f79a06868643f66f48057effa0a897bcd2cac098f6a94ceb75cc764",
+      "git_blob": "c1b598076876daba708cdb4819ef0a48f8644259",
+      "width": 390,
+      "height": 2174,
+      "existing_committed_paths": [],
+      "publication_method": "GitHub create_blob base64",
+      "remote_git_blob": "c1b598076876daba708cdb4819ef0a48f8644259",
+      "remote_matches_local": true
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-verification-remediation-1-evidence/screenshots/live-50-anything-off.png",
+      "source_filename": "50-anything-off.png",
+      "bytes": 268408,
+      "sha256": "435bf051e99d45b85481cd39b5becf76eada6ba56ca1226f7964a44abb46946b",
+      "git_blob": "81a49a6fe10a2799bc769b813147ba97338bf10c",
+      "width": 390,
+      "height": 2082,
+      "existing_committed_paths": [],
+      "publication_method": "GitHub create_blob base64",
+      "remote_git_blob": "81a49a6fe10a2799bc769b813147ba97338bf10c",
+      "remote_matches_local": true
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-verification-remediation-1-evidence/screenshots/live-50-corn-maze-off.png",
+      "source_filename": "50-corn-maze-off.png",
+      "bytes": 278429,
+      "sha256": "8ba1e718ce67b07c2f2e3fd2a07bb7d11456549e3b9ae5e6b0520179360946ab",
+      "git_blob": "6991ebe20e632688637f350a99b50eedfd182ff2",
+      "width": 390,
+      "height": 2062,
+      "existing_committed_paths": [
+        "audit/date-night-live-discovery-resilience-1-evidence/screenshots/cache-fixed-live-50-corn-maze-off.png"
+      ],
+      "publication_method": "Reuse existing published ancestor blob",
+      "remote_git_blob": "6991ebe20e632688637f350a99b50eedfd182ff2",
+      "remote_matches_local": true
+    }
+  ],
+  "publication": {
+    "status": "All four binary blobs available and exact local Git hashes verified. Two new unique blobs uploaded; two existing published ancestor blobs reused.",
+    "new_unique_blobs_uploaded": 2,
+    "existing_blobs_reused": 2,
+    "tree_commit_or_ref_changes": false
+  }
+}

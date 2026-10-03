@@ -1,0 +1,27 @@
+✔ Date Night hedge mirror 2 wins at 1500ms and cancels losing attempts (14.617274ms)
+✔ Date Night hedge mirror 3 wins at 3000ms and cancels losing attempts (1.207797ms)
+✔ Date Night hedge mirror 4 wins at 4500ms and cancels losing attempts (0.894677ms)
+✔ Date Night all fetch stalls settle by 12.5s even when abort is honored (1.590853ms)
+✔ Date Night all fetch stalls settle by 12.5s even when abort is ignored (1.13765ms)
+✔ Date Night all body stalls settle by 12.5s even when abort is honored (0.724265ms)
+✔ Date Night all body stalls settle by 12.5s even when abort is ignored (0.79999ms)
+✔ Date Night groups share the unchanged absolute 20s deadline, including abort-ignoring work (0.825593ms)
+✔ Date Night immediate 429 advances immediately and preserves normalized failure (1.510247ms)
+✔ Date Night immediate 500 advances immediately and preserves normalized failure (0.696874ms)
+✔ Date Night immediate 504 advances immediately and preserves normalized failure (0.567869ms)
+✔ Date Night immediate malformed advances immediately and preserves normalized failure (0.417781ms)
+✔ Date Night immediate invalid-json advances immediately and preserves normalized failure (0.894913ms)
+✔ Date Night immediate abort advances immediately and preserves normalized failure (1.229056ms)
+✔ Date Night immediate network-error advances immediately and preserves normalized failure (1.224529ms)
+✔ Date Night valid empty wins and differs from failure (0.555475ms)
+✔ Date Night late loser success/rejection cannot replace winner or mutate recorded outcome (4.178274ms)
+✔ Date Night cancellation aborts active attempts, stops scheduled hedges and records cancelled group (0.760565ms)
+✔ Date Night four groups never exceed sixteen fixed-mirror attempts and reject duplicate/untrusted group IDs (2.501107ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 44.561098

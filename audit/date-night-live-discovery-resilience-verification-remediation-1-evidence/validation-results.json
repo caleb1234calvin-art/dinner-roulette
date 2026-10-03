@@ -1,0 +1,192 @@
+[
+  {
+    "gate": "focused-query",
+    "command": [
+      "node",
+      "scripts/date-night-query-plan.test.mjs"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 1.771,
+    "log": "focused-query.log"
+  },
+  {
+    "gate": "focused-seasonal",
+    "command": [
+      "node",
+      "scripts/seasonal-discovery.test.mjs"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 13.707,
+    "log": "focused-seasonal.log"
+  },
+  {
+    "gate": "focused-cache",
+    "command": [
+      "node",
+      "scripts/date-night-cache.test.mjs"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.867,
+    "log": "focused-cache.log"
+  },
+  {
+    "gate": "focused-partial",
+    "command": [
+      "node",
+      "scripts/date-night-partial-results.test.mjs"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.762,
+    "log": "focused-partial.log"
+  },
+  {
+    "gate": "focused-partial-ui",
+    "command": [
+      "node",
+      "scripts/date-night-partial-ui.test.mjs"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.768,
+    "log": "focused-partial-ui.log"
+  },
+  {
+    "gate": "focused-client",
+    "command": [
+      "node",
+      "scripts/discovery-client-lifecycle.test.mjs"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 1.117,
+    "log": "focused-client.log"
+  },
+  {
+    "gate": "focused-hedges",
+    "command": [
+      "node",
+      "scripts/date-night-hedged-provider.test.mjs"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.465,
+    "log": "focused-hedges.log"
+  },
+  {
+    "gate": "focused-provider",
+    "command": [
+      "node",
+      "scripts/discovery-provider-deadlines.test.mjs"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 1.568,
+    "log": "focused-provider.log"
+  },
+  {
+    "gate": "typecheck",
+    "command": [
+      "npm",
+      "run",
+      "typecheck"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 6.165,
+    "log": "typecheck.log"
+  },
+  {
+    "gate": "lint",
+    "command": [
+      "node",
+      "node_modules/eslint/bin/eslint.js",
+      "scripts/date-night-cache.test.mjs",
+      "scripts/date-night-partial-results.test.mjs",
+      "scripts/date-night-query-plan.test.mjs",
+      "scripts/seasonal-discovery.test.mjs",
+      "scripts/tanstack-security.test.mjs",
+      "scripts/test-support/date-night-resilience-preload.mjs",
+      "src/lib/date-night/cache.ts",
+      "src/lib/date-night/provider-evidence.ts",
+      "src/lib/date-night/query-plan.ts"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 1.772,
+    "log": "lint.log"
+  },
+  {
+    "gate": "diff-check",
+    "command": [
+      "git",
+      "diff",
+      "--check",
+      "e84acc471f57dff430f73368390442e585f93637"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.017,
+    "log": "diff-check.log"
+  },
+  {
+    "gate": "build-capture",
+    "command": [
+      "node",
+      "scripts/browser-build-proof.mjs",
+      "capture"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.165,
+    "log": "build-capture.log"
+  },
+  {
+    "gate": "build",
+    "command": [
+      "node",
+      "scripts/with-app-env.mjs",
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "build",
+      "--mode",
+      "production"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 3.399,
+    "log": "build.log"
+  },
+  {
+    "gate": "build-complete",
+    "command": [
+      "node",
+      "scripts/browser-build-proof.mjs",
+      "complete"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.265,
+    "log": "build-complete.log"
+  },
+  {
+    "gate": "build-verify",
+    "command": [
+      "node",
+      "scripts/browser-build-proof.mjs",
+      "verify"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 0.417,
+    "log": "build-verify.log"
+  },
+  {
+    "gate": "security",
+    "command": [
+      "node",
+      "scripts/tanstack-security.test.mjs"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 2.075,
+    "log": "security.log"
+  },
+  {
+    "gate": "full-test",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exitCode": 0,
+    "durationSeconds": 19.363,
+    "log": "full-test.log"
+  }
+]

@@ -1,0 +1,33 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> audit:casinos
+> node scripts/audit-casino-catalog.mjs && node scripts/audit-national-coverage.mjs
+
+Casino catalog reconciliation warnings:
+- duplicate id: casino-catalog-caesars-new-orleans (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-15.ts, 0.077 mi); latest pass wins at runtime
+- duplicate name, latest pass wins: Caesars New Orleans (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-15.ts, 0.077 mi)
+- duplicate id: casino-catalog-beau-rivage (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-16.ts, 0.012 mi); latest pass wins at runtime
+- duplicate name, latest pass wins: Talking Stick Resort (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-18.ts, 0.073 mi)
+- duplicate name, latest pass wins: Pechanga Resort Casino (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-19.ts, 0.041 mi)
+- duplicate name, latest pass wins: Thunder Valley Casino Resort (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-19.ts, 0.343 mi)
+- duplicate name, latest pass wins: Yaamava' Resort & Casino at San Manuel (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-19.ts, 0.047 mi)
+- same name at distinct locations retained: Spirit Mountain Casino (src/lib/nightlife/casino-catalog-pass-18.ts / src/lib/nightlife/casino-catalog-pass-20.ts, 846.203 mi)
+- duplicate id: casino-catalog-mgm-grand-las-vegas (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-22.ts, 0.044 mi); latest pass wins at runtime
+- duplicate name, latest pass wins: Bellagio (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-22.ts, 0.037 mi)
+- duplicate name, latest pass wins: Caesars Palace (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-22.ts, 0.124 mi)
+- duplicate name, latest pass wins: Wynn Las Vegas (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-22.ts, 0.026 mi)
+- duplicate id: casino-catalog-winstar (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-28.ts, 0.051 mi); latest pass wins at runtime
+- duplicate name, latest pass wins: WinStar World Casino and Resort (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-28.ts, 0.051 mi)
+- duplicate id: casino-catalog-choctaw-durant (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-28.ts, 0.072 mi); latest pass wins at runtime
+- duplicate name, latest pass wins: Choctaw Casino & Resort-Durant (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-28.ts, 0.072 mi)
+- duplicate name, latest pass wins: Peppermill Resort Spa Casino (src/lib/nightlife/casino-catalog.ts / src/lib/nightlife/casino-catalog-pass-32.ts, 0.030 mi)
+- duplicate id: casino-catalog-wi-oneida-airport (src/lib/nightlife/casino-catalog-pass-23.ts / src/lib/nightlife/casino-catalog-pass-51.ts, 0.085 mi); latest pass wins at runtime
+- duplicate name, latest pass wins: Oneida Casino - Airport Drive (src/lib/nightlife/casino-catalog-pass-23.ts / src/lib/nightlife/casino-catalog-pass-51.ts, 0.085 mi)
+- duplicate id: casino-catalog-wi-oneida-imac (src/lib/nightlife/casino-catalog-pass-23.ts / src/lib/nightlife/casino-catalog-pass-51.ts, 0.256 mi); latest pass wins at runtime
+- duplicate name, latest pass wins: Oneida Casino - Irene Moore Activity Center (src/lib/nightlife/casino-catalog-pass-23.ts / src/lib/nightlife/casino-catalog-pass-51.ts, 0.256 mi)
+- duplicate id: casino-catalog-soaring-eagle-slot-palace (src/lib/nightlife/casino-catalog-pass-3.ts / src/lib/nightlife/casino-catalog-pass-53.ts, 0.011 mi); latest pass wins at runtime
+- duplicate name, latest pass wins: Soaring Eagle Slot Palace (src/lib/nightlife/casino-catalog-pass-3.ts / src/lib/nightlife/casino-catalog-pass-53.ts, 0.011 mi)
+- same name at distinct locations retained: Golden Eagle Casino (src/lib/nightlife/casino-catalog-pass-10.ts / src/lib/nightlife/casino-catalog-pass-56.ts, 362.428 mi)
+Canonical jurisdiction counts: {"Connecticut":2,"Massachusetts":3,"New Jersey":9,"Pennsylvania":18,"Maryland":6,"Michigan":27,"Mississippi":28,"Louisiana":24,"Oklahoma":113,"Arizona":26,"Nevada":204,"California":69,"Ohio":11,"Indiana":14,"Illinois":17,"Delaware":3,"West Virginia":5,"Missouri":13,"Arkansas":3,"Rhode Island":2,"Maine":2,"Kansas":10,"North Carolina":3,"Virginia":5,"Alabama":3,"Iowa":23,"Kentucky":14,"New Mexico":23,"Oregon":10,"Washington":30,"Wisconsin":23,"Idaho":6,"Minnesota":19,"Nebraska":10,"Wyoming":3,"South Dakota":26,"North Dakota":5,"Florida":16,"New York":20,"Colorado":31,"Texas":4}
+Casino catalog audit passed: 899 serialized records, 883 canonical destinations across 60 catalog files.
+National coverage audit passed: 39 complete jurisdictions, 0 authoritative inventories staged, 2 pending jurisdictions.

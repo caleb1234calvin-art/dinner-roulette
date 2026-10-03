@@ -1,0 +1,56 @@
+{
+  "testedAt": "2026-10-03T02:02:24.860Z",
+  "previewOrigin": "https://dinner-roulette-4kk3544xy-minions-9e2c.vercel.app",
+  "previewDeploymentId": "dpl_2StAVNmaECY6k3HKiaeXdTyFoQVv",
+  "candidate": "32e00be55c2cff6a5528d8a506d9dc3b1058821d",
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "e4bda69121b000a0a6f89dbd119c53a68c7a5756b5db6fc06c0e2cadce157cad",
+      "files": 411
+    },
+    "startedAt": "2026-10-03T01:59:47.604Z",
+    "output": {
+      "sha256": "1af3eb20a0674cc21d9247af9f6b86256c82213acfa7161dea45bc80f659f270",
+      "files": 194
+    },
+    "completedAt": "2026-10-03T01:59:51.256Z"
+  },
+  "browserTlsVerificationBypassed": false,
+  "mode": "full-matrix",
+  "expectedRows": 12,
+  "requestedRadii": [
+    15,
+    50
+  ],
+  "requestedSelections": [
+    "anything",
+    "haunted-house",
+    "corn-maze",
+    "pumpkin-patch",
+    "mixed"
+  ],
+  "rows": [],
+  "rpc": [],
+  "localOnly": [],
+  "pageErrors": [],
+  "errors": [
+    {
+      "phase": "15:anything:off",
+      "check": "startup",
+      "kind": "environment-or-browser-error",
+      "networkCode": "net::ERR_CERT_AUTHORITY_INVALID"
+    }
+  ],
+  "passed": false,
+  "fullMatrixPassed": false,
+  "liveContributionObserved": false,
+  "limitations": [
+    "Venue counts are observations, not invariants.",
+    "No duplicate real request is made to decode captured RPC data.",
+    "Source summaries describe transport responses; UI may combine cached coverage.",
+    "Successful provider recall cannot be established when every live attempt fails."
+  ]
+}

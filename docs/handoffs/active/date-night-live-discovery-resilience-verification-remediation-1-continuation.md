@@ -57,3 +57,19 @@ SAFE TO RESUME FROM THIS CHECKPOINT
 - Resume: fetch required branch; inspect latest Git identity and this section; verify both RED/GREEN evidence; continue gates without modifying source unless a concrete failure is reproduced. Publish after validation and again at final immutable freeze; STOP for independent reverification.
 
 SAFE TO RESUME FROM THIS CHECKPOINT
+
+## Save 5 — FULL VALIDATION AND BROWSER ACCEPTANCE PASS
+
+- Latest pushed checkpoint: `32e00be55c2cff6a5528d8a506d9dc3b1058821d`, tree `e4ee1be81538257836eed65d1e9c009f84d14a3b`, sole parent `2da807b747dbe7a6ac06e666142b8cff72c3b4f0`. This save contains evidence/continuity only; tested source is unchanged.
+- All17 root gates PASS: query32, seasonal24, cache46, partial12, partial-UI2, client54, hedge19, provider41; typecheck; all9changed-code lint; diff-check; fresh auth-enabled migration-free build and capture/complete/verify proof; compiled security14; full npm test **641 passes =570repository+71application,4inherited skips,0failures**. Focused counts are not added to full total.
+- Dependency graph, casinos883canonical/899serialized/60catalogs, Android15launcher+4webicons, Python3/3 PASS. Initial protection scan:888failed-candidate files and all454prior production-protected paths unchanged; zero secret/junk/out-of-scope findings. No migrations, package/lockfile or native/config changes.
+- Controlled actual-browser/RPC four scenarios PASS: second mirror1582ms, third3091ms, partial12508ms, all-stall12504ms provider duration; truthful source/partial/fallback, loser cancellation, bounded loading, Open Now no-refetch and mobile no-overflow. Zero public-provider calls in controlled harness.
+- Accepted Preview: `dpl_2StAVNmaECY6k3HKiaeXdTyFoQVv`, https://dinner-roulette-4kk3544xy-minions-9e2c.vercel.app, READY/targetnull/exact32e00be. Full12-row live15/50matrix PASS with exactly2RPCs (4227ms/7842ms),4successful groups at each radius, no page/harness errors.15mi45live/seasonalvalidempty;50mi235live including1CornMaze. All seasonal subsets/OpenNow/mood/favorites/FewerParks made0additional RPCs. Counts are observations.
+- Normal Chromium TLS attempt failed at navigation with ERR_CERT_AUTHORITY_INVALID and0discovery requests; failure retained. Accepted run uses explicit disposable-browser ignoreHTTPS flag, not app/platform TLS changes.
+- Read-only hosted logs show seasonal2798ms(15mi)/6470ms(50mi), provider aggregate4060/7518ms, all4groups successful. Prior seasonal3595/6005ms: current15faster and50+465ms;50aggregate led by entertainment7118ms. No consistent attributable seasonal runtime harm established by these two observations; no more provider probes or deadline extension justified. Long hosted attempt arrays are tool-truncated and identified as excerpts.
+- Build fingerprints: source `e4bda69121b000a0a6f89dbd119c53a68c7a5756b5db6fc06c0e2cadce157cad`; output `1af3eb20a0674cc21d9247af9f6b86256c82213acfa7161dea45bc80f659f270`. Browser verdicts bind these same fingerprints.
+- Main freshly fetched unchanged at4d937e58; production readback remainsdpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL/4d937e58 with production aliases intact. No merge/promotion/production deployment or settings mutation.
+- Evidence includes original RED, focused/full/build/preservation logs, controlled provider events, both browser verdicts, certificate failure, hosted excerpts, query comparison and original representative screenshots with verified blob/hash manifests. Log presentation whitespace normalized only where documented.
+- Next: publish/read back this validation checkpoint, write separate final MD/JSON and current AI continuity entry, refresh final scope/privacy/diff/proof checks, freeze new immutable candidate and STOP for independent reverification. No additional source changes or live tests needed absent a concrete new failure.
+
+SAFE TO RESUME FROM THIS CHECKPOINT

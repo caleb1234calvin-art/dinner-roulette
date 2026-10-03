@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "validatedSource": "32e00be55c2cff6a5528d8a506d9dc3b1058821d",
+  "validatedSourceTree": "e4ee1be81538257836eed65d1e9c009f84d14a3b",
+  "baselineFailedCandidate": "e84acc471f57dff430f73368390442e585f93637",
+  "scope": "Dependency graph, casino invariants, Android structural/icon checks, Python native tests, protected-scope/secret/generated-junk sanity. Build, security, full/focused JavaScript, browsers and live Preview owned separately by root.",
+  "checks": [
+    {
+      "name": "dependencies",
+      "command": "npm ls --all",
+      "startedAt": "2026-10-03T01:59:18.389Z",
+      "wallElapsedMs": 5121,
+      "exitCode": 0,
+      "log": "full-dependencies.log",
+      "passed": true,
+      "logSha256": "66408b5ef11a6713097e3a1861788ceb124790a186ddcbdaee47263b09987470",
+      "logBytes": 66061,
+      "whitespaceOnlyNormalizationApplied": true,
+      "normalization": "Trailing spaces and extra EOF blank lines only; test/command results unchanged."
+    },
+    {
+      "name": "casino-invariants",
+      "command": "npm run audit:casinos",
+      "startedAt": "2026-10-03T01:59:18.390Z",
+      "wallElapsedMs": 5573,
+      "exitCode": 0,
+      "log": "full-casino-invariants.log",
+      "passed": true,
+      "logSha256": "2d0803767ef2020413d2ab49d14b9ed18486816127b5ab7f357f2bd3dcb944d1",
+      "logBytes": 5014,
+      "whitespaceOnlyNormalizationApplied": false,
+      "normalization": "Trailing spaces and extra EOF blank lines only; test/command results unchanged."
+    },
+    {
+      "name": "android-structural-icons",
+      "command": "npm run android:check",
+      "startedAt": "2026-10-03T01:59:18.390Z",
+      "wallElapsedMs": 5748,
+      "exitCode": 0,
+      "log": "full-android-structural-icons.log",
+      "passed": true,
+      "logSha256": "cd4ab08550fb1241ede73bad80df914901b8da3e86204e6888a33ce8734790cc",
+      "logBytes": 525,
+      "whitespaceOnlyNormalizationApplied": false,
+      "normalization": "Trailing spaces and extra EOF blank lines only; test/command results unchanged."
+    },
+    {
+      "name": "python-native",
+      "command": "python3 -m unittest discover -s native-android -p 'test_*.py'",
+      "startedAt": "2026-10-03T01:59:18.390Z",
+      "wallElapsedMs": 5988,
+      "exitCode": 0,
+      "log": "full-python-native.log",
+      "passed": true,
+      "logSha256": "921b60a7fd52e978fbb551cacd29df2d6708879400278e1fcc70fceeb0c6f8e0",
+      "logBytes": 101,
+      "whitespaceOnlyNormalizationApplied": false,
+      "normalization": "Trailing spaces and extra EOF blank lines only; test/command results unchanged."
+    }
+  ],
+  "observations": {
+    "dependencyGraph": {
+      "passed": true,
+      "invalidOrNonOptionalUnmetDependency": false,
+      "optionalDependencyAbsenceAllowed": true
+    },
+    "casino": {
+      "serializedRecords": 899,
+      "canonicalDestinations": 883,
+      "catalogFiles": 60,
+      "completeJurisdictions": 39,
+      "stagedAuthoritativeInventories": 0,
+      "pendingJurisdictions": 2,
+      "existingReconciliationWarningsRetained": true
+    },
+    "android": {
+      "launcherResources": 15,
+      "webIcons": 4,
+      "approvedMasterHashUnchanged": true,
+      "appId": "com.calebcalvin.pickforus",
+      "appName": "Pick For Us",
+      "versionCode": 1,
+      "versionName": "1.0.0",
+      "minSdk": 24,
+      "targetSdk": 36,
+      "compileSdk": 36,
+      "capacitor": "8.5.2"
+    },
+    "pythonNative": {
+      "passed": 3,
+      "failed": 0,
+      "countedSeparatelyFromJavaScript": true
+    }
+  },
+  "preservationEvidence": "protected-scope-sanity.json",
+  "mutations": "New evidence only; no tracked source, package/lockfile, Vercel, authentication, database, catalog, Android/native configuration or behavior changes. No Capacitor sync, migration, deployment, commit or push.",
+  "passed": true,
+  "preservationSummary": {
+    "protectedFileCount": 888,
+    "protectedUnchanged": true,
+    "priorFrozenProtectedFileCount": 454,
+    "priorFrozenProtectedUnchanged": true,
+    "passed": true,
+    "secretPatternHits": 0,
+    "generatedJunkHits": 0
+  }
+}

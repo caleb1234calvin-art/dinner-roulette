@@ -1,0 +1,35 @@
+{
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "operation": "GitHub create_blob only; no tree, commit, or reference mutation",
+  "encoding": "base64",
+  "transport": "Each base64 read checked exact expected encoded length and base64-only character set before upload; no truncated content accepted.",
+  "unique_blobs_uploaded": 3,
+  "screenshots": 4,
+  "results": [
+    {
+      "screenshots": [
+        "controlled-second-mirror.png",
+        "controlled-third-mirror.png"
+      ],
+      "expected_git_blob": "481aff03b5e588e956ed7bbf70babce5627438ac",
+      "returned_git_blob": "481aff03b5e588e956ed7bbf70babce5627438ac",
+      "match": true
+    },
+    {
+      "screenshots": [
+        "controlled-partial-groups.png"
+      ],
+      "expected_git_blob": "e55021b416f7f880cfcb3506e813722f2697c136",
+      "returned_git_blob": "e55021b416f7f880cfcb3506e813722f2697c136",
+      "match": true
+    },
+    {
+      "screenshots": [
+        "controlled-all-stall.png"
+      ],
+      "expected_git_blob": "37d7e0a45dc45b27ddcaa88bfb00cb388d393c41",
+      "returned_git_blob": "37d7e0a45dc45b27ddcaa88bfb00cb388d393c41",
+      "match": true
+    }
+  ]
+}
