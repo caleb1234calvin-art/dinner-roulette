@@ -65,3 +65,14 @@ SAFE TO RESUME FROM THIS CHECKPOINT.
 - Exact next action: publish/read back focused GREEN; add deterministic browser harness with external-fetch blockade and bounded live harness; checkpoint BEFORE running full validation/build. No promotion.
 
 SAFE TO RESUME FROM THIS CHECKPOINT.
+
+## Checkpoint 6 — BEFORE full validation/build
+
+- Branch/base unchanged. Latest published `84fda4411270a8ec9897ee2d662c938b1a466ca0`, tree `c386ba20c78ff6e1e3d99b9a4a71b189ec2e3b7a`, sole parent `5ffd73baa1d0fcab594dd65936efff4783705111`.
+- Changed paths: new radial controlled browser harness, external-fetch-blocking server preload and bounded exact-Preview live harness; this continuation. Harness lint/diff check PASS. Application runtime unchanged since checkpoint4.
+- Focused294/294, typecheck/lint/diff remain GREEN. Full validation and build have NOT run yet. Ten controlled scenarios are specified in the harness; no browser acceptance claimed before execution.
+- Geometry/coverage/cache/budgets unchanged. Controlled harness intercepts all external server fetches and blocks external browser routes. Live harness requires explicit verified-Preview flag, exact compiled RPC ID, allowed core/20:0/20:1 sequence, caps public traffic at3RPC/48theoretical attempts, gates outer traffic on core success, blocks other server functions and records deliberately incomplete50-mile coverage separately from usability. Post-cap outer failures are explicitly controlled transport failures, never described as real provider outages.
+- Exact next actions: publish/read back this pre-full checkpoint; run npm ls --all, typecheck, changed-code lint, diff check, casino invariants, Android structural/icons, Python native tests; capture proof with VITE_AUTH_ENABLED=true; run direct migration-free Vite production build through with-app-env; complete/verify proof; compiled TanStack security and full npm test; protected-scope/secret/generated-junk review. NEVER npm run build or migrations. Store separate exact commands/exits/logs.
+- Main/production untouched at frozen4d937e58/READY dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL. No accepted Preview and0public-provider calls. Remaining after full gates: checkpoint7, controlled10/checkpoint8, bounded exactPreview/checkpoint9, immutable freeze/checkpoint10. No promotion.
+
+SAFE TO RESUME FROM THIS CHECKPOINT.
