@@ -42,7 +42,7 @@ const fixture = (data, tags) => ({
 for (const [mode, search, key, tags] of modes) {
   for (const bodyStall of [false, true]) {
     for (const data of [local, remote]) {
-      test(`${mode}: ${bodyStall ? "body" : "headers"} stalls settle ${data === local ? "fallback" : "error"} at 20s; no fourth mirror`, async (t) => {
+      test(`${mode}: ${bodyStall ? "body" : "headers"} stalls settle ${data === local ? "fallback" : "error"} within the provider bound`, async (t) => {
         const clock = discoveryClock(t),
           calls = [];
         const log = t.mock.method(console, "warn", () => {});
@@ -65,14 +65,15 @@ for (const [mode, search, key, tags] of modes) {
           .finally(() => {
             settledAt = clock.now;
           });
-        await clock.tick(19_999);
+        const settlement = mode === "date-night" ? 12_500 : 20_000;
+        await clock.tick(settlement - 1);
         assert.equal(settledAt, undefined);
         await clock.tick(1);
-        assert.equal(settledAt, 20_000, "active chain must settle by aggregate budget");
+        assert.equal(settledAt, settlement, "active chain must settle by aggregate budget");
         await pending;
         assert.deepEqual(
           calls.map((x) => [x.url, x.at]),
-          mirrors.slice(0, 3).map((url, i) => [url, i * 8000]),
+          mode === "date-night" ? mirrors.map((url, i) => [url, i * 1500]) : mirrors.slice(0, 3).map((url, i) => [url, i * 8000]),
         );
         assert.ok(calls.every((x) => x.signal.aborted));
         assert.equal(clock.pending, 0);
@@ -92,10 +93,10 @@ for (const [mode, search, key, tags] of modes) {
         const record = log.mock.calls[0].arguments[1];
         assert.equal(record.mode, mode);
         assert.equal(record.source, data === local ? "fallback" : "error");
-        assert.equal(record.budgetExhausted, true);
+        assert.equal(record.budgetExhausted, mode !== "date-night");
         assert.deepEqual(
           record.attempts.map((x) => [x.mirror, x.durationMs, x.outcome]),
-          [
+          mode === "date-night" ? [[1, 8000, "timeout"], [2, 8000, "timeout"], [3, 8000, "timeout"], [4, 8000, "timeout"]] : [
             [1, 8000, "timeout"],
             [2, 8000, "timeout"],
             [3, 4000, "timeout"],
@@ -106,12 +107,12 @@ for (const [mode, search, key, tags] of modes) {
           /37\.176447|-94\.310223|43\.65348|-79\.38393|around:|https:|Deadline test venue/,
         );
         await clock.tick(60_000);
-        assert.equal(calls.length, 3);
+        assert.equal(calls.length, mode === "date-night" ? 4 : 3);
       });
     }
   }
 
-  test(`${mode}: first timeout then second success returns at 8s and clears timers`, async (t) => {
+  test(`${mode}: first stall then second success returns at ${mode === "date-night" ? "1.5" : "8"}s and clears timers`, async (t) => {
     const clock = discoveryClock(t),
       calls = [];
     t.mock.method(console, "warn", () => {});
@@ -125,7 +126,7 @@ for (const [mode, search, key, tags] of modes) {
     const pending = search({ data: local }).then((value) => {
       result = value;
     });
-    await clock.tick(7999);
+    await clock.tick((mode === "date-night" ? 1500 : 8000) - 1);
     assert.equal(result, undefined);
     await clock.tick(1);
     assert.ok(result?.[key].some((x) => x.name === "Deadline test venue"));

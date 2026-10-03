@@ -1,4 +1,5 @@
-import { createProviderChain, ProviderResponseError } from "../discovery/provider-chain";
+import { ProviderResponseError } from "../discovery/provider-chain";
+import { createDateNightProvider } from "../discovery/hedged-provider";
 import { DEFAULT_LOCATION } from "../restaurants/types";
 import { formatOsmAddress, requireCoordinates } from "../location/model";
 import { createServerFn } from "@tanstack/react-start";
@@ -16,13 +17,6 @@ import {
   type DateNightPlace,
   type DateNightSearchResponse,
 } from "./types";
-
-const MIRRORS = [
-  "https://overpass.openstreetmap.fr/api/interpreter",
-  "https://overpass.private.coffee/api/interpreter",
-  "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
-  "https://overpass-api.de/api/interpreter",
-];
 
 const QUERY = (lat: number, lon: number, radiusMeters: number, halloweenSeason: boolean) => `
 [out:json][timeout:20];
@@ -272,10 +266,10 @@ export const searchDateNight = createServerFn({ method: "POST" })
     const halloweenSeason = isHalloweenDateNightActive(data.spookySeasonEnabled);
     const body = `data=${encodeURIComponent(QUERY(data.lat, data.lon, radiusMeters, halloweenSeason))}`;
     const local = localWithin(data.lat, data.lon, fetchRadius, halloweenSeason);
-    const chain = createProviderChain("date-night");
+    const chain = createDateNightProvider();
     let lastError: unknown;
     try {
-      const live = await chain.run(MIRRORS, (mirror, signal) => queryMirror(mirror, body, halloweenSeason, signal));
+      const live = await chain.run("all", (mirror, signal) => queryMirror(mirror, body, halloweenSeason, signal));
       const venues = mergeDateNight(live, local);
       const source = local.length ? "merged" : "live";
       chain.finish(source);
