@@ -1,0 +1,17 @@
+# Date Night radial loading 1 — continuation
+
+Authority: `handoff/date-night-radial-loading-1`, commit `04a3ac240760fc025c62d487eeb7970c70620fb9`; full handoff read before executable changes.
+
+## Checkpoint 1 — architecture, patch plan and RED contracts
+
+- Branch `feature/date-night-radial-loading-1` created DIRECTLY from `d9cc8bdde2e531af6f029d3d558d25f4f7bb4ab5`. Verified tree `f9f46d16c876b4d608ab836d57a411a607e6f8fa`, sole parent `8e67d959f5b19cb00c22533a6eb27a1b2e1bfb2f`, clean starting worktree, zero post-base merges. Latest SHA before this save is the base. Resolve each save's own SHA with Git; do not amend for a self hash.
+- Fresh refs: main `4d937e58d2a65567b54ac5271915bc85b498898b`, handoff exact. Production alias readback READY `dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL`, target production, exact frozen main and unchanged aliases. Main/production untouched. No Preview accepted; no public-provider traffic.
+- Read current cache, RPC, DateNightHome, query/lifecycle/provider/evidence/identity/eligibility architecture, cache/component/client/browser tests, top continuity and retained timeout evidence. Current state machine and replacement design documented in `date-night-radial-loading-1-design.md`.
+- Changed paths: copied controlling handoff; new design; this continuation; `scripts/date-night-radial-plan.test.mjs`; separate `audit/date-night-radial-loading-1-evidence/planner-red.tap`. No application runtime edit or dependency/config/catalog/native change.
+- RED: `node --test scripts/date-night-radial-plan.test.mjs`: 0 passed / 10 failed, all specifically asserting absent bounded planner/coverage API. This is recorded before runtime implementation. Tests use an independent spherical oracle, dense sampling, exact prefix/ID contracts, bounded corners, ownership, hostile ID/radius input and missing/failed/loading/category/milestone proof rules. Existing behavior has no patch API; RED does not yet constitute geometry proof.
+- Geometry: spherical core15 + fixed sectors for (15,20], (20,30], (30,40], (40,50], with 4/7/9/11 sectors; 32 patches; circumscribed circles <15.1 miles. Stable single ownership avoids overlapping positive authority; cross-patch lifecycle evidence retained. Geographic/category proof is derived from retained cache, so eviction and failed inner work cannot remain complete.
+- Budget design: one in-flight RPC, one automatic attempt per missing patch/category per pass, one-second outer pacing, stop on failed core or three consecutive degraded patches; no auto-retry loop. Existing 4 mirrors / 4 groups / 8s attempt / 20s provider / 25s watchdog preserved. Full-pass caps 32 RPC / 512 theoretical provider attempts. Planned live cap core+two outer RPC (48 theoretical attempts), separate from full-radius completeness.
+- Remaining gates: implement/prove planner, patch RPC and hostile-input tests; patch cache/coverage regressions; progressive UI/scheduler; focused GREEN; pre-full checkpoint; all validation/security/build gates; ten controlled browser scenarios; bounded exact Preview acceptance; immutable freeze. No promotion.
+- Exact next action: publish/read back this RED checkpoint, implement the pure planner and server-owned patch contract, run planner/RPC tests and checkpoint acquisition contract before cache/UI wiring. Review pole/antimeridian cases and supersession/negative-evidence eviction explicitly.
+
+SAFE TO RESUME FROM THIS CHECKPOINT.

@@ -1,0 +1,42 @@
+# Date Night radial loading 1 — architecture and RED contract
+
+Authority: `04a3ac240760fc025c62d487eeb7970c70620fb9`. Base: `d9cc8bdde2e531af6f029d3d558d25f4f7bb4ab5` / tree `f9f46d16c876b4d608ab836d57a411a607e6f8fa` / sole parent `8e67d959f5b19cb00c22533a6eb27a1b2e1bfb2f`.
+
+## Existing state machine, read before runtime edits
+
+1. Mounted DateNightHome owns one in-memory cache and one effect-owned RPC. Its acquisition signature is exact origin, minimum-15-mile radius, normalized activity types, spooky toggle and derived season. Open Now, mood, favorites and Fewer Parks are local.
+2. Cache read prunes at ten minutes, selects newest successful authority per category from a sufficiently large disk, and retains cross-category lifecycle-negative evidence. Valid empty is coverage. Failed/cancelled/fallback/assembled cache hits cannot establish authority. Successful admission permanently retires older category authority before LRU eviction (V-DR-02). Bounds are eight entries and 20,000 raw venues.
+3. A complete cache hit applies immediately. Otherwise one RPC requests all missing categories over the entire selected disk. `loading=true` disables pick/options/plan until that RPC settles. Earlier successes are combined with fresh partial results or transport failure, but geographic coverage is not represented.
+4. The strict RPC validates origin/category inputs, clamps radius, acquires at least 15 miles, then independently executes up to four groups. Every group includes the canonical lifecycle carrier/negative companions. All groups share one 20-second provider deadline; four fixed mirrors hedge at 0/1.5/3/4.5 seconds with eight-second attempt limits. No provider/query change is needed for radial geometry beyond a derived center/radius.
+5. The effect's 25-second watchdog invalidates late callbacks before abort. Cleanup also invalidates before abort. Only guarded success admits cache data. Server cancellation on transport disconnect has historically NOT been established and must not be invented.
+6. Successful groups merge full provider identities/evidence and local catalogs. All-group failure uses saved places or throws outside catalog coverage. Selection uses locally decorated/eligible venues. Open pick/options/plan retain selected IDs; status/eligibility refresh from the current pool. Background expansion must not invoke any selection setter.
+
+## Geometry and proof obligation
+
+Use an origin-relative spherical partition, version `radial-v1`. The core is the 0–15 mile disk. Outer bands are (15,20], (20,30], (30,40], (40,50], divided into respectively 4, 7, 9, 11 equal-bearing sectors. There are 32 patches total including core, stable across requested maximums. IDs are version + outer radius + sector index, with a distinct core ID. Every milestone plan is an ordered prefix, core first.
+
+Each sector is acquired using one circumscribed circle, centered at its middle radius and middle bearing. The radius is the maximum spherical distance to either inner/outer corner, rounded upward in metres plus a 100-metre numerical/provider-model margin. Core gets the same margin. Every query radius must remain below 15.1 miles; no final giant disk. Boundaries use a deterministic single owner (inner boundary belongs to the nearer band; half-open bearing intervals). Exact poles require a defined bearing frame and dedicated tests; antimeridian wrapping must work. A point's origin distance and bearing assign it to exactly one logical patch. Dense sampling supplements the analytic proof: spherical cosine distance is largest at a bearing edge; for these short radial intervals its minimum cosine is at a radial endpoint.
+
+The circumscribed query circles overlap. Positive rows are admitted only to their logical owner, preventing duplicate acquisition authority. All lifecycle-negative companions in the bounded query circle are retained for cross-patch suppression. Full identity/evidence remains intact; no category stripping. Response/UI eligibility clips to the selected maximum. The request uses existing discrete distance choices and always acquires the full core for smaller selections. A cached patch never changes shape on a radius increase.
+
+## Coverage and cache contract
+
+The new coverage view contains selected maximum, requested categories, every required patch descriptor, per-category outcome (missing/loading/complete/failed), acquisition time and semantic version, missing categories per patch, complete/missing/failed/loading patch IDs, and continuously complete radius. Completeness is a conjunction over ALL required patches AND requested categories through a milestone. Counts, successful outer patches, catalog fallback and negative-only evidence cannot prove it. Valid-empty success can.
+
+Extend the existing cache with an optional stable patch key, preserving legacy disk behavior/tests. Patch-positive authority and supersession are confined to the SAME logical patch; negative evidence crosses patch/category boundaries for the same origin/season/version. Legacy and patch authority cannot satisfy one another. Successful refresh retires older authority before eviction. Ownership filtering means overlapping provider circles cannot establish duplicate positive authority. Test identity/negative handling at boundaries, including eviction; if required negative evidence is evicted, older conflicting positive identities must not resurrect. Radial cache bounds: 128 raw entries / existing 20,000 venues / ten-minute TTL; evicted or expired coverage is immediately missing on the next coverage projection. No coordinates in storage or logs.
+
+Coverage is derived from retained cache authority, not a separate permanent completed set. Attempt/error metadata is bounded by the 32-patch plan and eleven category IDs. Loading/failed are separate from successful proof. Category-aware future expansion is possible because missing work is per patch/category, not merely per band.
+
+## Scheduling and budgets
+
+One patch RPC in flight. Core first. At most one automatic attempt for each missing patch/category per acquisition pass. Each RPC keeps existing four groups/four mirrors, <=16 physical attempts, eight-second attempt / 20-second provider / 25-second client limits. Wait one second between outer RPCs. A full 50-mile pass has <=32 RPCs / <=512 theoretical physical attempts; these are caps, not observed counts. Stop expansion on failed core or three consecutive degraded patches. No recursive or timer-based auto-retry. Explicit retry starts a bounded pass over missing/failed work only. Successful categories are not retried. Failed middle coverage remains a gap even if farther work succeeds.
+
+Location/semantic changes cancel current work and invalidate incompatible reuse. Radius decreases cancel unnecessary outer work and filter immediately; increases reuse inner patches and schedule only missing outer work. Local-only filters never restart acquisition. Activity selection may cancel no-longer-needed work; core gets priority for newly requested categories. Each pass must visit each patch at most once, including under cache pressure, so eviction cannot cause a refill loop.
+
+Useful nearby success separates foreground loading from expansion; all three actions remain usable if otherwise eligible. Saved fallback stays honest and usable according to existing policy. Coverage progress can say `Loaded through X miles` only when proved for current scope; failure and paused states disclose incompleteness. Existing overlay selections are snapshots of IDs, while eligibility/status updates remain active.
+
+## Acceptance plan
+
+RED contract tests precede application wiring. Permanent planner/coverage/security/cache and actual-component tests follow. Preserve all existing lifecycle/query/hedge/cache regressions; adjust only tests that explicitly encode the intentionally replaced monolithic radius behavior, documenting stronger replacement assertions.
+
+Controlled production-built browser fixtures intercept every external request and exercise the ten required scenarios. Live acceptance is a separate exact-Preview run, initially bounded to core plus two outer patch RPCs (<=48 physical attempts); stop on failed core, never issue a monolithic 50-mile request, disclose deliberately incomplete maximum coverage. Establish actual core usability and at least one outer merge, local-filter reuse and honest partial coverage. Controlled evidence establishes deterministic outer-failure preservation separately from observed live provider conditions. No promotion.
