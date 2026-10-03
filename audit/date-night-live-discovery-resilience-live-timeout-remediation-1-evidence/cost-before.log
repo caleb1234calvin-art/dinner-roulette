@@ -1,0 +1,303 @@
+{
+  "phase": "before",
+  "method": "Actual builder; synthetic 43,-79,80467m; 100 warmups and 1000 iterations; construction only, no public traffic.",
+  "measures": [
+    {
+      "selection": [
+        "anything"
+      ],
+      "totalBytes": 19166,
+      "meanConstructionMs": 0.05787348199999997,
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5747,
+          "selectors": 53,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        },
+        {
+          "id": "entertainment",
+          "bytes": 4643,
+          "selectors": 42,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        },
+        {
+          "id": "culture",
+          "bytes": 4413,
+          "selectors": 38,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        },
+        {
+          "id": "outdoor",
+          "bytes": 4363,
+          "selectors": 37,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        }
+      ]
+    },
+    {
+      "selection": [
+        "haunted-house"
+      ],
+      "totalBytes": 5204,
+      "meanConstructionMs": 0.011495918000000074,
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5204,
+          "selectors": 49,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        }
+      ]
+    },
+    {
+      "selection": [
+        "corn-maze"
+      ],
+      "totalBytes": 5375,
+      "meanConstructionMs": 0.012374762999999915,
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5375,
+          "selectors": 53,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        }
+      ]
+    },
+    {
+      "selection": [
+        "pumpkin-patch"
+      ],
+      "totalBytes": 5092,
+      "meanConstructionMs": 0.010655380000000037,
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5092,
+          "selectors": 49,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        }
+      ]
+    },
+    {
+      "selection": [
+        "bowling"
+      ],
+      "totalBytes": 4372,
+      "meanConstructionMs": 0.009170659000000001,
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4372,
+          "selectors": 37,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        }
+      ]
+    },
+    {
+      "selection": [
+        "arcade"
+      ],
+      "totalBytes": 4375,
+      "meanConstructionMs": 0.009105879999999957,
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4375,
+          "selectors": 37,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        }
+      ]
+    },
+    {
+      "selection": [
+        "mini-golf"
+      ],
+      "totalBytes": 4373,
+      "meanConstructionMs": 0.008864036000000056,
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4373,
+          "selectors": 37,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        }
+      ]
+    },
+    {
+      "selection": [
+        "escape-room"
+      ],
+      "totalBytes": 4370,
+      "meanConstructionMs": 0.011626724999999965,
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4370,
+          "selectors": 37,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        }
+      ]
+    },
+    {
+      "selection": [
+        "skating"
+      ],
+      "totalBytes": 4421,
+      "meanConstructionMs": 0.009410530999999991,
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4421,
+          "selectors": 38,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        }
+      ]
+    },
+    {
+      "selection": [
+        "movies"
+      ],
+      "totalBytes": 4365,
+      "meanConstructionMs": 0.00944020599999999,
+      "groups": [
+        {
+          "id": "culture",
+          "bytes": 4365,
+          "selectors": 37,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        }
+      ]
+    },
+    {
+      "selection": [
+        "museum"
+      ],
+      "totalBytes": 4365,
+      "meanConstructionMs": 0.008898478000000069,
+      "groups": [
+        {
+          "id": "culture",
+          "bytes": 4365,
+          "selectors": 37,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        }
+      ]
+    },
+    {
+      "selection": [
+        "park"
+      ],
+      "totalBytes": 4363,
+      "meanConstructionMs": 0.011201759000000039,
+      "groups": [
+        {
+          "id": "outdoor",
+          "bytes": 4363,
+          "selectors": 37,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        }
+      ]
+    },
+    {
+      "selection": [
+        "haunted-house",
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "totalBytes": 5747,
+      "meanConstructionMs": 0.017070099000000026,
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5747,
+          "selectors": 53,
+          "carrierSelectors": 34,
+          "activeCarrierSelectors": 6,
+          "activeRegexSelectors": 6,
+          "prefixedCarrierSelectors": 28,
+          "lifecyclePredicates": 2
+        }
+      ]
+    }
+  ],
+  "parity": {
+    "rows": 154,
+    "authoritativeNegatives": 111,
+    "gaps": 0
+  },
+  "groupCount": 4,
+  "mirrorCount": 4,
+  "mirrors": [
+    "https://overpass.openstreetmap.fr/api/interpreter",
+    "https://overpass.private.coffee/api/interpreter",
+    "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+    "https://overpass-api.de/api/interpreter"
+  ],
+  "identicalCarrierAcrossGroups": true,
+  "carrierSelectorsAcrossGroups": 136,
+  "theoreticalCarrierSelectorsAllMirrors": 544,
+  "theoreticalActiveRegexSelectorsAllMirrors": 96,
+  "theoreticalLifecyclePredicatesAllMirrors": 32
+}
