@@ -1,0 +1,42 @@
+name: Bounded radial live remediation acceptance
+on:
+  push:
+    branches: [fix/date-night-radial-loading-browser-acceptance-remediation-1]
+    paths: [.github/workflows/date-night-radial-live-remediation.yml]
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      # Exact controlled-10/10 source, also verified READY on the pinned Preview.
+      - uses: actions/checkout@v4
+        with:
+          ref: abaaf680e9e54838e7002ce79f04166c4ebefedf
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - name: Build exact controlled source without migrations
+        env:
+          VITE_AUTH_ENABLED: "true"
+        run: |
+          test "$(git rev-parse HEAD)" = abaaf680e9e54838e7002ce79f04166c4ebefedf
+          node scripts/browser-build-proof.mjs capture
+          node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
+          node scripts/browser-build-proof.mjs complete
+          node scripts/browser-build-proof.mjs verify
+      - name: Bounded live acceptance - three patch RPC maximum
+        env:
+          VITE_AUTH_ENABLED: "true"
+          PFU_RADIAL_PREVIEW_VERIFIED: "1"
+        run: node scripts/date-night-radial-live.mjs https://dinner-roulette-jdys9liwl-minions-9e2c.vercel.app /tmp/pfu-radial-remediation-live
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: radial-remediation-live
+          path: /tmp/pfu-radial-remediation-live
+          retention-days: 7
