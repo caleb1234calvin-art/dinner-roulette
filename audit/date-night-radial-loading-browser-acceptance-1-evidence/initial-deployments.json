@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-03T20:38:31.640Z",
+  "production": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-o4fv4tqev-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1790985175870,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"4d937e58d2a65567b54ac5271915bc85b498898b\",\n        \"githubCommitMessage\": \"Fix Halloween notice mobile scroll clearance\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"pickforus.app\",\n        \"dinner-roulette-chi.vercel.app\",\n        \"www.pickforus.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1790985177037,\n      \"ready\": 1790985190558,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  "preview": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_HviVcpJT1dNBQg54n3Sx2b5ZeDsA\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-1xc11et6w-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1791057526633,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"feature/date-night-radial-loading-1\",\n        \"githubCommitSha\": \"b270e725baff0047cbaa3385515b24e911ba0bbe\",\n        \"githubCommitMessage\": \"Record full radial loading validation and auth-enabled build proof\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"dinner-roulette-git-feature-date-night-radi-afd274-minions-9e2c.vercel.app\"\n      ],\n      \"target\": null,\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1791057530109,\n      \"ready\": 1791057549122,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+        }
+      ],
+      "isError": false
+    }
+  }
+}

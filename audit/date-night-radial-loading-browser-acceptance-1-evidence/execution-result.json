@@ -1,0 +1,7 @@
+{
+  "command": "CI=true VITE_AUTH_ENABLED=true PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/tmp/pfu-rv2-browser/chrome-linux64/chrome DATE_NIGHT_RADIAL_OUTPUT=/tmp/pfu-radial-browser-acceptance-1 node scripts/date-night-radial-browser.mjs",
+  "startedAt": "2026-10-03T20:36:45.573005+00:00",
+  "exitCode": 1,
+  "elapsedSeconds": 8.392,
+  "sandboxEscalationRequested": false
+}

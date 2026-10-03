@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-10-03T20:41:55.850141+00:00",
+  "base": "028b2db775133f3343c41d1f8a0a4001d6ab122c",
+  "trackedFilesUnchangedExceptAppend": 1166,
+  "existingChangedFiles": [
+    "docs/handoffs/active/date-night-radial-loading-1-continuation.md"
+  ],
+  "continuationOldContentPreserved": true,
+  "newFiles": [
+    "audit/date-night-radial-loading-browser-acceptance-1-2026-10-03.md",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/control.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/events.jsonl",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/execution-result.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/final-readbacks.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/hosted-runner-capability.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/initial-deployments.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/initial-integrity.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/raw-evidence-manifest.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/server-log.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/verdict.json"
+  ],
+  "executableHarnessConfigNativeCatalogUnchanged": true,
+  "secretPatternReview": "PASS",
+  "newFilesReview": "only requested report/evidence; no generated application or cache files",
+  "successfulCandidateFrozen": false,
+  "publicProviderCalls": 0,
+  "stagedChangedFiles": [
+    "audit/date-night-radial-loading-browser-acceptance-1-2026-10-03.md",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/control.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/controlled-browser.log",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/events.jsonl",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/execution-result.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/final-readbacks.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/final-scope.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/hosted-runner-capability.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/initial-deployments.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/initial-integrity.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/raw-evidence-manifest.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/server-log.json",
+    "audit/date-night-radial-loading-browser-acceptance-1-evidence/verdict.json",
+    "docs/handoffs/active/date-night-radial-loading-1-continuation.md"
+  ],
+  "rawControlledBrowserLogExplicitlyIncluded": true
+}

@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-03T20:40:44.216Z",
+  "production": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-o4fv4tqev-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1790985175870,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"4d937e58d2a65567b54ac5271915bc85b498898b\",\n        \"githubCommitMessage\": \"Fix Halloween notice mobile scroll clearance\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"pickforus.app\",\n        \"dinner-roulette-chi.vercel.app\",\n        \"www.pickforus.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1790985177037,\n      \"ready\": 1790985190558,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  "gitBuildScope": {
+    "status": "fulfilled",
+    "value": {
+      "chunk_id": "8f7521",
+      "wall_time_seconds": 10.001491221,
+      "exit_code": 0,
+      "original_token_count": 152,
+      "output": "028b2db775133f3343c41d1f8a0a4001d6ab122c\trefs/heads/feature/date-night-radial-loading-1\ndb0ba6f1ddd752dc4c3b5260931bd63c3fd7bc5e\trefs/heads/handoff/date-night-radial-loading-browser-acceptance-1\n4d937e58d2a65567b54ac5271915bc85b498898b\trefs/heads/main\nBROWSER_BUILD_PROOF {\"schemaVersion\":1,\"status\":\"BUILT\",\"authFlag\":\"true\",\"source\":{\"sha256\":\"0c0aa41c7b76c4b52b5ba9598766a1935e871f1e07f4ab3821773a65876ab3bc\",\"files\":424},\"startedAt\":\"2026-10-03T19:53:21.781Z\",\"output\":{\"sha256\":\"43b8c4b90f62972eadf84c271b64a6be398ea216b4e7189a9de249cd9a8ae433\",\"files\":194},\"completedAt\":\"2026-10-03T19:53:25.838Z\"}\n"
+    }
+  }
+}
