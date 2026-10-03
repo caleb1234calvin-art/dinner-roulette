@@ -41,3 +41,13 @@ SAFE TO RESUME FROM THIS CHECKPOINT.
 - Exact next action: publish/readback Save3, then separate Save4 BEFORE full validation. Compiled TanStack security needs the new build; not claimed GREEN yet.
 
 SAFE TO RESUME FROM THIS CHECKPOINT.
+
+## Save 4 — BEFORE FULL VALIDATION / BUILD / BROWSER
+
+- Same branch/base. Latest pusheda388166c4ecd3ba47c38f78fc3a7323cfa801ab7, tree8b3e92fbd9e991f47c727301588d07cace38b469, sole parent4f6a6e5. This save changes only this continuation; clean worktree verified before it.
+- Runtime/test/evidence state: Save2 lifecycle-only equality patch and13newcost tests; Save3 focused113+162PASS, typecheck/lint/diffPASS.154rows/111negatives/zero parity gaps; V-DR-02/cache byte-identical. Query cost unchanged:170→238selectors/19166→21942bytes Anything, common-key carrier regex96→0 theoretical,4groups/4mirrors and8s20s25s unchanged.
+- Exact next sequence: npm ci --ignore-scripts --no-audit --no-fund; npm ls --all; npm run typecheck; changed-code lint; casino/Android/Python; VITE_AUTH_ENABLED=true build-proof capture; direct Vite production build through with-app-env; proof complete/verify; compiled TanStack security; full npm test in capable runner with normal test environment; protected scope/secret/junk review. Never migration-chaining npm run build. Capture exact commands/exits and actual totals.
+- Main/production untouched; frozen main4d937e58 and productiondpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL. No accepted Preview.0public-provider traffic. No full/build/security success claimed before execution.
+- Remaining after full gates: save5; controlled4; save6; exact nonproductionPreview15-mile canary (STOP on historical all-group timeout), then only if clean50-mile/twoRPC12rowmatrix; save7; final freeze only if all pass, then independent reverification. No promotion.
+
+SAFE TO RESUME FROM THIS CHECKPOINT.
