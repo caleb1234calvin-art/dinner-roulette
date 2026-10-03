@@ -476,6 +476,140 @@ test("real selected query cannot resurrect an active duplicate by dropping its l
   assert.deepEqual(pool, []);
 });
 
+// V-DR-01: fetch stubs must honor the actual requested predicates. Returning the
+// whole fixture regardless of the query would hide omitted lifecycle evidence.
+const lifecycleLocation = { lat: 43.65348, lon: -79.38393, label: "Toronto", source: "manual" };
+function lifecycleElement(id, tags, latitudeOffset = 0) {
+  return { type: id % 2 ? "node" : "way", id,
+    lat: lifecycleLocation.lat + latitudeOffset, lon: lifecycleLocation.lon, tags };
+}
+function installLifecycleProvider(t) {
+  t.mock.timers.enable({ apis: ["Date"], now: now.getTime() });
+  const state = { elements: [], reverse: false, firstMirrorFails: false, queries: [] };
+  t.mock.method(globalThis, "fetch", async (url, options) => {
+    const query = new URLSearchParams(options.body).get("data");
+    state.queries.push(query);
+    if (state.firstMirrorFails && String(url).includes("overpass.openstreetmap.fr")) {
+      return new Response("", { status: 503 });
+    }
+    const selected = state.elements.filter((element) => acquired(query, element.tags));
+    return Response.json({ elements: state.reverse ? selected.reverse() : selected });
+  });
+  return state;
+}
+async function lifecycleSearch(activityTypes, halloweenActive = true) {
+  const result = await searchDateNight({ data: { ...lifecycleLocation, radiusMiles: 50,
+    spookySeasonEnabled: halloweenActive, activityTypes } });
+  const pool = eligibleDateNight(decorateDateNight(result.venues, lifecycleLocation, now), {
+    ...DEFAULT_DATE_NIGHT_FILTERS, radiusMiles: 50, activityTypes, openNowOnly: false,
+  }, halloweenActive);
+  return { result, pool };
+}
+
+for (const activityTypes of [["corn-maze"], ["pumpkin-patch"], ["corn-maze", "pumpkin-patch"], ["anything"]]) {
+  test(`V-DR-01 cross-tag demolition excludes active Corn identity for ${activityTypes.join(" + ")} in either provider/result order`, async (t) => {
+    const state = installLifecycleProvider(t);
+    state.elements = [
+      lifecycleElement(101, { name: "Harvest Crossing", attraction: "corn_maze", tourism: "farm",
+        "seasonal:activities": "Pumpkin picking" }),
+      lifecycleElement(102, { name: "Harvest Crossing", "demolished:attraction": "pumpkin_patch" }),
+    ];
+    for (const reverse of [false, true]) {
+      for (const firstMirrorFails of [false, true]) {
+        Object.assign(state, { reverse, firstMirrorFails });
+        const { result, pool } = await lifecycleSearch(activityTypes);
+        assert.equal(result.source, "live");
+        assert.equal(result.discovery.partial, false);
+        assert.deepEqual(pool.map((place) => place.name), [], "Cross-category demolition must suppress the eligible identity");
+        assert.equal(result.venues.length, 1);
+        assert.equal(result.venues[0].lifecycle, "permanently-closed");
+        assert.deepEqual(sorted(result.venues[0].discoveryEvidence.map((item) => item.id)),
+          ["date-night-osm-node-101", "date-night-osm-way-102"]);
+      }
+    }
+  });
+}
+
+for (const [prefix, negativeAttraction, lifecycle] of [
+  ["demolished", "corn_maze", "permanently-closed"],
+  ["disused", "haunted_house", "disused"],
+]) {
+  test(`V-DR-01 Pumpkin-only retains reverse ${prefix}:${negativeAttraction} lifecycle companion`, async (t) => {
+    const state = installLifecycleProvider(t);
+    state.elements = [
+      lifecycleElement(111, { name: "Autumn Terrace", attraction: "pumpkin_patch" }),
+      lifecycleElement(112, { name: "Autumn Terrace", [`${prefix}:attraction`]: negativeAttraction }),
+    ];
+    for (const reverse of [false, true]) {
+      state.reverse = reverse;
+      const { result, pool } = await lifecycleSearch(["pumpkin-patch"]);
+      assert.deepEqual(pool, []);
+      assert.equal(result.venues[0].lifecycle, lifecycle);
+      assert.equal(result.venues[0].discoveryEvidence.length, 2);
+    }
+  });
+}
+
+test("V-DR-01 ordinary Movies narrowing retains matching Museum demolition with Halloween both OFF and ON", async (t) => {
+  const state = installLifecycleProvider(t);
+  state.elements = [
+    lifecycleElement(121, { name: "Riverside Arts", amenity: "cinema" }),
+    lifecycleElement(122, { name: "Riverside Arts", "demolished:tourism": "museum" }),
+  ];
+  for (const halloweenActive of [false, true]) {
+    for (const reverse of [false, true]) {
+      state.reverse = reverse;
+      const { result, pool } = await lifecycleSearch(["movies"], halloweenActive);
+      assert.deepEqual(pool, [], "Ordinary activity narrowing must also retain identity-negative evidence");
+      assert.equal(result.venues[0].lifecycle, "permanently-closed");
+      assert.equal(result.venues[0].discoveryEvidence.length, 2);
+    }
+  }
+});
+
+test("V-DR-01 unrelated negatives cannot suppress an active identity or leak into eligible positive results", async (t) => {
+  const state = installLifecycleProvider(t);
+  state.elements = [
+    lifecycleElement(131, { name: "Living Harvest", attraction: "corn_maze" }),
+    lifecycleElement(132, { name: "Distant Orchard", "demolished:attraction": "pumpkin_patch" }, 0.02),
+    lifecycleElement(133, { name: "Old Fairground", "disused:attraction": "haunted_house" }, -0.02),
+    lifecycleElement(134, { name: "Unrelated Farm", tourism: "farm" }, 0.04),
+    lifecycleElement(135, { name: "Unrelated Park", leisure: "park" }, -0.04),
+    lifecycleElement(136, { name: "Unrelated Attraction", tourism: "attraction" }, 0.06),
+    lifecycleElement(137, { name: "Hedge Labyrinth", leisure: "maze" }, -0.06),
+  ];
+  const { result, pool } = await lifecycleSearch(["corn-maze"]);
+  assert.deepEqual(pool.map((place) => place.name), ["Living Harvest"]);
+  assert.deepEqual(pool[0].activityTypes, ["corn-maze"]);
+  assert.equal(pool[0].lifecycle, undefined);
+  assert.equal(pool[0].discoveryEvidence.length, 1);
+  for (const place of result.venues) {
+    assert.ok(place.name === "Living Harvest" || place.lifecycle, "No generic positive context may leak through companions");
+  }
+  assert.equal(acquired(state.queries[0], state.elements[1].tags), true, "The unrelated terminal record is acquired, then excluded by lifecycle eligibility");
+});
+
+test("V-DR-01 negative companions span supported categories while affirmative clauses remain narrow", () => {
+  const negativeTags = [
+    { "demolished:attraction": "pumpkin_patch" }, { "disused:attraction": "corn_maze" },
+    { "abandoned:attraction": "haunted_trail" }, { "removed:amenity": "cinema" },
+    { "razed:tourism": "museum" }, { "destroyed:leisure": "bowling_alley" },
+  ];
+  for (const type of [...seasonal, ...ordinary]) {
+    const query = queryFor([type]);
+    for (const tags of negativeTags) assert.equal(acquired(query, tags), true, `${type}: ${JSON.stringify(tags)}`);
+    for (const other of [...seasonal, ...ordinary].filter((candidate) => candidate !== type)) {
+      const positiveTags = {
+        "corn-maze": { attraction: "corn_maze" }, "pumpkin-patch": { attraction: "pumpkin_patch" },
+        "haunted-house": { attraction: "haunted_house" }, movies: { amenity: "cinema" }, museum: { tourism: "museum" },
+        bowling: { leisure: "bowling_alley" }, arcade: { leisure: "amusement_arcade" }, "mini-golf": { leisure: "miniature_golf" },
+        "escape-room": { leisure: "escape_game" }, skating: { leisure: "ice_rink" }, park: { leisure: "park" },
+      }[other];
+      assert.equal(acquired(query, positiveTags), false, `${type} must not affirmatively acquire ${other}`);
+    }
+  }
+});
+
 test("narrowed acquisition never turns generic, negative or unrelated evidence into seasonal classification", () => {
   const negatives = [
     { name: "Turtle Moon Labyrinth", attraction: "maze" },

@@ -1,0 +1,452 @@
+TAP version 13
+# Subtest: Anything coverage satisfies every later category and subset without acquiring again
+ok 1 - Anything coverage satisfies every later category and subset without acquiring again
+  ---
+  duration_ms: 3.402219
+  type: 'test'
+  ...
+# Subtest: coverage is category-specific within a group; only missing types are requested
+ok 2 - coverage is category-specific within a group; only missing types are requested
+  ---
+  duration_ms: 7.498772
+  type: 'test'
+  ...
+# Subtest: valid-empty coverage is reusable and preserves its origin; failed/cancelled categories stay missing
+ok 3 - valid-empty coverage is reusable and preserves its origin; failed/cancelled categories stay missing
+  ---
+  duration_ms: 0.330576
+  type: 'test'
+  ...
+# Subtest: complete fallback and legacy missing metadata never establish reusable live coverage
+ok 4 - complete fallback and legacy missing metadata never establish reusable live coverage
+  ---
+  duration_ms: 0.328108
+  type: 'test'
+  ...
+# Subtest: cached successes plus fresh failure preserve partial live data and disjoint category outcomes
+ok 5 - cached successes plus fresh failure preserve partial live data and disjoint category outcomes
+  ---
+  duration_ms: 1.049472
+  type: 'test'
+  ...
+# Subtest: cached live success survives missing-category transport failure without asserting coverage
+ok 6 - cached live success survives missing-category transport failure without asserting coverage
+  ---
+  duration_ms: 0.278666
+  type: 'test'
+  ...
+# Subtest: radius narrowing reuses larger coverage but widening cannot use a narrower entry
+ok 7 - radius narrowing reuses larger coverage but widening cannot use a narrower entry
+  ---
+  duration_ms: 0.651328
+  type: 'test'
+  ...
+# Subtest: latitude separates incompatible cache coverage
+ok 8 - latitude separates incompatible cache coverage
+  ---
+  duration_ms: 0.204491
+  type: 'test'
+  ...
+# Subtest: longitude separates incompatible cache coverage
+ok 9 - longitude separates incompatible cache coverage
+  ---
+  duration_ms: 0.250415
+  type: 'test'
+  ...
+# Subtest: Halloween activation separates incompatible cache coverage
+ok 10 - Halloween activation separates incompatible cache coverage
+  ---
+  duration_ms: 0.325812
+  type: 'test'
+  ...
+# Subtest: semantic version separates incompatible cache coverage
+ok 11 - semantic version separates incompatible cache coverage
+  ---
+  duration_ms: 0.144444
+  type: 'test'
+  ...
+# Subtest: TTL expires exactly at bound; reads and fresh missing-category combinations never rejuvenate old coverage
+ok 12 - TTL expires exactly at bound; reads and fresh missing-category combinations never rejuvenate old coverage
+  ---
+  duration_ms: 0.540529
+  type: 'test'
+  ...
+# Subtest: new valid-empty category coverage cannot resurrect old venues through a reused superset
+ok 13 - new valid-empty category coverage cannot resurrect old venues through a reused superset
+  ---
+  duration_ms: 0.566606
+  type: 'test'
+  ...
+# Subtest: equal-timestamp freshness uses admission order even after an older superset becomes most recently used
+ok 14 - equal-timestamp freshness uses admission order even after an older superset becomes most recently used
+  ---
+  duration_ms: 0.253292
+  type: 'test'
+  ...
+# Subtest: V-DR-02: maxEntries eviction cannot resurrect superseded Corn (increasing timestamps)
+not ok 15 - V-DR-02: maxEntries eviction cannot resurrect superseded Corn (increasing timestamps)
+  ---
+  duration_ms: 1.431431
+  type: 'test'
+  location: '/workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:167:5'
+  failureType: 'testCodeFailure'
+  error: |-
+    eviction must never restore the superseded Corn identity
+
+    true !== false
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    assertNoSupersededCorn (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:155:10)
+    TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:189:7)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: V-DR-02: maxEntries eviction cannot resurrect superseded Corn (equal timestamps)
+not ok 16 - V-DR-02: maxEntries eviction cannot resurrect superseded Corn (equal timestamps)
+  ---
+  duration_ms: 0.565621
+  type: 'test'
+  location: '/workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:167:5'
+  failureType: 'testCodeFailure'
+  error: |-
+    eviction must never restore the superseded Corn identity
+
+    true !== false
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    assertNoSupersededCorn (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:155:10)
+    TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:189:7)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: V-DR-02: maxVenues eviction cannot resurrect superseded Corn (increasing timestamps)
+not ok 17 - V-DR-02: maxVenues eviction cannot resurrect superseded Corn (increasing timestamps)
+  ---
+  duration_ms: 1.917932
+  type: 'test'
+  location: '/workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:167:5'
+  failureType: 'testCodeFailure'
+  error: |-
+    eviction must never restore the superseded Corn identity
+
+    true !== false
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    assertNoSupersededCorn (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:155:10)
+    TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:189:7)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: V-DR-02: maxVenues eviction cannot resurrect superseded Corn (equal timestamps)
+not ok 18 - V-DR-02: maxVenues eviction cannot resurrect superseded Corn (equal timestamps)
+  ---
+  duration_ms: 0.625769
+  type: 'test'
+  location: '/workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:167:5'
+  failureType: 'testCodeFailure'
+  error: |-
+    eviction must never restore the superseded Corn identity
+
+    true !== false
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    assertNoSupersededCorn (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:155:10)
+    TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:189:7)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: V-DR-02: radius 50→15 supersession is durable and never claims wider coverage
+not ok 19 - V-DR-02: radius 50→15 supersession is durable and never claims wider coverage
+  ---
+  duration_ms: 0.449201
+  type: 'test'
+  location: '/workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:196:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    eviction must never restore the superseded Corn identity
+
+    true !== false
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    assertNoSupersededCorn (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:155:10)
+    TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:206:5)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: V-DR-02: radius 15→50 supersession is durable and never claims wider coverage
+not ok 20 - V-DR-02: radius 15→50 supersession is durable and never claims wider coverage
+  ---
+  duration_ms: 0.268013
+  type: 'test'
+  location: '/workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:196:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    eviction must never restore the superseded Corn identity
+
+    true !== false
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    assertNoSupersededCorn (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:155:10)
+    TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:215:7)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: V-DR-02: supersession lasts through the old TTL and never rejuvenates unaffected Movies
+not ok 21 - V-DR-02: supersession lasts through the old TTL and never rejuvenates unaffected Movies
+  ---
+  duration_ms: 0.353542
+  type: 'test'
+  location: '/workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:222:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    eviction must never restore the superseded Corn identity
+
+    true !== false
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    assertNoSupersededCorn (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:155:10)
+    TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:232:3)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: V-DR-02: successful coverage for another latitude cannot supersede this signature
+ok 22 - V-DR-02: successful coverage for another latitude cannot supersede this signature
+  ---
+  duration_ms: 0.281729
+  type: 'test'
+  ...
+# Subtest: V-DR-02: successful coverage for another longitude cannot supersede this signature
+ok 23 - V-DR-02: successful coverage for another longitude cannot supersede this signature
+  ---
+  duration_ms: 0.259828
+  type: 'test'
+  ...
+# Subtest: V-DR-02: successful coverage for another Halloween activation cannot supersede this signature
+ok 24 - V-DR-02: successful coverage for another Halloween activation cannot supersede this signature
+  ---
+  duration_ms: 0.205509
+  type: 'test'
+  ...
+# Subtest: V-DR-02: successful coverage for another semantic version cannot supersede this signature
+ok 25 - V-DR-02: successful coverage for another semantic version cannot supersede this signature
+  ---
+  duration_ms: 0.16618
+  type: 'test'
+  ...
+# Subtest: V-DR-02: valid-empty supersession retains full classification and evidence for an identity still reused through Movies
+not ok 26 - V-DR-02: valid-empty supersession retains full classification and evidence for an identity still reused through Movies
+  ---
+  duration_ms: 1.036059
+  type: 'test'
+  location: '/workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:256:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    truthful classification is not proof of still-valid Corn acquisition
+    + actual - expected
+
+    + []
+    - [
+    -   'corn-maze'
+    - ]
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'corn-maze'
+  actual:
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-cache.test.mjs:275:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: V-DR-02: rejected fallback response cannot supersede successful older coverage
+ok 27 - V-DR-02: rejected fallback response cannot supersede successful older coverage
+  ---
+  duration_ms: 0.241199
+  type: 'test'
+  ...
+# Subtest: V-DR-02: rejected failed response cannot supersede successful older coverage
+ok 28 - V-DR-02: rejected failed response cannot supersede successful older coverage
+  ---
+  duration_ms: 0.108229
+  type: 'test'
+  ...
+# Subtest: V-DR-02: rejected cancelled response cannot supersede successful older coverage
+ok 29 - V-DR-02: rejected cancelled response cannot supersede successful older coverage
+  ---
+  duration_ms: 0.140517
+  type: 'test'
+  ...
+# Subtest: V-DR-02: rejected cache-hit response cannot supersede successful older coverage
+ok 30 - V-DR-02: rejected cache-hit response cannot supersede successful older coverage
+  ---
+  duration_ms: 0.092752
+  type: 'test'
+  ...
+# Subtest: V-DR-02: rejected legacy response cannot supersede successful older coverage
+ok 31 - V-DR-02: rejected legacy response cannot supersede successful older coverage
+  ---
+  duration_ms: 0.081722
+  type: 'test'
+  ...
+# Subtest: V-DR-02: rejected oversize response cannot supersede successful older coverage
+ok 32 - V-DR-02: rejected oversize response cannot supersede successful older coverage
+  ---
+  duration_ms: 0.107995
+  type: 'test'
+  ...
+# Subtest: V-DR-02: partial success supersedes only its successful categories
+ok 33 - V-DR-02: partial success supersedes only its successful categories
+  ---
+  duration_ms: 0.150829
+  type: 'test'
+  ...
+# Subtest: LRU entry and aggregate raw-venue caps evict whole entries without truncated coverage
+ok 34 - LRU entry and aggregate raw-venue caps evict whole entries without truncated coverage
+  ---
+  duration_ms: 0.354902
+  type: 'test'
+  ...
+# Subtest: cache assembly preserves catalog aliases, full evidence, hours precedence and lifecycle in either insertion order
+ok 35 - cache assembly preserves catalog aliases, full evidence, hours precedence and lifecycle in either insertion order
+  ---
+  duration_ms: 0.735627
+  type: 'test'
+  ...
+# Subtest: fresh cross-category lifecycle evidence suppresses an older cached active identity without adding coverage
+ok 36 - fresh cross-category lifecycle evidence suppresses an older cached active identity without adding coverage
+  ---
+  duration_ms: 0.522534
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: Anything→subsets and every local-only filter reuse data without network
+ok 37 - actual DateNightHome: Anything→subsets and every local-only filter reuse data without network
+  ---
+  duration_ms: 270.925853
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: stale persisted unknown categories recover to Anything without weakening RPC validation
+ok 38 - actual DateNightHome: stale persisted unknown categories recover to Anything without weakening RPC validation
+  ---
+  duration_ms: 5.211435
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: subset then mixed selection fetches only missing categories
+ok 39 - actual DateNightHome: subset then mixed selection fetches only missing categories
+  ---
+  duration_ms: 4.566632
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: bounded missing-category timeout preserves cached live contribution and partial warning
+ok 40 - actual DateNightHome: bounded missing-category timeout preserves cached live contribution and partial warning
+  ---
+  duration_ms: 6.355713
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: TTL refreshes on next category acquisition, not local-only toggles or elapsed time
+ok 41 - actual DateNightHome: TTL refreshes on next category acquisition, not local-only toggles or elapsed time
+  ---
+  duration_ms: 6.091859
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: radius narrows from acquired 50 mi without RPC; widening 15→50 acquires
+ok 42 - actual DateNightHome: radius narrows from acquired 50 mi without RPC; widening 15→50 acquires
+  ---
+  duration_ms: 9.440021
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: late replacement response cannot seed reusable cache
+ok 43 - actual DateNightHome: late replacement response cannot seed reusable cache
+  ---
+  duration_ms: 6.875769
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: late timeout response cannot seed reusable cache
+ok 44 - actual DateNightHome: late timeout response cannot seed reusable cache
+  ---
+  duration_ms: 7.324302
+  type: 'test'
+  ...
+# Subtest: actual DateNightHome: component cache lifetime does not survive unmount or contaminate another session
+ok 45 - actual DateNightHome: component cache lifetime does not survive unmount or contaminate another session
+  ---
+  duration_ms: 6.13536
+  type: 'test'
+  ...
+1..45
+# tests 45
+# suites 0
+# pass 37
+# fail 8
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 357.854748

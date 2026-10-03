@@ -1,0 +1,873 @@
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 2,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'success',
+      durationMs: 1,
+      winnerMirror: 2
+    }
+  ],
+  attempts: [
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'http-error',
+      status: 503
+    },
+    {
+      group: 'seasonal',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'success'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'success',
+      durationMs: 1,
+      winnerMirror: 2
+    }
+  ],
+  attempts: [
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'http-error',
+      status: 503
+    },
+    {
+      group: 'seasonal',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'success'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'success',
+      durationMs: 1,
+      winnerMirror: 2
+    }
+  ],
+  attempts: [
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'http-error',
+      status: 503
+    },
+    {
+      group: 'seasonal',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'success'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'success',
+      durationMs: 1,
+      winnerMirror: 2
+    }
+  ],
+  attempts: [
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'http-error',
+      status: 503
+    },
+    {
+      group: 'seasonal',
+      mirror: 2,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'success'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 2,
+  budgetExhausted: false,
+  requestedGroups: 4,
+  successfulGroups: 4,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'success',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'entertainment',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'outdoor',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'success'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 2,
+  budgetExhausted: false,
+  requestedGroups: 4,
+  successfulGroups: 4,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'success',
+      durationMs: 2,
+      winnerMirror: 2
+    },
+    {
+      group: 'entertainment',
+      outcome: 'empty',
+      durationMs: 2,
+      winnerMirror: 2
+    },
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 2,
+      winnerMirror: 2
+    },
+    {
+      group: 'outdoor',
+      outcome: 'empty',
+      durationMs: 2,
+      winnerMirror: 2
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'http-error',
+      status: 503
+    },
+    {
+      group: 'culture',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'http-error',
+      status: 503
+    },
+    {
+      group: 'entertainment',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'http-error',
+      status: 503
+    },
+    {
+      group: 'outdoor',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'http-error',
+      status: 503
+    },
+    {
+      group: 'seasonal',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'success'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 4,
+  successfulGroups: 4,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'success',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'entertainment',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    },
+    {
+      group: 'outdoor',
+      outcome: 'empty',
+      durationMs: 1,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'success'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'live',
+  durationMs: 2,
+  budgetExhausted: false,
+  requestedGroups: 4,
+  successfulGroups: 4,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'success',
+      durationMs: 2,
+      winnerMirror: 2
+    },
+    {
+      group: 'entertainment',
+      outcome: 'empty',
+      durationMs: 2,
+      winnerMirror: 2
+    },
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 2,
+      winnerMirror: 2
+    },
+    {
+      group: 'outdoor',
+      outcome: 'empty',
+      durationMs: 2,
+      winnerMirror: 2
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'http-error',
+      status: 503
+    },
+    {
+      group: 'culture',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'entertainment',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'http-error',
+      status: 503
+    },
+    {
+      group: 'entertainment',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'outdoor',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'http-error',
+      status: 503
+    },
+    {
+      group: 'outdoor',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'empty'
+    },
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 1,
+      outcome: 'http-error',
+      status: 503
+    },
+    {
+      group: 'seasonal',
+      mirror: 2,
+      hedgeOffsetMs: 1,
+      durationMs: 1,
+      outcome: 'success'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 0,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'seasonal',
+      outcome: 'empty',
+      durationMs: 0,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'seasonal',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    }
+  ]
+}
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'merged',
+  durationMs: 1,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 1,
+  failedGroups: 0,
+  partial: false,
+  groups: [
+    {
+      group: 'culture',
+      outcome: 'empty',
+      durationMs: 0,
+      winnerMirror: 1
+    }
+  ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 0,
+      outcome: 'empty'
+    }
+  ]
+}
+✔ all Date Night category plans use exact keys, including every seasonal subset and lifecycle prefix (3.83339ms)
+✔ exact-key refinement preserves canonical reachability/classification for all seven subsets, contexts, fields and lifecycle prefixes (681.147072ms)
+✔ bounded context preselection never leaks generic places into seasonal output (5.38029ms)
+✔ precise and lifecycle selectors stay independent of the active context set (3.16586ms)
+✔ query fixture interpreter rejects missing/unknown sets, unbounded selectors and unexpected output grammar (2.202062ms)
+✔ exact text keys preserve classifier key casing while still matching case-insensitive values (2.430735ms)
+✔ Anything, omitted and empty category input produce all and only active query groups (0.536714ms)
+✔ specific categories plan only required groups and combine selected siblings (0.402554ms)
+✔ query plans and normalized coverage signatures are deterministic without mutating caller input (0.32499ms)
+✔ Halloween OFF strips stale seasonal selections and preserves existing Anything fallback (0.498972ms)
+✔ activity validation rejects malformed, inherited, unknown and query-injection inputs (0.569449ms)
+✔ every ordinary category owns its exact active clauses and only relevant lifecycle companions (13.638205ms)
+✔ query construction independently enforces concrete whitelist input, finite coordinates and capped radius (0.503616ms)
+✔ seasonal-only queries do not acquire unrelated ordinary or seasonal offerings (2.719834ms)
+✔ precise seasonal attraction and agricultural maze representations remain reachable (2.009919ms)
+✔ selected seasonal metadata remains reachable across every supported context, field and separator (23.489471ms)
+✔ retained Exeter theme-park record remains acquired by a Corn Maze-only plan (0.452656ms)
+✔ narrowed seasonal acquisition retains lifecycle-only evidence previously reached through broad contexts (4.562651ms)
+✔ real selected query cannot resurrect an active duplicate by dropping its lifecycle-only theme-park record (36.849198ms)
+✖ V-DR-01 cross-tag demolition excludes active Corn identity for corn-maze in either provider/result order (3.427555ms)
+✔ V-DR-01 cross-tag demolition excludes active Corn identity for pumpkin-patch in either provider/result order (6.417145ms)
+✔ V-DR-01 cross-tag demolition excludes active Corn identity for corn-maze + pumpkin-patch in either provider/result order (5.482772ms)
+✔ V-DR-01 cross-tag demolition excludes active Corn identity for anything in either provider/result order (9.18489ms)
+✖ V-DR-01 Pumpkin-only retains reverse demolished:corn_maze lifecycle companion (1.32416ms)
+✖ V-DR-01 Pumpkin-only retains reverse disused:haunted_house lifecycle companion (1.11365ms)
+✖ V-DR-01 ordinary Movies narrowing retains matching Museum demolition with Halloween both OFF and ON (1.346418ms)
+✖ V-DR-01 unrelated negatives cannot suppress an active identity or leak into eligible positive results (1.733283ms)
+✖ V-DR-01 negative companions span supported categories while affirmative clauses remain narrow (0.597068ms)
+✔ narrowed acquisition never turns generic, negative or unrelated evidence into seasonal classification (2.590288ms)
+✔ real server validator rejects hostile category input before any provider request (0.695349ms)
+✔ real server request uses validated selected clauses, normalizes inactive seasonal input and preserves radius cap (3.300836ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 25
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 831.993945
+
+✖ failing tests:
+
+test at scripts/date-night-query-plan.test.mjs:510:3
+✖ V-DR-01 cross-tag demolition excludes active Corn identity for corn-maze in either provider/result order (3.427555ms)
+  AssertionError [ERR_ASSERTION]: Cross-category demolition must suppress the eligible identity
+  + actual - expected
+
+  + [
+  +   'Harvest Crossing'
+  + ]
+  - []
+
+      at TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-query-plan.test.mjs:523:16)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/date-night-query-plan.test.mjs:537:3
+✖ V-DR-01 Pumpkin-only retains reverse demolished:corn_maze lifecycle companion (1.32416ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + [
+  +   {
+  +     activityTypes: [
+  +       'pumpkin-patch'
+  +     ],
+  +     address: 'Address unavailable',
+  +     availability: {
+  +       browseEligible: true,
+  +       checkedAt: undefined,
+  +       label: 'Schedule unconfirmed',
+  +       openNowEligible: false,
+  +       revalidationDue: true,
+  +       season: 'unconfirmed',
+  +       status: 'schedule-unconfirmed'
+  +     },
+  +     closesLabel: 'Schedule unconfirmed',
+  +     closingSoon: false,
+  +     cuisineLabel: 'Pumpkin Patch',
+  +     cuisines: [
+  +       'other'
+  +     ],
+  +     discoveryEvidence: [
+  +       {
+  +         activityTypes: [
+  +           'pumpkin-patch'
+  +         ],
+  +         id: 'date-night-osm-node-111',
+  +         lifecycle: undefined,
+  +         openingHours: null,
+  +         source: 'osm',
+  +         website: null
+  +       }
+  +     ],
+  +     distanceMiles: 0,
+  +     hoursKnown: false,
+  +     id: 'date-night-osm-node-111',
+  +     isChain: false,
+  +     isOpen: false,
+  +     lat: 43.65348,
+  +     lifecycle: undefined,
+  +     lon: -79.38393,
+  +     moodLevel: 2,
+  +     name: 'Autumn Terrace',
+  +     openingHours: null,
+  +     phone: null,
+  +     photoKey: 'cafe',
+  +     priceLevel: null,
+  +     rating: null,
+  +     reviewCount: null,
+  +     source: 'osm',
+  +     website: null
+  +   }
+  + ]
+  - []
+
+      at TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-query-plan.test.mjs:546:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/date-night-query-plan.test.mjs:537:3
+✖ V-DR-01 Pumpkin-only retains reverse disused:haunted_house lifecycle companion (1.11365ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + [
+  +   {
+  +     activityTypes: [
+  +       'pumpkin-patch'
+  +     ],
+  +     address: 'Address unavailable',
+  +     availability: {
+  +       browseEligible: true,
+  +       checkedAt: undefined,
+  +       label: 'Schedule unconfirmed',
+  +       openNowEligible: false,
+  +       revalidationDue: true,
+  +       season: 'unconfirmed',
+  +       status: 'schedule-unconfirmed'
+  +     },
+  +     closesLabel: 'Schedule unconfirmed',
+  +     closingSoon: false,
+  +     cuisineLabel: 'Pumpkin Patch',
+  +     cuisines: [
+  +       'other'
+  +     ],
+  +     discoveryEvidence: [
+  +       {
+  +         activityTypes: [
+  +           'pumpkin-patch'
+  +         ],
+  +         id: 'date-night-osm-node-111',
+  +         lifecycle: undefined,
+  +         openingHours: null,
+  +         source: 'osm',
+  +         website: null
+  +       }
+  +     ],
+  +     distanceMiles: 0,
+  +     hoursKnown: false,
+  +     id: 'date-night-osm-node-111',
+  +     isChain: false,
+  +     isOpen: false,
+  +     lat: 43.65348,
+  +     lifecycle: undefined,
+  +     lon: -79.38393,
+  +     moodLevel: 2,
+  +     name: 'Autumn Terrace',
+  +     openingHours: null,
+  +     phone: null,
+  +     photoKey: 'cafe',
+  +     priceLevel: null,
+  +     rating: null,
+  +     reviewCount: null,
+  +     source: 'osm',
+  +     website: null
+  +   }
+  + ]
+  - []
+
+      at TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-query-plan.test.mjs:546:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/date-night-query-plan.test.mjs:553:1
+✖ V-DR-01 ordinary Movies narrowing retains matching Museum demolition with Halloween both OFF and ON (1.346418ms)
+  AssertionError [ERR_ASSERTION]: Ordinary activity narrowing must also retain identity-negative evidence
+  + actual - expected
+
+  + [
+  +   {
+  +     activityTypes: [
+  +       'movies'
+  +     ],
+  +     address: 'Address unavailable',
+  +     availability: {
+  +       browseEligible: true,
+  +       checkedAt: undefined,
+  +       label: 'Hours unknown',
+  +       openNowEligible: false,
+  +       revalidationDue: false,
+  +       season: 'ordinary',
+  +       status: 'hours-unknown'
+  +     },
+  +     closesLabel: 'Hours unknown',
+  +     closingSoon: false,
+  +     cuisineLabel: 'Movies',
+  +     cuisines: [
+  +       'other'
+  +     ],
+  +     discoveryEvidence: [
+  +       {
+  +         activityTypes: [
+  +           'movies'
+  +         ],
+  +         id: 'date-night-osm-node-121',
+  +         lifecycle: undefined,
+  +         openingHours: null,
+  +         source: 'osm',
+  +         website: null
+  +       }
+  +     ],
+  +     distanceMiles: 0,
+  +     hoursKnown: false,
+  +     id: 'date-night-osm-node-121',
+  +     isChain: false,
+  +     isOpen: false,
+  +     lat: 43.65348,
+  +     lifecycle: undefined,
+  +     lon: -79.38393,
+  +     moodLevel: 1,
+  +     name: 'Riverside Arts',
+  +     openingHours: null,
+  +     phone: null,
+  +     photoKey: 'cafe',
+  +     priceLevel: null,
+  +     rating: null,
+  +     reviewCount: null,
+  +     source: 'osm',
+  +     website: null
+  +   }
+  + ]
+  - []
+
+      at TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-query-plan.test.mjs:563:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/date-night-query-plan.test.mjs:570:1
+✖ V-DR-01 unrelated negatives cannot suppress an active identity or leak into eligible positive results (1.733283ms)
+  AssertionError [ERR_ASSERTION]: The unrelated terminal record is acquired, then excluded by lifecycle eligibility
+
+  false !== true
+
+      at TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-query-plan.test.mjs:589:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/date-night-query-plan.test.mjs:592:1
+✖ V-DR-01 negative companions span supported categories while affirmative clauses remain narrow (0.597068ms)
+  AssertionError [ERR_ASSERTION]: haunted-house: {"demolished:attraction":"pumpkin_patch"}
+
+  false !== true
+
+      at TestContext.<anonymous> (file:///workspace/scratch/031a5044ce4a/dinner-roulette/scripts/date-night-query-plan.test.mjs:600:45)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

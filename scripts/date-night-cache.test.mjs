@@ -151,6 +151,158 @@ test("equal-timestamp freshness uses admission order even after an older superse
   assert.equal(corn.response.discovery.groups[0].originOutcome, "succeeded-empty");
 });
 
+function assertNoSupersededCorn(snapshot) {
+  assert.equal(snapshot.response?.venues.some(({ id }) => id === "superseded-corn") ?? false, false,
+    "eviction must never restore the superseded Corn identity");
+  if (!snapshot.missingActivityTypes.includes("corn-maze")) {
+    assert.ok(snapshot.response, "complete coverage requires a response");
+    assert.ok(snapshot.response.discovery.groups.some((group) =>
+      group.activityTypes.includes("corn-maze") && group.originOutcome === "succeeded-empty"),
+    "a complete Corn cache-hit must come from retained successful-empty coverage");
+  }
+}
+
+for (const capacity of ["maxEntries", "maxVenues"]) {
+  for (const equalTimestamps of [false, true]) {
+    test(`V-DR-02: ${capacity} eviction cannot resurrect superseded Corn (${equalTimestamps ? "equal" : "increasing"} timestamps)`, () => {
+      let now = 100;
+      const cache = createDateNightDiscoveryCache({ now: () => now,
+        maxEntries: capacity === "maxEntries" ? 2 : 8, maxVenues: capacity === "maxVenues" ? 4 : 20 });
+      const anything = query(), corn = query(["corn-maze"]), movies = query(["movies"]);
+      cache.store(anything, response(anything, [venue("superseded-corn", ["corn-maze"]), venue("movie", ["movies"])]));
+      if (!equalTimestamps) now++;
+      cache.store(corn, response(corn, []));
+      assertNoSupersededCorn(cache.read(corn));
+      const filler = query(["park"], { lat: 38 });
+      if (capacity === "maxVenues") cache.store(filler, response(filler, [venue("filler", ["park"])]));
+      // A Movies read changes only LRU priority. The old Anything stays alive
+      // while the newer empty Corn snapshot becomes the first eviction victim.
+      assert.deepEqual(cache.read(movies).response.venues.map(({ id }) => id), ["movie"]);
+      const pressure = query(["museum"], { lat: 39 });
+      cache.store(pressure, response(pressure, capacity === "maxVenues"
+        ? [venue("pressure-1", ["museum"]), venue("pressure-2", ["museum"])] : [venue("pressure", ["museum"])]));
+      assert.ok(cache.read(pressure).response, "new pressure entry remains cached");
+      if (capacity === "maxVenues") assert.equal(cache.read(filler).response, null,
+        "raw-venue pressure evicts the zero-row Corn snapshot then the expendable filler");
+      assert.deepEqual(cache.read(movies).response.venues.map(({ id }) => id), ["movie"],
+        "unrelated old Movies coverage remains reusable");
+      assertNoSupersededCorn(cache.read(corn));
+      assertNoSupersededCorn(cache.read(anything));
+    });
+  }
+}
+
+for (const [oldRadius, newRadius] of [[50, 15], [15, 50]]) {
+  test(`V-DR-02: radius ${oldRadius}→${newRadius} supersession is durable and never claims wider coverage`, () => {
+    let now = 0;
+    const cache = createDateNightDiscoveryCache({ now: () => now, maxEntries: 2 });
+    const anything = query(["anything"], { radiusMiles: oldRadius });
+    const corn = query(["corn-maze"], { radiusMiles: newRadius });
+    cache.store(anything, response(anything, [venue("superseded-corn", ["corn-maze"]), venue("movie", ["movies"])]));
+    now++;
+    cache.store(corn, response(corn, []));
+    assertNoSupersededCorn(cache.read(query(["corn-maze"], { radiusMiles: 15 })));
+    const wide = cache.read(query(["corn-maze"], { radiusMiles: 50 }));
+    assertNoSupersededCorn(wide);
+    if (newRadius === 15) assert.deepEqual(wide.missingActivityTypes, ["corn-maze"],
+      "new narrower success conservatively requires a fresh wider acquisition");
+    const movies = query(["movies"], { radiusMiles: oldRadius });
+    assert.deepEqual(cache.read(movies).response.venues.map(({ id }) => id), ["movie"]);
+    const pressure = query(["museum"], { lat: 38 });
+    cache.store(pressure, response(pressure));
+    for (const radiusMiles of [15, 50, 75]) {
+      const after = cache.read(query(["corn-maze"], { radiusMiles }));
+      assertNoSupersededCorn(after);
+      if (radiusMiles > newRadius) assert.deepEqual(after.missingActivityTypes, ["corn-maze"]);
+    }
+    assert.deepEqual(cache.read(movies).missingActivityTypes, []);
+  });
+}
+
+test("V-DR-02: supersession lasts through the old TTL and never rejuvenates unaffected Movies", () => {
+  let now = 0;
+  const cache = createDateNightDiscoveryCache({ now: () => now, ttlMs: 100, maxEntries: 2 });
+  cache.store(query(), response(query(), [venue("superseded-corn", ["corn-maze"]), venue("movie", ["movies"])]));
+  now = 10;
+  cache.store(query(["corn-maze"]), response(query(["corn-maze"]), []));
+  cache.read(query(["movies"]));
+  const pressure = query(["museum"], { lat: 38 });
+  cache.store(pressure, response(pressure));
+  now = 99;
+  assertNoSupersededCorn(cache.read(query(["corn-maze"])));
+  assert.deepEqual(cache.read(query(["movies"])).missingActivityTypes, []);
+  now = 100;
+  assert.deepEqual(cache.read(query(["movies"])).missingActivityTypes, ["movies"],
+    "LRU reuse did not extend the old acquisition TTL");
+  assert.deepEqual(cache.read(query(["corn-maze"])).missingActivityTypes, ["corn-maze"]);
+  now = 110;
+  assert.equal(cache.read(pressure).response, null);
+});
+
+for (const [dimension, change] of [
+  ["latitude", { lat: origin.lat + 0.000001 }], ["longitude", { lon: origin.lon + 0.000001 }],
+  ["Halloween activation", { halloweenActive: false }], ["semantic version", { semanticVersion: "next" }],
+]) {
+  test(`V-DR-02: successful coverage for another ${dimension} cannot supersede this signature`, () => {
+    const cache = createDateNightDiscoveryCache();
+    const original = query(["movies"]), other = query(["movies"], change);
+    cache.store(original, response(original, [venue("original-movie", ["movies"])]));
+    cache.store(other, response(other, []));
+    assert.deepEqual(cache.read(original).response.venues.map(({ id }) => id), ["original-movie"]);
+    assert.deepEqual(cache.read(other).response.venues, []);
+  });
+}
+
+test("V-DR-02: valid-empty supersession retains full classification and evidence for an identity still reused through Movies", () => {
+  const cache = createDateNightDiscoveryCache({ maxEntries: 2 });
+  const shared = venue("shared-identity", ["corn-maze", "movies"], { openingHours: "Mo-Su 10:00-20:00",
+    discoveryEvidence: [
+      { id: "shared-corn", source: "osm", activityTypes: ["corn-maze"], openingHours: null, website: null },
+      { id: "shared-movie", source: "catalog", activityTypes: ["movies"], openingHours: "Mo-Su 10:00-20:00", website: null },
+    ] });
+  const original = response(query(), [shared]);
+  cache.store(query(), original);
+  cache.store(query(["corn-maze"]), response(query(["corn-maze"]), []));
+  cache.read(query(["movies"]));
+  const pressure = query(["museum"], { lat: 38 });
+  cache.store(pressure, response(pressure));
+  const hit = cache.read(query(["movies"]));
+  assert.deepEqual(hit.response.venues[0].activityTypes, ["corn-maze", "movies"]);
+  assert.deepEqual(hit.response.venues[0].discoveryEvidence, shared.discoveryEvidence);
+  assert.equal(hit.response.venues[0].openingHours, shared.openingHours);
+  assert.deepEqual(hit.response.discovery.groups.flatMap((group) => group.activityTypes), ["movies"]);
+  const corn = cache.read(query(["corn-maze"]));
+  assert.deepEqual(corn.missingActivityTypes, ["corn-maze"], "truthful classification is not proof of still-valid Corn acquisition");
+  assert.equal(corn.response, null);
+  assert.ok(original.discovery.groups.some((group) => group.activityTypes.includes("corn-maze")),
+    "cache invalidation must not mutate the caller's response metadata");
+});
+
+for (const outcome of ["fallback", "failed", "cancelled", "cache-hit", "legacy", "oversize"]) {
+  test(`V-DR-02: rejected ${outcome} response cannot supersede successful older coverage`, () => {
+    const cache = createDateNightDiscoveryCache({ maxVenues: 2 });
+    const corn = query(["corn-maze"]);
+    cache.store(query(), response(query(), [venue("still-valid-corn", ["corn-maze"]), venue("movie", ["movies"])]));
+    let rejected = response(corn, []);
+    if (outcome === "fallback") rejected.source = "fallback";
+    else if (outcome === "legacy") delete rejected.discovery;
+    else if (outcome === "oversize") rejected.venues = [1, 2, 3].map((id) => venue(`oversize-${id}`, ["corn-maze"]));
+    else rejected.discovery.groups[0].outcome = outcome;
+    assert.equal(cache.store(corn, rejected), false);
+    assert.deepEqual(cache.read(corn).response.venues.map(({ id }) => id), ["still-valid-corn"]);
+    assert.deepEqual(cache.read(corn).missingActivityTypes, []);
+  });
+}
+
+test("V-DR-02: partial success supersedes only its successful categories", () => {
+  const cache = createDateNightDiscoveryCache();
+  cache.store(query(), response(query(), [venue("still-valid-corn", ["corn-maze"]), venue("old-movie", ["movies"])]));
+  const partial = query(["corn-maze", "movies"]);
+  cache.store(partial, response(partial, [], { seasonal: "failed" }));
+  assert.deepEqual(cache.read(query(["corn-maze"])).response.venues.map(({ id }) => id), ["still-valid-corn"]);
+  assert.deepEqual(cache.read(query(["movies"])).response.venues, []);
+});
+
 test("LRU entry and aggregate raw-venue caps evict whole entries without truncated coverage", () => {
   const cache = createDateNightDiscoveryCache({ maxEntries: 2, maxVenues: 3 });
   const a = query(["movies"]), b = query(["movies"], { lat: 38 }), c = query(["movies"], { lat: 39 });
