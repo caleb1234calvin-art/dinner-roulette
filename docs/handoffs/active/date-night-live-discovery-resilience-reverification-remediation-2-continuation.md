@@ -64,3 +64,16 @@ SAFE TO RESUME FROM THIS CHECKPOINT
 - Exact next action: push/readback this validation checkpoint, complete browser setup, controlled4, then boundedlive2RPC. Record actual runtime/query growth effect. If either phase exposes blocker, preserve/report; otherwisecheckpointacceptance then final immutablefreezeandSTOPforreverification3.
 
 SAFE TO RESUME FROM THIS CHECKPOINT
+
+## Save 6 — controlled browser GREEN; first bounded Preview acceptance FAILED
+
+- Latest pushed c4e42663c7a25519f443456e031d99d1c16dafdd, tree dc5706d27fd6a2ff954f700c28318e672e83b33d, sole parent 41f7e08. Same required branch and failed base. This save preserves browser evidence only; implementation remains deterministic GREEN, live acceptance FAILED.
+- Controlled browser 4/4 PASS: second mirror 1583ms provider / 1816ms visible, third 3085/3340ms, partial groups 12506/12460ms, all stall 12507/12533ms. Expected cancellations, truthful states, Open Now no-refetch, no page errors/overflow, zero public provider calls. Current build proof verified. Official Chrome for Testing recovery did not alter package/lockfiles.
+- Exact READY nonproduction Preview c4e4266: dpl_99Fu4mmCHAy1DnNhpipeR7DLiSeF, https://dinner-roulette-962xkmg15-minions-9e2c.vercel.app. Initial TLS trust failure made zero RPCs; preserved. Explicit harness TLS bypass then made exactly ONE 15-mile Anything acquisition. All four groups exhausted mirror attempts and returned truthful saved fallback at 12508ms provider / 13710ms UI. No lifecycle leakage or page errors. Budget guard stopped before subsets/50 miles: one forwarded RPC total. Live matrix NOT accepted.
+- Runtime excerpt shows attempt timeouts at approximately 8000ms, not an observed parse error. Provider outage versus query cost is not established. Do not label this passing or send retries to the same shape. Investigate query construction before another bounded acceptance attempt; any new runtime version must pass required deterministic/build/security gates first.
+- Prior RED remains preserved; complete audit remains 154 rows / 111 negatives / zero deterministic gaps. Anything 170 selectors / 19166 bytes, seasonal 53 / 5747; four groups/four mirrors and 8s/20s/25s unchanged. V-DR-02 PRESERVED; cache byte-identical, 162 preservation passes, full 673 passes / 4 inherited skips / 0 failures at c4e4266.
+- Changed files: this continuation and separate browser/environment/deployment/live-failure evidence. No source/dependency/settings changes. Main and production untouched; readback confirms frozen 4d937e58 and production dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL. Failed base 4e6ff124 remains FAILED and unpromoted.
+- Remaining gates: resolve or characterize live blocker; revalidate any query change; fresh controlled and bounded exact Preview acceptance; final evidence/scope/freeze. No immutable successful candidate exists.
+- Exact next action: verify this failure checkpoint pushed/clean; inspect authoritative Overpass evaluator/query execution semantics for a bounded lifecycle acquisition optimization, preserving every audited representation and positive-query narrowness. No repeated public-provider diagnostics.
+
+SAFE TO RESUME FROM THIS CHECKPOINT

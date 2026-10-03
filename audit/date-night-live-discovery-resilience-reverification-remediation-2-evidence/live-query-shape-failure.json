@@ -1,0 +1,234 @@
+{
+  "testedAt": "2026-10-03T16:41:37.014Z",
+  "previewOrigin": "https://dinner-roulette-962xkmg15-minions-9e2c.vercel.app",
+  "previewDeploymentId": "dpl_99Fu4mmCHAy1DnNhpipeR7DLiSeF",
+  "candidate": "c4e42663c7a25519f443456e031d99d1c16dafdd",
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "999d02d675bae0c2f33445a17b3711f95b0da14dbc028b5d7aed3ebb05941101",
+      "files": 414
+    },
+    "startedAt": "2026-10-03T16:35:41.536Z",
+    "output": {
+      "sha256": "39ec3817633ba6ba2d91053321a48586a14601b51039d7423a4b7779baeca2ab",
+      "files": 194
+    },
+    "completedAt": "2026-10-03T16:35:44.580Z"
+  },
+  "browserTlsVerificationBypassed": true,
+  "mode": "full-matrix",
+  "expectedRows": 12,
+  "requestedRadii": [
+    15,
+    50
+  ],
+  "requestedSelections": [
+    "anything",
+    "haunted-house",
+    "corn-maze",
+    "pumpkin-patch",
+    "mixed"
+  ],
+  "rows": [
+    {
+      "radiusMiles": 15,
+      "activityTypes": [
+        "anything"
+      ],
+      "openNow": false,
+      "elapsedMs": 13710,
+      "eligibleCount": 17,
+      "requestCount": 1,
+      "responses": [
+        {
+          "outcome": "decoded",
+          "durationMs": 12702,
+          "response": {
+            "source": "fallback",
+            "venues": 17,
+            "liveVenues": 0,
+            "lifecycleVenues": 0,
+            "byType": {
+              "haunted-house": 2,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 2,
+              "arcade": 4,
+              "mini-golf": 2,
+              "escape-room": 0,
+              "skating": 1,
+              "movies": 2,
+              "museum": 3,
+              "park": 6
+            },
+            "liveByType": {
+              "haunted-house": 0,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 0,
+              "arcade": 0,
+              "mini-golf": 0,
+              "escape-room": 0,
+              "skating": 0,
+              "movies": 0,
+              "museum": 0,
+              "park": 0
+            },
+            "partial": false,
+            "groups": [
+              {
+                "id": "seasonal",
+                "activityTypes": [
+                  "haunted-house",
+                  "corn-maze",
+                  "pumpkin-patch"
+                ],
+                "outcome": "failed"
+              },
+              {
+                "id": "entertainment",
+                "activityTypes": [
+                  "bowling",
+                  "arcade",
+                  "mini-golf",
+                  "escape-room",
+                  "skating"
+                ],
+                "outcome": "failed"
+              },
+              {
+                "id": "culture",
+                "activityTypes": [
+                  "movies",
+                  "museum"
+                ],
+                "outcome": "failed"
+              },
+              {
+                "id": "outdoor",
+                "activityTypes": [
+                  "park"
+                ],
+                "outcome": "failed"
+              }
+            ],
+            "warningPresent": true
+          }
+        }
+      ],
+      "liveSeasonalDisclosure": false,
+      "savedOnlyDisclosure": true,
+      "missingCategoryDisclosure": true,
+      "completeOutageDisclosure": true,
+      "partialDisclosure": false,
+      "terminalError": false,
+      "spinnerSettled": true,
+      "noRefetchExpectedFromSuccessfulSuperset": false,
+      "lastNetworkSource": "fallback",
+      "lastNetworkSourceMeaning": "network response; UI may also merge prior cached coverage",
+      "screenshot": "15-anything-off.png"
+    }
+  ],
+  "rpc": [
+    {
+      "phase": "15:anything:off",
+      "outcome": "decoded",
+      "response": {
+        "source": "fallback",
+        "venues": 17,
+        "liveVenues": 0,
+        "lifecycleVenues": 0,
+        "byType": {
+          "haunted-house": 2,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 2,
+          "arcade": 4,
+          "mini-golf": 2,
+          "escape-room": 0,
+          "skating": 1,
+          "movies": 2,
+          "museum": 3,
+          "park": 6
+        },
+        "liveByType": {
+          "haunted-house": 0,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 0,
+          "arcade": 0,
+          "mini-golf": 0,
+          "escape-room": 0,
+          "skating": 0,
+          "movies": 0,
+          "museum": 0,
+          "park": 0
+        },
+        "partial": false,
+        "groups": [
+          {
+            "id": "seasonal",
+            "activityTypes": [
+              "haunted-house",
+              "corn-maze",
+              "pumpkin-patch"
+            ],
+            "outcome": "failed"
+          },
+          {
+            "id": "entertainment",
+            "activityTypes": [
+              "bowling",
+              "arcade",
+              "mini-golf",
+              "escape-room",
+              "skating"
+            ],
+            "outcome": "failed"
+          },
+          {
+            "id": "culture",
+            "activityTypes": [
+              "movies",
+              "museum"
+            ],
+            "outcome": "failed"
+          },
+          {
+            "id": "outdoor",
+            "activityTypes": [
+              "park"
+            ],
+            "outcome": "failed"
+          }
+        ],
+        "warningPresent": true
+      },
+      "durationMs": 12702
+    }
+  ],
+  "forwardedRpcRequests": 1,
+  "maxRpcRequests": 2,
+  "localOnly": [],
+  "pageErrors": [],
+  "errors": [
+    {
+      "phase": "15:anything:off",
+      "check": "bounded-superset-coverage",
+      "kind": "acceptance-assertion",
+      "networkCode": null
+    }
+  ],
+  "passed": false,
+  "fullMatrixPassed": false,
+  "liveContributionObserved": false,
+  "limitations": [
+    "Venue counts are observations, not invariants.",
+    "No duplicate real request is made to decode captured RPC data.",
+    "Source summaries describe transport responses; UI may combine cached coverage.",
+    "Successful provider recall cannot be established when every live attempt fails."
+  ]
+}
