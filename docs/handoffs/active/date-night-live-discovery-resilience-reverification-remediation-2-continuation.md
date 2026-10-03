@@ -51,3 +51,16 @@ SAFE TO RESUME FROM THIS CHECKPOINT
 - Main/production untouched, read-only production identity confirmed Save3. No public-provider calls. SAFE TO RESUME state preserves all evidence and next commands.
 
 SAFE TO RESUME FROM THIS CHECKPOINT
+
+## Save 5 — deterministic/security/build validation GREEN; browser preparation
+
+- Latest pushed41f7e08f077d7850b5c85f2bf89fc9058cd9629a, treea8709f07b93929fd3b14d4f0eb2a7e46bf172897, sole parent0effd48. Same branch/base; this save includes validation evidence plus a bounded live-harness refinement.
+- Fresh full validation PASS673JavaScript=602repository+71application,4inheritedskips,0failures.32new permanent regressions over641. Focused suites not double-counted. Compiledsecurity14;typecheck/12changed-code lint/diff;dependencies/casino883canonical899serialized60catalogs/Android15launcher4webicons/Python3PASS.952protectedbasefiles unchanged; no out-of-scope/secret/generated-junk findings. Fresh auth-enabled direct Vite build and capture/complete/verify proof PASS; no migration.
+- Initial full test mistakenly inherited build-only VITE_AUTH_ENABLED=true and failed2environment-wrapper assertions (600repositorypasses). Preserved failure and initial gate JSON; unchanged tests rerun with normal env passed602. No weakening or source fix. Build/proof refreshed after harness change; current proof retained.
+- Supporting live harness now accepts PFU_LIVE_MAX_RPC_REQUESTS=2 with a network-route hard cap, stops before subset retries when superset coverage is incomplete, and records raw lifecycle-negative count. This addresses the explicit two-acquisition budget. Default24 compatibility retained. Runtime unchanged sincebf5f01a; latest harness fingerprint includes this refinement.
+- RED preserved; parity auditcomplete154rows/111negative/zero gaps; focused100pass;V-DR-02byte-identicaland162preservationpasses. Querymetrics/budgets unchanged fromSave2.
+- Browser install from pinned Playwright CDN failed with invalid ZIP; failure preserved. No browser scenario or public acquisition has run. Next diagnostic is official Google Chrome for Testing manifest/download into scratch; no package/lock/platform changes. Once browser available, run controlled4with current proof, then verified exactnewPreview with PFU_LIVE_MAX_RPC_REQUESTS=2 and local12rowmatrix. Preserve any browser failure before alternate diagnostic approach.
+- Main/production untouched. LastfreshproductionREADY/frozen4d937e58. Prior acceptedPreview:none; knownbf5f01aPreviewabove remains untested; latestcandidatePreviewmust be readback after this push. No manual deployment/settings/migration/merge/promotion.
+- Exact next action: push/readback this validation checkpoint, complete browser setup, controlled4, then boundedlive2RPC. Record actual runtime/query growth effect. If either phase exposes blocker, preserve/report; otherwisecheckpointacceptance then final immutablefreezeandSTOPforreverification3.
+
+SAFE TO RESUME FROM THIS CHECKPOINT

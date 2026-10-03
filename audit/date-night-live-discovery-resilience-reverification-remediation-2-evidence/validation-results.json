@@ -1,0 +1,179 @@
+[
+  {
+    "gate": "full-dependencies",
+    "command": [
+      "npm",
+      "ls",
+      "--all"
+    ],
+    "authEnabled": false,
+    "exitCode": 0,
+    "seconds": 1.641,
+    "log": "full-dependencies.log"
+  },
+  {
+    "gate": "full-typecheck",
+    "command": [
+      "npm",
+      "run",
+      "typecheck"
+    ],
+    "authEnabled": false,
+    "exitCode": 0,
+    "seconds": 6.171,
+    "log": "full-typecheck.log"
+  },
+  {
+    "gate": "full-lint",
+    "command": [
+      "node",
+      "node_modules/eslint/bin/eslint.js",
+      "scripts/date-night-lifecycle-parity.test.mjs",
+      "scripts/date-night-partial-results.test.mjs",
+      "scripts/date-night-query-plan.test.mjs",
+      "scripts/date-night-resilience-live.mjs",
+      "scripts/seasonal-discovery.test.mjs",
+      "scripts/tanstack-security.test.mjs",
+      "scripts/test-support/date-night-query-evaluator.mjs",
+      "scripts/test-support/date-night-resilience-preload.mjs",
+      "src/lib/date-night/lifecycle.ts",
+      "src/lib/date-night/provider-evidence.ts",
+      "src/lib/date-night/query-plan.ts",
+      "src/lib/date-night/search.ts"
+    ],
+    "authEnabled": false,
+    "exitCode": 0,
+    "seconds": 2.895,
+    "log": "full-lint.log"
+  },
+  {
+    "gate": "full-casino",
+    "command": [
+      "npm",
+      "run",
+      "audit:casinos"
+    ],
+    "authEnabled": false,
+    "exitCode": 0,
+    "seconds": 1.939,
+    "log": "full-casino.log"
+  },
+  {
+    "gate": "full-android",
+    "command": [
+      "npm",
+      "run",
+      "android:check"
+    ],
+    "authEnabled": false,
+    "exitCode": 0,
+    "seconds": 1.635,
+    "log": "full-android.log"
+  },
+  {
+    "gate": "full-python",
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "native-android",
+      "-p",
+      "test_*.py"
+    ],
+    "authEnabled": false,
+    "exitCode": 0,
+    "seconds": 0.115,
+    "log": "full-python.log"
+  },
+  {
+    "gate": "source-diff-check",
+    "command": [
+      "git",
+      "diff",
+      "--check",
+      "4e6ff124960d77be0c454ccfa0401c8a1ced35a1"
+    ],
+    "authEnabled": false,
+    "exitCode": 0,
+    "seconds": 0.034,
+    "log": "source-diff-check.log"
+  },
+  {
+    "gate": "build-capture",
+    "command": [
+      "node",
+      "scripts/browser-build-proof.mjs",
+      "capture"
+    ],
+    "authEnabled": true,
+    "exitCode": 0,
+    "seconds": 0.165,
+    "log": "build-capture.log"
+  },
+  {
+    "gate": "production-build",
+    "command": [
+      "node",
+      "scripts/with-app-env.mjs",
+      "node",
+      "node_modules/vite/bin/vite.js",
+      "build",
+      "--mode",
+      "production"
+    ],
+    "authEnabled": true,
+    "exitCode": 0,
+    "seconds": 2.801,
+    "log": "production-build.log"
+  },
+  {
+    "gate": "build-complete",
+    "command": [
+      "node",
+      "scripts/browser-build-proof.mjs",
+      "complete"
+    ],
+    "authEnabled": true,
+    "exitCode": 0,
+    "seconds": 0.216,
+    "log": "build-complete.log"
+  },
+  {
+    "gate": "build-verify",
+    "command": [
+      "node",
+      "scripts/browser-build-proof.mjs",
+      "verify"
+    ],
+    "authEnabled": true,
+    "exitCode": 0,
+    "seconds": 0.216,
+    "log": "build-verify.log"
+  },
+  {
+    "gate": "compiled-security",
+    "command": [
+      "node",
+      "--test",
+      "--test-reporter=tap",
+      "scripts/tanstack-security.test.mjs"
+    ],
+    "authEnabled": true,
+    "exitCode": 0,
+    "seconds": 2.242,
+    "log": "compiled-security.log"
+  },
+  {
+    "gate": "full-test",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "authEnabled": false,
+    "exitCode": 0,
+    "seconds": 17.825,
+    "log": "full-test.log"
+  }
+]

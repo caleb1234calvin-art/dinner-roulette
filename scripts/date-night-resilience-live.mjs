@@ -30,7 +30,9 @@ const rpcId = [...manifest.matchAll(/"([a-f0-9]{64})": \{\s*functionName: "([^"]
   .find((match) => match[2] === "searchDateNight_createServerFn_handler")?.[1];
 assert.ok(rpcId, "Fresh build must identify the Date Night RPC");
 const rpcPath = `/_serverFn/${rpcId}`;
-const MAX_RPC_REQUESTS = 24;
+const MAX_RPC_REQUESTS = Number(process.env.PFU_LIVE_MAX_RPC_REQUESTS ?? 24);
+assert.ok(Number.isInteger(MAX_RPC_REQUESTS) && MAX_RPC_REQUESTS >= 1 && MAX_RPC_REQUESTS <= 24, "Live RPC limit must be 1–24");
+let forwardedRpcRequests = 0;
 const selectionById = {
   anything: ["anything"],
   "haunted-house": ["haunted-house"],
@@ -69,6 +71,7 @@ function summaryOf(result) {
   return {
     source: result.source, venues: result.venues.length,
     liveVenues: result.venues.filter((venue) => venue.discoveryEvidence?.some((evidence) => evidence.source === "osm") || venue.source === "osm").length,
+    lifecycleVenues: result.venues.filter((venue) => Boolean(venue.lifecycle)).length,
     byType, liveByType, partial: result.discovery?.partial ?? null,
     groups: result.discovery?.groups.map((group) => ({ id: group.id, activityTypes: group.activityTypes, outcome: group.outcome })) ?? [],
     warningPresent: Boolean(result.warning),
@@ -206,6 +209,10 @@ try {
     context.setDefaultNavigationTimeout(30_000);
     await context.route("**/*", (route) => {
       if (new URL(route.request().url()).hostname === productionHost) return route.abort("blockedbyclient");
+      if (new URL(route.request().url()).pathname === rpcPath) {
+        if (forwardedRpcRequests >= MAX_RPC_REQUESTS) return route.abort("blockedbyclient");
+        forwardedRpcRequests++;
+      }
       return route.continue();
     });
     await context.addInitScript((radiusMiles) => {
@@ -257,10 +264,14 @@ try {
     else assert.equal(initialRow.completeOutageDisclosure, false, "Successful acquisition must not claim complete outage");
     if (initialResponse.partial) assert.equal(initialRow.partialDisclosure, true, "Partial acquisition requires visible partial disclosure");
     const complete = initialResponse?.groups.length === 4 && initialResponse.groups.every((group) => group.outcome.startsWith("succeeded"));
+    if (MAX_RPC_REQUESTS <= radii.length) {
+      checkPhase = "bounded-superset-coverage";
+      assert.ok(complete, "Preserve incomplete coverage without issuing extra subset acquisitions");
+    }
     for (const selectionId of selectionIds.slice(1)) {
       const selection = selectionById[selectionId];
       currentPhase = `${radius}:${selection.join("+")}:off`;
-      assert.ok(rpc.length < MAX_RPC_REQUESTS, "Bounded live acceptance request limit reached; preserve observations without retrying providers");
+      assert.ok(rpc.length <= MAX_RPC_REQUESTS, "Bounded live acceptance request limit reached; preserve observations without retrying providers");
       const before = rpc.length;
       const started = Date.now();
       await selectCategories(page, selection);
@@ -296,7 +307,7 @@ try {
     previewDeploymentId: process.env.PFU_PREVIEW_DEPLOYMENT_ID ?? null,
     candidate: process.env.PFU_CANDIDATE_SHA ?? null,
     buildProof, browserTlsVerificationBypassed: ignoreHTTPSErrors, mode: verdictMode, expectedRows, requestedRadii: radii, requestedSelections: selectionIds,
-    rows, rpc, localOnly, pageErrors, errors,
+    rows, rpc, forwardedRpcRequests, maxRpcRequests: MAX_RPC_REQUESTS, localOnly, pageErrors, errors,
     passed: errors.length === 0 && rows.length === expectedRows,
     fullMatrixPassed: verdictMode === "full-matrix" && errors.length === 0 && rows.length === 12,
     liveContributionObserved: rpc.some((event) => event.response?.liveVenues > 0),

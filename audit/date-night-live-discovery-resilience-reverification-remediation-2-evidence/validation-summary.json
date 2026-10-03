@@ -1,0 +1,27 @@
+{
+  "javascript": {
+    "repositoryPassed": 602,
+    "applicationPassed": 71,
+    "totalPassed": 673,
+    "skipped": 4,
+    "failed": 0,
+    "focusedNotDoubleCounted": true
+  },
+  "security": 14,
+  "typecheck": "PASS",
+  "lintFiles": 12,
+  "build": "Migration-free/auth-enabled PASS",
+  "casino": {
+    "canonical": 883,
+    "serialized": 899,
+    "catalogs": 60
+  },
+  "android": {
+    "launcherResources": 15,
+    "webIcons": 4
+  },
+  "pythonPassed": 3,
+  "protectedFilesUnchanged": 952,
+  "environmentalFailure": "Initial full test incorrectly inherited VITE_AUTH_ENABLED=true:600repositorypass/2wrapperfail/4skip;unchanged tests rerun without override602pass. Initial failure preserved.",
+  "newLifecycleTests": 32
+}

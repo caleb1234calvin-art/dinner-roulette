@@ -1,0 +1,158 @@
+TAP version 13
+# Subtest: all five actual compiled application POST functions succeed through the client codec
+ok 1 - all five actual compiled application POST functions succeed through the client codec
+  ---
+  duration_ms: 1733.001229
+  type: 'test'
+  ...
+# Subtest: Date Night seasonal on/off survives real transport with a fixed October date
+ok 2 - Date Night seasonal on/off survives real transport with a fixed October date
+  ---
+  duration_ms: 9.265025
+  type: 'test'
+  ...
+# Subtest: invalid application coordinates and queries produce decoded Errors without providers
+ok 3 - invalid application coordinates and queries produce decoded Errors without providers
+  ---
+  duration_ms: 14.201593
+  type: 'test'
+  ...
+# Subtest: GET legitimate Seroval values, thrown Errors and falsy returns
+ok 4 - GET legitimate Seroval values, thrown Errors and falsy returns
+  ---
+  duration_ms: 35.018019
+  type: 'test'
+  ...
+# Subtest: GET ignores inert internal result/error fields, including failed validation
+ok 5 - GET ignores inert internal result/error fields, including failed validation
+  ---
+  duration_ms: 5.071796
+  type: 'test'
+  ...
+# Subtest: GET safely serializes response-shaped data and preserves real Response
+ok 6 - GET safely serializes response-shaped data and preserves real Response
+  ---
+  duration_ms: 1.57687
+  type: 'test'
+  ...
+# Subtest: POST legitimate Seroval values, thrown Errors and falsy returns
+ok 7 - POST legitimate Seroval values, thrown Errors and falsy returns
+  ---
+  duration_ms: 4.33911
+  type: 'test'
+  ...
+# Subtest: POST ignores inert internal result/error fields, including failed validation
+ok 8 - POST ignores inert internal result/error fields, including failed validation
+  ---
+  duration_ms: 2.681538
+  type: 'test'
+  ...
+# Subtest: POST safely serializes response-shaped data and preserves real Response
+ok 9 - POST safely serializes response-shaped data and preserves real Response
+  ---
+  duration_ms: 1.2388
+  type: 'test'
+  ...
+# Subtest: compiled application and fixture enforce CSRF and methods before providers
+ok 10 - compiled application and fixture enforce CSRF and methods before providers
+  ---
+  duration_ms: 8.084754
+  type: 'test'
+  ...
+# Subtest: searchRestaurants compiled provider chain terminates at its total deadline with aborted attempts
+ok 11 - searchRestaurants compiled provider chain terminates at its total deadline with aborted attempts
+  ---
+  duration_ms: 9.355723
+  type: 'test'
+  ...
+# [discovery] provider-chain {
+#   mode: 'dinner',
+#   source: 'error',
+#   durationMs: 20000,
+#   budgetExhausted: true,
+#   attempts: [
+#     { mirror: 1, durationMs: 8000, outcome: 'timeout' },
+#     { mirror: 2, durationMs: 8000, outcome: 'timeout' },
+#     { mirror: 3, durationMs: 4000, outcome: 'timeout' }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'error',
+#   durationMs: 12500,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 0,
+#   failedGroups: 1,
+#   partial: false,
+#   groups: [ { group: 'culture', outcome: 'failed', durationMs: 12500 } ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 8000,
+#       outcome: 'timeout'
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1500,
+#       durationMs: 8000,
+#       outcome: 'timeout'
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 3,
+#       hedgeOffsetMs: 3000,
+#       durationMs: 8000,
+#       outcome: 'timeout'
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 4,
+#       hedgeOffsetMs: 4500,
+#       durationMs: 8000,
+#       outcome: 'timeout'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'nightlife',
+#   source: 'error',
+#   durationMs: 20000,
+#   budgetExhausted: true,
+#   attempts: [
+#     { mirror: 1, durationMs: 8000, outcome: 'timeout' },
+#     { mirror: 2, durationMs: 8000, outcome: 'timeout' },
+#     { mirror: 3, durationMs: 4000, outcome: 'timeout' }
+#   ]
+# }
+# Subtest: searchDateNight compiled provider chain terminates at its total deadline with aborted attempts
+ok 12 - searchDateNight compiled provider chain terminates at its total deadline with aborted attempts
+  ---
+  duration_ms: 6.242873
+  type: 'test'
+  ...
+# Subtest: searchNightlife compiled provider chain terminates at its total deadline with aborted attempts
+ok 13 - searchNightlife compiled provider chain terminates at its total deadline with aborted attempts
+  ---
+  duration_ms: 2.044096
+  type: 'test'
+  ...
+# Subtest: real client transport cancels an in-flight HTTP request within a bounded deadline
+ok 14 - real client transport cancels an in-flight HTTP request within a bounded deadline
+  ---
+  duration_ms: 39.016025
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2186.897453

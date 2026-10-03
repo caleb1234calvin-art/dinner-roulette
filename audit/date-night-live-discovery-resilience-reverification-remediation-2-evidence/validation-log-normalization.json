@@ -1,0 +1,20 @@
+{
+  "change": "Trailing whitespace and EOF blank lines only; outcomes unchanged.",
+  "files": [
+    {
+      "file": "full-dependencies.log",
+      "before": "934aaafa973067744b9a22b9bd4e5f14d9e8375b83622bc2b52ff349fdb88f28",
+      "after": "2e21ba1d3b2102125630e0d9ade8ca0d6cdfa908388ef4ceacb4568aa3368996"
+    },
+    {
+      "file": "full-test-auth-env-failure.log",
+      "before": "8b669f351d07354e6f47eee2d670c3c36d7b8e73e5b1b8ca1aca1552adf5d0e8",
+      "after": "8b52a12105a6cd01fe6de818b3289423d5c70f9399b234ebce1fe9d1aa37de49"
+    },
+    {
+      "file": "full-typecheck.log",
+      "before": "ae791f9f57ffbb3c0a592b6a34e25250c1f7f6f13fde4d05f77a0d4e7681f89a",
+      "after": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4"
+    }
+  ]
+}

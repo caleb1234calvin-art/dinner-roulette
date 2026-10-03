@@ -1,0 +1,16 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> android:check
+> node scripts/check-android.mjs && python3 scripts/android-icons.py --check
+
+{
+  "appId": "com.calebcalvin.pickforus",
+  "appName": "Pick For Us",
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "minSdk": 24,
+  "targetSdk": 36,
+  "compileSdk": 36,
+  "capacitor": "8.5.2"
+}
+Verified 15 launcher resources and 4 web icons; approved master hash unchanged; full artwork within Android and maskable safe circles.
