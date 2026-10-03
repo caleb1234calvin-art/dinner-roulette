@@ -1,9 +1,10 @@
 import * as SliderPrimitive from "@radix-ui/react-slider";
-import type { ComponentProps } from "react";
+import { Fragment, useId, type ComponentProps } from "react";
 import { DISTANCE_OPTIONS } from "@/lib/restaurants/types";
 import { cn } from "@/lib/utils";
 
-function Slider({ className, ...props }: ComponentProps<typeof SliderPrimitive.Root>) {
+function Slider({ className, "aria-label": ariaLabel, "aria-labelledby": ariaLabelledBy, ...props }: ComponentProps<typeof SliderPrimitive.Root>) {
+  const labelId = useId();
   const thumbCount = props.value?.length ?? props.defaultValue?.length ?? 1;
   const distanceScale =
     props.min === 0 &&
@@ -19,12 +20,22 @@ function Slider({ className, ...props }: ComponentProps<typeof SliderPrimitive.R
       <SliderPrimitive.Track className="relative h-1.5 w-full grow overflow-hidden rounded-full bg-elevated">
         <SliderPrimitive.Range className="absolute h-full bg-accent" />
       </SliderPrimitive.Track>
-      {Array.from({ length: thumbCount }).map((_, index) => (
-        <SliderPrimitive.Thumb
-          key={index}
-          className="block size-5 rounded-full bg-fg shadow-[var(--shadow-border)] outline-none ring-offset-bg transition-transform duration-150 focus-visible:ring-2 focus-visible:ring-accent/70 active:scale-95"
-        />
-      ))}
+      {Array.from({ length: thumbCount }).map((_, index) => {
+        // Radix exposes role=slider on Thumb. Range thumbs need distinct names.
+        const suffix = thumbCount === 2 ? ["minimum", "maximum"][index] : `value ${index + 1}`;
+        const suffixId = `${labelId}-${index}`;
+        const needsSuffix = thumbCount > 1;
+        return (
+          <Fragment key={index}>
+            {ariaLabelledBy && needsSuffix && <span id={suffixId} hidden>{suffix}</span>}
+            <SliderPrimitive.Thumb
+              {...(ariaLabel ? { "aria-label": needsSuffix ? `${ariaLabel} ${suffix}` : ariaLabel } : {})}
+              {...(ariaLabelledBy ? { "aria-labelledby": needsSuffix ? `${ariaLabelledBy} ${suffixId}` : ariaLabelledBy } : {})}
+              className="block size-5 rounded-full bg-fg shadow-[var(--shadow-border)] outline-none ring-offset-bg transition-transform duration-150 focus-visible:ring-2 focus-visible:ring-accent/70 active:scale-95"
+            />
+          </Fragment>
+        );
+      })}
     </SliderPrimitive.Root>
   );
 
