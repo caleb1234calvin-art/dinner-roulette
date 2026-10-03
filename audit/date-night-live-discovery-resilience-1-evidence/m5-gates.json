@@ -1,0 +1,38 @@
+{
+  "checkpoint": "d6ca8517144bd1e1e16d8479ff4ada221059e122",
+  "repository_script_tests": {
+    "passed": 533,
+    "skipped": 4,
+    "failed": 0,
+    "total": 537
+  },
+  "application_tests": {
+    "passed": 71,
+    "skipped": 0,
+    "failed": 0
+  },
+  "total_passed": 604,
+  "python_passed": 3,
+  "typecheck": "pass",
+  "changed_code_lint": "pass",
+  "dependency_tree": "pass",
+  "production_build": {
+    "result": "pass",
+    "auth_enabled": true,
+    "migration_run": false,
+    "command": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production"
+  },
+  "tanstack_security": "passed through authoritative npm test with fresh build",
+  "casino": {
+    "canonical": 883,
+    "serialized": 899,
+    "catalogs": 60
+  },
+  "android": {
+    "checks": "pass",
+    "tracked_files_unchanged": 41,
+    "sync": "pass"
+  },
+  "browser_acceptance": "pending",
+  "live_acceptance": "pending"
+}

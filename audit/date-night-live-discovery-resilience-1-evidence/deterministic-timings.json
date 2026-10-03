@@ -1,0 +1,38 @@
+{
+  "baseline": {
+    "strategy": "serial",
+    "attempt_cap_ms": 8000,
+    "aggregate_cap_ms": 20000,
+    "mirror_start_ms": [
+      0,
+      8000,
+      16000,
+      null
+    ],
+    "second_mirror_success_ms": 8000,
+    "fourth_meaningful_opportunity": false,
+    "outage_ms": 20000
+  },
+  "candidate": {
+    "strategy": "bounded hedges per independent requested group",
+    "attempt_cap_ms": 8000,
+    "aggregate_cap_ms": 20000,
+    "mirror_start_ms": [
+      0,
+      1500,
+      3000,
+      4500
+    ],
+    "winner_ms": {
+      "second": 1500,
+      "third": 3000,
+      "fourth": 4500
+    },
+    "all_stall_ms": 12500,
+    "last_attempt_opportunity_ms": 8000,
+    "maximum_groups": 4,
+    "maximum_attempts": 16
+  },
+  "client_watchdog_ms": 25000,
+  "method": "deterministic fake clocks; native/browser timings separately recorded"
+}
