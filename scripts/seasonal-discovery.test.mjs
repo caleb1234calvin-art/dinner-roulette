@@ -31,7 +31,8 @@ function freeze(t, at = now) {
 }
 async function search(t, elements, location = international, inspect = () => {}) {
   t.mock.method(globalThis, "fetch", async (_url, options) => {
-    inspect(new URLSearchParams(options.body).get("data"));
+    const query = new URLSearchParams(options.body).get("data");
+    if (query.includes("haunted_house")) inspect(query);
     return Response.json({ elements });
   });
   return searchDateNight({ data: { ...location, radiusMiles: 50, spookySeasonEnabled: true } });
@@ -245,7 +246,7 @@ test("saved-only successful sparse coverage, missing categories and provider out
     throw new Error("offline");
   });
   const fallback = await searchDateNight({
-    data: { ...origin, radiusMiles: 50, spookySeasonEnabled: true },
+    data: { ...origin, radiusMiles: 50, spookySeasonEnabled: true, activityTypes: selected },
   });
   assert.equal(failed.mock.callCount(), 4);
   assert.equal(fallback.source, "fallback");

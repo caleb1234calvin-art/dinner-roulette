@@ -122,7 +122,7 @@ test("all five actual compiled application POST functions succeed through the cl
     assert.equal(result.lon, location.lon);
     assert.equal(result.label, "Toronto, Ontario, Canada");
   }
-  const dateNight = await rpc(app, "searchDateNight", { ...location, spookySeasonEnabled: false });
+  const dateNight = await rpc(app, "searchDateNight", { ...location, spookySeasonEnabled: false, activityTypes: ["museum"] });
   assert.equal(dateNight.source, "live");
   assert.ok(dateNight.venues.some((place) => place.activityTypes.includes("museum")));
   const nightlife = await rpc(app, "searchNightlife", location);
@@ -138,11 +138,14 @@ test("Date Night seasonal on/off survives real transport with a fixed October da
     constructor(...args) { super(...(args.length ? args : ["2026-10-15T12:00:00Z"])); }
   });
   const off = await rpc(app, "searchDateNight", { ...location, spookySeasonEnabled: false });
+  const offCalls = calls.length;
   const on = await rpc(app, "searchDateNight", { ...location, spookySeasonEnabled: true });
   assert.ok(!off.venues.some((place) => place.activityTypes.includes("haunted-house")));
   assert.ok(on.venues.some((place) => place.activityTypes.includes("haunted-house")));
-  assert.doesNotMatch(decodeURIComponent(calls[0].body), /haunted_house/);
-  assert.match(decodeURIComponent(calls[1].body), /haunted_house/);
+  assert.ok(calls.slice(0, offCalls).every((call) => !decodeURIComponent(call.body).includes("haunted_house")));
+  assert.ok(calls.slice(offCalls).some((call) => decodeURIComponent(call.body).includes("haunted_house")));
+  assert.equal(off.discovery.groups.length, 3);
+  assert.equal(on.discovery.groups.length, 4);
 });
 
 test("invalid application coordinates and queries produce decoded Errors without providers", async (t) => {
@@ -154,6 +157,9 @@ test("invalid application coordinates and queries produce decoded Errors without
   }
   for (const query of ["", "bad\u0000query", "x".repeat(301), 12]) {
     await assert.rejects(rpc(app, "lookupLocation", { query }), (error) => error instanceof Error);
+  }
+  for (const activityTypes of [null, "movies", ["__proto__"], ["movies);out;"], [{ type: "movies" }]]) {
+    await assert.rejects(rpc(app, "searchDateNight", { ...location, activityTypes }), (error) => error instanceof Error);
   }
   assert.equal(calls.length, 0);
 });
@@ -227,10 +233,10 @@ test(`${name} compiled provider chain terminates at its total deadline with abor
     signals.push(init.signal);
     return untilAbort(init.signal);
   });
-  const result = rpc(app, name, location).then(() => null, (error) => error);
+  const result = rpc(app, name, name === "searchDateNight" ? { ...location, activityTypes: ["movies"] } : location).then(() => null, (error) => error);
   await clock.tick(20_001);
   assert.ok(await result instanceof Error);
-  assert.equal(signals.length, 3);
+  assert.equal(signals.length, name === "searchDateNight" ? 4 : 3);
   assert.ok(signals.every((signal) => signal.aborted));
   assert.equal(clock.pending, 0);
 });

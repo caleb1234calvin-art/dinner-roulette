@@ -21,7 +21,7 @@ const modes = [
   ],
   [
     "date-night",
-    load("src/lib/date-night/search.ts").searchDateNight,
+    ({ data }) => load("src/lib/date-night/search.ts").searchDateNight({ data: { ...data, activityTypes: ["movies"] } }),
     "venues",
     { amenity: "cinema" },
   ],

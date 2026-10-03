@@ -11,12 +11,14 @@ import { JASPER_COUNTY_DATE_NIGHT_CATALOG } from "./jasper-county-catalog";
 import { JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG } from "./seasonal-catalog";
 import { seasonalTypes, providerLifecycle } from "./provider-evidence";
 import { isHalloweenDateNightActive } from "./season";
+import { dedupeDateNight, mergeDateNight, mergeIdentity, moodFor } from "./identity";
 import { buildDateNightQuery, buildDateNightQueryPlan, validateDateNightActivityTypes } from "./query-plan";
 import {
   dateNightTypeLabel,
   type ConcreteDateNightType,
   type DateNightPlace,
   type DateNightSearchResponse,
+  type DateNightGroupCoverage,
 } from "./types";
 
 interface OverpassElement {
@@ -30,27 +32,8 @@ interface OverpassElement {
 
 const RETIRED_DATE_NIGHT_NAMES = ["powers museum"] as const;
 
-const DATE_NIGHT_ALIAS_GROUPS = [
-  [
-    "precious moments chapel",
-    "precious moments chapel and gardens",
-    "precious moments chapel & gardens",
-    "samuel j butcher museum",
-    "samuel j. butcher museum",
-  ],
-] as const;
-
 function isRetiredDateNightName(name: string): boolean {
   return RETIRED_DATE_NIGHT_NAMES.some((retired) => namesMatch(retired, name));
-}
-
-function dateNightNamesMatch(a: string, b: string): boolean {
-  if (namesMatch(a, b)) return true;
-  return DATE_NIGHT_ALIAS_GROUPS.some(
-    (group) =>
-      group.some((candidate) => namesMatch(candidate, a)) &&
-      group.some((candidate) => namesMatch(candidate, b)),
-  );
 }
 
 function classify(tags: Record<string, string>, halloweenSeason: boolean): ConcreteDateNightType[] {
@@ -67,14 +50,6 @@ function classify(tags: Record<string, string>, halloweenSeason: boolean): Concr
   if (halloweenSeason) seasonalTypes(tags).forEach((type) => types.add(type));
 
   return [...types];
-}
-
-function moodFor(types: readonly ConcreteDateNightType[]): 1 | 2 | 3 {
-  if (types.includes("haunted-house")) return 3;
-  if (types.includes("corn-maze") || types.includes("pumpkin-patch")) return 2;
-  if (types.includes("movies") || types.includes("museum") || types.includes("park")) return 1;
-  if (types.includes("bowling") || types.includes("arcade") || types.includes("mini-golf")) return 2;
-  return 3;
 }
 
 function elementToPlace(element: OverpassElement, halloweenSeason: boolean): DateNightPlace | null {
@@ -129,62 +104,6 @@ function elementToPlace(element: OverpassElement, halloweenSeason: boolean): Dat
   };
 }
 
-function combineTypes(a: readonly ConcreteDateNightType[], b: readonly ConcreteDateNightType[]) {
-  return [...new Set([...a, ...b])].sort();
-}
-
-function evidenceFor(place: DateNightPlace) {
-  return place.discoveryEvidence ?? [{
-    id: place.id, source: place.source === "osm" ? "osm" as const : "catalog" as const,
-    activityTypes: place.activityTypes, openingHours: place.openingHours,
-    website: place.website, lifecycle: place.lifecycle,
-  }];
-}
-
-function mergeIdentity(a: DateNightPlace, b: DateNightPlace): DateNightPlace {
-  // Catalog coordinates/identity take priority; otherwise stable provider ID wins.
-  const rank = (place: DateNightPlace) => `${place.id.startsWith("date-night-osm-") ? "1" : "0"}:${place.id}`;
-  const [first, second] = [a, b].sort((x, y) => rank(x).localeCompare(rank(y)));
-  const activityTypes = combineTypes(a.activityTypes, b.activityTypes);
-  const evidence = [...evidenceFor(a), ...evidenceFor(b)];
-  const discoveryEvidence = [...new Map(evidence.map((item) => [JSON.stringify(item), item])).values()]
-    .sort((x, y) => JSON.stringify(x).localeCompare(JSON.stringify(y)));
-  const hours = [...new Set(discoveryEvidence.map((item) => item.openingHours).filter((value) => value && value !== "unknown"))];
-  const curated = discoveryEvidence.find((item) => item.source === "catalog" && item.openingHours && item.openingHours !== "unknown");
-  return {
-    ...second!, ...first!, activityTypes, discoveryEvidence,
-    lifecycle: a.lifecycle === "permanently-closed" || b.lifecycle === "permanently-closed"
-      ? "permanently-closed" : a.lifecycle ?? b.lifecycle,
-    openingHours: curated?.openingHours ?? (hours.length === 1 ? hours[0]! : null),
-    phone: first!.phone ?? second!.phone,
-    website: first!.website ?? second!.website,
-    address: first!.address !== "Address unavailable" ? first!.address : second!.address,
-    cuisineLabel: dateNightTypeLabel(activityTypes), moodLevel: moodFor(activityTypes),
-    source: discoveryEvidence.some((item) => item.source === "catalog") && discoveryEvidence.some((item) => item.source === "osm")
-      ? "merged" : first!.source,
-  };
-}
-
-function dedupeDateNight(places: DateNightPlace[]): DateNightPlace[] {
-  const result: DateNightPlace[] = [];
-  for (const place of places) {
-    const matchIndex = result.findIndex((candidate) => {
-      const distance = haversineMiles(candidate.lat, candidate.lon, place.lat, place.lon);
-      const sameName = namesMatch(candidate.name, place.name);
-      const sharedType = candidate.activityTypes.some((type) => place.activityTypes.includes(type));
-      return (sameName && distance < 0.6) || (distance < 0.03 && sharedType);
-    });
-
-    if (matchIndex < 0) {
-      result.push(place);
-      continue;
-    }
-
-    result[matchIndex] = mergeIdentity(result[matchIndex]!, place);
-  }
-  return result;
-}
-
 async function queryMirror(url: string, body: string, halloweenSeason: boolean, signal: AbortSignal): Promise<DateNightPlace[]> {
   const response = await fetch(url, {
     method: "POST",
@@ -217,23 +136,6 @@ function localWithin(lat: number, lon: number, radiusMiles: number, halloweenAct
   return catalog.filter((place) => haversineMiles(lat, lon, place.lat, place.lon) <= radiusMiles + 1);
 }
 
-function mergeDateNight(live: DateNightPlace[], local: DateNightPlace[]): DateNightPlace[] {
-  const merged = [...local];
-  for (const place of live) {
-    const matchIndex = merged.findIndex(
-      (candidate) =>
-        dateNightNamesMatch(candidate.name, place.name) &&
-        haversineMiles(candidate.lat, candidate.lon, place.lat, place.lon) < 0.35,
-    );
-    if (matchIndex >= 0) {
-      merged[matchIndex] = mergeIdentity(merged[matchIndex]!, place);
-      continue;
-    }
-    merged.push(place);
-  }
-  return dedupeDateNight(merged);
-}
-
 export const searchDateNight = createServerFn({ method: "POST" })
   .validator((data: { lat: number; lon: number; radiusMiles: number; spookySeasonEnabled?: boolean; activityTypes?: unknown }) => {
     requireCoordinates(data);
@@ -251,29 +153,41 @@ export const searchDateNight = createServerFn({ method: "POST" })
     const radiusMeters = Math.min(fetchRadius * 1609.34, 80467);
     const halloweenSeason = isHalloweenDateNightActive(data.spookySeasonEnabled);
     const plan = buildDateNightQueryPlan(data.activityTypes, halloweenSeason);
-    const body = `data=${encodeURIComponent(buildDateNightQuery({ activityTypes: plan.flatMap((group) => group.activityTypes) }, data.lat, data.lon, radiusMeters))}`;
     const local = localWithin(data.lat, data.lon, fetchRadius, halloweenSeason);
     const chain = createDateNightProvider();
-    let lastError: unknown;
-    try {
-      const live = await chain.run("all", (mirror, signal) => queryMirror(mirror, body, halloweenSeason, signal));
-      const venues = mergeDateNight(live, local);
+    const outcomes = await Promise.allSettled(plan.map(async (group) => {
+      const body = `data=${encodeURIComponent(buildDateNightQuery(group, data.lat, data.lon, radiusMeters))}`;
+      return chain.run(group.id, (mirror, signal) => queryMirror(mirror, body, halloweenSeason, signal));
+    }));
+    const groups: DateNightGroupCoverage[] = plan.map((group, index) => {
+      const result = outcomes[index]!;
+      return { ...group, outcome: result.status === "fulfilled"
+        ? result.value.length ? "succeeded-nonempty" : "succeeded-empty"
+        : "failed" };
+    });
+    const successes = outcomes.filter((result): result is PromiseFulfilledResult<DateNightPlace[]> => result.status === "fulfilled");
+    const failedTypes = groups.filter((group) => group.outcome === "failed").flatMap((group) => group.activityTypes);
+    const discovery = { groups, partial: successes.length > 0 && failedTypes.length > 0 };
+    if (successes.length > 0) {
+      const venues = mergeDateNight(successes.flatMap((result) => result.value), local);
       const source = local.length ? "merged" : "live";
       chain.finish(source);
-      return { venues, source };
-    } catch (error) {
-      lastError = error;
+      return { venues, source, discovery,
+        ...(discovery.partial ? { warning: `Some live activity searches are unavailable: ${failedTypes.map((type) => dateNightTypeLabel([type])).join(", ")}. Available live results and saved places are included; coverage may be incomplete.` } : {}),
+      };
     }
+    const lastError = outcomes.slice().reverse().find((result) => result.status === "rejected");
 
     if (local.length > 0) {
       chain.finish("fallback");
       return {
         venues: dedupeDateNight(local),
         source: "fallback",
+        discovery,
         warning: "Using saved Jasper County Date Night places while the live map is unavailable.",
       };
     }
 
     chain.finish("error");
-    throw lastError instanceof Error ? lastError : new Error("Could not load date-night activities for that area.");
+    throw lastError?.status === "rejected" && lastError.reason instanceof Error ? lastError.reason : new Error("Could not load date-night activities for that area.");
   });

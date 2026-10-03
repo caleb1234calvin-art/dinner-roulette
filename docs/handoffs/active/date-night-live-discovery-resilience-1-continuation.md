@@ -101,4 +101,22 @@ Migration-free production build later: `VITE_AUTH_ENABLED=true node scripts/with
 - New live-provider observations: none. Deadlines remain20000/25000ms.
 - Resume status: QUERY DECOMPOSITION IMPLEMENTED — PARTIAL MERGE PENDING.
 
+
+## Save 3 — partial live results
+
+- Repository/branch/frozen base unchanged. Latest pushed checkpoint `68e157dbe9688522d1a8549c9c39778580b3130f`, tree `867d0da8680f0954321b245ccfed6f0f16eb561f`, sole parent `edb91d91462a333785df79fe80c8f4d8c85839d3`. This save descends solely from68e157d; no merges.
+- Completed milestones0–3. New `identity.ts` contains extracted existing merge semantics; same OSM id now matches before geometry and tie representatives are stable. Distance thresholds, catalog/alias preference, category/evidence union, conflicting-hours handling and lifecycle precedence preserved.
+- Concurrent independent groups share one absolute provider deadline. Every response includes bounded `discovery.groups` with requested category lists and succeeded-nonempty/succeeded-empty/failed outcome; schema supports cancelled/cache-hit for reuse. `partial` means at least one successful group plus at least one failed requested group. Successful-empty is a successful response, never outage.
+- Only no successful requested groups falls back. Source remains live/merged/fallback. Partial warning names unavailable category searches; UI displays it even alongside seasonal coverage. Per-category evidence still decides live/saved-only/missing. Exact existing fallback and Halloween caution copy/layout preserved.
+- Changed since M2: `src/lib/date-night/{identity,search,types}.ts`, `src/components/date-night-home.tsx`, new partial-results/partial-ui scripts; targeted existing provider/seasonal/security test adaptations; continuation and M3 evidence. Full earlier changed paths above.
+- Tests PASS: partial-results12/12; partial UI2/2; query-plan16/16; full seasonal runner24/24; client lifecycle54/54; provider deadlines41/41; typecheck; ESLint all M3 changed source/tests; diff check. Evidence retained. Initial typecheck found ES2023 findLast incompatibility, replaced with ES2022 reverse/find; recheck passed.
+- Existing provider deadline suite now explicitly requests Movies only for Date Night, preserving full assertions for one group and unchanged Dinner/Nightlife scenarios. Security suite category/count expectations adapted and hostile category transport cases added; security runtime test awaits fresh M5 production build and is NOT claimed passed yet.
+- Deterministic partial/all-group failures settle by12500ms, four groups at most16 attempts. Partial successes and valid-empty survive, aliases/dedupe/lifecycle retained. No deadlines changed.
+- Worktree coherent; exact staged tree will be verified during API publication, then clean state confirmed.
+- Next action: M4 bounded client cache/raw result reuse, feed selected activityTypes into acquisition, only fetch uncovered categories, current-clock eligibility remains outside cache.
+- Resume commands: prior commands plus `node scripts/date-night-partial-results.test.mjs`, `node scripts/date-night-partial-ui.test.mjs`, `node --test scripts/seasonal-discovery.test.mjs`, `node scripts/discovery-client-lifecycle.test.mjs`.
+- Blockers: no implementation blocker. Cache/whole-suite/build/Preview/browser/live acceptance still pending. No temporary application instrumentation.
+- Main/production remain untouched; no migration/settings change/explicit deployment/merge. Automatic branch Previews continue; last observed baseline Preview above, none accepted yet. No new live-provider probes.
+- Resume status: PARTIAL LIVE RESULTS IMPLEMENTED — CACHE/REUSE PENDING.
+
 SAFE TO RESUME FROM THIS CHECKPOINT

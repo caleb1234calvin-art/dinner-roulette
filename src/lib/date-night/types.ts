@@ -1,5 +1,6 @@
 import type { SeasonalVenueAvailability, DateNightAvailability } from "./availability";
 import type { DecoratedRestaurant, DistanceMiles, Restaurant } from "@/lib/restaurants/types";
+import type { DateNightQueryGroupId } from "./query-plan";
 
 export type DateNightTypeId =
   | "anything"
@@ -51,10 +52,20 @@ export interface DecoratedDateNightPlace extends DecoratedRestaurant, DateNightP
   moodLevel: 1 | 2 | 3;
 }
 
+export interface DateNightGroupCoverage {
+  id: DateNightQueryGroupId;
+  activityTypes: ConcreteDateNightType[];
+  outcome: "succeeded-nonempty" | "succeeded-empty" | "failed" | "cancelled" | "cache-hit";
+  originOutcome?: "succeeded-nonempty" | "succeeded-empty";
+}
+
 export interface DateNightSearchResponse {
   venues: DateNightPlace[];
   source: "live" | "merged" | "fallback";
   warning?: string;
+  /** Successful empty is coverage, not outage. Cache assembly may split a group
+   * into disjoint category slices with different outcomes. */
+  discovery?: { groups: DateNightGroupCoverage[]; partial: boolean };
 }
 
 export const DEFAULT_DATE_NIGHT_FILTERS: DateNightFilters = {

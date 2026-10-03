@@ -23,6 +23,7 @@ import {
   type ConcreteDateNightType,
   type DateNightFilters,
   type DateNightPlace,
+  type DateNightSearchResponse,
   type DateNightTypeId,
   type DecoratedDateNightPlace,
 } from "@/lib/date-night/types";
@@ -162,6 +163,7 @@ export function DateNightHome() {
   const [lastCategory, setLastCategory] = useState<ConcreteDateNightType | null>(null);
   const now = useDateNightClock();
   const [source, setSource] = useState<"live" | "merged" | "fallback">("live");
+  const [discovery, setDiscovery] = useState<DateNightSearchResponse["discovery"]>();
   const halloweenActive = isHalloweenDateNightActive(spookySeasonEnabled, now);
   const activityChips = dateNightChipsForNow(spookySeasonEnabled, now);
 
@@ -169,6 +171,7 @@ export function DateNightHome() {
     setLoading(true);
     setError(null);
     setWarning(null);
+    setDiscovery(undefined);
     return startDiscoveryRequest({
       mode: "date-night",
       request: (signal) => searchDateNight({
@@ -184,6 +187,7 @@ export function DateNightHome() {
         setVenues(result.venues);
         setSource(result.source);
         setWarning(result.warning ?? null);
+        setDiscovery(result.discovery);
       },
       onError: (err) => {
         setVenues([]);
@@ -337,11 +341,11 @@ export function DateNightHome() {
       </section>
 
       {loading ? <DiscoveryLoading label="Finding date ideas near you…" /> : null}
-      {warning && !coverage ? (
+      {warning && (!coverage || discovery?.partial) ? (
         <DiscoveryNotice
           tone="fallback"
-          title="Live discovery is temporarily unavailable"
-          body={halloweenActive
+          title={discovery?.partial ? "Some live searches are unavailable" : "Live discovery is temporarily unavailable"}
+          body={discovery?.partial ? warning : halloweenActive
             ? "Pick For Us is using saved seasonal anchors. Check each stop before you leave."
             : "Pick For Us is using verified saved local date ideas so the roulette can keep working."}
         />
