@@ -2,26 +2,52 @@ import type { ConcreteDateNightType, DateNightLifecycle } from "./types";
 
 // Complement the ordinary activity query within its existing capped radius.
 // Broad place kinds are acquisition hints, never seasonal classifications.
-const ACTIVITY_VALUES =
-  "corn_maze|maize_maze|pumpkin_patch|haunted_house|haunted_trail|haunted_forest|haunted_attraction";
-const ACTIVITY_WORDS =
-  "corn[ _-]maze|maize[ _-]maze|pumpkin[ _-](patch|picking)|haunted[ _-](house|trail|forest|attraction)";
-export function seasonalQueryClauses(around: string): string {
+const SEASONAL_SELECTORS: Partial<Record<ConcreteDateNightType, { values: string; words: string }>> = {
+  "corn-maze": { values: "corn_maze|maize_maze", words: "(corn|maize)[ _-]+maze" },
+  "pumpkin-patch": { values: "pumpkin_patch", words: "pumpkin[ _-]+(patch|picking)" },
+  "haunted-house": { values: "haunted_house|haunted_trail|haunted_forest|haunted_attraction", words: "haunted[ _-]+(house|trail|forest|attraction)" },
+};
+export function seasonalQueryClauses(around: string, selected: readonly ConcreteDateNightType[] = ["haunted-house", "corn-maze", "pumpkin-patch"]): string {
+  const selectors = selected.flatMap((type) => SEASONAL_SELECTORS[type] ? [SEASONAL_SELECTORS[type]!] : []);
+  if (!selectors.length) return "";
   const clauses = [
-    '["leisure"="maze"]',
-    '["attraction"="maze"]',
-    `["attraction"~"^(${ACTIVITY_VALUES})$"]`,
-    '["tourism"="theme_park"]',
+    `["attraction"~"^(${selectors.map((selector) => selector.values).join("|")})$"]`,
+    ...(selected.includes("corn-maze") ? ['["leisure"="maze"]', '["attraction"="maze"]'].flatMap((maze) =>
+      [`${maze}["maze:type"~"^(corn|maize)$"]`, `${maze}["crop"~"^(corn|maize)$"]`]) : []),
     ...[
+      '["leisure"="maze"]',
+      '["attraction"="maze"]',
+      '["tourism"="theme_park"]',
       '["tourism"~"^(attraction|farm)$"]',
       '["leisure"="park"]',
       '["landuse"~"^(farmyard|farmland)$"]',
     ].map(
       (context) =>
-        `${context}[~"^(name|description|seasonal:description|seasonal:activities)$"~"${ACTIVITY_WORDS}",i]`,
+        `${context}[~"^(name|description|seasonal:description|seasonal:activities)$"~"${selectors.map((selector) => selector.words).join("|")}",i]`,
     ),
   ];
   return clauses.map((clause) => `nwr${clause}${around};`).join("\n  ");
+}
+
+/** Negative evidence must remain discoverable when active tags were removed.
+ * Otherwise a narrower query can resurrect a duplicate still carrying active tags.
+ * Values are category-owned; lifecycle/classification precedence stays below. */
+export function lifecycleQueryClauses(around: string, selected: readonly ConcreteDateNightType[]): string[] {
+  const tags: Record<ConcreteDateNightType, readonly [string, string][]> = {
+    bowling: [["leisure", "bowling_alley"]],
+    arcade: [["leisure", "amusement_arcade"]],
+    movies: [["amenity", "cinema"]],
+    "mini-golf": [["leisure", "miniature_golf"]],
+    "escape-room": [["leisure", "escape_game"]],
+    museum: [["tourism", "museum"]],
+    skating: [["leisure", "ice_rink"]],
+    park: [["leisure", "park"]],
+    "haunted-house": [["attraction", "haunted_house|haunted_trail|haunted_forest|haunted_attraction"]],
+    "corn-maze": [["attraction", "corn_maze|maize_maze|maze"], ["leisure", "maze"]],
+    "pumpkin-patch": [["attraction", "pumpkin_patch"]],
+  };
+  return selected.flatMap((type) => tags[type]).map(([key, values]) =>
+    `nwr[~"^(disused|abandoned|was|demolished|removed|razed|destroyed):${key}$"~"^(${values})$"]${around};`);
 }
 
 /** Structured lifecycle evidence wins over still-present active tags. */

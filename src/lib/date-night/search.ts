@@ -9,31 +9,15 @@ import { namesMatch } from "@/lib/utils";
 import type { PhotoKey } from "@/lib/restaurants/types";
 import { JASPER_COUNTY_DATE_NIGHT_CATALOG } from "./jasper-county-catalog";
 import { JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG } from "./seasonal-catalog";
-import { seasonalQueryClauses, seasonalTypes, providerLifecycle } from "./provider-evidence";
+import { seasonalTypes, providerLifecycle } from "./provider-evidence";
 import { isHalloweenDateNightActive } from "./season";
+import { buildDateNightQuery, buildDateNightQueryPlan, validateDateNightActivityTypes } from "./query-plan";
 import {
   dateNightTypeLabel,
   type ConcreteDateNightType,
   type DateNightPlace,
   type DateNightSearchResponse,
 } from "./types";
-
-const QUERY = (lat: number, lon: number, radiusMeters: number, halloweenSeason: boolean) => `
-[out:json][timeout:20];
-(
-  nwr["leisure"="bowling_alley"](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["leisure"="amusement_arcade"](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["amenity"="cinema"](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["leisure"="miniature_golf"](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["leisure"="escape_game"](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["tourism"="museum"](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["leisure"="ice_rink"](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["sport"="roller_skating"](around:${Math.round(radiusMeters)},${lat},${lon});
-  nwr["leisure"="park"](around:${Math.round(radiusMeters)},${lat},${lon});
-  ${halloweenSeason ? seasonalQueryClauses(`(around:${Math.round(radiusMeters)},${lat},${lon})`) : ""}
-);
-out center tags;
-`;
 
 interface OverpassElement {
   type: string;
@@ -251,20 +235,23 @@ function mergeDateNight(live: DateNightPlace[], local: DateNightPlace[]): DateNi
 }
 
 export const searchDateNight = createServerFn({ method: "POST" })
-  .validator((data: { lat: number; lon: number; radiusMiles: number; spookySeasonEnabled?: boolean }) => {
+  .validator((data: { lat: number; lon: number; radiusMiles: number; spookySeasonEnabled?: boolean; activityTypes?: unknown }) => {
     requireCoordinates(data);
+    if (data.radiusMiles !== undefined && (typeof data.radiusMiles !== "number" || !Number.isFinite(data.radiusMiles))) throw new Error("A valid discovery radius is required");
     return {
       lat: data.lat,
       lon: data.lon,
       radiusMiles: Math.min(Math.max(data.radiusMiles || 15, 1), 50),
       spookySeasonEnabled: Boolean(data.spookySeasonEnabled),
+      activityTypes: validateDateNightActivityTypes(data.activityTypes),
     };
   })
   .handler(async ({ data }): Promise<DateNightSearchResponse> => {
     const fetchRadius = Math.max(data.radiusMiles, 15);
     const radiusMeters = Math.min(fetchRadius * 1609.34, 80467);
     const halloweenSeason = isHalloweenDateNightActive(data.spookySeasonEnabled);
-    const body = `data=${encodeURIComponent(QUERY(data.lat, data.lon, radiusMeters, halloweenSeason))}`;
+    const plan = buildDateNightQueryPlan(data.activityTypes, halloweenSeason);
+    const body = `data=${encodeURIComponent(buildDateNightQuery({ activityTypes: plan.flatMap((group) => group.activityTypes) }, data.lat, data.lon, radiusMeters))}`;
     const local = localWithin(data.lat, data.lon, fetchRadius, halloweenSeason);
     const chain = createDateNightProvider();
     let lastError: unknown;

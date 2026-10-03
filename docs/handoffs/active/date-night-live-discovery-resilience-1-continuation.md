@@ -81,4 +81,24 @@ Migration-free production build later: `VITE_AUTH_ENABLED=true node scripts/with
 - New live-provider observations: none; no timeout extension warranted from deterministic evidence.
 - Resume status: HEDGED PROVIDERS IMPLEMENTED — QUERY DECOMPOSITION PENDING.
 
+
+## Save 2 — validated query decomposition
+
+- Repository `caleb1234calvin-art/dinner-roulette`; branch `fix/date-night-live-discovery-resilience-1`; frozen base unchanged.
+- Latest pushed checkpoint: `edb91d91462a333785df79fe80c8f4d8c85839d3`, tree `1166b39d1aad9fa6820b6fabf6ee61f9d1c0fd60`, sole parent `f31b63b1ab00a0a2ecf395f743a3273145d44b1c`. This save has edb91d9 as sole parent; no merges.
+- Completed milestones: 0,1,2 server-owned query plan. M2 source paths: new `src/lib/date-night/query-plan.ts`, narrowed `provider-evidence.ts`, validated `search.ts`; new `scripts/date-night-query-plan.test.mjs`; M2 logs/continuation. Prior changed paths remain listed above.
+- Tests: `node scripts/date-night-query-plan.test.mjs` PASS16/16; `node scripts/seasonal-discovery.test.mjs` PASS24/24; `npm run typecheck` PASS; ESLint on changed source PASS; `git diff --check` PASS.
+- Input: optional/empty/Anything normalizes to currently active types; strict IDs only; unknown, non-array, null, sparse, nested and non-string entries rejected before providers; finite coordinates/radius; radius clamped to existing cap. No arbitrary query text accepted.
+- Groups: seasonal (haunted-house/corn-maze/pumpkin-patch), entertainment (bowling/arcade/mini-golf/escape-room/skating), culture (movies/museum), outdoor (park). Specific selections include only requested clauses. Inactive stale seasonal-only selections normalize to ordinary Anything, matching existing eligibility.
+- Review found and fixed lifecycle-only negative records omitted by narrowing. Category-specific lifecycle-prefixed companion queries preserve suppression, including real-handler duplicate anti-resurrection tests. Seasonal narrowing preserves structural corn-maze tags, selected direct attractions and supported contextual evidence across all four fields; multi-separator/case reachability, retained Exeter and false-positive rejection tested. Classification code unchanged.
+- Worktree coherent for this checkpoint; exact staged tree verified through API before ref publication, then confirm clean.
+- Current intermediate behavior: plans generate narrowed combined query under single hedged `all` execution; next M3 executes each planned group independently. UI category acquisition/caching arrives in M4. No hidden partial implementation claim.
+- Next action: extract existing identity merge to pure shared module; execute concurrent groups under one provider deadline; expose success/empty/failure metadata and honest partial UI; test and publish M3 before cache.
+- Resume commands: prior commands plus `node scripts/date-night-query-plan.test.mjs`, `node scripts/seasonal-discovery.test.mjs`, `npm run typecheck`.
+- Blockers: none for M3; Preview build-log connector limitation as above. No temporary instrumentation.
+- Main/production untouched; no migration/settings/deployment command. Existing integration automatically creates non-production Previews on checkpoint ref updates; acceptance not yet begun.
+- Preview last observed: baseline dpl_Eq2Wfikqc38EK6tzDydK3jESDh2N / URL above; later automatic previews not yet used.
+- New live-provider observations: none. Deadlines remain20000/25000ms.
+- Resume status: QUERY DECOMPOSITION IMPLEMENTED — PARTIAL MERGE PENDING.
+
 SAFE TO RESUME FROM THIS CHECKPOINT
