@@ -10,7 +10,7 @@ const {
   normalizeDateNightActivityTypes,
   validateDateNightActivityTypes,
 } = load("src/lib/date-night/query-plan.ts");
-const { seasonalTypes } = load("src/lib/date-night/provider-evidence.ts");
+const { seasonalTypes, providerLifecycle } = load("src/lib/date-night/provider-evidence.ts");
 const { searchDateNight } = load("src/lib/date-night/search.ts");
 const { decorateDateNight, eligibleDateNight } = load("src/lib/date-night/eligibility.ts");
 const { DEFAULT_DATE_NIGHT_FILTERS } = load("src/lib/date-night/types.ts");
@@ -42,7 +42,7 @@ function acquired(query, tags) {
       const key = JSON.parse(keyPattern ? rawKey.slice(1) : rawKey);
       const value = JSON.parse(rawValue);
       const candidates = keyPattern
-        ? Object.entries(tags).filter(([candidate]) => new RegExp(key).test(candidate)).map(([, candidate]) => candidate)
+        ? Object.entries(tags).filter(([candidate]) => new RegExp(key, ignoreCase ? "i" : "").test(candidate)).map(([, candidate]) => candidate)
         : Object.hasOwn(tags, key) ? [tags[key]] : [];
       return candidates.some((candidate) => operation === "="
         ? candidate === value
@@ -50,6 +50,111 @@ function acquired(query, tags) {
     });
   });
 }
+
+// Frozen pre-refinement predicate control from checkpoint 9f90f689. This is
+// intentionally independent of the current builder: compare semantic reachability
+// while changing only regex keys into finite, exact-key alternatives.
+function previousSeasonalQuery(selected) {
+  const selectors = {
+    "haunted-house": { values: "haunted_house|haunted_trail|haunted_forest|haunted_attraction", words: "haunted[ _-]+(house|trail|forest|attraction)" },
+    "corn-maze": { values: "corn_maze|maize_maze", words: "(corn|maize)[ _-]+maze" },
+    "pumpkin-patch": { values: "pumpkin_patch", words: "pumpkin[ _-]+(patch|picking)" },
+  };
+  const contexts = [
+    '["leisure"="maze"]', '["attraction"="maze"]', '["tourism"="theme_park"]',
+    '["tourism"~"^(attraction|farm)$"]', '["leisure"="park"]', '["landuse"~"^(farmyard|farmland)$"]',
+  ];
+  const lifecycle = {
+    "haunted-house": [["attraction", selectors["haunted-house"].values]],
+    "corn-maze": [["attraction", "corn_maze|maize_maze|maze"], ["leisure", "maze"]],
+    "pumpkin-patch": [["attraction", "pumpkin_patch"]],
+  };
+  const clauses = [
+    `["attraction"~"^(${selected.map((type) => selectors[type].values).join("|")})$"]`,
+    ...(selected.includes("corn-maze") ? ['["leisure"="maze"]', '["attraction"="maze"]'].flatMap((maze) =>
+      [`${maze}["maze:type"~"^(corn|maize)$"]`, `${maze}["crop"~"^(corn|maize)$"]`]) : []),
+    ...contexts.map((context) => `${context}[~"^(name|description|seasonal:description|seasonal:activities)$"~"${selected.map((type) => selectors[type].words).join("|")}",i]`),
+    ...selected.flatMap((type) => lifecycle[type]).map(([key, values]) =>
+      `[~"^(disused|abandoned|was|demolished|removed|razed|destroyed):${key}$"~"^(${values})$"]`),
+  ];
+  return clauses.map((clause) => `nwr${clause}(around:80467,37.176447,-94.310223);`).join("\n");
+}
+
+function classifiedAcquisition(query, rawTags) {
+  if (!acquired(query, rawTags)) return null;
+  const tags = { ...rawTags };
+  for (const [key, value] of Object.entries(rawTags)) {
+    const match = key.match(/^(disused|abandoned|was|demolished|removed|razed|destroyed):(leisure|tourism|attraction|amenity)$/);
+    if (match && !tags[match[2]]) tags[match[2]] = value;
+  }
+  return { activityTypes: seasonalTypes(tags), lifecycle: providerLifecycle(rawTags) };
+}
+
+test("all Date Night category plans use exact keys, including every seasonal subset and lifecycle prefix", () => {
+  const selections = [["anything"], ...ordinary.map((type) => [type])];
+  for (let mask = 1; mask < 8; mask++) selections.push(seasonal.filter((_, index) => mask & (1 << index)));
+  for (const selected of selections) {
+    const query = queryFor(selected);
+    assert.doesNotMatch(query, /\[~/, selected.join(","));
+    assert.match(query, /\[timeout:20\]/);
+    assert.ok(acquisitionClauses(query).every((line) => line.endsWith("(around:80467,37.176447,-94.310223);")));
+  }
+  assert.equal(acquisitionClauses(queryFor(["haunted-house"])).length, 32);
+  assert.equal(acquisitionClauses(queryFor(seasonal)).length, 57);
+});
+
+test("exact-key refinement preserves canonical reachability/classification for all seven subsets, contexts, fields and lifecycle prefixes", () => {
+  const contexts = [
+    { leisure: "maze" }, { attraction: "maze" }, { tourism: "theme_park" },
+    { tourism: "attraction" }, { tourism: "farm" }, { leisure: "park" },
+    { landuse: "farmyard" }, { landuse: "farmland" },
+  ];
+  const words = ["haunted house", "HAUNTED___TRAIL", "Haunted--Forest", "haunted  attraction",
+    "corn maze", "MAIZE___MAZE", "Corn--Maze", "maize  maze", "pumpkin patch", "PUMPKIN___PICKING", "Pumpkin--Patch", "pumpkin  picking"];
+  const fixtures = contexts.flatMap((context) =>
+    ["name", "description", "seasonal:description", "seasonal:activities"].flatMap((field) =>
+      words.map((word) => ({ name: "Activity fixture", ...context, [field]: word }))));
+  for (const attraction of ["haunted_house", "haunted_trail", "haunted_forest", "haunted_attraction", "corn_maze", "maize_maze", "pumpkin_patch"]) {
+    fixtures.push({ name: "Activity fixture", attraction });
+    for (const prefix of ["disused", "abandoned", "was", "demolished", "removed", "razed", "destroyed"]) {
+      for (const context of contexts) fixtures.push({ name: "Activity fixture", ...context, [`${prefix}:attraction`]: attraction });
+    }
+  }
+  for (const prefix of ["disused", "abandoned", "was", "demolished", "removed", "razed", "destroyed"]) {
+    for (const key of ["leisure", "attraction"]) {
+      for (const field of ["crop", "maze:type"]) {
+        for (const value of ["corn", "maize"]) fixtures.push({ name: "Activity fixture", [`${prefix}:${key}`]: "maze", [field]: value });
+      }
+    }
+  }
+  for (const context of contexts) {
+    for (const description of ["Former corn maze, no pumpkin patch", "Hedge corn maze", "No haunted house", "Unrelated attraction", ""]) {
+      fixtures.push({ name: "Activity fixture", ...context, description });
+    }
+  }
+  fixtures.push({ name: "Haunted House Pizza", amenity: "restaurant" }, { name: "Pumpkin Patch Shop", shop: "farm" });
+  for (let mask = 1; mask < 8; mask++) {
+    const selected = seasonal.filter((_, index) => mask & (1 << index));
+    const current = queryFor(selected), previous = previousSeasonalQuery(selected);
+    for (const tags of fixtures) {
+      assert.deepEqual(classifiedAcquisition(current, tags), classifiedAcquisition(previous, tags), `${selected}: ${JSON.stringify(tags)}`);
+    }
+  }
+});
+
+test("exact text keys preserve classifier key casing while still matching case-insensitive values", () => {
+  for (const field of ["Name", "DESCRIPTION", "Seasonal:Description", "Seasonal:Activities"]) {
+    const tags = { name: "Activity fixture", tourism: "farm", [field]: "HAUNTED HOUSE, CORN MAZE, PUMPKIN PATCH" };
+    assert.equal(acquired(previousSeasonalQuery(seasonal), tags), true, "old key-regex also matched noncanonical uppercase keys");
+    assert.equal(acquired(queryFor(seasonal), tags), false);
+    assert.deepEqual(seasonalTypes(tags), [], "the unchanged classifier never accepted those noncanonical keys");
+  }
+  for (const field of ["name", "description", "seasonal:description", "seasonal:activities"]) {
+    const tags = { name: "Activity fixture", tourism: "farm", [field]: "HAUNTED HOUSE, CORN MAZE, PUMPKIN PATCH" };
+    assert.equal(acquired(queryFor(seasonal), tags), true);
+    assert.deepEqual(seasonalTypes(tags), sorted(seasonal));
+  }
+});
 
 test("Anything, omitted and empty category input produce all and only active query groups", () => {
   for (const input of [undefined, [], ["anything"], ["movies", "anything"]]) {
@@ -130,7 +235,7 @@ test("every ordinary category owns its exact active clauses and only relevant li
   };
   for (const [type, clauses] of Object.entries(expected)) {
     const query = queryFor([type]);
-    const activeClauses = acquisitionClauses(query).filter((line) => !line.startsWith("nwr[~"));
+    const activeClauses = acquisitionClauses(query).filter((line) => !/^nwr\["(disused|abandoned|was|demolished|removed|razed|destroyed):/.test(line));
     assert.deepEqual(sorted(activeClauses), sorted(clauses.map((clause) => `nwr${clause}(around:80467,37.176447,-94.310223);`)), type);
     assert.match(query, /\[out:json\]\[timeout:20\]/);
     assert.match(query, /out center tags;/);

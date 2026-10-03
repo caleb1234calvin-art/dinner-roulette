@@ -21,9 +21,12 @@ export function seasonalQueryClauses(around: string, selected: readonly Concrete
       '["tourism"~"^(attraction|farm)$"]',
       '["leisure"="park"]',
       '["landuse"~"^(farmyard|farmland)$"]',
-    ].map(
+    ].flatMap(
       (context) =>
-        `${context}[~"^(name|description|seasonal:description|seasonal:activities)$"~"${selectors.map((selector) => selector.words).join("|")}",i]`,
+        // These keys are finite and classifier-owned. Fixed keys avoid regex-key
+        // lookups while preserving case-insensitive matching of their values.
+        ["name", "description", "seasonal:description", "seasonal:activities"].map((key) =>
+          `${context}["${key}"~"${selectors.map((selector) => selector.words).join("|")}",i]`),
     ),
   ];
   return clauses.map((clause) => `nwr${clause}${around};`).join("\n  ");
@@ -46,8 +49,9 @@ export function lifecycleQueryClauses(around: string, selected: readonly Concret
     "corn-maze": [["attraction", "corn_maze|maize_maze|maze"], ["leisure", "maze"]],
     "pumpkin-patch": [["attraction", "pumpkin_patch"]],
   };
-  return selected.flatMap((type) => tags[type]).map(([key, values]) =>
-    `nwr[~"^(disused|abandoned|was|demolished|removed|razed|destroyed):${key}$"~"^(${values})$"]${around};`);
+  return selected.flatMap((type) => tags[type]).flatMap(([key, values]) =>
+    ["disused", "abandoned", "was", "demolished", "removed", "razed", "destroyed"].map((prefix) =>
+      `nwr["${prefix}:${key}"~"^(${values})$"]${around};`));
 }
 
 /** Structured lifecycle evidence wins over still-present active tags. */

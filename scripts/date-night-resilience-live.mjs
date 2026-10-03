@@ -2,6 +2,8 @@
 // production build, and independent confirmation that the URL is a Preview.
 // Usage: VITE_AUTH_ENABLED=true BROWSER_ALLOW_EXTERNAL_HOST=1 node
 // scripts/date-night-resilience-live.mjs <preview-url> [output-directory]
+// A low-load pilot can set PFU_LIVE_RADII=15 PFU_LIVE_SELECTIONS=anything.
+// Pilot verdicts explicitly identify their smaller matrix; they are not full acceptance.
 // Captured RPC bytes are decoded in memory; the decoder never sends a request.
 import assert from "node:assert/strict";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -29,6 +31,20 @@ const rpcId = [...manifest.matchAll(/"([a-f0-9]{64})": \{\s*functionName: "([^"]
 assert.ok(rpcId, "Fresh build must identify the Date Night RPC");
 const rpcPath = `/_serverFn/${rpcId}`;
 const MAX_RPC_REQUESTS = 24;
+const selectionById = {
+  anything: ["anything"],
+  "haunted-house": ["haunted-house"],
+  "corn-maze": ["corn-maze"],
+  "pumpkin-patch": ["pumpkin-patch"],
+  mixed: ["haunted-house", "corn-maze", "pumpkin-patch"],
+};
+const defaultSelectionIds = Object.keys(selectionById);
+const radii = (process.env.PFU_LIVE_RADII ?? "15,50").split(",").map((value) => Number(value.trim()));
+assert.ok(radii.length > 0 && new Set(radii).size === radii.length && radii.every((radius) => [15, 50].includes(radius)), "PFU_LIVE_RADII must contain distinct 15 and/or 50 values");
+const selectionIds = (process.env.PFU_LIVE_SELECTIONS ?? defaultSelectionIds.join(",")).split(",").map((value) => value.trim());
+assert.ok(selectionIds[0] === "anything" && new Set(selectionIds).size === selectionIds.length && selectionIds.every((id) => Object.hasOwn(selectionById, id)), "PFU_LIVE_SELECTIONS must start with anything and contain only distinct approved selection IDs");
+const expectedRows = radii.length * (selectionIds.length + 1);
+const verdictMode = radii.join(",") === "15,50" && selectionIds.join(",") === defaultSelectionIds.join(",") ? "full-matrix" : "pilot";
 const rows = [];
 const rpc = [];
 const errors = [];
@@ -162,13 +178,18 @@ async function recordRow(page, radius, activityTypes, openNow, before, started, 
 async function localOnlyChecks(page, radius) {
   const before = rpc.length;
   for (const name of ["Favorites only", "Fewer parks"]) {
+    checkPhase = name === "Favorites only" ? "local-favorites-on" : "local-fewer-parks-toggle";
     await page.getByRole("switch", { name, exact: true }).click();
+    checkPhase = name === "Favorites only" ? "local-favorites-off" : "local-fewer-parks-restore";
     await page.getByRole("switch", { name, exact: true }).click();
   }
-  const mood = page.getByRole("slider", { name: "Cozy to adventurous", exact: true });
+  checkPhase = "local-mood-focus";
+  const mood = page.locator('[aria-label="Cozy to adventurous"]').getByRole("slider");
   await mood.focus();
+  checkPhase = "local-mood-adjust";
   await mood.press("End");
   await page.waitForTimeout(150);
+  checkPhase = "local-controls-no-refetch";
   assert.equal(rpc.length, before, "Mood, favorites and fewer-parks changes must not refetch");
   return { radiusMiles: radius, moodFavoritesFewerParksNoRefetch: true };
 }
@@ -179,7 +200,7 @@ try {
   browser = await chromium.launch({ headless: true,
     executablePath: process.env.PFU_BROWSER_EXECUTABLE_PATH ?? "/tmp/pfu-halloween-browser/chrome-linux64/chrome",
     args: ["--no-sandbox", "--disable-dev-shm-usage", "--no-zygote"] });
-  for (const radius of [15, 50]) {
+  for (const radius of radii) {
     const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: "reduce", timezoneId: "America/Chicago", ignoreHTTPSErrors });
     context.setDefaultTimeout(10_000);
     context.setDefaultNavigationTimeout(30_000);
@@ -236,7 +257,8 @@ try {
     else assert.equal(initialRow.completeOutageDisclosure, false, "Successful acquisition must not claim complete outage");
     if (initialResponse.partial) assert.equal(initialRow.partialDisclosure, true, "Partial acquisition requires visible partial disclosure");
     const complete = initialResponse?.groups.length === 4 && initialResponse.groups.every((group) => group.outcome.startsWith("succeeded"));
-    for (const selection of [["haunted-house"], ["corn-maze"], ["pumpkin-patch"], ["haunted-house", "corn-maze", "pumpkin-patch"]]) {
+    for (const selectionId of selectionIds.slice(1)) {
+      const selection = selectionById[selectionId];
       currentPhase = `${radius}:${selection.join("+")}:off`;
       assert.ok(rpc.length < MAX_RPC_REQUESTS, "Bounded live acceptance request limit reached; preserve observations without retrying providers");
       const before = rpc.length;
@@ -244,7 +266,8 @@ try {
       await selectCategories(page, selection);
       await recordRow(page, radius, selection, false, before, started, complete);
     }
-    currentPhase = `${radius}:mixed:on`;
+    const finalSelection = selectionById[selectionIds.at(-1)];
+    currentPhase = `${radius}:${finalSelection.join("+")}:on`;
     const before = rpc.length;
     const started = Date.now();
     await page.getByRole("switch", { name: "Open now only", exact: true }).click();
@@ -252,14 +275,15 @@ try {
     checkPhase = "open-now-no-refetch";
     assert.equal(rpc.length, before, "Open Now must not refetch");
     const mixedOffCount = rows.at(-1).eligibleCount;
-    await recordRow(page, radius, ["haunted-house", "corn-maze", "pumpkin-patch"], true, before, started, complete);
+    await recordRow(page, radius, finalSelection, true, before, started, complete);
     checkPhase = "open-now-eligibility-subset";
     assert.ok(rows.at(-1).eligibleCount <= mixedOffCount, "Open Now must not add browse-ineligible candidates");
     localOnly.push(await localOnlyChecks(page, radius));
     await context.close();
   }
   assert.deepEqual(pageErrors, [], "No fatal page errors");
-  assert.equal(rows.length, 12);
+  checkPhase = "expected-matrix-row-count";
+  assert.equal(rows.length, expectedRows);
 } catch (error) {
   // Error text can include DOM/provider details; only a bounded type/phase is saved.
   errors.push({ phase: currentPhase, check: checkPhase, kind: error?.name === "AssertionError" ? "acceptance-assertion" : "environment-or-browser-error",
@@ -271,11 +295,13 @@ try {
   const verdict = { testedAt: new Date().toISOString(), previewOrigin: targetUrl.origin,
     previewDeploymentId: process.env.PFU_PREVIEW_DEPLOYMENT_ID ?? null,
     candidate: process.env.PFU_CANDIDATE_SHA ?? null,
-    buildProof, browserTlsVerificationBypassed: ignoreHTTPSErrors, rows, rpc, localOnly, pageErrors, errors,
-    passed: errors.length === 0 && rows.length === 12,
+    buildProof, browserTlsVerificationBypassed: ignoreHTTPSErrors, mode: verdictMode, expectedRows, requestedRadii: radii, requestedSelections: selectionIds,
+    rows, rpc, localOnly, pageErrors, errors,
+    passed: errors.length === 0 && rows.length === expectedRows,
+    fullMatrixPassed: verdictMode === "full-matrix" && errors.length === 0 && rows.length === 12,
     liveContributionObserved: rpc.some((event) => event.response?.liveVenues > 0),
     limitations: ["Venue counts are observations, not invariants.", "No duplicate real request is made to decode captured RPC data.", "Source summaries describe transport responses; UI may combine cached coverage.", "Successful provider recall cannot be established when every live attempt fails."] };
   mkdirSync(output, { recursive: true });
   writeFileSync(resolve(output, "verdict.json"), JSON.stringify(verdict, null, 2) + "\n");
-  console.log("DATE_NIGHT_LIVE_VERDICT " + JSON.stringify({ passed: verdict.passed, rows: rows.length, requests: rpc.length, liveContributionObserved: verdict.liveContributionObserved, errors }));
+  console.log("DATE_NIGHT_LIVE_VERDICT " + JSON.stringify({ mode: verdict.mode, expectedRows, passed: verdict.passed, fullMatrixPassed: verdict.fullMatrixPassed, rows: rows.length, requests: rpc.length, liveContributionObserved: verdict.liveContributionObserved, errors }));
 }
