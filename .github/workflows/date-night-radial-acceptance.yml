@@ -1,0 +1,106 @@
+name: Date Night radial browser acceptance
+
+on:
+  push:
+    branches:
+      - acceptance/date-night-radial-loading-browser-1
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  controlled-browser:
+    name: Controlled radial browser 10/10
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout acceptance snapshot
+        uses: actions/checkout@v4
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: Resolve Chromium executable
+        shell: bash
+        run: |
+          CHROME_PATH="$(node --input-type=module -e "import { chromium } from 'playwright'; console.log(chromium.executablePath())")"
+          test -x "$CHROME_PATH"
+          echo "CHROME_PATH=$CHROME_PATH" >> "$GITHUB_ENV"
+          echo "Using Chromium: $CHROME_PATH"
+
+      - name: Safe auth-enabled production build
+        run: VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
+
+      - name: Run controlled radial browser acceptance
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+          PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH: ${{ env.CHROME_PATH }}
+          DATE_NIGHT_RADIAL_OUTPUT: artifacts/radial-browser
+        run: node scripts/date-night-radial-browser.mjs
+
+      - name: Upload controlled browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: radial-browser-acceptance
+          path: artifacts/radial-browser
+          if-no-files-found: warn
+          retention-days: 7
+
+  live-preview:
+    name: Bounded radial live preview acceptance
+    needs: controlled-browser
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout acceptance snapshot
+        uses: actions/checkout@v4
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: Resolve Chromium executable
+        shell: bash
+        run: |
+          CHROME_PATH="$(node --input-type=module -e "import { chromium } from 'playwright'; console.log(chromium.executablePath())")"
+          test -x "$CHROME_PATH"
+          echo "CHROME_PATH=$CHROME_PATH" >> "$GITHUB_ENV"
+          echo "Using Chromium: $CHROME_PATH"
+
+      - name: Run bounded exact-Preview radial acceptance
+        env:
+          PFU_RADIAL_PREVIEW_VERIFIED: "1"
+          PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH: ${{ env.CHROME_PATH }}
+        run: |
+          node scripts/date-night-radial-live.mjs \
+            https://dinner-roulette-1xc11et6w-minions-9e2c.vercel.app \
+            artifacts/radial-live
+
+      - name: Upload live radial evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: radial-live-acceptance
+          path: artifacts/radial-live
+          if-no-files-found: warn
+          retention-days: 7
