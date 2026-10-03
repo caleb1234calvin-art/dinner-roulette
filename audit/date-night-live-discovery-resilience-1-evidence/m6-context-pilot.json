@@ -1,0 +1,245 @@
+{
+  "testedAt": "2026-10-03T01:09:38.087Z",
+  "previewOrigin": "https://dinner-roulette-8nkpc3y0k-minions-9e2c.vercel.app",
+  "previewDeploymentId": "dpl_2Yj8nnPFbosnVPDMK5MNffJtMdCw",
+  "candidate": "a1ebaefde27b0f5f6845f7ee158a358e2487e7a0",
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "01a7706bcd1871b6bc866dc87a5f656bd89c2a1d1e79085efb9e65068b0b488f",
+      "files": 411
+    },
+    "startedAt": "2026-10-03T01:07:35.265Z",
+    "output": {
+      "sha256": "44b4af09c462630e805162213d0933598a4dc3307d222721995e9ec74257a951",
+      "files": 194
+    },
+    "completedAt": "2026-10-03T01:07:39.392Z"
+  },
+  "browserTlsVerificationBypassed": true,
+  "mode": "pilot",
+  "expectedRows": 2,
+  "requestedRadii": [
+    15
+  ],
+  "requestedSelections": [
+    "anything"
+  ],
+  "rows": [
+    {
+      "radiusMiles": 15,
+      "activityTypes": [
+        "anything"
+      ],
+      "openNow": false,
+      "elapsedMs": 5207,
+      "eligibleCount": 53,
+      "requestCount": 1,
+      "responses": [
+        {
+          "outcome": "decoded",
+          "durationMs": 3942,
+          "response": {
+            "source": "merged",
+            "venues": 53,
+            "liveVenues": 45,
+            "byType": {
+              "haunted-house": 2,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 3,
+              "arcade": 5,
+              "mini-golf": 2,
+              "escape-room": 0,
+              "skating": 2,
+              "movies": 4,
+              "museum": 3,
+              "park": 37
+            },
+            "liveByType": {
+              "haunted-house": 0,
+              "corn-maze": 0,
+              "pumpkin-patch": 0,
+              "bowling": 1,
+              "arcade": 1,
+              "mini-golf": 0,
+              "escape-room": 0,
+              "skating": 1,
+              "movies": 3,
+              "museum": 3,
+              "park": 36
+            },
+            "partial": false,
+            "groups": [
+              {
+                "id": "seasonal",
+                "activityTypes": [
+                  "haunted-house",
+                  "corn-maze",
+                  "pumpkin-patch"
+                ],
+                "outcome": "succeeded-empty"
+              },
+              {
+                "id": "entertainment",
+                "activityTypes": [
+                  "bowling",
+                  "arcade",
+                  "mini-golf",
+                  "escape-room",
+                  "skating"
+                ],
+                "outcome": "succeeded-nonempty"
+              },
+              {
+                "id": "culture",
+                "activityTypes": [
+                  "movies",
+                  "museum"
+                ],
+                "outcome": "succeeded-nonempty"
+              },
+              {
+                "id": "outdoor",
+                "activityTypes": [
+                  "park"
+                ],
+                "outcome": "succeeded-nonempty"
+              }
+            ],
+            "warningPresent": false
+          }
+        }
+      ],
+      "liveSeasonalDisclosure": false,
+      "savedOnlyDisclosure": true,
+      "missingCategoryDisclosure": true,
+      "completeOutageDisclosure": false,
+      "partialDisclosure": false,
+      "terminalError": false,
+      "spinnerSettled": true,
+      "noRefetchExpectedFromSuccessfulSuperset": false,
+      "lastNetworkSource": "merged",
+      "lastNetworkSourceMeaning": "network response; UI may also merge prior cached coverage",
+      "screenshot": "15-anything-off.png"
+    },
+    {
+      "radiusMiles": 15,
+      "activityTypes": [
+        "anything"
+      ],
+      "openNow": true,
+      "elapsedMs": 199,
+      "eligibleCount": 9,
+      "requestCount": 0,
+      "responses": [],
+      "liveSeasonalDisclosure": false,
+      "savedOnlyDisclosure": true,
+      "missingCategoryDisclosure": true,
+      "completeOutageDisclosure": false,
+      "partialDisclosure": false,
+      "terminalError": false,
+      "spinnerSettled": true,
+      "noRefetchExpectedFromSuccessfulSuperset": false,
+      "lastNetworkSource": "merged",
+      "lastNetworkSourceMeaning": "prior acquisition reused; source disclosure checked separately",
+      "screenshot": "15-anything-on.png"
+    }
+  ],
+  "rpc": [
+    {
+      "phase": "15:anything:off",
+      "outcome": "decoded",
+      "response": {
+        "source": "merged",
+        "venues": 53,
+        "liveVenues": 45,
+        "byType": {
+          "haunted-house": 2,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 3,
+          "arcade": 5,
+          "mini-golf": 2,
+          "escape-room": 0,
+          "skating": 2,
+          "movies": 4,
+          "museum": 3,
+          "park": 37
+        },
+        "liveByType": {
+          "haunted-house": 0,
+          "corn-maze": 0,
+          "pumpkin-patch": 0,
+          "bowling": 1,
+          "arcade": 1,
+          "mini-golf": 0,
+          "escape-room": 0,
+          "skating": 1,
+          "movies": 3,
+          "museum": 3,
+          "park": 36
+        },
+        "partial": false,
+        "groups": [
+          {
+            "id": "seasonal",
+            "activityTypes": [
+              "haunted-house",
+              "corn-maze",
+              "pumpkin-patch"
+            ],
+            "outcome": "succeeded-empty"
+          },
+          {
+            "id": "entertainment",
+            "activityTypes": [
+              "bowling",
+              "arcade",
+              "mini-golf",
+              "escape-room",
+              "skating"
+            ],
+            "outcome": "succeeded-nonempty"
+          },
+          {
+            "id": "culture",
+            "activityTypes": [
+              "movies",
+              "museum"
+            ],
+            "outcome": "succeeded-nonempty"
+          },
+          {
+            "id": "outdoor",
+            "activityTypes": [
+              "park"
+            ],
+            "outcome": "succeeded-nonempty"
+          }
+        ],
+        "warningPresent": false
+      },
+      "durationMs": 3942
+    }
+  ],
+  "localOnly": [
+    {
+      "radiusMiles": 15,
+      "moodFavoritesFewerParksNoRefetch": true
+    }
+  ],
+  "pageErrors": [],
+  "errors": [],
+  "passed": true,
+  "fullMatrixPassed": false,
+  "liveContributionObserved": true,
+  "limitations": [
+    "Venue counts are observations, not invariants.",
+    "No duplicate real request is made to decode captured RPC data.",
+    "Source summaries describe transport responses; UI may combine cached coverage.",
+    "Successful provider recall cannot be established when every live attempt fails."
+  ]
+}
