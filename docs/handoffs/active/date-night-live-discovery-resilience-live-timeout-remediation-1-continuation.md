@@ -29,3 +29,15 @@ SAFE TO RESUME FROM THIS CHECKPOINT.
 - Exact next action: publish/readback this checkpoint, then run focused lifecycle100 plus cache/client/provider162 and new cost13; verify protected cache SHA256; checkpoint Save3.
 
 SAFE TO RESUME FROM THIS CHECKPOINT.
+
+## Save 3 — lifecycle parity and cache/client/provider preservation GREEN
+
+- Same branch/base; latest pushed4f6a6e5e9e23ec92761995334eae5bddbec3671a, tree7b0cae5fb2a4b1605c4d7c204a0de7af4295335e, sole parentf039d6e0eff68178716834efb29747527e95ea01. This save adds focused logs/continuation only; runtime/tests unchanged since Save2.
+- Lifecycle/query/seasonal/partial+newcost113/113PASS (28+36+24+12+13), including all154audit rows/111authoritative negatives/zero gaps. Cache46/client-session54/partialUI2/hedge19/provider41=162/162PASS. These focused totals are not added to full-suite totals. Typecheck, all4changed executable files lint and git diff --check PASS.
+- V-DR-02 PRESERVED: cache.ts SHA25671b8f4d4cdfbfd6bda4d57ad19c1034ac5012038e762931a90ee06b1fa1f45f4, byte-identical to base and failed candidate. No new cache defect or transport/deadline change.
+- Cost remains Save2: Anything170→238selectors/19166→21942bytes; per-group active6regex→23exact; prefixed28/predicates2unchanged; theoretical common active-key regex96→0, carrier544→816. Construction0.0579→0.0873ms, not runtime performance. Four independent groups/four mirrors unchanged.
+- Main/production untouched; last verified frozen4d937e58 / READY dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL. Preview none accepted;0public RPCs.
+- Remaining: prefull checkpoint, clean install/dependency/fullJS/typecheck/lint/diff/compiledsecurity/casino/Android/Python/safe authbuild/proof/scope, controlled4, bounded exactPreview15/50twoRPC, final freeze.
+- Exact next action: publish/readback Save3, then separate Save4 BEFORE full validation. Compiled TanStack security needs the new build; not claimed GREEN yet.
+
+SAFE TO RESUME FROM THIS CHECKPOINT.
