@@ -1,0 +1,210 @@
+{
+  "javascript": {
+    "passed": 729,
+    "repositoryPassed": 658,
+    "applicationPassed": 71,
+    "skipped": 4,
+    "failed": 0
+  },
+  "compiledSecurityPassed": 14,
+  "focusedPassedNotDoubleCounted": 294,
+  "gates": [
+    {
+      "gate": "build-proof-capture",
+      "command": [
+        "node",
+        "scripts/browser-build-proof.mjs",
+        "capture"
+      ],
+      "exitCode": 0,
+      "seconds": 0.258,
+      "authEnabled": true,
+      "log": "build-proof-capture.log"
+    },
+    {
+      "gate": "build-proof-complete",
+      "command": [
+        "node",
+        "scripts/browser-build-proof.mjs",
+        "complete"
+      ],
+      "exitCode": 0,
+      "seconds": 0.214,
+      "authEnabled": true,
+      "log": "build-proof-complete.log"
+    },
+    {
+      "gate": "build-proof-verify",
+      "command": [
+        "node",
+        "scripts/browser-build-proof.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "seconds": 0.228,
+      "authEnabled": true,
+      "log": "build-proof-verify.log"
+    },
+    {
+      "gate": "full-android",
+      "command": [
+        "npm",
+        "run",
+        "android:check"
+      ],
+      "exitCode": 0,
+      "seconds": 1.953,
+      "authEnabled": false,
+      "log": "full-android.log"
+    },
+    {
+      "gate": "full-build",
+      "command": [
+        "node",
+        "scripts/with-app-env.mjs",
+        "node",
+        "node_modules/vite/bin/vite.js",
+        "build",
+        "--mode",
+        "production"
+      ],
+      "exitCode": 0,
+      "seconds": 3.767,
+      "authEnabled": true,
+      "log": "full-build.log"
+    },
+    {
+      "gate": "full-casino",
+      "command": [
+        "npm",
+        "run",
+        "audit:casinos"
+      ],
+      "exitCode": 0,
+      "seconds": 1.959,
+      "authEnabled": false,
+      "log": "full-casino.log"
+    },
+    {
+      "gate": "full-dependencies",
+      "command": [
+        "npm",
+        "ls",
+        "--all"
+      ],
+      "exitCode": 0,
+      "seconds": 1.157,
+      "authEnabled": false,
+      "log": "full-dependencies.log"
+    },
+    {
+      "gate": "full-lint",
+      "command": [
+        "npx",
+        "eslint",
+        "src/lib/date-night/cache.ts",
+        "src/lib/date-night/radial-plan.ts",
+        "src/lib/date-night/radial-cache.ts",
+        "src/lib/date-night/radial-session.ts",
+        "src/lib/date-night/search.ts",
+        "src/lib/date-night/types.ts",
+        "src/components/date-night-home.tsx",
+        "scripts/date-night-radial-plan.test.mjs",
+        "scripts/date-night-radial-search.test.mjs",
+        "scripts/date-night-radial-cache.test.mjs",
+        "scripts/date-night-radial-session.test.mjs",
+        "scripts/date-night-radial-browser.mjs",
+        "scripts/date-night-radial-live.mjs",
+        "scripts/date-night-cache.test.mjs",
+        "scripts/discovery-client-lifecycle.test.mjs",
+        "scripts/test-support/load-app-module.mjs",
+        "scripts/test-support/date-night-radial-preload.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 2.985,
+      "authEnabled": false,
+      "log": "full-lint.log"
+    },
+    {
+      "gate": "full-python",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "native-android",
+        "-p",
+        "test_*.py"
+      ],
+      "exitCode": 0,
+      "seconds": 0.141,
+      "authEnabled": false,
+      "log": "full-python.log"
+    },
+    {
+      "gate": "full-security",
+      "command": [
+        "node",
+        "--test",
+        "scripts/tanstack-security.test.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 4.069,
+      "authEnabled": true,
+      "log": "full-security.log"
+    },
+    {
+      "gate": "full-test-auth-override",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 1,
+      "seconds": 20.325,
+      "authEnabled": true,
+      "log": "full-test-auth-override.log"
+    },
+    {
+      "gate": "full-test",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "seconds": 21.143,
+      "authEnabled": false,
+      "log": "full-test.log"
+    },
+    {
+      "gate": "full-typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exitCode": 0,
+      "seconds": 6.563,
+      "authEnabled": false,
+      "log": "full-typecheck.log"
+    }
+  ],
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "0c0aa41c7b76c4b52b5ba9598766a1935e871f1e07f4ab3821773a65876ab3bc",
+      "files": 424
+    },
+    "startedAt": "2026-10-03T19:53:21.781Z",
+    "output": {
+      "sha256": "43b8c4b90f62972eadf84c271b64a6be398ea216b4e7189a9de249cd9a8ae433",
+      "files": 194
+    },
+    "completedAt": "2026-10-03T19:53:25.838Z"
+  },
+  "retainedFailures": [
+    "Full test with build-only VITE_AUTH_ENABLED=true override: two wrapper environment-default assertions failed. Unchanged suite passed in normal test environment."
+  ]
+}

@@ -76,3 +76,16 @@ SAFE TO RESUME FROM THIS CHECKPOINT.
 - Main/production untouched at frozen4d937e58/READY dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL. No accepted Preview and0public-provider calls. Remaining after full gates: checkpoint7, controlled10/checkpoint8, bounded exactPreview/checkpoint9, immutable freeze/checkpoint10. No promotion.
 
 SAFE TO RESUME FROM THIS CHECKPOINT.
+
+## Checkpoint 7 — full deterministic/security/build GREEN
+
+- Branch/base unchanged. Latest published `23881d97e9e17a488d18ff2a2fd74cbf7641e178`, tree `ff4af258d55bc7a3fae51566b15c25e4e75c5993`, sole parent `84fda4411270a8ec9897ee2d662c938b1a466ca0`. This save is dedicated evidence/continuation only; application unchanged since checkpoint4, harnesses unchanged since checkpoint6.
+- Full npm test PASS729 JavaScript=658repository+71application;4inherited skips;0failures. Compiled TanStack security14/14. Focused294 not double-counted. Typecheck/all changed-code lint/diff/dependency tree/casino883canonical899serialized60catalogs/Android15launcher4webicons/Python3 all PASS. Canonical lifecycle154/111/zero parity gaps and all V-DR-02 preserved.
+- Migration-free VITE_AUTH_ENABLED=true direct Vite production build PASS. Build proof source `0c0aa41c7b76c4b52b5ba9598766a1935e871f1e07f4ab3821773a65876ab3bc` (424files); output `43b8c4b90f62972eadf84c271b64a6be398ea216b4e7189a9de249cd9a8ae433` (194files). Fresh verify PASS after full tests. Never migration-chaining npm run build.
+- Retained validation failure: first full suite was incorrectly invoked with the build-only auth override, causing2 environment-default wrapper assertions to fail (656repository passes). Reran the unchanged full suite without that override and all729 passed. Original failure log/result retained; no source/test weakening.
+- Scope review:1096 protected base files byte-identical, exact7existing executable/test files in allowed scope plus new radial files. Prior evidence/catalogs/Dinner/Nightlife/auth/database/package/lock/Vercel/native/branding/PWA unchanged. No secrets/generated junk or post-base merges found. Dependencies reused the preserved exact-lock local install; npm ls --all succeeds (optional peers remain optional).
+- Geometry/model/budgets unchanged:32patches, circles<15.1mi, retained patch/category proof,1inflight,1second pacing,32RPC/pass,3consecutive-failure stop,4groups/4mirrors/8s20s25s. Public-provider calls0. Production freshly reread READY frozen4d937e58 at dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL; main/production untouched. Preview not yet accepted.
+- Remaining gates: controlled10scenario browser acceptance, bounded exactPreview acceptance, final protected-scope/references/readbacks and immutable freeze.
+- Exact next action: publish/read back this full-GREEN checkpoint; run `CI=true VITE_AUTH_ENABLED=true PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/tmp/pfu-rv2-browser/chrome-linux64/chrome node scripts/date-night-radial-browser.mjs`; inspect screenshots and results; save checkpoint8. Do not contact public providers until controlled gates pass.
+
+SAFE TO RESUME FROM THIS CHECKPOINT.

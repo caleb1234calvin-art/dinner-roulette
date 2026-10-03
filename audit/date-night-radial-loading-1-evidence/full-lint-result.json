@@ -1,0 +1,28 @@
+{
+  "gate": "full-lint",
+  "command": [
+    "npx",
+    "eslint",
+    "src/lib/date-night/cache.ts",
+    "src/lib/date-night/radial-plan.ts",
+    "src/lib/date-night/radial-cache.ts",
+    "src/lib/date-night/radial-session.ts",
+    "src/lib/date-night/search.ts",
+    "src/lib/date-night/types.ts",
+    "src/components/date-night-home.tsx",
+    "scripts/date-night-radial-plan.test.mjs",
+    "scripts/date-night-radial-search.test.mjs",
+    "scripts/date-night-radial-cache.test.mjs",
+    "scripts/date-night-radial-session.test.mjs",
+    "scripts/date-night-radial-browser.mjs",
+    "scripts/date-night-radial-live.mjs",
+    "scripts/date-night-cache.test.mjs",
+    "scripts/discovery-client-lifecycle.test.mjs",
+    "scripts/test-support/load-app-module.mjs",
+    "scripts/test-support/date-night-radial-preload.mjs"
+  ],
+  "exitCode": 0,
+  "seconds": 2.985,
+  "authEnabled": false,
+  "log": "full-lint.log"
+}

@@ -1,0 +1,41 @@
+{
+  "base": "d9cc8bdde2e531af6f029d3d558d25f4f7bb4ab5",
+  "head": "23881d97e9e17a488d18ff2a2fd74cbf7641e178",
+  "protectedBaseFilesByteIdentical": 1096,
+  "changedExistingPaths": [
+    "scripts/date-night-cache.test.mjs",
+    "scripts/discovery-client-lifecycle.test.mjs",
+    "scripts/test-support/load-app-module.mjs",
+    "src/components/date-night-home.tsx",
+    "src/lib/date-night/cache.ts",
+    "src/lib/date-night/search.ts",
+    "src/lib/date-night/types.ts"
+  ],
+  "newPaths": [
+    "audit/date-night-radial-loading-1-evidence/cache-green.log",
+    "audit/date-night-radial-loading-1-evidence/contract-green.log",
+    "audit/date-night-radial-loading-1-evidence/contract-initial.log",
+    "audit/date-night-radial-loading-1-evidence/focused-green.log",
+    "audit/date-night-radial-loading-1-evidence/planner-red.tap",
+    "audit/date-night-radial-loading-1-evidence/session-green.log",
+    "audit/date-night-radial-loading-1-evidence/ui-initial.log",
+    "audit/date-night-radial-loading-1-evidence/ui-preservation.log",
+    "docs/handoffs/active/date-night-radial-loading-1-continuation.md",
+    "docs/handoffs/active/date-night-radial-loading-1-design.md",
+    "docs/handoffs/active/date-night-radial-loading-1.md",
+    "scripts/date-night-radial-browser.mjs",
+    "scripts/date-night-radial-cache.test.mjs",
+    "scripts/date-night-radial-live.mjs",
+    "scripts/date-night-radial-plan.test.mjs",
+    "scripts/date-night-radial-search.test.mjs",
+    "scripts/date-night-radial-session.test.mjs",
+    "scripts/test-support/date-night-radial-preload.mjs",
+    "src/lib/date-night/radial-cache.ts",
+    "src/lib/date-night/radial-plan.ts",
+    "src/lib/date-night/radial-session.ts"
+  ],
+  "secretsFound": [],
+  "generatedJunkFound": [],
+  "postBaseMerges": [],
+  "publicProviderCalls": 0
+}

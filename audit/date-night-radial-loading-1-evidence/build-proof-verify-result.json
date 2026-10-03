@@ -1,0 +1,12 @@
+{
+  "gate": "build-proof-verify",
+  "command": [
+    "node",
+    "scripts/browser-build-proof.mjs",
+    "verify"
+  ],
+  "exitCode": 0,
+  "seconds": 0.228,
+  "authEnabled": true,
+  "log": "build-proof-verify.log"
+}

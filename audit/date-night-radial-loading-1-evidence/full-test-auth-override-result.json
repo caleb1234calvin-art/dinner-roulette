@@ -1,0 +1,11 @@
+{
+  "gate": "full-test-auth-override",
+  "command": [
+    "npm",
+    "test"
+  ],
+  "exitCode": 1,
+  "seconds": 20.325,
+  "authEnabled": true,
+  "log": "full-test-auth-override.log"
+}

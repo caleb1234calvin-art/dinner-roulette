@@ -1,0 +1,86 @@
+✔ all five actual compiled application POST functions succeed through the client codec (3206.538092ms)
+✔ Date Night seasonal on/off survives real transport with a fixed October date (21.788089ms)
+✔ invalid application coordinates and queries produce decoded Errors without providers (28.296888ms)
+✔ GET legitimate Seroval values, thrown Errors and falsy returns (71.150808ms)
+✔ GET ignores inert internal result/error fields, including failed validation (12.70868ms)
+✔ GET safely serializes response-shaped data and preserves real Response (4.914617ms)
+✔ POST legitimate Seroval values, thrown Errors and falsy returns (22.658488ms)
+✔ POST ignores inert internal result/error fields, including failed validation (3.566403ms)
+✔ POST safely serializes response-shaped data and preserves real Response (1.036625ms)
+✔ compiled application and fixture enforce CSRF and methods before providers (36.418616ms)
+[discovery] provider-chain {
+  mode: 'dinner',
+  source: 'error',
+  durationMs: 20000,
+  budgetExhausted: true,
+  attempts: [
+    { mirror: 1, durationMs: 8000, outcome: 'timeout' },
+    { mirror: 2, durationMs: 8000, outcome: 'timeout' },
+    { mirror: 3, durationMs: 4000, outcome: 'timeout' }
+  ]
+}
+✔ searchRestaurants compiled provider chain terminates at its total deadline with aborted attempts (36.97127ms)
+[discovery] provider-chain {
+  mode: 'date-night',
+  strategy: 'hedged',
+  source: 'error',
+  durationMs: 12500,
+  budgetExhausted: false,
+  requestedGroups: 1,
+  successfulGroups: 0,
+  failedGroups: 1,
+  partial: false,
+  groups: [ { group: 'culture', outcome: 'failed', durationMs: 12500 } ],
+  attempts: [
+    {
+      group: 'culture',
+      mirror: 1,
+      hedgeOffsetMs: 0,
+      durationMs: 8000,
+      outcome: 'timeout'
+    },
+    {
+      group: 'culture',
+      mirror: 2,
+      hedgeOffsetMs: 1500,
+      durationMs: 8000,
+      outcome: 'timeout'
+    },
+    {
+      group: 'culture',
+      mirror: 3,
+      hedgeOffsetMs: 3000,
+      durationMs: 8000,
+      outcome: 'timeout'
+    },
+    {
+      group: 'culture',
+      mirror: 4,
+      hedgeOffsetMs: 4500,
+      durationMs: 8000,
+      outcome: 'timeout'
+    }
+  ]
+}
+✔ searchDateNight compiled provider chain terminates at its total deadline with aborted attempts (8.624547ms)
+[discovery] provider-chain {
+  mode: 'nightlife',
+  source: 'error',
+  durationMs: 20000,
+  budgetExhausted: true,
+  attempts: [
+    { mirror: 1, durationMs: 8000, outcome: 'timeout' },
+    { mirror: 2, durationMs: 8000, outcome: 'timeout' },
+    { mirror: 3, durationMs: 4000, outcome: 'timeout' }
+  ]
+}
+✔ searchNightlife compiled provider chain terminates at its total deadline with aborted attempts (47.339308ms)
+✔ real client transport cancels an in-flight HTTP request within a bounded deadline (231.79374ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3960.622323
