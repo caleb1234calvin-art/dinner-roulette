@@ -226,4 +226,16 @@ Migration-free production build later: `VITE_AUTH_ENABLED=true node scripts/with
 - Blockers: real seasonal success and full50mi acceptance unresolved. Prior fifteen-mile failure evidence preserved; no public call after it yet. Query equivalence proven but speed remains a measurement question. Deadline constants unchanged; no application diagnostics.
 - Main/production untouched, no migration/settings/merge/promotion. Automatic non-production previews only. Resume status:607 DETERMINISTIC PASSES — REFINED QUERY LIVE PILOT PENDING.
 
+## Save 12 — exact-key pilot measured; bounded context stage next
+
+- Repository/implementation branch/frozen base unchanged. Latest pushed `50e677f9262d5ff9069aefc65a6b86188ed73738`, tree `ad51bb72ec4e121eb39c9651d549bd0a460eea91`, sole parent `f0508548ea1483fd4f4aeac4a68efb219fdc61b8`. This save is its direct sole-parent descendant.
+- Low-load pilot functional checks PASS2/2 with exactly1RPC, but seasonal performance NOT resolved.15mi Anything53places/45live, seasonal failed while other3groups succeeded; OFF53→ON9 with no RPC; mood/favorites/Fewer Parks no refetch. Correct partial/saved-only/missing disclosure. Full matrix intentionally not retried.
+- Hosted log exactf050854 Preview confirms seasonal all4full8s timeouts, starts0/1499/3000/4500ms, group12501ms; ordinary winners1434–3897ms. Exact-key rewrite alone is insufficient; no causal speedup claimed. Evidence JSON/log/runtime retained.
+- Changed this save: evidence/continuation only. Clean source before evidence, coherent evidence-only checkpoint.607 deterministic passes/fresh build and original4controlled browser cases remain as recorded; no application diagnostics, no deadline adjustment.
+- Next action BEFORE another public probe: implement supported-context preselection into a bounded named set, then apply four seasonal text filters only to that set, union existing precise/agricultural/lifecycle selectors. Context set must be outside final output union so generic farms/parks never leak. No unfiltered all-elements spatial scan. Same groups/mirrors/attempt count and exact classification.
+- Upgrade query test evaluator to understand named-set membership and output versus preselection, preserve6167equivalence comparisons and all priorfixtures, add generic-context leakage/lifecycle-outside-context guards. Then focused tests/checkpoint, fresh safe build/fullsuite, one low-load pilot. Do not simply extend deadlines.
+- Resume commands: review m6-exact-key-pilot.json/runtime; query/seasonal focused tests; typecheck/lint; build-proof safe build/fullsuite before pilot. Local mood locator is now fixed and verified by real pilot. Screenshots from initialcontrolled/liveattempts durable in Save11.
+- Blockers: seasonal query still misses bounded execution window;50mi/fullmatrix unresolved. Main/production untouched, no migrations/settings/promotion/merge. Tested Preview `dpl_DrhrHmWGmYaV4wAt99skKzUBVtNm`, https://dinner-roulette-epqwevkv8-minions-9e2c.vercel.app, exactf050854.20s/25s preserved.
+- Resume status: PARTIAL LIVE/CLIENT REUSE VERIFIED — SEASONAL CONTEXT QUERY OPTIMIZATION REQUIRED.
+
 CHECKPOINT INCOMPLETE — READ BLOCKERS BEFORE CONTINUING
