@@ -1,0 +1,727 @@
+{
+  "status": "DATE NIGHT LIVE DISCOVERY RESILIENCE REVERIFICATION REMEDIATION 2 INCOMPLETE \u2014 REVIEW REQUIRED",
+  "authority": {
+    "branch": "handoff/date-night-live-discovery-resilience-reverification-remediation-2",
+    "sha": "3dde9141e883f2bd2a11d0fb9835c73f4b2db135",
+    "path": "docs/handoffs/active/date-night-live-discovery-resilience-reverification-remediation-2.md"
+  },
+  "branch": "fix/date-night-live-discovery-resilience-reverification-remediation-2",
+  "failedCandidate": {
+    "sha": "4e6ff124960d77be0c454ccfa0401c8a1ced35a1",
+    "tree": "a8abffa67584e64e03b37300967319b8e49f9c61",
+    "soleParent": "444a68dd17e058e11778f805311a768986481c0c",
+    "status": "FAILED reverification; preserved"
+  },
+  "createdDirectlyFromFailedCandidate": true,
+  "latestPushedAtAuthorship": {
+    "sha": "08893d73a5e22674d4f9fccbdf04599cdd2c6f25",
+    "tree": "02bf64a823df26ee3147c8c13456148f9abed0ba",
+    "soleParent": "c4e42663c7a25519f443456e031d99d1c16dafdd"
+  },
+  "successfulFinalCandidate": null,
+  "incompleteCheckpointIdentityResolution": "git log --diff-filter=A --format='%H %T %P' -- audit/date-night-live-discovery-resilience-reverification-remediation-2-2026-10-03.json",
+  "red": {
+    "capablePass": 3,
+    "capableFail": 1,
+    "failure": "Corn-only wrongly returned node9201 with shared-identity node9202 attraction=pumpkin_patch demolished=yes; other three selections excluded",
+    "evidence": "demolished-red-capable.tap",
+    "runtimeUnchangedBeforeAudit": true
+  },
+  "parity": {
+    "baselineRows": 154,
+    "recognizedNegativeRows": 111,
+    "baselineRowsWithGap": 69,
+    "afterGapsInEveryRequestedGroup": 0,
+    "sourceAudit": "lifecycle-parity-audit.md",
+    "beforeMatrix": "parity-before.json",
+    "afterMatrix": "parity-after.json",
+    "canonicalRegistry": "src/lib/date-night/lifecycle.ts",
+    "frozenIndependentOracle": true
+  },
+  "focused": {
+    "lifecycle": 100,
+    "cacheClientProvider": 162,
+    "fullTotalsDoNotDoubleCountFocused": true
+  },
+  "vdr02": {
+    "cacheByteIdentical": true,
+    "sha256": "71b8f4d4cdfbfd6bda4d57ad19c1034ac5012038e762931a90ee06b1fa1f45f4",
+    "tests": {
+      "cache": 46,
+      "clientSessionLifecycle": 54,
+      "partialUI": 2,
+      "hedges": 19,
+      "providerDeadlines": 41,
+      "total": 162,
+      "failures": 0
+    },
+    "newCacheDefect": false,
+    "status": "V-DR-02 PRESERVED"
+  },
+  "validation": {
+    "javascript": {
+      "repositoryPassed": 602,
+      "applicationPassed": 71,
+      "totalPassed": 673,
+      "skipped": 4,
+      "failed": 0,
+      "focusedNotDoubleCounted": true
+    },
+    "security": 14,
+    "typecheck": "PASS",
+    "lintFiles": 12,
+    "build": "Migration-free/auth-enabled PASS",
+    "casino": {
+      "canonical": 883,
+      "serialized": 899,
+      "catalogs": 60
+    },
+    "android": {
+      "launcherResources": 15,
+      "webIcons": 4
+    },
+    "pythonPassed": 3,
+    "protectedFilesUnchanged": 952,
+    "environmentalFailure": "Initial full test incorrectly inherited VITE_AUTH_ENABLED=true:600repositorypass/2wrapperfail/4skip;unchanged tests rerun without override602pass. Initial failure preserved.",
+    "newLifecycleTests": 32
+  },
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "999d02d675bae0c2f33445a17b3711f95b0da14dbc028b5d7aed3ebb05941101",
+      "files": 414
+    },
+    "startedAt": "2026-10-03T16:35:41.536Z",
+    "output": {
+      "sha256": "39ec3817633ba6ba2d91053321a48586a14601b51039d7423a4b7779baeca2ab",
+      "files": 194
+    },
+    "completedAt": "2026-10-03T16:35:44.580Z"
+  },
+  "queryBefore": [
+    {
+      "selection": [
+        "anything"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 4335,
+          "selectors": 45
+        },
+        {
+          "id": "entertainment",
+          "bytes": 3231,
+          "selectors": 34
+        },
+        {
+          "id": "culture",
+          "bytes": 3001,
+          "selectors": 30
+        },
+        {
+          "id": "outdoor",
+          "bytes": 2951,
+          "selectors": 29
+        }
+      ],
+      "groupCount": 4,
+      "maxMirrorAttempts": 16,
+      "totalBytes": 13518,
+      "meanConstructionMs": 0.06245869400000004
+    },
+    {
+      "selection": [
+        "haunted-house"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 3792,
+          "selectors": 41
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 3792,
+      "meanConstructionMs": 0.021752211999999986
+    },
+    {
+      "selection": [
+        "corn-maze"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 3963,
+          "selectors": 45
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 3963,
+      "meanConstructionMs": 0.01784621800000002
+    },
+    {
+      "selection": [
+        "pumpkin-patch"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 3680,
+          "selectors": 41
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 3680,
+      "meanConstructionMs": 0.015314662999999996
+    },
+    {
+      "selection": [
+        "bowling"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 2960,
+          "selectors": 29
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 2960,
+      "meanConstructionMs": 0.022372667999999863
+    },
+    {
+      "selection": [
+        "arcade"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 2963,
+          "selectors": 29
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 2963,
+      "meanConstructionMs": 0.01789004399999999
+    },
+    {
+      "selection": [
+        "mini-golf"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 2961,
+          "selectors": 29
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 2961,
+      "meanConstructionMs": 0.01402480199999991
+    },
+    {
+      "selection": [
+        "escape-room"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 2958,
+          "selectors": 29
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 2958,
+      "meanConstructionMs": 0.011892384999999877
+    },
+    {
+      "selection": [
+        "skating"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 3009,
+          "selectors": 30
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 3009,
+      "meanConstructionMs": 0.010276545999999826
+    },
+    {
+      "selection": [
+        "movies"
+      ],
+      "groups": [
+        {
+          "id": "culture",
+          "bytes": 2953,
+          "selectors": 29
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 2953,
+      "meanConstructionMs": 0.010187235999999985
+    },
+    {
+      "selection": [
+        "museum"
+      ],
+      "groups": [
+        {
+          "id": "culture",
+          "bytes": 2953,
+          "selectors": 29
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 2953,
+      "meanConstructionMs": 0.013169881999999916
+    },
+    {
+      "selection": [
+        "park"
+      ],
+      "groups": [
+        {
+          "id": "outdoor",
+          "bytes": 2951,
+          "selectors": 29
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 2951,
+      "meanConstructionMs": 0.010425195000000031
+    },
+    {
+      "selection": [
+        "haunted-house",
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 4335,
+          "selectors": 45
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4335,
+      "meanConstructionMs": 0.015865158999999948
+    }
+  ],
+  "queryAfter": [
+    {
+      "selection": [
+        "anything"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5747,
+          "selectors": 53
+        },
+        {
+          "id": "entertainment",
+          "bytes": 4643,
+          "selectors": 42
+        },
+        {
+          "id": "culture",
+          "bytes": 4413,
+          "selectors": 38
+        },
+        {
+          "id": "outdoor",
+          "bytes": 4363,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 4,
+      "maxMirrorAttempts": 16,
+      "totalBytes": 19166,
+      "meanConstructionMs": 0.05331284399999993
+    },
+    {
+      "selection": [
+        "haunted-house"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5204,
+          "selectors": 49
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 5204,
+      "meanConstructionMs": 0.03449086
+    },
+    {
+      "selection": [
+        "corn-maze"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5375,
+          "selectors": 53
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 5375,
+      "meanConstructionMs": 0.014801692000000003
+    },
+    {
+      "selection": [
+        "pumpkin-patch"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5092,
+          "selectors": 49
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 5092,
+      "meanConstructionMs": 0.012069548000000168
+    },
+    {
+      "selection": [
+        "bowling"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4372,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4372,
+      "meanConstructionMs": 0.010410223999999971
+    },
+    {
+      "selection": [
+        "arcade"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4375,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4375,
+      "meanConstructionMs": 0.011136899999999969
+    },
+    {
+      "selection": [
+        "mini-golf"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4373,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4373,
+      "meanConstructionMs": 0.014179838000000018
+    },
+    {
+      "selection": [
+        "escape-room"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4370,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4370,
+      "meanConstructionMs": 0.011692812999999887
+    },
+    {
+      "selection": [
+        "skating"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4421,
+          "selectors": 38
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4421,
+      "meanConstructionMs": 0.011208902999999965
+    },
+    {
+      "selection": [
+        "movies"
+      ],
+      "groups": [
+        {
+          "id": "culture",
+          "bytes": 4365,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4365,
+      "meanConstructionMs": 0.011876506000000063
+    },
+    {
+      "selection": [
+        "museum"
+      ],
+      "groups": [
+        {
+          "id": "culture",
+          "bytes": 4365,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4365,
+      "meanConstructionMs": 0.014943596000000071
+    },
+    {
+      "selection": [
+        "park"
+      ],
+      "groups": [
+        {
+          "id": "outdoor",
+          "bytes": 4363,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4363,
+      "meanConstructionMs": 0.011898910000000115
+    },
+    {
+      "selection": [
+        "haunted-house",
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5747,
+          "selectors": 53
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 5747,
+      "meanConstructionMs": 0.021861286999999948
+    }
+  ],
+  "budgets": {
+    "groups": 4,
+    "mirrors": 4,
+    "maximumAttempts": 16,
+    "hedgeOffsetsMs": [
+      0,
+      1500,
+      3000,
+      4500
+    ],
+    "attemptMs": 8000,
+    "providerMs": 20000,
+    "clientMs": 25000,
+    "changed": false
+  },
+  "controlledBrowser": {
+    "passed": true,
+    "scenarios": 4,
+    "publicProviderCalls": 0,
+    "evidence": "controlled-browser.json",
+    "screenshots": "browser-screenshots.json"
+  },
+  "live": {
+    "accepted": false,
+    "candidate": "c4e42663c7a25519f443456e031d99d1c16dafdd",
+    "deployment": "dpl_99Fu4mmCHAy1DnNhpipeR7DLiSeF",
+    "url": "https://dinner-roulette-962xkmg15-minions-9e2c.vercel.app",
+    "acquisitions": 1,
+    "radiusMiles": 15,
+    "source": "fallback",
+    "successfulGroups": 0,
+    "failedGroups": 4,
+    "providerDurationMs": 12508,
+    "uiDurationMs": 13710,
+    "observedSavedVenues": 17,
+    "observedLiveVenues": 0,
+    "pageErrors": [],
+    "horizontalOverflow": false,
+    "subsetReuseObserved": false,
+    "fiftyMileAcquisitionRun": false,
+    "fullMatrixPassed": false,
+    "reason": "All groups timed out; budget guard stopped before retries or50-mile acquisition. Provider availability versus query cost unresolved.",
+    "performanceRegressionExcluded": false,
+    "evidence": "live-query-shape-failure.json",
+    "investigation": "live-runtime-investigation.md"
+  },
+  "preservation": {
+    "checkedAt": "2026-10-03T16:50:11.709Z",
+    "main": "4d937e58d2a65567b54ac5271915bc85b498898b",
+    "production": {
+      "id": "dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL",
+      "state": "READY",
+      "target": "production",
+      "sha": "4d937e58d2a65567b54ac5271915bc85b498898b",
+      "branch": "main",
+      "aliases": [
+        "pickforus.app",
+        "dinner-roulette-chi.vercel.app",
+        "www.pickforus.app",
+        "dinner-roulette-minions-9e2c.vercel.app",
+        "dinner-roulette-git-main-minions-9e2c.vercel.app"
+      ]
+    },
+    "failedCandidate": {
+      "sha": "4e6ff124960d77be0c454ccfa0401c8a1ced35a1",
+      "tree": "a8abffa67584e64e03b37300967319b8e49f9c61",
+      "soleParent": "444a68dd17e058e11778f805311a768986481c0c",
+      "status": "FAILED reverification; preserved"
+    },
+    "mainProductionUntouched": true,
+    "mergesSinceFailed": 0
+  },
+  "changedPaths": [
+    "AI_CONTINUITY.md",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-2026-10-03.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-2026-10-03.md",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/browser-environment.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/browser-install-failure.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/browser-recovery.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/browser-screenshots.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/build-capture.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/build-complete.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/build-proof.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/build-verify.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/cache-client-provider-green.tap",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/cache-preservation.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/compiled-security.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/controlled-all-stall.png",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/controlled-browser.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/controlled-browser.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/controlled-partial-groups.png",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/controlled-provider-events.jsonl",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/controlled-second-mirror.png",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/controlled-third-mirror.png",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/demolished-red-capable.tap",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/demolished-red.tap",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/deployment-readback.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/final-preservation-readback.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/final-protected-scope-sanity.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/focused-lint.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/focused-typecheck.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/full-android.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/full-casino.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/full-dependencies.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/full-install.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/full-lint.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/full-python.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/full-test-auth-env-failure.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/full-test.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/full-typecheck.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/implementation.md",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/initial-validation-results.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/install.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/lifecycle-focused-green.tap",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/lifecycle-parity-audit.md",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/live-certificate-failure.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/live-certificate-failure.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/live-query-shape-failure.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/live-query-shape-failure.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/live-runtime-failure-excerpt.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/live-runtime-investigation.md",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/parity-after.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/parity-baseline.mjs",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/parity-before.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/parity-measure.mjs",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/production-build.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/protected-scope-sanity.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/red-log-normalization.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/scope-review.py",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/screenshot-upload-rejection.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/source-diff-check.log",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/validation-log-normalization.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/validation-results.json",
+    "audit/date-night-live-discovery-resilience-reverification-remediation-2-evidence/validation-summary.json",
+    "docs/handoffs/active/date-night-live-discovery-resilience-reverification-remediation-2-continuation.md",
+    "scripts/date-night-lifecycle-parity.test.mjs",
+    "scripts/date-night-partial-results.test.mjs",
+    "scripts/date-night-query-plan.test.mjs",
+    "scripts/date-night-resilience-live.mjs",
+    "scripts/seasonal-discovery.test.mjs",
+    "scripts/tanstack-security.test.mjs",
+    "scripts/test-support/date-night-query-evaluator.mjs",
+    "scripts/test-support/date-night-resilience-preload.mjs",
+    "src/lib/date-night/lifecycle.ts",
+    "src/lib/date-night/provider-evidence.ts",
+    "src/lib/date-night/query-plan.ts",
+    "src/lib/date-night/search.ts"
+  ],
+  "remainingGates": [
+    "Explain/resolve bounded live provider timeout risk without repeated public-provider probes",
+    "If runtime changes, rerun parity/focused/cache/full/security/build/controlled gates",
+    "Bounded exact-Preview15/50 acquisitions and local subset/filter reuse acceptance",
+    "Only after all gates pass, immutable candidate freeze/push and fresh independent reverification#3"
+  ],
+  "nextAction": "Review retained live timeout evidence and bounded carrier-query cost. No successful freeze or promotion.",
+  "safeToResume": true,
+  "finalScopeReview": {
+    "evidence": "final-protected-scope-sanity.json",
+    "passed": true,
+    "protectedFilesUnchanged": 952,
+    "historicalContinuityPreservedVerbatim": true
+  },
+  "evidenceUploadLimitation": {
+    "action": "Upload live-failed-15-anything-off.png as a GitHub blob",
+    "destination": "caleb1234calvin-art/dinner-roulette",
+    "result": "REJECTED by automatic approval review",
+    "statedReason": "This uploads a large, potentially sensitive screenshot to an unverified external GitHub repository, and no trusted user-authored instruction authorizes that payload and destination.",
+    "disposition": "No retry or alternate upload. Removed this image from the proposed commit. Textual live JSON/log evidence and four accepted synthetic controlled screenshots provide the reviewable evidence. Original live screenshot remains temporary local browser output only.",
+    "essentialTaskBlockedByImageOmission": false
+  }
+}

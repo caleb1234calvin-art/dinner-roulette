@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-03T16:50:11.709Z",
+  "main": "4d937e58d2a65567b54ac5271915bc85b498898b",
+  "production": {
+    "id": "dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL",
+    "state": "READY",
+    "target": "production",
+    "sha": "4d937e58d2a65567b54ac5271915bc85b498898b",
+    "branch": "main",
+    "aliases": [
+      "pickforus.app",
+      "dinner-roulette-chi.vercel.app",
+      "www.pickforus.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app"
+    ]
+  },
+  "failedCandidate": {
+    "sha": "4e6ff124960d77be0c454ccfa0401c8a1ced35a1",
+    "tree": "a8abffa67584e64e03b37300967319b8e49f9c61",
+    "soleParent": "444a68dd17e058e11778f805311a768986481c0c",
+    "status": "FAILED reverification; preserved"
+  },
+  "mainProductionUntouched": true,
+  "mergesSinceFailed": 0
+}

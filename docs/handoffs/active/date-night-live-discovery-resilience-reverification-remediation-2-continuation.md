@@ -77,3 +77,15 @@ SAFE TO RESUME FROM THIS CHECKPOINT
 - Exact next action: verify this failure checkpoint pushed/clean; inspect authoritative Overpass evaluator/query execution semantics for a bounded lifecycle acquisition optimization, preserving every audited representation and positive-query narrowness. No repeated public-provider diagnostics.
 
 SAFE TO RESUME FROM THIS CHECKPOINT
+
+## Save 7 — INCOMPLETE evidence checkpoint; no successful final freeze
+
+- Branch/base unchanged; latest pushed08893d73a5e22674d4f9fccbdf04599cdd2c6f25, tree02bf64a823df26ee3147c8c13456148f9abed0ba, sole parentc4e42663c7a25519f443456e031d99d1c16dafdd. This save is evidence/continuity only. No runtime changes after deterministic/build/security/controlled validation.
+- Complete RED/audit/parity evidence remains preserved:154rows/111negative/zero deterministic post-fix gaps. Full673passes/4skips/0fail, compiledsecurity14, controlledbrowser4/4 GREEN. V-DR-02 preserved; cache byte-identical. Querymetrics unchanged170selectors/19166bytes Anything,53/5747seasonal; fourgroups/fourmirrors/8s20s25s unchanged.
+- Live15-mile one-RPC result remains FAILED/incomplete; exact Preview c4e4266/dpl_99Fu4mmCHAy1DnNhpipeR7DLiSeF asSave6. No additional provider requests, subsets or50-mile attempt. Official Overpass source review shows bounded named-set filtering in inspected version; no unrestricted key-regex scan established. Carrier acquisition cost versus provider/network conditions remains unresolved. No speculative second runtime implementation.
+- Changed paths: separate final remediation2 MD/JSON, runtime investigation, final preservation/scope evidence, four masked synthetic controlled screenshots/manifest, top AI_CONTINUITY and this continuation. Previous failed candidate/evidence untouched. This is NOT a successful immutable candidate freeze.
+- Main freshly fetched at frozen4d937e58; production freshly read READY/dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL at exact main, aliases intact. Protected scope/privacy rechecked. No promotion/migration/settings change.
+- Automatic approval review rejected the live screenshot GitHub upload for potential sensitivity/unverified authorization. Omitted that optional image without retry; JSON/log evidence retained and four synthetic screenshots accepted. Rejection recorded separately.
+- Exact next action: push this incomplete evidence checkpoint, verify exact SHA/tree/sole parent and clean worktree. Resume by reviewing retained live timeout evidence and carrier-query cost before new bounded acceptance. Runtime edits require renewed gates; freeze for independent reverification3 only when all gates pass. Status: DATE NIGHT LIVE DISCOVERY RESILIENCE REVERIFICATION REMEDIATION 2 INCOMPLETE — REVIEW REQUIRED.
+
+SAFE TO RESUME FROM THIS CHECKPOINT

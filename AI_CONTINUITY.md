@@ -1,3 +1,21 @@
+# Pick For Us — Date Night Live Discovery Resilience Reverification Remediation #2 (2026-10-03)
+
+## CURRENT — DATE NIGHT LIVE DISCOVERY RESILIENCE REVERIFICATION REMEDIATION 2 INCOMPLETE — REVIEW REQUIRED
+
+This TOP entry supersedes historical next actions. All prior continuity below is preserved verbatim.
+
+- Required branch `fix/date-night-live-discovery-resilience-reverification-remediation-2` was created directly from failed candidate `4e6ff124960d77be0c454ccfa0401c8a1ced35a1`. That candidate remains FAILED reverification history, unamended and unpromoted.
+- RED was reproduced before runtime changes; complete154-row lifecycle audit found111 recognized negatives and69 rows with acquisition gaps. Canonical lifecycle interpretation/acquisition/normalization now has zero deterministic parity gaps in every requested group. Positive query/classification semantics remain narrow. Runtime scope: lifecycle.ts, provider-evidence.ts, query-plan.ts and the necessary search.ts normalizer substitution.
+- Full validation GREEN:673 JavaScript passes (602 repository +71 application),4 inherited skips,0 failures; compiled security14/14; safe auth-enabled migration-free build/proof; typecheck/lint/dependency/casino/Android/Python/scope gates.32 new permanent regression tests. Focused100 lifecycle and162 cache/client/provider passes are not double-counted. V-DR-02 PRESERVED; cache.ts byte-identical.
+- Controlled browser4/4 GREEN, with bounded loading, truthful partial/fallback, cancellation, local Open Now, no fatal errors/overflow and zero public-provider calls.
+- Live acceptance FAILED/incomplete on exact c4e42663c7a25519f443456e031d99d1c16dafdd Preview dpl_99Fu4mmCHAy1DnNhpipeR7DLiSeF. Exactly one15-mile Anything acquisition: all four groups timed out; truthful saved fallback at12.5s provider/13.7s UI. Budget guard stopped before subset retries or50-mile acquisition. No full matrix or live-performance acceptance claim. Provider availability versus carrier-query cost remains unresolved; official engine source confirms named-set filters avoid an unrestricted key-regex scan in the inspected version. No speculative runtime rewrite or repeated provider probes.
+- Query Anything138→170selectors/13518→19166bytes; full seasonal45→53/4335→5747. Fourgroups/fourmirrors/8s20s25s unchanged. Query microbenchmarks do not prove provider runtime.
+- Latest pushed before this evidence save:08893d73a5e22674d4f9fccbdf04599cdd2c6f25, tree02bf64a823df26ee3147c8c13456148f9abed0ba, parentc4e42663c7a25519f443456e031d99d1c16dafdd. Resolve this incomplete checkpoint from the commit introducing `audit/date-night-live-discovery-resilience-reverification-remediation-2-2026-10-03.json`; do not amend for a self hash.
+- Fresh main remains4d937e58d2a65567b54ac5271915bc85b498898b; READY production remainsdpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL at that SHA. No merge, promotion, production/settings/dependency/native/auth/catalog change or migration.
+- **NEXT: review the retained live failure and bounded carrier-query cost before another acceptance attempt. Any runtime change requires renewed gates. No successful immutable candidate exists; do not promote or claim awaiting reverification#3.** Continuation and separate remediation2 MD/JSON/evidence retain all commands, gates and failures. SAFE TO RESUME.
+
+## Prior continuity — preserved verbatim
+
 # Pick For Us — Date Night Live Discovery Resilience Verification Remediation #1 (2026-10-02)
 
 This TOP entry supersedes the prior Date Night resilience next action. Historical continuity below is preserved verbatim.
