@@ -75,3 +75,16 @@ SAFE TO RESUME FROM THIS CHECKPOINT.
 - Remaining gates: bounded live15/50matrix/localreuse, save7, final evidence/scope/clean/preservation and immutable successful freeze only if all pass. No promotion.
 
 SAFE TO RESUME FROM THIS CHECKPOINT.
+
+## Save 7 — bounded live acceptance INCOMPLETE; stop public requests
+
+- Same branch/base. Latest pushed4a321e5ec84dd2b1d196f6c6220ea35337ea775c, tree27ff8c12add310cee2c3ca2e895ca530fee0867b, sole parentce7d9df. This save is separate live evidence/continuation only. No executable changes after validated4f6a6e5; no speculative rewrite.
+- Exact Preview checked READY/nonproduction/ce7d9df immediately before live: dpl_7kz238n3Fp2rNYGjvFDuHK18YKYk, https://dinner-roulette-ijp958pl9-minions-9e2c.vercel.app. Local source/build remained identical to that checkpoint; auth-enabled proof retained. Disposable browser TLS tolerance explicitly enabled due known CA environment; no app/Vercel TLS change.
+- Exactly2discoveryRPCs forwarded.15Anything:4groupsSUCCESS (seasonalvalidempty),merged/partialfalse,45live/53total observed, provider6699ms/RPC6826/UI8062. Six15mile rows completed; Corn0/Pumpkin0/mixed2consistent with acquisition, OpenNow0; categories/OpenNow/mood/favorites/FewerParks caused0additionalRPCs. No lifecycle records observed in returned raw venues.
+-50Anything:all4groupsFAILED;fallback/partialfalse,17saved/0live,provider12175ms/RPC12340/UI13209. Truthful outage and settled spinner; no page errors or horizontal overflow. Runtime excerpts show8sattempttimeouts and mirror3HTTP504, with unchanged immediate advance to mirror4. Excerpts truncate tail; do not invent missing attempt timings or an exact physicalHTTP count. At most32attempts theoretical for2RPCs, not a measured count.
+- Harness STOPPED at bounded-superset-coverage before50mile subsets/localfilters.7of12rows captured;fullmatrixNOTaccepted. No provider-runtime regression exclusion. The removed common-key regex path is proven structurally, but this does not establish remaining timeout cause. No more public requests/retries authorized in this pass.
+- Prior GREEN preserved:686JS/4skips/0fail,compiledsecurity14,controlled4/4,parity154/111/0,cacheV-DR-02originalbytes. Querycost remains170→238selectors/19166→21942bytes;96→0targeted active regex over4groups×4mirrors. Runtime path onlylifecycle.ts;28prefixed clauses and2predicates remain unchanged.
+- Main freshly fetched frozen4d937e58; production freshly readREADYdpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL beforelive, unchanged. Final readback pending; main/production untouched throughout.
+- Remaining gates are BLOCKED by50milelivefailure: accepted12rowmatrix/no material runtime regression/successfulimmutablefreeze. Exact next action: publish this failure checkpoint; create final separate MD/JSON and current continuity markingINCOMPLETE; verify scope/clean/main/production and push final INCOMPLETE evidence checkpoint. STOP for review, not independent successful-candidate reverification. No promotion.
+
+SAFE TO RESUME FROM THIS CHECKPOINT. DATE NIGHT LIVE DISCOVERY RESILIENCE LIVE TIMEOUT REMEDIATION INCOMPLETE — REVIEW REQUIRED.

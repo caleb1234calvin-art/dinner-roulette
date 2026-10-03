@@ -1,0 +1,45 @@
+{
+  "accepted": false,
+  "discoveryRpcs": 2,
+  "maximumRpcs": 2,
+  "fifteenMiles": {
+    "groupsSucceeded": 4,
+    "seasonal": "succeeded-empty",
+    "providerDurationMs": 6699,
+    "rpcDurationMs": 6826,
+    "visibleSettlementMs": 8062,
+    "liveVenuesObserved": 45,
+    "totalVenuesObserved": 53,
+    "lifecycleVenuesObserved": 0,
+    "localSubsetAndOpenNowRequests": 0,
+    "moodFavoritesFewerParksNoRefetch": true,
+    "cornPumpkinConsistency": "Both zero in acquisition and local subsets; mixed seasonal2 matches savedHaunted2; OpenNow0."
+  },
+  "fiftyMiles": {
+    "groupsSucceeded": 0,
+    "groupsFailed": 4,
+    "providerDurationMs": 12175,
+    "rpcDurationMs": 12340,
+    "visibleSettlementMs": 13209,
+    "source": "fallback",
+    "partial": false,
+    "liveVenuesObserved": 0,
+    "savedVenuesObserved": 17,
+    "lifecycleVenuesObserved": 0,
+    "subsetsRun": false,
+    "localReuseAccepted": false,
+    "timeoutSignature": "Visible culture/entertainment/outdoor mirrors1/2 time out around8s; mirror3 HTTP504; visible culture/entertainment mirror4 time out8s after immediate failure advancement. Log tail truncated; exact seasonal/outdoor4 details unobserved."
+  },
+  "matrix": {
+    "completedRows": 7,
+    "expectedRows": 12,
+    "accepted": false
+  },
+  "pageErrors": [],
+  "horizontalOverflow": false,
+  "publicHttpRequests": "At most32 theoretical across2discovery RPCs; exact physical attempt records truncated; do not label32 as measured",
+  "noFurtherProviderRequests": true,
+  "noSpeculativeRewrite": true,
+  "providerRuntimeRegressionExcluded": false,
+  "cause": "50mile live acceptance blocker persists; retained telemetry cannot separate provider/network conditions from remaining query cost. No causal attribution from these2observations."
+}
