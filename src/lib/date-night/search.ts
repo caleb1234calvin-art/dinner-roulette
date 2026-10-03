@@ -3,6 +3,7 @@ import { createDateNightProvider } from "../discovery/hedged-provider";
 import { DEFAULT_LOCATION } from "../restaurants/types";
 import { formatOsmAddress, requireCoordinates } from "../location/model";
 import { createServerFn } from "@tanstack/react-start";
+import { getRequest } from "@tanstack/react-start/server";
 import { isLikelyChain } from "@/lib/restaurants/chains";
 import { haversineMiles } from "@/lib/restaurants/geo";
 import { namesMatch } from "@/lib/utils";
@@ -14,6 +15,7 @@ import { normalizeLifecycleTags } from "./lifecycle";
 import { isHalloweenDateNightActive } from "./season";
 import { dedupeDateNight, mergeDateNight, mergeIdentity, moodFor } from "./identity";
 import { buildDateNightQuery, buildDateNightQueryPlan, validateDateNightActivityTypes } from "./query-plan";
+import { dateNightPatchOwns, resolveDateNightPatch } from "./radial-plan";
 import {
   dateNightTypeLabel,
   type ConcreteDateNightType,
@@ -134,26 +136,33 @@ function localWithin(lat: number, lon: number, radiusMiles: number, halloweenAct
 }
 
 export const searchDateNight = createServerFn({ method: "POST" })
-  .validator((data: { lat: number; lon: number; radiusMiles: number; spookySeasonEnabled?: boolean; activityTypes?: unknown }) => {
+  .validator((data: { lat: number; lon: number; radiusMiles: number; spookySeasonEnabled?: boolean; activityTypes?: unknown; patchId?: unknown }) => {
     requireCoordinates(data);
     if (data.radiusMiles !== undefined && (typeof data.radiusMiles !== "number" || !Number.isFinite(data.radiusMiles))) throw new Error("A valid discovery radius is required");
+    const patch = data.patchId === undefined ? undefined : resolveDateNightPatch(data, data.radiusMiles, data.patchId);
+    if (patch && Object.keys(data).some(key => !["lat", "lon", "radiusMiles", "spookySeasonEnabled", "activityTypes", "patchId"].includes(key))) {
+      throw new Error("Date Night patch geometry is server-owned");
+    }
     return {
       lat: data.lat,
       lon: data.lon,
       radiusMiles: Math.min(Math.max(data.radiusMiles || 15, 1), 50),
       spookySeasonEnabled: Boolean(data.spookySeasonEnabled),
       activityTypes: validateDateNightActivityTypes(data.activityTypes),
+      patch,
     };
   })
   .handler(async ({ data }): Promise<DateNightSearchResponse> => {
     const fetchRadius = Math.max(data.radiusMiles, 15);
-    const radiusMeters = Math.min(fetchRadius * 1609.34, 80467);
+    const radiusMeters = data.patch?.radiusMeters ?? Math.min(fetchRadius * 1609.34, 80467);
+    const center = data.patch?.center ?? data;
     const halloweenSeason = isHalloweenDateNightActive(data.spookySeasonEnabled);
     const plan = buildDateNightQueryPlan(data.activityTypes, halloweenSeason);
-    const local = localWithin(data.lat, data.lon, fetchRadius, halloweenSeason);
-    const chain = createDateNightProvider();
+    const owned = (place: DateNightPlace) => !data.patch || dateNightPatchOwns(data, data.patch, place);
+    const local = localWithin(data.lat, data.lon, fetchRadius, halloweenSeason).filter(owned);
+    const chain = createDateNightProvider(data.patch ? getRequest().signal : undefined);
     const outcomes = await Promise.allSettled(plan.map(async (group) => {
-      const body = `data=${encodeURIComponent(buildDateNightQuery(group, data.lat, data.lon, radiusMeters))}`;
+      const body = `data=${encodeURIComponent(buildDateNightQuery(group, center.lat, center.lon, radiusMeters))}`;
       return chain.run(group.id, (mirror, signal) => queryMirror(mirror, body, halloweenSeason, signal));
     }));
     const groups: DateNightGroupCoverage[] = plan.map((group, index) => {
@@ -165,11 +174,15 @@ export const searchDateNight = createServerFn({ method: "POST" })
     const successes = outcomes.filter((result): result is PromiseFulfilledResult<DateNightPlace[]> => result.status === "fulfilled");
     const failedTypes = groups.filter((group) => group.outcome === "failed").flatMap((group) => group.activityTypes);
     const discovery = { groups, partial: successes.length > 0 && failedTypes.length > 0 };
+    const patch = data.patch ? { id: data.patch.id, version: data.patch.version } : undefined;
     if (successes.length > 0) {
-      const venues = mergeDateNight(successes.flatMap((result) => result.value), local);
+      // Keep negative companions across overlapping acquisition circles; positive
+      // rows belong to one logical sector. Lifecycle evidence is never coverage.
+      const live = successes.flatMap((result) => result.value).filter(place => place.lifecycle || owned(place));
+      const venues = mergeDateNight(live, local);
       const source = local.length ? "merged" : "live";
       chain.finish(source);
-      return { venues, source, discovery,
+      return { venues, source, discovery, ...(patch ? { patch } : {}),
         ...(discovery.partial ? { warning: `Some live activity searches are unavailable: ${failedTypes.map((type) => dateNightTypeLabel([type])).join(", ")}. Available live results and saved places are included; coverage may be incomplete.` } : {}),
       };
     }
@@ -181,6 +194,7 @@ export const searchDateNight = createServerFn({ method: "POST" })
         venues: dedupeDateNight(local),
         source: "fallback",
         discovery,
+        ...(patch ? { patch } : {}),
         warning: "Using saved Jasper County Date Night places while the live map is unavailable.",
       };
     }

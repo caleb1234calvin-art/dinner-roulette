@@ -63,6 +63,7 @@ export interface DateNightSearchResponse {
   venues: DateNightPlace[];
   source: "live" | "merged" | "fallback";
   warning?: string;
+  patch?: { id: string; version: string };
   /** Successful empty is coverage, not outage. Cache assembly may split a group
    * into disjoint category slices with different outcomes. */
   discovery?: { groups: DateNightGroupCoverage[]; partial: boolean };

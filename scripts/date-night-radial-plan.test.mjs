@@ -62,6 +62,21 @@ test("every sector corner fits its bounded circle; no patch approaches a 50-mile
   }
 });
 
+test("exact poles have a deterministic bearing frame and complete bounded coverage", () => {
+  const { planDateNightPatches, dateNightPatchOwns } = planner();
+  for (const lat of [-90, 90]) {
+    const pole = { lat, lon: 20 }, patches = planDateNightPatches(pole, 50);
+    for (const miles of [1, 15, 15.001, 20, 25, 30, 35, 40, 45, 50]) {
+      for (let lon = -180; lon < 180; lon += 7) {
+        const p = { lat: Math.sign(lat) * (90 - miles / earth / rad), lon };
+        const owners = patches.filter(patch => dateNightPatchOwns(pole, patch, p));
+        assert.equal(owners.length, 1);
+        assert.ok(distance(owners[0].center, p) * 1609.344 <= owners[0].radiusMeters + 1);
+      }
+    }
+  }
+});
+
 test("out-of-radius points have no logical owner and overlap maps to only one patch", () => {
   const { planDateNightPatches, dateNightPatchOwns } = planner();
   for (const max of [15, 20, 30, 40, 50]) {

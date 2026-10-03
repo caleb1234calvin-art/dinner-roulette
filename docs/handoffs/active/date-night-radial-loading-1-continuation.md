@@ -15,3 +15,16 @@ Authority: `handoff/date-night-radial-loading-1`, commit `04a3ac240760fc025c62d4
 - Exact next action: publish/read back this RED checkpoint, implement the pure planner and server-owned patch contract, run planner/RPC tests and checkpoint acquisition contract before cache/UI wiring. Review pole/antimeridian cases and supersession/negative-evidence eviction explicitly.
 
 SAFE TO RESUME FROM THIS CHECKPOINT.
+
+## Checkpoint 2 — bounded patch planner and server contract
+
+- Branch/base unchanged. Latest published SHA `d3111611794328ad084134134f80115161920e3b`, tree `94426f463536b36579af57b7e67b32d9627bc15e`, sole parent is the preserved base. Checkpoint 1 published through authenticated GitHub tree/commit/ref tools because shell push had no credentials; exact staged/published tree verified and checkout aligned without changing bytes.
+- Changed paths: new radial-plan.ts, optional patch contract in search.ts/types.ts, test loader request-signal seam, planner/search tests, this continuation and dedicated contract logs. Existing DateNightHome/cache are still unchanged. Lifecycle/query/provider implementations unchanged.
+- Planner/coverage contracts now GREEN 11/11, including >120,000 independently generated sampled positions, antimeridian/high-latitude and exact-pole checks, deterministic prefixes, bounded corners and truthful missing/category proof. Server contract GREEN 4/4: strict server-derived geometry; logical positive ownership; retained overlapping lifecycle evidence; valid empty; hostile geometry/ID rejection before fetch; request signal forwarding/attempt abortion. Earlier contract assertion incorrectly assumed a negative raw ID remained representative after existing same-location dedupe; corrected to require negative lifecycle plus original evidence identity. Initial failure log retained.
+- Existing partial-results suite 12/12 and typecheck passed. This is focused validation only; full gates remain pending.
+- Geometry remains core15 plus 4/7/9/11 sectors (32 total), circles <15.1 miles. Coverage tracks per-category completeness and missing/failed/loading patches. Runtime scheduler/cache not wired yet, so no progressive behavior claimed.
+- Provider budget unchanged (4 mirrors, 4 groups, 8/20/25 seconds). New patch RPC forwards the server Request signal into the existing hedge executor; deterministic propagation proven, hosted disconnect propagation still unclaimed. No public provider calls. Preview identity: none accepted. Main/production untouched; last verified frozen4d937e58 / READY dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL.
+- Remaining gates: patch-aware cache and coverage admission/eviction/negative regressions; serial scheduler and progressive UI; focused GREEN; pre-full and full/security/build checks; controlled browser; bounded exact Preview; final freeze.
+- Exact next action: publish/read back this checkpoint, extend the cache with isolated patch authority while preserving legacy V-DR-02 tests, add the coverage projection and patch/cache regressions before UI wiring.
+
+SAFE TO RESUME FROM THIS CHECKPOINT.

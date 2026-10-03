@@ -6,7 +6,7 @@ const requirePackage = createRequire(import.meta.url);
 
 // Executes the actual application validators, handlers and normalization graph.
 // Only the TanStack RPC transport is replaced; browser/RPC tests are separate.
-export function appModuleLoader() {
+export function appModuleLoader({ requestSignal = new AbortController().signal } = {}) {
   const modules = new Map();
   const transport = {
     createServerFn() {
@@ -37,6 +37,7 @@ export function appModuleLoader() {
     });
     const require = (specifier) => {
       if (specifier === "@tanstack/react-start") return transport;
+      if (specifier === "@tanstack/react-start/server") return { getRequest: () => ({ signal: requestSignal }) };
       if (!specifier.startsWith(".") && !specifier.startsWith("@/"))
         return requirePackage(specifier);
       const base = specifier.startsWith("@/")
