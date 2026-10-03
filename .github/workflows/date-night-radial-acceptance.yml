@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - acceptance/date-night-radial-loading-browser-1
+  pull_request:
+    branches:
+      - feature/date-night-radial-loading-1
   workflow_dispatch:
 
 permissions:
