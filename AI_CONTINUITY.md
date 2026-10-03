@@ -1,3 +1,22 @@
+# Pick For Us — Date Night Live Discovery Resilience Remediation #1 (2026-10-02)
+
+This TOP entry supersedes earlier next actions. Historical continuity below is preserved verbatim.
+
+## CURRENT — DATE NIGHT LIVE DISCOVERY RESILIENCE REMEDIATED — AWAITING INDEPENDENT VERIFICATION
+
+- Branch `fix/date-night-live-discovery-resilience-1`, created directly from frozen production `4d937e58d2a65567b54ac5271915bc85b498898b`; original handoff commit `a14b5df517e5054eb2d47d8789e25e9aa4e210df` remains authoritative. All milestone saves are pushed and retained. Main and production were not modified; no merge, promotion, configuration change or migration.
+- Date Night now has staggered bounded mirror hedges, validated category-owned acquisition groups, independent partial/valid-empty outcomes, honest coverage and a bounded client acquisition cache. Supported seasonal contexts are selected once before text filtering. Dinner/Nightlife and the shared serial/client deadline helpers remain unchanged. No unverified venue was added.
+- Existing deadlines remain **20s provider / 25s client**, with <=8s individual attempts. Fake clocks prove mirror2 at1.5s, mirror3 at3s, mirror4 at4.5s, all-stall12.5s and an absolute20s ceiling. No extension was justified by the healthy live measurements.
+- Latest executable source: `ce632d5d973396df92a74d36d57125e0fd7423fc`, tree `aa5c6af95dba32fc9cee84bf1292d8c52b4d2bf5`, sole parent `6f9598dfbdce79d4dd2f7210d15c58f75d1c231e`. Final freshness regression fixes equal-timestamp cache admission ordering without changing LRU eviction. All later changes are evidence/continuity only.
+- Final gates PASS: **611 JavaScript tests =540 repository+71 application;4 inherited skips;0 failures**, compiled TanStack security/transport, typecheck, changed-code lint, dependency graph, casino883canonical/899serialized/60catalogs, Android15launcher/4webicons, Python3/3, tracked-byte preservation and migration-free auth-enabled production build. Initial restricted-runner failures and the intentional cache-regression RED result are retained and resolved by documented capability/correctness changes.
+- Final controlled Chromium4/4 PASS through actual RPC: mirror2/mirror3 wins, seasonal live results survive parks failure, all16stalled attempts settle honestly. Final real Carthage15/50 matrix12/12 PASS with only2RPCs: both all4groups succeed;15mi45live/seasonalvalidempty,50mi235live including one Corn Maze; source merged, partialfalse. Covered category/local-filter changes make0RPCs. Counts are observations, not invariants. Current Open Now recomputation retains the established seasonal rules.
+- Tested final-source Preview: `dpl_4aJAVbUh9jjEdP7bsz5n3ep2ypo6`, https://dinner-roulette-7umkzl8qi-minions-9e2c.vercel.app, READY/non-production/exactce632d5. LiveRPC4.304s/6.700s. Disposable Chromium required explicit TLS-error tolerance due its CA trust; app/platform TLS unchanged. No claim of exhaustive public-provider recall, physical Android acceptance, or immediate server cancellation upon browser disconnect.
+- New evidence: `audit/date-night-live-discovery-resilience-1-2026-10-02.md/.json` and separate evidence directory. Original loading/seasonal audits remain unchanged. Continuation: `docs/handoffs/active/date-night-live-discovery-resilience-1-continuation.md`.
+- Final immutable candidate is the unique commit introducing the new remediation JSON, sole parent `b7487e8832e6f4a0b8ec5a8352c9db31586324c4`. Resolve its SHA/tree using `git log --diff-filter=A --format=%H -- audit/date-night-live-discovery-resilience-1-2026-10-02.json` then `git show -s --format='%H %T %P' <resolved-sha>`. The final response records literal resolved values; do not amend the candidate to embed its own hash.
+- **NEXT: STOP after candidate publication and readback. A fresh independent verifier must review the immutable SHA/tree/sole parent before any main/production decision.** No merge, production deployment, promotion, migration, signing or publication is authorized by this handoff.
+
+## Prior continuity — preserved verbatim
+
 # Pick For Us — Production Loading Hang Remediation #1 (2026-09-30)
 
 This TOP entry supersedes earlier next actions. Historical continuity below is preserved verbatim.

@@ -1,0 +1,759 @@
+{
+  "scope": "Final source and all Save20 evidence reviewed; final report/continuity additions separately reviewed by root before freeze",
+  "frozen_base": "4d937e58d2a65567b54ac5271915bc85b498898b",
+  "snapshot": "b7487e8832e6f4a0b8ec5a8352c9db31586324c4",
+  "source_checkpoint": "ce632d5d973396df92a74d36d57125e0fd7423fc",
+  "protected_count": 454,
+  "protected_unchanged": true,
+  "changed_paths": [
+    "audit/date-night-live-discovery-resilience-1-evidence/baseline-client-seasonal.tap",
+    "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+    "audit/date-night-live-discovery-resilience-1-evidence/deterministic-test-map.md",
+    "audit/date-night-live-discovery-resilience-1-evidence/deterministic-timings.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m1-hedged-tests.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m1-provider-deadlines.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m1-typecheck.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m2-query-tests.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m2-seasonal.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m3-client-lifecycle.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m3-partial-results.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m3-partial-ui.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m3-provider-deadlines.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+    "audit/date-night-live-discovery-resilience-1-evidence/m4-cache.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m4-seasonal.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-android-after.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-android-before.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-android-check.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-android-sync.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-android-tracked-diff.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-availability-location.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-build-proof-capture.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-build-proof-complete.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-build-proof-verify.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-casino-audit.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-changed-lint.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-full-suite.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-gates.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-npm-ls.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-preservation-results.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-production-build.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-python-native.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-scope-sanity.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m5-typecheck.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-build-capture.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-build-complete.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-build.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-full-runtime.txt",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-full-suite.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-full.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-full.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-pilot-runtime.txt",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-pilot.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-pilot.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-query-lint.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-query-seasonal.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-query-tests.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-context-query-typecheck.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-controlled-browser.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-controlled-browser.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-controlled-context-provider-events.jsonl",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-controlled-context.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-controlled-context.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-controlled-provider-events.jsonl",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-build-capture.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-build-complete.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-build.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-full-suite.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-pilot.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-pilot.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-runtime.md",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-live-attempt-1.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-live-attempt-1.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-live-attempt-2.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-live-attempt-2.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-preview-access-diagnosis.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-query-refinement-lint.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-query-refinement-query.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-query-refinement-seasonal.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-query-refinement-typecheck.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-rebuild-capture.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-rebuild-complete.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-rebuild.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m6-runtime-observations-1.md",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-android.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-build-capture.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-build-complete.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-build.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-after.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-before.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-lint.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-typecheck.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-casino.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-changed-lint.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-dependencies.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-final-controlled-provider-events.jsonl",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-final-controlled.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-final-controlled.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-final-live-runtime.txt",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-final-live.json",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-final-live.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-full-suite-sandbox.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-full-suite.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-python.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-sandbox-diagnosis.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/m7-typecheck.log",
+    "audit/date-night-live-discovery-resilience-1-evidence/mandatory-read-manifest.md",
+    "audit/date-night-live-discovery-resilience-1-evidence/screenshots/controlled-all-stall.png",
+    "audit/date-night-live-discovery-resilience-1-evidence/screenshots/controlled-partial-groups.png",
+    "audit/date-night-live-discovery-resilience-1-evidence/screenshots/controlled-second-mirror.png",
+    "audit/date-night-live-discovery-resilience-1-evidence/screenshots/controlled-third-mirror.png",
+    "audit/date-night-live-discovery-resilience-1-evidence/screenshots/initial-live-15-anything-off.png",
+    "audit/date-night-live-discovery-resilience-1-evidence/screenshots/initial-live-15-haunted-house-off.png",
+    "docs/handoffs/active/date-night-live-discovery-resilience-1-continuation.md",
+    "scripts/date-night-cache.test.mjs",
+    "scripts/date-night-hedged-provider.test.mjs",
+    "scripts/date-night-partial-results.test.mjs",
+    "scripts/date-night-partial-ui.test.mjs",
+    "scripts/date-night-query-plan.test.mjs",
+    "scripts/date-night-resilience-browser.mjs",
+    "scripts/date-night-resilience-live.mjs",
+    "scripts/discovery-provider-deadlines.test.mjs",
+    "scripts/seasonal-discovery.test.mjs",
+    "scripts/tanstack-security.test.mjs",
+    "scripts/test-support/date-night-resilience-preload.mjs",
+    "src/components/date-night-home.tsx",
+    "src/lib/date-night/cache.ts",
+    "src/lib/date-night/identity.ts",
+    "src/lib/date-night/provider-evidence.ts",
+    "src/lib/date-night/query-plan.ts",
+    "src/lib/date-night/search.ts",
+    "src/lib/date-night/types.ts",
+    "src/lib/discovery/hedged-provider.ts"
+  ],
+  "text_evidence_file_count": 100,
+  "text_evidence_inventory": [
+    {
+      "path": "/tmp/pfu-date-night-context-pilot/verdict.json",
+      "bytes": 6640,
+      "sha256": "f95e3a461e66195f9b6c15000031aa89b185f76ae9ebbb31458d72564c6dd5b8"
+    },
+    {
+      "path": "/tmp/pfu-date-night-controlled-context/verdict.json",
+      "bytes": 3206,
+      "sha256": "518e627b8fa116e69dcb21b427c40f6cfe217f0d399f1a8a6229f912b863440e"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-client-seasonal.tap",
+      "bytes": 423,
+      "sha256": "11d1814622aeae3badbe010e1972e7a4b32272ab12dc6741a6b028b0aa95434a"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/baseline-provider.tap",
+      "bytes": 9798,
+      "sha256": "36490198a0d735494ccd285f854fbfad10571b764e6c40a43ec9015d73e76a61"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/deterministic-test-map.md",
+      "bytes": 2291,
+      "sha256": "b4f374528f41b6b37bd57101c8aed46db4128233b6c1fe7d44737aabbe941d4b"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/deterministic-timings.json",
+      "bytes": 840,
+      "sha256": "7f7fdd4d7a6390dc321e3b0fdb68470fecd492d3a588f94ab82fbecd9421a6bb"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m1-hedged-tests.log",
+      "bytes": 1947,
+      "sha256": "0aeaf2f1ed4c70c7b71ad253f82bd78601c088a8c34280134ad8a2eaeb13aae0"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m1-provider-deadlines.log",
+      "bytes": 4237,
+      "sha256": "12e3f44cfb2ec7493290f9cff2ca0f4062284d152268a8929ead5f17ac4ee34c"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m1-typecheck.log",
+      "bytes": 28,
+      "sha256": "dac125c794db702133345f3a0d33f3193f975fddc564ca4f1498b0d4132ed500"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m2-query-tests.log",
+      "bytes": 3184,
+      "sha256": "55c075b815074f9f02312118d4b16875f8024504a1b03d25a62ff242a9fbd685"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m2-seasonal.log",
+      "bytes": 5361,
+      "sha256": "5f886887bd19af15dc7a18a62f78c267656a07f944bdffefc1fe65bbcb24f9d4"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-client-lifecycle.log",
+      "bytes": 4922,
+      "sha256": "df85e8c3571d8b7cfcac236e8bd4a29fd4f6ba886cd0c04ed87750b30f6db10b"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-partial-results.log",
+      "bytes": 1339,
+      "sha256": "a3143682eefb5a92a6fab91fc67bb3bd611a7bfe377f645b07e3dc5dffe9dc15"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-partial-ui.log",
+      "bytes": 311,
+      "sha256": "78bf5781125ceb9bced942e7d1ac429ea34fff46a97f60b82d78af7e49d8dfe2"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-provider-deadlines.log",
+      "bytes": 4233,
+      "sha256": "e8f58f08abbb4d6e841e7f61692b482170b76dd854097638308ed234b825ffd0"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m3-seasonal.tap",
+      "bytes": 12158,
+      "sha256": "802f822caebddbf778ae723f90f81b7325840c9343a84746dd05e232778b6052"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m4-cache.log",
+      "bytes": 2715,
+      "sha256": "f9cbc2ef3814169a3fac982d3aa1cbae54dff25bf31e168a9babb4b11f4d759c"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m4-seasonal.log",
+      "bytes": 7383,
+      "sha256": "9c126c94ee21ebfd05e625917325fa9b1dcf799c7987fb321b9b0c6fb186553f"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-android-after.json",
+      "bytes": 4831,
+      "sha256": "29ee55dfd8acdf6699e18307384a4bb60ee5e9b92ccd876f7e38a4e5f966d8f7"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-android-before.json",
+      "bytes": 4831,
+      "sha256": "29ee55dfd8acdf6699e18307384a4bb60ee5e9b92ccd876f7e38a4e5f966d8f7"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-android-check.log",
+      "bytes": 525,
+      "sha256": "cd4ab08550fb1241ede73bad80df914901b8da3e86204e6888a33ce8734790cc"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-android-sync.log",
+      "bytes": 430,
+      "sha256": "be10d0f7943a7504afd2e984beafef769ac5458367a45965231c863ff5bfeb2c"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-android-tracked-diff.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-availability-location.log",
+      "bytes": 227,
+      "sha256": "2f9f06c5015f26edea96fcf3a7d0abd00668bb123dbb4728d14aded4239f3610"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-build-proof-capture.log",
+      "bytes": 221,
+      "sha256": "da45818eb28ead6f7736036739447af786bd7845801a56295153576b6ddc6f01"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-build-proof-complete.log",
+      "bytes": 353,
+      "sha256": "6b90cd6486a9389f218c308e57afd127a18acf58abaf825b557673b0b0b841a2"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-build-proof-verify.log",
+      "bytes": 353,
+      "sha256": "6b90cd6486a9389f218c308e57afd127a18acf58abaf825b557673b0b0b841a2"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-casino-audit.log",
+      "bytes": 5014,
+      "sha256": "2d0803767ef2020413d2ab49d14b9ed18486816127b5ab7f357f2bd3dcb944d1"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-changed-lint.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-full-suite.log",
+      "bytes": 86341,
+      "sha256": "beb536ecc67489522a4d25fdec57d8fd4bb25a79010782d6d3ab92aea88e8d7d"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-gates.json",
+      "bytes": 941,
+      "sha256": "5e75eda0787af06c8b5433b7947181fcb9c80eff0f075ff5bb4f752a7f6ec0b9"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-npm-ls.log",
+      "bytes": 66061,
+      "sha256": "bc1afc3c45e6696e3c0d480da8710cb68413e060a8360e8efabbc88ce74e373e"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-preservation-results.json",
+      "bytes": 1943,
+      "sha256": "887d9fb9799f7056ab6166429aa3868a4960c1d440dfbdce6bce1b577bc15d0d"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-production-build.log",
+      "bytes": 10189,
+      "sha256": "58f26c43ea5e847e9d8bcaf454f519f49ce9196d5a1211ae948c5216a122f68a"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-python-native.log",
+      "bytes": 101,
+      "sha256": "33060fd73862c5e1af97335504d5b45211fce6d229657f556d8deceeadc52ce4"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-scope-sanity.json",
+      "bytes": 193848,
+      "sha256": "e3b398e78fd7cc809215d42529ced7c8349abb8f677bada900905217a96ba043"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m5-typecheck.log",
+      "bytes": 127,
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-build-capture.log",
+      "bytes": 221,
+      "sha256": "22c2ff27e29dd04ffde4dc51102637e25de409b3a4623dcb766079db5a6a4dd6"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-build-complete.log",
+      "bytes": 353,
+      "sha256": "5300c5dd4b8c803467d6a898e888035032fe701845f6e84e2dd5c97cba2daf88"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-build.log",
+      "bytes": 10189,
+      "sha256": "a847fac72c6f8d2161d30dcf79d944c04428438b8b857c2c310c4a86f7a5dae8"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-full-runtime.txt",
+      "bytes": 8579,
+      "sha256": "519f0f5bde2d7b15c5c50473fbbdeb5191e8b7fd3baa6a5c7a8bf8a7b2ef1afe"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-full-suite.log",
+      "bytes": 87039,
+      "sha256": "41e151a70dd3c9e359b0a949ad76604155f14c21ce06dea6fa62e1ea6b866f2d"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-full.json",
+      "bytes": 17993,
+      "sha256": "2ea9d95afbdd2b31cfecedb309871c214715e00268a82332274a6ac95dd6092f"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-full.log",
+      "bytes": 8752,
+      "sha256": "ae7aedac380589b20623907c088ae0bdbefb72587fe8170d2fb4d2d70c688f00"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-pilot-runtime.txt",
+      "bytes": 2985,
+      "sha256": "046056ac267cd71305689749d738d6a23746913ed8bd58071af56ca49b55f1ab"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-pilot.json",
+      "bytes": 6640,
+      "sha256": "f95e3a461e66195f9b6c15000031aa89b185f76ae9ebbb31458d72564c6dd5b8"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-pilot.log",
+      "bytes": 2114,
+      "sha256": "867a51d0293b477122afc22d58d79a8ec3725ec7042f9e39e6b784f5e09c5c3e"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-query-lint.log",
+      "bytes": 99,
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-query-seasonal.log",
+      "bytes": 7381,
+      "sha256": "5e1ca87b518dd619f96f7ec9f33800a0e61704979e776fd0514e4efd3b52f23c"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-query-tests.log",
+      "bytes": 3981,
+      "sha256": "f916ebea0523779b74572084779abac8202fe0421640f4927efd52992d330d9a"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-context-query-typecheck.log",
+      "bytes": 127,
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-controlled-browser.json",
+      "bytes": 3206,
+      "sha256": "f7ab3916fc65d6a29dab38a30e8dbe93ef032b14a5e068c94a373a4f74ff843d"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-controlled-browser.log",
+      "bytes": 3252,
+      "sha256": "a6eaef231b55912fd45aed49ae2216c75ef3d4f0bedbd02204172218f0787166"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-controlled-context-provider-events.jsonl",
+      "bytes": 8058,
+      "sha256": "1b4c4e78425b26f3a46d5db9abfa9fa261b7df01a342a8b9f4eea35e17677c04"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-controlled-context.json",
+      "bytes": 3206,
+      "sha256": "518e627b8fa116e69dcb21b427c40f6cfe217f0d399f1a8a6229f912b863440e"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-controlled-context.log",
+      "bytes": 3260,
+      "sha256": "c0b15de1583e5ff2968d1694cc6dfa9dedf0031e58669c5f28ae28450072094d"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-controlled-provider-events.jsonl",
+      "bytes": 8058,
+      "sha256": "35be029db3b389acc5c1d2d0c89c11ea4a47532c2540ab530f125da2ac81e3ea"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-build-capture.log",
+      "bytes": 221,
+      "sha256": "8f7a4bfd5675165f463a52a9038fed2c4a30b5950d1c4f73a418fb0c3e9548f6"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-build-complete.log",
+      "bytes": 353,
+      "sha256": "94176daa2ace462cbbe9a1a42330ccb5f17d970efc27a87af496a67d50959e69"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-build.log",
+      "bytes": 10189,
+      "sha256": "39244c3facf7dd5604e387b9e2971f1e0f331f9f2f2e92390cad7883e71c32d7"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-full-suite.log",
+      "bytes": 86741,
+      "sha256": "f4904a3e70fa2d3b2bfe9ce7b9ec3abd7360c26f3a3d6765aa5095e06eddc602"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-pilot.json",
+      "bytes": 6619,
+      "sha256": "c65dac7f30af68368293899d1d944859312c023a6b3801f03e20e1e58997eec6"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-pilot.log",
+      "bytes": 2103,
+      "sha256": "a4d15de6d5f29a800aba329c4c0c8bbd16e4fade724ccf75b73785a7840f33cd"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-exact-key-runtime.md",
+      "bytes": 2915,
+      "sha256": "2755c075fe624d7eee76f7a8cd1cf81324919dddecf5bfbfc75656978ed46028"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-live-attempt-1.json",
+      "bytes": 1260,
+      "sha256": "68bda542f31dd914d498d835ddb94d463628257d483f79a9a2e662558347f7eb"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-live-attempt-1.log",
+      "bytes": 299,
+      "sha256": "cc5ee532aafb70d5a381079ec8958569ab2c3e30e0b36b7e06d6938d4ec05d50"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-live-attempt-2.json",
+      "bytes": 19620,
+      "sha256": "9e38e6b2a5c06e4b5e07c367bccf0a032d36b2d3244877f984e681701d60fca2"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-live-attempt-2.log",
+      "bytes": 7002,
+      "sha256": "6622220140a674f1bcc27a27614499cd3177cf4a0ce33722cb501f55c1b52fb8"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-preview-access-diagnosis.json",
+      "bytes": 412,
+      "sha256": "dc5b3bfc4c71412907e32427204d6be5d2f75cdb7eb4c5c329a61c0463600fb6"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-query-refinement-lint.log",
+      "bytes": 99,
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-query-refinement-query.log",
+      "bytes": 3668,
+      "sha256": "b9b8f49ff6ac983bc6ec097a9619655372f448baf28585d46bd22b5e2b552e4e"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-query-refinement-seasonal.log",
+      "bytes": 7385,
+      "sha256": "a446a55f4d7d63b10f8f75618f6474d5f34baf3f63c89330e730ffaa6d0fbe0a"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-query-refinement-typecheck.log",
+      "bytes": 127,
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-rebuild-capture.log",
+      "bytes": 221,
+      "sha256": "b5b22e6ae303313001206540fb2e2a8b8245c21af783c8d4ad5b89bdafe7d267"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-rebuild-complete.log",
+      "bytes": 353,
+      "sha256": "4d324de3a4bb2a1da2bd827b028175e501104b954309663bd10d89603fcba5fa"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-rebuild.log",
+      "bytes": 10189,
+      "sha256": "79d6f448d910f31a25ee0c2005cfb5ca0cbdb586b6a30221885adb4c4a5cac61"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m6-runtime-observations-1.md",
+      "bytes": 4785,
+      "sha256": "8772ff5fe0f15d74a0b0176492e86d8c71df0132435ce9a3831755a5b4a80bc7"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-android.log",
+      "bytes": 525,
+      "sha256": "cd4ab08550fb1241ede73bad80df914901b8da3e86204e6888a33ce8734790cc"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-build-capture.log",
+      "bytes": 221,
+      "sha256": "9e30260fcf07e1e60caa2c5ef64d41b50af9dfe6801d92ed817219406a6a6d95"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-build-complete.log",
+      "bytes": 353,
+      "sha256": "2055144afe487d068fbbed7bda72445e129402c6538553769865d2621caf3a33"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-build.log",
+      "bytes": 10189,
+      "sha256": "e2c5b7ace55228172fb4aad3f04befaeaac4dd39842c6eefa0b93f52ebcab7bf"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-after.log",
+      "bytes": 2843,
+      "sha256": "b882c10c6ae354e629463db1bcd220233611434f0242b77323b391821f6917e0"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-before.log",
+      "bytes": 4429,
+      "sha256": "3f679574fb04f1bc3ae75bf4710cee4638f5873cc022291942eb7626b4d7be19"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-lint.log",
+      "bytes": 99,
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-typecheck.log",
+      "bytes": 127,
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-casino.log",
+      "bytes": 5014,
+      "sha256": "2d0803767ef2020413d2ab49d14b9ed18486816127b5ab7f357f2bd3dcb944d1"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-changed-lint.log",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-dependencies.log",
+      "bytes": 66061,
+      "sha256": "bc1afc3c45e6696e3c0d480da8710cb68413e060a8360e8efabbc88ce74e373e"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-final-controlled-provider-events.jsonl",
+      "bytes": 8058,
+      "sha256": "a213d97e1648d2e7686bd2e832a6efaa2d1f7f2cae10c2b4af35ab5165dfea2a"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-final-controlled.json",
+      "bytes": 3206,
+      "sha256": "d56253d1ed0ade3e156833d3c91534122f84320aed04c4089db1bb872bca52d6"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-final-controlled.log",
+      "bytes": 3258,
+      "sha256": "f99d86209d8cbd0989d2e6d9f15874789fd07c7f7a299d278f2998b7a6169505"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-final-live-runtime.txt",
+      "bytes": 5776,
+      "sha256": "ec822f3d79e130dd804ce5865ba0a02c2d8b67d688765a5a93e310b69e2c69b8"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-final-live.json",
+      "bytes": 17991,
+      "sha256": "39c28948102d15aafa69ece17c9f6a0f23b71c07cdf61f34bc553bb040464bd7"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-final-live.log",
+      "bytes": 8750,
+      "sha256": "7ca8c14974acc5fef58c133744d5feac3b3b857c885ac1d5a62c9cd714529956"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-full-suite-sandbox.log",
+      "bytes": 3936,
+      "sha256": "e42cf360fce3fc248c256670878aadead5a7d8f3a6dc1a34a3b40ca902d21827"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-full-suite.log",
+      "bytes": 87172,
+      "sha256": "cc027fbf9e2ed265ad89cff35ae704389c0ded08ec26a46c47f6fdbba2595d7d"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-python.log",
+      "bytes": 101,
+      "sha256": "921b60a7fd52e978fbb551cacd29df2d6708879400278e1fcc70fceeb0c6f8e0"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-sandbox-diagnosis.log",
+      "bytes": 4763,
+      "sha256": "06fdee23c06c3d178b7923a048e8da20c21b519a81341d4f99f0abbb98fa6e6b"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-typecheck.log",
+      "bytes": 127,
+      "sha256": "b19be1a127b43f4b12ff880203cd55855c61667abffe84f9f625a6078c3acec4"
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/mandatory-read-manifest.md",
+      "bytes": 7916,
+      "sha256": "77456c8c32c42f83e6127bf6f47be744d9a0d8fce131faf399c58e9f112a5a7d"
+    }
+  ],
+  "automated_scan_hits": [
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-before.log",
+      "kind": "location_assignment",
+      "line": 56,
+      "match_sha256": "7f052fc037d17d0272326b67a5a7af1b235c3447f597d36f43850e471a9ba379",
+      "classification": "Public deterministic test-fixture assertion output; fixed Carthage fixture coordinates/address marker from scripts/date-night-cache.test.mjs:12 and native test runner stack, no user/provider details",
+      "sensitive_live_or_personal_content": false
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-before.log",
+      "kind": "location_assignment",
+      "line": 57,
+      "match_sha256": "803ec62354a956b0139f8b0b7c7c828318a9169442463a5aeb099cfe4e3761b2",
+      "classification": "Public deterministic test-fixture assertion output; fixed Carthage fixture coordinates/address marker from scripts/date-night-cache.test.mjs:12 and native test runner stack, no user/provider details",
+      "sensitive_live_or_personal_content": false
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-before.log",
+      "kind": "raw_exception_stack",
+      "line": 74,
+      "match_sha256": "61e555597447579b87fd1e3c743cb1a985dda1ec9a97921d8902efcf0a3cd497",
+      "classification": "Public deterministic test-fixture assertion output; fixed Carthage fixture coordinates/address marker from scripts/date-night-cache.test.mjs:12 and native test runner stack, no user/provider details",
+      "sensitive_live_or_personal_content": false
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-before.log",
+      "kind": "raw_exception_stack",
+      "line": 76,
+      "match_sha256": "81d21eb9d0cce96bbb6b68d664f0cb42535fcb06c0a7fc65004cb0902e13f1ae",
+      "classification": "Public deterministic test-fixture assertion output; fixed Carthage fixture coordinates/address marker from scripts/date-night-cache.test.mjs:12 and native test runner stack, no user/provider details",
+      "sensitive_live_or_personal_content": false
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-before.log",
+      "kind": "raw_exception_stack",
+      "line": 77,
+      "match_sha256": "64f2cff143ec17d001205060a6da2c09bd18ed51a4b499128856081c4420c432",
+      "classification": "Public deterministic test-fixture assertion output; fixed Carthage fixture coordinates/address marker from scripts/date-night-cache.test.mjs:12 and native test runner stack, no user/provider details",
+      "sensitive_live_or_personal_content": false
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-before.log",
+      "kind": "raw_exception_stack",
+      "line": 78,
+      "match_sha256": "3d30388f7c22f4a70d2529a6917513e32dc4ae2079896bb731c59c95c58b4276",
+      "classification": "Public deterministic test-fixture assertion output; fixed Carthage fixture coordinates/address marker from scripts/date-night-cache.test.mjs:12 and native test runner stack, no user/provider details",
+      "sensitive_live_or_personal_content": false
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-before.log",
+      "kind": "raw_exception_stack",
+      "line": 79,
+      "match_sha256": "d498d4de04cdd9a1510c012ceafd127fdda5d0b5f5ce694f0841772da525f452",
+      "classification": "Public deterministic test-fixture assertion output; fixed Carthage fixture coordinates/address marker from scripts/date-night-cache.test.mjs:12 and native test runner stack, no user/provider details",
+      "sensitive_live_or_personal_content": false
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-cache-tie-before.log",
+      "kind": "raw_exception_stack",
+      "line": 80,
+      "match_sha256": "64f2cff143ec17d001205060a6da2c09bd18ed51a4b499128856081c4420c432",
+      "classification": "Public deterministic test-fixture assertion output; fixed Carthage fixture coordinates/address marker from scripts/date-night-cache.test.mjs:12 and native test runner stack, no user/provider details",
+      "sensitive_live_or_personal_content": false
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-sandbox-diagnosis.log",
+      "kind": "raw_exception_stack",
+      "line": 55,
+      "match_sha256": "7861b9d60e647441146b8b53bc3a8116bf15e2fcab88bb215ab83d9db7743902",
+      "classification": "Native test runner EPERM stack for loopback 127.0.0.1; environment-only diagnostic, no provider/user data",
+      "sensitive_live_or_personal_content": false
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-sandbox-diagnosis.log",
+      "kind": "raw_exception_stack",
+      "line": 57,
+      "match_sha256": "074ff47ebe68e6f911fe30b8a7a0762b5af56124effa00227196c7e67fb55948",
+      "classification": "Native test runner EPERM stack for loopback 127.0.0.1; environment-only diagnostic, no provider/user data",
+      "sensitive_live_or_personal_content": false
+    },
+    {
+      "path": "audit/date-night-live-discovery-resilience-1-evidence/m7-sandbox-diagnosis.log",
+      "kind": "raw_exception_stack",
+      "line": 59,
+      "match_sha256": "7a0605c6450429ec86e7fd6ca395eda65f4d8076c225abc35047abb81d159c69",
+      "classification": "Native test runner EPERM stack for loopback 127.0.0.1; environment-only diagnostic, no provider/user data",
+      "sensitive_live_or_personal_content": false
+    }
+  ],
+  "visual_review": {
+    "original_screenshots_reviewed": 24,
+    "precise_location_or_address_visible": false,
+    "note": "Carthage town label only in synthetic screenshots; live location control masked during original browser capture. No editing/resizing performed."
+  },
+  "requirements_gaps": [
+    "Independent verification after immutable candidate publication; no merge/promotion authorized"
+  ],
+  "identity_convention": {
+    "recommended": "Use the immutable tested executable source SHA/tree/sole parent explicitly and keep final documentation commit identity separate; if user requires final commit including reports, identify introducing commit with resolver and publish exact resolved values in final response without amendment.",
+    "self_reference": "A Git commit cannot contain its own SHA/tree. A tree also cannot contain its own tree SHA. Never fabricate literal final identity fields.",
+    "resolver_commands": [
+      "git log --diff-filter=A --format=%H -- audit/date-night-live-discovery-resilience-1-2026-10-02.json",
+      "git show -s --format='%H %T %P' <resolved-final-candidate>"
+    ]
+  },
+  "mutations": "Scratch report only; no repository/index/ref/network mutation",
+  "privacy_review_passed": true,
+  "privacy_review_note": "11 regex hits manually classified as synthetic fixture and loopback test diagnostics. No credentials, personal identifiers, live precise-location/address, raw provider query/payload/exception details found. Provider/application logging remains bounded and sanitized.",
+  "final_boundary_readback": {
+    "main": "4d937e58d2a65567b54ac5271915bc85b498898b",
+    "production_deployment": "dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL",
+    "production_commit": "4d937e58d2a65567b54ac5271915bc85b498898b",
+    "production_aliases_confirmed": [
+      "pickforus.app",
+      "dinner-roulette-chi.vercel.app"
+    ],
+    "read_at_utc": "2026-10-03T01:25Z",
+    "note": "Fresh git fetch and Vercel deployment detail, READY target production, unchanged aliases"
+  },
+  "protected_manifest_reference": "audit/date-night-live-discovery-resilience-1-evidence/m5-scope-sanity.json#protected_hashes",
+  "protected_hashes_verified_count": 454
+}
