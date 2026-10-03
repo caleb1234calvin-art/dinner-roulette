@@ -33,6 +33,7 @@ jobs:
         env:
           VITE_AUTH_ENABLED: "true"
           PFU_RADIAL_PREVIEW_VERIFIED: "1"
+          BROWSER_ALLOW_EXTERNAL_HOST: "1"
         run: node scripts/date-night-radial-live.mjs https://dinner-roulette-jdys9liwl-minions-9e2c.vercel.app /tmp/pfu-radial-remediation-live
       - uses: actions/upload-artifact@v4
         if: always()
