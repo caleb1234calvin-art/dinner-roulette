@@ -1,0 +1,69 @@
+name: Radial live acceptance remediation
+
+on:
+  pull_request:
+    branches:
+      - fix/date-night-radial-loading-browser-acceptance-remediation-1
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bounded-live:
+    name: Bounded radial live acceptance
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout acceptance snapshot
+        uses: actions/checkout@v4
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: Resolve Chromium executable
+        shell: bash
+        run: |
+          CHROME_PATH="$(node --input-type=module -e "import { chromium } from 'playwright'; console.log(chromium.executablePath())")"
+          test -x "$CHROME_PATH"
+          echo "CHROME_PATH=$CHROME_PATH" >> "$GITHUB_ENV"
+
+      - name: Capture browser build proof
+        run: VITE_AUTH_ENABLED=true node scripts/browser-build-proof.mjs capture
+
+      - name: Safe auth-enabled production build
+        run: VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
+
+      - name: Complete and verify browser build proof
+        run: |
+          VITE_AUTH_ENABLED=true node scripts/browser-build-proof.mjs complete
+          VITE_AUTH_ENABLED=true node scripts/browser-build-proof.mjs verify
+
+      - name: Run one bounded exact-Preview live acceptance
+        env:
+          VITE_AUTH_ENABLED: "true"
+          PFU_RADIAL_PREVIEW_VERIFIED: "1"
+          BROWSER_ALLOW_EXTERNAL_HOST: "1"
+          PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH: ${{ env.CHROME_PATH }}
+        run: |
+          node scripts/date-night-radial-live.mjs \
+            https://dinner-roulette-jdys9liwl-minions-9e2c.vercel.app \
+            /tmp/pfu-radial-live-acceptance-remediation-1
+
+      - name: Upload live evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: radial-live-acceptance-remediation
+          path: /tmp/pfu-radial-live-acceptance-remediation-1
+          if-no-files-found: warn
+          retention-days: 7
