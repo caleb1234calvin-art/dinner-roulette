@@ -492,6 +492,24 @@ test("real selected query cannot resurrect an active duplicate by dropping its l
 // V-DR-01: fetch stubs must honor the actual requested predicates. Returning the
 // whole fixture regardless of the query would hide omitted lifecycle evidence.
 const lifecycleLocation = { lat: 43.65348, lon: -79.38393, label: "Toronto", source: "manual" };
+for (const activityTypes of [["anything"], ["corn-maze", "pumpkin-patch"], ["pumpkin-patch"], ["corn-maze"]]) {
+  test(`RV2 demolished=yes real acquisition parity: ${activityTypes.join(" + ")}`, async (t) => {
+    const state = installLifecycleProvider(t);
+    state.elements = [
+      { type: "node", id: 9201, lat: lifecycleLocation.lat, lon: lifecycleLocation.lon,
+        tags: { name: "RV2 Twinfield", attraction: "corn_maze" } },
+      { type: "node", id: 9202, lat: lifecycleLocation.lat, lon: lifecycleLocation.lon,
+        tags: { name: "RV2 Twinfield", attraction: "pumpkin_patch", demolished: "yes" } },
+    ];
+    const { result, pool } = await lifecycleSearch(activityTypes);
+    t.diagnostic(JSON.stringify({ selection: activityTypes, source: result.source,
+      partial: result.discovery.partial, eligible: pool.map((place) => place.id),
+      acquired: result.venues.flatMap((place) => place.discoveryEvidence.map((item) => item.id)) }));
+    assert.equal(result.source, "live");
+    assert.equal(result.discovery.partial, false);
+    assert.deepEqual(pool, [], "A narrowed category cannot omit a matching demolished=yes record");
+  });
+}
 function lifecycleElement(id, tags, latitudeOffset = 0) {
   return { type: id % 2 ? "node" : "way", id,
     lat: lifecycleLocation.lat + latitudeOffset, lon: lifecycleLocation.lon, tags };

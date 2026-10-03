@@ -1,0 +1,215 @@
+TAP version 13
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 45,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 44,
+#       winnerMirror: 1
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'empty',
+#       durationMs: 43,
+#       winnerMirror: 1
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'empty',
+#       durationMs: 43,
+#       winnerMirror: 1
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'empty',
+#       durationMs: 43,
+#       winnerMirror: 1
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 43,
+#       outcome: 'empty'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 43,
+#       outcome: 'empty'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 43,
+#       outcome: 'empty'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 43,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# Subtest: RV2 demolished=yes real acquisition parity: anything
+ok 1 - RV2 demolished=yes real acquisition parity: anything
+  ---
+  duration_ms: 49.082075
+  type: 'test'
+  ...
+# {"selection":["anything"],"source":"live","partial":false,"eligible":[],"acquired":["date-night-osm-node-9201","date-night-osm-node-9202"]}
+# Subtest: RV2 demolished=yes real acquisition parity: corn-maze + pumpkin-patch
+ok 2 - RV2 demolished=yes real acquisition parity: corn-maze + pumpkin-patch
+  ---
+  duration_ms: 3.848737
+  type: 'test'
+  ...
+# {"selection":["corn-maze","pumpkin-patch"],"source":"live","partial":false,"eligible":[],"acquired":["date-night-osm-node-9201","date-night-osm-node-9202"]}
+# Subtest: RV2 demolished=yes real acquisition parity: pumpkin-patch
+ok 3 - RV2 demolished=yes real acquisition parity: pumpkin-patch
+  ---
+  duration_ms: 2.829289
+  type: 'test'
+  ...
+# {"selection":["pumpkin-patch"],"source":"live","partial":false,"eligible":[],"acquired":["date-night-osm-node-9202"]}
+# Subtest: RV2 demolished=yes real acquisition parity: corn-maze
+not ok 4 - RV2 demolished=yes real acquisition parity: corn-maze
+  ---
+  duration_ms: 4.933073
+  type: 'test'
+  location: '/workspace/scratch/7cfb612d1e7c/dinner-roulette/scripts/date-night-query-plan.test.mjs:496:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    A narrowed category cannot omit a matching demolished=yes record
+    + actual - expected
+
+    + [
+    +   {
+    +     activityTypes: [
+    +       'corn-maze'
+    +     ],
+    +     address: 'Address unavailable',
+    +     availability: {
+    +       browseEligible: true,
+    +       checkedAt: undefined,
+    +       label: 'Schedule unconfirmed',
+    +       openNowEligible: false,
+    +       revalidationDue: true,
+    +       season: 'unconfirmed',
+    +       status: 'schedule-unconfirmed'
+    +     },
+    +     closesLabel: 'Schedule unconfirmed',
+    +     closingSoon: false,
+    +     cuisineLabel: 'Corn Maze',
+    +     cuisines: [
+    +       'other'
+    +     ],
+    +     discoveryEvidence: [
+    +       {
+    +         activityTypes: [
+    +           'corn-maze'
+    +         ],
+    +         id: 'date-night-osm-node-9201',
+    +         lifecycle: undefined,
+    +         openingHours: null,
+    +         source: 'osm',
+    +         website: null
+    +       }
+    +     ],
+    +     distanceMiles: 0,
+    +     hoursKnown: false,
+    +     id: 'date-night-osm-node-9201',
+    +     isChain: false,
+    +     isOpen: false,
+    +     lat: 43.65348,
+    +     lifecycle: undefined,
+    +     lon: -79.38393,
+    +     moodLevel: 2,
+    +     name: 'RV2 Twinfield',
+    +     openingHours: null,
+    +     phone: null,
+    +     photoKey: 'cafe',
+    +     priceLevel: null,
+    +     rating: null,
+    +     reviewCount: null,
+    +     source: 'osm',
+    +     website: null
+    +   }
+    + ]
+    - []
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0:
+      id: 'date-night-osm-node-9201'
+      name: 'RV2 Twinfield'
+      lat: 43.65348
+      lon: -79.38393
+      address: 'Address unavailable'
+      cuisines:
+        0: 'other'
+      cuisineLabel: 'Corn Maze'
+      priceLevel: ~
+      rating: ~
+      reviewCount: ~
+      openingHours: ~
+      phone: ~
+      website: ~
+      isChain: false
+      photoKey: 'cafe'
+      source: 'osm'
+      activityTypes:
+        0: 'corn-maze'
+      discoveryEvidence:
+        0:
+          id: 'date-night-osm-node-9201'
+          source: 'osm'
+          activityTypes: <Circular>
+          openingHours: ~
+          website: ~
+      moodLevel: 2
+      distanceMiles: 0
+      isOpen: false
+      hoursKnown: false
+      closesLabel: 'Schedule unconfirmed'
+      closingSoon: false
+      availability:
+        status: 'schedule-unconfirmed'
+        season: 'unconfirmed'
+        label: 'Schedule unconfirmed'
+        browseEligible: true
+        openNowEligible: false
+        revalidationDue: true
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/7cfb612d1e7c/dinner-roulette/scripts/date-night-query-plan.test.mjs:510:12)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# {"selection":["corn-maze"],"source":"live","partial":false,"eligible":["date-night-osm-node-9201"],"acquired":["date-night-osm-node-9201"]}
+1..4
+# tests 4
+# suites 0
+# pass 3
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 781.839064
