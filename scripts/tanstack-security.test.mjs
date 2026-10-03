@@ -1,3 +1,4 @@
+import { affirmativeClauses } from "./test-support/date-night-query-evaluator.mjs";
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 import { once } from "node:events";
@@ -142,8 +143,7 @@ test("Date Night seasonal on/off survives real transport with a fixed October da
   const on = await rpc(app, "searchDateNight", { ...location, spookySeasonEnabled: true });
   assert.ok(!off.venues.some((place) => place.activityTypes.includes("haunted-house")));
   assert.ok(on.venues.some((place) => place.activityTypes.includes("haunted-house")));
-  const affirmativeQuery = (call) => new URLSearchParams(call.body).get("data").split("\n")
-    .filter((line) => !/^\s*nwr\["(disused|abandoned|was|demolished|removed|razed|destroyed):/.test(line)).join("\n");
+  const affirmativeQuery = (call) => affirmativeClauses(new URLSearchParams(call.body).get("data")).join("\n");
   assert.ok(calls.slice(0, offCalls).every((call) => !affirmativeQuery(call).includes("haunted_house")));
   assert.ok(calls.slice(offCalls).some((call) => affirmativeQuery(call).includes("haunted_house")));
   assert.equal(off.discovery.groups.length, 3);

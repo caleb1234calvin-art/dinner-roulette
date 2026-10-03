@@ -1,3 +1,4 @@
+import { affirmativeClauses } from "./test-support/date-night-query-evaluator.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
 import fs from "node:fs";
@@ -307,8 +308,7 @@ test("ordinary Date Night and seasonal toggle still work internationally; unknow
   });
   assert.deepEqual(inactive.venues, []);
   for (const query of queries) {
-    const affirmative = query.split("\n")
-      .filter((line) => !/^\s*nwr\["(disused|abandoned|was|demolished|removed|razed|destroyed):/.test(line)).join("\n");
+    const affirmative = affirmativeClauses(query).join("\n");
     assert.doesNotMatch(affirmative, /theme_park|haunted_trail/);
   }
 });

@@ -1,0 +1,7556 @@
+TAP version 13
+# Subtest: canonical lifecycle interpretation preserves the full frozen key/value semantics and precedence
+ok 1 - canonical lifecycle interpretation preserves the full frozen key/value semantics and precedence
+  ---
+  duration_ms: 25.959262
+  type: 'test'
+  ...
+# Subtest: generated POSIX value matcher has exact truth semantics, including false prefixes/extensions and case
+ok 2 - generated POSIX value matcher has exact truth semantics, including false prefixes/extensions and case
+  ---
+  duration_ms: 1.367754
+  type: 'test'
+  ...
+# Subtest: canonical normalization preserves fill-only, input ordering, active tags and supported suffix boundaries
+ok 3 - canonical normalization preserves fill-only, input ordering, active tags and supported suffix boundaries
+  ---
+  duration_ms: 4.990653
+  type: 'test'
+  ...
+# Subtest: registry parity demolished: simple flags and every recognized namespace across every supported category
+ok 4 - registry parity demolished: simple flags and every recognized namespace across every supported category
+  ---
+  duration_ms: 439.877505
+  type: 'test'
+  ...
+# Subtest: registry parity removed: simple flags and every recognized namespace across every supported category
+ok 5 - registry parity removed: simple flags and every recognized namespace across every supported category
+  ---
+  duration_ms: 386.534084
+  type: 'test'
+  ...
+# Subtest: registry parity razed: simple flags and every recognized namespace across every supported category
+ok 6 - registry parity razed: simple flags and every recognized namespace across every supported category
+  ---
+  duration_ms: 451.728343
+  type: 'test'
+  ...
+# Subtest: registry parity destroyed: simple flags and every recognized namespace across every supported category
+ok 7 - registry parity destroyed: simple flags and every recognized namespace across every supported category
+  ---
+  duration_ms: 450.813858
+  type: 'test'
+  ...
+# Subtest: registry parity disused: simple flags and every recognized namespace across every supported category
+ok 8 - registry parity disused: simple flags and every recognized namespace across every supported category
+  ---
+  duration_ms: 237.876531
+  type: 'test'
+  ...
+# Subtest: registry parity abandoned: simple flags and every recognized namespace across every supported category
+ok 9 - registry parity abandoned: simple flags and every recognized namespace across every supported category
+  ---
+  duration_ms: 284.736806
+  type: 'test'
+  ...
+# Subtest: registry parity was: simple flags and every recognized namespace across every supported category
+ok 10 - registry parity was: simple flags and every recognized namespace across every supported category
+  ---
+  duration_ms: 221.408479
+  type: 'test'
+  ...
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 5,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 5,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 4,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 4,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 4,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 4,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 2,
+#   budgetExhausted: false,
+#   requestedGroups: 2,
+#   successfulGroups: 2,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# Subtest: real handler demolished: forward/reverse seasonal and ordinary flags, result order, later mirror
+ok 11 - real handler demolished: forward/reverse seasonal and ordinary flags, result order, later mirror
+  ---
+  duration_ms: 124.779827
+  type: 'test'
+  ...
+# Subtest: real handler demolished: reconstructed contextual seasonal evidence and ordinary namespace parity
+ok 12 - real handler demolished: reconstructed contextual seasonal evidence and ordinary namespace parity
+  ---
+  duration_ms: 7.842457
+  type: 'test'
+  ...
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 4,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 2,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 2,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 4,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 2,
+#   successfulGroups: 2,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 5,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# Subtest: real handler removed: forward/reverse seasonal and ordinary flags, result order, later mirror
+ok 13 - real handler removed: forward/reverse seasonal and ordinary flags, result order, later mirror
+  ---
+  duration_ms: 76.241315
+  type: 'test'
+  ...
+# Subtest: real handler removed: reconstructed contextual seasonal evidence and ordinary namespace parity
+ok 14 - real handler removed: reconstructed contextual seasonal evidence and ordinary namespace parity
+  ---
+  duration_ms: 8.155269
+  type: 'test'
+  ...
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 4,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 2,
+#   budgetExhausted: false,
+#   requestedGroups: 2,
+#   successfulGroups: 2,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 6,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 6,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 5,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# Subtest: real handler razed: forward/reverse seasonal and ordinary flags, result order, later mirror
+ok 15 - real handler razed: forward/reverse seasonal and ordinary flags, result order, later mirror
+  ---
+  duration_ms: 54.484293
+  type: 'test'
+  ...
+# Subtest: real handler razed: reconstructed contextual seasonal evidence and ordinary namespace parity
+ok 16 - real handler razed: reconstructed contextual seasonal evidence and ordinary namespace parity
+  ---
+  duration_ms: 10.73941
+  type: 'test'
+  ...
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 4,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 4,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 4,
+#   budgetExhausted: false,
+#   requestedGroups: 2,
+#   successfulGroups: 2,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 5,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 2,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# Subtest: real handler destroyed: forward/reverse seasonal and ordinary flags, result order, later mirror
+ok 17 - real handler destroyed: forward/reverse seasonal and ordinary flags, result order, later mirror
+  ---
+  duration_ms: 64.92652
+  type: 'test'
+  ...
+# Subtest: real handler destroyed: reconstructed contextual seasonal evidence and ordinary namespace parity
+ok 18 - real handler destroyed: reconstructed contextual seasonal evidence and ordinary namespace parity
+  ---
+  duration_ms: 10.004631
+  type: 'test'
+  ...
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 4,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 2,
+#   successfulGroups: 2,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# Subtest: real handler disused: forward/reverse seasonal and ordinary flags, result order, later mirror
+ok 19 - real handler disused: forward/reverse seasonal and ordinary flags, result order, later mirror
+  ---
+  duration_ms: 53.024085
+  type: 'test'
+  ...
+# Subtest: real handler disused: reconstructed contextual seasonal evidence and ordinary namespace parity
+ok 20 - real handler disused: reconstructed contextual seasonal evidence and ordinary namespace parity
+  ---
+  duration_ms: 7.066537
+  type: 'test'
+  ...
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 3,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 7,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 6,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 6,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 6,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 5,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 6,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 5,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 2,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 5,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 5,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 5,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 3,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 3,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 3,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 3,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 3,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 3,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 3,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 3,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 2,
+#   successfulGroups: 2,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# Subtest: real handler abandoned: forward/reverse seasonal and ordinary flags, result order, later mirror
+ok 21 - real handler abandoned: forward/reverse seasonal and ordinary flags, result order, later mirror
+  ---
+  duration_ms: 62.226714
+  type: 'test'
+  ...
+# Subtest: real handler abandoned: reconstructed contextual seasonal evidence and ordinary namespace parity
+ok 22 - real handler abandoned: reconstructed contextual seasonal evidence and ordinary namespace parity
+  ---
+  duration_ms: 6.98916
+  type: 'test'
+  ...
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 4,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 2,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 2,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 3,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 2,
+#   successfulGroups: 2,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 2,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# Subtest: real handler was: forward/reverse seasonal and ordinary flags, result order, later mirror
+ok 23 - real handler was: forward/reverse seasonal and ordinary flags, result order, later mirror
+  ---
+  duration_ms: 54.767777
+  type: 'test'
+  ...
+# Subtest: real handler was: reconstructed contextual seasonal evidence and ordinary namespace parity
+ok 24 - real handler was: reconstructed contextual seasonal evidence and ordinary namespace parity
+  ---
+  duration_ms: 5.645772
+  type: 'test'
+  ...
+# Subtest: all supported active seasonal contexts carry simple lifecycle flags independent of category
+ok 25 - all supported active seasonal contexts carry simple lifecycle flags independent of category
+  ---
+  duration_ms: 6.422825
+  type: 'test'
+  ...
+# Subtest: different groups, completion order, duplicate identities and disused/permanent conflicts remain deterministic
+ok 26 - different groups, completion order, duplicate identities and disused/permanent conflicts remain deterministic
+  ---
+  duration_ms: 13.203099
+  type: 'test'
+  ...
+# Subtest: lifecycle-only, false flags, generic contexts and unsupported status tags never create eligible seasonal leakage
+ok 27 - lifecycle-only, false flags, generic contexts and unsupported status tags never create eligible seasonal leakage
+  ---
+  duration_ms: 8.991061
+  type: 'test'
+  ...
+# Subtest: negative-key search is exclusively set-bounded, positive queries stay narrow and hostile input never interpolates
+ok 28 - negative-key search is exclusively set-bounded, positive queries stay narrow and hostile input never interpolates
+  ---
+  duration_ms: 1.225309
+  type: 'test'
+  ...
+# Subtest: seasonal live success survives stalled parks and merges saved coverage with honest partial metadata
+ok 29 - seasonal live success survives stalled parks and merges saved coverage with honest partial metadata
+  ---
+  duration_ms: 59.150121
+  type: 'test'
+  ...
+# Subtest: entertainment survives seasonal HTTP failure with selected failed coverage retained
+ok 30 - entertainment survives seasonal HTTP failure with selected failed coverage retained
+  ---
+  duration_ms: 9.520911
+  type: 'test'
+  ...
+# Subtest: valid empty requested group is successful coverage, distinct from missing venues and failed acquisition
+ok 31 - valid empty requested group is successful coverage, distinct from missing venues and failed acquisition
+  ---
+  duration_ms: 1.997835
+  type: 'test'
+  ...
+# Subtest: valid empty success with a failed sibling remains partial live, not fallback or terminal error
+ok 32 - valid empty success with a failed sibling remains partial live, not fallback or terminal error
+  ---
+  duration_ms: 2.737923
+  type: 'test'
+  ...
+# Subtest: cross-group equal OSM identity unions disjoint classifications despite changed provider name
+ok 33 - cross-group equal OSM identity unions disjoint classifications despite changed provider name
+  ---
+  duration_ms: 3.421254
+  type: 'test'
+  ...
+# Subtest: identical cross-group evidence is deduplicated and permanently closed evidence dominates active siblings
+ok 34 - identical cross-group evidence is deduplicated and permanently closed evidence dominates active siblings
+  ---
+  duration_ms: 6.0821
+  type: 'test'
+  ...
+# Subtest: malformed missing-elements sibling cannot erase valid seasonal live response
+ok 35 - malformed missing-elements sibling cannot erase valid seasonal live response
+  ---
+  duration_ms: 2.631792
+  type: 'test'
+  ...
+# Subtest: malformed remark sibling cannot erase valid seasonal live response
+ok 36 - malformed remark sibling cannot erase valid seasonal live response
+  ---
+  duration_ms: 2.093249
+  type: 'test'
+  ...
+# Subtest: malformed invalid-json sibling cannot erase valid seasonal live response
+ok 37 - malformed invalid-json sibling cannot erase valid seasonal live response
+  ---
+  duration_ms: 2.957834
+  type: 'test'
+  ...
+# Subtest: all four groups/mirrors stalled settle honest saved fallback at 12.5s
+ok 38 - all four groups/mirrors stalled settle honest saved fallback at 12.5s
+  ---
+  duration_ms: 16.577633
+  type: 'test'
+  ...
+# Subtest: all four groups/mirrors stalled settle terminal error at 12.5s
+ok 39 - all four groups/mirrors stalled settle terminal error at 12.5s
+  ---
+  duration_ms: 5.316615
+  type: 'test'
+  ...
+# Subtest: all valid-empty groups are live coverage rather than outage even with zero venues
+ok 40 - all valid-empty groups are live coverage rather than outage even with zero venues
+  ---
+  duration_ms: 2.554155
+  type: 'test'
+  ...
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 2,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 1,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 3,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 2,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 4,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'success',
+#       durationMs: 4,
+#       winnerMirror: 2
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'culture',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'http-error',
+#       status: 503
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 1,
+#       durationMs: 3,
+#       outcome: 'success'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 2,
+#   budgetExhausted: false,
+#   requestedGroups: 3,
+#   successfulGroups: 3,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'entertainment',
+#       outcome: 'empty',
+#       durationMs: 2,
+#       winnerMirror: 1
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'success',
+#       durationMs: 2,
+#       winnerMirror: 1
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'empty',
+#       durationMs: 2,
+#       winnerMirror: 1
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'success'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'empty'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'empty'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'merged',
+#   durationMs: 2,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'empty',
+#       durationMs: 1,
+#       winnerMirror: 1
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'empty'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'merged',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'empty',
+#       durationMs: 0,
+#       winnerMirror: 1
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'empty'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'merged',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'culture',
+#       outcome: 'empty',
+#       durationMs: 1,
+#       winnerMirror: 1
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'empty'
+#     }
+#   ]
+# }
+# Subtest: all Date Night database selectors use exact keys; lifecycle regex keys are bounded to a named set
+ok 41 - all Date Night database selectors use exact keys; lifecycle regex keys are bounded to a named set
+  ---
+  duration_ms: 4.529888
+  type: 'test'
+  ...
+# Subtest: all 6167 canonical fixtures preserve selected positive semantics and broad identity-negative lifecycle acquisition
+ok 42 - all 6167 canonical fixtures preserve selected positive semantics and broad identity-negative lifecycle acquisition
+  ---
+  duration_ms: 1570.378027
+  type: 'test'
+  ...
+# Subtest: bounded context preselection never leaks generic places into seasonal output
+ok 43 - bounded context preselection never leaks generic places into seasonal output
+  ---
+  duration_ms: 16.043475
+  type: 'test'
+  ...
+# Subtest: precise and lifecycle selectors stay independent of the active context set
+ok 44 - precise and lifecycle selectors stay independent of the active context set
+  ---
+  duration_ms: 9.910509
+  type: 'test'
+  ...
+# Subtest: query fixture interpreter rejects missing/unknown sets, unbounded selectors and unexpected output grammar
+ok 45 - query fixture interpreter rejects missing/unknown sets, unbounded selectors and unexpected output grammar
+  ---
+  duration_ms: 7.403946
+  type: 'test'
+  ...
+# Subtest: exact text keys preserve classifier key casing while still matching case-insensitive values
+ok 46 - exact text keys preserve classifier key casing while still matching case-insensitive values
+  ---
+  duration_ms: 6.299087
+  type: 'test'
+  ...
+# Subtest: Anything, omitted and empty category input produce all and only active query groups
+ok 47 - Anything, omitted and empty category input produce all and only active query groups
+  ---
+  duration_ms: 0.754238
+  type: 'test'
+  ...
+# Subtest: specific categories plan only required groups and combine selected siblings
+ok 48 - specific categories plan only required groups and combine selected siblings
+  ---
+  duration_ms: 0.30466
+  type: 'test'
+  ...
+# Subtest: query plans and normalized coverage signatures are deterministic without mutating caller input
+ok 49 - query plans and normalized coverage signatures are deterministic without mutating caller input
+  ---
+  duration_ms: 0.246813
+  type: 'test'
+  ...
+# Subtest: Halloween OFF strips stale seasonal selections and preserves existing Anything fallback
+ok 50 - Halloween OFF strips stale seasonal selections and preserves existing Anything fallback
+  ---
+  duration_ms: 0.902062
+  type: 'test'
+  ...
+# Subtest: activity validation rejects malformed, inherited, unknown and query-injection inputs
+ok 51 - activity validation rejects malformed, inherited, unknown and query-injection inputs
+  ---
+  duration_ms: 2.578962
+  type: 'test'
+  ...
+# Subtest: every ordinary category owns exact active clauses and shares supported identity-negative companions
+ok 52 - every ordinary category owns exact active clauses and shares supported identity-negative companions
+  ---
+  duration_ms: 91.113241
+  type: 'test'
+  ...
+# Subtest: query construction independently enforces concrete whitelist input, finite coordinates and capped radius
+ok 53 - query construction independently enforces concrete whitelist input, finite coordinates and capped radius
+  ---
+  duration_ms: 0.659215
+  type: 'test'
+  ...
+# Subtest: seasonal-only queries do not acquire unrelated ordinary or seasonal offerings
+ok 54 - seasonal-only queries do not acquire unrelated ordinary or seasonal offerings
+  ---
+  duration_ms: 6.840566
+  type: 'test'
+  ...
+# Subtest: precise seasonal attraction and agricultural maze representations remain reachable
+ok 55 - precise seasonal attraction and agricultural maze representations remain reachable
+  ---
+  duration_ms: 2.90859
+  type: 'test'
+  ...
+# Subtest: selected seasonal metadata remains reachable across every supported context, field and separator
+ok 56 - selected seasonal metadata remains reachable across every supported context, field and separator
+  ---
+  duration_ms: 65.851446
+  type: 'test'
+  ...
+# Subtest: retained Exeter theme-park record remains acquired by a Corn Maze-only plan
+ok 57 - retained Exeter theme-park record remains acquired by a Corn Maze-only plan
+  ---
+  duration_ms: 0.766837
+  type: 'test'
+  ...
+# Subtest: narrowed seasonal acquisition retains lifecycle-only evidence previously reached through broad contexts
+ok 58 - narrowed seasonal acquisition retains lifecycle-only evidence previously reached through broad contexts
+  ---
+  duration_ms: 12.50803
+  type: 'test'
+  ...
+# Subtest: real selected query cannot resurrect an active duplicate by dropping its lifecycle-only theme-park record
+ok 59 - real selected query cannot resurrect an active duplicate by dropping its lifecycle-only theme-park record
+  ---
+  duration_ms: 44.054786
+  type: 'test'
+  ...
+# Subtest: RV2 demolished=yes real acquisition parity: anything
+ok 60 - RV2 demolished=yes real acquisition parity: anything
+  ---
+  duration_ms: 6.60502
+  type: 'test'
+  ...
+# {"selection":["anything"],"source":"live","partial":false,"eligible":[],"acquired":["date-night-osm-node-9201","date-night-osm-node-9202"]}
+# Subtest: RV2 demolished=yes real acquisition parity: corn-maze + pumpkin-patch
+ok 61 - RV2 demolished=yes real acquisition parity: corn-maze + pumpkin-patch
+  ---
+  duration_ms: 1.984495
+  type: 'test'
+  ...
+# {"selection":["corn-maze","pumpkin-patch"],"source":"live","partial":false,"eligible":[],"acquired":["date-night-osm-node-9201","date-night-osm-node-9202"]}
+# Subtest: RV2 demolished=yes real acquisition parity: pumpkin-patch
+ok 62 - RV2 demolished=yes real acquisition parity: pumpkin-patch
+  ---
+  duration_ms: 1.393613
+  type: 'test'
+  ...
+# {"selection":["pumpkin-patch"],"source":"live","partial":false,"eligible":[],"acquired":["date-night-osm-node-9202"]}
+# Subtest: RV2 demolished=yes real acquisition parity: corn-maze
+ok 63 - RV2 demolished=yes real acquisition parity: corn-maze
+  ---
+  duration_ms: 1.502908
+  type: 'test'
+  ...
+# {"selection":["corn-maze"],"source":"live","partial":false,"eligible":[],"acquired":["date-night-osm-node-9201","date-night-osm-node-9202"]}
+# Subtest: V-DR-01 cross-tag demolition excludes active Corn identity for corn-maze in either provider/result order
+ok 64 - V-DR-01 cross-tag demolition excludes active Corn identity for corn-maze in either provider/result order
+  ---
+  duration_ms: 8.764229
+  type: 'test'
+  ...
+# Subtest: V-DR-01 cross-tag demolition excludes active Corn identity for pumpkin-patch in either provider/result order
+ok 65 - V-DR-01 cross-tag demolition excludes active Corn identity for pumpkin-patch in either provider/result order
+  ---
+  duration_ms: 5.758252
+  type: 'test'
+  ...
+# Subtest: V-DR-01 cross-tag demolition excludes active Corn identity for corn-maze + pumpkin-patch in either provider/result order
+ok 66 - V-DR-01 cross-tag demolition excludes active Corn identity for corn-maze + pumpkin-patch in either provider/result order
+  ---
+  duration_ms: 5.939275
+  type: 'test'
+  ...
+# Subtest: V-DR-01 cross-tag demolition excludes active Corn identity for anything in either provider/result order
+ok 67 - V-DR-01 cross-tag demolition excludes active Corn identity for anything in either provider/result order
+  ---
+  duration_ms: 12.271347
+  type: 'test'
+  ...
+# Subtest: V-DR-01 Pumpkin-only retains reverse demolished:corn_maze lifecycle companion
+ok 68 - V-DR-01 Pumpkin-only retains reverse demolished:corn_maze lifecycle companion
+  ---
+  duration_ms: 7.988178
+  type: 'test'
+  ...
+# Subtest: V-DR-01 Pumpkin-only retains reverse disused:haunted_house lifecycle companion
+ok 69 - V-DR-01 Pumpkin-only retains reverse disused:haunted_house lifecycle companion
+  ---
+  duration_ms: 2.196104
+  type: 'test'
+  ...
+# Subtest: V-DR-01 ordinary Movies narrowing retains matching Museum demolition with Halloween both OFF and ON
+ok 70 - V-DR-01 ordinary Movies narrowing retains matching Museum demolition with Halloween both OFF and ON
+  ---
+  duration_ms: 3.245308
+  type: 'test'
+  ...
+# Subtest: V-DR-01 Halloween OFF preserves the same seasonal-classification boundary for Anything and narrowed ordinary queries
+ok 71 - V-DR-01 Halloween OFF preserves the same seasonal-classification boundary for Anything and narrowed ordinary queries
+  ---
+  duration_ms: 4.974559
+  type: 'test'
+  ...
+# Subtest: V-DR-01 unrelated negatives cannot suppress an active identity or leak into eligible positive results
+ok 72 - V-DR-01 unrelated negatives cannot suppress an active identity or leak into eligible positive results
+  ---
+  duration_ms: 3.598211
+  type: 'test'
+  ...
+# Subtest: V-DR-01 negative companions span supported categories while affirmative clauses remain narrow
+ok 73 - V-DR-01 negative companions span supported categories while affirmative clauses remain narrow
+  ---
+  duration_ms: 28.115137
+  type: 'test'
+  ...
+# Subtest: narrowed acquisition never turns generic, negative or unrelated evidence into seasonal classification
+ok 74 - narrowed acquisition never turns generic, negative or unrelated evidence into seasonal classification
+  ---
+  duration_ms: 8.973319
+  type: 'test'
+  ...
+# Subtest: real server validator rejects hostile category input before any provider request
+ok 75 - real server validator rejects hostile category input before any provider request
+  ---
+  duration_ms: 1.114181
+  type: 'test'
+  ...
+# Subtest: real server request uses validated selected clauses, normalizes inactive seasonal input and preserves radius cap
+ok 76 - real server request uses validated selected clauses, normalizes inactive seasonal input and preserves radius cap
+  ---
+  duration_ms: 5.552927
+  type: 'test'
+  ...
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'merged',
+#   durationMs: 2,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'empty',
+#       durationMs: 1,
+#       winnerMirror: 1
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'empty',
+#       durationMs: 1,
+#       winnerMirror: 1
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'empty',
+#       durationMs: 1,
+#       winnerMirror: 1
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'empty',
+#       durationMs: 1,
+#       winnerMirror: 1
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'empty'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'empty'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'empty'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'empty'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'fallback',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 0,
+#   failedGroups: 1,
+#   partial: false,
+#   groups: [ { group: 'seasonal', outcome: 'failed', durationMs: 0 } ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'network-error'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 2,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'network-error'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 3,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'network-error'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 4,
+#       hedgeOffsetMs: 0,
+#       durationMs: 0,
+#       outcome: 'network-error'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'live',
+#   durationMs: 1,
+#   budgetExhausted: false,
+#   requestedGroups: 3,
+#   successfulGroups: 3,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'entertainment',
+#       outcome: 'empty',
+#       durationMs: 1,
+#       winnerMirror: 1
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'empty',
+#       durationMs: 1,
+#       winnerMirror: 1
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'empty',
+#       durationMs: 1,
+#       winnerMirror: 1
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'empty'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'empty'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'empty'
+#     }
+#   ]
+# }
+# Subtest: Exeter's actual theme-park record is acquired by the real seasonal query and reaches the eligible pool
+ok 77 - Exeter's actual theme-park record is acquired by the real seasonal query and reaches the eligible pool
+  ---
+  duration_ms: 55.365744
+  type: 'test'
+  ...
+# Subtest: precise activity evidence admits corn, pumpkin and haunted trail without admitting generic places
+ok 78 - precise activity evidence admits corn, pumpkin and haunted trail without admitting generic places
+  ---
+  duration_ms: 8.531888
+  type: 'test'
+  ...
+# Subtest: same identity preserves C/P, provenance, stable ID and representative metadata in either provider order
+ok 79 - same identity preserves C/P, provenance, stable ID and representative metadata in either provider order
+  ---
+  duration_ms: 7.610998
+  type: 'test'
+  ...
+# Subtest: structured lifecycle cannot survive eligibility or be resurrected by an active duplicate
+ok 80 - structured lifecycle cannot survive eligibility or be resurrected by an active duplicate
+  ---
+  duration_ms: 3.913096
+  type: 'test'
+  ...
+# Subtest: all availability states share one OFF/ON policy, including expiry and next-year revalidation
+ok 81 - all availability states share one OFF/ON policy, including expiry and next-year revalidation
+  ---
+  duration_ms: 2.604862
+  type: 'test'
+  ...
+# Subtest: all seven seasonal selections preserve union and the radius boundary
+ok 82 - all seven seasonal selections preserve union and the radius boundary
+  ---
+  duration_ms: 13.709393
+  type: 'test'
+  ...
+# Subtest: saved-only successful sparse coverage, missing categories and provider outage remain distinct
+ok 83 - saved-only successful sparse coverage, missing categories and provider outage remain distinct
+  ---
+  duration_ms: 6.597298
+  type: 'test'
+  ...
+# Subtest: per-category provenance never labels a saved haunt as live because its ordinary park duplicate is live
+ok 84 - per-category provenance never labels a saved haunt as live because its ordinary park duplicate is live
+  ---
+  duration_ms: 8.399848
+  type: 'test'
+  ...
+# Subtest: ordinary Date Night and seasonal toggle still work internationally; unknown hours fail strict ON
+ok 85 - ordinary Date Night and seasonal toggle still work internationally; unknown hours fail strict ON
+  ---
+  duration_ms: 3.874948
+  type: 'test'
+  ...
+# Subtest: Halloween caution: live loading/settlement retains controls, counts and selections
+ok 86 - Halloween caution: live loading/settlement retains controls, counts and selections
+  ---
+  duration_ms: 320.410027
+  type: 'test'
+  ...
+# Subtest: Halloween caution: merged loading/settlement retains controls, counts and selections
+ok 87 - Halloween caution: merged loading/settlement retains controls, counts and selections
+  ---
+  duration_ms: 231.762321
+  type: 'test'
+  ...
+# Subtest: Halloween caution: fallback loading/settlement retains controls, counts and selections
+ok 88 - Halloween caution: fallback loading/settlement retains controls, counts and selections
+  ---
+  duration_ms: 145.428775
+  type: 'test'
+  ...
+# Subtest: ordinary Date Night caution absent: seasonal toggle off; controls/count/selection remain
+ok 89 - ordinary Date Night caution absent: seasonal toggle off; controls/count/selection remain
+  ---
+  duration_ms: 159.127622
+  type: 'test'
+  ...
+# Subtest: ordinary Date Night caution absent: outside Halloween season; controls/count/selection remain
+ok 90 - ordinary Date Night caution absent: outside Halloween season; controls/count/selection remain
+  ---
+  duration_ms: 178.847732
+  type: 'test'
+  ...
+# Subtest: dinner: Halloween caution remains absent during loading and after settlement
+ok 91 - dinner: Halloween caution remains absent during loading and after settlement
+  ---
+  duration_ms: 71.706133
+  type: 'test'
+  ...
+# Subtest: nightlife: Halloween caution remains absent during loading and after settlement
+ok 92 - nightlife: Halloween caution remains absent during loading and after settlement
+  ---
+  duration_ms: 55.176659
+  type: 'test'
+  ...
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'merged',
+#   durationMs: 2,
+#   budgetExhausted: false,
+#   requestedGroups: 4,
+#   successfulGroups: 4,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'empty',
+#       durationMs: 1,
+#       winnerMirror: 1
+#     },
+#     {
+#       group: 'entertainment',
+#       outcome: 'empty',
+#       durationMs: 1,
+#       winnerMirror: 1
+#     },
+#     {
+#       group: 'culture',
+#       outcome: 'empty',
+#       durationMs: 1,
+#       winnerMirror: 1
+#     },
+#     {
+#       group: 'outdoor',
+#       outcome: 'empty',
+#       durationMs: 1,
+#       winnerMirror: 1
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'culture',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'empty'
+#     },
+#     {
+#       group: 'entertainment',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'empty'
+#     },
+#     {
+#       group: 'outdoor',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'empty'
+#     },
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 1,
+#       outcome: 'empty'
+#     }
+#   ]
+# }
+# [discovery] provider-chain {
+#   mode: 'date-night',
+#   strategy: 'hedged',
+#   source: 'merged',
+#   durationMs: 2,
+#   budgetExhausted: false,
+#   requestedGroups: 1,
+#   successfulGroups: 1,
+#   failedGroups: 0,
+#   partial: false,
+#   groups: [
+#     {
+#       group: 'seasonal',
+#       outcome: 'empty',
+#       durationMs: 2,
+#       winnerMirror: 1
+#     }
+#   ],
+#   attempts: [
+#     {
+#       group: 'seasonal',
+#       mirror: 1,
+#       hedgeOffsetMs: 0,
+#       durationMs: 2,
+#       outcome: 'empty'
+#     }
+#   ]
+# }
+# Subtest: actual component: handler → count/options/pick/plan and all seven category combinations
+ok 93 - actual component: handler → count/options/pick/plan and all seven category combinations
+  ---
+  duration_ms: 259.789841
+  type: 'test'
+  ...
+# Subtest: actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dependent pool/overlay refresh
+ok 94 - actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dependent pool/overlay refresh
+  ---
+  duration_ms: 175.63936
+  type: 'test'
+  ...
+# Subtest: actual component displays schedule uncertainty distinctly for live weekly-hours-only venues
+ok 95 - actual component displays schedule uncertainty distinctly for live weekly-hours-only venues
+  ---
+  duration_ms: 160.637466
+  type: 'test'
+  ...
+# Subtest: V-F03-01 actual component: not-operating stays excluded before and after revalidation expiry
+ok 96 - V-F03-01 actual component: not-operating stays excluded before and after revalidation expiry
+  ---
+  duration_ms: 278.583268
+  type: 'test'
+  ...
+# Subtest: V-F03-01 actual component: an expired negative cannot fill a plan until stored positive evidence replaces it
+ok 97 - V-F03-01 actual component: an expired negative cannot fill a plan until stored positive evidence replaces it
+  ---
+  duration_ms: 477.083645
+  type: 'test'
+  ...
+# Subtest: V-F03-01 control: positive calendar expiry remains uncertain OFF and refreshes ON result/options/plan
+ok 98 - V-F03-01 control: positive calendar expiry remains uncertain OFF and refreshes ON result/options/plan
+  ---
+  duration_ms: 175.902582
+  type: 'test'
+  ...
+# Subtest: real clock hook refreshes at minute boundaries and focus/visibility resume, then cleans up
+ok 99 - real clock hook refreshes at minute boundaries and focus/visibility resume, then cleans up
+  ---
+  duration_ms: 11.371504
+  type: 'test'
+  ...
+# Subtest: retained regional provider captures replay through the new handler without generic-maze false positives
+ok 100 - retained regional provider captures replay through the new handler without generic-maze false positives
+  ---
+  duration_ms: 8730.936812
+  type: 'test'
+  ...
+1..100
+# tests 100
+# suites 0
+# pass 100
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 12614.740461

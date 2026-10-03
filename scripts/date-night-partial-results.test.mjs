@@ -1,3 +1,4 @@
+import { affirmativeClauses } from "./test-support/date-night-query-evaluator.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
@@ -13,8 +14,7 @@ const element = (id, tags, location = remote) => ({ type: "node", id, lat: locat
 const queryGroup = (options) => {
   // Lifecycle companions are deliberately shared across every activity group.
   // Identify the requested group from affirmative clauses only.
-  const query = new URLSearchParams(options.body).get("data").split("\n")
-    .filter((line) => !/^\s*nwr\["(disused|abandoned|was|demolished|removed|razed|destroyed):/.test(line)).join("\n");
+  const query = affirmativeClauses(new URLSearchParams(options.body).get("data")).join("\n");
   if (/haunted_house|corn_maze|pumpkin_patch/.test(query)) return "seasonal";
   if (/bowling_alley|amusement_arcade|miniature_golf|escape_game|roller_skating/.test(query)) return "entertainment";
   if (/cinema|museum/.test(query)) return "culture";

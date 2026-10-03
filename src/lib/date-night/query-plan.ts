@@ -1,5 +1,5 @@
 import { requireCoordinates } from "../location/model";
-import { lifecycleQueryClauses, seasonalQueryClauses, seasonalQueryPrelude } from "./provider-evidence";
+import { lifecycleQueryClauses, lifecycleQueryPrelude, seasonalQueryClauses, seasonalQueryPrelude } from "./provider-evidence";
 import type { ConcreteDateNightType, DateNightTypeId } from "./types";
 
 export const DATE_NIGHT_QUERY_GROUPS = {
@@ -68,7 +68,7 @@ export function buildDateNightQuery(group: Pick<DateNightQueryGroup, "activityTy
     .map((clause) => `nwr${clause}${around};`);
   const seasonal = selected.filter((type): type is ConcreteDateNightType => type !== "anything" && DATE_NIGHT_QUERY_GROUPS.seasonal.includes(type as typeof DATE_NIGHT_QUERY_GROUPS.seasonal[number]));
   const clauses = [...ordinary, ...(seasonal.length ? [seasonalQueryClauses(around, seasonal)] : []),
-    ...lifecycleQueryClauses(around)];
-  const prelude = seasonal.length ? seasonalQueryPrelude(around) : "";
+    ...lifecycleQueryClauses()];
+  const prelude = lifecycleQueryPrelude(around) + (seasonal.length ? seasonalQueryPrelude(around) : "");
   return `[out:json][timeout:20];\n${prelude}(\n  ${clauses.join("\n  ")}\n);\nout center tags;`;
 }

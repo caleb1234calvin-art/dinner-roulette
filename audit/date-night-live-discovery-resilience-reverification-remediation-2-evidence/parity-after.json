@@ -1,0 +1,2978 @@
+{
+  "method": "Same154 baseline fixtures; AFTER requires retrieval in EVERY group, stronger than baseline ANY group. Same synthetic coordinates;100warmups/1000construction iterations, not provider runtime.",
+  "rows": [
+    {
+      "id": "simple:demolished=yes",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "demolished": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:demolished=1",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "demolished": "1"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:demolished=true",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "demolished": "true"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:demolished=2020",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "demolished": "2020"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:demolished=unknown",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "demolished": "unknown"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:demolished=no",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "demolished": "no"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:demolished=FALSE",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "demolished": "FALSE"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:demolished=0",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "demolished": "0"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:demolished=",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "demolished": ""
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "prefix:demolished:leisure",
+      "tags": {
+        "demolished:leisure": "bowling_alley"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:demolished:tourism",
+      "tags": {
+        "demolished:tourism": "museum"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:demolished:attraction",
+      "tags": {
+        "demolished:attraction": "pumpkin_patch"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:demolished:amenity",
+      "tags": {
+        "demolished:amenity": "cinema"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:demolished:tourism=farm",
+      "tags": {
+        "demolished:tourism": "farm",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:demolished:leisure=maze",
+      "tags": {
+        "demolished:leisure": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:demolished:attraction=maze",
+      "tags": {
+        "demolished:attraction": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:demolished:building",
+      "tags": {
+        "tourism": "museum",
+        "demolished:building": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:demolished:sport",
+      "tags": {
+        "tourism": "museum",
+        "demolished:sport": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:demolished:name",
+      "tags": {
+        "tourism": "museum",
+        "demolished:name": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:demolished:custom:nested",
+      "tags": {
+        "tourism": "museum",
+        "demolished:custom:nested": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:demolished:",
+      "tags": {
+        "tourism": "museum",
+        "demolished:": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "other-value:demolished:amenity",
+      "tags": {
+        "sport": "roller_skating",
+        "demolished:amenity": "parking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Any positive value can carry lifecycle with independent active classification",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:removed=yes",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "removed": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:removed=1",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "removed": "1"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:removed=true",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "removed": "true"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:removed=2020",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "removed": "2020"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:removed=unknown",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "removed": "unknown"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:removed=no",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "removed": "no"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:removed=FALSE",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "removed": "FALSE"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:removed=0",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "removed": "0"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:removed=",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "removed": ""
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "prefix:removed:leisure",
+      "tags": {
+        "removed:leisure": "bowling_alley"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:removed:tourism",
+      "tags": {
+        "removed:tourism": "museum"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:removed:attraction",
+      "tags": {
+        "removed:attraction": "pumpkin_patch"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:removed:amenity",
+      "tags": {
+        "removed:amenity": "cinema"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:removed:tourism=farm",
+      "tags": {
+        "removed:tourism": "farm",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:removed:leisure=maze",
+      "tags": {
+        "removed:leisure": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:removed:attraction=maze",
+      "tags": {
+        "removed:attraction": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:removed:building",
+      "tags": {
+        "tourism": "museum",
+        "removed:building": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:removed:sport",
+      "tags": {
+        "tourism": "museum",
+        "removed:sport": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:removed:name",
+      "tags": {
+        "tourism": "museum",
+        "removed:name": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:removed:custom:nested",
+      "tags": {
+        "tourism": "museum",
+        "removed:custom:nested": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:removed:",
+      "tags": {
+        "tourism": "museum",
+        "removed:": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "other-value:removed:amenity",
+      "tags": {
+        "sport": "roller_skating",
+        "removed:amenity": "parking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Any positive value can carry lifecycle with independent active classification",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:razed=yes",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "razed": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:razed=1",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "razed": "1"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:razed=true",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "razed": "true"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:razed=2020",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "razed": "2020"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:razed=unknown",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "razed": "unknown"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:razed=no",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "razed": "no"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:razed=FALSE",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "razed": "FALSE"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:razed=0",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "razed": "0"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:razed=",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "razed": ""
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "prefix:razed:leisure",
+      "tags": {
+        "razed:leisure": "bowling_alley"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:razed:tourism",
+      "tags": {
+        "razed:tourism": "museum"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:razed:attraction",
+      "tags": {
+        "razed:attraction": "pumpkin_patch"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:razed:amenity",
+      "tags": {
+        "razed:amenity": "cinema"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:razed:tourism=farm",
+      "tags": {
+        "razed:tourism": "farm",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:razed:leisure=maze",
+      "tags": {
+        "razed:leisure": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:razed:attraction=maze",
+      "tags": {
+        "razed:attraction": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:razed:building",
+      "tags": {
+        "tourism": "museum",
+        "razed:building": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:razed:sport",
+      "tags": {
+        "tourism": "museum",
+        "razed:sport": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:razed:name",
+      "tags": {
+        "tourism": "museum",
+        "razed:name": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:razed:custom:nested",
+      "tags": {
+        "tourism": "museum",
+        "razed:custom:nested": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:razed:",
+      "tags": {
+        "tourism": "museum",
+        "razed:": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "other-value:razed:amenity",
+      "tags": {
+        "sport": "roller_skating",
+        "razed:amenity": "parking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Any positive value can carry lifecycle with independent active classification",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:destroyed=yes",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "destroyed": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:destroyed=1",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "destroyed": "1"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:destroyed=true",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "destroyed": "true"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:destroyed=2020",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "destroyed": "2020"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:destroyed=unknown",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "destroyed": "unknown"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:destroyed=no",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "destroyed": "no"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:destroyed=FALSE",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "destroyed": "FALSE"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:destroyed=0",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "destroyed": "0"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:destroyed=",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "destroyed": ""
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "prefix:destroyed:leisure",
+      "tags": {
+        "destroyed:leisure": "bowling_alley"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:destroyed:tourism",
+      "tags": {
+        "destroyed:tourism": "museum"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:destroyed:attraction",
+      "tags": {
+        "destroyed:attraction": "pumpkin_patch"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:destroyed:amenity",
+      "tags": {
+        "destroyed:amenity": "cinema"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:destroyed:tourism=farm",
+      "tags": {
+        "destroyed:tourism": "farm",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:destroyed:leisure=maze",
+      "tags": {
+        "destroyed:leisure": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:destroyed:attraction=maze",
+      "tags": {
+        "destroyed:attraction": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:destroyed:building",
+      "tags": {
+        "tourism": "museum",
+        "destroyed:building": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:destroyed:sport",
+      "tags": {
+        "tourism": "museum",
+        "destroyed:sport": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:destroyed:name",
+      "tags": {
+        "tourism": "museum",
+        "destroyed:name": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:destroyed:custom:nested",
+      "tags": {
+        "tourism": "museum",
+        "destroyed:custom:nested": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:destroyed:",
+      "tags": {
+        "tourism": "museum",
+        "destroyed:": "yes"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "other-value:destroyed:amenity",
+      "tags": {
+        "sport": "roller_skating",
+        "destroyed:amenity": "parking"
+      },
+      "interpreted": "permanently-closed",
+      "notes": "Any positive value can carry lifecycle with independent active classification",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:disused=yes",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "disused": "yes"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:disused=1",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "disused": "1"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:disused=true",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "disused": "true"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:disused=2020",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "disused": "2020"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:disused=unknown",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "disused": "unknown"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:disused=no",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "disused": "no"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:disused=FALSE",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "disused": "FALSE"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:disused=0",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "disused": "0"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:disused=",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "disused": ""
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "prefix:disused:leisure",
+      "tags": {
+        "disused:leisure": "bowling_alley"
+      },
+      "interpreted": "disused",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:disused:tourism",
+      "tags": {
+        "disused:tourism": "museum"
+      },
+      "interpreted": "disused",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:disused:attraction",
+      "tags": {
+        "disused:attraction": "pumpkin_patch"
+      },
+      "interpreted": "disused",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:disused:amenity",
+      "tags": {
+        "disused:amenity": "cinema"
+      },
+      "interpreted": "disused",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:disused:tourism=farm",
+      "tags": {
+        "disused:tourism": "farm",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "disused",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:disused:leisure=maze",
+      "tags": {
+        "disused:leisure": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "disused",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:disused:attraction=maze",
+      "tags": {
+        "disused:attraction": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "disused",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:disused:building",
+      "tags": {
+        "tourism": "museum",
+        "disused:building": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "arbitrary:disused:sport",
+      "tags": {
+        "tourism": "museum",
+        "disused:sport": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "arbitrary:disused:name",
+      "tags": {
+        "tourism": "museum",
+        "disused:name": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "arbitrary:disused:custom:nested",
+      "tags": {
+        "tourism": "museum",
+        "disused:custom:nested": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "arbitrary:disused:",
+      "tags": {
+        "tourism": "museum",
+        "disused:": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "other-value:disused:amenity",
+      "tags": {
+        "sport": "roller_skating",
+        "disused:amenity": "parking"
+      },
+      "interpreted": "disused",
+      "notes": "Any positive value can carry lifecycle with independent active classification",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:abandoned=yes",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "abandoned": "yes"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:abandoned=1",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "abandoned": "1"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:abandoned=true",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "abandoned": "true"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:abandoned=2020",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "abandoned": "2020"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:abandoned=unknown",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "abandoned": "unknown"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:abandoned=no",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "abandoned": "no"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:abandoned=FALSE",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "abandoned": "FALSE"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:abandoned=0",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "abandoned": "0"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:abandoned=",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "abandoned": ""
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "prefix:abandoned:leisure",
+      "tags": {
+        "abandoned:leisure": "bowling_alley"
+      },
+      "interpreted": "disused",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:abandoned:tourism",
+      "tags": {
+        "abandoned:tourism": "museum"
+      },
+      "interpreted": "disused",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:abandoned:attraction",
+      "tags": {
+        "abandoned:attraction": "pumpkin_patch"
+      },
+      "interpreted": "disused",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:abandoned:amenity",
+      "tags": {
+        "abandoned:amenity": "cinema"
+      },
+      "interpreted": "disused",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:abandoned:tourism=farm",
+      "tags": {
+        "abandoned:tourism": "farm",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "disused",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:abandoned:leisure=maze",
+      "tags": {
+        "abandoned:leisure": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "disused",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:abandoned:attraction=maze",
+      "tags": {
+        "abandoned:attraction": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "disused",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:abandoned:building",
+      "tags": {
+        "tourism": "museum",
+        "abandoned:building": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "arbitrary:abandoned:sport",
+      "tags": {
+        "tourism": "museum",
+        "abandoned:sport": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "arbitrary:abandoned:name",
+      "tags": {
+        "tourism": "museum",
+        "abandoned:name": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "arbitrary:abandoned:custom:nested",
+      "tags": {
+        "tourism": "museum",
+        "abandoned:custom:nested": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "arbitrary:abandoned:",
+      "tags": {
+        "tourism": "museum",
+        "abandoned:": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "other-value:abandoned:amenity",
+      "tags": {
+        "sport": "roller_skating",
+        "abandoned:amenity": "parking"
+      },
+      "interpreted": "disused",
+      "notes": "Any positive value can carry lifecycle with independent active classification",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:was=yes",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "was": "yes"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:was=1",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "was": "1"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:was=true",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "was": "true"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:was=2020",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "was": "2020"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:was=unknown",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "was": "unknown"
+      },
+      "interpreted": "disused",
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "simple:was=no",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "was": "no"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:was=FALSE",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "was": "FALSE"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:was=0",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "was": "0"
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "simple:was=",
+      "tags": {
+        "attraction": "pumpkin_patch",
+        "was": ""
+      },
+      "interpreted": null,
+      "notes": "Simple flag: active Pumpkin carrier; Corn and ordinary selection require independent negatives",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": false,
+        "museum": false,
+        "skating": false
+      }
+    },
+    {
+      "id": "prefix:was:leisure",
+      "tags": {
+        "was:leisure": "bowling_alley"
+      },
+      "interpreted": "disused",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:was:tourism",
+      "tags": {
+        "was:tourism": "museum"
+      },
+      "interpreted": "disused",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:was:attraction",
+      "tags": {
+        "was:attraction": "pumpkin_patch"
+      },
+      "interpreted": "disused",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "prefix:was:amenity",
+      "tags": {
+        "was:amenity": "cinema"
+      },
+      "interpreted": "disused",
+      "notes": "Four reconstructable tag namespaces",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:was:tourism=farm",
+      "tags": {
+        "was:tourism": "farm",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "disused",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:was:leisure=maze",
+      "tags": {
+        "was:leisure": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "disused",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "context:was:attraction=maze",
+      "tags": {
+        "was:attraction": "maze",
+        "description": "Pumpkin picking"
+      },
+      "interpreted": "disused",
+      "notes": "Seasonal prose requires reconstructed supported context; current direct values can omit farm/theme_park/attraction",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    },
+    {
+      "id": "arbitrary:was:building",
+      "tags": {
+        "tourism": "museum",
+        "was:building": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "arbitrary:was:sport",
+      "tags": {
+        "tourism": "museum",
+        "was:sport": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "arbitrary:was:name",
+      "tags": {
+        "tourism": "museum",
+        "was:name": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "arbitrary:was:custom:nested",
+      "tags": {
+        "tourism": "museum",
+        "was:custom:nested": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "arbitrary:was:",
+      "tags": {
+        "tourism": "museum",
+        "was:": "yes"
+      },
+      "interpreted": null,
+      "notes": "Permanent prefixes recognize ANY suffix; disused-family only four exact suffixes",
+      "acquisition": {
+        "anything": false,
+        "corn-maze": false,
+        "pumpkin-patch": false,
+        "corn-maze+pumpkin-patch": false,
+        "movies": false,
+        "museum": true,
+        "skating": false
+      }
+    },
+    {
+      "id": "other-value:was:amenity",
+      "tags": {
+        "sport": "roller_skating",
+        "was:amenity": "parking"
+      },
+      "interpreted": "disused",
+      "notes": "Any positive value can carry lifecycle with independent active classification",
+      "acquisition": {
+        "anything": true,
+        "corn-maze": true,
+        "pumpkin-patch": true,
+        "corn-maze+pumpkin-patch": true,
+        "movies": true,
+        "museum": true,
+        "skating": true
+      }
+    }
+  ],
+  "gaps": [],
+  "measurements": [
+    {
+      "selection": [
+        "anything"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5747,
+          "selectors": 53
+        },
+        {
+          "id": "entertainment",
+          "bytes": 4643,
+          "selectors": 42
+        },
+        {
+          "id": "culture",
+          "bytes": 4413,
+          "selectors": 38
+        },
+        {
+          "id": "outdoor",
+          "bytes": 4363,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 4,
+      "maxMirrorAttempts": 16,
+      "totalBytes": 19166,
+      "meanConstructionMs": 0.05331284399999993
+    },
+    {
+      "selection": [
+        "haunted-house"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5204,
+          "selectors": 49
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 5204,
+      "meanConstructionMs": 0.03449086
+    },
+    {
+      "selection": [
+        "corn-maze"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5375,
+          "selectors": 53
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 5375,
+      "meanConstructionMs": 0.014801692000000003
+    },
+    {
+      "selection": [
+        "pumpkin-patch"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5092,
+          "selectors": 49
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 5092,
+      "meanConstructionMs": 0.012069548000000168
+    },
+    {
+      "selection": [
+        "bowling"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4372,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4372,
+      "meanConstructionMs": 0.010410223999999971
+    },
+    {
+      "selection": [
+        "arcade"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4375,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4375,
+      "meanConstructionMs": 0.011136899999999969
+    },
+    {
+      "selection": [
+        "mini-golf"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4373,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4373,
+      "meanConstructionMs": 0.014179838000000018
+    },
+    {
+      "selection": [
+        "escape-room"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4370,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4370,
+      "meanConstructionMs": 0.011692812999999887
+    },
+    {
+      "selection": [
+        "skating"
+      ],
+      "groups": [
+        {
+          "id": "entertainment",
+          "bytes": 4421,
+          "selectors": 38
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4421,
+      "meanConstructionMs": 0.011208902999999965
+    },
+    {
+      "selection": [
+        "movies"
+      ],
+      "groups": [
+        {
+          "id": "culture",
+          "bytes": 4365,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4365,
+      "meanConstructionMs": 0.011876506000000063
+    },
+    {
+      "selection": [
+        "museum"
+      ],
+      "groups": [
+        {
+          "id": "culture",
+          "bytes": 4365,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4365,
+      "meanConstructionMs": 0.014943596000000071
+    },
+    {
+      "selection": [
+        "park"
+      ],
+      "groups": [
+        {
+          "id": "outdoor",
+          "bytes": 4363,
+          "selectors": 37
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 4363,
+      "meanConstructionMs": 0.011898910000000115
+    },
+    {
+      "selection": [
+        "haunted-house",
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "groups": [
+        {
+          "id": "seasonal",
+          "bytes": 5747,
+          "selectors": 53
+        }
+      ],
+      "groupCount": 1,
+      "maxMirrorAttempts": 4,
+      "totalBytes": 5747,
+      "meanConstructionMs": 0.021861286999999948
+    }
+  ],
+  "valuePattern": "^([^nNfF0]([^a]|a)*|[nN]|[nN][^oO]([^a]|a)*|[nN][oO]([^a]|a)+|[fF]|[fF][^aA]([^a]|a)*|[fF][aA]|[fF][aA][^lL]([^a]|a)*|[fF][aA][lL]|[fF][aA][lL][^sS]([^a]|a)*|[fF][aA][lL][sS]|[fF][aA][lL][sS][^eE]([^a]|a)*|[fF][aA][lL][sS][eE]([^a]|a)+|[0]([^a]|a)+)$"
+}

@@ -17,3 +17,16 @@ Authority: handoff/date-night-live-discovery-resilience-reverification-remediati
 - Exact next action: verify this checkpoint pushed and clean, implement canonical lifecycle model with bounded named carrier set and shared value/prefix semantics, extend real query-aware tests, then focused GREEN checkpoint. Preserve RED and prior evidence verbatim.
 
 SAFE TO RESUME FROM THIS CHECKPOINT
+
+## Save 2 — canonical parity implementation and focused GREEN
+
+- Branch/base unchanged. Latest pushed checkpoint00e7ce6fb1392ccad9df271c8b46372db86bfdd8, tree0cb1620bca130f1c9673082c76e4158e1cea3ba9, sole parent failed4e6ff124. This save is its direct child.
+- Runtime changed only new lifecycle.ts, provider-evidence.ts, query-plan.ts, and necessary search.ts canonical-normalizer substitution (rationale documented before implementation). Added permanent28-group parity suite and strict shared query evaluator; updated query tests and affirmative group detectors in seasonal/partial/security/controlled harness. Detailed scope in implementation.md.
+- RED preserved. Focused GREEN100/100:parity28/query36/seasonal24/partial12; typecheck/all11changed-code lint pass. Query6167comparison retained. Parity matrix154rows/111negative/zero gaps in EVERY requested group. Value/normalization semantics checked against frozen oracle. No unresolved acquisition gap within existing interpretation.
+- Anything138→170selectors/13518→19166bytes; seasonal45→53selectors/4335→5747bytes (synthetic43,-79). Each group+8selectors/+1412bytes.4groups/4mirrors/max16attempts unchanged;8s/20s/25s unchanged. Construction observations recorded; provider-runtime acceptance pending.
+- Cache byte-identical; V-DR-02 preserved in source, cache/client/session fresh gate next. No cache defect found. No runtime diagnostics, new dependency, provider or configuration change.
+- Main/production untouched; no manual deploy/migration/promotion; no public provider calls. Automatic Preview not yet accepted. Fresh hosted production identity remains a final gate.
+- Remaining: full cache/client/session and broader focused suites; before-full checkpoint; clean install/full deterministic/security/native/build; controlled/browser/live; final freeze.
+- Exact next action: confirm checkpoint pushed/clean, run cache46/client54 plus partialUI/hedge/provider suites, verify cache byte identity, and checkpoint preservation. Compiled security requires fresh safe production build; do not claim it passed before that build.
+
+SAFE TO RESUME FROM THIS CHECKPOINT

@@ -24,86 +24,7 @@ const queryFor = (activityTypes, active = true) =>
 const sorted = (items) => [...items].sort();
 const ids = (plan) => plan.map((group) => group.id);
 
-// Interpret only the server-owned predicate grammar used by this query builder.
-// This lets reachability tests prove that a real positive fixture is acquired,
-// without relying on an Overpass service or merely searching query substrings.
-function acquisitionClauses(query) {
-  return query.split("\n").map((line) => line.trim()).filter((line) => line.startsWith("nwr"));
-}
-
-function affirmativeClauses(query) {
-  return acquisitionClauses(query).filter((line) => !/^nwr\["(disused|abandoned|was|demolished|removed|razed|destroyed):/.test(line));
-}
-
-function acquired(query, tags) {
-  const lines = query.split("\n").map((line) => line.trim()).filter(Boolean);
-  assert.equal(lines.shift(), "[out:json][timeout:20];", "Expected bounded JSON query header");
-  const sets = new Map();
-  let block = null, result, printed = false;
-  for (const [index, line] of lines.entries()) {
-    if (line === "(") {
-      assert.equal(block, null, "Nested unions are outside the fixture grammar");
-      block = [];
-      continue;
-    }
-    if (line === ");" || line === ")->.seasonal_context;") {
-      assert.ok(block?.length, "Only a populated query union may be closed");
-      if (line === ");") {
-        assert.equal(result, undefined, "The fixture expects exactly one final output union");
-        result = block.some(Boolean);
-      } else {
-        assert.equal(result, undefined, "Context preselection must precede the output union");
-        assert.equal(sets.has("seasonal_context"), false, "Do not overwrite a named context set");
-        sets.set("seasonal_context", block.some(Boolean));
-      }
-      block = null;
-      continue;
-    }
-    if (line === "out center tags;") {
-      assert.equal(block, null);
-      assert.equal(typeof result, "boolean", "Output must come from the final union");
-      assert.equal(index, lines.length - 1, "Output must be the final statement");
-      printed = true;
-      continue;
-    }
-    assert.ok(block, `Query selectors must be inside a union: ${line}`);
-    const statement = line.match(/^nwr(?:\.([a-z_]+))?(.+);$/);
-    assert.ok(statement, `Unrecognized query statement: ${line}`);
-    const [, inputSet, filters] = statement;
-    let selectors = filters;
-    let member = true;
-    if (inputSet) {
-      assert.equal(inputSet, "seasonal_context", "Only the server-owned context set is supported");
-      assert.ok(sets.has(inputSet), "A named input set must be declared before use");
-      member = sets.get(inputSet);
-    } else {
-      const geographic = filters.match(/\(around:([0-9]+),(-?[0-9.]+(?:e[+-]?[0-9]+)?),(-?[0-9.]+(?:e[+-]?[0-9]+)?)\)$/i);
-      assert.ok(geographic, `Every database selection must be spatially bounded: ${line}`);
-      const [, radius, lat, lon] = geographic;
-      assert.ok(Number(radius) > 0 && Number(radius) <= 80467);
-      assert.ok(Number.isFinite(Number(lat)) && Math.abs(Number(lat)) <= 90);
-      assert.ok(Number.isFinite(Number(lon)) && Math.abs(Number(lon)) <= 180);
-      selectors = filters.slice(0, -geographic[0].length);
-    }
-    const parsed = [...selectors.matchAll(/\[(~?"(?:\\.|[^"\\])*")(=|~)("(?:\\.|[^"\\])*")(,i)?\]/g)];
-    assert.ok(parsed.length, `Expected whitelisted predicates: ${line}`);
-    assert.equal(parsed.map((match) => match[0]).join(""), selectors, `Unrecognized predicate grammar: ${line}`);
-    const predicatesMatch = parsed.every(([, rawKey, operation, rawValue, ignoreCase]) => {
-      const keyPattern = rawKey.startsWith("~");
-      const key = JSON.parse(keyPattern ? rawKey.slice(1) : rawKey);
-      const value = JSON.parse(rawValue);
-      const candidates = keyPattern
-        ? Object.entries(tags).filter(([candidate]) => new RegExp(key, ignoreCase ? "i" : "").test(candidate)).map(([, candidate]) => candidate)
-        : Object.hasOwn(tags, key) ? [tags[key]] : [];
-      return candidates.some((candidate) => operation === "="
-        ? candidate === value
-        : new RegExp(value, ignoreCase ? "i" : "").test(candidate));
-    });
-    block.push(member && predicatesMatch);
-  }
-  assert.equal(printed, true, "The fixture must evaluate an explicit output statement");
-  return result;
-}
+import { acquisitionClauses, affirmativeClauses, acquired } from "./test-support/date-night-query-evaluator.mjs";
 
 // Frozen pre-refinement predicate control from checkpoint 9f90f689. This is
 // intentionally independent of the current builder: compare semantic reachability
@@ -145,17 +66,17 @@ function classifiedAcquisition(query, rawTags) {
   return { activityTypes: seasonalTypes(tags), lifecycle: providerLifecycle(rawTags) };
 }
 
-test("all Date Night category plans use exact keys, including every seasonal subset and lifecycle prefix", () => {
+test("all Date Night database selectors use exact keys; lifecycle regex keys are bounded to a named set", () => {
   const selections = [["anything"], ...ordinary.map((type) => [type])];
   for (let mask = 1; mask < 8; mask++) selections.push(seasonal.filter((_, index) => mask & (1 << index)));
   for (const selected of selections) {
     const query = queryFor(selected);
-    assert.doesNotMatch(query, /\[~/, selected.join(","));
+    assert.ok(acquisitionClauses(query).filter((line) => line.includes("[~")).every((line) => line.startsWith("nwr.lifecycle_context[")));
     assert.match(query, /\[timeout:20\]/);
-    assert.ok(acquisitionClauses(query).every((line) => line.startsWith("nwr.seasonal_context[") || line.endsWith("(around:80467,37.176447,-94.310223);")));
+    assert.ok(acquisitionClauses(query).every((line) => /^nwr\.(seasonal|lifecycle)_context\[/.test(line) || line.endsWith("(around:80467,37.176447,-94.310223);")));
   }
-  assert.equal(acquisitionClauses(queryFor(["haunted-house"])).length, 41);
-  assert.equal(acquisitionClauses(queryFor(seasonal)).length, 45);
+  assert.equal(acquisitionClauses(queryFor(["haunted-house"])).length, 49);
+  assert.equal(acquisitionClauses(queryFor(seasonal)).length, 53);
 });
 
 test("all 6167 canonical fixtures preserve selected positive semantics and broad identity-negative lifecycle acquisition", () => {
@@ -250,6 +171,9 @@ test("query fixture interpreter rejects missing/unknown sets, unbounded selector
     query.replace('(around:80467,37.176447,-94.310223)', ""),
     query.replace("out center tags;", ".seasonal_context out center tags;"),
     query.replace("nwr.seasonal_context", "nwr"),
+    query.replaceAll("nwr.lifecycle_context", "nwr.untrusted"),
+    query.replace(/\n\([\s\S]*?\)->\.lifecycle_context;\n/, "\n"),
+    query.replace("out center tags;", ".lifecycle_context out center tags;"),
     query.replace("out center tags;", "out center tags;\nout center tags;"),
   ];
   for (const mutation of mutations) assert.throws(() => acquired(mutation, { tourism: "farm", name: "Haunted House" }));

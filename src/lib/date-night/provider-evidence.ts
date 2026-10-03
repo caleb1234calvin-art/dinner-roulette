@@ -1,4 +1,5 @@
-import type { ConcreteDateNightType, DateNightLifecycle } from "./types";
+import type { ConcreteDateNightType } from "./types";
+export { providerLifecycle, lifecycleQueryClauses, lifecycleQueryPrelude } from "./lifecycle";
 
 // Complement the ordinary activity query within its existing capped radius.
 // Broad place kinds are acquisition hints, never seasonal classifications.
@@ -38,49 +39,6 @@ export function seasonalQueryClauses(around: string, selected: readonly Concrete
   const prose = ["name", "description", "seasonal:description", "seasonal:activities"].map((key) =>
     `nwr.seasonal_context["${key}"~"${selectors.map((selector) => selector.words).join("|")}",i];`);
   return [...clauses.map((clause) => `nwr${clause}${around};`), ...prose].join("\n  ");
-}
-
-// The same identity can have active and lifecycle-only representations classified
-// under different activities. Keep negative acquisition independent of selection,
-// using only the existing supported tag/value vocabulary. Aggregating by exact
-// key bounds this to 4 keys × 7 prefixes, instead of one clause per category.
-const LIFECYCLE_TAG_VALUES = {
-  leisure: "bowling_alley|amusement_arcade|miniature_golf|escape_game|ice_rink|park|maze",
-  amenity: "cinema",
-  tourism: "museum",
-  attraction: "haunted_house|haunted_trail|haunted_forest|haunted_attraction|corn_maze|maize_maze|maze|pumpkin_patch",
-};
-
-/** Shared identity-negative companions; affirmative acquisition stays selected.
- * Existing classification, lifecycle precedence and eligibility remain decisive. */
-export function lifecycleQueryClauses(around: string): string[] {
-  return Object.entries(LIFECYCLE_TAG_VALUES).flatMap(([key, values]) =>
-    ["disused", "abandoned", "was", "demolished", "removed", "razed", "destroyed"].map((prefix) =>
-      `nwr["${prefix}:${key}"~"^(${values})$"]${around};`));
-}
-
-/** Structured lifecycle evidence wins over still-present active tags. */
-export function providerLifecycle(tags: Record<string, string>): DateNightLifecycle | undefined {
-  const positive = (value: string | undefined) => Boolean(value && !/^(no|false|0)$/i.test(value));
-  if (
-    ["demolished", "removed", "razed", "destroyed"].some((key) => positive(tags[key])) ||
-    Object.keys(tags).some(
-      (key) => /^(demolished|removed|razed|destroyed):/.test(key) && positive(tags[key]),
-    )
-  ) {
-    return "permanently-closed";
-  }
-  if (
-    ["disused", "abandoned", "was"].some((key) => positive(tags[key])) ||
-    Object.keys(tags).some(
-      (key) =>
-        /^(disused|abandoned|was):(leisure|tourism|attraction|amenity)$/.test(key) &&
-        positive(tags[key]),
-    )
-  ) {
-    return "disused";
-  }
-  return undefined;
 }
 
 export function seasonalTypes(tags: Record<string, string>): ConcreteDateNightType[] {

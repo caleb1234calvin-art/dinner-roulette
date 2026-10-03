@@ -1,3 +1,4 @@
+import { affirmativeClauses } from "./date-night-query-evaluator.mjs";
 // Disposable acceptance-server fixture only; never imported by application code.
 import { appendFileSync, readFileSync } from "node:fs";
 
@@ -37,8 +38,7 @@ globalThis.fetch = async (input, init) => {
   const index = mirrors.indexOf(url.hostname);
   if (index < 0) throw new Error("External network disabled in Date Night acceptance fixture");
   // Shared lifecycle-negative companions do not identify the positive group.
-  const query = (new URLSearchParams(init?.body).get("data") ?? "").split("\n")
-    .filter((line) => !/^\s*nwr\["(disused|abandoned|was|demolished|removed|razed|destroyed):/.test(line)).join("\n");
+  const query = affirmativeClauses(new URLSearchParams(init?.body).get("data") ?? "").join("\n");
   const group = /haunted_house|corn_maze|pumpkin_patch/.test(query) ? "seasonal"
     : /bowling_alley|amusement_arcade|miniature_golf|escape_game|roller_skating/.test(query) ? "entertainment"
       : /cinema|museum/.test(query) ? "culture"

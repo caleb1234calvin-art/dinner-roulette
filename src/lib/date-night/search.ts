@@ -10,6 +10,7 @@ import type { PhotoKey } from "@/lib/restaurants/types";
 import { JASPER_COUNTY_DATE_NIGHT_CATALOG } from "./jasper-county-catalog";
 import { JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG } from "./seasonal-catalog";
 import { seasonalTypes, providerLifecycle } from "./provider-evidence";
+import { normalizeLifecycleTags } from "./lifecycle";
 import { isHalloweenDateNightActive } from "./season";
 import { dedupeDateNight, mergeDateNight, mergeIdentity, moodFor } from "./identity";
 import { buildDateNightQuery, buildDateNightQueryPlan, validateDateNightActivityTypes } from "./query-plan";
@@ -55,12 +56,8 @@ function classify(tags: Record<string, string>, halloweenSeason: boolean): Concr
 function elementToPlace(element: OverpassElement, halloweenSeason: boolean): DateNightPlace | null {
   const rawTags = element.tags ?? {};
   const lifecycle = providerLifecycle(rawTags);
-  const tags = { ...rawTags };
   // Retain lifecycle-only records so a duplicate cannot resurrect a closed venue.
-  for (const [key, value] of Object.entries(rawTags)) {
-    const match = key.match(/^(disused|abandoned|was|demolished|removed|razed|destroyed):(leisure|tourism|attraction|amenity)$/);
-    if (match && !tags[match[2]!]) tags[match[2]!] = value;
-  }
+  const tags = normalizeLifecycleTags(rawTags);
   const name = tags.name?.trim();
   if (!name || /closed/i.test(name)) return null;
   const lat = element.lat ?? element.center?.lat;
