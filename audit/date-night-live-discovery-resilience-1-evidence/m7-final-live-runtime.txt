@@ -1,0 +1,230 @@
+## Runtime Logs
+
+**Project:** prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm
+**Deployment:** dpl_4aJAVbUh9jjEdP7bsz5n3ep2ypo6
+**Time range:** 2026-10-03T01:05:56.192Z → 2026-10-03T01:20:56.192Z
+
+### 01:20:30 POST /_serverFn/608c34308c11ff23ec95123e13645a3f5e73aa32bd73cdd2742409e0d31b0253 200 [warn/serverless]
+dep=dpl_4aJAVbUh9jjEdP7bsz5n3ep2ypo6 branch=fix/date-night-live-discovery-resilience-1 cache=MISS
+    [discovery] provider-chain {
+      mode: 'date-night',
+      strategy: 'hedged',
+      source: 'merged',
+      durationMs: 6397,
+      budgetExhausted: false,
+      requestedGroups: 4,
+      successfulGroups: 4,
+      failedGroups: 0,
+      partial: false,
+      groups: [
+        {
+          group: 'seasonal',
+          outcome: 'success',
+          durationMs: 6005,
+          winnerMirror: 1
+        },
+        {
+          group: 'entertainment',
+          outcome: 'success',
+          durationMs: 4908,
+          winnerMirror: 1
+        },
+        {
+          group: 'culture',
+          outcome: 'success',
+          durationMs: 3165,
+          winnerMirror: 1
+        },
+        {
+          group: 'outdoor',
+          outcome: 'success',
+          durationMs: 4316,
+          winnerMirror: 1
+        }
+      ],
+      attempts: [
+        {
+          group: 'culture',
+          mirror: 1,
+          hedgeOffsetMs: 0,
+          durationMs: 3165,
+          outcome: 'success'
+        },
+        {
+          group: 'culture',
+          mirror: 2,
+          hedgeOffsetMs: 1502,
+          durationMs: 1663,
+          outcome: 'cancelled'
+        },
+        {
+          group: 'culture',
+          mirror: 3,
+          hedgeOffsetMs: 3001,
+          durationMs: 164,
+          outcome: 'cancelled'
+        },
+        {
+          group: 'entertainment',
+          mirror: 1,
+          hedgeOffsetMs: 0,
+          durationMs: 4908,
+          outcome: 'success'
+        },
+        {
+          group: 'entertainment',
+          mirror: 2,
+          hedgeOffsetMs: 1501,
+          durationMs: 3407,
+          outcome: 'cancelled'
+        },
+        {
+          group: 'entertainment',
+          mirror: 3,
+          hedgeOffsetMs: 3003,
+          durationMs: 1906,
+          outcome: 'cancelled'
+        },
+        {
+          group: 'entertainment',
+          mirror: 4,
+          hedgeOffsetMs: 4500,
+          durationMs: 408,
+          outcome: 'cancelled'
+        },
+        {
+          group: 'outdoor',
+          mirror: 1,
+          hedgeOffsetMs: 0,
+          durationMs: 4316,
+          outcome: 'success'
+        },
+        {
+          group: 'outdoor',
+          mirror: 2,
+          hedgeOffsetMs: 1503,
+          durationMs: 2813,
+          outcome: 'cancelled'
+        },
+        {
+          group: 'outdoor',
+          mirror: 3,
+          hedgeOffsetMs: 3002,
+          durationMs: 813,
+          outcome:… (truncated)
+
+### 01:20:29 GET / 200 [info/serverless]
+dep=dpl_4aJAVbUh9jjEdP7bsz5n3ep2ypo6 branch=fix/date-night-live-discovery-resilience-1 cache=MISS
+
+### 01:20:22 POST /_serverFn/608c34308c11ff23ec95123e13645a3f5e73aa32bd73cdd2742409e0d31b0253 200 [warn/serverless]
+dep=dpl_4aJAVbUh9jjEdP7bsz5n3ep2ypo6 branch=fix/date-night-live-discovery-resilience-1 cache=MISS
+    [discovery] provider-chain {
+      mode: 'date-night',
+      strategy: 'hedged',
+      source: 'merged',
+      durationMs: 4091,
+      budgetExhausted: false,
+      requestedGroups: 4,
+      successfulGroups: 4,
+      failedGroups: 0,
+      partial: false,
+      groups: [
+        {
+          group: 'seasonal',
+          outcome: 'empty',
+          durationMs: 3595,
+          winnerMirror: 1
+        },
+        {
+          group: 'entertainment',
+          outcome: 'success',
+          durationMs: 1569,
+          winnerMirror: 1
+        },
+        {
+          group: 'culture',
+          outcome: 'success',
+          durationMs: 4062,
+          winnerMirror: 1
+        },
+        {
+          group: 'outdoor',
+          outcome: 'success',
+          durationMs: 3131,
+          winnerMirror: 1
+        }
+      ],
+      attempts: [
+        {
+          group: 'culture',
+          mirror: 1,
+          hedgeOffsetMs: 0,
+          durationMs: 4062,
+          outcome: 'success'
+        },
+        {
+          group: 'culture',
+          mirror: 2,
+          hedgeOffsetMs: 1503,
+          durationMs: 2559,
+          outcome: 'cancelled'
+        },
+        {
+          group: 'culture',
+          mirror: 3,
+          hedgeOffsetMs: 3002,
+          durationMs: 1060,
+          outcome: 'cancelled'
+        },
+        {
+          group: 'entertainment',
+          mirror: 1,
+          hedgeOffsetMs: 0,
+          durationMs: 1568,
+          outcome: 'success'
+        },
+        {
+          group: 'entertainment',
+          mirror: 2,
+          hedgeOffsetMs: 1501,
+          durationMs: 68,
+          outcome: 'cancelled'
+        },
+        {
+          group: 'outdoor',
+          mirror: 1,
+          hedgeOffsetMs: 0,
+          durationMs: 3131,
+          outcome: 'success'
+        },
+        {
+          group: 'outdoor',
+          mirror: 2,
+          hedgeOffsetMs: 1504,
+          durationMs: 1627,
+          outcome: 'cancelled'
+        },
+        {
+          group: 'outdoor',
+          mirror: 3,
+          hedgeOffsetMs: 3001,
+          durationMs: 131,
+          outcome: 'cancelled'
+        },
+        {
+          group: 'seasonal',
+          mirror: 1,
+          hedgeOffsetMs: 0,
+          durationMs: 3595,
+          outcome: 'empty'
+        },
+        {
+          group: 'seasonal',
+          mirror: 2,
+          hedgeOffsetMs: 1500,
+          durationMs: 2096,
+          outcome: 'cancelled'
+        },… (truncated)
+
+### 01:20:20 GET / 200 [info/serverless]
+dep=dpl_4aJAVbUh9jjEdP7bsz5n3ep2ypo6 branch=fix/date-night-live-discovery-resilience-1 cache=MISS
