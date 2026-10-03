@@ -1,3 +1,22 @@
+# Pick For Us — Date Night Live Timeout Remediation #1 (2026-10-03)
+
+## CURRENT — DATE NIGHT LIVE DISCOVERY RESILIENCE LIVE TIMEOUT REMEDIATION INCOMPLETE — REVIEW REQUIRED
+
+This TOP entry supersedes historical next actions. All prior continuity below is preserved verbatim.
+
+- Branch `fix/date-night-live-discovery-resilience-live-timeout-remediation-1` was created directly from `e8730f7e44ba48a78a3335657190f7e5aaf82d7b` with verified tree `50a412de4e6ef656ce0f7c8b8e4a39fb720b9e20` and sole parent `08893d73a5e22674d4f9fccbdf04599cdd2c6f25`. Authority: `67e91ca0839760ce77e07706d69d5093c38352cb`; full controlling handoff read before executable changes.
+- Only `src/lib/date-night/lifecycle.ts` changes runtime: six common active-key regex carrier selectors become 23 exact key/value selectors per independent group. The 28 prefixed selectors, two named-set predicates, arbitrary permanent suffixes and positive query statements remain unchanged. No shared prerequisite or discovery redesign. New permanent structural regression: 13/13 GREEN after meaningful 5-pass/8-fail RED.
+- Anything query cost: 170→238 selectors / 19,166→21,942 bytes. Theoretical common active-key regex carrier acquisition across four groups × four mirrors: 96→0; total carrier selectors 544→816. Local construction 0.0579→0.0873ms is not provider runtime. Every remaining regex and its scope/semantic rationale is recorded.
+- Lifecycle parity remains complete: 154 audited cases / 111 authoritative negatives / zero deterministic gaps in every requested group. V-DR-02 PRESERVED; cache.ts byte-identical. Four mirrors/groups, hedge offsets and 8s/20s/25s deadlines unchanged.
+- Fresh full gates GREEN: 686 JavaScript passes (615 repository + 71 application), four inherited skips, zero failures; compiled security 14/14; clean locked install/dependency tree/typecheck/lint; casino 883/899/60; Android 15/4; Python 3/3; migration-free auth-enabled direct Vite production build/proof; protected-scope/secret/junk checks. Focused 113+162 are not double-counted. Never migration-chaining npm run build.
+- Controlled browser 4/4 GREEN: second/third mirror wins, partial groups, all-stall; bounded loading, truthful states, expected cancellation, Open Now no-refetch, no page errors/mobile horizontal overflow, zero public-provider calls.
+- Live acceptance FAILED/incomplete on exact `ce7d9df74cfda9d6ac1473a7392b8f089d87fc80` Preview `dpl_7kz238n3Fp2rNYGjvFDuHK18YKYk`. Exactly two discovery RPCs. 15-mile: all four groups succeed (seasonal valid-empty), 45 live/53 total observed, provider 6,699ms / UI 8,062ms, all six rows and local reuse pass. 50-mile: all four groups fail, truthful saved fallback (17 saved/zero live), provider 12,175ms / UI 13,209ms. Attempt timeouts/HTTP 504s remain. Harness stops before 50-mile subsets: 7/12 rows, no full-matrix or no-regression claim. No further provider traffic or speculative rewrite.
+- Latest pushed before final evidence save: `8e67d959f5b19cb00c22533a6eb27a1b2e1bfb2f`, tree `33d88539f4d4bffc0dfddcaa3f2fdd6216788a4f`, sole parent `4a321e5ec84dd2b1d196f6c6220ea35337ea775c`. Resolve this final INCOMPLETE checkpoint from the unique commit introducing `audit/date-night-live-discovery-resilience-live-timeout-remediation-1-2026-10-03.json`; do not amend for its own hash. No successful immutable candidate exists.
+- Main remains `4d937e58d2a65567b54ac5271915bc85b498898b`; production remains READY `dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL` at that SHA. No merge, promotion, migration, settings/native/catalog/auth/dependency or other protected-scope change.
+- **NEXT: STOP for review of the retained 50-mile failure. Do not promote, retry public providers, speculate another runtime rewrite, or claim awaiting successful-candidate reverification.** Separate final MD/JSON/evidence and continuation preserve actual results and environmental limitations. Any future implementation change requires renewed gates. SAFE TO RESUME.
+
+## Prior continuity — preserved verbatim
+
 # Pick For Us — Date Night Live Discovery Resilience Reverification Remediation #2 (2026-10-03)
 
 ## CURRENT — DATE NIGHT LIVE DISCOVERY RESILIENCE REVERIFICATION REMEDIATION 2 INCOMPLETE — REVIEW REQUIRED

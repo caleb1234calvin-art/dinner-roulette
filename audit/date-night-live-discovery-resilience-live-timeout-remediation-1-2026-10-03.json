@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-03T18:05:50.347106+00:00",
+  "status": "DATE NIGHT LIVE DISCOVERY RESILIENCE LIVE TIMEOUT REMEDIATION INCOMPLETE \u2014 REVIEW REQUIRED",
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "branch": "fix/date-night-live-discovery-resilience-live-timeout-remediation-1",
+  "authority": {
+    "sha": "67e91ca0839760ce77e07706d69d5093c38352cb",
+    "branch": "handoff/date-night-live-discovery-resilience-live-timeout-remediation-1",
+    "handoff": "docs/handoffs/active/date-night-live-discovery-resilience-live-timeout-remediation-1.md",
+    "readInFullBeforeExecutableChanges": true
+  },
+  "base": {
+    "sha": "e8730f7e44ba48a78a3335657190f7e5aaf82d7b",
+    "tree": "50a412de4e6ef656ce0f7c8b8e4a39fb720b9e20",
+    "soleParent": "08893d73a5e22674d4f9fccbdf04599cdd2c6f25",
+    "directBranchCreation": true
+  },
+  "latestPushedBeforeFinalEvidence": {
+    "sha": "8e67d959f5b19cb00c22533a6eb27a1b2e1bfb2f",
+    "tree": "33d88539f4d4bffc0dfddcaa3f2fdd6216788a4f",
+    "soleParent": "4a321e5ec84dd2b1d196f6c6220ea35337ea775c"
+  },
+  "finalCheckpoint": {
+    "kind": "INCOMPLETE evidence checkpoint; not successful candidate",
+    "expectedSoleParent": "8e67d959f5b19cb00c22533a6eb27a1b2e1bfb2f",
+    "resolveCommand": "git log --diff-filter=A --format='%H %T %P' -- audit/date-night-live-discovery-resilience-live-timeout-remediation-1-2026-10-03.json",
+    "doNotAmendForSelfHash": true
+  },
+  "successfulCandidate": null,
+  "promotionAuthorized": false,
+  "promoted": false,
+  "implementation": {
+    "runtimePaths": [
+      "src/lib/date-night/lifecycle.ts"
+    ],
+    "testPaths": [
+      "scripts/date-night-query-cost.test.mjs",
+      "scripts/date-night-query-plan.test.mjs"
+    ],
+    "exactFinitePairs": 23,
+    "activeCommonKeyRegexSelectorsBeforePerGroup": 6,
+    "activeCommonKeyRegexSelectorsAfterPerGroup": 0,
+    "arbitraryPrefixSemanticsUnchanged": true,
+    "positiveStatementsByteIdentical": true,
+    "groups": 4,
+    "mirrors": 4,
+    "sharedPrerequisiteAdded": false,
+    "runtimeUnchangedSince": "4f6a6e5e9e23ec92761995334eae5bddbec3671a"
+  },
+  "cost": {
+    "beforeEvidence": "cost-before.json",
+    "afterEvidence": "cost-after.json",
+    "anything": {
+      "beforeSelectors": 170,
+      "afterSelectors": 238,
+      "beforeBytes": 19166,
+      "afterBytes": 21942,
+      "beforeMeanConstructionMs": 0.057873482,
+      "afterMeanConstructionMs": 0.087319959
+    },
+    "perGroup": [
+      {
+        "group": "seasonal",
+        "beforeSelectors": 53,
+        "afterSelectors": 70,
+        "beforeBytes": 5747,
+        "afterBytes": 6441
+      },
+      {
+        "group": "entertainment",
+        "beforeSelectors": 42,
+        "afterSelectors": 59,
+        "beforeBytes": 4643,
+        "afterBytes": 5337
+      },
+      {
+        "group": "culture",
+        "beforeSelectors": 38,
+        "afterSelectors": 55,
+        "beforeBytes": 4413,
+        "afterBytes": 5107
+      },
+      {
+        "group": "outdoor",
+        "beforeSelectors": 37,
+        "afterSelectors": 54,
+        "beforeBytes": 4363,
+        "afterBytes": 5057
+      }
+    ],
+    "carrierPerGroup": {
+      "beforeSelectors": 34,
+      "afterSelectors": 51,
+      "beforeBytes": 3598,
+      "afterBytes": 4292,
+      "beforeActive": 6,
+      "afterActive": 23,
+      "prefixedBeforeAndAfter": 28,
+      "lifecyclePredicatesBeforeAndAfter": 2
+    },
+    "theoreticalFourGroupsFourMirrors": {
+      "beforeCarrierSelectors": 544,
+      "afterCarrierSelectors": 816,
+      "beforeCommonActiveRegex": 96,
+      "afterCommonActiveRegex": 0,
+      "prefixedBeforeAndAfter": 448,
+      "predicatesBeforeAndAfter": 32
+    },
+    "measurement": {
+      "coordinates": [
+        43,
+        -79
+      ],
+      "radiusMetres": 80467,
+      "warmups": 100,
+      "iterations": 1000,
+      "notProviderLatency": true
+    },
+    "remainingRegexRationale": "registry-audit.md; every statement inventoried in cost-after.json; prefixed finite regex retained as explicit scope/size tradeoff, arbitrary suffix/value predicates semantically necessary, positive regex protected unchanged"
+  },
+  "parity": {
+    "auditCases": 154,
+    "authoritativeNegatives": 111,
+    "deterministicGaps": 0,
+    "allRequestedGroups": true,
+    "beforeEvidence": "parity-before.json",
+    "afterEvidence": "parity-after.json"
+  },
+  "preservation": {
+    "V-DR-02": "PRESERVED",
+    "cacheByteIdentical": true,
+    "cacheSha256": "71b8f4d4cdfbfd6bda4d57ad19c1034ac5012038e762931a90ee06b1fa1f45f4",
+    "attemptDeadlineMs": 8000,
+    "providerDeadlineMs": 20000,
+    "clientWatchdogMs": 25000,
+    "hedgeOffsetsMs": [
+      0,
+      1500,
+      3000,
+      4500
+    ],
+    "protectedBaseFilesCompared": 1023,
+    "unrelatedRuntimeChanges": false
+  },
+  "validation": {
+    "javascript": {
+      "repositoryPassed": 615,
+      "applicationPassed": 71,
+      "totalPassed": 686,
+      "failed": 0,
+      "skipped": 4,
+      "newPermanentCostTests": 13,
+      "focusedNotDoubleCounted": true
+    },
+    "focused": {
+      "costLifecycleQuerySeasonalPartial": 113,
+      "cacheClientProvider": 162
+    },
+    "compiledSecurity": {
+      "passed": 14,
+      "failed": 0
+    },
+    "casino": {
+      "canonical": 883,
+      "serialized": 899,
+      "catalogs": 60
+    },
+    "android": {
+      "launcherResources": 15,
+      "webIcons": 4
+    },
+    "pythonPassed": 3,
+    "build": "auth-enabled direct Vite production build, no migrations; original proof verifies after generated bytecode removal",
+    "sourceProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "1fc5e8452b51be67a066d7a7511c28fbae62d2c50b4192970103801598d124df",
+        "files": 414
+      },
+      "startedAt": "2026-10-03T17:42:23.634Z",
+      "output": {
+        "sha256": "138f886cdedb6850f9334cb7a2aa45ff8efc73ca0fedfd913731c835c28f4724",
+        "files": 194
+      },
+      "completedAt": "2026-10-03T17:42:27.521Z"
+    },
+    "retainedFailures": [
+      "restricted structural runner file-level failure; capable RED reproduced then GREEN13",
+      "saved log trailing EOF blank line; normalized with exact original bytes retained",
+      "Python bytecode added to source fingerprint; generated bytecode removed and original proof verified"
+    ]
+  },
+  "controlledBrowser": {
+    "passed": true,
+    "testedAt": "2026-10-03T17:49:28.225Z",
+    "buildProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "1fc5e8452b51be67a066d7a7511c28fbae62d2c50b4192970103801598d124df",
+        "files": 414
+      },
+      "startedAt": "2026-10-03T17:42:23.634Z",
+      "output": {
+        "sha256": "138f886cdedb6850f9334cb7a2aa45ff8efc73ca0fedfd913731c835c28f4724",
+        "files": 194
+      },
+      "completedAt": "2026-10-03T17:42:27.521Z"
+    },
+    "mode": "Production-built local Preview; real browser and TanStack RPC; disposable synthetic provider failures. No live public-provider calls.",
+    "checks": [
+      "second-mirror: actual browser/RPC, bounded spinner, truthful source, expected provider timing/cancellation, local Open Now reuse, mobile layout",
+      "third-mirror: actual browser/RPC, bounded spinner, truthful source, expected provider timing/cancellation, local Open Now reuse, mobile layout",
+      "partial-groups: actual browser/RPC, bounded spinner, truthful source, expected provider timing/cancellation, local Open Now reuse, mobile layout",
+      "all-stall: actual browser/RPC, bounded spinner, truthful source, expected provider timing/cancellation, local Open Now reuse, mobile layout"
+    ],
+    "scenarios": [
+      {
+        "scenario": "second-mirror",
+        "passed": true,
+        "visibleLoadingMs": 1804,
+        "providerDurationMs": 1581,
+        "source": "merged",
+        "partial": false,
+        "attempts": 2,
+        "seasonalOffsets": [
+          {
+            "mirror": 1,
+            "offsetMs": 0
+          },
+          {
+            "mirror": 2,
+            "offsetMs": 1499
+          }
+        ],
+        "noOpenNowRefetch": true,
+        "cancelledLosers": 1
+      },
+      {
+        "scenario": "third-mirror",
+        "passed": true,
+        "visibleLoadingMs": 3335,
+        "providerDurationMs": 3082,
+        "source": "merged",
+        "partial": false,
+        "attempts": 3,
+        "seasonalOffsets": [
+          {
+            "mirror": 1,
+            "offsetMs": 0
+          },
+          {
+            "mirror": 2,
+            "offsetMs": 1495
+          },
+          {
+            "mirror": 3,
+            "offsetMs": 2996
+          }
+        ],
+        "noOpenNowRefetch": true,
+        "cancelledLosers": 2
+      },
+      {
+        "scenario": "partial-groups",
+        "passed": true,
+        "visibleLoadingMs": 12475,
+        "providerDurationMs": 12507,
+        "source": "merged",
+        "partial": true,
+        "attempts": 5,
+        "seasonalOffsets": [
+          {
+            "mirror": 1,
+            "offsetMs": 0
+          }
+        ],
+        "noOpenNowRefetch": true,
+        "cancelledLosers": 0
+      },
+      {
+        "scenario": "all-stall",
+        "passed": true,
+        "visibleLoadingMs": 12527,
+        "providerDurationMs": 12504,
+        "source": "fallback",
+        "partial": false,
+        "attempts": 16,
+        "seasonalOffsets": [
+          {
+            "mirror": 1,
+            "offsetMs": 0
+          },
+          {
+            "mirror": 2,
+            "offsetMs": 1502
+          },
+          {
+            "mirror": 3,
+            "offsetMs": 3000
+          },
+          {
+            "mirror": 4,
+            "offsetMs": 4498
+          }
+        ],
+        "noOpenNowRefetch": true,
+        "cancelledLosers": 0
+      }
+    ],
+    "errors": []
+  },
+  "liveAcceptance": {
+    "accepted": false,
+    "discoveryRpcs": 2,
+    "maximumRpcs": 2,
+    "fifteenMiles": {
+      "groupsSucceeded": 4,
+      "seasonal": "succeeded-empty",
+      "providerDurationMs": 6699,
+      "rpcDurationMs": 6826,
+      "visibleSettlementMs": 8062,
+      "liveVenuesObserved": 45,
+      "totalVenuesObserved": 53,
+      "lifecycleVenuesObserved": 0,
+      "localSubsetAndOpenNowRequests": 0,
+      "moodFavoritesFewerParksNoRefetch": true,
+      "cornPumpkinConsistency": "Both zero in acquisition and local subsets; mixed seasonal2 matches savedHaunted2; OpenNow0."
+    },
+    "fiftyMiles": {
+      "groupsSucceeded": 0,
+      "groupsFailed": 4,
+      "providerDurationMs": 12175,
+      "rpcDurationMs": 12340,
+      "visibleSettlementMs": 13209,
+      "source": "fallback",
+      "partial": false,
+      "liveVenuesObserved": 0,
+      "savedVenuesObserved": 17,
+      "lifecycleVenuesObserved": 0,
+      "subsetsRun": false,
+      "localReuseAccepted": false,
+      "timeoutSignature": "Visible culture/entertainment/outdoor mirrors1/2 time out around8s; mirror3 HTTP504; visible culture/entertainment mirror4 time out8s after immediate failure advancement. Log tail truncated; exact seasonal/outdoor4 details unobserved."
+    },
+    "matrix": {
+      "completedRows": 7,
+      "expectedRows": 12,
+      "accepted": false
+    },
+    "pageErrors": [],
+    "horizontalOverflow": false,
+    "publicHttpRequests": "At most32 theoretical across2discovery RPCs; exact physical attempt records truncated; do not label32 as measured",
+    "noFurtherProviderRequests": true,
+    "noSpeculativeRewrite": true,
+    "providerRuntimeRegressionExcluded": false,
+    "cause": "50mile live acceptance blocker persists; retained telemetry cannot separate provider/network conditions from remaining query cost. No causal attribution from these2observations."
+  },
+  "livePreview": {
+    "id": "dpl_7kz238n3Fp2rNYGjvFDuHK18YKYk",
+    "url": "https://dinner-roulette-ijp958pl9-minions-9e2c.vercel.app",
+    "sha": "ce7d9df74cfda9d6ac1473a7392b8f089d87fc80",
+    "readyState": "READY",
+    "target": null,
+    "browserHarnessOnlyTlsTolerance": true
+  },
+  "frozenMain": "4d937e58d2a65567b54ac5271915bc85b498898b",
+  "productionReadback": {
+    "checkedAt": "2026-10-03T18:00:37.302Z",
+    "requestedAlias": "pickforus.app",
+    "deployment": {
+      "id": "dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL",
+      "name": "dinner-roulette",
+      "url": "dinner-roulette-o4fv4tqev-minions-9e2c.vercel.app",
+      "type": "LAMBDAS",
+      "state": "READY",
+      "createdAt": 1790985175870,
+      "creator": {
+        "uid": "vJzqOIJ7PLOtgdkmemscyDMC",
+        "username": "caleb1234calvin-6132"
+      },
+      "project": {
+        "id": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "name": "dinner-roulette",
+        "framework": "tanstack-start"
+      },
+      "meta": {
+        "githubCommitRef": "main",
+        "githubCommitSha": "4d937e58d2a65567b54ac5271915bc85b498898b",
+        "githubCommitMessage": "Fix Halloween notice mobile scroll clearance",
+        "githubRepo": "dinner-roulette",
+        "githubOrg": "caleb1234calvin-art"
+      },
+      "alias": [
+        "pickforus.app",
+        "dinner-roulette-chi.vercel.app",
+        "www.pickforus.app",
+        "dinner-roulette-minions-9e2c.vercel.app",
+        "dinner-roulette-git-main-minions-9e2c.vercel.app"
+      ],
+      "target": "production",
+      "regions": [
+        "iad1"
+      ],
+      "buildingAt": 1790985177037,
+      "ready": 1790985190558,
+      "readyState": "READY",
+      "source": "git",
+      "aliasError": null
+    }
+  },
+  "remainingGates": [
+    "50-mile live acceptance failed",
+    "12-row live matrix incomplete: 7/12",
+    "50-mile subset and local filter reuse not accepted",
+    "Absence of material provider-runtime regression not established",
+    "Successful immutable candidate freeze blocked"
+  ],
+  "nextAction": "STOP for review; no further public-provider requests, runtime rewrite, promotion or successful-candidate reverification claim in this pass.",
+  "safeToResume": true,
+  "evidenceDirectory": "audit/date-night-live-discovery-resilience-live-timeout-remediation-1-evidence",
+  "continuation": "docs/handoffs/active/date-night-live-discovery-resilience-live-timeout-remediation-1-continuation.md"
+}
