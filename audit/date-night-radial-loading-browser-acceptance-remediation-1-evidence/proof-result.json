@@ -1,0 +1,11 @@
+{
+  "gate": "proof",
+  "command": [
+    "node",
+    "scripts/browser-build-proof.mjs",
+    "verify"
+  ],
+  "exitCode": 0,
+  "seconds": 0.308,
+  "authEnabled": true
+}

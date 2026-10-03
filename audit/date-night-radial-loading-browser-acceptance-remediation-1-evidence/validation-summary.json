@@ -1,0 +1,224 @@
+{
+  "javascript": {
+    "repository": 658,
+    "application": 71,
+    "total": 729,
+    "skipped": 4,
+    "failed": 0
+  },
+  "compiledSecurity": 14,
+  "focusedNotAdditive": 183,
+  "sliderBrowser": {
+    "red": {
+      "failed": 8,
+      "passed": 1,
+      "run": 37156707435
+    },
+    "green": {
+      "passed": 9,
+      "run": 37156889299
+    }
+  },
+  "lifecycle": {
+    "auditedCases": 154,
+    "authoritativeNegatives": 111,
+    "parityGaps": 0
+  },
+  "legacyCacheAndVDR02": 46,
+  "casinos": {
+    "canonical": 883,
+    "serialized": 899,
+    "catalogs": 60
+  },
+  "android": {
+    "launcherIcons": 15,
+    "webIcons": 4
+  },
+  "python": 3,
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "4489dc9a9e71e552583de354d1994724ab22074ea3b58b01c3c4876dd8c9d5c2",
+      "files": 427
+    },
+    "startedAt": "2026-10-03T21:59:41.724Z",
+    "output": {
+      "sha256": "c47842df8f4a3d737c1ea5ddfb55906e52c6707a53ae13d289bc520330f81eb2",
+      "files": 194
+    },
+    "completedAt": "2026-10-03T21:59:44.841Z"
+  },
+  "gates": [
+    {
+      "gate": "android",
+      "command": [
+        "npm",
+        "run",
+        "android:check"
+      ],
+      "exitCode": 0,
+      "seconds": 1.479,
+      "authEnabled": false
+    },
+    {
+      "gate": "build",
+      "command": [
+        "node",
+        "scripts/with-app-env.mjs",
+        "node",
+        "node_modules/vite/bin/vite.js",
+        "build",
+        "--mode",
+        "production"
+      ],
+      "exitCode": 0,
+      "seconds": 2.881,
+      "authEnabled": true
+    },
+    {
+      "gate": "capture",
+      "command": [
+        "node",
+        "scripts/browser-build-proof.mjs",
+        "capture"
+      ],
+      "exitCode": 0,
+      "seconds": 0.198,
+      "authEnabled": true
+    },
+    {
+      "gate": "casinos",
+      "command": [
+        "npm",
+        "run",
+        "audit:casinos"
+      ],
+      "exitCode": 0,
+      "seconds": 0.908,
+      "authEnabled": false
+    },
+    {
+      "gate": "complete",
+      "command": [
+        "node",
+        "scripts/browser-build-proof.mjs",
+        "complete"
+      ],
+      "exitCode": 0,
+      "seconds": 0.232,
+      "authEnabled": true
+    },
+    {
+      "gate": "dependencies",
+      "command": [
+        "npm",
+        "ls",
+        "--all"
+      ],
+      "exitCode": 0,
+      "seconds": 0.745,
+      "authEnabled": false
+    },
+    {
+      "gate": "diff",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "seconds": 0.004,
+      "authEnabled": false
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "scripts/date-night-radial-plan.test.mjs",
+        "scripts/date-night-radial-search.test.mjs",
+        "scripts/date-night-radial-cache.test.mjs",
+        "scripts/date-night-radial-session.test.mjs",
+        "scripts/date-night-cache.test.mjs",
+        "scripts/discovery-client-lifecycle.test.mjs",
+        "scripts/date-night-lifecycle-parity.test.mjs",
+        "scripts/date-night-partial-results.test.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 4.811
+    },
+    {
+      "gate": "full-test",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exitCode": 0,
+      "seconds": 19.995,
+      "authEnabled": false
+    },
+    {
+      "gate": "lint",
+      "command": [
+        "node",
+        "node_modules/eslint/bin/eslint.js",
+        "src/components/ui/slider.tsx",
+        "scripts/slider-accessibility-browser.mjs",
+        "scripts/test-support/slider-accessibility-fixture.tsx"
+      ],
+      "exitCode": 0,
+      "seconds": 0.834,
+      "authEnabled": false
+    },
+    {
+      "gate": "proof",
+      "command": [
+        "node",
+        "scripts/browser-build-proof.mjs",
+        "verify"
+      ],
+      "exitCode": 0,
+      "seconds": 0.308,
+      "authEnabled": true
+    },
+    {
+      "gate": "python",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "native-android",
+        "-p",
+        "test_*.py"
+      ],
+      "exitCode": 0,
+      "seconds": 0.074,
+      "authEnabled": false
+    },
+    {
+      "gate": "security",
+      "command": [
+        "node",
+        "--test",
+        "scripts/tanstack-security.test.mjs"
+      ],
+      "exitCode": 0,
+      "seconds": 1.895,
+      "authEnabled": true
+    },
+    {
+      "gate": "typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "exitCode": 0,
+      "seconds": 5.7,
+      "authEnabled": false
+    }
+  ]
+}

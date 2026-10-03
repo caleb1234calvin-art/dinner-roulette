@@ -1,0 +1,16 @@
+{
+  "gate": "python",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "native-android",
+    "-p",
+    "test_*.py"
+  ],
+  "exitCode": 0,
+  "seconds": 0.074,
+  "authEnabled": false
+}

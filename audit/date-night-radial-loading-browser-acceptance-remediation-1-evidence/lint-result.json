@@ -1,0 +1,13 @@
+{
+  "gate": "lint",
+  "command": [
+    "node",
+    "node_modules/eslint/bin/eslint.js",
+    "src/components/ui/slider.tsx",
+    "scripts/slider-accessibility-browser.mjs",
+    "scripts/test-support/slider-accessibility-fixture.tsx"
+  ],
+  "exitCode": 0,
+  "seconds": 0.834,
+  "authEnabled": false
+}

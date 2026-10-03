@@ -1,0 +1,16 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "scripts/date-night-radial-plan.test.mjs",
+    "scripts/date-night-radial-search.test.mjs",
+    "scripts/date-night-radial-cache.test.mjs",
+    "scripts/date-night-radial-session.test.mjs",
+    "scripts/date-night-cache.test.mjs",
+    "scripts/discovery-client-lifecycle.test.mjs",
+    "scripts/date-night-lifecycle-parity.test.mjs",
+    "scripts/date-night-partial-results.test.mjs"
+  ],
+  "exitCode": 0,
+  "seconds": 4.811
+}

@@ -1,0 +1,11 @@
+{
+  "gate": "security",
+  "command": [
+    "node",
+    "--test",
+    "scripts/tanstack-security.test.mjs"
+  ],
+  "exitCode": 0,
+  "seconds": 1.895,
+  "authEnabled": true
+}
