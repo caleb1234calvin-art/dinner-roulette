@@ -1,0 +1,88 @@
+✔ Anything coverage satisfies every later category and subset without acquiring again (2.953193ms)
+✔ coverage is category-specific within a group; only missing types are requested (8.732924ms)
+✔ valid-empty coverage is reusable and preserves its origin; failed/cancelled categories stay missing (0.355676ms)
+✔ complete fallback and legacy missing metadata never establish reusable live coverage (0.30698ms)
+✔ cached successes plus fresh failure preserve partial live data and disjoint category outcomes (0.776338ms)
+✔ cached live success survives missing-category transport failure without asserting coverage (0.271008ms)
+✔ radius narrowing reuses larger coverage but widening cannot use a narrower entry (0.405447ms)
+✔ latitude separates incompatible cache coverage (0.186119ms)
+✔ longitude separates incompatible cache coverage (0.19899ms)
+✔ Halloween activation separates incompatible cache coverage (0.527321ms)
+✔ semantic version separates incompatible cache coverage (0.130024ms)
+✔ TTL expires exactly at bound; reads and fresh missing-category combinations never rejuvenate old coverage (0.65349ms)
+✔ new valid-empty category coverage cannot resurrect old venues through a reused superset (0.51024ms)
+✖ equal-timestamp freshness uses admission order even after an older superset becomes most recently used (2.212388ms)
+✔ LRU entry and aggregate raw-venue caps evict whole entries without truncated coverage (1.091613ms)
+✔ cache assembly preserves catalog aliases, full evidence, hours precedence and lifecycle in either insertion order (1.133121ms)
+✔ fresh cross-category lifecycle evidence suppresses an older cached active identity without adding coverage (0.70826ms)
+✔ actual DateNightHome: Anything→subsets and every local-only filter reuse data without network (231.378687ms)
+✔ actual DateNightHome: stale persisted unknown categories recover to Anything without weakening RPC validation (6.108749ms)
+✔ actual DateNightHome: subset then mixed selection fetches only missing categories (5.123183ms)
+✔ actual DateNightHome: bounded missing-category timeout preserves cached live contribution and partial warning (5.448059ms)
+✔ actual DateNightHome: TTL refreshes on next category acquisition, not local-only toggles or elapsed time (6.159558ms)
+✔ actual DateNightHome: radius narrows from acquired 50 mi without RPC; widening 15→50 acquires (9.092825ms)
+✔ actual DateNightHome: late replacement response cannot seed reusable cache (7.018873ms)
+✔ actual DateNightHome: late timeout response cannot seed reusable cache (7.370604ms)
+✔ actual DateNightHome: component cache lifetime does not survive unmount or contaminate another session (6.272152ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 25
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 317.076327
+
+✖ failing tests:
+
+test at scripts/date-night-cache.test.mjs:142:1
+✖ equal-timestamp freshness uses admission order even after an older superset becomes most recently used (2.212388ms)
+  AssertionError [ERR_ASSERTION]: an LRU read must not make an older acquisition newer
+  + actual - expected
+  
+  + [
+  +   {
+  +     activityTypes: [
+  +       'corn-maze'
+  +     ],
+  +     address: 'Test fixture',
+  +     cuisineLabel: 'Pizza',
+  +     cuisines: [
+  +       'pizza'
+  +     ],
+  +     energyLevel: 2,
+  +     id: 'old-corn',
+  +     isChain: false,
+  +     lat: 37.176447,
+  +     lon: -94.310223,
+  +     moodLevel: 1,
+  +     name: 'old-corn',
+  +     openingHours: '24/7',
+  +     phone: null,
+  +     photoKey: 'cafe',
+  +     priceLevel: 2,
+  +     rating: null,
+  +     reviewCount: null,
+  +     source: 'osm',
+  +     venueTypes: [
+  +       'bar'
+  +     ],
+  +     website: null
+  +   }
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/c31e06475fc4/dinner-roulette/scripts/date-night-cache.test.mjs:149:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

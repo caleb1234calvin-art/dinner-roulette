@@ -139,6 +139,18 @@ test("new valid-empty category coverage cannot resurrect old venues through a re
   assert.ok(hit.response.discovery.groups.some((group) => group.activityTypes.includes("corn-maze") && group.originOutcome === "succeeded-empty"));
 });
 
+test("equal-timestamp freshness uses admission order even after an older superset becomes most recently used", () => {
+  const cache = createDateNightDiscoveryCache({ now: () => 100 });
+  cache.store(query(), response(query(), [venue("old-corn", ["corn-maze"]), venue("movie", ["movies"])]));
+  cache.store(query(["corn-maze"]), response(query(["corn-maze"]), []));
+  assert.deepEqual(cache.read(query(["corn-maze"])).response.venues, []);
+  assert.deepEqual(cache.read(query(["movies"])).response.venues.map(({ id }) => id), ["movie"]);
+  const corn = cache.read(query(["corn-maze"]));
+  assert.deepEqual(corn.response.venues, [], "an LRU read must not make an older acquisition newer");
+  assert.deepEqual(corn.missingActivityTypes, []);
+  assert.equal(corn.response.discovery.groups[0].originOutcome, "succeeded-empty");
+});
+
 test("LRU entry and aggregate raw-venue caps evict whole entries without truncated coverage", () => {
   const cache = createDateNightDiscoveryCache({ maxEntries: 2, maxVenues: 3 });
   const a = query(["movies"]), b = query(["movies"], { lat: 38 }), c = query(["movies"], { lat: 39 });

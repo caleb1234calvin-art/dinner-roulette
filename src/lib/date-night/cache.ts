@@ -48,6 +48,7 @@ interface CacheEntry {
   venues: DateNightPlace[];
   groups: DateNightGroupCoverage[];
   acquiredAt: number;
+  readonly admitted: number;
   used: number;
 }
 
@@ -127,7 +128,9 @@ export function createDateNightDiscoveryCache({
       const negativeEvidence = entries.filter((entry) => sameSignature(entry, query))
         .flatMap((entry) => entry.venues.filter((place) => Boolean(place.lifecycle)));
       const selected = new Map<ConcreteDateNightType, { entry: CacheEntry; group: DateNightGroupCoverage }>();
-      for (const entry of [...entries].sort((a, b) => b.acquiredAt - a.acquiredAt || b.used - a.used)) {
+      // Equal-resolution clock readings still follow acquisition order. LRU
+      // reads may change eviction priority, never a snapshot's freshness.
+      for (const entry of [...entries].sort((a, b) => b.acquiredAt - a.acquiredAt || b.admitted - a.admitted)) {
         if (!compatible(entry, query)) continue;
         for (const group of entry.groups) {
           for (const type of group.activityTypes) {
@@ -168,8 +171,9 @@ export function createDateNightDiscoveryCache({
         ...group, activityTypes: group.activityTypes.filter((type) => requested.includes(type)),
       })).filter((group) => group.activityTypes.length > 0);
       if (!groups.length) return false;
+      const admitted = ++sequence;
       entries.push({ acquisition: { ...query, activityTypes: [...query.activityTypes] },
-        venues: response.venues, groups, acquiredAt: at, used: ++sequence });
+        venues: response.venues, groups, acquiredAt: at, admitted, used: admitted });
       while (entries.length > maxEntries || entries.reduce((sum, entry) => sum + entry.venues.length, 0) > maxVenues) {
         const oldest = entries.reduce((a, b) => a.used < b.used ? a : b);
         entries.splice(entries.indexOf(oldest), 1);
