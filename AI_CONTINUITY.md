@@ -1,3 +1,20 @@
+# Pick For Us — Date Night Radial Pacing #1 (2026-10-03)
+
+## CURRENT — DATE NIGHT RADIAL PACING IMPLEMENTED — AWAITING INDEPENDENT VERIFICATION
+
+This top entry supersedes prior next actions; historical continuity below is preserved verbatim.
+
+- Branch `feature/date-night-radial-pacing-1` starts at approved base `908510ac25fe5c24335126a0f34ff42fe4d80632`, tree `3211b4df4eccb638a8c492da047eac3b24abb600`. Full authority `f9383aa2d4f5156510594657759acb046e1841bc` and design `edb524d2fe49174b217dbcbaf97a1c7edc81608f` were read first.
+- Only runtime change: `radial-session.ts`. Success/empty waits 250 ms nominally; degraded waits 1,000 ms; outer starts stay at least 1,000 ms apart. One RPC, core-first, unchanged failure/pass caps, cache, lifecycle, providers and geometry. A monotonic deadline prevents update/retry bursts. Three focused test paths and one branch-scoped controlled runner changed.
+- Fresh validation: 19 pacing, 296 focused, full 748 passed with 4 inherited skips, 14 compiled security (included in full; separately rerun), typecheck, changed lint, build and protected-scope checks pass. Full lint retains the exact base's 3 errors and 6 warnings and is not claimed clean. RED and initial timing failures remain in the lossless evidence archive.
+- Final controlled browser: 10/10, run `37168371526`, job `111336022002`, source `70e049b47194696910c70cc1f5dd2ae9ba229aec`, tree `07f091c0f7d4953c79af6e96961eb176b921876e`, sole parent `419687fa16ff51fa9ce1da30f8a7880c0e776887`. Zero public calls, page errors or overflow; unchanged harness. Source proof `18c93c120639f4ba330a9f78921f74d61301889b0f55ab59610ae5de512f86dc` matches local and hosted builds. Artifact `11290052228` verified. Local Chromium socket failure was resolved by authorized hosted execution.
+- Synthetic model: exactly 6 seconds per patch, 32 patches, 223 s → 199.75 s, saving 23.25 s. No provider median/SLA/capacity or real-world speed claim. All requested behavior and historical blocker coverage retained.
+- Final freeze is the unique commit adding `audit/date-night-radial-pacing-1-2026-10-03.json`, sole parent `70e049b47194696910c70cc1f5dd2ae9ba229aec`; resolve literal SHA/tree from final publication and Git. No self-hash amendment. Full report, JSON and continuation retained in Git; raw logs and browser archives retained in the private downloadable evidence bundle after automatic review rejected their GitHub upload.
+- Main `4d937e58d2a65567b54ac5271915bc85b498898b`, approved candidate `908510ac25fe5c24335126a0f34ff42fe4d80632`, and READY production `dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL` remain unchanged. No merge, promotion, production deployment, migration, settings mutation or public-provider test.
+- NEXT: stop after freeze publication/readback. Independent verification of the exact candidate and inherited lint caveat must precede any promotion decision. SAFE TO RESUME.
+
+## Prior continuity — preserved verbatim
+
 # Pick For Us — Date Night Radial Loading Candidate Freeze #1 (2026-10-03)
 
 ## CURRENT — DATE NIGHT RADIAL LOADING IMPLEMENTED — AWAITING INDEPENDENT VERIFICATION

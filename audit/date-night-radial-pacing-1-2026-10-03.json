@@ -1,0 +1,150 @@
+{
+  "state": "DATE NIGHT RADIAL PACING IMPLEMENTED \u2014 AWAITING INDEPENDENT VERIFICATION",
+  "authority": "f9383aa2d4f5156510594657759acb046e1841bc",
+  "designAuthority": "edb524d2fe49174b217dbcbaf97a1c7edc81608f",
+  "branch": "feature/date-night-radial-pacing-1",
+  "base": {
+    "sha": "908510ac25fe5c24335126a0f34ff42fe4d80632",
+    "tree": "3211b4df4eccb638a8c492da047eac3b24abb600"
+  },
+  "freezeSoleParent": "70e049b47194696910c70cc1f5dd2ae9ba229aec",
+  "freezeResolution": "Unique commit introducing this JSON; resolve SHA/tree after creation, no self-hash amendment",
+  "testedCheckpoint": {
+    "sha": "70e049b47194696910c70cc1f5dd2ae9ba229aec",
+    "tree": "07f091c0f7d4953c79af6e96961eb176b921876e",
+    "parent": "419687fa16ff51fa9ce1da30f8a7880c0e776887"
+  },
+  "runtimePaths": [
+    "src/lib/date-night/radial-session.ts"
+  ],
+  "testPaths": [
+    "scripts/date-night-radial-pacing.test.mjs",
+    "scripts/date-night-radial-session.test.mjs",
+    "scripts/date-night-cache.test.mjs"
+  ],
+  "runnerPath": ".github/workflows/date-night-radial-pacing.yml",
+  "validation": {
+    "pacing": {
+      "pass": 19,
+      "fail": 0
+    },
+    "finalBaselinePacingRed": {
+      "pass": 1,
+      "fail": 18
+    },
+    "focused": {
+      "pass": 296,
+      "fail": 0
+    },
+    "full": {
+      "pass": 748,
+      "repositoryPass": 677,
+      "applicationPass": 71,
+      "skip": 4,
+      "fail": 0,
+      "exit": 0
+    },
+    "compiledSecuritySeparate": {
+      "pass": 14,
+      "fail": 0,
+      "exit": 0,
+      "includedInFullSuite": true
+    },
+    "typecheck": {
+      "exit": 0
+    },
+    "changedLint": {
+      "exit": 0
+    },
+    "repositoryLint": {
+      "exit": 1,
+      "errors": 3,
+      "warnings": 6,
+      "exactBaselineParity": true
+    },
+    "safeBuild": {
+      "exit": 0,
+      "auth": true,
+      "migrations": false
+    },
+    "protectedScope": {
+      "pass": true
+    },
+    "publicProviderCalls": 0
+  },
+  "controlledBrowser": {
+    "pass": 10,
+    "fail": 0,
+    "publicProviderCalls": 0,
+    "pageErrors": 0,
+    "horizontalOverflow": false,
+    "runId": 37168371526,
+    "jobId": 111336022002,
+    "artifactId": 11290052228,
+    "artifactSha256": "130750aad176236dd565fee1c411cc834f77e191f677d4d7bdda28677075cad5",
+    "sourceProof": "18c93c120639f4ba330a9f78921f74d61301889b0f55ab59610ae5de512f86dc",
+    "priorRun": 37168182189,
+    "priorArtifactId": 11289953370,
+    "priorArtifactSha256": "c57dc1da05ae3eff9539f95c5dd612ec87ce2d16b61523023c0b99ba5cf03a36"
+  },
+  "timing": {
+    "model": "synthetic successful patch latency; not provider median or SLA",
+    "patchCount": 32,
+    "geometry": [
+      1,
+      4,
+      7,
+      9,
+      11
+    ],
+    "latencyMsPerPatch": 6000,
+    "baselineDelayMs": 1000,
+    "nominalSuccessDelayMs": 250,
+    "minimumOuterStartSpacingMs": 1000,
+    "baselineDurationMs": 223000,
+    "newDurationMs": 199750,
+    "savingMs": 23250,
+    "testedBy": "scripts/date-night-radial-pacing.test.mjs: every patch starts before exactly 6000ms latency, then settles; all 32 complete"
+  },
+  "preservation": {
+    "checkedAt": "2026-10-04T01:40:44.035Z",
+    "main": "4d937e58d2a65567b54ac5271915bc85b498898b",
+    "approvedCandidate": "908510ac25fe5c24335126a0f34ff42fe4d80632",
+    "production": {
+      "id": "dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL",
+      "state": "READY",
+      "target": "production",
+      "sha": "4d937e58d2a65567b54ac5271915bc85b498898b",
+      "aliases": [
+        "pickforus.app",
+        "dinner-roulette-chi.vercel.app",
+        "www.pickforus.app",
+        "dinner-roulette-minions-9e2c.vercel.app",
+        "dinner-roulette-git-main-minions-9e2c.vercel.app"
+      ]
+    },
+    "mutationPolicy": "No main/approved-candidate movement, merge, promotion, production deployment, settings mutation or public-provider test."
+  },
+  "caveats": [
+    "Full repository lint retains exactly 3 existing errors and 6 warnings; changed executable lint is clean.",
+    "Four inherited external-documentation skips remain.",
+    "Local Chromium cannot create its socket; both hosted controlled runs pass.",
+    "No provider median/SLA/capacity or measured real-world speedup is claimed.",
+    "Independent verification remains required; no promotion."
+  ],
+  "evidenceSha256": {
+    "audit/date-night-radial-pacing-1-evidence/browser-artifact-members.json": "21a43736ff1dce11ce3cec2aec32fc1b9c7a6ab60f2a4e6e097942d5ee04b457",
+    "audit/date-night-radial-pacing-1-evidence/build-proof-final.json": "79cadc4706cc7a0753c48b989ec31ebf26e81aba8ded18c7e7018c99b835053d",
+    "audit/date-night-radial-pacing-1-evidence/controlled-browser-verdict.json": "1eac0a72003d14eb0a6f97783311ac13ba6d10610d166d4f38358b60646f0e54",
+    "audit/date-night-radial-pacing-1-evidence/lint-parity.txt": "ae8da2ef4665055248da86d8575442eafc8f97eee8aced0c7af15bd6071893f7",
+    "audit/date-night-radial-pacing-1-evidence/protected-scope.json": "c85bf43be1b1e4ddda0c780d7d1773eeffcc26b4aec0c5979ca187707fad2717",
+    "audit/date-night-radial-pacing-1-evidence/remote-preservation.json": "0e397cf25635af54864747909dff0b7a87bf90d7d54ab515724b0ea68b4696b4",
+    "audit/date-night-radial-pacing-1-evidence/synthetic-timing.json": "9cd2d1ddd2a0790fb8758d7c91aec91e71d4b736a7376d78e6db9f8c096e211d"
+  },
+  "rawValidationLogs": {
+    "fileName": "validation-logs.zip",
+    "sha256": "1c7be7616a8caf92100a99944903b27805bdaeaf8b1a3017f9a1247693ddadad",
+    "retention": "Private downloadable evidence bundle, not published to GitHub",
+    "reason": "Automatic approval review rejected raw archive upload to public GitHub because it could contain internal data; reviewed summaries and integrity records remain in repository."
+  }
+}

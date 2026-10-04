@@ -1,0 +1,37 @@
+{
+  "base": "908510ac25fe5c24335126a0f34ff42fe4d80632",
+  "testedCommit": "70e049b47194696910c70cc1f5dd2ae9ba229aec",
+  "changedPaths": [
+    ".github/workflows/date-night-radial-pacing.yml",
+    "scripts/date-night-cache.test.mjs",
+    "scripts/date-night-radial-pacing.test.mjs",
+    "scripts/date-night-radial-session.test.mjs",
+    "src/lib/date-night/radial-session.ts"
+  ],
+  "runtimePaths": [
+    "src/lib/date-night/radial-session.ts"
+  ],
+  "protectedPathsByteIdentical": [
+    "src/lib/date-night/radial-plan.ts",
+    "src/lib/date-night/radial-cache.ts",
+    "src/lib/date-night/cache.ts",
+    "src/lib/date-night/search.ts",
+    "src/lib/date-night/query-plan.ts",
+    "src/lib/date-night/lifecycle.ts",
+    "src/lib/discovery/hedged-provider.ts",
+    "src/lib/discovery/client-request.ts",
+    "scripts/date-night-radial-browser.mjs",
+    "scripts/test-support/date-night-radial-preload.mjs",
+    "scripts/date-night-lifecycle-parity.test.mjs",
+    "scripts/date-night-radial-cache.test.mjs",
+    "package.json",
+    "package-lock.json",
+    "vercel.json"
+  ],
+  "allOtherTrackedPathsUnchanged": true,
+  "geometry": "core+4+7+9+11=32",
+  "concurrency": 1,
+  "providerMirrorsAndTimeouts": "unchanged",
+  "cacheLifecycleGroupingRetriesPassCap": "unchanged",
+  "publicProviderCalls": 0
+}

@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "proof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "18c93c120639f4ba330a9f78921f74d61301889b0f55ab59610ae5de512f86dc",
+      "files": 427
+    },
+    "startedAt": "2026-10-04T01:34:06.824Z",
+    "output": {
+      "sha256": "4f4da292407a0d9dd9cb3b9b2d3db44fad7c017725a9f9224b202daa5a13d6ee",
+      "files": 194
+    },
+    "completedAt": "2026-10-04T01:34:10.070Z"
+  },
+  "publicProviderCalls": 0,
+  "scenarios": [
+    {
+      "scenario": "progressive-success",
+      "passed": true,
+      "rpcRequests": 5,
+      "cancelledTransports": 0,
+      "initialProgress": "Loaded through 15 miles · expanding toward 20 miles…",
+      "finalProgress": "Loaded through 20 miles",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "middle-failure",
+      "passed": true,
+      "rpcRequests": 5,
+      "cancelledTransports": 0,
+      "initialProgress": "Loaded through 15 miles · expanding toward 20 miles…",
+      "finalProgress": "Loaded through 15 miles · some outer areas could not be loaded",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "outermost-failure",
+      "passed": true,
+      "rpcRequests": 32,
+      "cancelledTransports": 0,
+      "initialProgress": "Loaded through 15 miles · expanding toward 50 miles…",
+      "finalProgress": "Loaded through 40 miles · some outer areas could not be loaded",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "options-stable",
+      "passed": true,
+      "rpcRequests": 2,
+      "cancelledTransports": 0,
+      "initialProgress": "Loaded through 15 miles · expanding toward 20 miles…",
+      "finalProgress": "Loaded through 15 miles · expanding toward 20 miles…",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "future-pick",
+      "passed": true,
+      "rpcRequests": 2,
+      "cancelledTransports": 0,
+      "initialProgress": "Loaded through 15 miles · expanding toward 20 miles…",
+      "finalProgress": "Loaded through 15 miles · expanding toward 20 miles…",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "radius-increase",
+      "passed": true,
+      "rpcRequests": 2,
+      "cancelledTransports": 1,
+      "initialProgress": "Loaded through 15 miles",
+      "finalProgress": "Loaded through 1 miles",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "radius-decrease",
+      "passed": true,
+      "rpcRequests": 2,
+      "cancelledTransports": 1,
+      "initialProgress": "Loaded through 15 miles · expanding toward 50 miles…",
+      "finalProgress": "Loaded through 1 miles",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "local-filters",
+      "passed": true,
+      "rpcRequests": 2,
+      "cancelledTransports": 0,
+      "initialProgress": "Loaded through 15 miles · expanding toward 20 miles…",
+      "finalProgress": "Loaded through 15 miles · expanding toward 20 miles…",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "mobile-progress",
+      "passed": true,
+      "rpcRequests": 1,
+      "cancelledTransports": 0,
+      "initialProgress": "Loaded through 15 miles · expanding toward 20 miles…",
+      "finalProgress": "Loaded through 15 miles · expanding toward 20 miles…",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "all-stall",
+      "passed": true,
+      "rpcRequests": 1,
+      "cancelledTransports": 0,
+      "initialProgress": "Nearby coverage is incomplete · some areas could not be loaded",
+      "finalProgress": "Nearby coverage is incomplete · some areas could not be loaded",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    }
+  ],
+  "errors": []
+}

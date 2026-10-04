@@ -1,0 +1,19 @@
+{
+  "model": "synthetic successful patch latency; not provider median or SLA",
+  "patchCount": 32,
+  "geometry": [
+    1,
+    4,
+    7,
+    9,
+    11
+  ],
+  "latencyMsPerPatch": 6000,
+  "baselineDelayMs": 1000,
+  "nominalSuccessDelayMs": 250,
+  "minimumOuterStartSpacingMs": 1000,
+  "baselineDurationMs": 223000,
+  "newDurationMs": 199750,
+  "savingMs": 23250,
+  "testedBy": "scripts/date-night-radial-pacing.test.mjs: every patch starts before exactly 6000ms latency, then settles; all 32 complete"
+}
