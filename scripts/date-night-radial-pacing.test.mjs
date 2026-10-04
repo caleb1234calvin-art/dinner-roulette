@@ -200,7 +200,9 @@ test("32-start cap also blocks newly requested categories after a complete succe
 test("synthetic 6-second cold pass measures 199750ms; baseline model is 223000ms", async t => {
   const h = setup(t);
   for (let i = 0; i < 32; i++) {
+    assert.equal(h.calls.length, i + 1, "each patch must start before its synthetic latency begins");
     await h.clock.tick(6000); await h.reply({ outcome: "succeeded-empty" });
+    assert.equal(h.clock.now - h.calls[i].at, 6000, "every synthetic patch takes exactly six seconds");
     if (i < 31) await h.clock.tick(250);
   }
   assert.equal(h.calls.length, 32);
