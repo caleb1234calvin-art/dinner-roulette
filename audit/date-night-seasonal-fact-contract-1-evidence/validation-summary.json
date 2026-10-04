@@ -1,0 +1,72 @@
+{
+  "state": "SEASONAL FACT CONTRACT IMPLEMENTED \u2014 AWAITING SOURCE PILOT / VERIFICATION",
+  "authority": "91951bdad7b4c2faad4dd668a32e6d740d5728db",
+  "designAuthority": "edb524d2fe49174b217dbcbaf97a1c7edc81608f",
+  "base": "908510ac25fe5c24335126a0f34ff42fe4d80632",
+  "baseTree": "3211b4df4eccb638a8c492da047eac3b24abb600",
+  "branch": "feature/date-night-seasonal-fact-contract-1",
+  "soleParentRequired": "908510ac25fe5c24335126a0f34ff42fe4d80632",
+  "freezeRule": "The unique commit introducing this evidence file is the frozen implementation; resolve exact SHA/tree/sole parent from Git. No self-referential amend.",
+  "newTests": {
+    "tests": 112,
+    "passed": 112,
+    "failed": 0,
+    "unmockedNetworkAttempts": 0
+  },
+  "fullSuite": {
+    "tests": 845,
+    "passed": 841,
+    "failed": 0,
+    "skipped": 4,
+    "repositoryScripts": {
+      "tests": 774,
+      "passed": 770,
+      "skipped": 4
+    },
+    "application": {
+      "tests": 71,
+      "passed": 71
+    },
+    "skipReason": "External workspace OG documentation package absent: four preexisting documentation contract checks"
+  },
+  "checks": {
+    "contractTypecheck": "passed",
+    "productTypecheck": "passed",
+    "changedLint": "passed",
+    "fullLint": "3 preexisting no-empty errors, 6 preexisting warnings; all affected blobs unchanged",
+    "localMigrationFreeBuild": "passed",
+    "npmCi": "offline, ignore-scripts; 506 packages installed",
+    "npmLs": "passed after clean offline installation",
+    "npmAudit": "offline report: 0 vulnerabilities; not a fresh online advisory scan",
+    "protectedScope": "all existing tracked paths unchanged",
+    "runtimeIntegration": false,
+    "publicSourceCalls": 0,
+    "geocoderCalls": 0,
+    "newDependencies": 0,
+    "newBillingDependencies": 0
+  },
+  "generated": {
+    "contentRevision": "0b4823ffd0460646a0c6dc40e9cd30661c54a6ec9151cbf84e37a11fa1c06bcd",
+    "published": 7,
+    "reviewedIdentities": 38,
+    "quarantined": 4,
+    "tombstones": 1,
+    "runtimeBytes": 40102,
+    "hashesMatchActualExportBytes": true
+  },
+  "priorValidationIssues": {
+    "reusedNodeModules": "npm ls warnings resolved by a clean locked offline install",
+    "firstFullSuite": "15 setup failures due to absent compiled output; migration-free build then full rerun passed"
+  },
+  "production": {
+    "checkedAt": "2026-10-04T01:53:00.478Z",
+    "id": "dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL",
+    "state": "READY",
+    "target": "production",
+    "branch": "main",
+    "sha": "4d937e58d2a65567b54ac5271915bc85b498898b",
+    "mutations": 0
+  },
+  "nextBranch": "feature/date-night-seasonal-source-pilot-1",
+  "nextGate": "Independent verification of this exact frozen commit before one permission-reviewed source pilot; runtime integration remains separate"
+}

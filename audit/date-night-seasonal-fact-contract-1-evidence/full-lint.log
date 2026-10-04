@@ -1,0 +1,35 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> lint
+> eslint .
+
+
+/workspace/scratch/72d37ae520f2/dinner-roulette/audit/seasonal-discovery-coverage-audit-1-evidence/live-probe.mjs
+  14:347  error  Empty block statement  no-empty
+
+/workspace/scratch/72d37ae520f2/dinner-roulette/audit/seasonal-discovery-coverage-audit-1-evidence/probe.mjs
+  61:7  warning  'normalized' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/72d37ae520f2/dinner-roulette/audit/seasonal-discovery-coverage-audit-1-evidence/source-probe.mjs
+  7:530  error  Empty block statement  no-empty
+
+/workspace/scratch/72d37ae520f2/dinner-roulette/scripts/test-support/slider-accessibility-fixture.tsx
+  5:10  warning  Fast refresh only works when a file has exports. Move your component(s) to a separate file  react-refresh/only-export-components
+
+/workspace/scratch/72d37ae520f2/dinner-roulette/src/components/ui/button.tsx
+  42:18  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/workspace/scratch/72d37ae520f2/dinner-roulette/src/lib/app-data/client.server.ts
+  214:13  error  Empty block statement  no-empty
+
+/workspace/scratch/72d37ae520f2/dinner-roulette/src/lib/auth/use-current-user.ts
+  59:3  warning  Unused eslint-disable directive (no problems were reported from 'react-hooks/rules-of-hooks')
+
+/workspace/scratch/72d37ae520f2/dinner-roulette/src/lib/nightlife/casino-catalog-pass-16.ts
+  4:7  warning  'MGC_PROPERTY_LIST_SOURCE' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/72d37ae520f2/dinner-roulette/src/lib/nightlife/casino-catalog-pass-25.ts
+  6:7  warning  'NIGC_SOURCE' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+✖ 9 problems (3 errors, 6 warnings)
+  0 errors and 1 warning potentially fixable with the `--fix` option.

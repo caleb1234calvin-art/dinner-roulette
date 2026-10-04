@@ -1,0 +1,88 @@
+{
+  "base": "908510ac25fe5c24335126a0f34ff42fe4d80632",
+  "baseTree": "3211b4df4eccb638a8c492da047eac3b24abb600",
+  "existingTrackedFilesChanged": 0,
+  "packageAndLockIdentical": true,
+  "newBillingDependencies": 0,
+  "runtimeIntegration": false,
+  "realSourceAdapters": 0,
+  "networkTransportImplementations": 0,
+  "collectorImports": [
+    {
+      "file": "schema.ts",
+      "module": "zod"
+    },
+    {
+      "file": "canonical.ts",
+      "module": "node:crypto"
+    },
+    {
+      "file": "canonical.ts",
+      "module": "./schema.ts"
+    },
+    {
+      "file": "policy.ts",
+      "module": "node:net"
+    },
+    {
+      "file": "policy.ts",
+      "module": "./schema.ts"
+    },
+    {
+      "file": "builder.ts",
+      "module": "zod"
+    },
+    {
+      "file": "builder.ts",
+      "module": "./schema.ts"
+    },
+    {
+      "file": "builder.ts",
+      "module": "./canonical.ts"
+    },
+    {
+      "file": "builder.ts",
+      "module": "./policy.ts"
+    },
+    {
+      "file": "io.ts",
+      "module": "node:fs"
+    },
+    {
+      "file": "io.ts",
+      "module": "node:path"
+    },
+    {
+      "file": "io.ts",
+      "module": "node:crypto"
+    },
+    {
+      "file": "io.ts",
+      "module": "./canonical.ts"
+    },
+    {
+      "file": "io.ts",
+      "module": "./builder.ts"
+    },
+    {
+      "file": "cli.ts",
+      "module": "node:url"
+    },
+    {
+      "file": "cli.ts",
+      "module": "./io.ts"
+    }
+  ],
+  "generatedArtifacts": [
+    "bundle.json",
+    "diff.json",
+    "diff.txt",
+    "exclusions.json",
+    "field-source-map.json",
+    "input.synthetic.json",
+    "ledger.json",
+    "manifest.json",
+    "runtime.json",
+    "tombstones.json"
+  ]
+}
