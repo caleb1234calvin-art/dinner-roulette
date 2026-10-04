@@ -91,16 +91,26 @@ export function validateDnsAndPeer(rawUrl: string, s: unknown, answers: string[]
 }
 export function validateRedirectChain(chain: string[], s: unknown): void {
   const parsed = source.parse(s);
+  if (!Array.isArray(chain)) throw new Error("Invalid redirect chain");
   if (!chain.length || chain.length - 1 > parsed.budget.redirects || chain.length > 3) throw new Error("Redirect bound");
-  chain.forEach(target => validateUrl(target, parsed));
+  for (let index = 0; index < chain.length; index++) {
+    if (!Object.hasOwn(chain, index) || typeof chain[index] !== "string") throw new Error("Invalid redirect hop");
+    validateUrl(chain[index], parsed);
+  }
 }
 export function validateResponseEnvelope(s: unknown, metrics: {
   contentType: string; headerBytes: number; wireBytes: number; decompressedBytes: number;
   elapsedMs: number; domNodes: number; depth: number; jsonLdBytes: number; requests: number;
 }): void {
   const p = source.parse(s);
-  const { contentType, ...counts } = metrics;
-  if (!Object.values(counts).every(n => Number.isSafeInteger(n) && n >= 0)) throw new Error("Invalid response metrics");
+  const numericKeys = ["headerBytes", "wireBytes", "decompressedBytes", "elapsedMs", "domNodes", "depth", "jsonLdBytes", "requests"] as const;
+  const requiredKeys = ["contentType", ...numericKeys];
+  if (metrics === null || typeof metrics !== "object" ||
+    (Object.getPrototypeOf(metrics) !== Object.prototype && Object.getPrototypeOf(metrics) !== null) ||
+    Reflect.ownKeys(metrics).length !== requiredKeys.length || !requiredKeys.every(key => Object.hasOwn(metrics, key)) ||
+    typeof metrics.contentType !== "string" || !numericKeys.every(key => Number.isSafeInteger(metrics[key]) && metrics[key] >= 0))
+    throw new Error("Invalid response metrics");
+  const { contentType } = metrics;
   if (!p.contentTypes.includes(contentType as Source["contentTypes"][number]) ||
     metrics.headerBytes > p.budget.maxHeaderBytes || metrics.wireBytes > p.budget.maxBodyBytes ||
     metrics.decompressedBytes > p.budget.maxBodyBytes || metrics.elapsedMs > p.budget.deadlineMs ||

@@ -1,0 +1,1187 @@
+TAP version 13
+# Subtest: envelope omission rejected: contentType
+ok 1 - envelope omission rejected: contentType
+  ---
+  duration_ms: 9.525152
+  type: 'test'
+  ...
+# Subtest: envelope explicit undefined rejected: contentType
+ok 2 - envelope explicit undefined rejected: contentType
+  ---
+  duration_ms: 0.520634
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: contentType
+ok 3 - envelope inherited-only field rejected: contentType
+  ---
+  duration_ms: 0.474245
+  type: 'test'
+  ...
+# Subtest: envelope omission rejected: headerBytes
+ok 4 - envelope omission rejected: headerBytes
+  ---
+  duration_ms: 0.267744
+  type: 'test'
+  ...
+# Subtest: envelope explicit undefined rejected: headerBytes
+ok 5 - envelope explicit undefined rejected: headerBytes
+  ---
+  duration_ms: 0.439472
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: headerBytes
+ok 6 - envelope inherited-only field rejected: headerBytes
+  ---
+  duration_ms: 0.383007
+  type: 'test'
+  ...
+# Subtest: envelope omission rejected: wireBytes
+ok 7 - envelope omission rejected: wireBytes
+  ---
+  duration_ms: 0.502757
+  type: 'test'
+  ...
+# Subtest: envelope explicit undefined rejected: wireBytes
+ok 8 - envelope explicit undefined rejected: wireBytes
+  ---
+  duration_ms: 0.481966
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: wireBytes
+ok 9 - envelope inherited-only field rejected: wireBytes
+  ---
+  duration_ms: 0.820906
+  type: 'test'
+  ...
+# Subtest: envelope omission rejected: decompressedBytes
+ok 10 - envelope omission rejected: decompressedBytes
+  ---
+  duration_ms: 0.740996
+  type: 'test'
+  ...
+# Subtest: envelope explicit undefined rejected: decompressedBytes
+ok 11 - envelope explicit undefined rejected: decompressedBytes
+  ---
+  duration_ms: 0.394404
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: decompressedBytes
+ok 12 - envelope inherited-only field rejected: decompressedBytes
+  ---
+  duration_ms: 0.48446
+  type: 'test'
+  ...
+# Subtest: envelope omission rejected: elapsedMs
+ok 13 - envelope omission rejected: elapsedMs
+  ---
+  duration_ms: 0.42513
+  type: 'test'
+  ...
+# Subtest: envelope explicit undefined rejected: elapsedMs
+ok 14 - envelope explicit undefined rejected: elapsedMs
+  ---
+  duration_ms: 0.5375
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: elapsedMs
+ok 15 - envelope inherited-only field rejected: elapsedMs
+  ---
+  duration_ms: 0.458611
+  type: 'test'
+  ...
+# Subtest: envelope omission rejected: domNodes
+ok 16 - envelope omission rejected: domNodes
+  ---
+  duration_ms: 0.29876
+  type: 'test'
+  ...
+# Subtest: envelope explicit undefined rejected: domNodes
+ok 17 - envelope explicit undefined rejected: domNodes
+  ---
+  duration_ms: 0.258099
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: domNodes
+ok 18 - envelope inherited-only field rejected: domNodes
+  ---
+  duration_ms: 0.316097
+  type: 'test'
+  ...
+# Subtest: envelope omission rejected: depth
+ok 19 - envelope omission rejected: depth
+  ---
+  duration_ms: 0.260732
+  type: 'test'
+  ...
+# Subtest: envelope explicit undefined rejected: depth
+ok 20 - envelope explicit undefined rejected: depth
+  ---
+  duration_ms: 0.251349
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: depth
+ok 21 - envelope inherited-only field rejected: depth
+  ---
+  duration_ms: 0.263427
+  type: 'test'
+  ...
+# Subtest: envelope omission rejected: jsonLdBytes
+ok 22 - envelope omission rejected: jsonLdBytes
+  ---
+  duration_ms: 0.375165
+  type: 'test'
+  ...
+# Subtest: envelope explicit undefined rejected: jsonLdBytes
+ok 23 - envelope explicit undefined rejected: jsonLdBytes
+  ---
+  duration_ms: 0.240923
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: jsonLdBytes
+ok 24 - envelope inherited-only field rejected: jsonLdBytes
+  ---
+  duration_ms: 0.303277
+  type: 'test'
+  ...
+# Subtest: envelope omission rejected: requests
+ok 25 - envelope omission rejected: requests
+  ---
+  duration_ms: 0.248595
+  type: 'test'
+  ...
+# Subtest: envelope explicit undefined rejected: requests
+ok 26 - envelope explicit undefined rejected: requests
+  ---
+  duration_ms: 0.392752
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: requests
+ok 27 - envelope inherited-only field rejected: requests
+  ---
+  duration_ms: 0.35862
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: null
+ok 28 - envelope non-plain input rejected: null
+  ---
+  duration_ms: 0.281484
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: undefined
+ok 29 - envelope non-plain input rejected: undefined
+  ---
+  duration_ms: 0.296237
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: array
+ok 30 - envelope non-plain input rejected: array
+  ---
+  duration_ms: 0.300082
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: array with metrics
+ok 31 - envelope non-plain input rejected: array with metrics
+  ---
+  duration_ms: 0.229085
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: string
+ok 32 - envelope non-plain input rejected: string
+  ---
+  duration_ms: 0.215635
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: number
+ok 33 - envelope non-plain input rejected: number
+  ---
+  duration_ms: 0.229466
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: boolean
+ok 34 - envelope non-plain input rejected: boolean
+  ---
+  duration_ms: 0.301624
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: function
+ok 35 - envelope non-plain input rejected: function
+  ---
+  duration_ms: 0.255636
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: date with metrics
+ok 36 - envelope non-plain input rejected: date with metrics
+  ---
+  duration_ms: 0.239251
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: inherited envelope
+ok 37 - envelope non-plain input rejected: inherited envelope
+  ---
+  duration_ms: 0.365621
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: headerBytes
+ok 38 - envelope invalid numeric NaN: headerBytes
+  ---
+  duration_ms: 0.423367
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: wireBytes
+ok 39 - envelope invalid numeric NaN: wireBytes
+  ---
+  duration_ms: 0.34528
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: decompressedBytes
+ok 40 - envelope invalid numeric NaN: decompressedBytes
+  ---
+  duration_ms: 0.23886
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: elapsedMs
+ok 41 - envelope invalid numeric NaN: elapsedMs
+  ---
+  duration_ms: 0.297248
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: domNodes
+ok 42 - envelope invalid numeric NaN: domNodes
+  ---
+  duration_ms: 0.296947
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: depth
+ok 43 - envelope invalid numeric NaN: depth
+  ---
+  duration_ms: 0.375215
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: jsonLdBytes
+ok 44 - envelope invalid numeric NaN: jsonLdBytes
+  ---
+  duration_ms: 0.282606
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: requests
+ok 45 - envelope invalid numeric NaN: requests
+  ---
+  duration_ms: 0.446163
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: headerBytes
+ok 46 - envelope invalid numeric Infinity: headerBytes
+  ---
+  duration_ms: 0.25873
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: wireBytes
+ok 47 - envelope invalid numeric Infinity: wireBytes
+  ---
+  duration_ms: 0.279722
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: decompressedBytes
+ok 48 - envelope invalid numeric Infinity: decompressedBytes
+  ---
+  duration_ms: 0.28552
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: elapsedMs
+ok 49 - envelope invalid numeric Infinity: elapsedMs
+  ---
+  duration_ms: 0.297698
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: domNodes
+ok 50 - envelope invalid numeric Infinity: domNodes
+  ---
+  duration_ms: 0.258019
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: depth
+ok 51 - envelope invalid numeric Infinity: depth
+  ---
+  duration_ms: 0.264979
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: jsonLdBytes
+ok 52 - envelope invalid numeric Infinity: jsonLdBytes
+  ---
+  duration_ms: 0.231559
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: requests
+ok 53 - envelope invalid numeric Infinity: requests
+  ---
+  duration_ms: 0.226452
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: headerBytes
+ok 54 - envelope invalid numeric negative Infinity: headerBytes
+  ---
+  duration_ms: 0.275465
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: wireBytes
+ok 55 - envelope invalid numeric negative Infinity: wireBytes
+  ---
+  duration_ms: 0.231328
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: decompressedBytes
+ok 56 - envelope invalid numeric negative Infinity: decompressedBytes
+  ---
+  duration_ms: 0.227653
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: elapsedMs
+ok 57 - envelope invalid numeric negative Infinity: elapsedMs
+  ---
+  duration_ms: 0.240472
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: domNodes
+ok 58 - envelope invalid numeric negative Infinity: domNodes
+  ---
+  duration_ms: 0.30521
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: depth
+ok 59 - envelope invalid numeric negative Infinity: depth
+  ---
+  duration_ms: 0.236796
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: jsonLdBytes
+ok 60 - envelope invalid numeric negative Infinity: jsonLdBytes
+  ---
+  duration_ms: 0.240442
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: requests
+ok 61 - envelope invalid numeric negative Infinity: requests
+  ---
+  duration_ms: 0.382146
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: headerBytes
+ok 62 - envelope invalid numeric fraction: headerBytes
+  ---
+  duration_ms: 0.396457
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: wireBytes
+ok 63 - envelope invalid numeric fraction: wireBytes
+  ---
+  duration_ms: 0.263276
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: decompressedBytes
+ok 64 - envelope invalid numeric fraction: decompressedBytes
+  ---
+  duration_ms: 0.283998
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: elapsedMs
+ok 65 - envelope invalid numeric fraction: elapsedMs
+  ---
+  duration_ms: 0.340033
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: domNodes
+ok 66 - envelope invalid numeric fraction: domNodes
+  ---
+  duration_ms: 0.337318
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: depth
+ok 67 - envelope invalid numeric fraction: depth
+  ---
+  duration_ms: 0.244829
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: jsonLdBytes
+ok 68 - envelope invalid numeric fraction: jsonLdBytes
+  ---
+  duration_ms: 0.253572
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: requests
+ok 69 - envelope invalid numeric fraction: requests
+  ---
+  duration_ms: 0.381615
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: headerBytes
+ok 70 - envelope invalid numeric negative: headerBytes
+  ---
+  duration_ms: 0.353753
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: wireBytes
+ok 71 - envelope invalid numeric negative: wireBytes
+  ---
+  duration_ms: 0.311699
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: decompressedBytes
+ok 72 - envelope invalid numeric negative: decompressedBytes
+  ---
+  duration_ms: 0.230817
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: elapsedMs
+ok 73 - envelope invalid numeric negative: elapsedMs
+  ---
+  duration_ms: 0.327633
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: domNodes
+ok 74 - envelope invalid numeric negative: domNodes
+  ---
+  duration_ms: 0.231689
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: depth
+ok 75 - envelope invalid numeric negative: depth
+  ---
+  duration_ms: 0.287734
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: jsonLdBytes
+ok 76 - envelope invalid numeric negative: jsonLdBytes
+  ---
+  duration_ms: 0.227182
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: requests
+ok 77 - envelope invalid numeric negative: requests
+  ---
+  duration_ms: 0.224348
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: headerBytes
+ok 78 - envelope invalid numeric unsafe integer: headerBytes
+  ---
+  duration_ms: 3.396027
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: wireBytes
+ok 79 - envelope invalid numeric unsafe integer: wireBytes
+  ---
+  duration_ms: 0.189335
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: decompressedBytes
+ok 80 - envelope invalid numeric unsafe integer: decompressedBytes
+  ---
+  duration_ms: 0.160121
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: elapsedMs
+ok 81 - envelope invalid numeric unsafe integer: elapsedMs
+  ---
+  duration_ms: 0.17289
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: domNodes
+ok 82 - envelope invalid numeric unsafe integer: domNodes
+  ---
+  duration_ms: 0.22566
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: depth
+ok 83 - envelope invalid numeric unsafe integer: depth
+  ---
+  duration_ms: 0.153582
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: jsonLdBytes
+ok 84 - envelope invalid numeric unsafe integer: jsonLdBytes
+  ---
+  duration_ms: 0.101113
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: requests
+ok 85 - envelope invalid numeric unsafe integer: requests
+  ---
+  duration_ms: 0.117417
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: headerBytes
+ok 86 - envelope invalid numeric string: headerBytes
+  ---
+  duration_ms: 0.21863
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: wireBytes
+ok 87 - envelope invalid numeric string: wireBytes
+  ---
+  duration_ms: 0.148454
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: decompressedBytes
+ok 88 - envelope invalid numeric string: decompressedBytes
+  ---
+  duration_ms: 0.141733
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: elapsedMs
+ok 89 - envelope invalid numeric string: elapsedMs
+  ---
+  duration_ms: 0.129796
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: domNodes
+ok 90 - envelope invalid numeric string: domNodes
+  ---
+  duration_ms: 0.140582
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: depth
+ok 91 - envelope invalid numeric string: depth
+  ---
+  duration_ms: 0.155585
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: jsonLdBytes
+ok 92 - envelope invalid numeric string: jsonLdBytes
+  ---
+  duration_ms: 0.130867
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: requests
+ok 93 - envelope invalid numeric string: requests
+  ---
+  duration_ms: 0.177047
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: headerBytes
+ok 94 - envelope invalid numeric null: headerBytes
+  ---
+  duration_ms: 0.149756
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: wireBytes
+ok 95 - envelope invalid numeric null: wireBytes
+  ---
+  duration_ms: 0.180302
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: decompressedBytes
+ok 96 - envelope invalid numeric null: decompressedBytes
+  ---
+  duration_ms: 0.171479
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: elapsedMs
+ok 97 - envelope invalid numeric null: elapsedMs
+  ---
+  duration_ms: 0.120622
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: domNodes
+ok 98 - envelope invalid numeric null: domNodes
+  ---
+  duration_ms: 0.134242
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: depth
+ok 99 - envelope invalid numeric null: depth
+  ---
+  duration_ms: 0.141033
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: jsonLdBytes
+ok 100 - envelope invalid numeric null: jsonLdBytes
+  ---
+  duration_ms: 0.113741
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: requests
+ok 101 - envelope invalid numeric null: requests
+  ---
+  duration_ms: 0.107823
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: headerBytes
+ok 102 - envelope invalid numeric boolean: headerBytes
+  ---
+  duration_ms: 0.115274
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: wireBytes
+ok 103 - envelope invalid numeric boolean: wireBytes
+  ---
+  duration_ms: 0.160301
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: decompressedBytes
+ok 104 - envelope invalid numeric boolean: decompressedBytes
+  ---
+  duration_ms: 0.115403
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: elapsedMs
+ok 105 - envelope invalid numeric boolean: elapsedMs
+  ---
+  duration_ms: 0.136767
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: domNodes
+ok 106 - envelope invalid numeric boolean: domNodes
+  ---
+  duration_ms: 0.136455
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: depth
+ok 107 - envelope invalid numeric boolean: depth
+  ---
+  duration_ms: 0.136586
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: jsonLdBytes
+ok 108 - envelope invalid numeric boolean: jsonLdBytes
+  ---
+  duration_ms: 0.122775
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: requests
+ok 109 - envelope invalid numeric boolean: requests
+  ---
+  duration_ms: 0.118037
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: headerBytes
+ok 110 - envelope invalid numeric bigint: headerBytes
+  ---
+  duration_ms: 0.151899
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: wireBytes
+ok 111 - envelope invalid numeric bigint: wireBytes
+  ---
+  duration_ms: 0.177287
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: decompressedBytes
+ok 112 - envelope invalid numeric bigint: decompressedBytes
+  ---
+  duration_ms: 0.154272
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: elapsedMs
+ok 113 - envelope invalid numeric bigint: elapsedMs
+  ---
+  duration_ms: 5.324933
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: domNodes
+ok 114 - envelope invalid numeric bigint: domNodes
+  ---
+  duration_ms: 0.278009
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: depth
+ok 115 - envelope invalid numeric bigint: depth
+  ---
+  duration_ms: 0.169946
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: jsonLdBytes
+ok 116 - envelope invalid numeric bigint: jsonLdBytes
+  ---
+  duration_ms: 0.154263
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: requests
+ok 117 - envelope invalid numeric bigint: requests
+  ---
+  duration_ms: 0.150256
+  type: 'test'
+  ...
+# Subtest: contentType rejected: number
+ok 118 - contentType rejected: number
+  ---
+  duration_ms: 0.242245
+  type: 'test'
+  ...
+# Subtest: contentType rejected: null
+ok 119 - contentType rejected: null
+  ---
+  duration_ms: 0.153361
+  type: 'test'
+  ...
+# Subtest: contentType rejected: boxed string
+ok 120 - contentType rejected: boxed string
+  ---
+  duration_ms: 0.169776
+  type: 'test'
+  ...
+# Subtest: contentType rejected: disallowed string
+ok 121 - contentType rejected: disallowed string
+  ---
+  duration_ms: 0.154483
+  type: 'test'
+  ...
+# Subtest: envelope unexpected enumerable key rejected
+ok 122 - envelope unexpected enumerable key rejected
+  ---
+  duration_ms: 0.239871
+  type: 'test'
+  ...
+# Subtest: envelope unexpected hidden key rejected
+ok 123 - envelope unexpected hidden key rejected
+  ---
+  duration_ms: 0.161483
+  type: 'test'
+  ...
+# Subtest: envelope unexpected symbol key rejected
+ok 124 - envelope unexpected symbol key rejected
+  ---
+  duration_ms: 0.199841
+  type: 'test'
+  ...
+# Subtest: envelope exact ceiling passes: headerBytes
+ok 125 - envelope exact ceiling passes: headerBytes
+  ---
+  duration_ms: 0.316277
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: headerBytes
+ok 126 - envelope ceiling plus one fails: headerBytes
+  ---
+  duration_ms: 0.206701
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: headerBytes
+ok 127 - envelope lowered source ceiling enforced: headerBytes
+  ---
+  duration_ms: 0.238158
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: headerBytes
+ok 128 - envelope non-enumerable invalid metric rejected: headerBytes
+  ---
+  duration_ms: 0.283557
+  type: 'test'
+  ...
+# Subtest: envelope exact ceiling passes: wireBytes
+ok 129 - envelope exact ceiling passes: wireBytes
+  ---
+  duration_ms: 0.172379
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: wireBytes
+ok 130 - envelope ceiling plus one fails: wireBytes
+  ---
+  duration_ms: 4.279759
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: wireBytes
+ok 131 - envelope lowered source ceiling enforced: wireBytes
+  ---
+  duration_ms: 0.341064
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: wireBytes
+ok 132 - envelope non-enumerable invalid metric rejected: wireBytes
+  ---
+  duration_ms: 0.373683
+  type: 'test'
+  ...
+# Subtest: envelope exact ceiling passes: decompressedBytes
+ok 133 - envelope exact ceiling passes: decompressedBytes
+  ---
+  duration_ms: 0.337479
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: decompressedBytes
+ok 134 - envelope ceiling plus one fails: decompressedBytes
+  ---
+  duration_ms: 0.383047
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: decompressedBytes
+ok 135 - envelope lowered source ceiling enforced: decompressedBytes
+  ---
+  duration_ms: 0.344449
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: decompressedBytes
+ok 136 - envelope non-enumerable invalid metric rejected: decompressedBytes
+  ---
+  duration_ms: 0.395947
+  type: 'test'
+  ...
+# Subtest: envelope exact ceiling passes: elapsedMs
+ok 137 - envelope exact ceiling passes: elapsedMs
+  ---
+  duration_ms: 0.30547
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: elapsedMs
+ok 138 - envelope ceiling plus one fails: elapsedMs
+  ---
+  duration_ms: 0.31185
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: elapsedMs
+ok 139 - envelope lowered source ceiling enforced: elapsedMs
+  ---
+  duration_ms: 0.339812
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: elapsedMs
+ok 140 - envelope non-enumerable invalid metric rejected: elapsedMs
+  ---
+  duration_ms: 4.455833
+  type: 'test'
+  ...
+# Subtest: envelope exact ceiling passes: domNodes
+ok 141 - envelope exact ceiling passes: domNodes
+  ---
+  duration_ms: 0.368996
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: domNodes
+ok 142 - envelope ceiling plus one fails: domNodes
+  ---
+  duration_ms: 0.325841
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: domNodes
+ok 143 - envelope lowered source ceiling enforced: domNodes
+  ---
+  duration_ms: 0.375886
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: domNodes
+ok 144 - envelope non-enumerable invalid metric rejected: domNodes
+  ---
+  duration_ms: 0.354184
+  type: 'test'
+  ...
+# Subtest: envelope exact ceiling passes: depth
+ok 145 - envelope exact ceiling passes: depth
+  ---
+  duration_ms: 0.309536
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: depth
+ok 146 - envelope ceiling plus one fails: depth
+  ---
+  duration_ms: 0.326492
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: depth
+ok 147 - envelope lowered source ceiling enforced: depth
+  ---
+  duration_ms: 0.33139
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: depth
+ok 148 - envelope non-enumerable invalid metric rejected: depth
+  ---
+  duration_ms: 0.350648
+  type: 'test'
+  ...
+# Subtest: envelope exact ceiling passes: jsonLdBytes
+ok 149 - envelope exact ceiling passes: jsonLdBytes
+  ---
+  duration_ms: 2.594019
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: jsonLdBytes
+ok 150 - envelope ceiling plus one fails: jsonLdBytes
+  ---
+  duration_ms: 0.320132
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: jsonLdBytes
+ok 151 - envelope lowered source ceiling enforced: jsonLdBytes
+  ---
+  duration_ms: 0.244568
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: jsonLdBytes
+ok 152 - envelope non-enumerable invalid metric rejected: jsonLdBytes
+  ---
+  duration_ms: 0.272651
+  type: 'test'
+  ...
+# Subtest: envelope exact ceiling passes: requests
+ok 153 - envelope exact ceiling passes: requests
+  ---
+  duration_ms: 0.262034
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: requests
+ok 154 - envelope ceiling plus one fails: requests
+  ---
+  duration_ms: 0.24534
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: requests
+ok 155 - envelope lowered source ceiling enforced: requests
+  ---
+  duration_ms: 0.290368
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: requests
+ok 156 - envelope non-enumerable invalid metric rejected: requests
+  ---
+  duration_ms: 0.359251
+  type: 'test'
+  ...
+# Subtest: all exact bounds pass together
+ok 157 - all exact bounds pass together
+  ---
+  duration_ms: 0.410068
+  type: 'test'
+  ...
+# Subtest: zero numeric values pass
+ok 158 - zero numeric values pass
+  ---
+  duration_ms: 0.412001
+  type: 'test'
+  ...
+# Subtest: complete null-prototype plain envelope passes
+ok 159 - complete null-prototype plain envelope passes
+  ---
+  duration_ms: 0.407574
+  type: 'test'
+  ...
+# Subtest: complete non-enumerable own metric passes
+ok 160 - complete non-enumerable own metric passes
+  ---
+  duration_ms: 0.373393
+  type: 'test'
+  ...
+# Subtest: allowed contentType passes: text/html
+ok 161 - allowed contentType passes: text/html
+  ---
+  duration_ms: 0.364188
+  type: 'test'
+  ...
+# Subtest: allowed contentType passes: text/plain
+ok 162 - allowed contentType passes: text/plain
+  ---
+  duration_ms: 0.312892
+  type: 'test'
+  ...
+# Subtest: allowed contentType passes: application/ld+json
+ok 163 - allowed contentType passes: application/ld+json
+  ---
+  duration_ms: 0.379652
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: one hole
+ok 164 - redirect malformed chain rejected: one hole
+  ---
+  duration_ms: 0.798403
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: two slots missing first
+ok 165 - redirect malformed chain rejected: two slots missing first
+  ---
+  duration_ms: 0.286151
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: two slots missing last
+ok 166 - redirect malformed chain rejected: two slots missing last
+  ---
+  duration_ms: 9.512391
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: three slots missing middle
+ok 167 - redirect malformed chain rejected: three slots missing middle
+  ---
+  duration_ms: 6.822265
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: explicit undefined
+ok 168 - redirect malformed chain rejected: explicit undefined
+  ---
+  duration_ms: 7.619898
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: null hop
+ok 169 - redirect malformed chain rejected: null hop
+  ---
+  duration_ms: 0.711303
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: numeric hop
+ok 170 - redirect malformed chain rejected: numeric hop
+  ---
+  duration_ms: 0.645013
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: boxed string hop
+ok 171 - redirect malformed chain rejected: boxed string hop
+  ---
+  duration_ms: 0.329918
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: empty
+ok 172 - redirect malformed chain rejected: empty
+  ---
+  duration_ms: 0.390019
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: over limit
+ok 173 - redirect malformed chain rejected: over limit
+  ---
+  duration_ms: 0.362387
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: null chain
+ok 174 - redirect malformed chain rejected: null chain
+  ---
+  duration_ms: 0.365151
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: string chain
+ok 175 - redirect malformed chain rejected: string chain
+  ---
+  duration_ms: 0.35821
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: array-like
+ok 176 - redirect malformed chain rejected: array-like
+  ---
+  duration_ms: 0.434095
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: array-like with forEach
+ok 177 - redirect malformed chain rejected: array-like with forEach
+  ---
+  duration_ms: 0.508838
+  type: 'test'
+  ...
+# Subtest: dense 1-URL chain passes at redirect budget
+ok 178 - dense 1-URL chain passes at redirect budget
+  ---
+  duration_ms: 0.812937
+  type: 'test'
+  ...
+# Subtest: dense 1-URL chain revalidates hostile hop 0
+ok 179 - dense 1-URL chain revalidates hostile hop 0
+  ---
+  duration_ms: 0.72906
+  type: 'test'
+  ...
+# Subtest: redirect inherited-only index 0 of 1 rejected
+ok 180 - redirect inherited-only index 0 of 1 rejected
+  ---
+  duration_ms: 4.806282
+  type: 'test'
+  ...
+# Subtest: dense 2-URL chain passes at redirect budget
+ok 181 - dense 2-URL chain passes at redirect budget
+  ---
+  duration_ms: 9.815512
+  type: 'test'
+  ...
+# Subtest: dense 2-URL chain exceeds lower source budget
+ok 182 - dense 2-URL chain exceeds lower source budget
+  ---
+  duration_ms: 0.31158
+  type: 'test'
+  ...
+# Subtest: dense 2-URL chain revalidates hostile hop 0
+ok 183 - dense 2-URL chain revalidates hostile hop 0
+  ---
+  duration_ms: 0.228795
+  type: 'test'
+  ...
+# Subtest: redirect inherited-only index 0 of 2 rejected
+ok 184 - redirect inherited-only index 0 of 2 rejected
+  ---
+  duration_ms: 0.134233
+  type: 'test'
+  ...
+# Subtest: dense 2-URL chain revalidates hostile hop 1
+ok 185 - dense 2-URL chain revalidates hostile hop 1
+  ---
+  duration_ms: 0.446334
+  type: 'test'
+  ...
+# Subtest: redirect inherited-only index 1 of 2 rejected
+ok 186 - redirect inherited-only index 1 of 2 rejected
+  ---
+  duration_ms: 0.300083
+  type: 'test'
+  ...
+# Subtest: dense 3-URL chain passes at redirect budget
+ok 187 - dense 3-URL chain passes at redirect budget
+  ---
+  duration_ms: 4.574533
+  type: 'test'
+  ...
+# Subtest: dense 3-URL chain exceeds lower source budget
+ok 188 - dense 3-URL chain exceeds lower source budget
+  ---
+  duration_ms: 0.177649
+  type: 'test'
+  ...
+# Subtest: dense 3-URL chain revalidates hostile hop 0
+ok 189 - dense 3-URL chain revalidates hostile hop 0
+  ---
+  duration_ms: 0.248345
+  type: 'test'
+  ...
+# Subtest: redirect inherited-only index 0 of 3 rejected
+ok 190 - redirect inherited-only index 0 of 3 rejected
+  ---
+  duration_ms: 0.157117
+  type: 'test'
+  ...
+# Subtest: dense 3-URL chain revalidates hostile hop 1
+ok 191 - dense 3-URL chain revalidates hostile hop 1
+  ---
+  duration_ms: 0.279762
+  type: 'test'
+  ...
+# Subtest: redirect inherited-only index 1 of 3 rejected
+ok 192 - redirect inherited-only index 1 of 3 rejected
+  ---
+  duration_ms: 0.313553
+  type: 'test'
+  ...
+# Subtest: dense 3-URL chain revalidates hostile hop 2
+ok 193 - dense 3-URL chain revalidates hostile hop 2
+  ---
+  duration_ms: 0.351781
+  type: 'test'
+  ...
+# Subtest: redirect inherited-only index 2 of 3 rejected
+ok 194 - redirect inherited-only index 2 of 3 rejected
+  ---
+  duration_ms: 0.312842
+  type: 'test'
+  ...
+# Subtest: deleting a hostile middle hop cannot turn a denied chain into an accepted chain
+ok 195 - deleting a hostile middle hop cannot turn a denied chain into an accepted chain
+  ---
+  duration_ms: 0.539384
+  type: 'test'
+  ...
+# Subtest: remediation suite made zero unmocked collector network attempts
+ok 196 - remediation suite made zero unmocked collector network attempts
+  ---
+  duration_ms: 0.100082
+  type: 'test'
+  ...
+# OFFLINE_NETWORK_PROOF unmocked_attempts=0
+1..196
+# tests 196
+# suites 0
+# pass 196
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 623.355662

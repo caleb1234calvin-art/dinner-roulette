@@ -1,0 +1,187 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import { readFileSync, writeFileSync, mkdtempSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { fixtureInput, fixtureSource, FIXTURE_TIME } from '../candidate/tools/seasonal-facts/fixtures.ts';
+import { buildSnapshot, verifySnapshot, refreshSnapshot } from '../candidate/tools/seasonal-facts/builder.ts';
+import { canonical, occurrenceId, artifactDigest, digest } from '../candidate/tools/seasonal-facts/canonical.ts';
+import { source } from '../candidate/tools/seasonal-facts/schema.ts';
+import { writeSnapshot } from '../candidate/tools/seasonal-facts/io.ts';
+import { validateResponseEnvelope, validateUrl, validateRedirectChain, validateDnsAndPeer, assertPublicIp,
+  automaticCollectionAllowed, collectSource } from '../candidate/tools/seasonal-facts/policy.ts';
+
+const one = () => fixtureInput(1);
+const fact = (i, name) => i.observations[0].assertions.find(a => a.field === name);
+const allowed = 'https://seasonal.invalid/events/independent?year=2026';
+const envelope = () => ({contentType:'text/plain',headerBytes:32,wireBytes:64,decompressedBytes:64,
+  elapsedMs:50,domNodes:0,depth:0,jsonLdBytes:0,requests:1});
+const policy = () => { const s=fixtureSource(); s.budget.requests=1; return s; };
+const extraObservation = (i, name, value, suffix='independent') => {
+  const observation=structuredClone(i.observations[0]);
+  observation.evidenceId='evidence:'+suffix;
+  observation.assertions=[{assertionId:'assertion:'+suffix,field:name,value}];
+  observation.contentHash=digest(observation.assertions);
+  i.observations.push(observation); return observation;
+};
+const negative = (i, scope, state) => {
+  const obs=extraObservation(i,'lifecycle',state);
+  const ids={occurrence:i.occurrences[0].id,operator:i.occurrences[0].operatorId,
+    attraction:i.occurrences[0].attractionId,venue:i.locations[0].venueId};
+  i.lifecycle.push({id:'lifecycle:independent',state,subject:{scope,id:ids[scope]},
+    effective:{start:'2026-10-01',end:null},evidenceIds:[obs.evidenceId],reviewer:'independent',reviewedAt:FIXTURE_TIME});
+};
+
+for (const field of ['reviewProse','marketingDescriptions','photos','logos','screenshots','rankings','popularity','ratings','prices','articleText']) {
+  test('strict factual assertion rejects '+field,()=>{ const i=one(); extraObservation(i,field,'forbidden'); assert.throws(()=>buildSnapshot(i)); });
+}
+for (const where of ['location','observation','calendar','hours','relationship','identity']) {
+  test('nested unknown field rejected: '+where,()=>{
+    const i=one(); const target={location:i.locations[0],observation:i.observations[0],calendar:fact(i,'calendar').value,
+      hours:fact(i,'hours').value[0],relationship:i.relationships[0],identity:i.identities[0]}[where];
+    target.unrecognized='forbidden'; assert.throws(()=>buildSnapshot(i));
+  });
+}
+test('full fixture identity distinctions, recurring year, moved version, and crosswalks',()=>{
+  const i=fixtureInput(), s=buildSnapshot(i);
+  assert.equal(s.runtime.occurrences.length,7); assert.equal(s.exclusions.length,4);
+  assert.equal(s.tombstones.length,1); assert.equal(s.ledger.crosswalks.length,3);
+  const rows=s.runtime.occurrences.filter(o=>o.facts.address.street==='123 Imaginary Lantern Lane');
+  assert.ok(rows.length>3); assert.equal(new Set(rows.map(r=>r.occurrenceId)).size,rows.length);
+  assert.equal(s.runtime.occurrences.find(r=>r.facts.name==='Wandering Glass Haunt').facts.address.street,'456 Imaginary Lantern Lane');
+  assert.equal(new Set(i.occurrences.filter(o=>o.occurrenceKey==='recurring').map(o=>o.id)).size,2);
+});
+test('name correction preserves immutable occurrence id',()=>{
+  const i=one(), id=i.occurrences[0].id; fact(i,'name').value='Independent Display';
+  assert.equal(buildSnapshot(i).runtime.occurrences[0].occurrenceId,id);
+});
+test('deep input permutations reproduce identical bytes',()=>{
+  function reverse(v) {return Array.isArray(v)?v.map(reverse).reverse():v&&typeof v==='object'?Object.fromEntries(Object.entries(v).reverse().map(([k,x])=>[k,reverse(x)])):v;}
+  const i=fixtureInput(); assert.equal(canonical(buildSnapshot(i)),canonical(buildSnapshot(reverse(i))));
+});
+test('conflict requires complete reviewed assertion accounting',()=>{
+  const i=one(), original=fact(i,'name'), o=extraObservation(i,'name','A second factual name');
+  assert.equal(buildSnapshot(i).runtime.occurrences.length,0);
+  i.resolutions.push({occurrenceId:i.occurrences[0].id,field:'name',selectedAssertionIds:[o.assertions[0].assertionId],
+    conflictingAssertionIds:[],rejectedAssertionIds:[original.assertionId],reason:'explicit-review',reviewer:'independent',resolvedAt:FIXTURE_TIME});
+  const s=buildSnapshot(i); assert.equal(s.runtime.occurrences.length,1);
+  assert.equal(s.fieldSourceMap.find(f=>f.field==='name').evidenceIds.length,2);
+});
+for (const status of ['candidate','unresolved']) test(status+' coordinate publication denied',()=>{
+  const i=one(); i.locations[0].coordinates.status=status; fact(i,'coordinates').value.status=status;
+  assert.equal(buildSnapshot(i).runtime.occurrences.length,0);
+});
+test('moved address with stale fingerprint fails',()=>{const i=one(); i.locations[0].address.street='999 Invented New Address';assert.throws(()=>buildSnapshot(i));});
+test('location version cannot reuse evidence attached to another version',()=>{
+  const i=fixtureInput(2); i.locations[0].coordinates.evidenceIds=[i.observations[1].evidenceId];
+  fact(i,'coordinates').value.evidenceIds=[i.observations[1].evidenceId]; assert.throws(()=>buildSnapshot(i));
+});
+for (const verification of ['operator-confirmed','current-season-directory','current-season-secondary','historical/unconfirmed']) test('verification quality: '+verification,()=>{
+  const i=one(); i.occurrences[0].verification=verification;i.observations[0].verification=verification;fact(i,'verification').value=verification;
+  assert.equal(buildSnapshot(i).runtime.occurrences.length,verification==='historical/unconfirmed'?0:1);
+});
+for(const basis of ['footer-only','absent']) test('no current season inferred from '+basis,()=>{
+  const i=one();i.observations[0].seasonEvidence.basis=basis;assert.equal(buildSnapshot(i).runtime.occurrences.length,0);
+});
+for(const scope of ['operator','venue','attraction','occurrence']) test('negative correctly scoped to '+scope,()=>{
+  const i=fixtureInput(2);negative(i,scope,'event-cancelled');const s=buildSnapshot(i);
+  assert.equal(s.runtime.occurrences.length,['operator','venue'].includes(scope)?0:1);assert.equal(s.tombstones.length,1);
+});
+for(const state of ['season-not-operating','event-cancelled','moved','disused','permanently-closed']) test('negative persists after omission: '+state,()=>{
+  const i=one();negative(i,'occurrence',state);const prior=buildSnapshot(i);const after=buildSnapshot(one(),prior);
+  assert.equal(after.runtime.occurrences.length,0);assert.equal(after.tombstones[0].lifecycle.state,state);
+});
+test('omission preserves prior optional fact and checkedAt',()=>{
+  const i=one();extraObservation(i,'phone','+1 555 010 0200');const prior=buildSnapshot(i);const fresh=one();fresh.observations=[];
+  const after=buildSnapshot(fresh,prior);assert.equal(after.runtime.occurrences[0].facts.phone,'+1 555 010 0200');
+  assert.equal(after.manifest.lastGoodCheckedAt,prior.manifest.lastGoodCheckedAt);
+});
+test('failed refresh returns exactly last-good serialized bytes',()=>{
+  const i=one(), prior=buildSnapshot(i);i.schemaVersion='invalid';const r=refreshSnapshot(prior,i);
+  assert.equal(r.ok,false);assert.equal(canonical(r.snapshot),canonical(prior));
+});
+test('transitive do-not-merge overrides explicit equivalence',()=>{
+  const i=one(), original=i.occurrences[0];
+  const alias=key=>({...original,occurrenceKey:key,id:occurrenceId(original.attractionId,original.season,original.year,key)});
+  const b=alias('independent-b'),c=alias('independent-c');i.occurrences.push(b,c);
+  const relation=(id,from,to,kind,decision)=>({id,kind,from,to,decision,evidenceIds:[i.observations[0].evidenceId],reviewer:'independent',reviewedAt:FIXTURE_TIME});
+  i.relationships.push(relation('r:ab',b.id,original.id,'same-event','same'),relation('r:bc',c.id,b.id,'same-event','same'),relation('r:ac',c.id,original.id,'do-not-merge','distinct'));
+  assert.throws(()=>buildSnapshot(i),/Do-not-merge/);
+});
+test('publication bound 100 inclusive and 101 explicit failure',()=>{
+  assert.equal(buildSnapshot(fixtureInput(100)).runtime.occurrences.length,100);assert.throws(()=>buildSnapshot(fixtureInput(101)),/100/);
+});
+test('identity bound 512 includes quarantined and tombstone identities',()=>{
+  const i=one();while(i.identities.length+i.locations.length+i.occurrences.length<512)i.identities.push({id:'extra:'+i.identities.length,kind:'attraction',reviewState:'tombstone',reviewer:'independent',reviewedAt:FIXTURE_TIME});
+  assert.equal(buildSnapshot(i).manifest.reviewedIdentityCount,512);i.identities.push({...i.identities.at(-1),id:'overflow:identity'});assert.throws(()=>buildSnapshot(i),/512/);
+});
+test('observation bound retains 20 provenances and rejects 21',()=>{
+  const i=one();for(let n=1;n<20;n++)extraObservation(i,'name',fact(i,'name').value,'observation-'+n);
+  assert.equal(buildSnapshot(i).fieldSourceMap.find(f=>f.field==='name').evidenceIds.length,20);
+  extraObservation(i,'name',fact(i,'name').value,'observation-overflow');assert.throws(()=>buildSnapshot(i),/20/);
+});
+for(const [name,value] of [['name','x'.repeat(201)],['operatorWebsite','https://seasonal.invalid/'+ 'x'.repeat(2048)]])test('text bound rejects '+name,()=>{
+  const i=one();extraObservation(i,name,value);assert.throws(()=>buildSnapshot(i));
+});
+test('address combined bound rejects overflow',()=>{const i=one();fact(i,'address').value.street='x'.repeat(501);assert.throws(()=>buildSnapshot(i));});
+test('runtime 2 MiB overflow explicitly rejected',()=>{
+  const i=fixtureInput(100);for(const o of [...i.observations])for(let n=1;n<20;n++){
+    const copy=structuredClone(o);copy.evidenceId='replica:'+digest([o.evidenceId,n]);copy.assertions=copy.assertions.map(a=>({...a,assertionId:'replica:'+digest([a.assertionId,n])}));i.observations.push(copy);
+  }assert.throws(()=>buildSnapshot(i),/2 MiB/);
+});
+test('snapshot cannot forge materialized fact by updating hashes and revision',()=>{
+  const s=buildSnapshot(one());s.runtime.occurrences[0].facts.name='Forged';
+  s.manifest.artifacts.runtime={sha256:artifactDigest(s.runtime),bytes:Buffer.byteLength(canonical(s.runtime)+'\n')};
+  s.manifest.contentRevision=digest(Object.fromEntries(['runtime','fieldSourceMap','exclusions','tombstones','ledger'].map(k=>[k,s[k]])));
+  assert.throws(()=>verifySnapshot(s),/ledger mismatch/);
+});
+test('schema and manifest failures preserve atomic file bytes',()=>{
+  const dir=mkdtempSync(join(tmpdir(),'independent-seasonal-'));try{
+    const path=join(dir,'bundle.json'), s=buildSnapshot(one());writeSnapshot(path,s);const bytes=readFileSync(path);
+    for(const edit of [x=>x.manifest.schemaVersion='wrong',x=>x.manifest.artifacts.runtime.bytes++]){
+      const bad=structuredClone(s);edit(bad);assert.throws(()=>writeSnapshot(path,bad));assert.deepEqual(readFileSync(path),bytes);
+    }
+  }finally{rmSync(dir,{recursive:true,force:true});}
+});
+for(const state of ['unknown','conflicting','denied','approved'])test('permission state never enables source: '+state,()=>{
+  const s=fixtureSource();s.mode='automatic';s.permission.state=state;
+  assert.equal(source.parse(s).enabled,false);assert.equal(automaticCollectionAllowed(s,FIXTURE_TIME),false);
+});
+test('malformed approvals and enabled flags fail validation',()=>{
+  for(const val of [true,1,'true']){const s=fixtureSource();s.enabled=val;assert.throws(()=>source.parse(s));}
+  const s=fixtureSource();s.permission.state=true;assert.throws(()=>automaticCollectionAllowed(s,FIXTURE_TIME));
+});
+test('expired affirmative permission still cannot activate collector',()=>{
+  const s=fixtureSource(),r={state:'approved',reviewer:'independent',reviewedAt:'2026-09-01T12:00:00.000Z',evidenceIds:['approval:synthetic']};
+  s.robots=r;s.terms=r;s.permission={...r,reuse:'approved',expiresAt:'2026-09-30T12:00:00.000Z'};s.mode='automatic';
+  assert.equal(automaticCollectionAllowed(s,FIXTURE_TIME),false);assert.throws(()=>collectSource(),/OFFLINE_ONLY/);
+});
+for(const url of ['http://seasonal.invalid/events/x','https://seasonal.invalid:8443/events/x','https://name@seasonal.invalid/events/x',
+  'https://[::1]/events/x','https://seasonal.invalid.evil.invalid/events/x','https://seasonal.invalid/eventsx','https://seasonal.invalid/events/%2fsecret',
+  'https://seasonal.invalid/events/x?year=2026&year=2026','https://seasonal.invalid/events/x?unknown=yes'])
+  test('exact URL policy rejects '+url,()=>assert.throws(()=>validateUrl(url,fixtureSource())));
+for(const ip of ['10.255.255.255','172.16.0.1','169.254.169.254','100.64.0.1','192.0.2.255','198.19.255.255','240.0.0.1',
+  '::ffff:169.254.169.254','::ffff:a9fe:a9fe','::ffff:0808:0808','fe80::abcd','fc00::abcd','2001:db8::abcd'])
+  test('denied IP class '+ip,()=>assert.throws(()=>assertPublicIp(ip)));
+test('DNS poison and peer rebinding rejected without network',()=>{
+  assert.throws(()=>validateDnsAndPeer(allowed,fixtureSource(),['8.8.8.8','10.0.0.1'],'8.8.8.8'));
+  assert.throws(()=>validateDnsAndPeer(allowed,fixtureSource(),['8.8.8.8'],'1.1.1.1'));
+  validateDnsAndPeer(allowed,fixtureSource(),['2606:4700:4700::1111'],'2606:4700:4700:0:0:0:0:1111');
+});
+test('redirect count and every present target checked',()=>{
+  validateRedirectChain([allowed,allowed,allowed],fixtureSource());
+  assert.throws(()=>validateRedirectChain([allowed,allowed,allowed,allowed],fixtureSource()));
+  assert.throws(()=>validateRedirectChain([allowed,'https://127.0.0.1/events/x'],fixtureSource()));
+});
+for(const [key,limit] of Object.entries({headerBytes:16384,wireBytes:2097152,decompressedBytes:2097152,elapsedMs:10000,domNodes:20000,depth:64,jsonLdBytes:262144,requests:1})){
+  test('response metric upper bound '+key,()=>{validateResponseEnvelope(policy(),{...envelope(),[key]:limit});assert.throws(()=>validateResponseEnvelope(policy(),{...envelope(),[key]:limit+1}));});
+}
+// Required security metrics must be present at the runtime validation boundary.
+// The other values are all valid, isolating one missing required metric per case.
+for(const key of Object.keys(envelope()).filter(k=>k!=='contentType'))test('missing required response metric must fail: '+key,()=>{
+  const m=envelope();delete m[key];assert.throws(()=>validateResponseEnvelope(policy(),m),'missing '+key+' accepted');
+});
+test('sparse redirect chain must fail rather than skip an unvalidated hop',()=>{
+  const chain=[allowed,allowed,allowed];delete chain[1];assert.throws(()=>validateRedirectChain(chain,fixtureSource()));
+});
+test('independent execution made zero unmocked collector network attempts',()=>assert.equal(globalThis.__seasonalNetworkAttempts(),0));

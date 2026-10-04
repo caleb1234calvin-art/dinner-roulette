@@ -1,0 +1,155 @@
+{
+  "state": "SEASONAL FACT CONTRACT REMEDIATION IMPLEMENTED \u2014 AWAITING INDEPENDENT REVERIFICATION",
+  "authority": "e6806c5b62ca109d7e2a443f7ad4414b770b8afa",
+  "parent": "f7fa63f5688b1d09e5b0baccfd5e617d0748a41a",
+  "requiredBranch": "fix/date-night-seasonal-fact-contract-remediation-1",
+  "freezeMode": "Local Git branch plus portable bundle; no push because non-integration branches are not disabled in vercel.json automatic deployments. No deployment or Vercel settings mutation authorized.",
+  "red": {
+    "independent": {
+      "total": 99,
+      "passed": 90,
+      "failed": 9
+    },
+    "remediation": {
+      "total": 196,
+      "passed": 152,
+      "failed": 44
+    },
+    "beforePolicyEdit": true,
+    "finalTestFileRepeatedAgainstBase": true
+  },
+  "green": {
+    "originalContract": {
+      "total": 112,
+      "passed": 112,
+      "failed": 0
+    },
+    "remediation": {
+      "total": 196,
+      "passed": 196,
+      "failed": 0
+    },
+    "combinedContract": 308,
+    "independent": {
+      "total": 99,
+      "passed": 99,
+      "failed": 0
+    },
+    "fullSuite": {
+      "total": 1041,
+      "passed": 1037,
+      "failed": 0,
+      "skipped": 4,
+      "repositoryScripts": {
+        "total": 970,
+        "passed": 966,
+        "skipped": 4
+      },
+      "application": {
+        "total": 71,
+        "passed": 71
+      }
+    },
+    "contractTypecheck": 0,
+    "productTypecheck": 0,
+    "changedLint": 0,
+    "safeBuild": 0
+  },
+  "lint": {
+    "errors": 3,
+    "warnings": 6,
+    "exactInheritedParity": true,
+    "clean": false
+  },
+  "initialValidationCorrections": [
+    "First full-suite run preceded required compiled fixtures; safe migration-free build then full suite passed.",
+    "Sparse array literals in new tests triggered no-sparse-arrays; replaced with explicit delete constructions, reran RED/GREEN and lint."
+  ],
+  "networkAndCost": {
+    "guardedCollectorAttempts": 0,
+    "publicSourceCalls": 0,
+    "geocoderCalls": 0,
+    "billingDependenciesAdded": 0,
+    "activeTransports": 0,
+    "newSources": 0,
+    "runtimeIntegration": false,
+    "lockedOfflineInstallPackages": 506,
+    "packageAndLockIdentical": {
+      "package.json": {
+        "gitBlob": "e49aaca989bf9fafed68714fdb7f036785c1a226",
+        "sha256": "6d966eda6ff732719e17862d97ca822a8574926f2fbe5edaaae1cf45607aebf0"
+      },
+      "package-lock.json": {
+        "gitBlob": "1eaa6a78dc119ae889ca371632fa91136be1139a",
+        "sha256": "462f09bd3fda35cf30646b2f343cd8d2a65340a63b59222b5f9d57084d9aa4b3"
+      }
+    }
+  },
+  "scope": {
+    "onlyExistingFileModified": "tools/seasonal-facts/policy.ts",
+    "productFilesUnchanged": true,
+    "schemaBuilderIdentityUnchanged": true,
+    "ceilingsUnchanged": true,
+    "radialPacingMerged": false,
+    "migrationsRun": false
+  },
+  "preservation": {
+    "projectSettingsUnchanged": true,
+    "productionDeploymentUnchanged": true,
+    "productionAliasesUnchanged": true,
+    "normalization": "Object-key and unordered alias/domain list order ignored; every value retained.",
+    "settingsScope": "All fields exposed by get_project except unrelated latest preview deployment; includes updatedAt, domains, framework, nodeVersion and protection settings.",
+    "productionId": "dpl_7RkbrP1c5g1bd7wpnWgWpc9D25DL",
+    "state": "READY",
+    "vercelMutations": 0,
+    "deploymentsInitiated": 0
+  },
+  "artifacts": {
+    "identicalTenFiles": true,
+    "twoIndependentRegenerationsMatch": true,
+    "manifestHashesAndLengthsMatch": true,
+    "contentRevision": "0b4823ffd0460646a0c6dc40e9cd30661c54a6ec9151cbf84e37a11fa1c06bcd",
+    "files": {
+      "bundle.json": {
+        "sha256": "eda32ef8263212b585e6e13fe708ffc53fb803264c665cff501947995b7d9708",
+        "bytes": 141848
+      },
+      "diff.json": {
+        "sha256": "eff8223f437d1b164cbbcaae979eb0ec1b68bf81b37d0820762d65ff2d71fa5b",
+        "bytes": 719
+      },
+      "diff.txt": {
+        "sha256": "1af7e5bbe8e87519e266122cffd2c429e99c88ee7c2cdbcba69ba0a7af6605bc",
+        "bytes": 708
+      },
+      "exclusions.json": {
+        "sha256": "6197d82d901508a0cff4c915f800a7cd99e5644788f24595c2a8b6f792593805",
+        "bytes": 934
+      },
+      "field-source-map.json": {
+        "sha256": "2981f909907ab381785dbe4449fa2fbcfc069c639cbef6b209ebb81134679dad",
+        "bytes": 49103
+      },
+      "input.synthetic.json": {
+        "sha256": "a2c561ce7e99bdb99cb901215e691ebf298d21b51c296a5783916c7060a04427",
+        "bytes": 49629
+      },
+      "ledger.json": {
+        "sha256": "a2c561ce7e99bdb99cb901215e691ebf298d21b51c296a5783916c7060a04427",
+        "bytes": 49629
+      },
+      "manifest.json": {
+        "sha256": "02e0cba6d5c35fca207c4981ca3b260e73f7e502389a560ac41ec7ad68b583e8",
+        "bytes": 845
+      },
+      "runtime.json": {
+        "sha256": "bf45e8a0770d0023441a25142f12042774860ca7b628868b9b8a4c5636360ae8",
+        "bytes": 40102
+      },
+      "tombstones.json": {
+        "sha256": "610a9c4f52534651359d97dfa9ceb8df7882a394d2e753a213a16c0dc64b0fbf",
+        "bytes": 434
+      }
+    }
+  }
+}

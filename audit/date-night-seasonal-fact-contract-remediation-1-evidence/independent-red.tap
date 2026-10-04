@@ -1,0 +1,731 @@
+TAP version 13
+# Subtest: strict factual assertion rejects reviewProse
+ok 1 - strict factual assertion rejects reviewProse
+  ---
+  duration_ms: 31.245696
+  type: 'test'
+  ...
+# Subtest: strict factual assertion rejects marketingDescriptions
+ok 2 - strict factual assertion rejects marketingDescriptions
+  ---
+  duration_ms: 2.15478
+  type: 'test'
+  ...
+# Subtest: strict factual assertion rejects photos
+ok 3 - strict factual assertion rejects photos
+  ---
+  duration_ms: 1.905254
+  type: 'test'
+  ...
+# Subtest: strict factual assertion rejects logos
+ok 4 - strict factual assertion rejects logos
+  ---
+  duration_ms: 1.294583
+  type: 'test'
+  ...
+# Subtest: strict factual assertion rejects screenshots
+ok 5 - strict factual assertion rejects screenshots
+  ---
+  duration_ms: 2.104164
+  type: 'test'
+  ...
+# Subtest: strict factual assertion rejects rankings
+ok 6 - strict factual assertion rejects rankings
+  ---
+  duration_ms: 1.801187
+  type: 'test'
+  ...
+# Subtest: strict factual assertion rejects popularity
+ok 7 - strict factual assertion rejects popularity
+  ---
+  duration_ms: 2.031675
+  type: 'test'
+  ...
+# Subtest: strict factual assertion rejects ratings
+ok 8 - strict factual assertion rejects ratings
+  ---
+  duration_ms: 1.32573
+  type: 'test'
+  ...
+# Subtest: strict factual assertion rejects prices
+ok 9 - strict factual assertion rejects prices
+  ---
+  duration_ms: 1.211998
+  type: 'test'
+  ...
+# Subtest: strict factual assertion rejects articleText
+ok 10 - strict factual assertion rejects articleText
+  ---
+  duration_ms: 1.360213
+  type: 'test'
+  ...
+# Subtest: nested unknown field rejected: location
+ok 11 - nested unknown field rejected: location
+  ---
+  duration_ms: 4.147417
+  type: 'test'
+  ...
+# Subtest: nested unknown field rejected: observation
+ok 12 - nested unknown field rejected: observation
+  ---
+  duration_ms: 1.505371
+  type: 'test'
+  ...
+# Subtest: nested unknown field rejected: calendar
+ok 13 - nested unknown field rejected: calendar
+  ---
+  duration_ms: 1.990924
+  type: 'test'
+  ...
+# Subtest: nested unknown field rejected: hours
+ok 14 - nested unknown field rejected: hours
+  ---
+  duration_ms: 1.201182
+  type: 'test'
+  ...
+# Subtest: nested unknown field rejected: relationship
+ok 15 - nested unknown field rejected: relationship
+  ---
+  duration_ms: 0.998386
+  type: 'test'
+  ...
+# Subtest: nested unknown field rejected: identity
+ok 16 - nested unknown field rejected: identity
+  ---
+  duration_ms: 1.401715
+  type: 'test'
+  ...
+# Subtest: full fixture identity distinctions, recurring year, moved version, and crosswalks
+ok 17 - full fixture identity distinctions, recurring year, moved version, and crosswalks
+  ---
+  duration_ms: 42.168294
+  type: 'test'
+  ...
+# Subtest: name correction preserves immutable occurrence id
+ok 18 - name correction preserves immutable occurrence id
+  ---
+  duration_ms: 46.117641
+  type: 'test'
+  ...
+# Subtest: deep input permutations reproduce identical bytes
+ok 19 - deep input permutations reproduce identical bytes
+  ---
+  duration_ms: 58.848597
+  type: 'test'
+  ...
+# Subtest: conflict requires complete reviewed assertion accounting
+ok 20 - conflict requires complete reviewed assertion accounting
+  ---
+  duration_ms: 8.06101
+  type: 'test'
+  ...
+# Subtest: candidate coordinate publication denied
+ok 21 - candidate coordinate publication denied
+  ---
+  duration_ms: 2.634905
+  type: 'test'
+  ...
+# Subtest: unresolved coordinate publication denied
+ok 22 - unresolved coordinate publication denied
+  ---
+  duration_ms: 2.274231
+  type: 'test'
+  ...
+# Subtest: moved address with stale fingerprint fails
+ok 23 - moved address with stale fingerprint fails
+  ---
+  duration_ms: 1.055002
+  type: 'test'
+  ...
+# Subtest: location version cannot reuse evidence attached to another version
+ok 24 - location version cannot reuse evidence attached to another version
+  ---
+  duration_ms: 1.668747
+  type: 'test'
+  ...
+# Subtest: verification quality: operator-confirmed
+ok 25 - verification quality: operator-confirmed
+  ---
+  duration_ms: 2.905513
+  type: 'test'
+  ...
+# Subtest: verification quality: current-season-directory
+ok 26 - verification quality: current-season-directory
+  ---
+  duration_ms: 4.078883
+  type: 'test'
+  ...
+# Subtest: verification quality: current-season-secondary
+ok 27 - verification quality: current-season-secondary
+  ---
+  duration_ms: 3.378777
+  type: 'test'
+  ...
+# Subtest: verification quality: historical/unconfirmed
+ok 28 - verification quality: historical/unconfirmed
+  ---
+  duration_ms: 2.825553
+  type: 'test'
+  ...
+# Subtest: no current season inferred from footer-only
+ok 29 - no current season inferred from footer-only
+  ---
+  duration_ms: 2.29337
+  type: 'test'
+  ...
+# Subtest: no current season inferred from absent
+ok 30 - no current season inferred from absent
+  ---
+  duration_ms: 2.755336
+  type: 'test'
+  ...
+# Subtest: negative correctly scoped to operator
+ok 31 - negative correctly scoped to operator
+  ---
+  duration_ms: 3.842066
+  type: 'test'
+  ...
+# Subtest: negative correctly scoped to venue
+ok 32 - negative correctly scoped to venue
+  ---
+  duration_ms: 3.523766
+  type: 'test'
+  ...
+# Subtest: negative correctly scoped to attraction
+ok 33 - negative correctly scoped to attraction
+  ---
+  duration_ms: 4.730946
+  type: 'test'
+  ...
+# Subtest: negative correctly scoped to occurrence
+ok 34 - negative correctly scoped to occurrence
+  ---
+  duration_ms: 3.692901
+  type: 'test'
+  ...
+# Subtest: negative persists after omission: season-not-operating
+ok 35 - negative persists after omission: season-not-operating
+  ---
+  duration_ms: 10.511246
+  type: 'test'
+  ...
+# Subtest: negative persists after omission: event-cancelled
+ok 36 - negative persists after omission: event-cancelled
+  ---
+  duration_ms: 6.561518
+  type: 'test'
+  ...
+# Subtest: negative persists after omission: moved
+ok 37 - negative persists after omission: moved
+  ---
+  duration_ms: 11.119905
+  type: 'test'
+  ...
+# Subtest: negative persists after omission: disused
+ok 38 - negative persists after omission: disused
+  ---
+  duration_ms: 20.922633
+  type: 'test'
+  ...
+# Subtest: negative persists after omission: permanently-closed
+ok 39 - negative persists after omission: permanently-closed
+  ---
+  duration_ms: 6.875733
+  type: 'test'
+  ...
+# Subtest: omission preserves prior optional fact and checkedAt
+ok 40 - omission preserves prior optional fact and checkedAt
+  ---
+  duration_ms: 24.75247
+  type: 'test'
+  ...
+# Subtest: failed refresh returns exactly last-good serialized bytes
+ok 41 - failed refresh returns exactly last-good serialized bytes
+  ---
+  duration_ms: 15.432671
+  type: 'test'
+  ...
+# Subtest: transitive do-not-merge overrides explicit equivalence
+ok 42 - transitive do-not-merge overrides explicit equivalence
+  ---
+  duration_ms: 1.414404
+  type: 'test'
+  ...
+# Subtest: publication bound 100 inclusive and 101 explicit failure
+ok 43 - publication bound 100 inclusive and 101 explicit failure
+  ---
+  duration_ms: 278.00708
+  type: 'test'
+  ...
+# Subtest: identity bound 512 includes quarantined and tombstone identities
+ok 44 - identity bound 512 includes quarantined and tombstone identities
+  ---
+  duration_ms: 10.83835
+  type: 'test'
+  ...
+# Subtest: observation bound retains 20 provenances and rejects 21
+ok 45 - observation bound retains 20 provenances and rejects 21
+  ---
+  duration_ms: 8.05373
+  type: 'test'
+  ...
+# Subtest: text bound rejects name
+ok 46 - text bound rejects name
+  ---
+  duration_ms: 0.976764
+  type: 'test'
+  ...
+# Subtest: text bound rejects operatorWebsite
+ok 47 - text bound rejects operatorWebsite
+  ---
+  duration_ms: 1.22016
+  type: 'test'
+  ...
+# Subtest: address combined bound rejects overflow
+ok 48 - address combined bound rejects overflow
+  ---
+  duration_ms: 1.332209
+  type: 'test'
+  ...
+# Subtest: runtime 2 MiB overflow explicitly rejected
+ok 49 - runtime 2 MiB overflow explicitly rejected
+  ---
+  duration_ms: 748.621275
+  type: 'test'
+  ...
+# Subtest: snapshot cannot forge materialized fact by updating hashes and revision
+ok 50 - snapshot cannot forge materialized fact by updating hashes and revision
+  ---
+  duration_ms: 5.814051
+  type: 'test'
+  ...
+# Subtest: schema and manifest failures preserve atomic file bytes
+ok 51 - schema and manifest failures preserve atomic file bytes
+  ---
+  duration_ms: 9.084284
+  type: 'test'
+  ...
+# Subtest: permission state never enables source: unknown
+ok 52 - permission state never enables source: unknown
+  ---
+  duration_ms: 0.553405
+  type: 'test'
+  ...
+# Subtest: permission state never enables source: conflicting
+ok 53 - permission state never enables source: conflicting
+  ---
+  duration_ms: 0.122014
+  type: 'test'
+  ...
+# Subtest: permission state never enables source: denied
+ok 54 - permission state never enables source: denied
+  ---
+  duration_ms: 0.091137
+  type: 'test'
+  ...
+# Subtest: permission state never enables source: approved
+ok 55 - permission state never enables source: approved
+  ---
+  duration_ms: 0.361535
+  type: 'test'
+  ...
+# Subtest: malformed approvals and enabled flags fail validation
+ok 56 - malformed approvals and enabled flags fail validation
+  ---
+  duration_ms: 0.828179
+  type: 'test'
+  ...
+# Subtest: expired affirmative permission still cannot activate collector
+ok 57 - expired affirmative permission still cannot activate collector
+  ---
+  duration_ms: 0.344069
+  type: 'test'
+  ...
+# Subtest: exact URL policy rejects http://seasonal.invalid/events/x
+ok 58 - exact URL policy rejects http://seasonal.invalid/events/x
+  ---
+  duration_ms: 0.347844
+  type: 'test'
+  ...
+# Subtest: exact URL policy rejects https://seasonal.invalid:8443/events/x
+ok 59 - exact URL policy rejects https://seasonal.invalid:8443/events/x
+  ---
+  duration_ms: 0.203186
+  type: 'test'
+  ...
+# Subtest: exact URL policy rejects https://name@seasonal.invalid/events/x
+ok 60 - exact URL policy rejects https://name@seasonal.invalid/events/x
+  ---
+  duration_ms: 0.268315
+  type: 'test'
+  ...
+# Subtest: exact URL policy rejects https://[::1]/events/x
+ok 61 - exact URL policy rejects https://[::1]/events/x
+  ---
+  duration_ms: 0.184178
+  type: 'test'
+  ...
+# Subtest: exact URL policy rejects https://seasonal.invalid.evil.invalid/events/x
+ok 62 - exact URL policy rejects https://seasonal.invalid.evil.invalid/events/x
+  ---
+  duration_ms: 0.203507
+  type: 'test'
+  ...
+# Subtest: exact URL policy rejects https://seasonal.invalid/eventsx
+ok 63 - exact URL policy rejects https://seasonal.invalid/eventsx
+  ---
+  duration_ms: 0.128574
+  type: 'test'
+  ...
+# Subtest: exact URL policy rejects https://seasonal.invalid/events/%2fsecret
+ok 64 - exact URL policy rejects https://seasonal.invalid/events/%2fsecret
+  ---
+  duration_ms: 0.135865
+  type: 'test'
+  ...
+# Subtest: exact URL policy rejects https://seasonal.invalid/events/x?year=2026&year=2026
+ok 65 - exact URL policy rejects https://seasonal.invalid/events/x?year=2026&year=2026
+  ---
+  duration_ms: 0.224689
+  type: 'test'
+  ...
+# Subtest: exact URL policy rejects https://seasonal.invalid/events/x?unknown=yes
+ok 66 - exact URL policy rejects https://seasonal.invalid/events/x?unknown=yes
+  ---
+  duration_ms: 0.174864
+  type: 'test'
+  ...
+# Subtest: denied IP class 10.255.255.255
+ok 67 - denied IP class 10.255.255.255
+  ---
+  duration_ms: 0.281305
+  type: 'test'
+  ...
+# Subtest: denied IP class 172.16.0.1
+ok 68 - denied IP class 172.16.0.1
+  ---
+  duration_ms: 0.072759
+  type: 'test'
+  ...
+# Subtest: denied IP class 169.254.169.254
+ok 69 - denied IP class 169.254.169.254
+  ---
+  duration_ms: 0.112269
+  type: 'test'
+  ...
+# Subtest: denied IP class 100.64.0.1
+ok 70 - denied IP class 100.64.0.1
+  ---
+  duration_ms: 0.125449
+  type: 'test'
+  ...
+# Subtest: denied IP class 192.0.2.255
+ok 71 - denied IP class 192.0.2.255
+  ---
+  duration_ms: 0.067482
+  type: 'test'
+  ...
+# Subtest: denied IP class 198.19.255.255
+ok 72 - denied IP class 198.19.255.255
+  ---
+  duration_ms: 0.062194
+  type: 'test'
+  ...
+# Subtest: denied IP class 240.0.0.1
+ok 73 - denied IP class 240.0.0.1
+  ---
+  duration_ms: 0.06601
+  type: 'test'
+  ...
+# Subtest: denied IP class ::ffff:169.254.169.254
+ok 74 - denied IP class ::ffff:169.254.169.254
+  ---
+  duration_ms: 0.126451
+  type: 'test'
+  ...
+# Subtest: denied IP class ::ffff:a9fe:a9fe
+ok 75 - denied IP class ::ffff:a9fe:a9fe
+  ---
+  duration_ms: 0.098448
+  type: 'test'
+  ...
+# Subtest: denied IP class ::ffff:0808:0808
+ok 76 - denied IP class ::ffff:0808:0808
+  ---
+  duration_ms: 0.068133
+  type: 'test'
+  ...
+# Subtest: denied IP class fe80::abcd
+ok 77 - denied IP class fe80::abcd
+  ---
+  duration_ms: 0.058167
+  type: 'test'
+  ...
+# Subtest: denied IP class fc00::abcd
+ok 78 - denied IP class fc00::abcd
+  ---
+  duration_ms: 0.050416
+  type: 'test'
+  ...
+# Subtest: denied IP class 2001:db8::abcd
+ok 79 - denied IP class 2001:db8::abcd
+  ---
+  duration_ms: 0.050496
+  type: 'test'
+  ...
+# Subtest: DNS poison and peer rebinding rejected without network
+ok 80 - DNS poison and peer rebinding rejected without network
+  ---
+  duration_ms: 0.626836
+  type: 'test'
+  ...
+# Subtest: redirect count and every present target checked
+ok 81 - redirect count and every present target checked
+  ---
+  duration_ms: 0.66931
+  type: 'test'
+  ...
+# Subtest: response metric upper bound headerBytes
+ok 82 - response metric upper bound headerBytes
+  ---
+  duration_ms: 0.378901
+  type: 'test'
+  ...
+# Subtest: response metric upper bound wireBytes
+ok 83 - response metric upper bound wireBytes
+  ---
+  duration_ms: 0.245801
+  type: 'test'
+  ...
+# Subtest: response metric upper bound decompressedBytes
+ok 84 - response metric upper bound decompressedBytes
+  ---
+  duration_ms: 0.249016
+  type: 'test'
+  ...
+# Subtest: response metric upper bound elapsedMs
+ok 85 - response metric upper bound elapsedMs
+  ---
+  duration_ms: 0.11245
+  type: 'test'
+  ...
+# Subtest: response metric upper bound domNodes
+ok 86 - response metric upper bound domNodes
+  ---
+  duration_ms: 0.110737
+  type: 'test'
+  ...
+# Subtest: response metric upper bound depth
+ok 87 - response metric upper bound depth
+  ---
+  duration_ms: 0.090507
+  type: 'test'
+  ...
+# Subtest: response metric upper bound jsonLdBytes
+ok 88 - response metric upper bound jsonLdBytes
+  ---
+  duration_ms: 0.09933
+  type: 'test'
+  ...
+# Subtest: response metric upper bound requests
+ok 89 - response metric upper bound requests
+  ---
+  duration_ms: 0.101603
+  type: 'test'
+  ...
+# Subtest: missing required response metric must fail: headerBytes
+not ok 90 - missing required response metric must fail: headerBytes
+  ---
+  duration_ms: 0.671152
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:181:71'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception: missing headerBytes accepted'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:182:43)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: missing required response metric must fail: wireBytes
+not ok 91 - missing required response metric must fail: wireBytes
+  ---
+  duration_ms: 0.257198
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:181:71'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception: missing wireBytes accepted'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:182:43)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: missing required response metric must fail: decompressedBytes
+not ok 92 - missing required response metric must fail: decompressedBytes
+  ---
+  duration_ms: 2.348793
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:181:71'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception: missing decompressedBytes accepted'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:182:43)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: missing required response metric must fail: elapsedMs
+not ok 93 - missing required response metric must fail: elapsedMs
+  ---
+  duration_ms: 0.153822
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:181:71'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception: missing elapsedMs accepted'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:182:43)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: missing required response metric must fail: domNodes
+not ok 94 - missing required response metric must fail: domNodes
+  ---
+  duration_ms: 0.23236
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:181:71'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception: missing domNodes accepted'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:182:43)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: missing required response metric must fail: depth
+not ok 95 - missing required response metric must fail: depth
+  ---
+  duration_ms: 0.219251
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:181:71'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception: missing depth accepted'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:182:43)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: missing required response metric must fail: jsonLdBytes
+not ok 96 - missing required response metric must fail: jsonLdBytes
+  ---
+  duration_ms: 0.170408
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:181:71'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception: missing jsonLdBytes accepted'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:182:43)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: missing required response metric must fail: requests
+not ok 97 - missing required response metric must fail: requests
+  ---
+  duration_ms: 0.123746
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:181:71'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception: missing requests accepted'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:182:43)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: sparse redirect chain must fail rather than skip an unvalidated hop
+not ok 98 - sparse redirect chain must fail rather than skip an unvalidated hop
+  ---
+  duration_ms: 0.513315
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:184:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/evidence/independent-adversarial.test.mjs:185:64)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: independent execution made zero unmocked collector network attempts
+ok 99 - independent execution made zero unmocked collector network attempts
+  ---
+  duration_ms: 0.101934
+  type: 'test'
+  ...
+# OFFLINE_NETWORK_PROOF unmocked_attempts=0
+1..99
+# tests 99
+# suites 0
+# pass 90
+# fail 9
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1736.771111

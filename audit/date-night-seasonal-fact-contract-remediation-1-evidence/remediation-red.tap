@@ -1,0 +1,1803 @@
+TAP version 13
+# Subtest: envelope omission rejected: contentType
+ok 1 - envelope omission rejected: contentType
+  ---
+  duration_ms: 9.383325
+  type: 'test'
+  ...
+# Subtest: envelope explicit undefined rejected: contentType
+ok 2 - envelope explicit undefined rejected: contentType
+  ---
+  duration_ms: 0.605353
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: contentType
+not ok 3 - envelope inherited-only field rejected: contentType
+  ---
+  duration_ms: 0.964555
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:24:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:28:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope omission rejected: headerBytes
+not ok 4 - envelope omission rejected: headerBytes
+  ---
+  duration_ms: 0.70941
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:17:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:19:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope explicit undefined rejected: headerBytes
+ok 5 - envelope explicit undefined rejected: headerBytes
+  ---
+  duration_ms: 0.541817
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: headerBytes
+not ok 6 - envelope inherited-only field rejected: headerBytes
+  ---
+  duration_ms: 0.416138
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:24:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:28:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope omission rejected: wireBytes
+not ok 7 - envelope omission rejected: wireBytes
+  ---
+  duration_ms: 0.389617
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:17:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:19:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope explicit undefined rejected: wireBytes
+ok 8 - envelope explicit undefined rejected: wireBytes
+  ---
+  duration_ms: 0.751184
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: wireBytes
+not ok 9 - envelope inherited-only field rejected: wireBytes
+  ---
+  duration_ms: 0.645875
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:24:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:28:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope omission rejected: decompressedBytes
+not ok 10 - envelope omission rejected: decompressedBytes
+  ---
+  duration_ms: 0.781429
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:17:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:19:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope explicit undefined rejected: decompressedBytes
+ok 11 - envelope explicit undefined rejected: decompressedBytes
+  ---
+  duration_ms: 0.35776
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: decompressedBytes
+not ok 12 - envelope inherited-only field rejected: decompressedBytes
+  ---
+  duration_ms: 0.403288
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:24:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:28:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope omission rejected: elapsedMs
+not ok 13 - envelope omission rejected: elapsedMs
+  ---
+  duration_ms: 0.439002
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:17:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:19:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope explicit undefined rejected: elapsedMs
+ok 14 - envelope explicit undefined rejected: elapsedMs
+  ---
+  duration_ms: 0.530901
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: elapsedMs
+not ok 15 - envelope inherited-only field rejected: elapsedMs
+  ---
+  duration_ms: 0.561728
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:24:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:28:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope omission rejected: domNodes
+not ok 16 - envelope omission rejected: domNodes
+  ---
+  duration_ms: 0.376398
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:17:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:19:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope explicit undefined rejected: domNodes
+ok 17 - envelope explicit undefined rejected: domNodes
+  ---
+  duration_ms: 0.396127
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: domNodes
+not ok 18 - envelope inherited-only field rejected: domNodes
+  ---
+  duration_ms: 0.384851
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:24:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:28:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope omission rejected: depth
+not ok 19 - envelope omission rejected: depth
+  ---
+  duration_ms: 0.345892
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:17:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:19:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope explicit undefined rejected: depth
+ok 20 - envelope explicit undefined rejected: depth
+  ---
+  duration_ms: 0.241595
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: depth
+not ok 21 - envelope inherited-only field rejected: depth
+  ---
+  duration_ms: 0.427565
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:24:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:28:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope omission rejected: jsonLdBytes
+not ok 22 - envelope omission rejected: jsonLdBytes
+  ---
+  duration_ms: 0.301144
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:17:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:19:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope explicit undefined rejected: jsonLdBytes
+ok 23 - envelope explicit undefined rejected: jsonLdBytes
+  ---
+  duration_ms: 0.379142
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: jsonLdBytes
+not ok 24 - envelope inherited-only field rejected: jsonLdBytes
+  ---
+  duration_ms: 0.362196
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:24:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:28:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope omission rejected: requests
+not ok 25 - envelope omission rejected: requests
+  ---
+  duration_ms: 0.277819
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:17:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:19:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope explicit undefined rejected: requests
+ok 26 - envelope explicit undefined rejected: requests
+  ---
+  duration_ms: 0.256748
+  type: 'test'
+  ...
+# Subtest: envelope inherited-only field rejected: requests
+not ok 27 - envelope inherited-only field rejected: requests
+  ---
+  duration_ms: 0.416208
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:24:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:28:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope non-plain input rejected: null
+ok 28 - envelope non-plain input rejected: null
+  ---
+  duration_ms: 0.362266
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: undefined
+ok 29 - envelope non-plain input rejected: undefined
+  ---
+  duration_ms: 0.31158
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: array
+ok 30 - envelope non-plain input rejected: array
+  ---
+  duration_ms: 0.302106
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: array with metrics
+not ok 31 - envelope non-plain input rejected: array with metrics
+  ---
+  duration_ms: 0.345251
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:35:4'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:36:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope non-plain input rejected: string
+ok 32 - envelope non-plain input rejected: string
+  ---
+  duration_ms: 0.303348
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: number
+ok 33 - envelope non-plain input rejected: number
+  ---
+  duration_ms: 0.254865
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: boolean
+ok 34 - envelope non-plain input rejected: boolean
+  ---
+  duration_ms: 0.224289
+  type: 'test'
+  ...
+# Subtest: envelope non-plain input rejected: function
+not ok 35 - envelope non-plain input rejected: function
+  ---
+  duration_ms: 0.420705
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:35:4'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:36:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope non-plain input rejected: date with metrics
+not ok 36 - envelope non-plain input rejected: date with metrics
+  ---
+  duration_ms: 0.270098
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:35:4'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:36:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope non-plain input rejected: inherited envelope
+not ok 37 - envelope non-plain input rejected: inherited envelope
+  ---
+  duration_ms: 0.266913
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:35:4'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:36:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope invalid numeric NaN: headerBytes
+ok 38 - envelope invalid numeric NaN: headerBytes
+  ---
+  duration_ms: 0.358751
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: wireBytes
+ok 39 - envelope invalid numeric NaN: wireBytes
+  ---
+  duration_ms: 0.306633
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: decompressedBytes
+ok 40 - envelope invalid numeric NaN: decompressedBytes
+  ---
+  duration_ms: 0.228755
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: elapsedMs
+ok 41 - envelope invalid numeric NaN: elapsedMs
+  ---
+  duration_ms: 0.32461
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: domNodes
+ok 42 - envelope invalid numeric NaN: domNodes
+  ---
+  duration_ms: 0.475467
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: depth
+ok 43 - envelope invalid numeric NaN: depth
+  ---
+  duration_ms: 0.280213
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: jsonLdBytes
+ok 44 - envelope invalid numeric NaN: jsonLdBytes
+  ---
+  duration_ms: 0.262226
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric NaN: requests
+ok 45 - envelope invalid numeric NaN: requests
+  ---
+  duration_ms: 0.416989
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: headerBytes
+ok 46 - envelope invalid numeric Infinity: headerBytes
+  ---
+  duration_ms: 0.281575
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: wireBytes
+ok 47 - envelope invalid numeric Infinity: wireBytes
+  ---
+  duration_ms: 0.26569
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: decompressedBytes
+ok 48 - envelope invalid numeric Infinity: decompressedBytes
+  ---
+  duration_ms: 0.275585
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: elapsedMs
+ok 49 - envelope invalid numeric Infinity: elapsedMs
+  ---
+  duration_ms: 0.385101
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: domNodes
+ok 50 - envelope invalid numeric Infinity: domNodes
+  ---
+  duration_ms: 0.336188
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: depth
+ok 51 - envelope invalid numeric Infinity: depth
+  ---
+  duration_ms: 0.297669
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: jsonLdBytes
+ok 52 - envelope invalid numeric Infinity: jsonLdBytes
+  ---
+  duration_ms: 0.200112
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric Infinity: requests
+ok 53 - envelope invalid numeric Infinity: requests
+  ---
+  duration_ms: 0.189155
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: headerBytes
+ok 54 - envelope invalid numeric negative Infinity: headerBytes
+  ---
+  duration_ms: 0.09951
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: wireBytes
+ok 55 - envelope invalid numeric negative Infinity: wireBytes
+  ---
+  duration_ms: 0.097587
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: decompressedBytes
+ok 56 - envelope invalid numeric negative Infinity: decompressedBytes
+  ---
+  duration_ms: 0.093111
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: elapsedMs
+ok 57 - envelope invalid numeric negative Infinity: elapsedMs
+  ---
+  duration_ms: 0.090096
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: domNodes
+ok 58 - envelope invalid numeric negative Infinity: domNodes
+  ---
+  duration_ms: 0.125039
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: depth
+ok 59 - envelope invalid numeric negative Infinity: depth
+  ---
+  duration_ms: 0.094844
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: jsonLdBytes
+ok 60 - envelope invalid numeric negative Infinity: jsonLdBytes
+  ---
+  duration_ms: 0.091318
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative Infinity: requests
+ok 61 - envelope invalid numeric negative Infinity: requests
+  ---
+  duration_ms: 0.338
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: headerBytes
+ok 62 - envelope invalid numeric fraction: headerBytes
+  ---
+  duration_ms: 0.317219
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: wireBytes
+ok 63 - envelope invalid numeric fraction: wireBytes
+  ---
+  duration_ms: 0.216636
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: decompressedBytes
+ok 64 - envelope invalid numeric fraction: decompressedBytes
+  ---
+  duration_ms: 0.219071
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: elapsedMs
+ok 65 - envelope invalid numeric fraction: elapsedMs
+  ---
+  duration_ms: 0.29792
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: domNodes
+ok 66 - envelope invalid numeric fraction: domNodes
+  ---
+  duration_ms: 0.243477
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: depth
+ok 67 - envelope invalid numeric fraction: depth
+  ---
+  duration_ms: 0.269397
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: jsonLdBytes
+ok 68 - envelope invalid numeric fraction: jsonLdBytes
+  ---
+  duration_ms: 0.217738
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric fraction: requests
+ok 69 - envelope invalid numeric fraction: requests
+  ---
+  duration_ms: 0.355026
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: headerBytes
+ok 70 - envelope invalid numeric negative: headerBytes
+  ---
+  duration_ms: 0.22517
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: wireBytes
+ok 71 - envelope invalid numeric negative: wireBytes
+  ---
+  duration_ms: 0.221895
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: decompressedBytes
+ok 72 - envelope invalid numeric negative: decompressedBytes
+  ---
+  duration_ms: 0.253833
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: elapsedMs
+ok 73 - envelope invalid numeric negative: elapsedMs
+  ---
+  duration_ms: 0.228995
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: domNodes
+ok 74 - envelope invalid numeric negative: domNodes
+  ---
+  duration_ms: 0.360114
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: depth
+ok 75 - envelope invalid numeric negative: depth
+  ---
+  duration_ms: 0.363107
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: jsonLdBytes
+ok 76 - envelope invalid numeric negative: jsonLdBytes
+  ---
+  duration_ms: 0.236256
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric negative: requests
+ok 77 - envelope invalid numeric negative: requests
+  ---
+  duration_ms: 3.410094
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: headerBytes
+ok 78 - envelope invalid numeric unsafe integer: headerBytes
+  ---
+  duration_ms: 0.206161
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: wireBytes
+ok 79 - envelope invalid numeric unsafe integer: wireBytes
+  ---
+  duration_ms: 0.087723
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: decompressedBytes
+ok 80 - envelope invalid numeric unsafe integer: decompressedBytes
+  ---
+  duration_ms: 0.159751
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: elapsedMs
+ok 81 - envelope invalid numeric unsafe integer: elapsedMs
+  ---
+  duration_ms: 0.171358
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: domNodes
+ok 82 - envelope invalid numeric unsafe integer: domNodes
+  ---
+  duration_ms: 0.174543
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: depth
+ok 83 - envelope invalid numeric unsafe integer: depth
+  ---
+  duration_ms: 0.124217
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: jsonLdBytes
+ok 84 - envelope invalid numeric unsafe integer: jsonLdBytes
+  ---
+  duration_ms: 0.088103
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric unsafe integer: requests
+ok 85 - envelope invalid numeric unsafe integer: requests
+  ---
+  duration_ms: 0.075744
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: headerBytes
+ok 86 - envelope invalid numeric string: headerBytes
+  ---
+  duration_ms: 0.30461
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: wireBytes
+ok 87 - envelope invalid numeric string: wireBytes
+  ---
+  duration_ms: 0.1459
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: decompressedBytes
+ok 88 - envelope invalid numeric string: decompressedBytes
+  ---
+  duration_ms: 0.090026
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: elapsedMs
+ok 89 - envelope invalid numeric string: elapsedMs
+  ---
+  duration_ms: 0.078488
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: domNodes
+ok 90 - envelope invalid numeric string: domNodes
+  ---
+  duration_ms: 0.159831
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: depth
+ok 91 - envelope invalid numeric string: depth
+  ---
+  duration_ms: 0.174884
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: jsonLdBytes
+ok 92 - envelope invalid numeric string: jsonLdBytes
+  ---
+  duration_ms: 0.083726
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric string: requests
+ok 93 - envelope invalid numeric string: requests
+  ---
+  duration_ms: 0.073751
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: headerBytes
+ok 94 - envelope invalid numeric null: headerBytes
+  ---
+  duration_ms: 0.071168
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: wireBytes
+ok 95 - envelope invalid numeric null: wireBytes
+  ---
+  duration_ms: 0.070987
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: decompressedBytes
+ok 96 - envelope invalid numeric null: decompressedBytes
+  ---
+  duration_ms: 0.071157
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: elapsedMs
+ok 97 - envelope invalid numeric null: elapsedMs
+  ---
+  duration_ms: 0.068043
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: domNodes
+ok 98 - envelope invalid numeric null: domNodes
+  ---
+  duration_ms: 0.066841
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: depth
+ok 99 - envelope invalid numeric null: depth
+  ---
+  duration_ms: 0.070276
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: jsonLdBytes
+ok 100 - envelope invalid numeric null: jsonLdBytes
+  ---
+  duration_ms: 0.094031
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric null: requests
+ok 101 - envelope invalid numeric null: requests
+  ---
+  duration_ms: 0.072509
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: headerBytes
+ok 102 - envelope invalid numeric boolean: headerBytes
+  ---
+  duration_ms: 0.078749
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: wireBytes
+ok 103 - envelope invalid numeric boolean: wireBytes
+  ---
+  duration_ms: 0.1788
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: decompressedBytes
+ok 104 - envelope invalid numeric boolean: decompressedBytes
+  ---
+  duration_ms: 0.089044
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: elapsedMs
+ok 105 - envelope invalid numeric boolean: elapsedMs
+  ---
+  duration_ms: 0.072149
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: domNodes
+ok 106 - envelope invalid numeric boolean: domNodes
+  ---
+  duration_ms: 0.068013
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: depth
+ok 107 - envelope invalid numeric boolean: depth
+  ---
+  duration_ms: 0.065108
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: jsonLdBytes
+ok 108 - envelope invalid numeric boolean: jsonLdBytes
+  ---
+  duration_ms: 0.150977
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric boolean: requests
+ok 109 - envelope invalid numeric boolean: requests
+  ---
+  duration_ms: 0.14576
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: headerBytes
+ok 110 - envelope invalid numeric bigint: headerBytes
+  ---
+  duration_ms: 0.177278
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: wireBytes
+ok 111 - envelope invalid numeric bigint: wireBytes
+  ---
+  duration_ms: 0.124558
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: decompressedBytes
+ok 112 - envelope invalid numeric bigint: decompressedBytes
+  ---
+  duration_ms: 0.078008
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: elapsedMs
+ok 113 - envelope invalid numeric bigint: elapsedMs
+  ---
+  duration_ms: 0.166481
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: domNodes
+ok 114 - envelope invalid numeric bigint: domNodes
+  ---
+  duration_ms: 0.100993
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: depth
+ok 115 - envelope invalid numeric bigint: depth
+  ---
+  duration_ms: 0.181224
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: jsonLdBytes
+ok 116 - envelope invalid numeric bigint: jsonLdBytes
+  ---
+  duration_ms: 0.089284
+  type: 'test'
+  ...
+# Subtest: envelope invalid numeric bigint: requests
+ok 117 - envelope invalid numeric bigint: requests
+  ---
+  duration_ms: 0.097347
+  type: 'test'
+  ...
+# Subtest: contentType rejected: number
+ok 118 - contentType rejected: number
+  ---
+  duration_ms: 0.154954
+  type: 'test'
+  ...
+# Subtest: contentType rejected: null
+ok 119 - contentType rejected: null
+  ---
+  duration_ms: 0.079009
+  type: 'test'
+  ...
+# Subtest: contentType rejected: boxed string
+ok 120 - contentType rejected: boxed string
+  ---
+  duration_ms: 0.105019
+  type: 'test'
+  ...
+# Subtest: contentType rejected: disallowed string
+ok 121 - contentType rejected: disallowed string
+  ---
+  duration_ms: 0.080932
+  type: 'test'
+  ...
+# Subtest: envelope unexpected enumerable key rejected
+not ok 122 - envelope unexpected enumerable key rejected
+  ---
+  duration_ms: 0.212301
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:50:39'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:52:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope unexpected hidden key rejected
+not ok 123 - envelope unexpected hidden key rejected
+  ---
+  duration_ms: 0.122575
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:50:39'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:52:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope unexpected symbol key rejected
+not ok 124 - envelope unexpected symbol key rejected
+  ---
+  duration_ms: 0.222335
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:50:39'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:52:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope exact ceiling passes: headerBytes
+ok 125 - envelope exact ceiling passes: headerBytes
+  ---
+  duration_ms: 0.369778
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: headerBytes
+ok 126 - envelope ceiling plus one fails: headerBytes
+  ---
+  duration_ms: 0.248494
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: headerBytes
+ok 127 - envelope lowered source ceiling enforced: headerBytes
+  ---
+  duration_ms: 0.216767
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: headerBytes
+not ok 128 - envelope non-enumerable invalid metric rejected: headerBytes
+  ---
+  duration_ms: 0.24506
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:68:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope exact ceiling passes: wireBytes
+ok 129 - envelope exact ceiling passes: wireBytes
+  ---
+  duration_ms: 0.35747
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: wireBytes
+ok 130 - envelope ceiling plus one fails: wireBytes
+  ---
+  duration_ms: 0.295206
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: wireBytes
+ok 131 - envelope lowered source ceiling enforced: wireBytes
+  ---
+  duration_ms: 0.368666
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: wireBytes
+not ok 132 - envelope non-enumerable invalid metric rejected: wireBytes
+  ---
+  duration_ms: 0.363238
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:68:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope exact ceiling passes: decompressedBytes
+ok 133 - envelope exact ceiling passes: decompressedBytes
+  ---
+  duration_ms: 0.305141
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: decompressedBytes
+ok 134 - envelope ceiling plus one fails: decompressedBytes
+  ---
+  duration_ms: 0.300744
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: decompressedBytes
+ok 135 - envelope lowered source ceiling enforced: decompressedBytes
+  ---
+  duration_ms: 0.303818
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: decompressedBytes
+not ok 136 - envelope non-enumerable invalid metric rejected: decompressedBytes
+  ---
+  duration_ms: 0.392632
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:68:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope exact ceiling passes: elapsedMs
+ok 137 - envelope exact ceiling passes: elapsedMs
+  ---
+  duration_ms: 0.31102
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: elapsedMs
+ok 138 - envelope ceiling plus one fails: elapsedMs
+  ---
+  duration_ms: 0.283017
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: elapsedMs
+ok 139 - envelope lowered source ceiling enforced: elapsedMs
+  ---
+  duration_ms: 0.280984
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: elapsedMs
+not ok 140 - envelope non-enumerable invalid metric rejected: elapsedMs
+  ---
+  duration_ms: 0.333553
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:68:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope exact ceiling passes: domNodes
+ok 141 - envelope exact ceiling passes: domNodes
+  ---
+  duration_ms: 0.195164
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: domNodes
+ok 142 - envelope ceiling plus one fails: domNodes
+  ---
+  duration_ms: 0.225671
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: domNodes
+ok 143 - envelope lowered source ceiling enforced: domNodes
+  ---
+  duration_ms: 0.191099
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: domNodes
+not ok 144 - envelope non-enumerable invalid metric rejected: domNodes
+  ---
+  duration_ms: 0.25158
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:68:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope exact ceiling passes: depth
+ok 145 - envelope exact ceiling passes: depth
+  ---
+  duration_ms: 0.196226
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: depth
+ok 146 - envelope ceiling plus one fails: depth
+  ---
+  duration_ms: 0.21213
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: depth
+ok 147 - envelope lowered source ceiling enforced: depth
+  ---
+  duration_ms: 0.190978
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: depth
+not ok 148 - envelope non-enumerable invalid metric rejected: depth
+  ---
+  duration_ms: 0.310869
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:68:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope exact ceiling passes: jsonLdBytes
+ok 149 - envelope exact ceiling passes: jsonLdBytes
+  ---
+  duration_ms: 0.189777
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: jsonLdBytes
+ok 150 - envelope ceiling plus one fails: jsonLdBytes
+  ---
+  duration_ms: 0.255626
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: jsonLdBytes
+ok 151 - envelope lowered source ceiling enforced: jsonLdBytes
+  ---
+  duration_ms: 0.206531
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: jsonLdBytes
+not ok 152 - envelope non-enumerable invalid metric rejected: jsonLdBytes
+  ---
+  duration_ms: 0.401095
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:68:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: envelope exact ceiling passes: requests
+ok 153 - envelope exact ceiling passes: requests
+  ---
+  duration_ms: 0.234815
+  type: 'test'
+  ...
+# Subtest: envelope ceiling plus one fails: requests
+ok 154 - envelope ceiling plus one fails: requests
+  ---
+  duration_ms: 0.188875
+  type: 'test'
+  ...
+# Subtest: envelope lowered source ceiling enforced: requests
+ok 155 - envelope lowered source ceiling enforced: requests
+  ---
+  duration_ms: 0.267523
+  type: 'test'
+  ...
+# Subtest: envelope non-enumerable invalid metric rejected: requests
+not ok 156 - envelope non-enumerable invalid metric rejected: requests
+  ---
+  duration_ms: 0.271029
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:68:3'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: all exact bounds pass together
+ok 157 - all exact bounds pass together
+  ---
+  duration_ms: 0.31842
+  type: 'test'
+  ...
+# Subtest: zero numeric values pass
+ok 158 - zero numeric values pass
+  ---
+  duration_ms: 0.277659
+  type: 'test'
+  ...
+# Subtest: complete null-prototype plain envelope passes
+ok 159 - complete null-prototype plain envelope passes
+  ---
+  duration_ms: 0.276998
+  type: 'test'
+  ...
+# Subtest: complete non-enumerable own metric passes
+ok 160 - complete non-enumerable own metric passes
+  ---
+  duration_ms: 0.254124
+  type: 'test'
+  ...
+# Subtest: allowed contentType passes: text/html
+ok 161 - allowed contentType passes: text/html
+  ---
+  duration_ms: 0.322066
+  type: 'test'
+  ...
+# Subtest: allowed contentType passes: text/plain
+ok 162 - allowed contentType passes: text/plain
+  ---
+  duration_ms: 0.136166
+  type: 'test'
+  ...
+# Subtest: allowed contentType passes: application/ld+json
+ok 163 - allowed contentType passes: application/ld+json
+  ---
+  duration_ms: 0.162235
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: one hole
+not ok 164 - redirect malformed chain rejected: one hole
+  ---
+  duration_ms: 0.330017
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:97:4'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:98:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: redirect malformed chain rejected: two slots missing first
+not ok 165 - redirect malformed chain rejected: two slots missing first
+  ---
+  duration_ms: 3.107367
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:97:4'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:98:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: redirect malformed chain rejected: two slots missing last
+not ok 166 - redirect malformed chain rejected: two slots missing last
+  ---
+  duration_ms: 1.460914
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:97:4'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:98:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: redirect malformed chain rejected: three slots missing middle
+not ok 167 - redirect malformed chain rejected: three slots missing middle
+  ---
+  duration_ms: 1.334793
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:97:4'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:98:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: redirect malformed chain rejected: explicit undefined
+ok 168 - redirect malformed chain rejected: explicit undefined
+  ---
+  duration_ms: 1.113389
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: null hop
+ok 169 - redirect malformed chain rejected: null hop
+  ---
+  duration_ms: 0.634888
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: numeric hop
+ok 170 - redirect malformed chain rejected: numeric hop
+  ---
+  duration_ms: 0.599334
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: boxed string hop
+ok 171 - redirect malformed chain rejected: boxed string hop
+  ---
+  duration_ms: 0.449518
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: empty
+ok 172 - redirect malformed chain rejected: empty
+  ---
+  duration_ms: 0.273613
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: over limit
+ok 173 - redirect malformed chain rejected: over limit
+  ---
+  duration_ms: 0.207654
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: null chain
+ok 174 - redirect malformed chain rejected: null chain
+  ---
+  duration_ms: 0.473825
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: string chain
+ok 175 - redirect malformed chain rejected: string chain
+  ---
+  duration_ms: 0.323308
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: array-like
+ok 176 - redirect malformed chain rejected: array-like
+  ---
+  duration_ms: 0.302977
+  type: 'test'
+  ...
+# Subtest: redirect malformed chain rejected: array-like with forEach
+not ok 177 - redirect malformed chain rejected: array-like with forEach
+  ---
+  duration_ms: 0.436588
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:97:4'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:98:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: dense 1-URL chain passes at redirect budget
+ok 178 - dense 1-URL chain passes at redirect budget
+  ---
+  duration_ms: 0.487625
+  type: 'test'
+  ...
+# Subtest: dense 1-URL chain revalidates hostile hop 0
+ok 179 - dense 1-URL chain revalidates hostile hop 0
+  ---
+  duration_ms: 3.627893
+  type: 'test'
+  ...
+# Subtest: redirect inherited-only index 0 of 1 rejected
+not ok 180 - redirect inherited-only index 0 of 1 rejected
+  ---
+  duration_ms: 0.731603
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:114:5'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:119:14)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: dense 2-URL chain passes at redirect budget
+ok 181 - dense 2-URL chain passes at redirect budget
+  ---
+  duration_ms: 0.456098
+  type: 'test'
+  ...
+# Subtest: dense 2-URL chain exceeds lower source budget
+ok 182 - dense 2-URL chain exceeds lower source budget
+  ---
+  duration_ms: 0.163667
+  type: 'test'
+  ...
+# Subtest: dense 2-URL chain revalidates hostile hop 0
+ok 183 - dense 2-URL chain revalidates hostile hop 0
+  ---
+  duration_ms: 0.328166
+  type: 'test'
+  ...
+# Subtest: redirect inherited-only index 0 of 2 rejected
+not ok 184 - redirect inherited-only index 0 of 2 rejected
+  ---
+  duration_ms: 0.337479
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:114:5'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:119:14)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: dense 2-URL chain revalidates hostile hop 1
+ok 185 - dense 2-URL chain revalidates hostile hop 1
+  ---
+  duration_ms: 0.268355
+  type: 'test'
+  ...
+# Subtest: redirect inherited-only index 1 of 2 rejected
+not ok 186 - redirect inherited-only index 1 of 2 rejected
+  ---
+  duration_ms: 0.315977
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:114:5'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:119:14)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: dense 3-URL chain passes at redirect budget
+ok 187 - dense 3-URL chain passes at redirect budget
+  ---
+  duration_ms: 0.713416
+  type: 'test'
+  ...
+# Subtest: dense 3-URL chain exceeds lower source budget
+ok 188 - dense 3-URL chain exceeds lower source budget
+  ---
+  duration_ms: 0.102084
+  type: 'test'
+  ...
+# Subtest: dense 3-URL chain revalidates hostile hop 0
+ok 189 - dense 3-URL chain revalidates hostile hop 0
+  ---
+  duration_ms: 0.119871
+  type: 'test'
+  ...
+# Subtest: redirect inherited-only index 0 of 3 rejected
+not ok 190 - redirect inherited-only index 0 of 3 rejected
+  ---
+  duration_ms: 0.249587
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:114:5'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:119:14)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: dense 3-URL chain revalidates hostile hop 1
+ok 191 - dense 3-URL chain revalidates hostile hop 1
+  ---
+  duration_ms: 0.242556
+  type: 'test'
+  ...
+# Subtest: redirect inherited-only index 1 of 3 rejected
+not ok 192 - redirect inherited-only index 1 of 3 rejected
+  ---
+  duration_ms: 0.589033
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:114:5'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:119:14)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: dense 3-URL chain revalidates hostile hop 2
+ok 193 - dense 3-URL chain revalidates hostile hop 2
+  ---
+  duration_ms: 0.45053
+  type: 'test'
+  ...
+# Subtest: redirect inherited-only index 2 of 3 rejected
+not ok 194 - redirect inherited-only index 2 of 3 rejected
+  ---
+  duration_ms: 0.608738
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:114:5'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:119:14)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: deleting a hostile middle hop cannot turn a denied chain into an accepted chain
+not ok 195 - deleting a hostile middle hop cannot turn a denied chain into an accepted chain
+  ---
+  duration_ms: 0.900879
+  type: 'test'
+  location: '/workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:123:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/scratch/2f8818f4d3b0/candidate/scripts/seasonal-fact-contract-remediation.test.mjs:127:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: remediation suite made zero unmocked collector network attempts
+ok 196 - remediation suite made zero unmocked collector network attempts
+  ---
+  duration_ms: 0.202085
+  type: 'test'
+  ...
+# OFFLINE_NETWORK_PROOF unmocked_attempts=0
+1..196
+# tests 196
+# suites 0
+# pass 152
+# fail 44
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 471.448182

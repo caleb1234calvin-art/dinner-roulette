@@ -1,0 +1,683 @@
+TAP version 13
+# Subtest: invented identity matrix produces seven eligible occurrences, four quarantines and closure tombstone
+ok 1 - invented identity matrix produces seven eligible occurrences, four quarantines and closure tombstone
+  ---
+  duration_ms: 192.36712
+  type: 'test'
+  ...
+# Subtest: strict unknown field rejection: root
+ok 2 - strict unknown field rejection: root
+  ---
+  duration_ms: 2.455845
+  type: 'test'
+  ...
+# Subtest: strict unknown field rejection: occurrence
+ok 3 - strict unknown field rejection: occurrence
+  ---
+  duration_ms: 1.073189
+  type: 'test'
+  ...
+# Subtest: strict unknown field rejection: source
+ok 4 - strict unknown field rejection: source
+  ---
+  duration_ms: 1.207342
+  type: 'test'
+  ...
+# Subtest: strict unknown field rejection: assertion
+ok 5 - strict unknown field rejection: assertion
+  ---
+  duration_ms: 1.117366
+  type: 'test'
+  ...
+# Subtest: strict unknown field rejection: coordinate
+ok 6 - strict unknown field rejection: coordinate
+  ---
+  duration_ms: 1.209194
+  type: 'test'
+  ...
+# Subtest: strict unknown field rejection: address
+ok 7 - strict unknown field rejection: address
+  ---
+  duration_ms: 1.907738
+  type: 'test'
+  ...
+# Subtest: fact-only rejection: review
+ok 8 - fact-only rejection: review
+  ---
+  duration_ms: 1.349145
+  type: 'test'
+  ...
+# Subtest: fact-only rejection: description
+ok 9 - fact-only rejection: description
+  ---
+  duration_ms: 1.184167
+  type: 'test'
+  ...
+# Subtest: fact-only rejection: photos
+ok 10 - fact-only rejection: photos
+  ---
+  duration_ms: 1.209304
+  type: 'test'
+  ...
+# Subtest: fact-only rejection: logos
+ok 11 - fact-only rejection: logos
+  ---
+  duration_ms: 1.099539
+  type: 'test'
+  ...
+# Subtest: fact-only rejection: screenshots
+ok 12 - fact-only rejection: screenshots
+  ---
+  duration_ms: 0.86775
+  type: 'test'
+  ...
+# Subtest: fact-only rejection: ranking
+ok 13 - fact-only rejection: ranking
+  ---
+  duration_ms: 0.76212
+  type: 'test'
+  ...
+# Subtest: fact-only rejection: popularity
+ok 14 - fact-only rejection: popularity
+  ---
+  duration_ms: 0.657242
+  type: 'test'
+  ...
+# Subtest: fact-only rejection: rating
+ok 15 - fact-only rejection: rating
+  ---
+  duration_ms: 0.90149
+  type: 'test'
+  ...
+# Subtest: fact-only rejection: price
+ok 16 - fact-only rejection: price
+  ---
+  duration_ms: 0.96787
+  type: 'test'
+  ...
+# Subtest: fact-only rejection: articleText
+ok 17 - fact-only rejection: articleText
+  ---
+  duration_ms: 1.161192
+  type: 'test'
+  ...
+# Subtest: malformed schema/version, nonfinite coordinate and invalid date are rejected
+ok 18 - malformed schema/version, nonfinite coordinate and invalid date are rejected
+  ---
+  duration_ms: 3.656677
+  type: 'test'
+  ...
+# Subtest: name/address/URL overflow fails explicitly
+ok 19 - name/address/URL overflow fails explicitly
+  ---
+  duration_ms: 2.997863
+  type: 'test'
+  ...
+# Subtest: exact 100 publication limit accepted, 101 rejected
+ok 20 - exact 100 publication limit accepted, 101 rejected
+  ---
+  duration_ms: 404.415927
+  type: 'test'
+  ...
+# Subtest: 512 reviewed identities includes locations, quarantined and tombstone records
+ok 21 - 512 reviewed identities includes locations, quarantined and tombstone records
+  ---
+  duration_ms: 12.980652
+  type: 'test'
+  ...
+# Subtest: 20 observations accepted, 21 rejected without provenance truncation
+ok 22 - 20 observations accepted, 21 rejected without provenance truncation
+  ---
+  duration_ms: 8.224517
+  type: 'test'
+  ...
+# Subtest: runtime byte ceiling fails rather than truncating
+ok 23 - runtime byte ceiling fails rather than truncating
+  ---
+  duration_ms: 1085.521155
+  type: 'test'
+  ...
+# Subtest: Unicode NFC and whitespace normalize while display capitalization is preserved
+ok 24 - Unicode NFC and whitespace normalize while display capitalization is preserved
+  ---
+  duration_ms: 4.340478
+  type: 'test'
+  ...
+# Subtest: conflicts quarantine, explicit review resolves and preserves all assertion/source IDs
+ok 25 - conflicts quarantine, explicit review resolves and preserves all assertion/source IDs
+  ---
+  duration_ms: 7.580476
+  type: 'test'
+  ...
+# Subtest: incomplete resolution, selected conflicts and overlapping sets are rejected
+ok 26 - incomplete resolution, selected conflicts and overlapping sets are rejected
+  ---
+  duration_ms: 3.279848
+  type: 'test'
+  ...
+# Subtest: current footer year is not season evidence: footer-only
+ok 27 - current footer year is not season evidence: footer-only
+  ---
+  duration_ms: 3.177374
+  type: 'test'
+  ...
+# Subtest: current footer year is not season evidence: absent
+ok 28 - current footer year is not season evidence: absent
+  ---
+  duration_ms: 2.683699
+  type: 'test'
+  ...
+# Subtest: historical/unconfirmed and mismatched season/year evidence quarantine
+ok 29 - historical/unconfirmed and mismatched season/year evidence quarantine
+  ---
+  duration_ms: 27.910056
+  type: 'test'
+  ...
+# Subtest: all scoped negative lifecycle states survive in tombstones and exclude affected occurrences
+ok 30 - all scoped negative lifecycle states survive in tombstones and exclude affected occurrences
+  ---
+  duration_ms: 14.406855
+  type: 'test'
+  ...
+# Subtest: occurrence cancellation does not close other events at the venue
+ok 31 - occurrence cancellation does not close other events at the venue
+  ---
+  duration_ms: 5.229179
+  type: 'test'
+  ...
+# Subtest: operator lifecycle applies to its events
+ok 32 - operator lifecycle applies to its events
+  ---
+  duration_ms: 4.937589
+  type: 'test'
+  ...
+# Subtest: venue lifecycle applies to its events
+ok 33 - venue lifecycle applies to its events
+  ---
+  duration_ms: 4.712779
+  type: 'test'
+  ...
+# Subtest: past seasonal cancellation interval does not cancel this year's event
+ok 34 - past seasonal cancellation interval does not cancel this year's event
+  ---
+  duration_ms: 7.010947
+  type: 'test'
+  ...
+# Subtest: unscoped negative, wrong scope and unsupported lifecycle evidence fail
+ok 35 - unscoped negative, wrong scope and unsupported lifecycle evidence fail
+  ---
+  duration_ms: 5.740581
+  type: 'test'
+  ...
+# Subtest: closed attraction with active duplicate is excluded and terminal evidence retained
+ok 36 - closed attraction with active duplicate is excluded and terminal evidence retained
+  ---
+  duration_ms: 25.200668
+  type: 'test'
+  ...
+# Subtest: moved venue uses the new location version and explicit moved-from relationship
+ok 37 - moved venue uses the new location version and explicit moved-from relationship
+  ---
+  duration_ms: 22.540304
+  type: 'test'
+  ...
+# Subtest: same address, category and generic farm preserve distinct event identity
+ok 38 - same address, category and generic farm preserve distinct event identity
+  ---
+  duration_ms: 15.655849
+  type: 'test'
+  ...
+# Subtest: missing OSM eligible; explicit OSM/web/catalog crosswalk has one event
+ok 39 - missing OSM eligible; explicit OSM/web/catalog crosswalk has one event
+  ---
+  duration_ms: 17.826263
+  type: 'test'
+  ...
+# Subtest: recurring next-year occurrences retain different IDs and prior-year relation
+ok 40 - recurring next-year occurrences retain different IDs and prior-year relation
+  ---
+  duration_ms: 14.131309
+  type: 'test'
+  ...
+# Subtest: explicit same-event and alias decisions combine evidence before any dedupe
+ok 41 - explicit same-event and alias decisions combine evidence before any dedupe
+  ---
+  duration_ms: 4.822465
+  type: 'test'
+  ...
+# Subtest: do-not-merge overrides direct and transitive equivalence
+ok 42 - do-not-merge overrides direct and transitive equivalence
+  ---
+  duration_ms: 4.713997
+  type: 'test'
+  ...
+# Subtest: cyclic identity and unsupported crosswalk decisions reject
+ok 43 - cyclic identity and unsupported crosswalk decisions reject
+  ---
+  duration_ms: 5.247086
+  type: 'test'
+  ...
+# Subtest: stable IDs reject mutable name/address derivation and do not change with spelling
+ok 44 - stable IDs reject mutable name/address derivation and do not change with spelling
+  ---
+  duration_ms: 3.03602
+  type: 'test'
+  ...
+# Subtest: entire output and content revision are deterministic independent of input ordering
+ok 45 - entire output and content revision are deterministic independent of input ordering
+  ---
+  duration_ms: 67.285188
+  type: 'test'
+  ...
+# Subtest: candidate and unresolved coordinates never enter radius-ready facts
+ok 46 - candidate and unresolved coordinates never enter radius-ready facts
+  ---
+  duration_ms: 4.304664
+  type: 'test'
+  ...
+# Subtest: coordinate review and fingerprint are required; moved address cannot reuse old point
+ok 47 - coordinate review and fingerprint are required; moved address cannot reuse old point
+  ---
+  duration_ms: 1.349626
+  type: 'test'
+  ...
+# Subtest: calendar/timezone remain explicit with local overnight closing semantics
+ok 48 - calendar/timezone remain explicit with local overnight closing semantics
+  ---
+  duration_ms: 4.85853
+  type: 'test'
+  ...
+# Subtest: missing field/record is not deletion; previous facts retain their checkedAt
+ok 49 - missing field/record is not deletion; previous facts retain their checkedAt
+  ---
+  duration_ms: 7.232461
+  type: 'test'
+  ...
+# Subtest: failed refresh preserves last-good bytes and freshness; immutable evidence cannot be replaced
+ok 50 - failed refresh preserves last-good bytes and freshness; immutable evidence cannot be replaced
+  ---
+  duration_ms: 8.824583
+  type: 'test'
+  ...
+# Subtest: terminal negatives survive omission in later refresh
+ok 51 - terminal negatives survive omission in later refresh
+  ---
+  duration_ms: 6.128995
+  type: 'test'
+  ...
+# Subtest: schema/manifest mismatch fails atomically and leaves output bytes unchanged
+ok 52 - schema/manifest mismatch fails atomically and leaves output bytes unchanged
+  ---
+  duration_ms: 19.309501
+  type: 'test'
+  ...
+# Subtest: tampered manifest freshness/count or runtime data is rejected
+ok 53 - tampered manifest freshness/count or runtime data is rejected
+  ---
+  duration_ms: 11.225115
+  type: 'test'
+  ...
+# Subtest: adapters are disabled by default; true cannot be parsed
+ok 54 - adapters are disabled by default; true cannot be parsed
+  ---
+  duration_ms: 0.545543
+  type: 'test'
+  ...
+# Subtest: permission review cannot be bypassed by public reachability, approval flag, expiry or automatic mode
+ok 55 - permission review cannot be bypassed by public reachability, approval flag, expiry or automatic mode
+  ---
+  duration_ms: 0.825386
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: http://seasonal.invalid/events/a
+ok 56 - hostile URL rejected: http://seasonal.invalid/events/a
+  ---
+  duration_ms: 0.167163
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://seasonal.invalid:444/events/a
+ok 57 - hostile URL rejected: https://seasonal.invalid:444/events/a
+  ---
+  duration_ms: 0.132099
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://u:p@seasonal.invalid/events/a
+ok 58 - hostile URL rejected: https://u:p@seasonal.invalid/events/a
+  ---
+  duration_ms: 0.129054
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://@seasonal.invalid/events/a
+ok 59 - hostile URL rejected: https://@seasonal.invalid/events/a
+  ---
+  duration_ms: 0.103416
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://127.0.0.1/events/a
+ok 60 - hostile URL rejected: https://127.0.0.1/events/a
+  ---
+  duration_ms: 0.097688
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://2130706433/events/a
+ok 61 - hostile URL rejected: https://2130706433/events/a
+  ---
+  duration_ms: 0.103937
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://0x7f000001/events/a
+ok 62 - hostile URL rejected: https://0x7f000001/events/a
+  ---
+  duration_ms: 0.1064
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://[::ffff:127.0.0.1]/events/a
+ok 63 - hostile URL rejected: https://[::ffff:127.0.0.1]/events/a
+  ---
+  duration_ms: 0.090096
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://seasonal.invalid.evil.invalid/events/a
+ok 64 - hostile URL rejected: https://seasonal.invalid.evil.invalid/events/a
+  ---
+  duration_ms: 0.166952
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://seasonal.invalid./events/a
+ok 65 - hostile URL rejected: https://seasonal.invalid./events/a
+  ---
+  duration_ms: 0.107372
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://seasonal.invalid/other
+ok 66 - hostile URL rejected: https://seasonal.invalid/other
+  ---
+  duration_ms: 0.141604
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://seasonal.invalid/events-other
+ok 67 - hostile URL rejected: https://seasonal.invalid/events-other
+  ---
+  duration_ms: 0.128684
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://seasonal.invalid/events/../events/a
+ok 68 - hostile URL rejected: https://seasonal.invalid/events/../events/a
+  ---
+  duration_ms: 0.101864
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://seasonal.invalid/events/%2e%2e/a
+ok 69 - hostile URL rejected: https://seasonal.invalid/events/%2e%2e/a
+  ---
+  duration_ms: 0.130026
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://seasonal.invalid/events/%252f/a
+ok 70 - hostile URL rejected: https://seasonal.invalid/events/%252f/a
+  ---
+  duration_ms: 0.121543
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://seasonal.invalid/events/a\#x
+ok 71 - hostile URL rejected: https://seasonal.invalid/events/a\#x
+  ---
+  duration_ms: 0.10583
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://seasonal.invalid/events/a?redirect=https://bad.invalid
+ok 72 - hostile URL rejected: https://seasonal.invalid/events/a?redirect=https://bad.invalid
+  ---
+  duration_ms: 0.111779
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://seasonal.invalid/events/a?year=2026&year=2027
+ok 73 - hostile URL rejected: https://seasonal.invalid/events/a?year=2026&year=2027
+  ---
+  duration_ms: 0.149836
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://seasonal.invalid/events/a?year=2025
+ok 74 - hostile URL rejected: https://seasonal.invalid/events/a?year=2025
+  ---
+  duration_ms: 0.299342
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: https://seasonal.invalid\\@bad.invalid/events/a
+ok 75 - hostile URL rejected: https://seasonal.invalid\\@bad.invalid/events/a
+  ---
+  duration_ms: 0.111589
+  type: 'test'
+  ...
+# Subtest: hostile URL rejected: file:///events/a
+ok 76 - hostile URL rejected: file:///events/a
+  ---
+  duration_ms: 0.103456
+  type: 'test'
+  ...
+# Subtest: exact synthetic HTTPS host, port 443, path and allowed query pass pure policy
+ok 77 - exact synthetic HTTPS host, port 443, path and allowed query pass pure policy
+  ---
+  duration_ms: 0.22567
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 0.0.0.0
+ok 78 - SSRF reserved/private/mapped address denied: 0.0.0.0
+  ---
+  duration_ms: 0.424861
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 10.1.2.3
+ok 79 - SSRF reserved/private/mapped address denied: 10.1.2.3
+  ---
+  duration_ms: 0.080802
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 100.100.100.200
+ok 80 - SSRF reserved/private/mapped address denied: 100.100.100.200
+  ---
+  duration_ms: 0.05267
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 127.0.0.1
+ok 81 - SSRF reserved/private/mapped address denied: 127.0.0.1
+  ---
+  duration_ms: 0.085919
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 169.254.169.254
+ok 82 - SSRF reserved/private/mapped address denied: 169.254.169.254
+  ---
+  duration_ms: 0.136806
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 172.31.255.255
+ok 83 - SSRF reserved/private/mapped address denied: 172.31.255.255
+  ---
+  duration_ms: 0.070256
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 192.168.1.1
+ok 84 - SSRF reserved/private/mapped address denied: 192.168.1.1
+  ---
+  duration_ms: 0.057326
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 192.0.2.1
+ok 85 - SSRF reserved/private/mapped address denied: 192.0.2.1
+  ---
+  duration_ms: 0.058388
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 198.18.0.1
+ok 86 - SSRF reserved/private/mapped address denied: 198.18.0.1
+  ---
+  duration_ms: 0.05277
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 198.51.100.1
+ok 87 - SSRF reserved/private/mapped address denied: 198.51.100.1
+  ---
+  duration_ms: 0.044437
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 203.0.113.1
+ok 88 - SSRF reserved/private/mapped address denied: 203.0.113.1
+  ---
+  duration_ms: 0.045118
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 224.0.0.1
+ok 89 - SSRF reserved/private/mapped address denied: 224.0.0.1
+  ---
+  duration_ms: 0.070807
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 255.255.255.255
+ok 90 - SSRF reserved/private/mapped address denied: 255.255.255.255
+  ---
+  duration_ms: 0.113802
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 168.63.129.16
+ok 91 - SSRF reserved/private/mapped address denied: 168.63.129.16
+  ---
+  duration_ms: 0.080832
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: ::
+ok 92 - SSRF reserved/private/mapped address denied: ::
+  ---
+  duration_ms: 0.220052
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: ::1
+ok 93 - SSRF reserved/private/mapped address denied: ::1
+  ---
+  duration_ms: 0.0733
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: ::ffff:127.0.0.1
+ok 94 - SSRF reserved/private/mapped address denied: ::ffff:127.0.0.1
+  ---
+  duration_ms: 0.173732
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: ::ffff:7f00:1
+ok 95 - SSRF reserved/private/mapped address denied: ::ffff:7f00:1
+  ---
+  duration_ms: 0.055493
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: ::ffff:8.8.8.8
+ok 96 - SSRF reserved/private/mapped address denied: ::ffff:8.8.8.8
+  ---
+  duration_ms: 0.079781
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 64:ff9b::a00:1
+ok 97 - SSRF reserved/private/mapped address denied: 64:ff9b::a00:1
+  ---
+  duration_ms: 0.061974
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: fc00::1
+ok 98 - SSRF reserved/private/mapped address denied: fc00::1
+  ---
+  duration_ms: 0.044567
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: fe80::1
+ok 99 - SSRF reserved/private/mapped address denied: fe80::1
+  ---
+  duration_ms: 0.039339
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: ff02::1
+ok 100 - SSRF reserved/private/mapped address denied: ff02::1
+  ---
+  duration_ms: 0.037516
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 2001:db8::1
+ok 101 - SSRF reserved/private/mapped address denied: 2001:db8::1
+  ---
+  duration_ms: 0.060281
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 2002:7f00:1::
+ok 102 - SSRF reserved/private/mapped address denied: 2002:7f00:1::
+  ---
+  duration_ms: 0.049344
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: 3fff::1
+ok 103 - SSRF reserved/private/mapped address denied: 3fff::1
+  ---
+  duration_ms: 0.142635
+  type: 'test'
+  ...
+# Subtest: SSRF reserved/private/mapped address denied: fe80::1%eth0
+ok 104 - SSRF reserved/private/mapped address denied: fe80::1%eth0
+  ---
+  duration_ms: 0.048273
+  type: 'test'
+  ...
+# Subtest: DNS answers all validated, peer pinned; equivalent public IPv6 spellings compare equal
+ok 105 - DNS answers all validated, peer pinned; equivalent public IPv6 spellings compare equal
+  ---
+  duration_ms: 0.657241
+  type: 'test'
+  ...
+# Subtest: each redirect target revalidated, maximum two redirects
+ok 106 - each redirect target revalidated, maximum two redirects
+  ---
+  duration_ms: 0.693205
+  type: 'test'
+  ...
+# Subtest: bounded headers/wire/decompressed body/deadline/DOM/JSON-LD/request budget
+ok 107 - bounded headers/wire/decompressed body/deadline/DOM/JSON-LD/request budget
+  ---
+  duration_ms: 0.766577
+  type: 'test'
+  ...
+# Subtest: no executable extraction or fallback capability is exposed
+ok 108 - no executable extraction or fallback capability is exposed
+  ---
+  duration_ms: 0.079771
+  type: 'test'
+  ...
+# Subtest: unmocked network attempts remain zero when guard is preloaded
+ok 109 - unmocked network attempts remain zero when guard is preloaded
+  ---
+  duration_ms: 0.787559
+  type: 'test'
+  ...
+# Subtest: reused verified coordinates cannot cite another physical location's evidence
+ok 110 - reused verified coordinates cannot cite another physical location's evidence
+  ---
+  duration_ms: 1.380562
+  type: 'test'
+  ...
+# Subtest: source IDs, URLs and checkedAt facts cannot misstate observation metadata
+ok 111 - source IDs, URLs and checkedAt facts cannot misstate observation metadata
+  ---
+  duration_ms: 2.835558
+  type: 'test'
+  ...
+# Subtest: core offline dependencies are existing Zod and Node builtins, without paid SDKs
+ok 112 - core offline dependencies are existing Zod and Node builtins, without paid SDKs
+  ---
+  duration_ms: 0.796242
+  type: 'test'
+  ...
+# OFFLINE_NETWORK_PROOF unmocked_attempts=0
+1..112
+# tests 112
+# suites 0
+# pass 112
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2555.363652

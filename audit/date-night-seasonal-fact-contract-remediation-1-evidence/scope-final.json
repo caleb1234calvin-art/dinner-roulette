@@ -1,0 +1,112 @@
+{
+  "base": "f7fa63f5688b1d09e5b0baccfd5e617d0748a41a",
+  "approved": "908510ac25fe5c24335126a0f34ff42fe4d80632",
+  "trackedDeltaBeforeDocumentation": [
+    "tools/seasonal-facts/policy.ts"
+  ],
+  "packages": {
+    "package.json": {
+      "gitBlob": "e49aaca989bf9fafed68714fdb7f036785c1a226",
+      "sha256": "6d966eda6ff732719e17862d97ca822a8574926f2fbe5edaaae1cf45607aebf0"
+    },
+    "package-lock.json": {
+      "gitBlob": "1eaa6a78dc119ae889ca371632fa91136be1139a",
+      "sha256": "462f09bd3fda35cf30646b2f343cd8d2a65340a63b59222b5f9d57084d9aa4b3"
+    }
+  },
+  "noProductDiff": true,
+  "initialAstAudit": {
+    "base": "908510ac25fe5c24335126a0f34ff42fe4d80632",
+    "baseTree": "3211b4df4eccb638a8c492da047eac3b24abb600",
+    "existingTrackedFilesChanged": 0,
+    "packageAndLockIdentical": true,
+    "newBillingDependencies": 0,
+    "runtimeIntegration": false,
+    "realSourceAdapters": 0,
+    "networkTransportImplementations": 0,
+    "collectorImports": [
+      {
+        "file": "schema.ts",
+        "module": "zod"
+      },
+      {
+        "file": "canonical.ts",
+        "module": "node:crypto"
+      },
+      {
+        "file": "canonical.ts",
+        "module": "./schema.ts"
+      },
+      {
+        "file": "policy.ts",
+        "module": "node:net"
+      },
+      {
+        "file": "policy.ts",
+        "module": "./schema.ts"
+      },
+      {
+        "file": "builder.ts",
+        "module": "zod"
+      },
+      {
+        "file": "builder.ts",
+        "module": "./schema.ts"
+      },
+      {
+        "file": "builder.ts",
+        "module": "./canonical.ts"
+      },
+      {
+        "file": "builder.ts",
+        "module": "./policy.ts"
+      },
+      {
+        "file": "io.ts",
+        "module": "node:fs"
+      },
+      {
+        "file": "io.ts",
+        "module": "node:path"
+      },
+      {
+        "file": "io.ts",
+        "module": "node:crypto"
+      },
+      {
+        "file": "io.ts",
+        "module": "./canonical.ts"
+      },
+      {
+        "file": "io.ts",
+        "module": "./builder.ts"
+      },
+      {
+        "file": "cli.ts",
+        "module": "node:url"
+      },
+      {
+        "file": "cli.ts",
+        "module": "./io.ts"
+      }
+    ],
+    "generatedArtifacts": [
+      "bundle.json",
+      "diff.json",
+      "diff.txt",
+      "exclusions.json",
+      "field-source-map.json",
+      "input.synthetic.json",
+      "ledger.json",
+      "manifest.json",
+      "runtime.json",
+      "tombstones.json"
+    ]
+  },
+  "remoteRefs": {
+    "refs/heads/feature/date-night-seasonal-fact-contract-1": "f7fa63f5688b1d09e5b0baccfd5e617d0748a41a",
+    "refs/heads/finalize/date-night-radial-loading-candidate-1": "908510ac25fe5c24335126a0f34ff42fe4d80632",
+    "refs/heads/handoff/date-night-seasonal-fact-contract-remediation-1": "e6806c5b62ca109d7e2a443f7ad4414b770b8afa",
+    "refs/heads/main": "4d937e58d2a65567b54ac5271915bc85b498898b"
+  }
+}
