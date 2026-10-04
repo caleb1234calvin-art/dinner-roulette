@@ -1,0 +1,97 @@
+{
+  "verdict": "NO-GO",
+  "candidate": "Cadaver Zone",
+  "reviewedAt": "2026-10-04T19:21:53.000Z",
+  "canonicalOperatorDomain": null,
+  "candidateOperatorDomain": "cadaverzone.com",
+  "canonicalStatus": "Operator-linked candidate domain; live canonical hostname and ownership not verified.",
+  "operatorControlled": {
+    "status": "plausible-not-confirmed",
+    "basis": "Search-index result for the apparent operator Facebook profile names The Cadaver Zone in Webb City and links cadaverzone.com. No authenticated or direct social-page access was attempted.",
+    "referenceUrl": "https://www.facebook.com/cadaverzone/"
+  },
+  "robots": {
+    "status": "unknown",
+    "requestedUrl": "https://cadaverzone.com/robots.txt",
+    "httpStatus": 502,
+    "bytesReceived": 218,
+    "redirectsFollowed": 0,
+    "originResponseVerified": false,
+    "explanation": "Proxy-generated HTTP/2 protocol error; no robots directives received. Not evidence of an operator denial or a site-wide outage."
+  },
+  "terms": {
+    "status": "unknown",
+    "urls": [],
+    "reason": "No further source access after robots review failed; no claim that terms are absent."
+  },
+  "reusePermission": {
+    "status": "unknown",
+    "permissionEvidenceIds": [],
+    "expiresAt": null
+  },
+  "ordinaryUnauthenticatedHttp": "Not established; one unauthenticated HTTPS GET returned a gateway error.",
+  "captchaLoginPaywallBotChallenge": "Not established; no operator page received and no bypass attempted.",
+  "expectedFactualPages": [
+    {
+      "url": "https://cadaverzone.com/",
+      "status": "Candidate home page only; not fetched or approved; no calendar/contact path discovered."
+    }
+  ],
+  "expectedRequests": {
+    "approvedCollectorRequests": 0,
+    "directAccessReviewAttempted": 1,
+    "reviewRequestsAfterFailure": 0,
+    "futureCollectionBudget": null
+  },
+  "staticHtml": "Unknown; the text/html received is the proxy error, not attraction HTML.",
+  "structuredMetadata": "Unknown; none inspected.",
+  "javascriptRequired": "Unknown; browser/script execution remains prohibited.",
+  "contractFit": {
+    "sourceClassCandidate": "operator",
+    "actualRegistryEntryAdded": false,
+    "permissionApproved": false,
+    "reason": "Robots, terms, permission/reuse and ordinary access lack affirmative evidence. Existing A1 source schema and global collector remain disabled. No schema or policy change authorized by this NO-GO.",
+    "allowedCollectorHosts": [],
+    "allowedCollectorPaths": [],
+    "sourceActivation": false
+  },
+  "decisionReason": "Safe ordinary automated factual access is not clearly established. User stop rule requires stopping this source without workaround or replacement.",
+  "stopActions": [
+    "No retry",
+    "No HTTP downgrade or www alternative",
+    "No proxy rotation or alternate scraper",
+    "No browser execution",
+    "No source collection",
+    "No replacement source selection"
+  ],
+  "extractedFacts": {},
+  "realWorldObservations": 0,
+  "occurrenceIdentity": null,
+  "season": {
+    "target": {
+      "season": "halloween",
+      "year": 2026
+    },
+    "sourceEvidence": "none",
+    "publishedYear": null
+  },
+  "coordinates": {
+    "status": "unresolved",
+    "lat": null,
+    "lon": null,
+    "geocoderCalls": 0,
+    "explanation": "No operator coordinate evidence obtained; no location record invented."
+  },
+  "lifecycle": {
+    "status": "unknown",
+    "assertion": null,
+    "explanation": "Technical access failure is not evidence of cancellation, closure or inactivity."
+  },
+  "publication": {
+    "occurrences": 0,
+    "pilotFactArtifacts": [],
+    "productionRuntimeChanges": false,
+    "reason": "NO-GO before collection; no fabricated observation or placeholder occurrence."
+  },
+  "independentVerificationRecommendation": "Independently verify this NO-GO decision, exact Git base, one-request log and no-code/no-runtime delta. A real-source implementation verification is not ready. Resume only after a new bounded access decision with affirmative robots/terms/reuse evidence; replacement selection needs a new bounded decision."
+}

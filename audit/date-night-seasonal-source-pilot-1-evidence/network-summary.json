@@ -1,0 +1,24 @@
+{
+  "collectorAttempts": 0,
+  "directAccessReviewAttempts": [
+    {
+      "method": "GET",
+      "url": "https://cadaverzone.com/robots.txt",
+      "date": "2026-10-04",
+      "status": 502,
+      "bodyBytes": 218,
+      "redirectsFollowed": 0,
+      "retries": 0,
+      "originResponseVerified": false
+    }
+  ],
+  "unauthorizedCollectorHostAttempts": 0,
+  "unrelatedPublicProviderCollectorRequests": 0,
+  "geocoderCalls": 0,
+  "paidApiCalls": 0,
+  "searchToolCalls": 3,
+  "searchQueries": 4,
+  "explicitSearchResultPageOpens": 0,
+  "searchInternalOriginRequestCount": "not exposed",
+  "administrativeTraffic": "GitHub/Vercel metadata reads and evidence-only publication, Library transfers, locked dependency setup; separate from collector activity."
+}

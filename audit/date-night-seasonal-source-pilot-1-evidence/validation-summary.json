@@ -1,0 +1,91 @@
+{
+  "verdict": "SEASONAL SOURCE PILOT #1 BLOCKED \u2014 SOURCE NOT AUTHORIZED / UNSUITABLE",
+  "implementationWritten": false,
+  "pilotFocusedTests": {
+    "status": "not-applicable",
+    "count": 0,
+    "reason": "Source review NO-GO before collector/parser implementation. No source-specific tests or fabricated observation added."
+  },
+  "contractAndRemediation": {
+    "total": 308,
+    "passed": 308,
+    "failed": 0,
+    "skipped": 0
+  },
+  "retainedIndependentMatrix": {
+    "total": 468,
+    "passed": 468,
+    "failed": 0,
+    "skipped": 0
+  },
+  "fullSuite": {
+    "total": 1041,
+    "passed": 1037,
+    "failed": 0,
+    "skipped": 4
+  },
+  "countsOverlap": true,
+  "contractTests": 112,
+  "remediationTests": 196,
+  "productTypecheck": {
+    "exit": 0
+  },
+  "contractTypecheck": {
+    "exit": 0
+  },
+  "changedExecutableLint": {
+    "status": "not-applicable",
+    "changedExecutableFiles": 0
+  },
+  "contractSurfaceLint": {
+    "exit": 0,
+    "diagnostics": 0
+  },
+  "fullLint": {
+    "freshlyRun": false,
+    "inheritedKnownErrors": 3,
+    "inheritedKnownWarnings": 6,
+    "cleanClaim": false
+  },
+  "migrationFreeBuild": {
+    "exit": 0,
+    "command": "node scripts/with-app-env.mjs ./node_modules/.bin/vite build",
+    "migrationsRun": 0,
+    "configPresent": true,
+    "serverEntryPresent": true,
+    "compiledRegressionSuitePassed": true,
+    "note": "Captured build log is short; emitted server/config artifacts and complete full-suite result separately verified."
+  },
+  "dependencies": {
+    "offlineInstallExit": 1,
+    "offlineFailure": "ENOTCACHED",
+    "lockedInstallExit": 0,
+    "packages": 506,
+    "lifecycleScriptsRun": false,
+    "newPackagesAddedToManifest": 0,
+    "manifestChanged": false,
+    "lockfileChanged": false
+  },
+  "network": {
+    "collectorAttempts": 0,
+    "sourceAccessReviewAttempts": 1,
+    "unauthorizedCollectorHosts": 0,
+    "geocoderRequests": 0,
+    "paidApiRequests": 0,
+    "unrelatedPublicProviderCollectorRequests": 0
+  },
+  "determinism": {
+    "scope": "existing synthetic fixtures only",
+    "runs": 2,
+    "filesPerRun": 10,
+    "matchesBase": true,
+    "realPilotGeneration": "not attempted after NO-GO"
+  },
+  "gitDiffCheck": {
+    "exit": 0
+  },
+  "priorEvidenceManifestPayloads": {
+    "checked": 91,
+    "mismatches": 0
+  }
+}
