@@ -6,7 +6,7 @@ import { discoveryComponentHarness, discoveryModes, discoveryPayload, textOf } f
 const load = appModuleLoader();
 const { planDateNightPatches } = load("src/lib/date-night/radial-plan.ts");
 const { buildDateNightQueryPlan } = load("src/lib/date-night/query-plan.ts");
-const { DATE_NIGHT_RADIAL_PAUSE_MS } = load("src/lib/date-night/radial-session.ts");
+const { DATE_NIGHT_RADIAL_SUCCESS_PAUSE_MS } = load("src/lib/date-night/radial-session.ts");
 const config = discoveryModes[1];
 function setup(t, radiusMiles = 50) {
   const clock = discoveryClock(t), h = discoveryComponentHarness(config);
@@ -42,7 +42,7 @@ test("actual UI: core completes first, actions enable before maximum coverage an
   assert.equal(h.status().loading, false);
   for (const label of ["Pick our date", "Give us options", "Plan the night"]) assert.equal(h.button(h.render(), label).props.disabled, false);
   assert.match(progress(h), /Loaded through 15 miles · expanding toward 50/);
-  await clock.tick(DATE_NIGHT_RADIAL_PAUSE_MS - 1);
+  await clock.tick(DATE_NIGHT_RADIAL_SUCCESS_PAUSE_MS - 1);
   assert.equal(h.requests.length, 1);
   await clock.tick(1);
   assert.equal(h.requests.length, 2);
@@ -80,6 +80,8 @@ test("middle failure leaves a truthful gap, retains nearby picks, and retry targ
   assert.doesNotMatch(progress(h), /Loaded through 20 miles/);
   assert.equal(h.button(h.render(), "Pick our date").props.disabled, false);
   h.status().notices[0].onRetry(); h.render();
+  assert.equal(h.requests.length, 5, "retry respects the most recent outer start");
+  await clock.tick(1000);
   assert.equal(h.requests.length, 6);
   assert.equal(h.requests[5].args.data.patchId, "radial-v1:20:1");
   reply(h); await h.settle();
@@ -115,6 +117,8 @@ test("15→50 schedules only missing outer work; decreasing cancels obsolete wor
   const { h, clock } = setup(t, 15);
   reply(h); await h.settle();
   h.store.setDateNightFilters({ radiusMiles: 50 }); h.render();
+  assert.equal(h.requests.length, 1, "compatible widening retains core success pacing");
+  await clock.tick(250);
   assert.equal(h.requests.length, 2);
   assert.equal(h.requests[1].args.data.patchId, "radial-v1:20:0");
   h.store.setDateNightFilters({ radiusMiles: 15 }); h.render();
@@ -124,6 +128,9 @@ test("15→50 schedules only missing outer work; decreasing cancels obsolete wor
   assert.match(progress(h), /4 activities match/);
   assert.equal(clock.pending, 0);
   h.store.setDateNightFilters({ radiusMiles: 50 }); h.render();
+  await clock.tick(999);
+  assert.equal(h.requests.length, 2, "re-expansion cannot burst outer starts");
+  await clock.tick(1);
   assert.equal(h.requests.length, 3, "cancelled response cannot seed reuse");
   assert.equal(h.requests[2].args.data.patchId, "radial-v1:20:0");
 });

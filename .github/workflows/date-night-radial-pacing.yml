@@ -1,0 +1,49 @@
+name: Radial pacing controlled acceptance
+on:
+  push:
+    branches: [feature/date-night-radial-pacing-1]
+    paths:
+      - src/lib/date-night/radial-session.ts
+      - scripts/date-night-radial-pacing.test.mjs
+      - scripts/date-night-radial-session.test.mjs
+      - scripts/date-night-cache.test.mjs
+      - .github/workflows/date-night-radial-pacing.yml
+permissions:
+  contents: read
+jobs:
+  controlled:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CI: "true"
+      VITE_AUTH_ENABLED: "true"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - name: Record exact source and deterministic pacing
+        run: |
+          mkdir -p /tmp/pfu-radial-pacing
+          git show -s --format='%H%n%T%n%P' HEAD > /tmp/pfu-radial-pacing/source.txt
+          node --test scripts/date-night-radial-pacing.test.mjs scripts/date-night-radial-session.test.mjs scripts/date-night-cache.test.mjs > /tmp/pfu-radial-pacing/deterministic.log 2>&1
+      - name: Safe auth-enabled build without migrations
+        run: |
+          node scripts/browser-build-proof.mjs capture
+          node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
+          node scripts/browser-build-proof.mjs complete
+          node scripts/browser-build-proof.mjs verify
+          cp audit/browser-results/build-proof.json /tmp/pfu-radial-pacing/build-proof.json
+      - name: All existing controlled radial scenarios with third-party traffic blocked
+        env:
+          DATE_NIGHT_RADIAL_OUTPUT: /tmp/pfu-radial-pacing/controlled
+        run: node scripts/date-night-radial-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: radial-pacing-controlled-evidence
+          path: /tmp/pfu-radial-pacing
+          retention-days: 14
