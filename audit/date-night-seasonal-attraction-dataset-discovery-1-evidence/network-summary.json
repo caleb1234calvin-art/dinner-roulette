@@ -1,0 +1,181 @@
+{
+  "scope": "controlled direct HTTPS requests are distinct from search/reference documentation actions",
+  "directRequests": [
+    {
+      "id": "MO-M01",
+      "url": "https://data.mo.gov/api/views/2zg8-cta8.json",
+      "kind": "metadata",
+      "time": "2026-10-05T18:34:15.719370+00:00",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 39902,
+      "client": "Python standard HTTPS client; no custom user-agent",
+      "timeoutSeconds": 10,
+      "retries": 0,
+      "authentication": false,
+      "cookies": false
+    },
+    {
+      "id": "MC-R01",
+      "url": "https://services1.arcgis.com/kOChldNuKsox8qZD/ArcGIS/rest/services/Montgomery_County_AgriTourism/FeatureServer/0/query?where=CornMaze+IS+NOT+NULL+OR+PumpkinPicking+IS+NOT+NULL&outFields=OBJECTID%2CName%2CAddress%2CCity%2CState%2CZip_Code%2CPhone_Number%2CWebSite%2CCornMaze%2CPumpkinPicking&returnGeometry=true&outSR=4326&resultRecordCount=3&orderByFields=OBJECTID+ASC&f=json",
+      "kind": "row",
+      "time": "2026-10-05T18:34:52.923121+00:00",
+      "limit": 3,
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "bytes": 2592,
+      "client": "Python standard HTTPS client; no custom user-agent",
+      "timeoutSeconds": 10,
+      "retries": 0,
+      "authentication": false,
+      "cookies": false
+    },
+    {
+      "id": "MC-L01",
+      "kind": "license-metadata",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/98996b62c9ab4a9a8e12de859565790a?f=pjson",
+      "time": "2026-10-05T18:35:11.170746+00:00",
+      "status": 200,
+      "content_type": "text/plain;charset=utf-8",
+      "bytes": 3229,
+      "client": "Python standard HTTPS client; no custom user-agent",
+      "timeoutSeconds": 10,
+      "retries": 0,
+      "authentication": false,
+      "cookies": false
+    },
+    {
+      "id": "MC-M01",
+      "kind": "schema-metadata",
+      "url": "https://services1.arcgis.com/kOChldNuKsox8qZD/ArcGIS/rest/services/Montgomery_County_AgriTourism/FeatureServer/0?f=json",
+      "time": "2026-10-05T18:36:03.112452+00:00",
+      "failure": "URLError",
+      "client": "Python standard HTTPS client; no custom user-agent",
+      "timeoutSeconds": 10,
+      "retries": 0,
+      "authentication": false,
+      "cookies": false
+    }
+  ],
+  "directAttemptCounts": {
+    "C1_Missouri": 1,
+    "C2_USDA": 0,
+    "C3_Montgomery": 3,
+    "C4_Kansas": 0,
+    "C5_Oklahoma": 0,
+    "C6_Arkansas": 0
+  },
+  "totalControlledDirectAttempts": 4,
+  "http200": 3,
+  "transportFailures": 1,
+  "rowDataRequests": 1,
+  "rowsObtained": 3,
+  "qualifyingCornMazeRows": 1,
+  "positivePumpkinPickingRows": 3,
+  "current2026OccurrencesVerified": 0,
+  "referenceDocumentationActions": [
+    {
+      "id": "MO-catalog",
+      "url": "https://catalog.data.gov/dataset/missouri-farmers-markets",
+      "purpose": "catalog/schema distribution/cadence",
+      "result": "rendered"
+    },
+    {
+      "id": "MO-landing",
+      "url": "https://data.mo.gov/d/2zg8-cta8",
+      "purpose": "dataset landing",
+      "result": "minimal rendered page"
+    },
+    {
+      "id": "USDA-program",
+      "url": "https://www.ams.usda.gov/services/local-regional/food-directories",
+      "purpose": "official program provenance",
+      "result": "rendered"
+    },
+    {
+      "id": "USDA-landing",
+      "url": "https://www.usdalocalfoodportal.com/",
+      "purpose": "program landing",
+      "result": "403 reported by reference tool; not retried"
+    },
+    {
+      "id": "MC-service",
+      "url": "https://services1.arcgis.com/kOChldNuKsox8qZD/ArcGIS/rest/services/Montgomery_County_AgriTourism/FeatureServer",
+      "purpose": "service documentation",
+      "result": "rendered"
+    },
+    {
+      "id": "MC-layer",
+      "url": "https://services1.arcgis.com/kOChldNuKsox8qZD/ArcGIS/rest/services/Montgomery_County_AgriTourism/FeatureServer/0",
+      "purpose": "schema documentation",
+      "result": "rendered"
+    },
+    {
+      "id": "MC-item-reference",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/98996b62c9ab4a9a8e12de859565790a?f=pjson",
+      "purpose": "license metadata reference",
+      "result": "tool reported not accessible; no origin HTTP status exposed"
+    },
+    {
+      "id": "MC-overview-reference",
+      "url": "https://www.arcgis.com/home/item.html?id=98996b62c9ab4a9a8e12de859565790a",
+      "purpose": "item documentation reference",
+      "result": "tool reported not accessible; no origin HTTP status exposed"
+    },
+    {
+      "id": "MC-program",
+      "url": "https://taxclaim.montcopa.org/CivicAlerts.aspx?AID=4595",
+      "purpose": "official program",
+      "result": "rendered"
+    },
+    {
+      "id": "MC-GIS",
+      "url": "https://taxclaim.montcopa.org/3132/Data-Mapping-Services",
+      "purpose": "GIS authority",
+      "result": "rendered"
+    },
+    {
+      "id": "MC-GIS-data",
+      "url": "https://taxclaim.montcopa.org/3223/GIS-DATA",
+      "purpose": "GIS data policy lead",
+      "result": "reference redirect to https://www.montgomerycountypa.gov/departments/tax-claim-bureau; not policy evidence"
+    },
+    {
+      "id": "KS-policy",
+      "url": "https://www.travelks.com/privacy-policy/",
+      "purpose": "terms",
+      "result": "rendered; no qualifying reuse grant established"
+    },
+    {
+      "id": "OK-program",
+      "url": "https://oklahomaagritourism.com/producers/getting-started/how-we-help-you",
+      "purpose": "directory model",
+      "result": "rendered"
+    },
+    {
+      "id": "AR-directory",
+      "url": "https://www.arkansas.com/directory",
+      "purpose": "directory documentation",
+      "result": "redirected to https://www.arkansas.com/; no structured endpoint established"
+    }
+  ],
+  "additionalSearchNotes": [
+    "Both search systems used for discovery; no search result alone counted as an obtained row.",
+    "Official Esri docs establish JSON point and spatial reference semantics.",
+    "A reference operation reported montgomerycountypa.gov robots blocking; no bypass or direct fetch of that blocked website followed.",
+    "The two ArcGIS item reference failures reported tool unavailability, not an origin HTTP denial; ordinary direct item metadata succeeded.",
+    "USDA reference 403 was not retried.",
+    "Direct layer metadata URLError not retried; cause and origin HTTP status were not retained, so no stronger diagnosis is claimed."
+  ],
+  "collectorCalls": 0,
+  "geocoderCalls": 0,
+  "paidApiCalls": 0,
+  "runtimeCollectionCalls": 0,
+  "sourceActivationCalls": 0,
+  "browserBypassCalls": 0,
+  "scrapingGatewayCalls": 0,
+  "proxyServiceCalls": 0,
+  "bulkCrawls": 0,
+  "manualDeployments": 0,
+  "limitsNote": "Each direct attempt had bounded response reads (64 KiB row/item, 128 KiB layer, 256 KiB MO metadata). This is not a validated production transport."
+}

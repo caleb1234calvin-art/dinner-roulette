@@ -1,0 +1,189 @@
+{
+  "evidenceType": "bounded direct factual response",
+  "sourceItem": "98996b62c9ab4a9a8e12de859565790a",
+  "layer": 0,
+  "sourceResponseSha256": "1a0a06f9e4e16fac3b56776a75880b804ed671558e6ab1a9dbb06f744ff8cbd4",
+  "sourceResponseBytes": 2592,
+  "response": {
+    "objectIdFieldName": "OBJECTID",
+    "uniqueIdField": {
+      "name": "OBJECTID",
+      "isSystemMaintained": true
+    },
+    "globalIdFieldName": "",
+    "geometryType": "esriGeometryPoint",
+    "spatialReference": {
+      "wkid": 4326,
+      "latestWkid": 4326
+    },
+    "fields": [
+      {
+        "name": "OBJECTID",
+        "type": "esriFieldTypeOID",
+        "alias": "OBJECTID",
+        "sqlType": "sqlTypeOther",
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "Name",
+        "type": "esriFieldTypeString",
+        "alias": "Name",
+        "sqlType": "sqlTypeOther",
+        "length": 254,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "Address",
+        "type": "esriFieldTypeString",
+        "alias": "Address",
+        "sqlType": "sqlTypeOther",
+        "length": 50,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "City",
+        "type": "esriFieldTypeString",
+        "alias": "City",
+        "sqlType": "sqlTypeOther",
+        "length": 50,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "State",
+        "type": "esriFieldTypeString",
+        "alias": "State",
+        "sqlType": "sqlTypeOther",
+        "length": 2,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "Zip_Code",
+        "type": "esriFieldTypeString",
+        "alias": "Zip Code",
+        "sqlType": "sqlTypeOther",
+        "length": 5,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "Phone_Number",
+        "type": "esriFieldTypeString",
+        "alias": "Phone Number",
+        "sqlType": "sqlTypeOther",
+        "length": 254,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "WebSite",
+        "type": "esriFieldTypeString",
+        "alias": "WebSite",
+        "sqlType": "sqlTypeOther",
+        "length": 254,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "CornMaze",
+        "type": "esriFieldTypeString",
+        "alias": "Corn Maze",
+        "sqlType": "sqlTypeOther",
+        "length": 255,
+        "domain": null,
+        "defaultValue": null
+      },
+      {
+        "name": "PumpkinPicking",
+        "type": "esriFieldTypeString",
+        "alias": "Pumpkin Picking",
+        "sqlType": "sqlTypeOther",
+        "length": 255,
+        "domain": null,
+        "defaultValue": null
+      }
+    ],
+    "exceededTransferLimit": true,
+    "features": [
+      {
+        "attributes": {
+          "OBJECTID": 3,
+          "Name": "Arader Tree Farm",
+          "Address": "746 South Trappe Road",
+          "City": "Collegeville",
+          "State": "PA",
+          "Zip_Code": "19426",
+          "Phone_Number": "610-489-8878",
+          "WebSite": "https://araderfarm.com/",
+          "CornMaze": "Yes",
+          "PumpkinPicking": "Yes"
+        },
+        "geometry": {
+          "x": -75.49166300130442,
+          "y": 40.17471798679341
+        }
+      },
+      {
+        "attributes": {
+          "OBJECTID": 5,
+          "Name": "Barry Davis Produce Stand",
+          "Address": "821 Collegeville Road",
+          "City": "Collegeville",
+          "State": "PA",
+          "Zip_Code": "19426",
+          "Phone_Number": "484-941-3792",
+          "WebSite": "https://www.barrydavisproduce.com/",
+          "CornMaze": null,
+          "PumpkinPicking": "Yes"
+        },
+        "geometry": {
+          "x": -75.42242102084602,
+          "y": 40.2053159987891
+        }
+      },
+      {
+        "attributes": {
+          "OBJECTID": 14,
+          "Name": "Freed's Produce",
+          "Address": "175 Morwood Road",
+          "City": "Harleysville",
+          "State": "PA",
+          "Zip_Code": "19438",
+          "Phone_Number": "484-226-9353",
+          "WebSite": "https://www.facebook.com/freedsproducestand/",
+          "CornMaze": null,
+          "PumpkinPicking": "Yes"
+        },
+        "geometry": {
+          "x": -75.40733602619615,
+          "y": 40.30145802056312
+        }
+      }
+    ]
+  },
+  "assessment": {
+    "decisiveQualifyingActivity": {
+      "OBJECTID": 3,
+      "field": "CornMaze",
+      "value": "Yes",
+      "category": "corn-maze"
+    },
+    "pumpkinPickingPositiveIds": [
+      3,
+      5,
+      14
+    ],
+    "pumpkinPatchMapping": "future explicit visitor-picking mapping review",
+    "current2026OccurrenceVerified": false,
+    "country": "not in source; reviewed US constant proposed only",
+    "pointMeaning": "unknown",
+    "verifiedContractCoordinates": false,
+    "sourceNativeIdDurability": "unverified"
+  },
+  "requestStartedAt": "2026-10-05T18:34:52.923121+00:00",
+  "retrievalTimestampNote": "Recorded time is request start; exact response completion timestamp was not retained."
+}

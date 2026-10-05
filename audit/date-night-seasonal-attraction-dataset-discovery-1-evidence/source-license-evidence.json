@@ -1,0 +1,194 @@
+{
+  "reviewDate": "2026-10-05",
+  "selectedSource": {
+    "publisher": "Montgomery County GIS, Montgomery County Planning Commission",
+    "officialStatus": "county program notice plus service/item publisher metadata",
+    "itemId": "98996b62c9ab4a9a8e12de859565790a",
+    "itemOwner": "Montco_GIS",
+    "title": "Montgomery County AgriTourism",
+    "serviceUrl": "https://services1.arcgis.com/kOChldNuKsox8qZD/arcgis/rest/services/Montgomery_County_AgriTourism/FeatureServer",
+    "layer": 0,
+    "access": "public",
+    "itemModifiedEpochMs": 1783960549000,
+    "itemModifiedUtc": "2026-07-13T16:35:49+00:00",
+    "licenseAuthorityUrl": "https://www.arcgis.com/sharing/rest/content/items/98996b62c9ab4a9a8e12de859565790a?f=pjson",
+    "licenseField": "licenseInfo",
+    "licenseLabel": "bespoke government free/open-resource declaration; no standard license identifier",
+    "grantExcerpt": "Montgomery County provides this data as a free and open resource.",
+    "licenseStringSha256": "e76fc217eac2461862ba7940fc274eac7e5c0b36d8452947841096b42fa8f025",
+    "conditionsParaphrase": "No suitability or warranty assurance; not usable as a legal property description.",
+    "commercialAndNormalizationAssessment": "Supportable discovery interpretation of explicit free/open data grant; these rights are not separately enumerated. Independent review before activation.",
+    "attribution": "No express requirement in item terms observed; preserve county credit, item/service URL, retrieval date and transformations as project policy.",
+    "automatedAccess": "Published public Feature Service Query capability and Esri REST documentation; ordinary anonymous query succeeded. No authority claimed for linked farm sites.",
+    "cadence": "not specified",
+    "numericalRateLimit": "not established; maxRecordCount 2000 is a response ceiling",
+    "referenceLayerEdit": "2025-08-11 18:31:19 from reference-rendered schema; timezone unknown, direct refresh failed",
+    "currentSeasonEvidence": null
+  },
+  "missouri": {
+    "metadataUrl": "https://data.mo.gov/api/views/2zg8-cta8.json",
+    "datasetId": "2zg8-cta8",
+    "provenance": "official",
+    "licenseId": null,
+    "licenseGate": "not established",
+    "rowsUpdatedAt": 1790991003,
+    "rowsUpdatedUtc": "2026-10-03T01:30:03+00:00",
+    "cadence": "This dataset is updated MON-FRI at 8:30PM",
+    "factualSchema": [
+      {
+        "fieldName": "business_name",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "address1",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "address2",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "city",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "state",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "zipcode",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "county",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "website",
+        "dataTypeName": "url"
+      },
+      {
+        "fieldName": "latlong",
+        "dataTypeName": "location"
+      }
+    ],
+    "excludedExpressiveColumns": [
+      "company_profile",
+      "company_description",
+      "location_description"
+    ],
+    "qualifyingActivityFieldEstablished": false,
+    "rowsFetched": 0
+  },
+  "remainingCandidates": {
+    "USDA_AMS": {
+      "permission": "not established for portal records",
+      "structuredEndpoint": "not verified",
+      "landingResult": "403 via reference tool; stopped"
+    },
+    "Kansas_Tourism": {
+      "permission": "no applicable affirmative grant established in reviewed terms",
+      "structuredEndpoint": "not established"
+    },
+    "Oklahoma_Agritourism": {
+      "permission": "free program marketing is not downstream reuse permission; no grant established",
+      "structuredEndpoint": "not established"
+    },
+    "Arkansas_Tourism": {
+      "permission": "no applicable affirmative grant established",
+      "structuredEndpoint": "not established; directory landing redirected"
+    }
+  },
+  "primaryDocumentation": [
+    {
+      "id": "MO-catalog",
+      "url": "https://catalog.data.gov/dataset/missouri-farmers-markets",
+      "purpose": "catalog/schema distribution/cadence",
+      "result": "rendered"
+    },
+    {
+      "id": "MO-landing",
+      "url": "https://data.mo.gov/d/2zg8-cta8",
+      "purpose": "dataset landing",
+      "result": "minimal rendered page"
+    },
+    {
+      "id": "USDA-program",
+      "url": "https://www.ams.usda.gov/services/local-regional/food-directories",
+      "purpose": "official program provenance",
+      "result": "rendered"
+    },
+    {
+      "id": "USDA-landing",
+      "url": "https://www.usdalocalfoodportal.com/",
+      "purpose": "program landing",
+      "result": "403 reported by reference tool; not retried"
+    },
+    {
+      "id": "MC-service",
+      "url": "https://services1.arcgis.com/kOChldNuKsox8qZD/ArcGIS/rest/services/Montgomery_County_AgriTourism/FeatureServer",
+      "purpose": "service documentation",
+      "result": "rendered"
+    },
+    {
+      "id": "MC-layer",
+      "url": "https://services1.arcgis.com/kOChldNuKsox8qZD/ArcGIS/rest/services/Montgomery_County_AgriTourism/FeatureServer/0",
+      "purpose": "schema documentation",
+      "result": "rendered"
+    },
+    {
+      "id": "MC-item-reference",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/98996b62c9ab4a9a8e12de859565790a?f=pjson",
+      "purpose": "license metadata reference",
+      "result": "tool reported not accessible; no origin HTTP status exposed"
+    },
+    {
+      "id": "MC-overview-reference",
+      "url": "https://www.arcgis.com/home/item.html?id=98996b62c9ab4a9a8e12de859565790a",
+      "purpose": "item documentation reference",
+      "result": "tool reported not accessible; no origin HTTP status exposed"
+    },
+    {
+      "id": "MC-program",
+      "url": "https://taxclaim.montcopa.org/CivicAlerts.aspx?AID=4595",
+      "purpose": "official program",
+      "result": "rendered"
+    },
+    {
+      "id": "MC-GIS",
+      "url": "https://taxclaim.montcopa.org/3132/Data-Mapping-Services",
+      "purpose": "GIS authority",
+      "result": "rendered"
+    },
+    {
+      "id": "MC-GIS-data",
+      "url": "https://taxclaim.montcopa.org/3223/GIS-DATA",
+      "purpose": "GIS data policy lead",
+      "result": "reference redirect to https://www.montgomerycountypa.gov/departments/tax-claim-bureau; not policy evidence"
+    },
+    {
+      "id": "KS-policy",
+      "url": "https://www.travelks.com/privacy-policy/",
+      "purpose": "terms",
+      "result": "rendered; no qualifying reuse grant established"
+    },
+    {
+      "id": "OK-program",
+      "url": "https://oklahomaagritourism.com/producers/getting-started/how-we-help-you",
+      "purpose": "directory model",
+      "result": "rendered"
+    },
+    {
+      "id": "AR-directory",
+      "url": "https://www.arkansas.com/directory",
+      "purpose": "directory documentation",
+      "result": "redirected to https://www.arkansas.com/; no structured endpoint established"
+    }
+  ],
+  "coordinateDocumentation": [
+    "https://developers.arcgis.com/rest/services-reference/enterprise/query-feature-service-layer/",
+    "https://developers.arcgis.com/rest/services-reference/enterprise/geometry-objects/",
+    "https://developers.arcgis.com/documentation/spatial-references/"
+  ],
+  "scope": "factual evidence only; no linked operator or social content fetched or licensed by this evidence"
+}

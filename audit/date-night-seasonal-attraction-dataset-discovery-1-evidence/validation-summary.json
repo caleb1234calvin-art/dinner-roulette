@@ -1,0 +1,43 @@
+{
+  "scope": "prepublication validation; final identities and after-publication preservation belong to final receipt",
+  "baseSha": "514d0f02091f067e3ec675076b282ec6ff199efd",
+  "baseTree": "47c95ea07ba59de4aae77783bfe7e1a2c16fc7cf",
+  "baseSoleParent": "6a31e3a3da3fc2775eb06a9aed7e4f367e6ae5c4",
+  "baseIdentityAuthority": "GitHub Git object API plus branch readbacks; complete recursive tree not truncated",
+  "localValidation": "Reconstructed exact base directory tree objects from authoritative recursive listing and seeded index; no full checkout of preexisting blobs. Local staged diff compared against exact base tree.",
+  "preexistingLeafCount": 1352,
+  "preexistingLeafObjectOrModeChanges": 0,
+  "addedFilesBeforeThisSummary": 7,
+  "allAdditionsMode": "100644",
+  "allowedFileTypes": [
+    ".md",
+    ".json"
+  ],
+  "executableChangedPaths": 0,
+  "jsonSyntax": "passed",
+  "gitDiffCheck": "passed",
+  "sensitiveContentScreen": {
+    "result": "passed",
+    "matches": 0,
+    "scope": "new publication files only; exact literal credential patterns, authenticated URLs, headers and internal connection details"
+  },
+  "newContentReview": "fact-only selected fields; short data-use grant; no raw page bodies, descriptions, reviews, images, ratings, logos, private administrative records or credentials",
+  "runtimeTestsRun": 0,
+  "migrationsRun": 0,
+  "collectorCalls": 0,
+  "geocoderCalls": 0,
+  "paidApiCalls": 0,
+  "sourceActivations": 0,
+  "mainBefore": "078f65c5d194435452ca14569ea00e57f52a20f3",
+  "productionBefore": "dpl_HmqKyiLqCqMSTrhxKktsy9mJtDKy",
+  "productionBeforeAuthority": "read-only deployment metadata and exact pickforus.app/www.pickforus.app alias mappings",
+  "artifactSha256": {
+    "audit/date-night-seasonal-attraction-dataset-discovery-1-architecture.md": "7bb9bf6b9bd8967fd513d9c45093f04b2ea42e861ad0c64d2a7d37f0efac0eb4",
+    "audit/date-night-seasonal-attraction-dataset-discovery-1-evidence/network-summary.json": "050dcae48c439129d96149026f7000be5a0e414b5dfed820f23dd70bb4fb9fd5",
+    "audit/date-night-seasonal-attraction-dataset-discovery-1-evidence/owner-post-review-context.json": "76686a40b3f04324dff85b805bfaecda1a70373236e4af77c4f9985e36fad6b3",
+    "audit/date-night-seasonal-attraction-dataset-discovery-1-evidence/qualifying-records.json": "eaa13c94153995ca10e3f1469324f6dcc5bb4e713dddc8721fd0ed9f7867f043",
+    "audit/date-night-seasonal-attraction-dataset-discovery-1-evidence/source-license-evidence.json": "d00c12e3f9e18af4957ad7515fade007f0f1ddd5806dc2e26ca6e3206ab6654b",
+    "audit/date-night-seasonal-attraction-dataset-discovery-1.md": "f67d735a9431e0ca5847f0c4dbf99c7bd877a2e4d0c0eb10ccf4ed40f4dca35f",
+    "docs/handoffs/active/date-night-seasonal-attraction-dataset-discovery-1-continuation.md": "8812cf95764d4916f4e7600e237164e6996186e9d70866e2f60a62c840159d61"
+  }
+}

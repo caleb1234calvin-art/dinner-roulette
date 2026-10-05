@@ -1,0 +1,25 @@
+{
+  "provenance": "user message in this task; owner-supplied Termux observations after prior review",
+  "independentlyReproducedHere": false,
+  "belongsToPreviousCommitEvidence": false,
+  "minimalRowRequest": {
+    "endpoint": "https://data.cityofnewyork.us/resource/w3wp-dpdi.json",
+    "parameters": {
+      "$select": "guid",
+      "$limit": 1
+    },
+    "reportedStatus": 200,
+    "reportedContentType": "application/json",
+    "reportedResult": "actual row"
+  },
+  "exactActivityQueryReportedResult": [],
+  "broaderQueryReportedExamples": [
+    "Hallowscream Fright Walk",
+    "Hallowscream Fright Walk & Fall Festival",
+    "Free Halloween Puppet Pop-up",
+    "Upcycled Fabric Pumpkins",
+    "Halloween Trick or Treat at Powers Street Garden"
+  ],
+  "acceptedQualifyingRecords": 0,
+  "nycRequestsThisTask": 0
+}
