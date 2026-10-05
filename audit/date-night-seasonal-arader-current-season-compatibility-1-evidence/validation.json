@@ -1,0 +1,41 @@
+{
+  "validationScope": "Research only; no implementation tests/builds",
+  "startingSha": "016142008cc451225fee5eb5d56a8d33b38d4735",
+  "startingTree": "576c0f5c054aab0223f9f4ebdd13ea84c73105f4",
+  "startingSoleParent": "514d0f02091f067e3ec675076b282ec6ff199efd",
+  "preexistingLeafCount": 1360,
+  "preexistingObjectTypeModeChanges": 0,
+  "existingPathsModifiedOrDeleted": 0,
+  "documentationAdditionsBeforeThisReceipt": [
+    "audit/date-night-seasonal-arader-current-season-compatibility-1-evidence/network-summary.json",
+    "audit/date-night-seasonal-arader-current-season-compatibility-1-evidence/source-a-permission-reevaluation.json",
+    "audit/date-night-seasonal-arader-current-season-compatibility-1-evidence/source-b-assessment.json",
+    "audit/date-night-seasonal-arader-current-season-compatibility-1-facts.md",
+    "audit/date-night-seasonal-arader-current-season-compatibility-1-identity.md",
+    "audit/date-night-seasonal-arader-current-season-compatibility-1-json-arcgis-design.md",
+    "audit/date-night-seasonal-arader-current-season-compatibility-1.md",
+    "docs/handoffs/active/date-night-seasonal-arader-current-season-compatibility-1-continuation.md"
+  ],
+  "totalDocumentationAdditionsIncludingThisReceipt": 9,
+  "executableChangedPaths": 0,
+  "jsonSyntax": "All new JSON parsed; this receipt also parsed at final freeze",
+  "gitDiffCheck": "Both staged and unstaged diff --check passed",
+  "sensitiveContentScreen": {
+    "highConfidenceCredentialPatterns": "No matches",
+    "manualContentReview": "Reduced factual/permission/design evidence only; no raw operator prose/photos, credentials/cookies, internal proxy diagnostics or private administrative logs"
+  },
+  "collectorCalls": 0,
+  "geocoderCalls": 0,
+  "paidApiCalls": 0,
+  "remotePublication": "Held: required research branch is eligible for auto-deployment; no remote ref created",
+  "finalIdentity": "Exact local research SHA/tree/sole parent in external receipt; not self-embedded",
+  "preservation": {
+    "mainBeforeAndAfter": "078f65c5d194435452ca14569ea00e57f52a20f3",
+    "productionBeforeAndAfter": "dpl_HmqKyiLqCqMSTrhxKktsy9mJtDKy",
+    "productionState": "READY",
+    "productionAliasesAndExposedProjectStateUnchanged": true,
+    "remoteNewResearchBranchAbsent": true,
+    "remoteGitMutations": 0,
+    "vercelMutations": 0
+  }
+}

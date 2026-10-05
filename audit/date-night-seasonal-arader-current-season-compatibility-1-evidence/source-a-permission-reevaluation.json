@@ -1,0 +1,99 @@
+{
+  "reviewDate": "2026-10-05",
+  "sourceASelectedRole": "identity/activity/location candidate only",
+  "permissionVerdict": "Prior limited bespoke-grant interpretation survives; not an activation approval",
+  "item": {
+    "id": "98996b62c9ab4a9a8e12de859565790a",
+    "owner": "Montco_GIS",
+    "title": "Montgomery County AgriTourism",
+    "access": "public",
+    "type": "Feature Service",
+    "url": "https://services1.arcgis.com/kOChldNuKsox8qZD/arcgis/rest/services/Montgomery_County_AgriTourism/FeatureServer",
+    "accessInformation": "Montgomery County GIS, Montgomery County Planning Commission",
+    "modified": 1783960549000
+  },
+  "license": {
+    "authorityUrl": "https://www.arcgis.com/sharing/rest/content/items/98996b62c9ab4a9a8e12de859565790a?f=pjson",
+    "field": "licenseInfo",
+    "label": "Bespoke county free/open-resource declaration; no named license",
+    "grantExcerpt": "Montgomery County provides this data as a free and open resource.",
+    "fullLicenseStringSha256": "e76fc217eac2461862ba7940fc274eac7e5c0b36d8452947841096b42fa8f025",
+    "matchesPriorEvidence": true,
+    "remainingTermsParaphrase": "County disclaims suitability and warranties; data is not a legal property description.",
+    "commercialReuse": "Reasonably supported interpretation of affirmative free/open data grant; not separately enumerated",
+    "factualNormalization": "Reasonably supported for limited facts with transformations disclosed; not separately enumerated",
+    "attribution": "No explicit attribution condition observed; project should retain publisher credit, source link, retrieval date and transformations; no endorsement",
+    "linkedContentRights": "Not granted",
+    "validity": "Reevaluated on 2026-10-05 only; no permission expiry invented; current policy still requires finite review validity before activation"
+  },
+  "layer": {
+    "id": 0,
+    "name": "Montgomery County Agri Tourism",
+    "serviceItemId": "98996b62c9ab4a9a8e12de859565790a",
+    "copyrightText": "Montgomery County GIS, MCPC",
+    "geometryType": "esriGeometryPoint",
+    "spatialReference": {
+      "wkid": 102100,
+      "latestWkid": 3857
+    },
+    "objectIdField": "OBJECTID",
+    "uniqueIdField": {
+      "name": "OBJECTID",
+      "isSystemMaintained": true
+    },
+    "globalIdField": "",
+    "capabilities": "Query",
+    "hasStaticData": false,
+    "hasMetadata": true,
+    "maxRecordCount": 2000,
+    "editingInfo": {
+      "lastEditDate": 1754937079884,
+      "schemaLastEditDate": 1754937079884,
+      "dataLastEditDate": 1754937079884
+    }
+  },
+  "layerDescriptionAssessment": "Identifies agritourism locations in Montgomery County, Pennsylvania; no entrance/venue/parcel-centroid definition or positional-uncertainty method/value.",
+  "boundedQueryEvidence": "Prior immutable 200 anonymous three-row response plus fresh public Query metadata; no new row query in this task",
+  "costArchitecture": {
+    "anonymous": true,
+    "keyRequiredForObservedReads": false,
+    "accountRequiredForObservedReads": false,
+    "cardRequiredForObservedReads": false,
+    "paidServiceRequired": false,
+    "numericalRateAllowance": null
+  },
+  "pointMeaning": "unknown",
+  "uncertaintyMeters": null,
+  "objectIdCrossVersionDurability": "Not guaranteed; no GlobalID observed",
+  "sourcePolicyActivationApproved": false,
+  "newDirectRequests": [
+    {
+      "id": "A1",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/98996b62c9ab4a9a8e12de859565790a?f=pjson",
+      "startedAt": "2026-10-05T21:30:58.952440+00:00",
+      "limitBytes": 65536,
+      "timeoutSeconds": 10,
+      "retries": 0,
+      "redirects": 0,
+      "status": 200,
+      "contentType": "text/plain;charset=utf-8",
+      "bytes": 3229,
+      "sha256": "7b1f448ea2e789c413bcd1f4fd7dbb7019865ff24ffc9919f40c30945de45844",
+      "completedAt": "2026-10-05T21:31:05.272684+00:00"
+    },
+    {
+      "id": "A2",
+      "url": "https://services1.arcgis.com/kOChldNuKsox8qZD/ArcGIS/rest/services/Montgomery_County_AgriTourism/FeatureServer/0?f=pjson",
+      "startedAt": "2026-10-05T21:31:29.749327+00:00",
+      "limitBytes": 131072,
+      "timeoutSeconds": 10,
+      "retries": 0,
+      "redirects": 0,
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 24216,
+      "sha256": "579651f2a1300f4971c7af61928240c66710ab727eefc4ceb549a327501b21e1",
+      "completedAt": "2026-10-05T21:31:34.784316+00:00"
+    }
+  ]
+}
