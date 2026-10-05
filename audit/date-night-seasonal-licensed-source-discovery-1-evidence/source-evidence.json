@@ -1,0 +1,217 @@
+{
+  "decision": "SEASONAL LICENSED SOURCE DISCOVERY #1 BLOCKED — NO QUALIFYING LICENSED SOURCE",
+  "selectedSource": null,
+  "candidateCount": 5,
+  "sourceEvidence": [
+    {
+      "id": "E01",
+      "title": "Missouri catalog",
+      "url": "https://catalog.data.gov/dataset/missouri-farmers-markets",
+      "finding": "No license URL in the reviewed catalog; public access and update metadata are not a reuse grant."
+    },
+    {
+      "id": "E02",
+      "title": "NYC official dataset metadata",
+      "url": "https://data.cityofnewyork.us/api/views/w3wp-dpdi.json",
+      "finding": "Direct D02: official provenance, DPR attribution, 16 columns, daily update schedule; no licenseId/license supplied."
+    },
+    {
+      "id": "E03",
+      "title": "NYC robots",
+      "url": "https://data.cityofnewyork.us/robots.txt",
+      "finding": "Direct D03: wildcard crawl delay 1 second; reviewed rules do not disallow tested resource path. Not a reuse grant."
+    },
+    {
+      "id": "E04",
+      "title": "NYC Public Policies",
+      "url": "https://cityofnewyork.github.io/opendatatsm/publicpolicies.html",
+      "finding": "Affirmative public-dataset use framework; attribution/version/modification disclosure may be required; portal can rate-limit."
+    },
+    {
+      "id": "E05",
+      "title": "NYC published Local Law 11 of 2012",
+      "url": "https://cityofnewyork.github.io/opendatatsm/LocalLaw11of2012.html",
+      "finding": "Sections 23-502(b),(d), 23-505 address automated formats, use and modification disclosure, and APIs. Historical city-published law text; not a full current codification opinion."
+    },
+    {
+      "id": "E06",
+      "title": "NYC portal terms",
+      "url": "https://data.cityofnewyork.us/stories/s/Terms-of-Use/k9k7-3cje",
+      "finding": "Direct D05: portal incorporates NYC general/provider terms, disclaimers and source version control. Inert JSON story text reviewed; no scripts run."
+    },
+    {
+      "id": "E07",
+      "title": "Socrata application tokens",
+      "url": "https://dev.socrata.com/docs/app-tokens.html",
+      "finding": "Simple unauthenticated queries documented; anonymous shared IP throttling; numerical anonymous quota not given; 429 indicates throttling. Documentation copyright license is not the data license."
+    },
+    {
+      "id": "E08",
+      "title": "NYC general terms",
+      "url": "https://www.nyc.gov/main/terms-of-use",
+      "finding": "Protects city and third-party IP, prohibits disruption. Public-fact scope must be distinguished from expressive content."
+    },
+    {
+      "id": "E09",
+      "title": "NYC Public Standards",
+      "url": "https://cityofnewyork.github.io/opendatatsm/publicstandards.html",
+      "finding": "API section explicitly documents SODA access to published datasets; structured downloads supported."
+    },
+    {
+      "id": "E10",
+      "title": "NPS getting started",
+      "url": "https://www.nps.gov/subjects/developer/get-started.htm",
+      "finding": "Official invitation to use API data in applications/maps/websites; free key registration required."
+    },
+    {
+      "id": "E11",
+      "title": "NPS API guides",
+      "url": "https://www.nps.gov/subjects/developer/guides.htm",
+      "finding": "Key authentication; default hourly limit 1000; terms link to Disclaimer. No key obtained or used."
+    },
+    {
+      "id": "E12",
+      "title": "NPS Disclaimer",
+      "url": "https://www.nps.gov/aboutus/disclaimer.htm",
+      "finding": "Qualified public-domain policy for NPS-created works; commercial publication notice; third-party content and marks excluded."
+    },
+    {
+      "id": "E13",
+      "title": "NPS interactive reference",
+      "url": "https://www.nps.gov/subjects/developer/api-documentation.htm",
+      "finding": "Text retrieval exposed no usable event schema or sample; not substituted with third-party wrapper schema."
+    },
+    {
+      "id": "E14",
+      "title": "USDA catalog",
+      "url": "https://catalog.data.gov/dataset/national-on-farm-market-directory",
+      "finding": "Explicit CC0 assignment for usda-ams-2015-N039; legacy HTTP Excel export; modified 2015-10-19."
+    },
+    {
+      "id": "E15",
+      "title": "CC0 deed",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "finding": "Describes commercial reuse, modification and distribution without permission; other rights and non-endorsement remain."
+    },
+    {
+      "id": "E16",
+      "title": "USDA current directory documentation",
+      "url": "https://www.ams.usda.gov/local-food-directories/onfarm",
+      "finding": "Official directory description and API-forthcoming statement; no current export schema or occurrence sample reviewed."
+    },
+    {
+      "id": "E17",
+      "title": "Art Institute API documentation",
+      "url": "https://api.artic.edu/docs/",
+      "finding": "Events/occurrences carry restricted-use notices, not collection CC0; anonymous field-selecting access documented. Exact section headings: Events, Event Occurrences, Authentication, Scraping Data."
+    },
+    {
+      "id": "E18",
+      "title": "Art Institute terms",
+      "url": "https://www.artic.edu/terms",
+      "finding": "Reference fetch returned 403 Forbidden; no follow-up or alternate-route bypass."
+    }
+  ],
+  "nycSchemaObservation": {
+    "requestId": "D02",
+    "bodySha256": "28a0656749fea4b58b0d4a1c68ab841864ac0f7957204c2fce06ca1006d5bb4d",
+    "datasetId": "w3wp-dpdi",
+    "provenance": "official",
+    "attribution": "Department of Parks and Recreation (DPR)",
+    "rowsUpdatedAt": "2026-10-04T13:34:50+00:00",
+    "schedule": "Daily",
+    "licenseId": null,
+    "license": null,
+    "fields": [
+      {
+        "fieldName": "title",
+        "type": "text"
+      },
+      {
+        "fieldName": "instructor",
+        "type": "text"
+      },
+      {
+        "fieldName": "guid",
+        "type": "number"
+      },
+      {
+        "fieldName": "link",
+        "type": "url"
+      },
+      {
+        "fieldName": "description",
+        "type": "text"
+      },
+      {
+        "fieldName": "registration_url",
+        "type": "url"
+      },
+      {
+        "fieldName": "registration_description",
+        "type": "text"
+      },
+      {
+        "fieldName": "parkids",
+        "type": "text"
+      },
+      {
+        "fieldName": "parknames",
+        "type": "text"
+      },
+      {
+        "fieldName": "starttime",
+        "type": "calendar_date"
+      },
+      {
+        "fieldName": "endtime",
+        "type": "calendar_date"
+      },
+      {
+        "fieldName": "contact_phone",
+        "type": "text"
+      },
+      {
+        "fieldName": "location",
+        "type": "text"
+      },
+      {
+        "fieldName": "categories",
+        "type": "text"
+      },
+      {
+        "fieldName": "coordinates",
+        "type": "text"
+      },
+      {
+        "fieldName": "image",
+        "type": "url"
+      }
+    ],
+    "isEventOccurrenceEvidence": false
+  },
+  "contractReview": {
+    "baseSha": "a85a52511b99ecfbf19e50eb1cd9292cb63eb59d",
+    "files": [
+      "tools/seasonal-facts/README.md",
+      "tools/seasonal-facts/schema.ts",
+      "tools/seasonal-facts/policy.ts"
+    ],
+    "activities": [
+      "haunted-house",
+      "corn-maze",
+      "pumpkin-patch"
+    ],
+    "sourceContentTypes": [
+      "text/html",
+      "text/plain",
+      "application/ld+json"
+    ],
+    "dollarPrefixedQueryNamesAccepted": false,
+    "credentialsAllowed": false,
+    "networkEnabled": false,
+    "permissionGateUnchanged": true,
+    "sourceRegistryChanges": 0,
+    "realSourceContractArtifacts": 0
+  }
+}

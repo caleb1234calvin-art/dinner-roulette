@@ -1,0 +1,300 @@
+{
+  "scope": "Research-only reduced public evidence; no raw network or administrative payloads",
+  "reviewDate": "2026-10-05",
+  "controlledDirectAttempts": 6,
+  "successfulDirectResponses": 3,
+  "directTimeouts": 3,
+  "directDataAttempts": 2,
+  "eventRowsObtained": 0,
+  "referenceUrlActions": 27,
+  "referenceDocumentFinds": 6,
+  "searchCalls": 7,
+  "searchQueries": 21,
+  "explicitUrlActionsTotal": 33,
+  "collectorCalls": 0,
+  "geocoderCalls": 0,
+  "paidApiCalls": 0,
+  "executableChangedPaths": 0,
+  "wireRequestCountForSearchAndReferenceServices": null,
+  "wireCountExplanation": "Services may use caches, redirects or upstream retrieval; origin request counts are not exposed. Reference actions are not misreported as zero direct access.",
+  "transportBounds": {
+    "protocol": "HTTPS",
+    "credentials": false,
+    "automaticRetries": 0,
+    "followRedirects": false,
+    "connectSeconds": 5,
+    "totalSeconds": 10,
+    "bodyCapBytesD01ThroughD05": 2097152,
+    "bodyCapBytesD06": 65536,
+    "userAgent": "curl default",
+    "concurrency": 1
+  },
+  "directRequests": [
+    {
+      "id": "D01",
+      "url": "https://data.mo.gov/api/views/2zg8-cta8.json",
+      "observedAt": "2026-10-05T06:24:46.596671+00:00",
+      "method": "GET",
+      "authenticated": false,
+      "httpStatus": null,
+      "outcome": "timeout_no_http_response",
+      "contentType": null,
+      "receivedBodyBytes": 0,
+      "bodySha256": null
+    },
+    {
+      "id": "D02",
+      "url": "https://data.cityofnewyork.us/api/views/w3wp-dpdi.json",
+      "observedAt": "2026-10-05T06:24:51.605880+00:00",
+      "method": "GET",
+      "authenticated": false,
+      "httpStatus": 200,
+      "outcome": "received",
+      "contentType": "application/json; charset=utf-8",
+      "receivedBodyBytes": 8019,
+      "bodySha256": "28a0656749fea4b58b0d4a1c68ab841864ac0f7957204c2fce06ca1006d5bb4d"
+    },
+    {
+      "id": "D03",
+      "url": "https://data.cityofnewyork.us/robots.txt",
+      "observedAt": "2026-10-05T06:24:55.655955+00:00",
+      "method": "GET",
+      "authenticated": false,
+      "httpStatus": 200,
+      "outcome": "received",
+      "contentType": "text/plain; charset=utf-8",
+      "receivedBodyBytes": 1752,
+      "bodySha256": "0cb268a68e4fc210b4b7391392a87b19ac4c79e59704c6276620c5ec0efa0cde"
+    },
+    {
+      "id": "D04",
+      "url": "https://data.cityofnewyork.us/resource/w3wp-dpdi.json?%24select=guid%2Ctitle%2Clink%2Cparkids%2Cparknames%2Cstarttime%2Cendtime%2Ccontact_phone%2Clocation%2Ccategories%2Ccoordinates&%24where=starttime+%3E%3D+%272026-01-01T00%3A00%3A00%27+AND+%28upper%28title%29+like+%27%25PUMPKIN%25%27+OR+upper%28title%29+like+%27%25MAZE%25%27+OR+upper%28title%29+like+%27%25HAUNT%25%27+OR+upper%28categories%29+like+%27%25HALLOWEEN%25%27%29&%24limit=5&%24order=starttime%2Cguid",
+      "observedAt": "2026-10-05T06:25:45.641556+00:00",
+      "method": "GET",
+      "authenticated": false,
+      "httpStatus": null,
+      "outcome": "timeout_no_http_response",
+      "contentType": null,
+      "receivedBodyBytes": 0,
+      "bodySha256": null
+    },
+    {
+      "id": "D05",
+      "url": "https://data.cityofnewyork.us/stories/s/Terms-of-Use/k9k7-3cje",
+      "observedAt": "2026-10-05T06:25:51.938478+00:00",
+      "method": "GET",
+      "authenticated": false,
+      "httpStatus": 200,
+      "outcome": "received",
+      "contentType": "text/html; charset=utf-8",
+      "receivedBodyBytes": 286969,
+      "bodySha256": "4ddb32e6e1f52cad8337d84acc8a094f4737885c24a3d0b60e2cff84d4be3857"
+    },
+    {
+      "id": "D06",
+      "url": "https://data.cityofnewyork.us/resource/w3wp-dpdi.json?$limit=3&$select=guid,title,starttime,endtime,location,coordinates,categories",
+      "observedAt": "2026-10-05T06:27:09.341736+00:00",
+      "method": "GET",
+      "authenticated": false,
+      "httpStatus": null,
+      "outcome": "timeout_no_http_response",
+      "contentType": null,
+      "receivedBodyBytes": 0,
+      "bodySha256": null
+    }
+  ],
+  "referenceUrlReviews": [
+    {
+      "kind": "open",
+      "url": "https://data.cityofnewyork.us/City-Government/NYC-Parks-Public-Events-Upcoming-14-Days/w3wp-dpdi"
+    },
+    {
+      "kind": "open",
+      "url": "https://opendata.cityofnewyork.us/overview/#termsofuse"
+    },
+    {
+      "kind": "open",
+      "url": "https://data.mo.gov/Business/Missouri-Farmers-Markets/2zg8-cta8"
+    },
+    {
+      "kind": "open",
+      "url": "https://www.nps.gov/subjects/developer/get-started.htm"
+    },
+    {
+      "kind": "open",
+      "url": "https://www.nps.gov/subjects/developer/guides.htm"
+    },
+    {
+      "kind": "open",
+      "url": "https://catalog.data.gov/dataset/nyc-parks-public-events-upcoming-14-days"
+    },
+    {
+      "kind": "open",
+      "url": "https://catalog.data.gov/dataset/missouri-farmers-markets"
+    },
+    {
+      "kind": "click",
+      "url": "https://www.nps.gov/aboutus/disclaimer.htm"
+    },
+    {
+      "kind": "click",
+      "url": "https://www.nyc.gov/main/terms-of-use"
+    },
+    {
+      "kind": "open",
+      "url": "https://data.cityofnewyork.us/stories/s/Terms-of-Use/k9k7-3cje"
+    },
+    {
+      "kind": "open",
+      "url": "https://cityofnewyork.github.io/opendatatsm/publicpolicies.html"
+    },
+    {
+      "kind": "open",
+      "url": "https://cityofnewyork.github.io/opendatatsm/publicstandards.html"
+    },
+    {
+      "kind": "open",
+      "url": "https://www.nps.gov/aboutus/disclaimer.htm"
+    },
+    {
+      "kind": "open",
+      "url": "https://dev.socrata.com/foundry/data.cityofnewyork.us/w3wp-dpdi"
+    },
+    {
+      "kind": "open",
+      "url": "https://dev.socrata.com/docs/app-tokens.html"
+    },
+    {
+      "kind": "open",
+      "url": "https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCadmin/0-0-0-130572"
+    },
+    {
+      "kind": "open",
+      "url": "https://www.nyc.gov/main/terms-of-use"
+    },
+    {
+      "kind": "open",
+      "url": "https://catalog.data.gov/dataset/national-on-farm-market-directory"
+    },
+    {
+      "kind": "open",
+      "url": "https://api.artic.edu/docs/"
+    },
+    {
+      "kind": "open",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "kind": "open",
+      "url": "https://www.nps.gov/subjects/developer/api-documentation.htm"
+    },
+    {
+      "kind": "click",
+      "url": "https://cityofnewyork.github.io/opendatatsm/LocalLaw11of2012.html"
+    },
+    {
+      "kind": "open",
+      "url": "https://cityofnewyork.github.io/opendatatsm/LocalLaw11of2012.html"
+    },
+    {
+      "kind": "open",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "kind": "click",
+      "url": "https://www.artic.edu/terms"
+    },
+    {
+      "kind": "open",
+      "url": "https://www.ams.usda.gov/local-food-directories/onfarm"
+    },
+    {
+      "kind": "open",
+      "url": "https://www.nps.gov/subjects/developer/api-documentation.htm"
+    }
+  ],
+  "referenceDocumentReviews": [
+    {
+      "url": "https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCadmin/0-0-0-130572",
+      "pattern": "23-502"
+    },
+    {
+      "url": "https://dev.socrata.com/docs/app-tokens.html",
+      "pattern": "without"
+    },
+    {
+      "url": "https://api.artic.edu/docs/",
+      "pattern": "Events"
+    },
+    {
+      "url": "https://api.artic.edu/docs/",
+      "pattern": "Licensing"
+    },
+    {
+      "url": "https://api.artic.edu/docs/",
+      "pattern": "rate-limited"
+    },
+    {
+      "url": "https://api.artic.edu/docs/",
+      "pattern": "API key"
+    }
+  ],
+  "searchDiscovery": [
+    {
+      "engine": "system2_search_query",
+      "queries": [
+        "NYC Open Data terms use commercial reuse redistribute modify license",
+        "site.data.mo.gov \"Terms\" \"reuse\""
+      ]
+    },
+    {
+      "engine": "system1_search_query",
+      "queries": [
+        "\"Open data legal policy\" \"23-502\"",
+        "\"open data\" \"commercial\" terms"
+      ]
+    },
+    {
+      "engine": "system2_search_query",
+      "queries": [
+        "Missouri events dataset open data license API",
+        "Kansas Oklahoma Arkansas tourism events open data Creative Commons API",
+        "US events calendar dataset open data CC0 government 2026"
+      ]
+    },
+    {
+      "engine": "system1_search_query",
+      "queries": [
+        "site.catalog.data.gov events calendar \"License\" \"Creative Commons\"",
+        "site.data.mo.gov farmers markets license",
+        "site.nps.gov API terms use license events"
+      ]
+    },
+    {
+      "engine": "system2_search_query",
+      "queries": [
+        "NYC permitted events API data license tvpp-9vvx",
+        "NYC Parks events calendar open data XML license commercial",
+        "NPS API terms conditions data reuse 1000 free events",
+        "Missouri Farmers Markets 2zg8-cta8 license"
+      ]
+    },
+    {
+      "engine": "system2_search_query",
+      "queries": [
+        "Kansas City open data events dataset license",
+        "Wichita open data special events dataset arcgis license",
+        "events calendar dataset \"CC0\" \"United States\"",
+        "pumpkin patch corn maze dataset \"license\" open data"
+      ]
+    },
+    {
+      "engine": "system2_search_query",
+      "queries": [
+        "site.codelibrary.amlegal.com/codes/newyorkcity \"23-502\" \"license\"",
+        "site.nps.gov \"events\" \"datestart\" \"dateend\" API",
+        "site.search.ams.usda.gov onfarmmarkets download API data 2026"
+      ]
+    }
+  ]
+}
