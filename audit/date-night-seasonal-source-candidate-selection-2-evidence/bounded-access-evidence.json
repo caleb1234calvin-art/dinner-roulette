@@ -1,0 +1,122 @@
+{
+  "review": "seasonal-source-candidate-selection-2",
+  "base_sha": "bdd8b92e81d9f54a99c4e4c52aa54d7d3609b2d9",
+  "verdict": "SEASONAL SOURCE CANDIDATE SELECTION #2 BLOCKED — NO SUITABLE SOURCE FOUND",
+  "selected_candidate": null,
+  "direct_requests": [
+    {
+      "candidate": "exeter",
+      "url": "https://www.exetercornmaze.com/robots.txt",
+      "method": "GET",
+      "attempt": 1,
+      "started_at_utc": "2026-10-05T03:57:30.096126+00:00",
+      "ended_at_utc": "2026-10-05T03:57:34.385824+00:00",
+      "curl_exit_code": 0,
+      "http_status": 200,
+      "redirects_followed": 0,
+      "content_type": "text/plain; charset=utf-8",
+      "body_bytes_retained": 496,
+      "body_sha256": "386c87242bd0e293c7d1cabc5516e3512b76909daaa309d317909171c95f16c9",
+      "result": "robots_received",
+      "operator_prohibition_established": false,
+      "request_limit": 3,
+      "retry_count": 0,
+      "response_body_publication": "robots directives transcribed below"
+    },
+    {
+      "candidate": "exeter",
+      "url": "https://www.exetercornmaze.com/",
+      "method": "GET",
+      "attempt": 2,
+      "started_at_utc": "2026-10-05T03:58:49.453952+00:00",
+      "ended_at_utc": "2026-10-05T03:58:54.463914+00:00",
+      "curl_exit_code": 28,
+      "http_status": null,
+      "redirects_followed": 0,
+      "content_type": null,
+      "body_bytes_retained": 0,
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": "connection_timeout_before_http_response",
+      "operator_prohibition_established": false,
+      "request_limit": 3,
+      "retry_count": 0,
+      "response_body_publication": "no body received"
+    },
+    {
+      "candidate": "rightchoices",
+      "url": "https://www.rightchoicescornmaze.com/robots.txt",
+      "method": "GET",
+      "attempt": 1,
+      "started_at_utc": "2026-10-05T03:57:30.096518+00:00",
+      "ended_at_utc": "2026-10-05T03:57:35.107414+00:00",
+      "curl_exit_code": 28,
+      "http_status": null,
+      "redirects_followed": 0,
+      "content_type": null,
+      "body_bytes_retained": 0,
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": "connection_timeout_before_http_response",
+      "operator_prohibition_established": false,
+      "request_limit": 3,
+      "retry_count": 0,
+      "response_body_publication": "no body received"
+    },
+    {
+      "candidate": "visitmo",
+      "url": "https://www.visitmo.com/robots.txt",
+      "method": "GET",
+      "attempt": 1,
+      "started_at_utc": "2026-10-05T03:57:30.096967+00:00",
+      "ended_at_utc": "2026-10-05T03:57:35.107151+00:00",
+      "curl_exit_code": 28,
+      "http_status": null,
+      "redirects_followed": 0,
+      "content_type": null,
+      "body_bytes_retained": 0,
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": "connection_timeout_before_http_response",
+      "operator_prohibition_established": false,
+      "request_limit": 3,
+      "retry_count": 0,
+      "response_body_publication": "no body received"
+    }
+  ],
+  "exeter_robots_text": "User-agent: *\nAllow: /\nDisallow: *?lightbox=\n\n# Optimization for Google Ads Bot\nUser-agent: AdsBot-Google-Mobile\nUser-agent: AdsBot-Google\nDisallow: /_partials*\nDisallow: /pro-gallery-webapp/v1/galleries/*\n\n# Block PetalBot\nUser-agent: PetalBot\nDisallow: /\n\n# Crawl delay for overly enthusiastic bots\nUser-agent: dotbot\nCrawl-delay: 10\nUser-agent: AhrefsBot\nCrawl-delay: 10\n\nSitemap: https://www.exetercornmaze.com/sitemap.xml\n\n# Auto generated, go to SEO Tools > Robots.txt Editor to change this",
+  "canonical_domain_status": {
+    "exeter": "www.exetercornmaze.com serves robots; canonical factual page and operator ownership unverified",
+    "rightchoices": "www.rightchoicescornmaze.com historical operator-associated lead; canonical host unverified",
+    "visitmo": "www.visitmo.com official-tourism association is a search lead; canonical host unverified"
+  },
+  "permission_review": {
+    "exeter": {
+      "robots": "appears_allowed_for_generic_client_at_ordinary_non_lightbox_paths",
+      "terms": "unknown",
+      "reuse": "unknown",
+      "permission": "unknown",
+      "verdict": "NO-GO"
+    },
+    "rightchoices": {
+      "robots": "unknown",
+      "terms": "unknown",
+      "reuse": "unknown",
+      "permission": "unknown",
+      "verdict": "NO-GO"
+    },
+    "visitmo": {
+      "robots": "unknown",
+      "terms": "unknown",
+      "reuse": "unknown",
+      "permission": "unknown",
+      "verdict": "NO-GO"
+    }
+  },
+  "attribution_and_license": "unknown for all candidates; no approval granted",
+  "facts": "No source facts, observations, addresses, coordinates, normalized occurrences or contract artifacts created. Indexed current-year/location material is discovery-only.",
+  "limitations": [
+    "Search indexing is not source permission or verified factual evidence.",
+    "No response is not a 404, missing robots file, operator denial, closure or site-wide outage.",
+    "Readable robots is not permission to reuse factual content.",
+    "No directly retrieved factual or terms page was available.",
+    "No raw administrative payloads, headers, cookies, credentials or internal diagnostics are published."
+  ]
+}

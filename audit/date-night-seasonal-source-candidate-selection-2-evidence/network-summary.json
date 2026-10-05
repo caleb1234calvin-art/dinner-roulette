@@ -1,0 +1,104 @@
+{
+  "review": "seasonal-source-candidate-selection-2",
+  "direct_candidate_attempts": 4,
+  "per_candidate": {
+    "exeter": 2,
+    "rightchoices": 1,
+    "visitmo": 1
+  },
+  "candidate_limit": 3,
+  "request_limit_per_candidate": 3,
+  "cadaver_zone_attempts": 0,
+  "collector_calls": 0,
+  "geocoder_calls": 0,
+  "paid_api_calls": 0,
+  "billing_dependencies_added": 0,
+  "source_registry_entries_added": 0,
+  "real_source_contract_artifacts_created": 0,
+  "executable_changed_paths": 0,
+  "redirects_followed": 0,
+  "retries": 0,
+  "alternate_proxies": 0,
+  "alternate_hosts": 0,
+  "http_downgrades": 0,
+  "user_agent_rotations": 0,
+  "browser_calls": 0,
+  "remote_script_executions": 0,
+  "subresource_requests": 0,
+  "general_crawls": 0,
+  "outreach_messages": 0,
+  "transport": {
+    "client": "curl",
+    "configuration": "--disable; default user agent; default environment transport; unauthenticated HTTPS GET only",
+    "connect_timeout_seconds": 5,
+    "total_timeout_seconds": 10,
+    "robots_max_body_bytes": 16384,
+    "representative_page_max_body_bytes": 2097152,
+    "automatic_redirects": false,
+    "remote_scripts": false
+  },
+  "search": {
+    "purpose": "discovery only",
+    "calls": 5,
+    "queries": 13,
+    "explicit_result_opens": 0,
+    "upstream_request_count": null,
+    "upstream_count_note": "The search service does not expose its upstream requests. Controlled direct-review counts exclude that opaque work.",
+    "query_batches": [
+      {
+        "engine": "system2",
+        "queries": [
+          "Missouri pumpkin patch corn maze 2026 official terms of use",
+          "Missouri tourism events 2026 Halloween terms conditions automated access"
+        ]
+      },
+      {
+        "engine": "system1",
+        "queries": [
+          "Exeter Corn Maze official 2026 terms conditions website",
+          "Right Choices Corn Maze Missouri official 2026 terms website",
+          "site:visitmo.com terms privacy copyright robots"
+        ]
+      },
+      {
+        "engine": "system2",
+        "queries": [
+          "\"Exeter Corn Maze\" official",
+          "\"Right Choices Corn Maze\" official",
+          "site:visitmo.com \"privacy\" \"terms\""
+        ]
+      },
+      {
+        "engine": "system2",
+        "queries": [
+          "site:rightchoicescornmaze.com 2026",
+          "site:exetercornmaze.com (\"terms\" OR \"privacy\" OR \"copyright\")",
+          "site:visitmo.com \"privacy policy\""
+        ]
+      },
+      {
+        "engine": "system2",
+        "queries": [
+          "site:exetercornmaze.com \"terms\"",
+          "site:exetercornmaze.com \"privacy\""
+        ]
+      }
+    ],
+    "relevant_leads_only": [
+      "https://www.exetercornmaze.com/",
+      "https://www.exetercornmaze.com/about-us",
+      "https://www.exetercornmaze.com/about-3",
+      "https://www.exetercornmaze.com/faq",
+      "https://missourigrownusa.com/members/10246",
+      "https://mofb.org/missouri-agritourism/",
+      "https://www.rightchoicescornmaze.com/index.html",
+      "https://www.visitmo.com/",
+      "https://industry.visitmo.com/listings-criteria/",
+      "https://www.visitmo.com/events/legends-lanterns-a-spirited-journey-through-halloween-history",
+      "https://www.visitmo.com/privacy-policy"
+    ],
+    "facts_or_permission_derived_from_search": false
+  },
+  "administrative_boundary": "GitHub/Vercel reads and research branch publication are not candidate-source requests. No main/production/alias/configuration mutation, manual deployment or migration. Post-publication identities/preservation are recorded in the final owner report.",
+  "verification": "Git object/mode comparison, additive documentation path checks and git diff --check only; no implementation test suite or build invoked."
+}
