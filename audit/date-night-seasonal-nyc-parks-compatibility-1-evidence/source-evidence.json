@@ -1,0 +1,257 @@
+{
+  "decision": "NYC PARKS SEASONAL SOURCE COMPATIBILITY REVIEW BLOCKED — CURRENT QUALIFYING RECORD NOT ESTABLISHED",
+  "startingSha": "6a31e3a3da3fc2775eb06a9aed7e4f367e6ae5c4",
+  "startingTree": "4f7229124dd4688f64f1dd30d98241150a1586a4",
+  "startingSoleParent": "a85a52511b99ecfbf19e50eb1cd9292cb63eb59d",
+  "datasetId": "w3wp-dpdi",
+  "publisher": "Department of Parks and Recreation (DPR) / NYC Open Data",
+  "permissionConclusion": "Covered factual datasets remain supported by NYC statutory/open-data policy without registration, license or use restrictions, subject to stated conditions; commercial factual reuse and normalization are a supportable interpretation. No blanket expressive/third-party grant or source activation approval. Not CC0.",
+  "retainedMetadata": {
+    "provenance": "official",
+    "attribution": "Department of Parks and Recreation (DPR)",
+    "observedAt": "2026-10-05T06:24:51.605880Z",
+    "bodySha256": "28a0656749fea4b58b0d4a1c68ab841864ac0f7957204c2fce06ca1006d5bb4d",
+    "hashMatchesCommittedEvidence": true,
+    "lastDirectlyObservedRowsUpdatedAt": "2026-10-04T13:34:50Z",
+    "freshMetadataRetrievalSucceeded": false,
+    "licenseId": null,
+    "fields": [
+      {
+        "name": "title",
+        "type": "text",
+        "includedInProposedProjection": true
+      },
+      {
+        "name": "instructor",
+        "type": "text",
+        "includedInProposedProjection": false
+      },
+      {
+        "name": "guid",
+        "type": "number",
+        "includedInProposedProjection": true
+      },
+      {
+        "name": "link",
+        "type": "url",
+        "includedInProposedProjection": true
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "includedInProposedProjection": false
+      },
+      {
+        "name": "registration_url",
+        "type": "url",
+        "includedInProposedProjection": false
+      },
+      {
+        "name": "registration_description",
+        "type": "text",
+        "includedInProposedProjection": false
+      },
+      {
+        "name": "parkids",
+        "type": "text",
+        "includedInProposedProjection": true
+      },
+      {
+        "name": "parknames",
+        "type": "text",
+        "includedInProposedProjection": true
+      },
+      {
+        "name": "starttime",
+        "type": "calendar_date",
+        "includedInProposedProjection": true
+      },
+      {
+        "name": "endtime",
+        "type": "calendar_date",
+        "includedInProposedProjection": true
+      },
+      {
+        "name": "contact_phone",
+        "type": "text",
+        "includedInProposedProjection": true
+      },
+      {
+        "name": "location",
+        "type": "text",
+        "includedInProposedProjection": true
+      },
+      {
+        "name": "categories",
+        "type": "text",
+        "includedInProposedProjection": true
+      },
+      {
+        "name": "coordinates",
+        "type": "text",
+        "includedInProposedProjection": true
+      },
+      {
+        "name": "image",
+        "type": "url",
+        "includedInProposedProjection": false
+      }
+    ],
+    "coordinateMetadataQuote": "Latitude/logitude coordinates of event location.",
+    "coordinateCrs": null,
+    "coordinateSerializationOrder": null,
+    "pointPrecisionMeters": null
+  },
+  "portalTerms": {
+    "request": "M03",
+    "httpStatus": 200,
+    "rawBodySha256": "a0de1f4bb14e1c9a6b58849878fe931263c3be450ebf302acd9937b12afead37",
+    "normalizedTermsSha256": "79e38ddafaf4991129cce7b8483b7d4a238de616c2a189347e3dc1ca820c6209",
+    "substantiveTermsEqualRetainedPrior": true,
+    "requiresGeneralCityTermsPrivacyAndProviderConditions": true,
+    "sourceVersionModificationDisclosure": "Treat all three as required in the proposed adapter; policy permits the City to require them.",
+    "noPageCodeExecuted": true
+  },
+  "robots": {
+    "freshRequest": "M02",
+    "freshRetrievalSucceeded": false,
+    "retainedPriorHttpStatus": 200,
+    "retainedBodySha256": "0cb268a68e4fc210b4b7391392a87b19ac4c79e59704c6276620c5ec0efa0cde",
+    "retainedHashVerified": true,
+    "retainedWildcardCrawlDelaySeconds": 1,
+    "retainedResourcePathDisallowed": false,
+    "isReuseAuthorization": false
+  },
+  "location": {
+    "mandatoryAddressKeys": [
+      "street",
+      "city",
+      "state",
+      "postal",
+      "country"
+    ],
+    "streetMandatory": true,
+    "postalMandatory": true,
+    "completeAddressEstablished": false,
+    "constants": "Only explicitly reviewed jurisdictional derivations with scope provenance; not substitutes for source-published address or postal locality.",
+    "coordinateAloneSufficient": false,
+    "coordinatesVerified": false,
+    "reliableFingerprintEstablished": false,
+    "proposedSupportingSource": "Official NYC Parks property/address dataset keyed by full Prop_ID; exact dataset unselected and unfetched.",
+    "seasonalProvenanceCaution": "Do not label static historical address evidence as explicit current-season occurrence evidence."
+  },
+  "queryDesignChoice": "B: one exact internally generated 2026 SoQL template bound to source/origin/path/version; no user inputs",
+  "jsonDesign": "Exact application/json opt-in; versioned complete envelope; fail-closed bounded inert parsing; no implementation",
+  "sodaVersionCaution": "SODA3 query docs require token/auth. Anonymous SODA2 availability remains unproven.",
+  "recordFacts": {
+    "nativeId": null,
+    "title": null,
+    "eventUrl": null,
+    "start": null,
+    "end": null,
+    "parkId": null,
+    "parkName": null,
+    "location": null,
+    "categories": null,
+    "coordinates": null,
+    "phone": null,
+    "timezone": null,
+    "operatorIdentity": null,
+    "lifecycle": null
+  },
+  "reviewedRepositoryFiles": [
+    {
+      "path": "audit/date-night-seasonal-fact-contract-1.md",
+      "sha256": "0190e08574a78e2c576b7488a2b0ceb3c8919e1fbc388eacc81dc242021b3678"
+    },
+    {
+      "path": "audit/date-night-seasonal-fact-contract-remediation-1-evidence/scope-final.json",
+      "sha256": "6c08947159defb58d3c6eb937ec4c223018c5d2ae951ddee5f03eae89b393fa0"
+    },
+    {
+      "path": "audit/date-night-seasonal-fact-contract-remediation-1-evidence/validation-summary.json",
+      "sha256": "81cfda51d78d8e5fb13cd25d5e8622b26d25428e2f7b6d36847fa5a9ac212247"
+    },
+    {
+      "path": "audit/date-night-seasonal-fact-contract-remediation-1.md",
+      "sha256": "de1bec85366c41840cc6be33e72b893d528ab2ea8272d71aa3135cc9a616ff7f"
+    },
+    {
+      "path": "audit/date-night-seasonal-licensed-source-discovery-1-evidence/network-summary.json",
+      "sha256": "eb68c2b322c5a568039595d36b7ef7bf9afa1aacc79a32ec64ca009107615d86"
+    },
+    {
+      "path": "audit/date-night-seasonal-licensed-source-discovery-1-evidence/source-evidence.json",
+      "sha256": "5310c2c633aff237e81a1e0191b1af8e5ea92660c8c85bc99ff453f6e6797cfc"
+    },
+    {
+      "path": "audit/date-night-seasonal-licensed-source-discovery-1.md",
+      "sha256": "3981930251e4a3e294a3a058fb8f06762f8b9eeff4d02e201fe813e1d45174d0"
+    },
+    {
+      "path": "audit/date-night-seasonal-source-candidate-selection-2.md",
+      "sha256": "4e3b7b97d90a84a4264c7896699dec8fce9fb293b824ae81a0122aafafb39dd9"
+    },
+    {
+      "path": "audit/date-night-seasonal-source-pilot-1.md",
+      "sha256": "721576b612c571327725d4d00194562ea32b6b00accd845c02dab9e9b3588758"
+    },
+    {
+      "path": "tools/seasonal-facts/README.md",
+      "sha256": "d3b7c39af951d24f1a81f1471757de644cd724f2150ea62b99438b4e87079ecf"
+    },
+    {
+      "path": "tools/seasonal-facts/builder.ts",
+      "sha256": "9b4fc25f23eca42d5ec2bac377db271ec7756bfbb63fd5b8310fb992dbb8d014"
+    },
+    {
+      "path": "tools/seasonal-facts/canonical.ts",
+      "sha256": "3683a099c0dc553dd442bdd3065ea9e7f11bf76d02b5507aba2a7515865e57eb"
+    },
+    {
+      "path": "tools/seasonal-facts/cli.ts",
+      "sha256": "db4644f3c54457edb883dbb436a8a238c43ab0b100c2b74d776a3b9c3a3183de"
+    },
+    {
+      "path": "tools/seasonal-facts/fixtures.ts",
+      "sha256": "144135f149a15f73d49ebdc8da44a49ed348999d8563df7f8581c97df77a4a06"
+    },
+    {
+      "path": "tools/seasonal-facts/generate-fixture.ts",
+      "sha256": "7faa3a0d163fb9c8cf91b45ee93ef6bc3aa1cb2d01d396f360db75572c1dc6ec"
+    },
+    {
+      "path": "tools/seasonal-facts/io.ts",
+      "sha256": "5c7a0b7bf0526deb63e6baa498d4d77b135a35eebca03f51b3a9f3802ef425dd"
+    },
+    {
+      "path": "tools/seasonal-facts/network-guard.mjs",
+      "sha256": "5d0ea6e2476c75a5e0f48059fa30acc89f882b912be2bf4e1304d81dee2f2382"
+    },
+    {
+      "path": "tools/seasonal-facts/policy.ts",
+      "sha256": "3fa9ff76d1ee40539356ab283b963484addd78be46951146bacf03ce240013da"
+    },
+    {
+      "path": "tools/seasonal-facts/schema.ts",
+      "sha256": "b381077a6f077a1d40368a5af42be81b8da03606ab44c8f860a27467671b8628"
+    },
+    {
+      "path": "tools/seasonal-facts/tsconfig.json",
+      "sha256": "c8684018ab626cbc5663ee077be69d52e840204084ad64f229276e29f16bec70"
+    }
+  ],
+  "priorEvidenceIntegrity": {
+    "originalManifestPayloadsVerified": 17,
+    "remediationManifestPayloadsVerified": 38,
+    "retainedNycBodiesVerified": [
+      "metadata",
+      "robots",
+      "portal-terms"
+    ]
+  },
+  "collectorCalls": 0,
+  "geocoderCalls": 0,
+  "paidApiCalls": 0,
+  "executableChangedPaths": 0
+}
