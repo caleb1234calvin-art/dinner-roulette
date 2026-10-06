@@ -68,6 +68,10 @@ jobs:
         run: |
           npm ci --no-audit --no-fund
           python3 -m pip install -r native-android/requirements.txt
+      - name: Validate web production compilation without migrations
+        env:
+          VITE_AUTH_ENABLED: "true"
+        run: node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
       - name: Validate source, identity, icons, and regressions
         run: |
           npm run typecheck
@@ -76,10 +80,6 @@ jobs:
           npm run android:check
           python3 -m unittest discover -s native-android -p 'test_*.py'
           npx eslint scripts/check-android.mjs scripts/android-release.test.mjs src/components/settings-page.tsx
-      - name: Validate web production compilation without migrations
-        env:
-          VITE_AUTH_ENABLED: "true"
-        run: node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
       - name: Sync committed native project
         run: |
           npm run android:sync
