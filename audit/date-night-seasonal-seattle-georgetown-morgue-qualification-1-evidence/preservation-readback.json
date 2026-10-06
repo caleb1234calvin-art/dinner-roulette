@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-10-06T03:46:29.133517+00:00",
+  "base": {
+    "sha": "e8c3545a317486b5facbe024423d724c009f7b4c",
+    "tree": "b1d5d400980ce15538c2aeef0c646a605559acda",
+    "parents": [
+      "67ac0654488bb7f02b1c08eef11479c4fe63af04"
+    ]
+  },
+  "branch": "research/date-night-seasonal-seattle-georgetown-morgue-qualification-1",
+  "remoteMain": "078f65c5d194435452ca14569ea00e57f52a20f3",
+  "remoteStartingBranch": "e8c3545a317486b5facbe024423d724c009f7b4c",
+  "remoteNewBranchPresent": false,
+  "production": {
+    "id": "dpl_HmqKyiLqCqMSTrhxKktsy9mJtDKy",
+    "state": "READY",
+    "target": "production",
+    "gitSha": "078f65c5d194435452ca14569ea00e57f52a20f3",
+    "gitBranch": "main",
+    "aliases": [
+      "dinner-roulette-chi.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "pickforus.app",
+      "www.pickforus.app"
+    ]
+  },
+  "project": {
+    "id": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+    "updatedAt": 1791084432329,
+    "domains": [
+      "dinner-roulette-chi.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "pickforus.app",
+      "www.pickforus.app"
+    ],
+    "latestDeployment": {
+      "id": "dpl_8rD54odiwjvP6vSQsQC9njFqDT92",
+      "url": "dinner-roulette-g6vd6m2g5-minions-9e2c.vercel.app",
+      "createdAt": 1791252753255,
+      "readyState": "READY",
+      "target": null
+    }
+  },
+  "publication": "Local commit only; owner requires separate authorization for normal non-production Preview before push.",
+  "mutations": {
+    "pushes": 0,
+    "remoteRefsChanged": 0,
+    "deploymentsCreated": 0,
+    "promotions": 0,
+    "aliasChanges": 0,
+    "projectConfigurationChanges": 0
+  },
+  "note": "Final local commit SHA/tree/parent and post-commit readbacks are in external receipt, avoiding a self-referential commit hash.",
+  "endReadback": {
+    "checkedAt": "2026-10-06T03:49:22.532798+00:00",
+    "productionId": "dpl_HmqKyiLqCqMSTrhxKktsy9mJtDKy",
+    "gitSha": "078f65c5d194435452ca14569ea00e57f52a20f3",
+    "state": "READY",
+    "target": "production",
+    "aliases": [
+      "dinner-roulette-chi.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "pickforus.app",
+      "www.pickforus.app"
+    ],
+    "projectSummaryUnchanged": true,
+    "remoteMain": "078f65c5d194435452ca14569ea00e57f52a20f3",
+    "remoteNewBranchPresent": false
+  }
+}

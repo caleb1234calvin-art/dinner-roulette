@@ -1,0 +1,199 @@
+{
+  "reviewedOn": "2026-10-06 UTC / 2026-10-05 America/Chicago",
+  "candidateCap": 6,
+  "perCandidateActionCap": 3,
+  "candidateAccounting": {
+    "C1": 0,
+    "C2": 1,
+    "C3": 2,
+    "C4": 2,
+    "C5": 1,
+    "C6": 1
+  },
+  "candidateSourcesIncludingInheritedA": 6,
+  "newCandidateDirectedActions": 7,
+  "directHTTPRequests": [
+    {
+      "candidate": "C2",
+      "url": "https://web.seattle.gov/sfd/permitstatus/",
+      "at": "2026-10-06T03:40:50.493368+00:00",
+      "method": "GET",
+      "automaticRetries": 0,
+      "status": 200,
+      "contentType": "text/html",
+      "bytes": 6424,
+      "sha256": "70c60c20e8cc4326483eb1dfa57eaa8890095b2b6ac9902a44fa46a660de7c80",
+      "redirect": null,
+      "id": "D01",
+      "responseRetained": "Fact-only excerpts and hashes; raw HTML, failure body, and metadata caches not committed."
+    },
+    {
+      "candidate": "C3",
+      "url": "https://data.seattle.gov/api/views/dm95-f8w5.json",
+      "at": "2026-10-06T03:41:07.790735+00:00",
+      "method": "GET",
+      "automaticRetries": 0,
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 27915,
+      "sha256": "fd1bac28b2d3e0f8f69b5c6aa1a48e97096b6fccd7321f174476dad5c731b3fb",
+      "redirect": null,
+      "id": "D02",
+      "responseRetained": "Fact-only excerpts and hashes; raw HTML, failure body, and metadata caches not committed."
+    },
+    {
+      "candidate": "C4",
+      "url": "https://data.seattle.gov/api/views/wnbq-64tb.json",
+      "at": "2026-10-06T03:41:41.920345+00:00",
+      "method": "GET",
+      "automaticRetries": 0,
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 28684,
+      "sha256": "b677125f40eacfd2f6f718e2a63e12c3ed465a678ac22f0e86529eb7313ec87d",
+      "redirect": null,
+      "id": "D03",
+      "responseRetained": "Fact-only excerpts and hashes; raw HTML, failure body, and metadata caches not committed."
+    },
+    {
+      "candidate": "C3",
+      "url": "https://data.seattle.gov/resource/dm95-f8w5.json?%24select=year_month_app%2Cname_of_event%2Cpermit_status%2Cpermit_type%2Cevent_category%2Cevent_sub_category%2Cevent_start_date%2Cevent_end_date%2Cevent_location_park%2Cevent_location_neighborhood%2Capplication_date&%24where=upper%28name_of_event%29+like+%27%25GEORGETOWN%25MORGUE%25%27&%24limit=20&%24order=event_start_date+DESC",
+      "at": "2026-10-06T03:41:40.712380+00:00",
+      "method": "GET",
+      "automaticRetries": 0,
+      "status": 200,
+      "contentType": "application/json;charset=utf-8",
+      "bytes": 2125,
+      "sha256": "5c2f23eac3828c8ecef4602d9998047e54a724cebe4a84d66a1d345ea45792c1",
+      "redirect": null,
+      "id": "D04",
+      "responseRetained": "Fact-only excerpts and hashes; raw HTML, failure body, and metadata caches not committed."
+    },
+    {
+      "candidate": "C4",
+      "url": "https://data.seattle.gov/resource/wnbq-64tb.json?%24select=city_account_number%2Cubi%2Cbusiness_legal_name%2Ctrade_name%2Cownership_type%2Cnaics_code%2Cnaics_description%2Clicense_start_date%2Cstreet_address%2Ccity%2Cstate%2Czip&%24where=upper%28trade_name%29+like+%27%25GEORGETOWN%25MORGUE%25%27+OR+upper%28business_legal_name%29+like+%27%25GEORGETOWN%25MORGUE%25%27+OR+%28upper%28street_address%29+like+%275000%25MARGINAL%25%27+AND+upper%28city%29%3D%27SEATTLE%27%29&%24limit=20",
+      "at": "2026-10-06T03:42:16.919270+00:00",
+      "method": "GET",
+      "automaticRetries": 0,
+      "status": 200,
+      "contentType": "application/json;charset=utf-8",
+      "bytes": 1162,
+      "sha256": "b766697207812b41a738d50303f9e799a6d7679b153c57ef8864b7ab62166966",
+      "redirect": null,
+      "id": "D05",
+      "responseRetained": "Fact-only excerpts and hashes; raw HTML, failure body, and metadata caches not committed."
+    },
+    {
+      "candidate": "C6",
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A20%5D%3Bnwr%5B%22name%22~%22Georgetown+Morgue%22%2Ci%5D%2847.5555%2C-122.3410%2C47.5590%2C-122.3350%29%3Bout+tags+center+10%3B",
+      "at": "2026-10-06T03:42:29.702393+00:00",
+      "method": "GET",
+      "automaticRetries": 0,
+      "status": 406,
+      "contentType": "text/html; charset=iso-8859-1",
+      "bytes": 371,
+      "sha256": "396f0a34ea1dad2ac8ae630285dd93fd4cd1619c4ccb0f30160ae71ab118a04d",
+      "redirect": null,
+      "id": "D06",
+      "responseRetained": "Fact-only excerpts and hashes; raw HTML, failure body, and metadata caches not committed."
+    }
+  ],
+  "referenceCandidateActions": [
+    {
+      "id": "W-C5",
+      "candidate": "C5",
+      "url": "https://seattle.gov/special-events/plan-an-event/calendar",
+      "toolAction": "web open",
+      "result": "403 Forbidden reported by retrieval tool",
+      "automaticRetry": false,
+      "bytes": null,
+      "responseSha256": null
+    }
+  ],
+  "policyReferenceActions": [
+    {
+      "url": "https://www.seattle.gov/documents/departments/tech/opendata/cos_opendatapolicy.pdf",
+      "action": "web open",
+      "result": "403; no retry"
+    },
+    {
+      "url": "https://www.openstreetmap.org/copyright",
+      "action": "web open",
+      "result": "read"
+    },
+    {
+      "url": "https://dev.overpass-api.de/overpass-doc/en/preface/commons.html",
+      "action": "web open",
+      "result": "read"
+    },
+    {
+      "url": "https://dev.socrata.com/docs/app-tokens.html",
+      "action": "web open",
+      "result": "read"
+    },
+    {
+      "url": "https://dev.socrata.com/docs/app-tokens.html",
+      "action": "two find operations on returned reference",
+      "result": "unauthenticated query and throttling passages read"
+    }
+  ],
+  "discoverySearch": {
+    "calls": 8,
+    "queries": 23,
+    "note": "Search-index discovery only; no extra candidate origins opened or datasets screened. Provider-internal HTTP counts/cache behavior not observable. Two system1 calls returned irrelevant results and supplied no qualification evidence.",
+    "orderedQueryGroups": [
+      [
+        "site.data.seattle.gov Georgetown Morgue",
+        "site:seattle.gov \"Georgetown Morgue\" \"2026\"",
+        "site:data.seattle.gov fire permits special events"
+      ],
+      [
+        "site:data.seattle.gov \"Fire\" \"Permits\"",
+        "site:data.seattle.gov \"special\" \"events\"",
+        "site:data.seattle.gov \"business license\""
+      ],
+      [
+        "Seattle Fire Department open data permit dataset [Seattle domains]",
+        "Seattle special event permits open data [Seattle domains]",
+        "Seattle active business license data [Seattle domains]"
+      ],
+      [
+        "Seattle open data terms use public domain license commercial reuse [Seattle domains]",
+        "Seattle Fire permits haunted house 2501 public permit status [Seattle domains]"
+      ],
+      [
+        "site:seattle.gov \"open data\" \"license\"",
+        "site:seattle.gov fire \"haunted\" \"permit\""
+      ],
+      [
+        "site:seattle.gov \"open license\" \"commercial\" \"data\"",
+        "site:data.seattle.gov \"Georgetown\" \"Morgue\"",
+        "site:seattle.gov \"Georgetown Morgue\" \"2026\" \"calendar\""
+      ],
+      [
+        "site:seattle.gov \"Georgetown Morgue\" \"2026\" events calendar",
+        "site:visitseattle.org \"Georgetown Morgue\" 2026",
+        "site:seattle.gov events calendar reuse data license"
+      ],
+      [
+        "site:data.wa.gov \"Georgetown Morgue\"",
+        "site:kingcounty.gov \"Georgetown Morgue\" 2026",
+        "\"Georgetown Morgue\" \"open data\" OR \"CC0\" OR \"Creative Commons\" OR \"ODbL\"",
+        "site:seattle.gov \"Georgetown Morgue\" \"2026\" \"Special Events\""
+      ]
+    ]
+  },
+  "ordering": "Seattle retained open-data evidence; Fire lookup; special-event dataset; business licenses; public-safety/occupancy assessed via existing permit scopes; city calendar; state/county/open-license discovery; one bounded OSM query.",
+  "failures": "No identical automatic retries. No alternate host/UA, downgrade, gateway, proxy rotation, mirror, CAPTCHA or challenge bypass. Initial missing Python requests import caused zero HTTP; urllib standard library used for first actual request.",
+  "counters": {
+    "operatorContacts": 0,
+    "operatorOriginRequests": 0,
+    "permissionRequests": 0,
+    "formsSubmitted": 0,
+    "collectorCalls": 0,
+    "geocoderCalls": 0,
+    "paidApiCalls": 0,
+    "sourceActivations": 0
+  },
+  "limits": "Source count groups metadata and row requests under the same dataset, matching the three-request-per-candidate rule. General policy documentation and search-index discovery are separately accounted. Git/Vercel/Library administration is not source-provider traffic."
+}

@@ -1,0 +1,166 @@
+{
+  "reviewedOn": "2026-10-06 UTC / 2026-10-05 America/Chicago",
+  "sources": [
+    {
+      "candidateId": "C1",
+      "datasetOrService": "Building Permits 76t5-zqzr",
+      "publisher": "City of Seattle / SDCI",
+      "canonicalEndpoint": "https://data.seattle.gov/resource/76t5-zqzr.json",
+      "validityReviewDate": "2026-10-06 UTC / 2026-10-05 America/Chicago",
+      "validity": "Snapshot only; no evergreen approval, source activation, or contract permission window established.",
+      "permissionVerdict": "affirmative dataset Public Domain declaration",
+      "commercialFactualReuse": "Supported by dataset Public Domain declaration; Seattle open-data policy sections 3E and 4B support commercial modification and API use for portal datasets.",
+      "normalizationModification": "Permitted; preserve source facts and disclose deterministic normalization.",
+      "automatedAccessAuthority": "Official open-data portal dataset plus SODA documented unauthenticated queries; no automatic production collector approved.",
+      "accountKeyRequirement": "None for the successful anonymous public reads; optional app token is not required.",
+      "billingCardRequirement": "None; $0 demonstrated.",
+      "rateLimitPosture": "Untokened reads share source-IP capacity; 429 possible. No numeric entitlement or SLA established.",
+      "exactLicenseEvidence": {
+        "id": "76t5-zqzr",
+        "name": "Building Permits",
+        "licenseId": "PUBLIC_DOMAIN",
+        "license": {
+          "name": "Public Domain"
+        },
+        "attribution": "City of Seattle",
+        "provenance": "official"
+      },
+      "evidenceOrigin": "Inherited base commit; no fresh metadata/row request",
+      "attribution": "City of Seattle (retain publisher credit)"
+    },
+    {
+      "candidateId": "C2",
+      "datasetOrService": "Fire Permit Status",
+      "publisher": "Seattle Fire Department",
+      "canonicalEndpoint": "https://web.seattle.gov/sfd/permitstatus/",
+      "validityReviewDate": "2026-10-06 UTC / 2026-10-05 America/Chicago",
+      "validity": "Snapshot only; no evergreen approval, source activation, or contract permission window established.",
+      "permissionVerdict": "unestablished; not selectable",
+      "exactLicenseEvidence": null,
+      "commercialFactualReuse": "Unresolved; government ownership and public accessibility are not grants.",
+      "normalizationModification": "Unresolved.",
+      "attribution": "No adequate source-specific grant established.",
+      "automatedAccessAuthority": "Unresolved. No programmatic record extraction or form search attempted.",
+      "accountKeyRequirement": "C2 landing public with no key; C5 feed access requirements unestablished.",
+      "billingCardRequirement": "No card or paid call used; usable feed cost unestablished.",
+      "rateLimitPosture": "Unknown."
+    },
+    {
+      "candidateId": "C3",
+      "datasetOrService": "Special Events Permits dm95-f8w5",
+      "publisher": "City of Seattle / Office of Economic Development / Special Events Office",
+      "canonicalEndpoint": "https://data.seattle.gov/resource/dm95-f8w5.json",
+      "validityReviewDate": "2026-10-06 UTC / 2026-10-05 America/Chicago",
+      "validity": "Snapshot only; no evergreen approval, source activation, or contract permission window established.",
+      "permissionVerdict": "affirmative dataset Public Domain declaration",
+      "commercialFactualReuse": "Supported by dataset Public Domain declaration; Seattle open-data policy sections 3E and 4B support commercial modification and API use for portal datasets.",
+      "normalizationModification": "Permitted; preserve source facts and disclose deterministic normalization.",
+      "automatedAccessAuthority": "Official open-data portal dataset plus SODA documented unauthenticated queries; no automatic production collector approved.",
+      "accountKeyRequirement": "None for the successful anonymous public reads; optional app token is not required.",
+      "billingCardRequirement": "None; $0 demonstrated.",
+      "rateLimitPosture": "Untokened reads share source-IP capacity; 429 possible. No numeric entitlement or SLA established.",
+      "exactLicenseEvidence": {
+        "id": "dm95-f8w5",
+        "name": "Special Events Permits",
+        "licenseId": "PUBLIC_DOMAIN",
+        "license": {
+          "name": "Public Domain"
+        },
+        "provenance": "official",
+        "attribution": "City of Seattle"
+      },
+      "evidenceOrigin": "Fresh direct metadata: D02 for C3, D03 for C4",
+      "attribution": "City of Seattle (retain publisher credit)"
+    },
+    {
+      "candidateId": "C4",
+      "datasetOrService": "Active Business License Tax Certificate wnbq-64tb",
+      "publisher": "City of Seattle / Department of Finance and Administrative Services",
+      "canonicalEndpoint": "https://data.seattle.gov/resource/wnbq-64tb.json",
+      "validityReviewDate": "2026-10-06 UTC / 2026-10-05 America/Chicago",
+      "validity": "Snapshot only; no evergreen approval, source activation, or contract permission window established.",
+      "permissionVerdict": "affirmative dataset Public Domain declaration",
+      "commercialFactualReuse": "Supported by dataset Public Domain declaration; Seattle open-data policy sections 3E and 4B support commercial modification and API use for portal datasets.",
+      "normalizationModification": "Permitted; preserve source facts and disclose deterministic normalization.",
+      "automatedAccessAuthority": "Official open-data portal dataset plus SODA documented unauthenticated queries; no automatic production collector approved.",
+      "accountKeyRequirement": "None for the successful anonymous public reads; optional app token is not required.",
+      "billingCardRequirement": "None; $0 demonstrated.",
+      "rateLimitPosture": "Untokened reads share source-IP capacity; 429 possible. No numeric entitlement or SLA established.",
+      "exactLicenseEvidence": {
+        "id": "wnbq-64tb",
+        "name": "Active Business License Tax Certificate",
+        "licenseId": "PUBLIC_DOMAIN",
+        "license": {
+          "name": "Public Domain"
+        },
+        "provenance": "official",
+        "attribution": "Department of Finance and Administrative Services"
+      },
+      "evidenceOrigin": "Fresh direct metadata: D02 for C3, D03 for C4",
+      "attribution": "Department of Finance and Administrative Services (retain publisher credit)"
+    },
+    {
+      "candidateId": "C5",
+      "datasetOrService": "Special Events planning calendar",
+      "publisher": "City of Seattle / Special Events Office",
+      "canonicalEndpoint": "https://seattle.gov/special-events/plan-an-event/calendar",
+      "validityReviewDate": "2026-10-06 UTC / 2026-10-05 America/Chicago",
+      "validity": "Snapshot only; no evergreen approval, source activation, or contract permission window established.",
+      "permissionVerdict": "unestablished; not selectable",
+      "exactLicenseEvidence": null,
+      "commercialFactualReuse": "Unresolved; government ownership and public accessibility are not grants.",
+      "normalizationModification": "Unresolved.",
+      "attribution": "No adequate source-specific grant established.",
+      "automatedAccessAuthority": "Unresolved. No programmatic record extraction or form search attempted.",
+      "accountKeyRequirement": "C2 landing public with no key; C5 feed access requirements unestablished.",
+      "billingCardRequirement": "No card or paid call used; usable feed cost unestablished.",
+      "rateLimitPosture": "Unknown."
+    },
+    {
+      "candidateId": "C6",
+      "datasetOrService": "OpenStreetMap via Overpass",
+      "publisher": "OpenStreetMap contributors; independent public Overpass service",
+      "canonicalEndpoint": "https://overpass-api.de/api/interpreter",
+      "validityReviewDate": "2026-10-06 UTC / 2026-10-05 America/Chicago",
+      "validity": "Snapshot only; no evergreen approval, source activation, or contract permission window established.",
+      "permissionVerdict": "ODbL affirmative; row acquisition failed",
+      "exactLicenseEvidence": {
+        "license": "Open Data Commons Open Database License (ODbL)",
+        "authority": "https://www.openstreetmap.org/copyright"
+      },
+      "commercialFactualReuse": "Supported subject to ODbL obligations.",
+      "normalizationModification": "Adaptation permitted subject to applicable database share-alike obligations.",
+      "attribution": "OpenStreetMap and its contributors; make ODbL availability clear.",
+      "automatedAccessAuthority": "Overpass public-query policy supports small research queries; expressly unsuitable as an unreviewed general-app backend.",
+      "accountKeyRequirement": "No account/key in documented public query path.",
+      "billingCardRequirement": "No billing/card; $0 research request.",
+      "rateLimitPosture": "Guidance approximately 10,000 requests/day and 1 GB/day; load shedding and per-IP slots, no entitlement or production SLA."
+    }
+  ],
+  "supportingAuthorities": [
+    {
+      "url": "https://www.seattle.gov/documents/departments/tech/opendata/cos_opendatapolicy.pdf",
+      "section": "3D–3F and 4B",
+      "evidence": "Official search index exposed the policy text, including commercial reuse/modification and machine-readable/API publication. Direct PDF open returned 403. This is corroboration, not a new claim of successful PDF retrieval. Exact per-dataset metadata is the primary grant evidence.",
+      "indexedUrl": "https://seattle.gov/Documents/Departments/Tech/OpenData/COS_OpenDataPolicy.pdf",
+      "scope": "Datasets published to Open Data Portal; not automatically Fire lookup, calendar, operator or third-party pages."
+    },
+    {
+      "url": "https://dev.socrata.com/docs/app-tokens.html",
+      "sections": "Throttling limits; Using your Application Token",
+      "evidence": "Simple unauthenticated SODA queries are documented; lower shared-IP limits and possible 429 apply. Documentation license is not substituted for dataset license."
+    },
+    {
+      "url": "https://www.openstreetmap.org/copyright",
+      "sections": "OpenStreetMap licensing; How to credit OpenStreetMap",
+      "evidence": "ODbL for map data, adaptation and distribution with attribution and applicable share-alike."
+    },
+    {
+      "url": "https://dev.overpass-api.de/overpass-doc/en/preface/commons.html",
+      "sections": "Magnitudes; Quotas",
+      "evidence": "Small queries contemplated; load-shedding possible; apps should not rely on public instances as their backend."
+    }
+  ],
+  "zeroContact": true,
+  "operatorWebsitePermissionInferred": false
+}

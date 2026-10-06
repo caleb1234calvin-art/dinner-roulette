@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-06T03:50:06.939319+00:00",
+  "base": {
+    "sha": "e8c3545a317486b5facbe024423d724c009f7b4c",
+    "tree": "b1d5d400980ce15538c2aeef0c646a605559acda",
+    "soleParent": "67ac0654488bb7f02b1c08eef11479c4fe63af04"
+  },
+  "baseIdentity": "PASS",
+  "additionsOnly": "PASS",
+  "preexistingLeafCount": 1378,
+  "preexistingObjectTypeModePreservation": "PASS",
+  "allNewFilesNonexecutableMarkdownOrJson": "PASS",
+  "executableChangedPaths": 0,
+  "jsonSyntax": "PASS",
+  "stagedDiffCheck": "PASS",
+  "sensitiveContentScreen": {
+    "result": "PASS",
+    "rules": [
+      "private-key",
+      "github-token",
+      "cloud-key",
+      "credential-value",
+      "signed-url",
+      "email-address"
+    ],
+    "findings": 0,
+    "manualReview": "Fact-only extracts; no raw promotional content, personal applicant records, unrelated business facts, cookies, credentials or raw deployment internals retained."
+  },
+  "inventories": "Six candidates, 22 fields each, all actual retained rows covered.",
+  "requestLimits": "PASS: six source candidates including inherited A; seven candidate content actions; at most two each. General documentation/search separately itemized.",
+  "unstagedPaths": 0,
+  "untrackedPaths": 0,
+  "buildsAndApplicationTests": "Not run: documentation-only; no executable changes.",
+  "finalization": "After adding this summary, the same validator is rerun over the entire staged tree. Exact final tree/SHA, ten-path count and clean post-commit state belong in external receipt."
+}

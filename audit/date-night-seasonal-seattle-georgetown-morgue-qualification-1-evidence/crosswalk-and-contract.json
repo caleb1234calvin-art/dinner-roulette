@@ -1,0 +1,65 @@
+{
+  "reviewedOn": "2026-10-06 UTC / 2026-10-05 America/Chicago",
+  "crosswalks": [
+    {
+      "from": "C1 permit 7160133-CN",
+      "to": "C1 permit 7160149-CN",
+      "result": "Strong same-attraction lead within one dataset; not an independent Source B",
+      "basis": "Same exact attraction phrase, full address, identical worksite coordinates and retained shared review reference. No canonical operator or permanent attraction ID."
+    },
+    {
+      "from": "C1 Georgetown Morgue",
+      "to": "C3 six historical named events",
+      "result": "Plausible historical-name lead only; strong cross-source identity gate not passed",
+      "basis": "Exact name/Haunted House title plus Seattle neighborhoods, but no exact street, shared official ID or official cross-reference acquired. Different years never merge into 2026."
+    },
+    {
+      "from": "C1 physical address",
+      "to": "C4 SEATTLEHAUNTS LLC tax-certificate record",
+      "result": "Reviewed exact physical-address match; no canonical operator-of or same-event crosswalk approved",
+      "basis": "E -> EAST deterministic directional expansion; same street number/street/S direction, Seattle, WA; 98134-2408 base ZIP 98134. No geocoding. Business name does not explicitly assert Georgetown Morgue alias/operation."
+    },
+    {
+      "from": "C1 physical address",
+      "to": "two C4 West Marginal Way rows",
+      "result": "Rejected",
+      "basis": "W MARGINAL WAY SW and ZIP 98106 do not equal EAST MARGINAL WAY S and ZIP 98134; no fuzzy merge."
+    }
+  ],
+  "durability": {
+    "C1": "Permit numbers identify administrative records, not permanent attraction entities.",
+    "C3": "Special Events Office permit number is a historical application locator, not a season-independent attraction ID. No republish permanence guarantee acquired.",
+    "C4": "city_account_number documented as unique license number; exact UBI retained. Business licensing identity is not attraction identity; no indefinite stability guarantee.",
+    "C6": "No typed OSM ID obtained; do not invent a crosswalk."
+  },
+  "contractReadiness": {
+    "decision": "C",
+    "directCollectorDesignReady": false,
+    "narrowContractDesignReady": false,
+    "conditionalLaterDecision": "B — NARROW CONTRACT DESIGN, only after source category/calendar/identity gates pass. Current JSON/SoQL paths cannot go directly to collector design.",
+    "unchangedFilesReviewed": [
+      "tools/seasonal-facts/schema.ts",
+      "tools/seasonal-facts/policy.ts",
+      "tools/seasonal-facts/builder.ts",
+      "tools/seasonal-facts/README.md"
+    ],
+    "blockers": [
+      "Ordinary application/json is outside the MIME enum.",
+      "Dollar-prefixed SoQL names fail allowedQuery name regex.",
+      "Query values are bounded to 100 characters; actual selected projections and C4 filter exceed that bound.",
+      "Every selected observation must carry explicit matching season/year and nonhistorical verification; static/historical A facts cannot inherit current season from B.",
+      "Runtime facts require an explicit calendar; active license/permit status and occupancy authorization are insufficient.",
+      "Worksite CRS, visitor-point meaning and uncertainty are unresolved; decimal precision is not accuracy.",
+      "No permission-qualified 2026 visitor evidence or complete reviewed identity pair acquired."
+    ],
+    "implementationChanges": 0
+  },
+  "nextTask": {
+    "exactTitle": "SEATTLE 2026 SPECIAL-EVENTS PUBLIC EXPORT RIGHTS TRIAGE #1 — ZERO CONTACT",
+    "reason": "Official Special Events application guidance says 2026 applications moved to Eproval, while acquired open dataset is last updated January 2025 and target rows end in 2024. This is a concrete publication-gap lead, not a proven open export.",
+    "discoveryAuthority": "https://www.seattle.gov/special-events/permits/application-and-instructions",
+    "scope": "One short, separately authorized permission-first check for an official public 2026 export linked by the Special Events Office. No login, application submission, contact, private records request, broad national search or assumption that Eproval has an open API.",
+    "stopRule": "If no affirmative public export grant and actual Georgetown Morgue row with category and visitor schedule are exposed, park this attraction. Do not chain more generic dataset sweeps.",
+    "optionalTransportDiagnostic": "Owner may separately run the exact bounded D06 OSM query in Termux if desired. No result exists yet and Work-only causation is unproven; even a successful row must satisfy 2026 calendar/category/crosswalk gates and separate architecture review. Not the primary pivot."
+  }
+}

@@ -1,0 +1,615 @@
+{
+  "reviewedOn": "2026-10-06 UTC / 2026-10-05 America/Chicago",
+  "verdict": "SEATTLE GEORGETOWN MORGUE QUALIFICATION BLOCKED — OPEN VISITOR-CALENDAR/CATEGORY EVIDENCE NOT ESTABLISHED",
+  "implementationDecision": "C — MORE SOURCE RESEARCH",
+  "singleSourcePath": false,
+  "twoSourcePath": false,
+  "legend": {
+    "A": "Directly source-published fact (scope/meaning caveats remain)",
+    "B": "Deterministic reviewed extraction/derivation",
+    "C": "Needs another permission-qualified source and strong crosswalk",
+    "D": "Absent/unresolved"
+  },
+  "candidates": [
+    {
+      "candidateId": "C1",
+      "name": "Building Permits 76t5-zqzr",
+      "canonicalEndpoint": "https://data.seattle.gov/resource/76t5-zqzr.json",
+      "selected": false,
+      "actualRowIds": [
+        "7160133-CN",
+        "7160149-CN"
+      ],
+      "inventoryAppliesTo": "Every listed row independently; differences are retained in record-evidence.json. Empty row lists have unresolved inventories, not invented schema facts.",
+      "fieldInventory": {
+        "native ID": {
+          "class": "A",
+          "evidence": "permitnum: administrative record IDs, not permanent attraction identities."
+        },
+        "attraction name": {
+          "class": "B",
+          "evidence": "Georgetown Morgue extracted from exact phrase Georgetown Morgue Haunted House 2026."
+        },
+        "attraction category": {
+          "class": "B",
+          "evidence": "Haunted House phrase extracted from administrative description. Dedicated classes Industrial / Building / Temporary do not pass category gate."
+        },
+        "operator/venue identity": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "street": {
+          "class": "A",
+          "evidence": "originaladdress1 directly published in both inherited records."
+        },
+        "city": {
+          "class": "A",
+          "evidence": "originalcity directly published in both inherited records."
+        },
+        "state": {
+          "class": "A",
+          "evidence": "originalstate directly published in both inherited records."
+        },
+        "postal": {
+          "class": "A",
+          "evidence": "originalzip directly published in both inherited records."
+        },
+        "country": {
+          "class": "B",
+          "evidence": "US derived from complete Seattle, WA source address/jurisdiction."
+        },
+        "latitude": {
+          "class": "A",
+          "evidence": "latitude directly published in both inherited records."
+        },
+        "longitude": {
+          "class": "A",
+          "evidence": "longitude directly published in both inherited records."
+        },
+        "coordinate CRS": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "coordinate point meaning": {
+          "class": "A",
+          "evidence": "Publisher describes worksite coordinates; public entrance/centroid role not established."
+        },
+        "coordinate uncertainty": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "website": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "2026 dates": {
+          "class": "C",
+          "evidence": "Public visitor dates missing. Occupancy intervals are reviewed B derivations 2026-09-19..10-18 and 2026-10-19..11-07, never accepted calendar."
+        },
+        "visitor hours": {
+          "class": "C",
+          "evidence": "Needs independent permission-qualified visitor schedule."
+        },
+        "season/year": {
+          "class": "B",
+          "evidence": "Explicit 2026 in administrative description, not proof of visitor operation."
+        },
+        "active/status/lifecycle": {
+          "class": "A",
+          "evidence": "Completed / Issued are permit workflow statuses; attraction lifecycle unresolved."
+        },
+        "per-record update timestamp": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "dataset update timestamp": {
+          "class": "A",
+          "evidence": "Inherited rowsUpdatedAt=1791249547; viewLastModified=1791249218; not season evidence."
+        }
+      }
+    },
+    {
+      "candidateId": "C2",
+      "name": "Fire Permit Status",
+      "canonicalEndpoint": "https://web.seattle.gov/sfd/permitstatus/",
+      "selected": false,
+      "actualRowIds": [],
+      "inventoryAppliesTo": "Every listed row independently; differences are retained in record-evidence.json. Empty row lists have unresolved inventories, not invented schema facts.",
+      "fieldInventory": {
+        "native ID": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "attraction name": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "attraction category": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "operator/venue identity": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "street": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "city": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "state": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "postal": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "country": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "latitude": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "longitude": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "coordinate CRS": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "coordinate point meaning": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "coordinate uncertainty": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "website": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "2026 dates": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "visitor hours": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "season/year": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "active/status/lifecycle": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "per-record update timestamp": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "dataset update timestamp": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        }
+      }
+    },
+    {
+      "candidateId": "C3",
+      "name": "Special Events Permits dm95-f8w5",
+      "canonicalEndpoint": "https://data.seattle.gov/resource/dm95-f8w5.json",
+      "selected": false,
+      "actualRowIds": [
+        "S24SE283",
+        "S23SE269",
+        "S22SE237",
+        "S21SE045",
+        "S20SE217",
+        "S19SE411"
+      ],
+      "inventoryAppliesTo": "Every listed row independently; differences are retained in record-evidence.json. Empty row lists have unresolved inventories, not invented schema facts.",
+      "fieldInventory": {
+        "native ID": {
+          "class": "A",
+          "evidence": "year_month_app: Special Events Office permit number."
+        },
+        "attraction name": {
+          "class": "A",
+          "evidence": "name_of_event = Georgetown Morgue Haunted House in each of six rows."
+        },
+        "attraction category": {
+          "class": "B",
+          "evidence": "Haunted House extracted from name. Dedicated event_category=Commercial, permit_type=Special Event; newest event_sub_category=Multi-Date. No dedicated qualifying classification."
+        },
+        "operator/venue identity": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "street": {
+          "class": "C",
+          "evidence": "No value in target event rows; another permission-qualified record and strong crosswalk would be needed."
+        },
+        "city": {
+          "class": "C",
+          "evidence": "No value in target event rows; another permission-qualified record and strong crosswalk would be needed."
+        },
+        "state": {
+          "class": "C",
+          "evidence": "No value in target event rows; another permission-qualified record and strong crosswalk would be needed."
+        },
+        "postal": {
+          "class": "C",
+          "evidence": "No value in target event rows; another permission-qualified record and strong crosswalk would be needed."
+        },
+        "country": {
+          "class": "B",
+          "evidence": "US by Seattle municipal event jurisdiction; not a published row value."
+        },
+        "latitude": {
+          "class": "C",
+          "evidence": "No value in target event rows; another permission-qualified record and strong crosswalk would be needed."
+        },
+        "longitude": {
+          "class": "C",
+          "evidence": "No value in target event rows; another permission-qualified record and strong crosswalk would be needed."
+        },
+        "coordinate CRS": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "coordinate point meaning": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "coordinate uncertainty": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "website": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "2026 dates": {
+          "class": "C",
+          "evidence": "No 2026 result. Six historical ranges, 2019–2024, are source-published but cannot become current-season visitor dates."
+        },
+        "visitor hours": {
+          "class": "C",
+          "evidence": "No visitor hours in selected rows or schema."
+        },
+        "season/year": {
+          "class": "B",
+          "evidence": "2019–2024 from published event dates; no 2026 season assertion."
+        },
+        "active/status/lifecycle": {
+          "class": "A",
+          "evidence": "Issued / Complete / Cancelled refer to historical permit/application records, not current attraction status."
+        },
+        "per-record update timestamp": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "dataset update timestamp": {
+          "class": "A",
+          "evidence": "rowsUpdatedAt=1736357166 (2025-01-08 UTC); viewLastModified=1738133337. Annual refresh metadata."
+        }
+      }
+    },
+    {
+      "candidateId": "C4",
+      "name": "Active Business License Tax Certificate wnbq-64tb",
+      "canonicalEndpoint": "https://data.seattle.gov/resource/wnbq-64tb.json",
+      "selected": false,
+      "actualRowIds": [
+        "0007491390659762"
+      ],
+      "inventoryAppliesTo": "Every listed row independently; differences are retained in record-evidence.json. Empty row lists have unresolved inventories, not invented schema facts.",
+      "fieldInventory": {
+        "native ID": {
+          "class": "A",
+          "evidence": "city_account_number=0007491390659762; ubi=6032185720010001. Preserve leading zeros and exact source UBI string."
+        },
+        "attraction name": {
+          "class": "C",
+          "evidence": "SEATTLEHAUNTS LLC is a published business name, not a source-published Georgetown Morgue attraction alias."
+        },
+        "attraction category": {
+          "class": "C",
+          "evidence": "naics_code=812990; naics_description=All Other Personal Services. Not an explicit haunted-house category."
+        },
+        "operator/venue identity": {
+          "class": "A",
+          "evidence": "Published legal/trade entity SEATTLEHAUNTS LLC at same address; its operator-of relationship to Georgetown Morgue remains unresolved."
+        },
+        "street": {
+          "class": "A",
+          "evidence": "street_address=5000 E MARGINAL WAY S"
+        },
+        "city": {
+          "class": "A",
+          "evidence": "city=SEATTLE"
+        },
+        "state": {
+          "class": "A",
+          "evidence": "state=WA"
+        },
+        "postal": {
+          "class": "A",
+          "evidence": "zip=98134-2408"
+        },
+        "country": {
+          "class": "B",
+          "evidence": "US by published Seattle, WA address."
+        },
+        "latitude": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "longitude": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "coordinate CRS": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "coordinate point meaning": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "coordinate uncertainty": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "website": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "2026 dates": {
+          "class": "C",
+          "evidence": "No visitor dates; license_start_date=20120801 is administrative history, not a 2026 calendar."
+        },
+        "visitor hours": {
+          "class": "C",
+          "evidence": "No schedule field."
+        },
+        "season/year": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "active/status/lifecycle": {
+          "class": "A",
+          "evidence": "Membership in active tax-certificate dataset, not attraction opening/season status."
+        },
+        "per-record update timestamp": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "dataset update timestamp": {
+          "class": "A",
+          "evidence": "rowsUpdatedAt=1791219335; viewLastModified=1791219234. Daily refresh metadata, not season evidence."
+        }
+      }
+    },
+    {
+      "candidateId": "C5",
+      "name": "Special Events planning calendar",
+      "canonicalEndpoint": "https://seattle.gov/special-events/plan-an-event/calendar",
+      "selected": false,
+      "actualRowIds": [],
+      "inventoryAppliesTo": "Every listed row independently; differences are retained in record-evidence.json. Empty row lists have unresolved inventories, not invented schema facts.",
+      "fieldInventory": {
+        "native ID": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "attraction name": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "attraction category": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "operator/venue identity": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "street": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "city": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "state": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "postal": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "country": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "latitude": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "longitude": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "coordinate CRS": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "coordinate point meaning": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "coordinate uncertainty": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "website": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "2026 dates": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "visitor hours": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "season/year": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "active/status/lifecycle": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "per-record update timestamp": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        },
+        "dataset update timestamp": {
+          "class": "D",
+          "evidence": "Absent/unresolved in acquired evidence."
+        }
+      }
+    },
+    {
+      "candidateId": "C6",
+      "name": "OpenStreetMap via Overpass",
+      "canonicalEndpoint": "https://overpass-api.de/api/interpreter",
+      "selected": false,
+      "actualRowIds": [],
+      "inventoryAppliesTo": "Every listed row independently; differences are retained in record-evidence.json. Empty row lists have unresolved inventories, not invented schema facts.",
+      "fieldInventory": {
+        "native ID": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "attraction name": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "attraction category": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "operator/venue identity": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "street": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "city": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "state": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "postal": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "country": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "latitude": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "longitude": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "coordinate CRS": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "coordinate point meaning": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "coordinate uncertainty": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "website": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "2026 dates": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "visitor hours": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "season/year": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "active/status/lifecycle": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "per-record update timestamp": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        },
+        "dataset update timestamp": {
+          "class": "D",
+          "evidence": "No OSM row acquired: one bounded request returned HTTP 406. No absence, category, coordinate or calendar inference."
+        }
+      }
+    }
+  ]
+}

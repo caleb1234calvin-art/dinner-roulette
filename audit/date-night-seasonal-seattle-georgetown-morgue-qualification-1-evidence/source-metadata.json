@@ -1,0 +1,206 @@
+{
+  "reviewedOn": "2026-10-06 UTC / 2026-10-05 America/Chicago",
+  "sources": {
+    "C3": {
+      "id": "dm95-f8w5",
+      "name": "Special Events Permits",
+      "description": "Applications received and Special Event permits issued by Special Events Office, Office of Economic Development, since 2019",
+      "licenseId": "PUBLIC_DOMAIN",
+      "license": {
+        "name": "Public Domain"
+      },
+      "attribution": "City of Seattle",
+      "provenance": "official",
+      "rowsUpdatedAt": 1736357166,
+      "viewLastModified": 1738133337,
+      "refreshFrequency": "Annually",
+      "fields": [
+        {
+          "name": "Application Date",
+          "fieldName": "application_date",
+          "dataTypeName": "calendar_date",
+          "description": "Date application was received by SE Office"
+        },
+        {
+          "name": "Permit Status",
+          "fieldName": "permit_status",
+          "dataTypeName": "text",
+          "description": "Status of permit (in process, issued, withdrawn, cancelled, etc)"
+        },
+        {
+          "name": "Permit Type",
+          "fieldName": "permit_type",
+          "dataTypeName": "text",
+          "description": "Event type description (Special Event, Charter Vessel, Valet)"
+        },
+        {
+          "name": "Event Category",
+          "fieldName": "event_category",
+          "dataTypeName": "text",
+          "description": "Category (Community, Commercial, Athletic, Free Speech, etc)"
+        },
+        {
+          "name": "Event Sub-Category",
+          "fieldName": "event_sub_category",
+          "dataTypeName": "text",
+          "description": "Athletic event type descriptor (Water, Cycling, Run/Walk)"
+        },
+        {
+          "name": "Name of Event",
+          "fieldName": "name_of_event",
+          "dataTypeName": "text",
+          "description": "Name of event as provided by applicant"
+        },
+        {
+          "name": "Year-Month-App#",
+          "fieldName": "year_month_app",
+          "dataTypeName": "text",
+          "description": "Permit number assigned by Special Events Office"
+        },
+        {
+          "name": "Event Start Date",
+          "fieldName": "event_start_date",
+          "dataTypeName": "calendar_date",
+          "description": "Event Start date"
+        },
+        {
+          "name": "Event End Date",
+          "fieldName": "event_end_date",
+          "dataTypeName": "calendar_date",
+          "description": "Event End date"
+        },
+        {
+          "name": "Event Location - Park",
+          "fieldName": "event_location_park",
+          "dataTypeName": "text",
+          "description": "Park location (if applicable)"
+        },
+        {
+          "name": "Event Location - Neighborhood",
+          "fieldName": "event_location_neighborhood",
+          "dataTypeName": "text",
+          "description": "Neighborhood location(s)"
+        },
+        {
+          "name": "Council District",
+          "fieldName": "council_district",
+          "dataTypeName": "text",
+          "description": "Council District location(s)"
+        },
+        {
+          "name": "Precinct",
+          "fieldName": "precinct",
+          "dataTypeName": "text",
+          "description": "SPD precinct location(s) or SPD office(s)"
+        },
+        {
+          "name": "Organization",
+          "fieldName": "organization",
+          "dataTypeName": "text",
+          "description": "Organization on application"
+        },
+        {
+          "name": "Attendance",
+          "fieldName": "attendance",
+          "dataTypeName": "number",
+          "description": "Attendance as reported by applicant"
+        }
+      ]
+    },
+    "C4": {
+      "id": "wnbq-64tb",
+      "name": "Active Business License Tax Certificate",
+      "description": "This dataset contains active business license tax certificate data for the City of Seattle",
+      "licenseId": "PUBLIC_DOMAIN",
+      "license": {
+        "name": "Public Domain"
+      },
+      "attribution": "Department of Finance and Administrative Services",
+      "provenance": "official",
+      "rowsUpdatedAt": 1791219335,
+      "viewLastModified": 1791219234,
+      "refreshFrequency": "Daily",
+      "fields": [
+        {
+          "name": "Business Legal Name",
+          "fieldName": "business_legal_name",
+          "dataTypeName": "text",
+          "description": "Legal name of the business."
+        },
+        {
+          "name": "Trade Name",
+          "fieldName": "trade_name",
+          "dataTypeName": "text",
+          "description": "Doing Business As (DBA), also known as the trade name of the business."
+        },
+        {
+          "name": "Ownership Type",
+          "fieldName": "ownership_type",
+          "dataTypeName": "text",
+          "description": "Type of business, such as sole proprietorship (SP), partnership (PT), or limited liability corporation (LLC)."
+        },
+        {
+          "name": "NAICS Code",
+          "fieldName": "naics_code",
+          "dataTypeName": "text",
+          "description": "A code identifying the type of business. NAICS stands for North American Industry Classification System."
+        },
+        {
+          "name": "NAICS Description",
+          "fieldName": "naics_description",
+          "dataTypeName": "text",
+          "description": "Full description of North American Industry Classification System (NAICS) code."
+        },
+        {
+          "name": "License Start Date",
+          "fieldName": "license_start_date",
+          "dataTypeName": "text",
+          "description": "Date business was opened in Seattle."
+        },
+        {
+          "name": "Street Address",
+          "fieldName": "street_address",
+          "dataTypeName": "text",
+          "description": "Physical (street) address at which the business is located."
+        },
+        {
+          "name": "City",
+          "fieldName": "city",
+          "dataTypeName": "text",
+          "description": "City"
+        },
+        {
+          "name": "State",
+          "fieldName": "state",
+          "dataTypeName": "text",
+          "description": "State  in which the business is located."
+        },
+        {
+          "name": "Zip",
+          "fieldName": "zip",
+          "dataTypeName": "text",
+          "description": "ZIP code  in which the business is located."
+        },
+        {
+          "name": "Business Phone",
+          "fieldName": "business_phone",
+          "dataTypeName": "text",
+          "description": "Phone number provided by the business."
+        },
+        {
+          "name": "City Account Number",
+          "fieldName": "city_account_number",
+          "dataTypeName": "text",
+          "description": "Unique license number issued by the City of Seattle."
+        },
+        {
+          "name": "UBI",
+          "fieldName": "ubi",
+          "dataTypeName": "text",
+          "description": "Unified Business Identifier (UBI) number issued by the City of Seattle."
+        }
+      ]
+    }
+  },
+  "excluded": "Cached sample values, owner account identifiers and unrelated metadata omitted; complete response hashes are in request-ledger.json."
+}

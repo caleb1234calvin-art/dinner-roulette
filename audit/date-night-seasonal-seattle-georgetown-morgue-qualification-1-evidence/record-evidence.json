@@ -1,0 +1,254 @@
+{
+  "reviewedOn": "2026-10-06 UTC / 2026-10-05 America/Chicago",
+  "selectedSource": null,
+  "qualified2026VisitorRows": 0,
+  "C1": {
+    "acquisition": "Inherited immutable evidence; no new origin request in this task",
+    "commit": "e8c3545a317486b5facbe024423d724c009f7b4c",
+    "path": "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/qualifying-records.json",
+    "responseSha256": "b8a2777e2fd9f6b483acdb10e8cbf782b2a9e5f19b6b6e4f041ed30aa5fd20b0",
+    "records": [
+      {
+        "sourceId": "C2",
+        "nativeId": "7160133-CN",
+        "selectionQualified": false,
+        "publishedFacts": {
+          "permitnum": "7160133-CN",
+          "permitclass": "Industrial",
+          "permittypemapped": "Building",
+          "permittypedesc": "Temporary",
+          "issueddate": "2026-09-08T00:00:00.000",
+          "expiresdate": "2026-09-03T00:00:00.000",
+          "statuscurrent": "Completed",
+          "originaladdress1": "5000 EAST MARGINAL WAY S",
+          "originalcity": "SEATTLE",
+          "originalstate": "WA",
+          "originalzip": "98134",
+          "latitude": "47.55724818",
+          "longitude": "-122.33836450"
+        },
+        "exactShortDescriptionExcerpt": "Georgetown Morgue Haunted House 2026",
+        "derivations": {
+          "attractionName": {
+            "class": "B",
+            "value": "Georgetown Morgue",
+            "method": "Extract attraction name from same-record administrative identity phrase"
+          },
+          "activity": {
+            "class": "B",
+            "value": "haunted-house",
+            "method": "Explicit Haunted House phrase; source dedicated attraction classification absent"
+          },
+          "occurrenceYear": {
+            "class": "B",
+            "value": 2026,
+            "method": "Explicit year in same-record description, not metadata timestamp"
+          },
+          "permittedOccupancy": {
+            "class": "B",
+            "start": "2026-09-19",
+            "end": "2026-10-18",
+            "method": "Description month/day boundaries plus explicit same-record 2026",
+            "isPublicVisitorCalendar": false
+          },
+          "country": {
+            "class": "B",
+            "value": "US",
+            "method": "Seattle, Washington jurisdiction from published full address"
+          }
+        },
+        "unresolved": [
+          "visitor operating dates and hours",
+          "dedicated attraction classification",
+          "operator identity",
+          "attraction lifecycle",
+          "explicit coordinate CRS",
+          "coordinate uncertainty and entrance meaning"
+        ],
+        "dataQualityFlag": "Expiration predates issue date; not repaired"
+      },
+      {
+        "sourceId": "C2",
+        "nativeId": "7160149-CN",
+        "selectionQualified": false,
+        "publishedFacts": {
+          "permitnum": "7160149-CN",
+          "permitclass": "Industrial",
+          "permittypemapped": "Building",
+          "permittypedesc": "Temporary",
+          "issueddate": "2026-09-08T00:00:00.000",
+          "expiresdate": "2028-03-08T00:00:00.000",
+          "statuscurrent": "Issued",
+          "originaladdress1": "5000 EAST MARGINAL WAY S",
+          "originalcity": "SEATTLE",
+          "originalstate": "WA",
+          "originalzip": "98134",
+          "latitude": "47.55724818",
+          "longitude": "-122.33836450"
+        },
+        "exactShortDescriptionExcerpt": "Georgetown Morgue Haunted House 2026",
+        "derivations": {
+          "attractionName": {
+            "class": "B",
+            "value": "Georgetown Morgue",
+            "method": "Extract attraction name from same-record administrative identity phrase"
+          },
+          "activity": {
+            "class": "B",
+            "value": "haunted-house",
+            "method": "Explicit Haunted House phrase; source dedicated attraction classification absent"
+          },
+          "occurrenceYear": {
+            "class": "B",
+            "value": 2026,
+            "method": "Explicit year in same-record description, not metadata timestamp"
+          },
+          "permittedOccupancy": {
+            "class": "B",
+            "start": "2026-10-19",
+            "end": "2026-11-07",
+            "method": "Description month/day boundaries plus explicit same-record 2026",
+            "isPublicVisitorCalendar": false
+          },
+          "country": {
+            "class": "B",
+            "value": "US",
+            "method": "Seattle, Washington jurisdiction from published full address"
+          }
+        },
+        "unresolved": [
+          "visitor operating dates and hours",
+          "dedicated attraction classification",
+          "operator identity",
+          "attraction lifecycle",
+          "explicit coordinate CRS",
+          "coordinate uncertainty and entrance meaning"
+        ],
+        "dataQualityFlag": "2028 permit expiration must not become 2026 attraction season end"
+      }
+    ]
+  },
+  "C3": {
+    "acquisition": "D04 new direct anonymous JSON response",
+    "returnedCount": 6,
+    "records": [
+      {
+        "year_month_app": "S24SE283",
+        "name_of_event": "Georgetown Morgue Haunted House",
+        "permit_status": "Issued",
+        "permit_type": "Special Event",
+        "event_category": "Commercial",
+        "event_sub_category": "Multi-Date",
+        "event_start_date": "2024-09-20T00:00:00.000",
+        "event_end_date": "2024-11-05T00:00:00.000",
+        "event_location_neighborhood": "Duwamish / SODO",
+        "application_date": "2024-06-21T00:00:00.000"
+      },
+      {
+        "year_month_app": "S23SE269",
+        "name_of_event": "Georgetown Morgue Haunted House",
+        "permit_status": "Issued",
+        "permit_type": "Special Event",
+        "event_category": "Commercial",
+        "event_start_date": "2023-09-11T00:00:00.000",
+        "event_end_date": "2023-11-07T00:00:00.000",
+        "event_location_neighborhood": "Duwamish / SODO",
+        "application_date": "2023-06-23T00:00:00.000"
+      },
+      {
+        "year_month_app": "S22SE237",
+        "name_of_event": "Georgetown Morgue Haunted House",
+        "permit_status": "Issued",
+        "permit_type": "Special Event",
+        "event_category": "Commercial",
+        "event_start_date": "2022-09-23T00:00:00.000",
+        "event_end_date": "2022-11-05T00:00:00.000",
+        "event_location_neighborhood": "Duwamish / SODO",
+        "application_date": "2022-06-27T00:00:00.000"
+      },
+      {
+        "year_month_app": "S21SE045",
+        "name_of_event": "Georgetown Morgue Haunted House",
+        "permit_status": "Complete",
+        "permit_type": "Special Event",
+        "event_category": "Commercial",
+        "event_start_date": "2021-09-24T00:00:00.000",
+        "event_end_date": "2021-11-06T00:00:00.000",
+        "event_location_neighborhood": "Duwamish / SODO;Georgetown",
+        "application_date": "2021-06-28T00:00:00.000"
+      },
+      {
+        "year_month_app": "S20SE217",
+        "name_of_event": "Georgetown Morgue Haunted House",
+        "permit_status": "Cancelled",
+        "permit_type": "Special Event",
+        "event_category": "Commercial",
+        "event_start_date": "2020-09-25T00:00:00.000",
+        "event_end_date": "2020-11-01T00:00:00.000",
+        "event_location_neighborhood": "Georgetown",
+        "application_date": "2020-06-23T00:00:00.000"
+      },
+      {
+        "year_month_app": "S19SE411",
+        "name_of_event": "Georgetown Morgue Haunted House",
+        "permit_status": "Complete",
+        "permit_type": "Special Event",
+        "event_category": "Commercial",
+        "event_start_date": "2019-09-27T00:00:00.000",
+        "event_end_date": "2019-11-02T00:00:00.000",
+        "event_location_neighborhood": "Georgetown",
+        "application_date": "2019-07-23T00:00:00.000"
+      }
+    ],
+    "warning": "Historical application/event date ranges only; never 2026 visitor dates or daily opening claims."
+  },
+  "C4": {
+    "acquisition": "D05 new direct anonymous JSON response",
+    "returnedCount": 3,
+    "retainedTargetAddressCount": 1,
+    "records": [
+      {
+        "city_account_number": "0007491390659762",
+        "ubi": "6032185720010001",
+        "business_legal_name": "SEATTLEHAUNTS LLC",
+        "trade_name": "SEATTLEHAUNTS LLC",
+        "ownership_type": "LLC - Multi Member",
+        "naics_code": "812990",
+        "naics_description": "All Other Personal Services",
+        "license_start_date": "20120801",
+        "street_address": "5000 E MARGINAL WAY S",
+        "city": "SEATTLE",
+        "state": "WA",
+        "zip": "98134-2408"
+      }
+    ],
+    "excludedCount": 2,
+    "exclusion": "Two returned records were at 5000 W MARGINAL WAY SW, ZIP 98106. West/SW is not East/S. Their other business facts are not retained."
+  },
+  "C2": {
+    "returnedRows": 0,
+    "reason": "Landing inspected; no public-record search submitted because source-specific reuse/automation authority unestablished."
+  },
+  "C5": {
+    "returnedRows": 0,
+    "reason": "Reference-page open returned 403; no retry."
+  },
+  "C6": {
+    "returnedRows": 0,
+    "reason": "One narrow Overpass request returned 406; not evidence of an empty OSM result."
+  },
+  "newRowTotals": {
+    "allReturned": 9,
+    "relevantRetained": 7,
+    "rejectedLocationMismatches": 2
+  },
+  "excludedContent": [
+    "promotional prose",
+    "reviews",
+    "ratings",
+    "photos",
+    "logos",
+    "testimonials",
+    "personal applicant records"
+  ]
+}

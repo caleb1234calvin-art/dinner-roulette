@@ -1,0 +1,19 @@
+# Georgetown Morgue qualification #1 — continuation
+
+**SEATTLE GEORGETOWN MORGUE QUALIFICATION BLOCKED — OPEN VISITOR-CALENDAR/CATEGORY EVIDENCE NOT ESTABLISHED**
+
+Decision C — MORE SOURCE RESEARCH. No source/pair selected, no collector/contract/runtime implementation authorized. Report: `audit/date-night-seasonal-seattle-georgetown-morgue-qualification-1.md`; complete evidence in the corresponding `-evidence` directory.
+
+Verified base SHA `e8c3545a317486b5facbe024423d724c009f7b4c`, tree `b1d5d400980ce15538c2aeef0c646a605559acda`, sole parent `67ac0654488bb7f02b1c08eef11479c4fe63af04`. Required local branch `research/date-night-seasonal-seattle-georgetown-morgue-qualification-1` is a single additions-only documentation child of that base. Resolve its exact final SHA/tree/parent from the external receipt and bundled Git object; do not reconstruct.
+
+Six candidates including inherited Building Permits Source A; seven new candidate-directed actions, maximum two per candidate. C2 Fire lookup: rights unresolved, no form submitted. C3 Special Events `dm95-f8w5`: explicit Public Domain, six named Georgetown Morgue records from 2019–2024, no 2026 row; dedicated categories Commercial/Special Event/Multi-Date. C4 business licenses `wnbq-64tb`: explicit Public Domain, SEATTLEHAUNTS LLC at 5000 E MARGINAL WAY S, Seattle WA 98134-2408, account `0007491390659762`, UBI string `6032185720010001`, NAICS 812990 All Other Personal Services; no visitor calendar. Two West/SW address responses rejected. C5 planning calendar returned 403. C6 one bounded OSM query returned 406; no row, no retry, no absence inference. No alternate mirrors or transport tricks.
+
+C1 permit occupancy remains nonvisitor evidence; preserve the first permit's expiration-before-issue anomaly and the second's 2028 expiration. Worksite coordinates retain unresolved CRS/entrance meaning/uncertainty. Same address links SEATTLEHAUNTS LLC to a business location, not conclusively to the attraction operator. Historical event title without exact address/shared ID is not an approved crosswalk. No single-source or two-source implementation path exists.
+
+Next exact task: **SEATTLE 2026 SPECIAL-EVENTS PUBLIC EXPORT RIGHTS TRIAGE #1 — ZERO CONTACT.** Official discovery guidance says 2026 applications use Eproval; the open legacy dataset has January 2025 update metadata. A separately authorized short permission-first check may establish whether an official public 2026 export exists. Do not assume an open API/grant, log in, submit applications, contact any operator/agency, request private records, or broaden into national discovery. Require explicit reusable current visitor category/calendar and strong crosswalk. If no such export is exposed, park Georgetown. Optional owner-side OSM transport diagnosis is not completed evidence and not a production architecture decision.
+
+If facts later qualify, the next implementation-stage task is B — NARROW CONTRACT DESIGN: ordinary JSON, SoQL dollar keys/value bounds, truthful static/current-season provenance and coordinate review remain unresolved. No contract or collector work now.
+
+Publication held: **do not push** until the owner separately authorizes this exact new commit and the normal automatic Vercel non-production Preview. Prior publication authorization applied to Discovery #2 only. Preserve the exact commit object and sole parent. Main must remain `078f65c5d194435452ca14569ea00e57f52a20f3`; production `dpl_HmqKyiLqCqMSTrhxKktsy9mJtDKy`. No production deployment/promotion, alias change or project setting change.
+
+Operator contacts, operator-origin requests, permission requests, submitted forms, collector calls, geocoder calls, paid API calls, source activations and executable changed paths are all zero. Validate additions-only object/type/mode preservation, JSON, whitespace and sensitive content; final worktree must be clean. The user's explicit zero-contact boundary remains in force.
