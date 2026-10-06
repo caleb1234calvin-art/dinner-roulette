@@ -1,0 +1,53 @@
+{
+  "primaryOutcome": "SEASONAL RELEASE PATH BLOCKED — NO IMPLEMENTATION-READY ZERO-CONTACT SOURCE FOUND",
+  "decision": "C — RELEASE-SCOPE DECISION REQUIRED",
+  "sourceResearchFinishedForQualifiedPilot": false,
+  "boundedSweepFinished": true,
+  "repeatDiscoveryRecommended": false,
+  "phaseC": "NOT_ENTERED: source qualification prerequisite failed; no contract design or implementation handoff created",
+  "implementationHandoffPath": null,
+  "contractFilesRead": [
+    "tools/seasonal-facts/README.md",
+    "tools/seasonal-facts/schema.ts",
+    "tools/seasonal-facts/policy.ts",
+    "tools/seasonal-facts/builder.ts"
+  ],
+  "unchangedContractFindings": [
+    "Only three exact attraction categories.",
+    "Strict address requires postal and country; unknown postal is not invented.",
+    "Ordinary application/json and CSV/binary/octet-stream not allowed; dollar-prefixed query names fail and query values are bounded to 100 characters.",
+    "Every selected observation requires explicit matching season/year and nonhistorical verification.",
+    "Runtime requires explicit calendar and verified coordinates with point meaning, uncertainty and provenance.",
+    "All sources disabled; collectSource throws OFFLINE_ONLY. No fixture generation or runtime generation executed."
+  ],
+  "whyNoEngineeringExtensionNow": "Transport or schema changes cannot supply missing factual calendar, current rows, reuse authority or address provenance. Designing a pilot from rejected sources would not satisfy Phase C.",
+  "recommendedNextTask": "PICK FOR US — SEASONAL RELEASE-SCOPE DECISION #1",
+  "recommendedScope": "Defer live seasonal-attraction ingestion for this release. Preserve independently verified existing seasonal presentation and regular Date Night flows; do not fabricate or publish attraction occurrences.",
+  "alternatives": [
+    {
+      "choice": "Ship existing seasonal presentation only",
+      "conditions": "Separately scope any needed UI/empty-state work; no assertion that that UI was verified by this research sweep."
+    },
+    {
+      "choice": "Separately authorize a manually curated/static reviewed seed",
+      "conditions": "Requires permission-qualified factual evidence, current dates, provenance, refresh/expiry rules and independent review; manual entry does not waive data rights or factual integrity."
+    },
+    {
+      "choice": "Defer the seasonal attraction category entirely",
+      "conditions": "Keeps current ingestion constraints and avoids unsupported availability claims."
+    },
+    {
+      "choice": "Authorize a different acquisition model",
+      "conditions": "Owner must explicitly name changed constraint, scope/cost/contact rules and permission source. Existing zero-contact/$0 limits remain until changed."
+    }
+  ],
+  "forbiddenRelaxations": [
+    "reuse/access permissions",
+    "access controls",
+    "truthful categories",
+    "visitor dates versus administrative dates",
+    "season provenance",
+    "production protection"
+  ],
+  "nextWorkerGuard": "No source implementation, further equivalent discovery sweep, UI changes, seed creation or publication until owner selects/authorizes the next scope; preserve exact review commit for publication."
+}

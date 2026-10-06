@@ -1,0 +1,88 @@
+{
+  "reviewDateUTC": "2026-10-06",
+  "initialReadback": {
+    "main": "078f65c5d194435452ca14569ea00e57f52a20f3",
+    "production": {
+      "id": "dpl_HmqKyiLqCqMSTrhxKktsy9mJtDKy",
+      "target": "production",
+      "state": "READY",
+      "gitCommitRef": "main",
+      "gitCommitSha": "078f65c5d194435452ca14569ea00e57f52a20f3",
+      "aliases": [
+        "dinner-roulette-chi.vercel.app",
+        "dinner-roulette-git-main-minions-9e2c.vercel.app",
+        "dinner-roulette-minions-9e2c.vercel.app",
+        "pickforus.app",
+        "www.pickforus.app"
+      ],
+      "aliasError": null
+    },
+    "aliases": [
+      {
+        "alias": "dinner-roulette-chi.vercel.app",
+        "redirect": null
+      },
+      {
+        "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+        "redirect": null
+      },
+      {
+        "alias": "dinner-roulette-minions-9e2c.vercel.app",
+        "redirect": null
+      },
+      {
+        "alias": "pickforus.app",
+        "redirect": null
+      },
+      {
+        "alias": "www.pickforus.app",
+        "redirect": "pickforus.app"
+      }
+    ]
+  },
+  "precommitReadback": {
+    "main": "078f65c5d194435452ca14569ea00e57f52a20f3",
+    "startingBranch": "9c19deec26b433e7fb6b14c48e76cc0ea4cfbc93",
+    "production": {
+      "id": "dpl_HmqKyiLqCqMSTrhxKktsy9mJtDKy",
+      "target": "production",
+      "state": "READY",
+      "gitCommitRef": "main",
+      "gitCommitSha": "078f65c5d194435452ca14569ea00e57f52a20f3",
+      "aliases": [
+        "dinner-roulette-chi.vercel.app",
+        "dinner-roulette-git-main-minions-9e2c.vercel.app",
+        "dinner-roulette-minions-9e2c.vercel.app",
+        "pickforus.app",
+        "www.pickforus.app"
+      ],
+      "aliasError": null
+    },
+    "aliases": [
+      {
+        "alias": "dinner-roulette-chi.vercel.app",
+        "redirect": null
+      },
+      {
+        "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+        "redirect": null
+      },
+      {
+        "alias": "dinner-roulette-minions-9e2c.vercel.app",
+        "redirect": null
+      },
+      {
+        "alias": "pickforus.app",
+        "redirect": null
+      },
+      {
+        "alias": "www.pickforus.app",
+        "redirect": "pickforus.app"
+      }
+    ]
+  },
+  "unchanged": true,
+  "writeOperationsToGitHubVercel": 0,
+  "remoteResearchBranchLookup": "404 / NOT_FOUND before final commit; no push attempted",
+  "note": "Read-only observations at two stages. No claim about changes by other actors after these observations."
+}

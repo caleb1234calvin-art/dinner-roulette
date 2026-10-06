@@ -1,0 +1,30 @@
+{
+  "authority": {
+    "repository": "caleb1234calvin-art/dinner-roulette",
+    "handoffBranch": "integration/date-night-seasonal-release-path-sweep-1-handoff",
+    "handoffCommit": "3227f978f286326a305d3406cb7b75bb7590ae5f",
+    "handoffPath": "docs/handoffs/active/date-night-seasonal-release-path-sweep-1.md",
+    "handoffBlob": "08636d0ded687520bddcc5fcba9d5b9ba5aaf269"
+  },
+  "base": {
+    "sha": "9c19deec26b433e7fb6b14c48e76cc0ea4cfbc93",
+    "tree": "6b47904c0432cef8b2f7b32c4f45bf82d4cd472d",
+    "parents": [
+      "e8c3545a317486b5facbe024423d724c009f7b4c"
+    ]
+  },
+  "branch": "research/date-night-seasonal-release-path-sweep-1",
+  "main": "078f65c5d194435452ca14569ea00e57f52a20f3",
+  "production": "dpl_HmqKyiLqCqMSTrhxKktsy9mJtDKy",
+  "reviewDateUTC": "2026-10-06",
+  "localResearchDate": "2026-10-06 America/Chicago; task received 2026-10-05 23:58",
+  "baseVerifiedBeforeSourceResearch": true,
+  "baseVerificationMethods": [
+    "local git show/cat-file",
+    "GitHub Git commit endpoint"
+  ],
+  "handoffBranchReadbackMatches": true,
+  "applicableAgentsFilesFound": 0,
+  "isolatedClone": true,
+  "preexistingLeafCount": 1388
+}

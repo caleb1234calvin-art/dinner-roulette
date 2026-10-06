@@ -1,0 +1,126 @@
+{
+  "selectedQualifyingRecords": [],
+  "qualifyingRecordCount": 0,
+  "chicago": {
+    "dataset": "pk66-w54g",
+    "records": [
+      {
+        "park_number": "100",
+        "park_facility_name": "Lincoln Rowing Lagoon Event Space",
+        "reservation_start_date": "2026-12-31T00:00:00.000",
+        "reservation_end_date": "2026-12-31T00:00:00.000",
+        "event_type": "Permit - Athletic T Cluster 3",
+        "event_description": "Lincoln Park Hauntings Ghost Tour and Ghost Hunt (Non-exclusive Use)",
+        "permit_status": "Approved"
+      },
+      {
+        "park_number": "100",
+        "park_facility_name": "Lincoln Rowing Lagoon Event Space",
+        "reservation_start_date": "2026-12-30T00:00:00.000",
+        "reservation_end_date": "2026-12-30T00:00:00.000",
+        "event_type": "Permit - Athletic T Cluster 3",
+        "event_description": "Lincoln Park Hauntings Ghost Tour and Ghost Hunt (Non-exclusive Use)",
+        "permit_status": "Approved"
+      },
+      {
+        "park_number": "100",
+        "park_facility_name": "Lincoln Rowing Lagoon Event Space",
+        "reservation_start_date": "2026-12-29T00:00:00.000",
+        "reservation_end_date": "2026-12-29T00:00:00.000",
+        "event_type": "Permit - Athletic T Cluster 3",
+        "event_description": "Lincoln Park Hauntings Ghost Tour and Ghost Hunt (Non-exclusive Use)",
+        "permit_status": "Approved"
+      },
+      {
+        "park_number": "100",
+        "park_facility_name": "Lincoln Rowing Lagoon Event Space",
+        "reservation_start_date": "2026-12-28T00:00:00.000",
+        "reservation_end_date": "2026-12-28T00:00:00.000",
+        "event_type": "Permit - Athletic T Cluster 3",
+        "event_description": "Lincoln Park Hauntings Ghost Tour and Ghost Hunt (Non-exclusive Use)",
+        "permit_status": "Approved"
+      },
+      {
+        "park_number": "100",
+        "park_facility_name": "Lincoln Rowing Lagoon Event Space",
+        "reservation_start_date": "2026-12-27T00:00:00.000",
+        "reservation_end_date": "2026-12-27T00:00:00.000",
+        "event_type": "Permit - Athletic T Cluster 3",
+        "event_description": "Lincoln Park Hauntings Ghost Tour and Ghost Hunt (Non-exclusive Use)",
+        "permit_status": "Approved"
+      },
+      {
+        "park_number": "108",
+        "park_facility_name": "Seward Entire Grounds",
+        "reservation_start_date": "2026-10-29T00:00:00.000",
+        "reservation_end_date": "2026-10-29T00:00:00.000",
+        "event_type": "Permit - Event 1 Cluster 3",
+        "event_description": "Halloween Haunted House",
+        "permit_status": "Tentative"
+      }
+    ],
+    "meaning": "Source-published reservation facts; no selected occurrence. Requestor and organization columns intentionally excluded. The first five are ghost tours and fail exact category semantics. The sixth is an explicit haunted-house name but Tentative.",
+    "nativeId": "No event/permit ID is published in the acquired schema. park_number identifies a park, not an event."
+  },
+  "visitNH": {
+    "sourceUrl": "https://www.visitnh.gov/things-to-do/events-calendar/corn-maze",
+    "acquisition": "Web reference-page open, turn8view0; raw HTML/JSON-LD not acquired",
+    "title": "Corn Maze",
+    "labeledDate": "Saturday, September 12, 2026 - Saturday, October 3, 2026",
+    "labeledTime": "9:00 am - 5:00",
+    "labeledLocation": "250 West Road, Canterbury, NH",
+    "linkedAttractionName": "Brookford Farm",
+    "operatorWebsiteLinkObservedButNotRequested": "https://www.brookfordfarm.com/",
+    "conflict": "Narrative separately says opening September 9 through October 3. No resolution or synthetic calendar expansion applied.",
+    "postal": null,
+    "coordinates": null,
+    "nativeOccurrenceId": null,
+    "status": "NOT_SELECTED; reuse unqualified; past labeled end date as of review"
+  },
+  "sanDiego": {
+    "analysis": {
+      "row_count": 603,
+      "schema": [
+        "event_title",
+        "event_id",
+        "event_subtitle",
+        "event_type",
+        "event_desc",
+        "event_loc",
+        "date_event_start",
+        "date_event_end",
+        "exp_attendance",
+        "exp_participants",
+        "event_host",
+        "event_url",
+        "address_full",
+        "lat",
+        "lng"
+      ],
+      "start_year_counts": {
+        "2020": 294,
+        "2021": 309
+      },
+      "start_min": "2020-05-24 09:00:00",
+      "start_max": "2021-12-30 15:00:00",
+      "exact_activity_title_hits": [],
+      "exact_activity_title_hit_count": 0,
+      "retention": "Only schema, aggregate date coverage, and at most ten selected factual rows retained. Full temporary CSV will be deleted."
+    },
+    "landingSample": {
+      "acquisition": "turn13view0 HTML sample, distinct from aggregate CSV analysis",
+      "event_id": "53065",
+      "event_title": "Hillcrest Farmers' Market and Open Air Bizarre",
+      "event_type": "FARMERS",
+      "date_event_start": "2020-05-24 09:00:00",
+      "date_event_end": "2020-05-24 14:00:00",
+      "address_full": "3690 Normal Street",
+      "lat": "32.7485285",
+      "lng": "-117.1498856",
+      "selection": "Rejected historical nonqualifying category"
+    }
+  },
+  "crosswalks": [],
+  "operatorContacts": 0,
+  "operatorOriginRequests": 0
+}

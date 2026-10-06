@@ -1,0 +1,116 @@
+{
+  "reviewDateUTC": "2026-10-06",
+  "C1": {
+    "dataset": "pk66-w54g",
+    "provenance": "official",
+    "attribution": "Chicago Park District",
+    "licenseId": "SEE_TERMS_OF_USE",
+    "license": {
+      "name": "See Terms of Use"
+    },
+    "rowsUpdatedAt": 1791213884,
+    "fields": [
+      {
+        "name": "Requestor",
+        "fieldName": "requestor_",
+        "type": "text"
+      },
+      {
+        "name": "Organization",
+        "fieldName": "organization",
+        "type": "text"
+      },
+      {
+        "name": "Park Number",
+        "fieldName": "park_number",
+        "type": "number"
+      },
+      {
+        "name": "Park/Facility Name",
+        "fieldName": "park_facility_name",
+        "type": "text"
+      },
+      {
+        "name": "Reservation Start Date",
+        "fieldName": "reservation_start_date",
+        "type": "calendar_date"
+      },
+      {
+        "name": "Reservation End Date",
+        "fieldName": "reservation_end_date",
+        "type": "calendar_date"
+      },
+      {
+        "name": "Event Type",
+        "fieldName": "event_type",
+        "type": "text"
+      },
+      {
+        "name": "Event Description",
+        "fieldName": "event_description",
+        "type": "text"
+      },
+      {
+        "name": "Permit Status",
+        "fieldName": "permit_status",
+        "type": "text"
+      }
+    ],
+    "fieldsNotRequested": [
+      "requestor_",
+      "organization"
+    ],
+    "calendarMeaning": "reservation_start_date and reservation_end_date",
+    "categoryMeaning": "event_type describes permit level; actual haunted-house phrase is in event_description",
+    "coordinates": "No coordinate fields in inspected schema",
+    "completeAddress": "No street/city/state/postal fields in inspected schema"
+  },
+  "C3": {
+    "formatObserved": "text/html, labeled event facts via reference extraction",
+    "fieldsObserved": [
+      "title",
+      "Date",
+      "Time",
+      "Location",
+      "Website"
+    ],
+    "notEstablished": [
+      "JSON-LD envelope",
+      "native event ID",
+      "postal code",
+      "coordinates",
+      "dated update timestamp",
+      "explicit daily recurrence",
+      "unambiguous close meridiem"
+    ]
+  },
+  "C4": {
+    "schema": null,
+    "reason": "Metadata HTTP 404"
+  },
+  "C5": {
+    "fields": [
+      "event_title",
+      "event_id",
+      "event_subtitle",
+      "event_type",
+      "event_desc",
+      "event_loc",
+      "date_event_start",
+      "date_event_end",
+      "exp_attendance",
+      "exp_participants",
+      "event_host",
+      "event_url",
+      "address_full",
+      "lat",
+      "lng"
+    ],
+    "format": "CSV served as binary/octet-stream",
+    "landingUpdated": "2021-12-30",
+    "event_idMeaning": "Publisher dictionary: unique identifier assigned to special event; perpetual stability not guaranteed",
+    "dateMeaning": "Publisher dictionary: event beginning/end date and time; application-derived dataset scope still applies",
+    "coordinateMeaning": "Publisher dictionary calls them event-location latitude and longitude; CRS, entrance meaning and uncertainty unestablished",
+    "addressMeaning": "address_full documented as full street address; separate city/state/postal absent from schema"
+  }
+}

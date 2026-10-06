@@ -1,0 +1,48 @@
+{
+  "title": "SEATTLE 2026 SPECIAL-EVENTS PUBLIC EXPORT RIGHTS TRIAGE #1 — ZERO CONTACT",
+  "contentActionCount": 4,
+  "directDataRequestCount": 0,
+  "actions": [
+    {
+      "id": "A1",
+      "type": "search-index",
+      "engine": "system1",
+      "query": "site.seattle.gov/special-events 2026 Eproval public calendar data export",
+      "recencyDays": 365,
+      "result": "Official Eproval calendar and Seattle application guidance discovered; no acquired target record."
+    },
+    {
+      "id": "A2",
+      "type": "web-open",
+      "url": "https://www.seattle.gov/special-events/plan-an-event/calendar",
+      "reference": "turn1view0",
+      "result": "Reported HTTP 403; no retry"
+    },
+    {
+      "id": "A3",
+      "type": "web-open",
+      "url": "https://eproval.seattle.gov/pages/special-events-public-calendar",
+      "reference": "turn1view1",
+      "result": "Public HTML shell obtained; extracted content has heading/resources, no Georgetown row, export/feed/API documentation or affirmative record-reuse grant"
+    },
+    {
+      "id": "A4",
+      "type": "search-index",
+      "engine": "system1",
+      "query": "site:data.seattle.gov \"special events\" \"2026\"",
+      "recencyDays": 365,
+      "result": "Returned irrelevant results; no new official 2026 export identified. Search failure is not catalog absence proof."
+    }
+  ],
+  "publicPortalFound": true,
+  "qualifying2026RecordAcquired": false,
+  "reuseQualifiedPublicExportFound": false,
+  "georgetownParked": true,
+  "stopRuleApplied": true,
+  "noFurtherSeattleActions": true,
+  "prohibitedInferences": [
+    "A public calendar shell is not an open licensed data export.",
+    "Application/planning dates do not become confirmed visitor operation.",
+    "Failure to retrieve/index a record does not establish nonexistence or closure."
+  ]
+}

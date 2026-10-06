@@ -1,0 +1,137 @@
+{
+  "reviewDateUTC": "2026-10-06",
+  "screenedCount": 9,
+  "seriousCount": 4,
+  "seriousIds": [
+    "C1",
+    "C3",
+    "C4",
+    "C5"
+  ],
+  "selected": null,
+  "candidates": [
+    {
+      "id": "C1",
+      "name": "Chicago Park District - Outdoor Event Permits",
+      "publisher": "Chicago Park District through City of Chicago Data Portal",
+      "official": true,
+      "coverage": "Chicago, Illinois",
+      "endpoint": "https://data.cityofchicago.org/resource/pk66-w54g.json",
+      "depth": "serious",
+      "dataMetadataActions": 3,
+      "policyActions": 3,
+      "outcome": "NOT_SELECTED",
+      "reason": "One 2026 Halloween Haunted House row is Tentative and supplies reservation dates, not confirmed visitor admission hours/calendar. Complete address and event-native identifier are absent in acquired fields. Dataset-specific reuse review remains unresolved."
+    },
+    {
+      "id": "C2",
+      "name": "TravelOK tourism directory/service",
+      "publisher": "Oklahoma Tourism and Recreation Department",
+      "official": true,
+      "coverage": "Oklahoma",
+      "endpoint": "https://www.travelok.com/",
+      "depth": "permission-screen",
+      "dataMetadataActions": 0,
+      "policyActions": 1,
+      "outcome": "NOT_SELECTED",
+      "reason": "Reviewed terms grant submitted-material rights to the agency; they do not establish downstream commercial normalized-data reuse for this app. No data API/export grant or qualifying row was acquired. Brochure restrictions are not generalized to all factual listings."
+    },
+    {
+      "id": "C3",
+      "name": "Visit NH Events Calendar / Corn Maze",
+      "publisher": "NH Department of Business and Economic Affairs, Division of Travel and Tourism Development",
+      "official": true,
+      "coverage": "Canterbury, New Hampshire",
+      "endpoint": "https://www.visitnh.gov/things-to-do/events-calendar/corn-maze",
+      "depth": "serious",
+      "dataMetadataActions": 1,
+      "policyActions": 1,
+      "outcome": "NOT_SELECTED",
+      "reason": "Real labeled 2026 corn-maze page obtained, but no affirmative reuse/automation grant established. Start date differs between labeled Date and narrative; date-range daily operation and end-time meridiem are unresolved. Postal code/native occurrence ID/coordinates not acquired. No operator-origin follow-up."
+    },
+    {
+      "id": "C4",
+      "name": "LA City Events",
+      "publisher": "City of Los Angeles",
+      "official": "official successor lead; target metadata unavailable",
+      "coverage": "Los Angeles, California",
+      "endpoint": "https://data.lacity.org/resource/rx9t-fp7k.json",
+      "depth": "serious",
+      "dataMetadataActions": 1,
+      "policyActions": 0,
+      "outcome": "NOT_SELECTED",
+      "reason": "Published successor dataset ID led to metadata HTTP 404. No schema, grant or row obtained from that target. The archived predecessor CC0 label cannot silently license an unacquired successor."
+    },
+    {
+      "id": "C5",
+      "name": "San Diego Special Events",
+      "publisher": "City of San Diego, Special Events & Filming",
+      "official": true,
+      "coverage": "San Diego, California",
+      "endpoint": "https://seshat.datasd.org/special_events/special_events_list_datasd.csv",
+      "depth": "serious",
+      "dataMetadataActions": 3,
+      "policyActions": 2,
+      "outcome": "NOT_SELECTED",
+      "reason": "Dataset landing explicitly links ODC PDDL. Ordinary bounded CSV download succeeded; all 603 start dates are 2020 or 2021. No 2026 row. No exact qualifying activity phrase in title/subtitle/type. No current-season pairing established."
+    },
+    {
+      "id": "C6",
+      "name": "Indiana Grown Member Map MIL1",
+      "publisher": "Indiana state GIS / Indiana Grown (indexed official service)",
+      "official": "official-domain index lead; no new origin qualification",
+      "coverage": "Indiana",
+      "endpoint": "https://gisdata.in.gov/server/rest/services/Indiana_Grown_Member_Map_MIL1/MapServer",
+      "depth": "index-screen",
+      "dataMetadataActions": 0,
+      "policyActions": 0,
+      "outcome": "NOT_SELECTED",
+      "reason": "Different member-map lead from previously reviewed IGFallAgritourism. Index exposes IGmembers1124 layer and public Query formats, but no source-specific grant or real 2026 visitor occurrence was acquired. Not shown to materially improve on Montgomery County, so no deep GIS evaluation."
+    },
+    {
+      "id": "C7",
+      "name": "Riverdale municipal calendar",
+      "publisher": "City of Riverdale, Georgia",
+      "official": "official-domain index lead",
+      "coverage": "Riverdale, Georgia",
+      "endpoint": "https://riverdalega.gov/calendar.aspx?CID=23",
+      "depth": "index-screen",
+      "dataMetadataActions": 0,
+      "policyActions": 0,
+      "outcome": "NOT_SELECTED",
+      "reason": "Indexed Haunted House sessions Oct 27-31, 2026, 6-11 PM are discovery leads only. Targeted policy search did not establish an applicable affirmative data grant. No origin record, ICS feed, or API acquired; no operator page fetched."
+    },
+    {
+      "id": "C8",
+      "name": "Belen municipal calendar",
+      "publisher": "City of Belen, New Mexico",
+      "official": "official-domain index lead",
+      "coverage": "Belen, New Mexico",
+      "endpoint": "https://www.belen-nm.gov/calendar.aspx?CID=0&month=10&view=list&year=2026",
+      "depth": "index-screen",
+      "dataMetadataActions": 0,
+      "policyActions": 0,
+      "outcome": "NOT_SELECTED",
+      "reason": "Indexed Old City Hall haunted-house sessions in October 2026 are discovery leads only. Policy search did not establish an applicable affirmative reuse grant. No origin record/export was acquired."
+    },
+    {
+      "id": "C9",
+      "name": "Missouri Grown agritourism directory program",
+      "publisher": "Missouri Department of Agriculture",
+      "official": "official state program index evidence",
+      "coverage": "Missouri",
+      "endpoint": "https://agriculture.mo.gov/abd/missouri-grown/",
+      "depth": "index-screen",
+      "dataMetadataActions": 0,
+      "policyActions": 0,
+      "outcome": "NOT_SELECTED",
+      "reason": "Official program discovery confirms a directory role, but not a reusable dated 2026 event feed. No qualifying row, explicit grant or current visitor-calendar API surfaced. No Missouri Grown directory or attraction origin request was made."
+    }
+  ],
+  "scopeNotes": [
+    "Search incidental hits were not all adopted as candidates. The nine listed services were conservatively counted, including index-only screens.",
+    "Geographic searches began with MO/KS/OK/AR and nearby Midwest. Previously blocked Kansas/Arkansas/USDA/NYC/operator paths were not retried.",
+    "No new OSM or Seattle follow-up was used after parking Georgetown.",
+    "Unsuccessful search or transport is not proof of source absence. Index-only findings are never acquired records."
+  ]
+}

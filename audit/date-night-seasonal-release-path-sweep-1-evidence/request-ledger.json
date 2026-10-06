@@ -1,0 +1,313 @@
+{
+  "reviewDateUTC": "2026-10-06",
+  "accountingRules": [
+    "Phase A counts each search query and page open conservatively as one of four candidate-directed content actions; no concrete public data endpoint was established, so zero direct data requests.",
+    "Phase B maximum is three controlled data/metadata requests per serious candidate. Policy references and index discovery are separately counted and do not hide extra data reads. HTML event/landing opens count as data/metadata actions.",
+    "San Diego renderer rejection used one action; a single ordinary urllib GET used the remaining third data/metadata action. It used the same public URL without UA changes, proxy, login, downgrade or challenge handling.",
+    "Provider-internal requests, retries and caches are not observable; totals count agent-issued operations, not imaginary origin totals.",
+    "Git/GitHub, Vercel, filesystem and deliverable-saving operations are administrative and excluded from source-research counts."
+  ],
+  "phaseA": [
+    {
+      "id": "A1",
+      "type": "search-index",
+      "engine": "system1",
+      "query": "site.seattle.gov/special-events 2026 Eproval public calendar data export",
+      "recencyDays": 365,
+      "result": "Official Eproval calendar and Seattle application guidance discovered; no acquired target record."
+    },
+    {
+      "id": "A2",
+      "type": "web-open",
+      "url": "https://www.seattle.gov/special-events/plan-an-event/calendar",
+      "reference": "turn1view0",
+      "result": "Reported HTTP 403; no retry"
+    },
+    {
+      "id": "A3",
+      "type": "web-open",
+      "url": "https://eproval.seattle.gov/pages/special-events-public-calendar",
+      "reference": "turn1view1",
+      "result": "Public HTML shell obtained; extracted content has heading/resources, no Georgetown row, export/feed/API documentation or affirmative record-reuse grant"
+    },
+    {
+      "id": "A4",
+      "type": "search-index",
+      "engine": "system1",
+      "query": "site:data.seattle.gov \"special events\" \"2026\"",
+      "recencyDays": 365,
+      "result": "Returned irrelevant results; no new official 2026 export identified. Search failure is not catalog absence proof."
+    }
+  ],
+  "phaseBSearches": [
+    {
+      "group": "Bsearch1",
+      "engine": "system2",
+      "queries": [
+        "Missouri Kansas Oklahoma Arkansas open data events API pumpkin maze haunted house",
+        "site:data.gov \"events\" \"pumpkin\"",
+        "site:data.cityofchicago.org \"park\" \"events\"",
+        "\"open data\" \"tourism\" \"events\" Iowa Connecticut"
+      ]
+    },
+    {
+      "group": "Bsearch2",
+      "engine": "system1",
+      "queries": [
+        "\"events\" \"pumpkin\" \"open data\"",
+        "\"corn maze\" \"2026\" site:gov -site:seattle.gov",
+        "\"haunted house\" \"2026\" \"calendar\" site:gov",
+        "Missouri Kansas Oklahoma Arkansas agritourism data API license"
+      ]
+    },
+    {
+      "group": "Bsearch3",
+      "engine": "system2",
+      "queries": [
+        "site:agriculture.mo.gov agritourism directory corn maze data",
+        "site:travelok.com API data terms reuse",
+        "site:riverdalega.gov \"copyright\" \"use\"",
+        "\"tourism\" \"events\" \"data.iowa.gov\""
+      ]
+    },
+    {
+      "group": "Bsearch4",
+      "engine": "system2",
+      "queries": [
+        "site:visitnh.gov \"copyright\" policy",
+        "site:nh.gov \"copyright\" \"public information\"",
+        "site:chicago.gov \"data\" \"Terms of Use\"",
+        "\"open data\" \"pumpkin picking\" OR \"corn maze\" -site:opendatahandbook.org"
+      ]
+    },
+    {
+      "group": "C3andpolicies",
+      "engine": "system2",
+      "queries": [
+        "Chicago data portal data terms use disclaimer",
+        "Visit New Hampshire website terms use copyright privacy"
+      ]
+    },
+    {
+      "group": "Bsearch5",
+      "engine": "system1",
+      "queries": [
+        "\"events\" \"haunted\" \"data\" site:data.gov",
+        "\"corn maze\" \"FeatureServer\"",
+        "\"pumpkin\" \"events\" \"opendata\" -site:opendatahandbook.org",
+        "\"Indiana Grown\" \"ArcGIS\""
+      ]
+    },
+    {
+      "group": "Bsearch6",
+      "engine": "system2",
+      "queries": [
+        "Indiana Grown ArcGIS data hub",
+        "government open event calendar dataset API haunted house pumpkin patch",
+        "\"special events\" \"2026\" \"data\" \"haunted\" -site:reddit.com",
+        "\"corn maze\" \"open data\" license"
+      ]
+    },
+    {
+      "group": "Bsearch7",
+      "engine": "system2",
+      "queries": [
+        "LA City Events rx9t-fp7k open data",
+        "site:data.sandiego.gov special events permits",
+        "site:riverdalega.gov \"Copyright\" OR \"Disclaimer\" OR \"reuse\"",
+        "site:gisdata.in.gov/server/rest/services/Indiana_Grown_Member_Map_MIL1/MapServer/layers \"Corn\" \"Hours\""
+      ]
+    },
+    {
+      "group": "Bsearch8",
+      "engine": "system2",
+      "queries": [
+        "site:riverdalega.gov \"terms\" website",
+        "site:belen-nm.gov \"copyright\" \"website\"",
+        "site:gisdata.in.gov/server/rest/services/Indiana_Grown_Member_Map_MIL1/MapServer/layers \"Hours\""
+      ]
+    }
+  ],
+  "phaseBDirectHTTP": [
+    {
+      "id": "B-C1-1",
+      "candidate": "C1 Chicago outdoor event permits",
+      "kind": "metadata",
+      "url": "https://data.cityofchicago.org/api/views/pk66-w54g.json",
+      "at": "2026-10-06T05:00:35.564862+00:00",
+      "method": "GET",
+      "maxBytes": 2097152,
+      "timeoutSeconds": 15,
+      "retries": 0,
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 22464,
+      "sha256": "58c928f104d5e50b9117c52a3472bbbb5e8b674d1ad646a67ecce1ba52640e84"
+    },
+    {
+      "id": "B-C1-2",
+      "candidate": "C1 Chicago outdoor event permits",
+      "kind": "data",
+      "url": "https://data.cityofchicago.org/resource/pk66-w54g.json?%24select=park_number%2Cpark_facility_name%2Creservation_start_date%2Creservation_end_date%2Cevent_type%2Cevent_description%2Cpermit_status&%24where=reservation_start_date+%3E%3D+%272026-01-01T00%3A00%3A00%27+AND+%28upper%28event_description%29+like+%27%25HAUNT%25%27+OR+upper%28event_description%29+like+%27%25PUMPKIN%25%27+OR+upper%28event_description%29+like+%27%25CORN+MAZE%25%27%29&%24order=reservation_start_date+DESC&%24limit=5",
+      "at": "2026-10-06T05:01:30.472548+00:00",
+      "method": "GET",
+      "maxBytes": 2097152,
+      "timeoutSeconds": 15,
+      "retries": 0,
+      "redirectsAllowed": false,
+      "status": 200,
+      "contentType": "application/json;charset=utf-8",
+      "bytes": 1716,
+      "sha256": "8896d12531f4ffe0d0ecb45d2c3f66b0de2eb6ef8f0ecb83c5529ee10611a4dc"
+    },
+    {
+      "id": "B-C1-3",
+      "candidate": "C1 Chicago outdoor event permits",
+      "kind": "data",
+      "url": "https://data.cityofchicago.org/resource/pk66-w54g.json?%24select=park_number%2Cpark_facility_name%2Creservation_start_date%2Creservation_end_date%2Cevent_type%2Cevent_description%2Cpermit_status&%24where=reservation_start_date+%3E%3D+%272026-01-01T00%3A00%3A00%27+AND+%28upper%28event_description%29+like+%27%25HAUNTED+HOUSE%25%27+OR+upper%28event_description%29+like+%27%25PUMPKIN+PATCH%25%27+OR+upper%28event_description%29+like+%27%25PUMPKIN+PICK%25%27+OR+upper%28event_description%29+like+%27%25CORN+MAZE%25%27%29&%24order=reservation_start_date+ASC&%24limit=5",
+      "at": "2026-10-06T05:02:23.942664+00:00",
+      "method": "GET",
+      "maxBytes": 2097152,
+      "timeoutSeconds": 15,
+      "retries": 0,
+      "redirectsAllowed": false,
+      "status": 200,
+      "contentType": "application/json;charset=utf-8",
+      "bytes": 285,
+      "sha256": "977a1bebd92fd563d2bd42b8c717f1b3e504f1b5873bcdacf289970b3ffcb845"
+    },
+    {
+      "id": "B-C4-1",
+      "candidate": "C4 LA City Events",
+      "kind": "metadata",
+      "url": "https://data.lacity.org/api/views/rx9t-fp7k.json",
+      "at": "2026-10-06T05:03:11.924484+00:00",
+      "method": "GET",
+      "maxBytes": 2097152,
+      "timeoutSeconds": 15,
+      "retries": 0,
+      "redirectsAllowed": false,
+      "error": "HTTP Error 404: Not Found",
+      "status": 404
+    },
+    {
+      "id": "B-C5-3",
+      "candidate": "C5 San Diego Special Events",
+      "kind": "data",
+      "url": "https://seshat.datasd.org/special_events/special_events_list_datasd.csv",
+      "at": "2026-10-06T05:04:12.801501+00:00",
+      "method": "GET",
+      "maxBytes": 2097152,
+      "timeoutSeconds": 15,
+      "retries": 0,
+      "redirectsAllowed": false,
+      "status": 200,
+      "contentType": "binary/octet-stream",
+      "bytes": 333806,
+      "sha256": "ca17ac3ccc14b3cff35d8e8f5e75d9f44e0e52326d5b093a4a579c21a90d96f6"
+    }
+  ],
+  "phaseBWebActions": [
+    {
+      "id": "B-C2-P1",
+      "candidate": "C2",
+      "kind": "policy",
+      "url": "https://www.travelok.com/privacy-policy",
+      "reference": "turn7view0",
+      "result": "Retrieved terms/privacy; grant runs to agency"
+    },
+    {
+      "id": "B-C3-1",
+      "candidate": "C3",
+      "kind": "data/record",
+      "url": "https://www.visitnh.gov/things-to-do/events-calendar/corn-maze",
+      "reference": "turn8view0",
+      "result": "Retrieved labeled HTML facts; raw bytes/hash not claimed"
+    },
+    {
+      "id": "B-C1-P1",
+      "candidate": "C1",
+      "kind": "policy",
+      "url": "https://data.cityofchicago.org/stories/s/Data-Portal-FAQ/iy9c-7e89/",
+      "reference": "turn9view0",
+      "result": "Open returned zero extracted lines; indexed turn8search1 supplied limited FAQ context"
+    },
+    {
+      "id": "B-C3-P1",
+      "candidate": "C3",
+      "kind": "policy",
+      "url": "https://www.visitnh.gov/privacy-policy",
+      "reference": "turn9view1",
+      "result": "Retrieved privacy/disclosure policy; no data reuse grant established"
+    },
+    {
+      "id": "B-C1-P2",
+      "candidate": "C1",
+      "kind": "policy",
+      "url": "https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html",
+      "reference": "turn10view0",
+      "result": "Reported HTTP 403; no retry"
+    },
+    {
+      "id": "B-C5-1",
+      "candidate": "C5",
+      "kind": "metadata/landing",
+      "url": "https://data.sandiego.gov/datasets/special-events/",
+      "reference": "turn13view0",
+      "result": "Retrieved schema/sample/CSV and item-linked PDDL"
+    },
+    {
+      "id": "B-C5-2",
+      "candidate": "C5",
+      "kind": "data/attempt",
+      "url": "https://seshat.datasd.org/special_events/special_events_list_datasd.csv",
+      "reference": "turn14view0",
+      "result": "Reference renderer reported 400 Unsupported content-type binary/octet-stream; origin HTTP status unestablished; not a challenge"
+    },
+    {
+      "id": "B-C5-P1",
+      "candidate": "C5",
+      "kind": "policy",
+      "url": "https://opendefinition.org/licenses/odc-pddl/",
+      "reference": "turn14view1",
+      "result": "Retrieved dataset-linked license identity"
+    },
+    {
+      "id": "B-C1-P3",
+      "candidate": "C1",
+      "kind": "policy",
+      "url": "https://webapps1.chicago.gov/ChicagoTif/disclaimer.html",
+      "reference": "turn16view0",
+      "result": "Retrieved related official terms; exact Park District applicability not established"
+    },
+    {
+      "id": "B-C5-P2",
+      "candidate": "C5",
+      "kind": "policy",
+      "url": "https://opendatacommons.org/licenses/pddl/1-0/",
+      "reference": "turn16view1",
+      "result": "Retrieved publisher license text over HTTPS"
+    }
+  ],
+  "totals": {
+    "phaseAContentActions": 4,
+    "phaseADirectDataRequests": 0,
+    "phaseBSearchCalls": 9,
+    "phaseBSearchQueries": 33,
+    "phaseBControlledDataMetadataActions": 8,
+    "phaseBPolicyActions": 7,
+    "phaseBCandidateContentActionsExcludingSearch": 15,
+    "shellDirectHTTPAttempts": 5,
+    "allSearchCalls": 11,
+    "allSearchQueries": 35,
+    "sourceWebOpenClickActionsIncludingPhaseA": 12,
+    "operatorContacts": 0,
+    "operatorOriginRequests": 0,
+    "geocoderCalls": 0,
+    "paidApiCalls": 0,
+    "collectorCalls": 0,
+    "formsSubmitted": 0,
+    "accountsCreated": 0,
+    "sourceActivations": 0
+  }
+}
