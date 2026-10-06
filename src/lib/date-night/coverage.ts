@@ -50,8 +50,8 @@ export function seasonalCoverage(
     outage
       ? "Live map unavailable; using saved places."
       : live.length
-        ? "Live seasonal results included."
-        : "No live results for these seasonal categories.",
+        ? "Seasonal map listings included; current-season schedules may be unconfirmed."
+        : "No map listings found for these seasonal categories.",
     savedOnly.length ? `Saved places only: ${labels(savedOnly)}.` : "",
     missing.length ? `No places found: ${labels(missing)}.` : "",
     "Coverage may be incomplete; check schedules before going.",

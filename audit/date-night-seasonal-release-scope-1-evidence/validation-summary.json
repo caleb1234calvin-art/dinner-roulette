@@ -1,0 +1,97 @@
+{
+  "verdict": "REMEDIATION COMPLETE \u2014 READY FOR INDEPENDENT VERIFICATION; NOT APPROVED FOR PRODUCTION",
+  "base": {
+    "sha": "580b493e52fffc1e592b8107b142e01c945cee7f",
+    "tree": "f398ab4423b30e67d696eda4603a03ba9b4db7dd",
+    "soleParent": "9c19deec26b433e7fb6b14c48e76cc0ea4cfbc93"
+  },
+  "branch": "fix/date-night-seasonal-release-scope-remediation-1",
+  "checks": {
+    "typecheck": {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    "focused": {
+      "command": "node --test scripts/seasonal-discovery.test.mjs scripts/date-night-*.test.mjs scripts/seasonal-fact-contract*.test.mjs",
+      "passed": 550,
+      "failed": 0,
+      "exitCode": 0
+    },
+    "availability": {
+      "command": "node --experimental-strip-types --test src/lib/date-night/availability.test.ts",
+      "passed": 6,
+      "failed": 0,
+      "exitCode": 0
+    },
+    "factContractTypecheck": {
+      "command": "node_modules/.bin/tsc --project tools/seasonal-facts/tsconfig.json",
+      "exitCode": 0
+    },
+    "changedFileLint": {
+      "exitCode": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "build": {
+      "command": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node_modules/vite/bin/vite.js build --mode production",
+      "exitCode": 0,
+      "migrationCommandRun": false,
+      "proof": "build-proof.json"
+    },
+    "fullRegression": {
+      "command": "env -u VITE_AUTH_ENABLED npm test",
+      "exitCode": 0,
+      "repository": {
+        "tests": 989,
+        "passed": 985,
+        "failed": 0,
+        "skipped": 4
+      },
+      "application": {
+        "tests": 71,
+        "passed": 71,
+        "failed": 0,
+        "skipped": 0
+      },
+      "skipReason": "Four existing external workspace OG documentation checks; package unavailable."
+    },
+    "initialFullRegression": {
+      "command": "VITE_AUTH_ENABLED=true npm test",
+      "exitCode": 1,
+      "failed": 2,
+      "reason": "Build auth override leaked into with-app-env tests which assert file-supplied false. Corrected invocation only; no source/test changes to resolve this."
+    },
+    "security": "Passed within full regression: compiled TanStack application/fixture CSRF, methods, malicious payload handling, cancellation/deadlines, seasonal on/off transport; offline fact-contract policy tests passed.",
+    "reactReview": "Two TSX copy edits: no new hooks, effects, requests, subscriptions or event handlers; existing switch accessibility retained; explicit conditional paragraph.",
+    "renderInspection": "Actual Halloween panel server markup checked with Spooky Season ON and OFF; HTML retained. Not browser acceptance.",
+    "browserSmoke": {
+      "status": "BLOCKED_ENVIRONMENT",
+      "reason": "agent-browser/Chromium absent; Playwright Chromium installation failed because downloaded archives were invalid/truncated. No browser smoke pass claimed.",
+      "requiredBeforePromotion": true
+    },
+    "diffCheck": {
+      "exitCode": 0,
+      "note": "Application diff passed initially; final staged evidence check exposed whitespace in raw test stdout. Trailing whitespace/EOF blank lines in log copies normalized before final candidate freeze; test results and failure evidence retained."
+    },
+    "exactProductionBlobPreservation": [
+      "src/lib/date-night/radial-session.ts",
+      "scripts/date-night-radial-pacing.test.mjs",
+      "scripts/date-night-radial-session.test.mjs",
+      "scripts/date-night-cache.test.mjs"
+    ]
+  },
+  "boundaries": {
+    "operatorContacts": 0,
+    "operatorOriginRequests": 0,
+    "geocoderCalls": 0,
+    "paidApiCalls": 0,
+    "collectorCalls": 0,
+    "sourceActivations": 0,
+    "runtimeSeasonalDataGeneration": 0,
+    "migrationsRun": 0,
+    "remoteGitMutations": 0,
+    "deploymentsTriggered": 0
+  },
+  "scope": "New current-season attraction ingestion deferred. Existing OSM category discovery and two saved local haunt records retained without alteration.",
+  "evidenceNormalization": "Log copies have trailing whitespace and terminal blank lines trimmed; no diagnostic lines removed."
+}

@@ -7,6 +7,8 @@ import { DATE_NIGHT_RADIAL_MAX_PATCHES, type DateNightCoverageState, type DateNi
 import type { ConcreteDateNightType, DateNightSearchResponse } from "./types";
 
 export const DATE_NIGHT_RADIAL_PAUSE_MS = 1000;
+export const DATE_NIGHT_RADIAL_SUCCESS_PAUSE_MS = 250;
+export const DATE_NIGHT_RADIAL_MIN_OUTER_START_MS = 1000;
 export const DATE_NIGHT_RADIAL_FAILURE_LIMIT = 3;
 const PARTIAL_WARNING = "Some live date-night searches are unavailable. Showing available live results and saved places; coverage may be incomplete.";
 
@@ -29,6 +31,9 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
   let retryVersion = 0;
   let inFlight: { query: DateNightAcquisition; types: ConcreteDateNightType[]; cleanup?: () => void } | undefined;
   let timer: ReturnType<typeof setTimeout> | undefined;
+  // Monotonic admission deadline survives timer cancellation, compatible updates
+  // and explicit retries. Core is exempt; outer starts remain at least 1s apart.
+  let outerReadyAt = 0;
   let attempts = new Map<string, number>();
   let failed = new Map<string, Set<ConcreteDateNightType>>();
   let passRequests = 0, consecutiveFailures = 0;
@@ -90,6 +95,11 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
       paused = true;
       return publish();
     }
+    if (candidate.innerMiles > 0) {
+      const wait = outerReadyAt - performance.now();
+      if (wait > 0) { timer = setTimeout(next, wait); return publish(); }
+      outerReadyAt = performance.now() + DATE_NIGHT_RADIAL_MIN_OUTER_START_MS;
+    }
     const flight = { query: { ...query, patchId: candidate.id, activityTypes: candidate.missingActivityTypes },
       types: candidate.missingActivityTypes, cleanup: undefined as (() => void) | undefined };
     inFlight = flight;
@@ -136,7 +146,9 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
         consecutiveFailures = degraded ? consecutiveFailures + 1 : 0;
         const after = snapshot().coverage;
         if ((!candidate.innerMiles && after.patches[0]!.missingActivityTypes.length) || consecutiveFailures >= DATE_NIGHT_RADIAL_FAILURE_LIMIT) paused = true;
-        if (!paused && candidates(after).length) timer = setTimeout(next, DATE_NIGHT_RADIAL_PAUSE_MS);
+        const pause = degraded ? DATE_NIGHT_RADIAL_PAUSE_MS : DATE_NIGHT_RADIAL_SUCCESS_PAUSE_MS;
+        outerReadyAt = Math.max(outerReadyAt, performance.now() + pause);
+        if (!paused && candidates(after).length) timer = setTimeout(next, outerReadyAt - performance.now());
         publish();
       },
     });

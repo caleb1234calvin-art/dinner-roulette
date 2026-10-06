@@ -464,9 +464,11 @@ test("actual DateNightHome: TTL refreshes on next category acquisition, not loca
 });
 
 test("actual DateNightHome: radius widening schedules an outer patch; narrowing reuses core without RPC", async (t) => {
-  const { h } = setup(t, ["movies"]);
+  const { h, clock } = setup(t, ["movies"]);
   resolveRequest(h); await h.settle();
   h.store.setDateNightFilters({ radiusMiles: 50 }); h.render();
+  assert.equal(h.requests.length, 1, "widening respects the pending success delay");
+  await clock.tick(250);
   assert.equal(h.requests.length, 2);
   assert.equal(h.requests[1].args.data.patchId, "radial-v1:20:0");
   assert.notEqual(h.requests[1].args.data.patchId, h.requests[0].args.data.patchId);

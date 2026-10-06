@@ -344,7 +344,7 @@ function browserGlobals(t) {
 const halloweenCaution =
   "Seasonal listings can change quickly. Double-check the location, dates, and hours before you go.";
 const fallbackDisclosure =
-  "Pick For Us is using saved seasonal anchors. Check each stop before you leave.";
+  "Pick For Us is using saved local date ideas. Check each stop before you leave.";
 
 function assertHalloweenActionCard(harness, tree, disabled) {
   const card = findNode(tree, (node) => node.props?.className?.includes("fixed inset-x-0"));
@@ -547,7 +547,7 @@ test("actual component displays schedule uncertainty distinctly for live weekly-
   harness.button(tree, "Give us options").props.onClick();
   tree = harness.render();
   assert.match(harness.html(tree), /Schedule unconfirmed/);
-  assert.match(textOf(tree), /Live seasonal results included/);
+  assert.match(textOf(tree), /Seasonal map listings included; current-season schedules may be unconfirmed/);
   store.dateNightFilters.openNowOnly = true;
   tree = harness.render();
   assert.match(textOf(tree), /0 activities match/);
