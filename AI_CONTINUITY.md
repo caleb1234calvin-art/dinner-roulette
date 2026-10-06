@@ -1,3 +1,29 @@
+# Pick For Us — Post-Release Closeout #1 (2026-10-06)
+
+## CURRENT — SEASONAL RELEASE CLOSED AND SHIPPED
+
+This new current section supersedes every historical next-action, active-branch and pending-release instruction below. All prior continuity is preserved verbatim as dated evidence; old main/deployment values describe their original checkpoints, not today's production.
+
+- **Pick For Us seasonal release SHIPPED on 2026-10-06.** Released main / publication tip: `5534866e528e16721baa7369c0980f65b00a94b2`, tree `ea0ecb0c6e1e7bee1859d82b29fb09fef9a15c13`.
+- Released integration candidate: `4673854a0532fd753acea02c208189fcf23a4241`, tree `0d33cb7ca3217517a20a2d13fc545485893b5bd8`. It is the publication tip's sole parent; its own sole parent is pre-release main `078f65c5d194435452ca14569ea00e57f52a20f3`.
+- Production: **`dpl_3Bfbq9TPJqsrgCx4UKX1r9ANDZRj` — READY**, sourced from Git `main` at the released SHA. Retained prior rollback: `dpl_HmqKyiLqCqMSTrhxKktsy9mJtDKy` (also READY; prior revision, not current production).
+- All five established production aliases were confirmed on the released deployment: `pickforus.app`, `www.pickforus.app`, `dinner-roulette-chi.vercel.app`, `dinner-roulette-minions-9e2c.vercel.app`, and `dinner-roulette-git-main-minions-9e2c.vercel.app`. `www.pickforus.app` retains its **308 redirect to `pickforus.app`**.
+- Release promotion was exact fast-forward only, from the stated pre-release main through the two verified commits, with no synthetic merge or new release commit. No migrations or production configuration changes occurred. This closeout is documentation-only on `docs/post-release-closeout-1`, directly from released main; it does not merge, deploy, promote or change production.
+- **Live seasonal ingestion remains deferred.** Existing OSM seasonal discovery remains unchanged. **The Werehouse and Myer's Inn Haunt** remain the retained saved seasonal anchors. The seasonal release chain is **CLOSED AND SHIPPED**; release-scope work stays closed unless a real production defect is discovered. A defect requires its own scoped decision, not automatic reopening of ingestion or feature work.
+
+## NEXT PRODUCT WORKSTREAM — Android / Google Play Phase B continuation
+
+- **First perform CURRENT-STATE RECONCILIATION against production main.** The authority for the next worker is `docs/handoffs/active/android-phase-b-production-baseline-resume-1.md` from the exact published closeout commit. Read that handoff before starting, even while this documentation branch is unmerged.
+- Historical branch `polish/pre-google-play-pass-1` remains at `0a8f30dc57fcc1156342d1bfc8a07524f3125e3b`. Verified against released main: **0 commits ahead / 87 behind; merge base equals the historical head**. It is fully contained in current production history and is retained as historical evidence only. Do not resume it as a development base, merge it, rebase it, reset it, force-update it, rename it or delete it.
+- New Android work must start on a **FRESH branch directly from freshly verified current production main**, never from the old polish branch or this documentation branch. If main/production no longer matches this recorded baseline, stop and report the drift before choosing a new base.
+- Read the complete September 21 Android Phase B checkpoint below, `ANDROID_RELEASE.md`, `audit/android-phase-b-validation-2026-09-21.json`, and the relevant Android/pre-Google-Play handoffs/evidence. Historical Phase B evidence remains authoritative for work already completed at its exact revision; it must not be regenerated merely because the old branch is historical.
+- Completed unsigned native/compiled-bundle/signing-guard evidence is bound to `5aee90acbb44ab5d48b25cb1dac39db84cefcfbf`, CI run `35654077135`. It is not proof of a newly built current-main bundle. Later main changed the approved icon master, all 15 Android launcher PNGs and related validators, and patched web dependencies/runtime. Reconcile those changes and later CI evidence before deciding which gates remain. The old artifact records an October 5 expiry; verify actual availability rather than promise access or rebuild by default.
+- Preserve `com.calebcalvin.pickforus`, the hosted WebView runtime `https://dinner-roulette-chi.vercel.app`, and its current origin/permission/error-retry behavior. The native shell loads the current hosted web app; the historical AAB does not freeze September's web content. Do not replace current approved artwork with historical artwork.
+- Real signing/certificate identity, physical Android/WebView acceptance, and Play Console actions are **separate gates requiring explicit authorization**. No signed Play-upload candidate or physical acceptance is established by this closeout. Do not fabricate credentials, commit secrets, upload/publish to Play, create a public GitHub release, alter web production, deploy to Vercel production or run migrations.
+- **NEXT:** next worker reads the exact published handoff, verifies current main/production, and reports the reconciled completed/outstanding gates before deciding what Android work is actually needed. This closeout performs no Android implementation.
+
+## Prior continuity — preserved verbatim
+
 # Pick For Us — Date Night Radial Pacing #1 (2026-10-03)
 
 ## CURRENT — DATE NIGHT RADIAL PACING IMPLEMENTED — AWAITING INDEPENDENT VERIFICATION
