@@ -359,7 +359,7 @@ export function DateNightHome() {
           tone="fallback"
           title={discovery?.partial ? "Some live searches are unavailable" : "Live discovery is temporarily unavailable"}
           body={discovery?.partial ? warning : halloweenActive
-            ? "Pick For Us is using saved seasonal anchors. Check each stop before you leave."
+            ? "Pick For Us is using saved local date ideas. Check each stop before you leave."
             : "Pick For Us is using verified saved local date ideas so the roulette can keep working."}
           onRetry={discovery?.partial ? () => setRequestVersion((version) => version + 1) : undefined}
         />

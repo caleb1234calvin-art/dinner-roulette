@@ -367,9 +367,14 @@ export function HalloweenDateNightPanel() {
               </h2>
               <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted">
                 {spookySeasonEnabled
-                  ? "Haunts, harvest nights, and stranger doors are in the roulette now."
-                  : "Turn on the seasonal skin for Halloween styling, spooky picks, and October presets."}
+                  ? "Halloween styling and October presets are on. Choose a mood and explore the available date ideas."
+                  : "Turn on Halloween styling and October presets. Seasonal attraction coverage is limited."}
               </p>
+              {spookySeasonEnabled ? (
+                <p className="mt-2 max-w-sm text-xs leading-relaxed text-muted">
+                  Seasonal picks use saved local places and map listings. Current-season attraction schedules are not refreshed live. Check dates and hours before going.
+                </p>
+              ) : null}
             </div>
             <button
               type="button"

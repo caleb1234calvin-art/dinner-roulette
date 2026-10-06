@@ -25,7 +25,7 @@ for (const seasonal of [false, true]) {
     assert.equal(status.notices[0].body, result.warning);
     const text = textOf(status.tree);
     assert.match(text, /1 activities match/);
-    if (seasonal) assert.match(text, /Live seasonal results included/);
+    if (seasonal) assert.match(text, /Seasonal map listings included; current-season schedules may be unconfirmed/);
     assert.doesNotMatch(text, /Live map unavailable; using saved places/);
     h.button(status.tree, "Give us options").props.onClick();
     assert.equal(h.overlay(h.render(), "OptionsOverlay").props.restaurants[0].id, "current");
