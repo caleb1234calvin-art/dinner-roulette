@@ -1,0 +1,323 @@
+{
+  "reviewedOn": "2026-10-06",
+  "accountingScope": "Observable tool-level candidate actions, with policy/program discovery separate. Search backend internal requests/cache behavior unknown. Web follow-up line reads/finds reuse returned documents; no new controlled-origin GET assumed.",
+  "conservativeCandidateDirectedActions": 16,
+  "controlledDirectGetAttempts": 6,
+  "controlledDirectSuccesses": 5,
+  "controlledDirectFailures": 1,
+  "perCandidateConservativeCounts": {
+    "C1": 3,
+    "C2": 3,
+    "C3": 2,
+    "C4": 1,
+    "C5": 2,
+    "C6": 2,
+    "C7": 1,
+    "C8": 2
+  },
+  "maximumPerSeriousCandidate": 3,
+  "actions": [
+    {
+      "candidateId": "C1",
+      "kind": "web-service",
+      "urlOrReceiptName": "https://services2.arcgis.com/DXfJ1UFKElRbbqT4/ArcGIS/rest/services/IGFallAgritourism/FeatureServer",
+      "result": "Service HTML returned; HTTP status not exposed",
+      "webReference": "turn5view0"
+    },
+    {
+      "candidateId": "C1",
+      "kind": "controlled",
+      "urlOrReceiptName": "indiana-layer",
+      "result": "HTTP 200",
+      "webReference": null
+    },
+    {
+      "candidateId": "C1",
+      "kind": "controlled",
+      "urlOrReceiptName": "indiana-item",
+      "result": "HTTP 200",
+      "webReference": null
+    },
+    {
+      "candidateId": "C2",
+      "kind": "web-dataset",
+      "urlOrReceiptName": "https://data.seattle.gov/Permitting/Building-Permits/76t5-zqzr",
+      "result": "Inaccessible via web tool; no identical retry",
+      "webReference": "turn5view1"
+    },
+    {
+      "candidateId": "C2",
+      "kind": "controlled",
+      "urlOrReceiptName": "seattle-metadata",
+      "result": "HTTP 200",
+      "webReference": null
+    },
+    {
+      "candidateId": "C2",
+      "kind": "controlled",
+      "urlOrReceiptName": "seattle-rows",
+      "result": "HTTP 200; 2 rows; limit 3",
+      "webReference": null
+    },
+    {
+      "candidateId": "C3",
+      "kind": "web-program",
+      "urlOrReceiptName": "https://dsps.wi.gov/a-z-programs-list/amusement-rides/",
+      "result": "Program page returned",
+      "webReference": "turn12view0"
+    },
+    {
+      "candidateId": "C3",
+      "kind": "link-resolution",
+      "urlOrReceiptName": "Public lookup help link 282 from program page",
+      "result": "Tool invalid-arguments error; no target page acquired; conservatively counted",
+      "webReference": "turn18view1"
+    },
+    {
+      "candidateId": "C4",
+      "kind": "web-service",
+      "urlOrReceiptName": "https://web.seattle.gov/sfd/permitstatus/",
+      "result": "Search landing returned; no form submission",
+      "webReference": "turn14view0"
+    },
+    {
+      "candidateId": "C5",
+      "kind": "web-directory",
+      "urlOrReceiptName": "https://agritourism.utah.gov/",
+      "result": "Directory home returned",
+      "webReference": "turn18view0"
+    },
+    {
+      "candidateId": "C5",
+      "kind": "web-listing",
+      "urlOrReceiptName": "https://agritourism.utah.gov/farm-directory/listing/rocky-top-fruit-farm/",
+      "result": "Nonqualifying listing returned; no year/pumpkin-specific classification",
+      "webReference": "turn12view1"
+    },
+    {
+      "candidateId": "C6",
+      "kind": "web-story",
+      "urlOrReceiptName": "https://storymaps.arcgis.com/stories/f9fe74b8ac0d4a998983cfd5d56f2f0f",
+      "result": "Title, zero extracted body lines",
+      "webReference": "turn14view1"
+    },
+    {
+      "candidateId": "C6",
+      "kind": "controlled",
+      "urlOrReceiptName": "middlesex-item",
+      "result": "HTTP 200",
+      "webReference": null
+    },
+    {
+      "candidateId": "C7",
+      "kind": "controlled",
+      "urlOrReceiptName": "osm-rows",
+      "result": "HTTP 406; stopped; no rows",
+      "webReference": null
+    },
+    {
+      "candidateId": "C8",
+      "kind": "web-service",
+      "urlOrReceiptName": "https://www.wichita.gov/344/Business-Licenses",
+      "result": "HTTP 403 reported; no retry",
+      "webReference": "turn21view0"
+    },
+    {
+      "candidateId": "C8",
+      "kind": "web-form",
+      "urlOrReceiptName": "https://www.wichita.gov/DocumentCenter/View/8814/Haunted-Houses-Halloween-Houses-Mystery-Mansions-and-Ghost-Walks-Application-PDF",
+      "result": "Blank official form returned; no completed records",
+      "webReference": "turn21view1"
+    }
+  ],
+  "controlledReceipts": [
+    {
+      "name": "indiana-item",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/9e04cc4e7f5d4b9b802184a455b78fed?f=json",
+      "startedAt": "2026-10-06T01:26:12.526558+00:00",
+      "method": "GET",
+      "automaticRetries": 0,
+      "redirectsFollowed": 0,
+      "status": 200,
+      "contentType": "application/json;charset=utf-8",
+      "bytes": 1347,
+      "sha256": "d99fdf00cc876e5f6a781dc86a9f80e211480908f7a76f23ebb7515aa4b2aaf7",
+      "overLimit": false,
+      "endedAt": "2026-10-06T01:26:16.106818+00:00"
+    },
+    {
+      "name": "indiana-layer",
+      "url": "https://services2.arcgis.com/DXfJ1UFKElRbbqT4/ArcGIS/rest/services/IGFallAgritourism/FeatureServer/6?f=json",
+      "startedAt": "2026-10-06T01:25:51.754974+00:00",
+      "method": "GET",
+      "automaticRetries": 0,
+      "redirectsFollowed": 0,
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 14795,
+      "sha256": "d1babcf86be9e186489cbcaf48d8a58682b9f575e97543f81f8e213f371e2ce7",
+      "overLimit": false,
+      "endedAt": "2026-10-06T01:25:56.174385+00:00"
+    },
+    {
+      "name": "middlesex-item",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/f9fe74b8ac0d4a998983cfd5d56f2f0f?f=json",
+      "startedAt": "2026-10-06T01:29:08.606139+00:00",
+      "method": "GET",
+      "automaticRetries": 0,
+      "redirectsFollowed": 0,
+      "status": 200,
+      "contentType": "application/json;charset=utf-8",
+      "bytes": 2224,
+      "sha256": "31d7783baff71c2fb8855aef1a11fb6d0fe5888e2ff1e3c782df3bd5c6108673",
+      "overLimit": false,
+      "endedAt": "2026-10-06T01:29:12.681431+00:00"
+    },
+    {
+      "name": "osm-rows",
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A15%5D%5Bmaxsize%3A16777216%5D%3B%28nwr%5B%22maze%22%3D%22corn%22%5D%5B%22opening_hours%22~%222026%22%5D%2824%2C-125%2C50%2C-66%29%3Bnwr%5B%22attraction%22%3D%22haunted_house%22%5D%5B%22opening_hours%22~%222026%22%5D%2824%2C-125%2C50%2C-66%29%3Bnwr%5B%22pick_your_own%22%3D%22yes%22%5D%5B%22crop%22~%22pumpkin%22%5D%5B%22opening_hours%22~%222026%22%5D%2824%2C-125%2C50%2C-66%29%3Bnwr%5B%22attraction%22%3D%22haunted_house%22%5D%2847.50%2C-122.40%2C47.65%2C-122.25%29%3B%29%3Bout+center+tags+5%3B",
+      "startedAt": "2026-10-06T01:28:15.605997+00:00",
+      "method": "GET",
+      "automaticRetries": 0,
+      "redirectsFollowed": 0,
+      "status": 406,
+      "result": "http-error",
+      "endedAt": "2026-10-06T01:28:20.432265+00:00"
+    },
+    {
+      "name": "seattle-metadata",
+      "url": "https://data.seattle.gov/api/views/76t5-zqzr.json",
+      "startedAt": "2026-10-06T01:26:12.507225+00:00",
+      "method": "GET",
+      "automaticRetries": 0,
+      "redirectsFollowed": 0,
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 74694,
+      "sha256": "ebedf204970cc05f29329537ee6eed6464975173e8a006213fa8f07b37df3e9f",
+      "overLimit": false,
+      "endedAt": "2026-10-06T01:26:18.511352+00:00"
+    },
+    {
+      "name": "seattle-rows",
+      "url": "https://data.seattle.gov/resource/76t5-zqzr.json?%24select=permitnum%2Cpermitclass%2Cpermittypemapped%2Cpermittypedesc%2Cdescription%2Cissueddate%2Cexpiresdate%2Cstatuscurrent%2Coriginaladdress1%2Coriginalcity%2Coriginalstate%2Coriginalzip%2Clatitude%2Clongitude&%24where=upper%28description%29+like+%27%25HAUNTED%25%27+AND+issueddate+%3E%3D+%272026-01-01T00%3A00%3A00%27&%24limit=3&%24order=issueddate+DESC%2Cpermitnum",
+      "startedAt": "2026-10-06T01:26:55.995258+00:00",
+      "method": "GET",
+      "automaticRetries": 0,
+      "redirectsFollowed": 0,
+      "status": 200,
+      "contentType": "application/json;charset=utf-8",
+      "bytes": 1249,
+      "sha256": "b8a2777e2fd9f6b483acdb10e8cbf782b2a9e5f19b6b6e4f041ed30aa5fd20b0",
+      "overLimit": false,
+      "endedAt": "2026-10-06T01:27:04.193682+00:00"
+    }
+  ],
+  "controlledRequestBounds": {
+    "method": "GET",
+    "clientTimeoutSeconds": 12,
+    "maximumResponseBytes": 2097152,
+    "automaticRetries": 0,
+    "redirectsFollowed": 0,
+    "paidTransport": false
+  },
+  "osmQuery": "[out:json][timeout:15][maxsize:16777216];(nwr[\"maze\"=\"corn\"][\"opening_hours\"~\"2026\"](24,-125,50,-66);nwr[\"attraction\"=\"haunted_house\"][\"opening_hours\"~\"2026\"](24,-125,50,-66);nwr[\"pick_your_own\"=\"yes\"][\"crop\"~\"pumpkin\"][\"opening_hours\"~\"2026\"](24,-125,50,-66);nwr[\"attraction\"=\"haunted_house\"](47.50,-122.40,47.65,-122.25););out center tags 5;\n",
+  "seattleRowQuery": {
+    "select": [
+      "permitnum",
+      "permitclass",
+      "permittypemapped",
+      "permittypedesc",
+      "description",
+      "issueddate",
+      "expiresdate",
+      "statuscurrent",
+      "originaladdress1",
+      "originalcity",
+      "originalstate",
+      "originalzip",
+      "latitude",
+      "longitude"
+    ],
+    "where": "upper(description) like '%HAUNTED%' AND issueddate >= '2026-01-01T00:00:00'",
+    "limit": 3,
+    "order": "issueddate DESC,permitnum",
+    "returned": 2,
+    "paginationRequests": 0
+  },
+  "supportingDocumentation": [
+    {
+      "candidateId": "C1",
+      "url": "https://www.in.gov/isda/programs-and-initiatives/agritourism/",
+      "result": "Official program search result corroboration only"
+    },
+    {
+      "candidateId": "C2",
+      "url": "https://seattle.gov/tech/initiatives/open-data/terms-of-use",
+      "result": "Guessed policy URL failed in web read; no identical retry"
+    },
+    {
+      "candidateId": "C2",
+      "url": "https://data.seattle.gov/stories/s/Data-Policy/6ukr-wvup/",
+      "result": "Terms title returned with zero readable lines; policy not established"
+    },
+    {
+      "candidateId": "C2",
+      "url": "https://seattle.gov/construction-and-inspections/resources/research-a-project",
+      "result": "Official API/download lead in search; subsequent explicit doc open reported 403; no retry"
+    },
+    {
+      "candidateId": "C2",
+      "url": "https://dev.socrata.com/foundry/data.seattle.gov/76t5-zqzr",
+      "result": "Official generated API documentation in search results; no additional data query"
+    },
+    {
+      "candidateId": "C2",
+      "url": "https://dev.socrata.com/docs/app-tokens.html",
+      "result": "Read no-key support and shared-IP throttling; documentation copyright license is not dataset license"
+    },
+    {
+      "candidateId": "C5",
+      "url": "https://www.utah.gov/support/disclaimer.html",
+      "result": "Read state-use restrictions"
+    },
+    {
+      "candidateId": "C7",
+      "url": "https://www.openstreetmap.org/copyright",
+      "result": "Read ODbL attribution/reuse declaration"
+    },
+    {
+      "candidateId": "C7",
+      "url": "https://dev.overpass-api.de/overpass-doc/en/preface/commons.html",
+      "result": "Read public-instance research/capacity guidance"
+    },
+    {
+      "candidateId": "C7",
+      "url": "https://wiki.openstreetmap.org/wiki/Tag:attraction%3Dhaunted_house",
+      "result": "Web documentation open failed; no retry"
+    },
+    {
+      "candidateId": "C7",
+      "url": "https://wiki.openstreetmap.org/wiki/Tag:maze%3Dcorn",
+      "result": "Web documentation open failed; no retry"
+    }
+  ],
+  "searchScope": [
+    "Missouri Kansas Oklahoma Arkansas and surrounding Midwest seasonal attraction open data",
+    "Government agriculture/agritourism GIS explicit corn maze and pumpkin picking fields",
+    "Open public permits/temporary occupancy haunted-house classifications and annual dates",
+    "State/county tourism feeds and reusable current-year calendars",
+    "National ODbL structured records and same-attraction Seattle identity"
+  ],
+  "operatorContacts": 0,
+  "operatorPermissionRequests": 0,
+  "araderOriginRequests": 0,
+  "collectorCalls": 0,
+  "geocoderCalls": 0,
+  "paidApiCalls": 0,
+  "browserAutomationCalls": 0,
+  "loginOrChallengeBypasses": 0,
+  "automaticIdenticalRetries": 0,
+  "bulkCrawls": 0,
+  "ownerSideTransportEvidence": null
+}

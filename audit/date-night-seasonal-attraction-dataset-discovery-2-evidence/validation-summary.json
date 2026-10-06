@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-06T01:41:09.349554+00:00",
+  "scope": "Staged candidate documentation; final commit identity/cleanliness separately recorded after commit.",
+  "baseSha": "67ac0654488bb7f02b1c08eef11479c4fe63af04",
+  "baseTree": "e4f9dd2e39334f5c5a5e705fd217c4c36d5625a3",
+  "baseSoleParent": "016142008cc451225fee5eb5d56a8d33b38d4735",
+  "preexistingLeavesChecked": 1369,
+  "preexistingLeafObjectTypeModePreserved": true,
+  "additionsOnly": true,
+  "addedPaths": [
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/candidate-assessments.json",
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/network-summary.json",
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/permission-evidence.json",
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/preservation-readback.json",
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/qualifying-records.json",
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/source-schema-evidence.json",
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/validation-summary.json",
+    "audit/date-night-seasonal-attraction-dataset-discovery-2.md",
+    "docs/handoffs/active/date-night-seasonal-attraction-dataset-discovery-2-continuation.md"
+  ],
+  "jsonSyntaxPassed": [
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/candidate-assessments.json",
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/network-summary.json",
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/permission-evidence.json",
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/preservation-readback.json",
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/qualifying-records.json",
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/source-schema-evidence.json",
+    "audit/date-night-seasonal-attraction-dataset-discovery-2-evidence/validation-summary.json"
+  ],
+  "diffCheckPassed": true,
+  "sensitiveContentScreenPassed": true,
+  "sensitiveScreenScope": "Credential-shaped strings, private keys, credential-bearing URLs; manual fact-only review. No raw response bodies or personal applicant data included.",
+  "executableChangedPaths": 0,
+  "operatorContacts": 0,
+  "collectorCalls": 0,
+  "geocoderCalls": 0,
+  "paidApiCalls": 0,
+  "applicationBuildsTestsMigrations": 0,
+  "contractSourceRuntimeDependencyConfigurationEdits": 0,
+  "remotePublication": "held"
+}

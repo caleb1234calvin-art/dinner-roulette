@@ -1,0 +1,916 @@
+{
+  "reviewedOn": "2026-10-06",
+  "verdict": "SEASONAL ATTRACTION SOURCE DISCOVERY #2 BLOCKED — NO IMPLEMENTATION-READY OPEN SOURCE PATH FOUND",
+  "implementationDecision": "C",
+  "selectedSourceOrPair": null,
+  "candidatesScreened": 8,
+  "seriousCandidates": [
+    "C1",
+    "C2",
+    "C7"
+  ],
+  "classificationLegend": {
+    "A": "Directly published (schema-only explicitly distinguished)",
+    "B": "Reviewed deterministic extraction or derivation",
+    "C": "Needs another permission-qualified public source; none established",
+    "D": "Absent or unresolved"
+  },
+  "candidates": [
+    {
+      "id": "C1",
+      "name": "Indiana Grown FallAgritourism",
+      "publisher": "Indiana State Department of Agriculture",
+      "officialStatus": "Official government program/service",
+      "canonicalEndpoint": "https://services2.arcgis.com/DXfJ1UFKElRbbqT4/ArcGIS/rest/services/IGFallAgritourism/FeatureServer/6",
+      "evaluationDepth": "serious",
+      "selected": false,
+      "fieldInventory": {
+        "nativeId": {
+          "class": "A",
+          "evidence": "Schema only: ObjectID"
+        },
+        "attractionName": {
+          "class": "A",
+          "evidence": "Schema only: USER_BusinessName"
+        },
+        "activityCategory": {
+          "class": "D",
+          "evidence": "No dedicated qualifying activity field. Mixed agritourism and/or pumpkins dataset title is insufficient."
+        },
+        "operatorVenueIdentity": {
+          "class": "D",
+          "evidence": "No attraction row obtained; value unresolved."
+        },
+        "street": {
+          "class": "A",
+          "evidence": "Schema only: USER_Address"
+        },
+        "city": {
+          "class": "A",
+          "evidence": "Schema only: USER_City"
+        },
+        "state": {
+          "class": "A",
+          "evidence": "Schema only: USER_State"
+        },
+        "postal": {
+          "class": "A",
+          "evidence": "Schema only: USER_Zip (double; value/leading-zero behavior untested)"
+        },
+        "country": {
+          "class": "D",
+          "evidence": "IN_CountryCode is geocoder input schema only; no value acquired or jurisdiction derivation applied to a row."
+        },
+        "latitude": {
+          "class": "D",
+          "evidence": "No attraction row obtained; value unresolved."
+        },
+        "longitude": {
+          "class": "D",
+          "evidence": "No attraction row obtained; value unresolved."
+        },
+        "coordinateCrs": {
+          "class": "A",
+          "evidence": "Service spatialReference.wkid=26916; X/Y and DisplayX/DisplayY fields exist. No row or conversion."
+        },
+        "coordinatePointMeaning": {
+          "class": "D",
+          "evidence": "No attraction row obtained; value unresolved."
+        },
+        "coordinateUncertainty": {
+          "class": "D",
+          "evidence": "No attraction row obtained; value unresolved."
+        },
+        "website": {
+          "class": "A",
+          "evidence": "Schema only: USER_Website"
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "No attraction row obtained; value unresolved."
+        },
+        "dates2026": {
+          "class": "D",
+          "evidence": "No attraction row obtained; value unresolved."
+        },
+        "hours": {
+          "class": "D",
+          "evidence": "No attraction row obtained; value unresolved."
+        },
+        "season": {
+          "class": "D",
+          "evidence": "No attraction row obtained; value unresolved."
+        },
+        "activeStatusLifecycle": {
+          "class": "D",
+          "evidence": "Status is grouped with geocoder fields and is not established as attraction operation."
+        },
+        "perRowUpdatedAt": {
+          "class": "D",
+          "evidence": "No attraction row obtained; value unresolved."
+        },
+        "datasetUpdatedAt": {
+          "class": "A",
+          "evidence": "{'lastEditDate': 1665060673191, 'schemaLastEditDate': 1665060673191, 'dataLastEditDate': 1665060673191}; not season evidence"
+        }
+      },
+      "readiness": {
+        "permissionClarity": "Blank item license; no grant",
+        "explicitCategoryQuality": "No dedicated qualifying category",
+        "currentSeasonQuality": "No season/date field",
+        "addressCompleteness": "Four-component schema only",
+        "coordinateQuality": "Projected CRS known; values/meaning untested",
+        "identityDurability": "ObjectID schema; durability unproven",
+        "calendarQuality": "Missing",
+        "accessReliability": "Metadata success; rows untested",
+        "zeroCostSuitability": "No-key metadata; authorized reuse unresolved",
+        "contractAdaptationComplexity": "Missing rights/facts before JSON/query design"
+      },
+      "reviewedOn": "2026-10-06"
+    },
+    {
+      "id": "C2",
+      "name": "Building Permits 76t5-zqzr",
+      "publisher": "City of Seattle SDCI",
+      "officialStatus": "Official government program/service",
+      "canonicalEndpoint": "https://data.seattle.gov/resource/76t5-zqzr.json",
+      "evaluationDepth": "serious",
+      "selected": false,
+      "fieldInventory": {
+        "nativeId": {
+          "class": "A",
+          "evidence": "permitnum; permit tracking record, not permanent venue"
+        },
+        "attractionName": {
+          "class": "B",
+          "evidence": "Extract Georgetown Morgue from exact short administrative identity phrase; no dedicated name field."
+        },
+        "activityCategory": {
+          "class": "B",
+          "evidence": "Extract haunted-house from administrative description; not a dedicated structured source classification."
+        },
+        "operatorVenueIdentity": {
+          "class": "D",
+          "evidence": "No canonical operator. Same name/address/shared review-reference support a venue lead only."
+        },
+        "street": {
+          "class": "A",
+          "evidence": "originaladdress1"
+        },
+        "city": {
+          "class": "A",
+          "evidence": "originalcity"
+        },
+        "state": {
+          "class": "A",
+          "evidence": "originalstate"
+        },
+        "postal": {
+          "class": "A",
+          "evidence": "originalzip"
+        },
+        "country": {
+          "class": "B",
+          "evidence": "US from Seattle, Washington jurisdiction and complete source address."
+        },
+        "latitude": {
+          "class": "A",
+          "evidence": "latitude"
+        },
+        "longitude": {
+          "class": "A",
+          "evidence": "longitude"
+        },
+        "coordinateCrs": {
+          "class": "D",
+          "evidence": "Explicit datum/CRS not established; do not infer from lat/lon values."
+        },
+        "coordinatePointMeaning": {
+          "class": "A",
+          "evidence": "Publisher column descriptions specify worksite where permit activity occurs. Entrance/parcel-centroid distinction unresolved."
+        },
+        "coordinateUncertainty": {
+          "class": "D",
+          "evidence": "No documented accuracy; decimal precision is not accuracy."
+        },
+        "website": {
+          "class": "D",
+          "evidence": "No operator website. Schema link points to permit details, not attraction website; link not requested."
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "Absent in obtained record/schema or unresolved."
+        },
+        "dates2026": {
+          "class": "B",
+          "evidence": "Occupancy month/day ranges combined with explicit 2026 in the same descriptions; public operating dates absent."
+        },
+        "hours": {
+          "class": "D",
+          "evidence": "No visitor hours or weekday schedule obtained."
+        },
+        "season": {
+          "class": "B",
+          "evidence": "Explicit description year 2026; not row/dataset modification."
+        },
+        "activeStatusLifecycle": {
+          "class": "A",
+          "evidence": "Permit statuscurrent is administrative application/review/inspection workflow. Attraction lifecycle mapping D."
+        },
+        "perRowUpdatedAt": {
+          "class": "D",
+          "evidence": "Not selected/established in bounded response."
+        },
+        "datasetUpdatedAt": {
+          "class": "A",
+          "evidence": "rowsUpdatedAt=1791249547; viewLastModified=1791249218; daily frequency; not season proof."
+        }
+      },
+      "readiness": {
+        "permissionClarity": "Item Public Domain explicit; portal policy incomplete",
+        "explicitCategoryQuality": "Administrative text only; dedicated types not attraction classes",
+        "currentSeasonQuality": "Explicit 2026 permitted use; not proof of visitor schedule",
+        "addressCompleteness": "Street/city/state/ZIP A; US B",
+        "coordinateQuality": "Worksite lat/lon A; CRS/accuracy unresolved",
+        "identityDurability": "Tracking permit ID; no permanent venue ID",
+        "calendarQuality": "Bounded occupancy, visitor dates/hours absent",
+        "accessReliability": "Metadata and rows succeeded; display/docs gaps",
+        "zeroCostSuitability": "No-key $0 demonstrated; shared-IP throttle",
+        "contractAdaptationComplexity": "JSON/SoQL plus semantic/coordinate gaps; not transport-only"
+      },
+      "reviewedOn": "2026-10-06"
+    },
+    {
+      "id": "C3",
+      "name": "Amusement Rides / eSLA",
+      "publisher": "Wisconsin DSPS",
+      "officialStatus": "Official government program/service",
+      "canonicalEndpoint": "https://dsps.wi.gov/a-z-programs-list/amusement-rides/",
+      "evaluationDepth": "screen",
+      "selected": false,
+      "fieldInventory": {
+        "nativeId": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "attractionName": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "activityCategory": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "operatorVenueIdentity": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "street": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "city": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "state": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "postal": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "country": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "latitude": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "longitude": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinateCrs": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinatePointMeaning": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinateUncertainty": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "website": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "dates2026": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "hours": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "season": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "activeStatusLifecycle": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "perRowUpdatedAt": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "datasetUpdatedAt": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        }
+      },
+      "readiness": {
+        "permissionClarity": "No data grant established",
+        "explicitCategoryQuality": "No acquired classification row",
+        "currentSeasonQuality": "Annual permit process only; no 2026 record",
+        "addressCompleteness": "Unresolved",
+        "coordinateQuality": "Unresolved",
+        "identityDurability": "Unresolved",
+        "calendarQuality": "No completed record",
+        "accessReliability": "Program page read; lookup link resolution failed",
+        "zeroCostSuitability": "Reference access free; API/access terms unknown",
+        "contractAdaptationComplexity": "Source evidence absent"
+      },
+      "reviewedOn": "2026-10-06"
+    },
+    {
+      "id": "C4",
+      "name": "Fire Permit Status",
+      "publisher": "Seattle Fire Department",
+      "officialStatus": "Official government program/service",
+      "canonicalEndpoint": "https://web.seattle.gov/sfd/permitstatus/",
+      "evaluationDepth": "screen",
+      "selected": false,
+      "fieldInventory": {
+        "nativeId": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "attractionName": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "activityCategory": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "operatorVenueIdentity": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "street": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "city": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "state": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "postal": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "country": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "latitude": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "longitude": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinateCrs": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinatePointMeaning": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinateUncertainty": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "website": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "dates2026": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "hours": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "season": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "activeStatusLifecycle": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "perRowUpdatedAt": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "datasetUpdatedAt": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        }
+      },
+      "readiness": {
+        "permissionClarity": "No separate data grant",
+        "explicitCategoryQuality": "No acquired qualifying type",
+        "currentSeasonQuality": "Current-year renewal semantics only; no row",
+        "addressCompleteness": "Unresolved",
+        "coordinateQuality": "Unresolved",
+        "identityDurability": "Unresolved",
+        "calendarQuality": "No per-attraction season dates",
+        "accessReliability": "Public search landing read; search not submitted",
+        "zeroCostSuitability": "Landing free; automation unknown",
+        "contractAdaptationComplexity": "No pair; separate provenance needed if later qualified"
+      },
+      "reviewedOn": "2026-10-06"
+    },
+    {
+      "id": "C5",
+      "name": "Utah Agritourism Farm Directory",
+      "publisher": "State of Utah",
+      "officialStatus": "Official government program/service",
+      "canonicalEndpoint": "https://agritourism.utah.gov/",
+      "evaluationDepth": "screen",
+      "selected": false,
+      "fieldInventory": {
+        "nativeId": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "attractionName": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "activityCategory": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "operatorVenueIdentity": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "street": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "city": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "state": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "postal": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "country": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "latitude": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "longitude": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinateCrs": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinatePointMeaning": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinateUncertainty": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "website": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "dates2026": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "hours": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "season": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "activeStatusLifecycle": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "perRowUpdatedAt": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "datasetUpdatedAt": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        }
+      },
+      "readiness": {
+        "permissionClarity": "Personal/informational unmodified-use terms insufficient",
+        "explicitCategoryQuality": "Generic U-pick; no pumpkin-specific proof",
+        "currentSeasonQuality": "Dates lack year",
+        "addressCompleteness": "One nonqualifying listing has full address/country",
+        "coordinateQuality": "Not established",
+        "identityDurability": "Listing URL only",
+        "calendarQuality": "Undated season/day schedule",
+        "accessReliability": "Public HTML page read",
+        "zeroCostSuitability": "No-key reference access; export rights unknown",
+        "contractAdaptationComplexity": "No qualifying row or reuse grant"
+      },
+      "reviewedOn": "2026-10-06"
+    },
+    {
+      "id": "C6",
+      "name": "Grown in Middlesex County",
+      "publisher": "County-branded Middlesex County NJ StoryMap; publisher chain incomplete",
+      "officialStatus": "County branding/official publisher chain only partly established",
+      "canonicalEndpoint": "https://storymaps.arcgis.com/stories/f9fe74b8ac0d4a998983cfd5d56f2f0f",
+      "evaluationDepth": "screen",
+      "selected": false,
+      "fieldInventory": {
+        "nativeId": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "attractionName": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "activityCategory": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "operatorVenueIdentity": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "street": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "city": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "state": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "postal": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "country": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "latitude": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "longitude": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinateCrs": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinatePointMeaning": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinateUncertainty": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "website": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "dates2026": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "hours": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "season": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "activeStatusLifecycle": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "perRowUpdatedAt": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "datasetUpdatedAt": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        }
+      },
+      "readiness": {
+        "permissionClarity": "Item license null",
+        "explicitCategoryQuality": "Search snippets only; no obtained row",
+        "currentSeasonQuality": "No acquired year-specific evidence",
+        "addressCompleteness": "Snippet leads only",
+        "coordinateQuality": "Unresolved",
+        "identityDurability": "Story item ID; no attraction row ID",
+        "calendarQuality": "Snippet dates without year; unaccepted",
+        "accessReliability": "Item metadata success; body empty",
+        "zeroCostSuitability": "Metadata free; reuse unknown",
+        "contractAdaptationComplexity": "Missing grant and rows"
+      },
+      "reviewedOn": "2026-10-06"
+    },
+    {
+      "id": "C7",
+      "name": "OpenStreetMap via Overpass",
+      "publisher": "OpenStreetMap contributors; public Overpass operator",
+      "officialStatus": "Community open database, not government",
+      "canonicalEndpoint": "https://overpass-api.de/api/interpreter",
+      "evaluationDepth": "serious",
+      "selected": false,
+      "fieldInventory": {
+        "nativeId": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "attractionName": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "activityCategory": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "operatorVenueIdentity": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "street": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "city": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "state": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "postal": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "country": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "latitude": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "longitude": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "coordinateCrs": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "coordinatePointMeaning": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "coordinateUncertainty": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "website": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "dates2026": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "hours": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "season": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "activeStatusLifecycle": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "perRowUpdatedAt": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        },
+        "datasetUpdatedAt": {
+          "class": "D",
+          "evidence": "No returned row after HTTP 406; prospective tag/element fields are not evidence."
+        }
+      },
+      "readiness": {
+        "permissionClarity": "ODbL explicit; share-alike/attribution",
+        "explicitCategoryQuality": "Proposed tags only; no row",
+        "currentSeasonQuality": "No row",
+        "addressCompleteness": "No row",
+        "coordinateQuality": "No returned geometry; center not automatically entrance",
+        "identityDurability": "No acquired element ID",
+        "calendarQuality": "No acquired dated opening_hours",
+        "accessReliability": "One 406; stopped",
+        "zeroCostSuitability": "No-key research documented; shared instance limits",
+        "contractAdaptationComplexity": "Facts absent; ODbL and provenance/transport review remain"
+      },
+      "reviewedOn": "2026-10-06"
+    },
+    {
+      "id": "C8",
+      "name": "Haunted House business licensing",
+      "publisher": "City of Wichita Kansas",
+      "officialStatus": "Official government program/service",
+      "canonicalEndpoint": "https://www.wichita.gov/344/Business-Licenses",
+      "evaluationDepth": "screen",
+      "selected": false,
+      "fieldInventory": {
+        "nativeId": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "attractionName": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "activityCategory": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "operatorVenueIdentity": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "street": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "city": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "state": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "postal": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "country": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "latitude": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "longitude": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinateCrs": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinatePointMeaning": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "coordinateUncertainty": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "website": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "phone": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "dates2026": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "hours": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "season": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "activeStatusLifecycle": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "perRowUpdatedAt": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        },
+        "datasetUpdatedAt": {
+          "class": "D",
+          "evidence": "No qualifying attraction record obtained in screen; see readiness findings for nonqualifying form/page evidence."
+        }
+      },
+      "readiness": {
+        "permissionClarity": "No data grant",
+        "explicitCategoryQuality": "Blank form has indoor haunted-house options only",
+        "currentSeasonQuality": "No completed 2026 license",
+        "addressCompleteness": "Form fields, no values",
+        "coordinateQuality": "No values",
+        "identityDurability": "No completed license number",
+        "calendarQuality": "Blank dates-open/hours fields",
+        "accessReliability": "Landing 403; official PDF success",
+        "zeroCostSuitability": "Public form free; record/API access unknown",
+        "contractAdaptationComplexity": "No obtained dataset/row"
+      },
+      "reviewedOn": "2026-10-06"
+    }
+  ]
+}

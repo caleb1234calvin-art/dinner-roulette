@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-10-06T01:40:46.174Z",
+  "starting": {
+    "sha": "67ac0654488bb7f02b1c08eef11479c4fe63af04",
+    "tree": "e4f9dd2e39334f5c5a5e705fd217c4c36d5625a3",
+    "parents": [
+      "016142008cc451225fee5eb5d56a8d33b38d4735"
+    ],
+    "branch": "research/date-night-seasonal-arader-current-season-compatibility-1"
+  },
+  "remoteMain": "078f65c5d194435452ca14569ea00e57f52a20f3",
+  "localMain": "078f65c5d194435452ca14569ea00e57f52a20f3",
+  "newResearchBranch": "research/date-night-seasonal-attraction-dataset-discovery-2",
+  "remoteResearchBranchPresent": false,
+  "production": {
+    "id": "dpl_HmqKyiLqCqMSTrhxKktsy9mJtDKy",
+    "state": "READY",
+    "target": "production",
+    "source": "git",
+    "gitBranch": "main",
+    "gitSha": "078f65c5d194435452ca14569ea00e57f52a20f3",
+    "aliases": [
+      "dinner-roulette-chi.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "pickforus.app",
+      "www.pickforus.app"
+    ]
+  },
+  "projectLatestDeployment": {
+    "id": "dpl_FGfdLT9B3CS7J3eTXWeJJyMee93j",
+    "url": "dinner-roulette-ek86ikn47-minions-9e2c.vercel.app",
+    "createdAt": 1791246835039,
+    "readyState": "READY",
+    "target": null
+  },
+  "projectDomains": [
+    "dinner-roulette-chi.vercel.app",
+    "dinner-roulette-git-main-minions-9e2c.vercel.app",
+    "dinner-roulette-minions-9e2c.vercel.app",
+    "pickforus.app",
+    "www.pickforus.app"
+  ],
+  "preexistingPreview": {
+    "id": "dpl_FGfdLT9B3CS7J3eTXWeJJyMee93j",
+    "state": "READY",
+    "source": "git",
+    "target": null,
+    "gitSha": "67ac0654488bb7f02b1c08eef11479c4fe63af04",
+    "gitBranch": "research/date-night-seasonal-arader-current-season-compatibility-1"
+  },
+  "publication": {
+    "status": "held-before-push",
+    "reason": "Owner requires explicit authorization for normal non-production Vercel Preview side effect.",
+    "configEvidence": "Existing vercel.json disables only integration/**; no modification.",
+    "pushes": 0,
+    "deploymentsCreated": 0,
+    "promotions": 0,
+    "aliasMutations": 0,
+    "configMutations": 0
+  },
+  "readbackNote": "Read-only origin refs and Vercel deployment/project checks. Final post-commit identities belong in external receipt; no post-publication readback claimed."
+}

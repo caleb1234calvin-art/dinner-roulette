@@ -1,0 +1,449 @@
+{
+  "reviewedOn": "2026-10-06",
+  "indiana": {
+    "source": "https://services2.arcgis.com/DXfJ1UFKElRbbqT4/ArcGIS/rest/services/IGFallAgritourism/FeatureServer/6?f=json",
+    "fields": [
+      {
+        "name": "ObjectID",
+        "type": "esriFieldTypeOID",
+        "alias": "ObjectID"
+      },
+      {
+        "name": "Loc_name",
+        "type": "esriFieldTypeString",
+        "alias": "Loc_name"
+      },
+      {
+        "name": "Status",
+        "type": "esriFieldTypeString",
+        "alias": "Status"
+      },
+      {
+        "name": "Score",
+        "type": "esriFieldTypeDouble",
+        "alias": "Score"
+      },
+      {
+        "name": "Match_type",
+        "type": "esriFieldTypeString",
+        "alias": "Match_type"
+      },
+      {
+        "name": "Match_addr",
+        "type": "esriFieldTypeString",
+        "alias": "Match_addr"
+      },
+      {
+        "name": "Place_addr",
+        "type": "esriFieldTypeString",
+        "alias": "Place_addr"
+      },
+      {
+        "name": "StPreDir",
+        "type": "esriFieldTypeString",
+        "alias": "StPreDir"
+      },
+      {
+        "name": "StPreType",
+        "type": "esriFieldTypeString",
+        "alias": "StPreType"
+      },
+      {
+        "name": "StName",
+        "type": "esriFieldTypeString",
+        "alias": "StName"
+      },
+      {
+        "name": "StType",
+        "type": "esriFieldTypeString",
+        "alias": "StType"
+      },
+      {
+        "name": "StDir",
+        "type": "esriFieldTypeString",
+        "alias": "StDir"
+      },
+      {
+        "name": "StAddr",
+        "type": "esriFieldTypeString",
+        "alias": "StAddr"
+      },
+      {
+        "name": "City",
+        "type": "esriFieldTypeString",
+        "alias": "City"
+      },
+      {
+        "name": "Subregion",
+        "type": "esriFieldTypeString",
+        "alias": "Subregion"
+      },
+      {
+        "name": "Region",
+        "type": "esriFieldTypeString",
+        "alias": "Region"
+      },
+      {
+        "name": "RegionAbbr",
+        "type": "esriFieldTypeString",
+        "alias": "RegionAbbr"
+      },
+      {
+        "name": "Postal",
+        "type": "esriFieldTypeString",
+        "alias": "Postal"
+      },
+      {
+        "name": "Distance",
+        "type": "esriFieldTypeDouble",
+        "alias": "Distance"
+      },
+      {
+        "name": "X",
+        "type": "esriFieldTypeDouble",
+        "alias": "X"
+      },
+      {
+        "name": "Y",
+        "type": "esriFieldTypeDouble",
+        "alias": "Y"
+      },
+      {
+        "name": "DisplayX",
+        "type": "esriFieldTypeDouble",
+        "alias": "DisplayX"
+      },
+      {
+        "name": "DisplayY",
+        "type": "esriFieldTypeDouble",
+        "alias": "DisplayY"
+      },
+      {
+        "name": "Xmin",
+        "type": "esriFieldTypeDouble",
+        "alias": "Xmin"
+      },
+      {
+        "name": "Xmax",
+        "type": "esriFieldTypeDouble",
+        "alias": "Xmax"
+      },
+      {
+        "name": "Ymin",
+        "type": "esriFieldTypeDouble",
+        "alias": "Ymin"
+      },
+      {
+        "name": "Ymax",
+        "type": "esriFieldTypeDouble",
+        "alias": "Ymax"
+      },
+      {
+        "name": "ExInfo",
+        "type": "esriFieldTypeString",
+        "alias": "ExtraInfo"
+      },
+      {
+        "name": "User_fld",
+        "type": "esriFieldTypeString",
+        "alias": "User_fld"
+      },
+      {
+        "name": "IN_Address",
+        "type": "esriFieldTypeString",
+        "alias": "Address or Place"
+      },
+      {
+        "name": "IN_Address2",
+        "type": "esriFieldTypeString",
+        "alias": "Address2"
+      },
+      {
+        "name": "IN_Address3",
+        "type": "esriFieldTypeString",
+        "alias": "Address3"
+      },
+      {
+        "name": "IN_Neighborhood",
+        "type": "esriFieldTypeString",
+        "alias": "Neighborhood"
+      },
+      {
+        "name": "IN_City",
+        "type": "esriFieldTypeString",
+        "alias": "City"
+      },
+      {
+        "name": "IN_Subregion",
+        "type": "esriFieldTypeString",
+        "alias": "County"
+      },
+      {
+        "name": "IN_Region",
+        "type": "esriFieldTypeString",
+        "alias": "State"
+      },
+      {
+        "name": "IN_Postal",
+        "type": "esriFieldTypeString",
+        "alias": "ZIP"
+      },
+      {
+        "name": "IN_PostalExt",
+        "type": "esriFieldTypeString",
+        "alias": "ZIP4"
+      },
+      {
+        "name": "IN_CountryCode",
+        "type": "esriFieldTypeString",
+        "alias": "Country"
+      },
+      {
+        "name": "USER_BusinessName",
+        "type": "esriFieldTypeString",
+        "alias": "BusinessName"
+      },
+      {
+        "name": "USER_Profile",
+        "type": "esriFieldTypeString",
+        "alias": "Profile"
+      },
+      {
+        "name": "USER_Address",
+        "type": "esriFieldTypeString",
+        "alias": "Address"
+      },
+      {
+        "name": "USER_City",
+        "type": "esriFieldTypeString",
+        "alias": "City"
+      },
+      {
+        "name": "USER_State",
+        "type": "esriFieldTypeString",
+        "alias": "State"
+      },
+      {
+        "name": "USER_Zip",
+        "type": "esriFieldTypeDouble",
+        "alias": "Zip"
+      },
+      {
+        "name": "USER_County",
+        "type": "esriFieldTypeString",
+        "alias": "County"
+      },
+      {
+        "name": "USER_Website",
+        "type": "esriFieldTypeString",
+        "alias": "Website"
+      },
+      {
+        "name": "USER_Facebook",
+        "type": "esriFieldTypeString",
+        "alias": "Facebook"
+      }
+    ],
+    "spatialReference": {
+      "wkid": 26916,
+      "latestWkid": 26916
+    },
+    "editingInfo": {
+      "lastEditDate": 1665060673191,
+      "schemaLastEditDate": 1665060673191,
+      "dataLastEditDate": 1665060673191
+    },
+    "maxRecordCount": 2000,
+    "rowsObtained": 0
+  },
+  "seattle": {
+    "source": "https://data.seattle.gov/api/views/76t5-zqzr.json",
+    "columns": [
+      {
+        "fieldName": "permitnum",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "permitclass",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "permitclassmapped",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "permittypemapped",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "permittypedesc",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "description",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "housingunits",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "housingunitsremoved",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "housingunitsadded",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "estprojectcost",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "applieddate",
+        "dataTypeName": "calendar_date"
+      },
+      {
+        "fieldName": "issueddate",
+        "dataTypeName": "calendar_date"
+      },
+      {
+        "fieldName": "expiresdate",
+        "dataTypeName": "calendar_date"
+      },
+      {
+        "fieldName": "completeddate",
+        "dataTypeName": "calendar_date"
+      },
+      {
+        "fieldName": "statuscurrent",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "relatedmup",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "originaladdress1",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "originalcity",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "originalstate",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "originalzip",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "contractorcompanyname",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "link",
+        "dataTypeName": "url"
+      },
+      {
+        "fieldName": "latitude",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "longitude",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "location1",
+        "dataTypeName": "location"
+      },
+      {
+        "fieldName": "totaldaysplanreview",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "daysinitialplanreview",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "daysplanreviewcity",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "daysoutcorrections",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "numberreviewcycles",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "initialreviewcompletedate",
+        "dataTypeName": "calendar_date"
+      },
+      {
+        "fieldName": "planreviewcompletedate",
+        "dataTypeName": "calendar_date"
+      },
+      {
+        "fieldName": "daysissuepermitcity",
+        "dataTypeName": "number"
+      },
+      {
+        "fieldName": "readytoissuedate",
+        "dataTypeName": "calendar_date"
+      },
+      {
+        "fieldName": "zoning",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "dwellingunittype",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "standardplan",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "dependentbuilding",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "parentpermitnum",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "housingcategory",
+        "dataTypeName": "text"
+      },
+      {
+        "fieldName": "development_site",
+        "dataTypeName": "text"
+      }
+    ],
+    "columnMeaningReview": {
+      "permitnum": "Tracking number for permit in SDCI system",
+      "description": "Administrative work description; may change before issuance; long values may be truncated",
+      "expiresdate": "Application/permit expiration, not a public season-end promise",
+      "statuscurrent": "Application/review/inspection workflow, most recent completed process step",
+      "latitudeLongitude": "Worksite where permit activity occurs",
+      "link": "Permit details, not attraction website"
+    },
+    "rowsUpdatedAt": 1791249547,
+    "viewLastModified": 1791249218,
+    "refreshFrequency": "Daily"
+  },
+  "middlesex": {
+    "itemId": "f9fe74b8ac0d4a998983cfd5d56f2f0f",
+    "title": "Grown in Middlesex County",
+    "type": "StoryMap",
+    "modified": 1760557688000,
+    "modifiedIsSeasonEvidence": false,
+    "licenseInfo": null,
+    "accessInformation": null,
+    "access": "public"
+  }
+}
