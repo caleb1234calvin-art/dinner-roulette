@@ -1,3 +1,26 @@
+# Pick For Us — Minimal Lint Correction Frozen (2026-10-07)
+
+## CURRENT — AUTHOR FULL LINT ZERO ERRORS; NEW-HEAD VALIDATION IN PROGRESS
+
+[Draft PR #50](https://github.com/caleb1234calvin-art/dinner-roulette/pull/50) now freezes **`fd801eda9f496da33aa395ad2ad592027e16029a`**, tree **`97343fa7b22dd9fc25ccbc651e03102257a72a74`**, sole parent **`634ef2f2fc7017dc6d2daca45266977b96b6d4c7`**, on existing `integration/seasonal-release-candidate-2026-10-07`. No new PR or main publication.
+
+- Exact parent-relative diff is the three authorized files only: `audit/seasonal-discovery-coverage-audit-1-evidence/live-probe.mjs`, `source-probe.mjs` and `src/lib/app-data/client.server.ts`; **5 additions / 3 deletions**.
+- Each formerly empty catch now contains an explanatory comment documenting the existing fallback. No executable statement, lint rule/suppression, test assertion, provider query, authentication fallback semantics or unrelated style/refactor changed.
+- Author unchanged **`npm run lint` exits 0: zero errors / six existing warnings**. Receipt and exact patch were read. This supersedes the prior author's unresolved-three-error status for this revision only; old candidate 634ef2's lint FAIL remains historical fact.
+- Formal source-preservation proof and remaining exact-head local gates are being completed. **No new full-suite/build/browser or independent-verification PASS is yet claimed**, and no old-head result transfers automatically.
+- At **23:06 UTC**, exact-head [web run `37700284759`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37700284759) and [unsigned Android run `37700284917`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37700284917) are **IN PROGRESS**. Terminal artifacts/final author report are not yet frozen.
+- Six warnings may remain per owner authorization. V50-P01 inherited 320 px Directions-label cosmetic clipping stays explicitly deferred and untouched. Functional facts, 2026 bounds, never-OpenNow, qualified arrival and all previous immutable evidence remain preserved.
+
+### Fresh baseline and next action
+
+Read-only **23:06 UTC** checks: main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**; production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** READY at that SHA. PR #50 remains draft/open/unmerged at the exact new head. No main/deployment/Android signing/Play action.
+
+Continuity parent **`8d57cd39818efc76ee79ef5fef03fb3062b55e33`**, tree **`f19f4f916c78feb4ab57d90a7e9626fb9688fd91`**. Only AI_CONTINUITY.md changes on deployment-disabled `integration/continuity-refresh-2026-10-07`; verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**` exclusion.
+
+**Next:** finish all new-head local/full/focused/build-proof and hosted checks, including all 19 seasonal scenarios, image/notes/reachability/expiry/cache/Myer coverage; freeze receipts and obtain fresh independent exact-candidate review. Only after all applicable gates pass may a final proposal be prepared. A future intentional documentation-only publication wrapper still requires exact identity and runtime/build-input equality proof. No release authorization.
+
+## Prior continuity — authorized three-error cleanup task start, preserved verbatim
+
 # Pick For Us — Minimal Inherited Lint Cleanup Authorized (2026-10-07)
 
 ## CURRENT — THREE-ERROR CLEANUP TASK START; LINT RESOLUTION AND NEW-CANDIDATE GATES PENDING
