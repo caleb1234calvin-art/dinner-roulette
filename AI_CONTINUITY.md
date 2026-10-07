@@ -1,3 +1,29 @@
+# Pick For Us — Clearance Sprint #2 Independent v1 HOLD (2026-10-07)
+
+## CURRENT — V1 INDEPENDENT REVIEW COMPLETE: 0 PASS / 8 HOLD; MINIMAL AUTHOR V2 PENDING
+
+This supersedes the earlier independent-verification-pending state. The independent review completed **2026-10-07T20:14:44.163833+00:00** against immutable author v1 candidate SHA-256 `660b2c201d1c70b41b733184cc6e8bf186700e1dcc39850fd3c182c7feb64552`. Original v1 files and prior checkpoints remain unchanged.
+
+- **Whole-record factual/import clearance: 0 PASS / 8 HOLD / 0 REJECT. Correction quality: 4 PASS / 4 HOLD. Arrival gate: 1 PASS / 7 HOLD.** There is no cleared whole-record projection and no import authority.
+- **Lloyd's MO26-068 arrival gate alone PASSED**, at 38.7746696, -92.2372283 as approximate operator-designated navigation/site-arrival. This is not surveyed parking, an exact gate/doorway, runtime routing approval or whole-record PASS. The candidate omitted mandatory supervision of children under 18; whole-record and correction-quality verdicts remain HOLD.
+- The other correction-quality HOLDs are **Monster MO26-036** (13-and-under adult accompaniment, timed VIP/admission/refund conditions and material accessibility/visitor constraints), **Rutledge-Wilson MO26-030** (adult accompaniment condition for free-child maze admission), and **Campbell's MO26-029** (explicit age/day eligibility and payment-sensitive cash/card terms).
+- Correction-quality PASS applies only to the bounded held projections for **Dead Factory MO26-069, Bollinger Mill MO26-115, James River Joplin MO26-019 and Urban Gardens MO26-100**. Their whole-record arrival/freshness/other HOLDs remain. Campbell's last-admission contradiction and property-point ambiguity remain unresolved.
+- **Next authorized action: one minimal author revision v2 correcting only the four identified omissions, then fresh independent review of the new immutable version. V2 is pending, not complete.** No new arrival research, expanded scope, operator contact, paid API or Overpass. Preserve original values, v1, exact source limits, null/disabled consumer fields and evidence lineage. Do not allow the author to self-award independent PASS.
+- The exact original eight-record sprint scope and prior five parked records remain unchanged. Sam A. Baker MO26-116 remains the separate earlier corrected data-level PASS, with no crafts and fresh pre-import revalidation required. The owner still decides any later implementation/import; no merge/release authority follows from these findings.
+
+### Immutable independent v1 evidence
+
+The full report controls detailed conditions; source integrity PASS does not remove factual HOLDs. Independent integrity checks covered 436 field comparisons, eight original-record comparisons/hashes, five input hashes, three frozen output hashes, 21 ZIP members and 114 capture hashes.
+
+- `Missouri-Seasonal-2026-Clearance2-Independent-Report-v1.txt` — Library `libfile_bc160f178e4c81919c2a4ec739965b18`; SHA-256 `e678a7580659bbbe6c42103d031b8f59b0c576da5ccbcd1e94374151cab22ea6`.
+- `Missouri-Seasonal-2026-Clearance2-Independent-Verdicts-v1.json` — Library `libfile_462c6ac8a9348191b83c9c1e7edb5ae5`; SHA-256 `bb60a07f6fcf2ae17224a6e7298ef6766a83fade7cbcd945ab2f57978cc91ece`.
+- `Missouri-Seasonal-2026-Clearance2-Independent-Evidence-v1.zip` — Library `libfile_c111f7e473b081919ccf9d8012a7d203`; SHA-256 `9a3960304a7e16fccbe158dc7cf0207b87f669e2193c6491efef3aec3ba7e80e`.
+- `Missouri-Seasonal-2026-Clearance2-Independent-SHA256SUMS-v1.txt` — Library `libfile_ef5901662e188191a2636b609049dd95`; SHA-256 `78b93d80e42c03d6b1f72646e3c1398b92c3348bb155112a13fcbd1e1da815ae`.
+
+Fresh 20:15 UTC preflight: main `90f0f745a6e35d5abd09f727b7d3c87367ef3295`; native production alias resolves to READY `dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK` at that SHA; documentation parent `5cd8981637fd2379c7698786979fed4660751146`, tree `721d2dadeacc3e853b94d2e4d0f5862c21d2650f`. Only this continuity file changes on deployment-disabled `integration/continuity-refresh-2026-10-07`. Prior PR #47 status remains dated, with no interference. Seasonal release remains shipped, Android physical acceptance HOLD and deferred provider posture remain unchanged.
+
+## Prior continuity — historical author-freeze snapshot, preserved verbatim
+
 # Pick For Us — Clearance Sprint #2 Author Freeze (2026-10-07)
 
 ## CURRENT — AUTHOR CANDIDATE FROZEN; INDEPENDENT VERIFICATION PENDING; NO NEW CLEARANCE
