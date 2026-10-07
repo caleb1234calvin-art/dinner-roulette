@@ -59,7 +59,8 @@ export function mergeIdentity(a: DateNightPlace, b: DateNightPlace): DateNightPl
     ...second!, ...first!, activityTypes, discoveryEvidence,
     lifecycle: a.lifecycle === "permanently-closed" || b.lifecycle === "permanently-closed"
       ? "permanently-closed" : a.lifecycle ?? b.lifecycle,
-    openingHours: curated?.openingHours ?? (hours.length === 1 ? hours[0]! : null),
+    openingHours: (first!.seasonalAvailability ?? second!.seasonalAvailability)?.openNowPolicy === "never"
+      ? null : curated?.openingHours ?? (hours.length === 1 ? hours[0]! : null),
     phone: first!.phone ?? second!.phone,
     website: first!.website ?? second!.website,
     address: first!.address !== "Address unavailable" ? first!.address : second!.address,

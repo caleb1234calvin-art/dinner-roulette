@@ -8,6 +8,7 @@ export const HALLOWEEN_DATE_NIGHT_TYPES: readonly DateNightTypeId[] = [
   "haunted-house",
   "corn-maze",
   "pumpkin-patch",
+  "other-halloween-fall",
 ];
 
 export const HALLOWEEN_THRILL_TYPES: readonly DateNightTypeId[] = [
@@ -30,6 +31,7 @@ export const HALLOWEEN_DATE_NIGHT_CHIPS: ReadonlyArray<{
   { id: "haunted-house", label: "Haunted House" },
   { id: "corn-maze", label: "Corn Maze" },
   { id: "pumpkin-patch", label: "Pumpkin Patch" },
+  { id: "other-halloween-fall", label: "Other Halloween / Fall" },
 ];
 
 export const HALLOWEEN_DATE_NIGHT_PRESETS: ReadonlyArray<{

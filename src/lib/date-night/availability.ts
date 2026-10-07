@@ -10,6 +10,10 @@ export type SeasonalVenueAvailability = {
   revalidateAfter?: string;
   sourceUrls?: readonly string[];
   note?: string;
+  /** One-season imported event: absolute final activity end, never archive time. */
+  endsAt?: string;
+  timeZone?: string;
+  openNowPolicy?: "never";
 };
 
 /** Existing anchors only. Evidence: original audit reference-event-metadata.json
@@ -55,7 +59,11 @@ function localDateKey(now: Date): string {
 }
 
 function calendarState(record: SeasonalVenueAvailability | undefined, now: Date) {
-  const today = localDateKey(now);
+  // A bounded dated import stays ended in all later years, even if review is overdue.
+  if (record?.endsAt && now.getTime() >= Date.parse(record.endsAt)) return { season: "finished" as const, dateOpen: false, due: true };
+  const today = record?.timeZone
+    ? new Intl.DateTimeFormat("en-CA", { timeZone: record.timeZone, year: "numeric", month: "2-digit", day: "2-digit" }).format(now)
+    : localDateKey(now);
   const dates = record?.activeDates?.slice().sort();
   const from = record?.activeFrom ?? dates?.[0];
   const until = record?.activeUntil ?? dates?.[dates.length - 1];
@@ -91,7 +99,7 @@ export function getDateNightAvailability(
     Pick<DecoratedDateNightPlace, "hoursKnown" | "isOpen">,
   now = new Date(),
 ): DateNightAvailability {
-  const seasonal = venue.activityTypes?.some((type) => ["haunted-house", "corn-maze", "pumpkin-patch"].includes(type)) ?? false;
+  const seasonal = venue.activityTypes?.some((type) => ["haunted-house", "corn-maze", "pumpkin-patch", "other-halloween-fall"].includes(type)) ?? false;
   const record = venue.seasonalAvailability ?? SEASONAL_VENUE_AVAILABILITY[venue.id];
   const calendar = calendarState(record, now);
   const season = seasonal ? calendar.season : "ordinary";
@@ -102,7 +110,7 @@ export function getDateNightAvailability(
   else if (season === "upcoming") status = "upcoming-season";
   else if (season === "unconfirmed") status = "schedule-unconfirmed";
   else if (seasonal && !calendar.dateOpen) status = "closed-now";
-  else if (!venue.hoursKnown) status = "hours-unknown";
+  else if (record?.openNowPolicy === "never" || !venue.hoursKnown) status = "hours-unknown";
   else status = venue.isOpen ? "open-now" : "closed-now";
   const labels: Record<DateNightAvailabilityStatus, string> = {
     "open-now": "Open now", "closed-now": "Closed now", "hours-unknown": "Hours unknown",

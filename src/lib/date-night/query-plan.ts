@@ -3,7 +3,7 @@ import { lifecycleQueryClauses, lifecycleQueryPrelude, seasonalQueryClauses, sea
 import type { ConcreteDateNightType, DateNightTypeId } from "./types";
 
 export const DATE_NIGHT_QUERY_GROUPS = {
-  seasonal: ["haunted-house", "corn-maze", "pumpkin-patch"],
+  seasonal: ["haunted-house", "corn-maze", "pumpkin-patch", "other-halloween-fall"],
   entertainment: ["bowling", "arcade", "mini-golf", "escape-room", "skating"],
   culture: ["movies", "museum"],
   outdoor: ["park"],
