@@ -1,3 +1,26 @@
+# Pick For Us — Clearance Sprint #2 Author v2 Freeze (2026-10-07)
+
+## CURRENT — MINIMAL AUTHOR V2 FROZEN; FRESH INDEPENDENT REVIEW IN PROGRESS
+
+Author v2 froze **2026-10-07T20:18:02.437408+00:00**. This supersedes "author v2 pending" below, not the independent v1 HOLD or any unresolved factual gate. **Independent v2 results remain pending; no new whole-record PASS or import clearance is claimed.**
+
+- Exactly four targeted omissions were corrected: Lloyd's under-18 supervision; Monster's 13-and-under adult accompaniment, timed VIP/admission/refund and accessibility/entry constraints; Rutledge-Wilson's accompanied-adult condition for free-child admission; Campbell's age/day/payment-sensitive admission terms.
+- Author status remains **1 CLEARANCE CANDIDATE / 7 HOLD**, with no author independent PASS. Lloyd's earlier arrival-only PASS retains approximate operator navigation/site-arrival precision, not exact parking/gate/doorway. It does not approve v2 as a whole record.
+- Original and v1 bytes, all arrival proposals, dates, categories, lifecycle, fee/weather limitations and null/disabled runtime fields were preserved. No arrival research reopened. Monster's FAQ evidence remains indexed extraction with a four-month-old crawl after direct retrieval failed; do not portray it as fresh direct HTTP.
+- **Next: complete fresh independent review of the exact v2 candidate and explicit field diff, then return the verified result for the owner's small-batch implementation decision.** No runtime/import/taxonomy/merge/release approval. Original eight-record scope, five parked records, Sam A. Baker's separate corrected projection, Android physical HOLD, deferred providers and PR #47 noninterference remain unchanged.
+
+### Immutable v2 author package
+
+- `Missouri-Seasonal-2026-Clearance2-Candidates-v2.json` — Library `libfile_f82b7a0696348191a5fe794cdabea52e`; SHA-256 `c1c0424bf7db5640c4b844612752998b4a48fb8316e1edfb0c2826a77007d6c2`.
+- `Missouri-Seasonal-2026-Clearance2-Report-v2.txt` — Library `libfile_59f61910e95c81919229a0a5147c7240`; SHA-256 `d12995c7d42a06c030ca77239dc3d884e36306d78f603979765e51f6d34d0821`.
+- `Missouri-Seasonal-2026-Clearance2-Diff-v1-to-v2.json` — Library `libfile_59e89c2c6ac08191b81b148eedcdf8ae`; SHA-256 `cd6fa8bf62acc49f0f3e1132c9313180fb2f80f9e001ea07c398f67bca42a42c`.
+- `Missouri-Seasonal-2026-Clearance2-Evidence-v2.zip` — Library `libfile_f2d0207c905c8191956f1e3b9e47fb9e`; SHA-256 `46e246efa73ba49cedbd56db8dede96f7e62ee29e14b94ec4a9c157b5b508b39`.
+- `Missouri-Seasonal-2026-Clearance2-SHA256SUMS-v2.txt` — Library `libfile_3e82eddba52c8191af0f0bdd0b6cf470`; SHA-256 `7800c4072d7b450418ffedf72c596de35251d7743a253b152d712852df5f0067`.
+
+Fresh 20:18 UTC preflight: main `90f0f745a6e35d5abd09f727b7d3c87367ef3295`, production/native alias READY `dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK` at the same SHA; continuity parent `c54677105dd840180e67570f6880f0d77f03d72e`, tree `4ca0467cd73b5816d9e2d90c380e26cf7fe69e46`. This documentation-only update stays on deployment-disabled `integration/continuity-refresh-2026-10-07`. Preserve every older checkpoint as historical evidence.
+
+## Prior continuity — historical independent v1 checkpoint, preserved verbatim
+
 # Pick For Us — Clearance Sprint #2 Independent v1 HOLD (2026-10-07)
 
 ## CURRENT — V1 INDEPENDENT REVIEW COMPLETE: 0 PASS / 8 HOLD; MINIMAL AUTHOR V2 PENDING
