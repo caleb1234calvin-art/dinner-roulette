@@ -1,3 +1,26 @@
+# Pick For Us — Minimal Inherited Lint Cleanup Authorized (2026-10-07)
+
+## CURRENT — THREE-ERROR CLEANUP TASK START; LINT RESOLUTION AND NEW-CANDIDATE GATES PENDING
+
+The owner's **2026-10-07 23:03 UTC** decision authorizes only the minimal cleanup of the three inherited **no-empty** errors. This resolves the choice of next action below; **it does not declare lint fixed, waive errors or authorize release**.
+
+- Work is limited to **`audit/seasonal-discovery-coverage-audit-1-evidence/live-probe.mjs`**, **`audit/seasonal-discovery-coverage-audit-1-evidence/source-probe.mjs`** and **`src/lib/app-data/client.server.ts`**.
+- No suppression, lint-policy change, unrelated style cleanup, refactor or semantic runtime change. Preserve tests and their failure behavior. The six existing warnings may remain; inherited **V50-P01 320 px Directions-label cosmetic polish is explicitly deferred** and outside this cleanup.
+- The author is active. Create a minimal child commit of exact **`634ef2f2fc7017dc6d2daca45266977b96b6d4c7`** on the existing [draft PR #50](https://github.com/caleb1234calvin-art/dinner-roulette/pull/50), not a new PR. **No revised candidate or successful cleanup result is claimed at this checkpoint.**
+- Freeze exact new SHA/tree/parent and full bounded diff. Required new-head gates: full ESLint **zero errors** (six existing warnings permitted), full suite/focused tests, safe auth-enabled builds/proof, hosted checks, all **19 seasonal browser scenarios** plus decoded artwork/qualified notes/expiry/cache/Myer's fallback coverage, and fresh independent exact-candidate review.
+- Prior **757-test and scoped functional/hosted/browser PASS** remain bound to 634ef2. Full lint remains a historical **FAIL** there; no old PASS transfers automatically to the forthcoming child commit.
+- Preserve exact two-record facts, qualified routing precision, never-OpenNow, dates/DST/expiry, test-only revision history, no duplicate ancestry and all earlier artifacts. No main, production, provider, physical Android, signing or Play action.
+
+### Fresh baseline and publication boundary
+
+Read-only **23:04 UTC** checks: main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**; production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** READY at that SHA. PR #50 remains draft/open/unmerged at **634ef2** on `integration/seasonal-release-candidate-2026-10-07`.
+
+Continuity parent **`5be15232137d755dbc1c535bd0068ec9bc936374`**, tree **`e98c57b05faf678e393150beeda584d9770673b6`**. Only AI_CONTINUITY.md changes on deployment-disabled `integration/continuity-refresh-2026-10-07`; verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**` exclusion.
+
+**Next:** complete the authorized three-error cleanup and all exact-new-candidate gates, then obtain fresh independent verification. Only after all applicable gates pass may a final proposal be prepared. An eventual documentation-only publication wrapper must intentionally fold current continuity, record its exact identity and prove runtime/build-input equality; no blind continuity merge or implicit release approval. Main merge/deployment still requires a separate explicit owner decision.
+
+## Prior continuity — independent integration verdict and lint decision, preserved verbatim
+
 # Pick For Us — Independent Integration Review Complete; Lint Decision Required (2026-10-07)
 
 ## CURRENT — SCOPED FUNCTIONAL/HOSTED/BROWSER PASS; FULL LINT FAIL; RELEASE HOLD
