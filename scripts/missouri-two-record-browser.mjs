@@ -207,7 +207,7 @@ try {
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       assert.equal(await page.locator("[data-seasonal-visit-notes]").count(), 0);
       assert.doesNotMatch(await rowCard(page, row).innerText(), /Corn Maze|Pumpkin Patch|Other Halloween \/ Fall/i);
-      assert.match(await rowCard(page, row).innerText(), /Park/);
+      assert.match(await rowCard(page, row).innerText(), /Park/i);
       // The same-name provider park is deliberately recorded, not confused with
       // the absent curated event or silently treated as a disappearing venue.
       result.evidence.seasonOffOrdinarySameNamePark = await rowCard(page, row).innerText();
