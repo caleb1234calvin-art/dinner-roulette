@@ -1,3 +1,57 @@
+# Pick For Us — Incremental Seasonal Clearance Sprint #2 (2026-10-07)
+
+## CURRENT — EIGHT-RECORD RESEARCH ACTIVE; NO NEW CLEARANCE; PRODUCTION UNCHANGED
+
+The owner's 2026-10-07 19:49 UTC mission changes the next action from the previous general product decision to the bounded research sprint below. This entry supersedes older CURRENT/NEXT instructions only where stated. Preserve the prior five-record correction closeout, parked records, evidence and unresolved gates; do not restart them from historical handoffs.
+
+### Authoritative baseline and documentation scope
+
+- Fresh read-only preflight at approximately 19:52 UTC: main `90f0f745a6e35d5abd09f727b7d3c87367ef3295`, tree `18421f72c5b81a7d7b4ed9f08fd69439c45fc41b`; production `dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK` remains READY at that exact SHA. The native alias `dinner-roulette-chi.vercel.app` resolves to the same deployment.
+- Existing continuity parent: `99eab82f77a10e9a23c4951d06247a4c2256f368`, tree `692ca644128b8d5961e07979e8f6c8ee6003e7d1`, on `integration/continuity-refresh-2026-10-07`. This update changes only AI_CONTINUITY.md and preserves all prior text below.
+- `vercel.json` explicitly disables Git deployments for `integration/**`. Keep continuity on this branch until a separately intentional main publication; no main update, merge or deployment is authorized by this sprint.
+- Project `prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm`, team `team_iBSXkvS9Z7tu8o8AtW0vlDt7`. A latest project deployment may be a concurrent Preview; it is not evidence of a production change.
+
+### Authorized strategy and exact eight-record scope
+
+Research → clear the exact outstanding evidence gaps → freeze an immutable author candidate → fresh independent verification → propose a small verified batch for the owner's implementation decision. Do not wait for all 27 held records to clear.
+
+Only these eight records are active in Sprint #2:
+
+- MO26-036 — Monster Corn Maze
+- MO26-069 — Dead Factory Haunted House
+- MO26-068 — Lloyd's Family Farm
+- MO26-115 — Bollinger Mill State Historic Site — Trick-or-Treat Night
+- MO26-019 — James River Church Joplin — October 31st Party
+- MO26-030 — Rutledge-Wilson Farm Park
+- MO26-100 — Urban Gardens Pumpkin Patch & Corn Maze
+- MO26-029 — Campbell's Maze Daze & Pumpkin Patch
+
+Author research classifications are **CLEARANCE CANDIDATE / HOLD / EXPIRED / REJECT**. The author must not self-award an independent PASS. Results are pending: no new record is cleared by this task-start checkpoint. Reuse existing evidence and pursue the exact arrival or material-fact HOLDs without broadening the task.
+
+### Existing verdicts and gates remain distinct
+
+- Original unchanged 28-record proposals: **0 PASS / 28 HOLD**. Corrected independent data-level projections: **1 PASS / 27 HOLD / 0 REJECT**.
+- The sole corrected data-level PASS is **MO26-116 — Sam A. Baker Halloween Bash**. Use only its corrected projection with unsupported crafts removed; fresh pre-import revalidation and separate taxonomy/import authority remain required. It is not a new Sprint #2 clearance.
+- Prior southwest correction Revision 2: **5 correction-quality PASS / 0 correction-quality HOLD**, but **0 import-clearance PASS / 5 HOLD**. No implementation or import occurred.
+- MO26-003 Myer's Inn, MO26-010 Aftermath, MO26-011 Beyond, MO26-012 Witches Day Out and MO26-013 Vino Noir stay parked absent new evidence. The witch events must expire on their established schedule if uncleared, never be rushed or rolled into another season.
+- No lowered arrival-evidence standard, operator contact, paid API, or renewed Overpass probing. Preserve unsupported routing coordinates, provenance, machine opening intervals and Open Now as null; never turn date ranges into continuous opening or conflate last admission with final exit.
+- A future Other category is intended to reuse the Haunted House icon temporarily. This is a design direction, **not implementation authorization**. Existing HauntedHouse/CornMaze/PumpkinPatch behavior remains unchanged.
+- Seasonal release remains shipped/closed. Android current-input workflow verification/promotion remains complete, physical Android/WebView acceptance remains **HOLD**, and signing/Play remain separate. Optional/deferred provider work is not reopened.
+
+### Concurrent Myer's Inn hotfix — do not duplicate or interfere
+
+[PR #47](https://github.com/caleb1234calvin-art/dinner-roulette/pull/47), branch `fix/halloween-arrival-hotfix-1`, head `0b093dfff7eab1615a3a95c7c84fbdb7a6029d14`, separately removes the unverified Myer's Inn fallback. Fresh 19:52 UTC readback: open and unmerged, base main `90f0f745a6e35d5abd09f727b7d3c87367ef3295`.
+
+Its READY Preview does not establish release readiness: Validate Dinner Integration run `37676753416` and Android Release Readiness run `37676753430` both completed with failure at that head. Those results belong to the concurrent hotfix, not this documentation/research sprint. Do not fix, merge, deploy, or duplicate that work from this brief. Re-read its exact head/status before any later overlapping implementation.
+
+### Exact next action and stable-state continuity discipline
+
+Complete the bounded eight-record evidence research and freeze the immutable author candidate; then use a fresh independent verifier. Only independently cleared, freshly revalidated records may enter a small batch proposal. **The owner makes the next implementation/import decision; no merge or release authority is granted.** Do not interpret research quality, independent factual clearance, implementation quality, release readiness, physical acceptance, and production state as interchangeable gates.
+
+At each stable verification, promotion, release, HOLD, or material next-action change, update repository continuity and read it back for fresh-worker sufficiency. Verify main, production and any relevant release object first; stop on unexpected drift. Preserve historical results and carry unresolved HOLDs without reopening their work. Record genuinely expired or deliberately parked records explicitly. Publish documentation only through a verified deployment-safe `integration/**` branch, never main merely to refresh continuity; fold it into the next intentional main publication.
+
+## Prior continuity — historical snapshot, preserved verbatim
+
 # Pick For Us — Control-Room Continuity Refresh (2026-10-07)
 
 ## CURRENT — PRODUCTION READY; ANDROID DEVICE ACCEPTANCE HOLD; FIVE-RECORD SEASONAL CORRECTION CLOSED 0 PASS / 5 HOLD
