@@ -511,7 +511,7 @@ test("actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dep
   assert.doesNotMatch(textOf(tree), /Live map unavailable/);
   harness.button(tree, "Give us options").props.onClick();
   tree = harness.render();
-  assert.match(harness.html(tree), /Season upcoming/);
+  assert.match(harness.html(tree), /Closed now/);
   store.dateNightFilters.openNowOnly = true;
   tree = harness.render();
   assert.match(textOf(tree), /0 activities match/);
