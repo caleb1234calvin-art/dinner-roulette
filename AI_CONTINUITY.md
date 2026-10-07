@@ -1,3 +1,50 @@
+# Pick For Us — Lint-Clean Integrated Candidate Independently Verified (2026-10-07)
+
+## CURRENT — TECHNICAL CANDIDATE PASS; AUDITED PUBLICATION IDENTITY AND OWNER RELEASE APPROVAL HOLD
+
+Fresh independent review completed for [draft PR #50](https://github.com/caleb1234calvin-art/dinner-roulette/pull/50), exact **`fd801eda9f496da33aa395ad2ad592027e16029a`**, tree **`97343fa7b22dd9fc25ccbc651e03102257a72a74`**, sole parent **`634ef2f2fc7017dc6d2daca45266977b96b6d4c7`**. **Technical verification PASS**, including full ESLint **zero errors / six explicitly permitted warnings**. The prior lint-error blocker is resolved on this exact candidate. **Publication execution remains HOLD** pending an audited documentation-only wrapper and explicit owner approval; no unknown later SHA is verified.
+
+### Independent results and exact scope
+
+- Exact three-file correction is comments/necessary catch whitespace only, **5 additions / 3 deletions**. Independent exact substitution and parsed leaf-token comparisons prove unchanged executable tokens/control flow. All other parent-relative blobs/modes are identical; no suppression/policy/assertion/provider/dependency change.
+- Deliberate reviewed hotfix + exact CI ordering delta + seasonal feature composition remains PASS; **27 main-relative paths**, no duplicated ancestry. Parent lineage stays **fd801 → 634ef2 → b9fd308 → a5c6d1e → main90f0f745**. Earlier failed/qualified attempts remain preserved.
+- Fresh independent exact-lock install/dependency graph, typecheck, safe builds/proof, **757 full-suite PASS / 4 inherited skips / 0 failures**, focused 69/casino 83, audits, changed/full lint and diff checks PASS. Focused/supplementary checks do not inflate 757. Full lint's six warnings are the unchanged owner-permitted warnings, not an error waiver.
+- New source proof **`a887e5df608bb1aae8d06991ea68bba5c37b62821db57e4bf2682a4f0f2c4359`**, 432 files, matches hosted source. Client-server comment changed build-input bytes, so prior 634ef2 proof was not reused. Independent/local-author/hosted outputs remain separately identified.
+- [Web `37700284759` / job `113061827174`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37700284759/job/113061827174) SUCCESS on authenticated actual fd801 checkout. Artifact **`11516733693`**, SHA-256 **`50b21b47fc31ce571ebf09f5d74f73f47c3f1672c75190a3e51331eaba0f0707`**, independently downloaded/size/digest/CRC and head binding checked. Hosted output **`a085d87234a76bf9ea0814a7de3ac63fa5d4925bb28b480eaaaab05222fa74d1`** binds all three browser suites.
+- Existing casino 16/location 19 and new seasonal **19/19 PASS**; **22 decoded images, 48 qualified-note checks, 24 reachable controls**, zero image failures/uncaught page errors. Actual new pixels/RPCs reviewed. This run has **90 intercepted / zero forwarded provider calls**, not the prior 86. Console messages from blocked fonts/Grok/local insights remain retained.
+- Exact seasonal facts, never-OpenNow, Chicago final cutoffs/2027 exclusion, duplicate/cache/TTL/resume, Other label/icon and Myer's trusted-fallback removal remain verified. Off-season ordinary same-name provider parks can remain without curated identity/types/notes; no universal provider-correctness claim.
+- **V50-P01 remains low/inherited/explicitly deferred:** 320 px Directions-label clipping, with complete accessible name/exact target/trial actionability; 390 px fits. Qualified facts/warnings remain readable. No pixel-perfect or physical-arrival claim.
+- [Unsigned Android `37700284917` / job `113061828398`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37700284917/job/113061828398) SUCCESS; signing **`113063063148` SKIPPED**. Unlike the author metadata-only review, the independent verifier downloaded validation artifact **11516904180**, verified digest/CRC/source-revision/checksums, inspected AAB integrity/unsigned state and all 15 decoded launcher resources. No fresh local Gradle/bundletool run or physical-device acceptance; native NO-SOURCE tasks are not behavioral passes.
+- Factual October 14 and visitor 24 h/48 h review notes are not automated monitoring. No fresh live-operator/ticket/weather/social, live-provider, physical GPS/arrival/WebView, signing or Play acceptance.
+
+### Immutable final packages
+
+Independent:
+- `Pick-For-Us-PR50-Lint-Independent-Verification.txt`: Library **`libfile_5a6ae739f5148191b4732b8d3c88f8bb`**, SHA-256 **`ec11128004176aa203ad2106af291a68cb9903a12f01531f9f72c145bb0f6d42`**.
+- Independent JSON: Library **`libfile_a5036f7a93dc8191b9529ed7cb50ccc4`**, SHA-256 **`f936d4759c56f39d4cfbfa42e53a4ca76cc7072e40222a3c61a1c19045785b38`**.
+- Independent evidence ZIP: Library **`libfile_16e391c88f08819199ece09385a5beed`**, SHA-256 **`81ffab2e1e10e35a04e2bdde8c9dc831324a9a01880712481eef0d15f869a66f`**.
+
+Author package, separately retained:
+- `Pick-For-Us-PR50-Lint-Cleanup-Author-Validation.txt`: Library **`libfile_9bbb05cf5c2c8191b7728e57a1d2ca67`**, SHA-256 **`7ceb4ea35e1845faefcc255599a90d589a7d25380c9d486bf11d306d2a5d34d3`**.
+- Author JSON: Library **`libfile_2c42d903512c8191afe4959ca572464e`**, SHA-256 **`11e142ffdfffafa28fedc88f4271c8af6852a1a9e75a5aeaf7e82d75f0471e71`**.
+- Author evidence ZIP: Library **`libfile_e2b9dda688e081919dbfaa44e9b588dd`**, SHA-256 **`6df09b689020783e7bfcb64dea72291f40e1563a373137ec957d1b81dd0a0770`**.
+
+### Next publication gate, not release permission
+
+Technical fd801 PASS supports preparing a final exact-identity proposal. **No documentation wrapper has been created or verified by this checkpoint.** Wait for the coordinator's instruction before preparing it.
+
+The next permitted preparation, once directed, is a separate documentation-only child of fd801 deliberately folding current canonical continuity and truthful final handoff. Do not blindly merge continuity history or overlapping source PRs. Audit full diff/paths, freeze exact wrapper commit/tree/parents, prove all runtime/build-input bytes equal fd801 and independently verify that publication identity. Different SHA must be identified as different; any runtime/build-input change requires revalidation.
+
+Only after that audit may the final concrete protected-main/production proposal be presented for **explicit owner approval**. Recheck main/current aliases, effective migration-free publication route and authorized rollback procedure before any approved execution. Retained deployments being READY does not establish automatic rollback eligibility; prior filtered-listing 403 was not bypassed and eligibility remains unestablished. No release operator, merge/deploy/signing/Play action is authorized here.
+
+### Fresh preservation baseline
+
+At **23:15 UTC**, main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`** and production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** remain unchanged/READY; PR #50 draft/open/unmerged at fd801. Independent **23:12 UTC** current-alias reads resolved all five aliases to that production; this remains a dated observation.
+
+Continuity parent **`fd5e024878c8fc53f1d6cbe5bca98e886cd6b38a`**, tree **`7a0d7b2132688e56aac52d0927c0349054f52ccc`**. Only AI_CONTINUITY.md changes on deployment-disabled `integration/continuity-refresh-2026-10-07`; verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**` exclusion. Stop after readback for publication-preparation direction.
+
+## Prior continuity — lint correction freeze and validation pending, preserved verbatim
+
 # Pick For Us — Minimal Lint Correction Frozen (2026-10-07)
 
 ## CURRENT — AUTHOR FULL LINT ZERO ERRORS; NEW-HEAD VALIDATION IN PROGRESS
