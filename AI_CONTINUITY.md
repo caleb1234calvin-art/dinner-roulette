@@ -1,3 +1,49 @@
+# Pick For Us — Exact Publication Wrapper Independently Verified (2026-10-07)
+
+## CURRENT — PUBLICATION AUDIT PASS; CONDITIONAL OWNER RELEASE PROPOSAL NEXT; EXECUTION HOLD
+
+Fresh independent audit verifies the exact [draft PR #50](https://github.com/caleb1234calvin-art/dinner-roulette/pull/50) publication wrapper **`0bbf6758e94eea8129e21b004d4c36ff886cd46d`**, tree **`7add088fcbcacb8526f90a6f09c6dd7ca5249b3c`**, sole parent/verified technical runtime **`fd801eda9f496da33aa395ad2ad592027e16029a`**, parent tree **`97343fa7b22dd9fc25ccbc651e03102257a72a74`**. **Documentation identity/runtime equality and exact-wrapper hosted checks PASS. Execution remains HOLD for explicit owner approval and successful operator preflight.**
+
+**Keep wrapper 0bbf immutable.** This final audit receipt updates only the separate canonical continuity branch and Library evidence; it is not another wrapper amendment. Wrapper carries complete canonical 5302df runtime-PASS history plus preparation header. The later audit outcome is recoverable here and in the final report without recursive identity changes.
+
+### Independently verified publication and execution evidence
+
+- Wrapper changes only **AI_CONTINUITY.md**, +827/−0; all **1,271 other tracked blobs/modes** out of 1,272 are identical to fd801. Full main-relative inventory is **28 paths** in the report. No runtime, workflow, test, script, asset, lock, Android or configuration change; no continuity ancestry merge.
+- Complete canonical `5302df234b8188a66d0378656bf89792a3d58b17` content is preserved verbatim. Independent actual build-input fingerprint **`a887e5df608bb1aae8d06991ea68bba5c37b62821db57e4bf2682a4f0f2c4359` / 432 files** equals fd801. Source digest review is distinct from a new local build.
+- The technical fd801 **full-lint zero errors/six permitted warnings, 757 tests/four inherited skips and qualified runtime/seasonal acceptance** is inherited only through proven equality. Its old runs remain fd801 runs; wrapper has its own separately authenticated execution.
+- [Wrapper web `37701587676` / job `113066054557`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37701587676/job/113066054557) **SUCCESS**, actual checkout 0bbf, **757 PASS / 4 inherited skips**. New hosted output **`5179155122df47e8db462a37681b623008a6a09831bc511ee4d037e69f848a8b` / 194 files**; unchanged source proof binds all three browser suites.
+- New wrapper browser artifact **`11518000934`**, SHA-256 **`89b1ad0fc9e6987f0b02ec7177645f8f937f8ed1b7a2b7a9d9fa5fb065daf80d`**, independently downloaded/size/digest/CRC/head checked. Existing casino 16/location 19 and seasonal **19/19 PASS**; **22 decoded images, 48 qualified-note checks, 24 reachable controls**. Actual RPCs/screenshots reviewed; 90 intercepted/zero forwarded provider calls. Expected console errors remain retained.
+- [Wrapper unsigned Android `37701587679` / job `113066054577`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37701587679/job/113066054577) **SUCCESS**; signing **`113066889065` SKIPPED**. Actual checkout is 0bbf, not artifact-name merge SHA. New wrapper Android binaries were not independently downloaded; prior fd801 native-binary inspection is inherited through exact input equality, not relabeled a new binary review. Native NO-SOURCE tasks are not behavioral passes.
+- Six permitted warnings and **V50-P01 inherited 320 px Directions-label clipping** remain explicitly disclosed/deferred; functional target/name/href and qualified notes pass. No pixel-perfect, production-font, physical GPS/arrival/WebView, current provider/weather/ticket/social, upload signing or Play acceptance.
+- PR #50 metadata now identifies current wrapper/runtime separately and retains original prose below a historical heading. Exact API head and current audit control; source PRs #47/#48/#49 remain separate unmerged history, not additional merge targets.
+
+### Final corrected independent audit package (version 1)
+
+- `Pick-For-Us-PR50-Publication-Independent-Verification.txt`: Library **`libfile_dd94f5117c688191bc7393275fe87d33`**, SHA-256 **`e8a9d96eb5fc7b41926d8034f6f50810ff27b84ede0245ff3e4aeafabc1850f5`**.
+- Independent JSON: Library **`libfile_e16c56952a6c8191b6a6483c000147ae`**, SHA-256 **`aa264116f1fe892478ae88739dfc3bd18a697f03a4b42e0cf782fb8d0e357b5d`**.
+- Independent evidence ZIP: Library **`libfile_4b20339135348191be02fe739a3d2fe7`**, SHA-256 **`4d003933f9877d578960efc907f8cac9fe68f089f9b326a5708f06a333a05b6a`**.
+
+Version 1 corrects only the PR-description observation; version 0 remains historical. Publication PASS/execution HOLD is unchanged. The full report supplies the complete 28-path inventory, source/evidence bindings and operational limits.
+
+### Exact owner proposal and mandatory operator preflight
+
+A supportable next request is **explicit approval to publish only the reviewed wrapper tree through the protected-main process and perform a specified migration-free web production release, conditional on successful preflight**. No merge/deploy has occurred or is authorized by this audit.
+
+**Before ANY release mutation:**
+1. Re-read exact main/PR head/tree/check state and applicable branch protection. Stop on upstream drift, tree/input delta or unsatisfied required protection; never bypass it. Any merge-generated SHA must be recorded separately and its full tree proved equal to approved **7add088f…**.
+2. Establish the effective Vercel production build command, Git trigger/branch and auth/environment-safe release route. Current project reads omit these fields; they do not prove configuration. Ordinary `npm run build` chains migrations and must not be used. The tested safe command is `VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`. Main may auto-deploy; integration exclusion proves nothing about main. If a settings change is needed, obtain its separate authority.
+3. Record current production/aliases and verify an accessible authorized rollback operation to **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** as immediate prior production after a future promotion. READY does not prove automatic eligibility; the denied filtered-listing 403 was not bypassed. If the safe route or rollback procedure cannot be established, **HOLD before publication/promotion**.
+
+After a future authorized release, verify deployed SHA/tree/proof, READY state, actual alias assignments and scoped smoke checks; use only a separately authorized verified rollback if needed. No migration is part of this scope. Runtime/input changes require new validation and approval.
+
+### Fresh preservation baseline
+
+At **23:24–23:25 UTC**, main remains **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**, production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** READY at that SHA, and PR #50 draft/open/unmerged at **0bbf**. Independent current-alias checks separately confirmed all five production aliases, including unchanged www → apex redirect. No wrapper deployment exists at the last checked observation.
+
+Canonical continuity parent **`5302df234b8188a66d0378656bf89792a3d58b17`**, tree **`1ba4439ea7e3137c8e4e12ba4ca3d8099eaac1fc`**. This update changes only AI_CONTINUITY.md on deployment-disabled **`integration/continuity-refresh-2026-10-07`**; unchanged `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains exclusion. **Wrapper0bbf is untouched.** Stop after canonical readback for the owner's conditional release decision.
+
+## Prior continuity — technical candidate PASS and publication preparation gate, preserved verbatim
+
 # Pick For Us — Lint-Clean Integrated Candidate Independently Verified (2026-10-07)
 
 ## CURRENT — TECHNICAL CANDIDATE PASS; AUDITED PUBLICATION IDENTITY AND OWNER RELEASE APPROVAL HOLD
