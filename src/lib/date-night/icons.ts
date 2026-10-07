@@ -32,6 +32,8 @@ export const DATE_NIGHT_ICON_BY_TYPE: Record<ConcreteDateNightType, string> = {
   "haunted-house": HAUNTED_HOUSE_ICON,
   "corn-maze": CORN_MAZE_ICON,
   "pumpkin-patch": PUMPKIN_PATCH_ICON,
+  // Temporary presentation debt: Other has its own label, but reuses the haunt icon.
+  "other-halloween-fall": HAUNTED_HOUSE_ICON,
 };
 
 const HALLOWEEN_DATE_NIGHT_ICON_BY_TYPE: Partial<Record<ConcreteDateNightType, string>> = {
@@ -42,6 +44,7 @@ const HALLOWEEN_DATE_NIGHT_ICON_BY_TYPE: Partial<Record<ConcreteDateNightType, s
   "mini-golf": "/date-night-icons/grok_1788905190727.jpg",
   museum: "/date-night-icons/grok_1788905196749.jpg",
   "haunted-house": "/date-night-icons/grok_1788905199846.jpg",
+  "other-halloween-fall": "/date-night-icons/grok_1788905199846.jpg",
   "corn-maze": "/date-night-icons/grok_1788905202767.jpg",
   "pumpkin-patch": "/date-night-icons/grok_1788905205875.jpg",
   "escape-room": "/date-night-icons/grok_1788905208616.jpg",
@@ -51,6 +54,7 @@ const HALLOWEEN_DATE_NIGHT_ICON_BY_TYPE: Partial<Record<ConcreteDateNightType, s
 function inferTypeFromLabel(label?: string | null): ConcreteDateNightType | null {
   const value = label?.toLowerCase() ?? "";
   if (!value) return null;
+  if (value === "other halloween / fall") return "other-halloween-fall";
   if (value.includes("haunt") || value.includes("spook")) return "haunted-house";
   if (value.includes("corn maze") || value.includes("maize")) return "corn-maze";
   if (value.includes("pumpkin")) return "pumpkin-patch";

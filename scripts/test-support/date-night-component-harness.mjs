@@ -92,6 +92,7 @@ export function dateNightComponentHarness({ store, now, search }) {
         };
       if (
         [
+          "@/components/seasonal-visit-notes",
           "@/components/options-overlay",
           "@/components/result-overlay",
           "@/components/date-night-plan-overlay",

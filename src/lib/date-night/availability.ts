@@ -10,6 +10,10 @@ export type SeasonalVenueAvailability = {
   revalidateAfter?: string;
   sourceUrls?: readonly string[];
   note?: string;
+  /** One-season imported event: absolute final activity end, never archive time. */
+  endsAt?: string;
+  timeZone?: string;
+  openNowPolicy?: "never";
 };
 
 /** Existing anchors only. Evidence: original audit reference-event-metadata.json
@@ -23,13 +27,6 @@ export const SEASONAL_VENUE_AVAILABILITY: Readonly<Record<string, SeasonalVenueA
     checkedAt: "2026-09-29", revalidateAfter: "2026-10-31",
     sourceUrls: ["https://thewerehouse.net/", "https://www.missourihauntedhouses.com/halloween/haunted-house-joplin.html"],
     note: "Operator weekly hours and current directory season corroborated by the retained audit retrievals.",
-  },
-  "date-night-myers-inn-carthage": {
-    status: "confirmed", activeFrom: "2026-10-02", activeUntil: "2026-10-31",
-    activeDates: ["2026-10-02", "2026-10-03", "2026-10-09", "2026-10-10", "2026-10-16", "2026-10-17", "2026-10-23", "2026-10-24", "2026-10-30", "2026-10-31"],
-    checkedAt: "2026-09-29", revalidateAfter: "2026-10-31",
-    sourceUrls: ["https://www.myersinnhaunt.com/"],
-    note: "Ten October 2026 dates in the operator calendar, retained in original audit evidence. Verify changes before travel.",
   },
 };
 
@@ -55,7 +52,11 @@ function localDateKey(now: Date): string {
 }
 
 function calendarState(record: SeasonalVenueAvailability | undefined, now: Date) {
-  const today = localDateKey(now);
+  // A bounded dated import stays ended in all later years, even if review is overdue.
+  if (record?.endsAt && now.getTime() >= Date.parse(record.endsAt)) return { season: "finished" as const, dateOpen: false, due: true };
+  const today = record?.timeZone
+    ? new Intl.DateTimeFormat("en-CA", { timeZone: record.timeZone, year: "numeric", month: "2-digit", day: "2-digit" }).format(now)
+    : localDateKey(now);
   const dates = record?.activeDates?.slice().sort();
   const from = record?.activeFrom ?? dates?.[0];
   const until = record?.activeUntil ?? dates?.[dates.length - 1];
@@ -91,7 +92,7 @@ export function getDateNightAvailability(
     Pick<DecoratedDateNightPlace, "hoursKnown" | "isOpen">,
   now = new Date(),
 ): DateNightAvailability {
-  const seasonal = venue.activityTypes?.some((type) => ["haunted-house", "corn-maze", "pumpkin-patch"].includes(type)) ?? false;
+  const seasonal = venue.activityTypes?.some((type) => ["haunted-house", "corn-maze", "pumpkin-patch", "other-halloween-fall"].includes(type)) ?? false;
   const record = venue.seasonalAvailability ?? SEASONAL_VENUE_AVAILABILITY[venue.id];
   const calendar = calendarState(record, now);
   const season = seasonal ? calendar.season : "ordinary";
@@ -102,7 +103,7 @@ export function getDateNightAvailability(
   else if (season === "upcoming") status = "upcoming-season";
   else if (season === "unconfirmed") status = "schedule-unconfirmed";
   else if (seasonal && !calendar.dateOpen) status = "closed-now";
-  else if (!venue.hoursKnown) status = "hours-unknown";
+  else if (record?.openNowPolicy === "never" || !venue.hoursKnown) status = "hours-unknown";
   else status = venue.isOpen ? "open-now" : "closed-now";
   const labels: Record<DateNightAvailabilityStatus, string> = {
     "open-now": "Open now", "closed-now": "Closed now", "hours-unknown": "Hours unknown",

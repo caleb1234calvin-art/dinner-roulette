@@ -14,7 +14,8 @@ export type DateNightTypeId =
   | "skating"
   | "haunted-house"
   | "corn-maze"
-  | "pumpkin-patch";
+  | "pumpkin-patch"
+  | "other-halloween-fall";
 
 export type ConcreteDateNightType = Exclude<DateNightTypeId, "anything">;
 
@@ -44,6 +45,7 @@ export interface DateNightPlace extends Restaurant {
   seasonalAvailability?: SeasonalVenueAvailability;
   activityTypes: ConcreteDateNightType[];
   moodLevel: 1 | 2 | 3;
+  seasonalVisitNotes?: readonly string[];
 }
 
 export interface DecoratedDateNightPlace extends DecoratedRestaurant, DateNightPlace {
@@ -109,6 +111,7 @@ export function dateNightMoodLabel(value: number): string {
 }
 
 export function dateNightTypeLabel(types: readonly ConcreteDateNightType[]): string {
+  if (types.includes("other-halloween-fall")) return "Other Halloween / Fall";
   if (types.includes("haunted-house")) return "Haunted House";
   if (types.includes("corn-maze")) return "Corn Maze";
   if (types.includes("pumpkin-patch")) return "Pumpkin Patch";

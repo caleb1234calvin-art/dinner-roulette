@@ -22,6 +22,12 @@ import type { DateNightPlace } from "./types";
 //   Recent local haunt roundups identify the location, but 2026 operating dates
 //   were not strong enough in this audit to hard-code it.
 //
+// RIP at Myer’s Inn — 529 W Airport Dr, Carthage, MO 64836 — was removed from
+// this trusted coordinate fallback after the 2026-10-07 independent Missouri
+// verification found that the retained point did not establish the public
+// entrance or visitor parking. Keep it discoverable only through sources that
+// do not promote an unverified arrival coordinate until that gate is cleared.
+//
 // Myers Forest of Fears — 3935 S Garrison Ave, Carthage, MO 64836 — remains
 // intentionally uncurated because current sources conflict: structured local
 // business data marks it permanently closed, while current 2026 haunt directories
@@ -41,26 +47,6 @@ export const JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG: DateNightPlace[] = [
     openingHours: "Fr-Sa 19:00-24:00",
     phone: "+1 417-396-6094",
     website: "https://thewerehouse.net/",
-    isChain: false,
-    photoKey: "cafe",
-    source: "catalog",
-    activityTypes: ["haunted-house"],
-    moodLevel: 3,
-  },
-  {
-    id: "date-night-myers-inn-carthage",
-    name: "Myer's Inn Haunt",
-    lat: 37.1475746,
-    lon: -94.3173348,
-    address: "529 W Airport Dr, Carthage, MO 64836",
-    cuisines: ["other"],
-    cuisineLabel: "Haunted House",
-    priceLevel: null,
-    rating: null,
-    reviewCount: null,
-    openingHours: "Fr-Sa 19:00-24:00",
-    phone: "+1 417-313-2223",
-    website: "https://www.myersinnhaunt.com/",
     isChain: false,
     photoKey: "cafe",
     source: "catalog",

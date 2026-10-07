@@ -1,3 +1,4 @@
+import { SeasonalVisitNotes } from "@/components/seasonal-visit-notes";
 import { dateNightStatusLabel } from "@/lib/date-night/availability";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
@@ -83,6 +84,7 @@ function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { r
         {mode === "date-night" && activityTypes.length ? <div className="mt-2 flex flex-wrap gap-1">{activityTypes.slice(0, 3).map((type) => <span key={type} className="rounded-full bg-elevated px-2 py-1 text-[10px] tracking-wide text-muted uppercase">{dateNightTypeLabel([type])}</span>)}</div> : <p className="mt-1 text-xs text-muted">{restaurant.cuisineLabel}{restaurant.priceLevel ? ` · ${formatPrice(restaurant.priceLevel)}` : ""}</p>}
         <p className="mt-2 text-xs text-subtle">{formatDistance(restaurant.distanceMiles)}{openLabel ? ` · ${openLabel}` : ""}</p>
         {mode === "date-night" && !restaurant.hoursKnown ? <p className="mt-1 text-xs text-subtle">Hours unknown — check before going</p> : null}
+        {mode === "date-night" ? <SeasonalVisitNotes place={dateNightRestaurant} /> : null}
         {restaurant.closingSoon ? <p className="mt-1 text-xs text-danger">Closing soon</p> : null}
       </button>
     </article>

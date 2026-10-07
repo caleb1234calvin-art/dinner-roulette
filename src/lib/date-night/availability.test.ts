@@ -33,18 +33,18 @@ describe("seasonal date-night availability", () => {
     );
   });
 
-  it("uses Myer's retained operator 2026 calendar", () => {
-    assert.equal(hasSeasonalAvailabilityRecord("date-night-myers-inn-carthage"), true);
+  it("does not retain Myer's as a trusted seasonal anchor after arrival verification HOLD", () => {
+    assert.equal(hasSeasonalAvailabilityRecord("date-night-myers-inn-carthage"), false);
     assert.equal(
       getSeasonalDateStatus("date-night-myers-inn-carthage", new Date(2026, 9, 10, 20, 0)),
-      "available",
+      "unconfirmed",
     );
   });
 
   it("fails closed for Open now when hours or the seasonal date are not confirmed", () => {
     assert.equal(
       isDateNightOpenNowEligible(
-        { id: "date-night-myers-inn-carthage", hoursKnown: false, isOpen: true },
+        { id: "date-night-unverified-seasonal", hoursKnown: false, isOpen: true },
         true,
         new Date(2026, 9, 10, 20, 0),
       ),
