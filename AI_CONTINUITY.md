@@ -1,3 +1,30 @@
+# Pick For Us — Conditional Exact-Tree Release Approval; Preflight Active (2026-10-07)
+
+## CURRENT — OWNER APPROVAL CONDITIONAL; EXECUTION HOLD UNTIL OPERATIONAL GATES ARE PROVEN
+
+The owner's **2026-10-07 23:35 UTC** decision conditionally approves publication and promotion of the exact independently reviewed tree **`7add088fcbcacb8526f90a6f09c6dd7ca5249b3c`**, wrapper **`0bbf6758e94eea8129e21b004d4c36ff886cd46d`**. This supersedes the request-for-owner-approval next action below. **It does not waive preflight conditions or authorize assumptions about an unprotected main branch.**
+
+A separate release operator has started **read-only operational preflight**. No release mutation or successful release is claimed. Execution stays **HOLD** until all conditions below are established:
+
+1. Read the actual main branch-protection/rules requirements and satisfy them. If main is currently unprotected, obtain the owner's explicit decision for that fact before proceeding; do not infer permission from generic release approval or a mergeable flag.
+2. Verify an accessible, authorized rollback operation to current production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`**. READY alone is not eligibility or proven rollback access.
+3. Establish the effective Vercel production build command, Git trigger/branch and safe auth/environment route. The actual publication must be migration-free; ordinary `npm run build` chains migrations and must not execute. Omitted project fields are not proof. Any needed settings change requires its own authority.
+4. Immediately before any mutation, re-read unchanged main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**, PR #50 head **`0bbf6758e94eea8129e21b004d4c36ff886cd46d`**, exact tree **7add088f…**, current production **dpl_fU21…**, checks/protection and verified safe build/rollback routes. **Any unexpected drift or unprovable condition means HOLD.**
+
+Only after every condition is known/satisfied does the conditional approval authorize the exact-tree publication and promotion. Record any merge-generated identity separately and prove its full tree equals the approved tree; no source/tree change or protection bypass. After execution, verify deployed source/tree/proof, READY/current aliases and scoped smoke acceptance; rollback only through the verified authorized procedure if required.
+
+Technical/runtime/publication audit PASS remains intact. Six permitted warnings and deferred inherited V50-P01 cosmetic clipping remain disclosed; physical Android/WebView/GPS/arrival, signing/Play and live-provider/weather/ticket guarantees remain excluded. **Wrapper0bbf remains immutable; no further wrapper documentation amendment is part of this checkpoint.**
+
+### Fresh preservation baseline
+
+Read-only **23:36 UTC** checks: main remains **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**; production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** READY at that SHA. [PR #50](https://github.com/caleb1234calvin-art/dinner-roulette/pull/50) remains draft/open/unmerged at exact **0bbf**. No main/production change.
+
+Canonical continuity parent **`74fb783cf73a4cf7678897bf9ab6ee23fc40e255`**, tree **`c1588bb6ae41082ea5dfb57722ef592195e90ba9`**. Only AI_CONTINUITY.md changes on deployment-disabled `integration/continuity-refresh-2026-10-07`; verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**` exclusion.
+
+**Next:** finish read-only operational preflight and report actual protection, safe build and rollback findings. Seek the specific owner decision if a condition needs it; otherwise execute only within the conditional exact-tree approval. No release success is established yet.
+
+## Prior continuity — independent publication audit and owner proposal, preserved verbatim
+
 # Pick For Us — Exact Publication Wrapper Independently Verified (2026-10-07)
 
 ## CURRENT — PUBLICATION AUDIT PASS; CONDITIONAL OWNER RELEASE PROPOSAL NEXT; EXECUTION HOLD
