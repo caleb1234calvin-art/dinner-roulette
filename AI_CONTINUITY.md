@@ -1,3 +1,37 @@
+# Pick For Us — Isolated Integration Authorized (2026-10-07)
+
+## CURRENT — INTEGRATION TASK START; NO COMBINED CANDIDATE OR ACCEPTANCE YET
+
+The owner's **2026-10-07 22:15 UTC** decision authorizes an isolated integration branch and draft PR based on unchanged main, deliberately combining the reviewed hotfix, exact CI-ordering delta and reviewed two-record seasonal feature. This supersedes the integration-decision-pending instruction below. **No main merge or production deployment is authorized.**
+
+### Exact reviewed sources and boundaries
+
+- Base main: **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**.
+- [PR #47](https://github.com/caleb1234calvin-art/dinner-roulette/pull/47), hotfix head **`277aca01996b5559b6e520d9d3f193c4989f4f64`**: remove Myer's from trusted fallback/availability authority and retain reviewed regression changes.
+- [PR #49](https://github.com/caleb1234calvin-art/dinner-roulette/pull/49), **`49a552cf36e800fb684504cf8f36beb1ee3d3b5b`**: apply **only its exact workflow-ordering delta relative to parent `277aca01996b5559b6e520d9d3f193c4989f4f64`**. The full main-relative PR includes hotfix ancestry; do not duplicate that ancestry or blindly merge histories.
+- [PR #48](https://github.com/caleb1234calvin-art/dinner-roulette/pull/48), reviewed revision **`3dc116ef8d114127402d94fcbe299272080d0f4a`**: Lloyd's MO26-068 + Sam MO26-116, bounded curated Other Halloween / Fall with temporary Haunted House icon, and verified V48-01 region-neutral copy correction.
+- Prior source PASS results remain scoped to their recorded exact candidates. The combined source/tree, new seasonal browser acceptance and integrated release verification are **not yet established**.
+
+### Required integrated gates
+
+The integration author is active and must freshly verify baseline/source heads before edits. **No combined candidate, new draft PR, completed integration or passing integrated test result is claimed by this task-start checkpoint.**
+
+Inspect the resulting bounded diff, freeze exact SHA/tree/parent lineage, run full hosted validation and focused regressions, then run the new seasonal browser harness with provider fixtures/interception. Required coverage includes Myer's removal from trusted fallback, both records' exact mappings, duplicate/cache/resume behavior, seasonal on/off and Anything/Open Now behavior, dates/expiry/no-2027 recurrence, and Other label/icon behavior. Include the V48-02 mixed ordinary/seasonal duplicate toggle/resume/cache-refresh advisory; its end-to-end impact remains unproven until exercised.
+
+Preserve null machine hours/never-OpenNow, qualified navigation precision, visitor notes, bounded dates and all other factual limits. Do not import parked HOLD records, broaden provider discovery, weaken assertions or treat existing casino/location browser PASS as the new seasonal harness PASS.
+
+After successful integrated validation, obtain **fresh independent exact-candidate verification**. **Only if all required gates pass**, prepare a release proposal and ask for explicit release approval. Any failure or unavailable gate remains a reported HOLD; no release authority follows automatically.
+
+### Fresh preservation baseline and next action
+
+Read-only **22:16 UTC** checks: main remains **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**; latest production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** is READY at that SHA. All three source PRs remain open/unmerged at the exact heads above; #48 and #49 remain drafts.
+
+Continuity parent **`dfc48c1a892fac2a9c831b7d76e37fa894c434b2`**, tree **`96b1fa285cd35681e503c7bf9dfa9f0f0813c54f`**. Only AI_CONTINUITY.md changes on **`integration/continuity-refresh-2026-10-07`**; verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains deployment-disabled `integration/**`. Prior immutable sources, artifacts and historical gates are preserved.
+
+**Next:** assemble the authorized isolated candidate and draft PR, then complete the required hosted/seasonal-browser and independent gates. Save fresh exact candidate/evidence identities and read back continuity at each stable gate. Main, production, physical Android acceptance, signing and Play remain unchanged.
+
+## Prior continuity — hosted CI verification and integration recommendation, preserved verbatim
+
 # Pick For Us — PR #49 Hosted Validation Independently Verified (2026-10-07)
 
 ## CURRENT — CI CORRECTION AND EXISTING HOSTED BROWSERS PASS; INTEGRATION DECISION NEXT
