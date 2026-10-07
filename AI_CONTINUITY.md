@@ -1,3 +1,41 @@
+# Pick For Us — Seasonal Copy Correction Verified; Release Gates HOLD (2026-10-07)
+
+## CURRENT — V48-01 FIXED AND INDEPENDENTLY VERIFIED; BROWSER/HOSTED/RELEASE HOLD
+
+Current [draft PR #48](https://github.com/caleb1234calvin-art/dinner-roulette/pull/48) candidate is **`3dc116ef8d114127402d94fcbe299272080d0f4a`**, tree **`fdcb3ba87aae210c2b7c56915fcd8956304281af`**, sole parent **`ccceeaacc87ad3a4be2b7e27d505ad4a74cce113`**. Original candidate and HOLD evidence remain immutable. This supersedes pending-copy-revision/re-review wording below.
+
+Fresh independent re-review completed **2026-10-07T21:43:36.326247+00:00**: **correction quality PASS; V48-01 FIXED_VERIFIED**. No further copy remediation is required. This is not unconditional implementation acceptance or release readiness.
+
+- Exactly three paths changed: one region-neutral fallback string in `src/lib/date-night/search.ts`, two real-handler offline regressions in `scripts/missouri-two-records.test.mjs`, and the updated handoff/checklist. The warning now reads "Using saved Date Night places while the live map is unavailable." Both Lloyd and Sam outage cases independently pass.
+- Fresh independent **757 full-suite PASS / 4 inherited skips / 0 failures** (686 repository + 71 application), **9 focused PASS**, typecheck, development and auth-enabled migration-free production builds/proof, changed lint, casino audit, diff check and prior edge probes all PASS. Production source digest: `a4170ac116b8923c87256a72ed8c6c22e4e17369bef68328e76dcac06034e9d0`.
+- Factual catalog, precision/visitor notes, never-OpenNow, dates/DST/final expiry, provider selection, eligibility/identity/availability, dependencies, workflows and PR #47 remain unchanged by this revision. Prior full-lint **3 inherited errors / 6 warnings** remain known; full lint was not rerun for this narrow revision.
+- **V48-02 remains UNIT_REPRODUCED_UI_IMPACT_UNPROVEN**, an advisory on inherited mixed-type eligibility/identity algorithms. No end-to-end season-off retained-record bypass was demonstrated. Never-OpenNow and final expiry still hold. Browser acceptance must include mixed ordinary/seasonal duplicate toggle, resume and cache refresh; no eligibility hardening was bundled.
+- **Browser HOLD:** no real browser scenario completed, no new blocked attempt repeated. Screenshots/layout/hydration/keyboard/focus/navigation/physical routing and device acceptance are unverified.
+- Exact revision hosted CI at **21:44 UTC**: Validate Dinner Integration **`37691168660` / job `113031417074` FAILED** with inherited missing compiled SSR before build; no CI-order fix integrated. Unsigned Android **`37691168586` / job `113031417307` succeeded**, with signing job **`113032485529` SKIPPED**. This incidental unsigned result is not signing, physical Android or release acceptance.
+- Exact revised Preview **`dpl_6KmnEVduDBVfSYW9KGVdSdEGd4bS`** is READY at this revision with **target null/non-production**. Preview readiness does not satisfy browser or release gates.
+- **Hosted validation/browser/release readiness remain HOLD.** Separate CI-order candidate **`49a552cf36e800fb684504cf8f36beb1ee3d3b5b`** retains correction-quality PASS and qualified local evidence review; its draft-PR approval is still pending. It has not been integrated. PR #47 remains a separate explicit release dependency.
+
+### Recoverable exact revision and evidence
+
+[Updated immutable handoff](https://github.com/caleb1234calvin-art/dinner-roulette/blob/3dc116ef8d114127402d94fcbe299272080d0f4a/docs/handoffs/active/missouri-two-record-seasonal-candidate-2026.md) contains the narrow correction, historical candidate context and reproduction commands. The exact head and updated handoff control this revision; the author has refreshed the PR description to identify the current SHA and correction review.
+
+- Independent report `Two-Record-V48-01-Independent-Reverification.txt`: Library **`libfile_e1c0e141ba648191a3c87fae8706c7f8`**, SHA-256 **`1fe3b7b706178cbe8affa5bc3fc5e060b9bd5bb3fdf754a779a248cddaeb0667`**.
+- Independent JSON `Two-Record-V48-01-Independent-Reverification.json`: Library **`libfile_7f50c70ceadc81919c4c68002321a4a5`**, SHA-256 **`7f1a31654cd4031312e3cfaa8cb6ef766aae9e1aca8443a4e9cf7658befa9795`**.
+- Independent evidence `Two-Record-V48-01-Independent-Evidence.zip`: Library **`libfile_789d05af46c081919627200194bb3319`**, SHA-256 **`9895cfa82ae1e74f7bae641d65af5cb4be8575c3d1bbe5e0b4ff60d2a4096f29`**.
+
+- Author evidence `Two-Record-V48-01-Evidence.zip`: Library **`libfile_8dfe0f293238819189bfcbb4b06936f7`**, SHA-256 **`9a2db4a40a97d1879800eaecf994974caf31acfe888789c7eef3fc6582a16a74`**.
+- Author receipt `Two-Record-V48-01-Publication-Receipt.json`: Library **`libfile_6c06f401a59481918db4545dee5f131c`**, SHA-256 **`4d58fc649832428c3a3c46f64a3a7285a39cbe222dc87da827e29d9251b793e3`**.
+
+### Fresh baseline and blocked next action
+
+Read-only checks at **21:45–21:46 UTC**: main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**; production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** remains READY at that SHA. PR #48 is draft/open/unmerged at the revised candidate; [PR #47](https://github.com/caleb1234calvin-art/dinner-roulette/pull/47) remains open/unmerged at **`277aca01996b5559b6e520d9d3f193c4989f4f64`**. No production mutation occurred.
+
+Continuity parent **`dc54b7d7e5ecd252f9c7759a574c587cc1e2fc9a`**, tree **`6530f4b578483391aa1183c09127193f498526b6`**. Only AI_CONTINUITY.md changes on deployment-disabled **`integration/continuity-refresh-2026-10-07`**; verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** still disables `integration/**` Git deployments. All previous checkpoints/artifact identities remain preserved.
+
+**Next:** keep the revision frozen and draft/unmerged. Obtain the pending owner approval for the separate CI draft PR; obtain successful isolated browser acceptance with providers intercepted, then separately authorized exact-candidate CI ordering/integration and PR #47 release-dependency review. Do not retry blocked browser routes, alter unrelated eligibility or reopen parked research. No main merge, production deployment, Android signing/Play or release is authorized. Stop after continuity readback until the required permission/execution capability is available.
+
+## Prior continuity — independent original-candidate HOLD, preserved verbatim
+
 # Pick For Us — Independent Seasonal Verification HOLD (2026-10-07)
 
 ## CURRENT — CORE AUTOMATED REVIEW PASS; COPY REVISION IN PROGRESS; BROWSER/HOSTED/RELEASE HOLD
