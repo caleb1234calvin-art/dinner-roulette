@@ -1,3 +1,26 @@
+# Pick For Us — Separate CI Draft PR Approved and Running (2026-10-07)
+
+## CURRENT — PR #49 CREATED; EXACT-CANDIDATE HOSTED CHECKS IN PROGRESS
+
+The owner's **2026-10-07 21:54 UTC** approval authorized the separate CI-ordering draft PR and hosted checks on the frozen exact candidate, followed by independent verification and an integration recommendation. The earlier permission-pending blocker is resolved. **No merge or deployment was authorized.**
+
+- [Draft PR #49](https://github.com/caleb1234calvin-art/dinner-roulette/pull/49) was created at **21:55:19 UTC** after the authorized retry. It is open/unmerged, head **`49a552cf36e800fb684504cf8f36beb1ee3d3b5b`**, tree **`d0fa5ea61f6902f508bbfa9dba8189eaaadd892e`**, sole parent **`277aca01996b5559b6e520d9d3f193c4989f4f64`**, branch **`integration/hotfix-47-ci-build-order`**, base main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**.
+- No candidate edit accompanied PR creation. The correction remains the unchanged test-step move after existing development and migration-free production builds. Relative to its hotfix parent it is one workflow change; it is not the seasonal feature batch.
+- Exact-head [Validate Dinner Integration run `37692750298`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37692750298) and [Android Release Readiness run `37692750381`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37692750381) are **IN PROGRESS** at **21:55 UTC**. Hosted success, browser acceptance and release readiness are **not established** by this checkpoint.
+- Prior independent correction-quality PASS and qualified local evidence review remain historical evidence for this exact source, not new hosted PASS. Monitor the actual hosted validation through its browser stages and retain terminal failures or blockers honestly.
+- [PR #48](https://github.com/caleb1234calvin-art/dinner-roulette/pull/48) stays draft/open/unmerged at **`3dc116ef8d114127402d94fcbe299272080d0f4a`**. V48-01 remains fixed/verified with 757 independent test passes and four inherited skips; its browser/hosted/release HOLD remains. No seasonal feature or eligibility change is mixed into this CI task.
+- [PR #47](https://github.com/caleb1234calvin-art/dinner-roulette/pull/47) remains open/unmerged at **`277aca01996b5559b6e520d9d3f193c4989f4f64`**, an explicit release dependency. Neither PR #47 nor PR #48 was changed by this continuity update.
+
+### Fresh baseline and next action
+
+Read-only checks at **21:55 UTC** confirm main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`** and production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** READY at the same SHA. No main or production change occurred.
+
+Continuity parent **`261813972302102965e381917487cae341ce0f21`**, tree **`f2f1d2d1fadc94f788952d7e1db16b41d1b201dc`**. Only AI_CONTINUITY.md changes on deployment-disabled **`integration/continuity-refresh-2026-10-07`**; verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**` deployment exclusion. All frozen artifacts and prior gates below are preserved.
+
+**Next:** track PR #49's exact-candidate hosted runs to terminal results, independently verify the source plus completed hosted/browser evidence, then return an integration recommendation. Do not merge, deploy, mix candidates or treat any pending/missing stage as PASS.
+
+## Prior continuity — seasonal revision blocked-state checkpoint, preserved verbatim
+
 # Pick For Us — Seasonal Copy Correction Verified; Release Gates HOLD (2026-10-07)
 
 ## CURRENT — V48-01 FIXED AND INDEPENDENTLY VERIFIED; BROWSER/HOSTED/RELEASE HOLD
