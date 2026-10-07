@@ -1,3 +1,28 @@
+# Pick For Us — Integrated Browser Failure Preserved; Harness Revision Frozen (2026-10-07)
+
+## CURRENT — ONE HARNESS ASSERTION CORRECTED; ALL NEW-HEAD GATES RERUNNING
+
+Original integration **`a5c6d1e30b140e7a8cac7ab67b1d9424364b311e`** remains a preserved failed checkpoint. Hosted web [run `37696007092` / job `113047777629`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37696007092/job/113047777629) **FAILED**: existing casino/location browsers passed, but new seasonal acceptance was **18/19 PASS**, not complete acceptance.
+
+- The sole failed seasonal scenario was Lloyd's **mixed-toggle-cache**: a case-sensitive **`/Park/`** assertion encountered displayed **PARK**. The report retains the real text and the final nonzero-error aggregate. This is an assertion/display-casing mismatch, not demonstrated runtime leakage.
+- The other 18 cases passed, including Sam mixed toggle/cache, both records' expiry/resume cases and Myer's removal from trusted fallback. No full seasonal PASS is claimed from this partial result.
+- Failed browser artifact **`11515033905`**, archive SHA-256 **`c4a50f14feaaf0aef2c170170f35412618a3c3706cee4dc01ba0d69cc13d8505`**, is authenticated and preserved. Its `missouri-two-records/verdict.json` was read: `passed=false`, zero public-provider calls, 81 intercepted calls and zero forwarded external calls. Original failure is not erased or renamed as success.
+- The parent authorized exactly one bounded harness-only correction preserving intent: **`/Park/` → `/Park/i`**. No assertion was removed; the adjacent absence-of-seasonal-notes/category checks remain. No runtime file changed.
+
+[Draft PR #50](https://github.com/caleb1234calvin-art/dinner-roulette/pull/50) now freezes **`b9fd308ecff028b0a2f4aeca43fda3a6fef3c02a`**, tree **`16d8724fca7a6800dcd21ee762fc19a8aeb9ff2f`**, sole parent **`a5c6d1e30b140e7a8cac7ab67b1d9424364b311e`**. The original candidate's sole parent remains main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**. Exact revision diff is **one line added/one removed in `scripts/missouri-two-record-browser.mjs` only**. All runtime bytes and the controlling integration handoff remain unchanged.
+
+At **22:29 UTC**, revised-head [web run `37696501267`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37696501267) and [unsigned Android run `37696501398`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37696501398) are **IN PROGRESS**. Local full exact-head gates are also being rerun. **No original-head PASS transfers to this revision, and no revised seasonal/browser/hosted/independent acceptance is yet claimed.**
+
+### Fresh baseline and next action
+
+At **22:29 UTC**, main remains **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`** and production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** remains READY at that SHA. PR #50 is draft/open/unmerged on `integration/seasonal-release-candidate-2026-10-07`. No main or production mutation.
+
+Continuity parent **`b23e0fa93b4d62eb001e61c91266892f8b5d50a2`**, tree **`5dfec0073c596dc06469be8b49361978dae9c02e`**. Only AI_CONTINUITY.md changes on deployment-disabled `integration/continuity-refresh-2026-10-07`; verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**` exclusion.
+
+**Next:** complete all exact revised-head local/hosted gates, inspect the actual 19-scenario seasonal result and preserve both attempts. Then fresh independent verification must review the full integrated candidate and one-line harness correction. Keep HOLD on any failure/pending gate. No merge/deploy/release authorization; only after all gates pass may a release proposal be presented for explicit owner approval.
+
+## Prior continuity — original integration freeze, preserved verbatim
+
 # Pick For Us — Isolated Integration Candidate Frozen (2026-10-07)
 
 ## CURRENT — DRAFT PR #50 FROZEN; LOCAL AUTHOR GATES PASS; HOSTED/BROWSER/INDEPENDENT GATES PENDING
