@@ -1,3 +1,40 @@
+# Pick For Us — Operational Preflight HOLD (2026-10-07)
+
+## CURRENT — NO RELEASE MUTATION; THREE OPERATIONAL GAPS AND OWNER INPUT PENDING
+
+Read-only release preflight **23:36–23:40 UTC** produced **EXECUTION HOLD**. Technical/publication audit PASS and the owner's conditional exact-tree approval remain valid, but their execution conditions are not met. Main, immutable wrapper, production, aliases, PR state and settings were not changed by the operator.
+
+### Actual blockers
+
+1. **Main is unprotected.** Authenticated branch metadata gives `protected:false`, protection disabled and required-status-check enforcement off; repository rulesets including parents returned **[]**. This is an observed condition, not a missing-read assumption. The owner must explicitly approve this exact-tree publication despite unprotected main, or keep HOLD and separately authorize a protection plan. Generic conditional release approval does not supply that exception or permission to change protection.
+2. **Rollback access/eligibility remains unproven.** A concrete official rollback operation exists for project `prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm` and target **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`**. Connection identity matches team OWNER, but this is not proof of effective connector rollback permission or target eligibility. READY is not eligibility; no test rollback or mutation probe was performed. The prior filtered-listing 403 was not retried/bypassed. Official Hobby rules restrict rollback to the immediate previous production deployment, so this target must remain the immediate predecessor with no intervening release.
+3. **Effective safe production build/trigger/auth route remains unproven.** Project/list/deployment/Git-context reads omit buildCommand and productionBranch/effective trigger. Historical logs show Vite output but not the invoked command or required auth flag. Empty environment metadata does not prove every environment source is absent. Repository ordinary `npm run build` chains migrations and MUST NOT run. Obtain actual effective settings evidence; any required setting change needs separate approval.
+
+### Smallest next decisions and access step
+
+- The specific **unprotected-main exception/protection decision is pending**.
+- The operator's cloud browser reached the official Vercel ordinary sign-in page, not a bot block. **Sign-in method/permission is pending**: email-code or an appropriate existing Google/GitHub route. No account identifier, credential, login submission or settings action has been entered/performed. Do not invent a completed login or handoff.
+- After authorized authentication, inspect production build/Git/auth settings and actual rollback UI/capability read-only. Do not change settings or execute a test rollback.
+- An unprotected-main exception alone would not clear the safe-build or rollback gates. Keep HOLD until all required conditions are proven, then immediately recheck exact main/head/tree/checks/current aliases and the safe route before any mutation.
+
+### Frozen operator evidence
+
+- `Pick-For-Us-Release-Operational-Preflight-HOLD.txt`: Library **`libfile_7fdea0b915b48191b8c1a1459fd6e802`**, SHA-256 **`67369d9226706329967d16964d3e1218f4de235ca6cbc6580653777c995c64d7`**.
+- Preflight JSON: Library **`libfile_6a16347039e08191b0db836521164459`**, SHA-256 **`5a0ca9e1aa899a20025b24a476945b5598644f3bf0105bfd6def63a0f9a69901`**.
+- `Pick-For-Us-Release-Operational-Preflight-Evidence.zip`: Library **`libfile_d9fe2608a8f481919a55b2b832d74fb0`**, SHA-256 **`dce305f9db0f59346aa55c9f37241787d151e82c2f620f3edfab6686068418a7`**.
+
+The full report preserves successful read receipts, prior-production logs, access limits and bounded alternate reads. It does not claim an exhaustive historical-continuity reread or new technical validation. Official rollback context: [Vercel rollback documentation](https://vercel.com/docs/deployments/rollback-production-deployment).
+
+### Fresh preservation baseline and stop condition
+
+At **23:41 UTC**, main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`** remains unchanged and unprotected; production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** remains READY at that SHA. [PR #50](https://github.com/caleb1234calvin-art/dinner-roulette/pull/50) stays draft/open/unmerged at immutable wrapper **`0bbf6758e94eea8129e21b004d4c36ff886cd46d`**, tree **`7add088fcbcacb8526f90a6f09c6dd7ca5249b3c`**. Operator current-alias reads during preflight separately confirmed all five aliases and existing www 308 redirect.
+
+Canonical continuity parent **`871caa9e7fda6e1b3023c0eb3f0d0d7e004440e4`**, tree **`a623c2eab789e78862bb458a941fb9291be32e8e`**. Only AI_CONTINUITY.md changes on deployment-disabled `integration/continuity-refresh-2026-10-07`; unchanged `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains exclusion. **Wrapper0bbf is untouched.**
+
+**Next:** await the required owner protection decision and sign-in choice/permission, then resolve the remaining read-only operational gaps. Do not mutate main, PR readiness/merge, protection, Vercel settings, production or aliases while any condition is unresolved. This is a paused release preflight, not a completed release.
+
+## Prior continuity — conditional approval and preflight start, preserved verbatim
+
 # Pick For Us — Conditional Exact-Tree Release Approval; Preflight Active (2026-10-07)
 
 ## CURRENT — OWNER APPROVAL CONDITIONAL; EXECUTION HOLD UNTIL OPERATIONAL GATES ARE PROVEN
