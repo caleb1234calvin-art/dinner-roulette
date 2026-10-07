@@ -1,3 +1,53 @@
+# Pick For Us — Independent Integration Review Complete; Lint Decision Required (2026-10-07)
+
+## CURRENT — SCOPED FUNCTIONAL/HOSTED/BROWSER PASS; FULL LINT FAIL; RELEASE HOLD
+
+Fresh independent exact-candidate verification is complete for [draft PR #50](https://github.com/caleb1234calvin-art/dinner-roulette/pull/50). The reviewer supports scoped data/runtime/functional/hosted/browser acceptance with explicit limits. **Full repository ESLint still FAILS; it has not been waived. Actual release remains HOLD. Do not claim every gate is clean or unconditional release readiness.**
+
+### Exact verified identity and preserved lineage
+
+- Candidate **`634ef2f2fc7017dc6d2daca45266977b96b6d4c7`**; tree **`647cd65248fe7f37fdd8aa9be50fc73de9249fdb`**; sole parent **`b9fd308ecff028b0a2f4aeca43fda3a6fef3c02a`**.
+- Parent tree **`16d8724fca7a6800dcd21ee762fc19a8aeb9ff2f`**; its sole parent **`a5c6d1e30b140e7a8cac7ab67b1d9424364b311e`**, original integrated tree **`89b0249ae93ee9e610f4a80f4f7d240227c80544`**, sole parent unchanged main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**.
+- Independent review confirms deliberate PR #47 hotfix + PR #49 workflow-only delta + corrected PR #48 feature composition, 24 main-relative paths and no duplicated ancestry. Nineteen inherited paths match controlling source blobs; availability.ts is the intentional overlap.
+- Original a5c6 failure (18/19), b9fd behavioral PASS with visible-image evidence gap and final 634ef instrumentation are preserved. Both follow-ups change only the harness; runtime/workflow bytes remain a5c6-identical. Prior blank-image cause remains unmeasured, not a diagnosed runtime defect.
+
+### Independent gate results
+
+- **PASS:** exact two-record factual mapping, runtime composition, source/lock integrity, fresh offline locked install/dependency graph, typecheck, safe development and auth-enabled migration-free production builds/proof, focused tests/audits, changed lint and diff checks.
+- Fresh independent full suite: **686 repository + 71 application = 757 PASS / 4 inherited external-documentation skips / 0 failures**. Focused 69/casino 83 overlap this count. Forty source assertions and nine supplementary safety tests, including four time zones, supplement rather than inflate 757.
+- **PASS:** exact-head hosted web `37697159320` / job `113051590116`; authenticated artifact **`11516650575`**, SHA-256 **`868481c55d616b5146753b1dc380d493d085d15216f3a262cd588b610dcc6619`**. Actual checkout is 634ef2; all three browser suites share auth-enabled proof. Source digest **`3f3e8087063a4a80f12faea9e4da4c0330f0a6a3da0090d8dc880f60f3432603`** matches independent local proof. Hosted/local output digests differ and remain distinct.
+- **Qualified browser PASS:** existing casino 16/location 19 and new seasonal **19/19**, 22 decoded images, 48 qualified-note checks and 24 reachable controls; no uncaught page errors. Actual screenshot pixels/RPCs/network evidence independently reviewed. Zero forwarded external calls, 86 intercepted provider calls; retained blocked-font/Grok/local-insights console errors mean no zero-console claim.
+- Tested seasonal coverage includes exact mappings/coordinates, Anything/category, seasonal on/off, never-OpenNow, final end/2027, duplicate/cache/TTL/resume, navigation and Myer's trusted-fallback removal. V48-02 tested end-to-end uncertainty is bounded: curated identity/notes/types disappear off-season; ordinary same-name provider parks may remain. No universal live-provider correctness guarantee.
+- **FAIL, NOT WAIVED:** full ESLint **3 inherited no-empty errors / 6 warnings**. Errors: `audit/seasonal-discovery-coverage-audit-1-evidence/live-probe.mjs:14`, `source-probe.mjs:7`, and `src/lib/app-data/client.server.ts:214`. Error-bearing files equal main. No suppression, cleanup or gate waiver occurred.
+- **PASS WITH ADVISORY V50-P01:** inherited 320 px Directions-label clipping; 390 px fits. Exact accessible name/destination and usable trial-click target pass; facts/warnings are readable. Author's blanket readability statement is qualified. Cosmetic deferral is permitted, but this is not pixel-perfect acceptance and production-font layout is unmeasured because fixture fonts are blocked.
+- **Scoped unsigned Android PASS:** `37697159274` / job `113051590262`; signing `113052871279` SKIPPED. Independent logs/metadata/source bind exact 634ef2 despite merge-SHA artifact labels. No independent binary inspection; native NO-SOURCE tasks are not behavioral passes. Physical Android/WebView/GPS, signing and Play remain uncleared.
+
+### Immutable independent package
+
+- `Pick-For-Us-PR50-Independent-Verification.txt`: Library **`libfile_8bc34fff69808191af399d3cad96c7fe`**, SHA-256 **`aaef58338b6398ab55906b364b7314fd54af7bcfe764444640f47b6854f895ee`**.
+- `Pick-For-Us-PR50-Independent-Verification.json`: Library **`libfile_fa6168a9f39481918bbf7ba68605ed26`**, SHA-256 **`73df12de8bbf97bc1087195f58a670490a0bb7b6f8da2fa7e3b306d013947ac8`**.
+- `Pick-For-Us-PR50-Independent-Evidence.zip`: Library **`libfile_d7c63d4a3364819193dc24d62026bfe4`**, SHA-256 **`f9bb8e4bdfb1abf95551748a0dfb955153cbd52da95498a262fb62d233e27220`**.
+
+Full report controls limitations. No new live-operator, weather/ticket/social, physical-arrival or provider acceptance occurred. The October 14 review and visitor 24 h/48 h recheck requirements remain notes, not automatic monitoring.
+
+### Owner decision and publication boundary
+
+The owner conditioned release recommendation on all applicable gates passing. **Inherited lint failure has not been explicitly accepted as an exception.** Although the independent reviewer considers a conspicuously qualified release proposal technically supportable, the coordinator does **not** silently treat full lint as a non-gate.
+
+**Exact next owner decision: resolve the inherited full-lint FAIL**, either with an explicitly scoped separate cleanup or an explicit decision about the existing lint limitation. **Do not request merge/deployment approval or present an unconditional release recommendation yet.** No release operator has started.
+
+Any eventual protected-main publication must deliberately fold the current canonical continuity into the verified candidate as audited documentation/handoff changes; never blindly merge continuity history. Record resulting exact commit/tree/parents and prove runtime/build-input equality to 634ef2 before protected publication. A different publication SHA is not 634ef2; any runtime/build-input change requires new freeze/revalidation. Release still requires explicit owner approval and controlled deployment/source/alias readback.
+
+Rollback READY is not automatic rollback eligibility. Retained rollback objects were independently READY, but automatic eligibility remains not freshly established after the denied filtered listing (403). Before any approved release, recheck current aliases/source and an accessible authorized rollback procedure. Current production would be the intended immediate rollback target only after such a future promotion; no rollback is needed now.
+
+### Fresh preservation baseline
+
+At **22:53 UTC**, main remains **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**, production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** READY at that SHA, and PR #50 draft/open/unmerged at 634ef2. The independent 22:49 alias checks mapped all five production aliases to that deployment; this is a dated readback, not inferred from historical alias lists.
+
+Continuity parent **`77e0c9c7b2c25283081aec5a9090b9284630f781`**, tree **`c39c63e2e2bdc4a8fc018ab3e450cdd0faf60ef3`**. Only AI_CONTINUITY.md changes on deployment-disabled `integration/continuity-refresh-2026-10-07`; verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**` exclusion. No main merge, production change or release occurred. Stop after readback for the lint decision.
+
+## Prior continuity — author gate and pending independent review, preserved verbatim
+
 # Pick For Us — Integrated Author Validation Complete (2026-10-07)
 
 ## CURRENT — EXACT-CANDIDATE FUNCTIONAL/HOSTED AUTHOR PASS; INDEPENDENT RELEASE REVIEW PENDING
