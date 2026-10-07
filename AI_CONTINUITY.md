@@ -1,3 +1,34 @@
+# Pick For Us — Integrated Author Validation Complete (2026-10-07)
+
+## CURRENT — EXACT-CANDIDATE FUNCTIONAL/HOSTED AUTHOR PASS; INDEPENDENT RELEASE REVIEW PENDING
+
+Author validation froze **2026-10-07T22:47:51.566626+00:00** for [draft PR #50](https://github.com/caleb1234calvin-art/dinner-roulette/pull/50), exact **`634ef2f2fc7017dc6d2daca45266977b96b6d4c7`**, tree **`647cd65248fe7f37fdd8aa9be50fc73de9249fdb`**, sole parent **`b9fd308ecff028b0a2f4aeca43fda3a6fef3c02a`**. **Functional/hosted author gates PASS; fresh independent exact-candidate release review remains pending.** No release approval.
+
+- [Web run `37697159320` / job `113051590116`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37697159320/job/113051590116) SUCCESS on actual checked-out **634ef2**, Node 22. Local and hosted full-suite totals: **686 repository + 71 application = 757 PASS / 4 inherited skips**. Typecheck, safe builds/proof, focused regressions, audits, changed lint and diff checks pass. Full repository lint remains **3 inherited errors / 6 warnings**, not waived.
+- Existing browsers: **16 casino + 19 location checks PASS**. New seasonal harness: **19/19 PASS**, including both records/Anything/categories/season toggle/never-OpenNow/final expiry/2027 exclusion, repeated flows, mixed ordinary duplicates/cache reuse/TTL refresh, expiry on resume, navigation and Myer's absence from trusted fallback.
+- Authenticated browser artifact **`11516650575`**, SHA-256 **`868481c55d616b5146753b1dc380d493d085d15216f3a262cd588b610dcc6619`**. Hosted source proof **`3f3e8087063a4a80f12faea9e4da4c0330f0a6a3da0090d8dc880f60f3432603`**; output proof **`f38ff30844cd932fb896239f296ebcfebab956a1b066edc4a2d391c1b6423f21`**. Local source proof matches; differing environment output digests remain separate.
+- Current artifact records **22 successful image decodes**, HTTP 200 image/jpeg responses, **zero image request failures**, **48 qualified-note visibility checks** and **24 reachable controls**. Actual pixels show the temporary Haunted House icon with the distinct Other Halloween / Fall label and readable qualified facts. Zero public-provider calls, 86 intercepted calls, zero forwarded external calls.
+- This closes the prior **visible-icon evidence gap on this candidate** without a runtime/asset repair. Exact prior blank-capture cause remains unmeasured; timing is an inference, not established diagnosis. Failed a5c6 and narrower b9fd evidence remain intact.
+- **Presentation qualification:** the author report's blanket statement that navigation controls are readable is too broad. Independent review identified inherited low-severity **320 px Directions-label horizontal clipping**; 390 px fits. Accessible full name, exact destination and trial click target pass; nearby warnings/facts remain readable. Code is byte-identical to main. Treat functional/browser PASS with a cosmetic advisory, **not pixel-perfect PASS**; no runtime polish change is authorized here.
+- Unsigned Android **`37697159274` / job `113051590262` SUCCESS**; signing **`113052871279` SKIPPED**. Exact source checkout was verified in logs; artifact labels use merge SHA `c19a827b789375f4003c9d529a71109aedf8d779`, not the compiled checkout. Author reviewed logs/metadata, not downloaded binaries. Physical device/GPS/WebView, signing and Play remain separate.
+- V48-02 exercised behavior excludes curated IDs/types/notes when season is off while ordinary same-name provider parks may remain with provider hours/Park label. This is documented fixture behavior, not a claim of universal live-provider correctness. Expected blocked fonts/Grok and local insights console failures are retained; do not claim zero console errors.
+
+### Immutable author package
+
+- `Pick-For-Us-PR50-Author-Validation.txt`: Library **`libfile_52d2535f23548191abb1cdc2a09440df`**, SHA-256 **`d2c4426fdfcca597116f67fc93831758489bd9b70a91cc10949b936f20f52b38`**.
+- `Pick-For-Us-PR50-Author-Validation.json`: Library **`libfile_355cf52dddd48191af3c6ad17b7ff738`**, SHA-256 **`f42b5b115e0f847f1c35b8599800bc3d33c6e2f3f8120f4803d06b09a5bba1b9`**.
+- `Pick-For-Us-PR50-Author-Evidence.zip`: Library **`libfile_ee495817e684819190871222e618f4bb`**, SHA-256 **`0b01032ebd0ad047d23605ac92c982377a384a0fc795030c543727bf9b9cc707`**.
+
+### Fresh baseline and next gate
+
+Checks **22:46–22:49 UTC**: main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**; production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** READY at that SHA. PR #50 remains draft/open/unmerged at exact 634ef2. Retained rollback `dpl_3Bfbq9TPJqsrgCx4UKX1r9ANDZRj` was author-checked READY, but filtered rollback eligibility listing returned 403; fresh automatic eligibility was not re-established.
+
+Continuity parent **`73254c6a570db9a948ba9c64aed2f5d8b521facb`**, tree **`123804d336b3a1597171bb6a2ac9b9a44501982a`**. Only AI_CONTINUITY.md changes on deployment-disabled `integration/continuity-refresh-2026-10-07`; verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**` exclusion.
+
+**Next:** finish fresh independent exact-candidate review, including authenticated hosted/browser evidence and the cosmetic qualification. Only after required gates pass may a release proposal be prepared for explicit owner approval. No main merge, production deployment, physical-device acceptance, signing or Play authority is inferred.
+
+## Prior continuity — presentation instrumentation freeze, preserved verbatim
+
 # Pick For Us — Behavioral Gate Passed; Presentation Instrumentation Frozen (2026-10-07)
 
 ## CURRENT — PRIOR 19-SCENARIO PASS PRESERVED; VISIBLE-PRESENTATION HOLD; NEW TEST-ONLY HEAD RUNNING
