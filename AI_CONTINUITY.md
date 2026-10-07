@@ -1,3 +1,30 @@
+# Pick For Us — Behavioral Gate Passed; Presentation Instrumentation Frozen (2026-10-07)
+
+## CURRENT — PRIOR 19-SCENARIO PASS PRESERVED; VISIBLE-PRESENTATION HOLD; NEW TEST-ONLY HEAD RUNNING
+
+The **`b9fd308ecff028b0a2f4aeca43fda3a6fef3c02a`** revision completed hosted behavioral validation: [web run `37696501267` / job `113049432729`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37696501267/job/113049432729) **SUCCESS**, existing browser suites PASS and **19/19 seasonal scenarios PASS**. Unsigned Android **`37696501398` / job `113049434249` SUCCESS**, signing **`113050734974` SKIPPED**. Browser artifact **`11514989549`**, SHA-256 **`d788c6469af736ad35bfe3b1de7e06318aed27394ab3915d1ce1a6962f30e2d7`**, and its result summary/verdict are preserved.
+
+**Presentation remains HOLD despite those behavioral passes.** Screenshots showed blank image areas; checking an image's source URL does not establish decoding or visible presentation. Read-only diagnosis found the approved source and built icon to be valid **1408×1408 JPEG**, SHA-256 **`f9fcb33683f59a0e3d81caeadd32042997318c43aea20ae70e1a71e6d37572b6`**, with local built HTTP 200 and identical bytes. Local icons were not blocked and no CSS hiding was identified. Browser decode/timing cause is **unproven**; no runtime defect or runtime repair is claimed.
+
+### Exact new test-only checkpoint
+
+The parent authorized bounded presentation instrumentation, not a runtime change. [Draft PR #50](https://github.com/caleb1234calvin-art/dinner-roulette/pull/50) now freezes **`634ef2f2fc7017dc6d2daca45266977b96b6d4c7`**, tree **`647cd65248fe7f37fdd8aa9be50fc73de9249fdb`**, sole parent **`b9fd308ecff028b0a2f4aeca43fda3a6fef3c02a`**.
+
+- Exact parent-relative diff changes only **`scripts/missouri-two-record-browser.mjs`**, **111 additions / 2 deletions (net 109)**. Runtime bytes and reviewed source composition are unchanged; main-relative scope remains 24 paths.
+- Instrumentation adds bounded image decode/naturalWidth checks, response status/MIME/failure and console evidence, element/viewport screenshots, every qualified note's scroll reachability and navigation-control reachability.
+- No new decode, visual or presentation result exists at this freeze. Full exact-head local/hosted gates are rerunning. At **22:35 UTC**, [web run `37697159320`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37697159320) and [unsigned Android run `37697159274`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37697159274) are **IN PROGRESS**.
+- Original **a5c6d1e** failed 18/19 checkpoint and **b9fd308** behavioral 19/19 checkpoint remain intact with their distinct acceptance scopes. None is unconditional presentation/release PASS and no old-head result substitutes for the new exact-head evidence.
+
+### Fresh baseline and next action
+
+At **22:35 UTC**, main remains **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**; production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** remains READY at that SHA. PR #50 stays draft/open/unmerged on `integration/seasonal-release-candidate-2026-10-07`. No main/production change.
+
+Continuity parent **`d3a928941c562efc26760d6ed36e4f64cd3177bb`**, tree **`6d748ae45ed747b048fa22354ae000ebe5482d4b`**. Only AI_CONTINUITY.md changes on deployment-disabled `integration/continuity-refresh-2026-10-07`; verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**` exclusion.
+
+**Next:** inspect actual instrumented decode/presentation, qualified-note and navigation evidence after exact-head gates finish; preserve every attempt and diagnose any failed gate without assuming a runtime cause. Then obtain fresh independent exact-candidate verification. No unconditional acceptance, merge/deploy or release proposal until required gates pass; release still needs explicit owner approval.
+
+## Prior continuity — harness casing correction and original failure, preserved verbatim
+
 # Pick For Us — Integrated Browser Failure Preserved; Harness Revision Frozen (2026-10-07)
 
 ## CURRENT — ONE HARNESS ASSERTION CORRECTED; ALL NEW-HEAD GATES RERUNNING
