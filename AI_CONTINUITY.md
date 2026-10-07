@@ -1,3 +1,44 @@
+# Pick For Us — PR #49 Hosted Validation Independently Verified (2026-10-07)
+
+## CURRENT — CI CORRECTION AND EXISTING HOSTED BROWSERS PASS; INTEGRATION DECISION NEXT
+
+Fresh independent hosted review froze **2026-10-07 22:02 UTC** for [draft PR #49](https://github.com/caleb1234calvin-art/dinner-roulette/pull/49), exact **`49a552cf36e800fb684504cf8f36beb1ee3d3b5b`**, tree **`d0fa5ea61f6902f508bbfa9dba8189eaaadd892e`**, sole parent **`277aca01996b5559b6e520d9d3f193c4989f4f64`**. **Correction quality PASS; hosted corrected workflow PASS; existing casino/location browser acceptance PASS; unsigned Android validation PASS; signing SKIPPED.** This supersedes pending hosted checks and the earlier missing-hosted-evidence HOLD for this exact candidate only.
+
+- [Validate Dinner Integration `37692750298` / job `113036738953`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37692750298/job/113036738953) completed SUCCESS at **21:57:42 UTC**, all 19 steps successful. Actual checkout independently confirmed **49a552cf**, Node **22.23.3** / npm **10.9.9**. The earlier local-versus-hosted Node gap is resolved for this candidate.
+- Hosted typecheck, safe builds/proof, **677 repository + 71 application = 748 tests PASS / 4 inherited skips**, 83 focused casino regressions, audits and 30 icons pass. Unchanged test-step movement now satisfies compiled-security prerequisites; no assertion or failure propagation weakened.
+- Existing browser suites: **16 casino checks PASS, errors empty; 19 location checks PASS**. Artifact **`11513708635`**, SHA-256 **`f33a5b85e573fc6d518a14d424195507bb1952057a3342a85801cc40dbf714e1`**, independently authenticated against fresh metadata/logs. Both share auth-enabled BUILT proof: source **`8f8372f6cc0a0befc584b302454726bb01b3456ee825c3e0d932474153cfce8d`**, output **`5c149c8ae84bd01289d66de3f5287c76472e3d849af6ac1acc9dfd2947c251dc`**.
+- Those browsers are hosted CI local-preview tests with actual app/RPC, provider fixtures and simulated native coordinates. **They do not test PR #48's new seasonal browser harness, live-provider behavior or physical-device GPS. No PASS transfers to PR #48.**
+- [Unsigned Android `37692750381` / job `113036740165`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37692750381/job/113036740165) SUCCESS; signing job **`113038097763` SKIPPED**. Checkout and recorded source are exact **49a552cf** despite artifact names containing merge SHA **`43e269ccc7c7f6e8d01c877d4afcb93ff948639f`**.
+- Android verdict is independent job-log/metadata/workflow review, **not independent binary inspection**: ZIP payload retrieval returned HTTP 403. Physical Android/WebView, upload signing and Play/publication remain uncleared. Repository ESLint's inherited **3 errors / 6 warnings** remain; hosted success is not a full-lint PASS.
+
+### Immutable hosted evidence
+
+- `Pick-For-Us-PR49-Independent-Hosted-Verification.txt`: Library **`libfile_94e8f42e6118819192b19e60f8e61423`**, SHA-256 **`74523da7167d0d367ca15b69cfebb3150e18474f503092c224cf459750bfdfa8`**.
+- `Pick-For-Us-PR49-Hosted-Validation.json`: Library **`libfile_a9e9e1e81274819188af0fb7485560ad`**, SHA-256 **`288200f4d1093343ceac2c649e15d0257d037241cbeddcf4389c3a7752546ae3`**.
+- `Pick-For-Us-PR49-Hosted-Evidence.zip`: Library **`libfile_98a09594bf508191b31ad435e2ed5b69`**, SHA-256 **`e94d2ce894dbb37f6940f84cbd6f039d774ed7668b2adf5951dbdd9cbd580755`**.
+
+The full independent report controls scope and limits. Earlier local/browser-blocked reports remain preserved historical evidence. This independent review examined hosted execution/source/logs/artifacts; it did not trigger another run.
+
+### Integration recommendation, not authorization
+
+**PR #49 is NOT workflow-only relative to main.** It is one workflow-file delta relative to its PR #47 parent, but **six commits / five changed files relative to unchanged main**: workflow, seasonal-discovery tests, availability tests, availability implementation and seasonal catalog. It contains PR #47 hotfix ancestry. Do not merge it under a misleading workflow-only description.
+
+Recommended next owner decision: authorize one isolated integration candidate from unchanged main that deliberately combines reviewed PR #47 hotfix, the exact CI ordering delta and reviewed PR #48 feature without duplicate ancestry. Inspect/freeze the final diff/SHA/tree, run full and focused regressions plus the **new seasonal browser harness**, and obtain fresh independent release verification of that exact integration. Existing PASS results cannot substitute for these future gates.
+
+A smaller alternative also needs explicit owner approval: handle hotfix + CI as a clearly labelled combined unit first, with applicable release review, then rebase/integrate the seasonal feature and run its complete acceptance separately. A changed head/base/integration tree needs renewed validation.
+
+[PR #48](https://github.com/caleb1234calvin-art/dinner-roulette/pull/48) remains draft/open/unmerged at **`3dc116ef8d114127402d94fcbe299272080d0f4a`**: V48-01 fixed/verified, 757 independent tests PASS/four skips, but seasonal browser, its hosted validation and integrated release remain **HOLD**. V48-02 remains advisory with end-to-end impact unproven.
+
+### Fresh preservation baseline and exact next action
+
+Read-only checks **22:00–22:03 UTC**: main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**; production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** READY at that SHA. PR #47 remains open/unmerged at **`277aca01996b5559b6e520d9d3f193c4989f4f64`**; PR #49 remains draft/open/unmerged at the exact reviewed candidate. No merge, main edit or deployment occurred.
+
+Continuity parent **`9919a0941ad8a228a90dc2f8000206b6e0c99c9d`**, tree **`ae8828175f7ce8ea425cf4c93bc674b90d5517c7`**. This changes only AI_CONTINUITY.md on deployment-disabled **`integration/continuity-refresh-2026-10-07`**. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**` exclusion.
+
+**Next:** present the scoped integration recommendation for owner decision. Do not merge/deploy or infer integration authorization from hosted success. Preserve all candidate boundaries and factual/physical acceptance HOLDs; stop after continuity readback pending the next authorized action.
+
+## Prior continuity — approved draft PR and pending hosted checks, preserved verbatim
+
 # Pick For Us — Separate CI Draft PR Approved and Running (2026-10-07)
 
 ## CURRENT — PR #49 CREATED; EXACT-CANDIDATE HOSTED CHECKS IN PROGRESS
