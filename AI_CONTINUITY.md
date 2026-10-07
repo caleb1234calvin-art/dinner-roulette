@@ -1,6 +1,6 @@
 # Pick For Us — Control-Room Continuity Refresh (2026-10-07)
 
-## CURRENT — PRODUCTION READY; ANDROID DEVICE ACCEPTANCE HOLD; MISSOURI SEASONAL CORRECTIONS IN PROGRESS
+## CURRENT — PRODUCTION READY; ANDROID DEVICE ACCEPTANCE HOLD; FIVE-RECORD SEASONAL CORRECTION CLOSED 0 PASS / 5 HOLD
 
 This entry supersedes all older "CURRENT", "NEXT", and "awaiting verification" language below. Historical continuity is preserved after this section for audit value.
 
@@ -8,52 +8,59 @@ This entry supersedes all older "CURRENT", "NEXT", and "awaiting verification" l
 
 - Repository: `caleb1234calvin-art/dinner-roulette`.
 - Current protected `main`: **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**.
-- Current production deployment: **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`**, freshly re-read on 2026-10-07 as **READY**, target `production`, Git source `main` at the exact SHA above.
-- Production aliases include `pickforus.app` and `www.pickforus.app`.
-- Immediate product/runtime state is therefore still anchored to the verified `90f0f745...` source; this continuity refresh is documentation-only and lives on an `integration/**` branch so it does not silently create a new production deployment.
+- Current production deployment: **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`**, READY, target `production`, Git source `main` at the exact SHA above.
+- Immediate product/runtime state remains anchored to that verified source. This continuity refresh is documentation-only on deployment-disabled `integration/continuity-refresh-2026-10-07`; it does not itself change production.
 
-### Superseded October 3 state
+### Superseded historical state
 
-The older top entry below says Date Night Radial Pacing is awaiting independent verification on old main `4d937e...` / old production. That is historical only.
-
-Subsequent work completed the release path through the seasonal integration and Android current-input workflow correction. The Android publication handoff on current main is itself now historical: its "awaiting fresh independent verification" language predates the later verification PASS, promotion, production alignment and physical-device acceptance attempt.
+The October 3 radial-pacing and October 6 Android "awaiting verification" language below is historical. Subsequent verification/promotion work completed those gates. Do not reopen them from older handoffs.
 
 ### Current operational chain
 
-Treat the following as the current control-room sequence:
+Treat this as the current control-room sequence:
 
-1. Date Night radial work reached accepted verification/promotion state; do not reopen the October 3 "awaiting verification" gate from historical entries.
+1. Date Night radial work reached accepted verification/promotion state.
 2. Seasonal release-scope work was integrated onto protected main.
 3. Android Phase B current-input workflow correction was independently verified and promoted; current main became `90f0f745...`.
-4. Production was promoted/aligned to `dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`, READY at the same Git source.
-5. Physical Android/WebView acceptance is **HOLD**, not a development failure and not authorization to rebuild/sign/publish. Preserve the existing unsigned/current-input artifact lineage unless a later acceptance task explicitly changes it.
-6. Seasonal miscellaneous-recall work did **not** establish trustworthy fresh Overpass measurement. Evidence recovery and transport diagnosis remained inconclusive after HTTPS/OSM success but Overpass timeout behavior. Treat Overpass as de-prioritized for this release path; do not infer zero recall from unavailable measurement and do not burn repeated public-provider traffic trying to force a result.
-7. Product strategy returned to direct public research for a Missouri-wide 2026 Halloween/fall inventory rather than depending on generalized live discovery.
-8. The Missouri statewide inventory then received an independent **28-record verification** pass. That verification identified a bounded set of material local corrections rather than authorizing broad rework.
-9. A **five-record southwest Missouri correction pass is currently in progress** for:
-   - RIP at Myer's Inn
-   - The Aftermath Haunted Attraction
-   - Beyond The Outer Limits
-   - Christine's Vineyard — Witches Day Out
-   - Vino Noir — Witch Broom Making Workshop
+4. Production aligned to `dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`, READY at the same Git source.
+5. Physical Android/WebView acceptance remains **HOLD**. Do not rebuild, sign, publish, or touch Play Console without a separately authorized task.
+6. Seasonal miscellaneous-recall / Overpass work remained inconclusive at the measurement layer. Unavailable measurements are not zero results. Overpass is de-prioritized for this release path.
+7. Product strategy returned to direct public research for Missouri 2026 Halloween/fall coverage.
+8. The Missouri statewide inventory received independent verification and produced a bounded five-record southwest Missouri correction task.
+9. **Revision 2 correction quality independently PASSED for all five records, but import clearance is 0 PASS / 5 HOLD.** The correction faithfully preserves supported facts and unresolved gates; none of the five records is import-ready.
+10. **Nothing from the five-record pass was implemented or imported.**
 
-### Current five-record correction authority
+### Final five-record verdict
 
-For the active correction pass:
+All five remain blocked by unresolved visitor-arrival evidence. Numerical routing remains null, coordinate provenance remains null, machine opening intervals remain null, Open Now remains null, and runtime/import flags remain false.
 
-- Prioritize visitor-arrival evidence and the exact material corrections identified by the independent verifier.
-- Do **not** implement or import the records into runtime/catalog data as part of this pass.
-- Do **not** lower the evidence standard to beat an event date.
-- If Vino Noir or Witches Day Out cannot be independently cleared while still useful, allow them to expire rather than weakening evidence requirements.
-- Do not reopen statewide discovery, runtime query/classifier changes, Android, Vercel, production or operator outreach from this bounded correction task.
+- **MO26-003 — RIP at Myer's Inn: HOLD.** Schedule/address/phone/admission corrections are accepted, but an official designated public entrance or visitor parking point with defensible coordinates is still missing. A map marker alone is insufficient.
+- **MO26-010 — The Aftermath Haunted Attraction: HOLD.** Corrected schedule, age/infant, accessibility, weather, ticket and closing-time treatment passed review. A property-specific visitor access point tied to defensible coordinates is still missing. Recheck schedule/weather before any future use; keep final-exit uncertainty unless closing intervals later become necessary.
+- **MO26-011 — Beyond The Outer Limits: HOLD.** Corrected schedule, phone-conflict handling and closing-time treatment passed review. A separately corroborated visitor entrance/parking point is still missing; current operator weather/schedule state must be revalidated before use.
+- **MO26-012 — Christine's Vineyard — Witches Day Out: HOLD.** Revision 2 correctly leaves the VIP/general-admission relationship unknown. It still lacks verified general-admission terms and a defensible event visitor entrance/parking coordinate reconciling the differing property points. If not independently cleared in time, let the October 10 event expire rather than lower the evidence standard.
+- **MO26-013 — Vino Noir — Witch Broom Making Workshop: HOLD.** 21+ status and the observed $33.44 checkout total are supported. Visitor entrance/parking coordinates remain unresolved, and ticket inventory/fees plus event/cancellation state require immediate-before-use revalidation. If not cleared in time, let the October 8 event expire rather than rush import.
 
-### Provider / seasonal posture
+### Correction-quality result
 
-- Public-map provider transport is not considered a reliable release dependency for the current seasonal push.
-- Earlier Overpass failures are **unavailable/inconclusive measurements**, never valid zero-result evidence.
-- Direct public research and evidence-backed venue records are the preferred short-term path for useful local/regional seasonal coverage.
-- Deferred generalized live seasonal-source ingestion remains deferred unless separately authorized.
-- Existing concrete runtime seasonal categories and product behavior must not be broadened merely to make an audit hypothesis pass.
+The independent Revision 2 review found:
+
+- overall candidate quality: **PASS**;
+- correction-quality count: **5 PASS / 0 HOLD**;
+- import-clearance count: **0 PASS / 5 HOLD**;
+- all 113 manifest entries matched the retained local/ZIP bytes;
+- all 177 original-value checks matched the immutable originals after Revision 2 corrections;
+- the two identified correction-quality issues were resolved without changing original source artifacts.
+
+Correction-quality PASS is **not** import readiness. There is no approved import subset.
+
+### Seasonal posture after closeout
+
+- Park these five records until missing evidence becomes available.
+- Do not start another open-ended arrival search merely because an event date is close.
+- Vino Noir and Witches Day Out should expire on schedule if they remain uncleared.
+- Keep Myer's Inn, Aftermath and Beyond available only as research candidates for later revalidation; do not infer 2027 rollover.
+- Do not broaden runtime categories or implement the two "Other" witch-event taxonomies from this research result without separate authorization.
+- Do not reopen generalized live-source ingestion or repeated Overpass probing as a substitute for the missing evidence.
 
 ### Android posture
 
@@ -64,17 +71,15 @@ For the active correction pass:
 
 ### Exact next action
 
-1. Finish the bounded five-record correction/evidence pass without implementation.
-2. Independently verify the corrected five-record package.
-3. Reconcile the final correction verdict into this top continuity entry.
-4. Only then decide whether any curated seasonal records should enter an implementation/import workflow.
-5. Keep Android acceptance, generalized provider work, signing/Play Console, and unrelated runtime changes separate.
+The southwest Missouri correction workstream is closed at **0 import-ready records**.
+
+Next product work must be selected deliberately; there is no automatic seasonal import action from this result. If these five records are revisited, require new evidence that resolves the stated HOLD gates and fresh independent verification before implementation.
 
 ### Continuity maintenance rule
 
 A workstream is not fully closed when only the chat/Dot handoff is current. At every stable verification, promotion, release, HOLD, or materially changed next-action gate, update repository continuity so a fresh worker can recover the true state without reconstructing it from conversation history.
 
-For Pick For Us specifically, **do not update `main` solely for continuity without checking deployment behavior first**: `main` is production-connected. Documentation-only continuity work should use a deployment-disabled `integration/**` branch until it is intentionally folded into a normal protected-main publication step.
+For Pick For Us specifically, **do not update `main` solely for continuity without checking deployment behavior first**: `main` is production-connected. Documentation-only continuity work should stay on a deployment-disabled `integration/**` branch until intentionally folded into a normal protected-main publication step.
 
 ## Prior continuity — historical, preserved below
 
