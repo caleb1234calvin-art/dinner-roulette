@@ -1,3 +1,40 @@
+# Pick For Us — Both Pre-Import Revalidations PASS (2026-10-07)
+
+## CURRENT — TWO-RECORD FACTUAL GATE PASSED; BOUNDED IMPLEMENTATION MAY BEGIN
+
+Fresh revalidation completed **2026-10-07T21:22:54.912792+00:00**: **Lloyd's MO26-068 PASS-revalidation; Sam A. Baker MO26-116 PASS-revalidation**. Seven official/official-linked HTTP 200 captures began at **21:21:06 UTC**. No factual deltas or correction projection were required; both exact cleared inputs remain unchanged. This supersedes the pending-revalidation gate below.
+
+The authorized implementer may now begin the bounded two-record candidate and minimum Other Halloween / Fall support with the temporary Haunted House icon. **Implementation, focused/full validation, browser acceptance and fresh independent exact-candidate review are still pending.** Data revalidation is not successful runtime verification or release approval.
+
+### Exact unchanged input authority
+
+- Lloyd's: `Missouri-Seasonal-2026-Clearance2-Cleared-Factual-Subset-v2.json`, Library `libfile_079c4e53fc288191af08642c2fd4f7b5`, SHA-256 `ab7a7fac4370937c0240d9992f570f685cc2adf10e813768aec85205ca68165f`.
+- Sam: `Missouri-Seasonal-2026-Verified-Corrected-Subset.json`, Library `libfile_55e36e94705081919bd49d60055cd59b`, SHA-256 `008b7c9bf53079c59befcf9a828ed0d1cb644c137ed14fe4ddd7bd7cc336d88c`.
+- Revalidation report: `Two-Record-Preimport-Revalidation.txt`, Library `libfile_d849df11d73c819187594b9c773df128`, SHA-256 `285991680e42b584922ff536156d9e0eda50fb2b7a1a31e323ced091dc3bb729`.
+- Complete receipts/verdicts: `Two-Record-Preimport-Revalidation.json`, Library `libfile_0499a5b14d7c8191a77a0877d42ddf06`, SHA-256 `67ccd9ff4fa7caffafcf172ade3f876a33e2a8232d3a09f1e13babf50d7a4fe1`.
+- Evidence bundle: `Two-Record-Preimport-Revalidation.zip`, Library `libfile_d3fdab99d15c81919bbb275b48488472`, SHA-256 `4753753e2a259e6edd63e514461bc36b2af7baaa74f664eed02e6ae7580113f3`. Raw source bodies remain outside the report bundle.
+
+### Safety facts the implementation must preserve
+
+- Lloyd's exact eleven 2026 dates/hours, under-18 supervision, admission/refund and weather limits remain. Navigation **38.7746696, -92.2372283** is approximate operator navigation/site arrival only, never an exact gate, driveway edge, stall or doorway. No social/live-ticket assurance or all-in online processing total was established.
+- Sam's official October 31 event confirms free public activities, no registration and **no crafts**. Campgrounds 14:00–16:00; recycling station by store 14:00–17:00; Mudlick Mountain Grill 15:00–18:00. It supports bounded community trick-or-treat/Halloween games under Other, not a scare attraction, maze or pumpkin patch.
+- Sam's fresh official event explicitly identifies the **free parking lot next to Shelter 1 at 37.259288, -90.505404**. Preserve this supported parking fact without survey-grade/doorway precision. Inclement weather can cancel the event; no specific cancellation was shown. Tick Awareness/Firewood Advisory were visible; no live status-map guarantee.
+- Keep **machine_opening_intervals=null and open_now=null**; no generic business-hours fallback, synthetic daily intervals or Open Now claim. October 31 activity times are CDT (UTC−05:00); November 1 **06:00 CST = 12:00 UTC** archive is retention policy, not admission. No 2027 recurrence or evergreen listing.
+- Historical factual artifacts retain runtime/import-disabled fields. These are pre-implementation guards, not evidence that the newly authorized runtime/UX has passed review. Preserve qualified geometry and routing limits: Lloyd's source projection keeps routing disabled/null; Sam's projection provides no positive routing authorization. Independently test the actual implementation's enforcement.
+- Next periodic factual review by October 14; Lloyd's weather-sensitive visitor check within 24 hours; Sam recheck within 48 hours before its start, by October 29 at 14:00 CDT.
+
+### Release dependency and fresh preservation check
+
+At **21:24 UTC**, main remains **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`** and latest production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** remains READY at that SHA. Main still retains the Myer's fallback; **PR #47 is an explicit release dependency**. It remains open/unmerged at **`277aca01996b5559b6e520d9d3f193c4989f4f64`**. Do not mix its remediation into this two-record feature.
+
+A separate CI author is preparing the isolated one-file build-order correction on `integration/hotfix-47-ci-build-order`; that work remains pending review and PR #47 is untouched. This records its separate assignment, not a verified/published CI fix or a green hotfix gate.
+
+Continuity parent **`61c3b8e8b75218c2616162f0876814017a96574a`**, tree **`37bec94b35de4e1d344b6f77e8aa54ed03f1d2bd`**. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** still disables `integration/**` deployments. Only this file changes on `integration/continuity-refresh-2026-10-07`; no main/production/configuration change.
+
+**Next:** complete and freeze the authorized bounded implementation, its focused/full gates and browser evidence, then obtain fresh independent review of the exact candidate. No merge/deploy/release authority is inferred. All 26 other HOLDs, immutable research history, Android physical HOLD and deferred provider posture remain unchanged.
+
+## Prior continuity — historical task-start gate, preserved verbatim
+
 # Pick For Us — Two-Record Seasonal Implementation Task Start (2026-10-07)
 
 ## CURRENT — BOUNDED IMPLEMENTATION AUTHORIZED; BOTH PRE-IMPORT REVALIDATIONS PENDING
