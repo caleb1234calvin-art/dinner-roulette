@@ -96,3 +96,13 @@ for (const row of records) test(`actual component keeps ${row.id} qualified thro
  clock.value=new Date(row.seasonalAvailability.endsAt);tree=harness.render();assert.match(textOf(tree),/0 activities match/);
  clock.value=new Date("2027-10-10T18:00:00Z");tree=harness.render();assert.match(textOf(tree),/0 activities match/);
 });
+
+for (const row of records) test(`offline Anything at ${row.id} uses region-neutral saved-place disclosure`, async(t)=>{
+ t.mock.timers.enable({apis:["Date"],now:new Date("2026-10-07T18:00:00Z").getTime()});
+ t.mock.method(globalThis,"fetch",async()=>{throw new Error("Controlled provider outage");});
+ const response=await searchDateNight({data:{lat:row.lat,lon:row.lon,radiusMiles:15,activityTypes:["anything"],spookySeasonEnabled:true}});
+ assert.equal(response.source,"fallback");
+ assert.deepEqual(response.venues.map(place=>place.id),[row.id]);
+ assert.equal(response.warning,"Using saved Date Night places while the live map is unavailable.");
+ assert.doesNotMatch(response.warning,/Jasper County/);
+});

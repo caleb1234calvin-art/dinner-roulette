@@ -1,5 +1,15 @@
 # Missouri 2026 two-record seasonal implementation candidate
 
+## V48-01 bounded correction after independent HOLD
+
+Original immutable candidate `ccceeaacc87ad3a4be2b7e27d505ad4a74cce113` remains preserved. Its independent verdict was HOLD, with core automated/factual checks PASS, browser/hosted gates unresolved, and reproduced V48-01 inaccurate Jasper County outage wording. Report SHA-256: `2b0ed4134913b0be016fd56b0d6f62007f8882b6cf828743ee34744b6d1c684e`.
+
+This sole-parent follow-up changes only that one runtime string to region-neutral “Using saved Date Night places while the live map is unavailable.” It adds two real-handler offline-Anything regressions centered on the exact approved Lloyd and Sam locations. No factual mapping, eligibility, taxonomy, provider scope, CI or PR47 change. Updated local full-suite count: 757 passes, four inherited skips, zero failures; focused nine tests pass. Fresh typecheck, safe builds/build proof, changed-file lint and casino audit pass. Exact immutable revision identity and receipts accompany publication; fresh independent review is required.
+
+V48-02 stays an advisory, not confirmed end-to-end leakage. Pending browser checklist additionally includes mixed ordinary/seasonal duplicates followed by seasonal toggle, resume and cache refresh. No eligibility hardening is included. Browser blockage is unchanged; no repetitive blocked browser attempt or acceptance PASS. Hosted CI/build-order and PR47 remain separate release gates.
+
+## Original candidate handoff (historical validation counts below)
+
 Status: IMPLEMENTATION CANDIDATE; BROWSER ACCEPTANCE HOLD; independent verification and release decisions remain separate.
 
 ## Immutable inputs and base

@@ -198,7 +198,7 @@ export const searchDateNight = createServerFn({ method: "POST" })
         source: "fallback",
         discovery,
         ...(patch ? { patch } : {}),
-        warning: "Using saved Jasper County Date Night places while the live map is unavailable.",
+        warning: "Using saved Date Night places while the live map is unavailable.",
       };
     }
 
