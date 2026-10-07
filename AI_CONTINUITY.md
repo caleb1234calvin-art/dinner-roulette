@@ -1,3 +1,36 @@
+# Pick For Us — Independent Seasonal Verification HOLD (2026-10-07)
+
+## CURRENT — CORE AUTOMATED REVIEW PASS; COPY REVISION IN PROGRESS; BROWSER/HOSTED/RELEASE HOLD
+
+Fresh independent review completed **2026-10-07T21:38:44.694004+00:00** for immutable seasonal candidate **`ccceeaacc87ad3a4be2b7e27d505ad4a74cce113`**, tree **`7ee17cfefba377bd59ef0ca014327342cf015716`**, sole parent **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**. Overall verdict: **HOLD_FOR_BROWSER_HOSTED_VALIDATION_AND_REVIEWED_FINDINGS**. This supersedes pending-independent-review wording below, not the unresolved gates.
+
+- **Core whitelist/factual mapping and runtime automated checks PASS.** Independently rerun **755 tests passed / 4 inherited skips / 0 failures** (684 repository + 71 application), typecheck, development and migration-free auth-enabled production builds/proof, changed lint, dependency graph, casino invariants and diff check pass. Dependencies were reused and independently checked; no fresh verifier npm-ci claim.
+- Independent edge probes pass for exact identities/coordinates/dates, review/overdue states, final-end millisecond boundaries, Chicago DST/archive, 2027 exclusion and never-OpenNow behavior through live duplicate ordering/ordinary-type merges.
+- **V48-01 [P3], confirmed:** `src/lib/date-night/search.ts:201` shows misleading "Jasper County" saved-place fallback copy for either new statewide record during provider outage. Both real-handler cases reproduced. Geometry, identity, eligibility and provider scope are unaffected.
+- The parent routed **only a region-neutral copy correction plus two outage regressions** back to the author within the existing implementation scope. **Bounded revision is in progress; no revised candidate or verification PASS yet.** Preserve the original reviewed candidate and evidence. No unrelated CI or eligibility changes.
+- **V48-02 [advisory]:** a same-place ordinary park + seasonal duplicate can pass the isolated season-off eligibility helper. Actual end-to-end user-visible leakage was **not demonstrated**; acquisition/cache signatures and server exclusion provide separate safeguards. Include mixed-type seasonal toggle/resume in browser acceptance. Do not label this a confirmed product defect or silently expand remediation.
+- **Browser HOLD:** zero independent scenarios completed. Existing Chromium EPERM/blocked local URL evidence remains; cloud browser lacked safe interception/init-script capability for hosted fixture acceptance. No layout, hydration, keyboard, focus, navigation or physical-device PASS.
+- Exact-head Validate Dinner Integration **`37690001759` / job `113027431684` FAILED** at inherited compiled-security test-before-build ordering; later build/browser stages skipped. Unsigned Android **`37690001917` / job `113027432210` succeeded**, signing skipped. Full lint retains **3 inherited errors / 6 warnings**. Preview READY is not acceptance.
+- **Release readiness HOLD.** PR #47 remains an explicit dependency; separate CI candidate correction-quality PASS is not hosted validation or integration. Draft-PR approval for that separate CI candidate remains pending; do not combine it into feature remediation.
+
+### Immutable independent review evidence
+
+- `Two-Record-Independent-Implementation-Verification.txt` — Library **`libfile_ff909ba11ff88191a4c8af4df7dd304d`**, version **1**, SHA-256 **`2b0ed4134913b0be016fd56b0d6f62007f8882b6cf828743ee34744b6d1c684e`**.
+- `Two-Record-Independent-Implementation-Verification.json` — Library **`libfile_65d68abb6a1881918b2786efad96975f`**, SHA-256 **`162a8423acfa027da9e7051c4e06d314041ca3c43190754e9fc09d0fb2ad9956`**.
+- `Two-Record-Independent-Verification-Evidence.zip` — Library **`libfile_3a5c268ede848191822d3533f78aa346`**, SHA-256 **`b4b37c1a04c0209579d84871ef738af999892ab22ade1fa17ee9f40d4194230d`**.
+
+The full report controls qualifications; previous research/input/author artifacts remain unchanged. Independent verification made no source edits or publication.
+
+### Fresh baseline and next gate
+
+At **21:39 UTC**, main remains **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**; production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** is READY at that SHA. [PR #48](https://github.com/caleb1234calvin-art/dinner-roulette/pull/48) remains draft/open/unmerged at the original reviewed candidate. [PR #47](https://github.com/caleb1234calvin-art/dinner-roulette/pull/47) remains open/unmerged at **`277aca01996b5559b6e520d9d3f193c4989f4f64`**.
+
+Continuity parent **`20e38f0d2ea5205949e6fbf5d630960e5b1b1066`**, tree **`d9ef54b44de5d27a2b9ca1175836e6156412b2cd`**. Deployment-disabled `integration/continuity-refresh-2026-10-07` remains the documentation-only destination; `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** is unchanged.
+
+**Next:** finish the minimal copy/regression revision, freeze a new exact candidate and independently re-review it. Successful isolated browser acceptance and separately authorized hosted CI/integration remain required; do not lower these gates. No main merge, production deploy, physical Android acceptance or release authority is inferred.
+
+## Prior continuity — original candidate freeze and separate CI review, preserved verbatim
+
 # Pick For Us — Seasonal Candidate Freeze and Separate CI Review (2026-10-07)
 
 ## CURRENT — TWO-RECORD CANDIDATE FROZEN; INDEPENDENT REVIEW PENDING; BROWSER/RELEASE HOLD
