@@ -1,3 +1,83 @@
+# Pick For Us — Control-Room Continuity Refresh (2026-10-07)
+
+## CURRENT — PRODUCTION READY; ANDROID DEVICE ACCEPTANCE HOLD; MISSOURI SEASONAL CORRECTIONS IN PROGRESS
+
+This entry supersedes all older "CURRENT", "NEXT", and "awaiting verification" language below. Historical continuity is preserved after this section for audit value.
+
+### Authoritative release baseline
+
+- Repository: `caleb1234calvin-art/dinner-roulette`.
+- Current protected `main`: **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**.
+- Current production deployment: **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`**, freshly re-read on 2026-10-07 as **READY**, target `production`, Git source `main` at the exact SHA above.
+- Production aliases include `pickforus.app` and `www.pickforus.app`.
+- Immediate product/runtime state is therefore still anchored to the verified `90f0f745...` source; this continuity refresh is documentation-only and lives on an `integration/**` branch so it does not silently create a new production deployment.
+
+### Superseded October 3 state
+
+The older top entry below says Date Night Radial Pacing is awaiting independent verification on old main `4d937e...` / old production. That is historical only.
+
+Subsequent work completed the release path through the seasonal integration and Android current-input workflow correction. The Android publication handoff on current main is itself now historical: its "awaiting fresh independent verification" language predates the later verification PASS, promotion, production alignment and physical-device acceptance attempt.
+
+### Current operational chain
+
+Treat the following as the current control-room sequence:
+
+1. Date Night radial work reached accepted verification/promotion state; do not reopen the October 3 "awaiting verification" gate from historical entries.
+2. Seasonal release-scope work was integrated onto protected main.
+3. Android Phase B current-input workflow correction was independently verified and promoted; current main became `90f0f745...`.
+4. Production was promoted/aligned to `dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`, READY at the same Git source.
+5. Physical Android/WebView acceptance is **HOLD**, not a development failure and not authorization to rebuild/sign/publish. Preserve the existing unsigned/current-input artifact lineage unless a later acceptance task explicitly changes it.
+6. Seasonal miscellaneous-recall work did **not** establish trustworthy fresh Overpass measurement. Evidence recovery and transport diagnosis remained inconclusive after HTTPS/OSM success but Overpass timeout behavior. Treat Overpass as de-prioritized for this release path; do not infer zero recall from unavailable measurement and do not burn repeated public-provider traffic trying to force a result.
+7. Product strategy returned to direct public research for a Missouri-wide 2026 Halloween/fall inventory rather than depending on generalized live discovery.
+8. The Missouri statewide inventory then received an independent **28-record verification** pass. That verification identified a bounded set of material local corrections rather than authorizing broad rework.
+9. A **five-record southwest Missouri correction pass is currently in progress** for:
+   - RIP at Myer's Inn
+   - The Aftermath Haunted Attraction
+   - Beyond The Outer Limits
+   - Christine's Vineyard — Witches Day Out
+   - Vino Noir — Witch Broom Making Workshop
+
+### Current five-record correction authority
+
+For the active correction pass:
+
+- Prioritize visitor-arrival evidence and the exact material corrections identified by the independent verifier.
+- Do **not** implement or import the records into runtime/catalog data as part of this pass.
+- Do **not** lower the evidence standard to beat an event date.
+- If Vino Noir or Witches Day Out cannot be independently cleared while still useful, allow them to expire rather than weakening evidence requirements.
+- Do not reopen statewide discovery, runtime query/classifier changes, Android, Vercel, production or operator outreach from this bounded correction task.
+
+### Provider / seasonal posture
+
+- Public-map provider transport is not considered a reliable release dependency for the current seasonal push.
+- Earlier Overpass failures are **unavailable/inconclusive measurements**, never valid zero-result evidence.
+- Direct public research and evidence-backed venue records are the preferred short-term path for useful local/regional seasonal coverage.
+- Deferred generalized live seasonal-source ingestion remains deferred unless separately authorized.
+- Existing concrete runtime seasonal categories and product behavior must not be broadened merely to make an audit hypothesis pass.
+
+### Android posture
+
+- Main contains the verified current-input Android workflow correction lineage.
+- Physical-device/WebView acceptance remains **HOLD** until a separately scoped acceptance task produces a PASS.
+- Do not rebuild merely to repeat acceptance.
+- Do not sign a release candidate or access/mutate Play Console without explicit authorization.
+
+### Exact next action
+
+1. Finish the bounded five-record correction/evidence pass without implementation.
+2. Independently verify the corrected five-record package.
+3. Reconcile the final correction verdict into this top continuity entry.
+4. Only then decide whether any curated seasonal records should enter an implementation/import workflow.
+5. Keep Android acceptance, generalized provider work, signing/Play Console, and unrelated runtime changes separate.
+
+### Continuity maintenance rule
+
+A workstream is not fully closed when only the chat/Dot handoff is current. At every stable verification, promotion, release, HOLD, or materially changed next-action gate, update repository continuity so a fresh worker can recover the true state without reconstructing it from conversation history.
+
+For Pick For Us specifically, **do not update `main` solely for continuity without checking deployment behavior first**: `main` is production-connected. Documentation-only continuity work should use a deployment-disabled `integration/**` branch until it is intentionally folded into a normal protected-main publication step.
+
+## Prior continuity — historical, preserved below
+
 # Pick For Us — Date Night Radial Pacing #1 (2026-10-03)
 
 ## CURRENT — DATE NIGHT RADIAL PACING IMPLEMENTED — AWAITING INDEPENDENT VERIFICATION
