@@ -1,3 +1,33 @@
+# Pick For Us — Clearance Sprint #2 Author Freeze (2026-10-07)
+
+## CURRENT — AUTHOR CANDIDATE FROZEN; INDEPENDENT VERIFICATION PENDING; NO NEW CLEARANCE
+
+This checkpoint supersedes the earlier "research active/results pending" next action. The exact eight-record scope and all authority limits below remain unchanged. The completed author pass is not an independent PASS, import clearance, implementation approval or release approval.
+
+- Author version **MO2026-clearance2-research-v1**, completed **2026-10-07T20:03:34.979004+00:00**: **1 CLEARANCE CANDIDATE / 7 HOLD / 0 EXPIRED / 0 REJECT**; author QA reports 147 checks. Independent new PASS and import-cleared counts remain zero at this checkpoint.
+- **MO26-068 Lloyd's Family Farm** is the sole author clearance candidate. A named operator navigation location and arrival-loop corroboration support a proposed coordinate; independent acceptance of its site-arrival precision is pending. Weather/social freshness and the all-in online checkout fee remain qualified, and consumer routing/Open Now guards remain disabled/unverified. Do not turn this recommendation into a PASS.
+- **MO26-036 Monster, MO26-069 Dead Factory, MO26-115 Bollinger Mill, MO26-019 James River Joplin, MO26-030 Rutledge-Wilson, MO26-100 Urban Gardens and MO26-029 Campbell's remain HOLD.** All retain arrival-evidence gaps. Preserve James River's ZIP conflict, Urban Gardens' inaccessible weather updates, Campbell's last-admission contradiction, and the other source/precision limits in the full report.
+- No record newly expired or rejected in this pass. Dates are seasonal/event dates, not Open Now. Unsupported routable coordinates remain null; no runtime flags, routing, machine intervals or taxonomy implementation were activated.
+- Original corrected data-level PASS **MO26-116 Sam A. Baker** remains unchanged and outside this pass, with no crafts and pre-import revalidation required. Prior five **003/010/011/012/013** remain parked absent new evidence; their correction-quality PASS does not remove any clearance HOLD.
+- A fresh independent verifier has been assigned to this immutable candidate; **verification results are pending**. Next: verify all eight outcomes and decisive evidence independently, then propose only a small verified batch for the owner's implementation decision. No implementation/import/merge/release is authorized here.
+
+### Immutable author evidence
+
+These owner Library artifacts are the author package, not independent verification results. Verify their SHA-256 before reuse; source summaries and capture-hash receipts are in the evidence ZIP. Full downloaded website bodies were not redistributed.
+
+- `Missouri-Seasonal-2026-Clearance2-Candidates-v1.json` — Library `libfile_dd18fd552568819194755cdf29466893`; SHA-256 `660b2c201d1c70b41b733184cc6e8bf186700e1dcc39850fd3c182c7feb64552`.
+- `Missouri-Seasonal-2026-Clearance2-Report-v1.txt` — Library `libfile_865030d8f56c81919b13ad28a8595dee`; SHA-256 `1178ffab1d6f2957903a1af871a9b5d97fe0fb3f4b309fd17c3168190534ad71`.
+- `Missouri-Seasonal-2026-Clearance2-Evidence-v1.zip` — Library `libfile_4b9d7e680a2c8191a8d6a05aa0d6690f`; SHA-256 `3c779d4557ce442a9c11cd39046eff3d709b7d01606c5048a215692d28e80e99`.
+- `Missouri-Seasonal-2026-Clearance2-SHA256SUMS-v1.txt` — Library `libfile_570ae3a708b08191a6d54b42366c6510`; SHA-256 `1e8be15644912f77d2f4c1b2d8149c1cc0d3ea2e2e211f289a324765b9165080`.
+
+### Preservation and publication boundary
+
+Fresh 20:04 UTC readback: main `90f0f745a6e35d5abd09f727b7d3c87367ef3295`; production/native alias `dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK` READY at the same SHA; continuity parent `1fbef8a974025595cf5a2549f33dbb0f3e47927f`, tree `e38f09557cfe199c6be1afaf6dce9ebbee382d69`. This checkpoint changes only this file on deployment-disabled `integration/continuity-refresh-2026-10-07`.
+
+The prior PR #47 observation remains a dated concurrent-work receipt, not a fresh status claim; do not interfere and re-read before overlapping implementation. Seasonal release remains shipped, Android physical acceptance HOLD remains, and deferred Overpass/provider work stays deferred. The existing standing stable-state continuity rule applies; no main update or deployment merely for documentation.
+
+## Prior continuity — historical task-start snapshot, preserved verbatim
+
 # Pick For Us — Incremental Seasonal Clearance Sprint #2 (2026-10-07)
 
 ## CURRENT — EIGHT-RECORD RESEARCH ACTIVE; NO NEW CLEARANCE; PRODUCTION UNCHANGED
