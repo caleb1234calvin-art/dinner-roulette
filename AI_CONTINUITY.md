@@ -1,3 +1,29 @@
+# Pick For Us — Isolated Integration Candidate Frozen (2026-10-07)
+
+## CURRENT — DRAFT PR #50 FROZEN; LOCAL AUTHOR GATES PASS; HOSTED/BROWSER/INDEPENDENT GATES PENDING
+
+[Draft PR #50](https://github.com/caleb1234calvin-art/dinner-roulette/pull/50) is open/unmerged on **`integration/seasonal-release-candidate-2026-10-07`**, exact **`a5c6d1e30b140e7a8cac7ab67b1d9424364b311e`**, tree **`89b0249ae93ee9e610f4a80f4f7d240227c80544`**, sole parent unchanged main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**. One commit, **24 changed paths**. This supersedes "no combined candidate yet" below; it is not final acceptance.
+
+Full controlling [integration handoff at the immutable candidate](https://github.com/caleb1234calvin-art/dinner-roulette/blob/a5c6d1e30b140e7a8cac7ab67b1d9424364b311e/docs/handoffs/active/integrated-seasonal-release-candidate-2026.md) has been read. The older PR #48 handoff/audit are retained verbatim as source history; their "separate PR #47" language refers to the old feature-only tree, not this deliberately combined candidate.
+
+- Explicit source-delta composition: main → PR #47 **277aca01996b5559b6e520d9d3f193c4989f4f64**; PR #47 → PR #49 **49a552cf36e800fb684504cf8f36beb1ee3d3b5b** workflow-ordering delta only; main → corrected PR #48 **3dc116ef8d114127402d94fcbe299272080d0f4a**. No blind history merge or duplicate shared ancestry. The availability.ts overlap combines Myer's removal with the reviewed never-OpenNow/final-end additions.
+- Runtime scope remains the reviewed source changes. Extra integration scope is testing/handoff: wire seasonal browser acceptance after unchanged existing hosted browser checks and expand its disposable fixture harness. Required assertions, auth-enabled build and failure propagation remain intact.
+- Author reports complete final-diff inspection before tests and finished local **757 full-suite PASS / 4 inherited skips**, focused/audit/typecheck/safe development and migration-free production build/proof/changed-lint/diff checks PASS. **Full lint remains exactly 3 inherited errors / 6 warnings**, not waived. These are author local results, not independent acceptance.
+- At **22:25 UTC**, exact-head [Validate Dinner Integration `37696007092`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37696007092) and [unsigned Android `37696007087`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37696007087) are **IN PROGRESS**. No hosted terminal result or new seasonal browser PASS is claimed.
+- The expanded **19-scenario seasonal browser harness is pending execution/result review**: both records; Anything/category/on-off/Open Now; exact expiry/2027; mixed duplicates with actual cache reuse/TTL refresh; resume/overlays; keyboard/navigation/mobile layout; temporary Other icon; and Myer's absence from trusted fallback. Provider traffic is intercepted. A committed harness is not proof it passed.
+- V48-02 remains advisory on unchanged inherited algorithms until actual integrated toggle/resume/cache evidence exists. Do not silently harden unrelated runtime; any demonstrated defect requires a bounded remediation decision.
+- Exactly two cleared records remain the factual scope. Preserve qualified arrival precision, date/admission/weather/age notes, null machine hours/never-OpenNow, Chicago time and final October 31 cutoffs. No parked HOLD imports, live provider/physical arrival acceptance or 2027 recurrence.
+
+### Fresh preservation baseline and next action
+
+Fresh **22:25 UTC** checks confirm main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**; production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** remains READY at that SHA. No source PR merge, main update or production deployment occurred.
+
+Continuity parent **`7ef844c0362c75b4ad13d8181bd8884f9528f607`**, tree **`64e6ade4a3a3d41cb5e2874cdbb787c51b06a4d2`**. Only AI_CONTINUITY.md changes on **`integration/continuity-refresh-2026-10-07`**; verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** preserves deployment-disabled `integration/**`. Candidate branch has the same exclusion.
+
+**Next:** finish exact-candidate hosted validation and all existing/new browser gates; freeze terminal logs/results/artifact digests, then obtain fresh independent exact-candidate release verification. Only if all required gates pass may a release proposal be prepared for explicit owner approval. Keep draft/unmerged; no main/deploy/signing/Play action is authorized.
+
+## Prior continuity — authorized integration task start, preserved verbatim
+
 # Pick For Us — Isolated Integration Authorized (2026-10-07)
 
 ## CURRENT — INTEGRATION TASK START; NO COMBINED CANDIDATE OR ACCEPTANCE YET
