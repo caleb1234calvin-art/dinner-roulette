@@ -24,13 +24,6 @@ export const SEASONAL_VENUE_AVAILABILITY: Readonly<Record<string, SeasonalVenueA
     sourceUrls: ["https://thewerehouse.net/", "https://www.missourihauntedhouses.com/halloween/haunted-house-joplin.html"],
     note: "Operator weekly hours and current directory season corroborated by the retained audit retrievals.",
   },
-  "date-night-myers-inn-carthage": {
-    status: "confirmed", activeFrom: "2026-10-02", activeUntil: "2026-10-31",
-    activeDates: ["2026-10-02", "2026-10-03", "2026-10-09", "2026-10-10", "2026-10-16", "2026-10-17", "2026-10-23", "2026-10-24", "2026-10-30", "2026-10-31"],
-    checkedAt: "2026-09-29", revalidateAfter: "2026-10-31",
-    sourceUrls: ["https://www.myersinnhaunt.com/"],
-    note: "Ten October 2026 dates in the operator calendar, retained in original audit evidence. Verify changes before travel.",
-  },
 };
 
 export type DateNightAvailabilityStatus = "open-now" | "closed-now" | "hours-unknown" |
