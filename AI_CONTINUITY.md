@@ -1,3 +1,63 @@
+# Pick For Us — Clearance Sprint #2 Final Independent Closeout (2026-10-07)
+
+## CURRENT — INDEPENDENT V2 COMPLETE: 1 FACTUAL PASS / 7 HOLD; OWNER IMPLEMENTATION DECISION NEXT
+
+Independent audit #2 completed **2026-10-07T20:37:47.691622+00:00**. This entry supersedes all pending-review/author-revision next actions below. Author and independent-verification work are complete; the sprint closes when this continuity publication is read back successfully. All prior checkpoints remain verbatim historical evidence.
+
+- **Correction quality: 8 PASS / 0 HOLD / 0 REJECT. Factual data clearance: 1 PASS / 7 HOLD / 0 REJECT.** Only **MO26-068 — Lloyd's Family Farm** newly clears, for the exact separate verifier-approved factual projection. Existing-category factual PASS: 1; new Other factual PASS: 0.
+- Corrected 28-record population now totals **2 data-level PASS / 26 HOLD / 0 REJECT**: earlier Sam A. Baker MO26-116 remains unchanged; Lloyd's MO26-068 is the new PASS. The original 28 proposals were never approved wholesale.
+- Correction-quality PASS, factual clearance, taxonomy authority, implementation quality, release readiness and production state are separate gates. **No implementation, import, taxonomy, runtime, routing, main merge or release authorization follows from this result.**
+- Reviewed author candidate SHA-256: `c1c0424bf7db5640c4b844612752998b4a48fb8316e1edfb0c2826a77007d6c2`. Author v1/v2 and original bytes remain immutable. The author candidate still contains null geometry/pending-review bookkeeping; never import it wholesale. Only the exact cleared subset below is eligible for a future separately authorized, freshly revalidated import.
+
+### Lloyd's approved scope and required qualifications
+
+- Address: 7015 E Route Y, Ashland, MO 65010. Corn Maze and Pumpkin Patch; hayride is supplemental. Eleven exact 2026 dates: September 26–27; October 3–4, 10–11, 17–18, 24–25 and 31. Weekends through October 25 are 10:00–18:00; October 31 is 10:00–16:00, America/Chicago. No November 1 admission, continuous daily schedule or 2027 rollover.
+- Operator navigation **38.7746696, -92.2372283** is approved only as **approximate operator navigation/site arrival**, corroborated near the turning loop connected to Route Y. It is not surveyed accuracy, an exact gate, lane, parking stall or doorway. Aerial acquisition date remains unknown.
+- All children under 18 require supervision. Online admission is USD 12 plus displayed USD 1.20 ticket fee; separate processing/all-in checkout total remains unverified. Onsite USD 14; ages 2 and under free; pumpkins extra; tickets nonrefundable. Preserve these as advertised terms, not a guaranteed checkout quote.
+- Weather can alter/cancel operations. Checked official pages showed no specific cancellation, but current social posts and live ticket inventory were not comprehensively verified. No Open Now claim.
+- Exact cleared JSON keeps `routing_enabled=false`, `routing_destination=null`, `runtime_active=false`, `automatic_import_allowed=false`, `machine_opening_intervals=null` and `open_now=null`. Numerical geometry is factual evidence, not runtime enforcement proof.
+- Immediately before any authorized import, revalidate schedule, age/admission/refunds, cancellations, activity availability and navigation provenance, then independently verify downstream safeguards. Periodic revalidation no later than October 14; weather-sensitive visitor check within 24 hours. Archive **November 1 at 06:00 CST / 12:00 UTC**, a retention cutoff rather than extra opening hours.
+
+### Seven HOLDs parked after the bounded sprint
+
+Do not repeat open-ended arrival searches. Reopen only against new evidence and a scoped decision; preserve each existing lifecycle cutoff and no-2027-rollover rule.
+
+- **MO26-036 Monster Corn Maze:** visitor-arrival point unresolved. The independent v2 reviewer reopened homepage/FAQ directly with HTTP 200, resolving the author's retrieval failure for this review. Adult accompaniment for ages 13 and under, VIP 20:00–23:00 timed slots/prompt arrival, refund and accessibility/entry limits now pass correction review; weather/entry revalidation remains.
+- **MO26-069 Dead Factory:** visitor-arrival point unresolved; direct-source/current cancellation assurance unavailable.
+- **MO26-115 Bollinger Mill:** no defensible numerical visitor-arrival point; Other taxonomy/import authority remains separate.
+- **MO26-019 James River Joplin:** uncorroborated event arrival point and unresolved 64801/64804 ZIP conflict; separate Other taxonomy/import authority required.
+- **MO26-030 Rutledge-Wilson:** parking-labelled map lacks georeferencing; named-park KML is not visitor arrival. Operator 65802 address accepted with Census 65807 discrepancy retained. Accompanying-adult requirement for free child maze admission is corrected.
+- **MO26-100 Urban Gardens:** no entrance/parking coordinate; street address/interpolation insufficient. Facebook response was a title-only shell, not readable current weather updates.
+- **MO26-029 Campbell's:** property-scale navigation ambiguity and conflicting October Friday/Saturday last admission (21:00 versus one hour before 23:00 closing). Last admission stays null. Corrected waiver/age/benefit/day/payment terms do not remove HOLD.
+
+Prior southwest Missouri **003/010/011/012/013 remain parked**. Their five correction-quality PASS verdicts still yield zero factual/import clearance; let dated events expire on schedule if uncleared. Prior Sam A. Baker **MO26-116** is unchanged: use only its corrected projection, no crafts, no invented official parking/weather assurance, and fresh pre-import revalidation required. Both Sam and Lloyd's require that fresh revalidation.
+
+### Immutable final independent package
+
+All hashes below were checked against the retained final bytes. The full report and verdict JSON control detailed qualifications; the cleared JSON is the exact approved whitelist.
+
+- `Missouri-Seasonal-2026-Clearance2-Final-Independent-Report-v2.txt` — Library `libfile_7ae7f45edd8c8191ae05c44edcf81e8a`; SHA-256 `5f3d361fd3213fbf1532c3e9200878e3defd0398847bc7414d684c60c710ac4b`.
+- `Missouri-Seasonal-2026-Clearance2-Final-Independent-Verdicts-v2.json` — Library `libfile_0e70fc21f818819196c9a40c70b69088`; SHA-256 `725c7f0c8da72737aa01ee5c39c0d5d8e185d8af67e752ec9a40049b5ae6ca93`.
+- `Missouri-Seasonal-2026-Clearance2-Cleared-Factual-Subset-v2.json` — Library `libfile_079c4e53fc288191af08642c2fd4f7b5`; SHA-256 `ab7a7fac4370937c0240d9992f570f685cc2adf10e813768aec85205ca68165f`.
+- `Missouri-Seasonal-2026-Clearance2-Final-Independent-Evidence-v2.zip` — Library `libfile_dfff9e9a722c8191bd0341f37c77f344`; SHA-256 `5f06e41e82bc072842d6348423a2983bd6732d69f77b16507c991fa440701b16`.
+- `Missouri-Seasonal-2026-Clearance2-Final-Independent-SHA256SUMS-v2.txt` — Library `libfile_2e22c58bc78481919c06e8887055d3ff`; SHA-256 `a345d51b1a399252e0026687f04bca06c502447e880eb85aa5b92b691538b3e0`.
+
+### Fresh baseline and concurrent PR #47
+
+Read-only preflight at 20:39 UTC: main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**; latest production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`**, READY at that exact main SHA. Continuity parent **`24069cb4dd92410e69561917b819cddbc18d31aa`**, tree **`8aff71e70a5da083ff3bcb3bb2b4e697f8468a44`**. `vercel.json` blob `65925d91f882a10433e3eb43f53ed802914c969b` explicitly keeps `integration/**` Git deployments disabled. Only AI_CONTINUITY.md changes on `integration/continuity-refresh-2026-10-07`.
+
+[PR #47](https://github.com/caleb1234calvin-art/dinner-roulette/pull/47) remains open and unmerged but has independently advanced to **`277aca01996b5559b6e520d9d3f193c4989f4f64`** on `fix/halloween-arrival-hotfix-1`. At 20:39 UTC: validate failed (run `37682305405`); validate-android succeeded and sign-upload-bundle skipped (run `37682305343`); Vercel status/Preview Comments succeeded. Thus it is not a fully green release gate. The earlier head/failures below are historical. Do not modify, duplicate, merge or deploy this separate hotfix. Reconcile its exact current head/status before overlapping implementation.
+
+Seasonal release remains shipped; Android physical/WebView acceptance remains HOLD; signing/Play and deferred providers/Overpass stay separate. No runtime, Android, provider, main, production, import or release change was performed by this sprint.
+
+### Exact next owner decision
+
+Propose a small implementation batch for **Lloyd's + Sam A. Baker**, with bounded **Other Halloween / Fall** support using the **Haunted House icon temporarily**, conditioned on fresh pre-import revalidation and reconciliation with PR #47. This is a proposal, **not authorization**. The owner may instead choose **Lloyd's only** for the smallest existing-category increment. Do not wait for all 26 HOLDs or restart broad research.
+
+Any chosen batch requires separate implementer, independent verifier and release gates. Maintain deployment-safe continuity at each stable gate and read it back. Do not update main merely to refresh documentation. After this closeout readback, stop for the owner's decision.
+
+## Prior continuity — historical author v2 checkpoint, preserved verbatim
+
 # Pick For Us — Clearance Sprint #2 Author v2 Freeze (2026-10-07)
 
 ## CURRENT — MINIMAL AUTHOR V2 FROZEN; FRESH INDEPENDENT REVIEW IN PROGRESS
