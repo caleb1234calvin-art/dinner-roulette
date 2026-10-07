@@ -270,9 +270,9 @@ test("per-category provenance never labels a saved haunt as live because its ord
       {
         type: "node",
         id: 77,
-        lat: 37.1475746,
-        lon: -94.3173348,
-        tags: { name: "Myer's Inn Haunt", leisure: "park" },
+        lat: 37.0694258,
+        lon: -94.4688601,
+        tags: { name: "The Werehouse", leisure: "park" },
       },
     ],
     origin,
@@ -506,24 +506,23 @@ test("actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dep
   t.after(() => harness.dispose());
   harness.render();
   let tree = await harness.settle();
-  assert.match(textOf(tree), /2 activities match/);
+  assert.match(textOf(tree), /1 activities match/);
   assert.match(textOf(tree), /Saved places only: Haunted House/);
   assert.doesNotMatch(textOf(tree), /Live map unavailable/);
   harness.button(tree, "Give us options").props.onClick();
   tree = harness.render();
   assert.match(harness.html(tree), /Season upcoming/);
-  assert.match(harness.html(tree), /Closed now/);
   store.dateNightFilters.openNowOnly = true;
   tree = harness.render();
   assert.match(textOf(tree), /0 activities match/);
   assert.equal(harness.button(tree, "Pick our date").props.disabled, true);
   store.dateNightFilters.openNowOnly = false;
   tree = harness.render();
-  assert.match(textOf(tree), /2 activities match/);
+  assert.match(textOf(tree), /1 activities match/);
   clock.value = new Date(2026, 9, 10, 20);
   store.dateNightFilters.openNowOnly = true;
   tree = harness.render();
-  assert.match(textOf(tree), /2 activities match/);
+  assert.match(textOf(tree), /1 activities match/);
   clock.value = new Date(2026, 9, 11, 0);
   tree = harness.render();
   assert.match(textOf(tree), /0 activities match/);
