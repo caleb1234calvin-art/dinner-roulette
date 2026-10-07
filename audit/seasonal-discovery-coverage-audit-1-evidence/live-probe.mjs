@@ -11,7 +11,7 @@ for(const origin of origins){
  const run={origin,startedAt:new Date().toISOString(),calls:[]};
  globalThis.fetch=async(url,options)=>{
   const call={url,query:new URLSearchParams(options.body).get('data'),startedAt:new Date().toISOString()};run.calls.push(call);
-  try{const r=await nativeFetch(url,options);call.status=r.status;const body=await r.clone().text();call.body=body;try{const json=JSON.parse(body);call.rawCandidateCount=Array.isArray(json.elements)?json.elements.length:null;call.normalized=Array.isArray(json.elements)?json.elements.map(e=>app.elementToPlace(e,true)).filter(Boolean):null;}catch{} call.finishedAt=new Date().toISOString();console.log(JSON.stringify({origin:origin.label,url,status:call.status,count:call.rawCandidateCount}));return r;}
+  try{const r=await nativeFetch(url,options);call.status=r.status;const body=await r.clone().text();call.body=body;try{const json=JSON.parse(body);call.rawCandidateCount=Array.isArray(json.elements)?json.elements.length:null;call.normalized=Array.isArray(json.elements)?json.elements.map(e=>app.elementToPlace(e,true)).filter(Boolean):null;}catch{/* Retain the raw response when candidate decoding fails. */} call.finishedAt=new Date().toISOString();console.log(JSON.stringify({origin:origin.label,url,status:call.status,count:call.rawCandidateCount}));return r;}
   catch(e){call.error=e.message;call.cause=e.cause?.message??null;call.finishedAt=new Date().toISOString();console.log(JSON.stringify({origin:origin.label,url,error:call.error,cause:call.cause}));throw e;}
  };
  try{run.result=await app.searchDateNight.execute({data:app.searchDateNight.validate({...origin,radiusMiles:50,spookySeasonEnabled:true})});}catch(e){run.error=e.message;}
