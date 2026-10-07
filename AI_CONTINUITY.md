@@ -1,3 +1,28 @@
+# Pick For Us — Two-Record Seasonal Implementation Task Start (2026-10-07)
+
+## CURRENT — BOUNDED IMPLEMENTATION AUTHORIZED; BOTH PRE-IMPORT REVALIDATIONS PENDING
+
+The owner's **2026-10-07 21:19 UTC** decision authorizes a bounded implementation candidate for **Lloyd's Family Farm MO26-068 + Sam A. Baker MO26-116**, with minimum **Other Halloween / Fall** support using the **Haunted House icon temporarily**. This supersedes the owner-decision-pending next action below; it does not turn earlier factual clearance into release approval.
+
+- **Current stage: fresh pre-import revalidation of BOTH records is active; implementation preparation is read-only and waits for both clearance results before edits.** No implementation, import, completed test gate or successful candidate is claimed at this task-start checkpoint.
+- Use only each exact cleared projection and preserve its source limits. Lloyd's retains approximate operator navigation/site-arrival precision, under-18 supervision, qualified fees/weather, exact 2026 dates and November 1 06:00 CST archive policy. Sam retains the corrected projection without crafts or invented official parking/weather assurance. Both require fresh revalidation before use.
+- After both revalidations clear: implement only this two-record slice and minimum supporting taxonomy/UI behavior; run focused tests, full applicable gates and browser acceptance; freeze an immutable candidate; obtain a fresh independent review of that exact candidate.
+- Reconcile PR #47 and its validation separately. Do not combine unrelated CI repair with this feature batch or interfere with the concurrent hotfix. Fresh exact-head status must inform the eventual integration boundary.
+- **No main merge, production deployment or release authorization is inferred.** Prepare release only after independent verification; a later release decision remains separate. Android physical/WebView acceptance stays HOLD; signing/Play, providers/Overpass and the other 26 data HOLDs remain outside this task.
+- Preserve all original/author/verifier artifacts and prior counts: corrected population **2 data-level PASS / 26 HOLD / 0 REJECT**; Sprint #2 correction quality **8 PASS**, factual clearance **1 PASS / 7 HOLD**. These prior results are not fresh pre-import results. Parked records remain parked.
+
+### Fresh task-start baseline
+
+Read-only checks at **21:21 UTC**: main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**; latest production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`**, READY at that SHA. Continuity parent **`6177df59ac6ec0abe80fcaeee36e775eddb112d6`**, tree **`4e9e690061ea2c3eaed72c42dee73a845f7b06ea`**. Full existing continuity matches the prior verified readback.
+
+[PR #47](https://github.com/caleb1234calvin-art/dinner-roulette/pull/47) remains open/unmerged at **`277aca01996b5559b6e520d9d3f193c4989f4f64`**: validate failed (run `37682305405`), validate-android succeeded and signing skipped (run `37682305343`), Preview Comments succeeded. No PR change was made by this continuity update.
+
+Documentation remains on **`integration/continuity-refresh-2026-10-07`**. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** keeps **`integration/**` deployments disabled**. Only AI_CONTINUITY.md changes; no runtime/configuration change or deployment is needed for this checkpoint.
+
+**Next:** finish both fresh revalidations and record their exact immutable evidence before implementation edits. At each subsequent stable gate, freshly verify baseline/artifact state, publish deployment-safe continuity and read it back. Do not claim pending work complete.
+
+## Prior continuity — final research closeout, preserved verbatim
+
 # Pick For Us — Clearance Sprint #2 Final Independent Closeout (2026-10-07)
 
 ## CURRENT — INDEPENDENT V2 COMPLETE: 1 FACTUAL PASS / 7 HOLD; OWNER IMPLEMENTATION DECISION NEXT
