@@ -1,3 +1,50 @@
+# Pick For Us — Seasonal Candidate Freeze and Separate CI Review (2026-10-07)
+
+## CURRENT — TWO-RECORD CANDIDATE FROZEN; INDEPENDENT REVIEW PENDING; BROWSER/RELEASE HOLD
+
+The author published the bounded seasonal candidate as **`ccceeaacc87ad3a4be2b7e27d505ad4a74cce113`**, tree **`7ee17cfefba377bd59ef0ca014327342cf015716`**, sole parent **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**, branch **`feature/seasonal-two-records-2026`**. [Draft PR #48](https://github.com/caleb1234calvin-art/dinner-roulette/pull/48) is open/unmerged at that exact SHA. Nineteen paths changed; no CI-order fix or PR #47 hotfix was combined.
+
+Full controlling handoff: [missouri-two-record-seasonal-candidate-2026.md at the immutable candidate](https://github.com/caleb1234calvin-art/dinner-roulette/blob/ccceeaacc87ad3a4be2b7e27d505ad4a74cce113/docs/handoffs/active/missouri-two-record-seasonal-candidate-2026.md). Audit record: `audit/missouri-two-record-import-2026.json` at that same SHA. A fresh independent verifier is active; no verdict yet.
+
+Frozen author evidence: `Two-Record-Implementation-Evidence.zip`, Library `libfile_76f5cf0db58081918e5e4d74c3f9df40`, SHA-256 `53695e2a8de024812a59095e6841653b157bcd3611b73fdad5dca1e5d91cef75`. Publication receipt: `Two-Record-Implementation-Publication-Receipt.json`, Library `libfile_5fa8f17d6cf481919e65c476f0061685`, SHA-256 `97fbb4b4032ef50bf9f21c237180bba7846d3ab0c35853c09f73e919fcc6ac5b`.
+
+- Author local results: **755 full-suite PASS / 4 inherited skips**, including seven focused new tests; locked install/dependency graph, typecheck, safe development/production builds and proof, changed-file lint, casino invariants and diff check pass. Full lint remains **3 inherited errors / 6 warnings**.
+- **Browser acceptance HOLD: zero scenarios completed.** Chromium socket EPERM persisted after reviewed escalation; cloud browser local URL was blocked. No screenshot, mobile layout, hydration or browser PASS is claimed. The committed disposable harness remains the reproduction path.
+- Author mapping adds only Lloyd's Corn Maze/Pumpkin Patch and Sam's bounded Other Halloween / Fall. Other is curated-only, seasonal, uses the existing Haunted House icon temporarily, and makes no provider calls for Other-only requests. No generalized park/event classifier.
+- Null opening hours and never-OpenNow policy, exact 2026 dates, source-scoped visitor notes, qualified geometry and no-2027 recurrence are intended safeguards requiring independent verification. Final activity ends are October 31 16:00 CDT (Lloyd's) and 18:00 CDT (Sam); November 1 06:00 CST archive is not extra admission.
+- The author explicitly mapped existing external directions to source coordinates with precision notes. This downstream behavior is **not** retroactive routing authorization in historical factual artifacts or proof of physical arrival accuracy; independent runtime/UX review must assess it.
+- Fresh **21:35 UTC** hosted observation: Validate Dinner Integration **`37690001759` / job `113027431684` completed FAILURE** at the inherited missing-compiled-SSR-before-build prerequisite; unsigned Android **`37690001917` / job `113027432210` succeeded**, with signing job `113028488707` **SKIPPED**. This incidental unsigned job is not physical Android acceptance, signing or Play release. The inherited test-before-build ordering is a separate documented remediation; no failure is silently converted to PASS.
+- Exact Preview **`dpl_97GX79vEfNG78XW9LHWNEco5kiBE`** is READY, **target null/non-production**, at this SHA. Preview readiness is not browser acceptance or a production release. Production remains the separate baseline below.
+
+**Next feature gate:** fresh independent exact-candidate review and actual browser acceptance. Keep the frozen candidate isolated. PR #47 remains an explicit release dependency; a future intentional combined candidate requires renewed validation. No main merge, production deployment or release is authorized.
+
+## Separate CI correction checkpoint
+
+Separately, the CI author froze **`49a552cf36e800fb684504cf8f36beb1ee3d3b5b`**, tree **`d0fa5ea61f6902f508bbfa9dba8189eaaadd892e`**, sole parent **`277aca01996b5559b6e520d9d3f193c4989f4f64`**, on **`integration/hotfix-47-ci-build-order`**. It changes only `.github/workflows/validate-icon-pack.yml`: move the unchanged Repository and application tests step after the existing development and migration-free production builds. No test assertion, command or feature is changed.
+
+- Author local checks on Node 24.19.0 / npm 11.9.0: typecheck, development build, migration-free production build/proof and full tests pass (**677 repository + 71 application = 748 PASS, 4 inherited skips**); focused casino regression **83 PASS**, not additive. Catalog 883 canonical / 899 records / 60 files and all 30 icons remain verified.
+- Original pre-build security run retained **15 failures** (14 missing-SSR before-hook errors plus cleanup error). Full lint retains **3 errors / 6 warnings** in unchanged files; no unrelated cleanup was made.
+- **Local browser acceptance BLOCKED:** unchanged casino/location runners could not launch Chromium because socket creation was not permitted, including a reviewed escalation attempt. No browser PASS.
+- **Hosted exact-candidate CI is pending/unrun**, with no candidate workflow runs observed. Hosted workflow uses Node 22, unlike local Node 24. Missing checks are never PASS.
+- Draft PR creation was denied for missing explicit owner approval. The owner was asked at 21:25 UTC; approval remains pending at this checkpoint. No retry or alternate publication route is authorized by this record.
+- **Fresh independent review completed at 21:28 UTC: correction quality PASS; local evidence review qualified PASS, with no independent execution rerun. Hosted CI, browser acceptance and release readiness remain HOLD.** The verifier independently confirmed commit/tree/parent, exact unchanged step movement, source dependency, no assertion/skip/failure-propagation weakening and all 18 referenced evidence hashes. PR #47 remains a separate release dependency, not part of the two-record feature or a green release gate.
+
+### Immutable author evidence
+
+`handoff.json` SHA-256 **`9e7d8a2ab2b2445a3f07dc4abe819e8db74829430ddcf67964c73c62a856180f`** records exact scope, local commands/results, browser/hosted limitations and individual log hashes. Author handoff Library `libfile_2ee5f89c97848191ba53c001b4d1c67a`. Full `Pick-For-Us-Hotfix-47-CI-Author-Evidence.zip` Library `libfile_3655dac80a248191a0760470a4ca91ce`, SHA-256 `7fd23987fa4013203953d217b732ad7fd59e9e86bf37073501ad1dae36253697`, preserves the handoff, original logs and candidate patch.
+
+Independent report: `Pick-For-Us-CI-Order-Independent-Verification.txt`, Library `libfile_bd9a520674d48191b0ef71374fce4223`, SHA-256 `a41ec3b80e5a17f1a0773ffb6ec2b7e4721da371ab4e558e5c70c53c5fdb98d6`. Its qualified evidence review is not an independent rerun or release authorization.
+
+### Fresh preservation baseline
+
+Read-only checks at **21:36 UTC**: main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`**; latest production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`**, READY at the same SHA. [PR #47](https://github.com/caleb1234calvin-art/dinner-roulette/pull/47) remains open/unmerged and unchanged at **`277aca01996b5559b6e520d9d3f193c4989f4f64`**. Main still retains the Myer's fallback; reconcile this release dependency before any later release.
+
+Continuity parent **`dcfe54c267dbc1ec9b32c6f1740e18d7f5cb8949`**, tree **`68783e3b6b98290091c92907f95ee2d5a22fc4b8`**. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** keeps `integration/**` Git deployments disabled. This update changes only AI_CONTINUITY.md on `integration/continuity-refresh-2026-10-07`.
+
+**Next:** complete the feature's independent review and browser gate; obtain the pending separate draft-PR approval, then inspect exact-candidate hosted CI through browser acceptance. Until approval arrives, keep hosted PR/CI work pending. Preserve all factual precision, null Open Now/machine intervals, source limits and parked HOLDs from the revalidation checkpoint below. No merge, main update, production deployment, Android action or release is authorized by this record.
+
+## Prior continuity — both-revalidation PASS gate, preserved verbatim
+
 # Pick For Us — Both Pre-Import Revalidations PASS (2026-10-07)
 
 ## CURRENT — TWO-RECORD FACTUAL GATE PASSED; BOUNDED IMPLEMENTATION MAY BEGIN
