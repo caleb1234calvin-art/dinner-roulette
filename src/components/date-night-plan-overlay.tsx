@@ -1,3 +1,4 @@
+import { SeasonalVisitNotes } from "@/components/seasonal-visit-notes";
 import { dateNightStatusLabel } from "@/lib/date-night/availability";
 import { directionsUrl } from "@/lib/location/maps";
 import { useEffect, useState } from "react";
@@ -92,6 +93,7 @@ export function DateNightPlanOverlay({
                           {dateNightTypeLabel(place.activityTypes)} · {formatDistance(place.distanceMiles)}
                         </p>
                         <p className="mt-1 text-xs text-subtle">{dateNightStatusLabel(place)}</p>
+                        <SeasonalVisitNotes place={place} />
                         {!place.hoursKnown ? (
                           <p className="mt-1 text-xs text-subtle">Hours unconfirmed — check before going.</p>
                         ) : null}

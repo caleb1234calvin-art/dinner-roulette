@@ -10,6 +10,7 @@ import { namesMatch } from "@/lib/utils";
 import type { PhotoKey } from "@/lib/restaurants/types";
 import { JASPER_COUNTY_DATE_NIGHT_CATALOG } from "./jasper-county-catalog";
 import { JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG } from "./seasonal-catalog";
+import { MISSOURI_2026_CLEARED_SEASONAL_CATALOG } from "./missouri-2026-cleared-catalog";
 import { seasonalTypes, providerLifecycle } from "./provider-evidence";
 import { normalizeLifecycleTags } from "./lifecycle";
 import { isHalloweenDateNightActive } from "./season";
@@ -130,7 +131,7 @@ async function queryMirror(url: string, body: string, halloweenSeason: boolean, 
 
 function localWithin(lat: number, lon: number, radiusMiles: number, halloweenActive: boolean): DateNightPlace[] {
   const catalog = halloweenActive
-    ? [...JASPER_COUNTY_DATE_NIGHT_CATALOG, ...JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG]
+    ? [...JASPER_COUNTY_DATE_NIGHT_CATALOG, ...JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG, ...MISSOURI_2026_CLEARED_SEASONAL_CATALOG]
     : JASPER_COUNTY_DATE_NIGHT_CATALOG;
   return catalog.filter((place) => haversineMiles(lat, lon, place.lat, place.lon) <= radiusMiles + 1);
 }
@@ -162,7 +163,9 @@ export const searchDateNight = createServerFn({ method: "POST" })
     const local = localWithin(data.lat, data.lon, fetchRadius, halloweenSeason).filter(owned);
     const chain = createDateNightProvider(data.patch ? getRequest().signal : undefined);
     const outcomes = await Promise.allSettled(plan.map(async (group) => {
-      const body = `data=${encodeURIComponent(buildDateNightQuery(group, center.lat, center.lon, radiusMeters))}`;
+      const providerTypes = group.activityTypes.filter((type) => type !== "other-halloween-fall");
+      if (!providerTypes.length) return []; // Curated-only category; never query generic parks/events.
+      const body = `data=${encodeURIComponent(buildDateNightQuery({ activityTypes: providerTypes }, center.lat, center.lon, radiusMeters))}`;
       return chain.run(group.id, (mirror, signal) => queryMirror(mirror, body, halloweenSeason, signal));
     }));
     const groups: DateNightGroupCoverage[] = plan.map((group, index) => {
@@ -195,7 +198,7 @@ export const searchDateNight = createServerFn({ method: "POST" })
         source: "fallback",
         discovery,
         ...(patch ? { patch } : {}),
-        warning: "Using saved Jasper County Date Night places while the live map is unavailable.",
+        warning: "Using saved Date Night places while the live map is unavailable.",
       };
     }
 

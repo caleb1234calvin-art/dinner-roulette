@@ -197,11 +197,11 @@ test("Anything, omitted and empty category input produce all and only active que
   for (const input of [undefined, [], ["anything"], ["movies", "anything"]]) {
     const active = buildDateNightQueryPlan(input, true);
     assert.deepEqual(ids(active), ["seasonal", "entertainment", "culture", "outdoor"]);
-    assert.deepEqual(sorted(active.flatMap((group) => group.activityTypes)), sorted([...ordinary, ...seasonal]));
+    assert.deepEqual(sorted(active.flatMap((group) => group.activityTypes)), sorted([...ordinary, ...seasonal, "other-halloween-fall"]));
     const inactive = buildDateNightQueryPlan(input, false);
     assert.deepEqual(ids(inactive), ["entertainment", "culture", "outdoor"]);
     assert.deepEqual(sorted(inactive.flatMap((group) => group.activityTypes)), sorted(ordinary));
-    assert.equal(new Set(active.flatMap((group) => group.activityTypes)).size, ordinary.length + seasonal.length);
+    assert.equal(new Set(active.flatMap((group) => group.activityTypes)).size, ordinary.length + seasonal.length + 1);
   }
 });
 
