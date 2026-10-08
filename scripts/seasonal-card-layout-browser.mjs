@@ -55,11 +55,11 @@ function renderer(old = false) {
     return module.exports;
   }
   return (kind, records) => {
-    globalThis.document = { body: {} };
-    const names = { options: ["options-overlay", "OptionsOverlay"], result: ["result-overlay", "ResultOverlay"] };
+    globalThis.document = { body: {}, documentElement: { classList: { contains: () => true } } };
+    const names = { options: ["options-overlay", "OptionsOverlay"], result: ["result-overlay", "ResultOverlay"], plan: ["date-night-plan-overlay", "DateNightPlanOverlay"] };
     const [file, name] = names[kind];
     const Component = load(`src/components/${file}.tsx`)[name];
-    const props = kind === "options" ? { restaurants: records, onClose() {}, onSelect() {}, onShuffle() {}, onNotTonight() {}, mode: "date-night" }
+    const props = kind === "plan" ? { plan: records, onClose() {}, onReplan() {} } : kind === "options" ? { restaurants: records, onClose() {}, onSelect() {}, onShuffle() {}, onNotTonight() {}, mode: "date-night" }
       : { restaurant: records[0], reelNames: [], skipSpin: true, onClose() {}, onReroll() {}, onNotTonight() {}, mode: "date-night" };
     const html = renderToStaticMarkup(React.createElement(Component, props));
     delete globalThis.document;
@@ -67,28 +67,32 @@ function renderer(old = false) {
   };
 }
 const decorate = row => ({ ...row, cuisineLabel: row.activityTypes.join(" · "), distanceMiles: 2.5, hoursKnown: false, isOpen: false, closingSoon: false });
-const ordinary = row => ({ ...decorate(row), id: "ordinary-layout-control", seasonalListing: undefined, seasonalAvailability: undefined, seasonalVisitNotes: undefined, activityTypes: ["park"], name: row.name });
+const ordinary = row => ({ ...decorate(row), id: "ordinary-layout-control", seasonalListing: undefined, seasonalAvailability: undefined, seasonalVisitNotes: undefined, activityTypes: row.activityTypes, name: row.name });
 const verdict = { passed: false, baseline, proof, comparisons: [], errors: [] };
 let browser;
 try {
   browser = await chromium.launch({ headless: true });
   for (const width of [320, 390, 512]) {
     for (const row of rows) {
+    for (const kind of ["options", "result", ...(row.activityTypes.includes("haunted-house") ? ["plan"] : [])]) {
       const context = await browser.newContext({ viewport: { width, height: 844 }, reducedMotion: "reduce" });
       const page = await context.newPage();
       const measured = {};
-      for (const variant of ["ordinary", "before", "after"]) {
-        const render = renderer(variant === "before" || variant === "ordinary");
-        const item = variant === "ordinary" ? ordinary(row) : decorate(row);
-        await page.setContent(`<html class="dark"><head><style>${css}</style></head><body>${render("options", [item, { ...ordinary(row), id: "second-control", name: "Ordinary park" }])}</body></html>`);
+      await context.route("**/*", route => route.abort());
+      for (const variant of ["standard", "ordinary", "before", "after"]) {
+        const render = renderer(variant !== "after");
+        const item = ["ordinary", "standard"].includes(variant) ? ordinary(row) : decorate(row);
+        if (variant === "standard") { item.name = "Ordinary park"; item.activityTypes = ["park"]; }
+        if (kind === "plan") item.activityTypes = ["haunted-house"];
+        await page.setContent(`<html class="dark"><head><style>${css}</style></head><body>${render(kind, [item, { ...ordinary(row), id: "second-control", name: "Ordinary park", activityTypes: ["park"] }])}</body></html>`);
         await page.locator("img").evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
-        const card = page.locator("article").first();
-        const geometry = await card.evaluate(el => {
-          const rect = el.getBoundingClientRect(), media = el.querySelector("img").parentElement.getBoundingClientRect();
+        const card = kind === "result" ? page.locator(".result-in") : page.locator("article").first();
+        const geometry = await card.evaluate((el, kind) => {
+          const rect = el.getBoundingClientRect(), image = kind === "result" ? document.querySelector("img") : el.querySelector("img"), media = image.parentElement.getBoundingClientRect();
           return { width: rect.width, height: rect.height, mediaHeight: media.height, cardClass: el.className,
-            mediaClass: el.querySelector("img").parentElement.className, scrollWidth: el.scrollWidth,
+            mediaClass: image.parentElement.className, scrollWidth: el.scrollWidth,
             summary: el.querySelector("summary")?.getBoundingClientRect().toJSON() };
-        });
+        }, kind);
         measured[variant] = geometry;
         if (variant === "after") {
           const details = card.locator("details");
@@ -102,18 +106,21 @@ try {
           await details.locator("summary").press("Enter");
           assert.equal(await details.getAttribute("open"), null);
         }
-        await page.screenshot({ path: `${out}/${row.seasonalListing?.recordId ?? row.id}-${width}-${variant}.png`, fullPage: true });
+        await page.screenshot({ path: `${out}/${row.seasonalListing?.recordId ?? row.id}-${width}-${kind}-${variant}.png`, fullPage: true });
       }
       const delta = measured.after.height - measured.ordinary.height;
-      verdict.comparisons.push({ id: row.id, width, ...measured, delta, percent: delta / measured.ordinary.height * 100 });
+      verdict.comparisons.push({ id: row.id, kind, width, ...measured, delta, standardDelta: measured.after.height - measured.standard.height, percent: delta / measured.ordinary.height * 100 });
       assert.equal(measured.after.mediaHeight, measured.ordinary.mediaHeight);
       assert.equal(measured.after.mediaClass, measured.ordinary.mediaClass);
       assert.equal(measured.after.cardClass, measured.ordinary.cardClass);
-      assert.ok(delta <= 16, `Collapsed seasonal card exceeds standard by ${delta}px at ${width}: ${row.name}`);
+      if (delta > 16) verdict.errors.push(`Collapsed ${kind} seasonal card exceeds matched ordinary by ${delta}px at ${width}: ${row.name}`);
+      if (kind === "options" && measured.after.height - measured.standard.height > 16) verdict.errors.push(`Collapsed option exceeds short standard by ${measured.after.height - measured.standard.height}px at ${width}: ${row.name}`);
       assert.ok(measured.after.height <= measured.before.height);
       await context.close();
     }
+    }
   }
-  verdict.passed = true;
+  verdict.passed = verdict.errors.length === 0;
+  if (!verdict.passed) process.exitCode = 1;
 } catch (error) { verdict.errors.push(error.stack); process.exitCode = 1; }
 finally { await browser?.close(); fs.writeFileSync(`${out}/verdict.json`, JSON.stringify(verdict, null, 2)); }
