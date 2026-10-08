@@ -3,6 +3,47 @@ import type { SeasonalPresentation } from "./seasonal-presentation";
 /** Explicit independently reviewed visitor copy. Full facts remain in immutable audit
  * artifacts and catalog metadata; no audit narratives are rendered as consumer prose. */
 export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentation>> = {
+  "MO26-012": {
+    "canonicalId": "date-night-mo26-012-witches-day-out",
+    "confidence": "good",
+    "details": [
+      "October 10, 2026, noon–10 p.m.",
+      "Seasonal social event with local vendors, drinks and food.",
+      "Admission/ticket terms are not fully confirmed; check admission before committing.",
+      "Location is approximate."
+    ]
+  },
+  "MO26-028": {
+    "canonicalId": "date-night-mo26-028-nevada-oktoberfest",
+    "confidence": "good",
+    "details": [
+      "October 10, 2026, 9 a.m.–2 p.m. at the Vernon County Fairgrounds.",
+      "Admission terms are not confirmed; check admission before committing.",
+      "Location is approximate.",
+      "2026-only event; no recurrence is assumed."
+    ]
+  },
+  "MO26-074": {
+    "canonicalId": "date-night-mo26-074-osage-beach-fall-festival",
+    "confidence": "good",
+    "details": [
+      "October 10, 2026, 11 a.m.–5 p.m.",
+      "Family festival with food/concessions, vendors, bounce houses, animal shelters/rescues and pie-eating contests.",
+      "The city event page does not state an admission price; check admission before committing.",
+      "Location is approximate."
+    ]
+  },
+  "MO26-084": {
+    "canonicalId": "date-night-mo26-084-mcwilliams",
+    "confidence": "good",
+    "details": [
+      "October 4–31, 2026: Tue–Fri 2–5 p.m.; Sat 10 a.m.–5 p.m.; Sun noon–5 p.m.; closed Mondays.",
+      "$7 weekdays / $15 weekends. Parties, tables/pavilions and bonfires have separate reservation requirements.",
+      "Partially wheelchair accessible; no smoking. Weather can affect seasonal operation.",
+      "Listed as Other Halloween / Fall for 2026; typical-season corn-maze/pumpkin activities are not presented as guaranteed current features.",
+      "Location is approximate."
+    ]
+  },
   "MO26-036": {
     "canonicalId": "date-night-mo26-036-monster-corn-maze",
     "confidence": "good",
