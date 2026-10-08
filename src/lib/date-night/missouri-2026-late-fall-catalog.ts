@@ -18,8 +18,8 @@ export const MISSOURI_2026_LATE_FALL_LISTINGS:
     seasonalAvailability: {
       status: "confirmed", activeFrom: "2026-09-11", activeUntil: "2026-11-08",
       checkedAt: "2026-10-08", revalidateAfter: "2026-10-14", timeZone: "America/Chicago",
-      openNowPolicy: "never", listingExpiresAt: "2026-11-09T06:00:00-06:00", seasonYear: 2026,
-      sourceUrls: [
+      openNowPolicy: "never", endsAt: "2026-11-08T18:00:00-06:00", listingExpiresAt: "2026-11-08T18:00:00-06:00", seasonYear: 2026,
+      sourceUrls: ["https://www.brookdalefarms.com/events-1/fall-festival-2026-brookdale-farms-2026-11-08-10-00",
         "https://www.brookdalefarms.com/fall-festival",
         "https://www.brookdalefarms.com/events-calendar"
       ],
@@ -34,8 +34,8 @@ export const MISSOURI_2026_LATE_FALL_LISTINGS:
         checkedAt: "2026-10-07", precisionLabel: "Approximate address-range placement; not an entrance or parking coordinate" },
       directionsTarget: { kind: "visitor-address", address: "8004 Twin Rivers Road, Eureka, MO 63025" },
       hours: { state: "partial", displayText: "2026 Fall Festival runs through Nov. 8. September/October calendar starts Wed–Sun at 10 a.m.; complete date-specific closing times are not established for every day." },
-      listingExpiresAt: "2026-11-09T06:00:00-06:00", expiryBasis: "date-only",
-      sourceUrls: [
+      listingExpiresAt: "2026-11-08T18:00:00-06:00", expiryBasis: "exact",
+      sourceUrls: ["https://www.brookdalefarms.com/events-1/fall-festival-2026-brookdale-farms-2026-11-08-10-00",
         "https://www.brookdalefarms.com/fall-festival",
         "https://www.brookdalefarms.com/events-calendar"
       ],

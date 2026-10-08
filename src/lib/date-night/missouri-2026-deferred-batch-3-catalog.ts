@@ -2,7 +2,7 @@ import type { DateNightPlace } from "./types";
 import { seasonalListingToPlace, type SeasonalListing } from "./listing";
 
 /** Five independently cleared 2026 deferred projections.
- * Verification: audit/missouri-deferred-seasonal-batch-3-independent-verification-2026-10-08.md
+ * Verification: audit/missouri-autonomous-active15-independent-verification-2026-10-08.md
  * Display schedules never become machine opening intervals; Open Now stays fail-closed. */
 export const MISSOURI_2026_DEFERRED_BATCH_3_LISTINGS:
   (Omit<DateNightPlace, "lat" | "lon"> & { seasonalListing: SeasonalListing })[] = [
@@ -19,7 +19,7 @@ export const MISSOURI_2026_DEFERRED_BATCH_3_LISTINGS:
       status: "confirmed", activeFrom: "2026-09-18", activeUntil: "2026-10-30",
       activeDates: ["2026-09-18","2026-09-19","2026-09-25","2026-09-26","2026-10-02","2026-10-03","2026-10-09","2026-10-10","2026-10-16","2026-10-17","2026-10-23","2026-10-24","2026-10-30"],
       checkedAt: "2026-10-08", revalidateAfter: "2026-10-14", timeZone: "America/Chicago",
-      openNowPolicy: "never", listingExpiresAt: "2026-10-31T06:00:00-05:00", seasonYear: 2026,
+      openNowPolicy: "never", listingExpiresAt: "2026-10-31T00:00:00-05:00", seasonYear: 2026,
       sourceUrls: ["https://www.monstercornmaze.com/","https://www.monstercornmaze.com/faq.htm"],
       note: "Reviewed display-only schedule; no machine opening intervals."
     },
@@ -31,7 +31,7 @@ export const MISSOURI_2026_DEFERRED_BATCH_3_LISTINGS:
         checkedAt: "2026-10-07", precisionLabel: "Approximate address-range interpolation; not an entrance or parking coordinate" },
       directionsTarget: { kind: "visitor-address", address: "711 State Route AM, Cabool, MO 65689" },
       hours: { state: "partial", displayText: "Fri/Sat: gates 6:30 p.m.; maze after dark; last tickets 11 p.m.; final close after the last guest exits." },
-      listingExpiresAt: "2026-10-31T06:00:00-05:00", expiryBasis: "date-only",
+      listingExpiresAt: "2026-10-31T00:00:00-05:00", expiryBasis: "date-only",
       sourceUrls: ["https://www.monstercornmaze.com/","https://www.monstercornmaze.com/faq.htm"],
       reviewRevision: "MO2026-deferred-batch3-verified-2026-10-08"
     },
@@ -57,7 +57,7 @@ export const MISSOURI_2026_DEFERRED_BATCH_3_LISTINGS:
       activeDates: ["2026-10-02","2026-10-03","2026-10-09","2026-10-10","2026-10-15","2026-10-16","2026-10-17","2026-10-22","2026-10-23","2026-10-24","2026-10-29","2026-10-30","2026-10-31"],
       checkedAt: "2026-10-08", revalidateAfter: "2026-10-14", timeZone: "America/Chicago",
       openNowPolicy: "never", listingExpiresAt: "2026-11-01T00:30:00-05:00", seasonYear: 2026,
-      sourceUrls: ["https://www.kcbeast.com/","https://www.kcbeast.com/faq","https://www.kcbeast.com/safety-security","https://www.visitkc.com/events/beast-haunted-attraction-2026/"],
+      sourceUrls: ["https://www.kcbeast.com/","https://www.kcbeast.com/faq","https://www.kcbeast.com/safety-security","https://www.visitkc.com/events/beast-haunted-attraction-2026/", "https://www.visitkc.com/events/beast-haunted-house/"],
       note: "Mandatory Central Waiver Station check-in precedes attraction entry."
     },
     seasonalListing: {
@@ -69,7 +69,7 @@ export const MISSOURI_2026_DEFERRED_BATCH_3_LISTINGS:
       directionsTarget: { kind: "visitor-address", address: "1300 W 13th St, Kansas City, MO 64102" },
       hours: { state: "verified", displayText: "Thu 7:30–11:30 p.m.; Fri 7:30 p.m.–midnight; Sat 6:30 p.m.–12:30 a.m. on listed 2026 nights." },
       listingExpiresAt: "2026-11-01T00:30:00-05:00", expiryBasis: "exact",
-      sourceUrls: ["https://www.kcbeast.com/","https://www.kcbeast.com/faq","https://www.kcbeast.com/safety-security","https://www.visitkc.com/events/beast-haunted-attraction-2026/"],
+      sourceUrls: ["https://www.kcbeast.com/","https://www.kcbeast.com/faq","https://www.kcbeast.com/safety-security","https://www.visitkc.com/events/beast-haunted-attraction-2026/", "https://www.visitkc.com/events/beast-haunted-house/"],
       reviewRevision: "MO2026-deferred-batch3-verified-2026-10-08"
     },
     seasonalVisitNotes: [
@@ -127,8 +127,8 @@ export const MISSOURI_2026_DEFERRED_BATCH_3_LISTINGS:
     seasonalAvailability: {
       status: "confirmed", activeFrom: "2026-10-16", activeUntil: "2026-10-17",
       activeDates: ["2026-10-16","2026-10-17"], checkedAt: "2026-10-08", revalidateAfter: "2026-10-14",
-      timeZone: "America/Chicago", openNowPolicy: "never", endsAt: "2026-10-17T19:00:00-05:00",
-      listingExpiresAt: "2026-10-17T19:00:00-05:00", seasonYear: 2026,
+      timeZone: "America/Chicago", openNowPolicy: "never",
+      listingExpiresAt: "2026-10-18T00:00:00-05:00", seasonYear: 2026,
       sourceUrls: ["https://mostateparks.com/event/pomme-de-terror-2026","https://mostateparks.com/park/pomme-de-terre-state-park"],
       note: "Activity-specific times only; do not infer continuous event opening."
     },
@@ -140,7 +140,7 @@ export const MISSOURI_2026_DEFERRED_BATCH_3_LISTINGS:
         precisionLabel: "Official Hermitage Area Campground event location" },
       directionsTarget: { kind: "verified-point", lat: 37.883074, lon: -93.303521, description: "Hermitage Area Campground event location" },
       hours: { state: "partial", displayText: "Oct. 16 naturalist program 7:30 p.m.; Oct. 17 activities run at separate times through trick-or-treating 5–7 p.m." },
-      listingExpiresAt: "2026-10-17T19:00:00-05:00", expiryBasis: "exact",
+      listingExpiresAt: "2026-10-18T00:00:00-05:00", expiryBasis: "date-only",
       sourceUrls: ["https://mostateparks.com/event/pomme-de-terror-2026","https://mostateparks.com/park/pomme-de-terre-state-park"],
       reviewRevision: "MO2026-deferred-batch3-verified-2026-10-08"
     },

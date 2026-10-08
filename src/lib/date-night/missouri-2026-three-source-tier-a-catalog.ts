@@ -2,7 +2,7 @@ import type { DateNightPlace } from "./types";
 import { seasonalListingToPlace, type SeasonalListing } from "./listing";
 
 /** Five runtime-ready Tier A records from the three-source Missouri delta sweep.
- * Factual verification: audit/missouri-three-source-tier-a-independent-verification-2026-10-08.md
+ * Factual verification: audit/missouri-autonomous-active15-independent-verification-2026-10-08.md
  * Hell Harvest remains factual PASS / runtime placement HOLD and is intentionally absent. */
 export const MISSOURI_2026_THREE_SOURCE_TIER_A_LISTINGS:
   (Omit<DateNightPlace, "lat" | "lon"> & { seasonalListing: SeasonalListing })[] = [
@@ -55,7 +55,7 @@ export const MISSOURI_2026_THREE_SOURCE_TIER_A_LISTINGS:
       status: "confirmed", activeFrom: "2026-10-02", activeUntil: "2026-11-13",
       activeDates: ["2026-10-02","2026-10-03","2026-10-04","2026-10-09","2026-10-10","2026-10-11","2026-10-16","2026-10-17","2026-10-18","2026-10-23","2026-10-24","2026-10-25","2026-10-26","2026-10-27","2026-10-28","2026-10-29","2026-10-30","2026-10-31","2026-11-01","2026-11-07","2026-11-13"],
       checkedAt: "2026-10-08", revalidateAfter: "2026-10-14", timeZone: "America/Chicago",
-      openNowPolicy: "never", listingExpiresAt: "2026-11-14T00:00:00-06:00", seasonYear: 2026,
+      openNowPolicy: "never", endsAt: "2026-11-13T22:00:00-06:00", listingExpiresAt: "2026-11-13T22:00:00-06:00", seasonYear: 2026,
       sourceUrls: ["https://www.creepyworld.com/","https://www.creepyworld.com/haunted-house-in-stlouis-missouri-creepyworld/?id=cms%2Foperations-dates","https://scarefest.fearticket.com/"],
       note: "Operator schedule contains overlapping time text; dates are source-supported but machine opening intervals remain disabled."
     },
@@ -68,7 +68,7 @@ export const MISSOURI_2026_THREE_SOURCE_TIER_A_LISTINGS:
         checkedAt: "2026-10-08", precisionLabel: "Approximate address-range placement; not an entrance or parking coordinate" },
       directionsTarget: { kind: "visitor-address", address: "1400 S Old Highway 141, Fenton, MO 63026" },
       hours: { state: "partial", displayText: "2026 operator calendar lists date-specific hours through Nov. 13; overlapping October time text is retained as schedule uncertainty." },
-      listingExpiresAt: "2026-11-14T00:00:00-06:00", expiryBasis: "date-only",
+      listingExpiresAt: "2026-11-13T22:00:00-06:00", expiryBasis: "exact",
       sourceUrls: ["https://www.creepyworld.com/","https://www.creepyworld.com/haunted-house-in-stlouis-missouri-creepyworld/?id=cms%2Foperations-dates","https://scarefest.fearticket.com/"],
       reviewRevision: "MO2026-three-source-tier-a-verified-2026-10-08"
     },
@@ -91,9 +91,9 @@ export const MISSOURI_2026_THREE_SOURCE_TIER_A_LISTINGS:
     activityTypes: ["haunted-house"], moodLevel: 3,
     seasonalAvailability: {
       status: "confirmed", activeFrom: "2026-09-19", activeUntil: "2026-11-13",
-      activeDates: ["2026-09-19","2026-09-25","2026-09-26","2026-10-02","2026-10-03","2026-10-04","2026-10-09","2026-10-10","2026-10-11","2026-10-16","2026-10-17","2026-10-18","2026-10-23","2026-10-24","2026-10-25","2026-10-26","2026-10-27","2026-10-28","2026-10-29","2026-10-30","2026-10-31","2026-11-01","2026-11-07","2026-11-13"],
+      activeDates: ["2026-09-19","2026-10-02","2026-10-03","2026-10-04","2026-10-09","2026-10-10","2026-10-11","2026-10-16","2026-10-17","2026-10-18","2026-10-23","2026-10-24","2026-10-25","2026-10-26","2026-10-27","2026-10-28","2026-10-29","2026-10-30","2026-10-31","2026-11-01","2026-11-07","2026-11-13"],
       checkedAt: "2026-10-08", revalidateAfter: "2026-10-14", timeZone: "America/Chicago",
-      openNowPolicy: "never", listingExpiresAt: "2026-11-14T00:00:00-06:00", seasonYear: 2026,
+      openNowPolicy: "never", endsAt: "2026-11-13T22:00:00-06:00", listingExpiresAt: "2026-11-13T22:00:00-06:00", seasonYear: 2026,
       sourceUrls: ["https://www.thedarkness.com/","https://www.thedarkness.com/dates-and-times-page","https://scarefest.fearticket.com/"],
       note: "Operator calendar contains overlapping Oct. 16–17 time text; no machine opening intervals."
     },
@@ -106,7 +106,7 @@ export const MISSOURI_2026_THREE_SOURCE_TIER_A_LISTINGS:
         checkedAt: "2026-10-08", precisionLabel: "Approximate address-range placement; not an entrance or parking coordinate" },
       directionsTarget: { kind: "visitor-address", address: "1525 South 8th Street, St. Louis, MO 63104" },
       hours: { state: "partial", displayText: "2026 operator calendar lists date-specific hours through Nov. 13; Oct. 16–17 contain conflicting start-time text, so check current hours." },
-      listingExpiresAt: "2026-11-14T00:00:00-06:00", expiryBasis: "date-only",
+      listingExpiresAt: "2026-11-13T22:00:00-06:00", expiryBasis: "exact",
       sourceUrls: ["https://www.thedarkness.com/","https://www.thedarkness.com/dates-and-times-page","https://scarefest.fearticket.com/"],
       reviewRevision: "MO2026-three-source-tier-a-verified-2026-10-08"
     },
@@ -128,10 +128,10 @@ export const MISSOURI_2026_THREE_SOURCE_TIER_A_LISTINGS:
     isChain: false, photoKey: "cafe", source: "catalog",
     activityTypes: ["other-halloween-fall"], moodLevel: 3,
     seasonalAvailability: {
-      status: "confirmed", activeFrom: "2026-09-19", activeUntil: "2026-10-31",
-      activeDates: ["2026-09-19","2026-10-03","2026-10-10","2026-10-16","2026-10-17","2026-10-23","2026-10-24","2026-10-30","2026-10-31"],
+      status: "confirmed", activeFrom: "2026-10-03", activeUntil: "2026-10-31",
+      activeDates: ["2026-10-03","2026-10-10","2026-10-16","2026-10-17","2026-10-23","2026-10-24","2026-10-30","2026-10-31"],
       checkedAt: "2026-10-08", revalidateAfter: "2026-10-14", timeZone: "America/Chicago",
-      openNowPolicy: "never", endsAt: "2026-10-31T23:59:59-05:00", listingExpiresAt: "2026-10-31T23:59:59-05:00", seasonYear: 2026,
+      openNowPolicy: "never", endsAt: "2026-11-01T00:00:00-05:00", listingExpiresAt: "2026-11-01T00:00:00-05:00", seasonYear: 2026,
       sourceUrls: ["https://visitpulaskicounty.org/calendar-of-events/","https://visitpulaskicounty.org/stories?rec_id=463","https://rubyslanding.com/"],
       note: "Only explicitly enumerated 2026 DMO dates are active; no recurrence inferred."
     },
@@ -143,12 +143,12 @@ export const MISSOURI_2026_THREE_SOURCE_TIER_A_LISTINGS:
         checkedAt: "2026-10-08", precisionLabel: "Approximate address-range placement; not an entrance or parking coordinate" },
       directionsTarget: { kind: "visitor-address", address: "22474 Restful Lane, Waynesville, MO 65583" },
       hours: { state: "verified", displayText: "3 p.m.–midnight on the explicitly listed 2026 dates." },
-      listingExpiresAt: "2026-10-31T23:59:59-05:00", expiryBasis: "exact",
+      listingExpiresAt: "2026-11-01T00:00:00-05:00", expiryBasis: "exact",
       sourceUrls: ["https://visitpulaskicounty.org/calendar-of-events/","https://visitpulaskicounty.org/stories?rec_id=463","https://rubyslanding.com/"],
       reviewRevision: "MO2026-three-source-tier-a-verified-2026-10-08"
     },
     seasonalVisitNotes: [
-      "Verified 2026 dates include September 19 and October 3, 10, 16–17, 23–24 and 30–31; 3 p.m.–midnight.",
+      "Verified 2026 dates include October 3, 10, 16–17, 23–24 and 30–31; 3 p.m.–midnight.",
       "Pulaski County tourism describes a hayride to a dark river float, followed by a haunted trail/forest/cemetery and a 26-room haunted house.",
       "Only explicitly listed dates are treated as active; no Friday/Saturday recurrence is inferred.",
       "Location is approximate; Directions use the supported resort address."
@@ -164,11 +164,11 @@ export const MISSOURI_2026_THREE_SOURCE_TIER_A_LISTINGS:
     isChain: false, photoKey: "cafe", source: "catalog",
     activityTypes: ["haunted-house","corn-maze"], moodLevel: 3,
     seasonalAvailability: {
-      status: "confirmed", activeFrom: "2026-10-09", activeUntil: "2026-10-24",
-      activeDates: ["2026-10-09","2026-10-10","2026-10-16","2026-10-17","2026-10-23","2026-10-24"],
+      status: "confirmed", activeFrom: "2026-10-09", activeUntil: "2026-10-31",
+      activeDates: ["2026-10-09","2026-10-10","2026-10-16","2026-10-17","2026-10-23","2026-10-24","2026-10-30","2026-10-31"],
       checkedAt: "2026-10-08", revalidateAfter: "2026-10-14", timeZone: "America/Chicago",
-      openNowPolicy: "never", endsAt: "2026-10-24T23:00:00-05:00", listingExpiresAt: "2026-10-24T23:00:00-05:00", seasonYear: 2026,
-      sourceUrls: ["https://www.explorewestplains.com/calendar/"],
+      openNowPolicy: "never", endsAt: "2026-10-31T23:00:00-05:00", listingExpiresAt: "2026-10-31T23:00:00-05:00", seasonYear: 2026,
+      sourceUrls: ["https://www.explorewestplains.com/calendar/", "https://www.explorewestplains.com/calendar/action~agenda/exact_date~10-23-2026/"],
       note: "Only explicitly observed 2026 DMO dates are active; prior price text is not promoted without fresh current binding."
     },
     seasonalListing: {
@@ -179,12 +179,12 @@ export const MISSOURI_2026_THREE_SOURCE_TIER_A_LISTINGS:
         checkedAt: "2026-10-08", precisionLabel: "Approximate address-range placement; not an entrance or parking coordinate" },
       directionsTarget: { kind: "visitor-address", address: "8518 County Road 7190, West Plains, MO 65775" },
       hours: { state: "verified", displayText: "7–11 p.m. on the explicitly observed 2026 dates." },
-      listingExpiresAt: "2026-10-24T23:00:00-05:00", expiryBasis: "exact",
-      sourceUrls: ["https://www.explorewestplains.com/calendar/"],
+      listingExpiresAt: "2026-10-31T23:00:00-05:00", expiryBasis: "exact",
+      sourceUrls: ["https://www.explorewestplains.com/calendar/", "https://www.explorewestplains.com/calendar/action~agenda/exact_date~10-23-2026/"],
       reviewRevision: "MO2026-three-source-tier-a-verified-2026-10-08"
     },
     seasonalVisitNotes: [
-      "Verified 2026 dates: October 9–10, 16–17 and 23–24, 7–11 p.m.",
+      "Verified 2026 dates: October 9–10, 16–17, 23–24 and 30–31, 7–11 p.m.",
       "Current DMO classification: Haunted Attraction & Corn Maze.",
       "Call 417-247-8281 or check the attraction’s current Facebook updates before going.",
       "Only explicitly observed 2026 dates are treated as active. Location is approximate."

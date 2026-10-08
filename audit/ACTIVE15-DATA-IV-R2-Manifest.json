@@ -1,0 +1,167 @@
+{
+  "revision": "ACTIVE15-DATA-IV-R2",
+  "reviewedAt": "2026-10-08T20:34:40.974Z",
+  "baseCandidate": "d876dbc12de47d5d40be0e9cc2116b30d9834089",
+  "baseTree": "a3369fa554f7e07ca1e39ac0ccdbdf4296f4895a",
+  "reviewBinding": "Exact five-file SHA256 content set; eventual commit must match these bytes. No commit-wide runtime PASS is implied.",
+  "files": [
+    "src/lib/date-night/missouri-2026-deferred-batch-3-catalog.ts",
+    "src/lib/date-night/missouri-2026-final-four-catalog.ts",
+    "src/lib/date-night/missouri-2026-late-fall-catalog.ts",
+    "src/lib/date-night/missouri-2026-three-source-tier-a-catalog.ts",
+    "src/lib/date-night/seasonal-presentation-catalog.ts"
+  ],
+  "hashes": [
+    {
+      "path": "src/lib/date-night/missouri-2026-deferred-batch-3-catalog.ts",
+      "sha256": "36df98c3fd2bd8ad08b6f6729cc3d8f38d1f9afeaf51dad2148d2d4acdb560f3"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-final-four-catalog.ts",
+      "sha256": "7ab28748dbd26df3993882fe82903f35c61db1a8830399e110af51c1fae92111"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-late-fall-catalog.ts",
+      "sha256": "c64b98a0d6ac8b5b2ba12974597ee93fa78123e29e1b71c21aafa43bd20297e3"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-three-source-tier-a-catalog.ts",
+      "sha256": "22860de6252f243e9504b0582ed028e19e96035fdc2a6b0ea61326883503e920"
+    },
+    {
+      "path": "src/lib/date-night/seasonal-presentation-catalog.ts",
+      "sha256": "69aa6cd3c41a6bc23a464f40c17b72e3eebe3a1c8232793815c2140b41cf7a5b"
+    }
+  ],
+  "projectionSha256": "4bcdaea567c18bd1080f7a681880bea45f2846fbfff5d5017f9f66dfece848be",
+  "recordDecisions": [
+    {
+      "recordId": "MO26-036",
+      "name": "Monster Corn Maze",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-10-31T00:00:00-05:00",
+      "expiryBasis": "date-only"
+    },
+    {
+      "recordId": "MO26-058",
+      "name": "Beast Haunted House",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-11-01T00:30:00-05:00",
+      "expiryBasis": "exact"
+    },
+    {
+      "recordId": "MO26-069",
+      "name": "Dead Factory Haunted House",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-10-31T23:00:00-05:00",
+      "expiryBasis": "exact"
+    },
+    {
+      "recordId": "MO26-071",
+      "name": "Pomme de Terre State Park — Pomme de Terror",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-10-18T00:00:00-05:00",
+      "expiryBasis": "date-only"
+    },
+    {
+      "recordId": "MO26-118",
+      "name": "Haunted Hall of Horror at A. C. Brase Arena",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-10-31T22:00:00-05:00",
+      "expiryBasis": "exact"
+    },
+    {
+      "recordId": "MO26-012",
+      "name": "Christine’s Vineyard — Witches Day Out",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-10-10T22:00:00-05:00",
+      "expiryBasis": "exact"
+    },
+    {
+      "recordId": "MO26-028",
+      "name": "Nevada/Vernon County Oktoberfest Fall Festival",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-10-10T14:00:00-05:00",
+      "expiryBasis": "exact"
+    },
+    {
+      "recordId": "MO26-074",
+      "name": "Osage Beach City Park Fall Festival",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-10-10T17:00:00-05:00",
+      "expiryBasis": "exact"
+    },
+    {
+      "recordId": "MO26-084",
+      "name": "McWilliams Pumpkin Patch",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-10-31T17:00:00-05:00",
+      "expiryBasis": "exact"
+    },
+    {
+      "recordId": "MO26-085",
+      "name": "Brookdale Farms Fall Festival",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-11-08T18:00:00-06:00",
+      "expiryBasis": "exact"
+    },
+    {
+      "recordId": "DELTA-EDGE-2026",
+      "name": "Edge of Hell Haunted Attraction",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-11-01T00:30:00-05:00",
+      "expiryBasis": "exact"
+    },
+    {
+      "recordId": "DELTA-CREEPYWORLD-2026",
+      "name": "Creepyworld",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-11-13T22:00:00-06:00",
+      "expiryBasis": "exact"
+    },
+    {
+      "recordId": "DELTA-DARKNESS-2026",
+      "name": "The Darkness",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-11-13T22:00:00-06:00",
+      "expiryBasis": "exact"
+    },
+    {
+      "recordId": "DELTA-HAUNTED-RIVER-2026",
+      "name": "The Haunted River Float at Ruby’s Landing River Resort",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-11-01T00:00:00-05:00",
+      "expiryBasis": "exact"
+    },
+    {
+      "recordId": "DELTA-FEAR-BLOODY-TIMBER-2026",
+      "name": "Fear the Bloody Timber Haunted Attraction & Corn Maze",
+      "decision": "PASS",
+      "placementReady": true,
+      "expiry": "2026-10-31T23:00:00-05:00",
+      "expiryBasis": "exact"
+    }
+  ],
+  "totals": {
+    "PASS": 15,
+    "HOLD": 0,
+    "REJECT": 0
+  },
+  "evidenceRecovery": "PARTIAL for missing historical reports; fresh independent current-field review is authoritative for these exact projections.",
+  "implementationVerification": "NOT PERFORMED BY DATA VERIFIER",
+  "releaseAuthority": "NONE"
+}

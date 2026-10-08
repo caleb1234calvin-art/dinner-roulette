@@ -9,8 +9,8 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "details": [
       "Listed nights October 2–31, 2026. Thu 7:30–11:30 p.m.; Fri 7:30 p.m.–midnight; Sat 6:30 p.m.–12:30 a.m.",
       "Required first stop: Central Waiver Station, 1300 W 13th St. Arrive one hour before scheduled entry.",
-      "Visit KC lists tickets from $40+. Check current ticket terms before committing.",
-      "Location is approximate; Directions intentionally lead to the waiver station first."
+      "Waiver/video verification and a security bracelet are required. Minors need a parent or guardian 18+ with valid ID to sign in person.",
+      "No weapons or costumes. Location is approximate; Directions intentionally lead to the waiver station first."
     ]
   },
   "DELTA-CREEPYWORLD-2026": {
@@ -20,8 +20,9 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
       "Current 2026 operator calendar lists dates through November 13; check date-specific hours before going.",
       "Thirteen attractions are advertised in one location, including haunted mazes and a haunted hayride.",
       "No refunds; tickets are transferable. Present tickets within 15 minutes of closing to guarantee entry.",
+      "Strobes and physically demanding terrain; check operator access restrictions before booking.",
       "Metal detectors and a no-weapons policy apply. Location is approximate.",
-      "This curated listing remains eligible after the Halloween layer ends because its verified season continues into November."
+      "Check the calendar for your chosen visit date."
     ]
   },
   "DELTA-DARKNESS-2026": {
@@ -29,19 +30,18 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "confidence": "good",
     "details": [
       "The 2026 operator calendar runs from September into November; November 13 is listed as the final unused-ticket night.",
-      "October 16–17 contain conflicting start-time text on the operator schedule; check current hours before going.",
+      "October 16–17 start time is unconfirmed; check before going.",
       "No refunds; tickets are transferable. Present tickets within 15 minutes of closing to guarantee entry.",
-      "No weapons; metal detection is used. Teen drop-offs require a parent available for pickup.",
-      "This curated listing remains eligible after the Halloween layer ends because its verified season continues into November."
+      "No weapons; metal detection is used. Teens need adult supervision or an immediate ride when exiting.",
+      "Check the calendar for your chosen visit date."
     ]
   },
   "DELTA-HAUNTED-RIVER-2026": {
     "canonicalId": "date-night-mo26-delta-haunted-river-float",
     "confidence": "high",
     "details": [
-      "Verified 2026 dates include September 19 and October 3, 10, 16–17, 23–24 and 30–31; 3 p.m.–midnight.",
-      "Pulaski County tourism describes a hayride, dark river float, haunted trail/forest/cemetery and a 26-room haunted house.",
-      "Only explicitly listed dates are treated as active; no Friday/Saturday recurrence is inferred.",
+      "Listed October 2026 dates: 3, 10, 16–17, 23–24 and 30–31; 3 p.m.–midnight.",
+      "Hayride, dark river float, haunted trail and 26-room haunted house.",
       "Location is approximate."
     ]
   },
@@ -49,10 +49,10 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "canonicalId": "date-night-mo26-delta-fear-bloody-timber",
     "confidence": "high",
     "details": [
-      "Verified 2026 dates: October 9–10, 16–17 and 23–24, 7–11 p.m.",
-      "Current DMO classification: Haunted Attraction & Corn Maze.",
+      "October 9–10, 16–17, 23–24 and 30–31, 2026, 7–11 p.m.",
+      "Haunted attraction and corn maze.",
       "Call 417-247-8281 or check the attraction’s current Facebook updates before going.",
-      "Only explicitly observed 2026 dates are treated as active. Location is approximate."
+      "Location is approximate."
     ]
   },
   "MO26-085": {
@@ -60,10 +60,9 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "confidence": "good",
     "details": [
       "Fall Festival runs September 11–November 8, 2026. Check the date-specific calendar because activities and closing times vary.",
-      "Current 2026 sources support both the corn maze and pumpkin patch; pumpkins are sold separately.",
-      "General admission pricing varies by day and ages; check the current ticket page before committing.",
-      "Activities may vary with date, weather and staffing. Location is approximate.",
-      "This curated listing remains eligible after the Halloween layer ends because its verified 2026 season continues through November 8."
+      "Corn maze and pumpkin patch; activities vary with date, weather and staffing.",
+      "Dogs require a waiver at check-in.",
+      "Location is approximate."
     ]
   },
   "MO26-012": {
@@ -72,7 +71,6 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "details": [
       "October 10, 2026, noon–10 p.m.",
       "Seasonal social event with local vendors, drinks and food.",
-      "Admission/ticket terms are not fully confirmed; check admission before committing.",
       "Location is approximate."
     ]
   },
@@ -81,9 +79,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "confidence": "good",
     "details": [
       "October 10, 2026, 9 a.m.–2 p.m. at the Vernon County Fairgrounds.",
-      "Admission terms are not confirmed; check admission before committing.",
-      "Location is approximate.",
-      "2026-only event; no recurrence is assumed."
+      "Location is approximate."
     ]
   },
   "MO26-074": {
@@ -92,7 +88,6 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "details": [
       "October 10, 2026, 11 a.m.–5 p.m.",
       "Family festival with food/concessions, vendors, bounce houses, animal shelters/rescues and pie-eating contests.",
-      "The city event page does not state an admission price; check admission before committing.",
       "Location is approximate."
     ]
   },
@@ -101,9 +96,9 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "confidence": "good",
     "details": [
       "October 4–31, 2026: Tue–Fri 2–5 p.m.; Sat 10 a.m.–5 p.m.; Sun noon–5 p.m.; closed Mondays.",
-      "$7 weekdays / $15 weekends. Parties, tables/pavilions and bonfires have separate reservation requirements.",
+      "Reserve tables/pavilions and bonfires in advance.",
       "Partially wheelchair accessible; no smoking. Weather can affect seasonal operation.",
-      "Listed as Other Halloween / Fall for 2026; typical-season corn-maze/pumpkin activities are not presented as guaranteed current features.",
+      "Check which seasonal activities are available on your visit date.",
       "Location is approximate."
     ]
   },
@@ -112,8 +107,9 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "confidence": "good",
     "details": [
       "Fridays and Saturdays, September 18–October 30, 2026. Gates open 6:30 p.m.; maze starts after dark; last tickets 11 p.m.; final exit time varies.",
-      "$20 general admission; $30 VIP timed reservation. Ages 13 and under require an adult at all times.",
+      "VIP entry requires a timed reservation. Ages 13 and under require an adult at all times.",
       "Maze is not handicap accessible. No pets, smoking, alcohol/illicit drugs, weapons, backpacks/purses or flashlights.",
+      "Rough terrain, stairs and flashing lights; no easy exit. Check accessibility and safety guidance.",
       "Weather may close the maze. Location is approximate; Directions use the operator's visitor address."
     ]
   },
@@ -123,7 +119,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "details": [
       "Listed nights October 2–31, 2026. Thu 7:30–11:30 p.m.; Fri 7:30 p.m.–midnight; Sat 6:30 p.m.–12:30 a.m.",
       "Required first stop: Central Waiver Station, 1300 W 13th St. Arrive at least one hour before timed entry.",
-      "Waiver/video verification and a security bracelet are required. Minors need an adult 18+ with valid ID to sign in person.",
+      "Waiver/video verification and a security bracelet are required. Minors need a parent or guardian 18+ with valid ID to sign in person.",
       "No weapons or costumes. Map placement is approximate and refers to the attraction; Directions lead to the waiver station first."
     ]
   },
@@ -132,7 +128,6 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "confidence": "high",
     "details": [
       "Fridays and Saturdays, September 25–October 31, 2026, 7–11 p.m.",
-      "$25 per person for all ages at the ticket booth; cash, credit and debit accepted. Operator states no added ticket taxes or fees.",
       "Children under 13 need an adult. Indoor waiting area; attraction runs rain or shine.",
       "Operator advertises free onsite parking. Map placement remains approximate."
     ]
@@ -142,8 +137,8 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "confidence": "high",
     "details": [
       "October 16–17, 2026 at the Hermitage Area Campground. Friday naturalist program starts 7:30 p.m.",
-      "Saturday activities run at separate times through trick-or-treating 5–7 p.m.; do not treat this as continuous opening.",
-      "Free and open to the public. Day-use visitors may join all activities except the campground decorating contest.",
+      "Saturday activities run at separate times, including trick-or-treating 5–7 p.m. Awards follow; final end time is unconfirmed.",
+      "Day-use visitors may join all activities except the campground decorating contest.",
       "Directions use the official Hermitage campground event point, not the Pittsburg-side park office."
     ]
   },
@@ -152,9 +147,8 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "confidence": "good",
     "details": [
       "October 9–10, 16–17, 23–24 and 30–31, 2026, 7–10 p.m.",
-      "$12 per person; current city page says ages 5 and under free. October 31 student night is $8 with valid student ID.",
-      "A 2026 secondary report says ages 4 and under free, so verify the child cutoff before purchase.",
-      "Children 12 and under require an adult. This is the A. C. Brase Arena event, not the separate S.T.A.R. Haunted Hall."
+      "October 31 student-night discount requires valid student ID. Check child admission terms before going.",
+      "Children 12 and under require an adult. Held at A. C. Brase Arena."
     ]
   },
   "MO26-019": {

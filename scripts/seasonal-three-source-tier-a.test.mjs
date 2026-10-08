@@ -57,10 +57,10 @@ test("all five remain never-OpenNow and 2026-only", () => {
 test("explicit-date subset records do not infer unverified recurrence", () => {
   const river = MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG.find((p) => p.name.includes("Haunted River Float"));
   assert.deepEqual(river.seasonalAvailability.activeDates,
-    ["2026-09-19","2026-10-03","2026-10-10","2026-10-16","2026-10-17","2026-10-23","2026-10-24","2026-10-30","2026-10-31"]);
+    ["2026-10-03","2026-10-10","2026-10-16","2026-10-17","2026-10-23","2026-10-24","2026-10-30","2026-10-31"]);
   const timber = MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG.find((p) => p.name.startsWith("Fear the Bloody Timber"));
   assert.deepEqual(timber.seasonalAvailability.activeDates,
-    ["2026-10-09","2026-10-10","2026-10-16","2026-10-17","2026-10-23","2026-10-24"]);
+    ["2026-10-09","2026-10-10","2026-10-16","2026-10-17","2026-10-23","2026-10-24","2026-10-30","2026-10-31"]);
 });
 
 test("Open Now excludes all Tier A curated records", () => {

@@ -39,12 +39,12 @@ test("all final-four records use Other only and fail closed for Open Now", () =>
   }
 });
 
-test("uncertain admission and McWilliams category limits remain explicit", () => {
-  assert.match(SEASONAL_PRESENTATIONS["MO26-012"].details.join(" "), /not fully confirmed/i);
-  assert.match(SEASONAL_PRESENTATIONS["MO26-028"].details.join(" "), /not confirmed/i);
-  assert.match(SEASONAL_PRESENTATIONS["MO26-074"].details.join(" "), /does not state an admission price/i);
-  assert.match(SEASONAL_PRESENTATIONS["MO26-084"].details.join(" "), /Other Halloween \/ Fall/i);
-  assert.match(SEASONAL_PRESENTATIONS["MO26-084"].details.join(" "), /not presented as guaranteed current features/i);
+test("consumer details omit routine admission research while preserving access restrictions", () => {
+  for (const id of expected) assert.doesNotMatch(SEASONAL_PRESENTATIONS[id].details.join(" "), /\$\s*\d|admission terms|admission price|recurrence|typical-season/i);
+  const details = SEASONAL_PRESENTATIONS["MO26-084"].details.join(" ");
+  assert.match(details, /Reserve tables\/pavilions and bonfires/);
+  assert.match(details, /Partially wheelchair accessible; no smoking/);
+  assert.match(details, /Check which seasonal activities/);
 });
 
 test("short-lived October 10 records expire at their sourced event ends", () => {

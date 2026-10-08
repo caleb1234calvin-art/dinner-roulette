@@ -1,0 +1,68 @@
+{
+  "revision": "ACTIVE15-DATA-IV-R1",
+  "reviewedAt": "2026-10-08T20:31:25.040777+00:00",
+  "inputCandidate": "d876dbc12de47d5d40be0e9cc2116b30d9834089",
+  "inputTree": "a3369fa554f7e07ca1e39ac0ccdbdf4296f4895a",
+  "baselineMain": "213502ef8cf3f67d75e6d9c9c8ff43f9f656890c",
+  "baselineProduction": "dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv READY",
+  "sourceEvidenceRecovery": "PARTIAL historical missing reports not recovered; fresh independent review replaces only claims actually rechecked",
+  "factualCoreIdentitySeasonAddressCategory": {
+    "PASS": 15,
+    "HOLD": 0,
+    "REJECT": 0
+  },
+  "placement": {
+    "PASS": 15,
+    "scope": "14 freshly reviewed address geocodes;1 explicit official Hermitage event point; not surveyed arrival"
+  },
+  "exactProjectionVerdict": "HOLD pending bounded factual lifecycle/copy corrections and immutable re-read",
+  "findings": [
+    {
+      "id": "D01",
+      "records": "MO26-085",
+      "correction": "Known final operator event Nov8 10\u201318 CST replaces unknown final close; set endsAt and both expiry values2026-11-08T18:00:00-06:00 exact. Preserve dog check-in waiver."
+    },
+    {
+      "id": "D02",
+      "records": "DELTA-CREEPYWORLD-2026 / DELTA-DARKNESS-2026",
+      "correction": "Known final Nov13 19\u201322 CST on each official schedule; set endsAt/expiry2026-11-13T22:00:00-06:00 exact. Preserve partial other hours and neverOpenNow."
+    },
+    {
+      "id": "D03",
+      "records": "MO26-036",
+      "correction": "Restore approved date-only cutoff2026-10-31T00:00:00-05:00; no unsupported06grace. Final exit unknown."
+    },
+    {
+      "id": "D04",
+      "records": "MO26-071",
+      "correction": "Trick-or-treat ends19 but awards follow; no exact final end known. Restore date-only expiry2026-10-18T00:00:00-05:00, remove endsAt19."
+    },
+    {
+      "id": "D05",
+      "records": "DELTA-HAUNTED-RIVER-2026",
+      "correction": "Midnight is Nov1T00:00:00-05:00 not Oct31T23:59:59. Unsupported historicalSep19 must be omitted absent retained dated evidence."
+    },
+    {
+      "id": "D06",
+      "records": "DELTA-FEAR-BLOODY-TIMBER-2026",
+      "correction": "Fresh paginated official calendar also listsOct30/31 19\u201323; extend explicit dates and finalexpiryOct31T23:00-05."
+    },
+    {
+      "id": "D07",
+      "records": "ALL15",
+      "correction": "Remove routineprices/processcopy; preserve attendance restrictions and uncertainty. Beast/Edge parentguardian18ID, Edge weaponscostumes; McWilliams only amenities reservations; HauntedHall discountID not generaladmissionID; Monsterterrainaccess; Brookdaledogwaiver."
+    },
+    {
+      "id": "D08",
+      "records": "MO26-058",
+      "correction": "Bind full13night/hours sourcehttps://www.visitkc.com/events/beast-haunted-house/; current referenced alternative does not show allhours."
+    },
+    {
+      "id": "D09",
+      "records": "DELTA-DARKNESS-2026",
+      "correction": "September25/26 not substantiated in fresh decisive pages; remove pastdates unless retained specific evidence supplied. September19 homepage supported."
+    }
+  ],
+  "noImplementationVerification": true,
+  "noReleaseApproval": true
+}

@@ -63,10 +63,11 @@ test("all five have explicit reviewed presentation and material warnings", () =>
     const presentation = SEASONAL_PRESENTATIONS[record];
     assert.ok(presentation, record);
     assert.equal(presentation.canonicalId, place.id);
-    assert.ok(presentation.details.length >= 4, record);
+    assert.ok(presentation.details.length >= 3, record);
+    assert.doesNotMatch(presentation.details.join(" "), /\$\s*\d|retention|curated listing/i);
   }
   assert.match(SEASONAL_PRESENTATIONS["MO26-058"].details.join(" "), /Waiver Station/);
-  assert.match(SEASONAL_PRESENTATIONS["MO26-118"].details.join(" "), /ages 4 and under/i);
+  assert.match(SEASONAL_PRESENTATIONS["MO26-118"].details.join(" "), /Children 12 and under require an adult/i);
 });
 
 test("Open Now excludes every new curated record while ordinary browse retains active-season records", () => {

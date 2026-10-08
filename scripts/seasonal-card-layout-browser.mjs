@@ -21,6 +21,10 @@ const rows = [
   ...pure("src/lib/date-night/missouri-2026-cleared-catalog.ts").MISSOURI_2026_CLEARED_SEASONAL_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-v1-catalog.ts").MISSOURI_2026_V1_SEASONAL_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-v1-next-catalog.ts").MISSOURI_2026_V1_NEXT_SEASONAL_CATALOG,
+  ...pure("src/lib/date-night/missouri-2026-three-source-tier-a-catalog.ts").MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG,
+  ...pure("src/lib/date-night/missouri-2026-late-fall-catalog.ts").MISSOURI_2026_LATE_FALL_CATALOG,
+  ...pure("src/lib/date-night/missouri-2026-final-four-catalog.ts").MISSOURI_2026_FINAL_FOUR_CATALOG,
+  ...pure("src/lib/date-night/missouri-2026-deferred-batch-3-catalog.ts").MISSOURI_2026_DEFERRED_BATCH_3_CATALOG,
 ];
 const cssDir = ".vercel/output/static/assets";
 const css = fs.readdirSync(cssDir).filter(p => p.endsWith(".css")).map(p => fs.readFileSync(path.join(cssDir, p), "utf8")).join("\n");
@@ -78,7 +82,7 @@ try {
   browser = await chromium.launch({ headless: true });
   for (const width of [320, 390, 512]) {
     for (const row of rows) {
-    for (const kind of ["options", "result", ...(row.activityTypes.includes("haunted-house") ? ["plan"] : [])]) {
+    for (const kind of ["options", "result", "plan"]) {
       const context = await browser.newContext({ viewport: { width, height: 844 }, reducedMotion: "reduce" });
       const page = await context.newPage();
       const measured = {};
@@ -88,7 +92,6 @@ try {
         const render = renderer(variant !== "after" && !variant.startsWith("current-"));
         const item = ["ordinary", "standard", "current-standard", "current-ordinary"].includes(variant) ? ordinary(row) : decorate(row);
         if (variant.endsWith("standard")) { item.name = "Ordinary park"; item.activityTypes = ["park"]; }
-        if (kind === "plan") item.activityTypes = ["haunted-house"];
         await page.setContent(`<html class="dark"><head><style>${css}</style></head><body>${render(kind, [item, { ...ordinary(row), id: "second-control", name: "Ordinary park", activityTypes: ["park"] }])}</body></html>`);
         await page.locator("img").evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
         const card = kind === "result" ? page.locator(".result-in") : page.locator("article").first();

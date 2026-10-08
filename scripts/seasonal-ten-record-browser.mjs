@@ -8,7 +8,8 @@ import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 assert.equal(process.env.CI, "true");
 const proof = assertBrowserBuild();
-const output = resolve("audit/browser-results/seasonal-ten-record");
+const cumulative = process.env.SEASONAL_CUMULATIVE === "true";
+const output = resolve(`audit/browser-results/${cumulative ? "seasonal-cumulative-15" : "seasonal-ten-record"}`);
 await mkdir(output, { recursive: true });
 const control = resolve(output, "control.json"), events = resolve(output, "events.jsonl");
 const origin = "http://127.0.0.1:8099", defaultAt = "2026-10-07T18:00:00Z";
@@ -29,7 +30,20 @@ server.stdout.on("data", d => { logs += d; });
 server.stderr.on("data", d => { logs += d; });
 const verdict = { passed: false, proof, publicProviderCalls: 0, scenarios: [], errors: [] };
 const load = appModuleLoader();
-const { MISSOURI_2026_V1_NEXT_SEASONAL_CATALOG: rows } = load("src/lib/date-night/missouri-2026-v1-next-catalog.ts");
+const { MISSOURI_2026_V1_NEXT_SEASONAL_CATALOG: priorTen } = load("src/lib/date-night/missouri-2026-v1-next-catalog.ts");
+const addedRows = [
+  ...load("src/lib/date-night/missouri-2026-deferred-batch-3-catalog.ts").MISSOURI_2026_DEFERRED_BATCH_3_CATALOG,
+  ...load("src/lib/date-night/missouri-2026-final-four-catalog.ts").MISSOURI_2026_FINAL_FOUR_CATALOG,
+  ...load("src/lib/date-night/missouri-2026-late-fall-catalog.ts").MISSOURI_2026_LATE_FALL_CATALOG,
+  ...load("src/lib/date-night/missouri-2026-three-source-tier-a-catalog.ts").MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG,
+];
+const rows = cumulative ? addedRows : priorTen;
+const destinationFor = row => {
+  const target = row.seasonalListing.directionsTarget;
+  return target.kind === "verified-point" ? `${target.lat},${target.lon}` : target.address;
+};
+const isApproximate = row => row.seasonalListing.placement.basis !== "verified-arrival";
+const assertPrecision = (text, row) => isApproximate(row) ? assert.match(text, /Approx\./) : assert.doesNotMatch(text, /Approx\./);
 const { seasonalPresentation, SEASONAL_VISITOR_NOTICE, SEASONAL_CONFIDENCE_LABELS } = appModuleLoader()("src/lib/date-night/seasonal-presentation.ts");
 const forbiddenConsumerCopy = /\$\s*\d|\bUSD\b|priced by weight|ticket fee|checkout total|audit|provenance|retention|Census|reviewRevision|survey-grade|periodic review|Schedule checked|listingExpiresAt|ListingCompletenessV1|machine opening|\b20\d{2}-\d{2}-\d{2}\b/i;
 const assertConsumerOnly = async (scope, row) => {
@@ -120,7 +134,7 @@ async function inspectQualifiedOverlay(test, row, kind) {
   const { page, result, state } = test;
   const overlay = overlayRoot(page, kind);
   await inspectIcons(test, kind, kind);
-  assert.match(await (kind === "options" ? rowCard(page, row) : overlay).innerText(), /Approx\./);
+  assertPrecision(await (kind === "options" ? rowCard(page, row) : overlay).innerText(), row);
   const scope = kind === "options" ? rowCard(page, row) : overlay;
   const section = scope.locator("[data-seasonal-visit-notes]");
   assert.equal(await section.locator(":scope > p").count(), 1, "Exactly one compact notice");
@@ -165,7 +179,7 @@ async function inspectQualifiedOverlay(test, row, kind) {
     ["Close options", overlay.getByRole("button", { name: "Close options", exact: true })],
   ] : [
     ["Directions", overlay.getByRole("link", { name: /Directions · Google Maps/ })],
-    ["Website", overlay.getByRole("link", { name: /Website & info/ })],
+    ...(row.website ? [["Website", overlay.getByRole("link", { name: /Website & info/ })]] : []),
     ...(row.phone ? [["Call venue", overlay.getByRole("link", { name: "Call venue", exact: true })]] : []),
     ["Close result", overlay.getByRole("button", { name: "Close result", exact: true })],
   ];
@@ -182,7 +196,7 @@ async function inspectQualifiedOverlay(test, row, kind) {
   }
   if (kind === "result") {
     const href = await overlay.getByRole("link", { name: /Directions · Google Maps/ }).getAttribute("href");
-    assert.equal(new URL(href).searchParams.get("destination"), row.seasonalListing.visitorAddress);
+    assert.equal(new URL(href).searchParams.get("destination"), destinationFor(row));
     const uber = overlay.getByRole("link", { name: "Open Uber; choose your destination in the external service", exact: true });
     assert.equal(await uber.getAttribute("href"), "https://m.uber.com/");
     reachability.navigation = { directions: href, uber: await uber.getAttribute("href") };
@@ -287,7 +301,7 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
 
 // These assertions intentionally use visitor facts independently of the exact
 // copy projection: matching a changed registry alone cannot erase a restriction.
-const materialFacts = {
+const priorFacts = {
   "MO26-019": [/October 31/, /1–5 p\.m\./, /infants through fifth grade/, /kid-friendly costumes/],
   "MO26-031": [/selected park days/i, /5:30 p\.m\./, /ticket.*passport/i, /No guest costumes/, /Indian Point Road/, /tram or bus/],
   "MO26-034": [/October 17/, /lantern hikes 7–8 p\.m\./, /picnic shelter/, /cancel(?:ed|led) or postponed/],
@@ -303,13 +317,32 @@ const expectedConfidence = {
   "MO26-019": "high", "MO26-031": "good", "MO26-034": "high", "MO26-054": "high", "MO26-067": "good",
   "MO26-100": "good", "MO26-114": "good", "MO26-115": "high", "MO26-124": "good", "MO26-125": "good",
 };
+const newFacts = {
+  "MO26-036": [/Gates open 6:30/, /after dark/, /last tickets 11/, /13 and under.*adult/, /not handicap accessible/, /No pets/],
+  "MO26-058": [/Central Waiver Station/, /1300 W 13th/, /one hour/, /Minors need a parent or guardian 18\+/, /No weapons or costumes/],
+  "MO26-069": [/September 25–October 31/, /7–11 p.m./, /under 13.*adult/, /rain or shine/],
+  "MO26-071": [/Hermitage/, /October 16–17/, /7:30 p.m./, /5–7 p.m./, /except.*decorating contest/],
+  "MO26-118": [/October 9–10/, /7–10 p.m./, /student.*valid student ID/, /12 and under.*adult/, /A. C. Brase/],
+  "MO26-012": [/October 10/, /noon–10 p.m./],
+  "MO26-028": [/October 10/, /9 a.m.–2 p.m./, /Vernon County Fairgrounds/],
+  "MO26-074": [/October 10/, /11 a.m.–5 p.m./],
+  "MO26-084": [/October 4–31/, /closed Mondays/, /Reserve tables\/pavilions and bonfires/, /Partially wheelchair accessible/, /no smoking/],
+  "MO26-085": [/November 8/, /corn maze and pumpkin patch/i, /date, weather and staffing/],
+  "DELTA-EDGE-2026": [/Central Waiver Station/, /1300 W 13th/, /one hour/],
+  "DELTA-CREEPYWORLD-2026": [/November 13/, /15 minutes of closing/, /no-weapons/],
+  "DELTA-DARKNESS-2026": [/November 13/, /October 16–17/, /15 minutes of closing/, /Teens need adult supervision or an immediate ride/],
+  "DELTA-HAUNTED-RIVER-2026": [/October 2026 dates: 3, 10, 16–17, 23–24 and 30–31/, /3 p.m.–midnight/, /river float/],
+  "DELTA-FEAR-BLOODY-TIMBER-2026": [/October 9–10, 16–17, 23–24 and 30–31/, /7–11 p.m./, /corn maze/],
+};
+const materialFacts = cumulative ? newFacts : priorFacts;
+const newConfidence = { "MO26-036": "good", "MO26-058": "high", "MO26-069": "high", "MO26-071": "high", "MO26-118": "good", "MO26-012": "good", "MO26-028": "good", "MO26-074": "good", "MO26-084": "good", "MO26-085": "good", "DELTA-EDGE-2026": "high", "DELTA-CREEPYWORLD-2026": "good", "DELTA-DARKNESS-2026": "good", "DELTA-HAUNTED-RIVER-2026": "high", "DELTA-FEAR-BLOODY-TIMBER-2026": "high" };
 const oldRows = [
   ...load("src/lib/date-night/missouri-2026-cleared-catalog.ts").MISSOURI_2026_CLEARED_SEASONAL_CATALOG,
   ...load("src/lib/date-night/missouri-2026-v1-catalog.ts").MISSOURI_2026_V1_SEASONAL_CATALOG,
 ];
 const ordinaryRows = load("src/lib/date-night/jasper-county-catalog.ts").JASPER_COUNTY_DATE_NIGHT_CATALOG;
 const anchors = load("src/lib/date-night/seasonal-catalog.ts").JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG;
-const catalog = [...ordinaryRows, ...anchors, ...oldRows, ...rows];
+const catalog = [...ordinaryRows, ...anchors, ...oldRows, ...priorTen, ...addedRows];
 const { haversineMiles } = load("src/lib/restaurants/geo.ts");
 const { getOpenStatus } = load("src/lib/restaurants/hours.ts");
 const { getDateNightAvailability } = load("src/lib/date-night/availability.ts");
@@ -321,7 +354,7 @@ const seasonalTypes = new Set(["other-halloween-fall", "corn-maze", "pumpkin-pat
 // the app's documented 0.05-mile boundary tolerance; it is not a record count.
 const nearby = (row, { at = defaultAt, category, season = true, open = false, offset = 0 } = {}) => catalog.filter(other => {
   if (haversineMiles(row.lat + offset, row.lon, other.lat, other.lon) > 1.05) return false;
-  if (!season && (other.seasonalListing || other.activityTypes.every(type => seasonalTypes.has(type)))) return false;
+  if (!season && other.seasonalListing?.visibility !== "listing-lifecycle" && (other.seasonalListing || other.activityTypes.every(type => seasonalTypes.has(type)))) return false;
   if (category && !other.activityTypes.some(type => category.includes(type))) return false;
   const now = new Date(at), availability = getDateNightAvailability({ ...other, ...getOpenStatus(other.openingHours, now) }, now);
   return availability.browseEligible && (!open || availability.openNowEligible);
@@ -354,12 +387,12 @@ const inspectSaved = async (test, row, label, ended = false) => {
   const { page, result, state } = test, item = savedItem(page, row);
   await item.waitFor(); assert.equal(await item.count(), 1);
   const text = await item.innerText();
-  assert.match(text, /Approx\./); assert.ok(text.includes(row.address));
+  assertPrecision(text, row); assert.ok(text.includes(row.address));
   if (ended) assert.match(text, /Season ended/);
   await assertConsumerOnly(item, row);
   const link = item.getByRole("link", { name: "Directions", exact: true });
   const href = await link.getAttribute("href");
-  assert.equal(new URL(href).searchParams.get("destination"), row.address);
+  assert.equal(new URL(href).searchParams.get("destination"), destinationFor(row));
   await link.click({ trial: true });
   assert.equal(await item.locator("img").evaluate(async img => { await img.decode(); return img.naturalWidth > 0 && img.naturalHeight > 0; }), true);
   result.evidence.saved ??= []; result.evidence.saved.push({ label, text, href });
@@ -372,11 +405,11 @@ try {
   browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
     args: ["--no-sandbox", "--disable-dev-shm-usage"] });
   assert.deepEqual(rows.map(row => row.seasonalListing.recordId).sort(), Object.keys(materialFacts).sort(), "Exactly the independently cleared ten-record batch");
-  assert.equal(new Set(rows.map(row => row.id)).size, 10);
+  assert.equal(new Set(rows.map(row => row.id)).size, cumulative ? 15 : 10);
   for (const row of rows) {
-    assert.equal(seasonalPresentation(row).confidence, expectedConfidence[row.seasonalListing.recordId]);
+    assert.equal(seasonalPresentation(row).confidence, (cumulative ? newConfidence : expectedConfidence)[row.seasonalListing.recordId]);
     assert.equal(row.openingHours, null); assert.equal(row.seasonalAvailability.openNowPolicy, "never");
-    assert.equal(row.seasonalListing.directionsTarget.kind, "visitor-address");
+    assert.ok(["visitor-address", "verified-point"].includes(row.seasonalListing.directionsTarget.kind));
     assert.ok(nearby(row).length <= 3, "The scoped neighborhood must fit in the real four-card shortlist with one ordinary fixture");
   }
   for (const [index, row] of rows.entries()) {
@@ -431,14 +464,15 @@ try {
         const { page } = test;
         await activityCount(page, expected.length);
         assert.equal(await pickButton(page).isDisabled(), expected.length === 0);
-        assert.ok(!expected.some(candidate => candidate.id === row.id), "The target is ineligible in each policy-negative scenario");
+        const targetEligible = scenario === "season-off" && row.seasonalListing.visibility === "listing-lifecycle";
+        assert.equal(expected.some(candidate => candidate.id === row.id), targetEligible, "Only explicit lifecycle listings survive seasonal switch-off");
         if (expected.length) {
           await optionsButton(page).click();
-          assert.equal(await rowHeading(page, row).count(), 0, "Ineligible target cannot appear beside valid ordinary or other seasonal places");
+          assert.equal(await rowHeading(page, row).count(), targetEligible ? 1 : 0, "Policy eligibility controls rendered target");
           await closeOptions(page);
         }
         await settleLocal(test); assert.equal(test.rpc.length, 1);
-        if (scenario === "season-off") assert.ok(!test.rpc[0].response.includes(row.id), "Season-off RPC excludes new curated identities");
+        if (scenario === "season-off") assert.equal(test.rpc[0].response.includes(row.id), targetEligible, "Season-off RPC preserves only explicitly lifecycle-visible identities");
       }, { at });
     }
     await runScenario(row, index, "mixed-alias-toggle-cache", async test => {
@@ -463,15 +497,17 @@ try {
       const season = page.getByRole("switch", { name: "Spooky Season", exact: true });
       await press(season, "Space");
       await waitFor(async () => test.rpc.length === before + 1 && test.rpc.at(-1).response, "Season-off RPC missing");
-      await ready(page); await activityCount(page, ordinary + 2);
-      assert.ok(!test.rpc.at(-1).response.includes(row.id)); assert.ok(!test.rpc.at(-1).response.includes("seasonalListing"));
+      const lifecycle = row.seasonalListing.visibility === "listing-lifecycle";
+      await ready(page); await activityCount(page, ordinary + (lifecycle ? 1 : 2));
+      assert.equal(test.rpc.at(-1).response.includes(row.id), lifecycle);
+      if (!lifecycle) assert.ok(!test.rpc.at(-1).response.includes("seasonalListing"));
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
-      assert.equal(await rowCard(page, row).locator("[data-seasonal-visit-notes]").count(), 0);
+      assert.equal(await rowCard(page, row).locator("[data-seasonal-visit-notes]").count(), lifecycle ? 1 : 0);
       // Inspect category badges, not the legitimate venue title (which may contain "Corn Maze").
       const offCard = rowCard(page, row);
       assert.equal(await rowHeading(page, row).innerText(), row.name);
-      assert.deepEqual((await offCard.locator("span.uppercase").allTextContents()).map(text => text.trim().toLowerCase()), ["park"]);
-      assert.equal(await offCard.locator("[data-seasonal-confidence]").count(), 0);
+      if (!lifecycle) assert.deepEqual((await offCard.locator("span.uppercase").allTextContents()).map(text => text.trim().toLowerCase()), ["park"]);
+      assert.equal(await offCard.locator("[data-seasonal-confidence]").count(), lifecycle ? 1 : 0);
       await closeOptions(page); const afterOff = test.rpc.length;
       await press(season, "Space"); await activityCount(page, n + 1);
       await assertNoRpc(test, afterOff, "Season-on restores its isolated superset");
@@ -504,7 +540,7 @@ try {
         await assertNoRpc(test, before, "Final expiry recomputes cached eligibility without provider traffic");
         await optionsButton(page).click(); await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
         assert.equal(await rowHeading(page, row).count(), 0); await closeOptions(page);
-        await advance(test, "2027-10-07T18:00:00Z"); await activityCount(page, ordinary + 1);
+        await advance(test, "2027-10-07T18:00:00Z"); await activityCount(page, nearby(row, { at: "2027-10-07T18:00:00Z", season: false }).length + 1);
         await assertNoRpc(test, before, "Cached identity cannot roll forward into 2027");
         result.evidence.expiry = { expiresAt, basis: row.seasonalListing.expiryBasis, rpcDelta: test.rpc.length - before };
       }, { fixture: "mixed", at: beforeAt });
@@ -515,7 +551,7 @@ try {
       assert.match(test.rpc[0].response, /fallback/); assert.ok(test.rpc[0].response.includes(row.id));
       await optionsButton(page).click(); await selectTarget(page, row);
       const href = await page.getByRole("link", { name: /Directions · Google Maps/ }).getAttribute("href");
-      assert.equal(new URL(href).searchParams.get("destination"), row.address);
+      assert.equal(new URL(href).searchParams.get("destination"), destinationFor(row));
       assert.equal(await page.getByRole("link", { name: "Open Uber; choose your destination in the external service", exact: true }).getAttribute("href"), "https://m.uber.com/");
       await closeResult(page); await press(page.getByRole("switch", { name: "Open now only", exact: true }), "Space");
       await activityCount(page, openOrdinary);
@@ -602,6 +638,37 @@ try {
       [node]: preference(row, node, { favorite: true, ourRating: 4 }), [way]: preference(row, way, { favorite: true }),
     } });
   }
+  if (cumulative) for (const [index, row] of rows.filter(row => row.seasonalListing.visibility === "listing-lifecycle").entries()) {
+    const at = "2026-11-05T12:00:00-06:00";
+    await runScenario(row, `late-${index}`, "late-fall-anything-cache-expiry", async test => {
+      const { page, result, state } = test;
+      const count = nearby(row, { at, season: false }).length;
+      await activityCount(page, count);
+      for (const label of ["Haunted House", "Corn Maze", "Pumpkin Patch", "Other Halloween / Fall"]) {
+        assert.equal(await page.getByRole("button", { name: label, exact: true }).count(), 0, "Halloween chips remain absent after November 2");
+      }
+      await optionsButton(page).click(); await rowHeading(page, row).waitFor();
+      await inspectQualifiedOverlay(test, row, "options"); await selectTarget(page, row);
+      await inspectQualifiedOverlay(test, row, "result");
+      await page.getByRole("button", { name: "Save", exact: true }).click(); await closeResult(page);
+      const before = test.rpc.length;
+      const open = page.getByRole("switch", { name: "Open now only", exact: true });
+      await press(open, "Space"); await activityCount(page, nearby(row, { at, season: false, open: true }).length);
+      await press(open, "Space"); await activityCount(page, count);
+      await assertNoRpc(test, before, "Late-fall Open Now remains a local fail-closed filter");
+      await optionsButton(page).click(); await rowHeading(page, row).waitFor();
+      await advance(test, row.seasonalListing.listingExpiresAt);
+      await rowHeading(page, row).waitFor({ state: "hidden" }); await closeOptions(page);
+      await activityCount(page, nearby(row, { at: row.seasonalListing.listingExpiresAt, season: false }).length);
+      await visitNav(page, "Favorites", "/favorites"); await inspectSaved(test, row, "late-expired-favorite", true);
+      await advance(test, "2027-11-05T12:00:00-05:00");
+      await visitNav(page, "Pick", "/"); await ready(page);
+      await activityCount(page, nearby(row, { at: "2027-11-05T12:00:00-05:00", season: false }).length);
+      const calls = (await readFile(events, "utf8")).split("\n").filter(Boolean).map(JSON.parse).filter(event => event.scenario === state.scenario);
+      assert.ok(calls.every(event => event.group !== "seasonal"), "Late-fall curated visibility never starts positive seasonal provider discovery");
+      result.evidence.lateFall = { at, expiry: row.seasonalListing.listingExpiresAt, providerCalls: calls };
+    }, { at });
+  }
   // These receipts were written against the seven already-shipped reviews.
   // Keep their literal old revisions: deriving from new rows would miss an
   // accidental data-review revision bump caused solely by presentation copy.
@@ -626,7 +693,7 @@ try {
     }, { pathname: "/favorites", preferences: { [providerId]: preference(row, providerId, { favorite: true, ourRating: 4 }) },
       identityReceipts: { [providerId]: { canonicalId: row.id, canonicalName: row.name, reviewRevision: oldRevision(row) } } });
   }
-  assert.equal(verdict.scenarios.length, rows.length * 15 + oldRows.length);
+  assert.equal(verdict.scenarios.length, rows.length * 15 + oldRows.length + (cumulative ? 3 : 0));
   assert.equal(verdict.errors.length, 0);
   verdict.passed = true;
 } catch (error) {

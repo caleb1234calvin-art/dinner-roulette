@@ -17,8 +17,8 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    # The existing browser suites plus 277 seasonal acceptance cases retain all coverage.
-    timeout-minutes: 35
+    # Retain existing browser suites and add the cumulative 15-record and 32-record geometry coverage.
+    timeout-minutes: 60
 
     steps:
       - name: Check out repository
@@ -41,6 +41,9 @@ jobs:
 
       - name: Typecheck
         run: npm run typecheck
+
+      - name: ESLint
+        run: npm run lint
 
       - name: Casino audit regression tests
         run: node --test scripts/casino-*.test.mjs
@@ -100,6 +103,13 @@ jobs:
         env:
           CI: "true"
           VITE_AUTH_ENABLED: "true"
+        run: node scripts/seasonal-ten-record-browser.mjs
+
+      - name: Exercise cumulative fifteen-record seasonal additions in local Chromium
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+          SEASONAL_CUMULATIVE: "true"
         run: node scripts/seasonal-ten-record-browser.mjs
 
       - name: Preserve browser evidence
