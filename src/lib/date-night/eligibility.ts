@@ -1,3 +1,4 @@
+import { seasonalIdentityPreference } from "./identity-preferences";
 import { applyCuratedSeasonalPolicy } from "./curated-policy";
 import { hasReviewedSeasonalPlacement } from "./listing";
 import { decorateRestaurant } from "../restaurants/decorate";
@@ -56,10 +57,10 @@ export function eligibleDateNight(
     )
       return false;
     if (venue.distanceMiles > filters.radiusMiles + 0.05) return false;
-    if (exclusions.some((item) => item.restaurantId === venue.id && item.expiresAt > now))
+    const pref = seasonalIdentityPreference(venue, preferences);
+    if (exclusions.some((item) => pref.ids.includes(item.restaurantId) && item.expiresAt > now))
       return false;
-    const pref = preferences[venue.id];
-    if (pref?.neverRecommend || (filters.favoritesOnly && !pref?.favorite)) return false;
+    if (pref.neverRecommend || (filters.favoritesOnly && !pref.favorite)) return false;
     if (!venue.availability.browseEligible) return false;
     if (filters.openNowOnly && !venue.availability.openNowEligible) return false;
     return anything || venue.activityTypes.some((type) => selected.includes(type));

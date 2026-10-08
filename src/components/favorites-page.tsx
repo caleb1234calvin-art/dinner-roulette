@@ -1,3 +1,9 @@
+import { resolveSavedSeasonalPlace } from "@/lib/date-night/identity-receipts";
+import { seasonalFavoriteToggleIds } from "@/lib/date-night/identity-preferences";
+import { seasonalDistancePrefix } from "@/lib/date-night/listing";
+import { getDateNightAvailability } from "@/lib/date-night/availability";
+import { useDateNightClock } from "@/lib/date-night/use-clock";
+import { directionsUrl } from "@/lib/location/maps";
 import { Heart, MapPinned, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getDateNightIcon, isDateNightRecord } from "@/lib/date-night/icons";
@@ -7,12 +13,20 @@ import { formatPrice } from "@/lib/restaurants/hours";
 import { useAppStore } from "@/lib/store";
 
 export function FavoritesPage() {
+  const now = useDateNightClock();
   const preferences = useAppStore((s) => s.preferences);
   const location = useAppStore((s) => s.location);
   const toggleFavorite = useAppStore((s) => s.toggleFavorite);
+  const seenIdentities = new Set<string>();
   const favorites = Object.values(preferences)
     .filter((item) => item.favorite)
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .filter(item => {
+      const id = resolveSavedSeasonalPlace(item)?.id ?? item.restaurantId;
+      if (seenIdentities.has(id)) return false;
+      seenIdentities.add(id);
+      return true;
+    });
 
   return (
     <main className="px-4 pt-6 pb-8">
@@ -31,17 +45,21 @@ export function FavoritesPage() {
       ) : (
         <ul className="mt-6 space-y-3">
           {favorites.map((item) => {
-            const distance =
-              item.lat != null && item.lon != null
-                ? haversineMiles(location.lat, location.lon, item.lat, item.lon)
-                : null;
-            const mapsUrl =
-              item.lat != null && item.lon != null
-                ? `https://www.google.com/maps/dir/?api=1&destination=${item.lat},${item.lon}`
-                : null;
-            const visual = restaurantVisual(item.name, item.photoKey ?? "american");
+            // Saved coordinates are a snapshot, never current seasonal arrival evidence.
+            // Historical favorites remain manageable after expiry with an explicit status.
+            const current = resolveSavedSeasonalPlace(item);
+            const destination = current ?? item;
+            const displayName = current?.name ?? item.name;
+            const cuisineLabel = current?.cuisineLabel ?? item.cuisineLabel;
+            const priceLevel = current ? current.priceLevel : item.priceLevel;
+            const distance = destination.lat != null && destination.lon != null
+              ? haversineMiles(location.lat, location.lon, destination.lat, destination.lon) : null;
+            const mapsUrl = current ? directionsUrl(current)
+              : item.lat != null && item.lon != null ? directionsUrl(item) : null;
+            const availability = current ? getDateNightAvailability({ ...current, hoursKnown: false, isOpen: false }, now) : null;
+            const visual = restaurantVisual(displayName, item.photoKey ?? "american");
             const dateNightIcon = isDateNightRecord(item.restaurantId)
-              ? getDateNightIcon({ cuisineLabel: item.cuisineLabel })
+              ? getDateNightIcon({ cuisineLabel })
               : null;
             return (
               <li key={item.restaurantId} className="overflow-hidden rounded-xl bg-surface shadow-[var(--shadow-border)]">
@@ -64,18 +82,19 @@ export function FavoritesPage() {
                     />
                   )}
                   <div className="min-w-0 flex-1">
-                    <p className="truncate text-base text-fg">{item.name}</p>
+                    <p className="truncate text-base text-fg">{displayName}</p>
                     <p className="mt-0.5 text-sm text-muted">
-                      {item.cuisineLabel ?? "Restaurant"}
-                      {item.priceLevel ? ` · ${formatPrice(item.priceLevel)}` : ""}
+                      {cuisineLabel ?? "Restaurant"}
+                      {priceLevel ? ` · ${formatPrice(priceLevel)}` : ""}
                     </p>
                     <p className="mt-1 text-xs text-subtle">
-                      {distance != null ? formatDistance(distance) : "Distance unknown"}
+                      {distance != null ? `${seasonalDistancePrefix(destination)}${formatDistance(distance)}` : "Distance unknown"}
                       {item.ourRating ? ` · Our rating ${item.ourRating}/5` : ""}
                       {item.lastVisited
                         ? ` · Last chose ${new Date(item.lastVisited).toLocaleDateString()}`
                         : ""}
                     </p>
+                    {current ? <p className="mt-1 text-xs text-subtle">{current.address} · {availability?.label}</p> : null}
                   </div>
                 </div>
                 <div className="flex gap-2 px-3 pb-3">
@@ -90,13 +109,14 @@ export function FavoritesPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    aria-label={`Remove ${item.name}`}
-                    onClick={() =>
-                      toggleFavorite({
-                        restaurantId: item.restaurantId,
-                        name: item.name,
-                      })
-                    }
+                    aria-label={`Remove ${displayName}`}
+                    onClick={() => {
+                      const ids = current ? seasonalFavoriteToggleIds(current, preferences) : [item.restaurantId];
+                      for (const restaurantId of ids) {
+                        const saved = preferences[restaurantId];
+                        if (saved?.favorite) toggleFavorite(saved);
+                      }
+                    }}
                   >
                     <Trash2 className="size-4" />
                   </Button>

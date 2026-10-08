@@ -123,3 +123,96 @@ test("V1 real provider failure keeps bounded five catalogs browseable without pr
  t.mock.method(globalThis,"fetch",async()=>Response.json({elements:[]},{status:503}));
  for(const row of rows){const result=await searchDateNight({data:{...row,radiusMiles:1,activityTypes:row.activityTypes,spookySeasonEnabled:true}});assert.ok(result.venues.some(p=>p.id===row.id));assert.equal(result.source,"fallback");}
 });
+
+const {seasonalIdentityPreference,seasonalFavoriteToggleIds}=load("src/lib/date-night/identity-preferences.ts");
+const {getCuratedSeasonalPlace}=load("src/lib/date-night/curated-policy.ts");
+for(const row of rows)test(`V1-ID-01 ${row.id}: affirmed provider preferences survive merge, cache, resume and unsave`,()=>{
+ const providerId="date-night-osm-node-99";
+ const provider={...row,id:providerId,source:"osm",openingHours:"24/7",seasonalListing:undefined,seasonalAvailability:undefined,seasonalVisitNotes:undefined};
+ for(const order of [[row,provider],[provider,row]]){
+  const merged=dedupeDateNight(order);
+  const favorite={[providerId]:{restaurantId:providerId,name:row.name,favorite:true,neverRecommend:false}};
+  assert.equal(pool(merged,at,{favoritesOnly:true},true,favorite).length,1);
+  assert.equal(pool(merged,at,{},true,{...favorite,[providerId]:{...favorite[providerId],neverRecommend:true},[row.id]:{favorite:true}}).length,0);
+  const exclusions=[{restaurantId:providerId,expiresAt:at.getTime()+60000}];
+  assert.equal(pool(merged,at,{},true,{},exclusions).length,0);
+  assert.equal(pool(merged,new Date(at.getTime()+60000),{},true,{},exclusions).length,1);
+  const resumed=JSON.parse(JSON.stringify(combineDateNightDiscovery({response:{venues:[order[0]],source:"merged"},missingActivityTypes:[]},{venues:[order[1]],source:"live"}).venues));
+  assert.equal(pool(resumed,at,{favoritesOnly:true},true,favorite).length,1);
+  assert.equal(pool(resumed,at,{favoritesOnly:true,openNowOnly:true},true,favorite).length,0);
+  assert.equal(pool(resumed,new Date(row.seasonalListing.listingExpiresAt),{favoritesOnly:true},true,favorite).length,0);
+  assert.deepEqual(seasonalFavoriteToggleIds(resumed[0],favorite),[providerId]);
+  const unsaved={[providerId]:{...favorite[providerId],favorite:false}};
+  assert.equal(seasonalIdentityPreference(resumed[0],unsaved).favorite,false);
+  assert.deepEqual(seasonalFavoriteToggleIds(resumed[0],unsaved),[row.id]);
+  assert.deepEqual(new Set(seasonalFavoriteToggleIds(resumed[0],{...favorite,[row.id]:{favorite:true}})),new Set([providerId,row.id]));
+ }
+ const stranger={...provider,name:"Unrelated attraction",id:"date-night-osm-node-stranger"};
+ const distinct=dedupeDateNight([row,stranger]);assert.equal(distinct.length,2);
+ assert.equal(pool([distinct.find(p=>p.id===row.id)],at,{},true,{[stranger.id]:{neverRecommend:true}}).length,1);
+ assert.equal(pool([distinct.find(p=>p.id===row.id)],at,{favoritesOnly:true},true,{[stranger.id]:{favorite:true}}).length,0);
+});
+test("V1-ID-01 ordinary records preserve existing preference behavior; no new ranking multiplier",()=>{
+ const plain={...fixture(),seasonalListing:undefined,discoveryEvidence:[{id:"other-id"}]};
+ assert.deepEqual(seasonalIdentityPreference(plain,{"other-id":{favorite:true,neverRecommend:true}}),{ids:[plain.id],favorite:false,neverRecommend:false});
+});
+test("V1-NAV-02 saved current IDs discard stale geometry and preserve Sam parking/ordinary navigation",()=>{
+ for(const row of rows){
+  const saved={restaurantId:row.id,name:row.name,lat:0,lon:0,address:"Stale address"};
+  const current=getCuratedSeasonalPlace(saved.restaurantId);
+  assert.equal(new URL(directionsUrl(current)).searchParams.get("destination"),row.address);
+  assert.ok(isApproximateSeasonalPlace(current));
+  assert.equal(getDateNightAvailability({...current,hoursKnown:false,isOpen:false},new Date(current.seasonalListing.listingExpiresAt)).label,"Season ended");
+ }
+ const sam=getCuratedSeasonalPlace("date-night-mo26-116-sam-baker-halloween-bash");
+ assert.equal(new URL(directionsUrl(sam)).searchParams.get("destination"),`${sam.lat},${sam.lon}`);
+ assert.equal(isApproximateSeasonalPlace(sam),false);
+ assert.equal(getCuratedSeasonalPlace("ordinary-dinner"),undefined);
+ assert.equal(new URL(directionsUrl({lat:1,lon:2,address:"Ordinary address"})).searchParams.get("destination"),"1,2");
+});
+
+const {SEASONAL_IDENTITY_RECEIPTS_KEY,recordSeasonalIdentityReceipts,resolveSavedSeasonalPlace,clearSeasonalIdentityReceipts}=load("src/lib/date-night/identity-receipts.ts");
+function receiptStorage(t){
+ const prior=Object.getOwnPropertyDescriptor(globalThis,"localStorage"),data=new Map();
+ Object.defineProperty(globalThis,"localStorage",{configurable:true,value:{getItem:key=>data.get(key)??null,setItem:(key,value)=>data.set(key,value),removeItem:key=>data.delete(key)}});
+ t.after(()=>{if(prior)Object.defineProperty(globalThis,"localStorage",prior);else delete globalThis.localStorage;});return data;
+}
+for(const row of rows)test(`V1-ID/NAV ${row.id}: only affirmed identity receipts survive Favorites reload and provider fallback`,t=>{
+ const storage=receiptStorage(t),providerId="date-night-osm-node-99";
+ const provider={...row,id:providerId,source:"osm",seasonalListing:undefined,seasonalAvailability:undefined,seasonalVisitNotes:undefined};
+ const saved={restaurantId:providerId,name:row.name,lat:0,lon:0,address:"Historical provider snapshot"};
+ assert.equal(resolveSavedSeasonalPlace(saved),undefined);
+ recordSeasonalIdentityReceipts([row,provider]);assert.equal(resolveSavedSeasonalPlace(saved),undefined,"Unmerged inputs are not receipts");
+ const merged=mergeDateNight([provider],[row]);recordSeasonalIdentityReceipts(merged);
+ const raw=JSON.parse(storage.get(SEASONAL_IDENTITY_RECEIPTS_KEY));
+ assert.deepEqual(raw[providerId],{canonicalId:row.id,reviewRevision:row.seasonalListing.reviewRevision,canonicalName:row.name});
+ assert.equal(JSON.stringify(raw).includes("lat"),false,"Identity-only, no point authority");
+ // A fresh loader simulates module restart while retained local storage remains.
+ const reload=appModuleLoader()("src/lib/date-night/identity-receipts.ts");
+ const current=reload.resolveSavedSeasonalPlace(saved);assert.equal(current.id,row.id);
+ assert.equal(new URL(directionsUrl(current)).searchParams.get("destination"),row.address);
+ const favorite={[providerId]:{restaurantId:providerId,name:row.name,favorite:true}};
+ assert.equal(pool([row],at,{favoritesOnly:true},true,favorite).length,1,"Known alias persists through pure catalog fallback");
+ assert.equal(pool([row],at,{},true,{[providerId]:{neverRecommend:true}}).length,0);
+ assert.equal(pool([row],at,{},true,{},[{restaurantId:providerId,expiresAt:at.getTime()+1000}]).length,0);
+ assert.deepEqual(seasonalFavoriteToggleIds(current,favorite),[providerId]);
+ clearSeasonalIdentityReceipts();assert.equal(storage.has(SEASONAL_IDENTITY_RECEIPTS_KEY),false);assert.equal(resolveSavedSeasonalPlace(saved),undefined);
+});
+test("V1 receipt validation rejects stale, malformed, unrelated and conflicting mappings without guessing",t=>{
+ const storage=receiptStorage(t),row=rows[0],id="date-night-osm-node-99",saved={restaurantId:id,name:row.name};
+ const good={canonicalId:row.id,reviewRevision:row.seasonalListing.reviewRevision,canonicalName:row.name};
+ for(const value of [null,[],"bad",{[id]:{...good,reviewRevision:"superseded"}},{[id]:{...good,canonicalId:"unreviewed"}},{[id]:{...good,canonicalName:"Unrelated"}},{[id]:{conflict:true}}]){
+  storage.set(SEASONAL_IDENTITY_RECEIPTS_KEY,JSON.stringify(value));assert.equal(resolveSavedSeasonalPlace(saved),undefined);
+ }
+ storage.set(SEASONAL_IDENTITY_RECEIPTS_KEY,"not-json");assert.equal(resolveSavedSeasonalPlace(saved),undefined);
+ storage.set(SEASONAL_IDENTITY_RECEIPTS_KEY,JSON.stringify({[id]:good}));
+ assert.equal(resolveSavedSeasonalPlace({...saved,name:"Unrelated saved venue"}),undefined);
+ assert.equal(resolveSavedSeasonalPlace({...saved,restaurantId:"date-night-osm-node-100"}),undefined);
+ // Two incompatible affirmed records claiming one provider ID are quarantined.
+ for(const candidate of rows.slice(0,2)){
+  const provider={...candidate,id,source:"osm",seasonalListing:undefined,seasonalAvailability:undefined};
+  recordSeasonalIdentityReceipts(mergeDateNight([provider],[candidate]));
+ }
+ assert.equal(resolveSavedSeasonalPlace(saved),undefined);
+ assert.deepEqual(JSON.parse(storage.get(SEASONAL_IDENTITY_RECEIPTS_KEY))[id],{conflict:true});
+});

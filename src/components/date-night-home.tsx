@@ -1,3 +1,4 @@
+import { recordSeasonalIdentityReceipts } from "@/lib/date-night/identity-receipts";
 import { DISCOVERY_TIMEOUT_MESSAGE } from "@/lib/discovery/client-request";
 import { useEffect, useMemo, useState } from "react";
 import { Heart, LayoutGrid } from "lucide-react";
@@ -203,6 +204,7 @@ export function DateNightHome() {
   useEffect(() => () => radialSession.dispose(), [radialSession]);
 
   const decorated = useMemo(() => decorateDateNight(venues, location, now), [venues, location, now]);
+  useEffect(() => recordSeasonalIdentityReceipts(decorated), [decorated]);
   const eligible = useMemo(
     () => eligibleDateNight(decorated, filters, halloweenActive, preferences, exclusions, now.getTime()),
     [decorated, exclusions, filters, halloweenActive, preferences, now],

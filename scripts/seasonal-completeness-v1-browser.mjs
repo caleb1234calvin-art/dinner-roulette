@@ -199,7 +199,7 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
       result.blockedBrowserRequests.push(route.request().url());
       return route.abort();
     });
-    await context.addInitScript(({ row, scenario, at, filters }) => {
+    await context.addInitScript(({ row, scenario, at, filters, preferences, exclusions, identityReceipts }) => {
       globalThis.__geolocationCalls = [];
       for (const method of ["getCurrentPosition", "watchPosition"]) {
         Object.defineProperty(navigator.geolocation, method, { value: () => {
@@ -214,14 +214,17 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
         static now() { return new OriginalDate(globalThis.__missouriNow).getTime(); }
       };
       sessionStorage.setItem("dinner-roulette-hint-seen", "1");
+      if (identityReceipts && !localStorage.getItem("pick-for-us-seasonal-identity-v1")) {
+        localStorage.setItem("pick-for-us-seasonal-identity-v1", JSON.stringify(identityReceipts));
+      }
       if (!localStorage.getItem("pick-for-us-v1")) localStorage.setItem("pick-for-us-v1", JSON.stringify({ version: 0, state: {
         location: { lat: row.lat + (scenario === "radius-exclusion" ? 0.06 : 0), lon: row.lon, label: row.name, source: "manual" }, homeMode: "date-night",
-        spookySeasonEnabled: scenario !== "season-off", dateNightFilters: {
+        spookySeasonEnabled: scenario !== "season-off", preferences: preferences ?? {}, exclusions: exclusions ?? [], dateNightFilters: {
           radiusMiles: 1, activityTypes: scenario === "category" ? row.activityTypes : ["anything"],
           mood: 50, openNowOnly: scenario === "open-now", favoritesOnly: false, reduceParks: false, ...filters,
         },
       } }));
-    }, { row, scenario, at: state.at, filters: overrides.filters });
+    }, { row, scenario, at: state.at, filters: overrides.filters, preferences: overrides.preferences, exclusions: overrides.exclusions, identityReceipts: overrides.identityReceipts });
     page = await context.newPage();
     page.on("pageerror", error => result.pageErrors.push(error.message));
     page.on("console", message => {
@@ -434,7 +437,225 @@ try {
       await assertNoRpc(test, before, "Favorites/exclusion do not reacquire providers");
     });
   }
-  assert.equal(verdict.scenarios.length, 60);
+  // Persisted preferences are real store input. Aliases are admitted only by
+  // intercepted live identity evidence, never inferred from a matching name.
+  const preference = (row, id, patch = {}) => ({ restaurantId: id, name: row.name,
+    favorite: false, neverRecommend: false, ourRating: null, timesVisited: 0, lastVisited: null,
+    cuisineLabel: row.cuisineLabel, photoKey: row.photoKey, lat: row.lat, lon: row.lon,
+    address: row.address, priceLevel: null, ...patch });
+  const stored = page => page.evaluate(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state);
+  const visitNav = async (page, name, pathname) => {
+    await press(page.getByRole("navigation", { name: "Main" }).getByRole("link", { name, exact: true }));
+    await page.waitForURL(`${origin}${pathname}`);
+  };
+  const savedItem = (page, row) => page.locator("main li").filter({ has: page.getByText(row.name, { exact: true }) });
+  const inspectSaved = async (test, row, label, ended = false) => {
+    const { page, result, state } = test;
+    const item = savedItem(page, row); await item.waitFor();
+    assert.equal(await item.count(), 1);
+    assert.match(await item.innerText(), /Approx\./);
+    assert.ok((await item.innerText()).includes(row.address));
+    if (ended) assert.match(await item.innerText(), /Season ended/);
+    const link = item.getByRole("link", { name: "Directions", exact: true });
+    assert.equal(new URL(await link.getAttribute("href")).searchParams.get("destination"), row.address);
+    await link.click({ trial: true });
+    assert.equal(await item.locator("img").evaluate(async img => {
+      await img.decode(); return img.naturalWidth > 0 && img.naturalHeight > 0;
+    }), true);
+    result.evidence.saved ??= [];
+    result.evidence.saved.push({ label, text: await item.innerText(), href: await link.getAttribute("href") });
+    await page.screenshot({ path: resolve(output, `${state.scenario}-${label}.png`), fullPage: true });
+    await noOverflow(page);
+  };
+  for (const [index, row] of rows.entries()) {
+    const n = nearbyCount(row), node = "date-night-osm-node-910001", way = "date-night-osm-way-910002";
+    await runScenario(row, index, "provider-favorite-cache-resume", async test => {
+      const { page, result } = test;
+      await activityCount(page, 1); await settleLocal(test); const before = test.rpc.length;
+      assert.equal(before, 1);
+      assert.ok(test.rpc[0].response.includes(node) && test.rpc[0].response.includes(way));
+      await press(categoryButton(page, row)); await activityCount(page, 1);
+      await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, 1);
+      await advance(test, new Date(Date.parse(defaultAt) + 60000).toISOString());
+      await activityCount(page, 1); await assertNoRpc(test, before, "Provider favorite survives cached category changes and resume");
+      await optionsButton(page).click(); await selectTarget(page, row);
+      await page.getByRole("button", { name: "Saved", exact: true }).waitFor();
+      await closeResult(page);
+      // Leave Favorites-only before Unsave so the overlay remains eligible.
+      await press(page.getByRole("switch", { name: "Favorites only", exact: true }), "Space");
+      await activityCount(page, n + 1);
+      await optionsButton(page).click(); await selectTarget(page, row);
+      await page.getByRole("button", { name: "Saved", exact: true }).click();
+      await page.getByRole("button", { name: "Save", exact: true }).waitFor();
+      let state = await stored(page);
+      assert.equal(state.preferences[node].favorite, false);
+      assert.equal(state.preferences[way].favorite, false);
+      assert.equal(state.preferences[node].ourRating, 4, "Unsave retains existing ratings");
+      assert.equal(state.preferences[way].timesVisited, 2, "Unsave retains visit history");
+      await page.getByRole("button", { name: "Save", exact: true }).click();
+      state = await stored(page);
+      assert.equal(state.preferences[row.id].favorite, true);
+      assert.deepEqual(Object.values(state.preferences).filter(p => p.favorite).map(p => p.restaurantId), [row.id], "Re-save writes only canonical identity");
+      await closeResult(page);
+      await press(page.getByRole("switch", { name: "Favorites only", exact: true }), "Space");
+      await activityCount(page, 1);
+      await optionsButton(page).click(); await rowHeading(page, row).waitFor();
+      await advance(test, row.seasonalListing.listingExpiresAt);
+      await rowHeading(page, row).waitFor({ state: "hidden" }); await activityCount(page, 0);
+      await assertNoRpc(test, before, "Saved aliases/canonical favorite cannot resurrect an expired cached listing");
+      result.evidence.preferenceIds = { node, way, canonical: row.id };
+    }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
+      [node]: preference(row, node, { favorite: true, ourRating: 4 }),
+      [way]: preference(row, way, { favorite: true, timesVisited: 2 }),
+    } });
+    await runScenario(row, index, "provider-never-beats-canonical-favorite", async test => {
+      const { page } = test;
+      await activityCount(page, 0); await settleLocal(test); const before = test.rpc.length;
+      assert.equal(before, 1); assert.ok(test.rpc[0].response.includes(row.id));
+      assert.equal(await pickButton(page).isDisabled(), true);
+      await press(categoryButton(page, row)); await activityCount(page, 0);
+      await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, 0);
+      await advance(test, new Date(Date.parse(defaultAt) + 60000).toISOString());
+      await activityCount(page, 0);
+      await press(page.getByRole("switch", { name: "Favorites only", exact: true }), "Space");
+      await activityCount(page, n);
+      await optionsButton(page).click();
+      await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
+      assert.equal(await rowHeading(page, row).count(), 0, "Negative provider preference outranks canonical favorite");
+      await closeOptions(page);
+      await assertNoRpc(test, before, "Never-recommend remains enforced through cache/resume");
+    }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
+      [row.id]: preference(row, row.id, { favorite: true }),
+      [node]: preference(row, node, { neverRecommend: true }),
+    } });
+    const exclusionEnd = Date.parse(defaultAt) + 120000;
+    await runScenario(row, index, "provider-exclusion-expiry-resume", async test => {
+      const { page, result } = test;
+      await activityCount(page, 0); await settleLocal(test); const before = test.rpc.length;
+      assert.equal(before, 1); assert.ok(test.rpc[0].response.includes(way));
+      await press(categoryButton(page, row)); await activityCount(page, 0);
+      await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, 0);
+      await advance(test, new Date(exclusionEnd - 1).toISOString()); await activityCount(page, 0);
+      await advance(test, new Date(exclusionEnd).toISOString()); await activityCount(page, 1);
+      await optionsButton(page).click(); await rowHeading(page, row).waitFor();
+      await closeOptions(page);
+      await assertNoRpc(test, before, "Affirmed alias exclusion expires locally without losing canonical favorite");
+      result.evidence.exclusionExpiresAt = new Date(exclusionEnd).toISOString();
+    }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
+      [row.id]: preference(row, row.id, { favorite: true }),
+    }, exclusions: [{ restaurantId: way, name: row.name, expiresAt: exclusionEnd, reason: "not-tonight" }] });
+    await runScenario(row, index, "save-favorites-address-remove-resave-expiry", async test => {
+      const { page, result } = test;
+      await activityCount(page, n);
+      await optionsButton(page).click(); await selectTarget(page, row);
+      await page.getByRole("button", { name: "Save", exact: true }).click();
+      await page.getByRole("button", { name: "Saved", exact: true }).waitFor(); await closeResult(page);
+      await visitNav(page, "Favorites", "/favorites"); await inspectSaved(test, row, "saved-address");
+      await savedItem(page, row).getByRole("button", { name: `Remove ${row.name}`, exact: true }).click();
+      await page.getByText("No favorites yet", { exact: true }).waitFor();
+      assert.equal((await stored(page)).preferences[row.id].favorite, false);
+      await visitNav(page, "Pick", "/"); await ready(page); await activityCount(page, n);
+      await optionsButton(page).click(); await selectTarget(page, row);
+      await page.getByRole("button", { name: "Save", exact: true }).click();
+      await closeResult(page);
+      await press(page.getByRole("switch", { name: "Favorites only", exact: true }), "Space");
+      await activityCount(page, 1); await settleLocal(test); const before = test.rpc.length;
+      await advance(test, row.seasonalListing.listingExpiresAt); await activityCount(page, 0);
+      assert.equal(await pickButton(page).isDisabled(), true);
+      await assertNoRpc(test, before, "Favorite eligibility ends at listing boundary without refetch");
+      await visitNav(page, "Favorites", "/favorites"); await inspectSaved(test, row, "saved-ended-history", true);
+      await savedItem(page, row).getByRole("button", { name: `Remove ${row.name}`, exact: true }).click();
+      await page.getByText("No favorites yet", { exact: true }).waitFor();
+      result.evidence.expiredFavoriteRemainsRemovable = true;
+    });
+  }
+  for (const [index, row] of rows.entries()) {
+    const node = "date-night-osm-node-910001", way = "date-night-osm-way-910002";
+    await runScenario(row, index, "affirmed-provider-direct-favorites-reload", async test => {
+      const { page, result } = test;
+      await activityCount(page, 1); await settleLocal(test);
+      assert.ok(test.rpc[0].response.includes(node) && test.rpc[0].response.includes(way));
+      await visitNav(page, "Favorites", "/favorites");
+      await inspectSaved(test, row, "affirmed-provider-saved");
+      assert.equal(await page.locator("main li").count(), 1, "Affirmed provider favorites group as one reviewed venue");
+      const beforeReload = test.rpc.length;
+      await page.reload({ waitUntil: "domcontentloaded" });
+      await inspectSaved(test, row, "affirmed-provider-saved-reloaded");
+      assert.equal(await page.locator("main li").count(), 1);
+      await assertNoRpc(test, beforeReload, "Persisted identity receipt survives Favorites reload without discovery RPC");
+      let state = await stored(page);
+      assert.equal(state.preferences[node].favorite, true);
+      assert.equal(state.preferences[way].favorite, true);
+      assert.notEqual(state.preferences[row.id]?.favorite, true, "Direct Saved read must not require manual canonical re-save");
+      await savedItem(page, row).getByRole("button", { name: `Remove ${row.name}`, exact: true }).click();
+      await page.getByText("No favorites yet", { exact: true }).waitFor();
+      state = await stored(page);
+      assert.equal(state.preferences[node].favorite, false);
+      assert.equal(state.preferences[way].favorite, false);
+      assert.equal(state.preferences[node].ourRating, 4);
+      await visitNav(page, "Pick", "/"); await ready(page); await activityCount(page, 0);
+      await press(page.getByRole("switch", { name: "Favorites only", exact: true }), "Space");
+      await activityCount(page, nearbyCount(row) + 1);
+      await optionsButton(page).click(); await selectTarget(page, row);
+      await page.getByRole("button", { name: "Save", exact: true }).click(); await closeResult(page);
+      state = await stored(page);
+      assert.deepEqual(Object.values(state.preferences).filter(p => p.favorite).map(p => p.restaurantId), [row.id]);
+      await visitNav(page, "Favorites", "/favorites");
+      await inspectSaved(test, row, "affirmed-provider-canonical-resave");
+      result.evidence.persistedIdentityReceipt = await page.evaluate(() => localStorage.getItem("pick-for-us-seasonal-identity-v1"));
+      assert.ok(result.evidence.persistedIdentityReceipt, "Actual affirmed discovery persists its identity-only receipt");
+    }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
+      [node]: preference(row, node, { favorite: true, ourRating: 4 }),
+      [way]: preference(row, way, { favorite: true }),
+    } });
+  }
+  const myer = rows.find(row => row.id === "date-night-myers-inn-carthage");
+  await runScenario(myer, 0, "legacy-myer-saved-coordinates", async test => {
+    const { page, result } = test;
+    await activityCount(page, 1);
+    await visitNav(page, "Favorites", "/favorites");
+    await inspectSaved(test, myer, "legacy-snapshot-current-address");
+    const state = await stored(page);
+    assert.equal(state.preferences[myer.id].lat, 37, "Read-time hydration does not silently rewrite historical snapshot");
+    assert.equal(state.preferences[myer.id].lon, -94);
+    await visitNav(page, "Pick", "/"); await ready(page); await activityCount(page, 1);
+    await optionsButton(page).click(); await selectTarget(page, myer);
+    await page.getByRole("button", { name: "Saved", exact: true }).waitFor();
+    const href = await page.getByRole("link", { name: /Directions · Google Maps/ }).getAttribute("href");
+    assert.equal(new URL(href).searchParams.get("destination"), myer.address);
+    result.evidence.staleSnapshot = { lat: 37, lon: -94, currentDirections: href };
+    await closeResult(page);
+  }, { filters: { favoritesOnly: true }, preferences: {
+    [myer.id]: preference(myer, myer.id, { favorite: true, lat: 37, lon: -94 }),
+  } });
+
+  const unmappedIds = [910099, 910100, 910101, 910102, 910103].map(id => `date-night-osm-node-${id}`);
+  const unmappedPreferences = Object.fromEntries(unmappedIds.map((id, index) => [id,
+    preference(myer, id, { favorite: true, lat: 37 + index * 0.001, lon: -94, cuisineLabel: "Park" })]));
+  await runScenario(myer, 0, "unobserved-invalid-stale-receipt-saved-controls", async test => {
+    const { page, result, state } = test;
+    await activityCount(page, 0);
+    assert.equal(await pickButton(page).isDisabled(), true, "Unobserved same-name provider favorites cannot favorite the catalog listing");
+    await visitNav(page, "Favorites", "/favorites");
+    const items = page.locator("main li");
+    await items.first().waitFor(); assert.equal(await items.count(), unmappedIds.length);
+    const expected = unmappedIds.map(id => `${unmappedPreferences[id].lat},${unmappedPreferences[id].lon}`).sort();
+    const actual = [];
+    for (let index = 0; index < await items.count(); index++) {
+      const item = items.nth(index);
+      assert.doesNotMatch(await item.innerText(), /Approx\.|Season ended|Hours partly confirmed|Check today's hours/);
+      actual.push(new URL(await item.getByRole("link", { name: "Directions", exact: true }).getAttribute("href")).searchParams.get("destination"));
+    }
+    assert.deepEqual(actual.sort(), expected, "Unknown, stale, malformed and quarantined receipts retain ordinary saved routing");
+    result.evidence.unmappedDestinations = actual;
+    await page.screenshot({ path: resolve(output, `${state.scenario}-saved-controls.png`), fullPage: true });
+  }, { filters: { favoritesOnly: true }, preferences: unmappedPreferences, identityReceipts: {
+    [unmappedIds[1]]: { canonicalId: myer.id, canonicalName: myer.name, reviewRevision: "superseded-review" },
+    [unmappedIds[2]]: { canonicalId: "date-night-unknown-canonical", canonicalName: myer.name, reviewRevision: myer.seasonalListing.reviewRevision },
+    [unmappedIds[3]]: "malformed-receipt",
+    [unmappedIds[4]]: { conflict: true },
+  } });
+  assert.equal(verdict.scenarios.length, 87);
   assert.equal(verdict.errors.length, 0);
   verdict.passed = true;
 

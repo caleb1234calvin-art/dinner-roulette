@@ -1,3 +1,4 @@
+import { clearSeasonalIdentityReceipts } from "./date-night/identity-receipts";
 import { create } from "zustand";
 import { isGeographicLocation } from "./location/model";
 import { persist } from "zustand/middleware";
@@ -229,7 +230,8 @@ export const useAppStore = create<AppState>()(
         });
       },
       resetFilters: () => set({ filters: DEFAULT_FILTERS, dateNightFilters: DEFAULT_DATE_NIGHT_FILTERS }),
-      resetAllData: () =>
+      resetAllData: () => {
+        clearSeasonalIdentityReceipts();
         set({
           filters: DEFAULT_FILTERS,
           dateNightFilters: DEFAULT_DATE_NIGHT_FILTERS,
@@ -240,7 +242,8 @@ export const useAppStore = create<AppState>()(
           sessionShown: [],
           sessionDate: todayKey(),
           spookySeasonEnabled: false,
-        }),
+        });
+      },
     }),
     {
       name: "pick-for-us-v1",
