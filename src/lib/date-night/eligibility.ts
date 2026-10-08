@@ -49,10 +49,11 @@ export function eligibleDateNight(
   );
   const anything = !selected.length || selected.includes("anything");
   return places.filter((venue) => {
-    if (venue.seasonalListing && (!halloweenActive || !hasReviewedSeasonalPlacement(venue.seasonalListing))) return false;
+    const lifecycleVisible = venue.seasonalListing?.visibility === "listing-lifecycle";
+    if (venue.seasonalListing && ((!halloweenActive && !lifecycleVisible) || !hasReviewedSeasonalPlacement(venue.seasonalListing))) return false;
     if (!Number.isFinite(venue.distanceMiles)) return false;
     if (
-      !halloweenActive &&
+      !halloweenActive && !lifecycleVisible &&
       venue.activityTypes.every((type) => HALLOWEEN_DATE_NIGHT_TYPES.includes(type))
     )
       return false;
