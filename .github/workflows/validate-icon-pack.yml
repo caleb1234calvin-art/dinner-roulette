@@ -67,6 +67,12 @@ jobs:
       - name: Install Chromium for disposable local browser validation
         run: npx playwright install --with-deps chromium
 
+      - name: Compare seasonal and standard card geometry
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+        run: node scripts/seasonal-card-layout-browser.mjs
+
       - name: Exercise casino experience in local Chromium
         env:
           VITE_AUTH_ENABLED: "true"
@@ -95,12 +101,6 @@ jobs:
           CI: "true"
           VITE_AUTH_ENABLED: "true"
         run: node scripts/seasonal-ten-record-browser.mjs
-
-      - name: Compare seasonal and standard card geometry
-        env:
-          CI: "true"
-          VITE_AUTH_ENABLED: "true"
-        run: node scripts/seasonal-card-layout-browser.mjs
 
       - name: Preserve browser evidence
         if: always()

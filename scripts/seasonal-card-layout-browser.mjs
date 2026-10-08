@@ -61,7 +61,11 @@ function renderer(old = false) {
     const Component = load(`src/components/${file}.tsx`)[name];
     const props = kind === "plan" ? { plan: records, onClose() {}, onReplan() {} } : kind === "options" ? { restaurants: records, onClose() {}, onSelect() {}, onShuffle() {}, onNotTonight() {}, mode: "date-night" }
       : { restaurant: records[0], reelNames: [], skipSpin: true, onClose() {}, onReroll() {}, onNotTonight() {}, mode: "date-night" };
-    const html = renderToStaticMarkup(React.createElement(Component, props));
+    const random = Math.random;
+    Math.random = () => 0; // Identical non-seasonal tagline across comparisons.
+    let html;
+    try { html = renderToStaticMarkup(React.createElement(Component, props)); }
+    finally { Math.random = random; }
     delete globalThis.document;
     return html.replace(/src="(\/[^"]+)"/g, (_match, src) => `src="data:image/jpeg;base64,${fs.readFileSync(`public${src}`).toString("base64")}"`);
   };
@@ -79,10 +83,11 @@ try {
       const page = await context.newPage();
       const measured = {};
       await context.route("**/*", route => route.abort());
-      for (const variant of ["standard", "ordinary", "before", "after"]) {
-        const render = renderer(variant !== "after");
-        const item = ["ordinary", "standard"].includes(variant) ? ordinary(row) : decorate(row);
-        if (variant === "standard") { item.name = "Ordinary park"; item.activityTypes = ["park"]; }
+      try {
+      for (const variant of ["standard", "ordinary", "current-standard", "current-ordinary", "before", "after"]) {
+        const render = renderer(variant !== "after" && !variant.startsWith("current-"));
+        const item = ["ordinary", "standard", "current-standard", "current-ordinary"].includes(variant) ? ordinary(row) : decorate(row);
+        if (variant.endsWith("standard")) { item.name = "Ordinary park"; item.activityTypes = ["park"]; }
         if (kind === "plan") item.activityTypes = ["haunted-house"];
         await page.setContent(`<html class="dark"><head><style>${css}</style></head><body>${render(kind, [item, { ...ordinary(row), id: "second-control", name: "Ordinary park", activityTypes: ["park"] }])}</body></html>`);
         await page.locator("img").evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
@@ -91,15 +96,33 @@ try {
           const rect = el.getBoundingClientRect(), image = kind === "result" ? document.querySelector("img") : el.querySelector("img"), media = image.parentElement.getBoundingClientRect();
           return { width: rect.width, height: rect.height, mediaHeight: media.height, cardClass: el.className,
             mediaClass: image.parentElement.className, scrollWidth: el.scrollWidth,
+            overflowElements: [...el.querySelectorAll("*")].filter(child => child.clientWidth > 0 && child.scrollWidth > child.clientWidth + 1).map(child => ({ tag: child.tagName, text: child.textContent, className: child.className, width: child.clientWidth, scrollWidth: child.scrollWidth, overflow: child.scrollWidth - child.clientWidth })),
             summary: el.querySelector("summary")?.getBoundingClientRect().toJSON() };
         }, kind);
         measured[variant] = geometry;
+        await page.screenshot({ path: `${out}/${row.seasonalListing?.recordId ?? row.id}-${width}-${kind}-${variant}.png`, fullPage: true });
+        fs.writeFileSync(`${out}/current-measurement.json`, JSON.stringify({ id: row.id, kind, width, variant, measured }, null, 2));
         if (variant === "after") {
           const details = card.locator("details");
           assert.equal(await details.getAttribute("open"), null);
           assert.equal(await card.locator("[data-seasonal-visit-notes] > p").innerText(), "Check current hours, admission, and weather before you go.");
           assert.ok(geometry.summary.height >= 24, "Details has at least a 24px target");
-          assert.ok(geometry.scrollWidth <= geometry.width + 1, "No horizontal card overflow");
+          // The full result has a separately accepted inherited Directions-label
+          // overflow at 320px. Do not confuse that unchanged control with a new
+          // seasonal-content overflow, or erase its measured baseline.
+          const priorOverflow = kind === "result" ? Math.max(measured.before.scrollWidth, measured.ordinary.scrollWidth) : geometry.width;
+          assert.ok(geometry.scrollWidth <= Math.max(geometry.width, priorOverflow) + 1, "No new horizontal card overflow");
+          if (kind === "result") for (const child of geometry.overflowElements) {
+            const prior = measured.before.overflowElements.find(old => old.tag === child.tag && old.text === child.text);
+            assert.ok(prior && child.overflow <= prior.overflow + 1, `No newly overflowing result element: ${child.text}`);
+          }
+          const noteGeometry = await card.locator("[data-seasonal-visit-notes]").evaluate(el => {
+            const box = el.getBoundingClientRect();
+            return { width: box.width, scrollWidth: el.scrollWidth, descendants: [...el.querySelectorAll("p, summary, summary span")].map(child => ({ text: child.textContent, width: child.getBoundingClientRect().width, scrollWidth: child.scrollWidth })) };
+          });
+          geometry.notes = noteGeometry;
+          assert.ok(noteGeometry.scrollWidth <= noteGeometry.width + 1, "Seasonal notice and summary never overflow");
+          for (const child of noteGeometry.descendants) assert.ok(child.scrollWidth <= child.width + 1, "Seasonal text is not clipped");
           await details.locator("summary").press("Enter");
           assert.notEqual(await details.getAttribute("open"), null);
           assert.ok(await details.locator("p").count());
@@ -110,13 +133,19 @@ try {
       }
       const delta = measured.after.height - measured.ordinary.height;
       verdict.comparisons.push({ id: row.id, kind, width, ...measured, delta, standardDelta: measured.after.height - measured.standard.height, percent: delta / measured.ordinary.height * 100 });
+      assert.equal(measured["current-ordinary"].height, measured.ordinary.height, "Ordinary matched card height is unchanged");
+      assert.equal(measured["current-standard"].height, measured.standard.height, "Short ordinary card height is unchanged");
       assert.equal(measured.after.mediaHeight, measured.ordinary.mediaHeight);
       assert.equal(measured.after.mediaClass, measured.ordinary.mediaClass);
       assert.equal(measured.after.cardClass, measured.ordinary.cardClass);
       if (delta > 16) verdict.errors.push(`Collapsed ${kind} seasonal card exceeds matched ordinary by ${delta}px at ${width}: ${row.name}`);
       if (kind === "options" && measured.after.height - measured.standard.height > 16) verdict.errors.push(`Collapsed option exceeds short standard by ${measured.after.height - measured.standard.height}px at ${width}: ${row.name}`);
       assert.ok(measured.after.height <= measured.before.height);
-      await context.close();
+      } catch (error) {
+        verdict.errors.push({ id: row.id, kind, width, message: error.stack });
+        if (!verdict.comparisons.some(item => item.id === row.id && item.kind === kind && item.width === width)) verdict.comparisons.push({ id: row.id, kind, width, ...measured, incomplete: true });
+      } finally { await context.close(); }
+      fs.writeFileSync(`${out}/verdict.json`, JSON.stringify(verdict, null, 2));
     }
     }
   }
