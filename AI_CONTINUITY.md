@@ -1,3 +1,52 @@
+# Pick For Us — RELEASED: PR #53 Verified Card-Size Fix Is Live (2026-10-08)
+
+## CURRENT — PRODUCTION ACCEPTANCE PASS; CONTINUITY CLOSEOUT THEN STOP
+
+**RELEASED — PR #53 VERIFIED CARD-SIZE FIX IS LIVE.** Exact publication, READY production, aliases and scoped live card acceptance PASS. The pending protection decision below is resolved. All seventeen factual records remain unchanged; no new data import. **Stop after this readback. No further production, data, implementation or monitoring work is authorized.**
+
+### Exact publication and one-attempt authority
+
+- Main / [merged PR #53](https://github.com/caleb1234calvin-art/dinner-roulette/pull/53): **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**.
+- Complete tree **`df157a388e582bae1e085d456f704e8f24d48aac`**; sole parent **`9c8fcd22a025b3cd23ba360d76faec7844c5d06c`**; previous main **`2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81`**.
+- Non-force expected-head-guarded six-commit fast-forward at **18:56:04Z** preserved exact source/tree. PR closed/merged automatically at that SHA; historical draft flag does not mean the PR remains unmerged.
+- Production **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv`**, READY **2026-10-08T18:56:25.875Z**, exact main213502.
+- [Live app](https://pickforus.app/) · [Immutable deployment](https://dinner-roulette-j8zc29052-minions-9e2c.vercel.app/).
+
+Initial preflight correctly stopped on unprotected main. Owner **18:54:19** then explicitly granted a **one-attempt, exact PR53 release waiver**, consumed on completion or abort. It is now **consumed**. No protection setting was changed and no standing exception exists.
+
+Fresh immediate main/head/tree/parent, ancestry/checks, current8VL production/aliases and safe build/rollback route were verified before publication. Actual authenticated build override remained:
+`VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`.
+Empty root, Node24.x; ordinary migration-chaining npm build was never used. Automatic deployment created18:56:06.736Z, building18:56:11.141Z, READY18:56:25.875Z. Logs bind checkout213502 and successful client/SSR build. Ten entry assets match logs and are identical between apex/immutable page; no full cross-build output hash equality claim.
+
+### Scoped live acceptance
+
+Normal production UI/current clock at18:57–19:00, without fixtures, provider interception, state injection, clock changes or external journey actions:
+
+- **Browse:** Hotel of Terror and Dungeons of Doom cards **272px**, matching four ordinary park cards **272px**;96px artwork, no horizontal overflow. Exact compact notice, Good confidence and collapsed Details visible.
+- **Full result:** Hotel opened normally with224px media/176px artwork, supported-address Directions, notice/confidence and default collapsed Details. Expanded dates/variable closing, waiver/fingerprint, sensory restrictions and approximate location remained readable. Collapse/close worked.
+- **Plan:** Normal Parks addition produced Dungeons plus Russel H. Keller Park. Seasonal **187.3125px** versus ordinary **198.3125px (-11px)**, both80px media; no overflow. Expanded facts were readable; keyboard Return collapsed Details. Maps/Info and ordinary unknown-hours helper remained.
+- **Ordinary controls:** park-only options retained ordinary layout/warnings without seasonal notes injected.
+- Exact notice remains **“Check current hours, admission, and weather before you go.”**
+- Seasonal discovery initially disclosed saved-only coverage; ordinary park discovery returned results. This is not provider-health PASS.
+
+Screenshots for collapsed/expanded browse, full result, plan and ordinary options were inspected. This is **scoped live smoke**, not a new full120-case geometry or277-case live rerun. Source-bound independent evidence remains820 tests/four skips, lint0/six warnings, typecheck/safe build, hosted37818549473/job113453343453 SUCCESS,120 geometry and277 retained seasonal cases. Source fingerprint **`3af79a5414cd8138f9aeda174ce01991f655da6a2e2b2b38705e020647dfbda0` /450 files** binds reviewed scope.
+
+### Aliases and rollback retained
+
+All five production aliases were individually verified on BCd: `pickforus.app`, `www.pickforus.app` (redirect to apex), `dinner-roulette-chi.vercel.app` (native origin unchanged), `dinner-roulette-minions-9e2c.vercel.app`, `dinner-roulette-git-main-minions-9e2c.vercel.app`.
+
+Immediate previous rollback is **`dpl_8VLrfiVD7MJx6KQCgGhRNtd4ESE9` READY**, source2fe. Authenticated postrelease dialog showed exact BCd Current/8VL Previous; canceled without Continue/Confirm. No rollback was executed or needed. Eoy is older history, not this release's immediate target. Under the latest owner failure instruction, **stop, preserve rollback and report options** on a material failure; do not infer blanket automatic rollback authority.
+
+### Recoverable final operator receipt and limits
+
+[Exact release report](docs/handoffs/active/seasonal-card-size-production-release.md), Library **`libfile_1d4658b6cad88191a601b586b39186f1`**, SHA-256 **`af70c65bda847cc651f252fe5487326a59253182e5b86a5750584e023e20d3ae`**. Evidence ZIP Library **`libfile_dc5229b442dc81918b64ed0b9602e1c8`**, SHA-256 **`0e8acfc23f302a9939dcb65b788a2bf17c905c1199a3d9dda2abf5bc4e8176c8`**. Report includes all seven changed paths and operational/scoped-smoke receipts. Its producer-time continuity-pending sentence is superseded after this readback; exact report bytes stay unchanged.
+
+Inherited320px Directions clipping remains no worse, not fixed; six warnings remain. Small footer and deliberate collapsed-title truncation are reviewed tradeoffs; expanded material facts remain accessible. Optional historical dev-only probe remains INCONCLUSIVE. Approximate locations, conservative Open Now, temporary Other icon and no provider/weather/ticket guarantee remain. Physical Android/WebView/GPS HOLD; signing/Play outside scope. All seventeen factual/taxonomy/lifecycle/navigation policies unchanged.
+
+Fresh **19:02 UTC** main213502/tree df157, PR53 merged exact and productionBCd READY were rechecked. Only AI_CONTINUITY.md and the exact operator report change on deployment-disabled `integration/continuity-refresh-2026-10-07`. **PARENT COMMIT:** `8f94a0821bbdffb637608fc4172156f8e81e49f5`; **PARENT TREE:** `0cd95228160ed132cb874f056d164a8497fefd80`. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains exclusion. No extra deployment for documentation. Preserve all prior history and stop.
+
+## Prior continuity — operational protection HOLD, now resolved and preserved verbatim
+
 # Pick For Us — Card Layout Release Operational HOLD (2026-10-08)
 
 ## CURRENT — OWNER PROTECTION DECISION PENDING; TECHNICAL/VISUAL PASS REMAINS CLOSED
