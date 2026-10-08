@@ -1,3 +1,4 @@
+import { getCuratedSeasonalPlace } from "./curated-policy";
 import { mergeDateNight } from "./identity";
 import { buildDateNightQueryPlan, normalizeDateNightActivityTypes } from "./query-plan";
 import { DATE_NIGHT_RADIAL_VERSION, dateNightPatchOwns, resolveDateNightPatch } from "./radial-plan";
@@ -176,7 +177,11 @@ export function createDateNightDiscoveryCache({
         // Reusing an old superset for Movies must not resurrect an old Corn Maze
         // snapshot after a newer Corn Maze query returned valid-empty. Retain
         // full provenance/classification on every included identity.
-        return entry.venues.filter((place) => place.activityTypes.some((type) => covered.includes(type)));
+        return entry.venues.filter((place) => place.activityTypes.some((type) => covered.includes(type)) ||
+          // Current catalog lifecycle supplements are not provider category coverage.
+          // Their ordinary filters, radius, expiry and Open Now policy are applied
+          // downstream; only a current registry identity can claim this exception.
+          (!query.halloweenActive && getCuratedSeasonalPlace(place.id)?.seasonalListing?.visibility === "listing-lifecycle"));
       }), ...negativeEvidence]);
       return { missingActivityTypes, negativeEvidence,
         acquiredAt: Math.min(...usedEntries.map(entry => entry.acquiredAt)),

@@ -584,7 +584,23 @@ try {
       assert.deepEqual(Object.values(state.preferences).filter(item => item.favorite).map(item => item.restaurantId), [row.id]);
       await closeResult(page); await press(page.getByRole("switch", { name: "Favorites only", exact: true }), "Space"); await activityCount(page, 1);
       await advance(test, row.seasonalListing.listingExpiresAt); await activityCount(page, 0);
-      await assertNoRpc(test, before, "Canonical and provider favorites cannot resurrect expired listings");
+      if (row.seasonalListing.visibility === "listing-lifecycle") {
+        // Crossing the global Halloween boundary changes the acquisition signature
+        // once. This is not an expiry refresh or positive seasonal discovery.
+        await waitFor(async () => test.rpc.length === before + 1 && test.rpc.at(-1).response, "Ordinary-only season-window refresh missing");
+        await settleLocal(test);
+        assert.equal(test.rpc.length, before + 1, "Exactly one global-window transition refresh");
+        const body = test.rpc.at(-1).body;
+        for (const type of seasonalTypes) assert.ok(!body.includes(`"s":"${type}"`), "Post-window request contains no seasonal activity type");
+        for (const type of ["bowling", "arcade", "mini-golf", "escape-room", "skating", "movies", "museum", "park"]) {
+          assert.ok(body.includes(`"s":"${type}"`), "Transition reacquires the ordinary Anything signature");
+        }
+        const calls = (await readFile(events, "utf8")).split("\n").filter(Boolean).map(JSON.parse)
+          .filter(event => event.scenario === test.state.scenario && event.at === row.seasonalListing.listingExpiresAt);
+        assert.ok(calls.length > 0);
+        assert.ok(calls.every(event => event.group !== "seasonal"), "Transition never queries positive seasonal providers");
+        await activityCount(page, 0);
+      } else await assertNoRpc(test, before, "Canonical and provider favorites cannot resurrect expired listings");
     }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
       [node]: preference(row, node, { favorite: true, ourRating: 4 }), [way]: preference(row, way, { favorite: true, timesVisited: 2 }),
     } });
@@ -669,6 +685,7 @@ try {
       await advance(test, row.seasonalListing.listingExpiresAt);
       await rowHeading(page, row).waitFor({ state: "hidden" }); await closeOptions(page);
       await activityCount(page, nearby(row, { at: row.seasonalListing.listingExpiresAt, season: false }).length);
+      await assertNoRpc(test, before, "Expiry within the already-ordinary late-fall session stays local");
       await visitNav(page, "Favorites", "/favorites"); await inspectSaved(test, row, "late-expired-favorite", true);
       await advance(test, "2027-11-05T12:00:00-05:00");
       await visitNav(page, "Pick", "/"); await ready(page);

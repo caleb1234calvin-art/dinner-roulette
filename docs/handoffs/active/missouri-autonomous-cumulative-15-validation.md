@@ -101,3 +101,25 @@ Current data authority: read R2 together with
 `audit/missouri-autonomous-active15-independent-verification-r3-2026-10-08.md`
 and `audit/ACTIVE15-DATA-IV-R3-Manifest.json`. R3 supersedes only the Pomme
 rideshare policy and binds the current five-file data/copy set; R2 remains history.
+
+## Actual client late-fall cache correction (IV-03)
+
+Retained 93b hosted evidence ran all 235 new scenarios: three Pomme failures and
+fifteen actual late-fall client visibility failures, plus three overstrict RPC
+expectations. RPCs contained the correct lifecycle catalog records, but client
+cache assembly dropped them because their activity types were not ordinary
+provider coverage. This is a real client integration defect, not a data HOLD.
+
+Cache reads now retain only current-registry, explicitly lifecycle-visible
+catalog identities as supplements when the Halloween layer is off. Provider
+coverage groups and query types are unchanged. Existing radius, ordinary filters,
+negative evidence, exact expiry and Open Now eligibility continue downstream.
+Actual discovery-cache and radial-session tests cover all three late-fall venues.
+
+The separate three favorite-expiry assertions cross October into November and
+must allow exactly one global-window transition to the eight ordinary query
+types. They assert no positive seasonal queries and an empty expired favorite
+pool. Expiry inside an already-ordinary November session still requires zero RPC.
+The failed 93b artifact is 11580279394, SHA-256
+1febeb0ff5cb2697cc1db979f9e8a50d6f54f310fe2e38882a7485fbaa42b505.
+No earlier browser result is promoted to the corrected candidate.
