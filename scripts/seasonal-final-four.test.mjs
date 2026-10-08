@@ -7,6 +7,8 @@ const { MISSOURI_2026_FINAL_FOUR_CATALOG } =
   load("src/lib/date-night/missouri-2026-final-four-catalog.ts");
 const { SEASONAL_PRESENTATIONS } =
   load("src/lib/date-night/seasonal-presentation-catalog.ts");
+const { getCuratedSeasonalPlace } =
+  load("src/lib/date-night/curated-policy.ts");
 
 const expected = ["MO26-012","MO26-028","MO26-074","MO26-084"];
 
@@ -17,6 +19,11 @@ test("final four contains only the independently cleared immediate subset", () =
   );
   assert.equal(MISSOURI_2026_FINAL_FOUR_CATALOG.some((x) => x.seasonalListing.recordId === "MO26-013"), false);
   assert.equal(MISSOURI_2026_FINAL_FOUR_CATALOG.some((x) => x.seasonalListing.recordId === "MO26-085"), false);
+});
+
+test("final four are current policy for cached/saved identities", () => {
+  for (const place of MISSOURI_2026_FINAL_FOUR_CATALOG)
+    assert.equal(getCuratedSeasonalPlace(place.id)?.id, place.id);
 });
 
 test("all final-four records use Other only and fail closed for Open Now", () => {
