@@ -1,3 +1,4 @@
+import { MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG } from "./missouri-2026-three-source-tier-a-catalog";
 import { MISSOURI_2026_LATE_FALL_CATALOG } from "./missouri-2026-late-fall-catalog";
 import { MISSOURI_2026_V1_NEXT_SEASONAL_CATALOG } from "./missouri-2026-v1-next-catalog";
 import { MISSOURI_2026_DEFERRED_BATCH_3_CATALOG } from "./missouri-2026-deferred-batch-3-catalog";
@@ -136,8 +137,8 @@ async function queryMirror(url: string, body: string, halloweenSeason: boolean, 
 
 function localWithin(lat: number, lon: number, radiusMiles: number, halloweenActive: boolean): DateNightPlace[] {
   const catalog = halloweenActive
-    ? [...JASPER_COUNTY_DATE_NIGHT_CATALOG, ...JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG, ...MISSOURI_2026_CLEARED_SEASONAL_CATALOG, ...MISSOURI_2026_V1_SEASONAL_CATALOG, ...MISSOURI_2026_V1_NEXT_SEASONAL_CATALOG, ...MISSOURI_2026_DEFERRED_BATCH_3_CATALOG, ...MISSOURI_2026_FINAL_FOUR_CATALOG, ...MISSOURI_2026_LATE_FALL_CATALOG]
-    : [...JASPER_COUNTY_DATE_NIGHT_CATALOG, ...MISSOURI_2026_LATE_FALL_CATALOG];
+    ? [...JASPER_COUNTY_DATE_NIGHT_CATALOG, ...JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG, ...MISSOURI_2026_CLEARED_SEASONAL_CATALOG, ...MISSOURI_2026_V1_SEASONAL_CATALOG, ...MISSOURI_2026_V1_NEXT_SEASONAL_CATALOG, ...MISSOURI_2026_DEFERRED_BATCH_3_CATALOG, ...MISSOURI_2026_FINAL_FOUR_CATALOG, ...MISSOURI_2026_LATE_FALL_CATALOG, ...MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG]
+    : [...JASPER_COUNTY_DATE_NIGHT_CATALOG, ...MISSOURI_2026_LATE_FALL_CATALOG, ...MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG.filter((place) => place.seasonalListing?.visibility === "listing-lifecycle")];
   return catalog.filter((place) => haversineMiles(lat, lon, place.lat, place.lon) <= radiusMiles + 1);
 }
 
