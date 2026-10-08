@@ -3,6 +3,56 @@ import type { SeasonalPresentation } from "./seasonal-presentation";
 /** Explicit independently reviewed visitor copy. Full facts remain in immutable audit
  * artifacts and catalog metadata; no audit narratives are rendered as consumer prose. */
 export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentation>> = {
+  "MO26-036": {
+    "canonicalId": "date-night-mo26-036-monster-corn-maze",
+    "confidence": "good",
+    "details": [
+      "Fridays and Saturdays, September 18–October 30, 2026. Gates open 6:30 p.m.; maze starts after dark; last tickets 11 p.m.; final exit time varies.",
+      "$20 general admission; $30 VIP timed reservation. Ages 13 and under require an adult at all times.",
+      "Maze is not handicap accessible. No pets, smoking, alcohol/illicit drugs, weapons, backpacks/purses or flashlights.",
+      "Weather may close the maze. Location is approximate; Directions use the operator's visitor address."
+    ]
+  },
+  "MO26-058": {
+    "canonicalId": "date-night-mo26-058-beast",
+    "confidence": "high",
+    "details": [
+      "Listed nights October 2–31, 2026. Thu 7:30–11:30 p.m.; Fri 7:30 p.m.–midnight; Sat 6:30 p.m.–12:30 a.m.",
+      "Required first stop: Central Waiver Station, 1300 W 13th St. Arrive at least one hour before timed entry.",
+      "Waiver/video verification and a security bracelet are required. Minors need an adult 18+ with valid ID to sign in person.",
+      "No weapons or costumes. Map placement is approximate and refers to the attraction; Directions lead to the waiver station first."
+    ]
+  },
+  "MO26-069": {
+    "canonicalId": "date-night-mo26-069-dead-factory",
+    "confidence": "high",
+    "details": [
+      "Fridays and Saturdays, September 25–October 31, 2026, 7–11 p.m.",
+      "$25 per person for all ages at the ticket booth; cash, credit and debit accepted. Operator states no added ticket taxes or fees.",
+      "Children under 13 need an adult. Indoor waiting area; attraction runs rain or shine.",
+      "Operator advertises free onsite parking. Map placement remains approximate."
+    ]
+  },
+  "MO26-071": {
+    "canonicalId": "date-night-mo26-071-pomme-de-terror",
+    "confidence": "high",
+    "details": [
+      "October 16–17, 2026 at the Hermitage Area Campground. Friday naturalist program starts 7:30 p.m.",
+      "Saturday activities run at separate times through trick-or-treating 5–7 p.m.; do not treat this as continuous opening.",
+      "Free and open to the public. Day-use visitors may join all activities except the campground decorating contest.",
+      "Directions use the official Hermitage campground event point, not the Pittsburg-side park office."
+    ]
+  },
+  "MO26-118": {
+    "canonicalId": "date-night-mo26-118-haunted-hall-horror",
+    "confidence": "good",
+    "details": [
+      "October 9–10, 16–17, 23–24 and 30–31, 2026, 7–10 p.m.",
+      "$12 per person; current city page says ages 5 and under free. October 31 student night is $8 with valid student ID.",
+      "A 2026 secondary report says ages 4 and under free, so verify the child cutoff before purchase.",
+      "Children 12 and under require an adult. This is the A. C. Brase Arena event, not the separate S.T.A.R. Haunted Hall."
+    ]
+  },
   "MO26-019": {
     "canonicalId": "date-night-mo26-019-james-river-joplin-party",
     "confidence": "high",
