@@ -1,3 +1,50 @@
+# Pick For Us — Listing Contract Revision #1 Accepted; Phase 2 Data Review Authorized (2026-10-08)
+
+## CURRENT — PHASE 1 AUDIT QUALITY PASS; OWNER ACCEPTED STAGED V1; PHASE 2 RESULTS PENDING
+
+The owner accepted the independently reviewed **staged V1 Seasonal Listing Completeness Policy Revision #1** at **2026-10-08 02:29:51 UTC** and authorized **Phase 2 data-only re-clearance of all existing 26 HOLD records**. This supersedes the proposal's review-time acceptance-pending language. **No new listing clearance, runtime implementation, import or release is claimed by this checkpoint.**
+
+Phase 1 is complete with independent **AUDIT QUALITY PASS**, no blocking factual correction. This is proposal/source-audit quality, not implementation/data/release PASS. The shipped Lloyd/Sam release remains complete and production H655 stays unchanged.
+
+### Accepted staged V1 contract and binding clarifications
+
+- A supported current 2026 seasonal identity/activity and **official usable visitor address** can establish listing evidence. Exact entrance/parking coordinates, exact price and complete hours are **not automatic listing gates**. Unknown facts remain unknown; preserve supported material age/access/admission/reservation restrictions and special activity locations/hours.
+- Approximate placement is allowed only with identified reproducible provenance and entity/address match. Address-preferred Directions must not silently select an approximate numeric point. Address-only records can clear factually without placement; keep them **outside radius math/counts/picks** and distinguish staged UI absence from factual HOLD.
+- **Minimum accepted staging:** use the existing radius path first for supported approximate placements. A separate distance-unknown catalog is optional additional UI, not a prerequisite for factual clearance and not delivered by this audit.
+- Unknown/partial seasonal hours remain browseable but fail closed for Open Now; verified display-only hours also remain false unless safely machine-evaluable. Preserve user saved Open Now preference. Generic/provider24/7 hours and duplicate/cache order must not override curated unknown/partial/never state.
+- One compact notice plus optional supported Details replaces repeated caution text in a later implementation; it must not hide known material restrictions. Generic ride-service launches must have truthful accessible labels and cannot promise a prefilled destination.
+- Mandatory hard **2026** lifecycle: exact end when known; date-only next local midnight in venue timezone as retention, not invented closing hours; unknown final dates use the accepted conservative editorial ceiling **no later than end of November 2**, narrowed by earlier evidence. This is never admission/venue-hours evidence. Cancellation/closure wins; malformed dates/timezones fail closed; venue-local year guard prevents 2027 rollover even when review is overdue.
+- Approximate/approximate **and approximate/verified** deduplication requires affirmative identity evidence. Shared address/point/type alone cannot collapse distinct operators/events. Test both merge/cache/completion orders in any later implementation.
+- Older strict exact-arrival completeness HOLDs remain preserved historical verdicts. They must not be silently relabeled, nor smuggled back in as automatic gates under this accepted contract. Myer's remains absent from trusted runtime fallback until a separately reviewed future projection and authorized import.
+
+### Exact Phase 2 scope and five result classes
+
+Review **all 26 existing HOLDs**, not statewide rediscovery, and return one evidence-based class per record:
+1. **CLEARS UNDER NEW CONTRACT**
+2. **CLEARS FACTUALLY / STAGED OUTSIDE RADIUS**
+3. **STILL HOLD — exact actual blocker(s)**
+4. **EXPIRED**
+5. **REJECT**
+
+Report totals, record-level reasons, separate spatial readiness/source freshness, and a recommended first small batch. Address-only factual clearance must not be counted as radius-ready. Reopen decisive current sources only as needed; do not repeat exhausted searches or invent precision/prices/hours. Expired records stay expired. **The existing 26 HOLD outcomes are unchanged until Phase 2 results are actually produced and independently checked.** No implementation, catalog/runtime mutation, import, main merge or deployment is authorized by this data-only phase.
+
+### Recoverable Phase 1 artifacts
+
+- [Exact source-bound proposal](docs/handoffs/active/seasonal-listing-contract-phase1-2026-10-08.md), SHA-256 **`f71a81465c2da2bd8c2aa1ce16058c8ce560c94a6a585323ba1580359bfeda8c`**. Its acceptance-pending phrasing is historical; this top entry records the later owner decision.
+- [Exact independent review and required clarifications](docs/handoffs/active/seasonal-listing-contract-phase1-review-2026-10-08.md), SHA-256 **`81bf0479635bfa39d488b499f81f73563b5460d168cb4638512a5cfc4281fbee`**.
+- Retained author fixture **`listing-contract-audit/current-behavior-probes.json`**, SHA-256 **`e24406735454817f7ebbb2d528da4fd67d766903d025c5f360e50750f2207929`**, referenced by the independent report. It proves current source behavior only, not new-contract implementation. Fixture/source code is not added by this documentation publication.
+- Both reports are pinned to shipped main **`0bbf6758e94eea8129e21b004d4c36ff886cd46d`**, tree **`7add088fcbcacb8526f90a6f09c6dd7ca5249b3c`**. No full test/browser rerun or runtime acceptance is claimed for this audit.
+
+### Fresh baseline and next action
+
+Fresh **02:31 UTC** reads confirm main **0bbf6758…**, production **`dpl_H655TNrL3hSuBNF8w2xp4MpxspkM`** READY at that exact SHA, and no drift. Prior release/rollback/cosmetic/physical limitations remain as recorded; no completed shipped work is reopened.
+
+This approved publication changes only **AI_CONTINUITY.md and the two linked report documents** on deployment-disabled `integration/continuity-refresh-2026-10-07`, parent **`3fc578d3d854f50e12cf2c4140956e3a313ed01b`**, tree **`6570aa1900ba4974bc28c8a4964bea18dadc7d5d`**. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**` exclusion. All prior continuity remains verbatim below.
+
+**Next:** execute the authorized bounded Phase 2 data-only review under the accepted staged contract, then independently verify exact outputs before proposing any implementation/import batch. No automatic release authority follows.
+
+## Prior continuity — completed exact-tree production release, preserved verbatim
+
 # Pick For Us — Exact-Tree Seasonal Release SHIPPED (2026-10-08)
 
 ## CURRENT — MAIN PUBLISHED; PRODUCTION READY; ALIASES AND QUALIFIED SMOKE PASS
