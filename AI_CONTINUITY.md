@@ -1,3 +1,54 @@
+# Pick For Us — Autonomous Missouri Pipeline Active; Cumulative Acceptance Gaps Open (2026-10-08)
+
+## CURRENT — NEW STANDING NONPRODUCTION AUTHORITY; NO CUMULATIVE RELEASE PASS
+
+Owner **20:20:19 UTC** authorized the continuing Missouri research, independent verification, cleared-record implementation, draft PR, bounded correction, validation and continuity pipeline. This supersedes the earlier STOP **only within that nonproduction scope**. Completed PR53 production work remains closed. No main merge, production promotion, protection waiver/settings, Vercel/DNS change, Android signing or Play action is authorized.
+
+Continue ordinary pipeline stages without repeated permission, using bounded research batches8–15 and implementation subsets5–15 when practical. Stop when an exact cumulative candidate independently passes every required gate at **VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION**, then present its exact identities, evidence, limitations and one concrete release decision. Current candidates have unresolved evidence/runtime/browser gates; that stopping point has not been reached.
+
+### Reconciled immutable candidate inventory
+
+- [PR #57](https://github.com/caleb1234calvin-art/dinner-roulette/pull/57), `integration/seasonal-brookdale-late-fall`, head **`a61af2bfd05ad959dfa3a3fb8dd564ad7b804921`**, tree **`f2879107c2cd65bddc96c849073cfe43f5965735`**, sole parent **`d77b8f031bf0dda309f33b958c0e67eaba3a7110`**. Main-based cumulative ten-record candidate: Monster Corn Maze, Beast, Dead Factory, Pomme de Terror, Haunted Hall of Horror, Witches Day Out, Nevada/Vernon County Oktoberfest, Osage Beach Fall Festival, McWilliams Other-only and Brookdale.
+- [PR #58](https://github.com/caleb1234calvin-art/dinner-roulette/pull/58), `integration/seasonal-three-source-tier-a-five`, head **`d876dbc12de47d5d40be0e9cc2116b30d9834089`**, tree **`a3369fa554f7e07ca1e39ac0ccdbdf4296f4895a`**, sole parent **`d588ae3d7cf229cb3772b64383d3bef6ef04e63d`**. Stacked on PR57; adds Edge of Hell, Creepyworld, The Darkness, Haunted River Float and Fear the Bloody Timber. Cumulative comparison is **23 commits ahead / zero behind /14 main-relative paths**, containing PR57 ancestry.
+- PR54 head **`f539d49fc5ff1ff08727566b6344e86c00e35d91`** and PR55 head **`e397488c4e33355cbf1e278d388226d0a41716dc`** are earlier constituent work; PR56 shares PR57's a61af head. Their intended changes/cache-policy corrections are represented in the cumulative line. **Do not merge constituent histories again.**
+- These remain draft/unmerged source candidates. Author preparation is local on `integration/missouri-autonomous-cumulative-15`, preserving d876's ancestry; **no replacement published SHA or new PR is asserted yet**.
+
+### Actual validation status and bounded gaps
+
+PR57 exact web **37835887461 SUCCESS** and Android readiness succeeded. PR58 exact **Android37837743557 SUCCESS**, but **no web run** existed because its stacked base did not match the web PR filter. Android success does not stand in for missing web validation.
+
+Existing277 seasonal scenarios and geometry cover the old seventeen, **not actual acceptance of all fifteen new records**. Brookdale's five late-fall tests and Creepyworld/Darkness flags do not establish full source-bound late-fall browser behavior. Required new-fifteen browser coverage and all-thirty-two card geometry are being added, alongside exact cumulative CI.
+
+Referenced deferred-batch-3/Tier-A independent report files are missing from the candidate's recoverable evidence. Fresh independent data/copy verification is recovering and checking those receipts rather than assuming prior PASS. Brookdale expiry boundary is under review. The author also confirmed new-fifteen consumer copy exposes routine prices and lifecycle/audit prose; minimal copy corrections are required under the existing compact-Details contract. Original facts/provenance must remain in audit artifacts.
+
+**Gate distinctions:** prior hosted success is scoped to its actual tests; factual claims in draft bodies are not fresh independent approval; missing evidence is HOLD, not rejection; cumulative implementation/browser/release acceptance remains pending. Preserve failed attempts and rerun exact-head affected/full gates after corrections.
+
+### Active work and evidence rules
+
+- Implementation/validation worker: add new-record browser, all32 layout, late-fall/cache/identity/navigation/expiry/no2027 coverage, recover cumulative main-based CI, and make only justified bounded corrections.
+- Independent data/copy worker: reopen source bindings, recover missing review artifacts and verify every active record/projection before final candidate approval.
+- Delta researcher:8–15 commercial/public candidates from **FrightMaps, MissouriHauntedHouses.com and The Scare Factor**, deduped against runtime, candidates, historical audit and previous holds; no statewide restart.
+
+Use sources field by field. Missing/stale fields do not invalidate other useful fields, and an “updated” label does not validate everything. Prefer/corroborate material visitor claims with operator, government/parks, official tickets or DMO sources; preserve conflicts, never silently average them. Existing records can receive independently reviewed stronger/additive enrichment. Keep residential/home haunts in a separate ledger requiring intentionally public visitor address, explicit2026 invitation, current qualified schedule/admission and product-policy review; never infer private addresses.
+
+### Holds, lifecycle and safety boundaries
+
+Hell Harvest: factual support reported but **runtime placement HOLD**. Labyrinth of Fear: **exact2026 date HOLD**. Rising Haunted Attraction: **current-year/exact schedule HOLD**. Do not import these through a batch PASS. Vino Noir remains the prior **EXPIRE / no2026 import decision**, with source/report retained; this label is not a fresh assertion that the physical event has already elapsed.
+
+Preserve ListingCompletenessV1: approximate address placement is for map/distance/radius, not entrance/parking/rideshare precision. Beast/Edge Directions must honestly lead first to the Central Waiver Station; Pomme to its verified Hermitage campground point. Never convert display hours into machine Open Now; preserve exact2026 expiry and no2027 recurrence.
+
+Brookdale/Creepyworld/Darkness may use independently verified, explicitly tested listing-lifecycle visibility through Anything. **Do not extend Halloween UI/chips/provider discovery globally after November2**, revive expired records or extend live seasonal discovery. Every lifecycle-enabled record needs explicit tests.
+
+### Fresh baseline, recovery and next gate
+
+Fresh **20:25 UTC** remote reads confirm main **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**, production **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv` READY** at that source, and the PR57/58 identities above unchanged. Seventeen records are shipped; fifteen candidate additions are not production. Retained immediate predecessor8VL remains the prior release rollback record; future release requires fresh target/procedure verification. All one-attempt waivers are consumed.
+
+Reconciliation snapshot `autonomous-pipeline-reconciliation/readback.json` records20:23:23 remote refs, commits, runs and full cumulative diff. This canonical summary supplies recoverable control state while exact new review artifacts are being prepared. Next: freeze corrected cumulative identity, complete data/copy and full exact-head technical/browser/layout/late-fall checks, obtain independent final verification and reconcile continuity. No premature release recommendation.
+
+This checkpoint changes only AI_CONTINUITY.md on deployment-disabled `integration/continuity-refresh-2026-10-07`. **PARENT COMMIT:** `421c111687514ad7a34f729a1224fe3055f5d4ff`; **PARENT TREE:** `d1fa87da7ccd071dba44acb3c8e8dc3271c7a59c`. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains exclusion. No main/docs deployment. Preserve all release history below; historical STOP does not cancel this newly authorized bounded pipeline.
+
+## Prior continuity — PR53 release complete, preserved verbatim
+
 # Pick For Us — RELEASED: PR #53 Verified Card-Size Fix Is Live (2026-10-08)
 
 ## CURRENT — PRODUCTION ACCEPTANCE PASS; CONTINUITY CLOSEOUT THEN STOP
