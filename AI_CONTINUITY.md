@@ -1,3 +1,44 @@
+# Pick For Us — Delta3 Final Data Gate; Four Placement-Ready Records Parked (2026-10-08)
+
+## CURRENT — DELTA3 TWO DATA PASSES; ACTIVE PR #59 BROWSER VERIFICATION STILL OPEN
+
+Delta3 independent R2 concludes **2 factual PASS /13 HOLD /0 REJECT**, with both accepted approximate placements. **No implementation/browser/release PASS.** Park Terror at the Ranch and PanicFest–The Cobb Factory alongside Delta2 Branson Ghoster and Liberty Corn Maze for a later bounded batch. Nixa and Carolyn remain separately staged outside radius. Do not mix these records into current PR59.
+
+### Cleared projections and meaningful qualifications
+
+- **Terror at the Ranch, Harrisonville:** official2026 ticket source supports relocated O'Bannon identity at23111 S Jefferson Pkwy and Haunted House + Corn Maze. Do not inherit historical Pumpkin Patch. Partial display schedule, Limited details, null machine hours/never-OpenNow. Editorial **November2 00:00 CST** cutoff is retention only, not admission/operating evidence. Approximate reproduced Census point **38.699068931183,-94.350116918769** supports map/distance only; full official address is Directions target.
+- **PanicFest–The Cobb Factory, Old Monroe:** official2026 dates include November1 and November6–7; exact final **November7 23:00 CST**. Haunted House; hayride is supplemental VIP product. R2 restores November1 19:00–22:00 display hours and qualified secondary age10+/sensory/physical/health warnings, explicitly not operator-confirmed. Approximate Census point **38.931375171592,-90.746591944663** matches the supported141 E Main address despite normalized E omission. Late-fall Anything visibility needs its own runtime tests; no global Halloween/provider extension.
+
+Neither address interpolation establishes entrance, parking or dropoff. Both remain never-OpenNow even with verified display hours, and2026-only. R1 had1 PASS/14 HOLD; only Cobb hours/Details changed in R2, fourteen other records remained identical. The verifier did not remediate source.
+
+### Thirteen retained HOLDs and coverage
+
+Bakersfield, Goblin Kings and Dark Lords Manor lack accepted current2026 operation. Ballwin Tunnel of Terror lacks reproducible location-specific event evidence; ordinary carwash hours do not suffice. Dark Nightmares has current-season uncertainty plus33100/34100 address conflict. Fearstone's undated calendar does not bind the year;18+ and kids-night distinctions remain material. TerrifiedExist lacks sufficient current corroboration. Mount Washington Manor's public2026 invitation and residential/commercial status remain unresolved. Zombie World's recovered event is2025. Fun Time Farms has2025 opening evidence only. Haunted Grotto has an uncorroborated2026 lead. Freaks Fair has accepted year signal but conflicting dates/street numbers. Farrington lacks decisive2026 binding.
+
+These are genuine evidence holds, not exact-price/complete-hours/precise-entrance demands, closure assertions or blanket first-party-only rules. The reviewer assessed the existing13 blockers; this was not exhaustive fresh research of all thirteen.
+
+Separate15-entry FrightMaps residential guide remains non-runtime, with no address enrichment or inferred public2026 invitation. Coverage is partial; earlier external sweep dedupe is unavailable, so NET NEW remains provisional and Missouri opportunities are **not exhausted**.
+
+### Immutable recoverable evidence
+
+[Exact independent report](docs/handoffs/active/missouri-delta3-independent-verification.md), SHA-256 **`2936bb4ffb04533b29b270c257276617bed4441dd584e0e22e82f2569fc79cc9`**.
+[Exact research R2](audit/missouri-three-source-delta3-research-r2.json), SHA-256 **`0845719a25a8fae03a810a2370aad117b577a67990054be95dc8718dcd87539c`**.
+Independent verdict JSON **`150c4b0a7662351f728d816bc348fb1cbb038e7881aec71c259883d6c587f361`**; cleared-subset JSON **`3b40e3d659832030da4184d844ccad93dc6170d985af123a3c3bb2c83f26d3eb`**. R1 input **`b6bf48b118201c6132e27a23572b1ccc276d9b759205ed9f9669e8e2b61979ef`** remains historical.
+
+Researcher-time proposed/pending labels remain exact immutable bytes; final independent verdict controls the reviewed data scope. Source failures and the limited re-opened Morty restriction extract are disclosed; no fresh operator health-policy/cancellation claim.
+
+### Actual PR59 progression, not a release verdict
+
+Current remotely verified PR59 head **`93b231c5326e6f4de5eb7d69f41564542c8018e9`**, tree **`5eb602c247be7140953e1fafd9b4f247901ae410`**, sole parent **`97fa2e40abe8e39f2782d3023d751f2ce7a129be`**. Its commit records a bounded harness correction retaining valid plan controls.
+
+Prior97fa tree **`89d0a8442f58fc434bfff9f5b26ee216d341ae4e`**, parent6f58, corrected the real Beast/Edge overnight eligibility defect. Independent/local865 tests/four skips passed there; data R2's five file hashes remained unchanged. Its hosted web37841651323 and Android37841651189 were launched separately. An invalid plan-geometry control then required the new harness successor. **No new-head browser/geometry or final runtime PASS is claimed**, and97fa results are not automatically transferred. Original6f58 runtime HOLD remains historical. Await exact current-head checks, authenticated artifacts/pixels and fresh independent final verification.
+
+Fresh **20:54 UTC** main **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**, production **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv` READY** remain unchanged. Standing nonproduction pipeline authority continues; no merge/deploy/settings or waiver.
+
+Approved recovery changes only AI_CONTINUITY.md, exact Delta3 report and exact research R2 audit JSON on deployment-disabled continuity. **PARENT COMMIT:** `d703c80a1379ff5e65c4570215e7340d2faeb049`; **PARENT TREE:** `15526bd48ffd0629114fcc8072f266b600c1112e`. Verified exclusion blob **`65925d91f882a10433e3eb43f53ed802914c969b`** remains; all prior states preserved.
+
+## Prior continuity — Delta2 data gate and PR59 initial runtime HOLD, preserved verbatim
+
 # Pick For Us — Delta2 Data Review Complete; PR #59 Runtime Correction Active (2026-10-08)
 
 ## CURRENT — SEPARATE DATA GATE CLOSED; CUMULATIVE RUNTIME HOLD REMAINS

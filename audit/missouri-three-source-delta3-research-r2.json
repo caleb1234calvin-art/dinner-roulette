@@ -1,0 +1,878 @@
+{
+  "audit_id": "MO2026-THREE-SOURCE-DELTA3",
+  "frozen_at": "2026-10-08T20:51:56.154079+00:00",
+  "role": "RESEARCHER; proposals only",
+  "baseline": {
+    "main": "213502ef8cf3f67d75e6d9c9c8ff43f9f656890c",
+    "production": "dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv",
+    "state": "READY",
+    "verified_at": "2026-10-08T20:41Z"
+  },
+  "continuity_read": "integration/continuity-refresh-2026-10-07 AI_CONTINUITY.md top150lines blob b9ce07e1d81073821be34a03f9935bc4b04441e7",
+  "prior_input_sha256": "a57340ed8a18150c21c5ede1339ac66c709fff6183e8d1f769e966d9925d9be5",
+  "active_candidate_read": "97fa2e40abe8e39f2782d3023d751f2ce7a129be localcurrent cumulative; PR59 no mutation",
+  "metrics": {
+    "screened": 15,
+    "clearance_candidates": 2,
+    "hold": 13,
+    "independent_pass": 0,
+    "runtime_cleared": 0
+  },
+  "records": [
+    {
+      "record_id": "DELTA3-BAKERSFIELD",
+      "name": "The Bakersfield Haunted House",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/the-bakersfield-haunted-house/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "The Bakersfield Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/the-bakersfield-haunted-house/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "652 County Road 585, Bakersfield, MO 65609",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/the-bakersfield-haunted-house/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/the-bakersfield-haunted-house/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Directory season empty; recovered local newspaper evidence is 2025/older, not current 2026."
+      ],
+      "consumer_projection": null
+    },
+    {
+      "record_id": "DELTA3-BALLWIN",
+      "name": "Tunnel of Terror Ballwin",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/tunnel-of-terror-ballwin/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "Tunnel of Terror Ballwin",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/tunnel-of-terror-ballwin/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "14918 Manchester Rd., Ballwin, MO 63011",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/tunnel-of-terror-ballwin/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Other Halloween / Fall",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/tunnel-of-terror-ballwin/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Search extraction of operator site shows Oct23\u201324 2026 18:30\u201321:30, but current open extraction events is blank. Reproduce location-specific event before clearance; national2026 campaign is not proof every location participates."
+      ],
+      "consumer_projection": null,
+      "additional_fields": {
+        "operator_address": "14918ManchesterRdBallwinMO63011",
+        "source": "https://tommys-express.com/locations/mo156/",
+        "indexed_event_dates": "Oct23\u201324 2026 18:30\u201321:30",
+        "reopened_event_content": "blank",
+        "material_access": "Hauntedcarwash requiresvehicleexperience; no ordinaryrideshare dropoff assumption."
+      }
+    },
+    {
+      "record_id": "DELTA3-DARK-NIGHTMARES",
+      "name": "Dark Nightmares Haunted Attraction",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/dark-nightmares-haunted-attraction/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "Dark Nightmares Haunted Attraction",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/dark-nightmares-haunted-attraction/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "34100 E US-24, Buckner, MO 64016",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/dark-nightmares-haunted-attraction/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/dark-nightmares-haunted-attraction/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Current 2026 operator binding missing; secondary Morty gives33100US24 versus directory34100. Preserve routing conflict."
+      ],
+      "consumer_projection": null
+    },
+    {
+      "record_id": "DELTA3-FEARSTONE",
+      "name": "Fearstone Forest Haunted Trail",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/fearstone-forest-haunted-trail/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "Fearstone Forest Haunted Trail",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/fearstone-forest-haunted-trail/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "85 Benne Blvd, Camdenton, MO 65020",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/fearstone-forest-haunted-trail/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/fearstone-forest-haunted-trail/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Operator calendar images inspected: weekday pattern matches2026, but no explicit year on calendar. Sponsor filename2026 is insufficient event-year binding. FAQ retrieval failed. Material Oct17 adult18+ validID and Oct31 kids night preserved."
+      ],
+      "consumer_projection": null,
+      "additional_fields": {
+        "operator_address": "85 Benne Blvd; distinct from organizer mailing837NHwy5",
+        "source": "https://www.fearstoneforest.com/",
+        "calendar_images_inspected": [
+          "evidence/fear-calendar.png",
+          "evidence/fear-dates.png"
+        ],
+        "date_pattern": [
+          2,
+          3,
+          9,
+          10,
+          16,
+          17,
+          23,
+          24,
+          30,
+          31
+        ],
+        "year_binding": null,
+        "material_restrictions": "Oct17 adult18+ validID; Oct31KidsNight; waiver applies. No calendar year inferred."
+      }
+    },
+    {
+      "record_id": "DELTA3-TERRIFIEDEXIST",
+      "name": "TerrifiedExist Haunted Attractions",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/terrifiedexist-haunted-attractions/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "TerrifiedExist Haunted Attractions",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/terrifiedexist-haunted-attractions/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "11490 Mehl Avenue, Florissant, MO 63033",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/terrifiedexist-haunted-attractions/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/terrifiedexist-haunted-attractions/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Direct operator extraction blank and Ticketleap unavailable. Secondary current2026 blog plus evergreen recurring schedule not decisive direct season binding."
+      ],
+      "consumer_projection": null
+    },
+    {
+      "record_id": "DELTA3-RANCH",
+      "name": "Terror at the Ranch",
+      "discovery_class": "HISTORICAL HOLD \u2014 MO26-066 enrichment / distinct seasonal activity",
+      "identity_dedupe": "Terror at the Ranch is the relocated O'Bannon Terror experience at Red Barn Ranch. The historical ledger includes MO26-066 Red Barn Ranch as a farm lead; treat this as HISTORICAL HOLD / ENRICHMENT, not an unrelated new property.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/terror-at-the-ranch/",
+      "research_decision": "CLEARANCE CANDIDATE",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "Terror at the Ranch",
+          "aliases": [
+            "O'Bannon Terror"
+          ],
+          "source": "https://app.hauntpay.com/events/terrorattheranch",
+          "status": "official ticket event"
+        },
+        "visitor_address": {
+          "value": "23111 S. Jefferson Pkwy, Harrisonville, MO64701",
+          "source": "https://app.hauntpay.com/events/terrorattheranch",
+          "status": "official event Directions"
+        },
+        "category": {
+          "value": [
+            "Haunted House",
+            "Corn Maze"
+          ],
+          "source": "https://app.hauntpay.com/events/terrorattheranch",
+          "status": "Final Harvest CornMaze +LaDawnAsylum+3LittlePigs; one venue"
+        },
+        "season_year": {
+          "value": 2026,
+          "source": "https://app.hauntpay.com/events/terrorattheranch",
+          "status": "explicit event timestamp; extracted versions Oct2/Oct9 and directHTMLOct3 date represent different available occurrences, not full calendar"
+        },
+        "hours": {
+          "state": "partial",
+          "display": "Selected October evenings; exact full schedule/closing unconfirmed.",
+          "source": "https://app.hauntpay.com/events/terrorattheranch",
+          "machine_intervals": null
+        },
+        "admission": {
+          "material": "One ticket includes three attractions.",
+          "source": "https://app.hauntpay.com/events/terrorattheranch",
+          "routine_prices_not_for_UI": true
+        },
+        "expiry": {
+          "at": "2026-11-02T00:00:00-06:00",
+          "basis": "editorial",
+          "source": "owner-approved2026ListingCompletenessV1; no finaloperatingdate established",
+          "not_operating_hours": true,
+          "not_admission_extension": true
+        }
+      },
+      "placement_candidate": {
+        "latitude": 38.699068931183,
+        "longitude": -94.350116918769,
+        "matched_address": "23111 S JEFFERSON PKWY, HARRISONVILLE, MO, 64701",
+        "basis": "Census address-range interpolation",
+        "precision": "approximate-address-derived; not gate/parking/doorway/rideshare dropoff",
+        "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=23111+S+Jefferson+Pkwy%2C+Harrisonville%2C+MO+64701&benchmark=Public_AR_Current&format=json",
+        "retrieved_at": "2026-10-08T20:45:09.499917+00:00",
+        "independent_verification": "PENDING"
+      },
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [],
+      "consumer_projection": {
+        "title": "Terror at the Ranch",
+        "confidence": "Limited details",
+        "details": [
+          "Three haunted experiences at Red Barn Ranch, including a haunted corn maze.",
+          "October event hours are incomplete; check the venue schedule.",
+          "Location is approximate."
+        ],
+        "footer": "Check current hours, admission, and weather before you go."
+      },
+      "conflicts": [
+        {
+          "field": "secondary address",
+          "detail": "Bizlaza directory11123SJefferson vs directticket23111; prefer explicit directeventaddress supported also contemporary regional article, preserve discrepancy."
+        },
+        {
+          "field": "structured event time",
+          "detail": "DirectHTML JSON-LD Oct4 midnight\u201304:00 has offset issues relative visibleOctober event7pm; do not encode machine schedule or full season from one occurrence."
+        }
+      ],
+      "runtime_constraints": [
+        "Do not duplicate ordinary RedBarnRanch recordMO26-066 or historical O'Bannon venue.",
+        "Editorialcutoff must stay outofconsumeroperatinghours.",
+        "No invented vehicle/dropoff/entrance."
+      ]
+    },
+    {
+      "record_id": "DELTA3-GOBLIN",
+      "name": "The Goblin Kings Haunted Trail",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/the-goblin-kings-haunted-trail/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "The Goblin Kings Haunted Trail",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/the-goblin-kings-haunted-trail/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "5651 State Highway F, Hartville, MO 65667",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/the-goblin-kings-haunted-trail/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/the-goblin-kings-haunted-trail/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Directory identity/activity/address retained. No current2026 season evidence recovered; old2024 visitor review not current operation."
+      ],
+      "consumer_projection": null
+    },
+    {
+      "record_id": "DELTA3-MOUNT-WASHINGTON",
+      "name": "Mount Washington Manor",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/mount-washington-manor/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "Mount Washington Manor",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/mount-washington-manor/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "9515 E Independence Ave, Independence, MO 64053",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/mount-washington-manor/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/mount-washington-manor/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Directory charity-haunt identity/address retained; no explicit2026 invitation. Residential/commercial status requires clarification before runtime proposal; no private enrichment performed."
+      ],
+      "consumer_projection": null
+    },
+    {
+      "record_id": "DELTA3-ZOMBIE-WORLD",
+      "name": "Zombie World Strange Things",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/zombie-world-strange-things/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "Zombie World Strange Things",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/zombie-world-strange-things/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "4350 County Road220, Kingdom City, MO 65262",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/zombie-world-strange-things/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Other Halloween / Fall",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/zombie-world-strange-things/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Operator booking explicitly October2025/theme2025 and old rain cancellation. Do not relabel current2026. Activity and under10 equipment restriction retained as historical field leads."
+      ],
+      "consumer_projection": null,
+      "additional_fields": {
+        "source": "https://booking.battlecreekpaintball.net/products/zombie-world",
+        "year": 2025,
+        "restrictions": "Under10cannotuselasergear; accompaniedwalking permitted perhistoricalpage. Notcurrentclearance."
+      }
+    },
+    {
+      "record_id": "DELTA3-FUN-TIME",
+      "name": "Fun Time Farms Haunted Corn MAiZE",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/fun-time-farms-haunted-corn-maize/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "Fun Time Farms Haunted Corn MAiZE",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/fun-time-farms-haunted-corn-maize/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "11050 NE201 Road, Lowry City, MO 64763",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/fun-time-farms-haunted-corn-maize/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Corn Maze",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/fun-time-farms-haunted-corn-maize/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Farm Bureau corroborates identity/maze activity; recovered news opening article is2025; no explicit2026 season. TSF detail unavailable."
+      ],
+      "consumer_projection": null
+    },
+    {
+      "record_id": "DELTA3-DARK-LORDS",
+      "name": "Dark Lords Manor Haunted House",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/dark-lords-manor-haunted-house/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "Dark Lords Manor Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/dark-lords-manor-haunted-house/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "14904 W State Hwy90, Noel, MO64854",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/dark-lords-manor-haunted-house/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/dark-lords-manor-haunted-house/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Directory identity/address/activity retained; no current2026 season binding recovered."
+      ],
+      "consumer_projection": null
+    },
+    {
+      "record_id": "DELTA3-COBB",
+      "name": "PanicFest \u2014 The Cobb Factory",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/panicfest-the-cobb-factory/",
+      "research_decision": "CLEARANCE CANDIDATE",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "PanicFest \u2014 The Cobb Factory",
+          "source": "https://panicfest.com/plan-your-visit/",
+          "status": "operator"
+        },
+        "visitor_address": {
+          "value": "141 E. Main Street, Old Monroe, MO63369",
+          "source": "https://panicfest.com/plan-your-visit/",
+          "status": "operator Directions"
+        },
+        "category": {
+          "value": [
+            "Haunted House"
+          ],
+          "source": "https://panicfest.com/plan-your-visit/",
+          "status": "operator house plus relatedscenes; hayride supplemental VIP only"
+        },
+        "season_year": {
+          "value": 2026,
+          "source": "https://panicfest.com/plan-your-visit/",
+          "status": "explicit New Scares in2026"
+        },
+        "hours": {
+          "state": "verified",
+          "display": "Listed September/October Friday and Saturday nights 7 p.m.\u2013midnight; listed Sundays through November 1, 7\u201310 p.m. November 6\u20137: 7\u201311 p.m.",
+          "source": "https://panicfest.com/plan-your-visit/",
+          "machine_intervals": null
+        },
+        "admission": {
+          "material": "Tickets purchased at event; one VIP product includes hayride.",
+          "source": "https://panicfest.com/buy-tickets/",
+          "routine_prices_not_for_UI": true
+        },
+        "expiry": {
+          "at": "2026-11-07T23:00:00-06:00",
+          "basis": "exact",
+          "source": "https://panicfest.com/plan-your-visit/"
+        },
+        "dates": {
+          "value": [
+            "2026-09-25",
+            "2026-09-26",
+            "2026-09-27",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-11",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-18",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-25",
+            "2026-10-30",
+            "2026-10-31",
+            "2026-11-01",
+            "2026-11-06",
+            "2026-11-07"
+          ],
+          "source": "https://panicfest.com/plan-your-visit/"
+        },
+        "restrictions": {
+          "value": [
+            "Directory minimum age10+. Secondary restriction copy mentions sensory/physical intensity and health restrictions; independently review before consumer projection."
+          ],
+          "source": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/panicfest-the-cobb-factory/",
+            "https://morty.app/attraction/42332/the-cobb-factory"
+          ],
+          "status": "secondary supported; not claimed operator-confirmed"
+        }
+      },
+      "placement_candidate": {
+        "latitude": 38.931375171592,
+        "longitude": -90.746591944663,
+        "matched_address": "141 MAIN ST, OLD MONROE, MO, 63369",
+        "basis": "Census address-range interpolation",
+        "precision": "approximate-address-derived; not gate/parking/doorway/rideshare dropoff",
+        "source": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=141+E+Main+Street%2C+Old+Monroe%2C+MO+63369&benchmark=Public_AR_Current&format=json",
+        "retrieved_at": "2026-10-08T20:45:05.095366+00:00",
+        "independent_verification": "PENDING"
+      },
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [],
+      "consumer_projection": {
+        "title": "PanicFest \u2014 The Cobb Factory",
+        "confidence": "Good confidence",
+        "details": [
+          "Listed Friday\u2013Sunday nights, September 25\u2013November 1; also November 6\u20137.",
+          "Friday/Saturday hours through October: 7 p.m.\u2013midnight. Listed Sundays, including November 1: 7\u201310 p.m. November 6\u20137: 7\u201311 p.m.",
+          "Tickets are purchased on site.",
+          "Haunt directories report ages 10+, strobes, fog and physically demanding conditions, plus health-related entry restrictions. Check venue restrictions before attending.",
+          "Location is approximate."
+        ],
+        "footer": "Check current hours, admission, and weather before you go.",
+        "requires_independent_material_restriction_review": true
+      },
+      "conflicts": [
+        {
+          "field": "routine prices",
+          "detail": "Search excerpt $30/40/55 versus reopened operator$35/45/60; omitted from UI."
+        },
+        {
+          "field": "secondary town/ZIP",
+          "detail": "Morty Winfield63389 versus operator OldMonroe63369. Proposed Directions explicitly use stronger operator141E.Main OldMonroe; preserve external discrepancy."
+        }
+      ],
+      "runtime_constraints": [
+        "Late-fall Anything visibility requires explicit scoped verification; HalloweenUI/provider season must not extend.",
+        "No OpenNow from display hours."
+      ]
+    },
+    {
+      "record_id": "DELTA3-GROTTO",
+      "name": "The Haunted Grotto",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/the-haunted-grotto/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "The Haunted Grotto",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/the-haunted-grotto/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "3102 Aad Grotto Road, Poplar Bluff, MO63901",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/the-haunted-grotto/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/the-haunted-grotto/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Directory identity/address retained; aggregator2026 event lead found but direct organizer invitation not reopened. Further direct source needed, not inferred rejection."
+      ],
+      "consumer_projection": null
+    },
+    {
+      "record_id": "DELTA3-FREAKS",
+      "name": "Freaks Fair Haunted Attraction",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/freaks-fair-haunted-attraction/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "Freaks Fair Haunted Attraction",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/freaks-fair-haunted-attraction/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "126 SW400th Road, Warrensburg, MO64093",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/freaks-fair-haunted-attraction/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/freaks-fair-haunted-attraction/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Operator says Friday25th October2026; DMO says October30. Operator126SW400th versus DMO122SW400th event address. Preserve date/address conflicts; officialticket page title2026 but content unreadable."
+      ],
+      "consumer_projection": null,
+      "additional_fields": {
+        "source": [
+          "https://freaksfair.com/",
+          "https://www.visitwarrensburg.com/events-calendar/category/covb-calendar/day/2026-10-30/"
+        ],
+        "year": 2026,
+        "hours_display": "7\u201310:30pm",
+        "date_conflict": "OperatorFriday25 versusDMOFriday30; no silent typo repair",
+        "address_conflict": "126vs122SW400th"
+      }
+    },
+    {
+      "record_id": "DELTA3-FARRINGTON",
+      "name": "Annual Farrington Park Haunted Hayride",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/annual-farrington-park-haunted-hayride/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "Annual Farrington Park Haunted Hayride",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/annual-farrington-park-haunted-hayride/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "116 S County Line Rd, Windsor, MO65360",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/annual-farrington-park-haunted-hayride/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Other Halloween / Fall",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/annual-farrington-park-haunted-hayride/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Operator says this year Oct17\u201318 19:00 but year not bound outside copyright; ticket page unavailable. Need current2026 event binding, not repeat copyright inference."
+      ],
+      "consumer_projection": null
+    }
+  ],
+  "coverage": {
+    "three_sources": [
+      "https://www.thescarefactor.com/haunted-houses/missouri/",
+      "https://www.missourihauntedhouses.com/",
+      "https://frightmaps.com/best-haunted-houses-missouri-2026"
+    ],
+    "method": "Screened 15 Scare Factor commercial/public leads absent from the earlier Delta2 batch. Cross-read the other two source indexes and followed selected operator/ticket sources. This is not a statewide restart.",
+    "not_exhausted": true,
+    "limitations": [
+      "Not all commercial operator pages could be reopened; unavailable sources remain HOLD.",
+      "The complete FrightMaps Missouri map is not exhausted. Its 15-entry guide is recorded separately without address enrichment.",
+      "An earlier external sweep ledger remains unavailable, so NET NEW is provisional.",
+      "There is no cancellation monitoring or live operator confirmation claim.",
+      "No Delta2 HOLD was repeated or silently resolved.",
+      "Cobb secondary restriction evidence requires independent judgment before consumer use."
+    ]
+  },
+  "next": "Fresh independent review of the two proposed projections and their approximate placements. Do not append them to current PR #59. Preserve all 13 HOLD records. This artifact grants no implementation or release clearance.",
+  "revision": 2,
+  "supersedes_research_projection_sha256": "b6bf48b118201c6132e27a23572b1ccc276d9b759205ed9f9669e8e2b61979ef"
+}
