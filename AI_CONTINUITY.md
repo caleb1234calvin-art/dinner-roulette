@@ -1,3 +1,65 @@
+# Pick For Us — Ten-Record V1 Release SHIPPED (2026-10-08)
+
+## CURRENT — EXACT APPROVED RELEASE LIVE; SEVENTEEN CURATED RECORDS SHIPPED
+
+The authorized ten-record release and scoped production acceptance **PASS**. This supersedes the pending release decision below. **Seventeen curated records are shipped: the prior seven plus ten newly added records. Eleven deferred records remain unimported, with no automatic next-batch or release authority.** Earlier completed releases remain closed.
+
+### Published identity and consumed authority
+
+- Main / merged [PR #52](https://github.com/caleb1234calvin-art/dinner-roulette/pull/52): **`2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81`**.
+- Complete approved tree **`ad80896e7fc063921873c5606a5cad6bb1b8d885`**; sole parent **`f3dff159dd7608fa6976b8e75ecba3c3cba5faa0`**; previous main **`5409b0fcbb24c54f03e3b1228e1481bfc594c7af`**.
+- Current production **`dpl_8VLrfiVD7MJx6KQCgGhRNtd4ESE9`**, READY **2026-10-08T13:27:16.304Z**, exact main2fe.
+- [Live application](https://pickforus.app/) and [immutable deployment](https://dinner-roulette-qdepszbim-minions-9e2c.vercel.app/).
+
+Owner **13:21:57 UTC** approved only this exact candidate/tree, scoped production checks and the source-bound future-date expiry method, with a **new one-release-only unprotected-main exception** conditional on all other preflight requirements. That exception was **consumed at publication and is not standing authority**. No protection/settings change.
+
+The operator freshly checked main5409, candidate2fe/tree ad808/parent f3dff, successful exact hosted checks, unchanged source/build inputs, production Eoy/aliases and authenticated rollback/build route. Publication at **13:26:53Z** used non-force, expected-head-guarded fast-forward; PR #52 merged at exact2fe without squash/rebase/generated tree. A preceding local push lacked authentication and made no mutation.
+
+### Auth-enabled migration-free production route
+
+Actual authenticated dashboard build override remained:
+`VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`.
+Root was empty, Node24.x, no settings changed. Ordinary migration-chaining npm build was never used. Automatic deployment was created13:26:55.157Z, building13:26:56.427Z and READY13:27:16.304Z. Actual logs bind checkout2fe, Vite client/SSR output and successful deployment; cache restored from Eoy does not imply stale-source reuse.
+
+### Scoped live acceptance and exact-source expiry proof
+
+All ten new records **019, 031, 034, 054, 067, 100, 114, 115, 124, 125** were reached through normal production Date Night controls and regional searches with the real current clock. All seven retained records were also live and inspected. No provider fixtures, client rewriting, clock override, external navigation/ride execution, geolocation grant or runtime remediation was used.
+
+- All ten new result/Details/navigation receipts show the exact notice **“Check current hours, admission, and weather before you go.”**, truthful completeness labels, concise material restrictions, approximate location and supported-address Directions. Generic Uber/Lyft links do not promise a precise prefilled destination. Routine dollar-pricing/audit/retention clutter is absent.
+- All seven retained records preserve their material facts and identity. Myer remains approximate with address Directions; Aftermath/Beyond retain distinct walk/ticket/access details; Campbell last-admission uncertainty, Rutledge separate schedules, Lloyd supervision/special close and Sam activity/weather/verified parking exception remain.
+- Live Open Now samples in Springfield haunts and Fun Farm returned zero eligible records. **These are sampled live toggles**, supplemented by independently passed all-seventeen policy/cache/provider-duplicate/expiry tests. No claim that all seventeen were individually toggled in production.
+- Live provider discovery was sometimes degraded/incomplete; a normal retry recovered saved listings. This is **not provider-health or weather/ticket/cancellation assurance**. A mismatched browser tab was treated as tooling-inconclusive until a fresh supported tab restored consistent pixels/DOM.
+- Spot live screenshots were inspected; the independent320/390 hosted evidence remains the narrow-width acceptance. No new full live277-case rerun is claimed.
+
+Read-only AST extraction of actual served **`index-BQw4GFnq.js`** proves **all seventeen complete factual catalogs deep-equal reviewed source**. Served **`routes-BZ_38f_p.js`** contains **all seventeen consumer projections deep-equal reviewed source**. Exact date lists, timezone/DST, cutoffs, addresses/placement basis, null machine schedules and never-OpenNow values survived. Seven served entry chunks match actual deployment logs; apex and immutable page return HTTP200 with the same entry set.
+
+The owner's accepted method combines independent future-date/post-expiry/cache/resume/no2027 tests with exact production source/tree/build-route and served-cutoff equality. **Expiry acceptance PASS under that method; no November live-clock execution claim.** Reviewed source fingerprint remains **`231f3828434addee8b32c86589691313571669119d71178c03e7371f09042c74` / 448 files**. Separately built full output hashes are not asserted equal.
+
+### Current aliases and immediate rollback
+
+Fresh **13:43 UTC** direct reads separately resolve all five aliases to **8VL**: `pickforus.app`, `www.pickforus.app` (308 to apex), `dinner-roulette-chi.vercel.app` (native origin unchanged), `dinner-roulette-minions-9e2c.vercel.app` and `dinner-roulette-git-main-minions-9e2c.vercel.app`.
+
+**Immediate previous rollback target is Eoy**: `dpl_EoyMdyZ8KzanHst1NuhA5v6HXSVe`, source5409, freshly READY. Postrelease13:33 authenticated dialog showed8VL Current and exact Eoy Previous target; it was canceled. No rollback was needed or executed. Older H655 is retained history, not this release's immediate target.
+
+Preflight dialog access succeeded after a single authorized retry following automatic-review denial. No Continue/Confirm was clicked; older05:24 two-stage inspection is explicitly historical, not a fresh final-confirmation visit. Preserved failure procedure: open Rollback, verify exact Eoy/source5409 Previous, Continue, inspect final target, then Confirm only for an authorized material failure. Hobby immediate-predecessor limits apply; rollback may suspend automatic promotion and that setting must not be silently changed.
+
+### Recoverable operator evidence and retained limits
+
+[Exact production release report](docs/handoffs/active/seasonal-ten-record-production-release.md), Library **`libfile_32fcd03f196881919fac87604aa314c4`**, SHA-256 **`dcfb6c7ba755441fb691d202303ab2eedeba9b366ce9147a06beed4ccc6f1b5f`**.
+Evidence ZIP Library **`libfile_9d3dec3050fc8191a5ebbee5dfa2c30b`**, SHA-256 **`cdccb7c1116deb44e67e4bb84ae84118e5b63459625cf6c729b216a50c034fd7`**. Report contains the complete seventeen-path release inventory, per-record receipts, operational qualifications and served-source proof. Its producer-time continuity-pending statement is superseded after this checkpoint's readback without altering its bytes.
+
+Retained independent validation:816 full PASS/four skips, focused310, casino83, lint zero errors/six warnings, typecheck/builds, hosted37746000098/job113207515956 SUCCESS and277 seasonal cases23+97+157. Artifact11536668803 SHA **`d74484e583aece3aa9d78a2fffd013dcdd64e48182074fd8173939c95055caf9`**,1288 decoded PNGs. These were not redundantly rerun as production fixtures.
+
+Optional dev-only `/__app-env` stays **INCONCLUSIVE**, explicitly accepted nonblocking; never relabeled PASS. Six warnings, deferred narrow Directions clipping, temporary Other icon, approximate locations and conservative Open Now remain. Physical Android/WebView/GPS/arrival acceptance remains **HOLD**; signing/Play separate. No live provider/weather/ticket guarantee, migrations, dependency/native changes or further production changes.
+
+### Closeout and next authority boundary
+
+The seventeen-record web release is complete after canonical readback. Any remaining-eleven work needs a new bounded owner decision and fresh revalidation; do not automatically import, rush expiring events or reopen closed implementation findings. No recurring monitoring or new release is authorized.
+
+Fresh main2fe/tree ad808, PR #52 merged exact and production8VL READY confirm intentional approved movement. This closeout changes only AI_CONTINUITY.md and the exact operator report on deployment-disabled `integration/continuity-refresh-2026-10-07`; no extra production deployment for docs. **PARENT COMMIT:** `7e2fe706d2be33b53c3361d7cc667a1f2d6346fd`; **PARENT TREE:** `f514a5015bb95dcca244ce4f8fa08c6c6e281c19`. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains exclusion. Preserve all history below.
+
+## Prior continuity — independent candidate PASS and pending release decision, preserved verbatim
+
 # Pick For Us — PR #52 Independent Implementation and Browser PASS (2026-10-08)
 
 ## CURRENT — TEN-RECORD + DETAILS VALIDATION COMPLETE; OWNER RELEASE DECISION NEXT
