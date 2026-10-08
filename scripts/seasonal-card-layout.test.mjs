@@ -31,6 +31,6 @@ test("seasonal plans use full-width compact notes without shrinking the base art
   const source = read("date-night-plan-overlay");
   assert.match(source, /size-20 shrink-0/);
   assert.match(source, /title=\{place.name\}/);
-  assert.match(source, /seasonal \? "gap-3 px-3 pt-3 pb-1" : "gap-4 p-4"/);
-  assert.match(source, /seasonal \? <div className="px-3 pb-1"><SeasonalVisitNotes/);
+  assert.match(source, /seasonal \? "gap-3 px-3 pt-2 pb-0" : "gap-4 p-4"/);
+  assert.match(source, /seasonal \? <div className="px-3"><SeasonalVisitNotes/);
 });
