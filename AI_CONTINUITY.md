@@ -1,3 +1,51 @@
+# Pick For Us — PR #52 Independent Implementation and Browser PASS (2026-10-08)
+
+## CURRENT — TEN-RECORD + DETAILS VALIDATION COMPLETE; OWNER RELEASE DECISION NEXT
+
+Fresh independent verification **PASS** covers the exact candidate's implementation, full applicable validation and hosted built-app browser acceptance. This closes the initial harness-scoping HOLD below. **No merge or production deployment is authorized.** The candidate is recommended for an owner-authorized release only after a new protection decision and fresh operational preflight. Production still contains the previously shipped seven curated records.
+
+### Exact immutable candidate
+
+- [Draft PR #52](https://github.com/caleb1234calvin-art/dinner-roulette/pull/52), branch `integration/seasonal-completeness-v1-ten-records`.
+- Candidate **`2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81`**; complete tree **`ad80896e7fc063921873c5606a5cad6bb1b8d885`**.
+- Sole parent **`f3dff159dd7608fa6976b8e75ecba3c3cba5faa0`**; that parent's sole parent is unchanged main **`5409b0fcbb24c54f03e3b1228e1481bfc594c7af`**.
+- Exactly ten additions **019, 031, 034, 054, 067, 100, 114, 115, 124, 125**, plus reviewed consumer presentation for all seventeen. Existing seven factual catalogs and review-revision identities remain unchanged. Eleven deferred records remain unimported; reasons are retained in the exact report and frozen audit.
+
+### Independent technical and rendered acceptance
+
+- **816 full tests PASS / four inherited skips**; focused310 and casino83 are subsets, not additional full-suite totals. Typecheck, zero-error/six-warning ESLint, casino audits, development build and auth-enabled migration-free production build/proof PASS.
+- Hosted web **37746000098 / job113207515956 SUCCESS**. All **277/277 seasonal cases PASS = 23 retained two-record + 97 first-five + 157 new-batch**. Separate casino/location browser gates also PASS. Fourteen old-seven presentation scenarios are included in retained totals, not double-counted.
+- Artifact **11536668803**, **151785890 bytes**, SHA-256 **`d74484e583aece3aa9d78a2fffd013dcdd64e48182074fd8173939c95055caf9`**, independently matched GitHub metadata and passed ZIP CRC. All **1288 PNGs decode**; actual screenshots for all seventeen at320/390 were inspected.
+- Source fingerprint **`231f3828434addee8b32c86589691313571669119d71178c03e7371f09042c74` / 448 files**. Hosted output **`2af9c199f3f9e6030f13044deb79ff14f32963caa8518c0b082e500855301aae` / 194 files**, authFlag true. Independent local output is separately recorded in the report; no cross-build hash equality claim.
+- Browser evidence includes154 visible decoded-image checks,368 note-reachability checks,248 control checks and1480 intercepted provider requests / zero forwarded. Correct compact notice, completeness labels, concise material restrictions, approximate addresses and saved navigation are visible. No new material overflow/readability defect.
+- Coverage includes category/Anything, duplicates with24/7 evidence, Hotel/Dungeons separation, season toggles, radius, exact expiry/cache/resume/2027, favorites/negative preferences/NotTonight/alias receipts/direct saved reload. Myer's old trusted geometry stays absent; Sam parking and prior identity receipts remain intact.
+- Incidental unsigned Android **37746000245 / job113207516942 SUCCESS**; signing **113208823692 SKIPPED**. Physical Android/GPS/WebView/arrival and signing/Play acceptance remain separate.
+- Optional dev-server `/__app-env` comparison remains **INCONCLUSIVE**, explicitly nonblocking for this unchanged-auth candidate because compiled application/security tests and auth-enabled build proof passed. It is not relabeled PASS.
+
+### Initial failure preserved and closed on the new identity
+
+Initialf3dff failed156/157 because a whole-card regex matched “Corn Maze” in Urban Gardens' venue name while its actual season-off category was ordinary PARK. Final2fe changes only the browser harness **5 additions / 2 deletions**, targeting actual category badges, preserving title and metadata/no-notes/identity/cache guards, and checking absence of confidence. Runtime/data/UI bytes are unchanged fromf3dff. Independent complete diff review found no assertion weakening; the fresh277-case run closes the test defect. Original failed artifact11535004776 and its hash/HOLD report remain historical evidence below.
+
+### Visitor contract and limits retained
+
+The exact notice remains **“Check current hours, admission, and weather before you go.”** High/Good/Limited describes completeness, not safety, current operation or Open Now. Unknown defaults Limited. Consumer Details use reviewed concise projections, retaining material restrictions without raw audit/routine pricing prose. All seventeen retain null machine schedules and never-OpenNow, exact cutoffs/DST/no2027, address Directions and approximate placement; Sam's parking exception is unchanged.
+
+Six inherited warnings and approved narrow Directions-label clipping remain disclosed cosmetic debt. Temporary Haunted House artwork for Other remains intentional. Deterministic hosted fixture acceptance does not establish live provider health, weather, cancellation/ticket inventory, physical entrance accuracy or external Maps/rideshare execution. No database migration, dependency, native Android, auth or production-setting change. CI timeout20→35 minutes accommodates expanded coverage without skips or weakened failure propagation.
+
+### Recoverable final review
+
+[Exact independent runtime report](docs/handoffs/active/seasonal-ten-record-independent-verification.md), SHA-256 **`9dc663922448005b8c15c3c90d55109b5e302d6045a3de1be137a6b76726f99d`**. Separate verdict JSON SHA-256 **`308d193caa3ba4958acde7fda70360314c1fa41366ff520938517c1b2ad80ce6`**. The report contains the full seventeen-path inventory, all eleven deferral reasons, factual bindings and release conditions. Its producer-time continuity-pending sentence is superseded by this checkpoint after readback; frozen report bytes stay unchanged.
+
+### Fresh baseline and next owner decision
+
+Fresh **08:25 UTC** main **`5409b0fcbb24c54f03e3b1228e1481bfc594c7af`**, tree **`f26fec09ac30c34b220244a2fd7e600ced16fbdb`**, and current production **`dpl_EoyMdyZ8KzanHst1NuhA5v6HXSVe` READY** remain unchanged. PR #52 remains draft/open/unmerged at exact2fe. For a prospective next release, **current Eoy must become the immediate rollback target**, rather than older H655; actual accessibility/target must be reverified.
+
+**Next:** owner decision on exact2fe/tree ad808 release and a new explicit decision if main remains unprotected. Prior one-release waivers are consumed. A separate operator must freshly reverify main/head/tree/checks/protection, effective auth-enabled migration-free build route, accessible authorized rollback and subsequent live production acceptance. No automatic release or remaining-eleven implementation is authorized.
+
+This approved two-document closeout changes only AI_CONTINUITY.md and the exact review on deployment-disabled `integration/continuity-refresh-2026-10-07`. **PARENT COMMIT:** `c32d2dd123707df52ab1ce8706beb3bb2790e029`; **PARENT TREE:** `922be13cafc54ac86433bc589e532d742cd16838`. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains integration exclusion. Preserve all prior history below.
+
+## Prior continuity — initial browser HOLD and bounded correction, preserved verbatim
+
 # Pick For Us — PR #52 Initial Browser HOLD; Bounded Harness Correction Active (2026-10-08)
 
 ## CURRENT — IMPLEMENTATION VALIDATION IN PROGRESS; NO RELEASE AUTHORITY
