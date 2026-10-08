@@ -7,6 +7,8 @@ const { MISSOURI_2026_DEFERRED_BATCH_3_CATALOG } =
   load("src/lib/date-night/missouri-2026-deferred-batch-3-catalog.ts");
 const { SEASONAL_PRESENTATIONS } =
   load("src/lib/date-night/seasonal-presentation-catalog.ts");
+const { getCuratedSeasonalPlace } =
+  load("src/lib/date-night/curated-policy.ts");
 const { decorateDateNight, eligibleDateNight } =
   load("src/lib/date-night/eligibility.ts");
 const { DEFAULT_DATE_NIGHT_FILTERS } =
@@ -24,6 +26,10 @@ test("deferred batch 3 contains exactly the five independently cleared records",
   assert.equal(MISSOURI_2026_DEFERRED_BATCH_3_CATALOG.length, 5);
   assert.deepEqual(MISSOURI_2026_DEFERRED_BATCH_3_CATALOG.map((x) => x.id).sort(), [...ids].sort());
   assert.ok(!MISSOURI_2026_DEFERRED_BATCH_3_CATALOG.some((x) => x.seasonalListing?.recordId === "MO26-084"));
+});
+
+test("batch 3 is current policy for cached/saved identities", () => {
+  for (const id of ids) assert.equal(getCuratedSeasonalPlace(id)?.id, id);
 });
 
 test("batch 3 preserves routing and precision contracts", () => {
