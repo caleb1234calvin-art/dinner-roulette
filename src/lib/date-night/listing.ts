@@ -19,6 +19,8 @@ export interface SeasonalListing {
   expiryBasis: "exact" | "date-only" | "editorial";
   sourceUrls: readonly string[];
   reviewRevision: string;
+  /** Optional curated visibility beyond the Halloween UI/provider window. */
+  visibility?: "halloween-layer" | "listing-lifecycle";
 }
 
 export function isApproximateSeasonalPlace(place: object): boolean {
