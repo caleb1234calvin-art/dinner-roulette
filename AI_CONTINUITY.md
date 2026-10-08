@@ -1,3 +1,63 @@
+# Pick For Us — Seasonal Completeness V1 First Five SHIPPED (2026-10-08)
+
+## CURRENT — EXACT RELEASE LIVE; ALL FIVE SCOPED PRODUCTION CHECKS PASS; SEVEN CURATED RECORDS TOTAL
+
+The authorized first-five V1 release is **SHIPPED**. This supersedes pending expiry-evidence, execution and implementation HOLD instructions below for this completed release. **Seven curated records are now shipped: prior Lloyd/Sam plus Myer, Aftermath, Beyond, Campbell and Rutledge-Wilson. Remaining21 R2-cleared records remain unimported and no next batch is authorized.**
+
+- **Published main / PR #51 merge SHA:** `5409b0fcbb24c54f03e3b1228e1481bfc594c7af`.
+- **Complete approved/published tree:** `f26fec09ac30c34b220244a2fd7e600ced16fbdb`; sole parent `d5b26ee264fa45a032ae226c9505bfb610bbe745`.
+- **Current production:** `dpl_EoyMdyZ8KzanHst1NuhA5v6HXSVe`, READY **2026-10-08T06:32:59.691Z**, Git/main at exact5409.
+- [Live app](https://pickforus.app/) · [Immutable deployment](https://dinner-roulette-gw86j0skb-minions-9e2c.vercel.app/) · [Merged PR #51](https://github.com/caleb1234calvin-art/dinner-roulette/pull/51).
+
+### Authority and exact publication
+
+Owner **05:21** approval and new one-release unprotected-main waiver, plus **06:29:16** approval of the bounded expiry-evidence method, authorized this release after fresh preflight. The waiver is now **consumed, not reusable**; no standing protection exception. No protection/settings change.
+
+Immediately before publication, the operator reconfirmed main0bbf, PRhead5409/tree f26fec/parentd5b, exact successful hosted checks, H655 production/aliases and safe rollback/build settings. Main advanced by a **non-force expected-head-guarded fast-forward** to exact5409; no squash/rebase/wrapper/generated merge SHA/tree substitution. PR #51 closed/merged with merge_commit_sha5409.
+
+Actual authenticated build override remained:
+`VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`.
+Automatic production deployment was created **06:32:44.722Z**, building **06:32:45.893Z**, READY **06:32:59.691Z**. Logs bind checkout5409 and completed Vite/SSR/nodejs24 deployment. No migration-chaining npm build, manual redundant deployment, settings mutation or migration occurred. Connector logs omitted30 of130events; retained checkout/build/assets/completion are distinguished from a full-output fingerprint.
+
+### Scoped live acceptance and accepted expiry proof
+
+Actual production cloud browser used normal current-time UI and real application/RPC, **no provider fixtures, client rewriting or clock override**. Joplin15-mile Haunted House and Springfield30-mile Corn Maze flows reached all five cards.
+
+- All five: visible artwork, one compact linked notice, readable expandable Details, Approx. distance, supported visitor address, address-based Directions and generic Uber with truthful “choose your destination” accessible label. No external Directions/ride/venue action submitted.
+- Details preserve Myer's ticket/final-exit distinction, Aftermath/Beyond separate identities/access/schedule qualifications, Campbell's unresolved last-admission conflict and Rutledge's separate activity schedules/operator-vs-Census ZIP qualification.
+- Open Now off exposes all five; on removes all five with zero eligibility; off restores picks. Reload preserves OpenNow-on selection and zero eligibility. Four partial-hour and one verified-display-only records remain conservative never-OpenNow; no synthetic unknown-hours live row was inserted.
+- **Public discovery remained incomplete/no map listings**, with curated fallback functioning. This is not a provider-health/completeness or live weather/ticket/cancellation guarantee.
+- Owner explicitly accepted independent future-date/post-expiry/cache/resume/no2027 tests plus exact production source/tree/build-input/cutoff binding. No live November clock claim.
+- Actual served `index-BOgA5Sr-.js` (468746bytes), SHA-256 **`5b85feedc119ed4ac6fd0e064a7c33081e076fa63dacdb0e96ca8f9f2295110c`**, was parsed read-only using Acorn without executing downloaded code. **All five complete catalog objects deep-equal exact5409 registry**, including addresses/placements/basis/schedules/restrictions/notes/cutoffs.
+- Served cutoffs: Myer/Aftermath/Beyond **November1 00:00 CDT** date-only retention (not final exit; may precede last overnight walk); Campbell **October31 23:00 CDT**; Rutledge **October25 18:00 CDT**. All never-OpenNow/null machine hours/no2027. Old Myer trusted coordinate was not restored.
+- Exact candidate source fingerprint **`dbf13025acd8dc6a5b720f3f9f6bb92934d52395eb61a7ef8728cab9f6495982` / 441 files** remains source-bound. Independent790tests/four skips, lint0errors/six warnings, dedicated87+retained19 browser evidence are not falsely described as a full live-production fixture rerun.
+- Bounded error/fatal runtime query returned no logs; browser extension-metadata warnings remain disclosed, not universal error-free proof.
+
+### Aliases and immediate rollback
+
+Fresh direct alias reads **06:42 UTC** separately resolve all five to **Eoy**: `pickforus.app`, `www.pickforus.app` (308toapex), `dinner-roulette-chi.vercel.app` (native hosted origin), `dinner-roulette-minions-9e2c.vercel.app`, `dinner-roulette-git-main-minions-9e2c.vercel.app`. Apex/immutable HTTP200 and ten entry assets match actual production build output.
+
+**Immediate previous rollback target is H655**: `dpl_H655TNrL3hSuBNF8w2xp4MpxspkM`, READY at old main `0bbf6758e94eea8129e21b004d4c36ff886cd46d`. Post-release authenticated dashboard showed Eoy Current/H655 Previous with exact target link; dialog canceled, **no rollback needed/executed**.
+
+Procedure evidence is explicit: earlier05:24 successful two-stage inspection, fresh06:31 dialog; redundant Continue was denied by automatic review and **not retried/bypassed**. Post06:33–06:34 target-specific H655 Previous observation completes the record. For a covered failure, reverify current/previous target and authorized UI procedure; any change means HOLD/escalate. Hobby immediate-predecessor restriction applies; rollback stops auto-promotion until removed. Older fU21 is retained history, **not this release's rollback target**.
+
+### Exact operator receipt
+
+[Full production release report](docs/handoffs/active/seasonal-completeness-v1-five-record-production-release.md), also Library **`libfile_1fac62f5721081918e0a21fc5bd9c82a`**, SHA-256 **`0308857793575f6b1bdc80f5ed8220333fee29ab0373102e5176397a9f32926f`**.
+Evidence ZIP `Pick-For-Us-V1-Five-Record-Production-Evidence.zip`, SHA-256 **`647dc0b3d3b2a2e0df5947fc73a715d373f50441cf2843700ff608c9fe718eec`**, preserves preflight/publication/aliases/served-catalog/DOM/screenshots. The report's producer-time continuity-pending sentence is superseded by this verified closeout, without editing its frozen bytes.
+
+### Remaining limits and deliberate next work
+
+Physical Android/WebView/GPS/arrival acceptance remains **HOLD**; signing/certificates/Play separate. Six permitted warnings, deferred320px Directions clipping, conservative hours, approximate distance, current-source freshness and bounded identity-receipt storage limits remain. No remaining21 import, new research, dependency/native/database change or recurring monitoring was authorized.
+
+The previously recommended next group **019/031/034/124/125** remains an **owner decision only**, with fresh pre-import checks and separate validation/release authority required. Do not start it automatically, rush short-lived events or reopen completed V1 blockers from historical instructions.
+
+**This V1 five-record web release is complete after canonical readback.** Fresh06:42 main5409/tree f26fec, PR #51 merged exact and productionEoyREADY confirm intentional approved movement, not unexpected drift. No extra production deployment is needed for docs.
+
+This approved closeout changes only AI_CONTINUITY.md and the exact report on deployment-disabled `integration/continuity-refresh-2026-10-07`. **PARENT COMMIT:** `954439ff55a61a60486cd3a7c6c68822545d4c9b`; **PARENT TREE:** `020bd2210c72f7894168e73359e9b5346ae16413`. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains exclusion. Main and shipped candidate remain untouched by closeout.
+
+## Prior continuity — conditional release and pending expiry-evidence acceptance, preserved verbatim
+
 # Pick For Us — Five-Record Release Conditionally Approved; Expiry-Evidence Decision Pending (2026-10-08)
 
 ## CURRENT — OPERATIONAL EXECUTION HOLD; NO NEW IMPLEMENTATION BLOCKER
