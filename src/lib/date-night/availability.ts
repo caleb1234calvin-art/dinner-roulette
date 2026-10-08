@@ -64,16 +64,17 @@ function calendarState(record: SeasonalVenueAvailability | undefined, now: Date)
       : localDateKey(now);
   } catch { return finished; }
   if (!Number.isFinite(now.getTime())) return finished;
-  for (const cutoff of [record?.endsAt, record?.listingExpiresAt]) {
-    if (cutoff !== undefined && (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})$/.test(cutoff) || !Number.isFinite(Date.parse(cutoff)) || now.getTime() >= Date.parse(cutoff))) return finished;
-  }
   const validDay = (day: string) => /^\d{4}-\d{2}-\d{2}$/.test(day) &&
     Number.isFinite(Date.parse(day)) && new Date(day).toISOString().slice(0, 10) === day;
+  for (const cutoff of [record?.endsAt, record?.listingExpiresAt]) {
+    if (cutoff !== undefined && (!validDay(cutoff.slice(0, 10)) || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})$/.test(cutoff) || !Number.isFinite(Date.parse(cutoff)) || now.getTime() >= Date.parse(cutoff))) return finished;
+  }
   if ([record?.activeFrom, record?.activeUntil, ...(record?.activeDates ?? [])].some(day => day !== undefined && !validDay(day))) return finished;
   if (record?.seasonYear !== undefined && (!Number.isInteger(record.seasonYear) || Number(today.slice(0, 4)) !== record.seasonYear)) return finished;
   const dates = record?.activeDates?.slice().sort();
   const from = record?.activeFrom ?? dates?.[0];
   const until = record?.activeUntil ?? dates?.[dates.length - 1];
+  if (from && until && from > until) return finished;
   const priorYear = Boolean(until && until.slice(0, 4) < today.slice(0, 4));
   const expired = Boolean(record?.revalidateAfter && today > record.revalidateAfter);
   const due = !record || priorYear || expired || record.checkedAt.slice(0, 4) !== today.slice(0, 4);
@@ -108,7 +109,7 @@ export function getDateNightAvailability(
     Pick<DecoratedDateNightPlace, "hoursKnown" | "isOpen">,
   now = new Date(),
 ): DateNightAvailability {
-  const seasonal = venue.activityTypes?.some((type) => ["haunted-house", "corn-maze", "pumpkin-patch", "other-halloween-fall"].includes(type)) ?? false;
+  const seasonal = Boolean(venue.seasonalListing) || (venue.activityTypes?.some((type) => ["haunted-house", "corn-maze", "pumpkin-patch", "other-halloween-fall"].includes(type)) ?? false);
   const record = venue.seasonalAvailability ?? SEASONAL_VENUE_AVAILABILITY[venue.id];
   const listing = venue.seasonalListing;
   const effectiveRecord = listing ? { ...record, status: record?.status ?? "unconfirmed", checkedAt: record?.checkedAt ?? "",

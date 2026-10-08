@@ -62,10 +62,12 @@ test("V1 exact/date-only/editorial cutoff and malformed/year guards fail closed"
   assert.equal(pool([row],new Date("2026-11-03T06:00:00Z")).length,0);
   assert.equal(pool([row],new Date("2027-10-10T20:00:00Z")).length,0);
  }
- for(const invalid of ["not-a-date","2026-11-01",""]){const row=fixture();row.seasonalListing.listingExpiresAt=invalid;assert.equal(pool([row]).length,0);}
+ for(const invalid of ["not-a-date","2026-11-01","2026-11-31T00:00:00-06:00",""]){const row=fixture();row.seasonalListing.listingExpiresAt=invalid;assert.equal(pool([row]).length,0);}
  const overEditorial=fixture();overEditorial.seasonalListing.expiryBasis="editorial";overEditorial.seasonalListing.listingExpiresAt="2026-11-04T00:00:00-06:00";assert.equal(pool([overEditorial]).length,0);
  const badZone=fixture();badZone.seasonalListing.timeZone="Invalid/Zone";assert.equal(pool([badZone]).length,0);
  const badDay=fixture();badDay.seasonalAvailability.activeUntil="2026-02-31";assert.equal(pool([badDay]).length,0);
+ const inverted=fixture();inverted.seasonalAvailability.activeFrom="2026-11-01";assert.equal(pool([inverted]).length,0);
+ const providerCategory=fixture();providerCategory.activityTypes=["park"];assert.equal(pool([providerCategory],new Date("2027-10-10T20:00:00Z")).length,0);
  const missingCalendar=fixture();delete missingCalendar.seasonalAvailability;assert.equal(pool([missingCalendar],new Date("2027-10-10T20:00:00Z")).length,0);
 });
 test("V1 factually cleared address-only is staged outside all radius math",()=>{
