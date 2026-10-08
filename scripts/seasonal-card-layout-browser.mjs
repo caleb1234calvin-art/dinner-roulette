@@ -126,6 +126,28 @@ try {
           await details.locator("summary").press("Enter");
           assert.notEqual(await details.getAttribute("open"), null);
           assert.ok(await details.locator("p").count());
+          if (kind === "plan") {
+            const paragraphs = details.locator("p");
+            geometry.expandedNotes = [];
+            for (let index = 0; index < await paragraphs.count(); index++) {
+              const paragraph = paragraphs.nth(index);
+              await paragraph.scrollIntoViewIfNeeded();
+              const metric = await paragraph.evaluate(el => {
+                const box = el.getBoundingClientRect();
+                const x = Math.max(0, Math.min(innerWidth - 1, box.x + box.width / 2));
+                const y = Math.max(0, Math.min(innerHeight - 1, box.y + box.height / 2));
+                const hit = document.elementFromPoint(x, y);
+                return { text: el.textContent, x: box.x, y: box.y, width: box.width, height: box.height,
+                  bottom: box.bottom, scrollWidth: el.scrollWidth, viewportWidth: innerWidth, viewportHeight: innerHeight,
+                  fontSize: getComputedStyle(el).fontSize, unobscured: Boolean(hit && (el.contains(hit) || hit.contains(el))) };
+              });
+              geometry.expandedNotes.push(metric);
+              await page.screenshot({ path: `${out}/${row.seasonalListing?.recordId ?? row.id}-${width}-plan-expanded-${index}.png` });
+              assert.ok(metric.scrollWidth <= metric.width + 1, "Expanded plan fact is not clipped horizontally");
+              assert.ok(metric.y >= 0 && metric.bottom <= metric.viewportHeight + 1 && metric.height > 0 && metric.unobscured, "Expanded plan fact is readable after scrolling");
+              assert.ok(parseFloat(metric.fontSize) >= 12, "Expanded material facts retain readable text size");
+            }
+          }
           await details.locator("summary").press("Enter");
           assert.equal(await details.getAttribute("open"), null);
         }
@@ -138,8 +160,8 @@ try {
       assert.equal(measured.after.mediaHeight, measured.ordinary.mediaHeight);
       assert.equal(measured.after.mediaClass, measured.ordinary.mediaClass);
       assert.equal(measured.after.cardClass, measured.ordinary.cardClass);
-      if (delta > 16) verdict.errors.push(`Collapsed ${kind} seasonal card exceeds matched ordinary by ${delta}px at ${width}: ${row.name}`);
-      if (kind === "options" && measured.after.height - measured.standard.height > 16) verdict.errors.push(`Collapsed option exceeds short standard by ${measured.after.height - measured.standard.height}px at ${width}: ${row.name}`);
+      if (delta > (kind === "options" ? 0.5 : 5)) verdict.errors.push(`Collapsed ${kind} seasonal card exceeds matched ordinary by ${delta}px at ${width}: ${row.name}`);
+      if (["options", "plan"].includes(kind) && measured.after.height - measured.standard.height > (kind === "options" ? 0.5 : 5)) verdict.errors.push(`Collapsed ${kind} exceeds short standard by ${measured.after.height - measured.standard.height}px at ${width}: ${row.name}`);
       assert.ok(measured.after.height <= measured.before.height);
       } catch (error) {
         verdict.errors.push({ id: row.id, kind, width, message: error.stack });

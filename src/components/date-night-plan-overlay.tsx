@@ -81,7 +81,7 @@ export function DateNightPlanOverlay({
               return (
                 <div key={place.id}>
                   <article className="overflow-hidden rounded-2xl bg-surface shadow-border">
-                    <div className={cn("flex", seasonal ? "gap-3 px-3 pt-2 pb-0" : "gap-4 p-4")}>
+                    <div className={cn("flex", seasonal ? "gap-3 px-3 pt-1 pb-0" : "gap-4 p-4")}>
                       <div className="flex size-20 shrink-0 items-center justify-center rounded-2xl bg-elevated p-1.5 outline outline-1 -outline-offset-1 outline-fg/10">
                         {icon ? (
                           <img src={icon} alt="" className="size-full rounded-xl object-cover" />
