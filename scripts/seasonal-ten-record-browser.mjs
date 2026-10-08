@@ -524,13 +524,22 @@ try {
       result.evidence.cache = { before, afterOff, afterRefresh, refreshedAt };
     }, { fixture: "mixed" });
     for (const kind of ["options", "result"]) {
-      const expiresAt = row.seasonalListing.listingExpiresAt, beforeAt = new Date(Date.parse(expiresAt) - 60000).toISOString();
+      const expiresAt = row.seasonalListing.listingExpiresAt;
+      const overnight = ["MO26-058", "DELTA-EDGE-2026"].includes(row.seasonalListing.recordId);
+      const beforeAt = new Date(Date.parse(expiresAt) - (overnight ? 31 * 60000 : 60000)).toISOString();
       await runScenario(row, index, `resume-expiry-${kind}`, async test => {
         const { page, result } = test;
         await activityCount(page, nearby(row, { at: beforeAt }).length + 1);
         await optionsButton(page).click(); await rowHeading(page, row).waitFor();
         if (kind === "result") await selectTarget(page, row);
         await settleLocal(test); const before = test.rpc.length;
+        if (overnight) {
+          for (const at of ["2026-11-01T00:00:00-05:00", new Date(Date.parse(expiresAt) - 1).toISOString()]) {
+            await advance(test, at); await rowHeading(page, row).waitFor();
+            assert.doesNotMatch(await (kind === "options" ? rowCard(page, row) : overlayRoot(page, kind)).innerText(), /Open now/);
+            await assertNoRpc(test, before, "Supported overnight tail survives cache/resume without new provider facts");
+          }
+        }
         await advance(test, expiresAt); await rowHeading(page, row).waitFor({ state: "hidden" });
         const remaining = nearby(row, { at: expiresAt }).length + 1;
         await activityCount(page, remaining);

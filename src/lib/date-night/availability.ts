@@ -54,7 +54,7 @@ function localDateKey(now: Date): string {
   return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
 }
 
-function calendarState(record: SeasonalVenueAvailability | undefined, now: Date) {
+function calendarState(record: SeasonalVenueAvailability | undefined, now: Date, exactListingEnd = false) {
   const finished = { season: "finished" as const, dateOpen: false, due: true };
   // Invalid dates/timezones fail closed rather than throwing or reviving a record.
   let today: string;
@@ -80,8 +80,11 @@ function calendarState(record: SeasonalVenueAvailability | undefined, now: Date)
   const due = !record || priorYear || expired || record.checkedAt.slice(0, 4) !== today.slice(0, 4);
   // A dated prior season is terminal: no automatic later-year browsing rollover.
   if (priorYear) return finished;
-  // Known end is enforced even when revalidation is overdue.
-  if (record?.status === "confirmed" && until && today > until && !priorYear) return { season: "finished" as const, dateOpen: false, due };
+  // A separately supported exact final end can fall after the last event-start
+  // date (for example an October 31 event ending at 00:30 November 1).
+  // Its validated timestamp above controls expiry; date-only records still end
+  // after their last supported date. No opening interval is inferred here.
+  if (record?.status === "confirmed" && until && today > until && !priorYear && !(exactListingEnd && record.endsAt)) return { season: "finished" as const, dateOpen: false, due };
   // Revalidation can become due without supplying evidence of renewed operation.
   if (record?.status === "not-operating") return { season: "not-operating" as const, dateOpen: false, due };
   if (due || !record || record.status === "unconfirmed") return { season: "unconfirmed" as const, dateOpen: false, due };
@@ -114,8 +117,9 @@ export function getDateNightAvailability(
   const listing = venue.seasonalListing;
   const effectiveRecord = listing ? { ...record, status: record?.status ?? "unconfirmed", checkedAt: record?.checkedAt ?? "",
     seasonYear: listing.seasonYear, timeZone: listing.timeZone,
+    endsAt: record?.endsAt ?? (listing.expiryBasis === "exact" ? listing.listingExpiresAt : undefined),
     listingExpiresAt: listing.listingExpiresAt ?? "", openNowPolicy: "never" as const } : record;
-  const calendar = calendarState(effectiveRecord, now);
+  const calendar = calendarState(effectiveRecord, now, listing?.expiryBasis === "exact");
   if (listing?.expiryBasis === "editorial") {
     // Editorial Halloween retention is never operating evidence and cannot run
     // beyond November 2 in the venue timezone, regardless of a malformed cache.

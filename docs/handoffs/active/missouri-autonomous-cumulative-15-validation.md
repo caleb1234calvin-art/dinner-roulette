@@ -50,3 +50,21 @@ DNS, Android signing or Play action is authorized. Main213502/production
 BCdD3eWRXk6UEN2FNJQE88r18VXv were freshly checked before preparation. Reverify before
 publication or further consequential work. An independent exact-candidate review
 is still required after hosted acceptance. Physical Android remains HOLD.
+
+## First runtime review correction
+
+The fresh independent runtime review of 6f58f88c790db3509e76a6fde386e410aee759c2
+found Beast and Edge of Hell prematurely expired at November 1 midnight because
+activeUntil (the October 31 event-start date) overrode the independently supported
+00:30 final end. The first candidate remains runtime HOLD; its hosted attempts
+are retained rather than relabeled PASS.
+
+The bounded correction gives only a curated exact-expiry listing's validated
+final timestamp precedence over the date-only terminal check. Earlier explicit
+endsAt, invalid cutoffs, negative lifecycle and season-year checks remain
+fail-closed. Editorial/date-only/unreviewed/ordinary records gain no extension;
+original event-start dates remain unchanged and no opening interval is created.
+Dedicated tests pin midnight, cutoff minus one millisecond, cutoff and later,
+including duplicate/cache/saved/DST behavior. Built-browser resume cases cross
+midnight and 00:29:59.999 before requiring expiry at 00:30. The five independently
+reviewed data/copy file hashes remain unchanged.
