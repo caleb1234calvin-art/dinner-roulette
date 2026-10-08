@@ -254,10 +254,21 @@ Disposition:
 
 Wolfman's House of Screams and Aurora Maze / Adventure Farm remain historical-overlap records and are not duplicated. Current directory facts may enrich their existing held/research records after field-level verification.
 
+## Placement follow-up
+
+Fresh address-geocoding was attempted for all six factual PASS records before runtime implementation.
+
+- Edge of Hell, Creepyworld, The Darkness, Haunted River Float and Fear the Bloody Timber returned defensible address-derived points suitable for **approximate map/radius placement only**.
+- Hell Harvest's supported visitor address did **not** return a unique acceptable Census match. A fallback OSM/Nominatim query resolved only to a generic Potosi road segment and is not acceptable as venue placement.
+
+Therefore Hell Harvest remains **factual PASS / runtime placement HOLD** until a defensible operator-linked or address-bound point is obtained. Do not weaken placement precision merely to include it in the same batch.
+
 ## Batch result
 
-Immediate runtime implementation candidates: 6
-Schedule HOLD: 2
+Factual PASS: 6
+Immediate runtime implementation candidates: 5
+Runtime placement HOLD: 1 (Hell Harvest)
+Schedule HOLD: 2 (Labyrinth of Fear, Rising Haunted Attraction)
 Reject: 0
 
-Implementation may proceed only for the six PASS records, with late-season visibility required for Creepyworld and The Darkness.
+Implementation may proceed only for the five runtime-ready PASS records, with late-season visibility required for Creepyworld and The Darkness.
