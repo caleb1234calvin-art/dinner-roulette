@@ -468,6 +468,8 @@ try {
         assert.equal(expected.some(candidate => candidate.id === row.id), targetEligible, "Only explicit lifecycle listings survive seasonal switch-off");
         if (expected.length) {
           await optionsButton(page).click();
+          await page.getByRole("button", { name: "Close options", exact: true }).waitFor();
+          if (targetEligible) await rowHeading(page, row).waitFor();
           assert.equal(await rowHeading(page, row).count(), targetEligible ? 1 : 0, "Policy eligibility controls rendered target");
           await closeOptions(page);
         }
@@ -683,8 +685,15 @@ try {
       await assertNoRpc(test, before, "Late-fall Open Now remains a local fail-closed filter");
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       await advance(test, row.seasonalListing.listingExpiresAt);
-      await rowHeading(page, row).waitFor({ state: "hidden" }); await closeOptions(page);
-      await activityCount(page, nearby(row, { at: row.seasonalListing.listingExpiresAt, season: false }).length);
+      await rowHeading(page, row).waitFor({ state: "hidden" });
+      const remaining = nearby(row, { at: row.seasonalListing.listingExpiresAt, season: false }).length;
+      await activityCount(page, remaining);
+      if (remaining === 0) {
+        await page.getByRole("button", { name: "Close options", exact: true }).waitFor({ state: "hidden" });
+        assert.equal(await overlayRoot(page, "options").count(), 0, "Empty expired shortlist unmounts");
+        assert.equal(await pickButton(page).isDisabled(), true);
+        assert.equal(await optionsButton(page).isDisabled(), true);
+      } else await closeOptions(page);
       await assertNoRpc(test, before, "Expiry within the already-ordinary late-fall session stays local");
       await visitNav(page, "Favorites", "/favorites"); await inspectSaved(test, row, "late-expired-favorite", true);
       await advance(test, "2027-11-05T12:00:00-05:00");

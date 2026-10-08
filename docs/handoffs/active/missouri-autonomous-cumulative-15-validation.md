@@ -123,3 +123,16 @@ pool. Expiry inside an already-ordinary November session still requires zero RPC
 The failed 93b artifact is 11580279394, SHA-256
 1febeb0ff5cb2697cc1db979f9e8a50d6f54f310fe2e38882a7485fbaa42b505.
 No earlier browser result is promoted to the corrected candidate.
+
+## Final six browser harness corrections
+
+Exact 46ded hosted matrix completed 235 cases: 229 PASS and six FAIL. Independent
+pixel/DOM inspection found all three season-off target cards correctly visible
+but positive heading counts ran before OptionsOverlay mounted. Wait for the
+actual mounted overlay and positive target; negative assertions remain strict.
+The other three cases correctly expired the final row and unmounted the empty
+shortlist, so clicking its removed Close button was invalid. Assert zero eligible
+rows, no overlay and disabled pick/options controls when empty, then continue the
+unchanged no-RPC, saved-history and 2027 assertions. No runtime code changes.
+Retained artifact11582623786 SHA-256
+022dfaa088841d2594eb9db852bd5e26ead5b423a674980635d09ff31e74c07b.
