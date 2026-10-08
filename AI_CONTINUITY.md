@@ -1,3 +1,64 @@
+# Pick For Us — PR59 Independently Verified; Owner Release Decision Required (2026-10-08)
+
+## CURRENT — VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION
+
+**PASS — exact-candidate implementation, full applicable technical validation and scoped hosted browser/layout acceptance.** Stop the autonomous pipeline at this release gate. The owner must make one concrete decision on this exact cumulative candidate; **no merge, production promotion, settings change or protection waiver is authorized by this PASS**. Production remains the previously shipped seventeen-record/card-layout release.
+
+### Exact immutable candidate and ancestry
+
+[Draft PR #59](https://github.com/caleb1234calvin-art/dinner-roulette/pull/59), branch `integration/missouri-autonomous-cumulative-15`.
+Candidate **`979d83aede9d66163e1ebaed9ad5b219cb637882`**; complete tree **`a7dbb32947c0a0daf4864346b0d212477fc9a11b`**; sole parent **`46ded230297976698b9c8a035cb2dafd11219314`**.
+Main base **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**, tree **`df157a388e582bae1e085d456f704e8f24d48aac`**. Main is an ancestor; **29 commits ahead /zero behind /32 main-relative paths**. PR54–58 constituent ancestry is already represented once; do not merge those separately.
+
+Fifteen additions: Monster Corn Maze, Beast, Dead Factory, Pomme de Terror, Haunted Hall of Horror, Witches Day Out, Nevada/Vernon County Oktoberfest, Osage Beach Fall Festival, McWilliams Other-only, Brookdale, Edge of Hell, Creepyworld, The Darkness, Haunted River Float and Fear the Bloody Timber. **32 candidate records =17 shipped +15 new.** Existing17 factual catalogs and consumer copy are unchanged; no future research batch is imported.
+
+### Full independent and hosted acceptance
+
+- **892 full tests PASS /four inherited skips** (821 repository +71 application); typecheck PASS; ESLint zero errors/six warnings; auth-enabled migration-free production build/proof PASS. Ordinary migration-chaining npm build was never used.
+- Exact web **37856067474 / job113580422161 SUCCESS**; development/safe production builds, full tests, audits, browser and artwork gates passed.
+- **512/512 seasonal cases PASS =23 +97 +157 +235**. New235 covers fifteen scenarios per added record, seven old receipt controls and three dedicated late-fall cases. All15 narrow/normal card flows, Details, routing/ride policy, provider duplicates, Open Now, fallback, cache/resume, preferences/identity receipts and expiry/no2027 have actual built-app coverage.
+- **255/255 geometry comparisons PASS**, plus11 no-plan controls:32×3 widths×2 options/results and21 genuinely thrill-eligible records×3 plans. Maximum positive excess **0px options /4.671875px matched results /3px plans**. Original112/224/80px media retained.
+- Artifact **11585666587**,396532848 bytes, SHA-256 **`47eff27045414262b64adbd4c26228c20652d3a91792953ab1a43ce8f195be51`** authenticated against metadata and CRC-checked; **4005 PNGs decoded**. Actual all15 narrow options/material Details, all3 late-fall rows/expired Favorites and plan/ordinary comparison pixels independently inspected.
+- Source **`074c2991bd5bc524073138ddba41bf958bd8a23df03bc993584731fa2631db49` /461 files**; hosted output **`d18ee615980f4e476a26b07e2a20e192a55b9ca221e31c1bc93c4c0fc514fede` /194 files**. All verdicts bind that source/build. Separate local output hash is not claimed equal across environments.
+- New15 fixtures intercepted1305 provider calls with zero forwarded. Casino16/location19 checks passed on the same build. These prove controlled application behavior, not public provider completeness or physical GPS.
+- Unsigned Android **37856067567 / job113580423096 SUCCESS**, signing **113581613283 SKIPPED**. Artifact11584446429 SHA **`8352c4cc594a5a713116f870a9c8ebf5a52f4b2cabac7b73e707322ced8040d8`** and internal source979d/APK/AAB checksums/CRC independently checked; synthetic PR artifact label does not change checkout identity. Android lint retains14 warnings; physical/WebView/GPS acceptance remains HOLD.
+
+### Three material runtime findings now closed
+
+**IV-01 CLOSED:** Beast/Edge remain eligible through the exact November1 00:30 CDT overnight end, while original event-start dates and conservative malformed/non-exact/negative/year controls remain. Browser/cache/resume tests cross midnight and expire at the exact end.
+
+**IV-02 CLOSED:** Pomme keeps official Hermitage campground point Directions but uses generic external ride destination selection; fresh/merged/stale/saved paths honor it. Sam's separately reviewed parking behavior is unchanged. Earlier harness-only interpretation was withdrawn; no unsupported ride precision was accepted.
+
+**IV-03 CLOSED:** Current-registry lifecycle supplements survive actual client discovery/radial cache without fabricating provider coverage. Arbitrary payload flags cannot gain authority; radius/explicit categories/canonical policy/preference/expiry rules still apply. Pending RPC finishing at expiry cannot resurrect an eligible pick.
+
+Preserve failed6f58 runtime,97fa geometry-harness,93b21-failure,c2ca18-failure and46ded six-harness-failure attempts. Final979d reran all gates; earlier failures are not relabeled PASS. Corrected positive mount waits, empty-overlay expiry and exactly-one ordinary Oct→Nov refresh keep strict assertions. Expiry inside an already ordinary late-fall session requires no extra RPC.
+
+### Exact lifecycle and navigation semantics for the owner decision
+
+Only **Brookdale, Creepyworld and Darkness** use lifecycle visibility through Anything **even with Spooky Season off during October**, and after the normal November2 UI/provider window until their own ends. This is not merely a November-only switch. Explicit park/museum selections exclude them; stale seasonal-only filters retain prior normalization to Anything without positive seasonal provider queries. Halloween chips/UI and live seasonal provider discovery are not globally extended.
+
+Brookdale ends **November8 18:00 CST**; Creepyworld/Darkness **November13 22:00 CST**. Exact expiry, saved Season ended history and no2027 passed. All curated rows remain never machine Open Now. Monster/Pomme date-only boundaries are retention, not fabricated closing. Fourteen approximate address points support radius/distance only; supported-address Directions remain distinct. Beast/Edge remain separate identities with required Central Waiver Station first-stop routing.
+
+### Evidence, parked records and known limits
+
+[Exact corrected independent report](docs/handoffs/active/missouri-autonomous-cumulative-15-independent-verification.md), SHA-256 **`a2dadec8aa9c729d69ca097480f4709add4d60ec967fb0f0a8de8f480a8435f4`**; independent evidence ZIP **`27dd8afcfb8d37cdb6f8118c9e58b9ce9f5ab515343217c3788e4ab9bec2c2f8`**. Report lists every changed path and complete gate evidence. Corrected only Hell Harvest's global status; original report history preserved and candidate bytes unchanged. Its continuity-pending sentence is superseded after this readback.
+
+Active15 R3 full projections SHA **`45f2bf1269b741e3ca2613f6c8547a6107b8297062ad5fee1d0bb147b178be9a`** and five source-file hashes deep-match all15 catalog and consumer objects. Historical missing report recovery remains PARTIAL; fresh inspected evidence supplies actual field approval.
+
+Future nine remain data/placement/copy PASS but **unimplemented and outside PR59**: Branson, Liberty, Ranch, Cobb, Nixa, Nightmare, Trepidations, Freaks and Hell Harvest. Hell Harvest's original PR58 placement HOLD was later cleared by fresh Delta4R4 evidence; it is not still globally held. Carolyn/Route66 staged placement HOLD, Labyrinth/Rising dates, other unresolved records and residential requirements remain. Vino's deliberate2026 no-import/expiry decision is retained, without inventing a physical-event end. No statewide exhaustion claim.
+
+Retain six ESLint warnings, inherited320px Directions clipping (no worse, not fixed), temporary Other icon, approximate placement, conservative hours and no live provider/weather/ticket guarantee. Optional historical dev-only probe remains INCONCLUSIVE. Local Chromium was blocked; accepted browser evidence is hosted. No physical Android/signing/Play approval.
+
+### Release boundary and current production
+
+Fresh **23:38 UTC** main213502/tree df157, PR59 draft/unmerged exact979d and current production **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv` READY** remain unchanged. For any prospective release, **current BCd is the prospective immediate rollback target**, not older8VL; actual future target/access must be verified. Integration deployments remain disabled; no Vercel candidate preview or production promotion is implied by hosted acceptance.
+
+**Next: one owner release decision for exact979d/tree a7db**, conditional on fresh operator main/head/tree/check/protection/build-route/alias/rollback preflight. Prior waivers are consumed and no new waiver is granted. Stop autonomous source/research work at this gate; do not import the parked nine or merge constituents.
+
+This approved closeout changes only AI_CONTINUITY.md and the exact corrected review on deployment-disabled continuity. **PARENT COMMIT:** `b597f352307c4c52ad19f3dee5fe1ed5ca477c17`; **PARENT TREE:** `022d302d94c2f2c2f0b2ab48f9afac13d982d60d`. Verified exclusion blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retained. All historical evidence follows unchanged.
+
+## Prior continuity — final harness rerun pending, now resolved and preserved verbatim
+
 # Pick For Us — PR59 Harness Correction Frozen; Complete Acceptance Still HOLD (2026-10-08)
 
 ## CURRENT — EXACT979d VALIDATION PENDING; SIX INCOMPLETE SCENARIOS MUST FINISH
