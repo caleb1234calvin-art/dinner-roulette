@@ -1,0 +1,1074 @@
+{
+  "audit_id": "MO2026-autonomous-three-source-delta-2",
+  "revision": 3,
+  "frozen_at": "2026-10-08T20:38:00.296517+00:00",
+  "role": "RESEARCHER — no import clearance authority",
+  "main_observed_by_coordinator": "213502ef8cf3f67d75e6d9c9c8ff43f9f656890c",
+  "production_observed_by_coordinator": "dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv READY",
+  "pr57": "a61af2bfd05ad959dfa3a3fb8dd564ad7b804921",
+  "pr58": "d876dbc12de47d5d40be0e9cc2116b30d9834089",
+  "metrics": {
+    "researched": 15,
+    "clearance_candidates": 4,
+    "holds": 11,
+    "independent_pass": 0,
+    "runtime_ready": 0,
+    "placement_candidates": 3,
+    "address_only_clearance_candidate": 1
+  },
+  "records": [
+    {
+      "record_id": "DELTA2-BRANSON-GHOSTER",
+      "name": "The Curse at The Branson Ghoster Coaster",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://www.missourihauntedhouses.com/",
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "CLEARANCE CANDIDATE",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address": {
+          "value": "2115 W. 76 Country Blvd, Branson, MO 65616",
+          "source_urls": [
+            "https://www.thebransoncoaster.com/halloween"
+          ]
+        },
+        "category": {
+          "value": "Other Halloween / Fall",
+          "source_urls": [
+            "https://www.thebransoncoaster.com/halloween"
+          ]
+        },
+        "activity_subtype": {
+          "value": "Haunted coaster ride",
+          "source_urls": [
+            "https://www.thebransoncoaster.com/halloween"
+          ]
+        },
+        "current_season": {
+          "value": "Explicit 2026 Event Schedule",
+          "source_urls": [
+            "https://www.thebransoncoaster.com/halloween"
+          ]
+        },
+        "date_rule": {
+          "value": "Friday and Saturday nights in October 2026",
+          "source_urls": [
+            "https://www.thebransoncoaster.com/halloween"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "verified",
+            "display": "7–10 p.m. on listed nights; no machine intervals"
+          },
+          "source_urls": [
+            "https://www.thebransoncoaster.com/halloween"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "Special event ticket required; ordinary/third-party tickets and discounts not accepted.",
+            "Recommended age13+; this is a recommendation, not an absolute minimum.",
+            "For two riders, the passenger must be age 3+ and 38–56 inches tall, accompanied by a driver age 16+ and at least 56 inches tall. Two riders both over 56 inches cannot share a sled. The front rider must be at least a head height shorter than the driver. The age-16 companion rule is not a claimed minimum age for solo driving. Maximum sled weight is 375 pounds dry / 330 pounds wet."
+          ],
+          "source_urls": [
+            "https://www.thebransoncoaster.com/halloween",
+            "https://www.thebransoncoaster.com/ride-requirements",
+            "https://www.thebransoncoaster.com/"
+          ]
+        },
+        "phone": {
+          "value": "417-544-8068",
+          "source_urls": [
+            "https://www.thebransoncoaster.com/halloween"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-10-31T22:00:00-05:00",
+            "basis": "exact",
+            "derivation": "Final Friday/Saturday in explicitly bounded October2026 schedule plus explicit10pm close."
+          },
+          "source_urls": [
+            "https://www.thebransoncoaster.com/halloween"
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "hours",
+          "values": [
+            "Current operator7–10pm",
+            "Directory8–10pm"
+          ],
+          "handling": "Use direct operator wording only after independent review; retain discrepancy; never average/infer8pm start.",
+          "sources": [
+            "https://www.thebransoncoaster.com/halloween",
+            "https://www.missourihauntedhouses.com/halloween/the-branson-ghoster-mo.html"
+          ]
+        }
+      ],
+      "blockers": [],
+      "runtime_constraint": "Address-only; stage outside radius until approximate placement is reviewed.",
+      "placement_candidate": {
+        "latitude": 36.64095609765,
+        "longitude": -93.260005613352,
+        "basis": "address-geocode",
+        "precision": "Approximate Census address-range interpolation; not an entrance, parking stall, gate, doorway or rideshare drop-off.",
+        "matched_address": "2115 W 76 COUNTRY BLVD, BRANSON, MO, 65616",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2115+W+76+Country+Blvd%2C+Branson%2C+MO+65616&benchmark=Public_AR_Current&format=json",
+        "retrieved_at": "2026-10-08T20:32:23.116221+00:00",
+        "independent_review": "NOT PERFORMED"
+      }
+    },
+    {
+      "record_id": "MO26-037",
+      "name": "Field of Screams Nixa",
+      "discovery_class": "HISTORICAL HOLD",
+      "discovery_sources": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "CLEARANCE CANDIDATE",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address": {
+          "value": "Summers at the River, 2142 N. Sports Complex Ln., Nixa, MO 65714",
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/dates",
+            "https://fieldofscreamsnixa.com/directions"
+          ]
+        },
+        "category": {
+          "value": "Haunted House",
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/"
+          ]
+        },
+        "activity_subtype": {
+          "value": [
+            "Haunted Forest",
+            "Coulrophobia clown haunt"
+          ],
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/"
+          ]
+        },
+        "current_season": {
+          "value": "Explicit2026 dates page",
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/dates"
+          ]
+        },
+        "dates": {
+          "value": [
+            "2026-09-18",
+            "2026-09-19",
+            "2026-09-25",
+            "2026-09-26",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-11",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-18",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-25",
+            "2026-10-29",
+            "2026-10-30",
+            "2026-10-31",
+            "2026-11-01"
+          ],
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/dates"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "verified",
+            "display": "7p.m.–midnight on listed dates; machine intervals remain null"
+          },
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/dates"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "Children must be accompanied by an adult; recommended10–12+ with parental discretion.",
+            "Uneven outdoor terrain; closed-toe footwear.",
+            "Strobes/fog/intense sound/darkness; operator warns guests with relevant medical sensitivities.",
+            "No pets; contact venue for access questions."
+          ],
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/safety-rules",
+            "https://fieldofscreamsnixa.com/faq"
+          ]
+        },
+        "admission_access": {
+          "value": "Online tickets recommended; gate availability not guaranteed on peak nights.",
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/faq"
+          ]
+        },
+        "weather": {
+          "value": "Weather cancellations may result in rescheduling; no live weather guarantee.",
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/faq"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-11-02T00:00:00-06:00",
+            "basis": "exact",
+            "derivation": "Explicit finalNov 1 night closes at midnight, America/Chicago post-DST."
+          },
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/dates"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [],
+      "runtime_constraint": "Address-only; stage outside radius pending reviewed placement. Preserve one property/two activities, not two duplicate listings.",
+      "old_hold_superseded": "Original audit lacked usable2026 dates/address. Current direct operator pages now supply both; no old entrance requirement retained.",
+      "placement_candidate": null
+    },
+    {
+      "record_id": "MO26-055",
+      "name": "Carolyn’s Pumpkin Patch",
+      "discovery_class": "HISTORICAL HOLD",
+      "discovery_sources": [
+        "https://www.missourihauntedhouses.com/"
+      ],
+      "research_decision": "CLEARANCE CANDIDATE",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address": {
+          "value": "17607 N.E.52nd Street, Liberty, MO64068",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/location-and-directions/"
+          ]
+        },
+        "category": {
+          "value": "Pumpkin Patch",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "activity_subtype": {
+          "value": [
+            "Pumpkin patch",
+            "wagon ride"
+          ],
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "current_season": {
+          "value": "Explicit2026 seasonSeptember19–October31",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "date_rule": {
+          "value": "Thursday through Monday within September19–October31,2026",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "partial",
+            "display": "Thursday–Monday. Check daily hours; entrance stops one hour before closing.",
+            "machine_last_admission": null
+          },
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/",
+            "https://carolynspumpkinpatch.com/hours-and-pricing/"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "Tickets use one-hour check-in windows.",
+            "No outside food/alcohol; medical/dietary access questions should go to venue.",
+            "No pets; operator permits outside service animals.",
+            "Liberty Corn Maze next door is distinct; pumpkin listing does not imply corn-maze access."
+          ],
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/hours-and-pricing/",
+            "https://carolynspumpkinpatch.com/frequently-asked-questions/"
+          ]
+        },
+        "phone": {
+          "value": "816-781-9196 (text line)",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-11-01T00:00:00-05:00",
+            "basis": "date-only",
+            "derivation": "Exclude after finalOct 31 date; not a fabricatedOct 31closing interval."
+          },
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "placement",
+          "values": [
+            "Originaloperator-linked point39.183364,-94.366",
+            "OriginalCensus39.186806,-94.379614"
+          ],
+          "handling": "Both withheld here; supported address establishes factual listing but no radius eligibility.",
+          "sources": [
+            "selection_inputs/Missouri-Seasonal-2026-Candidates.json#MO26-055"
+          ]
+        }
+      ],
+      "blockers": [],
+      "runtime_constraint": "Address-only factual projection; do not use original1.3km-discrepant point until approximate placement is separately reviewed.",
+      "placement_candidate": {
+        "latitude": 39.18680551923,
+        "longitude": -94.379614495957,
+        "basis": "address-geocode",
+        "precision": "Approximate Census address-range interpolation; not an entrance, parking stall, gate, doorway or rideshare drop-off.",
+        "matched_address": "17607 NE 52ND ST, LIBERTY, MO, 64068",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=17607+NE+52nd+Street%2C+Liberty%2C+MO+64068&benchmark=Public_AR_Current&format=json",
+        "retrieved_at": "2026-10-08T20:32:31.263258+00:00",
+        "independent_review": "NOT PERFORMED"
+      }
+    },
+    {
+      "record_id": "DELTA2-MISSOURI-NIGHTMARE",
+      "name": "Missouri Nightmare Haunted Attraction",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://frightmaps.com/best-haunted-houses-missouri-2026",
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "HOLD",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address": {
+          "value": "1420 County Rd276, Columbia, MO65202",
+          "source_urls": [
+            "https://app2.hauntpay.com/venues/9298"
+          ]
+        },
+        "current_season_signal": {
+          "value": "Search-indexed official ticket venue shows Oct9–Nov 1,2026; not accepted normalized schedule",
+          "source_urls": [
+            "https://app2.hauntpay.com/venues/9298"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [
+        "Direct current season ticket content could not be reproduced: search index shows2026 event but opened venue page returns older empty upcoming list; operator domain linked by directory returned404. Current-season binding needs independent decisive source, not copyright/index title."
+      ]
+    },
+    {
+      "record_id": "DELTA2-TERROR66",
+      "name": "Terror on Route66",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "HOLD",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "category": {
+          "value": "Haunted House",
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "current_season": {
+          "value": "2026 ticketing; season endsNov 1",
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "visitor_address_candidates": {
+          "value": [
+            "1143 North Service Road West,Sullivan,MO63080 (ticketing)",
+            "1143 N Service Rd E,Sullivan,MO63080 (directory)"
+          ],
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565",
+            "https://www.thescarefactor.com/haunted-houses/missouri/terror-on-route-66/"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "unknown"
+          },
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "material_access": {
+          "value": "Waiver required. No-touch general admission; optional10+touch requires accompanying adult for minors and ID; separate18+full-contact option.",
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "expiry_candidate": {
+          "value": "2026-11-02T00:00:00-06:00, date-only; not an opening interval",
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "visitor_address",
+          "unresolved": true
+        }
+      ],
+      "blockers": [
+        "Visitor address directional conflict needs corroboration before routing."
+      ]
+    },
+    {
+      "record_id": "DELTA2-HANNIBAL",
+      "name": "Hannibal Jaycees’ Warehouse of Nightmares",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "HOLD",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "address_candidates": {
+          "value": [
+            "320 S.Bird St,HannibalMO",
+            "320 South3rd Street,HannibalMO63401"
+          ],
+          "source_urls": [
+            "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/",
+            "https://hannibaljaycees.org/"
+          ]
+        },
+        "2026_dates_signal": {
+          "value": "DMO index10/02/2026–10/30/2026, explicitFri/Satdates andOct 30; explicitlynotOct 31",
+          "source_urls": [
+            "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/"
+          ]
+        },
+        "hours": {
+          "value": "7:30pm–midnight on listed dates, no machine intervals",
+          "source_urls": [
+            "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/"
+          ]
+        },
+        "category": {
+          "value": "Haunted House",
+          "source_urls": [
+            "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [
+        "DMO event routes320S.Bird St while operator/directory320S3rd St. Resolve destination conflict.",
+        "DMO says first 4 weekends but explicitlist includesOct 30; preserve explicitlist vs prose conflict rather than infer recurrence."
+      ]
+    },
+    {
+      "record_id": "DELTA2-MACABRE",
+      "name": "Macabre Cinema",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://frightmaps.com/best-haunted-houses-missouri-2026",
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "HOLD",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address": {
+          "value": "1222 W12thSt,KansasCityMO",
+          "source_urls": [
+            "https://www.visitkc.com/events/macabre-cinema-haunted-attraction-2026-update/"
+          ]
+        },
+        "season_status": {
+          "value": "Operator-attributedDMO2026update: planned season interrupted; potential specials unconfirmed",
+          "source_urls": [
+            "https://www.visitkc.com/events/macabre-cinema-haunted-attraction-2026-update/"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [
+        "Redevelopment; no traditional fullseason. Possible specials not announced. Daily calendar wrapper is not proof of visitor operation."
+      ]
+    },
+    {
+      "record_id": "MO26-056",
+      "name": "Liberty Corn Maze",
+      "discovery_class": "HISTORICAL HOLD",
+      "discovery_sources": [
+        "https://www.missourihauntedhouses.com/"
+      ],
+      "research_decision": "CLEARANCE CANDIDATE",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address": {
+          "value": "17607 Liberty Bend Road S,Liberty,MO64068",
+          "source_urls": [
+            "https://www.libertycornmaze.com/maze-info/"
+          ]
+        },
+        "category": {
+          "value": "Corn Maze",
+          "source_urls": [
+            "https://www.libertycornmaze.com/maze-info/"
+          ]
+        },
+        "current_season": {
+          "value": "Current operator ticket page explicitly binds passes to weekends September 11–October 30, 2026.",
+          "source_urls": [
+            "https://www.libertycornmaze.com/event/2026-corn-maze-pass/"
+          ]
+        },
+        "season_end_signal": {
+          "value": "Oct 30; ticket end10pm vs info11pm",
+          "source_urls": [
+            "https://www.libertycornmaze.com/maze-info/",
+            "https://www.libertycornmaze.com/event/2026-corn-maze-pass/"
+          ]
+        },
+        "dates": {
+          "value": {
+            "start": "2026-09-11",
+            "end": "2026-10-30",
+            "recurrence": "Friday, Saturday and Sunday",
+            "note": "Ticket event text explicitly supplies 2026 dates; older maze-info weekday/date labels are inconsistent."
+          },
+          "source_urls": [
+            "https://www.libertycornmaze.com/event/2026-corn-maze-pass/"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "partial",
+            "display": "Weekend admission hours vary. Check last-entry and closing times before going.",
+            "machine_last_admission": null
+          },
+          "source_urls": [
+            "https://www.libertycornmaze.com/event/2026-corn-maze-pass/",
+            "https://www.libertycornmaze.com/maze-info/"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-10-30T23:00:00-05:00",
+            "basis": "exact",
+            "derivation": "Both current operator visitor-facing schedules explicitly state October 30 closes at 11 p.m. The ticket event metadata ends at 10 p.m., which the same page separately labels as last admission. Conflicting last-admission text remains unknown and does not override the corroborated closing time."
+          },
+          "source_urls": [
+            "https://www.libertycornmaze.com/event/2026-corn-maze-pass/",
+            "https://www.libertycornmaze.com/maze-info/"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "Large group bookings require one week advance notice.",
+            "Outdoor trails may be muddy; wear suitable footwear.",
+            "No pets, alcohol, smoking or outside food/drink; bags may be searched.",
+            "Separate from adjacent Carolyn’s Pumpkin Patch; combo access requires the appropriate ticket."
+          ],
+          "source_urls": [
+            "https://www.libertycornmaze.com/maze-info/",
+            "https://www.libertycornmaze.com/event/2026-corn-maze-pass/"
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "display schedule",
+          "values": [
+            "Maze-info says Friday September 12 / Sunday October 30; weekdays do not match 2026.",
+            "Explicit 2026 ticket validity says September 11–October 30.",
+            "Ticket end metadata is 10 p.m.; visitor text distinguishes last admission 10 p.m. and close 11 p.m.; special last-admission 4 p.m. appears on maze-info."
+          ],
+          "handling": "Keep hours partial and machine opening/last-admission intervals null. Both visitor-facing schedules corroborate an 11 p.m. final close; enforce that exact expiry. Conflicting last-admission prose remains qualified."
+        }
+      ],
+      "blockers": [],
+      "runtime_constraint": "Factual candidate with partial display hours. Independent review must approve placement before radius eligibility.",
+      "old_hold_superseded": "Missing safely normalized last-admission information is not an automatic V1 factual HOLD. Final October 30 close at 11 p.m. is corroborated by both operator pages and enforced exactly.",
+      "placement_candidate": {
+        "latitude": 39.1857233,
+        "longitude": -94.3698827,
+        "basis": "operator-linked destination point",
+        "precision": "Approximate site placement only; not independently verified entrance or parking.",
+        "source_url": "https://www.libertycornmaze.com/maze-info/",
+        "receipt": "evidence/operator-map-links.json",
+        "independent_review": "NOT PERFORMED"
+      }
+    },
+    {
+      "record_id": "DELTA2-FEARFACTORY",
+      "name": "Fear Factory LLC, Mountain Grove",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://www.missourihauntedhouses.com/"
+      ],
+      "research_decision": "HOLD",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address": {
+          "value": "102SouthMainSt,MountainGroveMO65711",
+          "source_urls": [
+            "https://www.fearfactoryllc.com/contact"
+          ]
+        },
+        "category": {
+          "value": "Haunted House",
+          "source_urls": [
+            "https://www.fearfactoryllc.com/contact"
+          ]
+        },
+        "historical_schedule": {
+          "value": "2025Sept 26–Nov 1Fri/Sat8–11pm; DO NOTrollforward",
+          "source_urls": [
+            "https://www.fearfactoryllc.com/contact"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [
+        "Primarycontactpage explicitly2025; directoryupdated2026stamp does not bind operatingdates; separateaggregatorclosedclaim unresolved, notprovenclosed."
+      ]
+    },
+    {
+      "record_id": "DELTA2-SHEPHERD-LANTERN",
+      "name": "Shepherd’s Lantern, Cuba",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://www.missourihauntedhouses.com/"
+      ],
+      "research_decision": "HOLD",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "city": {
+          "value": "Cuba,Missouri",
+          "source_urls": [
+            "https://www.missourihauntedhouses.com/"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [
+        "Directoryidentityleadonly; detailpage unavailable; current 2026Halloween event/address/category unresolved. Wintereventsearch not substituted."
+      ]
+    },
+    {
+      "record_id": "DELTA2-HOLLOWS",
+      "name": "Haunted Hollows Haunted Trail, Palmyra",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "HOLD",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address_lead": {
+          "value": "5947CountyRoad261,Palmyra,MO63461",
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/haunted-hollows-haunted-trail/"
+          ]
+        },
+        "category_lead": {
+          "value": "Trail/hayride classification differs; confirm current activity",
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [
+        "Only historical2025 ticket/olderdirectoryevidence recovered. Needexplicitcurrent 2026 season."
+      ]
+    },
+    {
+      "record_id": "DELTA2-TWISTED",
+      "name": "Twisted Minds Haunted House, Richwoods",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "HOLD",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "city": {
+          "value": "Richwoods,Missouri",
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [
+        "Directorydetailunavailable; historicalhaunt/hayride signals notcurrent 2026 invitation. Needcurrentidentity/address/season."
+      ]
+    },
+    {
+      "record_id": "DELTA2-OZARK",
+      "name": "Ozark Nightmares Haunted House, Lebanon",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "HOLD",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address": {
+          "value": "22599MO-32,LebanonMO65536",
+          "source_urls": [
+            "https://www.visitlebanonmo.org/p/play/attractions"
+          ]
+        },
+        "activity": {
+          "value": "Hauntedhouse/cornmaze; publictourismrecurringFri/SatstartingSeptember",
+          "source_urls": [
+            "https://www.visitlebanonmo.org/p/play/attractions"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [
+        "Publictourism evergreenattraction supportsaddress/activity but noexplicit 2026 season dates orannouncement. Older2025newsnotcurrent."
+      ]
+    },
+    {
+      "record_id": "DELTA2-WACO",
+      "name": "Waco School House Haunt",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "HOLD",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address_lead": {
+          "value": "148RoseStreet,Asbury/WacoMO64832",
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/waco-school-house-haunt/"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [
+        "Directorydatesnotloaded; external2025 listingnot 2026 confirmation."
+      ]
+    },
+    {
+      "record_id": "DELTA2-TREPIDATIONS",
+      "name": "Trepidations Haunted Attraction",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "HOLD",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address_lead": {
+          "value": "101ECommercialSt,ExeterMO65647",
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/trepidations-haunted-attraction/"
+          ]
+        },
+        "schedule_lead": {
+          "value": "Oct2,3,9,10,16,17,23,24,30,31; no-scareOct22; blackoutNov 1. YEAR NOT independently accepted.",
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/trepidations-haunted-attraction/"
+          ]
+        },
+        "ticket_source": {
+          "value": "https://trepidationshaunt.fearticket.com/",
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/trepidations-haunted-attraction/"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [
+        "Detaileddirectorydatepatternnotexplicitlyyear-bound; officialticketpage extractionLoadingonly. Need2026 binding anddirectrestrictionconfirmation."
+      ]
+    }
+  ],
+  "excluded_current_or_active": [
+    "RIP at Myer’s Inn",
+    "The Aftermath Haunted Attraction",
+    "Beyond The Outer Limits",
+    "Campbell’s Maze Daze & Pumpkin Patch",
+    "Rutledge-Wilson Farm Park",
+    "Lloyd’s Family Farm",
+    "Sam A.Baker Halloween Bash",
+    "James River Joplin",
+    "Silver Dollar City Harvest Festival",
+    "Boone Historical Haunts",
+    "Fun Farm",
+    "Shryocks",
+    "Urban Gardens",
+    "Perryville",
+    "Bollinger Mill",
+    "Hotel of Terror",
+    "Dungeons of Doom",
+    "Monster Corn Maze",
+    "Beast",
+    "Dead Factory",
+    "Pomme de Terror",
+    "Haunted Hall of Horror",
+    "Witches Day Out",
+    "Nevada Oktoberfest",
+    "Osage Beach Fall Festival",
+    "McWilliams",
+    "Brookdale",
+    "Edge of Hell",
+    "Creepyworld",
+    "The Darkness",
+    "Haunted River Float",
+    "Fear the Bloody Timber"
+  ],
+  "residential_separate_ledger": [
+    {
+      "name": "Dorsett Hill Haunt",
+      "classification": "RESIDENTIAL/HOME HAUNT",
+      "source_url": "https://www.thescarefactor.com/haunted-houses/missouri/",
+      "runtime_proposal": false,
+      "needed": [
+        "Operator intentionally publishes address for public visitation",
+        "Explicit 2026 invitation to visitors",
+        "Current dates/hours or qualified unknowns",
+        "Exact free/donation/ticket semantics",
+        "Independent visitor-safety and product-policy review"
+      ]
+    },
+    {
+      "name": "Candy Corn Trail of Terror",
+      "classification": "RESIDENTIAL/HOME HAUNT",
+      "source_url": "https://www.thescarefactor.com/haunted-houses/missouri/",
+      "runtime_proposal": false,
+      "needed": [
+        "Operator intentionally publishes address for public visitation",
+        "Explicit 2026 invitation to visitors",
+        "Current dates/hours or qualified unknowns",
+        "Exact free/donation/ticket semantics",
+        "Independent visitor-safety and product-policy review"
+      ]
+    },
+    {
+      "name": "Haunting of Green Berry",
+      "classification": "RESIDENTIAL/HOME HAUNT",
+      "source_url": "https://www.thescarefactor.com/haunted-houses/missouri/",
+      "runtime_proposal": false,
+      "needed": [
+        "Operator intentionally publishes address for public visitation",
+        "Explicit 2026 invitation to visitors",
+        "Current dates/hours or qualified unknowns",
+        "Exact free/donation/ticket semantics",
+        "Independent visitor-safety and product-policy review"
+      ]
+    },
+    {
+      "name": "Drachenmoor",
+      "classification": "RESIDENTIAL/HOME HAUNT",
+      "source_url": "https://www.thescarefactor.com/haunted-houses/missouri/",
+      "runtime_proposal": false,
+      "needed": [
+        "Operator intentionally publishes address for public visitation",
+        "Explicit 2026 invitation to visitors",
+        "Current dates/hours or qualified unknowns",
+        "Exact free/donation/ticket semantics",
+        "Independent visitor-safety and product-policy review"
+      ]
+    },
+    {
+      "name": "Wicked Wraith Haunted House",
+      "classification": "RESIDENTIAL/HOME HAUNT",
+      "source_url": "https://www.thescarefactor.com/haunted-houses/missouri/",
+      "runtime_proposal": false,
+      "needed": [
+        "Operator intentionally publishes address for public visitation",
+        "Explicit 2026 invitation to visitors",
+        "Current dates/hours or qualified unknowns",
+        "Exact free/donation/ticket semantics",
+        "Independent visitor-safety and product-policy review"
+      ]
+    },
+    {
+      "name": "Boulevard Frights",
+      "classification": "RESIDENTIAL/HOME HAUNT",
+      "source_url": "https://www.thescarefactor.com/haunted-houses/missouri/",
+      "runtime_proposal": false,
+      "needed": [
+        "Operator intentionally publishes address for public visitation",
+        "Explicit 2026 invitation to visitors",
+        "Current dates/hours or qualified unknowns",
+        "Exact free/donation/ticket semantics",
+        "Independent visitor-safety and product-policy review"
+      ]
+    },
+    {
+      "name": "Spooky Hollow",
+      "classification": "RESIDENTIAL/HOME HAUNT",
+      "source_url": "https://www.thescarefactor.com/haunted-houses/missouri/",
+      "runtime_proposal": false,
+      "needed": [
+        "Operator intentionally publishes address for public visitation",
+        "Explicit 2026 invitation to visitors",
+        "Current dates/hours or qualified unknowns",
+        "Exact free/donation/ticket semantics",
+        "Independent visitor-safety and product-policy review"
+      ]
+    },
+    {
+      "name": "The Crypt Haunted Attraction",
+      "classification": "RESIDENTIAL/HOME HAUNT",
+      "source_url": "https://www.thescarefactor.com/haunted-houses/missouri/",
+      "runtime_proposal": false,
+      "needed": [
+        "Operator intentionally publishes address for public visitation",
+        "Explicit 2026 invitation to visitors",
+        "Current dates/hours or qualified unknowns",
+        "Exact free/donation/ticket semantics",
+        "Independent visitor-safety and product-policy review"
+      ]
+    }
+  ],
+  "coverage": {
+    "three_sources": "All three discovery indexes reopened; field-level lead screening, followed by a bounded 15-record public/commercial batch.",
+    "exhausted": false,
+    "prior_external_sweep_ledger": "Not recovered. NET NEW means absent from the 134-record historical master and 32 known shipped/active names; provisional against the missing external sweep.",
+    "unsearched_remainder": "Other commercial, public and charity listings remain. No Missouri opportunity-set exhaustion is claimed.",
+    "no_paid_apis": true,
+    "no_operator_contact": true,
+    "no_runtime_changes": true
+  },
+  "evidence_limitations": [
+    "Web tool returns extracted/indexed content with variable crawl ages; independent reviewers must reopen decisive sources.",
+    "One generic direct website request returned a 195-byte Site Unavailable page; it is a failed transport receipt, not evidence about a venue.",
+    "Census returned a single matching address for Branson and Carolyn’s, and zero matches for Nixa. No coordinates are independently cleared in this researcher report.",
+    "Carolyn’s prior operator-linked point differs by approximately 1.3 km from the Census interpolation. Keep this visible to the placement reviewer.",
+    "Liberty’s operator-linked destination is an approximate candidate only. Neither a viewport nor an entrance claim is promoted.",
+    "All factual decisions are researcher proposals, not independent import clearance."
+  ],
+  "source_urls": {
+    "tsf": "https://www.thescarefactor.com/haunted-houses/missouri/",
+    "mhh": "https://www.missourihauntedhouses.com/",
+    "fm": "https://frightmaps.com/best-haunted-houses-missouri-2026",
+    "branson": "https://www.thebransoncoaster.com/halloween",
+    "branson-rules": "https://www.thebransoncoaster.com/ride-requirements",
+    "branson-dir": "https://www.missourihauntedhouses.com/halloween/the-branson-ghoster-mo.html",
+    "nixa": "https://fieldofscreamsnixa.com/dates",
+    "nixa-home": "https://fieldofscreamsnixa.com/",
+    "nixa-rules": "https://fieldofscreamsnixa.com/safety-rules",
+    "nixa-faq": "https://fieldofscreamsnixa.com/faq",
+    "nixa-nav": "https://fieldofscreamsnixa.com/directions",
+    "carolyn": "https://carolynspumpkinpatch.com/",
+    "carolyn-nav": "https://carolynspumpkinpatch.com/location-and-directions/",
+    "carolyn-hours": "https://carolynspumpkinpatch.com/hours-and-pricing/",
+    "carolyn-faq": "https://carolynspumpkinpatch.com/frequently-asked-questions/",
+    "liberty": "https://www.libertycornmaze.com/maze-info/",
+    "liberty-calendar": "https://www.libertycornmaze.com/event/2026-corn-maze-pass/",
+    "nightmare-ticket": "https://app2.hauntpay.com/venues/9298",
+    "fearfactory": "https://www.fearfactoryllc.com/contact",
+    "terror": "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565",
+    "terror-dir": "https://www.thescarefactor.com/haunted-houses/missouri/terror-on-route-66/",
+    "hannibal": "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/",
+    "hannibal-operator": "https://hannibaljaycees.org/",
+    "macabre": "https://www.visitkc.com/events/macabre-cinema-haunted-attraction-2026-update/",
+    "ozark": "https://www.visitlebanonmo.org/p/play/attractions",
+    "trepidations": "https://www.thescarefactor.com/haunted-houses/missouri/trepidations-haunted-attraction/",
+    "trepidations-ticket": "https://trepidationshaunt.fearticket.com/"
+  },
+  "historical_dataset_sha256": "87a1f244d9a13348ec7f7318fcc022e4796f162f05d2ea24f350cb83260e4ede"
+}

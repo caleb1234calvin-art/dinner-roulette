@@ -1,3 +1,44 @@
+# Pick For Us — Delta2 Data Review Complete; PR #59 Runtime Correction Active (2026-10-08)
+
+## CURRENT — SEPARATE DATA GATE CLOSED; CUMULATIVE RUNTIME HOLD REMAINS
+
+Delta2 final independent review of15 records yields **4 factual PASS /11 HOLD /0 REJECT /0 EXPIRED**. Only **two** have accepted approximate placement; the other two factual passes are staged outside radius. **No Delta2 consumer-runtime/browser/release PASS.** Park its two placement-ready candidates for a later bounded batch; do not mix them into the active fifteen.
+
+Meanwhile PR59 exact **`6f58f88c790db3509e76a6fde386e410aee759c2`** has an independently identified **runtime HOLD**: Beast/Edge date filtering can end eligibility30 minutes before their supported final00:30 end. The author is making the bounded correction; full exact-candidate review continues. Active15 R2 data/copy PASS remains scoped to its reviewed fields, not proof of runtime lifecycle correctness. Preserve6f58 and its findings; no old PASS transfers to a successor.
+
+### Delta2 accepted and staged subsets
+
+- **The Curse at The Branson Ghoster Coaster:** factual and approximate Census placement PASS; Other haunted-coaster category. Direct operator2026 October Friday/Saturday19:00–22:00 controls over directory20:00 wording; discrepancy retained. Corrected two-rider age/height relationship and weight restrictions are material. Final **October31 22:00 CDT**.
+- **Liberty Corn Maze (MO26-056):** factual and approximate operator-linked destination PASS, distinct from adjacent Carolyn. Explicit2026 season and both visitor schedules support final **October30 23:00 CDT**, now exact expiry. Conflicting last-admission/weekday text remains qualified; no machine opening intervals.
+- **Field of Screams Nixa (MO26-037):** factual PASS, **placement HOLD/address-only outside radius**. No reviewed point; do not fabricate radius eligibility. One property/two named activities, not duplicate venues. Supported final November1 night ends **November2 00:00 CST**.
+- **Carolyn's Pumpkin Patch (MO26-055):** factual PASS, **placement conflict HOLD/outside radius**. Operator named destination differs1,234m from reproduced Census point. It is a real destination coordinate, not just viewport; do not average or silently choose. Supported address and partial hours still clear factually; final date-only retention **November1 00:00 CDT** is not an operator closing assertion.
+
+All accepted records remain null machine schedules/never-OpenNow. Approximate placements establish neither entrance/parking nor rideshare dropoff. Consumer copy still needs independent implementation review under the compact-notice/Details contract.
+
+### Eleven exact evidence HOLDs
+
+Missouri Nightmare lacks reproducible decisive current ticket/operator season content; Terror on Route66 has conflicting E/W visitor address; Hannibal Warehouse has Bird/3rd destination and date-list/prose conflicts; Macabre redevelopment/possible specials do not establish traditional public operation; Fear Factory only has decisive2025 operator schedule; Shepherd's Lantern lacks supported visitor address/current authoritative binding; Haunted Hollows, Twisted Minds, Ozark Nightmares and Waco lack accepted explicit current2026 evidence; Trepidations needs reproducible2026 ticket/season and direct restriction binding.
+
+These are unresolved evidence gates, **not proof of closure or expiry**. Unknown/partial hours alone are not automatic V1 rejection. Seek genuinely new corroboration for narrow conflicts; do not repeat exhausted empty searches.
+
+### Frozen recoverable artifacts and interpretation
+
+- [Exact independent report](docs/handoffs/active/missouri-delta2-independent-verification.md), SHA-256 **`2e175c16b053a4ea2cc1ddf646e6197aef30bd4ff8f6e653023d8c20bc74c57f`**.
+- [Exact research R3 audit JSON](audit/missouri-three-source-delta2-research-r3.json), SHA-256 **`a57340ed8a18150c21c5ede1339ac66c709fff6183e8d1f769e966d9925d9be5`**.
+- Independent verdict JSON **`cec1ac1d512cd4d835a516dc66c1fb864945b895826cd20d1d26e84af74bb668`**; independent evidence ZIP **`cb42d04aabd5ae42448fac400c56680c86869f4eb10260d2bd1eac1eb9bb8fef`**.
+
+The researcher JSON intentionally preserves producer-time NOT PERFORMED flags, proposed3 placements and old runtime constraints. **The later independent report above controls the current4 factual /2 placement verdict**, including Carolyn's withheld placement. Do not rewrite immutable evidence or mistake historical research flags for current independent status. Branson rider correction and Liberty exact-cutoff R1/R2 findings are closed in R3.
+
+Eight source-classified TSF residential/home haunts remain in a separate ledger with no runtime clearance. FrightMaps residential/three-source coverage is partial. Earlier external sweep ledger was not recovered; NET NEW classifications are provisional against that missing history. No statewide exhaustion claim. Separate residential invitation/address/season/admission/product-policy gates remain.
+
+### Fresh control state and next work
+
+Fresh **20:41 UTC** main **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**, production **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv` READY** and PR59 head6f58 remain unchanged. New6f58 web37840887838 and Android37840887904 were running at freeze observation; terminal outcomes are not assumed. Active15 runtime correction/reverification has priority; Delta2 stays separate for a later appropriately sized batch. Standing nonproduction authority remains; no merge/deploy/settings/waiver.
+
+This approved three-path recovery changes only AI_CONTINUITY.md, exact independent report and exact research audit JSON on deployment-disabled continuity. **PARENT COMMIT:** `aed54b77d5ba336d47f9d38c1148d5a1ead411a9`; **PARENT TREE:** `12b89aa495dc87d9f9b3b4c24263a40f80c5f09b`. Existing integration deployment exclusion and all history are preserved.
+
+## Prior continuity — active15 data PASS and candidate freeze, preserved verbatim
+
 # Pick For Us — Active Fifteen Data/Copy PASS; Cumulative PR #59 Frozen (2026-10-08)
 
 ## CURRENT — EXACT DATA R2 CLEARED; NEW CUMULATIVE RUNTIME/BROWSER GATES PENDING
