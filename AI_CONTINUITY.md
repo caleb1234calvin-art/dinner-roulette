@@ -1,3 +1,45 @@
+# Pick For Us — Seasonal Card Layout Verified; Stop at Draft PR #53 (2026-10-08)
+
+## CURRENT — INDEPENDENT TECHNICAL AND SCOPED VISUAL PASS; NO RELEASE ACTION
+
+The owner's layout-only task is complete after this continuity readback. **Stop at the verified draft candidate, ready for a separate release decision. Do not merge, deploy, ask automatically for release, or start additional work.** The seventeen-record production release remains closed and unchanged.
+
+### Exact candidate and scope
+
+[Draft PR #53](https://github.com/caleb1234calvin-art/dinner-roulette/pull/53), branch `integration/seasonal-card-size-regression`, exact SHA **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**, tree **`df157a388e582bae1e085d456f704e8f24d48aac`**, sole parent **`9c8fcd22a025b3cd23ba360d76faec7844c5d06c`**.
+
+Seven main-relative paths: four presentation components (plan/options/result/seasonal notes), layout harness/test and validation workflow. All factual catalogs, seventeen consumer factual projections, category/hours/admission/date/expiry policies, navigation/approximation, identity/cache/favorites/exclusions, dependencies/artwork/native/production configuration remain unchanged. Full titles/facts remain available in Details/full results despite requested compact-title ellipsis. Original media heights **112/224/80px** are retained.
+
+### Final exact-head acceptance
+
+Independent **820 full tests PASS / four inherited skips**, typecheck, ESLint **zero errors / six warnings**, auth-enabled migration-free build/proof PASS. Hosted web **37818549473 / job113453343453 SUCCESS** includes all required gates, **277 retained seasonal cases** and **120/120 geometry comparisons** at320/390/512. Android readiness37818549355 is incidental unsigned evidence; physical acceptance is not implied.
+
+- **51 options:** exact short-standard height, **281.5px at320**, **272px at390/512**; zero excess.
+- **51 full results:** maximum positive matched-content excess **4.671875px at320**; all10px shorter at390/512. Absolute heights still vary with full venue title/address wrapping.
+- **18 haunt plans:** at320, **217.3125 vs214.3125px (+3)**; at390, **187.3125 vs214.3125px (-27)**; at512, **187.3125 vs198.3125px (-11)**.
+- Final guards require options≤0.5px and results/plans≤5px excess, including short-standard plans. The earlier16px guard was tightened; no criterion was waived.
+- **66 expanded-plan paragraph checks** confirm horizontal fit, scrolling/reachability, unobscured visibility and text≥12px. Keyboard open/close and default collapsed Details pass. Exact notice and all material restrictions remain.
+- Actual all-seventeen option contact sheets, six haunt plans at320/390, full-result spots and critical expanded restrictions were pixel-reviewed. No new horizontal overflow; inherited narrow Directions clipping is demonstrably no worse, not pixel-perfect.
+- Geometry renders actual source components with mocked state and production CSS; retained hosted application suites separately cover real hydration/actions. These layers are not conflated.
+
+Artifact **11568778426**,209939877 bytes, SHA-256 **`3a0b71039f13103ab4987ffc98461aa494882fcd92aad767741b678c329d14be`**, independently authenticated/CRC checked; **2074 PNGs decode**. Source fingerprint **`3af79a5414cd8138f9aeda174ce01991f655da6a2e2b2b38705e020647dfbda0` /450 files**; hosted output **`e20f4be69185c7733fb9911a908e5bf609cfe62836d3b937b0b8194d7c906755` /194 files**, authFlag true.
+
+### Failed attempts preserved
+
+Initial733 candidate had incomplete visual coverage. b0b4 hosted37813306009 failed a generic overflow assertion after its first passing options case; missing after-width evidence prevented blanket attribution. 6ec353 preserved baseline/new-element checks and measured **18 genuinely oversized plan cases (+20–50px)**, HOLD. 6e40 still had three320px cases+19px, HOLD. Further plan-only padding corrections and the owner's final≤5px requirement culminated in213502. **Only the final exact run closes these failures**, not earlier partial results or the obsolete16px criterion.
+
+### Recoverable review, limits and stop boundary
+
+[Exact independent report](docs/handoffs/active/seasonal-card-size-independent-verification.md), Library **`libfile_176a73f214f48191bca84a292158b01f`**, SHA-256 **`7fbd0af16540380fb812471202906738e4e49c9d3d63daecf7fcd3b7980fa975`**. Full artifact Library **`libfile_42b4156ce17c8191a7b4e06300dc8d9a`** has the artifact hash above. Actual before/after320px options and plan screenshots: **`libfile_4650bdef71448191af4ad83e7b636863`**, **`libfile_299bbdb2b06081918574bd7ae450679b`**. Report's producer-time continuity-pending line is superseded by this readback; exact bytes are preserved.
+
+**No Vercel preview identity exists for this candidate:** integration deployment exclusion remains enabled. Acceptance used hosted local production builds, not production deployment. Small11px footer/confidence text and deliberate truncation are requested tradeoffs; expanded facts remain12px/readable. Six inherited warnings, optional dev-only probe historically INCONCLUSIVE, approximate locations/conservative Open Now/temporary Other icon and no provider/weather/ticket guarantee remain. Android physical/WebView/GPS HOLD; signing/Play outside scope.
+
+Fresh **18:39 UTC** main **`2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81`**, tree **`ad80896e7fc063921873c5606a5cad6bb1b8d885`**, production **`dpl_8VLrfiVD7MJx6KQCgGhRNtd4ESE9` READY** and exact draft PR53 unmerged were verified. No release/protection waiver or additional batch authority. **Stop after verified continuity; await an explicit new owner instruction.**
+
+Only AI_CONTINUITY.md and the exact review are added on deployment-disabled `integration/continuity-refresh-2026-10-07`. **PARENT COMMIT:** `b75fedef38302c3ebefa1b8ea719080b5156994e`; **PARENT TREE:** `7ba58fe7ada45f37de0cf17988e9a3541f7458f0`. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains exclusion. No docs deployment; all prior history preserved below.
+
+## Prior continuity — shipped seventeen-record release, preserved verbatim
+
 # Pick For Us — Ten-Record V1 Release SHIPPED (2026-10-08)
 
 ## CURRENT — EXACT APPROVED RELEASE LIVE; SEVENTEEN CURATED RECORDS SHIPPED
