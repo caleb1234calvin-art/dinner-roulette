@@ -1,3 +1,29 @@
+# Pick For Us — PR59 Harness Correction Frozen; Complete Acceptance Still HOLD (2026-10-08)
+
+## CURRENT — EXACT979d VALIDATION PENDING; SIX INCOMPLETE SCENARIOS MUST FINISH
+
+[Draft PR #59](https://github.com/caleb1234calvin-art/dinner-roulette/pull/59) now freezes **`979d83aede9d66163e1ebaed9ad5b219cb637882`**, tree **`a7dbb32947c0a0daf4864346b0d212477fc9a11b`**, sole parent **`46ded230297976698b9c8a035cb2dafd11219314`**. Only the browser harness and handoff changed; runtime/data bytes remain unchanged. Author local892 tests PASS/four skips, typecheck, lint zero errors/six warnings and safe build PASS. **New exact hosted/browser and final independent acceptance remain pending; no release-ready verdict.**
+
+### Preserved terminal failure and independent attribution
+
+Prior46ded web **37849689591 / job113559238015 FAILED**, specifically the new15 browser gate, **not timeout**. Artifact **11582623786**, SHA-256 **`022dfaa088841d2594eb9db852bd5e26ead5b423a674980635d09ff31e74c07b`**, records **229/235 new cases PASS,6 FAIL**, with all277 existing seasonal cases and255 geometry comparisons passing in that run.
+
+Full independent findings `R5/HARNESS-HOLD.md`, SHA-256 **`b0112018bb2f3a0fc99d9dc8ea34db3c05bed3942340cbca5bf24fe1b2a425ff`**, distinguish:
+- Three season-off scenarios counted headings before OptionsOverlay's mount effect. Actual final DOM/inspected screenshot contained the correct target, one activity and compact notice/confidence/Details. Correction positively waits for the target before counting, retaining negative checks.
+- Three exact-expiry scenarios correctly lost their sole row, unmounted OptionsOverlay and showed zero activities/disabled pick/no modal. The harness then clicked nonexistent Close. Correction asserts the empty overlay is hidden, closing normally only when results remain; subsequent no-RPC, saved-history and2027 checks remain required.
+
+These six scenarios did not complete intended final assertions, so the failed gate is not waived. The independent review confirms IV-03 cache retention is functionally corrected through actual cache/radial/pending-expiry probes and successful hosted flows. IV-01/IV-02/IV-03 histories remain preserved. No additional runtime/data defect was identified by this bounded evidence review; that is not a substitute for completing the new exact-head run.
+
+### Remaining acceptance and unchanged boundaries
+
+Require all **512 seasonal cases (277 retained +235 new)**,255 geometry comparisons and source-bound final artifacts/pixels, along with full exact-head technical gates and fresh independent final review. Old-head partial PASS is evidence scoped to that head, not automatic transfer.
+
+Future nine data/copy-cleared records remain parked separately, with fresh pre-import/runtime gates outstanding. Main **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`** and production **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv` READY** were freshly unchanged at **22:52 UTC**; PR59 exact979d remains draft/unmerged. No main/deploy/settings/waiver; nonproduction pipeline continues.
+
+This checkpoint changes only AI_CONTINUITY.md on deployment-disabled continuity. **PARENT COMMIT:** `6aa2b42832b6fcde700bc31af7e5606c8a690f52`; **PARENT TREE:** `60de3ab9dc07a8aa8961583e488686827143fedf`. Verified exclusion blob **`65925d91f882a10433e3eb43f53ed802914c969b`** unchanged; all history retained.
+
+## Prior continuity — future-nine copy gate and earlier PR59 correction state, preserved verbatim
+
 # Pick For Us — Future Nine Consumer Copy PASS; PR59 Remains the Active Candidate (2026-10-08)
 
 ## CURRENT — DATA-ONLY PREPARATION COMPLETE; NO NEW IMPLEMENTATION CANDIDATE
