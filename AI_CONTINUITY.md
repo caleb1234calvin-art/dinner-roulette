@@ -1,3 +1,54 @@
+# Pick For Us — V1 Phase 2 Data Re-clearance Complete (2026-10-08)
+
+## CURRENT — EXACT R2 INDEPENDENT DATA PASS: 26 CLEAR; OWNER IMPLEMENTATION DECISION NEXT
+
+Fresh independent review of exact corrected **R2** is **PASS for projection correction quality and data eligibility**. All 26 former HOLD records were reviewed under the owner-accepted staged V1 contract. **No runtime, listing, implementation, import or release authorization follows.** Production and the two shipped Lloyd/Sam records remain unchanged.
+
+### Final separate outcomes
+
+- **26 CLEARS UNDER NEW CONTRACT**
+- **0 CLEARS FACTUALLY / STAGED OUTSIDE RADIUS**
+- **0 STILL HOLD; 0 EXPIRED; 0 REJECT** at the review instant
+- **26 accepted approximate spatial placements**, conditional on separately implemented/reviewed V1 radius/navigation safeguards; no precise entrance or ride-dropoff promise
+- **26 exact R2 correction-quality PASS**, no remaining material data correction
+- **0 implemented/imported** from this Phase 2 pass
+
+The full corrected historical population is now two already shipped records plus these 26 newly data-cleared projections. Historical original HOLD decisions remain intact; this is new contract-bound review, not retroactive approval of original payloads.
+
+Producer freeze-time PENDING labels and zero independently-verified counters in the immutable R2 artifact are **historical author state**. The separate final independent receipt establishes completion without modifying reviewed bytes or recursively changing their hash. Do not import the review JSON directly or interpret its historical labels as current review status.
+
+### Bounded R1 corrections and accepted qualifications
+
+R1 research initially reported25clear/1HOLD. Independent R1 review supported26factual clearances but held four exact-projection/report corrections (22 record-quality PASS plus four bounded corrections); R1 remains immutable. Final R2 independently reproduces **43 field changes**, only records **003/010/011/084** changed, with the other **22 record objects identical**. All original input/source bindings and no-runtime/import/release flags are preserved.
+
+- **SW-LIFE-01 closed:** Myer/Aftermath/Beyond use the accepted next-local-midnight **date-only retention** rule consistently. Last-walk00:30 next day and null final exit remain qualified facts. Retention may hide the listing before the final overnight walk; it is **not an operator closing-time claim**.
+- **SW-ACCESS-02 closed:** Aftermath/Beyond retain compact source-linked no-costume and sensory/health-suitability guidance, distinguishing recommendations from invented medical prohibitions, plus existing age/infant/wheelchair/weather/refund limits.
+- **CENTRAL-C1 closed:** McWilliams narrowly clears as Other Halloween / Fall for supported animal viewing/reservation-only group bonfires with partial accessibility/reservation qualifications. No current maze/rides/hayrides/U-pick/walk-up bonfire claim or implication that ordinary admission needs a group booking.
+- **REPORT-01 closed:** Hotel/Dungeons remain distinct, with their shared qualified October31 schedule accurately reported; their already correct data objects are unchanged.
+- Brookdale retains supported **November8** season end / **November9** date-only expiry. The November2 editorial ceiling applies to unknown end dates; current global November2 product-window behavior is a separate implementation limitation, not grounds to rewrite known facts.
+- Beast retains waiver-station Directions; Pomme retains its designated campground navigation exception. Every accepted placement remains approximate with affirmative-identity/merge safeguards, address-preferred navigation where applicable, curated never-OpenNow and no2027 rollover.
+
+### Recoverable exact reviewed artifacts
+
+- [Final R2 research report](docs/handoffs/active/seasonal-listing-v1-phase2-2026-10-08.md), SHA-256 **`c447e037390e433d17d42a33aa1b5509f9ad43d3883438502a9a3b4d77d61952`**.
+- [Exact R2 data-only reviewed projection](audit/seasonal-listing-v1-phase2-reviewed-2026-10-08.json), SHA-256 **`76896ea4131f68927b7287eb46cda1d25b8993dd28527b0a2d072a72ef9ef1a6`**.
+- [Final independent R2 report](docs/handoffs/active/seasonal-listing-v1-phase2-review-2026-10-08.md), SHA-256 **`d79d9ee17022ca051b2826410ca7c36677730fe6156ba88334c0778f8157fb92`**.
+- Separate final verdict JSON `Missouri-V1-Final-R2-Independent-Verdicts.json`, SHA-256 **`6d250c087b8368e9a0aa7b3ee240c61e4014a0fe0b3d96a5c391dfae5fc3a0a4`**.
+- R2 evidence ZIP SHA-256 **`8d703a6fae875d5dda46ddc2e3d13a687f982036f7d778736fda92d72380ebc8`**; author field diff **`2bbe5d3dee39a2134f8fc55971d1c246acdb156dc750c8b85c6bb6d64872db80`**. Nested R1 ZIP **`b900b01830315983dbf8323cb080be3102adf515875257d56cda74d8ed096991`** preserves prior receipts.
+- R1 candidate **`ce0512e2994f25db62817a6bad82fa2dc714267035d4e72ce096e5c6aaf54cd7`**, R1 independent report **`2226e700c05362d7aec33986ebcc435c26c3794686b3096f110698fb39d16de2`** and verdicts **`5edc7312842304d6d23629c7ab5e5ccfc3b3a8fb3ff155a26da85d8d968d7be2`** remain unchanged historical evidence.
+
+### Next owner decision and unchanged production
+
+Recommend a separate, bounded **V1 runtime-support + first five-record batch** decision: **MO26-003 Myer, MO26-010 Aftermath, MO26-011 Beyond, MO26-029 Campbell, MO26-030 Rutledge-Wilson**. Do not automatically import all26. No further broad research/correction loop is needed for reviewed R2. Let short-lived witch events expire normally rather than rush a release.
+
+Any later authorized implementation must provide V1 address/approximate-distance navigation and truthful rideshare labels, affirmative-identity dedupe, unknown/partial-hours fail-closed Open Now, hard/date-only/year/expiry/cache/resume safeguards and compact notices with material Details. Keep shipped Lloyd/Sam facts. Myer's legacy trusted fallback remains removed until a separately authorized new projection mapping. Runtime tests, browser/hosted validation, independent verification and release approval remain separate.
+
+Fresh **02:58 UTC** reads confirm main **`0bbf6758e94eea8129e21b004d4c36ff886cd46d`**, tree **`7add088fcbcacb8526f90a6f09c6dd7ca5249b3c`**, and production **`dpl_H655TNrL3hSuBNF8w2xp4MpxspkM`** READY at that SHA. No runtime/production drift or data import.
+
+This approved four-path publication changes only AI_CONTINUITY.md, the two linked reports and the data-only audit JSON on deployment-disabled `integration/continuity-refresh-2026-10-07`. **PARENT COMMIT:** `1b131fea736600df1345074726bf44aef20d70db`. **PARENT TREE:** `c2b0b133fbc608a5fdec0fd4416b02d266118221` (not this new commit's tree; resolve the latter from Git). Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains exclusion. Preserve all history below; stop after readback for the owner's implementation decision.
+
+## Prior continuity — staged V1 acceptance and Phase 2 authorization, preserved verbatim
+
 # Pick For Us — Listing Contract Revision #1 Accepted; Phase 2 Data Review Authorized (2026-10-08)
 
 ## CURRENT — PHASE 1 AUDIT QUALITY PASS; OWNER ACCEPTED STAGED V1; PHASE 2 RESULTS PENDING
