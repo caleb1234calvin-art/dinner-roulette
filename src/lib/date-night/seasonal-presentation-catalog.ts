@@ -3,6 +3,58 @@ import type { SeasonalPresentation } from "./seasonal-presentation";
 /** Explicit independently reviewed visitor copy. Full facts remain in immutable audit
  * artifacts and catalog metadata; no audit narratives are rendered as consumer prose. */
 export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentation>> = {
+  "DELTA-EDGE-2026": {
+    "canonicalId": "date-night-mo26-delta-edge-of-hell",
+    "confidence": "high",
+    "details": [
+      "Listed nights October 2–31, 2026. Thu 7:30–11:30 p.m.; Fri 7:30 p.m.–midnight; Sat 6:30 p.m.–12:30 a.m.",
+      "Required first stop: Central Waiver Station, 1300 W 13th St. Arrive one hour before scheduled entry.",
+      "Visit KC lists tickets from $40+. Check current ticket terms before committing.",
+      "Location is approximate; Directions intentionally lead to the waiver station first."
+    ]
+  },
+  "DELTA-CREEPYWORLD-2026": {
+    "canonicalId": "date-night-mo26-delta-creepyworld",
+    "confidence": "good",
+    "details": [
+      "Current 2026 operator calendar lists dates through November 13; check date-specific hours before going.",
+      "Thirteen attractions are advertised in one location, including haunted mazes and a haunted hayride.",
+      "No refunds; tickets are transferable. Present tickets within 15 minutes of closing to guarantee entry.",
+      "Metal detectors and a no-weapons policy apply. Location is approximate.",
+      "This curated listing remains eligible after the Halloween layer ends because its verified season continues into November."
+    ]
+  },
+  "DELTA-DARKNESS-2026": {
+    "canonicalId": "date-night-mo26-delta-darkness",
+    "confidence": "good",
+    "details": [
+      "The 2026 operator calendar runs from September into November; November 13 is listed as the final unused-ticket night.",
+      "October 16–17 contain conflicting start-time text on the operator schedule; check current hours before going.",
+      "No refunds; tickets are transferable. Present tickets within 15 minutes of closing to guarantee entry.",
+      "No weapons; metal detection is used. Teen drop-offs require a parent available for pickup.",
+      "This curated listing remains eligible after the Halloween layer ends because its verified season continues into November."
+    ]
+  },
+  "DELTA-HAUNTED-RIVER-2026": {
+    "canonicalId": "date-night-mo26-delta-haunted-river-float",
+    "confidence": "high",
+    "details": [
+      "Verified 2026 dates include September 19 and October 3, 10, 16–17, 23–24 and 30–31; 3 p.m.–midnight.",
+      "Pulaski County tourism describes a hayride, dark river float, haunted trail/forest/cemetery and a 26-room haunted house.",
+      "Only explicitly listed dates are treated as active; no Friday/Saturday recurrence is inferred.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA-FEAR-BLOODY-TIMBER-2026": {
+    "canonicalId": "date-night-mo26-delta-fear-bloody-timber",
+    "confidence": "high",
+    "details": [
+      "Verified 2026 dates: October 9–10, 16–17 and 23–24, 7–11 p.m.",
+      "Current DMO classification: Haunted Attraction & Corn Maze.",
+      "Call 417-247-8281 or check the attraction’s current Facebook updates before going.",
+      "Only explicitly observed 2026 dates are treated as active. Location is approximate."
+    ]
+  },
   "MO26-085": {
     "canonicalId": "date-night-mo26-085-brookdale-farms",
     "confidence": "good",
