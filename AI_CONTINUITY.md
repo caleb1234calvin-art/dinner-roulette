@@ -1,3 +1,46 @@
+# Pick For Us — Active Fifteen Data/Copy PASS; Cumulative PR #59 Frozen (2026-10-08)
+
+## CURRENT — EXACT DATA R2 CLEARED; NEW CUMULATIVE RUNTIME/BROWSER GATES PENDING
+
+Fresh independent **ACTIVE15-DATA-IV-R2** clears all **15 factual/placement projections and consumer copy:15 PASS, zero HOLD/REJECT within this subset**. This supersedes the nine corrected original projection findings, while preserving their history. It does **not** establish implementation, hosted-browser, release or physical Android PASS.
+
+### New recoverable cumulative candidate
+
+[Draft PR #59](https://github.com/caleb1234calvin-art/dinner-roulette/pull/59), branch `integration/missouri-autonomous-cumulative-15`, targets unchanged main213502. Remote freeze **`6f58f88c790db3509e76a6fde386e410aee759c2`**, tree **`27c6a2630440f58806e6c32e578463e6d2f88ca5`**, sole parent **`d876dbc12de47d5d40be0e9cc2116b30d9834089`**. The24-commit cumulative chain includes the prior PR57/58 work, with23 main-relative paths; do not duplicate constituent merges.
+
+Author reports853 full tests PASS/four skips, typecheck PASS, lint zero errors/six warnings and safe auth-enabled build PASS. **New exact-head hosted/runtime/browser acceptance is pending.** Local Chromium socket failure is a blocked browser check, not PASS. The main-target draft addresses the prior stacked-base web-trigger gap; actual new-run outcomes must be recorded separately. No old SHA's browser PASS is transferred.
+
+### Independent corrected data binding
+
+[Exact R2 independent report](docs/handoffs/active/missouri-autonomous-active15-data-independent-verification.md), SHA-256 **`78938074dc11ff84ccef01c243bc53d4263da4f7e4696165aba618d3e8c0af7a`**. Corrected full projection JSON SHA-256 **`4bcdaea567c18bd1080f7a681880bea45f2846fbfff5d5017f9f66dfece848be`**. The report binds five source-file hashes and all corrected consumer text. Candidate audit carries recoverable source projections; future edits require renewed binding.
+
+Historical evidence recovery remains **PARTIAL**. Missing Tier-A/deferred-batch-3 reports were not invented or retroactively marked recovered. Fresh field-level review substitutes only for facts actually inspected; R1 HOLD/direct retrieval failures and recovered historical reports remain preserved.
+
+All14 address geocodes were independently reproduced as approximate placement only. Pomme's fifteenth point is the state park's explicit Hermitage event point. None establishes a surveyed gate/parking stall. Source retrieval20:24–20:33 used current operator/public-authority pages, qualified alternate readable retrievals and inspected organizer poster pixels; no universal cancellation/inventory guarantee.
+
+Material corrections include:
+- Brookdale exact **November8 18:00 CST**; Creepyworld and The Darkness exact **November13 22:00 CST**.
+- Pomme awards follow19:00, so conservative date-only retention is **October18 midnight CDT**, not19:00 final closing.
+- Monster date-only retention is **October31 midnight CDT**, not06:00; final exit remains unknown.
+- Fear the Bloody Timber adds explicitly sourced October30/31, ending **October31 23:00 CDT**.
+- Haunted River removes unsupported September19 and ends **November1 midnight CDT**, not one second earlier.
+- Darkness removes unsupported September25/26; supported September19 and schedule uncertainty remain.
+- Consumer routine prices and audit/lifecycle-process prose removed; required supervision/check-in/access/reservation conditions retained. All15 retain null machine hours/never-OpenNow and exact2026-only boundaries.
+
+The subset remains the ten PR57 records plus Edge, Creepyworld, Darkness, Haunted River and Fear. Existing17 were not re-cleared/changed by this data review. Hell Harvest, Labyrinth and Rising are outside this verdict and retain their separate HOLDs. Vino remains excluded for2026.
+
+### Parallel work and remaining gate
+
+A separate second delta sweep researched15, proposing four candidates with eleven HOLDs; fresh independent review is active. Three approximate placements and Nixa's staged placement proposal are **not final clearance**. Do not mix that separate batch into this frozen fifteen without its own review and deliberate candidate decision.
+
+Continue exact PR59 full technical/hosted and actual new15 browser/all32 layout validation, including routing, duplicate/cache/saved/exclusion policy, Details, Open Now, exact/date-only expiry/no2027 and each Brookdale/Creepyworld/Darkness late-fall Anything path. Halloween UI/provider season must remain unchanged. Obtain fresh independent exact-candidate runtime verification before any release recommendation.
+
+Fresh **20:38 UTC** main **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**, production **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv` READY** and PR59 exact6f58 draft/unmerged were confirmed. Standing authority remains nonproduction only. No merge, deploy, settings or waiver.
+
+This approved two-document checkpoint changes only AI_CONTINUITY.md and the exact R2 report on deployment-disabled continuity. **PARENT COMMIT:** `ce879f57b96f88bf2ae4c0ac7d22f91b0727c7d1`; **PARENT TREE:** `f09e591dd0117f735c04cef7600e014dc7e5ff43`. Verified deployment exclusion blob **`65925d91f882a10433e3eb43f53ed802914c969b`** remains. All history is preserved below.
+
+## Prior continuity — autonomous pipeline reconciliation, preserved verbatim
+
 # Pick For Us — Autonomous Missouri Pipeline Active; Cumulative Acceptance Gaps Open (2026-10-08)
 
 ## CURRENT — NEW STANDING NONPRODUCTION AUTHORITY; NO CUMULATIVE RELEASE PASS
