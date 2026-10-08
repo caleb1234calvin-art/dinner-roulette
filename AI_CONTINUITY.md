@@ -1,3 +1,36 @@
+# Pick For Us — One-Release Main Exception Approved; Manual Sign-In Pending (2026-10-08)
+
+## CURRENT — UNPROTECTED-MAIN DECISION RESOLVED FOR THIS RELEASE ONLY; SAFE-ROUTE/ROLLBACK HOLD REMAINS
+
+At **2026-10-08 00:01 UTC**, the owner explicitly approved publication despite currently unprotected main **for this one exact reviewed release only**, conditional on every other release gate being established. This supersedes the unprotected-main-decision-pending instruction below. **It is not a standing waiver, permission to change protection, or approval to skip any other preflight condition.**
+
+The approved identity remains wrapper **`0bbf6758e94eea8129e21b004d4c36ff886cd46d`**, tree **`7add088fcbcacb8526f90a6f09c6dd7ca5249b3c`**, sole parent/technical runtime **`fd801eda9f496da33aa395ad2ad592027e16029a`**. Keep the wrapper immutable.
+
+### Authentication and actual current operator state
+
+- Owner authorized using an existing Google/GitHub session if available; otherwise the owner signs in manually. **Never request or receive one-time sign-in codes in chat.** No password, credential or OTP collection is part of this continuation.
+- At **00:02 UTC**, the cloud Vercel browser was still signed out. The authorized existing-GitHub-session route reached a username/password login rather than an active session, so the operator stopped before credentials, OTP or OAuth consent.
+- The operator returned to the official Vercel login and issued the supported **manual-sign-in handoff**. Owner completion is pending. A handoff invitation is not successful authentication.
+- No main/PR/production/settings mutation occurred. The earlier Library preflight report remains a preserved historical 23:40 freeze; it is not silently amended to claim new operational evidence.
+
+### Remaining conditions before any release mutation
+
+**Execution remains HOLD.** After owner sign-in, inspect actual account/project identity, effective production build command/Git trigger/auth environment and accessible authorized rollback capability read-only. Current metadata still does not establish the effective safe build route; ordinary `npm run build` chains migrations and must not run. No settings change or test rollback is authorized by the sign-in permission.
+
+Rollback to **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** remains unproven; OWNER role/READY status/tool availability do not establish connector permission or exact target eligibility. Preserve the immediate-predecessor constraint and do not bypass denied reads.
+
+Only if safe build, rollback and every other condition are actually established may the one-release conditional approval be exercised. Immediately beforehand recheck main **90f0f745…**, PR #50 head **0bbf…**, exact tree **7add088f…**, current production/aliases and checks. Any drift or unresolved condition means HOLD. No release success is claimed.
+
+### Fresh baseline and next action
+
+Authenticated operator and continuity checks **00:02–00:03 UTC**: main **`90f0f745a6e35d5abd09f727b7d3c87367ef3295`** remains unprotected/unchanged; [PR #50](https://github.com/caleb1234calvin-art/dinner-roulette/pull/50) remains draft/open/unmerged at 0bbf. Production **`dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`** remains READY at the same main SHA; operator current apex alias read still resolves to it.
+
+Canonical continuity parent **`a2b76338f28b61360e73129187194f23da422838`**, tree **`aca0c5fa85e728bbc999cd0968cf79aae40dba18`**. Only AI_CONTINUITY.md changes on deployment-disabled `integration/continuity-refresh-2026-10-07`; verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains exclusion. Wrapper/source/main/production are untouched.
+
+**Next:** await owner manual sign-in completion, then resume bounded read-only Vercel preflight. Do not request OTP in chat or proceed on elapsed time. Keep safe-build/rollback/identity HOLDs until proven.
+
+## Prior continuity — operational preflight HOLD, preserved verbatim
+
 # Pick For Us — Operational Preflight HOLD (2026-10-07)
 
 ## CURRENT — NO RELEASE MUTATION; THREE OPERATIONAL GAPS AND OWNER INPUT PENDING
