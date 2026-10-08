@@ -1,3 +1,46 @@
+# Pick For Us — Ten-Record Data/Copy Gate PASS; Implementation Active (2026-10-08)
+
+## CURRENT — OWNER-AUTHORIZED TEN-RECORD + DETAILS CANDIDATE BUILD; NO RUNTIME VERIFICATION OR RELEASE YET
+
+The owner's **07:00 UTC** authorization permits implementation/validation of up to ten additional V1 records and revised compact Details/reliability presentation. This supersedes the prior next-batch-not-authorized sentence below for this specific scope. **No main merge or production deployment is authorized.**
+
+Fresh independent **data/copy PASS** covers exactly ten new projections and all **17 consumer-copy proposals** (seven shipped + ten candidate). No required data/copy correction. Original R2 evidence remains unchanged. The implementer is constructing `integration/seasonal-completeness-v1-ten-records` from main5409; **no frozen candidate SHA or runtime/browser acceptance is claimed at this checkpoint**.
+
+### Selected records and deliberate deferrals
+
+Selected **019 James River Joplin,031 Silver Dollar City,034 Boone Homestead,054 Fun Farm,067 Shryocks,100 Urban Gardens,114 Perryville,115 Bollinger Mill,124 Hotel of Terror,125 Dungeons of Doom**. All ten data projections and copy proposals PASS fresh independent review.
+
+Eleven remaining records have individual deferral reasons in the frozen research JSON. Deferral is not rejection or an invented expired verdict: short-lived October8/10 events were still current at review; Beast/Pomme navigation complexity, Brookdale's global-window mismatch and other source/subtype complexity are deliberately outside this batch. No statewide discovery or quota padding.
+
+### Required consumer contract and implementation boundary
+
+- Exact shared footer: **“Check current hours, admission, and weather before you go.”**
+- Compact **High / Good / Limited** expresses listing completeness, not safety, current operation or Open Now. Missing reliability must not default High.
+- Remove routine pricing amounts, audit/provenance/research chronology and retention explanations from consumer presentation. Retain supported facts in audit artifacts, and keep material age/access/waiver/sensory/reservation/special-hour facts in concise accessible Details. UI must not fall back to raw audit prose.
+- Preserve all seven shipped records' material qualifications, including Lloyd supervision/special closing, Sam activity/parking/weather, Campbell last-admission conflict, Aftermath/Beyond distinct walk/ticket times and access guidance, and Rutledge separate schedules.
+- All ten new entries keep **never-OpenNow and null machine schedules**, even High-reliability/display-verified entries. Exact dates/DST/hard cutoffs/no2027, approximate placement/address Directions, truthful generic rides and Sam verified parking exception remain.
+- Final candidate must prove identity/negative preferences/favorites/saved navigation/cache/resume/expiry and ordinary-mode behavior remain correct; no transfer of data/copy PASS into runtime or rendered browser PASS.
+- No other eleven import, physical Android/signing/Play, migration, unrelated cleanup or production-setting change is authorized. Prior released first-five work remains closed and intact.
+
+### Recoverable source-bound data/copy review
+
+[Exact independent data/copy report](docs/handoffs/active/seasonal-ten-record-data-copy-independent-review.md), SHA-256 **`ed84d4022ae23e8ec2f1fd2b5912d3c0ed68dda2b706635fd59dae4ca3e2dc93`**.
+Separate verdict JSON SHA-256 **`324a0ea6e2fc416d19e201a08fb8453b5b0e5b101458c86d374556394d6c6a69`**.
+
+Frozen research `Ten-Record-Revalidation-R1.json`, SHA-256 **`e0736dc8ddfdf508cca36daa0a43b88768c9e78d410955223be026e0acf79429`**; research report **`62c58d21ccc6a05a51172fe1929aef5014d6c96e5af9677abfaae4f1693bdfa5`**; evidence ZIP **`0eca2d1c2944e93bcdced669eb20ac2693f9548c2f101be36ea7c1ec2cabc6f3`**. All33 manifest sizes/hashes and ZIP CRC passed; embedded ten objects deep-equal exact independently cleared R2 **`76896ea4131f68927b7287eb46cda1d25b8993dd28527b0a2d072a72ef9ef1a6`**. No silent coordinate/date/source replacement.
+
+Decisive official sources were independently reopened; varying crawl freshness and no universal cancellation/inventory guarantee are retained. Optional Fun Farm wording refinement may label the same supported schedule “October1–November1 hours”; no blocking omission or new factual assumption.
+
+### Fresh baseline and next gate
+
+Fresh **07:11 UTC** main **`5409b0fcbb24c54f03e3b1228e1481bfc594c7af`**, tree **`f26fec09ac30c34b220244a2fd7e600ced16fbdb`**, and production **`dpl_EoyMdyZ8KzanHst1NuhA5v6HXSVe`** READY at that SHA remain unchanged. Current immediate previous production remains H655, subject to fresh verification for any future release; no release is now authorized.
+
+This approved two-document checkpoint changes only AI_CONTINUITY.md and the exact independent data/copy report on deployment-disabled `integration/continuity-refresh-2026-10-07`. **PARENT COMMIT:** `bc15b0d74fe9f43194813a34ed27f4f42fae727a`; **PARENT TREE:** `96ef680396d2ea08d28b4234a82a656d6debe506`. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains exclusion.
+
+**Next:** complete the authorized bounded candidate, freeze exact identity/source-bound audit, run all applicable full/focused/lint/build/hosted/browser gates, then obtain fresh independent runtime verification. Data/copy work is complete; implementation and release are not. Preserve all prior release history below.
+
+## Prior continuity — shipped first-five V1 release, preserved verbatim
+
 # Pick For Us — Seasonal Completeness V1 First Five SHIPPED (2026-10-08)
 
 ## CURRENT — EXACT RELEASE LIVE; ALL FIVE SCOPED PRODUCTION CHECKS PASS; SEVEN CURATED RECORDS TOTAL
