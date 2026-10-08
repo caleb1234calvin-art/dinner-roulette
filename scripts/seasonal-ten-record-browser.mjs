@@ -467,8 +467,11 @@ try {
       assert.ok(!test.rpc.at(-1).response.includes(row.id)); assert.ok(!test.rpc.at(-1).response.includes("seasonalListing"));
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       assert.equal(await rowCard(page, row).locator("[data-seasonal-visit-notes]").count(), 0);
-      assert.match(await rowCard(page, row).innerText(), /Park/i);
-      assert.doesNotMatch(await rowCard(page, row).innerText(), /Haunted House|Corn Maze|Other Halloween/i);
+      // Inspect category badges, not the legitimate venue title (which may contain "Corn Maze").
+      const offCard = rowCard(page, row);
+      assert.equal(await rowHeading(page, row).innerText(), row.name);
+      assert.deepEqual((await offCard.locator("span.uppercase").allTextContents()).map(text => text.trim().toLowerCase()), ["park"]);
+      assert.equal(await offCard.locator("[data-seasonal-confidence]").count(), 0);
       await closeOptions(page); const afterOff = test.rpc.length;
       await press(season, "Space"); await activityCount(page, n + 1);
       await assertNoRpc(test, afterOff, "Season-on restores its isolated superset");
