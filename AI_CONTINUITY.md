@@ -1,3 +1,39 @@
+# Pick For Us — Future Nine Consumer Copy PASS; PR59 Remains the Active Candidate (2026-10-08)
+
+## CURRENT — DATA-ONLY PREPARATION COMPLETE; NO NEW IMPLEMENTATION CANDIDATE
+
+Fresh independent review concludes **9 consumer-copy PASS /0 HOLD /0 REJECT** against the nine already accepted factual/placement objects. Exact input hashes, canonical object hashes and deep equality were verified; no source projection changed. **Runtime, browser/pixels and release were not performed.** These nine remain parked for later fresh pre-import review and bounded implementation; do not mix them into PR59 or delay its current acceptance gate.
+
+### Exact nine and preserved visitor qualifications
+
+Branson Ghoster, Liberty Corn Maze, Terror at the Ranch, PanicFest–The Cobb Factory, Field of Screams Nixa, Missouri Nightmare, Trepidations, Freaks Fair and Hell Harvest are the unique reviewed set.
+
+Proposed concise Details preserve material rider age/height/weight relationships, partial-hour uncertainty, distinct venue identities, explicit event dates and exact cutoffs, access/supervision/sensory/medical restrictions with source qualification, and truthful address navigation. Ranch does not inherit historical Pumpkin Patch; Cobb's secondary restrictions are not asserted operator-confirmed; Trepidations separates regular/no-scare/Blackout dates; Hell Harvest retains unknown closing and selected nights. No routine price/audit/retention prose is added.
+
+All nine use **“Check current hours, admission, and weather before you go.”** Good/Limited expresses completeness, not live operation or safety. All retain never-OpenNow/null machine intervals and supported-address Directions separate from approximate map placement. Long consequential warnings still require readable expanded Details and independent320/390px/card/browser acceptance.
+
+Cobb alone proposes extended curated Anything visibility through its verified **November7 23:00 CST** end. A future candidate must independently test server/cache/radius/provider-success/fallback paths for Cobb; no global Halloween UI/provider extension or inherited approval from other late-fall records.
+
+### Recoverable exact manifest and review
+
+[Independent copy report](docs/handoffs/active/missouri-next-nine-copy-independent-verification.md), SHA-256 **`9dc1748bf028729cac3dd17b14f3ab6f5aa35e85bce7cf566db31c37d1dc1bb8`**.
+[Exact nine-record review manifest](audit/missouri-next-nine-review-manifest-r1.json), SHA-256 **`ccdfa54e21179d18fdd86f4edd2a5d66624aadac84058b19386ddeda6bba8115`**.
+Independent verdict JSON **`d36342787929e5c488ad54c83ea0c0ad3bd788435795f8cc54f521ac717d3fe7`**.
+
+The manifest preserves all nine complete accepted objects and prior Delta2/Delta3/Delta4 R2/R4 source/report bindings. Researcher-time pending labels remain historical and are superseded only within the linked independent verdict's scope. This copy review is not a comprehensive fresh current-source audit. **Fresh pre-import revalidation remains required.**
+
+Carolyn/Route66 placement holds, other unresolved records and residential ledgers remain excluded. No newly inferred release or import clearance, no source-data rewrite and no runtime candidate has been started for this nine-record package.
+
+### Current control state
+
+PR59 remains **`46ded230297976698b9c8a035cb2dafd11219314`**, tree **`e40cab26dcbc2e3d6ff6fec09694ddf7cfd287ff`**, parent **`c2ca6fa84409c47b6153e0d9233e0bc46a9e1a47`**. IV-03 correction's final hosted/browser/independent acceptance is pending, with all prior failed attempts retained. Keep this active fifteen separate from future nine.
+
+Fresh **21:59 UTC** main **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**, production **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv` READY**, PR59 and canonical baseline unchanged. Nonproduction standing authority remains; no main merge, deployment, settings or waiver.
+
+Approved three-path checkpoint changes only AI_CONTINUITY.md, exact copy report and exact manifest audit JSON on deployment-disabled continuity. **PARENT COMMIT:** `d9502a7257d488f12c00d05df32f95543f540c74`; **PARENT TREE:** `345dc3ce6f107c59d111fda7b908f48b4557a76b`. All history and deployment exclusion retained.
+
+## Prior continuity — active PR59 cache correction freeze, preserved verbatim
+
 # Pick For Us — PR59 IV-03 Cache Correction Frozen; Final Acceptance Pending (2026-10-08)
 
 ## CURRENT — REAL LATE-FALL CACHE DEFECT PRESERVED; NEW EXACT HEAD REQUIRES FULL VERIFICATION
