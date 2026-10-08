@@ -3,6 +3,17 @@ import type { SeasonalPresentation } from "./seasonal-presentation";
 /** Explicit independently reviewed visitor copy. Full facts remain in immutable audit
  * artifacts and catalog metadata; no audit narratives are rendered as consumer prose. */
 export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentation>> = {
+  "MO26-085": {
+    "canonicalId": "date-night-mo26-085-brookdale-farms",
+    "confidence": "good",
+    "details": [
+      "Fall Festival runs September 11–November 8, 2026. Check the date-specific calendar because activities and closing times vary.",
+      "Current 2026 sources support both the corn maze and pumpkin patch; pumpkins are sold separately.",
+      "General admission pricing varies by day and ages; check the current ticket page before committing.",
+      "Activities may vary with date, weather and staffing. Location is approximate.",
+      "This curated listing remains eligible after the Halloween layer ends because its verified 2026 season continues through November 8."
+    ]
+  },
   "MO26-012": {
     "canonicalId": "date-night-mo26-012-witches-day-out",
     "confidence": "good",
