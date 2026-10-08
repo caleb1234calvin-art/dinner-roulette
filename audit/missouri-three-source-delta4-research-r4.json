@@ -1,0 +1,1491 @@
+{
+  "audit_id": "MO2026-Delta4-targeted-reclearance",
+  "frozen_at": "2026-10-08T21:16:56.868531+00:00",
+  "role": "research only",
+  "baseline_from_coordinator": {
+    "main": "213502ef8cf3f67d75e6d9c9c8ff43f9f656890c",
+    "production": "dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv READY"
+  },
+  "scope": "Eight existing HOLD/re-clearance opportunities; no statewide restart, no runtime changes, noPR59 additions.",
+  "counts": {
+    "reviewed": 8,
+    "clearance_candidates": 6,
+    "hold": 2,
+    "independent_pass": 0,
+    "approximate_placement_candidates": 5,
+    "factual_candidate_staged_outside_radius": 1
+  },
+  "records": [
+    {
+      "record_id": "MO26-037",
+      "name": "Field of Screams Nixa",
+      "discovery_class": "HISTORICAL HOLD",
+      "discovery_sources": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "CLEARANCE CANDIDATE",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address": {
+          "value": "Summers at the River, 2142 N. Sports Complex Ln., Nixa, MO 65714",
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/dates",
+            "https://fieldofscreamsnixa.com/directions"
+          ]
+        },
+        "category": {
+          "value": "Haunted House",
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/"
+          ]
+        },
+        "activity_subtype": {
+          "value": [
+            "Haunted Forest",
+            "Coulrophobia clown haunt"
+          ],
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/"
+          ]
+        },
+        "current_season": {
+          "value": "Explicit2026 dates page",
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/dates"
+          ]
+        },
+        "dates": {
+          "value": [
+            "2026-09-18",
+            "2026-09-19",
+            "2026-09-25",
+            "2026-09-26",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-11",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-18",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-25",
+            "2026-10-29",
+            "2026-10-30",
+            "2026-10-31",
+            "2026-11-01"
+          ],
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/dates"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "verified",
+            "display": "7p.m.\u2013midnight on listed dates; machine intervals remain null"
+          },
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/dates"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "Children must be accompanied by an adult; recommended10\u201312+ with parental discretion.",
+            "Uneven outdoor terrain; closed-toe footwear.",
+            "Strobes/fog/intense sound/darkness; operator warns guests with relevant medical sensitivities.",
+            "No pets; contact venue for access questions."
+          ],
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/safety-rules",
+            "https://fieldofscreamsnixa.com/faq"
+          ]
+        },
+        "admission_access": {
+          "value": "Online tickets recommended; gate availability not guaranteed on peak nights.",
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/faq"
+          ]
+        },
+        "weather": {
+          "value": "Weather cancellations may result in rescheduling; no live weather guarantee.",
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/faq"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-11-02T00:00:00-06:00",
+            "basis": "exact",
+            "derivation": "Explicit finalNov 1 night closes at midnight, America/Chicago post-DST."
+          },
+          "source_urls": [
+            "https://fieldofscreamsnixa.com/dates"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [],
+      "runtime_constraint": "Pending independent placement verification; no gate precision.",
+      "old_hold_superseded": "Original audit lacked usable2026 dates/address. Current direct operator pages now supply both; no old entrance requirement retained.",
+      "placement_candidate": {
+        "latitude": 37.0931968,
+        "longitude": -93.3012305,
+        "basis": "operator-linked-site-point",
+        "precision": "Approximate site placement only; not entrance, parking, gate, doorway or rideshare dropoff.",
+        "source_url": "https://maps.app.goo.gl/uockRQnBPToZLvkk8",
+        "checked_at": "2026-10-08T21:02:00Z",
+        "independent_review": "NOT PERFORMED"
+      },
+      "original_projection_sha256": "3377379ea4d71e734b2b6fefe9edbb79571d879515855773a6675353068a478d",
+      "prior_projection": {
+        "record_id": "MO26-037",
+        "name": "Field of Screams Nixa",
+        "discovery_class": "HISTORICAL HOLD",
+        "discovery_sources": [
+          "https://www.thescarefactor.com/haunted-houses/missouri/"
+        ],
+        "research_decision": "CLEARANCE CANDIDATE",
+        "independent_verification": "NOT PERFORMED",
+        "runtime_eligible": false,
+        "placement": null,
+        "open_now_policy": "never",
+        "machine_opening_intervals": null,
+        "season_year": 2026,
+        "fields": {
+          "visitor_address": {
+            "value": "Summers at the River, 2142 N. Sports Complex Ln., Nixa, MO 65714",
+            "source_urls": [
+              "https://fieldofscreamsnixa.com/dates",
+              "https://fieldofscreamsnixa.com/directions"
+            ]
+          },
+          "category": {
+            "value": "Haunted House",
+            "source_urls": [
+              "https://fieldofscreamsnixa.com/"
+            ]
+          },
+          "activity_subtype": {
+            "value": [
+              "Haunted Forest",
+              "Coulrophobia clown haunt"
+            ],
+            "source_urls": [
+              "https://fieldofscreamsnixa.com/"
+            ]
+          },
+          "current_season": {
+            "value": "Explicit2026 dates page",
+            "source_urls": [
+              "https://fieldofscreamsnixa.com/dates"
+            ]
+          },
+          "dates": {
+            "value": [
+              "2026-09-18",
+              "2026-09-19",
+              "2026-09-25",
+              "2026-09-26",
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-04",
+              "2026-10-09",
+              "2026-10-10",
+              "2026-10-11",
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-18",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-25",
+              "2026-10-29",
+              "2026-10-30",
+              "2026-10-31",
+              "2026-11-01"
+            ],
+            "source_urls": [
+              "https://fieldofscreamsnixa.com/dates"
+            ]
+          },
+          "hours": {
+            "value": {
+              "state": "verified",
+              "display": "7p.m.\u2013midnight on listed dates; machine intervals remain null"
+            },
+            "source_urls": [
+              "https://fieldofscreamsnixa.com/dates"
+            ]
+          },
+          "restrictions": {
+            "value": [
+              "Children must be accompanied by an adult; recommended10\u201312+ with parental discretion.",
+              "Uneven outdoor terrain; closed-toe footwear.",
+              "Strobes/fog/intense sound/darkness; operator warns guests with relevant medical sensitivities.",
+              "No pets; contact venue for access questions."
+            ],
+            "source_urls": [
+              "https://fieldofscreamsnixa.com/safety-rules",
+              "https://fieldofscreamsnixa.com/faq"
+            ]
+          },
+          "admission_access": {
+            "value": "Online tickets recommended; gate availability not guaranteed on peak nights.",
+            "source_urls": [
+              "https://fieldofscreamsnixa.com/faq"
+            ]
+          },
+          "weather": {
+            "value": "Weather cancellations may result in rescheduling; no live weather guarantee.",
+            "source_urls": [
+              "https://fieldofscreamsnixa.com/faq"
+            ]
+          },
+          "expiry": {
+            "value": {
+              "at": "2026-11-02T00:00:00-06:00",
+              "basis": "exact",
+              "derivation": "Explicit finalNov 1 night closes at midnight, America/Chicago post-DST."
+            },
+            "source_urls": [
+              "https://fieldofscreamsnixa.com/dates"
+            ]
+          }
+        },
+        "conflicts": [],
+        "blockers": [],
+        "runtime_constraint": "Address-only; stage outside radius pending reviewed placement. Preserve one property/two activities, not two duplicate listings.",
+        "old_hold_superseded": "Original audit lacked usable2026 dates/address. Current direct operator pages now supply both; no old entrance requirement retained.",
+        "placement_candidate": null
+      },
+      "new_evidence": "Official Directions link resolves named matching-address haunt; preserve unchanged independently cleared facts. Operator-linked approximate site placement for review."
+    },
+    {
+      "record_id": "MO26-055",
+      "name": "Carolyn\u2019s Pumpkin Patch",
+      "discovery_class": "HISTORICAL HOLD",
+      "discovery_sources": [
+        "https://www.missourihauntedhouses.com/"
+      ],
+      "research_decision": "HOLD",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address": {
+          "value": "17607 N.E.52nd Street, Liberty, MO64068",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/location-and-directions/"
+          ]
+        },
+        "category": {
+          "value": "Pumpkin Patch",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "activity_subtype": {
+          "value": [
+            "Pumpkin patch",
+            "wagon ride"
+          ],
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "current_season": {
+          "value": "Explicit2026 seasonSeptember19\u2013October31",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "date_rule": {
+          "value": "Thursday through Monday within September19\u2013October31,2026",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "partial",
+            "display": "Thursday\u2013Monday. Check daily hours; entrance stops one hour before closing.",
+            "machine_last_admission": null
+          },
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/",
+            "https://carolynspumpkinpatch.com/hours-and-pricing/"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "Tickets use one-hour check-in windows.",
+            "No outside food/alcohol; medical/dietary access questions should go to venue.",
+            "No pets; operator permits outside service animals.",
+            "Liberty Corn Maze next door is distinct; pumpkin listing does not imply corn-maze access."
+          ],
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/hours-and-pricing/",
+            "https://carolynspumpkinpatch.com/frequently-asked-questions/"
+          ]
+        },
+        "phone": {
+          "value": "816-781-9196 (text line)",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-11-01T00:00:00-05:00",
+            "basis": "date-only",
+            "derivation": "Exclude after finalOct 31 date; not a fabricatedOct 31closing interval."
+          },
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "placement",
+          "values": [
+            "Originaloperator-linked point39.183364,-94.366",
+            "OriginalCensus39.186806,-94.379614"
+          ],
+          "handling": "Both withheld here; supported address establishes factual listing but no radius eligibility.",
+          "sources": [
+            "selection_inputs/Missouri-Seasonal-2026-Candidates.json#MO26-055"
+          ]
+        }
+      ],
+      "blockers": [
+        "Prior independent placement conflict remains for adjudication: current named operator destination vs Census differ. No averaging or silent choice."
+      ],
+      "runtime_constraint": "Address-only factual projection; do not use original1.3km-discrepant point until approximate placement is separately reviewed.",
+      "placement_candidate": {
+        "latitude": 39.1857337,
+        "longitude": -94.3697357,
+        "basis": "operator-linked-site-point",
+        "precision": "Approximate site placement only; not entrance, parking, gate, doorway or rideshare dropoff.",
+        "source_url": "https://goo.gl/maps/pKngpKRpDZhtK55M9",
+        "checked_at": "2026-10-08T21:02:00Z",
+        "independent_review": "NOT PERFORMED"
+      },
+      "original_projection_sha256": "692c4d66da1d43e13a7e16822a2f76056fc6dcfe8b7d4bdf1d282484e8d619d1",
+      "prior_projection": {
+        "record_id": "MO26-055",
+        "name": "Carolyn\u2019s Pumpkin Patch",
+        "discovery_class": "HISTORICAL HOLD",
+        "discovery_sources": [
+          "https://www.missourihauntedhouses.com/"
+        ],
+        "research_decision": "CLEARANCE CANDIDATE",
+        "independent_verification": "NOT PERFORMED",
+        "runtime_eligible": false,
+        "placement": null,
+        "open_now_policy": "never",
+        "machine_opening_intervals": null,
+        "season_year": 2026,
+        "fields": {
+          "visitor_address": {
+            "value": "17607 N.E.52nd Street, Liberty, MO64068",
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/location-and-directions/"
+            ]
+          },
+          "category": {
+            "value": "Pumpkin Patch",
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/"
+            ]
+          },
+          "activity_subtype": {
+            "value": [
+              "Pumpkin patch",
+              "wagon ride"
+            ],
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/"
+            ]
+          },
+          "current_season": {
+            "value": "Explicit2026 seasonSeptember19\u2013October31",
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/"
+            ]
+          },
+          "date_rule": {
+            "value": "Thursday through Monday within September19\u2013October31,2026",
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/"
+            ]
+          },
+          "hours": {
+            "value": {
+              "state": "partial",
+              "display": "Thursday\u2013Monday. Check daily hours; entrance stops one hour before closing.",
+              "machine_last_admission": null
+            },
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/",
+              "https://carolynspumpkinpatch.com/hours-and-pricing/"
+            ]
+          },
+          "restrictions": {
+            "value": [
+              "Tickets use one-hour check-in windows.",
+              "No outside food/alcohol; medical/dietary access questions should go to venue.",
+              "No pets; operator permits outside service animals.",
+              "Liberty Corn Maze next door is distinct; pumpkin listing does not imply corn-maze access."
+            ],
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/hours-and-pricing/",
+              "https://carolynspumpkinpatch.com/frequently-asked-questions/"
+            ]
+          },
+          "phone": {
+            "value": "816-781-9196 (text line)",
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/"
+            ]
+          },
+          "expiry": {
+            "value": {
+              "at": "2026-11-01T00:00:00-05:00",
+              "basis": "date-only",
+              "derivation": "Exclude after finalOct 31 date; not a fabricatedOct 31closing interval."
+            },
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/"
+            ]
+          }
+        },
+        "conflicts": [
+          {
+            "field": "placement",
+            "values": [
+              "Originaloperator-linked point39.183364,-94.366",
+              "OriginalCensus39.186806,-94.379614"
+            ],
+            "handling": "Both withheld here; supported address establishes factual listing but no radius eligibility.",
+            "sources": [
+              "selection_inputs/Missouri-Seasonal-2026-Candidates.json#MO26-055"
+            ]
+          }
+        ],
+        "blockers": [],
+        "runtime_constraint": "Address-only factual projection; do not use original1.3km-discrepant point until approximate placement is separately reviewed.",
+        "placement_candidate": {
+          "latitude": 39.18680551923,
+          "longitude": -94.379614495957,
+          "basis": "address-geocode",
+          "precision": "Approximate Census address-range interpolation; not an entrance, parking stall, gate, doorway or rideshare drop-off.",
+          "matched_address": "17607 NE 52ND ST, LIBERTY, MO, 64068",
+          "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=17607+NE+52nd+Street%2C+Liberty%2C+MO+64068&benchmark=Public_AR_Current&format=json",
+          "retrieved_at": "2026-10-08T20:32:31.263258+00:00",
+          "independent_review": "NOT PERFORMED"
+        }
+      },
+      "new_evidence": "Current official link resolves Carolyn named place with correct address and website, not Liberty Corn Maze. Prior verdict preserved; no claim prior verifier wrong.",
+      "factual_state_carried_forward": "PASS from Delta2; this HOLD concerns placement only."
+    },
+    {
+      "record_id": "DELTA2-MISSOURI-NIGHTMARE",
+      "name": "Missouri Nightmare Haunted Attraction",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://frightmaps.com/best-haunted-houses-missouri-2026",
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "CLEARANCE CANDIDATE",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address": {
+          "value": "1420 County Rd276, Columbia, MO65202",
+          "source_urls": [
+            "https://app2.hauntpay.com/venues/9298"
+          ]
+        },
+        "current_season_signal": {
+          "value": "Search-indexed official ticket venue shows Oct9\u2013Nov 1,2026; not accepted normalized schedule",
+          "source_urls": [
+            "https://app2.hauntpay.com/venues/9298"
+          ]
+        },
+        "current_season": {
+          "value": "Explicit current2026 event reproduced in normal public cloudbrowser.",
+          "source_urls": [
+            "https://app2.hauntpay.com/events/missouri-nightmare-haunted-attraction-2026"
+          ]
+        },
+        "category": {
+          "value": "Haunted House",
+          "source_urls": [
+            "https://app2.hauntpay.com/events/missouri-nightmare-haunted-attraction-2026"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "partial",
+            "display": "Season listing October 9\u2013November 1. First occurrence starts 7 p.m.; final November 1 occurrence ends 8:30 p.m. CST. Check individual visit times.",
+            "machine_intervals": null
+          },
+          "source_urls": [
+            "https://app2.hauntpay.com/events/missouri-nightmare-haunted-attraction-2026"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-11-01T20:30:00-06:00",
+            "basis": "exact",
+            "derivation": "Official venue page explicitly ends final November 1 occurrence at 8:30 p.m. CST. Daily schedule remains partial and no machine opening intervals are inferred."
+          },
+          "source_urls": [
+            "https://app2.hauntpay.com/venues/9298"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "No refunds/returns unless organizer cancels; no live cancellation guarantee."
+          ],
+          "source_urls": [
+            "https://app2.hauntpay.com/events/missouri-nightmare-haunted-attraction-2026"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [],
+      "original_projection_sha256": "5bdba788a172f763b2949515b8705d6c019456330bafcd3d9b613f7a8dd35c10",
+      "prior_projection": {
+        "record_id": "DELTA2-MISSOURI-NIGHTMARE",
+        "name": "Missouri Nightmare Haunted Attraction",
+        "discovery_class": "NET NEW",
+        "discovery_sources": [
+          "https://frightmaps.com/best-haunted-houses-missouri-2026",
+          "https://www.thescarefactor.com/haunted-houses/missouri/"
+        ],
+        "research_decision": "HOLD",
+        "independent_verification": "NOT PERFORMED",
+        "runtime_eligible": false,
+        "placement": null,
+        "open_now_policy": "never",
+        "machine_opening_intervals": null,
+        "season_year": 2026,
+        "fields": {
+          "visitor_address": {
+            "value": "1420 County Rd276, Columbia, MO65202",
+            "source_urls": [
+              "https://app2.hauntpay.com/venues/9298"
+            ]
+          },
+          "current_season_signal": {
+            "value": "Search-indexed official ticket venue shows Oct9\u2013Nov 1,2026; not accepted normalized schedule",
+            "source_urls": [
+              "https://app2.hauntpay.com/venues/9298"
+            ]
+          }
+        },
+        "conflicts": [],
+        "blockers": [
+          "Direct current season ticket content could not be reproduced: search index shows2026 event but opened venue page returns older empty upcoming list; operator domain linked by directory returned404. Current-season binding needs independent decisive source, not copyright/index title."
+        ]
+      },
+      "new_evidence": "Previous empty extraction replaced by visible current2026 venue and event pages. Dates subpage empty; exact daily occurrence list unresolved and omitted. R2 corrects final expiry to the explicit 8:30 p.m. CST endpoint; date-only midnight retention is superseded.",
+      "placement_candidate": {
+        "latitude": 38.977510601859,
+        "longitude": -92.139911854447,
+        "basis": "address-geocode",
+        "precision": "Approximate Census address-range interpolation only; Directions must use supported visitor address.",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1420+County+Rd+276%2C+Columbia%2C+MO+65202&benchmark=Public_AR_Current&format=json",
+        "matched_address": "1420 CO RD 276, COLUMBIA, MO, 65202",
+        "retrieved_at": "2026-10-08T21:00:22.802475+00:00",
+        "independent_review": "NOT PERFORMED"
+      }
+    },
+    {
+      "record_id": "DELTA2-TERROR66",
+      "name": "Terror on Route66",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "CLEARANCE CANDIDATE",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "category": {
+          "value": "Haunted House",
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "current_season": {
+          "value": "2026 ticketing; season endsNov 1",
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "visitor_address_candidates": {
+          "value": [
+            "1143 North Service Road West,Sullivan,MO63080 (ticketing)",
+            "1143 N Service Rd E,Sullivan,MO63080 (directory)"
+          ],
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565",
+            "https://www.thescarefactor.com/haunted-houses/missouri/terror-on-route-66/"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "unknown"
+          },
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "material_access": {
+          "value": [
+            "All participants must complete a waiver. General admission is no-touch.",
+            "Optional Interactive Touch Pass is ages 10+. Minors under 18 must be accompanied by an adult with valid ID.",
+            "A valid ID is required at check-in for every Interactive Touch Pass and Rated R Pass participant.",
+            "Rated R Pass is 18+ and includes full contact, adult language and dark humor. Rated R participants cannot enter with guests who do not hold Rated R passes. General admission and Interactive Touch guests may enter together."
+          ],
+          "source_urls": [
+            "https://scarestl.com/",
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "expiry_candidate": {
+          "value": "2026-11-02T00:00:00-06:00, date-only; not an opening interval",
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "visitor_address": {
+          "value": "1143 North Service Road West, Sullivan, MO63080",
+          "source_urls": [
+            "https://scarestl.com/"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-11-02T00:00:00-06:00",
+            "basis": "date-only"
+          },
+          "source_urls": [
+            "https://scarestl.com/"
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "visitor_address",
+          "values": [
+            "Directory E",
+            "Official operator and official ticket W"
+          ],
+          "handling": "Propose W based on two direct visitor-facing sources; preserve discrepancy for independent review, do not silently average."
+        },
+        {
+          "field": "placement",
+          "values": {
+            "official_ticket_linked_point": [
+              38.22635269165039,
+              -91.15493774414062
+            ],
+            "Census_address_point": [
+              38.241800124583,
+              -91.14156921747
+            ]
+          },
+          "handling": "Independent reviewer found roughly2km discrepancy. Neither point approved for runtime; no averaging or automatic preference. Directions literal supported West address only.",
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565",
+            "https://scarestl.com/"
+          ]
+        }
+      ],
+      "blockers": [],
+      "original_projection_sha256": "35b0106082774d1901d06167cf54f86f23077d51d92cd46252d95395ce148dcb",
+      "prior_projection": {
+        "record_id": "DELTA2-TERROR66",
+        "name": "Terror on Route66",
+        "discovery_class": "NET NEW",
+        "discovery_sources": [
+          "https://www.thescarefactor.com/haunted-houses/missouri/"
+        ],
+        "research_decision": "HOLD",
+        "independent_verification": "NOT PERFORMED",
+        "runtime_eligible": false,
+        "placement": null,
+        "open_now_policy": "never",
+        "machine_opening_intervals": null,
+        "season_year": 2026,
+        "fields": {
+          "category": {
+            "value": "Haunted House",
+            "source_urls": [
+              "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+            ]
+          },
+          "current_season": {
+            "value": "2026 ticketing; season endsNov 1",
+            "source_urls": [
+              "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+            ]
+          },
+          "visitor_address_candidates": {
+            "value": [
+              "1143 North Service Road West,Sullivan,MO63080 (ticketing)",
+              "1143 N Service Rd E,Sullivan,MO63080 (directory)"
+            ],
+            "source_urls": [
+              "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565",
+              "https://www.thescarefactor.com/haunted-houses/missouri/terror-on-route-66/"
+            ]
+          },
+          "hours": {
+            "value": {
+              "state": "unknown"
+            },
+            "source_urls": [
+              "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+            ]
+          },
+          "material_access": {
+            "value": "Waiver required. No-touch general admission; optional10+touch requires accompanying adult for minors and ID; separate18+full-contact option.",
+            "source_urls": [
+              "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+            ]
+          },
+          "expiry_candidate": {
+            "value": "2026-11-02T00:00:00-06:00, date-only; not an opening interval",
+            "source_urls": [
+              "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+            ]
+          }
+        },
+        "conflicts": [
+          {
+            "field": "visitor_address",
+            "unresolved": true
+          }
+        ],
+        "blockers": [
+          "Visitor address directional conflict needs corroboration before routing."
+        ]
+      },
+      "new_evidence": "Operator explicit2026 season end and Directions both West corroborate ticket address; optionaltouch rules preserved. No machine intervals.",
+      "placement_candidate": {
+        "latitude": 38.241800124583,
+        "longitude": -91.14156921747,
+        "basis": "address-geocode",
+        "precision": "Approximate Census address-range interpolation only; Directions must use supported visitor address.",
+        "source_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1143+North+Service+Road+West%2C+Sullivan%2C+MO+63080&benchmark=Public_AR_Current&format=json",
+        "matched_address": "1143 N SVC RD W, SULLIVAN, MO, 63080",
+        "retrieved_at": "2026-10-08T21:00:26.311446+00:00",
+        "independent_review": "HOLD \u2014 conflict; not approved"
+      },
+      "placement_review_state": "HOLD \u2014 STAGED OUTSIDE RADIUS",
+      "runtime_constraint": "Factual supported West address is proposed clear; radius eligibility remains HOLD due to ticket-map versus Census placement discrepancy."
+    },
+    {
+      "record_id": "DELTA2-TREPIDATIONS",
+      "name": "Trepidations Haunted Attraction",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "CLEARANCE CANDIDATE",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "visitor_address_lead": {
+          "value": "101ECommercialSt,ExeterMO65647",
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/trepidations-haunted-attraction/"
+          ]
+        },
+        "schedule_lead": {
+          "value": "Oct2,3,9,10,16,17,23,24,30,31; no-scareOct22; blackoutNov 1. YEAR NOT independently accepted.",
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/trepidations-haunted-attraction/"
+          ]
+        },
+        "ticket_source": {
+          "value": "https://trepidationshaunt.fearticket.com/",
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/trepidations-haunted-attraction/"
+          ]
+        },
+        "visitor_address": {
+          "value": "101 East Commercial Street, Exeter, MO65647",
+          "source_urls": [
+            "https://trepidationshaunt.fearticket.com/"
+          ]
+        },
+        "category": {
+          "value": "Haunted House",
+          "source_urls": [
+            "https://trepidationshaunt.fearticket.com/"
+          ]
+        },
+        "current_season": {
+          "value": "Explicit Nov1 2026 Blackout product plus2026ticket envelope and attached calendar",
+          "source_urls": [
+            "https://trepidationshaunt.fearticket.com/"
+          ]
+        },
+        "dates": {
+          "value": [
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-22",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-29",
+            "2026-10-30",
+            "2026-10-31",
+            "2026-11-01"
+          ],
+          "source_urls": [
+            "https://trepidationshaunt.fearticket.com/"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "verified",
+            "display": "RegularOct2\u20133,9\u201310,16\u201317,23\u201324,30\u201331 7\u201311pm; no-scareOct22and29 7\u201310pm; Nov1blackout7\u201311pm. Display only."
+          },
+          "source_urls": [
+            "https://trepidationshaunt.fearticket.com/"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-11-01T23:00:00-06:00",
+            "basis": "exact"
+          },
+          "source_urls": [
+            "https://trepidationshaunt.fearticket.com/"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "Intense strobes, fog, low visibility and physically demanding walking. Operator lists medical/pregnancy/claustrophobia restrictions; read warning before booking.",
+            "Operator prohibits entry with casts, braces, crutches, physical limitations, intoxication, and broadly medication/drug use; check eligibility with venue.",
+            "No-scare nights and Nov1blackout are distinct experiences. Rainchecks throughseason; no refunds."
+          ],
+          "source_urls": [
+            "https://trepidationshaunt.fearticket.com/"
+          ]
+        }
+      },
+      "conflicts": [
+        {
+          "field": "attraction_count",
+          "values": [
+            "two",
+            "three named attractions"
+          ],
+          "handling": "Omit attraction count claim."
+        }
+      ],
+      "blockers": [],
+      "original_projection_sha256": "811cb1d518f7a4cb9ee9bc01f9b75ae56d995a67263f4341af9341119e405231",
+      "prior_projection": {
+        "record_id": "DELTA2-TREPIDATIONS",
+        "name": "Trepidations Haunted Attraction",
+        "discovery_class": "NET NEW",
+        "discovery_sources": [
+          "https://www.thescarefactor.com/haunted-houses/missouri/"
+        ],
+        "research_decision": "HOLD",
+        "independent_verification": "NOT PERFORMED",
+        "runtime_eligible": false,
+        "placement": null,
+        "open_now_policy": "never",
+        "machine_opening_intervals": null,
+        "season_year": 2026,
+        "fields": {
+          "visitor_address_lead": {
+            "value": "101ECommercialSt,ExeterMO65647",
+            "source_urls": [
+              "https://www.thescarefactor.com/haunted-houses/missouri/trepidations-haunted-attraction/"
+            ]
+          },
+          "schedule_lead": {
+            "value": "Oct2,3,9,10,16,17,23,24,30,31; no-scareOct22; blackoutNov 1. YEAR NOT independently accepted.",
+            "source_urls": [
+              "https://www.thescarefactor.com/haunted-houses/missouri/trepidations-haunted-attraction/"
+            ]
+          },
+          "ticket_source": {
+            "value": "https://trepidationshaunt.fearticket.com/",
+            "source_urls": [
+              "https://www.thescarefactor.com/haunted-houses/missouri/trepidations-haunted-attraction/"
+            ]
+          }
+        },
+        "conflicts": [],
+        "blockers": [
+          "Detaileddirectorydatepatternnotexplicitlyyear-bound; officialticketpage extractionLoadingonly. Need2026 binding anddirectrestrictionconfirmation."
+        ]
+      },
+      "placement_candidate": {
+        "latitude": 36.6725635,
+        "longitude": -93.9396267,
+        "basis": "operator-linked-site-point",
+        "precision": "Approximate site placement only; not entrance, parking, gate, doorway or rideshare dropoff.",
+        "source_url": "https://trepidationshaunt.fearticket.com/",
+        "checked_at": "2026-10-08T21:02:00Z",
+        "independent_review": "NOT PERFORMED"
+      },
+      "new_evidence": "Public browser JS rendered2026ticket/calendar and named visitor-location link. Downloaded official warning image visually inspected. Apr12ticket-envelope start is not opening date."
+    },
+    {
+      "record_id": "DELTA3-FREAKS",
+      "name": "Freaks Fair Haunted Attraction",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/freaks-fair-haunted-attraction/",
+      "research_decision": "CLEARANCE CANDIDATE",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "Freaks Fair Haunted Attraction",
+          "source_urls": [
+            "https://freaksfair2026.fearticket.com/"
+          ]
+        },
+        "visitor_address": {
+          "value": "126 SW 400 Rd. (Twin Oaks Event Center), Warrensburg, MO 64093",
+          "source_urls": [
+            "https://freaksfair2026.fearticket.com/"
+          ]
+        },
+        "category": {
+          "value": "Haunted House",
+          "source_urls": [
+            "https://freaksfair2026.fearticket.com/"
+          ]
+        },
+        "season_year": {
+          "value": 2026,
+          "source_urls": [
+            "https://freaksfair2026.fearticket.com/"
+          ]
+        },
+        "dates": {
+          "value": [
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "source_urls": [
+            "https://freaksfair2026.fearticket.com/"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "verified",
+            "display": "October 23\u201324 and 30\u201331, 7\u201310:30 p.m.",
+            "machine_intervals": null
+          },
+          "source_urls": [
+            "https://freaksfair2026.fearticket.com/"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-10-31T22:30:00-05:00",
+            "basis": "exact",
+            "derivation": "Official 2026 booking calendar final October 31 date and displayed 10:30 p.m. endpoint."
+          },
+          "source_urls": [
+            "https://freaksfair2026.fearticket.com/"
+          ]
+        },
+        "material_access": {
+          "value": [
+            "Ticket is valid for one-time entry on the selected night."
+          ],
+          "source_urls": [
+            "https://freaksfair2026.fearticket.com/"
+          ]
+        },
+        "admission_price": {
+          "value": null,
+          "source_urls": [
+            "https://freaksfair2026.fearticket.com/"
+          ]
+        }
+      },
+      "placement_candidate": {
+        "latitude": 38.7627893,
+        "longitude": -93.7360498,
+        "basis": "operator-linked-site-point",
+        "precision": "Approximate site placement only, not an entrance, parking, gate or rideshare dropoff.",
+        "source_url": "https://freaksfair2026.fearticket.com/",
+        "checked_at": "2026-10-08T21:09:06.208219+00:00",
+        "independent_review": "NOT PERFORMED"
+      },
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [],
+      "consumer_projection": {
+        "name": "Freaks Fair Haunted Attraction",
+        "category": "Haunted House",
+        "visitor_address": "126 SW 400 Rd. (Twin Oaks Event Center), Warrensburg, MO 64093",
+        "directions_kind": "visitor-address",
+        "hours_state": "verified",
+        "hours_display": "October 23\u201324 and 30\u201331, 7\u201310:30 p.m.",
+        "details": [
+          "Ticket is for one-time entry on your selected night.",
+          "Location is approximate."
+        ],
+        "confidence": "Good confidence",
+        "notice": "Check current hours, admission, and weather before you go.",
+        "season_year": 2026,
+        "listing_expires_at": "2026-10-31T22:30:00-05:00",
+        "open_now_policy": "never",
+        "machine_opening_intervals": null
+      },
+      "additional_fields": {
+        "source": [
+          "https://freaksfair.com/",
+          "https://www.visitwarrensburg.com/events-calendar/category/covb-calendar/day/2026-10-30/"
+        ],
+        "year": 2026,
+        "hours_display": "7\u201310:30pm",
+        "date_conflict": "OperatorFriday25 versusDMOFriday30; no silent typo repair",
+        "address_conflict": "126vs122SW400th"
+      },
+      "original_projection_sha256": "aa60ffd1a38661f9b840c3ece97009d4038a93064b65fdba08c7d30e1325c784",
+      "prior_projection": {
+        "record_id": "DELTA3-FREAKS",
+        "name": "Freaks Fair Haunted Attraction",
+        "discovery_class": "NET NEW \u2014 PROVISIONAL",
+        "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+        "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/freaks-fair-haunted-attraction/",
+        "research_decision": "HOLD",
+        "independent_verdict": "NOT PERFORMED",
+        "runtime_eligible": false,
+        "fields": {
+          "identity": {
+            "value": "Freaks Fair Haunted Attraction",
+            "source": "https://www.thescarefactor.com/haunted-houses/missouri/freaks-fair-haunted-attraction/",
+            "status": "directory lead"
+          },
+          "visitor_address": {
+            "value": "126 SW400th Road, Warrensburg, MO64093",
+            "source": "https://www.thescarefactor.com/haunted-houses/missouri/freaks-fair-haunted-attraction/",
+            "status": "directory lead; requires stronger corroboration unless overridden"
+          },
+          "category": {
+            "value": "Haunted House",
+            "source": "https://www.thescarefactor.com/haunted-houses/missouri/freaks-fair-haunted-attraction/",
+            "status": "proposed mapping; independent activity classification required"
+          },
+          "season_year": {
+            "value": null,
+            "status": "unresolved"
+          },
+          "hours": {
+            "state": "unknown",
+            "display": null
+          },
+          "admission": null,
+          "expiry": null
+        },
+        "placement_candidate": null,
+        "open_now_policy": "never",
+        "machine_opening_intervals": null,
+        "blockers": [
+          "Operator says Friday25th October2026; DMO says October30. Operator126SW400th versus DMO122SW400th event address. Preserve date/address conflicts; officialticket page title2026 but content unreadable."
+        ],
+        "consumer_projection": null,
+        "additional_fields": {
+          "source": [
+            "https://freaksfair.com/",
+            "https://www.visitwarrensburg.com/events-calendar/category/covb-calendar/day/2026-10-30/"
+          ],
+          "year": 2026,
+          "hours_display": "7\u201310:30pm",
+          "date_conflict": "OperatorFriday25 versusDMOFriday30; no silent typo repair",
+          "address_conflict": "126vs122SW400th"
+        }
+      },
+      "independent_verification": "NOT PERFORMED",
+      "season_year": 2026,
+      "new_evidence": "R2 explicitly adjudicates dated operator booking calendar and corroborated operator address against prior weaker conflicts. No silent date repair; old values remain in prior_projection and conflicts.",
+      "conflicts": [
+        {
+          "field": "dates",
+          "values": [
+            "Homepage says Friday October 25",
+            "Current 2026 ticket calendar enables October 23,24,30,31 and disables25"
+          ],
+          "resolution_proposed": "Use explicitly selectable current operator booking dates; preserve old homepage contradiction in audit history, do not infer a typo silently."
+        },
+        {
+          "field": "visitor_address",
+          "values": [
+            "DMO122 SW400",
+            "Operator homepage and current booking126 SW400 at Twin Oaks Event Center"
+          ],
+          "resolution_proposed": "Use corroborated operator visitor address and operator booking navigation; retain DMO discrepancy as weaker conflicting evidence."
+        }
+      ]
+    },
+    {
+      "record_id": "DELTA2-HANNIBAL",
+      "name": "Hannibal Jaycees\u2019 Warehouse of Nightmares",
+      "discovery_class": "NET NEW",
+      "discovery_sources": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "research_decision": "HOLD",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "address_candidates": {
+          "value": [
+            "320 S.Bird St,HannibalMO",
+            "320 South3rd Street,HannibalMO63401"
+          ],
+          "source_urls": [
+            "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/",
+            "https://hannibaljaycees.org/"
+          ]
+        },
+        "2026_dates_signal": {
+          "value": "DMO index10/02/2026\u201310/30/2026, explicitFri/Satdates andOct 30; explicitlynotOct 31",
+          "source_urls": [
+            "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/"
+          ]
+        },
+        "hours": {
+          "value": "7:30pm\u2013midnight on listed dates, no machine intervals",
+          "source_urls": [
+            "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/"
+          ]
+        },
+        "category": {
+          "value": "Haunted House",
+          "source_urls": [
+            "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/"
+          ]
+        }
+      },
+      "conflicts": [],
+      "blockers": [
+        "DMO event routes320S.Bird St while operator/directory320S3rd St. Resolve destination conflict.",
+        "DMO says first 4 weekends but explicitlist includesOct 30; preserve explicitlist vs prose conflict rather than infer recurrence."
+      ],
+      "original_projection_sha256": "43e44cf4174ddfbe7ea2d4305341c971388ffc6af28a7c2947661ff519a7f010",
+      "prior_projection": {
+        "record_id": "DELTA2-HANNIBAL",
+        "name": "Hannibal Jaycees\u2019 Warehouse of Nightmares",
+        "discovery_class": "NET NEW",
+        "discovery_sources": [
+          "https://www.thescarefactor.com/haunted-houses/missouri/"
+        ],
+        "research_decision": "HOLD",
+        "independent_verification": "NOT PERFORMED",
+        "runtime_eligible": false,
+        "placement": null,
+        "open_now_policy": "never",
+        "machine_opening_intervals": null,
+        "season_year": 2026,
+        "fields": {
+          "address_candidates": {
+            "value": [
+              "320 S.Bird St,HannibalMO",
+              "320 South3rd Street,HannibalMO63401"
+            ],
+            "source_urls": [
+              "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/",
+              "https://hannibaljaycees.org/"
+            ]
+          },
+          "2026_dates_signal": {
+            "value": "DMO index10/02/2026\u201310/30/2026, explicitFri/Satdates andOct 30; explicitlynotOct 31",
+            "source_urls": [
+              "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/"
+            ]
+          },
+          "hours": {
+            "value": "7:30pm\u2013midnight on listed dates, no machine intervals",
+            "source_urls": [
+              "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/"
+            ]
+          },
+          "category": {
+            "value": "Haunted House",
+            "source_urls": [
+              "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/"
+            ]
+          }
+        },
+        "conflicts": [],
+        "blockers": [
+          "DMO event routes320S.Bird St while operator/directory320S3rd St. Resolve destination conflict.",
+          "DMO says first 4 weekends but explicitlist includesOct 30; preserve explicitlist vs prose conflict rather than infer recurrence."
+        ]
+      },
+      "new_evidence": "Operator haunt-specific poster confirms320S3rdSt but undatedFri/SatOctober conflicts with priorDMO2026address320SBird andspecificdates. HOLD retained, no more bounded search."
+    },
+    {
+      "record_id": "DELTA4-HELL-HARVEST",
+      "name": "Hell Harvest",
+      "research_decision": "CLEARANCE CANDIDATE",
+      "independent_verification": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "prior_state": "PR58 reported factual PASS / placement HOLD. Full historical held projection remains unrecovered. This is a newly constructed complete source-bound proposal, not a claim to have recovered that prior proof.",
+      "blockers": [],
+      "new_evidence": {
+        "official_current_ticket": "https://hellharvest2026.fearticket.com/",
+        "visitor_address": "19126 Missouri8, PotosiMO63664",
+        "date_range": "September25\u2013October31 2026",
+        "operator_linked_point": [
+          37.9133909,
+          -90.942628
+        ],
+        "restrictions": "Strobes/fog/intense scares, uneventerrain/confinedspaces; operator advises against youngchildren/pregnancy/heart/epilepsy/othermedicalconcerns.",
+        "precision": "Approximate site only; not gate/parking/dropoff."
+      },
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "season_year": 2026,
+      "fields": {
+        "identity": {
+          "value": "Hell Harvest Haunted House",
+          "source_urls": [
+            "https://hellharvest2026.fearticket.com/"
+          ]
+        },
+        "visitor_address": {
+          "value": "19126 Missouri 8, Potosi, MO 63664",
+          "source_urls": [
+            "https://hellharvest2026.fearticket.com/",
+            "https://hellharvest.com/faq/"
+          ]
+        },
+        "category": {
+          "value": "Haunted House",
+          "source_urls": [
+            "https://hellharvest2026.fearticket.com/",
+            "https://hellharvest.com/warning/"
+          ]
+        },
+        "activity_subtype": {
+          "value": "Indoor/outdoor haunted walkthrough; no separate corn-maze category asserted",
+          "source_urls": [
+            "https://hellharvest2026.fearticket.com/",
+            "https://hellharvest.com/faq/"
+          ]
+        },
+        "current_season": {
+          "value": "Explicit September 25\u2013October 31, 2026 event envelope",
+          "source_urls": [
+            "https://hellharvest2026.fearticket.com/"
+          ]
+        },
+        "date_boundaries": {
+          "value": {
+            "start_date": "2026-09-25",
+            "end_date": "2026-10-31",
+            "continuous_daily_operation": false
+          },
+          "source_urls": [
+            "https://hellharvest2026.fearticket.com/"
+          ]
+        },
+        "remaining_display_dates": {
+          "value": [
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-11",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-22",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-29",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "source_urls": [
+            "https://hellharvest.com/venue/hell-harvest-haunted-attraction/"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "partial",
+            "display": "Select nights September 25\u2013October 31. Listed October nights start at 8 p.m.; closing time unconfirmed. October 11 is listed as chicken night.",
+            "machine_intervals": null,
+            "closing_time": null
+          },
+          "source_urls": [
+            "https://hellharvest.com/venue/hell-harvest-haunted-attraction/",
+            "https://hellharvest2026.fearticket.com/"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-11-01T00:00:00-05:00",
+            "basis": "date-only",
+            "derivation": "Known final October 31 season date; exclude after date without inventing closing hours or extending admission."
+          },
+          "source_urls": [
+            "https://hellharvest2026.fearticket.com/"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "Intense strobes, fog, sound, uneven terrain and confined spaces. Operator does not recommend this for young children or visitors with relevant medical conditions or pregnancy.",
+            "Operator says the terrain is not accessible and warns against entry with injuries, casts, braces, crutches, physical limitations, intoxication or medication/drug use. Read the operator warning before booking.",
+            "No pets, weapons, alcohol or costumes. No touching actors."
+          ],
+          "source_urls": [
+            "https://hellharvest2026.fearticket.com/",
+            "https://hellharvest.com/faq/",
+            "https://hellharvest.com/warning/"
+          ]
+        },
+        "weather": {
+          "value": "Light drizzle may operate; check operator updates for cancellation. No live weather or closure guarantee.",
+          "source_urls": [
+            "https://hellharvest.com/faq/"
+          ]
+        },
+        "admission_price": {
+          "value": null,
+          "source_urls": [
+            "https://hellharvest2026.fearticket.com/"
+          ]
+        },
+        "material_ticket_terms": {
+          "value": "Tickets available online or at the gate; sales final. Routine price claims omitted.",
+          "source_urls": [
+            "https://hellharvest2026.fearticket.com/",
+            "https://hellharvest.com/faq/"
+          ]
+        }
+      },
+      "placement_candidate": {
+        "latitude": 37.9133909,
+        "longitude": -90.942628,
+        "basis": "operator-linked-site-point",
+        "precision": "Approximate operator ticket-map site placement only; not entrance, parking stall, gate, doorway or rideshare dropoff.",
+        "source_url": "https://hellharvest2026.fearticket.com/",
+        "navigation_link": "https://www.google.com/maps/search/?api=1&query=37.9133909%2C-90.942628",
+        "checked_at": "2026-10-08T21:14:27.404588+00:00",
+        "independent_review": "NOT PERFORMED",
+        "rejected_alternate": {
+          "latitude": 37,
+          "longitude": -90,
+          "reason": "Unusable whole-degree operator venue/event map point; prohibited from runtime."
+        }
+      },
+      "conflicts": [
+        {
+          "field": "legacy_ticket_links",
+          "values": [
+            "Header/footer link2025 and olderFAQticketlink",
+            "Homehero and freshly rendered2026ticket"
+          ],
+          "handling": "Use explicit2026ticket package; do not inherit older ticket calendar."
+        },
+        {
+          "field": "operating_days",
+          "values": [
+            "Home generalizedFriday/Saturday wording",
+            "Currentcalendar alsoSundayOct11 andThursdayOct22/29"
+          ],
+          "handling": "Retain explicit calendar list and special night distinction; do not infer weekly recurrence."
+        },
+        {
+          "field": "operator_map_links",
+          "values": {
+            "venue_and_final_event_page_query": "37,-90",
+            "current_2026_ticket_site_point": "37.9133909,-90.942628"
+          },
+          "handling": "The whole-degree venue/event map destination is unusable for attraction placement and must not enter runtime. Prefer the current 2026 ticket package point explicitly linked to the supported visitor address, solely as approximate site placement. The discrepancy is preserved; its cause is unknown, not described as a truncation bug.",
+          "source_urls": [
+            "https://hellharvest.com/venue/hell-harvest-haunted-attraction/",
+            "https://hellharvest.com/event/night-13-final-haunt/",
+            "https://hellharvest2026.fearticket.com/"
+          ]
+        }
+      ],
+      "consumer_projection": {
+        "name": "Hell Harvest Haunted House",
+        "category": "Haunted House",
+        "visitor_address": "19126 Missouri 8, Potosi, MO 63664",
+        "directions_kind": "visitor-address",
+        "hours_state": "partial",
+        "hours_display": "Select nights through October 31; listed October nights begin at 8 p.m. Closing time unconfirmed.",
+        "details": [
+          "October 11 is listed as chicken night.",
+          "Intense effects, uneven terrain and confined spaces; not accessible according to the operator.",
+          "Operator lists medical, pregnancy, mobility and medication restrictions. Read the venue warning before booking.",
+          "No pets, weapons, alcohol or costumes. Location is approximate."
+        ],
+        "confidence": "Limited details",
+        "notice": "Check current hours, admission, and weather before you go.",
+        "listing_expires_at": "2026-11-01T00:00:00-05:00",
+        "expiry_basis": "date-only",
+        "season_year": 2026,
+        "open_now_policy": "never",
+        "machine_opening_intervals": null
+      },
+      "evidence_limitations": [
+        "Author final-night extraction failed; independent verifier subsequently reopened final-night page and confirmed October31 2026 at8pm with no closing time. Partial hours and date-only cutoff remain supported; no closing interval invented.",
+        "FAQ/warning contain legacy footer and ticket links; limitations are qualified operator statements, current2026 existence comes from ticket package.",
+        "No independent historical held-projection comparison claimed. Fresh verifier must approve actual fields and map."
+      ]
+    }
+  ],
+  "limitations": [
+    "Publicmappages used only namedplace/address/destination provenance. No review-derived hours or account/private data retained.",
+    "No operator contact; no purchase; no live cancellation guarantee.",
+    "Carolyn remains factualPASS carried forward but placementHOLD; source discrepancy not silently corrected.",
+    "All projections require fresh independent field/placement verification; source document and prior verifier artifacts remain authoritative references."
+  ],
+  "revision": 4,
+  "supersedes_research_input_sha256": "50c2372609af12c7f670f76aaa0f8a673d30dec427ac878cfe93faaa68eb82c7"
+}

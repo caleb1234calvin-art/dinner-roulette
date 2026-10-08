@@ -1,3 +1,39 @@
+# Pick For Us — Delta4 R4 Hell Harvest Cleared; Nine Unique Placement-Ready Records Parked (2026-10-08)
+
+## CURRENT — DATA-ONLY ADDENDUM; PR59 FINAL ACCEPTANCE STILL PENDING
+
+Delta4 R4 supersedes R2 **only for Hell Harvest**: fresh complete projection independently PASS for facts and approximate placement. Across the same eight Delta4 records, current totals are **7 factual PASS /1 HOLD /0 REJECT /0 EXPIRED;5 placement PASS and2 factual-only staged**. These are revised totals, not an additional batch. **Zero runtime/browser/release PASS.**
+
+Five Delta4 placement passes are **Nixa, Missouri Nightmare, Trepidations, Freaks Fair and Hell Harvest**. Carolyn and Route66 remain factual PASS but placement HOLD/outside radius; Hannibal remains factual HOLD. Add the distinct Branson Ghoster, Liberty Corn Maze, Terror at the Ranch and Cobb Factory from earlier reviews to obtain **nine unique future placement-ready records**. Park them separately; do not mix them into frozen active15 PR59. Labyrinth, Rising and all unrelated evidence HOLDs remain unchanged.
+
+### Hell Harvest fresh evidence and precise limits
+
+Current2026 ticket page directly linked by the operator supports September25–October31, visitor address and address-labeled map **37.9133909,-90.942628**. Eleven explicit remaining dates and20:00 starts were reproduced. The final October31 page has no supported closing time; **November1 00:00 CDT** is conservative date-only retention, not an operating-hours claim. Preserve null machine intervals/never-OpenNow.
+
+The whole-degree **37,-90** calendar map is unusable and excluded. Prefer the current2026 address-linked point as approximate site placement, not a precise entrance/parking/dropoff. Do not average the two or invent why the coarse link exists. Directions use the supported visitor address.
+
+Explicit calendar dates distinguish chicken night/Thursday events from general Friday/Saturday prose; no broad recurrence. Haunted House is supported; maze prose does not add Corn Maze. Qualified operator medical/mobility/medication/access restrictions remain as visitor information, no routine-price dump or health advice. Legacy2025 header/footer links remain a conflict while current hero/ticket binds2026.
+
+**This is fresh full-projection verification, not recovery of the missing historical PASS report.** It replaces missing proof only for actually inspected fields and does not retroactively approve unrelated PR58 evidence.
+
+### Recoverable immutable R4 and preserved R2 history
+
+[Exact R4 independent addendum](docs/handoffs/active/missouri-delta4-independent-verification-r4.md), SHA-256 **`e3c1644aeb911ee7d8ce6c81dd1c8a5a8e051da1602d15323999826753138b4a`**.
+[Exact research R4 JSON](audit/missouri-three-source-delta4-research-r4.json), SHA-256 **`45918c34c1ab199cdeca72614803b290396d258e095d3ee15acdd93e07ba032b`**.
+Accepted five-projection SHA-256 **`8009d281e551ec75dca9852aafbaae6f51a1ab171a8ccf1f24af2fa6596d3bcb`**; verdict JSON **`c8d23697279454ecaeab976f032017b35960e3b98421e60645b0dd75e9029f6c`**.
+
+R2 report/research/evidence remain intact below and in their original paths. Frozen researcher-time pending flags are historical; independent R4 controls this scoped data result. Source/coverage limitations and partial residential ledgers remain; no exhaustion or residential clearance claim.
+
+### Active cumulative candidate and authority
+
+PR59 still exact **`c2ca6fa84409c47b6153e0d9233e0bc46a9e1a47`**, tree **`b05403d16a3923120707a26ad092fc43070f8252`**, parent **`93b231c5326e6f4de5eb7d69f41564542c8018e9`**. Pomme correction has technical checks passing, but hosted artifact/browser and fresh final independent acceptance remain pending. Preserve prior IV-01/IV-02 findings; do not transfer a final PASS or treat data R3 semantics review as runtime approval.
+
+Fresh **21:18 UTC** main **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**, production **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv` READY** and PR59 unchanged. Standing nonproduction pipeline continues; no merge/deploy/settings/waiver. Any future nine-record implementation requires its own bounded candidate, consumer-copy/runtime/browser verification and separate owner release decision.
+
+This approved checkpoint adds only AI_CONTINUITY.md, exact R4 addendum and exact R4 audit JSON on deployment-disabled continuity. **PARENT COMMIT:** `de70a1a55d95e881d373577317b8df0c5e96237c`; **PARENT TREE:** `aba10003ed8cac2160999ec857cbf0fd8c7da3ad`. All history and integration deployment exclusion remain.
+
+## Prior continuity — Delta4 R2 and Pomme corrected freeze, preserved verbatim
+
 # Pick For Us — Delta4 Data Gate Complete; Pomme Routing Correction Frozen (2026-10-08)
 
 ## CURRENT — SIX FACTUAL / FOUR PLACEMENT PASSES IN DELTA4; PR59 STILL AWAITING FINAL RUNTIME ACCEPTANCE
