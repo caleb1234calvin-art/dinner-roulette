@@ -1,4 +1,5 @@
 import { seasonalDistancePrefix } from "@/lib/date-night/listing";
+import { cn } from "@/lib/utils";
 import { SeasonalVisitNotes } from "@/components/seasonal-visit-notes";
 import { dateNightStatusLabel } from "@/lib/date-night/availability";
 import { directionsUrl } from "@/lib/location/maps";
@@ -75,11 +76,12 @@ export function DateNightPlanOverlay({
                 activityTypes: place.activityTypes,
                 cuisineLabel: place.cuisineLabel,
               });
+              const seasonal = Boolean(place.seasonalListing || place.seasonalAvailability || place.seasonalVisitNotes?.length);
               const role = index === 0 ? "1 · Scare" : "2 · Settle";
               return (
                 <div key={place.id}>
                   <article className="overflow-hidden rounded-2xl bg-surface shadow-border">
-                    <div className="flex gap-4 p-4">
+                    <div className={cn("flex", seasonal ? "gap-3 px-3 pt-3 pb-1" : "gap-4 p-4")}>
                       <div className="flex size-20 shrink-0 items-center justify-center rounded-2xl bg-elevated p-1.5 outline outline-1 -outline-offset-1 outline-fg/10">
                         {icon ? (
                           <img src={icon} alt="" className="size-full rounded-xl object-cover" />
@@ -89,17 +91,18 @@ export function DateNightPlanOverlay({
                       </div>
                       <div className="min-w-0 flex-1">
                         <p className="text-[0.68rem] uppercase tracking-[0.18em] text-accent">{role}</p>
-                        <h3 className="font-display mt-1 text-xl leading-tight text-fg">{place.name}</h3>
+                        <h3 title={place.name} className={cn("font-display mt-1 text-fg", seasonal ? "truncate text-base leading-5" : "text-xl leading-tight")}>{place.name}</h3>
                         <p className="mt-1 text-xs text-muted">
                           {dateNightTypeLabel(place.activityTypes)} · {seasonalDistancePrefix(place)}{formatDistance(place.distanceMiles)}
                         </p>
                         <p className="mt-1 text-xs text-subtle">{dateNightStatusLabel(place)}</p>
-                        <SeasonalVisitNotes place={place} />
                         {!place.hoursKnown && !place.seasonalListing && !place.seasonalAvailability && !place.seasonalVisitNotes?.length ? (
                           <p className="mt-1 text-xs text-subtle">Hours unconfirmed — check before going.</p>
                         ) : null}
                       </div>
                     </div>
+
+                    {seasonal ? <div className="px-3 pb-1"><SeasonalVisitNotes place={place} /></div> : null}
 
                     <div className="grid grid-cols-2 gap-2 border-t border-border/70 p-3">
                       <Button size="sm" asChild>

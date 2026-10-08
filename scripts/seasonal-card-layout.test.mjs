@@ -26,3 +26,11 @@ test("original full-result and plan media are unchanged", () => {
   assert.match(read("result-overlay"), /size-44 rounded-\[2rem\]/);
   assert.match(read("date-night-plan-overlay"), /size-20 shrink-0/);
 });
+
+test("seasonal plans use full-width compact notes without shrinking the base artwork", () => {
+  const source = read("date-night-plan-overlay");
+  assert.match(source, /size-20 shrink-0/);
+  assert.match(source, /title=\{place.name\}/);
+  assert.match(source, /seasonal \? "gap-3 px-3 pt-3 pb-1" : "gap-4 p-4"/);
+  assert.match(source, /seasonal \? <div className="px-3 pb-1"><SeasonalVisitNotes/);
+});
