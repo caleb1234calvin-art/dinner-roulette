@@ -1,3 +1,48 @@
+# Pick For Us — First Five V1 Candidate Independently Verified (2026-10-08)
+
+## CURRENT — APPLICABLE IMPLEMENTATION/WEB GATES PASS; EXACT CANDIDATE FROZEN; OWNER RELEASE DECISION NEXT
+
+Fresh independent verification completed **04:54 UTC**: **PASS for exact application/runtime implementation and applicable web validation**. Both saved-state blockers **V1-ID-01 and V1-NAV-02 are closed** on [draft PR #51](https://github.com/caleb1234calvin-art/dinner-roulette/pull/51), exact **`5409b0fcbb24c54f03e3b1228e1481bfc594c7af`**, tree **`f26fec09ac30c34b220244a2fd7e600ced16fbdb`**, sole parent **`d5b26ee264fa45a032ae226c9505bfb610bbe745`**. **No merge/deployment authority or new production acceptance.**
+
+Keep this technical candidate frozen. This closeout changes only separate canonical documentation, not PR #51's source. No publication wrapper is required by this checkpoint; any later owner-directed wrapper or changed publication tree needs its own exact-identity/equality audit.
+
+### Verified scope and blocker closure
+
+- Only reviewed **003 Myer / 010 Aftermath / 011 Beyond / 029 Campbell / 030 Rutledge-Wilson** are added in the candidate. All five audit objects exactly match independent R2; no remaining21 imported. Existing Lloyd/Sam facts remain preserved with bounded V1 treatment.
+- V1-ID-01: preferences/exclusions resolve through already affirmed identities; negative restrictions dominate; Favorites Only/Saved/remove/re-save semantics survive provider/catalog merges. No unrelated ranking multiplier or preference-schema migration.
+- V1-NAV-02: Favorites hydrates current reviewed address/navigation/Approx policy, including legacy Myer snapshots and saved provider aliases. Sam verified parking and ordinary favorites retain their behavior; expired saved listings remain removable historical items, not active picks.
+- Identity-only receipts bind observed provider ID to current canonical/review/name, never geometry authority. Malformed/stale/conflicting receipts fail closed. Local storage is bounded512 and revision-bound; unobserved historical aliases are not guessed, cross-device receipt persistence is not guaranteed and reset requires re-observation.
+- V1 date/address/hours/compact-notice/Details/approximate-navigation/generic-Uber/affirmative-dedupe/cache/year/expiry safeguards pass. All seven curated seasonal records remain never-OpenNow; approximate distance is not precise arrival. Date-only midnight may precede a final overnight walk and is retention, not operator closing.
+- Original d5b26 HOLD and NAV addendum remain immutable; earlier92ffec/ece025 receipts remain historical. The incidental d5b Android dependency-resolution failure is retained, not a runtime defect or current-head failure.
+
+### Fresh independent and source-bound hosted results
+
+- **790 full-suite PASS / 4 inherited skips / 0 failures**: 719 repository passes +71 application. **66 focused PASS** (including33 V1), casino83/audits/typecheck/safe auth-enabled production build/proof PASS. Full lint **zero errors / six inherited permitted warnings**. Focused counts overlap, not additive.
+- Source fingerprint **`dbf13025acd8dc6a5b720f3f9f6bb92934d52395eb61a7ef8728cab9f6495982` / 441 files**. Independent local output and hosted output remain distinct.
+- [Exact-head web `37728828732` / job `113153069477`](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37728828732) **SUCCESS**; hosted output **`3440cbcc8c83fe782750146dd349735d70551a51406fe43bdc27d7ec90249419` / 194 files**.
+- Browser artifact **`11529237420`**, SHA-256 **`a2b257aed77d47afd734a5123997162838f94e16054315f4da9eeb50748fbe69`**, exact run/head binding and ZIP CRC verified. **Dedicated V1 87/87 + retained seasonal19/19 PASS**, existing casino16/location19 PASS. Dedicated observations:34 decoded images,216 qualified-note checks,50 controls,26 saved views;472 V1+90 retained intercepted calls,zero forwarded.
+- All603 PNGs fully decode; independent representative pixel review covers five cards/Details/artwork/notices, persisted Favorites reload, legacy Myer, ended history and retained Lloyd/Sam. This is not a claim every PNG was individually human-inspected. Local Chromium restriction was not bypassed; acceptance is independent inspection of actual source-bound hosted built-app/RPC execution.
+- Exact-head incidental unsigned Android **`37728828686` / job `113153069853` SUCCESS**, signing **`113154095212` SKIPPED**. No independent new binary acceptance or physical Android/WebView PASS.
+- Six warnings and inherited owner-deferred320px Directions-label clipping remain; target/accessibility/qualification checks pass, not pixel-perfect polish. No live-provider/weather/ticket/cancellation/physical arrival guarantee. Fresh pre-import source limitations remain in audit evidence.
+
+### Recoverable final review
+
+[Exact final independent report](docs/handoffs/active/seasonal-completeness-v1-five-record-independent-verification.md), SHA-256 **`b42ebe2d67bafb9c5c83a3295837fdb15be9a18b196f2fb2e85cc95cb7ae3bbd`**. Separate final JSON SHA-256 **`f8d8aa7a7375534c9a93a044f9ed31143bcef889585a51b2ef24daed41ae5d8a`**. Full report provides the complete32-path inventory,11-path corrective delta, source checks, actual browser evidence and limits. The candidate's controlling handoff remains `docs/handoffs/active/seasonal-completeness-v1-five-record-candidate.md`.
+
+### Owner decision and production boundary
+
+**Next: owner decides whether to release exact verified5409**, then a separately scoped operational preflight must establish actual main/head/tree/checks, effective migration-free route and accessible authorized rollback. No publication/deploy has been authorized. The prior one-release unprotected-main exception was consumed and is not reusable.
+
+For any next release, **current production H655 would become the immediate previous rollback target**, not older fU21. Reconfirm actual UI/procedure/target eligibility at execution; retain fU21 as older evidence. No rollback is needed now.
+
+After that release decision, a possible separately authorized next five-record batch is **019 James River Joplin,031 Silver Dollar City,034 Boone Homestead,124 Hotel of Terror,125 Dungeons of Doom**. This is prioritization only, not authorization or fresh factual revalidation. Do not rush short-lived witch events, import all remaining records or start another broad search.
+
+Fresh **04:57 UTC** main **`0bbf6758e94eea8129e21b004d4c36ff886cd46d`**, tree **`7add088fcbcacb8526f90a6f09c6dd7ca5249b3c`**, production **`dpl_H655TNrL3hSuBNF8w2xp4MpxspkM`** READY at that SHA, and PR #51 draft/open/unmerged at5409 are unchanged.
+
+This approved two-document publication changes only AI_CONTINUITY.md plus the exact final report on deployment-disabled `integration/continuity-refresh-2026-10-07`. **PARENT COMMIT:** `43a999f7b68e98ad6e63109a2edc0a08ed257f56`; **PARENT TREE:** `1cb56cbb094f5ad6b4f4dc8885a7cf183a780d3b`. Unchanged `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains exclusion. Preserve all history; stop after readback for owner release decision.
+
+## Prior continuity — independent saved-state HOLD and bounded remediation, preserved verbatim
+
 # Pick For Us — First Five V1 Candidate Independent HOLD; Remediation Active (2026-10-08)
 
 ## CURRENT — TWO SAVED-STATE BLOCKERS; AUTHOR BOUNDED REMEDIATION ACTIVE; NO RELEASE
