@@ -1,3 +1,33 @@
+# Pick For Us — PR #52 Initial Browser HOLD; Bounded Harness Correction Active (2026-10-08)
+
+## CURRENT — IMPLEMENTATION VALIDATION IN PROGRESS; NO RELEASE AUTHORITY
+
+Owner authorization remains the **07:00 UTC implementation/validation-only** scope for ten additional records and the seventeen-record compact Details/reliability presentation. The initial candidate is frozen in [draft PR #52](https://github.com/caleb1234calvin-art/dinner-roulette/pull/52), branch `integration/seasonal-completeness-v1-ten-records`. **Overall independent/runtime acceptance remains HOLD. No merge or production deployment is authorized.** The seven-record production release remains complete.
+
+### Initial exact candidate and preserved failed gate
+
+- Initial commit **`f3dff159dd7608fa6976b8e75ecba3c3cba5faa0`**, tree **`bc32b87320abf62a3a9fac7442f5bab34cb93dbe`**, sole parent/main **`5409b0fcbb24c54f03e3b1228e1481bfc594c7af`**.
+- Fresh independent local checks passed: full **816 tests / four inherited skips**, focused310, casino83/audits, typecheck, ESLint **zero errors / six inherited warnings**, development build and auth-enabled migration-free production build/proof. Frozen research, ten runtime projections and seventeen consumer-copy projections match reviewed data, with the accepted Fun Farm schedule clarification. Existing seven factual catalogs/review revisions remain unchanged.
+- Hosted web **37742870928 / job113197433246 FAILED**. Retained seasonal suites **23 + 97 PASS**; new suite **156/157 PASS**, aggregate correctly fails. These partial passes do not close the candidate gate.
+- Actual browser artifact **11535004776**, **151567788 bytes**, SHA-256 **`b00a9e63d9d0fad64054c57e4ec7b12be1739882e7d68366c6a3a0619cd9070e`**, was independently recovered and authenticated against GitHub; ZIP CRC passed.
+- Independent report `Initial-Candidate-HOLD.md`, SHA-256 **`8549845fc1d66458fb2ad9d1260b96a3ef54cf49a8eb996ffe6849d434d6bd9e`**, preserves the exact initial verdict. The source-bound candidate handoff is [committed here](https://github.com/caleb1234calvin-art/dinner-roulette/blob/f3dff159dd7608fa6976b8e75ecba3c3cba5faa0/docs/handoffs/active/seasonal-completeness-v1-next-candidate.md).
+
+### Bounded correction and next acceptance gate
+
+The sole failure is MO26-100 Urban Gardens, mixed-alias-toggle-cache: a whole-card negative regex matched “Corn Maze” in the real venue name. The inspected result correctly rendered ordinary **PARK**, without seasonal notes/metadata. This is a demonstrated test-scoping defect; runtime seasonal leakage was not demonstrated. **The failed gate is not waived.**
+
+The coordinator authorized one bounded harness-only correction targeting rendered category labels while preserving seasonal-off RPC, metadata, notes, category and identity assertions. The author has prepared the one-file delta, is rerunning full local gates and inspecting actual screenshots for all seventeen records before a new freeze. No new frozen identity is asserted here. New exact-head hosted/browser validation and fresh independent review remain required; no results transfer automatically from the initial SHA.
+
+Prior data/copy PASS remains scoped to the ten selected projections and seventeen proposed consumer presentations. The exact shared footer, truthful completeness labels, material visitor restrictions, address-first navigation, approximate location, conservative Open Now, expiry/no2027 and identity/cache/preferences requirements below remain binding. Eleven deferred records remain outside the batch.
+
+### Fresh baseline and continuity scope
+
+Fresh **07:47 UTC** main remains **`5409b0fcbb24c54f03e3b1228e1481bfc594c7af`**, tree **`f26fec09ac30c34b220244a2fd7e600ced16fbdb`**; latest production **`dpl_EoyMdyZ8KzanHst1NuhA5v6HXSVe` READY** at the same source. No production or main change. Previous release waivers remain consumed; future release needs separate authority and preflight.
+
+This checkpoint changes only `AI_CONTINUITY.md` on deployment-disabled `integration/continuity-refresh-2026-10-07`. **PARENT COMMIT:** `0ecfd4adf55e381bedce68c4c8b9dc5cac674694`; **PARENT TREE:** `06d476b39c571356742e1b98b74e3d28e84e39f4`. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**: false`. Preserve all prior records and immutable failed evidence below.
+
+## Prior continuity — data/copy PASS and task start, preserved verbatim
+
 # Pick For Us — Ten-Record Data/Copy Gate PASS; Implementation Active (2026-10-08)
 
 ## CURRENT — OWNER-AUTHORIZED TEN-RECORD + DETAILS CANDIDATE BUILD; NO RUNTIME VERIFICATION OR RELEASE YET
