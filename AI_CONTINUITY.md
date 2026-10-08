@@ -1,3 +1,40 @@
+# Pick For Us — First Five V1 Candidate Independent HOLD; Remediation Active (2026-10-08)
+
+## CURRENT — TWO SAVED-STATE BLOCKERS; AUTHOR BOUNDED REMEDIATION ACTIVE; NO RELEASE
+
+The owner authorized **implementation/validation of V1 support plus the first five records only** at **03:57 UTC**: MO26-003 Myer, 010 Aftermath, 011 Beyond, 029 Campbell and 030 Rutledge-Wilson. This supersedes the implementation-decision-pending next action below. **No main merge or deployment is authorized; the other21 newly data-cleared records are not part of this candidate.**
+
+[Draft PR #51](https://github.com/caleb1234calvin-art/dinner-roulette/pull/51), branch `integration/seasonal-completeness-v1-five-records`, currently freezes **`d5b26ee264fa45a032ae226c9505bfb610bbe745`**, tree **`3e48fb22971731f0a7f90f33cbdb7000a452be3e`**, sole parent **`ece025a118d899af661affcb509ec7d2e2d11160`**. This is an implementation candidate, **independent verification HOLD**, not released data.
+
+### Independent blocking findings and authorized correction
+
+- **V1-ID-01:** affirmed provider/catalog merges change canonical ID but saved provider-ID Never Recommend, Not Tonight and Favorites Only semantics are not preserved. Independent real-source reproduction showed negative exclusions ignored and saved provider favorite lost; the ResultOverlay saved indicator/removal flow also requires consistency.
+- Bounded fix: resolve preferences/exclusions through **already affirmed identity aliases**, let negative restrictions dominate and retain favorite eligibility/removal/re-save consistency. Do not infer aliases from shared geometry/address/type or change unrelated picker ranking. Cover both merge orders, conflicts, persisted/cache/resume state and unrelated nearby controls.
+- **V1-NAV-02:** FavoritesPage calculates distance and Directions from saved snapshot lat/lon, bypassing current seasonal navigation policy. Approximate listings and legacy Myer saved coordinates can therefore expose inappropriate precise navigation and unqualified distance.
+- Bounded fix: hydrate current reviewed Favorites policy by canonical identity, use supported visitor-address Directions and qualified current approximate distance, preserve Sam verified parking and ordinary favorites. Test actual save → Favorites → Directions, legacy Myer snapshots and truthful expired saved history. Do not destroy saved preferences or redesign Favorites.
+- **Author paired remediation is active; no corrected successor is frozen at this checkpoint.** Preserve d5b26 and both receipts. A new exact candidate must rerun applicable gates and receive fresh independent review before either blocker is closed.
+
+### Evidence and passing scope remain distinct
+
+The pinned [candidate handoff](https://github.com/caleb1234calvin-art/dinner-roulette/blob/d5b26ee264fa45a032ae226c9505bfb610bbe745/docs/handoffs/active/seasonal-completeness-v1-five-record-candidate.md) was read in full. The five audit objects independently match exact R2 subset/hash **`76896ea4131f68927b7287eb46cda1d25b8993dd28527b0a2d072a72ef9ef1a6`**. Data clearance remains valid; these findings concern implementation.
+
+- Independent `HOLD-d5b26.md`, SHA-256 **`e6c8459b772344b5a11d6371f4d8caa9d356c0295043e9523f92b7edf7217491`**.
+- Independent `HOLD-d5b26-addendum-saved-navigation.md`, SHA-256 **`39888d93c9bc83d3fc033fc6f6d67e6ff02f5f2c736e43b81564a1cda0616425`**.
+- Exact d5b26 independent local full suite **777 PASS / 4 inherited skips**, typecheck, zero-error/six-warning lint and migration-free auth-enabled build/proof PASS. Source fingerprint **`ae89cce1b7f6b0c6a2d4f8df777ae2e3a659719520c9e2f1a6110a7574a34470` / 439 files**.
+- Fresh **04:32 UTC** metadata: hosted web **`37727169702` SUCCESS**; unsigned Android **`37727169701` FAILURE**. This checkpoint has not established Android failure cause or independently accepted final browser artifacts. Terminal workflow success does not remove source-confirmed ID/NAV blockers.
+- Earlier92ffec/ece025 candidate results remain historical. No PASS transfers to a future remediation head. Existing six warnings and owner-deferred320px Directions cosmetic clipping remain separate.
+- Prior pre-import checks found no factual delta in the five records; direct Spooktacular406/web-reopen freshness limitations remain in the committed audit. No current cancellation/inventory/provider guarantee.
+
+### Fresh baseline and next gate
+
+At **04:32 UTC**, main **`0bbf6758e94eea8129e21b004d4c36ff886cd46d`**, tree **`7add088fcbcacb8526f90a6f09c6dd7ca5249b3c`**, and production **`dpl_H655TNrL3hSuBNF8w2xp4MpxspkM`** remain unchanged/READY. PR #51 remains draft/open at d5b26. The already shipped two-record release is not reopened or mutated.
+
+This changes only AI_CONTINUITY.md on deployment-disabled `integration/continuity-refresh-2026-10-07`. **PARENT COMMIT:** `828d6c3fdd5ab0d210dcd7f064ff5c861ab8ab09`; **PARENT TREE:** `74a945e4789847954da9373689d9033d9e6a4f77`. Unchanged `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**` exclusion.
+
+**Next:** finish only the authorized paired saved-state/navigation correction, freeze exact successor and evidence, rerun full/focused/build/lint/hosted/browser gates including persisted preferences and Favorites, and obtain fresh independent review. Preserve failed/HOLD history and report actual remaining blockers. No main/deploy/other21-import authority; consumed prior release exception is not reusable.
+
+## Prior continuity — Phase 2 R2 data completion and implementation proposal, preserved verbatim
+
 # Pick For Us — V1 Phase 2 Data Re-clearance Complete (2026-10-08)
 
 ## CURRENT — EXACT R2 INDEPENDENT DATA PASS: 26 CLEAR; OWNER IMPLEMENTATION DECISION NEXT
