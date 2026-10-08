@@ -8,7 +8,7 @@ export function SeasonalVisitNotes({ place }: { place: Pick<DateNightPlace, "sea
     {place.seasonalVisitNotes?.length ? <details>
       <summary className="cursor-pointer rounded-sm font-medium text-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">Details</summary>
       <div className="mt-2 space-y-2">
-        {place.seasonalVisitNotes.map((note) => <p key={note}>{note}</p>)}
+        {place.seasonalVisitNotes.map((note) => <p key={note} className="[overflow-wrap:anywhere]">{note}</p>)}
       </div>
     </details> : null}
   </div>;

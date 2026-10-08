@@ -142,9 +142,12 @@ async function inspectQualifiedOverlay(test, row, kind) {
       const hit = document.elementFromPoint(rect.x + rect.width / 2, rect.y + rect.height / 2);
       return { top: rect.top, bottom: rect.bottom, left: rect.left, right: rect.right,
         viewportWidth: innerWidth, viewportHeight: innerHeight,
+        contentWidth: element.scrollWidth, availableWidth: element.clientWidth,
         unobscured: Boolean(hit && (hit === element || element.contains(hit))) };
     });
     reachability.notes.push({ index, text: expected, ...visible });
+    assert.ok(visible.contentWidth <= visible.availableWidth + 1,
+      `${kind}: qualified note ${index + 1} must not clip inline text horizontally`);
     assert.ok(visible.top >= -1 && visible.bottom <= visible.viewportHeight + 1 &&
       visible.left >= -1 && visible.right <= visible.viewportWidth + 1 && visible.unobscured,
     `${kind}: qualified note ${index + 1} must be readable after scrolling`);
