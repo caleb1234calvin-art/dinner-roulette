@@ -139,6 +139,7 @@ export const MISSOURI_2026_DEFERRED_BATCH_3_LISTINGS:
         sourceUrl: "https://mostateparks.com/event/pomme-de-terror-2026", checkedAt: "2026-10-08",
         precisionLabel: "Official Hermitage Area Campground event location" },
       directionsTarget: { kind: "verified-point", lat: 37.883074, lon: -93.303521, description: "Hermitage Area Campground event location" },
+      ridesharePolicy: "external-picker",
       hours: { state: "partial", displayText: "Oct. 16 naturalist program 7:30 p.m.; Oct. 17 activities run at separate times through trick-or-treating 5–7 p.m." },
       listingExpiresAt: "2026-10-18T00:00:00-05:00", expiryBasis: "date-only",
       sourceUrls: ["https://mostateparks.com/event/pomme-de-terror-2026","https://mostateparks.com/park/pomme-de-terre-state-park"],

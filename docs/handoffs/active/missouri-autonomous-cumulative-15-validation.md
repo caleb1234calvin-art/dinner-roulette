@@ -82,3 +82,22 @@ result comparisons. Explicit no-plan checks cover non-thrill first stops.
 Missing geometry cards now fail immediately rather than await a selector timeout.
 No layout threshold or readability assertion is relaxed. Prior attempts remain
 non-PASS evidence, not proof of a product layout defect.
+
+## Pomme navigation versus rideshare precision
+
+Independent data clarification confirms the official Hermitage campground point
+is a navigation/event point, not a verified ride dropoff. The generic rideshare
+browser expectation remains strict. A proposed assertion accepting a point-based
+Uber link was rejected before publication. The actual runtime defect is corrected
+with an explicit external-picker rideshare policy for Pomme while preserving its
+point-based Directions. Sam's previously reviewed parking-point behavior remains
+unchanged. Dedicated Pomme negative and Sam control assertions are required.
+
+Added late-fall filter tests confirm explicit ordinary selections exclude seasonal
+rows while stale seasonal-only selections use existing Anything normalization
+without positive seasonal provider queries.
+
+Current data authority: read R2 together with
+`audit/missouri-autonomous-active15-independent-verification-r3-2026-10-08.md`
+and `audit/ACTIVE15-DATA-IV-R3-Manifest.json`. R3 supersedes only the Pomme
+rideshare policy and binds the current five-file data/copy set; R2 remains history.

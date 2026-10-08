@@ -264,3 +264,22 @@ test("ordinary seasonal records cannot inherit lifecycle-only post-window visibi
     assert.equal(pool(row, [ordinary]).length, 0);
   }
 });
+
+
+test("late-fall ordinary filters stay explicit and stale seasonal-only filters normalize without seasonal queries", () => {
+  const { buildDateNightQueryPlan, buildDateNightQuery } = load("src/lib/date-night/query-plan.ts");
+  for (const row of rows) {
+    for (const activityTypes of [["museum"], ["park"], ["museum", "haunted-house"]]) {
+      assert.equal(pool(row, [row], nov5, { activityTypes }).length, 0);
+    }
+    for (const activityTypes of [["haunted-house"], ["corn-maze"], ["other-halloween-fall"]]) {
+      assert.deepEqual(pool(row, [row], nov5, { activityTypes }).map(place => place.id), [row.id]);
+      const plan = buildDateNightQueryPlan(activityTypes, false);
+      assert.ok(plan.length > 0);
+      assert.ok(plan.every(group => group.id !== "seasonal"));
+      for (const group of plan) assert.doesNotMatch(buildDateNightQuery(group, row.lat, row.lon, 1609), /seasonal_context/);
+    }
+    assert.equal(pool(row, [row], new Date("2026-10-20T18:00:00-05:00"), {}, false).length, 1,
+      "Explicit lifecycle visibility also survives an October user switch-off");
+  }
+});

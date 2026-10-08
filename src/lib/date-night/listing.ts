@@ -14,6 +14,8 @@ export interface SeasonalListing {
   };
   directionsTarget: { kind: "visitor-address"; address: string } |
     { kind: "verified-point"; lat: number; lon: number; description: string };
+  /** A supported navigation point is not necessarily a verified ride dropoff. */
+  ridesharePolicy?: "external-picker";
   hours: { state: "verified" | "partial" | "unknown"; displayText?: string };
   listingExpiresAt: string;
   expiryBasis: "exact" | "date-only" | "editorial";

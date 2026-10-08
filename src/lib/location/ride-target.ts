@@ -5,6 +5,7 @@ import type { NavigablePlace } from "./maps.ts";
 type RidePlace = NavigablePlace & {
   name: string;
   seasonalListing?: NavigablePlace["seasonalListing"] & {
+    ridesharePolicy?: "external-picker";
     placement: null | { lat: number; lon: number; basis: "address-geocode" | "operator-site" | "verified-arrival" };
   };
 };
@@ -13,7 +14,7 @@ type RidePlace = NavigablePlace & {
 export function uberRideTarget(place: RidePlace): { url: string; ariaLabel: string } {
   const target = place.seasonalListing?.directionsTarget;
   const coordinates = target?.kind === "verified-point" ? target : place;
-  if ((target?.kind !== "verified-point" && (isApproximateSeasonalPlace(place) || target?.kind === "visitor-address")) || !isCoordinates(coordinates)) {
+  if (place.seasonalListing?.ridesharePolicy === "external-picker" || (target?.kind !== "verified-point" && (isApproximateSeasonalPlace(place) || target?.kind === "visitor-address")) || !isCoordinates(coordinates)) {
     return { url: "https://m.uber.com/", ariaLabel: "Open Uber; choose your destination in the external service" };
   }
   const params = new URLSearchParams();

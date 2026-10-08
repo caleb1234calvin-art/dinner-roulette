@@ -1,0 +1,44 @@
+{
+  "revision": "ACTIVE15-DATA-IV-R3",
+  "reviewedAt": "2026-10-08T21:10:17.784775+00:00",
+  "verdict": "PASS \u2014 factual navigation/placement semantics only",
+  "supersedes": "R2 five-file binding through one explicit Pomme rideshare policy addition; R2 retained unchanged",
+  "priorManifestSha256": "5cffff4e6822c23a51a5932d43ccbacc5c346d3146e9412d97935c5280326523",
+  "hashes": [
+    {
+      "path": "src/lib/date-night/missouri-2026-deferred-batch-3-catalog.ts",
+      "sha256": "42ba5f69f4d8ecd0fcfd8fc647dc21b5938bd105c93ac5489fc2559952b5757b"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-final-four-catalog.ts",
+      "sha256": "7ab28748dbd26df3993882fe82903f35c61db1a8830399e110af51c1fae92111"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-late-fall-catalog.ts",
+      "sha256": "c64b98a0d6ac8b5b2ba12974597ee93fa78123e29e1b71c21aafa43bd20297e3"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-three-source-tier-a-catalog.ts",
+      "sha256": "22860de6252f243e9504b0582ed028e19e96035fdc2a6b0ea61326883503e920"
+    },
+    {
+      "path": "src/lib/date-night/seasonal-presentation-catalog.ts",
+      "sha256": "69aa6cd3c41a6bc23a464f40c17b72e3eebe3a1c8232793815c2140b41cf7a5b"
+    }
+  ],
+  "projectionSha256": "45f2bf1269b741e3ca2613f6c8547a6107b8297062ad5fee1d0bb147b178be9a",
+  "delta": {
+    "recordId": "MO26-071",
+    "field": "seasonalListing.ridesharePolicy",
+    "value": "external-picker",
+    "exactlyOneSourceLineAdded": true,
+    "otherFourFilesByteIdentical": true
+  },
+  "factualCounts": {
+    "PASS": 15,
+    "HOLD": 0,
+    "REJECT": 0
+  },
+  "runtimeVerification": "SEPARATE_GATE",
+  "releaseAuthorization": false
+}
