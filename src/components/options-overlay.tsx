@@ -58,6 +58,7 @@ function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { r
   const visualSrc = dinnerRestaurantIcon(restaurant, theme);
   const dateNightRestaurant = restaurant as DecoratedDateNightPlace;
   const dateNightIcon = mode === "date-night" ? getDateNightIcon({ activityTypes: dateNightRestaurant.activityTypes, cuisineLabel: restaurant.cuisineLabel, halloween }) : null;
+  const seasonal = mode === "date-night" && Boolean(dateNightRestaurant.seasonalListing || dateNightRestaurant.seasonalAvailability || dateNightRestaurant.seasonalVisitNotes?.length);
   const activityTypes = mode === "date-night" ? dateNightRestaurant.activityTypes ?? [] : [];
   const nightlifeRestaurant = restaurant as DecoratedNightlifePlace;
   const nightlifeIcon = mode === "nightlife" ? nightlifeArtwork(nightlifeRestaurant.venueTypes ?? []) : null;
@@ -80,14 +81,14 @@ function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { r
         </button>
         <button type="button" onClick={onNotTonight} className="absolute top-2 right-2 flex size-10 items-center justify-center rounded-md bg-bg/80 text-fg" aria-label={`Not tonight: ${restaurant.name}`}><Ban className="size-4" /></button>
       </div>
-      <button type="button" onClick={onSelect} className="flex flex-1 flex-col px-3 py-3 text-left">
-        <h3 className="font-display line-clamp-2 text-lg leading-tight text-fg">{restaurant.name}</h3>
-        {mode === "date-night" && activityTypes.length ? <div className="mt-2 flex flex-wrap gap-1">{activityTypes.slice(0, 3).map((type) => <span key={type} className="rounded-full bg-elevated px-2 py-1 text-[10px] tracking-wide text-muted uppercase">{dateNightTypeLabel([type])}</span>)}</div> : <p className="mt-1 text-xs text-muted">{restaurant.cuisineLabel}{restaurant.priceLevel ? ` · ${formatPrice(restaurant.priceLevel)}` : ""}</p>}
-        <p className="mt-2 text-xs text-subtle">{seasonalDistancePrefix(restaurant)}{formatDistance(restaurant.distanceMiles)}{openLabel ? ` · ${openLabel}` : ""}</p>
+      <button type="button" onClick={onSelect} className={cn("flex flex-1 flex-col text-left", seasonal ? "px-2 pt-2 pb-0" : "px-3 py-3")}>
+        <h3 title={restaurant.name} className={cn("font-display text-fg", seasonal ? "w-full truncate text-sm leading-[18px]" : "line-clamp-2 text-lg leading-tight")}>{restaurant.name}</h3>
+        {mode === "date-night" && activityTypes.length ? <div className={cn("flex gap-1", seasonal ? "mt-1 w-full min-w-0" : "mt-2 flex-wrap")}>{activityTypes.slice(0, 3).map((type) => <span key={type} title={dateNightTypeLabel([type])} className={cn("rounded-full bg-elevated text-[10px] tracking-wide text-muted uppercase", seasonal ? "min-w-0 truncate px-1 py-0.5 leading-[14px]" : "px-2 py-1")}>{dateNightTypeLabel([type])}</span>)}</div> : <p className="mt-1 text-xs text-muted">{restaurant.cuisineLabel}{restaurant.priceLevel ? ` · ${formatPrice(restaurant.priceLevel)}` : ""}</p>}
+        <p className={cn("text-xs text-subtle", seasonal ? "mt-1 leading-[14px]" : "mt-2")}>{seasonalDistancePrefix(restaurant)}{formatDistance(restaurant.distanceMiles)}{openLabel ? ` · ${openLabel}` : ""}</p>
         {mode === "date-night" && !restaurant.hoursKnown && !dateNightRestaurant.seasonalListing && !dateNightRestaurant.seasonalAvailability && !dateNightRestaurant.seasonalVisitNotes?.length ? <p className="mt-1 text-xs text-subtle">Hours unknown — check before going</p> : null}
         {restaurant.closingSoon ? <p className="mt-1 text-xs text-danger">Closing soon</p> : null}
       </button>
-      {mode === "date-night" && (dateNightRestaurant.seasonalListing || dateNightRestaurant.seasonalAvailability || dateNightRestaurant.seasonalVisitNotes?.length) ? <div className="px-3 pb-3"><SeasonalVisitNotes place={dateNightRestaurant} /></div> : null}
+      {mode === "date-night" && (dateNightRestaurant.seasonalListing || dateNightRestaurant.seasonalAvailability || dateNightRestaurant.seasonalVisitNotes?.length) ? <div className="px-2 pb-1"><SeasonalVisitNotes place={dateNightRestaurant} /></div> : null}
     </article>
   );
 }

@@ -25,6 +25,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
 
       - name: Record validated commit
         run: git rev-parse HEAD
@@ -94,6 +95,12 @@ jobs:
           CI: "true"
           VITE_AUTH_ENABLED: "true"
         run: node scripts/seasonal-ten-record-browser.mjs
+
+      - name: Compare seasonal and standard card geometry
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+        run: node scripts/seasonal-card-layout-browser.mjs
 
       - name: Preserve browser evidence
         if: always()
