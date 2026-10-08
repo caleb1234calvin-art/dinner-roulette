@@ -1,3 +1,27 @@
+# Pick For Us — Card Layout Release Operational HOLD (2026-10-08)
+
+## CURRENT — OWNER PROTECTION DECISION PENDING; TECHNICAL/VISUAL PASS REMAINS CLOSED
+
+The owner's **18:48 UTC** instruction approved the exact PR #53 release through the normal protected path. Fresh preflight found main **unprotected**, protection enabled=false and repository rulesets empty. The new instruction did not explicitly waive this condition. At **18:49:34 UTC**, the coordinator requested a **new one-release unprotected-main decision**; the answer remains pending at this checkpoint. **No publication, deployment or settings mutation occurred.** Earlier consumed waivers are not reusable.
+
+Exact candidate remains **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**, tree **`df157a388e582bae1e085d456f704e8f24d48aac`**, sole parent **`9c8fcd22a025b3cd23ba360d76faec7844c5d06c`**. Draft [PR #53](https://github.com/caleb1234calvin-art/dinner-roulette/pull/53) remains open/unmerged. Independent technical and scoped visual PASS below is complete; this is an operational authority HOLD, not a reopened layout defect.
+
+### Read-only preflight and next action
+
+Operator observation **18:51:23 UTC** confirms main2fe is an ancestor, candidate six commits ahead/zero behind, exact web37818549473 SUCCESS, current production8VL READY, current aliases and authenticated dashboard. Effective enabled build override is:
+`VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`.
+Root empty; Node24.x. Ordinary migration-chaining npm build remains prohibited.
+
+Authenticated rollback dialog was accessible and showed8VL Current/Eoy Previous; canceled without Continue or Confirm. For any prospective approved release, **current8VL must become its immediate previous rollback target**, subject to fresh postrelease verification. No rollback was executed.
+
+Operator receipts `card-size-release-operator/preflight-summary.json` and `preflight-receipts.json` preserve the snapshot. Optional rules/branches/main fetch was unsupported and is not relabeled PASS; branch API explicitly confirms protection disabled and rulesets are empty.
+
+**Next: wait for the pending owner protection decision.** Do not infer approval from elapsed time or repeat the question. After explicit resolution, the separate operator must repeat immediate main/head/tree/check/build-route/production/rollback preflight before any mutation. Source/runtime changes remain outside this release-only scope.
+
+Fresh **18:52 UTC** reads confirm main **`2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81`**, production **`dpl_8VLrfiVD7MJx6KQCgGhRNtd4ESE9` READY**, exact PR53 head unchanged. This update changes only AI_CONTINUITY.md on the deployment-disabled continuity branch. **PARENT COMMIT:** `0325c62da323da9c7d7f23f95cabbe690308b5e5`; **PARENT TREE:** `cbc2d46b8a043a89ab2f9698921d174bb5881ff2`. All earlier history is preserved; no docs deployment.
+
+## Prior continuity — verified draft candidate and completed layout work, preserved verbatim
+
 # Pick For Us — Seasonal Card Layout Verified; Stop at Draft PR #53 (2026-10-08)
 
 ## CURRENT — INDEPENDENT TECHNICAL AND SCOPED VISUAL PASS; NO RELEASE ACTION
