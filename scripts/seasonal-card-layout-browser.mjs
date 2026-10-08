@@ -26,6 +26,8 @@ const rows = [
   ...pure("src/lib/date-night/missouri-2026-final-four-catalog.ts").MISSOURI_2026_FINAL_FOUR_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-deferred-batch-3-catalog.ts").MISSOURI_2026_DEFERRED_BATCH_3_CATALOG,
 ];
+const { HALLOWEEN_THRILL_TYPES } = pure("src/lib/date-night/season.ts");
+const isThrill = row => row.activityTypes.some(type => HALLOWEEN_THRILL_TYPES.includes(type));
 const cssDir = ".vercel/output/static/assets";
 const css = fs.readdirSync(cssDir).filter(p => p.endsWith(".css")).map(p => fs.readFileSync(path.join(cssDir, p), "utf8")).join("\n");
 const state = { theme: "dark", spookySeasonEnabled: true, preferences: {}, toggleFavorite() {}, recordVisit() {} };
@@ -80,9 +82,16 @@ const verdict = { passed: false, baseline, proof, comparisons: [], errors: [] };
 let browser;
 try {
   browser = await chromium.launch({ headless: true });
+  verdict.ineligiblePlanControls = [];
+  for (const row of rows.filter(row => !isThrill(row))) {
+    const html = renderer()("plan", [decorate(row), { ...ordinary(row), id: "second-control", name: "Ordinary park", activityTypes: ["park"] }]);
+    assert.ok(!html.includes("<article"), "Non-thrill first stops must not fabricate Scare plan cards");
+    assert.ok(html.includes("No complete seasonal pair yet."));
+    verdict.ineligiblePlanControls.push(row.id);
+  }
   for (const width of [320, 390, 512]) {
     for (const row of rows) {
-    for (const kind of ["options", "result", "plan"]) {
+    for (const kind of ["options", "result", ...(isThrill(row) ? ["plan"] : [])]) {
       const context = await browser.newContext({ viewport: { width, height: 844 }, reducedMotion: "reduce" });
       const page = await context.newPage();
       const measured = {};
@@ -92,9 +101,12 @@ try {
         const render = renderer(variant !== "after" && !variant.startsWith("current-"));
         const item = ["ordinary", "standard", "current-standard", "current-ordinary"].includes(variant) ? ordinary(row) : decorate(row);
         if (variant.endsWith("standard")) { item.name = "Ordinary park"; item.activityTypes = ["park"]; }
+        // Both sides require the same valid Scare/Settle fixture.
+        if (kind === "plan") item.activityTypes = row.activityTypes;
         await page.setContent(`<html class="dark"><head><style>${css}</style></head><body>${render(kind, [item, { ...ordinary(row), id: "second-control", name: "Ordinary park", activityTypes: ["park"] }])}</body></html>`);
         await page.locator("img").evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
         const card = kind === "result" ? page.locator(".result-in") : page.locator("article").first();
+        assert.equal(await card.count(), 1, "A valid geometry fixture must render its card");
         const geometry = await card.evaluate((el, kind) => {
           const rect = el.getBoundingClientRect(), image = kind === "result" ? document.querySelector("img") : el.querySelector("img"), media = image.parentElement.getBoundingClientRect();
           return { width: rect.width, height: rect.height, mediaHeight: media.height, cardClass: el.className,

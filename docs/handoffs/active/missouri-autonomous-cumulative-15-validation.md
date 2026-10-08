@@ -21,7 +21,9 @@ acceptance and release readiness remain separate gates.
 
 ## Validation changes
 
-- Full 32-record standard-card comparison at 320/390/512px across options/result/plan.
+- Full 32-record standard-card comparison at 320/390/512px across options/result;
+  plan comparisons use all actually Scare-eligible records and valid
+  Scare/Settle controls. Non-thrill venues do not form a valid first Scare stop.
 - Existing browser cases retained; the proven ten-record harness also runs against
   all fifteen additions, with per-record material facts, navigation, aliases,
   favorites/exclusions, cache/resume, expiry and 2027 checks.
@@ -68,3 +70,15 @@ Dedicated tests pin midnight, cutoff minus one millisecond, cutoff and later,
 including duplicate/cache/saved/DST behavior. Built-browser resume cases cross
 midnight and 00:29:59.999 before requiring expiry at 00:30. The five independently
 reviewed data/copy file hashes remain unchanged.
+
+## Geometry harness correction
+
+The first expanded geometry harness incorrectly removed its valid Scare/Settle
+control and attempted plans for non-thrill first stops. The real component
+correctly rendered no plan cards, so geometry selectors waited rather than
+measuring anything. Restore the original valid-plan fixture and compare plan
+geometry only for actual Scare-eligible records; all 32 retain browse and
+result comparisons. Explicit no-plan checks cover non-thrill first stops.
+Missing geometry cards now fail immediately rather than await a selector timeout.
+No layout threshold or readability assertion is relaxed. Prior attempts remain
+non-PASS evidence, not proof of a product layout defect.
