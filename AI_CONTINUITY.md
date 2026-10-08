@@ -1,3 +1,76 @@
+# Pick For Us — Exact-Tree Seasonal Release SHIPPED (2026-10-08)
+
+## CURRENT — MAIN PUBLISHED; PRODUCTION READY; ALIASES AND QUALIFIED SMOKE PASS
+
+**The approved two-record seasonal release is shipped.** This supersedes all pending implementation, verification, publication, login and operational-preflight HOLD language below for this completed web release. Those records remain historical; physical Android/signing/Play and the explicit limitations below remain unresolved/out of scope.
+
+- **Published main and PR #50 merge SHA:** `0bbf6758e94eea8129e21b004d4c36ff886cd46d`.
+- **Complete approved/published tree:** `7add088fcbcacb8526f90a6f09c6dd7ca5249b3c`; sole parent/independently verified technical candidate `fd801eda9f496da33aa395ad2ad592027e16029a`.
+- **Current production:** `dpl_H655TNrL3hSuBNF8w2xp4MpxspkM`, READY **2026-10-08T00:35:33.968Z**, source Git/main at the exact published SHA.
+- [Live app](https://pickforus.app/) · [Immutable deployment](https://dinner-roulette-cm5v6ce5k-minions-9e2c.vercel.app/) · [Merged PR #50](https://github.com/caleb1234calvin-art/dinner-roulette/pull/50).
+
+The release integrates reviewed Myer's trusted-fallback removal, corrected CI test/build ordering, Lloyd's MO26-068 + Sam MO26-116 with bounded curated Other Halloween / Fall and temporary Haunted House icon, V48-01 neutral copy, and the three comment-only lint corrections. Exactly two cleared projections were included; the other 26 data HOLDs were not imported. There is no incomplete implementation gate left for this shipped slice.
+
+### Authority, safe route and exact publication
+
+The owner's conditional exact-tree approval and explicit **one-release unprotected-main exception** were exercised only for this release. Main was observed unprotected; no protection setting changed or protected check was bypassed. **This is not a standing waiver or authority for another release.**
+
+Owner manual sign-in enabled authenticated Vercel preflight. No OTP was requested/received in chat. The actual dashboard confirmed an existing enabled Build Command override:
+`VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`.
+Production tracks main; Auto-Assign Custom Production Domains was enabled. Explicit inline auth wins over file-based flags. No build/environment/Git-trigger/alias setting was changed; ordinary migration-chaining `npm run build` was not used.
+
+After immediate fresh main/head/tree/check/alias/preflight reads, the operator performed a **non-force fast-forward with expected-main90f0 lease** at **00:35 UTC** from `90f0f745a6e35d5abd09f727b7d3c87367ef3295` to exact **0bbf**. No generated merge/rebase/squash SHA; the complete approved tree was preserved. GitHub automatically closed PR #50 as merged with merge_commit_sha0bbf. Its remaining historical draft flag does not mean it is unmerged.
+
+Automatic production H655 was created **00:35:13.995Z**, began building **00:35:15.326Z** and became READY **00:35:33.968Z**. Actual logs bind main/0bbf checkout, Vercel CLI62.1.0/Node24.x/Vite8.2.2 and successful client/SSR/output deployment. No redundant manual deployment/promotion, migration, signing or Play action occurred.
+
+Production binding is actual Git/tree identity, effective safe command, checkout/build logs and served-output evidence. The verified source fingerprint remains **`a887e5df608bb1aae8d06991ea68bba5c37b62821db57e4bf2682a4f0f2c4359` / 432 files** through exact tree identity. **No full production Vercel-output fingerprint or live full-fixture rerun is claimed; CI output hashes were not substituted for production hashes.**
+
+### Current aliases and scoped production acceptance
+
+Fresh direct alias checks **00:42 UTC**, independently of historical deployment alias lists, resolve all five to **H655**:
+- `pickforus.app`
+- `www.pickforus.app` (unchanged HTTP308 redirect to apex)
+- `dinner-roulette-chi.vercel.app` (unchanged native Capacitor server origin)
+- `dinner-roulette-minions-9e2c.vercel.app`
+- `dinner-roulette-git-main-minions-9e2c.vercel.app`
+
+Operator scoped smoke **00:35–00:39 UTC PASS, qualified**:
+- Five aliases and immutable deployment origin return HTTP200 after redirects, title Pick For Us, and the same seven entry JS chunk names bound to actual H655 build output. Dynamic HTML digests differ and were retained honestly.
+- Haunted House/Corn Maze/Pumpkin Patch artwork each returned200, matched approved source bytes and decoded1408×1408 JPEG.
+- Actual production browser rendered Dinner → Date Night → Spooky Season, Other Halloween / Fall, October styling and schedule/coverage warnings; loading settled with eight available activities and enabled pick/options/plan controls; Settings rendered. No pick/plan/retry/location permission/external venue action was submitted.
+- **Ordinary live discovery was degraded**, with unavailable/incomplete-live-search warnings and saved fallback. This observed honest fallback is not provider-health PASS or a new backend diagnosis. No live-provider research was performed.
+- A bounded five-minute error/fatal runtime-log query returned no matches; this is not continuous monitoring or universal zero-error proof. Browser extension-metadata console errors were disclosed.
+
+The full 757-test/four-skip, zero-error/six-warning lint, 19-seasonal/22-image/48-note/24-control evidence remains bound to audited candidate/wrapper runs, not a repeated full production suite. V50-P01 inherited320px Directions-label clipping remains expressly deferred. Physical Android/WebView/GPS/arrival, current ticket/weather/social/provider guarantees, upload signing and Play remain **HOLD/out of scope**.
+
+### Immediate rollback and retained history
+
+**Immediate previous production / rollback target:** `dpl_fU21Bdhhw6Ruu1KnruYxfpVdQkAK`, READY at old main `90f0f745a6e35d5abd09f727b7d3c87367ef3295`.
+
+The authenticated dashboard exposed a usable two-stage rollback procedure; after H655 became current it directly displayed **fU21/main90f0 as Previous**, exact target link verified. The confirmation dialog was canceled. This is actual target-specific UI eligibility/access evidence, **not an executed/tested rollback or proof of connector rollback permission**. No rollback was needed.
+
+For a covered acceptance incident, first reconfirm current H655/previous exactfU21 and domains, then use only the authorized verified UI procedure. If target/access changes, HOLD/escalate. Hobby immediate-predecessor constraints apply; rollback also disables subsequent automatic promotion until removed, so do not silently change that behavior. The previously denied API route was not bypassed.
+
+Fresh **00:42 UTC** reads retain older READY `dpl_3Bfbq9TPJqsrgCx4UKX1r9ANDZRj` at `5534866e528e16721baa7369c0980f65b00a94b2` and `dpl_HmqKyiLqCqMSTrhxKktsy9mJtDKy` at `078f65c5d194435452ca14569ea00e57f52a20f3`. These are retained history, not current Hobby rollback substitutes.
+
+### Immutable final release receipt
+
+- `Pick-For-Us-Exact-Tree-Production-Release.txt`: Library **`libfile_76dcc8c952bc81919e97fa1b72cbfca6`**, SHA-256 **`8d3bccc73c0b1dca07e30a6edefc33a896c7df80305f48e85334f9d52c1a1b41`**.
+- Release JSON: Library **`libfile_db2a299d647881918e30d127fb491918`**, SHA-256 **`b10d847de66a17ce021d3452d04fe035b10f6657b26c4a1332ed9f0c3b179e98`**.
+- `Pick-For-Us-Exact-Tree-Production-Evidence.zip`: Library **`libfile_68ca4fd9d02c8191a72230276749709c`**, SHA-256 **`e7ff5ba758daea52427ed01034ca2dad2126f3335f730ee224b8894d0451fa1c`**.
+
+The complete report/preflight/action/build/alias/HTTP/image/output-binding receipts were read and hashes verified. All earlier research, failed attempts, source reviews, exact-wrapper audits and limits remain preserved below.
+
+### Closeout and deliberate next work
+
+PR #47 `277aca01996b5559b6e520d9d3f193c4989f4f64`, PR #48 `3dc116ef8d114127402d94fcbe299272080d0f4a` and PR #49 `49a552cf36e800fb684504cf8f36beb1ee3d3b5b` remain open/unmerged at fresh readback. Their reviewed changes were deliberately composed into the shipped tree; **do not merge those overlapping PRs again** or infer cleanup authority.
+
+**The web release workstream is complete after this continuity readback.** Do not reopen completed implementation, lint, browser or release work from historical instructions. Future product work may consider a deliberately scoped remaining-HOLD clearance only when useful new evidence exists; do not repeat exhausted arrival searches or lower standards because dates are close. Keep the two shipped projections' factual revalidation/expiry requirements; they are not automatic monitoring. No new recurring task or next-release approval follows.
+
+This closeout changes only AI_CONTINUITY.md on deployment-disabled **`integration/continuity-refresh-2026-10-07`**, parent **`5774e006273dfbf88f0909ccc9b690fb6f40b023`**, tree **`9fb46a80b794ed3e74ff82f6ccc05217e37b96d9`**. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains `integration/**` exclusion. **No extra production deployment is needed for documentation; main/wrapper0bbf remains untouched by closeout.**
+
+## Prior continuity — one-release exception and pending manual authentication, preserved verbatim
+
 # Pick For Us — One-Release Main Exception Approved; Manual Sign-In Pending (2026-10-08)
 
 ## CURRENT — UNPROTECTED-MAIN DECISION RESOLVED FOR THIS RELEASE ONLY; SAFE-ROUTE/ROLLBACK HOLD REMAINS
