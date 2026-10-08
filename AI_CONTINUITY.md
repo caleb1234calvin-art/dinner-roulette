@@ -1,3 +1,40 @@
+# Pick For Us — PR59 IV-03 Cache Correction Frozen; Final Acceptance Pending (2026-10-08)
+
+## CURRENT — REAL LATE-FALL CACHE DEFECT PRESERVED; NEW EXACT HEAD REQUIRES FULL VERIFICATION
+
+PR59 is now **`46ded230297976698b9c8a035cb2dafd11219314`**, tree **`e40cab26dcbc2e3d6ff6fec09694ddf7cfd287ff`**, sole parent **`c2ca6fa84409c47b6153e0d9233e0bc46a9e1a47`**. The bounded IV-03 correction is frozen; **exact hosted/browser and fresh independent final acceptance remain pending**. Author local892 tests PASS/four inherited skips, typecheck, lint zero errors/six warnings and safe auth-enabled build PASS do not close those gates.
+
+### IV-03 actual defect and evidence
+
+Independent report `independent-cumulative-runtime/R4/HOLD-IV03.md`, SHA-256 **`fbf81334efa9391af25774a84bbe6d61f33e18d9ada982334ab0a96ab2d24470`**, records a material client cache/radial integration defect on c2ca and identical late-fall runtime in93b.
+
+Server RPC200 included Brookdale, Creepyworld and Darkness with current lifecycle policy, but ordinary successful provider coverage filtered their seasonal types out during client cache read. Brookdale's actual in-radius Anything/OpenNow-off view displayed zero activities. Independent cache reproduction stored successfully but read no venue/no missing types for all three. Radial display-only rescue retained only failed-group catalog rows, so successful ordinary acquisition did not restore them. Earlier direct search/eligibility tests missed this real integration path.
+
+Original93b artifact **11580279394**, SHA-256 **`1febeb0ff5cb2697cc1db979f9e8a50d6f54f310fe2e38882a7485fbaa42b505`**, records **235 attempted new cases /21 failures**:
+-3 Pomme precision failures, subsequently corrected by c2ca;
+-15 actual late-fall absence failures;
+-3 incorrect RPC-transition expectations.
+
+These categories are distinct; no blanket harness waiver or whole-run PASS.
+
+### Correction scope and strict test semantics
+
+New46ded changes four files: current-registry lifecycle supplements in the cache path,23 actual cache/radial-session tests, the three precise RPC-transition assertions and handoff. The supplements must remain registry-confirmed, radius/category/preference constrained and expiry/year bounded, without manufacturing seasonal provider coverage or extending Halloween queries. Data R3/copy bytes are unchanged.
+
+The three favorite-alias expiry tests crossed from October7 into November, legitimately changing the query signature from12 types to8 ordinary types. Correction permits **exactly one ordinary-only refresh with no positive seasonal query**, not arbitrary extra calls. Starting in November and crossing exact expiry must still expire locally without another request.
+
+Preserve all material history: **IV-01** premature Beast/Edge overnight ending; **IV-02** Pomme official navigation point incorrectly used as a ride dropoff; **IV-03** client cache/radial removal of lifecycle-curated rows. c2ca's independent869 tests/four skips and corrected IV-01/IV-02 functional probes did not establish browser acceptance while IV-03 remained. New46ded must prove the complete corrected flow on its own source-bound artifacts and pixels.
+
+### Current pipeline boundary
+
+Active fifteen remain the only candidate additions in PR59. Nine unique independently placement-ready future records remain parked separately; no new research batch or import is folded into this correction. All existing staged/HOLD/residential/coverage limits in the data checkpoints remain.
+
+Fresh **21:52 UTC** main **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**, production **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv` READY** and draft/unmerged PR59 exact46ded confirmed. Standing authority permits bounded nonproduction correction/validation/continuity only. No release recommendation until fresh independent full acceptance; no main/deploy/settings/waiver.
+
+This checkpoint changes only AI_CONTINUITY.md on deployment-disabled continuity. **PARENT COMMIT:** `fdefb566f44b9691ccf5e4c7d787c1cf5df0babe`; **PARENT TREE:** `04bbfeb7f6775f6d459683ec70dfca6a50651314`. Verified deployment exclusion blob **`65925d91f882a10433e3eb43f53ed802914c969b`** unchanged. All history retained.
+
+## Prior continuity — Delta4 R4 and earlier PR59 pending state, preserved verbatim
+
 # Pick For Us — Delta4 R4 Hell Harvest Cleared; Nine Unique Placement-Ready Records Parked (2026-10-08)
 
 ## CURRENT — DATA-ONLY ADDENDUM; PR59 FINAL ACCEPTANCE STILL PENDING
