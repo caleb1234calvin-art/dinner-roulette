@@ -86,10 +86,10 @@ for (const row of records) test(`actual component keeps ${row.id} qualified thro
  t.after(()=>harness.dispose());harness.render();let tree=await harness.settle();
  assert.match(textOf(tree),/1 activities match/);
  harness.button(tree,"Give us options").props.onClick();tree=harness.render();
- assert.ok(harness.html(tree).includes(row.seasonalVisitNotes[0]));
+ assert.ok(harness.html(tree).includes(load("src/lib/date-night/seasonal-presentation.ts").seasonalPresentation(row).details[0]));
  harness.button(tree,"Pick our date").props.onClick();tree=harness.render();
  assert.equal(harness.overlay(tree,"ResultOverlay").props.restaurant.id,row.id);
- assert.ok(harness.html(tree).includes(row.seasonalVisitNotes.at(-1)));
+ assert.ok(harness.html(tree).includes(load("src/lib/date-night/seasonal-presentation.ts").SEASONAL_VISITOR_NOTICE));
  store.dateNightFilters.openNowOnly=true;tree=harness.render();
  assert.match(textOf(tree),/0 activities match/);assert.equal(harness.overlay(tree,"ResultOverlay"),null);assert.equal(harness.overlay(tree,"OptionsOverlay"),null);
  store.dateNightFilters.openNowOnly=false;tree=harness.render();assert.match(textOf(tree),/1 activities match/);
@@ -102,7 +102,8 @@ for (const row of records) test(`offline Anything at ${row.id} uses region-neutr
  t.mock.method(globalThis,"fetch",async()=>{throw new Error("Controlled provider outage");});
  const response=await searchDateNight({data:{lat:row.lat,lon:row.lon,radiusMiles:15,activityTypes:["anything"],spookySeasonEnabled:true}});
  assert.equal(response.source,"fallback");
- assert.deepEqual(response.venues.map(place=>place.id),[row.id]);
+ const nearbyNew = load("src/lib/date-night/missouri-2026-v1-next-catalog.ts").MISSOURI_2026_V1_NEXT_SEASONAL_CATALOG.filter(place => load("src/lib/restaurants/geo.ts").haversineMiles(row.lat,row.lon,place.lat,place.lon) <= 16);
+ assert.deepEqual(response.venues.map(place=>place.id).sort(),[row.id,...nearbyNew.map(place=>place.id)].sort());
  assert.equal(response.warning,"Using saved Date Night places while the live map is unavailable.");
  assert.doesNotMatch(response.warning,/Jasper County/);
 });

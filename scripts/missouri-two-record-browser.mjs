@@ -29,6 +29,26 @@ server.stdout.on("data", d => { logs += d; });
 server.stderr.on("data", d => { logs += d; });
 const verdict = { passed: false, proof, publicProviderCalls: 0, scenarios: [], errors: [] };
 const { MISSOURI_2026_CLEARED_SEASONAL_CATALOG: rows } = appModuleLoader()("src/lib/date-night/missouri-2026-cleared-catalog.ts");
+const { seasonalPresentation, SEASONAL_VISITOR_NOTICE, SEASONAL_CONFIDENCE_LABELS } = appModuleLoader()("src/lib/date-night/seasonal-presentation.ts");
+const legacyMaterialFacts = {
+  "MO26-003": [/doors open 7 p\.m\./, /final tickets at midnight/, /Closing time is unconfirmed/],
+  "MO26-010": [/last walk 12:30 a\.m\. the next day/, /Carrying babies or infants is prohibited/, /Not wheelchair accessible/, /No costumes/, /strobes/, /epilepsy, pregnancy, heart issues/],
+  "MO26-011": [/last walk 12:30 a\.m\. the next day/, /Carrying babies or infants is prohibited/, /Not wheelchair accessible/, /No costumes/, /strobes/, /epilepsy, pregnancy, heart issues/],
+  "MO26-029": [/after dark/, /Last admission varies/, /Every visitor must sign a waiver/, /Weekday groups need reservations/, /no weekday public walk-ins/],
+  "MO26-030": [/closed Mondays/, /Children 4 and under need an adult/, /Farm Road 146/, /roundabout/, /opposite Stonehinge/],
+  "MO26-068": [/October 31 closes early at 4 p\.m\./, /Children under 18 require supervision/, /Weather may close activities/, /within 24 hours/],
+  "MO26-116": [/trick-or-treating 2–4 p\.m\./, /trunk-or-treat 2–5 p\.m\./, /games and activities 3–6 p\.m\./, /Parking is next to Shelter 1/, /within 48 hours/],
+};
+const legacyConfidence = { "MO26-003": "good", "MO26-010": "good", "MO26-011": "good", "MO26-029": "good", "MO26-030": "high", "MO26-068": "high", "MO26-116": "high" };
+const forbiddenConsumerCopy = /\$\s*\d|\bUSD\b|priced by weight|ticket fee|checkout total|audit|provenance|retention|Census|reviewRevision|survey-grade|periodic review|Schedule checked|listingExpiresAt|ListingCompletenessV1|machine opening|\b20\d{2}-\d{2}-\d{2}\b/i;
+const assertConsumerOnly = async (scope, row) => {
+  const text = await scope.innerText();
+  assert.doesNotMatch(text, forbiddenConsumerCopy, "Consumer UI must not expose prices, audit or retention prose");
+  const projected = seasonalPresentation(row);
+  for (const raw of row.seasonalVisitNotes ?? []) {
+    if (!projected.details.includes(raw)) assert.ok(!text.includes(raw), "Full factual audit notes remain data-only");
+  }
+};
 const waitFor = async (predicate, message, timeout = 30000) => {
   const start = Date.now();
   while (Date.now() - start < timeout) {
@@ -111,16 +131,22 @@ async function inspectQualifiedOverlay(test, row, kind) {
   await inspectIcons(test, kind, kind);
   const section = overlay.locator("[data-seasonal-visit-notes]");
   assert.equal(await section.locator(":scope > p").count(), 1, "Exactly one compact notice");
-  assert.equal(await section.locator(":scope > p").innerText(), "Check the venue for current hours, admission, and weather updates.");
+  assert.equal(await section.locator(":scope > p").innerText(), SEASONAL_VISITOR_NOTICE);
+  const presentation = seasonalPresentation(row);
+  assert.equal(presentation.confidence, legacyConfidence[row.seasonalListing.recordId], "Completeness confidence matches independently reviewed tier");
+  assert.equal(await section.locator("[data-seasonal-confidence]").innerText(), SEASONAL_CONFIDENCE_LABELS[presentation.confidence]);
+  assert.ok(presentation.details.length > 0, "Reviewed consumer details are required");
   const details = section.locator("details");
   assert.equal(await details.getAttribute("open"), null, "Details initially collapsed");
   await details.locator("summary").click();
   const notes = details.locator("p");
-  assert.equal(await notes.count(), row.seasonalVisitNotes.length, `${kind}: every qualified note is present`);
+  for (const fact of legacyMaterialFacts[row.seasonalListing.recordId]) assert.match(await details.innerText(), fact, `${kind}: retained material visitor fact ${fact}`);
+  assert.equal(await notes.count(), presentation.details.length, `${kind}: every concise consumer fact is present`);
+  await assertConsumerOnly(overlay, row);
   const reachability = { overlay: kind, notes: [], controls: [] };
   result.evidence.overlayReachability ??= [];
   result.evidence.overlayReachability.push(reachability);
-  for (const [index, expected] of row.seasonalVisitNotes.entries()) {
+  for (const [index, expected] of presentation.details.entries()) {
     const note = notes.nth(index);
     assert.equal(await note.innerText(), expected);
     await note.scrollIntoViewIfNeeded({ timeout: 5000 });
@@ -160,15 +186,28 @@ async function inspectQualifiedOverlay(test, row, kind) {
     reachability.controls.push({ label, href, reachable: true });
     await page.screenshot({ path: resolve(output, `${state.scenario}-${kind}-control-${label.replaceAll(" ", "-")}.png`), animations: "disabled" });
   }
+  if (kind === "result") {
+    const destination = new URL(await overlay.getByRole("link", { name: /Directions · Google Maps/ }).getAttribute("href")).searchParams.get("destination");
+    if (row.seasonalListing.directionsTarget.kind === "verified-point") {
+      assert.equal(destination, `${row.lat},${row.lon}`, "Sam Baker retains the reviewed Shelter 1 parking point");
+      const ride = overlay.getByRole("link", { name: `Open Uber with ${row.name} as the destination; external service`, exact: true });
+      const params = new URL(await ride.getAttribute("href")).searchParams;
+      assert.equal(params.get("dropoff[latitude]"), String(row.lat));
+      assert.equal(params.get("dropoff[longitude]"), String(row.lon));
+    } else {
+      assert.equal(destination, row.address);
+      assert.equal(await overlay.getByRole("link", { name: "Open Uber; choose your destination in the external service", exact: true }).getAttribute("href"), "https://m.uber.com/");
+    }
+  }
   await noOverflow(page);
 }
 async function runScenario(row, index, scenario, callback, overrides = {}) {
   const state = { at: defaultAt, scenario: `${index}-${scenario}`, fixture: "empty", row, ...overrides };
   await setControl(state);
-  const result = { id: row.id, scenario, passed: false, evidence: {}, rpc: [], blockedBrowserRequests: [],
+  const result = { id: row.id, scenario, width: overrides.width ?? (index ? 320 : 390), passed: false, evidence: {}, rpc: [], blockedBrowserRequests: [],
     imageResponses: [], imageRequestFailures: [], consoleMessages: [], pageErrors: [] };
   verdict.scenarios.push(result);
-  const context = await browser.newContext({ viewport: { width: index ? 320 : 390, height: 844 },
+  const context = await browser.newContext({ viewport: { width: overrides.width ?? (index ? 320 : 390), height: 844 },
     timezoneId: "UTC", reducedMotion: "reduce", serviceWorkers: "block" });
   let page;
   const pending = new Set();
@@ -260,7 +299,7 @@ try {
         await optionsButton(page).click();
         await rowHeading(page, row).waitFor();
         const text = await page.locator("[data-seasonal-visit-notes]").textContent();
-        assert.ok(text.includes(index ? "Shelter 1" : "Approximate operator navigation"));
+        assert.ok(text.includes(index ? "Shelter 1" : seasonalPresentation(row).details[0]));
         if (index) {
           assert.equal(await rowCard(page, row).locator("img").getAttribute("src"), "/date-night-icons/grok_1788905199846.jpg");
           assert.match(await rowCard(page, row).innerText(), /Other Halloween \/ Fall/i);
@@ -269,7 +308,7 @@ try {
         await closeOptions(page);
         await pick.click(); await rowHeading(page, row).waitFor({ timeout: 20000 });
         const resultText = await page.locator("[data-seasonal-visit-notes]").textContent();
-        assert.ok(resultText.includes(index ? "14:00–16:00" : "younger than 18"));
+        assert.ok(resultText.includes(seasonalPresentation(row).details[0]));
         const href = await page.getByRole("link", { name: /Directions · Google Maps/ }).getAttribute("href");
         assert.equal(new URL(href).searchParams.get("destination"), index ? `${row.lat},${row.lon}` : row.address);
         await inspectQualifiedOverlay(test, row, "result");
@@ -452,7 +491,19 @@ try {
       assert.equal(await page.getByRole("link", { name: "Open Uber; choose your destination in the external service", exact: true }).getAttribute("href"), "https://m.uber.com/");
       await closeResult(page);
     }, { fixture: "provider-failure", filters: { activityTypes: ["haunted-house"] } });
-  assert.equal(verdict.scenarios.length, 19);
+  // Each of the seven shipped records must be readable at both supported widths.
+  for (const [index, row] of rows.entries()) for (const width of [320, 390]) {
+    await runScenario(row, index, `consumer-details-${width}`, async test => {
+      const { page } = test;
+      await optionsButton(page).click(); await rowHeading(page, row).waitFor();
+      await inspectQualifiedOverlay(test, row, "options");
+      await rowCard(page, row).getByRole("button").filter({ has: rowHeading(page, row) }).click();
+      await page.getByRole("button", { name: "Close result", exact: true }).waitFor();
+      await inspectQualifiedOverlay(test, row, "result");
+      await closeResult(page);
+    }, { width });
+  }
+  assert.equal(verdict.scenarios.length, 19 + rows.length * 2);
   assert.equal(verdict.errors.length, 0);
   verdict.passed = true;
 } catch (error) {

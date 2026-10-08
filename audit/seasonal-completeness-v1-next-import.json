@@ -1,0 +1,2081 @@
+{
+  "selectedRecordIds": [
+    "MO26-019",
+    "MO26-031",
+    "MO26-034",
+    "MO26-054",
+    "MO26-067",
+    "MO26-100",
+    "MO26-114",
+    "MO26-115",
+    "MO26-124",
+    "MO26-125"
+  ],
+  "reviewedResearchSha256": "e0736dc8ddfdf508cca36daa0a43b88768c9e78d410955223be026e0acf79429",
+  "research": {
+    "revision": "TEN-BATCH-REVALIDATION-R1",
+    "frozenAt": "2026-10-08T07:06:06.354385+00:00",
+    "role": "research/copy proposal only; independent review pending; no runtime edits/import/deploy",
+    "baseline": {
+      "main": "5409b0fcbb24c54f03e3b1228e1481bfc594c7af",
+      "tree": "f26fec09ac30c34b220244a2fd7e600ced16fbdb",
+      "production": "dpl_EoyMdyZ8KzanHst1NuhA5v6HXSVe",
+      "state": "READY",
+      "rollback": "dpl_H655TNrL3hSuBNF8w2xp4MpxspkM",
+      "readAt": "2026-10-08T07:01:45Z"
+    },
+    "originalR2Sha256": "76896ea4131f68927b7287eb46cda1d25b8993dd28527b0a2d072a72ef9ef1a6",
+    "selectedCount": 10,
+    "records": [
+      {
+        "recordId": "MO26-019",
+        "name": "James River Church Joplin — October 31st Party",
+        "revalidationVerdict": "CLEARANCE CANDIDATE — fresh source check supports unchanged approved factual projection",
+        "approvedProjection": {
+          "venueId": "MO26-019",
+          "canonicalName": "James River Church Joplin — October 31st Party",
+          "aliases": [],
+          "contractRevision": "ListingCompletenessV1",
+          "reviewRevision": "MO2026-phase2-reclearance-recent-v1",
+          "seasonYear": 2026,
+          "visitorAddress": {
+            "text": "1850 S Maiden Lane, Joplin, MO",
+            "city": "Joplin",
+            "region": "MO",
+            "postalCode": null,
+            "role": "visitor",
+            "sourceUrls": [
+              "https://jamesriver.church/october31/",
+              "https://jamesriver.church/locations/joplin/",
+              "https://www.visitjoplinmo.com/events/james-river-church-october-31st-party/"
+            ],
+            "checkedAt": "2026-10-08T02:33:46.705895+00:00"
+          },
+          "categories": [
+            "Other Halloween / Fall"
+          ],
+          "otherSubtypes": [
+            "community_halloween_party"
+          ],
+          "activities": [
+            {
+              "activity_type": "community_halloween_party",
+              "source_refs": [
+                "turn33view3",
+                "turn32search0",
+                "turn26view1",
+                "turn32search1",
+                "turn32search1"
+              ],
+              "evidence_scope": "2026",
+              "season_start": "2026-10-31",
+              "season_end": "2026-10-31",
+              "exact_active_dates": [
+                "2026-10-31"
+              ],
+              "hours": null,
+              "schedule_scope": "See venue schedule and activity-specific restrictions; no opening interval inferred.",
+              "activity_id": "MO26-019-A01",
+              "category_currently_supported": true,
+              "category_basis": "Other Halloween / Fall is now the accepted category; subtype factual evidence unchanged."
+            }
+          ],
+          "seasonEvidence": {
+            "sourceUrls": [
+              "https://jamesriver.church/october31/",
+              "https://jamesriver.church/locations/joplin/",
+              "https://www.visitjoplinmo.com/events/james-river-church-october-31st-party/"
+            ],
+            "checkedAt": "2026-10-08T02:33:46.705895+00:00",
+            "claimScope": "Identity, supported seasonal activities and explicit current 2026 operation; source-specific scope is in evidence.",
+            "accepted": true
+          },
+          "seasonStartDate": "2026-10-31",
+          "seasonEndDate": "2026-10-31",
+          "exactActiveDates": [
+            "2026-10-31"
+          ],
+          "hours": {
+            "state": "verified",
+            "displayText": "13:00–17:00.",
+            "timezone": "America/Chicago",
+            "openNowPolicy": "never",
+            "machineSchedule": null,
+            "lastAdmission": null,
+            "verificationScope": "Source-supported display only; no separately tested date-specific machine schedule is provided. Conflicts, variable darkness/final exit and weather exceptions are not inferred."
+          },
+          "admission": {
+            "displayText": "Free public event.",
+            "amount": null,
+            "currency": null,
+            "priceLevel": null,
+            "finalCheckoutQuote": false,
+            "ageFamilyText": "Families; infants through fifth grade."
+          },
+          "materialNotes": [
+            "Free public family party intended for children from infants through fifth grade; kid-friendly costumes welcome.",
+            "Volunteer check-in, GrowTrack, background-screening and volunteer waiver requirements are not public visitor entry restrictions.",
+            "Operator sources disagree on ZIP 64801 versus 64804. Street, city, campus identity and named campus point agree. Visitor Directions intentionally omit an unverified ZIP; this does not resolve the postal conflict.",
+            "Temporary mini-pumpkin activity is classified as Other Halloween / Fall, not a farm Pumpkin Patch."
+          ],
+          "accessibilityAndEntryText": null,
+          "lifecycle": {
+            "timezone": "America/Chicago",
+            "eventEndsAt": "2026-10-31T17:00:00-05:00",
+            "lastSourcedActiveDate": "2026-10-31",
+            "listingExpiresAt": "2026-10-31T17:00:00-05:00",
+            "listingExpiresAtUtc": "2026-10-31T22:00:00+00:00",
+            "expiryBasis": "known exact final activity end",
+            "expiryIsAdmissionOrHoursClaim": false,
+            "no2027Rollover": true,
+            "closed": false,
+            "cancelled": false,
+            "negativeStatusScope": "No terminal cancellation/closure observed in the specific reopened official sources; not a guarantee against subsequent changes.",
+            "eventEndEvidenceScope": "Supported exact final seasonal activity closing instant"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "venueName": "James River Church Joplin — October 31st Party",
+            "address": "1850 S Maiden Lane, Joplin, MO",
+            "coordinateOverrideAllowed": false
+          },
+          "placement": {
+            "lat": 37.0715533,
+            "lon": -94.5331944,
+            "basis": "operator-site",
+            "sourceUrl": "https://jamesriver.church/locations/joplin/",
+            "sourceCheckedAt": "2026-10-08T02:33:46.702845+00:00",
+            "capturePath": "phase2-reclearance/evidence/recent/019-venue.html",
+            "captureSha256": "f9246b4c013046492787f02cace9450c84f5b78c1f68ac050088377428c5acb8",
+            "matchedEntity": "Explicitly labelled Joplin Campus marker at 1850 S Maiden Lane, Joplin; both published navigation links resolve to the same campus/address destination.",
+            "selectionReason": "Named operator marker establishes the same campus without choosing either disputed ZIP. Map viewport centers are rejected.",
+            "reviewedAt": "2026-10-08T02:37:30.513176+00:00",
+            "precisionLabel": "Approximate venue location",
+            "entranceVerified": false,
+            "suitableFor": "approximate map/radius placement only",
+            "directionsCoordinateUseAllowed": false
+          },
+          "browseEligibleUnderContract": true,
+          "radiusReadyUnderContract": true,
+          "distanceLabel": "Approx. distance",
+          "rideshareTargetPolicy": "Generic external ride-service launch; never use approximate placement as precise dropoff.",
+          "visitorNotice": {
+            "text": "Check the venue for current hours, admission, and weather updates.",
+            "url": "https://jamesriver.church/october31/"
+          },
+          "sourceConflictsAndLimits": [
+            {
+              "field": "visitorAddress.postalCode",
+              "kind": "unresolved_source_conflict",
+              "values": [
+                "64801",
+                "64804"
+              ],
+              "treatment": "null in new visitor-address projection; both original source values retained here and in baseline; street/locality remain supported",
+              "blocksListing": false
+            }
+          ],
+          "runtimeImportAuthorized": false
+        },
+        "factualDelta": null,
+        "additionalSupportedMaterialRestrictions": [],
+        "consumerCopy": {
+          "confidence": "high",
+          "details": [
+            "October 31, 2026, 1–5 p.m.",
+            "Family party for infants through fifth grade; kid-friendly costumes welcome."
+          ],
+          "locationNote": "Location is approximate.",
+          "notice": "Check current hours, admission, and weather before you go."
+        },
+        "constraints": "Preserve original identity, category, address, approximate placement, lifecycle/exact dates, never-OpenNow and null machine intervals. Proposed consumer text does not replace underlying factual projection."
+      },
+      {
+        "recordId": "MO26-031",
+        "name": "Silver Dollar City — Harvest Festival",
+        "revalidationVerdict": "CLEARANCE CANDIDATE — fresh source check supports unchanged approved factual projection",
+        "approvedProjection": {
+          "venueId": "MO26-031",
+          "name": "Silver Dollar City — Harvest Festival",
+          "seasonYear": 2026,
+          "categories": [
+            "Other Halloween / Fall"
+          ],
+          "supportedSubtypes": [
+            "harvest_festival",
+            "pumpkin_illumination"
+          ],
+          "visitorAddress": {
+            "address": "399 Silver Dollar City Parkway, Branson, MO 65616",
+            "visitorUseConfirmed": true,
+            "sourceUrls": [
+              "https://www.silverdollarcity.com/theme-park/festivals/harvest-festival/",
+              "https://www.silverdollarcity.com/theme-park/directions"
+            ],
+            "role": "venue visitor street address"
+          },
+          "documentedArrival": null,
+          "attractionAddress": null,
+          "placement": {
+            "lat": 36.661658,
+            "lon": -93.338519,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=399+Silver+Dollar+City+Parkway%2C+Branson%2C+MO+65616&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+            "checkedAt": "2026-10-08T02:33:26.014163+00:00",
+            "precisionLabel": "Approximate address-range interpolation; not an entrance or parking coordinate",
+            "matchedAddress": "399 SILVER DOLLAR CITY PKWY, BRANSON, MO, 65616",
+            "addressEntityReview": {
+              "reviewedAt": "2026-10-08T02:37:22.562105+00:00",
+              "accepted": true,
+              "scope": "Returned street number, street and locality match the independently read visitor address.",
+              "unchangedResponseSha256": "2b9fa79049f4309c712efa8f93b7bf0766e8f1e2fab8c190c6d7d016beed3d04"
+            },
+            "approximate": true,
+            "allowedUses": [
+              "map placement",
+              "approximate distance",
+              "approximate radius filtering"
+            ],
+            "forbiddenUses": [
+              "entrance precision",
+              "coordinate-first directions",
+              "precise rideshare dropoff"
+            ],
+            "sourceSnapshot": "phase2-reclearance/evidence/central/MO26-031-geocode.json"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "399 Silver Dollar City Parkway, Branson, MO 65616",
+            "venueName": "Silver Dollar City — Harvest Festival",
+            "preferAddressOverPlacement": true,
+            "sourceUrls": [
+              "https://www.silverdollarcity.com/theme-park/festivals/harvest-festival/",
+              "https://www.silverdollarcity.com/theme-park/directions"
+            ]
+          },
+          "ridesharePolicy": "generic-service-launch; no approximate coordinate dropoff",
+          "hours": {
+            "state": "partial",
+            "displayText": "Nighttime plaza programming starts at 5:30 p.m. on festival operating evenings. Complete selected-date park hours remain unknown.",
+            "timezone": "America/Chicago",
+            "machineOpeningIntervals": null,
+            "openNowPolicy": "never",
+            "machineEvaluabilityVerified": false
+          },
+          "admission": {
+            "displayText": "Park ticket or 2026 season passport required; tasting tickets are separate add-ons.",
+            "priceLevel": null,
+            "exactAllInPrice": null
+          },
+          "materialNotes": [
+            "Selected operating days only; the season range does not imply daily opening.",
+            "Guest costumes are prohibited.",
+            "Use Indian Point Road into the park; parking connects to the front gate by tram or bus."
+          ],
+          "lifecycle": {
+            "seasonYear": 2026,
+            "timezone": "America/Chicago",
+            "seasonStartDate": "2026-09-11",
+            "seasonEndDate": "2026-10-31",
+            "exactActiveDates": null,
+            "eventEndsAt": null,
+            "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+            "listingExpiresAtUtc": "2026-11-01T05:00:00+00:00",
+            "cutoffBasis": "date-only-retention",
+            "dateOnlyBoundaryIsNotOperatorClosingTime": true,
+            "editorialUnknownEndCeilingApplied": false,
+            "no2027Rollover": true,
+            "cancellationOrClosureObserved": false,
+            "closureReviewScope": "No cancellation/closure observed in the reopened decisive sources listed in evidence; not a guarantee against later changes.",
+            "reviewDueAt": "2026-10-14T00:00:00-05:00",
+            "reviewDueDoesNotExtendExpiry": true,
+            "expiredAtReview": false,
+            "seasonDateScope": "September 11–October 31 is supported by festival tasting-ticket validity and current festival page; selected operating dates remain unenumberated."
+          },
+          "sourceUrl": "https://www.silverdollarcity.com/theme-park/festivals/harvest-festival/",
+          "notice": "Check the venue for current hours, admission, and weather updates.",
+          "runtimeActive": false,
+          "automaticImportAllowed": false,
+          "freshIndependentReviewPending": true
+        },
+        "factualDelta": null,
+        "additionalSupportedMaterialRestrictions": [],
+        "consumerCopy": {
+          "confidence": "good",
+          "details": [
+            "September 11–October 31, 2026, on selected park days. Evening plaza activities begin at 5:30 p.m.; check the day’s park hours.",
+            "Park admission ticket or 2026 season passport required. No guest costumes.",
+            "Enter via Indian Point Road; parking connects to the front gate by tram or bus."
+          ],
+          "locationNote": "Location is approximate.",
+          "notice": "Check current hours, admission, and weather before you go."
+        },
+        "constraints": "Preserve original identity, category, address, approximate placement, lifecycle/exact dates, never-OpenNow and null machine intervals. Proposed consumer text does not replace underlying factual projection."
+      },
+      {
+        "recordId": "MO26-034",
+        "name": "Nathan and Olive Boone Homestead — Historical Haunts",
+        "revalidationVerdict": "CLEARANCE CANDIDATE — fresh source check supports unchanged approved factual projection",
+        "approvedProjection": {
+          "venueId": "MO26-034",
+          "name": "Nathan and Olive Boone Homestead — Historical Haunts",
+          "seasonYear": 2026,
+          "categories": [
+            "Other Halloween / Fall"
+          ],
+          "supportedSubtypes": [
+            "lantern_history_walk"
+          ],
+          "visitorAddress": {
+            "address": "7850 N State Highway V, Ash Grove, MO 65604",
+            "visitorUseConfirmed": true,
+            "sourceUrls": [
+              "https://mostateparks.com/event/historical-haunts-homestead-2026"
+            ],
+            "role": "venue visitor street address"
+          },
+          "documentedArrival": null,
+          "attractionAddress": null,
+          "placement": {
+            "lat": 37.347285,
+            "lon": -93.582655,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=7850+N+State+Highway+V%2C+Ash+Grove%2C+MO+65604&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+            "checkedAt": "2026-10-08T02:33:26.015875+00:00",
+            "precisionLabel": "Approximate address-range interpolation; not an entrance or parking coordinate",
+            "matchedAddress": "7850 N STATE HWY V, ASH GROVE, MO, 65604",
+            "addressEntityReview": {
+              "reviewedAt": "2026-10-08T02:37:22.562105+00:00",
+              "accepted": true,
+              "scope": "Returned street number, street and locality match the independently read visitor address.",
+              "unchangedResponseSha256": "b7169772ccf88ff6e468e4913697220cc0bb7f930aa1e11a0988bdd2b359ad01"
+            },
+            "approximate": true,
+            "allowedUses": [
+              "map placement",
+              "approximate distance",
+              "approximate radius filtering"
+            ],
+            "forbiddenUses": [
+              "entrance precision",
+              "coordinate-first directions",
+              "precise rideshare dropoff"
+            ],
+            "sourceSnapshot": "phase2-reclearance/evidence/central/MO26-034-geocode.json"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "7850 N State Highway V, Ash Grove, MO 65604",
+            "venueName": "Nathan and Olive Boone Homestead — Historical Haunts",
+            "preferAddressOverPlacement": true,
+            "sourceUrls": [
+              "https://mostateparks.com/event/historical-haunts-homestead-2026"
+            ]
+          },
+          "ridesharePolicy": "generic-service-launch; no approximate coordinate dropoff",
+          "hours": {
+            "state": "verified",
+            "displayText": "October 17: interpretation 6–8 p.m.; music 6–7 p.m.; lantern hikes 7–8 p.m.",
+            "timezone": "America/Chicago",
+            "machineOpeningIntervals": null,
+            "openNowPolicy": "never",
+            "machineEvaluabilityVerified": false
+          },
+          "admission": {
+            "displayText": "Free public activities; no registration required.",
+            "priceLevel": null,
+            "exactAllInPrice": null
+          },
+          "materialNotes": [
+            "Lantern hikes begin near the picnic shelter.",
+            "Outdoor activities may be canceled or postponed for inclement weather; consult official updates."
+          ],
+          "lifecycle": {
+            "seasonYear": 2026,
+            "timezone": "America/Chicago",
+            "seasonStartDate": "2026-10-17",
+            "seasonEndDate": "2026-10-17",
+            "exactActiveDates": [
+              "2026-10-17"
+            ],
+            "eventEndsAt": "2026-10-17T20:00:00-05:00",
+            "listingExpiresAt": "2026-10-17T20:00:00-05:00",
+            "listingExpiresAtUtc": "2026-10-18T01:00:00+00:00",
+            "cutoffBasis": "exact-event-end",
+            "dateOnlyBoundaryIsNotOperatorClosingTime": false,
+            "editorialUnknownEndCeilingApplied": false,
+            "no2027Rollover": true,
+            "cancellationOrClosureObserved": false,
+            "closureReviewScope": "No cancellation/closure observed in the reopened decisive sources listed in evidence; not a guarantee against later changes.",
+            "reviewDueAt": "2026-10-14T00:00:00-05:00",
+            "reviewDueDoesNotExtendExpiry": true,
+            "expiredAtReview": false
+          },
+          "sourceUrl": "https://mostateparks.com/event/historical-haunts-homestead-2026",
+          "notice": "Check the venue for current hours, admission, and weather updates.",
+          "runtimeActive": false,
+          "automaticImportAllowed": false,
+          "freshIndependentReviewPending": true
+        },
+        "factualDelta": null,
+        "additionalSupportedMaterialRestrictions": [],
+        "consumerCopy": {
+          "confidence": "high",
+          "details": [
+            "October 17, 2026: history programs 6–8 p.m.; music 6–7 p.m.; lantern hikes 7–8 p.m.",
+            "Hikes start near the picnic shelter. Dress for outdoor weather; activities may be canceled or postponed."
+          ],
+          "locationNote": "Location is approximate.",
+          "notice": "Check current hours, admission, and weather before you go."
+        },
+        "constraints": "Preserve original identity, category, address, approximate placement, lifecycle/exact dates, never-OpenNow and null machine intervals. Proposed consumer text does not replace underlying factual projection."
+      },
+      {
+        "recordId": "MO26-054",
+        "name": "Fun Farm",
+        "revalidationVerdict": "CLEARANCE CANDIDATE — fresh source check supports unchanged approved factual projection",
+        "approvedProjection": {
+          "venueId": "MO26-054",
+          "name": "Fun Farm",
+          "seasonYear": 2026,
+          "categories": [
+            "Corn Maze",
+            "Pumpkin Patch"
+          ],
+          "supportedSubtypes": [
+            "corn_maze",
+            "pumpkin_patch"
+          ],
+          "visitorAddress": {
+            "address": "650 N Jefferson Street, Kearney, MO 64060",
+            "visitorUseConfirmed": true,
+            "sourceUrls": [
+              "https://funfarmpumpkinpatch.ticketspice.com/2026-fall-festival",
+              "https://www.funfarmpumpkinpatch.com/fall-festival"
+            ],
+            "role": "venue visitor street address"
+          },
+          "documentedArrival": null,
+          "attractionAddress": null,
+          "placement": {
+            "lat": 39.379769,
+            "lon": -94.3646,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=650+N+Jefferson+Street%2C+Kearney%2C+MO+64060&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+            "checkedAt": "2026-10-08T02:33:29.900271+00:00",
+            "precisionLabel": "Approximate address-range interpolation; not an entrance or parking coordinate",
+            "matchedAddress": "650 N JEFFERSON ST, KEARNEY, MO, 64060",
+            "addressEntityReview": {
+              "reviewedAt": "2026-10-08T02:37:22.562105+00:00",
+              "accepted": true,
+              "scope": "Returned street number, street and locality match the independently read visitor address.",
+              "unchangedResponseSha256": "b9e95716983a829ccb17d4eac2d2ffafba2ed1569b4c31377cf9e60a2584ca3a"
+            },
+            "approximate": true,
+            "allowedUses": [
+              "map placement",
+              "approximate distance",
+              "approximate radius filtering"
+            ],
+            "forbiddenUses": [
+              "entrance precision",
+              "coordinate-first directions",
+              "precise rideshare dropoff"
+            ],
+            "sourceSnapshot": "phase2-reclearance/evidence/central/MO26-054-geocode.json"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "650 N Jefferson Street, Kearney, MO 64060",
+            "venueName": "Fun Farm",
+            "preferAddressOverPlacement": true,
+            "sourceUrls": [
+              "https://funfarmpumpkinpatch.ticketspice.com/2026-fall-festival",
+              "https://www.funfarmpumpkinpatch.com/fall-festival"
+            ]
+          },
+          "ridesharePolicy": "generic-service-launch; no approximate coordinate dropoff",
+          "hours": {
+            "state": "verified",
+            "displayText": "September 18–30: Mon/Wed/Thu 9 a.m.–7 p.m., Fri/Sat 9 a.m.–10 p.m., Sun 9 a.m.–9 p.m. October 1–November 1: Mon/Thu 9 a.m.–7 p.m., Wed/Sun 9 a.m.–9 p.m., Fri/Sat 9 a.m.–10 p.m. Closed Tuesdays.",
+            "timezone": "America/Chicago",
+            "machineOpeningIntervals": null,
+            "openNowPolicy": "never",
+            "machineEvaluabilityVerified": false
+          },
+          "admission": {
+            "displayText": "Ages 2+ require admission. GA advertised online: weekday $19.95, weekend $24.95; gate: weekday $24.95, weekend $30.95. Observed offers, not all-in checkout totals.",
+            "priceLevel": null,
+            "exactAllInPrice": null
+          },
+          "materialNotes": [
+            "Final admission purchases and the last tractor to the maze and patch stop one hour before closing.",
+            "Take-home crops cost extra and are supply-dependent.",
+            "Jacks in the Night is separately ticketed and does not inherit this Fall Festival schedule. Eligible Jacks/passholders arriving after 9 p.m. use the big barn.",
+            "Tickets are final sale/nonrefundable; weather and crop conditions can change season dates."
+          ],
+          "lifecycle": {
+            "seasonYear": 2026,
+            "timezone": "America/Chicago",
+            "seasonStartDate": "2026-09-18",
+            "seasonEndDate": "2026-11-01",
+            "exactActiveDates": [
+              "2026-09-18",
+              "2026-09-19",
+              "2026-09-20",
+              "2026-09-21",
+              "2026-09-23",
+              "2026-09-24",
+              "2026-09-25",
+              "2026-09-26",
+              "2026-09-27",
+              "2026-09-28",
+              "2026-09-30",
+              "2026-10-01",
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-04",
+              "2026-10-05",
+              "2026-10-07",
+              "2026-10-08",
+              "2026-10-09",
+              "2026-10-10",
+              "2026-10-11",
+              "2026-10-12",
+              "2026-10-14",
+              "2026-10-15",
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-18",
+              "2026-10-19",
+              "2026-10-21",
+              "2026-10-22",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-25",
+              "2026-10-26",
+              "2026-10-28",
+              "2026-10-29",
+              "2026-10-30",
+              "2026-10-31",
+              "2026-11-01"
+            ],
+            "eventEndsAt": "2026-11-01T21:00:00-06:00",
+            "listingExpiresAt": "2026-11-01T21:00:00-06:00",
+            "listingExpiresAtUtc": "2026-11-02T03:00:00+00:00",
+            "cutoffBasis": "exact-season-end",
+            "dateOnlyBoundaryIsNotOperatorClosingTime": false,
+            "editorialUnknownEndCeilingApplied": false,
+            "no2027Rollover": true,
+            "cancellationOrClosureObserved": false,
+            "closureReviewScope": "No cancellation/closure observed in the reopened decisive sources listed in evidence; not a guarantee against later changes.",
+            "reviewDueAt": "2026-10-14T00:00:00-05:00",
+            "reviewDueDoesNotExtendExpiry": true,
+            "expiredAtReview": false
+          },
+          "sourceUrl": "https://www.funfarmpumpkinpatch.com/fall-festival",
+          "notice": "Check the venue for current hours, admission, and weather updates.",
+          "runtimeActive": false,
+          "automaticImportAllowed": false,
+          "freshIndependentReviewPending": true
+        },
+        "factualDelta": null,
+        "additionalSupportedMaterialRestrictions": [
+          "No smoking, including vaping; no dogs other than service animals. Source: delegated official TicketSpice PLEASE BE AWARE."
+        ],
+        "consumerCopy": {
+          "confidence": "high",
+          "details": [
+            "September 18–November 1, 2026. October hours: Mon/Thu 9 a.m.–7 p.m.; Wed/Sun 9 a.m.–9 p.m.; Fri/Sat 9 a.m.–10 p.m. Closed Tuesdays.",
+            "Admission and the last tractor to the maze and pumpkin patch stop one hour before closing.",
+            "Ages 2+ need admission tickets. Jacks in the Night requires separate admission; its hours differ.",
+            "No smoking or vaping; no dogs except service animals."
+          ],
+          "locationNote": "Location is approximate.",
+          "notice": "Check current hours, admission, and weather before you go."
+        },
+        "constraints": "Preserve original identity, category, address, approximate placement, lifecycle/exact dates, never-OpenNow and null machine intervals. Proposed consumer text does not replace underlying factual projection."
+      },
+      {
+        "recordId": "MO26-067",
+        "name": "Shryocks Callaway Farms",
+        "revalidationVerdict": "CLEARANCE CANDIDATE — fresh source check supports unchanged approved factual projection",
+        "approvedProjection": {
+          "venueId": "MO26-067",
+          "name": "Shryocks Callaway Farms",
+          "seasonYear": 2026,
+          "categories": [
+            "Corn Maze"
+          ],
+          "supportedSubtypes": [
+            "corn_maze"
+          ],
+          "visitorAddress": {
+            "address": "2927 County Road 253, Columbia, MO 65202",
+            "visitorUseConfirmed": true,
+            "sourceUrls": [
+              "https://callawayfarms.com/the-corn-maze/",
+              "https://callawayfarms.com/contact/"
+            ],
+            "role": "venue visitor street address"
+          },
+          "documentedArrival": null,
+          "attractionAddress": null,
+          "placement": {
+            "lat": 38.955913,
+            "lon": -92.079145,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=2927+County+Road+253%2C+Columbia%2C+MO+65202&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+            "checkedAt": "2026-10-08T02:33:33.817477+00:00",
+            "precisionLabel": "Approximate address-range interpolation; not an entrance or parking coordinate",
+            "matchedAddress": "2927 CO RD 253, COLUMBIA, MO, 65202",
+            "addressEntityReview": {
+              "reviewedAt": "2026-10-08T02:37:22.562105+00:00",
+              "accepted": true,
+              "scope": "Returned street number, street and locality match the independently read visitor address.",
+              "unchangedResponseSha256": "1cbfecd8b7c87c90376bb543da5b9876ff5fbe26f4aa3810ad2cbdd86067e67d"
+            },
+            "approximate": true,
+            "allowedUses": [
+              "map placement",
+              "approximate distance",
+              "approximate radius filtering"
+            ],
+            "forbiddenUses": [
+              "entrance precision",
+              "coordinate-first directions",
+              "precise rideshare dropoff"
+            ],
+            "sourceSnapshot": "phase2-reclearance/evidence/central/MO26-067-geocode.json"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "2927 County Road 253, Columbia, MO 65202",
+            "venueName": "Shryocks Callaway Farms",
+            "preferAddressOverPlacement": true,
+            "sourceUrls": [
+              "https://callawayfarms.com/the-corn-maze/",
+              "https://callawayfarms.com/contact/"
+            ]
+          },
+          "ridesharePolicy": "generic-service-launch; no approximate coordinate dropoff",
+          "hours": {
+            "state": "partial",
+            "displayText": "Fridays/Saturdays noon–9 p.m.; Sundays noon–6 p.m., September 18–November 1, 2026. Source footnote says ticket sales end and the maze is cleared after one hour; the exact relationship to listed closing time is unresolved.",
+            "timezone": "America/Chicago",
+            "machineOpeningIntervals": null,
+            "openNowPolicy": "never",
+            "machineEvaluabilityVerified": false
+          },
+          "admission": {
+            "displayText": "Adult $13; ages 5–12 $11; ages 4 and under free; advertised prices include sales tax.",
+            "priceLevel": null,
+            "exactAllInPrice": null
+          },
+          "materialNotes": [
+            "Children 12 and under must be accompanied by an adult.",
+            "Weather can change hours. Confirm last-ticket and maze-clearing times before visiting.",
+            "Pumpkins, concessions and reserved campfires cost extra; pumpkin sales do not establish a pickable-patch category."
+          ],
+          "lifecycle": {
+            "seasonYear": 2026,
+            "timezone": "America/Chicago",
+            "seasonStartDate": "2026-09-18",
+            "seasonEndDate": "2026-11-01",
+            "exactActiveDates": [
+              "2026-09-18",
+              "2026-09-19",
+              "2026-09-20",
+              "2026-09-25",
+              "2026-09-26",
+              "2026-09-27",
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-04",
+              "2026-10-09",
+              "2026-10-10",
+              "2026-10-11",
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-18",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-25",
+              "2026-10-30",
+              "2026-10-31",
+              "2026-11-01"
+            ],
+            "eventEndsAt": null,
+            "listingExpiresAt": "2026-11-02T00:00:00-06:00",
+            "listingExpiresAtUtc": "2026-11-02T06:00:00+00:00",
+            "cutoffBasis": "date-only-retention",
+            "dateOnlyBoundaryIsNotOperatorClosingTime": true,
+            "editorialUnknownEndCeilingApplied": false,
+            "no2027Rollover": true,
+            "cancellationOrClosureObserved": false,
+            "closureReviewScope": "No cancellation/closure observed in the reopened decisive sources listed in evidence; not a guarantee against later changes.",
+            "reviewDueAt": "2026-10-14T00:00:00-05:00",
+            "reviewDueDoesNotExtendExpiry": true,
+            "expiredAtReview": false,
+            "expiryExplanation": "Ambiguous last-ticket/maze-clearing footnote prevents asserting an exact final operating end; final-date retention is midnight starting November 2 (CST)."
+          },
+          "sourceUrl": "https://callawayfarms.com/",
+          "notice": "Check the venue for current hours, admission, and weather updates.",
+          "runtimeActive": false,
+          "automaticImportAllowed": false,
+          "freshIndependentReviewPending": true
+        },
+        "factualDelta": null,
+        "additionalSupportedMaterialRestrictions": [
+          "No alcoholic beverages; smoking/vaping prohibited in barns and maze; pets prohibited in maze/facilities; unauthorized drones prohibited. Source: unchanged official corn-maze page."
+        ],
+        "consumerCopy": {
+          "confidence": "good",
+          "details": [
+            "September 18–November 1, 2026: Fri/Sat noon–9 p.m.; Sun noon–6 p.m. Check last-ticket and maze-clearing times before a late visit.",
+            "Children 12 and under must have an adult. School groups and campfires need reservations.",
+            "No alcohol. No smoking or vaping in barns or maze; no pets in the maze or facilities."
+          ],
+          "locationNote": "Location is approximate.",
+          "notice": "Check current hours, admission, and weather before you go."
+        },
+        "constraints": "Preserve original identity, category, address, approximate placement, lifecycle/exact dates, never-OpenNow and null machine intervals. Proposed consumer text does not replace underlying factual projection."
+      },
+      {
+        "recordId": "MO26-100",
+        "name": "Urban Gardens Pumpkin Patch & Corn Maze",
+        "revalidationVerdict": "CLEARANCE CANDIDATE — fresh source check supports unchanged approved factual projection",
+        "approvedProjection": {
+          "venueId": "MO26-100",
+          "canonicalName": "Urban Gardens Pumpkin Patch & Corn Maze",
+          "aliases": [],
+          "contractRevision": "ListingCompletenessV1",
+          "reviewRevision": "MO2026-phase2-reclearance-recent-v1",
+          "seasonYear": 2026,
+          "visitorAddress": {
+            "text": "701 W LaHarpe Street, Kirksville, MO 63501",
+            "city": "Kirksville",
+            "region": "MO",
+            "postalCode": "63501",
+            "role": "visitor",
+            "sourceUrls": [
+              "https://urbangardenskv.com/"
+            ],
+            "checkedAt": "2026-10-08T02:33:46.588072+00:00"
+          },
+          "categories": [
+            "Corn Maze",
+            "Pumpkin Patch"
+          ],
+          "otherSubtypes": [],
+          "activities": [
+            {
+              "activity_type": "corn_maze",
+              "source_refs": [
+                "turn21view2"
+              ],
+              "evidence_scope": "2026",
+              "season_start": "2026-09-05",
+              "season_end": "2026-11-01",
+              "exact_active_dates": null,
+              "hours": null,
+              "schedule_scope": "See venue schedule and activity-specific restrictions; no opening interval inferred.",
+              "activity_id": "MO26-100-A01",
+              "category_currently_supported": true
+            },
+            {
+              "activity_type": "pumpkin_patch",
+              "source_refs": [
+                "turn21view2"
+              ],
+              "evidence_scope": "2026",
+              "season_start": "2026-09-05",
+              "season_end": "2026-11-01",
+              "exact_active_dates": null,
+              "hours": null,
+              "schedule_scope": "See venue schedule and activity-specific restrictions; no opening interval inferred.",
+              "activity_id": "MO26-100-A02",
+              "category_currently_supported": true
+            },
+            {
+              "activity_type": "harvest_games",
+              "source_refs": [
+                "turn21view2"
+              ],
+              "evidence_scope": "2026",
+              "season_start": null,
+              "season_end": null,
+              "exact_active_dates": null,
+              "hours": null,
+              "schedule_scope": "See venue schedule and activity-specific restrictions; no opening interval inferred.",
+              "activity_id": "MO26-100-A03",
+              "category_currently_supported": false
+            }
+          ],
+          "seasonEvidence": {
+            "sourceUrls": [
+              "https://urbangardenskv.com/"
+            ],
+            "checkedAt": "2026-10-08T02:33:46.588072+00:00",
+            "claimScope": "Identity, supported seasonal activities and explicit current 2026 operation; source-specific scope is in evidence.",
+            "accepted": true
+          },
+          "seasonStartDate": "2026-09-05",
+          "seasonEndDate": "2026-11-01",
+          "exactActiveDates": [
+            "2026-09-05",
+            "2026-09-06",
+            "2026-09-07",
+            "2026-09-08",
+            "2026-09-09",
+            "2026-09-10",
+            "2026-09-11",
+            "2026-09-12",
+            "2026-09-13",
+            "2026-09-14",
+            "2026-09-15",
+            "2026-09-16",
+            "2026-09-17",
+            "2026-09-18",
+            "2026-09-19",
+            "2026-09-20",
+            "2026-09-21",
+            "2026-09-22",
+            "2026-09-23",
+            "2026-09-24",
+            "2026-09-25",
+            "2026-09-26",
+            "2026-09-27",
+            "2026-09-28",
+            "2026-09-29",
+            "2026-09-30",
+            "2026-10-01",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-05",
+            "2026-10-06",
+            "2026-10-07",
+            "2026-10-08",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-11",
+            "2026-10-12",
+            "2026-10-13",
+            "2026-10-14",
+            "2026-10-15",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-18",
+            "2026-10-19",
+            "2026-10-20",
+            "2026-10-21",
+            "2026-10-22",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-25",
+            "2026-10-26",
+            "2026-10-27",
+            "2026-10-28",
+            "2026-10-29",
+            "2026-10-30",
+            "2026-10-31",
+            "2026-11-01"
+          ],
+          "hours": {
+            "state": "verified",
+            "displayText": "Daily 10:00–18:00 September 5–November 1, 2026, weather permitting. Operator directs visitors to Facebook for timely changes; current posts were not accessible in this check.",
+            "timezone": "America/Chicago",
+            "openNowPolicy": "never",
+            "machineSchedule": null,
+            "lastAdmission": null,
+            "verificationScope": "Source-supported display only; no separately tested date-specific machine schedule is provided. Conflicts, variable darkness/final exit and weather exceptions are not inferred."
+          },
+          "admission": {
+            "displayText": "$13; ages 2 and under free.",
+            "amount": null,
+            "currency": null,
+            "priceLevel": null,
+            "finalCheckoutQuote": false,
+            "ageFamilyText": "Families."
+          },
+          "materialNotes": [
+            "Hours are weather dependent; check the linked operator Facebook page for timely changes. Its current posts have not been independently verified in this bounded review.",
+            "Children ages 2 and younger have free entry.",
+            "Operator prohibits pets, smoking, vaping and tobacco products. School field trips require appointments.",
+            "Saloon is Friday–Sunday only, although the seasonal grounds schedule is daily.",
+            "Apples are expected for the 2027 season, not an accepted 2026 apple-picking activity. Ghost-town scenery is not sufficient to classify this as a haunted attraction."
+          ],
+          "accessibilityAndEntryText": null,
+          "lifecycle": {
+            "timezone": "America/Chicago",
+            "eventEndsAt": "2026-11-01T18:00:00-06:00",
+            "lastSourcedActiveDate": "2026-11-01",
+            "listingExpiresAt": "2026-11-01T18:00:00-06:00",
+            "listingExpiresAtUtc": "2026-11-02T00:00:00+00:00",
+            "expiryBasis": "known exact final activity end",
+            "expiryIsAdmissionOrHoursClaim": false,
+            "no2027Rollover": true,
+            "closed": false,
+            "cancelled": false,
+            "negativeStatusScope": "No terminal cancellation/closure observed in the specific reopened official sources; not a guarantee against subsequent changes.",
+            "eventEndEvidenceScope": "Supported exact final seasonal activity closing instant"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "venueName": "Urban Gardens Pumpkin Patch & Corn Maze",
+            "address": "701 W LaHarpe Street, Kirksville, MO 63501",
+            "coordinateOverrideAllowed": false
+          },
+          "placement": {
+            "lat": 40.179161,
+            "lon": -92.587774,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=701+W+LaHarpe+Street%2C+Kirksville%2C+MO+63501&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+            "sourceCheckedAt": "2026-10-07T06:44:14.521149+00:00",
+            "capturePath": "selection_inputs/Missouri-Seasonal-2026-Candidates.json",
+            "responseSha256": "c120b706c1e7a7ef6dc6497ce960fa80ea9a5eb0a31f217ee29f2a7889434e95",
+            "matchedAddress": "701 W LAHARPE ST, KIRKSVILLE, MO, 63501",
+            "matchedEntity": "Source ledger unique matched street number, street, locality and state agree with freshly reopened official visitor address. Postal code agrees (Bollinger uses its matching five-digit base).",
+            "selectionReason": "Reuse reviewed, source-identifiable Census address-range interpolation solely for approximate map/radius placement; this is not entrance validation.",
+            "reviewedAt": "2026-10-08T02:37:30.513176+00:00",
+            "precisionLabel": "Approximate venue location",
+            "entranceVerified": false,
+            "suitableFor": "approximate map/radius placement only",
+            "directionsCoordinateUseAllowed": false
+          },
+          "browseEligibleUnderContract": true,
+          "radiusReadyUnderContract": true,
+          "distanceLabel": "Approx. distance",
+          "rideshareTargetPolicy": "Generic external ride-service launch; never use approximate placement as precise dropoff.",
+          "visitorNotice": {
+            "text": "Check the venue for current hours, admission, and weather updates.",
+            "url": "https://urbangardenskv.com/"
+          },
+          "sourceConflictsAndLimits": [
+            {
+              "field": "hours.weatherCancellationFreshness",
+              "kind": "current_social_posts_unverified",
+              "treatment": "Current 2026 base season is verified; no same-day operation assurance, never Open Now and direct visitor to operator updates.",
+              "blocksListing": false
+            }
+          ],
+          "runtimeImportAuthorized": false
+        },
+        "factualDelta": null,
+        "additionalSupportedMaterialRestrictions": [],
+        "consumerCopy": {
+          "confidence": "good",
+          "details": [
+            "September 5–November 1, 2026: daily 10 a.m.–6 p.m., weather permitting. Check the venue’s Facebook for changes.",
+            "No pets, smoking, vaping or tobacco. School field trips need appointments.",
+            "Saloon opens Friday–Sunday only."
+          ],
+          "locationNote": "Location is approximate.",
+          "notice": "Check current hours, admission, and weather before you go."
+        },
+        "constraints": "Preserve original identity, category, address, approximate placement, lifecycle/exact dates, never-OpenNow and null machine intervals. Proposed consumer text does not replace underlying factual projection."
+      },
+      {
+        "recordId": "MO26-114",
+        "name": "Perryville Pumpkin Farm",
+        "revalidationVerdict": "CLEARANCE CANDIDATE — fresh source check supports unchanged approved factual projection",
+        "approvedProjection": {
+          "id": "MO26-114",
+          "name": "Perryville Pumpkin Farm",
+          "operatorName": "Perryville Pumpkin Farm",
+          "seasonYear": 2026,
+          "categories": [
+            "Corn Maze",
+            "Pumpkin Patch"
+          ],
+          "seasonEvidence": {
+            "sourceIds": [
+              "perryville-operator",
+              "perryville-tourism"
+            ],
+            "checkedAt": "2026-10-08T02:37:47.800221+00:00",
+            "status": "verified-relevant-2026-operation"
+          },
+          "visitorAddress": {
+            "text": "1410 Allens Landing Road, Perryville, MO 63775",
+            "locality": "Perryville",
+            "region": "Missouri",
+            "country": "US",
+            "usage": "supported visitor destination",
+            "sourceIds": [
+              "perryville-operator",
+              "perryville-tourism"
+            ],
+            "checkedAt": "2026-10-08T02:37:47.800221+00:00"
+          },
+          "placement": {
+            "lat": 37.730183,
+            "lon": -89.84486,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=1410+Allens+Landing+Road%2C+Perryville%2C+MO+63775&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+            "checkedAt": "2026-10-08T02:33:57.537465+00:00",
+            "precisionLabel": "Approximate address-range location",
+            "method": "US Census address-range interpolation",
+            "matchedAddress": "1410 ALLENS LANDING RD, PERRYVILLE, MO, 63775",
+            "originalRetrievedAt": "2026-10-07T06:44:22.447771+00:00",
+            "responseSha256": "8a57aac35f72984d62211c0f25c66408ae73e589822f9afe1d08fc0e4e26ade1",
+            "receiptPath": "phase2-reclearance/evidence/remaining/MO26-114-census.receipt.json",
+            "rawResponsePath": "phase2-reclearance/evidence/remaining/MO26-114-census.json",
+            "sourceCoordinates": {
+              "x": -89.844859696423,
+              "y": 37.730183378125
+            },
+            "reviewedUnder": "ListingCompletenessV1",
+            "addressEntityMatch": "Street number, street, locality, state and ZIP match the supported visitor address; standard suffix/direction normalization only.",
+            "entranceVerified": false,
+            "permittedUses": [
+              "approximate map placement",
+              "approximate straight-line distance",
+              "approximate radius filtering"
+            ],
+            "forbiddenUses": [
+              "entrance claim",
+              "parking claim",
+              "coordinate Directions destination",
+              "precise rideshare dropoff"
+            ]
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "1410 Allens Landing Road, Perryville, MO 63775",
+            "venueName": "Perryville Pumpkin Farm",
+            "preferOverApproximatePlacement": true
+          },
+          "ridesharePolicy": "Use address-aware destination if supported or generic service launch; never the approximate coordinate as a precise dropoff.",
+          "priceLevel": null,
+          "machineOpeningIntervals": null,
+          "openNowPolicy": "never",
+          "runtimeActive": false,
+          "automaticImportAllowed": false,
+          "sourceIds": [
+            "perryville-operator",
+            "perryville-tourism"
+          ],
+          "notice": {
+            "text": "Check the venue for current hours, admission, and weather updates.",
+            "url": "https://perryvillepumpkinfarm.com/"
+          },
+          "supportedActivities": [
+            {
+              "type": "pumpkin_patch",
+              "scope": "walk-in picking daily during season"
+            },
+            {
+              "type": "corn_maze",
+              "scope": "farm-pass activity"
+            },
+            {
+              "type": "soybean_maze",
+              "scope": "farm-pass activity"
+            },
+            {
+              "type": "wagon_ride",
+              "scope": "September Sundays and October Saturdays/Sundays; weekday groups by appointment"
+            }
+          ],
+          "hours": {
+            "state": "partial",
+            "displayText": "September 7–30: daily 9:30 a.m.–6 p.m. October 1–31: Sunday–Friday 9 a.m.–6 p.m.; Saturdays 9 a.m.–8:30 p.m. Named flashlight nights: October 3, 10, 17 and 24.",
+            "sourceIds": [
+              "perryville-operator"
+            ],
+            "timezone": "America/Chicago",
+            "machineSchedule": null,
+            "openNowPolicy": "never",
+            "qualification": "Operator’s explicit public farm-hours table controls over tourism’s Sunday late-hours claim. October 31 is covered by the Saturday table; do not advertise it as a specifically confirmed flashlight-event night."
+          },
+          "admission": {
+            "displayText": "Operator lists $5 weekday farm passes and $10 October weekend passes; age 2 and under free. Free store/nearby activity area is separate from paid full-farm activities. Cards: $10 minimum and 4% convenience fee.",
+            "sourceIds": [
+              "perryville-operator"
+            ],
+            "observedOnly": true,
+            "numericPriceLevel": null
+          },
+          "materialNotes": [
+            "Weekday group wagon rides require an appointment.",
+            "Bring your own flashlight for the named flashlight nights.",
+            "October 31 flashlight programming is not separately confirmed."
+          ],
+          "lifecycle": {
+            "seasonYear": 2026,
+            "timezone": "America/Chicago",
+            "seasonStartsOn": "2026-09-07",
+            "eventEndsOn": "2026-10-31",
+            "eventEndsAt": "2026-10-31T20:30:00-05:00",
+            "knownActiveDates": null,
+            "knownActiveDatesScope": "Operator says open seven days weekly; activity-specific restrictions remain.",
+            "listingExpiresAt": "2026-10-31T20:30:00-05:00",
+            "listingExpiresAtUtc": "2026-11-01T01:30:00+00:00",
+            "expiryBasis": "known-exact-final-end",
+            "retentionExplanation": "Expire at the supported final event/farm closing instant.",
+            "editorialUnknownEndCutoffUsed": false,
+            "noAdmissionExtension": true,
+            "no2027Rollover": true,
+            "cancelled": false,
+            "permanentlyClosed": false,
+            "negativeStatusScope": "No reviewed source establishes a current cancellation or closure; future notices override retention.",
+            "revalidationDueAt": "2026-10-14T00:00:00-05:00",
+            "revalidationDoesNotExtendExpiry": true,
+            "exactEndScope": "Operator’s 2026 October 1–31 table states every Saturday closes 20:30. October 31, 2026 is Saturday. The separate four-date flashlight list does not remove public farm hours, but it does not prove October 31 flashlight programming."
+          }
+        },
+        "factualDelta": null,
+        "additionalSupportedMaterialRestrictions": [],
+        "consumerCopy": {
+          "confidence": "good",
+          "details": [
+            "October 2026: Sun–Fri 9 a.m.–6 p.m.; Sat 9 a.m.–8:30 p.m., through October 31.",
+            "Flashlight nights: October 3, 10, 17 and 24; bring a flashlight.",
+            "October wagon rides run weekends; weekday group rides need an appointment. A farm pass is needed for maze and full-farm activities."
+          ],
+          "locationNote": "Location is approximate.",
+          "notice": "Check current hours, admission, and weather before you go."
+        },
+        "constraints": "Preserve original identity, category, address, approximate placement, lifecycle/exact dates, never-OpenNow and null machine intervals. Proposed consumer text does not replace underlying factual projection."
+      },
+      {
+        "recordId": "MO26-115",
+        "name": "Bollinger Mill State Historic Site — Trick-or-Treat Night",
+        "revalidationVerdict": "CLEARANCE CANDIDATE — fresh source check supports unchanged approved factual projection",
+        "approvedProjection": {
+          "venueId": "MO26-115",
+          "canonicalName": "Bollinger Mill State Historic Site — Trick-or-Treat Night",
+          "aliases": [],
+          "contractRevision": "ListingCompletenessV1",
+          "reviewRevision": "MO2026-phase2-reclearance-recent-v1",
+          "seasonYear": 2026,
+          "visitorAddress": {
+            "text": "113 Bollinger Mill Road, Burfordville, MO 63739-9051",
+            "city": "Burfordville",
+            "region": "MO",
+            "postalCode": "63739-9051",
+            "role": "visitor",
+            "sourceUrls": [
+              "https://mostateparks.com/event/trick-or-treat-night-2026",
+              "https://mostateparks.com/historic-site/bollinger-mill-state-historic-site"
+            ],
+            "checkedAt": "2026-10-08T02:33:46.624340+00:00"
+          },
+          "categories": [
+            "Other Halloween / Fall"
+          ],
+          "otherSubtypes": [
+            "community_trick_or_treat"
+          ],
+          "activities": [
+            {
+              "activity_type": "community_trick_or_treat",
+              "source_refs": [
+                "turn23view1"
+              ],
+              "evidence_scope": "2026",
+              "season_start": "2026-10-23",
+              "season_end": "2026-10-23",
+              "exact_active_dates": [
+                "2026-10-23"
+              ],
+              "hours": null,
+              "schedule_scope": "See venue schedule and activity-specific restrictions; no opening interval inferred.",
+              "activity_id": "MO26-115-A01",
+              "category_currently_supported": true,
+              "category_basis": "Other Halloween / Fall is now the accepted category; subtype factual evidence unchanged."
+            }
+          ],
+          "seasonEvidence": {
+            "sourceUrls": [
+              "https://mostateparks.com/event/trick-or-treat-night-2026",
+              "https://mostateparks.com/historic-site/bollinger-mill-state-historic-site"
+            ],
+            "checkedAt": "2026-10-08T02:33:46.624340+00:00",
+            "claimScope": "Identity, supported seasonal activities and explicit current 2026 operation; source-specific scope is in evidence.",
+            "accepted": true
+          },
+          "seasonStartDate": "2026-10-23",
+          "seasonEndDate": "2026-10-23",
+          "exactActiveDates": [
+            "2026-10-23"
+          ],
+          "hours": {
+            "state": "verified",
+            "displayText": "16:00–19:00.",
+            "timezone": "America/Chicago",
+            "openNowPolicy": "never",
+            "machineSchedule": null,
+            "lastAdmission": null,
+            "verificationScope": "Source-supported display only; no separately tested date-specific machine schedule is provided. Conflicts, variable darkness/final exit and weather exceptions are not inferred."
+          },
+          "admission": {
+            "displayText": "Free.",
+            "amount": null,
+            "currency": null,
+            "priceLevel": null,
+            "finalCheckoutQuote": false,
+            "ageFamilyText": "Families."
+          },
+          "materialNotes": [
+            "Free and open to the public; no registration required.",
+            "Event is inside the mill across all four floors. General accessibility guidance supports a ramp to the porch/first floor only; do not claim all event floors are accessible.",
+            "The operator suggests a costume, flashlight and candy container.",
+            "Venue-wide street address is the Directions target; the approximate address point is not a designated parking or entry point."
+          ],
+          "accessibilityAndEntryText": null,
+          "lifecycle": {
+            "timezone": "America/Chicago",
+            "eventEndsAt": "2026-10-23T19:00:00-05:00",
+            "lastSourcedActiveDate": "2026-10-23",
+            "listingExpiresAt": "2026-10-23T19:00:00-05:00",
+            "listingExpiresAtUtc": "2026-10-24T00:00:00+00:00",
+            "expiryBasis": "known exact final activity end",
+            "expiryIsAdmissionOrHoursClaim": false,
+            "no2027Rollover": true,
+            "closed": false,
+            "cancelled": false,
+            "negativeStatusScope": "No terminal cancellation/closure observed in the specific reopened official sources; not a guarantee against subsequent changes.",
+            "eventEndEvidenceScope": "Supported exact final seasonal activity closing instant"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "venueName": "Bollinger Mill State Historic Site — Trick-or-Treat Night",
+            "address": "113 Bollinger Mill Road, Burfordville, MO 63739-9051",
+            "coordinateOverrideAllowed": false
+          },
+          "placement": {
+            "lat": 37.3679,
+            "lon": -89.802902,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=113+Bollinger+Mill+Road%2C+Burfordville%2C+MO&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+            "sourceCheckedAt": "2026-10-07T06:44:26.400223+00:00",
+            "capturePath": "selection_inputs/Missouri-Seasonal-2026-Candidates.json",
+            "responseSha256": "4d8ddd83a25c7ae0594f1ba4a57f5f08d226539d13cbec607e86517edfa5aec4",
+            "matchedAddress": "113 BOLLINGER MILL RD, BURFORDVILLE, MO, 63739",
+            "matchedEntity": "Source ledger unique matched street number, street, locality and state agree with freshly reopened official visitor address. Postal code agrees (Bollinger uses its matching five-digit base).",
+            "selectionReason": "Reuse reviewed, source-identifiable Census address-range interpolation solely for approximate map/radius placement; this is not entrance validation.",
+            "reviewedAt": "2026-10-08T02:37:30.513176+00:00",
+            "precisionLabel": "Approximate venue location",
+            "entranceVerified": false,
+            "suitableFor": "approximate map/radius placement only",
+            "directionsCoordinateUseAllowed": false
+          },
+          "browseEligibleUnderContract": true,
+          "radiusReadyUnderContract": true,
+          "distanceLabel": "Approx. distance",
+          "rideshareTargetPolicy": "Generic external ride-service launch; never use approximate placement as precise dropoff.",
+          "visitorNotice": {
+            "text": "Check the venue for current hours, admission, and weather updates.",
+            "url": "https://mostateparks.com/event/trick-or-treat-night-2026"
+          },
+          "sourceConflictsAndLimits": [],
+          "runtimeImportAuthorized": false
+        },
+        "factualDelta": null,
+        "additionalSupportedMaterialRestrictions": [],
+        "consumerCopy": {
+          "confidence": "high",
+          "details": [
+            "October 23, 2026, 4–7 p.m. Bring a flashlight and candy container; costumes welcome.",
+            "Trick-or-treating spans four mill floors. Ramp access reaches the first floor only; upper floors involve stairs."
+          ],
+          "locationNote": "Location is approximate.",
+          "notice": "Check current hours, admission, and weather before you go."
+        },
+        "constraints": "Preserve original identity, category, address, approximate placement, lifecycle/exact dates, never-OpenNow and null machine intervals. Proposed consumer text does not replace underlying factual projection."
+      },
+      {
+        "recordId": "MO26-124",
+        "name": "Hotel of Terror",
+        "revalidationVerdict": "CLEARANCE CANDIDATE — fresh source check supports unchanged approved factual projection",
+        "approvedProjection": {
+          "id": "MO26-124",
+          "name": "Hotel of Terror",
+          "operatorName": "Hotel of Terror / Dungeons of Doom",
+          "seasonYear": 2026,
+          "categories": [
+            "Haunted House / Haunted Attraction"
+          ],
+          "seasonEvidence": {
+            "sourceIds": [
+              "hotel-home",
+              "hotel-calendar",
+              "hotel-contact",
+              "hotel-hours",
+              "hotel-lifecycle"
+            ],
+            "checkedAt": "2026-10-08T02:37:47.800221+00:00",
+            "status": "verified-relevant-2026-operation"
+          },
+          "visitorAddress": {
+            "text": "334 N Main Avenue, Springfield, MO 65806",
+            "locality": "Springfield",
+            "region": "Missouri",
+            "country": "US",
+            "usage": "supported visitor destination",
+            "sourceIds": [
+              "hotel-home",
+              "hotel-calendar",
+              "hotel-contact",
+              "hotel-hours",
+              "hotel-lifecycle"
+            ],
+            "checkedAt": "2026-10-08T02:37:47.800221+00:00"
+          },
+          "placement": {
+            "lat": 37.210875,
+            "lon": -93.296377,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=334+N+Main+Avenue%2C+Springfield%2C+MO+65806&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+            "checkedAt": "2026-10-08T02:33:57.538483+00:00",
+            "precisionLabel": "Approximate address-range location",
+            "method": "US Census address-range interpolation",
+            "matchedAddress": "334 N MAIN AVE, SPRINGFIELD, MO, 65806",
+            "originalRetrievedAt": "2026-10-07T06:49:07.999104+00:00",
+            "responseSha256": "d6c2182e83adcbbf375e982de037cdcef5db388dcecfb3d16e295a915a331922",
+            "receiptPath": "phase2-reclearance/evidence/remaining/MO26-124-census.receipt.json",
+            "rawResponsePath": "phase2-reclearance/evidence/remaining/MO26-124-census.json",
+            "sourceCoordinates": {
+              "x": -93.296377158825,
+              "y": 37.210875306746
+            },
+            "reviewedUnder": "ListingCompletenessV1",
+            "addressEntityMatch": "Street number, street, locality, state and ZIP match the supported visitor address; standard suffix/direction normalization only.",
+            "entranceVerified": false,
+            "permittedUses": [
+              "approximate map placement",
+              "approximate straight-line distance",
+              "approximate radius filtering"
+            ],
+            "forbiddenUses": [
+              "entrance claim",
+              "parking claim",
+              "coordinate Directions destination",
+              "precise rideshare dropoff"
+            ]
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "334 N Main Avenue, Springfield, MO 65806",
+            "venueName": "Hotel of Terror",
+            "preferOverApproximatePlacement": true
+          },
+          "ridesharePolicy": "Use address-aware destination if supported or generic service launch; never the approximate coordinate as a precise dropoff.",
+          "priceLevel": null,
+          "machineOpeningIntervals": null,
+          "openNowPolicy": "never",
+          "runtimeActive": false,
+          "automaticImportAllowed": false,
+          "sourceIds": [
+            "hotel-home",
+            "hotel-calendar",
+            "hotel-contact",
+            "hotel-hours",
+            "hotel-lifecycle"
+          ],
+          "notice": {
+            "text": "Check the venue for current hours, admission, and weather updates.",
+            "url": "https://www.hotelofterror.com/"
+          },
+          "supportedActivities": [
+            {
+              "type": "haunted_house",
+              "scope": "Hotel of Terror only; separate venue identity from paired haunt"
+            }
+          ],
+          "hours": {
+            "state": "partial",
+            "displayText": "Doors open at 7 p.m. on listed dates. Closing depends on attendance; exact Friday/Saturday closing is unconfirmed.",
+            "sourceIds": [
+              "hotel-home",
+              "hotel-calendar",
+              "hotel-hours"
+            ],
+            "timezone": "America/Chicago",
+            "machineSchedule": null,
+            "openNowPolicy": "never",
+            "qualification": "Operator prints an ambiguous Friday/Saturday “12:00pm–1:00am” closing range. Do not normalize noon to midnight, infer a last-ticket time, or extend dates."
+          },
+          "admission": {
+            "displayText": "Operator lists $25 for this haunt; $45 combined pass includes one entry to each haunt and inter-haunt hay/hearse rides.",
+            "sourceIds": [
+              "hotel-home"
+            ],
+            "observedOnly": true,
+            "numericPriceLevel": null
+          },
+          "materialNotes": [
+            "Liability waiver required; operator states fingerprint signature.",
+            "Loud sound, strobe lighting, darkness, fog and wet conditions are disclosed.",
+            "Reported final 2026 season at this Hotel of Terror site; do not carry this location into 2027."
+          ],
+          "lifecycle": {
+            "seasonYear": 2026,
+            "timezone": "America/Chicago",
+            "seasonStartsOn": "2026-09-11",
+            "eventEndsOn": "2026-10-31",
+            "eventEndsAt": null,
+            "knownActiveDates": [
+              "2026-09-11",
+              "2026-09-12",
+              "2026-09-18",
+              "2026-09-19",
+              "2026-09-25",
+              "2026-09-26",
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-04",
+              "2026-10-09",
+              "2026-10-10",
+              "2026-10-11",
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-18",
+              "2026-10-19",
+              "2026-10-20",
+              "2026-10-21",
+              "2026-10-22",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-25",
+              "2026-10-26",
+              "2026-10-27",
+              "2026-10-28",
+              "2026-10-29",
+              "2026-10-30",
+              "2026-10-31"
+            ],
+            "knownActiveDatesScope": "Six September public operating dates from operator calendar plus 22 October dates from operator home calendar. September hiring night and separate kids-night session are not general-haunt hours.",
+            "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+            "listingExpiresAtUtc": "2026-11-01T05:00:00+00:00",
+            "expiryBasis": "known-final-date-midnight-retention",
+            "retentionExplanation": "Date-only retention expires at midnight beginning the following day; this is not a claim that admission or operating hours continue until midnight.",
+            "editorialUnknownEndCutoffUsed": false,
+            "noAdmissionExtension": true,
+            "no2027Rollover": true,
+            "cancelled": false,
+            "permanentlyClosed": false,
+            "negativeStatusScope": "No reviewed source establishes a current cancellation or closure; future notices override retention.",
+            "revalidationDueAt": "2026-10-14T00:00:00-05:00",
+            "revalidationDoesNotExtendExpiry": true,
+            "closureContext": {
+              "sourceId": "hotel-lifecycle",
+              "scope": "Reported property acquisition permits 2026 operation and possession January 1, 2027; planned demolition is not a current-season cancellation."
+            }
+          },
+          "deduplication": {
+            "distinctFrom": "MO26-125",
+            "reason": "Separate named haunted attraction and visitor street address; shared operator/calendar/combo ticket do not merge identities."
+          }
+        },
+        "factualDelta": null,
+        "additionalSupportedMaterialRestrictions": [],
+        "consumerCopy": {
+          "confidence": "good",
+          "details": [
+            "Selected dates September 11–October 31, 2026; doors open 7 p.m. Closing time varies with attendance.",
+            "Liability waiver with fingerprint signature required. Loud sound, strobes, darkness, fog and wet conditions."
+          ],
+          "locationNote": "Location is approximate.",
+          "notice": "Check current hours, admission, and weather before you go."
+        },
+        "constraints": "Preserve original identity, category, address, approximate placement, lifecycle/exact dates, never-OpenNow and null machine intervals. Proposed consumer text does not replace underlying factual projection."
+      },
+      {
+        "recordId": "MO26-125",
+        "name": "Dungeons of Doom",
+        "revalidationVerdict": "CLEARANCE CANDIDATE — fresh source check supports unchanged approved factual projection",
+        "approvedProjection": {
+          "id": "MO26-125",
+          "name": "Dungeons of Doom",
+          "operatorName": "Hotel of Terror / Dungeons of Doom",
+          "seasonYear": 2026,
+          "categories": [
+            "Haunted House / Haunted Attraction"
+          ],
+          "seasonEvidence": {
+            "sourceIds": [
+              "hotel-home",
+              "hotel-calendar",
+              "hotel-contact",
+              "hotel-hours"
+            ],
+            "checkedAt": "2026-10-08T02:37:47.800221+00:00",
+            "status": "verified-relevant-2026-operation"
+          },
+          "visitorAddress": {
+            "text": "701 W Wall Street, Springfield, MO 65802",
+            "locality": "Springfield",
+            "region": "Missouri",
+            "country": "US",
+            "usage": "supported visitor destination",
+            "sourceIds": [
+              "hotel-home",
+              "hotel-calendar",
+              "hotel-contact",
+              "hotel-hours"
+            ],
+            "checkedAt": "2026-10-08T02:37:47.800221+00:00"
+          },
+          "placement": {
+            "lat": 37.211958,
+            "lon": -93.298751,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=701+W+Wall+Street%2C+Springfield%2C+MO+65802&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+            "checkedAt": "2026-10-08T02:33:57.539597+00:00",
+            "precisionLabel": "Approximate address-range location",
+            "method": "US Census address-range interpolation",
+            "matchedAddress": "701 W WALL ST, SPRINGFIELD, MO, 65802",
+            "originalRetrievedAt": "2026-10-07T06:49:11.528126+00:00",
+            "responseSha256": "eb83226d69ab205fd9e68979b73cf9f72d54555fc76cc1b3b37b56900ffb2c0b",
+            "receiptPath": "phase2-reclearance/evidence/remaining/MO26-125-census.receipt.json",
+            "rawResponsePath": "phase2-reclearance/evidence/remaining/MO26-125-census.json",
+            "sourceCoordinates": {
+              "x": -93.298751320088,
+              "y": 37.211957776783
+            },
+            "reviewedUnder": "ListingCompletenessV1",
+            "addressEntityMatch": "Street number, street, locality, state and ZIP match the supported visitor address; standard suffix/direction normalization only.",
+            "entranceVerified": false,
+            "permittedUses": [
+              "approximate map placement",
+              "approximate straight-line distance",
+              "approximate radius filtering"
+            ],
+            "forbiddenUses": [
+              "entrance claim",
+              "parking claim",
+              "coordinate Directions destination",
+              "precise rideshare dropoff"
+            ]
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "701 W Wall Street, Springfield, MO 65802",
+            "venueName": "Dungeons of Doom",
+            "preferOverApproximatePlacement": true
+          },
+          "ridesharePolicy": "Use address-aware destination if supported or generic service launch; never the approximate coordinate as a precise dropoff.",
+          "priceLevel": null,
+          "machineOpeningIntervals": null,
+          "openNowPolicy": "never",
+          "runtimeActive": false,
+          "automaticImportAllowed": false,
+          "sourceIds": [
+            "hotel-home",
+            "hotel-calendar",
+            "hotel-contact",
+            "hotel-hours"
+          ],
+          "notice": {
+            "text": "Check the venue for current hours, admission, and weather updates.",
+            "url": "https://www.hotelofterror.com/"
+          },
+          "supportedActivities": [
+            {
+              "type": "haunted_house",
+              "scope": "Dungeons of Doom only; separate venue identity from paired haunt"
+            }
+          ],
+          "hours": {
+            "state": "partial",
+            "displayText": "Doors open at 7 p.m. on listed dates. Closing depends on attendance; exact Friday/Saturday closing is unconfirmed.",
+            "sourceIds": [
+              "hotel-home",
+              "hotel-calendar",
+              "hotel-hours"
+            ],
+            "timezone": "America/Chicago",
+            "machineSchedule": null,
+            "openNowPolicy": "never",
+            "qualification": "Operator prints an ambiguous Friday/Saturday “12:00pm–1:00am” closing range. Do not normalize noon to midnight, infer a last-ticket time, or extend dates."
+          },
+          "admission": {
+            "displayText": "Operator lists $25 for this haunt; $45 combined pass includes one entry to each haunt and inter-haunt hay/hearse rides.",
+            "sourceIds": [
+              "hotel-home"
+            ],
+            "observedOnly": true,
+            "numericPriceLevel": null
+          },
+          "materialNotes": [
+            "Liability waiver required; operator states fingerprint signature.",
+            "Loud sound, strobe lighting, darkness, fog and wet conditions are disclosed."
+          ],
+          "lifecycle": {
+            "seasonYear": 2026,
+            "timezone": "America/Chicago",
+            "seasonStartsOn": "2026-09-11",
+            "eventEndsOn": "2026-10-31",
+            "eventEndsAt": null,
+            "knownActiveDates": [
+              "2026-09-11",
+              "2026-09-12",
+              "2026-09-18",
+              "2026-09-19",
+              "2026-09-25",
+              "2026-09-26",
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-04",
+              "2026-10-09",
+              "2026-10-10",
+              "2026-10-11",
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-18",
+              "2026-10-19",
+              "2026-10-20",
+              "2026-10-21",
+              "2026-10-22",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-25",
+              "2026-10-26",
+              "2026-10-27",
+              "2026-10-28",
+              "2026-10-29",
+              "2026-10-30",
+              "2026-10-31"
+            ],
+            "knownActiveDatesScope": "Six September public operating dates from operator calendar plus 22 October dates from operator home calendar. September hiring night and separate kids-night session are not general-haunt hours.",
+            "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+            "listingExpiresAtUtc": "2026-11-01T05:00:00+00:00",
+            "expiryBasis": "known-final-date-midnight-retention",
+            "retentionExplanation": "Date-only retention expires at midnight beginning the following day; this is not a claim that admission or operating hours continue until midnight.",
+            "editorialUnknownEndCutoffUsed": false,
+            "noAdmissionExtension": true,
+            "no2027Rollover": true,
+            "cancelled": false,
+            "permanentlyClosed": false,
+            "negativeStatusScope": "No reviewed source establishes a current cancellation or closure; future notices override retention.",
+            "revalidationDueAt": "2026-10-14T00:00:00-05:00",
+            "revalidationDoesNotExtendExpiry": true,
+            "closureContext": {
+              "scope": "Hotel of Terror property-sale/closure context is not applied to Dungeons of Doom; this record still expires strictly in 2026."
+            }
+          },
+          "deduplication": {
+            "distinctFrom": "MO26-124",
+            "reason": "Separate named haunted attraction and visitor street address; shared operator/calendar/combo ticket do not merge identities."
+          }
+        },
+        "factualDelta": null,
+        "additionalSupportedMaterialRestrictions": [],
+        "consumerCopy": {
+          "confidence": "good",
+          "details": [
+            "Selected dates September 11–October 31, 2026; doors open 7 p.m. Closing time varies with attendance.",
+            "Liability waiver with fingerprint signature required. Loud sound, strobes, darkness, fog and wet conditions."
+          ],
+          "locationNote": "Location is approximate.",
+          "notice": "Check current hours, admission, and weather before you go."
+        },
+        "constraints": "Preserve original identity, category, address, approximate placement, lifecycle/exact dates, never-OpenNow and null machine intervals. Proposed consumer text does not replace underlying factual projection."
+      }
+    ],
+    "all21Considered": [
+      {
+        "recordId": "MO26-012",
+        "name": "Christine’s Vineyard — Witches Day Out",
+        "decision": "DEFERRED",
+        "reason": "October 10 short-lived event; avoid deadline-driven release. Retains factual clearance, not expired at review."
+      },
+      {
+        "recordId": "MO26-013",
+        "name": "Vino Noir — Witch Broom Making Workshop",
+        "decision": "DEFERRED",
+        "reason": "October 8 short-lived workshop; avoid rushed verification. Retains factual clearance, not expired at review."
+      },
+      {
+        "recordId": "MO26-019",
+        "name": "James River Church Joplin — October 31st Party",
+        "decision": "SELECTED",
+        "reason": "Priority requested by owner"
+      },
+      {
+        "recordId": "MO26-028",
+        "name": "Nevada/Vernon County Oktoberfest Fall Festival",
+        "decision": "DEFERRED",
+        "reason": "October 10 one-day event; prefer longer-use candidates."
+      },
+      {
+        "recordId": "MO26-031",
+        "name": "Silver Dollar City — Harvest Festival",
+        "decision": "SELECTED",
+        "reason": "Priority requested by owner"
+      },
+      {
+        "recordId": "MO26-034",
+        "name": "Nathan and Olive Boone Homestead — Historical Haunts",
+        "decision": "SELECTED",
+        "reason": "Priority requested by owner"
+      },
+      {
+        "recordId": "MO26-036",
+        "name": "Monster Corn Maze",
+        "decision": "DEFERRED",
+        "reason": "Usable future candidate; more haunted-attraction timing, accessibility and ticket restrictions than selected coverage mix."
+      },
+      {
+        "recordId": "MO26-054",
+        "name": "Fun Farm",
+        "decision": "SELECTED",
+        "reason": "Durable bounded season, useful regional coverage and clean visitor address/current evidence"
+      },
+      {
+        "recordId": "MO26-058",
+        "name": "Beast Haunted House",
+        "decision": "DEFERRED",
+        "reason": "Mandatory separate waiver/check-in address and attraction placement increase navigation complexity; retain for deliberate later batch."
+      },
+      {
+        "recordId": "MO26-067",
+        "name": "Shryocks Callaway Farms",
+        "decision": "SELECTED",
+        "reason": "Durable bounded season, useful regional coverage and clean visitor address/current evidence"
+      },
+      {
+        "recordId": "MO26-069",
+        "name": "Dead Factory Haunted House",
+        "decision": "DEFERRED",
+        "reason": "Prior direct-source retrieval limited; selected equally useful records with straightforward current source access. Not a rejection."
+      },
+      {
+        "recordId": "MO26-071",
+        "name": "Pomme de Terre State Park — Pomme de Terror",
+        "decision": "DEFERRED",
+        "reason": "Official campground-navigation exception across lake from office address warrants dedicated later navigation coverage."
+      },
+      {
+        "recordId": "MO26-074",
+        "name": "Osage Beach City Park Fall Festival",
+        "decision": "DEFERRED",
+        "reason": "October 10 short-lived event; prefer longer-use candidates."
+      },
+      {
+        "recordId": "MO26-084",
+        "name": "McWilliams Pumpkin Patch",
+        "decision": "DEFERRED",
+        "reason": "Other-only narrow activity projection and reservation-only group bonfires need careful subtype copy; reserve later."
+      },
+      {
+        "recordId": "MO26-085",
+        "name": "Brookdale Farms Fall Festival",
+        "decision": "DEFERRED",
+        "reason": "November 8 season extends beyond current global November 2 seasonal window; avoid bundling architecture change."
+      },
+      {
+        "recordId": "MO26-100",
+        "name": "Urban Gardens Pumpkin Patch & Corn Maze",
+        "decision": "SELECTED",
+        "reason": "Durable bounded season, useful regional coverage and clean visitor address/current evidence"
+      },
+      {
+        "recordId": "MO26-114",
+        "name": "Perryville Pumpkin Farm",
+        "decision": "SELECTED",
+        "reason": "Durable bounded season, useful regional coverage and clean visitor address/current evidence"
+      },
+      {
+        "recordId": "MO26-115",
+        "name": "Bollinger Mill State Historic Site — Trick-or-Treat Night",
+        "decision": "SELECTED",
+        "reason": "Durable bounded season, useful regional coverage and clean visitor address/current evidence"
+      },
+      {
+        "recordId": "MO26-118",
+        "name": "Haunted Hall of Horror at A. C. Brase Arena",
+        "decision": "DEFERRED",
+        "reason": "Current-year binding relies on dated reporting alongside yearless operator page; more complex than selected farm/park mix."
+      },
+      {
+        "recordId": "MO26-124",
+        "name": "Hotel of Terror",
+        "decision": "SELECTED",
+        "reason": "Priority requested by owner"
+      },
+      {
+        "recordId": "MO26-125",
+        "name": "Dungeons of Doom",
+        "decision": "SELECTED",
+        "reason": "Priority requested by owner"
+      }
+    ],
+    "existingSevenConsumerCopy": [
+      {
+        "recordId": "MO26-003",
+        "confidence": "good",
+        "details": [
+          "Fridays and Saturdays in October 2026: doors open 7 p.m.; final tickets at midnight. Closing time is unconfirmed."
+        ],
+        "locationNote": "Location is approximate.",
+        "scope": "presentation-only on exact shipped projection; preserve reviewRevision and all operational data"
+      },
+      {
+        "recordId": "MO26-010",
+        "confidence": "good",
+        "details": [
+          "Fridays and Saturdays, September 25–October 31, 2026: gates/tickets 6 p.m.; first walk 7:30 p.m.; last tickets 11:30 p.m.; last walk 12:30 a.m. the next day. Closing time varies.",
+          "Recommended for mature audiences; younger children at parental discretion. Carrying babies or infants is prohibited. Not wheelchair accessible.",
+          "No costumes. Intense strobes; flashing-light accommodation is not guaranteed.",
+          "Operator advises against attendance with epilepsy, pregnancy, heart issues, or conditions affecting breathing, vision or walking."
+        ],
+        "locationNote": "Location is approximate.",
+        "scope": "presentation-only on exact shipped projection; preserve reviewRevision and all operational data"
+      },
+      {
+        "recordId": "MO26-011",
+        "confidence": "good",
+        "details": [
+          "Fridays and Saturdays, September 25–October 31, 2026: gates/tickets 6 p.m.; first walk 7:30 p.m.; last tickets 11:30 p.m.; last walk 12:30 a.m. the next day. Closing time varies.",
+          "Recommended for mature audiences; younger children at parental discretion. Carrying babies or infants is prohibited. Not wheelchair accessible.",
+          "No costumes. Intense strobes; flashing-light accommodation is not guaranteed.",
+          "Operator advises against attendance with epilepsy, pregnancy, heart issues, or conditions affecting breathing, vision or walking."
+        ],
+        "locationNote": "Location is approximate.",
+        "scope": "presentation-only on exact shipped projection; preserve reviewRevision and all operational data"
+      },
+      {
+        "recordId": "MO26-029",
+        "confidence": "good",
+        "details": [
+          "October 2026: Fri 6–11 p.m.; Sat 2–11 p.m.; Sun noon–7 p.m. through October 25. Final day October 31.",
+          "Haunted maze runs after dark on October Fridays/Saturdays. Last admission varies; check before a late visit.",
+          "Every visitor must sign a waiver. Weekday groups need reservations; no weekday public walk-ins."
+        ],
+        "locationNote": "Location is approximate.",
+        "scope": "presentation-only on exact shipped projection; preserve reviewRevision and all operational data"
+      },
+      {
+        "recordId": "MO26-030",
+        "confidence": "high",
+        "details": [
+          "Corn maze/Harvest Fest, October 3–25, 2026: Sat 11 a.m.–6 p.m.; Sun noon–6 p.m.",
+          "Pumpkin patch, September 29–October 25: Tue–Fri 9 a.m.–5 p.m.; Sat 11 a.m.–6 p.m.; Sun noon–6 p.m.; closed Mondays.",
+          "Children 4 and under need an adult in the corn maze.",
+          "Drive west on Farm Road 146 through the roundabout; entrance is north of the road, opposite Stonehinge."
+        ],
+        "locationNote": "Location is approximate.",
+        "scope": "presentation-only on exact shipped projection; preserve reviewRevision and all operational data"
+      },
+      {
+        "recordId": "MO26-068",
+        "confidence": "high",
+        "details": [
+          "September 26–27; October 3–4, 10–11, 17–18, 24–25 and 31, 2026.",
+          "Regular hours 10 a.m.–6 p.m.; October 31 closes early at 4 p.m.",
+          "Children under 18 require supervision. Weather may close activities; check within 24 hours of visiting."
+        ],
+        "locationNote": "Location is approximate.",
+        "scope": "presentation-only on exact shipped projection; preserve reviewRevision and all operational data"
+      },
+      {
+        "recordId": "MO26-116",
+        "confidence": "high",
+        "details": [
+          "October 31, 2026: campground trick-or-treating 2–4 p.m.; store recycling-station trunk-or-treat 2–5 p.m.; grill games and activities 3–6 p.m.",
+          "Parking is next to Shelter 1; activities are at the campgrounds, store and grill.",
+          "May be canceled for weather; check within 48 hours of the event."
+        ],
+        "locationNote": "Parking next to Shelter 1.",
+        "scope": "presentation-only on exact shipped projection; preserve reviewRevision and all operational data"
+      }
+    ],
+    "reliabilityRubric": {
+      "high": "Core identity/address/dates and useful display schedule supported; not live confirmation, exact-location certification or machine Open Now.",
+      "good": "Core supported; hours, last-admission or timely operational updates are incomplete/variable.",
+      "limited": "Core event/location supported but substantial visit information, particularly hours, missing. No selected record requires this tier.",
+      "default": "Never infer High from category/geocode alone; missing tier must not default High."
+    },
+    "presentationRules": [
+      "One exact compact notice: Check current hours, admission, and weather before you go.",
+      "No dollar amounts, source-provenance, retention policy, audit terminology or postal/conflict investigation narrative in consumer UI.",
+      "Preserve material age, access, waiver, sensory, reservation and activity-specific scheduling distinctions.",
+      "Reviewed facts may remain in audit artifact; rendering must not fall back to raw materialNotes or original long hours prose.",
+      "Do not alter existing reviewRevision for presentation-only changes; preserve identity receipts.",
+      "No machine schedule generated; all selected records remain never-OpenNow.",
+      "All date-only boundaries remain retention, never displayed as closing times."
+    ],
+    "freshnessLimits": [
+      "Reopened direct public sources 07:03 UTC. Hotel and selected blocked pages read through web tool; tool crawl dates today/yesterday/last week explicitly retained, not falsely described as live operator confirmation.",
+      "James River campus direct403 and web timeout; current official DMO independently confirms unchanged visitor address and current event. Preserve prior reviewed operator-site placement, not a fresh coordinate measurement.",
+      "Hotel direct406; web tool current home and retained cached contact/hours/calendar support unchanged 2026 projection.",
+      "No cancellation seen in reopened decisive pages; social live feeds not assured. No ticket inventory promise.",
+      "No re-geocoding needed: unchanged approved placements/source hashes retained; new checks confirm same visitor destinations."
+    ],
+    "sourceReceipts": [
+      {
+        "id": "019-event",
+        "url": "https://jamesriver.church/october31/",
+        "at": "2026-10-08T07:03:17.390400+00:00",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "id": "019-venue",
+        "url": "https://jamesriver.church/locations/joplin/",
+        "at": "2026-10-08T07:03:17.391031+00:00",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "id": "019-dmo",
+        "url": "https://www.visitjoplinmo.com/events/james-river-church-october-31st-party/",
+        "at": "2026-10-08T07:03:17.391456+00:00",
+        "status": 200,
+        "final_url": "https://www.visitjoplinmo.com/events/james-river-church-october-31st-party/",
+        "sha256": "47958cb31d43ee3ad04b76d481ec81c368242f0e9167b798b136c07b8dce215e",
+        "capture": "captures/019-dmo.html"
+      },
+      {
+        "id": "MO26-031-source-0",
+        "url": "https://www.silverdollarcity.com/theme-park/festivals/harvest-festival/",
+        "at": "2026-10-08T07:03:17.391980+00:00",
+        "status": 200,
+        "final_url": "https://www.silverdollarcity.com/theme-park/festivals/harvest-festival/",
+        "sha256": "47d05983df0da8b3825ddc8085fcf491f0b26a8b66246e6015577fdd2e40fc54",
+        "capture": "captures/MO26-031-source-0.html"
+      },
+      {
+        "id": "MO26-031-directions",
+        "url": "https://www.silverdollarcity.com/theme-park/directions",
+        "at": "2026-10-08T07:03:17.392662+00:00",
+        "status": 200,
+        "final_url": "https://www.silverdollarcity.com/theme-park/directions",
+        "sha256": "7ba7abe85063feea8094010a1a812273e671c2ebdfea7f797de25faf8ce52762",
+        "capture": "captures/MO26-031-directions.html"
+      },
+      {
+        "id": "MO26-034-source-0",
+        "url": "https://mostateparks.com/event/historical-haunts-homestead-2026",
+        "at": "2026-10-08T07:03:17.393636+00:00",
+        "status": 200,
+        "final_url": "https://mostateparks.com/event/historical-haunts-homestead-2026",
+        "sha256": "008ca0325cf5f8fad68077509368c1dbc1fc74ff108f258eab04a90148cf4795",
+        "capture": "captures/MO26-034-source-0.html"
+      },
+      {
+        "id": "MO26-054-source-0",
+        "url": "https://funfarmpumpkinpatch.ticketspice.com/2026-fall-festival",
+        "at": "2026-10-08T07:03:17.394963+00:00",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "id": "MO26-054-source-1",
+        "url": "https://www.funfarmpumpkinpatch.com/fall-festival",
+        "at": "2026-10-08T07:03:17.396626+00:00",
+        "status": 200,
+        "final_url": "https://www.funfarmpumpkinpatch.com/fall-festival",
+        "sha256": "d0dd42ec5f62293a3b091bc5999c12890e012193686b98c632f81cb9b4751b44",
+        "capture": "captures/MO26-054-source-1.html"
+      },
+      {
+        "id": "MO26-067-source-2",
+        "url": "https://callawayfarms.com/the-corn-maze/",
+        "at": "2026-10-08T07:03:21.450462+00:00",
+        "status": 200,
+        "final_url": "https://callawayfarms.com/the-corn-maze/",
+        "sha256": "c3266e664912d85620499fe079f24a5b7499a93a6e107dba3f72003325c0d3af",
+        "capture": "captures/MO26-067-source-2.html"
+      },
+      {
+        "id": "MO26-067-source-1",
+        "url": "https://callawayfarms.com/contact/",
+        "at": "2026-10-08T07:03:22.171138+00:00",
+        "status": 200,
+        "final_url": "https://callawayfarms.com/contact/",
+        "sha256": "12760a48bc1d35a3e0eef7e9e0eeba4bfc1b0b5d00a9682f77d79eb2edf53a62",
+        "capture": "captures/MO26-067-source-1.html"
+      },
+      {
+        "id": "100-home",
+        "url": "https://urbangardenskv.com/",
+        "at": "2026-10-08T07:03:22.281139+00:00",
+        "status": 200,
+        "final_url": "https://urbangardenskv.com/",
+        "sha256": "90077fe2e395b8a5866ed6e126acb33f1f8d1fe8a401166df14a6b434e7fc24a",
+        "capture": "captures/100-home.html"
+      },
+      {
+        "id": "perryville-operator",
+        "url": "https://perryvillepumpkinfarm.com/",
+        "at": "2026-10-08T07:03:22.424183+00:00",
+        "status": 200,
+        "final_url": "https://perryvillepumpkinfarm.com/",
+        "sha256": "50d6bae004d281de1f26bef507fe6a616ecfb39a839a579c01eb58d43b8d5c8a",
+        "capture": "captures/perryville-operator.html"
+      },
+      {
+        "id": "perryville-tourism",
+        "url": "https://visitperrycounty.com/event/perryville-pumpkin-farm-2026/",
+        "at": "2026-10-08T07:03:23.094601+00:00",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "id": "115-event",
+        "url": "https://mostateparks.com/event/trick-or-treat-night-2026",
+        "at": "2026-10-08T07:03:23.095298+00:00",
+        "status": 200,
+        "final_url": "https://mostateparks.com/event/trick-or-treat-night-2026",
+        "sha256": "705b183955ea8464b9f2b9b53f5d77ca1a5dec224c045ef06f2240073b83a61b",
+        "capture": "captures/115-event.html"
+      },
+      {
+        "id": "115-venue",
+        "url": "https://mostateparks.com/historic-site/bollinger-mill-state-historic-site",
+        "at": "2026-10-08T07:03:23.095904+00:00",
+        "status": 200,
+        "final_url": "https://mostateparks.com/historic-site/bollinger-mill-state-historic-site",
+        "sha256": "c517b1a2aeb01d12ab9e946a9b5d3868ed3d3c4e6e49b16f5593910fde739574",
+        "capture": "captures/115-venue.html"
+      },
+      {
+        "id": "hotel-home",
+        "url": "https://www.hotelofterror.com/",
+        "at": "2026-10-08T07:03:23.428488+00:00",
+        "error": "HTTP Error 406: Not Acceptable"
+      },
+      {
+        "id": "hotel-calendar",
+        "url": "https://www.hotelofterror.com/index.php/calendar/",
+        "at": "2026-10-08T07:03:25.810235+00:00",
+        "error": "HTTP Error 406: Not Acceptable"
+      },
+      {
+        "id": "hotel-contact",
+        "url": "https://www.hotelofterror.com/index.php/contact/",
+        "at": "2026-10-08T07:03:25.820551+00:00",
+        "error": "HTTP Error 406: Not Acceptable"
+      },
+      {
+        "id": "hotel-hours",
+        "url": "https://www.hotelofterror.com/index.php/hours/",
+        "at": "2026-10-08T07:03:26.077854+00:00",
+        "error": "HTTP Error 406: Not Acceptable"
+      },
+      {
+        "id": "hotel-lifecycle",
+        "url": "https://www.ksmu.org/news/2026-05-18/city-of-springfield-reaches-purchase-agreement-with-hotel-of-terror-owner",
+        "at": "2026-10-08T07:03:26.258564+00:00",
+        "status": 200,
+        "final_url": "https://www.ksmu.org/news/2026-05-18/city-of-springfield-reaches-purchase-agreement-with-hotel-of-terror-owner",
+        "sha256": "d1981cfdd2b3efe02eb821ba9d5a08878413cb612c32fa42bc12739bc48c8b4a",
+        "capture": "captures/hotel-lifecycle.html"
+      }
+    ]
+  },
+  "mappingNotes": [
+    "Runtime mapping copies approved address, categories, placement, exact date boundaries and expiry unchanged; no generated machine opening intervals or prices.",
+    "Prior seven catalog objects/reviewRevision are unchanged. Consumer projections are separate and omit routine admission amounts/audit prose.",
+    "Fun Farm copy says October 1–November 1 hours per independently supported clarification."
+  ],
+  "independentDataCopyReview": {
+    "reportSha256": "ed84d4022ae23e8ec2f1fd2b5912d3c0ed68dda2b706635fd59dae4ca3e2dc93",
+    "verdictSha256": "324a0ea6e2fc416d19e201a08fb8453b5b0e5b101458c86d374556394d6c6a69",
+    "dataPass": 10,
+    "consumerCopyPass": 17,
+    "runtimeVerification": "pending"
+  }
+}

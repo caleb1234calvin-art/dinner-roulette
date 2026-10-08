@@ -17,7 +17,8 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # The existing browser suites plus 277 seasonal acceptance cases retain all coverage.
+    timeout-minutes: 35
 
     steps:
       - name: Check out repository
@@ -87,6 +88,12 @@ jobs:
           CI: "true"
           VITE_AUTH_ENABLED: "true"
         run: node scripts/seasonal-completeness-v1-browser.mjs
+
+      - name: Exercise reviewed ten-record seasonal batch in local Chromium
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+        run: node scripts/seasonal-ten-record-browser.mjs
 
       - name: Preserve browser evidence
         if: always()
