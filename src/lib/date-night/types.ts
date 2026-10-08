@@ -1,3 +1,4 @@
+import type { SeasonalListing } from "./listing";
 import type { SeasonalVenueAvailability, DateNightAvailability } from "./availability";
 import type { DecoratedRestaurant, DistanceMiles, Restaurant } from "@/lib/restaurants/types";
 import type { DateNightQueryGroupId } from "./query-plan";
@@ -46,6 +47,7 @@ export interface DateNightPlace extends Restaurant {
   activityTypes: ConcreteDateNightType[];
   moodLevel: 1 | 2 | 3;
   seasonalVisitNotes?: readonly string[];
+  seasonalListing?: SeasonalListing;
 }
 
 export interface DecoratedDateNightPlace extends DecoratedRestaurant, DateNightPlace {

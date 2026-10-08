@@ -1,3 +1,4 @@
+import { seasonalDistancePrefix } from "@/lib/date-night/listing";
 import { SeasonalVisitNotes } from "@/components/seasonal-visit-notes";
 import { dateNightStatusLabel } from "@/lib/date-night/availability";
 import { directionsUrl } from "@/lib/location/maps";
@@ -90,11 +91,11 @@ export function DateNightPlanOverlay({
                         <p className="text-[0.68rem] uppercase tracking-[0.18em] text-accent">{role}</p>
                         <h3 className="font-display mt-1 text-xl leading-tight text-fg">{place.name}</h3>
                         <p className="mt-1 text-xs text-muted">
-                          {dateNightTypeLabel(place.activityTypes)} · {formatDistance(place.distanceMiles)}
+                          {dateNightTypeLabel(place.activityTypes)} · {seasonalDistancePrefix(place)}{formatDistance(place.distanceMiles)}
                         </p>
                         <p className="mt-1 text-xs text-subtle">{dateNightStatusLabel(place)}</p>
                         <SeasonalVisitNotes place={place} />
-                        {!place.hoursKnown ? (
+                        {!place.hoursKnown && !place.seasonalListing && !place.seasonalAvailability && !place.seasonalVisitNotes?.length ? (
                           <p className="mt-1 text-xs text-subtle">Hours unconfirmed — check before going.</p>
                         ) : null}
                       </div>

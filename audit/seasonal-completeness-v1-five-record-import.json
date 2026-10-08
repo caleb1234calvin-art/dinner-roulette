@@ -1,0 +1,1319 @@
+{
+  "reviewedSourceSha256": "76896ea4131f68927b7287eb46cda1d25b8993dd28527b0a2d072a72ef9ef1a6",
+  "reviewedSourceCommit": "828d6c3fdd5ab0d210dcd7f064ff5c861ab8ab09",
+  "sourcePath": "audit/seasonal-listing-v1-phase2-reviewed-2026-10-08.json",
+  "sourceReview": "docs/handoffs/active/seasonal-listing-v1-phase2-review-2026-10-08.md",
+  "scope": "Exactly five reviewed projections mapped explicitly into candidate runtime. No production import or release approval.",
+  "records": [
+    {
+      "venue_id": "MO26-003",
+      "canonical_name": "RIP at Myer’s Inn",
+      "classification": "CLEARS UNDER NEW CONTRACT",
+      "factual_clearance": true,
+      "radius_ready": true,
+      "correction_scope": "Research re-clearance candidate only; fresh independent verification pending.",
+      "retired_old_blockers": [
+        "Exact entrance/parking coordinates are no longer a listing prerequisite.",
+        "Partial hours are valid with never-OpenNow; do not confuse last admission with final exit."
+      ],
+      "remaining_blockers": [],
+      "evidence": [
+        {
+          "url": "https://www.myersinnhaunt.com/",
+          "resolved_url": "https://www.myersinnhaunt.com/",
+          "retrieved_at": "2026-10-08T02:32:52.866871+00:00",
+          "status": 200,
+          "sha256": "0fa61f30437b2c1bf2e52f203aafae64f9732d3ced7f30ebd3ff0b42f5456b83",
+          "size": 31145,
+          "claim_scope": "Official current seasonal identity, visitor address and event schedule; admission/material restrictions where stated.",
+          "capture": "phase2-reclearance/captures/myers_home.html"
+        },
+        {
+          "url": "https://www.myersinnhaunt.com/location",
+          "resolved_url": "https://www.myersinnhaunt.com/location",
+          "retrieved_at": "2026-10-08T02:32:52.867545+00:00",
+          "status": 200,
+          "sha256": "e8a541900ef153736915c8650790eece7aabb48445e8cdb78f118fee95a4ac43",
+          "size": 32251,
+          "claim_scope": "Official current seasonal identity, visitor address and event schedule; admission/material restrictions where stated.",
+          "capture": "phase2-reclearance/captures/myers_location.html"
+        }
+      ],
+      "corrected_projection": {
+        "venue_id": "MO26-003",
+        "canonical_name": "RIP at Myer’s Inn",
+        "season_year": 2026,
+        "categories": [
+          "Haunted House"
+        ],
+        "activity_subtypes": [
+          "haunted_house"
+        ],
+        "visitor_address": "529 West Airport Drive, Carthage, MO 64836",
+        "visitor_address_source": "https://www.myersinnhaunt.com/",
+        "official_website": "https://www.myersinnhaunt.com/",
+        "placement": {
+          "latitude": 37.147546859607,
+          "longitude": -94.317780429306,
+          "basis": "address-geocode",
+          "method": "Census address-range interpolation",
+          "source_url": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=529+West+Airport+Drive%2C+Carthage%2C+MO+64836&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-08T02:33:27.364574+00:00",
+          "matched_address": "529 W AIRPORT DR, CARTHAGE, MO, 64836",
+          "source_sha256": "b8de9eaeb9b8d775e86ca4f56dd1ac1157ced1adfcd3742d2d132b3aa7728e9c",
+          "review": "Fresh exact street number/name/locality match against official visitor address. Approximate address-derived placement only; no entrance/parking/driveway precision.",
+          "precision_label": "Approximate address location",
+          "independently_verified_arrival": false
+        },
+        "radius_eligible_after_runtime_support": true,
+        "directions_target": {
+          "kind": "visitor-address",
+          "address": "529 West Airport Drive, Carthage, MO 64836",
+          "venue_name": "RIP at Myer’s Inn"
+        },
+        "hours": {
+          "state": "partial",
+          "display_text": "Fridays and Saturdays in October 2026: doors open 19:00; last ticket sold at 00:00 next day. Final exit/closing time unspecified.",
+          "machine_opening_intervals": null,
+          "open_now_policy": "never"
+        },
+        "admission": {
+          "display_text": "$20; three-location combo $60 does not make the three locations one venue.",
+          "source_url": "https://www.myersinnhaunt.com/",
+          "current_inventory_guarantee": false
+        },
+        "details": {
+          "age_restrictions": null,
+          "accessibility": null,
+          "ticket_restrictions": null,
+          "schedule_events_display_only": null,
+          "qualified_notes": [
+            "Start/end expanded from explicit October 2026 Friday/Saturday recurrence; closing after final ticket is unspecified."
+          ]
+        },
+        "notice": "Check the venue for current hours, admission, and weather updates.",
+        "lifecycle": {
+          "timezone": "America/Chicago",
+          "season_start": "2026-10-02",
+          "season_end": "2026-10-31",
+          "exact_active_dates": [
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "event_start": null,
+          "event_end": null,
+          "listing_expires_at": "2026-11-01T00:00:00-05:00",
+          "expiry_basis": "Accepted date-only retention: midnight beginning the local day after the final explicit operating date, October 31. This is not an operator closing time or final exit.",
+          "editorial_cutoff": false,
+          "no_2027_rollover": true,
+          "date_only_retention": true
+        },
+        "runtime_active": false,
+        "automatic_import_allowed": false,
+        "independent_review": "PENDING for this exact new-policy projection"
+      },
+      "latest_corrected_input": "SWMO26-CORRECTION-R2, independently correction-quality PASS 2026-10-07T18:18:45Z",
+      "source_freshness_limit": "No cancellation observed in accessible official materials; not a live guarantee. Fresh pre-import revalidation required, especially short-lived events.",
+      "subset": "southwest",
+      "contract_summary": {
+        "visitor_address": "529 West Airport Drive, Carthage, MO 64836",
+        "categories": [
+          "Haunted House"
+        ],
+        "approximate_placement_basis": "address-geocode",
+        "hours_state": "partial",
+        "open_now_policy": "never",
+        "listing_expires_at": "2026-11-01T00:00:00-05:00",
+        "directions_target": {
+          "kind": "visitor-address",
+          "address": "529 West Airport Drive, Carthage, MO 64836",
+          "venue_name": "RIP at Myer’s Inn"
+        },
+        "independent_verification": "PENDING",
+        "implementation_authorized": false,
+        "runtime_active": false
+      },
+      "r2_findings_resolved": [
+        "SW-LIFE-01"
+      ]
+    },
+    {
+      "venue_id": "MO26-010",
+      "canonical_name": "The Aftermath Haunted Attraction",
+      "classification": "CLEARS UNDER NEW CONTRACT",
+      "factual_clearance": true,
+      "radius_ready": true,
+      "correction_scope": "Research re-clearance candidate only; fresh independent verification pending.",
+      "retired_old_blockers": [
+        "Exact entrance/parking coordinates are no longer a listing prerequisite.",
+        "Partial hours are valid with never-OpenNow; do not confuse last admission with final exit."
+      ],
+      "remaining_blockers": [],
+      "evidence": [
+        {
+          "url": "https://spooktacularstudios.com/",
+          "retrieved_at": "2026-10-08T02:32:52.867946+00:00",
+          "error": "HTTP Error 406: Not Acceptable",
+          "claim_scope": "Official current seasonal identity, visitor address and event schedule; admission/material restrictions where stated.",
+          "capture": "phase2-reclearance/captures/sp-web-reopen.json; web extraction successful, direct HTTP406 disclosed"
+        },
+        {
+          "url": "https://spooktacularstudios.com/faq/",
+          "retrieved_at": "2026-10-08T02:32:52.868371+00:00",
+          "error": "HTTP Error 406: Not Acceptable",
+          "claim_scope": "Official current seasonal identity, visitor address and event schedule; admission/material restrictions where stated.",
+          "capture": "phase2-reclearance/captures/sp-web-reopen.json; web extraction successful, direct HTTP406 disclosed"
+        }
+      ],
+      "corrected_projection": {
+        "venue_id": "MO26-010",
+        "canonical_name": "The Aftermath Haunted Attraction",
+        "season_year": 2026,
+        "categories": [
+          "Haunted House"
+        ],
+        "activity_subtypes": [
+          "haunted_attraction"
+        ],
+        "visitor_address": "2520 Jaguar Road, Joplin, MO 64804",
+        "visitor_address_source": "https://spooktacularstudios.com/",
+        "official_website": "https://spooktacularstudios.com/",
+        "placement": {
+          "latitude": 37.032013052845,
+          "longitude": -94.424739897714,
+          "basis": "address-geocode",
+          "method": "Census address-range interpolation",
+          "source_url": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=2520+Jaguar+Road%2C+Joplin%2C+MO+64804&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-08T02:33:27.365147+00:00",
+          "matched_address": "2520 JAGUAR RD, JOPLIN, MO, 64804",
+          "source_sha256": "5d26386abc7a7ed8a1d78e20dc49b9c7923951befccbaf9a3ed93c19860e279d",
+          "review": "Fresh exact street number/name/locality match against official visitor address. Approximate address-derived placement only; no entrance/parking/driveway precision.",
+          "precision_label": "Approximate address location",
+          "independently_verified_arrival": false
+        },
+        "radius_eligible_after_runtime_support": true,
+        "directions_target": {
+          "kind": "visitor-address",
+          "address": "2520 Jaguar Road, Joplin, MO 64804",
+          "venue_name": "The Aftermath Haunted Attraction"
+        },
+        "hours": {
+          "state": "partial",
+          "display_text": "On the 12 listed 2026 nights: gates and ticket booth 18:00; first walk-through 19:30; last ticket sale 23:30; last walk-through 00:30 the following day. Final exit/closing is not established. FAQ also gives generic 18:00–00:00 hours and allows later operation; do not convert this into a hard close.",
+          "machine_opening_intervals": null,
+          "open_now_policy": "never"
+        },
+        "admission": {
+          "display_text": "$20 per attraction; both-haunts offer $30. Price statement is operator advertised base price, not verified final checkout total.",
+          "source_url": "https://spooktacularstudios.com/",
+          "current_inventory_guarantee": false
+        },
+        "details": {
+          "age_restrictions": "Recommended for adults, older teens and mature audiences; not recommended for young children. No strict minimum age is stated, and younger children may attend at parental discretion. Carrying babies or infants is prohibited; no special child pricing.",
+          "accessibility": "Operator FAQ says the attractions are not wheelchair accessible.",
+          "ticket_restrictions": "Operator FAQ: all sales final/no refunds. If operator closes a purchased night, tickets honored on another open night.",
+          "schedule_events_display_only": [
+            {
+              "event": "gates_open",
+              "local_time": "18:00",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-HOME",
+                "SP-AFTER"
+              ]
+            },
+            {
+              "event": "ticket_booth_open",
+              "local_time": "18:00",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-FAQ"
+              ]
+            },
+            {
+              "event": "first_walk_through",
+              "local_time": "19:30",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-HOME",
+                "SP-FAQ",
+                "SP-AFTER"
+              ]
+            },
+            {
+              "event": "last_ticket_sale",
+              "local_time": "23:30",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-HOME",
+                "SP-FAQ",
+                "SP-AFTER"
+              ]
+            },
+            {
+              "event": "last_walk_through",
+              "local_time": "00:30",
+              "day_offset": 1,
+              "status": "SUPPORTED; next-day interpretation follows overnight ordering",
+              "source_refs": [
+                "SP-HOME",
+                "SP-FAQ",
+                "SP-AFTER"
+              ]
+            },
+            {
+              "event": "final_exit_or_close",
+              "local_time": null,
+              "day_offset": null,
+              "status": "UNRESOLVED; FAQ generic midnight wording differs from explicit 00:30 last walk and allows later operation",
+              "source_refs": [
+                "SP-FAQ"
+              ]
+            }
+          ],
+          "qualified_notes": [
+            "Same Spooktacular Studios operator, two different attractions at separate addresses. Keep separate; combo is not a third venue.",
+            "Operator says light rain operation is possible; heavy rain or lightning can close the attractions. Check operator updates close to visit. No current cancellation was established in reviewed sources; absence of notice is not live availability.",
+            "FAQ generic midnight operating-hours text must not override the explicit 00:30 last walk.",
+            "The event-page 18:00–23:30 wrapper describes the gate/sale window; it does not establish final exit."
+          ],
+          "material_access_notice": {
+            "text": "No costumes. The operator warns of intense strobes and does not recommend attendance for people with epilepsy, pregnancy, heart issues, or conditions affecting breathing, vision or walking; flashing-light accommodations are not guaranteed.",
+            "source_url": "https://spooktacularstudios.com/faq/",
+            "scope": "Operator suitability advice, not a newly inferred medical prohibition."
+          }
+        },
+        "notice": "Check the venue for current hours, admission, and weather updates.",
+        "lifecycle": {
+          "timezone": "America/Chicago",
+          "season_start": "2026-09-25",
+          "season_end": "2026-10-31",
+          "exact_active_dates": [
+            "2026-09-25",
+            "2026-09-26",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "event_start": null,
+          "event_end": null,
+          "listing_expires_at": "2026-11-01T00:00:00-05:00",
+          "expiry_basis": "Accepted date-only retention: midnight beginning the local day after the final explicit operating date, October 31. This is not an operator closing time or final exit.",
+          "editorial_cutoff": false,
+          "no_2027_rollover": true,
+          "date_only_retention": true
+        },
+        "runtime_active": false,
+        "automatic_import_allowed": false,
+        "independent_review": "PENDING for this exact new-policy projection"
+      },
+      "latest_corrected_input": "SWMO26-CORRECTION-R2, independently correction-quality PASS 2026-10-07T18:18:45Z",
+      "source_freshness_limit": "No cancellation observed in accessible official materials; not a live guarantee. Fresh pre-import revalidation required, especially short-lived events.",
+      "subset": "southwest",
+      "contract_summary": {
+        "visitor_address": "2520 Jaguar Road, Joplin, MO 64804",
+        "categories": [
+          "Haunted House"
+        ],
+        "approximate_placement_basis": "address-geocode",
+        "hours_state": "partial",
+        "open_now_policy": "never",
+        "listing_expires_at": "2026-11-01T00:00:00-05:00",
+        "directions_target": {
+          "kind": "visitor-address",
+          "address": "2520 Jaguar Road, Joplin, MO 64804",
+          "venue_name": "The Aftermath Haunted Attraction"
+        },
+        "independent_verification": "PENDING",
+        "implementation_authorized": false,
+        "runtime_active": false
+      },
+      "r2_findings_resolved": [
+        "SW-LIFE-01",
+        "SW-ACCESS-02"
+      ]
+    },
+    {
+      "venue_id": "MO26-011",
+      "canonical_name": "Beyond The Outer Limits",
+      "classification": "CLEARS UNDER NEW CONTRACT",
+      "factual_clearance": true,
+      "radius_ready": true,
+      "correction_scope": "Research re-clearance candidate only; fresh independent verification pending.",
+      "retired_old_blockers": [
+        "Exact entrance/parking coordinates are no longer a listing prerequisite.",
+        "Partial hours are valid with never-OpenNow; do not confuse last admission with final exit."
+      ],
+      "remaining_blockers": [],
+      "evidence": [
+        {
+          "url": "https://spooktacularstudios.com/",
+          "retrieved_at": "2026-10-08T02:32:52.867946+00:00",
+          "error": "HTTP Error 406: Not Acceptable",
+          "claim_scope": "Official current seasonal identity, visitor address and event schedule; admission/material restrictions where stated.",
+          "capture": "phase2-reclearance/captures/sp-web-reopen.json; web extraction successful, direct HTTP406 disclosed"
+        },
+        {
+          "url": "https://spooktacularstudios.com/faq/",
+          "retrieved_at": "2026-10-08T02:32:52.868371+00:00",
+          "error": "HTTP Error 406: Not Acceptable",
+          "claim_scope": "Official current seasonal identity, visitor address and event schedule; admission/material restrictions where stated.",
+          "capture": "phase2-reclearance/captures/sp-web-reopen.json; web extraction successful, direct HTTP406 disclosed"
+        }
+      ],
+      "corrected_projection": {
+        "venue_id": "MO26-011",
+        "canonical_name": "Beyond The Outer Limits",
+        "season_year": 2026,
+        "categories": [
+          "Haunted House"
+        ],
+        "activity_subtypes": [
+          "haunted_attraction"
+        ],
+        "visitor_address": "2163 Jaguar Road, Joplin, MO 64804",
+        "visitor_address_source": "https://spooktacularstudios.com/",
+        "official_website": "https://spooktacularstudios.com/",
+        "placement": {
+          "latitude": 37.03315620173,
+          "longitude": -94.424538484412,
+          "basis": "address-geocode",
+          "method": "Census address-range interpolation",
+          "source_url": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=2163+Jaguar+Road%2C+Joplin%2C+MO+64804&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-08T02:33:27.365543+00:00",
+          "matched_address": "2163 JAGUAR RD, JOPLIN, MO, 64804",
+          "source_sha256": "d0951c202267145dca2d909ea3c057cc6bfc6c2852025ea1adfe0490e15cb93f",
+          "review": "Fresh exact street number/name/locality match against official visitor address. Approximate address-derived placement only; no entrance/parking/driveway precision.",
+          "precision_label": "Approximate address location",
+          "independently_verified_arrival": false
+        },
+        "radius_eligible_after_runtime_support": true,
+        "directions_target": {
+          "kind": "visitor-address",
+          "address": "2163 Jaguar Road, Joplin, MO 64804",
+          "venue_name": "Beyond The Outer Limits"
+        },
+        "hours": {
+          "state": "partial",
+          "display_text": "On the 12 listed 2026 nights: gates and ticket booth 18:00; first walk-through 19:30; last ticket sale 23:30; last walk-through 00:30 the following day. Final exit/closing is not established. FAQ also gives generic 18:00–00:00 hours and allows later operation; do not convert this into a hard close.",
+          "machine_opening_intervals": null,
+          "open_now_policy": "never"
+        },
+        "admission": {
+          "display_text": "$20 per attraction; both-haunts offer $30. Price statement is operator advertised base price, not verified final checkout total.",
+          "source_url": "https://spooktacularstudios.com/",
+          "current_inventory_guarantee": false
+        },
+        "details": {
+          "age_restrictions": "Recommended for adults, older teens and mature audiences; not recommended for young children. No strict minimum age is stated, and younger children may attend at parental discretion. Carrying babies or infants is prohibited; no special child pricing.",
+          "accessibility": "Operator FAQ says the attractions are not wheelchair accessible.",
+          "ticket_restrictions": "Operator FAQ: all sales final/no refunds. If operator closes a purchased night, tickets honored on another open night.",
+          "schedule_events_display_only": [
+            {
+              "event": "gates_open",
+              "local_time": "18:00",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-HOME",
+                "SP-BEYOND"
+              ]
+            },
+            {
+              "event": "ticket_booth_open",
+              "local_time": "18:00",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-FAQ"
+              ]
+            },
+            {
+              "event": "first_walk_through",
+              "local_time": "19:30",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-HOME",
+                "SP-FAQ",
+                "SP-BEYOND"
+              ]
+            },
+            {
+              "event": "last_ticket_sale",
+              "local_time": "23:30",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-HOME",
+                "SP-FAQ",
+                "SP-BEYOND"
+              ]
+            },
+            {
+              "event": "last_walk_through",
+              "local_time": "00:30",
+              "day_offset": 1,
+              "status": "SUPPORTED; next-day interpretation follows overnight ordering",
+              "source_refs": [
+                "SP-HOME",
+                "SP-FAQ",
+                "SP-BEYOND"
+              ]
+            },
+            {
+              "event": "final_exit_or_close",
+              "local_time": null,
+              "day_offset": null,
+              "status": "UNRESOLVED; FAQ generic midnight wording differs from explicit 00:30 last walk and allows later operation",
+              "source_refs": [
+                "SP-FAQ"
+              ]
+            }
+          ],
+          "qualified_notes": [
+            "Same Spooktacular Studios operator, two different attractions at separate addresses. Keep separate; combo is not a third venue.",
+            "Operator says light rain operation is possible; heavy rain or lightning can close the attractions. Check operator updates close to visit. No current cancellation was established in reviewed sources; absence of notice is not live availability.",
+            "FAQ generic midnight operating-hours text must not override the explicit 00:30 last walk.",
+            "The event-page 18:00–23:30 wrapper describes the gate/sale window; it does not establish final exit.",
+            "Beyond event-page organizer block uses 417-312-7988, while the same page venue block, live site header and delegated ticket pages use 417-317-7988. Retain the corroborated venue phone; do not silently use organizer typo."
+          ],
+          "material_access_notice": {
+            "text": "No costumes. The operator warns of intense strobes and does not recommend attendance for people with epilepsy, pregnancy, heart issues, or conditions affecting breathing, vision or walking; flashing-light accommodations are not guaranteed.",
+            "source_url": "https://spooktacularstudios.com/faq/",
+            "scope": "Operator suitability advice, not a newly inferred medical prohibition."
+          }
+        },
+        "notice": "Check the venue for current hours, admission, and weather updates.",
+        "lifecycle": {
+          "timezone": "America/Chicago",
+          "season_start": "2026-09-25",
+          "season_end": "2026-10-31",
+          "exact_active_dates": [
+            "2026-09-25",
+            "2026-09-26",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "event_start": null,
+          "event_end": null,
+          "listing_expires_at": "2026-11-01T00:00:00-05:00",
+          "expiry_basis": "Accepted date-only retention: midnight beginning the local day after the final explicit operating date, October 31. This is not an operator closing time or final exit.",
+          "editorial_cutoff": false,
+          "no_2027_rollover": true,
+          "date_only_retention": true
+        },
+        "runtime_active": false,
+        "automatic_import_allowed": false,
+        "independent_review": "PENDING for this exact new-policy projection"
+      },
+      "latest_corrected_input": "SWMO26-CORRECTION-R2, independently correction-quality PASS 2026-10-07T18:18:45Z",
+      "source_freshness_limit": "No cancellation observed in accessible official materials; not a live guarantee. Fresh pre-import revalidation required, especially short-lived events.",
+      "subset": "southwest",
+      "contract_summary": {
+        "visitor_address": "2163 Jaguar Road, Joplin, MO 64804",
+        "categories": [
+          "Haunted House"
+        ],
+        "approximate_placement_basis": "address-geocode",
+        "hours_state": "partial",
+        "open_now_policy": "never",
+        "listing_expires_at": "2026-11-01T00:00:00-05:00",
+        "directions_target": {
+          "kind": "visitor-address",
+          "address": "2163 Jaguar Road, Joplin, MO 64804",
+          "venue_name": "Beyond The Outer Limits"
+        },
+        "independent_verification": "PENDING",
+        "implementation_authorized": false,
+        "runtime_active": false
+      },
+      "r2_findings_resolved": [
+        "SW-LIFE-01",
+        "SW-ACCESS-02"
+      ]
+    },
+    {
+      "venue_id": "MO26-029",
+      "canonical_name": "Campbell’s Maze Daze & Pumpkin Patch",
+      "factualClearance": "CLEARS FACTUALLY",
+      "spatialReadiness": "APPROXIMATE PLACEMENT READY",
+      "reviewedAt": "2026-10-08T02:37:30.513176+00:00",
+      "priorStatus": "HOLD",
+      "priorCorrectionQuality": "PASS",
+      "priorUnresolvedGates": [
+        "Specific Friday/Saturday October last admission of 21:00 conflicts with generic one hour before 23:00 closing. Keep last_admission null and preserve both statements.",
+        "Two operator-linked destinations differ at property scale; neither is labeled a precise parking/entrance point."
+      ],
+      "decisionReason": "Fresh official 2026 identity/activity and visitor-address evidence support the accepted listing contract. Existing reviewed source-identifiable placement supports approximate radius/map use only; all Directions use visitor address. Remaining uncertainties are retained at field scope rather than converted to invented facts.",
+      "retiredOldGates": [
+        {
+          "gate": "Verified numerical parking/entrance point required for a listing",
+          "reason": "Official usable visitor street address suffices. Reviewed approximate placement is separate from address-based Directions."
+        },
+        {
+          "gate": "Complete exact hours or exact admission price required for a listing",
+          "reason": "Not a ListingCompletenessV1 prerequisite. Unknown/partial values are permitted and never Open Now."
+        },
+        {
+          "gate": "Previous 06:00 post-event archival grace window",
+          "reason": "Use exact supported event end, or next-local-midnight retention boundary when only final date is known; no inferred extra admission."
+        },
+        {
+          "gate": "Resolved last-admission conflict required before any listing",
+          "reason": "Partial hours can be listed. Conflict remains explicit, lastAdmission remains null, and never-OpenNow is mandatory."
+        }
+      ],
+      "remainingBlockers": [],
+      "remainingNonblockingConflictsOrLimitations": [
+        {
+          "field": "hours.lastAdmission",
+          "kind": "unresolved_source_conflict",
+          "values": [
+            "one hour before closing (22:00 for a 23:00 finish)",
+            "21:00 October Fridays/Saturdays"
+          ],
+          "treatment": "null; hours partial; both statements retained and visitor warning required",
+          "blocksListing": false
+        },
+        {
+          "field": "placement",
+          "kind": "property_scale_alternatives",
+          "values": [
+            {
+              "lat": 36.9937383,
+              "lon": -93.418114
+            },
+            {
+              "lat": 36.9936483,
+              "lon": -93.4185482
+            }
+          ],
+          "treatment": "Use operator street-address destination as approximate venue placement only. Do not average points or assert entrance accuracy. Both are same-farm destinations, not conflicting venue identities.",
+          "blocksListing": false
+        }
+      ],
+      "evidence": [
+        {
+          "id": "029-home",
+          "url": "https://www.campbellsmazedaze.com/",
+          "finalUrl": "https://www.campbellsmazedaze.com/",
+          "checkedAt": "2026-10-08T02:33:41.189804+00:00",
+          "completedAt": "2026-10-08T02:33:46.670047+00:00",
+          "method": "Direct unauthenticated public HTTP GET",
+          "httpStatus": 200,
+          "capturePath": "phase2-reclearance/evidence/recent/029-home.html",
+          "sha256": "07941d24356f86d4465eec7d794eb4ba0b354f78f058e3a1ea987192348a5b07",
+          "bytes": 178097,
+          "error": null,
+          "claimScope": "Explicit 2026 season, public versus reservation-only hours, corn maze/pumpkin patch/haunted maze, visitor address, two property-scale destination points and contradictory last-admission clauses.",
+          "role": "official_operator_or_authority",
+          "currentDirectCapture": true
+        },
+        {
+          "id": "029-admission",
+          "url": "https://www.campbellsmazedaze.com/general-admission",
+          "finalUrl": "https://www.campbellsmazedaze.com/general-admission",
+          "checkedAt": "2026-10-08T02:33:41.191327+00:00",
+          "completedAt": "2026-10-08T02:33:48.118472+00:00",
+          "method": "Direct unauthenticated public HTTP GET",
+          "httpStatus": 200,
+          "capturePath": "phase2-reclearance/evidence/recent/029-admission.html",
+          "sha256": "0972826747dc75c7cf1d598317025fd64e7eb1319778de3c9122d71613f78360",
+          "bytes": 101619,
+          "error": null,
+          "claimScope": "Material waiver requirement, age limits and benefits, day-specific published prices and public schedule; no final checkout total claim.",
+          "role": "official_operator_or_authority",
+          "currentDirectCapture": true
+        }
+      ],
+      "retainedEvidence": [
+        {
+          "url": "https://www.campbellsmazedaze.com/",
+          "checkedAt": "2026-10-07T19:53:22.381581+00:00",
+          "capturePath": "clearance_audit2/internal_captures/campbell.html",
+          "sha256": "b70f0dba3648c9f8dac5ce43f06fce9d8686b537fa8b2aaf9535742afe012959",
+          "claimScope": null,
+          "retainedHistoricalEvidence": true
+        },
+        {
+          "url": "https://www.campbellsmazedaze.com/general-admission",
+          "checkedAt": "2026-10-07T19:53:28.329207+00:00",
+          "capturePath": "clearance_audit2/internal_captures/campbell_admission.html",
+          "sha256": "3b277496406a63159ff5b5cc55766cb2186988a0186e43d639c31c9640df7479",
+          "claimScope": null,
+          "retainedHistoricalEvidence": true
+        },
+        {
+          "url": "https://www.campbellsmazedaze.com/general-admission",
+          "checkedAt": "2026-10-07T20:15:46.731118+00:00",
+          "capturePath": "clearance_audit2/v2_captures/campbell_admission.html",
+          "sha256": "0b83d2097b4e2ba7c4c1245825faeba1d064a9fb55c98c388a7d67518d70ba3b",
+          "claimScope": "Retained correction source for v2 material visitor facts.",
+          "retainedHistoricalEvidence": true
+        }
+      ],
+      "sourceBaseline": {
+        "candidateFile": "clearance_audit2/frozen_v2/Missouri-Seasonal-2026-Clearance2-Candidates-v2.json",
+        "candidateProjectionSha256": "a45172636ab668b28843b139a41f230d8c5004c5966b7324d93182eb33bd7053",
+        "independentVerdictFile": "clearance_audit2/independent_v2/deliverables/Missouri-Seasonal-2026-Clearance2-Final-Independent-Verdicts-v2.json",
+        "originalCandidatesFile": "selection_inputs/Missouri-Seasonal-2026-Candidates.json",
+        "originalIndependentLedgerFile": "selection_inputs/Missouri-Seasonal-2026-Independent-Verification-Ledger.json",
+        "originalCensusOrCoordinateEvidence": {
+          "source_ref": "turn12view3",
+          "url": "https://www.google.com/maps/dir//177%2BCarob%2BRoad%2C%2BClever%2C%2BMO%2B65631/%4036.9937331%2C-93.4532193%2C13z/data%3D%213m1%214b1%214m8%214m7%211m0%211m5%211m1%211s0x87cf69fe4b218a17%3A0x29aaddfb530f6d13%212m2%211d-93.418114%212d36.9937383",
+          "method": "official_directions_destination",
+          "retrieved_at": "2026-10-07",
+          "precision_notes": "Destination coordinates in operator-linked Google directions; viewport center discarded.",
+          "independently_verified_entrance": false
+        },
+        "originalApproximatePoint": {
+          "lat": 36.9937383,
+          "lon": -93.418114
+        },
+        "originalCoordinateAlternative": {
+          "latitude": 36.993311,
+          "longitude": -93.415494,
+          "source_ref": "CENSUS-MO26-029",
+          "url": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=177+Carob+Road%2C+Clever%2C+MO+65631&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-07T06:43:39.819457+00:00",
+          "method": "Census address-range interpolation",
+          "matched_address": "177 CAROB RD, CLEVER, MO, 65631",
+          "response_sha256": "5cd66f51849f9c88a9ee1241f30fed3a62769f57109914c1248eee1b6710f94d",
+          "precision_notes": "Approximate address-range point. Not surveyed, rooftop, parking, or verified entrance. Geocoder county follows this point.",
+          "independently_verified_entrance": false
+        },
+        "canonicalCorrectedProjectionFactsPreserved": true
+      },
+      "freshIndependentVerification": "PENDING",
+      "runtimeImportAuthorized": false,
+      "classification": "CLEARS UNDER NEW CONTRACT",
+      "corrected_projection": {
+        "venueId": "MO26-029",
+        "canonicalName": "Campbell’s Maze Daze & Pumpkin Patch",
+        "aliases": [],
+        "contractRevision": "ListingCompletenessV1",
+        "reviewRevision": "MO2026-phase2-reclearance-recent-v1",
+        "seasonYear": 2026,
+        "visitorAddress": {
+          "text": "177 Carob Road, Clever, MO 65631",
+          "city": "Clever",
+          "region": "MO",
+          "postalCode": "65631",
+          "role": "visitor",
+          "sourceUrls": [
+            "https://www.campbellsmazedaze.com/"
+          ],
+          "checkedAt": "2026-10-08T02:33:41.191327+00:00"
+        },
+        "categories": [
+          "Haunted House / Haunted Attraction",
+          "Corn Maze",
+          "Pumpkin Patch"
+        ],
+        "otherSubtypes": [],
+        "activities": [
+          {
+            "activity_type": "corn_maze",
+            "source_refs": [
+              "turn9view0",
+              "turn12view3"
+            ],
+            "evidence_scope": "2026",
+            "season_start": "2026-09-26",
+            "season_end": "2026-10-31",
+            "exact_active_dates": null,
+            "hours": null,
+            "schedule_scope": "See venue schedule and activity-specific restrictions; no opening interval inferred.",
+            "activity_id": "MO26-029-A01",
+            "category_currently_supported": true
+          },
+          {
+            "activity_type": "pumpkin_patch",
+            "source_refs": [
+              "turn9view0",
+              "turn12view3"
+            ],
+            "evidence_scope": "2026",
+            "season_start": "2026-09-26",
+            "season_end": "2026-10-31",
+            "exact_active_dates": null,
+            "hours": null,
+            "schedule_scope": "See venue schedule and activity-specific restrictions; no opening interval inferred.",
+            "activity_id": "MO26-029-A02",
+            "category_currently_supported": true
+          },
+          {
+            "activity_type": "haunted_corn_maze",
+            "source_refs": [
+              "turn9view0",
+              "turn12view3"
+            ],
+            "evidence_scope": "2026",
+            "season_start": "2026-10-02",
+            "season_end": "2026-10-31",
+            "exact_active_dates": null,
+            "hours": null,
+            "schedule_scope": "See venue schedule and activity-specific restrictions; no opening interval inferred.",
+            "activity_id": "MO26-029-A03",
+            "category_currently_supported": true
+          },
+          {
+            "activity_type": "hayride",
+            "source_refs": [
+              "turn9view0",
+              "turn12view3"
+            ],
+            "evidence_scope": "2026",
+            "season_start": null,
+            "season_end": null,
+            "exact_active_dates": null,
+            "hours": null,
+            "schedule_scope": "See venue schedule and activity-specific restrictions; no opening interval inferred.",
+            "activity_id": "MO26-029-A04",
+            "category_currently_supported": false
+          }
+        ],
+        "seasonEvidence": {
+          "sourceUrls": [
+            "https://www.campbellsmazedaze.com/",
+            "https://www.campbellsmazedaze.com/general-admission"
+          ],
+          "checkedAt": "2026-10-08T02:33:41.191327+00:00",
+          "claimScope": "Identity, supported seasonal activities and explicit current 2026 operation; source-specific scope is in evidence.",
+          "accepted": true
+        },
+        "seasonStartDate": "2026-09-26",
+        "seasonEndDate": "2026-10-31",
+        "exactActiveDates": null,
+        "hours": {
+          "state": "partial",
+          "displayText": "Sep 26–27 12:00–19:00; October Fri 18:00–23:00, Sat 14:00–23:00, Sun through Oct 25 12:00–19:00. Haunted maze starts Oct 2, after dark Fridays/Saturdays. Weekday public entry unavailable; groups require reservations. Last-admission conflict: homepage says one hour before closing and separately 21:00 on October Fridays/Saturdays. No normalized last-admission value accepted.",
+          "timezone": "America/Chicago",
+          "openNowPolicy": "never",
+          "machineSchedule": null,
+          "lastAdmission": null,
+          "verificationScope": "Source-supported display only; no separately tested date-specific machine schedule is provided. Conflicts, variable darkness/final exit and weather exceptions are not inferred."
+        },
+        "admission": {
+          "displayText": "Everyone entering must sign a liability waiver. Ages 4 and younger enter free but do not receive a free mini pumpkin. September 26 and 27: $10 per paying visitor. October Fridays 2–30: $12 per paying visitor. October Saturdays 3–31: adults $14 by card or $13 cash; children ages 5–12 $12. October Sundays 4–25: $12 per paying visitor. Paid children ages 5–12 receive a mini pumpkin and decorating until 18:00, while supplies last; mini pumpkins for other children may be purchased for $4. Published admission amounts are not a guaranteed final checkout quote.",
+          "amount": null,
+          "currency": null,
+          "priceLevel": null,
+          "finalCheckoutQuote": false,
+          "ageFamilyText": "Family attraction; ages 4 and younger have free entry, with the paid-child mini-pumpkin benefit limited to ages 5–12."
+        },
+        "materialNotes": [
+          "Every visitor must sign the operator liability waiver before entering.",
+          "Public walk-ins are Friday–Sunday on the listed seasonal dates; weekday and weeknight groups require reservations and are not public walk-in hours.",
+          "The operator states both last admission one hour before closing and 21:00 on October Fridays/Saturdays despite a 23:00 closing. Last-admission time remains unknown; confirm with the venue before a late visit.",
+          "The haunted maze starts October 2 and operates after dark on October Fridays/Saturdays.",
+          "Free entry for ages 4 and younger excludes the free mini pumpkin. Paid ages 5–12 receive the mini-pumpkin/decorating benefit until 18:00 while supplies last."
+        ],
+        "accessibilityAndEntryText": null,
+        "lifecycle": {
+          "timezone": "America/Chicago",
+          "eventEndsAt": "2026-10-31T23:00:00-05:00",
+          "lastSourcedActiveDate": "2026-10-31",
+          "listingExpiresAt": "2026-10-31T23:00:00-05:00",
+          "listingExpiresAtUtc": "2026-11-01T04:00:00+00:00",
+          "expiryBasis": "known exact final activity end",
+          "expiryIsAdmissionOrHoursClaim": false,
+          "no2027Rollover": true,
+          "closed": false,
+          "cancelled": false,
+          "negativeStatusScope": "No terminal cancellation/closure observed in the specific reopened official sources; not a guarantee against subsequent changes.",
+          "eventEndEvidenceScope": "Supported exact final seasonal activity closing instant"
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "venueName": "Campbell’s Maze Daze & Pumpkin Patch",
+          "address": "177 Carob Road, Clever, MO 65631",
+          "coordinateOverrideAllowed": false
+        },
+        "placement": {
+          "lat": 36.9937383,
+          "lon": -93.418114,
+          "basis": "operator-site",
+          "sourceUrl": "https://www.google.com/maps/dir//177%2BCarob%2BRoad%2C%2BClever%2C%2BMO%2B65631/%4036.9937331%2C-93.4532193%2C13z/data%3D%213m1%214b1%214m8%214m7%211m0%211m5%211m1%211s0x87cf69fe4b218a17%3A0x29aaddfb530f6d13%212m2%211d-93.418114%212d36.9937383",
+          "sourceCheckedAt": "2026-10-08T02:33:41.189804+00:00",
+          "capturePath": "phase2-reclearance/evidence/recent/029-home.html",
+          "captureSha256": "07941d24356f86d4465eec7d794eb4ba0b354f78f058e3a1ea987192348a5b07",
+          "matchedEntity": "Operator-linked 177 Carob Road, Clever street-address destination; feature coordinates are encoded in the freshly captured hyperlink.",
+          "selectionReason": "Select the explicit street-address destination for approximate venue placement; alternate named-business pin remains documented at the same property. Neither is entrance evidence.",
+          "reviewedAt": "2026-10-08T02:37:30.513176+00:00",
+          "precisionLabel": "Approximate venue location",
+          "entranceVerified": false,
+          "suitableFor": "approximate map/radius placement only",
+          "directionsCoordinateUseAllowed": false
+        },
+        "browseEligibleUnderContract": true,
+        "radiusReadyUnderContract": true,
+        "distanceLabel": "Approx. distance",
+        "rideshareTargetPolicy": "Generic external ride-service launch; never use approximate placement as precise dropoff.",
+        "visitorNotice": {
+          "text": "Check the venue for current hours, admission, and weather updates.",
+          "url": "https://www.campbellsmazedaze.com/"
+        },
+        "sourceConflictsAndLimits": [
+          {
+            "field": "hours.lastAdmission",
+            "kind": "unresolved_source_conflict",
+            "values": [
+              "one hour before closing (22:00 for a 23:00 finish)",
+              "21:00 October Fridays/Saturdays"
+            ],
+            "treatment": "null; hours partial; both statements retained and visitor warning required",
+            "blocksListing": false
+          },
+          {
+            "field": "placement",
+            "kind": "property_scale_alternatives",
+            "values": [
+              {
+                "lat": 36.9937383,
+                "lon": -93.418114
+              },
+              {
+                "lat": 36.9936483,
+                "lon": -93.4185482
+              }
+            ],
+            "treatment": "Use operator street-address destination as approximate venue placement only. Do not average points or assert entrance accuracy. Both are same-farm destinations, not conflicting venue identities.",
+            "blocksListing": false
+          }
+        ],
+        "runtimeImportAuthorized": false
+      },
+      "remaining_blockers": [],
+      "factual_clearance": true,
+      "radius_ready": true,
+      "subset": "recent",
+      "contract_summary": {
+        "visitor_address": "177 Carob Road, Clever, MO 65631",
+        "categories": [
+          "Haunted House / Haunted Attraction",
+          "Corn Maze",
+          "Pumpkin Patch"
+        ],
+        "approximate_placement_basis": "operator-site",
+        "hours_state": "partial",
+        "open_now_policy": "never",
+        "listing_expires_at": "2026-10-31T23:00:00-05:00",
+        "directions_target": {
+          "kind": "visitor-address",
+          "venueName": "Campbell’s Maze Daze & Pumpkin Patch",
+          "address": "177 Carob Road, Clever, MO 65631",
+          "coordinateOverrideAllowed": false
+        },
+        "independent_verification": "PENDING",
+        "implementation_authorized": false,
+        "runtime_active": false
+      }
+    },
+    {
+      "venue_id": "MO26-030",
+      "canonical_name": "Rutledge-Wilson Farm Park",
+      "factualClearance": "CLEARS FACTUALLY",
+      "spatialReadiness": "APPROXIMATE PLACEMENT READY",
+      "reviewedAt": "2026-10-08T02:37:30.513176+00:00",
+      "priorStatus": "HOLD",
+      "priorCorrectionQuality": "PASS",
+      "priorUnresolvedGates": [
+        "No numerical entrance/parking point established. Reopened event map labels parking but has no georeferencing; reopened KML point is a named-park placemark, not arrival.",
+        "Official 65802 postal address remains accepted as operator address; Census 65807 discrepancy preserved, not silently resolved."
+      ],
+      "decisionReason": "Fresh official 2026 identity/activity and visitor-address evidence support the accepted listing contract. Existing reviewed source-identifiable placement supports approximate radius/map use only; all Directions use visitor address. Remaining uncertainties are retained at field scope rather than converted to invented facts.",
+      "retiredOldGates": [
+        {
+          "gate": "Verified numerical parking/entrance point required for a listing",
+          "reason": "Official usable visitor street address suffices. Reviewed approximate placement is separate from address-based Directions."
+        },
+        {
+          "gate": "Complete exact hours or exact admission price required for a listing",
+          "reason": "Not a ListingCompletenessV1 prerequisite. Unknown/partial values are permitted and never Open Now."
+        },
+        {
+          "gate": "Previous 06:00 post-event archival grace window",
+          "reason": "Use exact supported event end, or next-local-midnight retention boundary when only final date is known; no inferred extra admission."
+        }
+      ],
+      "remainingBlockers": [],
+      "remainingNonblockingConflictsOrLimitations": [
+        {
+          "field": "postalCode",
+          "kind": "official_vs_geocoder_discrepancy",
+          "values": [
+            "official 65802",
+            "Census 65807"
+          ],
+          "treatment": "Keep official visitor address. Select labelled operator park map for placement instead of Census alternative.",
+          "blocksListing": false
+        }
+      ],
+      "evidence": [
+        {
+          "id": "030-home",
+          "url": "https://parkboard.org/265/Rutledge-Wilson-Farm-Park",
+          "finalUrl": "https://parkboard.org/265/Rutledge-Wilson-Farm-Park",
+          "checkedAt": "2026-10-08T02:33:41.192504+00:00",
+          "completedAt": "2026-10-08T02:33:46.587458+00:00",
+          "method": "Direct unauthenticated public HTTP GET",
+          "httpStatus": 200,
+          "capturePath": "phase2-reclearance/evidence/recent/030-home.html",
+          "sha256": "4c380b49c22422bc055848fb674a16b8e3296262bb1ef9c4f85d331b41dbcfac",
+          "bytes": 145884,
+          "error": null,
+          "claimScope": "Official park identity, 3825 W Farm Road 146 Springfield MO 65802 and north-side arrival directions; links same named-park map used for approximate placement. Ordinary park hours excluded.",
+          "role": "official_operator_or_authority",
+          "currentDirectCapture": true
+        },
+        {
+          "id": "030-harvest",
+          "url": "https://parkboard.org/harvestfest",
+          "finalUrl": "https://parkboard.org/harvestfest",
+          "checkedAt": "2026-10-08T02:33:41.194052+00:00",
+          "completedAt": "2026-10-08T02:33:46.623926+00:00",
+          "method": "Direct unauthenticated public HTTP GET",
+          "httpStatus": 200,
+          "capturePath": "phase2-reclearance/evidence/recent/030-harvest.html",
+          "sha256": "654d80e2af7eb67d23d45ecca2eb4ff1203e5d466ea42bcf4e341295184a13df",
+          "bytes": 120530,
+          "error": null,
+          "claimScope": "Current seasonal activities with separate corn-maze and pumpkin-patch schedules, known last date/time, fee and accompanied-child condition.",
+          "role": "official_operator_or_authority",
+          "currentDirectCapture": true
+        },
+        {
+          "id": "030-calendar",
+          "url": "https://parkboard.org/Calendar.aspx?EID=9795",
+          "finalUrl": "https://parkboard.org/Calendar.aspx?EID=9795",
+          "checkedAt": "2026-10-08T02:33:41.195477+00:00",
+          "completedAt": "2026-10-08T02:33:46.705589+00:00",
+          "method": "Direct unauthenticated public HTTP GET",
+          "httpStatus": 200,
+          "capturePath": "phase2-reclearance/evidence/recent/030-calendar.html",
+          "sha256": "d9c7ed27ac8fbe098cf3c742897f7b8afd1cdd07f4a1c4414af3c4c74fbca162",
+          "bytes": 154380,
+          "error": null,
+          "claimScope": "Explicit October 7, 2026 pumpkin-patch event at the same farm and visitor street address; links Harvest Fest details, anchoring the seasonal page to 2026.",
+          "role": "official_operator_or_authority",
+          "currentDirectCapture": true
+        }
+      ],
+      "retainedEvidence": [
+        {
+          "url": "https://parkboard.org/265/Rutledge-Wilson-Farm-Park",
+          "checkedAt": "2026-10-07T19:53:09.584220+00:00",
+          "capturePath": "clearance_audit2/internal_captures/rw.html",
+          "sha256": "a6b888d8b4290f457aa0a8fb3370a38f30f4e2b895db389ee7cc7dc3f01a528a",
+          "claimScope": null,
+          "retainedHistoricalEvidence": true
+        },
+        {
+          "url": "https://parkboard.org/harvestfest",
+          "checkedAt": "2026-10-07T19:53:14.050965+00:00",
+          "capturePath": "clearance_audit2/internal_captures/harvest.html",
+          "sha256": "654d80e2af7eb67d23d45ecca2eb4ff1203e5d466ea42bcf4e341295184a13df",
+          "claimScope": null,
+          "retainedHistoricalEvidence": true
+        },
+        {
+          "url": "https://parkboard.org/ImageRepository/Document?documentID=17576",
+          "checkedAt": "2026-10-07T19:53:57.856669+00:00",
+          "capturePath": "clearance_audit2/internal_captures/rw_event_map",
+          "sha256": "ef59f0f7b9f33b39e54445b5749ca7a57b271eb26c630b2a50edf200e36f29e3",
+          "claimScope": null,
+          "retainedHistoricalEvidence": true
+        },
+        {
+          "url": "https://www.google.com/maps/d/kml?mid=1GWi3uqBrcGQqN_iYWg4igElBk16fJnCe&forcekml=1",
+          "checkedAt": "2026-10-07T19:54:01.887666+00:00",
+          "capturePath": "clearance_audit2/internal_captures/rw_official_kml",
+          "sha256": "10bee54166abcb213bb3c448d8befde000d743225d0308f8d1cf016153abe4d8",
+          "claimScope": null,
+          "retainedHistoricalEvidence": true
+        },
+        {
+          "url": "https://parkboard.org/Calendar.aspx?EID=9795",
+          "checkedAt": "2026-10-07T19:54:58.408713+00:00",
+          "capturePath": "clearance_audit2/internal_captures/rw_calendar.html",
+          "sha256": "8e2c0aa4e46ae7663bb109bb8137f543fa6c892ff5820ae454ede01a83916e03",
+          "claimScope": null,
+          "retainedHistoricalEvidence": true
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-93.3632%2C37.1896%2C-93.3582%2C37.1931&bboxSR=4326&imageSR=4326&size=1000%2C900&format=jpg&f=image",
+          "checkedAt": "2026-10-07T19:57:11.737542+00:00",
+          "capturePath": "clearance_audit2/internal_captures/rw_aerial.jpg",
+          "sha256": "310b6f95a04aed24966548daf80264c06e793c43a3fcf0044101b72e1a26ebc2",
+          "claimScope": null,
+          "retainedHistoricalEvidence": true
+        },
+        {
+          "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=-93.3632%2C37.1896%2C-93.3582%2C37.1931&bboxSR=4326&imageSR=4326&size=1000%2C900&format=jpg&f=pjson",
+          "checkedAt": "2026-10-07T19:57:18.456934+00:00",
+          "capturePath": "clearance_audit2/internal_captures/rw_aerial_extent.json",
+          "sha256": "23541471d193892db83f0e87ef6dd1ea4794b632b2a6d58c5518964e76525f13",
+          "claimScope": null,
+          "retainedHistoricalEvidence": true
+        },
+        {
+          "url": "https://parkboard.org/harvestfest",
+          "checkedAt": "2026-10-07T20:15:46.729605+00:00",
+          "capturePath": "clearance_audit2/v2_captures/rutledge_harvest.html",
+          "sha256": "654d80e2af7eb67d23d45ecca2eb4ff1203e5d466ea42bcf4e341295184a13df",
+          "claimScope": "Retained correction source for v2 material visitor facts.",
+          "retainedHistoricalEvidence": true
+        }
+      ],
+      "sourceBaseline": {
+        "candidateFile": "clearance_audit2/frozen_v2/Missouri-Seasonal-2026-Clearance2-Candidates-v2.json",
+        "candidateProjectionSha256": "5297be005fa91f2d181f8e0a9f0867ebc7bb9ac2f0ce9bcacba579202aa0faf2",
+        "independentVerdictFile": "clearance_audit2/independent_v2/deliverables/Missouri-Seasonal-2026-Clearance2-Final-Independent-Verdicts-v2.json",
+        "originalCandidatesFile": "selection_inputs/Missouri-Seasonal-2026-Candidates.json",
+        "originalIndependentLedgerFile": "selection_inputs/Missouri-Seasonal-2026-Independent-Verification-Ledger.json",
+        "originalCensusOrCoordinateEvidence": {
+          "source_ref": "CENSUS-MO26-030",
+          "url": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=3825+W+Farm+Road+146%2C+Springfield%2C+MO+65802&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "retrieved_at": "2026-10-07T06:43:39.882710+00:00",
+          "method": "Census address-range interpolation",
+          "matched_address": "3825 W FARM RD 146, SPRINGFIELD, MO, 65807",
+          "response_sha256": "7a28b128ebdd1765cbf2529ed8e79a23d824221165b653282ab53a5617c13a02",
+          "precision_notes": "Approximate address-range point. Not surveyed, rooftop, parking, or verified entrance. Geocoder county follows this point.",
+          "independently_verified_entrance": false
+        },
+        "originalApproximatePoint": {
+          "lat": 37.190327,
+          "lon": -93.355112
+        },
+        "originalCoordinateAlternative": null,
+        "canonicalCorrectedProjectionFactsPreserved": true
+      },
+      "freshIndependentVerification": "PENDING",
+      "runtimeImportAuthorized": false,
+      "classification": "CLEARS UNDER NEW CONTRACT",
+      "corrected_projection": {
+        "venueId": "MO26-030",
+        "canonicalName": "Rutledge-Wilson Farm Park",
+        "aliases": [],
+        "contractRevision": "ListingCompletenessV1",
+        "reviewRevision": "MO2026-phase2-reclearance-recent-v1",
+        "seasonYear": 2026,
+        "visitorAddress": {
+          "text": "3825 W Farm Road 146, Springfield, MO 65802",
+          "city": "Springfield",
+          "region": "MO",
+          "postalCode": "65802",
+          "role": "visitor",
+          "sourceUrls": [
+            "https://parkboard.org/265/Rutledge-Wilson-Farm-Park",
+            "https://parkboard.org/Calendar.aspx?EID=9795"
+          ],
+          "checkedAt": "2026-10-08T02:33:41.195477+00:00"
+        },
+        "categories": [
+          "Corn Maze",
+          "Pumpkin Patch"
+        ],
+        "otherSubtypes": [],
+        "activities": [
+          {
+            "activity_type": "corn_maze",
+            "source_refs": [
+              "turn11view0",
+              "turn6search5",
+              "turn28search4"
+            ],
+            "evidence_scope": "2026",
+            "season_start": "2026-10-03",
+            "season_end": "2026-10-25",
+            "exact_active_dates": null,
+            "hours": null,
+            "schedule_scope": "See venue schedule and activity-specific restrictions; no opening interval inferred.",
+            "activity_id": "MO26-030-A01",
+            "category_currently_supported": true
+          },
+          {
+            "activity_type": "pumpkin_patch",
+            "source_refs": [
+              "turn11view0",
+              "turn6search5",
+              "turn28search4"
+            ],
+            "evidence_scope": "2026",
+            "season_start": "2026-09-29",
+            "season_end": "2026-10-25",
+            "exact_active_dates": null,
+            "hours": null,
+            "schedule_scope": "See venue schedule and activity-specific restrictions; no opening interval inferred.",
+            "activity_id": "MO26-030-A02",
+            "category_currently_supported": true
+          },
+          {
+            "activity_type": "hayride",
+            "source_refs": [
+              "turn11view0",
+              "turn6search5",
+              "turn28search4"
+            ],
+            "evidence_scope": "2026",
+            "season_start": null,
+            "season_end": null,
+            "exact_active_dates": null,
+            "hours": null,
+            "schedule_scope": "See venue schedule and activity-specific restrictions; no opening interval inferred.",
+            "activity_id": "MO26-030-A03",
+            "category_currently_supported": false
+          }
+        ],
+        "seasonEvidence": {
+          "sourceUrls": [
+            "https://parkboard.org/265/Rutledge-Wilson-Farm-Park",
+            "https://parkboard.org/harvestfest",
+            "https://parkboard.org/Calendar.aspx?EID=9795"
+          ],
+          "checkedAt": "2026-10-08T02:33:41.195477+00:00",
+          "claimScope": "Identity, supported seasonal activities and explicit current 2026 operation; source-specific scope is in evidence.",
+          "accepted": true
+        },
+        "seasonStartDate": "2026-09-29",
+        "seasonEndDate": "2026-10-25",
+        "exactActiveDates": null,
+        "hours": {
+          "state": "verified",
+          "displayText": "Harvest Fest Oct 3–25: Sat 11:00–18:00, Sun 12:00–18:00. Pumpkin patch Sep 29–Oct 25: Tue–Fri 09:00–17:00, Sat 11:00–18:00, Sun 12:00–18:00; Mon closed.",
+          "timezone": "America/Chicago",
+          "openNowPolicy": "never",
+          "machineSchedule": null,
+          "lastAdmission": null,
+          "verificationScope": "Source-supported display only; no separately tested date-specific machine schedule is provided. Conflicts, variable darkness/final exit and weather exceptions are not inferred."
+        },
+        "admission": {
+          "displayText": "Festival entry is free; individual activities carry separate charges. Corn maze: adults $4; ages 5–11 $3; ages 4 and younger enter free only when accompanied by an adult.",
+          "amount": null,
+          "currency": null,
+          "priceLevel": null,
+          "finalCheckoutQuote": false,
+          "ageFamilyText": "Corn maze welcomes all ages; free admission for children aged 4 or younger requires an accompanying adult."
+        },
+        "materialNotes": [
+          "Festival entry is free; activities carry separate fees and pumpkins are priced by weight.",
+          "Corn-maze free admission for ages 4 and younger requires an accompanying adult.",
+          "Corn maze: October 3–25 weekends only. Pumpkin patch: September 29–October 25, closed Mondays; do not apply ordinary farm-park hours to either activity.",
+          "Use the farm address, never Park Board headquarters. Drive west along Farm Road 146 through the roundabout; park entrance is north of the road opposite Stonehinge subdivision.",
+          "Operator ZIP 65802 and Census match ZIP 65807 remain different. Official visitor address and named-park map are retained; Census ZIP is not substituted."
+        ],
+        "accessibilityAndEntryText": null,
+        "lifecycle": {
+          "timezone": "America/Chicago",
+          "eventEndsAt": "2026-10-25T18:00:00-05:00",
+          "lastSourcedActiveDate": "2026-10-25",
+          "listingExpiresAt": "2026-10-25T18:00:00-05:00",
+          "listingExpiresAtUtc": "2026-10-25T23:00:00+00:00",
+          "expiryBasis": "known exact final activity end",
+          "expiryIsAdmissionOrHoursClaim": false,
+          "no2027Rollover": true,
+          "closed": false,
+          "cancelled": false,
+          "negativeStatusScope": "No terminal cancellation/closure observed in the specific reopened official sources; not a guarantee against subsequent changes.",
+          "eventEndEvidenceScope": "Supported exact final seasonal activity closing instant"
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "venueName": "Rutledge-Wilson Farm Park",
+          "address": "3825 W Farm Road 146, Springfield, MO 65802",
+          "coordinateOverrideAllowed": false
+        },
+        "placement": {
+          "lat": 37.191319,
+          "lon": -93.360734,
+          "basis": "operator-site",
+          "sourceUrl": "https://www.google.com/maps/d/kml?mid=1GWi3uqBrcGQqN_iYWg4igElBk16fJnCe&forcekml=1",
+          "sourceCheckedAt": "2026-10-07T19:54:01.887666+00:00",
+          "capturePath": "clearance_audit2/internal_captures/rw_official_kml",
+          "captureSha256": "10bee54166abcb213bb3c448d8befde000d743225d0308f8d1cf016153abe4d8",
+          "matchedEntity": "KML placemark explicitly named Rutledge-Wilson Farm Community Park. Fresh official park page still embeds the same map ID.",
+          "selectionReason": "Official named-park point is fit for approximate park placement; not exact seasonal activity, parking or entrance. Prefer it over the Census address interpolation with ZIP discrepancy.",
+          "reviewedAt": "2026-10-08T02:37:30.513176+00:00",
+          "precisionLabel": "Approximate venue location",
+          "entranceVerified": false,
+          "suitableFor": "approximate map/radius placement only",
+          "directionsCoordinateUseAllowed": false
+        },
+        "browseEligibleUnderContract": true,
+        "radiusReadyUnderContract": true,
+        "distanceLabel": "Approx. distance",
+        "rideshareTargetPolicy": "Generic external ride-service launch; never use approximate placement as precise dropoff.",
+        "visitorNotice": {
+          "text": "Check the venue for current hours, admission, and weather updates.",
+          "url": "https://parkboard.org/harvestfest"
+        },
+        "sourceConflictsAndLimits": [
+          {
+            "field": "postalCode",
+            "kind": "official_vs_geocoder_discrepancy",
+            "values": [
+              "official 65802",
+              "Census 65807"
+            ],
+            "treatment": "Keep official visitor address. Select labelled operator park map for placement instead of Census alternative.",
+            "blocksListing": false
+          }
+        ],
+        "runtimeImportAuthorized": false
+      },
+      "remaining_blockers": [],
+      "factual_clearance": true,
+      "radius_ready": true,
+      "subset": "recent",
+      "contract_summary": {
+        "visitor_address": "3825 W Farm Road 146, Springfield, MO 65802",
+        "categories": [
+          "Corn Maze",
+          "Pumpkin Patch"
+        ],
+        "approximate_placement_basis": "operator-site",
+        "hours_state": "verified",
+        "open_now_policy": "never",
+        "listing_expires_at": "2026-10-25T18:00:00-05:00",
+        "directions_target": {
+          "kind": "visitor-address",
+          "venueName": "Rutledge-Wilson Farm Park",
+          "address": "3825 W Farm Road 146, Springfield, MO 65802",
+          "coordinateOverrideAllowed": false
+        },
+        "independent_verification": "PENDING",
+        "implementation_authorized": false,
+        "runtime_active": false
+      }
+    }
+  ]
+}

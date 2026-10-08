@@ -82,6 +82,12 @@ jobs:
           VITE_AUTH_ENABLED: "true"
         run: node scripts/missouri-two-record-browser.mjs
 
+      - name: Exercise seasonal listing completeness V1 in local Chromium
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+        run: node scripts/seasonal-completeness-v1-browser.mjs
+
       - name: Preserve browser evidence
         if: always()
         uses: actions/upload-artifact@v4

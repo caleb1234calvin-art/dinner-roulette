@@ -59,7 +59,7 @@ test("live duplicate cannot invent opening hours, erase expiry, arrival or restr
   assert.equal(pool(merged,at,true).length,0);
   assert.equal(pool(merged,new Date("2027-10-10T18:00:00Z")).length,0);
   const dest=new URL(directionsUrl(merged)).searchParams.get("destination");
-  assert.equal(dest,`${row.lat},${row.lon}`);
+  assert.equal(dest,row.seasonalListing.directionsTarget.kind === "visitor-address" ? row.address : `${row.lat},${row.lon}`);
  }
 });
 test("real handler finds only the two regional additions; Other makes zero provider requests", async(t)=>{

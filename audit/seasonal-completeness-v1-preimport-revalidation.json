@@ -1,0 +1,541 @@
+{
+  "scope": "Bounded pre-import factual revalidation only. Not runtime, import, implementation or release PASS.",
+  "checkedAt": "2026-10-08T04:01:18.737824+00:00",
+  "candidateSha256": "76896ea4131f68927b7287eb46cda1d25b8993dd28527b0a2d072a72ef9ef1a6",
+  "verdict": "NO FACTUAL DELTA OBSERVED",
+  "materialDrift": false,
+  "hold": false,
+  "freshnessLimit": "Spooktacular direct HTTP 406 persisted; successful web reopen offers crawl today/home and yesterday/FAQ, identical extracted factual lines to original. No live cancellation or availability guarantee.",
+  "records": [
+    {
+      "venueId": "MO26-003",
+      "canonicalName": "RIP at Myer\u2019s Inn",
+      "verdict": "NO FACTUAL DELTA OBSERVED",
+      "sourceIds": [
+        "source-1",
+        "source-2"
+      ],
+      "preserveExactFrozenProjection": true,
+      "qualifiedFacts": {
+        "season_year": 2026,
+        "categories": [
+          "Haunted House"
+        ],
+        "visitor_address": "529 West Airport Drive, Carthage, MO 64836",
+        "directions_target": {
+          "kind": "visitor-address",
+          "address": "529 West Airport Drive, Carthage, MO 64836",
+          "venue_name": "RIP at Myer\u2019s Inn"
+        },
+        "hours": {
+          "state": "partial",
+          "display_text": "Fridays and Saturdays in October 2026: doors open 19:00; last ticket sold at 00:00 next day. Final exit/closing time unspecified.",
+          "machine_opening_intervals": null,
+          "open_now_policy": "never"
+        },
+        "admission": {
+          "display_text": "$20; three-location combo $60 does not make the three locations one venue.",
+          "source_url": "https://www.myersinnhaunt.com/",
+          "current_inventory_guarantee": false
+        },
+        "details": {
+          "age_restrictions": null,
+          "accessibility": null,
+          "ticket_restrictions": null,
+          "schedule_events_display_only": null,
+          "qualified_notes": [
+            "Start/end expanded from explicit October 2026 Friday/Saturday recurrence; closing after final ticket is unspecified."
+          ]
+        },
+        "lifecycle": {
+          "timezone": "America/Chicago",
+          "season_start": "2026-10-02",
+          "season_end": "2026-10-31",
+          "exact_active_dates": [
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "event_start": null,
+          "event_end": null,
+          "listing_expires_at": "2026-11-01T00:00:00-05:00",
+          "expiry_basis": "Accepted date-only retention: midnight beginning the local day after the final explicit operating date, October 31. This is not an operator closing time or final exit.",
+          "editorial_cutoff": false,
+          "no_2027_rollover": true,
+          "date_only_retention": true
+        }
+      }
+    },
+    {
+      "venueId": "MO26-010",
+      "canonicalName": "The Aftermath Haunted Attraction",
+      "verdict": "NO FACTUAL DELTA OBSERVED",
+      "sourceIds": [
+        "source-3",
+        "source-4"
+      ],
+      "preserveExactFrozenProjection": true,
+      "qualifiedFacts": {
+        "season_year": 2026,
+        "categories": [
+          "Haunted House"
+        ],
+        "visitor_address": "2520 Jaguar Road, Joplin, MO 64804",
+        "directions_target": {
+          "kind": "visitor-address",
+          "address": "2520 Jaguar Road, Joplin, MO 64804",
+          "venue_name": "The Aftermath Haunted Attraction"
+        },
+        "hours": {
+          "state": "partial",
+          "display_text": "On the 12 listed 2026 nights: gates and ticket booth 18:00; first walk-through 19:30; last ticket sale 23:30; last walk-through 00:30 the following day. Final exit/closing is not established. FAQ also gives generic 18:00\u201300:00 hours and allows later operation; do not convert this into a hard close.",
+          "machine_opening_intervals": null,
+          "open_now_policy": "never"
+        },
+        "admission": {
+          "display_text": "$20 per attraction; both-haunts offer $30. Price statement is operator advertised base price, not verified final checkout total.",
+          "source_url": "https://spooktacularstudios.com/",
+          "current_inventory_guarantee": false
+        },
+        "details": {
+          "age_restrictions": "Recommended for adults, older teens and mature audiences; not recommended for young children. No strict minimum age is stated, and younger children may attend at parental discretion. Carrying babies or infants is prohibited; no special child pricing.",
+          "accessibility": "Operator FAQ says the attractions are not wheelchair accessible.",
+          "ticket_restrictions": "Operator FAQ: all sales final/no refunds. If operator closes a purchased night, tickets honored on another open night.",
+          "schedule_events_display_only": [
+            {
+              "event": "gates_open",
+              "local_time": "18:00",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-HOME",
+                "SP-AFTER"
+              ]
+            },
+            {
+              "event": "ticket_booth_open",
+              "local_time": "18:00",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-FAQ"
+              ]
+            },
+            {
+              "event": "first_walk_through",
+              "local_time": "19:30",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-HOME",
+                "SP-FAQ",
+                "SP-AFTER"
+              ]
+            },
+            {
+              "event": "last_ticket_sale",
+              "local_time": "23:30",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-HOME",
+                "SP-FAQ",
+                "SP-AFTER"
+              ]
+            },
+            {
+              "event": "last_walk_through",
+              "local_time": "00:30",
+              "day_offset": 1,
+              "status": "SUPPORTED; next-day interpretation follows overnight ordering",
+              "source_refs": [
+                "SP-HOME",
+                "SP-FAQ",
+                "SP-AFTER"
+              ]
+            },
+            {
+              "event": "final_exit_or_close",
+              "local_time": null,
+              "day_offset": null,
+              "status": "UNRESOLVED; FAQ generic midnight wording differs from explicit 00:30 last walk and allows later operation",
+              "source_refs": [
+                "SP-FAQ"
+              ]
+            }
+          ],
+          "qualified_notes": [
+            "Same Spooktacular Studios operator, two different attractions at separate addresses. Keep separate; combo is not a third venue.",
+            "Operator says light rain operation is possible; heavy rain or lightning can close the attractions. Check operator updates close to visit. No current cancellation was established in reviewed sources; absence of notice is not live availability.",
+            "FAQ generic midnight operating-hours text must not override the explicit 00:30 last walk.",
+            "The event-page 18:00\u201323:30 wrapper describes the gate/sale window; it does not establish final exit."
+          ],
+          "material_access_notice": {
+            "text": "No costumes. The operator warns of intense strobes and does not recommend attendance for people with epilepsy, pregnancy, heart issues, or conditions affecting breathing, vision or walking; flashing-light accommodations are not guaranteed.",
+            "source_url": "https://spooktacularstudios.com/faq/",
+            "scope": "Operator suitability advice, not a newly inferred medical prohibition."
+          }
+        },
+        "lifecycle": {
+          "timezone": "America/Chicago",
+          "season_start": "2026-09-25",
+          "season_end": "2026-10-31",
+          "exact_active_dates": [
+            "2026-09-25",
+            "2026-09-26",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "event_start": null,
+          "event_end": null,
+          "listing_expires_at": "2026-11-01T00:00:00-05:00",
+          "expiry_basis": "Accepted date-only retention: midnight beginning the local day after the final explicit operating date, October 31. This is not an operator closing time or final exit.",
+          "editorial_cutoff": false,
+          "no_2027_rollover": true,
+          "date_only_retention": true
+        }
+      }
+    },
+    {
+      "venueId": "MO26-011",
+      "canonicalName": "Beyond The Outer Limits",
+      "verdict": "NO FACTUAL DELTA OBSERVED",
+      "sourceIds": [
+        "source-3",
+        "source-4"
+      ],
+      "preserveExactFrozenProjection": true,
+      "qualifiedFacts": {
+        "season_year": 2026,
+        "categories": [
+          "Haunted House"
+        ],
+        "visitor_address": "2163 Jaguar Road, Joplin, MO 64804",
+        "directions_target": {
+          "kind": "visitor-address",
+          "address": "2163 Jaguar Road, Joplin, MO 64804",
+          "venue_name": "Beyond The Outer Limits"
+        },
+        "hours": {
+          "state": "partial",
+          "display_text": "On the 12 listed 2026 nights: gates and ticket booth 18:00; first walk-through 19:30; last ticket sale 23:30; last walk-through 00:30 the following day. Final exit/closing is not established. FAQ also gives generic 18:00\u201300:00 hours and allows later operation; do not convert this into a hard close.",
+          "machine_opening_intervals": null,
+          "open_now_policy": "never"
+        },
+        "admission": {
+          "display_text": "$20 per attraction; both-haunts offer $30. Price statement is operator advertised base price, not verified final checkout total.",
+          "source_url": "https://spooktacularstudios.com/",
+          "current_inventory_guarantee": false
+        },
+        "details": {
+          "age_restrictions": "Recommended for adults, older teens and mature audiences; not recommended for young children. No strict minimum age is stated, and younger children may attend at parental discretion. Carrying babies or infants is prohibited; no special child pricing.",
+          "accessibility": "Operator FAQ says the attractions are not wheelchair accessible.",
+          "ticket_restrictions": "Operator FAQ: all sales final/no refunds. If operator closes a purchased night, tickets honored on another open night.",
+          "schedule_events_display_only": [
+            {
+              "event": "gates_open",
+              "local_time": "18:00",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-HOME",
+                "SP-BEYOND"
+              ]
+            },
+            {
+              "event": "ticket_booth_open",
+              "local_time": "18:00",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-FAQ"
+              ]
+            },
+            {
+              "event": "first_walk_through",
+              "local_time": "19:30",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-HOME",
+                "SP-FAQ",
+                "SP-BEYOND"
+              ]
+            },
+            {
+              "event": "last_ticket_sale",
+              "local_time": "23:30",
+              "day_offset": 0,
+              "status": "SUPPORTED",
+              "source_refs": [
+                "SP-HOME",
+                "SP-FAQ",
+                "SP-BEYOND"
+              ]
+            },
+            {
+              "event": "last_walk_through",
+              "local_time": "00:30",
+              "day_offset": 1,
+              "status": "SUPPORTED; next-day interpretation follows overnight ordering",
+              "source_refs": [
+                "SP-HOME",
+                "SP-FAQ",
+                "SP-BEYOND"
+              ]
+            },
+            {
+              "event": "final_exit_or_close",
+              "local_time": null,
+              "day_offset": null,
+              "status": "UNRESOLVED; FAQ generic midnight wording differs from explicit 00:30 last walk and allows later operation",
+              "source_refs": [
+                "SP-FAQ"
+              ]
+            }
+          ],
+          "qualified_notes": [
+            "Same Spooktacular Studios operator, two different attractions at separate addresses. Keep separate; combo is not a third venue.",
+            "Operator says light rain operation is possible; heavy rain or lightning can close the attractions. Check operator updates close to visit. No current cancellation was established in reviewed sources; absence of notice is not live availability.",
+            "FAQ generic midnight operating-hours text must not override the explicit 00:30 last walk.",
+            "The event-page 18:00\u201323:30 wrapper describes the gate/sale window; it does not establish final exit.",
+            "Beyond event-page organizer block uses 417-312-7988, while the same page venue block, live site header and delegated ticket pages use 417-317-7988. Retain the corroborated venue phone; do not silently use organizer typo."
+          ],
+          "material_access_notice": {
+            "text": "No costumes. The operator warns of intense strobes and does not recommend attendance for people with epilepsy, pregnancy, heart issues, or conditions affecting breathing, vision or walking; flashing-light accommodations are not guaranteed.",
+            "source_url": "https://spooktacularstudios.com/faq/",
+            "scope": "Operator suitability advice, not a newly inferred medical prohibition."
+          }
+        },
+        "lifecycle": {
+          "timezone": "America/Chicago",
+          "season_start": "2026-09-25",
+          "season_end": "2026-10-31",
+          "exact_active_dates": [
+            "2026-09-25",
+            "2026-09-26",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "event_start": null,
+          "event_end": null,
+          "listing_expires_at": "2026-11-01T00:00:00-05:00",
+          "expiry_basis": "Accepted date-only retention: midnight beginning the local day after the final explicit operating date, October 31. This is not an operator closing time or final exit.",
+          "editorial_cutoff": false,
+          "no_2027_rollover": true,
+          "date_only_retention": true
+        }
+      }
+    },
+    {
+      "venueId": "MO26-029",
+      "canonicalName": "Campbell\u2019s Maze Daze & Pumpkin Patch",
+      "verdict": "NO FACTUAL DELTA OBSERVED",
+      "sourceIds": [
+        "source-5",
+        "source-6"
+      ],
+      "preserveExactFrozenProjection": true,
+      "qualifiedFacts": {
+        "seasonYear": 2026,
+        "visitorAddress": {
+          "text": "177 Carob Road, Clever, MO 65631",
+          "city": "Clever",
+          "region": "MO",
+          "postalCode": "65631",
+          "role": "visitor",
+          "sourceUrls": [
+            "https://www.campbellsmazedaze.com/"
+          ],
+          "checkedAt": "2026-10-08T02:33:41.191327+00:00"
+        },
+        "categories": [
+          "Haunted House / Haunted Attraction",
+          "Corn Maze",
+          "Pumpkin Patch"
+        ],
+        "hours": {
+          "state": "partial",
+          "displayText": "Sep 26\u201327 12:00\u201319:00; October Fri 18:00\u201323:00, Sat 14:00\u201323:00, Sun through Oct 25 12:00\u201319:00. Haunted maze starts Oct 2, after dark Fridays/Saturdays. Weekday public entry unavailable; groups require reservations. Last-admission conflict: homepage says one hour before closing and separately 21:00 on October Fridays/Saturdays. No normalized last-admission value accepted.",
+          "timezone": "America/Chicago",
+          "openNowPolicy": "never",
+          "machineSchedule": null,
+          "lastAdmission": null,
+          "verificationScope": "Source-supported display only; no separately tested date-specific machine schedule is provided. Conflicts, variable darkness/final exit and weather exceptions are not inferred."
+        },
+        "admission": {
+          "displayText": "Everyone entering must sign a liability waiver. Ages 4 and younger enter free but do not receive a free mini pumpkin. September 26 and 27: $10 per paying visitor. October Fridays 2\u201330: $12 per paying visitor. October Saturdays 3\u201331: adults $14 by card or $13 cash; children ages 5\u201312 $12. October Sundays 4\u201325: $12 per paying visitor. Paid children ages 5\u201312 receive a mini pumpkin and decorating until 18:00, while supplies last; mini pumpkins for other children may be purchased for $4. Published admission amounts are not a guaranteed final checkout quote.",
+          "amount": null,
+          "currency": null,
+          "priceLevel": null,
+          "finalCheckoutQuote": false,
+          "ageFamilyText": "Family attraction; ages 4 and younger have free entry, with the paid-child mini-pumpkin benefit limited to ages 5\u201312."
+        },
+        "materialNotes": [
+          "Every visitor must sign the operator liability waiver before entering.",
+          "Public walk-ins are Friday\u2013Sunday on the listed seasonal dates; weekday and weeknight groups require reservations and are not public walk-in hours.",
+          "The operator states both last admission one hour before closing and 21:00 on October Fridays/Saturdays despite a 23:00 closing. Last-admission time remains unknown; confirm with the venue before a late visit.",
+          "The haunted maze starts October 2 and operates after dark on October Fridays/Saturdays.",
+          "Free entry for ages 4 and younger excludes the free mini pumpkin. Paid ages 5\u201312 receive the mini-pumpkin/decorating benefit until 18:00 while supplies last."
+        ],
+        "lifecycle": {
+          "timezone": "America/Chicago",
+          "eventEndsAt": "2026-10-31T23:00:00-05:00",
+          "lastSourcedActiveDate": "2026-10-31",
+          "listingExpiresAt": "2026-10-31T23:00:00-05:00",
+          "listingExpiresAtUtc": "2026-11-01T04:00:00+00:00",
+          "expiryBasis": "known exact final activity end",
+          "expiryIsAdmissionOrHoursClaim": false,
+          "no2027Rollover": true,
+          "closed": false,
+          "cancelled": false,
+          "negativeStatusScope": "No terminal cancellation/closure observed in the specific reopened official sources; not a guarantee against subsequent changes.",
+          "eventEndEvidenceScope": "Supported exact final seasonal activity closing instant"
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "venueName": "Campbell\u2019s Maze Daze & Pumpkin Patch",
+          "address": "177 Carob Road, Clever, MO 65631",
+          "coordinateOverrideAllowed": false
+        },
+        "sourceConflictsAndLimits": [
+          {
+            "field": "hours.lastAdmission",
+            "kind": "unresolved_source_conflict",
+            "values": [
+              "one hour before closing (22:00 for a 23:00 finish)",
+              "21:00 October Fridays/Saturdays"
+            ],
+            "treatment": "null; hours partial; both statements retained and visitor warning required",
+            "blocksListing": false
+          },
+          {
+            "field": "placement",
+            "kind": "property_scale_alternatives",
+            "values": [
+              {
+                "lat": 36.9937383,
+                "lon": -93.418114
+              },
+              {
+                "lat": 36.9936483,
+                "lon": -93.4185482
+              }
+            ],
+            "treatment": "Use operator street-address destination as approximate venue placement only. Do not average points or assert entrance accuracy. Both are same-farm destinations, not conflicting venue identities.",
+            "blocksListing": false
+          }
+        ]
+      }
+    },
+    {
+      "venueId": "MO26-030",
+      "canonicalName": "Rutledge-Wilson Farm Park",
+      "verdict": "NO FACTUAL DELTA OBSERVED",
+      "sourceIds": [
+        "source-7",
+        "source-8",
+        "source-9"
+      ],
+      "preserveExactFrozenProjection": true,
+      "qualifiedFacts": {
+        "seasonYear": 2026,
+        "visitorAddress": {
+          "text": "3825 W Farm Road 146, Springfield, MO 65802",
+          "city": "Springfield",
+          "region": "MO",
+          "postalCode": "65802",
+          "role": "visitor",
+          "sourceUrls": [
+            "https://parkboard.org/265/Rutledge-Wilson-Farm-Park",
+            "https://parkboard.org/Calendar.aspx?EID=9795"
+          ],
+          "checkedAt": "2026-10-08T02:33:41.195477+00:00"
+        },
+        "categories": [
+          "Corn Maze",
+          "Pumpkin Patch"
+        ],
+        "hours": {
+          "state": "verified",
+          "displayText": "Harvest Fest Oct 3\u201325: Sat 11:00\u201318:00, Sun 12:00\u201318:00. Pumpkin patch Sep 29\u2013Oct 25: Tue\u2013Fri 09:00\u201317:00, Sat 11:00\u201318:00, Sun 12:00\u201318:00; Mon closed.",
+          "timezone": "America/Chicago",
+          "openNowPolicy": "never",
+          "machineSchedule": null,
+          "lastAdmission": null,
+          "verificationScope": "Source-supported display only; no separately tested date-specific machine schedule is provided. Conflicts, variable darkness/final exit and weather exceptions are not inferred."
+        },
+        "admission": {
+          "displayText": "Festival entry is free; individual activities carry separate charges. Corn maze: adults $4; ages 5\u201311 $3; ages 4 and younger enter free only when accompanied by an adult.",
+          "amount": null,
+          "currency": null,
+          "priceLevel": null,
+          "finalCheckoutQuote": false,
+          "ageFamilyText": "Corn maze welcomes all ages; free admission for children aged 4 or younger requires an accompanying adult."
+        },
+        "materialNotes": [
+          "Festival entry is free; activities carry separate fees and pumpkins are priced by weight.",
+          "Corn-maze free admission for ages 4 and younger requires an accompanying adult.",
+          "Corn maze: October 3\u201325 weekends only. Pumpkin patch: September 29\u2013October 25, closed Mondays; do not apply ordinary farm-park hours to either activity.",
+          "Use the farm address, never Park Board headquarters. Drive west along Farm Road 146 through the roundabout; park entrance is north of the road opposite Stonehinge subdivision.",
+          "Operator ZIP 65802 and Census match ZIP 65807 remain different. Official visitor address and named-park map are retained; Census ZIP is not substituted."
+        ],
+        "lifecycle": {
+          "timezone": "America/Chicago",
+          "eventEndsAt": "2026-10-25T18:00:00-05:00",
+          "lastSourcedActiveDate": "2026-10-25",
+          "listingExpiresAt": "2026-10-25T18:00:00-05:00",
+          "listingExpiresAtUtc": "2026-10-25T23:00:00+00:00",
+          "expiryBasis": "known exact final activity end",
+          "expiryIsAdmissionOrHoursClaim": false,
+          "no2027Rollover": true,
+          "closed": false,
+          "cancelled": false,
+          "negativeStatusScope": "No terminal cancellation/closure observed in the specific reopened official sources; not a guarantee against subsequent changes.",
+          "eventEndEvidenceScope": "Supported exact final seasonal activity closing instant"
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "venueName": "Rutledge-Wilson Farm Park",
+          "address": "3825 W Farm Road 146, Springfield, MO 65802",
+          "coordinateOverrideAllowed": false
+        },
+        "sourceConflictsAndLimits": [
+          {
+            "field": "postalCode",
+            "kind": "official_vs_geocoder_discrepancy",
+            "values": [
+              "official 65802",
+              "Census 65807"
+            ],
+            "treatment": "Keep official visitor address. Select labelled operator park map for placement instead of Census alternative.",
+            "blocksListing": false
+          }
+        ]
+      }
+    }
+  ]
+}

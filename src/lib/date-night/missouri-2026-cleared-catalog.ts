@@ -55,7 +55,8 @@ export const MISSOURI_2026_CLEARED_SEASONAL_CATALOG: DateNightPlace[] = [
       "sourceUrls": [
         "https://www.lloydsfamilyfarm.com/fallfestival"
       ],
-      "note": "2026-only cleared factual projection; no machine opening intervals. Final activity end is not the November 1 archive cutoff."
+      "note": "2026-only cleared factual projection; no machine opening intervals. Final activity end is not the November 1 archive cutoff.",
+      "seasonYear": 2026
     },
     "seasonalVisitNotes": [
       "2026 dates: September 26–27; October 3–4, 10–11, 17–18, 24–25 and 31.",
@@ -65,7 +66,35 @@ export const MISSOURI_2026_CLEARED_SEASONAL_CATALOG: DateNightPlace[] = [
       "Weather may cancel operations or close activities. Check the operator within 24 hours before visiting. Live ticket inventory and current social cancellations are not assured.",
       "Approximate operator navigation/site arrival at the farm turning-loop area from Route Y. Not a surveyed gate, driveway edge, parking stall or doorway.",
       "Schedule checked October 7, 2026; periodic review due October 14. These dated details do not establish Open Now."
-    ]
+    ],
+    "seasonalListing": {
+      "contract": "ListingCompletenessV1",
+      "timeZone": "America/Chicago",
+      "recordId": "MO26-068",
+      "seasonYear": 2026,
+      "visitorAddress": "7015 E Route Y, Ashland, MO 65010",
+      "placement": {
+        "lat": 38.7746696,
+        "lon": -92.2372283,
+        "basis": "operator-site",
+        "sourceUrl": "https://www.lloydsfamilyfarm.com/fallfestival",
+        "checkedAt": "2026-10-07",
+        "precisionLabel": "Approximate operator-designated site arrival"
+      },
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "7015 E Route Y, Ashland, MO 65010"
+      },
+      "hours": {
+        "state": "verified"
+      },
+      "listingExpiresAt": "2026-10-31T16:00:00-05:00",
+      "expiryBasis": "exact",
+      "sourceUrls": [
+        "https://www.lloydsfamilyfarm.com/fallfestival"
+      ],
+      "reviewRevision": "Shipped-two-record-corrected-projections-2026-10-07"
+    }
   },
   {
     "id": "date-night-mo26-116-sam-baker-halloween-bash",
@@ -105,7 +134,8 @@ export const MISSOURI_2026_CLEARED_SEASONAL_CATALOG: DateNightPlace[] = [
       "sourceUrls": [
         "https://mostateparks.com/event/halloween-bash-2026"
       ],
-      "note": "2026-only cleared factual projection; no machine opening intervals. Final activity end is not the November 1 archive cutoff."
+      "note": "2026-only cleared factual projection; no machine opening intervals. Final activity end is not the November 1 archive cutoff.",
+      "seasonYear": 2026
     },
     "seasonalVisitNotes": [
       "October 31, 2026 only, America/Chicago. October 31: campground trick-or-treating 14:00–16:00; trunk-or-treat at recycling station by Mudlick Mountain Store 14:00–17:00; games and interpretive activities, free food, photo booth, campfire and s’mores at Mudlick Mountain Grill 15:00–18:00.",
@@ -113,6 +143,36 @@ export const MISSOURI_2026_CLEARED_SEASONAL_CATALOG: DateNightPlace[] = [
       "Event may be cancelled for inclement weather; recheck before use. Recheck within 48 hours of the event.",
       "Official free parking: lot next to Shelter 1. Activities are at the campgrounds, store recycling station and grill. Parking coordinates are operator-designated, not survey-grade or an exact doorway.",
       "Schedule checked October 7, 2026; periodic review due October 14. These dated details do not establish Open Now."
-    ]
+    ],
+    "seasonalListing": {
+      "contract": "ListingCompletenessV1",
+      "timeZone": "America/Chicago",
+      "recordId": "MO26-116",
+      "seasonYear": 2026,
+      "visitorAddress": "5580 State Highway 143, Patterson, MO",
+      "placement": {
+        "lat": 37.259288,
+        "lon": -90.505404,
+        "basis": "verified-arrival",
+        "sourceUrl": "https://mostateparks.com/event/halloween-bash-2026",
+        "checkedAt": "2026-10-07",
+        "precisionLabel": "Official parking next to Shelter 1; not survey-grade"
+      },
+      "directionsTarget": {
+        "kind": "verified-point",
+        "lat": 37.259288,
+        "lon": -90.505404,
+        "description": "Official free parking next to Shelter 1"
+      },
+      "hours": {
+        "state": "verified"
+      },
+      "listingExpiresAt": "2026-10-31T18:00:00-05:00",
+      "expiryBasis": "exact",
+      "sourceUrls": [
+        "https://mostateparks.com/event/halloween-bash-2026"
+      ],
+      "reviewRevision": "Shipped-two-record-corrected-projections-2026-10-07"
+    }
   }
 ];

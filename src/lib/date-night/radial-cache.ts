@@ -1,3 +1,4 @@
+import { hasReviewedSeasonalPlacement } from "./listing";
 import { createDateNightDiscoveryCache, type DateNightAcquisition } from "./cache";
 import { mergeDateNight } from "./identity";
 import { normalizeDateNightActivityTypes } from "./query-plan";
@@ -42,5 +43,6 @@ export function createDateNightRadialCache(options: Parameters<typeof createDate
 
 /** Geographic eligibility never expands by the query-circle safety margin. */
 export function clipDateNightRadius(venues: DateNightPlace[], query: Pick<DateNightAcquisition, "lat" | "lon" | "radiusMiles">) {
-  return venues.filter(p => haversineMiles(query.lat, query.lon, p.lat, p.lon) <= query.radiusMiles + 1e-8);
+  return venues.filter(p => (!p.seasonalListing || hasReviewedSeasonalPlacement(p.seasonalListing)) &&
+    haversineMiles(query.lat, query.lon, p.lat, p.lon) <= query.radiusMiles + 1e-8);
 }

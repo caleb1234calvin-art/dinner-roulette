@@ -8,10 +8,10 @@ import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 assert.equal(process.env.CI, "true");
 const proof = assertBrowserBuild();
-const output = resolve("audit/browser-results/missouri-two-records");
+const output = resolve("audit/browser-results/seasonal-completeness-v1");
 await mkdir(output, { recursive: true });
 const control = resolve(output, "control.json"), events = resolve(output, "events.jsonl");
-const origin = "http://127.0.0.1:8097", defaultAt = "2026-10-07T18:00:00Z";
+const origin = "http://127.0.0.1:8098", defaultAt = "2026-10-07T18:00:00Z";
 const setControl = async state => {
   await writeFile(`${control}.next`, JSON.stringify(state));
   await rename(`${control}.next`, control);
@@ -19,16 +19,16 @@ const setControl = async state => {
 await writeFile(events, "");
 await setControl({ at: defaultAt, scenario: "startup" });
 const server = spawn(process.execPath, ["scripts/with-app-env.mjs", process.execPath, "--import",
-  resolve("scripts/test-support/missouri-two-record-preload.mjs"), "node_modules/vite/bin/vite.js", "preview",
-  "--host", "127.0.0.1", "--port", "8097", "--strictPort"], {
-  env: { ...process.env, DATABASE_URL: "", MISSOURI_TWO_CONTROL: control, MISSOURI_TWO_EVENTS: events },
+  resolve("scripts/test-support/seasonal-completeness-v1-preload.mjs"), "node_modules/vite/bin/vite.js", "preview",
+  "--host", "127.0.0.1", "--port", "8098", "--strictPort"], {
+  env: { ...process.env, DATABASE_URL: "", SEASONAL_V1_CONTROL: control, SEASONAL_V1_EVENTS: events },
   detached: true, stdio: ["ignore", "pipe", "pipe"],
 });
 let logs = "", browser;
 server.stdout.on("data", d => { logs += d; });
 server.stderr.on("data", d => { logs += d; });
 const verdict = { passed: false, proof, publicProviderCalls: 0, scenarios: [], errors: [] };
-const { MISSOURI_2026_CLEARED_SEASONAL_CATALOG: rows } = appModuleLoader()("src/lib/date-night/missouri-2026-cleared-catalog.ts");
+const { MISSOURI_2026_V1_SEASONAL_CATALOG: rows } = appModuleLoader()("src/lib/date-night/missouri-2026-v1-catalog.ts");
 const waitFor = async (predicate, message, timeout = 30000) => {
   const start = Date.now();
   while (Date.now() - start < timeout) {
@@ -109,7 +109,9 @@ async function inspectQualifiedOverlay(test, row, kind) {
   const { page, result, state } = test;
   const overlay = overlayRoot(page, kind);
   await inspectIcons(test, kind, kind);
-  const section = overlay.locator("[data-seasonal-visit-notes]");
+  assert.match(await (kind === "options" ? rowCard(page, row) : overlay).innerText(), /Approx\./);
+  const scope = kind === "options" ? rowCard(page, row) : overlay;
+  const section = scope.locator("[data-seasonal-visit-notes]");
   assert.equal(await section.locator(":scope > p").count(), 1, "Exactly one compact notice");
   assert.equal(await section.locator(":scope > p").innerText(), "Check the venue for current hours, admission, and weather updates.");
   const details = section.locator("details");
@@ -117,6 +119,17 @@ async function inspectQualifiedOverlay(test, row, kind) {
   await details.locator("summary").click();
   const notes = details.locator("p");
   assert.equal(await notes.count(), row.seasonalVisitNotes.length, `${kind}: every qualified note is present`);
+  const materialFacts = {
+    "MO26-003": [/19:00/, /last ticket.*00:00/i, /closing.*unspecified/i, /\$20/, /retention boundary.*not a closing-time/i],
+    "MO26-010": [/last walk-through 00:30/, /not wheelchair accessible/, /Carrying babies or infants is prohibited/, /all sales final\/no refunds/, /No costumes/, /strobes/, /heavy rain or lightning/, /separate addresses/],
+    "MO26-011": [/last walk-through 00:30/, /not wheelchair accessible/, /Carrying babies or infants is prohibited/, /all sales final\/no refunds/, /No costumes/, /strobes/, /heavy rain or lightning/, /separate addresses/],
+    "MO26-029": [/liability waiver/, /Last-admission conflict/, /Weekday public entry unavailable/, /after dark/, /free mini pumpkin/, /while supplies last/],
+    "MO26-030": [/Festival entry is free/, /separate fees/, /pumpkins are priced by weight/, /accompanying adult/, /closed Mondays/, /never Park Board headquarters/, /roundabout/],
+  };
+  const fullDetails = await details.innerText();
+  for (const expected of materialFacts[row.seasonalListing.recordId]) assert.match(fullDetails, expected, `${kind}: material fact ${expected}`);
+  assert.doesNotMatch(await section.innerText(), /Hours unknown|Schedule checked|periodic review|does not establish Open Now/i);
+
   const reachability = { overlay: kind, notes: [], controls: [] };
   result.evidence.overlayReachability ??= [];
   result.evidence.overlayReachability.push(reachability);
@@ -135,7 +148,7 @@ async function inspectQualifiedOverlay(test, row, kind) {
     assert.ok(visible.top >= -1 && visible.bottom <= visible.viewportHeight + 1 &&
       visible.left >= -1 && visible.right <= visible.viewportWidth + 1 && visible.unobscured,
     `${kind}: qualified note ${index + 1} must be readable after scrolling`);
-    await page.screenshot({ path: resolve(output, `${state.scenario}-${kind}-note-${index}.png`), animations: "disabled" });
+    await page.screenshot({ path: resolve(output, `${state.scenario}-${kind}-note-${row.id}-${index}.png`), animations: "disabled" });
   }
   const controls = kind === "options" ? [
     ["Shuffle options", overlay.getByRole("button", { name: "Shuffle options", exact: true })],
@@ -143,7 +156,7 @@ async function inspectQualifiedOverlay(test, row, kind) {
   ] : [
     ["Directions", overlay.getByRole("link", { name: /Directions · Google Maps/ })],
     ["Website", overlay.getByRole("link", { name: /Website & info/ })],
-    ["Call venue", overlay.getByRole("link", { name: "Call venue", exact: true })],
+    ...(row.phone ? [["Call venue", overlay.getByRole("link", { name: "Call venue", exact: true })]] : []),
     ["Close result", overlay.getByRole("button", { name: "Close result", exact: true })],
   ];
   for (const [label, control] of controls) {
@@ -157,6 +170,14 @@ async function inspectQualifiedOverlay(test, row, kind) {
     reachability.controls.push({ label, href, reachable: true });
     await page.screenshot({ path: resolve(output, `${state.scenario}-${kind}-control-${label.replaceAll(" ", "-")}.png`), animations: "disabled" });
   }
+  if (kind === "result") {
+    const href = await overlay.getByRole("link", { name: /Directions · Google Maps/ }).getAttribute("href");
+    assert.equal(new URL(href).searchParams.get("destination"), row.seasonalListing.visitorAddress);
+    const uber = overlay.getByRole("link", { name: "Open Uber; choose your destination in the external service", exact: true });
+    assert.equal(await uber.getAttribute("href"), "https://m.uber.com/");
+    reachability.navigation = { directions: href, uber: await uber.getAttribute("href") };
+  }
+  assert.doesNotMatch(await scope.innerText(), /Open now/);
   await noOverflow(page);
 }
 async function runScenario(row, index, scenario, callback, overrides = {}) {
@@ -176,6 +197,13 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
       return route.abort();
     });
     await context.addInitScript(({ row, scenario, at, filters }) => {
+      globalThis.__geolocationCalls = [];
+      for (const method of ["getCurrentPosition", "watchPosition"]) {
+        Object.defineProperty(navigator.geolocation, method, { value: () => {
+          globalThis.__geolocationCalls.push(method);
+          throw new Error("Geolocation must not be requested in manual-location acceptance");
+        } });
+      }
       const OriginalDate = Date;
       globalThis.__missouriNow = at;
       globalThis.Date = class extends OriginalDate {
@@ -184,9 +212,9 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
       };
       sessionStorage.setItem("dinner-roulette-hint-seen", "1");
       if (!localStorage.getItem("pick-for-us-v1")) localStorage.setItem("pick-for-us-v1", JSON.stringify({ version: 0, state: {
-        location: { lat: row.lat, lon: row.lon, label: row.name, source: "manual" }, homeMode: "date-night",
+        location: { lat: row.lat + (scenario === "radius-exclusion" ? 0.06 : 0), lon: row.lon, label: row.name, source: "manual" }, homeMode: "date-night",
         spookySeasonEnabled: scenario !== "season-off", dateNightFilters: {
-          radiusMiles: 15, activityTypes: scenario === "category" ? row.activityTypes : ["anything"],
+          radiusMiles: 1, activityTypes: scenario === "category" ? row.activityTypes : ["anything"],
           mood: 50, openNowOnly: scenario === "open-now", favoritesOnly: false, reduceParks: false, ...filters,
         },
       } }));
@@ -223,6 +251,8 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
     await callback(test);
     await settleLocal(test);
     assert.deepEqual(result.pageErrors, []);
+    result.evidence.geolocationCalls = await page.evaluate(() => globalThis.__geolocationCalls);
+    assert.deepEqual(result.evidence.geolocationCalls, [], "No device geolocation requested");
     await noOverflow(page);
     result.passed = true;
   } catch (error) {
@@ -238,220 +268,173 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
       await page.screenshot({ path: resolve(output, `${state.scenario}-final.png`), fullPage: true }).catch(() => {});
     }
     await context.close();
-    console.log(`MISSOURI_BROWSER_${result.passed ? "PASS" : "FAIL"} ${state.scenario}`);
+    console.log(`SEASONAL_V1_BROWSER_${result.passed ? "PASS" : "FAIL"} ${state.scenario}`);
   }
 }
+
 try {
   await waitFor(async () => { try { return (await fetch(origin)).ok; } catch { return false; } }, "Preview startup failed");
   browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
     args: ["--no-sandbox", "--disable-dev-shm-usage"] });
-  // Preserve all 12 original PR48 scenarios and their assertions.
-  for (const [index, row] of rows.entries()) for (const scenario of ["anything", "category", "open-now", "ended", "next-year", "season-off"]) {
-    const at = scenario === "ended" ? row.seasonalAvailability.endsAt : scenario === "next-year" ? "2027-10-07T18:00:00Z" : defaultAt;
-    await runScenario(row, index, scenario, async test => {
-      const { page } = test;
-      const pick = pickButton(page), visible = ["anything", "category"].includes(scenario);
-      await activityCount(page, visible ? 1 : 0);
-      assert.equal(await pick.isDisabled(), !visible, `${row.id}:${scenario}`);
-      if (visible) {
-        await optionsButton(page).click();
-        await rowHeading(page, row).waitFor();
-        const text = await page.locator("[data-seasonal-visit-notes]").textContent();
-        assert.ok(text.includes(index ? "Shelter 1" : "Approximate operator navigation"));
-        if (index) {
-          assert.equal(await rowCard(page, row).locator("img").getAttribute("src"), "/date-night-icons/grok_1788905199846.jpg");
-          assert.match(await rowCard(page, row).innerText(), /Other Halloween \/ Fall/i);
-        }
-        await inspectQualifiedOverlay(test, row, "options");
-        await closeOptions(page);
-        await pick.click(); await rowHeading(page, row).waitFor({ timeout: 20000 });
-        const resultText = await page.locator("[data-seasonal-visit-notes]").textContent();
-        assert.ok(resultText.includes(index ? "14:00–16:00" : "younger than 18"));
-        const href = await page.getByRole("link", { name: /Directions · Google Maps/ }).getAttribute("href");
-        assert.equal(new URL(href).searchParams.get("destination"), index ? `${row.lat},${row.lon}` : row.address);
-        await inspectQualifiedOverlay(test, row, "result");
-        await page.screenshot({ path: resolve(output, `${index}-${scenario}.png`), fullPage: true });
-        await noOverflow(page);
-        await closeResult(page);
-        await pick.click(); await rowHeading(page, row).waitFor({ timeout: 20000 });
-        await closeResult(page);
-      }
-    }, { at });
-  }
+  assert.equal(rows.length, 5, "This acceptance is exactly the five approved V1 records");
+  const { haversineMiles } = appModuleLoader()("src/lib/restaurants/geo.ts");
+  const nearbyCount = row => rows.filter(other => haversineMiles(row.lat, row.lon, other.lat, other.lon) <= 1).length;
+  const categoryLabel = row => row.activityTypes.includes("corn-maze") ? "Corn Maze" : "Haunted House";
+  const categoryButton = (page, row) => page.getByRole("button", { name: categoryLabel(row), exact: true });
+  const selectTarget = async (page, row) => {
+    await rowCard(page, row).getByRole("button").filter({ has: rowHeading(page, row) }).click();
+    await page.getByRole("button", { name: "Close result", exact: true }).waitFor();
+  };
+  const advance = async (test, at) => {
+    await setControl({ ...test.state, at });
+    await test.page.evaluate(at => {
+      globalThis.__missouriNow = at;
+      document.dispatchEvent(new Event("visibilitychange"));
+      window.dispatchEvent(new Event("focus"));
+    }, at);
+  };
   for (const [index, row] of rows.entries()) {
+    const n = nearbyCount(row);
+    for (const scenario of ["anything", "category", "open-now", "ended", "next-year", "season-off", "radius-exclusion"]) {
+      const visible = ["anything", "category"].includes(scenario);
+      const at = scenario === "ended" ? row.seasonalListing.listingExpiresAt : scenario === "next-year" ? "2027-10-07T18:00:00Z" : defaultAt;
+      await runScenario(row, index, scenario, async test => {
+        const { page, result } = test;
+        await activityCount(page, visible ? n : 0);
+        assert.equal(await pickButton(page).isDisabled(), !visible);
+        if (!visible) return;
+        await optionsButton(page).click(); await rowHeading(page, row).waitFor();
+        assert.equal(await rowHeading(page, row).count(), 1);
+        assert.equal(await page.locator("article").count(), n);
+        await inspectQualifiedOverlay(test, row, "options");
+        await selectTarget(page, row);
+        await inspectQualifiedOverlay(test, row, "result");
+        await closeResult(page);
+        // Exercise the actual Pick path as well as selecting an options card.
+        await pickButton(page).click();
+        await page.getByRole("button", { name: "Close result", exact: true }).waitFor({ timeout: 20000 });
+        const selectedName = await overlayRoot(page, "result").getByRole("heading").last().innerText();
+        result.evidence.pickSelectedName = selectedName;
+        assert.ok(rows.some(candidate => candidate.name === selectedName), "Pick selects a reviewed listing");
+        await inspectIcons(test, "result", "pick-result");
+        assert.equal(await overlayRoot(page, "result").locator("[data-seasonal-visit-notes] details[open]").count(), 0);
+        await closeResult(page);
+      }, { at });
+    }
     await runScenario(row, index, "mixed-toggle-cache", async test => {
       const { page, result } = test;
-      await activityCount(page, 2);
-      await settleLocal(test);
-      assert.equal(test.rpc.length, 1, "One real initial patch RPC");
-      const initialRpc = test.rpc[0].response;
-      for (const value of [row.id, "date-night-osm-node-910001", "date-night-osm-way-910002", "park", "seasonalAvailability", row.seasonalAvailability.endsAt]) {
-        assert.ok(initialRpc.includes(value), `Real RPC retains merged evidence: ${value}`);
+      await activityCount(page, n + 1); await settleLocal(test);
+      assert.equal(test.rpc.length, 1);
+      for (const value of [row.id, "date-night-osm-node-910001", "date-night-osm-way-910002", "ListingCompletenessV1", row.seasonalListing.listingExpiresAt]) {
+        assert.ok(test.rpc[0].response.includes(value), `RPC retains merged qualification ${value}`);
       }
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
-      assert.equal(await rowHeading(page, row).count(), 1, "Duplicate identities render once");
-      assert.equal(await page.locator("article").count(), 2);
-      assert.equal(await rowCard(page, row).locator("[data-seasonal-visit-notes]").count(), 1);
+      assert.equal(await rowHeading(page, row).count(), 1, "Two provider representations merge into one reviewed listing");
+      assert.equal(await page.locator("article").count(), n + 1);
       assert.doesNotMatch(await rowCard(page, row).innerText(), /Open now/);
-      result.evidence.seasonOn = await page.locator("article").allTextContents();
-      await inspectIcons(test, "options", "mixed-season-on");
-      await page.screenshot({ path: resolve(output, `${index}-mixed-season-on.png`), fullPage: true });
-      await noOverflow(page); await closeOptions(page);
-      const initialCount = test.rpc.length;
-      const category = page.getByRole("button", { name: index ? "Other Halloween / Fall" : "Corn Maze", exact: true });
-      await press(category); await activityCount(page, 1);
-      assert.equal(await category.getAttribute("aria-pressed"), "true");
-      await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, 2);
-      await assertNoRpc(test, initialCount, "Anything/category uses the acquired superset cache");
+      await closeOptions(page);
+      const before = test.rpc.length;
+      const category = categoryButton(page, row);
+      await press(category); await activityCount(page, n);
+      await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, n + 1);
+      await assertNoRpc(test, before, "Category/Anything reuse acquired superset");
       const openNow = page.getByRole("switch", { name: "Open now only", exact: true });
-      await press(openNow, "Space"); await activityCount(page, 1);
-      await optionsButton(page).click(); await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
-      assert.equal(await rowHeading(page, row).count(), 0, "Provider 24/7 hours cannot promote the curated event to Open now");
-      await closeOptions(page); await press(openNow, "Space"); await activityCount(page, 2);
-      await assertNoRpc(test, initialCount, "Open now is a local filter");
-      const toggle = page.getByRole("switch", { name: "Spooky Season", exact: true });
-      await press(toggle, "Space");
-      await waitFor(async () => test.rpc.length === initialCount + 1 && test.rpc.at(-1).response, "Season-off RPC did not settle");
-      await ready(page); await activityCount(page, 2);
-      assert.equal(await toggle.getAttribute("aria-checked"), "false");
-      assert.equal(await category.count(), 0);
-      assert.ok(!test.rpc.at(-1).response.includes(row.id), "Season-off RPC excludes curated event identity");
-      assert.ok(!test.rpc.at(-1).response.includes("seasonalVisitNotes"), "Season-off RPC excludes curated details");
-      await optionsButton(page).click(); await rowHeading(page, row).waitFor();
-      assert.equal(await page.locator("[data-seasonal-visit-notes]").count(), 0);
-      assert.doesNotMatch(await rowCard(page, row).innerText(), /Corn Maze|Pumpkin Patch|Other Halloween \/ Fall/i);
-      assert.match(await rowCard(page, row).innerText(), /Park/i);
-      // The same-name provider park is deliberately recorded, not confused with
-      // the absent curated event or silently treated as a disappearing venue.
-      result.evidence.seasonOffOrdinarySameNamePark = await rowCard(page, row).innerText();
-      await inspectIcons(test, "options", "mixed-season-off");
-      await page.screenshot({ path: resolve(output, `${index}-mixed-season-off.png`), fullPage: true });
-      await noOverflow(page); await closeOptions(page);
-      const afterOff = test.rpc.length;
-      await press(toggle, "Space"); await activityCount(page, 2);
-      assert.equal(await toggle.getAttribute("aria-checked"), "true");
-      await optionsButton(page).click(); await rowHeading(page, row).waitFor();
-      assert.equal(await rowCard(page, row).locator("[data-seasonal-visit-notes]").count(), 1);
-      assert.doesNotMatch(await rowCard(page, row).innerText(), /Open now/);
-      await closeOptions(page);
-      await assertNoRpc(test, afterOff, "Season-on restores its isolated cache without another RPC");
-      await press(openNow, "Space"); await activityCount(page, 1);
-      await assertNoRpc(test, afterOff, "Cached merged event remains fail-closed for Open now");
-      await press(openNow, "Space"); await activityCount(page, 2);
-      result.evidence.cacheRpcCount = afterOff;
-      // Advance past the real ten-minute acquisition TTL, then use actual
-      // category controls to request fresh evidence. Resume alone refreshes
-      // eligibility; it does not claim to refresh the discovery cache.
-      const refreshedAt = new Date(Date.parse(defaultAt) + 10 * 60000 + 1).toISOString();
-      await setControl({ ...test.state, at: refreshedAt });
-      await page.evaluate(at => {
-        globalThis.__missouriNow = at;
-        document.dispatchEvent(new Event("visibilitychange"));
-        window.dispatchEvent(new Event("focus"));
-      }, refreshedAt);
-      await press(category);
-      await waitFor(async () => test.rpc.length >= afterOff + 1 && test.rpc.at(-1).response,
-        "Expired category cache did not reacquire through the real RPC");
-      await ready(page); await activityCount(page, 1);
-      assert.equal(test.rpc.length, afterOff + 1, "Expired category requires exactly one core RPC");
-      assert.ok(test.rpc.at(-1).response.includes(row.id));
-      await optionsButton(page).click(); await rowHeading(page, row).waitFor();
-      assert.equal(await page.locator("[data-seasonal-visit-notes]").count(), 1);
-      assert.doesNotMatch(await rowCard(page, row).innerText(), /Open now/);
-      await closeOptions(page);
-      await press(page.getByRole("button", { name: "Anything", exact: true }));
-      await waitFor(async () => test.rpc.length >= afterOff + 2 && test.rpc.at(-1).response,
-        "Anything did not reacquire the expired missing categories");
-      await ready(page); await activityCount(page, 2);
-      assert.equal(test.rpc.length, afterOff + 2, "Anything refreshes missing categories in one core RPC");
-      const afterRefresh = test.rpc.length;
       await press(openNow, "Space"); await activityCount(page, 1);
       await optionsButton(page).click();
       await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
-      assert.equal(await rowHeading(page, row).count(), 0, "Fresh merged evidence still cannot promote the event to Open now");
-      await closeOptions(page); await press(openNow, "Space"); await activityCount(page, 2);
-      await assertNoRpc(test, afterRefresh, "Fresh-cache Open now remains a local filter");
-      result.evidence.expiredCacheRefresh = { at: refreshedAt, additionalRpcCount: afterRefresh - afterOff };
-      // Exercise real keyboard controls and application Back/Forward navigation.
-      await press(page.getByRole("slider", { name: "Cozy to adventurous", exact: true }), "End");
-      await assertNoRpc(test, afterRefresh, "Keyboard mood change is local");
-      await press(page.getByRole("navigation", { name: "Main" }).getByRole("link", { name: "Settings", exact: true }));
-      await page.waitForURL(`${origin}/settings`);
-      await page.goBack(); await page.waitForURL(`${origin}/`); await ready(page); await activityCount(page, 2);
-      assert.equal(await toggle.getAttribute("aria-checked"), "true");
-      await page.goForward(); await page.waitForURL(`${origin}/settings`);
-      await page.goBack(); await page.waitForURL(`${origin}/`); await ready(page); await activityCount(page, 2);
-      result.evidence.navigation = "Keyboard Settings, Back, Forward, Back preserved stored filters; remount RPCs are recorded separately.";
+      assert.equal(await rowHeading(page, row).count(), 0, "24/7 provider hours cannot promote V1 listing");
+      await closeOptions(page); await press(openNow, "Space"); await activityCount(page, n + 1);
+      await assertNoRpc(test, before, "Open now filters locally");
+      const season = page.getByRole("switch", { name: "Spooky Season", exact: true });
+      await press(season, "Space");
+      await waitFor(async () => test.rpc.length === before + 1 && test.rpc.at(-1).response, "Season-off RPC missing");
+      await ready(page); await activityCount(page, 2);
+      assert.ok(!test.rpc.at(-1).response.includes(row.id));
+      assert.ok(!test.rpc.at(-1).response.includes("seasonalListing"));
+      await optionsButton(page).click(); await rowHeading(page, row).waitFor();
+      assert.equal(await page.locator("[data-seasonal-visit-notes]").count(), 0);
+      assert.match(await rowCard(page, row).innerText(), /Park/i);
+      result.evidence.seasonOffSameNameProvider = await rowCard(page, row).innerText();
+      await closeOptions(page);
+      const afterOff = test.rpc.length;
+      await press(season, "Space"); await activityCount(page, n + 1);
+      await assertNoRpc(test, afterOff, "Season-on restores isolated cache");
+      await press(openNow, "Space"); await activityCount(page, 1);
+      await press(openNow, "Space"); await activityCount(page, n + 1);
+      const refreshedAt = new Date(Date.parse(defaultAt) + 10 * 60000 + 1).toISOString();
+      await advance(test, refreshedAt);
+      await press(category);
+      await waitFor(async () => test.rpc.length === afterOff + 1 && test.rpc.at(-1).response, "Expired category did not reacquire");
+      await ready(page); await activityCount(page, n);
+      assert.ok(test.rpc.at(-1).response.includes(row.id));
+      await press(page.getByRole("button", { name: "Anything", exact: true }));
+      await waitFor(async () => test.rpc.length === afterOff + 2 && test.rpc.at(-1).response, "Expired Anything did not reacquire");
+      await ready(page); await activityCount(page, n + 1);
+      const afterRefresh = test.rpc.length;
+      await press(openNow, "Space"); await activityCount(page, 1);
+      await assertNoRpc(test, afterRefresh, "Fresh cache remains fail-closed for Open now");
+      result.evidence.cache = { before, afterOff, afterRefresh, refreshedAt };
     }, { fixture: "mixed" });
-    for (const overlay of ["options", "result"]) {
-      const endsAt = row.seasonalAvailability.endsAt;
-      await runScenario(row, index, `mixed-resume-${overlay}`, async test => {
-        const { page, state, result } = test;
-        await activityCount(page, 2);
+    for (const kind of ["options", "result"]) {
+      const expiresAt = row.seasonalListing.listingExpiresAt;
+      await runScenario(row, index, `resume-${kind}`, async test => {
+        const { page, result } = test;
+        await activityCount(page, n + 1);
         await optionsButton(page).click(); await rowHeading(page, row).waitFor();
-        if (overlay === "result") {
-          await rowCard(page, row).getByRole("button").filter({ has: rowHeading(page, row) }).click();
-          await page.getByRole("button", { name: "Close result", exact: true }).waitFor();
-        }
-        assert.equal(await page.locator("[data-seasonal-visit-notes]").count(), 1);
-        await settleLocal(test);
-        const before = test.rpc.length;
-        result.evidence.beforeEnd = await rowHeading(page, row).innerText();
-        await inspectIcons(test, overlay, `resume-${overlay}-before`);
-        await page.screenshot({ path: resolve(output, `${index}-resume-${overlay}-before.png`), fullPage: true });
-        await setControl({ ...state, at: endsAt });
-        await page.evaluate(at => {
-          globalThis.__missouriNow = at;
-          document.dispatchEvent(new Event("visibilitychange"));
-          window.dispatchEvent(new Event("focus"));
-        }, endsAt);
+        if (kind === "result") await selectTarget(page, row);
+        await settleLocal(test); const before = test.rpc.length;
+        await advance(test, expiresAt);
         await rowHeading(page, row).waitFor({ state: "hidden" });
         await activityCount(page, 1);
         assert.equal(await page.locator("[data-seasonal-visit-notes]").count(), 0);
-        if (overlay === "options") {
-          await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
-          assert.equal(await page.locator("article").count(), 1, "Open options drops only the expired identity");
+        if (kind === "options") {
+          assert.equal(await page.locator("article").count(), 1);
           await closeOptions(page);
-        } else assert.equal(await page.getByRole("button", { name: "Close result", exact: true }).count(), 0, "Expired result overlay is dismissed");
-        await assertNoRpc(test, before, "Resume at final end recomputes eligibility without provider traffic");
+        } else assert.equal(await page.getByRole("button", { name: "Close result", exact: true }).count(), 0);
+        await assertNoRpc(test, before, "Resume at expiry removes cached listing without provider traffic");
         await optionsButton(page).click();
         await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
-        assert.equal(await rowHeading(page, row).count(), 0, "Future selections cannot resurrect the ended duplicate");
-        await noOverflow(page); await closeOptions(page);
-        result.evidence.finalEnd = endsAt;
-        result.evidence.resumeRpcDelta = test.rpc.length - before;
-      }, { fixture: "mixed", at: new Date(Date.parse(endsAt) - 60000).toISOString() });
+        assert.equal(await rowHeading(page, row).count(), 0);
+        await closeOptions(page);
+        result.evidence.expiry = { expiresAt, basis: row.seasonalListing.expiryBasis, rpcDelta: test.rpc.length - before };
+      }, { fixture: "mixed", at: new Date(Date.parse(expiresAt) - 60000).toISOString() });
     }
-  }
-  // Intentional V1 change: the approved address-geocoded listing now survives
-  // provider outage. It must never revive the removed trusted arrival point.
-  const { MISSOURI_2026_V1_SEASONAL_CATALOG: v1 } = appModuleLoader()("src/lib/date-night/missouri-2026-v1-catalog.ts");
-  const myer = v1.find(row => row.id === "date-night-myers-inn-carthage");
-  await runScenario({ ...myer, name: "Carthage, Missouri", lat: 37.176447, lon: -94.310223 }, 0,
-    "myer-reviewed-v1-fallback-only", async test => {
+    await runScenario(row, index, "provider-failure", async test => {
       const { page, result } = test;
-      await activityCount(page, 4);
-      await settleLocal(test);
-      assert.equal(test.rpc.length, 1);
-      assert.match(test.rpc[0].response, /fallback/);
-      for (const value of [myer.id, "ListingCompletenessV1", "address-geocode", String(myer.lat), String(myer.lon), myer.address]) {
-        assert.ok(test.rpc[0].response.includes(value), `Reviewed fallback carries ${value}`);
-      }
-      await optionsButton(page).click();
-      await rowHeading(page, myer).waitFor();
-      await page.getByRole("heading", { name: "The Werehouse", exact: true }).waitFor();
-      assert.equal(await rowHeading(page, myer).count(), 1);
-      assert.doesNotMatch(await rowCard(page, myer).innerText(), /Open now/);
-      result.evidence.fallbackNames = await page.locator("article h3").allTextContents();
-      await rowCard(page, myer).getByRole("button").filter({ has: rowHeading(page, myer) }).click();
+      await activityCount(page, n); await settleLocal(test);
+      assert.equal(test.rpc.length, 1); assert.match(test.rpc[0].response, /fallback/);
+      assert.ok(test.rpc[0].response.includes(row.id));
+      await optionsButton(page).click(); await rowHeading(page, row).waitFor();
+      assert.equal(await rowHeading(page, row).count(), 1);
+      assert.doesNotMatch(await rowCard(page, row).innerText(), /Open now/);
+      await selectTarget(page, row);
       const href = await page.getByRole("link", { name: /Directions · Google Maps/ }).getAttribute("href");
-      assert.equal(new URL(href).searchParams.get("destination"), myer.address);
-      assert.equal(await page.getByRole("link", { name: "Open Uber; choose your destination in the external service", exact: true }).getAttribute("href"), "https://m.uber.com/");
+      assert.equal(new URL(href).searchParams.get("destination"), row.address);
+      result.evidence.fallbackDirections = href;
       await closeResult(page);
-    }, { fixture: "provider-failure", filters: { activityTypes: ["haunted-house"] } });
-  assert.equal(verdict.scenarios.length, 19);
+      await press(page.getByRole("switch", { name: "Open now only", exact: true }), "Space");
+      await activityCount(page, 0); assert.equal(await pickButton(page).isDisabled(), true);
+    }, { fixture: "provider-failure" });
+    await runScenario(row, index, "favorites-exclusion", async test => {
+      const { page } = test;
+      await activityCount(page, n); await settleLocal(test); const before = test.rpc.length;
+      const favorites = page.getByRole("switch", { name: "Favorites only", exact: true });
+      await press(favorites, "Space"); await activityCount(page, 0);
+      assert.equal(await pickButton(page).isDisabled(), true);
+      await press(favorites, "Space"); await activityCount(page, n);
+      await optionsButton(page).click(); await rowHeading(page, row).waitFor();
+      await rowCard(page, row).getByRole("button", { name: `Not tonight: ${row.name}`, exact: true }).click();
+      await rowHeading(page, row).waitFor({ state: "hidden" });
+      const close = page.getByRole("button", { name: "Close options", exact: true });
+      if (await close.count()) await close.click();
+      await activityCount(page, n - 1);
+      await assertNoRpc(test, before, "Favorites/exclusion do not reacquire providers");
+    });
+  }
+  assert.equal(verdict.scenarios.length, 60);
   assert.equal(verdict.errors.length, 0);
   verdict.passed = true;
+
 } catch (error) {
   verdict.errors.push({ message: error.message, stack: error.stack });
   process.exitCode = 1;

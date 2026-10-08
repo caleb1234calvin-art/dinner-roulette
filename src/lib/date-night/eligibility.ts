@@ -1,3 +1,5 @@
+import { applyCuratedSeasonalPolicy } from "./curated-policy";
+import { hasReviewedSeasonalPlacement } from "./listing";
 import { decorateRestaurant } from "../restaurants/decorate";
 import { getOpenStatus } from "../restaurants/hours";
 import type {
@@ -15,6 +17,8 @@ export function decorateDateNight(
   now = new Date(),
 ): DecoratedDateNightPlace[] {
   return places
+    .map(applyCuratedSeasonalPolicy)
+    .filter(place => !place.seasonalListing || hasReviewedSeasonalPlacement(place.seasonalListing))
     .map((place) => {
       const weekly = getOpenStatus(place.openingHours, now);
       const availability = getDateNightAvailability({ ...place, ...weekly }, now);
@@ -44,6 +48,8 @@ export function eligibleDateNight(
   );
   const anything = !selected.length || selected.includes("anything");
   return places.filter((venue) => {
+    if (venue.seasonalListing && (!halloweenActive || !hasReviewedSeasonalPlacement(venue.seasonalListing))) return false;
+    if (!Number.isFinite(venue.distanceMiles)) return false;
     if (
       !halloweenActive &&
       venue.activityTypes.every((type) => HALLOWEEN_DATE_NIGHT_TYPES.includes(type))

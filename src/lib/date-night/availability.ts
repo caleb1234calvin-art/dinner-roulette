@@ -13,6 +13,9 @@ export type SeasonalVenueAvailability = {
   /** One-season imported event: absolute final activity end, never archive time. */
   endsAt?: string;
   timeZone?: string;
+  /** Product retention, not necessarily an operator closing time. */
+  listingExpiresAt?: string;
+  seasonYear?: number;
   openNowPolicy?: "never";
 };
 
@@ -52,18 +55,31 @@ function localDateKey(now: Date): string {
 }
 
 function calendarState(record: SeasonalVenueAvailability | undefined, now: Date) {
-  // A bounded dated import stays ended in all later years, even if review is overdue.
-  if (record?.endsAt && now.getTime() >= Date.parse(record.endsAt)) return { season: "finished" as const, dateOpen: false, due: true };
-  const today = record?.timeZone
-    ? new Intl.DateTimeFormat("en-CA", { timeZone: record.timeZone, year: "numeric", month: "2-digit", day: "2-digit" }).format(now)
-    : localDateKey(now);
+  const finished = { season: "finished" as const, dateOpen: false, due: true };
+  // Invalid dates/timezones fail closed rather than throwing or reviving a record.
+  let today: string;
+  try {
+    today = record?.timeZone
+      ? new Intl.DateTimeFormat("en-CA", { timeZone: record.timeZone, year: "numeric", month: "2-digit", day: "2-digit" }).format(now)
+      : localDateKey(now);
+  } catch { return finished; }
+  if (!Number.isFinite(now.getTime())) return finished;
+  for (const cutoff of [record?.endsAt, record?.listingExpiresAt]) {
+    if (cutoff !== undefined && (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})$/.test(cutoff) || !Number.isFinite(Date.parse(cutoff)) || now.getTime() >= Date.parse(cutoff))) return finished;
+  }
+  const validDay = (day: string) => /^\d{4}-\d{2}-\d{2}$/.test(day) &&
+    Number.isFinite(Date.parse(day)) && new Date(day).toISOString().slice(0, 10) === day;
+  if ([record?.activeFrom, record?.activeUntil, ...(record?.activeDates ?? [])].some(day => day !== undefined && !validDay(day))) return finished;
+  if (record?.seasonYear !== undefined && (!Number.isInteger(record.seasonYear) || Number(today.slice(0, 4)) !== record.seasonYear)) return finished;
   const dates = record?.activeDates?.slice().sort();
   const from = record?.activeFrom ?? dates?.[0];
   const until = record?.activeUntil ?? dates?.[dates.length - 1];
   const priorYear = Boolean(until && until.slice(0, 4) < today.slice(0, 4));
   const expired = Boolean(record?.revalidateAfter && today > record.revalidateAfter);
   const due = !record || priorYear || expired || record.checkedAt.slice(0, 4) !== today.slice(0, 4);
-  // A known ended season remains ended for its year; next year needs new evidence.
+  // A dated prior season is terminal: no automatic later-year browsing rollover.
+  if (priorYear) return finished;
+  // Known end is enforced even when revalidation is overdue.
   if (record?.status === "confirmed" && until && today > until && !priorYear) return { season: "finished" as const, dateOpen: false, due };
   // Revalidation can become due without supplying evidence of renewed operation.
   if (record?.status === "not-operating") return { season: "not-operating" as const, dateOpen: false, due };
@@ -88,13 +104,27 @@ export function isSeasonalDateSelectable(venueId: string, now = new Date()): boo
 }
 
 export function getDateNightAvailability(
-  venue: Pick<DateNightPlace, "id"> & Partial<Pick<DateNightPlace, "activityTypes" | "lifecycle" | "seasonalAvailability">> &
+  venue: Pick<DateNightPlace, "id"> & Partial<Pick<DateNightPlace, "activityTypes" | "lifecycle" | "seasonalAvailability" | "seasonalListing">> &
     Pick<DecoratedDateNightPlace, "hoursKnown" | "isOpen">,
   now = new Date(),
 ): DateNightAvailability {
   const seasonal = venue.activityTypes?.some((type) => ["haunted-house", "corn-maze", "pumpkin-patch", "other-halloween-fall"].includes(type)) ?? false;
   const record = venue.seasonalAvailability ?? SEASONAL_VENUE_AVAILABILITY[venue.id];
-  const calendar = calendarState(record, now);
+  const listing = venue.seasonalListing;
+  const effectiveRecord = listing ? { ...record, status: record?.status ?? "unconfirmed", checkedAt: record?.checkedAt ?? "",
+    seasonYear: listing.seasonYear, timeZone: listing.timeZone,
+    listingExpiresAt: listing.listingExpiresAt ?? "", openNowPolicy: "never" as const } : record;
+  const calendar = calendarState(effectiveRecord, now);
+  if (listing?.expiryBasis === "editorial") {
+    // Editorial Halloween retention is never operating evidence and cannot run
+    // beyond November 2 in the venue timezone, regardless of a malformed cache.
+    try {
+      const cutoff = new Date(listing.listingExpiresAt);
+      const cutoffLocal = new Intl.DateTimeFormat("sv-SE", { timeZone: listing.timeZone,
+        year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit", hourCycle: "h23" }).format(cutoff);
+      if (cutoffLocal > `${listing.seasonYear}-11-03 00:00:00`) calendar.season = "finished";
+    } catch { calendar.season = "finished"; }
+  }
   const season = seasonal ? calendar.season : "ordinary";
   let status: DateNightAvailabilityStatus;
   if (venue.lifecycle) status = venue.lifecycle;
@@ -103,7 +133,7 @@ export function getDateNightAvailability(
   else if (season === "upcoming") status = "upcoming-season";
   else if (season === "unconfirmed") status = "schedule-unconfirmed";
   else if (seasonal && !calendar.dateOpen) status = "closed-now";
-  else if (record?.openNowPolicy === "never" || !venue.hoursKnown) status = "hours-unknown";
+  else if (listing || record?.openNowPolicy === "never" || !venue.hoursKnown) status = "hours-unknown";
   else status = venue.isOpen ? "open-now" : "closed-now";
   const labels: Record<DateNightAvailabilityStatus, string> = {
     "open-now": "Open now", "closed-now": "Closed now", "hours-unknown": "Hours unknown",
@@ -112,7 +142,9 @@ export function getDateNightAvailability(
     "permanently-closed": "Permanently closed", disused: "No longer operating",
   };
   return {
-    status, season, label: labels[status],
+    status, season, label: status === "hours-unknown" && listing
+      ? listing.hours.state === "partial" ? "Hours partly confirmed" : listing.hours.state === "verified" ? "Check today’s hours" : "Hours unconfirmed"
+      : labels[status],
     browseEligible: !["finished-season", "not-operating-season", "permanently-closed", "disused"].includes(status),
     openNowEligible: status === "open-now", checkedAt: seasonal ? record?.checkedAt : undefined,
     revalidationDue: seasonal && calendar.due,
@@ -121,7 +153,7 @@ export function getDateNightAvailability(
 
 /** Strict ON requires known hours AND a confirmed active seasonal date. */
 export function isDateNightOpenNowEligible(
-  venue: Pick<DecoratedDateNightPlace, "id" | "hoursKnown" | "isOpen"> & Partial<Pick<DateNightPlace, "lifecycle" | "seasonalAvailability">>,
+  venue: Pick<DecoratedDateNightPlace, "id" | "hoursKnown" | "isOpen"> & Partial<Pick<DateNightPlace, "lifecycle" | "seasonalAvailability" | "seasonalListing">>,
   seasonal: boolean,
   now = new Date(),
 ): boolean {

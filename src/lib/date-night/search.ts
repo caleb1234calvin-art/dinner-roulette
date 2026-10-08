@@ -10,6 +10,7 @@ import { namesMatch } from "@/lib/utils";
 import type { PhotoKey } from "@/lib/restaurants/types";
 import { JASPER_COUNTY_DATE_NIGHT_CATALOG } from "./jasper-county-catalog";
 import { JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG } from "./seasonal-catalog";
+import { MISSOURI_2026_V1_SEASONAL_CATALOG } from "./missouri-2026-v1-catalog";
 import { MISSOURI_2026_CLEARED_SEASONAL_CATALOG } from "./missouri-2026-cleared-catalog";
 import { seasonalTypes, providerLifecycle } from "./provider-evidence";
 import { normalizeLifecycleTags } from "./lifecycle";
@@ -131,7 +132,7 @@ async function queryMirror(url: string, body: string, halloweenSeason: boolean, 
 
 function localWithin(lat: number, lon: number, radiusMiles: number, halloweenActive: boolean): DateNightPlace[] {
   const catalog = halloweenActive
-    ? [...JASPER_COUNTY_DATE_NIGHT_CATALOG, ...JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG, ...MISSOURI_2026_CLEARED_SEASONAL_CATALOG]
+    ? [...JASPER_COUNTY_DATE_NIGHT_CATALOG, ...JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG, ...MISSOURI_2026_CLEARED_SEASONAL_CATALOG, ...MISSOURI_2026_V1_SEASONAL_CATALOG]
     : JASPER_COUNTY_DATE_NIGHT_CATALOG;
   return catalog.filter((place) => haversineMiles(lat, lon, place.lat, place.lon) <= radiusMiles + 1);
 }

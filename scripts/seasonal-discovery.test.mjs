@@ -178,7 +178,7 @@ test("all availability states share one OFF/ON policy, including expiry and next
       true,
       false,
     ],
-    [record, "24/7", new Date(2027, 9, 10, 20), "schedule-unconfirmed", true, false],
+    [record, "24/7", new Date(2027, 9, 10, 20), "finished-season", false, false],
     [
       { ...record, activeDates: ["2026-10-09", "2026-10-16"] },
       "24/7",
@@ -502,6 +502,10 @@ test("actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dep
   await search(t, [], origin);
   const store = storeFor(),
     clock = { value: new Date(2026, 8, 29, 20) };
+  // Isolate the legacy Werehouse clock regression; new V1 browseable additions
+  // are covered separately and must not alter this fixture's one-venue intent.
+  store.dateNightFilters.favoritesOnly = true;
+  store.preferences["date-night-werehouse-joplin"] = { favorite: true };
   const harness = dateNightComponentHarness({ store, now: clock, search: searchDateNight });
   t.after(() => harness.dispose());
   harness.render();

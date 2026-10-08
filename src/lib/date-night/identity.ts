@@ -1,5 +1,7 @@
+import { applyCuratedSeasonalPolicy } from "./curated-policy";
+import { isApproximateSeasonalPlace } from "./listing";
 import { haversineMiles } from "../restaurants/geo";
-import { namesMatch } from "../utils";
+import { namesMatch, normalizeName } from "../utils";
 import { dateNightTypeLabel, type ConcreteDateNightType, type DateNightPlace } from "./types";
 
 const DATE_NIGHT_ALIAS_GROUPS = [
@@ -29,6 +31,16 @@ export function moodFor(types: readonly ConcreteDateNightType[]): 1 | 2 | 3 {
   return 3;
 }
 
+function affirmedNameMatch(a: DateNightPlace, b: DateNightPlace): boolean {
+  if (a.seasonalListing && b.seasonalListing && a.seasonalListing.recordId !== b.seasonalListing.recordId) return false;
+  if (isApproximateSeasonalPlace(a) || isApproximateSeasonalPlace(b)) {
+    // Exact normalized names are affirmative evidence; substring/shared-type
+    // similarities at a generic site point are not sufficient for V1 records.
+    return Boolean(normalizeName(a.name)) && normalizeName(a.name) === normalizeName(b.name);
+  }
+  return dateNightNamesMatch(a.name, b.name);
+}
+
 function combineTypes(a: readonly ConcreteDateNightType[], b: readonly ConcreteDateNightType[]) {
   return [...new Set([...a, ...b])].sort();
 }
@@ -42,8 +54,10 @@ function evidenceFor(place: DateNightPlace) {
 }
 
 export function mergeIdentity(a: DateNightPlace, b: DateNightPlace): DateNightPlace {
+  a = applyCuratedSeasonalPolicy(a);
+  b = applyCuratedSeasonalPolicy(b);
   // Catalog coordinates/identity take priority; otherwise stable provider ID wins.
-  const rank = (place: DateNightPlace) => `${place.id.startsWith("date-night-osm-") ? "1" : "0"}:${place.id}`;
+  const rank = (place: DateNightPlace) => `${place.seasonalListing ? "0" : place.id.startsWith("date-night-osm-") ? "2" : "1"}:${place.id}`;
   // The same OSM identity can arrive through separate group snapshots. Keep the
   // representative stable across completion/cache order; evidence still unions.
   const snapshot = (place: DateNightPlace) => JSON.stringify([place.name, place.lat, place.lon,
@@ -72,12 +86,15 @@ export function mergeIdentity(a: DateNightPlace, b: DateNightPlace): DateNightPl
 
 export function dedupeDateNight(places: DateNightPlace[]): DateNightPlace[] {
   const result: DateNightPlace[] = [];
-  for (const place of places) {
+  for (const raw of places) {
+    const place = applyCuratedSeasonalPolicy(raw);
     const matchIndex = result.findIndex((candidate) => {
       const distance = haversineMiles(candidate.lat, candidate.lon, place.lat, place.lon);
-      const sameName = namesMatch(candidate.name, place.name);
+      const sameName = affirmedNameMatch(candidate, place);
       const sharedType = candidate.activityTypes.some((type) => place.activityTypes.includes(type));
-      return candidate.id === place.id || (sameName && distance < 0.6) || (distance < 0.03 && sharedType);
+      const approximate = isApproximateSeasonalPlace(candidate) || isApproximateSeasonalPlace(place);
+      // Approximate geometry/address/type is not affirmative identity evidence.
+      return candidate.id === place.id || (sameName && distance < 0.6) || (!approximate && distance < 0.03 && sharedType);
     });
 
     if (matchIndex < 0) {
@@ -95,7 +112,7 @@ export function mergeDateNight(live: DateNightPlace[], local: DateNightPlace[]):
   for (const place of live) {
     const matchIndex = merged.findIndex(
       (candidate) =>
-        candidate.id === place.id || (dateNightNamesMatch(candidate.name, place.name) &&
+        candidate.id === place.id || (affirmedNameMatch(candidate, place) &&
         haversineMiles(candidate.lat, candidate.lon, place.lat, place.lon) < 0.35),
     );
     if (matchIndex >= 0) {

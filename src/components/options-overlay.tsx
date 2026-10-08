@@ -1,3 +1,4 @@
+import { seasonalDistancePrefix } from "@/lib/date-night/listing";
 import { SeasonalVisitNotes } from "@/components/seasonal-visit-notes";
 import { dateNightStatusLabel } from "@/lib/date-night/availability";
 import { useEffect, useState } from "react";
@@ -82,11 +83,11 @@ function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { r
       <button type="button" onClick={onSelect} className="flex flex-1 flex-col px-3 py-3 text-left">
         <h3 className="font-display line-clamp-2 text-lg leading-tight text-fg">{restaurant.name}</h3>
         {mode === "date-night" && activityTypes.length ? <div className="mt-2 flex flex-wrap gap-1">{activityTypes.slice(0, 3).map((type) => <span key={type} className="rounded-full bg-elevated px-2 py-1 text-[10px] tracking-wide text-muted uppercase">{dateNightTypeLabel([type])}</span>)}</div> : <p className="mt-1 text-xs text-muted">{restaurant.cuisineLabel}{restaurant.priceLevel ? ` · ${formatPrice(restaurant.priceLevel)}` : ""}</p>}
-        <p className="mt-2 text-xs text-subtle">{formatDistance(restaurant.distanceMiles)}{openLabel ? ` · ${openLabel}` : ""}</p>
-        {mode === "date-night" && !restaurant.hoursKnown ? <p className="mt-1 text-xs text-subtle">Hours unknown — check before going</p> : null}
-        {mode === "date-night" ? <SeasonalVisitNotes place={dateNightRestaurant} /> : null}
+        <p className="mt-2 text-xs text-subtle">{seasonalDistancePrefix(restaurant)}{formatDistance(restaurant.distanceMiles)}{openLabel ? ` · ${openLabel}` : ""}</p>
+        {mode === "date-night" && !restaurant.hoursKnown && !dateNightRestaurant.seasonalListing && !dateNightRestaurant.seasonalAvailability && !dateNightRestaurant.seasonalVisitNotes?.length ? <p className="mt-1 text-xs text-subtle">Hours unknown — check before going</p> : null}
         {restaurant.closingSoon ? <p className="mt-1 text-xs text-danger">Closing soon</p> : null}
       </button>
+      {mode === "date-night" && (dateNightRestaurant.seasonalListing || dateNightRestaurant.seasonalAvailability || dateNightRestaurant.seasonalVisitNotes?.length) ? <div className="px-3 pb-3"><SeasonalVisitNotes place={dateNightRestaurant} /></div> : null}
     </article>
   );
 }
