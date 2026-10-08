@@ -1,3 +1,33 @@
+# Pick For Us — Five-Record Release Conditionally Approved; Expiry-Evidence Decision Pending (2026-10-08)
+
+## CURRENT — OPERATIONAL EXECUTION HOLD; NO NEW IMPLEMENTATION BLOCKER
+
+At **05:21 UTC**, the owner conditionally approved release of exact verified candidate **`5409b0fcbb24c54f03e3b1228e1481bfc594c7af`**, tree **`f26fec09ac30c34b220244a2fd7e600ced16fbdb`**, sole parent **`d5b26ee264fa45a032ae226c9505bfb610bbe745`**, subject to fresh operational preflight. The owner also supplied a **new one-release-only exception for currently unprotected main**. This permission has **not been exercised or consumed**, and is not a standing waiver.
+
+Technical implementation/web PASS and closure of V1-ID-01/V1-NAV-02 remain intact. The current HOLD concerns how to satisfy the requested production expiry-evidence acceptance, **not a reopened source defect**.
+
+### Preflight completed and unresolved owner clarification
+
+The separate release operator's **05:26 UTC** summary records unchanged main/head/tree, successful exact web run37728828732, all five current production aliases, authenticated safe build settings and usable two-stage rollback UI. No release/settings/PR/main/production mutation was performed.
+
+- Effective build override was read as **`VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`**, root empty, Node24.x. Ordinary migration-chaining npm build remains prohibited.
+- Current production is **H655**, previous **fU21**. Enabled final rollback confirmation was inspected then canceled. After one future approved promotion H655 must become the immediate previous target; actual post-release target must be rechecked. No rollback was executed.
+- The cloud browser cannot advance the live production clock. At **05:25:34 UTC**, the owner was asked whether **independently verified future-date tests plus proof that production serves the exact verified code/cutoffs** satisfies expiry acceptance, while the other requested checks are performed live.
+- **Owner answer is still pending.** This is a proposed evidence method, not accepted proof or a waived requirement. Elapsed time, silence or implementation PASS does not grant that acceptance.
+- Planned remaining live smoke can exercise ordinary Joplin/Springfield/Clever UI, Open Now off and relevant filters, all five cards/Details, qualified approximate language and actual DOM navigation targets without external navigation. No such post-release smoke or production future-clock test has yet occurred.
+
+The source preflight receipts remain `v1-release-operator/preflight-receipts.json` and `preflight-summary.json`; this entry records their bounded observation, not perpetual readiness.
+
+### Current baseline and next action
+
+Fresh **06:27 UTC** authenticated reads confirm main **`0bbf6758e94eea8129e21b004d4c36ff886cd46d`**, tree **`7add088fcbcacb8526f90a6f09c6dd7ca5249b3c`**, and production **`dpl_H655TNrL3hSuBNF8w2xp4MpxspkM`** READY at that SHA. [PR #51](https://github.com/caleb1234calvin-art/dinner-roulette/pull/51) remains draft/open/unmerged at exact5409. No five-record release has happened.
+
+**Next:** wait for the owner's expiry-evidence decision. After an answer, re-read exact main/head/tree/checks/current aliases, effective safe route and authorized rollback immediately before any permitted mutation. Do not proceed based on this older preflight alone; any drift or unresolved condition means HOLD. No PR metadata retry: the prior routine description-update action was canceled, and canonical continuity/final independent report remain authoritative.
+
+Only AI_CONTINUITY.md changes on deployment-disabled `integration/continuity-refresh-2026-10-07`. **PARENT COMMIT:** `b482a59e0f3b5f0d3a9801b95fb18905145866b2`; **PARENT TREE:** `06867a9a2921ddd3441a305de2ce038774966db9`. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains exclusion. Candidate/runtime/main/production remain untouched by this checkpoint.
+
+## Prior continuity — first-five V1 independent PASS and release proposal, preserved verbatim
+
 # Pick For Us — First Five V1 Candidate Independently Verified (2026-10-08)
 
 ## CURRENT — APPLICABLE IMPLEMENTATION/WEB GATES PASS; EXACT CANDIDATE FROZEN; OWNER RELEASE DECISION NEXT
