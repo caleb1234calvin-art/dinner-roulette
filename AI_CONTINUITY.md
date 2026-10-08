@@ -1,3 +1,50 @@
+# Pick For Us — Delta4 Data Gate Complete; Pomme Routing Correction Frozen (2026-10-08)
+
+## CURRENT — SIX FACTUAL / FOUR PLACEMENT PASSES IN DELTA4; PR59 STILL AWAITING FINAL RUNTIME ACCEPTANCE
+
+Delta4 R2 independent review concludes **6 factual PASS /2 HOLD /0 REJECT /0 EXPIRED**. **Four approximate placements PASS; two factual passes remain staged outside radius. Zero runtime, consumer UI/browser or release PASS.** Together with earlier distinct Branson, Liberty, Ranch and Cobb projections, this yields **eight unique placement-ready records parked for a future bounded batch**. Do not add them to active PR59. Cross-batch HOLD counts overlap and must not be summed blindly.
+
+### Delta4 accepted and staged records
+
+- **Nixa (MO26-037):** prior factual PASS retained; official named destination now independently resolved to **37.0931968,-93.3012305**, approximate site only. This supersedes its earlier missing-placement HOLD.
+- **Missouri Nightmare:** current official2026 ticket/venue and Census address independently reproduced. Final known **November1 20:30 CST** supersedes proposed midnight; daily display hours remain partial.
+- **Trepidations:** official rendered2026 ticket, calendar and warning pixels support regular nights, distinct October22/29 no-scare and November1 blackout. April12 ticket-envelope start is not daily opening. Material operator health/physical/medication restrictions preserved as visitor information, not medical advice; no unsupported attraction count. Address-linked point approximate.
+- **Freaks Fair:** official-linked booking enables October23/24/30/31 and disables25; stronger booking dates accepted while homepage contradiction retained. Operator/booking support126 SW400 over DMO122. Point **38.7627893,-93.7360498** approximate; exact final **October31 22:30 CDT**.
+- **Carolyn:** factual PASS retained, placement still HOLD across conflicting operator-link/Census destinations and a timed-out follow-up. Do not declare the earlier reviewer wrong or average points.
+- **Terror on Route66:** factual PASS now supported by two direct West-address sources and complete waiver/touch-age/ID/full-contact/group restrictions. Placement remains HOLD: ticket point differs about2km from exact-address Census. Neither point is cleared; use staged factual record only.
+
+All accepted projections retain approximate-versus-arrival distinctions, fail-closed Open Now and bounded2026 lifecycle. No new product/UI acceptance is inferred from data clearance.
+
+### Two remaining exact-projection HOLDs
+
+**Hannibal Warehouse:** actual destination/date conflict persists (Bird versus3rd; precise2026 list versus undated recurring poster). Failed re-open does not imply closure.
+
+**Hell Harvest:** fresh public ticket does support2026 dates/address and an operator-linked point, but the complete prior held projection/restrictions/expiry reconciliation was not supplied. **Current exact-projection HOLD is incomplete recovery, not revocation of the earlier reported factual PASS** and not a claim that sources are unavailable or exact price/full hours are mandatory.
+
+### Frozen recoverable evidence
+
+[Exact Delta4 report](docs/handoffs/active/missouri-delta4-independent-verification.md), SHA-256 **`d6c4668947e4352e403fc6fe96e60817bc5c7adf0e340d84810353a1cb49265e`**.
+[Exact research R2 audit JSON](audit/missouri-three-source-delta4-research-r2.json), SHA-256 **`6ebdd30a18c6089cf8e0ebe9f589977a3150030b3fb01747682face6221849aa`**.
+Accepted four-placement projection SHA-256 **`b37b3c0ab808728f5fa7973764daaf59190fefcf0e87b62f205503ab3975bd85`**.
+
+Producer-time research proposals/pending flags remain immutable; the later independent report controls the current scoped verdict. R1 findings and retrieval limitations remain. Residential coverage is partial/unverified, discovery novelty provisional and opportunity-set exhaustion not claimed. Runtime/copy/browser/build/release checks remain separate.
+
+### PR59 IV-02 history and actual corrected freeze
+
+Actual **93b231** runtime behavior incorrectly promoted Pomme's official Hermitage event/navigation point to a precise Uber dropoff. Data authority confirms the point supports Directions, not entrance/parking/rideshare precision. The earlier author/verifier “harness-only defect” assumption was **withdrawn**. Independent HOLD report SHA-256 **`713fad257dd464f8c99ba458f74a75dae0b1491ea99430b8bc308eb6f73eff2a`** preserves this material finding; no external ride link was followed.
+
+New remotely verified PR59 commit **`c2ca6fa84409c47b6153e0d9233e0bc46a9e1a47`**, tree **`b05403d16a3923120707a26ad092fc43070f8252`**, sole parent **`93b231c5326e6f4de5eb7d69f41564542c8018e9`**, freezes the bounded event-navigation versus ride-dropoff correction. Pomme uses explicit **external-picker** rideshare policy while retaining official point-based Directions. Preserve Sam's independently reviewed parking behavior; do not weaken generic-ride assertions to accept unverified precision.
+
+Fresh R3 factual routing review **PASS only for navigation/placement semantics**, report SHA-256 **`21ef754234262f001a8f57d33f0fe7f015678e4ce88be92159255a37ef69366c`**; projection SHA **`45f2bf1269b741e3ca2613f6c8547a6107b8297062ad5fee1d0bb147b178be9a`**. Exactly one data line added; removing it reproduces R2 hash, other four data/copy files unchanged. Current deferred-batch-3 file hash **`42ba5f69f4d8ecd0fcfd8fc647dc21b5938bd105c93ac5489fc2559952b5757b`**. Runtime verifier must still prove fresh/cache/saved policy handling.
+
+Prior93b geometry step completed255 comparisons plus11 no-plan controls; artifact metrics/pixels and full new15 browser acceptance were not final at IV-02. Its865 tests/four skips and unsigned Android37842910096 success/signing skipped do not transfer automatically. Overnight IV-01 correction remains source-proven. Currentc2ca exact-head technical/hosted/browser and fresh independent final verification are **pending**, not release-ready.
+
+Fresh **21:12 UTC** main **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**, production **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv` READY** remain unchanged. Standing nonproduction authority continues; no main/deploy/settings/waiver.
+
+Approved three-path checkpoint changes only AI_CONTINUITY.md, exact Delta4 report and research R2 JSON on deployment-disabled continuity. **PARENT COMMIT:** `2d89e3f4e116a6464ac3f0d2ae052226781ac513`; **PARENT TREE:** `81985502c4b574b1a80d0ef34f1af9ec507d6b55`. Preserve all prior evidence below.
+
+## Prior continuity — Delta3 gate and earlier PR59 pending checks, preserved verbatim
+
 # Pick For Us — Delta3 Final Data Gate; Four Placement-Ready Records Parked (2026-10-08)
 
 ## CURRENT — DELTA3 TWO DATA PASSES; ACTIVE PR #59 BROWSER VERIFICATION STILL OPEN
