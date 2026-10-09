@@ -1,3 +1,35 @@
+# PR #61 Independent Safety HOLD — Capacity-Rejected Audit Loses Closure Evidence (2026-10-09 22:27 UTC)
+
+## CURRENT
+
+**HYB-IV-01: independent candidate safety HOLD. Live benchmark remains blocked; zero provider traffic.** Exact failed candidate is draft PR61 **`c931188a96752fcb97dac9066e530688f9aaef2a`**, tree **`ef30671a048d6463ded751efe974ee8f8303ed3a`**, parent **`fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`**, branch `integration/date-night-primary-radial-audit-1`. Preserve this failure even if the authorized minimal correction advances the branch.
+
+When selected-radius primary holds a positive Movies identity and a background audit returns same-ID permanent-closure evidence in an oversized payload, the cache rejects that payload before preserving negative authority. The radial rejected-response path does not forward the OSM negative; the older primary positive remains eligible. This is discarded observed closure evidence, not merely incomplete positive coverage.
+
+Independent reproduction fails at both **maxVenues1 with two rows** and the **actual default maxVenues20,000 with 20,001 rows**. Result is background-partial with the stale positive still present. Outer-patch, cross-category/alias and later eviction paths need explicit review during correction.
+
+[Full frozen safety report](audit/hybrid-loading-2026-10-09/c931-Safety-Preflight-R1.md), SHA-256 **`6ff744c6f6337d96784a7e567de1b5dffeee87f197b8e09b3fb897b3cc890add`**; [exact independent probe](audit/hybrid-loading-2026-10-09/c931-probes.test.mjs) **`73f2d8a9d9b0113025cbc8918dc8d38928738b814388ead36fedb010f9794b43`**; [probe log](audit/hybrid-loading-2026-10-09/c931-probes-r3.log) **`822e3d1718eb512cd2030fc31a2589af01fc63e10b781278a7c034741de5798d`**. Initial invalid RPC-shape probe is identified as verifier harness error, separate from the two genuine capacity failures.
+
+## Separate passing and pending gates
+
+Independent **77 existing tests PASS** and **two active-group/multi-hedge abort probes PASS** do not clear this lifecycle blocker. R4 benchmark budget/instrumentation26testsPASS remains valid only within its prior scope. Author exact local **1,034 PASS / 4 skips**, typecheck, lint0errors/6warnings and safe auth-enabled build PASS remain separate from overall candidate HOLD.
+
+Local browser attempts first lacked an executable; installed Chromium then failed socket creation with OperationNotPermitted. No bypass and no local browser PASS. Hosted c931 validation remains active; any completed c931 controlled/hosted result is bound to this failed historical candidate and cannot substitute for a corrected-head rerun.
+
+## NEXT
+
+Implementer is preparing the smallest justified negative-authority correction and focused regressions. Freeze a new exact remote identity, rerun required gates and obtain fresh independent safety clearance before any bounded live benchmark. Retain c931 failure, raw probes and earlier attempts; do not weaken the negative-evidence expectation or treat ordinary accepted-entry eviction tests as proof of capacity-rejection safety.
+
+“Radial discovery becomes an audit layer” remains the owner-authorized design, but background positives must never overrule authoritative negative lifecycle evidence. No final runtime/architecture or release PASS.
+
+## HOLD / unchanged boundaries
+
+No main/production/settings mutation, merge/deploy, signing or Play authority. No Missouri/Cadaver work resumed. Cadaver retains reliable attraction-specific **2026 operation/date binding and supported expiry HOLD**; all parked backlog and physical Android qualifications persist.
+
+Fresh **22:27 UTC** reads: main **`fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`**, tree **`8d5059c9fee871c522616971cce0a80b153e4d23`**, production **`dpl_8xyE9R3BxyE1883QpavaEBWV2LGa` READY** at that source; PR61 open/draft c931. The 52-record production release remains closed. PARENT CONTINUITY COMMIT: `247fe240cfb0dfb47b135c73a801e3ee50e1a106`; PARENT TREE: `153279756373bc32bb92c0115cce8b169466e18f`. Documentation/audit-only safe branch; all history follows verbatim.
+
+---
+
 # Draft PR #61 Frozen; Benchmark Budget R4 PASS, Candidate Safety Pending (2026-10-09 22:25 UTC)
 
 ## CURRENT

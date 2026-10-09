@@ -1,0 +1,44 @@
+✔ all parallel active hedges cancel undefined (291.68496ms)
+✔ all parallel active hedges cancel radial-v1:core (149.466826ms)
+CAP_REJECTION_STATE {"phase":"background-partial","venues":[{"id":"movie","name":"movie","lat":43,"lon":-79,"source":"osm","activityTypes":["movies"],"address":"A","openingHours":null,"discoveryEvidence":[{"id":"movie","source":"osm","activityTypes":["movies"],"openingHours":null}],"cuisineLabel":"Movies","moodLevel":1}]}
+✖ audit negative retained when response exceeds cache capacity 1 (8.663003ms)
+CAP_REJECTION_STATE {"phase":"background-partial","venues":[{"id":"movie","name":"movie","lat":43,"lon":-79,"source":"osm","activityTypes":["movies"],"address":"A","openingHours":null,"discoveryEvidence":[{"id":"movie","source":"osm","activityTypes":["movies"],"openingHours":null}],"cuisineLabel":"Movies","moodLevel":1}]}
+✖ audit negative retained when response exceeds cache capacity 20000 (16.219887ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 2
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1528.849558
+
+✖ failing tests:
+
+test at ../hybrid-independent-c931/probes.test.mjs:19:30
+✖ audit negative retained when response exceeds cache capacity 1 (8.663003ms)
+  AssertionError [ERR_ASSERTION]: Observed closure must suppress the older primary positive even if positive cache admission is rejected
+      at TestContext.<anonymous> (file:///tmp/hybrid-independent-c931/probes.test.mjs:26:9)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at ../hybrid-independent-c931/probes.test.mjs:19:30
+✖ audit negative retained when response exceeds cache capacity 20000 (16.219887ms)
+  AssertionError [ERR_ASSERTION]: Observed closure must suppress the older primary positive even if positive cache admission is rejected
+      at TestContext.<anonymous> (file:///tmp/hybrid-independent-c931/probes.test.mjs:26:9)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
