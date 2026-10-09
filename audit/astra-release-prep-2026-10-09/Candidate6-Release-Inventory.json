@@ -1,6 +1,6 @@
 {
-  "artifact": "Candidate6 release inventory",
-  "status": "Controlled-stop failure-exception closeout: exact-head local gates, independent minimal harness delta, hosted unit checks and automated Android artifact readiness PASS. Current web/browser/geometry/final runtime acceptance PENDING.",
+  "artifact": "Candidate6 final controlled-stop inventory",
+  "status": "CI PASS / FINAL ARTIFACT AND RUNTIME ACCEPTANCE HOLD",
   "repository": "caleb1234calvin-art/dinner-roulette",
   "branch": "integration/missouri-astra-push-2026-10-09",
   "head": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
@@ -995,7 +995,7 @@
         "recordId": "DELTA6-WORLDS-OF-FUN",
         "name": "Worlds of Fun — Halloween Haunt",
         "classification": "NET NEW",
-        "currentDisposition": "IMPLEMENTED IN CANDIDATE; independent factual PASS, exact-head runtime gates pending",
+        "currentDisposition": "IMPLEMENTED; independent factual/source PASS and exact-head CI PASS; final artifact/runtime acceptance HOLD",
         "implemented": true,
         "sourceStageDecision": "CURRENT CANDIDATE — independent review pending",
         "remainingBlockerOrRetainedLimitations": "Frozen projection deliberately covers explicit October calendar only, not inferred September dates.; All dates must be bound to 2026 only.; Calendar has park-hours entries separate from haunt entries; keep hours partial.; No separate passholder-exclusive October 29 import."
@@ -1004,7 +1004,7 @@
         "recordId": "DELTA2-OZARK",
         "name": "Ozark Nightmares Haunted House — The Viscount’s Manor",
         "classification": "HISTORICAL HOLD / re-clearance",
-        "currentDisposition": "IMPLEMENTED IN CANDIDATE; independent factual PASS, exact-head runtime gates pending",
+        "currentDisposition": "IMPLEMENTED; independent factual/source PASS and exact-head CI PASS; final artifact/runtime acceptance HOLD",
         "implemented": true,
         "sourceStageDecision": "CURRENT CANDIDATE — independent review pending",
         "remainingBlockerOrRetainedLimitations": "2026 schedule is indexed first-party evidence; direct Facebook page unavailable. Independent reviewer must accept/reproduce this evidence before PASS.; DMO 2020-path event currently describing 2025 is not used to bind 2026.; Unknown admission availability, restrictions and closing times remain explicit unknowns."
@@ -1013,7 +1013,7 @@
         "recordId": "DELTA3-BALLWIN",
         "name": "Tunnel of Terror — Tommy’s Express Ballwin",
         "classification": "HISTORICAL HOLD / re-clearance",
-        "currentDisposition": "IMPLEMENTED IN CANDIDATE; independent factual PASS, exact-head runtime gates pending",
+        "currentDisposition": "IMPLEMENTED; independent factual/source PASS and exact-head CI PASS; final artifact/runtime acceptance HOLD",
         "implemented": true,
         "sourceStageDecision": "CURRENT CANDIDATE — independent review pending",
         "remainingBlockerOrRetainedLimitations": "Direct 200 HTML and extracted page do not contain event details; indexed source date binding requires independent corroboration.; Ordinary daily wash hours not substituted for event schedule.; Category requires existing Other Halloween / Fall semantics; do not label walk-through haunted house.; Drive-through attraction: do not promise a precise pedestrian or rideshare entrance."
@@ -1022,7 +1022,7 @@
         "recordId": "DELTA6-OFALLON",
         "name": "Tunnel of Terror — Tommy’s Express O’Fallon",
         "classification": "NET NEW",
-        "currentDisposition": "IMPLEMENTED IN CANDIDATE; independent factual PASS, exact-head runtime gates pending",
+        "currentDisposition": "IMPLEMENTED; independent factual/source PASS and exact-head CI PASS; final artifact/runtime acceptance HOLD",
         "implemented": true,
         "sourceStageDecision": "CURRENT CANDIDATE — independent review pending",
         "remainingBlockerOrRetainedLimitations": "Independent evidence confidence lower than Ballwin: direct HTML event cards blank; exact dates/hours depend on saved location-specific search receipt.; Nationwide Tunnel of Terror campaign cannot prove location dates; Ballwin schedule was not copied as proof.; No price imported; no exact ticket inventory claim.; Drive-through classification and ride semantics need product/runtime review."
@@ -1031,7 +1031,7 @@
         "recordId": "DELTA3-GROTTO",
         "name": "The Haunted Grotto",
         "classification": "HISTORICAL HOLD / re-clearance",
-        "currentDisposition": "IMPLEMENTED IN CANDIDATE; independent factual PASS, exact-head runtime gates pending",
+        "currentDisposition": "IMPLEMENTED; independent factual/source PASS and exact-head CI PASS; final artifact/runtime acceptance HOLD",
         "implemented": true,
         "sourceStageDecision": "CURRENT CANDIDATE — independent review pending",
         "remainingBlockerOrRetainedLimitations": "Independent acceptance of indexed2026 operator/vendor date evidence and exact-address Waze placement qualification. Runtime not implemented or reviewed. Census/Nominatim no-match preserved; no generic city or road point used."
@@ -1310,7 +1310,7 @@
   "localValidationReportedByRoot": {
     "head": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
     "tree": "8d5059c9fee871c522616971cce0a80b153e4d23",
-    "status": "LOCAL_GATES_PASS_HOSTED_PENDING",
+    "status": "LOCAL_GATES_PASS; original receipt timestamp retained; final hosted status appears under currentHostedGates",
     "checkedAt": "2026-10-09T07:54:22.858437+00:00",
     "receiptPath": "Candidate6-Local-Gates.json",
     "receiptSha256": "baa6b5afe96b7eabdbdc6caeaf82228b22b27ba336cdba43b5255201064323e6",
@@ -1370,16 +1370,104 @@
       }
     ],
     "checkoutIntegrity": "Fresh independent clone; clean exact tree; git fsck connectivity PASS; no borrowed object storage",
-    "localBrowser": "Chromium binary not installed locally; full exact-head hosted Chromium gates required and running, no prior PASS substituted."
+    "localBrowser": "Chromium binary not installed locally; no local exact-head browser acceptance claimed. Exact hosted gates completed successfully; independent final browser artifact acceptance remains HOLD."
   },
   "currentHostedGates": {
     "web": {
       "runId": "37901365412",
       "jobId": "113724452856",
-      "status": "IN_PROGRESS; final conclusion PENDING",
+      "status": "SUCCESS in native exact-head GitHub job metadata",
       "browserCounts": null,
       "geometryCounts": null,
-      "finalIndependentArtifactReview": "PENDING"
+      "finalIndependentArtifactReview": "HOLD: original ZIP exceeds supported connector cap",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-10-09T07:50:49Z",
+      "completedAt": "2026-10-09T08:55:37Z",
+      "allRecordedStepsSuccess": true,
+      "nativeBrowserStepConclusions": [
+        {
+          "number": 14,
+          "name": "Exercise casino experience in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 15,
+          "name": "Exercise country-aware location flow in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 16,
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "conclusion": "success"
+        },
+        {
+          "number": 17,
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 18,
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 19,
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 20,
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 21,
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 22,
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 23,
+          "name": "Compare seasonal and standard card geometry",
+          "conclusion": "success"
+        },
+        {
+          "number": 24,
+          "name": "Preserve browser evidence",
+          "conclusion": "success"
+        },
+        {
+          "number": 25,
+          "name": "Verify Dinner icon packs",
+          "conclusion": "success"
+        }
+      ],
+      "geometryMetrics": null,
+      "countStatus": "Actual exported counts and metrics UNVERIFIED; no expected or predecessor counts promoted to current-head results",
+      "finalRuntimeAcceptance": "HOLD",
+      "artifact": {
+        "id": 11604834689,
+        "name": "casino-browser-evidence",
+        "officialBytes": 659552557,
+        "officialSha256": "57bebbd86e183df68db154366c02a8f10819873ebb6c06022ba2cfd2e864878f",
+        "digestAttribution": "Official GitHub metadata only; not locally recomputed",
+        "connectorLimitBytes": 536870912,
+        "downloadRejection": "InvalidInputException: Artifact exceeds max size of 536870912 bytes: 659552557 bytes.",
+        "localFileReference": null,
+        "localFileBytesAvailable": false,
+        "localDigestVerified": false,
+        "crcVerified": false,
+        "internalProofVerified": false,
+        "verdictCountsVerified": false,
+        "pixelsReviewed": false
+      },
+      "fullJobLog": "Unavailable: Transport closed; native step metadata preserved",
+      "stepMetadataReceipt": "runtime-independent-review/fe22-web-step-timings.json",
+      "stepMetadataReceiptSha256": "2611d3424a891e9adff33d13f92651e04f5a475caa408eebabc30651ed155a5d"
     },
     "android": {
       "runId": "37901365396",
@@ -1574,8 +1662,9 @@
   "carryForwardScope": "Unchanged earlier continuity decisions; not new re-clearances and not included in this run batchcounts.",
   "priorSkipReason": "Superseded by current-head inspected skip reason in localValidationReportedByRoot.",
   "latestContinuityCheckpoint": {
-    "sha": "74bd6d0d9f608207446e3d64c6d56522f4af7a0b",
-    "status": "Published/readback by root after exact candidate6 Android gate. Web/browser/geometry pending; not final acceptance continuity."
+    "sha": "449909cc04862e5e5a588daf18bac7603d4e2e31",
+    "tree": "f1e5037a7633e06f97c60405f855aa7f0d0fd4a9",
+    "status": "Material terminal HOLD checkpoint published and reports/AI_CONTINUITY read back exactly by root. CI PASS / final artifact and runtime acceptance HOLD. Later final STOP/archive checkpoint pending root."
   },
   "storageRecovery": {
     "authoritativeCheckout": "repo-verified",
@@ -1609,15 +1698,19 @@
     {
       "sha": "15d095a65c5670dfe596ed1d84becc0ce75e1bd9",
       "status": "Published/readback by root after candidate6 local gate; controlled-stop failure exception only. Final acceptance continuity pending."
+    },
+    {
+      "sha": "74bd6d0d9f608207446e3d64c6d56522f4af7a0b",
+      "status": "Published/readback by root after exact candidate6 Android gate. Web/browser/geometry pending; not final acceptance continuity."
     }
   ],
   "controlledStop": {
     "authoritativeContinuity": "0fbdea6d9b2ec9d54e05dcb7b8ff921a69569496",
     "publication": "Published/readback by root; supersedes open-ended run",
-    "scope": "Finish existing validation/evidence closeout. User failure exception permits minimal diagnosed harness correction and required exact-head rerun only; no new research, record/runtime implementation or backlog execution.",
+    "scope": "Terminal controlled stop at external artifact-access blocker. CI rerun completed successfully; no further workflow/source/research or retrieval actions without owner authorization.",
     "candidateFrozen": true,
     "nextIsUnexecuted": true,
-    "terminalEvidenceBinding": "Wait for root final candidate6 web/browser/geometry/Android evidence, fresh identities and acceptance continuity before terminal brief."
+    "terminalEvidenceBinding": "Terminal CI PASS / final artifact and runtime acceptance HOLD; root publishes/readbacks final continuity separately."
   },
   "nextUnexecuted": {
     "cadaver": "Resolve independently reliable attraction-specific 2026 operation/date binding for at least one explicit date and supported expiry; proposedOct29 subset still not source-year-bound. Retain accepted identity/public visitoraddress/approximatepoint; no recurrence inference.",
@@ -1736,33 +1829,48 @@
       }
     ],
     "optionalEnrichments": "Brookdale separate-admission sentence and Hotel of Terror transfer-ride sentence remain independently reviewed but unapplied. No runtime churn authorized by closeout.",
-    "ownerAction": "If final exact-head candidate6 gates PASS, owner may decide release of PR60/headfe22c15 and must resolve protection or grant fresh exact-candidate waiver. Agent does not merge/deploy or execute backlog."
+    "ownerAction": "First supply or authorize bounded access to original current-head evidence. Only after final artifact/runtime acceptance PASS may owner decide release of PR60/headfe22 and resolve protection/fresh exact-candidate waiver. No next action executed.",
+    "evidenceRetrievalOwnerChoice": [
+      {
+        "option": "Supply original ZIP in raw binary split parts",
+        "maximumPartBytes": 268435456,
+        "maximumPartMiB": 256,
+        "requirement": "Ordered raw parts with per-part hashes must reassemble byte-for-byte to original659552557-byte ZIP; verify aggregate officialSHA25657bebbd86e183df68db154366c02a8f10819873ebb6c06022ba2cfd2e864878f before CRC/internal proof/count/pixel review. No recompression substitute.",
+        "executed": false
+      },
+      {
+        "option": "Explicitly authorize separate evidence-export-only workflow",
+        "requirement": "Preserve exactfe22 candidate and originalrun/artifact; use separate deployment-disabled branch to export existing evidence in supported bounded parts/subsets with manifest. No runtime/source or production changes; no relabeling another run as original evidence.",
+        "executed": false
+      }
+    ]
   },
   "identityReadback": {
     "receipt": "Final-Identity-Readback.json",
-    "sha256": "3e43992283fe5810e9a457128b5c67bcbe457118326546d8b0e36c445bb2bb17",
-    "checked_at": "2026-10-09T07:36:45.321Z",
-    "scope": "Controlled-stop repository/production/rollback/protection readback; no mutations",
+    "sha256": "4de3911f42e5d42b787af72de2fdcd826da1980cee3f09f1fa2a56faf1b0740e",
+    "checked_at": "2026-10-09T08:56:45.637Z",
+    "scope": "Final controlled-stop exact-head repository/production/rollback/protection readback after both hosted runs SUCCESS; no release mutations",
     "candidate": {
       "pr": 60,
       "branch": "integration/missouri-astra-push-2026-10-09",
-      "sha": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
-      "tree": "fdfbf4045ea69f7a9b610a434243fc43f2c9f338",
+      "sha": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+      "tree": "8d5059c9fee871c522616971cce0a80b153e4d23",
       "parent": [
-        "a44e70996bc8546f75dc71e4af13c414350ec1f9"
+        "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd"
       ],
       "draft": true,
       "state": "open",
       "changed_paths": 32,
       "mergeable": true,
-      "mergeable_state": "unstable"
+      "mergeable_state": "clean"
     },
     "main": {
       "sha": "979d83aede9d66163e1ebaed9ad5b219cb637882",
       "tree": "a7dbb32947c0a0daf4864346b0d212477fc9a11b",
       "parent": [
         "46ded230297976698b9c8a035cb2dafd11219314"
-      ]
+      ],
+      "fresh_immutable_commit_readback_at": "2026-10-09T09:00:36.699Z"
     },
     "production": {
       "id": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
@@ -1826,12 +1934,34 @@
         "redirectStatusCode": null
       }
     ],
+    "hosted_runs": [
+      {
+        "id": 37901365396,
+        "name": "Pick For Us Android Release Readiness",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 76,
+        "jobs_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/37901365396/jobs",
+        "logs_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/37901365396/logs",
+        "workflow_id": 351386078
+      },
+      {
+        "id": 37901365412,
+        "name": "Validate Dinner Integration",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 405,
+        "jobs_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/37901365412/jobs",
+        "logs_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/37901365412/logs",
+        "workflow_id": 354688615
+      }
+    ],
     "readback_times": {
-      "github": "2026-10-09T07:36:08.159Z",
-      "deployment": "2026-10-09T07:36:17.331Z",
-      "aliases": "2026-10-09T07:36:25.281Z"
+      "github_and_deployments": "2026-10-09T08:56:21.442Z",
+      "aliases": "2026-10-09T08:56:45.637Z"
     },
-    "bindingStatus": "Historical candidate5 receipt at07:36UTC; production/rollback/protection observations retained with timestamp only. Candidate6 final PR/production/protection refresh pending root."
+    "historical_receipt": "Final-Identity-Readback-F767-Historical.json",
+    "integration_deployments": "disabled by unchanged integration/** policy; no Vercel configuration mutation"
   },
   "deploymentDisabledIntegrationBranch": {
     "status": "Unchanged",
@@ -2067,5 +2197,22 @@
     "receiptPath": "runtime-independent-review/f767-rpc-focused-replay-results.json",
     "receiptSha256": "5acbe6ded4ebf7830c6864735dbb2d59bfbcbd4f55444db7fdc2079436df1f57",
     "independentAttribution": "Executed by browser worker; replay code/results/source binding independently reviewed."
-  }
+  },
+  "releaseReady": false,
+  "verifiedCandidateReadyForOwnerReleaseDecision": false,
+  "terminalControlledStop": {
+    "reached": true,
+    "reason": "External evidence-access blocker after exact-head CI success",
+    "noFurtherMonitoringResearchOrMutation": true,
+    "independentTerminalReport": "runtime-independent-review/Independent-Terminal-Status-fe22c15.json",
+    "independentTerminalReportSha256": "675821d2234f042a7178fdcf28bfad77c17886cab05abb58b33ef08df48664ad",
+    "browserFinalStatus": "runtime-independent-review/FE22-Browser-Final-Status.md",
+    "browserFinalStatusSha256": "2382f44a8b2808bbafbbf55eeaae75ca127340cdfdec30aa4084f8c7180e6fdd",
+    "rootToAppend": "Available-evidence archive and final STOP publication receipts live separately on canonical continuity branch to avoid self-referential hashes.",
+    "materialHoldCheckpoint": "449909cc04862e5e5a588daf18bac7603d4e2e31",
+    "finalStopCheckpoint": null
+  },
+  "finalRuntimeVerdict": "HOLD pending supported original artifact retrieval, integrity/internal proof/verdict/pixel inspection. CI success is verified but does not satisfy final evidence acceptance.",
+  "priorIdentityReadbackRetained": "Final-Identity-Readback-F767-Historical.json",
+  "finalContinuationAuthority": "None. Owner evidence-retrieval decision required; stop now."
 }
