@@ -1,3 +1,18 @@
+# Pick For Us — Feemster Placement Recovered; Fourth Commercial Proposal (2026-10-09)
+
+## CURRENT
+Focused Feemster R2 follows frozenR1 without rewriting history. Operator visitor address2501 E Farm Road94, Springfield now has a public exact-address ArcGIS StreetAddress match, score100, **37.273100307742,-93.24361332435**. This is qualified approximate placement only; Directions remain the operator address. Prior Census wrong W-road match is rejected, not averaged. Exact final2026Nov1 21:00 CST end stays distinct from20:00 last-ticket time. Four cumulative commercial proposals, six remaining HOLD, independent publication binding pending.
+
+Full supplement audit/astra-commercial-holds-2026-10-09/revision-2/Commercial-Holds-Feemster-Supplement-R2.json SHA256 **d3f545c0d15f8286e79091a5ea668264ea071ceb873de38de87a90706b12077e**, report and full raw point receipt are preserved. R1 three projections remain unchanged.
+
+## NEXT
+Independent reviewer binds exact published R1/R2 and issues4-record author subset. Stack only approved records using existing mechanisms, then rerun exact-head gates. Eleven implementation now locally complete: focused109 tests, typecheck and targeted lint PASS; full first prebuild attempt found one expected-neighborhood fixture needing the new nearby Missouri Nightmare plus compiled tests lacking a built bundle. Preserve that attempt; build safely before full rerun. No runtime defect is inferred from missing build. Delta18-lead research and Cadaver review are nearing their own gates.
+
+## HOLD
+No cumulative runtime/browser or release PASS. Remaining commercial Werehouse/Wolfman/Fear Factory/Twisted Minds/Waco/Rising exact dates/expiry remain held. Local Chromium unavailable; hosted gate required. Main979d83a/treea7db and productionF1 READY/source979d, BCd rollback remain unchanged last verified baseline. Six warnings/narrow Directions clipping/physical Android HOLD retain scope. No merge/deploy/settings/waiver/signing/Play authority.
+
+PARENT COMMIT **a1977764a79c692f0a136ce910d1b18b76d6453b**, TREE **bd469fc067d8434a480c52652537915eaf96e76b**. Prior history follows verbatim.
+
 # Pick For Us — Ten Commercial HOLDs Ranked; Three Re-clearance Proposals Frozen (2026-10-09)
 
 ## CURRENT
