@@ -1,3 +1,20 @@
+# ASTRA MATERIAL GATE — 2026-10-09 05:22 UTC — exact candidate 2 local gates PASS
+
+## CURRENT
+- PR #60 head **4513aee7de0afe55e0f0fa061c1ec5f6af4fa412**, tree **7323e271b5ecf23fdf60f8c4a98f8fffc564137c**, parent **bb7f36123c5035a36676e98acb1b9ab4fe599955**. Clean local worktree.
+- Full local tests **1,018 PASS / 0 FAIL / 4 skips**: repository 947 PASS / 4 skips (951 total), application 71 PASS. Typecheck PASS. Lint PASS with 0 errors / 6 inherited warnings.
+- Exact-head auth-enabled, migration-free production build PASS. Source SHA256 cfb3d432502d4d09bc99d89f1347315e9ed0ec7032bb90dcdc72ee90c68685ab (468 files); output SHA256 b406ade9c8a8591655bac0052146ba1e1d65b2985215b15fb0cdc5b13a009cbe (194 files). Log hashes retained in audit/astra-validation-2026-10-09/Candidate2-Local-Gates.json.
+- Twenty additions implemented; existing 32 retained. No candidate deployment. Hosted web 37888059004 and unsigned Android 37888058961 active. Independent candidate source review and Cadaver adjudication active.
+## NEXT
+- Complete hosted browser/geometry/Android gates and independent exact-head acceptance.
+- Resolve Cadaver factual review, preserve data/evidence archive, produce release-decision brief.
+## HOLD
+- Local PASS is not final release readiness. Browser counts/geometry remain planned until hosted verdicts.
+- Main unprotected; fresh exact-candidate waiver absent. All production actions require owner decision.
+- Named six commercial, residential and physical Android HOLDs retained below.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 05:20 UTC — bounded test-fixture remediation
 
 ## CURRENT

@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-10-09T05:22:13.741453+00:00",
+  "head": "4513aee7de0afe55e0f0fa061c1ec5f6af4fa412",
+  "tree": "7323e271b5ecf23fdf60f8c4a98f8fffc564137c",
+  "verdict": "LOCAL_GATES_PASS_HOSTED_PENDING",
+  "tests": {
+    "repository": {
+      "pass": 947,
+      "fail": 0,
+      "skip": 4,
+      "total": 951
+    },
+    "application": {
+      "pass": 71,
+      "fail": 0,
+      "skip": 0
+    },
+    "aggregate_pass": 1018,
+    "aggregate_skip": 4
+  },
+  "lint": {
+    "errors": 0,
+    "inherited_warnings": 6
+  },
+  "typecheck": "PASS",
+  "build": {
+    "auth_enabled": true,
+    "migrations_run": false,
+    "status": "PASS",
+    "source_sha256": "cfb3d432502d4d09bc99d89f1347315e9ed0ec7032bb90dcdc72ee90c68685ab",
+    "source_files": 468,
+    "output_sha256": "b406ade9c8a8591655bac0052146ba1e1d65b2985215b15fb0cdc5b13a009cbe",
+    "output_files": 194
+  },
+  "logs": [
+    {
+      "path": "test-candidate2.log",
+      "bytes": 366175,
+      "sha256": "56dbe56e8f468c1827c43c3f03cfbe166c94562a4469ac7766a49e72fcf9104f"
+    },
+    {
+      "path": "lint-candidate2.log",
+      "bytes": 1589,
+      "sha256": "c5f5a24f4722874425d2938e8926e52c3f1984340ab234516916f8dc14a0929b"
+    },
+    {
+      "path": "typecheck-candidate2.log",
+      "bytes": 128,
+      "sha256": "ae791f9f57ffbb3c0a592b6a34e25250c1f7f6f13fde4d05f77a0d4e7681f89a"
+    },
+    {
+      "path": "build-candidate2.log",
+      "bytes": 10549,
+      "sha256": "375f6baf0a75de972b2649f610bab0096db17a2277a5deac8e6968f7cce0b88f"
+    }
+  ]
+}
+
