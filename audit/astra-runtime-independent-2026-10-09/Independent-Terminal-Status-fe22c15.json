@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent_review",
+  "reviewedAt": "2026-10-09T09:02:10.350577+00:00",
+  "terminalAssessment": "CONTROLLED STOP AT EXTERNAL EVIDENCE-ACCESS BLOCKER; CI PASS / INDEPENDENT CURRENT-BROWSER ARTIFACT ACCEPTANCE HOLD",
+  "verifiedCandidateReadyForOwnerReleaseDecision": false,
+  "candidate": {
+    "pr": 60,
+    "branch": "integration/missouri-astra-push-2026-10-09",
+    "sha": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "tree": "8d5059c9fee871c522616971cce0a80b153e4d23",
+    "parent": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+    "cleanLocalIdentityIndependentlyVerified": true,
+    "recordsAdded": 20,
+    "previousCuratedRecords": 32,
+    "candidateCuratedRecords": 52,
+    "existingRuntimeEnrichments": 0
+  },
+  "completedEvidence": {
+    "independentSourceAndHarnessDelta": "PASS, frozen source/data previously independently reviewed; exact final harness-only delta attested",
+    "localGates": {
+      "source": "Candidate6-Local-Gates.json",
+      "boundLogsHashVerified": true,
+      "repositoryPass": 947,
+      "applicationPass": 71,
+      "totalPass": 1018,
+      "fail": 0,
+      "skip": 4,
+      "typecheck": "PASS",
+      "lintErrors": 0,
+      "inheritedLintWarnings": 6,
+      "authEnabledMigrationFreeBuild": "PASS"
+    },
+    "hostedWeb": {
+      "source": "Native GitHub job metadata receipt, independently inspected; not a downloaded browser artifact",
+      "runId": 37901365412,
+      "jobId": 113724452856,
+      "headSha": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+      "conclusion": "SUCCESS",
+      "startedAt": "2026-10-09T07:50:49Z",
+      "completedAt": "2026-10-09T08:55:37Z",
+      "allRecordedStepsSuccess": true,
+      "browserStepConclusions": [
+        {
+          "number": 14,
+          "name": "Exercise casino experience in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 15,
+          "name": "Exercise country-aware location flow in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 16,
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "conclusion": "success"
+        },
+        {
+          "number": 17,
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 18,
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 19,
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 20,
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 21,
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 22,
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "conclusion": "success"
+        },
+        {
+          "number": 23,
+          "name": "Compare seasonal and standard card geometry",
+          "conclusion": "success"
+        },
+        {
+          "number": 24,
+          "name": "Preserve browser evidence",
+          "conclusion": "success"
+        },
+        {
+          "number": 25,
+          "name": "Verify Dinner icon packs",
+          "conclusion": "success"
+        }
+      ]
+    },
+    "android": "Current exact-head independent archive/payload/source/manifest/unsigned/guard/lint PASS; physical-device, signing and publication excluded"
+  },
+  "unresolvedCurrentBrowserEvidence": {
+    "status": "HOLD",
+    "artifactId": 11604834689,
+    "officialBytes": 659552557,
+    "officialSha256": "57bebbd86e183df68db154366c02a8f10819873ebb6c06022ba2cfd2e864878f",
+    "officialIdentityAttribution": "Recorded GitHub artifact metadata; digest has NOT been locally recomputed from the unavailable original ZIP.",
+    "supportedDownloadLimitBytes": 536870912,
+    "downloadRejection": "InvalidInputException: Artifact exceeds max size of 536870912 bytes: 659552557 bytes.",
+    "localFileReferenceCreated": false,
+    "localDigestVerification": false,
+    "zipCRCVerification": false,
+    "innerSourceBuildProofVerification": false,
+    "verdictCountsVerification": false,
+    "screenshotPixelReview": false,
+    "actualCurrentBrowserCounts": null,
+    "actualCurrentGeometryCounts": null,
+    "actualCurrentGeometryMetrics": null,
+    "logRetrieval": "Full job log tool returned Transport closed; native step metadata remains available.",
+    "additionalAccessLimits": "Root reports generic fetch rejects binary, gh CLI absent, and no supported member/range export tool. No new unsupported retrieval or workflow mutation attempted by reviewer."
+  },
+  "interpretation": [
+    "The exact-head CI job reports success for every required suite including geometry and icon checks. This is a positive CI result, not a failed product gate.",
+    "Native success metadata does not replace archive integrity, internal build proof, detailed verdict counts or selected pixel review required by the acceptance standard.",
+    "Prior-head archives, counts and geometry measurements remain historical evidence and must not be promoted to current-head PASS.",
+    "No browser/count/runtime PASS is inferred from expected harness coverage or the size of the published artifact.",
+    "The controlled stop permits closing out at this unavoidable external evidence-access blocker. It does not authorize a new export workflow or source mutation after passing CI."
+  ],
+  "ownerNext": [
+    {
+      "option": "Provide original artifact in parts",
+      "scope": "Download the exact 659552557-byte original ZIP and provide ordered binary split parts no larger than 256 MiB each, with per-part hashes. Reassemble byte-for-byte; require aggregate SHA256 57bebbd86e183df68db154366c02a8f10819873ebb6c06022ba2cfd2e864878f before CRC/internal-proof/verdict/pixel review. Do not substitute a recompressed archive for original-byte identity."
+    },
+    {
+      "option": "Explicitly authorize a separate evidence-export-only workflow",
+      "scope": "Preserve frozen candidate fe22c15 and its original run/artifact. Export existing evidence into retrievable bounded parts without runtime/source changes, production action or relabeling an unrelated run as the candidate evidence."
+    }
+  ],
+  "retainedReleaseHolds": {
+    "ownerReleaseAuthority": "No merge/deploy/promote authority granted. Final current browser evidence review must complete before release-ready claim.",
+    "protection": "Root fresh readback reports main unprotected, no rulesets, dedicated endpoint403; fresh exact-candidate owner waiver absent. Owner must resolve protection or explicitly grant the necessary waiver if release is later approved.",
+    "android": "Physical device/WebView/GPS, upload signing, Play Console and publication HOLD.",
+    "cadaver": "Reliable attraction-specific 2026 date binding and supported expiry remain unresolved; no new research or import.",
+    "backlog": "Six commercial HOLDs, eight delta HOLDs, residential lane, earlier no-import/placement decisions and two optional enrichment sentences preserved without execution."
+  },
+  "productionReceipt": {
+    "attribution": "Fresh root readback receipt inspected; reviewer made no new production calls or mutations.",
+    "checkedAt": "2026-10-09T08:56:45.637Z",
+    "production": {
+      "id": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "state": "READY",
+      "source": "979d83aede9d66163e1ebaed9ad5b219cb637882"
+    },
+    "rollback": {
+      "id": "dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv",
+      "state": "READY",
+      "source": "213502ef8cf3f67d75e6d9c9c8ff43f9f656890c"
+    },
+    "main": {
+      "sha": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+      "tree": "a7dbb32947c0a0daf4864346b0d212477fc9a11b",
+      "parent": [
+        "46ded230297976698b9c8a035cb2dafd11219314"
+      ],
+      "fresh_immutable_commit_readback_at": "2026-10-09T09:00:36.699Z"
+    },
+    "candidateReadback": {
+      "pr": 60,
+      "branch": "integration/missouri-astra-push-2026-10-09",
+      "sha": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+      "tree": "8d5059c9fee871c522616971cce0a80b153e4d23",
+      "parent": [
+        "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd"
+      ],
+      "draft": true,
+      "state": "open",
+      "changed_paths": 32,
+      "mergeable": true,
+      "mergeable_state": "clean"
+    }
+  },
+  "continuity": "Root must publish/read back canonical CURRENT/NEXT/HOLD terminal checkpoint and record its exact SHA before ending the run. This report does not claim that final publication is already complete.",
+  "boundReceipts": [
+    {
+      "path": "runtime-independent-review/fe22-web-step-timings.json",
+      "sha256": "2611d3424a891e9adff33d13f92651e04f5a475caa408eebabc30651ed155a5d"
+    },
+    {
+      "path": "runtime-independent-review/fe22-artifact-retrieval.json",
+      "sha256": "43a61cd522fb0b8ce9eaea2d75e2044f2db8bc101c43bfc113f6681de126e4fc"
+    },
+    {
+      "path": "runtime-independent-review/fe22-web-log-retrieval.json",
+      "sha256": "50ddb4baeedd23aeea4d236dfd669d23061d1546cb48ef020a91f44d1afc9d30"
+    },
+    {
+      "path": "runtime-independent-review/Independent-Delta-Attestation-fe22c15.json",
+      "sha256": "33c6f6253139254f8d4b9ea9ffef6b30975127fc562c831fc970c9f44a45e1d4"
+    },
+    {
+      "path": "runtime-independent-review/Android-Artifact-Independent-fe22c15.json",
+      "sha256": "3da21b677ff64e919a3bb799fbebbda4423e69689eb5a8639693918041691aad"
+    },
+    {
+      "path": "Candidate6-Local-Gates.json",
+      "sha256": "baa6b5afe96b7eabdbdc6caeaf82228b22b27ba336cdba43b5255201064323e6"
+    },
+    {
+      "path": "Candidate6-Hosted-Unit-Counts.json",
+      "sha256": "c9acd7a2b6d1f4a6165491bfdfdd9ebc9fe74ae31de890f19da65e68a4adea20"
+    },
+    {
+      "path": "release-prep/Final-Identity-Readback.json",
+      "sha256": "4de3911f42e5d42b787af72de2fdcd826da1980cee3f09f1fa2a56faf1b0740e"
+    }
+  ],
+  "reviewerMutations": "Only this review report written; no source, workflow, research, production, signing or external publication changes."
+}

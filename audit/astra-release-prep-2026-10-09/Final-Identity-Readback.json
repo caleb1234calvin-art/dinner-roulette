@@ -1,0 +1,116 @@
+{
+  "checked_at": "2026-10-09T08:56:45.637Z",
+  "scope": "Final controlled-stop exact-head repository/production/rollback/protection readback after both hosted runs SUCCESS; no release mutations",
+  "candidate": {
+    "pr": 60,
+    "branch": "integration/missouri-astra-push-2026-10-09",
+    "sha": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "tree": "8d5059c9fee871c522616971cce0a80b153e4d23",
+    "parent": [
+      "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd"
+    ],
+    "draft": true,
+    "state": "open",
+    "changed_paths": 32,
+    "mergeable": true,
+    "mergeable_state": "clean"
+  },
+  "main": {
+    "sha": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+    "tree": "a7dbb32947c0a0daf4864346b0d212477fc9a11b",
+    "parent": [
+      "46ded230297976698b9c8a035cb2dafd11219314"
+    ],
+    "fresh_immutable_commit_readback_at": "2026-10-09T09:00:36.699Z"
+  },
+  "production": {
+    "id": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+    "state": "READY",
+    "source": "979d83aede9d66163e1ebaed9ad5b219cb637882"
+  },
+  "rollback": {
+    "id": "dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv",
+    "state": "READY",
+    "source": "213502ef8cf3f67d75e6d9c9c8ff43f9f656890c"
+  },
+  "protection": {
+    "branch_protected": false,
+    "rulesets": [],
+    "dedicated_endpoint": {
+      "error": "GitHub API error 403: {\"message\":\"Resource not accessible by integration\",\"documentation_url\":\"https://docs.github.com/rest/branches/branch-protection#get-branch-protection\",\"status\":\"403\"}",
+      "error_code": "FORBIDDEN",
+      "error_data": {
+        "message": "Resource not accessible by integration",
+        "documentation_url": "https://docs.github.com/rest/branches/branch-protection#get-branch-protection",
+        "status": "403"
+      }
+    },
+    "fresh_owner_waiver": false,
+    "status": "Owner must resolve protection or explicitly grant a fresh exact-candidate waiver; no waiver granted by agent."
+  },
+  "aliases": [
+    {
+      "alias": "pickforus.app",
+      "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "www.pickforus.app",
+      "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": "pickforus.app",
+      "redirectStatusCode": 308
+    },
+    {
+      "alias": "dinner-roulette-chi.vercel.app",
+      "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null
+    }
+  ],
+  "hosted_runs": [
+    {
+      "id": 37901365396,
+      "name": "Pick For Us Android Release Readiness",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 76,
+      "jobs_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/37901365396/jobs",
+      "logs_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/37901365396/logs",
+      "workflow_id": 351386078
+    },
+    {
+      "id": 37901365412,
+      "name": "Validate Dinner Integration",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 405,
+      "jobs_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/37901365412/jobs",
+      "logs_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/37901365412/logs",
+      "workflow_id": 354688615
+    }
+  ],
+  "readback_times": {
+    "github_and_deployments": "2026-10-09T08:56:21.442Z",
+    "aliases": "2026-10-09T08:56:45.637Z"
+  },
+  "historical_receipt": "Final-Identity-Readback-F767-Historical.json",
+  "integration_deployments": "disabled by unchanged integration/** policy; no Vercel configuration mutation"
+}
