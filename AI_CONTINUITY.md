@@ -1,3 +1,41 @@
+# Pick For Us — Nine Fresh Research Proposals Frozen; Independent Review Required (2026-10-09)
+
+## CURRENT
+
+Prepared-nine fresh pre-import research R1 is complete: **9 researcher PASS proposals /0 research HOLD /0 REJECT; zero fresh independent PASS**. No runtime/browser/import/release acceptance. Original accepted objects remain immutable; proposed corrected projections, consumer arrays and field-level source bindings are preserved in the new full package. This checkpoint precedes fresh independent verifier dispatch.
+
+[Full research and corrected projections/copy](audit/nine-preimport-2026-10-09/Nine-Preimport-Research-R1.json), SHA-256 **`b922bcc762c36b8be566614f4c7e67df80d91ac72af560973b3b42eaae345210`**.
+[Full research report](audit/nine-preimport-2026-10-09/Nine-Preimport-Research-Report-R1.txt), SHA **`70950aadbae5a50f1105fdc291b2db8e3288d39a9bdc1feb2f83367b4470f72a`**.
+[Hash manifest](audit/nine-preimport-2026-10-09/SHA256SUMS.json), input integrity/structural checks and live-fetch receipts are retained beside them. Full evidence manifest identifies additional local bodies/images; it does not imply all multi-megabyte raw sources were copied to the repository.
+
+### Material findings for independent review
+
+- **Ranch:** newly reproduced official linked venue endpoint establishes final **October31 23:00 CDT**. Proposed exact cutoff replaces prior editorialNovember2 retention. Partial individual hours remain; no daily recurrence inferred.
+- **Liberty:** preserve partial/last-entry conflicts and exactOctober30 23:00 end; add no-concealed-weapons, scope alcohol prohibition to maze rather than separate saloon/beer garden.
+- **Cobb:** current web extraction with recent crawl reproduces2026 calendar/end/address, but live curl/cloud browser return Site Unavailable. Secondary10+ corroborated; detailed previously accepted sensory/health warning was not freshly reproduced. **Verifier must explicitly accept the qualified evidence or HOLD Cobb alone**, without claiming live-origin verification.
+- **Nixa:** same current20-date calendar/map; proposed no-smoking/drugs/alcohol/weapons/touch/flash-photo rules and long-wait warning. Secondary wheelchair/carried-infant limits must remain qualified, not operator-confirmed.
+- **Trepidations:** visually inspected calendar/warning preserve regular/no-scare/Blackout distinctions; proposed shoes/no-high-heels/jewelry and smoking/touch/photo restrictions remain operator-qualified.
+- **Hell Harvest:** dates/address/point and date-onlyNovember1 boundary retained; additional cigarettes/drugs/video-flash restrictions proposed. Coarse map and legacy2025 conflicts remain rejected/qualified.
+- **Branson, Nightmare, Freaks:** current decisive sources reproduce accepted core; retain weaker “ended”/generichours/address/date discrepancies without overruling stronger current operator/booking evidence.
+
+No editorial fallback remains proposed among these nine after Ranch's exact-end correction; Hell Harvest still has date-only retention, not closing-time evidence. All nine remain never-OpenNow/null machine intervals, qualified approximate placement and address Directions. Cobb alone needs explicit late-fall runtime tests, never a global Halloween season extension.
+
+## NEXT
+
+Fresh independent verifier reads the complete frozen package, reopens decisive evidence and evaluates each factual/placement/copy change separately. Researchers do not self-approve; one HOLD must not block the rest. Only the independently cleared subset may enter the authorized bounded nonproduction candidate, with full exact-head browser/layout/cache/expiry and independent runtime gates.
+
+Cadaver is **independently VERIFIED HOLD**, parked for new material2026 binding; its individual address/approximate-point PASS is not import clearance. Delta5 research has completed a queued researcher handoff and will receive its own checkpoint/readback before separate independent review. No implementation candidate exists and none is begun by this checkpoint.
+
+## HOLD
+
+Nine fresh independent clearance is pending, especially explicit Cobb source-age/restriction qualification and changed Ranch lifecycle. Targeted cancellation searches are bounded, not a continuous or exhaustive guarantee. Archived proposed/pending labels remain distinct from prior or future independent verdicts. All32 shipped facts and existing runtime fixes remain untouched; other backlog/residential/physicalAndroid/release constraints remain.
+
+Fresh **03:43 UTC** main **`979d83aede9d66163e1ebaed9ad5b219cb637882`**, treea7dbb32947c0a0daf4864346b0d212477fc9a11b, production **`dpl_F1XiMcc9AUuykunNamr87R3re7gP` READY/source979d** unchanged. BCd retained rollback per baseline, no new test. Nonproduction scope only; no main/deploy/settings/waiver.
+
+Only continuity and frozen research files under `audit/nine-preimport-2026-10-09/` change on deployment-disabled integration. **PARENT COMMIT:** `f86f820561ce480c48eebe946b5235b3254aaefb`; **PARENT TREE:** `3899905d41c788620f58e04c8198708e73132001`. Preserve all history; this stable research checkpoint is not terminal completion.
+
+## Prior continuity — Cadaver independent HOLD, preserved verbatim
+
 # Pick For Us — Cadaver Independently VERIFIED HOLD; Park Pending New Evidence (2026-10-09)
 
 ## CURRENT
