@@ -13,6 +13,10 @@ const nativeFetch = globalThis.fetch;
 globalThis.fetch = async (input, init) => {
   const url = new URL(input instanceof Request ? input.url : input);
   if (["127.0.0.1", "localhost", "[::1]"].includes(url.hostname)) return nativeFetch(input, init);
+  if (url.hostname === "nominatim.openstreetmap.org" && url.pathname === "/search") {
+    record(config(), { event: "geocode", query: url.searchParams.get("q") });
+    return Response.json(url.searchParams.get("q")?.includes("Columbia") ? [{ lat: "38.9517", lon: "-92.3341", address: { city: "Columbia", state: "Missouri", country: "United States", country_code: "us" } }] : []);
+  }
   if (!["overpass.openstreetmap.fr", "overpass.private.coffee", "maps.mail.ru", "overpass-api.de"].includes(url.hostname)) {
     throw new Error("External network disabled in radial fixture");
   }
@@ -20,23 +24,24 @@ globalThis.fetch = async (input, init) => {
   const values = query.match(/\(around:([^)]*)\)/)?.[1].split(",").map(Number);
   if (!query.includes(".lifecycle_context") || !values) return Response.json({ elements: [] });
   const [radius, lat, lon] = values;
+  const replacement = Math.abs(lat - 38.9517) < 1e-8 && Math.abs(lon + 92.3341) < 1e-8;
   let patch = plan.find(p => Math.abs(p.center.lat - lat) < 1e-8 && Math.abs(p.center.lon - lon) < 1e-8 && p.radiusMeters === radius);
   if (!patch && radius <= 80468 && radius > 0) patch = { id: "primary", center: { lat, lon }, radiusMeters: radius, innerMiles: 0 };
   if (!patch) throw new Error("Unrecognized or unbounded hybrid query in fixture");
   const state = config(), signal = init?.signal;
-  record(state, { event: "start", patchId: patch.id, radiusMeters: radius });
+  record(state, { event: "start", patchId: patch.id, radiusMeters: radius, lat, lon });
   if (state.scenario === "middle-failure" && patch.id === "radial-v1:20:1" ||
       state.scenario === "outermost-failure" && patch.id === "radial-v1:50:10") {
-    record(state, { event: "http-error", patchId: patch.id });
+    record(state, { event: "http-error", patchId: patch.id, lat, lon });
     return new Response("fixture failure", { status: 504 });
   }
   await new Promise((resolve, reject) => {
     let timer;
     const cleanup = () => { clearTimeout(timer); signal?.removeEventListener("abort", abort); };
-    const abort = () => { cleanup(); record(state, { event: "abort", patchId: patch.id }); reject(signal.reason); };
+    const abort = () => { cleanup(); record(state, { event: "abort", patchId: patch.id, lat, lon }); reject(signal.reason); };
     const poll = () => {
       const current = config();
-      if (state.scenario === "all-stall" || current.scenario === state.scenario && current.holdPatch === patch.id) {
+      if (state.scenario === "all-stall" || current.scenario === state.scenario && current.holdPatch === patch.id && !replacement) {
         timer = setTimeout(poll, 50);
       } else { cleanup(); resolve(); }
     };
@@ -44,12 +49,12 @@ globalThis.fetch = async (input, init) => {
     signal?.addEventListener("abort", abort, { once: true });
     timer = setTimeout(poll, patch.innerMiles ? 100 : 250);
   });
-  record(state, { event: "response", patchId: patch.id });
+  record(state, { event: "response", patchId: patch.id, lat, lon });
   const index = patch.id === "primary" ? 0 : plan.findIndex(p => p.id === patch.id);
   return Response.json({ elements: [
-    ...Array.from({ length: patch.innerMiles ? 1 : 4 }, (_, i) => ({ type: "node", id: 980000000 + index * 10 + i,
+    ...Array.from({ length: patch.innerMiles ? 1 : 4 }, (_, i) => ({ type: "node", id: (replacement ? 981000000 : 980000000) + index * 10 + i,
       lat: patch.center.lat + i * 0.015, lon: patch.center.lon,
-      tags: { name: patch.innerMiles ? `Radial outer cinema ${index}` : `Radial nearby cinema ${i + 1}`, amenity: "cinema", opening_hours: "24/7" } })),
+      tags: { name: replacement ? `Columbia replacement cinema ${i + 1}` : patch.innerMiles ? `Radial outer cinema ${index}` : `Radial nearby cinema ${i + 1}`, amenity: "cinema", opening_hours: "24/7" } })),
     { type: "node", id: 989999999, ...origin, tags: { name: "Radial permanently closed fixture", amenity: "cinema", demolished: "yes", opening_hours: "24/7" } },
   ] });
 };

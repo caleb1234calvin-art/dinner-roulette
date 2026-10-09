@@ -1,3 +1,4 @@
+import { dateNightRpcEvidence } from "./test-support/hybrid-rpc-evidence.mjs";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
@@ -45,7 +46,8 @@ try {
     const radiusMiles = scenario === "radius-increase" ? 15 : ["outermost-failure", "radius-decrease", "all-stall"].includes(scenario) ? 50 : 20;
     await context.addInitScript(({ radiusMiles, scenario, fixtureOrigin }) => {
       // Fixture setup belongs only to our application origin, never opaque about:blank.
-      if (location.origin !== fixtureOrigin) return;
+      if (location.origin !== fixtureOrigin || sessionStorage.getItem("hybrid-fixture-seeded")) return;
+      sessionStorage.setItem("hybrid-fixture-seeded", "1");
       sessionStorage.setItem("dinner-roulette-hint-seen", "1");
       localStorage.setItem("pick-for-us-v1", JSON.stringify({ version: 0, state: {
         location: { lat: 37.176447, lon: -94.310223, label: "Carthage, Missouri", source: "manual" },
@@ -115,13 +117,13 @@ try {
       if (scenario === "radius-increase") { await slider.focus(); await slider.press("End"); }
       await waitFor(async () => (await records(scenario)).some(r => r.event === "start" && r.patchId === "radial-v1:20:0"), "Outer work not scheduled");
       const count = rpcRequests.length;
-      const primaryCount = rpcRequests.filter(r => !r.postData()?.includes("patchId")).length;
+      const primaryCount = rpcRequests.filter(r => dateNightRpcEvidence(r.postData()).kind === "primary").length;
       const radiusStarted = Date.now();
       await slider.focus(); await slider.press("Home");
       await waitFor(async () => (await progress.innerText()).startsWith("Ready"), "Shrink did not reuse core");
       await delay(250);
       assert.ok(rpcRequests.length >= count);
-      assert.equal(rpcRequests.filter(r => !r.postData()?.includes("patchId")).length, primaryCount, "Covered decrease must not launch primary refetch");
+      assert.equal(rpcRequests.filter(r => dateNightRpcEvidence(r.postData()).kind === "primary").length, primaryCount, "Covered decrease must not launch primary refetch");
       assert.ok(Date.now() - radiusStarted < 1500, "Covered radius decrease is local and promptly usable");
       assert.ok(cancelled.length >= 1, "Obsolete outer transport must abort");
       assert.equal(await pick.isDisabled(), false);
@@ -137,19 +139,32 @@ try {
     } else if (["category-cancel", "location-cancel", "unmount-cancel", "primary-category-cancel", "primary-location-cancel"].includes(scenario)) {
       const cancellationTarget = scenario.startsWith("primary-") ? "primary" : "radial-v1:20:0";
       await waitFor(async () => (await records(scenario)).some(r => r.event === "start" && r.patchId === cancellationTarget), "Provider request must be pending before cancellation");
+      const heldStart = (await records(scenario)).find(r => r.event === "start" && r.patchId === cancellationTarget);
       if (scenario.endsWith("category-cancel")) {
         await page.getByRole("button", { name: "Museum", exact: true }).click();
       } else if (scenario.endsWith("location-cancel")) {
-        await page.evaluate(() => {
-          const state = JSON.parse(localStorage.getItem("pick-for-us-v1"));
-          state.state.location = { lat: 38.9517, lon: -92.3341, label: "Columbia", source: "manual" };
-          localStorage.setItem("pick-for-us-v1", JSON.stringify(state));
-        });
-        await page.reload({ waitUntil: "domcontentloaded" });
+        await page.evaluate(() => { window.__sameMountedDocument = "preserved"; });
+        const section = page.getByRole("region", { name: "Search location" });
+        await section.getByRole("button", { name: "Change location", exact: true }).click();
+        await page.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill("Columbia, Missouri, United States");
+        await page.getByRole("button", { name: "Set location", exact: true }).click();
       } else {
         await page.goto("about:blank");
       }
-      await waitFor(async () => (await records(scenario)).some(r => r.event === "abort" && r.patchId === cancellationTarget), "Obsolete upstream provider work must abort");
+      await waitFor(async () => (await records(scenario)).some(r => r.event === "abort" && r.patchId === cancellationTarget && r.lat === heldStart.lat && r.lon === heldStart.lon), "Obsolete upstream provider work must abort");
+      if (scenario.endsWith("location-cancel")) {
+        await waitFor(async () => (await records(scenario)).some(r => r.event === "response" && r.patchId === "primary" && r.lat === 38.9517 && r.lon === -92.3341), "New Columbia primary must complete");
+        assert.equal(await page.evaluate(() => window.__sameMountedDocument), "preserved", "Normal location change must not reload");
+        const location = await page.evaluate(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location);
+        assert.equal(location.lat, 38.9517); assert.equal(location.lon, -92.3341);
+        await page.getByRole("button", { name: "Give us options", exact: true }).click();
+        await waitFor(async () => (await page.locator("article h3").allTextContents()).some(n => n.startsWith("Columbia replacement cinema")), "New-origin venue must be selectable");
+        const before = await page.locator("article h3").allTextContents();
+        assert.ok(before.every(n => !n.startsWith("Radial nearby") && !n.startsWith("Radial outer")));
+        await writeFile(control, JSON.stringify({ scenario })); await delay(300);
+        assert.deepEqual(await page.locator("article h3").allTextContents(), before, "Late old-origin work cannot replace open decision");
+        await page.getByRole("button", { name: "Close options", exact: true }).click();
+      }
       await writeFile(control, JSON.stringify({ scenario }));
       if (scenario === "unmount-cancel") await page.goto(origin, { waitUntil: "domcontentloaded" });
       await waitFor(async () => await page.locator("[data-radial-progress]").count() > 0, "Replacement session settles");
