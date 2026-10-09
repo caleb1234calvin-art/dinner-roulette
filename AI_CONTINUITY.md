@@ -1,3 +1,35 @@
+# Track F — Date Night Radial Loading Performance Audit Started (2026-10-09 21:49 UTC)
+
+## CURRENT
+
+Owner's **21:47:15 UTC** instruction opens **Track F: audit only**. Compare the exact current progressive radial acquisition with (1) selected-radius one-shot acquisition and (2) a 50-mile session pool with local radius clipping. Establish evidence before any architecture decision. **No runtime implementation, production/main change, or performance conclusion is authorized or claimed by this task-start checkpoint.**
+
+Active audit lead: radial-loading performance audit. Separate read-only reviewer: acquisition safety boundaries. Exact source checkout and request-accounting inspection are underway. No provider requests had been issued at the lead's initial baseline/protocol handoff. The initial protocol covers three areas (Joplin/Carthage, Columbia and Kansas City), Anything/ordinary/seasonal/mixed modes and increasing/decreasing radius. Real network measurements must remain separate from deterministic fixtures, prototypes and simulations; neither substitutes for the other.
+
+The lead's **provisional maximum** is 240 upstream requests total, with concurrency no higher than current implementation and stop conditions for sustained failures or HTTP 429. Source inspection and safety review may reduce this budget. This records the proposed bounded protocol, not approval of extra traffic or a new production load test. No production RPC load test or configuration mutation is planned. Unhealthy or unavailable measurement routes must be reported as **MORE EVIDENCE REQUIRED**, not a performance PASS. This documentation worker issues no provider traffic.
+
+## Verified baseline
+
+Fresh writer and lead checks at **21:47–21:48 UTC** agree: main **`fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`**, tree **`8d5059c9fee871c522616971cce0a80b153e4d23`**, parent **`f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd`**. Production **`dpl_8xyE9R3BxyE1883QpavaEBWV2LGa` READY**, source exact main. Canonical continuity remained **`ffa3a4a3a98b1060ca1228d5bcebd155e2c13805`** with the complete PR60 release closeout; no other coordinator's checkpoint was superseded. PR60's 52-record shipped state and scoped acceptance remain closed.
+
+Retained F1 and owner-selected BCd restoration evidence retain their release-time scope. BCd's supported prior-build Promote route must not be confused with disabled older-target Hobby Instant Rollback. No new rollback operation or eligibility test is performed here. All earlier one-attempt release waivers remain consumed.
+
+## NEXT
+
+Complete the source-bound audit protocol and safety review, then run only justified bounded nonproduction measurements. Quantify loading behavior, request count, coverage, cache/radius reuse, freshness/expiry and failure tradeoffs for the three approaches. Preserve actual receipts and explicitly label simulations and unresolved measurement limits. Record each stable audit/review gate in continuity with exact source and artifact hashes.
+
+Return an evidence-backed comparison and recommendation or MORE EVIDENCE REQUIRED. Any runtime architecture implementation or new release needs a separate owner decision. No automatic implementation follows the audit.
+
+## HOLD / parallel work
+
+The owner says Missouri discovery and Cadaver must not be blocked by Track F. **This audit instruction does not itself resume their parked work.** No fresh Missouri research assignment or implementation candidate is started by this checkpoint. Preserve any separately authorized coordinator activity if it appears.
+
+**Cadaver Zone remains FACTUAL / RUNTIME HOLD for reliable attraction-specific 2026 operation/date binding and supported expiry.** Accepted identity, public visitor address and qualified approximate placement remain. Named commercial/delta/residential backlog, unapplied enrichment, source-access limits, conservative Open Now, 2026 expiry/no recurrence, physical Android/WebView/GPS, signing/Play, six web and fourteen Android warnings and qualified narrow-screen clipping remain as recorded below. Performance alternatives must not silently weaken those policies.
+
+**PARENT CONTINUITY COMMIT:** `ffa3a4a3a98b1060ca1228d5bcebd155e2c13805`; **PARENT TREE:** `bfd2f4c00778b05ff7749d47898ca375e5c19dd9`. Only AI_CONTINUITY changes on deployment-disabled `integration/continuity-refresh-2026-10-07`. Complete prior history follows verbatim.
+
+---
+
 # PR #60 RELEASED — Exact Production Acceptance PASS — 2026-10-09 19:56 UTC
 
 ## CURRENT
