@@ -1,0 +1,92 @@
+{
+  "audit_id": "MISSOURI-DELTA5-RESIDENTIAL",
+  "frozen_at": "2026-10-09T03:42:04.761931+00:00",
+  "policy": "Separate research-only ledger. No private-address inference, no runtime inclusion, product-policy review required.",
+  "records": [
+    {
+      "name": "Wentzville’s Halls Of Horror",
+      "classification": "RESIDENTIAL/HOME HAUNT",
+      "prior_identity": "autonomous-delta3 residential ledger",
+      "research_decision": "HOLD",
+      "fields": {
+        "public_directory_address": {
+          "value": "2725 Defender Drive, Wentzville, MO 63385",
+          "status": "explicitly public visitor listing; operator authorship/intention not independently established",
+          "source_ids": [
+            "residential-web"
+          ],
+          "source_urls": [
+            "https://frightmaps.com/houses/missouri/wentzvilles-halls-of-horror"
+          ],
+          "retrieved_at": [
+            "2026-10-09T03:37:31.797Z"
+          ]
+        },
+        "dates": {
+          "value": [
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "status": "secondary explicit 2026 invitation",
+          "source_ids": [
+            "residential-web"
+          ],
+          "source_urls": [
+            "https://frightmaps.com/houses/missouri/wentzvilles-halls-of-horror"
+          ],
+          "retrieved_at": [
+            "2026-10-09T03:37:31.797Z"
+          ]
+        },
+        "admission": {
+          "value": "Free admission",
+          "status": "secondary",
+          "source_ids": [
+            "residential-web"
+          ],
+          "source_urls": [
+            "https://frightmaps.com/houses/missouri/wentzvilles-halls-of-horror"
+          ],
+          "retrieved_at": [
+            "2026-10-09T03:37:31.797Z"
+          ]
+        }
+      },
+      "required": [
+        "Verify operator-intentionally-public visitor address and current invitation",
+        "Independent product-policy and visitor-safety review"
+      ],
+      "runtime_eligible": false
+    },
+    {
+      "name": "Spooky Hollow Dyerdown Holiday House",
+      "classification": "RESIDENTIAL/HOME HAUNT",
+      "prior_identity": "autonomous-delta3 residential ledger",
+      "research_decision": "HOLD",
+      "public_address": null,
+      "guide_2026_invitation": "Guide says opening October3,2026; detail reader failed",
+      "source": "https://frightmaps.com/best-haunted-houses-missouri-2026",
+      "required": [
+        "Readable operator-intentionally-public address",
+        "Precise season end/current invitation",
+        "Product-policy review"
+      ],
+      "runtime_eligible": false
+    },
+    {
+      "name": "West Gravestone Square",
+      "classification": "RESIDENTIAL/HOME HAUNT",
+      "prior_identity": "autonomous-delta3 residential ledger",
+      "research_decision": "HOLD",
+      "public_address": null,
+      "guide_invitation": "Photos welcome; do not knock; no explicit 2026 date binding in descriptive invitation",
+      "source": "https://frightmaps.com/best-haunted-houses-missouri-2026",
+      "required": [
+        "Operator-intentionally-public visitor address",
+        "Current-year invitation",
+        "Product-policy review"
+      ],
+      "runtime_eligible": false
+    }
+  ]
+}

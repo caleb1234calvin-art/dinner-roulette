@@ -1,0 +1,766 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labyrinth of Fear - Missouri Haunted House</title>
+
+    <script src="/Scripts/jquery-1.12.4.min.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/respond.js"></script>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+    <meta property="og:url" content="https://www.labyrinthoffear.com/">
+
+
+
+
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+        <link href="/assets/cyborg.css" rel="stylesheet" />
+
+        <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+
+    <link href="/assets/font-awesome.min.css" rel="stylesheet" />
+
+<meta name="robots" content="index, follow">
+<meta name="language" content="en-us">
+<meta name="author" content="https://www.hauntedhousemedia.com">
+<meta name="publisher" content="https://www.hauntedhousemedia.com">
+    <style type="text/css">
+        /* darkly */
+        /* .navbar-default { filter: alpha(opacity=75); -moz-opacity: 0.75; opacity: 0.75; } */
+
+            body, h1 { color: #FFF; }
+
+
+            a { color: #FFA500; }
+
+            a:hover { color: yellow; }
+
+            
+            h1 { font-family: 'Special Elite', cursive; }
+            .theme-text { font-family: 'Special Elite', cursive; }
+            
+
+
+            h1 { font-size: '20px'; }
+
+        .side-content { padding: 14px; border-radius: 7px; margin-bottom: 20px;   background-color: #111111  }
+        .side-title {   font-size: 17px  line-height: .9; padding-bottom: 14px; }
+        .side-connect { font-size: 2em; padding-bottom: 16px; }
+        .side-connect i { font-size: 36px; line-height: .5; }
+        .side-title i { float: right; font-size: 24px; }
+
+        /*.side-connect a { color: rgba(255, 255, 255, .8); }
+        .side-connect a:hover { color: rgba(255, 255, 255, 1.0); }*/
+
+        body { margin-top: 60px;  background-image: url('https://www.haunt.photos/images/clientsites/backgrounds/100.jpg'); background-position: top center; background-repeat: no-repeat; background-attachment: fixed;  }
+
+        .navbar { border: 0; border-radius: 0; margin-bottom: 0; }
+        #mobile-logo { display: none; }
+
+        .bottom-wrapper { margin-top: 0; padding-left: 0; padding-right: 0; padding-bottom: 12px; }
+
+        @media only screen and (max-width: 768px) {
+            #mobile-logo { position: absolute; top: 3px; left: 10px; } /* display: block;  */
+            .navbar-right { margin-top: 0; }
+            ul.navbar-right li { float: left; }
+            ul.navbar-right li a { font-size: 1.8em; padding-right: 0; }
+            .navbar-nav > li > a { padding-top: 5px; padding-bottom: 5px; font-size: 1.2em; }
+            h1 { font-size: 1.5em; padding-top: 20px; }
+        }
+
+        @media only screen and (min-width: 768px) {
+            #nav-social { display: none; }
+            .body-content { padding-left: 0; padding-right: 0; margin-top: 20px; }
+        }
+
+        #img-social a { font-size: 2em; margin-left: 5px; margin-right: 5px; }
+        /* .navbar-right { display: none !important; } */
+        #big-img-container h1 { width: auto; color: inherit; margin: 0; padding: 6px 15px; font-size: 2em; }
+
+        /* .logo-wrapper { display: none; } */
+        .logo-wrapper { display: block; position: relative; text-align: center; }
+
+        @media only screen and (max-width: 500px) {
+            .logo-wrapper a img, .logo-wrapper img { max-width: 250px; }
+        }
+
+        .content-wrapper {
+  background-color: rgba(0, 0, 0, .65);             border-radius: 12px; margin-top: 16px; padding-bottom: 14px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .navbar { height: 50px; } /* height: 50px; */
+            .navbar-responsive-collapse { padding-left: 0; }
+            .navbar > .container > .col-sm-10 { padding-left: 0; padding-right: 0; }
+            /* .navbar > .container { position: relative; z-index: 1001; } */
+            .nav li a {
+ color: #CCCCCC;                  font-family: 'Special Elite', cursive;                                  font-size: 15px;                                     text-shadow: 0 0 5px rgba(255, 255, 115, 0.8);
+            }
+
+                .navbar-default .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a { color: #CCCCCC; }
+
+                .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus { color: #FFA500; }
+
+            .navbar-right li a { font-size: 2em !important; margin-left: 5px; margin-right: 5px; padding: 0; padding-top: 10px; }
+            .navbar-right li a:hover { margin-left: 5px; margin-right: 5px; padding: 0; padding-top: 10px; }*/
+            .navbar-right > li > a { padding-left: 5px; padding-right: 5px; }
+
+            .navbar { margin-bottom: 0; }
+            #img-social { display: none; }
+
+            /* .logo-wrapper { display: block; position: relative; text-align: center; } */
+            #logo-social { display: inline-block; position: absolute; bottom: 0; right: 0; }
+        }
+
+        @media only screen and (min-width: 1200px) {
+ .nav li a { font-size: 18px; }         }
+
+        @media only screen and (max-width: 570px) {
+            #big-img-container h1 { font-size: 1.3em; }
+        }
+
+        .right-info { font-size: .95em; text-align: justify; }
+        .info-large { font-size: 1.25em; }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+            margin-bottom: 14px !important;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .listing-photos { margin-bottom: 14px; margin-top: 24px; }
+        .listing-photos::after { content: ""; }
+        .listing-photos ul { list-style-type: none; margin: 0; padding: 0; }
+        .listing-photos ul li { width: 20%; float: left; margin: 0; padding: 0 18px 18px 0; position: relative; }
+        .listing-photos ul li p { display: none; }
+        .listing-photos ul li a img { width: 100%; }
+
+        @media only screen and (max-width: 768px) {
+            .listing-photos ul li { width: 25%; }
+        }
+
+        @media only screen and (max-width: 420px) {
+            .listing-photos ul li { width: 33%; }
+        }
+
+        .calendar-wrapper { width: 100%; max-width: 660px; margin-left: auto; margin-right: auto; }
+	    .month_wrap { width: 100%; margin: .5em 0; position: relative; }
+        .calendar_month { border-collapse: separate; border-spacing: 1px; margin: 0 auto; text-align: center; background-color: transparent; width: 100%; }
+
+        .calendar_month tr th { font-size: 11px; padding: 6px 2px; text-align: center; vertical-align: middle; font-weight: 600; }
+        /* .calendar_month tr th:first-child { border-radius: 0 0 0 .3em; }
+        .calendar_month tr th:last-child { border-radius: 0 0 .3em 0; } */
+        .calendar_month tr td { font-size: 11px; padding: 6px 2px; text-align: center; vertical-align: middle; border: 1px solid #393939; } /* border-radius: .3em; */
+        .calendar_month tr td.month_title { border: 0; font-size: 13px; font-weight: 600; padding: 6px 2px; } /* border-radius: .6em .6em 0 0; */
+        .calendar_month tr td.empty_day { border: 0; }
+        .calendar_month tr td.active_day { border: 0; }
+        .calendar_hide { display: none; }
+        .calendar_month tbody tr td.navbar-default { border: 0; }
+
+        @media only screen and (max-width: 768px) {
+	        /*.calendar-wrapper { float: left; max-width: 230px; }
+	        .month_wrap { width: 100%; float: left; max-width: 280px; margin: .5em 1% .5em 0; } */
+        }
+
+        @media only screen and (max-width: 650px) {
+	        .month_wrap { width: 195px; max-width: 195px; margin: .5em 10px 0 0; }
+        }
+
+        footer { text-align: center; }
+        footer div.content-wrapper { padding-top: 2px; margin-bottom: 12px; }
+        footer div p { text-align: center; margin-top: 20px; }
+        footer div p:first-child { font-size: 1.25em; }
+
+        @media only screen and (max-width: 560px) {
+            footer div p:first-child { font-size: 1em; }
+        }
+
+        @media only screen and (max-width: 420px) {
+            footer div p:first-child { font-size: .85em; }
+        }
+
+        .rate-our-haunt { text-align: center; }
+        .rate-our-haunt a img { width: 100%; max-width: 220px; }
+
+        #page-bg-audio { text-align: center; padding: 18px 0 10px; }
+
+        #nav-map { width: 100%; height: 250px; }
+        #nav-map-wrapper { position: relative; }
+	    #nav-map-canvas { height: 250px; width: 100%; }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+            margin-bottom: 14px !important;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block; margin-left: auto; margin-right: auto;
+        }
+
+        .contact-form { display: block; clear: both; }
+        .contact-form::before { content: ""; }
+        .contact-form::after { content: ""; }
+        .contact-form div input, .contact-form div textarea { max-width: 400px; }
+
+        .navbar > div.container { padding-left: 0; padding-right: 0; }
+
+        @media only screen and (min-width: 768px) {
+            .navbar > div.container > div.col-sm-12 { padding-left: 0; padding-right: 0; }
+        }
+        .navbar-toggle { margin-right: 0; }
+
+
+        .cal-month { border-spacing: 1px; border-collapse: separate; background-color: transparent; width: 100%; }
+        .cal-month tbody tr td, .cal-month tbody tr th { padding: 4px; font-size: 13px; text-align: center; } /* set default padding */
+
+        .cal-month tbody tr td {
+ background-color: #555;              color: #000;         } /* set regular days */
+
+        .cal-month tbody tr:first-child td a.cal-backward {
+            display: inline-block; float: left; font-size: 15px; line-height: 90%;
+ color: #FFF;         }
+        .cal-month tbody tr:first-child td a.cal-forward {
+            display: inline-block; float: right; font-size: 15px; line-height: 90%;
+ color: #FFF;         }
+
+        .cal-month tbody tr:first-child td {
+            font-weight: bold;
+ background-color: #333;              color: #FFF;         } /* top row title + controls */
+
+        .cal-month tbody tr th {
+ background-color: #555;              color: gold;         } /* weekday names */
+
+        .cal-month-title { }
+
+        .cal-month tbody tr td.cal-inactive-day {
+ background-color: rgba(0, 0, 0, 0.1);              color: #666;         }
+
+        .cal-month tbody tr td.cal-active-day {
+ background-color: #AA0303;              color: yellow;         }
+
+        /* .cal-month { display: none; } */
+        .cal-month-hide { display: none; }
+
+        .calendar-variable { clear: both; position: relative; display: block; }
+        .cal-wrapper { display: inline-block; width: 230px; margin-right: 8px; }
+        .cal-month { width: 100%; }
+        
+        #side-cal-wrapper { position: relative; }
+        #main-cal-wrap { position: relative; }
+        .last-year-cal { position: absolute; height: 220px; width: 100%; background-color: rgba(0, 0, 0, 0.6); 
+            z-index: 10001; padding-top: 100px; padding-left: 60px; color: #ccc; font-weight: bold; font-size: 1.8rem; }
+        /*.last-year-cal > div { padding-top: 130px; padding-left: 100px; color: #ccc; font-weight: bold; font-size: 1.8rem; transform: rotate(45deg); }*/
+
+        @media only screen and (max-width: 992px) {
+            .cal-wrapper { display: inline-block; width: 48%; margin-right: 1%; }
+            .cal-month { width: 100%; }
+        }
+
+        @media only screen and (max-width: 470px) {
+            .cal-wrapper { display: block; width: 100%; margin-right: 0; padding: 5px; }
+            .cal-month { width: 100%; }
+        }
+
+        #buy-tickets-large a img { width: 100%; }
+
+        .pre-map-load1, .pre-map-load2 { background: url('https://www.haunt.photos/images/view-map-bg.jpg') center center no-repeat; }
+        .pre-map-load1:hover, .pre-map-load2:hover { cursor: pointer; }
+
+        .my-website { display: none !important; }
+
+        #buy-tickets-mobile { text-align: center; margin-bottom: 1rem; }
+        #buy-tickets-mobile a img { width: 100%; max-width: 240px; }
+    </style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F9TR4LJLW2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F9TR4LJLW2');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104101791-25"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-104101791-25');
+</script>
+
+
+
+        
+    <!--   
+    <script src="https://cdn.klokantech.com/mapbox-gl-js/v0.43.0/mapbox-gl.js"></script>
+            <link href="/assets/maps/mapbox-gl-v0.43.0.css" rel="stylesheet" />
+    -->
+    <script src="https://cdn.maptiler.com/mapbox-gl-js/v1.13.2/mapbox-gl.js" type="text/javascript"></script>
+<link href="https://cdn.maptiler.com/mapbox-gl-js/v1.13.2/mapbox-gl.css" rel="stylesheet" />
+            <script>
+            var geojson = {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "iconSize": [24, 36]
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                -94.315562,
+                                37.828856
+                            ]
+                        }
+                    }
+                ]
+            };
+            </script>
+        
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="col-sm-12">
+                <!--col-sm-offset-1 col-sm-10-->
+                    <a href="/" id="mobile-logo"><img src="https://www.haunt.photos/images/clientsites/logomobile28.png" /></a>
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                                        
+                                        <li class="active"><a href="/">Home</a></li>
+                                        
+                                        <li ><a href="/calendar">Calendar</a></li>
+                                        
+                                        <li ><a href="/tickets">Tickets</a></li>
+                                        
+                                        <li ><a href="/location">Location</a></li>
+                                        
+                                        <li ><a href="/photos">Photos</a></li>
+                                        
+                                        <li ><a href="/faq">FAQs</a></li>
+                                        
+                                        <li ><a href="/contact">Contact Us</a></li>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                                
+                                    <li><a href="Labyrinth of Fear" target="_blank"><i class="fa fa-facebook-square fa-3" aria-hidden="true"></i></a></li>
+                                
+                                    <li><a href="https://x.com/FearLabyrinth" target="_blank"><i class="fa fa-twitter-square fa-3" aria-hidden="true"></i></a></li>
+                                
+                                    <li><a href="https://www.instagram.com/laboffear/" target="_blank"><i class="fa fa-instagram fa-3" aria-hidden="true"></i></a></li>
+
+                    </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container body-content">
+
+        <div class="col-sm-12 logo-wrapper">
+            <!--col-sm-offset-1 col-sm-10-->
+            <img src="https://www.haunt.photos/images/clientsites/logo28.png?2026100903" />
+        </div>
+
+
+    <div class="col-sm-12 content-wrapper">
+        <!--col-sm-offset-1 col-sm-10-->
+            <h1>Labyrinth of Fear</h1>
+
+        <!--<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vulputate, sapien id placerat porta, metus lectus ullamcorper dui, at pulvinar turpis ipsum quis enim. Nam varius sem vitae risus posuere, eu hendrerit nulla congue. Praesent rhoncus ut libero sit amet ullamcorper. Phasellus tincidunt ut orci et varius. Pellentesque vel erat libero. Suspendisse vel ullamcorper mi. Aliquam in sollicitudin risus. Aenean ac dui diam. Nullam eleifend sodales ex, vel sagittis purus pretium ut. Integer vehicula mi ac justo dignissim, non fringilla odio blandit. Nullam sit amet mollis nulla. Aenean cursus molestie erat, non vestibulum dolor ultrices nec. Nulla pretium orci et odio hendrerit, vel consectetur lectus posuere. Aliquam ornare, ante at pharetra porttitor, mauris ipsum blandit urna, in aliquam elit ipsum et neque. Praesent maximus nibh at mauris elementum, vel condimentum nunc pulvinar.</p>-->
+
+        <div class="row">
+            <div class=" col-sm-8 ">
+                <!--
+                        10/17/26
+                        10/23/26
+                        10/24/26
+                        10/30/26
+                        10/31/26
+
+
+                <p>MinDate = 10/17/2026 12:00:00 AM</p>
+                <p>MaxDate = 10/31/2026 12:00:00 AM</p>
+                <p>TmpDate = 10/1/2026 12:00:00 AM</p>
+                -->
+
+                <div>
+<div dir="ltr">
+<div><span style="font-size: 14pt;">2026, the inmates are back. This year they are much smarter and not going to let the non corrupt escape. To prevent this, they are requiring a series of artifacts to be collected along the way. They must be presented at the end to gain a safe exit.</span></div>
+<div>&nbsp;</div>
+<div><span style="font-size: 14pt;">Along the way new challenges will be encountered.</span></div>
+<div><span style="font-size: 14pt;">&nbsp; &nbsp; &nbsp;Can one of your group brave being locked in a coffin ..... blindfolded?</span></div>
+<div><span style="font-size: 14pt;">&nbsp; &nbsp; &nbsp;Can you make it thru the possessed room ?</span></div>
+<div><span style="font-size: 14pt;">&nbsp; &nbsp; &nbsp;Are you able to find your way through the never ending stairway?</span></div>
+<div><span style="font-size: 14pt;">&nbsp; &nbsp; &nbsp;Does the horrors of the torture room scare you?</span></div>
+<div>&nbsp;</div>
+<div><span style="font-size: 14pt;">Once again, The Labyrinth of Fear sets out to show you that we will test your limits of fear.</span></div>
+<div>&nbsp;</div>
+<div><span style="font-size: 14pt;">Are you up to the challenge to make it through, we will see!</span></div>
+<div>&nbsp;</div>
+<div><a href="https://www.missourihauntedhouses.com/halloween/labyrinth-of-fear-mo.html" target="_blank"><img style="width: 100%; height: auto; max-width: 600px;" src="https://cdn.haunt.photos/images/awards/Missouri_win2025_600x100.jpg" alt="" width="600" height="100" border="0" /></a></div>
+<div>&nbsp;</div>
+<div><a href="https://www.missourihauntedhouses.com/halloween/labyrinth-of-fear-mo.html" target="_blank"><img style="width: 100%; height: auto; max-width: 600px;" src="https://cdn.haunt.photos/images/awards/Missouri_win2024_600x100.jpg" alt="" width="600" height="100" border="0" /></a></div>
+</div>
+</div>
+
+            </div><!--col-sm-8-->
+
+                <div class="col-sm-4">
+
+
+
+                    <div class="side-content">
+                        <div class="theme-text side-title">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            CALENDAR
+                        </div>
+                        <div id="side-cal-wrapper">
+                            
+<table id="cal-0" class="cal-month side-cal">
+   <tr><td colspan="7" class="cal-month-title">October 2026</td></tr>
+    <tr>
+        <th>Su</th>
+        <th>M</th>
+        <th>Tu</th>
+        <th>W</th>
+        <th>Th</th>
+        <th>F</th>
+        <th>Sa</th>
+    <tr>
+  <tr>
+       <td colspan="4" class="cal-inactive-day">&nbsp;</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+ </tr>
+ <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>10</td>
+ </tr>
+ <tr>
+      <td>11</td>
+      <td>12</td>
+      <td>13</td>
+      <td>14</td>
+      <td>15</td>
+      <td>16</td>
+      <td class="cal-active-day">17</td>
+ </tr>
+ <tr>
+      <td>18</td>
+      <td>19</td>
+      <td>20</td>
+      <td>21</td>
+      <td>22</td>
+      <td class="cal-active-day">23</td>
+      <td class="cal-active-day">24</td>
+ </tr>
+ <tr>
+      <td>25</td>
+      <td>26</td>
+      <td>27</td>
+      <td>28</td>
+      <td>29</td>
+      <td class="cal-active-day">30</td>
+      <td class="cal-active-day">31</td>
+ </tr>
+</table>
+
+
+                        </div>
+                    <!--
+                        10/17/2026 12:00:00 AM
+                        10/31/2026 12:00:00 AM
+                    -->
+                            
+
+
+                            <p>
+                                <div style="height: 16px; width: 16px; display: inline-block; background-color: #AA0303;"></div> - dates open
+                            </p>
+
+                            <p class="right-info">Tickets sales start 6:30pm<br>Gate opens 7:30pm<br><br>Reserved tickets go on sale the Monday before the weekend by calling 417-667-4993</p>
+                    </div><!--side-content-->
+
+                    <div class="side-content">
+                        <div class="theme-text side-title">
+                            <i class="fa fa-ticket" aria-hidden="true"></i>
+                            ADMISSION
+                        </div>
+
+                            <p class="right-info">At the window       $30<br>Reserved times     $35</p>
+
+                    </div>
+
+                        <div class="side-content">
+                            <div class="theme-text side-title">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                RATE OUR HAUNT
+                            </div>
+
+                            <p class="rate-our-haunt"><a href="https://www.missourihauntedhouses.com/halloween/labyrinth-of-fear-mo.html"><img src="https://www.missourihauntedhouses.com/images/rate-our-haunt/rate-missouri-haunt.gif"></a><br><br><a href="https://www.haunts.com/labrinthoffear"><img src="/images/hh_vote_350x150_2-2.png"></a></p>
+                        </div>
+
+                    <div class="side-content">
+                        <div class="theme-text side-title">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            LOCATION
+                        </div>
+                        <p class="right-info info-large">
+                                    17866 East Overland Road<br />
+                                    Nevada,
+                                    MO
+                                    64772
+ <br />                                 417-667-4993
+
+
+                        </p>
+
+                            
+                            <div id="nav-map-wrapper" class="clearfix">
+		                        <div id="nav-map-canvas" class="pre-map-load1"></div>
+	                        </div>
+                            <script>
+                                $(document).ready(function () {
+	                                $(".pre-map-load1").bind("mousedown", function(e) {
+		                                $(this).off("mousedown");
+		                                $(this).removeClass("pre-map-load1");
+
+		                                var map1 = new mapboxgl.Map({
+			                                container: 'nav-map-canvas',
+                                            style: 'https://api.maptiler.com/maps/streets/style.json?key=TVmwqTrA0YgRTYH6jWsP&0',
+			                                center: [-94.315562, 37.828856],
+			                                zoom: 14
+		                                });
+		
+		                                map1.addControl(new mapboxgl.NavigationControl());
+
+		                                geojson.features.forEach(function(marker) {
+		                                    var el = document.createElement('div');
+		                                    el.className = 'map-marker';
+		                                    el.style.backgroundImage = 'url(https://www.haunt.photos/images/map-marker.png)';
+		                                    el.style.width = '24px';
+		                                    el.style.height = '36px';
+
+		                                    new mapboxgl.Marker(el)
+		                                        .setLngLat(marker.geometry.coordinates)
+		                                        .addTo(map1);
+                                        });
+	                                });
+                                });
+                            </script>
+                            
+                    </div>
+
+
+ <!--end if newsletter signup-->
+
+                        <div class="side-content">
+                            <div class="theme-text side-title">
+                                <i class="fa fa-plug" aria-hidden="true"></i>
+                                CONNECT
+                            </div>
+                            <div class="side-connect">
+                                        <a href="Labyrinth of Fear" target="_blank"><i class="fa fa-facebook-square fa-3" aria-hidden="true"></i></a>
+                                        <a href="https://x.com/FearLabyrinth" target="_blank"><i class="fa fa-twitter-square fa-3" aria-hidden="true"></i></a>
+                                        <a href="https://www.instagram.com/laboffear/" target="_blank"><i class="fa fa-instagram fa-3" aria-hidden="true"></i></a>
+
+                            </div>
+                            <!--<div class="fb-page" data-href="https://www.facebook.com/ilovehaunts/" data-tabs="timeline" data-width="500" data-height="410" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/ilovehaunts/"><a href="https://www.facebook.com/ilovehaunts/">Haunts.com</a></blockquote></div></div>-->
+                        </div>
+
+
+
+                    <!--
+                    <div style="height: 18px; width: 100%; display: block; clear: both;" class="clearfix">&nbsp;</div>
+                    <div class="fb-page" data-href="https://www.facebook.com/ilovehaunts/" data-tabs="timeline" data-width="500" data-height="410" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/ilovehaunts/"><a href="https://www.facebook.com/ilovehaunts/">Haunts.com</a></blockquote></div></div>
+                    -->
+
+                </div><!--col-sm-4-->
+        </div><!--row-->
+
+    </div>
+
+</div>
+
+<div class="container bottom-wrapper">
+    <div class="col-sm-12">
+        <!--col-sm-offset-1 col-sm-10-->
+        <footer>
+            <div class="content-wrapper">
+                <p>
+                                      <a href="/">Home</a>
+                                     &nbsp; &nbsp; | &nbsp; &nbsp; <a href="/calendar">Calendar</a>
+                                     &nbsp; &nbsp; | &nbsp; &nbsp; <a href="/tickets">Tickets</a>
+                                     &nbsp; &nbsp; | &nbsp; &nbsp; <a href="/location">Location</a>
+                                     &nbsp; &nbsp; | &nbsp; &nbsp; <a href="/photos">Photos</a>
+                                     &nbsp; &nbsp; | &nbsp; &nbsp; <a href="/faq">FAQs</a>
+                                     &nbsp; &nbsp; | &nbsp; &nbsp; <a href="/contact">Contact Us</a>
+
+                </p>
+
+                <p>
+                    All content &copy;                             Labyrinth of Fear
+ 2026. All Rights Reserved
+                </p>
+            </div>
+
+                            <p><a href="https://www.hauntedhousemedia.com/haunted-attraction-website-design/" target="_blank" rel="nofollow"><img src="https://www.haunt.photos/images/clientsites/footer/28.png" /></a></p>
+
+        </footer>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $('.side-cal').hide();
+
+        if ($("#cal-0").length) {
+            $("#cal-0").show();
+        }
+
+        $('.cal-control').click(function (e) {
+            e.preventDefault();
+
+            var seq = parseInt($(this).data("seq"));
+            var dir = $(this).data("direction");
+
+            // alert(seq + ' ~~ ' + dir);
+
+            $('#cal-' + seq).hide();
+
+            if (dir == "backward") {
+                if (seq == 0) {
+                    for (i = 20; i > 0; i--) {
+                        if ($('#cal-' + i).length) {
+                            $('#cal-' + i).show();
+                            break;
+                        }
+                    }
+                } else {
+                    $('#cal-' + (seq-1)).show();
+                }
+            } else if (dir == "forward") {
+                if ($('#cal-' + (seq+1)).length) {
+                    $('#cal-' + (seq + 1)).show();
+                } else {
+                    $('#cal-0').show();
+                }
+            }
+        });
+        
+    });
+</script>
+
+    <script>
+        var logoVisible = false;
+
+        $(document).ready(function () {
+
+            $(window).scroll(function () {
+                var shouldBeVisible = $(window).scrollTop() > 200;
+
+                if (shouldBeVisible && !logoVisible) {
+                    logoVisible = true;
+                    if (window.innerWidth <= 768) $('#mobile-logo').show();
+                } else if (logoVisible && !shouldBeVisible) {
+                    logoVisible = false;
+                    $('#mobile-logo').hide();
+                }
+            });
+
+            //if (window.innerWidth <= 768) $('#mobile-logo').show();
+        });
+    </script>
+
+    <div id="page-bg-audio">
+        <iframe id="iframeAudio" src="https://www.haunt.photos/audio/28-165.mp3" allow="autoplay" style="border: 0; width: 378px; height: 70px; padding: 0; margin: 0;"></iframe>
+
+        <audio id="playAudio" controls autoplay   loop >
+            <source src="https://www.haunt.photos/audio/28-165.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script>
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (!isChrome) {
+            $('#iframeAudio').remove()
+        }
+        else {
+            $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background 
+        }
+    </script>
+
+</body>
+</html>
+<!--
+
+True
+
+True
+
+
+
+currentHost = https://www.labyrinthoffear.com
+
+validHost = https://www.labyrinthoffear.com
+
+redirectTo = 
+-->

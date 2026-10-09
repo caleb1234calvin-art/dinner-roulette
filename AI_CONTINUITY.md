@@ -1,3 +1,32 @@
+# Pick For Us — Delta5 Research Frozen; Independent Review Pending (2026-10-09)
+
+## CURRENT
+
+Delta5 bounded research R1 is complete: **12 commercial/public identities: 1 researcher PASS proposal, 11 HOLD, 0 REJECT; 3 residential follow-ups remain separate. Zero fresh independent clearance and no NET NEW or source-exhaustion claim.** No implementation candidate exists yet.
+
+The complete [research ledger](audit/missouri-delta5-2026-10-09/Missouri-Delta5-Research-R1.json), SHA-256 `ac19dbecf11b0006ed675060f790d8723a5c69cde76f028d5ebc0f6c8d22d88f`, retains prior identities and every field-level source binding. The [full report](audit/missouri-delta5-2026-10-09/Missouri-Delta5-Report-R1.txt), SHA-256 `fbe3c032682984303b4fdfc3a9610608b44091a1af057094c68e120c1d67f56c`, proposed and blocked projections, segregated residential ledger, complete evidence manifest and selected decisive receipts are preserved beside it. Manifest references to other local raw evidence do not imply that every body or image is copied to this branch.
+
+**Labyrinth of Fear (MO26-027) is a research re-clearance proposal only.** Official October 2026 active calendar cells are October 17, 23, 24, 30 and 31. The named operator location page supplies approximate point 37.828856, -94.315562 and public visitor address. Gate opening is 19:30; closing remains unknown. Proposed November 1 midnight CDT expiry is a conservative date-only retention boundary, never claimed admission closing. No entrance, parking or rideshare drop-off precision is inferred. Independent factual, placement, copy and lifecycle review must decide whether this supersedes the historical HOLD.
+
+Newly useful HOLD evidence includes Shepherd’s Lantern's explicit October 16–17, 2026 invitation with unresolved 5830 versus 5803 address, Aurora's current 2026 season with unresolved 20591 versus 20701 address, and Myers' current calendar alongside an unrecovered historical closure signal. No closure is asserted. Feemster has current dates and material activity restrictions but lacks an accepted visitor address or defensible placement. Other record-specific blockers remain in the full report. Cadaver and the prepared nine were excluded from duplicate research.
+
+## NEXT
+
+Fresh independent reviewers are reading the frozen nine and Delta5 packages. Close each gate only after its research checkpoint and exact readback are available. Nine fresh research remains 9 proposals pending independent approval, including Ranch's changed exact October 31 23:00 CDT cutoff and Cobb's explicit source freshness/restriction qualification. Cadaver is independently VERIFIED HOLD and parked unless new material current-year evidence appears.
+
+After independent decisions, only the cleared subset may enter the owner-authorized bounded nonproduction candidate. Preserve all remaining HOLDs and all failed or pending history. Do not treat one HOLD as a blocker for unrelated cleared records. Exact-head runtime, browser, layout, cache, saved/resume, Directions, Open Now and expiry/no-2027 gates still follow implementation.
+
+## HOLD
+
+Research proposals are not runtime or import acceptance. Residential records require intentionally public operator invitation/address and separate product-policy review; none enters the commercial pipeline. All proposed machine intervals remain null and Open Now fail-closed. Source access failures and cached text have their stated evidence limits. No statewide restart, inferred private address, global novelty or exhaustive coverage claim.
+
+Production remains the completed 32-record release: main `979d83aede9d66163e1ebaed9ad5b219cb637882`, tree `a7dbb32947c0a0daf4864346b0d212477fc9a11b`; production `dpl_F1XiMcc9AUuykunNamr87R3re7gP` READY at that source; BCd is the retained prior rollback. Fresh main/production preflight at 04:33 UTC matched these identities. Prior release waivers are consumed. Standing continuation permits research and bounded implementation/validation on safe branches, while future production release requires its own owner decision. Physical Android, six inherited lint warnings and existing qualified presentation limits remain unchanged.
+
+Only documentation/evidence changes on deployment-disabled `integration/continuity-refresh-2026-10-07`. PARENT COMMIT: `b475d7eae57eff52549b5ec4d219482f78d79d37`. PARENT TREE: `492607e7b2e8ee991c15faebc26dca03f1d54e56`. The owner's 04:32:49 explicit retry approval resolved the earlier cancellation; this research-history checkpoint preserves R1, while later independent findings and R2 corrections will be recorded separately. Preserve all history below.
+
+## Prior continuity — preserved verbatim
+
+
 # Pick For Us — Nine Fresh Research Proposals Frozen; Independent Review Required (2026-10-09)
 
 ## CURRENT
