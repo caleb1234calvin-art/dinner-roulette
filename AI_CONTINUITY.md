@@ -1,3 +1,38 @@
+# Pick For Us — Cadaver Independently VERIFIED HOLD; Park Pending New Evidence (2026-10-09)
+
+## CURRENT
+
+Cadaver MO26-007 fresh independent review is complete: **research quality PASS; address and approximate-address-point PASS; review-only copy/excluded-projection PASS; factual clearance, active runtime placement and import HOLD**. No author correction required. This supersedes the prior awaiting-independent-review label, without editing the frozen research.
+
+The sole decisive blocker remains **no accepted attraction-specific current2026 operation/date binding and therefore no supported2026 expiry**. Unknown operational details are not independent automatic V1 blockers. No closure, dates, exact arrival geometry or active listing is inferred.
+
+[Full independent JSON](audit/cadaver-zone-independent-2026-10-09/Cadaver-Independent-Report-R1.json), SHA-256 **`2d0fd7149a49c4ba3dcda0870162e391a48d6da98e53f91bfccee091fef18a90`**, contains all17 field decisions, projection/copy boundaries and exact source interpretations.
+[Readable report](audit/cadaver-zone-independent-2026-10-09/Cadaver-Independent-Report-R1.txt), [input integrity](audit/cadaver-zone-independent-2026-10-09/Input-Integrity.json) and [full hash manifest](audit/cadaver-zone-independent-2026-10-09/SHA256SUMS.json) are preserved with selected decisive independent receipts. All32 original research manifest members matched, and the historical MO26-007 object equaled the full134 intake record. Source package R1 remains **`efed6d770a98cd470030ca189b429cb7a5f66c42301afa7574cfe1d5244f243b`**.
+
+### Source and precision distinctions
+
+Independent Census reproduced **25088 Kafir Road, Webb City, MO64870**, **37.214948823592,-94.510739246392**. This is approximate address-range placement only, not entrance/parking/ride or precise coordinate Directions approval. **Approximate point PASS does not override the current-season import HOLD**; radius eligibility remains excluded.
+
+TSF readable web extraction supports identity/address but lacks coming-season dates; directHTTP200 body is Site Unavailable. Facebook temporary block carries old crawl metadata. Four States explicitly2025 remains historical; verifier direct465 is disclosed. Municipal2025 PDF independently reproduced exact historical sign/operator context, not current operation.
+
+New independent domain observation was a367-byte frameset to an old Wix destination returning404. Preserve the researcher's earlier502 as a time-specific observation; neither response establishes permanent closure or2026 operation. Cached extraction capture times are not live-origin proof. Bounded missing page matches do not prove exhaustion.
+
+## NEXT
+
+**Park Cadaver unless reliable new material current-season evidence appears or a new explicit assignment warrants reopening. Do not repeat the same exhausted searches.** Preserve the supported address/approximate point and exact blocker for takeover. No active runtime object may be emitted; research-status copy is not cleared catalog copy.
+
+Nine prepared-record pre-import revalidation and Delta5 delta/enrichment remain active. Freeze their results, obtain fresh independent record-level review, then advance only cleared subsets into the bounded nonproduction candidate. Cadaver's HOLD does not block them. No implementation candidate exists yet.
+
+## HOLD
+
+Cadaver facts/current runtime/import remain HOLD despite research quality and individual location-field PASS. Dates/expiry stay null; no2027 and never-OpenNow exclusion policies remain. Other historical placement/date/residential HOLDs and inherited Android/release limits remain unchanged.
+
+Fresh **03:40 UTC** main **`979d83aede9d66163e1ebaed9ad5b219cb637882`**, treea7dbb32947c0a0daf4864346b0d212477fc9a11b, production **`dpl_F1XiMcc9AUuykunNamr87R3re7gP` READY/source979d** unchanged. BCd is retained rollback from the verified baseline, not a new rollback test. No main/deploy/settings/waiver authority;32 shipped records and completed PR59 release remain intact.
+
+This checkpoint changes only continuity and frozen independent review/evidence under `audit/cadaver-zone-independent-2026-10-09/` on deployment-disabled integration. Selected decisive receipts are included; the full manifest does not imply every raw body is repository-copied. **PARENT COMMIT:** `ca5f54331f42f4db67fb2b2c59bc7f2254743c9d`; **PARENT TREE:** `a913e41c8d8f362b9a380990b66f6620891cb11b`. All prior research/history retained. Stable gate closed after readback; broader continuation is still active.
+
+## Prior continuity — Cadaver researcher HOLD pending review, preserved verbatim
+
 # Pick For Us — Cadaver Research R1 HOLD; Independent Review Next (2026-10-09)
 
 ## CURRENT
