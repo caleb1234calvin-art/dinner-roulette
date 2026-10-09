@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-09T06:48:03.220812+00:00",
+  "old_checkout": "/workspace/scratch/45a2c39f129e/repo",
+  "vanished_alternate": "/workspace/scratch/42aaff4ce109/repo/.git/objects",
+  "old_working_files": "preserved",
+  "alternate_backup": ".git/objects/info/alternates.stale-2026-10-09",
+  "attempts": [
+    {
+      "command": "git fsck --connectivity-only --no-dangling",
+      "exit": 10,
+      "result": "missing old cached objects and invalid remote refs; original output tool-truncated"
+    },
+    {
+      "command": "git fetch origin integration/missouri-astra-push-2026-10-09",
+      "exit": 1,
+      "result": "bad cached object; no source change"
+    },
+    {
+      "command": "git fetch --refetch origin",
+      "exit": 1,
+      "log": "git-refetch-candidate5.log"
+    }
+  ],
+  "resolution": "Fresh independent single-branch clone without alternates; existing dependency tree copied; full safe local build/tests/typecheck/lint rerun",
+  "authoritative_checkout": "/workspace/scratch/45a2c39f129e/repo-verified",
+  "head": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+  "tree": "fdfbf4045ea69f7a9b610a434243fc43f2c9f338",
+  "connectivity_exit": 0,
+  "source_status": "clean",
+  "remote_mutation_for_recovery": false,
+  "logs": [
+    "git-clean-clone-candidate5.log",
+    "git-clean-connectivity-candidate5.log"
+  ]
+}

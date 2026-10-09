@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-09T06:45:33.204025+00:00",
+  "head": "7e6f26e55f85e85e232b2ff0f2e2e16e08676885",
+  "run_id": 37889676019,
+  "job_id": 113687518483,
+  "conclusion": "failure",
+  "artifact_id": 11598994150,
+  "path": "deliverables/Pick-For-Us-Superseded-7e6-Browser-Evidence.zip",
+  "bytes": 368216649,
+  "sha256": "45a58d44e60417357c5296c8f1f1e0ce002c8b05eaadd70df2982cbbae2647d1",
+  "members": 2989,
+  "crc": "PASS",
+  "proof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "f3e04706be725f94eeeb8535529d4455eab17eaf7babef540b0f78311971ea43",
+      "files": 468
+    },
+    "startedAt": "2026-10-09T05:41:00.690Z",
+    "output": {
+      "sha256": "a4afa71cea05a1349d2c2351e8cdf3d9dcf040569109fc124af33cf45e2984e4",
+      "files": 194
+    },
+    "completedAt": "2026-10-09T05:41:03.802Z"
+  },
+  "failed_gate": "new eleven",
+  "scenario_count": 220,
+  "errors": [
+    {
+      "id": "date-night-mo26-058-beast",
+      "scenario": "old-receipt-survives-batch",
+      "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '1300 W 13th St, Kansas City, MO 64102'\n- '1401 W 13th St, Suite B, Kansas City, MO 64102'\n"
+    },
+    {
+      "id": "date-night-mo26-delta-edge-of-hell",
+      "scenario": "old-receipt-survives-batch",
+      "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '1300 W 13th St, Kansas City, MO 64102'\n- '1300 W 12th St, Kansas City, MO 64101'\n           ^\n"
+    },
+    {
+      "message": "Expected values to be strictly equal:\n\n2 !== 0\n",
+      "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n2 !== 0\n\n    at file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:859:10"
+    }
+  ],
+  "qualification": "Superseded intermediate; preserved separately, not current-head acceptance. Extra-nine and geometry skipped."
+}

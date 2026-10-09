@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-09T06:58:37.274938+00:00",
+  "head": "a44e70996bc8546f75dc71e4af13c414350ec1f9",
+  "run_id": 37889747808,
+  "job_id": 113687741679,
+  "full_decoded_job_log": "UNAVAILABLE",
+  "attempts": [
+    {
+      "operation": "github_fetch_workflow_job_logs",
+      "observation": "Repeated root and independent browser-agent reads returned Transport closed; no decoded content received"
+    },
+    {
+      "operation": "github_fetch approved-resource fallback for actions/jobs/113687741679/logs",
+      "observation": "HTTP400 INVALID_ARGUMENT: endpoint is not supported by generic GitHub Fetch; no further fallback attempted"
+    }
+  ],
+  "preserved_evidence": [
+    "Original complete artifact11599059205 SHA49103e1d42f83dc4b8ca18572095a6aac491f41db6514adc5aaa0341aec5a762 with2989members andCRC PASS",
+    "Exact source build proof, all suite verdicts, failure screenshots and state",
+    "Native GitHub job/step timestamps and final step conclusions",
+    "Root and independent before-correction diagnosis tied to frozen production receipt destinations"
+  ],
+  "qualification": "Full stdout is not claimed. Failure, source identity, exact assertions and actual UI behavior are established by retained original artifact and native job metadata."
+}
