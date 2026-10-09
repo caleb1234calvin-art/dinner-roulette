@@ -4,6 +4,7 @@ import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { setTimeout as delay } from "node:timers/promises";
 import { chromium } from "playwright";
+import { fromCrossJSON } from "seroval";
 import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 assert.equal(process.env.CI, "true");
@@ -565,7 +566,28 @@ try {
       const lifecycle = row.seasonalListing.visibility === "listing-lifecycle";
       await ready(page); await activityCount(page, ordinary + (lifecycle ? 1 : 2));
       assert.equal(test.rpc.at(-1).response.includes(row.id), lifecycle);
-      if (!lifecycle) assert.ok(!test.rpc.at(-1).response.includes("seasonalListing"));
+      const offVenues = fromCrossJSON(JSON.parse(test.rpc.at(-1).response), { refs: new Map() }).result.venues;
+      assert.ok(Array.isArray(offVenues), "Season-off RPC carries a decoded venue list");
+      const seasonalKeys = ["seasonalListing", "seasonalAvailability", "seasonalVisitNotes"];
+      const offAliases = offVenues.filter(venue => [node, way].includes(venue.id));
+      if (!lifecycle) {
+        assert.ok(offAliases.length > 0, "Season-off response retains the ordinary provider alias");
+        for (const alias of offAliases) {
+          assert.deepEqual(alias.activityTypes, ["park"], "Season-off target aliases retain only their ordinary category");
+          for (const key of seasonalKeys) assert.equal(Object.hasOwn(alias, key), false, `Season-off target alias strips ${key}`);
+        }
+      }
+      const offSeasonal = offVenues.filter(venue => seasonalKeys.some(key => venue[key] != null));
+      for (const venue of offSeasonal) {
+        const reviewed = catalog.find(item => item.id === venue.id);
+        assert.equal(reviewed?.seasonalListing?.visibility, "listing-lifecycle", "Every remaining seasonal identity has reviewed lifecycle visibility");
+        assert.deepEqual(venue.seasonalListing, reviewed.seasonalListing, "Season-off lifecycle metadata matches the reviewed catalog");
+        assert.equal(getDateNightAvailability(reviewed, new Date(test.state.at)).browseEligible, true, "Season-off lifecycle identity remains eligible at the current clock");
+        assert.ok(haversineMiles(row.lat, row.lon, venue.lat, venue.lon) <= 15.05, "Lifecycle superset stays within the existing 15-mile server core");
+      }
+      result.evidence.seasonOffSuperset = { targetAliases: offAliases.map(venue => ({ id: venue.id, activityTypes: venue.activityTypes,
+        seasonalKeys: seasonalKeys.filter(key => Object.hasOwn(venue, key)) })), lifecycleRows: offSeasonal.map(venue => ({ id: venue.id,
+        visibility: venue.seasonalListing.visibility, distanceMiles: haversineMiles(row.lat, row.lon, venue.lat, venue.lon) })) };
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       assert.equal(await rowCard(page, row).locator("[data-seasonal-visit-notes]").count(), lifecycle ? 1 : 0);
       // Inspect category badges, not the legitimate venue title (which may contain "Corn Maze").
