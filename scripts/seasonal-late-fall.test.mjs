@@ -22,7 +22,9 @@ const { resolveSavedSeasonalPlace, recordSeasonalIdentityReceipts, seasonalRecei
 );
 const { searchDateNight } = load("src/lib/date-night/search.ts");
 
+const { MISSOURI_2026_ASTRA_ELEVEN_CATALOG } = load("src/lib/date-night/missouri-2026-astra-eleven-catalog.ts");
 const rows = [
+  ...MISSOURI_2026_ASTRA_ELEVEN_CATALOG,
   ...MISSOURI_2026_LATE_FALL_CATALOG,
   ...MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG,
 ].filter((row) => row.seasonalListing.visibility === "listing-lifecycle");
@@ -55,12 +57,13 @@ const providerFor = (row, index = 0) => ({
 // Independently verified final operating times, after Chicago's DST rollback.
 // The -06:00 offset is intentional, not the October daylight-saving offset.
 const effectiveExpiry = {
+  "DELTA3-COBB": "2026-11-07T23:00:00-06:00",
   "MO26-085": "2026-11-08T18:00:00-06:00",
   "DELTA-CREEPYWORLD-2026": "2026-11-13T22:00:00-06:00",
   "DELTA-DARKNESS-2026": "2026-11-13T22:00:00-06:00",
 };
 
-test("all three reviewed late-fall identities have lifecycle-only visibility", () => {
+test("all four reviewed late-fall identities have lifecycle-only visibility", () => {
   assert.deepEqual(
     rows.map((row) => row.seasonalListing.recordId).sort(),
     Object.keys(effectiveExpiry).sort(),

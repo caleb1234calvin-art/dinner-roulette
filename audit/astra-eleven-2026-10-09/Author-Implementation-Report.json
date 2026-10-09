@@ -1,0 +1,95 @@
+{
+  "at": "2026-10-09T05:00:41.900678+00:00",
+  "baseline_main": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+  "implementation_start_checkpoint": "6c3515d2cad7c8266b41c53f5a92d4da1db753d0",
+  "recordsAdded": 11,
+  "oldCuratedRecords": 32,
+  "totalCuratedRecords": 43,
+  "recordsEnriched": 0,
+  "recordDataHoldsWithinSubset": 0,
+  "mutationScope": "Local uncommitted candidate files; no merge/deploy/push",
+  "changedPaths": [
+    "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts",
+    "src/lib/date-night/seasonal-presentation-catalog.ts",
+    "src/lib/date-night/curated-policy.ts",
+    "src/lib/date-night/search.ts",
+    "src/lib/date-night/seasonal-catalog.ts",
+    "src/lib/date-night/missouri-2026-three-source-tier-a-catalog.ts",
+    "scripts/seasonal-astra-eleven.test.mjs",
+    "scripts/seasonal-late-fall.test.mjs",
+    "scripts/seasonal-late-fall-client-cache.test.mjs",
+    "scripts/missouri-two-records.test.mjs"
+  ],
+  "sourceSha256": {
+    "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts": "7c2c15b5323bc0649b6c2e64f815c9052bd476f17e26f3d0e4448876e712c08b",
+    "src/lib/date-night/seasonal-presentation-catalog.ts": "3de919e9a12766ef394e40d0ea9dfd4ac797cbd2d36035004890aa17a53b81dc",
+    "src/lib/date-night/curated-policy.ts": "ccade3d454433d1330cf5f709a79a5af95542cb74713bb41abe398e703e213b1",
+    "src/lib/date-night/search.ts": "995f8590047200b89aab1e9b9ad20098441df41b7de6b98ecfc0e8b00ec84c9e",
+    "src/lib/date-night/seasonal-catalog.ts": "d6ca4fa2df9002a2b86b7e7a53185f846b8a56bd9c0f31f951dc717a4f01f665",
+    "src/lib/date-night/missouri-2026-three-source-tier-a-catalog.ts": "88a36ad0a025299f7e21d6ef570653a9b791855905470ad0b2cdcb5579bfe9f8",
+    "scripts/seasonal-astra-eleven.test.mjs": "c5e851a97208438846afd2077c62a0c0d95d356e2e11c117ebfd8936be1f99d7",
+    "scripts/seasonal-late-fall.test.mjs": "b4b9026c9000853db43dd0d611eb09b9f45cd7790c4f504779bd2f179f011040",
+    "scripts/seasonal-late-fall-client-cache.test.mjs": "a4b244b692cfdf37479e3d272e246336bafdbd1286fba1fa16e30bd69706faf1",
+    "scripts/missouri-two-records.test.mjs": "f1f08e85aa2d043650069334906494a667d15594060320cc60a8a01d1173b50c"
+  },
+  "validation": {
+    "focusedTests": {
+      "pass": 109,
+      "fail": 0,
+      "skipped": 0
+    },
+    "newTests": 59,
+    "additionalLatefallIntegrationTests": 11,
+    "typecheck": "PASS",
+    "targetedLint": "PASS",
+    "fullTests": "PENDING root exact candidate",
+    "productionBuild": "PENDING root exact candidate",
+    "hostedCI": "PENDING",
+    "browser": "PENDING",
+    "independentFinal": "PENDING"
+  },
+  "preservedPolicies": [
+    "ListingCompletenessV1",
+    "Approximate site/address placement with visitor-address Directions; external ride picker",
+    "Null machine hours and never Open Now",
+    "Current-policy cache/saved reapplication",
+    "2026 exact/date-only expiry and no recurrence",
+    "Cobb alone new listing-lifecycle visibility; global season unchanged",
+    "Exact nine reviewed Details; newest two text preserved with approximate qualifier"
+  ],
+  "notes": [
+    "Ranch current availability envelope begins first remaining explicit Oct9; no full daily schedule inferred.",
+    "Branson/Liberty only enumerate explicitly supported2026 weekly rule inside bounded2026 dates.",
+    "Hell Harvest known remaining explicit dates retained; generic ticket-widget dates not treated as operation.",
+    "Date-only cutoffs carry no endsAt closing claim.",
+    "Previous32 runtime record objects/reviewRevisions and presentation objects unchanged; only obsolete comments updated."
+  ],
+  "remediationHistory": [
+    {
+      "attempt": "Initial unbuilt cumulative full-suite attempt; no immutable candidate SHA existed",
+      "log": "/workspace/scratch/45a2c39f129e/test-first.log",
+      "originalFailure": "offline Anything at Lloyd expected only Lloyd/Shryocks; actual correctly also returned new reviewed MissouriNightmare",
+      "evidence": {
+        "lloydPoint": [
+          38.7746696,
+          -92.2372283
+        ],
+        "nightmarePoint": [
+          38.977510601859,
+          -92.139911854447
+        ],
+        "haversineMiles": 14.960783988676557,
+        "requestRadiusMiles": 15,
+        "catalogAcquisitionBufferMiles": 1
+      },
+      "correction": "Only explicit expected fixture neighborhood changes. Added exact new-record identity and reviewed-point distance assertion; retained complete response equality, fallback-source/disclosure assertions and every other safety assertion. Upcoming source schedule is eligible for browse, never Open Now. No product correction required.",
+      "rerun": {
+        "file": "scripts/missouri-two-records.test.mjs",
+        "tests": 9,
+        "pass": 9,
+        "fail": 0
+      },
+      "unrelatedCompiledArtifactFailures": "Root rerunning only after required auth-enabled safe build; no evidence of runtime defects from absent prebuild output."
+    }
+  ]
+}

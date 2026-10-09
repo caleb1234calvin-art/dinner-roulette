@@ -3,7 +3,7 @@ import { seasonalListingToPlace, type SeasonalListing } from "./listing";
 
 /** Five runtime-ready Tier A records from the three-source Missouri delta sweep.
  * Factual verification: audit/missouri-autonomous-active15-independent-verification-2026-10-08.md
- * Hell Harvest remains factual PASS / runtime placement HOLD and is intentionally absent. */
+ * Hell Harvest’s later clearance is implemented separately in the Astra eleven catalog. */
 export const MISSOURI_2026_THREE_SOURCE_TIER_A_LISTINGS:
   (Omit<DateNightPlace, "lat" | "lon"> & { seasonalListing: SeasonalListing })[] = [
   {

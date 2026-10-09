@@ -1,3 +1,6 @@
+import { MISSOURI_2026_ASTRA_DELTA_CATALOG } from "./missouri-2026-astra-delta-catalog";
+import { MISSOURI_2026_ASTRA_COMMERCIAL_CATALOG } from "./missouri-2026-astra-commercial-catalog";
+import { MISSOURI_2026_ASTRA_ELEVEN_CATALOG } from "./missouri-2026-astra-eleven-catalog";
 import { MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG } from "./missouri-2026-three-source-tier-a-catalog";
 import { MISSOURI_2026_LATE_FALL_CATALOG } from "./missouri-2026-late-fall-catalog";
 import { MISSOURI_2026_FINAL_FOUR_CATALOG } from "./missouri-2026-final-four-catalog";
@@ -10,7 +13,7 @@ import type { DateNightPlace } from "./types";
 const reviewed = new Map([...MISSOURI_2026_CLEARED_SEASONAL_CATALOG,
   ...MISSOURI_2026_V1_SEASONAL_CATALOG, ...MISSOURI_2026_V1_NEXT_SEASONAL_CATALOG,
   ...MISSOURI_2026_DEFERRED_BATCH_3_CATALOG, ...MISSOURI_2026_FINAL_FOUR_CATALOG,
-  ...MISSOURI_2026_LATE_FALL_CATALOG, ...MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG].map(place => [place.id, place]));
+  ...MISSOURI_2026_LATE_FALL_CATALOG, ...MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG, ...MISSOURI_2026_ASTRA_ELEVEN_CATALOG, ...MISSOURI_2026_ASTRA_COMMERCIAL_CATALOG, ...MISSOURI_2026_ASTRA_DELTA_CATALOG].map(place => [place.id, place]));
 
 export function getCuratedSeasonalPlace(id: string): DateNightPlace | undefined {
   return reviewed.get(id);

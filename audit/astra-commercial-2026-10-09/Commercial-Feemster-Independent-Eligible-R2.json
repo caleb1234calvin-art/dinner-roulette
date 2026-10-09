@@ -1,0 +1,249 @@
+{
+  "package": "ASTRA-COMMERCIAL-FEEMSTER-INDEPENDENT-ELIGIBLE-R2",
+  "reviewed_at": "2026-10-09T05:01:08.172713+00:00",
+  "input_sha256": "d3f545c0d15f8286e79091a5ea668264ea071ceb873de38de87a90706b12077e",
+  "verdict": "PASS — independent factual/destination/approximate-placement/copy; runtime HOLD until exact-candidate verification",
+  "records": [
+    {
+      "record_id": "MO26-039",
+      "contract": "Seasonal Listing Completeness V1 staged radius path",
+      "season_year": 2026,
+      "timezone": "America/Chicago",
+      "research_decision": "PASS PROPOSAL ONLY; independent review pending",
+      "independent_verification": "PENDING",
+      "runtime_status": "HOLD: unimplemented/unverified",
+      "runtime_eligible": false,
+      "automatic_import_allowed": false,
+      "projection": {
+        "name": "Feemster Twisted Corn Maze",
+        "activityTypes": [
+          "corn-maze"
+        ],
+        "categoryLabel": "Corn Maze",
+        "description": "A family farm corn maze near Springfield with hayrides, a petting zoo and outdoor activities.",
+        "details": "September 26–27, October Fridays–Sundays, and November 1, 2026. October: Fridays 5–9 p.m., Saturdays 10 a.m.–9 p.m., Sundays 1–9 p.m.; November 1 is 1–9 p.m. Last tickets are sold one hour before closing. Hayrides and the apple cannon stop at sunset. Height and supervision rules apply to play equipment. The farm’s posted no-animal rule includes service animals; contact it about access arrangements before travel. Check the farm’s Facebook page for weather updates.",
+        "website": "https://www.feemsterscornmaze.com/",
+        "actionLabel": "Visit website",
+        "address": "2501 E Farm Road 94, Springfield, MO 65803",
+        "directionsTarget": "2501 E Farm Road 94, Springfield, MO 65803",
+        "lat": 37.273100307742,
+        "lon": -93.24361332435,
+        "coordinatePrecision": "approximate",
+        "directionsPolicy": "Operator-published visitor address for navigation. Address-derived street point is approximate radius placement only, not verified entrance, parking or dropoff.",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "valid_dates": [
+          "2026-09-26",
+          "2026-09-27",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-04",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-11",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-30",
+          "2026-10-31",
+          "2026-11-01"
+        ],
+        "expires_at": "2026-11-01T21:00:00-06:00",
+        "expiry_semantics": "Operator final November1 closing9p.m. CST after DST ends that morning. Last ticket8p.m. is separate admission constraint, no 2027 recurrence.",
+        "no_2027_recurrence": true
+      },
+      "projection_sha256_canonical_json": "75ef9f8b3d80b3141c6ba4d0f6363f599e96872f3d0cb2218f91ccfc34538459",
+      "fields": {
+        "visitor_address": {
+          "value": "2501 E Farm Road 94, Springfield, MO 65803",
+          "source_ids": [
+            "feemster-contact"
+          ],
+          "qualification": "Explicit public operator contact address, also corroborated by indexed operator Facebook. No private-address inference."
+        },
+        "placement": {
+          "value": {
+            "lat": 37.273100307742,
+            "lon": -93.24361332435,
+            "method": "ArcGIS anonymous public geocoder, exact E address match, StreetAddress type, score100"
+          },
+          "source_ids": [
+            "feemster-arcgis"
+          ],
+          "qualification": "Approximate address-derived street point. Score100 is matching confidence, not surveyed entrance precision."
+        },
+        "season_dates_hours": {
+          "value": {
+            "dates": [
+              "2026-09-26",
+              "2026-09-27",
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-04",
+              "2026-10-09",
+              "2026-10-10",
+              "2026-10-11",
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-18",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-25",
+              "2026-10-30",
+              "2026-10-31",
+              "2026-11-01"
+            ],
+            "expiry": "2026-11-01T21:00:00-06:00",
+            "final_admission_local": "2026-11-01T20:00:00-06:00"
+          },
+          "source_ids": [
+            "feemster-home"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "Last ticket one hour before closing",
+            "Hayride and apple cannon end at sunset",
+            "Height and supervision rules for play equipment",
+            "Operator says no animals including service animals; access arrangements need clarification",
+            "Pumpkin/gourd patch pending availability, NOT assigned pumpkin-patch category"
+          ],
+          "source_ids": [
+            "feemster-home"
+          ]
+        },
+        "phone": {
+          "value": "417-894-7458",
+          "source_ids": [
+            "feemster-contact"
+          ]
+        }
+      },
+      "conflicts": [
+        "Census matched2501W FarmRd94 at37.275407,-93.329064 despite requestedE; wrong-direction point rejected, never averaged.",
+        "Maptons identifier14054245666 was checked once against publicOSM API. Returned bare untagged node inFrance; identity mismatch rejected. No venue point inferred.",
+        "PublicArcGIS exactE StreetAddress match resolves the placement gap; must remain approximate.",
+        "Historical regional September19 start superseded by currentoperator September26. Pumpkin availability remains pending.",
+        "Jumpingpillow exact48-inch adult-supervision boundary differs between homepage and rules; do not encode detailed threshold beyond qualified equipment-rules copy."
+      ],
+      "adjudication_proposed": "Accept explicit public operator E address plus matching anonymous public ArcGIS StreetAddress point as qualified address-derived approximate placement. This fulfills V1 address routing/radius without requiring surveyed arrival point. Review must verify match direction and CST expiry.",
+      "source_binding": {
+        "feemster-home": {
+          "id": "feemster-home",
+          "url": "https://www.feemsterscornmaze.com/",
+          "retrieved_at": "2026-10-09T04:52:10.205726+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://www.feemsterscornmaze.com/",
+          "bytes": 262882,
+          "sha256": "579222895284042e6497d08f9aa075382a1b36e03f109347687a62819debed2e",
+          "content_type": "text/html;charset=utf-8",
+          "receipt_file": "receipts/feemster-home.receipt.json",
+          "receipt_sha256": "f44658df634534a4a64afc3eb4fb97f7aeb2cfda6ad06090a4413bd291fa2349",
+          "body_file": "receipts/feemster-home.body"
+        },
+        "feemster-contact": {
+          "id": "feemster-contact",
+          "url": "https://www.feemsterscornmaze.com/contact",
+          "retrieved_at": "2026-10-09T04:52:10.205256+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://www.feemsterscornmaze.com/contact",
+          "bytes": 159783,
+          "sha256": "a2b847f642893bc66a382ea7898b714e3d7a95b276b81ff2a31e1b692f1497f3",
+          "content_type": "text/html;charset=utf-8",
+          "receipt_file": "receipts/feemster-contact.receipt.json",
+          "receipt_sha256": "b816a9096566c55dffecee26da6ef18543c7e55ad301f1bd48219a85e1b47ac1",
+          "body_file": "receipts/feemster-contact.body"
+        },
+        "feemster-census": {
+          "id": "feemster-census",
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2501+E+Farm+Road+94%2C+Springfield%2C+MO+65803&benchmark=Public_AR_Current&format=json",
+          "retrieved_at": "2026-10-09T04:52:14.645764+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2501+E+Farm+Road+94%2C+Springfield%2C+MO+65803&benchmark=Public_AR_Current&format=json",
+          "bytes": 665,
+          "sha256": "e450cc71dda91e9783a7ba6cbb02e5a32bb0939a2459e1f448a9ef673cf329f8",
+          "content_type": "application/json",
+          "receipt_file": "receipts/feemster-census.receipt.json",
+          "receipt_sha256": "b50053bd52da8e3d80947b73c867e4776b080b62d0bc8a849327a0d2582cb4d3",
+          "body_file": "receipts/feemster-census.body"
+        },
+        "feemster-arcgis": {
+          "id": "feemster-arcgis",
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2501+E+Farm+Road+94%2C+Springfield%2C+MO+65803&f=pjson&outFields=Match_addr%2CAddr_type&maxLocations=3",
+          "retrieved_at": "2026-10-09T04:59:10.976381+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2501+E+Farm+Road+94%2C+Springfield%2C+MO+65803&f=pjson&outFields=Match_addr%2CAddr_type&maxLocations=3",
+          "bytes": 517,
+          "sha256": "23e7e7ee4bea7810d9262cc44671581c5bbd44b72ca5255899958cb9c9cb3cdd",
+          "content_type": "text/plain;charset=UTF-8",
+          "receipt_file": "revision-2/receipts/feemster-arcgis.receipt.json",
+          "receipt_sha256": "b5a27afb317f7048478a22fce4afe0b5cb8102401fff496fbbefd3c8f535e233",
+          "body_file": "revision-2/receipts/feemster-arcgis.body"
+        },
+        "feemster-osm-node": {
+          "id": "feemster-osm-node",
+          "url": "https://api.openstreetmap.org/api/0.6/node/14054245666.json",
+          "retrieved_at": "2026-10-09T04:58:47.042632+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://api.openstreetmap.org/api/0.6/node/14054245666.json",
+          "bytes": 431,
+          "sha256": "9d7096795405771215db9bff0924fe69c3e5993b2086abfd2bdbfc26bc9ca988",
+          "content_type": "application/json; charset=utf-8",
+          "receipt_file": "revision-2/receipts/feemster-osm-node.receipt.json",
+          "receipt_sha256": "83e51ae1098577ccb905f1a7468a5894032277e4ce3b69059b0b1ebcf1c04011",
+          "body_file": "revision-2/receipts/feemster-osm-node.body"
+        }
+      },
+      "required_runtime_guards": [
+        "Never Open Now; machine intervals null",
+        "Address-based Directions and ride targets, approximate radius only",
+        "FinalNovember1 21:00CST afterDST change; test cutoff minus1ms/at/plus1ms",
+        "Saved/cache/resume/pendingRPC reapplication",
+        "No2027 recurrence",
+        "No pumpkin-patch tag while availability pending",
+        "Retain last-ticket and sunset activity restrictions; no admission guarantee"
+      ]
+    }
+  ],
+  "accepted_ids": [
+    "MO26-039"
+  ],
+  "approved_consumer_addendum": "Location is approximate.",
+  "source_checks": {
+    "all_five_source_body_hashes_match": true,
+    "all_five_source_receipt_hashes_match": true,
+    "arcgis_match": "2501 E Farm Road 94, Springfield, Missouri, 65803",
+    "arcgis_addr_type": "StreetAddress",
+    "accepted_point": {
+      "lat": 37.273100307742,
+      "lon": -93.24361332435
+    },
+    "operator_visitor_address_verified": true,
+    "operator_2026_dates_and_Nov1_21_CST_verified": true,
+    "Census_wrong_W_rejected": true,
+    "OSM_unrelated_node_rejected": true
+  },
+  "adjudication": "The operator intentionally publishes the East-address visitor location. Public ArcGIS result reproduces its number/direction/road/city/postcode and supplies qualified address-range placement. Matching score100 does not assert entrance precision. Current operator2026 dates and finalNovember1 closing21:00CST support cutoff; last admission20:00 and sunset activities remain separate.",
+  "preserved_limits": [
+    "No machine opening intervals and never Open Now",
+    "Address-based Directions and external ride picker",
+    "No pumpkin category while availability pending",
+    "Operator no-animal/service-animal restriction remains attributed; no legal assessment",
+    "DST-aware final cutoff2026-11-01T21:00:00-06:00; no2027 recurrence"
+  ],
+  "cumulative_commercial": {
+    "eligible_after_binding": 4,
+    "remaining_hold": 6
+  },
+  "publication_binding": "PENDING root immutable research commit/readback",
+  "runtime_pass": false,
+  "release_authority": false
+}

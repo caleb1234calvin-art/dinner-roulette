@@ -18,7 +18,9 @@ const { buildDateNightQueryPlan } = load("src/lib/date-night/query-plan.ts");
 const { decorateDateNight, eligibleDateNight } = load("src/lib/date-night/eligibility.ts");
 const { DEFAULT_DATE_NIGHT_FILTERS } = load("src/lib/date-night/types.ts");
 const { HALLOWEEN_DATE_NIGHT_TYPES } = load("src/lib/date-night/season.ts");
+const { MISSOURI_2026_ASTRA_ELEVEN_CATALOG } = load("src/lib/date-night/missouri-2026-astra-eleven-catalog.ts");
 const rows = [
+  ...MISSOURI_2026_ASTRA_ELEVEN_CATALOG,
   ...MISSOURI_2026_LATE_FALL_CATALOG,
   ...MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG,
 ].filter((row) => row.seasonalListing.visibility === "listing-lifecycle");
@@ -90,10 +92,10 @@ function assertRetained(row, response) {
   }
 }
 
-test("client-cache regression covers exactly Brookdale, Creepyworld and Darkness", () => {
+test("client-cache regression covers exactly Cobb, Brookdale, Creepyworld and Darkness", () => {
   assert.deepEqual(
     rows.map((row) => row.seasonalListing.recordId).sort(),
-    ["MO26-085", "DELTA-CREEPYWORLD-2026", "DELTA-DARKNESS-2026"].sort(),
+    ["DELTA3-COBB", "MO26-085", "DELTA-CREEPYWORLD-2026", "DELTA-DARKNESS-2026"].sort(),
   );
 });
 for (const row of rows) {

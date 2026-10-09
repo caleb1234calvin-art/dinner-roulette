@@ -1,0 +1,65 @@
+{
+  "implementationGate": "81fe87a7c8a543e8142bac46b4e8100b23ca5677",
+  "independentReportSha256": "4812ad5a38d1fb11ce8ba711ab3c2ebc71fc33c078cdddb1aa27c1ce5d673c5b",
+  "recordsAdded": 5,
+  "cumulativeNewRecords": 20,
+  "cumulativeCuratedRecords": 52,
+  "recordsEnriched": 0,
+  "existing32Changed": false,
+  "changedPaths": [
+    "src/lib/date-night/missouri-2026-astra-delta-catalog.ts",
+    "src/lib/date-night/search.ts",
+    "src/lib/date-night/curated-policy.ts",
+    "src/lib/date-night/seasonal-presentation-catalog.ts",
+    "scripts/seasonal-astra-delta.test.mjs"
+  ],
+  "sourceSha256": {
+    "src/lib/date-night/missouri-2026-astra-delta-catalog.ts": "b8ef2cd904c7496f65256de4b69bfb4962f1c4dd2882222443b4ac3c5201e4c3",
+    "src/lib/date-night/search.ts": "e50f412650400a5cbf58dce3599a4e0abaabcb8fe196084159f042f14fbe4f89",
+    "src/lib/date-night/curated-policy.ts": "83396d81910fe315e8318690960a2f8d8799a4619b856dade912a2c70e1fa93e",
+    "src/lib/date-night/seasonal-presentation-catalog.ts": "5bb6320f3d0936836890efecf42d997f0ce01c1249170a004d0aa884749b7e77",
+    "scripts/seasonal-astra-delta.test.mjs": "de4013bd325e7c7ec7b818001e13179707f8c4aca6211db56fa25ab743633d18"
+  },
+  "validation": {
+    "newTests": 31,
+    "cumulativeNewUnitTests": 115,
+    "focusedRegressionTests": 174,
+    "focusedPass": 174,
+    "focusedFail": 0,
+    "typecheck": "PASS",
+    "targetedLint": "PASS",
+    "exactHeadFullTests": "PENDING root",
+    "build": "PENDING root",
+    "browser": "PENDING",
+    "independentRuntime": "PENDING"
+  },
+  "runtimeConstraints": [
+    "All five limited confidence, approximate placement, supported visitor-address Directions",
+    "All null machine hours and never Open Now; no2027 recurrence",
+    "Worlds/Ozark date-only cutoff has no endsAt closing claim",
+    "Worlds exact eleven October dates exclude October29 passholder-only event; maxfive minors per21+chaperone copied from reviewed amendment",
+    "Tommy locations are two independent OtherHalloweenFall vehicle experiences, no walk-through promise, no ride precision",
+    "Grotto exact eight2026dates and Waze exact-address point, no feed contaminant or price claim",
+    "Current policy registered for search, cache and saved identities"
+  ],
+  "normalizations": [
+    "Only literal Unicode punctuation escapes2013/2014/2019 decoded in names,address,hours,Details; independently approved, every normalized field recorded in manifest.",
+    "Exact raw finalR2 and eligibleR2 artifacts copied unchanged."
+  ],
+  "preservedLimitations": [
+    "Indexed-only operator schedule evidence remains documented for Ozark, Tommy locations and Grotto.",
+    "Park/wash hours never treated as attraction intervals.",
+    "No promise of current ticket stock or price.",
+    "Two existing-record enrichment proposals remain evidence-only; old32 unchanged."
+  ],
+  "remediationHistory": [
+    {
+      "attempt": "Uncommitted author test attempt1",
+      "log": "/workspace/scratch/45a2c39f129e/author-delta-unit-first.log",
+      "result": "30PASS/1FAIL",
+      "failure": "Tommy dedupe comparison rejected two addedundefined metadata keys (lifecycle/discoveryEvidence); bothdistinct IDs, destinations and policies were unchanged.",
+      "correction": "Compare complete serialized JSON record arrays, which correctly omitsundefined fields, keeping every serializableconsumer/evidence field and exactarraylength/order. No runtime modification.",
+      "rerun": "31new delta +25commercial +59eleven +50latefall +9neighborhood =174PASS/0FAIL"
+    }
+  ]
+}

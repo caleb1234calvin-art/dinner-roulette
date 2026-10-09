@@ -103,7 +103,13 @@ for (const row of records) test(`offline Anything at ${row.id} uses region-neutr
  const response=await searchDateNight({data:{lat:row.lat,lon:row.lon,radiusMiles:15,activityTypes:["anything"],spookySeasonEnabled:true}});
  assert.equal(response.source,"fallback");
  const nearbyNew = load("src/lib/date-night/missouri-2026-v1-next-catalog.ts").MISSOURI_2026_V1_NEXT_SEASONAL_CATALOG.filter(place => load("src/lib/restaurants/geo.ts").haversineMiles(row.lat,row.lon,place.lat,place.lon) <= 16);
- assert.deepEqual(response.venues.map(place=>place.id).sort(),[row.id,...nearbyNew.map(place=>place.id)].sort());
+ const astraNearby = load("src/lib/date-night/missouri-2026-astra-eleven-catalog.ts").MISSOURI_2026_ASTRA_ELEVEN_CATALOG.filter(place => load("src/lib/restaurants/geo.ts").haversineMiles(row.lat,row.lon,place.lat,place.lon) <= 16);
+ const expectedAstra = row.id === "date-night-mo26-068-lloyds-family-farm" ? ["date-night-mo26-astra-missouri-nightmare"] : [];
+ assert.deepEqual(astraNearby.map(place=>place.id),expectedAstra);
+ // Independently reviewed points place Nightmare 14.960784 miles from Lloyd's;
+ // it is a valid upcoming listing even before its first October 9 occurrence.
+ if (astraNearby.length) assert.ok(Math.abs(load("src/lib/restaurants/geo.ts").haversineMiles(row.lat,row.lon,astraNearby[0].lat,astraNearby[0].lon) - 14.960783988676557) < 0.000001);
+ assert.deepEqual(response.venues.map(place=>place.id).sort(),[row.id,...nearbyNew.map(place=>place.id),...expectedAstra].sort());
  assert.equal(response.warning,"Using saved Date Night places while the live map is unavailable.");
  assert.doesNotMatch(response.warning,/Jasper County/);
 });

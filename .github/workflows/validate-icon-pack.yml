@@ -17,8 +17,8 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    # Retain existing browser suites and add the cumulative 15-record and 32-record geometry coverage.
-    timeout-minutes: 60
+    # Retain every existing suite; cover each bounded addition batch and all geometry rows.
+    timeout-minutes: 90
 
     steps:
       - name: Check out repository
@@ -87,6 +87,13 @@ jobs:
           LOCATION_BROWSER_OUTPUT: audit/browser-results/location
         run: node scripts/location-browser.mjs
 
+      - name: Regress ordinary Date Night progressive loading and local controls
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+          DATE_NIGHT_RADIAL_OUTPUT: audit/browser-results/date-night-radial
+        run: node scripts/date-night-radial-browser.mjs
+
       - name: Exercise integrated two-record seasonal experience in local Chromium
         env:
           CI: "true"
@@ -110,6 +117,20 @@ jobs:
           CI: "true"
           VITE_AUTH_ENABLED: "true"
           SEASONAL_CUMULATIVE: "true"
+        run: node scripts/seasonal-ten-record-browser.mjs
+
+      - name: Exercise eleven Astra additions and all previous seasonal receipts in local Chromium
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+          SEASONAL_ASTRA: "true"
+        run: node scripts/seasonal-ten-record-browser.mjs
+
+      - name: Exercise additional independently cleared Astra records in local Chromium
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+          SEASONAL_ASTRA_EXTRAS: "true"
         run: node scripts/seasonal-ten-record-browser.mjs
 
       - name: Preserve browser evidence

@@ -1,0 +1,62 @@
+{
+  "implementationGate": "4f17f5235f865dd3e215e9c5400e1a854871f7f6",
+  "recordsAdded": 4,
+  "cumulativeNewRecords": 15,
+  "cumulativeCuratedRecords": 47,
+  "recordsEnriched": 0,
+  "changedPaths": [
+    "src/lib/date-night/missouri-2026-astra-commercial-catalog.ts",
+    "src/lib/date-night/search.ts",
+    "src/lib/date-night/curated-policy.ts",
+    "src/lib/date-night/seasonal-presentation-catalog.ts",
+    "scripts/seasonal-astra-commercial.test.mjs"
+  ],
+  "sourceSha256": {
+    "src/lib/date-night/missouri-2026-astra-commercial-catalog.ts": "06968eab6c10fd3d1ae45c43baa99ef5a41c85fbae98a3de92907ac0bc02813b",
+    "src/lib/date-night/search.ts": "bd7832333f36bb31cdd9865614bdd549252aaeae92485ca2fd67caa83995e3ec",
+    "src/lib/date-night/curated-policy.ts": "62a774d9fb926c47de84d391e00175afc357b899e480f144734d13de840cb43e",
+    "src/lib/date-night/seasonal-presentation-catalog.ts": "9cf98596892d3da03d4b7b94356ae20ffe5bd6a309eb08f59d1151beb5c5a957",
+    "scripts/seasonal-astra-commercial.test.mjs": "b203036190bd312666453e59791364badaac6fd2604b0c5b2031c61e5c547ccd"
+  },
+  "validation": {
+    "newTests": 25,
+    "focusedRegressionTests": 93,
+    "focusedPass": 93,
+    "focusedFail": 0,
+    "typecheck": "PASS",
+    "targetedLint": "PASS",
+    "exactHeadFullTests": "PENDING root",
+    "build": "PENDING root",
+    "browser": "PENDING",
+    "independentRuntime": "PENDING"
+  },
+  "normalizations": [
+    "Hollows literal Unicode dash escapes decoded into en dash with independent reviewer approval; raw approved subset unchanged.",
+    "Reviewed prose split at sentence boundaries; approximate qualifier appended."
+  ],
+  "runtimeConstraints": [
+    "All4 limited confidence",
+    "ListingCompletenessV1; null machine hours; never Open Now",
+    "Qualified approximate placement, supported visitor-address Directions, no precise rideshare point",
+    "Exact2026 date subsets/expiry; no recurring rule",
+    "Aurora22:00 cutoff is last admission; endsAt omitted",
+    "Hollows only4confirmed dates; finalcutoff lastsupportedsession notclaimedfullseasonclose",
+    "Feemster East-address placement; no pumpkin tag; last tickets distinct from closing"
+  ],
+  "remediationHistory": [
+    {
+      "attempt": "Uncommitted author test attempt1",
+      "log": "/workspace/scratch/45a2c39f129e/author-commercial-unit-first.log",
+      "result": "24PASS/1FAIL",
+      "failure": "Hollows unlisted-date test usedOct17 afterOct15 revalidation and incorrectly expected closed-now; established product correctly returned schedule-unconfirmed.",
+      "evidence": "availability.ts calendarState treats expired revalidateAfter as unconfirmed before dateOpen check. No product defect.",
+      "correction": "Verify unlistedOct11 before revalidation yieldsclosed-now and add separate explicitOct17 assertion forschedule-unconfirmed. NeverOpenNow and exactexpiry assertions retained.",
+      "rerun": "25new+59eleven+9neighborhood=93PASS/0FAIL"
+    }
+  ],
+  "additionalReviewedFields": {
+    "HollowsPhone": "573-406-3515",
+    "FeemsterPhone": "417-894-7458",
+    "basis": "Already independently accepted field-level provenance; carried into phone UI."
+  }
+}

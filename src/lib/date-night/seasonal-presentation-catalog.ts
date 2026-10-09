@@ -3,6 +3,211 @@ import type { SeasonalPresentation } from "./seasonal-presentation";
 /** Explicit independently reviewed visitor copy. Full facts remain in immutable audit
  * artifacts and catalog metadata; no audit narratives are rendered as consumer prose. */
 export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentation>> = {
+  "DELTA6-WORLDS-OF-FUN": {
+    "canonicalId": "date-night-mo26-astra-worlds-of-fun-haunt",
+    "confidence": "limited",
+    "details": [
+      "Halloween Haunt runs on selected October nights through October 31, 2026. Check the haunt schedule before visiting.",
+      "Haunted mazes are included with valid park admission or an eligible season pass.",
+      "Guests 17 and younger need a chaperone age 21 or older, with no more than five minors per chaperone. No re-entry after 6 p.m.; review ID, bag and costume rules.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA2-OZARK": {
+    "canonicalId": "date-night-mo26-astra-ozark-nightmares",
+    "confidence": "limited",
+    "details": [
+      "The Viscount’s Manor opens September 25–26 and October 2–3, 9–10, 16–17, 23–24 and 30–31, 2026.",
+      "Check the operator for nightly hours and admission.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA3-BALLWIN": {
+    "canonicalId": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+    "confidence": "limited",
+    "details": [
+      "Haunted car wash on October 23–24, 2026, 6:30–9:30 p.m.",
+      "Check this location’s event information for vehicle rules and admission.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA6-OFALLON": {
+    "canonicalId": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+    "confidence": "limited",
+    "details": [
+      "Haunted car wash on October 23–24, 2026, 6:30–9:30 p.m.",
+      "Check this location’s event information for vehicle rules and admission.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA3-GROTTO": {
+    "canonicalId": "date-night-mo26-astra-haunted-grotto",
+    "confidence": "limited",
+    "details": [
+      "Open October 9–10, 16–17, 23–24 and 30–31, 2026, 7–10 p.m.",
+      "Check the operator before visiting for admission and current conditions.",
+      "Location is approximate."
+    ]
+  },
+  "MO26-002": {
+    "canonicalId": "date-night-mo26-astra-aurora-maize",
+    "confidence": "limited",
+    "details": [
+      "September 19–October 31, 2026.",
+      "Wednesdays from October 7: 5–8:30 p.m.; Fridays 5–10 p.m.; Saturdays 4–10 p.m. These are last-admission times; final exit is not specified.",
+      "Maze scares start at dark Friday/Saturday from September 25 and Wednesdays October 7–28. Zombie Harvest runs Friday/Saturday at dusk.",
+      "Confirm the visitor entrance before traveling.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA2-SHEPHERD-LANTERN": {
+    "canonicalId": "date-night-mo26-astra-shepherds-lantern",
+    "confidence": "limited",
+    "details": [
+      "October 16–17, 2026; check your ticket for arrival time.",
+      "Parental guidance suggested for darkness, suspense and frightening situations.",
+      "Tickets are offered online and at the door. Online refunds are available up to seven days before the event.",
+      "Confirm arrival instructions with your booking.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA2-HOLLOWS": {
+    "canonicalId": "date-night-mo26-astra-haunted-hollows",
+    "confidence": "limited",
+    "details": [
+      "Confirmed ticket dates: October 9, 10, 24 and 30, 2026.",
+      "October 10, 24 and 30 sessions run 7:30–11 p.m.; October 9 starts at 7:30 p.m.",
+      "Check the booking calendar for other dates and current availability.",
+      "Tickets are nonrefundable unless the organizer cancels.",
+      "Location is approximate."
+    ]
+  },
+  "MO26-039": {
+    "canonicalId": "date-night-mo26-astra-feemster-corn-maze",
+    "confidence": "limited",
+    "details": [
+      "September 26–27, October Fridays–Sundays, and November 1, 2026.",
+      "October: Fridays 5–9 p.m., Saturdays 10 a.m.–9 p.m., Sundays 1–9 p.m.; November 1 is 1–9 p.m. Last tickets are sold one hour before closing.",
+      "Hayrides and the apple cannon stop at sunset. Height and supervision rules apply to play equipment.",
+      "The farm’s posted no-animal rule includes service animals; contact it about access arrangements before travel.",
+      "Check the farm’s Facebook page for weather updates.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA2-BRANSON-GHOSTER": {
+    "canonicalId": "date-night-mo26-astra-branson-ghoster",
+    "confidence": "good",
+    "details": [
+      "Friday and Saturday nights in October: 7–10 p.m.",
+      "Special-event ticket required; regular and third-party tickets or discounts do not apply. Recommended ages 13+.",
+      "Two-rider sled: passenger age 3+ and 38–56 inches; driver age 16+ and at least 56 inches. Front rider must be at least a head shorter; two riders both over 56 inches cannot share.",
+      "Sled weight limit: 375 lb dry / 330 lb wet. The age-16 companion rule is not a solo-driver minimum.",
+      "Location is approximate."
+    ]
+  },
+  "MO26-056": {
+    "canonicalId": "date-night-mo26-astra-liberty-corn-maze",
+    "confidence": "good",
+    "details": [
+      "Friday–Sunday, September 11–October 30. Final October 30 close: 11 p.m. Last admission varies; check the venue.",
+      "Large groups require one week’s advance notice. Trails may be muddy; wear suitable footwear.",
+      "Maze rules: no pets, alcohol, smoking, concealed weapons or outside food/drink; bags may be searched.",
+      "Carolyn’s Pumpkin Patch is separate; combined access needs the appropriate ticket.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA3-RANCH": {
+    "canonicalId": "date-night-mo26-astra-terror-at-the-ranch",
+    "confidence": "limited",
+    "details": [
+      "Three haunted experiences at Red Barn Ranch, including a haunted corn maze.",
+      "Selected October evenings through October 31; check individual times. Final October 31 event ends at 11 p.m.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA3-COBB": {
+    "canonicalId": "date-night-mo26-astra-cobb-factory",
+    "confidence": "good",
+    "details": [
+      "Listed Friday–Sunday nights September 25–November 1; also November 6–7.",
+      "Friday/Saturday nights through October: 7 p.m.–midnight. Listed Sundays, including November 1: 7–10 p.m. November 6–7: 7–11 p.m.",
+      "Tickets are purchased on site.",
+      "Haunt directories report ages 10+, strobes, fog, physically demanding conditions and health-related entry restrictions. Confirm restrictions with the venue.",
+      "Location is approximate."
+    ]
+  },
+  "MO26-037": {
+    "canonicalId": "date-night-mo26-astra-field-of-screams-nixa",
+    "confidence": "good",
+    "details": [
+      "Selected nights September 18–November 1, 7 p.m.–midnight. Check the listed dates before visiting.",
+      "Children must have an adult; recommended ages 10–12+ at parental discretion.",
+      "Uneven outdoor terrain: wear closed-toe shoes. Strobes, fog, loud effects and darkness; check the operator’s medical-sensitivity warning.",
+      "No pets, smoking, drugs, alcohol or weapons. Do not touch actors or props; no flash photography.",
+      "A haunt directory reports no wheelchair access or carried babies/infants; confirm access restrictions with the venue.",
+      "Online tickets recommended; peak-night gate availability is not guaranteed. October waits may exceed three hours.",
+      "Haunted Forest and Coulrophobia share one location. Location is approximate."
+    ]
+  },
+  "DELTA2-MISSOURI-NIGHTMARE": {
+    "canonicalId": "date-night-mo26-astra-missouri-nightmare",
+    "confidence": "limited",
+    "details": [
+      "Selected events October 9–November 1; check individual times. First occurrence starts at 7 p.m.; final November 1 event ends at 8:30 p.m.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA2-TREPIDATIONS": {
+    "canonicalId": "date-night-mo26-astra-trepidations",
+    "confidence": "good",
+    "details": [
+      "Regular scare nights October 2–3, 9–10, 16–17, 23–24 and 30–31: 7–11 p.m.",
+      "No-scare nights October 22 and 29: 7–10 p.m. November 1 Blackout: 7–11 p.m.",
+      "Strobes, fog, low visibility and demanding walking. Read the operator’s medical, pregnancy and claustrophobia warning before booking.",
+      "Operator bars entry with casts, braces, crutches, physical limitations, intoxication or medication/drug use; check eligibility with the venue.",
+      "Shoes required; no high heels. Remove jewelry/earrings. No smoking, touching actors or props, or video/photography inside.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA3-FREAKS": {
+    "canonicalId": "date-night-mo26-astra-freaks-fair",
+    "confidence": "good",
+    "details": [
+      "October 23–24 and 30–31, 7–10:30 p.m.",
+      "Ticket is valid for one entry on the selected night.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA4-HELL-HARVEST": {
+    "canonicalId": "date-night-mo26-astra-hell-harvest",
+    "confidence": "limited",
+    "details": [
+      "Select nights through October 31; listed October nights start at 8 p.m. Closing time unconfirmed. October 11 is chicken night.",
+      "Intense effects, uneven terrain and confined spaces; operator says the terrain is not accessible.",
+      "Operator advises against entry for young children, pregnancy or relevant medical conditions, and bars injuries, casts, braces, crutches, physical limitations, intoxication or medication/drug use. Read the venue warning before booking.",
+      "No pets, weapons, alcohol, drugs, cigarettes or costumes. Do not touch actors or props; no video or flash photography.",
+      "Location is approximate."
+    ]
+  },
+  "MO26-005": {
+    "canonicalId": "date-night-mo26-astra-myers-forest-of-fears",
+    "confidence": "limited",
+    "details": [
+      "Open October 9–10, 16–17, 23–24 and 30–31, 2026. Hours are not listed; check the operator before visiting.",
+      "Location is approximate."
+    ]
+  },
+  "MO26-027": {
+    "canonicalId": "date-night-mo26-astra-labyrinth-of-fear",
+    "confidence": "limited",
+    "details": [
+      "Open October 17, 23–24 and 30–31, 2026.",
+      "Ticket sales start at 6:30 p.m.; entry starts at 7:30 p.m. Closing time is not listed.",
+      "Groups enter in parties of up to four. Expect strobes, fog, loud sound and water effects; incidental contact can occur.",
+      "Tickets are valid only on the purchase night and are nonrefundable.",
+      "Location is approximate."
+    ]
+  },
   "DELTA-EDGE-2026": {
     "canonicalId": "date-night-mo26-delta-edge-of-hell",
     "confidence": "high",

@@ -28,10 +28,9 @@ import type { DateNightPlace } from "./types";
 // entrance or visitor parking. Keep it discoverable only through sources that
 // do not promote an unverified arrival coordinate until that gate is cleared.
 //
-// Myers Forest of Fears — 3935 S Garrison Ave, Carthage, MO 64836 — remains
-// intentionally uncurated because current sources conflict: structured local
-// business data marks it permanently closed, while current 2026 haunt directories
-// continue to feature it. Do not suppress or promote it until that conflict clears.
+// Myers Forest of Fears is now independently cleared in the separate
+// missouri-2026-astra-eleven-catalog.ts V1 registry using the current operator
+// calendar and approximate site marker. It remains distinct from Myer’s Inn.
 export const JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG: DateNightPlace[] = [
   {
     id: "date-night-werehouse-joplin",
