@@ -1,11 +1,4 @@
-import { MISSOURI_2026_ASTRA_DELTA_CATALOG } from "./missouri-2026-astra-delta-catalog";
-import { MISSOURI_2026_ASTRA_COMMERCIAL_CATALOG } from "./missouri-2026-astra-commercial-catalog";
-import { MISSOURI_2026_ASTRA_ELEVEN_CATALOG } from "./missouri-2026-astra-eleven-catalog";
-import { MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG } from "./missouri-2026-three-source-tier-a-catalog";
-import { MISSOURI_2026_LATE_FALL_CATALOG } from "./missouri-2026-late-fall-catalog";
-import { MISSOURI_2026_V1_NEXT_SEASONAL_CATALOG } from "./missouri-2026-v1-next-catalog";
-import { MISSOURI_2026_DEFERRED_BATCH_3_CATALOG } from "./missouri-2026-deferred-batch-3-catalog";
-import { MISSOURI_2026_FINAL_FOUR_CATALOG } from "./missouri-2026-final-four-catalog";
+import { localDateNightCatalog } from "./local-catalog";
 import { ProviderResponseError } from "../discovery/provider-chain";
 import { createDateNightProvider } from "../discovery/hedged-provider";
 import { DEFAULT_LOCATION } from "../restaurants/types";
@@ -16,10 +9,6 @@ import { isLikelyChain } from "@/lib/restaurants/chains";
 import { haversineMiles } from "@/lib/restaurants/geo";
 import { namesMatch } from "@/lib/utils";
 import type { PhotoKey } from "@/lib/restaurants/types";
-import { JASPER_COUNTY_DATE_NIGHT_CATALOG } from "./jasper-county-catalog";
-import { JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG } from "./seasonal-catalog";
-import { MISSOURI_2026_V1_SEASONAL_CATALOG } from "./missouri-2026-v1-catalog";
-import { MISSOURI_2026_CLEARED_SEASONAL_CATALOG } from "./missouri-2026-cleared-catalog";
 import { seasonalTypes, providerLifecycle } from "./provider-evidence";
 import { normalizeLifecycleTags } from "./lifecycle";
 import { isHalloweenDateNightActive } from "./season";
@@ -138,13 +127,6 @@ async function queryMirror(url: string, body: string, halloweenSeason: boolean, 
   return dedupeDateNight([...unique.values()].sort((a, b) => a.id.localeCompare(b.id)));
 }
 
-function localWithin(lat: number, lon: number, radiusMiles: number, halloweenActive: boolean): DateNightPlace[] {
-  const catalog = halloweenActive
-    ? [...JASPER_COUNTY_DATE_NIGHT_CATALOG, ...JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG, ...MISSOURI_2026_CLEARED_SEASONAL_CATALOG, ...MISSOURI_2026_V1_SEASONAL_CATALOG, ...MISSOURI_2026_V1_NEXT_SEASONAL_CATALOG, ...MISSOURI_2026_DEFERRED_BATCH_3_CATALOG, ...MISSOURI_2026_FINAL_FOUR_CATALOG, ...MISSOURI_2026_LATE_FALL_CATALOG, ...MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG, ...MISSOURI_2026_ASTRA_ELEVEN_CATALOG, ...MISSOURI_2026_ASTRA_COMMERCIAL_CATALOG, ...MISSOURI_2026_ASTRA_DELTA_CATALOG]
-    : [...JASPER_COUNTY_DATE_NIGHT_CATALOG, ...MISSOURI_2026_LATE_FALL_CATALOG, ...MISSOURI_2026_THREE_SOURCE_TIER_A_CATALOG.filter((place) => place.seasonalListing?.visibility === "listing-lifecycle"), ...MISSOURI_2026_ASTRA_ELEVEN_CATALOG.filter((place) => place.seasonalListing?.visibility === "listing-lifecycle")];
-  return catalog.filter((place) => haversineMiles(lat, lon, place.lat, place.lon) <= radiusMiles + 1);
-}
-
 export const searchDateNight = createServerFn({ method: "POST" })
   .validator((data: { lat: number; lon: number; radiusMiles: number; spookySeasonEnabled?: boolean; activityTypes?: unknown; patchId?: unknown }) => {
     requireCoordinates(data);
@@ -169,8 +151,8 @@ export const searchDateNight = createServerFn({ method: "POST" })
     const halloweenSeason = isHalloweenDateNightActive(data.spookySeasonEnabled);
     const plan = buildDateNightQueryPlan(data.activityTypes, halloweenSeason);
     const owned = (place: DateNightPlace) => !data.patch || dateNightPatchOwns(data, data.patch, place);
-    const local = localWithin(data.lat, data.lon, fetchRadius, halloweenSeason).filter(owned);
-    const chain = createDateNightProvider(data.patch ? getRequest().signal : undefined);
+    const local = localDateNightCatalog(data.lat, data.lon, fetchRadius, halloweenSeason).filter(owned);
+    const chain = createDateNightProvider(getRequest().signal);
     const outcomes = await Promise.allSettled(plan.map(async (group) => {
       const providerTypes = group.activityTypes.filter((type) => type !== "other-halloween-fall");
       if (!providerTypes.length) return []; // Curated-only category; never query generic parks/events.

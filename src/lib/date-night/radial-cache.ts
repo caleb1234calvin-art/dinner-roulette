@@ -8,8 +8,8 @@ import { haversineMiles } from "../restaurants/geo";
 import type { DateNightPlace, DateNightSearchResponse } from "./types";
 
 export const DATE_NIGHT_RADIAL_MAX_CACHE_ENTRIES = 128;
-export function createDateNightRadialCache(options: Parameters<typeof createDateNightDiscoveryCache>[0] = {}) {
-  const cache = createDateNightDiscoveryCache({ maxEntries: DATE_NIGHT_RADIAL_MAX_CACHE_ENTRIES, ...options });
+export function createDateNightRadialCache(options: Parameters<typeof createDateNightDiscoveryCache>[0] = {},
+  cache = createDateNightDiscoveryCache({ maxEntries: DATE_NIGHT_RADIAL_MAX_CACHE_ENTRIES, ...options })) {
   const versioned = (query: DateNightAcquisition) => ({ ...query,
     semanticVersion: query.semanticVersion ?? DATE_NIGHT_RADIAL_VERSION });
   return {

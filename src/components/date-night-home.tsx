@@ -12,7 +12,7 @@ import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { searchDateNight } from "@/lib/date-night/search";
 import { normalizeDateNightClientActivityTypes, sanitizeDateNightClientActivityTypes } from "@/lib/date-night/cache";
-import { createDateNightRadialSession, dateNightRadialProgress } from "@/lib/date-night/radial-session";
+import { createDateNightHybridSession, dateNightHybridProgress, type DateNightLoadPhase } from "@/lib/date-night/hybrid-session";
 import type { DateNightCoverageState } from "@/lib/date-night/radial-plan";
 import {
   dateNightChipsForNow,
@@ -169,9 +169,11 @@ export function DateNightHome() {
   const now = useDateNightClock();
   const [source, setSource] = useState<"live" | "merged" | "fallback">("live");
   const [discovery, setDiscovery] = useState<DateNightSearchResponse["discovery"]>();
-  const [radialSession] = useState(createDateNightRadialSession);
+  const [radialSession] = useState(createDateNightHybridSession);
   const [radialCoverage, setRadialCoverage] = useState<DateNightCoverageState>();
   const [expanding, setExpanding] = useState(false);
+  const [loadPhase, setLoadPhase] = useState<DateNightLoadPhase>("initial-loading");
+  const [primaryPending, setPrimaryPending] = useState(true);
   const halloweenActive = isHalloweenDateNightActive(spookySeasonEnabled, now);
   const activityChips = dateNightChipsForNow(spookySeasonEnabled, now);
   const acquisitionSignature = normalizeDateNightClientActivityTypes(filters.activityTypes, halloweenActive).join(",");
@@ -189,13 +191,15 @@ export function DateNightHome() {
         },
         signal,
       }),
-      onChange: ({ response, coverage: nextCoverage, loading: foreground, expanding: background, error: failure }) => {
+      onChange: ({ response, coverage: nextCoverage, loading: foreground, expanding: background, phase, primaryPending: pending, error: failure }) => {
         setVenues(response?.venues ?? []);
         setSource(response?.source ?? "live");
         setWarning(response?.warning ?? null);
         setDiscovery(response?.discovery);
         setError(failure);
         setLoading(foreground);
+        setLoadPhase(phase);
+        setPrimaryPending(pending);
         setExpanding(background);
         setRadialCoverage(nextCoverage);
       },
@@ -348,10 +352,10 @@ export function DateNightHome() {
       </section>
 
       {loading ? <DiscoveryLoading label="Finding date ideas near you…" /> : null}
-      {!loading && radialCoverage ? (
+      {!loading ? (
         <div className="mt-5 rounded-xl bg-surface p-4 text-xs leading-relaxed text-muted shadow-border">
-          <p role="status" data-radial-progress>{dateNightRadialProgress(radialCoverage, expanding)}</p>
-          {!expanding && !radialCoverage.complete && !error && !discovery?.partial ? (
+          <p role="status" data-radial-progress data-date-night-phase={loadPhase}>{dateNightHybridProgress(loadPhase)}</p>
+          {!primaryPending && !expanding && !radialCoverage?.complete && !error && !discovery?.partial ? (
             <button type="button" className="mt-2 min-h-11 text-accent underline" onClick={() => setRequestVersion(version => version + 1)}>Retry missing areas</button>
           ) : null}
         </div>
@@ -363,11 +367,11 @@ export function DateNightHome() {
           body={discovery?.partial ? warning : halloweenActive
             ? "Pick For Us is using saved local date ideas. Check each stop before you leave."
             : "Pick For Us is using verified saved local date ideas so the roulette can keep working."}
-          onRetry={discovery?.partial ? () => setRequestVersion((version) => version + 1) : undefined}
+          onRetry={() => setRequestVersion((version) => version + 1)}
         />
       ) : null}
       {!loading && !error && coverage ? (
-        <p role="status" className="mt-5 rounded-xl bg-surface p-4 text-xs leading-relaxed text-muted shadow-border">{coverage.text}</p>
+        <p role="status" className="mt-5 rounded-xl bg-surface p-4 text-xs leading-relaxed text-muted shadow-border">{primaryPending ? "Available saved places are ready. Live discovery is continuing." : coverage.text}</p>
       ) : null}
       {error ? (
         <DiscoveryNotice

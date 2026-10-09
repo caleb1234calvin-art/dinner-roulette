@@ -8,9 +8,13 @@ for (const seasonal of [false, true]) {
     const clock = discoveryClock(t);
     const h = discoveryComponentHarness(discoveryModes[1]);
     t.after(() => h.dispose());
+    // Isolate provider-partial disclosure from the separately tested immediate
+    // curated pool; local catalog results no longer wait for provider settlement.
+    h.store.location = { ...h.store.location, lat: 43, lon: -79 };
     h.store.spookySeasonEnabled = seasonal;
     h.render();
     const result = discoveryPayload(discoveryModes[1], "live");
+    Object.assign(result.venues[0], { lat: 43, lon: -79 });
     result.venues[0].activityTypes = seasonal ? ["haunted-house"] : ["movies"];
     result.discovery = { partial: true, groups: [
       { id: seasonal ? "seasonal" : "culture", activityTypes: result.venues[0].activityTypes, outcome: "succeeded-nonempty" },
@@ -29,6 +33,9 @@ for (const seasonal of [false, true]) {
     assert.doesNotMatch(text, /Live map unavailable; using saved places/);
     h.button(status.tree, "Give us options").props.onClick();
     assert.equal(h.overlay(h.render(), "OptionsOverlay").props.restaurants[0].id, "current");
+    assert.equal(h.requests.at(-1).args.data.patchId, "radial-v1:core");
+    assert.equal(clock.pending, 1, "only the bounded background audit watchdog remains");
+    h.dispose();
     assert.equal(clock.pending, 0);
   });
 }

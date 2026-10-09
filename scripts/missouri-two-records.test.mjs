@@ -80,7 +80,8 @@ for (const row of records) test(`actual component keeps ${row.id} qualified thro
  const prior=Object.getOwnPropertyDescriptor(globalThis,"document");
  Object.defineProperty(globalThis,"document",{configurable:true,value:{body:{},documentElement:{classList:{contains:()=>true}}}});
  t.after(()=>{if(prior)Object.defineProperty(globalThis,"document",prior);else delete globalThis.document;});
- const store={location:{...row,label:row.name,source:"manual"},preferences:{},exclusions:[],sessionShown:[],dateNightFilters:{...DEFAULT_DATE_NIGHT_FILTERS,openNowOnly:false},spookySeasonEnabled:true,theme:"dark",markShown(){},excludeTonight(){},setDateNightFilters(patch){this.dateNightFilters={...this.dateNightFilters,...patch};}};
+ // Isolate this record’s types: immediate curated composition now truthfully includes nearby Nightmare in Anything.
+ const store={location:{...row,label:row.name,source:"manual"},preferences:{},exclusions:[],sessionShown:[],dateNightFilters:{...DEFAULT_DATE_NIGHT_FILTERS,activityTypes:[...row.activityTypes],openNowOnly:false},spookySeasonEnabled:true,theme:"dark",markShown(){},excludeTonight(){},setDateNightFilters(patch){this.dateNightFilters={...this.dateNightFilters,...patch};}};
  const clock={value:at};
  const harness=dateNightComponentHarness({store,now:clock,search:async()=>({venues:[row],source:"merged"})});
  t.after(()=>harness.dispose());harness.render();let tree=await harness.settle();

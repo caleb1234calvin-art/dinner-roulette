@@ -118,7 +118,6 @@ export function createDateNightDiscoveryCache({
   // a venue after old evidence expires. This is destructive retirement, no
   // unbounded tombstone registry or rejuvenated negative TTL.
   const retireEvictedNegative = (removed: CacheEntry) => {
-    if (!removed.acquisition.patchId) return;
     const negatives = removed.venues.filter(place => place.lifecycle);
     if (!negatives.length) return;
     for (const entry of entries) {

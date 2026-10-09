@@ -85,8 +85,8 @@ jobs:
         env:
           CI: "true"
           VITE_AUTH_ENABLED: "true"
-          DATE_NIGHT_RADIAL_OUTPUT: audit/browser-results/date-night-radial
-        run: node scripts/date-night-radial-browser.mjs
+          DATE_NIGHT_RADIAL_OUTPUT: audit/browser-results/date-night-hybrid
+        run: node scripts/date-night-hybrid-browser.mjs
 
       - name: Exercise integrated two-record seasonal experience in local Chromium
         env:
