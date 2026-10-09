@@ -1,0 +1,113 @@
+{
+  "reviewedAt": "2026-10-09T05:39:21.713649+00:00",
+  "candidate": "4513aee7de0afe55e0f0fa061c1ec5f6af4fa412",
+  "tree": "7323e271b5ecf23fdf60f8c4a98f8fffc564137c",
+  "hostedRun": "37888059004",
+  "artifactSha256": "5baf4f286e23ae1de87f8a9ecce7c124cd6386be74355e3e598b68149846c033",
+  "artifactBytes": 237048678,
+  "zipMembers": 3233,
+  "crcPass": true,
+  "independentSourceFingerprint": {
+    "head": "4513aee7de0afe55e0f0fa061c1ec5f6af4fa412",
+    "tree": "7323e271b5ecf23fdf60f8c4a98f8fffc564137c",
+    "source": {
+      "sha256": "cfb3d432502d4d09bc99d89f1347315e9ed0ec7032bb90dcdc72ee90c68685ab",
+      "files": 468
+    },
+    "status": ""
+  },
+  "hostedBuildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "cfb3d432502d4d09bc99d89f1347315e9ed0ec7032bb90dcdc72ee90c68685ab",
+      "files": 468
+    },
+    "startedAt": "2026-10-09T05:20:40.180Z",
+    "output": {
+      "sha256": "4422c6c68fdf4789d62ddf24c180cbcfe9958990641a276c38721821f781d804",
+      "files": 194
+    },
+    "completedAt": "2026-10-09T05:20:43.360Z"
+  },
+  "allPresentVerdictsUseSameSourceFingerprint": true,
+  "geometry": {
+    "verdict": "PASS",
+    "comparisons": 426,
+    "uniqueRecords": 52,
+    "widths": {
+      "320": 142,
+      "390": 142,
+      "512": 142
+    },
+    "contexts": {
+      "options": 156,
+      "result": 156,
+      "plan": 114
+    },
+    "ineligiblePlanControls": 14,
+    "independentComparisonFailures": [],
+    "notes": "Options/plan collapsed-height budgets retained. Result cards can be taller than shortstandard; all no taller than pre-presentation control. Same card/media classes and unchanged ordinarycontrols. No horizontal notice overflow."
+  },
+  "otherCompleted": {
+    "ordinaryDateNightRadial": "10/10 PASS; 0 publicprovider calls",
+    "smokeChecks": 16,
+    "smokeErrors": 0
+  },
+  "legacySuite": {
+    "verdict": "FAIL, preserved",
+    "pass": 20,
+    "fail": 3,
+    "publicProviderCalls": 0,
+    "forwardedExternalCalls": 0,
+    "error": "Exactly one compact notice: 2 !== 1",
+    "failureStateReviews": [
+      {
+        "scenario": "anything",
+        "width": 390,
+        "noticeCountInWholePage": 2,
+        "lloydPresent": true,
+        "nightmarePresent": true,
+        "observedStatus": [
+          "Closed now",
+          "Season upcoming"
+        ],
+        "visualInspection": "Two distinct cards, each exactly one visible compactnotice and individual Details; neither claims OpenNow; rendered images visible.",
+        "sourceScreenshot": "missouri-two-records/0-anything-failure.png"
+      },
+      {
+        "scenario": "consumer-details-320",
+        "width": 320,
+        "noticeCountInWholePage": 2,
+        "lloydPresent": true,
+        "nightmarePresent": true,
+        "observedStatus": [
+          "Closed now",
+          "Season upcoming"
+        ],
+        "visualInspection": "Two distinct cards, each exactly one visible compactnotice and individual Details; neither claims OpenNow; rendered images visible.",
+        "sourceScreenshot": "missouri-two-records/0-consumer-details-320-failure.png"
+      },
+      {
+        "scenario": "consumer-details-390",
+        "width": 390,
+        "noticeCountInWholePage": 2,
+        "lloydPresent": true,
+        "nightmarePresent": true,
+        "observedStatus": [
+          "Closed now",
+          "Season upcoming"
+        ],
+        "visualInspection": "Two distinct cards, each exactly one visible compactnotice and individual Details; neither claims OpenNow; rendered images visible.",
+        "sourceScreenshot": "missouri-two-records/0-consumer-details-390-failure.png"
+      }
+    ],
+    "rootCause": "inspectQualifiedOverlay uses overlay.locator(data-seasonal-visit-notes) in multi-card optionsoverlay and asserts all matchingdirectparagraphs count1. A legitimately added nearbyNightmarecard produces a second independentnotice. The invariant must be per targetrecord/card.",
+    "productFinding": "Observed state/screenshots show correct two-card inventory and one notice percard; no productduplication found.",
+    "candidateRemediation": "For options select unique rowCard(page,row) within overlay; assert exactlyone targetcard and one visit-notessection there; preserve exactcompactnotice, confidence, Details facts and reachability. Result scope remains single resultoverlay. Do not change runtime or weakenexpectednoticecount.",
+    "unprovenUntilRerun": "Failed Lloyd scenarios terminate before expanding Details/result checks. Their full reachability/runtime assertions are not PASS until corrected exact-head browser rerun. Other newrecord suites were skipped afterfailure and cannot borrow geometryPASS."
+  },
+  "releaseVerdict": "HOLD: candidate2 hostedweb failed. Bounded test harness correction justified by independently observed productstate; all exact-head gates required on nextcandidate.",
+  "sourceMutation": "None performed by independentreviewer; repo clean exact4513 during fingerprint."
+}

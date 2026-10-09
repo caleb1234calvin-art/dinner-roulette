@@ -1,3 +1,24 @@
+# ASTRA MATERIAL GATE — 2026-10-09 05:41 UTC — candidate2 browser failure diagnosed; exact corrected candidate4 active
+
+## CURRENT
+- Draft PR #60 current frozen head **a44e70996bc8546f75dc71e4af13c414350ec1f9**, tree **b16122c4bad65e7a51b8de57a166ba1d0f07e426**, parent **7e6f26e55f85e85e232b2ff0f2e2e16e08676885**. Branch integration/missouri-astra-push-2026-10-09. Local clean tree matches.
+- Full ancestry after production979d83aede9d66163e1ebaed9ad5b219cb637882: bb7f36123c5035a36676e98acb1b9ab4fe599955 → 4513aee7de0afe55e0f0fa061c1ec5f6af4fa412 → 7e6f26e55f85e85e232b2ff0f2e2e16e08676885 → a44e70996bc8546f75dc71e4af13c414350ec1f9.
+- Candidate2 web37888059004 FAILED: old two-record suite **20 PASS / 3 FAIL**, all Lloyd options/Details320/390 global notice count2vs1. Retained geometry **426 PASS**,52records/14non-thrill-plan controls, casino16/location19/ordinaryDateNight10 PASS. Later seasonal suites were skipped, not PASS.
+- Exact failed artifact **11598330095**, **237,048,678 bytes**, SHA256 **5baf4f286e23ae1de87f8a9ecce7c124cd6386be74355e3e598b68149846c033**,3233members, CRC/digest/source proof verified. Root and independent reviewer inspected actual320/390 screenshots and state BEFORE mutation: two distinct eligible Lloyd/Nightmare cards, one compact notice each, visible artwork, no false Open Now. Product behavior was correct; whole-overlay cardinality assertion was stale.
+- Independent diagnosis report SHA256 **c77489d3d1bbb65b88b90158ec10893c84bf2e2f318e06e4cda48c51e41be909**, retained at audit/astra-runtime-independent-2026-10-09/Candidate2-Browser-Independent-Failure-Review.json.
+- Correction in scripts/missouri-two-record-browser.mjs scopes target Details/confidence/notice to its unique card, asserts every rendered seasonal card has exactly one section/notice and overlay sum matches, retains all material fact/reachability/controls/artwork/consumer-copy checks. No test weakening or runtime/data mutation.
+- Workflow moved the SAME geometry gate after browser interactions for faster failure feedback. No gate removed. Current candidate4 web **37889747808**, Android **37889747820** started; local full safe build/tests/lint/typecheck rerunning.
+- Intermediate candidate3 **7e6f26e55f85e85e232b2ff0f2e2e16e08676885**, tree2740c37ec069fe8d9df53dd967acf3ab13fe00de, web37889676019/Android37889675984 is superseded, not claimed failed/PASS. Two-line explicit target uniqueness assertion arrived during publication; preserved via a separate fast-forward commit, no history rewrite. No cancellation tool exposed; older runs may finish but cannot satisfy current-head gate.
+## NEXT
+- Finish full exact a44e709 gates; independent delta/source attestation and final browser artifact acceptance.
+- Preserve all failed/superseded attempts and logs, save durable evidence, refresh release identities, publish owner decision checkpoint.
+## HOLD
+- Candidate2 is FAIL/HOLD despite passing geometry and source review. Those gates do not transfer to a44 without exact-head rerun.
+- Twenty cleared additions remain unchanged. Cadaver final narrow HOLD, all other data HOLDs and physical Android restrictions retained.
+- No production/main/protection/signing mutation; no fresh owner waiver.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 05:33 UTC — hosted geometry stage PASS
 
 ## CURRENT
