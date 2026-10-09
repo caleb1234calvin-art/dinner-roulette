@@ -1,3 +1,44 @@
+# PR #61 R3 Safety Remediation PASS; Terminal Benchmark HOLD (2026-10-09 22:54 UTC)
+
+## CURRENT
+
+“Radial discovery becomes an audit layer.” Draft [PR #61](https://github.com/caleb1234calvin-art/dinner-roulette/pull/61), branch `integration/date-night-primary-radial-audit-1`, now has exact remote **63b4c0096c2af305019cc7f5adf67e55720b562a**, tree **14580b2bc2b99b1c9f10002ba302ba419ba1962f**, sole parent **a4f43e9b886764592053a53652dc91602749ba11**. Twenty-nine paths differ from main. R3 changes truthful empty/unavailable status and the owned-origin browser fixture guard; no acquisition, cache, query, timing or performance optimization. The [committed remediation report](https://github.com/caleb1234calvin-art/dinner-roulette/blob/63b4c0096c2af305019cc7f5adf67e55720b562a/audit/date-night-hybrid-candidate/remediation-r3.md) was read in full.
+
+**Independent scoped safety/state PASS:** HYB-IV-01, IV-02 and IV-03 are closed by 15 independent probes and 95 focused repository tests. Closure still invalidates unsafe choices. Exact R3 full local validation is reported PASS by author and independent reviewer: **1,052 tests PASS / 4 skips**, typecheck PASS, lint **0 errors / 6 warnings**, safe auth-enabled migration-free build PASS. Hosted web **38001408334** and Android **38001408344** remain pending at this checkpoint. Full browser/seasonal/geometry and final candidate acceptance are not yet PASS.
+
+[Independent safety and applicability report](audit/hybrid-loading-2026-10-09/63b4-Safety-and-Applicability-R3.md), SHA-256 **f593bac899595a119909933b77a9d140781b8697ab6ffe68e43ec1750f36ce81**. Complete a4-to-R3 diff review establishes unchanged acquisition logic: frozen a4 physical outcomes, eligible identity sets and first-usable-pool evidence remain relevant within their original limits. They are **a4 measurements**, not fresh R3 UI timings. Old failed-primary settlement/Ready values do not transfer as usable readiness.
+
+## Terminal benchmark: integrity PASS, full protocol HOLD
+
+Live traffic has stopped. **No restart, new ledger, counter reset, compensating traffic or extra provider calls are authorized.** The measured candidate was a4f43e9, not R3. Independent review verified **327 physical attempts / 327 outcomes**, 799 hash-chain rows, no unresolved request, no reset, no 429 and no cap overrun. Outcomes: 131 success, 26 failure, 15 timeout, 155 expected losing-hedge aborts. The 384-attempt ceiling and failure thresholds did not fire.
+
+Seven cases finalized (two partial and five complete); the eighth started and remains unfinalized, with 79 further attempts and 32 handler acquisitions. Twenty-four planned cases never started. The runner exited **13 / unsettled top-level await** because quiescent partial baseline coverage was neither complete nor paused, and its unreferenced watchdog did not keep Node alive. This is a **benchmark termination HOLD**, not completed geographic coverage. The older seven-case results snapshot covers only 248 attempts; final global accounting is 327. Unknown partial-case timing and eligible-final metrics remain null.
+
+Controlled exact-code evidence: **288 cases / 72 independently recomputed final-ID parity groups PASS**. Virtual baseline first useful results were already 100ms; the large full-coverage versus broad-primary timing difference must not be sold as an equivalent first-interaction improvement. Hybrid audits added recovery mechanics and extra requests. Local covered-radius controller CPU was worse overall: baseline median 0.569ms versus hybrid 6.716ms, hybrid maximum 370.673ms. These are local CPU observations, not browser/mobile timings.
+
+Live evidence is Columbia Movies only. Both completed hybrid 50-mile primaries failed; audit later recovered nine IDs each. Baseline first useful 6.112s / complete 94.987s; hybrid first useful 19.820s and 19.483s / complete 97.547s and 99.198s. Failed settlement near 12s is not usable READY. Final sets match within this bounded sample, but recovery after failed primary does not prove omission by successful broad queries. Final reverse-order baseline was incomplete. CPU overlap confounds are disclosed for early 15-mile cases and second hybrid 50-mile case. No completed three-city live matrix, live-browser comparison, broad recall or superiority claim.
+
+**Recommendation: MORE EVIDENCE REQUIRED. Architecture adoption / performance acceptance remains HOLD**, independently of safety or repository-test PASS.
+
+## Recoverable evidence
+
+- [Frozen author benchmark report](audit/hybrid-loading-2026-10-09/a4f43-Hybrid-Performance-Report.md), SHA **5a1dc78102b8929f81bce970c140607b046308702694918e12e5de4ae82e036f**. Its “independent review pending” labels are historical producer-time labels superseded only by the review below.
+- [Independent terminal evidence review](audit/hybrid-loading-2026-10-09/a4f43-BENCHMARK-EVIDENCE-HOLD.md), SHA **624c7a3a408063cdee5522f889e2e162bde595fd084a25f010a1e7d26a138e74**.
+- [Complete frozen manifest](audit/hybrid-loading-2026-10-09/a4f43-FINAL-BENCHMARK-MANIFEST.json), SHA **e5a5225c87447d8b47a5778c814f6e65c623694375fef7f18dfb669e4725e1b1**.
+- Frozen evidence ZIP: 503 members, 1,530,317 bytes, SHA **aec28210d5ca1a0e70b7739fa69bb51d1564a9ac0b5c85306380b8a6fb518d97**. Raw ledger SHA **c8cabeeb07db1188fe371cb730644caee17ce41172e2038e4a491f390c526034**. Original failed attempts and raw bodies remain preserved.
+
+## NEXT / HOLD
+
+Complete only the authorized exact R3 hosted/browser/geometry and independent final review; then report separate functional and architectural verdicts. No further live benchmark or performance optimization is authorized by this checkpoint. Historical c931/a4 failures and Track F global-stop noncompliance remain preserved. No merge, deployment, settings change or new waiver. Physical Android/signing/Play remain HOLD.
+
+Missouri discovery and Cadaver remain parked. Cadaver's exact blocker is reliable attraction-specific **2026 operation/date binding and supported expiry**; no accepted runtime subset. Existing backlog limits remain unchanged.
+
+Fresh 22:53 reads confirm main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**, production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY**, source fe22. All 52 shipped records remain unchanged. Unchanged vercel.json explicitly disables integration/** deployments.
+
+**PARENT CONTINUITY COMMIT:** `d6a43880aee9e14e29f542132b62871013beadfd`; **PARENT TREE:** `b42173e6aee5199392e4379f31e174407f88af3f`. Documentation-only checkpoint; prior history follows verbatim.
+
+---
+
 # PR #61 R2 Full Acceptance HOLD — Empty Primary Readiness and Hosted Browser Failure (2026-10-09 22:47 UTC)
 
 ## CURRENT
