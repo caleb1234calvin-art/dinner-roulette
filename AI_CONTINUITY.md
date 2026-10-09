@@ -1,3 +1,36 @@
+# PR #60 Published at Exact Approved Identity — Production Acceptance In Progress (2026-10-09 19:49 UTC)
+
+## CURRENT
+
+Owner-authorized expected-head, non-force fast-forward publication succeeded. Main is **`fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`**, tree **`8d5059c9fee871c522616971cce0a80b153e4d23`**, sole parent **`f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd`**. PR #60 automatically closed as merged at **19:48:14 UTC**, merge identity equal to the approved candidate; no generated merge SHA, source edit or extra records.
+
+Automatic production deployment **`dpl_8xyE9R3BxyE1883QpavaEBWV2LGa`** at https://dinner-roulette-55q5rf8y3-minions-9e2c.vercel.app/ is now **READY**, exact source fe22. The operator records READY at **19:48:34.773 UTC**; this writer independently read READY/source and merged main/PR at 19:49. Initial BUILDING observation is superseded. **Production acceptance remains IN PROGRESS; READY is not a smoke-test or final acceptance PASS.** The deployed catalog contains the approved twenty additions, 52 curated records total; final live acceptance still needs the operator receipt.
+
+Preflight at 19:47 verified prior main979d/F1, all five aliases, exact web and Android successful checks, and the effective migration-free auth-enabled command:
+`VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`.
+Main was unprotected with empty rulesets. The owner's release-specific one-attempt waiver is now consumed; it is no standing waiver or settings authority.
+
+### Preserved restore procedures
+
+The operator authenticated the exact **BCd** prior-build **Actions → Promote** restoration confirmation, observed it enabled and cancelled without executing. This restores the existing production build without rebuilding. **BCd is not the new immediate predecessor and this is distinct from Hobby Instant Rollback.** F1 is retained as the preceding release; BCd remains separately retained at `dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv`. No rollback or restore was executed.
+
+## NEXT
+
+Finish only this current release: verify actual production aliases, source/build binding, scoped normal live UI and required acceptance evidence; retain the precise rollback/restore procedure and any qualifications. On the operator's final immutable result, publish and read back a final documentation-only checkpoint, report exact continuity SHA and CURRENT / NEXT / HOLD, then **STOP**. No other research, batches, enrichment, source changes or autonomous continuation.
+
+## HOLD / LIMITS
+
+- Final production acceptance remains pending. Historical exact-candidate tests and recovered browser evidence remain PASS at their stated scope; they are not a newly performed full live suite.
+- **Cadaver Zone remains FACTUAL / RUNTIME HOLD:** reliable attraction-specific **2026 operation/date binding and supported expiry** are missing. Accepted identity, public visitor address and approximate placement remain; no import or repeat research begins.
+- Six commercial HOLDs, eight unimplemented delta HOLDs, separate residential leads, previous placement/expiry decisions and two unapplied enrichment suggestions remain unchanged in the preserved inventory.
+- Physical Android/WebView/GPS, signing and Play remain HOLD. Six web warnings, fourteen Android warnings, inherited narrow Directions clipping and other qualified UI/provider/source limits remain. No new blanket visual, live provider, ticket, weather or physical-device guarantee.
+
+Operational receipt paths supplied by the operator: `pr60-release-operator/publication-receipts.json`, `preflight-connector-receipts.json`, `bcd-restore-confirmation.png` and `build-settings.png`. These are in-progress operator evidence; the final frozen report will be separately preserved at closeout. This checkpoint records the publication gate without pretending that acceptance has finished.
+
+**PARENT CONTINUITY COMMIT:** `bf9098e39c310de20e3e26adf3f09a829d15926e`; **PARENT TREE:** `9ffa15becc09636052153bcc799aa8bcb897879f`. Only AI_CONTINUITY changes on deployment-disabled `integration/continuity-refresh-2026-10-07`. All previous history follows verbatim.
+
+---
+
 # PR #60 EVIDENCE EXPORT COMPLETE — VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION — 2026-10-09T17:52:11.934Z
 
 The owner's October 9 evidence-export-only authorization was executed to its bounded stopping condition. Final browser/evidence acceptance is PASS. This supersedes the missing-artifact HOLD in historical entries below only. It authorizes no merge, deployment, protection/configuration change, signing, further research, or automatic continuation.
