@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-10-09T05:20:41.530452+00:00",
+  "candidate1": {
+    "sha": "bb7f36123c5035a36676e98acb1b9ab4fe599955",
+    "tree": "69a90a419ea7f735823a001676c78428b741e3fb",
+    "parent": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+    "verdict": "FAILED_TEST_FIXTURE_EXPECTATION",
+    "local_tests": {
+      "repository_pass": 945,
+      "repository_fail": 2,
+      "repository_skip": 4,
+      "application_pass": 71
+    },
+    "web_run": 37887765459,
+    "android_run": 37887765470,
+    "browser_executed": false
+  },
+  "candidate2": {
+    "sha": "4513aee7de0afe55e0f0fa061c1ec5f6af4fa412",
+    "tree": "7323e271b5ecf23fdf60f8c4a98f8fffc564137c",
+    "parent": "bb7f36123c5035a36676e98acb1b9ab4fe599955",
+    "changed_paths": [
+      "scripts/seasonal-discovery.test.mjs"
+    ],
+    "focused_tests": {
+      "pass": 24,
+      "fail": 0,
+      "skip": 0
+    },
+    "web_run": 37888059004,
+    "android_run": 37888058961
+  },
+  "diagnosis": "Aurora Maize at its independently cleared approximate point is 36.876755617897096 miles from the unchanged Carthage 50-mile fixture. Correct saved-only corn-maze coverage invalidates two old single-haunt expectations. No runtime code defect found. Exact identity, coordinates, distance, activity types and saved provenance assertions were added while retaining sparse/outage/live and missing-category assertions.",
+  "evidence": [
+    {
+      "path": "test-candidate1.log",
+      "bytes": 367031,
+      "sha256": "8d7bddd0af967bbbb48fef61d03f293e03da096fd14c6e4f68f225043e87ede4"
+    },
+    {
+      "path": "build-candidate1.log",
+      "bytes": 5472,
+      "sha256": "6eb156979ac92460f28ddc15b8aea4579b5f4a44ca7cf3ab47ea2d0e5961a1fb"
+    },
+    {
+      "path": "lint-candidate1.log",
+      "bytes": 1589,
+      "sha256": "c5f5a24f4722874425d2938e8926e52c3f1984340ab234516916f8dc14a0929b"
+    },
+    {
+      "path": "typecheck-candidate1.log",
+      "bytes": 128,
+      "sha256": "ae791f9f57ffbb3c0a592b6a34e25250c1f7f6f13fde4d05f77a0d4e7681f89a"
+    },
+    {
+      "path": "browser-diagnosis/candidate1-web37887765459-job113681493407.log",
+      "bytes": 2157250,
+      "sha256": "bfd709cda3497a47b17c3651686be5ca3f4489484d7305b21efe074b420a4650"
+    },
+    {
+      "path": "browser-diagnosis/candidate2-seasonal-discovery-focused.log",
+      "bytes": 7379,
+      "sha256": "5b4be745f0c299f2b3f265422b8802ad1790221d595b066fd5285d6dacf456e7"
+    }
+  ]
+}

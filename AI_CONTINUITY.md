@@ -1,3 +1,23 @@
+# ASTRA MATERIAL GATE — 2026-10-09 05:20 UTC — bounded test-fixture remediation
+
+## CURRENT
+- PR #60 candidate 2: branch **integration/missouri-astra-push-2026-10-09**, head **4513aee7de0afe55e0f0fa061c1ec5f6af4fa412**, tree **7323e271b5ecf23fdf60f8c4a98f8fffc564137c**, parent **bb7f36123c5035a36676e98acb1b9ab4fe599955**. Clean local tree matches. Candidate 1 remains in ancestry, whose parent is production source 979d83aede9d66163e1ebaed9ad5b219cb637882.
+- Only remediation path: scripts/seasonal-discovery.test.mjs. Exact observed Aurora identity/name/point/distance (36.876755617897096 miles), activity types and saved-only provenance now asserted inside the unchanged Carthage 50-mile fixture. Two stale expected category arrays corrected. Outage/sparse/live distinctions retained; no runtime changes or weakened radius.
+- Focused discovery suite **24 PASS / 0 FAIL / 0 skips**. Full auth-enabled migration-free build and repository/application tests restarted. Lint/typecheck restarted. Web run **37888059004**, Android run **37888058961** active.
+- Failed candidate 1 preserved: bb7f36123c5035a36676e98acb1b9ab4fe599955; web 37887765459 / Android 37887765470 failed at test gate. Local repository 945 PASS / 2 FAIL / 4 skips, application 71 PASS. No browser or geometry executed. Full failure/remediation report with raw log hashes retained at audit/astra-validation-2026-10-09/Candidate1-Failure-Candidate2-Remediation.json.
+- Cadaver focused package remains pending independent year/date adjudication; twenty-record runtime unchanged. Production remains 32 live, no release action.
+## NEXT
+1. Complete candidate 2 full local and hosted gates; independent exact-head source and browser review.
+2. Conclude Cadaver review, preserve exact factual/runtime verdict.
+3. Save raw evidence archive and final release brief, then fresh identities and owner decision gate.
+## HOLD
+- No full candidate PASS yet; no transfer of earlier gates to this head.
+- Six commercial and residential HOLDs unchanged. Cadaver unresolved authenticity/year binding is independent from its accepted address/approximate placement.
+- Current main reports unprotected and rulesets empty; no fresh owner waiver has been granted. No autonomous merge/deploy/settings/signing.
+- Timestamp correction: preceding Cadaver checkpoint heading was labeled 05:21 UTC prematurely; its immutable publication preceded this 05:20 UTC gate. The authoritative commit order and source capture timestamps govern.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 05:21 UTC — Cadaver focused research frozen; candidate validation active
 
 ## CURRENT
