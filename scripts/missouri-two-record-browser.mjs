@@ -185,7 +185,30 @@ async function inspectQualifiedOverlay(test, row, kind) {
   const { page, result, state } = test;
   const overlay = overlayRoot(page, kind);
   await inspectIcons(test, kind, kind);
-  const section = overlay.locator("[data-seasonal-visit-notes]");
+  if (kind === "options") {
+    const cards = overlay.locator("article");
+    const notices = [];
+    for (let index = 0; index < await cards.count(); index++) {
+      const card = cards.nth(index);
+      const name = await card.getByRole("heading").innerText();
+      const identity = nearbyCatalog.find(item => item.name === name);
+      assert.ok(identity, `Options card ${name} must retain a reviewed neighborhood identity`);
+      const cardSection = card.locator("[data-seasonal-visit-notes]");
+      const expected = identity.seasonalListing ? 1 : 0;
+      assert.equal(await cardSection.count(), expected, `${name}: exactly one visit-notes section per seasonal card`);
+      if (expected) {
+        assert.equal(await cardSection.locator(":scope > p").count(), 1, `${name}: exactly one compact notice`);
+        assert.equal(await cardSection.locator(":scope > p").innerText(), SEASONAL_VISITOR_NOTICE);
+      }
+      notices.push({ id: identity.id, sections: expected });
+    }
+    assert.equal(await overlay.locator("[data-seasonal-visit-notes]").count(), notices.reduce((sum, item) => sum + item.sections, 0),
+      "Overlay notice count matches all rendered seasonal cards");
+    result.evidence.optionCardNotices ??= [];
+    result.evidence.optionCardNotices.push(notices);
+  }
+  const section = (kind === "options" ? rowCard(page, row) : overlay).locator("[data-seasonal-visit-notes]");
+  assert.equal(await section.count(), 1, "Target owns exactly one visit-notes section");
   assert.equal(await section.locator(":scope > p").count(), 1, "Exactly one compact notice");
   assert.equal(await section.locator(":scope > p").innerText(), SEASONAL_VISITOR_NOTICE);
   const presentation = seasonalPresentation(row);
