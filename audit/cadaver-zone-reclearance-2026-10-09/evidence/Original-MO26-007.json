@@ -1,0 +1,126 @@
+{
+  "venue_id": "MO26-007",
+  "canonical_name": "The Cadaver Zone Spook House",
+  "aliases": [],
+  "street_address": "25088 Kafir Road, Webb City, MO 64870",
+  "city": "Webb City",
+  "county": "Jasper",
+  "county_source": {
+    "type": "Census point-in-county geography",
+    "request_url": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=25088+Kafir+Road%2C+Webb+City%2C+MO+64870&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+    "retrieved_at": "2026-10-07T06:43:21.892944+00:00",
+    "census_geoid": "29097"
+  },
+  "state": "Missouri",
+  "region": "Southwest / Four-State Missouri",
+  "latitude": 37.214949,
+  "longitude": -94.510739,
+  "coordinate_provenance": {
+    "source_ref": "CENSUS-MO26-007",
+    "url": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=25088+Kafir+Road%2C+Webb+City%2C+MO+64870&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+    "retrieved_at": "2026-10-07T06:43:21.892944+00:00",
+    "method": "Census address-range interpolation",
+    "matched_address": "25088 KAFIR RD, WEBB CITY, MO, 64870",
+    "response_sha256": "a72f56fd051077c1058ad9026d21e69ac302262bc5247004c9af359b6b25fa31",
+    "precision_notes": "Approximate address-range point. Not surveyed, rooftop, parking, or verified entrance. Geocoder county follows this point.",
+    "independently_verified_entrance": false
+  },
+  "official_website": null,
+  "operator_social_url": "https://www.facebook.com/cadaverzone/",
+  "phone": null,
+  "existing_categories": [
+    "Haunted House / Haunted Attraction"
+  ],
+  "other_halloween_fall": {
+    "assessment": "not_assigned",
+    "subtypes": [],
+    "rationale": null
+  },
+  "activities": [
+    {
+      "activity_type": "haunted_house",
+      "source_refs": [
+        "turn4search3",
+        "turn4search7"
+      ],
+      "evidence_scope": "identity_or_lead_only",
+      "season_start": null,
+      "season_end": null,
+      "exact_active_dates": null,
+      "hours": null,
+      "schedule_scope": "See venue schedule and activity-specific restrictions; no opening interval inferred.",
+      "activity_id": "MO26-007-A01",
+      "category_currently_supported": false
+    }
+  ],
+  "season_start_2026": null,
+  "season_end_2026": null,
+  "exact_active_dates_2026": null,
+  "hours_text": null,
+  "timezone": "America/Chicago",
+  "machine_opening_intervals": null,
+  "open_now": null,
+  "schedule_evidence_status": "incomplete_or_conflicting",
+  "schedule_source_refs": [
+    "turn4search3",
+    "turn4search7"
+  ],
+  "schedule_evidence_retrieved_date": "2026-10-07",
+  "ticket_admission": null,
+  "explicit_age_family_orientation": null,
+  "provenance": {
+    "identity_source_refs": [
+      "turn4search3",
+      "turn4search7"
+    ],
+    "address_source_refs": [
+      "turn4search3",
+      "turn4search7"
+    ],
+    "classification_source_refs": [
+      "turn4search3",
+      "turn4search7"
+    ],
+    "all_source_refs": [
+      "turn4search3",
+      "turn4search7"
+    ],
+    "source_urls": [
+      "https://www.facebook.com/cadaverzone/",
+      "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/"
+    ],
+    "stable_source_ids": [
+      "SRC-d2121e8d79",
+      "SRC-e59d102215"
+    ]
+  },
+  "verification_class": "CURRENT-SEASON LIKELY / NEEDS REVIEW",
+  "lifecycle": "unresolved",
+  "closure_concerns": null,
+  "notes_conflicts": [
+    "2026 promotional snippet found, but no readable official dated schedule. Directory dates not loaded."
+  ],
+  "import_blockers": [
+    "Current season / identity / product-fit evidence not accepted for production."
+  ],
+  "arrival_location_notes": null,
+  "recommended_production_eligibility": "EXCLUDE \u2014 UNVERIFIED, HISTORICAL OR REJECTED",
+  "proposed_expiry_date": null,
+  "proposed_revalidation_date": "2026-10-07",
+  "runtime_active": false,
+  "exact_active_dates_scope": "not fully enumerated; see sourced schedule text",
+  "schedule_claims_not_accepted": [
+    "2026 promotional snippet found, but no readable official dated schedule. Directory dates not loaded."
+  ],
+  "source_tier_note": "Source tiers and retrieval limitations are in the linked source ledger; source membership alone is not 2026 proof.",
+  "proposed_import_route": "existing_three_categories",
+  "proposed_expiry_local_time": null,
+  "independent_review": {
+    "status": "NOT PERFORMED",
+    "reviewer": null,
+    "reviewed_at": null,
+    "decision": null
+  },
+  "automatic_import_allowed": false,
+  "official_website_role": null
+}

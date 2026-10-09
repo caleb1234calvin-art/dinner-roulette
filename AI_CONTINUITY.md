@@ -1,3 +1,41 @@
+# Pick For Us — Cadaver Research R1 HOLD; Independent Review Next (2026-10-09)
+
+## CURRENT
+
+Priority Cadaver research R1 is frozen: **researcher HOLD, awaiting fresh independent verification**. This is not an independent verdict. MO26-007 remains a historical re-clearance, not NET NEW. The exact blocker is **missing reliable attraction-specific2026 operation/date-window binding and therefore unsupported2026 expiry**. Missing price, payment, age/access/weather or other operational details are qualified unknowns, not separate automatic V1 blockers.
+
+[Full research package](audit/cadaver-zone-reclearance-2026-10-09/Cadaver-Zone-Research-R1.json), SHA-256 **`efed6d770a98cd470030ca189b429cb7a5f66c42301afa7574cfe1d5244f243b`**.
+[Research report](audit/cadaver-zone-reclearance-2026-10-09/Cadaver-Zone-Report-R1.txt), SHA **`aaf7ae0a269f8992b95b4977a3f20360421a40f5f6107682562688edea709f00`**.
+[Excluded projection](audit/cadaver-zone-reclearance-2026-10-09/Cadaver-Zone-Projection-R1.json), SHA **`66f8b9c6723003c8763037c627e2316ea88e0436d36bbbca5475196b56c05fd1`**.
+[Review-only status copy](audit/cadaver-zone-reclearance-2026-10-09/Cadaver-Zone-Consumer-Copy-R1.txt), SHA **`1f8b2279fc5e100f5bd41714d2191c16c2c34f686c4254049cf54dd543e0d5d7`**.
+[Complete frozen hash manifest](audit/cadaver-zone-reclearance-2026-10-09/SHA256SUMS.json) identifies the full local evidence package; selected decisive source receipts are persisted beside it. A manifest entry alone does not claim every raw body is copied into this repository.
+
+### Supported fields and actual source limits
+
+Research supports25088 Kafir Road, Webb City, MO64870 through TSF and fresh Census matching; Four States agrees street/number but uses Joplin64804, preserved as a locality discrepancy. Reproduced Census **37.214948823592,-94.510739246392** is approximate address-range placement only, pending independent review; no entrance/parking/dropoff precision or radius clearance.
+
+TSF web extraction says coming-season dates/hours not loaded; directHTTP200 was a195-byte Site Unavailable body, not successful content. Facebook extraction showed temporary blocking and older crawl metadata; no bypass. Directory-linked operator domain returned502 in the cloud browser. Four States readable content explicitly labels **2025**; Friday/Saturday19:00–midnight, $14 and card acceptance remain historical, never rolled into2026. Municipal2025 minutes provide historical operator/sign context only. No current ticket link was verified; missing search matches do not prove closure.
+
+Cadaver's bounded supplemental sweep included TSF, MissouriHauntedHouses.com and Hauntworld, plus Four States/Visit Joplin. This is not a claim of complete required three-source coverage; the separate Delta5 track continues FrightMaps/TSF/MissouriHauntedHouses field-level work. Cached web receipts are identified separately from fresh direct retrievals.
+
+Persisted decisive evidence includes original historical record, Census raw response/receipt, Four States text/receipt, TSF failure receipt/body text, cloud-browser error and source-open receipt. All17 owner field groups are explicit; no accepted runtime object, active date window or expiry is emitted. Consumer text is a review status only, not selectable listing copy.
+
+## NEXT
+
+Fresh independent verifier reopens the decisive evidence and assesses the researcher HOLD, supported address and approximate-point limits. Do not treat this researcher as approving its own result. Nine pre-import revalidation and Delta5 discovery/enrichment continue separately; their results remain pending. No implementation candidate exists. A Cadaver HOLD must not block unrelated independently cleared records.
+
+At the independent gate, publish its exact verdict/reasons and read back continuity. Only fresh independent cleared subsets may advance to the authorized bounded nonproduction implementation; no production permission.
+
+## HOLD
+
+Cadaver current2026 binding/date window/expiry remain unresolved; dates/hours/payment/prices/restrictions cannot be invented or copied from2025. No closure claim. Projection explicitly import_allowed=false/runtime_active=false and no radius eligibility; null machine hours, no2027 policy retained.
+
+Fresh **03:36 UTC** main **`979d83aede9d66163e1ebaed9ad5b219cb637882`**, treea7dbb32947c0a0daf4864346b0d212477fc9a11b, and production **`dpl_F1XiMcc9AUuykunNamr87R3re7gP` READY/source979d** unchanged. BCd retained rollback per fresh baseline; no new access/execution claim. PR59 release remains closed, historical constituents not active merge work, all existing backlog/physicalAndroid/release-authority limits remain.
+
+This safe checkpoint adds only continuity and frozen research/evidence under `audit/cadaver-zone-reclearance-2026-10-09/` on deployment-disabled integration. **PARENT COMMIT:** `da4f6f1eb401023abf3749186e565944d0ea1797`; **PARENT TREE:** `9a16c2e3697af873919a5fbe085d1cebad125a68`. All earlier history retained; this is a stable research gate, not terminal completion.
+
+## Prior continuity — three-track continuation start, preserved verbatim
+
 # Pick For Us — Nine Revalidation, Cadaver Priority and Delta5 Research Active (2026-10-09)
 
 ## CURRENT

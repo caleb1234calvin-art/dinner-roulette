@@ -1,0 +1,174 @@
+{
+  "record_id": "MO26-007",
+  "canonical_name": "The Cadaver Zone Spook House",
+  "historical_status": "HOLD",
+  "net_new": false,
+  "research_decision": "HOLD",
+  "research_as_of": "2026-10-09T03:35:55.641256+00:00",
+  "independent_verification": "AWAITING FRESH INDEPENDENT VERIFICATION",
+  "runtime_eligible": false,
+  "fields": {
+    "identity_name": {
+      "value": "The Cadaver Zone Spook House",
+      "status": "SUPPORTED",
+      "source_urls": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/"
+      ],
+      "note": "Historical MO26-007; one haunted-house destination, not net new."
+    },
+    "visitor_address": {
+      "value": "25088 Kafir Road, Webb City, MO 64870",
+      "status": "SUPPORTED",
+      "source_urls": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+        "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=25088+Kafir+Road%2C+Webb+City%2C+MO+64870&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+      ],
+      "note": "Four States agrees street/number but uses Joplin 64804. TSF and fresh Census agree Webb City 64870. No relocation inferred."
+    },
+    "approximate_point": {
+      "value": {
+        "latitude": 37.214949,
+        "longitude": -94.510739
+      },
+      "status": "REPRODUCED_APPROXIMATE_PENDING_INDEPENDENT_REVIEW",
+      "source_urls": [
+        "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=25088+Kafir+Road%2C+Webb+City%2C+MO+64870&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+      ],
+      "note": "Fresh address-range interpolation. Not entrance, parking, rooftop, survey, Directions or ride destination precision."
+    },
+    "current_2026_binding": {
+      "value": null,
+      "status": "BLOCKER",
+      "source_urls": [
+        "https://www.facebook.com/cadaverzone/",
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+        "https://www.cadaverzone.com/",
+        "https://www.spookthefourstates.com/"
+      ],
+      "note": "No readable accepted 2026 operation/schedule binding. Facebook retrieval blocked; linked website 502 in cloud browser; TSF dates not loaded; Four States explicitly 2025."
+    },
+    "operating_dates_2026": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "Do not roll forward 2025 Fridays/Saturdays or infer Halloween operation."
+    },
+    "hours_start_last_ticket_final_exit": {
+      "value": {
+        "hours_text": null,
+        "start_time": null,
+        "last_ticket": null,
+        "final_exit": null
+      },
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "2025 7pm-midnight is historical only; neither last admission nor final exit established for 2026."
+    },
+    "admission_2026": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [
+        "https://www.spookthefourstates.com/"
+      ],
+      "note": "2025 $14 historical; not accepted as current price."
+    },
+    "payment_2026": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [
+        "https://www.spookthefourstates.com/"
+      ],
+      "note": "2025 credit/debit acceptance historical; not accepted for 2026."
+    },
+    "age_guardian_rules": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "No age or guardian rule established."
+    },
+    "accessibility_terrain": {
+      "value": {
+        "accessibility": null,
+        "terrain": null,
+        "directory_characterization": "Indoor/outdoor attraction and waiting line"
+      },
+      "status": "PARTIAL_UNDATED",
+      "source_urls": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/"
+      ],
+      "note": "No wheelchair accessibility guarantee; mixed indoor/outdoor characterization alone does not establish terrain."
+    },
+    "weather_cancellation": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "No rain-or-shine or cancellation rule established."
+    },
+    "weapons_bags_photography": {
+      "value": {
+        "weapons": null,
+        "bags": null,
+        "photography": null
+      },
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "Historical review photo-op is not photography permission."
+    },
+    "parking_arrival": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "Historical route and parking observations do not establish current entrance or parking plan."
+    },
+    "operator_url": {
+      "value": "https://www.facebook.com/cadaverzone/",
+      "status": "SUPPORTED_OPERATOR_SOCIAL_IDENTITY_FROM_PRIOR_LEDGER",
+      "source_urls": [
+        "https://www.facebook.com/cadaverzone/",
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+        "https://www.spookthefourstates.com/"
+      ],
+      "note": "No claim current posts were readable. cadaverzone.com is directory-linked but currently inaccessible."
+    },
+    "exact_2026_expiry": {
+      "value": null,
+      "status": "BLOCKED_BY_UNBOUND_SEASON",
+      "source_urls": [],
+      "note": "No artificial expiry or extra operating days; runtime projection stays excluded."
+    },
+    "no_2027_rollover": {
+      "value": true,
+      "status": "REQUIRED_POLICY",
+      "source_urls": [],
+      "note": "2026-only record; no inferred 2027 dates or automatic rollover."
+    },
+    "never_open_now": {
+      "value": true,
+      "status": "REQUIRED_POLICY",
+      "source_urls": [],
+      "note": "Curated seasonal only; open_now null, machine_opening_intervals null."
+    }
+  },
+  "blocking_reason": "No readable reliable attraction-specific current-2026 operation/date binding; therefore no supported 2026 date window or exact expiry.",
+  "nonblocking_unknown_policy": "Unknown operational fields do not independently cause HOLD under V1; current-season binding is mandatory.",
+  "closure_status": "NOT ESTABLISHED; unavailable evidence does not prove closure",
+  "placement_review": "Fresh Census reproduction supports an approximate address point candidate only; independent review outstanding.",
+  "source_coverage": {
+    "three_directories": [
+      "The Scare Factor",
+      "MissouriHauntedHouses.com",
+      "Hauntworld"
+    ],
+    "supplemental_directory": "Spook the Four States",
+    "dmo": "Visit Joplin events page; no Cadaver text in retrieved page",
+    "municipal": "Airport Drive September 25, 2025 minutes; historical operator/sign context, not 2026 operation",
+    "tickets": "No verified current ticket link found in inspected sources; no checkout or operator contact"
+  },
+  "rejected_inferences": [
+    "Directory copyright 2026 is not attraction season binding.",
+    "2025 hours/admission/payment cannot be carried into 2026.",
+    "No search result does not mean no event exists.",
+    "Approximate geocode does not establish an entrance."
+  ],
+  "baseline_receipt": "../reconcile/missouri-continuation-baseline-2026-10-09.json"
+}
