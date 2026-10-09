@@ -1,3 +1,18 @@
+# Pick For Us — Delta5 Independent R1 HOLD Preserved (2026-10-09)
+
+## CURRENT
+This separate historical review gate accepts **zero exact R1 projections**. Five records have supported current-season fields, while all 12 complete commercial projections remain HOLD. [Full independent report](audit/missouri-delta5-independent-2026-10-09/Independent-Delta5-R1-Report.md), SHA-256 `f81ec2530a4c492004e11a7137066fe08b1ca9d3406bb1f519a5b1fde7c0a377`, and exact verdict JSON `d320919ba4ae6cf6e8b798c6e2fff90387db5d4d08e12b6e69ab9472eac38092` are preserved with manifests.
+
+D5-COPY-01 requires Labyrinth's known same-night-only, nonrefundable ticket condition. D5-MYERS-01 recognizes affirmative 2026 operator calendar evidence but requires an exact projection, normalized dates, hard lifecycle and explicit operator-versus-Census point adjudication. An unrecovered historical closure comment is not a current closure finding. D5-META-01 corrects Wolfman's blocked Facebook content_usable flag to false. Three residential records remain separate and ineligible.
+
+## NEXT
+Bounded R2 corrections and their independent review have been completed locally and will be preserved in subsequent checkpoints. This R1 HOLD is retained as history, not transferred to corrected R2. Nine independent source review passed and has now bound published research b475; its final eligible subset will receive a separate checkpoint. No implementation has begun.
+
+## HOLD
+Cadaver remains independently VERIFIED HOLD for missing accepted attraction-specific 2026 operation/date binding and therefore supported expiry. No runtime, browser, import or release acceptance is implied by this review. Main `979d83aede9d66163e1ebaed9ad5b219cb637882` / tree `a7dbb32947c0a0daf4864346b0d212477fc9a11b`, production F1 READY at that source, and retained BCd rollback remain the checked baseline. Owner's 04:32 retry approval is documentation-only. All future production release decisions remain separate.
+
+PARENT COMMIT: `2f55d98068556b2ad94ca0869c2ebc5b76c22b2d`; PARENT TREE: `43df3f9eebad38bebf4a7652917e641073ebeedb`. Deployment-disabled continuity branch only. Prior history follows verbatim.
+
 # Pick For Us — Delta5 Research Frozen; Independent Review Pending (2026-10-09)
 
 ## CURRENT

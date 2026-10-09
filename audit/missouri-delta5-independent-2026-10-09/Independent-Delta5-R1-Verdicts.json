@@ -1,0 +1,890 @@
+{
+  "audit_id": "INDEPENDENT-DELTA5-R1",
+  "completed_at": "2026-10-09T04:00:28.667652+00:00",
+  "scope": "12 commercial/public records plus 3 segregated residential; bounded read-only data review",
+  "verdict": "HOLD exact R1; field clearances and correction findings preserved",
+  "checkpoint_gate": "PENDING exact published Delta5 checkpoint/readback; no gate closed",
+  "reviewed_inputs": {
+    "fetch_evidence.py": "22bd83317d286bdd68fa284fc8c29c0022fcb53093d4232dfac2dab0211b05f5",
+    "Evidence-Manifest-R1.json": "e8935242f9a9a23df2afdac54968753b45d356addbd3c935e7411e0ae3db7455",
+    "Missouri-Delta5-Residential-R1.json": "f72737e769b42ec93315f889abab149879aac65d937fa2816dfb5bf7de2fe7a1",
+    "build_batch.py": "25997b9b1880d2f60e9354b7ae83af9557ea7945a5e70cdebb6e8f5dee2556df",
+    "Missouri-Delta5-Report-R1.txt": "fbe3c032682984303b4fdfc3a9610608b44091a1af057094c68e120c1d67f56c",
+    "SHA256SUMS.txt": "37a90911bc8b10fc643836d81c952e7a3a6011754a8a4830539f8bfede2f12c0",
+    "Missouri-Delta5-Research-R1.json": "ac19dbecf11b0006ed675060f790d8723a5c69cde76f028d5ebc0f6c8d22d88f",
+    "Missouri-Delta5-Projections-R1.json": "0d1fe3c3188b5935baa916aea2287d11e000f3ad3102712eec8211bce789d2c2",
+    "Missouri-Delta5-Evidence-R1.zip": "ce6a326d7bef06b37fe708139f4364695e3783507a7f2e6e2b1b993ce9e79bd2"
+  },
+  "baseline": {
+    "main": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+    "tree": "a7dbb32947c0a0daf4864346b0d212477fc9a11b",
+    "production": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+    "state": "READY",
+    "direct_apex_checked": true,
+    "receipts": "evidence/main-readback.json; production-readback.json; alias-readback.json"
+  },
+  "integrity": "All 10 prior input hashes and all 64 manifest size/hash entries match. ZIP CRC passes, 66 entries. Full 134 identities, delta2/3/4 ledgers, 32 runtime receipts and prepared-nine exclusions checked. No global novelty claim.",
+  "records": [
+    {
+      "record_id": "MO26-004",
+      "name": "The Werehouse",
+      "record_decision": "HOLD",
+      "field_review": {
+        "identity": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "The Werehouse",
+          "source_ids": [
+            "werehouse"
+          ],
+          "source_urls": [
+            "https://thewerehouse.net/"
+          ]
+        },
+        "visitor_address": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "3819 E 20th Street, Joplin, MO 64801",
+          "source_ids": [
+            "werehouse",
+            "werehouse-tsf-web"
+          ],
+          "source_urls": [
+            "https://thewerehouse.net/",
+            "https://www.thescarefactor.com/haunted-houses/missouri/the-werehouse/"
+          ]
+        },
+        "hours": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "Friday and Saturday 7 p.m.–midnight; undated, not accepted as a 2026 schedule",
+          "source_ids": [
+            "werehouse"
+          ],
+          "source_urls": [
+            "https://thewerehouse.net/"
+          ]
+        },
+        "season_dates": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": null,
+          "source_ids": [
+            "werehouse",
+            "werehouse-tsf-web"
+          ],
+          "source_urls": [
+            "https://thewerehouse.net/",
+            "https://www.thescarefactor.com/haunted-houses/missouri/the-werehouse/"
+          ]
+        },
+        "secondary_amenities": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": [
+            "Covered waiting area",
+            "Strobe lighting and loud sound effects",
+            "Indoor and outdoor components"
+          ],
+          "source_ids": [
+            "werehouse-directory"
+          ],
+          "source_urls": [
+            "https://www.missourihauntedhouses.com/halloween/haunted-house-joplin.html"
+          ]
+        }
+      },
+      "research_quality": "PASS AT STATED LIMITS",
+      "factual_current_season": "HOLD",
+      "approximate_placement": "HOLD",
+      "consumer_projection": "HOLD",
+      "lifecycle": "HOLD / NOT ACCEPTED AS COMPLETE RECORD",
+      "reason": "Undated operator Fri/Sat hours support identity only; no accepted current-season invitation. Existing legacy fallback is not a new identity; historic point conflict remains.",
+      "immutable_r1_record_sha256": "82c5346e3ad8ec35bdad9a3ca097a42e06b30e2bc2618fa04c67df2f0ae1b032",
+      "runtime_import_release_authorized": false
+    },
+    {
+      "record_id": "MO26-006",
+      "name": "Wolfmans House Of Screams",
+      "record_decision": "HOLD",
+      "field_review": {
+        "visitor_address": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "26267 King Lane, Carl Junction, MO 64834",
+          "source_ids": [
+            "wolfman-web"
+          ],
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/wolfmans-house-of-screams/"
+          ]
+        },
+        "season_lead": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "2026: weekends in October",
+          "source_ids": [
+            "wolfman-web"
+          ],
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/wolfmans-house-of-screams/"
+          ]
+        },
+        "secondary_features": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": [
+            "Charity haunt",
+            "No-touch policy",
+            "Free parking",
+            "Concessions",
+            "Indoor/outdoor waiting line"
+          ],
+          "source_ids": [
+            "wolfman-web"
+          ],
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/wolfmans-house-of-screams/"
+          ]
+        },
+        "exact_dates": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": null,
+          "source_ids": [
+            "wolfman-web"
+          ],
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/wolfmans-house-of-screams/"
+          ]
+        }
+      },
+      "research_quality": "PASS AT STATED LIMITS",
+      "factual_current_season": "HOLD",
+      "approximate_placement": "HOLD",
+      "consumer_projection": "HOLD",
+      "lifecycle": "HOLD / NOT ACCEPTED AS COMPLETE RECORD",
+      "reason": "Explicit secondary 2026 weekends lead retained. Operator unavailable and directory 2026 shell coexists with 2025 copy; current operator season and lifecycle remain unaccepted. This is unknown, not closure.",
+      "immutable_r1_record_sha256": "17a9c0f8d44862c71ca1a58e7dd2b40123239a70a6bd2b339c31737d4bccbb62",
+      "runtime_import_release_authorized": false
+    },
+    {
+      "record_id": "MO26-002",
+      "name": "Aurora Maize at Adventure Farm",
+      "record_decision": "HOLD",
+      "field_review": {
+        "visitor_address_candidate": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "20591 County Road 2200, Aurora, MO 65605",
+          "source_ids": [
+            "aurora-location",
+            "aurora-hours"
+          ],
+          "source_urls": [
+            "https://auroramaize.com/find-the-farm/",
+            "https://auroramaize.com/hourstickets/"
+          ]
+        },
+        "season": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": {
+            "start": "2026-09-19",
+            "end": "2026-10-31"
+          },
+          "source_ids": [
+            "aurora-hours"
+          ],
+          "source_urls": [
+            "https://auroramaize.com/hourstickets/"
+          ]
+        },
+        "farm_hours": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "Wednesday 5–8:30 p.m. from October 7; Friday 5–10 p.m.; Saturday 4–10 p.m.",
+          "source_ids": [
+            "aurora-hours"
+          ],
+          "source_urls": [
+            "https://auroramaize.com/hourstickets/"
+          ]
+        },
+        "haunted_maze_schedule": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "Fridays and Saturdays at dark September 25–October 31; Wednesdays October 7–28",
+          "source_ids": [
+            "aurora-haunted"
+          ],
+          "source_urls": [
+            "https://auroramaize.com/haunted/"
+          ]
+        },
+        "zombie_harvest_restriction": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "Friday/Saturday at dusk; do not extend Zombie Harvest to Wednesday maze sessions",
+          "source_ids": [
+            "aurora-hours"
+          ],
+          "source_urls": [
+            "https://auroramaize.com/hourstickets/"
+          ]
+        },
+        "placement_candidate": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": {
+            "latitude": 36.9808456,
+            "longitude": -93.6877871,
+            "method": "Operator-embedded Aurora Maze public map marker",
+            "precision": "Approximate venue/radius placement only; no arrival/entrance certification"
+          },
+          "source_ids": [
+            "aurora-map"
+          ],
+          "source_urls": [
+            "https://www.google.com/maps/d/embed?mid=1r3gzFPM4zv8RVTvb5uD9ouIY6uALIFRs"
+          ]
+        }
+      },
+      "research_quality": "PASS AT STATED LIMITS",
+      "factual_current_season": "PASS",
+      "approximate_placement": "HOLD",
+      "consumer_projection": "HOLD",
+      "lifecycle": "HOLD / NOT ACCEPTED AS COMPLETE RECORD",
+      "reason": "Current 2026 season and activity restrictions supported. Dedicated location/footer 20591 conflicts with homepage 20701; no silent address hierarchy resolution. Operator map point is a useful approximate candidate. Saturday ticket-source conflict remains; no machine hours.",
+      "immutable_r1_record_sha256": "ba7650ed44dc9218785a35e0a9652476f09967fc1957a30b801944c15db46336",
+      "runtime_import_release_authorized": false
+    },
+    {
+      "record_id": "MO26-005",
+      "name": "Myers Forest of Fears",
+      "record_decision": "HOLD",
+      "field_review": {
+        "visitor_address": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "3935 S Garrison Avenue, Carthage, MO 64836",
+          "source_ids": [
+            "myers"
+          ],
+          "source_urls": [
+            "https://www.myersforestoffears.com/"
+          ]
+        },
+        "exact_dates_candidate": {
+          "status": "SUPPORTED DATES; normalize first ISO date; current-season evidence accepted independently",
+          "value": [
+            "2026-10-9",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "source_ids": [
+            "myers"
+          ],
+          "source_urls": [
+            "https://www.myersforestoffears.com/"
+          ]
+        },
+        "category": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "Haunted forest walkthrough",
+          "source_ids": [
+            "myers"
+          ],
+          "source_urls": [
+            "https://www.myersforestoffears.com/"
+          ]
+        },
+        "hours": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": null,
+          "source_ids": [
+            "myers"
+          ],
+          "source_urls": [
+            "https://www.myersforestoffears.com/"
+          ]
+        }
+      },
+      "research_quality": "HOLD FOR CORRECTION",
+      "factual_current_season": "PASS",
+      "approximate_placement": "HOLD",
+      "consumer_projection": "HOLD",
+      "lifecycle": "HOLD / NOT ACCEPTED AS COMPLETE RECORD",
+      "reason": "Current 2026 dates are positively supported by operator active cells/CSS/legend and should supersede an absence-of-current-year rationale. Unrecovered historical closure note is not terminal evidence. R1 has no exact consumer projection or mandatory expiry, noncanonical first date string, and no current placement adjudication; hold exact package for these concrete missing elements.",
+      "immutable_r1_record_sha256": "b715783a742f37a7fc20126b7c305074996518f4225fc5ef5d8318cccd1ba1f3",
+      "runtime_import_release_authorized": false
+    },
+    {
+      "record_id": "MO26-027",
+      "name": "Labyrinth of Fear",
+      "record_decision": "HOLD",
+      "field_review": {
+        "visitor_address": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "17866 East Overland Road, Nevada, MO 64772",
+          "source_ids": [
+            "labyrinth",
+            "labyrinth-location"
+          ],
+          "source_urls": [
+            "https://www.labyrinthoffear.com/",
+            "https://www.labyrinthoffear.com/location"
+          ]
+        },
+        "category": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "Haunted house",
+          "source_ids": [
+            "labyrinth"
+          ],
+          "source_urls": [
+            "https://www.labyrinthoffear.com/"
+          ]
+        },
+        "exact_dates": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": [
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "source_ids": [
+            "labyrinth"
+          ],
+          "source_urls": [
+            "https://www.labyrinthoffear.com/"
+          ]
+        },
+        "hours": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": {
+            "state": "partial",
+            "text": "Ticket sales start at 6:30 p.m.; gate opens at 7:30 p.m.; closing time is not published."
+          },
+          "source_ids": [
+            "labyrinth"
+          ],
+          "source_urls": [
+            "https://www.labyrinthoffear.com/"
+          ]
+        },
+        "placement": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": {
+            "latitude": 37.828856,
+            "longitude": -94.315562,
+            "method": "Operator location page GeoJSON marker",
+            "precision": "Approximate public venue/radius placement; not verified entrance, parking or arrival",
+            "independently_verified": false
+          },
+          "source_ids": [
+            "labyrinth-location"
+          ],
+          "source_urls": [
+            "https://www.labyrinthoffear.com/location"
+          ]
+        },
+        "material_restrictions": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": [
+            "Groups enter in parties of at most four.",
+            "Strobes, fog, loud sound and water effects are used.",
+            "Incidental contact with actors or props can occur.",
+            "Tickets are valid for the purchase night and are nonrefundable."
+          ],
+          "source_ids": [
+            "labyrinth-faq"
+          ],
+          "source_urls": [
+            "https://www.labyrinthoffear.com/faq"
+          ]
+        },
+        "expiry": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": {
+            "value": "2026-11-01T00:00:00-05:00",
+            "basis": "Conservative end-of-last-listed-calendar-date boundary, not an asserted closing time; must be independently accepted",
+            "no_2027_recurrence": true
+          },
+          "source_ids": [
+            "labyrinth"
+          ],
+          "source_urls": [
+            "https://www.labyrinthoffear.com/"
+          ]
+        }
+      },
+      "research_quality": "HOLD FOR CORRECTION",
+      "factual_current_season": "PASS",
+      "approximate_placement": "PASS",
+      "consumer_projection": "HOLD",
+      "lifecycle": "PASS DATE-ONLY RETENTION",
+      "reason": "Identity, 2026 active-date set, public visitor address, operator point, partial hours and date-only expiry pass. Exact consumer Details omit known same-night-only/nonrefundable ticket restriction already in research. Hold exact projection for one compact correction; no import authority.",
+      "immutable_r1_record_sha256": "d8e9724ca4d8fa2605099f67722a85359a30947b94724560e9ec9d746645932c",
+      "runtime_import_release_authorized": false
+    },
+    {
+      "record_id": "MO26-039",
+      "name": "Feemster Twisted Corn Maze",
+      "record_decision": "HOLD",
+      "field_review": {
+        "season": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": {
+            "start": "2026-09-26",
+            "end": "2026-11-01"
+          },
+          "source_ids": [
+            "feemster-home"
+          ],
+          "source_urls": [
+            "https://www.feemsterscornmaze.com/"
+          ]
+        },
+        "hours": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "September 26–27 1–9 p.m.; October Fridays 5–9 p.m., Saturdays 10 a.m.–9 p.m., Sundays 1–9 p.m.; November 1 1–9 p.m.",
+          "source_ids": [
+            "feemster-home"
+          ],
+          "source_urls": [
+            "https://www.feemsterscornmaze.com/"
+          ]
+        },
+        "material_restrictions": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": [
+            "Last admission is one hour before closing.",
+            "Hayride and apple cannon stop at sunset.",
+            "Jump-pillow and slide height restrictions apply.",
+            "Operator posts an animal restriction including service animals; access arrangements need clarification before travel."
+          ],
+          "source_ids": [
+            "feemster-home"
+          ],
+          "source_urls": [
+            "https://www.feemsterscornmaze.com/"
+          ]
+        },
+        "pumpkin_patch": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "Pending availability; do not classify as a confirmed 2026 pumpkin patch",
+          "source_ids": [
+            "feemster-home"
+          ],
+          "source_urls": [
+            "https://www.feemsterscornmaze.com/"
+          ]
+        },
+        "location_description": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "Farm Road 94 / Bluegrass Road, north of I-44 between Glenstone/H Highway and Highway 65",
+          "source_ids": [
+            "feemster-directions"
+          ],
+          "source_urls": [
+            "https://www.feemsterscornmaze.com/directions"
+          ]
+        },
+        "visitor_address": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": null,
+          "source_ids": [
+            "feemster-directions"
+          ],
+          "source_urls": [
+            "https://www.feemsterscornmaze.com/directions"
+          ]
+        },
+        "placement": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": null,
+          "source_ids": [
+            "feemster-directions"
+          ],
+          "source_urls": [
+            "https://www.feemsterscornmaze.com/directions"
+          ]
+        }
+      },
+      "research_quality": "PASS AT STATED LIMITS",
+      "factual_current_season": "PASS",
+      "approximate_placement": "HOLD",
+      "consumer_projection": "HOLD",
+      "lifecycle": "HOLD / NOT ACCEPTED AS COMPLETE RECORD",
+      "reason": "2026 season, corn maze, hours and restrictions supported. Corridor/schematic is not a sufficiently supported numbered visitor destination or reproducible point. No invented address; pumpkin patch remains conditional.",
+      "immutable_r1_record_sha256": "6381617b1d15b535da748f64fedae7e14a259eff8142e544705d2d49f883521a",
+      "runtime_import_release_authorized": false
+    },
+    {
+      "record_id": "DELTA2-SHEPHERD-LANTERN",
+      "name": "Shepherd’s Lantern — Bellweather and The Broken Hour",
+      "record_decision": "HOLD",
+      "field_review": {
+        "exact_dates": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": [
+            "2026-10-16",
+            "2026-10-17"
+          ],
+          "source_ids": [
+            "shepherd"
+          ],
+          "source_urls": [
+            "https://www.shepherdslanternllc.com/"
+          ]
+        },
+        "category": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "Immersive haunted experience in a barn and grounds",
+          "source_ids": [
+            "shepherd"
+          ],
+          "source_urls": [
+            "https://www.shepherdslanternllc.com/"
+          ]
+        },
+        "visitor_address_candidate": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "5830 Jakes Prairie Road, Cuba, MO 65453",
+          "source_ids": [
+            "shepherd"
+          ],
+          "source_urls": [
+            "https://www.shepherdslanternllc.com/"
+          ]
+        },
+        "hours_candidate": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "7–10 p.m.",
+          "source_ids": [
+            "shepherd-mhh"
+          ],
+          "source_urls": [
+            "https://www.missourihauntedhouses.com/halloween/shepherds-lantern-mo.html"
+          ]
+        },
+        "material_restrictions": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "Parental guidance suggested for darkness, suspense, disturbing characters and frightening situations.",
+          "source_ids": [
+            "shepherd"
+          ],
+          "source_urls": [
+            "https://www.shepherdslanternllc.com/"
+          ]
+        },
+        "ticket_url": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "https://www.eventbrite.com/e/the-broken-hour-tickets-2000536103338",
+          "source_ids": [
+            "shepherd"
+          ],
+          "source_urls": [
+            "https://www.shepherdslanternllc.com/"
+          ]
+        },
+        "placement": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": null,
+          "source_ids": [
+            "shepherd"
+          ],
+          "source_urls": [
+            "https://www.shepherdslanternllc.com/"
+          ]
+        }
+      },
+      "research_quality": "PASS AT STATED LIMITS",
+      "factual_current_season": "PASS",
+      "approximate_placement": "HOLD",
+      "consumer_projection": "HOLD",
+      "lifecycle": "HOLD / NOT ACCEPTED AS COMPLETE RECORD",
+      "reason": "Current 2026 dates and haunted immersive activity now supported. Retain unresolved 5830 operator versus 5803 secondary address conflict; no accepted point. Secondary 7–10 hours cannot silently become accepted lifecycle end.",
+      "immutable_r1_record_sha256": "8987f4bbffc6446050a024b0dc58a958bf17350a609f20a0c213f36cf0ac7805",
+      "runtime_import_release_authorized": false
+    },
+    {
+      "record_id": "DELTA2-FEARFACTORY",
+      "name": "Fear Factory LLC, Mountain Grove",
+      "record_decision": "HOLD",
+      "field_review": {
+        "visitor_address": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "102 South Main Street, Mountain Grove, MO 65711",
+          "source_ids": [
+            "fearfactory-web"
+          ],
+          "source_urls": [
+            "https://www.fearfactoryllc.com/contact"
+          ]
+        },
+        "historical_schedule": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "September 26–November 1, Fridays and Saturdays 8–11 p.m., explicitly labeled Halloween Season 2025",
+          "source_ids": [
+            "fearfactory-web"
+          ],
+          "source_urls": [
+            "https://www.fearfactoryllc.com/contact"
+          ]
+        },
+        "ticket_restriction": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "Tickets at the window only",
+          "source_ids": [
+            "fearfactory-web"
+          ],
+          "source_urls": [
+            "https://www.fearfactoryllc.com/contact"
+          ]
+        }
+      },
+      "research_quality": "PASS AT STATED LIMITS",
+      "factual_current_season": "HOLD",
+      "approximate_placement": "HOLD",
+      "consumer_projection": "HOLD",
+      "lifecycle": "HOLD / NOT ACCEPTED AS COMPLETE RECORD",
+      "reason": "Operator capture explicitly labels 2025. Retain historical address/category; no 2026 recurrence or closure inference.",
+      "immutable_r1_record_sha256": "2f461437961e4f52e26646bfd9da586fffbe1275339055788018b6f80ea88943",
+      "runtime_import_release_authorized": false
+    },
+    {
+      "record_id": "DELTA2-HOLLOWS",
+      "name": "Haunted Hollows Haunted Trail, Palmyra",
+      "record_decision": "HOLD",
+      "field_review": {
+        "visitor_address_lead": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "5947 County Road 261, Palmyra, MO 63461",
+          "source_ids": [
+            "hollows-web"
+          ],
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/haunted-hollows-haunted-trail/"
+          ]
+        },
+        "secondary_type": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "Charity haunted hayride",
+          "source_ids": [
+            "hollows-web"
+          ],
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/haunted-hollows-haunted-trail/"
+          ]
+        },
+        "secondary_restrictions": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "Directory recommends age 10+, lists all-outdoor setting, uncovered waiting and no-touch policy",
+          "source_ids": [
+            "hollows-web"
+          ],
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/haunted-hollows-haunted-trail/"
+          ]
+        },
+        "season_dates": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": null,
+          "source_ids": [
+            "hollows-web"
+          ],
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/haunted-hollows-haunted-trail/"
+          ]
+        }
+      },
+      "research_quality": "PASS AT STATED LIMITS",
+      "factual_current_season": "HOLD",
+      "approximate_placement": "HOLD",
+      "consumer_projection": "HOLD",
+      "lifecycle": "HOLD / NOT ACCEPTED AS COMPLETE RECORD",
+      "reason": "Secondary public identity/address/category leads preserved, but no accepted 2026 invitation. Canadian namesake rejected as evidence, not rejection of Missouri identity.",
+      "immutable_r1_record_sha256": "87e42e5ae87986949e79bab90005f9d416cbafe27d441c6b72bb124ff8ff3cb0",
+      "runtime_import_release_authorized": false
+    },
+    {
+      "record_id": "DELTA2-TWISTED",
+      "name": "Twisted Minds Haunted House, Richwoods",
+      "record_decision": "HOLD",
+      "field_review": {
+        "visitor_address_lead": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "10000 Bear Cove Road, Richwoods, MO 63071",
+          "source_ids": [
+            "twisted-web"
+          ],
+          "source_urls": [
+            "https://www.hauntworld.com/haunted-house-in-richwoods-missouri-twisted-minds-haunted"
+          ]
+        },
+        "category_leads": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": [
+            "Haunted house in mobile homes",
+            "Associated Richwoods Fire Protection District haunted hayride"
+          ],
+          "source_ids": [
+            "twisted-web"
+          ],
+          "source_urls": [
+            "https://www.hauntworld.com/haunted-house-in-richwoods-missouri-twisted-minds-haunted"
+          ]
+        },
+        "season_dates": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": null,
+          "source_ids": [
+            "twisted-web"
+          ],
+          "source_urls": [
+            "https://www.hauntworld.com/haunted-house-in-richwoods-missouri-twisted-minds-haunted"
+          ]
+        }
+      },
+      "research_quality": "PASS AT STATED LIMITS",
+      "factual_current_season": "HOLD",
+      "approximate_placement": "HOLD",
+      "consumer_projection": "HOLD",
+      "lifecycle": "HOLD / NOT ACCEPTED AS COMPLETE RECORD",
+      "reason": "Undated Richwoods identity/address/activity leads only; no accepted 2026 invitation. California namesake rejected as evidence.",
+      "immutable_r1_record_sha256": "d02a1802c96029c0feaacb109c7b5884a6e72110338f112216475e1b1f5ab06e",
+      "runtime_import_release_authorized": false
+    },
+    {
+      "record_id": "DELTA2-WACO",
+      "name": "Waco School House Haunt",
+      "record_decision": "HOLD",
+      "field_review": {
+        "visitor_address_lead": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "148 Rose Street, Waco / Asbury, MO 64832",
+          "source_ids": [
+            "waco-web"
+          ],
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/waco-school-house-haunt/"
+          ]
+        },
+        "season_dates": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": null,
+          "source_ids": [
+            "waco-web"
+          ],
+          "source_urls": [
+            "https://www.thescarefactor.com/haunted-houses/missouri/waco-school-house-haunt/"
+          ]
+        }
+      },
+      "research_quality": "PASS AT STATED LIMITS",
+      "factual_current_season": "HOLD",
+      "approximate_placement": "HOLD",
+      "consumer_projection": "HOLD",
+      "lifecycle": "HOLD / NOT ACCEPTED AS COMPLETE RECORD",
+      "reason": "Address/identity retained. Directory explicitly says forthcoming dates not loaded; operator fetch failure is not closure evidence. No accepted 2026 schedule.",
+      "immutable_r1_record_sha256": "4f80d8930e62904f93aeaa77a1325d19dc23c9e15e69561c33916685c7052ab2",
+      "runtime_import_release_authorized": false
+    },
+    {
+      "record_id": "DELTA5-RISING-RECHECK",
+      "name": "Rising Haunted Attraction",
+      "record_decision": "HOLD",
+      "field_review": {
+        "visitor_address": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "25238 Raleigh Road, Waynesville, MO 65583",
+          "source_ids": [
+            "rising-dmo"
+          ],
+          "source_urls": [
+            "https://visitpulaskicounty.org/events?event=17447"
+          ]
+        },
+        "historical_schedule": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": "September 27–October 31, 2024; listed event dates are explicitly 2024",
+          "source_ids": [
+            "rising-dmo"
+          ],
+          "source_urls": [
+            "https://visitpulaskicounty.org/events?event=17447"
+          ]
+        },
+        "current_2026_dates": {
+          "status": "SUPPORTED AT STATED QUALIFICATION",
+          "value": null,
+          "source_ids": [
+            "rising-dmo"
+          ],
+          "source_urls": [
+            "https://visitpulaskicounty.org/events?event=17447"
+          ]
+        }
+      },
+      "research_quality": "PASS AT STATED LIMITS",
+      "factual_current_season": "HOLD",
+      "approximate_placement": "HOLD",
+      "consumer_projection": "HOLD",
+      "lifecycle": "HOLD / NOT ACCEPTED AS COMPLETE RECORD",
+      "reason": "DMO raw event schedule explicitly 2024; preserve that year and conflicting historical time claims. No current season binding and no recovered prior stable ID; local recheck ID is not novelty.",
+      "immutable_r1_record_sha256": "072ee03c20dbd1fc472f7a56452ade61a8544ee48bc6c15c82ed1b5bcb291091",
+      "runtime_import_release_authorized": false
+    }
+  ],
+  "residential": [
+    {
+      "name": "Wentzville’s Halls Of Horror",
+      "record_decision": "HOLD",
+      "product_policy": "SEGREGATED; NOT COMMERCIAL IMPORT",
+      "reason": "Verify operator-intentionally-public visitor address and current invitation; Independent product-policy and visitor-safety review",
+      "runtime_eligible": false
+    },
+    {
+      "name": "Spooky Hollow Dyerdown Holiday House",
+      "record_decision": "HOLD",
+      "product_policy": "SEGREGATED; NOT COMMERCIAL IMPORT",
+      "reason": "Readable operator-intentionally-public address; Precise season end/current invitation; Product-policy review",
+      "runtime_eligible": false
+    },
+    {
+      "name": "West Gravestone Square",
+      "record_decision": "HOLD",
+      "product_policy": "SEGREGATED; NOT COMMERCIAL IMPORT",
+      "reason": "Operator-intentionally-public visitor address; Current-year invitation; Product-policy review",
+      "runtime_eligible": false
+    }
+  ],
+  "findings": [
+    {
+      "id": "D5-COPY-01",
+      "record_id": "MO26-027",
+      "severity": "material exact-projection correction",
+      "finding": "Consumer Details omit research-known same-night-only, nonrefundable ticket condition.",
+      "required": "Preserve it compactly in Details; keep remaining supported copy/dates/partial-hours/point/expiry unchanged.",
+      "source": "https://www.labyrinthoffear.com/faq",
+      "independent_source_sha256": "fa48af2ece4b78669823c3f128af438521ff5b08a50bd1a81cb412ed04b7335d"
+    },
+    {
+      "id": "D5-MYERS-01",
+      "record_id": "MO26-005",
+      "severity": "evidence adjudication and missing projection",
+      "finding": "Positive current operator date evidence should replace obsolete absence-of-current-year rationale; no verified terminal negative recovered. R1 lacks exact projection/lifecycle and freshly adjudicated point.",
+      "required": "Explicitly adjudicate current calendar over stale marketing/unrecovered closure note; normalize October 9 ISO date; create exact unknown-hours/never-OpenNow projection with supported visitor address and hard date-only expiry. Explicitly choose and qualify operator point versus historical Census interpolation rather than average.",
+      "source": "https://www.myersforestoffears.com/location",
+      "independent_source_sha256": "db1cf780b96eca1da41ebe31fbed974d9964effbdad6f747801814e12c0b3e0f",
+      "operator_point": {
+        "lat": 37.119659,
+        "lon": -94.312243,
+        "precision": "approximate venue only; address navigation"
+      }
+    },
+    {
+      "id": "D5-META-01",
+      "record_id": "MO26-006",
+      "severity": "minor source quality metadata",
+      "finding": "wolfman-social content_usable:true inaccurately describes a blocked Facebook page.",
+      "required": "Mark false for venue facts; retain report explanation and HOLD."
+    }
+  ],
+  "accepted_immutable_subset": [],
+  "calendar_verification": "Independent direct retrieval and raw HTML semantic verification binds October2026 table, active cells, CSS and matching dates-open legend; no pixel verification claim (local browser socket restriction).",
+  "no_changes": "No author artifact, repository, runtime, production, API setting or external state changed; no paid APIs or operator contact."
+}
