@@ -1,3 +1,22 @@
+# ASTRA MATERIAL GATE — 2026-10-09 06:43 UTC — candidate5 local and independent delta PASS
+
+## CURRENT
+- Frozen PR #60 **f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd**, tree **fdfbf4045ea69f7a9b610a434243fc43f2c9f338**, parenta44e70996bc8546f75dc71e4af13c414350ec1f9.
+- Fresh independent local checkout **/workspace/scratch/45a2c39f129e/repo-verified** is clean at exact head/tree; Git connectivity PASS, no borrowed object storage. The old /repo working files and stale-object/refetch failure logs are preserved; use repo-verified for continuing source work.
+- Exact-head local full tests **947 repository +71 application =1018 PASS /0FAIL /4skips**. Four skips are external OG documentation-package contracts absent from checkout, not seasonal/runtime scenarios. Typecheck PASS; lint0errors/6inheritedwarnings; auth-enabled migration-free production build PASS.
+- Source digest **a7613459eef6aac9cb20e9566484583a428562b5eb43e9fbc3ad8bb02bd4f84a**/468files; local output **2e43107aaae5cf866d87d31517e4fabcef87672e893dad8b3e5db6191196185b**/194files. Exact logs and receipt preserved at audit/astra-validation-2026-10-09/Candidate5-Local-Gates.json.
+- Independent exact-delta PASS: **ae5b815c064cd556405c5059fb8f2de4fc8cab83fe73480cd8271d3ba8463052**. One browser harness file changed; src/server/public/audit/.github subtree IDs and frozen32receiptblob identical to a44. Exact supported-destination equality and every later assertion preserved; fixture/kind/evidence assertions added.
+- Hosted web **37894492761** and Android **37894492778** continue. No final exact-head browser/geometry/Android result claimed yet.
+- Superseded7e6 web37889676019 ultimately FAILED at same neweleven gate; Android37889675984 CANCELLED. Artifact11598994150 retained separately, expectedSHA45a58d44e60417357c5296c8f1f1e0ce002c8b05eaadd70df2982cbbae2647d1; root has materialized it for integrity/verdict preservation. No superseded run substitutes for current acceptance.
+## NEXT
+- Finish all current-head hosted gates and independent downloaded artifact/screenshots acceptance.
+- Save evidence, refresh production/rollback/protection identities, finalize release brief, publish/read back owner-decision continuity only when all required gates PASS.
+## HOLD
+- Candidate5 remains in validation, not ready for owner release decision. Named data/residential/placement/no-import HOLDs and physical Android constraints remain unchanged.
+- No production/main/protection/config/signing/Play changes; no fresh owner waiver.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 — prior-receipt routing harness corrected; candidate5 active
 
 ## CURRENT

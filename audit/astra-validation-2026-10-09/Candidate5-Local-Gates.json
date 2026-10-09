@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-10-09T06:43:09.708201+00:00",
+  "head": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+  "tree": "fdfbf4045ea69f7a9b610a434243fc43f2c9f338",
+  "verdict": "LOCAL_GATES_PASS_HOSTED_PENDING",
+  "tests": {
+    "repository": {
+      "pass": 947,
+      "fail": 0,
+      "skip": 4,
+      "total": 951
+    },
+    "application": {
+      "pass": 71,
+      "fail": 0,
+      "skip": 0
+    },
+    "aggregate_pass": 1018,
+    "aggregate_skip": 4
+  },
+  "lint": {
+    "errors": 0,
+    "inherited_warnings": 6
+  },
+  "typecheck": "PASS",
+  "build": {
+    "auth_enabled": true,
+    "migrations_run": false,
+    "status": "PASS",
+    "source_sha256": "a7613459eef6aac9cb20e9566484583a428562b5eb43e9fbc3ad8bb02bd4f84a",
+    "source_files": 468,
+    "output_sha256": "2e43107aaae5cf866d87d31517e4fabcef87672e893dad8b3e5db6191196185b",
+    "output_files": 194
+  },
+  "logs": [
+    {
+      "path": "test-candidate5.log",
+      "bytes": 366191,
+      "sha256": "d3c1274ac19aacfa935b682f9cf53298068724c7d2db5f6b11c12f410193ab1b"
+    },
+    {
+      "path": "lint-candidate5.log",
+      "bytes": 1643,
+      "sha256": "cbbc3913f0a5ae63c5194366045638c45270268553e67c3b8b56497ecf645012"
+    },
+    {
+      "path": "typecheck-candidate5.log",
+      "bytes": 128,
+      "sha256": "ae791f9f57ffbb3c0a592b6a34e25250c1f7f6f13fde4d05f77a0d4e7681f89a"
+    },
+    {
+      "path": "build-candidate5.log",
+      "bytes": 5673,
+      "sha256": "57b49c74cbf9bc3d6461014aee125a5c19420af24f4ff6c7c7d34cc716ab5e4f"
+    }
+  ],
+  "checkout": "/workspace/scratch/45a2c39f129e/repo-verified",
+  "checkout_integrity": "Fresh independent clone; clean exact tree; git fsck connectivity PASS; no borrowed object storage"
+}

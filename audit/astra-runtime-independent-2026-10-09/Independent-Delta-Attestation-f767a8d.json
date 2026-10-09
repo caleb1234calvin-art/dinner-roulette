@@ -1,0 +1,60 @@
+{
+  "reviewedAt": "2026-10-09T06:41:34.931644+00:00",
+  "candidate": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+  "tree": "fdfbf4045ea69f7a9b610a434243fc43f2c9f338",
+  "parent": "a44e70996bc8546f75dc71e4af13c414350ec1f9",
+  "checkout": "/workspace/scratch/45a2c39f129e/repo-verified",
+  "checkoutStatus": "",
+  "changedPathsFromParent": [
+    "scripts/seasonal-ten-record-browser.mjs"
+  ],
+  "unchangedSubtrees": {
+    "src": {
+      "prior": "dbb4366a3df17334a40785b15ff234ce4ee10e24",
+      "current": "dbb4366a3df17334a40785b15ff234ce4ee10e24"
+    },
+    "server": {
+      "prior": "170418d170dcc2397f339e97882b3c926e1c6f5c",
+      "current": "170418d170dcc2397f339e97882b3c926e1c6f5c"
+    },
+    "public": {
+      "prior": "8a24e98af48debee93503fc90098e01b8b0c1c6d",
+      "current": "8a24e98af48debee93503fc90098e01b8b0c1c6d"
+    },
+    "audit": {
+      "prior": "be6a15bfcaa53f0e0525c43c77b971ae023b0fa6",
+      "current": "be6a15bfcaa53f0e0525c43c77b971ae023b0fa6"
+    },
+    ".github": {
+      "prior": "424c0837f0c8b411da9c73e2e9fa2de364f0320b",
+      "current": "424c0837f0c8b411da9c73e2e9fa2de364f0320b"
+    }
+  },
+  "frozenPrevious32ReceiptBlob": "29898a1638541c617b4c3fa8f08d2239715def98",
+  "frozenPrevious32SourceCommit": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+  "verdict": "PASS independent bounded delta attestation. Exactlyone browser-harness path changed; all runtime/data/provenance/copy, previous32 receipts, workflow and geometry gates unchanged.",
+  "assertionReview": {
+    "retained": "Every previous assertion remains except the one explicitly corrected expected-destination expression. Exact destination equality is preserved and now uses supported independently frozen navigationtarget, not attractiondisplayaddress.",
+    "added": "Require prior immutable receipt, supported targetkind, expected/actual/sourceCommit evidence.",
+    "details": "Expanded modes use frozen receipt directionsTarget; unexpanded modes use existing supported target. Verifiedpoint compares targetlat/lon, visitoraddress compares targetaddress.",
+    "unchangedAfterEquality": [
+      "precision",
+      "consumer-only text",
+      "reload and unchangedDirections",
+      "noRPC",
+      "saved rating/preferences",
+      "old reviewrevision/canonicalidentity",
+      "previous32objectinvariance"
+    ]
+  },
+  "productFinding": "No product mutation. Actual Beast/Edge1300W13th centralcheck-in routing already matched productionbaseline/frozenreceipt; predecessor failure was incorrect harness row.address expectation.",
+  "priorFailureReceiptSha256": "df867f3ac77359e223d3045554e42f1ceedb7d79e11428584567707007f54447",
+  "sourceReviewCarry": "Independent source/policy PASS for4513aee carries only across proven unchangedsrc/server/public/audit objects; no predecessor browser/geometry counts substituted for currentheadPASS.",
+  "runtimeVerdict": "HOLD pending current exacthead full gates and independent artifact review.",
+  "plannedRuns": {
+    "web": "37894492761",
+    "android": "37894492778"
+  },
+  "storageRemediationScope": "Old checkout had vanished alternateobjectstore; this attestation uses newly cloned clean checkout with complete gitobjects. No source mutation performed by reviewer.",
+  "tests": "No tests rerun for this staticdelta review per rootinstruction."
+}
