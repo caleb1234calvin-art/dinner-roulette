@@ -1,0 +1,137 @@
+{
+  "reviewedAt": "2026-10-09T06:36:05.212034+00:00",
+  "candidate": "a44e70996bc8546f75dc71e4af13c414350ec1f9",
+  "tree": "b16122c4bad65e7a51b8de57a166ba1d0f07e426",
+  "runId": "37889747808",
+  "artifactId": "11599059205",
+  "artifactSha256": "49103e1d42f83dc4b8ca18572095a6aac491f41db6514adc5aaa0341aec5a762",
+  "artifactBytes": 368349809,
+  "members": 2989,
+  "crcPass": true,
+  "sourceFingerprint": {
+    "head": "a44e70996bc8546f75dc71e4af13c414350ec1f9",
+    "tree": "b16122c4bad65e7a51b8de57a166ba1d0f07e426",
+    "source": {
+      "sha256": "956be6f2c9b33f470cfff969c26911b05bb0a4ed5ffc663266d83eb7629001fd",
+      "files": 468
+    },
+    "status": ""
+  },
+  "hostedBuildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "956be6f2c9b33f470cfff969c26911b05bb0a4ed5ffc663266d83eb7629001fd",
+      "files": 468
+    },
+    "startedAt": "2026-10-09T05:41:51.621Z",
+    "output": {
+      "sha256": "8ae73834387aacfcee1338554b4955a406f53bab044d4d60e30f0dd2d3b46081",
+      "files": 194
+    },
+    "completedAt": "2026-10-09T05:41:54.768Z"
+  },
+  "allSevenVerdictProofsAndLocationMatch": true,
+  "completedScenarioSuites": {
+    "date-night-radial/verdict.json": {
+      "pass": 10,
+      "fail": 0,
+      "total": 10,
+      "verdict": true
+    },
+    "missouri-two-records/verdict.json": {
+      "pass": 23,
+      "fail": 0,
+      "total": 23,
+      "verdict": true
+    },
+    "seasonal-astra-eleven/verdict.json": {
+      "pass": 218,
+      "fail": 2,
+      "total": 220,
+      "verdict": false
+    },
+    "seasonal-completeness-v1/verdict.json": {
+      "pass": 97,
+      "fail": 0,
+      "total": 97,
+      "verdict": true
+    },
+    "seasonal-cumulative-15/verdict.json": {
+      "pass": 235,
+      "fail": 0,
+      "total": 235,
+      "verdict": true
+    },
+    "seasonal-ten-record/verdict.json": {
+      "pass": 157,
+      "fail": 0,
+      "total": 157,
+      "verdict": true
+    }
+  },
+  "scenarioPass": 740,
+  "scenarioFail": 2,
+  "additionalChecks": {
+    "smoke": 16,
+    "smokeErrors": 0,
+    "location": 19,
+    "locationPassed": true
+  },
+  "elevenBreakdown": {
+    "newElevenPlusCobbLatefall": 188,
+    "newElevenFailed": 0,
+    "prior32ReceiptPass": 30,
+    "prior32ReceiptFail": 2,
+    "overall": "218PASS/2FAIL of220"
+  },
+  "skippedGates": [
+    "extra-nine seasonal suite",
+    "currenthead geometry; prior426geometry remains historicalonly"
+  ],
+  "failureAnalysis": {
+    "rootCause": "Expanded old32receipt harness compares Directions destination with row.address rather than frozen independently reviewed directionsTarget. Beast and Edge intentionally route to CentralWaiverStation1300W13thSt before visiting their different attractionaddresses.",
+    "records": [
+      {
+        "id": "date-night-mo26-058-beast",
+        "frozenDirectionsTarget": {
+          "kind": "visitor-address",
+          "address": "1300 W 13th St, Kansas City, MO 64102"
+        },
+        "revision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "displayAddress": "1401 W 13th St, Suite B, Kansas City, MO 64102",
+        "observedActualDestination": "1300 W 13th St, Kansas City, MO 64102",
+        "pageErrors": [],
+        "RPCsBeforeFailedAssertion": 0,
+        "screenReviewed": "legacy-18-old-receipt-survives-batch-failure.png",
+        "pixelFinding": "Correct canonical attractionname/address, Approximate and Closednow status, existingfavorite rating and Directions button. Screenshot cannot exposehref; actualhref destination is recorded in assertionfailure and matches frozen independentreceipt/operator firstcheckin."
+      },
+      {
+        "id": "date-night-mo26-delta-edge-of-hell",
+        "frozenDirectionsTarget": {
+          "kind": "visitor-address",
+          "address": "1300 W 13th St, Kansas City, MO 64102"
+        },
+        "revision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "displayAddress": "1300 W 12th St, Kansas City, MO 64101",
+        "observedActualDestination": "1300 W 13th St, Kansas City, MO 64102",
+        "pageErrors": [],
+        "RPCsBeforeFailedAssertion": 0,
+        "screenReviewed": "legacy-27-old-receipt-survives-batch-failure.png",
+        "pixelFinding": "Correct canonical attractionname/address, Approximate and Closednow status, existingfavorite rating and Directions button. Screenshot cannot exposehref; actualhref destination is recorded in assertionfailure and matches frozen independentreceipt/operator firstcheckin."
+      }
+    ],
+    "baselineProof": "Both required1300W13th check-in directionsTargets independently found in exact production979d83a catalogs; frozen receiptmatrix and a44 runtimepolicy agree.",
+    "classification": "Harness expected-destination defect, no product or recordrouting defect found in observedstates.",
+    "allowedCorrection": "For expanded old32receipt scenarios derive expected from frozen independently reviewed receipt.directionsTarget (address or targetlat/lon). Preserve unique favorite, precision, consumertext, postreload direction, noRPC and preference assertions. Prefer logging frozenexpected and observed actual. Do not substituterowaddress for navigation target, alter either venue, or weaken exactequality.",
+    "requiresRerun": "All exacthead gates on correctedcandidate; failedBeast/Edge assertions terminated before later reload/noRPC/preferences checks. No PASS claimed for those incompleteflows."
+  },
+  "network": {
+    "interceptedProviderCalls": 1016,
+    "blockedServerRequests": [],
+    "forwardedExternalCalls": 0
+  },
+  "releaseVerdict": "HOLD: hostedrunFAILED. Source/product diagnosis justifies boundedharness correction only, with full exactheadrerun.",
+  "mutations": "No source or research mutation performed by independentreviewer."
+}

@@ -1,0 +1,257 @@
+{
+  "total_count": 1,
+  "jobs": [
+    {
+      "id": 113687741679,
+      "run_id": 37889747808,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/missouri-astra-push-2026-10-09",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/37889747808",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAaeFFE7w",
+      "head_sha": "a44e70996bc8546f75dc71e4af13c414350ec1f9",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/113687741679",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37889747808/job/113687741679",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-09T05:41:03Z",
+      "started_at": "2026-10-09T05:41:05Z",
+      "completed_at": "2026-10-09T06:32:01Z",
+      "name": "validate",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-09T05:41:08Z",
+          "completed_at": "2026-10-09T05:41:09Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-09T05:41:09Z",
+          "completed_at": "2026-10-09T05:41:12Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-09T05:41:12Z",
+          "completed_at": "2026-10-09T05:41:12Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-09T05:41:12Z",
+          "completed_at": "2026-10-09T05:41:15Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-09T05:41:15Z",
+          "completed_at": "2026-10-09T05:41:25Z"
+        },
+        {
+          "name": "Typecheck",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-09T05:41:25Z",
+          "completed_at": "2026-10-09T05:41:31Z"
+        },
+        {
+          "name": "ESLint",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-09T05:41:31Z",
+          "completed_at": "2026-10-09T05:41:38Z"
+        },
+        {
+          "name": "Casino audit regression tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-09T05:41:38Z",
+          "completed_at": "2026-10-09T05:41:46Z"
+        },
+        {
+          "name": "Audit curated casino catalog",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-09T05:41:46Z",
+          "completed_at": "2026-10-09T05:41:48Z"
+        },
+        {
+          "name": "Build development bundle",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-09T05:41:48Z",
+          "completed_at": "2026-10-09T05:41:51Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-09T05:41:51Z",
+          "completed_at": "2026-10-09T05:41:54Z"
+        },
+        {
+          "name": "Repository and application tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-09T05:41:54Z",
+          "completed_at": "2026-10-09T05:42:54Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-09T05:42:54Z",
+          "completed_at": "2026-10-09T05:43:17Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-09T05:43:17Z",
+          "completed_at": "2026-10-09T05:43:26Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-09T05:43:26Z",
+          "completed_at": "2026-10-09T05:43:46Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-09T05:43:46Z",
+          "completed_at": "2026-10-09T05:45:02Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-09T05:45:02Z",
+          "completed_at": "2026-10-09T05:46:42Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-09T05:46:42Z",
+          "completed_at": "2026-10-09T05:52:33Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-09T05:52:33Z",
+          "completed_at": "2026-10-09T06:02:39Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-09T06:02:39Z",
+          "completed_at": "2026-10-09T06:17:54Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 21,
+          "started_at": "2026-10-09T06:17:54Z",
+          "completed_at": "2026-10-09T06:31:43Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-09T06:31:43Z",
+          "completed_at": "2026-10-09T06:31:43Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-09T06:31:43Z",
+          "completed_at": "2026-10-09T06:31:43Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24,
+          "started_at": "2026-10-09T06:31:43Z",
+          "completed_at": "2026-10-09T06:31:58Z"
+        },
+        {
+          "name": "Verify Dinner icon packs",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 25,
+          "started_at": "2026-10-09T06:31:58Z",
+          "completed_at": "2026-10-09T06:31:58Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 49,
+          "started_at": "2026-10-09T06:31:58Z",
+          "completed_at": "2026-10-09T06:31:58Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-09T06:31:58Z",
+          "completed_at": "2026-10-09T06:31:59Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-09T06:31:59Z",
+          "completed_at": "2026-10-09T06:31:59Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/113687741679",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000493,
+      "runner_name": "GitHub Actions 1000000493",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

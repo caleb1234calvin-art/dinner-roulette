@@ -1,0 +1,154 @@
+{
+  "sha": "a44e70996bc8546f75dc71e4af13c414350ec1f9",
+  "tree": "b16122c4bad65e7a51b8de57a166ba1d0f07e426",
+  "run": 37889747808,
+  "job": 113687741679,
+  "status": "FAIL",
+  "artifact": {
+    "id": 11599059205,
+    "bytes": 368349809,
+    "sha256": "49103e1d42f83dc4b8ca18572095a6aac491f41db6514adc5aaa0341aec5a762",
+    "files": 2989,
+    "crc": "PASS"
+  },
+  "proof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "956be6f2c9b33f470cfff969c26911b05bb0a4ed5ffc663266d83eb7629001fd",
+      "files": 468
+    },
+    "startedAt": "2026-10-09T05:41:51.621Z",
+    "output": {
+      "sha256": "8ae73834387aacfcee1338554b4955a406f53bab044d4d60e30f0dd2d3b46081",
+      "files": 194
+    },
+    "completedAt": "2026-10-09T05:41:54.768Z"
+  },
+  "suites": [
+    {
+      "path": "verdict.json",
+      "passed": null,
+      "count": 0,
+      "passCount": 0,
+      "errorCount": 0,
+      "publicProviderCalls": null,
+      "sha256": "3161fe99d757be62e6b8706ec649f663c6c111feb4ce97d668ac59c4758d0fd3"
+    },
+    {
+      "path": "seasonal-ten-record/verdict.json",
+      "passed": true,
+      "count": 157,
+      "passCount": 157,
+      "errorCount": 0,
+      "publicProviderCalls": 0,
+      "sha256": "47647eaf28d31e90e76bd33bcb2f1047b51e824956ec0458849b287fe87664f6"
+    },
+    {
+      "path": "seasonal-completeness-v1/verdict.json",
+      "passed": true,
+      "count": 97,
+      "passCount": 97,
+      "errorCount": 0,
+      "publicProviderCalls": 0,
+      "sha256": "460aa2a0585eee96ab6783b51f8ff9d9290a63d074ca1c9c736666e75c7cc808"
+    },
+    {
+      "path": "date-night-radial/verdict.json",
+      "passed": true,
+      "count": 10,
+      "passCount": 10,
+      "errorCount": 0,
+      "publicProviderCalls": 0,
+      "sha256": "2ff85970e1b4a8b9262c8876fe5387a66669e426feafd3a81cc4d45be5a1ff88"
+    },
+    {
+      "path": "seasonal-astra-eleven/verdict.json",
+      "passed": false,
+      "count": 220,
+      "passCount": 218,
+      "errorCount": 3,
+      "publicProviderCalls": 0,
+      "sha256": "6b68c6f222545239a610b19ff821303b9aa749229b19a904bbf95954ae54032e"
+    },
+    {
+      "path": "seasonal-cumulative-15/verdict.json",
+      "passed": true,
+      "count": 235,
+      "passCount": 235,
+      "errorCount": 0,
+      "publicProviderCalls": 0,
+      "sha256": "0ceafa65a93a4df4e2cb269050069476be4898caf3d7376f76dd1438aac23924"
+    },
+    {
+      "path": "missouri-two-records/verdict.json",
+      "passed": true,
+      "count": 23,
+      "passCount": 23,
+      "errorCount": 0,
+      "publicProviderCalls": 0,
+      "sha256": "13e4b0a576b1826ac3a4405bba5be553e09bc2502b7174c6c3dc674c51f3181e"
+    }
+  ],
+  "failures": [
+    {
+      "id": "date-night-mo26-058-beast",
+      "scenario": "old-receipt-survives-batch",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ '1300 W 13th St, Kansas City, MO 64102'\n- '1401 W 13th St, Suite B, Kansas City, MO 64102'\n\n    at runScenario.pathname (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:846:14)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:300:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:841:5",
+      "evidence": {
+        "finalText": "SAVED FOR LATER\n\nFavorites\n\nPlaces you already know you like.\n\nBeast Haunted House\n\nHaunted House\n\nApprox. Nearby \u00b7 Our rating 4/5\n\n1401 W 13th St, Suite B, Kansas City, MO 64102 \u00b7 Closed now\n\nDirections\nPick\nFavorites\nHistory\nSettings"
+      },
+      "frozenReceipt": {
+        "id": "date-night-mo26-058-beast",
+        "recordId": "MO26-058",
+        "name": "Beast Haunted House",
+        "reviewRevision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "1300 W 13th St, Kansas City, MO 64102"
+        },
+        "placement": {
+          "lat": 39.09963,
+          "lon": -94.60158,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=1401+W+13th+Street%2C+Suite+B%2C+Kansas+City%2C+MO+64102&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "checkedAt": "2026-10-07",
+          "precisionLabel": "Approximate attraction address; not the required first check-in stop"
+        }
+      }
+    },
+    {
+      "id": "date-night-mo26-delta-edge-of-hell",
+      "scenario": "old-receipt-survives-batch",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ '1300 W 13th St, Kansas City, MO 64102'\n- '1300 W 12th St, Kansas City, MO 64101'\n           ^\n\n    at runScenario.pathname (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:846:14)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:300:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:841:5",
+      "evidence": {
+        "finalText": "SAVED FOR LATER\n\nFavorites\n\nPlaces you already know you like.\n\nEdge of Hell Haunted Attraction\n\nHaunted House\n\nApprox. Nearby \u00b7 Our rating 4/5\n\n1300 W 12th St, Kansas City, MO 64101 \u00b7 Closed now\n\nDirections\nPick\nFavorites\nHistory\nSettings"
+      },
+      "frozenReceipt": {
+        "id": "date-night-mo26-delta-edge-of-hell",
+        "recordId": "DELTA-EDGE-2026",
+        "name": "Edge of Hell Haunted Attraction",
+        "reviewRevision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "1300 W 13th St, Kansas City, MO 64102"
+        },
+        "placement": {
+          "lat": 39.100665528955,
+          "lon": -94.599950797359,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=1300+W+12th+St%2C+Kansas+City%2C+MO+64101&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+          "checkedAt": "2026-10-08",
+          "precisionLabel": "Approximate attraction address; not the required first check-in stop"
+        }
+      }
+    }
+  ],
+  "skipped": [
+    "seasonal-astra-extras",
+    "seasonal-card-layout",
+    "Dinner icon pack verification"
+  ],
+  "logLimitation": "GitHub decoded full job log retrieval twice returned Transport closed. Native job step timestamps recovered through workflow-run jobs API and preserved separately."
+}

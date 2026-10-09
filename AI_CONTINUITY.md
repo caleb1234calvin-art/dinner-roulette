@@ -1,3 +1,22 @@
+# ASTRA MATERIAL GATE — 2026-10-09 — prior-receipt routing harness corrected; candidate5 active
+
+## CURRENT
+- Draft PR #60 current frozen head **f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd**, tree **fdfbf4045ea69f7a9b610a434243fc43f2c9f338**, parent **a44e70996bc8546f75dc71e4af13c414350ec1f9**. Single changed path from parent: scripts/seasonal-ten-record-browser.mjs; eight insertions/one replacement. No data/runtime/workflow changes.
+- Root and independent reviewer inspected both failed a44 actual screenshots/state and frozen production979d receipts BEFORE correction. Beast and Edge correctly route to supported first check-in **1300 W13th St, Kansas City64102**, distinct from displayed attraction addresses. Harness wrongly compared row.address. No product defect found.
+- Corrected expectation uses immutable previous32 directionsTarget in expanded mode and supported target in unexpanded mode; asserts fixture existence/kind and records expected/actual destination before exact equality. All reload, noRPC, preferences, revision, precision, consumer-copy and32-object invariance checks retained. Independent review found no weakening.
+- a44 independent failed artifact report SHA256 **df867f3ac77359e223d3045554e42f1ceedb7d79e11428584567707007f54447**. Actual exported scenario totals740PASS/2FAIL, casino16/location19 separate; new11 gate218PASS/2FAIL (all188 new-record/Cobb scenarios and30oldreceiptsPASS). Extras/geometry were skipped. Full failed ZIP and decoded verdicts preserved; log endpoint transport failure remains explicit.
+- Candidate5 hosted web **37894492761**, Android **37894492778** active. Full local safe build/tests/lint/typecheck and independent exact-delta attestation pending.
+- Fresh pre-publication identities unchanged: main979d83aede9d66163e1ebaed9ad5b219cb637882; productiondpl_F1XiMcc9AUuykunNamr87R3re7gP READY/source979d; rollbackdpl_BCdD3eWRXk6UEN2FNJQE88r18VXv READY/source213502ef8cf3f67d75e6d9c9c8ff43f9f656890c.
+- Local checkout referenced a vanished earlier scratch Git object store. Stale alternate was preserved/disabled; ordinary fetch and full refetch exposed missing cached history objects. A fresh independent checkout is being created before local gates. Remote candidate and production identities are unaffected; old working files preserved.
+## NEXT
+- Complete clean checkout verification/local gates, exact candidate5 hosted gates and independent artifact acceptance; no source edits while frozen.
+- Preserve all attempts, final evidence, exact identities and release brief, then publish owner-decision checkpoint only after complete PASS.
+## HOLD
+- Candidate5 is not release ready while full exact-head gates are pending. Cadaver and all named data/residential/placement/no-import HOLDs retained.
+- No merge/production/config/protection/waiver/signing/Play authority exercised.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 06:34 UTC — exact a44 browser FAILURE preserved
 
 ## CURRENT
