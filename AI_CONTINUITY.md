@@ -1,3 +1,36 @@
+# PR #61 R2 Full Acceptance HOLD — Empty Primary Readiness and Hosted Browser Failure (2026-10-09 22:47 UTC)
+
+## CURRENT
+
+Exact draft PR61 remains **`a4f43e9b886764592053a53652dc91602749ba11`**, tree **`44929e3f3d0b6ba2e4dd366de847b952388f9cb3`**, parentc931. **Overall candidate/UX acceptance is HOLD.** Prior independent safety-entry PASS for IV01/IV02 remains valid only within its stated scope.
+
+**HYB-IV-03:** actual DateNightHome at a noncatalog Movies50 origin receives a failed empty primary. Foreground loading correctly ends, but UI says **“Ready · checking background coverage” while zero activities and Pick/Options are disabled**. Terminal settlement is not usable readiness; error notice does not erase the contradiction. [Frozen independent report](audit/hybrid-loading-2026-10-09/a4f43-Readiness-Semantics-Hold-R2.md), SHA-256 **`0c5151de4cd9bfed5d0461718313428ab9a0391e144bb44b8197419c77ebe0f7`**, and executable component probe/log preserve the failure. A bounded correction is authorized after the current live atomic block; no successor SHA yet.
+
+### Hosted and local gate distinctions
+
+- Web **38000254537 FAILED** in the hybrid unmount scenario after **14 scenarios PASS**. Later seasonal/geometry gates were **SKIPPED**, not passed. Frozen failed artifact **11649460402**, SHA **`f12fc1f6893c5c4662d84fef7c38236e96df0df7e5f22fc91fa4cb934eb6e0f8`**.
+- Actual upstream abort evidence passes. Observed failure is a SecurityError; about:blank storage initialization is the working harness diagnosis, with stack absent in original receipt. Minimal owned-origin storage guard and richer errors are prepared but unpublished; diagnosis is not blanket browser acceptance.
+- Android **38000254581 PASS** remains separate from physical Android/signing/Play HOLD.
+- Independent exact local **1,048 PASS (977 repository +71 application), 0 fail /4 skips**, typecheckPASS, lint0errors6warnings, safe auth-enabled build/proofPASS. Source **629a959ea0f741dacff473cc71bdd21e2a9a461a45cde7908840d6d0676defbe /474 files**; independent local output **cb5a957f2402c1d2850b9c942efab035830561995e9cca422b30125376344324 /194 files**. These do not clear actual UX/browser failures.
+
+## Benchmark in progress — no final recommendation
+
+Isolated immutable-a4 controlled run completed **288 cases /72 matched ID-parity groups**; coverage/parity does not establish speed superiority. Covered Anything local CPU was worse in the observed diagnostic (median85.98ms versus8.02ms baseline, maximum370.67ms); no instant-under-all-conditions claim.
+
+The bounded live comparison is still active under the single R4 ledger, with more than181 physical attempts recorded at the coordinator snapshot. Initial Columbia50 pair: baseline radial completion94.99s, nine Movies, first usable6.11s; hybrid completion97.55s, nine Movies, first usable19.82s. Its failed primary settled at11.97s **without usable results**. These are partial ordered observations, not final latency/reliability/recall verdicts. Do not compare failed settlement with baseline usable time. Preserve all attempts and stop conditions; no counter reset, extension or favorable-only reporting. Historical mutable-c931 controlled run remains invalidated.
+
+## NEXT
+
+Finish the currently authorized bounded atomic measurement block and freeze its truthful outcomes. Apply only the authorized readiness-label and harness corrections, freeze new identity and rerun required exact-head gates. Independent review must separate primary usability, later audit recovery, browser evidence and final performance recommendation. No final candidate or production approval follows partial measurements.
+
+## HOLD / boundaries
+
+No merge/deploy/settings/new waiver, no Missouri/Cadaver research or imports. Cadaver remains HOLD for reliable attraction-specific **2026 operation/date binding and supported expiry**; parked backlog/physical Android limits remain. Fresh22:47 main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree8d5059, production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/sourcefe22**, 52 shipped records unchanged.
+
+**PARENT CONTINUITY COMMIT:** `cf32c31571b0c7f52ea519d964881941202ddb17`; **PARENT TREE:** `47f43cbe8324d676017bc0f305d6c9c1b84f0315`. Documentation-only safe integration branch; all prior history retained verbatim.
+
+---
+
 # PR #61 R2 Independent Safety Entry PASS — Full Candidate Acceptance Pending (2026-10-09 22:40 UTC)
 
 ## CURRENT

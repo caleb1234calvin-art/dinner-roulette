@@ -1,0 +1,26 @@
+READY_TEXT Dinner roulette · Date NightWhat Should We Do?Set the mood. Let the app pick the date.How far?Within 50 miles11030What sounds fun?AnythingBowlingArcadeMoviesMini GolfEscape RoomParksMuseumSkatingWhat's the mood?PlayfulCozyPlayfulAdventurousOpen now onlyOnly activities with confirmed open hoursFavorites onlyPick from date spots you've savedFewer parksKeep parks available, but make the park category much less likelyReady · checking background coverage0 activities matchPick our dateGive us options
+✖ failed primary without eligible places does not label controls Ready (701.672634ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1076.377948
+
+✖ failing tests:
+
+test at ../hybrid-independent-a4-evidence/empty-primary-readiness.test.mjs:4:1
+✖ failed primary without eligible places does not label controls Ready (701.672634ms)
+  AssertionError [ERR_ASSERTION]: Ready must denote usable controls, not empty primary failure settlement
+      at TestContext.<anonymous> (file:///tmp/hybrid-independent-a4-evidence/empty-primary-readiness.test.mjs:5:517)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: "Dinner roulette · Date NightWhat Should We Do?Set the mood. Let the app pick the date.How far?Within 50 miles11030What sounds fun?AnythingBowlingArcadeMoviesMini GolfEscape RoomParksMuseumSkatingWhat's the mood?PlayfulCozyPlayfulAdventurousOpen now onlyOnly activities with confirmed open hoursFavorites onlyPick from date spots you've savedFewer parksKeep parks available, but make the park category much less likelyReady · checking background coverage0 activities matchPick our dateGive us options",
+    expected: /Ready ·/,
+    operator: 'doesNotMatch',
+    diff: 'simple'
+  }
