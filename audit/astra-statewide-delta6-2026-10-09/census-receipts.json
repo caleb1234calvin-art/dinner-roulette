@@ -1,0 +1,1073 @@
+[
+  {
+    "id": "worlds-of-fun",
+    "url": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=4545+Worlds+of+Fun+Avenue%2C+Kansas+City%2C+MO+64161&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+    "http": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "L",
+          "tigerLineId": "641597808"
+        },
+        "geographies": {
+          "States": [
+            {
+              "STATENS": "01779791",
+              "GEOID": "29",
+              "CENTLAT": "+38.3569837",
+              "AREAWATER": 2487431721,
+              "STATE": "29",
+              "BASENAME": "Missouri",
+              "STUSAB": "MO",
+              "OID": "2749046934061",
+              "LSADC": "00",
+              "FUNCSTAT": "A",
+              "INTPTLAT": "+38.3507508",
+              "DIVISION": "4",
+              "NAME": "Missouri",
+              "REGION": "2",
+              "OBJECTID": 12,
+              "CENTLON": "-092.4580520",
+              "AREALAND": 178052694679,
+              "INTPTLON": "-092.4567820",
+              "MTFCC": "G4000"
+            }
+          ],
+          "Combined Statistical Areas": [
+            {
+              "POP100": "",
+              "GEOID": "312",
+              "CENTLAT": "+39.0558175",
+              "AREAWATER": 432043616,
+              "BASENAME": "Kansas City-Overland Park-Kansas City, MO-KS",
+              "OID": "2619034687908051",
+              "LSADC": "M0",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+39.0561001",
+              "NAME": "Kansas City-Overland Park-Kansas City, MO-KS CSA",
+              "OBJECTID": 26,
+              "CSA": "312",
+              "CENTLON": "-094.5593249",
+              "INTPTLON": "-094.5588469",
+              "AREALAND": 29009044566,
+              "HU100": "",
+              "MTFCC": "G3100"
+            }
+          ],
+          "County Subdivisions": [
+            {
+              "COUSUB": "13780",
+              "GEOID": "2904713780",
+              "CENTLAT": "+39.2151399",
+              "AREAWATER": 2344239,
+              "STATE": "29",
+              "BASENAME": "Chouteau",
+              "OID": "2769046934004",
+              "LSADC": "44",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+39.2127453",
+              "NAME": "Chouteau township",
+              "OBJECTID": 895,
+              "CENTLON": "-094.5036717",
+              "COUSUBCC": "Z1",
+              "AREALAND": 134543060,
+              "INTPTLON": "-094.5032564",
+              "MTFCC": "G4040",
+              "COUSUBNS": "00766504",
+              "COUNTY": "047"
+            }
+          ],
+          "Urban Areas": [
+            {
+              "GEOID": "43912",
+              "CENTLAT": "+39.0398256",
+              "AREAWATER": 21333971,
+              "BASENAME": "Kansas City, MO--KS",
+              "OID": "2702146934319",
+              "UA": "43912",
+              "LSADC": "67",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+39.0412437",
+              "NAME": "Kansas City, MO--KS Urban Area",
+              "OBJECTID": 997,
+              "CENTLON": "-094.6057761",
+              "AREALAND": 1849618158,
+              "INTPTLON": "-094.6063588",
+              "MTFCC": "G3500"
+            }
+          ],
+          "Incorporated Places": [
+            {
+              "DISP_CLR": 4,
+              "STGEOMETRY_Area": 1372937797.7641878,
+              "NECTAPCI": "N",
+              "GEOID": "2938000",
+              "CENTLAT": "+39.1237467",
+              "AREAWATER": 10529358,
+              "BASENAME": "Kansas City",
+              "STATE": "29",
+              "OID": "2789046934021",
+              "LSADC": "25",
+              "PLACE": "38000",
+              "FUNCSTAT": "A",
+              "INTPTLAT": "+39.1251553",
+              "NAME": "Kansas City city",
+              "OBJECTID": 31954,
+              "PLACECC": "C1",
+              "CENTLON": "-094.5539473",
+              "STGEOMETRY_Length": 443636.88837162254,
+              "CBSAPCI": "Y",
+              "AREALAND": 814609007,
+              "INTPTLON": "-094.5503133",
+              "PLACENS": "02395492",
+              "MTFCC": "G4110"
+            }
+          ],
+          "Counties": [
+            {
+              "GEOID": "29047",
+              "CENTLAT": "+39.3104665",
+              "AREAWATER": 28468708,
+              "STATE": "29",
+              "BASENAME": "Clay",
+              "OID": "2759046933991",
+              "LSADC": "06",
+              "FUNCSTAT": "A",
+              "INTPTLAT": "+39.3155512",
+              "NAME": "Clay County",
+              "OBJECTID": 2323,
+              "CENTLON": "-094.4209274",
+              "COUNTYCC": "H1",
+              "COUNTYNS": "00758478",
+              "AREALAND": 1029945880,
+              "INTPTLON": "-094.4215024",
+              "MTFCC": "G4020",
+              "COUNTY": "047"
+            }
+          ],
+          "2026 State Legislative Districts - Upper": [
+            {
+              "GEOID": "29017",
+              "CENTLAT": "+39.2276101",
+              "AREAWATER": 4629056,
+              "STATE": "29",
+              "BASENAME": "17",
+              "OID": "2129042393388398",
+              "SLDU": "017",
+              "LSADC": "LU",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+39.2322180",
+              "NAME": "State Senate District 17",
+              "OBJECTID": 379,
+              "CENTLON": "-094.5215858",
+              "LSY": "2026",
+              "AREALAND": 292714194,
+              "INTPTLON": "-094.5274935",
+              "MTFCC": "G5210",
+              "LDTYP": "O"
+            }
+          ],
+          "120th Congressional Districts": [
+            {
+              "STGEOMETRY_Area": 74189386713.25914,
+              "CD120": "06",
+              "GEOID": "2906",
+              "CENTLAT": "+39.9893595",
+              "CDSESSN": "120",
+              "AREAWATER": 396829837,
+              "STATE": "29",
+              "BASENAME": "6",
+              "OID": "2119042393340459",
+              "LSADC": "C2",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+39.9904063",
+              "NAME": "Congressional District 6",
+              "OBJECTID": 57,
+              "CENTLON": "-093.5253022",
+              "STGEOMETRY_Length": 1614495.8250390226,
+              "AREALAND": 43102052468,
+              "INTPTLON": "-093.5241125",
+              "MTFCC": "G5200"
+            }
+          ],
+          "2026 State Legislative Districts - Lower": [
+            {
+              "GEOID": "29017",
+              "CENTLAT": "+39.1925100",
+              "SLDL": "017",
+              "AREAWATER": 2290326,
+              "STATE": "29",
+              "BASENAME": "17",
+              "OID": "2139042393388537",
+              "LSADC": "LL",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+39.1935041",
+              "NAME": "State House District 17",
+              "OBJECTID": 4179,
+              "CENTLON": "-094.4755526",
+              "LSY": "2026",
+              "AREALAND": 99015499,
+              "INTPTLON": "-094.4771802",
+              "MTFCC": "G5220",
+              "LDTYP": "O"
+            }
+          ],
+          "2020 Census Blocks": [
+            {
+              "SUFFIX": "",
+              "GEOID": "290470222003037",
+              "CENTLAT": "+39.1743215",
+              "BLOCK": "3037",
+              "AREAWATER": 0,
+              "STATE": "29",
+              "BASENAME": "3037",
+              "OID": "210701005446957",
+              "LSADC": "BK",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+39.1743215",
+              "NAME": "Block 3037",
+              "OBJECTID": 1641890,
+              "TRACT": "022200",
+              "CENTLON": "-094.4836027",
+              "BLKGRP": "3",
+              "AREALAND": 1850349,
+              "INTPTLON": "-094.4836027",
+              "MTFCC": "G5040",
+              "LWBLKTYP": "L",
+              "UR": "U",
+              "COUNTY": "047"
+            }
+          ],
+          "Census Tracts": [
+            {
+              "GEOID": "29047022200",
+              "CENTLAT": "+39.1634125",
+              "AREAWATER": 1823760,
+              "STATE": "29",
+              "BASENAME": "222",
+              "OID": "207903711715544",
+              "LSADC": "CT",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+39.1630328",
+              "NAME": "Census Tract 222",
+              "OBJECTID": 26652,
+              "TRACT": "022200",
+              "CENTLON": "-094.4514817",
+              "AREALAND": 44102532,
+              "INTPTLON": "-094.4518867",
+              "MTFCC": "G5020",
+              "COUNTY": "047"
+            }
+          ]
+        },
+        "coordinates": {
+          "x": -94.489341242397,
+          "y": 39.177249320447
+        },
+        "addressComponents": {
+          "zip": "64161",
+          "streetName": "WORLDS OF FUN",
+          "preType": "",
+          "city": "KANSAS CITY",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "4501",
+          "state": "MO",
+          "suffixType": "AVE",
+          "toAddress": "4599",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "4545 WORLDS OF FUN AVE, KANSAS CITY, MO, 64161"
+      }
+    ]
+  },
+  {
+    "id": "grotto",
+    "url": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=3102+Aad+Grotto+Road%2C+Poplar+Bluff%2C+MO+63901&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+    "http": 200,
+    "matches": []
+  },
+  {
+    "id": "ozark",
+    "url": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=22599+Highway+32%2C+Lebanon%2C+MO+65536&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+    "http": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "R",
+          "tigerLineId": "26126021"
+        },
+        "geographies": {
+          "States": [
+            {
+              "STATENS": "01779791",
+              "GEOID": "29",
+              "CENTLAT": "+38.3569837",
+              "AREAWATER": 2487431721,
+              "STATE": "29",
+              "BASENAME": "Missouri",
+              "STUSAB": "MO",
+              "OID": "2749046934061",
+              "LSADC": "00",
+              "FUNCSTAT": "A",
+              "INTPTLAT": "+38.3507508",
+              "DIVISION": "4",
+              "NAME": "Missouri",
+              "REGION": "2",
+              "OBJECTID": 12,
+              "CENTLON": "-092.4580520",
+              "AREALAND": 178052694679,
+              "INTPTLON": "-092.4567820",
+              "MTFCC": "G4000"
+            }
+          ],
+          "County Subdivisions": [
+            {
+              "COUSUB": "41186",
+              "GEOID": "2910541186",
+              "CENTLAT": "+37.6790866",
+              "AREAWATER": 714388,
+              "STATE": "29",
+              "BASENAME": "Lebanon",
+              "OID": "27690276937960",
+              "LSADC": "44",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+37.6777389",
+              "NAME": "Lebanon township",
+              "OBJECTID": 14531,
+              "CENTLON": "-092.6341192",
+              "COUSUBCC": "Z1",
+              "AREALAND": 148101349,
+              "INTPTLON": "-092.6368463",
+              "MTFCC": "G4040",
+              "COUSUBNS": "00766862",
+              "COUNTY": "105"
+            }
+          ],
+          "Counties": [
+            {
+              "GEOID": "29105",
+              "CENTLAT": "+37.6582789",
+              "AREAWATER": 8720827,
+              "STATE": "29",
+              "BASENAME": "Laclede",
+              "OID": "27590276932270",
+              "LSADC": "06",
+              "FUNCSTAT": "A",
+              "INTPTLAT": "+37.6596977",
+              "NAME": "Laclede County",
+              "OBJECTID": 543,
+              "CENTLON": "-092.5901864",
+              "COUNTYCC": "H1",
+              "COUNTYNS": "00758507",
+              "AREALAND": 1980522187,
+              "INTPTLON": "-092.5948430",
+              "MTFCC": "G4020",
+              "COUNTY": "105"
+            }
+          ],
+          "2026 State Legislative Districts - Upper": [
+            {
+              "GEOID": "29016",
+              "CENTLAT": "+37.7098726",
+              "AREAWATER": 42276059,
+              "STATE": "29",
+              "BASENAME": "16",
+              "OID": "2129042393388421",
+              "SLDU": "016",
+              "LSADC": "LU",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+37.7114479",
+              "NAME": "State Senate District 16",
+              "OBJECTID": 390,
+              "CENTLON": "-092.0855888",
+              "LSY": "2026",
+              "AREALAND": 10217848892,
+              "INTPTLON": "-092.0834053",
+              "MTFCC": "G5210",
+              "LDTYP": "O"
+            }
+          ],
+          "120th Congressional Districts": [
+            {
+              "STGEOMETRY_Area": 43557807768.995445,
+              "CD120": "04",
+              "GEOID": "2904",
+              "CENTLAT": "+37.9654423",
+              "CDSESSN": "120",
+              "AREAWATER": 717658477,
+              "STATE": "29",
+              "BASENAME": "4",
+              "OID": "2119042393340438",
+              "LSADC": "C2",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+37.9630592",
+              "NAME": "Congressional District 4",
+              "OBJECTID": 55,
+              "CENTLON": "-093.5781870",
+              "STGEOMETRY_Length": 1287375.4095242382,
+              "AREALAND": 26308929736,
+              "INTPTLON": "-093.5798124",
+              "MTFCC": "G5200"
+            }
+          ],
+          "2026 State Legislative Districts - Lower": [
+            {
+              "GEOID": "29141",
+              "CENTLAT": "+37.3956935",
+              "SLDL": "141",
+              "AREAWATER": 11821940,
+              "STATE": "29",
+              "BASENAME": "141",
+              "OID": "2139042393388694",
+              "LSADC": "LL",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+37.4003948",
+              "NAME": "State House District 141",
+              "OBJECTID": 3929,
+              "CENTLON": "-092.5056678",
+              "LSY": "2026",
+              "AREALAND": 4183984451,
+              "INTPTLON": "-092.5046767",
+              "MTFCC": "G5220",
+              "LDTYP": "O"
+            }
+          ],
+          "2020 Census Blocks": [
+            {
+              "SUFFIX": "",
+              "GEOID": "291059603012021",
+              "CENTLAT": "+37.6752809",
+              "BLOCK": "2021",
+              "AREAWATER": 3193,
+              "STATE": "29",
+              "BASENAME": "2021",
+              "OID": "210701005702083",
+              "LSADC": "BK",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+37.6752800",
+              "NAME": "Block 2021",
+              "OBJECTID": 7023247,
+              "TRACT": "960301",
+              "CENTLON": "-092.6172387",
+              "BLKGRP": "2",
+              "AREALAND": 1286050,
+              "INTPTLON": "-092.6172399",
+              "MTFCC": "G5040",
+              "LWBLKTYP": "B",
+              "UR": "R",
+              "COUNTY": "105"
+            }
+          ],
+          "Census Tracts": [
+            {
+              "GEOID": "29105960301",
+              "CENTLAT": "+37.6930588",
+              "AREAWATER": 261896,
+              "STATE": "29",
+              "BASENAME": "9603.01",
+              "OID": "2079015482115355",
+              "LSADC": "CT",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+37.6910494",
+              "NAME": "Census Tract 9603.01",
+              "OBJECTID": 38491,
+              "TRACT": "960301",
+              "CENTLON": "-092.5982221",
+              "AREALAND": 79297685,
+              "INTPTLON": "-092.5859115",
+              "MTFCC": "G5020",
+              "COUNTY": "105"
+            }
+          ]
+        },
+        "coordinates": {
+          "x": -92.619844432713,
+          "y": 37.668169182421
+        },
+        "addressComponents": {
+          "zip": "65536",
+          "streetName": "32",
+          "preType": "STATE HWY",
+          "city": "LEBANON",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "22661",
+          "state": "MO",
+          "suffixType": "",
+          "toAddress": "22501",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "22599 STATE HWY 32, LEBANON, MO, 65536"
+      }
+    ]
+  },
+  {
+    "id": "ballwin",
+    "url": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=14918+Manchester+Road%2C+Ballwin%2C+MO+63011&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+    "http": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "L",
+          "tigerLineId": "100113299"
+        },
+        "geographies": {
+          "States": [
+            {
+              "STATENS": "01779791",
+              "GEOID": "29",
+              "CENTLAT": "+38.3569837",
+              "AREAWATER": 2487431721,
+              "STATE": "29",
+              "BASENAME": "Missouri",
+              "STUSAB": "MO",
+              "OID": "2749046934061",
+              "LSADC": "00",
+              "FUNCSTAT": "A",
+              "INTPTLAT": "+38.3507508",
+              "DIVISION": "4",
+              "NAME": "Missouri",
+              "REGION": "2",
+              "OBJECTID": 12,
+              "CENTLON": "-092.4580520",
+              "AREALAND": 178052694679,
+              "INTPTLON": "-092.4567820",
+              "MTFCC": "G4000"
+            }
+          ],
+          "Combined Statistical Areas": [
+            {
+              "POP100": "",
+              "GEOID": "476",
+              "CENTLAT": "+38.6839906",
+              "AREAWATER": 582222433,
+              "BASENAME": "St. Louis-St. Charles-Farmington, MO-IL",
+              "OID": "2619034687908121",
+              "LSADC": "M0",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+38.6843841",
+              "NAME": "St. Louis-St. Charles-Farmington, MO-IL CSA",
+              "OBJECTID": 113,
+              "CSA": "476",
+              "CENTLON": "-090.2663583",
+              "INTPTLON": "-090.2644483",
+              "AREALAND": 23019554829,
+              "HU100": "",
+              "MTFCC": "G3100"
+            }
+          ],
+          "County Subdivisions": [
+            {
+              "COUSUB": "79801",
+              "GEOID": "2918979801",
+              "CENTLAT": "+38.5788288",
+              "AREAWATER": 197589,
+              "STATE": "29",
+              "BASENAME": "Wildhorse",
+              "OID": "27690539566261",
+              "LSADC": "44",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+38.5781688",
+              "NAME": "Wildhorse township",
+              "OBJECTID": 9878,
+              "CENTLON": "-090.5982561",
+              "COUSUBCC": "Z1",
+              "AREALAND": 37380519,
+              "INTPTLON": "-090.5992356",
+              "MTFCC": "G4040",
+              "COUSUBNS": "01987846",
+              "COUNTY": "189"
+            }
+          ],
+          "Urban Areas": [
+            {
+              "GEOID": "77770",
+              "CENTLAT": "+38.6375263",
+              "AREAWATER": 32072298,
+              "BASENAME": "St. Louis, MO--IL",
+              "OID": "27021149986311",
+              "UA": "77770",
+              "LSADC": "67",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+38.6363760",
+              "NAME": "St. Louis, MO--IL Urban Area",
+              "OBJECTID": 1051,
+              "CENTLON": "-090.3423811",
+              "AREALAND": 2358472684,
+              "INTPTLON": "-090.3414179",
+              "MTFCC": "G3500"
+            }
+          ],
+          "Incorporated Places": [
+            {
+              "DISP_CLR": 4,
+              "STGEOMETRY_Area": 38574986.41728319,
+              "NECTAPCI": "N",
+              "GEOID": "2903160",
+              "CENTLAT": "+38.5947255",
+              "AREAWATER": 0,
+              "BASENAME": "Ballwin",
+              "STATE": "29",
+              "OID": "27890539588153",
+              "LSADC": "25",
+              "PLACE": "03160",
+              "FUNCSTAT": "A",
+              "INTPTLAT": "+38.5947255",
+              "NAME": "Ballwin city",
+              "OBJECTID": 28637,
+              "PLACECC": "C1",
+              "CENTLON": "-090.5499603",
+              "STGEOMETRY_Length": 50730.740488892334,
+              "CBSAPCI": "N",
+              "AREALAND": 23528762,
+              "INTPTLON": "-090.5499603",
+              "PLACENS": "02394057",
+              "MTFCC": "G4110"
+            }
+          ],
+          "Counties": [
+            {
+              "GEOID": "29189",
+              "CENTLAT": "+38.6404733",
+              "AREAWATER": 40008921,
+              "STATE": "29",
+              "BASENAME": "St. Louis",
+              "OID": "27590539513588",
+              "LSADC": "06",
+              "FUNCSTAT": "A",
+              "INTPTLAT": "+38.6404382",
+              "NAME": "St. Louis County",
+              "OBJECTID": 1748,
+              "CENTLON": "-090.4438331",
+              "COUNTYCC": "H1",
+              "COUNTYNS": "00758549",
+              "AREALAND": 1317074957,
+              "INTPTLON": "-090.4454969",
+              "MTFCC": "G4020",
+              "COUNTY": "189"
+            }
+          ],
+          "2026 State Legislative Districts - Upper": [
+            {
+              "GEOID": "29015",
+              "CENTLAT": "+38.5960659",
+              "AREAWATER": 7965066,
+              "STATE": "29",
+              "BASENAME": "15",
+              "OID": "2129042393388397",
+              "SLDU": "015",
+              "LSADC": "LU",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+38.5942855",
+              "NAME": "State Senate District 15",
+              "OBJECTID": 378,
+              "CENTLON": "-090.6011063",
+              "LSY": "2026",
+              "AREALAND": 410246926,
+              "INTPTLON": "-090.5970403",
+              "MTFCC": "G5210",
+              "LDTYP": "O"
+            }
+          ],
+          "120th Congressional Districts": [
+            {
+              "STGEOMETRY_Area": 15284263382.944294,
+              "CD120": "02",
+              "GEOID": "2902",
+              "CENTLAT": "+38.2368414",
+              "CDSESSN": "120",
+              "AREAWATER": 78831209,
+              "STATE": "29",
+              "BASENAME": "2",
+              "OID": "2119042393340436",
+              "LSADC": "C2",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+38.2488162",
+              "NAME": "Congressional District 2",
+              "OBJECTID": 50,
+              "CENTLON": "-091.0501219",
+              "STGEOMETRY_Length": 695932.9667276053,
+              "AREALAND": 9335379083,
+              "INTPTLON": "-091.0468209",
+              "MTFCC": "G5200"
+            }
+          ],
+          "2026 State Legislative Districts - Lower": [
+            {
+              "GEOID": "29100",
+              "CENTLAT": "+38.5897443",
+              "SLDL": "100",
+              "AREAWATER": 0,
+              "STATE": "29",
+              "BASENAME": "100",
+              "OID": "2139042393388645",
+              "LSADC": "LL",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+38.5897443",
+              "NAME": "State House District 100",
+              "OBJECTID": 3774,
+              "CENTLON": "-090.5473476",
+              "LSY": "2026",
+              "AREALAND": 28627943,
+              "INTPTLON": "-090.5473476",
+              "MTFCC": "G5220",
+              "LDTYP": "O"
+            }
+          ],
+          "2020 Census Blocks": [
+            {
+              "SUFFIX": "",
+              "GEOID": "291892179231001",
+              "CENTLAT": "+38.5898660",
+              "BLOCK": "1001",
+              "AREAWATER": 0,
+              "STATE": "29",
+              "BASENAME": "1001",
+              "OID": "210701005859599",
+              "LSADC": "BK",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+38.5898660",
+              "NAME": "Block 1001",
+              "OBJECTID": 6716747,
+              "TRACT": "217923",
+              "CENTLON": "-090.5439759",
+              "BLKGRP": "1",
+              "AREALAND": 298674,
+              "INTPTLON": "-090.5439759",
+              "MTFCC": "G5040",
+              "LWBLKTYP": "L",
+              "UR": "U",
+              "COUNTY": "189"
+            }
+          ],
+          "Census Tracts": [
+            {
+              "GEOID": "29189217923",
+              "CENTLAT": "+38.5764084",
+              "AREAWATER": 0,
+              "STATE": "29",
+              "BASENAME": "2179.23",
+              "OID": "20790539604605",
+              "LSADC": "CT",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+38.5764084",
+              "NAME": "Census Tract 2179.23",
+              "OBJECTID": 72025,
+              "TRACT": "217923",
+              "CENTLON": "-090.5495309",
+              "AREALAND": 5085376,
+              "INTPTLON": "-090.5495309",
+              "MTFCC": "G5020",
+              "COUNTY": "189"
+            }
+          ]
+        },
+        "coordinates": {
+          "x": -90.543467455396,
+          "y": 38.592934080507
+        },
+        "addressComponents": {
+          "zip": "63011",
+          "streetName": "MANCHESTER",
+          "preType": "",
+          "city": "BALLWIN",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "14918",
+          "state": "MO",
+          "suffixType": "RD",
+          "toAddress": "14998",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "14918 MANCHESTER RD, BALLWIN, MO, 63011"
+      }
+    ]
+  },
+  {
+    "id": "ofallon",
+    "url": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=101+Fallon+Loop+Road%2C+O+Fallon%2C+MO+63368&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+    "http": 200,
+    "matches": [
+      {
+        "tigerLine": {
+          "side": "L",
+          "tigerLineId": "647288382"
+        },
+        "geographies": {
+          "States": [
+            {
+              "STATENS": "01779791",
+              "GEOID": "29",
+              "CENTLAT": "+38.3569837",
+              "AREAWATER": 2487431721,
+              "STATE": "29",
+              "BASENAME": "Missouri",
+              "STUSAB": "MO",
+              "OID": "2749046934061",
+              "LSADC": "00",
+              "FUNCSTAT": "A",
+              "INTPTLAT": "+38.3507508",
+              "DIVISION": "4",
+              "NAME": "Missouri",
+              "REGION": "2",
+              "OBJECTID": 12,
+              "CENTLON": "-092.4580520",
+              "AREALAND": 178052694679,
+              "INTPTLON": "-092.4567820",
+              "MTFCC": "G4000"
+            }
+          ],
+          "Combined Statistical Areas": [
+            {
+              "POP100": "",
+              "GEOID": "476",
+              "CENTLAT": "+38.6839906",
+              "AREAWATER": 582222433,
+              "BASENAME": "St. Louis-St. Charles-Farmington, MO-IL",
+              "OID": "2619034687908121",
+              "LSADC": "M0",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+38.6843841",
+              "NAME": "St. Louis-St. Charles-Farmington, MO-IL CSA",
+              "OBJECTID": 113,
+              "CSA": "476",
+              "CENTLON": "-090.2663583",
+              "INTPTLON": "-090.2644483",
+              "AREALAND": 23019554829,
+              "HU100": "",
+              "MTFCC": "G3100"
+            }
+          ],
+          "County Subdivisions": [
+            {
+              "COUSUB": "18244",
+              "GEOID": "2918318244",
+              "CENTLAT": "+38.7650145",
+              "AREAWATER": 30738,
+              "STATE": "29",
+              "BASENAME": "Dardenne",
+              "OID": "27690336752261",
+              "LSADC": "44",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+38.7638280",
+              "NAME": "Dardenne township",
+              "OBJECTID": 6329,
+              "CENTLON": "-090.6794294",
+              "COUSUBCC": "Z1",
+              "AREALAND": 25433266,
+              "INTPTLON": "-090.6792132",
+              "MTFCC": "G4040",
+              "COUSUBNS": "00767300",
+              "COUNTY": "183"
+            }
+          ],
+          "Urban Areas": [
+            {
+              "GEOID": "77770",
+              "CENTLAT": "+38.6375263",
+              "AREAWATER": 32072298,
+              "BASENAME": "St. Louis, MO--IL",
+              "OID": "27021149986311",
+              "UA": "77770",
+              "LSADC": "67",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+38.6363760",
+              "NAME": "St. Louis, MO--IL Urban Area",
+              "OBJECTID": 1051,
+              "CENTLON": "-090.3423811",
+              "AREALAND": 2358472684,
+              "INTPTLON": "-090.3414179",
+              "MTFCC": "G3500"
+            }
+          ],
+          "Incorporated Places": [
+            {
+              "DISP_CLR": 4,
+              "STGEOMETRY_Area": 132299196.52976784,
+              "NECTAPCI": "N",
+              "GEOID": "2954074",
+              "CENTLAT": "+38.7839072",
+              "AREAWATER": 11608,
+              "BASENAME": "O'Fallon",
+              "STATE": "29",
+              "OID": "27890336755764",
+              "LSADC": "25",
+              "PLACE": "54074",
+              "FUNCSTAT": "A",
+              "INTPTLAT": "+38.7788250",
+              "NAME": "O'Fallon city",
+              "OBJECTID": 31239,
+              "PLACECC": "C1",
+              "CENTLON": "-090.7212674",
+              "STGEOMETRY_Length": 307536.5033494989,
+              "CBSAPCI": "N",
+              "AREALAND": 80261842,
+              "INTPTLON": "-090.7217803",
+              "PLACENS": "02395303",
+              "MTFCC": "G4110"
+            }
+          ],
+          "Counties": [
+            {
+              "GEOID": "29183",
+              "CENTLAT": "+38.7820451",
+              "AREAWATER": 83022114,
+              "STATE": "29",
+              "BASENAME": "St. Charles",
+              "OID": "27590336728254",
+              "LSADC": "06",
+              "FUNCSTAT": "A",
+              "INTPTLAT": "+38.7811023",
+              "NAME": "St. Charles County",
+              "OBJECTID": 2849,
+              "CENTLON": "-090.6751877",
+              "COUNTYCC": "H1",
+              "COUNTYNS": "00758546",
+              "AREALAND": 1451193708,
+              "INTPTLON": "-090.6749153",
+              "MTFCC": "G4020",
+              "COUNTY": "183"
+            }
+          ],
+          "2026 State Legislative Districts - Upper": [
+            {
+              "GEOID": "29002",
+              "CENTLAT": "+38.7162191",
+              "AREAWATER": 20832046,
+              "STATE": "29",
+              "BASENAME": "2",
+              "OID": "2129042393388377",
+              "SLDU": "002",
+              "LSADC": "LU",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+38.7172594",
+              "NAME": "State Senate District 2",
+              "OBJECTID": 472,
+              "CENTLON": "-090.8013759",
+              "LSY": "2026",
+              "AREALAND": 759983956,
+              "INTPTLON": "-090.8025413",
+              "MTFCC": "G5210",
+              "LDTYP": "O"
+            }
+          ],
+          "120th Congressional Districts": [
+            {
+              "STGEOMETRY_Area": 25507952662.679012,
+              "CD120": "03",
+              "GEOID": "2903",
+              "CENTLAT": "+39.0956698",
+              "CDSESSN": "120",
+              "AREAWATER": 344120449,
+              "STATE": "29",
+              "BASENAME": "3",
+              "OID": "2119042393340437",
+              "LSADC": "C2",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+39.0923319",
+              "NAME": "Congressional District 3",
+              "OBJECTID": 51,
+              "CENTLON": "-091.4946211",
+              "STGEOMETRY_Length": 931181.4400229998,
+              "AREALAND": 14997887653,
+              "INTPTLON": "-091.4946701",
+              "MTFCC": "G5200"
+            }
+          ],
+          "2026 State Legislative Districts - Lower": [
+            {
+              "GEOID": "29107",
+              "CENTLAT": "+38.7458906",
+              "SLDL": "107",
+              "AREAWATER": 0,
+              "STATE": "29",
+              "BASENAME": "107",
+              "OID": "2139042393388650",
+              "LSADC": "LL",
+              "FUNCSTAT": "N",
+              "INTPTLAT": "+38.7458906",
+              "NAME": "State House District 107",
+              "OBJECTID": 3877,
+              "CENTLON": "-090.7172123",
+              "LSY": "2026",
+              "AREALAND": 30847916,
+              "INTPTLON": "-090.7172123",
+              "MTFCC": "G5220",
+              "LDTYP": "O"
+            }
+          ],
+          "2020 Census Blocks": [
+            {
+              "SUFFIX": "",
+              "GEOID": "291833117353007",
+              "CENTLAT": "+38.7670002",
+              "BLOCK": "3007",
+              "AREAWATER": 0,
+              "STATE": "29",
+              "BASENAME": "3007",
+              "OID": "210701005781306",
+              "LSADC": "BK",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+38.7670002",
+              "NAME": "Block 3007",
+              "OBJECTID": 6465940,
+              "TRACT": "311735",
+              "CENTLON": "-090.6977191",
+              "BLKGRP": "3",
+              "AREALAND": 220683,
+              "INTPTLON": "-090.6977191",
+              "MTFCC": "G5040",
+              "LWBLKTYP": "L",
+              "UR": "U",
+              "COUNTY": "183"
+            }
+          ],
+          "Census Tracts": [
+            {
+              "GEOID": "29183311735",
+              "CENTLAT": "+38.7741537",
+              "AREAWATER": 0,
+              "STATE": "29",
+              "BASENAME": "3117.35",
+              "OID": "207903711850354",
+              "LSADC": "CT",
+              "FUNCSTAT": "S",
+              "INTPTLAT": "+38.7741537",
+              "NAME": "Census Tract 3117.35",
+              "OBJECTID": 52072,
+              "TRACT": "311735",
+              "CENTLON": "-090.6890332",
+              "AREALAND": 3225280,
+              "INTPTLON": "-090.6890332",
+              "MTFCC": "G5020",
+              "COUNTY": "183"
+            }
+          ]
+        },
+        "coordinates": {
+          "x": -90.700048687725,
+          "y": 38.764203107345
+        },
+        "addressComponents": {
+          "zip": "63368",
+          "streetName": "FALLON LOOP",
+          "preType": "",
+          "city": "O FALLON",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "101",
+          "state": "MO",
+          "suffixType": "RD",
+          "toAddress": "199",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "101 FALLON LOOP RD, O FALLON, MO, 63368"
+      }
+    ]
+  }
+]

@@ -1,3 +1,20 @@
+# Pick For Us — Statewide Delta6 Frozen: Eighteen Leads, Five Proposals (2026-10-09)
+
+## CURRENT
+Three-source delta research classified **18 commercial/public leads plus5 separate home/uncertain-classification leads**, deduped against live32, prepared11, exact original134 and later ledgers. No statewide completeness or global novelty claim. New named identities remain provisional against the unavailable earlier external sweep. Original134 input SHA256 **87a1f244d9a13348ec7f7318fcc022e4796f162f05d2ea24f350cb83260e4ede**.
+
+Frozen package audit/astra-statewide-delta6-2026-10-09/: **Classification-Matrix-R2.json** SHA **ca6fd3c1592039a30a1757ec4fab214660b102febaa5dbff08fb53cdb0ab3974**; **Priority-Projections-R2.json** SHA **a29096db200a38c405401a795a7ef8dae92974ba2963ed9b0cf734441dee7e09**; final README-R2 and SHA256SUMS-R2 retained. R1 is preserved. Five proposals: Worlds of Fun Halloween Haunt, Ozark Nightmares, Ballwin and O’Fallon Tunnel of Terror, Haunted Grotto. Four exact Census matches; R2 Grotto recovers named exact-public-address Waze marker36.7950117,-90.4314449 after Census/Nominatim no-match. All placements approximate/address Directions. Full new raw operator HTML/geocode and method-specific web receipts persisted. No researcher self-approval.
+
+Two optional existing-record enrichments remain evidence-only proposals with explicit currentDetails diffs. Stronger first-party facts/conflicts preserved; Brookdale fall-festivalNov8 cutoff never extends its separately admitted haunted trail. Residential/uncertain leads remain segregated.
+
+## NEXT
+Independent review adjudicates exact five source/date/address/placement/lifecycle/copy projections, especially indexed location-specific operator events versus sparse/throttled direct pages. Only compatible approved subset joins eleven+commercial additions. Commercial4 independent binding in progress. Eleven stable full tests, lint/typecheck and safe auth-enabled migration-free build now PASS locally; hosted and independent runtime gates remain. All imported records receive new/existing browser and geometry coverage.
+
+## HOLD
+No new delta import/runtime PASS. Grotto prior placement HOLD is historical R1 pending independentR2 acceptance. Lemp cannot borrow Darkness/Creepyworld schedules; unconfirmed2026 opening stays HOLD. Cadaver focused source-binding assessment continues. All residential gates remain. Main979d83a/treea7db, productionF1 READY/source979d and BCd rollback unchanged last verified baseline. Local Chromium unavailable; hosted browser required. Six inherited warnings/narrow Directions clipping/physical-device qualifications and no merge/deploy/settings/waiver/signing/Play authority persist.
+
+PARENT COMMIT **f03c885ec7aeb11ee4171fcf7f96eae05b534af5**. Prior history follows verbatim.
+
 # Pick For Us — Feemster Placement Recovered; Fourth Commercial Proposal (2026-10-09)
 
 ## CURRENT

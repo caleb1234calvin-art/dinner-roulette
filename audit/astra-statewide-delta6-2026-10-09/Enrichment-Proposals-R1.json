@@ -1,0 +1,50 @@
+{
+  "frozenAt": "2026-10-09T05:01:32.879431+00:00",
+  "records": [
+    {
+      "recordId": "MO26-085",
+      "canonicalId": "date-night-mo26-085-brookdale-farms",
+      "catalogMain": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+      "presentationPath": "src/lib/date-night/seasonal-presentation-catalog.ts",
+      "existingDetails": [
+        "Fall Festival runs September 11–November 8, 2026. Check the date-specific calendar because activities and closing times vary.",
+        "Corn maze and pumpkin patch; activities vary with date, weather and staffing.",
+        "Dogs require a waiver at check-in.",
+        "Location is approximate."
+      ],
+      "proposedDetails": [
+        "Fall Festival runs September 11–November 8, 2026. Check the date-specific calendar because activities and closing times vary.",
+        "Corn maze and pumpkin patch; activities vary with date, weather and staffing.",
+        "Dogs require a waiver at check-in.",
+        "The Hollows haunted trail uses separate admission and its own October calendar.",
+        "Location is approximate."
+      ],
+      "addedSentence": "The Hollows haunted trail uses separate admission and its own October calendar.",
+      "sourceUrl": "https://www.brookdalefarms.com/the-hollows",
+      "decision": "EVIDENCE-ONLY — independent material copy review required before mutation",
+      "scope": "Optional sentence only. Do not add HauntedHouse category to FallFestival, overwrite currenthours/cutoff, import2025FAQprices, or borrow SummerFest parking7997JimWeberRd."
+    },
+    {
+      "recordId": "MO26-124",
+      "canonicalId": "date-night-mo26-124-hotel-of-terror",
+      "catalogMain": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+      "presentationPath": "src/lib/date-night/seasonal-presentation-catalog.ts",
+      "existingDetails": [
+        "Selected dates September 11–October 31, 2026; doors open 7 p.m. Closing time varies with attendance.",
+        "Liability waiver with fingerprint signature required. Loud sound, strobes, darkness, fog and wet conditions.",
+        "Location is approximate."
+      ],
+      "proposedDetails": [
+        "Selected dates September 11–October 31, 2026; doors open 7 p.m. Closing time varies with attendance.",
+        "Liability waiver with fingerprint signature required. Loud sound, strobes, darkness, fog and wet conditions.",
+        "A combo pass with Dungeons of Doom includes transfer rides between the two haunts.",
+        "Location is approximate."
+      ],
+      "addedSentence": "A combo pass with Dungeons of Doom includes transfer rides between the two haunts.",
+      "sourceUrl": "https://www.hotelofterror.com/",
+      "decision": "EVIDENCE-ONLY — independent material copy review required before mutation",
+      "scope": "Optional arrival/admission note only; do not promise specific ridevehicle or availability, and do not add directory unsupported last-ever-season claim."
+    }
+  ],
+  "noRuntimeChangeRequired": true
+}

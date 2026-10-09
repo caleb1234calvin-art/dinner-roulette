@@ -1,0 +1,29 @@
+{
+  "recordId": "DELTA3-GROTTO",
+  "sourceUrl": "https://www.waze.com/live-map/directions/us/mo/poplar-bluff/3102-aad-grotto-rd?to=place.ChIJyQVQh72614cRiUJfLHYyszA",
+  "retrievedAt": "2026-10-09T05:03:13.790045+00:00",
+  "httpStatus": 200,
+  "sourceType": "Waze public address-geocode page, not operator entrance pin",
+  "pageTitle": "Driving directions to 3102 Aad Grotto Rd, 3102 Aad Grotto Rd, Poplar Bluff - Waze",
+  "addressMatch": {
+    "houseNumber": "3102",
+    "street": "Aad Grotto Rd",
+    "city": "Poplar Bluff",
+    "state": "MO"
+  },
+  "coordinates": {
+    "lat": 36.7950117,
+    "lon": -90.4314449
+  },
+  "precision": "Approximate address-derived placement only. Directions remain operator-published visitor address. Not verified entrance or parking.",
+  "rawReceipt": "grotto-waze.html",
+  "rawSha256": "8bc52ce8086b89bcd4b76b2027185218f566a1009825bbafbe6adfb7de021481",
+  "extraction": "Exact venue.latLng and venue.address in server-delivered public HTML; schema Place geo repeats point. No coordinate taken from generic map bounds.",
+  "priorAttempts": [
+    "Census published address no match",
+    "Census normalized spacing no match",
+    "Nominatim exact address no match",
+    "ScareFactor map link only address query; no point"
+  ],
+  "factualReview": "Independent review still required; this resolves author placement gap only."
+}

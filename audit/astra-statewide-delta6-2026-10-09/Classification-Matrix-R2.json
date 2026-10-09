@@ -1,0 +1,943 @@
+{
+  "auditId": "ASTRA-MISSOURI-DELTA6-2026-10-09",
+  "frozenAt": "2026-10-09T05:01:32.879431+00:00",
+  "records": [
+    {
+      "recordId": "DELTA6-WORLDS-OF-FUN",
+      "name": "Worlds of Fun — Halloween Haunt",
+      "classification": "NET NEW",
+      "decision": "CURRENT CANDIDATE — independent review pending",
+      "newFieldsRecovered": [
+        "identity",
+        "visitorAddress",
+        "exactActiveDates",
+        "hours",
+        "admission",
+        "phone",
+        "ageRestriction",
+        "arrival",
+        "ticketUrl"
+      ],
+      "remainingBlocker": "Frozen projection deliberately covers explicit October calendar only, not inferred September dates.; All dates must be bound to 2026 only.; Calendar has park-hours entries separate from haunt entries; keep hours partial.; No separate passholder-exclusive October 29 import.",
+      "sourceUrls": [
+        "https://worldsoffun.enchantedparks.com/halloween-haunt/",
+        "https://worldsoffun.enchantedparks.com/park-info/calendar-hours/",
+        "https://worldsoffun.enchantedparks.com/park-info/code-of-conduct/"
+      ],
+      "priorIdentity": null
+    },
+    {
+      "recordId": "DELTA2-OZARK",
+      "name": "Ozark Nightmares Haunted House — The Viscount’s Manor",
+      "classification": "HISTORICAL HOLD / re-clearance",
+      "decision": "CURRENT CANDIDATE — independent review pending",
+      "newFieldsRecovered": [
+        "identity",
+        "visitorAddress",
+        "exactActiveDates",
+        "hours"
+      ],
+      "remainingBlocker": "2026 schedule is indexed first-party evidence; direct Facebook page unavailable. Independent reviewer must accept/reproduce this evidence before PASS.; DMO 2020-path event currently describing 2025 is not used to bind 2026.; Unknown admission availability, restrictions and closing times remain explicit unknowns.",
+      "sourceUrls": [
+        "https://www.facebook.com/OzarkNightmares/posts/ozark-nightmares-2026-seasonthe-viscounts-manor-will-be-open-september-25th26th-/1721554156641099/",
+        "https://www.facebook.com/events/22599-highway-32-lebanon-mo/halloween-weekend-20-years-of-ozark-nightmares-haunted-house-and-corn-maze-the-v/1445243187544330/",
+        "https://www.thescarefactor.com/haunted-houses/missouri/ozark-nightmares-haunted-house/"
+      ],
+      "priorIdentity": "DELTA2-OZARK"
+    },
+    {
+      "recordId": "DELTA3-BALLWIN",
+      "name": "Tunnel of Terror — Tommy’s Express Ballwin",
+      "classification": "HISTORICAL HOLD / re-clearance",
+      "decision": "CURRENT CANDIDATE — independent review pending",
+      "newFieldsRecovered": [
+        "identity",
+        "visitorAddress",
+        "exactActiveDates",
+        "hours",
+        "phone",
+        "admission"
+      ],
+      "remainingBlocker": "Direct 200 HTML and extracted page do not contain event details; indexed source date binding requires independent corroboration.; Ordinary daily wash hours not substituted for event schedule.; Category requires existing Other Halloween / Fall semantics; do not label walk-through haunted house.; Drive-through attraction: do not promise a precise pedestrian or rideshare entrance.",
+      "sourceUrls": [
+        "https://tommys-express.com/locations/mo156/",
+        "https://www.facebook.com/events/14918-manchester-rd-ballwin-mo-63011/tunnel-of-terror-tommys-express-ballwin/1482904123658769/",
+        "https://www.facebook.com/events/14918-manchester-rd-ballwin-mo-63011/tunnel-of-terror-tommys-express-ballwin/1482904133658768/"
+      ],
+      "priorIdentity": "DELTA3-BALLWIN"
+    },
+    {
+      "recordId": "DELTA6-OFALLON",
+      "name": "Tunnel of Terror — Tommy’s Express O’Fallon",
+      "classification": "NET NEW",
+      "decision": "CURRENT CANDIDATE — independent review pending",
+      "newFieldsRecovered": [
+        "identity",
+        "visitorAddress",
+        "exactActiveDates",
+        "hours",
+        "phone"
+      ],
+      "remainingBlocker": "Independent evidence confidence lower than Ballwin: direct HTML event cards blank; exact dates/hours depend on saved location-specific search receipt.; Nationwide Tunnel of Terror campaign cannot prove location dates; Ballwin schedule was not copied as proof.; No price imported; no exact ticket inventory claim.; Drive-through classification and ride semantics need product/runtime review.",
+      "sourceUrls": [
+        "https://tommys-express.com/locations/mo77/"
+      ],
+      "priorIdentity": null
+    },
+    {
+      "recordId": "DELTA3-GROTTO",
+      "name": "The Haunted Grotto",
+      "classification": "HISTORICAL HOLD / re-clearance",
+      "decision": "CURRENT CANDIDATE — independent review pending",
+      "newFieldsRecovered": [
+        "identity",
+        "visitorAddress",
+        "exactActiveDates",
+        "hours",
+        "admission",
+        "Exact public-address Waze geocode36.7950117,-90.4314449; approximate only"
+      ],
+      "remainingBlocker": "Independent acceptance of indexed2026 operator/vendor date evidence and exact-address Waze placement qualification. Runtime not implemented or reviewed. Census/Nominatim no-match preserved; no generic city or road point used.",
+      "sourceUrls": [
+        "https://semodollarsaver.com/product/1-admission-ticket-to-the-haunted-grotto-10-9-10-31/",
+        "https://www.facebook.com/events/3102-aad-grotto-road-poplar-bluff-mo/the-haunted-grotto-2026/27777216921952770/",
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-haunted-grotto/",
+        "https://www.waze.com/live-map/directions/us/mo/poplar-bluff/3102-aad-grotto-rd?to=place.ChIJyQVQh72614cRiUJfLHYyszA"
+      ],
+      "priorIdentity": "DELTA3-GROTTO"
+    },
+    {
+      "recordId": "DELTA6-ROLLA",
+      "name": "A Field of Screams / Timmy’s Terror, Rolla",
+      "classification": "NET NEW",
+      "decision": "HOLD",
+      "newFieldsRecovered": [
+        "Current operator rebrand and public visitor address18255US63; indexed Oct10,2026 operator event"
+      ],
+      "remainingBlocker": "Whole-season operator schedule Oct2–31 not explicitly year-bound; Oct10 event may support smaller exact subset but hours conflict22:00 directory versus23:00 indexed operator; no placement prepared.",
+      "sourceUrls": [
+        "https://hauntedhouserolla.com/",
+        "https://www.facebook.com/events/rolla-mo-united-states-missouri/timmys-terror-haunted-trail/1545245127374595/",
+        "https://www.missourihauntedhouses.com/halloween/a-field-of-screams-mo.html",
+        "https://www.thescarefactor.com/haunted-houses/missouri/a-field-of-screams/"
+      ],
+      "priorIdentity": null
+    },
+    {
+      "recordId": "DELTA6-BRANSON-FIELD",
+      "name": "Field of Screams Branson",
+      "classification": "NET NEW",
+      "decision": "HOLD",
+      "newFieldsRecovered": [
+        "Public commercial attraction at1000PatNashDrive;2026 operator/DMO season signal"
+      ],
+      "remainingBlocker": "DMO extraction nav-only; conflicting tradepress Sep/Oct opening and four November crossover dates not resolved to exact lifecycle. Distinct from MO26-037 Nixa.",
+      "sourceUrls": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/field-of-screams-branson/",
+        "https://www.facebook.com/fieldofscreamsbranson/",
+        "https://www.explorebranson.com/event/field-of-screams-branson/6036/",
+        "https://hauntedattractionnetwork.com/field-of-screams-nixa-expands-to-branson/"
+      ],
+      "priorIdentity": null
+    },
+    {
+      "recordId": "DELTA3-FEARSTONE",
+      "name": "Fearstone Forest Haunted Trail",
+      "classification": "HISTORICAL HOLD / re-clearance",
+      "decision": "HOLD",
+      "newFieldsRecovered": [
+        "Indexed operator2026 opening signal; waiver venue85BenneBlvd Eldon"
+      ],
+      "remainingBlocker": "Exact operating calendar remains image/year unbound;837NHwy5 organizer address vs85Benne venue must stay separate;18+Oct17/kidsOct31 cannot be treated2026 before binding.",
+      "sourceUrls": [
+        "https://www.fearstoneforest.com/",
+        "https://www.facebook.com/fearstonehaunt/"
+      ],
+      "priorIdentity": "DELTA3-FEARSTONE"
+    },
+    {
+      "recordId": "DELTA3-FUN-TIME",
+      "name": "Fun Time Farms Haunted Corn MAiZE",
+      "classification": "HISTORICAL HOLD / re-clearance",
+      "decision": "HOLD",
+      "newFieldsRecovered": [
+        "Operator indexed2026 price-list/season post"
+      ],
+      "remainingBlocker": "Final active date/expiry still unresolved; hiring or season announcement alone does not establish exact season.",
+      "sourceUrls": [
+        "https://www.facebook.com/FunTimeFarms/posts/we-are-one-month-out-from-our-opening-day-heres-our-updated-price-list-for-the-2/1544670360793681/",
+        "https://www.missourihauntedhouses.com/halloween/fun-time-farms-mo.html"
+      ],
+      "priorIdentity": "DELTA3-FUN-TIME"
+    },
+    {
+      "recordId": "DELTA3-TERRIFIEDEXIST",
+      "name": "TerrifiedExist Haunted Attractions",
+      "classification": "HISTORICAL HOLD / re-clearance",
+      "decision": "HOLD",
+      "newFieldsRecovered": [
+        "2026 operator hiring event recovered"
+      ],
+      "remainingBlocker": "Hiring is not visitor operation; exact2026dates/expiry unresolved.",
+      "sourceUrls": [
+        "https://www.facebook.com/events/11490-mehl-ave-florissant-mo-united-states-missouri-63033/stlouis-2026-auditions-haunted-house-monstersdirectors-wanted/2218583845591250/",
+        "https://www.thescarefactor.com/haunted-houses/missouri/"
+      ],
+      "priorIdentity": "DELTA3-TERRIFIEDEXIST"
+    },
+    {
+      "recordId": "MO26-088",
+      "name": "Lemp Brewery Haunted House",
+      "classification": "HISTORICAL HOLD / re-clearance",
+      "decision": "HOLD",
+      "newFieldsRecovered": [
+        "Current operator notices conflict: may/may-not open2026 versus marketingback2026; public3500Lemp identity retained"
+      ],
+      "remainingBlocker": "No Lemp-specific2026 calendar/expiry or official ticket availability; shared Scarefest calendar/tickets currently Darkness+Creepyworld only.",
+      "sourceUrls": [
+        "https://www.lemphauntedhouse.com/whats-new-lemp-haunted-house",
+        "https://www.lemphauntedhouse.com/illinois-haunted-house-lemp-brewery-operation-dates",
+        "https://scarefest.fearticket.com/",
+        "https://www.thescarefactor.com/haunted-houses/missouri/lemp-brewery-haunted-house/"
+      ],
+      "priorIdentity": "MO26-088"
+    },
+    {
+      "recordId": "DELTA6-BOSS",
+      "name": "BOSS Haunted House, Fort Leonard Wood",
+      "classification": "NET NEW",
+      "decision": "HOLD",
+      "newFieldsRecovered": [
+        "Directory military installation contact/location guidance;2026 edit timestamp"
+      ],
+      "remainingBlocker": "2026 edit timestamp not2026 operation; prior schedule Oct25,2025 stale; supported visitor/base access route and final date absent.",
+      "sourceUrls": [
+        "https://www.missourihauntedhouses.com/halloween/boss-haunted-house-mo.html"
+      ],
+      "priorIdentity": null
+    },
+    {
+      "recordId": "MO26-085",
+      "name": "Brookdale Farms / The Hollows",
+      "classification": "LIVE EXISTING / enrichment",
+      "decision": "EVIDENCE-ONLY ENRICHMENT PROPOSAL",
+      "newFieldsRecovered": [
+        "The Hollows separate admission,2026 exact October dates;age17-and-underadult;last ticket/check-in1hbeforeclose;weatherclosure refund/transfer"
+      ],
+      "remainingBlocker": "Do not apply haunted attraction lifecycle to FallFestivalNov8 or mix old2025FAQprices withcurrenttickets; consumer copy optional independent review.",
+      "sourceUrls": [
+        "https://www.brookdalefarms.com/the-hollows",
+        "https://www.brookdalefarms.com/events-calendar"
+      ],
+      "priorIdentity": "MO26-085"
+    },
+    {
+      "recordId": "MO26-124",
+      "name": "Hotel of Terror",
+      "classification": "LIVE EXISTING / enrichment",
+      "decision": "RETAIN EXISTING + OPTIONAL EVIDENCE ENRICHMENT",
+      "newFieldsRecovered": [
+        "Fresh operator2026 calendar;combo admission includes transfer rides to Dungeons"
+      ],
+      "remainingBlocker": "No need runtime churn; no supported last-ever-season claim from directory.",
+      "sourceUrls": [
+        "https://frightmaps.com/houses/missouri/hotel-of-terror",
+        "https://www.hotelofterror.com/"
+      ],
+      "priorIdentity": "MO26-124"
+    },
+    {
+      "recordId": "DELTA-DARKNESS-2026",
+      "name": "The Darkness",
+      "classification": "LIVE EXISTING / enrichment",
+      "decision": "RETAIN STRONGER EXISTING",
+      "newFieldsRecovered": [
+        "FrightMaps professional-attraction classification/operator link corroborated"
+      ],
+      "remainingBlocker": "Directory city-only address/0mile neighbors not usable placement; Scarefest date-hour conflicts already recognized, no overwrite.",
+      "sourceUrls": [
+        "https://frightmaps.com/houses/missouri/the-darkness",
+        "https://www.scarefest.com/times-dates-and-hours-st-louis-missouri-scariest-haunted-houses"
+      ],
+      "priorIdentity": "MO26-086 / DELTA-DARKNESS-2026"
+    },
+    {
+      "recordId": "DELTA-CREEPYWORLD-2026",
+      "name": "Creepyworld",
+      "classification": "LIVE EXISTING / enrichment",
+      "decision": "RETAIN STRONGER EXISTING",
+      "newFieldsRecovered": [
+        "Current Scarefest2026 date source corroborated"
+      ],
+      "remainingBlocker": "No unique stronger new consumer field; direct FrightMaps detail failed, index usedonlyforidentity.",
+      "sourceUrls": [
+        "https://frightmaps.com/haunted-houses/missouri",
+        "https://www.scarefest.com/times-dates-and-hours-st-louis-missouri-scariest-haunted-houses"
+      ],
+      "priorIdentity": "MO26-087 / DELTA-CREEPYWORLD-2026"
+    },
+    {
+      "recordId": "DUP-BEAST-EDGE",
+      "name": "The Beast and Edge of Hell combined directory row",
+      "classification": "DUPLICATE",
+      "decision": "NO NEW IMPORT",
+      "newFieldsRecovered": [
+        "Combined discovery deduped to two already-live identities"
+      ],
+      "remainingBlocker": "Not a third attraction; maintain each venue’s separate address/directions.",
+      "sourceUrls": [
+        "https://www.missourihauntedhouses.com/missouri-haunted-houses.aspx"
+      ],
+      "priorIdentity": "MO26-058 and MO26-059 / DELTA-EDGE-2026"
+    },
+    {
+      "recordId": "DELTA2-MACABRE",
+      "name": "Macabre Cinema",
+      "classification": "HISTORICAL HOLD / re-clearance",
+      "decision": "HOLD / NOT CURRENT FULL-SEASON",
+      "newFieldsRecovered": [
+        "Current DMO2026 redevelopment notice;FrightMaps awaiting2026 update"
+      ],
+      "remainingBlocker": "Traditional full-season schedule suspended for redevelopment; surprise event possibility not explicit dated public operation. Current magazine generic reopening conflicts; do not import.",
+      "sourceUrls": [
+        "https://www.visitkc.com/events/macabre-cinema-haunted-attraction-2026-update/",
+        "https://frightmaps.com/houses/missouri/macabre-cinema",
+        "https://kansascitymag.com/kansas-citys-haunted-houses-are-ready-to-scare-you-silly/"
+      ],
+      "priorIdentity": "DELTA2-MACABRE"
+    }
+  ],
+  "commercialPublicLeadCount": 18,
+  "counts": {
+    "DUPLICATE": 1,
+    "HISTORICAL HOLD / re-clearance": 8,
+    "LIVE EXISTING / enrichment": 4,
+    "NET NEW": 5
+  },
+  "excludedParallelWork": [
+    "Cadaver Zone",
+    "Werehouse",
+    "Wolfman",
+    "Aurora",
+    "Feemster",
+    "Shepherd Lantern",
+    "FearFactory",
+    "Haunted Hollows Palmyra",
+    "TwistedMinds Richwoods",
+    "Waco",
+    "Rising"
+  ],
+  "dedupe": {
+    "inputs": [
+      {
+        "path": "/workspace/scratch/45a2c39f129e/audit-input/Missouri-Seasonal-2026-Candidates.json",
+        "sha256": "87a1f244d9a13348ec7f7318fcc022e4796f162f05d2ea24f350cb83260e4ede",
+        "recordCount": 134,
+        "libraryFileId": "libfile_ec7a04f65d7081918964f75a5706e97e"
+      },
+      {
+        "path": "audit/missouri-delta5-2026-10-09/Missouri-Delta5-Research-R1.json",
+        "sha256": "ac19dbecf11b0006ed675060f790d8723a5c69cde76f028d5ebc0f6c8d22d88f"
+      },
+      {
+        "path": "audit/missouri-delta5-2026-10-09/revision-2/Missouri-Delta5-Research-R2.json",
+        "sha256": "2dd0b7be13f5f1ed4fa26837fe9db9390ac8d1c30965578f57270d8a114c132d"
+      },
+      {
+        "path": "audit/missouri-three-source-delta2-research-r3.json",
+        "sha256": "a57340ed8a18150c21c5ede1339ac66c709fff6183e8d1f769e966d9925d9be5"
+      },
+      {
+        "path": "audit/missouri-three-source-delta3-research-r2.json",
+        "sha256": "0845719a25a8fae03a810a2370aad117b577a67990054be95dc8718dcd87539c"
+      },
+      {
+        "path": "audit/missouri-three-source-delta4-research-r2.json",
+        "sha256": "6ebdd30a18c6089cf8e0ebe9f589977a3150030b3fb01747682face6221849aa"
+      },
+      {
+        "path": "audit/missouri-three-source-delta4-research-r4.json",
+        "sha256": "45918c34c1ab199cdeca72614803b290396d258e095d3ee15acdd93e07ba032b"
+      }
+    ],
+    "liveCatalogs": [
+      {
+        "path": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts",
+        "sha256": "7c2c15b5323bc0649b6c2e64f815c9052bd476f17e26f3d0e4448876e712c08b"
+      },
+      {
+        "path": "src/lib/date-night/missouri-2026-cleared-catalog.ts",
+        "sha256": "52564f746709696bdde3ea775c50743aae40d1ca932bfb872aa93f840720f65a"
+      },
+      {
+        "path": "src/lib/date-night/missouri-2026-deferred-batch-3-catalog.ts",
+        "sha256": "42ba5f69f4d8ecd0fcfd8fc647dc21b5938bd105c93ac5489fc2559952b5757b"
+      },
+      {
+        "path": "src/lib/date-night/missouri-2026-final-four-catalog.ts",
+        "sha256": "7ab28748dbd26df3993882fe82903f35c61db1a8830399e110af51c1fae92111"
+      },
+      {
+        "path": "src/lib/date-night/missouri-2026-late-fall-catalog.ts",
+        "sha256": "c64b98a0d6ac8b5b2ba12974597ee93fa78123e29e1b71c21aafa43bd20297e3"
+      },
+      {
+        "path": "src/lib/date-night/missouri-2026-three-source-tier-a-catalog.ts",
+        "sha256": "88a36ad0a025299f7e21d6ef570653a9b791855905470ad0b2cdcb5579bfe9f8"
+      },
+      {
+        "path": "src/lib/date-night/missouri-2026-v1-catalog.ts",
+        "sha256": "726e2d0b717f68d1ead576d7cbc172782ab597e9a0b714a7a20a1d0c2649e9b0"
+      },
+      {
+        "path": "src/lib/date-night/missouri-2026-v1-next-catalog.ts",
+        "sha256": "0866a11ff68b0f2e0987a94848ec606195b1351dafb6a53df014ba9ffa6aef37"
+      }
+    ],
+    "historicalNames": [
+      {
+        "id": "MO26-001",
+        "name": "Exeter Corn Maze"
+      },
+      {
+        "id": "MO26-002",
+        "name": "Aurora Maize at Adventure Farm"
+      },
+      {
+        "id": "MO26-003",
+        "name": "RIP at Myer’s Inn"
+      },
+      {
+        "id": "MO26-004",
+        "name": "The Werehouse"
+      },
+      {
+        "id": "MO26-005",
+        "name": "Myers Forest of Fears"
+      },
+      {
+        "id": "MO26-006",
+        "name": "Wolfmans House Of Screams"
+      },
+      {
+        "id": "MO26-007",
+        "name": "The Cadaver Zone Spook House"
+      },
+      {
+        "id": "MO26-008",
+        "name": "Pickin’ Patch Farm"
+      },
+      {
+        "id": "MO26-009",
+        "name": "Drachenmoor All Ages Haunted Trail"
+      },
+      {
+        "id": "MO26-010",
+        "name": "The Aftermath Haunted Attraction"
+      },
+      {
+        "id": "MO26-011",
+        "name": "Beyond The Outer Limits"
+      },
+      {
+        "id": "MO26-012",
+        "name": "Christine’s Vineyard — Witches Day Out"
+      },
+      {
+        "id": "MO26-013",
+        "name": "Vino Noir — Witch Broom Making Workshop"
+      },
+      {
+        "id": "MO26-014",
+        "name": "Maple Leaf Festival"
+      },
+      {
+        "id": "MO26-015",
+        "name": "Neosho Fall Festival"
+      },
+      {
+        "id": "MO26-016",
+        "name": "Halloween Hullabaloo"
+      },
+      {
+        "id": "MO26-017",
+        "name": "Sarcoxie Trunk or Treat"
+      },
+      {
+        "id": "MO26-018",
+        "name": "Right Choices Corn Maze"
+      },
+      {
+        "id": "MO26-019",
+        "name": "James River Church Joplin — October 31st Party"
+      },
+      {
+        "id": "MO26-020",
+        "name": "Harvick Farms Fall Fest"
+      },
+      {
+        "id": "MO26-021",
+        "name": "Autumn in the Ozarks"
+      },
+      {
+        "id": "MO26-022",
+        "name": "Kings Prairie Fall Festival"
+      },
+      {
+        "id": "MO26-023",
+        "name": "Villa Heights Pumpkin Fundraiser"
+      },
+      {
+        "id": "MO26-024",
+        "name": "Four States Card Show"
+      },
+      {
+        "id": "MO26-025",
+        "name": "Webb City Downtown Trick or Treat"
+      },
+      {
+        "id": "MO26-026",
+        "name": "Carterville Comets Park Trunk or Treat"
+      },
+      {
+        "id": "MO26-027",
+        "name": "Labyrinth of Fear"
+      },
+      {
+        "id": "MO26-028",
+        "name": "Nevada/Vernon County Oktoberfest Fall Festival"
+      },
+      {
+        "id": "MO26-029",
+        "name": "Campbell’s Maze Daze & Pumpkin Patch"
+      },
+      {
+        "id": "MO26-030",
+        "name": "Rutledge-Wilson Farm Park"
+      },
+      {
+        "id": "MO26-031",
+        "name": "Silver Dollar City — Harvest Festival"
+      },
+      {
+        "id": "MO26-032",
+        "name": "Shepherd of the Hills — PumpkinFest"
+      },
+      {
+        "id": "MO26-033",
+        "name": "Roaring River State Park — Halloween"
+      },
+      {
+        "id": "MO26-034",
+        "name": "Nathan and Olive Boone Homestead — Historical Haunts"
+      },
+      {
+        "id": "MO26-035",
+        "name": "Stockton State Park — Spooktacular Soiree"
+      },
+      {
+        "id": "MO26-036",
+        "name": "Monster Corn Maze"
+      },
+      {
+        "id": "MO26-037",
+        "name": "Field of Screams Nixa"
+      },
+      {
+        "id": "MO26-038",
+        "name": "7C’s Winery Sunflower Experience"
+      },
+      {
+        "id": "MO26-039",
+        "name": "Feemster Twisted Corn Maze"
+      },
+      {
+        "id": "MO26-040",
+        "name": "Restoration Ranch Fall Nights"
+      },
+      {
+        "id": "MO26-041",
+        "name": "Apple Butter Makin’ Days"
+      },
+      {
+        "id": "MO26-042",
+        "name": "Thayer Fall Festival"
+      },
+      {
+        "id": "MO26-043",
+        "name": "Hollister Grape and Fall Festival"
+      },
+      {
+        "id": "MO26-044",
+        "name": "Hartville Fall Festival"
+      },
+      {
+        "id": "MO26-045",
+        "name": "Sparta Persimmon Days"
+      },
+      {
+        "id": "MO26-046",
+        "name": "Pets and Pumpkins"
+      },
+      {
+        "id": "MO26-047",
+        "name": "Cassville Chili Cook-Off"
+      },
+      {
+        "id": "MO26-048",
+        "name": "Republic Pumpkin Daze"
+      },
+      {
+        "id": "MO26-049",
+        "name": "Seymour Apple Festival"
+      },
+      {
+        "id": "MO26-050",
+        "name": "Still Waters Resort Harvest Festival"
+      },
+      {
+        "id": "MO26-051",
+        "name": "Big Cedar Lodge — Cedar Fest"
+      },
+      {
+        "id": "MO26-052",
+        "name": "Kimberling City Fall Craft Fair"
+      },
+      {
+        "id": "MO26-053",
+        "name": "Holy Trinity Fall Bazaar"
+      },
+      {
+        "id": "MO26-054",
+        "name": "Fun Farm"
+      },
+      {
+        "id": "MO26-055",
+        "name": "Carolyn’s Pumpkin Patch"
+      },
+      {
+        "id": "MO26-056",
+        "name": "Liberty Corn Maze"
+      },
+      {
+        "id": "MO26-057",
+        "name": "Johnson Farms Plants & Pumpkins"
+      },
+      {
+        "id": "MO26-058",
+        "name": "Beast Haunted House"
+      },
+      {
+        "id": "MO26-059",
+        "name": "Edge of Hell"
+      },
+      {
+        "id": "MO26-060",
+        "name": "Kansas City Zoo & Aquarium — GloWild / Boo at the Zoo"
+      },
+      {
+        "id": "MO26-061",
+        "name": "Coffin Club at Fountain City Winery"
+      },
+      {
+        "id": "MO26-062",
+        "name": "Dorsett Hill Haunt"
+      },
+      {
+        "id": "MO26-063",
+        "name": "KC Pumpkin Patch"
+      },
+      {
+        "id": "MO26-064",
+        "name": "Louisburg Cider Mill"
+      },
+      {
+        "id": "MO26-065",
+        "name": "Weston Red Barn Farm"
+      },
+      {
+        "id": "MO26-066",
+        "name": "Red Barn Ranch"
+      },
+      {
+        "id": "MO26-067",
+        "name": "Shryocks Callaway Farms"
+      },
+      {
+        "id": "MO26-068",
+        "name": "Lloyd’s Family Farm"
+      },
+      {
+        "id": "MO26-069",
+        "name": "Dead Factory Haunted House"
+      },
+      {
+        "id": "MO26-070",
+        "name": "Hartsburg Pumpkin Festival"
+      },
+      {
+        "id": "MO26-071",
+        "name": "Pomme de Terre State Park — Pomme de Terror"
+      },
+      {
+        "id": "MO26-072",
+        "name": "Onondaga Cave State Park — Frightfully Fun Fest"
+      },
+      {
+        "id": "MO26-073",
+        "name": "Knob Noster State Park — Hallowfest"
+      },
+      {
+        "id": "MO26-074",
+        "name": "Osage Beach City Park Fall Festival"
+      },
+      {
+        "id": "MO26-075",
+        "name": "Pumpkin Float Fest"
+      },
+      {
+        "id": "MO26-076",
+        "name": "Rhymer’s Ridge"
+      },
+      {
+        "id": "MO26-077",
+        "name": "Fischer Farms Pumpkin Patch and Corn Maze"
+      },
+      {
+        "id": "MO26-078",
+        "name": "Pete’s Pumpkin Patch"
+      },
+      {
+        "id": "MO26-079",
+        "name": "Amber Valley Pumpkin Patch"
+      },
+      {
+        "id": "MO26-080",
+        "name": "St. James Grape and Fall Festival"
+      },
+      {
+        "id": "MO26-081",
+        "name": "Rolla Fall Arts and Crafts Festival"
+      },
+      {
+        "id": "MO26-082",
+        "name": "Warsaw Heritage Days"
+      },
+      {
+        "id": "MO26-083",
+        "name": "Noland’s Dusty Boots Pumpkin Patch"
+      },
+      {
+        "id": "MO26-084",
+        "name": "McWilliams Pumpkin Patch"
+      },
+      {
+        "id": "MO26-085",
+        "name": "Brookdale Farms Fall Festival"
+      },
+      {
+        "id": "MO26-086",
+        "name": "The Darkness"
+      },
+      {
+        "id": "MO26-087",
+        "name": "Creepyworld"
+      },
+      {
+        "id": "MO26-088",
+        "name": "Lemp Brewery Haunted House"
+      },
+      {
+        "id": "MO26-089",
+        "name": "Saint Louis Zoo — Boo at the Zoo"
+      },
+      {
+        "id": "MO26-090",
+        "name": "Legends & Lanterns"
+      },
+      {
+        "id": "MO26-091",
+        "name": "Broemmelsiek Park Corn Maze"
+      },
+      {
+        "id": "MO26-092",
+        "name": "St. Francois State Park Public Halloween Event"
+      },
+      {
+        "id": "MO26-093",
+        "name": "Centennial Farms"
+      },
+      {
+        "id": "MO26-094",
+        "name": "Washington State Park Fall Harvest Fest"
+      },
+      {
+        "id": "MO26-095",
+        "name": "Johnson’s Shut-Ins State Park Halloween"
+      },
+      {
+        "id": "MO26-096",
+        "name": "Meramec State Park Spooktacular"
+      },
+      {
+        "id": "MO26-097",
+        "name": "Arrow Rock Spooktacular"
+      },
+      {
+        "id": "MO26-098",
+        "name": "Van Meter State Park Spookin’ at the Park"
+      },
+      {
+        "id": "MO26-099",
+        "name": "Jefferson Landing — Backyard Movie"
+      },
+      {
+        "id": "MO26-100",
+        "name": "Urban Gardens Pumpkin Patch & Corn Maze"
+      },
+      {
+        "id": "MO26-101",
+        "name": "Crowder State Park — Fall Colors Bus Tours"
+      },
+      {
+        "id": "MO26-102",
+        "name": "Wallace State Park Fall Fun Event"
+      },
+      {
+        "id": "MO26-103",
+        "name": "Wakonda State Park Spooktacular"
+      },
+      {
+        "id": "MO26-104",
+        "name": "Main Street Social House — Little Lanterns Fair"
+      },
+      {
+        "id": "MO26-105",
+        "name": "The Great Jack-o-Lantern Festival"
+      },
+      {
+        "id": "MO26-106",
+        "name": "Mark Twain Lake Jellystone Park Halloween Weekends"
+      },
+      {
+        "id": "MO26-107",
+        "name": "Pony Express PumpkinFest"
+      },
+      {
+        "id": "MO26-108",
+        "name": "Downtown Maryville — Fall Into Fun"
+      },
+      {
+        "id": "MO26-109",
+        "name": "Mozingo Lake Haunted Campground"
+      },
+      {
+        "id": "MO26-110",
+        "name": "Dot Family Farms"
+      },
+      {
+        "id": "MO26-111",
+        "name": "Southside Fall Festival"
+      },
+      {
+        "id": "MO26-112",
+        "name": "Gospel Farms"
+      },
+      {
+        "id": "MO26-113",
+        "name": "River City Adventure Park — Jurassic Pumpkin Patch"
+      },
+      {
+        "id": "MO26-114",
+        "name": "Perryville Pumpkin Farm"
+      },
+      {
+        "id": "MO26-115",
+        "name": "Bollinger Mill State Historic Site — Trick-or-Treat Night"
+      },
+      {
+        "id": "MO26-116",
+        "name": "Sam A. Baker State Park — Halloween Bash"
+      },
+      {
+        "id": "MO26-117",
+        "name": "Beggs Family Farm"
+      },
+      {
+        "id": "MO26-118",
+        "name": "Haunted Hall of Horror at A. C. Brase Arena"
+      },
+      {
+        "id": "MO26-119",
+        "name": "GO WILD! Indoor Playground & Arcade"
+      },
+      {
+        "id": "MO26-120",
+        "name": "Chief Sarcoxie Days"
+      },
+      {
+        "id": "MO26-121",
+        "name": "Halloween Trick or Treat — Stadium Drive"
+      },
+      {
+        "id": "MO26-122",
+        "name": "Bloomsdale Fun Farm — Missouri Pumpkin Fest"
+      },
+      {
+        "id": "MO26-123",
+        "name": "Apple of My Eye Farm & Orchard"
+      },
+      {
+        "id": "MO26-124",
+        "name": "Hotel of Terror"
+      },
+      {
+        "id": "MO26-125",
+        "name": "Dungeons of Doom"
+      },
+      {
+        "id": "MO26-126",
+        "name": "Gardener’s Orchard Fall Festival"
+      },
+      {
+        "id": "MO26-127",
+        "name": "Hickory Ridge Orchard"
+      },
+      {
+        "id": "MO26-128",
+        "name": "Lone Jack Acres Fall Fun Fest"
+      },
+      {
+        "id": "MO26-129",
+        "name": "Fassnight Farm"
+      },
+      {
+        "id": "MO26-130",
+        "name": "Castle of Chaos"
+      },
+      {
+        "id": "MO26-131",
+        "name": "Ozark Fall Farmfest"
+      },
+      {
+        "id": "MO26-132",
+        "name": "Downtown Branson Fall Festival"
+      },
+      {
+        "id": "MO26-133",
+        "name": "Cider Days"
+      },
+      {
+        "id": "MO26-134",
+        "name": "Japanese Fall Festival"
+      }
+    ],
+    "method": "Exact and normalized aliases/city/address comparisons against all134 records, current32 catalogs, prepared11 and Delta2–5 retained research. Known historical identities use original IDs. Net-new means no matching record in these available canonical inputs, not exhaustive statewide completeness.",
+    "limitations": "Earlier external statewide sweep mentioned by Delta3 is not among canonical repository artifacts. NET NEW global novelty remains provisional against that unprovided ledger; absence in134/current catalogs/prior availableDelta2–5 is confirmed."
+  },
+  "scope": "Research only. No runtime, continuity, branch or deployment mutation.",
+  "revision": 2,
+  "supersedesMatrixSha256": "059c04905d3f8dfa05fe476353e93679b644792c6d63983c9353e7a9677dbc91",
+  "priorityProjectionFile": "Priority-Projections-R2.json",
+  "priorityProjectionSha256": "a29096db200a38c405401a795a7ef8dae92974ba2963ed9b0cf734441dee7e09"
+}
