@@ -1,0 +1,576 @@
+{
+  "review_state": "PROPOSALS ONLY; independentreviewpending",
+  "records": [
+    {
+      "contract": "Seasonal Listing Completeness V1 staged radius path",
+      "season_year": 2026,
+      "timezone": "America/Chicago",
+      "research_decision": "PASS PROPOSAL ONLY; INDEPENDENT REVIEW PENDING",
+      "independent_verification": "PENDING",
+      "runtime_status": "HOLD: implementation and exact-candidate review unperformed",
+      "runtime_eligible": false,
+      "automatic_import_allowed": false,
+      "record_id": "MO26-002",
+      "name": "Aurora Maize at Adventure Farm",
+      "projection": {
+        "coordinatePrecision": "approximate",
+        "directionsPolicy": "Use supported visitor address; point is for approximate placement only, not entrance/parking/dropoff",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "no_2027_recurrence": true,
+        "name": "Aurora Maize at Adventure Farm",
+        "activityTypes": [
+          "corn-maze",
+          "haunted-house"
+        ],
+        "categoryLabel": "Corn Maze / Haunted Attraction",
+        "description": "A corn maze and farm activities, with after-dark maze scares and Zombie Harvest paintball on selected nights.",
+        "details": "September 19–October 31, 2026. Wednesdays from October 7: 5–8:30 p.m.; Fridays 5–10 p.m.; Saturdays 4–10 p.m. These are last-admission times; final exit is not specified. Maze scares start at dark Friday/Saturday from September 25 and Wednesdays October 7–28. Zombie Harvest runs Friday/Saturday at dusk. Confirm the visitor entrance before traveling.",
+        "website": "https://auroramaize.com/hourstickets/",
+        "actionLabel": "Visit website",
+        "address": "20591 County Road 2200, Aurora, MO 65605",
+        "directionsTarget": "20591 County Road 2200, Aurora, MO 65605",
+        "lat": 36.9808456,
+        "lon": -93.6877871,
+        "valid_dates": [
+          "2026-09-19",
+          "2026-09-25",
+          "2026-09-26",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-07",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-14",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-21",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-28",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "expires_at": "2026-10-31T22:00:00-05:00",
+        "expiry_semantics": "Conservative new-visit visibility cutoff at final posted last-admission time; not a final-exit claim."
+      },
+      "fields": {
+        "visitor_address": {
+          "value": "20591 County Road 2200, Aurora, MO 65605",
+          "source_ids": [
+            "aurora-contact"
+          ],
+          "qualification": "Dedicated contact page explicitly labels physical location separately from mailing address; location/hours footers corroborate."
+        },
+        "placement": {
+          "value": {
+            "lat": 36.9808456,
+            "lon": -93.6877871,
+            "method": "operator-embedded public Aurora Maze marker"
+          },
+          "source_ids": [
+            "aurora-map"
+          ],
+          "qualification": "Approximate venue placement only. Marker description retains20701 address; no averaging/no exact entrance claim."
+        },
+        "season_dates_hours": {
+          "value": {
+            "dates": [
+              "2026-09-19",
+              "2026-09-25",
+              "2026-09-26",
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-07",
+              "2026-10-09",
+              "2026-10-10",
+              "2026-10-14",
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-21",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-28",
+              "2026-10-30",
+              "2026-10-31"
+            ],
+            "season_start": "2026-09-19",
+            "season_end": "2026-10-31",
+            "last_admission": {
+              "Wed": "20:30",
+              "Fri": "22:00",
+              "Sat": "22:00"
+            }
+          },
+          "source_ids": [
+            "aurora-hours"
+          ]
+        },
+        "activity_scope": {
+          "value": "Haunted maze Fri/Sat at dark fromSep25 plusWedOct7–28; ZombieHarvest Fri/Sat dusk only.",
+          "source_ids": [
+            "aurora-haunted",
+            "aurora-hours"
+          ]
+        },
+        "phone": {
+          "value": "417-489-1220; hotline417-236-6714",
+          "source_ids": [
+            "aurora-contact"
+          ]
+        }
+      },
+      "conflicts": [
+        "Homepage body and operator map-marker description say20701 Lawrence2200; dedicated contact/location/hours say20591. Both retained.",
+        "Prior ticket-vendor Saturday-opening conflict not silently resolved; no machine intervals."
+      ],
+      "adjudication_proposed": "Propose accepting explicit dedicated physical-location contact address20591 for navigation, approximate operator marker for radius only. Time-sensitive hours page freshly says last admission at posted closing times; expiry22:00 is admission visibility cutoff, not exit.",
+      "source_binding": {
+        "aurora-contact": {
+          "id": "aurora-contact",
+          "url": "https://auroramaize.com/contacts/",
+          "retrieved_at": "2026-10-09T04:52:10.206112+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://auroramaize.com/contacts/",
+          "bytes": 40566,
+          "sha256": "64f29f5841ffc2f25cc2a1a50858a1f0a0509cef583fd552ddad1d27584963cb",
+          "content_type": "text/html; charset=UTF-8",
+          "receipt_file": "receipts/aurora-contact.receipt.json",
+          "receipt_sha256": "6a236dc5d932b8193bd2dd4c6e33e3d0e16c40a9cddd37d1932ee41b79364b02",
+          "body_file": "receipts/aurora-contact.body"
+        },
+        "aurora-home": {
+          "id": "aurora-home",
+          "url": "https://auroramaize.com/",
+          "retrieved_at": "2026-10-09T04:52:10.206509+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://auroramaize.com/",
+          "bytes": 34757,
+          "sha256": "64062e6a6fd0c7f8edfd948dd062ea5b433c2f140dd36eca60987f7ea4d17be1",
+          "content_type": "text/html; charset=UTF-8",
+          "receipt_file": "receipts/aurora-home.receipt.json",
+          "receipt_sha256": "5cd702c7cde8bf59aa2127059e3e3517833e93144bcaf3023a6518f5eecf1eec",
+          "body_file": "receipts/aurora-home.body"
+        },
+        "aurora-hours": {
+          "id": "aurora-hours",
+          "url": "https://auroramaize.com/hourstickets/",
+          "retrieved_at": "2026-10-09T04:52:10.207195+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://auroramaize.com/hourstickets/",
+          "bytes": 19238,
+          "sha256": "039dd4c1b070b8d732e1e43c3829d25b72620f68adf82de8402ba6749f9d7f52",
+          "content_type": "text/html; charset=UTF-8",
+          "receipt_file": "receipts/aurora-hours.receipt.json",
+          "receipt_sha256": "c6eaaaf851852939f87fa80a9292f2196269a733782dfeb3fd54cb5f1940fdfb",
+          "body_file": "receipts/aurora-hours.body"
+        },
+        "aurora-haunted": {
+          "id": "aurora-haunted",
+          "url": "https://auroramaize.com/haunted/",
+          "retrieved_at": "2026-10-09T04:52:10.208337+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://auroramaize.com/haunted/",
+          "bytes": 18265,
+          "sha256": "7d1986a2aba2fa3a2b057d09ec39deefff0fec94ffe54eef0eadab7049d80579",
+          "content_type": "text/html; charset=UTF-8",
+          "receipt_file": "receipts/aurora-haunted.receipt.json",
+          "receipt_sha256": "5f157404fd9277f3a534ebc415d3c69624153285617edb0dc571ca62a393bc8d",
+          "body_file": "receipts/aurora-haunted.body"
+        },
+        "aurora-map": {
+          "id": "aurora-map",
+          "url": "https://www.google.com/maps/d/embed?mid=1r3gzFPM4zv8RVTvb5uD9ouIY6uALIFRs",
+          "retrieved_at": "2026-10-09T04:52:13.779184+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://www.google.com/maps/d/embed?mid=1r3gzFPM4zv8RVTvb5uD9ouIY6uALIFRs",
+          "bytes": 12379,
+          "sha256": "df68495e9eb85814e4005d134a1ff33d821433b8b009d4d49f8d5b789f6725ae",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/aurora-map.receipt.json",
+          "receipt_sha256": "dc606d08821b5759bba5688f20b560593ba16beb4afec9e6f0ec7a2aacd1eeff",
+          "body_file": "receipts/aurora-map.body"
+        }
+      },
+      "required_runtime_guards": [
+        "Never Open Now including provider/cache/saved/resumed/async merges",
+        "machine opening intervals null",
+        "Directions and ride target use accepted visitor address, never approximate point",
+        "Qualified approximate distance/radius placement",
+        "Hard exact2026 expiry with cutoff minus1ms/at/plus1ms and pending-RPC guards",
+        "No2027 recurrence",
+        "Current-policy reapplication to saved/cache identities",
+        "No global Halloween extension"
+      ],
+      "projection_sha256_canonical_json": "7121b2ad31bf4ea2168898ef20319950259e0982a3983a4e7a1f494deace867e"
+    },
+    {
+      "contract": "Seasonal Listing Completeness V1 staged radius path",
+      "season_year": 2026,
+      "timezone": "America/Chicago",
+      "research_decision": "PASS PROPOSAL ONLY; INDEPENDENT REVIEW PENDING",
+      "independent_verification": "PENDING",
+      "runtime_status": "HOLD: implementation and exact-candidate review unperformed",
+      "runtime_eligible": false,
+      "automatic_import_allowed": false,
+      "record_id": "DELTA2-SHEPHERD-LANTERN",
+      "name": "The Broken Hour at Shepherd’s Lantern",
+      "projection": {
+        "coordinatePrecision": "approximate",
+        "directionsPolicy": "Use supported visitor address; point is for approximate placement only, not entrance/parking/dropoff",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "no_2027_recurrence": true,
+        "name": "The Broken Hour at Shepherd’s Lantern",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "categoryLabel": "Haunted Experience",
+        "description": "An immersive haunted story with clues and choices in Bellweather’s barn and grounds.",
+        "details": "October 16–17, 2026; check your ticket for arrival time. Parental guidance suggested for darkness, suspense and frightening situations. Tickets are offered online and at the door. Online refunds are available up to seven days before the event. Confirm arrival instructions with your booking.",
+        "website": "https://www.eventbrite.com/e/the-broken-hour-tickets-2000536103338",
+        "actionLabel": "View tickets",
+        "address": "5803 Jakes Prairie Road, Cuba, MO 65453",
+        "directionsTarget": "5803 Jakes Prairie Road, Cuba, MO 65453",
+        "lat": 38.130489811549,
+        "lon": -91.467898376669,
+        "valid_dates": [
+          "2026-10-16",
+          "2026-10-17"
+        ],
+        "expires_at": "2026-10-17T22:00:00-05:00",
+        "expiry_semantics": "Final2026 endDate explicitly published by operator-linked Eventbrite event schema; not inferred recurrence or all-day interval."
+      },
+      "fields": {
+        "visitor_address": {
+          "value": "5803 Jakes Prairie Road, Cuba, MO 65453",
+          "source_ids": [
+            "shepherd-ticket"
+          ],
+          "qualification": "Event-specific operator-linked ticketing destination preferred over generic homepage footer5830."
+        },
+        "placement": {
+          "value": {
+            "lat": 38.130489811549,
+            "lon": -91.467898376669,
+            "method": "Census exact5803 address-range interpolation"
+          },
+          "source_ids": [
+            "shepherd5803-census"
+          ],
+          "qualification": "Approximate address-derived only; not surveyed entrance/parking."
+        },
+        "dates": {
+          "value": [
+            "2026-10-16",
+            "2026-10-17"
+          ],
+          "source_ids": [
+            "shepherd-home"
+          ]
+        },
+        "final_end": {
+          "value": "2026-10-17T22:00:00-05:00",
+          "source_ids": [
+            "shepherd-ticket"
+          ],
+          "qualification": "Event schema startOct16 19:00,endOct17 22:00; does not assert continuous overnight opening."
+        },
+        "admission": {
+          "value": {
+            "online_schema_price_usd": 32,
+            "availability_at_capture": "InStock",
+            "door_tickets": "offered",
+            "refunds": "up to7days beforeevent"
+          },
+          "source_ids": [
+            "shepherd-ticket",
+            "shepherd-home"
+          ],
+          "qualification": "Price/availability are observations, not guarantee; exact price omitted from consumer copy."
+        },
+        "age_safety": {
+          "value": "Parental guidance suggested: darkness, suspense, unsettling characters, frightening situations",
+          "source_ids": [
+            "shepherd-home"
+          ]
+        }
+      },
+      "conflicts": [
+        "Generic operator footer says5830; event-specific linkedEventbrite and directory say5803. Both preserved.",
+        "Homepage Wix businessLocationCoordinates38.0628225,-91.4034833 is genericcity-level metadata, REJECTED as venue placement.",
+        "Census5830 nearby alternate result retained only as conflict evidence, never averaged."
+      ],
+      "adjudication_proposed": "Propose resolving destination hierarchy in favor of operator-linked event-specific ticket destination5803; current event is positively2026 and scheduled. Address-derived5803 point accepted only as approximate. Consumer must check booking arrival instructions.",
+      "source_binding": {
+        "shepherd-home": {
+          "id": "shepherd-home",
+          "url": "https://www.shepherdslanternllc.com/",
+          "retrieved_at": "2026-10-09T04:52:13.871762+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://www.shepherdslanternllc.com/",
+          "bytes": 2161752,
+          "sha256": "e017b798cf70ee6c6b840580945af6d4abe7fe24972d6f02cede737126a4afbd",
+          "content_type": "text/html; charset=UTF-8",
+          "receipt_file": "receipts/shepherd-home.receipt.json",
+          "receipt_sha256": "e17edf1b8e9b42163b041fd2a90b31c8f7208ecc1bb4b098a9226e77a6fb6c55",
+          "body_file": "receipts/shepherd-home.body"
+        },
+        "shepherd-ticket": {
+          "id": "shepherd-ticket",
+          "url": "https://www.eventbrite.com/e/the-broken-hour-tickets-2000536103338",
+          "retrieved_at": "2026-10-09T04:52:14.410001+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://www.eventbrite.com/e/the-broken-hour-tickets-2000536103338",
+          "bytes": 176050,
+          "sha256": "c8f366f01cf60989e485f7813c2e410178ef94195fe4b9ce4d152da0402edc9d",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/shepherd-ticket.receipt.json",
+          "receipt_sha256": "c4bd3e98e927f4822e39308068f42f24a383fa9da1c7a2564b12f4d3c6a4aa14",
+          "body_file": "receipts/shepherd-ticket.body"
+        },
+        "shepherd5803-census": {
+          "id": "shepherd5803-census",
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5803+Jakes+Prairie+Road%2C+Cuba%2C+MO+65453&benchmark=Public_AR_Current&format=json",
+          "retrieved_at": "2026-10-09T04:52:14.670043+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5803+Jakes+Prairie+Road%2C+Cuba%2C+MO+65453&benchmark=Public_AR_Current&format=json",
+          "bytes": 657,
+          "sha256": "91ef48143c5a41e98acbd72058317e7370737b1c35df388a11bc07f2fa444c4e",
+          "content_type": "application/json",
+          "receipt_file": "receipts/shepherd5803-census.receipt.json",
+          "receipt_sha256": "23dfb61dc5e955fbdfbe410d948bcbc0f58ac9d8d23d9812a0d142921ee773f9",
+          "body_file": "receipts/shepherd5803-census.body"
+        },
+        "shepherd5830-census": {
+          "id": "shepherd5830-census",
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5830+Jakes+Prairie+Road%2C+Cuba%2C+MO+65453&benchmark=Public_AR_Current&format=json",
+          "retrieved_at": "2026-10-09T04:52:14.751670+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5830+Jakes+Prairie+Road%2C+Cuba%2C+MO+65453&benchmark=Public_AR_Current&format=json",
+          "bytes": 657,
+          "sha256": "d99cf650fd1c9de45e83e0275decf30a0210a1f470b80f90884fcc030b5cff1e",
+          "content_type": "application/json",
+          "receipt_file": "receipts/shepherd5830-census.receipt.json",
+          "receipt_sha256": "db6839611311d1aca82e03050dc7deda95746562f2496161901a8b84dc4840c3",
+          "body_file": "receipts/shepherd5830-census.body"
+        }
+      },
+      "required_runtime_guards": [
+        "Never Open Now including provider/cache/saved/resumed/async merges",
+        "machine opening intervals null",
+        "Directions and ride target use accepted visitor address, never approximate point",
+        "Qualified approximate distance/radius placement",
+        "Hard exact2026 expiry with cutoff minus1ms/at/plus1ms and pending-RPC guards",
+        "No2027 recurrence",
+        "Current-policy reapplication to saved/cache identities",
+        "No global Halloween extension"
+      ],
+      "projection_sha256_canonical_json": "f31f26ffb264221035b3a197a6192edb9808fba1da810dabe299062b94c3aacd"
+    },
+    {
+      "contract": "Seasonal Listing Completeness V1 staged radius path",
+      "season_year": 2026,
+      "timezone": "America/Chicago",
+      "research_decision": "PASS PROPOSAL ONLY; INDEPENDENT REVIEW PENDING",
+      "independent_verification": "PENDING",
+      "runtime_status": "HOLD: implementation and exact-candidate review unperformed",
+      "runtime_eligible": false,
+      "automatic_import_allowed": false,
+      "record_id": "DELTA2-HOLLOWS",
+      "name": "Haunted Hollows Haunted Trail",
+      "projection": {
+        "coordinatePrecision": "approximate",
+        "directionsPolicy": "Use supported visitor address; point is for approximate placement only, not entrance/parking/dropoff",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "no_2027_recurrence": true,
+        "name": "Haunted Hollows Haunted Trail",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "categoryLabel": "Haunted Trail",
+        "description": "A seasonal haunted trail in Palmyra.",
+        "details": "Confirmed ticket dates: October 9, 10, 24 and 30, 2026. October 10, 24 and 30 sessions run 7:30–11 p.m.; October 9 starts at 7:30 p.m. Check the booking calendar for other dates and current availability. Tickets are nonrefundable unless the organizer cancels.",
+        "website": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season",
+        "actionLabel": "View tickets",
+        "address": "5947 County Road 261, Palmyra, MO 63461",
+        "directionsTarget": "5947 County Road 261, Palmyra, MO 63461",
+        "lat": 39.733676,
+        "lon": -91.562875,
+        "valid_dates": [
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-24",
+          "2026-10-30"
+        ],
+        "expires_at": "2026-10-30T23:00:00-05:00",
+        "expiry_semantics": "Exact end of last independently readable session in deliberately bounded subset; not asserted full-season final date."
+      },
+      "fields": {
+        "visitor_address": {
+          "value": "5947 County Road 261, Palmyra, MO 63461",
+          "source_ids": [
+            "hollows-tickets"
+          ],
+          "qualification": "Matches prior TSF venue identity; explicit ticketing venue destination."
+        },
+        "placement": {
+          "value": {
+            "lat": 39.733676,
+            "lon": -91.562875,
+            "method": "public ticketing venue marker in gon.locations"
+          },
+          "source_ids": [
+            "hollows-tickets"
+          ],
+          "qualification": "Bound by exact venue name/address/phone; approximate only."
+        },
+        "explicit_dates": {
+          "value": [
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-24",
+            "2026-10-30"
+          ],
+          "source_ids": [
+            "hollows-tickets",
+            "hollows-oct10",
+            "hollows-oct24",
+            "hollows-oct30"
+          ],
+          "qualification": "Conservative enumerated subset; no full-season recurrence inferred."
+        },
+        "hours": {
+          "value": {
+            "Oct9_start": "19:30",
+            "Oct10": "19:30–23:00",
+            "Oct24": "19:30–23:00",
+            "Oct30": "19:30–23:00"
+          },
+          "source_ids": [
+            "hollows-tickets",
+            "hollows-oct10",
+            "hollows-oct24",
+            "hollows-oct30"
+          ],
+          "qualification": "Human-visible session-specific text controls; generic schema is stale/conflicting."
+        },
+        "admission": {
+          "value": {
+            "from_usd": 5,
+            "refund_policy": "No refunds or returns; organizer cancellation refund within4 businessdays"
+          },
+          "source_ids": [
+            "hollows-tickets"
+          ],
+          "qualification": "From-price does not establish every ticket type; no price guarantee in copy."
+        },
+        "phone": {
+          "value": "573-406-3515",
+          "source_ids": [
+            "hollows-tickets"
+          ]
+        }
+      },
+      "conflicts": [
+        "Ticket pages all carry generic JSON-LD start2026-10-03T00:30-05:00/end04:00 despite different visible sessiondates. These schema hours are REJECTED; use visible event-specific dates/times.",
+        "Prior TSF classifies haunted hayride; current ticket identity says trail. No current hayride activity asserted.",
+        "Dynamic full calendar not recovered; known4 dates are a subset, not claimed complete season."
+      ],
+      "adjudication_proposed": "Propose factual clearance for precisely enumerated four-date subset; explicit3future session pages independently readable and source-bound. Runtime hold if existing architecture cannot limit valid dates/last cutoff without inventing broader schedule. No machine hours.",
+      "source_binding": {
+        "hollows-tickets": {
+          "id": "hollows-tickets",
+          "url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season",
+          "retrieved_at": "2026-10-09T04:52:53.568940+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season",
+          "bytes": 21895,
+          "sha256": "1c8975eb3b84f6ad99d14b3d450265ee66257abfab57b1b4230b1402a89990d1",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/hollows-tickets.receipt.json",
+          "receipt_sha256": "8fcd704e906c22f2d68ad07ba7d8e8d565dcf81b7ef16629bf51ba87eeda3c31",
+          "body_file": "receipts/hollows-tickets.body"
+        },
+        "hollows-times": {
+          "id": "hollows-times",
+          "url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times",
+          "retrieved_at": "2026-10-09T04:53:39.768710+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times",
+          "bytes": 17835,
+          "sha256": "26075c4f7c47a513dc75b473d70820a924340ce6cc6dbcd0cbd73347e5ed51e5",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/hollows-times.receipt.json",
+          "receipt_sha256": "1f8e886d37d490f7dbf1b4e9f85906d41d205f8cf6029f06b9f615dc56ad49d4",
+          "body_file": "receipts/hollows-times.body"
+        },
+        "hollows-oct10": {
+          "id": "hollows-oct10",
+          "url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852662",
+          "retrieved_at": "2026-10-09T04:54:28.303319+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852662",
+          "bytes": 21522,
+          "sha256": "7adf325e1988bb40fff552c542154f7feebf878482d0b641433916e97a461d89",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/hollows-oct10.receipt.json",
+          "receipt_sha256": "0139d1e26c2eb67db758963908d829f20ccb43a99482ea100cd15cba46860a41",
+          "body_file": "receipts/hollows-oct10.body"
+        },
+        "hollows-oct24": {
+          "id": "hollows-oct24",
+          "url": "https://app.hauntpay.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852666",
+          "retrieved_at": "2026-10-09T04:54:28.303774+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://app.hauntpay.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852666",
+          "bytes": 21772,
+          "sha256": "cd7fb7bceda82e00743f3f5886176926ad07438dbc681015ab4132bbf7ba5c39",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/hollows-oct24.receipt.json",
+          "receipt_sha256": "2be2affed8aea80dfcf1101130a37946f7700ab2056c76d9f45b5220b721cd70",
+          "body_file": "receipts/hollows-oct24.body"
+        },
+        "hollows-oct30": {
+          "id": "hollows-oct30",
+          "url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852667",
+          "retrieved_at": "2026-10-09T04:55:01.767817+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852667",
+          "bytes": 21522,
+          "sha256": "872c0f966d4e07fde165e27875b9a90a18b969fa36e88cc6c2de8cc6c363bfb7",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/hollows-oct30.receipt.json",
+          "receipt_sha256": "a55ef018d4802d0c70d80f8c7df607da5dfce79c5dbf883286988c8c55c5f435",
+          "body_file": "receipts/hollows-oct30.body"
+        }
+      },
+      "required_runtime_guards": [
+        "Never Open Now including provider/cache/saved/resumed/async merges",
+        "machine opening intervals null",
+        "Directions and ride target use accepted visitor address, never approximate point",
+        "Qualified approximate distance/radius placement",
+        "Hard exact2026 expiry with cutoff minus1ms/at/plus1ms and pending-RPC guards",
+        "No2027 recurrence",
+        "Current-policy reapplication to saved/cache identities",
+        "No global Halloween extension"
+      ],
+      "projection_sha256_canonical_json": "5af8b9d8ca845b0a0281daa039faf280a1eacc987f8ff8ef6f6e4f6bdfbc8b17"
+    }
+  ]
+}

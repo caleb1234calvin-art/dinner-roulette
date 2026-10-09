@@ -1,0 +1,26 @@
+{
+ "spatialReference": {
+  "wkid": 4326,
+  "latestWkid": 4326
+ },
+ "candidates": [
+  {
+   "address": "2501 E Farm Road 94, Springfield, Missouri, 65803",
+   "location": {
+    "x": -93.24361332435,
+    "y": 37.273100307742
+   },
+   "score": 100,
+   "attributes": {
+    "Match_addr": "2501 E Farm Road 94, Springfield, Missouri, 65803",
+    "Addr_type": "StreetAddress"
+   },
+   "extent": {
+    "xmin": -93.24461332435,
+    "ymin": 37.272100307742,
+    "xmax": -93.24261332435,
+    "ymax": 37.274100307742
+   }
+  }
+ ]
+}

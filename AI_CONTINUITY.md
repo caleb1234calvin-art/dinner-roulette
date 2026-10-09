@@ -1,3 +1,18 @@
+# Pick For Us — Ten Commercial HOLDs Ranked; Three Re-clearance Proposals Frozen (2026-10-09)
+
+## CURRENT
+Track C R1 completed targeted research across all ten named commercial HOLDs: **3 exact projection PASS proposals / 7 remaining factual or runtime HOLD / 0 new independent approval at this research gate**. Research audit/astra-commercial-holds-2026-10-09/Commercial-Holds-Research-R1.json SHA256 **daa7a61c2f5ff9f4ff4a90fa0a870ba03134fe858ed448085f4e694210ca62cc**; exact Projections-R1 SHA **1dcff3603d5cdf2070ff2b26c15c22de56c5144dde526f540a1c2ef4b7bd7f27**; readable Report-R1 SHA **95707e9d2567fae932a90db5da6f42f3965ce9913ec348c3da6a7ada8a2b3038**. All ten are ranked and carry exact remaining blockers and recovered fields. Manifest and publication inventory distinguish persisted text/selected bodies from pending raw evidence archive.
+
+Aurora proposes dedicated operator physical-location20591 over conflicting homepage20701, qualified operator map placement and22:00 last-admission visibility. Shepherd’s Lantern proposes operator-linked event-specific5803 over generic5830 footer, exact2026Oct16–17/end22:00. Haunted Hollows proposes explicit ticket sessionsOct9/10/24/30 only, human-visible session dates over stale generic structured data. Feemster newly clears address/phone fields but rejects the Census E-to-W mis-match; correct placement remains HOLD. Wolfman/Werehouse new season signals do not yet clear exact calendar/expiry; Fear Factory/Waco/Rising/Twisted Minds retain exact blockers.
+
+## NEXT
+Independent reviewer assesses the three exact projections and retained conflict adjudications, then only approved subset stacks onto cumulative candidate. Eleven import is active after independently published freshness PASS at6c3515d2. Bounded Feemster point follow-up proceeds without rewriting frozenR1. Cadaver and statewide delta still active. Root maintains exact-head validation and separate owner release gate.
+
+## HOLD
+All new Track C proposals are not runtime/import approval yet. Residential records stay segregated. Main979d83a/treea7db, productiondpl_F1XiMcc9AUuykunNamr87R3re7gP READY/source979d and BCd rollback remain last verified baseline; no release actions. Local Chromium unavailable; hosted exact candidate browser/geometry/Android gates required. Six inherited lint warnings, narrow Directions clipping and physical device HOLD persist. No merge/deploy/settings/waiver/signing/Play authority.
+
+PARENT COMMIT **6c3515d2cad7c8266b41c53f5a92d4da1db753d0**. Prior history follows verbatim.
+
 # Pick For Us — Eleven Freshness Independently Reaffirmed; Import Authorized (2026-10-09)
 
 ## CURRENT
