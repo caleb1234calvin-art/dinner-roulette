@@ -1,3 +1,72 @@
+# Pick For Us — PR59 Fifteen-Record Release SHIPPED (2026-10-09)
+
+## CURRENT — EXACT RELEASE LIVE; THIRTY-TWO CURATED RECORDS SHIPPED
+
+**PASS — exact publication, READY production, scoped live smoke and owner-approved source-bound expiry acceptance.** The prior owner release-decision gate is complete. **32 curated records are shipped:17 prior +15 additions.** Future nine data/placement/copy-cleared records remain unimplemented and outside this release; other HOLD/residential constraints remain.
+
+### Exact publication and consumed authority
+
+- Main / [merged PR #59](https://github.com/caleb1234calvin-art/dinner-roulette/pull/59): **`979d83aede9d66163e1ebaed9ad5b219cb637882`**.
+- Complete approved tree **`a7dbb32947c0a0daf4864346b0d212477fc9a11b`**; sole parent **`46ded230297976698b9c8a035cb2dafd11219314`**.
+- Previous main **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**, tree df157a388e582bae1e085d456f704e8f24d48aac.
+- Publication **2026-10-09T02:08:46Z**, non-force expected-head-guarded29-commit fast-forward. Exact candidate/main/merge SHA and tree preserved; no squash/rebase/generated tree. PR59 automatically closed/merged; historical draft flag is not an unmerged status.
+- **PR54–58 constituent ancestry was already included and must not be merged separately.**
+- Production **`dpl_F1XiMcc9AUuykunNamr87R3re7gP` READY**, source main979d, READY **02:09:07.702Z**.
+- [Live app](https://pickforus.app/) · [Immutable deployment](https://dinner-roulette-ezfgoqn2y-minions-9e2c.vercel.app/).
+
+Owner **02:05:05 UTC** approved only this exact release after fresh preflight, source-bound expiry evidence and rollback to BCd on material divergence. Actual main was unprotected/rulesets empty; the explicit **PR59-only one-release waiver is now consumed**. No protection/rules/settings change or standing future waiver.
+
+### Fresh safe route and production binding
+
+Operator read canonicalfb504 and corrected independent report, rechecked main/head/tree/parent/ancestry/checks and each BCd alias immediately before publication. Authenticated actual build override remained:
+`VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`.
+Root empty, Node24.x, no settings save; migration-chaining npm build was never used.
+
+Automatic deployment created02:08:48.026Z, building02:08:49.329Z, READY02:09:07.702Z. Logs bind checkout979d and successful client/SSR build; cache reuse from BCd is not stale-source evidence. Apex and immutable HTML contain identical ten entry assets, all present in actual build logs.
+
+Served **`index-fg6BrV-K.js`**,533323 bytes, SHA-256 **`148231d2c3a418143905c593010ff3d9b02fcb786ed605e4c1810e92f4ec23ec`**, contains all15 new IDs and exact expiry strings and all17 prior IDs. Prior17 factual source files are byte-identical to previous main. This is not a full served-object AST deep-equality claim. Release461-file source fingerprint **`074c2991bd5bc524073138ddba41bf958bd8a23df03bc993584731fa2631db49`** matches independently reviewed/hosted inputs. No full cross-environment output equality is claimed.
+
+### Scoped normal-UI production acceptance
+
+Actual current-time cloud-browser smoke02:09–02:17 used normal app controls and regional searches, with no fixtures/interception/state injection/fake clock/external ride or Maps execution.
+
+- Darkness options/result showed visible artwork, compact notice, Good confidence and readable qualified Details/address Directions/generic ride selection. Open Now on yielded zero/disabled pick.
+- Darkness remained in Anything with Spooky Season off while seasonal chips/styles/presets disappeared; explicit Parks excluded it. Future lifecycle dates are covered separately below.
+- Beast/Edge retained distinct identities, approximate placement and **Central Waiver Station first-stop Directions to1300 W13th St**. Expanded Beast facts preserved early arrival, guardian and security restrictions.
+- Pomme Directions retained official Hermitage campground point **37.883074,-93.303521**, with generic Uber destination selection and readable separate activity/awards/final-end qualifications. No precise ride dropoff.
+- Witches Day Out appeared alongside retained James River; concise October10 activity details and upcoming/approximate state preserved.
+- Ordinary season-off Joplin returned59 activities with ordinary cards/status and no injected seasonal notes. Retained Myer/Aftermath/Beyond remained; Myer used supported address Directions and generic rides, not old trusted entrance geometry.
+- Representative screenshots/readability/artwork/spacing passed. **No full live512-case or255-geometry rerun is claimed.** Some regional provider acquisition was incomplete/saved-only and truthfully disclosed; this is not provider-health PASS. Bounded error/fatal query returned no matching logs, not universal assurance.
+
+### Accepted source-bound time-dependent gate
+
+Owner expressly accepted exact production source/tree/build/served-cutoff binding plus independent future-date/cache/resume/no2027 evidence. Operator additionally reran **54 focused tests PASS** on unchanged979d, covering overnight ends, late-fall/cache and rideshare precision. No live November/2027 clock simulation.
+
+Retained exact979d independent892 tests/four skips,512 seasonal cases,255 geometry +11 no-plan controls and hosted37856067474/job113580422161 SUCCESS remain source-bound. Artifact11585666587 SHA **`47eff27045414262b64adbd4c26228c20652d3a91792953ab1a43ce8f195be51`** remains the full browser proof. This release did not reclassify earlier failed attempts as PASS.
+
+Beast/Edge exact end is **November1 00:30 CDT**. Brookdale ends **November8 18:00 CST**; Creepyworld/Darkness **November13 22:00 CST**. Those three alone remain Anything-visible, including October toggle-off, through own lifecycle without extending global Halloween UI/provider queries. Monster/Pomme date-only bounds remain retention, not closing claims. All15 exact cutoffs are listed in the full report; all curated Open Now remains fail-closed. Expired cache/saved/pending responses cannot revive an eligible pick or roll2026 into2027.
+
+### Current aliases and immediate rollback
+
+Fresh **02:18 UTC** direct reads independently resolve all five to F1: `pickforus.app`, `www.pickforus.app` (308 to apex), `dinner-roulette-chi.vercel.app` (native origin unchanged), `dinner-roulette-minions-9e2c.vercel.app`, `dinner-roulette-git-main-minions-9e2c.vercel.app`.
+
+Immediate rollback is **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv` READY**, source213502, freshly rechecked. Authenticated postrelease dialog showed F1 Current/BCd Previous and was canceled. **No rollback was needed or executed.** Owner authorized BCd restoration for material divergence; reverify exact target/procedure before any covered action. Hobby immediate-predecessor limit applies; older8VL is history, not this release's target. Historical alias lists on old deployment metadata are not current routing evidence.
+
+### Recoverable final release receipt and remaining boundaries
+
+[Exact operator report](docs/handoffs/active/missouri-autonomous-cumulative-15-production-release.md), SHA-256 **`516bd0af268fea3579eb1fb712317099f522f503d1a25057ec66cd4c8e897b3e`**.
+Evidence ZIP **`eb2d6e31201ec480d52176c847cd2e2682f37cda28fb78a43d830b490557239f`**,801934 bytes. The report preserves exact preflight/publication/source/alias/rollback/live and focused-test receipts. Producer-time continuity-pending wording is superseded by this readback without changing frozen bytes.
+
+Remain six ESLint warnings, inherited narrow Directions clipping (no worse), temporary Other icon, approximate locations, conservative Open Now, no provider/weather/ticket guarantee and historical dev probe INCONCLUSIVE. Automated Android37856067567 succeeded/signing skipped; **physical Android/WebView/GPS HOLD**, signing/Play separate.
+
+Future nine remain parked: Branson, Liberty, Ranch, Cobb, Nixa, Nightmare, Trepidations, Freaks and Hell Harvest. Their data/copy PASS is not implementation or release approval. Vino remains2026 no-import; Labyrinth/Rising dates, Carolyn/Route66 placement, other HOLDs and residential invitation/safety requirements remain. No next-batch release authority follows this release.
+
+Fresh **02:18 UTC** main979d/tree a7db, PR59 merged exact, productionF1 READY/source979d, all aliases and BCd READY confirm intentional approved movement. This release is complete after canonical readback; no owner action remains for this completed release. Future implementation/product/release decisions retain their own gates.
+
+Approved closeout changes only AI_CONTINUITY.md and exact operator report on deployment-disabled continuity. **PARENT COMMIT:** `fb504e5136054081fe53f15e2e23f64d45c31767`; **PARENT TREE:** `1cc32dd367ca474f75bbc726f3b2f4a21654cf21`. Verified exclusion blob **`65925d91f882a10433e3eb43f53ed802914c969b`** remains. No extra production deployment for documentation; preserve all prior history.
+
+## Prior continuity — independently verified candidate and pending owner release, now completed
+
 # Pick For Us — PR59 Independently Verified; Owner Release Decision Required (2026-10-08)
 
 ## CURRENT — VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION
