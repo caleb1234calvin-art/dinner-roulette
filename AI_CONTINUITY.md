@@ -1,3 +1,22 @@
+# ASTRA MATERIAL GATE — 2026-10-09 05:29 UTC — Cadaver independent final HOLD; research freeze
+
+## CURRENT
+- Cadaver independently remains **FACTUAL HOLD / RUNTIME HOLD**, excluded from PR #60. Final report SHA256 **3a0e803473ba901be18d95f89cc1e71ef88b38d2bd3d5d80e79d61f14faec4f2**, preserved with readable report and independent source receipts in audit/astra-independent-2026-10-09/.
+- Narrow remaining blocker: independently reliable attraction-specific **2026 operation/date binding and supported expiry**. Prior identity, published visitor address (25088 Kafir Road, Webb City) and qualified approximate Census point remain PASS. New current captured operator profile corroborates address and public business phone. Entrance/parking coordinates are not required.
+- Focused attack recovered purported operator poster alt text explicitly naming 2026, October29 7–10p.m., admission and contacts. Same extractor repeated the text on post/profile; actual poster unavailable and shortcode/year uncertainty unresolved. The conservative one-night subset was considered but not cleared. No accepted dates/expiry, recurrence or closure inference.
+- Independent direct open throttled; independent alternative extraction stalled850.8seconds and was aborted without usable result. Author's separate1279second stalled call and credit failure also preserved. These are source-access limitations, not attraction cancellation evidence.
+- All five research folders frozen. Complete raw evidence ZIP prepared: **279 source files / 281 ZIP members**, **3,473,343 bytes**, SHA256 **b57227dc98fa73a399e9477b69c7f70cbb69610c9779e96709a1b1d9ff5fdc4d**. Manifest SHA256 **d03cd8e8c2519846d3f0bfc10ea86a25b6e724ef273ef9a1555e2fdaa47b393f**. Every source/payload hash and ZIP CRC verified; no byte normalization or omitted raw evidence. Durable deliverable save pending final acceptance batch.
+- Exact candidate remains twenty additions / total52, PR60/head4513aee7de0afe55e0f0fa061c1ec5f6af4fa412/tree7323e271b5ecf23fdf60f8c4a98f8fffc564137c. Local1018PASS/4skips and hosted Android PASS. Web geometry is still running.
+## NEXT
+- Finish twenty-record independent source review, hosted geometry/browser suites and independent artifact verification.
+- Save complete research and acceptance evidence, publish exact release brief and final owner decision checkpoint.
+- For future Cadaver clearance, obtain a reproducible operator poster/current dated event/ticket or reliable local official source tying an exact2026 date to this attraction; retain already recovered fields.
+## HOLD
+- Cadaver is not part of runtime. Six named commercial HOLDs, eight held delta leads and residential lane remain explicitly classified in research records.
+- No final release readiness until browser/source gates PASS. No fresh main waiver, merge, production action, upload signing or Play Console authority.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 05:24 UTC — exact candidate 2 Android automated readiness PASS
 
 ## CURRENT
