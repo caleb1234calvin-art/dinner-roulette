@@ -1,3 +1,16 @@
+# Pick For Us — Eleven Freshness Research PASS, Independent Confirmation Pending (2026-10-09)
+
+## CURRENT
+Bounded time-sensitive rechecks complete: **11 researcher freshness PASS / 0 changed projections / 0 stale exclusions / 0 newly corroborated cancellations**. Exact ledger audit/astra-eleven-freshness-2026-10-09/Eleven-Freshness-R1.json SHA256 **d1dd4c5395000e32de47ee35d9b2d19d5d6c79942e18f8f071a1705e50c13136** retains direct/indexed access limits and prior exact accepted projections. Prior independent data clearance is preserved; this new research result is not independent runtime PASS. Selected complete text receipts, source hashes and publication inventory accompany it. Raw HTML/image manifest entries are not falsely claimed repository-published.
+
+## NEXT
+Independent reviewer confirms the scoped freshness result before eleven import starts. Candidate branch integration/missouri-astra-push-2026-10-09 remains main-derived with browser/geometry harness edits in progress; no remote candidate SHA/PR yet. Cadaver, ten commercial HOLDs and10–20-lead statewide delta/enrichment remain actively researched. Original134-record audit recovered for dedupe. Only newly independently cleared projections may stack onto the cumulative candidate, followed by exact-head full/hosted/browser/Android and separate independent review.
+
+## HOLD
+Cobb live origin remains unavailable; indexed operator schedule accepted at documented limits, no fresh operator health-policy confirmation. Hell Harvest final ticket endpoint403 retains approximately hour-old approved explicit dates and date-only cutoff. Cadaver potential2026 signals remain unapproved pending reliable date binding; commercial and delta findings are proposals. Local Chromium installer returned invalid/truncated archives; hosted Actions is intended browser execution route, no local pixel PASS. Physical Android/WebView/GPS and six inherited lint warnings remain. No merge/deploy/settings/waiver/signing/Play authority.
+
+Verified baseline unchanged: main979d83aede9d66163e1ebaed9ad5b219cb637882/treea7dbb32947c0a0daf4864346b0d212477fc9a11b; F1XiMcc9AUuykunNamr87R3re7gP READY/source979d; retained BCdD3eWRXk6UEN2FNJQE88r18VXv READY/source213502, no new rollback test. PARENT COMMIT **7018f7aa467cc393e01ff2ebb9372f4aa4b2caf2**, TREE **5188e30d5810748141aa8e7b8ef62f01bd4beb50**. Prior history follows verbatim.
+
 # Pick For Us — Astra Takeover Active, Baseline Verified (2026-10-09)
 
 ## CURRENT

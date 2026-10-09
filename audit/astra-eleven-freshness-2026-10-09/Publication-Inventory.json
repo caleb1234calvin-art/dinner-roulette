@@ -1,0 +1,473 @@
+{
+  "scope": "Selected complete text receipts and full manifest; raw HTML/calendar image retained locally pending final evidence archive, not implied published here.",
+  "files": [
+    {
+      "path": "Eleven-Freshness-R1.json",
+      "sha256": "d1dd4c5395000e32de47ee35d9b2d19d5d6c79942e18f8f071a1705e50c13136",
+      "bytes": 13391,
+      "published": true
+    },
+    {
+      "path": "Eleven-Freshness-R1.md",
+      "sha256": "971cbb653fe3c64a4d2bf8f38ee10c924683d58007ab0f1e295bd838cac2ebc8",
+      "bytes": 3528,
+      "published": true
+    },
+    {
+      "path": "SHA256SUMS.json",
+      "sha256": "31ffc983fe2b85a9802c64cf9262097c5093d223d18a6a4eab28ae0e82555551",
+      "bytes": 7607,
+      "published": true
+    },
+    {
+      "path": "evidence/branson.html",
+      "sha256": "eb1b83a3ff01ceae2e931b4b79c7ad963fd6194bc4247b740a0f41a7a6e1a393",
+      "bytes": 888335,
+      "published": false
+    },
+    {
+      "path": "evidence/branson.json",
+      "sha256": "2c3e335533cfa0040bc3d08ec2b562e0d0910b7f56d355d6c3a0122547b31dfd",
+      "bytes": 309,
+      "published": true
+    },
+    {
+      "path": "evidence/branson.txt",
+      "sha256": "aef749db2909c9e5e87a328de6b256c07d667fde9d06c24b14445e3af1db621e",
+      "bytes": 2037,
+      "published": true
+    },
+    {
+      "path": "evidence/cobb-tickets.html",
+      "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+      "bytes": 195,
+      "published": false
+    },
+    {
+      "path": "evidence/cobb-tickets.json",
+      "sha256": "4ed73232953c5cc17bb13708545b14389b7882c126d16792de2724ce09a1b66a",
+      "bytes": 285,
+      "published": true
+    },
+    {
+      "path": "evidence/cobb-tickets.txt",
+      "sha256": "b0a51afb98b5dd1e6ee75eb67869834f5c71f6f22e7a24c88bc4a25c1da30df3",
+      "bytes": 63,
+      "published": true
+    },
+    {
+      "path": "evidence/cobb-visit.html",
+      "sha256": "5b131ca14aa96311d3432b0062c7443d3b0e6346ec279bd376a75f0a76bcd5d7",
+      "bytes": 195,
+      "published": false
+    },
+    {
+      "path": "evidence/cobb-visit.json",
+      "sha256": "2f92dc34e2963ce86cefd3a0eb82b1d737b60e243940419ed387604be8ee2ece",
+      "bytes": 299,
+      "published": true
+    },
+    {
+      "path": "evidence/cobb-visit.txt",
+      "sha256": "b0a51afb98b5dd1e6ee75eb67869834f5c71f6f22e7a24c88bc4a25c1da30df3",
+      "bytes": 63,
+      "published": true
+    },
+    {
+      "path": "evidence/freaks-calendar.html",
+      "sha256": "b4e4fee82efd7376f9d5c10a1ca7221629ef3b89e8c89c87dac505f4c011e757",
+      "bytes": 58048,
+      "published": false
+    },
+    {
+      "path": "evidence/freaks-calendar.json",
+      "sha256": "200bffc75409d49c63dda49455cf98eb05332c76120237793c7ce9335fd26311",
+      "bytes": 411,
+      "published": true
+    },
+    {
+      "path": "evidence/freaks-embedded.txt",
+      "sha256": "99153c864dcb182bbe47bcd6b97672778723a46f0987f0c8d4f6f0e445ea1efa",
+      "bytes": 88525,
+      "published": true
+    },
+    {
+      "path": "evidence/freaks.html",
+      "sha256": "65b5083e6107f73d435c6c9722bb1ebe945becec176349f5cdabdd547d70dafe",
+      "bytes": 235293,
+      "published": false
+    },
+    {
+      "path": "evidence/freaks.json",
+      "sha256": "c549ec01d686f6c9d9b2e9c8f125910d64a286e007c7d65a12790af9ba4bfedd",
+      "bytes": 298,
+      "published": true
+    },
+    {
+      "path": "evidence/freaks.txt",
+      "sha256": "7e0da260e6df7ec9d5a056626165acaced3d2cc5372b9dfeceb64818943f33fb",
+      "bytes": 50,
+      "published": true
+    },
+    {
+      "path": "evidence/hell-final.json",
+      "sha256": "e4c1bffa0d501f2c65bf920916ecd9b0ea9a8559db6eaaa98f6d87d76a019c3b",
+      "bytes": 182,
+      "published": true
+    },
+    {
+      "path": "evidence/hell-ticket-calendar.html",
+      "sha256": "70ce7f2316f38dd7e0d4c1b7ab964d3e41297e2d8c0d6517c2b19b0c7c5c58d9",
+      "bytes": 58949,
+      "published": false
+    },
+    {
+      "path": "evidence/hell-ticket-calendar.json",
+      "sha256": "4b775c50b359654d6190bd6416f5f5e3051a388e000b44007891fb48743b31ab",
+      "bytes": 417,
+      "published": true
+    },
+    {
+      "path": "evidence/hell-ticket-embedded.txt",
+      "sha256": "691a043471446aa793108a22e6346c5fa90d42b10224bd40679d25ca6c8914ff",
+      "bytes": 98162,
+      "published": true
+    },
+    {
+      "path": "evidence/hell-ticket.html",
+      "sha256": "1067c819d96d5925cd27ffc5185dac7014b6b9388517c038da5f14484a80ceac",
+      "bytes": 246256,
+      "published": false
+    },
+    {
+      "path": "evidence/hell-ticket.json",
+      "sha256": "ed6f47f9a95726535459726379c2e9994731deb02ebe53751197ea81331522d1",
+      "bytes": 305,
+      "published": true
+    },
+    {
+      "path": "evidence/hell-ticket.txt",
+      "sha256": "93b171c2cb462e02c86451e11dc46b3b57b441b647deeecd2a3cd95bbd178991",
+      "bytes": 44,
+      "published": true
+    },
+    {
+      "path": "evidence/labyrinth-faq.html",
+      "sha256": "a107227fc550eb522e67caa230c1ef5fc5134cae9f2b1c84931f18e009c5240b",
+      "bytes": 28492,
+      "published": false
+    },
+    {
+      "path": "evidence/labyrinth-faq.json",
+      "sha256": "7bc85c599ef872be912c24a993ae3d3c887bd040f2f0e5ae6c7c2e9769edd1a4",
+      "bytes": 298,
+      "published": true
+    },
+    {
+      "path": "evidence/labyrinth-faq.txt",
+      "sha256": "3bc855e3217dca5e882ddab8395790815b0d91b51594a629109ec7dd6af4206c",
+      "bytes": 4558,
+      "published": true
+    },
+    {
+      "path": "evidence/labyrinth-location.html",
+      "sha256": "fd6aba1ae14c3e4cfe1ead6c653212786305b40916313dad7e252ed2774c15cf",
+      "bytes": 26256,
+      "published": false
+    },
+    {
+      "path": "evidence/labyrinth-location.json",
+      "sha256": "e53c842773fbdc1591e3caeae98d1352f052e500accffba2f9175dfe8f9ffa3f",
+      "bytes": 313,
+      "published": true
+    },
+    {
+      "path": "evidence/labyrinth-location.txt",
+      "sha256": "70b38c7d88a48cf99919f9a903461e5ebdede73aacd908410a6262fd6a46fbf3",
+      "bytes": 1490,
+      "published": true
+    },
+    {
+      "path": "evidence/labyrinth.html",
+      "sha256": "f957955875ca45f9b5481a7520b371c740d6aa099661fa53b5b028bd9c0ca809",
+      "bytes": 31269,
+      "published": false
+    },
+    {
+      "path": "evidence/labyrinth.json",
+      "sha256": "e3eb9e490bb9a83154be1b9d7d4de094d122882f56d68e43c9987a90cb370e0b",
+      "bytes": 288,
+      "published": true
+    },
+    {
+      "path": "evidence/labyrinth.txt",
+      "sha256": "d8176968bf4d5fbe236461b347ac6c4a1424968cc6487fb572c266e15a994f03",
+      "bytes": 2480,
+      "published": true
+    },
+    {
+      "path": "evidence/liberty-info.html",
+      "sha256": "3406640157f039f9336586e974e09c4f9bdf3b1dae719884ce5ab80b17d99c44",
+      "bytes": 452154,
+      "published": false
+    },
+    {
+      "path": "evidence/liberty-info.json",
+      "sha256": "09d226df4e9ff4804e34aca57573d4400a2fe6e11bb8b4c0f8345b355b81928d",
+      "bytes": 312,
+      "published": true
+    },
+    {
+      "path": "evidence/liberty-info.txt",
+      "sha256": "e30c2070db8305f32a7207108b20ca2e9fbf82379630807d7c1c1e0f435ffaff",
+      "bytes": 3521,
+      "published": true
+    },
+    {
+      "path": "evidence/liberty-ticket.html",
+      "sha256": "f4fdfe95dcc9c0debd6122aca3d7150f9a2400fbc0ccb71fc20219eeae21659a",
+      "bytes": 453221,
+      "published": false
+    },
+    {
+      "path": "evidence/liberty-ticket.json",
+      "sha256": "d79203e335333e709e93f71f6f9a1fad1a976d1817bda5c99f4341e86d0303de",
+      "bytes": 346,
+      "published": true
+    },
+    {
+      "path": "evidence/liberty-ticket.txt",
+      "sha256": "0706021bd95ab7b70a80c71fe582818e5493981215cdd01b85b2b5bf61e466db",
+      "bytes": 2901,
+      "published": true
+    },
+    {
+      "path": "evidence/myers-location.html",
+      "sha256": "138bd49cc75d52bf37f1c1dd18b42aa5e3f31b150348ed1e69db8c745a1e30c7",
+      "bytes": 29140,
+      "published": false
+    },
+    {
+      "path": "evidence/myers-location.json",
+      "sha256": "5ef5f0c12f45910e462779cac9a2eac0fd59f7925b9bd5b632e9624722566a37",
+      "bytes": 315,
+      "published": true
+    },
+    {
+      "path": "evidence/myers-location.txt",
+      "sha256": "177d0e434742682adec0b50511323a286f6b250a858838d1821e7a92df09bf6a",
+      "bytes": 1621,
+      "published": true
+    },
+    {
+      "path": "evidence/myers.html",
+      "sha256": "519b158ce76664c1b1e50e5c87498ef80cfec80e9aeac67120ad678e808b66d1",
+      "bytes": 26478,
+      "published": false
+    },
+    {
+      "path": "evidence/myers.json",
+      "sha256": "2c0bc7cc703ddac056a4d0ebd5407137992355d607bd42e69f7e842c5b2f3fcc",
+      "bytes": 290,
+      "published": true
+    },
+    {
+      "path": "evidence/myers.txt",
+      "sha256": "ae2fc0b1167e8e3f2adad4b2f693b4657f061ac08b3b946eaefae57aa0b6b721",
+      "bytes": 2125,
+      "published": true
+    },
+    {
+      "path": "evidence/nightmare-event.html",
+      "sha256": "97b1f2c8bdbd2f26e4025cc9ad5f9230bd7bf8755ded7aedbf4b7d0be913f846",
+      "bytes": 25662,
+      "published": false
+    },
+    {
+      "path": "evidence/nightmare-event.json",
+      "sha256": "0cb0290c0171c86d1886e147ce5f2a4a14aa76723ca603957110490a0d0b3909",
+      "bytes": 380,
+      "published": true
+    },
+    {
+      "path": "evidence/nightmare-event.txt",
+      "sha256": "7a70f85b6886205d7304231a130eba59570f7256c13adf7b20c98c8edb6e5e8b",
+      "bytes": 2386,
+      "published": true
+    },
+    {
+      "path": "evidence/nightmare-venue.html",
+      "sha256": "3e280329a13cfbd9db28940fba4a579ef2719c17810613e4f7c0c4805ddd9ad7",
+      "bytes": 26023,
+      "published": false
+    },
+    {
+      "path": "evidence/nightmare-venue.json",
+      "sha256": "aff8994f280ec50bd5bf9bd63f5f70676897f347aa6d32614e9ddc305b1bcec4",
+      "bytes": 304,
+      "published": true
+    },
+    {
+      "path": "evidence/nightmare-venue.txt",
+      "sha256": "b6d18ad79c6402a300bf34a0b92fd909a7e7068ddd9479120a41082edeb130b7",
+      "bytes": 1487,
+      "published": true
+    },
+    {
+      "path": "evidence/nixa.html",
+      "sha256": "ffa97da55c0415df2095fdc4ff214ecd501a640e6cefdcdf0ebedeb3c32afe98",
+      "bytes": 103063,
+      "published": false
+    },
+    {
+      "path": "evidence/nixa.json",
+      "sha256": "51e6fd0f2271579beed5efc256ef44661187e5f1b4ec85fd0e75fe72045fb822",
+      "bytes": 292,
+      "published": true
+    },
+    {
+      "path": "evidence/nixa.txt",
+      "sha256": "ac11e30bb3162a5505a2290e0ac29dd81c8e344baf28a6ecef05a274b16c8986",
+      "bytes": 1028,
+      "published": true
+    },
+    {
+      "path": "evidence/probe.html",
+      "sha256": "519b158ce76664c1b1e50e5c87498ef80cfec80e9aeac67120ad678e808b66d1",
+      "bytes": 26478,
+      "published": false
+    },
+    {
+      "path": "evidence/ranch-event.html",
+      "sha256": "5ebb793999ce668fe5652b685943f3cc86c1285a34e494f7c1b01fe8df7d15be",
+      "bytes": 31555,
+      "published": false
+    },
+    {
+      "path": "evidence/ranch-event.json",
+      "sha256": "b89c2240b09807c5fa11d9c23836c78432a10ea25db0d6ff57352e778f9997db",
+      "bytes": 322,
+      "published": true
+    },
+    {
+      "path": "evidence/ranch-event.txt",
+      "sha256": "6c5b42acc4815208b03fb4883c7bc0889982c7a2720c968f57ab987ff67f0ac1",
+      "bytes": 4231,
+      "published": true
+    },
+    {
+      "path": "evidence/ranch-venue.html",
+      "sha256": "a45bd311eaeaac33ee0de7168cc9d5bbd2dc6167d40f68378dbed1141d665e00",
+      "bytes": 25002,
+      "published": false
+    },
+    {
+      "path": "evidence/ranch-venue.json",
+      "sha256": "e0330bee682db8ae9edbe22c7a73f27dad5ab836a91c511fc4eb8030a6dd8cc9",
+      "bytes": 300,
+      "published": true
+    },
+    {
+      "path": "evidence/ranch-venue.txt",
+      "sha256": "37aeb43f68621ad0dceac898eb8609bc8b94335e5a68701964dc4e9f452d66b7",
+      "bytes": 1423,
+      "published": true
+    },
+    {
+      "path": "evidence/trepidations-calendar-image.json",
+      "sha256": "a960535dd88c337b7594d995a99ea2fa1074f3521d745382578b848689297553",
+      "bytes": 300,
+      "published": true
+    },
+    {
+      "path": "evidence/trepidations-calendar.html",
+      "sha256": "c82953d6bb601ee3ec5ffd263099213eaa782ec07faaa0b90b4d31658e75c25a",
+      "bytes": 59002,
+      "published": false
+    },
+    {
+      "path": "evidence/trepidations-calendar.jpg",
+      "sha256": "8aafbe408d3dac1a53ccea9cb65b6fc4629bc8e12d3cb5df5505732cb683d6ef",
+      "bytes": 746825,
+      "published": false
+    },
+    {
+      "path": "evidence/trepidations-calendar.json",
+      "sha256": "2af957cb965f5d50a650cd7a357e777b2fe27471032f90c5ddf7af9e369ba514",
+      "bytes": 424,
+      "published": true
+    },
+    {
+      "path": "evidence/trepidations-embedded.txt",
+      "sha256": "e4681901c17115c1f4bef67223e703e8966ab08b6eb0b82dea2c2b4c1863f890",
+      "bytes": 97872,
+      "published": true
+    },
+    {
+      "path": "evidence/trepidations.html",
+      "sha256": "462ca85729286b0a5cac100e74fcc32c9c51ffd82bea15a84ccdeab12c58200a",
+      "bytes": 246446,
+      "published": false
+    },
+    {
+      "path": "evidence/trepidations.json",
+      "sha256": "14a894975b8d8f51a8cf8d64f57968a6fe85711933bb0fff51a40a801351fa6c",
+      "bytes": 310,
+      "published": true
+    },
+    {
+      "path": "evidence/trepidations.txt",
+      "sha256": "3a0707e76ec5d0d3a4fb1d11042e0770fc37cb478c5f26917b2b935f8a0c41f8",
+      "bytes": 44,
+      "published": true
+    },
+    {
+      "path": "evidence/web-1.json",
+      "sha256": "cf75eb662b325f8b25798b94d5c46a751669b8c2ee7e18c2e2e2c184151f6ff0",
+      "bytes": 18248,
+      "published": true
+    },
+    {
+      "path": "evidence/web-2.json",
+      "sha256": "3ec637b776781c96def4210bb65cc4a277bb2ef984e076b2e8f744cb6245d9a0",
+      "bytes": 31204,
+      "published": true
+    },
+    {
+      "path": "evidence/web-3.json",
+      "sha256": "d17465723760522ca1d3ca777a83661f4c56fc296371fddb23d2dadd1a6e4a8f",
+      "bytes": 30186,
+      "published": true
+    },
+    {
+      "path": "fetch.py",
+      "sha256": "67054378bebd842a6a118047a14171936019b6c1901eb78bf3fce086c0d60c48",
+      "bytes": 2110,
+      "published": false
+    },
+    {
+      "path": "input-1.json",
+      "sha256": "463e5809612f0e7c0ea5c5a32d08cbb0ef186034b6866cb37496b4e990ed393c",
+      "bytes": 227658,
+      "published": false
+    },
+    {
+      "path": "input-2.json",
+      "sha256": "bf3b0d90d045751e2539b094b3950842044a6e9703a4aca2d333540a713cfc7c",
+      "bytes": 10247,
+      "published": false
+    },
+    {
+      "path": "make-ledger.py",
+      "sha256": "c2d065bfc283bb5bf3553054a90cd5ae0ae9cb185dcee4ef5ad6c54e7cdde08d",
+      "bytes": 6088,
+      "published": false
+    },
+    {
+      "path": "receipts.json",
+      "sha256": "500d94770f01e76551b71602a9e7d0e6dd7774d36a64966893e3d11d5fbd99be",
+      "bytes": 6124,
+      "published": true
+    }
+  ]
+}

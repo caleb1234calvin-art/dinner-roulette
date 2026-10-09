@@ -1,0 +1,282 @@
+{
+  "package": "ASTRA-ELEVEN-FRESHNESS-2026-10-09-R1",
+  "checked_at": "2026-10-09T04:55:20.024954+00:00",
+  "baseline_continuity": "d7348ea0c3da658da199a6b789ccbea6dc862172",
+  "scope": "Time-sensitive continuation only; not repeat immutable prior independent review, not runtime clearance",
+  "inputs": [
+    {
+      "path": "input-1.json",
+      "sha256": "463e5809612f0e7c0ea5c5a32d08cbb0ef186034b6866cb37496b4e990ed393c"
+    },
+    {
+      "path": "input-2.json",
+      "sha256": "bf3b0d90d045751e2539b094b3950842044a6e9703a4aca2d333540a713cfc7c"
+    }
+  ],
+  "records": [
+    {
+      "record_id": "DELTA2-BRANSON-GHOSTER",
+      "name": "The Curse at The Branson Ghoster Coaster",
+      "prior_data_verdict": "independent PASS at d7348ea; retained unchanged",
+      "freshness_verdict": "PASS for continued bounded implementation eligibility",
+      "material_projection_changes": [],
+      "observations": "Direct operator current 2026 October Friday/Saturday haunted schedule 19:00\u201322:00, special-event ticket requirement and same visitor address. No new cancellation notice.",
+      "evidence": [
+        {
+          "id": "branson",
+          "receipt": "evidence/branson.json",
+          "receipt_sha256": "2c3e335533cfa0040bc3d08ec2b562e0d0910b7f56d355d6c3a0122547b31dfd"
+        }
+      ],
+      "fresh_live_guarantee": false
+    },
+    {
+      "record_id": "MO26-056",
+      "name": "Liberty Corn Maze",
+      "prior_data_verdict": "independent PASS at d7348ea; retained unchanged",
+      "freshness_verdict": "PASS for continued bounded implementation eligibility",
+      "material_projection_changes": [],
+      "observations": "Direct current 2026 pass and venue schedules retain weekends Sept11\u2013Oct30 and final close23:00. Ticket controls available, not inventory guarantee. Older weekday/last-admission conflict remains; no material change.",
+      "evidence": [
+        {
+          "id": "liberty-ticket",
+          "receipt": "evidence/liberty-ticket.json",
+          "receipt_sha256": "d79203e335333e709e93f71f6f9a1fad1a976d1817bda5c99f4341e86d0303de"
+        },
+        {
+          "id": "liberty-info",
+          "receipt": "evidence/liberty-info.json",
+          "receipt_sha256": "09d226df4e9ff4804e34aca57573d4400a2fe6e11bb8b4c0f8345b355b81928d"
+        }
+      ],
+      "fresh_live_guarantee": false
+    },
+    {
+      "record_id": "DELTA3-RANCH",
+      "name": "Terror at the Ranch",
+      "prior_data_verdict": "independent PASS at d7348ea; retained unchanged",
+      "freshness_verdict": "PASS for continued bounded implementation eligibility",
+      "material_projection_changes": [],
+      "observations": "Direct event current October9 opening and same destination; venue public React props show event_date final Oct31 23:00CDT and max_end_time2026-11-01T04:00Z. Get Tickets available; no new cancellation.",
+      "evidence": [
+        {
+          "id": "ranch-event",
+          "receipt": "evidence/ranch-event.json",
+          "receipt_sha256": "b89c2240b09807c5fa11d9c23836c78432a10ea25db0d6ff57352e778f9997db"
+        },
+        {
+          "id": "ranch-venue",
+          "receipt": "evidence/ranch-venue.json",
+          "receipt_sha256": "e0330bee682db8ae9edbe22c7a73f27dad5ab836a91c511fc4eb8030a6dd8cc9"
+        }
+      ],
+      "fresh_live_guarantee": false
+    },
+    {
+      "record_id": "DELTA3-COBB",
+      "name": "PanicFest \u2014 The Cobb Factory",
+      "prior_data_verdict": "independent PASS at d7348ea; retained unchanged",
+      "freshness_verdict": "PASS for continued bounded implementation eligibility",
+      "material_projection_changes": [],
+      "observations": "Direct origin returns noncontent 195-byte body, not current operator access PASS. Fresh indexed operator plan and buy-tickets pages reproduce explicit 2026 schedule incl Nov1 19\u201322 and Nov6\u20137 19\u201323, same public address and on-site tickets. Existing qualified directory restrictions retained, not freshly operator-confirmed.",
+      "evidence": [
+        {
+          "id": "cobb-visit",
+          "receipt": "evidence/cobb-visit.json",
+          "receipt_sha256": "2f92dc34e2963ce86cefd3a0eb82b1d737b60e243940419ed387604be8ee2ece"
+        },
+        {
+          "id": "cobb-tickets",
+          "receipt": "evidence/cobb-tickets.json",
+          "receipt_sha256": "4ed73232953c5cc17bb13708545b14389b7882c126d16792de2724ce09a1b66a"
+        },
+        {
+          "id": "web-1",
+          "receipt": "evidence/web-1.json",
+          "receipt_sha256": "cf75eb662b325f8b25798b94d5c46a751669b8c2ee7e18c2e2e2c184151f6ff0"
+        },
+        {
+          "id": "web-2",
+          "receipt": "evidence/web-2.json",
+          "receipt_sha256": "3ec637b776781c96def4210bb65cc4a277bb2ef984e076b2e8f744cb6245d9a0"
+        },
+        {
+          "id": "web-3",
+          "receipt": "evidence/web-3.json",
+          "receipt_sha256": "d17465723760522ca1d3ca777a83661f4c56fc296371fddb23d2dadd1a6e4a8f"
+        }
+      ],
+      "fresh_live_guarantee": false
+    },
+    {
+      "record_id": "MO26-037",
+      "name": "Field of Screams Nixa",
+      "prior_data_verdict": "independent PASS at d7348ea; retained unchanged",
+      "freshness_verdict": "PASS for continued bounded implementation eligibility",
+      "material_projection_changes": [],
+      "observations": "Direct operator explicitly retains 2026 Sept18\u2013Nov1 enumerated dates and 19:00\u2013midnight; same destination and online peak-night ticket warning. Secondary access claims remain qualified and unchanged.",
+      "evidence": [
+        {
+          "id": "nixa",
+          "receipt": "evidence/nixa.json",
+          "receipt_sha256": "51e6fd0f2271579beed5efc256ef44661187e5f1b4ec85fd0e75fe72045fb822"
+        }
+      ],
+      "fresh_live_guarantee": false
+    },
+    {
+      "record_id": "DELTA2-MISSOURI-NIGHTMARE",
+      "name": "Missouri Nightmare Haunted Attraction",
+      "prior_data_verdict": "independent PASS at d7348ea; retained unchanged",
+      "freshness_verdict": "PASS for continued bounded implementation eligibility",
+      "material_projection_changes": [],
+      "observations": "Direct current2026 event and same destination; public venue React props max_end_time2026-11-02T02:30Z => Nov1 20:30CST. No full daily schedule inferred or changed.",
+      "evidence": [
+        {
+          "id": "nightmare-event",
+          "receipt": "evidence/nightmare-event.json",
+          "receipt_sha256": "0cb0290c0171c86d1886e147ce5f2a4a14aa76723ca603957110490a0d0b3909"
+        },
+        {
+          "id": "nightmare-venue",
+          "receipt": "evidence/nightmare-venue.json",
+          "receipt_sha256": "aff8994f280ec50bd5bf9bd63f5f70676897f347aa6d32614e9ddc305b1bcec4"
+        }
+      ],
+      "fresh_live_guarantee": false
+    },
+    {
+      "record_id": "DELTA2-TREPIDATIONS",
+      "name": "Trepidations Haunted Attraction",
+      "prior_data_verdict": "independent PASS at d7348ea; retained unchanged",
+      "freshness_verdict": "PASS for continued bounded implementation eligibility",
+      "material_projection_changes": [],
+      "observations": "Fresh linked calendar image visually confirms regular Oct2\u20133,9\u201310,16\u201317,23\u201324,30\u201331 19\u201323, no-scare22/29 19\u201322, Nov1 lights-out. Fresh ticket explicitly binds Nov1 2026 Blackout and end2026-11-02T05Z; same address. Generic widget dates span envelope and are not recurrence evidence.",
+      "evidence": [
+        {
+          "id": "trepidations",
+          "receipt": "evidence/trepidations.json",
+          "receipt_sha256": "14a894975b8d8f51a8cf8d64f57968a6fe85711933bb0fff51a40a801351fa6c"
+        },
+        {
+          "id": "trepidations-calendar",
+          "receipt": "evidence/trepidations-calendar.json",
+          "receipt_sha256": "2af957cb965f5d50a650cd7a357e777b2fe27471032f90c5ddf7af9e369ba514"
+        },
+        {
+          "id": "trepidations-calendar-image",
+          "receipt": "evidence/trepidations-calendar-image.json",
+          "receipt_sha256": "a960535dd88c337b7594d995a99ea2fa1074f3521d745382578b848689297553"
+        }
+      ],
+      "fresh_live_guarantee": false
+    },
+    {
+      "record_id": "DELTA3-FREAKS",
+      "name": "Freaks Fair Haunted Attraction",
+      "prior_data_verdict": "independent PASS at d7348ea; retained unchanged",
+      "freshness_verdict": "PASS for continued bounded implementation eligibility",
+      "material_projection_changes": [],
+      "observations": "Fresh public booking widget defaultMonthlyDates exactly Oct23/24/30/31 (Oct25 absent); current ticket details retain 19\u201322:30, one-time selected-night admission and same126SW400 address. Existing homepage/DMO conflict retained.",
+      "evidence": [
+        {
+          "id": "freaks",
+          "receipt": "evidence/freaks.json",
+          "receipt_sha256": "c549ec01d686f6c9d9b2e9c8f125910d64a286e007c7d65a12790af9ba4bfedd"
+        },
+        {
+          "id": "freaks-calendar",
+          "receipt": "evidence/freaks-calendar.json",
+          "receipt_sha256": "200bffc75409d49c63dda49455cf98eb05332c76120237793c7ce9335fd26311"
+        }
+      ],
+      "fresh_live_guarantee": false
+    },
+    {
+      "record_id": "DELTA4-HELL-HARVEST",
+      "name": "Hell Harvest",
+      "prior_data_verdict": "independent PASS at d7348ea; retained unchanged",
+      "freshness_verdict": "PASS for continued bounded implementation eligibility",
+      "material_projection_changes": [],
+      "observations": "Fresh2026 ticket envelope still Sept25\u2013Oct31 and same19126Missouri8 address. Final-night page direct403; previously cleared explicit date list ~1hour old retained, not declared freshly recaptured. Ticket envelope23:00 endpoint does not newly establish final-exit semantics; retain date-only Nov1midnight cutoff/unknown closing. Widget generic dates not used for recurrence.",
+      "evidence": [
+        {
+          "id": "hell-ticket",
+          "receipt": "evidence/hell-ticket.json",
+          "receipt_sha256": "ed6f47f9a95726535459726379c2e9994731deb02ebe53751197ea81331522d1"
+        },
+        {
+          "id": "hell-ticket-calendar",
+          "receipt": "evidence/hell-ticket-calendar.json",
+          "receipt_sha256": "4b775c50b359654d6190bd6416f5f5e3051a388e000b44007891fb48743b31ab"
+        },
+        {
+          "id": "hell-final",
+          "receipt": "evidence/hell-final.json",
+          "receipt_sha256": "e4c1bffa0d501f2c65bf920916ecd9b0ea9a8559db6eaaa98f6d87d76a019c3b"
+        }
+      ],
+      "fresh_live_guarantee": false
+    },
+    {
+      "record_id": "MO26-005",
+      "name": "Myers Forest of Fears",
+      "prior_data_verdict": "independent PASS at d7348ea; retained unchanged",
+      "freshness_verdict": "PASS for continued bounded implementation eligibility",
+      "material_projection_changes": [],
+      "observations": "Fresh operator October2026 active-day cells exactly9/10,16/17,23/24,30/31; same3935SGarrison address/operator marker. Legacy2023 prose and indexed socialOct2 mention do not alter bounded supported remaining dates. Hours remain unknown; no cancellation or supported location change.",
+      "evidence": [
+        {
+          "id": "myers",
+          "receipt": "evidence/myers.json",
+          "receipt_sha256": "2c0bc7cc703ddac056a4d0ebd5407137992355d607bd42e69f7e842c5b2f3fcc"
+        },
+        {
+          "id": "myers-location",
+          "receipt": "evidence/myers-location.json",
+          "receipt_sha256": "5ef5f0c12f45910e462779cac9a2eac0fd59f7925b9bd5b632e9624722566a37"
+        }
+      ],
+      "fresh_live_guarantee": false
+    },
+    {
+      "record_id": "MO26-027",
+      "name": "Labyrinth of Fear",
+      "prior_data_verdict": "independent PASS at d7348ea; retained unchanged",
+      "freshness_verdict": "PASS for continued bounded implementation eligibility",
+      "material_projection_changes": [],
+      "observations": "Fresh operator October2026 active-day cells exactly17,23/24,30/31; same17866EastOverland address. Ticket sales18:30/entry19:30 retained; FAQ keeps nonrefundable purchase-night-only and groups<=4. Closing unknown.",
+      "evidence": [
+        {
+          "id": "labyrinth",
+          "receipt": "evidence/labyrinth.json",
+          "receipt_sha256": "e3eb9e490bb9a83154be1b9d7d4de094d122882f56d68e43c9987a90cb370e0b"
+        },
+        {
+          "id": "labyrinth-faq",
+          "receipt": "evidence/labyrinth-faq.json",
+          "receipt_sha256": "7bc85c599ef872be912c24a993ae3d3c887bd040f2f0e5ae6c7c2e9769edd1a4"
+        },
+        {
+          "id": "labyrinth-location",
+          "receipt": "evidence/labyrinth-location.json",
+          "receipt_sha256": "e53c842773fbdc1591e3caeae98d1352f052e500accffba2f9175dfe8f9ffa3f"
+        }
+      ],
+      "fresh_live_guarantee": false
+    }
+  ],
+  "counts": {
+    "pass": 11,
+    "hold": 0,
+    "expired_rejected": 0,
+    "changed_projections": 0
+  },
+  "limits": [
+    "No universal cancellation, weather, inventory or ticket guarantee.",
+    "Indexed operator Cobb evidence retains prior accepted origin limitation; no new restriction confirmation.",
+    "Prior explicit Hell Harvest date list remains recent accepted evidence; final-night refetch forbidden, not closure.",
+    "All11 retain null machine intervals, never Open Now, qualified approximate placement/address navigation, exact2026 lifecycle/no recurrence.",
+    "Independent runtime and consumer rendering validation remain outstanding."
+  ]
+}
