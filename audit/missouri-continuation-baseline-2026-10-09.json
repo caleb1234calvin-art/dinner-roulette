@@ -1,0 +1,285 @@
+{
+  "observedAt": "2026-10-09T03:29:57Z",
+  "verdict": "PASS — baseline unchanged; no new factual/runtime clearance",
+  "continuity": {
+    "sha": "113a46480e4439dee2f9fb1ad7ed4b550e551160",
+    "node_id": "C_kwDOUPp-qdoAKDExM2E0NjQ4MGU0NDM5ZGVlMmY5ZmIxYWQ3ZWQ0YjU1MGU1NTExNjA",
+    "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/113a46480e4439dee2f9fb1ad7ed4b550e551160",
+    "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/113a46480e4439dee2f9fb1ad7ed4b550e551160",
+    "author": {
+      "name": "caleb1234calvin-art",
+      "email": "caleb1234calvin@gmail.com",
+      "date": "2026-10-09T03:20:03Z"
+    },
+    "committer": {
+      "name": "caleb1234calvin-art",
+      "email": "caleb1234calvin@gmail.com",
+      "date": "2026-10-09T03:20:03Z"
+    },
+    "tree": {
+      "sha": "371637e017fcd06ea25ad18d81cdd67f18021a6c",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/trees/371637e017fcd06ea25ad18d81cdd67f18021a6c"
+    },
+    "message": "docs: make stable-gate continuity and takeover readback explicit",
+    "parents": [
+      {
+        "sha": "b781575c3d018081364d2889540496be5aec11b2",
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/b781575c3d018081364d2889540496be5aec11b2",
+        "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/b781575c3d018081364d2889540496be5aec11b2"
+      }
+    ],
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "main": {
+    "name": "main",
+    "commit": {
+      "sha": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+      "node_id": "C_kwDOUPp-qdoAKDk3OWQ4M2FlZGU5ZDY2MTYzZTFlYmFlZDlhZDViMjE5Y2I2Mzc4ODI",
+      "commit": {
+        "author": {
+          "name": "caleb1234calvin-art",
+          "email": "caleb1234calvin@gmail.com",
+          "date": "2026-10-08T22:51:16Z"
+        },
+        "committer": {
+          "name": "caleb1234calvin-art",
+          "email": "caleb1234calvin@gmail.com",
+          "date": "2026-10-08T22:51:16Z"
+        },
+        "message": "test(seasonal): synchronize lifecycle overlay acceptance",
+        "tree": {
+          "sha": "a7dbb32947c0a0daf4864346b0d212477fc9a11b",
+          "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/trees/a7dbb32947c0a0daf4864346b0d212477fc9a11b"
+        },
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/979d83aede9d66163e1ebaed9ad5b219cb637882",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/commits/979d83aede9d66163e1ebaed9ad5b219cb637882",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/979d83aede9d66163e1ebaed9ad5b219cb637882",
+      "comments_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/commits/979d83aede9d66163e1ebaed9ad5b219cb637882/comments",
+      "author": {
+        "login": "caleb1234calvin-art",
+        "id": 325354361,
+        "node_id": "U_kgDOE2SDeQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/325354361?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/caleb1234calvin-art",
+        "html_url": "https://github.com/caleb1234calvin-art",
+        "followers_url": "https://api.github.com/users/caleb1234calvin-art/followers",
+        "following_url": "https://api.github.com/users/caleb1234calvin-art/following{/other_user}",
+        "gists_url": "https://api.github.com/users/caleb1234calvin-art/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/caleb1234calvin-art/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/caleb1234calvin-art/subscriptions",
+        "organizations_url": "https://api.github.com/users/caleb1234calvin-art/orgs",
+        "repos_url": "https://api.github.com/users/caleb1234calvin-art/repos",
+        "events_url": "https://api.github.com/users/caleb1234calvin-art/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/caleb1234calvin-art/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "caleb1234calvin-art",
+        "id": 325354361,
+        "node_id": "U_kgDOE2SDeQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/325354361?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/caleb1234calvin-art",
+        "html_url": "https://github.com/caleb1234calvin-art",
+        "followers_url": "https://api.github.com/users/caleb1234calvin-art/followers",
+        "following_url": "https://api.github.com/users/caleb1234calvin-art/following{/other_user}",
+        "gists_url": "https://api.github.com/users/caleb1234calvin-art/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/caleb1234calvin-art/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/caleb1234calvin-art/subscriptions",
+        "organizations_url": "https://api.github.com/users/caleb1234calvin-art/orgs",
+        "repos_url": "https://api.github.com/users/caleb1234calvin-art/repos",
+        "events_url": "https://api.github.com/users/caleb1234calvin-art/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/caleb1234calvin-art/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "46ded230297976698b9c8a035cb2dafd11219314",
+          "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/commits/46ded230297976698b9c8a035cb2dafd11219314",
+          "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/46ded230297976698b9c8a035cb2dafd11219314"
+        }
+      ]
+    },
+    "_links": {
+      "self": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/branches/main",
+      "html": "https://github.com/caleb1234calvin-art/dinner-roulette/tree/main"
+    },
+    "protected": false,
+    "protection": {
+      "enabled": false,
+      "required_status_checks": {
+        "enforcement_level": "off",
+        "contexts": [],
+        "checks": []
+      }
+    },
+    "protection_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/branches/main/protection"
+  },
+  "canonicalRef": {
+    "ref": "refs/heads/integration/continuity-refresh-2026-10-07",
+    "node_id": "REF_kwDOUPp-qdoANHJlZnMvaGVhZHMvaW50ZWdyYXRpb24vY29udGludWl0eS1yZWZyZXNoLTIwMjYtMTAtMDc",
+    "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/refs/heads/integration/continuity-refresh-2026-10-07",
+    "object": {
+      "sha": "113a46480e4439dee2f9fb1ad7ed4b550e551160",
+      "type": "commit",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/113a46480e4439dee2f9fb1ad7ed4b550e551160"
+    }
+  },
+  "pr59": {
+    "state": "closed",
+    "merged": true,
+    "head": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+    "merge": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+    "merged_at": "2026-10-09T02:08:46Z"
+  },
+  "openPRs": [
+    {
+      "number": 58,
+      "head": "d876dbc12de47d5d40be0e9cc2116b30d9834089",
+      "branch": "integration/seasonal-three-source-tier-a-five",
+      "base": "integration/seasonal-brookdale-late-fall",
+      "draft": true
+    },
+    {
+      "number": 56,
+      "head": "a61af2bfd05ad959dfa3a3fb8dd564ad7b804921",
+      "branch": "integration/seasonal-brookdale-late-fall",
+      "base": "integration/seasonal-final-four",
+      "draft": true
+    },
+    {
+      "number": 55,
+      "head": "e397488c4e33355cbf1e278d388226d0a41716dc",
+      "branch": "integration/seasonal-final-four",
+      "base": "integration/seasonal-deferred-batch-3-five-records",
+      "draft": true
+    },
+    {
+      "number": 54,
+      "head": "f539d49fc5ff1ff08727566b6344e86c00e35d91",
+      "branch": "integration/seasonal-deferred-batch-3-five-records",
+      "base": "main",
+      "draft": true
+    },
+    {
+      "number": 49,
+      "head": "49a552cf36e800fb684504cf8f36beb1ee3d3b5b",
+      "branch": "integration/hotfix-47-ci-build-order",
+      "base": "main",
+      "draft": true
+    },
+    {
+      "number": 48,
+      "head": "3dc116ef8d114127402d94fcbe299272080d0f4a",
+      "branch": "feature/seasonal-two-records-2026",
+      "base": "main",
+      "draft": true
+    },
+    {
+      "number": 47,
+      "head": "277aca01996b5559b6e520d9d3f193c4989f4f64",
+      "branch": "fix/halloween-arrival-hotfix-1",
+      "base": "main",
+      "draft": false
+    },
+    {
+      "number": 46,
+      "head": "761832d58c75f9cda857886ead908e58f4d02a56",
+      "branch": "acceptance/date-night-radial-loading-live-acceptance-remediation-1",
+      "base": "fix/date-night-radial-loading-browser-acceptance-remediation-1",
+      "draft": true
+    },
+    {
+      "number": 45,
+      "head": "748c1ae4ed6dc5f84853a69af67b5d4a313abeb6",
+      "branch": "acceptance/date-night-radial-loading-browser-1",
+      "base": "feature/date-night-radial-loading-1",
+      "draft": true
+    }
+  ],
+  "production": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_F1XiMcc9AUuykunNamr87R3re7gP\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-ezfgoqn2y-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1791511728026,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"979d83aede9d66163e1ebaed9ad5b219cb637882\",\n        \"githubCommitMessage\": \"test(seasonal): synchronize lifecycle overlay acceptance\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"pickforus.app\",\n        \"dinner-roulette-chi.vercel.app\",\n        \"www.pickforus.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1791511729329,\n      \"ready\": 1791511747702,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+      }
+    ],
+    "isError": false
+  },
+  "rollback": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-j8zc29052-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1791485766736,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"213502ef8cf3f67d75e6d9c9c8ff43f9f656890c\",\n        \"githubCommitMessage\": \"fix(seasonal): finish plan spacing and verify expanded facts\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"pickforus.app\",\n        \"dinner-roulette-chi.vercel.app\",\n        \"www.pickforus.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1791485771141,\n      \"ready\": 1791485785875,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+      }
+    ],
+    "isError": false
+  },
+  "aliases": {
+    "pickforus.app": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"alias\": \"pickforus.app\",\n    \"created\": \"2026-10-02T03:09:27.303Z\",\n    \"createdAt\": 1790910567303,\n    \"creator\": {\n      \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n      \"email\": \"caleb1234calvin@gmail.com\",\n      \"username\": \"caleb1234calvin-6132\"\n    },\n    \"deletedAt\": null,\n    \"deployment\": {\n      \"id\": \"dpl_F1XiMcc9AUuykunNamr87R3re7gP\",\n      \"url\": \"dinner-roulette-ezfgoqn2y-minions-9e2c.vercel.app\"\n    },\n    \"deploymentId\": \"dpl_F1XiMcc9AUuykunNamr87R3re7gP\",\n    \"projectId\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n    \"redirect\": null,\n    \"redirectStatusCode\": null,\n    \"uid\": \"949c3d0efcb2ff4a7d582bedda749cb78cd76c689c05473c5b09b9e14bef1b27f4f22e09953eab78eca187814910413a4852204eaac889ab2e264cebcd2ddab9\",\n    \"updatedAt\": 1791511747871\n  }\n}"
+        }
+      ],
+      "isError": false
+    },
+    "www.pickforus.app": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"alias\": \"www.pickforus.app\",\n    \"created\": \"2026-10-02T03:09:27.093Z\",\n    \"createdAt\": 1790910567093,\n    \"creator\": {\n      \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n      \"email\": \"caleb1234calvin@gmail.com\",\n      \"username\": \"caleb1234calvin-6132\"\n    },\n    \"deletedAt\": null,\n    \"deployment\": {\n      \"id\": \"dpl_F1XiMcc9AUuykunNamr87R3re7gP\",\n      \"url\": \"dinner-roulette-ezfgoqn2y-minions-9e2c.vercel.app\"\n    },\n    \"deploymentId\": \"dpl_F1XiMcc9AUuykunNamr87R3re7gP\",\n    \"projectId\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n    \"redirect\": \"pickforus.app\",\n    \"redirectStatusCode\": 308,\n    \"uid\": \"4c9eae44801eaef0f193e71a0c6acb5fc42f825e7ef76a4ad1bd036b2d16d45f456f235de02a6f0dd24c9d4dd0b66ecd8ae1696aec1348fb43f1ec96540f9884\",\n    \"updatedAt\": 1791511747904\n  }\n}"
+        }
+      ],
+      "isError": false
+    },
+    "dinner-roulette-chi.vercel.app": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"alias\": \"dinner-roulette-chi.vercel.app\",\n    \"created\": \"2026-09-05T22:21:41.578Z\",\n    \"createdAt\": 1788646901578,\n    \"creator\": {\n      \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n      \"email\": \"caleb1234calvin@gmail.com\",\n      \"username\": \"caleb1234calvin-6132\"\n    },\n    \"deletedAt\": null,\n    \"deployment\": {\n      \"id\": \"dpl_F1XiMcc9AUuykunNamr87R3re7gP\",\n      \"url\": \"dinner-roulette-ezfgoqn2y-minions-9e2c.vercel.app\"\n    },\n    \"deploymentId\": \"dpl_F1XiMcc9AUuykunNamr87R3re7gP\",\n    \"projectId\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n    \"redirect\": null,\n    \"redirectStatusCode\": null,\n    \"uid\": \"8d745052bc4c670ebc5bb22ac59d4b79e34d5c37b2e0dc4062165ce1ec5d34d1fa17d3629d866dc5919926e7a5cf3c1e2fddd2b28c23e24fb1de19d33bcc3a4d\",\n    \"updatedAt\": 1791511747859,\n    \"protectionBypass\": {}\n  }\n}"
+        }
+      ],
+      "isError": false
+    },
+    "dinner-roulette-minions-9e2c.vercel.app": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"alias\": \"dinner-roulette-minions-9e2c.vercel.app\",\n    \"created\": \"2026-09-05T22:21:41.579Z\",\n    \"createdAt\": 1788646901579,\n    \"creator\": {\n      \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n      \"email\": \"caleb1234calvin@gmail.com\",\n      \"username\": \"caleb1234calvin-6132\"\n    },\n    \"deletedAt\": null,\n    \"deployment\": {\n      \"id\": \"dpl_F1XiMcc9AUuykunNamr87R3re7gP\",\n      \"url\": \"dinner-roulette-ezfgoqn2y-minions-9e2c.vercel.app\"\n    },\n    \"deploymentId\": \"dpl_F1XiMcc9AUuykunNamr87R3re7gP\",\n    \"projectId\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n    \"redirect\": null,\n    \"redirectStatusCode\": null,\n    \"uid\": \"f2835fbdb9528aed7cfede7c85634bbd6b9b5c6868577aaf37d4cd7b2a056517b85e133e186460a1988028fe1e9be6fbac46bbe18cddfd541bff08d99cc049ce\",\n    \"updatedAt\": 1791511747856,\n    \"protectionBypass\": {}\n  }\n}"
+        }
+      ],
+      "isError": false
+    },
+    "dinner-roulette-git-main-minions-9e2c.vercel.app": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"alias\": \"dinner-roulette-git-main-minions-9e2c.vercel.app\",\n    \"created\": \"2026-09-05T22:21:14.760Z\",\n    \"createdAt\": 1788646874760,\n    \"creator\": {\n      \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n      \"email\": \"caleb1234calvin@gmail.com\",\n      \"username\": \"caleb1234calvin-6132\"\n    },\n    \"deletedAt\": null,\n    \"deployment\": {\n      \"id\": \"dpl_F1XiMcc9AUuykunNamr87R3re7gP\",\n      \"url\": \"dinner-roulette-ezfgoqn2y-minions-9e2c.vercel.app\"\n    },\n    \"deploymentId\": \"dpl_F1XiMcc9AUuykunNamr87R3re7gP\",\n    \"projectId\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n    \"redirect\": null,\n    \"redirectStatusCode\": null,\n    \"uid\": \"e29f806976a4d5e082892dcd628db4f4b5f93350d5346d706fed33cee83b7ad259d9825a47858f800fd40cfdc969c8c3eeb035fbfbfbad87691e846470433611\",\n    \"updatedAt\": 1791511747861\n  }\n}"
+        }
+      ],
+      "isError": false
+    }
+  }
+}

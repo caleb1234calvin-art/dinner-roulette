@@ -1,3 +1,48 @@
+# Pick For Us — Nine Revalidation, Cadaver Priority and Delta5 Research Active (2026-10-09)
+
+## CURRENT
+
+Owner **03:27:32 UTC** directed autonomous continuation from the complete113a checkpoint: freshly revalidate the prepared nine, prioritize **The Cadaver Zone Spook House (MO26-007)** and continue bounded three-source delta/enrichment. Full canonical read and independent control-room reconciliation completed before starting the three tracks; **no baseline drift**.
+
+Fresh **03:33 UTC** main **`979d83aede9d66163e1ebaed9ad5b219cb637882`**, tree **`a7dbb32947c0a0daf4864346b0d212477fc9a11b`**, parent **`46ded230297976698b9c8a035cb2dafd11219314`**; production **`dpl_F1XiMcc9AUuykunNamr87R3re7gP` READY**, source979d. Baseline worker separately confirmed all five aliases F1, www308 to apex and retained **BCd READY/source213502**. No new rollback execution/access proof. PR59 merged exact; its32-record production release stays closed.
+
+**No implementation candidate exists yet.** Historical open constituent PR54/55/56/58 and older45–49 are not new work; do not merge them. Current research assignments:
+- **Prepared nine fresh pre-import review**, batch `nine-preimport-2026-10-09`: re-open decisive sources, current lifecycle/address/placement/restrictions and cancellation/closure signals. Prior data/copy PASS is input, not automatically fresh clearance.
+- **Priority Cadaver re-clearance**, batch `cadaver-zone-reclearance-2026-10-09`: MO26-007 historical HOLD, not NET NEW.
+- **Delta5 discovery/enrichment**, batch `missouri-delta5-2026-10-09`:8–15 commercial/public leads from FrightMaps, MissouriHauntedHouses.com and The Scare Factor; excludes dedicated Cadaver/nine tracks, dedupes against32 live, historical134 and all prepared/HOLD/residential ledgers. Werehouse, Wolfman's House of Screams and Aurora Maze/Adventure Farm are useful enrichment leads, not presumed clearance.
+
+### Recoverable baseline and worker handoff
+
+[Exact reconciliation receipt](audit/missouri-continuation-baseline-2026-10-09.json), SHA-256 **`785e1aecbd9629b97da8cb4b4e28cbe324f6564bcaaa8b917c6c2884084e446f`**.
+[Exact worker handoff/evidence map](docs/handoffs/active/missouri-continuation-worker-handoff-2026-10-09.md), SHA-256 **`8172cdf00989f28439781e00f71a8948d30d78bf65b429dba24359eb3e844683`**.
+
+These preserve exact refs, prior source hashes, repository recovery paths and limits. Their03:30 producer-time next-track wording is historical; the assignments above are now active. Prior nine manifest **`ccdfa54e21179d18fdd86f4edd2a5d66624aadac84058b19386ddeda6bba8115`** and copy review **`9dc1748bf028729cac3dd17b14f3ab6f5aa35e85bce7cf566db31c37d1dc1bb8`** were verified unchanged.
+
+## NEXT
+
+Freeze immutable record-level research results, obtain fresh independent PASS/HOLD/REJECT and copy/placement review as applicable, then advance the independently cleared subset into one bounded nonproduction candidate. A HOLD must not block unrelated cleared records. Preserve all32 shipped facts and IV01/02/03 runtime corrections.
+
+Cadaver must explicitly resolve current2026 identity/address/season/date/hour semantics, admission/payment, guardian/access/weather/material restrictions, arrival/parking evidence, operator URL and expiry/no2027. Unknowns remain qualified; current directory presence and local history alone are insufficient. Supported address can drive Directions, while geocoding is approximate map/radius only. Open Now stays fail-closed.
+
+Each future implementation must run exact-head full/typecheck/lint/safe migration-free build, actual seasonal browser/card geometry/Details/navigation/OpenNow/cache/saved/expiry/no2027/ordinary regression and incidental automated Android checks, followed by fresh independent review. No old-SHA PASS transfer. Lifecycle-specific late-fall visibility needs its own tests and must not extend global Halloween UI/provider season.
+
+Continue under existing nonproduction authority without repeated permission between ordinary stages. Stop at **VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION**. No main merge/deploy, protection waiver/rules, Vercel/DNS change, Android signing or Play action is authorized.
+
+After every stable research/review/freeze/remediation/validation/reprioritization gate, the sole canonical writer updates and reads back continuity. Before expected takeover, finish the safe atomic operation, leave recoverable artifacts, checkpoint/read back and report exact SHA with CURRENT/NEXT/HOLD and explicit Cadaver status. Reserve terminal DONE for the actual stopping condition and verified final readback; this is a start checkpoint, not completion.
+
+## HOLD
+
+- **Cadaver MO26-007 remains uncleared pending fresh research/independent review.** Historical address signal25088 Kafir Road, Webb City; previous2026 promo snippet lacked reliable dated schedule binding. Historical Census37.214949,-94.510739 is unrefreshed approximate interpolation, not arrival precision or new PASS. Dates/hours/expiry cannot be invented or hurried for local notability.
+- Prepared nine await fresh revalidation; no import/runtime PASS is granted at this checkpoint. Cobb's November7 late-fall behavior requires separate implementation proof.
+- Carolyn/Route66 placement, Labyrinth/Rising dates, other unresolved ledgers and residential invitation/public-address/product-policy gates remain. Vino stays2026 no-import. Hell Harvest is previously cleared in future nine, not globally HOLD.
+- Missing earlier external sweep ledger keeps novelty provisional; field-level source usefulness does not imply whole-page approval. Preserve conflicts, stronger first-party facts and partial coverage; no statewide exhaustion.
+- Physical Android/WebView/GPS HOLD; signing/Play separate. Existing six warnings, narrow Directions clipping no-worse, temporary Other icon, approximate placement/conservative OpenNow, optional historical probe INCONCLUSIVE and no live provider/weather/ticket guarantee remain.
+- Prior release waivers consumed; no production authority inferred from this continuation.
+
+This checkpoint changes only AI_CONTINUITY.md plus exact baseline receipt and handoff on deployment-disabled `integration/continuity-refresh-2026-10-07`. **PARENT COMMIT:** `113a46480e4439dee2f9fb1ad7ed4b550e551160`; **PARENT TREE:** `371637e017fcd06ea25ad18d81cdd67f18021a6c`. Preserve all history; no extra deployment for docs.
+
+## Prior continuity — active-checkpoint rule and previous parked state, preserved verbatim
+
 # Pick For Us — Active Continuity Checkpoint Requirement (2026-10-09)
 
 ## CURRENT
