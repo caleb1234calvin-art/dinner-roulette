@@ -1,3 +1,18 @@
+# Pick For Us — Astra Takeover Active, Baseline Verified (2026-10-09)
+
+## CURRENT
+Owner explicitly resumed and expanded the Missouri nonproduction pipeline. The entire 2,861-line d7348ea checkpoint was read across the coordinator and five workers before research/implementation. Fresh connected GitHub and Vercel reads verify main **979d83aede9d66163e1ebaed9ad5b219cb637882**, tree **a7dbb32947c0a0daf4864346b0d212477fc9a11b**, parent **46ded230297976698b9c8a035cb2dafd11219314**. Production **dpl_F1XiMcc9AUuykunNamr87R3re7gP READY**, source exact main; all five current aliases resolve to F1, www redirects308 to apex. Retained rollback **dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv READY**, source213502ef8cf3f67d75e6d9c9c8ff43f9f656890c; artifact state verified, no rollback execution claimed. Full baseline receipts: audit/astra-takeover-2026-10-09/baseline.json.
+
+Exact eleven identified from the two independently accepted subsets below: Branson Ghoster, Liberty, Ranch, Cobb, Nixa, Missouri Nightmare, Trepidations, Freaks, Hell Harvest, Labyrinth, Myers. Their prior data PASS stands subject to bounded fresh time-sensitive checks; runtime PASS is not yet claimed. Candidate local branch **integration/missouri-astra-push-2026-10-09** starts at main979d; no implementation commit or PR yet. Integration deployment exclusion is verified in vercel.json blob65925d91f882a10433e3eb43f53ed802914c969b. No main, production or settings mutation.
+
+## NEXT
+Parallel active assignments: exact11 freshness then compatible cumulative import; focused Cadaver2026 binding/expiry recovery; rank and attack ten named commercial HOLDs; three-source10–20-lead delta/enrichment; independent data and exact-candidate verification; browser/geometry harness extension. Preserve stronger source facts, source-bound copy, ListingCompletenessV1, address Directions/qualified placement, never Open Now, exact2026 lifecycle/no recurrence. Cobb alone joins existing lifecycle-scoped late-fall behavior; global Halloween stays bounded. Publish/read back each material gate. Target VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION.
+
+## HOLD
+Cadaver remains missing accepted attraction-specific2026 date binding/expiry until new evidence independently clears. Ten commercial HOLDs and three residential HOLDs remain excluded pending record-level review. New research leads are proposals, not clearance. Eleven runtime/browser/layout/cache/expiry gates remain pending. Six inherited lint warnings, qualified320px Directions clipping and physical Android/WebView/GPS remain. All prior release waivers consumed; owner has withheld merge, deploy, protection waiver/settings, Vercel/DNS, Android signing/Play authority.
+
+PARENT COMMIT **d7348ea0c3da658da199a6b789ccbea6dc862172**; PARENT TREE **eabfff4fab3b745bea55d30026e20c338e9060d0**. Sole canonical writer is root on deployment-disabled integration/continuity-refresh-2026-10-07. Previous checkpoint/history follows verbatim.
+
 # Pick For Us — OWNER PAUSED: 11 Data-Cleared Records, No Implementation Started (2026-10-09)
 
 ## CURRENT
