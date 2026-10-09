@@ -1,3 +1,52 @@
+# PR #60 RELEASED — Exact Production Acceptance PASS — 2026-10-09 19:56 UTC
+
+## CURRENT
+
+**RELEASED.** PR #60 is merged at exact approved main **`fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`**, tree **`8d5059c9fee871c522616971cce0a80b153e4d23`**, sole parent **`f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd`**. Expected-head, non-force fast-forward completed at **19:48:14 UTC**; no generated merge identity, extra constituent merges or source changes.
+
+Production **`dpl_8xyE9R3BxyE1883QpavaEBWV2LGa` READY** at **2026-10-09T19:48:34.773Z**, source exact fe22. Immutable URL: https://dinner-roulette-55q5rf8y3-minions-9e2c.vercel.app/. All five production aliases were independently read on 8xy: pickforus.app, www.pickforus.app (308 to apex), dinner-roulette-chi.vercel.app, dinner-roulette-minions-9e2c.vercel.app and dinner-roulette-git-main-minions-9e2c.vercel.app. **52 curated records are now deployed: 20 additions plus 32 retained.** Location/date/filter eligibility still applies; this does not mean all 52 appear simultaneously.
+
+**Operator scoped production acceptance PASS; independent deployed-identity and source-bound lifecycle acceptance PASS.** This supersedes the preceding acceptance-in-progress checkpoint. Prior exact-candidate 1,018 tests, 962 browser checks and 426 geometry comparisons remain accepted historical evidence, not freshly rerun live totals. No additional production remediation was needed.
+
+### Authoritative release receipts
+
+- [Full operator report](audit/pr60-production-release-2026-10-09/PR60-Production-Release-Report.md): SHA-256 **`5beae27cc77aeb5116e35d0f3afecca6177d7e91027be37dbd9c93280b82f9da`**.
+- [Independent production identity/time acceptance](audit/pr60-production-release-2026-10-09/Independent-Production-Identity-Acceptance.md): SHA **`b779ddcb54c7f0cb63cf4fde5d628759ded1f24ee0ec248534b856f867a11b5f`**.
+- [Evidence manifest](audit/pr60-production-release-2026-10-09/Evidence-Manifest.json): SHA **`412dc8aa6f0cc4d6f6701b15f915724f7f54a5e29dc34bcf404643a940062457`**. Final identities and the postrelease BCd restore-dialog receipt are preserved beside it.
+- Frozen complete operator evidence ZIP: `Pick-For-Us-PR60-Release-Evidence.zip`, 996,471 bytes, SHA **`f8964cc80f84abf671ab2552241afa2aa2607fc4339f72bf58ed3a83cf7edb74`**, CRC PASS. The manifest identifies original screenshots/raw receipts; this documentation checkpoint does not duplicate the full archive.
+
+### What was actually verified live
+
+Normal production controls showed new Myers Forest with unknown hours, compact notice, readable expanded Details, supported address Directions and generic rides; existing Myer's Inn, Beyond The Outer Limits and Aftermath remained present. Haunted Open Now returned zero with disabled pick/options/plan. Cobb displayed November 6–7 notes, qualified restrictions and its supported address. Aurora preserved activity and last-admission distinctions, correct address and readable facts; a one-stop plan honestly failed, while adding Parks produced genuine Aurora + Oak Park. Ordinary Kinetic Park remained clean. Reload/filter changes stayed fail-closed. This is representative live smoke, not all 52 cards or a new full geometry rerun. No provider fixtures, injected state, external ride booking or production-clock manipulation.
+
+Independent delivered asset `index-CQ7DsCRP.js`: 582,366 bytes, SHA **`97f0fcbfcbe6cd9760e08d57a35cb757644b3c2c64af3c6825e3e654dd3a44e5`**. All 20 new per-record IDs, visitor addresses, cutoffs, 2026 year, null machine hours and never-Open-Now policy bound to exact deployed source; all 32 earlier IDs remain. Every retained pending-RPC-at-expiry receipt matched its served cutoff. Future expiry/cache/no-2027 acceptance uses the approved source-bound method. Cobb alone among the additions has listing-lifecycle visibility through November 7 at 23:00 CST; no global Halloween UI/provider extension.
+
+### Safe build and restoration
+
+The effective authenticated dashboard build override was verified before publication:
+`VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`.
+Actual logs corroborate fe22 clone and Vite client/SSR production build. Ordinary migration-chaining npm build was not used. Truncated log response limits remain disclosed; no CI/Vercel byte-reproducibility claim.
+
+The owner's exact one-attempt unprotected-main waiver is **consumed**. Main protection/rules/settings were not changed; this is no standing waiver.
+
+Requested emergency target **BCd `dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv`** remains READY/source **213502ef8cf3f67d75e6d9c9c8ff43f9f656890c**. **F1 `dpl_F1XiMcc9AUuykunNamr87R3re7gP`** also remains READY/source979d. BCd is not the immediate predecessor and its Hobby Instant Rollback is disabled. The independently described supported route is authenticated BCd deployment → Actions → **Promote the existing production build without rebuilding**. Exact target/source and enabled confirmation were inspected both before and after release, then cancelled. No restore was executed. Its dialog names apex/native production domains; emergency execution would still require verifying all five aliases afterwards. Do not claim that a five-alias rollback was exercised.
+
+## NEXT — owner decision only; STOP
+
+The exact authorized release and scoped acceptance are complete. Publish/read back this final documentation-only receipt, report exact continuity identity and **STOP**. No automatic monitoring loop, research, enrichment, new implementation batch or production action follows. Future work requires renewed owner direction. Cadaver may remain the first proposed research priority, but is parked now.
+
+## HOLD / remaining backlog and limitations
+
+- **Cadaver Zone MO26-007 remains FACTUAL / RUNTIME HOLD:** reliable attraction-specific **2026 operation/date binding and supported expiry** are absent. Identity, intentionally public visitor address and qualified approximate placement are recovered; placement is not the blocker. Purported October 29 poster evidence remains unaccepted. No Cadaver record was imported.
+- Six commercial HOLDs remain: Wolfman, Werehouse, Fear Factory, Waco, Rising and Twisted Minds. Eight delta HOLDs remain: A Field of Screams/Timmy's Terror Rolla, Field of Screams Branson, Fearstone Forest, Fun Time Farms, Terrified Exist, Lemp, BOSS Fort Leonard Wood and Macabre Cinema. Exact field blockers remain in the preserved inventory. Residential/uncertain leads stay separate.
+- Carolyn and Terror on Route 66 retain factual PASS / placement HOLD; Hannibal retains destination/date HOLD; Vino Noir remains expired/no 2026 import, not a closure assertion. Brookdale's separately ticketed Hollows and Hotel/Dungeons transfer enrichment suggestions remain evidence-only and unapplied.
+- Physical Android/WebView/GPS, release signing and Play remain HOLD. Six inherited web lint warnings, fourteen Android warnings, narrow Directions-label clipping and deliberate compact-title truncation remain qualified. No guarantee of live provider availability, tickets, weather, exact entrance/dropoff or physical-device behavior.
+- Twenty additions retain conservative hours/Open Now policy, approximate placement, address navigation, October 15 revalidation, exact 2026 expiry and no automatic 2027 recurrence. Historical source-access qualifications remain.
+
+**PARENT CONTINUITY COMMIT:** `fe47acec5b014744708ce54d65668b3c10999805`; **PARENT TREE:** `39ef65a8e9c3c9f52a4d5b02df688a5c7d29880c`. This final documentation/audit-only checkpoint uses deployment-disabled `integration/continuity-refresh-2026-10-07`; no main or production mutation. The operator report's continuity-pending sentence is closed only by this checkpoint's successful publication and readback. All prior history follows verbatim.
+
+---
+
 # PR #60 Published at Exact Approved Identity — Production Acceptance In Progress (2026-10-09 19:49 UTC)
 
 ## CURRENT
