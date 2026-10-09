@@ -1,3 +1,20 @@
+# ASTRA MATERIAL GATE — 2026-10-09 05:33 UTC — hosted geometry stage PASS
+
+## CURRENT
+- Exact PR #60 candidate **4513aee7de0afe55e0f0fa061c1ec5f6af4fa412** unchanged.
+- Hosted web **37888059004 / job 113682436489** has passed full tests, production build, Chromium installation, **seasonal/standard card geometry**, and casino browser smoke. Browser interaction suites continue.
+- Geometry source enumerates 52 records / 426 comparisons at320/390/512 widths with expanded Details/artwork/control checks. Actual exported verdict counts, screenshots and source proof still require artifact download and independent review; no final release PASS yet.
+- Local1018PASS/4skips, typecheck/lint/safeauthbuild PASS; hosted Android PASS; independent20source/32invariance and198focusedtests PASS.
+## NEXT
+- Finish location, ordinary Date Night, retained seasonal suites and new11/extra9 browser suites.
+- Download browser evidence, verify exact source/CRC/digest/verdict counts and inspect representative narrow/expanded Details screenshots.
+- Save evidence, reverify production/rollback/protection identities, publish owner release decision brief.
+## HOLD
+- Candidate not yet ready for release decision until all remaining exact-head acceptance gates PASS.
+- Cadaver and named data HOLDs remain excluded; no new waiver or production authority.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 05:30 UTC — independent exact-candidate source/policy PASS
 
 ## CURRENT
