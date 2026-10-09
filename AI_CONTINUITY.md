@@ -1,3 +1,24 @@
+# Pick For Us — Nine Independent Data Eligibility PASS (2026-10-09)
+
+## CURRENT
+**Nine exact projections independently PASS factual, approximate-placement, consumer-copy and author-eligibility review; zero record HOLD or REJECT. Runtime has not been implemented or verified.** The independent reviewer bound published research commit b475d7e and closed the prior procedural publication HOLD. R1 reports and verdicts remain preserved, including their historically correct cancellation HOLD.
+
+[Final R2 report](audit/nine-preimport-independent-2026-10-09/revision-2/Nine-Preimport-Independent-Report-R2.txt), SHA-256 `3e0f3b75cc02835a4c9d0951e313bd58478f0f43c728dfa750f41e92e6f72e9d`.
+[Exact eligible-author subset](audit/nine-preimport-independent-2026-10-09/revision-2/Nine-Preimport-Eligible-Author-Subset-R2.json), SHA `463e5809612f0e7c0ea5c5a32d08cbb0ef186034b6866cb37496b4e990ed393c`.
+Final verdict SHA `862ddd7a81b81dd3fdaa3f9a89ed28cc2c0f3cd32b373798d203adc47a56fe72`, publication integrity and manifests are retained beside them.
+
+Cleared records: Branson Ghoster, Liberty, Ranch, Cobb, Nixa, Missouri Nightmare, Trepidations, Freaks and Hell Harvest. Cobb's indexed operator schedule and previously accepted qualified directory restrictions are explicitly accepted at their stated freshness limits; live origin remains unavailable and operator health policy is not freshly confirmed. Nixa secondary claims remain qualified. Ranch's final cutoff is October 31 23:00 CDT. All approximate placement, address navigation, material warnings, null intervals, never Open Now and hard 2026 expiry constraints remain.
+
+## NEXT — OWNER PAUSED
+Owner's 04:38:30 instruction requires stopping after the current verification/continuity closeout. No implementation or new batch may begin without new owner resumption, superseding the prior autonomous continuation. Finish the final data-receipt checkpoint and hold for human/Astra takeover.
+
+Delta5 final independent publication binding is underway for Labyrinth and Myers. Its exact R2 research is published at 78de638. Preserve that final verdict/subset separately, then root reports the latest canonical SHA plus CURRENT / NEXT / HOLD to the owner as the handoff; implementation remains paused until new owner resumption. Only exact independently cleared projections may enter the bounded nonproduction candidate, followed by full exact-head author and separate independent runtime/browser gates. This documentation checkpoint starts no implementation.
+
+## HOLD
+Cadaver is independently VERIFIED HOLD: no accepted attraction-specific 2026 operation/date binding and therefore no supported expiry. Ten other Delta5 commercial records and three residential leads remain held and excluded. Runtime, browser, layout, cache/saved/resume, provider/dedup, Directions, Open Now and expiry/no-2027 acceptance remain future gates. Cobb's late-fall behavior must be tested without globally extending Halloween UI/provider season.
+
+Main `979d83aede9d66163e1ebaed9ad5b219cb637882`, tree `a7dbb32947c0a0daf4864346b0d212477fc9a11b`, production F1 READY at that source and retained BCd rollback remain the unchanged baseline. No release authority is implied; old release waivers remain consumed. PARENT COMMIT: `78de638456595fa936b58578ca077bde140cadd9`; PARENT TREE: `3212ab58e9091d90ad08ab633cc2d2e44927635d`. Prior history follows verbatim.
+
 # Pick For Us — Delta5 Bounded R2 Research Correction (2026-10-09)
 
 ## CURRENT
