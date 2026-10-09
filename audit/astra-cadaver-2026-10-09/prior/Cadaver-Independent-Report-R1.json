@@ -1,0 +1,200 @@
+{
+  "review_id": "MO26-007-independent-R1",
+  "reviewed_at": "2026-10-09T03:39:43.683543+00:00",
+  "role": "fresh independent data verifier; no implementation or release authority",
+  "record_id": "MO26-007",
+  "reviewed_research_sha256": "efed6d770a98cd470030ca189b429cb7a5f66c42301afa7574cfe1d5244f243b",
+  "verdicts": {
+    "research_quality": "PASS",
+    "factual_clearance": "HOLD",
+    "runtime_placement": "HOLD",
+    "record_level_import": "HOLD",
+    "address_support": "PASS",
+    "approximate_address_point": "PASS",
+    "consumer_copy_review_only": "PASS"
+  },
+  "disposition": "VERIFIED HOLD",
+  "author_correction_required": false,
+  "blocking_reason": "Attraction-specific current-2026 operation/date binding not accepted; consequently no supported exact 2026 expiry.",
+  "nonblocking_unknowns": "Age/access/payment/weather and other operational unknowns are not independent automatic V1 HOLDs.",
+  "baseline": {
+    "verdict": "PASS: no drift",
+    "main": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+    "tree": "a7dbb32947c0a0daf4864346b0d212477fc9a11b",
+    "production": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+    "state": "READY",
+    "production_source": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+    "evidence": [
+      "evidence/main.json",
+      "evidence/baseline.json"
+    ],
+    "note": "Fresh GitHub main branch read and Vercel deployment read by pickforus.app hostname. No new rollback test."
+  },
+  "integrity": {
+    "all_frozen_hashes_match": true,
+    "manifest_member_count": 32,
+    "original_record_equal": true,
+    "original_intake_sha256": "87a1f244d9a13348ec7f7318fcc022e4796f162f05d2ea24f350cb83260e4ede",
+    "baseline_handoff_sha256": "8172cdf00989f28439781e00f71a8948d30d78bf65b429dba24359eb3e844683"
+  },
+  "field_reviews": [
+    {
+      "field": "identity_name",
+      "verdict": "PASS",
+      "assessment": "TSF independently reopened; same named single haunted attraction as original MO26-007. Historical re-clearance, not net new.",
+      "author_status": "SUPPORTED",
+      "source_urls": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/"
+      ]
+    },
+    {
+      "field": "visitor_address",
+      "verdict": "PASS",
+      "assessment": "TSF readable web retrieval repeats 25088 Kafir Road, Webb City, Missouri 64870; independent Census matches that address. Four States street/number agrees but Joplin 64804 differs. Supported visitor address is sufficient location evidence; locality disagreement does not negate this support.",
+      "author_status": "SUPPORTED",
+      "source_urls": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+        "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=25088+Kafir+Road%2C+Webb+City%2C+MO+64870&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+      ]
+    },
+    {
+      "field": "approximate_point",
+      "verdict": "PASS",
+      "assessment": "Independent Census GET reproduced latitude 37.214948823592, longitude -94.510739246392, Jasper County; rounded six-decimal point agrees. Address-range interpolation only. No entrance, parking, Directions or ride precision clearance.",
+      "author_status": "REPRODUCED_APPROXIMATE_PENDING_INDEPENDENT_REVIEW",
+      "source_urls": [
+        "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=25088+Kafir+Road%2C+Webb+City%2C+MO+64870&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+      ]
+    },
+    {
+      "field": "current_2026_binding",
+      "verdict": "HOLD",
+      "assessment": "No accepted attraction-specific 2026 operating announcement or schedule established by bounded decisive checks. Original promotional-snippet lead remains inadequate. Facebook returned an old-crawl temporary-block page; no bypass attempted. TSF has no coming-season dates. Four States is explicitly 2025.",
+      "author_status": "BLOCKER",
+      "source_urls": [
+        "https://www.facebook.com/cadaverzone/",
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+        "https://www.cadaverzone.com/",
+        "https://www.spookthefourstates.com/"
+      ]
+    },
+    {
+      "field": "operating_dates_2026",
+      "verdict": "HOLD",
+      "assessment": "Null is correct. No 2025 recurrence or Halloween date can be carried into 2026.",
+      "author_status": "UNKNOWN",
+      "source_urls": []
+    },
+    {
+      "field": "hours_start_last_ticket_final_exit",
+      "verdict": "PASS",
+      "assessment": "Unknown values correctly preserved. Historical 2025 hours do not establish 2026 hours, last ticket or final exit. Nonblocking unknown alone.",
+      "author_status": "UNKNOWN",
+      "source_urls": []
+    },
+    {
+      "field": "admission_2026",
+      "verdict": "PASS",
+      "assessment": "Unknown is correct; 2025 $14 is historical only. Nonblocking unknown alone.",
+      "author_status": "UNKNOWN",
+      "source_urls": [
+        "https://www.spookthefourstates.com/"
+      ]
+    },
+    {
+      "field": "payment_2026",
+      "verdict": "PASS",
+      "assessment": "Unknown is correct; historical card acceptance cannot be promoted. Nonblocking unknown alone.",
+      "author_status": "UNKNOWN",
+      "source_urls": [
+        "https://www.spookthefourstates.com/"
+      ]
+    },
+    {
+      "field": "age_guardian_rules",
+      "verdict": "PASS",
+      "assessment": "No verified rule established. Correctly unknown; not an independent V1 HOLD.",
+      "author_status": "UNKNOWN",
+      "source_urls": []
+    },
+    {
+      "field": "accessibility_terrain",
+      "verdict": "PASS",
+      "assessment": "TSF supports undated indoor/outdoor characterization; wheelchair access and terrain remain unknown. No accessibility guarantee.",
+      "author_status": "PARTIAL_UNDATED",
+      "source_urls": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/"
+      ]
+    },
+    {
+      "field": "weather_cancellation",
+      "verdict": "PASS",
+      "assessment": "Unknown correctly retained; no rain-or-shine claim. Nonblocking unknown alone.",
+      "author_status": "UNKNOWN",
+      "source_urls": []
+    },
+    {
+      "field": "weapons_bags_photography",
+      "verdict": "PASS",
+      "assessment": "Unknown correctly retained for all three; a historical photo-op is not current permission.",
+      "author_status": "UNKNOWN",
+      "source_urls": []
+    },
+    {
+      "field": "parking_arrival",
+      "verdict": "PASS",
+      "assessment": "Unknown correctly retained; no present-day parking or entrance plan established. Approximate placement does not imply arrival precision.",
+      "author_status": "UNKNOWN",
+      "source_urls": []
+    },
+    {
+      "field": "operator_url",
+      "verdict": "PASS",
+      "assessment": "Facebook identity is corroborated by TSF and Four States. Readable current posts not claimed. Domain observation differs by retrieval: independent GET yielded a 367-byte frame wrapper to http://jshelto9.wix.com/cadaverzone, whose direct GET returned 404; web retrieval inaccessible. Author 502 is a valid historical observation, not contradicted by a later response. No 2026 binding.",
+      "author_status": "SUPPORTED_OPERATOR_SOCIAL_IDENTITY_FROM_PRIOR_LEDGER",
+      "source_urls": [
+        "https://www.facebook.com/cadaverzone/",
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+        "https://www.spookthefourstates.com/"
+      ]
+    },
+    {
+      "field": "exact_2026_expiry",
+      "verdict": "HOLD",
+      "assessment": "No supported season window or exact expiry. Null required; no fabricated date.",
+      "author_status": "BLOCKED_BY_UNBOUND_SEASON",
+      "source_urls": []
+    },
+    {
+      "field": "no_2027_rollover",
+      "verdict": "PASS",
+      "assessment": "Required policy present; excluded projection supplies no 2027 rollover.",
+      "author_status": "REQUIRED_POLICY",
+      "source_urls": []
+    },
+    {
+      "field": "never_open_now",
+      "verdict": "PASS",
+      "assessment": "Curated-only semantics retained, open_now and machine_opening_intervals null. No runtime object emitted.",
+      "author_status": "REQUIRED_POLICY",
+      "source_urls": []
+    }
+  ],
+  "independent_observations": [
+    "Census response SHA a72f56fd051077c1058ad9026d21e69ac302262bc5247004c9af359b6b25fa31 independently reproduced.",
+    "TSF direct HTTP200 is 195-byte Site Unavailable response; independently reopened web retrieval supports identity/address and missing-date statement, with last-month crawl metadata. Capture time is not live-origin proof.",
+    "Four States web retrieval explicitly marks Cadaver Zone (2025). Independent direct HTTP465 retained as limitation; author direct body and current web retrieval agree historical content.",
+    "Municipal September25 2025 PDF independently reproduced exact SHA d4106f5b3204a891cb746279db409a7af277ae5b8f84fce08a3c920a75e41768. Sign request context is historical, not 2026 operation/closure.",
+    "Fresh MHH root, Hauntworld Missouri and Visit Joplin events bodies show no Cadaver match. These are bounded page checks, never completeness or closure proof.",
+    "Two bounded current2026/municipal searches produced no accepted contrary current evidence; irrelevant results not treated as facts.",
+    "Operator frame wrapper and inaccessible/404 destination do not establish closure or current season."
+  ],
+  "projection_review": "PASS for exclusion correctness only: import_allowed false, runtime_active false, accepted_runtime_record null, season dates and expiry null, approximate point not eligible for radius. Runtime placement remains HOLD, not tested/approved.",
+  "copy_review": "PASS only as explicitly labeled review-status text; not cleared selectable catalog copy.",
+  "scope_limits": [
+    "No runtime/repository/production changes.",
+    "No operator contact, paid API, login, CAPTCHA, auth bypass or private address enrichment.",
+    "No release authority, no active runtime object, no closure claim, no exhaustive search claim.",
+    "Bounded check complete. Reopen only upon reliable new current-season evidence or explicit new assignment."
+  ]
+}

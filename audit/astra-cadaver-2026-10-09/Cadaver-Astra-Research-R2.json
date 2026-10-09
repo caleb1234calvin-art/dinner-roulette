@@ -1,0 +1,236 @@
+{
+  "record_id": "MO26-007",
+  "canonical_name": "The Cadaver Zone Spook House",
+  "historical_status": "HOLD",
+  "net_new": false,
+  "research_decision": "PROPOSED_EXACT_DATE_SUBSET_PENDING_INDEPENDENT_REVIEW",
+  "research_as_of": "2026-10-09T05:16:27.605972+00:00",
+  "independent_verification": "PENDING; earlier R1 independent HOLD remains authoritative until separately adjudicated",
+  "runtime_eligible": false,
+  "fields": {
+    "identity_name": {
+      "value": "The Cadaver Zone Spook House",
+      "status": "SUPPORTED",
+      "source_urls": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/"
+      ],
+      "note": "Previously independently accepted MO26-007 identity retained; new operator profile describes the same Joplin/Webb City/Carl Junction haunt."
+    },
+    "visitor_address": {
+      "value": "25088 Kafir Road, Webb City, MO 64870",
+      "status": "PRIOR_INDEPENDENT_PASS_NEW_OPERATOR_CORROBORATION",
+      "source_urls": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+        "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=25088+Kafir+Road%2C+Webb+City%2C+MO+64870&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/",
+        "https://www.facebook.com/cadaverzone/"
+      ],
+      "note": "Accepted street/address preserved. New operator calendar alt text explicitly gives25088 Kafir Rd, Webb City; Facebook profile independently lists same. FourStates locality discrepancy remains historical."
+    },
+    "approximate_point": {
+      "value": {
+        "latitude": 37.214949,
+        "longitude": -94.510739
+      },
+      "status": "PRIOR_INDEPENDENT_PASS_RETAINED",
+      "source_urls": [
+        "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=25088+Kafir+Road%2C+Webb+City%2C+MO+64870&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+      ],
+      "note": "Exact prior independently accepted Census range interpolation retained. No new geocode; no entrance/parking/ride precision."
+    },
+    "current_2026_binding": {
+      "value": "Operator poster alt text explicitly contains SEPTEMBER2026 and OCTOBER2026, not merely page metadata.",
+      "status": "PROPOSED_CURRENT_YEAR_BINDING_PENDING_REVIEW",
+      "source_urls": [
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "note": "Parallel full extraction extract_42c215b7ca4893d4415e84d81d3ca6ae repeats same current poster on exact post and operator profile. Raw image not recovered. Do not rely solely on inferred publication_date2026-09-03; shortcode/date consistency requires independent adjudication. Morty2026 statement is supplemental, never sole clearance."
+    },
+    "operating_dates_2026": {
+      "value": [
+        "2026-10-29"
+      ],
+      "status": "PROPOSED_CONSERVATIVE_EXPLICIT_DATE_SUBSET",
+      "source_urls": [
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "note": "Poster alt text explicitly says October29th7\u201310pm within September/October2026 calendar. Highlighted calendar cells are not recoverable from OCR; no Fri/Sat recurrence, full season, Halloween or additional dates inferred."
+    },
+    "hours_start_last_ticket_final_exit": {
+      "value": {
+        "hours_text": "October29,2026:7\u201310pm",
+        "start_time": "19:00",
+        "last_ticket": null,
+        "final_exit": null
+      },
+      "status": "PROPOSED_PARTIAL_DISPLAY_ONLY",
+      "source_urls": [
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "note": "Special Oct29 hours stated explicitly. General7pm-midnight poster header is not assigned to unreadable dates.10pm is advertised end, not proven last-ticket/final-exit semantics. Machine schedules remain null; never OpenNow."
+    },
+    "admission_2026": {
+      "value": {
+        "advertised_general_admission_usd": 15
+      },
+      "status": "PROPOSED_OPERATOR_POSTER_FIELD",
+      "source_urls": [
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "note": "New poster text explicitly ADMISSION$15. No ticket availability, fees, age tiers, payment method or purchase guarantee. Routine pricing omitted from consumer copy per existing policy."
+    },
+    "payment_2026": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [
+        "https://www.spookthefourstates.com/"
+      ],
+      "note": "Still unknown; new poster does not establish current cash/card policy. Do not carry2025card acceptance."
+    },
+    "age_guardian_rules": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "No age or guardian rule established."
+    },
+    "accessibility_terrain": {
+      "value": {
+        "accessibility": null,
+        "terrain": null,
+        "directory_characterization": "Indoor/outdoor attraction and waiting line"
+      },
+      "status": "PARTIAL_UNDATED",
+      "source_urls": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/"
+      ],
+      "note": "No wheelchair accessibility guarantee; mixed indoor/outdoor characterization alone does not establish terrain."
+    },
+    "weather_cancellation": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "No rain-or-shine or cancellation rule established."
+    },
+    "weapons_bags_photography": {
+      "value": {
+        "weapons": null,
+        "bags": null,
+        "photography": null
+      },
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "Historical review photo-op is not photography permission."
+    },
+    "parking_arrival": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "Historical route and parking observations do not establish current entrance or parking plan."
+    },
+    "operator_url": {
+      "value": "https://www.facebook.com/cadaverzone/",
+      "status": "SUPPORTED_OPERATOR_SOCIAL_IDENTITY_CORROBORATED",
+      "source_urls": [
+        "https://www.facebook.com/cadaverzone/",
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "note": "Facebook current public extraction lists address and phone. Instagram operator identity corroborates same address and both historically published business phones. Directory-linked website yielded inaccessible/empty title-only content; not closure."
+    },
+    "exact_2026_expiry": {
+      "value": {
+        "proposed_expires_at": "2026-10-30T05:00:00.000Z",
+        "venue_timezone": "America/Chicago",
+        "final_supported_subset_date": "2026-10-29",
+        "basis": "Date-only next-local-midnight retention for one explicit imported night; not full-season ending, closing, last admission, or final-exit claim."
+      },
+      "status": "PROPOSED_DATE_ONLY_SUBSET_EXPIRY_PENDING_REVIEW",
+      "source_urls": [
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "note": "If exact subset independently passes, retain onlyOct29and expire at midnight followingOct29(CDT). If poster binding fails, dates/expiry revertnull and importHOLD remains. No inferred later night or2027."
+    },
+    "no_2027_rollover": {
+      "value": true,
+      "status": "REQUIRED_POLICY",
+      "source_urls": [],
+      "note": "2026-only record; no inferred 2027 dates or automatic rollover."
+    },
+    "never_open_now": {
+      "value": true,
+      "status": "REQUIRED_POLICY",
+      "source_urls": [],
+      "note": "Curated seasonal only; open_now null, machine_opening_intervals null."
+    }
+  },
+  "blocking_reason": "Original missing2026binding may be resolved by explicit operator poster alt text, but proposed binding/exactOct29subset awaits independent reproduction/adjudication; raw calendar image and full highlighted-date schedule remain unrecovered.",
+  "nonblocking_unknown_policy": "Unknown operational fields do not independently cause HOLD under V1; current-season binding is mandatory.",
+  "closure_status": "NOT ESTABLISHED; unavailable evidence does not prove closure",
+  "placement_review": "Prior independent address and approximate-point PASS retained; no automatic runtime clearance.",
+  "source_coverage": {
+    "operator_website": "Fresh open inaccessible; full extraction title-only. Prior404/502observations preserved.",
+    "operator_social": "Actual Instagram poster/profile full extraction new material; Facebook profile full extraction address/phone and relative-date repost, not exact schedule.",
+    "official_tickets": "No verified current official ticket URL established.",
+    "municipal_DMO": "No new reliable2026Cadaver municipal/DMO binding recovered in focused search; original2025municipal receipt remains historical.",
+    "required_directories": "TSF re-open/search retained current missing-date statement; MHH/FrightMaps targetedsearch low-relevance/no usableCadaver2026schedule; not exhaustion.",
+    "supplemental": "Morty explicitly reopens2026(last-verified8/31/2026) but ambiguousSep28opening not imported. FourStates2025retainedhistorical."
+  },
+  "rejected_inferences": [
+    "Directory copyright 2026 is not attraction season binding.",
+    "2025 hours/admission/payment cannot be carried into 2026.",
+    "No search result does not mean no event exists.",
+    "Approximate geocode does not establish an entrance."
+  ],
+  "baseline_receipt": "../reconcile/missouri-continuation-baseline-2026-10-09.json",
+  "research_id": "cadaver-astra-takeover-R2",
+  "continuity_input": "d7348ea0c3da658da199a6b789ccbea6dc862172",
+  "prior_research_sha256": "efed6d770a98cd470030ca189b429cb7a5f66c42301afa7574cfe1d5244f243b",
+  "prior_independent_report_sha256": "2d0fd7149a49c4ba3dcda0870162e391a48d6da98e53f91bfccee091fef18a90",
+  "new_fields": {
+    "public_operator_phone": {
+      "value": [
+        "417-499-5635",
+        "417-825-2005"
+      ],
+      "source_urls": [
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "status": "PROPOSED_OPERATOR_POSTER_FIELD",
+      "note": "First number corroborated by Facebook public profile. No call made."
+    },
+    "arrival_note": {
+      "value": "5 miles north of Stones Corner",
+      "source_urls": [
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "status": "PUBLISHED_TEXT_ONLY_NOT_PRECISE_ROUTE",
+      "note": "Retain as evidence; omit from consumer Directions because address is supported and no entrance/parking plan established."
+    }
+  },
+  "conflicts_and_rejected_inferences": [
+    "Facebookphoto1325853942885271searchsnippet says2026calendar, but exact-post full extraction isOct5,2025without calendar. Reject snippet as2026proof; likely related-post contamination.",
+    "Instagramsearch snippets from unrelated haunts show9/25\u201310/31or8pm\u20131amand unrelated2080Mainaddress; do not attribute toCadaver.",
+    "InstagramshortcodeDc14NDtxedGmay appear historically old; shortcode shapealone doesnot provepublicationdate. Extractor metadata alone insufficient. Explicit2026calendartext is proposedbinding and must independentlyreproduce.",
+    "Mortysearch/openextract differ in whetherOpeningSeptember28ispresent. Do not importSept28orimplied fullseason.",
+    "CalendarOCRlists allcellswithout reliablydistinguishing highlightedopen dates. No routineFriday/Saturday datesinferred.",
+    "No cancellationresultisnotproofuncancelled. No ticketinventoryclaim. No closureclaimfromsitefailures."
+  ],
+  "tool_limitations": [
+    "Firecrawl live poster scrape returnedINSUFFICIENT_CREDITS; no page/image result or livefreshnessproof.",
+    "Final image_query plusTavilyextractexec stalled and wasaborted after1279seconds. No receiptreturned, noimageobtained, noresultclaimed.",
+    "Full operator extraction is tool-renderedpublictext, not an actualdownloadedposter orhumanpixelreview. Sourceavailability/capturetime notsameaspostpublication."
+  ],
+  "accepted_runtime_record": null,
+  "import_allowed": false,
+  "runtime_active": false,
+  "self_approval": false,
+  "scope": "Data-only supplement; no runtime/repository/production/continuity mutation. Root publishes exact frozen package; independent reviewer adjudicates only newfields."
+}

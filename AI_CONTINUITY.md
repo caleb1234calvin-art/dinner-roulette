@@ -1,3 +1,23 @@
+# ASTRA MATERIAL GATE — 2026-10-09 05:21 UTC — Cadaver focused research frozen; candidate validation active
+
+## CURRENT
+- Cadaver research R2 frozen and preserved in audit/astra-cadaver-2026-10-09 (15 exact text receipts including prior reports). Research SHA2567916962320c8ceb99c1585f8a74f1e2a22e68f401766736262eb70a917378572; proposed subsetSHA2568aa07208f6ad55abb6b46a74f503daacbda2c9380a20e4897b2e84de2fe761bf; manifestSHA25630224e47c31a10583b894de439b9d327890317cb1da78eab9e33989549dc3dc4.
+- New operator extracted poster text explicitly says2026 andOct29,7–10pm; address/public phones/admission corroboration recovered. Proposal onlyOct29/date-onlymidnightretention, no inferredcadence. Independent factual adjudication pending; no import/runtimeclearance.
+- Exact twenty-record candidate remains PR60/headbb7f36123c5035a36676e98acb1b9ab4fe599955/tree69a90a419ea7f735823a001676c78428b741e3fb/parent979d83aede9d66163e1ebaed9ad5b219cb637882.
+- Auth-enabled migration-free production build PASS exacthead:source750ee199e0e1a52fb8e972f5a6899b8f79f5df33d7a9409b7f59ecde4d202eff(468files),output9e3971b1ba9710f22c2013324b49fb7eda2116c8a7030379c27933eaf772a917(194files). TypecheckPASS;lint0errors/6inheritedwarnings.
+- Full local test attempt returnedfailure; diagnosis pending, preserved test-candidate1.log. No exact-head fulltestPASS claimed. Hosted web37887765459 and Android37887765470 are running at candidatehead; hosted/sourceindependentreviews active.
+- Fresh protection read:main protected=false, protection.enabled=false/enforcementoff; repositoryrulesets empty. Dedicatedprotectionendpoint403integrationpermission, not proof ofhiddenrules. No settingschanged. Fresh exact-candidate owner waiver is NOTgranted.
+## NEXT
+- Diagnose fulltestfailure; preserve firstattempt and fix only demonstrated defect/harness issue. Inspect hostedgates.
+- Independently adjudicate Cadaver year/datebinding and publish narrowfinalverdict.
+- Continue cumulative source/browser/geometry/unsignedAndroidverification, then ownerreleasegate onlyifPASS.
+## HOLD
+- Cadaveractualposterimageunrecovered, Instagramshortcode/dateuncertainty; exactsubsetproposal is NOTPASS. Finalimageextraction stalled1279s and aborted; Firecrawlcreditfailure preserved. No closure inference.
+- Mainmerge,productionpromotion,protectionwaiver/configuration,signing/PlayConsole prohibited withoutownerdecision.
+- All prior commercial/residential/physicalAndroid HOLDs remain. Production32unchanged and candidate not releaseready.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 05:16 UTC — cumulative twenty-record implementation candidate
 
 ## CURRENT
