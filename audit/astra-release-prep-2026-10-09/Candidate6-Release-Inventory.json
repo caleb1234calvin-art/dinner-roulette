@@ -1,0 +1,2071 @@
+{
+  "artifact": "Candidate6 release inventory",
+  "status": "Controlled-stop failure-exception closeout: exact-head local gates, independent minimal harness delta, hosted unit checks and automated Android artifact readiness PASS. Current web/browser/geometry/final runtime acceptance PENDING.",
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "branch": "integration/missouri-astra-push-2026-10-09",
+  "head": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "tree": "8d5059c9fee871c522616971cce0a80b153e4d23",
+  "parents": [
+    "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd"
+  ],
+  "baselineMain": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+  "baselineTree": "a7dbb32947c0a0daf4864346b0d212477fc9a11b",
+  "baselineIsAncestor": true,
+  "candidateAncestryAfterBaseline": [
+    "bb7f36123c5035a36676e98acb1b9ab4fe599955",
+    "4513aee7de0afe55e0f0fa061c1ec5f6af4fa412",
+    "7e6f26e55f85e85e232b2ff0f2e2e16e08676885",
+    "a44e70996bc8546f75dc71e4af13c414350ec1f9",
+    "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+    "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2"
+  ],
+  "changedPathCount": 32,
+  "changedPaths": [
+    ".github/workflows/validate-icon-pack.yml",
+    "audit/astra-commercial-2026-10-09/Author-Implementation-Report.json",
+    "audit/astra-commercial-2026-10-09/Commercial-Feemster-Independent-Eligible-R2.json",
+    "audit/astra-commercial-2026-10-09/Commercial-Holds-Independent-Eligible-R1.json",
+    "audit/astra-commercial-2026-10-09/Implementation-Projection-Manifest.json",
+    "audit/astra-delta-2026-10-09/Author-Implementation-Report.json",
+    "audit/astra-delta-2026-10-09/Delta6-Independent-Eligible-R2.json",
+    "audit/astra-delta-2026-10-09/Delta6-Independent-Final-R2.json",
+    "audit/astra-delta-2026-10-09/Implementation-Projection-Manifest.json",
+    "audit/astra-eleven-2026-10-09/Author-Implementation-Report.json",
+    "audit/astra-eleven-2026-10-09/Implementation-Projection-Manifest.json",
+    "audit/astra-eleven-2026-10-09/Independent-Delta5-R2-Final-Eligible-Subset.json",
+    "audit/astra-eleven-2026-10-09/Nine-Preimport-Eligible-Author-Subset-R2.json",
+    "scripts/missouri-two-record-browser.mjs",
+    "scripts/missouri-two-records.test.mjs",
+    "scripts/seasonal-astra-commercial.test.mjs",
+    "scripts/seasonal-astra-delta.test.mjs",
+    "scripts/seasonal-astra-eleven.test.mjs",
+    "scripts/seasonal-card-layout-browser.mjs",
+    "scripts/seasonal-discovery.test.mjs",
+    "scripts/seasonal-late-fall-client-cache.test.mjs",
+    "scripts/seasonal-late-fall.test.mjs",
+    "scripts/seasonal-ten-record-browser.mjs",
+    "scripts/test-support/missouri-previous32-receipts.json",
+    "src/lib/date-night/curated-policy.ts",
+    "src/lib/date-night/missouri-2026-astra-commercial-catalog.ts",
+    "src/lib/date-night/missouri-2026-astra-delta-catalog.ts",
+    "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts",
+    "src/lib/date-night/missouri-2026-three-source-tier-a-catalog.ts",
+    "src/lib/date-night/search.ts",
+    "src/lib/date-night/seasonal-catalog.ts",
+    "src/lib/date-night/seasonal-presentation-catalog.ts"
+  ],
+  "recordCounts": {
+    "baselineCurated": 32,
+    "added": 20,
+    "candidateCurated": 52,
+    "originalClearedElevenImplemented": 11,
+    "originalElevenExpiredOrRejected": 0,
+    "runtimeEnriched": 0,
+    "independentlyClearedEvidenceOnlyEnrichments": 2,
+    "remainingCommercialHoldsExcludingCadaver": 6,
+    "deltaCommercialPublicLeads": 18,
+    "deltaImplemented": 5,
+    "deltaStillHeld": 8,
+    "deltaLiveExistingRetained": 4,
+    "deltaDuplicateRejectedAsNewIdentity": 1,
+    "residentialOrUncertainClassificationHeldSeparately": 5
+  },
+  "addedRecords": [
+    {
+      "batch": "eleven",
+      "recordId": "DELTA2-BRANSON-GHOSTER",
+      "canonicalId": "date-night-mo26-astra-branson-ghoster",
+      "name": "The Curse at The Branson Ghoster Coaster",
+      "activityTypes": [
+        "other-halloween-fall"
+      ],
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-10-02",
+      "activeUntil": "2026-10-31",
+      "finalExpiry": "2026-10-31T22:00:00-05:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Reviewed final event/operating cutoff",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "2115 W. 76 Country Blvd, Branson, MO 65616",
+      "placement": {
+        "lat": 36.64095609765,
+        "lon": -93.260005613352,
+        "basis": "address-geocode",
+        "precisionLabel": "Approximate Census address-range interpolation; not an entrance, parking stall, gate, doorway or rideshare drop-off."
+      },
+      "confidence": "good",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-eleven-d7348ea-freshness-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts"
+    },
+    {
+      "batch": "eleven",
+      "recordId": "MO26-056",
+      "canonicalId": "date-night-mo26-astra-liberty-corn-maze",
+      "name": "Liberty Corn Maze",
+      "activityTypes": [
+        "corn-maze"
+      ],
+      "activeDates": [
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13",
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-20",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-09-11",
+      "activeUntil": "2026-10-30",
+      "finalExpiry": "2026-10-30T23:00:00-05:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Reviewed final event/operating cutoff",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "17607 Liberty Bend Road S,Liberty,MO64068",
+      "placement": {
+        "lat": 39.1857233,
+        "lon": -94.3698827,
+        "basis": "operator-site",
+        "precisionLabel": "Approximate site placement only; not independently verified entrance or parking."
+      },
+      "confidence": "good",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-eleven-d7348ea-freshness-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts"
+    },
+    {
+      "batch": "eleven",
+      "recordId": "DELTA3-RANCH",
+      "canonicalId": "date-night-mo26-astra-terror-at-the-ranch",
+      "name": "Terror at the Ranch",
+      "activityTypes": [
+        "haunted-house",
+        "corn-maze"
+      ],
+      "activeDates": null,
+      "dateCoverage": "Bounded2026 availability envelope only; full operating-date list not imported or inferred",
+      "activeFrom": "2026-10-09",
+      "activeUntil": "2026-10-31",
+      "finalExpiry": "2026-10-31T23:00:00-05:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Reviewed final event/operating cutoff",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "23111 S. Jefferson Pkwy, Harrisonville, MO64701",
+      "placement": {
+        "lat": 38.699068931183,
+        "lon": -94.350116918769,
+        "basis": "address-geocode",
+        "precisionLabel": "approximate-address-derived; not gate/parking/doorway/rideshare dropoff"
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-eleven-d7348ea-freshness-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts"
+    },
+    {
+      "batch": "eleven",
+      "recordId": "DELTA3-COBB",
+      "canonicalId": "date-night-mo26-astra-cobb-factory",
+      "name": "PanicFest — The Cobb Factory",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "activeDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01",
+        "2026-11-06",
+        "2026-11-07"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-09-25",
+      "activeUntil": "2026-11-07",
+      "finalExpiry": "2026-11-07T23:00:00-06:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Reviewed final event/operating cutoff",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "141 E. Main Street, Old Monroe, MO63369",
+      "placement": {
+        "lat": 38.931375171592,
+        "lon": -90.746591944663,
+        "basis": "address-geocode",
+        "precisionLabel": "approximate-address-derived; not gate/parking/doorway/rideshare dropoff"
+      },
+      "confidence": "good",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-eleven-d7348ea-freshness-2026-10-09",
+      "visibility": "listing-lifecycle",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts"
+    },
+    {
+      "batch": "eleven",
+      "recordId": "MO26-037",
+      "canonicalId": "date-night-mo26-astra-field-of-screams-nixa",
+      "name": "Field of Screams Nixa",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "activeDates": [
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-09-18",
+      "activeUntil": "2026-11-01",
+      "finalExpiry": "2026-11-02T00:00:00-06:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Reviewed final event/operating cutoff",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "Summers at the River, 2142 N. Sports Complex Ln., Nixa, MO 65714",
+      "placement": {
+        "lat": 37.0931968,
+        "lon": -93.3012305,
+        "basis": "operator-site",
+        "precisionLabel": "Approximate site placement only; not entrance, parking, gate, doorway or rideshare dropoff."
+      },
+      "confidence": "good",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-eleven-d7348ea-freshness-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts"
+    },
+    {
+      "batch": "eleven",
+      "recordId": "DELTA2-MISSOURI-NIGHTMARE",
+      "canonicalId": "date-night-mo26-astra-missouri-nightmare",
+      "name": "Missouri Nightmare Haunted Attraction",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "activeDates": null,
+      "dateCoverage": "Bounded2026 availability envelope only; full operating-date list not imported or inferred",
+      "activeFrom": "2026-10-09",
+      "activeUntil": "2026-11-01",
+      "finalExpiry": "2026-11-01T20:30:00-06:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Reviewed final event/operating cutoff",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "1420 County Rd276, Columbia, MO65202",
+      "placement": {
+        "lat": 38.977510601859,
+        "lon": -92.139911854447,
+        "basis": "address-geocode",
+        "precisionLabel": "Approximate Census address-range interpolation only; Directions must use supported visitor address."
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-eleven-d7348ea-freshness-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts"
+    },
+    {
+      "batch": "eleven",
+      "recordId": "DELTA2-TREPIDATIONS",
+      "canonicalId": "date-night-mo26-astra-trepidations",
+      "name": "Trepidations Haunted Attraction",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-10-02",
+      "activeUntil": "2026-11-01",
+      "finalExpiry": "2026-11-01T23:00:00-06:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Reviewed final event/operating cutoff",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "101 East Commercial Street, Exeter, MO65647",
+      "placement": {
+        "lat": 36.6725635,
+        "lon": -93.9396267,
+        "basis": "operator-site",
+        "precisionLabel": "Approximate site placement only; not entrance, parking, gate, doorway or rideshare dropoff."
+      },
+      "confidence": "good",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-eleven-d7348ea-freshness-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts"
+    },
+    {
+      "batch": "eleven",
+      "recordId": "DELTA3-FREAKS",
+      "canonicalId": "date-night-mo26-astra-freaks-fair",
+      "name": "Freaks Fair Haunted Attraction",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "activeDates": [
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-10-23",
+      "activeUntil": "2026-10-31",
+      "finalExpiry": "2026-10-31T22:30:00-05:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Reviewed final event/operating cutoff",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "126 SW 400 Rd. (Twin Oaks Event Center), Warrensburg, MO 64093",
+      "placement": {
+        "lat": 38.7627893,
+        "lon": -93.7360498,
+        "basis": "operator-site",
+        "precisionLabel": "Approximate site placement only, not an entrance, parking, gate or rideshare dropoff."
+      },
+      "confidence": "good",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-eleven-d7348ea-freshness-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts"
+    },
+    {
+      "batch": "eleven",
+      "recordId": "DELTA4-HELL-HARVEST",
+      "canonicalId": "date-night-mo26-astra-hell-harvest",
+      "name": "Hell Harvest",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-09-25",
+      "activeUntil": "2026-10-31",
+      "finalExpiry": "2026-11-01T00:00:00-05:00",
+      "expiryBasis": "date-only",
+      "cutoffMeaning": "Date-only listing visibility cutoff, not claimed closing time",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "19126 Missouri 8, Potosi, MO 63664",
+      "placement": {
+        "lat": 37.9133909,
+        "lon": -90.942628,
+        "basis": "operator-site",
+        "precisionLabel": "Approximate operator ticket-map site placement only; not entrance, parking stall, gate, doorway or rideshare dropoff."
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-eleven-d7348ea-freshness-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts"
+    },
+    {
+      "batch": "eleven",
+      "recordId": "MO26-005",
+      "canonicalId": "date-night-mo26-astra-myers-forest-of-fears",
+      "name": "Myers Forest of Fears",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-10-09",
+      "activeUntil": "2026-10-31",
+      "finalExpiry": "2026-11-01T00:00:00-05:00",
+      "expiryBasis": "date-only",
+      "cutoffMeaning": "Date-only listing visibility cutoff, not claimed closing time",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "3935 S Garrison Avenue, Carthage, MO 64836",
+      "placement": {
+        "lat": 37.119659,
+        "lon": -94.312243,
+        "basis": "operator-site",
+        "precisionLabel": "Approximate operator-linked site placement; not an entrance, parking point or rideshare dropoff"
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-eleven-d7348ea-freshness-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts"
+    },
+    {
+      "batch": "eleven",
+      "recordId": "MO26-027",
+      "canonicalId": "date-night-mo26-astra-labyrinth-of-fear",
+      "name": "Labyrinth of Fear",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "activeDates": [
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-10-17",
+      "activeUntil": "2026-10-31",
+      "finalExpiry": "2026-11-01T00:00:00-05:00",
+      "expiryBasis": "date-only",
+      "cutoffMeaning": "Date-only listing visibility cutoff, not claimed closing time",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "17866 East Overland Road, Nevada, MO 64772",
+      "placement": {
+        "lat": 37.828856,
+        "lon": -94.315562,
+        "basis": "operator-site",
+        "precisionLabel": "Approximate operator-linked site placement; not an entrance, parking point or rideshare dropoff"
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-eleven-d7348ea-freshness-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts"
+    },
+    {
+      "batch": "commercial",
+      "recordId": "MO26-002",
+      "canonicalId": "date-night-mo26-astra-aurora-maize",
+      "name": "Aurora Maize at Adventure Farm",
+      "activityTypes": [
+        "corn-maze",
+        "haunted-house"
+      ],
+      "activeDates": [
+        "2026-09-19",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-07",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-14",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-21",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-28",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-09-19",
+      "activeUntil": "2026-10-31",
+      "finalExpiry": "2026-10-31T22:00:00-05:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Last-admission visibility cutoff, not final exit",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "20591 County Road 2200, Aurora, MO 65605",
+      "placement": {
+        "lat": 36.9808456,
+        "lon": -93.6877871,
+        "basis": "operator-site",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-commercial-independent-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-commercial-catalog.ts"
+    },
+    {
+      "batch": "commercial",
+      "recordId": "DELTA2-SHEPHERD-LANTERN",
+      "canonicalId": "date-night-mo26-astra-shepherds-lantern",
+      "name": "The Broken Hour at Shepherd’s Lantern",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "activeDates": [
+        "2026-10-16",
+        "2026-10-17"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-10-16",
+      "activeUntil": "2026-10-17",
+      "finalExpiry": "2026-10-17T22:00:00-05:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Reviewed final event/operating cutoff",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "5803 Jakes Prairie Road, Cuba, MO 65453",
+      "placement": {
+        "lat": 38.130489811549,
+        "lon": -91.467898376669,
+        "basis": "address-geocode",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-commercial-independent-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-commercial-catalog.ts"
+    },
+    {
+      "batch": "commercial",
+      "recordId": "DELTA2-HOLLOWS",
+      "canonicalId": "date-night-mo26-astra-haunted-hollows",
+      "name": "Haunted Hollows Haunted Trail",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-24",
+        "2026-10-30"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-10-09",
+      "activeUntil": "2026-10-30",
+      "finalExpiry": "2026-10-30T23:00:00-05:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Last supported ticket-subset session end, not complete-season closure",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "5947 County Road 261, Palmyra, MO 63461",
+      "placement": {
+        "lat": 39.733676,
+        "lon": -91.562875,
+        "basis": "operator-site",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-commercial-independent-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-commercial-catalog.ts"
+    },
+    {
+      "batch": "commercial",
+      "recordId": "MO26-039",
+      "canonicalId": "date-night-mo26-astra-feemster-corn-maze",
+      "name": "Feemster Twisted Corn Maze",
+      "activityTypes": [
+        "corn-maze"
+      ],
+      "activeDates": [
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-09-26",
+      "activeUntil": "2026-11-01",
+      "finalExpiry": "2026-11-01T21:00:00-06:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Reviewed final event/operating cutoff",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "2501 E Farm Road 94, Springfield, MO 65803",
+      "placement": {
+        "lat": 37.273100307742,
+        "lon": -93.24361332435,
+        "basis": "address-geocode",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-commercial-independent-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-commercial-catalog.ts"
+    },
+    {
+      "batch": "delta",
+      "recordId": "DELTA6-WORLDS-OF-FUN",
+      "canonicalId": "date-night-mo26-astra-worlds-of-fun-haunt",
+      "name": "Worlds of Fun — Halloween Haunt",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-10-02",
+      "activeUntil": "2026-10-31",
+      "finalExpiry": "2026-11-01T00:00:00-05:00",
+      "expiryBasis": "date-only",
+      "cutoffMeaning": "Date-only listing visibility cutoff, not claimed closing time",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "4545 Worlds of Fun Avenue, Kansas City, MO 64161",
+      "placement": {
+        "lat": 39.177249320447,
+        "lon": -94.489341242397,
+        "basis": "address-geocode",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-delta6-independent-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-delta-catalog.ts"
+    },
+    {
+      "batch": "delta",
+      "recordId": "DELTA2-OZARK",
+      "canonicalId": "date-night-mo26-astra-ozark-nightmares",
+      "name": "Ozark Nightmares Haunted House — The Viscount’s Manor",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "activeDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-09-25",
+      "activeUntil": "2026-10-31",
+      "finalExpiry": "2026-11-01T00:00:00-05:00",
+      "expiryBasis": "date-only",
+      "cutoffMeaning": "Date-only listing visibility cutoff, not claimed closing time",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "22599 Highway 32, Lebanon, MO 65536",
+      "placement": {
+        "lat": 37.668169182421,
+        "lon": -92.619844432713,
+        "basis": "address-geocode",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-delta6-independent-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-delta-catalog.ts"
+    },
+    {
+      "batch": "delta",
+      "recordId": "DELTA3-BALLWIN",
+      "canonicalId": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+      "name": "Tunnel of Terror — Tommy’s Express Ballwin",
+      "activityTypes": [
+        "other-halloween-fall"
+      ],
+      "activeDates": [
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-10-23",
+      "activeUntil": "2026-10-24",
+      "finalExpiry": "2026-10-24T21:30:00-05:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Reviewed final event/operating cutoff",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "14918 Manchester Road, Ballwin, MO 63011",
+      "placement": {
+        "lat": 38.592934080507,
+        "lon": -90.543467455396,
+        "basis": "address-geocode",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-delta6-independent-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-delta-catalog.ts"
+    },
+    {
+      "batch": "delta",
+      "recordId": "DELTA6-OFALLON",
+      "canonicalId": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+      "name": "Tunnel of Terror — Tommy’s Express O’Fallon",
+      "activityTypes": [
+        "other-halloween-fall"
+      ],
+      "activeDates": [
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-10-23",
+      "activeUntil": "2026-10-24",
+      "finalExpiry": "2026-10-24T21:30:00-05:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Reviewed final event/operating cutoff",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "101 Fallon Loop Road, O’Fallon, MO 63368",
+      "placement": {
+        "lat": 38.764203107345,
+        "lon": -90.700048687725,
+        "basis": "address-geocode",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-delta6-independent-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-delta-catalog.ts"
+    },
+    {
+      "batch": "delta",
+      "recordId": "DELTA3-GROTTO",
+      "canonicalId": "date-night-mo26-astra-haunted-grotto",
+      "name": "The Haunted Grotto",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "dateCoverage": "Explicit bounded dates",
+      "activeFrom": "2026-10-09",
+      "activeUntil": "2026-10-31",
+      "finalExpiry": "2026-10-31T22:00:00-05:00",
+      "expiryBasis": "exact",
+      "cutoffMeaning": "Reviewed final event/operating cutoff",
+      "directionsKind": "visitor-address",
+      "directionsAddress": "3102 Aad Grotto Road, Poplar Bluff, MO 63901",
+      "placement": {
+        "lat": 36.7950117,
+        "lon": -90.4314449,
+        "basis": "address-geocode",
+        "precisionLabel": "Approximate address-derived placement; not an entrance or parking coordinate"
+      },
+      "confidence": "limited",
+      "checkedAt": "2026-10-09",
+      "revalidateAfter": "2026-10-15",
+      "openNowPolicy": "never",
+      "machineOpeningHours": null,
+      "reviewRevision": "MO2026-astra-delta6-independent-2026-10-09",
+      "visibility": "normal-season",
+      "sourcePath": "src/lib/date-night/missouri-2026-astra-delta-catalog.ts"
+    }
+  ],
+  "commercialHoldsRanked": [
+    {
+      "remainingRank": 1,
+      "originalResearchRank": 5,
+      "recordId": "MO26-006",
+      "name": "Wolfmans House Of Screams",
+      "rankingReason": "High local utility; indexed primary 2026 calendar and directory current-season evidence, but calendar image inaccessible.",
+      "exactBlockerAndRecoveredEvidence": "New official 2026 trailer and opening calendar found in search index. Direct calendar is a login wall. Need exact future 2026 dates and final expiry; no closure inferred.",
+      "status": "HOLD",
+      "runtimeImported": false
+    },
+    {
+      "remainingRank": 2,
+      "originalResearchRank": 6,
+      "recordId": "MO26-004",
+      "name": "The Werehouse",
+      "rankingReason": "High local utility, but already legacy fallback and still lacks exact dates.",
+      "exactBlockerAndRecoveredEvidence": "Indexed 2026 operator hiring/trailer signals recovered. Direct website remains undated Friday/Saturday 7 p.m.–midnight. Directory raw calendar has no active dates. Need exact 2026 date binding and expiry; legacy coordinate conflict retained.",
+      "status": "HOLD",
+      "runtimeImported": false
+    },
+    {
+      "remainingRank": 3,
+      "originalResearchRank": 7,
+      "recordId": "DELTA2-FEARFACTORY",
+      "name": "Fear Factory LLC",
+      "rankingReason": "Southern Missouri coverage; current secondary weekend lead, but prior operator schedule is explicitly 2025.",
+      "exactBlockerAndRecoveredEvidence": "October 8 directory guide says Friday/Saturday. This remains secondary evidence; direct contact page returned 502. Need decisive 2026 binding and expiry.",
+      "status": "HOLD",
+      "runtimeImported": false
+    },
+    {
+      "remainingRank": 4,
+      "originalResearchRank": 8,
+      "recordId": "DELTA2-WACO",
+      "name": "Waco School House Haunt",
+      "rankingReason": "Useful local coverage but weak current evidence and unavailable official origin.",
+      "exactBlockerAndRecoveredEvidence": "Focused exact-name 2026 search yielded no accepted schedule. Official site returned 502. Need 2026 date binding and expiry, not a closure assumption.",
+      "status": "HOLD",
+      "runtimeImported": false
+    },
+    {
+      "remainingRank": 5,
+      "originalResearchRank": 9,
+      "recordId": "DELTA5-RISING-RECHECK",
+      "name": "Rising Haunted Attraction",
+      "rankingReason": "Waynesville already has live Haunted River; secondary current roundups coexist with historical DMO evidence.",
+      "exactBlockerAndRecoveredEvidence": "Raw directory calendar contains no active dates; 8–11 p.m. text is undated. October 7 guide lacks exact dates. Historical 2024 DMO cannot establish 2026.",
+      "status": "HOLD",
+      "runtimeImported": false
+    },
+    {
+      "remainingRank": 6,
+      "originalResearchRank": 10,
+      "recordId": "DELTA2-TWISTED",
+      "name": "Twisted Minds Haunted House",
+      "rankingReason": "Lowest resolution probability: weak current season evidence and mostly historical directory leads.",
+      "exactBlockerAndRecoveredEvidence": "Focused 2026 search yielded historical directory and contaminated social snippets. Need exact 2026 public invitation/dates. California Twisted Minds is unrelated.",
+      "status": "HOLD",
+      "runtimeImported": false
+    }
+  ],
+  "delta": {
+    "classificationCounts": {
+      "DUPLICATE": 1,
+      "HISTORICAL HOLD / re-clearance": 8,
+      "LIVE EXISTING / enrichment": 4,
+      "NET NEW": 5
+    },
+    "dedupeInputsSummary": "134 historical identities + baseline32 + prepared11 + available Delta2–5 ledgers; external older statewide sweep unavailable, so global novelty provisional.",
+    "dispositions": [
+      {
+        "recordId": "DELTA6-WORLDS-OF-FUN",
+        "name": "Worlds of Fun — Halloween Haunt",
+        "classification": "NET NEW",
+        "currentDisposition": "IMPLEMENTED IN CANDIDATE; independent factual PASS, exact-head runtime gates pending",
+        "implemented": true,
+        "sourceStageDecision": "CURRENT CANDIDATE — independent review pending",
+        "remainingBlockerOrRetainedLimitations": "Frozen projection deliberately covers explicit October calendar only, not inferred September dates.; All dates must be bound to 2026 only.; Calendar has park-hours entries separate from haunt entries; keep hours partial.; No separate passholder-exclusive October 29 import."
+      },
+      {
+        "recordId": "DELTA2-OZARK",
+        "name": "Ozark Nightmares Haunted House — The Viscount’s Manor",
+        "classification": "HISTORICAL HOLD / re-clearance",
+        "currentDisposition": "IMPLEMENTED IN CANDIDATE; independent factual PASS, exact-head runtime gates pending",
+        "implemented": true,
+        "sourceStageDecision": "CURRENT CANDIDATE — independent review pending",
+        "remainingBlockerOrRetainedLimitations": "2026 schedule is indexed first-party evidence; direct Facebook page unavailable. Independent reviewer must accept/reproduce this evidence before PASS.; DMO 2020-path event currently describing 2025 is not used to bind 2026.; Unknown admission availability, restrictions and closing times remain explicit unknowns."
+      },
+      {
+        "recordId": "DELTA3-BALLWIN",
+        "name": "Tunnel of Terror — Tommy’s Express Ballwin",
+        "classification": "HISTORICAL HOLD / re-clearance",
+        "currentDisposition": "IMPLEMENTED IN CANDIDATE; independent factual PASS, exact-head runtime gates pending",
+        "implemented": true,
+        "sourceStageDecision": "CURRENT CANDIDATE — independent review pending",
+        "remainingBlockerOrRetainedLimitations": "Direct 200 HTML and extracted page do not contain event details; indexed source date binding requires independent corroboration.; Ordinary daily wash hours not substituted for event schedule.; Category requires existing Other Halloween / Fall semantics; do not label walk-through haunted house.; Drive-through attraction: do not promise a precise pedestrian or rideshare entrance."
+      },
+      {
+        "recordId": "DELTA6-OFALLON",
+        "name": "Tunnel of Terror — Tommy’s Express O’Fallon",
+        "classification": "NET NEW",
+        "currentDisposition": "IMPLEMENTED IN CANDIDATE; independent factual PASS, exact-head runtime gates pending",
+        "implemented": true,
+        "sourceStageDecision": "CURRENT CANDIDATE — independent review pending",
+        "remainingBlockerOrRetainedLimitations": "Independent evidence confidence lower than Ballwin: direct HTML event cards blank; exact dates/hours depend on saved location-specific search receipt.; Nationwide Tunnel of Terror campaign cannot prove location dates; Ballwin schedule was not copied as proof.; No price imported; no exact ticket inventory claim.; Drive-through classification and ride semantics need product/runtime review."
+      },
+      {
+        "recordId": "DELTA3-GROTTO",
+        "name": "The Haunted Grotto",
+        "classification": "HISTORICAL HOLD / re-clearance",
+        "currentDisposition": "IMPLEMENTED IN CANDIDATE; independent factual PASS, exact-head runtime gates pending",
+        "implemented": true,
+        "sourceStageDecision": "CURRENT CANDIDATE — independent review pending",
+        "remainingBlockerOrRetainedLimitations": "Independent acceptance of indexed2026 operator/vendor date evidence and exact-address Waze placement qualification. Runtime not implemented or reviewed. Census/Nominatim no-match preserved; no generic city or road point used."
+      },
+      {
+        "recordId": "DELTA6-ROLLA",
+        "name": "A Field of Screams / Timmy’s Terror, Rolla",
+        "classification": "NET NEW",
+        "currentDisposition": "HOLD",
+        "implemented": false,
+        "sourceStageDecision": "HOLD",
+        "remainingBlockerOrRetainedLimitations": "Whole-season operator schedule Oct2–31 not explicitly year-bound; Oct10 event may support smaller exact subset but hours conflict22:00 directory versus23:00 indexed operator; no placement prepared."
+      },
+      {
+        "recordId": "DELTA6-BRANSON-FIELD",
+        "name": "Field of Screams Branson",
+        "classification": "NET NEW",
+        "currentDisposition": "HOLD",
+        "implemented": false,
+        "sourceStageDecision": "HOLD",
+        "remainingBlockerOrRetainedLimitations": "DMO extraction nav-only; conflicting tradepress Sep/Oct opening and four November crossover dates not resolved to exact lifecycle. Distinct from MO26-037 Nixa."
+      },
+      {
+        "recordId": "DELTA3-FEARSTONE",
+        "name": "Fearstone Forest Haunted Trail",
+        "classification": "HISTORICAL HOLD / re-clearance",
+        "currentDisposition": "HOLD",
+        "implemented": false,
+        "sourceStageDecision": "HOLD",
+        "remainingBlockerOrRetainedLimitations": "Exact operating calendar remains image/year unbound;837NHwy5 organizer address vs85Benne venue must stay separate;18+Oct17/kidsOct31 cannot be treated2026 before binding."
+      },
+      {
+        "recordId": "DELTA3-FUN-TIME",
+        "name": "Fun Time Farms Haunted Corn MAiZE",
+        "classification": "HISTORICAL HOLD / re-clearance",
+        "currentDisposition": "HOLD",
+        "implemented": false,
+        "sourceStageDecision": "HOLD",
+        "remainingBlockerOrRetainedLimitations": "Final active date/expiry still unresolved; hiring or season announcement alone does not establish exact season."
+      },
+      {
+        "recordId": "DELTA3-TERRIFIEDEXIST",
+        "name": "TerrifiedExist Haunted Attractions",
+        "classification": "HISTORICAL HOLD / re-clearance",
+        "currentDisposition": "HOLD",
+        "implemented": false,
+        "sourceStageDecision": "HOLD",
+        "remainingBlockerOrRetainedLimitations": "Hiring is not visitor operation; exact2026dates/expiry unresolved."
+      },
+      {
+        "recordId": "MO26-088",
+        "name": "Lemp Brewery Haunted House",
+        "classification": "HISTORICAL HOLD / re-clearance",
+        "currentDisposition": "HOLD",
+        "implemented": false,
+        "sourceStageDecision": "HOLD",
+        "remainingBlockerOrRetainedLimitations": "No Lemp-specific2026 calendar/expiry or official ticket availability; shared Scarefest calendar/tickets currently Darkness+Creepyworld only."
+      },
+      {
+        "recordId": "DELTA6-BOSS",
+        "name": "BOSS Haunted House, Fort Leonard Wood",
+        "classification": "NET NEW",
+        "currentDisposition": "HOLD",
+        "implemented": false,
+        "sourceStageDecision": "HOLD",
+        "remainingBlockerOrRetainedLimitations": "2026 edit timestamp not2026 operation; prior schedule Oct25,2025 stale; supported visitor/base access route and final date absent."
+      },
+      {
+        "recordId": "MO26-085",
+        "name": "Brookdale Farms / The Hollows",
+        "classification": "LIVE EXISTING / enrichment",
+        "currentDisposition": "INDEPENDENT FACTUAL/COPY PASS; evidence-only, no runtime change",
+        "implemented": false,
+        "sourceStageDecision": "EVIDENCE-ONLY ENRICHMENT PROPOSAL",
+        "remainingBlockerOrRetainedLimitations": "Do not apply haunted attraction lifecycle to FallFestivalNov8 or mix old2025FAQprices withcurrenttickets; consumer copy optional independent review."
+      },
+      {
+        "recordId": "MO26-124",
+        "name": "Hotel of Terror",
+        "classification": "LIVE EXISTING / enrichment",
+        "currentDisposition": "INDEPENDENT FACTUAL/COPY PASS; evidence-only, no runtime change",
+        "implemented": false,
+        "sourceStageDecision": "RETAIN EXISTING + OPTIONAL EVIDENCE ENRICHMENT",
+        "remainingBlockerOrRetainedLimitations": "No need runtime churn; no supported last-ever-season claim from directory."
+      },
+      {
+        "recordId": "DELTA-DARKNESS-2026",
+        "name": "The Darkness",
+        "classification": "LIVE EXISTING / enrichment",
+        "currentDisposition": "RETAIN STRONGER EXISTING",
+        "implemented": false,
+        "sourceStageDecision": "RETAIN STRONGER EXISTING",
+        "remainingBlockerOrRetainedLimitations": "Directory city-only address/0mile neighbors not usable placement; Scarefest date-hour conflicts already recognized, no overwrite."
+      },
+      {
+        "recordId": "DELTA-CREEPYWORLD-2026",
+        "name": "Creepyworld",
+        "classification": "LIVE EXISTING / enrichment",
+        "currentDisposition": "RETAIN STRONGER EXISTING",
+        "implemented": false,
+        "sourceStageDecision": "RETAIN STRONGER EXISTING",
+        "remainingBlockerOrRetainedLimitations": "No unique stronger new consumer field; direct FrightMaps detail failed, index usedonlyforidentity."
+      },
+      {
+        "recordId": "DUP-BEAST-EDGE",
+        "name": "The Beast and Edge of Hell combined directory row",
+        "classification": "DUPLICATE",
+        "currentDisposition": "NO NEW IMPORT",
+        "implemented": false,
+        "sourceStageDecision": "NO NEW IMPORT",
+        "remainingBlockerOrRetainedLimitations": "Not a third attraction; maintain each venue’s separate address/directions."
+      },
+      {
+        "recordId": "DELTA2-MACABRE",
+        "name": "Macabre Cinema",
+        "classification": "HISTORICAL HOLD / re-clearance",
+        "currentDisposition": "HOLD / NOT CURRENT FULL-SEASON",
+        "implemented": false,
+        "sourceStageDecision": "HOLD / NOT CURRENT FULL-SEASON",
+        "remainingBlockerOrRetainedLimitations": "Traditional full-season schedule suspended for redevelopment; surprise event possibility not explicit dated public operation. Current magazine generic reopening conflicts; do not import."
+      }
+    ],
+    "runtimeSemantics": "All five imported only after independent factual review. Original source-stage pending language retained as history, superseded for imported5 by candidate and independentFinalR2."
+  },
+  "enrichmentEvidenceOnly": [
+    {
+      "recordId": "MO26-085",
+      "canonicalId": "date-night-mo26-085-brookdale-farms",
+      "addedSentence": "The Hollows haunted trail uses separate admission and its own October calendar.",
+      "sourceUrl": "https://www.brookdalefarms.com/the-hollows",
+      "scope": "Optional sentence only. Do not add HauntedHouse category to FallFestival, overwrite currenthours/cutoff, import2025FAQprices, or borrow SummerFest parking7997JimWeberRd.",
+      "runtimeApplied": false,
+      "decision": "Independent factual/copy PASS, evidence-only retained"
+    },
+    {
+      "recordId": "MO26-124",
+      "canonicalId": "date-night-mo26-124-hotel-of-terror",
+      "addedSentence": "A combo pass with Dungeons of Doom includes transfer rides between the two haunts.",
+      "sourceUrl": "https://www.hotelofterror.com/",
+      "scope": "Optional arrival/admission note only; do not promise specific ridevehicle or availability, and do not add directory unsupported last-ever-season claim.",
+      "runtimeApplied": false,
+      "decision": "Independent factual/copy PASS, evidence-only retained"
+    }
+  ],
+  "residentialSeparate": {
+    "imported": 0,
+    "records": [
+      {
+        "name": "Arcadia Academy Haunted Tours",
+        "classification": "RESIDENTIAL / HOME HAUNT — separate pending operator classification",
+        "sourceUrl": "https://frightmaps.com/houses/missouri/arcadia-academy-haunted-tours",
+        "decision": "HOLD; no runtime proposal",
+        "blocker": "Listed Home haunt, but historic academy public-tour description suggests classification may be wrong. Require official current2026 public invitation before public-commercial proposal.",
+        "privacy": "Only operator/directory intentionally public location can be considered; no unrelated public-record/private-address research performed."
+      },
+      {
+        "name": "Historic Commercial Haunt",
+        "classification": "RESIDENTIAL / HOME HAUNT — separate pending operator classification",
+        "sourceUrl": "https://frightmaps.com/houses/missouri/historic-commercial-haunt",
+        "decision": "HOLD; no runtime proposal",
+        "blocker": "Home/yard tag; name Commercial does not establish business status. Directory00:00–23:59 schedule is unusable.",
+        "privacy": "Only operator/directory intentionally public location can be considered; no unrelated public-record/private-address research performed."
+      },
+      {
+        "name": "RMAA Haunted House and Trunk or Treat",
+        "classification": "RESIDENTIAL / HOME HAUNT — separate pending operator classification",
+        "sourceUrl": "https://frightmaps.com/houses/missouri/rmaa-haunted-house-and-trunk-or-treat",
+        "decision": "HOLD; no runtime proposal",
+        "blocker": "Home tag/community event unclear; no explicit2026 dates or operator public invitation recovered.",
+        "privacy": "Only operator/directory intentionally public location can be considered; no unrelated public-record/private-address research performed."
+      },
+      {
+        "name": "Apple Ridge Orchard Spooky House",
+        "classification": "RESIDENTIAL / HOME HAUNT — separate pending operator classification",
+        "sourceUrl": "https://frightmaps.com/houses/missouri/apple-ridge-orchard-spooky-house",
+        "decision": "HOLD; no runtime proposal",
+        "blocker": "Farm/public status needs corroboration; directory visitor address3849SSRBB conflicts narrative3887HwyBB; unyear-bound Fri/Sat hours not2026proof.",
+        "privacy": "Only operator/directory intentionally public location can be considered; no unrelated public-record/private-address research performed."
+      },
+      {
+        "name": "Horror in the Holler",
+        "classification": "RESIDENTIAL / HOME HAUNT — separate pending operator classification",
+        "sourceUrl": "https://frightmaps.com/houses/missouri/horror-in-the-holler",
+        "decision": "HOLD; no runtime proposal",
+        "blocker": "Home tag/outdoorcharitytrail; no current2026 public invitation or date support recovered.",
+        "privacy": "Only operator/directory intentionally public location can be considered; no unrelated public-record/private-address research performed."
+      }
+    ],
+    "decision": "Separate product lane; no commercial runtime proposal, no inferred private-address research."
+  },
+  "cadaverZone": {
+    "status": "FACTUAL_HOLD_RUNTIME_HOLD",
+    "recordId": "MO26-007",
+    "blocker": "Independently reliable attraction-specific 2026 operation/date binding and supported expiry remain unresolved.",
+    "retainedPass": [
+      "identity",
+      "published visitor address",
+      "qualified approximate placement"
+    ],
+    "proposedSubsetRejectedUntilSourceBound": "October 29, 2026 only; extracted operator poster year/date not independently reliable.",
+    "independentReportSha256": "3a0e803473ba901be18d95f89cc1e71ef88b38d2bd3d5d80e79d61f14faec4f2"
+  },
+  "limitations": [
+    "All20 null machinehours and neverOpenNow; approximate placement only; addressDirections; no automatic2027recurrence.",
+    "All20 revalidateAfter2026-10-15. Candidate does not promise ticket inventory.",
+    "Ranch and MissouriNightmare have bounded availability envelopes, no inferred complete daily operating list.",
+    "Cobb alone newly uses listing-lifecycle visibility throughNov7; global Halloween/provider window unchanged.",
+    "Several schedules rely on independently reproduced indexed operator evidence; raw/direct limitations retained in candidate audit.",
+    "No production change, merge, release authorization or protection waiver is implied.",
+    "Inherited320px Directionslabel clipping; geometry comparisons do not claim every legacylabel overflow-free. Current-head Details reachability and newoverflow verdict pending."
+  ],
+  "researchSourceBindings": [
+    {
+      "path": "research/commercial-holds/Commercial-Holds-Research-R1.json",
+      "sha256": "daa7a61c2f5ff9f4ff4a90fa0a870ba03134fe858ed448085f4e694210ca62cc"
+    },
+    {
+      "path": "research/statewide-delta/Classification-Matrix-R2.json",
+      "sha256": "ca6fd3c1592039a30a1757ec4fab214660b102febaa5dbff08fb53cdb0ab3974"
+    },
+    {
+      "path": "research/statewide-delta/Residential-Separate-Ledger-R1.json",
+      "sha256": "f9ee5ada50a74faeeaa287186bfe410bb02dc510051d691814d883b1f9ce1109"
+    },
+    {
+      "path": "research/independent-review/Enrichment-Two-Independent-R1.json",
+      "sha256": "cef4ef079260642fc1576dfa03ec4ae45f7291d8ae1f226b51288fab81844ab7"
+    }
+  ],
+  "construction": "Head/tree/parent/ancestry/32paths freshly verified in repo-verified; candidate data reused only across independently proven unchanged runtime/audit subtrees. Current-head local receipt bound; no prior hosted count carried as current.",
+  "currentHeadRebind": {
+    "parent": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+    "changedPaths": [
+      "scripts/seasonal-ten-record-browser.mjs"
+    ],
+    "insertions": 23,
+    "deletions": 1,
+    "independentDeltaAttestationSha256": "33c6f6253139254f8d4b9ea9ffef6b30975127fc562c831fc970c9f44a45e1d4",
+    "unchangedSubtrees": {
+      "src": {
+        "base": "dbb4366a3df17334a40785b15ff234ce4ee10e24",
+        "candidate": "dbb4366a3df17334a40785b15ff234ce4ee10e24",
+        "equal": true
+      },
+      "server": {
+        "base": "170418d170dcc2397f339e97882b3c926e1c6f5c",
+        "candidate": "170418d170dcc2397f339e97882b3c926e1c6f5c",
+        "equal": true
+      },
+      "public": {
+        "base": "8a24e98af48debee93503fc90098e01b8b0c1c6d",
+        "candidate": "8a24e98af48debee93503fc90098e01b8b0c1c6d",
+        "equal": true
+      },
+      "audit": {
+        "base": "be6a15bfcaa53f0e0525c43c77b971ae023b0fa6",
+        "candidate": "be6a15bfcaa53f0e0525c43c77b971ae023b0fa6",
+        "equal": true
+      },
+      ".github": {
+        "base": "424c0837f0c8b411da9c73e2e9fa2de364f0320b",
+        "candidate": "424c0837f0c8b411da9c73e2e9fa2de364f0320b",
+        "equal": true
+      },
+      "scripts/test-support": {
+        "base": "5e14a4152b2c74a1601206e530f2e0b4a6a5baf1",
+        "candidate": "5e14a4152b2c74a1601206e530f2e0b4a6a5baf1",
+        "equal": true
+      }
+    },
+    "previous32ReceiptBlob": "29898a1638541c617b4c3fa8f08d2239715def98",
+    "allOtherLinesByteIdenticalToParent": true,
+    "sourceDataStatus": "All20 additions and previous32 facts/copy/provenance unchanged. Only identity-scoped harness expectation corrected after root+independent failure evidence."
+  },
+  "authoritativeCheckout": "/workspace/scratch/45a2c39f129e/repo-verified",
+  "localValidationReportedByRoot": {
+    "head": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "tree": "8d5059c9fee871c522616971cce0a80b153e4d23",
+    "status": "LOCAL_GATES_PASS_HOSTED_PENDING",
+    "checkedAt": "2026-10-09T07:54:22.858437+00:00",
+    "receiptPath": "Candidate6-Local-Gates.json",
+    "receiptSha256": "baa6b5afe96b7eabdbdc6caeaf82228b22b27ba336cdba43b5255201064323e6",
+    "testsPassed": 1018,
+    "testsFailed": 0,
+    "testsSkipped": 4,
+    "testBreakdown": {
+      "repository": {
+        "pass": 947,
+        "fail": 0,
+        "skip": 4,
+        "total": 951
+      },
+      "application": {
+        "pass": 71,
+        "fail": 0,
+        "skip": 0
+      },
+      "aggregate_pass": 1018,
+      "aggregate_skip": 4
+    },
+    "skipReason": "Four documentation-contract checks require absent external workspace OG documentation package; zero seasonal/runtime skips.",
+    "lintErrors": 0,
+    "lintWarnings": 6,
+    "lintWarningScope": "Inherited",
+    "typecheck": "PASS",
+    "authEnabledMigrationFreeBuild": "PASS",
+    "build": {
+      "auth_enabled": true,
+      "migrations_run": false,
+      "status": "PASS",
+      "source_sha256": "38873e4e38ef8eeb061303f3c9cd49344eea8f421c010129e0f1e013c357c998",
+      "source_files": 468,
+      "output_sha256": "8d3f98fb30c7bfcaedace17dee90b7cc4262b8db590258063a13992903421c36",
+      "output_files": 194
+    },
+    "logs": [
+      {
+        "path": "test-candidate6.log",
+        "bytes": 366202,
+        "sha256": "33fb69a4c28a49de517931f1b14574abe4e4fa7f4e6ac8d811463a702d8745c4"
+      },
+      {
+        "path": "lint-candidate6.log",
+        "bytes": 1643,
+        "sha256": "cbbc3913f0a5ae63c5194366045638c45270268553e67c3b8b56497ecf645012"
+      },
+      {
+        "path": "typecheck-candidate6.log",
+        "bytes": 128,
+        "sha256": "ae791f9f57ffbb3c0a592b6a34e25250c1f7f6f13fde4d05f77a0d4e7681f89a"
+      },
+      {
+        "path": "build-candidate6.log",
+        "bytes": 11123,
+        "sha256": "323000d7d92d1ae5a0dac79ee35549ab3a4e82d262b444cbf01d67e5e0febbd7"
+      }
+    ],
+    "checkoutIntegrity": "Fresh independent clone; clean exact tree; git fsck connectivity PASS; no borrowed object storage",
+    "localBrowser": "Chromium binary not installed locally; full exact-head hosted Chromium gates required and running, no prior PASS substituted."
+  },
+  "currentHostedGates": {
+    "web": {
+      "runId": "37901365412",
+      "jobId": "113724452856",
+      "status": "IN_PROGRESS; final conclusion PENDING",
+      "browserCounts": null,
+      "geometryCounts": null,
+      "finalIndependentArtifactReview": "PENDING"
+    },
+    "android": {
+      "runId": "37901365396",
+      "jobId": "113724453244",
+      "status": "SUCCESS",
+      "signingJob": {
+        "id": "113725719122",
+        "status": "SKIPPED",
+        "attribution": "Root supplied exact hosted job metadata; reviewer verifies unsigned payload and missing-key guard independently."
+      },
+      "artifactId": "11602184425",
+      "artifactSha256": "880eb60770c66cc76ea4d97aef25b89079399cbc293f32c4d60f3787cb838c24",
+      "artifactBytes": 6866411,
+      "archives": [
+        {
+          "path": "/workspace/scratch/45a2c39f129e/deliverables/Pick-For-Us-Android-fe22c15-validation.zip",
+          "artifactId": "11602184425",
+          "sha256": "880eb60770c66cc76ea4d97aef25b89079399cbc293f32c4d60f3787cb838c24",
+          "bytes": 6866411,
+          "members": 8,
+          "crcPass": true
+        },
+        {
+          "path": "/workspace/scratch/45a2c39f129e/deliverables/Pick-For-Us-Android-fe22c15-lint.zip",
+          "artifactId": "11602463759",
+          "sha256": "7f54369d507718708f1709c55ee6faca0c91e5b47bce917fd0c8b03b4e57590b",
+          "bytes": 24070,
+          "members": 3,
+          "crcPass": true
+        }
+      ],
+      "independentArtifactVerdict": "PASS: exact-head automated Android artifact integrity/readiness evidence only.",
+      "independentReportSha256": "3da21b677ff64e919a3bb799fbebbda4423e69689eb5a8639693918041691aad",
+      "sourceRevisionPass": true,
+      "payloadChecksums": [
+        {
+          "manifestPath": "artifacts/PickForUs-unsigned.aab",
+          "archiveMember": "PickForUs-unsigned.aab",
+          "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee",
+          "pass": true
+        },
+        {
+          "manifestPath": "artifacts/PickForUs-debug.apk",
+          "archiveMember": "PickForUs-debug.apk",
+          "sha256": "6acf554075bfe8e7263ba2a405b8347f4f2e37aab8b1fcf6ea27ddf203d88636",
+          "pass": true
+        }
+      ],
+      "manifestReview": {
+        "package": "com.calebcalvin.pickforus",
+        "versionCode": "1",
+        "versionName": "1.0.0",
+        "minSdk": "24",
+        "targetSdk": "36",
+        "compileSdk": "36",
+        "allowBackup": "false",
+        "usesCleartextTraffic": "false",
+        "debuggable": "false",
+        "permissions": [
+          "android.permission.INTERNET",
+          "android.permission.ACCESS_COARSE_LOCATION",
+          "android.permission.ACCESS_FINE_LOCATION",
+          "com.calebcalvin.pickforus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        ]
+      },
+      "bundletoolValidation": "PASS",
+      "signingGuard": "PASS: requireReleaseSigning explicitly fails for missing upload key. Unsigned validation AAB has no signature entries; no reviewer signing action.",
+      "unsignedBundleSignatureEntries": [],
+      "lint": {
+        "warnings": 14,
+        "errors": 0,
+        "rawXmlMatchesSummary": true
+      },
+      "hostedLog": {
+        "path": "browser-diagnosis/candidate6-android37901365396-job113724453244.log",
+        "bytes": 921530,
+        "sha256": "f937f95b2444013583b80aec2c1994153cdca840cdc1a4002e57997285af190f",
+        "sourceShaPresent": true,
+        "buildSuccessfulPresent": true
+      },
+      "knownLimits": [
+        "Remote HTTPS wrapper is not a snapshot of branch web content.",
+        "Physical device/WebView/GPS behavior remains unverified.",
+        "Upload signing, Play Console acceptance and Android publication remain HOLD and unperformed.",
+        "14 lint warnings preserved; zero errors."
+      ],
+      "hostedUnitCounts": {
+        "repository_pass": 947,
+        "application_pass": 71,
+        "aggregate_pass": 1018,
+        "fail": 0,
+        "skip": 4
+      },
+      "rootUnitReceiptSha256": "c9acd7a2b6d1f4a6165491bfdfdd9ebc9fe74ae31de890f19da65e68a4adea20",
+      "checkerAttempts": [
+        {
+          "attempt": 1,
+          "result": "Checker KeyError; SHA256SUMS uses artifacts/ paths while GitHub ZIP is flattened. No product/artifact failure."
+        },
+        {
+          "attempt": 2,
+          "result": "Use verified member basename mapping; all checksum assertions PASS."
+        }
+      ]
+    }
+  },
+  "priorCandidate4ValidationHistoricalOnly": {
+    "head": "a44e70996bc8546f75dc71e4af13c414350ec1f9",
+    "local": {
+      "testsPassed": 1018,
+      "testsSkipped": 4,
+      "testsFailed": 0,
+      "lintErrors": 0,
+      "lintWarnings": 6,
+      "lintWarningScope": "Inherited",
+      "typecheck": "PASS",
+      "authEnabledMigrationFreeBuild": "PASS",
+      "hostedCI": "PENDING root",
+      "browserAcceptance": "PENDING root",
+      "geometry": "PENDING root",
+      "independentExactRuntime": "PENDING root"
+    },
+    "androidRun": "37889747820",
+    "androidVerdict": "SUCCESS historical only; not current-head result",
+    "webRun": "37889747808",
+    "webVerdict": "FAIL",
+    "browserScenarioPass": 740,
+    "browserScenarioFail": 2,
+    "newElevenSuite": {
+      "newElevenPlusCobbLatefall": 188,
+      "newElevenFailed": 0,
+      "prior32ReceiptPass": 30,
+      "prior32ReceiptFail": 2,
+      "overall": "218PASS/2FAIL of220"
+    },
+    "skippedGates": [
+      "extra-nine seasonal suite",
+      "currenthead geometry; prior426geometry remains historicalonly"
+    ],
+    "artifact": {
+      "id": "11599059205",
+      "bytes": 368349809,
+      "sha256": "49103e1d42f83dc4b8ca18572095a6aac491f41db6514adc5aaa0341aec5a762",
+      "members": 2989,
+      "crcPass": true,
+      "localPath": "deliverables/Pick-For-Us-A44-Browser-Evidence.zip"
+    },
+    "independentFailureReportSha256": "df867f3ac77359e223d3045554e42f1ceedb7d79e11428584567707007f54447",
+    "rootFailureReceiptSha256": "04bb6fac0813c18a9a37edc7f6b02c3eca45e4d046e43fab10d18e83610cdb87",
+    "cause": "Two old32 receipt tests expected attractiondisplayaddress, while actual routing correctly uses required firstcheckin1300W13thSt. Frozen productionreceipts and independent review proved correct productbehavior before bounded harnessfix.",
+    "logLimitation": "Full job-log API returned Transport closed; native job step timestamps preserved separately."
+  },
+  "retainedEarlierDecisions": [
+    {
+      "name": "Carolyn’s Pumpkin Patch",
+      "recordId": "MO26-055",
+      "disposition": "FACTUAL PASS / RUNTIME PLACEMENT HOLD",
+      "blocker": "Conflicting operator-linked destination and reproduced Census point remain unresolved; no averaging or silent point selection."
+    },
+    {
+      "name": "Terror on Route 66",
+      "disposition": "FACTUAL PASS / RUNTIME PLACEMENT HOLD",
+      "blocker": "West visitor address supported; ticket point and exact-address Census point differ by about2km; neitherpoint cleared."
+    },
+    {
+      "name": "Hannibal Warehouse",
+      "disposition": "FACTUAL HOLD",
+      "blocker": "Visitor destination and date-list/prose conflicts unresolved."
+    },
+    {
+      "name": "Vino Noir — Witch Broom Making Workshop",
+      "recordId": "MO26-013",
+      "disposition": "EXPIRE / no2026import forOctober8event",
+      "blocker": "Retained prior decision, not physicalclosure or automaticyearrevival."
+    },
+    {
+      "name": "Wentzville’s Halls Of Horror",
+      "disposition": "Separate residential HOLD",
+      "blocker": "Operator-intended public visitor location and invitation, product and visitor-safety review required."
+    },
+    {
+      "name": "Spooky Hollow Dyerdown Holiday House",
+      "disposition": "Separate residential HOLD",
+      "blocker": "Operator-intended publicaddress, precise seasonend/current invitation and productreview required."
+    },
+    {
+      "name": "West Gravestone Square",
+      "disposition": "Separate residential HOLD",
+      "blocker": "Operator-intended publicvisitoraddress, currentyear invitation and productreview required."
+    }
+  ],
+  "carryForwardScope": "Unchanged earlier continuity decisions; not new re-clearances and not included in this run batchcounts.",
+  "priorSkipReason": "Superseded by current-head inspected skip reason in localValidationReportedByRoot.",
+  "latestContinuityCheckpoint": {
+    "sha": "74bd6d0d9f608207446e3d64c6d56522f4af7a0b",
+    "status": "Published/readback by root after exact candidate6 Android gate. Web/browser/geometry pending; not final acceptance continuity."
+  },
+  "storageRecovery": {
+    "authoritativeCheckout": "repo-verified",
+    "integrity": "Clean fresh clone; full object connectivity PASS",
+    "priorIssue": "Old borrowed object store vanished; working files preserved",
+    "productSourceChangeRequired": false
+  },
+  "supersededIntermediateFinalResults": {
+    "head": "7e6f26e55f85e85e232b2ff0f2e2e16e08676885",
+    "webRun": "37889676019",
+    "webResult": "FAIL at new-eleven suite",
+    "androidRun": "37889675984",
+    "androidResult": "CANCELLED",
+    "artifactId": "11598994150",
+    "artifactSha256": "45a58d44e60417357c5296c8f1f1e0ce002c8b05eaadd70df2982cbbae2647d1",
+    "artifactPreservation": "Root preserving full artifact; no current-head acceptance inferred."
+  },
+  "priorContinuityCheckpoints": [
+    {
+      "sha": "8f15c182b814d67f3865083b80c9f042e5836110",
+      "status": "Published and read back by root; localPASS/hostedpending checkpoint, not final release-decision continuity."
+    },
+    {
+      "sha": "8218fa693cb4879393eeb12443028d9ebb795caf",
+      "status": "Published/readback by root after exact-head Android gate. Web/browser/geometry pending; not final release-decision continuity."
+    },
+    {
+      "sha": "0fbdea6d9b2ec9d54e05dcb7b8ff921a69569496",
+      "status": "Controlled-stop checkpoint published/readback. Not final acceptance continuity; supersedes open-ended run."
+    },
+    {
+      "sha": "15d095a65c5670dfe596ed1d84becc0ce75e1bd9",
+      "status": "Published/readback by root after candidate6 local gate; controlled-stop failure exception only. Final acceptance continuity pending."
+    }
+  ],
+  "controlledStop": {
+    "authoritativeContinuity": "0fbdea6d9b2ec9d54e05dcb7b8ff921a69569496",
+    "publication": "Published/readback by root; supersedes open-ended run",
+    "scope": "Finish existing validation/evidence closeout. User failure exception permits minimal diagnosed harness correction and required exact-head rerun only; no new research, record/runtime implementation or backlog execution.",
+    "candidateFrozen": true,
+    "nextIsUnexecuted": true,
+    "terminalEvidenceBinding": "Wait for root final candidate6 web/browser/geometry/Android evidence, fresh identities and acceptance continuity before terminal brief."
+  },
+  "nextUnexecuted": {
+    "cadaver": "Resolve independently reliable attraction-specific 2026 operation/date binding for at least one explicit date and supported expiry; proposedOct29 subset still not source-year-bound. Retain accepted identity/public visitoraddress/approximatepoint; no recurrence inference.",
+    "commercialHolds": [
+      {
+        "recordId": "MO26-006",
+        "name": "Wolfmans House Of Screams",
+        "blocker": "New official 2026 trailer and opening calendar found in search index. Direct calendar is a login wall. Need exact future 2026 dates and final expiry; no closure inferred."
+      },
+      {
+        "recordId": "MO26-004",
+        "name": "The Werehouse",
+        "blocker": "Indexed 2026 operator hiring/trailer signals recovered. Direct website remains undated Friday/Saturday 7 p.m.–midnight. Directory raw calendar has no active dates. Need exact 2026 date binding and expiry; legacy coordinate conflict retained."
+      },
+      {
+        "recordId": "DELTA2-FEARFACTORY",
+        "name": "Fear Factory LLC",
+        "blocker": "October 8 directory guide says Friday/Saturday. This remains secondary evidence; direct contact page returned 502. Need decisive 2026 binding and expiry."
+      },
+      {
+        "recordId": "DELTA2-WACO",
+        "name": "Waco School House Haunt",
+        "blocker": "Focused exact-name 2026 search yielded no accepted schedule. Official site returned 502. Need 2026 date binding and expiry, not a closure assumption."
+      },
+      {
+        "recordId": "DELTA5-RISING-RECHECK",
+        "name": "Rising Haunted Attraction",
+        "blocker": "Raw directory calendar contains no active dates; 8–11 p.m. text is undated. October 7 guide lacks exact dates. Historical 2024 DMO cannot establish 2026."
+      },
+      {
+        "recordId": "DELTA2-TWISTED",
+        "name": "Twisted Minds Haunted House",
+        "blocker": "Focused 2026 search yielded historical directory and contaminated social snippets. Need exact 2026 public invitation/dates. California Twisted Minds is unrelated."
+      }
+    ],
+    "deltaHolds": [
+      {
+        "recordId": "DELTA6-ROLLA",
+        "name": "A Field of Screams / Timmy’s Terror, Rolla",
+        "blocker": "Whole-season operator schedule Oct2–31 not explicitly year-bound; Oct10 event may support smaller exact subset but hours conflict22:00 directory versus23:00 indexed operator; no placement prepared."
+      },
+      {
+        "recordId": "DELTA6-BRANSON-FIELD",
+        "name": "Field of Screams Branson",
+        "blocker": "DMO extraction nav-only; conflicting tradepress Sep/Oct opening and four November crossover dates not resolved to exact lifecycle. Distinct from MO26-037 Nixa."
+      },
+      {
+        "recordId": "DELTA3-FEARSTONE",
+        "name": "Fearstone Forest Haunted Trail",
+        "blocker": "Exact operating calendar remains image/year unbound;837NHwy5 organizer address vs85Benne venue must stay separate;18+Oct17/kidsOct31 cannot be treated2026 before binding."
+      },
+      {
+        "recordId": "DELTA3-FUN-TIME",
+        "name": "Fun Time Farms Haunted Corn MAiZE",
+        "blocker": "Final active date/expiry still unresolved; hiring or season announcement alone does not establish exact season."
+      },
+      {
+        "recordId": "DELTA3-TERRIFIEDEXIST",
+        "name": "TerrifiedExist Haunted Attractions",
+        "blocker": "Hiring is not visitor operation; exact2026dates/expiry unresolved."
+      },
+      {
+        "recordId": "MO26-088",
+        "name": "Lemp Brewery Haunted House",
+        "blocker": "No Lemp-specific2026 calendar/expiry or official ticket availability; shared Scarefest calendar/tickets currently Darkness+Creepyworld only."
+      },
+      {
+        "recordId": "DELTA6-BOSS",
+        "name": "BOSS Haunted House, Fort Leonard Wood",
+        "blocker": "2026 edit timestamp not2026 operation; prior schedule Oct25,2025 stale; supported visitor/base access route and final date absent."
+      },
+      {
+        "recordId": "DELTA2-MACABRE",
+        "name": "Macabre Cinema",
+        "blocker": "Traditional full-season schedule suspended for redevelopment; surprise event possibility not explicit dated public operation. Current magazine generic reopening conflicts; do not import."
+      }
+    ],
+    "residential": "Five current separate residential/uncertainclassification leads plus three earlier residential HOLDs remain separate; require intentional publiclocation/invitation/currentyear/dates/productreview. No commercial import.",
+    "earlierDecisions": [
+      {
+        "name": "Carolyn’s Pumpkin Patch",
+        "recordId": "MO26-055",
+        "disposition": "FACTUAL PASS / RUNTIME PLACEMENT HOLD",
+        "blocker": "Conflicting operator-linked destination and reproduced Census point remain unresolved; no averaging or silent point selection."
+      },
+      {
+        "name": "Terror on Route 66",
+        "disposition": "FACTUAL PASS / RUNTIME PLACEMENT HOLD",
+        "blocker": "West visitor address supported; ticket point and exact-address Census point differ by about2km; neitherpoint cleared."
+      },
+      {
+        "name": "Hannibal Warehouse",
+        "disposition": "FACTUAL HOLD",
+        "blocker": "Visitor destination and date-list/prose conflicts unresolved."
+      },
+      {
+        "name": "Vino Noir — Witch Broom Making Workshop",
+        "recordId": "MO26-013",
+        "disposition": "EXPIRE / no2026import forOctober8event",
+        "blocker": "Retained prior decision, not physicalclosure or automaticyearrevival."
+      },
+      {
+        "name": "Wentzville’s Halls Of Horror",
+        "disposition": "Separate residential HOLD",
+        "blocker": "Operator-intended public visitor location and invitation, product and visitor-safety review required."
+      },
+      {
+        "name": "Spooky Hollow Dyerdown Holiday House",
+        "disposition": "Separate residential HOLD",
+        "blocker": "Operator-intended publicaddress, precise seasonend/current invitation and productreview required."
+      },
+      {
+        "name": "West Gravestone Square",
+        "disposition": "Separate residential HOLD",
+        "blocker": "Operator-intended publicvisitoraddress, currentyear invitation and productreview required."
+      }
+    ],
+    "optionalEnrichments": "Brookdale separate-admission sentence and Hotel of Terror transfer-ride sentence remain independently reviewed but unapplied. No runtime churn authorized by closeout.",
+    "ownerAction": "If final exact-head candidate6 gates PASS, owner may decide release of PR60/headfe22c15 and must resolve protection or grant fresh exact-candidate waiver. Agent does not merge/deploy or execute backlog."
+  },
+  "identityReadback": {
+    "receipt": "Final-Identity-Readback.json",
+    "sha256": "3e43992283fe5810e9a457128b5c67bcbe457118326546d8b0e36c445bb2bb17",
+    "checked_at": "2026-10-09T07:36:45.321Z",
+    "scope": "Controlled-stop repository/production/rollback/protection readback; no mutations",
+    "candidate": {
+      "pr": 60,
+      "branch": "integration/missouri-astra-push-2026-10-09",
+      "sha": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+      "tree": "fdfbf4045ea69f7a9b610a434243fc43f2c9f338",
+      "parent": [
+        "a44e70996bc8546f75dc71e4af13c414350ec1f9"
+      ],
+      "draft": true,
+      "state": "open",
+      "changed_paths": 32,
+      "mergeable": true,
+      "mergeable_state": "unstable"
+    },
+    "main": {
+      "sha": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+      "tree": "a7dbb32947c0a0daf4864346b0d212477fc9a11b",
+      "parent": [
+        "46ded230297976698b9c8a035cb2dafd11219314"
+      ]
+    },
+    "production": {
+      "id": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "state": "READY",
+      "source": "979d83aede9d66163e1ebaed9ad5b219cb637882"
+    },
+    "rollback": {
+      "id": "dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv",
+      "state": "READY",
+      "source": "213502ef8cf3f67d75e6d9c9c8ff43f9f656890c"
+    },
+    "protection": {
+      "branch_protected": false,
+      "rulesets": [],
+      "dedicated_endpoint": {
+        "error": "GitHub API error 403: {\"message\":\"Resource not accessible by integration\",\"documentation_url\":\"https://docs.github.com/rest/branches/branch-protection#get-branch-protection\",\"status\":\"403\"}",
+        "error_code": "FORBIDDEN",
+        "error_data": {
+          "message": "Resource not accessible by integration",
+          "documentation_url": "https://docs.github.com/rest/branches/branch-protection#get-branch-protection",
+          "status": "403"
+        }
+      },
+      "fresh_owner_waiver": false,
+      "status": "Owner must resolve protection or explicitly grant a fresh exact-candidate waiver; no waiver granted by agent."
+    },
+    "aliases": [
+      {
+        "alias": "pickforus.app",
+        "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+        "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "redirect": null,
+        "redirectStatusCode": null
+      },
+      {
+        "alias": "www.pickforus.app",
+        "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+        "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "redirect": "pickforus.app",
+        "redirectStatusCode": 308
+      },
+      {
+        "alias": "dinner-roulette-chi.vercel.app",
+        "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+        "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "redirect": null,
+        "redirectStatusCode": null
+      },
+      {
+        "alias": "dinner-roulette-minions-9e2c.vercel.app",
+        "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+        "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "redirect": null,
+        "redirectStatusCode": null
+      },
+      {
+        "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+        "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+        "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "redirect": null,
+        "redirectStatusCode": null
+      }
+    ],
+    "readback_times": {
+      "github": "2026-10-09T07:36:08.159Z",
+      "deployment": "2026-10-09T07:36:17.331Z",
+      "aliases": "2026-10-09T07:36:25.281Z"
+    },
+    "bindingStatus": "Historical candidate5 receipt at07:36UTC; production/rollback/protection observations retained with timestamp only. Candidate6 final PR/production/protection refresh pending root."
+  },
+  "deploymentDisabledIntegrationBranch": {
+    "status": "Unchanged",
+    "basis": "Root fresh read-only identity message; integration/** deployment remains disabled"
+  },
+  "priorCandidate5ValidationHistoricalOnly": {
+    "head": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+    "tree": "fdfbf4045ea69f7a9b610a434243fc43f2c9f338",
+    "local": {
+      "head": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+      "tree": "fdfbf4045ea69f7a9b610a434243fc43f2c9f338",
+      "status": "LOCAL_GATES_PASS_HOSTED_PENDING",
+      "checkedAt": "2026-10-09T06:43:09.708201+00:00",
+      "receiptPath": "Candidate5-Local-Gates.json",
+      "receiptSha256": "b0594ba11602a4a87f6a46c15700b0748fd04cadfb6a337a609bbcccbd20b331",
+      "testsPassed": 1018,
+      "testsSkipped": 4,
+      "testsFailed": 0,
+      "testBreakdown": {
+        "repository": {
+          "pass": 947,
+          "fail": 0,
+          "skip": 4,
+          "total": 951
+        },
+        "application": {
+          "pass": 71,
+          "fail": 0,
+          "skip": 0
+        },
+        "aggregate_pass": 1018,
+        "aggregate_skip": 4
+      },
+      "skipReason": "External workspace OG documentation package is not installed in this checkout; four documentation-contract checks only. Current test log inspected.",
+      "lintErrors": 0,
+      "lintWarnings": 6,
+      "lintWarningScope": "Inherited",
+      "typecheck": "PASS",
+      "authEnabledMigrationFreeBuild": "PASS",
+      "build": {
+        "auth_enabled": true,
+        "migrations_run": false,
+        "status": "PASS",
+        "source_sha256": "a7613459eef6aac9cb20e9566484583a428562b5eb43e9fbc3ad8bb02bd4f84a",
+        "source_files": 468,
+        "output_sha256": "2e43107aaae5cf866d87d31517e4fabcef87672e893dad8b3e5db6191196185b",
+        "output_files": 194
+      },
+      "logs": [
+        {
+          "path": "test-candidate5.log",
+          "bytes": 366191,
+          "sha256": "d3c1274ac19aacfa935b682f9cf53298068724c7d2db5f6b11c12f410193ab1b"
+        },
+        {
+          "path": "lint-candidate5.log",
+          "bytes": 1643,
+          "sha256": "cbbc3913f0a5ae63c5194366045638c45270268553e67c3b8b56497ecf645012"
+        },
+        {
+          "path": "typecheck-candidate5.log",
+          "bytes": 128,
+          "sha256": "ae791f9f57ffbb3c0a592b6a34e25250c1f7f6f13fde4d05f77a0d4e7681f89a"
+        },
+        {
+          "path": "build-candidate5.log",
+          "bytes": 5673,
+          "sha256": "57b49c74cbf9bc3d6461014aee125a5c19420af24f4ff6c7c7d34cc716ab5e4f"
+        }
+      ],
+      "checkoutIntegrity": "Fresh independent clone; clean exact tree; git fsck connectivity PASS; no borrowed object storage"
+    },
+    "android": {
+      "runId": "37894492778",
+      "jobId": "113702618918",
+      "status": "SUCCESS",
+      "signingJob": "SKIPPED",
+      "artifactId": "11600235442",
+      "artifactSha256": "4af9f645307906614108c88245e4a1d77841c753a474862cc833eab58c6b9de5",
+      "artifactBytes": 6866410,
+      "rawLintArtifact": {
+        "path": "/workspace/scratch/45a2c39f129e/deliverables/Pick-For-Us-Android-f767a8d-lint.zip",
+        "artifactId": "11599574262",
+        "sha256": "5ed861a9a56acb7d01f3041f681bb89b34892decec4d8be147bd110ef4c80c36",
+        "bytes": 24070,
+        "members": 3,
+        "crcPass": true
+      },
+      "independentArtifactVerdict": "PASS: exact-head automated Android artifact integrity/readiness evidence only.",
+      "independentReportSha256": "8a4857f3bc0123b41fbe5b3c7e35e89c129ad3bfa03e17bae91f8ed0308426f8",
+      "sourceRevisionPass": true,
+      "archives": [
+        {
+          "path": "/workspace/scratch/45a2c39f129e/deliverables/Pick-For-Us-Android-f767a8d-validation.zip",
+          "artifactId": "11600235442",
+          "sha256": "4af9f645307906614108c88245e4a1d77841c753a474862cc833eab58c6b9de5",
+          "bytes": 6866410,
+          "members": 8,
+          "crcPass": true
+        },
+        {
+          "path": "/workspace/scratch/45a2c39f129e/deliverables/Pick-For-Us-Android-f767a8d-lint.zip",
+          "artifactId": "11599574262",
+          "sha256": "5ed861a9a56acb7d01f3041f681bb89b34892decec4d8be147bd110ef4c80c36",
+          "bytes": 24070,
+          "members": 3,
+          "crcPass": true
+        }
+      ],
+      "payloadChecksums": [
+        {
+          "manifestPath": "artifacts/PickForUs-unsigned.aab",
+          "archiveMember": "PickForUs-unsigned.aab",
+          "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee",
+          "pass": true
+        },
+        {
+          "manifestPath": "artifacts/PickForUs-debug.apk",
+          "archiveMember": "PickForUs-debug.apk",
+          "sha256": "179628036ab5b5715c09a53bc9ad97c23a4bb9ea4c900fcf0d91d3aa790b7107",
+          "pass": true
+        }
+      ],
+      "signingGuard": "PASS: explicit release-signing missing failure observed; validation bundle remains unsigned. Signingjob skipped as reported in hostedrun metadata; no signingaction performed.",
+      "manifestReview": {
+        "package": "com.calebcalvin.pickforus",
+        "versionCode": "1",
+        "versionName": "1.0.0",
+        "minSdk": "24",
+        "targetSdk": "36",
+        "compileSdk": "36",
+        "allowBackup": "false",
+        "usesCleartextTraffic": "false",
+        "debuggable": "false",
+        "permissions": [
+          "android.permission.INTERNET",
+          "android.permission.ACCESS_COARSE_LOCATION",
+          "android.permission.ACCESS_FINE_LOCATION",
+          "com.calebcalvin.pickforus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        ]
+      },
+      "bundletoolValidation": "PASS",
+      "unsignedBundleSignatureEntries": [],
+      "lint": {
+        "warnings": 14,
+        "errors": 0,
+        "rawXmlMatchesSummary": true,
+        "issueIDs": {
+          "ManifestOrder": 1,
+          "AndroidGradlePluginVersion": 1,
+          "DataExtractionRules": 1,
+          "UnusedResources": 4,
+          "IconLauncherShape": 5,
+          "MonochromeLauncherIcon": 2
+        }
+      },
+      "knownLimits": [
+        "Remote HTTPS wrapper is not a branchwebsnapshot.",
+        "Physical device/WebView/GPS behavior remains unverified.",
+        "Upload signing, PlayConsole acceptance and Androidpublication remain HOLD and unperformed.",
+        "14lintwarnings preserved;0errors."
+      ],
+      "fullJobLog": "Saved by root"
+    },
+    "web": {
+      "runId": 37894492761,
+      "jobId": 113702618075,
+      "status": "FAILURE",
+      "geometry": "SKIPPED"
+    },
+    "webScenarioCounts": {
+      "date-night-radial/verdict.json": {
+        "passed": 10,
+        "failed": 0,
+        "total": 10
+      },
+      "missouri-two-records/verdict.json": {
+        "passed": 23,
+        "failed": 0,
+        "total": 23
+      },
+      "seasonal-astra-eleven/verdict.json": {
+        "passed": 220,
+        "failed": 0,
+        "total": 220
+      },
+      "seasonal-astra-extras/verdict.json": {
+        "passed": 183,
+        "failed": 2,
+        "total": 185
+      },
+      "seasonal-completeness-v1/verdict.json": {
+        "passed": 97,
+        "failed": 0,
+        "total": 97
+      },
+      "seasonal-cumulative-15/verdict.json": {
+        "passed": 235,
+        "failed": 0,
+        "total": 235
+      },
+      "seasonal-ten-record/verdict.json": {
+        "passed": 157,
+        "failed": 0,
+        "total": 157
+      }
+    },
+    "webTotals": {
+      "passed": 925,
+      "failed": 2,
+      "total": 927,
+      "smokeChecks": 16,
+      "locationChecks": 19
+    },
+    "failedArchive": {
+      "path": "deliverables/Pick-For-Us-F767-Browser-Evidence.zip",
+      "bytes": 444162027,
+      "sha256": "4d9b65d9976f99af5dfa83ce180dff4bdc48204442fdc87c7ae4f7398fdae8c8",
+      "members": 3570,
+      "crc": "PASS"
+    },
+    "independentFailureReportSha256": "1fea95279d554a55111f020c3a755017683690fa026085c8d73007451743d6fb",
+    "failureClassification": "HARNESS_SCOPE_DEFECT; no product defect observed. Global metadata prohibition contradicted reviewed lifecycle rows in regional acquisition superset.",
+    "incompleteFlows": "Two mixed-alias-toggle-cache flows stopped before downstream alias-card/cache assertions; geometry skipped.",
+    "failedShaPreserved": true
+  },
+  "focusedAssertionReplay": {
+    "status": "PASS for recorded RPC assertion replay only; not browser or exact-head hosted acceptance",
+    "sourceSha256": "7e0c507793ab9b758d4e87f074f6f43f7eacbb00c9f425b801e7664f142a3a74",
+    "recordedRpcPasses": 45,
+    "originalFailuresReproduced": 2,
+    "negativeContaminationRejections": 4,
+    "receiptPath": "runtime-independent-review/f767-rpc-focused-replay-results.json",
+    "receiptSha256": "5acbe6ded4ebf7830c6864735dbb2d59bfbcbd4f55444db7fdc2079436df1f57",
+    "independentAttribution": "Executed by browser worker; replay code/results/source binding independently reviewed."
+  }
+}

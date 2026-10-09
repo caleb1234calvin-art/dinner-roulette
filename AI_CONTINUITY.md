@@ -1,3 +1,25 @@
+# CONTROLLED-STOP NEW-ELEVEN GATE PASS / EXTRAS ACTIVE — 2026-10-09T08:37:51.237Z
+
+## CURRENT
+- Frozen draft PR #60: integration/missouri-astra-push-2026-10-09; exact head fe22c15cc6442fc4a48fec23c9a1331c69d70bd2; tree8d5059c9fee871c522616971cce0a80b153e4d23; parentf767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd.
+- Current web37901365412/job113724452856: all gates through the new-eleven browser suite PASS, including previous32receipt checks. Additional-nine suite now RUNNING; geometry, final artifact and independent final runtime acceptance pending. No final exported browser/geometry counts claimed yet.
+- Current local tests1018PASS/0FAIL/4documentedexternal-documentationSKIP; typecheckPASS;lint0errors/6inheritedwarnings;auth-enabled migration-free production buildPASS. Android37901365396 SUCCESS with root/independent artifactPASS and unsignedAAB; signingjobSKIPPED. Exact identities/checksums in prior checkpoint below.
+- Candidate6 inventory and controlled-stop release brief draft now preserved on canonical branch. Both clearly mark current final browser/geometry/identity refresh/acceptance pending, preserve failedf767 and all older attempts, all20additions/32paths, exact namedHOLDs and unexecutedNEXT.
+- Only one minimal, independently approved browser-harness correction followed f767's concrete failure. No record, product, research, enrichment, workflow or production mutation during controlled stop.
+
+## NEXT
+- Finish the active additional-nine suite and geometry, then originalartifactdownload/integrity, screenshots/state inspection, final evidence archive, fresh main/production/rollback/protection/alias readback, and exact-candidate release determination.
+- Publish/read back final canonical continuity, return exact SHA and CURRENT/NEXT/HOLD, then STOP. No automatic backlog continuation.
+- Future owner release decision and named Cadaver/commercial/delta/residential/enrichment backlog remain unexecuted and are detailed in the preserved Candidate6 release brief/inventory.
+
+## HOLD
+- Final release-ready determination pending current exact-head browser/geometry/artifact gates. Prior f767 remains a FAILED preserved attempt.
+- Cadaver: reliable attraction-specific2026operation/date binding and supportedexpiry absent. Accepted identity/publicaddress/approximatepoint/contact retained; no newresearch.
+- Six named commercial HOLDs, eight delta HOLDs, separate residential and prior placement/expired decisions unchanged.
+- Owner protection/fresh-waiver decision and physical Android/WebView/GPS/signing/Play remain HOLD. No merge/deployment/signing authority is granted.
+
+---
+
 # EXACT fe22c15 ANDROID AUTOMATED / ARTIFACT PASS — 2026-10-09T07:58:10.978Z
 
 ## CURRENT
