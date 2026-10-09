@@ -1,3 +1,29 @@
+# CONTROLLED STOP AUTHORITY — 2026-10-09 07:32 UTC / 02:32 CDT
+
+This checkpoint supersedes every earlier open-ended instruction to continue research or implementation. The owner repeated CONTROLLED STOP AFTER CURRENT VALIDATION. Current CI must not be cancelled or interrupted.
+
+## CURRENT
+- Frozen draft PR #60: integration/missouri-astra-push-2026-10-09, head f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd, tree fdfbf4045ea69f7a9b610a434243fc43f2c9f338, parent a44e70996bc8546f75dc71e4af13c414350ec1f9.
+- Web run 37894492761 / job 113702618075 remains IN PROGRESS. Fresh readback: all gates through new-eleven step 21 PASS; additional-nine step 22 RUNNING; geometry, final artifact and final acceptance pending. No final browser counts or release-ready claim yet.
+- Exact-head local 1018 PASS / 0 FAIL / 4 documented skips, typecheck PASS, lint 0 errors / 6 inherited warnings, auth-enabled migration-free production build PASS. Android run 37894492778 SUCCESS; downloaded artifacts and independent verification PASS; unsigned only.
+- No further research, discovery, enrichment, residential work or implementation batch is authorized in this run. Only a smallest justified correction for a concrete current-head validation failure may change source, followed by required exact-head reruns with failed attempts preserved.
+- Current operation: finish current web/browser suites, geometry, artifact integrity, screenshot/state inspection, final evidence archive, fresh main/production/rollback/protection readback, and final exact-candidate release-readiness determination. Then publish/read back final canonical continuity and STOP.
+
+## NEXT
+- Finish the current validation/evidence operation only. At the next stable terminal gate publish/read back canonical AI_CONTINUITY.md, report exact continuity SHA and CURRENT / NEXT / HOLD, then STOP without automatic continuation.
+- Preserve owner release decision for PR #60 if all exact-candidate gates pass. Merge, deployment/promotion, protection changes or waiver grants, signing, and Play Console remain owner actions.
+- Future work after a new owner instruction: resolve Cadaver's exact date/expiry blocker; prioritize named commercial HOLDs and unimplemented delta backlog below; consider only independently approved enrichment or separate residential product decisions. Do not execute these tasks now.
+
+## HOLD
+- Cadaver Zone remains FACTUAL HOLD / RUNTIME HOLD. Recovered public identity/address 25088 Kafir Road, Webb City MO 64870; qualified Census address-derived approximate point 37.214949,-94.510739; operator social presence and public phone 417-499-5635. Placement is not the blocker. Reliable attraction-specific 2026 operation/date binding and supported final expiry remain absent. Purported Oct29 poster alt text lacks verifiable poster/year binding and independent reproduction; no explicit-date subset accepted. Research and independent rejection evidence retained below.
+- Commercial: Wolfman; Werehouse; Fear Factory; Waco; Rising; Twisted Minds. Exact blockers and ranking retained below.
+- Unimplemented delta: A Field of Screams/Timmy Terror (Rolla), Field of Screams (Branson), Fearstone Forest, Fun Time Farms, Terrified Exist, Lemp, BOSS Fort Leonard Wood, Macabre Cinema. Residential/uncertain leads remain separate and unimplemented.
+- Prior carryforward: Carolyn's Pumpkin Patch and Terror on Route 66 factual PASS / placement HOLD; Hannibal Warehouse destination/date conflicts; Vino Noir expired with no 2026 import. Physical Android/WebView/GPS, signing and Play remain HOLD.
+- Fresh final production/protection/alias readback, current browser artifact acceptance and release determination are still pending. Earlier main unprotected/no active rulesets and no fresh owner waiver are not a release authorization.
+- All detailed evidence, named backlogs, immutable identities and failed attempts in the following checkpoints remain preserved. Earlier NEXT instructions conflicting with this controlled stop are superseded.
+
+---
+
 # OWNER-REQUESTED CONTINUITY REFRESH — 2026-10-09 07:04 UTC / 02:04 CDT
 
 ## CURRENT
