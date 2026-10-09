@@ -1,3 +1,41 @@
+# Hybrid Date Night Candidate Authorized — “Radial discovery becomes an audit layer.” (2026-10-09 22:12 UTC)
+
+## CURRENT
+
+Owner's **22:10:09 UTC** instruction authorizes a bounded **nonproduction architecture candidate and draft PR**. Exact design intent: **“Radial discovery becomes an audit layer.”** Selected-radius one-shot acquisition becomes the primary path; useful curated/cache/primary results and controls must not wait for background radial completion. Retained radial discovery checks omissions in the background, with stable already-open decisions and truthful audit status. This is a new candidate authorization, not a production replacement or release approval.
+
+Implementation plan: **`integration/date-night-primary-radial-audit-1`**, based on shipped **`fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`**, tree **`8d5059c9fee871c522616971cce0a80b153e4d23`**, parent **`f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd`**. No frozen implementation SHA or draft PR number exists at this task-start handoff. Implementer reported no source mutation yet when supplying the plan; subsequent edits belong to the candidate and require their own freeze/checkpoint.
+
+The planned hybrid session reuses the background radial controller, supports immediate eligible curated/cache data, separates primary readiness from audit progress, preserves shared negative authority and honest spatial/category coverage, and retains overlay selected identities while still removing invalid/expired records. **Upstream AbortSignal propagation and nonpatch negative-evidence eviction retirement are mandatory remediations.** Focused cancellation/session/eviction regressions precede full repository tests, typecheck, unchanged lint policy, safe auth-enabled build, hosted/browser acceptance and fresh independent exact-candidate review.
+
+Fresh **22:11 UTC** canonical/main/production reads: canonical **`b9dd67c1992697fc8601ca1da3f4422b23ae11d1`**; main exact fe22/tree8d5059; production **`dpl_8xyE9R3BxyE1883QpavaEBWV2LGa` READY**, source fe22. The complete canonical file matches its prior full readback. No other-coordinator drift. The 52-record PR60 production release remains closed and unchanged.
+
+## Benchmark protocol — proposed, not executed
+
+Independent protocol worker has supplied R1 for parent review. **No live traffic was issued or authorized by that protocol document itself.** Proposed ceiling: 384 physical upstream attempts total, one persistent append-only cross-stage ledger, no overlapping benchmark cases, existing provider behavior only. Planned successful-no-retry Movies matrix has 344 attempts across Joplin/Columbia/Kansas City, 15/20/50-mile comparisons with alternating order and bounded repeats. Retry/hedge costs count against the same ceiling; unrun cases remain unrun. Anything/mixed/seasonal comparisons remain controlled/browser unless separately reviewed.
+
+Proposed global latched stops: any HTTP429, eight consecutive physical failures excluding expected aborts, two wholly failed handlers across all stages, 30-minute live wall limit, budget exhaustion, identity/safety drift or owner stop. Counter state persists across restart; incomplete earlier attempts require recovery HOLD. Ledger unit tests, parent protocol acceptance, exact candidate freeze and safety prechecks must precede network experiments.
+
+Evidence must distinguish curated-ready, first live/merged-primary-ready, browser usable controls and final background audit completion. Audit yield means genuinely added eligible unique identities divided by all physical audit attempts, with failures/cancellations retained. Compare exact sets, radius/category authority and unknown/failed coverage honestly. Handler, virtual-fixture and actual browser timings are separate. No production RPC load test or provider traffic is performed by this documentation writer.
+
+## NEXT
+
+Implement the bounded isolated candidate and prove the two required safety adaptations. Finalize and independently check the benchmark ledger/protocol before any bounded live measurements. Publish a draft PR only after an exact candidate freeze, then perform the scoped full validation and fresh independent review. Record every stable freeze, failed attempt, justified remediation and exact-head result in continuity.
+
+Keep open result/plan identity stable as audit data arrives, without retaining unsafe or expired selections. Preserve current factual/seasonal policy, provider negative evidence, radius clipping, cache TTL/origin/version, preferences, saved aliases, supported navigation, fail-closed Open Now and exact expiry/no2027. No simple removal of safety or query semantics to improve timing.
+
+## HOLD / authority boundaries
+
+Prior Track F **MORE EVIDENCE REQUIRED** and **strict global-stop compliance NOT PASS** remain historical truths; this new authorization does not waive or rewrite them. Its sparse ordered live sample was not browser performance proof. New candidate architecture/runtime/benchmark acceptance is pending; no PASS transfers merely from the previous audit.
+
+**No merge, deployment, production/main/settings change, new release waiver, signing or Play action. No Missouri discovery or Cadaver work is resumed by this task.** Cadaver remains explicitly HOLD for reliable attraction-specific **2026 operation/date binding and supported expiry**. Named commercial/delta/residential backlog and physical Android/WebView/GPS remain parked. Existing warnings and qualified presentation/source limitations retain their scope.
+
+BCd/F1 restoration history remains the previous dated release evidence, not a fresh test. All prior one-attempt release waivers are consumed. This task ends at the verified nonproduction candidate/owner-decision gate unless later directed.
+
+**PARENT CONTINUITY COMMIT:** `b9dd67c1992697fc8601ca1da3f4422b23ae11d1`; **PARENT TREE:** `090e377ad93d322d3ca024aca8b6299f4e21c7d2`. Only continuity changes on deployment-disabled `integration/continuity-refresh-2026-10-07`. Prior history preserved verbatim.
+
+---
+
 # Track F Audit Complete — MORE EVIDENCE REQUIRED; Replacement HOLD (2026-10-09 22:02 UTC)
 
 ## CURRENT
