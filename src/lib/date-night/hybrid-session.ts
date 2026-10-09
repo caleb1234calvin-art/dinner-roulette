@@ -9,7 +9,7 @@ import { mergeDateNight } from "./identity";
 import { getDateNightAvailability } from "./availability";
 import type { DateNightPlace, DateNightSearchResponse } from "./types";
 
-export type DateNightLoadPhase = "initial-loading" | "ready" | "background-auditing" | "background-partial" | "audit-complete";
+export type DateNightLoadPhase = "initial-loading" | "ready" | "background-auditing" | "background-partial" | "audit-complete" | "empty" | "unavailable";
 export interface DateNightHybridUpdate {
   response: DateNightSearchResponse | null;
   loading: boolean;
@@ -63,18 +63,23 @@ export function createDateNightHybridSession({ now = Date.now,
       (v.activityTypes.some(type => selected.includes(type)) ||
         (!current.halloweenActive && selected.length === normalizeDateNightActivityTypes(["anything"], false).length &&
           v.seasonalListing?.visibility === "listing-lifecycle")));
-    const ready = settled || hasUsablePool;
+    // Settlement ends the foreground spinner; only an eligible pool is usable.
+    const foregroundComplete = settled || hasUsablePool;
     const partial = Boolean(primary?.warning || primary?.discovery?.partial || audit?.paused || audit?.coverage.failedPatchIds.length);
     const auditing = Boolean(audit && (audit.loading || audit.expanding));
-    const phase: DateNightLoadPhase = !ready ? "initial-loading" : auditing ? "background-auditing"
+    const failedPrimary = Boolean(error || primary?.discovery?.groups.some(group => group.outcome === "failed"));
+    const phase: DateNightLoadPhase = !foregroundComplete ? "initial-loading"
+      : !hasUsablePool ? failedPrimary ? "unavailable" : "empty" : auditing ? "background-auditing"
       : audit?.coverage.complete ? "audit-complete" : partial ? "background-partial" : "ready";
-    const response = ready ? {
+    const response = foregroundComplete ? {
       venues, source: primary?.source ?? (venues.some(v => v.source !== "osm") ? "merged" : "live"),
       discovery: primary?.discovery ?? snapshot.response?.discovery,
       warning: error && !hasUsablePool ? undefined : primary?.warning ??
-        (partial ? "Some background coverage checks are unavailable. Available places remain usable." : undefined),
+        (partial ? hasUsablePool
+          ? "Some background coverage checks are unavailable. Available places remain usable."
+          : "Some live searches are unavailable. No matching places are available yet." : undefined),
     } as DateNightSearchResponse : null;
-    onChange({ response, phase, primaryPending, loading: !ready, coverage: audit?.coverage,
+    onChange({ response, phase, primaryPending, loading: !foregroundComplete, coverage: audit?.coverage,
       expanding: auditing, error: hasUsablePool ? null : error });
   };
   const startAudit = (version: number) => {
@@ -148,8 +153,10 @@ export function createDateNightHybridSession({ now = Date.now,
   };
 }
 
-export function dateNightHybridProgress(phase: DateNightLoadPhase) {
+export function dateNightHybridProgress(phase: DateNightLoadPhase, auditing = false) {
   switch (phase) {
+    case "empty": return auditing ? "No matching date ideas yet · checking background coverage" : "No matching date ideas available";
+    case "unavailable": return auditing ? "Live discovery unavailable · checking background coverage" : "Live discovery unavailable · try again";
     case "background-auditing": return "Ready · checking background coverage";
     case "background-partial": return "Ready · some background coverage checks are unavailable";
     case "audit-complete": return "Ready · background coverage checked";

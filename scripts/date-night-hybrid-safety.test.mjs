@@ -2,9 +2,9 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 import { discoveryClock, deferred, flush, untilAbort } from "./test-support/discovery-clock.mjs";
-import { discoveryComponentHarness, discoveryModes, discoveryPayload } from "./test-support/discovery-component-harness.mjs";
+import { discoveryComponentHarness, discoveryModes, discoveryPayload, textOf } from "./test-support/discovery-component-harness.mjs";
 const load = appModuleLoader();
-const { createDateNightHybridSession } = load("src/lib/date-night/hybrid-session.ts");
+const { createDateNightHybridSession, dateNightHybridProgress } = load("src/lib/date-night/hybrid-session.ts");
 const { createDateNightDiscoveryCache } = load("src/lib/date-night/cache.ts");
 const { planDateNightPatches } = load("src/lib/date-night/radial-plan.ts");
 const { buildDateNightQueryPlan } = load("src/lib/date-night/query-plan.ts");
@@ -214,3 +214,52 @@ for (const order of [["z", "a"], ["a", "z"]]) {
     });
   }
 }
+
+for (const outcome of ["succeeded-empty", "failed"]) {
+  test(`settled ${outcome} primary ends spinner without claiming usable READY; audit can recover`, async t => {
+    const h = setup(t);
+    await h.reply(0, [], outcome);
+    assert.equal(h.state.loading, false);
+    assert.equal(h.state.primaryPending, false);
+    assert.equal(h.state.phase, outcome === "failed" ? "unavailable" : "empty");
+    assert.equal(h.state.response.venues.length, 0);
+    assert.equal(h.calls[1].q.patchId, "radial-v1:core");
+    const message = dateNightHybridProgress(h.state.phase, h.state.expanding);
+    assert.doesNotMatch(message, /Ready/i);
+    assert.match(message, /checking background coverage/);
+    await h.reply(1, [venue("recovered")]);
+    assert.equal(h.state.loading, false);
+    assert.ok(h.state.response.venues.some(v => v.id === "recovered"));
+    assert.match(dateNightHybridProgress(h.state.phase, h.state.expanding), /Ready/);
+  });
+}
+
+test("failed primary with an eligible curated pool remains usable", async t => {
+  const h = setup(t);
+  h.update({ lat: 37.08, lon: -94.5, activityTypes: ["haunted-house"], radiusMiles: 20 });
+  await h.reply(h.calls.length - 1, [], "failed");
+  assert.equal(h.state.loading, false);
+  assert.equal(h.state.phase, "background-auditing");
+  assert.ok(h.state.response.venues.some(v => v.seasonalListing));
+  assert.match(dateNightHybridProgress(h.state.phase, h.state.expanding), /Ready/);
+});
+
+test("actual UI: empty failed primary stops foreground loading without a Ready label or enabled decisions", async t => {
+  discoveryClock(t);
+  t.mock.method(console, "warn", () => {});
+  const h = discoveryComponentHarness(discoveryModes[1]);
+  t.after(() => h.dispose());
+  h.store.location = { lat: 43, lon: -79, label: "control", source: "manual" };
+  h.store.spookySeasonEnabled = true;
+  h.store.setDateNightFilters({ radiusMiles: 50, activityTypes: ["movies"] });
+  h.render();
+  h.requests[0].reject(new Error("Primary provider unavailable"));
+  await h.settle();
+  const tree = h.render();
+  assert.equal(h.status().loading, false);
+  for (const label of ["Pick our date", "Give us options", "Plan the night"])
+    assert.equal(h.button(tree, label).props.disabled, true);
+  assert.doesNotMatch(textOf(tree), /Ready ·/);
+  assert.match(textOf(tree), /Live discovery unavailable/);
+  assert.equal(h.requests[1].args.data.patchId, "radial-v1:core");
+});

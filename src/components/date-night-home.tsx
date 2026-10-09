@@ -363,7 +363,7 @@ export function DateNightHome() {
       {loading ? <DiscoveryLoading label="Finding date ideas near you…" /> : null}
       {!loading ? (
         <div className="mt-5 rounded-xl bg-surface p-4 text-xs leading-relaxed text-muted shadow-border">
-          <p role="status" data-radial-progress data-date-night-phase={loadPhase}>{dateNightHybridProgress(loadPhase)}</p>
+          <p role="status" data-radial-progress data-date-night-phase={loadPhase}>{dateNightHybridProgress(loadPhase, expanding)}</p>
           {!primaryPending && !expanding && !radialCoverage?.complete && !error && !discovery?.partial ? (
             <button type="button" className="mt-2 min-h-11 text-accent underline" onClick={() => setRequestVersion(version => version + 1)}>Retry missing areas</button>
           ) : null}

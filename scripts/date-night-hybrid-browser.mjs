@@ -43,17 +43,19 @@ try {
     const context = await browser.newContext({ viewport: { width: scenario === "mobile-progress" ? 320 : 390, height: 844 }, reducedMotion: "reduce", serviceWorkers: "block" });
     await context.route("**/*", route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
     const radiusMiles = scenario === "radius-increase" ? 15 : ["outermost-failure", "radius-decrease", "all-stall"].includes(scenario) ? 50 : 20;
-    await context.addInitScript(({ radiusMiles, scenario }) => {
+    await context.addInitScript(({ radiusMiles, scenario, fixtureOrigin }) => {
+      // Fixture setup belongs only to our application origin, never opaque about:blank.
+      if (location.origin !== fixtureOrigin) return;
       sessionStorage.setItem("dinner-roulette-hint-seen", "1");
       localStorage.setItem("pick-for-us-v1", JSON.stringify({ version: 0, state: {
         location: { lat: 37.176447, lon: -94.310223, label: "Carthage, Missouri", source: "manual" },
         homeMode: "date-night", spookySeasonEnabled: true,
         dateNightFilters: { radiusMiles, activityTypes: ["all-stall", "plan-stable"].includes(scenario) ? ["anything"] : ["movies"], mood: 50, openNowOnly: false, favoritesOnly: false, reduceParks: false },
       } }));
-    }, { radiusMiles, scenario });
+    }, { radiusMiles, scenario, fixtureOrigin: origin });
     const page = await context.newPage(); currentPage = page;
     const pageErrors = [], rpcRequests = [], cancelled = [];
-    page.on("pageerror", e => pageErrors.push(e.name));
+    page.on("pageerror", e => pageErrors.push({ name: e.name, message: e.message, stack: e.stack, url: page.url() }));
     page.on("request", r => { if (r.url().includes("/_serverFn/") && r.postData()?.includes("activityTypes")) rpcRequests.push(r); });
     page.on("requestfailed", r => { if (rpcRequests.includes(r)) cancelled.push(r.url()); });
     const navigationStarted = Date.now();
