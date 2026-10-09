@@ -1,0 +1,141 @@
+{
+  "reviewedAt": "2026-10-09T07:57:19.010032+00:00",
+  "source": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "hostedRunId": "37901365396",
+  "jobId": "113724453244",
+  "signingJob": {
+    "id": "113725719122",
+    "status": "SKIPPED",
+    "attribution": "Root supplied exact hosted job metadata; reviewer verifies unsigned payload and missing-key guard independently."
+  },
+  "verdict": "PASS: exact-head automated Android artifact integrity/readiness evidence only.",
+  "archives": [
+    {
+      "path": "/workspace/scratch/45a2c39f129e/deliverables/Pick-For-Us-Android-fe22c15-validation.zip",
+      "artifactId": "11602184425",
+      "sha256": "880eb60770c66cc76ea4d97aef25b89079399cbc293f32c4d60f3787cb838c24",
+      "bytes": 6866411,
+      "members": 8,
+      "crcPass": true
+    },
+    {
+      "path": "/workspace/scratch/45a2c39f129e/deliverables/Pick-For-Us-Android-fe22c15-lint.zip",
+      "artifactId": "11602463759",
+      "sha256": "7f54369d507718708f1709c55ee6faca0c91e5b47bce917fd0c8b03b4e57590b",
+      "bytes": 24070,
+      "members": 3,
+      "crcPass": true
+    }
+  ],
+  "sourceRevisionPass": true,
+  "checksumChecks": [
+    {
+      "manifestPath": "artifacts/PickForUs-unsigned.aab",
+      "archiveMember": "PickForUs-unsigned.aab",
+      "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee",
+      "pass": true
+    },
+    {
+      "manifestPath": "artifacts/PickForUs-debug.apk",
+      "archiveMember": "PickForUs-debug.apk",
+      "sha256": "6acf554075bfe8e7263ba2a405b8347f4f2e37aab8b1fcf6ea27ddf203d88636",
+      "pass": true
+    }
+  ],
+  "manifestReview": {
+    "package": "com.calebcalvin.pickforus",
+    "versionCode": "1",
+    "versionName": "1.0.0",
+    "minSdk": "24",
+    "targetSdk": "36",
+    "compileSdk": "36",
+    "allowBackup": "false",
+    "usesCleartextTraffic": "false",
+    "debuggable": "false",
+    "permissions": [
+      "android.permission.INTERNET",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "com.calebcalvin.pickforus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ]
+  },
+  "bundleReport": {
+    "artifact": "app-release.aab",
+    "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee",
+    "bytes": 3103535,
+    "package": "com.calebcalvin.pickforus",
+    "versionCode": 1,
+    "versionName": "1.0.0",
+    "minSdk": 24,
+    "compileSdk": 36,
+    "targetSdk": 36,
+    "debuggable": false,
+    "appLabel": "Pick For Us",
+    "allowBackup": false,
+    "cleartextTraffic": false,
+    "launcherImages": [
+      "base/res/mipmap-hdpi-v4/ic_launcher.png",
+      "base/res/mipmap-hdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-hdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher_round.png"
+    ],
+    "adaptiveIcons": [
+      "base/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "base/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    ],
+    "bundletool": "1.18.3",
+    "bundletoolValidation": "PASS",
+    "signing": "unsigned",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.INTERNET",
+      "com.calebcalvin.pickforus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "nativeLibraries": [],
+    "pageSizeAssessment": "No packaged native .so libraries; no ELF alignment requirement applies",
+    "runtime": "Remote HTTPS app; not a snapshot of branch web content",
+    "uploadSignatureVerified": false,
+    "playConsoleAcceptance": "NOT VERIFIED"
+  },
+  "unsignedBundleSignatureEntries": [],
+  "signingGuard": "PASS: requireReleaseSigning explicitly fails for missing upload key. Unsigned validation AAB has no signature entries; no reviewer signing action.",
+  "rawLintCounts": {
+    "Warning": 14
+  },
+  "lintSummaryMatchesRawXML": true,
+  "rawLintIssueIDs": {
+    "ManifestOrder": 1,
+    "AndroidGradlePluginVersion": 1,
+    "DataExtractionRules": 1,
+    "UnusedResources": 4,
+    "IconLauncherShape": 5,
+    "MonochromeLauncherIcon": 2
+  },
+  "hostedLog": {
+    "path": "browser-diagnosis/candidate6-android37901365396-job113724453244.log",
+    "bytes": 921530,
+    "sha256": "f937f95b2444013583b80aec2c1994153cdca840cdc1a4002e57997285af190f",
+    "sourceShaPresent": true,
+    "buildSuccessfulPresent": true
+  },
+  "priorBundleIdentity": "AAB identical to prior independently reviewed f767 bundle; current debug APK independently checksum verified.",
+  "knownLimits": [
+    "Remote HTTPS wrapper is not a snapshot of branch web content.",
+    "Physical device/WebView/GPS behavior remains unverified.",
+    "Upload signing, Play Console acceptance and Android publication remain HOLD and unperformed.",
+    "14 lint warnings preserved; zero errors."
+  ],
+  "sourceMutation": "None; no build/test/device/signing actions rerun by reviewer."
+}

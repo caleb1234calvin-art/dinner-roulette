@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-09T07:57:20.867534+00:00",
+  "source": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "run_id": 37901365396,
+  "job_id": 113724453244,
+  "hosted_unit_counts": {
+    "repository_pass": 947,
+    "application_pass": 71,
+    "aggregate_pass": 1018,
+    "fail": 0,
+    "skip": 4
+  },
+  "decoded_job_log": "browser-diagnosis/candidate6-android37901365396-job113724453244.log",
+  "decoded_job_log_sha256": "f937f95b2444013583b80aec2c1994153cdca840cdc1a4002e57997285af190f",
+  "payloads": [
+    {
+      "manifest_path": "artifacts/PickForUs-unsigned.aab",
+      "zip_path": "PickForUs-unsigned.aab",
+      "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee"
+    },
+    {
+      "manifest_path": "artifacts/PickForUs-debug.apk",
+      "zip_path": "PickForUs-debug.apk",
+      "sha256": "6acf554075bfe8e7263ba2a405b8347f4f2e37aab8b1fcf6ea27ddf203d88636"
+    }
+  ],
+  "root_artifact_validation": "ZIP CRC, source revision, every payload checksum, unsigned AAB, guard, bundletool, manifest and raw lint PASS",
+  "raw_lint": {
+    "Warning": 14
+  },
+  "release_signatures": [],
+  "no_physical_acceptance_or_signing_claim": true,
+  "checker_attempts": [
+    {
+      "attempt": 1,
+      "result": "Checker KeyError; SHA256SUMS uses artifacts/ paths while GitHub ZIP is flattened. No product/artifact failure."
+    },
+    {
+      "attempt": 2,
+      "result": "Use verified member basename mapping; all checksum assertions PASS."
+    }
+  ]
+}
