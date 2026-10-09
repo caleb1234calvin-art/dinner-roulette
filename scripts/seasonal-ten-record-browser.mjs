@@ -843,7 +843,14 @@ try {
       await item.waitFor(); assert.equal(await item.count(), 1);
       const href = await item.getByRole("link", { name: "Directions", exact: true }).getAttribute("href");
       const destination = new URL(href).searchParams.get("destination");
-      assert.equal(destination, row.seasonalListing.directionsTarget.kind === "verified-point" ? `${row.lat},${row.lon}` : row.address);
+      const receipt = previousReceipts.records.find(item => item.id === row.id);
+      assert.ok(receipt, "Previously shipped identity has an immutable receipt fixture");
+      const target = expanded ? receipt.directionsTarget : row.seasonalListing.directionsTarget;
+      assert.ok(["visitor-address", "verified-point"].includes(target.kind), "Saved receipt retains a supported Directions target");
+      const expectedDestination = target.kind === "verified-point" ? `${target.lat},${target.lon}` : target.address;
+      result.evidence.receiptNavigation = { displayAddress: row.address, directionsTarget: target, expectedDestination,
+        actualDestination: destination, sourceCommit: expanded ? previousReceipts.sourceCommit : null };
+      assert.equal(destination, expectedDestination, "Saved receipt uses the reviewed visitor destination, including required first check-in routing");
       assertPrecision(await item.innerText(), row);
       await assertConsumerOnly(item, row);
       await page.reload({ waitUntil: "domcontentloaded" }); await item.waitFor();
