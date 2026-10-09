@@ -1,3 +1,21 @@
+# ASTRA MATERIAL GATE — 2026-10-09 06:34 UTC — exact a44 browser FAILURE preserved
+
+## CURRENT
+- PR #60 head **a44e70996bc8546f75dc71e4af13c414350ec1f9**, tree **b16122c4bad65e7a51b8de57a166ba1d0f07e426**, parent7e6f26e55f85e85e232b2ff0f2e2e16e08676885 remains frozen.
+- Hosted web **37889747808 / job113687741679 FAILED** at new eleven gate: **218 PASS / 2 FAIL of220**, both old-receipt-survives-batch assertions for Beast and Edge of Hell. ActualDirections1300W13th differs from each attraction street address; inspection must determine authoritative visitor destination before any correction. No source change yet.
+- Earlier oldtwo23, V1 97, ten157, cumulative235 and ordinary10 gates PASS. Extra-nine and geometry SKIPPED on this head; historical geometry does not transfer.
+- Failed artifact **11599059205**,368,349,809bytes, **2989members**, SHA256 **49103e1d42f83dc4b8ca18572095a6aac491f41db6514adc5aaa0341aec5a762**. Root and browser agent reproduced digest and CRC PASS. Root materialized full ZIP; independent screenshot/state review underway.
+- Full job-log endpoint returned Transport closed to root and browser agent. Exact native job timestamps preserved: total50m56s, V1 5m51s, ten10m06s, cumulative15m15s, eleven13m49s. No missing log content claimed.
+- Local1018PASS/4skips, lint/typecheck/migration-free auth build and exact-head Android automated PASS remain separately valid. Main/production unchanged last verified; no release action.
+## NEXT
+- Inspect actual failed states/screenshots and frozen prior32 destination evidence independently before a bounded fix; preserve every old assertion and failed receipt.
+- Publish corrected exact candidate only after diagnosis, then rerun full exact-head gates and independent acceptance.
+## HOLD
+- Candidate is **NOT ready for owner release decision**. Final browser/runtime/geometry acceptance is blocked by these two failed assertions.
+- Cadaver and named data/placement/residential/no-import decisions remain unchanged. No production/main/protection/config/signing changes or fresh owner waiver.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 — current candidate4 Android independent PASS and Lloyd browser correction verified
 
 ## CURRENT
