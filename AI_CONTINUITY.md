@@ -1,3 +1,29 @@
+# PR #61 R2 Independent Safety Entry PASS — Full Candidate Acceptance Pending (2026-10-09 22:40 UTC)
+
+## CURRENT
+
+Fresh independent review **PASS for bounded live-benchmark safety entry only**, exact draft PR61 **`a4f43e9b886764592053a53652dc91602749ba11`**, tree **`44929e3f3d0b6ba2e4dd366de847b952388f9cb3`**, parent **`c931188a96752fcb97dac9066e530688f9aaef2a`**. **HYB-IV-01 and HYB-IV-02 are independently closed on R2**. The failed c931 reports/probes stay preserved and remain failed historical evidence.
+
+[Full immutable safety-entry report](audit/hybrid-loading-2026-10-09/a4f43-Safety-Preflight-R2.md), SHA-256 **`1bbd19fe998e932c00c49ef789ce4b804a0348f40e4952e14c8ed34c3baea23c`**. Reviewer tested an independent git-archive snapshot, not the mutable author checkout. **91 focused repository tests + 14 independent probes PASS**: active multi-group/hedge abort; capacity-rejected closure at cap1/default20,000; three open decisions preserved through affirmed alias replacement; all three correctly invalidated by subsequent closure; cancelled stale negatives cannot poison a new origin; cross-category/radius alias retirement at multiple caps.
+
+Positive coverage remains rejected for oversized payloads while negative safety is retained. Current eligible identity resolution and stable presentation keys preserve valid open decisions without choosing unrelated replacements. No new source remediation by verifier.
+
+## NEXT
+
+Coordinator permits bounded live benchmarking **only after the benchmark researcher freshly verifies main/production/PR/source identity and approved ledger state**. Frozen R4 instrumentation, global 384-attempt ceiling, latched stop thresholds and preregistered order remain mandatory. This checkpoint does not claim that traffic or measurements have occurred. New controlled/live executions use isolated immutable source and pre/post hashes.
+
+Complete exact-head hosted/browser/seasonal/geometry evidence and independent full-runtime review. Author1,048testsPASS/4skips/typecheck/lint0errors6warnings/safeauthbuildPASS remain separately recorded. Hosted web38000254537/Android38000254581 and final comparative recommendation still require terminal evidence. “Radial discovery becomes an audit layer” remains the candidate design, not a production release.
+
+## HOLD / scope
+
+**Full implementation, browser/geometry acceptance, benchmark results, performance recommendation and release readiness are NOT yet PASS.** Narrow safety-entry clearance does not establish provider reliability, recall or user-perceived speed. Historical invalidated controlledc931 run and Track F protocol deviation remain unchanged. No merge/deploy/settings/new waiver/signing/Play authority; no Missouri/Cadaver work.
+
+Cadaver retains reliable attraction-specific **2026 operation/date binding and supported expiry HOLD**, and physical Android/other parked backlog remain. Fresh22:40main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree8d5059, production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/sourcefe22**, 52 shipped records unchanged.
+
+**PARENT CONTINUITY COMMIT:** `0d735d5d7809d4c574e378dd539c923f0d331eae`; **PARENT TREE:** `321100adc5266fd91f3d213fedba8ac57a172588`. Documentation-only safe integration branch, all history retained verbatim.
+
+---
+
 # PR #61 R2 Remediation Frozen — Independent Safety and Hosted Acceptance Pending (2026-10-09 22:39 UTC)
 
 ## CURRENT
