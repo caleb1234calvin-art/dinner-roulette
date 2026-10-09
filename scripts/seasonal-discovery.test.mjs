@@ -47,6 +47,20 @@ const eligible = (venues, patch = {}, location = international, at = now) =>
     [],
     at.getTime(),
   );
+function assertReviewedAuroraSavedCoverage(venues) {
+  const cornMazes = decorateDateNight(venues, origin, now).filter(venue =>
+    venue.distanceMiles <= filters.radiusMiles + 0.05 && venue.availability.browseEligible && venue.activityTypes.includes("corn-maze"));
+  assert.deepEqual(cornMazes.map(venue => venue.id), ["date-night-mo26-astra-aurora-maize"]);
+  const [aurora] = cornMazes;
+  assert.equal(aurora.name, "Aurora Maize at Adventure Farm");
+  assert.deepEqual([aurora.lat, aurora.lon], [36.9808456, -93.6877871]);
+  assert.ok(Math.abs(aurora.distanceMiles - 36.876755617897096) < 0.000001,
+    "The independently reviewed approximate point places Aurora inside the unchanged 50-mile fixture");
+  assert.deepEqual(aurora.activityTypes, ["corn-maze", "haunted-house"]);
+  assert.equal(aurora.source, "catalog");
+  assert.ok(!(aurora.discoveryEvidence ?? []).some(evidence => evidence.source === "osm" && evidence.activityTypes.includes("corn-maze")),
+    "A newly imported corn maze is saved coverage, never inferred live-provider provenance");
+}
 const record = {
   status: "confirmed",
   activeFrom: "2026-10-02",
@@ -232,14 +246,15 @@ test("saved-only successful sparse coverage, missing categories and provider out
   const result = await search(t, [], origin);
   assert.equal(result.source, "merged");
   assert.equal(result.warning, undefined);
+  assertReviewedAuroraSavedCoverage(result.venues);
   const coverage = seasonalCoverage(
     decorateDateNight(result.venues, origin, now),
     filters,
     result.source,
     true,
   );
-  assert.deepEqual(coverage.savedOnly, ["haunted-house"]);
-  assert.deepEqual(coverage.missing, ["corn-maze", "pumpkin-patch"]);
+  assert.deepEqual(coverage.savedOnly, ["haunted-house", "corn-maze"]);
+  assert.deepEqual(coverage.missing, ["pumpkin-patch"]);
   assert.equal(coverage.sparse, true);
   assert.equal(coverage.outage, false);
   assert.doesNotMatch(coverage.text, /unavailable/);
@@ -284,7 +299,8 @@ test("per-category provenance never labels a saved haunt as live because its ord
     true,
   );
   assert.deepEqual(coverage.live, []);
-  assert.deepEqual(coverage.savedOnly, ["haunted-house"]);
+  assertReviewedAuroraSavedCoverage(result.venues);
+  assert.deepEqual(coverage.savedOnly, ["haunted-house", "corn-maze"]);
 });
 
 test("ordinary Date Night and seasonal toggle still work internationally; unknown hours fail strict ON", async (t) => {
