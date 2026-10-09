@@ -1,3 +1,35 @@
+# PR #61 R4 Test-Only Remediation Frozen — Exact-Head Acceptance Pending (2026-10-09 23:26 UTC)
+
+## CURRENT
+
+Draft [PR #61](https://github.com/caleb1234calvin-art/dinner-roulette/pull/61), `integration/date-night-primary-radial-audit-1`, now controls exact remote **cd78a0d8b5efb7fee818da5b2ea79588e28c8270**, tree **f43672a114fd772cfc0084fc149c41abcb500104**, sole parent **63b4c0096c2af305019cc7f5adf67e55720b562a**. Fourteen parent-relative paths contain tests, audit documents and preserved failure evidence; runtime source is unchanged. The publication delay resolved through the same pending connector call; no alternate route, retry or scope expansion was used.
+
+Hosted web **38004387318** and Android **38004387248** are running. **R4 full local, hosted/browser/geometry and independent exact-head acceptance remain pending. No previous PASS transfers automatically.** R3's scoped safety/state PASS and 1,052 local tests PASS remain historical exact-R3 results. “Radial discovery becomes an audit layer” remains a nonproduction candidate.
+
+## Preserved R3 hosted failure and reviewed correction
+
+Web **38001408334 FAILED** after **18 hybrid scenarios PASS**, when the two-record seasonal suite expected one total RPC and observed two. Later seasonal/geometry steps were skipped, not passed. Android **38001408344 PASS** is separate from physical Android/signing/Play HOLD. Frozen failed artifact **11649822622**, 27,885,371 bytes, SHA-256 **ba93bba19ee8ed6440309966586e921a3b421163e420146dcf5ff3ce41933277**; original verdicts and screenshots remain in the candidate's audit history.
+
+The [complete expectation map](https://github.com/caleb1234calvin-art/dinner-roulette/blob/cd78a0d8b5efb7fee818da5b2ea79588e28c8270/audit/date-night-hybrid-candidate/test-expectation-migration.md) was read. Three existing seasonal harnesses now decode actual serialized patchId values: undefined primary versus explicit radial audit ID. All raw requests remain recorded; exact one-primary and +1/+2 refresh counts, TTL, factual/lifecycle/routing payload assertions, and exact total zero-refetch checks remain. Core audit requests must match a distinct primary origin/radius/season/category and remain bounded; duplicate audits and malformed inputs fail. Three decoder tests use captured hosted payloads.
+
+R4 also corrects two evidence gaps: the hybrid radius check previously could miscount zero primaries, and location cancellation cases reloaded after editing storage rather than proving actual same-document location replacement. Normal Change location UI now requires the new Columbia coordinates/provider response, matching old-request abort, a selectable new pool, same-document sentinel, and stable options after old work releases. Geometry thresholds and runtime files remain unchanged. The standalone location workflow was not published.
+
+[Independent prepublication scope review](audit/hybrid-loading-2026-10-09/R4-Test-Expectation-Review.md), SHA **d24381f5de1f9612871bbe1a5342d9ffc61b551adc4b5c52a8e1127e04215066**, grants **scope PASS for freezing/testing only**. Its [eight-file reviewed hash manifest](audit/hybrid-loading-2026-10-09/R4-Reviewed-Harness-SHA256SUMS) has SHA **9657cc33113fa9adad9edb2cf3c3a0fcc13cda160031957f726f7f15d0819590**. All eight reviewed hashes matched the final publication per author/coordinator receipt; independent exact-remote binding and actual hosted evidence remain required.
+
+## NEXT / HOLD
+
+Run and independently review the exact R4 full tests, typecheck, lint, safe auth-enabled build, hosted hybrid/seasonal/geometry evidence and actual screenshots. Preserve every failed candidate and assertion migration. Final functional acceptance is pending.
+
+**Architecture/performance recommendation remains MORE EVIDENCE REQUIRED / HOLD.** The frozen a4 benchmark ended with 327 accounted physical attempts, seven finalized cases and an incomplete eighth due to harness termination failure. No new live traffic, restart, replacement ledger, compensating calls or performance optimization is authorized. Safety PASS and test-only corrections do not establish speed, broad recall or adoption.
+
+No main publication, deployment, settings change, release waiver or Missouri/Cadaver work. Cadaver remains HOLD for reliable attraction-specific **2026 operation/date binding and supported expiry**. All parked backlog and physical Android limitations remain.
+
+Fresh 23:26 reads confirm main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**, production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/sourcefe22**, and 52 shipped records unchanged. Unchanged vercel.json disables integration/** deployments.
+
+**PARENT CONTINUITY COMMIT:** `db5b123cb28d8edc5eff755f0abe8909df1c0daa`; **PARENT TREE:** `4d5b9bd5ffa1a0b5dc903fad86a26dcf2bef8fda`. Documentation-only checkpoint; all history retained below.
+
+---
+
 # PR #61 R3 Safety Remediation PASS; Terminal Benchmark HOLD (2026-10-09 22:54 UTC)
 
 ## CURRENT
