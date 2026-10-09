@@ -207,7 +207,9 @@ async function inspectQualifiedOverlay(test, row, kind) {
     result.evidence.optionCardNotices ??= [];
     result.evidence.optionCardNotices.push(notices);
   }
-  const section = (kind === "options" ? rowCard(page, row) : overlay).locator("[data-seasonal-visit-notes]");
+  const target = kind === "options" ? rowCard(page, row) : overlay;
+  assert.equal(await target.count(), 1, "Exactly one target card or result overlay");
+  const section = target.locator("[data-seasonal-visit-notes]");
   assert.equal(await section.count(), 1, "Target owns exactly one visit-notes section");
   assert.equal(await section.locator(":scope > p").count(), 1, "Exactly one compact notice");
   assert.equal(await section.locator(":scope > p").innerText(), SEASONAL_VISITOR_NOTICE);
