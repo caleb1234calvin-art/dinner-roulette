@@ -1,0 +1,171 @@
+{
+  "parent_research_sha256": "2dd0b7be13f5f1ed4fa26837fe9db9390ac8d1c30965578f57270d8a114c132d",
+  "parent_projections_sha256": "8906c00d1f23ff24062c275d324e742836e3727a6a452eaaecdd9e56a5e334ab",
+  "review_gate": "Do not treat this as final gate closure until parent supplies exact published Delta5 checkpoint/readback. None received.",
+  "records": [
+    {
+      "record_id": "MO26-005",
+      "contract": "Seasonal Listing Completeness V1 staged radius path",
+      "season_year": 2026,
+      "timezone": "America/Chicago",
+      "review_state": "DATA REVIEW PASS; CHECKPOINT GATE PENDING",
+      "record_sha256_canonical_json": "bd02e5f2c9cc5a63951527059b06b09a1a9f7c82847d10d14fd4df3b17e7c25c",
+      "projection_sha256_canonical_json": "703eba5477b0bf0cb42c4faa5be9888b9168fd654907756ded7b4be7d5bfabdc",
+      "projection": {
+        "name": "Myers Forest of Fears",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "categoryLabel": "Haunted Attraction",
+        "description": "A haunted forest attraction in Carthage.",
+        "details": "Open October 9–10, 16–17, 23–24 and 30–31, 2026. Hours are not listed; check the operator before visiting.",
+        "actionLabel": "Visit website",
+        "website": "https://www.myersforestoffears.com/",
+        "address": "3935 S Garrison Avenue, Carthage, MO 64836",
+        "lat": 37.119659,
+        "lon": -94.312243,
+        "coordinatePrecision": "approximate",
+        "directionsTarget": "3935 S Garrison Avenue, Carthage, MO 64836",
+        "directionsPolicy": "Use supported street address, never approximate point as an arrival/parking assertion",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "valid_dates": [
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "expires_at": "2026-11-01T00:00:00-05:00",
+        "expiry_semantics": "Date-only product cutoff at end of last listed date; not a claimed admission closing time",
+        "no_2027_recurrence": true
+      },
+      "source_binding": {
+        "myers-location-r2": {
+          "url": "https://www.myersforestoffears.com/location",
+          "retrieved_at": "2026-10-09T03:57:10.151510+00:00",
+          "status": 200,
+          "bytes": 31058,
+          "sha256": "db1cf780b96eca1da41ebe31fbed974d9964effbdad6f747801814e12c0b3e0f",
+          "source_kind": "Fresh public operator HTML, captured by independent worker and directly read by researcher",
+          "evidence_file": "/workspace/scratch/a0ea701c7b34/missouri-delta5-2026-10-09/revision-2/evidence/myers-location-receipt.json",
+          "evidence_sha256": "7f06327707b2b013b7256d11ab7a0c1da7746a4993b34db89bdce3ee8b089ded",
+          "file": "/workspace/scratch/a0ea701c7b34/missouri-delta5-2026-10-09/revision-2/evidence/myers-location.html",
+          "content_usable": true,
+          "independent_clearance": "PENDING on new R2 projection; source capture is not overall approval"
+        },
+        "myers-r2": {
+          "url": "https://www.myersforestoffears.com/",
+          "retrieved_at": "2026-10-09T03:57:10.150756+00:00",
+          "status": 200,
+          "bytes": 28396,
+          "sha256": "4f73ed91046d43f2605a9e618fcfd4061d1b5b5b4dac062c79616bb6df85560e",
+          "source_kind": "Fresh public operator HTML, captured by independent worker and directly read by researcher",
+          "evidence_file": "/workspace/scratch/a0ea701c7b34/missouri-delta5-2026-10-09/revision-2/evidence/myers-receipt.json",
+          "evidence_sha256": "ffbb266bee69a037d32577174607cbc0f594960fd7255a792f1bfed98957a40c",
+          "file": "/workspace/scratch/a0ea701c7b34/missouri-delta5-2026-10-09/revision-2/evidence/myers.html",
+          "content_usable": true,
+          "independent_clearance": "PENDING on new R2 projection; source capture is not overall approval"
+        }
+      },
+      "required_runtime_guards": [
+        "Never Open Now, including provider/cache merges",
+        "Address-based Directions; no precise coordinate rideshare dropoff",
+        "Approximate distance/radius semantics",
+        "Hard date-only expiry2026-11-01T00:00:00-05:00, separate from unknown event closing",
+        "No2027 recurrence; exclude expired/cancelled records in cached and resumed overlays",
+        "Affirmative identity dedupe; preserve distinct Myers Forest and Myer Inn"
+      ],
+      "runtime_import_release_authorized": false
+    },
+    {
+      "record_id": "MO26-027",
+      "contract": "Seasonal Listing Completeness V1 staged radius path",
+      "season_year": 2026,
+      "timezone": "America/Chicago",
+      "review_state": "DATA REVIEW PASS; CHECKPOINT GATE PENDING",
+      "record_sha256_canonical_json": "c7fddcb96eba2612ee7aa646833630f58de825102dedc28a598f26d88e11af7f",
+      "projection_sha256_canonical_json": "309bac917830f19cf77d19e83e502b3455a088b492c65d34d97c89b87c961d61",
+      "projection": {
+        "name": "Labyrinth of Fear",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "categoryLabel": "Haunted House",
+        "description": "A haunted-house walkthrough in Nevada with new challenges for the 2026 season.",
+        "details": "Open October 17, 23–24 and 30–31, 2026. Ticket sales start at 6:30 p.m.; entry starts at 7:30 p.m. Closing time is not listed. Groups enter in parties of up to four. Expect strobes, fog, loud sound and water effects; incidental contact can occur. Tickets are valid only on the purchase night and are nonrefundable.",
+        "actionLabel": "Visit website",
+        "website": "https://www.labyrinthoffear.com/",
+        "address": "17866 East Overland Road, Nevada, MO 64772",
+        "lat": 37.828856,
+        "lon": -94.315562,
+        "coordinatePrecision": "approximate",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "valid_dates": [
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "expires_at": "2026-11-01T00:00:00-05:00",
+        "expiry_semantics": "Conservative date cutoff, not claimed admission closing time",
+        "no_2027_recurrence": true
+      },
+      "source_binding": {
+        "labyrinth": {
+          "id": "labyrinth",
+          "url": "https://www.labyrinthoffear.com/",
+          "retrieved_at": "2026-10-09T03:35:01.159535+00:00",
+          "status": 200,
+          "final_url": "https://www.labyrinthoffear.com/",
+          "sha256": "b34bf3d3503a7515c594cd8cf48b60ed10d44a6dbd4aa13519d7926234542dca",
+          "file": "/workspace/scratch/a0ea701c7b34/missouri-delta5-2026-10-09/evidence/labyrinth.html",
+          "bytes": 33187,
+          "evidence_file": "/workspace/scratch/a0ea701c7b34/missouri-delta5-2026-10-09/evidence/labyrinth-receipt.json",
+          "evidence_sha256": "105d1a07438effc94827457e5341d293007fd8d49b441e63258077d4c55b3f1a",
+          "content_usable": true
+        },
+        "labyrinth-faq-r2": {
+          "url": "https://www.labyrinthoffear.com/faq",
+          "retrieved_at": "2026-10-09T03:57:10.150279+00:00",
+          "status": 200,
+          "bytes": 28492,
+          "sha256": "fa48af2ece4b78669823c3f128af438521ff5b08a50bd1a81cb412ed04b7335d",
+          "source_kind": "Fresh public operator HTML, captured by independent worker and directly read by researcher",
+          "evidence_file": "/workspace/scratch/a0ea701c7b34/missouri-delta5-2026-10-09/revision-2/evidence/labyrinth-faq-receipt.json",
+          "evidence_sha256": "2e160487bf07a584268464fbdbd46de950f21b1b0d1557b13d7542fec5772f36",
+          "file": "/workspace/scratch/a0ea701c7b34/missouri-delta5-2026-10-09/revision-2/evidence/labyrinth-faq.html",
+          "content_usable": true,
+          "independent_clearance": "PENDING on new R2 projection; source capture is not overall approval"
+        },
+        "labyrinth-location": {
+          "id": "labyrinth-location",
+          "url": "https://www.labyrinthoffear.com/location",
+          "retrieved_at": "2026-10-09T03:36:10.123068+00:00",
+          "status": 200,
+          "final_url": "https://www.labyrinthoffear.com/location",
+          "sha256": "023f732bd73277920900e69c2b183e67f702abdd0013b5a9cb0ad300ba3b2e96",
+          "file": "/workspace/scratch/a0ea701c7b34/missouri-delta5-2026-10-09/evidence/labyrinth-location.html",
+          "bytes": 26256,
+          "evidence_file": "/workspace/scratch/a0ea701c7b34/missouri-delta5-2026-10-09/evidence/labyrinth-location-receipt.json",
+          "evidence_sha256": "8299272a1cca3ade28e6d5e26890ce1770074db4ad8bba087f6568a7e53400cd",
+          "content_usable": true
+        }
+      },
+      "required_runtime_guards": [
+        "Never Open Now, including provider/cache merges",
+        "Address-based Directions; no precise coordinate rideshare dropoff",
+        "Approximate distance/radius semantics",
+        "Hard date-only expiry2026-11-01T00:00:00-05:00, separate from unknown event closing",
+        "No2027 recurrence; exclude expired/cancelled records in cached and resumed overlays",
+        "Affirmative identity dedupe; preserve distinct Myers Forest and Myer Inn"
+      ],
+      "runtime_import_release_authorized": false
+    }
+  ]
+}

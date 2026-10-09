@@ -1,3 +1,39 @@
+# Pick For Us — OWNER PAUSED: 11 Data-Cleared Records, No Implementation Started (2026-10-09)
+
+## CURRENT
+
+**OWNER PAUSED for human/Astra takeover.** The owner's 04:38:30 stop instruction supersedes the earlier autonomous continuation. The current verification and continuity recovery are closed by this published/read-back handoff; do not start another batch, implementation or automatic continuation.
+
+**32 curated records remain shipped. Eleven additional exact projections now independently PASS data, approximate-placement, consumer-copy and author-eligibility review: the prepared nine plus Labyrinth and Myers. No new implementation candidate, import, runtime change, application/browser acceptance or release has occurred.**
+
+Nine: Branson Ghoster, Liberty, Ranch, Cobb, Nixa, Missouri Nightmare, Trepidations, Freaks and Hell Harvest. Their [final report](audit/nine-preimport-independent-2026-10-09/revision-2/Nine-Preimport-Independent-Report-R2.txt) SHA-256 is `3e0f3b75cc02835a4c9d0951e313bd58478f0f43c728dfa750f41e92e6f72e9d`; [exact eligible subset](audit/nine-preimport-independent-2026-10-09/revision-2/Nine-Preimport-Eligible-Author-Subset-R2.json) is `463e5809612f0e7c0ea5c5a32d08cbb0ef186034b6866cb37496b4e990ed393c`; final verdict is `862ddd7a81b81dd3fdaa3f9a89ed28cc2c0f3cd32b373798d203adc47a56fe72`. Published research b475 was independently bound; its former procedural HOLD is closed.
+
+Delta5: [final independent report](audit/missouri-delta5-independent-2026-10-09/final/Independent-Delta5-R2-Final-Report.md), SHA `d9be2637b36c962064e510f3713d27d7d9dabcd16b6eac33637bf2feb21a6966`; [exact two-record eligible subset](audit/missouri-delta5-independent-2026-10-09/final/Independent-Delta5-R2-Final-Eligible-Subset.json), SHA `bf3b0d90d045751e2539b094b3950842044a6e9703a4aca2d333540a713cfc7c`; final verdict SHA `396e558e1bd0c5605b85e621c245374c9ec4afc35cdd2b0851f1993ef2baf006`. Verifier independently bound research checkpoint 78de638, all 23 relevant blobs and exact R2 objects. **2 data PASS / 10 commercial HOLD / 0 REJECT; 3 residential HOLD remain separate.** R1 failures and pending-checkpoint R2 receipts are preserved, never relabeled as earlier PASS.
+
+### Live identity and release state
+
+Fresh **04:41 UTC** checks: main **`979d83aede9d66163e1ebaed9ad5b219cb637882`**, tree **`a7dbb32947c0a0daf4864346b0d212477fc9a11b`**, sole parent **`46ded230297976698b9c8a035cb2dafd11219314`**. Production **`dpl_F1XiMcc9AUuykunNamr87R3re7gP` READY**, source exact main. PR59 is the completed merged release; no constituent PR54–58 should be merged separately. Existing historical PRs are not a new implementation candidate.
+
+BCd **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv`** remains the recorded prior rollback at source 213502. The release operator previously verified its actual postrelease Previous dialog and cancelled without execution; this data checkpoint does not claim a new rollback test. Existing five-alias binding and live smoke retain their dated release scope, not a new full production browser rerun. All earlier one-release waivers are consumed.
+
+## NEXT — wait for renewed owner direction
+
+A bounded **11-record nonproduction candidate is a proposal only while paused**. After the owner explicitly resumes, use only the two exact eligible subsets linked above, preserve source-bound facts and stage any record that fails new runtime review. Root must report this final canonical SHA plus CURRENT / NEXT / HOLD before any author start.
+
+Future implementation must cover the exact 11 projections and retained 32 through full/focused tests, typecheck, unchanged lint policy, safe auth-enabled build, hosted exact-head browser/layout/Details checks, radius/dedup/provider success and fallback, address navigation, never-Open-Now overrides, saved/cache/resume/async stale response, exact/date-only expiry ±1 ms and DST/no-2027 guards, plus fresh independent exact-candidate review. Cobb's own late-fall Anything lifecycle needs explicit tests; do not extend global Halloween UI/provider season. No future merge/deploy/settings/waiver/signing authority is granted by data PASS.
+
+## HOLD and evidence limits
+
+- **Cadaver Zone MO26-007 remains explicitly independently VERIFIED HOLD:** no accepted attraction-specific **2026 operation/date binding**, therefore **no supported 2026 expiry**. Its supported address and approximate point do not clear import. Park it unless new material evidence appears; source failure is not closure evidence.
+- Delta5 Werehouse, Wolfman, Aurora, Feemster, Shepherd’s Lantern, Fear Factory, Haunted Hollows, Twisted Minds, Waco and Rising retain their exact factual/destination/projection blockers. Five current-season field passes do not automatically clear complete records. Three residential leads remain segregated and ineligible. Other historical backlog HOLDs remain; no exhaustive coverage or NET NEW claim.
+- Cobb's data clearance explicitly accepts fresh indexed operator schedule and qualified retained secondary restrictions, despite unavailable live origin; do not claim fresh operator health-policy confirmation. Nixa secondary accessibility/infant claims remain qualified. Ranch now ends October 31 at 23:00 CDT.
+- Labyrinth preserves nonrefundable purchase-night ticket conditions. Myers uses an explicitly adjudicated approximate operator marker, not averaged Census geometry or exact arrival. Both November 1 midnight CDT cutoffs are date-only visibility boundaries, never asserted closing times; unknown hours, null intervals, never Open Now and no 2027 remain.
+- No runtime or pixel PASS for these 11. Existing six lint warnings, qualified narrow Directions clipping, provider/weather/ticket limits and physical Android/WebView/GPS HOLD persist. No signed Play release is implied.
+
+The owner approved retry at 04:32:49 after the cancelled documentation ref update; the exact retry succeeded, and sequential research/review/correction checkpoints preserve the interruption and historical HOLDs. The later owner pause governs now.
+
+**PARENT COMMIT:** `15bfc6ed2e188e916e993055ce8b1578e2dde887`; **PARENT TREE:** `abf23ba36a040f8e4f88b21beffc48d3d54fd199`. This final receipt changes only AI_CONTINUITY and audit evidence on deployment-disabled `integration/continuity-refresh-2026-10-07`; runtime, main and production are untouched. Prior history follows verbatim.
+
 # Pick For Us — Nine Independent Data Eligibility PASS (2026-10-09)
 
 ## CURRENT
