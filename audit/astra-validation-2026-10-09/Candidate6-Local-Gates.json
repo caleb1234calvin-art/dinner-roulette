@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-10-09T07:54:22.858437+00:00",
+  "head": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "tree": "8d5059c9fee871c522616971cce0a80b153e4d23",
+  "verdict": "LOCAL_GATES_PASS_HOSTED_PENDING",
+  "tests": {
+    "repository": {
+      "pass": 947,
+      "fail": 0,
+      "skip": 4,
+      "total": 951
+    },
+    "application": {
+      "pass": 71,
+      "fail": 0,
+      "skip": 0
+    },
+    "aggregate_pass": 1018,
+    "aggregate_skip": 4
+  },
+  "lint": {
+    "errors": 0,
+    "inherited_warnings": 6
+  },
+  "typecheck": "PASS",
+  "build": {
+    "auth_enabled": true,
+    "migrations_run": false,
+    "status": "PASS",
+    "source_sha256": "38873e4e38ef8eeb061303f3c9cd49344eea8f421c010129e0f1e013c357c998",
+    "source_files": 468,
+    "output_sha256": "8d3f98fb30c7bfcaedace17dee90b7cc4262b8db590258063a13992903421c36",
+    "output_files": 194
+  },
+  "logs": [
+    {
+      "path": "test-candidate6.log",
+      "bytes": 366202,
+      "sha256": "33fb69a4c28a49de517931f1b14574abe4e4fa7f4e6ac8d811463a702d8745c4"
+    },
+    {
+      "path": "lint-candidate6.log",
+      "bytes": 1643,
+      "sha256": "cbbc3913f0a5ae63c5194366045638c45270268553e67c3b8b56497ecf645012"
+    },
+    {
+      "path": "typecheck-candidate6.log",
+      "bytes": 128,
+      "sha256": "ae791f9f57ffbb3c0a592b6a34e25250c1f7f6f13fde4d05f77a0d4e7681f89a"
+    },
+    {
+      "path": "build-candidate6.log",
+      "bytes": 11123,
+      "sha256": "323000d7d92d1ae5a0dac79ee35549ab3a4e82d262b444cbf01d67e5e0febbd7"
+    }
+  ],
+  "checkout": "/workspace/scratch/45a2c39f129e/repo-verified",
+  "checkout_integrity": "Fresh independent clone; clean exact tree; git fsck connectivity PASS; no borrowed object storage",
+  "parent": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+  "skips": "Four documentation-contract checks require absent external workspace OG documentation package; zero seasonal/runtime skips.",
+  "local_browser": "Chromium binary not installed locally; full exact-head hosted Chromium gates required and running, no prior PASS substituted."
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent_review",
+  "verdict": "EXACT DELTA SOURCE PASS; RUNTIME VALIDATION PENDING",
+  "candidate": {
+    "sha": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "tree": "8d5059c9fee871c522616971cce0a80b153e4d23",
+    "parent": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+    "branch": "integration/missouri-astra-push-2026-10-09",
+    "clean": true
+  },
+  "changedPaths": [
+    "scripts/seasonal-ten-record-browser.mjs"
+  ],
+  "diffNumstat": "23\t1\tscripts/seasonal-ten-record-browser.mjs",
+  "fileSha256": "7e0c507793ab9b758d4e87f074f6f43f7eacbb00c9f425b801e7664f142a3a74",
+  "boundPriorReview": {
+    "path": "runtime-independent-review/F767-Minimal-Harness-Patch-Independent-Review.json",
+    "sha256": "047788fab1b6bc881785259934ccd6b94a77138b9b01f88e9f587f1d256dc83c"
+  },
+  "unchangedSubtrees": {
+    "src": {
+      "base": "dbb4366a3df17334a40785b15ff234ce4ee10e24",
+      "candidate": "dbb4366a3df17334a40785b15ff234ce4ee10e24",
+      "equal": true
+    },
+    "server": {
+      "base": "170418d170dcc2397f339e97882b3c926e1c6f5c",
+      "candidate": "170418d170dcc2397f339e97882b3c926e1c6f5c",
+      "equal": true
+    },
+    "public": {
+      "base": "8a24e98af48debee93503fc90098e01b8b0c1c6d",
+      "candidate": "8a24e98af48debee93503fc90098e01b8b0c1c6d",
+      "equal": true
+    },
+    "audit": {
+      "base": "be6a15bfcaa53f0e0525c43c77b971ae023b0fa6",
+      "candidate": "be6a15bfcaa53f0e0525c43c77b971ae023b0fa6",
+      "equal": true
+    },
+    ".github": {
+      "base": "424c0837f0c8b411da9c73e2e9fa2de364f0320b",
+      "candidate": "424c0837f0c8b411da9c73e2e9fa2de364f0320b",
+      "equal": true
+    },
+    "scripts/test-support": {
+      "base": "5e14a4152b2c74a1601206e530f2e0b4a6a5baf1",
+      "candidate": "5e14a4152b2c74a1601206e530f2e0b4a6a5baf1",
+      "equal": true
+    }
+  },
+  "previous32ReceiptBlob": "29898a1638541c617b4c3fa8f08d2239715def98",
+  "allOtherLinesByteIdenticalToParent": true,
+  "retainedAssertions": "Canonical eligibility, counts/radius, alias-card notices/confidence/category, cache restoration/reacquisition and no-RPC behavior remain unchanged. The only removed assertion incorrectly banned all seasonal metadata from a regional superset. New decoded assertions require target alias stripping and reviewed active lifecycle identities with exact listing metadata and bounded geography.",
+  "hostedPending": {
+    "webRun": 37901365412,
+    "androidRun": 37901365396
+  },
+  "limitations": [
+    "No new browser or Android PASS claimed.",
+    "No optional tests rerun; static immutable delta binding only.",
+    "Reviewer made no source edits."
+  ]
+}
