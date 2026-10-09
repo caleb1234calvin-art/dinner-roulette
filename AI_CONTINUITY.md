@@ -1,3 +1,22 @@
+# ASTRA MATERIAL GATE — 2026-10-09 05:24 UTC — exact candidate 2 Android automated readiness PASS
+
+## CURRENT
+- Candidate remains PR #60 / **4513aee7de0afe55e0f0fa061c1ec5f6af4fa412** / tree **7323e271b5ecf23fdf60f8c4a98f8fffc564137c**.
+- Hosted Android **37888058961 / job 113682436611 SUCCESS**, signing job SKIPPED. Checkout log and downloaded artifact source-revision.txt both prove exact candidate head despite synthetic PR SHA in artifact display name.
+- Artifact **11597331963**, ZIP SHA256 **c21b0aa1e36b03c90ed7f503726749241b6579e78a1030a5105aa264adc1e61a**, CRC PASS; internal APK/AAB payload checksums verified. Unsigned AAB SHA256 **4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee**. Package com.calebcalvin.pickforus; version1.0.0/code1; min24/target36; nondebuggable, backup false, cleartext false. Bundletool validation PASS.
+- Missing-key normal-release signing guard rejected release as required. Explicit unsigned validation bundle/debug APK built; no upload signing, release publication or Play Console action.
+- Android lint 0 errors / 14 inherited warnings, matching prior recorded categories. Exact receipt at audit/astra-validation-2026-10-09/Candidate2-Android-Independent-Receipt.json.
+- Hosted web full tests PASS and Chromium installation PASS; geometry running. Local full1018PASS/4skips/typecheck/lint/safeauthbuild PASS retained.
+## NEXT
+- Finish hosted web geometry and all browser suites, independent source and final runtime review.
+- Publish Cadaver adjudication, freeze raw evidence archive, prepare owner decision.
+## HOLD
+- Android physical device/WebView/GPS remains HOLD. App is a remote HTTPS wrapper, not an embedded snapshot of candidate web content.
+- Candidate still not release-ready pending browser/geometry/source final verdicts.
+- Owner release approval and fresh unprotected-main waiver remain absent; no production change.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 05:22 UTC — exact candidate 2 local gates PASS
 
 ## CURRENT

@@ -1,0 +1,156 @@
+{
+  "checked_at": "2026-10-09T05:24:47.486001+00:00",
+  "head": "4513aee7de0afe55e0f0fa061c1ec5f6af4fa412",
+  "run_id": 37888058961,
+  "job_id": 113682436611,
+  "status": "SUCCESS",
+  "signing_job": "SKIPPED",
+  "artifact_id": 11597331963,
+  "artifact_sha256": "c21b0aa1e36b03c90ed7f503726749241b6579e78a1030a5105aa264adc1e61a",
+  "crc": "PASS",
+  "internal_source_revision": "PASS",
+  "payload_hashes": [
+    {
+      "path": "PickForUs-unsigned.aab",
+      "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee"
+    },
+    {
+      "path": "PickForUs-debug.apk",
+      "sha256": "f3c4ff352bc829b0e0713b9e75b95c8fb80e53f778d4c1125ffe66bb25a5689f"
+    }
+  ],
+  "bundle_verification": {
+    "artifact": "app-release.aab",
+    "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee",
+    "bytes": 3103535,
+    "package": "com.calebcalvin.pickforus",
+    "versionCode": 1,
+    "versionName": "1.0.0",
+    "minSdk": 24,
+    "compileSdk": 36,
+    "targetSdk": 36,
+    "debuggable": false,
+    "appLabel": "Pick For Us",
+    "allowBackup": false,
+    "cleartextTraffic": false,
+    "launcherImages": [
+      "base/res/mipmap-hdpi-v4/ic_launcher.png",
+      "base/res/mipmap-hdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-hdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher_round.png"
+    ],
+    "adaptiveIcons": [
+      "base/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "base/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    ],
+    "bundletool": "1.18.3",
+    "bundletoolValidation": "PASS",
+    "signing": "unsigned",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.INTERNET",
+      "com.calebcalvin.pickforus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "nativeLibraries": [],
+    "pageSizeAssessment": "No packaged native .so libraries; no ELF alignment requirement applies",
+    "runtime": "Remote HTTPS app; not a snapshot of branch web content",
+    "uploadSignatureVerified": false,
+    "playConsoleAcceptance": "NOT VERIFIED"
+  },
+  "lint_summary": {
+    "counts": {
+      "Warning": 14
+    },
+    "issues": [
+      {
+        "id": "ManifestOrder",
+        "severity": "Warning",
+        "message": "`<uses-permission>` tag appears after `<application>` tag"
+      },
+      {
+        "id": "AndroidGradlePluginVersion",
+        "severity": "Warning",
+        "message": "A newer version of Gradle than 8.14.3 is available: 8.14.6"
+      },
+      {
+        "id": "DataExtractionRules",
+        "severity": "Warning",
+        "message": "The attribute `android:allowBackup` is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute `android:dataExtractionRules` specifying an `@xml` resource which configures cloud backups and device transfers on Android 12 and higher."
+      },
+      {
+        "id": "UnusedResources",
+        "severity": "Warning",
+        "message": "The resource `R.layout.activity_main` appears to be unused"
+      },
+      {
+        "id": "UnusedResources",
+        "severity": "Warning",
+        "message": "The resource `R.xml.config` appears to be unused"
+      },
+      {
+        "id": "UnusedResources",
+        "severity": "Warning",
+        "message": "The resource `R.string.package_name` appears to be unused"
+      },
+      {
+        "id": "UnusedResources",
+        "severity": "Warning",
+        "message": "The resource `R.string.custom_url_scheme` appears to be unused"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "MonochromeLauncherIcon",
+        "severity": "Warning",
+        "message": "The application adaptive icon is missing a monochrome tag"
+      },
+      {
+        "id": "MonochromeLauncherIcon",
+        "severity": "Warning",
+        "message": "The application adaptive roundIcon is missing a monochrome tag"
+      }
+    ]
+  },
+  "limitations": [
+    "Physical device/WebView/GPS not tested.",
+    "Remote HTTPS wrapper does not embed candidate web content.",
+    "No upload signing or Play Console action.",
+    "Artifact display name uses synthetic PR merge SHA; checkout log and internal source revision prove exact4513candidate."
+  ]
+}
+
