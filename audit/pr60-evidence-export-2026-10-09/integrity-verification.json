@@ -1,0 +1,66 @@
+{
+  "verified_at": "2026-10-09T17:46:30.629223+00:00",
+  "verdict": "PASS",
+  "original_artifact_id": 11604834689,
+  "original_size_bytes": 659552557,
+  "original_sha256": "57bebbd86e183df68db154366c02a8f10819873ebb6c06022ba2cfd2e864878f",
+  "export_wrappers": [
+    {
+      "artifact_id": 11634750345,
+      "bytes": 251658418,
+      "sha256": "2822eee150569c976c6dc511d74400a07cdabcf911f0e59d956881f964f27120",
+      "crc": "PASS"
+    },
+    {
+      "artifact_id": 11634715460,
+      "bytes": 283633,
+      "sha256": "7e7f55836021c0b516b0665caa284bfb4e58733cc5be2e8878927ad65158ff66",
+      "crc": "PASS"
+    },
+    {
+      "artifact_id": 11634655510,
+      "bytes": 251658418,
+      "sha256": "fda319bf8dde50dbe1d8235c29fa992f016339fec9eedb90662ee4df1269411f",
+      "crc": "PASS"
+    },
+    {
+      "artifact_id": 11633294901,
+      "bytes": 156236255,
+      "sha256": "04aaa0585cde1f81c00838e02035c1dab21d767121a6b84e69c8b8669a8044f6",
+      "crc": "PASS"
+    }
+  ],
+  "raw_parts": [
+    {
+      "order": 1,
+      "file": "original-11604834689.zip.part001",
+      "offset": 0,
+      "size_bytes": 251658240,
+      "sha256": "5335e996f37de45efd4472ad5035589c4bdcf1b104f25bd66d019b95af3d295a",
+      "verified": true
+    },
+    {
+      "order": 2,
+      "file": "original-11604834689.zip.part002",
+      "offset": 251658240,
+      "size_bytes": 251658240,
+      "sha256": "98a3316344340ffb3ed486d0eef795f1fc5e28bd8b64fbc2ebe86fc1f914b495",
+      "verified": true
+    },
+    {
+      "order": 3,
+      "file": "original-11604834689.zip.part003",
+      "offset": 503316480,
+      "size_bytes": 156236077,
+      "sha256": "21ca105de57c7fe92ce2b141aa7c005bfd5fbde05d2fa1b90bd9902365abdb03",
+      "verified": true
+    }
+  ],
+  "archive_member_count": 6606,
+  "complete_file_count": 6606,
+  "total_uncompressed_bytes": 696579953,
+  "all_member_sizes_crc_sha256": "PASS",
+  "duplicate_or_unsafe_paths": false,
+  "complete_original_paths_preserved": true,
+  "manifest_sha256": "eb4c15cbfc0d5601747274d8c3a59d71d3fa9ebc910139754852097785ed7149"
+}

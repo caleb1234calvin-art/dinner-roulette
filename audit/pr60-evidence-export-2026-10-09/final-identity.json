@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-10-09T17:50:47.390Z",
+  "candidate": {
+    "pr": 60,
+    "branch": "integration/missouri-astra-push-2026-10-09",
+    "sha": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "tree": "8d5059c9fee871c522616971cce0a80b153e4d23",
+    "parent": [
+      "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd"
+    ],
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "changed_paths": 32
+  },
+  "main": {
+    "sha": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+    "tree": "a7dbb32947c0a0daf4864346b0d212477fc9a11b",
+    "parent": [
+      "46ded230297976698b9c8a035cb2dafd11219314"
+    ]
+  },
+  "production": {
+    "id": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+    "state": "READY",
+    "sha": "979d83aede9d66163e1ebaed9ad5b219cb637882"
+  },
+  "rollback": {
+    "id": "dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv",
+    "state": "READY",
+    "sha": "213502ef8cf3f67d75e6d9c9c8ff43f9f656890c"
+  },
+  "aliases": [
+    {
+      "alias": "pickforus.app",
+      "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "www.pickforus.app",
+      "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": "pickforus.app",
+      "redirectStatusCode": 308
+    },
+    {
+      "alias": "dinner-roulette-chi.vercel.app",
+      "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null
+    }
+  ],
+  "protection": {
+    "branch_protected": false,
+    "rulesets": [],
+    "dedicated_endpoint": {
+      "error": "GitHub API error 403: {\"message\":\"Resource not accessible by integration\",\"documentation_url\":\"https://docs.github.com/rest/branches/branch-protection#get-branch-protection\",\"status\":\"403\"}",
+      "error_code": "FORBIDDEN",
+      "error_data": {
+        "message": "Resource not accessible by integration",
+        "documentation_url": "https://docs.github.com/rest/branches/branch-protection#get-branch-protection",
+        "status": "403"
+      }
+    },
+    "fresh_exact_candidate_owner_waiver": false
+  },
+  "export": {
+    "branch": "integration/pr60-evidence-export-2026-10-09",
+    "sha": "2d47efc19617cc9b54076eb6ab862e88b007244d",
+    "run_id": 37968247257,
+    "workflow_id": 379873035,
+    "job_id": 113947963560,
+    "conclusion": "success"
+  },
+  "integration_deployment_policy": "Unchanged vercel.json: integration/** false",
+  "release_mutations": false
+}

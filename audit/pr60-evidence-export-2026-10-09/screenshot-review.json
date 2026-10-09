@@ -1,0 +1,105 @@
+{
+  "verdict": "PASS_WITH_RETAINED_KNOWN_LIMITATION",
+  "reviewed_original_images": 16,
+  "method": "Visual inspection of original unmodified PNGs plus associated exported state/metrics; no regenerated screenshots",
+  "images": [
+    {
+      "path": "seasonal-astra-eleven/0-consumer-anything-category-320-result-control-Directions.png",
+      "finding": "Branson event facts, approximate-location qualification and reachable Directions. Legacy wide button text clips at 320 px; no new overflow versus measured baseline.",
+      "sha256": "1b3466670df1b57e27cab07d20e2a58acf89845b7ec667d6343b6fde6b79b226",
+      "bytes": 75419
+    },
+    {
+      "path": "seasonal-astra-extras/0-consumer-anything-category-320-options-note-date-night-mo26-astra-aurora-maize-0.png",
+      "finding": "Aurora expanded schedule and last-admission distinction visible with readable Details and close/shuffle controls.",
+      "sha256": "e6eae1c1f7d9b04032b201480eb49fea787403bc494838fa1ad2646db1f4acda",
+      "bytes": 73853
+    },
+    {
+      "path": "seasonal-astra-eleven/late-0-late-fall-anything-cache-expiry-result-note-date-night-mo26-astra-cobb-factory-1.png",
+      "finding": "Cobb remains discoverable after Halloween with explicit November 6–7 schedule, schedule-unconfirmed status and approximate location.",
+      "sha256": "c76b493ca2a5c55f26ebb1b0dc6649ac293ffcac930e358c2510b88ad53edc5a",
+      "bytes": 78426
+    },
+    {
+      "path": "seasonal-astra-eleven/late-0-late-fall-anything-cache-expiry-late-expired-favorite.png",
+      "finding": "Cobb saved record says Season ended after final expiry; Directions retained.",
+      "sha256": "c554206a686810297d89e6214633f4df6ec00c572b9e84dd7d14e2c682c65721",
+      "bytes": 35235
+    },
+    {
+      "path": "date-night-radial/options-stable.png",
+      "finding": "Ordinary Date Night filters, progressive loading status, selection controls and selected category present; full-page image captures fixed footer at viewport position.",
+      "sha256": "4710ebec3d5f6c8e29b278c2362c90dca1756ff10bd8d9291194d4aa514ac404",
+      "bytes": 329139
+    },
+    {
+      "path": "date-night-radial/mobile-progress.png",
+      "finding": "320px ordinary Date Night controls fit, progress through 15 miles toward 20 visible, no horizontal overflow in accompanying metrics.",
+      "sha256": "09550e47b229056bdadea5dfba5c5187977d3b89c3e503fe4432fee1f265a4e9",
+      "bytes": 317858
+    },
+    {
+      "path": "seasonal-astra-extras/3-consumer-anything-category-390-result-note-date-night-mo26-astra-feemster-corn-maze-0.png",
+      "finding": "Feemster correct East visitor address, November 1 schedule, last-ticket and access qualifications, approximate location, Uber/Lyft controls visible.",
+      "sha256": "b252747ba4d7c65be6849fd69fe66b84de1ae9499c97c4e8a0c12a30ff61f041",
+      "bytes": 108767
+    },
+    {
+      "path": "seasonal-astra-extras/8-consumer-anything-category-320-options-image-0-viewport.png",
+      "finding": "Haunted Grotto collapsed card, season-upcoming status, concise notice and Details accessible.",
+      "sha256": "ba21a2dd76e99267ff166e0e1a06465d64155ff5bb0f2a3ef73d8b3fdcefcf6f",
+      "bytes": 45661
+    },
+    {
+      "path": "seasonal-astra-eleven/legacy-0-old-receipt-survives-batch-final.png",
+      "finding": "Lloyd's existing saved canonical record retains review rating, address and Directions.",
+      "sha256": "ab9ec0993fc86075df3814d5ef86e52c802d79adfc371cd9a6fd63bafdad98d9",
+      "bytes": 37107
+    },
+    {
+      "path": "seasonal-astra-extras/legacy-24-old-receipt-survives-batch-final.png",
+      "finding": "Osage Beach existing saved record retains address, season-upcoming state and Directions.",
+      "sha256": "c06c6d649165c69d51a82b305aeac2f065a0016350d123670cf9b7cd4c9bad9e",
+      "bytes": 38805
+    },
+    {
+      "path": "seasonal-astra-eleven/0-pending-rpc-at-expiry-final.png",
+      "finding": "Stale pre-expiry result delivered at expiry leaves zero activities and disabled pick controls; no expired candidate rendered.",
+      "sha256": "b6340949f645665067ea4e4b18f6cec98f4f1ac30b2ff441ad9ea77b21c6c4b0",
+      "bytes": 347177
+    },
+    {
+      "path": "seasonal-astra-eleven/0-affirmed-favorites-direct-reload-expiry-ended-history-reload.png",
+      "finding": "Branson saved record after reload says Season ended with address Directions preserved.",
+      "sha256": "c66a9cb8aaccf38192f34bd26218a2b0d5be60640269b5438d455d16603d827c",
+      "bytes": 37673
+    },
+    {
+      "path": "seasonal-card-layout/DELTA3-COBB-320-options-after.png",
+      "finding": "Cobb compact options card aligns with ordinary comparison; Details keyboard focus visible.",
+      "sha256": "e034bca4dc6c8e8c56936a0c37f604a41e04e5704c53a5fc9b0e6bb3d14245de",
+      "bytes": 61089
+    },
+    {
+      "path": "seasonal-card-layout/DELTA3-COBB-320-plan-after.png",
+      "finding": "Cobb plan card is compact with visible Details, Maps/Info and ordinary second stop.",
+      "sha256": "606d3d9560d17425d5f40bd054352779e46b0e76711a78bfb9d9b55f2d4b7bbf",
+      "bytes": 65812
+    },
+    {
+      "path": "seasonal-card-layout/MO26-039-512-plan-expanded-4.png",
+      "finding": "Feemster expanded plan facts readable through approximate-location note; action row visible.",
+      "sha256": "a85b4dadb5f062ead763a7908580a4e74a9e644f5f8dd692bbc853c1439ce1f1",
+      "bytes": 97041
+    },
+    {
+      "path": "seasonal-astra-extras/3-consumer-anything-category-390-result-control-Directions.png",
+      "finding": "Feemster Directions, website, reroll, exclusion, save, completed and phone controls visible at 390 px.",
+      "sha256": "d5e58131ffccb10a7a80c01e037521a8a4a806ed2aaf31a05887ce53087f2ef9",
+      "bytes": 68988
+    }
+  ],
+  "ride_precision_limit": "Recorded navigation includes generic Uber href for all new records; Lyft buttons visually observed, but no Lyft href exported. No live ride booking or map service navigation performed.",
+  "retained_limitation": "Inherited 320px Directions label clipping, unchanged/worse-than-baseline checks pass."
+}

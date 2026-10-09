@@ -1,0 +1,1579 @@
+{
+  "inspected_at": "2026-10-09T17:49:19.373683+00:00",
+  "verdict": "PASS",
+  "scope": "Offline independent inspection of existing exact-head output; no application regeneration or tests executed",
+  "source_sha": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "source_tree": "8d5059c9fee871c522616971cce0a80b153e4d23",
+  "parent": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+  "build_proof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "38873e4e38ef8eeb061303f3c9cd49344eea8f421c010129e0f1e013c357c998",
+      "files": 468
+    },
+    "startedAt": "2026-10-09T07:51:21.212Z",
+    "output": {
+      "sha256": "b2bf998699ad7622018150dc8793e72262474ae55f4f86bd03889cddcd35f12a",
+      "files": 194
+    },
+    "completedAt": "2026-10-09T07:51:23.784Z"
+  },
+  "source_fingerprint_matches_prior_exact_candidate": true,
+  "hosted_output_note": "This hosted output fingerprint is internally identical in all suite proofs. It differs from the separate local build output, which is not a byte-reproducible-build acceptance requirement.",
+  "suite_counts": {
+    "date-night-radial": 10,
+    "missouri-two-records": 23,
+    "seasonal-astra-eleven": 220,
+    "seasonal-astra-extras": 185,
+    "seasonal-completeness-v1": 97,
+    "seasonal-cumulative-15": 235,
+    "seasonal-ten-record": 157,
+    "casino": 16,
+    "location": 19
+  },
+  "seasonal_scenarios": 917,
+  "total_browser_scenarios_and_checks": 962,
+  "all_scenarios_passed": true,
+  "failures": 0,
+  "geometry": {
+    "options": {
+      "comparisons": 156,
+      "unique_records": 52,
+      "widths": [
+        320,
+        390,
+        512
+      ],
+      "standard_delta_range_px": [
+        0,
+        0
+      ],
+      "matched_ordinary_delta_range_px": [
+        -76.5,
+        0
+      ]
+    },
+    "result": {
+      "comparisons": 156,
+      "unique_records": 52,
+      "widths": [
+        320,
+        390,
+        512
+      ],
+      "standard_delta_range_px": [
+        -15.328125,
+        166.671875
+      ],
+      "matched_ordinary_delta_range_px": [
+        -80,
+        4.671875
+      ]
+    },
+    "plan": {
+      "comparisons": 114,
+      "unique_records": 38,
+      "widths": [
+        320,
+        390,
+        512
+      ],
+      "standard_delta_range_px": [
+        -27,
+        3
+      ],
+      "matched_ordinary_delta_range_px": [
+        -77,
+        3
+      ]
+    }
+  },
+  "geometry_comparisons": 426,
+  "ineligible_plan_controls": [
+    "date-night-mo26-116-sam-baker-halloween-bash",
+    "date-night-mo26-019-james-river-joplin-party",
+    "date-night-mo26-031-silver-dollar-city-harvest",
+    "date-night-mo26-034-boone-historical-haunts",
+    "date-night-mo26-115-bollinger-trick-or-treat",
+    "date-night-mo26-delta-haunted-river-float",
+    "date-night-mo26-012-witches-day-out",
+    "date-night-mo26-028-nevada-oktoberfest",
+    "date-night-mo26-074-osage-beach-fall-festival",
+    "date-night-mo26-084-mcwilliams",
+    "date-night-mo26-071-pomme-de-terror",
+    "date-night-mo26-astra-branson-ghoster",
+    "date-night-mo26-astra-tunnel-of-terror-ballwin",
+    "date-night-mo26-astra-tunnel-of-terror-ofallon"
+  ],
+  "expanded_plan_note_observations": 480,
+  "evidence_observation_counts": {
+    "decoded_image_observations": 381,
+    "reachable_note_observations": 980,
+    "reachable_control_observations": 634
+  },
+  "new_record_navigation_observations": 41,
+  "navigation": [
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-branson-ghoster",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=2115%20W.%2076%20Country%20Blvd%2C%20Branson%2C%20MO%2065616",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-branson-ghoster",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=2115%20W.%2076%20Country%20Blvd%2C%20Branson%2C%20MO%2065616",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-liberty-corn-maze",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=17607%20Liberty%20Bend%20Road%20S%2CLiberty%2CMO64068",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-liberty-corn-maze",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=17607%20Liberty%20Bend%20Road%20S%2CLiberty%2CMO64068",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-terror-at-the-ranch",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=23111%20S.%20Jefferson%20Pkwy%2C%20Harrisonville%2C%20MO64701",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-terror-at-the-ranch",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=23111%20S.%20Jefferson%20Pkwy%2C%20Harrisonville%2C%20MO64701",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-cobb-factory",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=141%20E.%20Main%20Street%2C%20Old%20Monroe%2C%20MO63369",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-cobb-factory",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=141%20E.%20Main%20Street%2C%20Old%20Monroe%2C%20MO63369",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-field-of-screams-nixa",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=Summers%20at%20the%20River%2C%202142%20N.%20Sports%20Complex%20Ln.%2C%20Nixa%2C%20MO%2065714",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-field-of-screams-nixa",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=Summers%20at%20the%20River%2C%202142%20N.%20Sports%20Complex%20Ln.%2C%20Nixa%2C%20MO%2065714",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-missouri-nightmare",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=1420%20County%20Rd276%2C%20Columbia%2C%20MO65202",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-missouri-nightmare",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=1420%20County%20Rd276%2C%20Columbia%2C%20MO65202",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-trepidations",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=101%20East%20Commercial%20Street%2C%20Exeter%2C%20MO65647",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-trepidations",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=101%20East%20Commercial%20Street%2C%20Exeter%2C%20MO65647",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-freaks-fair",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=126%20SW%20400%20Rd.%20(Twin%20Oaks%20Event%20Center)%2C%20Warrensburg%2C%20MO%2064093",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-freaks-fair",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=126%20SW%20400%20Rd.%20(Twin%20Oaks%20Event%20Center)%2C%20Warrensburg%2C%20MO%2064093",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-hell-harvest",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=19126%20Missouri%208%2C%20Potosi%2C%20MO%2063664",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-hell-harvest",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=19126%20Missouri%208%2C%20Potosi%2C%20MO%2063664",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-myers-forest-of-fears",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=3935%20S%20Garrison%20Avenue%2C%20Carthage%2C%20MO%2064836",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-myers-forest-of-fears",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=3935%20S%20Garrison%20Avenue%2C%20Carthage%2C%20MO%2064836",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-labyrinth-of-fear",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=17866%20East%20Overland%20Road%2C%20Nevada%2C%20MO%2064772",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-labyrinth-of-fear",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=17866%20East%20Overland%20Road%2C%20Nevada%2C%20MO%2064772",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "record": "date-night-mo26-astra-cobb-factory",
+      "scenario": "late-fall-anything-cache-expiry",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=141%20E.%20Main%20Street%2C%20Old%20Monroe%2C%20MO63369",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-aurora-maize",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=20591%20County%20Road%202200%2C%20Aurora%2C%20MO%2065605",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-aurora-maize",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=20591%20County%20Road%202200%2C%20Aurora%2C%20MO%2065605",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-shepherds-lantern",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=5803%20Jakes%20Prairie%20Road%2C%20Cuba%2C%20MO%2065453",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-shepherds-lantern",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=5803%20Jakes%20Prairie%20Road%2C%20Cuba%2C%20MO%2065453",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-haunted-hollows",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=5947%20County%20Road%20261%2C%20Palmyra%2C%20MO%2063461",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-haunted-hollows",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=5947%20County%20Road%20261%2C%20Palmyra%2C%20MO%2063461",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-feemster-corn-maze",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=2501%20E%20Farm%20Road%2094%2C%20Springfield%2C%20MO%2065803",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-feemster-corn-maze",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=2501%20E%20Farm%20Road%2094%2C%20Springfield%2C%20MO%2065803",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-worlds-of-fun-haunt",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=4545%20Worlds%20of%20Fun%20Avenue%2C%20Kansas%20City%2C%20MO%2064161",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-worlds-of-fun-haunt",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=4545%20Worlds%20of%20Fun%20Avenue%2C%20Kansas%20City%2C%20MO%2064161",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-ozark-nightmares",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=22599%20Highway%2032%2C%20Lebanon%2C%20MO%2065536",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-ozark-nightmares",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=22599%20Highway%2032%2C%20Lebanon%2C%20MO%2065536",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=14918%20Manchester%20Road%2C%20Ballwin%2C%20MO%2063011",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=14918%20Manchester%20Road%2C%20Ballwin%2C%20MO%2063011",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=101%20Fallon%20Loop%20Road%2C%20O%E2%80%99Fallon%2C%20MO%2063368",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=101%20Fallon%20Loop%20Road%2C%20O%E2%80%99Fallon%2C%20MO%2063368",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-haunted-grotto",
+      "scenario": "consumer-anything-category-320",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=3102%20Aad%20Grotto%20Road%2C%20Poplar%20Bluff%2C%20MO%2063901",
+      "uber": "https://m.uber.com/"
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "record": "date-night-mo26-astra-haunted-grotto",
+      "scenario": "consumer-anything-category-390",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=3102%20Aad%20Grotto%20Road%2C%20Poplar%20Bluff%2C%20MO%2063901",
+      "uber": "https://m.uber.com/"
+    }
+  ],
+  "previous32_regression_receipts": [
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-068-lloyds-family-farm",
+      "receipt": {
+        "providerId": "date-night-osm-node-920000",
+        "canonicalId": "date-night-mo26-068-lloyds-family-farm",
+        "revision": "Shipped-two-record-corrected-projections-2026-10-07",
+        "destination": "7015 E Route Y, Ashland, MO 65010"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-116-sam-baker-halloween-bash",
+      "receipt": {
+        "providerId": "date-night-osm-node-920001",
+        "canonicalId": "date-night-mo26-116-sam-baker-halloween-bash",
+        "revision": "Shipped-two-record-corrected-projections-2026-10-07",
+        "destination": "37.259288,-90.505404"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-myers-inn-carthage",
+      "receipt": {
+        "providerId": "date-night-osm-node-920002",
+        "canonicalId": "date-night-myers-inn-carthage",
+        "revision": "MO2026-Phase2-R2-76896ea4",
+        "destination": "529 West Airport Drive, Carthage, MO 64836"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-010-aftermath",
+      "receipt": {
+        "providerId": "date-night-osm-node-920003",
+        "canonicalId": "date-night-mo26-010-aftermath",
+        "revision": "MO2026-Phase2-R2-76896ea4",
+        "destination": "2520 Jaguar Road, Joplin, MO 64804"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-011-beyond-outer-limits",
+      "receipt": {
+        "providerId": "date-night-osm-node-920004",
+        "canonicalId": "date-night-mo26-011-beyond-outer-limits",
+        "revision": "MO2026-Phase2-R2-76896ea4",
+        "destination": "2163 Jaguar Road, Joplin, MO 64804"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-029-campbells",
+      "receipt": {
+        "providerId": "date-night-osm-node-920005",
+        "canonicalId": "date-night-mo26-029-campbells",
+        "revision": "MO2026-Phase2-R2-76896ea4",
+        "destination": "177 Carob Road, Clever, MO 65631"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-030-rutledge-wilson",
+      "receipt": {
+        "providerId": "date-night-osm-node-920006",
+        "canonicalId": "date-night-mo26-030-rutledge-wilson",
+        "revision": "MO2026-Phase2-R2-76896ea4",
+        "destination": "3825 W Farm Road 146, Springfield, MO 65802"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-019-james-river-joplin-party",
+      "receipt": {
+        "providerId": "date-night-osm-node-920007",
+        "canonicalId": "date-night-mo26-019-james-river-joplin-party",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "1850 S Maiden Lane, Joplin, MO"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-031-silver-dollar-city-harvest",
+      "receipt": {
+        "providerId": "date-night-osm-node-920008",
+        "canonicalId": "date-night-mo26-031-silver-dollar-city-harvest",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "399 Silver Dollar City Parkway, Branson, MO 65616"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-034-boone-historical-haunts",
+      "receipt": {
+        "providerId": "date-night-osm-node-920009",
+        "canonicalId": "date-night-mo26-034-boone-historical-haunts",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "7850 N State Highway V, Ash Grove, MO 65604"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-054-fun-farm",
+      "receipt": {
+        "providerId": "date-night-osm-node-920010",
+        "canonicalId": "date-night-mo26-054-fun-farm",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "650 N Jefferson Street, Kearney, MO 64060"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-067-shryocks-callaway-farms",
+      "receipt": {
+        "providerId": "date-night-osm-node-920011",
+        "canonicalId": "date-night-mo26-067-shryocks-callaway-farms",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "2927 County Road 253, Columbia, MO 65202"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-100-urban-gardens",
+      "receipt": {
+        "providerId": "date-night-osm-node-920012",
+        "canonicalId": "date-night-mo26-100-urban-gardens",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "701 W LaHarpe Street, Kirksville, MO 63501"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-114-perryville-pumpkin-farm",
+      "receipt": {
+        "providerId": "date-night-osm-node-920013",
+        "canonicalId": "date-night-mo26-114-perryville-pumpkin-farm",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "1410 Allens Landing Road, Perryville, MO 63775"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-115-bollinger-trick-or-treat",
+      "receipt": {
+        "providerId": "date-night-osm-node-920014",
+        "canonicalId": "date-night-mo26-115-bollinger-trick-or-treat",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "113 Bollinger Mill Road, Burfordville, MO 63739-9051"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-124-hotel-of-terror",
+      "receipt": {
+        "providerId": "date-night-osm-node-920015",
+        "canonicalId": "date-night-mo26-124-hotel-of-terror",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "334 N Main Avenue, Springfield, MO 65806"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-125-dungeons-of-doom",
+      "receipt": {
+        "providerId": "date-night-osm-node-920016",
+        "canonicalId": "date-night-mo26-125-dungeons-of-doom",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "701 W Wall Street, Springfield, MO 65802"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-036-monster-corn-maze",
+      "receipt": {
+        "providerId": "date-night-osm-node-920017",
+        "canonicalId": "date-night-mo26-036-monster-corn-maze",
+        "revision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "destination": "711 State Route AM, Cabool, MO 65689"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-058-beast",
+      "receipt": {
+        "providerId": "date-night-osm-node-920018",
+        "canonicalId": "date-night-mo26-058-beast",
+        "revision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "destination": "1300 W 13th St, Kansas City, MO 64102"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-069-dead-factory",
+      "receipt": {
+        "providerId": "date-night-osm-node-920019",
+        "canonicalId": "date-night-mo26-069-dead-factory",
+        "revision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "destination": "2100 E Liberty St, Mexico, MO 65265"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-071-pomme-de-terror",
+      "receipt": {
+        "providerId": "date-night-osm-node-920020",
+        "canonicalId": "date-night-mo26-071-pomme-de-terror",
+        "revision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "destination": "37.883074,-93.303521"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-118-haunted-hall-horror",
+      "receipt": {
+        "providerId": "date-night-osm-node-920021",
+        "canonicalId": "date-night-mo26-118-haunted-hall-horror",
+        "revision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "destination": "410 Kiwanis Drive, Cape Girardeau, MO 63701"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-012-witches-day-out",
+      "receipt": {
+        "providerId": "date-night-osm-node-920022",
+        "canonicalId": "date-night-mo26-012-witches-day-out",
+        "revision": "MO2026-final-four-verified-2026-10-08",
+        "destination": "25695 Mulberry Road, Webb City, MO 64870"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-028-nevada-oktoberfest",
+      "receipt": {
+        "providerId": "date-night-osm-node-920023",
+        "canonicalId": "date-night-mo26-028-nevada-oktoberfest",
+        "revision": "MO2026-final-four-verified-2026-10-08",
+        "destination": "1641 E Ashland Street, Nevada, MO 64772"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-074-osage-beach-fall-festival",
+      "receipt": {
+        "providerId": "date-night-osm-node-920024",
+        "canonicalId": "date-night-mo26-074-osage-beach-fall-festival",
+        "revision": "MO2026-final-four-verified-2026-10-08",
+        "destination": "950 Hatchery Road, Osage Beach, MO 65065"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-084-mcwilliams",
+      "receipt": {
+        "providerId": "date-night-osm-node-920025",
+        "canonicalId": "date-night-mo26-084-mcwilliams",
+        "revision": "MO2026-final-four-verified-2026-10-08",
+        "destination": "4007 County Road 6920, West Plains, MO 65775"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-085-brookdale-farms",
+      "receipt": {
+        "providerId": "date-night-osm-node-920026",
+        "canonicalId": "date-night-mo26-085-brookdale-farms",
+        "revision": "MO2026-brookdale-late-fall-verified-2026-10-08",
+        "destination": "8004 Twin Rivers Road, Eureka, MO 63025"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-delta-edge-of-hell",
+      "receipt": {
+        "providerId": "date-night-osm-node-920027",
+        "canonicalId": "date-night-mo26-delta-edge-of-hell",
+        "revision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "destination": "1300 W 13th St, Kansas City, MO 64102"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-delta-creepyworld",
+      "receipt": {
+        "providerId": "date-night-osm-node-920028",
+        "canonicalId": "date-night-mo26-delta-creepyworld",
+        "revision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "destination": "1400 S Old Highway 141, Fenton, MO 63026"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-delta-darkness",
+      "receipt": {
+        "providerId": "date-night-osm-node-920029",
+        "canonicalId": "date-night-mo26-delta-darkness",
+        "revision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "destination": "1525 South 8th Street, St. Louis, MO 63104"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-delta-haunted-river-float",
+      "receipt": {
+        "providerId": "date-night-osm-node-920030",
+        "canonicalId": "date-night-mo26-delta-haunted-river-float",
+        "revision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "destination": "22474 Restful Lane, Waynesville, MO 65583"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-delta-fear-bloody-timber",
+      "receipt": {
+        "providerId": "date-night-osm-node-920031",
+        "canonicalId": "date-night-mo26-delta-fear-bloody-timber",
+        "revision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "destination": "8518 County Road 7190, West Plains, MO 65775"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-068-lloyds-family-farm",
+      "receipt": {
+        "providerId": "date-night-osm-node-920000",
+        "canonicalId": "date-night-mo26-068-lloyds-family-farm",
+        "revision": "Shipped-two-record-corrected-projections-2026-10-07",
+        "destination": "7015 E Route Y, Ashland, MO 65010"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-116-sam-baker-halloween-bash",
+      "receipt": {
+        "providerId": "date-night-osm-node-920001",
+        "canonicalId": "date-night-mo26-116-sam-baker-halloween-bash",
+        "revision": "Shipped-two-record-corrected-projections-2026-10-07",
+        "destination": "37.259288,-90.505404"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-myers-inn-carthage",
+      "receipt": {
+        "providerId": "date-night-osm-node-920002",
+        "canonicalId": "date-night-myers-inn-carthage",
+        "revision": "MO2026-Phase2-R2-76896ea4",
+        "destination": "529 West Airport Drive, Carthage, MO 64836"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-010-aftermath",
+      "receipt": {
+        "providerId": "date-night-osm-node-920003",
+        "canonicalId": "date-night-mo26-010-aftermath",
+        "revision": "MO2026-Phase2-R2-76896ea4",
+        "destination": "2520 Jaguar Road, Joplin, MO 64804"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-011-beyond-outer-limits",
+      "receipt": {
+        "providerId": "date-night-osm-node-920004",
+        "canonicalId": "date-night-mo26-011-beyond-outer-limits",
+        "revision": "MO2026-Phase2-R2-76896ea4",
+        "destination": "2163 Jaguar Road, Joplin, MO 64804"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-029-campbells",
+      "receipt": {
+        "providerId": "date-night-osm-node-920005",
+        "canonicalId": "date-night-mo26-029-campbells",
+        "revision": "MO2026-Phase2-R2-76896ea4",
+        "destination": "177 Carob Road, Clever, MO 65631"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-030-rutledge-wilson",
+      "receipt": {
+        "providerId": "date-night-osm-node-920006",
+        "canonicalId": "date-night-mo26-030-rutledge-wilson",
+        "revision": "MO2026-Phase2-R2-76896ea4",
+        "destination": "3825 W Farm Road 146, Springfield, MO 65802"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-019-james-river-joplin-party",
+      "receipt": {
+        "providerId": "date-night-osm-node-920007",
+        "canonicalId": "date-night-mo26-019-james-river-joplin-party",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "1850 S Maiden Lane, Joplin, MO"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-031-silver-dollar-city-harvest",
+      "receipt": {
+        "providerId": "date-night-osm-node-920008",
+        "canonicalId": "date-night-mo26-031-silver-dollar-city-harvest",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "399 Silver Dollar City Parkway, Branson, MO 65616"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-034-boone-historical-haunts",
+      "receipt": {
+        "providerId": "date-night-osm-node-920009",
+        "canonicalId": "date-night-mo26-034-boone-historical-haunts",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "7850 N State Highway V, Ash Grove, MO 65604"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-054-fun-farm",
+      "receipt": {
+        "providerId": "date-night-osm-node-920010",
+        "canonicalId": "date-night-mo26-054-fun-farm",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "650 N Jefferson Street, Kearney, MO 64060"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-067-shryocks-callaway-farms",
+      "receipt": {
+        "providerId": "date-night-osm-node-920011",
+        "canonicalId": "date-night-mo26-067-shryocks-callaway-farms",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "2927 County Road 253, Columbia, MO 65202"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-100-urban-gardens",
+      "receipt": {
+        "providerId": "date-night-osm-node-920012",
+        "canonicalId": "date-night-mo26-100-urban-gardens",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "701 W LaHarpe Street, Kirksville, MO 63501"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-114-perryville-pumpkin-farm",
+      "receipt": {
+        "providerId": "date-night-osm-node-920013",
+        "canonicalId": "date-night-mo26-114-perryville-pumpkin-farm",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "1410 Allens Landing Road, Perryville, MO 63775"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-115-bollinger-trick-or-treat",
+      "receipt": {
+        "providerId": "date-night-osm-node-920014",
+        "canonicalId": "date-night-mo26-115-bollinger-trick-or-treat",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "113 Bollinger Mill Road, Burfordville, MO 63739-9051"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-124-hotel-of-terror",
+      "receipt": {
+        "providerId": "date-night-osm-node-920015",
+        "canonicalId": "date-night-mo26-124-hotel-of-terror",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "334 N Main Avenue, Springfield, MO 65806"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-125-dungeons-of-doom",
+      "receipt": {
+        "providerId": "date-night-osm-node-920016",
+        "canonicalId": "date-night-mo26-125-dungeons-of-doom",
+        "revision": "MO2026-next-R2-e0736dc8",
+        "destination": "701 W Wall Street, Springfield, MO 65802"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-036-monster-corn-maze",
+      "receipt": {
+        "providerId": "date-night-osm-node-920017",
+        "canonicalId": "date-night-mo26-036-monster-corn-maze",
+        "revision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "destination": "711 State Route AM, Cabool, MO 65689"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-058-beast",
+      "receipt": {
+        "providerId": "date-night-osm-node-920018",
+        "canonicalId": "date-night-mo26-058-beast",
+        "revision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "destination": "1300 W 13th St, Kansas City, MO 64102"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-069-dead-factory",
+      "receipt": {
+        "providerId": "date-night-osm-node-920019",
+        "canonicalId": "date-night-mo26-069-dead-factory",
+        "revision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "destination": "2100 E Liberty St, Mexico, MO 65265"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-071-pomme-de-terror",
+      "receipt": {
+        "providerId": "date-night-osm-node-920020",
+        "canonicalId": "date-night-mo26-071-pomme-de-terror",
+        "revision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "destination": "37.883074,-93.303521"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-118-haunted-hall-horror",
+      "receipt": {
+        "providerId": "date-night-osm-node-920021",
+        "canonicalId": "date-night-mo26-118-haunted-hall-horror",
+        "revision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "destination": "410 Kiwanis Drive, Cape Girardeau, MO 63701"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-012-witches-day-out",
+      "receipt": {
+        "providerId": "date-night-osm-node-920022",
+        "canonicalId": "date-night-mo26-012-witches-day-out",
+        "revision": "MO2026-final-four-verified-2026-10-08",
+        "destination": "25695 Mulberry Road, Webb City, MO 64870"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-028-nevada-oktoberfest",
+      "receipt": {
+        "providerId": "date-night-osm-node-920023",
+        "canonicalId": "date-night-mo26-028-nevada-oktoberfest",
+        "revision": "MO2026-final-four-verified-2026-10-08",
+        "destination": "1641 E Ashland Street, Nevada, MO 64772"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-074-osage-beach-fall-festival",
+      "receipt": {
+        "providerId": "date-night-osm-node-920024",
+        "canonicalId": "date-night-mo26-074-osage-beach-fall-festival",
+        "revision": "MO2026-final-four-verified-2026-10-08",
+        "destination": "950 Hatchery Road, Osage Beach, MO 65065"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-084-mcwilliams",
+      "receipt": {
+        "providerId": "date-night-osm-node-920025",
+        "canonicalId": "date-night-mo26-084-mcwilliams",
+        "revision": "MO2026-final-four-verified-2026-10-08",
+        "destination": "4007 County Road 6920, West Plains, MO 65775"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-085-brookdale-farms",
+      "receipt": {
+        "providerId": "date-night-osm-node-920026",
+        "canonicalId": "date-night-mo26-085-brookdale-farms",
+        "revision": "MO2026-brookdale-late-fall-verified-2026-10-08",
+        "destination": "8004 Twin Rivers Road, Eureka, MO 63025"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-delta-edge-of-hell",
+      "receipt": {
+        "providerId": "date-night-osm-node-920027",
+        "canonicalId": "date-night-mo26-delta-edge-of-hell",
+        "revision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "destination": "1300 W 13th St, Kansas City, MO 64102"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-delta-creepyworld",
+      "receipt": {
+        "providerId": "date-night-osm-node-920028",
+        "canonicalId": "date-night-mo26-delta-creepyworld",
+        "revision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "destination": "1400 S Old Highway 141, Fenton, MO 63026"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-delta-darkness",
+      "receipt": {
+        "providerId": "date-night-osm-node-920029",
+        "canonicalId": "date-night-mo26-delta-darkness",
+        "revision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "destination": "1525 South 8th Street, St. Louis, MO 63104"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-delta-haunted-river-float",
+      "receipt": {
+        "providerId": "date-night-osm-node-920030",
+        "canonicalId": "date-night-mo26-delta-haunted-river-float",
+        "revision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "destination": "22474 Restful Lane, Waynesville, MO 65583"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-delta-fear-bloody-timber",
+      "receipt": {
+        "providerId": "date-night-osm-node-920031",
+        "canonicalId": "date-night-mo26-delta-fear-bloody-timber",
+        "revision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "destination": "8518 County Road 7190, West Plains, MO 65775"
+      }
+    }
+  ],
+  "pending_expiry": [
+    {
+      "record": "date-night-mo26-astra-branson-ghoster",
+      "receivedBefore": "2026-11-01T02:59:59.999Z",
+      "deliveredAt": "2026-10-31T22:00:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-liberty-corn-maze",
+      "receivedBefore": "2026-10-31T03:59:59.999Z",
+      "deliveredAt": "2026-10-30T23:00:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-terror-at-the-ranch",
+      "receivedBefore": "2026-11-01T03:59:59.999Z",
+      "deliveredAt": "2026-10-31T23:00:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-cobb-factory",
+      "receivedBefore": "2026-11-08T04:59:59.999Z",
+      "deliveredAt": "2026-11-07T23:00:00-06:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-field-of-screams-nixa",
+      "receivedBefore": "2026-11-02T05:59:59.999Z",
+      "deliveredAt": "2026-11-02T00:00:00-06:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-missouri-nightmare",
+      "receivedBefore": "2026-11-02T02:29:59.999Z",
+      "deliveredAt": "2026-11-01T20:30:00-06:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-trepidations",
+      "receivedBefore": "2026-11-02T04:59:59.999Z",
+      "deliveredAt": "2026-11-01T23:00:00-06:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-freaks-fair",
+      "receivedBefore": "2026-11-01T03:29:59.999Z",
+      "deliveredAt": "2026-10-31T22:30:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-hell-harvest",
+      "receivedBefore": "2026-11-01T04:59:59.999Z",
+      "deliveredAt": "2026-11-01T00:00:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-myers-forest-of-fears",
+      "receivedBefore": "2026-11-01T04:59:59.999Z",
+      "deliveredAt": "2026-11-01T00:00:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-labyrinth-of-fear",
+      "receivedBefore": "2026-11-01T04:59:59.999Z",
+      "deliveredAt": "2026-11-01T00:00:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-aurora-maize",
+      "receivedBefore": "2026-11-01T02:59:59.999Z",
+      "deliveredAt": "2026-10-31T22:00:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-shepherds-lantern",
+      "receivedBefore": "2026-10-18T02:59:59.999Z",
+      "deliveredAt": "2026-10-17T22:00:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-haunted-hollows",
+      "receivedBefore": "2026-10-31T03:59:59.999Z",
+      "deliveredAt": "2026-10-30T23:00:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-feemster-corn-maze",
+      "receivedBefore": "2026-11-02T02:59:59.999Z",
+      "deliveredAt": "2026-11-01T21:00:00-06:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-worlds-of-fun-haunt",
+      "receivedBefore": "2026-11-01T04:59:59.999Z",
+      "deliveredAt": "2026-11-01T00:00:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-ozark-nightmares",
+      "receivedBefore": "2026-11-01T04:59:59.999Z",
+      "deliveredAt": "2026-11-01T00:00:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+      "receivedBefore": "2026-10-25T02:29:59.999Z",
+      "deliveredAt": "2026-10-24T21:30:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+      "receivedBefore": "2026-10-25T02:29:59.999Z",
+      "deliveredAt": "2026-10-24T21:30:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    },
+    {
+      "record": "date-night-mo26-astra-haunted-grotto",
+      "receivedBefore": "2026-11-01T02:59:59.999Z",
+      "deliveredAt": "2026-10-31T22:00:00-05:00",
+      "staleResponseContainedId": true,
+      "expiredIdRendered": false,
+      "requests": 1
+    }
+  ],
+  "late_fall": [
+    {
+      "record": "date-night-mo26-astra-cobb-factory",
+      "at": "2026-11-05T12:00:00-06:00",
+      "expiry": "2026-11-07T23:00:00-06:00",
+      "providerCalls": [
+        {
+          "scenario": "late-0-late-fall-anything-cache-expiry",
+          "at": "2026-11-05T12:00:00-06:00",
+          "event": "intercepted-provider",
+          "host": "overpass.openstreetmap.fr",
+          "group": "other",
+          "status": 200,
+          "elements": [],
+          "forwarded": false
+        },
+        {
+          "scenario": "late-0-late-fall-anything-cache-expiry",
+          "at": "2026-11-05T12:00:00-06:00",
+          "event": "intercepted-provider",
+          "host": "overpass.openstreetmap.fr",
+          "group": "other",
+          "status": 200,
+          "elements": [],
+          "forwarded": false
+        },
+        {
+          "scenario": "late-0-late-fall-anything-cache-expiry",
+          "at": "2026-11-05T12:00:00-06:00",
+          "event": "intercepted-provider",
+          "host": "overpass.openstreetmap.fr",
+          "group": "outdoor",
+          "status": 200,
+          "elements": [],
+          "forwarded": false
+        },
+        {
+          "scenario": "late-0-late-fall-anything-cache-expiry",
+          "at": "2027-11-05T12:00:00-05:00",
+          "event": "intercepted-provider",
+          "host": "overpass.openstreetmap.fr",
+          "group": "other",
+          "status": 200,
+          "elements": [],
+          "forwarded": false
+        },
+        {
+          "scenario": "late-0-late-fall-anything-cache-expiry",
+          "at": "2027-11-05T12:00:00-05:00",
+          "event": "intercepted-provider",
+          "host": "overpass.openstreetmap.fr",
+          "group": "other",
+          "status": 200,
+          "elements": [],
+          "forwarded": false
+        },
+        {
+          "scenario": "late-0-late-fall-anything-cache-expiry",
+          "at": "2027-11-05T12:00:00-05:00",
+          "event": "intercepted-provider",
+          "host": "overpass.openstreetmap.fr",
+          "group": "outdoor",
+          "status": 200,
+          "elements": [],
+          "forwarded": false
+        }
+      ]
+    }
+  ],
+  "season_off_supersets": [
+    {
+      "record": "date-night-mo26-astra-branson-ghoster",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-liberty-corn-maze",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-terror-at-the-ranch",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-cobb-factory",
+      "targetAliases": [],
+      "lifecycleRows": [
+        {
+          "id": "date-night-mo26-astra-cobb-factory",
+          "visibility": "listing-lifecycle",
+          "distanceMiles": 0
+        }
+      ]
+    },
+    {
+      "record": "date-night-mo26-astra-field-of-screams-nixa",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-missouri-nightmare",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-trepidations",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-freaks-fair",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-hell-harvest",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-myers-forest-of-fears",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-labyrinth-of-fear",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-aurora-maize",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-shepherds-lantern",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-haunted-hollows",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-feemster-corn-maze",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-worlds-of-fun-haunt",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-ozark-nightmares",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    },
+    {
+      "record": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": [
+        {
+          "id": "date-night-mo26-085-brookdale-farms",
+          "visibility": "listing-lifecycle",
+          "distanceMiles": 9.65887164910754
+        },
+        {
+          "id": "date-night-mo26-delta-creepyworld",
+          "visibility": "listing-lifecycle",
+          "distanceMiles": 9.249770598401206
+        }
+      ]
+    },
+    {
+      "record": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": [
+        {
+          "id": "date-night-mo26-astra-cobb-factory",
+          "visibility": "listing-lifecycle",
+          "distanceMiles": 11.819020284555583
+        }
+      ]
+    },
+    {
+      "record": "date-night-mo26-astra-haunted-grotto",
+      "targetAliases": [
+        {
+          "id": "date-night-osm-node-910001",
+          "activityTypes": [
+            "park"
+          ],
+          "seasonalKeys": []
+        }
+      ],
+      "lifecycleRows": []
+    }
+  ],
+  "console_resource_errors": {
+    "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600&display=swap": 1090,
+    "https://grok.com/grok-app-builder/extensions.js": 1090,
+    "http://127.0.0.1:8097/_vercel/insights/script.js": 23,
+    "http://127.0.0.1:8099/_vercel/insights/script.js": 965,
+    "http://127.0.0.1:8098/_vercel/insights/script.js": 102
+  },
+  "console_resource_error_assessment": "Only intentionally blocked external fonts/Grok extension and absent local preview Vercel analytics script. No uncaught page errors or image failures.",
+  "inherited_result_overflow": {
+    "Directions · Google Maps ↗Directions open an independent third-party mapping service. Verify destination details before travel.Website & info ↗Opens the venue's external website. Hours, prices, tickets, and availability are controlled by the venue.RerollNot tonightSaveWe did thisCall venue": 10,
+    "Directions · Google Maps ↗": 52,
+    "Directions · Google Maps ↗Directions open an independent third-party mapping service. Verify destination details before travel.Website & info ↗Opens the venue's external website. Hours, prices, tickets, and availability are controlled by the venue.RerollNot tonightSaveWe did this": 41,
+    "Directions · Google Maps ↗Directions open an independent third-party mapping service. Verify destination details before travel.RerollNot tonightSaveWe did thisCall venue": 1,
+    "Approx. 2.5 miles · Hours unknown17607 Liberty Bend Road S,Liberty,MO64068": 1,
+    "17607 Liberty Bend Road S,Liberty,MO64068": 1
+  },
+  "ride_target_precision": "All recorded new-record Uber links generic https://m.uber.com/; address-derived placement never prefilled as precise destination. Lyft visible in representative pixels but no Lyft href exported by this harness.",
+  "limits": [
+    "Controlled local Chromium production-mode app/RPC with provider fixtures; not live provider reachability or physical WebView/GPS.",
+    "Inherited 320px Directions label clipping retained; measured current result overflow no worse than baseline; action reachable.",
+    "Sources/data schedules not re-researched. All twenty added records never automatic Open Now; revalidation 2026-10-15; exact 2026 lifecycle only.",
+    "Geometry uses controlled card fixtures; compared ordinary variants unchanged. Representative pixels inspected separately."
+  ]
+}

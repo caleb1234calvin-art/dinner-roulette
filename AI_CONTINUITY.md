@@ -1,3 +1,56 @@
+# PR #60 EVIDENCE EXPORT COMPLETE — VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION — 2026-10-09T17:52:11.934Z
+
+The owner's October 9 evidence-export-only authorization was executed to its bounded stopping condition. Final browser/evidence acceptance is PASS. This supersedes the missing-artifact HOLD in historical entries below only. It authorizes no merge, deployment, protection/configuration change, signing, further research, or automatic continuation.
+
+## CURRENT
+- PR #60: https://github.com/caleb1234calvin-art/dinner-roulette/pull/60; open draft. Candidate branch integration/missouri-astra-push-2026-10-09.
+- Exact SHA fe22c15cc6442fc4a48fec23c9a1331c69d70bd2; tree 8d5059c9fee871c522616971cce0a80b153e4d23; parent f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd. Source and tests unchanged. Twenty additions; 52 candidate curated records; production still 32. Candidate diff remains 32 paths.
+- EVIDENCE VERDICT: PASS. VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION. Evidence-ready=true; release-authorized=false.
+- Previously verified exact-candidate tests retained: 947 repository + 71 application = 1,018 PASS / 0 FAIL / 4 documented external OG documentation skips. Typecheck PASS; lint 0 errors / 6 inherited warnings. Auth-enabled migration-free build PASS. No tests/build/application behavior regenerated for this export.
+- Original hosted web workflow 354688615 / run 37901365412 / job 113724452856 SUCCESS. Original artifact 11604834689 (casino-browser-evidence), exactly 659,552,557 bytes, SHA256 57bebbd86e183df68db154366c02a8f10819873ebb6c06022ba2cfd2e864878f. The digest is now independently recomputed from reconstructed local bytes, not metadata-only. Original expiry 2026-10-23T08:55:14Z.
+- Separate export branch integration/pr60-evidence-export-2026-10-09; export commit 2d47efc19617cc9b54076eb6ab862e88b007244d. Its only change from candidate is .github/workflows/pr60-evidence-export.yml. Existing integration/** deployment-disabled rule retained. No export PR created. Export workflow 379873035 / run 37968247257 / job 113947963560 SUCCESS. It reads the original archive, verifies source/run/artifact identity, enumerates every file, and performs a raw binary split. No checkout or app execution.
+- All three parts and manifest downloaded. Local wrapper hashes/CRC, raw part hashes, ordered offsets, reconstructed size/SHA256, original member CRC/size/SHA256, unique safe paths and complete extraction PASS. Exactly 6,606 files / 6,606 ZIP members; 696,579,953 uncompressed bytes. No omissions, recompression substitution or renamed original members. Complete manifest SHA256 eb4c15cbfc0d5601747274d8c3a59d71d3fa9ebc910139754852097785ed7149.
+- First direct temporary-file transfer returned HTTP 403; supported file-reference materialization subsequently succeeded for all four exports. This did not require any runtime regeneration, credentials or network configuration changes.
+- Exported verdicts independently inspected: 917 seasonal scenarios (23 two-record, 97 completeness V1, 157 ten-record, 235 cumulative fifteen, 220 new-eleven suite, 185 additional-nine suite); 10 ordinary Date Night scenarios; 16 casino checks; 19 location checks. Total 962 browser scenarios/checks PASS / 0 FAIL. Counts are exported scenario/check units, not unique records or individual assertions.
+- New suites include 64 unchanged previous-32 saved-record receipt checks; 20 pending-RPC-at-expiry cases; all 20 new records represented in 41 recorded Directions/Uber observations. Directions match approved visitor addresses; Uber links are generic https://m.uber.com/ with no approximate coordinate dropoff. All 20 season-off superset receipts retain clean ordinary aliases and constrain legitimate lifecycle rows to the reviewed radius. Cobb late-fall visibility through November 7, saved expiry and no 2027 revival inspected.
+- Geometry: 426 comparisons PASS / 0 errors across 320, 390 and 512 px. Options 156 (52 records), result 156 (52 records), plan 114 (38 eligible records), plus 14 ineligible-plan negative controls. Options delta vs short ordinary standard 0 px; plan maximum +3 px (accepted threshold +5 px). Current ordinary comparison heights/media/classes unchanged. Result-size comparisons retain their separate measured thresholds; no claim that result cards match the short ordinary standard. All 480 expanded-plan text observations readable/unobscured; 980 overlay note and 634 control observations reachable; 381 image observations decoded. Existing result overflow did not increase.
+- Internal source/build proof identical across every recovered suite. Auth flag true; BUILT. Source fingerprint 38873e4e38ef8eeb061303f3c9cd49344eea8f421c010129e0f1e013c357c998 / 468 files matches prior exact-candidate verification. Hosted output fingerprint b2bf998699ad7622018150dc8793e72262474ae55f4f86bd03889cddcd35f12a / 194 files. Different separate local-build output is preserved historically; no reproducible-build claim.
+- Sixteen original screenshots visually inspected with state/metrics: both new-record batches, old saved records, address Directions, ride controls, Cobb late-fall/expired state, pending expiry, saved-cache reload, ordinary Date Night and representative options/plan geometry. Original paths and hashes recorded in screenshot-review.json.
+- Android prior exact-head automated artifact/readiness PASS retained: workflow 351386078 / run 37901365396 / validation job 113724453244; signing job 113725719122 SKIPPED. Artifact 11602184425, 6,866,411 bytes, SHA256 880eb60770c66cc76ea4d97aef25b89079399cbc293f32c4d60f3787cb838c24. Lint artifact 11602463759, SHA256 7f54369d507718708f1709c55ee6faca0c91e5b47bce917fd0c8b03b4e57590b. No Android rebuild or signing in this task.
+- Fresh identity readback 2026-10-09T17:50:47.390Z: main 979d83aede9d66163e1ebaed9ad5b219cb637882; tree a7dbb32947c0a0daf4864346b0d212477fc9a11b. Production dpl_F1XiMcc9AUuykunNamr87R3re7gP READY, same main source. Immediate rollback dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv READY, source 213502ef8cf3f67d75e6d9c9c8ff43f9f656890c. All five aliases independently read and remain on production F1; www.pickforus.app retains 308 redirect to pickforus.app. Main protected:false, rulesets:[], dedicated protection read 403. No fresh exact-candidate owner waiver granted.
+
+## EXPORTED PARTS
+Raw part hashes identify bytes that reconstruct the original ZIP. Artifact hashes identify downloaded GitHub ZIP wrappers; both layers independently verified. Every wrapper below is less than 256 MiB.
+- Part 1: original-11604834689.zip.part001; raw 251658240 bytes; raw SHA256 5335e996f37de45efd4472ad5035589c4bdcf1b104f25bd66d019b95af3d295a. Export artifact 11634750345; 251658418 bytes; artifact SHA256 2822eee150569c976c6dc511d74400a07cdabcf911f0e59d956881f964f27120.
+- Part 2: original-11604834689.zip.part002; raw 251658240 bytes; raw SHA256 98a3316344340ffb3ed486d0eef795f1fc5e28bd8b64fbc2ebe86fc1f914b495. Export artifact 11634655510; 251658418 bytes; artifact SHA256 fda319bf8dde50dbe1d8235c29fa992f016339fec9eedb90662ee4df1269411f.
+- Part 3: original-11604834689.zip.part003; raw 156236077 bytes; raw SHA256 21ca105de57c7fe92ce2b141aa7c005bfd5fbde05d2fa1b90bd9902365abdb03. Export artifact 11633294901; 156236255 bytes; artifact SHA256 04aaa0585cde1f81c00838e02035c1dab21d767121a6b84e69c8b8669a8044f6.
+- Manifest/metadata artifact 11634715460; 283,633 bytes; artifact SHA256 7e7f55836021c0b516b0665caa284bfb4e58733cc5be2e8878927ad65158ff66. Includes complete original paths, per-member hashes/CRC/sizes, original artifact/run/jobs and export workflow/run/job IDs.
+
+## EVIDENCE POINTERS
+- Export run: https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/37968247257
+- Canonical report directory on this continuity branch: audit/pr60-evidence-export-2026-10-09/
+- integrity-verification.json SHA256 839585b9f69b99430a8bffa532f553eed372dc340c75d45eedaa3e257e362155
+- browser-evidence-review.json SHA256 15ca9852e69a9978da2f93184f42559cc2661d980c1fe7698f86166282d3685b
+- screenshot-review.json SHA256 ac3c26feb6febc260f9ad4fa774841938a7aa555a3e4eeca1067cee697e30157
+- final-identity.json SHA256 94904c146091753e4183c69c946b1a79becb2dc57201e2375923d803ef983eba
+
+## NEXT — OWNER DECISION ONLY
+- Owner may decide whether to release this exact candidate and separately resolve branch protection or grant a fresh exact-candidate waiver. Evidence acceptance is complete; this task grants neither release nor waiver.
+- Stop. No release, research/discovery batch, monitoring loop or source/test remediation starts automatically.
+
+## HOLD / REMAINING LIMITATIONS
+- Main remains unprotected; exact-candidate owner waiver/release decision absent. Physical Android/WebView/GPS acceptance, upload signing, Play Console and Android publication remain HOLD.
+- Controlled Chromium tests used the real local production-mode app/RPC with provider fixtures. They do not establish live provider reachability, current ticket inventory or physical device behavior.
+- Known 320px Directions label clipping remains, and long compact-card titles/category labels may truncate by design. Current result overflow is no worse than the accepted baseline; Details and actions remain reachable. No blanket overflow-free claim.
+- The harness records Uber hrefs; Lyft controls are visually present, but no Lyft href is exported. No external ride booking or destination handoff was executed.
+- Console resource errors are limited to intentionally blocked external fonts/Grok extension and the unavailable local-preview Vercel analytics script; zero uncaught page errors or image-request failures. Production-font equivalence is not asserted by these fixture screenshots.
+- All twenty added records retain unknown/display-only machine hours and never automatic Open Now, qualified approximate placement, visitor-address navigation, October 15 revalidation, source-bound 2026 expiry and no automatic 2027 recurrence. Ranch/Nightmare envelopes do not infer daily operation; Cobb has explicit late-fall lifecycle. Existing source-access qualifications preserved.
+- Cadaver Zone, six commercial HOLDs, eight unimplemented delta HOLDs, separate residential leads, earlier placement/expiry decisions and two evidence-only enrichment suggestions remain unchanged and unexecuted; see preserved historical inventory.
+
+STOP: Evidence-export workflow completed successfully and browser/evidence gate PASS. Publish this checkpoint on canonical continuity, read it back in full, then report its exact SHA and DONE. No automatic continuation.
+
+---
+
 # FINAL CONTROLLED STOP — CI PASS / FINAL ARTIFACT AND RUNTIME ACCEPTANCE HOLD — 2026-10-09T09:14:01.824Z
 
 This is the terminal checkpoint for the owner's controlled-stop instruction. The current validation and available-evidence closeout are finished at an external evidence-access blocker. No automatic continuation, monitoring, research, source/workflow mutation, CI rerun, merge, deployment or signing is authorized. Read this CURRENT / NEXT / HOLD before historical entries below.
