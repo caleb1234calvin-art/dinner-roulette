@@ -1,3 +1,34 @@
+# PR #61 R2 Remediation Frozen — Independent Safety and Hosted Acceptance Pending (2026-10-09 22:39 UTC)
+
+## CURRENT
+
+Draft [PR #61](https://github.com/caleb1234calvin-art/dinner-roulette/pull/61), `integration/date-night-primary-radial-audit-1`, now controls exact remote **`a4f43e9b886764592053a53652dc91602749ba11`**, tree **`44929e3f3d0b6ba2e4dd366de847b952388f9cb3`**, sole parent **`c931188a96752fcb97dac9066e530688f9aaef2a`**. Parent c931 remains the failed historical candidate; its parent is shipped fe22. Twenty-five paths differ from main. Remote readback and the author's isolated clean checkout `/tmp/hybrid-frozen-a4f43e9` match.
+
+[Full committed remediation report](https://github.com/caleb1234calvin-art/dinner-roulette/blob/a4f43e9b886764592053a53652dc91602749ba11/audit/date-night-hybrid-candidate/remediation-r2.md) was read. HYB-IV-01 correction preserves validated raw negative companions before positive capacity rejection, retires older matching cache positives, and guards cancelled generations; author coverage includes core/outer, small/default caps and affirmed aliases. HYB-IV-02 resolves a selected place through affirmed evidence aliases inside the current eligible pool, with stable animation identities/card keys; real closure/expiry still invalidates it. No unrelated replacement choice is allowed.
+
+**Exact R2 author local gates:** **1,048 PASS / 0 FAIL / 4 skips**, typecheck PASS, lint0errors/6warnings, auth-enabled migration-free build PASS. Source fingerprint **`629a959ea0f741dacff473cc71bdd21e2a9a461a45cde7908840d6d0676defbe` / 474 files**. These are author results, not independent final clearance. Current hosted web **38000254537** and Android **38000254581** are active; exact-head browser, benchmark and independent safety/full-runtime review remain pending.
+
+## Preserved failed attempts
+
+- c931 retains independent **HYB-IV-01** closure-authority loss and **HYB-IV-02** three-overlay alias dismissal HOLDs, despite its author1,034testsPASS. R2 fixes are not yet independently accepted.
+- c931 hosted web **37999033501 FAILED** at hybrid browser step16. Screenshot/state diagnosis identified a **harness Movies-only complete-plan assumption**, while the app correctly showed no valid pair. R2 uses genuine Anything thrill/settle candidates and adds explicit Movies-only no-pair control; 18 browser cases planned, not yet PASS. No plan-validity assertion is waived.
+- Original failed browser artifact **11647559112**, SHA-256 **`d72c9975ad81e4aaa8ce8f134b557c21945070a25f8c14cab5c4c6dbf1386791`**, plus verdict/screenshot are preserved; candidate repository includes `audit/date-night-hybrid-candidate/c931-browser-failure/`.
+- The c931 controlled288 attempt remains **INCONCLUSIVE / invalidated** because its module loader read mutable author files during remediation. Future R2 runs use an isolated immutable checkout with pre/post source hashes. No historical benchmark result transfers.
+
+## NEXT
+
+Fresh independent mandatory safety review must clear both IV defects at exact a4f43 before any live traffic. Then use only reviewed frozen R4 budget instrumentation and approved persistent global ledger for bounded comparisons. Complete exact-head hosted browser/seasonal/geometry gates, actual evidence/pixel inspection and fresh independent full review. “Radial discovery becomes an audit layer” still requires usable primary results and stable valid open decisions.
+
+## HOLD / boundaries
+
+**Zero live provider traffic; live remains gated. No final candidate runtime, benchmark or release PASS.** R4 instrumentation26testsPASS does not replace candidate safety. Prior Track F MORE EVIDENCE REQUIRED/global-stop NOT PASS remain historical, not waived.
+
+Fresh **22:39 UTC** reads: main **`fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`**, tree **`8d5059c9fee871c522616971cce0a80b153e4d23`**, production **`dpl_8xyE9R3BxyE1883QpavaEBWV2LGa` READY**, same source. All52 shipped records remain unchanged. No merge/deploy/settings/signing/Play authority or new waiver; no Missouri/Cadaver work. Cadaver remains HOLD for reliable attraction-specific **2026 operation/date binding and supported expiry**. Physical Android and all parked backlog retain their limits.
+
+**PARENT CONTINUITY COMMIT:** `3d2d29774a04c1f1c24ad67a6d059f92d6c0592b`; **PARENT TREE:** `3e0d67183d008e9a9e26d8be2852773f803ee38d`. Only continuity changes on deployment-disabled integration; all history follows verbatim.
+
+---
+
 # PR #61 Safety HOLD Expanded — Open Decisions Lost on Alias Rekeying (2026-10-09 22:29 UTC)
 
 ## CURRENT
