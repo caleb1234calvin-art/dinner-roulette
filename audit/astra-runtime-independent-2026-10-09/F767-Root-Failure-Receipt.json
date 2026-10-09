@@ -1,0 +1,164 @@
+{
+  "checked_at": "2026-10-09T07:44:32.638037+00:00",
+  "candidate_sha": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+  "run_id": 37894492761,
+  "job_id": 113702618075,
+  "artifact_id": 11601694579,
+  "archive": "deliverables/Pick-For-Us-F767-Browser-Evidence.zip",
+  "bytes": 444162027,
+  "sha256": "4d9b65d9976f99af5dfa83ce180dff4bdc48204442fdc87c7ae4f7398fdae8c8",
+  "zip_members": 3570,
+  "CRC": "PASS",
+  "build_proof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "a7613459eef6aac9cb20e9566484583a428562b5eb43e9fbc3ad8bb02bd4f84a",
+      "files": 468
+    },
+    "startedAt": "2026-10-09T06:38:12.760Z",
+    "output": {
+      "sha256": "bd9ccbc28670cd97d9f365596e5580bd58a0af31b4ebba491ad046951815f752",
+      "files": 194
+    },
+    "completedAt": "2026-10-09T06:38:15.959Z"
+  },
+  "suites": [
+    {
+      "path": "date-night-radial/verdict.json",
+      "passed": true,
+      "scenarios": 10,
+      "passed_scenarios": 10,
+      "failed": [],
+      "keys": [
+        "passed",
+        "proof",
+        "publicProviderCalls",
+        "scenarios",
+        "errors"
+      ]
+    },
+    {
+      "path": "missouri-two-records/verdict.json",
+      "passed": true,
+      "scenarios": 23,
+      "passed_scenarios": 23,
+      "failed": [],
+      "keys": [
+        "passed",
+        "proof",
+        "publicProviderCalls",
+        "scenarios",
+        "errors",
+        "network"
+      ]
+    },
+    {
+      "path": "seasonal-astra-eleven/verdict.json",
+      "passed": true,
+      "scenarios": 220,
+      "passed_scenarios": 220,
+      "failed": [],
+      "keys": [
+        "passed",
+        "proof",
+        "publicProviderCalls",
+        "scenarios",
+        "errors",
+        "network"
+      ]
+    },
+    {
+      "path": "seasonal-astra-extras/verdict.json",
+      "passed": false,
+      "scenarios": 185,
+      "passed_scenarios": 183,
+      "failed": [
+        {
+          "id": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+          "scenario": "mixed-alias-toggle-cache",
+          "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(!test.rpc.at(-1).response.includes(\"seasonalListing\"))\n\n    at runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:568:30)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:300:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:543:5"
+        },
+        {
+          "id": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+          "scenario": "mixed-alias-toggle-cache",
+          "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(!test.rpc.at(-1).response.includes(\"seasonalListing\"))\n\n    at runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:568:30)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:300:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:543:5"
+        }
+      ],
+      "keys": [
+        "passed",
+        "proof",
+        "publicProviderCalls",
+        "scenarios",
+        "errors",
+        "network"
+      ]
+    },
+    {
+      "path": "seasonal-completeness-v1/verdict.json",
+      "passed": true,
+      "scenarios": 97,
+      "passed_scenarios": 97,
+      "failed": [],
+      "keys": [
+        "passed",
+        "proof",
+        "publicProviderCalls",
+        "scenarios",
+        "errors",
+        "network"
+      ]
+    },
+    {
+      "path": "seasonal-cumulative-15/verdict.json",
+      "passed": true,
+      "scenarios": 235,
+      "passed_scenarios": 235,
+      "failed": [],
+      "keys": [
+        "passed",
+        "proof",
+        "publicProviderCalls",
+        "scenarios",
+        "errors",
+        "network"
+      ]
+    },
+    {
+      "path": "seasonal-ten-record/verdict.json",
+      "passed": true,
+      "scenarios": 157,
+      "passed_scenarios": 157,
+      "failed": [],
+      "keys": [
+        "passed",
+        "proof",
+        "publicProviderCalls",
+        "scenarios",
+        "errors",
+        "network"
+      ]
+    },
+    {
+      "path": "verdict.json",
+      "passed": null,
+      "scenarios": 0,
+      "passed_scenarios": 0,
+      "failed": [],
+      "keys": [
+        "origin",
+        "buildProof",
+        "fixtures",
+        "checks",
+        "errors"
+      ]
+    }
+  ],
+  "geometry": "SKIPPED after extras failure",
+  "root_pixels": [
+    "6-mixed-alias-toggle-cache-failure.png",
+    "7-mixed-alias-toggle-cache-failure.png"
+  ],
+  "root_observation": "Both failure screenshots show Spooky Season off, no seasonal filters and expected 2 ordinary activities. The failure is a blanket whole-RPC seasonalListing absence assertion; unrelated lifecycle listings in a server superset require independent diagnosis before any correction. Later cache assertions not yet completed for those two scenarios."
+}

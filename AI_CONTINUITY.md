@@ -1,3 +1,24 @@
+# CONTROLLED-STOP CURRENT-HEAD FAILURE — 2026-10-09 07:46 UTC / 02:46 CDT
+
+## CURRENT
+- Frozen candidate f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd / tree fdfbf4045ea69f7a9b610a434243fc43f2c9f338 (draft PR #60) is NOT RELEASE READY. Web 37894492761 / job 113702618075 completed FAILURE.
+- New eleven 220/220 PASS, including previous32 saved receipts. Additional nine 183 PASS / 2 FAIL of185: Ballwin and O'Fallon Tunnel of Terror mixed-alias-toggle-cache, blanket whole-RPC assertion forbidding seasonalListing while Spooky Season is off. Other seasonal suites: 23+97+157+235 PASS; ordinary radial10 PASS. Geometry and icon verification skipped after failure, not passed.
+- Downloaded original artifact11601694579: 444162027 bytes, SHA256 4d9b65d9976f99af5dfa83ce180dff4bdc48204442fdc87c7ae4f7398fdae8c8,3570members,CRC PASS. Auth=true/source a7613459eef6aac9cb20e9566484583a428562b5eb43e9fbc3ad8bb02bd4f84a/468files, hostedoutput bd9ccbc28670cd97d9f365596e5580bd58a0af31b4ebba491ad046951815f752/194files. Full original ZIP preserved locally for final archive.
+- Root inspected both actual failed screenshots: Spooky Season off, seasonal category chips absent, expected2ordinary activities. Initial decoded-state finding: unrelated lifecycle-visible Brookdale/Cobb remain in server superset; target seasonal identities are absent. Independent exact failure/state review in progress; no source correction yet. Later cache assertions in the two aborted scenarios are not claimed PASS.
+- Native job06:37:27–07:40:54 UTC,63m27s; extras07:28:46–07:40:33. Full job-log retrieval Transport closed; native steps and original verdicts/screens retained. Current Android automated PASS remains as prior checkpoint.
+
+## NEXT
+- Finish this concrete failure diagnosis from immutable artifact/state/screenshots. Only the smallest justified correction is authorized, then required exact-head reruns and evidence acceptance. Preserve f767 failure and all earlier attempts.
+- No discovery, research, enrichment, residential or implementation batch. At stable terminal validation/evidence gate publish/read back canonical continuity, report exact SHA/CURRENT/NEXT/HOLD and STOP.
+- Future unexecuted backlog and owner release decision remain exactly as prior controlled-stop checkpoint.
+
+## HOLD
+- Candidate release acceptance pending resolution/rerun of current concrete failure, geometry and final evidence review.
+- Cadaver remains factual/runtime HOLD for reliable attraction-specific2026dates/operation and supported expiry; accepted identity/address/approximate point/contact preserved. No new research.
+- Six named commercial, eight delta, separate residential and prior placement/expired decisions retained below. Owner protection/waiver decision and physical Android/signing/Play remain HOLD. Production remains untouched.
+
+---
+
 # CONTROLLED STOP AUTHORITY — 2026-10-09 07:32 UTC / 02:32 CDT
 
 This checkpoint supersedes every earlier open-ended instruction to continue research or implementation. The owner repeated CONTROLLED STOP AFTER CURRENT VALIDATION. Current CI must not be cancelled or interrupted.
