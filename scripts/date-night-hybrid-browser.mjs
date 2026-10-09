@@ -30,7 +30,7 @@ const waitFor = async (fn, label, timeout = 25000) => {
   while (Date.now() - started < timeout) { if (await fn()) return; await delay(50); }
   throw new Error(label);
 };
-const scenarios = ["progressive-success", "middle-failure", "outermost-failure", "options-stable", "pick-stable", "plan-stable", "future-pick",
+const scenarios = ["progressive-success", "middle-failure", "outermost-failure", "options-stable", "pick-stable", "plan-stable", "plan-no-pair", "future-pick",
   "radius-increase", "radius-decrease", "local-filters", "mobile-progress", "category-cancel", "location-cancel", "unmount-cancel", "primary-category-cancel", "primary-location-cancel", "all-stall"];
 try {
   await waitFor(async () => { try { return (await fetch(origin)).ok; } catch { return false; } }, "Preview startup failed");
@@ -48,7 +48,7 @@ try {
       localStorage.setItem("pick-for-us-v1", JSON.stringify({ version: 0, state: {
         location: { lat: 37.176447, lon: -94.310223, label: "Carthage, Missouri", source: "manual" },
         homeMode: "date-night", spookySeasonEnabled: true,
-        dateNightFilters: { radiusMiles, activityTypes: scenario === "all-stall" ? ["anything"] : ["movies"], mood: 50, openNowOnly: false, favoritesOnly: false, reduceParks: false },
+        dateNightFilters: { radiusMiles, activityTypes: ["all-stall", "plan-stable"].includes(scenario) ? ["anything"] : ["movies"], mood: 50, openNowOnly: false, favoritesOnly: false, reduceParks: false },
       } }));
     }, { radiusMiles, scenario });
     const page = await context.newPage(); currentPage = page;
@@ -92,6 +92,11 @@ try {
         await waitFor(async () => (await options.allTextContents()).some(name => name.includes("Radial outer cinema")), "New venue absent from future selection");
       }
       await page.getByRole("button", { name: "Close options", exact: true }).click();
+    } else if (scenario === "plan-no-pair") {
+      await page.getByRole("button", { name: "Plan the night", exact: true }).click();
+      await page.getByRole("heading", { name: "No complete seasonal pair yet.", exact: true }).waitFor();
+      assert.equal(await page.locator(".fixed.inset-0.z-50 h3").count(), 0, "Movies-only must not fabricate thrill/settle stops");
+      await page.getByRole("button", { name: "Close night plan", exact: true }).click();
     } else if (scenario === "pick-stable" || scenario === "plan-stable") {
       const planMode = scenario === "plan-stable";
       await page.getByRole("button", { name: planMode ? "Plan the night" : "Pick our date", exact: true }).click();

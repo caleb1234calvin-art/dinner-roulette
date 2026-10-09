@@ -79,7 +79,15 @@ export function createDateNightHybridSession({ now = Date.now,
   };
   const startAudit = (version: number) => {
     if (!query || version !== generation) return;
-    radial.update(query, { request, retryVersion, onChange: state => {
+    radial.update(query, { request: async (acquisition, signal) => {
+      const result = await request(acquisition, signal);
+      // Radial positive admission can reject an oversized response. Retain its
+      // valid negative companions for the current display before that decision.
+      if (version === generation && !signal.aborted) {
+        displayNegatives = mergeDateNight(displayNegatives, result.venues.filter(v => v.lifecycle));
+      }
+      return result;
+    }, retryVersion, onChange: state => {
       if (version !== generation) return;
       audit = state;
       displayNegatives = mergeDateNight(displayNegatives, state.response?.venues.filter(v => v.lifecycle) ?? []);

@@ -215,9 +215,18 @@ export function DateNightHome() {
   );
   const coverage = seasonalCoverage(decorated, filters, source, halloweenActive);
   // Open overlays receive refreshed status/eligibility, too, including on resume.
-  const currentPick = pick ? eligible.find((venue) => venue.id === pick.id) : null;
-  const currentOptions = options?.map((item) => eligible.find((venue) => venue.id === item.id)).filter((item): item is DecoratedDateNightPlace => Boolean(item));
-  const currentPlan = nightPlan?.map((item) => eligible.find((venue) => venue.id === item.id)).filter((item): item is DecoratedDateNightPlace => Boolean(item));
+  // Background duplicate evidence may choose a new canonical representative.
+  // Follow affirmed identity receipts, never select a replacement from the pool.
+  // Lookup stays inside current eligibility so expiry/negative evidence still
+  // invalidates an unsafe decision instead of freezing stale presentation.
+  const currentDecision = (item: DecoratedDateNightPlace) => {
+    const ids = new Set([item.id, ...(item.discoveryEvidence?.map(record => record.id) ?? [])]);
+    return eligible.find(venue => ids.has(venue.id) || venue.discoveryEvidence?.some(record => ids.has(record.id)));
+  };
+  const currentPick = pick ? currentDecision(pick) : null;
+  const currentOptions = options?.map(currentDecision).filter((item): item is DecoratedDateNightPlace => Boolean(item));
+  const currentPlan = nightPlan?.map(currentDecision).filter((item): item is DecoratedDateNightPlace => Boolean(item));
+  const decisionKeys = (items: DecoratedDateNightPlace[] | null) => items?.filter(item => currentDecision(item)).map(item => item.id);
 
   function updateFilters(patch: Partial<DateNightFilters>) {
     setDateNightFilters(patch);
@@ -413,9 +422,9 @@ export function DateNightHome() {
         </div>
       </div>
 
-      {currentPick ? <ResultOverlay restaurant={currentPick as DecoratedRestaurant} reelNames={reelNames} onClose={() => setPick(null)} onReroll={() => roll()} onNotTonight={() => { excludeTonight(currentPick.id, currentPick.name); setPick(null); }} skipSpin={skipSpin} mode="date-night" /> : null}
-      {currentOptions?.length ? <OptionsOverlay restaurants={currentOptions as DecoratedRestaurant[]} onClose={() => setOptions(null)} onSelect={(restaurant) => { setOptions(null); setSkipSpin(true); setPick(restaurant as DecoratedDateNightPlace); }} onShuffle={dealOptions} onNotTonight={(restaurant) => excludeTonight(restaurant.id, restaurant.name)} mode="date-night" /> : null}
-      {currentPlan?.length ? <DateNightPlanOverlay plan={currentPlan} onClose={() => setNightPlan(null)} onReplan={planNight} /> : null}
+      {currentPick ? <ResultOverlay decisionIdentity={pick ? { id: pick.id, name: pick.name } : undefined} restaurant={currentPick as DecoratedRestaurant} reelNames={reelNames} onClose={() => setPick(null)} onReroll={() => roll()} onNotTonight={() => { excludeTonight(currentPick.id, currentPick.name); setPick(null); }} skipSpin={skipSpin} mode="date-night" /> : null}
+      {currentOptions?.length ? <OptionsOverlay decisionKeys={decisionKeys(options)} restaurants={currentOptions as DecoratedRestaurant[]} onClose={() => setOptions(null)} onSelect={(restaurant) => { setOptions(null); setSkipSpin(true); setPick(restaurant as DecoratedDateNightPlace); }} onShuffle={dealOptions} onNotTonight={(restaurant) => excludeTonight(restaurant.id, restaurant.name)} mode="date-night" /> : null}
+      {currentPlan?.length ? <DateNightPlanOverlay decisionKeys={decisionKeys(nightPlan)} plan={currentPlan} onClose={() => setNightPlan(null)} onReplan={planNight} /> : null}
     </main>
   );
 }

@@ -27,10 +27,12 @@ function isValidHalloweenPlan(plan: DecoratedDateNightPlace[]) {
 
 export function DateNightPlanOverlay({
   plan,
+  decisionKeys,
   onClose,
   onReplan,
 }: {
   plan: DecoratedDateNightPlace[];
+  decisionKeys?: string[];
   onClose: () => void;
   onReplan: () => void;
 }) {
@@ -79,7 +81,7 @@ export function DateNightPlanOverlay({
               const seasonal = Boolean(place.seasonalListing || place.seasonalAvailability || place.seasonalVisitNotes?.length);
               const role = index === 0 ? "1 · Scare" : "2 · Settle";
               return (
-                <div key={place.id}>
+                <div key={decisionKeys?.[index] ?? place.id}>
                   <article className="overflow-hidden rounded-2xl bg-surface shadow-border">
                     <div className={cn("flex", seasonal ? "gap-3 px-3 pt-1 pb-0" : "gap-4 p-4")}>
                       <div className="flex size-20 shrink-0 items-center justify-center rounded-2xl bg-elevated p-1.5 outline outline-1 -outline-offset-1 outline-fg/10">

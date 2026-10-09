@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 import { discoveryClock, deferred, flush, untilAbort } from "./test-support/discovery-clock.mjs";
-import { discoveryModes, discoveryPayload } from "./test-support/discovery-component-harness.mjs";
+import { discoveryComponentHarness, discoveryModes, discoveryPayload } from "./test-support/discovery-component-harness.mjs";
 const load = appModuleLoader();
 const { createDateNightHybridSession } = load("src/lib/date-night/hybrid-session.ts");
 const { createDateNightDiscoveryCache } = load("src/lib/date-night/cache.ts");
@@ -158,4 +158,59 @@ for (const maxEntries of [2, 3, 8]) {
       }
     }
   });
+}
+
+for (const cap of [1, 20000]) for (const auditStage of ["core", "outer"]) {
+  test(`HYB-IV-01 capacity-rejected ${auditStage} negative still suppresses primary and cached aliases (cap ${cap})`, async t => {
+    const h = setup(t, { cache: createDateNightDiscoveryCache({ maxVenues: cap }) });
+    const positive = venue("movie", { name: "Shared Cinema" });
+    await h.reply(0, [positive]);
+    if (auditStage === "outer") { await h.reply(1, []); await h.clock.tick(250); }
+    const call = h.calls.at(-1);
+    call.resolve(response(call.q, [venue("negative-alias", { name: "Shared Cinema", lifecycle: "permanently-closed" }),
+      ...Array.from({ length: cap }, (_, i) => venue(`overflow-${i}`, { lat: 43.05 }))]));
+    await flush();
+    const safe = () => assert.equal(h.state.response?.venues.some(v => v.name === "Shared Cinema" && !v.lifecycle) ?? false, false);
+    safe(); h.update({ radiusMiles: 15 }); safe();
+    h.update({ activityTypes: ["park"] });
+    h.update({ activityTypes: ["movies"] }); safe();
+  });
+}
+
+test("cancelled oversized audit cannot retire a newer origin's positive identity", async t => {
+  const h = setup(t, { cache: createDateNightDiscoveryCache({ maxVenues: 1 }) });
+  await h.reply(0, [venue()]); const obsolete = h.calls[1];
+  h.update({ lat: 43.01 }); const primary = h.calls.at(-1);
+  primary.resolve(response(primary.q, [venue()])); await flush();
+  obsolete.resolve(response(obsolete.q, [venue("movie", { lifecycle: "permanently-closed" }), venue("overflow")]));
+  await flush();
+  assert.equal(h.state.response.venues.find(v => v.id === "movie").lifecycle, undefined);
+});
+
+for (const order of [["z", "a"], ["a", "z"]]) {
+  for (const [label, overlay, prop] of [["Pick our date", "ResultOverlay", "restaurant"],
+    ["Give us options", "OptionsOverlay", "restaurants"], ["Plan the night", "DateNightPlanOverlay", "plan"]]) {
+    test(`HYB-IV-02 ${overlay} follows affirmed rekey ${order.join("→")} but still invalidates lifecycle negatives`, async t => {
+      const clock = discoveryClock(t), h = discoveryComponentHarness(discoveryModes[1]);
+      t.after(() => h.dispose()); h.store.spookySeasonEnabled = true;
+      h.store.location = { lat: 43, lon: -79, label: "Control", source: "manual" };
+      h.store.setDateNightFilters({ radiusMiles: 20, activityTypes: ["movies"] }); h.render();
+      const row = id => venue(`date-night-osm-${id}`, { name: "Affirmed Alias Cinema" });
+      const reply = async (index, rows) => {
+        const q = h.requests[index].args.data;
+        h.requests[index].resolve(response({ ...q, halloweenActive: true }, rows)); await h.settle();
+      };
+      await reply(0, [row(order[0])]); h.button(h.render(), label).props.onClick();
+      const names = () => [h.overlay(h.render(), overlay).props[prop]].flat().map(v => v.name);
+      const before = names();
+      const presentation = () => { const props = h.overlay(h.render(), overlay).props; return props.decisionIdentity ?? props.decisionKeys; };
+      const stablePresentation = presentation();
+      await reply(1, [row(order[1]), venue("unrelated", { name: "Unrelated Recreation Venue", lat: 43.02 })]);
+      assert.deepEqual(names(), before, "new canonical representative cannot dismiss or replace the decision");
+      assert.deepEqual(presentation(), stablePresentation, "animation and card keys stay tied to the user’s selection");
+      await clock.tick(250);
+      await reply(h.requests.length - 1, [{ ...row(order[1]), lifecycle: "permanently-closed" }]);
+      assert.equal(h.overlay(h.render(), overlay), null, "closure authority must invalidate even an alias-preserved decision");
+    });
+  }
 }

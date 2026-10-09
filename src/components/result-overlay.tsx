@@ -54,7 +54,7 @@ function buildWhyReasons(restaurant: DecoratedRestaurant, mode: ResultMode, favo
   return [...new Set(reasons)].slice(0, 4);
 }
 
-export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotTonight, skipSpin = false, mode = "dinner" }: { restaurant: DecoratedRestaurant; reelNames: string[]; onClose: () => void; onReroll: () => void; onNotTonight: () => void; skipSpin?: boolean; mode?: ResultMode; }) {
+export function ResultOverlay({ restaurant, decisionIdentity, reelNames, onClose, onReroll, onNotTonight, skipSpin = false, mode = "dinner" }: { restaurant: DecoratedRestaurant; decisionIdentity?: { id: string; name: string }; reelNames: string[]; onClose: () => void; onReroll: () => void; onNotTonight: () => void; skipSpin?: boolean; mode?: ResultMode; }) {
   const preferences = useAppStore((s) => s.preferences);
   const spookySeasonEnabled = useAppStore((s) => s.spookySeasonEnabled);
   const theme = useAppStore((s) => s.theme);
@@ -78,19 +78,21 @@ export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotT
   const [rateOpen, setRateOpen] = useState(false);
   const [rating, setRating] = useState(4);
   const [mounted, setMounted] = useState(false);
+  const animationId = decisionIdentity?.id ?? restaurant.id;
+  const animationName = decisionIdentity?.name ?? restaurant.name;
   const taglines = mode === "nightlife" ? NIGHTLIFE_TAGLINES : mode === "date-night" ? DATE_NIGHT_TAGLINES : TAGLINES;
-  const tagline = useMemo(() => taglines[Math.floor(Math.random() * taglines.length)] ?? taglines[0], [restaurant.id, mode]);
+  const tagline = useMemo(() => taglines[Math.floor(Math.random() * taglines.length)] ?? taglines[0], [animationId, mode]);
 
   useEffect(() => setMounted(true), []);
   useEffect(() => {
-    setRateOpen(false); setReel(reelNames[0] ?? restaurant.name);
+    setRateOpen(false); setReel(reelNames[0] ?? animationName);
     const reduceMotion = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (skipSpin || reduceMotion) { setPhase("result"); return; }
-    setPhase("spin"); const pool = reelNames.filter(Boolean).length > 1 ? reelNames.filter(Boolean) : [restaurant.name];
+    setPhase("spin"); const pool = reelNames.filter(Boolean).length > 1 ? reelNames.filter(Boolean) : [animationName];
     let cancelled = false; let timeout = 0; let tick = 0;
-    const step = () => { if (cancelled) return; if (tick >= SPIN_DELAYS.length) { setReel(restaurant.name); setPhase("result"); if ("vibrate" in navigator) navigator.vibrate?.(24); return; } setReel(pool[Math.floor(Math.random() * pool.length)] ?? restaurant.name); timeout = window.setTimeout(step, SPIN_DELAYS[tick] ?? 80); tick += 1; };
+    const step = () => { if (cancelled) return; if (tick >= SPIN_DELAYS.length) { setReel(animationName); setPhase("result"); if ("vibrate" in navigator) navigator.vibrate?.(24); return; } setReel(pool[Math.floor(Math.random() * pool.length)] ?? animationName); timeout = window.setTimeout(step, SPIN_DELAYS[tick] ?? 80); tick += 1; };
     timeout = window.setTimeout(step, 40); return () => { cancelled = true; window.clearTimeout(timeout); };
-  }, [restaurant.id, restaurant.name, reelNames, skipSpin]);
+  }, [animationId, animationName, reelNames, skipSpin]);
 
   if (!mounted) return null;
   const mapsUrl = directionsUrl(restaurant) ?? undefined;

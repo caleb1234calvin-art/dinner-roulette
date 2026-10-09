@@ -51,3 +51,11 @@ Browser location replacement through reload does not by itself prove same-mounte
 `missouri-two-records.test.mjs` isolates each record's actual activity categories, because immediate curated composition now truthfully includes nearby Missouri Nightmare in Anything at Lloyd's. The same target facts, notice, Open Now exclusion, exact expiry and 2027 checks remain. Separate existing tests retain the regional Anything superset.
 
 Initial full-suite failures are preserved as `/tmp/hybrid-full-r1.log`; initial primary/audit safety author failures as `/tmp/hybrid-safety-r1.log`. A concrete UX defect found during test migration was fixed: a failed primary retains a retry action while audit is still pending. An empty failed primary now displays its error once instead of also claiming saved fallback availability.
+
+## c931 hosted failure and bounded harness correction
+
+Exact candidate c931188a96752fcb97dac9066e530688f9aaef2a, run37999033501/job114052295184 failed at the sixth hybrid scenario, `plan-stable`. First five scenarios passed. The harness selected Movies only, then incorrectly demanded complete Halloween-plan venue cards. The screenshot shows the correct truthful UI: “No complete seasonal pair yet.” This is a harness setup error, not evidence that the application should fabricate a thrill/settle pair.
+
+Correction: `plan-stable` uses Anything, including supported existing local thrill and settle records. A separate `plan-no-pair` Movies-only negative control explicitly asserts the truthful empty-plan heading and absence of fabricated venue cards. No runtime changes and no weakening of plan validity. The harness now contains 18 scenarios.
+
+Original artifact11647559112, 2,415,491 bytes, SHA256 d72c9975ad81e4aaa8ce8f134b557c21945070a25f8c14cab5c4c6dbf1386791, downloaded and hash-verified. Failure screenshot inspected directly; preserved verdict and screenshot are in `c931-browser-failure/`. Original archive retained at `/tmp/hybrid-c931-browser-failure/original.zip`. Remaining scenarios and all downstream seasonal browser/geometry steps were NOT executed on this failed run, so they remain unverified rather than PASS.

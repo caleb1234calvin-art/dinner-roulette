@@ -18,8 +18,9 @@ import { cn } from "@/lib/utils";
 
 type ResultMode = "dinner" | "nightlife" | "date-night";
 
-export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNotTonight, mode = "dinner" }: {
+export function OptionsOverlay({ restaurants, decisionKeys, onClose, onSelect, onShuffle, onNotTonight, mode = "dinner" }: {
   restaurants: DecoratedRestaurant[];
+  decisionKeys?: string[];
   onClose: () => void;
   onSelect: (restaurant: DecoratedRestaurant) => void;
   onShuffle: () => void;
@@ -43,7 +44,7 @@ export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNo
           <button type="button" onClick={onClose} className="mt-2 flex size-11 shrink-0 items-center justify-center rounded-md bg-surface text-fg shadow-border" aria-label="Close options"><X className="size-5" /></button>
         </div>
         <div className={cn("mt-5 grid content-start gap-x-3 gap-y-4", restaurants.length === 1 ? "grid-cols-1" : "grid-cols-2")}>
-          {restaurants.map((restaurant) => <OptionCard key={restaurant.id} restaurant={restaurant} mode={mode} halloween={halloween} onSelect={() => onSelect(restaurant)} onNotTonight={() => onNotTonight(restaurant)} />)}
+          {restaurants.map((restaurant, index) => <OptionCard key={decisionKeys?.[index] ?? restaurant.id} restaurant={restaurant} mode={mode} halloween={halloween} onSelect={() => onSelect(restaurant)} onNotTonight={() => onNotTonight(restaurant)} />)}
         </div>
         <div className="mt-4"><Button size="lg" variant="secondary" className="w-full" onClick={onShuffle}><Shuffle className="size-4" /><span className="tracking-kicker uppercase">Shuffle options</span></Button></div>
       </div>
