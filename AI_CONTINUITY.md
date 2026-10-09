@@ -1,3 +1,37 @@
+# Draft PR #61 Frozen; Benchmark Budget R4 PASS, Candidate Safety Pending (2026-10-09 22:25 UTC)
+
+## CURRENT
+
+**“Radial discovery becomes an audit layer.”** Draft [PR #61](https://github.com/caleb1234calvin-art/dinner-roulette/pull/61), branch **`integration/date-night-primary-radial-audit-1`**, now has controlling remote commit **`c931188a96752fcb97dac9066e530688f9aaef2a`**, tree **`ef30671a048d6463ded751efe974ee8f8303ed3a`**, sole parent shipped **`fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`**. Eighteen changed paths, 840 additions / 206 deletions. Local f054 and 8211 identities are preserved unpublished author attempts, not the controlling remote head.
+
+Candidate [architecture](https://github.com/caleb1234calvin-art/dinner-roulette/blob/c931188a96752fcb97dac9066e530688f9aaef2a/audit/date-night-hybrid-candidate/architecture.md) and [test-expectation migration](https://github.com/caleb1234calvin-art/dinner-roulette/blob/c931188a96752fcb97dac9066e530688f9aaef2a/audit/date-night-hybrid-candidate/test-expectation-migration.md) were read in full. Selected-radius primary and eligible local/cache data make foreground controls usable independently of subsequent radial audit. Disk/patch authority stays separate; new audit positives enter future selection pools without rerolling open Pick/Options/Plan, while expiry and negative lifecycle may invalidate unsafe selections. Provider AbortSignal and nonpatch negative-eviction retirement are adapted; catalog assembly is moved verbatim for shared use. No venue facts/imports or production changes.
+
+**Author prefreeze local gates:** 1,034 PASS / 4 documented skips, typecheck PASS, lint 0 errors / 6 inherited warnings, safe auth-enabled build PASS. These are author evidence; exact remote checkout reruns, hosted browser/seasonal/geometry results and fresh independent runtime acceptance remain pending. Prior focused/full failures and expectation migrations remain preserved. No final candidate PASS or release readiness is claimed.
+
+### Separate independent benchmark instrumentation gate
+
+**R4 request-budget/instrumentation PASS only.** [Full independent report](audit/hybrid-loading-2026-10-09/benchmark-independent-R4-BUDGET-PASS.md), SHA-256 **`3aa8cc8722340bb24ff31056e93fb36012850bd8777a3d4240fa470d4a5c9fbc`**, binds [frozen R4 manifest](audit/hybrid-loading-2026-10-09/benchmark-R4-SHA256SUMS.json) **`3b98814075f2b1359f228cf36a3d4368987c82d26749cb6806061bb41277ddde`**. All frozen inputs rehashed; **26/26 tests independently rerun PASS** with local stub fetches, no live traffic.
+
+R1 crash-after-429 and active-deadline gaps are fixed with replayed terminal latches/watchdog and persisted elapsed time. Later integration defects are corrected: per-handler request signals, durable reservation before physical dispatch, 429 abort/status evidence, output-directory reuse refusal, restart preservation and cancellation-neutral failure accounting. Historical R1 and intermediate R2/R3 HOLDs remain retained, never relabeled as earlier PASS.
+
+Global maximum 384 physical attempts; latched 429, eight physical failures, two wholly failed acquisitions, 30-minute wall cap, drift and owner stop. One invocation/ledger across stages; no new path or counter reset to evade a stop. Early Columbia50 balanced repeats and limited Joplin/Kansas City order comparisons keep their preregistered scope. This PASS does not clear actual candidate safety or live performance.
+
+## NEXT
+
+Fresh independent **candidate cancellation and negative-lifecycle safety preflight** must PASS at exact c931 before any live benchmark. Full exact-head tests, build/source proof, hosted controlled browser and inherited seasonal/geometry suites, actual screenshot/state review and independent final acceptance follow. Only the frozen reviewed R4 harness may issue conditionally approved bounded measurements after all prerequisites; changes require re-review. Record results and unrun cells separately, not inferred from planned counts.
+
+## HOLD / scope
+
+**No live provider traffic yet.** Candidate safety, full runtime/browser and comparative performance remain pending. Prior Track F MORE EVIDENCE REQUIRED and global-stop NOT PASS remain historical and unwaived. No merge, production deployment, settings change, signing or Play authority; no new release waiver. No Missouri/Cadaver research or imports.
+
+Cadaver remains explicitly HOLD for reliable attraction-specific **2026 operation/date binding and supported expiry**. Other commercial/delta/residential backlog and physical Android limits remain parked. Existing 52-record release is unchanged.
+
+Fresh **22:25 UTC** reads confirm main **`fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`**, tree **`8d5059c9fee871c522616971cce0a80b153e4d23`**, production **`dpl_8xyE9R3BxyE1883QpavaEBWV2LGa` READY**, same source; PR61 open draft exact c931. Integration deployment exclusion remains verified by author and continuity route. BCd/F1 restore history retains its prior dated scope.
+
+**PARENT CONTINUITY COMMIT:** `a0248ddb39ec210bdf13b9d7b2dd658cf93cc0fc`; **PARENT TREE:** `b42d4c296323329ff7383c637eea4d7d6f4af997`. Only continuity/audit receipts change on the safe branch. All prior history follows verbatim.
+
+---
+
 # Hybrid Benchmark Protocol R1 Independent HOLD — Live Traffic Blocked (2026-10-09)
 
 ## CURRENT
