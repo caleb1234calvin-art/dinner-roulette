@@ -1,3 +1,29 @@
+# ASTRA MATERIAL GATE — 2026-10-09 05:16 UTC — cumulative twenty-record implementation candidate
+
+## CURRENT
+- Draft PR **#60**: https://github.com/caleb1234calvin-art/dinner-roulette/pull/60
+- Candidate branch **integration/missouri-astra-push-2026-10-09**, exact head **bb7f36123c5035a36676e98acb1b9ab4fe599955**, tree **69a90a419ea7f735823a001676c78428b741e3fb**, sole parent **979d83aede9d66163e1ebaed9ad5b219cb637882**. Local clean tree equals published tree. 31 changed paths; all implementation/provenance/harness files retained on candidate.
+- All twenty independently cleared records implemented: original eleven; Aurora Maize, Shepherd's Lantern/Broken Hour, Haunted Hollows Palmyra, Feemster; Worlds of Fun, Ozark Nightmares, Ballwin, O'Fallon, Haunted Grotto. Exact accepted subsets/manifests under audit/astra-eleven-2026-10-09, audit/astra-commercial-2026-10-09, audit/astra-delta-2026-10-09.
+- Existing32 runtime records/copy unchanged; two enrichment proposals evidence-only. All additions conservative Open Now, approximate address placement, exact supported2026 lifecycle, current-policy/cache registration, no automatic recurrence. Cobb uses existing late-fall scoped behavior only.
+- Author focused cumulative tests **174/174 PASS**, including **115 new unit tests**; typecheck/targeted lint PASS. Browser harness structural checks **113 material assertions**,20confidence labels; suites planned11=220/extras9=185. Geometry planned52records/426comparisons. These are NOT hosted browser PASS.
+- Full auth-enabled migration-free build started exact candidate. Full tests/lint/typecheck and hosted web/unsigned Android runs pending. Independent exact-candidate source review underway.
+- Earlier stable eleven local gate:962PASS/4skips (891repo+71app), lint0errors/6inheritedwarnings,typecheckPASS,safeauthbuildPASS. Superseded by current cumulative candidate; no transfer of PASS to newhead. First mid-author/prebuild failure retained at scratch/test-first.log SHA4f8a2e9235433dcd7e8c5931ad0c959fdf0de1d40547efb1f7f761ef82fbb42f: old neighborhood assertion required valid nearby MissouriNightmare, other compiled transport failures reflected missing SSR build. Focused author attempt histories retained in audit reports.
+- Production reverified unchanged:main979d83aede9d66163e1ebaed9ad5b219cb637882/treea7dbb32947c0a0daf4864346b0d212477fc9a11b; READY dpl_F1XiMcc9AUuykunNamr87R3re7gP; five known aliases point there. Immediate retained READY rollbackdpl_BCdD3eWRXk6UEN2FNJQE88r18VXv/source213502ef8cf3f67d75e6d9c9c8ff43f9f656890c.32live. No main/production/protection/config mutation.
+## NEXT
+1. Finish exact-head safe build/full tests/lint/typecheck; inspect hosted web+Android run identities.
+2. Independent source review then downloaded browser/geometry artifacts/screenshots, acceptance and old32 regression; preserve all failed candidate SHA attempts and correct demonstrated harness/product defects.
+3. Conclude Cadaver focused evidence adjudication. If independent PASS before final validation, deliberately stack with complete rerun; otherwise retain narrow HOLD without blocking20.
+4. Publish final raw evidence archive and exact gate reports. Refresh production/protection/rollback identities before owner release decision.
+## HOLD
+- Candidate is **NOT RELEASE READY** until cumulative exact-head gates PASS.
+- Cadaver exact operator Instagram extracted poster explicitly2026/Oct29 subset proposed but displayed image not recovered and shortcode/date consistency requires independent adjudication. Long read-only image extraction was interrupted after stalling; no unsafe workaround.
+- Six commercial date/expiry HOLDs:Werehouse,Wolfman,FearFactory,TwistedMinds,Waco,Rising. Residential/home-haunts remain separate. Lemp uncertain2026notimported.
+- Local Chromium install failed with invalid/truncated official download; no local pixel PASS. Hosted browser execution is required.
+- Physical Android, signing and PlayConsole remain HOLD/out-of-scope. No autonomous merge/deploy/waiver. Previous waivers consumed; fresh current protection assessment pending.
+- Canonical continuity parent at this gate81fe87a7c8a543e8142bac46b4e8100b23ca5677. Historical checkpoints below are retained verbatim.
+
+---
+
 # Pick For Us — Five Delta Records Independently Cleared; Twenty-Record Candidate Target (2026-10-09)
 
 ## CURRENT
