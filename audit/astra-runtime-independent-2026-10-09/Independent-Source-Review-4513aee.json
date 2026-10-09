@@ -1,0 +1,776 @@
+{
+  "head": "4513aee7de0afe55e0f0fa061c1ec5f6af4fa412",
+  "tree": "7323e271b5ecf23fdf60f8c4a98f8fffc564137c",
+  "base": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+  "parent": "bb7f36123c5035a36676e98acb1b9ab4fe599955",
+  "verifiedAt": "2026-10-09T05:29:15.606Z",
+  "inputs": [
+    {
+      "path": "audit/astra-eleven-2026-10-09/Nine-Preimport-Eligible-Author-Subset-R2.json",
+      "sha256": "463e5809612f0e7c0ea5c5a32d08cbb0ef186034b6866cb37496b4e990ed393c",
+      "verdict": "EXACT MATCH"
+    },
+    {
+      "path": "audit/astra-eleven-2026-10-09/Independent-Delta5-R2-Final-Eligible-Subset.json",
+      "sha256": "bf3b0d90d045751e2539b094b3950842044a6e9703a4aca2d333540a713cfc7c",
+      "verdict": "EXACT MATCH"
+    },
+    {
+      "path": "audit/astra-commercial-2026-10-09/Commercial-Holds-Independent-Eligible-R1.json",
+      "sha256": "5bf8a0e037749efd72e4d7efd61b1b0d9b39fe79faa46bc903eec226f7ed0496",
+      "verdict": "EXACT MATCH"
+    },
+    {
+      "path": "audit/astra-commercial-2026-10-09/Commercial-Feemster-Independent-Eligible-R2.json",
+      "sha256": "c4c0af852587731e74f2d052c8f0dc6a8dc02d097a2590c66780266a18b7ed78",
+      "verdict": "EXACT MATCH"
+    },
+    {
+      "path": "audit/astra-delta-2026-10-09/Delta6-Independent-Eligible-R2.json",
+      "sha256": "1c8e7619d95dc498a9d78cd081442ee8623d8badeae8d55327faea3a9c44820f",
+      "verdict": "EXACT MATCH"
+    },
+    {
+      "path": "audit/astra-delta-2026-10-09/Delta6-Independent-Final-R2.json",
+      "sha256": "4812ad5a38d1fb11ce8ba711ab3c2ebc71fc33c078cdddb1aa27c1ce5d673c5b",
+      "verdict": "EXACT MATCH"
+    }
+  ],
+  "recordChecks": [
+    {
+      "recordId": "DELTA2-BRANSON-GHOSTER",
+      "id": "date-night-mo26-astra-branson-ghoster",
+      "name": "The Curse at The Branson Ghoster Coaster",
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "cutoff": "2026-10-31T22:00:00-05:00",
+      "localCutoff": "2026-10-31, 22:00:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "MO26-056",
+      "id": "date-night-mo26-astra-liberty-corn-maze",
+      "name": "Liberty Corn Maze",
+      "activeDates": [
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13",
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-20",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30"
+      ],
+      "cutoff": "2026-10-30T23:00:00-05:00",
+      "localCutoff": "2026-10-30, 23:00:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "DELTA3-RANCH",
+      "id": "date-night-mo26-astra-terror-at-the-ranch",
+      "name": "Terror at the Ranch",
+      "activeDates": null,
+      "cutoff": "2026-10-31T23:00:00-05:00",
+      "localCutoff": "2026-10-31, 23:00:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "DELTA3-COBB",
+      "id": "date-night-mo26-astra-cobb-factory",
+      "name": "PanicFest \u2014 The Cobb Factory",
+      "activeDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01",
+        "2026-11-06",
+        "2026-11-07"
+      ],
+      "cutoff": "2026-11-07T23:00:00-06:00",
+      "localCutoff": "2026-11-07, 23:00:00",
+      "expiryBasis": "exact",
+      "visibility": "listing-lifecycle",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "MO26-037",
+      "id": "date-night-mo26-astra-field-of-screams-nixa",
+      "name": "Field of Screams Nixa",
+      "activeDates": [
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "cutoff": "2026-11-02T00:00:00-06:00",
+      "localCutoff": "2026-11-02, 00:00:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "DELTA2-MISSOURI-NIGHTMARE",
+      "id": "date-night-mo26-astra-missouri-nightmare",
+      "name": "Missouri Nightmare Haunted Attraction",
+      "activeDates": null,
+      "cutoff": "2026-11-01T20:30:00-06:00",
+      "localCutoff": "2026-11-01, 20:30:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "DELTA2-TREPIDATIONS",
+      "id": "date-night-mo26-astra-trepidations",
+      "name": "Trepidations Haunted Attraction",
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "cutoff": "2026-11-01T23:00:00-06:00",
+      "localCutoff": "2026-11-01, 23:00:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "DELTA3-FREAKS",
+      "id": "date-night-mo26-astra-freaks-fair",
+      "name": "Freaks Fair Haunted Attraction",
+      "activeDates": [
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "cutoff": "2026-10-31T22:30:00-05:00",
+      "localCutoff": "2026-10-31, 22:30:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "DELTA4-HELL-HARVEST",
+      "id": "date-night-mo26-astra-hell-harvest",
+      "name": "Hell Harvest",
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "cutoff": "2026-11-01T00:00:00-05:00",
+      "localCutoff": "2026-11-01, 00:00:00",
+      "expiryBasis": "date-only",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "MO26-005",
+      "id": "date-night-mo26-astra-myers-forest-of-fears",
+      "name": "Myers Forest of Fears",
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "cutoff": "2026-11-01T00:00:00-05:00",
+      "localCutoff": "2026-11-01, 00:00:00",
+      "expiryBasis": "date-only",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "MO26-027",
+      "id": "date-night-mo26-astra-labyrinth-of-fear",
+      "name": "Labyrinth of Fear",
+      "activeDates": [
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "cutoff": "2026-11-01T00:00:00-05:00",
+      "localCutoff": "2026-11-01, 00:00:00",
+      "expiryBasis": "date-only",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "MO26-002",
+      "id": "date-night-mo26-astra-aurora-maize",
+      "name": "Aurora Maize at Adventure Farm",
+      "activeDates": [
+        "2026-09-19",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-07",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-14",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-21",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-28",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "cutoff": "2026-10-31T22:00:00-05:00",
+      "localCutoff": "2026-10-31, 22:00:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "DELTA2-SHEPHERD-LANTERN",
+      "id": "date-night-mo26-astra-shepherds-lantern",
+      "name": "The Broken Hour at Shepherd\u2019s Lantern",
+      "activeDates": [
+        "2026-10-16",
+        "2026-10-17"
+      ],
+      "cutoff": "2026-10-17T22:00:00-05:00",
+      "localCutoff": "2026-10-17, 22:00:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "DELTA2-HOLLOWS",
+      "id": "date-night-mo26-astra-haunted-hollows",
+      "name": "Haunted Hollows Haunted Trail",
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-24",
+        "2026-10-30"
+      ],
+      "cutoff": "2026-10-30T23:00:00-05:00",
+      "localCutoff": "2026-10-30, 23:00:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "MO26-039",
+      "id": "date-night-mo26-astra-feemster-corn-maze",
+      "name": "Feemster Twisted Corn Maze",
+      "activeDates": [
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "cutoff": "2026-11-01T21:00:00-06:00",
+      "localCutoff": "2026-11-01, 21:00:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "DELTA6-WORLDS-OF-FUN",
+      "id": "date-night-mo26-astra-worlds-of-fun-haunt",
+      "name": "Worlds of Fun \u2014 Halloween Haunt",
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "cutoff": "2026-11-01T00:00:00-05:00",
+      "localCutoff": "2026-11-01, 00:00:00",
+      "expiryBasis": "date-only",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "DELTA2-OZARK",
+      "id": "date-night-mo26-astra-ozark-nightmares",
+      "name": "Ozark Nightmares Haunted House \u2014 The Viscount\u2019s Manor",
+      "activeDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "cutoff": "2026-11-01T00:00:00-05:00",
+      "localCutoff": "2026-11-01, 00:00:00",
+      "expiryBasis": "date-only",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "DELTA3-BALLWIN",
+      "id": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+      "name": "Tunnel of Terror \u2014 Tommy\u2019s Express Ballwin",
+      "activeDates": [
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "cutoff": "2026-10-24T21:30:00-05:00",
+      "localCutoff": "2026-10-24, 21:30:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "DELTA6-OFALLON",
+      "id": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+      "name": "Tunnel of Terror \u2014 Tommy\u2019s Express O\u2019Fallon",
+      "activeDates": [
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "cutoff": "2026-10-24T21:30:00-05:00",
+      "localCutoff": "2026-10-24, 21:30:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    },
+    {
+      "recordId": "DELTA3-GROTTO",
+      "id": "date-night-mo26-astra-haunted-grotto",
+      "name": "The Haunted Grotto",
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "cutoff": "2026-10-31T22:00:00-05:00",
+      "localCutoff": "2026-10-31, 22:00:00",
+      "expiryBasis": "exact",
+      "visibility": "halloween-layer",
+      "rawProjectionEqualsManifest": true,
+      "registered": true,
+      "addressDirections": true,
+      "genericRideTarget": true,
+      "currentPolicyReapplies": true
+    }
+  ],
+  "prior32": [
+    {
+      "recordId": "MO26-068",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-116",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-003",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-010",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-011",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-029",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-030",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-019",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-031",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-034",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-054",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-067",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-100",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-114",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-115",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-124",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-125",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-036",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-058",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-069",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-071",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-118",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-012",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-028",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-074",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-084",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "MO26-085",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "DELTA-EDGE-2026",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "DELTA-CREEPYWORLD-2026",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "DELTA-DARKNESS-2026",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "DELTA-HAUNTED-RIVER-2026",
+      "catalogEqual": true,
+      "presentationEqual": true
+    },
+    {
+      "recordId": "DELTA-FEAR-BLOODY-TIMBER-2026",
+      "catalogEqual": true,
+      "presentationEqual": true
+    }
+  ],
+  "findings": [],
+  "verdict": "PASS: exact candidate source mapping and previous32 invariance; browser/hosted/build handled separately",
+  "changedPaths": [
+    ".github/workflows/validate-icon-pack.yml",
+    "audit/astra-commercial-2026-10-09/Author-Implementation-Report.json",
+    "audit/astra-commercial-2026-10-09/Commercial-Feemster-Independent-Eligible-R2.json",
+    "audit/astra-commercial-2026-10-09/Commercial-Holds-Independent-Eligible-R1.json",
+    "audit/astra-commercial-2026-10-09/Implementation-Projection-Manifest.json",
+    "audit/astra-delta-2026-10-09/Author-Implementation-Report.json",
+    "audit/astra-delta-2026-10-09/Delta6-Independent-Eligible-R2.json",
+    "audit/astra-delta-2026-10-09/Delta6-Independent-Final-R2.json",
+    "audit/astra-delta-2026-10-09/Implementation-Projection-Manifest.json",
+    "audit/astra-eleven-2026-10-09/Author-Implementation-Report.json",
+    "audit/astra-eleven-2026-10-09/Implementation-Projection-Manifest.json",
+    "audit/astra-eleven-2026-10-09/Independent-Delta5-R2-Final-Eligible-Subset.json",
+    "audit/astra-eleven-2026-10-09/Nine-Preimport-Eligible-Author-Subset-R2.json",
+    "scripts/missouri-two-record-browser.mjs",
+    "scripts/missouri-two-records.test.mjs",
+    "scripts/seasonal-astra-commercial.test.mjs",
+    "scripts/seasonal-astra-delta.test.mjs",
+    "scripts/seasonal-astra-eleven.test.mjs",
+    "scripts/seasonal-card-layout-browser.mjs",
+    "scripts/seasonal-discovery.test.mjs",
+    "scripts/seasonal-late-fall-client-cache.test.mjs",
+    "scripts/seasonal-late-fall.test.mjs",
+    "scripts/seasonal-ten-record-browser.mjs",
+    "scripts/test-support/missouri-previous32-receipts.json",
+    "src/lib/date-night/curated-policy.ts",
+    "src/lib/date-night/missouri-2026-astra-commercial-catalog.ts",
+    "src/lib/date-night/missouri-2026-astra-delta-catalog.ts",
+    "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts",
+    "src/lib/date-night/missouri-2026-three-source-tier-a-catalog.ts",
+    "src/lib/date-night/search.ts",
+    "src/lib/date-night/seasonal-catalog.ts",
+    "src/lib/date-night/seasonal-presentation-catalog.ts"
+  ],
+  "focusedValidation": {
+    "command": "node --test scripts/seasonal-astra-eleven.test.mjs scripts/seasonal-astra-commercial.test.mjs scripts/seasonal-astra-delta.test.mjs scripts/seasonal-late-fall.test.mjs scripts/seasonal-late-fall-client-cache.test.mjs scripts/seasonal-discovery.test.mjs scripts/missouri-two-records.test.mjs",
+    "tests": 198,
+    "pass": 198,
+    "fail": 0,
+    "skipped": 0,
+    "duration_ms": 17363.094367,
+    "log": "focused-tests-4513aee.log",
+    "countingNote": "One independently run subset, not additional tests to add to full-suite counts."
+  },
+  "scope": "Independent source/projection mapping and focused runtime policy validation only. Browser, geometry, hosted CI, full repository suite, typecheck/lint/build and Android gates remain separate root/other-reviewer evidence.",
+  "sourceFindings": [
+    "No blocking implementation/data-mapping defect found on exact head.",
+    "All20 raw catalog objects equal their committed implementation manifests. Six accepted source snapshots exactly hash-match either immutable continuity-listed expected digest or independently reviewed local source file.",
+    "All20 supported destinations, accepted approximate points, cutoffs, source-bound explicit dates and reviewed consumer copy preserved. Only approved recurring date rules for Branson and Liberty expanded; explicit lists retained elsewhere; Ranch/Nightmare retain unknown daily recurrence.",
+    "All20 registered in actual search and current curated-policy registry plus presentation map. Null openingHours and never OpenNow survive provider24/7 duplicates and stale cache/saved identities.",
+    "All20 directions use supported visitor address. All20 ride links are generic external-picker targets with truthful accessible label; no approximate coordinate forwarded as precise dropoff.",
+    "All32 previous factual catalog objects and reviewed presentation objects deep-equal baseline979d. Oldtier-a catalog change is comment-only; old source review identities remain intact.",
+    "Only Cobb newly receives listing-lifecycle visibility; prior Brookdale/Creepyworld/Darkness behavior retained. No change to global season.ts/query-plan.ts. DateNight ordinary categories remain explicit.",
+    "Aurora raw endsAt intentionally omitted so audited source does not misstate finalexit; exact cutoff is last admission. Existing availability evaluator applies exactcutoff as terminal visibility at22:00, without inventing openingintervals or rendering finalexit.",
+    "5 date-only rows preserve absent source endsAt; next-local-midnight visibility is not asserted operator closing. LocalCDT/CST boundaries retained; all20 no2027 guards tested.",
+    "Initial independent comparison script failed only because its baseline module loader omitted.ts extension. No product code changed. Retained failure log; resolver corrected and exactsource script then passed."
+  ],
+  "limitations": [
+    "This is not independent re-research of already accepted sources. Their freshness, indexed-source, unknownhours, weather/ticket and approximateplacement limits remain.",
+    "No actualbrowser pixel/geometry/RPC finalacceptance claim from this report.",
+    "Existing six lintwarnings and physical Android/WebView/GPS acceptance remain separate.",
+    "Cadaver is absent from candidate and remains independent factualHOLD; residentialleads absent.",
+    "No merge/deploy/protectionwaiver/signing/Play authority."
+  ],
+  "completedAt": "2026-10-09T05:30:07.082059+00:00"
+}

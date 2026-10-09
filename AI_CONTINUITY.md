@@ -1,3 +1,21 @@
+# ASTRA MATERIAL GATE — 2026-10-09 05:30 UTC — independent exact-candidate source/policy PASS
+
+## CURRENT
+- Independent source/policy **PASS** for PR #60 head **4513aee7de0afe55e0f0fa061c1ec5f6af4fa412**, tree **7323e271b5ecf23fdf60f8c4a98f8fffc564137c**.
+- All twenty catalog objects equal implementation projections; all six accepted input files hash-match. Dates/cutoffs, addresses, approximate points and reviewed copy independently compared. All thirty-two prior factual and presentation objects deep-equal production source979d83aede9d66163e1ebaed9ad5b219cb637882.
+- Independent **198 focused tests PASS / 0 FAIL / 0 skips**. No blocking mapping or policy defect. Cobb-only new late-fall visibility, Aurora last-admission expiry, null machine hours/never Open Now, visitor-address Directions/generic ride behavior, saved/current-policy handling and no2027 revival verified.
+- Report SHA256 **f661269e99e39deb846e933071239b4133fa21e6bbd0999e5dd9a9ecaf158465**. First outside-repository review checker failed due to a missing .ts loader suffix; corrected checker PASS, no product change, failed receipt retained. Source review, checker and machine findings preserved at audit/astra-runtime-independent-2026-10-09/.
+- Separate independent Android artifact review PASS: report SHA256 **3301bc601fe0be2d0128f33ad3297d00b175ac07660144ccdae1640e27dce658**, ZIP CRC, both binary checksums, internal source, unsigned bundle verification and fourteen inherited lint warnings checked.
+- Full local1018PASS/4skips, lint/typecheck/auth-enabled migration-free build PASS; hosted Android37888058961 SUCCESS. Hosted web37888059004 geometry still running.
+## NEXT
+- Complete hosted geometry and every browser suite, download and independently inspect exact-source artifacts/screenshots.
+- Save full research/acceptance evidence and publish owner release decision brief after final gate PASS.
+## HOLD
+- Source PASS is not browser/release PASS. Cadaver narrow factual/runtime HOLD and all documented commercial/delta/residential HOLDs retained.
+- Main remains unprotected with no fresh owner waiver. No merge, production change, signing or Play Console action.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 05:29 UTC — Cadaver independent final HOLD; research freeze
 
 ## CURRENT
