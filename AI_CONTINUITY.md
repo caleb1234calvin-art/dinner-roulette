@@ -1,3 +1,33 @@
+# Hybrid Benchmark Protocol R1 Independent HOLD — Live Traffic Blocked (2026-10-09)
+
+## CURRENT
+
+Independent protocol/ledger review found concrete safety failures despite the author's **14/14 unit tests PASS**. **R1 benchmark protocol enforcement is HOLD, not PASS; no live provider traffic has begun.** Preserve the failing snapshots and this verdict even after later corrections.
+
+- A persisted HTTP429 outcome followed by a crash before writing the explicit stop row can permit a new request on reopen. Stop reconstruction must derive the latch from durable outcomes, not require a separately written stop event.
+- The wall-time cap is checked only at reservation/stage boundaries; it does not itself abort already in-flight work at the deadline.
+- The actual fetch-accounting wrapper is not yet implemented, so reservation/outcome/abort enforcement on real requests is unproven.
+
+Exact reviewed R1 identities: protocol SHA-256 `b727bdb552c5592e5f2627d3c5ff90c3e41f40665e33e2b671464a5532310d3d`; ledger `413d4c1c1a020c769fd16b70d40e9890a699c3cc5c1f7f4effee33645ae04af1`; tests `3130e9382db3575aa0383588083031d02e76ad9fcc2a24de6335c3ac695a982e`. These hashes bind failed R1, not mutable author remediation. [Frozen independent HOLD receipt](audit/hybrid-loading-2026-10-09/benchmark-independent-R1-HOLD.md), SHA-256 `6a358f515c87a5eb84f34a9906777012a2e8bdf484596c7c97ca3ee4b331e3d6`, is preserved with exact local reproduction outputs.
+
+The coordinator conditionally accepted a global 384-attempt ceiling and balanced order with Columbia50 early, **subject to all global safety gates**. This is not permission to start live requests while this HOLD remains. The researcher is correcting the benchmark harness only; fresh independent PASS must precede bounded traffic.
+
+## Separate runtime candidate
+
+The selected-radius-primary/background-radial architecture remains in progress on planned branch `integration/date-night-primary-radial-audit-1`, unfrozen. “Radial discovery becomes an audit layer.” Initial focused runtime attempt had **24 failures**, preserved at `/tmp/hybrid-focused-r1.log`; implementer is distinguishing obsolete expectations from real safety failures. They are not relabeled PASS. No current exact candidate SHA, completed browser result or release acceptance exists yet.
+
+## NEXT
+
+Freeze corrected benchmark ledger/wrapper, add crash/reopen and active-deadline tests, then obtain fresh independent exact-artifact review. Preserve all R1 receipts; never reset global counters between stages or after restart. Runtime author continues only the already authorized bounded candidate and required safety adaptations. Record each stable freeze/remediation/validation separately; no transfer of predecessor PASS.
+
+## HOLD / boundaries
+
+No live benchmark until corrected enforcement and actual fetch wiring pass. Prior Track F global-stop NOT PASS remains historical and unwaived. No main/production/settings changes or release authority. No Missouri/Cadaver work is resumed. Cadaver remains HOLD for reliable attraction-specific 2026 operation/date binding and supported expiry; physical Android and other parked backlog remain unchanged.
+
+Fresh 22:19 UTC baseline: main `fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`, tree `8d5059c9fee871c522616971cce0a80b153e4d23`, production `dpl_8xyE9R3BxyE1883QpavaEBWV2LGa` READY at that source. The 52-record release remains closed. PARENT CONTINUITY COMMIT: `c59647972145a7cfebf73ea28f88ff401eaacb45`; PARENT TREE: `111516faa2d69ff15fd931dc7c5e79a272e1b45d`. Documentation-only safe branch; all history follows verbatim.
+
+---
+
 # Hybrid Date Night Candidate Authorized — “Radial discovery becomes an audit layer.” (2026-10-09 22:12 UTC)
 
 ## CURRENT
