@@ -1,0 +1,794 @@
+{
+  "status": "PASS",
+  "sourceSha256": "7e0c507793ab9b758d4e87f074f6f43f7eacbb00c9f425b801e7664f142a3a74",
+  "actualRpcReplayPasses": 45,
+  "preservedOriginalFailuresReproduced": 2,
+  "contaminationNegativeChecks": 4,
+  "results": [
+    {
+      "suite": "seasonal-ten-record",
+      "id": "date-night-mo26-019-james-river-joplin-party",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-ten-record",
+      "id": "date-night-mo26-031-silver-dollar-city-harvest",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-ten-record",
+      "id": "date-night-mo26-034-boone-historical-haunts",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-ten-record",
+      "id": "date-night-mo26-054-fun-farm",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-ten-record",
+      "id": "date-night-mo26-067-shryocks-callaway-farms",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-ten-record",
+      "id": "date-night-mo26-100-urban-gardens",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-ten-record",
+      "id": "date-night-mo26-114-perryville-pumpkin-farm",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-ten-record",
+      "id": "date-night-mo26-115-bollinger-trick-or-treat",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-ten-record",
+      "id": "date-night-mo26-124-hotel-of-terror",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-ten-record",
+      "id": "date-night-mo26-125-dungeons-of-doom",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-036-monster-corn-maze",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-058-beast",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-069-dead-factory",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-071-pomme-de-terror",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-118-haunted-hall-horror",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-012-witches-day-out",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-028-nevada-oktoberfest",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-074-osage-beach-fall-festival",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-084-mcwilliams",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-085-brookdale-farms",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [],
+        "lifecycleRows": [
+          {
+            "id": "date-night-mo26-085-brookdale-farms",
+            "visibility": "listing-lifecycle",
+            "distanceMiles": 0
+          },
+          {
+            "id": "date-night-mo26-delta-creepyworld",
+            "visibility": "listing-lifecycle",
+            "distanceMiles": 9.481042026631618
+          }
+        ]
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-delta-edge-of-hell",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-delta-creepyworld",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [],
+        "lifecycleRows": [
+          {
+            "id": "date-night-mo26-085-brookdale-farms",
+            "visibility": "listing-lifecycle",
+            "distanceMiles": 9.481042026631618
+          },
+          {
+            "id": "date-night-mo26-delta-creepyworld",
+            "visibility": "listing-lifecycle",
+            "distanceMiles": 0
+          }
+        ]
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-delta-darkness",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [],
+        "lifecycleRows": [
+          {
+            "id": "date-night-mo26-delta-darkness",
+            "visibility": "listing-lifecycle",
+            "distanceMiles": 0
+          }
+        ]
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-delta-haunted-river-float",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-cumulative-15",
+      "id": "date-night-mo26-delta-fear-bloody-timber",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-astra-branson-ghoster",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-astra-liberty-corn-maze",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-astra-terror-at-the-ranch",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-astra-cobb-factory",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [],
+        "lifecycleRows": [
+          {
+            "id": "date-night-mo26-astra-cobb-factory",
+            "visibility": "listing-lifecycle",
+            "distanceMiles": 0
+          }
+        ]
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-astra-field-of-screams-nixa",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-astra-missouri-nightmare",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-astra-trepidations",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-astra-freaks-fair",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-astra-hell-harvest",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-astra-myers-forest-of-fears",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven",
+      "id": "date-night-mo26-astra-labyrinth-of-fear",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-astra-aurora-maize",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-astra-shepherds-lantern",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-astra-haunted-hollows",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-astra-feemster-corn-maze",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-astra-worlds-of-fun-haunt",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-astra-ozark-nightmares",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": [
+          {
+            "id": "date-night-mo26-085-brookdale-farms",
+            "visibility": "listing-lifecycle",
+            "distanceMiles": 9.65887164910754
+          },
+          {
+            "id": "date-night-mo26-delta-creepyworld",
+            "visibility": "listing-lifecycle",
+            "distanceMiles": 9.249770598401206
+          }
+        ]
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": [
+          {
+            "id": "date-night-mo26-astra-cobb-factory",
+            "visibility": "listing-lifecycle",
+            "distanceMiles": 11.819020284555583
+          }
+        ]
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras",
+      "id": "date-night-mo26-astra-haunted-grotto",
+      "passed": true,
+      "evidence": {
+        "targetAliases": [
+          {
+            "id": "date-night-osm-node-910001",
+            "activityTypes": [
+              "park"
+            ],
+            "seasonalKeys": []
+          }
+        ],
+        "lifecycleRows": []
+      }
+    }
+  ],
+  "limitation": "Recorded actual-built-app RPC assertion replay only; no local Chromium execution. Complete exact-head hosted browser gates still required."
+}

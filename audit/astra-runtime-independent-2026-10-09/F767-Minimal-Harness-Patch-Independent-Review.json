@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent_review",
+  "baseSha": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+  "status": "SCOPED PATCH REVIEW PASS; IMMUTABLE NEW HEAD PENDING",
+  "changedPath": "scripts/seasonal-ten-record-browser.mjs",
+  "insertions": 23,
+  "deletions": 1,
+  "newFileSha256": "7e0c507793ab9b758d4e87f074f6f43f7eacbb00c9f425b801e7664f142a3a74",
+  "checks": {
+    "syntax": "PASS",
+    "gitDiffCheck": "PASS",
+    "outsideCorrectionByteIdenticalToBase": true,
+    "focusReplaySourceHashMatches": true
+  },
+  "rationale": [
+    "The sole removed check globally banned metadata anywhere in a regional season-off response; independent evidence proves that assertion contradicts qualified lifecycle superset behavior.",
+    "Decoded ordinary target aliases retain park category and are required to have no own seasonalListing, seasonalAvailability or seasonalVisitNotes.",
+    "Every returned nonnull seasonal-metadata row must match a reviewed catalog identity with listing-lifecycle visibility, identical listing metadata, eligible current clock and 15.05-mile core bound.",
+    "All preexisting target canonical eligibility, UI counts, one-mile filtering, downstream alias-card notice/confidence/category, restored season cache, reacquisition and no-RPC checks remain unchanged.",
+    "Existing 52 catalog rows/data and old32 receipt fixtures remain unchanged."
+  ],
+  "focusedReplayEvidence": {
+    "path": "runtime-independent-review/f767-rpc-focused-replay-results.json",
+    "sha256": "5acbe6ded4ebf7830c6864735dbb2d59bfbcbd4f55444db7fdc2079436df1f57",
+    "actualCapturedRpcPasses": 45,
+    "oldAssertionFailuresReproduced": 2,
+    "negativeContaminationRejections": 4,
+    "attribution": "Browser acceptance agent authored and executed replay; independent reviewer checked replay code, results and exact patched-source binding."
+  },
+  "limits": [
+    "No browser runtime PASS is claimed from replay.",
+    "Freeze and independently bind new commit; exact-head hosted/local/Android and geometry gates remain required."
+  ],
+  "reviewerSourceMutations": false
+}

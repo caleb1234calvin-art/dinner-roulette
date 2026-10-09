@@ -1,0 +1,211 @@
+{
+  "sha": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+  "tree": "fdfbf4045ea69f7a9b610a434243fc43f2c9f338",
+  "run": 37894492761,
+  "job": 113702618075,
+  "status": "FAIL",
+  "artifact": {
+    "id": 11601694579,
+    "bytes": 444162027,
+    "sha256": "4d9b65d9976f99af5dfa83ce180dff4bdc48204442fdc87c7ae4f7398fdae8c8",
+    "files": 3570,
+    "crc": "PASS"
+  },
+  "proof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "a7613459eef6aac9cb20e9566484583a428562b5eb43e9fbc3ad8bb02bd4f84a",
+      "files": 468
+    },
+    "startedAt": "2026-10-09T06:38:12.760Z",
+    "output": {
+      "sha256": "bd9ccbc28670cd97d9f365596e5580bd58a0af31b4ebba491ad046951815f752",
+      "files": 194
+    },
+    "completedAt": "2026-10-09T06:38:15.959Z"
+  },
+  "suites": [
+    {
+      "path": "verdict.json",
+      "passed": null,
+      "count": 0,
+      "passCount": 0,
+      "errorCount": 0,
+      "publicProviderCalls": null,
+      "sha256": "9f1712a001669f72af8a5367342bfae0642ae697b76fa523b65e5b1899ca203d"
+    },
+    {
+      "path": "seasonal-astra-extras/verdict.json",
+      "passed": false,
+      "count": 185,
+      "passCount": 183,
+      "errorCount": 3,
+      "publicProviderCalls": 0,
+      "sha256": "0cd9f9de3ae8692b1a4abd81c695daf36c4c8c79988931ce565347461de24d3d"
+    },
+    {
+      "path": "seasonal-ten-record/verdict.json",
+      "passed": true,
+      "count": 157,
+      "passCount": 157,
+      "errorCount": 0,
+      "publicProviderCalls": 0,
+      "sha256": "5b6b2e723dd3f0461cf9485307c18465625a2bf60c324d05a2514c0bb04d40d6"
+    },
+    {
+      "path": "seasonal-completeness-v1/verdict.json",
+      "passed": true,
+      "count": 97,
+      "passCount": 97,
+      "errorCount": 0,
+      "publicProviderCalls": 0,
+      "sha256": "6519037439132664c1f3e93d080f25a04e519f255f187e4b417eb94490850671"
+    },
+    {
+      "path": "date-night-radial/verdict.json",
+      "passed": true,
+      "count": 10,
+      "passCount": 10,
+      "errorCount": 0,
+      "publicProviderCalls": 0,
+      "sha256": "584852f6d619550a0f86c387d0347130e28341627b58b7e02e603cd5747a0e79"
+    },
+    {
+      "path": "seasonal-astra-eleven/verdict.json",
+      "passed": true,
+      "count": 220,
+      "passCount": 220,
+      "errorCount": 0,
+      "publicProviderCalls": 0,
+      "sha256": "9923219c47ba656533556f3cbba2ce2186df879d9997a653589eecf012d45a9d"
+    },
+    {
+      "path": "seasonal-cumulative-15/verdict.json",
+      "passed": true,
+      "count": 235,
+      "passCount": 235,
+      "errorCount": 0,
+      "publicProviderCalls": 0,
+      "sha256": "1f99bdefb1f9124c99117229fbadbc677002dcd95abd7bf4fa9763465b687e69"
+    },
+    {
+      "path": "missouri-two-records/verdict.json",
+      "passed": true,
+      "count": 23,
+      "passCount": 23,
+      "errorCount": 0,
+      "publicProviderCalls": 0,
+      "sha256": "778a689d6079fdb4494e8717d300ae1de7b3ce557a4bddf9a8d7135d1a09f921"
+    }
+  ],
+  "failures": [
+    {
+      "id": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+      "scenario": "mixed-alias-toggle-cache",
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(!test.rpc.at(-1).response.includes(\"seasonalListing\"))\n\n    at runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:568:30)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:300:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:543:5",
+      "evidence": {
+        "finalText": "PICK FOR US \u00b7 DATE NIGHT\n\nWhat Should We Do?\n\nSet the mood. Let the app pick the date.\n\nDinner\nNightlife\nDate Night\nSPOOKY SEASON\nDress Date Night for Halloween.\n\nTurn on Halloween styling and October presets. Seasonal attraction coverage is limited.\n\nSearching near\n\nTunnel of Terror \u2014 Tommy\u2019s Express Ballwin\n\nHow far?\n\nWithin 1 miles\n\n1\n3\n5\n10\n15\n20\n30\n40\n50\nWhat sounds fun?\nAnything\nBowling\nArcade\nMovies\nMini Golf\nEscape Room\nParks\nMuseum\nSkating\nWhat's the mood?\n\nPlayful\n\nCozy\nPlayful\nAdventurous\n\nOpen now only\n\nOnly activities with confirmed open hours\n\nFavorites only\n\nPick from date spots you've saved\n\nFewer parks\n\nKeep parks available, but make the park category much less likely\n\nLoaded through 1 miles\n\n2 activities match\n\nPick our date\nGive us options\nPick\nFavorites\nHistory\nSettings"
+      }
+    },
+    {
+      "id": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+      "scenario": "mixed-alias-toggle-cache",
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(!test.rpc.at(-1).response.includes(\"seasonalListing\"))\n\n    at runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:568:30)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:300:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:543:5",
+      "evidence": {
+        "finalText": "PICK FOR US \u00b7 DATE NIGHT\n\nWhat Should We Do?\n\nSet the mood. Let the app pick the date.\n\nDinner\nNightlife\nDate Night\nSPOOKY SEASON\nDress Date Night for Halloween.\n\nTurn on Halloween styling and October presets. Seasonal attraction coverage is limited.\n\nSearching near\n\nTunnel of Terror \u2014 Tommy\u2019s Express O\u2019Fallon\n\nHow far?\n\nWithin 1 miles\n\n1\n3\n5\n10\n15\n20\n30\n40\n50\nWhat sounds fun?\nAnything\nBowling\nArcade\nMovies\nMini Golf\nEscape Room\nParks\nMuseum\nSkating\nWhat's the mood?\n\nPlayful\n\nCozy\nPlayful\nAdventurous\n\nOpen now only\n\nOnly activities with confirmed open hours\n\nFavorites only\n\nPick from date spots you've saved\n\nFewer parks\n\nKeep parks available, but make the park category much less likely\n\nLoaded through 1 miles\n\n2 activities match\n\nPick our date\nGive us options\nPick\nFavorites\nHistory\nSettings"
+      }
+    }
+  ],
+  "previousFailureFixProof": [
+    {
+      "suite": "seasonal-astra-extras/verdict.json",
+      "id": "date-night-mo26-058-beast",
+      "passed": true,
+      "receiptNavigation": {
+        "displayAddress": "1401 W 13th St, Suite B, Kansas City, MO 64102",
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "1300 W 13th St, Kansas City, MO 64102"
+        },
+        "expectedDestination": "1300 W 13th St, Kansas City, MO 64102",
+        "actualDestination": "1300 W 13th St, Kansas City, MO 64102",
+        "sourceCommit": "979d83aede9d66163e1ebaed9ad5b219cb637882"
+      },
+      "preservedReceipt": {
+        "providerId": "date-night-osm-node-920018",
+        "canonicalId": "date-night-mo26-058-beast",
+        "revision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "destination": "1300 W 13th St, Kansas City, MO 64102"
+      }
+    },
+    {
+      "suite": "seasonal-astra-extras/verdict.json",
+      "id": "date-night-mo26-delta-edge-of-hell",
+      "passed": true,
+      "receiptNavigation": {
+        "displayAddress": "1300 W 12th St, Kansas City, MO 64101",
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "1300 W 13th St, Kansas City, MO 64102"
+        },
+        "expectedDestination": "1300 W 13th St, Kansas City, MO 64102",
+        "actualDestination": "1300 W 13th St, Kansas City, MO 64102",
+        "sourceCommit": "979d83aede9d66163e1ebaed9ad5b219cb637882"
+      },
+      "preservedReceipt": {
+        "providerId": "date-night-osm-node-920027",
+        "canonicalId": "date-night-mo26-delta-edge-of-hell",
+        "revision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "destination": "1300 W 13th St, Kansas City, MO 64102"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven/verdict.json",
+      "id": "date-night-mo26-058-beast",
+      "passed": true,
+      "receiptNavigation": {
+        "displayAddress": "1401 W 13th St, Suite B, Kansas City, MO 64102",
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "1300 W 13th St, Kansas City, MO 64102"
+        },
+        "expectedDestination": "1300 W 13th St, Kansas City, MO 64102",
+        "actualDestination": "1300 W 13th St, Kansas City, MO 64102",
+        "sourceCommit": "979d83aede9d66163e1ebaed9ad5b219cb637882"
+      },
+      "preservedReceipt": {
+        "providerId": "date-night-osm-node-920018",
+        "canonicalId": "date-night-mo26-058-beast",
+        "revision": "MO2026-deferred-batch3-verified-2026-10-08",
+        "destination": "1300 W 13th St, Kansas City, MO 64102"
+      }
+    },
+    {
+      "suite": "seasonal-astra-eleven/verdict.json",
+      "id": "date-night-mo26-delta-edge-of-hell",
+      "passed": true,
+      "receiptNavigation": {
+        "displayAddress": "1300 W 12th St, Kansas City, MO 64101",
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "1300 W 13th St, Kansas City, MO 64102"
+        },
+        "expectedDestination": "1300 W 13th St, Kansas City, MO 64102",
+        "actualDestination": "1300 W 13th St, Kansas City, MO 64102",
+        "sourceCommit": "979d83aede9d66163e1ebaed9ad5b219cb637882"
+      },
+      "preservedReceipt": {
+        "providerId": "date-night-osm-node-920027",
+        "canonicalId": "date-night-mo26-delta-edge-of-hell",
+        "revision": "MO2026-three-source-tier-a-verified-2026-10-08",
+        "destination": "1300 W 13th St, Kansas City, MO 64102"
+      }
+    }
+  ],
+  "skipped": [
+    "seasonal-card-layout",
+    "Dinner icon pack verification"
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent_review",
+  "candidate": {
+    "sha": "f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd",
+    "tree": "fdfbf4045ea69f7a9b610a434243fc43f2c9f338",
+    "parent": "a44e70996bc8546f75dc71e4af13c414350ec1f9",
+    "checkout": "repo-verified",
+    "cleanAtSourceFingerprintVerification": true
+  },
+  "hosted": {
+    "runId": 37894492761,
+    "jobId": 113702618075,
+    "status": "FAILURE",
+    "geometry": "SKIPPED"
+  },
+  "archive": {
+    "path": "deliverables/Pick-For-Us-F767-Browser-Evidence.zip",
+    "bytes": 444162027,
+    "sha256": "4d9b65d9976f99af5dfa83ce180dff4bdc48204442fdc87c7ae4f7398fdae8c8",
+    "members": 3570,
+    "crc": "PASS"
+  },
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "a7613459eef6aac9cb20e9566484583a428562b5eb43e9fbc3ad8bb02bd4f84a",
+      "files": 468
+    },
+    "startedAt": "2026-10-09T06:38:12.760Z",
+    "output": {
+      "sha256": "bd9ccbc28670cd97d9f365596e5580bd58a0af31b4ebba491ad046951815f752",
+      "files": 194
+    },
+    "completedAt": "2026-10-09T06:38:15.959Z"
+  },
+  "sourceBinding": "Exact candidate git identity and clean worktree independently verified. Local read-only repository fingerprint algorithm matches hosted source digest and 468 files. All scenario, smoke and location verdicts bind identical build proof. Hosted output digest recorded, not conflated with local build output.",
+  "scenarioCounts": {
+    "date-night-radial/verdict.json": {
+      "passed": 10,
+      "failed": 0,
+      "total": 10
+    },
+    "missouri-two-records/verdict.json": {
+      "passed": 23,
+      "failed": 0,
+      "total": 23
+    },
+    "seasonal-astra-eleven/verdict.json": {
+      "passed": 220,
+      "failed": 0,
+      "total": 220
+    },
+    "seasonal-astra-extras/verdict.json": {
+      "passed": 183,
+      "failed": 2,
+      "total": 185
+    },
+    "seasonal-completeness-v1/verdict.json": {
+      "passed": 97,
+      "failed": 0,
+      "total": 97
+    },
+    "seasonal-cumulative-15/verdict.json": {
+      "passed": 235,
+      "failed": 0,
+      "total": 235
+    },
+    "seasonal-ten-record/verdict.json": {
+      "passed": 157,
+      "failed": 0,
+      "total": 157
+    }
+  },
+  "totals": {
+    "passed": 925,
+    "failed": 2,
+    "total": 927,
+    "smokeChecks": 16,
+    "locationChecks": 19
+  },
+  "failures": [
+    {
+      "id": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+      "scenario": "mixed-alias-toggle-cache",
+      "width": 320,
+      "request": {
+        "lat": 38.592934080507,
+        "lon": -90.543467455396,
+        "radiusMiles": 1,
+        "spookySeasonEnabled": false,
+        "activityTypes": [
+          "bowling",
+          "arcade",
+          "mini-golf",
+          "escape-room",
+          "skating",
+          "movies",
+          "museum",
+          "park"
+        ],
+        "patchId": "radial-v1:core"
+      },
+      "canonicalTargetAbsent": true,
+      "mergedProviderAlias": {
+        "id": "date-night-osm-node-910001",
+        "activityTypes": [
+          "park"
+        ],
+        "noOwnSeasonalMetadata": true,
+        "discoveryEvidence": [
+          {
+            "id": "date-night-osm-node-910001",
+            "source": "osm",
+            "activityTypes": [
+              "park"
+            ],
+            "openingHours": "24/7",
+            "website": null,
+            "lifecycle": null
+          },
+          {
+            "id": "date-night-osm-way-910002",
+            "source": "osm",
+            "activityTypes": [
+              "park"
+            ],
+            "openingHours": "24/7",
+            "website": null,
+            "lifecycle": null
+          }
+        ]
+      },
+      "qualifiedSupersetRows": [
+        {
+          "id": "date-night-mo26-085-brookdale-farms",
+          "name": "Brookdale Farms Fall Festival",
+          "lat": 38.465355,
+          "lon": -90.616517,
+          "distanceMiles": 9.658777226976191,
+          "visibility": "listing-lifecycle",
+          "listingExpiresAt": "2026-11-08T18:00:00-06:00",
+          "openNowPolicy": "never"
+        },
+        {
+          "id": "date-night-mo26-delta-creepyworld",
+          "name": "Creepyworld",
+          "lat": 38.484571437462,
+          "lon": -90.442969239594,
+          "distanceMiles": 9.249680175514793,
+          "visibility": "listing-lifecycle",
+          "listingExpiresAt": "2026-11-13T22:00:00-06:00",
+          "openNowPolicy": "never"
+        }
+      ],
+      "screenshot": "seasonal-astra-extras/6-mixed-alias-toggle-cache-failure.png",
+      "screenshotSha256": "8432ec7f37c0104f88daac5f6955823301e28e1d2cd60f4813c70d7620692011",
+      "visualObservation": "Spooky Season off; ordinary Date Night styling; Halloween chips absent; Loaded through 1 mile; exactly 2 activities match. Failure occurs before opening options, so screenshot does not prove downstream alias-card or cache assertions."
+    },
+    {
+      "id": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+      "scenario": "mixed-alias-toggle-cache",
+      "width": 320,
+      "request": {
+        "lat": 38.764203107345,
+        "lon": -90.700048687725,
+        "radiusMiles": 1,
+        "spookySeasonEnabled": false,
+        "activityTypes": [
+          "bowling",
+          "arcade",
+          "mini-golf",
+          "escape-room",
+          "skating",
+          "movies",
+          "museum",
+          "park"
+        ],
+        "patchId": "radial-v1:core"
+      },
+      "canonicalTargetAbsent": true,
+      "mergedProviderAlias": {
+        "id": "date-night-osm-node-910001",
+        "activityTypes": [
+          "park"
+        ],
+        "noOwnSeasonalMetadata": true,
+        "discoveryEvidence": [
+          {
+            "id": "date-night-osm-node-910001",
+            "source": "osm",
+            "activityTypes": [
+              "park"
+            ],
+            "openingHours": "24/7",
+            "website": null,
+            "lifecycle": null
+          },
+          {
+            "id": "date-night-osm-way-910002",
+            "source": "osm",
+            "activityTypes": [
+              "park"
+            ],
+            "openingHours": "24/7",
+            "website": null,
+            "lifecycle": null
+          }
+        ]
+      },
+      "qualifiedSupersetRows": [
+        {
+          "id": "date-night-mo26-astra-cobb-factory",
+          "name": "PanicFest — The Cobb Factory",
+          "lat": 38.931375171592,
+          "lon": -90.746591944663,
+          "distanceMiles": 11.818904745481813,
+          "visibility": "listing-lifecycle",
+          "listingExpiresAt": "2026-11-07T23:00:00-06:00",
+          "openNowPolicy": "never"
+        }
+      ],
+      "screenshot": "seasonal-astra-extras/7-mixed-alias-toggle-cache-failure.png",
+      "screenshotSha256": "d3a2d92502a682a0d8272773cb98c66f451cd4173f91d311fea346b50647f351",
+      "visualObservation": "Spooky Season off; ordinary Date Night styling; Halloween chips absent; Loaded through 1 mile; exactly 2 activities match. Failure occurs before opening options, so screenshot does not prove downstream alias-card or cache assertions."
+    }
+  ],
+  "diagnosis": {
+    "classification": "HARNESS_SCOPE_DEFECT",
+    "productDefectObserved": false,
+    "failedAssertion": "scripts/seasonal-ten-record-browser.mjs:568 blanket raw RPC absence of seasonalListing for non-lifecycle target",
+    "serverEvidence": "src/lib/date-night/search.ts:141-145 includes eligible listing-lifecycle catalogs with Spooky Season off; line166 fetchRadius is Math.max(data.radiusMiles,15). RPC is regional acquisition superset while UI filters selected 1-mile radius.",
+    "errorCountExplanation": "Two failed scenarios plus aggregate zero-failure assertion produce three errors; exactly two independent scenario failures.",
+    "sourceMutationsByReviewer": false
+  },
+  "minimalCorrection": {
+    "scope": "Replace blanket metadata-string assertion with decoded identity-scoped assertions only; no runtime/data change.",
+    "requiredAssertions": [
+      "Preserve exact canonical target eligibility assertion.",
+      "Merged target provider alias exists exactly once and retains both node/way identity evidence.",
+      "Non-lifecycle target aliases have no own seasonalListing/seasonalAvailability/seasonalVisitNotes and remain park.",
+      "Every remaining seasonal row matches reviewed catalog identity with listing-lifecycle visibility, exact cutoff/policy and current eligibility.",
+      "Preserve UI count/radius, alias-card notice/confidence absence, ordinary badge, season restore and cache/no-RPC assertions."
+    ],
+    "rerun": "Freeze minimal harness-only candidate; rerun all required exact-head browser, geometry, local and Android gates. Preserve failed SHA/archive."
+  },
+  "verdict": "INDEPENDENT FAILURE DIAGNOSIS PASS; CURRENT CANDIDATE RUNTIME HOLD",
+  "limitations": [
+    "Two scenarios stop at overbroad assertion; geometry skipped.",
+    "Later alias-card/cache assertions in those two scenarios unexecuted until corrected exact-head rerun.",
+    "No new research, runtime source or production mutation."
+  ],
+  "reviewExecutionNote": "Initial independent decoder stopped on empty null-prototype object type11; handled as keyed object and all decoded checks reran successfully. No product evidence altered."
+}

@@ -1,0 +1,136 @@
+[
+  {
+    "id": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+    "scenario": "mixed-alias-toggle-cache",
+    "request": {
+      "lat": 38.592934080507,
+      "lon": -90.543467455396,
+      "radiusMiles": 1,
+      "spookySeasonEnabled": false,
+      "activityTypes": [
+        "bowling",
+        "arcade",
+        "mini-golf",
+        "escape-room",
+        "skating",
+        "movies",
+        "museum",
+        "park"
+      ],
+      "patchId": "radial-v1:core"
+    },
+    "venues": [
+      {
+        "id": "date-night-mo26-085-brookdale-farms",
+        "name": "Brookdale Farms Fall Festival",
+        "types": [
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "visibility": "listing-lifecycle",
+        "contract": "ListingCompletenessV1",
+        "distanceMiles": 9.65887164910754,
+        "hasSeasonalListing": true,
+        "hasSeasonalAvailability": true,
+        "hasSeasonalVisitNotes": true
+      },
+      {
+        "id": "date-night-mo26-delta-creepyworld",
+        "name": "Creepyworld",
+        "types": [
+          "haunted-house"
+        ],
+        "visibility": "listing-lifecycle",
+        "contract": "ListingCompletenessV1",
+        "distanceMiles": 9.249770598401206,
+        "hasSeasonalListing": true,
+        "hasSeasonalAvailability": true,
+        "hasSeasonalVisitNotes": true
+      },
+      {
+        "id": "date-night-osm-node-910001",
+        "name": "Tunnel of Terror — Tommy’s Express Ballwin",
+        "types": [
+          "park"
+        ],
+        "distanceMiles": 0,
+        "hasSeasonalListing": false,
+        "hasSeasonalAvailability": false,
+        "hasSeasonalVisitNotes": false
+      },
+      {
+        "id": "date-night-osm-node-910003",
+        "name": "Ordinary park control",
+        "types": [
+          "park"
+        ],
+        "distanceMiles": 0.34547047213993437,
+        "hasSeasonalListing": false,
+        "hasSeasonalAvailability": false,
+        "hasSeasonalVisitNotes": false
+      }
+    ],
+    "finalText": "PICK FOR US · DATE NIGHT\n\nWhat Should We Do?\n\nSet the mood. Let the app pick the date.\n\nDinner\nNightlife\nDate Night\nSPOOKY SEASON\nDress Date Night for Halloween.\n\nTurn on Halloween styling and October presets. Seasonal attraction coverage is limited.\n\nSearching near\n\nTunnel of Terror — Tommy’s Express Ballwin\n\nHow far?\n\nWithin 1 miles\n\n1\n3\n5\n10\n15\n20\n30\n40\n50\nWhat sounds fun?\nAnything\nBowling\nArcade\nMovies\nMini Golf\nEscape Room\nParks\nMuseum\nSkating\nWhat's the mood?\n\nPlayful\n\nCozy\nPlayful\nAdventurous\n\nOpen now only\n\nOnly activities with confirmed open hours\n\nFavorites only\n\nPick from date spots you've saved\n\nFewer parks\n\nKeep parks available, but make the park category much less likely\n\nLoaded through 1 miles\n\n2 activities match\n\nPick our date\nGive us options\nPick\nFavorites\nHistory\nSettings",
+    "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(!test.rpc.at(-1).response.includes(\"seasonalListing\"))\n\n    at runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:568:30)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:300:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:543:5"
+  },
+  {
+    "id": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+    "scenario": "mixed-alias-toggle-cache",
+    "request": {
+      "lat": 38.764203107345,
+      "lon": -90.700048687725,
+      "radiusMiles": 1,
+      "spookySeasonEnabled": false,
+      "activityTypes": [
+        "bowling",
+        "arcade",
+        "mini-golf",
+        "escape-room",
+        "skating",
+        "movies",
+        "museum",
+        "park"
+      ],
+      "patchId": "radial-v1:core"
+    },
+    "venues": [
+      {
+        "id": "date-night-mo26-astra-cobb-factory",
+        "name": "PanicFest — The Cobb Factory",
+        "types": [
+          "haunted-house"
+        ],
+        "visibility": "listing-lifecycle",
+        "contract": "ListingCompletenessV1",
+        "distanceMiles": 11.819020284555583,
+        "hasSeasonalListing": true,
+        "hasSeasonalAvailability": true,
+        "hasSeasonalVisitNotes": true
+      },
+      {
+        "id": "date-night-osm-node-910001",
+        "name": "Tunnel of Terror — Tommy’s Express O’Fallon",
+        "types": [
+          "park"
+        ],
+        "distanceMiles": 0,
+        "hasSeasonalListing": false,
+        "hasSeasonalAvailability": false,
+        "hasSeasonalVisitNotes": false
+      },
+      {
+        "id": "date-night-osm-node-910003",
+        "name": "Ordinary park control",
+        "types": [
+          "park"
+        ],
+        "distanceMiles": 0.34547047213993437,
+        "hasSeasonalListing": false,
+        "hasSeasonalAvailability": false,
+        "hasSeasonalVisitNotes": false
+      }
+    ],
+    "finalText": "PICK FOR US · DATE NIGHT\n\nWhat Should We Do?\n\nSet the mood. Let the app pick the date.\n\nDinner\nNightlife\nDate Night\nSPOOKY SEASON\nDress Date Night for Halloween.\n\nTurn on Halloween styling and October presets. Seasonal attraction coverage is limited.\n\nSearching near\n\nTunnel of Terror — Tommy’s Express O’Fallon\n\nHow far?\n\nWithin 1 miles\n\n1\n3\n5\n10\n15\n20\n30\n40\n50\nWhat sounds fun?\nAnything\nBowling\nArcade\nMovies\nMini Golf\nEscape Room\nParks\nMuseum\nSkating\nWhat's the mood?\n\nPlayful\n\nCozy\nPlayful\nAdventurous\n\nOpen now only\n\nOnly activities with confirmed open hours\n\nFavorites only\n\nPick from date spots you've saved\n\nFewer parks\n\nKeep parks available, but make the park category much less likely\n\nLoaded through 1 miles\n\n2 activities match\n\nPick our date\nGive us options\nPick\nFavorites\nHistory\nSettings",
+    "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(!test.rpc.at(-1).response.includes(\"seasonalListing\"))\n\n    at runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:568:30)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:300:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:543:5"
+  }
+]

@@ -1,3 +1,28 @@
+# CONTROLLED-STOP MINIMAL CORRECTION / EXACT-HEAD RERUN — 2026-10-09 07:54 UTC / 02:54 CDT
+
+## CURRENT
+- Draft PR #60 now has exact corrective head **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**, parent **f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd**, same branch integration/missouri-astra-push-2026-10-09. Canonical source checkout repo-verified is clean at this exact head.
+- This single-file harness correction is authorized only by the owner's concrete-current-failure exception. No product, venue data, consumer copy, workflow, geometry assertion or research changed. Candidate still20additions/52records/32changedpaths versus production979d.
+- Exact new web **37901365412** and Android **37901365396** are IN PROGRESS. Current local typecheck/lint/auth-enabled migration-free production build started; full tests follow completed build. No predecessor PASS is substituted for these exact-head gates.
+- f767 failure is preserved: extra9 183PASS/2FAIL (Ballwin/O'Fallon mixed alias),925/927 scenarioPASS plus16smoke/19locationPASS; geometrySKIPPED. Original artifact11601694579 SHA2564d9b65d9976f99af5dfa83ce180dff4bdc48204442fdc87c7ae4f7398fdae8c8/444162027bytes/3570members/CRCPASS.
+- Root and independent actual screenshots and decoded RPC prove harness scope error: SpookySeasonOFF gives2ordinary within1mile, no target seasonal metadata. Broader15mile server core legitimately includes lifecycle-visible Brookdale/Creepyworld nearBallwin and Cobb nearO'Fallon. Target canonical IDs absent. Product behavior is consistent with current policy.
+- Correction replaces the one global raw-string absence check with decoded venue assertions: ordinary target aliases must retain only park and have no own seasonalListing/Availability/VisitNotes; all remaining seasonal rows must match reviewed lifecycle identity/listing, active clock and existing core radius. Existing card, radius, cache, saved, no-RPC and subsequent assertions retained.
+- Independent patchPASS SHA256047788fab1b6bc881785259934ccd6b94a77138b9b01f88e9f587f1d256dc83c. Actual edited assertion block replays45captured season-off casesPASS, reproduces both prior failures, rejects4contaminationnegativecontrols. Source harnessSHA2567e0c507793ab9b758d4e87f074f6f43f7eacbb00c9f425b801e7664f142a3a74. Full exact-head browser/geometry acceptance still pending.
+- Fresh prepublication readback: priorbranchf767/main979d; productionF1 READY/source979d. Main/protection/rollback/aliases retain07:36receipt; finalcloseoutrefresh required. No production/config/protection/signing mutation.
+
+## NEXT
+- Finish only these required exact-head reruns, original artifact integrity, screenshot/state inspection, geometry, final evidence archive, final fresh production/rollback/protection readback, and release determination. Preserve failed attempts.
+- At stable terminal gate publish/read back finalcanonicalcontinuity and STOP; no automatic continuation. All future named research/enrichment/residential/backlog work stays unexecuted.
+- If a new concrete failure occurs, diagnose from evidence and permit only the smallest justified correction, then required rerun. Do not reopen broad work.
+
+## HOLD
+- Release-ready status NOT YET earned. Current web/Android/local exact-head completion and final independent runtime acceptance pending.
+- Cadaver remains FACTUAL HOLD/RUNTIME HOLD: reliable attraction-specific2026operation/dates and supportedexpiry. Recoveredidentity/address/qualifiedpoint/contact retained; no newresearch.
+- Named six commercial, eight delta, separate residential, prior placement and expired decisions remain below. Physical Android/signing/Play and owner protection/waiver decision remain HOLD.
+- Previous f767 is now a FAILED preserved attempt, not the active releasecandidate. Prior open-ended NEXT instructions remain superseded by controlledstop.
+
+---
+
 # CONTROLLED-STOP CURRENT-HEAD FAILURE — 2026-10-09 07:46 UTC / 02:46 CDT
 
 ## CURRENT
