@@ -1,0 +1,691 @@
+{
+  "package": "ASTRA-DELTA6-INDEPENDENT-ELIGIBLE-R2",
+  "reviewedAt": "2026-10-09T05:10:17.690165+00:00",
+  "inputSha256": "a29096db200a38c405401a795a7ef8dae92974ba2963ed9b0cf734441dee7e09",
+  "verdict": "PASS: independent factual, destination, approximate-placement and consumer-copy review for five; immutable research binding complete. Runtime HOLD pending bounded implementation and exact-candidate validation.",
+  "acceptedIds": [
+    "DELTA6-WORLDS-OF-FUN",
+    "DELTA2-OZARK",
+    "DELTA3-BALLWIN",
+    "DELTA6-OFALLON",
+    "DELTA3-GROTTO"
+  ],
+  "records": [
+    {
+      "recordId": "DELTA6-WORLDS-OF-FUN",
+      "name": "Worlds of Fun \u2014 Halloween Haunt",
+      "category": "Haunted House",
+      "researchDecision": "PROPOSE FOR INDEPENDENT FACTUAL REVIEW",
+      "independentVerdict": "PASS: independent factual, destination, approximate-placement and consumer-copy review",
+      "runtimeStatus": "HOLD: implementation and exact-candidate validation pending",
+      "priority": 1,
+      "seasonYear": 2026,
+      "timeZone": "America/Chicago",
+      "contract": "ListingCompletenessV1",
+      "visitorAddress": "4545 Worlds of Fun Avenue, Kansas City, MO 64161",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "4545 Worlds of Fun Avenue, Kansas City, MO 64161"
+      },
+      "placement": {
+        "lat": 39.177249320447,
+        "lon": -94.489341242397,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=4545+Worlds+of+Fun+Avenue%2C+Kansas+City%2C+MO+64161&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-09T05:01:32.879431+00:00",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate",
+        "matchedAddress": "4545 WORLDS OF FUN AVE, KANSAS CITY, MO, 64161",
+        "receipt": "worlds-of-fun-census.json"
+      },
+      "exactActiveDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "expiryBasis": "date-only",
+      "openNowPolicy": "never",
+      "machineOpeningIntervals": null,
+      "autoRecurrence": false,
+      "fields": {
+        "identity": {
+          "value": "Public park Halloween Haunt",
+          "sourceUrls": [
+            "https://worldsoffun.enchantedparks.com/halloween-haunt/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09"
+        },
+        "visitorAddress": {
+          "value": "4545 Worlds of Fun Avenue, Kansas City, MO 64161",
+          "sourceUrls": [
+            "https://worldsoffun.enchantedparks.com/halloween-haunt/",
+            "https://worldsoffun.enchantedparks.com/park-info/calendar-hours/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09"
+        },
+        "exactActiveDates": {
+          "value": "2026-10-02,03,09,10,16,17,23,24,25,30,31",
+          "sourceUrls": [
+            "https://worldsoffun.enchantedparks.com/park-info/calendar-hours/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09",
+          "qualification": "Explicit October 2026 calendar entries named Halloween Haunt. October 29 Coasters & Creatures is passholder-only and excluded."
+        },
+        "hours": {
+          "value": {
+            "state": "partial",
+            "displayText": "Select October nights through October 31, 2026. Check the Halloween Haunt schedule before visiting."
+          },
+          "sourceUrls": [
+            "https://worldsoffun.enchantedparks.com/park-info/calendar-hours/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09",
+          "qualification": "Park hours and all-day event metadata are NOT haunt opening intervals. No noon opening or exact attraction closing inferred."
+        },
+        "admission": {
+          "value": "Haunted mazes included with valid park admission or eligible season pass.",
+          "sourceUrls": [
+            "https://worldsoffun.enchantedparks.com/halloween-haunt/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09",
+          "qualification": "No price or inventory guarantee; pass eligibility details remain on operator page."
+        },
+        "phone": {
+          "value": "816-454-4545",
+          "sourceUrls": [
+            "https://worldsoffun.enchantedparks.com/halloween-haunt/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09"
+        },
+        "ageRestriction": {
+          "value": "Haunt-day guests age 17 or younger require a chaperone age 21 or older; at most five minors per chaperone.",
+          "sourceUrls": [
+            "https://worldsoffun.enchantedparks.com/park-info/code-of-conduct/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09",
+          "qualification": "Use Haunt-specific code section, not generic 16-or-younger / six-guest FAQ."
+        },
+        "arrival": {
+          "value": "No re-entry after 6 p.m. on Haunt days. Review ID, bag and costume rules.",
+          "sourceUrls": [
+            "https://worldsoffun.enchantedparks.com/halloween-haunt/",
+            "https://worldsoffun.enchantedparks.com/park-info/code-of-conduct/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09"
+        },
+        "ticketUrl": {
+          "value": "https://worldsoffun.ticketspice.com/",
+          "sourceUrls": [
+            "https://worldsoffun.enchantedparks.com/halloween-haunt/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09",
+          "qualification": "Linked official ticket portal observed; no checkout performed."
+        }
+      },
+      "consumerDetailsProposal": [
+        "Halloween Haunt runs on selected October nights through October 31, 2026. Check the haunt schedule before visiting.",
+        "Haunted mazes are included with valid park admission or an eligible season pass.",
+        "Guests 17 and younger need a chaperone age 21 or older, with no more than five minors per chaperone. No re-entry after 6 p.m.; review ID, bag and costume rules.",
+        "Location is approximate."
+      ],
+      "limitations": [
+        "Frozen projection deliberately covers explicit October calendar only, not inferred September dates.",
+        "All dates must be bound to 2026 only.",
+        "Calendar has park-hours entries separate from haunt entries; keep hours partial.",
+        "No separate passholder-exclusive October 29 import."
+      ],
+      "runtimeRequirements": [
+        "Preserve conservative Open Now and no machine intervals",
+        "Apply current policy to cached and saved identities",
+        "Expire at cutoff without RPC completion; verify -1ms/exact/+1ms",
+        "No 2027 revival",
+        "Visitor-address Directions; approximate placement never used as a precise ride entrance",
+        "Independent copy review and current-season recheck before import"
+      ]
+    },
+    {
+      "recordId": "DELTA2-OZARK",
+      "name": "Ozark Nightmares Haunted House \u2014 The Viscount\u2019s Manor",
+      "category": "Haunted House",
+      "researchDecision": "PROPOSE FOR INDEPENDENT FACTUAL REVIEW",
+      "independentVerdict": "PASS: independent factual, destination, approximate-placement and consumer-copy review",
+      "runtimeStatus": "HOLD: implementation and exact-candidate validation pending",
+      "priority": 2,
+      "seasonYear": 2026,
+      "timeZone": "America/Chicago",
+      "contract": "ListingCompletenessV1",
+      "visitorAddress": "22599 Highway 32, Lebanon, MO 65536",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "22599 Highway 32, Lebanon, MO 65536"
+      },
+      "placement": {
+        "lat": 37.668169182421,
+        "lon": -92.619844432713,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=22599+Highway+32%2C+Lebanon%2C+MO+65536&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-09T05:01:32.879431+00:00",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate",
+        "matchedAddress": "22599 STATE HWY 32, LEBANON, MO, 65536",
+        "receipt": "ozark-census.json"
+      },
+      "exactActiveDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "expiryBasis": "date-only",
+      "openNowPolicy": "never",
+      "machineOpeningIntervals": null,
+      "autoRecurrence": false,
+      "fields": {
+        "identity": {
+          "value": "Ozark Nightmares Haunted House",
+          "sourceUrls": [
+            "https://www.facebook.com/OzarkNightmares/posts/ozark-nightmares-2026-seasonthe-viscounts-manor-will-be-open-september-25th26th-/1721554156641099/",
+            "https://www.thescarefactor.com/haunted-houses/missouri/ozark-nightmares-haunted-house/"
+          ],
+          "retrievalMethod": "indexed operator + directory",
+          "checkedAt": "2026-10-09"
+        },
+        "visitorAddress": {
+          "value": "22599 Highway 32, Lebanon, MO 65536",
+          "sourceUrls": [
+            "https://www.facebook.com/events/22599-highway-32-lebanon-mo/halloween-weekend-20-years-of-ozark-nightmares-haunted-house-and-corn-maze-the-v/1445243187544330/",
+            "https://www.thescarefactor.com/haunted-houses/missouri/ozark-nightmares-haunted-house/"
+          ],
+          "retrievalMethod": "indexed operator event corroborated by directory",
+          "checkedAt": "2026-10-09"
+        },
+        "exactActiveDates": {
+          "value": "September 25\u201326; October 2\u20133,9\u201310,16\u201317,23\u201324,30\u201331, 2026",
+          "sourceUrls": [
+            "https://www.facebook.com/OzarkNightmares/posts/ozark-nightmares-2026-seasonthe-viscounts-manor-will-be-open-september-25th26th-/1721554156641099/"
+          ],
+          "retrievalMethod": "indexed operator post; direct Facebook open throttled",
+          "checkedAt": "2026-10-09"
+        },
+        "hours": {
+          "value": {
+            "state": "unknown",
+            "displayText": "Check the operator for nightly hours."
+          },
+          "sourceUrls": [
+            "https://www.facebook.com/OzarkNightmares/posts/ozark-nightmares-2026-seasonthe-viscounts-manor-will-be-open-september-25th26th-/1721554156641099/"
+          ],
+          "retrievalMethod": "not established",
+          "checkedAt": "2026-10-09",
+          "qualification": "Search feed surfaced a Wednesday Halloween time fragment incompatible with 2026; rejected, no 11 p.m. cutoff inferred."
+        }
+      },
+      "consumerDetailsProposal": [
+        "The Viscount\u2019s Manor opens September 25\u201326 and October 2\u20133, 9\u201310, 16\u201317, 23\u201324 and 30\u201331, 2026.",
+        "Check the operator for nightly hours and admission.",
+        "Location is approximate."
+      ],
+      "limitations": [
+        "2026 schedule is indexed first-party evidence; direct Facebook page unavailable. Independent reviewer must accept/reproduce this evidence before PASS.",
+        "DMO 2020-path event currently describing 2025 is not used to bind 2026.",
+        "Unknown admission availability, restrictions and closing times remain explicit unknowns."
+      ],
+      "runtimeRequirements": [
+        "Preserve conservative Open Now and no machine intervals",
+        "Apply current policy to cached and saved identities",
+        "Expire at cutoff without RPC completion; verify -1ms/exact/+1ms",
+        "No 2027 revival",
+        "Visitor-address Directions; approximate placement never used as a precise ride entrance",
+        "Independent copy review and current-season recheck before import"
+      ]
+    },
+    {
+      "recordId": "DELTA3-BALLWIN",
+      "name": "Tunnel of Terror \u2014 Tommy\u2019s Express Ballwin",
+      "category": "Other Halloween / Fall",
+      "researchDecision": "PROPOSE FOR INDEPENDENT FACTUAL REVIEW",
+      "independentVerdict": "PASS: independent factual, destination, approximate-placement and consumer-copy review",
+      "runtimeStatus": "HOLD: implementation and exact-candidate validation pending",
+      "priority": 3,
+      "seasonYear": 2026,
+      "timeZone": "America/Chicago",
+      "contract": "ListingCompletenessV1",
+      "visitorAddress": "14918 Manchester Road, Ballwin, MO 63011",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "14918 Manchester Road, Ballwin, MO 63011"
+      },
+      "placement": {
+        "lat": 38.592934080507,
+        "lon": -90.543467455396,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=14918+Manchester+Road%2C+Ballwin%2C+MO+63011&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-09T05:01:32.879431+00:00",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate",
+        "matchedAddress": "14918 MANCHESTER RD, BALLWIN, MO, 63011",
+        "receipt": "ballwin-census.json"
+      },
+      "exactActiveDates": [
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "listingExpiresAt": "2026-10-24T21:30:00-05:00",
+      "expiryBasis": "exact",
+      "openNowPolicy": "never",
+      "machineOpeningIntervals": null,
+      "autoRecurrence": false,
+      "fields": {
+        "identity": {
+          "value": "Haunted car wash",
+          "sourceUrls": [
+            "https://tommys-express.com/locations/mo156/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09"
+        },
+        "visitorAddress": {
+          "value": "14918 Manchester Road, Ballwin, MO 63011",
+          "sourceUrls": [
+            "https://tommys-express.com/locations/mo156/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09"
+        },
+        "exactActiveDates": {
+          "value": "October 23\u201324, 2026",
+          "sourceUrls": [
+            "https://tommys-express.com/locations/mo156/",
+            "https://www.facebook.com/events/14918-manchester-rd-ballwin-mo-63011/tunnel-of-terror-tommys-express-ballwin/1482904123658769/",
+            "https://www.facebook.com/events/14918-manchester-rd-ballwin-mo-63011/tunnel-of-terror-tommys-express-ballwin/1482904133658768/"
+          ],
+          "retrievalMethod": "indexed location-specific operator content; direct location HTML has empty event cards",
+          "checkedAt": "2026-10-09"
+        },
+        "hours": {
+          "value": {
+            "state": "partial",
+            "displayText": "October 23\u201324, 2026, 6:30\u20139:30 p.m."
+          },
+          "sourceUrls": [
+            "https://tommys-express.com/locations/mo156/"
+          ],
+          "retrievalMethod": "indexed location-specific operator content",
+          "checkedAt": "2026-10-09"
+        },
+        "phone": {
+          "value": "636-224-8278",
+          "sourceUrls": [
+            "https://tommys-express.com/locations/mo156/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09"
+        },
+        "admission": {
+          "value": "Check location for current per-vehicle admission.",
+          "sourceUrls": [
+            "https://tommys-express.com/locations/mo156/"
+          ],
+          "retrievalMethod": "indexed location source; price intentionally omitted",
+          "checkedAt": "2026-10-09"
+        }
+      },
+      "consumerDetailsProposal": [
+        "Haunted car wash on October 23\u201324, 2026, 6:30\u20139:30 p.m.",
+        "Check this location\u2019s event information for vehicle rules and admission.",
+        "Location is approximate."
+      ],
+      "limitations": [
+        "Direct 200 HTML and extracted page do not contain event details; indexed source date binding requires independent corroboration.",
+        "Ordinary daily wash hours not substituted for event schedule.",
+        "Category requires existing Other Halloween / Fall semantics; do not label walk-through haunted house.",
+        "Drive-through attraction: do not promise a precise pedestrian or rideshare entrance."
+      ],
+      "runtimeRequirements": [
+        "Preserve conservative Open Now and no machine intervals",
+        "Apply current policy to cached and saved identities",
+        "Expire at cutoff without RPC completion; verify -1ms/exact/+1ms",
+        "No 2027 revival",
+        "Visitor-address Directions; approximate placement never used as a precise ride entrance",
+        "Independent copy review and current-season recheck before import"
+      ]
+    },
+    {
+      "recordId": "DELTA6-OFALLON",
+      "name": "Tunnel of Terror \u2014 Tommy\u2019s Express O\u2019Fallon",
+      "category": "Other Halloween / Fall",
+      "researchDecision": "PROPOSE FOR INDEPENDENT FACTUAL REVIEW",
+      "independentVerdict": "PASS: independent factual, destination, approximate-placement and consumer-copy review",
+      "runtimeStatus": "HOLD: implementation and exact-candidate validation pending",
+      "priority": 4,
+      "seasonYear": 2026,
+      "timeZone": "America/Chicago",
+      "contract": "ListingCompletenessV1",
+      "visitorAddress": "101 Fallon Loop Road, O\u2019Fallon, MO 63368",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "101 Fallon Loop Road, O\u2019Fallon, MO 63368"
+      },
+      "placement": {
+        "lat": 38.764203107345,
+        "lon": -90.700048687725,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=101+Fallon+Loop+Road%2C+O+Fallon%2C+MO+63368&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-09T05:01:32.879431+00:00",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate",
+        "matchedAddress": "101 FALLON LOOP RD, O FALLON, MO, 63368",
+        "receipt": "ofallon-census.json"
+      },
+      "exactActiveDates": [
+        "2026-10-23",
+        "2026-10-24"
+      ],
+      "listingExpiresAt": "2026-10-24T21:30:00-05:00",
+      "expiryBasis": "exact",
+      "openNowPolicy": "never",
+      "machineOpeningIntervals": null,
+      "autoRecurrence": false,
+      "fields": {
+        "identity": {
+          "value": "Haunted car wash",
+          "sourceUrls": [
+            "https://tommys-express.com/locations/mo77/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09"
+        },
+        "visitorAddress": {
+          "value": "101 Fallon Loop Road, O\u2019Fallon, MO 63368",
+          "sourceUrls": [
+            "https://tommys-express.com/locations/mo77/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09"
+        },
+        "exactActiveDates": {
+          "value": "October 23\u201324, 2026",
+          "sourceUrls": [
+            "https://tommys-express.com/locations/mo77/"
+          ],
+          "retrievalMethod": "indexed location-specific operator content, turn40search2",
+          "checkedAt": "2026-10-09"
+        },
+        "hours": {
+          "value": {
+            "state": "partial",
+            "displayText": "October 23\u201324, 2026, 6:30\u20139:30 p.m."
+          },
+          "sourceUrls": [
+            "https://tommys-express.com/locations/mo77/"
+          ],
+          "retrievalMethod": "indexed location-specific operator content, turn40search2",
+          "checkedAt": "2026-10-09"
+        },
+        "phone": {
+          "value": "636-271-5970",
+          "sourceUrls": [
+            "https://tommys-express.com/locations/mo77/"
+          ],
+          "retrievalMethod": "direct operator page",
+          "checkedAt": "2026-10-09"
+        }
+      },
+      "consumerDetailsProposal": [
+        "Haunted car wash on October 23\u201324, 2026, 6:30\u20139:30 p.m.",
+        "Check this location\u2019s event information for vehicle rules and admission.",
+        "Location is approximate."
+      ],
+      "limitations": [
+        "Independent evidence confidence lower than Ballwin: direct HTML event cards blank; exact dates/hours depend on saved location-specific search receipt.",
+        "Nationwide Tunnel of Terror campaign cannot prove location dates; Ballwin schedule was not copied as proof.",
+        "No price imported; no exact ticket inventory claim.",
+        "Drive-through classification and ride semantics need product/runtime review."
+      ],
+      "runtimeRequirements": [
+        "Preserve conservative Open Now and no machine intervals",
+        "Apply current policy to cached and saved identities",
+        "Expire at cutoff without RPC completion; verify -1ms/exact/+1ms",
+        "No 2027 revival",
+        "Visitor-address Directions; approximate placement never used as a precise ride entrance",
+        "Independent copy review and current-season recheck before import"
+      ]
+    },
+    {
+      "recordId": "DELTA3-GROTTO",
+      "name": "The Haunted Grotto",
+      "category": "Haunted House",
+      "researchDecision": "PROPOSE FOR INDEPENDENT FACTUAL REVIEW",
+      "independentVerdict": "PASS: independent factual, destination, approximate-placement and consumer-copy review",
+      "runtimeStatus": "HOLD: implementation and exact-candidate validation pending",
+      "priority": 5,
+      "seasonYear": 2026,
+      "timeZone": "America/Chicago",
+      "contract": "ListingCompletenessV1",
+      "visitorAddress": "3102 Aad Grotto Road, Poplar Bluff, MO 63901",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "3102 Aad Grotto Road, Poplar Bluff, MO 63901"
+      },
+      "placement": {
+        "lat": 36.7950117,
+        "lon": -90.4314449,
+        "basis": "address-geocode",
+        "sourceUrl": "https://www.waze.com/live-map/directions/us/mo/poplar-bluff/3102-aad-grotto-rd?to=place.ChIJyQVQh72614cRiUJfLHYyszA",
+        "checkedAt": "2026-10-09T05:03:13.790045+00:00",
+        "precisionLabel": "Approximate address-derived placement; not an entrance or parking coordinate",
+        "matchedAddress": "3102 Aad Grotto Rd, Poplar Bluff, MO 63901",
+        "receipt": "Grotto-Placement-Addendum-R2.json"
+      },
+      "exactActiveDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "listingExpiresAt": "2026-10-31T22:00:00-05:00",
+      "expiryBasis": "exact",
+      "openNowPolicy": "never",
+      "machineOpeningIntervals": null,
+      "autoRecurrence": false,
+      "fields": {
+        "identity": {
+          "value": "The Haunted Grotto",
+          "sourceUrls": [
+            "https://www.facebook.com/events/3102-aad-grotto-road-poplar-bluff-mo/the-haunted-grotto-2026/27777216921952770/"
+          ],
+          "retrievalMethod": "indexed operator event",
+          "checkedAt": "2026-10-09"
+        },
+        "visitorAddress": {
+          "value": "3102 Aad Grotto Road, Poplar Bluff, MO 63901",
+          "sourceUrls": [
+            "https://www.facebook.com/events/3102-aad-grotto-road-poplar-bluff-mo/the-haunted-grotto-2026/27777216921952770/",
+            "https://www.thescarefactor.com/haunted-houses/missouri/the-haunted-grotto/"
+          ],
+          "retrievalMethod": "indexed operator event URL/location + direct directory",
+          "checkedAt": "2026-10-09"
+        },
+        "exactActiveDates": {
+          "value": "Fridays and Saturdays October 9\u201331, 2026",
+          "sourceUrls": [
+            "https://www.facebook.com/events/3102-aad-grotto-road-poplar-bluff-mo/the-haunted-grotto-2026/27777216921952770/",
+            "https://semodollarsaver.com/product/1-admission-ticket-to-the-haunted-grotto-10-9-10-31/"
+          ],
+          "retrievalMethod": "indexed operator event + local voucher seller",
+          "checkedAt": "2026-10-09",
+          "qualification": "Finite exact dates expanded only within explicit 2026 period; no annual recurrence."
+        },
+        "hours": {
+          "value": {
+            "state": "partial",
+            "displayText": "7\u201310 p.m. on listed 2026 dates."
+          },
+          "sourceUrls": [
+            "https://www.facebook.com/events/3102-aad-grotto-road-poplar-bluff-mo/the-haunted-grotto-2026/27777216921952770/",
+            "https://semodollarsaver.com/product/1-admission-ticket-to-the-haunted-grotto-10-9-10-31/"
+          ],
+          "retrievalMethod": "indexed operator event + voucher seller",
+          "checkedAt": "2026-10-09"
+        },
+        "admission": {
+          "value": "$20 at the door",
+          "sourceUrls": [
+            "https://www.facebook.com/events/3102-aad-grotto-road-poplar-bluff-mo/the-haunted-grotto-2026/27777216921952770/"
+          ],
+          "retrievalMethod": "indexed operator event",
+          "checkedAt": "2026-10-09",
+          "qualification": "Omit from consumer copy if inventory/admission freshness not independently reproduced."
+        }
+      },
+      "consumerDetailsProposal": [
+        "Open October 9\u201310, 16\u201317, 23\u201324 and 30\u201331, 2026, 7\u201310 p.m.",
+        "Check the operator before visiting for admission and current conditions.",
+        "Location is approximate."
+      ],
+      "limitations": [
+        "Census no-match preserved. Waze public exact-address geocode recovered; independent reviewer must validate address binding and qualification before accepting.",
+        "Indexed operator and seller evidence only. Direct event throttled; seller direct web returned404 and raw fetch403.",
+        "Morty September opening conflicts with operator October9; operator is prioritized, conflict retained.",
+        "Search snippets append unrelated 1097 Highway142 text; do not replace venue address with feed contaminant."
+      ],
+      "runtimeRequirements": [
+        "Preserve conservative Open Now and no machine intervals",
+        "Apply current policy to cached and saved identities",
+        "Expire at cutoff without RPC completion; verify -1ms/exact/+1ms",
+        "No 2027 revival",
+        "Visitor-address Directions; approximate placement never used as a precise ride entrance",
+        "Independent copy review and current-season recheck before import"
+      ]
+    }
+  ],
+  "sourceChecks": {
+    "sourceManifestFiles": 37,
+    "sourceManifestMismatches": 0,
+    "CensusExactAddressMatches": 4,
+    "WazeExactAddressMatches": 1,
+    "independentlyReproducedIndexedSeasonRecords": [
+      "DELTA2-OZARK",
+      "DELTA3-BALLWIN",
+      "DELTA6-OFALLON",
+      "DELTA3-GROTTO"
+    ],
+    "indexedSourcesPreservedAsIndexed": true,
+    "worldsDirectCalendarExplicitOctoberDates": 11,
+    "noCancellationEvidenceObservedInReviewedSources": true
+  },
+  "copyAmendments": [
+    {
+      "recordId": "DELTA6-WORLDS-OF-FUN",
+      "change": "Add no more than five minors per chaperone to existing reviewed age requirement sentence.",
+      "source": "Direct operator Haunt-specific Code of Conduct; maxfive age17oryounger,21+chaperone. Generic maxsix age16oryounger policy is explicitly non-Haunt and rejected."
+    }
+  ],
+  "runtimeConstraints": [
+    "Five limited-confidence records, approximate placement only, visitor-address Directions, no precise ride point, null machine intervals, never Open Now.",
+    "Worlds and Ozark date-only expiry November1 midnightCDT. Do not infer haunt operating intervals from parkhours or event metadata.",
+    "Ballwin and O\u2019Fallon exact October23/24 18:30\u201321:30; OtherHalloweenFall category, drive-through vehicle experience, no walk-through or guaranteed pedestrian entrance.",
+    "Grotto exact eight Fri/Sat dates October9\u201331, final22:00CDT. Finite2026-only expansion, no2027recurrence.",
+    "Worlds explicit October29 passholder-only event excluded.",
+    "Apply currentpolicy to cache/saved aliases and provider enrichment. Exactcutoff plus/minus1ms, pendingRPC expiry, no2027 revival required."
+  ],
+  "preservedLimitations": [
+    "Ozark/Grotto operatorFacebook direct reads throttled. Indexed exact2026source independently reproduced and retained; not described as direct-origin success.",
+    "Both Tommy\u2019s directlocation HTML event cards blank. Fresh indexed location-specific2026 dates/hours independently reproduced for each, not copied across locations.",
+    "Grotto failed Census/Nominatim and voucher direct404/403 retained. Waze public exactaddress point independently verified from venue.latLng, not mapbounds.",
+    "No assertion all seasonal ticket inventory exists or stableprices. Grotto freshindexed $20door admission omitted conservatively from consumer copy.",
+    "Statewide discovery18leads deduped against134historical/current32/current11/priorDelta2\u20135; no claim inventory exhaustive, external historical sweep unavailable.",
+    "No residential record promoted. Enrichment proposals remain separate evidence-only pending independent source confirmation."
+  ],
+  "publicationBinding": {
+    "commit": "926199bd369c3024c200952da27bc937eefb930c",
+    "tree": "7e2d46c49334d8dcfb7d14c0e50cf19f9e605ed9",
+    "parent": "4f17f5235f865dd3e215e9c5400e1a854871f7f6",
+    "projectionPath": "audit/astra-statewide-delta6-2026-10-09/Priority-Projections-R2.json",
+    "projectionSha256": "a29096db200a38c405401a795a7ef8dae92974ba2963ed9b0cf734441dee7e09",
+    "exactPublishedSourceBlobs": 33,
+    "rootGeneratedAdditionalPaths": [
+      "Publication-Inventory.json"
+    ],
+    "mismatches": [],
+    "scope": "All33 locally-reviewed published source files now byte-identical, including five corrected rawHTML files. Projection unchanged. Root-generated publication inventory and raw-byte correction receipt separate."
+  },
+  "runtimePass": false,
+  "releaseAuthority": "No merge/deploy/production promotion or waiver.",
+  "priorPublicationAttempt": {
+    "commit": "011f9356e72d8d3cfc2ffa473ee7ac1a6fed5f3f",
+    "status": "Publication-integrity HOLD due uploader CRLF-to-LF normalization of fiveHTML sources. Facts passed; exactraw correction now resolved.",
+    "dualHashReceipt": [
+      {
+        "path": "ballwin-operator.html",
+        "rawSha256": "8dd96949ffc1aa9bfffd95ef7d9e8aebf4e330003ffc09dbee4d7244611f991f",
+        "publishedSha256": "a643a51dea0f68af26e3d5425d320f8f23a2ad0211517922ab2b52c5ec6325a4",
+        "normalization": "CRLF to LF only, full equality independently proved",
+        "rawBytes": 330368,
+        "publishedBytes": 330186
+      },
+      {
+        "path": "ofallon-operator.html",
+        "rawSha256": "c87d4b66ff99f39f0d1f5b9f9dea8e2a36da0c60cb6a35f0eb443db6dd1bfcd7",
+        "publishedSha256": "677f949f8580a64ef32de9506ece3b920bebe949df6fba3afe595765b537512d",
+        "normalization": "CRLF to LF only, full equality independently proved",
+        "rawBytes": 330271,
+        "publishedBytes": 330089
+      },
+      {
+        "path": "worlds-calendar.html",
+        "rawSha256": "85147fa2b46c33ffdb1f7035323e64ac75409f2a6937cdb8fe421abf6a1506ae",
+        "publishedSha256": "ab067d834f23435d7d5ff2678de621bbb296c5eb8fc87d4266c36540d4f4c05b",
+        "normalization": "CRLF to LF only, full equality independently proved",
+        "rawBytes": 495065,
+        "publishedBytes": 494484
+      },
+      {
+        "path": "worlds-code.html",
+        "rawSha256": "700a19d3080a4c117c39417975983c15d5fc05efa5dee030f8d66bb8b2ebea5f",
+        "publishedSha256": "7129d6da5109f2a95f6baa0bb1138fd83e822bd810a5d51f776d577df872f596",
+        "normalization": "CRLF to LF only, full equality independently proved",
+        "rawBytes": 209949,
+        "publishedBytes": 209368
+      },
+      {
+        "path": "worlds-haunt.html",
+        "rawSha256": "8baf218a41fbe5dafd8502e3c6b256c624485a5612e3a2ca7c4d5fa770826b99",
+        "publishedSha256": "f06a7ceb0de6f1b023437c592438587e57fa3556576559e02b9c0b181383f278",
+        "normalization": "CRLF to LF only, full equality independently proved",
+        "rawBytes": 248914,
+        "publishedBytes": 248333
+      }
+    ]
+  },
+  "copyNormalizations": [
+    "Literal backslash-u2013/u2014/u2019 decoded to actual en dash/em dash/apostrophe in runtime names/address/hours/Details; typography only. Preserve raw projection and log per-field normalization."
+  ]
+}

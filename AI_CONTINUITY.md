@@ -1,3 +1,18 @@
+# Pick For Us — Five Delta Records Independently Cleared; Twenty-Record Candidate Target (2026-10-09)
+
+## CURRENT
+**Independent factual/destination/placement/lifecycle/consumer PASS5**: Worlds of Fun Halloween Haunt, Ozark Nightmares Haunted House, Tunnel of Terror Ballwin, Tunnel of Terror O’Fallon, The Haunted Grotto. Final audit/astra-delta6-independent-2026-10-09/Delta6-Independent-Final-R2.json SHA256 **4812ad5a38d1fb11ce8ba711ab3c2ebc71fc33c078cdddb1aa27c1ce5d673c5b** binds correction926199bd; all33 reviewed source blobs match exact bytes, including restored5HTML. Exact eligible subset, earlier normalized-publication receipt and final binding preserved. Worlds copy includes chaperone maximum5 minors. Approved typography decoding changes presentation only. No runtime PASS yet.
+
+**20 additions are now data-cleared for the cumulative candidate: original11 + commercial4 + delta5.** Eleven and commercial4 currently implemented locally; delta5 author starts after this readback. All32 existing record data/copy stay unchanged. Two enrichments independently reviewed for fresh evidence/copy are retained evidence-only to avoid unnecessary runtime churn; exact sentences/diffs and source receipt are in Enrichment-Two-Independent-R1.json, SHA **cef4ef079260642fc1576dfa03ec4ae45f7291d8ae1f226b51288fab81844ab7**.
+
+## NEXT
+Import exact approved delta5 into separate catalog, extend complete extras browser/geometry/source-binding tests alongside original11 and prior32 suites. Cadaver remains a separate last research decision; include only a defensible independently accepted explicit2026 subset. Freeze and publish cumulative draftPR with exactSHA/tree/parent/paths; run full/safeauthbuild/typecheck/lint/hostedCI/Android/browser/layout/cache/Directions/expiry and independent exact-candidate review. Stop at owner release-decision gate.
+
+## HOLD
+Cadaver not yet cleared; commercial6 and residential/uncertain leads stay held. Indexed/direct distinctions and source conflicts remain, no recurrence or missing-hours invention. New material admissions/age/conditions stay concise consumer copy. Fresh repeat baseline still main979d83aede9d66163e1ebaed9ad5b219cb637882 / treea7dbb32947c0a0daf4864346b0d212477fc9a11b; productiondpl_F1XiMcc9AUuykunNamr87R3re7gP READY/source979d; retained BCd rollback. No production change. Local Chromium unavailable; hosted proof needed. Six warnings/narrowDirections/physicalAndroid limits and no merge/deploy/settings/waiver/signing/Play authority persist.
+
+PARENT COMMIT **926199bd369c3024c200952da27bc937eefb930c**. Prior history follows verbatim.
+
 # Pick For Us — Delta6 Raw Evidence Byte Preservation Correction (2026-10-09)
 
 ## CURRENT

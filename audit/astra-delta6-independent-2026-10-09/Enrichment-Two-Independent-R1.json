@@ -1,0 +1,68 @@
+{
+  "package": "ASTRA-ENRICHMENT-TWO-INDEPENDENT-R1",
+  "sourceCommit": "011f9356e72d8d3cfc2ffa473ee7ac1a6fed5f3f",
+  "sourceSha256": "040e29817eb840330dd8eb70b2ec726f0c7df34ee0bf5885e1d37463cd4e7b6c",
+  "verdict": "PASS factual and exact consumer-copy additions; optional implementation only, no runtime change required.",
+  "records": [
+    {
+      "recordId": "MO26-085",
+      "canonicalId": "date-night-mo26-085-brookdale-farms",
+      "catalogMain": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+      "presentationPath": "src/lib/date-night/seasonal-presentation-catalog.ts",
+      "existingDetails": [
+        "Fall Festival runs September 11\u2013November 8, 2026. Check the date-specific calendar because activities and closing times vary.",
+        "Corn maze and pumpkin patch; activities vary with date, weather and staffing.",
+        "Dogs require a waiver at check-in.",
+        "Location is approximate."
+      ],
+      "proposedDetails": [
+        "Fall Festival runs September 11\u2013November 8, 2026. Check the date-specific calendar because activities and closing times vary.",
+        "Corn maze and pumpkin patch; activities vary with date, weather and staffing.",
+        "Dogs require a waiver at check-in.",
+        "The Hollows haunted trail uses separate admission and its own October calendar.",
+        "Location is approximate."
+      ],
+      "addedSentence": "The Hollows haunted trail uses separate admission and its own October calendar.",
+      "sourceUrl": "https://www.brookdalefarms.com/the-hollows",
+      "decision": "INDEPENDENT FACTUAL/COPY PASS; optional runtime import pending root decision",
+      "scope": "Optional sentence only. Do not add HauntedHouse category to FallFestival, overwrite currenthours/cutoff, import2025FAQprices, or borrow SummerFest parking7997JimWeberRd."
+    },
+    {
+      "recordId": "MO26-124",
+      "canonicalId": "date-night-mo26-124-hotel-of-terror",
+      "catalogMain": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+      "presentationPath": "src/lib/date-night/seasonal-presentation-catalog.ts",
+      "existingDetails": [
+        "Selected dates September 11\u2013October 31, 2026; doors open 7 p.m. Closing time varies with attendance.",
+        "Liability waiver with fingerprint signature required. Loud sound, strobes, darkness, fog and wet conditions.",
+        "Location is approximate."
+      ],
+      "proposedDetails": [
+        "Selected dates September 11\u2013October 31, 2026; doors open 7 p.m. Closing time varies with attendance.",
+        "Liability waiver with fingerprint signature required. Loud sound, strobes, darkness, fog and wet conditions.",
+        "A combo pass with Dungeons of Doom includes transfer rides between the two haunts.",
+        "Location is approximate."
+      ],
+      "addedSentence": "A combo pass with Dungeons of Doom includes transfer rides between the two haunts.",
+      "sourceUrl": "https://www.hotelofterror.com/",
+      "decision": "INDEPENDENT FACTUAL/COPY PASS; optional runtime import pending root decision",
+      "scope": "Optional arrival/admission note only; do not promise specific ridevehicle or availability, and do not add directory unsupported last-ever-season claim."
+    }
+  ],
+  "sourceChecks": [
+    {
+      "recordId": "MO26-085",
+      "freshSource": "https://www.brookdalefarms.com/the-hollows",
+      "ref": "turn57view0",
+      "verified": "Separate ticket product and October2026calendar directly present. Other contemporaneous events require separateticket. 2025FAQprice rejected; no price imported."
+    },
+    {
+      "recordId": "MO26-124",
+      "freshSource": "https://www.hotelofterror.com/",
+      "ref": "turn57view1",
+      "verified": "Operator2026homepage explicitly combo admission bothhaunts plus hayand/orhearse transfer rides. Approvedcopy does not guaranteevehicletype, stock or time."
+    }
+  ],
+  "runtimeScope": "Only append approved additive sentence if included; preserve all existing lifecycle, routing, categories, opening, and stronger facts. No consumer-facing audit prose.",
+  "releaseAuthority": "No release authority"
+}
