@@ -1,3 +1,16 @@
+# Pick For Us — Eleven Freshness Independently Reaffirmed; Import Authorized (2026-10-09)
+
+## CURRENT
+**Independent PASS: all eleven unchanged exact projections are reaffirmed for bounded implementation.** Review independently bound published research cdee1341ed1d92b2ce6b66338cff6bd20a2bf922 and ledger d1dd4c5395000e32de47ee35d9b2d19d5d6c79942e18f8f071a1705e50c13136. Final immutable-binding report: audit/astra-eleven-independent-2026-10-09/Eleven-Freshness-Independent-Final.json and .md. Original pending-binding R1 preserved. No fresh HOLD, stale exclusion, changed projection or expired/rejected record. Prior exact9+2 subset authority and all source limitations remain.
+
+## NEXT
+Author now imports the11 on integration/missouri-astra-push-2026-10-09 using existing catalog/presentation/current-policy/search mechanisms, with source provenance and tests. Browser/geometry/CI additions are prepared; all previous suites retained. New Cadaver/commercial/delta proposals remain separate pending independent review and may stack deliberately if bounded/compatible. Runtime and exact-head validation are not yet complete.
+
+## HOLD
+No runtime/browser/release PASS yet. Local browser executable unavailable after failed standard installer; hosted CI browser proof required. Cadaver current-year source/date binding under careful verification; ten commercial and additional historical/delta leads still held unless independently re-cleared. Residential product decision remains separate. Six inherited lint warnings, narrow Directions clipping and physical Android/WebView/GPS persist. Main979d83a/treea7db and productiondpl_F1XiMcc9AUuykunNamr87R3re7gP READY/source979d remain the last freshly verified baseline; rollbackdpl_BCdD3eWRXk6UEN2FNJQE88r18VXv READY/source213502. No merge/deploy/settings/waiver/signing/Play authority.
+
+PARENT COMMIT **cdee1341ed1d92b2ce6b66338cff6bd20a2bf922**; TREE **262cf06ffbc6dc18054c1638be5923ff87e70a29**. Prior history follows verbatim.
+
 # Pick For Us — Eleven Freshness Research PASS, Independent Confirmation Pending (2026-10-09)
 
 ## CURRENT
