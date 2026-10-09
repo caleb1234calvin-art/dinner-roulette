@@ -1,3 +1,20 @@
+# ASTRA MATERIAL GATE — 2026-10-09 — candidate5 exact Android artifact independent PASS
+
+## CURRENT
+- PR #60 frozen **f767a8d2e8c6ffe1120dd5f1bb73d9215b8dfafd**, tree **fdfbf4045ea69f7a9b610a434243fc43f2c9f338** unchanged; authoritative clean local checkout repo-verified.
+- Exact-head Android **37894492778 / job113702618918 SUCCESS**; signing job113703729015 SKIPPED. Main validation artifact **11600235442**,6,866,410bytes,SHA256 **4af9f645307906614108c88245e4a1d77841c753a474862cc833eab58c6b9de5**. Raw lint artifact **11599574262**,24,070bytes,SHA256 **5ed861a9a56acb7d01f3041f681bb89b34892decec4d8be147bd110ef4c80c36**.
+- Root and independent review verified both CRC/digests, internal source revisionf767, both binary checksums, unsigned AAB/no signature entries, bundletool/manifest agreement and expected missing-key failure. AAB **4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee** unchanged. Raw lint independently14warnings/0errors, same inherited baseline.
+- Independent report **8a4857f3bc0123b41fbe5b3c7e35e89c129ad3bfa03e17bae91f8ed0308426f8** at audit/astra-runtime-independent-2026-10-09/Android-Artifact-Independent-f767a8d.json. Full current Android decoded job log preserved locally for final evidence archive. Artifact label contains GitHub synthetic merge identity9d64f51, but internal checked source and run head are independently verifiedf767; no production merge occurred.
+- Web **37894492761 / job113702618075** continues through V1 after earlier ordinary/legacytwo PASS. Local1018PASS/4documentedskips/typecheck/lint/safeauthbuild and independent source/delta PASS remain.
+## NEXT
+- Complete every current-head web suite, extra-nine and geometry; inspect full artifact and actual screenshots independently before final acceptance.
+- Save full evidence, refresh release identities/protection, publish and read back final owner-decision checkpoint only after complete PASS.
+## HOLD
+- Current final browser/runtime/geometry acceptance pending. Physical Android/WebView/GPS, upload signing and Play remain outside automated readiness.
+- All named data HOLDs and fresh owner waiver/release decision remain. No production/main/config/protection/signing changes.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 06:43 UTC — candidate5 local and independent delta PASS
 
 ## CURRENT
