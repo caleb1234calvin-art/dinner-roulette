@@ -1,0 +1,843 @@
+{
+  "package": "ASTRA-COMMERCIAL-FOUR-INDEPENDENT-FINAL",
+  "reviewed_at": "2026-10-09T05:05:35.596698+00:00",
+  "verdict": "PASS: independent factual, destination, approximate-placement and consumer-copy review. Runtime HOLD pending bounded implementation and exact-candidate validation.",
+  "publication_bindings": [
+    {
+      "commit": "a1977764a79c692f0a136ce910d1b18b76d6453b",
+      "treeParent": "bd469fc067d8434a480c52652537915eaf96e76b 6c3515d2cad7c8266b41c53f5a92d4da1db753d0",
+      "verifiedPublishedFiles": 83,
+      "mismatches": [],
+      "relocatedLocalFiles": [
+        "receipts/feemster-arcgis.body",
+        "receipts/feemster-arcgis.receipt.json",
+        "receipts/feemster-osm-node.body",
+        "receipts/feemster-osm-node.receipt.json"
+      ]
+    },
+    {
+      "commit": "f03c885ec7aeb11ee4171fcf7f96eae05b534af5",
+      "treeParent": "f65a9e0136007613a575a6338a07a6b9897e7fe4 a1977764a79c692f0a136ce910d1b18b76d6453b",
+      "verifiedPublishedFiles": 7,
+      "mismatches": []
+    }
+  ],
+  "source_research": {
+    "R1_commit": "a1977764a79c692f0a136ce910d1b18b76d6453b",
+    "R1_research_sha256": "daa7a61c2f5ff9f4ff4a90fa0a870ba03134fe858ed448085f4e694210ca62cc",
+    "R1_projections_sha256": "1dcff3603d5cdf2070ff2b26c15c22de56c5144dde526f540a1c2ef4b7bd7f27",
+    "R2_commit": "f03c885ec7aeb11ee4171fcf7f96eae05b534af5",
+    "R2_supplement_sha256": "d3f545c0d15f8286e79091a5ea668264ea071ceb873de38de87a90706b12077e"
+  },
+  "accepted_ids": [
+    "MO26-002",
+    "DELTA2-SHEPHERD-LANTERN",
+    "DELTA2-HOLLOWS",
+    "MO26-039"
+  ],
+  "records": [
+    {
+      "contract": "Seasonal Listing Completeness V1 staged radius path",
+      "season_year": 2026,
+      "timezone": "America/Chicago",
+      "research_decision": "PASS PROPOSAL ONLY; INDEPENDENT REVIEW PENDING",
+      "independent_verification": "PASS: independent factual/destination/approximate-placement/consumer-copy review, immutable research binding complete",
+      "runtime_status": "HOLD: implementation and exact-candidate validation pending",
+      "runtime_eligible": false,
+      "automatic_import_allowed": false,
+      "record_id": "MO26-002",
+      "name": "Aurora Maize at Adventure Farm",
+      "projection": {
+        "coordinatePrecision": "approximate",
+        "directionsPolicy": "Use supported visitor address; point is for approximate placement only, not entrance/parking/dropoff",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "no_2027_recurrence": true,
+        "name": "Aurora Maize at Adventure Farm",
+        "activityTypes": [
+          "corn-maze",
+          "haunted-house"
+        ],
+        "categoryLabel": "Corn Maze / Haunted Attraction",
+        "description": "A corn maze and farm activities, with after-dark maze scares and Zombie Harvest paintball on selected nights.",
+        "details": "September 19\u2013October 31, 2026. Wednesdays from October 7: 5\u20138:30 p.m.; Fridays 5\u201310 p.m.; Saturdays 4\u201310 p.m. These are last-admission times; final exit is not specified. Maze scares start at dark Friday/Saturday from September 25 and Wednesdays October 7\u201328. Zombie Harvest runs Friday/Saturday at dusk. Confirm the visitor entrance before traveling.",
+        "website": "https://auroramaize.com/hourstickets/",
+        "actionLabel": "Visit website",
+        "address": "20591 County Road 2200, Aurora, MO 65605",
+        "directionsTarget": "20591 County Road 2200, Aurora, MO 65605",
+        "lat": 36.9808456,
+        "lon": -93.6877871,
+        "valid_dates": [
+          "2026-09-19",
+          "2026-09-25",
+          "2026-09-26",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-07",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-14",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-21",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-28",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "expires_at": "2026-10-31T22:00:00-05:00",
+        "expiry_semantics": "Conservative new-visit visibility cutoff at final posted last-admission time; not a final-exit claim."
+      },
+      "fields": {
+        "visitor_address": {
+          "value": "20591 County Road 2200, Aurora, MO 65605",
+          "source_ids": [
+            "aurora-contact"
+          ],
+          "qualification": "Dedicated contact page explicitly labels physical location separately from mailing address; location/hours footers corroborate."
+        },
+        "placement": {
+          "value": {
+            "lat": 36.9808456,
+            "lon": -93.6877871,
+            "method": "operator-embedded public Aurora Maze marker"
+          },
+          "source_ids": [
+            "aurora-map"
+          ],
+          "qualification": "Approximate venue placement only. Marker description retains20701 address; no averaging/no exact entrance claim."
+        },
+        "season_dates_hours": {
+          "value": {
+            "dates": [
+              "2026-09-19",
+              "2026-09-25",
+              "2026-09-26",
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-07",
+              "2026-10-09",
+              "2026-10-10",
+              "2026-10-14",
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-21",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-28",
+              "2026-10-30",
+              "2026-10-31"
+            ],
+            "season_start": "2026-09-19",
+            "season_end": "2026-10-31",
+            "last_admission": {
+              "Wed": "20:30",
+              "Fri": "22:00",
+              "Sat": "22:00"
+            }
+          },
+          "source_ids": [
+            "aurora-hours"
+          ]
+        },
+        "activity_scope": {
+          "value": "Haunted maze Fri/Sat at dark fromSep25 plusWedOct7\u201328; ZombieHarvest Fri/Sat dusk only.",
+          "source_ids": [
+            "aurora-haunted",
+            "aurora-hours"
+          ]
+        },
+        "phone": {
+          "value": "417-489-1220; hotline417-236-6714",
+          "source_ids": [
+            "aurora-contact"
+          ]
+        }
+      },
+      "conflicts": [
+        "Homepage body and operator map-marker description say20701 Lawrence2200; dedicated contact/location/hours say20591. Both retained.",
+        "Prior ticket-vendor Saturday-opening conflict not silently resolved; no machine intervals."
+      ],
+      "adjudication_proposed": "Propose accepting explicit dedicated physical-location contact address20591 for navigation, approximate operator marker for radius only. Time-sensitive hours page freshly says last admission at posted closing times; expiry22:00 is admission visibility cutoff, not exit.",
+      "source_binding": {
+        "aurora-contact": {
+          "id": "aurora-contact",
+          "url": "https://auroramaize.com/contacts/",
+          "retrieved_at": "2026-10-09T04:52:10.206112+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://auroramaize.com/contacts/",
+          "bytes": 40566,
+          "sha256": "64f29f5841ffc2f25cc2a1a50858a1f0a0509cef583fd552ddad1d27584963cb",
+          "content_type": "text/html; charset=UTF-8",
+          "receipt_file": "receipts/aurora-contact.receipt.json",
+          "receipt_sha256": "6a236dc5d932b8193bd2dd4c6e33e3d0e16c40a9cddd37d1932ee41b79364b02",
+          "body_file": "receipts/aurora-contact.body"
+        },
+        "aurora-home": {
+          "id": "aurora-home",
+          "url": "https://auroramaize.com/",
+          "retrieved_at": "2026-10-09T04:52:10.206509+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://auroramaize.com/",
+          "bytes": 34757,
+          "sha256": "64062e6a6fd0c7f8edfd948dd062ea5b433c2f140dd36eca60987f7ea4d17be1",
+          "content_type": "text/html; charset=UTF-8",
+          "receipt_file": "receipts/aurora-home.receipt.json",
+          "receipt_sha256": "5cd702c7cde8bf59aa2127059e3e3517833e93144bcaf3023a6518f5eecf1eec",
+          "body_file": "receipts/aurora-home.body"
+        },
+        "aurora-hours": {
+          "id": "aurora-hours",
+          "url": "https://auroramaize.com/hourstickets/",
+          "retrieved_at": "2026-10-09T04:52:10.207195+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://auroramaize.com/hourstickets/",
+          "bytes": 19238,
+          "sha256": "039dd4c1b070b8d732e1e43c3829d25b72620f68adf82de8402ba6749f9d7f52",
+          "content_type": "text/html; charset=UTF-8",
+          "receipt_file": "receipts/aurora-hours.receipt.json",
+          "receipt_sha256": "c6eaaaf851852939f87fa80a9292f2196269a733782dfeb3fd54cb5f1940fdfb",
+          "body_file": "receipts/aurora-hours.body"
+        },
+        "aurora-haunted": {
+          "id": "aurora-haunted",
+          "url": "https://auroramaize.com/haunted/",
+          "retrieved_at": "2026-10-09T04:52:10.208337+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://auroramaize.com/haunted/",
+          "bytes": 18265,
+          "sha256": "7d1986a2aba2fa3a2b057d09ec39deefff0fec94ffe54eef0eadab7049d80579",
+          "content_type": "text/html; charset=UTF-8",
+          "receipt_file": "receipts/aurora-haunted.receipt.json",
+          "receipt_sha256": "5f157404fd9277f3a534ebc415d3c69624153285617edb0dc571ca62a393bc8d",
+          "body_file": "receipts/aurora-haunted.body"
+        },
+        "aurora-map": {
+          "id": "aurora-map",
+          "url": "https://www.google.com/maps/d/embed?mid=1r3gzFPM4zv8RVTvb5uD9ouIY6uALIFRs",
+          "retrieved_at": "2026-10-09T04:52:13.779184+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://www.google.com/maps/d/embed?mid=1r3gzFPM4zv8RVTvb5uD9ouIY6uALIFRs",
+          "bytes": 12379,
+          "sha256": "df68495e9eb85814e4005d134a1ff33d821433b8b009d4d49f8d5b789f6725ae",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/aurora-map.receipt.json",
+          "receipt_sha256": "dc606d08821b5759bba5688f20b560593ba16beb4afec9e6f0ec7a2aacd1eeff",
+          "body_file": "receipts/aurora-map.body"
+        }
+      },
+      "required_runtime_guards": [
+        "Never Open Now including provider/cache/saved/resumed/async merges",
+        "machine opening intervals null",
+        "Directions and ride target use accepted visitor address, never approximate point",
+        "Qualified approximate distance/radius placement",
+        "Hard exact2026 expiry with cutoff minus1ms/at/plus1ms and pending-RPC guards",
+        "No2027 recurrence",
+        "Current-policy reapplication to saved/cache identities",
+        "No global Halloween extension"
+      ],
+      "projection_sha256_canonical_json": "7121b2ad31bf4ea2168898ef20319950259e0982a3983a4e7a1f494deace867e"
+    },
+    {
+      "contract": "Seasonal Listing Completeness V1 staged radius path",
+      "season_year": 2026,
+      "timezone": "America/Chicago",
+      "research_decision": "PASS PROPOSAL ONLY; INDEPENDENT REVIEW PENDING",
+      "independent_verification": "PASS: independent factual/destination/approximate-placement/consumer-copy review, immutable research binding complete",
+      "runtime_status": "HOLD: implementation and exact-candidate validation pending",
+      "runtime_eligible": false,
+      "automatic_import_allowed": false,
+      "record_id": "DELTA2-SHEPHERD-LANTERN",
+      "name": "The Broken Hour at Shepherd\u2019s Lantern",
+      "projection": {
+        "coordinatePrecision": "approximate",
+        "directionsPolicy": "Use supported visitor address; point is for approximate placement only, not entrance/parking/dropoff",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "no_2027_recurrence": true,
+        "name": "The Broken Hour at Shepherd\u2019s Lantern",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "categoryLabel": "Haunted Experience",
+        "description": "An immersive haunted story with clues and choices in Bellweather\u2019s barn and grounds.",
+        "details": "October 16\u201317, 2026; check your ticket for arrival time. Parental guidance suggested for darkness, suspense and frightening situations. Tickets are offered online and at the door. Online refunds are available up to seven days before the event. Confirm arrival instructions with your booking.",
+        "website": "https://www.eventbrite.com/e/the-broken-hour-tickets-2000536103338",
+        "actionLabel": "View tickets",
+        "address": "5803 Jakes Prairie Road, Cuba, MO 65453",
+        "directionsTarget": "5803 Jakes Prairie Road, Cuba, MO 65453",
+        "lat": 38.130489811549,
+        "lon": -91.467898376669,
+        "valid_dates": [
+          "2026-10-16",
+          "2026-10-17"
+        ],
+        "expires_at": "2026-10-17T22:00:00-05:00",
+        "expiry_semantics": "Final2026 endDate explicitly published by operator-linked Eventbrite event schema; not inferred recurrence or all-day interval."
+      },
+      "fields": {
+        "visitor_address": {
+          "value": "5803 Jakes Prairie Road, Cuba, MO 65453",
+          "source_ids": [
+            "shepherd-ticket"
+          ],
+          "qualification": "Event-specific operator-linked ticketing destination preferred over generic homepage footer5830."
+        },
+        "placement": {
+          "value": {
+            "lat": 38.130489811549,
+            "lon": -91.467898376669,
+            "method": "Census exact5803 address-range interpolation"
+          },
+          "source_ids": [
+            "shepherd5803-census"
+          ],
+          "qualification": "Approximate address-derived only; not surveyed entrance/parking."
+        },
+        "dates": {
+          "value": [
+            "2026-10-16",
+            "2026-10-17"
+          ],
+          "source_ids": [
+            "shepherd-home"
+          ]
+        },
+        "final_end": {
+          "value": "2026-10-17T22:00:00-05:00",
+          "source_ids": [
+            "shepherd-ticket"
+          ],
+          "qualification": "Event schema startOct16 19:00,endOct17 22:00; does not assert continuous overnight opening."
+        },
+        "admission": {
+          "value": {
+            "online_schema_price_usd": 32,
+            "availability_at_capture": "InStock",
+            "door_tickets": "offered",
+            "refunds": "up to7days beforeevent"
+          },
+          "source_ids": [
+            "shepherd-ticket",
+            "shepherd-home"
+          ],
+          "qualification": "Price/availability are observations, not guarantee; exact price omitted from consumer copy."
+        },
+        "age_safety": {
+          "value": "Parental guidance suggested: darkness, suspense, unsettling characters, frightening situations",
+          "source_ids": [
+            "shepherd-home"
+          ]
+        }
+      },
+      "conflicts": [
+        "Generic operator footer says5830; event-specific linkedEventbrite and directory say5803. Both preserved.",
+        "Homepage Wix businessLocationCoordinates38.0628225,-91.4034833 is genericcity-level metadata, REJECTED as venue placement.",
+        "Census5830 nearby alternate result retained only as conflict evidence, never averaged."
+      ],
+      "adjudication_proposed": "Propose resolving destination hierarchy in favor of operator-linked event-specific ticket destination5803; current event is positively2026 and scheduled. Address-derived5803 point accepted only as approximate. Consumer must check booking arrival instructions.",
+      "source_binding": {
+        "shepherd-home": {
+          "id": "shepherd-home",
+          "url": "https://www.shepherdslanternllc.com/",
+          "retrieved_at": "2026-10-09T04:52:13.871762+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://www.shepherdslanternllc.com/",
+          "bytes": 2161752,
+          "sha256": "e017b798cf70ee6c6b840580945af6d4abe7fe24972d6f02cede737126a4afbd",
+          "content_type": "text/html; charset=UTF-8",
+          "receipt_file": "receipts/shepherd-home.receipt.json",
+          "receipt_sha256": "e17edf1b8e9b42163b041fd2a90b31c8f7208ecc1bb4b098a9226e77a6fb6c55",
+          "body_file": "receipts/shepherd-home.body"
+        },
+        "shepherd-ticket": {
+          "id": "shepherd-ticket",
+          "url": "https://www.eventbrite.com/e/the-broken-hour-tickets-2000536103338",
+          "retrieved_at": "2026-10-09T04:52:14.410001+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://www.eventbrite.com/e/the-broken-hour-tickets-2000536103338",
+          "bytes": 176050,
+          "sha256": "c8f366f01cf60989e485f7813c2e410178ef94195fe4b9ce4d152da0402edc9d",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/shepherd-ticket.receipt.json",
+          "receipt_sha256": "c4bd3e98e927f4822e39308068f42f24a383fa9da1c7a2564b12f4d3c6a4aa14",
+          "body_file": "receipts/shepherd-ticket.body"
+        },
+        "shepherd5803-census": {
+          "id": "shepherd5803-census",
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5803+Jakes+Prairie+Road%2C+Cuba%2C+MO+65453&benchmark=Public_AR_Current&format=json",
+          "retrieved_at": "2026-10-09T04:52:14.670043+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5803+Jakes+Prairie+Road%2C+Cuba%2C+MO+65453&benchmark=Public_AR_Current&format=json",
+          "bytes": 657,
+          "sha256": "91ef48143c5a41e98acbd72058317e7370737b1c35df388a11bc07f2fa444c4e",
+          "content_type": "application/json",
+          "receipt_file": "receipts/shepherd5803-census.receipt.json",
+          "receipt_sha256": "23dfb61dc5e955fbdfbe410d948bcbc0f58ac9d8d23d9812a0d142921ee773f9",
+          "body_file": "receipts/shepherd5803-census.body"
+        },
+        "shepherd5830-census": {
+          "id": "shepherd5830-census",
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5830+Jakes+Prairie+Road%2C+Cuba%2C+MO+65453&benchmark=Public_AR_Current&format=json",
+          "retrieved_at": "2026-10-09T04:52:14.751670+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5830+Jakes+Prairie+Road%2C+Cuba%2C+MO+65453&benchmark=Public_AR_Current&format=json",
+          "bytes": 657,
+          "sha256": "d99cf650fd1c9de45e83e0275decf30a0210a1f470b80f90884fcc030b5cff1e",
+          "content_type": "application/json",
+          "receipt_file": "receipts/shepherd5830-census.receipt.json",
+          "receipt_sha256": "db6839611311d1aca82e03050dc7deda95746562f2496161901a8b84dc4840c3",
+          "body_file": "receipts/shepherd5830-census.body"
+        }
+      },
+      "required_runtime_guards": [
+        "Never Open Now including provider/cache/saved/resumed/async merges",
+        "machine opening intervals null",
+        "Directions and ride target use accepted visitor address, never approximate point",
+        "Qualified approximate distance/radius placement",
+        "Hard exact2026 expiry with cutoff minus1ms/at/plus1ms and pending-RPC guards",
+        "No2027 recurrence",
+        "Current-policy reapplication to saved/cache identities",
+        "No global Halloween extension"
+      ],
+      "projection_sha256_canonical_json": "f31f26ffb264221035b3a197a6192edb9808fba1da810dabe299062b94c3aacd"
+    },
+    {
+      "contract": "Seasonal Listing Completeness V1 staged radius path",
+      "season_year": 2026,
+      "timezone": "America/Chicago",
+      "research_decision": "PASS PROPOSAL ONLY; INDEPENDENT REVIEW PENDING",
+      "independent_verification": "PASS: independent factual/destination/approximate-placement/consumer-copy review, immutable research binding complete",
+      "runtime_status": "HOLD: implementation and exact-candidate validation pending",
+      "runtime_eligible": false,
+      "automatic_import_allowed": false,
+      "record_id": "DELTA2-HOLLOWS",
+      "name": "Haunted Hollows Haunted Trail",
+      "projection": {
+        "coordinatePrecision": "approximate",
+        "directionsPolicy": "Use supported visitor address; point is for approximate placement only, not entrance/parking/dropoff",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "no_2027_recurrence": true,
+        "name": "Haunted Hollows Haunted Trail",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "categoryLabel": "Haunted Trail",
+        "description": "A seasonal haunted trail in Palmyra.",
+        "details": "Confirmed ticket dates: October 9, 10, 24 and 30, 2026. October 10, 24 and 30 sessions run 7:30\u201311 p.m.; October 9 starts at 7:30 p.m. Check the booking calendar for other dates and current availability. Tickets are nonrefundable unless the organizer cancels.",
+        "website": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season",
+        "actionLabel": "View tickets",
+        "address": "5947 County Road 261, Palmyra, MO 63461",
+        "directionsTarget": "5947 County Road 261, Palmyra, MO 63461",
+        "lat": 39.733676,
+        "lon": -91.562875,
+        "valid_dates": [
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-24",
+          "2026-10-30"
+        ],
+        "expires_at": "2026-10-30T23:00:00-05:00",
+        "expiry_semantics": "Exact end of last independently readable session in deliberately bounded subset; not asserted full-season final date."
+      },
+      "fields": {
+        "visitor_address": {
+          "value": "5947 County Road 261, Palmyra, MO 63461",
+          "source_ids": [
+            "hollows-tickets"
+          ],
+          "qualification": "Matches prior TSF venue identity; explicit ticketing venue destination."
+        },
+        "placement": {
+          "value": {
+            "lat": 39.733676,
+            "lon": -91.562875,
+            "method": "public ticketing venue marker in gon.locations"
+          },
+          "source_ids": [
+            "hollows-tickets"
+          ],
+          "qualification": "Bound by exact venue name/address/phone; approximate only."
+        },
+        "explicit_dates": {
+          "value": [
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-24",
+            "2026-10-30"
+          ],
+          "source_ids": [
+            "hollows-tickets",
+            "hollows-oct10",
+            "hollows-oct24",
+            "hollows-oct30"
+          ],
+          "qualification": "Conservative enumerated subset; no full-season recurrence inferred."
+        },
+        "hours": {
+          "value": {
+            "Oct9_start": "19:30",
+            "Oct10": "19:30\u201323:00",
+            "Oct24": "19:30\u201323:00",
+            "Oct30": "19:30\u201323:00"
+          },
+          "source_ids": [
+            "hollows-tickets",
+            "hollows-oct10",
+            "hollows-oct24",
+            "hollows-oct30"
+          ],
+          "qualification": "Human-visible session-specific text controls; generic schema is stale/conflicting."
+        },
+        "admission": {
+          "value": {
+            "from_usd": 5,
+            "refund_policy": "No refunds or returns; organizer cancellation refund within4 businessdays"
+          },
+          "source_ids": [
+            "hollows-tickets"
+          ],
+          "qualification": "From-price does not establish every ticket type; no price guarantee in copy."
+        },
+        "phone": {
+          "value": "573-406-3515",
+          "source_ids": [
+            "hollows-tickets"
+          ]
+        }
+      },
+      "conflicts": [
+        "Ticket pages all carry generic JSON-LD start2026-10-03T00:30-05:00/end04:00 despite different visible sessiondates. These schema hours are REJECTED; use visible event-specific dates/times.",
+        "Prior TSF classifies haunted hayride; current ticket identity says trail. No current hayride activity asserted.",
+        "Dynamic full calendar not recovered; known4 dates are a subset, not claimed complete season."
+      ],
+      "adjudication_proposed": "Propose factual clearance for precisely enumerated four-date subset; explicit3future session pages independently readable and source-bound. Runtime hold if existing architecture cannot limit valid dates/last cutoff without inventing broader schedule. No machine hours.",
+      "source_binding": {
+        "hollows-tickets": {
+          "id": "hollows-tickets",
+          "url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season",
+          "retrieved_at": "2026-10-09T04:52:53.568940+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season",
+          "bytes": 21895,
+          "sha256": "1c8975eb3b84f6ad99d14b3d450265ee66257abfab57b1b4230b1402a89990d1",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/hollows-tickets.receipt.json",
+          "receipt_sha256": "8fcd704e906c22f2d68ad07ba7d8e8d565dcf81b7ef16629bf51ba87eeda3c31",
+          "body_file": "receipts/hollows-tickets.body"
+        },
+        "hollows-times": {
+          "id": "hollows-times",
+          "url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times",
+          "retrieved_at": "2026-10-09T04:53:39.768710+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times",
+          "bytes": 17835,
+          "sha256": "26075c4f7c47a513dc75b473d70820a924340ce6cc6dbcd0cbd73347e5ed51e5",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/hollows-times.receipt.json",
+          "receipt_sha256": "1f8e886d37d490f7dbf1b4e9f85906d41d205f8cf6029f06b9f615dc56ad49d4",
+          "body_file": "receipts/hollows-times.body"
+        },
+        "hollows-oct10": {
+          "id": "hollows-oct10",
+          "url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852662",
+          "retrieved_at": "2026-10-09T04:54:28.303319+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852662",
+          "bytes": 21522,
+          "sha256": "7adf325e1988bb40fff552c542154f7feebf878482d0b641433916e97a461d89",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/hollows-oct10.receipt.json",
+          "receipt_sha256": "0139d1e26c2eb67db758963908d829f20ccb43a99482ea100cd15cba46860a41",
+          "body_file": "receipts/hollows-oct10.body"
+        },
+        "hollows-oct24": {
+          "id": "hollows-oct24",
+          "url": "https://app.hauntpay.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852666",
+          "retrieved_at": "2026-10-09T04:54:28.303774+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://app.hauntpay.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852666",
+          "bytes": 21772,
+          "sha256": "cd7fb7bceda82e00743f3f5886176926ad07438dbc681015ab4132bbf7ba5c39",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/hollows-oct24.receipt.json",
+          "receipt_sha256": "2be2affed8aea80dfcf1101130a37946f7700ab2056c76d9f45b5220b721cd70",
+          "body_file": "receipts/hollows-oct24.body"
+        },
+        "hollows-oct30": {
+          "id": "hollows-oct30",
+          "url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852667",
+          "retrieved_at": "2026-10-09T04:55:01.767817+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852667",
+          "bytes": 21522,
+          "sha256": "872c0f966d4e07fde165e27875b9a90a18b969fa36e88cc6c2de8cc6c363bfb7",
+          "content_type": "text/html; charset=utf-8",
+          "receipt_file": "receipts/hollows-oct30.receipt.json",
+          "receipt_sha256": "a55ef018d4802d0c70d80f8c7df607da5dfce79c5dbf883286988c8c55c5f435",
+          "body_file": "receipts/hollows-oct30.body"
+        }
+      },
+      "required_runtime_guards": [
+        "Never Open Now including provider/cache/saved/resumed/async merges",
+        "machine opening intervals null",
+        "Directions and ride target use accepted visitor address, never approximate point",
+        "Qualified approximate distance/radius placement",
+        "Hard exact2026 expiry with cutoff minus1ms/at/plus1ms and pending-RPC guards",
+        "No2027 recurrence",
+        "Current-policy reapplication to saved/cache identities",
+        "No global Halloween extension"
+      ],
+      "projection_sha256_canonical_json": "5af8b9d8ca845b0a0281daa039faf280a1eacc987f8ff8ef6f6e4f6bdfbc8b17"
+    },
+    {
+      "record_id": "MO26-039",
+      "contract": "Seasonal Listing Completeness V1 staged radius path",
+      "season_year": 2026,
+      "timezone": "America/Chicago",
+      "research_decision": "PASS PROPOSAL ONLY; independent review pending",
+      "independent_verification": "PASS: independent factual/destination/approximate-placement/consumer-copy review, immutable research binding complete",
+      "runtime_status": "HOLD: implementation and exact-candidate validation pending",
+      "runtime_eligible": false,
+      "automatic_import_allowed": false,
+      "projection": {
+        "name": "Feemster Twisted Corn Maze",
+        "activityTypes": [
+          "corn-maze"
+        ],
+        "categoryLabel": "Corn Maze",
+        "description": "A family farm corn maze near Springfield with hayrides, a petting zoo and outdoor activities.",
+        "details": "September 26\u201327, October Fridays\u2013Sundays, and November 1, 2026. October: Fridays 5\u20139 p.m., Saturdays 10 a.m.\u20139 p.m., Sundays 1\u20139 p.m.; November 1 is 1\u20139 p.m. Last tickets are sold one hour before closing. Hayrides and the apple cannon stop at sunset. Height and supervision rules apply to play equipment. The farm\u2019s posted no-animal rule includes service animals; contact it about access arrangements before travel. Check the farm\u2019s Facebook page for weather updates.",
+        "website": "https://www.feemsterscornmaze.com/",
+        "actionLabel": "Visit website",
+        "address": "2501 E Farm Road 94, Springfield, MO 65803",
+        "directionsTarget": "2501 E Farm Road 94, Springfield, MO 65803",
+        "lat": 37.273100307742,
+        "lon": -93.24361332435,
+        "coordinatePrecision": "approximate",
+        "directionsPolicy": "Operator-published visitor address for navigation. Address-derived street point is approximate radius placement only, not verified entrance, parking or dropoff.",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "valid_dates": [
+          "2026-09-26",
+          "2026-09-27",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-04",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-11",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-30",
+          "2026-10-31",
+          "2026-11-01"
+        ],
+        "expires_at": "2026-11-01T21:00:00-06:00",
+        "expiry_semantics": "Operator final November1 closing9p.m. CST after DST ends that morning. Last ticket8p.m. is separate admission constraint, no 2027 recurrence.",
+        "no_2027_recurrence": true
+      },
+      "projection_sha256_canonical_json": "75ef9f8b3d80b3141c6ba4d0f6363f599e96872f3d0cb2218f91ccfc34538459",
+      "fields": {
+        "visitor_address": {
+          "value": "2501 E Farm Road 94, Springfield, MO 65803",
+          "source_ids": [
+            "feemster-contact"
+          ],
+          "qualification": "Explicit public operator contact address, also corroborated by indexed operator Facebook. No private-address inference."
+        },
+        "placement": {
+          "value": {
+            "lat": 37.273100307742,
+            "lon": -93.24361332435,
+            "method": "ArcGIS anonymous public geocoder, exact E address match, StreetAddress type, score100"
+          },
+          "source_ids": [
+            "feemster-arcgis"
+          ],
+          "qualification": "Approximate address-derived street point. Score100 is matching confidence, not surveyed entrance precision."
+        },
+        "season_dates_hours": {
+          "value": {
+            "dates": [
+              "2026-09-26",
+              "2026-09-27",
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-04",
+              "2026-10-09",
+              "2026-10-10",
+              "2026-10-11",
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-18",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-25",
+              "2026-10-30",
+              "2026-10-31",
+              "2026-11-01"
+            ],
+            "expiry": "2026-11-01T21:00:00-06:00",
+            "final_admission_local": "2026-11-01T20:00:00-06:00"
+          },
+          "source_ids": [
+            "feemster-home"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "Last ticket one hour before closing",
+            "Hayride and apple cannon end at sunset",
+            "Height and supervision rules for play equipment",
+            "Operator says no animals including service animals; access arrangements need clarification",
+            "Pumpkin/gourd patch pending availability, NOT assigned pumpkin-patch category"
+          ],
+          "source_ids": [
+            "feemster-home"
+          ]
+        },
+        "phone": {
+          "value": "417-894-7458",
+          "source_ids": [
+            "feemster-contact"
+          ]
+        }
+      },
+      "conflicts": [
+        "Census matched2501W FarmRd94 at37.275407,-93.329064 despite requestedE; wrong-direction point rejected, never averaged.",
+        "Maptons identifier14054245666 was checked once against publicOSM API. Returned bare untagged node inFrance; identity mismatch rejected. No venue point inferred.",
+        "PublicArcGIS exactE StreetAddress match resolves the placement gap; must remain approximate.",
+        "Historical regional September19 start superseded by currentoperator September26. Pumpkin availability remains pending.",
+        "Jumpingpillow exact48-inch adult-supervision boundary differs between homepage and rules; do not encode detailed threshold beyond qualified equipment-rules copy."
+      ],
+      "adjudication_proposed": "Accept explicit public operator E address plus matching anonymous public ArcGIS StreetAddress point as qualified address-derived approximate placement. This fulfills V1 address routing/radius without requiring surveyed arrival point. Review must verify match direction and CST expiry.",
+      "source_binding": {
+        "feemster-home": {
+          "id": "feemster-home",
+          "url": "https://www.feemsterscornmaze.com/",
+          "retrieved_at": "2026-10-09T04:52:10.205726+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://www.feemsterscornmaze.com/",
+          "bytes": 262882,
+          "sha256": "579222895284042e6497d08f9aa075382a1b36e03f109347687a62819debed2e",
+          "content_type": "text/html;charset=utf-8",
+          "receipt_file": "receipts/feemster-home.receipt.json",
+          "receipt_sha256": "f44658df634534a4a64afc3eb4fb97f7aeb2cfda6ad06090a4413bd291fa2349",
+          "body_file": "receipts/feemster-home.body"
+        },
+        "feemster-contact": {
+          "id": "feemster-contact",
+          "url": "https://www.feemsterscornmaze.com/contact",
+          "retrieved_at": "2026-10-09T04:52:10.205256+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://www.feemsterscornmaze.com/contact",
+          "bytes": 159783,
+          "sha256": "a2b847f642893bc66a382ea7898b714e3d7a95b276b81ff2a31e1b692f1497f3",
+          "content_type": "text/html;charset=utf-8",
+          "receipt_file": "receipts/feemster-contact.receipt.json",
+          "receipt_sha256": "b816a9096566c55dffecee26da6ef18543c7e55ad301f1bd48219a85e1b47ac1",
+          "body_file": "receipts/feemster-contact.body"
+        },
+        "feemster-census": {
+          "id": "feemster-census",
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2501+E+Farm+Road+94%2C+Springfield%2C+MO+65803&benchmark=Public_AR_Current&format=json",
+          "retrieved_at": "2026-10-09T04:52:14.645764+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2501+E+Farm+Road+94%2C+Springfield%2C+MO+65803&benchmark=Public_AR_Current&format=json",
+          "bytes": 665,
+          "sha256": "e450cc71dda91e9783a7ba6cbb02e5a32bb0939a2459e1f448a9ef673cf329f8",
+          "content_type": "application/json",
+          "receipt_file": "receipts/feemster-census.receipt.json",
+          "receipt_sha256": "b50053bd52da8e3d80947b73c867e4776b080b62d0bc8a849327a0d2582cb4d3",
+          "body_file": "receipts/feemster-census.body"
+        },
+        "feemster-arcgis": {
+          "id": "feemster-arcgis",
+          "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2501+E+Farm+Road+94%2C+Springfield%2C+MO+65803&f=pjson&outFields=Match_addr%2CAddr_type&maxLocations=3",
+          "retrieved_at": "2026-10-09T04:59:10.976381+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2501+E+Farm+Road+94%2C+Springfield%2C+MO+65803&f=pjson&outFields=Match_addr%2CAddr_type&maxLocations=3",
+          "bytes": 517,
+          "sha256": "23e7e7ee4bea7810d9262cc44671581c5bbd44b72ca5255899958cb9c9cb3cdd",
+          "content_type": "text/plain;charset=UTF-8",
+          "receipt_file": "revision-2/receipts/feemster-arcgis.receipt.json",
+          "receipt_sha256": "b5a27afb317f7048478a22fce4afe0b5cb8102401fff496fbbefd3c8f535e233",
+          "body_file": "revision-2/receipts/feemster-arcgis.body"
+        },
+        "feemster-osm-node": {
+          "id": "feemster-osm-node",
+          "url": "https://api.openstreetmap.org/api/0.6/node/14054245666.json",
+          "retrieved_at": "2026-10-09T04:58:47.042632+00:00",
+          "kind": "fresh direct public HTTP",
+          "status": 200,
+          "final_url": "https://api.openstreetmap.org/api/0.6/node/14054245666.json",
+          "bytes": 431,
+          "sha256": "9d7096795405771215db9bff0924fe69c3e5993b2086abfd2bdbfc26bc9ca988",
+          "content_type": "application/json; charset=utf-8",
+          "receipt_file": "revision-2/receipts/feemster-osm-node.receipt.json",
+          "receipt_sha256": "83e51ae1098577ccb905f1a7468a5894032277e4ce3b69059b0b1ebcf1c04011",
+          "body_file": "revision-2/receipts/feemster-osm-node.body"
+        }
+      },
+      "required_runtime_guards": [
+        "Never Open Now; machine intervals null",
+        "Address-based Directions and ride targets, approximate radius only",
+        "FinalNovember1 21:00CST afterDST change; test cutoff minus1ms/at/plus1ms",
+        "Saved/cache/resume/pendingRPC reapplication",
+        "No2027 recurrence",
+        "No pumpkin-patch tag while availability pending",
+        "Retain last-ticket and sunset activity restrictions; no admission guarantee"
+      ]
+    }
+  ],
+  "approved_copy_normalizations": [
+    "Append Location is approximate. once to each Details copy.",
+    "Decode literal backslash-u2013 escape sequences to actual en dash; typography only.",
+    "Split long reviewed Details text into paragraphs at sentence boundaries without changing words or semantics."
+  ],
+  "mapping_constraints": [
+    "Aurora 2026-10-31 22:00 CDT is last-admission product new-visit cutoff; omit seasonalAvailability.endsAt because final-exit is unknown. Exact listing expiry and neverOpenNow remain required.",
+    "Hollows activeDates exactly October 9,10,24,30. October 9 has start only; other three sessions end 23:00. October 30 23:00 CDT is final supported subset end, not asserted full-season closure.",
+    "Feemster final November 1 21:00 CST; last tickets 20:00 is separate. Corn-maze only; no pumpkin tag.",
+    "All four use limited confidence, approximate placement, supported visitor-address Directions, null machine intervals, neverOpenNow and no 2027 revival.",
+    "Preserve Aurora20591/20701 and Shepherd5803/5830 evidence conflicts in provenance; accepted visitor destinations are20591 and5803 respectively."
+  ],
+  "held_commercial_count": 6,
+  "held_ids": [
+    "MO26-006",
+    "MO26-004",
+    "DELTA2-FEARFACTORY",
+    "DELTA2-WACO",
+    "DELTA5-RISING-RECHECK",
+    "DELTA2-TWISTED"
+  ],
+  "runtime_pass": false,
+  "release_authority": "No merge, deploy, promotion or waiver authorized. Root checkpoint required before import.",
+  "publication_scope": "R1 inventory enumerates83 published research files plus Publication-Inventory itself (84 paths); all83 were matched to reviewed local bytes. Four Feemster receipt files have since moved locally to revision-2; published bytes remain exact. R2 all7 published revision-2 files match reviewed local bytes. Raw bodies not selected for R1 publication remain locally archived with source receipt hashes; no claim all raw originals were git-published."
+}

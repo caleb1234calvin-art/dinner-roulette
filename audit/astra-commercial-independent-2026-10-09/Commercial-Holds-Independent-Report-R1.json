@@ -1,0 +1,253 @@
+{
+  "package": "ASTRA-COMMERCIAL-HOLDS-INDEPENDENT-REPORT-R1",
+  "reviewed_at": "2026-10-09T05:00:05.669083+00:00",
+  "source_research_sha256": "daa7a61c2f5ff9f4ff4a90fa0a870ba03134fe858ed448085f4e694210ca62cc",
+  "source_projections_sha256": "1dcff3603d5cdf2070ff2b26c15c22de56c5144dde526f540a1c2ef4b7bd7f27",
+  "verdicts": [
+    {
+      "record_id": "MO26-002",
+      "factual": "PASS",
+      "placement_destination": "PASS",
+      "consumer_copy": "PASS with ordinary approximate-location addendum",
+      "adjudication": "Fresh dedicated operator Contacts explicitly labels20591 physical location separately from mailing address, corroborated current hours footer. Prefer this purpose-specific destination while retaining homepage/map20701 conflict. Operator-linked named map point accepted only approximate. Final22:00 is last-admission visibility cutoff; never assert final exit.",
+      "runtime_requirements": [
+        "Keep expiry metadata/copy explicitly admission-cutoff, not claimed attraction end.",
+        "Date calendar derives only bounded operator2026 weekdays, with Wednesday startOctober7.",
+        "No per-night machine hours or point-based ride dropoff."
+      ]
+    },
+    {
+      "record_id": "DELTA2-SHEPHERD-LANTERN",
+      "factual": "PASS",
+      "placement_destination": "PASS",
+      "consumer_copy": "PASS with ordinary approximate-location addendum",
+      "adjudication": "Fresh operator homepage directly links exact2000536103338 ticket event. Event-specific5803 overrides generic5830 footer for this event; preserve conflict. Explicit2026 schedule and event end align with current operator date pair; Census matched exact5803 with no averaging.",
+      "runtime_requirements": [
+        "Arrival time varies by booking; no continuousOct16–17 opening interval.",
+        "Retain parent guidance and7-day refund qualification."
+      ]
+    },
+    {
+      "record_id": "DELTA2-HOLLOWS",
+      "factual": "PASS — bounded explicit four-date subset",
+      "placement_destination": "PASS",
+      "consumer_copy": "PASS with ordinary approximate-location addendum",
+      "adjudication": "Fresh public ticket event and three event_times pages bind exact2026Oct9/10/24/30 to matching venue/address/phone. Visible session times supersede identical conflicting generic JSON-LD; named gon.locations marker is approximate. Last cutoffOct30 23:00 is last supported subset end, not full-season final-operation claim.",
+      "runtime_requirements": [
+        "activeDates exactly4 accepted dates; no inferred recurrence.",
+        "No claim full calendar; retain booking check.",
+        "Hide at accepted subset cutoff; no2027 recurrence."
+      ]
+    }
+  ],
+  "integrity_checks": [
+    {
+      "path": "receipts/aurora-contact.body",
+      "sha256": "64f29f5841ffc2f25cc2a1a50858a1f0a0509cef583fd552ddad1d27584963cb"
+    },
+    {
+      "path": "receipts/aurora-contact.receipt.json",
+      "sha256": "6a236dc5d932b8193bd2dd4c6e33e3d0e16c40a9cddd37d1932ee41b79364b02"
+    },
+    {
+      "path": "receipts/aurora-home.body",
+      "sha256": "64062e6a6fd0c7f8edfd948dd062ea5b433c2f140dd36eca60987f7ea4d17be1"
+    },
+    {
+      "path": "receipts/aurora-home.receipt.json",
+      "sha256": "5cd702c7cde8bf59aa2127059e3e3517833e93144bcaf3023a6518f5eecf1eec"
+    },
+    {
+      "path": "receipts/aurora-hours.body",
+      "sha256": "039dd4c1b070b8d732e1e43c3829d25b72620f68adf82de8402ba6749f9d7f52"
+    },
+    {
+      "path": "receipts/aurora-hours.receipt.json",
+      "sha256": "c6eaaaf851852939f87fa80a9292f2196269a733782dfeb3fd54cb5f1940fdfb"
+    },
+    {
+      "path": "receipts/aurora-haunted.body",
+      "sha256": "7d1986a2aba2fa3a2b057d09ec39deefff0fec94ffe54eef0eadab7049d80579"
+    },
+    {
+      "path": "receipts/aurora-haunted.receipt.json",
+      "sha256": "5f157404fd9277f3a534ebc415d3c69624153285617edb0dc571ca62a393bc8d"
+    },
+    {
+      "path": "receipts/aurora-map.body",
+      "sha256": "df68495e9eb85814e4005d134a1ff33d821433b8b009d4d49f8d5b789f6725ae"
+    },
+    {
+      "path": "receipts/aurora-map.receipt.json",
+      "sha256": "dc606d08821b5759bba5688f20b560593ba16beb4afec9e6f0ec7a2aacd1eeff"
+    },
+    {
+      "path": "receipts/shepherd-home.body",
+      "sha256": "e017b798cf70ee6c6b840580945af6d4abe7fe24972d6f02cede737126a4afbd"
+    },
+    {
+      "path": "receipts/shepherd-home.receipt.json",
+      "sha256": "e17edf1b8e9b42163b041fd2a90b31c8f7208ecc1bb4b098a9226e77a6fb6c55"
+    },
+    {
+      "path": "receipts/shepherd-ticket.body",
+      "sha256": "c8f366f01cf60989e485f7813c2e410178ef94195fe4b9ce4d152da0402edc9d"
+    },
+    {
+      "path": "receipts/shepherd-ticket.receipt.json",
+      "sha256": "c4bd3e98e927f4822e39308068f42f24a383fa9da1c7a2564b12f4d3c6a4aa14"
+    },
+    {
+      "path": "receipts/shepherd5803-census.body",
+      "sha256": "91ef48143c5a41e98acbd72058317e7370737b1c35df388a11bc07f2fa444c4e"
+    },
+    {
+      "path": "receipts/shepherd5803-census.receipt.json",
+      "sha256": "23dfb61dc5e955fbdfbe410d948bcbc0f58ac9d8d23d9812a0d142921ee773f9"
+    },
+    {
+      "path": "receipts/shepherd5830-census.body",
+      "sha256": "d99cf650fd1c9de45e83e0275decf30a0210a1f470b80f90884fcc030b5cff1e"
+    },
+    {
+      "path": "receipts/shepherd5830-census.receipt.json",
+      "sha256": "db6839611311d1aca82e03050dc7deda95746562f2496161901a8b84dc4840c3"
+    },
+    {
+      "path": "receipts/hollows-tickets.body",
+      "sha256": "1c8975eb3b84f6ad99d14b3d450265ee66257abfab57b1b4230b1402a89990d1"
+    },
+    {
+      "path": "receipts/hollows-tickets.receipt.json",
+      "sha256": "8fcd704e906c22f2d68ad07ba7d8e8d565dcf81b7ef16629bf51ba87eeda3c31"
+    },
+    {
+      "path": "receipts/hollows-times.body",
+      "sha256": "26075c4f7c47a513dc75b473d70820a924340ce6cc6dbcd0cbd73347e5ed51e5"
+    },
+    {
+      "path": "receipts/hollows-times.receipt.json",
+      "sha256": "1f8e886d37d490f7dbf1b4e9f85906d41d205f8cf6029f06b9f615dc56ad49d4"
+    },
+    {
+      "path": "receipts/hollows-oct10.body",
+      "sha256": "7adf325e1988bb40fff552c542154f7feebf878482d0b641433916e97a461d89"
+    },
+    {
+      "path": "receipts/hollows-oct10.receipt.json",
+      "sha256": "0139d1e26c2eb67db758963908d829f20ccb43a99482ea100cd15cba46860a41"
+    },
+    {
+      "path": "receipts/hollows-oct24.body",
+      "sha256": "cd7fb7bceda82e00743f3f5886176926ad07438dbc681015ab4132bbf7ba5c39"
+    },
+    {
+      "path": "receipts/hollows-oct24.receipt.json",
+      "sha256": "2be2affed8aea80dfcf1101130a37946f7700ab2056c76d9f45b5220b721cd70"
+    },
+    {
+      "path": "receipts/hollows-oct30.body",
+      "sha256": "872c0f966d4e07fde165e27875b9a90a18b969fa36e88cc6c2de8cc6c363bfb7"
+    },
+    {
+      "path": "receipts/hollows-oct30.receipt.json",
+      "sha256": "a55ef018d4802d0c70d80f8c7df607da5dfce79c5dbf883286988c8c55c5f435"
+    }
+  ],
+  "counts": {
+    "factual_placement_copy_pass": 3,
+    "remaining_commercial_hold": 7,
+    "runtime_pass": 0
+  },
+  "retained_holds": [
+    {
+      "rank": 1,
+      "record_id": "MO26-039",
+      "name": "Feemster Twisted Corn Maze",
+      "ranking_reason": "Highest initial priority: Springfield family coverage, explicit 2026 schedule through November 1, and an address/placement gap.",
+      "result_status": "FACTUAL FIELD PASS / RUNTIME HOLD",
+      "result": "Operator visitor address and phone recovered. Census returned 2501 W Farm Road 94 for the requested E address; wrong point rejected. No acceptable alternative placement recovered.",
+      "direct_source_ids": [
+        "feemster-contact",
+        "feemster-home",
+        "feemster-census",
+        "feemster-osm",
+        "feemster-maptons",
+        "feemster-google"
+      ]
+    },
+    {
+      "rank": 5,
+      "record_id": "MO26-006",
+      "name": "Wolfmans House Of Screams",
+      "ranking_reason": "High local utility; indexed primary 2026 calendar and directory current-season evidence, but calendar image inaccessible.",
+      "result_status": "HOLD",
+      "result": "New official 2026 trailer and opening calendar found in search index. Direct calendar is a login wall. Need exact future 2026 dates and final expiry; no closure inferred.",
+      "direct_source_ids": [
+        "wolfman-social",
+        "wolfman-calendar",
+        "wolfman-mhh",
+        "wolfman-tsf"
+      ]
+    },
+    {
+      "rank": 6,
+      "record_id": "MO26-004",
+      "name": "The Werehouse",
+      "ranking_reason": "High local utility, but already legacy fallback and still lacks exact dates.",
+      "result_status": "HOLD",
+      "result": "Indexed 2026 operator hiring/trailer signals recovered. Direct website remains undated Friday/Saturday 7 p.m.–midnight. Directory raw calendar has no active dates. Need exact 2026 date binding and expiry; legacy coordinate conflict retained.",
+      "direct_source_ids": [
+        "werehouse-home",
+        "werehouse-social",
+        "werehouse-mhh"
+      ]
+    },
+    {
+      "rank": 7,
+      "record_id": "DELTA2-FEARFACTORY",
+      "name": "Fear Factory LLC",
+      "ranking_reason": "Southern Missouri coverage; current secondary weekend lead, but prior operator schedule is explicitly 2025.",
+      "result_status": "HOLD",
+      "result": "October 8 directory guide says Friday/Saturday. This remains secondary evidence; direct contact page returned 502. Need decisive 2026 binding and expiry.",
+      "direct_source_ids": [
+        "fearfactory-contact"
+      ]
+    },
+    {
+      "rank": 8,
+      "record_id": "DELTA2-WACO",
+      "name": "Waco School House Haunt",
+      "ranking_reason": "Useful local coverage but weak current evidence and unavailable official origin.",
+      "result_status": "HOLD",
+      "result": "Focused exact-name 2026 search yielded no accepted schedule. Official site returned 502. Need 2026 date binding and expiry, not a closure assumption.",
+      "direct_source_ids": [
+        "waco-home"
+      ]
+    },
+    {
+      "rank": 9,
+      "record_id": "DELTA5-RISING-RECHECK",
+      "name": "Rising Haunted Attraction",
+      "ranking_reason": "Waynesville already has live Haunted River; secondary current roundups coexist with historical DMO evidence.",
+      "result_status": "HOLD",
+      "result": "Raw directory calendar contains no active dates; 8–11 p.m. text is undated. October 7 guide lacks exact dates. Historical 2024 DMO cannot establish 2026.",
+      "direct_source_ids": [
+        "rising-mhh"
+      ]
+    },
+    {
+      "rank": 10,
+      "record_id": "DELTA2-TWISTED",
+      "name": "Twisted Minds Haunted House",
+      "ranking_reason": "Lowest resolution probability: weak current season evidence and mostly historical directory leads.",
+      "result_status": "HOLD",
+      "result": "Focused 2026 search yielded historical directory and contaminated social snippets. Need exact 2026 public invitation/dates. California Twisted Minds is unrelated.",
+      "direct_source_ids": []
+    }
+  ],
+  "scope": "New promoted assertions independently inspected against raw snapshots; prior held peers retained, no full immutable identity audit repeated.",
+  "publication_binding": "PENDING root immutable research commit and readback",
+  "runtime_pass": false,
+  "release_authority": false
+}

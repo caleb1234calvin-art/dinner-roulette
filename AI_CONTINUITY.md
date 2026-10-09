@@ -1,3 +1,18 @@
+# Pick For Us — Four Commercial Records Independently Cleared; Cumulative Import Continues (2026-10-09)
+
+## CURRENT
+**Independent factual/destination/approximate-placement/copy PASS4:** Aurora Maize, Shepherd’s Lantern/Broken Hour, Haunted Hollows explicit four-date subset, Feemster Twisted Corn Maze. Final audit/astra-commercial-independent-2026-10-09/Commercial-Four-Independent-Final.json SHA256 **d16638f9565edf0c8251c2b50db593afe82eef1710361d2ee4d581b2d8c97412** independently binds researchR1 a1977764 and FeemsterR2 f03c885e;83 R1 selected blobs plus inventory and all7 R2 blobs match. Accepted exact subsets and earlier reports retained beside final. Runtime remains HOLD until import/validation.
+
+Eleven original cleared records are implemented locally using existing catalog/presentation/search/current-policy mechanisms. Stable working-tree safe auth migration-free build and full **962PASS/4 inherited skips (891 repository +71 application)**, typecheck PASS, lint0errors/6inheritedwarnings. This is local working-source evidence, not yet hosted exact candidate acceptance. First prebuild/mid-author test attempt preserved with one old-neighborhood expectation and missing compiled bundle; explicit legitimate nearby Missouri Nightmare correction has its distance proof and focused PASS. Browser old-neighborhood assertions are being similarly updated, without weakening policies. No remote implementation SHA/PR yet; candidate not frozen while compatible cleared additions stack.
+
+## NEXT
+Author imports commercial4 in separate catalog alongside original11; browser worker adds complete per-record extras mode and retains eleven/previous32 suites. Aurora22:00 expiry is last-admission visibility (omit endsAt); Hollows onlyOct9/10/24/30 andOct30 23:00 subset cutoff; FeemsterNov1 21:00 CST. Independent data acceptance allows exact typography normalization and approximate-location notice, never audit prose. Statewide five and Cadaver still under independent review. Freeze one cumulative source, run exact-head/full/hosted/browser/geometry/Android, independently verify, then stop for owner release decision.
+
+## HOLD
+Commercial6 remain: Werehouse, Wolfman, Fear Factory, Twisted Minds, Waco, Rising. No research self-approval/import of held records. Cadaver/unreviewed Delta/residential remain separate. Main979d83a/treea7db and productionF1 READY/source979d, BCd rollback are unchanged last fresh baseline. Local browser missing; hosted execution required. Existing six warnings/narrowDirections/physicalAndroid limits persist. No merge/deploy/settings/waiver/signing/Play authority.
+
+PARENT COMMIT **011f9356e72d8d3cfc2ffa473ee7ac1a6fed5f3f**; TREE **662e930b7569849d6c30740d6b0922174272d2e2**. Prior history follows verbatim.
+
 # Pick For Us — Statewide Delta6 Frozen: Eighteen Leads, Five Proposals (2026-10-09)
 
 ## CURRENT
