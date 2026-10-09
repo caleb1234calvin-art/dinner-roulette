@@ -1,0 +1,42 @@
+{
+  "reviewedAt": "2026-10-09T05:47:29.275843+00:00",
+  "source": "a44e70996bc8546f75dc71e4af13c414350ec1f9",
+  "hostedRunId": "37889747820",
+  "jobId": "113687906947",
+  "artifactId": "11598416096",
+  "artifact": "/workspace/scratch/45a2c39f129e/deliverables/Pick-For-Us-Android-a44e709-validation.zip",
+  "artifactSha256": "1dc3d41b48a0a0c02616fd1323debd03c088fdf57d128573d5c6051580fe1ae7",
+  "artifactBytes": 6866411,
+  "crcPass": true,
+  "sourceRevisionPass": true,
+  "checksumChecks": [
+    {
+      "manifestPath": "artifacts/PickForUs-unsigned.aab",
+      "archiveMember": "PickForUs-unsigned.aab",
+      "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee",
+      "pass": true
+    },
+    {
+      "manifestPath": "artifacts/PickForUs-debug.apk",
+      "archiveMember": "PickForUs-debug.apk",
+      "sha256": "669ae07ba4608035c12aed48618c6e8e80b2570108b974720414f91ae1c93590",
+      "pass": true
+    }
+  ],
+  "bundleReportUnchangedFrom4513aee": true,
+  "bundleSha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee",
+  "bundletoolValidation": "PASS",
+  "signing": "unsigned",
+  "lintCounts": {
+    "Warning": 14
+  },
+  "scope": "Independent current-exacthead artifact integrity rebind. Unchanged bundle report and identical AAB bytes reuse previously reviewed static bundle metadata; no duplicate device checks.",
+  "verdict": "PASS for exact-head automated Android evidence integrity/readiness scope only.",
+  "limitations": [
+    "Remote HTTPS wrapper, not snapshot of branch web content",
+    "Physical Android/GPS acceptance not performed",
+    "Upload signature and Play Console acceptance not verified",
+    "14 lint warnings preserved; zero lint errors in summary"
+  ],
+  "releaseAuthority": "No signing, PlayConsole, publication or production change."
+}

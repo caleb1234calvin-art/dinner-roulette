@@ -1,3 +1,21 @@
+# ASTRA MATERIAL GATE — 2026-10-09 — current candidate4 Android independent PASS and Lloyd browser correction verified
+
+## CURRENT
+- Current head **a44e70996bc8546f75dc71e4af13c414350ec1f9**, tree **b16122c4bad65e7a51b8de57a166ba1d0f07e426**, draft PR #60 unchanged.
+- Hosted Android **37889747820 / job113687906947 SUCCESS**; artifact **11598416096**, ZIP SHA256 **1dc3d41b48a0a0c02616fd1323debd03c088fdf57d128573d5c6051580fe1ae7**,6,866,411bytes. Root and independent reviewer verified CRC, exact internal a44 source revision and both payload checksums. AAB unchanged **4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee**, unsigned, bundletool PASS, fourteen inherited warnings / zero errors.
+- Independent current Android report SHA256 **82e2dbf3f122ae84cb4d5468d34aed1591a1034037ca422d0a839781dd511861**, retained at audit/astra-runtime-independent-2026-10-09/Android-Artifact-Independent-a44e709.json.
+- Hosted web **37889747808** full tests, casino/location/ordinary Date Night and **legacy two-record seasonal suite PASS**. The three prior notice-scope failures are resolved at current head with every required per-card and reachability assertion retained. Remaining seasonal suites and rerun geometry still active; exported final counts pending artifact verification.
+- Current local1018PASS/4skips/lint/typecheck/safeauthbuild and independent delta/source PASS retained.
+## NEXT
+- Finish retained V1/ten/cumulative suites, new eleven/extra-nine suites and identical geometry gate.
+- Independently inspect final exact-head browser artifacts/pixels, save durable evidence, refresh production/rollback/protection and publish owner release-decision checkpoint.
+## HOLD
+- Final acceptance is incomplete. No current browser total or final release PASS claimed yet.
+- Physical Android/WebView/GPS, upload signing and Play Console remain outside automated PASS. Cadaver and all named data HOLDs unchanged.
+- Owner release decision and fresh main protection/waiver resolution required; no production changes.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 05:44 UTC — current exact candidate4 local and independent delta PASS
 
 ## CURRENT
