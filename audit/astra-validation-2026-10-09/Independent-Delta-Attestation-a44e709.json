@@ -1,0 +1,44 @@
+{
+  "reviewedAt": "2026-10-09T05:42:15.097579+00:00",
+  "sourceCandidate": "a44e70996bc8546f75dc71e4af13c414350ec1f9",
+  "tree": "b16122c4bad65e7a51b8de57a166ba1d0f07e426",
+  "parent": "7e6f26e55f85e85e232b2ff0f2e2e16e08676885",
+  "comparisonCandidate": "4513aee7de0afe55e0f0fa061c1ec5f6af4fa412",
+  "comparisonIsAncestor": true,
+  "intermediatePreserved": "7e6f26e55f85e85e232b2ff0f2e2e16e08676885",
+  "changedPaths": [
+    ".github/workflows/validate-icon-pack.yml",
+    "scripts/missouri-two-record-browser.mjs"
+  ],
+  "unchangedSubtreeIdentities": {
+    "src": {
+      "before": "dbb4366a3df17334a40785b15ff234ce4ee10e24",
+      "after": "dbb4366a3df17334a40785b15ff234ce4ee10e24"
+    },
+    "server": {
+      "before": "170418d170dcc2397f339e97882b3c926e1c6f5c",
+      "after": "170418d170dcc2397f339e97882b3c926e1c6f5c"
+    },
+    "public": {
+      "before": "8a24e98af48debee93503fc90098e01b8b0c1c6d",
+      "after": "8a24e98af48debee93503fc90098e01b8b0c1c6d"
+    },
+    "audit": {
+      "before": "be6a15bfcaa53f0e0525c43c77b971ae023b0fa6",
+      "after": "be6a15bfcaa53f0e0525c43c77b971ae023b0fa6"
+    }
+  },
+  "sourceVerdict": "PASS delta attestation: all20 runtime/data/provenance/copy mappings and original32 records unchanged from independently source-reviewed4513aee; no source/presentation/catalog mutation.",
+  "harnessVerdict": "PASS bounded correction: targetcard/result unique, target visitnotes section unique, exactlyone compactnotice and exacttext preserved. Per-rendered-card identity/section/notice assertions added; wholeoverlaycount must equal seasonalcard sum. Every pre-existing assert statement preserved. Existing Details/confidence/materialfact/scrollreachability checks remain.",
+  "workflowVerdict": "PASS: identical auth-enabled geometrygate moved after interactiongates. Same command/environment, unchanged geometryscriptblob, not removed or conditionally skipped on success. Evidence upload still follows gates.",
+  "geometryScriptBlob": "b302686623c420c4364b89f6ff7039e53f1ca4ac",
+  "testPolicy": "No assertion weakened. Full nexthead hosted browser, build, test and Android gates remain required; predecessor partialpasses not reported as finalheadpasses.",
+  "currentRuntimeStatus": "HOLD pending exacthead finalgates",
+  "plannedHostedRuns": {
+    "web": "37889747808",
+    "android": "37889747820"
+  },
+  "basisForCorrection": "Candidate2 observed three failedscreenshots and state show two legitimate nearbycards each with one notice; globaloptionsselector incorrectly countedboth. Independent report c77489d3d1bbb65b88b90158ec10893c84bf2e2f318e06e4cda48c51e41be909 preserved.",
+  "independentSourceReviewCarry": "Independent-Source-Review-4513aee.json SHA256f661269e99e39deb846e933071239b4133fa21e6bbd0999e5dd9a9ecaf158465; only exact unchangedsource finding carries, browsergates do not.",
+  "worktreeStatus": ""
+}

@@ -1,3 +1,19 @@
+# ASTRA MATERIAL GATE — 2026-10-09 05:44 UTC — current exact candidate4 local and independent delta PASS
+
+## CURRENT
+- PR #60 head **a44e70996bc8546f75dc71e4af13c414350ec1f9**, tree **b16122c4bad65e7a51b8de57a166ba1d0f07e426**, parent **7e6f26e55f85e85e232b2ff0f2e2e16e08676885** remains frozen.
+- Exact-head local full tests **1,018 PASS / 0 FAIL / 4 skips** (947 repository +71 application). Typecheck PASS; lint0errors/6inheritedwarnings. Auth-enabled migration-free production build PASS: source SHA256 **956be6f2c9b33f470cfff969c26911b05bb0a4ed5ffc663266d83eb7629001fd**/468files, local output **8a918a6b7ea392c1394433484cdc01104eb94320a3222b7a3d25d0445b7694a9**/194files. Receipt at audit/astra-validation-2026-10-09/Candidate4-Local-Gates.json.
+- Independent exact delta PASS: report SHA256 **5d5753730dda25b5968784460a2ec67f794d43403b8b729096ed80b6b0b2b45c**. Only two paths differ from4513: legacy browser harness and workflow order. src/server/public/audit subtree object IDs are identical; all20new/32old factual and presentation source remains unchanged. Every previous harness assertion retained, stronger unique target/per-card/overlay checks added; identical auth-enabled geometry gate moved, not removed.
+- Hosted web **37889747808 / job113687741679** active; Android **37889747820** active/queued. Earlier successful gates and failed/superseded runs remain separately recorded below.
+## NEXT
+- Finish every exact current-head hosted gate, independently verify downloaded browser and Android artifacts and actual screenshots.
+- Save research and all acceptance evidence, refresh immutable production/rollback/protection identities, and publish owner release decision checkpoint.
+## HOLD
+- Hosted acceptance remains incomplete. Candidate2 failed receipts and candidate3 supersession remain preserved.
+- Cadaver/date-binding and other data HOLDs unchanged; no owner waiver or production authority granted.
+
+---
+
 # ASTRA MATERIAL GATE — 2026-10-09 05:41 UTC — candidate2 browser failure diagnosed; exact corrected candidate4 active
 
 ## CURRENT
