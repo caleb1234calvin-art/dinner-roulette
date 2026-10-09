@@ -1,3 +1,16 @@
+# Pick For Us — Delta6 Raw Evidence Byte Preservation Correction (2026-10-09)
+
+## CURRENT
+Independent Delta6 review found no factual content drift but detected CRLF-to-LF newline normalization in five published operator HTML blobs at011f9356: ballwin-operator.html, ofallon-operator.html, worlds-calendar.html, worlds-code.html, worlds-haunt.html. The first final report fully proved normalization-only equality and retained dual raw/published hashes. This checkpoint restores the exact original raw bytes for those5 paths under audit/astra-statewide-delta6-2026-10-09/; frozen manifests/projections stay unchanged. Earlier normalized commit remains preserved and is not relabeled exact raw-byte equality.
+
+## NEXT
+Independent verifier binds the corrected five blobs to the unchanged raw manifest and issues superseding publication receipt. Five factual proposals already substantively PASS; author waits only this final binding/checkpoint. Original11+commercial4 are now implemented locally using existing mechanisms, with their focused/typecheck/lint gates passing. Cumulative full/exact-head/browser validation follows all approved additions. Cadaver frozen package still pending.
+
+## HOLD
+No delta runtime or release PASS is implied. Exact source subsets/copy/schedules were not changed by newline correction. Main979d83a/treea7db and productionF1 READY/source979d with BCd rollback remain unchanged last verified baseline. Remaining six commercial and residential HOLDs, local Chromium limitation, six lint warnings, narrowDirections and physicalAndroid limitations persist. No merge/deploy/settings/waiver/signing/Play authority.
+
+PARENT COMMIT **4f17f5235f865dd3e215e9c5400e1a854871f7f6**. Prior history follows verbatim.
+
 # Pick For Us — Four Commercial Records Independently Cleared; Cumulative Import Continues (2026-10-09)
 
 ## CURRENT
