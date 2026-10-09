@@ -1,3 +1,54 @@
+# Pick For Us — Active Continuity Checkpoint Requirement (2026-10-09)
+
+## CURRENT
+
+Owner instruction **2026-10-09 03:18:20 UTC** makes canonical continuity an **active checkpoint after every stable gate**, not merely end-of-task documentation. This requirement applies to research, independent verification, candidate freeze, remediation, exact-head validation, release decisions, releases and backlog reprioritization. A task is not DONE until its final relevant continuity update is read back and verified.
+
+Fresh **03:18 UTC** state:
+- Main **`979d83aede9d66163e1ebaed9ad5b219cb637882`**, tree **`a7dbb32947c0a0daf4864346b0d212477fc9a11b`**, sole parent **`46ded230297976698b9c8a035cb2dafd11219314`**.
+- Production **`dpl_F1XiMcc9AUuykunNamr87R3re7gP` READY**, Git/main source979d. PR59 is merged at that exact SHA; its implementation and scoped production acceptance remain complete.
+- Immediate predecessor/retained rollback **`dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv` READY**, source **`213502ef8cf3f67d75e6d9c9c8ff43f9f656890c`**. Prior operator verified the actual F1 Current/BCd Previous dialog; this checkpoint freshly verifies artifact state, not a new rollback execution.
+- Thirty-two curated records shipped. Future nine remain data/placement/copy-cleared, parked and not started as an implementation candidate. No new research or runtime work is begun by this bounded documentation update.
+
+### Active versus historical PR state
+
+No new implementation candidate is active at this checkpoint. Completed PR59 used `integration/missouri-autonomous-cumulative-15`; its full29-commit lineage/32-path inventory and evidence are preserved below. Open PR54/55/56/58 are historical constituent drafts, not independent pending release work:
+- PR54 `integration/seasonal-deferred-batch-3-five-records`: **`f539d49fc5ff1ff08727566b6344e86c00e35d91`**.
+- PR55 `integration/seasonal-final-four`: **`e397488c4e33355cbf1e278d388226d0a41716dc`**.
+- PR56 `integration/seasonal-brookdale-late-fall`: **`a61af2bfd05ad959dfa3a3fb8dd564ad7b804921`**.
+- PR58 `integration/seasonal-three-source-tier-a-five`: **`d876dbc12de47d5d40be0e9cc2116b30d9834089`**.
+
+PR57 is closed/merged with head and merge SHA **`a61af2bfd05ad959dfa3a3fb8dd564ad7b804921`**; this source ancestry was included in PR59, not a separate current production release.
+
+Their constituent ancestry was reconciled into released PR59. Do not separately merge or reopen completed work merely because an older PR description is stale. Older hotfix/CI/feature/acceptance PRs also remain historical records; this checkpoint does not authorize their closure or mutation.
+
+## NEXT
+
+Maintain the standing autonomous **nonproduction** Missouri pipeline authority: research, field-level verification, cleared-record implementation, draft PRs, bounded fixes, validation and evidence preparation may proceed within the owner's existing scope. This documentation task neither starts the next batch nor adds a new permission barrier to those already authorized stages. Any future candidate must freshly revalidate its inputs, preserve runtime safety, complete exact-head and independent gates, then stop at the owner release-decision boundary. Future main merge/production/settings/protection-waiver decisions remain owner-controlled.
+
+For every stable gate, publish a recoverable checkpoint containing:
+- Current main SHA/tree and production deployment/source/state, with fresh observation time.
+- Active PRs/branches, exact heads/tree/parents/ancestry, current checks and completed versus pending gates.
+- Separate research quality, factual/placement/copy clearance, runtime eligibility, implementation/browser acceptance, Android physical acceptance and release authority.
+- Concrete PASS/HOLD/FAIL reasons, exclusions/expired/rejected records, active research and the next bounded action.
+- Exact evidence paths/hashes and immutable review identities; preserve failed attempts and later corrections.
+- Current rollback identity/procedure qualifications and inherited limitations.
+
+Before an expected coordinator takeover, finish the current safe atomic operation, leave no mutation without a usable handoff, then checkpoint and read back. Return the exact published continuity commit/path with explicit **CURRENT / NEXT / HOLD** so a fresh coordinator can recover without chat. Never infer successful publication, PASS or DONE from an unverified write.
+
+## HOLD
+
+There is no reopened blocker for completed PR59. Remaining boundaries:
+- Future nine have data/copy PASS only; later fresh pre-import, implementation, runtime/browser/layout and exact-candidate review remain unperformed.
+- Carolyn/Route66 placement, Labyrinth/Rising dates and other retained evidence HOLDs remain; residential public-invitation/address/product-policy requirements remain. Vino's2026 no-import decision is retained, not an invented closure claim.
+- Physical Android/WebView/GPS remains HOLD; signing/Play separate. Six inherited ESLint warnings, narrow Directions clipping no-worse, temporary Other icon, approximate location/conservative Open Now, historical optional dev probe INCONCLUSIVE and no live provider/weather/ticket guarantee remain.
+- All earlier one-release waivers are consumed. No standing main/protection/deploy authority is created. Any future release requires exact candidate approval and fresh operational preflight.
+- Missing historical source-ledger evidence and partial coverage are not silently filled; no statewide exhaustion claim.
+
+This update changes only AI_CONTINUITY.md on deployment-disabled `integration/continuity-refresh-2026-10-07`, preserving complete history. **PARENT COMMIT:** `b781575c3d018081364d2889540496be5aec11b2`; **PARENT TREE:** `bef6209e408f8538336142deeb34bbf55b5f657b`. Verified `vercel.json` blob **`65925d91f882a10433e3eb43f53ed802914c969b`** retains integration exclusion. No runtime/main/deployment/settings change.
+
+## Prior continuity — completed PR59 production closeout, preserved verbatim
+
 # Pick For Us — PR59 Fifteen-Record Release SHIPPED (2026-10-09)
 
 ## CURRENT — EXACT RELEASE LIVE; THIRTY-TWO CURATED RECORDS SHIPPED
