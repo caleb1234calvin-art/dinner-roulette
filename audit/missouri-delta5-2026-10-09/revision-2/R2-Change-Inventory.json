@@ -1,0 +1,36 @@
+{
+  "frozen_at": "2026-10-09T04:00:52.812751+00:00",
+  "parent_R1_sha256": "ac19dbecf11b0006ed675060f790d8723a5c69cde76f028d5ebc0f6c8d22d88f",
+  "R1_unchanged_hashes": {
+    "Evidence-Manifest-R1.json": "e8935242f9a9a23df2afdac54968753b45d356addbd3c935e7411e0ae3db7455",
+    "Missouri-Delta5-Residential-R1.json": "f72737e769b42ec93315f889abab149879aac65d937fa2816dfb5bf7de2fe7a1",
+    "Missouri-Delta5-Report-R1.txt": "fbe3c032682984303b4fdfc3a9610608b44091a1af057094c68e120c1d67f56c",
+    "Missouri-Delta5-Research-R1.json": "ac19dbecf11b0006ed675060f790d8723a5c69cde76f028d5ebc0f6c8d22d88f",
+    "Missouri-Delta5-Projections-R1.json": "0d1fe3c3188b5935baa916aea2287d11e000f3ad3102712eec8211bce789d2c2",
+    "Missouri-Delta5-Evidence-R1.zip": "ce6a326d7bef06b37fe708139f4364695e3783507a7f2e6e2b1b993ce9e79bd2"
+  },
+  "changed_records": {
+    "MO26-027": [
+      "Consumer details add same-night-only/nonrefundable condition",
+      "Material-restriction provenance points to freshly captured operator FAQ",
+      "No calendar, point, hours or lifecycle changes"
+    ],
+    "MO26-005": [
+      "Research HOLD becomes research PASS, pending independent R2 acceptance",
+      "Explicit eight-date 2026 set with padded October9",
+      "Unknown hours preserved; null intervals and never OpenNow",
+      "Operator approximate point added and preferred over historical Census interpolation, both retained without averaging",
+      "Source-hierarchy adjudication replaces stale/unrecovered closure commentary as blocker",
+      "New bounded consumer projection and date-only expiry",
+      "Address-only Directions policy"
+    ]
+  },
+  "other_changes": [
+    "Metadata/counts: 2 research PASS, 10 HOLD, 0 REJECT; still 12 commercial/public records",
+    "Three fresh operator source receipts/captures added; original source ledger otherwise retained",
+    "Wolfman-social content_usable corrected to false for temporary-block page; no Wolfman record verdict change",
+    "All 10 other records, residential ledger and original R1 artifacts unchanged"
+  ],
+  "no_external_changes": true,
+  "independent_acceptance": "PENDING"
+}

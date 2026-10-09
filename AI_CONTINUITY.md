@@ -1,3 +1,20 @@
+# Pick For Us — Delta5 Bounded R2 Research Correction (2026-10-09)
+
+## CURRENT
+R2 research proposes **2 PASS / 10 HOLD / 0 REJECT**, with 3 residential records unchanged and separate. [Complete R2 research](audit/missouri-delta5-2026-10-09/revision-2/Missouri-Delta5-Research-R2.json), SHA-256 `2dd0b7be13f5f1ed4fa26837fe9db9390ac8d1c30965578f57270d8a114c132d`; [full report](audit/missouri-delta5-2026-10-09/revision-2/Missouri-Delta5-Report-R2.txt), SHA `0f58fb4d88a7c2623e6fd8bd7e54b3a6f6ce8f7fd9e1e009650f87865abd9843`; exact projections, change inventory and manifests are preserved beside them. R1 research and independent HOLD remain immutable below.
+
+Labyrinth adds purchase-night-only, nonrefundable ticket conditions. Myers now has exact October 9–10, 16–17, 23–24 and 30–31, 2026 dates, unknown hours and a complete projection. Its dedicated operator point 37.119659,-94.312243 is explicitly preferred for approximate venue placement over historical Census interpolation about 127.2 m away; no averaging or arrival precision. Directions use 3935 S Garrison Avenue, Carthage. Current operator calendar supersedes stale 2023 copy; the unrecovered closure comment is not current negative evidence. Both records expire November 1 at 00:00 CDT as date-only visibility limits, not admission closing. Null intervals, never Open Now and no 2027 remain mandatory.
+
+Wolfman's blocked-source content_usable flag is corrected to false. The other ten record objects remain identical. No research expands to Cadaver or the nine.
+
+## NEXT
+Independent R2 content review has passed two records locally but remains checkpoint-dependent. Supply this exact published research checkpoint to the verifier for final source-bound subset issuance, then preserve its final report and objects. Nine independent final data eligibility is ready for its own checkpoint. Root must report the final canonical SHA and CURRENT / NEXT / HOLD to the owner before any bounded candidate begins.
+
+## HOLD
+No implementation has started and no runtime acceptance is claimed. Ten Delta5 commercial HOLDs and three residential HOLDs remain. Cadaver is explicitly VERIFIED HOLD for missing accepted attraction-specific 2026 operation/date binding and therefore supported expiry; its address/approximate point PASS does not clear import. Main `979d83aede9d66163e1ebaed9ad5b219cb637882`, tree `a7dbb32947c0a0daf4864346b0d212477fc9a11b`, production F1 READY at that source and retained BCd rollback remain unchanged. No new release authority.
+
+PARENT COMMIT: `5461a03f0fa73b86d595c1b62193dc1dc04f6add`; PARENT TREE: `388779556853a370c6d27a08911b9ac8953fc6e6`. Safe documentation branch only; previous history retained verbatim.
+
 # Pick For Us — Delta5 Independent R1 HOLD Preserved (2026-10-09)
 
 ## CURRENT

@@ -1,0 +1,93 @@
+{
+  "frozen_at": "2026-10-09T04:00:52.812751+00:00",
+  "status": "RESEARCH ONLY; independent R2 review pending",
+  "pass_projections": [
+    {
+      "name": "Myers Forest of Fears",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "categoryLabel": "Haunted Attraction",
+      "description": "A haunted forest attraction in Carthage.",
+      "details": "Open October 9–10, 16–17, 23–24 and 30–31, 2026. Hours are not listed; check the operator before visiting.",
+      "actionLabel": "Visit website",
+      "website": "https://www.myersforestoffears.com/",
+      "address": "3935 S Garrison Avenue, Carthage, MO 64836",
+      "lat": 37.119659,
+      "lon": -94.312243,
+      "coordinatePrecision": "approximate",
+      "directionsTarget": "3935 S Garrison Avenue, Carthage, MO 64836",
+      "directionsPolicy": "Use supported street address, never approximate point as an arrival/parking assertion",
+      "machine_opening_intervals": null,
+      "open_now_policy": "never",
+      "valid_dates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "expires_at": "2026-11-01T00:00:00-05:00",
+      "expiry_semantics": "Date-only product cutoff at end of last listed date; not a claimed admission closing time",
+      "no_2027_recurrence": true
+    },
+    {
+      "name": "Labyrinth of Fear",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "categoryLabel": "Haunted House",
+      "description": "A haunted-house walkthrough in Nevada with new challenges for the 2026 season.",
+      "details": "Open October 17, 23–24 and 30–31, 2026. Ticket sales start at 6:30 p.m.; entry starts at 7:30 p.m. Closing time is not listed. Groups enter in parties of up to four. Expect strobes, fog, loud sound and water effects; incidental contact can occur. Tickets are valid only on the purchase night and are nonrefundable.",
+      "actionLabel": "Visit website",
+      "website": "https://www.labyrinthoffear.com/",
+      "address": "17866 East Overland Road, Nevada, MO 64772",
+      "lat": 37.828856,
+      "lon": -94.315562,
+      "coordinatePrecision": "approximate",
+      "machine_opening_intervals": null,
+      "open_now_policy": "never",
+      "valid_dates": [
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "expires_at": "2026-11-01T00:00:00-05:00",
+      "expiry_semantics": "Conservative date cutoff, not claimed admission closing time",
+      "no_2027_recurrence": true
+    }
+  ],
+  "held_staged_projections": [
+    {
+      "record_id": "MO26-002",
+      "projection": {
+        "status": "STAGED ONLY; blocked",
+        "name": "Aurora Maize at Adventure Farm",
+        "summary": "Corn maze and courtyard activities, with after-dark maze scares on select nights. Zombie Harvest paintball runs Friday and Saturday at dusk.",
+        "season_text": "September 19–October 31, 2026. Check the operator’s activity-specific schedule.",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "expires_at_candidate": "2026-10-31T22:00:00-05:00"
+      }
+    },
+    {
+      "record_id": "DELTA2-SHEPHERD-LANTERN",
+      "projection": {
+        "status": "STAGED ONLY; blocked",
+        "name": "Bellweather and The Broken Hour",
+        "summary": "An immersive haunted story with clues and choices in the barn and grounds at Shepherd’s Lantern.",
+        "season_text": "October 16–17, 2026. Parental guidance suggested.",
+        "hours_text": "Directory lists 7–10 p.m.; confirm with operator.",
+        "expires_at_candidate": "2026-10-17T22:00:00-05:00",
+        "expiry_status": "secondary time candidate; hold until accepted",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never"
+      }
+    }
+  ]
+}

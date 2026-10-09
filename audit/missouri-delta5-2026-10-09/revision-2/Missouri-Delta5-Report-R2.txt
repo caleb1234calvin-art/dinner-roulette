@@ -1,0 +1,31 @@
+MISSOURI DELTA5 R2 — BOUNDED RESEARCH CORRECTION
+
+12 commercial/public records: research PASS 2, HOLD 10, REJECT 0. Independent R2 review PENDING. Three residential records remain separate and unchanged. No NET NEW claims.
+
+1. Labyrinth of Fear
+Consumer details now state that tickets are valid only on the purchase night and are nonrefundable. The source is the freshly captured operator FAQ. Dates, partial hours, approximate point and date-only expiry are unchanged.
+
+2. Myers Forest of Fears
+A bounded research projection is now supported for October 9–10, 16–17, 23–24 and 30–31, 2026. Home and dedicated location pages both bind these active cells to October2026. The October9 value is normalized to ISO 2026-10-09, correcting R1’s unpadded candidate day.
+
+The dedicated operator location page binds 3935 S Garrison Avenue, Carthage, MO64836 to marker 37.119659,-94.312243. The historical Census road-range interpolation point, 37.118642,-94.311586, remains in the provenance adjudication. The points are approximately127.2m apart. The operator marker is preferred for approximate venue/radius placement; no averaging and no claim of parking, entrance or arrival precision. Directions must use the supported street address.
+
+The explicit current calendar controls the 2026 date field despite stale 2023 promotional text. The unrecovered historical closure comment is not a current factual closure finding or remaining blocker. No current layout, admission policy, accessibility or operating hours are inferred. Hours remain unknown, machine intervals null and OpenNow disabled.
+
+Proposed expiry: 2026-11-01T00:00:00-05:00. This is a date-only product visibility cutoff at the end of the last listed date, not an asserted admission closing time. No 2027 recurrence.
+
+3. Source-ledger correction
+Wolfman’s Facebook temporary-block response is now explicitly content_usable:false. Wolfman’s HOLD and other record content remain unchanged.
+
+Validation
+All R1 deliverables remain byte-identical. The ten unchanged record objects compare equal to R1. All null-interval/never-OpenNow/runtime-ineligible flags remain in place. Fresh captured source hashes were checked before use. Raw calendar semantic binding was inspected; no rendered pixel verification is claimed.
+
+Source captures
+Myers home: https://www.myersforestoffears.com/
+SHA256 4f73ed91046d43f2605a9e618fcfd4061d1b5b5b4dac062c79616bb6df85560e
+Myers location: https://www.myersforestoffears.com/location
+SHA256 db1cf780b96eca1da41ebe31fbed974d9964effbdad6f747801814e12c0b3e0f
+Labyrinth FAQ: https://www.labyrinthoffear.com/faq
+SHA256 fa48af2ece4b78669823c3f128af438521ff5b08a50bd1a81cb412ed04b7335d
+
+Full changes are in R2-Change-Inventory.json. Research/projection files are immutable R2 proposals, not self-approved deliverables. Independent acceptance of facts, point semantics, consumer copy and lifecycle remains required. No implementation, repository write, production action or operator contact was performed.
