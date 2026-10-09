@@ -1,3 +1,52 @@
+# Track F Audit Complete — MORE EVIDENCE REQUIRED; Replacement HOLD (2026-10-09 22:02 UTC)
+
+## CURRENT
+
+**Track F's bounded audit and independent evidence review are complete. Audit integrity/reporting PASS; architecture replacement remains HOLD — MORE EVIDENCE REQUIRED. Strict global live-stop compliance is NOT PASS. Browser-real-use/mobile performance is INCONCLUSIVE / NOT MEASURED.** These are separate verdicts. No runtime architecture, application source, main, production, seasonal taxonomy or discovery data was changed.
+
+The audit compared exact current radial-v1, the existing unpatched selected-radius handler/cache, and an unpatched 50-mile pool with local clipping. Actual application query/controller/cache/identity/eligibility code was used at **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**. Only RPC transport was stubbed. Live timings are handler/controller timings from a permitted cloud route, **not production RPC, browser input-to-render, Vercel cold-start or physical Android performance**.
+
+### Findings with their evidence scope
+
+- **Live:** 40 physical provider attempts, Movies only, in ordered Joplin/Columbia/Kansas City observations. Columbia radial20 completed in **20.020 s**, first eligible **6.506 s**; successful 50-mile one-shot completed in **7.318 s** and clipped to the same three 20-mile IDs (nine at 50 miles). That single successful completion was about 63% faster, while radial first results were 0.812 s earlier. Smaller Columbia20 one-shot failed before these successes. Unequal order, unknown provider cache and failures preclude a comparative reliability or population latency conclusion.
+- Outcomes: 7 usable HTTP200, 10 HTTP500, 2 HTTP504, 11 timeouts and 10 losing hedge aborts. Expected hedge aborts are not provider failures. Fallback is not successful live acquisition. No full live radial50 result, live Anything/seasonal/mixed matrix, repeated randomized comparison or browser measurement was completed.
+- **Protocol deviation:** failure counter reset between initial probe and matrix. Failed Joplin50 followed by failed Columbia20 should have triggered the strict global two-failure stop but did not. This is explicitly **NOT PASS**, not waived by truthful reporting. Total 40 stayed below the provisional 240 ceiling; no 429. Work stopped after two failed Kansas City acquisitions and no compensating traffic was issued.
+- **Controlled exact-code experiment:** 108 deterministic runs, 36/36 matched eligible-ID groups. At 50 miles, radial made 32 calls and took **30,450 ms virtual time** versus one call/100 ms for one-shot with fixed 100 ms fixtures. This demonstrates scheduling overhead, not observed live50 performance or real-world recall. Curated-first at virtual zero is modeled separate composition, not a shipped instant UI.
+- **Cached real-payload replay:** 150 offline views, median **0.691 ms**, p95 **3.297 ms**, maximum **10.888 ms**. Real Columbia JSON 15,965 bytes; estimated retained Node cache about 24,797 bytes. This supports local filtering mechanics for a small payload, not browser/phone/large-city guarantees.
+- **Existing focused regressions:** 155 + 247 = **402 PASS** across disjoint command sets. Not a full repository/browser suite or acceptance of a new architecture. Independent review separately reproduced deterministic fields, ID parity, receipt hashes, replay metrics and both safety gaps.
+
+### Required safety adaptations before any alternative
+
+1. Unpatched handler drops upstream request-abort propagation. Controlled abort at 100 ms stopped patched work at 100 ms; unpatched continued four attempts until 12,500 ms. Callback invalidation does not stop that server work.
+2. Negative-lifecycle retirement on eviction is patch-gated. Synthetic unpatched maxEntries2 probe lost permanent-closure evidence after eviction. This is a demonstrated legacy alternative-path transfer gap, **not a newly proven regression in current radial production**.
+3. Immediate curated display needs explicit implementation and later negative-evidence/current-policy merging. It does not already exist merely by omitting patchId.
+
+Strict clipping, truthful category/partial/fallback coverage, identity and negative lifecycle, cancellation generations, cache TTL/version/origin, current-policy saved/favorite/exclusion handling, exact expiry/no2027, never Open Now and supported-address navigation remain mandatory. Spatial ownership and contiguous-ring progress are the sector-specific pieces. Query semantics must not be weakened for a faster benchmark.
+
+## Recoverable evidence
+
+[Author report](audit/track-f-performance-2026-10-09/Track-F-Performance-Audit.md) SHA-256 **`ffdaa34c41f17ae6e134187661bcbae2571936f5567f6694ca9878d2da42bfbb`**; [author manifest](audit/track-f-performance-2026-10-09/SHA256SUMS.json) **`afc8faeb0f7b31dca66ee633a72d5d0518e5a9e2b510ad739eb2ad437bce3140`**.
+[Independent verification](audit/track-f-performance-2026-10-09/independent/Track-F-Independent-Verification.md) **`a6c03320cc419abc82e8211c01bee2b000cb456f1614a7faefc937fd5b04d083`**.
+[Source safety review](audit/track-f-performance-2026-10-09/safety/Track-F-Architecture-Safety-Review.md) **`b162003e1c8e65ca88171a30c2f4be4bfa1c4ceca1ab3e4d6ae3e403d3778761`**.
+
+Protocol, exact source manifest, reproducible scripts, controlled/replay results, independent receipts and safety probe are preserved under that audit directory. They are audit artifacts only, not wired into runtime or CI. Scripts retain their original explicit filesystem paths; reproduction needs the exact checkout/dependencies and intentional path setup. Future controlled replay must freeze both Date.now and Date constructor consistently; current run used October9 for both. **Do not rerun live scripts automatically.**
+
+Complete frozen archive **Pick-For-Us-Track-F-Performance-Evidence.zip**: **345,288 bytes, 59 members, CRC PASS**, SHA **`6dab6ee96962e6663236a0569b8e41e9023e08f61e37c6e5c9f35273fc8ef53c`**. It preserves all 58 author/safety/independent files, raw live and failed attempts, prior R1 artifacts and complete evidence manifest **`fb108f84a75431bfd63cff937b69b4f7a29b8e8733397b51912a68c9961ad9c9`**. Repository manifest/packaging receipt distinguish included files from archive-only raw evidence. Durable Library version0 report **libfile_4ff0cc209dcc8191998d337e5e72926e**, evidence **libfile_98968ded4bd08191b7e7894c22dc492c**; exact bytes saved.
+
+## NEXT — owner decision only; STOP
+
+Smallest proposal: a separate isolated nonproduction performance candidate/benchmark that generalizes upstream abort and negative-evidence retirement with targeted regressions, evaluates curated-first separately, and obtains repeated order-balanced selected-radius/50-mile comparisons plus a successful complete radial50 reference and browser timing. Reuse frozen payloads for offline correctness. **This is not authorized implementation and does not recommend switching production today.** No new provider traffic, monitoring, architecture edit or release follows this audit.
+
+## HOLD / independent work lanes
+
+Missouri discovery and Cadaver are not blocked by Track F, but this audit does not resume their parked work. **Cadaver remains HOLD for reliable attraction-specific 2026 operation/date binding and supported expiry.** Prior accepted address/approximate placement remains; no Cadaver research was performed. Six commercial/eight delta/separate residential HOLDs, unapplied enrichment and physical Android/WebView/GPS/signing/Play limits remain unchanged.
+
+Fresh final-preparation checks at **21:59 UTC**: canonical task-start **bb27afd9c5d18eefefad4d044d8b46c03fdd14a8**, main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**, production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY**, same source. The 52-record PR60 release remains closed. BCd/F1 restoration evidence keeps its previous dated scope; no new restore test. No new waiver or production authority.
+
+**PARENT CONTINUITY COMMIT:** `bb27afd9c5d18eefefad4d044d8b46c03fdd14a8`; **PARENT TREE:** `7f4cc457641feb1e594cc9e9558dbbc21ca6e22a`. Documentation/audit-only changes on deployment-disabled `integration/continuity-refresh-2026-10-07`. The reports' pending-continuity labels are superseded only after this final checkpoint is published and fully read back. Complete prior history follows verbatim.
+
+---
+
 # Track F — Date Night Radial Loading Performance Audit Started (2026-10-09 21:49 UTC)
 
 ## CURRENT

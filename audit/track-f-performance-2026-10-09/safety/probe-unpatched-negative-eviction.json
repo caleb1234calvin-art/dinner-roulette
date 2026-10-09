@@ -1,0 +1,16 @@
+{
+  "source": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "purpose": "controlled synthetic unpatched cache negative eviction transfer probe; no network",
+  "before": [
+    {
+      "id": "date-night-osm-node-991",
+      "lifecycle": "permanently-closed"
+    }
+  ],
+  "after": [
+    {
+      "id": "date-night-osm-node-991",
+      "lifecycle": null
+    }
+  ]
+}

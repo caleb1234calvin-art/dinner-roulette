@@ -1,0 +1,45 @@
+{
+  "kind": "deterministic stalled-provider fixture, no actual provider traffic",
+  "rows": [
+    {
+      "patched": true,
+      "cancelAt": 100,
+      "calls": [
+        {
+          "start": 0,
+          "abortAt": 100
+        }
+      ],
+      "result": {
+        "source": "fallback",
+        "at": 100
+      }
+    },
+    {
+      "patched": false,
+      "cancelAt": 100,
+      "calls": [
+        {
+          "start": 0,
+          "abortAt": 8000
+        },
+        {
+          "start": 1500,
+          "abortAt": 9500
+        },
+        {
+          "start": 3000,
+          "abortAt": 11000
+        },
+        {
+          "start": 4500,
+          "abortAt": 12500
+        }
+      ],
+      "result": {
+        "source": "fallback",
+        "at": 12500
+      }
+    }
+  ]
+}

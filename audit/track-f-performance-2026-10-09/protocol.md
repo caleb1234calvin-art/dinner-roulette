@@ -1,0 +1,15 @@
+# Track F bounded performance protocol
+
+Source: fe22c15cc6442fc4a48fec23c9a1331c69d70bd2, tree 8d5059c9fee871c522616971cce0a80b153e4d23. Baseline read at 2026-10-09 21:47 UTC: production dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY, same source. Canonical initial ffa3a4a3a98b1060ca1228d5bcebd155e2c13805; task checkpoint bb27afd9c5d18eefefad4d044d8b46c03fdd14a8. No registered execution environment; clean ordinary local clone. No production RPC traffic, deployment or runtime edit.
+
+Compare A actual radial-v1 controller + actual handler; B actual existing no-patch selected-radius handler + existing unpatched discovery cache; C no-patch 50-mile handler/cache then local radius clipping. C immediate curated overlay is explicitly a separate prototype measurement, not current behavior.
+
+Locations: public city centers Joplin (37.0842,-94.5133), Columbia (38.9517,-92.3341), Kansas City (39.0997,-94.5786). No owner device coordinates. Non-Missouri control optional only if it adds evidence. Modes Anything, movies (ordinary), haunted-house (seasonal), movies+haunted-house+park (mixed). Radii15,20,50 with smaller/local1,5,10 and up/down50→10→20→50 reuse.
+
+Two evidence strata: (1) deterministic provider fixtures through exact handler/controller, virtual clocks separately labeled; actual local CPU wall timings for clipping/serialization, not live latency. (2) real public provider requests through exact source, cold application cache; provider-side cold/warm status unknown. No mocked response treated as live recall.
+
+Live staged budget ceiling240 physical upstream fetches, not target. Start minimal single ordinary category Joplin core/selected50 pair (≤8 physical attempts) to establish valid healthy data. Stop after two fully failed acquisitions or any429; no extra mirror exploration beyond source's four fixed mirrors. If healthy, full actual radial movie50 and matched one-shot50 at3locations, bounded subsequent modes only while budget permits; record unrun cells. No retry amplification beyond exact source. Record each URL, payload hash, timing, status/error, bytes, abort, group, query radius and data. Concurrency bounded by exact source. Unknown failure/recall remains unknown.
+
+Controls: same category plan, identity semantics, query clauses, current2026 policy, query date, location and cache state. Count raw returned rows, unique final IDs, category coverage, callback/RPC-equivalent calls vs actual upstream attempts, first eligible result and selected-radius completion. Measure failures, fallback disclosure, cancellation/location-change, local radius changes, TTL, negative lifecycle merging, saved current-policy, expiry and no2027. Existing regression results are separate from prototype coverage. Consumer UI/render latency not inferred from local handler timing.
+
+Freeze scripts, raw evidence, source hashes, failures and report; independent review before final recommendation. Recommendation limited to KEEP RADIAL / OPTIMIZE RADIAL / REPLACE WITH SELECTED-RADIUS ONE-SHOT / REPLACE WITH50-MILE SESSION ACQUISITION / MORE EVIDENCE REQUIRED. No architecture implementation follows this audit.

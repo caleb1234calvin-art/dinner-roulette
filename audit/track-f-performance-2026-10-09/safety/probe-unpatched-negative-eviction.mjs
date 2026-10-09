@@ -1,0 +1,10 @@
+import {appModuleLoader} from '/tmp/track-f-source/scripts/test-support/load-app-module.mjs';
+const load=appModuleLoader(); const {createDateNightDiscoveryCache}=load('src/lib/date-night/cache.ts'); const {buildDateNightQueryPlan}=load('src/lib/date-night/query-plan.ts');
+const cache=createDateNightDiscoveryCache({maxEntries:2});const q=(types)=>({lat:37,lon:-94,radiusMiles:50,halloweenActive:true,activityTypes:types});
+const p={id:'date-night-osm-node-991',name:'Synthetic Place',lat:37,lon:-94,address:'Fixture',activityTypes:['movies'],source:'osm',openingHours:'24/7'};
+const r=(query,places)=>({venues:places,source:'live',discovery:{groups:buildDateNightQueryPlan(query.activityTypes,true).map(g=>({...g,outcome:places.length?'succeeded-nonempty':'succeeded-empty'})),partial:false}});
+cache.store(q(['movies']),r(q(['movies']),[p]));cache.store(q(['haunted-house']),r(q(['haunted-house']),[{...p,activityTypes:['haunted-house'],lifecycle:'permanently-closed'}]));
+const before=cache.read(q(['movies'])).response?.venues.map(v=>({id:v.id,lifecycle:v.lifecycle}));
+cache.store(q(['park']),r(q(['park']),[]));const after=cache.read(q(['movies'])).response?.venues.map(v=>({id:v.id,lifecycle:v.lifecycle??null}));
+console.log(JSON.stringify({source:'fe22c15cc6442fc4a48fec23c9a1331c69d70bd2',purpose:'controlled synthetic unpatched cache negative eviction transfer probe; no network',before,after},null,2));
+if(before?.[0]?.lifecycle!=='permanently-closed'||after?.[0]?.lifecycle!==null)process.exitCode=1;

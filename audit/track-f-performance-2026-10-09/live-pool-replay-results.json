@@ -1,0 +1,1643 @@
+{
+  "source": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "kind": "offline replay of real Columbia payload; no provider requests",
+  "same20MileIds": true,
+  "twentyIds": [
+    "date-night-osm-node-3509935172",
+    "date-night-osm-way-137621484",
+    "date-night-osm-way-367307533"
+  ],
+  "radialIds": [
+    "date-night-osm-node-3509935172",
+    "date-night-osm-way-137621484",
+    "date-night-osm-way-367307533"
+  ],
+  "medianMs": 0.690812,
+  "p95Ms": 3.296764,
+  "maxMs": 10.888077,
+  "responseJsonBytes": 15965,
+  "approximateNodeHeapPerClonedCacheBytes": 24797.36,
+  "heapMethod": "Node --expose-gc:100 independent caches with structured-cloned real response; aggregate retained heap delta divided100; runtime-specific/no browser heap or peak claim",
+  "samples": [
+    {
+      "iteration": 0,
+      "radiusMiles": 1,
+      "ms": 10.888077,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 0,
+      "radiusMiles": 10,
+      "ms": 0.905496,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 0,
+      "radiusMiles": 20,
+      "ms": 0.873728,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 0,
+      "radiusMiles": 50,
+      "ms": 0.891925,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 0,
+      "radiusMiles": 10,
+      "ms": 0.705144,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 1,
+      "radiusMiles": 1,
+      "ms": 0.581597,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 1,
+      "radiusMiles": 10,
+      "ms": 0.484692,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 1,
+      "radiusMiles": 20,
+      "ms": 0.714578,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 1,
+      "radiusMiles": 50,
+      "ms": 0.56339,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 1,
+      "radiusMiles": 10,
+      "ms": 0.610311,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 2,
+      "radiusMiles": 1,
+      "ms": 0.699606,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 2,
+      "radiusMiles": 10,
+      "ms": 0.823513,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 2,
+      "radiusMiles": 20,
+      "ms": 2.812323,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 2,
+      "radiusMiles": 50,
+      "ms": 2.515144,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 2,
+      "radiusMiles": 10,
+      "ms": 2.936371,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 3,
+      "radiusMiles": 1,
+      "ms": 3.240229,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 3,
+      "radiusMiles": 10,
+      "ms": 2.735577,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 3,
+      "radiusMiles": 20,
+      "ms": 2.803229,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 3,
+      "radiusMiles": 50,
+      "ms": 2.681445,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 3,
+      "radiusMiles": 10,
+      "ms": 2.551199,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 4,
+      "radiusMiles": 1,
+      "ms": 3.444817,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 4,
+      "radiusMiles": 10,
+      "ms": 2.435935,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 4,
+      "radiusMiles": 20,
+      "ms": 2.608455,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 4,
+      "radiusMiles": 50,
+      "ms": 2.722928,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 4,
+      "radiusMiles": 10,
+      "ms": 2.661656,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 5,
+      "radiusMiles": 1,
+      "ms": 2.807936,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 5,
+      "radiusMiles": 10,
+      "ms": 3.719131,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 5,
+      "radiusMiles": 20,
+      "ms": 2.9098,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 5,
+      "radiusMiles": 50,
+      "ms": 2.723308,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 5,
+      "radiusMiles": 10,
+      "ms": 3.045224,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 6,
+      "radiusMiles": 1,
+      "ms": 2.434964,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 6,
+      "radiusMiles": 10,
+      "ms": 2.964703,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 6,
+      "radiusMiles": 20,
+      "ms": 3.296764,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 6,
+      "radiusMiles": 50,
+      "ms": 8.674827,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 6,
+      "radiusMiles": 10,
+      "ms": 0.530401,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 7,
+      "radiusMiles": 1,
+      "ms": 0.458161,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 7,
+      "radiusMiles": 10,
+      "ms": 0.539574,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 7,
+      "radiusMiles": 20,
+      "ms": 0.741038,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 7,
+      "radiusMiles": 50,
+      "ms": 0.488006,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 7,
+      "radiusMiles": 10,
+      "ms": 0.618203,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 8,
+      "radiusMiles": 1,
+      "ms": 0.448968,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 8,
+      "radiusMiles": 10,
+      "ms": 0.537902,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 8,
+      "radiusMiles": 20,
+      "ms": 0.611563,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 8,
+      "radiusMiles": 50,
+      "ms": 0.488117,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 8,
+      "radiusMiles": 10,
+      "ms": 0.495467,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 9,
+      "radiusMiles": 1,
+      "ms": 0.401546,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 9,
+      "radiusMiles": 10,
+      "ms": 0.561387,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 9,
+      "radiusMiles": 20,
+      "ms": 0.412222,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 9,
+      "radiusMiles": 50,
+      "ms": 0.439654,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 9,
+      "radiusMiles": 10,
+      "ms": 0.401295,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 10,
+      "radiusMiles": 1,
+      "ms": 0.396158,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 10,
+      "radiusMiles": 10,
+      "ms": 0.544902,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 10,
+      "radiusMiles": 20,
+      "ms": 0.644983,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 10,
+      "radiusMiles": 50,
+      "ms": 1.702348,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 10,
+      "radiusMiles": 10,
+      "ms": 3.197904,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 11,
+      "radiusMiles": 1,
+      "ms": 2.789047,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 11,
+      "radiusMiles": 10,
+      "ms": 2.649557,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 11,
+      "radiusMiles": 20,
+      "ms": 2.80385,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 11,
+      "radiusMiles": 50,
+      "ms": 3.005925,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 11,
+      "radiusMiles": 10,
+      "ms": 2.695807,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 12,
+      "radiusMiles": 1,
+      "ms": 2.647364,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 12,
+      "radiusMiles": 10,
+      "ms": 2.81701,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 12,
+      "radiusMiles": 20,
+      "ms": 2.772683,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 12,
+      "radiusMiles": 50,
+      "ms": 2.803439,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 12,
+      "radiusMiles": 10,
+      "ms": 3.15472,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 13,
+      "radiusMiles": 1,
+      "ms": 3.170023,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 13,
+      "radiusMiles": 10,
+      "ms": 3.037172,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 13,
+      "radiusMiles": 20,
+      "ms": 3.582985,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 13,
+      "radiusMiles": 50,
+      "ms": 3.244335,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 13,
+      "radiusMiles": 10,
+      "ms": 3.14162,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 14,
+      "radiusMiles": 1,
+      "ms": 2.918293,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 14,
+      "radiusMiles": 10,
+      "ms": 3.041669,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 14,
+      "radiusMiles": 20,
+      "ms": 4.011412,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 14,
+      "radiusMiles": 50,
+      "ms": 2.813584,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 14,
+      "radiusMiles": 10,
+      "ms": 2.972234,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 15,
+      "radiusMiles": 1,
+      "ms": 4.017431,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 15,
+      "radiusMiles": 10,
+      "ms": 0.428797,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 15,
+      "radiusMiles": 20,
+      "ms": 0.638424,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 15,
+      "radiusMiles": 50,
+      "ms": 0.996113,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 15,
+      "radiusMiles": 10,
+      "ms": 0.724433,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 16,
+      "radiusMiles": 1,
+      "ms": 0.796962,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 16,
+      "radiusMiles": 10,
+      "ms": 0.686726,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 16,
+      "radiusMiles": 20,
+      "ms": 0.525674,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 16,
+      "radiusMiles": 50,
+      "ms": 0.44393,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 16,
+      "radiusMiles": 10,
+      "ms": 0.401225,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 17,
+      "radiusMiles": 1,
+      "ms": 0.768089,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 17,
+      "radiusMiles": 10,
+      "ms": 0.64907,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 17,
+      "radiusMiles": 20,
+      "ms": 1.018046,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 17,
+      "radiusMiles": 50,
+      "ms": 0.577922,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 17,
+      "radiusMiles": 10,
+      "ms": 0.493365,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 18,
+      "radiusMiles": 1,
+      "ms": 0.396148,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 18,
+      "radiusMiles": 10,
+      "ms": 0.534487,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 18,
+      "radiusMiles": 20,
+      "ms": 0.515117,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 18,
+      "radiusMiles": 50,
+      "ms": 0.664402,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 18,
+      "radiusMiles": 10,
+      "ms": 0.505262,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 19,
+      "radiusMiles": 1,
+      "ms": 0.438111,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 19,
+      "radiusMiles": 10,
+      "ms": 0.576901,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 19,
+      "radiusMiles": 20,
+      "ms": 0.582719,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 19,
+      "radiusMiles": 50,
+      "ms": 0.603861,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 19,
+      "radiusMiles": 10,
+      "ms": 0.719125,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 20,
+      "radiusMiles": 1,
+      "ms": 0.575518,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 20,
+      "radiusMiles": 10,
+      "ms": 0.505803,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 20,
+      "radiusMiles": 20,
+      "ms": 0.542128,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 20,
+      "radiusMiles": 50,
+      "ms": 0.528387,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 20,
+      "radiusMiles": 10,
+      "ms": 0.754087,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 21,
+      "radiusMiles": 1,
+      "ms": 0.548577,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 21,
+      "radiusMiles": 10,
+      "ms": 0.546554,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 21,
+      "radiusMiles": 20,
+      "ms": 1.752293,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 21,
+      "radiusMiles": 50,
+      "ms": 0.482738,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 21,
+      "radiusMiles": 10,
+      "ms": 0.482458,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 22,
+      "radiusMiles": 1,
+      "ms": 0.471472,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 22,
+      "radiusMiles": 10,
+      "ms": 0.491381,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 22,
+      "radiusMiles": 20,
+      "ms": 0.49736,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 22,
+      "radiusMiles": 50,
+      "ms": 0.492653,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 22,
+      "radiusMiles": 10,
+      "ms": 0.458361,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 23,
+      "radiusMiles": 1,
+      "ms": 0.476639,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 23,
+      "radiusMiles": 10,
+      "ms": 0.455758,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 23,
+      "radiusMiles": 20,
+      "ms": 0.487756,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 23,
+      "radiusMiles": 50,
+      "ms": 1.142914,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 23,
+      "radiusMiles": 10,
+      "ms": 0.473595,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 24,
+      "radiusMiles": 1,
+      "ms": 0.451311,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 24,
+      "radiusMiles": 10,
+      "ms": 0.508548,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 24,
+      "radiusMiles": 20,
+      "ms": 0.939758,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 24,
+      "radiusMiles": 50,
+      "ms": 0.512002,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 24,
+      "radiusMiles": 10,
+      "ms": 0.797122,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 25,
+      "radiusMiles": 1,
+      "ms": 1.63724,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 25,
+      "radiusMiles": 10,
+      "ms": 1.00745,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 25,
+      "radiusMiles": 20,
+      "ms": 1.41162,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 25,
+      "radiusMiles": 50,
+      "ms": 0.522098,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 25,
+      "radiusMiles": 10,
+      "ms": 0.404811,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 26,
+      "radiusMiles": 1,
+      "ms": 0.389568,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 26,
+      "radiusMiles": 10,
+      "ms": 0.42399,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 26,
+      "radiusMiles": 20,
+      "ms": 0.398331,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 26,
+      "radiusMiles": 50,
+      "ms": 0.440073,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 26,
+      "radiusMiles": 10,
+      "ms": 0.56372,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 27,
+      "radiusMiles": 1,
+      "ms": 1.026138,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 27,
+      "radiusMiles": 10,
+      "ms": 1.143334,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 27,
+      "radiusMiles": 20,
+      "ms": 0.915962,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 27,
+      "radiusMiles": 50,
+      "ms": 1.284948,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 27,
+      "radiusMiles": 10,
+      "ms": 0.983544,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 28,
+      "radiusMiles": 1,
+      "ms": 0.409157,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 28,
+      "radiusMiles": 10,
+      "ms": 0.690812,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 28,
+      "radiusMiles": 20,
+      "ms": 0.405261,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 28,
+      "radiusMiles": 50,
+      "ms": 0.585363,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 28,
+      "radiusMiles": 10,
+      "ms": 0.466794,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 29,
+      "radiusMiles": 1,
+      "ms": 0.431481,
+      "ids": [
+        "date-night-osm-node-3509935172"
+      ]
+    },
+    {
+      "iteration": 29,
+      "radiusMiles": 10,
+      "ms": 0.395426,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 29,
+      "radiusMiles": 20,
+      "ms": 0.705524,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    },
+    {
+      "iteration": 29,
+      "radiusMiles": 50,
+      "ms": 0.658513,
+      "ids": [
+        "date-night-osm-node-11047330097",
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-1194175114",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-253757572",
+        "date-night-osm-way-367307533",
+        "date-night-osm-way-572529393",
+        "date-night-osm-way-737936308",
+        "date-night-osm-way-753702404"
+      ]
+    },
+    {
+      "iteration": 29,
+      "radiusMiles": 10,
+      "ms": 0.430098,
+      "ids": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ]
+    }
+  ]
+}

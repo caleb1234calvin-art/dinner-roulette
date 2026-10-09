@@ -1,0 +1,7291 @@
+{
+  "source": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "rows": [
+    {
+      "location": "Joplin",
+      "mode": "anything",
+      "radiusMiles": 15,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 13,
+      "uniqueEligible": 28,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-battle-of-carthage-museum",
+        "date-night-cunningham-park-joplin",
+        "date-night-fourth-street-bowl-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-joplin-museum",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-012-witches-day-out",
+        "date-night-mo26-019-james-river-joplin-party",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-precious-moments-chapel",
+        "date-night-rangeline-golf-joplin",
+        "date-night-roller-city-joplin",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-tilt-studio-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "arcade",
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "mini-golf",
+        "movies",
+        "museum",
+        "other-halloween-fall",
+        "park",
+        "pumpkin-patch",
+        "skating"
+      ],
+      "responseBytes": 31365,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 40.096702,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 25.843682,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 29.793783,
+          "eligible": 22
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 21.895534,
+          "eligible": 22
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "anything",
+      "radiusMiles": 15,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 13,
+      "uniqueEligible": 28,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-battle-of-carthage-museum",
+        "date-night-cunningham-park-joplin",
+        "date-night-fourth-street-bowl-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-joplin-museum",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-012-witches-day-out",
+        "date-night-mo26-019-james-river-joplin-party",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-precious-moments-chapel",
+        "date-night-rangeline-golf-joplin",
+        "date-night-roller-city-joplin",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-tilt-studio-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "arcade",
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "mini-golf",
+        "movies",
+        "museum",
+        "other-halloween-fall",
+        "park",
+        "pumpkin-patch",
+        "skating"
+      ],
+      "responseBytes": 31253,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 4.725301,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 4.428673,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 4.372159,
+          "eligible": 22
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 4.059947,
+          "eligible": 22
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "anything",
+      "radiusMiles": 15,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 45,
+      "uniqueEligible": 28,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-battle-of-carthage-museum",
+        "date-night-cunningham-park-joplin",
+        "date-night-fourth-street-bowl-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-joplin-museum",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-012-witches-day-out",
+        "date-night-mo26-019-james-river-joplin-party",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-precious-moments-chapel",
+        "date-night-rangeline-golf-joplin",
+        "date-night-roller-city-joplin",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-tilt-studio-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "arcade",
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "mini-golf",
+        "movies",
+        "museum",
+        "other-halloween-fall",
+        "park",
+        "pumpkin-patch",
+        "skating"
+      ],
+      "responseBytes": 53543,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 19.113756,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 19.679059,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 19.360958,
+          "eligible": 22
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 19.336141,
+          "eligible": 36
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 19.393488,
+          "eligible": 63
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 19.167677,
+          "eligible": 22
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "anything",
+      "radiusMiles": 20,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 3450,
+      "handlerCalls": 5,
+      "upstreamFixtureCalls": 20,
+      "rawFixtureRows": 42,
+      "uniqueEligible": 36,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-battle-of-carthage-museum",
+        "date-night-cunningham-park-joplin",
+        "date-night-fourth-street-bowl-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-joplin-museum",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-012-witches-day-out",
+        "date-night-mo26-019-james-river-joplin-party",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9",
+        "date-night-precious-moments-chapel",
+        "date-night-rangeline-golf-joplin",
+        "date-night-roller-city-joplin",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-tilt-studio-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "arcade",
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "mini-golf",
+        "movies",
+        "museum",
+        "other-halloween-fall",
+        "park",
+        "pumpkin-patch",
+        "skating"
+      ],
+      "responseBytes": 37622,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 24.561947,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 25.848665,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 25.102704,
+          "eligible": 22
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 37.289195,
+          "eligible": 36
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 25.869716,
+          "eligible": 22
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "anything",
+      "radiusMiles": 20,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 21,
+      "uniqueEligible": 36,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-battle-of-carthage-museum",
+        "date-night-cunningham-park-joplin",
+        "date-night-fourth-street-bowl-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-joplin-museum",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-012-witches-day-out",
+        "date-night-mo26-019-james-river-joplin-party",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9",
+        "date-night-precious-moments-chapel",
+        "date-night-rangeline-golf-joplin",
+        "date-night-roller-city-joplin",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-tilt-studio-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "arcade",
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "mini-golf",
+        "movies",
+        "museum",
+        "other-halloween-fall",
+        "park",
+        "pumpkin-patch",
+        "skating"
+      ],
+      "responseBytes": 35411,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 8.068446,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 8.212214,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 8.420418,
+          "eligible": 22
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 8.254257,
+          "eligible": 36
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 7.824258,
+          "eligible": 22
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "anything",
+      "radiusMiles": 20,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 45,
+      "uniqueEligible": 36,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-battle-of-carthage-museum",
+        "date-night-cunningham-park-joplin",
+        "date-night-fourth-street-bowl-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-joplin-museum",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-012-witches-day-out",
+        "date-night-mo26-019-james-river-joplin-party",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9",
+        "date-night-precious-moments-chapel",
+        "date-night-rangeline-golf-joplin",
+        "date-night-roller-city-joplin",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-tilt-studio-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "arcade",
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "mini-golf",
+        "movies",
+        "museum",
+        "other-halloween-fall",
+        "park",
+        "pumpkin-patch",
+        "skating"
+      ],
+      "responseBytes": 53543,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 21.035175,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 20.758689,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 23.048223,
+          "eligible": 22
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 82.912577,
+          "eligible": 36
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 27.017494,
+          "eligible": 63
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 24.045208,
+          "eligible": 22
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "anything",
+      "radiusMiles": 50,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 30450,
+      "handlerCalls": 32,
+      "upstreamFixtureCalls": 128,
+      "rawFixtureRows": 105,
+      "uniqueEligible": 63,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-battle-of-carthage-museum",
+        "date-night-cunningham-park-joplin",
+        "date-night-fourth-street-bowl-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-joplin-museum",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-012-witches-day-out",
+        "date-night-mo26-019-james-river-joplin-party",
+        "date-night-mo26-astra-aurora-maize",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-mo26-astra-trepidations",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-19",
+        "date-night-osm-node-20",
+        "date-night-osm-node-21",
+        "date-night-osm-node-22",
+        "date-night-osm-node-23",
+        "date-night-osm-node-24",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-27",
+        "date-night-osm-node-28",
+        "date-night-osm-node-29",
+        "date-night-osm-node-3",
+        "date-night-osm-node-30",
+        "date-night-osm-node-31",
+        "date-night-osm-node-32",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-35",
+        "date-night-osm-node-36",
+        "date-night-osm-node-37",
+        "date-night-osm-node-38",
+        "date-night-osm-node-39",
+        "date-night-osm-node-4",
+        "date-night-osm-node-40",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9",
+        "date-night-precious-moments-chapel",
+        "date-night-rangeline-golf-joplin",
+        "date-night-roller-city-joplin",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-stebbins-park-sarcoxie",
+        "date-night-tilt-studio-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "arcade",
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "mini-golf",
+        "movies",
+        "museum",
+        "other-halloween-fall",
+        "park",
+        "pumpkin-patch",
+        "skating"
+      ],
+      "responseBytes": 69821,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 26.560935,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 34.521869,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 26.664251,
+          "eligible": 22
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 35.941952,
+          "eligible": 36
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 91.620339,
+          "eligible": 63
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 23.778526,
+          "eligible": 22
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "anything",
+      "radiusMiles": 50,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 45,
+      "uniqueEligible": 63,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-battle-of-carthage-museum",
+        "date-night-cunningham-park-joplin",
+        "date-night-fourth-street-bowl-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-joplin-museum",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-012-witches-day-out",
+        "date-night-mo26-019-james-river-joplin-party",
+        "date-night-mo26-astra-aurora-maize",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-mo26-astra-trepidations",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-19",
+        "date-night-osm-node-20",
+        "date-night-osm-node-21",
+        "date-night-osm-node-22",
+        "date-night-osm-node-23",
+        "date-night-osm-node-24",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-27",
+        "date-night-osm-node-28",
+        "date-night-osm-node-29",
+        "date-night-osm-node-3",
+        "date-night-osm-node-30",
+        "date-night-osm-node-31",
+        "date-night-osm-node-32",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-35",
+        "date-night-osm-node-36",
+        "date-night-osm-node-37",
+        "date-night-osm-node-38",
+        "date-night-osm-node-39",
+        "date-night-osm-node-4",
+        "date-night-osm-node-40",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9",
+        "date-night-precious-moments-chapel",
+        "date-night-rangeline-golf-joplin",
+        "date-night-roller-city-joplin",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-stebbins-park-sarcoxie",
+        "date-night-tilt-studio-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "arcade",
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "mini-golf",
+        "movies",
+        "museum",
+        "other-halloween-fall",
+        "park",
+        "pumpkin-patch",
+        "skating"
+      ],
+      "responseBytes": 53543,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 20.056558,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 21.120394,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 24.938386,
+          "eligible": 22
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 24.577321,
+          "eligible": 36
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 28.139422,
+          "eligible": 63
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 21.916235,
+          "eligible": 22
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "anything",
+      "radiusMiles": 50,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 45,
+      "uniqueEligible": 63,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-battle-of-carthage-museum",
+        "date-night-cunningham-park-joplin",
+        "date-night-fourth-street-bowl-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-joplin-museum",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-012-witches-day-out",
+        "date-night-mo26-019-james-river-joplin-party",
+        "date-night-mo26-astra-aurora-maize",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-mo26-astra-trepidations",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-19",
+        "date-night-osm-node-20",
+        "date-night-osm-node-21",
+        "date-night-osm-node-22",
+        "date-night-osm-node-23",
+        "date-night-osm-node-24",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-27",
+        "date-night-osm-node-28",
+        "date-night-osm-node-29",
+        "date-night-osm-node-3",
+        "date-night-osm-node-30",
+        "date-night-osm-node-31",
+        "date-night-osm-node-32",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-35",
+        "date-night-osm-node-36",
+        "date-night-osm-node-37",
+        "date-night-osm-node-38",
+        "date-night-osm-node-39",
+        "date-night-osm-node-4",
+        "date-night-osm-node-40",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9",
+        "date-night-precious-moments-chapel",
+        "date-night-rangeline-golf-joplin",
+        "date-night-roller-city-joplin",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-stebbins-park-sarcoxie",
+        "date-night-tilt-studio-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "arcade",
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "mini-golf",
+        "movies",
+        "museum",
+        "other-halloween-fall",
+        "park",
+        "pumpkin-patch",
+        "skating"
+      ],
+      "responseBytes": 53543,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 31.360587,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 21.328148,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 23.539561,
+          "eligible": 22
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 22.556492,
+          "eligible": 36
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 26.347037,
+          "eligible": 63
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 23.116782,
+          "eligible": 22
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "ordinary",
+      "radiusMiles": 15,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 3,
+      "uniqueEligible": 3,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-osm-node-1",
+        "date-night-route-66-theater-webb-city"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 2235,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.909112,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.228304,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.683261,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.12002,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "ordinary",
+      "radiusMiles": 15,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 3,
+      "uniqueEligible": 3,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-osm-node-1",
+        "date-night-route-66-theater-webb-city"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 27676,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.095584,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.077347,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.075875,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.1264,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "ordinary",
+      "radiusMiles": 15,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 3,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-osm-node-1",
+        "date-night-route-66-theater-webb-city"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 35370,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.356478,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.325,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.305881,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.513455,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.599795,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.295506,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "ordinary",
+      "radiusMiles": 20,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 3450,
+      "handlerCalls": 5,
+      "upstreamFixtureCalls": 5,
+      "rawFixtureRows": 8,
+      "uniqueEligible": 4,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-9",
+        "date-night-route-66-theater-webb-city"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 3148,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.885486,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.725855,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.795691,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.786145,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.865456,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "ordinary",
+      "radiusMiles": 20,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 4,
+      "uniqueEligible": 4,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-9",
+        "date-night-route-66-theater-webb-city"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 28186,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.24513,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.127122,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.114673,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.229406,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.117508,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "ordinary",
+      "radiusMiles": 20,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 4,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-9",
+        "date-night-route-66-theater-webb-city"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 35370,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.387544,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.649841,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.312902,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.317368,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.560375,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.604812,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "ordinary",
+      "radiusMiles": 50,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 30450,
+      "handlerCalls": 32,
+      "upstreamFixtureCalls": 32,
+      "rawFixtureRows": 16,
+      "uniqueEligible": 7,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-17",
+        "date-night-osm-node-25",
+        "date-night-osm-node-33",
+        "date-night-osm-node-9",
+        "date-night-route-66-theater-webb-city"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 7394,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.827869,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.73615,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.069083,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 2.318688,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 12.909274,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.059749,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "ordinary",
+      "radiusMiles": 50,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 7,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-17",
+        "date-night-osm-node-25",
+        "date-night-osm-node-33",
+        "date-night-osm-node-9",
+        "date-night-route-66-theater-webb-city"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 35370,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.473955,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.312471,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.29182,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.5502,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.395737,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.29169,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "ordinary",
+      "radiusMiles": 50,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 7,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-17",
+        "date-night-osm-node-25",
+        "date-night-osm-node-33",
+        "date-night-osm-node-9",
+        "date-night-route-66-theater-webb-city"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 35370,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.812546,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.457971,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.383719,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.295066,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.332272,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.296257,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "seasonal",
+      "radiusMiles": 15,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 2,
+      "uniqueEligible": 6,
+      "ids": [
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-5",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 16349,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.979879,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.329631,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.752024,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.359912,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "seasonal",
+      "radiusMiles": 15,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 2,
+      "uniqueEligible": 6,
+      "ids": [
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-5",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 27593,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.228945,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.126121,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.478241,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.472263,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "seasonal",
+      "radiusMiles": 15,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 6,
+      "ids": [
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-5",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 35374,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.441416,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.727197,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.093931,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.3983,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 1.416017,
+          "eligible": 12
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.270126,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "seasonal",
+      "radiusMiles": 20,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 3450,
+      "handlerCalls": 5,
+      "upstreamFixtureCalls": 5,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 7,
+      "ids": [
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 17321,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.660105,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.281884,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.442416,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 2.712112,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.629339,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "seasonal",
+      "radiusMiles": 20,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 3,
+      "uniqueEligible": 7,
+      "ids": [
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 28127,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.266231,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.146681,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.603771,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.070635,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.509289,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "seasonal",
+      "radiusMiles": 20,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 7,
+      "ids": [
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 35374,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.419543,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.414305,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.888471,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.650952,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.871365,
+          "eligible": 12
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.659364,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "seasonal",
+      "radiusMiles": 50,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 30450,
+      "handlerCalls": 32,
+      "upstreamFixtureCalls": 32,
+      "rawFixtureRows": 14,
+      "uniqueEligible": 12,
+      "ids": [
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-aurora-maize",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-mo26-astra-trepidations",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-13",
+        "date-night-osm-node-21",
+        "date-night-osm-node-29",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "corn-maze",
+        "haunted-house"
+      ],
+      "responseBytes": 27067,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.952187,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.049954,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.201904,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 2.955138,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 18.819667,
+          "eligible": 12
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.419652,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "seasonal",
+      "radiusMiles": 50,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 12,
+      "ids": [
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-aurora-maize",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-mo26-astra-trepidations",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-13",
+        "date-night-osm-node-21",
+        "date-night-osm-node-29",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "corn-maze",
+        "haunted-house"
+      ],
+      "responseBytes": 35374,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.476739,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.37125,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.900629,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.225559,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 1.145138,
+          "eligible": 12
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.777943,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "seasonal",
+      "radiusMiles": 50,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 12,
+      "ids": [
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-aurora-maize",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-mo26-astra-trepidations",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-13",
+        "date-night-osm-node-21",
+        "date-night-osm-node-29",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "corn-maze",
+        "haunted-house"
+      ],
+      "responseBytes": 35374,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.39721,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.382517,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.902552,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.737332,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.955211,
+          "eligible": 12
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.625334,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "mixed",
+      "radiusMiles": 15,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 14,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-cunningham-park-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-5",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 20236,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 5.508823,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 5.477315,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 6.769904,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 5.815384,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "mixed",
+      "radiusMiles": 15,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 14,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-cunningham-park-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-5",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 28469,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.371379,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.091137,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.245739,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.52414,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "mixed",
+      "radiusMiles": 15,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 19,
+      "uniqueEligible": 14,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-cunningham-park-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-5",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 40321,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 3.602967,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 5.925806,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 4.941586,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 4.819041,
+          "eligible": 17
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 4.537106,
+          "eligible": 29
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 4.166116,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "mixed",
+      "radiusMiles": 20,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 3450,
+      "handlerCalls": 5,
+      "upstreamFixtureCalls": 15,
+      "rawFixtureRows": 20,
+      "uniqueEligible": 17,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-cunningham-park-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 23022,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 5.358415,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 5.432567,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 6.956302,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 11.845363,
+          "eligible": 17
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 6.000754,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "mixed",
+      "radiusMiles": 20,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 10,
+      "uniqueEligible": 17,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-cunningham-park-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 30019,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.715077,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.767557,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.733616,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 2.272499,
+          "eligible": 17
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.560555,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "mixed",
+      "radiusMiles": 20,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 19,
+      "uniqueEligible": 17,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-cunningham-park-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 40321,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 4.40083,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 3.916128,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 4.110272,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 4.637568,
+          "eligible": 17
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 4.757519,
+          "eligible": 29
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 4.391857,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "mixed",
+      "radiusMiles": 50,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 30450,
+      "handlerCalls": 32,
+      "upstreamFixtureCalls": 96,
+      "rawFixtureRows": 43,
+      "uniqueEligible": 29,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-cunningham-park-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-aurora-maize",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-mo26-astra-trepidations",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-21",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-29",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-stebbins-park-sarcoxie",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "corn-maze",
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 41613,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 6.99824,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 6.393477,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 8.166893,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 11.982009,
+          "eligible": 17
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 32.721652,
+          "eligible": 29
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 12.096227,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "mixed",
+      "radiusMiles": 50,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 19,
+      "uniqueEligible": 29,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-cunningham-park-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-aurora-maize",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-mo26-astra-trepidations",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-21",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-29",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-stebbins-park-sarcoxie",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "corn-maze",
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 40321,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 3.30748,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 3.252938,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 3.643408,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 3.639632,
+          "eligible": 17
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 3.79737,
+          "eligible": 29
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 3.991092,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "mixed",
+      "radiusMiles": 50,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 19,
+      "uniqueEligible": 29,
+      "ids": [
+        "date-night-66-drive-in-carthage",
+        "date-night-cunningham-park-joplin",
+        "date-night-hatten-park-webb-city",
+        "date-night-kellogg-lake-park-carthage",
+        "date-night-king-jack-park-webb-city",
+        "date-night-mo26-010-aftermath",
+        "date-night-mo26-011-beyond-outer-limits",
+        "date-night-mo26-astra-aurora-maize",
+        "date-night-mo26-astra-myers-forest-of-fears",
+        "date-night-mo26-astra-trepidations",
+        "date-night-myers-inn-carthage",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-21",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-29",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9",
+        "date-night-route-66-theater-webb-city",
+        "date-night-schifferdecker-park-joplin",
+        "date-night-stebbins-park-sarcoxie",
+        "date-night-werehouse-joplin"
+      ],
+      "categories": [
+        "corn-maze",
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 40321,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 3.280139,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 3.72469,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 4.355281,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 4.635584,
+          "eligible": 17
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 4.729687,
+          "eligible": 29
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 3.644489,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "anything",
+      "radiusMiles": 15,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 13,
+      "uniqueEligible": 10,
+      "ids": [
+        "date-night-mo26-067-shryocks-callaway-farms",
+        "date-night-mo26-068-lloyds-family-farm",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 13249,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 2.957592,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 3.019105,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 2.56429,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 2.539282,
+          "eligible": 7
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "anything",
+      "radiusMiles": 15,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 13,
+      "uniqueEligible": 10,
+      "ids": [
+        "date-night-mo26-067-shryocks-callaway-farms",
+        "date-night-mo26-068-lloyds-family-farm",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 13137,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.421146,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.449488,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.793096,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.463359,
+          "eligible": 7
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "anything",
+      "radiusMiles": 15,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 45,
+      "uniqueEligible": 10,
+      "ids": [
+        "date-night-mo26-067-shryocks-callaway-farms",
+        "date-night-mo26-068-lloyds-family-farm",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 32221,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 9.441747,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 9.376277,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 10.847087,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 9.978176,
+          "eligible": 18
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 10.043674,
+          "eligible": 43
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 8.801991,
+          "eligible": 7
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "anything",
+      "radiusMiles": 20,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 3450,
+      "handlerCalls": 5,
+      "upstreamFixtureCalls": 20,
+      "rawFixtureRows": 42,
+      "uniqueEligible": 18,
+      "ids": [
+        "date-night-mo26-067-shryocks-callaway-farms",
+        "date-night-mo26-068-lloyds-family-farm",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "park",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 19500,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 2.752954,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 2.827967,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 2.613273,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 8.188426,
+          "eligible": 18
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 2.638201,
+          "eligible": 7
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "anything",
+      "radiusMiles": 20,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 21,
+      "uniqueEligible": 18,
+      "ids": [
+        "date-night-mo26-067-shryocks-callaway-farms",
+        "date-night-mo26-068-lloyds-family-farm",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "park",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 17289,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.623029,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.61091,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.493133,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 2.228993,
+          "eligible": 18
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.486953,
+          "eligible": 7
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "anything",
+      "radiusMiles": 20,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 45,
+      "uniqueEligible": 18,
+      "ids": [
+        "date-night-mo26-067-shryocks-callaway-farms",
+        "date-night-mo26-068-lloyds-family-farm",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "park",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 32221,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 9.061653,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 9.068944,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 9.286272,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 9.918887,
+          "eligible": 18
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 10.98823,
+          "eligible": 43
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 8.918998,
+          "eligible": 7
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "anything",
+      "radiusMiles": 50,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 30450,
+      "handlerCalls": 32,
+      "upstreamFixtureCalls": 128,
+      "rawFixtureRows": 105,
+      "uniqueEligible": 43,
+      "ids": [
+        "date-night-mo26-067-shryocks-callaway-farms",
+        "date-night-mo26-068-lloyds-family-farm",
+        "date-night-mo26-069-dead-factory",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-19",
+        "date-night-osm-node-20",
+        "date-night-osm-node-21",
+        "date-night-osm-node-22",
+        "date-night-osm-node-23",
+        "date-night-osm-node-24",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-27",
+        "date-night-osm-node-28",
+        "date-night-osm-node-29",
+        "date-night-osm-node-3",
+        "date-night-osm-node-30",
+        "date-night-osm-node-31",
+        "date-night-osm-node-32",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-35",
+        "date-night-osm-node-36",
+        "date-night-osm-node-37",
+        "date-night-osm-node-38",
+        "date-night-osm-node-39",
+        "date-night-osm-node-4",
+        "date-night-osm-node-40",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "park",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 48499,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 4.105915,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 3.083443,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 3.064213,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 10.276696,
+          "eligible": 18
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 46.00778,
+          "eligible": 43
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 3.274901,
+          "eligible": 7
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "anything",
+      "radiusMiles": 50,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 45,
+      "uniqueEligible": 43,
+      "ids": [
+        "date-night-mo26-067-shryocks-callaway-farms",
+        "date-night-mo26-068-lloyds-family-farm",
+        "date-night-mo26-069-dead-factory",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-19",
+        "date-night-osm-node-20",
+        "date-night-osm-node-21",
+        "date-night-osm-node-22",
+        "date-night-osm-node-23",
+        "date-night-osm-node-24",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-27",
+        "date-night-osm-node-28",
+        "date-night-osm-node-29",
+        "date-night-osm-node-3",
+        "date-night-osm-node-30",
+        "date-night-osm-node-31",
+        "date-night-osm-node-32",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-35",
+        "date-night-osm-node-36",
+        "date-night-osm-node-37",
+        "date-night-osm-node-38",
+        "date-night-osm-node-39",
+        "date-night-osm-node-4",
+        "date-night-osm-node-40",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "park",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 32221,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 9.073931,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 9.414284,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 9.085489,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 10.136404,
+          "eligible": 18
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 11.271968,
+          "eligible": 43
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 9.558203,
+          "eligible": 7
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "anything",
+      "radiusMiles": 50,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 45,
+      "uniqueEligible": 43,
+      "ids": [
+        "date-night-mo26-067-shryocks-callaway-farms",
+        "date-night-mo26-068-lloyds-family-farm",
+        "date-night-mo26-069-dead-factory",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-19",
+        "date-night-osm-node-20",
+        "date-night-osm-node-21",
+        "date-night-osm-node-22",
+        "date-night-osm-node-23",
+        "date-night-osm-node-24",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-27",
+        "date-night-osm-node-28",
+        "date-night-osm-node-29",
+        "date-night-osm-node-3",
+        "date-night-osm-node-30",
+        "date-night-osm-node-31",
+        "date-night-osm-node-32",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-35",
+        "date-night-osm-node-36",
+        "date-night-osm-node-37",
+        "date-night-osm-node-38",
+        "date-night-osm-node-39",
+        "date-night-osm-node-4",
+        "date-night-osm-node-40",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "park",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 32221,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 9.306452,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 9.629329,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 10.27283,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 10.171638,
+          "eligible": 18
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 10.295655,
+          "eligible": 43
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 9.332752,
+          "eligible": 7
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "ordinary",
+      "radiusMiles": 15,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 3,
+      "uniqueEligible": 1,
+      "ids": [
+        "date-night-osm-node-1"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 1367,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.172481,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.252521,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.161343,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.209476,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "ordinary",
+      "radiusMiles": 15,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 3,
+      "uniqueEligible": 1,
+      "ids": [
+        "date-night-osm-node-1"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 9559,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.03325,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.025458,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.025368,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.063536,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "ordinary",
+      "radiusMiles": 15,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 1,
+      "ids": [
+        "date-night-osm-node-1"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 14053,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.355646,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.267483,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.162686,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.22575,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.175535,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.157608,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "ordinary",
+      "radiusMiles": 20,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 3450,
+      "handlerCalls": 5,
+      "upstreamFixtureCalls": 5,
+      "rawFixtureRows": 8,
+      "uniqueEligible": 2,
+      "ids": [
+        "date-night-osm-node-1",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 2280,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.262456,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.632935,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.339001,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.292059,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.4038,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "ordinary",
+      "radiusMiles": 20,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 4,
+      "uniqueEligible": 2,
+      "ids": [
+        "date-night-osm-node-1",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 10069,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.051698,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.045348,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.03999,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.084537,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.043556,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "ordinary",
+      "radiusMiles": 20,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 2,
+      "ids": [
+        "date-night-osm-node-1",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 14053,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.239322,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.303147,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.553174,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.254194,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.26517,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.329437,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "ordinary",
+      "radiusMiles": 50,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 30450,
+      "handlerCalls": 32,
+      "upstreamFixtureCalls": 32,
+      "rawFixtureRows": 16,
+      "uniqueEligible": 5,
+      "ids": [
+        "date-night-osm-node-1",
+        "date-night-osm-node-17",
+        "date-night-osm-node-25",
+        "date-night-osm-node-33",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 6527,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.505292,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.317479,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.466434,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.172429,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 8.293303,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.557301,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "ordinary",
+      "radiusMiles": 50,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 5,
+      "ids": [
+        "date-night-osm-node-1",
+        "date-night-osm-node-17",
+        "date-night-osm-node-25",
+        "date-night-osm-node-33",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 14053,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.188384,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.164778,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.15947,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.15901,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.166171,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.179541,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "ordinary",
+      "radiusMiles": 50,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 5,
+      "ids": [
+        "date-night-osm-node-1",
+        "date-night-osm-node-17",
+        "date-night-osm-node-25",
+        "date-night-osm-node-33",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 14053,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.170077,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.332782,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.458902,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.262095,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.215706,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.158819,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "seasonal",
+      "radiusMiles": 15,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 2,
+      "uniqueEligible": 2,
+      "ids": [
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 3594,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.243678,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.270949,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.200723,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.308185,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "seasonal",
+      "radiusMiles": 15,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 2,
+      "uniqueEligible": 2,
+      "ids": [
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 9477,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.042905,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.030806,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.027141,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.025859,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "seasonal",
+      "radiusMiles": 15,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 2,
+      "ids": [
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 14056,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.389047,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.20595,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.291199,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.320063,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.45071,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.273442,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "seasonal",
+      "radiusMiles": 20,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 3450,
+      "handlerCalls": 5,
+      "upstreamFixtureCalls": 5,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 3,
+      "ids": [
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 4564,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.479313,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.301315,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.63601,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.931985,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.330369,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "seasonal",
+      "radiusMiles": 20,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 3,
+      "uniqueEligible": 3,
+      "ids": [
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 10009,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.060381,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.050727,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.050356,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.203517,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.096766,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "seasonal",
+      "radiusMiles": 20,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 3,
+      "ids": [
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 14056,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.208785,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.281545,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.25151,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.346412,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.631192,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.208114,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "seasonal",
+      "radiusMiles": 50,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 30450,
+      "handlerCalls": 32,
+      "upstreamFixtureCalls": 32,
+      "rawFixtureRows": 14,
+      "uniqueEligible": 7,
+      "ids": [
+        "date-night-mo26-069-dead-factory",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-13",
+        "date-night-osm-node-21",
+        "date-night-osm-node-29",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 11536,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.427175,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.399212,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.408126,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.330097,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 7.942374,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.488277,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "seasonal",
+      "radiusMiles": 50,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 7,
+      "ids": [
+        "date-night-mo26-069-dead-factory",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-13",
+        "date-night-osm-node-21",
+        "date-night-osm-node-29",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 14056,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.209696,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.244649,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.194063,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.29818,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.466434,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.208625,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "seasonal",
+      "radiusMiles": 50,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 7,
+      "ids": [
+        "date-night-mo26-069-dead-factory",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-13",
+        "date-night-osm-node-21",
+        "date-night-osm-node-29",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 14056,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.208044,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.222085,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.196667,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.299552,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.366753,
+          "eligible": 7
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.229667,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "mixed",
+      "radiusMiles": 15,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 3,
+      "ids": [
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies"
+      ],
+      "responseBytes": 4525,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.50411,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.599104,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.411961,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.445242,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "mixed",
+      "radiusMiles": 15,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 3,
+      "ids": [
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies"
+      ],
+      "responseBytes": 10352,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.090055,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.074352,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.069726,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.069746,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "mixed",
+      "radiusMiles": 15,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 19,
+      "uniqueEligible": 3,
+      "ids": [
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies"
+      ],
+      "responseBytes": 19004,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.612092,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.214543,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.329095,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.481275,
+          "eligible": 6
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 1.566624,
+          "eligible": 16
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.429016,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "mixed",
+      "radiusMiles": 20,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 3450,
+      "handlerCalls": 5,
+      "upstreamFixtureCalls": 15,
+      "rawFixtureRows": 20,
+      "uniqueEligible": 6,
+      "ids": [
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 7309,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.619524,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.583491,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.572214,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 2.20703,
+          "eligible": 6
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.599104,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "mixed",
+      "radiusMiles": 20,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 10,
+      "uniqueEligible": 6,
+      "ids": [
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 11900,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.226312,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.243978,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.207834,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.56302,
+          "eligible": 6
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.230457,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "mixed",
+      "radiusMiles": 20,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 19,
+      "uniqueEligible": 6,
+      "ids": [
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 19004,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.630841,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.281604,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.256046,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.59053,
+          "eligible": 6
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 1.556028,
+          "eligible": 16
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.317678,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "mixed",
+      "radiusMiles": 50,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 30450,
+      "handlerCalls": 32,
+      "upstreamFixtureCalls": 96,
+      "rawFixtureRows": 43,
+      "uniqueEligible": 16,
+      "ids": [
+        "date-night-mo26-069-dead-factory",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-21",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-29",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 22702,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.721418,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.729991,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.750482,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 2.116234,
+          "eligible": 6
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 12.899503,
+          "eligible": 16
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.422837,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "mixed",
+      "radiusMiles": 50,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 19,
+      "uniqueEligible": 16,
+      "ids": [
+        "date-night-mo26-069-dead-factory",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-21",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-29",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 19004,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 2.40597,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 2.550158,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 2.551379,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 2.416566,
+          "eligible": 6
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 2.18676,
+          "eligible": 16
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.319892,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "mixed",
+      "radiusMiles": 50,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 19,
+      "uniqueEligible": 16,
+      "ids": [
+        "date-night-mo26-069-dead-factory",
+        "date-night-mo26-astra-missouri-nightmare",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-21",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-29",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 19004,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 2.085307,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.266101,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.301483,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.595487,
+          "eligible": 6
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 1.494155,
+          "eligible": 16
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.466753,
+          "eligible": 2
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "anything",
+      "radiusMiles": 15,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 13,
+      "uniqueEligible": 11,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-liberty-corn-maze",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 16086,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 2.906947,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 3.030973,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 2.990201,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 4.018474,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "anything",
+      "radiusMiles": 15,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 13,
+      "uniqueEligible": 11,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-liberty-corn-maze",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 15974,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.49015,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.631613,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.74888,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.838245,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "anything",
+      "radiusMiles": 15,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 45,
+      "uniqueEligible": 11,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-liberty-corn-maze",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 40244,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 10.836131,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 9.420114,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 9.402457,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 9.924044,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 10.975821,
+          "eligible": 45
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 9.492803,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "anything",
+      "radiusMiles": 20,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 3450,
+      "handlerCalls": 5,
+      "upstreamFixtureCalls": 20,
+      "rawFixtureRows": 42,
+      "uniqueEligible": 19,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-liberty-corn-maze",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "park",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 22341,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 2.834216,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 3.243324,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 2.98258,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 8.346443,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 3.127218,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "anything",
+      "radiusMiles": 20,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 21,
+      "uniqueEligible": 19,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-liberty-corn-maze",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "park",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 20130,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.578431,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.978645,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 2.05477,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 2.468294,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 2.026207,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "anything",
+      "radiusMiles": 20,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 45,
+      "uniqueEligible": 19,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-liberty-corn-maze",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-3",
+        "date-night-osm-node-4",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "park",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 40244,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 9.405522,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 10.6436,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 11.912664,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 11.083053,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 11.42612,
+          "eligible": 45
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 12.427622,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "anything",
+      "radiusMiles": 50,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 30450,
+      "handlerCalls": 32,
+      "upstreamFixtureCalls": 128,
+      "rawFixtureRows": 105,
+      "uniqueEligible": 45,
+      "ids": [
+        "date-night-mo26-054-fun-farm",
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-liberty-corn-maze",
+        "date-night-mo26-astra-terror-at-the-ranch",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-19",
+        "date-night-osm-node-20",
+        "date-night-osm-node-21",
+        "date-night-osm-node-22",
+        "date-night-osm-node-23",
+        "date-night-osm-node-24",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-27",
+        "date-night-osm-node-28",
+        "date-night-osm-node-29",
+        "date-night-osm-node-3",
+        "date-night-osm-node-30",
+        "date-night-osm-node-31",
+        "date-night-osm-node-32",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-35",
+        "date-night-osm-node-36",
+        "date-night-osm-node-37",
+        "date-night-osm-node-38",
+        "date-night-osm-node-39",
+        "date-night-osm-node-4",
+        "date-night-osm-node-40",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "park",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 54586,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 3.612211,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 3.935949,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 3.799764,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 12.977051,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 43.877846,
+          "eligible": 45
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 3.414803,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "anything",
+      "radiusMiles": 50,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 45,
+      "uniqueEligible": 45,
+      "ids": [
+        "date-night-mo26-054-fun-farm",
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-liberty-corn-maze",
+        "date-night-mo26-astra-terror-at-the-ranch",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-19",
+        "date-night-osm-node-20",
+        "date-night-osm-node-21",
+        "date-night-osm-node-22",
+        "date-night-osm-node-23",
+        "date-night-osm-node-24",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-27",
+        "date-night-osm-node-28",
+        "date-night-osm-node-29",
+        "date-night-osm-node-3",
+        "date-night-osm-node-30",
+        "date-night-osm-node-31",
+        "date-night-osm-node-32",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-35",
+        "date-night-osm-node-36",
+        "date-night-osm-node-37",
+        "date-night-osm-node-38",
+        "date-night-osm-node-39",
+        "date-night-osm-node-4",
+        "date-night-osm-node-40",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "park",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 40244,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 12.295282,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 11.556237,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 11.534664,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 12.188321,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 11.449786,
+          "eligible": 45
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 11.6311,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "anything",
+      "radiusMiles": 50,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 4,
+      "rawFixtureRows": 45,
+      "uniqueEligible": 45,
+      "ids": [
+        "date-night-mo26-054-fun-farm",
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-liberty-corn-maze",
+        "date-night-mo26-astra-terror-at-the-ranch",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-11",
+        "date-night-osm-node-12",
+        "date-night-osm-node-13",
+        "date-night-osm-node-14",
+        "date-night-osm-node-15",
+        "date-night-osm-node-16",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-19",
+        "date-night-osm-node-20",
+        "date-night-osm-node-21",
+        "date-night-osm-node-22",
+        "date-night-osm-node-23",
+        "date-night-osm-node-24",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-27",
+        "date-night-osm-node-28",
+        "date-night-osm-node-29",
+        "date-night-osm-node-3",
+        "date-night-osm-node-30",
+        "date-night-osm-node-31",
+        "date-night-osm-node-32",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-35",
+        "date-night-osm-node-36",
+        "date-night-osm-node-37",
+        "date-night-osm-node-38",
+        "date-night-osm-node-39",
+        "date-night-osm-node-4",
+        "date-night-osm-node-40",
+        "date-night-osm-node-5",
+        "date-night-osm-node-6",
+        "date-night-osm-node-7",
+        "date-night-osm-node-8",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "bowling",
+        "corn-maze",
+        "escape-room",
+        "haunted-house",
+        "movies",
+        "museum",
+        "park",
+        "pumpkin-patch"
+      ],
+      "responseBytes": 40244,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 10.815047,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 11.548893,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 10.894096,
+          "eligible": 10
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 11.23532,
+          "eligible": 19
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 11.26165,
+          "eligible": 45
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 11.036821,
+          "eligible": 10
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "ordinary",
+      "radiusMiles": 15,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 3,
+      "uniqueEligible": 1,
+      "ids": [
+        "date-night-osm-node-1"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 1366,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.176446,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.158829,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.162555,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.154033,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "ordinary",
+      "radiusMiles": 15,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 3,
+      "uniqueEligible": 1,
+      "ids": [
+        "date-night-osm-node-1"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 12395,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.032068,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.024377,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.01968,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.01973,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "ordinary",
+      "radiusMiles": 15,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 1,
+      "ids": [
+        "date-night-osm-node-1"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 22076,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.167953,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.161203,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.157107,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.161513,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.293522,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.160882,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "ordinary",
+      "radiusMiles": 20,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 3450,
+      "handlerCalls": 5,
+      "upstreamFixtureCalls": 5,
+      "rawFixtureRows": 8,
+      "uniqueEligible": 2,
+      "ids": [
+        "date-night-osm-node-1",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 2279,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.263638,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.319002,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.300704,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.827839,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.266732,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "ordinary",
+      "radiusMiles": 20,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 4,
+      "uniqueEligible": 2,
+      "ids": [
+        "date-night-osm-node-1",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 12905,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.049645,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.079851,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.041413,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.041783,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.04017,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "ordinary",
+      "radiusMiles": 20,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 2,
+      "ids": [
+        "date-night-osm-node-1",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 22076,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.29863,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.240543,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.160923,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.221915,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.261444,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.15922,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "ordinary",
+      "radiusMiles": 50,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 30450,
+      "handlerCalls": 32,
+      "upstreamFixtureCalls": 32,
+      "rawFixtureRows": 16,
+      "uniqueEligible": 5,
+      "ids": [
+        "date-night-osm-node-1",
+        "date-night-osm-node-17",
+        "date-night-osm-node-25",
+        "date-night-osm-node-33",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 6526,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.312251,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.248244,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.286483,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.019387,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 7.592685,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.39777,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "ordinary",
+      "radiusMiles": 50,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 5,
+      "ids": [
+        "date-night-osm-node-1",
+        "date-night-osm-node-17",
+        "date-night-osm-node-25",
+        "date-night-osm-node-33",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 22076,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.241344,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.166451,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.19199,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.21229,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.170567,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.234403,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "ordinary",
+      "radiusMiles": 50,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 5,
+      "ids": [
+        "date-night-osm-node-1",
+        "date-night-osm-node-17",
+        "date-night-osm-node-25",
+        "date-night-osm-node-33",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "movies"
+      ],
+      "responseBytes": 22076,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.170547,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.15911,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.155245,
+          "eligible": 1
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.186371,
+          "eligible": 2
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.168023,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.211699,
+          "eligible": 1
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "seasonal",
+      "radiusMiles": 15,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 2,
+      "uniqueEligible": 4,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 9792,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.393063,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.520976,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.812606,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.598694,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "seasonal",
+      "radiusMiles": 15,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 2,
+      "uniqueEligible": 4,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 12313,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.054392,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.213982,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.288305,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.371771,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "seasonal",
+      "radiusMiles": 15,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 4,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 22077,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.261143,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.426935,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.539855,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.586495,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.786546,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.567827,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "seasonal",
+      "radiusMiles": 20,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 3450,
+      "handlerCalls": 5,
+      "upstreamFixtureCalls": 5,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 5,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 10763,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.53702,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.704553,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.74235,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.912586,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.820709,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "seasonal",
+      "radiusMiles": 20,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 3,
+      "uniqueEligible": 5,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 12846,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.117487,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.270669,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.609089,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.435818,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.310037,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "seasonal",
+      "radiusMiles": 20,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 5,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house"
+      ],
+      "responseBytes": 22077,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.257539,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.63652,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.527907,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.587236,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 1.057055,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.643822,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "seasonal",
+      "radiusMiles": 50,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 30450,
+      "handlerCalls": 32,
+      "upstreamFixtureCalls": 32,
+      "rawFixtureRows": 14,
+      "uniqueEligible": 9,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-terror-at-the-ranch",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-13",
+        "date-night-osm-node-21",
+        "date-night-osm-node-29",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "corn-maze",
+        "haunted-house"
+      ],
+      "responseBytes": 17496,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.785285,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.90755,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.186691,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 2.157094,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 10.104685,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.88787,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "seasonal",
+      "radiusMiles": 50,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 9,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-terror-at-the-ranch",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-13",
+        "date-night-osm-node-21",
+        "date-night-osm-node-29",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "corn-maze",
+        "haunted-house"
+      ],
+      "responseBytes": 22077,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.333784,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.575509,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.681468,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.715189,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 1.100701,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.785675,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "seasonal",
+      "radiusMiles": 50,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 1,
+      "rawFixtureRows": 6,
+      "uniqueEligible": 9,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-terror-at-the-ranch",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-13",
+        "date-night-osm-node-21",
+        "date-night-osm-node-29",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "corn-maze",
+        "haunted-house"
+      ],
+      "responseBytes": 22077,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.342777,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.964736,
+          "eligible": 3
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.693036,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.82163,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 0.795911,
+          "eligible": 9
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.886737,
+          "eligible": 4
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "mixed",
+      "radiusMiles": 15,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 5,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies"
+      ],
+      "responseBytes": 10723,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.703812,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.922371,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.218879,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.862471,
+          "eligible": 5
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "mixed",
+      "radiusMiles": 15,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 7,
+      "uniqueEligible": 5,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies"
+      ],
+      "responseBytes": 13188,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.147052,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.316458,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.610742,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.627457,
+          "eligible": 5
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "mixed",
+      "radiusMiles": 15,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 19,
+      "uniqueEligible": 5,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-5"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies"
+      ],
+      "responseBytes": 27026,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.620355,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.674516,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.964053,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.813736,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 2.157935,
+          "eligible": 18
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.927087,
+          "eligible": 5
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "mixed",
+      "radiusMiles": 20,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 3450,
+      "handlerCalls": 5,
+      "upstreamFixtureCalls": 15,
+      "rawFixtureRows": 20,
+      "uniqueEligible": 8,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 13508,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.005187,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.134632,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.142244,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 3.044553,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.562157,
+          "eligible": 5
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "mixed",
+      "radiusMiles": 20,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 10,
+      "uniqueEligible": 8,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 14737,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 0.366273,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 0.533304,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.720366,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 0.5573,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 0.552934,
+          "eligible": 5
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "mixed",
+      "radiusMiles": 20,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 19,
+      "uniqueEligible": 8,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 27026,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.596739,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.677691,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 2.028991,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.958665,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 1.919787,
+          "eligible": 18
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.654877,
+          "eligible": 5
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "mixed",
+      "radiusMiles": 50,
+      "strategy": "radial-v1",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 30450,
+      "handlerCalls": 32,
+      "upstreamFixtureCalls": 96,
+      "rawFixtureRows": 43,
+      "uniqueEligible": 18,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-terror-at-the-ranch",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-21",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-29",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "corn-maze",
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 28663,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.137907,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.250767,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.59124,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 2.955909,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 14.232542,
+          "eligible": 18
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.317587,
+          "eligible": 5
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "mixed",
+      "radiusMiles": 50,
+      "strategy": "selected-radius-one-shot",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 100,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 19,
+      "uniqueEligible": 18,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-terror-at-the-ranch",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-21",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-29",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "corn-maze",
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 27026,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.440944,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 2.048391,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.894969,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.786525,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 1.729209,
+          "eligible": 18
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.856471,
+          "eligible": 5
+        }
+      ],
+      "complete": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "mixed",
+      "radiusMiles": 50,
+      "strategy": "50-mile-session",
+      "clock": "deterministic virtual; fixed100ms provider",
+      "firstUsefulMs": 0,
+      "completionMs": 100,
+      "handlerCalls": 1,
+      "upstreamFixtureCalls": 3,
+      "rawFixtureRows": 19,
+      "uniqueEligible": 18,
+      "ids": [
+        "date-night-mo26-058-beast",
+        "date-night-mo26-astra-terror-at-the-ranch",
+        "date-night-mo26-astra-worlds-of-fun-haunt",
+        "date-night-mo26-delta-edge-of-hell",
+        "date-night-osm-node-1",
+        "date-night-osm-node-10",
+        "date-night-osm-node-13",
+        "date-night-osm-node-17",
+        "date-night-osm-node-18",
+        "date-night-osm-node-21",
+        "date-night-osm-node-25",
+        "date-night-osm-node-26",
+        "date-night-osm-node-29",
+        "date-night-osm-node-33",
+        "date-night-osm-node-34",
+        "date-night-osm-node-37",
+        "date-night-osm-node-5",
+        "date-night-osm-node-9"
+      ],
+      "categories": [
+        "corn-maze",
+        "haunted-house",
+        "movies",
+        "park"
+      ],
+      "responseBytes": 27026,
+      "additionalRadiusChangeCalls": 0,
+      "localChanges": [
+        {
+          "radiusMiles": 1,
+          "cpuMs": 1.55769,
+          "eligible": 0
+        },
+        {
+          "radiusMiles": 5,
+          "cpuMs": 1.769449,
+          "eligible": 4
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.795539,
+          "eligible": 5
+        },
+        {
+          "radiusMiles": 20,
+          "cpuMs": 1.687997,
+          "eligible": 8
+        },
+        {
+          "radiusMiles": 50,
+          "cpuMs": 1.766004,
+          "eligible": 18
+        },
+        {
+          "radiusMiles": 10,
+          "cpuMs": 1.595007,
+          "eligible": 5
+        }
+      ],
+      "complete": true
+    }
+  ],
+  "comparisons": [
+    {
+      "location": "Joplin",
+      "mode": "anything",
+      "radius": 15,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "anything",
+      "radius": 20,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "anything",
+      "radius": 50,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "ordinary",
+      "radius": 15,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "ordinary",
+      "radius": 20,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "ordinary",
+      "radius": 50,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "seasonal",
+      "radius": 15,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "seasonal",
+      "radius": 20,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "seasonal",
+      "radius": 50,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "mixed",
+      "radius": 15,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "mixed",
+      "radius": 20,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Joplin",
+      "mode": "mixed",
+      "radius": 50,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "anything",
+      "radius": 15,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "anything",
+      "radius": 20,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "anything",
+      "radius": 50,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "ordinary",
+      "radius": 15,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "ordinary",
+      "radius": 20,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "ordinary",
+      "radius": 50,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "seasonal",
+      "radius": 15,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "seasonal",
+      "radius": 20,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "seasonal",
+      "radius": 50,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "mixed",
+      "radius": 15,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "mixed",
+      "radius": 20,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Columbia",
+      "mode": "mixed",
+      "radius": 50,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "anything",
+      "radius": 15,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "anything",
+      "radius": 20,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "anything",
+      "radius": 50,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "ordinary",
+      "radius": 15,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "ordinary",
+      "radius": 20,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "ordinary",
+      "radius": 50,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "seasonal",
+      "radius": 15,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "seasonal",
+      "radius": 20,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "seasonal",
+      "radius": 50,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "mixed",
+      "radius": 15,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "mixed",
+      "radius": 20,
+      "sameEligibleIds": true
+    },
+    {
+      "location": "Kansas City",
+      "mode": "mixed",
+      "radius": 50,
+      "sameEligibleIds": true
+    }
+  ],
+  "fixtureSize": 42,
+  "actualProviderRequests": 0,
+  "limitations": "Fixture recall is finite known-fixture parity only. C immediate catalog is prototype overlay, not current application behavior. No browser rendering or real provider latency measured."
+}

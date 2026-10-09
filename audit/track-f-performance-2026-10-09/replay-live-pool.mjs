@@ -1,0 +1,12 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {appModuleLoader} from '/tmp/track-f-source/scripts/test-support/load-app-module.mjs';
+process.chdir('/tmp/track-f-source');
+const root='/workspace/scratch/a0ea701c7b34/track-f-radial-audit',raw=JSON.parse(readFileSync(root+'/live-matrix/results.json'));
+const load=appModuleLoader(),{createDateNightDiscoveryCache}=load('src/lib/date-night/cache.ts'),{clipDateNightRadius}=load('src/lib/date-night/radial-cache.ts'),{decorateDateNight,eligibleDateNight}=load('src/lib/date-night/eligibility.ts');
+const c=raw.cases.find(x=>x.location.name==='Columbia'&&x.strategy==='50-mile-session'),a=raw.cases.find(x=>x.location.name==='Columbia'&&x.strategy==='radial-v1');
+const q={...c.location,radiusMiles:50,halloweenActive:true,activityTypes:['movies']},cache=createDateNightDiscoveryCache();cache.store(q,c.response);
+const rows=[];for(let n=0;n<30;n++)for(const radiusMiles of[1,10,20,50,10]){const view={...q,radiusMiles},start=process.hrtime.bigint();const response=cache.read(view).response;const p=eligibleDateNight(decorateDateNight(clipDateNightRadius(response.venues,view),view),{radiusMiles,activityTypes:['movies'],mood:50,openNowOnly:false,favoritesOnly:false,reduceParks:false},true);rows.push({iteration:n,radiusMiles,ms:Number(process.hrtime.bigint()-start)/1e6,ids:p.map(x=>x.id).sort()});}
+const twenty=rows.find(x=>x.radiusMiles===20),sorted=rows.map(x=>x.ms).sort((x,y)=>x-y);
+global.gc?.();const before=process.memoryUsage().heapUsed,held=[];for(let i=0;i<100;i++){const x=createDateNightDiscoveryCache();x.store(q,structuredClone(c.response));held.push(x);}global.gc?.();const after=process.memoryUsage().heapUsed;
+const result={source:raw.source,kind:'offline replay of real Columbia payload; no provider requests',same20MileIds:JSON.stringify(twenty.ids)===JSON.stringify(a.eligibleIds),twentyIds:twenty.ids,radialIds:a.eligibleIds,medianMs:sorted[Math.floor(sorted.length*.5)],p95Ms:sorted[Math.floor(sorted.length*.95)],maxMs:sorted.at(-1),responseJsonBytes:Buffer.byteLength(JSON.stringify(c.response)),approximateNodeHeapPerClonedCacheBytes:(after-before)/100,heapMethod:'Node --expose-gc:100 independent caches with structured-cloned real response; aggregate retained heap delta divided100; runtime-specific/no browser heap or peak claim',samples:rows};
+writeFileSync(root+'/live-pool-replay-results.json',JSON.stringify(result,null,2));console.log(JSON.stringify({...result,samples:result.samples.length}));
