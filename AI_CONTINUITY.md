@@ -1,3 +1,29 @@
+# PR #61 Safety HOLD Expanded — Open Decisions Lost on Alias Rekeying (2026-10-09 22:29 UTC)
+
+## CURRENT
+
+**HYB-IV-02 independently reproduces three actual-component failures on frozen c931:** a valid background duplicate changes the canonical provider ID from `date-night-osm-z` to `date-night-osm-a`, and existing **Pick, Options and Plan all dismiss**. Same venue/name/location/type; no expiry or negative lifecycle. This violates the owner's open-decision stability requirement. Unique-addition stability tests do not cover alias rekeying.
+
+Candidate remains **`c931188a96752fcb97dac9066e530688f9aaef2a` / tree `ef30671a048d6463ded751efe974ee8f8303ed3a` / parent `fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`**, draft PR61. **Both HYB-IV-01 capacity-rejected closure loss and HYB-IV-02 valid alias rekeying remain blocking independent HOLDs. Zero live provider traffic.** Narrow abort/test PASS does not clear either defect.
+
+[Full supplement](audit/hybrid-loading-2026-10-09/c931-Safety-Preflight-R1-Supplement.md), SHA-256 **`f1b8a0b4d7c757655994f9418914d4f2a4cec92d4850caac95b286d40dbce41e`**; [actual-component probe](audit/hybrid-loading-2026-10-09/c931-overlay-alias.test.mjs) **`266acd33c049f4141aea12b66678382ec83b85552b9d69c609beee559d62f8a1`**; [three-failure log](audit/hybrid-loading-2026-10-09/c931-overlay-alias-r2.log) **`f8ecd9e067404b1ec552e275dfc135720670512fcd38ace2b088c1f21b29d91b`**. Verifier used a git-archive frozen source snapshot. The first probe's absent Plan button was setup error; corrected seasonal setup reproduced actual Plan dismissal and remains distinct.
+
+### Controlled benchmark provenance correction
+
+The c931 **288-run controlled attempt is INCONCLUSIVE / invalidated for exact-source acceptance**, because its module loader read the mutable author checkout while remediation began. It is historical evidence, **not a benchmark PASS**. Preserve its outputs and provenance issue; do not transfer results to c931 or a successor. Future controlled/live runs must use an isolated immutable exact candidate checkout. This is separate from the R4 budget/instrumentation PASS.
+
+## NEXT
+
+Apply only the justified candidate corrections, preserving genuine negative/expiry invalidation while retaining a still-valid selected identity through alias rekeying. Freeze a new remote SHA/tree, obtain fresh independent coverage of both blockers and rerun required exact-head gates. Live remains blocked. “Radial discovery becomes an audit layer” still requires usable primary results and stable open decisions, not merely earlier callback timing.
+
+## HOLD / baseline
+
+Fresh **22:29 UTC** main **`fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`**, tree8d5059, production **`dpl_8xyE9R3BxyE1883QpavaEBWV2LGa` READY** at fe22 unchanged. No runtime changes by reviewer or writer, no production/settings/release authority. Cadaver remains HOLD for reliable attraction-specific **2026 operation/date binding and supported expiry**; Missouri and other parked backlog/physical Android limits remain unchanged.
+
+**PARENT CONTINUITY COMMIT:** `73f2a6227a3e504f922b5dc8044e1ac346b77dab`; **PARENT TREE:** `226dcde1c95e3b177c4801eb3ebb68d9a9d5a8c7`. Separate supplement preserves the preceding IV-01 checkpoint and all history verbatim.
+
+---
+
 # PR #61 Independent Safety HOLD — Capacity-Rejected Audit Loses Closure Evidence (2026-10-09 22:27 UTC)
 
 ## CURRENT

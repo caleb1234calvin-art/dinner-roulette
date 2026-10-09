@@ -1,0 +1,58 @@
+ResultOverlay AFTER undefined
+✖ open decision preserves alias discovery ResultOverlay (441.805578ms)
+OptionsOverlay AFTER undefined
+✖ open decision preserves alias discovery OptionsOverlay (14.72382ms)
+DateNightPlanOverlay AFTER undefined
+✖ open decision preserves alias discovery DateNightPlanOverlay (7.07049ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 947.162307
+
+✖ failing tests:
+
+test at ../overlay-alias.test.mjs:6:184
+✖ open decision preserves alias discovery ResultOverlay (441.805578ms)
+  AssertionError [ERR_ASSERTION]: Audit duplicate must not dismiss an open decision
+      at TestContext.<anonymous> (file:///tmp/hybrid-independent-c931/overlay-alias.test.mjs:13:57)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at ../overlay-alias.test.mjs:6:184
+✖ open decision preserves alias discovery OptionsOverlay (14.72382ms)
+  AssertionError [ERR_ASSERTION]: Audit duplicate must not dismiss an open decision
+      at TestContext.<anonymous> (file:///tmp/hybrid-independent-c931/overlay-alias.test.mjs:13:57)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at ../overlay-alias.test.mjs:6:184
+✖ open decision preserves alias discovery DateNightPlanOverlay (7.07049ms)
+  AssertionError [ERR_ASSERTION]: Audit duplicate must not dismiss an open decision
+      at TestContext.<anonymous> (file:///tmp/hybrid-independent-c931/overlay-alias.test.mjs:13:57)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
