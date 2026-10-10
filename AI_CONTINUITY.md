@@ -1,3 +1,74 @@
+# Phase 4 Hosted Attempt Failed — Test-Assertion Remediation NEXT (2026-10-10 19:51 UTC)
+
+## CURRENT — authoritative failure gate
+
+This entry supersedes older CURRENT/NEXT statements below. [Run 411 / 38076168774](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38076168774) completed **FAILURE** on exact candidate **dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f**, tree **3ce7bd595e4061a6405b008fb0daec82c5b2823a**, sole parent main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**. It failed in the new Phase 4 browser step, **not a 90-minute workflow timeout**.
+
+The exact dbb5 candidate remains **FAIL / release HOLD**. Independent diagnosis classifies the observed failure as a browser-test assertion/rendered-text case mismatch. It does not establish a runtime/source defect, does not retroactively pass the failed attempt and does not prove checks after the failing assertion.
+
+At the fresh read, [PR #62](https://github.com/caleb1234calvin-art/dinner-roulette/pull/62) remains open, draft and unmerged on `integration/phase4-missouri-recovery-2026-10-10`; the minimal test-only correction is authorized and being prepared by the candidate author. No corrected candidate SHA/tree or corrected hosted PASS is asserted in this checkpoint.
+
+### Exact hosted coverage
+
+- All earlier listed setup, typecheck, lint, casino audits, safe builds, repository/application tests and inherited browser-suite steps completed **success**.
+- Step 23, **Exercise seven independently cleared Phase 4 recovery records in local Chromium**, completed **failure**.
+- Phase 4 raw verdict: **164 scenarios executed; 157 passed, seven failed**. Every failure is the **qualified-night-plan** case, one for each selected record. Public provider calls: **0**.
+- Step 24, seasonal/standard card geometry: **SKIPPED**, never a geometry PASS for this candidate.
+- Step 25, browser evidence preservation: **SUCCESS**.
+- Step 26, final Dinner icon-pack verification: **SKIPPED**. Do not substitute Android icon results for this skipped web step.
+- [Android Run 82 / 38076168794](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38076168794): **completed SUCCESS** on the same exact dbb5 head. This is hosted Android readiness evidence; physical Android/WebView/GPS, signing and Play remain outside that result.
+
+Historical local results remain the author-recorded 1,062 passed tests, four inherited documentation skips, typecheck, lint zero errors/six inherited warnings, safe auth-enabled migration-free build and Android structural/icon/Python checks. Historical local browser/geometry **NOT RUN** due to Chromium Unix-socket restrictions is retained separately from this actual hosted assertion failure.
+
+## Concrete diagnosis and its limits
+
+At exact dbb5, `scripts/seasonal-ten-record-browser.mjs:838` performs a case-sensitive match against **/1 · Scare/** for six records and **/2 · Settle/** for Carolyn. Rendered inner text and independently inspected failure pixels show **“1 · SCARE” / “2 · SETTLE”**, consistent with the displayed uppercase labels. The seven failed cases are Wolfman, Werehouse, Fearstone, Fun Time, Carolyn, Terror on Route 66 and Branson.
+
+The harness had already reached a two-card plan and record-identity assertions, but then stopped each of these seven scenarios at the role-label check. **Subsequent qualified-plan detail/control inspection, close action and no-extra-RPC assertions were not reached.** The final aggregate assertion correctly rejects the seven failures (7 is not 0); this is not an eighth failed scenario.
+
+Independent review accepts the **scope of a minimal case-insensitive role-label test correction only**. Keep the role number, intended Scare/Settle meaning, record membership, downstream controls/details, RPC checks, exact 164-scenario coverage and fail-closed aggregate assertion. Do not alter application source, weaken counts or remove tests to turn the run green. A correction may reveal a later assertion failure and must be judged by its own exact-head evidence.
+
+## Immutable failed-attempt evidence
+
+GitHub artifact **11679797744**, **casino-browser-evidence**, from exact Run 411:
+- **509,164,182 bytes**, SHA-256 **868da5d487c5f4d80133f4785d48833c3e16b1faa6f55ac4f81fda6bdbd0b060**.
+- **4,085 ZIP members**; independent materialization verified full digest, member CRCs and safe paths.
+- Phase 4 verdict member `seasonal-phase4-recovery-seven/verdict.json`: **5,063,650 bytes**, SHA-256 **e5eaac2aa0a6a8e397acd5f7569d0553474994292b52ceb0de2f9499e3a673e8**.
+- Source build proof **827f413e3d9f0b8dcd6371ab2af3df2797d17706fbf8e6e3b9ae1cfe17cd1ef3** (472 files); output proof **815e9392a71067570687f3126aab240883c202160430d965753ccbe9b4f5db92** (194 files). These are attempt evidence, not a new candidate approval.
+- GitHub metadata reports artifact creation 2026-10-10T19:45:38Z and expiration 2026-10-24T19:45:18Z. Preserve the materialized evidence; no indefinite hosted retention is implied.
+
+The [failure-gate audit](audit/phase4-missouri-2026-10-10/failure-gate-20261010/Failure-Gate-R1.json) records exact run/artifact/source identities and the bounded diagnosis. The original failure artifact, all preceding successes, skipped checks, local not-run receipts and prior unsuccessful attempts remain evidence. No failed output is replaced by a corrected candidate's report.
+
+The earlier unrelated mixed search receipt remains excluded from repository publication and the evidence archives; its denied publication is not retried or bypassed.
+
+## NEXT — minimal author correction, new freeze and full exact-head verification
+
+The candidate author has authority for the concrete minimal test-only normalization identified above. Publish its new SHA, tree, parent and exact diff on the same candidate branch, then freeze and rerun the required hosted validation. Reverify all previously required suites, all **164 Phase 4 scenarios including the formerly unreached plan tail**, geometry and final icon checks. The independent runtime verifier must finish its exact-head review; test-scope acceptance alone is not runtime PASS.
+
+If the new head reveals another concrete failure, classify and minimally remediate it under the same bounded implementation task, preserve every attempt, then repeat exact-head verification. Do not transfer dbb5's 157 passing scenarios, earlier-suite successes, Android result or historical performance PASS into a corrected head's complete result.
+
+At each material stable freeze/remediation/verification gate, publish and fully read back canonical continuity. Keep documentation on this deployment-disabled branch rather than introducing documentation-only changes into the runtime candidate.
+
+**Stop before merge, deployment or production import.** Release remains HOLD until independent exact-head verification and the owner's separate concrete release gate are satisfied.
+
+## Retained research, counting, Cadaver and performance HOLDs
+
+The selected seven are unchanged: **six potential new runtime identities plus the existing Werehouse amendment**. Main remains **52 V1 listings plus one legacy Werehouse anchor = 53 distinct identities**; the failed candidate is 59 V1 / 59 distinct, with the previous 52 retained. Research remains **8 factual/approximate-placement ready of 17, nine factual HOLD**, with seven selected. Rolla remains deliberately excluded and must expire at **2026-10-11T05:00:00Z**, without extension or later count/import.
+
+Cadaver's actual uploaded 2026 poster and owner-attested official Facebook origin remain materially new evidence preserved for **later bounded reclearance**, not part of this seven-record correction. Exact source account/post/publication time remain unobserved; factual/runtime HOLD awaits explicit source-class and expiry acceptance. The historical no-pixels limitation is superseded, not a current blocker. Do not restart public discovery or repeat the exhausted extractor.
+
+Performance PR #61/c78 and adaptive D remain parked **MORE EVIDENCE REQUIRED, provider-limited category B**. **“Radial discovery becomes an audit layer.”** remains design intent; no performance adoption, live benchmark retry, reserve/budget reset or Phase 3 hardening is implied. Preserve residential separation, no 2027 revival, approximate placement, never Open Now and null machine intervals, physical Android/WebView/GPS HOLD, and inherited warnings/known geometry limitations.
+
+## Baseline and documentation safety
+
+Fresh 19:49–19:50 UTC project/deployment reads confirm **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY**, source **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**. Main is unchanged. No browser production smoke or additional live import is claimed.
+
+The documentation branch preserves `integration/**: false` and unchanged `vercel.json` blob **65925d91f882a10433e3eb43f53ed802914c969b**. This checkpoint changes continuity/audit documentation only. No application/test change is made by the continuity writer; no merge, deployment, configuration/protection change, operator contact, paid API, signing or Play action.
+
+**PARENT CONTINUITY COMMIT:** `ea0939ae65df8b418f3a19676b3f174abf8b8679`; **PARENT TREE:** `0c3bdd43e52aa35732b36134218e8c81c001e16f`. The entire prior **754,491-byte** continuity body, SHA-256 **29d22a316d6ee42bc95dad04c73a6c3f3a48fb6d3f651ff17553eb7ffc27e7d8**, is preserved unchanged below.
+
+---
+
 # Phase 4 Seven-Record Candidate Frozen — Exact-Head Verification Pending (2026-10-10 18:34 UTC)
 
 ## CURRENT — authoritative candidate gate

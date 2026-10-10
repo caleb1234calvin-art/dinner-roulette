@@ -1,0 +1,159 @@
+{
+  "package": "PHASE4-HOSTED-FAILURE-GATE-R1",
+  "candidate": {
+    "sha": "dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f",
+    "tree": "3ce7bd595e4061a6405b008fb0daec82c5b2823a",
+    "soleParent": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2"
+  },
+  "workflow": {
+    "runId": 38076168774,
+    "runNumber": 411,
+    "jobId": 114283444997,
+    "conclusion": "failure",
+    "failureStep": 23,
+    "failureStepName": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+    "timeout": false,
+    "earlierSteps": "All listed earlier steps succeeded, including inherited browser suites",
+    "geometryStep24": "skipped",
+    "preserveEvidenceStep25": "success",
+    "dinnerIconStep26": "skipped"
+  },
+  "phase4": {
+    "scenarios": 164,
+    "passed": 157,
+    "failed": 7,
+    "failedCases": [
+      {
+        "recordId": "date-night-mo26-phase4-wolfmans-house-of-screams",
+        "scenario": "qualified-night-plan"
+      },
+      {
+        "recordId": "date-night-werehouse-joplin",
+        "scenario": "qualified-night-plan"
+      },
+      {
+        "recordId": "date-night-mo26-phase4-fearstone-forest",
+        "scenario": "qualified-night-plan"
+      },
+      {
+        "recordId": "date-night-mo26-phase4-fun-time-farms",
+        "scenario": "qualified-night-plan"
+      },
+      {
+        "recordId": "date-night-mo26-phase4-carolyns-pumpkin-patch",
+        "scenario": "qualified-night-plan"
+      },
+      {
+        "recordId": "date-night-mo26-phase4-terror-on-route-66",
+        "scenario": "qualified-night-plan"
+      },
+      {
+        "recordId": "date-night-mo26-phase4-field-of-screams-branson",
+        "scenario": "qualified-night-plan"
+      }
+    ],
+    "errors": [
+      {
+        "recordId": "date-night-mo26-phase4-wolfmans-house-of-screams",
+        "scenario": "qualified-night-plan",
+        "firstLine": "The input did not match the regular expression /1 · Scare/. Input:"
+      },
+      {
+        "recordId": "date-night-werehouse-joplin",
+        "scenario": "qualified-night-plan",
+        "firstLine": "The input did not match the regular expression /1 · Scare/. Input:"
+      },
+      {
+        "recordId": "date-night-mo26-phase4-fearstone-forest",
+        "scenario": "qualified-night-plan",
+        "firstLine": "The input did not match the regular expression /1 · Scare/. Input:"
+      },
+      {
+        "recordId": "date-night-mo26-phase4-fun-time-farms",
+        "scenario": "qualified-night-plan",
+        "firstLine": "The input did not match the regular expression /1 · Scare/. Input:"
+      },
+      {
+        "recordId": "date-night-mo26-phase4-carolyns-pumpkin-patch",
+        "scenario": "qualified-night-plan",
+        "firstLine": "The input did not match the regular expression /2 · Settle/. Input:"
+      },
+      {
+        "recordId": "date-night-mo26-phase4-terror-on-route-66",
+        "scenario": "qualified-night-plan",
+        "firstLine": "The input did not match the regular expression /1 · Scare/. Input:"
+      },
+      {
+        "recordId": "date-night-mo26-phase4-field-of-screams-branson",
+        "scenario": "qualified-night-plan",
+        "firstLine": "The input did not match the regular expression /1 · Scare/. Input:"
+      },
+      {
+        "recordId": null,
+        "scenario": null,
+        "firstLine": "Expected values to be strictly equal:"
+      }
+    ],
+    "publicProviderCalls": 0,
+    "qualifiedPlanTailReached": false
+  },
+  "diagnosis": {
+    "classification": "Case-sensitive browser assertion versus rendered uppercase role label; no demonstrated runtime/source defect",
+    "path": "scripts/seasonal-ten-record-browser.mjs",
+    "line": 838,
+    "expected": [
+      "1 · Scare",
+      "2 · Settle"
+    ],
+    "rendered": [
+      "1 · SCARE",
+      "2 · SETTLE"
+    ],
+    "independentPixelsInspected": [
+      "Wolfman",
+      "Carolyn"
+    ],
+    "proposedCorrection": "Minimal i flags on both role-label regexes; retain all downstream assertions and exact scenario counts",
+    "scopeApprovalOnly": true,
+    "runtimePass": false
+  },
+  "artifact": {
+    "id": 11679797744,
+    "name": "casino-browser-evidence",
+    "bytes": 509164182,
+    "sha256": "868da5d487c5f4d80133f4785d48833c3e16b1faa6f55ac4f81fda6bdbd0b060",
+    "members": 4085,
+    "CRC": "PASS",
+    "paths": "PASS",
+    "phase4Verdict": {
+      "path": "seasonal-phase4-recovery-seven/verdict.json",
+      "bytes": 5063650,
+      "sha256": "e5eaac2aa0a6a8e397acd5f7569d0553474994292b52ceb0de2f9499e3a673e8"
+    }
+  },
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "827f413e3d9f0b8dcd6371ab2af3df2797d17706fbf8e6e3b9ae1cfe17cd1ef3",
+      "files": 472
+    },
+    "startedAt": "2026-10-10T18:32:55.966Z",
+    "output": {
+      "sha256": "815e9392a71067570687f3126aab240883c202160430d965753ccbe9b4f5db92",
+      "files": 194
+    },
+    "completedAt": "2026-10-10T18:32:59.167Z"
+  },
+  "android": {
+    "runId": 38076168794,
+    "runNumber": 82,
+    "conclusion": "success",
+    "head": "dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f",
+    "physicalDeviceVerified": false
+  },
+  "release": "HOLD; failed head remains failed. No PASS transfer to a later correction. No merge/deploy/production import.",
+  "sourceNote": "This bounded derived snapshot is extracted from the hash-bound hosted verdict and artifact member-integrity record, with remote job conclusions and independent source/pixel diagnosis. The full raw artifact remains separately retained.",
+  "recordedAt": "2026-10-10T19:52:02.589Z"
+}
