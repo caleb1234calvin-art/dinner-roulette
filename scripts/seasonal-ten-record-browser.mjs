@@ -1,3 +1,4 @@
+import { dateNightRpcEvidence, assertBoundedSeasonalAudit, primaryCatalogEnvelopeMiles } from "./test-support/hybrid-rpc-evidence.mjs";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
@@ -18,16 +19,18 @@ const output = resolve(`audit/browser-results/${extras ? "seasonal-astra-extras"
 await mkdir(output, { recursive: true });
 const control = resolve(output, "control.json"), events = resolve(output, "events.jsonl");
 const origin = "http://127.0.0.1:8099", defaultAt = "2026-10-07T18:00:00Z";
+let evidenceClock;
 const setControl = async state => {
   await writeFile(`${control}.next`, JSON.stringify(state));
   await rename(`${control}.next`, control);
+  evidenceClock = state.at;
 };
 await writeFile(events, "");
 await setControl({ at: defaultAt, scenario: "startup" });
 const server = spawn(process.execPath, ["scripts/with-app-env.mjs", process.execPath, "--import",
   resolve("scripts/test-support/seasonal-ten-record-preload.mjs"), "node_modules/vite/bin/vite.js", "preview",
   "--host", "127.0.0.1", "--port", "8099", "--strictPort"], {
-  env: { ...process.env, DATABASE_URL: "", SEASONAL_TEN_CONTROL: control, SEASONAL_TEN_EVENTS: events },
+  env: { ...process.env, TZ: "UTC", DATABASE_URL: "", SEASONAL_TEN_CONTROL: control, SEASONAL_TEN_EVENTS: events },
   detached: true, stdio: ["ignore", "pipe", "pipe"],
 });
 let logs = "", browser;
@@ -93,9 +96,11 @@ const settleLocal = async test => {
   await delay(350);
   await Promise.all([...test.pending]);
 };
-const assertNoRpc = async (test, count, label) => {
+const assertNoRpc = async (test, count, label, total = count) => {
   await settleLocal(test);
-  assert.equal(test.rpc.length, count, label);
+  assert.equal(test.primaryRpc.length, count, label);
+  assertBoundedSeasonalAudit(test.result.rpc);
+  if (!/category|Anything|Season-on/i.test(label)) assert.equal(test.result.rpc.length, total, `${label}: no extra primary or audit RPC`);
 };
 const overlayRoot = (page, kind) => page.locator(".fixed.inset-0.z-50").filter({
   has: page.getByRole("button", { name: `Close ${kind}`, exact: true }),
@@ -230,7 +235,7 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
   try {
     await context.route("**/*", async route => {
       if (new URL(route.request().url()).origin === origin) {
-        if (overrides.holdInitialRpc && !heldRpc.captured && route.request().url().includes("/_serverFn/") && route.request().postData()?.includes("patchId")) {
+        if (overrides.holdInitialRpc && !heldRpc.captured && route.request().url().includes("/_serverFn/") && route.request().postData()?.includes("activityTypes") && dateNightRpcEvidence(route.request().postData()).kind === "primary") {
           heldRpc.captured = true;
           const response = await route.fetch();
           heldRpc.responseBody = await response.text();
@@ -280,8 +285,8 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
       if (request.resourceType() === "image") result.imageRequestFailures.push({ url: request.url(), error: request.failure()?.errorText });
     });
     page.on("request", request => {
-      if (request.url().includes("/_serverFn/") && request.postData()?.includes("patchId")) {
-        result.rpc.push({ request, method: request.method(), body: request.postData() });
+      if (request.url().includes("/_serverFn/") && request.postData()?.includes("activityTypes")) {
+        result.rpc.push({ fixtureAt: evidenceClock, acquisition: dateNightRpcEvidence(request.postData()), request, method: request.method(), body: request.postData() });
       }
     });
     page.on("response", response => {
@@ -297,9 +302,11 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
     });
     await page.goto(`${origin}${overrides.pathname ?? "/"}`, { waitUntil: "domcontentloaded" });
     if (!overrides.holdInitialRpc && (!overrides.pathname || overrides.pathname === "/")) await ready(page);
-    const test = { page, state, result, rpc: result.rpc, pending, heldRpc, releaseRpc };
+    const test = { page, state, result, get primaryRpc() { return result.rpc.filter(r => r.acquisition.kind === "primary"); }, get auditRpc() { return result.rpc.filter(r => r.acquisition.kind === "audit"); }, pending, heldRpc, releaseRpc };
     await callback(test);
     await settleLocal(test);
+    assertBoundedSeasonalAudit(result.rpc);
+    result.evidence.acquisitionCounts = { primary: test.primaryRpc.length, audit: test.auditRpc.length, total: result.rpc.length };
     assert.deepEqual(result.pageErrors, []);
     result.evidence.geolocationCalls = await page.evaluate(() => globalThis.__geolocationCalls);
     assert.deepEqual(result.evidence.geolocationCalls, [], "No device geolocation requested");
@@ -484,10 +491,10 @@ try {
       await runScenario(row, index, `consumer-anything-category-${width}`, async test => {
         const { page, result } = test;
         await activityCount(page, n); await settleLocal(test);
-        assert.equal(test.rpc.length, 1, "Real initial core RPC completed");
+        assert.equal(test.primaryRpc.length, 1, "Real selected-radius primary RPC completed");
         for (const value of [row.id, "ListingCompletenessV1", row.seasonalListing.recordId,
           row.seasonalListing.listingExpiresAt, row.seasonalListing.reviewRevision, row.address]) {
-          assert.ok(test.rpc[0].response.includes(value), `Built RPC retains factual value ${value}`);
+          assert.ok(test.primaryRpc[0].response.includes(value), `Built RPC retains factual value ${value}`);
         }
         await optionsButton(page).click(); await rowHeading(page, row).waitFor();
         assert.equal(await rowHeading(page, row).count(), 1);
@@ -501,14 +508,14 @@ try {
         }
         await inspectQualifiedOverlay(test, row, "options");
         await selectTarget(page, row); await inspectQualifiedOverlay(test, row, "result"); await closeResult(page);
-        const before = test.rpc.length;
+        await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
         await press(categoryButton(page, row)); await activityCount(page, category);
         await optionsButton(page).click(); await rowHeading(page, row).waitFor();
         assert.equal(await rowHeading(page, row).count(), 1);
         assert.equal(await page.locator("article").count(), category);
         await assertConsumerOnly(rowCard(page, row), row); await closeOptions(page);
         await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, n);
-        await assertNoRpc(test, before, "Anything and category use actual acquired data locally");
+        await assertNoRpc(test, before, "Anything and category use actual acquired data locally", beforeTotal);
         await pickButton(page).click();
         await page.getByRole("button", { name: "Close result", exact: true }).waitFor({ timeout: 20000 });
         const selected = await overlayRoot(page, "result").getByRole("heading").last().innerText();
@@ -537,36 +544,36 @@ try {
           assert.equal(await rowHeading(page, row).count(), targetEligible ? 1 : 0, "Policy eligibility controls rendered target");
           await closeOptions(page);
         }
-        await settleLocal(test); assert.equal(test.rpc.length, 1);
-        if (scenario === "season-off") assert.equal(test.rpc[0].response.includes(row.id), targetEligible, "Season-off RPC preserves only explicitly lifecycle-visible identities");
+        await settleLocal(test); assert.equal(test.primaryRpc.length, 1);
+        if (scenario === "season-off") assert.equal(test.primaryRpc[0].response.includes(row.id), targetEligible, "Season-off RPC preserves only explicitly lifecycle-visible identities");
       }, { at });
     }
     await runScenario(row, index, "mixed-alias-toggle-cache", async test => {
       const { page, result } = test;
-      await activityCount(page, n + 1); await settleLocal(test); assert.equal(test.rpc.length, 1);
-      for (const value of [row.id, node, way, "ListingCompletenessV1", row.seasonalListing.listingExpiresAt]) assert.ok(test.rpc[0].response.includes(value), `Merged RPC carries ${value}`);
+      await activityCount(page, n + 1); await settleLocal(test); assert.equal(test.primaryRpc.length, 1);
+      for (const value of [row.id, node, way, "ListingCompletenessV1", row.seasonalListing.listingExpiresAt]) assert.ok(test.primaryRpc[0].response.includes(value), `Merged RPC carries ${value}`);
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       assert.equal(await rowHeading(page, row).count(), 1, "Two live provider representations merge once");
       assert.equal(await page.locator("article").count(), n + 1);
       assert.doesNotMatch(await rowCard(page, row).innerText(), /Open now/); await closeOptions(page);
-      const before = test.rpc.length;
+      await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
       await press(categoryButton(page, row)); await activityCount(page, category);
       await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, n + 1);
-      await assertNoRpc(test, before, "Anything/category reuse superset cache");
+      await assertNoRpc(test, before, "Anything/category reuse superset cache", beforeTotal);
       const openNow = page.getByRole("switch", { name: "Open now only", exact: true });
       await press(openNow, "Space"); await activityCount(page, openOrdinary + 1);
       await optionsButton(page).click();
       await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
       assert.equal(await rowHeading(page, row).count(), 0, "24/7 provider aliases cannot promote any new V1 listing to Open now");
       await closeOptions(page); await press(openNow, "Space"); await activityCount(page, n + 1);
-      await assertNoRpc(test, before, "Open now is local");
+      await assertNoRpc(test, before, "Open now is local", beforeTotal);
       const season = page.getByRole("switch", { name: "Spooky Season", exact: true });
       await press(season, "Space");
-      await waitFor(async () => test.rpc.length === before + 1 && test.rpc.at(-1).response, "Season-off RPC missing");
+      await waitFor(async () => test.primaryRpc.length === before + 1 && test.primaryRpc.at(-1).response, "Season-off RPC missing");
       const lifecycle = row.seasonalListing.visibility === "listing-lifecycle";
       await ready(page); await activityCount(page, ordinary + (lifecycle ? 1 : 2));
-      assert.equal(test.rpc.at(-1).response.includes(row.id), lifecycle);
-      const offVenues = fromCrossJSON(JSON.parse(test.rpc.at(-1).response), { refs: new Map() }).result.venues;
+      assert.equal(test.primaryRpc.at(-1).response.includes(row.id), lifecycle);
+      const offVenues = fromCrossJSON(JSON.parse(test.primaryRpc.at(-1).response), { refs: new Map() }).result.venues;
       assert.ok(Array.isArray(offVenues), "Season-off RPC carries a decoded venue list");
       const seasonalKeys = ["seasonalListing", "seasonalAvailability", "seasonalVisitNotes"];
       const offAliases = offVenues.filter(venue => [node, way].includes(venue.id));
@@ -583,7 +590,7 @@ try {
         assert.equal(reviewed?.seasonalListing?.visibility, "listing-lifecycle", "Every remaining seasonal identity has reviewed lifecycle visibility");
         assert.deepEqual(venue.seasonalListing, reviewed.seasonalListing, "Season-off lifecycle metadata matches the reviewed catalog");
         assert.equal(getDateNightAvailability(reviewed, new Date(test.state.at)).browseEligible, true, "Season-off lifecycle identity remains eligible at the current clock");
-        assert.ok(haversineMiles(row.lat, row.lon, venue.lat, venue.lon) <= 15.05, "Lifecycle superset stays within the existing 15-mile server core");
+        assert.ok(haversineMiles(row.lat, row.lon, venue.lat, venue.lon) <= primaryCatalogEnvelopeMiles(test.primaryRpc.at(-1).acquisition), "Lifecycle raw primary superset stays within the exact inherited server catalog envelope; UI radius remains strict");
       }
       result.evidence.seasonOffSuperset = { targetAliases: offAliases.map(venue => ({ id: venue.id, activityTypes: venue.activityTypes,
         seasonalKeys: seasonalKeys.filter(key => Object.hasOwn(venue, key)) })), lifecycleRows: offSeasonal.map(venue => ({ id: venue.id,
@@ -595,19 +602,19 @@ try {
       assert.equal(await rowHeading(page, row).innerText(), row.name);
       if (!lifecycle) assert.deepEqual((await offCard.locator("span.uppercase").allTextContents()).map(text => text.trim().toLowerCase()), ["park"]);
       assert.equal(await offCard.locator("[data-seasonal-confidence]").count(), lifecycle ? 1 : 0);
-      await closeOptions(page); const afterOff = test.rpc.length;
+      await closeOptions(page); await settleLocal(test); const afterOff = test.primaryRpc.length; const afterOffTotal = test.result.rpc.length;
       await press(season, "Space"); await activityCount(page, n + 1);
-      await assertNoRpc(test, afterOff, "Season-on restores its isolated superset");
+      await assertNoRpc(test, afterOff, "Season-on restores its isolated superset", afterOffTotal);
       const refreshedAt = new Date(Date.parse(defaultAt) + 10 * 60000 + 1).toISOString();
       await advance(test, refreshedAt); await press(categoryButton(page, row));
-      await waitFor(async () => test.rpc.length === afterOff + 1 && test.rpc.at(-1).response, "Expired category cache did not reacquire");
-      await ready(page); await activityCount(page, category); assert.ok(test.rpc.at(-1).response.includes(row.id));
+      await waitFor(async () => test.primaryRpc.length === afterOff + 1 && test.primaryRpc.at(-1).response, "Expired category cache did not reacquire");
+      await ready(page); await activityCount(page, category); assert.ok(test.primaryRpc.at(-1).response.includes(row.id));
       await press(page.getByRole("button", { name: "Anything", exact: true }));
-      await waitFor(async () => test.rpc.length === afterOff + 2 && test.rpc.at(-1).response, "Expired Anything cache did not reacquire missing categories");
-      await ready(page); await activityCount(page, n + 1); const afterRefresh = test.rpc.length;
+      await waitFor(async () => test.primaryRpc.length === afterOff + 2 && test.primaryRpc.at(-1).response, "Expired Anything cache did not reacquire missing categories");
+      await ready(page); await activityCount(page, n + 1); await settleLocal(test); const afterRefresh = test.primaryRpc.length; const afterRefreshTotal = test.result.rpc.length;
       await press(openNow, "Space"); await activityCount(page, openOrdinary + 1);
       await optionsButton(page).click(); assert.equal(await rowHeading(page, row).count(), 0); await closeOptions(page);
-      await assertNoRpc(test, afterRefresh, "Fresh merged aliases stay fail-closed");
+      await assertNoRpc(test, afterRefresh, "Fresh merged aliases stay fail-closed", afterRefreshTotal);
       result.evidence.cache = { before, afterOff, afterRefresh, refreshedAt };
     }, { fixture: "mixed" });
     for (const kind of ["options", "result"]) {
@@ -619,19 +626,19 @@ try {
         await activityCount(page, nearby(row, { at: beforeAt }).length + 1);
         await optionsButton(page).click(); await rowHeading(page, row).waitFor();
         if (kind === "result") await selectTarget(page, row);
-        await settleLocal(test); const before = test.rpc.length;
+        await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
         if (overnight) {
           for (const at of ["2026-11-01T00:00:00-05:00", new Date(Date.parse(expiresAt) - 1).toISOString()]) {
             await advance(test, at); await rowHeading(page, row).waitFor();
             assert.doesNotMatch(await (kind === "options" ? rowCard(page, row) : overlayRoot(page, kind)).innerText(), /Open now/);
-            await assertNoRpc(test, before, "Supported overnight tail survives cache/resume without new provider facts");
+            await assertNoRpc(test, before, "Supported overnight tail survives cache/resume without new provider facts", beforeTotal);
           }
         }
         if (expanded) {
           await advance(test, new Date(Date.parse(expiresAt) - 1).toISOString());
           await rowHeading(page, row).waitFor();
           assert.doesNotMatch(await (kind === "options" ? rowCard(page, row) : overlayRoot(page, kind)).innerText(), /Open now/);
-          await assertNoRpc(test, before, "Exact cutoff minus one millisecond retains only browse eligibility");
+          await assertNoRpc(test, before, "Exact cutoff minus one millisecond retains only browse eligibility", beforeTotal);
         }
         await advance(test, expiresAt); await rowHeading(page, row).waitFor({ state: "hidden" });
         const remaining = nearby(row, { at: expiresAt }).length + 1;
@@ -639,24 +646,24 @@ try {
         if (kind === "options") {
           assert.equal(await page.locator("article").count(), remaining); await closeOptions(page);
         } else assert.equal(await page.getByRole("button", { name: "Close result", exact: true }).count(), 0);
-        await assertNoRpc(test, before, "Final expiry recomputes cached eligibility without provider traffic");
+        await assertNoRpc(test, before, "Final expiry recomputes cached eligibility without provider traffic", beforeTotal);
         if (expanded) {
           await advance(test, new Date(Date.parse(expiresAt) + 1).toISOString());
           await activityCount(page, remaining);
           assert.equal(await rowHeading(page, row).count(), 0);
-          await assertNoRpc(test, before, "Exact cutoff plus one millisecond cannot restore stale overlays");
+          await assertNoRpc(test, before, "Exact cutoff plus one millisecond cannot restore stale overlays", beforeTotal);
         }
         await optionsButton(page).click(); await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
         assert.equal(await rowHeading(page, row).count(), 0); await closeOptions(page);
         await advance(test, "2027-10-07T18:00:00Z"); await activityCount(page, nearby(row, { at: "2027-10-07T18:00:00Z", season: false }).length + 1);
-        await assertNoRpc(test, before, "Cached identity cannot roll forward into 2027");
-        result.evidence.expiry = { expiresAt, basis: row.seasonalListing.expiryBasis, rpcDelta: test.rpc.length - before };
+        await assertNoRpc(test, before, "Cached identity cannot roll forward into 2027", beforeTotal);
+        result.evidence.expiry = { expiresAt, basis: row.seasonalListing.expiryBasis, primaryRpcDelta: test.primaryRpc.length - before, totalRpcDelta: test.result.rpc.length - beforeTotal };
       }, { fixture: "mixed", at: beforeAt });
     }
     await runScenario(row, index, "provider-failure", async test => {
       const { page } = test;
-      await activityCount(page, n); await settleLocal(test); assert.equal(test.rpc.length, 1);
-      assert.match(test.rpc[0].response, /fallback/); assert.ok(test.rpc[0].response.includes(row.id));
+      await activityCount(page, n); await settleLocal(test); assert.equal(test.primaryRpc.length, 1);
+      assert.match(test.primaryRpc[0].response, /fallback/); assert.ok(test.primaryRpc[0].response.includes(row.id));
       await optionsButton(page).click(); await selectTarget(page, row);
       const href = await page.getByRole("link", { name: /Directions · Google Maps/ }).getAttribute("href");
       assert.equal(new URL(href).searchParams.get("destination"), destinationFor(row));
@@ -666,12 +673,12 @@ try {
     }, { fixture: "provider-failure" });
     await runScenario(row, index, "favorite-alias-cache-resume-unsave", async test => {
       const { page } = test;
-      await activityCount(page, 1); await settleLocal(test); const before = test.rpc.length;
-      assert.ok(test.rpc[0].response.includes(node) && test.rpc[0].response.includes(way));
+      await activityCount(page, 1); await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
+      assert.ok(test.primaryRpc[0].response.includes(node) && test.primaryRpc[0].response.includes(way));
       await press(categoryButton(page, row)); await activityCount(page, 1);
       await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, 1);
       await advance(test, new Date(Date.parse(defaultAt) + 60000).toISOString()); await activityCount(page, 1);
-      await assertNoRpc(test, before, "Affirmed provider favorite survives cache and resume");
+      await assertNoRpc(test, before, "Affirmed provider favorite survives cache and resume", beforeTotal);
       await optionsButton(page).click(); await selectTarget(page, row); await page.getByRole("button", { name: "Saved", exact: true }).waitFor(); await closeResult(page);
       await press(page.getByRole("switch", { name: "Favorites only", exact: true }), "Space"); await activityCount(page, n + 1);
       await optionsButton(page).click(); await selectTarget(page, row);
@@ -686,10 +693,10 @@ try {
       if (row.seasonalListing.visibility === "listing-lifecycle") {
         // Crossing the global Halloween boundary changes the acquisition signature
         // once. This is not an expiry refresh or positive seasonal discovery.
-        await waitFor(async () => test.rpc.length === before + 1 && test.rpc.at(-1).response, "Ordinary-only season-window refresh missing");
+        await waitFor(async () => test.primaryRpc.length === before + 1 && test.primaryRpc.at(-1).response, "Ordinary-only season-window refresh missing");
         await settleLocal(test);
-        assert.equal(test.rpc.length, before + 1, "Exactly one global-window transition refresh");
-        const body = test.rpc.at(-1).body;
+        assert.equal(test.primaryRpc.length, before + 1, "Exactly one global-window transition refresh");
+        const body = test.primaryRpc.at(-1).body;
         for (const type of seasonalTypes) assert.ok(!body.includes(`"s":"${type}"`), "Post-window request contains no seasonal activity type");
         for (const type of ["bowling", "arcade", "mini-golf", "escape-room", "skating", "movies", "museum", "park"]) {
           assert.ok(body.includes(`"s":"${type}"`), "Transition reacquires the ordinary Anything signature");
@@ -699,28 +706,28 @@ try {
         assert.ok(calls.length > 0);
         assert.ok(calls.every(event => event.group !== "seasonal"), "Transition never queries positive seasonal providers");
         await activityCount(page, 0);
-      } else await assertNoRpc(test, before, "Canonical and provider favorites cannot resurrect expired listings");
+      } else await assertNoRpc(test, before, "Canonical and provider favorites cannot resurrect expired listings", beforeTotal);
     }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
       [node]: preference(row, node, { favorite: true, ourRating: 4 }), [way]: preference(row, way, { favorite: true, timesVisited: 2 }),
     } });
     await runScenario(row, index, "negative-alias-beats-canonical-favorite", async test => {
       const { page } = test;
-      await activityCount(page, 0); await settleLocal(test); const before = test.rpc.length;
-      assert.ok(test.rpc[0].response.includes(row.id)); assert.equal(await pickButton(page).isDisabled(), true);
+      await activityCount(page, 0); await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
+      assert.ok(test.primaryRpc[0].response.includes(row.id)); assert.equal(await pickButton(page).isDisabled(), true);
       await press(categoryButton(page, row)); await activityCount(page, 0);
       await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, 0);
       await advance(test, new Date(Date.parse(defaultAt) + 60000).toISOString()); await activityCount(page, 0);
       await press(page.getByRole("switch", { name: "Favorites only", exact: true }), "Space"); await activityCount(page, n);
       await optionsButton(page).click(); assert.equal(await rowHeading(page, row).count(), 0); await closeOptions(page);
-      await assertNoRpc(test, before, "Never-recommend alias remains effective through cache/resume");
+      await assertNoRpc(test, before, "Never-recommend alias remains effective through cache/resume", beforeTotal);
     }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
       [row.id]: preference(row, row.id, { favorite: true }), [node]: preference(row, node, { neverRecommend: true }),
     } });
     const exclusionEnd = Date.parse(defaultAt) + 120000;
     await runScenario(row, index, "alias-exclusion-expiry-and-not-tonight", async test => {
       const { page } = test;
-      await activityCount(page, 0); await settleLocal(test); const before = test.rpc.length;
-      assert.ok(test.rpc[0].response.includes(way));
+      await activityCount(page, 0); await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
+      assert.ok(test.primaryRpc[0].response.includes(way));
       await press(categoryButton(page, row)); await activityCount(page, 0);
       await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, 0);
       await advance(test, new Date(exclusionEnd - 1).toISOString()); await activityCount(page, 0);
@@ -728,18 +735,18 @@ try {
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       await rowCard(page, row).getByRole("button", { name: `Not tonight: ${row.name}`, exact: true }).click();
       await rowHeading(page, row).waitFor({ state: "hidden" }); await activityCount(page, 0);
-      await assertNoRpc(test, before, "Alias exclusion expiry and Not tonight remain local");
+      await assertNoRpc(test, before, "Alias exclusion expiry and Not tonight remain local", beforeTotal);
     }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: { [row.id]: preference(row, row.id, { favorite: true }) },
       exclusions: [{ restaurantId: way, name: row.name, expiresAt: exclusionEnd, reason: "not-tonight" }] });
     await runScenario(row, index, "affirmed-favorites-direct-reload-expiry", async test => {
       const { page, result } = test;
       await activityCount(page, 1); await settleLocal(test);
-      assert.ok(test.rpc[0].response.includes(node) && test.rpc[0].response.includes(way));
+      assert.ok(test.primaryRpc[0].response.includes(node) && test.primaryRpc[0].response.includes(way));
       await visitNav(page, "Favorites", "/favorites"); await inspectSaved(test, row, "aliases-grouped");
       assert.equal(await page.locator("main li").count(), 1);
-      const before = test.rpc.length;
+      await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
       await page.reload({ waitUntil: "domcontentloaded" }); await inspectSaved(test, row, "aliases-direct-reload");
-      await assertNoRpc(test, before, "Direct Favorites reload uses persisted identity receipt without discovery");
+      await assertNoRpc(test, before, "Direct Favorites reload uses persisted identity receipt without discovery", beforeTotal);
       let state = await stored(page);
       assert.equal(state.preferences[node].favorite, true); assert.equal(state.preferences[way].favorite, true);
       assert.notEqual(state.preferences[row.id]?.favorite, true);
@@ -767,7 +774,7 @@ try {
         assert.ok(!expected.some(candidate => candidate.id === row.id));
         await activityCount(test.page, expected.length);
         await settleLocal(test);
-        assert.equal(test.rpc.length, 1);
+        assert.equal(test.primaryRpc.length, 1);
         if (expected.length) {
           await optionsButton(test.page).click();
           await test.page.getByRole("button", { name: "Close options", exact: true }).waitFor();
@@ -794,7 +801,7 @@ try {
         }, expiresAt);
         test.releaseRpc();
         await ready(test.page);
-        await waitFor(async () => test.rpc.some(entry => entry.status === 200 && entry.response?.includes(row.id)),
+        await waitFor(async () => test.primaryRpc.some(entry => entry.status === 200 && entry.response?.includes(row.id)),
           "The stale held built response must actually reach the app after expiry");
         const expected = nearby(row, { at: expiresAt });
         await activityCount(test.page, expected.length);
@@ -808,7 +815,7 @@ try {
         await advance(test, new Date(Date.parse(expiresAt) + 1).toISOString());
         await activityCount(test.page, expected.length);
         test.result.evidence.pendingExpiry = { receivedBefore: new Date(Date.parse(expiresAt) - 1).toISOString(), deliveredAt: expiresAt,
-          staleResponseContainedId: true, expiredIdRendered: false, requests: test.rpc.length };
+          staleResponseContainedId: true, expiredIdRendered: false, primaryRequests: test.primaryRpc.length, totalRequests: test.result.rpc.length };
       }, { holdInitialRpc: true, at: new Date(Date.parse(expiresAt) - 1).toISOString() });
     }
   }
@@ -825,11 +832,11 @@ try {
       await inspectQualifiedOverlay(test, row, "options"); await selectTarget(page, row);
       await inspectQualifiedOverlay(test, row, "result");
       await page.getByRole("button", { name: "Save", exact: true }).click(); await closeResult(page);
-      const before = test.rpc.length;
+      await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
       const open = page.getByRole("switch", { name: "Open now only", exact: true });
       await press(open, "Space"); await activityCount(page, nearby(row, { at, season: false, open: true }).length);
       await press(open, "Space"); await activityCount(page, count);
-      await assertNoRpc(test, before, "Late-fall Open Now remains a local fail-closed filter");
+      await assertNoRpc(test, before, "Late-fall Open Now remains a local fail-closed filter", beforeTotal);
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       await advance(test, row.seasonalListing.listingExpiresAt);
       await rowHeading(page, row).waitFor({ state: "hidden" });
@@ -841,7 +848,7 @@ try {
         assert.equal(await pickButton(page).isDisabled(), true);
         assert.equal(await optionsButton(page).isDisabled(), true);
       } else await closeOptions(page);
-      await assertNoRpc(test, before, "Expiry within the already-ordinary late-fall session stays local");
+      await assertNoRpc(test, before, "Expiry within the already-ordinary late-fall session stays local", beforeTotal);
       await visitNav(page, "Favorites", "/favorites"); await inspectSaved(test, row, "late-expired-favorite", true);
       await advance(test, "2027-11-05T12:00:00-05:00");
       await visitNav(page, "Pick", "/"); await ready(page);

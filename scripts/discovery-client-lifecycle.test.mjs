@@ -11,9 +11,17 @@ import { appModuleLoader } from "./test-support/load-app-module.mjs";
 
 for (const config of discoveryModes) {
   const { mode } = config;
+  // Test primary request lifecycle with a separately recorded successful-empty
+  // background audit. Hybrid-specific tests exercise stalled/failed audit work.
+  const payload = (...args) => {
+    const value = discoveryPayload(...args);
+    if (mode === "date-night") value.venues = value.venues.map(v => ({ ...v, lat: 43, lon: -79 }));
+    return value;
+  };
   function setup(t) {
     const clock = discoveryClock(t),
-      h = discoveryComponentHarness(config);
+      h = discoveryComponentHarness(config, { emptyBackgroundAudit: mode === "date-night" });
+    if (mode === "date-night") h.store.location = { ...h.store.location, lat: 43, lon: -79 };
     const log = t.mock.method(console, "warn", () => {});
     t.after(() => h.dispose());
     assert.equal(h.status().loading, true);
@@ -27,7 +35,7 @@ for (const config of discoveryModes) {
       assert.ok(request.args.signal instanceof AbortSignal);
       if (scenario === "error" || scenario === "AbortError")
         request.reject(new DOMException("Transport failed", scenario));
-      else request.resolve(discoveryPayload(config, scenario === "fallback" ? "fallback" : "live"));
+      else request.resolve(payload(config, scenario === "fallback" ? "fallback" : "live"));
       const status = await h.settle();
       assert.equal(status.loading, false);
       assert.equal(
@@ -87,7 +95,7 @@ for (const config of discoveryModes) {
       const status = h.status();
       assert.equal(status.loading, false);
       const writes = h.writes;
-      if (late === "success") old.resolve(discoveryPayload(config, "fallback", "old"));
+      if (late === "success") old.resolve(payload(config, "fallback", "old"));
       else old.reject(new Error("old error"));
       await flush();
       assert.equal(h.writes, writes);
@@ -97,7 +105,7 @@ for (const config of discoveryModes) {
       assert.equal(h.requests.length, 2);
       assert.notEqual(h.requests[1].args.signal, old.args.signal);
       assert.equal(h.requests[1].args.signal.aborted, false);
-      h.requests[1].resolve(discoveryPayload(config, "live", "retry"));
+      h.requests[1].resolve(payload(config, "live", "retry"));
       const after = await h.settle();
       assert.equal(after.loading, false);
       assert.deepEqual(after.notices, []);
@@ -112,17 +120,17 @@ for (const config of discoveryModes) {
         const { clock, h } = setup(t),
           old = h.requests[0];
         await clock.tick(10_000);
-        h.store.location = { ...h.store.location, lat: 37.18 };
+        h.store.location = { ...h.store.location, lat: mode === "date-night" ? 43.001 : 37.18 };
         h.render();
         assert.equal(h.requests.length, 2);
         assert.equal(old.args.signal.aborted, true);
         assert.equal(clock.pending, 1);
         const settleOld = () =>
           late === "success"
-            ? old.resolve(discoveryPayload(config, "fallback", "stale"))
+            ? old.resolve(payload(config, "fallback", "stale"))
             : old.reject(new Error("stale rejection"));
         if (!oldFirst) {
-          h.requests[1].resolve(discoveryPayload(config));
+          h.requests[1].resolve(payload(config));
           await flush();
         }
         const writes = h.writes;
@@ -133,7 +141,7 @@ for (const config of discoveryModes) {
         if (oldFirst) {
           await clock.tick(15_000); // The old watchdog cannot clear the newer spinner.
           assert.equal(h.status().loading, true);
-          h.requests[1].resolve(discoveryPayload(config));
+          h.requests[1].resolve(payload(config));
           await flush();
         }
         assert.equal(h.status().loading, false);
@@ -151,14 +159,15 @@ for (const config of discoveryModes) {
       assert.equal(old.args.signal.aborted, true);
       assert.equal(clock.pending, 0);
       const writes = h.writes;
-      if (late === "success") old.resolve(discoveryPayload(config));
+      if (late === "success") old.resolve(payload(config));
       if (late === "rejection") old.reject(new Error("late unmount error"));
       await clock.tick(60_000);
       assert.equal(h.writes, writes);
-      const next = discoveryComponentHarness(config);
+      const next = discoveryComponentHarness(config, { emptyBackgroundAudit: mode === "date-night" });
+      if (mode === "date-night") next.store.location = { ...next.store.location, lat: 43, lon: -79 };
       t.after(() => next.dispose());
       next.render();
-      next.requests[0].resolve(discoveryPayload(config));
+      next.requests[0].resolve(payload(config));
       assert.equal((await next.settle()).loading, false);
     });
   }
@@ -169,10 +178,10 @@ for (const config of discoveryModes) {
     const slider = h.control(h.render(), "Travel distance");
     slider.props.onValueChange([0]);
     h.render();
-    const expectedRequests = mode === "date-night" ? 1 : 2;
-    assert.equal(old.args.signal.aborted, mode !== "date-night", "a smaller radius still needs the same bounded Date Night core");
+    const expectedRequests = 2;
+    assert.equal(old.args.signal.aborted, true, "selected-radius primary changes cancel obsolete transport");
     assert.equal(h.requests.length, expectedRequests);
-    h.requests.at(-1).resolve(discoveryPayload(config));
+    h.requests.at(-1).resolve(payload(config));
     let status = await h.settle();
     h.button(status.tree, "Give us options").props.onClick();
     let tree = h.render();
@@ -193,10 +202,10 @@ for (const config of discoveryModes) {
     await clock.tick(25_000);
     h.status().notices[0].onRetry();
     h.render();
-    h.requests[1].resolve(discoveryPayload(config));
+    h.requests[1].resolve(payload(config));
     await flush();
     const writes = h.writes;
-    old.resolve(discoveryPayload(config, "fallback", "late"));
+    old.resolve(payload(config, "fallback", "late"));
     await flush();
     assert.equal(h.writes, writes);
     assert.deepEqual(h.status().notices, []);
@@ -206,7 +215,8 @@ for (const config of discoveryModes) {
 
 test("Date Night: seasonal dependency replacement aborts the previous request", async (t) => {
   const clock = discoveryClock(t),
-    h = discoveryComponentHarness(discoveryModes[1]);
+    h = discoveryComponentHarness(discoveryModes[1], { emptyBackgroundAudit: true });
+  h.store.location = { ...h.store.location, lat: 43, lon: -79 };
   t.after(() => h.dispose());
   h.render();
   h.store.spookySeasonEnabled = true;

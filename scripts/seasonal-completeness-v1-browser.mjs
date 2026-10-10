@@ -1,3 +1,4 @@
+import { dateNightRpcEvidence, assertBoundedSeasonalAudit } from "./test-support/hybrid-rpc-evidence.mjs";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
@@ -12,16 +13,18 @@ const output = resolve("audit/browser-results/seasonal-completeness-v1");
 await mkdir(output, { recursive: true });
 const control = resolve(output, "control.json"), events = resolve(output, "events.jsonl");
 const origin = "http://127.0.0.1:8098", defaultAt = "2026-10-07T18:00:00Z";
+let evidenceClock;
 const setControl = async state => {
   await writeFile(`${control}.next`, JSON.stringify(state));
   await rename(`${control}.next`, control);
+  evidenceClock = state.at;
 };
 await writeFile(events, "");
 await setControl({ at: defaultAt, scenario: "startup" });
 const server = spawn(process.execPath, ["scripts/with-app-env.mjs", process.execPath, "--import",
   resolve("scripts/test-support/seasonal-completeness-v1-preload.mjs"), "node_modules/vite/bin/vite.js", "preview",
   "--host", "127.0.0.1", "--port", "8098", "--strictPort"], {
-  env: { ...process.env, DATABASE_URL: "", SEASONAL_V1_CONTROL: control, SEASONAL_V1_EVENTS: events },
+  env: { ...process.env, TZ: "UTC", DATABASE_URL: "", SEASONAL_V1_CONTROL: control, SEASONAL_V1_EVENTS: events },
   detached: true, stdio: ["ignore", "pipe", "pipe"],
 });
 let logs = "", browser;
@@ -78,9 +81,11 @@ const settleLocal = async test => {
   await delay(350);
   await Promise.all([...test.pending]);
 };
-const assertNoRpc = async (test, count, label) => {
+const assertNoRpc = async (test, count, label, total = count) => {
   await settleLocal(test);
-  assert.equal(test.rpc.length, count, label);
+  assert.equal(test.primaryRpc.length, count, label);
+  assertBoundedSeasonalAudit(test.result.rpc);
+  if (!/category|Anything|Season-on/i.test(label)) assert.equal(test.result.rpc.length, total, `${label}: no extra primary or audit RPC`);
 };
 const overlayRoot = (page, kind) => page.locator(".fixed.inset-0.z-50").filter({
   has: page.getByRole("button", { name: `Close ${kind}`, exact: true }),
@@ -252,8 +257,8 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
       if (request.resourceType() === "image") result.imageRequestFailures.push({ url: request.url(), error: request.failure()?.errorText });
     });
     page.on("request", request => {
-      if (request.url().includes("/_serverFn/") && request.postData()?.includes("patchId")) {
-        result.rpc.push({ request, method: request.method(), body: request.postData() });
+      if (request.url().includes("/_serverFn/") && request.postData()?.includes("activityTypes")) {
+        result.rpc.push({ fixtureAt: evidenceClock, acquisition: dateNightRpcEvidence(request.postData()), request, method: request.method(), body: request.postData() });
       }
     });
     page.on("response", response => {
@@ -269,9 +274,11 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
     });
     await page.goto(origin, { waitUntil: "domcontentloaded" });
     await ready(page);
-    const test = { page, state, result, rpc: result.rpc, pending };
+    const test = { page, state, result, get primaryRpc() { return result.rpc.filter(r => r.acquisition.kind === "primary"); }, get auditRpc() { return result.rpc.filter(r => r.acquisition.kind === "audit"); }, pending };
     await callback(test);
     await settleLocal(test);
+    assertBoundedSeasonalAudit(result.rpc);
+    result.evidence.acquisitionCounts = { primary: test.primaryRpc.length, audit: test.auditRpc.length, total: result.rpc.length };
     assert.deepEqual(result.pageErrors, []);
     result.evidence.geolocationCalls = await page.evaluate(() => globalThis.__geolocationCalls);
     assert.deepEqual(result.evidence.geolocationCalls, [], "No device geolocation requested");
@@ -346,55 +353,55 @@ try {
     await runScenario(row, index, "mixed-toggle-cache", async test => {
       const { page, result } = test;
       await activityCount(page, n + 1); await settleLocal(test);
-      assert.equal(test.rpc.length, 1);
+      assert.equal(test.primaryRpc.length, 1);
       for (const value of [row.id, "date-night-osm-node-910001", "date-night-osm-way-910002", "ListingCompletenessV1", row.seasonalListing.listingExpiresAt]) {
-        assert.ok(test.rpc[0].response.includes(value), `RPC retains merged qualification ${value}`);
+        assert.ok(test.primaryRpc[0].response.includes(value), `RPC retains merged qualification ${value}`);
       }
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       assert.equal(await rowHeading(page, row).count(), 1, "Two provider representations merge into one reviewed listing");
       assert.equal(await page.locator("article").count(), n + 1);
       assert.doesNotMatch(await rowCard(page, row).innerText(), /Open now/);
       await closeOptions(page);
-      const before = test.rpc.length;
+      await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
       const category = categoryButton(page, row);
       await press(category); await activityCount(page, n);
       await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, n + 1);
-      await assertNoRpc(test, before, "Category/Anything reuse acquired superset");
+      await assertNoRpc(test, before, "Category/Anything reuse acquired superset", beforeTotal);
       const openNow = page.getByRole("switch", { name: "Open now only", exact: true });
       await press(openNow, "Space"); await activityCount(page, 1);
       await optionsButton(page).click();
       await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
       assert.equal(await rowHeading(page, row).count(), 0, "24/7 provider hours cannot promote V1 listing");
       await closeOptions(page); await press(openNow, "Space"); await activityCount(page, n + 1);
-      await assertNoRpc(test, before, "Open now filters locally");
+      await assertNoRpc(test, before, "Open now filters locally", beforeTotal);
       const season = page.getByRole("switch", { name: "Spooky Season", exact: true });
       await press(season, "Space");
-      await waitFor(async () => test.rpc.length === before + 1 && test.rpc.at(-1).response, "Season-off RPC missing");
+      await waitFor(async () => test.primaryRpc.length === before + 1 && test.primaryRpc.at(-1).response, "Season-off RPC missing");
       await ready(page); await activityCount(page, 2);
-      assert.ok(!test.rpc.at(-1).response.includes(row.id));
-      assert.ok(!test.rpc.at(-1).response.includes("seasonalListing"));
+      assert.ok(!test.primaryRpc.at(-1).response.includes(row.id));
+      assert.ok(!test.primaryRpc.at(-1).response.includes("seasonalListing"));
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       assert.equal(await page.locator("[data-seasonal-visit-notes]").count(), 0);
       assert.match(await rowCard(page, row).innerText(), /Park/i);
       result.evidence.seasonOffSameNameProvider = await rowCard(page, row).innerText();
       await closeOptions(page);
-      const afterOff = test.rpc.length;
+      await settleLocal(test); const afterOff = test.primaryRpc.length; const afterOffTotal = test.result.rpc.length;
       await press(season, "Space"); await activityCount(page, n + 1);
-      await assertNoRpc(test, afterOff, "Season-on restores isolated cache");
+      await assertNoRpc(test, afterOff, "Season-on restores isolated cache", afterOffTotal);
       await press(openNow, "Space"); await activityCount(page, 1);
       await press(openNow, "Space"); await activityCount(page, n + 1);
       const refreshedAt = new Date(Date.parse(defaultAt) + 10 * 60000 + 1).toISOString();
       await advance(test, refreshedAt);
       await press(category);
-      await waitFor(async () => test.rpc.length === afterOff + 1 && test.rpc.at(-1).response, "Expired category did not reacquire");
+      await waitFor(async () => test.primaryRpc.length === afterOff + 1 && test.primaryRpc.at(-1).response, "Expired category did not reacquire");
       await ready(page); await activityCount(page, n);
-      assert.ok(test.rpc.at(-1).response.includes(row.id));
+      assert.ok(test.primaryRpc.at(-1).response.includes(row.id));
       await press(page.getByRole("button", { name: "Anything", exact: true }));
-      await waitFor(async () => test.rpc.length === afterOff + 2 && test.rpc.at(-1).response, "Expired Anything did not reacquire");
+      await waitFor(async () => test.primaryRpc.length === afterOff + 2 && test.primaryRpc.at(-1).response, "Expired Anything did not reacquire");
       await ready(page); await activityCount(page, n + 1);
-      const afterRefresh = test.rpc.length;
+      await settleLocal(test); const afterRefresh = test.primaryRpc.length; const afterRefreshTotal = test.result.rpc.length;
       await press(openNow, "Space"); await activityCount(page, 1);
-      await assertNoRpc(test, afterRefresh, "Fresh cache remains fail-closed for Open now");
+      await assertNoRpc(test, afterRefresh, "Fresh cache remains fail-closed for Open now", afterRefreshTotal);
       result.evidence.cache = { before, afterOff, afterRefresh, refreshedAt };
     }, { fixture: "mixed" });
     for (const kind of ["options", "result"]) {
@@ -404,7 +411,7 @@ try {
         await activityCount(page, n + 1);
         await optionsButton(page).click(); await rowHeading(page, row).waitFor();
         if (kind === "result") await selectTarget(page, row);
-        await settleLocal(test); const before = test.rpc.length;
+        await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
         await advance(test, expiresAt);
         await rowHeading(page, row).waitFor({ state: "hidden" });
         await activityCount(page, 1);
@@ -413,19 +420,19 @@ try {
           assert.equal(await page.locator("article").count(), 1);
           await closeOptions(page);
         } else assert.equal(await page.getByRole("button", { name: "Close result", exact: true }).count(), 0);
-        await assertNoRpc(test, before, "Resume at expiry removes cached listing without provider traffic");
+        await assertNoRpc(test, before, "Resume at expiry removes cached listing without provider traffic", beforeTotal);
         await optionsButton(page).click();
         await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
         assert.equal(await rowHeading(page, row).count(), 0);
         await closeOptions(page);
-        result.evidence.expiry = { expiresAt, basis: row.seasonalListing.expiryBasis, rpcDelta: test.rpc.length - before };
+        result.evidence.expiry = { expiresAt, basis: row.seasonalListing.expiryBasis, primaryRpcDelta: test.primaryRpc.length - before, totalRpcDelta: test.result.rpc.length - beforeTotal };
       }, { fixture: "mixed", at: new Date(Date.parse(expiresAt) - 60000).toISOString() });
     }
     await runScenario(row, index, "provider-failure", async test => {
       const { page, result } = test;
       await activityCount(page, n); await settleLocal(test);
-      assert.equal(test.rpc.length, 1); assert.match(test.rpc[0].response, /fallback/);
-      assert.ok(test.rpc[0].response.includes(row.id));
+      assert.equal(test.primaryRpc.length, 1); assert.match(test.primaryRpc[0].response, /fallback/);
+      assert.ok(test.primaryRpc[0].response.includes(row.id));
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       assert.equal(await rowHeading(page, row).count(), 1);
       assert.doesNotMatch(await rowCard(page, row).innerText(), /Open now/);
@@ -439,7 +446,7 @@ try {
     }, { fixture: "provider-failure" });
     await runScenario(row, index, "favorites-exclusion", async test => {
       const { page } = test;
-      await activityCount(page, n); await settleLocal(test); const before = test.rpc.length;
+      await activityCount(page, n); await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
       const favorites = page.getByRole("switch", { name: "Favorites only", exact: true });
       await press(favorites, "Space"); await activityCount(page, 0);
       assert.equal(await pickButton(page).isDisabled(), true);
@@ -450,7 +457,7 @@ try {
       const close = page.getByRole("button", { name: "Close options", exact: true });
       if (await close.count()) await close.click();
       await activityCount(page, n - 1);
-      await assertNoRpc(test, before, "Favorites/exclusion do not reacquire providers");
+      await assertNoRpc(test, before, "Favorites/exclusion do not reacquire providers", beforeTotal);
     });
   }
   // Persisted preferences are real store input. Aliases are admitted only by
@@ -487,13 +494,13 @@ try {
     const n = nearbyCount(row), node = "date-night-osm-node-910001", way = "date-night-osm-way-910002";
     await runScenario(row, index, "provider-favorite-cache-resume", async test => {
       const { page, result } = test;
-      await activityCount(page, 1); await settleLocal(test); const before = test.rpc.length;
+      await activityCount(page, 1); await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
       assert.equal(before, 1);
-      assert.ok(test.rpc[0].response.includes(node) && test.rpc[0].response.includes(way));
+      assert.ok(test.primaryRpc[0].response.includes(node) && test.primaryRpc[0].response.includes(way));
       await press(categoryButton(page, row)); await activityCount(page, 1);
       await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, 1);
       await advance(test, new Date(Date.parse(defaultAt) + 60000).toISOString());
-      await activityCount(page, 1); await assertNoRpc(test, before, "Provider favorite survives cached category changes and resume");
+      await activityCount(page, 1); await assertNoRpc(test, before, "Provider favorite survives cached category changes and resume", beforeTotal);
       await optionsButton(page).click(); await selectTarget(page, row);
       await page.getByRole("button", { name: "Saved", exact: true }).waitFor();
       await closeResult(page);
@@ -518,7 +525,7 @@ try {
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       await advance(test, row.seasonalListing.listingExpiresAt);
       await rowHeading(page, row).waitFor({ state: "hidden" }); await activityCount(page, 0);
-      await assertNoRpc(test, before, "Saved aliases/canonical favorite cannot resurrect an expired cached listing");
+      await assertNoRpc(test, before, "Saved aliases/canonical favorite cannot resurrect an expired cached listing", beforeTotal);
       result.evidence.preferenceIds = { node, way, canonical: row.id };
     }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
       [node]: preference(row, node, { favorite: true, ourRating: 4 }),
@@ -526,8 +533,8 @@ try {
     } });
     await runScenario(row, index, "provider-never-beats-canonical-favorite", async test => {
       const { page } = test;
-      await activityCount(page, 0); await settleLocal(test); const before = test.rpc.length;
-      assert.equal(before, 1); assert.ok(test.rpc[0].response.includes(row.id));
+      await activityCount(page, 0); await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
+      assert.equal(before, 1); assert.ok(test.primaryRpc[0].response.includes(row.id));
       assert.equal(await pickButton(page).isDisabled(), true);
       await press(categoryButton(page, row)); await activityCount(page, 0);
       await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, 0);
@@ -539,7 +546,7 @@ try {
       await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
       assert.equal(await rowHeading(page, row).count(), 0, "Negative provider preference outranks canonical favorite");
       await closeOptions(page);
-      await assertNoRpc(test, before, "Never-recommend remains enforced through cache/resume");
+      await assertNoRpc(test, before, "Never-recommend remains enforced through cache/resume", beforeTotal);
     }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
       [row.id]: preference(row, row.id, { favorite: true }),
       [node]: preference(row, node, { neverRecommend: true }),
@@ -547,15 +554,15 @@ try {
     const exclusionEnd = Date.parse(defaultAt) + 120000;
     await runScenario(row, index, "provider-exclusion-expiry-resume", async test => {
       const { page, result } = test;
-      await activityCount(page, 0); await settleLocal(test); const before = test.rpc.length;
-      assert.equal(before, 1); assert.ok(test.rpc[0].response.includes(way));
+      await activityCount(page, 0); await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
+      assert.equal(before, 1); assert.ok(test.primaryRpc[0].response.includes(way));
       await press(categoryButton(page, row)); await activityCount(page, 0);
       await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, 0);
       await advance(test, new Date(exclusionEnd - 1).toISOString()); await activityCount(page, 0);
       await advance(test, new Date(exclusionEnd).toISOString()); await activityCount(page, 1);
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       await closeOptions(page);
-      await assertNoRpc(test, before, "Affirmed alias exclusion expires locally without losing canonical favorite");
+      await assertNoRpc(test, before, "Affirmed alias exclusion expires locally without losing canonical favorite", beforeTotal);
       result.evidence.exclusionExpiresAt = new Date(exclusionEnd).toISOString();
     }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
       [row.id]: preference(row, row.id, { favorite: true }),
@@ -575,10 +582,10 @@ try {
       await page.getByRole("button", { name: "Save", exact: true }).click();
       await closeResult(page);
       await press(page.getByRole("switch", { name: "Favorites only", exact: true }), "Space");
-      await activityCount(page, 1); await settleLocal(test); const before = test.rpc.length;
+      await activityCount(page, 1); await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
       await advance(test, row.seasonalListing.listingExpiresAt); await activityCount(page, 0);
       assert.equal(await pickButton(page).isDisabled(), true);
-      await assertNoRpc(test, before, "Favorite eligibility ends at listing boundary without refetch");
+      await assertNoRpc(test, before, "Favorite eligibility ends at listing boundary without refetch", beforeTotal);
       await visitNav(page, "Favorites", "/favorites"); await inspectSaved(test, row, "saved-ended-history", true);
       await savedItem(page, row).getByRole("button", { name: `Remove ${row.name}`, exact: true }).click();
       await page.getByText("No favorites yet", { exact: true }).waitFor();
@@ -590,15 +597,15 @@ try {
     await runScenario(row, index, "affirmed-provider-direct-favorites-reload", async test => {
       const { page, result } = test;
       await activityCount(page, 1); await settleLocal(test);
-      assert.ok(test.rpc[0].response.includes(node) && test.rpc[0].response.includes(way));
+      assert.ok(test.primaryRpc[0].response.includes(node) && test.primaryRpc[0].response.includes(way));
       await visitNav(page, "Favorites", "/favorites");
       await inspectSaved(test, row, "affirmed-provider-saved");
       assert.equal(await page.locator("main li").count(), 1, "Affirmed provider favorites group as one reviewed venue");
-      const beforeReload = test.rpc.length;
+      await settleLocal(test); const beforeReload = test.primaryRpc.length; const beforeReloadTotal = test.result.rpc.length;
       await page.reload({ waitUntil: "domcontentloaded" });
       await inspectSaved(test, row, "affirmed-provider-saved-reloaded");
       assert.equal(await page.locator("main li").count(), 1);
-      await assertNoRpc(test, beforeReload, "Persisted identity receipt survives Favorites reload without discovery RPC");
+      await assertNoRpc(test, beforeReload, "Persisted identity receipt survives Favorites reload without discovery RPC", beforeReloadTotal);
       let state = await stored(page);
       assert.equal(state.preferences[node].favorite, true);
       assert.equal(state.preferences[way].favorite, true);

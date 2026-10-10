@@ -37,13 +37,14 @@ export const discoveryModes = [
 
 // Executes actual home components, shared lifecycle, decoration and selection.
 // Hooks/store/RPC and leaf components are modeled; no browser acceptance implied.
-export function discoveryComponentHarness(config) {
+export function discoveryComponentHarness(config, { emptyBackgroundAudit = false } = {}) {
   let states = [],
     cursor = 0,
     effects = [],
     effectIndex = 0,
     writes = 0;
   const requests = [];
+  const auditRequests = [];
   const store = {
     location: { lat: 37.176447, lon: -94.310223, label: "Carthage", source: "manual" },
     filters: { ...load("src/lib/restaurants/types.ts").DEFAULT_FILTERS, openNowOnly: false },
@@ -95,6 +96,15 @@ export function discoveryComponentHarness(config) {
     if (specifier.endsWith("/search"))
       return {
         [config.searchName]: (args) => {
+          // Primary transport lifecycle suites isolate a successful-empty audit.
+          // Dedicated hybrid suites leave this off and control every audit RPC.
+          if (emptyBackgroundAudit && args.data.patchId) {
+            auditRequests.push(args);
+            return Promise.resolve({ venues: [], source: "live", patch: { id: args.data.patchId, version: "radial-v1" },
+              discovery: { partial: false, groups: load("src/lib/date-night/query-plan.ts")
+                .buildDateNightQueryPlan(args.data.activityTypes, args.data.spookySeasonEnabled)
+                .map(group => ({ ...group, outcome: "succeeded-empty" })) } });
+          }
           const d = deferred();
           requests.push({ ...d, args });
           return d.promise;
@@ -150,6 +160,7 @@ export function discoveryComponentHarness(config) {
     render,
     store,
     requests,
+    auditRequests,
     get writes() {
       return writes;
     },

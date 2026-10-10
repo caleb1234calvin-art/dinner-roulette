@@ -1,0 +1,107 @@
+{
+  "passed": false,
+  "proof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "d63559d4f4b4bc4869089bffc28a73483d5ece6f38e9556a0661b980988dc0d4",
+      "files": 473
+    },
+    "startedAt": "2026-10-09T22:25:13.005Z",
+    "output": {
+      "sha256": "82c644eeb0f49d2f1caf29fd702ed61d1c04d33eeeb4e6dfd4a0c8c024275490",
+      "files": 194
+    },
+    "completedAt": "2026-10-09T22:25:16.107Z"
+  },
+  "publicProviderCalls": 0,
+  "scenarios": [
+    {
+      "scenario": "progressive-success",
+      "passed": true,
+      "providerRequests": 6,
+      "providerFailures": 0,
+      "providerAborts": 0,
+      "firstProviderResponseMs": 1819,
+      "finalProviderResponseMs": 5495,
+      "rpcRequests": 6,
+      "cancelledTransports": 0,
+      "readyMs": 1602,
+      "initialProgress": "Ready · available places",
+      "finalProgress": "Ready · background coverage checked",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "middle-failure",
+      "passed": true,
+      "providerRequests": 9,
+      "providerFailures": 4,
+      "providerAborts": 0,
+      "firstProviderResponseMs": 1707,
+      "finalProviderResponseMs": 5385,
+      "rpcRequests": 6,
+      "cancelledTransports": 0,
+      "readyMs": 1505,
+      "initialProgress": "Ready · available places",
+      "finalProgress": "Ready · some background coverage checks are unavailable",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "outermost-failure",
+      "passed": true,
+      "providerRequests": 36,
+      "providerFailures": 4,
+      "providerAborts": 0,
+      "firstProviderResponseMs": 1742,
+      "finalProviderResponseMs": 31561,
+      "rpcRequests": 33,
+      "cancelledTransports": 0,
+      "readyMs": 1532,
+      "initialProgress": "Ready · available places",
+      "finalProgress": "Ready · some background coverage checks are unavailable",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "options-stable",
+      "passed": true,
+      "providerRequests": 3,
+      "providerFailures": 0,
+      "providerAborts": 0,
+      "firstProviderResponseMs": 1722,
+      "finalProviderResponseMs": 2418,
+      "rpcRequests": 3,
+      "cancelledTransports": 0,
+      "readyMs": 1514,
+      "initialProgress": "Ready · available places",
+      "finalProgress": "Ready · checking background coverage",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "scenario": "pick-stable",
+      "passed": true,
+      "providerRequests": 3,
+      "providerFailures": 0,
+      "providerAborts": 0,
+      "firstProviderResponseMs": 1730,
+      "finalProviderResponseMs": 2434,
+      "rpcRequests": 3,
+      "cancelledTransports": 0,
+      "readyMs": 1532,
+      "initialProgress": "Ready · available places",
+      "finalProgress": "Ready · checking background coverage",
+      "pageErrors": [],
+      "horizontalOverflow": false
+    }
+  ],
+  "errors": [
+    {
+      "name": "TimeoutError",
+      "message": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('.fixed.inset-0.z-50 h3').first() to be visible\n"
+    }
+  ]
+}

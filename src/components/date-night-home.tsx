@@ -12,7 +12,7 @@ import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { searchDateNight } from "@/lib/date-night/search";
 import { normalizeDateNightClientActivityTypes, sanitizeDateNightClientActivityTypes } from "@/lib/date-night/cache";
-import { createDateNightRadialSession, dateNightRadialProgress } from "@/lib/date-night/radial-session";
+import { createDateNightHybridSession, dateNightHybridProgress, type DateNightLoadPhase } from "@/lib/date-night/hybrid-session";
 import type { DateNightCoverageState } from "@/lib/date-night/radial-plan";
 import {
   dateNightChipsForNow,
@@ -169,9 +169,11 @@ export function DateNightHome() {
   const now = useDateNightClock();
   const [source, setSource] = useState<"live" | "merged" | "fallback">("live");
   const [discovery, setDiscovery] = useState<DateNightSearchResponse["discovery"]>();
-  const [radialSession] = useState(createDateNightRadialSession);
+  const [radialSession] = useState(createDateNightHybridSession);
   const [radialCoverage, setRadialCoverage] = useState<DateNightCoverageState>();
   const [expanding, setExpanding] = useState(false);
+  const [loadPhase, setLoadPhase] = useState<DateNightLoadPhase>("initial-loading");
+  const [primaryPending, setPrimaryPending] = useState(true);
   const halloweenActive = isHalloweenDateNightActive(spookySeasonEnabled, now);
   const activityChips = dateNightChipsForNow(spookySeasonEnabled, now);
   const acquisitionSignature = normalizeDateNightClientActivityTypes(filters.activityTypes, halloweenActive).join(",");
@@ -189,13 +191,15 @@ export function DateNightHome() {
         },
         signal,
       }),
-      onChange: ({ response, coverage: nextCoverage, loading: foreground, expanding: background, error: failure }) => {
+      onChange: ({ response, coverage: nextCoverage, loading: foreground, expanding: background, phase, primaryPending: pending, error: failure }) => {
         setVenues(response?.venues ?? []);
         setSource(response?.source ?? "live");
         setWarning(response?.warning ?? null);
         setDiscovery(response?.discovery);
         setError(failure);
         setLoading(foreground);
+        setLoadPhase(phase);
+        setPrimaryPending(pending);
         setExpanding(background);
         setRadialCoverage(nextCoverage);
       },
@@ -211,9 +215,18 @@ export function DateNightHome() {
   );
   const coverage = seasonalCoverage(decorated, filters, source, halloweenActive);
   // Open overlays receive refreshed status/eligibility, too, including on resume.
-  const currentPick = pick ? eligible.find((venue) => venue.id === pick.id) : null;
-  const currentOptions = options?.map((item) => eligible.find((venue) => venue.id === item.id)).filter((item): item is DecoratedDateNightPlace => Boolean(item));
-  const currentPlan = nightPlan?.map((item) => eligible.find((venue) => venue.id === item.id)).filter((item): item is DecoratedDateNightPlace => Boolean(item));
+  // Background duplicate evidence may choose a new canonical representative.
+  // Follow affirmed identity receipts, never select a replacement from the pool.
+  // Lookup stays inside current eligibility so expiry/negative evidence still
+  // invalidates an unsafe decision instead of freezing stale presentation.
+  const currentDecision = (item: DecoratedDateNightPlace) => {
+    const ids = new Set([item.id, ...(item.discoveryEvidence?.map(record => record.id) ?? [])]);
+    return eligible.find(venue => ids.has(venue.id) || venue.discoveryEvidence?.some(record => ids.has(record.id)));
+  };
+  const currentPick = pick ? currentDecision(pick) : null;
+  const currentOptions = options?.map(currentDecision).filter((item): item is DecoratedDateNightPlace => Boolean(item));
+  const currentPlan = nightPlan?.map(currentDecision).filter((item): item is DecoratedDateNightPlace => Boolean(item));
+  const decisionKeys = (items: DecoratedDateNightPlace[] | null) => items?.filter(item => currentDecision(item)).map(item => item.id);
 
   function updateFilters(patch: Partial<DateNightFilters>) {
     setDateNightFilters(patch);
@@ -348,10 +361,10 @@ export function DateNightHome() {
       </section>
 
       {loading ? <DiscoveryLoading label="Finding date ideas near you…" /> : null}
-      {!loading && radialCoverage ? (
+      {!loading ? (
         <div className="mt-5 rounded-xl bg-surface p-4 text-xs leading-relaxed text-muted shadow-border">
-          <p role="status" data-radial-progress>{dateNightRadialProgress(radialCoverage, expanding)}</p>
-          {!expanding && !radialCoverage.complete && !error && !discovery?.partial ? (
+          <p role="status" data-radial-progress data-date-night-phase={loadPhase}>{dateNightHybridProgress(loadPhase, expanding)}</p>
+          {!primaryPending && !expanding && !radialCoverage?.complete && !error && !discovery?.partial ? (
             <button type="button" className="mt-2 min-h-11 text-accent underline" onClick={() => setRequestVersion(version => version + 1)}>Retry missing areas</button>
           ) : null}
         </div>
@@ -363,11 +376,11 @@ export function DateNightHome() {
           body={discovery?.partial ? warning : halloweenActive
             ? "Pick For Us is using saved local date ideas. Check each stop before you leave."
             : "Pick For Us is using verified saved local date ideas so the roulette can keep working."}
-          onRetry={discovery?.partial ? () => setRequestVersion((version) => version + 1) : undefined}
+          onRetry={() => setRequestVersion((version) => version + 1)}
         />
       ) : null}
       {!loading && !error && coverage ? (
-        <p role="status" className="mt-5 rounded-xl bg-surface p-4 text-xs leading-relaxed text-muted shadow-border">{coverage.text}</p>
+        <p role="status" className="mt-5 rounded-xl bg-surface p-4 text-xs leading-relaxed text-muted shadow-border">{primaryPending ? "Available saved places are ready. Live discovery is continuing." : coverage.text}</p>
       ) : null}
       {error ? (
         <DiscoveryNotice
@@ -409,9 +422,9 @@ export function DateNightHome() {
         </div>
       </div>
 
-      {currentPick ? <ResultOverlay restaurant={currentPick as DecoratedRestaurant} reelNames={reelNames} onClose={() => setPick(null)} onReroll={() => roll()} onNotTonight={() => { excludeTonight(currentPick.id, currentPick.name); setPick(null); }} skipSpin={skipSpin} mode="date-night" /> : null}
-      {currentOptions?.length ? <OptionsOverlay restaurants={currentOptions as DecoratedRestaurant[]} onClose={() => setOptions(null)} onSelect={(restaurant) => { setOptions(null); setSkipSpin(true); setPick(restaurant as DecoratedDateNightPlace); }} onShuffle={dealOptions} onNotTonight={(restaurant) => excludeTonight(restaurant.id, restaurant.name)} mode="date-night" /> : null}
-      {currentPlan?.length ? <DateNightPlanOverlay plan={currentPlan} onClose={() => setNightPlan(null)} onReplan={planNight} /> : null}
+      {currentPick ? <ResultOverlay decisionIdentity={pick ? { id: pick.id, name: pick.name } : undefined} restaurant={currentPick as DecoratedRestaurant} reelNames={reelNames} onClose={() => setPick(null)} onReroll={() => roll()} onNotTonight={() => { excludeTonight(currentPick.id, currentPick.name); setPick(null); }} skipSpin={skipSpin} mode="date-night" /> : null}
+      {currentOptions?.length ? <OptionsOverlay decisionKeys={decisionKeys(options)} restaurants={currentOptions as DecoratedRestaurant[]} onClose={() => setOptions(null)} onSelect={(restaurant) => { setOptions(null); setSkipSpin(true); setPick(restaurant as DecoratedDateNightPlace); }} onShuffle={dealOptions} onNotTonight={(restaurant) => excludeTonight(restaurant.id, restaurant.name)} mode="date-night" /> : null}
+      {currentPlan?.length ? <DateNightPlanOverlay decisionKeys={decisionKeys(nightPlan)} plan={currentPlan} onClose={() => setNightPlan(null)} onReplan={planNight} /> : null}
     </main>
   );
 }

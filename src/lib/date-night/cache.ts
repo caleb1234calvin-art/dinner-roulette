@@ -118,7 +118,6 @@ export function createDateNightDiscoveryCache({
   // a venue after old evidence expires. This is destructive retirement, no
   // unbounded tombstone registry or rejuvenated negative TTL.
   const retireEvictedNegative = (removed: CacheEntry) => {
-    if (!removed.acquisition.patchId) return;
     const negatives = removed.venues.filter(place => place.lifecycle);
     if (!negatives.length) return;
     for (const entry of entries) {
@@ -192,7 +191,7 @@ export function createDateNightDiscoveryCache({
       prune(at);
       // Missing metadata, complete fallback and prior cache assemblies cannot
       // become proof that a provider acquired a category.
-      if (response.source === "fallback" || !response.discovery || response.venues.length > maxVenues) return false;
+      if (response.source === "fallback" || !response.discovery) return false;
       const patch = query.patchId ? resolveDateNightPatch(query, query.radiusMiles, query.patchId) : undefined;
       if (patch && (response.patch?.id !== patch.id || response.patch.version !== DATE_NIGHT_RADIAL_VERSION)) return false;
       const requested = normalizeDateNightActivityTypes(query.activityTypes, query.halloweenActive);
@@ -200,6 +199,18 @@ export function createDateNightDiscoveryCache({
         ...group, activityTypes: group.activityTypes.filter((type) => requested.includes(type)),
       })).filter((group) => group.activityTypes.length > 0);
       if (!groups.length) return false;
+      // A valid response can exceed positive cache capacity. Its observed
+      // closure evidence must still retire older positives before rejection;
+      // memory admission is not a reason to forget a known unsafe identity.
+      if (response.venues.length > maxVenues) {
+        const negatives = response.venues.filter(place => place.lifecycle);
+        if (negatives.length) for (const entry of entries) {
+          if (!sameSignature(entry, query)) continue;
+          entry.venues = entry.venues.filter(place => place.lifecycle ||
+            !negatives.some(negative => mergeDateNight([place], [negative]).length === 1));
+        }
+        return false;
+      }
       // Successful coverage retires older authority before ordinary LRU eviction.
       // Otherwise evicting a newer empty snapshot could restore an older superset.
       // Invalidate across radii for the same signature: a narrower refresh may

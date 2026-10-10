@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 import { discoveryClock, flush } from "./test-support/discovery-clock.mjs";
-import { discoveryComponentHarness, discoveryModes, discoveryPayload, textOf } from "./test-support/discovery-component-harness.mjs";
+import { discoveryComponentHarness, discoveryModes, discoveryPayload } from "./test-support/discovery-component-harness.mjs";
 
 const load = appModuleLoader();
 const { createDateNightDiscoveryCache, combineDateNightDiscovery, failedDateNightAcquisition,
@@ -395,118 +395,109 @@ function resolveRequest(h, index = h.requests.length - 1, overrides = {}) {
   request.resolve({ ...response(q, [venue("movie", ["movies"])]), ...overrides });
 }
 
-test("actual DateNightHome: Anything→subsets and every local-only filter reuse data without network", async (t) => {
-  const { h, clock } = setup(t);
-  resolveRequest(h);
-  await h.settle();
-  for (const patch of [
-    { openNowOnly: true }, { mood: 90 }, { favoritesOnly: true }, { reduceParks: false },
-    { activityTypes: ["haunted-house"] }, { activityTypes: ["corn-maze", "pumpkin-patch"] },
-    { activityTypes: ["movies"] }, { activityTypes: ["anything"] },
-  ]) {
-    h.store.setDateNightFilters(patch);
-    h.render();
-    assert.equal(h.status().loading, false);
-    assert.equal(h.requests.length, 1);
+const primaries = h => h.requests.filter(r => !r.args.data.patchId);
+const resolvePrimary = (h, overrides = {}) => resolveRequest(h, h.requests.indexOf(primaries(h).at(-1)), overrides);
+
+test("actual DateNightHome: Anything→subsets reuse primary authority; local filters add no acquisition", async t => {
+  const { h } = setup(t);
+  resolvePrimary(h); await h.settle();
+  for (const patch of [{ openNowOnly: true }, { mood: 90 }, { favoritesOnly: true }, { reduceParks: false }]) {
+    const count = h.requests.length;
+    h.store.setDateNightFilters(patch); h.render();
+    assert.equal(h.requests.length, count);
   }
-  assert.equal(clock.pending, 0);
+  for (const activityTypes of [["haunted-house"], ["corn-maze", "pumpkin-patch"], ["movies"], ["anything"]]) {
+    h.store.setDateNightFilters({ activityTypes }); h.render();
+    assert.equal(h.status().loading, false);
+    assert.equal(primaries(h).length, 1, "subset must reuse full-disk category authority even if audit changes");
+  }
 });
 
-test("actual DateNightHome: stale persisted unknown categories recover to Anything without weakening RPC validation", async (t) => {
+test("actual DateNightHome: stale unknown category recovers Anything without weakening validator", async t => {
   const { h } = setup(t, ["retired-category"]);
-  assert.deepEqual(h.requests[0].args.data.activityTypes, normalizeDateNightActivityTypes(["anything"], true));
-  resolveRequest(h);
-  const state = await h.settle();
-  assert.match(textOf(state.tree), /1 activities match/);
+  assert.deepEqual(primaries(h)[0].args.data.activityTypes, normalizeDateNightActivityTypes(["anything"], true));
+  resolvePrimary(h); const state = await h.settle();
   assert.equal(h.button(state.tree, "Anything").props["aria-pressed"], true);
+  assert.equal(h.button(state.tree, "Pick our date").props.disabled, false);
   assert.throws(() => normalizeDateNightActivityTypes(["retired-category"], true), /Choose valid/);
 });
 
-test("actual DateNightHome: subset then mixed selection fetches only missing categories", async (t) => {
+test("actual DateNightHome: mixed selection acquires only missing primary categories", async t => {
   const { h } = setup(t, ["haunted-house"]);
-  assert.deepEqual(h.requests[0].args.data.activityTypes, ["haunted-house"]);
-  resolveRequest(h); await h.settle();
-  h.store.setDateNightFilters({ activityTypes: ["haunted-house", "movies"] });
-  h.render();
-  assert.deepEqual(h.requests[1].args.data.activityTypes, ["movies"]);
-  resolveRequest(h); await h.settle();
-  h.store.setDateNightFilters({ activityTypes: ["movies"] });
-  h.render();
-  assert.equal(h.requests.length, 2);
+  resolvePrimary(h); await h.settle();
+  h.store.setDateNightFilters({ activityTypes: ["haunted-house", "movies"] }); h.render();
+  assert.deepEqual(primaries(h).at(-1).args.data.activityTypes, ["movies"]);
+  resolvePrimary(h); await h.settle();
+  h.store.setDateNightFilters({ activityTypes: ["movies"] }); h.render();
+  assert.equal(primaries(h).length, 2);
 });
 
-test("actual DateNightHome: bounded missing-category timeout preserves cached live contribution and partial warning", async (t) => {
+test("actual DateNightHome: missing-category timeout keeps cached contribution and truthful qualification", async t => {
   const { h, clock } = setup(t, ["movies"]);
   t.mock.method(console, "warn", () => {});
-  resolveRequest(h); await h.settle();
-  h.store.setDateNightFilters({ activityTypes: ["movies", "park"] });
-  h.render();
+  resolvePrimary(h); await h.settle();
+  h.store.setDateNightFilters({ activityTypes: ["movies", "park"] }); h.render();
+  const missing = primaries(h).at(-1);
   await clock.tick(25_000);
-  const state = h.status();
-  assert.equal(state.loading, false);
-  assert.equal(h.requests[1].args.signal.aborted, true);
-  assert.match(state.notices[0].title, /Some live searches/);
-  assert.match(textOf(state.tree), /1 activities match/);
-  assert.equal(clock.pending, 0);
-  state.notices[0].onRetry(); h.render();
-  assert.deepEqual(h.requests[2].args.data.activityTypes, ["park"], "partial retry acquires only missing coverage");
+  assert.equal(missing.args.signal.aborted, true);
+  assert.equal(h.status().loading, false);
+  assert.equal(h.button(h.render(), "Pick our date").props.disabled, false);
+  assert.ok(h.status().notices.length, "partial provider failure remains disclosed");
+  h.status().notices.find(n => typeof n.onRetry === "function").onRetry(); h.render();
+  assert.deepEqual(primaries(h).at(-1).args.data.activityTypes, ["park"]);
 });
 
-test("actual DateNightHome: TTL refreshes on next category acquisition, not local-only toggles or elapsed time", async (t) => {
+test("actual DateNightHome: TTL refresh on category acquisition; local toggles never rejuvenate primary", async t => {
   const { h, clock } = setup(t);
-  resolveRequest(h); await h.settle();
+  resolvePrimary(h); await h.settle();
   await clock.tick(DATE_NIGHT_CACHE_TTL_MS);
   h.store.setDateNightFilters({ openNowOnly: true }); h.render();
-  assert.equal(h.requests.length, 1);
+  assert.equal(primaries(h).length, 1);
   h.store.setDateNightFilters({ activityTypes: ["movies"] }); h.render();
-  assert.equal(h.requests.length, 2);
-  assert.deepEqual(h.requests[1].args.data.activityTypes, ["movies"]);
+  assert.equal(primaries(h).length, 2);
+  assert.deepEqual(primaries(h).at(-1).args.data.activityTypes, ["movies"]);
 });
 
-test("actual DateNightHome: radius widening schedules an outer patch; narrowing reuses core without RPC", async (t) => {
-  const { h, clock } = setup(t, ["movies"]);
-  resolveRequest(h); await h.settle();
+test("actual DateNightHome: uncovered widening acquires disk; covered narrowing uses local authority", async t => {
+  const { h } = setup(t, ["movies"]);
+  resolvePrimary(h); await h.settle();
   h.store.setDateNightFilters({ radiusMiles: 50 }); h.render();
-  assert.equal(h.requests.length, 1, "widening respects the pending success delay");
-  await clock.tick(250);
-  assert.equal(h.requests.length, 2);
-  assert.equal(h.requests[1].args.data.patchId, "radial-v1:20:0");
-  assert.notEqual(h.requests[1].args.data.patchId, h.requests[0].args.data.patchId);
-  resolveRequest(h); await h.settle();
+  assert.equal(primaries(h).length, 2);
+  assert.equal(primaries(h).at(-1).args.data.radiusMiles, 50);
+  resolvePrimary(h); await h.settle();
   h.store.setDateNightFilters({ radiusMiles: 15 }); h.render();
-  assert.equal(h.requests.length, 2);
+  assert.equal(primaries(h).length, 2);
   assert.equal(h.status().loading, false);
 });
 
 for (const scenario of ["replacement", "timeout"]) {
-  test(`actual DateNightHome: late ${scenario} response cannot seed reusable cache`, async (t) => {
+  test(`actual DateNightHome: late ${scenario} response cannot seed primary authority`, async t => {
     const { h, clock } = setup(t, ["movies"]);
     t.mock.method(console, "warn", () => {});
-    const old = h.requests[0];
+    const old = primaries(h)[0];
     if (scenario === "timeout") {
       await clock.tick(25_000);
-      h.status().notices[0].onRetry();
+      h.status().notices.find(n => typeof n.onRetry === "function").onRetry();
     } else h.store.location = { ...h.store.location, lat: 38 };
     h.render();
     assert.equal(old.args.signal.aborted, true);
     resolveRequest(h, 0); await flush();
-    // Cancel the current request and revisit the abandoned location/category.
     h.store.setDateNightFilters({ activityTypes: ["museum"] }); h.render();
     h.store.location = { ...h.store.location, lat: origin.lat };
     h.store.setDateNightFilters({ activityTypes: ["movies"] }); h.render();
-    assert.equal(h.requests.length, 4, "late old success was not reusable");
-    assert.equal(h.status().loading, true);
+    assert.equal(primaries(h).length, 4, "late old response cannot satisfy a new acquisition");
+    assert.equal(primaries(h).at(-1).args.signal.aborted, false);
   });
 }
 
-test("actual DateNightHome: component cache lifetime does not survive unmount or contaminate another session", async (t) => {
+test("actual DateNightHome: unmount cancels pending audit and fresh session reacquires primary", async t => {
   const { h } = setup(t);
-  resolveRequest(h); await h.settle();
+  resolvePrimary(h); await h.settle();
+  const pending = h.requests.at(-1);
   h.dispose();
-  const next = discoveryComponentHarness(config);
-  t.after(() => next.dispose());
-  next.store.spookySeasonEnabled = true;
-  next.render();
-  assert.equal(next.requests.length, 1);
-  assert.equal(next.status().loading, true);
+  assert.equal(pending.args.signal.aborted, true);
+  const next = discoveryComponentHarness(config); t.after(() => next.dispose());
+  next.store.spookySeasonEnabled = true; next.render();
+  assert.equal(primaries(next).length, 1);
+  assert.equal(primaries(next)[0].args.signal.aborted, false);
 });

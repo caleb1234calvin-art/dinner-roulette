@@ -1,3 +1,4 @@
+import { dateNightRpcEvidence, assertBoundedSeasonalAudit } from "./test-support/hybrid-rpc-evidence.mjs";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
@@ -12,16 +13,18 @@ const output = resolve("audit/browser-results/missouri-two-records");
 await mkdir(output, { recursive: true });
 const control = resolve(output, "control.json"), events = resolve(output, "events.jsonl");
 const origin = "http://127.0.0.1:8097", defaultAt = "2026-10-07T18:00:00Z";
+let evidenceClock;
 const setControl = async state => {
   await writeFile(`${control}.next`, JSON.stringify(state));
   await rename(`${control}.next`, control);
+  evidenceClock = state.at;
 };
 await writeFile(events, "");
 await setControl({ at: defaultAt, scenario: "startup" });
 const server = spawn(process.execPath, ["scripts/with-app-env.mjs", process.execPath, "--import",
   resolve("scripts/test-support/missouri-two-record-preload.mjs"), "node_modules/vite/bin/vite.js", "preview",
   "--host", "127.0.0.1", "--port", "8097", "--strictPort"], {
-  env: { ...process.env, DATABASE_URL: "", MISSOURI_TWO_CONTROL: control, MISSOURI_TWO_EVENTS: events },
+  env: { ...process.env, TZ: "UTC", DATABASE_URL: "", MISSOURI_TWO_CONTROL: control, MISSOURI_TWO_EVENTS: events },
   detached: true, stdio: ["ignore", "pipe", "pipe"],
 });
 let logs = "", browser;
@@ -134,9 +137,11 @@ const settleLocal = async test => {
   await delay(350);
   await Promise.all([...test.pending]);
 };
-const assertNoRpc = async (test, count, label) => {
+const assertNoRpc = async (test, count, label, total = count) => {
   await settleLocal(test);
-  assert.equal(test.rpc.length, count, label);
+  assert.equal(test.primaryRpc.length, count, label);
+  assertBoundedSeasonalAudit(test.result.rpc);
+  if (!/category|Anything|Season-on/i.test(label)) assert.equal(test.result.rpc.length, total, `${label}: no extra primary or audit RPC`);
 };
 const overlayRoot = (page, kind) => page.locator(".fixed.inset-0.z-50").filter({
   has: page.getByRole("button", { name: `Close ${kind}`, exact: true }),
@@ -325,8 +330,8 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
       if (request.resourceType() === "image") result.imageRequestFailures.push({ url: request.url(), error: request.failure()?.errorText });
     });
     page.on("request", request => {
-      if (request.url().includes("/_serverFn/") && request.postData()?.includes("patchId")) {
-        result.rpc.push({ request, method: request.method(), body: request.postData() });
+      if (request.url().includes("/_serverFn/") && request.postData()?.includes("activityTypes")) {
+        result.rpc.push({ fixtureAt: evidenceClock, acquisition: dateNightRpcEvidence(request.postData()), request, method: request.method(), body: request.postData() });
       }
     });
     page.on("response", response => {
@@ -342,9 +347,11 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
     });
     await page.goto(origin, { waitUntil: "domcontentloaded" });
     await ready(page);
-    const test = { page, state, result, rpc: result.rpc, pending };
+    const test = { page, state, result, get primaryRpc() { return result.rpc.filter(r => r.acquisition.kind === "primary"); }, get auditRpc() { return result.rpc.filter(r => r.acquisition.kind === "audit"); }, pending };
     await callback(test);
     await settleLocal(test);
+    assertBoundedSeasonalAudit(result.rpc);
+    result.evidence.acquisitionCounts = { primary: test.primaryRpc.length, audit: test.auditRpc.length, total: result.rpc.length };
     assert.deepEqual(result.pageErrors, []);
     await noOverflow(page);
     result.passed = true;
@@ -425,8 +432,8 @@ try {
       const { page, result } = test;
       await activityCount(page, n + 1);
       await settleLocal(test);
-      assert.equal(test.rpc.length, 1, "One real initial patch RPC");
-      const initialRpc = test.rpc[0].response;
+      assert.equal(test.primaryRpc.length, 1, "One real selected-radius primary RPC");
+      const initialRpc = test.primaryRpc[0].response;
       for (const value of [row.id, "date-night-osm-node-910001", "date-night-osm-way-910002", "park", "seasonalAvailability", row.seasonalAvailability.endsAt]) {
         assert.ok(initialRpc.includes(value), `Real RPC retains merged evidence: ${value}`);
       }
@@ -439,26 +446,26 @@ try {
       await inspectIcons(test, "options", "mixed-season-on");
       await page.screenshot({ path: resolve(output, `${index}-mixed-season-on.png`), fullPage: true });
       await noOverflow(page); await closeOptions(page);
-      const initialCount = test.rpc.length;
+      await settleLocal(test); const initialCount = test.primaryRpc.length; const initialCountTotal = test.result.rpc.length;
       const category = page.getByRole("button", { name: index ? "Other Halloween / Fall" : "Corn Maze", exact: true });
       await press(category); await activityCount(page, categoryCount);
       assert.equal(await category.getAttribute("aria-pressed"), "true");
       await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, n + 1);
-      await assertNoRpc(test, initialCount, "Anything/category uses the acquired superset cache");
+      await assertNoRpc(test, initialCount, "Anything/category uses the acquired superset cache", initialCountTotal);
       const openNow = page.getByRole("switch", { name: "Open now only", exact: true });
       await press(openNow, "Space"); await activityCount(page, 1);
       await optionsButton(page).click(); await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
       assert.equal(await rowHeading(page, row).count(), 0, "Provider 24/7 hours cannot promote the curated event to Open now");
       await closeOptions(page); await press(openNow, "Space"); await activityCount(page, n + 1);
-      await assertNoRpc(test, initialCount, "Open now is a local filter");
+      await assertNoRpc(test, initialCount, "Open now is a local filter", initialCountTotal);
       const toggle = page.getByRole("switch", { name: "Spooky Season", exact: true });
       await press(toggle, "Space");
-      await waitFor(async () => test.rpc.length === initialCount + 1 && test.rpc.at(-1).response, "Season-off RPC did not settle");
+      await waitFor(async () => test.primaryRpc.length === initialCount + 1 && test.primaryRpc.at(-1).response, "Season-off RPC did not settle");
       await ready(page); await activityCount(page, 2);
       assert.equal(await toggle.getAttribute("aria-checked"), "false");
       assert.equal(await category.count(), 0);
-      assert.ok(!test.rpc.at(-1).response.includes(row.id), "Season-off RPC excludes curated event identity");
-      assert.ok(!test.rpc.at(-1).response.includes("seasonalVisitNotes"), "Season-off RPC excludes curated details");
+      assert.ok(!test.primaryRpc.at(-1).response.includes(row.id), "Season-off RPC excludes curated event identity");
+      assert.ok(!test.primaryRpc.at(-1).response.includes("seasonalVisitNotes"), "Season-off RPC excludes curated details");
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       assert.equal(await page.locator("[data-seasonal-visit-notes]").count(), 0);
       assert.doesNotMatch(await rowCard(page, row).innerText(), /Corn Maze|Pumpkin Patch|Other Halloween \/ Fall/i);
@@ -469,16 +476,16 @@ try {
       await inspectIcons(test, "options", "mixed-season-off");
       await page.screenshot({ path: resolve(output, `${index}-mixed-season-off.png`), fullPage: true });
       await noOverflow(page); await closeOptions(page);
-      const afterOff = test.rpc.length;
+      await settleLocal(test); const afterOff = test.primaryRpc.length; const afterOffTotal = test.result.rpc.length;
       await press(toggle, "Space"); await activityCount(page, n + 1);
       assert.equal(await toggle.getAttribute("aria-checked"), "true");
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       assert.equal(await rowCard(page, row).locator("[data-seasonal-visit-notes]").count(), 1);
       assert.doesNotMatch(await rowCard(page, row).innerText(), /Open now/);
       await closeOptions(page);
-      await assertNoRpc(test, afterOff, "Season-on restores its isolated cache without another RPC");
+      await assertNoRpc(test, afterOff, "Season-on restores its isolated cache without another RPC", afterOffTotal);
       await press(openNow, "Space"); await activityCount(page, 1);
-      await assertNoRpc(test, afterOff, "Cached merged event remains fail-closed for Open now");
+      await assertNoRpc(test, afterOff, "Cached merged event remains fail-closed for Open now", afterOffTotal);
       await press(openNow, "Space"); await activityCount(page, n + 1);
       result.evidence.cacheRpcCount = afterOff;
       // Advance past the real ten-minute acquisition TTL, then use actual
@@ -492,31 +499,31 @@ try {
         window.dispatchEvent(new Event("focus"));
       }, refreshedAt);
       await press(category);
-      await waitFor(async () => test.rpc.length >= afterOff + 1 && test.rpc.at(-1).response,
+      await waitFor(async () => test.primaryRpc.length >= afterOff + 1 && test.primaryRpc.at(-1).response,
         "Expired category cache did not reacquire through the real RPC");
       await ready(page); await activityCount(page, categoryCount);
-      assert.equal(test.rpc.length, afterOff + 1, "Expired category requires exactly one core RPC");
-      assert.ok(test.rpc.at(-1).response.includes(row.id));
+      assert.equal(test.primaryRpc.length, afterOff + 1, "Expired category requires exactly one primary RPC");
+      assert.ok(test.primaryRpc.at(-1).response.includes(row.id));
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       assert.equal(await rowCard(page, row).locator("[data-seasonal-visit-notes]").count(), 1);
       assert.doesNotMatch(await rowCard(page, row).innerText(), /Open now/);
       await closeOptions(page);
       await press(page.getByRole("button", { name: "Anything", exact: true }));
-      await waitFor(async () => test.rpc.length >= afterOff + 2 && test.rpc.at(-1).response,
+      await waitFor(async () => test.primaryRpc.length >= afterOff + 2 && test.primaryRpc.at(-1).response,
         "Anything did not reacquire the expired missing categories");
       await ready(page); await activityCount(page, n + 1);
-      assert.equal(test.rpc.length, afterOff + 2, "Anything refreshes missing categories in one core RPC");
-      const afterRefresh = test.rpc.length;
+      assert.equal(test.primaryRpc.length, afterOff + 2, "Anything refreshes missing categories in one primary RPC");
+      await settleLocal(test); const afterRefresh = test.primaryRpc.length; const afterRefreshTotal = test.result.rpc.length;
       await press(openNow, "Space"); await activityCount(page, 1);
       await optionsButton(page).click();
       await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
       assert.equal(await rowHeading(page, row).count(), 0, "Fresh merged evidence still cannot promote the event to Open now");
       await closeOptions(page); await press(openNow, "Space"); await activityCount(page, n + 1);
-      await assertNoRpc(test, afterRefresh, "Fresh-cache Open now remains a local filter");
-      result.evidence.expiredCacheRefresh = { at: refreshedAt, additionalRpcCount: afterRefresh - afterOff };
+      await assertNoRpc(test, afterRefresh, "Fresh-cache Open now remains a local filter", afterRefreshTotal);
+      result.evidence.expiredCacheRefresh = { at: refreshedAt, additionalPrimaryRpcCount: afterRefresh - afterOff, additionalTotalRpcCount: afterRefreshTotal - afterOffTotal };
       // Exercise real keyboard controls and application Back/Forward navigation.
       await press(page.getByRole("slider", { name: "Cozy to adventurous", exact: true }), "End");
-      await assertNoRpc(test, afterRefresh, "Keyboard mood change is local");
+      await assertNoRpc(test, afterRefresh, "Keyboard mood change is local", afterRefreshTotal);
       await press(page.getByRole("navigation", { name: "Main" }).getByRole("link", { name: "Settings", exact: true }));
       await page.waitForURL(`${origin}/settings`);
       await page.goBack(); await page.waitForURL(`${origin}/`); await ready(page); await activityCount(page, n + 1);
@@ -539,7 +546,7 @@ try {
         }
         assert.equal(await (overlay === "options" ? rowCard(page, row) : overlayRoot(page, "result")).locator("[data-seasonal-visit-notes]").count(), 1);
         await settleLocal(test);
-        const before = test.rpc.length;
+        await settleLocal(test); const before = test.primaryRpc.length; const beforeTotal = test.result.rpc.length;
         result.evidence.beforeEnd = await rowHeading(page, row).innerText();
         await inspectIcons(test, overlay, `resume-${overlay}-before`);
         await page.screenshot({ path: resolve(output, `${index}-resume-${overlay}-before.png`), fullPage: true });
@@ -557,13 +564,14 @@ try {
           assert.equal(await page.locator("article").count(), remainingRows.length + 1, "Open options drops only the expired identity");
           await closeOptions(page);
         } else assert.equal(await page.getByRole("button", { name: "Close result", exact: true }).count(), 0, "Expired result overlay is dismissed");
-        await assertNoRpc(test, before, "Resume at final end recomputes eligibility without provider traffic");
+        await assertNoRpc(test, before, "Resume at final end recomputes eligibility without provider traffic", beforeTotal);
         await optionsButton(page).click();
         await page.getByRole("heading", { name: "Ordinary park control", exact: true }).waitFor();
         assert.equal(await rowHeading(page, row).count(), 0, "Future selections cannot resurrect the ended duplicate");
         await noOverflow(page); await closeOptions(page);
         result.evidence.finalEnd = endsAt;
-        result.evidence.resumeRpcDelta = test.rpc.length - before;
+        result.evidence.resumePrimaryRpcDelta = test.primaryRpc.length - before;
+        result.evidence.resumeTotalRpcDelta = test.result.rpc.length - beforeTotal;
       }, { fixture: "mixed", at: beforeAt });
     }
   }
@@ -579,12 +587,12 @@ try {
       const { page, result } = test;
       await activityCount(page, fallbackRows.length);
       await settleLocal(test);
-      assert.equal(test.rpc.length, 1);
-      assert.match(test.rpc[0].response, /fallback/);
+      assert.equal(test.primaryRpc.length, 1);
+      assert.match(test.primaryRpc[0].response, /fallback/);
       for (const value of [myer.id, "ListingCompletenessV1", "address-geocode", String(myer.lat), String(myer.lon), myer.address]) {
-        assert.ok(test.rpc[0].response.includes(value), `Reviewed fallback carries ${value}`);
+        assert.ok(test.primaryRpc[0].response.includes(value), `Reviewed fallback carries ${value}`);
       }
-      for (const row of fallbackRows) assert.ok(test.rpc[0].response.includes(row.id), `Fallback includes the eligible reviewed neighborhood identity ${row.id}`);
+      for (const row of fallbackRows) assert.ok(test.primaryRpc[0].response.includes(row.id), `Fallback includes the eligible reviewed neighborhood identity ${row.id}`);
       await openOptionsContaining(test, [myer, werehouse]);
       await page.getByRole("heading", { name: "The Werehouse", exact: true }).waitFor();
       assert.equal(await rowHeading(page, myer).count(), 1);
