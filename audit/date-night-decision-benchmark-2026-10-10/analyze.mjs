@@ -8,8 +8,7 @@ const progress=JSON.parse(readFileSync(`${output}/progress.json`)),ledger=readFi
 const pct=(values,p)=>{const a=[...values].sort((x,y)=>x-y);return a.length?a[Math.min(a.length-1,Math.ceil(a.length*p)-1)]:null;};
 const cases=[];
 for(const row of progress.rows){
- const path=`${output}/${row.caseId}/browser-result.json`;let b;try{b=JSON.parse(readFileSync(path));}catch{const finalVisible=Array.isArray(b.finalState?.eligiblePool)?b.finalState.eligiblePool:null;const visibleEvidence=visibleAuditEvidence({primary,audit,snapshots:b.metrics.snapshots??[],finalVisible,rawPrimaryEligible:primaryEligible,merge:mergeDateNight});const genuineAdditional=visibleEvidence.finalAdditions;
- const visibleContributions=contributions.map(c=>({...c,rawAdditional:c.additional,additional:finalVisible?c.additional.filter(v=>finalVisible.some(p=>mergeDateNight([p],[v]).length===1)):null}));
+ const path=`${output}/${row.caseId}/browser-result.json`;let b;try{b=JSON.parse(readFileSync(path));}catch{
  cases.push({caseId:row.caseId,missingBrowserResult:true});continue;}
  const root=roots[row.strategy];process.chdir(root);const{appModuleLoader}=await import(pathToFileURL(`${root}/scripts/test-support/load-app-module.mjs`));const load=appModuleLoader();
  const{mergeDateNight}=load('src/lib/date-night/identity.ts'),{clipDateNightRadius}=load('src/lib/date-night/radial-cache.ts'),{decorateDateNight,eligibleDateNight}=load('src/lib/date-night/eligibility.ts');

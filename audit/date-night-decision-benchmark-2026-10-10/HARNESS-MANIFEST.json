@@ -1,5 +1,5 @@
 {
-  "status": "R2 FROZEN FOR INDEPENDENT PREFLIGHT REVIEW; NO LIVE TRAFFIC",
+  "status": "FROZEN FOR FINAL INDEPENDENT LIVE-ENTRY REVIEW; NO LIVE TRAFFIC YET",
   "files": {
     "server-preload.mjs": {
       "bytes": 5343,
@@ -58,8 +58,8 @@
       "sha256": "de66221f5f74163804eec883840db9db12a9c49c80e20c4ad7c15aff20a73e99"
     },
     "offline-tests.log": {
-      "bytes": 4265,
-      "sha256": "6123d978153a441a2bf09699b3185e524889feb7e29a2675dbe864e9d57841b0"
+      "bytes": 4377,
+      "sha256": "a091fc6d0c1f5165db64ad039d56e3c0beda59305ba8d77b40ea385b84a72ed4"
     },
     "browser-runner.test.mjs": {
       "bytes": 7322,
@@ -82,8 +82,20 @@
       "sha256": "a45da4b0787f672a2df31687b000f5452f099573ba5c3b8365076e4c15f60583"
     },
     "analyze.mjs": {
-      "bytes": 6838,
-      "sha256": "0b349387f839228e1d2c6e02ab535e2c722fa0b3b2a3f9f094d156dbc1f614bb"
+      "bytes": 6331,
+      "sha256": "17b46579a4ee84a1ab5521aea9627067109444fad62a2e7c281bdf73468dc185"
+    },
+    "analysis-missing-result.test.mjs": {
+      "bytes": 1202,
+      "sha256": "ed40914841e4720d6dbf136e1b8d10375f377ab652e782c9a11be1b218e5bcff"
+    },
+    "R2-PREFLIGHT-REVIEW.md": {
+      "bytes": 3313,
+      "sha256": "58f85b446a38d41ac6aecb99dfb72cd3300cc980ad40a16d4c0beb95b1fa45d8"
+    },
+    "INDEPENDENT-R2-REVIEW.md": {
+      "bytes": 4515,
+      "sha256": "88d2e7008044aba6fd5d11fa6ad5947b2f4683016fe3926ed7e1d8677916902b"
     }
   }
 }

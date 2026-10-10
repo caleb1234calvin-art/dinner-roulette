@@ -1,0 +1,17 @@
+{
+  "protocol": "PASS",
+  "baseline": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "candidate": "c78b97175cc094436e454fa888e1ed83486f750d",
+  "maxAttempts": 1280,
+  "maxWallMs": 2700000,
+  "harnessManifestSha": "a0acb0e4562f9e958c5a013a33abc6c16d59ff1e270d9c582959830aebe3eda5",
+  "expectedWorkflowRunNumber": 3,
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "workflowRef": "caleb1234calvin-art/dinner-roulette/.github/workflows/pr61-decision-benchmark.yml@refs/heads/integration/pr61-performance-decision-benchmark-2026-10-10",
+  "reviewedPreflightRunId": 38033469837,
+  "reviewedPreflightArtifactId": 11662288352,
+  "reviewedPreflightArtifactSha256": "cb4959648abb831131cce995a307ecba82a64826fcabcaaf8240ab8e1807a555",
+  "independentReviewSha256": "88d2e7008044aba6fd5d11fa6ad5947b2f4683016fe3926ed7e1d8677916902b",
+  "allowedRunAttempt": 1,
+  "experiment": "single final bounded PR61 decision benchmark; no reset, increase or replacement execution"
+}
