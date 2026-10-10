@@ -1,3 +1,56 @@
+# Adaptive Hosted R1 Verified with Live HOLD; Corrected R2 Fixture Running (2026-10-10 08:47 UTC)
+
+## CURRENT
+
+Benchmark-only R2 is published on `integration/pr61-adaptive-benchmark-2026-10-10`: **51a3af4b04b7d0abc0c3b598b37b4e9a34b7037d**, tree **458beae33876699ea3a0a40af63b80df4dd72c14**, parent **4b4b0e7c6ff0d954051edcfa7a17f3e134ddb9f6**. Seventeen changed paths and all 39 inventory bindings were verified by the publisher. [Run 38039008237](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38039008237), number 2 / attempt 1, is **in progress** at the fresh 08:46 read. No LIVE marker exists.
+
+Runtime D remains **d6d6f91b16aecd27773168c68d3c8ebdc33001c7**, tree **17f36a46f1d6894b6adf44edf7aefefc2b457cbb**. “Radial discovery becomes an audit layer.” Phase 1 scoped source PASS remains intact. R2 changes derived measurement and prospective reserve qualification, tests and reporting; the R1 browser runner, transport, ledger, application, source identities and workflow bytes remain unchanged. No performance optimization or provider traffic occurred.
+
+## Hosted R1: verified fixture scope, three live-entry corrections
+
+Run **38037557688** succeeded at exact 4b4b. Artifact **11665120105**, **2,347,368 bytes**, SHA **542a6d1e7d8684d0fee35e3a86e5bf88cfd918aa44eb09d7248db5160a538619**, has 198 members with independent hash/CRC verification. Independent review verified 221 ledger rows, **78 mock starts /78 outcomes /zero pending**, all 78 mock provider and 64 RPC bodies. **Zero public requests.**
+
+Seven cases reached recorded terminal states. Healthy fixture deferral was 2.017–2.054 seconds, each healthy settlement spacing at least 2.008 seconds, with four zero-yield patches and truthful incomplete coverage. Thin began in 9.7ms and completed five patches; failed-primary recovery began in 13.4ms without healthy early stopping. These are fixture mechanics, not provider performance.
+
+Actual pixels verified genuine distinct Escape Room/Movies Plan roles, early two curated Options followed by a separate four-provider-card click, and ordered identity/cardinality stability through later settlements for Pick, Plan and Options. Driver and observer timings met fixture gates.
+
+The independent R1 review kept **LIVE ENTRY HOLD** for three benchmark issues:
+1. A curated-only Route66 Pick was incorrectly labeled audit recovery at about 615ms. It was not provider recovery.
+2. The exact inherited failed-primary 20-to-15 warm predispatch guard needed explicit classification, preserving HOLD rather than imputing a warm PASS.
+3. Reserve admission needed the complete main adoption rubric, not only controls and a singleton mechanism gap.
+
+Original raw R1 outputs are immutable and retain the original mistaken derived recovery metric.
+
+## R2 independently reviewed corrections; hosted acceptance still pending
+
+[Independent R2 fixture-entry review](audit/hybrid-loading-2026-10-10/Adaptive-FIXTURE-R2-ENTRY-PASS.md), SHA **22898f824e354786a473bb2cd9953763fbebc780f8b1989345b8a91e7357949b**, verifies **77/77 offline tests**, all 36 manifest members and all 39 publication inventory entries. Manifest **8660d414800e4e450abc9a2652ad9bfc04838ec0915e6e6cd4a0705a1752478c**; publication inventory **343b7db9b67fe7c0321fc22de5aa786eb3796bc3960d82349df0ca277fc522d4**; fixture trigger **395f4f7ab70693684e39c34498273dbf08d2ee6e126d00fb3a5d5a3ebbe34c90**.
+
+A qualifying recovered control must include a provider-affirmed eligible OSM identity from a successfully dispatched audit. Independent reanalysis excludes the old curated Pick metric and identifies actual provider-backed Options at **2382.697ms after failure**. This remains synthetic mechanism evidence, not natural live recovery. Comparing a later recovered control with baseline's first Pick is a conservative usability bound, not like-for-like later-control speed.
+
+The inherited warm exception is restricted to Movies 20-mile failed primary, quiet same-radius20, one next15 broad request blocked before dispatch, actual prior audit recovery, and retained HOLD. Physical attempts remain zero for the blocked warm request. Every new refetch path remains disqualifying; no timing is invented.
+
+Reserve now requires complete fail-closed main qualification: historical cost/parity evidence, valid controls, paired timing/nondegradation and material benefit, physical/known-body cost, canonical parity, source/negative safety, stability and warm thresholds or the narrow inherited limitation. Missing, adverse or unassessed evidence cannot justify extra cases. A newly adverse reserve outcome stops further reserve use. Budget, source policy, case order and global stop rules are unchanged.
+
+## Recoverable reports and offline package
+
+[Full R1 independent review](audit/hybrid-loading-2026-10-10/Adaptive-HOSTED-FIXTURE-R1-REVIEW.md), SHA **3164c46d3b582f267e16f808d84a4289781839a408cc93ab78de297324482842**, and the R2 review above were read fully and preserved unchanged.
+
+[Offline replay qualification](audit/hybrid-loading-2026-10-10/Adaptive-REPLAY-QUALIFICATION.json), SHA **e3511be6556cfdbe13813de9178ce6f467a8216ba3e99280939ec6822163fcde**, explicitly qualifies retained-payload counterfactual intent savings only. Live performance, natural recovery and browser-control qualification are false. Both synthetic fifth-patch positive omission and unseen closure risks remain explicit.
+
+Frozen local package `adaptive-benchmark/replay/Pick-For-Us-Adaptive-Offline-Replay-d6d6f91.zip`: **160,132 bytes**, SHA **401e8bb1c9b65cf692149063ef6d842ef5aef3069bd3dae94a69423f0f9e1f49**. It contains the 14 original frozen inventory members plus the inventory, all member sizes/hashes and ZIP CRC verified. Library upload is pending; no durable new archive ID is invented. Full replay reports/inventory are already preserved in preceding canonical entries, and original raw hosted inputs remain recoverable through artifact11662969953/Librarylibfile_2a04f74a71fc81919e593f4af9bb54c7.
+
+## NEXT / HOLD / unchanged baseline
+
+NEXT: independently inspect the exact R2 hosted receipt and derived gates. **LIVE HOLD** until that PASS and a unique separately authorized live execution bound to final manifest/source. **Performance/adoption remains MORE EVIDENCE REQUIRED**; no full Phase 3 or release acceptance. Global limits remain 384 physical starts /96 cumulative failures-timeouts /30 minutes, main at most 288 and one conditional reserve at most 96, with no resets or replacement of incomplete main cases.
+
+Fresh 08:46 main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**; PR61 **c78b97175cc094436e454fa888e1ed83486f750d** draft/open/unmerged; production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/source fe22** unchanged. No new route/smoke acceptance is claimed. No merge, deploy, settings or waiver authority.
+
+Retain prior functional PASS at c78, all failed/incomplete experiments, warm-refetch limitation, physical Android HOLD and other backlog. Missouri/Cadaver remain parked during Phases 1–2; Cadaver's remaining blocker is reliable attraction-specific **2026 operation/date binding and supported expiry**. Owner-authorized later phase branching remains unchanged: only ADOPT leads to Phase 3 then owner release STOP; KEEP RADIAL or provider-limited MORE parks architecture and proceeds to authorized Phase 4.
+
+**PARENT CONTINUITY COMMIT:** `bf3b759922baf917778c07928f6842f603eb751c`; **PARENT TREE:** `521bbfcac1cd26706e0314f9b5198953681820a7`. Documentation-only deployment-disabled checkpoint; all history follows.
+
+---
+
 # Adaptive Offline Replay Verified; Hosted Zero-Public Fixture Running (2026-10-10 08:22 UTC)
 
 ## CURRENT

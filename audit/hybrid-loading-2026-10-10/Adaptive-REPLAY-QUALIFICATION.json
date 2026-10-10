@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "candidate": "d6d6f91b16aecd27773168c68d3c8ebdc33001c7",
+  "candidateTree": "17f36a46f1d6894b6adf44edf7aefefc2b457cbb",
+  "historical": "c78b97175cc094436e454fa888e1ed83486f750d",
+  "historicalTree": "6f7130dc46e5decc9b045c2841b63c73406ae2ae",
+  "independentReview": "PASS",
+  "scope": "retained-payload-counterfactual-only",
+  "requiredCostThresholdsPassed": true,
+  "sampledEligibleParity": true,
+  "boundaryTradeoffsDisclosed": true,
+  "networkAttempts": 0,
+  "livePerformanceQualification": false,
+  "naturalRecoveryQualification": false,
+  "browserControlQualification": false,
+  "protocolClock": {
+    "policyEpoch": "2026-10-10T12:00:00.000Z",
+    "advancingVirtualClock": true,
+    "syntheticResponseSettlementMs": 1,
+    "timestampsAreLatencyEvidence": false
+  },
+  "settings": {
+    "activityTypes": [
+      "movies"
+    ],
+    "halloweenActive": true,
+    "mood": 50,
+    "openNowOnly": false,
+    "favoritesOnly": false,
+    "reduceParks": false,
+    "preferences": {},
+    "exclusions": [],
+    "actualApplicationEligibilityCallback": true
+  },
+  "thresholds": {
+    "each50MileAuditIntentReductionAtLeast": 0.5,
+    "each50MileTotalAcquisitionIntentReductionAtLeast": 0.25,
+    "each20MileAuditAndTotalIntentsMustNotIncrease": true,
+    "requireCommonInputEligibleIdentityParity": true
+  },
+  "cases": [
+    {
+      "caseId": "1-Columbia-20-B",
+      "location": "Columbia",
+      "radiusMiles": 20,
+      "auditPatchIntents": {
+        "historical": 5,
+        "candidate": 5,
+        "reductionFraction": 0
+      },
+      "totalGroupAcquisitionIntents": {
+        "historical": 6,
+        "candidate": 6,
+        "reductionFraction": 0
+      },
+      "requiredCostThresholdPassed": true,
+      "sampledEligibleParity": true,
+      "historicalEligibleIds": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ],
+      "candidateEligibleIds": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ],
+      "observedNegativeIds": [],
+      "candidateNegativeEligibleIntersection": []
+    },
+    {
+      "caseId": "2-Columbia-20-B",
+      "location": "Columbia",
+      "radiusMiles": 20,
+      "auditPatchIntents": {
+        "historical": 5,
+        "candidate": 5,
+        "reductionFraction": 0
+      },
+      "totalGroupAcquisitionIntents": {
+        "historical": 6,
+        "candidate": 6,
+        "reductionFraction": 0
+      },
+      "requiredCostThresholdPassed": true,
+      "sampledEligibleParity": true,
+      "historicalEligibleIds": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ],
+      "candidateEligibleIds": [
+        "date-night-osm-node-3509935172",
+        "date-night-osm-way-137621484",
+        "date-night-osm-way-367307533"
+      ],
+      "observedNegativeIds": [],
+      "candidateNegativeEligibleIntersection": []
+    },
+    {
+      "caseId": "4-Joplin-50-B",
+      "location": "Joplin",
+      "radiusMiles": 50,
+      "auditPatchIntents": {
+        "historical": 32,
+        "candidate": 4,
+        "reductionFraction": 0.875
+      },
+      "totalGroupAcquisitionIntents": {
+        "historical": 33,
+        "candidate": 5,
+        "reductionFraction": 0.8484848484848485
+      },
+      "requiredCostThresholdPassed": true,
+      "sampledEligibleParity": true,
+      "historicalEligibleIds": [
+        "date-night-66-drive-in-carthage",
+        "date-night-osm-node-1683799370",
+        "date-night-osm-node-4630682425",
+        "date-night-osm-way-1194150113",
+        "date-night-osm-way-1448476586",
+        "date-night-osm-way-377006897",
+        "date-night-osm-way-587793713",
+        "date-night-osm-way-668350742",
+        "date-night-osm-way-737711002",
+        "date-night-osm-way-737938268",
+        "date-night-osm-way-742909146",
+        "date-night-osm-way-761495850",
+        "date-night-osm-way-783199698",
+        "date-night-route-66-theater-webb-city"
+      ],
+      "candidateEligibleIds": [
+        "date-night-66-drive-in-carthage",
+        "date-night-osm-node-1683799370",
+        "date-night-osm-node-4630682425",
+        "date-night-osm-way-1194150113",
+        "date-night-osm-way-1448476586",
+        "date-night-osm-way-377006897",
+        "date-night-osm-way-587793713",
+        "date-night-osm-way-668350742",
+        "date-night-osm-way-737711002",
+        "date-night-osm-way-737938268",
+        "date-night-osm-way-742909146",
+        "date-night-osm-way-761495850",
+        "date-night-osm-way-783199698",
+        "date-night-route-66-theater-webb-city"
+      ],
+      "observedNegativeIds": [
+        "date-night-osm-way-440220284"
+      ],
+      "candidateNegativeEligibleIntersection": []
+    },
+    {
+      "caseId": "7-Joplin-50-B",
+      "location": "Joplin",
+      "radiusMiles": 50,
+      "auditPatchIntents": {
+        "historical": 32,
+        "candidate": 4,
+        "reductionFraction": 0.875
+      },
+      "totalGroupAcquisitionIntents": {
+        "historical": 33,
+        "candidate": 5,
+        "reductionFraction": 0.8484848484848485
+      },
+      "requiredCostThresholdPassed": true,
+      "sampledEligibleParity": true,
+      "historicalEligibleIds": [
+        "date-night-66-drive-in-carthage",
+        "date-night-osm-node-1683799370",
+        "date-night-osm-node-4630682425",
+        "date-night-osm-way-1194150113",
+        "date-night-osm-way-1448476586",
+        "date-night-osm-way-377006897",
+        "date-night-osm-way-587793713",
+        "date-night-osm-way-668350742",
+        "date-night-osm-way-737711002",
+        "date-night-osm-way-737938268",
+        "date-night-osm-way-742909146",
+        "date-night-osm-way-761495850",
+        "date-night-osm-way-783199698",
+        "date-night-route-66-theater-webb-city"
+      ],
+      "candidateEligibleIds": [
+        "date-night-66-drive-in-carthage",
+        "date-night-osm-node-1683799370",
+        "date-night-osm-node-4630682425",
+        "date-night-osm-way-1194150113",
+        "date-night-osm-way-1448476586",
+        "date-night-osm-way-377006897",
+        "date-night-osm-way-587793713",
+        "date-night-osm-way-668350742",
+        "date-night-osm-way-737711002",
+        "date-night-osm-way-737938268",
+        "date-night-osm-way-742909146",
+        "date-night-osm-way-761495850",
+        "date-night-osm-way-783199698",
+        "date-night-route-66-theater-webb-city"
+      ],
+      "observedNegativeIds": [
+        "date-night-osm-way-440220284"
+      ],
+      "candidateNegativeEligibleIntersection": []
+    }
+  ],
+  "boundaryCounterexamples": [
+    {
+      "scenario": "eligible-only-fifth-patch",
+      "parity": false,
+      "verdict": "EXPECTED NON-PARITY; disclosed early-stop tradeoff, not a parity pass",
+      "historicalAuditIntents": 32,
+      "candidateAuditIntents": 4,
+      "omittedPatch": "radial-v1:20:3",
+      "bandMiles": [
+        15,
+        20
+      ],
+      "lostIds": [
+        "boundary-late-eligible"
+      ],
+      "additionalCandidateIds": [],
+      "candidateCoverageComplete": false,
+      "observedNegativeResurrected": false,
+      "interpretation": "Adaptive loses a genuinely eligible identity found by the exhaustive H audit. Zero yield does not prove recall."
+    },
+    {
+      "scenario": "closure-only-fifth-patch",
+      "parity": false,
+      "verdict": "EXPECTED NON-PARITY; disclosed early-stop tradeoff, not a parity pass",
+      "historicalAuditIntents": 32,
+      "candidateAuditIntents": 4,
+      "omittedPatch": "radial-v1:20:3",
+      "bandMiles": [
+        15,
+        20
+      ],
+      "lostIds": [],
+      "additionalCandidateIds": [
+        "boundary-initial-0"
+      ],
+      "candidateCoverageComplete": false,
+      "observedNegativeResurrected": false,
+      "interpretation": "Adaptive retains an earlier positive because the only closure evidence is in an unqueried patch. This is undiscovered stale-positive risk, not loss or resurrection of a previously observed negative."
+    }
+  ],
+  "supportingArtifacts": [
+    {
+      "path": "adaptive-benchmark/replay/FINAL-REPLAY-REPORT.md",
+      "bytes": 6285,
+      "sha256": "1f9e8cfb2a5522d534e23e89cc10c42d8f08ca395a55baf8334da02c9e3a3fc9"
+    },
+    {
+      "path": "adaptive-benchmark/replay/FINAL-REPLAY-INVENTORY.json",
+      "bytes": 2305,
+      "sha256": "86872ef22287c56a7a4392d7cb95b0904b657b91652434441ec9ebe0454717d4"
+    },
+    {
+      "path": "adaptive-benchmark/replay/d6d6f91-retained/RESULTS.json",
+      "bytes": 4079730,
+      "sha256": "911afefd06672716c896fd16f4e6ffbb4663bb00154c138fcd072f8a5fa26d6a"
+    },
+    {
+      "path": "adaptive-benchmark/replay/d6d6f91-retained/INPUT-MANIFEST.json",
+      "bytes": 13799,
+      "sha256": "1b145b09e96ea387c7affa6bebcbddd1b43fdb744f22b01c7acbff38263ad706"
+    },
+    {
+      "path": "adaptive-benchmark/replay/d6d6f91-retained/SOURCE-MANIFEST.json",
+      "bytes": 77154,
+      "sha256": "3795472faef83d1387639e1dd9954fbd66dbf6bddf3aaa867f3692ae00081940"
+    },
+    {
+      "path": "adaptive-benchmark/replay/d6d6f91-retained/ARCHIVE-VERIFICATION.json",
+      "bytes": 185,
+      "sha256": "6d8c864ed8df07ad8a4c1e8620958a623cb52acf80879c181dee3d642998284c"
+    },
+    {
+      "path": "adaptive-benchmark/replay/d6d6f91-boundaries/BOUNDARY-RESULTS.json",
+      "bytes": 180653,
+      "sha256": "75b91de6e397e9326ead60d88d53218e5342befa7ff9069cbf16f4ec4860a204"
+    },
+    {
+      "path": "adaptive-benchmark/replay/d6d6f91-boundaries/SOURCE-MANIFEST.json",
+      "bytes": 76972,
+      "sha256": "52a6f7ea20a8377fa83334a10df5ae74719b4764150a620d8a8c2a13baa5adf7"
+    },
+    {
+      "path": "adaptive-benchmark/independent-review/OFFLINE-REPLAY-REVIEW.md",
+      "bytes": 2878,
+      "sha256": "8f605c50314d87b881a95e683b99f88df23c46dbf9cf010ace19ec85d560336e"
+    }
+  ],
+  "independentReviewBinding": {
+    "path": "adaptive-benchmark/independent-review/OFFLINE-REPLAY-REVIEW.md",
+    "bytes": 2878,
+    "sha256": "8f605c50314d87b881a95e683b99f88df23c46dbf9cf010ace19ec85d560336e"
+  },
+  "limits": [
+    "Qualification establishes only historical common-payload controller intent reduction and sampled identity parity.",
+    "Counterfactual avoided historical physical starts are not contemporary measured savings.",
+    "Synthetic fifth-patch eligible omission and unqueried closure counterexamples demonstrate no universal recall or lifecycle-freshness guarantee.",
+    "No live speed, physical cost, provider reliability, natural recovery, actual Options/Plan, warm or adoption gate is passed by this JSON."
+  ]
+}
