@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 2,
+  "frozenAt": "2026-10-10T19:52:02.234432+00:00",
+  "title": "Phase 4 harness-only role-label casing correction; runtime release remains HOLD",
+  "candidateParent": "dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f",
+  "parentTree": "3ce7bd595e4061a6405b008fb0daec82c5b2823a",
+  "mainBase": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "acceptedSubsetSha256": "827eb67919c99dec61991cbc01cba63097ccd5dd1868de355b5f79b07d348882",
+  "scope": {
+    "onlyExecutableChange": "scripts/seasonal-ten-record-browser.mjs:838 adds case-insensitive flags to the exact numbered Scare and Settle role assertions. Runtime data, components, CSS, workflow, expected counts and all downstream Details/control assertions are unchanged.",
+    "before": "? /2 \u00b7 Settle/ : /1 \u00b7 Scare/",
+    "after": "? /2 \u00b7 Settle/i : /1 \u00b7 Scare/i",
+    "independentPrepublicationReview": "PASS for this one-line correction scope at 2026-10-10T19:50Z; this is not a runtime or release approval."
+  },
+  "preservedFailedRun": {
+    "runId": 38076168774,
+    "jobId": 114283444997,
+    "runUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38076168774",
+    "head": "dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f",
+    "conclusion": "FAILURE before timeout",
+    "phase4": {
+      "scenarios": 164,
+      "passed": 157,
+      "failed": 7,
+      "failures": [
+        {
+          "id": "date-night-mo26-phase4-wolfmans-house-of-screams",
+          "scenario": "qualified-night-plan",
+          "passed": false
+        },
+        {
+          "id": "date-night-werehouse-joplin",
+          "scenario": "qualified-night-plan",
+          "passed": false
+        },
+        {
+          "id": "date-night-mo26-phase4-fearstone-forest",
+          "scenario": "qualified-night-plan",
+          "passed": false
+        },
+        {
+          "id": "date-night-mo26-phase4-fun-time-farms",
+          "scenario": "qualified-night-plan",
+          "passed": false
+        },
+        {
+          "id": "date-night-mo26-phase4-carolyns-pumpkin-patch",
+          "scenario": "qualified-night-plan",
+          "passed": false
+        },
+        {
+          "id": "date-night-mo26-phase4-terror-on-route-66",
+          "scenario": "qualified-night-plan",
+          "passed": false
+        },
+        {
+          "id": "date-night-mo26-phase4-field-of-screams-branson",
+          "scenario": "qualified-night-plan",
+          "passed": false
+        }
+      ],
+      "reason": "The unchanged plan component transforms role labels to uppercase, so browser innerText is 1 \u00b7 SCARE / 2 \u00b7 SETTLE. Seven case-sensitive titlecase assertions failed. Later plan facts/controls did not execute and are not claimed PASS."
+    },
+    "geometry": "SKIPPED, not PASS",
+    "previousBrowserSuites": "All preceding suites passed",
+    "artifactId": 11679797744,
+    "artifactBytes": 509164182,
+    "artifactSha256": "868da5d487c5f4d80133f4785d48833c3e16b1faa6f55ac4f81fda6bdbd0b060",
+    "archiveIntegrity": "Independently reconstructed; all 4085 members CRC/path checked; original bytes retained. No split workflow or UI regeneration.",
+    "rawPhase4VerdictSha256": "e5eaac2aa0a6a8e397acd5f7569d0553474994292b52ceb0de2f9499e3a673e8",
+    "rawMemberIntegrityManifestSha256": "d70a18c9a123492a3eb0ddaca5b3c7ace52883b74837748c20c00e57ba227166",
+    "archiveTransferReceiptSha256": "d12bc5ea8e10edf1186ee1d748eafebeeda8cfb0012b239cff94cf7e35a2413d"
+  },
+  "freshLocalValidation": {
+    "repository": {
+      "tests": 995,
+      "passed": 991,
+      "failed": 0,
+      "skipped": 4
+    },
+    "application": {
+      "tests": 71,
+      "passed": 71,
+      "failed": 0,
+      "skipped": 0
+    },
+    "combinedPassed": 1062,
+    "focused": {
+      "tests": 68,
+      "passed": 68,
+      "failed": 0
+    },
+    "typecheck": "PASS",
+    "lint": {
+      "errors": 0,
+      "inheritedWarnings": 6
+    },
+    "safeAuthEnabledMigrationFreeBuild": "PASS",
+    "androidStructureAndIcons": "PASS",
+    "nativePython": {
+      "tests": 3,
+      "passed": 3
+    },
+    "nativePythonInitialInvocation": "Wrong discovery directory scripts found 0 tests and exited 5; not counted as PASS. Correct native-android invocation ran and passed all 3 tests.",
+    "roleAssertionSemanticCheck": "Both titlecase and uppercase accepted; wrong ordinals and roles rejected.",
+    "browserAndGeometry": "NOT RUN locally due previously proven Chromium Unix socket restriction; new exact-head hosted rerun required."
+  },
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "cfd01395c9b9cefbe9447d3795bc3175d7bff76dfbd2a63929b1aeaa8399e020",
+      "files": 472
+    },
+    "startedAt": "2026-10-10T19:50:02.233Z",
+    "output": {
+      "sha256": "e085f94d08e3694cedd174e8a476355cf65db6aacc73dfe9a60380bd78662ba7",
+      "files": 194
+    },
+    "completedAt": "2026-10-10T19:50:06.207Z"
+  },
+  "buildProofQualification": "The prior local proof included one ignored generated scripts/__pycache__/verify-android-bundle.cpython-312.pyc. That bytecode was preserved outside the source tree; PYTHONDONTWRITEBYTECODE=1 used for tests. This proof binds 472 actual checkout inputs, matching clean hosted input scope.",
+  "logArchive": {
+    "file": "Validation-Correction-Logs-R2.zip",
+    "bytes": 48189,
+    "sha256": "ba8b202ec9d9a4a170a25b996367acba04a35a1b5dc40579cbc99c2b14bafeb0",
+    "members": [
+      {
+        "file": "build.log",
+        "bytes": 11476,
+        "sha256": "323a7df94e12d8d945192e26a159eaaa2b3fb5d3fcabd4ebbe1845958702f09e"
+      },
+      {
+        "file": "checks.log",
+        "bytes": 2666,
+        "sha256": "19677b096ae004afa6ffe1698e4a10b6f19c6104754970c450d48693f9b15f3d"
+      },
+      {
+        "file": "native-python-tests.log",
+        "bytes": 101,
+        "sha256": "921b60a7fd52e978fbb551cacd29df2d6708879400278e1fcc70fceeb0c6f8e0"
+      },
+      {
+        "file": "full-tests.log",
+        "bytes": 437205,
+        "sha256": "f8a46145be18855d55011d263cfda627381b1033199369154ec49feb66b32185"
+      },
+      {
+        "file": "focused-tests.log",
+        "bytes": 78056,
+        "sha256": "f997db4dee96f7ec1cd2ec560bb48a3a0b0f78904a0bbad663a84dc12e1d936c"
+      },
+      {
+        "file": "role-assertion-check.log",
+        "bytes": 127,
+        "sha256": "a82c81a7ec6780672a55cefc9ad39a5851ed3ad470230b2034d9a469bec259ee"
+      },
+      {
+        "file": "case-normalization.patch",
+        "bytes": 996,
+        "sha256": "d1a4ef1627ac7caf14468aef4e9dd33fc75ccbc60517198f7aaaa16d5a6a1aa5"
+      },
+      {
+        "file": "build-proof.json",
+        "bytes": 392,
+        "sha256": "eff7a51fed7ffe09ef3e050089b8ecdd5dcf0e1ef5acbf6a4ec808065d929aa8"
+      }
+    ],
+    "scope": "Only fresh local correction logs, exact one-line diff and build proof. Original failed hosted artifact remains at its unchanged GitHub artifact identity and is not re-encoded in this archive."
+  },
+  "nextGate": "Full normal CI on new exact head, including all seven plan downstream checks, seasonal browser and geometry. Independent exact-head review and owner release remain required. No merge, deployment, signing or Play upload."
+}

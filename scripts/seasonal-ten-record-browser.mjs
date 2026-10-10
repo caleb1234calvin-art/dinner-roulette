@@ -835,7 +835,7 @@ try {
         assert.equal(await overlay.locator("article").count(), 2, "Plan uses two distinct real eligible identities");
         assert.equal(await rowHeading(page, settle).count(), 1);
         const targetCard = rowCard(page, row);
-        assert.match(await targetCard.innerText(), row.activityTypes.includes("pumpkin-patch") ? /2 · Settle/ : /1 · Scare/);
+        assert.match(await targetCard.innerText(), row.activityTypes.includes("pumpkin-patch") ? /2 · Settle/i : /1 · Scare/i);
         await inspectQualifiedOverlay(test, row, "plan");
         await overlay.getByRole("button", { name: "Close night plan", exact: true }).click();
         await assertNoRpc(test, before, "Qualified Scare/Settle plan uses the acquired local superset");
