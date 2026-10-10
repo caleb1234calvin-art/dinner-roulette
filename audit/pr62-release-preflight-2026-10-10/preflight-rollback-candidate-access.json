@@ -1,0 +1,22 @@
+{
+  "observedAt": "2026-10-10T22:23:04.542Z",
+  "operation": "GET /v7/deployments",
+  "inputs": {
+    "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+    "teamId": "team_iBSXkvS9Z7tu8o8AtW0vlDt7",
+    "rollbackCandidate": true,
+    "limit": 20,
+    "target": "production"
+  },
+  "status": 403,
+  "code": "forbidden",
+  "resource": "deploymentRollback",
+  "requestId": "cle1:sfo1::tm6w9-1791670984542-5c77d0b913df",
+  "message": "You don't have permission to list the resource.",
+  "fallback": {
+    "mapped": "vercel api /v7/deployments --method GET with identical query filters and explicit team",
+    "available": false,
+    "check": "command -v vercel returned no executable"
+  },
+  "conclusion": "Retained deployment READY identity is separately verified. This response does not establish current Instant Rollback or Promote eligibility. No restore action performed."
+}

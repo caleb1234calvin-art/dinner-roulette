@@ -1,0 +1,37 @@
+[
+  {
+    "url": "https://pickforus.app/",
+    "exit": 0,
+    "stdout": "HTTP/1.1 200 OK\ndate: Sat, 10 Oct 2026 22:22:43 GMT\n\nHTTP/2 200 \nage: 0\ncache-control: public, max-age=0, must-revalidate\ncontent-type: text/html; charset=utf-8\ndate: Sat, 10 Oct 2026 22:22:44 GMT\nserver: Vercel\nstrict-transport-security: max-age=63072000\nx-vercel-cache: MISS\nx-vercel-id: sfo1::iad1::8b6p5-1791670963441-99b568eeb7d8\n\n\nFINAL_HTTP=200 FINAL_URL=https://pickforus.app/\n",
+    "stderr": "",
+    "at": "2026-10-10T22:22:44.550635+00:00"
+  },
+  {
+    "url": "https://www.pickforus.app/",
+    "exit": 0,
+    "stdout": "HTTP/1.1 200 OK\ndate: Sat, 10 Oct 2026 22:22:45 GMT\n\nHTTP/2 308 \ncache-control: public, max-age=0, must-revalidate\ncontent-type: text/plain\ndate: Sat, 10 Oct 2026 22:22:45 GMT\nlocation: https://pickforus.app/\nrefresh: 0;url=https://pickforus.app/\nserver: Vercel\nstrict-transport-security: max-age=63072000\nx-vercel-id: sfo1::zn2z9-1791670965536-03e89d34e552\n\nHTTP/1.1 200 OK\ndate: Sat, 10 Oct 2026 22:22:48 GMT\n\nHTTP/2 200 \nage: 0\ncache-control: public, max-age=0, must-revalidate\ncontent-type: text/html; charset=utf-8\ndate: Sat, 10 Oct 2026 22:22:48 GMT\nserver: Vercel\nstrict-transport-security: max-age=63072000\nx-vercel-cache: MISS\nx-vercel-id: sfo1::iad1::kp77k-1791670968550-cb5e7a027d4e\n\n\nFINAL_HTTP=200 FINAL_URL=https://pickforus.app/\n",
+    "stderr": "",
+    "at": "2026-10-10T22:22:48.681369+00:00"
+  },
+  {
+    "url": "https://dinner-roulette-chi.vercel.app/",
+    "exit": 0,
+    "stdout": "HTTP/1.1 200 OK\ndate: Sat, 10 Oct 2026 22:22:42 GMT\n\nHTTP/2 200 \nage: 0\ncache-control: public, max-age=0, must-revalidate\ncontent-type: text/html; charset=utf-8\ndate: Sat, 10 Oct 2026 22:22:44 GMT\nserver: Vercel\nstrict-transport-security: max-age=63072000; includeSubDomains; preload\nx-vercel-cache: MISS\nx-vercel-id: sfo1::iad1::d8627-1791670963367-cf6ae1d909b2\n\n\nFINAL_HTTP=200 FINAL_URL=https://dinner-roulette-chi.vercel.app/\n",
+    "stderr": "",
+    "at": "2026-10-10T22:22:44.511717+00:00"
+  },
+  {
+    "url": "https://dinner-roulette-minions-9e2c.vercel.app/",
+    "exit": 0,
+    "stdout": "HTTP/1.1 200 OK\ndate: Sat, 10 Oct 2026 22:22:43 GMT\n\nHTTP/2 200 \nage: 0\ncache-control: public, max-age=0, must-revalidate\ncontent-type: text/html; charset=utf-8\ndate: Sat, 10 Oct 2026 22:22:44 GMT\nserver: Vercel\nstrict-transport-security: max-age=63072000; includeSubDomains; preload\nx-robots-tag: noindex\nx-vercel-cache: MISS\nx-vercel-id: sfo1::iad1::bvxfj-1791670964516-d76060e3846e\n\n\nFINAL_HTTP=200 FINAL_URL=https://dinner-roulette-minions-9e2c.vercel.app/\n",
+    "stderr": "",
+    "at": "2026-10-10T22:22:44.670639+00:00"
+  },
+  {
+    "url": "https://dinner-roulette-git-main-minions-9e2c.vercel.app/",
+    "exit": 0,
+    "stdout": "HTTP/1.1 200 OK\ndate: Sat, 10 Oct 2026 22:22:44 GMT\n\nHTTP/2 200 \nage: 0\ncache-control: public, max-age=0, must-revalidate\ncontent-type: text/html; charset=utf-8\ndate: Sat, 10 Oct 2026 22:22:45 GMT\nserver: Vercel\nstrict-transport-security: max-age=63072000; includeSubDomains; preload\nx-robots-tag: noindex\nx-vercel-cache: MISS\nx-vercel-id: sfo1::iad1::vqffx-1791670965075-2184ff662712\n\n\nFINAL_HTTP=200 FINAL_URL=https://dinner-roulette-git-main-minions-9e2c.vercel.app/\n",
+    "stderr": "",
+    "at": "2026-10-10T22:22:45.230180+00:00"
+  }
+]

@@ -1,3 +1,51 @@
+# PR #62 Owner-Authorized Release Preflight — HOLD Before Publication (2026-10-10 23:15 UTC)
+
+## CURRENT — exact candidate unchanged; release access gate incomplete
+
+The owner authorized publication and production deployment of exact PR #62 **bf88443932739a9448fac8d27fd845e9947cf697**, tree **7d91061065f5e7e36e4f76307a7b915a66ea006d**, subject to fresh release preflight, followed by Cadaver re-clearance and one further nonproduction Missouri candidate. The owner also supplied a one-release-only unprotected-main waiver for that exact candidate. **No release mutation or use of the waiver has occurred. It is not standing authority for another release.**
+
+**Release preflight is HOLD, not a candidate-validation failure.** Current effective hosted build/Git configuration and supported restore eligibility could not be freshly established. The authenticated Vercel metadata responses omit the effective build command/production trigger. The rollback-candidate query returned **403 Forbidden**, resource **deploymentRollback**. A browser inspection initially timed out; recovery found the Vercel login page, with no signed-in project/settings/restore controls. No denied access was bypassed, rollback executed, settings changed, or deployment created.
+
+The full authoritative continuity at **cf976a56f46d97a6a43aa82ff8b18636704d81d1** was read across contiguous parallel review ranges. Later entries govern superseded history. This checkpoint preserves the entire prior body unchanged.
+
+## Fresh preflight findings
+
+- Remote main remains **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**.
+- PR #62 remains **open, draft, unmerged** on `integration/phase4-missouri-recovery-2026-10-10`, exact approved **bf88443932739a9448fac8d27fd845e9947cf697**, tree **7d91061065f5e7e36e4f76307a7b915a66ea006d**, sole parent **dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f**.
+- Fresh remote comparison and independent local Git agree: **35 paths, 5,064 additions/103 deletions**, ahead two commits/behind zero. Scope is 20 audit, seven harness/test, seven Date Night source, one workflow; no unrelated candidate paths.
+- Exact-head **Web 412 / 38081550608** and **Android 83 / 38081550610** remain SUCCESS. Check runs **114299322669 validate** and **114299323024 validate-android** remain successful; **114300076400 sign-upload-bundle** remains intentionally skipped. No new suite run is claimed.
+- Main reports **protected:false**, protection enforcement off, rulesets **[]**. The dedicated protection endpoint separately returns **403 Resource not accessible by integration**; that limitation is preserved, not treated as proof of hidden rules. No protection change was made.
+- Production remains **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY**, source **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, correct project **prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm**, team **team_iBSXkvS9Z7tu8o8AtW0vlDt7**. Fresh late-session main/deployment reads reconfirm unchanged identities.
+- All five alias objects bind current production. Direct observations at **22:22:42–48 UTC**: `pickforus.app`, `dinner-roulette-chi.vercel.app`, `dinner-roulette-minions-9e2c.vercel.app`, `dinner-roulette-git-main-minions-9e2c.vercel.app` return HTTP 200; `www.pickforus.app` returns 308 to apex, then 200. This is HTTP/routing health, not new interactive production acceptance.
+- Exact accepted seven-record input remains **34,632 bytes**, SHA-256 **827eb67919c99dec61991cbc01cba63097ccd5dd1868de355b5f79b07d348882**. At **23:08:34 UTC**, every accepted cutoff is still future: Fearstone October 31 05:00Z; Wolfman/Werehouse/Fun Time/Carolyn November 1 05:00Z; Terror November 2 06:00Z; Branson November 15 06:00Z. Fun Time's editorial cutoff and source-access qualification remain. No resolved research was reopened; this is source-bound lifecycle review, not new operator/weather/ticket verification.
+- Safe required build remains `VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`. Exact candidate package still makes ordinary `npm run build` chain `db:migrate`; do not use it. Successful prior CI/history does not prove the current effective hosted override.
+
+## ROLLBACK — retained builds verified; current restore route HOLD
+
+Fresh authenticated metadata confirms:
+- **dpl_F1XiMcc9AUuykunNamr87R3re7gP READY**, production-target Git source **979d83aede9d66163e1ebaed9ad5b219cb637882**.
+- **dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv READY**, production-target Git source **213502ef8cf3f67d75e6d9c9c8ff43f9f656890c**.
+
+READY retention is not current Instant Rollback or Promote eligibility. The historical existing-build Promote path and Hobby restrictions are historical only until authenticated controls are freshly inspected. Current restore access, exact target, and alias implications remain HOLD. No restoration test or production mutation occurred.
+
+## Evidence
+
+Scoped receipts are preserved in `audit/pr62-release-preflight-2026-10-10/`. The independent scope/lifecycle receipt has SHA-256 **36e2558e67e1318dac84589771be7c74f2cea70c4100eb9a7daf0970bbcd6154**. Original alias HTTP receipt SHA-256 **3cbfdcb90b7499617e00d9c91b8995ac483ee3c20579474698fb226c6cfa954c**; alias/rollback metadata **9da36d96cb23c1717af364c9348ecc2271d4d68884540e418b5d2059cbea115f**; rollback access receipt **eab526e46409b7bf92546a7d99150680c5c14fe546f5485c9ba552404aef4b06**. Original exact-head independent candidate evidence in the prior checkpoint remains authoritative.
+
+## NEXT / HOLD
+
+**STOP before publication.** Complete secure Vercel sign-in for the requested authenticated inspection, then freshly verify effective migration-free auth build/Git settings, supported restore operation and alias implications, and recheck immediate main/candidate/checks/production state before any release mutation. This is an access/preflight requirement, not a request to approve a different candidate or relax rollback safety.
+
+**Cadaver: NOT STARTED in this mission.** New owner-supplied official-Facebook poster evidence is retained as the next research priority; no independent source binding or factual clearance was newly claimed. Prior approximate placement remains accepted. The exact 13 dates, October 29 exception, $15 admission and derived November 1 05:00Z expiry require the authorized Phase 2 review only after PR #62 production acceptance PASS.
+
+**Missouri next batch/candidate: NOT STARTED; no new candidate SHA/tree or new PASS/HOLD/REJECT decisions.** Preserve the nine factual HOLD inventory and excluded residential policy. Rolla remains deferred with its immutable October 11 05:00Z cutoff. PR #61/adaptive radial work remains PARKED; “Radial discovery becomes an audit layer.” is future design intent only.
+
+This documentation/evidence-only checkpoint remains on `integration/continuity-refresh-2026-10-07`; freshly verified `vercel.json` blob **65925d91f882a10433e3eb43f53ed802914c969b** preserves `integration/**: false`. No runtime/test change, main publication, production import, operator contact, paid API, protection/Vercel change, Android signing or Play action.
+
+**PARENT CONTINUITY COMMIT:** `cf976a56f46d97a6a43aa82ff8b18636704d81d1`; **PARENT TREE:** `7f5960142479ce50f4de43a2338dea91ad43cb4f`. Entire prior file: **779,109 bytes**, SHA-256 **88201f174d5621a839307f06cd28f46f0768f3f639ed105dc8d033d95d0e50ba**, blob **369039e60bb4208ad96369cbc4fafd6f8ef812e1**.
+
+---
+
 # Phase 4 Corrected Candidate Independently Verified — Candidate PASS, Release HOLD (2026-10-10 22:13 UTC)
 
 ## CURRENT — authoritative final candidate gate

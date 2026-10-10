@@ -1,0 +1,131 @@
+{
+  "checkedAt": "2026-10-10T23:08:34.117182Z",
+  "scope": "READ-ONLY exact PR62 candidate scope and supported lifecycle preflight; no fresh public-source research, mutation, release or Cadaver work",
+  "verdict": "PASS at stated scope; full release gate remains separate",
+  "candidate": {
+    "sha": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "tree": "7d91061065f5e7e36e4f76307a7b915a66ea006d",
+    "parent": "dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f"
+  },
+  "base": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "comparison": {
+    "source": "Fresh GitHub compare_commits connector, independently matched local git diff path list",
+    "status": "ahead",
+    "aheadBy": 2,
+    "behindBy": 0,
+    "totalCommits": 2,
+    "paths": 35,
+    "additions": 5064,
+    "deletions": 103,
+    "groups": {
+      "audit/": 20,
+      "scripts/": 7,
+      "src/": 7,
+      ".github/": 1
+    },
+    "pathManifest": "preflight-pr62-comparison.json",
+    "unrelatedPaths": []
+  },
+  "acceptedInput": {
+    "bytes": 34632,
+    "sha256": "827eb67919c99dec61991cbc01cba63097ccd5dd1868de355b5f79b07d348882",
+    "candidateBinding": "Exact candidate blob matches canonical accepted input hash"
+  },
+  "records": [
+    {
+      "recordId": "MO26-006",
+      "name": "Wolfmans House Of Screams",
+      "canonicalId": "date-night-mo26-phase4-wolfmans-house-of-screams",
+      "exclusiveCutoffUtc": "2026-11-01T05:00:00Z",
+      "expiryBasis": "date-only",
+      "unexpiredAtOwnerSubmission": true,
+      "unexpiredAtReceipt": true,
+      "machineOpenNow": "never",
+      "machineOpeningHours": null,
+      "dateCount": 9
+    },
+    {
+      "recordId": "MO26-004",
+      "name": "The Werehouse",
+      "canonicalId": "date-night-werehouse-joplin",
+      "exclusiveCutoffUtc": "2026-11-01T05:00:00Z",
+      "expiryBasis": "date-only",
+      "unexpiredAtOwnerSubmission": true,
+      "unexpiredAtReceipt": true,
+      "machineOpenNow": "never",
+      "machineOpeningHours": null,
+      "dateCount": 12
+    },
+    {
+      "recordId": "DELTA3-FEARSTONE",
+      "name": "Fearstone Forest Haunted Trail",
+      "canonicalId": "date-night-mo26-phase4-fearstone-forest",
+      "exclusiveCutoffUtc": "2026-10-31T05:00:00Z",
+      "expiryBasis": "date-only",
+      "unexpiredAtOwnerSubmission": true,
+      "unexpiredAtReceipt": true,
+      "machineOpenNow": "never",
+      "machineOpeningHours": null,
+      "dateCount": 9
+    },
+    {
+      "recordId": "DELTA3-FUN-TIME",
+      "name": "Fun Time Farms Corn MAiZE",
+      "canonicalId": "date-night-mo26-phase4-fun-time-farms",
+      "exclusiveCutoffUtc": "2026-11-01T05:00:00Z",
+      "expiryBasis": "editorial",
+      "unexpiredAtOwnerSubmission": true,
+      "unexpiredAtReceipt": true,
+      "machineOpenNow": "never",
+      "machineOpeningHours": null,
+      "dateCount": null
+    },
+    {
+      "recordId": "MO26-055",
+      "name": "Carolyn’s Pumpkin Patch",
+      "canonicalId": "date-night-mo26-phase4-carolyns-pumpkin-patch",
+      "exclusiveCutoffUtc": "2026-11-01T05:00:00Z",
+      "expiryBasis": "date-only",
+      "unexpiredAtOwnerSubmission": true,
+      "unexpiredAtReceipt": true,
+      "machineOpenNow": "never",
+      "machineOpeningHours": null,
+      "dateCount": 31
+    },
+    {
+      "recordId": "DELTA2-TERROR66",
+      "name": "Terror on Route 66",
+      "canonicalId": "date-night-mo26-phase4-terror-on-route-66",
+      "exclusiveCutoffUtc": "2026-11-02T06:00:00Z",
+      "expiryBasis": "date-only",
+      "unexpiredAtOwnerSubmission": true,
+      "unexpiredAtReceipt": true,
+      "machineOpenNow": "never",
+      "machineOpeningHours": null,
+      "dateCount": null
+    },
+    {
+      "recordId": "DELTA6-BRANSON-FIELD",
+      "name": "Field of Screams Branson",
+      "canonicalId": "date-night-mo26-phase4-field-of-screams-branson",
+      "exclusiveCutoffUtc": "2026-11-15T06:00:00Z",
+      "expiryBasis": "date-only",
+      "unexpiredAtOwnerSubmission": true,
+      "unexpiredAtReceipt": true,
+      "machineOpenNow": "never",
+      "machineOpeningHours": null,
+      "dateCount": 17
+    }
+  ],
+  "counting": "Six net additions plus existing canonical Werehouse amendment; 59 distinct identities after candidate, prior 52 V1 plus one legacy anchor before candidate",
+  "sourceScopeReview": "Reviewed all runtime registration/availability/presentation deltas and workflow addition: seven-record catalog, Werehouse legacy replacement, current-policy registration, Branson-only lifecycle registration, seven presentations, retained validation plus Phase4 suite; no performance/loader/migration/Vercel/Android-signing/config additions",
+  "qualifications": [
+    "Lifecycle PASS confirms accepted source-bound retention remains future; not a new verification of operator availability, weather or tickets.",
+    "Fun Time retains editorial cutoff and unknown exact dates/hours; no operator season-end assertion.",
+    "Existing accepted Fun Time origin reopen limitation is retained.",
+    "Branson has exactly seventeen dates, with November 6/7/13/14 crossover only.",
+    "Earlier accepted source evidence was revalidated at 2026-10-10T18:14:09Z; no resolved research reopened.",
+    "No automatic 2027 recurrence or machine Open Now asserted.",
+    "Full release gate and fresh authenticated build/restore verification are owned separately by root."
+  ]
+}
