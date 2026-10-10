@@ -1,0 +1,64 @@
+{
+  "candidate": "d6d6f91b16aecd27773168c68d3c8ebdc33001c7",
+  "tree": "17f36a46f1d6894b6adf44edf7aefefc2b457cbb",
+  "historical": "c78b97175cc094436e454fa888e1ed83486f750d",
+  "networkRequests": 0,
+  "files": {
+    "replay-helpers.test.mjs": {
+      "bytes": 2427,
+      "sha256": "7a4b38e5437669213361dd3a31f51e9a5b1b440084d5ef29846341e1dbe7bf96"
+    },
+    "run-boundary-fixtures.mjs": {
+      "bytes": 7504,
+      "sha256": "9c24d0a8270ee40377faf4ab5518e0f26615330fd425c278e911c806a48559d7"
+    },
+    "replay-helpers.mjs": {
+      "bytes": 2813,
+      "sha256": "0c8239d5a7859dd28563785d6be4f27aeb9fdb087e168ad01be876e35f778b4e"
+    },
+    "run-retained-replay.mjs": {
+      "bytes": 10659,
+      "sha256": "25259214c568a309036ac9a6861a31bad30f720a7da28e27781ccb1e2ae2ff26"
+    },
+    "verify-input-archive.py": {
+      "bytes": 1022,
+      "sha256": "f55b1693656bf689f94c4335081b4e972244199927965a8d97d40da568c378b7"
+    },
+    "README.md": {
+      "bytes": 3838,
+      "sha256": "77ae89c8864ff1dff62e51e0356fd853263a87db3576eeca94d333a0cc5624b2"
+    },
+    "FINAL-REPLAY-REPORT.md": {
+      "bytes": 6285,
+      "sha256": "1f9e8cfb2a5522d534e23e89cc10c42d8f08ca395a55baf8334da02c9e3a3fc9"
+    },
+    "helper-tests-final.log": {
+      "bytes": 551,
+      "sha256": "d98846cafbd08198d3c1c5e3b496928199f40a9b97315593bfa34cfe842f0c5b"
+    },
+    "d6d6f91-retained/SOURCE-MANIFEST.json": {
+      "bytes": 77154,
+      "sha256": "3795472faef83d1387639e1dd9954fbd66dbf6bddf3aaa867f3692ae00081940"
+    },
+    "d6d6f91-retained/INPUT-MANIFEST.json": {
+      "bytes": 13799,
+      "sha256": "1b145b09e96ea387c7affa6bebcbddd1b43fdb744f22b01c7acbff38263ad706"
+    },
+    "d6d6f91-retained/ARCHIVE-VERIFICATION.json": {
+      "bytes": 185,
+      "sha256": "6d8c864ed8df07ad8a4c1e8620958a623cb52acf80879c181dee3d642998284c"
+    },
+    "d6d6f91-retained/RESULTS.json": {
+      "bytes": 4079730,
+      "sha256": "911afefd06672716c896fd16f4e6ffbb4663bb00154c138fcd072f8a5fa26d6a"
+    },
+    "d6d6f91-boundaries/SOURCE-MANIFEST.json": {
+      "bytes": 76972,
+      "sha256": "52a6f7ea20a8377fa83334a10df5ae74719b4764150a620d8a8c2a13baa5adf7"
+    },
+    "d6d6f91-boundaries/BOUNDARY-RESULTS.json": {
+      "bytes": 180653,
+      "sha256": "75b91de6e397e9326ead60d88d53218e5342befa7ff9069cbf16f4ec4860a204"
+    }
+  }
+}

@@ -1,3 +1,54 @@
+# Adaptive Offline Replay Verified; Hosted Zero-Public Fixture Running (2026-10-10 08:22 UTC)
+
+## CURRENT
+
+The exact adaptive source remains **d6d6f91b16aecd27773168c68d3c8ebdc33001c7**, tree **17f36a46f1d6894b6adf44edf7aefefc2b457cbb**. Its scoped Phase 1 PASS and corrected ADAPT-IV01 disclosure remain as recorded below. “Radial discovery becomes an audit layer.”
+
+A separate benchmark-only successor is published: **4b4b0e7c6ff0d954051edcfa7a17f3e134ddb9f6**, tree **14cbc9a5c44fa85d738b003c0fd15e56646e7d90**, sole parent d6d6, branch `integration/pr61-adaptive-benchmark-2026-10-10`. The publication adds 33 approved benchmark paths, with exact inventory readback; application source is unchanged. [Hosted fixture run 38037557688](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38037557688), number 1 / attempt 1, is **in progress** at the fresh 08:21 read. No adaptive live approval marker exists. **Live entry remains HOLD; no provider traffic is authorized by this fixture gate.**
+
+## Completed offline replay gate
+
+Independent exact-source retained replay supports **bounded common-input eligible-set parity and acquisition-intent savings only**. Four retained successful-primary Movies payload sets produce identical final identities **3 / 3 / 14 / 14** for historical H (c78) and adaptive D (d6d6). Columbia 20-mile audits remain **5 to 5**, total acquisitions **6 to 6**. Both Joplin 50-mile repetitions change **32 to 4 audit intents**, **33 to 5 total acquisition intents**: 87.5% and 84.85% reductions. Fourteen final Joplin identities comprise 12 OSM, one catalog and one merged identity, not 14 newly live-retrieved venues.
+
+All 84 input files match the original complete archive; all 78 consumed RPC bodies and historical dispatch semantics were verified against the 1,011-row/427-pair ledger. Six helper tests and independent retained/boundary reruns passed within their stated scopes. All 14 final inventory members were independently hash/size verified. Published d6d6 results equal independently executed local 9322 results after replacing only the literal source SHA, with complete source-tree equality.
+
+**Zero network attempts.** Virtual settlement timestamps are not latency. Historical physical attempts associated with omitted patches are expressly counterfactual selections, not measured contemporary provider or wire-byte savings. Unknown partial transfers stay unknown.
+
+Two synthetic boundary counterexamples are preserved as **expected non-parity**, never recall PASS:
+- A genuinely eligible identity only in the fifth patch is missed: exhaustive H final five versus D four.
+- A closure only in that unqueried patch is missed: H excludes the earlier positive, D retains it. This is undiscovered stale-positive risk, distinct from losing a previously observed negative.
+
+D leaves 28 patches missing and coverage.complete=false. Repeated zero yield cannot prove universal geographic recall or lifecycle freshness. Existing observed negatives remain excluded. These risks remain part of any adoption decision.
+
+## Frozen protocol and executable fixture entry
+
+[Final frozen protocol](audit/hybrid-loading-2026-10-10/Adaptive-TARGETED-PROTOCOL-FROZEN.md), SHA **a02fac37a8ed0d53d29b5f28e215bb1f984f57fb8a242eb7eae02f69550920ef**, binds D d6d6, historical H c78 and shipped R fe22. Eight mandatory proposed live cases, only Joplin repeated/counterbalanced, retain the one global **384 physical starts /96 cumulative failures-timeouts /30 minutes**, main at most 288 and at most one qualifying reserve follow-up using at most 96 remaining starts. No reset, replacement of censored cells or traffic expansion.
+
+[Independent fixture-entry review](audit/hybrid-loading-2026-10-10/Adaptive-FIXTURE-ENTRY-PASS.md), SHA **74ea35815bab14a24970926df7e4bf2deb884c477254870a5dfdc3133c6cd826**, grants **one hosted zero-public fixture execution only**. Exact harness manifest **54a356107683c2f3231875a06c64719da2a95b23ca51778ae1b5c0a42b8f2be6**, all 30 members checked; 69 independently rerun offline harness tests PASS. Workflow SHA **0f609ca73966b8eb36073d8426f0e30fc561613cff13cab6bb33b654dc101c07**; trigger SHA **b5953df1bbbe4afda129148a94c66327c057d11616b847d1c4f543859ee121cb**, liveAuthorized=false. The publication's workflow-hash approval block was resolved through one authorized exact retry, without a scope or source change.
+
+Seven mock cases exercise radial/adaptive healthy, radial partial, adaptive failed-primary recovery with the retained warm 20-to-15 limitation, thin 20-mile, mixed Plan 50-mile, and early-short Options followed by an actual four-card reclick. Hosted raw ledger, pixels, source/build binding, genuine Plan roles, second Options interaction, two-second timing/four-zero stop, thin/recovery and stability facts remain **pending independent inspection**. Offline 69-test PASS does not prove those UI observations.
+
+## Recoverable replay evidence
+
+Full reports, inventory and protocol are retained here:
+- [Final replay report](audit/hybrid-loading-2026-10-10/Adaptive-FINAL-REPLAY-REPORT.md), SHA **1f9e8cfb2a5522d534e23e89cc10c42d8f08ca395a55baf8334da02c9e3a3fc9**.
+- [Exact final replay inventory](audit/hybrid-loading-2026-10-10/Adaptive-FINAL-REPLAY-INVENTORY.json), SHA **86872ef22287c56a7a4392d7cb95b0904b657b91652434441ec9ebe0454717d4**.
+- [Independent replay review](audit/hybrid-loading-2026-10-10/Adaptive-OFFLINE-REPLAY-REVIEW.md), SHA **8f605c50314d87b881a95e683b99f88df23c46dbf9cf010ace19ec85d560336e**.
+
+Detailed local reproducible package: `adaptive-benchmark/replay/`; inventory includes all scripts, source/input manifests and result sizes/hashes. Retained RESULTS.json SHA **911afefd06672716c896fd16f4e6ffbb4663bb00154c138fcd072f8a5fa26d6a**; boundary result SHA **75b91de6e397e9326ead60d88d53218e5342befa7ff9069cbf16f4ec4860a204**. Original raw input archive remains GitHub artifact **11662969953**, SHA **1c2334c4998d5ad3f2cdd07b34485ad499befcc2e10def0319cc3a4bbba14903**, Library **libfile_2a04f74a71fc81919e593f4af9bb54c7**. A new replay archive identity is not asserted before confirmed publication; no large result was silently truncated into this checkpoint.
+
+## NEXT / HOLD / unchanged production
+
+NEXT: finish the one fixture run, independently inspect all raw controls and source bindings, then checkpoint its actual verdict. Only a separately bound unique live approval after fixture PASS can start the bounded live phase. Performance/adoption remains **MORE EVIDENCE REQUIRED / HOLD**. No full Phase 3 or release PASS follows from replay or fixture entry. Preserve all previous failed, partial and stopped experiments and the failed-primary warm refetch HOLD.
+
+Fresh 08:21 main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**; PR61 **c78b97175cc094436e454fa888e1ed83486f750d** draft/open/unmerged; production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/source fe22** unchanged. This is identity/metadata verification, not new production smoke. No merge, deployment, settings or waiver authority.
+
+The owner-authorized phase order remains: ADOPT alone leads to Phase 3 hardening and owner release STOP; KEEP RADIAL or provider-limited MORE parks architecture and leads to authorized Phase 4 Missouri/Cadaver. Missouri is parked during current Phases 1–2. Cadaver still lacks reliable attraction-specific **2026 operation/date binding and supported expiry**. Physical Android and other backlog limits remain unchanged.
+
+**PARENT CONTINUITY COMMIT:** `64d1ff810e90286eed8835087af9fb8079f44520`; **PARENT TREE:** `06609b378e47e123e23220ee9f19134d276fc354`. Deployment-disabled documentation checkpoint; complete history follows.
+
+---
+
 # Adaptive Audit Phase 1 Scoped PASS — Published Source Bound; Phase 2 Entry Pending (2026-10-10 08:12 UTC)
 
 ## CURRENT
