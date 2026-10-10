@@ -1,0 +1,59 @@
+{
+  "package": "PHASE4-INDEPENDENT-DATA-CADAVER-R1",
+  "reviewedAt": "2026-10-10T09:16:06.613580+00:00",
+  "recordId": "MO26-007",
+  "name": "The Cadaver Zone Spook House",
+  "researchQuality": "PASS at stated limits",
+  "factualVerdict": "HOLD",
+  "runtimePlacementEligibility": false,
+  "placementFields": "PASS retained: supported visitor address and reviewed approximate address-range point; not an entrance or parking coordinate.",
+  "runtimeVerdict": "HOLD; no active projection or import",
+  "inputHashes": {
+    "Cadaver-Phase4-Research-R1.json": "e1d38cdf7bb0b36b8e89823d4c6aeab820aafdc7f947e8bf202a7226a84d3d07",
+    "Cadaver-Phase4-Projection-R1.json": "e401c083c77b14fc43b78529d72da849b75546633a38bc32705eb5a2d7d6dfed",
+    "SHA256SUMS.json": "c751ab834586b8c89e68696b7de8232f83437382402737729c47750eb08e8b0e"
+  },
+  "integrity": {
+    "filesChecked": 15,
+    "mismatches": []
+  },
+  "fieldReview": {
+    "identity": "PASS retained; named commercial/public haunt identity, not a residential display",
+    "visitorAddress": "PASS retained: 25088 Kafir Road, Webb City, MO 64870; independent fresh Scare Factor reopen corroborates street/locality",
+    "approximatePlacement": "PASS retained: latitude 37.214949, longitude -94.510739; prior independently accepted Census interpolation, no new geocode or entrance claim",
+    "operatorContact": "PASS retained at prior freshness, Facebook identity and 417-499-5635. No new phone freshness assertion",
+    "season2026": "HOLD: same disputed Instagram extractor text is not independent resolution; secondary Morty reopening assertion is not sufficient reliable operation/date binding",
+    "exactDates": "HOLD / null; no October 29 accepted",
+    "expiry": "HOLD / null; neither exact date nor editorial cutoff cures unproven current operation",
+    "hoursAdmission": "UNKNOWN for 2026; not separate automatic listing blockers",
+    "restrictions": "Unknown current material age/guardian/access/weather/parking rules. No fabricated restrictions or access guarantees",
+    "dedupe": "Existing MO26-007, not net-new",
+    "lifecycle": "No runtime record; never Open Now, no machine intervals, no recurrence or 2027 rollover"
+  },
+  "independentReopens": [
+    {
+      "url": "https://www.instagram.com/p/Dc14NDtxedG/",
+      "result": "Internal Error, no page content, no actual poster recovered",
+      "receipt": "evidence/cadaver-initial.json"
+    },
+    {
+      "url": "https://www.facebook.com/cadaverzone/",
+      "result": "Old crawled temporary-block page; no current origin proof",
+      "receipt": "evidence/cadaver-initial.json"
+    },
+    {
+      "url": "https://morty.app/attraction/42641/the-cadaver-zone",
+      "result": "Reopening for 2026 secondary assertion and Last verified 8/31/2026 reproduced; no date provided. Metadata not field-wide verification.",
+      "receipt": "evidence/cadaver-secondary.json"
+    },
+    {
+      "url": "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+      "result": "Address and haunted-house classification reproduced; forthcoming dates/hours not loaded",
+      "receipt": "evidence/cadaver-secondary.json"
+    }
+  ],
+  "minimalAuthorCorrections": [],
+  "scope": "Data-only independent review; no runtime implementation, import, merge, deploy, paid API, operator contact, Overpass, or residential policy change.",
+  "closureStatus": "UNKNOWN, not asserted closed or expired",
+  "acceptedRuntimeRecord": null
+}

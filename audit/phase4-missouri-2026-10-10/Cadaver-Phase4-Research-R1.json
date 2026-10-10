@@ -1,0 +1,247 @@
+{
+  "package": "PHASE4-CADAVER-2026-10-10-R1",
+  "record_id": "MO26-007",
+  "canonical_name": "The Cadaver Zone Spook House",
+  "research_decision": "HOLD",
+  "independent_verification": "PENDING_FRESH_PHASE4_REVIEW; prior independent HOLD retained",
+  "research_window_utc": {
+    "start": "2026-10-10T09:11:59Z",
+    "last_source_retrieval_end": "2026-10-10T09:13:29Z"
+  },
+  "canonical_input_commit": "67d27217c4b24e041dcf7df87083801bc9f4cb45",
+  "main_baseline_from_parent": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "main_tree_from_parent": "8d5059c9fee871c522616971cce0a80b153e4d23",
+  "baseline_note": "No runtime/repository/production mutation or new baseline verification by this researcher. Current canonical entry read in full from parent-shared readback; exact prior reports fetched from immutable canonical commit.",
+  "net_new": false,
+  "fields": {
+    "identity_name": {
+      "value": "The Cadaver Zone Spook House",
+      "status": "PRIOR_INDEPENDENT_PASS_RETAINED",
+      "source_urls": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/"
+      ],
+      "note": "Previously independently accepted MO26-007 identity retained; new operator profile describes the same Joplin/Webb City/Carl Junction haunt."
+    },
+    "visitor_address": {
+      "value": "25088 Kafir Road, Webb City, MO 64870",
+      "status": "PRIOR_INDEPENDENT_PASS_RETAINED",
+      "source_urls": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+        "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=25088+Kafir+Road%2C+Webb+City%2C+MO+64870&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/",
+        "https://www.facebook.com/cadaverzone/"
+      ],
+      "note": "Accepted street/address preserved. New operator calendar alt text explicitly gives25088 Kafir Rd, Webb City; Facebook profile independently lists same. FourStates locality discrepancy remains historical."
+    },
+    "approximate_point": {
+      "value": {
+        "latitude": 37.214949,
+        "longitude": -94.510739
+      },
+      "status": "PRIOR_INDEPENDENT_PASS_RETAINED",
+      "source_urls": [
+        "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=25088+Kafir+Road%2C+Webb+City%2C+MO+64870&benchmark=Public_AR_Current&vintage=Current_Current&format=json"
+      ],
+      "note": "Exact prior independently accepted Census range interpolation retained. No new geocode; no entrance/parking/ride precision."
+    },
+    "current_2026_binding": {
+      "value": null,
+      "status": "HOLD_NOT_CLEARED",
+      "source_urls": [
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "note": "Prior proposed source evidence remains preserved in prior/Research-R2.json. Same-extractor reproduction in evidence/fetch1.json is not independent corroboration and does not resolve reliable 2026 binding."
+    },
+    "operating_dates_2026": {
+      "value": null,
+      "status": "HOLD_NOT_CLEARED",
+      "source_urls": [
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "note": "Prior proposed source evidence remains preserved in prior/Research-R2.json. Same-extractor reproduction in evidence/fetch1.json is not independent corroboration and does not resolve reliable 2026 binding."
+    },
+    "hours_start_last_ticket_final_exit": {
+      "value": null,
+      "status": "HOLD_NOT_CLEARED",
+      "source_urls": [
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "note": "Prior proposed source evidence remains preserved in prior/Research-R2.json. Same-extractor reproduction in evidence/fetch1.json is not independent corroboration and does not resolve reliable 2026 binding."
+    },
+    "admission_2026": {
+      "value": null,
+      "status": "HOLD_NOT_CLEARED",
+      "source_urls": [
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "note": "Prior proposed source evidence remains preserved in prior/Research-R2.json. Same-extractor reproduction in evidence/fetch1.json is not independent corroboration and does not resolve reliable 2026 binding."
+    },
+    "payment_2026": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [
+        "https://www.spookthefourstates.com/"
+      ],
+      "note": "Still unknown; new poster does not establish current cash/card policy. Do not carry2025card acceptance."
+    },
+    "age_guardian_rules": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "No age or guardian rule established."
+    },
+    "accessibility_terrain": {
+      "value": {
+        "accessibility": null,
+        "terrain": null,
+        "directory_characterization": "Indoor/outdoor attraction and waiting line"
+      },
+      "status": "PARTIAL_UNDATED",
+      "source_urls": [
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/"
+      ],
+      "note": "No wheelchair accessibility guarantee; mixed indoor/outdoor characterization alone does not establish terrain."
+    },
+    "weather_cancellation": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "No rain-or-shine or cancellation rule established."
+    },
+    "weapons_bags_photography": {
+      "value": {
+        "weapons": null,
+        "bags": null,
+        "photography": null
+      },
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "Historical review photo-op is not photography permission."
+    },
+    "parking_arrival": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source_urls": [],
+      "note": "Historical route and parking observations do not establish current entrance or parking plan."
+    },
+    "operator_url": {
+      "value": "https://www.facebook.com/cadaverzone/",
+      "status": "SUPPORTED_OPERATOR_SOCIAL_IDENTITY_CORROBORATED",
+      "source_urls": [
+        "https://www.facebook.com/cadaverzone/",
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "note": "Facebook current public extraction lists address and phone. Instagram operator identity corroborates same address and both historically published business phones. Directory-linked website yielded inaccessible/empty title-only content; not closure."
+    },
+    "exact_2026_expiry": {
+      "value": null,
+      "status": "HOLD_NOT_CLEARED",
+      "source_urls": [
+        "https://www.instagram.com/p/Dc14NDtxedG/",
+        "https://www.instagram.com/thecadaverzone/"
+      ],
+      "note": "Prior proposed source evidence remains preserved in prior/Research-R2.json. Same-extractor reproduction in evidence/fetch1.json is not independent corroboration and does not resolve reliable 2026 binding."
+    },
+    "no_2027_rollover": {
+      "value": true,
+      "status": "REQUIRED_POLICY",
+      "source_urls": [],
+      "note": "2026-only record; no inferred 2027 dates or automatic rollover."
+    },
+    "never_open_now": {
+      "value": true,
+      "status": "REQUIRED_POLICY",
+      "source_urls": [],
+      "note": "Curated seasonal only; open_now null, machine_opening_intervals null."
+    },
+    "public_operator_phone": {
+      "value": "417-499-5635",
+      "status": "PRIOR_INDEPENDENT_PASS_RETAINED",
+      "source_urls": [
+        "https://www.facebook.com/cadaverzone/"
+      ],
+      "note": "No operator contact and no new live freshness claim; alternate number remains uncleared."
+    }
+  },
+  "blockers": [
+    "No newly reliable attraction-specific 2026 operation/date binding for even one explicit operating night.",
+    "No supported exact-date expiry or approved editorial expiry based on proven current operation."
+  ],
+  "accepted_dates": [],
+  "accepted_expiry": null,
+  "accepted_runtime_record": null,
+  "import_allowed": false,
+  "runtime_active": false,
+  "self_approval": false,
+  "new_findings": [
+    {
+      "source": "https://www.instagram.com/p/Dc14NDtxedG/",
+      "receipt": "evidence/fetch1.json",
+      "capture_interval_utc": [
+        "2026-10-10T09:13:01Z",
+        "2026-10-10T09:13:13Z"
+      ],
+      "finding": "Same Parallel extraction again supplies September 03, 2026 attribution and explicit September/October 2026 poster alt text with October 29 special hours. Actual poster image/raw source not returned. No separate corroboration; existing R2 uncertainty remains.",
+      "quote": "October 29th 7-10pm"
+    },
+    {
+      "source": "https://morty.app/attraction/42641/the-cadaver-zone",
+      "receipt": "evidence/fetch1.json",
+      "capture_interval_utc": [
+        "2026-10-10T09:13:01Z",
+        "2026-10-10T09:13:13Z"
+      ],
+      "finding": "Secondary page again says reopening for 2026 but gives no date in full extraction. Search excerpt includes Opening September 28, preserving prior search/full-text mismatch. Not accepted for dates or expiry.",
+      "quote": "Reopening for 2026. Hours, dates, and admission may vary"
+    },
+    {
+      "source": "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+      "receipt": "evidence/search2.json",
+      "capture_interval_utc": [
+        "2026-10-10T09:12:43Z",
+        "2026-10-10T09:12:48Z"
+      ],
+      "finding": "Current retrieved directory excerpt still lacks coming-season dates; no inference of closure.",
+      "quote": "Dates & hours for the coming season have not been loaded to this listing yet."
+    }
+  ],
+  "source_coverage": {
+    "new_targeted_search_scope": "Attraction-specific 2026 operation/date proof using public operator social, municipal/DMO, local-news/event/ticket searches. Generic cadaver medical/Frontier City results were rejected as irrelevant.",
+    "municipal_DMO": "Bounded searches targeting webbcitymo.org, webbcity.net, visitjoplinmo.com and local newsletter did not recover a usable new year-bound Cadaver event. Not comprehensive archival review or proof no event exists.",
+    "ticketing": "Targeted event/ticket search including Eventbrite and Ticket Tailor returned no verified current Cadaver ticket listing.",
+    "operator_social": "Facebook web extraction shows temporary block with 1.6-year-old crawl metadata; no current origin proof. Instagram profile internal error and exact-post Cache miss. Do not bypass blocks.",
+    "alternate_extractor": "Tavily search returned reauthentication-required; no source result obtained. No further attempt and no setup request made.",
+    "no_blind_repetition": "Settled identity/address/classification/contact and Census location were retained, not researched again; one focused same-post reproduction was used to assess whether the prior disputed evidence had improved. It had not."
+  },
+  "conflicts_preserved": [
+    "Four States Cadaver entry is explicitly 2025; Joplin 64804 conflicts with accepted Webb City 64870 postal locality. No 2025 schedule, prices or card policy carried forward.",
+    "Prior Facebook photo 1325853942885271 year/feed contamination remains rejected.",
+    "Instagram exact-post attribution, shortcode/date uncertainty and related-feed contamination remain unresolved; shortcode shape alone is not date evidence.",
+    "Morty search Opening September 28 is absent from extracted full text. No date imported.",
+    "No additional public phone, admission or special October 29 hours accepted as 2026 operational facts."
+  ],
+  "policy": {
+    "approximate_point_sufficient_if_season_cleared": true,
+    "exact_entrance_required": false,
+    "unknown_hours_prices_not_automatic_blockers": true,
+    "never_open_now": true,
+    "machine_hours": null,
+    "no_recurrence_inference": true,
+    "no_2027_rollover": true,
+    "residential_enrichment": false
+  },
+  "source_limitations": [
+    "Tool outputs are preserved as exact serialized returns, not origin HTML bodies or downloaded poster pixels. Capture windows are retrieval-call intervals, not publication timestamps.",
+    "Parallel allow_live_fetch=true permits live retrieval but does not establish that this exact content was live-origin fetched.",
+    "No screenshot or raw poster was obtained; no screenshot hashes are claimed.",
+    "Two news domains reported non-retryable robots blocks; no circumvention attempted."
+  ],
+  "stopping_condition": "Bounded current public delta completed. No reliable new corroboration surfaced; returned to HOLD without an endless repeat of previously exhausted extracts. Reopen only with materially new dated operator/official/ticket source, or explicit assignment. No closure or global source exhaustion claim.",
+  "fresh_verifier_request": "Verify exact frozen inputs and narrow HOLD. Retain settled location/contact and no candidate import. Do not convert same-extractor repetition into independent corroboration."
+}

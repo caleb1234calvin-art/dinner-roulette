@@ -1,3 +1,52 @@
+# Phase 4 Cadaver Priority Review Complete — Factual HOLD; Other Research Active (2026-10-10 09:17 UTC)
+
+## CURRENT
+
+Phase 4 began only after the adaptive park checkpoint was published/read back. Its first priority gate is complete: **Cadaver Zone MO26-007 research quality PASS at stated limits; factual and runtime/import HOLD**. No accepted date, expiry or runtime object was emitted. This is an existing record, not net-new.
+
+The precise remaining blocker is **reliable attraction-specific 2026 operation/date binding and a supported expiry**. Prior independently accepted identity, public visitor address **25088 Kafir Road, Webb City, MO 64870**, approximate Census address-range point **37.214949, -94.510739** and operator contact remain retained. That point is not an entrance, parking or ride-drop-off coordinate. Location precision, full hours and exact prices are not automatic listing blockers.
+
+No October29 date/hours, admission or disputed calendar is accepted. Dates and expiry remain null, import/runtime false, no machine opening intervals, never Open Now and no 2027 rollover.
+
+## Evidence and independent disposition
+
+The bounded researcher pass reproduced the same disputed Instagram calendar alt text through the same extractor. **Repetition is not independent corroboration.** No actual poster pixels or reliable new dated operator/official/ticket source were recovered. Morty's secondary “reopening for2026” signal still lacks a reliable date window; its search/full-text September28 mismatch remains preserved. The Scare Factor supports address/classification but has no coming-season dates.
+
+Independent reopens found Instagram Internal Error, Facebook's older blocked crawl, Morty's secondary assertion without dates, and Scare Factor address/classification. These access limitations do not prove closure, expiry or comprehensive source exhaustion. No bypass or operator contact occurred.
+
+The independent verifier checked all **15 researcher manifest members with zero mismatches**, accepted the narrow HOLD without author corrections, and retained placement PASS only as a field finding. Fresh Phase 4 review supersedes the frozen research package's “pending fresh review” status; original bytes remain unchanged.
+
+Recoverable exact files:
+- [Research](audit/phase4-missouri-2026-10-10/Cadaver-Phase4-Research-R1.json), SHA **e1d38cdf7bb0b36b8e89823d4c6aeab820aafdc7f947e8bf202a7226a84d3d07**.
+- [Excluded projection](audit/phase4-missouri-2026-10-10/Cadaver-Phase4-Projection-R1.json), SHA **e401c083c77b14fc43b78529d72da849b75546633a38bc32705eb5a2d7d6dfed**.
+- [Original package manifest](audit/phase4-missouri-2026-10-10/Cadaver-Phase4-SHA256SUMS.json), SHA **c751ab834586b8c89e68696b7de8232f83437382402737729c47750eb08e8b0e**.
+- [Independent verdict](audit/phase4-missouri-2026-10-10/Cadaver-Independent-Verdict-R1.json), SHA **6101c8eaf67aab3ef003e91732c034b62c4bfe931b54bc603828559fbdabafa3**.
+- Decisive serialized receipts are preserved alongside these as `cadaver-research-fetch1.json`, `cadaver-initial.json` and `cadaver-secondary.json`. The original manifest retains original relative package paths; these documented copies do not assert that every package member was duplicated into Git. Full local package remains `phase4-missouri/cadaver/`; independent receipts remain `phase4-missouri/independent-data/`.
+
+The full research, excluded projection, manifest, handoff and independent verdict were read. Cadaver is now parked unless materially new year-bound operation/date evidence appears; do not repeat the same exhausted extraction as new proof.
+
+## NEXT / active work
+
+Two other bounded research lanes remain active and unverified: **eight commercial/placement HOLDs** (`reclear_commercial_placement_holds`) and **eight discovery-delta HOLDs** (`reclear_missouri_delta_holds`). `verify_phase4_dataset_candidates` owns fresh independent review of immutable packages. Cadaver's lane `reclear_cadaver_zone_2026` has reached its bounded HOLD gate. No new PASS subset, implementation candidate or import is claimed for those other sixteen records.
+
+NEXT: complete/review those frozen data packages and checkpoint each stable research/verification result. A bounded implementation may use only the independently accepted subset under the owner's Phase 4 scope. Preserve residential separation, all remaining HOLDs and source-coverage limits. Do not inherit or merge experimental performance branches into the Missouri candidate.
+
+## Parked performance and durable evidence
+
+Adaptive performance remains **MORE EVIDENCE REQUIRED, provider-limited category B**, terminal and parked; no more benchmark traffic, reserve, rerun/reset or Phase 3. “Radial discovery becomes an audit layer” remains an experimental design. D **d6d6f91b16aecd27773168c68d3c8ebdc33001c7 /tree17f36a46f1d6894b6adf44edf7aefefc2b457cbb** retains scoped technical evidence; historical PR61 **c78b97175cc094436e454fa888e1ed83486f750d /tree6f7130dc46e5decc9b045c2841b63c73406ae2ae** retains functional PASS but adoption HOLD.
+
+Confirmed Library uploads now resolve the previous “upload pending” note: complete adaptive raw artifact **libfile_608f50422c6081918aae138ef62eaf5a**; producer report **libfile_ab1f92ad951c8191ac653041ba4218bf**; independent review **libfile_06c81722cc3c81919fa7927c3c2703b2**; inventory **libfile_b25f2961e5248191ad263e49bd0c3445**. They retain the exact hashes recorded in the prior terminal checkpoint; no report or verdict changed.
+
+## Unchanged baseline / HOLD
+
+Fresh 09:16 main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**; production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/source fe22**; PR61 c78 draft/open/unmerged. **52 curated records remain shipped.** These are identity/metadata checks, not a new production smoke.
+
+Physical Android/WebView/GPS/signing/Play, six inherited web warnings, existing cosmetic qualifications and other factual/release limitations remain. No merge, deployment, settings, protection waiver, paid API or operator-contact authority is added. Overall phased work remains active; this priority HOLD is not a terminal DONE.
+
+**PARENT CONTINUITY COMMIT:** `67d27217c4b24e041dcf7df87083801bc9f4cb45`; **PARENT TREE:** `7879710f7201ea65a4cabe9e59236e12d2c9e8a7`. Deployment-disabled documentation checkpoint; complete history follows.
+
+---
+
 # Adaptive Performance PARKED — Provider-Limited MORE; Phase 4 Missouri NEXT (2026-10-10 09:10 UTC)
 
 ## CURRENT / final decision
