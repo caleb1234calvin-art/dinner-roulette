@@ -21,6 +21,38 @@ export function extractPatchId(request, expectedPatches = []) {
   if (matches.length > 1) throw new Error('Ambiguous RPC patch attribution');
   return matches[0] || null;
 }
+/** Bind timing to this exact Playwright Request, never to the latest same-URL resource. */
+export function exactRequestBrowserTiming(timing, browserTimeOrigin) {
+  const validStart = Number.isFinite(timing?.startTime) && timing.startTime > 0 && Number.isFinite(browserTimeOrigin);
+  const startBrowserMs = validStart ? timing.startTime - browserTimeOrigin : null;
+  return { requestTiming: { ...timing }, browserTimeOrigin,
+    startBrowserMs,
+    responseEndBrowserMs: validStart && Number.isFinite(timing.responseEnd) && timing.responseEnd >= 0 ? startBrowserMs + timing.responseEnd : null };
+}
+
+export function isDateNightAcquisitionRequest(request) {
+  if (!request.url().includes('/_serverFn/') && !request.headers()['x-tsr-serverfn']) return false;
+  let payload = request.postData() || request.url();
+  try { payload = decodeURIComponent(payload); } catch {}
+  return payload.includes('activityTypes');
+}
+/** Warm guard is observational admission control: abort before any server/provider dispatch. */
+export async function routeBenchmarkRequest(route, { origin, postColdGuard, onWarmRefetch }) {
+  const request = route.request();
+  if (new URL(request.url()).origin !== origin) return route.abort('blockedbyclient');
+  if (postColdGuard && isDateNightAcquisitionRequest(request)) {
+    onWarmRefetch(request);
+    return route.abort('blockedbyclient');
+  }
+  return route.continue();
+}
+
+export function settleControlledWarmObservation(record, { end, failure, timing }) {
+  if (!record.controlledBlock) throw new Error('Warm request settled without a recorded admission block');
+  Object.assign(record, { end, failure, requestTiming: timing, outcome: 'controlled-block', providerFailure: false, physicalAttempts: 0 });
+  return record;
+}
+
 export async function readDecodedRPC(root, response, body) {
   const modulePath = path.join(root, 'node_modules/@tanstack/start-client-core/dist/esm/client-rpc/serverFnFetcher.js');
   const { serverFnFetcher } = await import(pathToFileURL(modulePath));
@@ -65,8 +97,52 @@ function findAcquisition(value, seen = new Set()) {
   return null;
 }
 
+/** Fixed-memory conservative histogram; this exact factory is injected into the page. */
+export function createObserverCostAccumulator() {
+  const binWidthMs = 0.1, bins = new Array(502).fill(0);
+  let count = 0, totalMs = 0, maxMs = 0;
+  return {
+    add(durationMs) {
+      if (!Number.isFinite(durationMs) || durationMs < 0) return;
+      count++; totalMs += durationMs; maxMs = Math.max(maxMs, durationMs);
+      bins[Math.min(501, Math.ceil(durationMs / binWidthMs))]++;
+    },
+    snapshot() {
+      let cumulative = 0, p95UpperBoundMs = null;
+      if (count) {
+        const rank = Math.ceil(count * 0.95);
+        for (let i = 0; i < bins.length; i++) {
+          cumulative += bins[i];
+          if (cumulative >= rank) { p95UpperBoundMs = i === 501 ? maxMs : i * binWidthMs; break; }
+        }
+      }
+      return { count, totalMs, meanMs: count ? totalMs / count : null, maxMs: count ? maxMs : null,
+        p95UpperBoundMs, p95Method: 'nearest-rank 0.1ms histogram upper bound; overflow uses observed maximum',
+        storageBinCount: bins.length, confounded: count > 0 && (p95UpperBoundMs > 10 || maxMs >= 50),
+        confoundingRule: 'p95 upper bound >10ms OR maximum >=50ms' };
+    },
+  };
+}
+
 /** Runs in page: observe committed DOM and React props, never call app internals. */
-function installObserver({ epoch, state }) {
+function installObserver({ epoch, state }, makeCostAccumulator) {
+  const costWindows = {};
+  let costPhase = 'cold';
+  function newCostWindow() { return { startBrowserMs: performance.now(), readCPU: makeCostAccumulator(), synchronousScanAndEmitDispatch: makeCostAccumulator() }; }
+  costWindows.cold = newCostWindow();
+  function recordCost(kind, elapsed) { if (costPhase) costWindows[costPhase][kind].add(elapsed); }
+  function costSummary(name) {
+    const window = costWindows[name]; if (!window) return null;
+    const readCPU = window.readCPU.snapshot(), synchronousScanAndEmitDispatch = window.synchronousScanAndEmitDispatch.snapshot();
+    return { startBrowserMs: window.startBrowserMs, endBrowserMs: window.endBrowserMs ?? performance.now(), readCPU, synchronousScanAndEmitDispatch,
+      confounded: readCPU.confounded || synchronousScanAndEmitDispatch.confounded,
+      scope: 'Observer work only; inclusive scan/dispatch contains readCPU. Excludes async IPC/fsync and must not be attributed to application long tasks.' };
+  }
+  function finishCostWindow() {
+    if (costPhase) costWindows[costPhase].endBrowserMs = performance.now();
+    costPhase = null;
+    return { cold: costSummary('cold'), warm: costSummary('warm') };
+  }
   const NativeDate = Date, anchor = NativeDate.now();
   const advancingEpoch = () => epoch + NativeDate.now() - anchor;
   class PolicyDate extends NativeDate {
@@ -107,6 +183,11 @@ function installObserver({ epoch, state }) {
   let last = '', scheduled = false;
   const history = [];
   function read() {
+    const started = performance.now();
+    try { return readDOM(); }
+    finally { recordCost('readCPU', performance.now() - started); }
+  }
+  function readDOM() {
     const body = document.body;
     if (!body) return null;
     const text = body.innerText;
@@ -149,6 +230,11 @@ function installObserver({ epoch, state }) {
       loading: text.includes('Finding date ideas'), eligiblePool, overlay };
   }
   function capture() {
+    const started = performance.now();
+    try { captureSnapshot(); }
+    finally { recordCost('synchronousScanAndEmitDispatch', performance.now() - started); }
+  }
+  function captureSnapshot() {
     scheduled = false;
     const snapshot = read(); if (!snapshot) return;
     const signature = JSON.stringify({ ...snapshot, browserMs: 0 });
@@ -157,7 +243,9 @@ function installObserver({ epoch, state }) {
       window.__benchEmit?.(snapshot).catch(() => {});
     }
   }
-  window.__benchmark = { read, history };
+  window.__benchmark = { read, history, finishCostWindow,
+    beginWarmCosts() { costWindows.warm = newCostWindow(); costPhase = 'warm'; },
+    observerCosts() { return { cold: costSummary('cold'), warm: costSummary('warm') }; } };
   new MutationObserver(() => { if (!scheduled) { scheduled = true; requestAnimationFrame(capture); } }).observe(document, { childList: true, subtree: true, attributes: true, characterData: true });
   // Catch animation visibility changes and React commits without observable text changes.
   setInterval(capture, 50);
@@ -205,10 +293,13 @@ export function browserTerminal({ snapshot, rpc, expected, activeRpc, activePhys
 export async function runBrowserCase({ root, job, output, ledger, server, origin, policyClock }) {
   job = { ...job, id: job.id || job.caseId, city: job.city || job.location };
   fs.mkdirSync(output, { recursive: true });
+  const driverJournalCosts = createObserverCostAccumulator(), driverHandlerCosts = createObserverCostAccumulator();
   const journalFd = fs.openSync(path.join(output, 'browser-events.jsonl'), 'a');
   const emit = (type, detail = {}) => {
+    const started = performance.now();
     const event = { type, caseId: job.id, monotonicMs: performance.now(), utc: realUTC(), ...detail };
     fs.writeSync(journalFd, JSON.stringify(event) + '\n'); fs.fsyncSync(journalFd);
+    driverJournalCosts.add(performance.now() - started);
     return event;
   };
   const require = createRequire(path.join(root, 'package.json'));
@@ -219,16 +310,31 @@ export async function runBrowserCase({ root, job, output, ledger, server, origin
   const epoch = typeof policyClock === 'number' ? policyClock : Date.parse(policyClock);
   if (!Number.isFinite(epoch)) throw new Error('Frozen policy clock required');
   const order = job.controlOrder || ['pick', 'options', 'plan'];
-  const metrics = { eligibilityFirstSeen: {}, openDecisionSettlements: [], controlOrder: order, reducedMotion: job.reducedMotion || 'no-preference', controls: {}, snapshots: [], longTasks: [], warm: [] };
+  const metrics = { eligibilityFirstSeen: {}, openDecisionSettlements: [], controlOrder: order, reducedMotion: job.reducedMotion || 'no-preference', controls: {}, snapshots: [], longTasks: [], warm: [], warmRefetchAttempts: [], driver: {} };
   const rpc = [], active = new Set(), handlers = new Set();
   let handlerCursor = 0;
   const flushHandlers = () => {
     while (rpc[handlerCursor]?.handlerReady) {
       const record = rpc[handlerCursor++];
-      ledger.handler({ caseId: job.id, rpcId: record.id, patchId: record.patchId, phase: record.phase, successfulProviderGroup: Boolean(record.success), whollyFailed: Boolean(record.whollyFailed), groups: record.groups || [], canceled: Boolean(record.canceled), ...record });
+      const began = performance.now();
+      ledger.handler({ caseId: job.id, rpcId: record.id, patchId: record.patchId, phase: record.phase, successfulProviderGroup: Boolean(record.success), whollyFailed: Boolean(record.whollyFailed), groups: record.groups || [], canceled: Boolean(record.canceled), status: record.status, start: record.start, end: record.end, sha256: record.sha256, applicationError: record.applicationError });
+      driverHandlerCosts.add(performance.now() - began);
     }
   };
-  let coldFinished = false;
+  let coldFinished = false, coldTerminal = null, postColdGuard = false, warmStatus = 'not-started', currentWarmRadius = null;
+  const warmRequests = new WeakMap(), warmActive = new Set();
+  const recordWarmRequest = (request, blocked = false) => {
+    let record = warmRequests.get(request);
+    if (!record) {
+      record = { id: `${job.id}-warm-rpc-${metrics.warmRefetchAttempts.length + 1}`, url: request.url(), method: request.method(), requestBody: request.postData(), patchId: extractPatchId(request, expected), start: performance.now(), targetRadius: currentWarmRadius, serverDispatched: false };
+      warmRequests.set(request, record); warmActive.add(request); metrics.warmRefetchAttempts.push(record); emit('warm-rpc-attempt', record);
+    }
+    if (blocked && !record.controlledBlock) {
+      record.controlledBlock = true; record.blockedAt = performance.now(); warmStatus = 'hold-refetch-required';
+      emit('warm-refetch-required', { ...record, result: 'controlled-block', physicalAttempts: 0, providerFailure: false });
+    }
+    return record;
+  };
   let browser, context, page, finalState, terminal = 'deadline', lastRPC = performance.now(), integrityError;
   const stopped = () => Boolean(ledger.snapshot().stop || ledger.snapshot().stopped || ledger.snapshot().stopReason);
   const start = performance.now();
@@ -257,29 +363,43 @@ export async function runBrowserCase({ root, job, output, ledger, server, origin
       if (c.renderedMs === undefined && c.clickMs !== undefined) {
         c.renderedMs = snapshot.browserMs; c.clickToRenderMs = snapshot.browserMs - c.clickMs;
         c.identities = overlay.venues; c.uniqueCount = overlay.venues.length;
-        c.fullFour = overlay.control === 'options' ? overlay.venues.length === 4 : undefined;
+        c.fullFour = overlay.control === 'options' ? (c.eligibleCountAtClick >= 4 ? overlay.venues.length === 4 : null) : undefined;
       }
     }
   };
   try {
     if (stopped()) throw new Error('Global stop already latched');
+    // Symmetric local imports only, before navigation; no decoder/handler/provider invocation.
+    await Promise.all([
+      import(pathToFileURL(path.join(root, 'node_modules/@tanstack/start-client-core/dist/esm/client-rpc/serverFnFetcher.js'))),
+      import(pathToFileURL(path.join(root, 'node_modules/@tanstack/start-storage-context/dist/esm/index.js'))),
+    ]);
+    require('seroval'); metrics.driver.decoderModulesPreloadedBeforeNavigation = true;
     browser = await playwright.chromium.launch({ headless: true });
     context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: metrics.reducedMotion, serviceWorkers: 'block' });
-    await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort('blockedbyclient'));
-    await context.addInitScript(installObserver, { epoch, state });
+    await context.route('**/*', route => routeBenchmarkRequest(route, { origin, postColdGuard, onWarmRefetch: request => recordWarmRequest(request, true) }));
+    // Both functions are serialized as harness source; no application source or state hooks are modified.
+    await context.addInitScript({ content: `(${installObserver.toString()})(${JSON.stringify({ epoch, state })}, ${createObserverCostAccumulator.toString()});` });
     page = await context.newPage();
     await page.exposeBinding('__benchEmit', (_, snapshot) => absorb(snapshot));
     await page.exposeBinding('__benchLongTask', (_, entry) => { metrics.longTasks.push(entry); emit('longtask', entry); });
     page.on('pageerror', error => emit('page-error', { error: String(error) }));
     page.on('request', request => {
       if (!request.url().includes('/_serverFn/') && !request.headers()['x-tsr-serverfn']) return;
-      const payload = request.postData() || decodeURIComponent(request.url());
-      if (!payload.includes('activityTypes')) { emit('other-local-rpc-start', { url: request.url(), method: request.method(), requestBody: request.postData() }); return; }
+      if (!isDateNightAcquisitionRequest(request)) { emit('other-local-rpc-start', { url: request.url(), method: request.method(), requestBody: request.postData() }); return; }
+      if (postColdGuard) { recordWarmRequest(request); return; }
       const record = { id: `${job.id}-rpc-${rpc.length + 1}`, url: request.url(), method: request.method(), requestBody: request.postData(), patchId: extractPatchId(request, expected), start: performance.now() };
       record.phase = record.patchId ? (job.strategy === 'A' ? 'radial-primary' : 'audit') : 'primary'; rpc.push(record); active.add(request); request.__benchRecord = record;
       lastRPC = performance.now(); emit('rpc-start', record);
     });
     async function settle(request, response, failure) {
+      const warm = warmRequests.get(request);
+      if (warm) {
+        settleControlledWarmObservation(warm, { end: performance.now(), failure, timing: request.timing() }); warmActive.delete(request);
+        emit('warm-rpc-settle', warm);
+        if (response) { integrityError = 'Post-cold acquisition reached server despite warm guard'; await ledger.stop('warm-guard-failed'); }
+        return;
+      }
       const record = request.__benchRecord; if (!record || record.settled) return;
       record.settled = true;
       try {
@@ -307,8 +427,11 @@ export async function runBrowserCase({ root, job, output, ledger, server, origin
         emit('rpc-settle', record);
         record.handlerReady = true; flushHandlers();
         if (page && !page.isClosed()) {
-          const receipt = await page.evaluate(url => ({ snapshot: window.__benchmark?.read(), resource: performance.getEntriesByName(url, 'resource').at(-1)?.toJSON() ?? null }), record.url).catch(() => null);
-          const open = receipt?.snapshot; record.responseEndBrowserMs = receipt?.resource?.responseEnd; record.startBrowserMs = receipt?.resource?.startTime;
+          const requestTiming = request.timing();
+          const receipt = await page.evaluate(() => ({ snapshot: window.__benchmark?.read(), browserTimeOrigin: performance.timeOrigin })).catch(() => null);
+          const open = receipt?.snapshot;
+          Object.assign(record, exactRequestBrowserTiming(requestTiming, receipt?.browserTimeOrigin));
+          emit('rpc-exact-timing', { rpcId: record.id, requestTiming: record.requestTiming, browserTimeOrigin: record.browserTimeOrigin, startBrowserMs: record.startBrowserMs, responseEndBrowserMs: record.responseEndBrowserMs });
           if (open?.overlay) { const observation = { rpcId: record.id, phase: record.phase, patchId: record.patchId, snapshot: open }; metrics.openDecisionSettlements.push(observation); emit('open-at-rpc-settlement', observation); }
         }
       }
@@ -317,10 +440,18 @@ export async function runBrowserCase({ root, job, output, ledger, server, origin
     page.on('requestfinished', request => track(request.response().then(response => settle(request, response))));
     page.on('requestfailed', request => track(settle(request, null, request.failure()?.errorText || 'failed')));
     emit('navigate', { origin, policyClock, state, expected, controlOrder: order });
-    await page.goto(origin, { waitUntil: 'domcontentloaded', timeout: 30000 });
+    metrics.driver.gotoStartMonotonicMs = performance.now();
+    await page.goto(origin, { waitUntil: 'commit', timeout: 30000 });
+    metrics.driver.gotoReturnedMonotonicMs = performance.now();
+    metrics.driver.gotoReturnedBrowserMs = await page.evaluate(() => performance.now());
+    metrics.driver.gotoWaitUntil = 'commit';
+    metrics.driver.gotoReturnedDocumentState = await page.evaluate(() => document.readyState);
+    emit('driver-goto-return', metrics.driver);
     let controlIndex = 0, shownAt = 0;
     while (performance.now() - start < 180000 && !stopped()) {
       const snapshot = await page.evaluate(() => window.__benchmark?.read());
+      if (metrics.driver.firstLoopMonotonicMs === undefined) { metrics.driver.firstLoopMonotonicMs = performance.now(); metrics.driver.firstLoopBrowserMs = snapshot?.browserMs ?? null; emit('driver-first-loop', metrics.driver); }
+      if (snapshot && metrics.driver.firstObserverReadyBrowserMs === undefined) { metrics.driver.firstObserverReadyBrowserMs = snapshot.browserMs; emit('driver-first-observer-ready', { browserMs: snapshot.browserMs, monotonicMs: performance.now() }); }
       if (snapshot) absorbIfChanged(snapshot);
       const next = order[controlIndex];
       if (next && finalState?.enabled[next] && (!shownAt || performance.now() - shownAt > 1500)) {
@@ -330,14 +461,24 @@ export async function runBrowserCase({ root, job, output, ledger, server, origin
         await page.evaluate(({ label, name }) => {
           document.addEventListener('click', function clicked(event) {
             if (event.target.closest('button')?.textContent.trim() !== label) return;
-            window.__benchClick = { name, browserMs: performance.now() }; document.removeEventListener('click', clicked, true);
+            window.__benchClick = { name, browserMs: performance.now(), eligibleCountAtClick: Number(document.body.innerText.match(/(\d+) activities match/)?.[1]) || 0 }; document.removeEventListener('click', clicked, true);
           }, true);
         }, { label, name: next });
+        metrics.controls[next].clickAttemptBrowserMs = await page.evaluate(() => performance.now());
+        metrics.controls[next].clickAttemptMonotonicMs = performance.now();
+        const readiness = Math.max(metrics.controls[next].enabledMs, metrics.firstEligibleMs ?? metrics.controls[next].enabledMs);
+        metrics.controls[next].eligibleEnabledToAttemptMs = metrics.controls[next].clickAttemptBrowserMs - readiness;
+        metrics.controls[next].primarySchedulingConfounded = next === order[0] && metrics.controls[next].eligibleEnabledToAttemptMs > 250;
+        metrics.controls[next].schedulingRule = next === order[0] ? 'Primary control confounded if eligible+enabled to trusted-click attempt >250ms' : 'Sequentially exercised secondary control; delay reported separately';
         await page.getByRole('button', { name: label, exact: true }).click({ timeout: 3000 });
+        metrics.controls[next].clickReturnedMonotonicMs = performance.now();
         const click = await page.evaluate(() => window.__benchClick);
-        metrics.controls[next].clickMs = click.browserMs; emit('control-click', click);
+        metrics.controls[next].clickMs = click.browserMs; metrics.controls[next].eligibleCountAtClick = click.eligibleCountAtClick;
+        if (next === 'options') metrics.controls[next].fullFourApplicableAtClick = click.eligibleCountAtClick >= 4;
+        Object.assign(metrics.controls[next], { enabledToDriverAttemptMs: metrics.controls[next].clickAttemptBrowserMs - metrics.controls[next].enabledMs, driverAttemptToActualClickMs: click.browserMs - metrics.controls[next].clickAttemptBrowserMs });
+        emit('control-click', { ...click, driver: metrics.controls[next] });
         const first = metrics.snapshots.find(s => s.browserMs >= click.browserMs && s.overlay?.control === next && usable(s.overlay, job));
-        if (first) Object.assign(metrics.controls[next], { renderedMs: first.browserMs, clickToRenderMs: first.browserMs - click.browserMs, identities: first.overlay.venues, uniqueCount: first.overlay.venues.length, fullFour: next === 'options' ? first.overlay.venues.length === 4 : undefined });
+        if (first) Object.assign(metrics.controls[next], { renderedMs: first.browserMs, clickToRenderMs: first.browserMs - click.browserMs, identities: first.overlay.venues, uniqueCount: first.overlay.venues.length, fullFour: next === 'options' ? (click.eligibleCountAtClick >= 4 ? first.overlay.venues.length === 4 : null) : undefined });
         const until = performance.now() + 10000;
         while (performance.now() < until && !stopped()) {
           const s = await page.evaluate(() => window.__benchmark.read()); absorbIfChanged(s);
@@ -360,15 +501,22 @@ export async function runBrowserCase({ root, job, output, ledger, server, origin
     if (stopped()) terminal = 'global-stop';
     if (integrityError) terminal = 'integrity-hold';
     if (terminal === 'deadline') await ledger.stop('case-deadline');
-    coldFinished = true;
-    emit('cold-terminal', { terminal, finalState });
+    coldFinished = true; coldTerminal = terminal; postColdGuard = true;
+    metrics.observerCosts = await page.evaluate(() => window.__benchmark.finishCostWindow());
+    emit('observer-cost-cold', metrics.observerCosts.cold);
+    emit('cold-terminal', { terminal, coldTerminal, finalState });
     await page.screenshot({ path: path.join(output, 'cold-final.png') });
     // Warm controls use the same browser/session; only proven complete authority permits radius switches.
     if (terminal === 'complete' && !stopped()) {
+      warmStatus = 'running';
+      await page.evaluate(() => window.__benchmark.beginWarmCosts());
       const radii = job.radiusMiles === 50 ? [50, 20, 1, 20, 50] : [20, 15, 1, 15, 20];
       for (const radius of radii) {
-        if (performance.now() - start > 165000 || stopped()) { metrics.warm.push({ skipped: 'Case observation limit approaching' }); break; }
-        await closeOverlay(); const priorRPC = rpc.length;
+        currentWarmRadius = radius;
+        if (warmStatus === 'hold-refetch-required') break;
+        if (performance.now() - start > 165000 || stopped()) { warmStatus = 'censored'; metrics.warm.push({ skipped: 'Case observation limit approaching' }); break; }
+        try {
+        await closeOverlay(); const priorRPC = metrics.warmRefetchAttempts.length;
         const slider = page.getByRole('slider', { name: 'Travel distance' });
         const options = [1, 3, 5, 10, 15, 20, 30, 40, 50];
         const track = slider.locator('xpath=ancestor::*[contains(@class,"touch-none")][1]');
@@ -389,10 +537,11 @@ export async function runBrowserCase({ root, job, output, ledger, server, origin
           }
           return null;
         }, { radius, before });
+        if (warmStatus === 'hold-refetch-required') { metrics.warm.push({ radius, status: warmStatus, noRefetch: false, physicalAttempts: 0, controlledBlock: true }); break; }
         const decisionStart = await page.evaluate(() => performance.now());
         if (warmDOM?.enabled.pick) await page.getByRole('button', { name: 'Pick our date', exact: true }).click({ timeout: 3000 });
         const deadline = performance.now() + 10000; let rendered;
-        while (warmDOM?.enabled.pick && performance.now() < deadline) {
+        while (warmDOM?.enabled.pick && performance.now() < deadline && warmStatus !== 'hold-refetch-required') {
           const s = await page.evaluate(() => window.__benchmark.read());
           if (usable(s.overlay, { ...job, radiusMiles: radius })) { rendered = s; break; }
           await delay(25);
@@ -400,31 +549,58 @@ export async function runBrowserCase({ root, job, output, ledger, server, origin
         const warm = { radius, startBrowserMs: before, eligibleDOMMs: warmDOM?.browserMs,
           radiusToEligibleDOMMs: warmDOM ? warmDOM.browserMs - before : null,
           observedDecisionRenderMs: rendered?.browserMs, decisionInteractionToRenderMs: rendered ? rendered.browserMs - decisionStart : null,
-          newRPCs: rpc.length - priorRPC, overlay: rendered?.overlay,
+          newRPCs: metrics.warmRefetchAttempts.length - priorRPC, noRefetch: metrics.warmRefetchAttempts.length === priorRPC, controlledBlock: warmStatus === 'hold-refetch-required', overlay: rendered?.overlay,
           note: 'Radius pointerdown to next eligible DOM animation-frame observation; actual Pick render separately includes ordinary animation and trusted click overhead.' };
         metrics.warm.push(warm); emit('warm', warm);
-        if (warm.newRPCs) { await ledger.stop('unexpected-warm-network'); terminal = 'integrity-hold'; break; }
+        if (warm.newRPCs || warmStatus === 'hold-refetch-required') break;
+        } catch (error) {
+          if (warmStatus !== 'hold-refetch-required') throw error;
+          metrics.warm.push({ radius, status: warmStatus, noRefetch: false, controlledBlock: true, driverErrorAfterControlledBlock: String(error) }); break;
+        }
       }
-    } else metrics.warm.push({ skipped: 'No complete acquisition authority' });
-    emit('case-final', { terminal, finalState, metrics });
+      if (warmStatus === 'running') warmStatus = metrics.warm.every(row => row.radiusToEligibleDOMMs !== null && row.noRefetch) ? 'pass-zero-refetch' : 'incomplete';
+    } else { warmStatus = 'skipped'; metrics.warm.push({ skipped: 'No complete acquisition authority' }); }
+    metrics.observerCosts = await page.evaluate(() => window.__benchmark.finishCostWindow());
+    metrics.observerConfounded = Boolean(metrics.observerCosts.cold?.confounded || metrics.observerCosts.warm?.confounded);
+    emit('observer-cost-final', metrics.observerCosts);
+    emit('case-final', { terminal, coldTerminal, warmStatus, finalState, metrics });
   } catch (error) {
     integrityError = String(error); terminal = 'integrity-hold'; emit('case-error', { error: integrityError }); await ledger.stop('browser-case-error');
   } finally {
+    if (page && !page.isClosed()) {
+      const costs = await page.evaluate(() => window.__benchmark?.finishCostWindow()).catch(() => null);
+      if (costs) { metrics.observerCosts = costs; metrics.observerConfounded = Boolean(costs.cold?.confounded || costs.warm?.confounded); }
+    }
     await context?.close().catch(() => {});
     await browser?.close().catch(() => {});
     await Promise.race([Promise.allSettled([...handlers]), delay(10000)]);
-    if (active.size || handlers.size) { terminal = 'integrity-hold'; await ledger.stop('unsettled-browser-rpc'); }
+    if (active.size || handlers.size || warmActive.size) { terminal = 'integrity-hold'; await ledger.stop('unsettled-browser-rpc'); }
     fs.closeSync(journalFd);
   }
+  metrics.driverSchedulingConfounded = Boolean(metrics.controls[order[0]]?.primarySchedulingConfounded);
+  metrics.driver.synchronousJournalWriteCosts = driverJournalCosts.snapshot();
+  metrics.driver.synchronousLedgerHandlerCosts = driverHandlerCosts.snapshot();
+  metrics.driver.note = 'Driver journaling/ledger costs are Node work, not application latency; enabled→attempt and attempt→trusted click are separate.';
   metrics.eligibilityProvenance = Object.values(metrics.eligibilityFirstSeen).map(({ browserMs, venue }) => ({
     id: venue.id, browserMs, curated: venue.id.startsWith('date-night-curated') || venue.discoveryEvidence?.some(e => e.source === 'catalog') || false,
     receipts: rpc.filter(r => r.acquisition?.venues.some(v => v.id === venue.id || v.discoveryEvidence?.some(e => e.id === venue.id) || venue.discoveryEvidence?.some(e => e.id === v.id))).map(r => ({ rpcId: r.id, phase: r.phase, patchId: r.patchId, settledMonotonicMs: r.end, responseEndBrowserMs: r.responseEndBrowserMs, availableAtFirstEligibility: Number.isFinite(r.responseEndBrowserMs) && r.responseEndBrowserMs <= browserMs }))
   }));
   const acquisitionStarts = rpc.map(r => r.startBrowserMs).filter(Number.isFinite);
   metrics.firstAcquisitionDispatchMs = acquisitionStarts.length ? Math.min(...acquisitionStarts) : null;
+  const visibleTimes = Object.values(metrics.controls).map(control => control.renderedMs).filter(Number.isFinite);
+  metrics.firstVisibleVenueMs = visibleTimes.length ? Math.min(...visibleTimes) : null;
+  metrics.firstFourEligibleMs = metrics.snapshots.find(snapshot => snapshot.eligibleCount >= 4)?.browserMs ?? null;
+  if (metrics.controls.options) {
+    const options = metrics.controls.options;
+    options.fullFourStatus = options.clickMs === undefined ? 'unmeasured-no-click' : !options.fullFourApplicableAtClick ? 'not-applicable-at-observed-click' : options.fullFour ? 'rendered-four' : 'four-not-observed';
+    if (Number.isFinite(metrics.firstFourEligibleMs) && metrics.firstFourEligibleMs > options.clickMs && !options.fullFourApplicableAtClick) options.laterFourRender = 'unmeasured-no-later-options-click';
+  }
+  const auditStarts = rpc.filter(record => record.phase === 'audit').map(record => record.startBrowserMs).filter(Number.isFinite);
+  metrics.backgroundAuditStartMs = auditStarts.length ? Math.min(...auditStarts) : null;
+  metrics.auditCompleteBrowserMs = coldTerminal === 'complete' ? metrics.snapshots.find(snapshot => snapshot.coverage?.complete)?.browserMs ?? null : null;
   metrics.primarySettlement = rpc.filter(r => r.phase === 'primary').map(r => ({ start: r.start, end: r.end, browserResponseEndMs: r.responseEndBrowserMs, success: r.success }));
   metrics.lastAuditSettlementMonotonicMs = rpc.filter(r => r.patchId).reduce((max, r) => Math.max(max, r.end || 0), 0) || null;
-  metrics.auditCompletionMonotonicMs = terminal === 'complete' ? metrics.lastAuditSettlementMonotonicMs : null;
+  metrics.auditCompletionMonotonicMs = coldTerminal === 'complete' ? metrics.lastAuditSettlementMonotonicMs : null;
   const receiptMatches = (r, v) => r.acquisition?.venues.some(item => item.id === v.id || item.discoveryEvidence?.some(e => e.id === v.id) || v.discoveryEvidence?.some(e => e.id === item.id));
   const liveFirst = metrics.snapshots.filter(s => s.eligiblePool?.some(v =>
     (v.source === 'osm' || v.discoveryEvidence?.some(e => e.source === 'osm')) && rpc.some(r => Number.isFinite(r.responseEndBrowserMs) && r.responseEndBrowserMs <= s.browserMs && receiptMatches(r, v)))).map(s => s.browserMs);
@@ -433,7 +609,7 @@ export async function runBrowserCase({ root, job, output, ledger, server, origin
   const recovery = failedPrimary ? metrics.snapshots.filter(s => s.eligiblePool?.some(v =>
     (v.source === 'osm' || v.discoveryEvidence?.some(e => e.source === 'osm')) && rpc.some(r => r.phase === 'audit' && r.success && Number.isFinite(r.responseEndBrowserMs) && r.responseEndBrowserMs <= s.browserMs && receiptMatches(r, v)))).map(s => s.browserMs) : [];
   metrics.firstAuditRecoveryEligibleMs = recovery.length ? Math.min(...recovery) : null;
-  const result = { caseId: job.id, terminal, censorReason: terminal === 'deadline' ? '180-second-case-observation-limit' : null, finalState, metrics, rpc, integrityError, activeRPCs: active.size, serverManagedExternally: Boolean(server), navigationOrigin: 'performance.timeOrigin; DOM and clicks use performance.now()', timingResolutionMs: 50 };
+  const result = { caseId: job.id, terminal, coldTerminal, warmStatus, censorReason: terminal === 'deadline' ? '180-second-case-observation-limit' : null, finalState, metrics, rpc, integrityError, activeRPCs: active.size, serverManagedExternally: Boolean(server), navigationOrigin: 'performance.timeOrigin; DOM and clicks use performance.now()', timingResolutionMs: 50 };
   durableWrite(path.join(output, 'browser-result.json'), JSON.stringify(result, null, 2));
   return result;
   function absorbIfChanged(snapshot) {

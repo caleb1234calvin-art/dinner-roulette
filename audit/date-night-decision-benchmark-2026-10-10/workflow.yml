@@ -64,9 +64,8 @@ jobs:
           PFU_CANDIDATE_ROOT: ${{ github.workspace }}/candidate
           PFU_BENCH_OUTPUT: /tmp/pfu-decision-evidence/preflight
         run: node harness/audit/date-night-decision-benchmark-2026-10-10/coordinator.mjs fixture
-      - name: Verify browser preflight terminal
-        run: |
-          node --input-type=module -e "import fs from 'node:fs';const r=JSON.parse(fs.readFileSync('/tmp/pfu-decision-evidence/preflight/progress.json'));if(r.rows.length!==4||r.ledger.stopped||r.ledger.pending.length||r.rows.some((x,i)=>x.outcome!==['complete','complete','quiescent-partial','complete'][i]))throw Error('Preflight not complete');"
+      - name: Verify actual rendered preflight evidence and timing quality
+        run: node harness/audit/date-night-decision-benchmark-2026-10-10/preflight-verdict.mjs /tmp/pfu-decision-evidence/preflight
       - name: Single approved bounded live experiment
         if: hashFiles('harness/audit/date-night-decision-benchmark-2026-10-10/LIVE-APPROVAL.json') != ''
         env:
