@@ -1,3 +1,41 @@
+# PR #61 Performance Decision Benchmark — Fixture Preflight Published; Live HOLD (2026-10-10 06:53 UTC)
+
+## CURRENT
+
+The owner's new06:28 authorization reopens only a bounded **performance decision benchmark**. It supersedes the prior STOP only for this task. **Radial discovery becomes an audit layer.** Existing exact c78 functional PASS remains closed; no functional-suite rerun or application-source change is needed for this protocol gate.
+
+Baseline A is shipped radial-v1 **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**. Candidate B remains draft PR61 **c78b97175cc094436e454fa888e1ed83486f750d**, tree **6f7130dc46e5decc9b045c2841b63c73406ae2ae**, parent cd78. Functional evidence remains1,059 tests/970 browser checks/426 geometry+14 controls PASS, separate from performance/adoption HOLD.
+
+Benchmark-only branch `integration/pr61-performance-decision-benchmark-2026-10-10` now has exact commit **a801c3f4f9086cf9e514c68647815f1d2f2437ce**, tree **ae4ae8a2aaae0363888dced69df16bc73589a7d1**, sole parent **c78b97175cc094436e454fa888e1ed83486f750d**. Sixteen approved additions:13 frozen manifest files, manifest, fixture trigger and identical workflow copy. No LIVE-APPROVAL marker. [Hosted fixture run38032445502](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38032445502) is in progress, not yet PASS. No public-provider traffic is authorized at this gate.
+
+## Frozen protocol / independent scope
+
+[Independent preflight R2 review](audit/hybrid-loading-2026-10-10/Decision-Benchmark-PREFLIGHT-R2-PASS.md), SHA **fcd16004745330f3780bcffacc456d0a0a7584d8c0e54f5a6403df469f04fa21**, grants **PASS FOR FIXTURES ONLY**. All13 manifest members were independently rehashed and33 offline tests passed. Harness manifest SHA **48776935fce7e9b4a7d5023bca1a0bd128f48a35ce635f86ba605cfe9f0f5001**; frozen protocol SHA **f9a4083f977ab21641bf6c16687f0313bd50f5bb6278aad972439c2540751211**. The complete protocol is recoverable on the immutable benchmark branch; local source `decision-benchmark/PROTOCOL-DRAFT.md`. The [read-only baseline receipt](audit/hybrid-loading-2026-10-10/Decision-Benchmark-Readonly-Preflight.md) preserves full prior continuity review and initial remote checks.
+
+Planned live experiment, still gated: one durable global ledger, fixed ceiling **1,280 physical upstream attempts /45 minutes**,24 mandatory cold actual-browser Movies cases across Joplin, Columbia and Kansas City at20/50 miles. Fixed order mixes ABBA/BAAB blocks. Every mirror, hedge, retry and canceled start counts; no reset, replacement experiment, compensating traffic or separate health probes. Optional mixed cases only after all mandatory cells with preregistered reserved budget/time.
+
+The metric is actual usable controls and correctly rendered selected results, not READY text or terminal settlement. Record first useful curated versus live pool, primary settlement versus audit recovery, click/render and animation separately. Movies no-compatible-plan is N/A, not fabricated plan success. Covered warm clipping/no-fetch and CPU/cost evidence remain distinct from cold acquisition. Exact source/protocol identities, complete request accounting, referenced watchdog and quiescent-incomplete termination are mandatory.
+
+**Decision options are only ADOPT / KEEP RADIAL-V1 PRIMARY / MORE EVIDENCE REQUIRED.** The frozen draft's extra OPTIMIZE RADIAL-V1 PRIMARY choice is obsolete and will receive a documentation-only correction before any live authorization. It is not an authorized fourth outcome or permission to optimize. Any manifest change needs explicit delta review/binding.
+
+## NEXT
+
+Run only four actual-browser **mock-provider / zero-public-request** preflight cases: baseline complete; hybrid complete; baseline failed outer patch/quiescent partial; hybrid failed primary with audit recovery. Expected terminal sequence complete, complete, quiescent-partial, complete. Local Chromium socket access was denied; hosted Actions supplies the permitted disposable browser route.
+
+Independent review must inspect actual fixture artifacts, rendered-choice pixels, raw RPCs, zero-public-request and starts/settles accounting, source/output binding, metric/provenance/yield mapping and observer overhead. Only after this separate gate can the coordinator authorize one uniquely bound live run/attempt. Fixture preflight PASS is not live permission. No LIVE-APPROVAL is published now.
+
+## HOLD / preserved boundaries
+
+Performance/adoption remains **MORE EVIDENCE REQUIRED**. Prior Track F global-counter protocol failure and a4 incomplete327-attempt run are preserved, not continued or erased. Previous controlled READY timings are not comparative first-interaction evidence. All failed candidate/harness attempts remain history.
+
+No candidate/runtime/config/provider-policy changes, merge, deployment, settings or waiver. No Missouri discovery/Cadaver work. Cadaver still lacks reliable attraction-specific **2026 operation/date binding and supported expiry**. Physical Android/WebView/GPS/signing/Play and other parked backlog remain HOLD.
+
+Fresh06:53 reads: main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree8d5059, PR61 c78 draft/unmerged, production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/sourcefe22**,52 shipped records unchanged. Both benchmark and canonical branches use unchanged integration/** deployment-disabled policy. Final task outcome requires canonical full readback and exact SHA; no premature DONE.
+
+**PARENT CONTINUITY COMMIT:** `a4ba18028324428e6dcfa53d863380d1385d54ed`; **PARENT TREE:** `8ae84c79029d99e9c079e99c7671c523c545f47e`. All history follows verbatim.
+
+---
+
 # PR #61 Final Evidence Recovery and Functional Verification PASS — PERFORMANCE / ADOPTION HOLD; STOP (2026-10-10 05:47 UTC)
 
 ## CURRENT
