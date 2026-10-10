@@ -1,3 +1,37 @@
+# Decision Benchmark Hosted Fixture PASS — Sole Bounded Live Execution Running (2026-10-10 07:22 UTC)
+
+## CURRENT
+
+Independent hosted fixture gate is PASS, and the coordinator has authorized the one uniquely bound live experiment. Benchmark branch `integration/pr61-performance-decision-benchmark-2026-10-10` now controls **103a093d600138e921a9c00bd46b53a241907a14**, tree **4b317d20adf6d264cf3cdc77760ba2bd9810da60**, parent **fdc67197cc505713b31929e2580fd1c573917d4b**. Seven benchmark-only successor paths changed; all26 inventory blobs were verified. Application source is unchanged.
+
+[Run38034143730](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38034143730), **workflow run number3 /attempt1**, is in progress. This is the sole authorized execution, not permission for reruns, resets, replacement cases or budget expansion. Live results are pending; this checkpoint does not claim any completed live observation or performance outcome.
+
+Frozen final harness manifest **a0acb0e4562f9e958c5a013a33abc6c16d59ff1e270d9c582959830aebe3eda5** and unique live approval SHA **8dad0fd7b2b8b227d27923393a408ba5705eb23d1d988b326717217fd93410ed** bind repository/workflow/ref, exact A/B identities, run number3/attempt1 and **1,280 physical attempts /45 minutes**. All latched stop rules and single durable global accounting remain mandatory.
+
+## Independently reviewed fixture evidence
+
+[Full hosted R2 review](audit/hybrid-loading-2026-10-10/Decision-Benchmark-HOSTED-R2-PASS.md), SHA **88d2e7008044aba6fd5d11fa6ad5947b2f4683016fe3926ed7e1d8677916902b**, was read. Fixture run38033469837 on fdc671 produced artifact **11662288352**, **927,226 bytes**, SHA **cb4959648abb831131cce995a307ecba82a64826fcabcaaf8240ab8e1807a555**,84 CRC-verified members.
+
+Zero public-provider requests; **28 mock starts/28 settlements**, all bodies independently matched;79-row chain verified. All four cases showed actual Pick/four Options/truthful no-pair, with terminal sequence complete/complete/quiescent-partial/complete. Exact request timestamps are separately bound. Pick enabled-to-attempt was38.1–91.2ms; cold observer p95≤2.2ms/max≤40.5ms, inside preregistered diagnostic limits. Fixture evidence is not comparative live performance.
+
+**Failed-primary warm20→15 refetch remains HOLD.** Same-radius reuse succeeds, but radius reduction emitted a new primary intent intercepted before dispatch. It remains a product limitation and is neither provider failure nor warm no-refetch PASS. Cold recovery stays separately valid. Images were blocked in this benchmark; fixture pixels prove usable choices/controls, not artwork loading.
+
+A minimal analysis-only missing-result catch correction removed undefined references while preserving explicit missing-result rows. Independent48 offline tests PASS; the refreshed manifest above binds the correction. No runtime, browser acquisition or ledger behavior was changed by it. Earlier R1 timing/driver/warm failures remain preserved.
+
+## NEXT / HOLD
+
+Observe only the authorized execution to its terminal state; preserve every failed, partial, censored and unrun case and all starts/outcomes. Independently inspect final original artifacts, source/ledger bindings, actual usable-control timing, complete case accounting, warm behavior and cost/yield evidence against the preregistered rubric. Then select only **ADOPT HYBRID / KEEP RADIAL-V1 PRIMARY / MORE EVIDENCE REQUIRED**, publish full canonical readback and stop at the owner-defined decision gate.
+
+**Performance/adoption remains MORE EVIDENCE REQUIRED until valid terminal evidence supports a decision.** Existing exact c78 functional PASS remains unchanged:1,059 tests,970 browser checks,426 geometry+14 controls. “Radial discovery becomes an audit layer.” Previous Track F global-counter failure and incomplete a4 327-attempt experiment remain immutable history, not erased or continued.
+
+No candidate/runtime/config/provider-policy changes, merge/deploy/settings/waiver or Missouri/Cadaver work. Cadaver still lacks reliable attraction-specific **2026 operation/date binding and supported expiry**; physical Android/signing/Play and other backlog remain parked.
+
+Fresh07:22 main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**, PR61 **c78b97175cc094436e454fa888e1ed83486f750d** draft/unmerged, production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/sourcefe22**,52 records unchanged. Integration branches remain deployment-disabled.
+
+**PARENT CONTINUITY COMMIT:** `0159ca3002a09c3a1e4e8cd39d04734cff1dffa9`; **PARENT TREE:** `cb34271278e3fe99fc337e9fb925562b7d4bd359`. Prior live-HOLD labels are superseded only for the uniquely authorized run; all history follows.
+
+---
+
 # Decision Benchmark R1 Hosted Fixture HOLD; R2 Fixture-Only Successor Published (2026-10-10 07:11 UTC)
 
 ## CURRENT
