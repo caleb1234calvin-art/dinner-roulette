@@ -1,0 +1,267 @@
+{
+  "package_id": "Carolyn-Terror-Public-Source-Recovery-R1",
+  "frozen_at": "2026-10-10T17:57:23.492859+00:00",
+  "role": "Research proposals only; fresh independent review required",
+  "scope_record_ids": [
+    "MO26-055",
+    "DELTA2-TERROR66"
+  ],
+  "records": [
+    {
+      "record_id": "MO26-055",
+      "name": "Carolyn’s Pumpkin Patch",
+      "season_year": 2026,
+      "fields": {
+        "visitor_address": {
+          "value": "17607 NE 52nd Street, Liberty, MO 64068",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/location-and-directions/"
+          ]
+        },
+        "category": {
+          "value": "Pumpkin Patch",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "activity_subtype": {
+          "value": [
+            "Pumpkin patch",
+            "wagon ride"
+          ],
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "current_season": {
+          "value": "Explicit 2026 season September 19 through October 31",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "date_rule": {
+          "value": "Thursday through Monday within September 19–October 31, 2026",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "partial",
+            "display": "Thursday–Monday. Check daily hours; entrance stops one hour before closing.",
+            "machine_last_admission": null
+          },
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/",
+            "https://carolynspumpkinpatch.com/hours-and-pricing/"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "Tickets use one-hour check-in windows.",
+            "No outside food/alcohol; medical/dietary access questions should go to venue.",
+            "No pets; operator permits outside service animals.",
+            "Liberty Corn Maze next door is distinct; pumpkin listing does not imply corn-maze access."
+          ],
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/hours-and-pricing/",
+            "https://carolynspumpkinpatch.com/frequently-asked-questions/"
+          ]
+        },
+        "phone": {
+          "value": "816-781-9196 (text line)",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-11-01T00:00:00-05:00",
+            "basis": "date-only",
+            "derivation": "Conservative midnight after the final October 31 date, America/Chicago. This is retention expiry, not an asserted operator closing time. DST has not ended at this midnight.",
+            "at_utc": "2026-11-01T05:00:00Z"
+          },
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        }
+      },
+      "researcher_factual_proposal": "PASS",
+      "researcher_placement_proposal": "PASS",
+      "independent_verification": "PENDING — researcher proposal only",
+      "runtime_eligible": false,
+      "import_allowed": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "rollover_2027_allowed": false,
+      "prior_local_record_canonical_sha256": "c2867a74807d7cfb1ac92824c2c0d0dfbec814c3726d0fa3e7bd615eea0cd9fe",
+      "prior_factual_state": "PASS reported in prior-independent-r2.md; current facts separately refreshed in this package",
+      "directions_policy": "Supported public visitor street address only; do not substitute placement coordinates for Directions or rideshare arrival.",
+      "placement_candidate": {
+        "latitude": 39.1857337,
+        "longitude": -94.3697357,
+        "basis": "operator-linked named-place destination",
+        "precision": "Approximate site placement only; no entrance, parking, gate, doorway, boundary or rideshare drop-off claim. Source decimal precision does not imply physical precision.",
+        "source_url": "https://goo.gl/maps/pKngpKRpDZhtK55M9",
+        "field_path": "Rendered Maps URL selected-place !8m2!3d39.1857337!4d-94.3697357; not the @ viewport center.",
+        "evidence_files": [
+          "carolyn-rendered-place-retry-r1.json",
+          "carolyn-map-retry-r1.receipt.json",
+          "carolyn-map-retry-r1.body",
+          "web-carolyn-map-link-faq-retry-r1.json",
+          "web-carolyn-visitor-pages-retry-r1.json"
+        ],
+        "independent_review": "PENDING"
+      },
+      "placement_conflict_reconciliation": {
+        "old_redirect_point": [
+          39.183364,
+          -94.366
+        ],
+        "old_redirect_to_candidate_meters": 416.053,
+        "prior_census_point": [
+          39.18680551923,
+          -94.379614495957
+        ],
+        "prior_census_to_candidate_meters": 859.722,
+        "proposal": "Prefer the current rendered selected place, which matches Carolyn’s identity, public address and official website, over the preserved legacy redirect target or prior address-range Census interpolation. The older redirect did encode a real destination, not merely a viewport. No assertion that earlier reviewers were wrong and no averaging. Liberty Corn Maze remains a separate place.",
+        "census_freshly_retrieved": false
+      },
+      "factual_evidence_files": [
+        "web-carolyn-home-retry-r1.json",
+        "web-carolyn-visitor-pages-retry-r1.json",
+        "web-carolyn-map-link-faq-retry-r1.json"
+      ],
+      "changes_from_prior": "Placement proposal and evidence references added; address, date text and punctuation normalized without changing facts; exact UTC and DST derivation added to unchanged date-only expiry. Other factual fields and material restrictions carried forward and refreshed against public operator extraction.",
+      "source_limitations": [
+        "Direct HTTP to both Carolyn domains returned 403; cloud browser countrycousins.com returned a 502 HTTP/2 transport error. No bypass performed.",
+        "Carolyn factual pages are fresh web-tool retrievals of indexed/extracted operator content, with reported crawl ages today or 3 days; not claimed to be fresh origin HTML.",
+        "A footer copyright range is not a 2027 season; only explicit 2026 visitor-season content is used.",
+        "Google dynamic hours, ratings, reviews and accessibility labels are not used as factual opening/access evidence."
+      ]
+    },
+    {
+      "record_id": "DELTA2-TERROR66",
+      "name": "Terror on Route 66",
+      "season_year": 2026,
+      "fields": {
+        "category": {
+          "value": "Haunted House",
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "current_season": {
+          "value": "Explicit 2026 Halloween season ending November 1; individual opening dates and hours are not asserted.",
+          "source_urls": [
+            "https://scarestl.com/",
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "unknown"
+          },
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "material_access": {
+          "value": [
+            "All participants must complete a waiver. General admission is no-touch.",
+            "Optional Interactive Touch Pass is ages 10+. Minors under 18 must be accompanied by an adult with valid ID.",
+            "A valid ID is required at check-in for every Interactive Touch Pass and Rated R Pass participant.",
+            "Rated R Pass is 18+ and includes full contact, adult language and dark humor. Rated R participants cannot enter with guests who do not hold Rated R passes. General admission and Interactive Touch guests may enter together."
+          ],
+          "source_urls": [
+            "https://scarestl.com/",
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "visitor_address": {
+          "value": "1143 North Service Road West, Sullivan, MO 63080",
+          "source_urls": [
+            "https://scarestl.com/",
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-11-02T00:00:00-06:00",
+            "basis": "date-only",
+            "at_utc": "2026-11-02T06:00:00Z",
+            "derivation": "Conservative midnight after the stated final November 1, 2026 season date, America/Chicago. DST ended earlier November 1, so this midnight is CST UTC−06:00. Not an operator closing-time assertion."
+          },
+          "source_urls": [
+            "https://scarestl.com/",
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        }
+      },
+      "researcher_factual_proposal": "PASS",
+      "researcher_placement_proposal": "PASS",
+      "independent_verification": "PENDING — researcher proposal only",
+      "runtime_eligible": false,
+      "import_allowed": false,
+      "placement": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "rollover_2027_allowed": false,
+      "prior_local_record_canonical_sha256": "77f37cf09d41e59e5642d140c11e1ca2cdedcc97d3abec552c73747893be879d",
+      "prior_factual_state": "PASS reported in prior-independent-r2.md; current facts separately refreshed in this package",
+      "directions_policy": "Supported public visitor street address only; do not substitute placement coordinates for Directions or rideshare arrival.",
+      "placement_candidate": {
+        "latitude": 38.2432122,
+        "longitude": -91.1408597,
+        "basis": "named-place destination corroborated by operator public address lookup",
+        "precision": "Approximate site placement only; no entrance, parking, gate, doorway, boundary or rideshare drop-off claim. Source decimal precision does not imply physical precision.",
+        "source_url": "https://www.google.com/maps/search/?api=1&query=Terror+On+Route+66+1143+North+Service+Road+West+Sullivan+MO",
+        "field_path": "Rendered Maps URL selected-place !8m2!3d38.2432122!4d-91.1408597; not inferred from viewport.",
+        "evidence_files": [
+          "terror-rendered-place-retry-r1.json",
+          "terror-rendered-address-retry-r1.json",
+          "terror-home-retry-r1.body",
+          "terror-home-retry-r1.receipt.json"
+        ],
+        "independent_review": "PENDING"
+      },
+      "placement_conflict_reconciliation": {
+        "official_address_query_point": [
+          38.2431976,
+          -91.140891
+        ],
+        "official_address_to_candidate_meters": 3.179,
+        "official_address_public_place_association": "Address result explicitly lists Terror On Route 66 under At this place.",
+        "ticket_point": [
+          38.22635269165039,
+          -91.15493774414062
+        ],
+        "ticket_to_candidate_meters": 2241.959,
+        "prior_census_point": [
+          38.241800124583,
+          -91.14156921747
+        ],
+        "prior_census_to_candidate_meters": 168.8,
+        "proposal": "Prefer the current named place with matching official website/address and its 3.179 m-consistent operator-address result. Preserve and exclude the distant SimpleTix embedded point and prior Census address-range interpolation; never average. No gate/drop-off precision inferred.",
+        "census_freshly_retrieved": false
+      },
+      "visitor_address_conflict_reconciliation": "The historical directory East address remains rejected for routing; freshly captured operator and operator-linked ticket both state West, matching the named place.",
+      "factual_evidence_files": [
+        "terror-home-retry-r1.body",
+        "terror-home-retry-r1.receipt.json",
+        "terror-ticket-retry-r1.body",
+        "terror-ticket-retry-r1.receipt.json",
+        "web-home-retry-r1.json"
+      ],
+      "changes_from_prior": "Replace unresolved Census placement proposal with current corroborated named-place proposal, still pending independent review. Keep routine prices/refunds/ticket sales boilerplate out of the projection. Preserve all prior material age/guardian/ID/touch/waiver/full-contact/group restrictions. Collapse historical address candidates into explicit conflict history. Retain date-only expiry and add correct UTC/DST derivation.",
+      "source_limitations": [
+        "No exact schedule image extraction or machine hours added; explicit season endpoint suffices for the unchanged date-only lifecycle.",
+        "The public operator-address iframe query was opened in full Maps by omitting output=embed; that address result is described accurately, not misrepresented as the named attraction or a gate.",
+        "No user origin, account data or private browser history is included in the selected DOM captures.",
+        "Google dynamic hours, ratings, reviews and accessibility labels are not imported."
+      ]
+    }
+  ],
+  "unchanged_runtime_state": "No runtime/source/test edits, import, Git publication, merge or deployment. Existing 52-record production state is coordinator context, not reverified by this research package."
+}

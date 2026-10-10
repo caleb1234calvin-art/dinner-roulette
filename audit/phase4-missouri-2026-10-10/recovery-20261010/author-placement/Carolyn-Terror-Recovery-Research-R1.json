@@ -1,0 +1,66 @@
+{
+  "package_id": "Carolyn-Terror-Public-Source-Recovery-R1",
+  "frozen_at": "2026-10-10T17:57:23.492859+00:00",
+  "authorization_scope": "Owner-authorized bounded public-source retention retry for Carolyn and Terror under this intended evidence path. No alternate path reconstructs the denied captures. All new capture files are actual fresh results and carry retrieval context.",
+  "researcher_outcomes": [
+    {
+      "record_id": "MO26-055",
+      "factual_proposal": "PASS",
+      "placement_proposal": "PASS",
+      "independent_status": "PENDING",
+      "runtime_import": "NOT AUTHORIZED"
+    },
+    {
+      "record_id": "DELTA2-TERROR66",
+      "factual_proposal": "PASS",
+      "placement_proposal": "PASS",
+      "independent_status": "PENDING",
+      "runtime_import": "NOT AUTHORIZED"
+    }
+  ],
+  "baseline_from_parent": {
+    "checked_at": "2026-10-10T17:50:00Z",
+    "main": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "tree": "8d5059c9fee871c522616971cce0a80b153e4d23",
+    "production": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/source fe22"
+  },
+  "source_evidence_classification": {
+    "raw_http": "Four successful unauthenticated HTTP response bodies, with exact requested/final URLs, redirect history, response status and hashes. Failed HTTP attempts have receipt-only records.",
+    "web_tool": "Actual serialized new tool results; reported crawl ages and source/line context retained. Extracted/indexed responses are not relabeled as origin bytes.",
+    "cloud_browser": "Actual serialized read-only public DOM field captures and current page URLs. Browser account/private data excluded. No new login or anti-bot bypass.",
+    "historical": "Prior local research/report references are hash-bound below; their reported historical findings remain historical. The old denied captures are not recreated."
+  },
+  "prior_artifacts": [
+    {
+      "path": "../prior-research-r2.json",
+      "sha256": "472f93d561ebf14ffb3cecfe1290314a64012c013d7ed509ed4feac29aae1dab",
+      "bytes": 52097,
+      "role": "Existing local recovered prior artifact; no assertion that it matches the original external historical file bytes."
+    },
+    {
+      "path": "../prior-independent-r2.md",
+      "sha256": "c8bf544e6ece6a77c4140eabc97fe03e0f2a34c3e17629ef0ccd82e206b42071",
+      "bytes": 5686,
+      "role": "Existing local recovered prior artifact; no assertion that it matches the original external historical file bytes."
+    }
+  ],
+  "prior_hash_limit": "The local prior research copy has SHA-256 472f93d561ebf14ffb3cecfe1290314a64012c013d7ed509ed4feac29aae1dab. The prior report names original research SHA 6ebdd30a18c6089cf8e0ebe9f589977a3150030b3fb01747682face6221849aa. These do not match; no byte-equivalence claim or explanation is invented. Current proposals are backed by fresh captures rather than assuming that historical byte binding.",
+  "geometry_method": "Haversine on a mean Earth sphere radius 6,371,000 m; distances are comparison diagnostics, not surveyed accuracy. Coordinates come from selected-place !3d/!4d values, never averaging or viewport inference.",
+  "expiry_method": "Python zoneinfo America/Chicago confirmed Carolyn November 1 midnight UTC−05 and Terror November 2 midnight UTC−06. Both are conservative date-only retention cutoffs, not exact operator closing hours.",
+  "projection_file": "Carolyn-Terror-Recovery-Projections-R1.json",
+  "excluded_work": [
+    "Runtime/source/test modification",
+    "Import or candidate implementation",
+    "Git or repository publication",
+    "Paid APIs",
+    "Operator contact",
+    "Login/authentication",
+    "Anti-bot bypass",
+    "Mirror substitution",
+    "Cadaver research",
+    "Performance work",
+    "2027 recurrence",
+    "Open Now machinery"
+  ],
+  "fresh_independent_verifier_required": true
+}

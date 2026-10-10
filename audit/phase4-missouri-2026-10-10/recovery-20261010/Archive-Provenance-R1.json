@@ -1,0 +1,131 @@
+{
+  "package": "PHASE4-RECOVERY-CONTINUITY-MINIMAL-ARCHIVE-R1",
+  "createdAt": "2026-10-10T18:08:55.473Z",
+  "scope": "Exact-byte copies of final immutable reports, projections, manifests, and selected decisive independent receipts. This is a minimal repository audit, not the complete raw-capture package. Original manifests enumerate omitted raw members and preserve source URLs, hashes, access failures and revision history.",
+  "parentContinuity": "ec5a13c0033d0b182b756716414b66fc07ee5442",
+  "main": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "independentFreeze": "2026-10-10T18:06:15.975186+00:00",
+  "files": [
+    {
+      "sourcePath": "phase4-missouri/recovery-independent-20261010T1753Z/Recovery-Independent-Review-R1.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Recovery-Independent-Review-R1.json",
+      "bytes": 50498,
+      "sha256": "49c8800ba964923d70dda46aeeb86a653d201fda251134c335523a5abfce9484"
+    },
+    {
+      "sourcePath": "phase4-missouri/recovery-independent-20261010T1753Z/Phase4-17-Record-Ledger-Recovery-R1.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+      "bytes": 19645,
+      "sha256": "3b1772c055e8b2852b732b56b9e9a0756755c31ef6c8a57341c684cab9f6a7b6"
+    },
+    {
+      "sourcePath": "phase4-missouri/recovery-independent-20261010T1753Z/Accepted-Seven-Record-Subset-R1.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Accepted-Seven-Record-Subset-R1.json",
+      "bytes": 34632,
+      "sha256": "827eb67919c99dec61991cbc01cba63097ccd5dd1868de355b5f79b07d348882"
+    },
+    {
+      "sourcePath": "phase4-missouri/recovery-independent-20261010T1753Z/HANDOFF-R1.md",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/HANDOFF-R1.md",
+      "bytes": 5335,
+      "sha256": "89abfdc06945182830c7578a8d61ae7034f1770664077e29f4af33bb5c634ec2"
+    },
+    {
+      "sourcePath": "phase4-missouri/recovery-independent-20261010T1753Z/SHA256SUMS-R1.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/SHA256SUMS-R1.json",
+      "bytes": 5519,
+      "sha256": "a240c420065b79858d81491ca744587d80256ca0bf8c2407a80fd850039d0131"
+    },
+    {
+      "sourcePath": "phase4-missouri/recovery-independent-20261010T1753Z/evidence/branson-narrow-official-binding-search.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/evidence/branson-narrow-official-binding-search.json",
+      "bytes": 10045,
+      "sha256": "661a8bf6130350548a22e62277cf93b51ef83ed644176a2bc8887a4086ab14be"
+    },
+    {
+      "sourcePath": "phase4-missouri/recovery-independent-20261010T1753Z/evidence/independent-source-capture-receipts.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/evidence/independent-source-capture-receipts.json",
+      "bytes": 6076,
+      "sha256": "7e8761c36c1aff4142b180b547b475a0bc79616494d6ea0579ba8c49dda9c2e2"
+    },
+    {
+      "sourcePath": "phase4-missouri/recovery-independent-20261010T1753Z/evidence/carolyn-independent-cloud-map.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/evidence/carolyn-independent-cloud-map.json",
+      "bytes": 1155,
+      "sha256": "dfac037f899ebe38dde467bdc1a0305b873dd6c112b239d05d97fd6f9bd3a2a2"
+    },
+    {
+      "sourcePath": "phase4-missouri/recovery-independent-20261010T1753Z/evidence/terror-independent-cloud-map.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/evidence/terror-independent-cloud-map.json",
+      "bytes": 1224,
+      "sha256": "7b6cfda4a5e76e76da838bb8ea2ba45baa366a041de5183bb8bc377cd8d4a928"
+    },
+    {
+      "sourcePath": "phase4-missouri/delta/official-retry-20261010T1751Z/Delta-Official-Recovery-Projections-Addendum-R4.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/author-official/Delta-Official-Recovery-Projections-Addendum-R4.json",
+      "bytes": 28452,
+      "sha256": "67d5c19a1739e838f662279cc389061753c20fceb12606ef76f0e07403c510f6"
+    },
+    {
+      "sourcePath": "phase4-missouri/delta/official-retry-20261010T1751Z/SHA256SUMS-R4.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/author-official/SHA256SUMS-R4.json",
+      "bytes": 6505,
+      "sha256": "d1cb4bde0a6f6204467d4f207e7d99b005a671ec180363048fdb606b048e847e"
+    },
+    {
+      "sourcePath": "phase4-missouri/delta/official-retry-20261010T1751Z/Official-Retry-Capture-Manifest-R1.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/author-official/Official-Retry-Capture-Manifest-R1.json",
+      "bytes": 6832,
+      "sha256": "e60997ddb79bcd1c1588f54565db84bd1692335feefe2216a2c72209244e41a8"
+    },
+    {
+      "sourcePath": "phase4-missouri/delta/official-retry-20261010T1751Z/Census-Placement-Proposals-R1.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/author-official/Census-Placement-Proposals-R1.json",
+      "bytes": 11241,
+      "sha256": "c6f7caebae5b6a3b371b8b70f3565632f1520893564350389149aaae12311452"
+    },
+    {
+      "sourcePath": "phase4-missouri/delta/official-retry-20261010T1751Z/Branson-Year-Binding-Assessment-R3.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/author-official/Branson-Year-Binding-Assessment-R3.json",
+      "bytes": 4696,
+      "sha256": "d5e573da0fafa18c72f0cd50a4b95ec1982703b557e95f9d1a7d14b7e85baebe"
+    },
+    {
+      "sourcePath": "phase4-missouri/delta/official-retry-20261010T1751Z/REPORT-R4.md",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/author-official/REPORT-R4.md",
+      "bytes": 643,
+      "sha256": "9f335ed28b6509c54814e508f2cddeb1d058e97440a9588f35db99240a583ba5"
+    },
+    {
+      "sourcePath": "phase4-missouri/commercial-placement/placement/evidence/Carolyn-Terror-Recovery-Projections-R1.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/author-placement/Carolyn-Terror-Recovery-Projections-R1.json",
+      "bytes": 13461,
+      "sha256": "9cd59d743b59ff25c5cb2c1d89c87f7509fd2c6f8da5c0fc1aa4e9a0869fa548"
+    },
+    {
+      "sourcePath": "phase4-missouri/commercial-placement/placement/evidence/Carolyn-Terror-Recovery-Research-R1.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/author-placement/Carolyn-Terror-Recovery-Research-R1.json",
+      "bytes": 3794,
+      "sha256": "67134dc63a571ec746790f2baaeb909626cb7c51327694ff3eb48de9e1a86773"
+    },
+    {
+      "sourcePath": "phase4-missouri/commercial-placement/placement/evidence/Carolyn-Terror-Recovery-Manifest-R1.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/author-placement/Carolyn-Terror-Recovery-Manifest-R1.json",
+      "bytes": 5107,
+      "sha256": "957009d868ea0c545ace5b5c5c82ae38d981626974c9d2b5bcc967dd1b521560"
+    },
+    {
+      "sourcePath": "phase4-missouri/commercial-placement/placement/evidence/Carolyn-Terror-Recovery-Freeze-R1.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/author-placement/Carolyn-Terror-Recovery-Freeze-R1.json",
+      "bytes": 258,
+      "sha256": "ba2c4e0d393f9f9a9ee177dd199f18d0f94390b81402ef6d229f6a87333e99f8"
+    },
+    {
+      "sourcePath": "phase4-missouri/library-recovery-upload-20261010T1807Z/Library-Delivery-Receipt-R1.json",
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/recovery-20261010/Library-Delivery-Receipt-R1.json",
+      "sha256": "45589037604fcabb7fee6f67a084c32e5d4b8edc73317908cb619784b56738d0",
+      "note": "Five final files delivered to owner 18:08:42 UTC, Sentinel_a049fc8e7e4c819194d4d181526218f0; receipt copied exactly."
+    }
+  ],
+  "untouched": "All prior repository audit files and the entire historical AI_CONTINUITY.md body are preserved. No source/runtime/test/configuration changes."
+}

@@ -1,0 +1,168 @@
+[
+  {
+    "id": "fearstone-faq",
+    "url": "https://www.fearstoneforest.com/faq",
+    "retrievedAt": "2026-10-10T17:56:50.123203+00:00",
+    "status": 200,
+    "finalUrl": "https://www.fearstoneforest.com/faq",
+    "bytes": 1080922,
+    "sha256": "ef01c01d44449ce36822f05541ca679a86e6f04803c8099dee55751fd83739ad",
+    "rawFile": "phase4-missouri/recovery-independent-20261010T1753Z/evidence/independent-fearstone-faq.body"
+  },
+  {
+    "id": "fearstone-census",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=85+Benne+Blvd%2C+Camdenton%2C+MO+65020&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-10-10T17:56:57.196860+00:00",
+    "status": 200,
+    "finalUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=85+Benne+Blvd%2C+Camdenton%2C+MO+65020&benchmark=Public_AR_Current&format=json",
+    "bytes": 643,
+    "sha256": "2c682086aaae4224d9405d1a54bf5a005cf04bb6c4e9bfd3161eec5aff4c5dc9",
+    "rawFile": "phase4-missouri/recovery-independent-20261010T1753Z/evidence/independent-fearstone-census.body",
+    "response": {
+      "result": {
+        "input": {
+          "address": {
+            "address": "85 Benne Blvd, Camdenton, MO 65020"
+          },
+          "benchmark": {
+            "isDefault": true,
+            "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+            "id": "4",
+            "benchmarkName": "Public_AR_Current"
+          }
+        },
+        "addressMatches": [
+          {
+            "tigerLine": {
+              "side": "R",
+              "tigerLineId": "610863878"
+            },
+            "coordinates": {
+              "x": -92.758610359304,
+              "y": 38.016075473125
+            },
+            "addressComponents": {
+              "zip": "65020",
+              "streetName": "BENNE",
+              "preType": "",
+              "city": "CAMDENTON",
+              "preDirection": "",
+              "suffixDirection": "",
+              "fromAddress": "1",
+              "state": "MO",
+              "suffixType": "BLVD",
+              "toAddress": "99",
+              "suffixQualifier": "",
+              "preQualifier": ""
+            },
+            "matchedAddress": "85 BENNE BLVD, CAMDENTON, MO, 65020"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "branson-census",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1000+Pat+Nash+Dr%2C+Branson%2C+MO+65616&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-10-10T17:57:00.260649+00:00",
+    "status": 200,
+    "finalUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1000+Pat+Nash+Dr%2C+Branson%2C+MO+65616&benchmark=Public_AR_Current&format=json",
+    "bytes": 647,
+    "sha256": "1ba5568b329ab68709555a59e80c97786693b221f19bf069ffdfdcf86e9c4526",
+    "rawFile": "phase4-missouri/recovery-independent-20261010T1753Z/evidence/independent-branson-census.body",
+    "response": {
+      "result": {
+        "input": {
+          "address": {
+            "address": "1000 Pat Nash Dr, Branson, MO 65616"
+          },
+          "benchmark": {
+            "isDefault": true,
+            "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+            "id": "4",
+            "benchmarkName": "Public_AR_Current"
+          }
+        },
+        "addressMatches": [
+          {
+            "tigerLine": {
+              "side": "R",
+              "tigerLineId": "20187682"
+            },
+            "coordinates": {
+              "x": -93.284825773276,
+              "y": 36.645101695991
+            },
+            "addressComponents": {
+              "zip": "65616",
+              "streetName": "PAT NASH",
+              "preType": "",
+              "city": "BRANSON",
+              "preDirection": "",
+              "suffixDirection": "",
+              "fromAddress": "100",
+              "state": "MO",
+              "suffixType": "DR",
+              "toAddress": "1098",
+              "suffixQualifier": "",
+              "preQualifier": ""
+            },
+            "matchedAddress": "1000 PAT NASH DR, BRANSON, MO, 65616"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "fun-time-census",
+    "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=11050+NE+201+Road%2C+Lowry+City%2C+MO+64763&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-10-10T17:57:03.968895+00:00",
+    "status": 200,
+    "finalUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=11050+NE+201+Road%2C+Lowry+City%2C+MO+64763&benchmark=Public_AR_Current&format=json",
+    "bytes": 656,
+    "sha256": "c89c8b6dec8efe4db121f62397672a1d2d72bb6e56c9ba10bf5cd037f1411ed0",
+    "rawFile": "phase4-missouri/recovery-independent-20261010T1753Z/evidence/independent-fun-time-census.body",
+    "response": {
+      "result": {
+        "input": {
+          "address": {
+            "address": "11050 NE 201 Road, Lowry City, MO 64763"
+          },
+          "benchmark": {
+            "isDefault": true,
+            "benchmarkDescription": "Public Address Ranges - Current Benchmark",
+            "id": "4",
+            "benchmarkName": "Public_AR_Current"
+          }
+        },
+        "addressMatches": [
+          {
+            "tigerLine": {
+              "side": "R",
+              "tigerLineId": "23164044"
+            },
+            "coordinates": {
+              "x": -93.739844249626,
+              "y": 38.183365966646
+            },
+            "addressComponents": {
+              "zip": "64763",
+              "streetName": "201",
+              "preType": "",
+              "city": "LOWRY CITY",
+              "preDirection": "NE",
+              "suffixDirection": "",
+              "fromAddress": "11000",
+              "state": "MO",
+              "suffixType": "RD",
+              "toAddress": "11098",
+              "suffixQualifier": "",
+              "preQualifier": ""
+            },
+            "matchedAddress": "11050 NE 201 RD, LOWRY CITY, MO, 64763"
+          }
+        ]
+      }
+    }
+  }
+]

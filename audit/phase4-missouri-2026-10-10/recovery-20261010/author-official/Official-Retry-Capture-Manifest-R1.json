@@ -1,0 +1,117 @@
+{
+  "auditId": "MISSOURI-BOUNDED-OFFICIAL-RETRY-R1",
+  "frozenAt": "2026-10-10T17:54:42.190623+00:00",
+  "runRoot": "phase4-missouri/delta/official-retry-20261010T1751Z",
+  "exactScript": {
+    "path": "phase4-missouri/delta/capture_final_official.py",
+    "bytes": 1038,
+    "sha256": "8251cbb65ac33e475a19b22e2d397bb40e5bfb065ddf22571feab2d1b6410f1d"
+  },
+  "exactScriptCopy": {
+    "path": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/capture_final_official.py",
+    "bytes": 1038,
+    "sha256": "8251cbb65ac33e475a19b22e2d397bb40e5bfb065ddf22571feab2d1b6410f1d"
+  },
+  "helperScript": {
+    "path": "phase4-missouri/delta/capture.py",
+    "bytes": 2008,
+    "sha256": "5b577677e49603ee0bd485631a5a8bd58c7f4eda5602eb41951c936914fd9f7c"
+  },
+  "execution": "python phase4-missouri/delta/capture_final_official.py, executed with this timestamped runRoot as CWD. Original script and helper bytes unchanged. Exactly the seven root URLs defined by the script were requested; ordinary automatic redirects are included. No additional network reads.",
+  "priorFailureManifest": {
+    "path": "phase4-missouri/delta/raw/direct-manifest-official-final.json",
+    "bytes": 1892,
+    "sha256": "a8191edaf349fd3d74b84d7d10af4e69a31d6e59bf25dd909db8e55fe8371b35"
+  },
+  "initialTargetRequests": 7,
+  "http200FinalResponses": 6,
+  "http403Errors": 1,
+  "captures": [
+    {
+      "id": "branson-dmo-list",
+      "url": "https://www.explorebranson.com/events-branson/",
+      "retrievedAt": "2026-10-10T17:51:57.592387+00:00",
+      "error": "HTTP Error 403: Forbidden",
+      "evidenceAssessment": "HTTP 403 response; no error response body retained by exact original script. Transport/access limitation only; not venue closure, contradiction, or refutation of earlier indexed DMO evidence."
+    },
+    {
+      "id": "branson-attraction",
+      "url": "https://www.fieldofscreamsbranson.com/home-1-5-5",
+      "retrievedAt": "2026-10-10T17:51:57.593535+00:00",
+      "status": 200,
+      "finalUrl": "https://www.fieldofscreamsbranson.com/home-1-5-5",
+      "rawFile": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/raw/branson-attraction.html",
+      "bytes": 709433,
+      "sha256": "608d281fb18e045a335602d91da8bf64bc358b05e5f9cdcc27773e022fef05f1",
+      "originalScriptRelativeRawFile": "phase4-missouri/delta/raw/branson-attraction.html",
+      "evidenceAssessment": "Read-only initial target request; automatic redirect handling was unchanged from original script."
+    },
+    {
+      "id": "terrified-tickets",
+      "url": "https://terrifiedexist.ticketleap.com/",
+      "retrievedAt": "2026-10-10T17:51:57.595401+00:00",
+      "status": 200,
+      "finalUrl": "https://www.ticketleap.com/",
+      "rawFile": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/raw/terrified-tickets.html",
+      "bytes": 128464,
+      "sha256": "48a16f3f5cc5400ecc3ec2c9d3b279fb2073573c3dfa355c3498ceafdd92f0cb",
+      "originalScriptRelativeRawFile": "phase4-missouri/delta/raw/terrified-tickets.html",
+      "evidenceAssessment": "Request succeeded but final URL is generic TicketLeap homepage, not a TerrifiedExist event. No attraction-specific invitation/date/expiry was recovered; no closure inferred."
+    },
+    {
+      "id": "fearstone-faq",
+      "url": "https://www.fearstoneforest.com/faq",
+      "retrievedAt": "2026-10-10T17:51:57.596232+00:00",
+      "status": 200,
+      "finalUrl": "https://www.fearstoneforest.com/faq",
+      "rawFile": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/raw/fearstone-faq.html",
+      "bytes": 1080922,
+      "sha256": "ef01c01d44449ce36822f05541ca679a86e6f04803c8099dee55751fd83739ad",
+      "originalScriptRelativeRawFile": "phase4-missouri/delta/raw/fearstone-faq.html",
+      "evidenceAssessment": "Read-only initial target request; automatic redirect handling was unchanged from original script."
+    },
+    {
+      "id": "fearstone-census",
+      "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=85+Benne+Blvd%2C+Camdenton%2C+MO+65020&benchmark=Public_AR_Current&format=json",
+      "retrievedAt": "2026-10-10T17:52:01.730681+00:00",
+      "status": 200,
+      "finalUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=85+Benne+Blvd%2C+Camdenton%2C+MO+65020&benchmark=Public_AR_Current&format=json",
+      "rawFile": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/raw/fearstone-census.html",
+      "bytes": 643,
+      "sha256": "2c682086aaae4224d9405d1a54bf5a005cf04bb6c4e9bfd3161eec5aff4c5dc9",
+      "originalScriptRelativeRawFile": "phase4-missouri/delta/raw/fearstone-census.html",
+      "evidenceAssessment": "Read-only initial target request; automatic redirect handling was unchanged from original script."
+    },
+    {
+      "id": "branson-census",
+      "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1000+Pat+Nash+Dr%2C+Branson%2C+MO+65616&benchmark=Public_AR_Current&format=json",
+      "retrievedAt": "2026-10-10T17:52:02.743874+00:00",
+      "status": 200,
+      "finalUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1000+Pat+Nash+Dr%2C+Branson%2C+MO+65616&benchmark=Public_AR_Current&format=json",
+      "rawFile": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/raw/branson-census.html",
+      "bytes": 647,
+      "sha256": "1ba5568b329ab68709555a59e80c97786693b221f19bf069ffdfdcf86e9c4526",
+      "originalScriptRelativeRawFile": "phase4-missouri/delta/raw/branson-census.html",
+      "evidenceAssessment": "Read-only initial target request; automatic redirect handling was unchanged from original script."
+    },
+    {
+      "id": "fun-time-census",
+      "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=11050+NE+201+Road%2C+Lowry+City%2C+MO+64763&benchmark=Public_AR_Current&format=json",
+      "retrievedAt": "2026-10-10T17:52:03.068047+00:00",
+      "status": 200,
+      "finalUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=11050+NE+201+Road%2C+Lowry+City%2C+MO+64763&benchmark=Public_AR_Current&format=json",
+      "rawFile": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/raw/fun-time-census.html",
+      "bytes": 656,
+      "sha256": "c89c8b6dec8efe4db121f62397672a1d2d72bb6e56c9ba10bf5cd037f1411ed0",
+      "originalScriptRelativeRawFile": "phase4-missouri/delta/raw/fun-time-census.html",
+      "evidenceAssessment": "Read-only initial target request; automatic redirect handling was unchanged from original script."
+    }
+  ],
+  "scope": [
+    "Field of Screams Branson",
+    "Fearstone Forest",
+    "Fun Time Farms",
+    "TerrifiedExist"
+  ],
+  "forbiddenRoutesUsed": false
+}

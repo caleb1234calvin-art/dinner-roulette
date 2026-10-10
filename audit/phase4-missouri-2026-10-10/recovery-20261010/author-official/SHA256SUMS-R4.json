@@ -1,0 +1,188 @@
+{
+  "package": "MISSOURI-FOUR-OFFICIAL-RECOVERY-R4",
+  "frozenAt": "2026-10-10T18:01:46.852543+00:00",
+  "basePath": "phase4-missouri/delta/official-retry-20261010T1751Z",
+  "activeProjection": "Delta-Official-Recovery-Projections-Addendum-R4.json",
+  "members": [
+    {
+      "path": "Branson-Year-Binding-Assessment-R3.json",
+      "bytes": 4696,
+      "sha256": "d5e573da0fafa18c72f0cd50a4b95ec1982703b557e95f9d1a7d14b7e85baebe"
+    },
+    {
+      "path": "Census-Placement-Proposals-R1.json",
+      "bytes": 11241,
+      "sha256": "c6f7caebae5b6a3b371b8b70f3565632f1520893564350389149aaae12311452"
+    },
+    {
+      "path": "Delta-Official-Recovery-Projections-Addendum-R1.json",
+      "bytes": 18405,
+      "sha256": "ac782c42215ba38ff46d60243d92a28764affeb325861e999a366c0c37b93c54"
+    },
+    {
+      "path": "Delta-Official-Recovery-Projections-Addendum-R2.json",
+      "bytes": 18680,
+      "sha256": "02cefea4827ba91971bb95f50a1308fa4e91e04133209c933c0ac97373d2462c"
+    },
+    {
+      "path": "Delta-Official-Recovery-Projections-Addendum-R3.json",
+      "bytes": 28541,
+      "sha256": "8c1d7319e76fe435c986271cf06438984a5bad2706f54341fbf022b671310ed8"
+    },
+    {
+      "path": "Delta-Official-Recovery-Projections-Addendum-R4.json",
+      "bytes": 28452,
+      "sha256": "67d5c19a1739e838f662279cc389061753c20fceb12606ef76f0e07403c510f6"
+    },
+    {
+      "path": "Official-Retry-Capture-Manifest-R1.json",
+      "bytes": 6832,
+      "sha256": "e60997ddb79bcd1c1588f54565db84bd1692335feefe2216a2c72209244e41a8"
+    },
+    {
+      "path": "Prior-Evidence-Hashes.json",
+      "bytes": 13122,
+      "sha256": "5135d8b79f5042a18c8faee7b5fe2cb999f3ab47a1c9908bfb705fab1cb62ccd"
+    },
+    {
+      "path": "Prior-Evidence-Preservation-Check-R1.json",
+      "bytes": 21794,
+      "sha256": "738c00959d669af4ebf132db2b5d5f064e44a0b41b4bf48d7c2534748ea30f25"
+    },
+    {
+      "path": "REPORT-R1.md",
+      "bytes": 3633,
+      "sha256": "a8caa4086902af8c3be0092ccfe1e817907355729cc4f2d72ddff01c5030b4d5"
+    },
+    {
+      "path": "REPORT-R2.md",
+      "bytes": 679,
+      "sha256": "5b6f57c15e38d63fca15d0fa99254601ba75f4a089e356ae8120573fdbcdcb0e"
+    },
+    {
+      "path": "REPORT-R3.md",
+      "bytes": 2220,
+      "sha256": "76252093e2e838769a3c9ff0377305f7fa49b579f1857dadc1f7952ac3bc9beb"
+    },
+    {
+      "path": "REPORT-R4.md",
+      "bytes": 643,
+      "sha256": "9f335ed28b6509c54814e508f2cddeb1d058e97440a9588f35db99240a583ba5"
+    },
+    {
+      "path": "SHA256SUMS-R1.json",
+      "bytes": 4585,
+      "sha256": "d5801605999e0c833a4e80484a2d332993cb245f1d7ede2b996c28389cfbc261"
+    },
+    {
+      "path": "SHA256SUMS-R2.json",
+      "bytes": 5150,
+      "sha256": "c6941e9016fe43e59f15c9f98e629ac8e7d76b140eb8f5996f0f0a1190642f1a"
+    },
+    {
+      "path": "SHA256SUMS-R3.json",
+      "bytes": 6018,
+      "sha256": "c4f01a00b18b22c3a9d0e7b11b068714b33baa23ea0357f855cf4a920bcda356"
+    },
+    {
+      "path": "build_addendum.py",
+      "bytes": 18022,
+      "sha256": "d9b6617fa7f8fd5ae654617c0d19260fc499d1ae8c82d4f75faccfd8b48aa0c1"
+    },
+    {
+      "path": "independent-source-addenda/branson-narrow-official-binding-search.json",
+      "bytes": 10045,
+      "sha256": "661a8bf6130350548a22e62277cf93b51ef83ed644176a2bc8887a4086ab14be"
+    },
+    {
+      "path": "phase4-missouri/delta/capture.py",
+      "bytes": 2008,
+      "sha256": "5b577677e49603ee0bd485631a5a8bd58c7f4eda5602eb41951c936914fd9f7c"
+    },
+    {
+      "path": "phase4-missouri/delta/capture_final_official.py",
+      "bytes": 1038,
+      "sha256": "8251cbb65ac33e475a19b22e2d397bb40e5bfb065ddf22571feab2d1b6410f1d"
+    },
+    {
+      "path": "phase4-missouri/delta/raw/branson-attraction.html",
+      "bytes": 709433,
+      "sha256": "608d281fb18e045a335602d91da8bf64bc358b05e5f9cdcc27773e022fef05f1"
+    },
+    {
+      "path": "phase4-missouri/delta/raw/branson-attraction.txt",
+      "bytes": 1773,
+      "sha256": "097a844b1510ee621db86cdd5ed5f2aaa072284a1ad5a4817523baa1f31f7ecc"
+    },
+    {
+      "path": "phase4-missouri/delta/raw/branson-census.html",
+      "bytes": 647,
+      "sha256": "1ba5568b329ab68709555a59e80c97786693b221f19bf069ffdfdcf86e9c4526"
+    },
+    {
+      "path": "phase4-missouri/delta/raw/direct-manifest-official-final.json",
+      "bytes": 3242,
+      "sha256": "3bf0d9177399415e791609170192f23e43c9cd8d00d15192a0a7f78b1f9efe22"
+    },
+    {
+      "path": "phase4-missouri/delta/raw/fearstone-census.html",
+      "bytes": 643,
+      "sha256": "2c682086aaae4224d9405d1a54bf5a005cf04bb6c4e9bfd3161eec5aff4c5dc9"
+    },
+    {
+      "path": "phase4-missouri/delta/raw/fearstone-faq.html",
+      "bytes": 1080922,
+      "sha256": "ef01c01d44449ce36822f05541ca679a86e6f04803c8099dee55751fd83739ad"
+    },
+    {
+      "path": "phase4-missouri/delta/raw/fearstone-faq.txt",
+      "bytes": 2695,
+      "sha256": "77a88fdd2ed2fdf2919b83a284fd773a2a7ecf91527e5a1199e9412b27942744"
+    },
+    {
+      "path": "phase4-missouri/delta/raw/fun-time-census.html",
+      "bytes": 656,
+      "sha256": "c89c8b6dec8efe4db121f62397672a1d2d72bb6e56c9ba10bf5cd037f1411ed0"
+    },
+    {
+      "path": "phase4-missouri/delta/raw/terrified-tickets.html",
+      "bytes": 128464,
+      "sha256": "48a16f3f5cc5400ecc3ec2c9d3b279fb2073573c3dfa355c3498ceafdd92f0cb"
+    },
+    {
+      "path": "phase4-missouri/delta/raw/terrified-tickets.txt",
+      "bytes": 5391,
+      "sha256": "4276785aa100be16709021b0710dac1042093366ee6e2def88eebca9fbf886fb"
+    },
+    {
+      "path": "prior-inputs/Delta-Eight-Independent-Verdicts-R1.json",
+      "bytes": 37499,
+      "sha256": "717e98f4362a06dc17f4e2e05251f80b456a667dfdacc80a18b69bee9f98ff31"
+    },
+    {
+      "path": "prior-inputs/Delta-Projections-R5.json",
+      "bytes": 82416,
+      "sha256": "59bcde127b2b25ffdba7b3968ca11edc832ef45662ddff7a2e6f11f6a1fc6385"
+    },
+    {
+      "path": "prior-inputs/branson-home.html",
+      "bytes": 761447,
+      "sha256": "de7d8af3a6f991335c791bee51fbbf5fb30c2e8f61e6555bc404cc24c23ce1c0"
+    },
+    {
+      "path": "prior-inputs/direct-manifest-official-final.json",
+      "bytes": 1892,
+      "sha256": "a8191edaf349fd3d74b84d7d10af4e69a31d6e59bf25dd909db8e55fe8371b35"
+    },
+    {
+      "path": "prior-inputs/search3-open3.json",
+      "bytes": 29378,
+      "sha256": "fe6b15f98f29882ef202243e80302d03d470eedad78d568ba308c5b29e35aada"
+    },
+    {
+      "path": "prior-inputs/search5.json",
+      "bytes": 29138,
+      "sha256": "877c21830b861c1251b3090696d0ddc0082e8289c744895199a775fbabc605cf"
+    }
+  ]
+}

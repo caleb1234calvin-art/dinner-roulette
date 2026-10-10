@@ -1,3 +1,100 @@
+# Phase 4 Recovery Gate Complete — Seven-Record Implementation NEXT (2026-10-10 18:07 UTC)
+
+## CURRENT — authoritative checkpoint
+
+This entry supersedes older CURRENT/NEXT statements below. The two exact evidence-recovery operations authorized by the owner at 17:50 UTC are complete, and their independent data/placement review is frozen. **Eight of 17 records have factual and approximate-placement PASS; nine remain factual HOLD.** Nine placement fields have PASS when Cadaver's retained approximate point is counted separately from its factual HOLD. Five records became newly fully eligible in this recovery; three gained new factual clearance. There are **0 REJECT, 0 expired at the 18:06:15 UTC review freeze, 0 runtime imports and 0 new discoveries**.
+
+**Seven records are selected for the next bounded candidate: six potential new runtime identities and one existing Werehouse amendment.** Rolla remains independently clear for October 10 only but is deliberately deferred, not already expired. The selected seven meet the owner's 5–15-record condition without deadline-driven inclusion or padding.
+
+Research quality and factual/placement PASS do not establish implementation, exact-head runtime verification or release PASS. **No implementation candidate SHA/tree exists at this checkpoint.** No source/runtime/test change, merge or deployment accompanies this continuity update.
+
+### Fresh baseline and deployment-safe publication
+
+Remote checks at 18:06:59 UTC reverified:
+- Main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**.
+- Current project production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa**, **READY**, Git source **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**. **52 curated records remain live.** These are metadata checks, not a new browser smoke.
+- Canonical documentation parent **ec5a13c0033d0b182b756716414b66fc07ee5442**, tree **6b385924cea519b4affecc2494cc269fd20f41f4**, on `integration/continuity-refresh-2026-10-07`.
+- The branch's `vercel.json` retains `integration/**: false`; its blob is **65925d91f882a10433e3eb43f53ed802914c969b**. No deployment or protection configuration is changed.
+- PR #61 remains draft/open/unmerged at **c78b97175cc094436e454fa888e1ed83486f750d**. Adaptive experimental ref remains **d6d6f91b16aecd27773168c68d3c8ebdc33001c7**. Both stay parked and excluded from the Missouri candidate.
+
+## Exact recovery outcomes and accepted scope
+
+The immutable [six-record independent review](audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Recovery-Independent-Review-R1.json), [17-record ledger](audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json) and [accepted seven-record subset](audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Accepted-Seven-Record-Subset-R1.json) govern exact fields and constraints.
+
+### Seven selected: factual PASS and approximate-placement PASS
+
+- **MO26-006 Wolfmans House Of Screams:** prior explicit 2026 date subset and approximate Census placement retained. Expiry **2026-11-01T05:00:00Z**.
+- **MO26-004 The Werehouse:** amend existing **date-night-werehouse-joplin**, never add a duplicate venue. Retain its exact 2026 subset and approximate placement. Remove legacy machine-hour/Open Now confidence through provider, cache and saved paths. Expiry **2026-11-01T05:00:00Z**.
+- **DELTA3-FEARSTONE Fearstone Forest:** prior nine haunt dates through October 30 retained; fresh FAQ/Census supports approximate **38.016075473125, -92.758610359304**. Operator point corroborates within 8.505 m. Preserve October 17 adults 18+/photo ID/waiver, ordinary-night age/guardian/independent-walking rules, operator-stated access limitation and lightning risk. Exclude separate October 31 Kids Night. Expiry **2026-10-31T05:00:00Z**; hours remain unknown.
+- **DELTA3-FUN-TIME Fun Time Farms:** established 2026 season retained; fresh Census supports approximate **38.183365966646, -93.739844249626**. Specific haunted/daytime subtype dates, hours and actual operating end remain unknown. **2026-11-01T05:00:00Z is an editorial visibility cutoff**, not a claimed business closing date. Do not convert directory general-farm dates into verified haunted-maze dates.
+- **MO26-055 Carolyn's Pumpkin Patch:** fresh operator evidence supports September 19–October 31, 2026, Thursday–Monday. Independent rendered official Directions shortlink reproduces named place **39.1857337, -94.3697357**, matching public visitor address and website. Historical redirect destination approximately 416 m away and Census interpolation approximately 860 m away remain disclosed and excluded; no averaging. Preserve ticket check-in/last-admission rules and material visitor restrictions without inventing daily clock hours. Liberty Corn Maze is distinct. Expiry **2026-11-01T05:00:00Z**.
+- **DELTA2-TERROR66 Terror on Route 66:** fresh operator/ticket evidence supports the 2026 season through November 1, with exact nights/hours unknown. Independent named place **38.2432122, -91.1408597** agrees with the West visitor address; operator address-map point is 3.179 m away. Exclude the distant ticket-map point approximately 2.242 km away and old East address. Preserve waiver, general no-touch, Interactive Touch 10+/guardian/ID and Rated R 18+/full-contact/grouping restrictions. Routine price/refund clutter is removed. Expiry **2026-11-02T06:00:00Z**, correctly after DST fall-back.
+- **DELTA6-BRANSON-FIELD Field of Screams Branson:** conservative **17 operator-listed dates, October 10–November 14, 2026**, accepted. A narrow independent result from the exact official DMO calendar and official homepage supplies attraction-specific 2026 year/common-end binding. It is indexed official content, not freshly readable origin HTML; the direct DMO 403 remains recorded. Different October 2/4/10 opening bounds remain unresolved historical fields; five earlier operator dates are excluded without cancellation inference. Never expand a DMO range into daily operation. Accepted Census point **36.645101695991, -93.284825773276** is approximate. Crossover nights are **November 6, 7, 13 and 14 only**; expiry **2026-11-15T06:00:00Z** (CST). October hours remain qualified; crossover hours unknown.
+
+All accepted coordinates support approximate map/distance placement only. Directions use supported public street addresses, never asserted entrances, parking or rideshare drop-off positions. Keep **Open Now never, machine opening intervals null, no 2027 rollover**, and no live ticket/weather/cancellation/provider guarantee.
+
+### Rolla: clear at review, deliberately deferred
+
+**DELTA6-ROLLA Timmy's Terror / A Field of Screams** retains factual and placement PASS for **October 10 only**. Hard cutoff **2026-10-11T05:00:00Z**. It is not expired at this checkpoint but is excluded from the seven-record candidate. At the cutoff it becomes expired and must not be imported or counted as currently eligible. No extension or inferred recurrence.
+
+### Nine factual HOLDs
+
+- **Cadaver Zone MO26-007:** attraction-specific reliable **2026 operation/date binding and supported expiry** still missing. Prior intentionally public address and approximate-placement PASS retained. Repeated disputed same-extractor text is not independent corroboration. Cadaver remains parked.
+- **Fear Factory:** official season evidence remains 2025; no reliable 2026 operation/expiry; lifecycle conflict unresolved.
+- **Waco:** no accepted 2026 invitation/date/expiry. Transport failures do not establish closure.
+- **Rising:** unresolved current closing/no-longer-operational/reopening conflict despite recovered 2026 directory dates.
+- **Twisted Minds:** undated Richwoods identity/address only; no reliable 2026 invitation/date/expiry; California namesake excluded.
+- **TerrifiedExist:** the exact TicketLeap route redirects to generic platform marketing, providing no attraction-specific current visitor dates or expiry; placement HOLD.
+- **Lemp:** unresolved first-party 2026 operation conflict and no attraction-specific date/ticket binding; never borrow Darkness dates.
+- **BOSS Fort Leonard Wood:** 2026 event evidence exists, but general-public eligibility and event-specific military-base access remain unresolved.
+- **Macabre Cinema:** no dated special established after suspended traditional season/redevelopment; no permanent-closure claim.
+
+There is no statewide-exhaustion claim. Residential/home-haunt work stays separate.
+
+## Permission recovery and immutable provenance
+
+The owner explicitly authorized both exact previously blocked operations at 17:50 UTC. Their permission blockers are now resolved:
+1. Carolyn/Terror public-source captures and corrected research JSON were retained in the originally intended placement/evidence directory, then independently reviewed. Fresh current operator facts govern despite a disclosed historical-copy research-hash mismatch; no old/new byte-equivalence is invented.
+2. The exact canceled seven-request official/Census batch completed once: six HTTP 200 results and one direct Branson DMO HTTP 403. Original failed requests and all prior evidence were preserved. The exact TicketLeap redirect is unsuccessful venue evidence despite HTTP 200. A narrow independent official-DMO search later resolved Branson's current bounded year binding.
+
+The independent FAQ/Census recapture first left a partial/canceled attempt, preserved separately; one explicitly authorized exact retry completed. All four final raw responses byte-match the author evidence. No denied mirror, bypass or unapproved alternate operation is included. Research quality PASS is at these stated source/access limits.
+
+Exact active package identities:
+- **Carolyn-Terror-Public-Source-Recovery-R1** projection SHA-256 **9cd59d743b59ff25c5cb2c1d89c87f7509fd2c6f8da5c0fc1aa4e9a0869fa548**; manifest **957009d868ea0c545ace5b5c5c82ae38d981626974c9d2b5bcc967dd1b521560**.
+- **MISSOURI-FOUR-OFFICIAL-RECOVERY-ADDENDUM-R4** projection SHA-256 **67d5c19a1739e838f662279cc389061753c20fceb12606ef76f0e07403c510f6**; R4 manifest **d1cb4bde0a6f6204467d4f207e7d99b005a671ec180363048fdb606b048e847e**. Original seven-request manifest **e60997ddb79bcd1c1588f54565db84bd1692335feefe2216a2c72209244e41a8**.
+- **PHASE4-RECOVERY-INDEPENDENT-REVIEW-R1**, frozen **2026-10-10T18:06:15.975186+00:00**: review SHA-256 **49c8800ba964923d70dda46aeeb86a653d201fda251134c335523a5abfce9484**; 29-member manifest **a240c420065b79858d81491ca744587d80256ca0bf8c2407a80fd850039d0131**.
+- **PHASE4-17-RECORD-LEDGER-RECOVERY-R1** SHA-256 **3b1772c055e8b2852b732b56b9e9a0756755c31ef6c8a57341c684cab9f6a7b6**.
+- **PHASE4-ACCEPTED-SEVEN-RECORD-SUBSET-R1** SHA-256 **827eb67919c99dec61991cbc01cba63097ccd5dd1868de355b5f79b07d348882**; independent handoff **89abfdc06945182830c7578a8d61ae7034f1770664077e29f4af33bb5c634ec2**.
+
+The [minimal immutable audit archive](audit/phase4-missouri-2026-10-10/recovery-20261010/Archive-Provenance-R1.json) maps exact source files to repository copies with sizes/hashes. Manifests retain full package membership and source provenance; this is not represented as a full raw-capture archive. All 42 prior independent members, 24 Carolyn/Terror members, two prior references and 36 official R4 members were checked by the independent verifier. Historical reports remain unchanged.
+
+## NEXT — fresh main-based seven-record candidate
+
+After this canonical checkpoint is published and fully read back, proceed with the owner's authorized **seven-record candidate**, a bounded 5–15-record batch, from freshly verified main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**. Do not inherit PR #61/c78 or adaptive-loader history. Use the exact accepted seven-record artifact; normalize schema without changing source facts. The Werehouse is one amendment, so the batch is six potential additions plus one amendment.
+
+Record the candidate's exact SHA, tree and parent when created. **No production/live import, merge or deployment until the exact implementation candidate has been independently verified and any separate release authority is satisfied.** Data/placement PASS alone is insufficient.
+
+Required exact-head review includes:
+- All discovery, detail, Options/Pick/Plan, ranking, aliases/provider merges, dedupe, address Directions and compact consumer-copy paths.
+- Werehouse duplicate prevention and removal of old machine-hour/Open Now confidence across provider/cache/saved paths.
+- Expired saved/cache/provider/stale-client suppression and wall-clock expiry without waiting for successful RPC. For every relevant cutoff test minus 1 ms, exact, plus 1 ms, destination America/Chicago dates and DST.
+- Branson's supported November 6/7/13/14 crossover visibility beyond the ordinary October 31/November 1 seasonal cutoff, correct November 15 **CST** removal, no other inferred dates and no 2027 revival.
+- Preservation of material access restrictions and unknowns, no fabricated exact prices/full hours/entrance precision, and no inappropriate consumer audit/refund boilerplate.
+
+Stop before release/merge/deployment. Reverify time-sensitive facts at implementation and review checkpoints.
+
+## HOLD — performance, release and inherited limits
+
+Performance remains **PARKED / MORE EVIDENCE REQUIRED, provider-limited category B**. **“Radial discovery becomes an audit layer.”** remains design intent. Historical c78 verification and adaptive focused tests do not transfer to this candidate or establish architecture adoption. Live run 38039658685 stopped at 8 starts/8 settlements with 8 consecutive provider failures, no completed case/audit requests/usable control timing; no new traffic, budget reset, reserve, follow-up or Phase 3 hardening is authorized by that result. Failed-primary warm radius refetch remains HOLD.
+
+Cadaver and the eight other exact factual HOLDs remain parked. Runtime implementation/release is not yet verified. Physical Android/WebView/GPS remains HOLD; signing/Play is out of scope. Retain inherited lint warnings, narrow Directions-label clipping, approximate placement, conservative Open Now, temporary Other icon and no live provider/weather/ticket guarantees. Historical waivers remain consumed.
+
+No source/runtime/test/configuration change, operator contact, paid API, merge or deployment was performed by this documentation task. Avoid docs-only production deployment. All older continuity text below is preserved byte-for-byte as history, including historical permission failures and superseded gates.
+
+**PARENT CONTINUITY COMMIT:** `ec5a13c0033d0b182b756716414b66fc07ee5442`; **PARENT TREE:** `6b385924cea519b4affecc2494cc269fd20f41f4`. Prior full file: **727,034 bytes**, SHA-256 **e601a98380a0511d6ca6e1f1ac7e3ac6dfe92ba8c2e984cdf6e5058c0b393180**.
+
+---
+
 # Phase 4 Independent Review Complete — Research/Placement Decision HOLD (2026-10-10 17:00 UTC)
 
 ## CURRENT — authoritative checkpoint

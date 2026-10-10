@@ -1,0 +1,544 @@
+{
+  "auditId": "MISSOURI-FOUR-OFFICIAL-RECOVERY-ADDENDUM-R4",
+  "frozenAt": "2026-10-10T18:01:46.852543+00:00",
+  "pinnedContinuity": "ec5a13c0033d0b182b756716414b66fc07ee5442",
+  "mainBaselineParentVerified": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "priorProjections": {
+    "path": "phase4-missouri/delta/Delta-Projections-R5.json",
+    "bytes": 82416,
+    "sha256": "59bcde127b2b25ffdba7b3968ca11edc832ef45662ddff7a2e6f11f6a1fc6385"
+  },
+  "priorIndependentVerdict": {
+    "path": "phase4-missouri/independent-data/Delta-Eight-Independent-Verdicts-R1.json",
+    "bytes": 37499,
+    "sha256": "717e98f4362a06dc17f4e2e05251f80b456a667dfdacc80a18b69bee9f98ff31"
+  },
+  "scope": "Four authorized records only; additive immutable evidence, no source/runtime/test edits, import, repository publication, merge, deployment, paid API, operator contact, authentication/bypass, mirror, or broad sweep.",
+  "records": [
+    {
+      "recordId": "DELTA6-BRANSON-FIELD",
+      "name": "Field of Screams Branson",
+      "priorIndependentFactualVerdict": "HOLD",
+      "priorIndependentVerdictSource": {
+        "path": "phase4-missouri/independent-data/Delta-Eight-Independent-Verdicts-R1.json",
+        "bytes": 37499,
+        "sha256": "717e98f4362a06dc17f4e2e05251f80b456a667dfdacc80a18b69bee9f98ff31"
+      },
+      "researchRole": "Author proposal; independent review pending",
+      "acceptedPlacement": null,
+      "candidatePlacement": {
+        "latitude": 36.645101695991,
+        "longitude": -93.284825773276,
+        "precision": "approximate address-range point",
+        "method": "U.S. Census Public_AR_Current single normalized address match",
+        "directionsMode": "address",
+        "verifiedEntrance": false,
+        "verifiedParking": false,
+        "verifiedRideshareDropoff": false
+      },
+      "consumerProjectionProposal": {
+        "name": "Field of Screams Branson",
+        "category": "Haunted House",
+        "address": "1000 Pat Nash Drive, Branson, MO 65616",
+        "website": "https://www.fieldofscreamsbranson.com/home-1",
+        "seasonYear": 2026,
+        "exactActiveDates": [
+          "2026-10-10",
+          "2026-10-11",
+          "2026-10-15",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-22",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-29",
+          "2026-10-30",
+          "2026-10-31",
+          "2026-11-06",
+          "2026-11-07",
+          "2026-11-13",
+          "2026-11-14"
+        ],
+        "listingExpiresAt": "2026-11-15T00:00:00-06:00",
+        "expiryKind": "last-supported-date visibility cutoff",
+        "hoursState": "partial",
+        "hoursText": "Posted October hours: Thursday/Sunday 7–11 p.m.; Friday/Saturday 7 p.m.–midnight; box office 6 p.m. November crossover hours are unverified.",
+        "admission": null,
+        "details": [
+          "Listed nights, October 10–November 14, 2026; check operator updates before travel.",
+          "Indoor haunted attraction at Ballparks of America, distinct from Field of Screams Nixa.",
+          "November 6–7 and 13–14 are a Halloween/Christmas crossover event; crossover hours are unverified.",
+          "The operator describes intense audio, live actors, fog and strobes.",
+          "Approximate location; Directions use 1000 Pat Nash Drive, Branson, MO 65616."
+        ],
+        "openNowPolicy": "never",
+        "machineOpeningIntervals": null,
+        "operatorSeasonStart": null,
+        "timeZone": "America/Chicago"
+      },
+      "priorAcceptedDates": null,
+      "priorAcceptedExpiry": null,
+      "runtimeEligible": false,
+      "automaticImportAllowed": false,
+      "releaseApproved": false,
+      "openNowPolicy": "never",
+      "machineOpeningIntervals": null,
+      "directionsMode": "address",
+      "no2027Rollover": true,
+      "researchRecommendation": "FACTUAL AND APPROXIMATE PLACEMENT CLEARANCE CANDIDATE; independent review required",
+      "newEvidence": {
+        "placement": {
+          "id": "branson-census",
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1000+Pat+Nash+Dr%2C+Branson%2C+MO+65616&benchmark=Public_AR_Current&format=json",
+          "retrievedAt": "2026-10-10T17:52:02.743874+00:00",
+          "status": 200,
+          "finalUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1000+Pat+Nash+Dr%2C+Branson%2C+MO+65616&benchmark=Public_AR_Current&format=json",
+          "rawFile": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/raw/branson-census.html",
+          "bytes": 647,
+          "sha256": "1ba5568b329ab68709555a59e80c97786693b221f19bf069ffdfdcf86e9c4526",
+          "originalScriptRelativeRawFile": "phase4-missouri/delta/raw/branson-census.html",
+          "evidenceAssessment": "Read-only initial target request; automatic redirect handling was unchanged from original script."
+        },
+        "operatorAttractionPage": {
+          "id": "branson-attraction",
+          "url": "https://www.fieldofscreamsbranson.com/home-1-5-5",
+          "retrievedAt": "2026-10-10T17:51:57.593535+00:00",
+          "status": 200,
+          "finalUrl": "https://www.fieldofscreamsbranson.com/home-1-5-5",
+          "rawFile": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/raw/branson-attraction.html",
+          "bytes": 709433,
+          "sha256": "608d281fb18e045a335602d91da8bf64bc358b05e5f9cdcc27773e022fef05f1",
+          "originalScriptRelativeRawFile": "phase4-missouri/delta/raw/branson-attraction.html",
+          "evidenceAssessment": "Read-only initial target request; automatic redirect handling was unchanged from original script."
+        },
+        "decisiveDmoAttempt": {
+          "id": "branson-dmo-list",
+          "url": "https://www.explorebranson.com/events-branson/",
+          "retrievedAt": "2026-10-10T17:51:57.592387+00:00",
+          "error": "HTTP Error 403: Forbidden",
+          "evidenceAssessment": "HTTP 403 response; no error response body retained by exact original script. Transport/access limitation only; not venue closure, contradiction, or refutation of earlier indexed DMO evidence."
+        },
+        "officialDmoYearBinding": {
+          "sourceClass": "official tourism/DMO indexed content",
+          "sourceUrls": [
+            "https://www.explorebranson.com/events-branson/",
+            "https://www.explorebranson.com/"
+          ],
+          "captureFile": "phase4-missouri/delta/official-retry-20261010T1751Z/independent-source-addenda/branson-narrow-official-binding-search.json",
+          "sha256": "661a8bf6130350548a22e62277cf93b51ef83ed644176a2bc8887a4086ab14be",
+          "bytes": 10045,
+          "suppliedBy": "Independent recovery verifier",
+          "queryReportedByVerifier": "site:explorebranson.com/events-branson/ \"Field of Screams Branson\" \"2026\"",
+          "retrievedAt": null,
+          "retrievalTimestampQualification": "Exact search start timestamp was not serialized in this result file; source file write time is separately recorded and is not presented as a fetch timestamp.",
+          "sourceFileWrittenAt": "2026-10-10T17:57:48.285112+00:00",
+          "authorInspectedAt": "2026-10-10T18:00:18.960662+00:00",
+          "sourceMode": "Search-indexed full result text from official DMO URLs; not fresh readable origin HTML.",
+          "crawlLabelsAsReturned": {
+            "eventsCalendar": "Crawled: 2 days ago",
+            "homepage": "Crawled: today"
+          },
+          "qualification": "Attraction-specific named Field of Screams Branson/Ballparks of America entries provide 2026 year binding and November 14 end; site-wide calendar headings/copyright and unrelated events are not evidence. Crawl labels do not verify all venue fields or live cancellation/inventory."
+        }
+      },
+      "sourceAssessment": {
+        "recordId": "DELTA6-BRANSON-FIELD",
+        "source": {
+          "sourceClass": "official tourism/DMO indexed content",
+          "sourceUrls": [
+            "https://www.explorebranson.com/events-branson/",
+            "https://www.explorebranson.com/"
+          ],
+          "captureFile": "phase4-missouri/delta/official-retry-20261010T1751Z/independent-source-addenda/branson-narrow-official-binding-search.json",
+          "sha256": "661a8bf6130350548a22e62277cf93b51ef83ed644176a2bc8887a4086ab14be",
+          "bytes": 10045,
+          "suppliedBy": "Independent recovery verifier",
+          "queryReportedByVerifier": "site:explorebranson.com/events-branson/ \"Field of Screams Branson\" \"2026\"",
+          "retrievedAt": null,
+          "retrievalTimestampQualification": "Exact search start timestamp was not serialized in this result file; source file write time is separately recorded and is not presented as a fetch timestamp.",
+          "sourceFileWrittenAt": "2026-10-10T17:57:48.285112+00:00",
+          "authorInspectedAt": "2026-10-10T18:00:18.960662+00:00",
+          "sourceMode": "Search-indexed full result text from official DMO URLs; not fresh readable origin HTML.",
+          "crawlLabelsAsReturned": {
+            "eventsCalendar": "Crawled: 2 days ago",
+            "homepage": "Crawled: today"
+          },
+          "qualification": "Attraction-specific named Field of Screams Branson/Ballparks of America entries provide 2026 year binding and November 14 end; site-wide calendar headings/copyright and unrelated events are not evidence. Crawl labels do not verify all venue fields or live cancellation/inventory."
+        },
+        "fieldScope": "Current-season year binding plus conservative date-subset projection, not a full-field freshness or live-operation guarantee.",
+        "operatorSource": {
+          "id": "branson-home",
+          "url": "https://www.fieldofscreamsbranson.com/home-1",
+          "retrievedAt": "2026-10-10T09:15:58.295597+00:00",
+          "rawFile": "phase4-missouri/delta/raw/branson-home.html",
+          "sha256": "de7d8af3a6f991335c791bee51fbbf5fb30c2e8f61e6555bc404cc24c23ce1c0"
+        },
+        "operatorOriginalMonthDayDates": {
+          "October": [
+            2,
+            3,
+            4,
+            8,
+            9,
+            10,
+            11,
+            15,
+            16,
+            17,
+            18,
+            22,
+            23,
+            24,
+            25,
+            29,
+            30,
+            31
+          ],
+          "November": [
+            6,
+            7,
+            13,
+            14
+          ]
+        },
+        "observedBounds": {
+          "operatorMonthDayListFirst": "October 2; operator body does not print year",
+          "indexedOfficialDmoCalendar": "October 4, 2026 – November 14, 2026",
+          "indexedOfficialDmoHomepage": "October 10, 2026 – November 14, 2026"
+        },
+        "reconciliation": "These lower bounds differ. No claim is made that October 2/3 were canceled, that the season opened October 4/10, or that calendar/homepage cards are definitive first-operating-day evidence. The author deliberately proposes only the 17 operator-listed dates from October 10 onward, within both DMO ranges. The DMO supplies explicit year and common end; only the operator list supplies individual active dates. No dates between listed nights are inferred.",
+        "excludedEarlierOperatorDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-04",
+          "2026-10-08",
+          "2026-10-09"
+        ],
+        "excludedDateReason": "Outside conservative current/future subset; retained historical evidence, not rejected or described as canceled.",
+        "proposedExactActiveDates": [
+          "2026-10-10",
+          "2026-10-11",
+          "2026-10-15",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-22",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-29",
+          "2026-10-30",
+          "2026-10-31",
+          "2026-11-06",
+          "2026-11-07",
+          "2026-11-13",
+          "2026-11-14"
+        ],
+        "operatorSeasonStart": null,
+        "proposedLastSupportedDate": "2026-11-14",
+        "proposedListingExpiresAt": "2026-11-15T00:00:00-06:00",
+        "proposedExpiryUtc": "2026-11-15T06:00:00Z",
+        "expiryMeaning": "Midnight destination-local visibility cutoff after the last explicitly supported crossover date, not a promise of admission until midnight.",
+        "novemberSubtype": "Operator labels November 6/7 and 13/14 Halloween/Christmas crossover. Those four dates are explicit; November 1–5/8–12 and November 15 onward are not inferred.",
+        "unresolvedFields": [
+          "October 2 versus calendar October 4 season-opening discrepancy is not resolved as historical fact.",
+          "Exact November crossover hours, prices, age restrictions, accessibility and live inventory remain unverified."
+        ],
+        "origin403Retained": true,
+        "sourceAccessQualification": "The direct DMO403 remains historical evidence of access failure. It does not negate independently reproduced indexed official content. No mirror, bypass, or operator contact used.",
+        "independentReview": "PENDING"
+      },
+      "acceptedDates": null,
+      "acceptedExpiry": null,
+      "remainingBlockers": [
+        "Independent assessment of the combined indexed-official-year/operator-date/approximate-placement proposal.",
+        "No implementation or exact-candidate lifecycle verification has occurred."
+      ],
+      "proposedExactActiveDates": [
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-13",
+        "2026-11-14"
+      ],
+      "proposedExpiry": "2026-11-15T00:00:00-06:00",
+      "requiredFutureRuntimeVerification": [
+        "Use America/Chicago destination dates and never infer daily operation from the DMO range.",
+        "The verified late-fall record must survive the ordinary October 31/November 1 seasonal cutoff; supported crossover dates must remain visible/selectable under the intended date-filter policy. Do not claim other November dates are active.",
+        "Prove correct visibility on November 6, 7, 13 and 14 and correct removal at 2026-11-15T06:00:00Z. Test cutoff minus 1 ms, exact cutoff, and plus 1 ms.",
+        "Test DST fall-back November 1, 2026: October dates use CDT; November 14/15 use CST. Do not reuse a fixed -05:00 offset for expiry.",
+        "Apply the same exact lifecycle and restriction behavior across discovery, detail, picks/ranking, provider merges, saved/cache replay and stale-client paths. Expiry must update without waiting for a successful RPC.",
+        "Keep Open Now fail-closed/never and machine opening intervals null, including qualified October hours and unknown crossover hours.",
+        "Use approximate point only for reviewed map/distance purposes; Directions stay address-based. No entrance/parking/drop-off precision.",
+        "No 2027 recurrence, rollover, fallback date synthesis, or saved/cache revival after expiry."
+      ]
+    },
+    {
+      "recordId": "DELTA3-FEARSTONE",
+      "name": "Fearstone Forest Haunted Trail",
+      "priorIndependentFactualVerdict": "PASS",
+      "priorIndependentVerdictSource": {
+        "path": "phase4-missouri/independent-data/Delta-Eight-Independent-Verdicts-R1.json",
+        "bytes": 37499,
+        "sha256": "717e98f4362a06dc17f4e2e05251f80b456a667dfdacc80a18b69bee9f98ff31"
+      },
+      "researchRole": "Author proposal; independent review pending",
+      "acceptedPlacement": null,
+      "candidatePlacement": {
+        "latitude": 38.016075473125,
+        "longitude": -92.758610359304,
+        "precision": "approximate address-range point",
+        "method": "U.S. Census Public_AR_Current single normalized address match",
+        "directionsMode": "address",
+        "verifiedEntrance": false,
+        "verifiedParking": false,
+        "verifiedRideshareDropoff": false
+      },
+      "consumerProjectionProposal": {
+        "name": "Fearstone Forest Haunted Trail",
+        "category": "Haunted House",
+        "address": "85 Benne Blvd, Camdenton, MO 65020",
+        "website": "https://www.fearstoneforest.com/",
+        "seasonYear": 2026,
+        "exactActiveDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30"
+        ],
+        "listingExpiresAt": "2026-10-31T00:00:00-05:00",
+        "expiryKind": "last-supported-date visibility cutoff",
+        "hoursState": "unknown",
+        "hoursText": null,
+        "admission": null,
+        "details": [
+          "October 17 is adults 18+ only with valid photo ID. A waiver is required.",
+          "On ordinary haunt nights, the operator recommends ages 12+. Children under 12 must have a parent or guardian and be able to walk independently.",
+          "The operator FAQ says the attraction is not “handicap accessible.” Check whether the trail is suitable for your access needs before visiting.",
+          "Outdoor haunted trail; lightning may delay or cancel the night. Check current operator hours and weather updates before travel.",
+          "Separate no-scare Kids Night October 31, 4–6 p.m., is not included in this haunted-trail schedule.",
+          "Approximate location; Directions use 85 Benne Blvd, not the organizer’s Highway 5 address."
+        ],
+        "openNowPolicy": "never",
+        "machineOpeningIntervals": null
+      },
+      "priorAcceptedDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30"
+      ],
+      "priorAcceptedExpiry": "2026-10-31T00:00:00-05:00",
+      "runtimeEligible": false,
+      "automaticImportAllowed": false,
+      "releaseApproved": false,
+      "openNowPolicy": "never",
+      "machineOpeningIntervals": null,
+      "directionsMode": "address",
+      "no2027Rollover": true,
+      "researchRecommendation": "PLACEMENT CLEARANCE CANDIDATE; retain prior nine-date factual PASS and review FAQ additions",
+      "newEvidence": {
+        "address": {
+          "id": "fearstone-faq",
+          "url": "https://www.fearstoneforest.com/faq",
+          "retrievedAt": "2026-10-10T17:51:57.596232+00:00",
+          "status": 200,
+          "finalUrl": "https://www.fearstoneforest.com/faq",
+          "rawFile": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/raw/fearstone-faq.html",
+          "bytes": 1080922,
+          "sha256": "ef01c01d44449ce36822f05541ca679a86e6f04803c8099dee55751fd83739ad",
+          "originalScriptRelativeRawFile": "phase4-missouri/delta/raw/fearstone-faq.html",
+          "evidenceAssessment": "Read-only initial target request; automatic redirect handling was unchanged from original script."
+        },
+        "placement": {
+          "id": "fearstone-census",
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=85+Benne+Blvd%2C+Camdenton%2C+MO+65020&benchmark=Public_AR_Current&format=json",
+          "retrievedAt": "2026-10-10T17:52:01.730681+00:00",
+          "status": 200,
+          "finalUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=85+Benne+Blvd%2C+Camdenton%2C+MO+65020&benchmark=Public_AR_Current&format=json",
+          "rawFile": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/raw/fearstone-census.html",
+          "bytes": 643,
+          "sha256": "2c682086aaae4224d9405d1a54bf5a005cf04bb6c4e9bfd3161eec5aff4c5dc9",
+          "originalScriptRelativeRawFile": "phase4-missouri/delta/raw/fearstone-census.html",
+          "evidenceAssessment": "Read-only initial target request; automatic redirect handling was unchanged from original script."
+        },
+        "faqFacts": {
+          "ordinaryNightAgeRecommendation": "12 and older recommended; under 12 must be accompanied by parent/guardian and able to walk independently. Adult-night 18+ requirement overrides ordinary-night guidance.",
+          "adultNight": "18 and older, photo ID required. Prior accepted October 17 date and waiver retained.",
+          "accessibility": "Operator FAQ states the attraction is not handicap accessible; no more specific accessibility assessment is inferred.",
+          "weather": "Outdoor facility remains open in rain; lightning can delay or cancel the night. No weather-status guarantee."
+        }
+      },
+      "unchangedConstraints": [
+        "Nine accepted October haunt dates only; October 31 Kids Night excluded.",
+        "October 17 adult 18+ / photo ID / waiver restrictions preserved.",
+        "Expiry 2026-10-31T00:00:00-05:00 retained; unknown hours and null machine intervals."
+      ],
+      "remainingBlockers": [
+        "Independent assessment of new approximate placement and FAQ projection additions."
+      ]
+    },
+    {
+      "recordId": "DELTA3-FUN-TIME",
+      "name": "Fun Time Farms Haunted Corn MAiZE",
+      "priorIndependentFactualVerdict": "PASS",
+      "priorIndependentVerdictSource": {
+        "path": "phase4-missouri/independent-data/Delta-Eight-Independent-Verdicts-R1.json",
+        "bytes": 37499,
+        "sha256": "717e98f4362a06dc17f4e2e05251f80b456a667dfdacc80a18b69bee9f98ff31"
+      },
+      "researchRole": "Author proposal; independent review pending",
+      "acceptedPlacement": null,
+      "candidatePlacement": {
+        "latitude": 38.183365966646,
+        "longitude": -93.739844249626,
+        "precision": "approximate address-range point",
+        "method": "U.S. Census Public_AR_Current single normalized address match",
+        "directionsMode": "address",
+        "verifiedEntrance": false,
+        "verifiedParking": false,
+        "verifiedRideshareDropoff": false
+      },
+      "consumerProjectionProposal": {
+        "name": "Fun Time Farms Corn MAiZE",
+        "categories": [
+          "Corn Maze",
+          "Haunted House"
+        ],
+        "address": "11050 NE 201 Road, Lowry City, MO 64763",
+        "website": "https://www.facebook.com/FunTimeFarms/posts/we-are-one-month-out-from-our-opening-day-heres-our-updated-price-list-for-the-2/1544670360793681/",
+        "seasonYear": 2026,
+        "exactActiveDates": null,
+        "operatorSeasonStart": null,
+        "operatorSeasonEnd": null,
+        "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+        "expiryKind": "editorial visibility cutoff, not operating dates",
+        "hoursState": "unknown",
+        "hoursText": null,
+        "admission": null,
+        "details": [
+          "2026 season advertised by the operator; exact dates and hours are unverified. Check current updates before travel.",
+          "Approximate location; Directions use the listed visitor address."
+        ],
+        "openNowPolicy": "never",
+        "machineOpeningIntervals": null
+      },
+      "priorAcceptedDates": null,
+      "priorAcceptedExpiry": "2026-11-01T00:00:00-05:00",
+      "runtimeEligible": false,
+      "automaticImportAllowed": false,
+      "releaseApproved": false,
+      "openNowPolicy": "never",
+      "machineOpeningIntervals": null,
+      "directionsMode": "address",
+      "no2027Rollover": true,
+      "researchRecommendation": "PLACEMENT CLEARANCE CANDIDATE; retain prior limited factual PASS",
+      "newEvidence": {
+        "placement": {
+          "id": "fun-time-census",
+          "url": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=11050+NE+201+Road%2C+Lowry+City%2C+MO+64763&benchmark=Public_AR_Current&format=json",
+          "retrievedAt": "2026-10-10T17:52:03.068047+00:00",
+          "status": 200,
+          "finalUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=11050+NE+201+Road%2C+Lowry+City%2C+MO+64763&benchmark=Public_AR_Current&format=json",
+          "rawFile": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/raw/fun-time-census.html",
+          "bytes": 656,
+          "sha256": "c89c8b6dec8efe4db121f62397672a1d2d72bb6e56c9ba10bf5cd037f1411ed0",
+          "originalScriptRelativeRawFile": "phase4-missouri/delta/raw/fun-time-census.html",
+          "evidenceAssessment": "Read-only initial target request; automatic redirect handling was unchanged from original script."
+        }
+      },
+      "unchangedConstraints": [
+        "Exact haunted/daytime subtype dates and hours remain unknown, as do operator season start/end.",
+        "November 1 midnight CDT cutoff remains editorial visibility policy, not an asserted operating end.",
+        "No weekly haunted-maze pattern promoted to confirmed 2026 consumer schedule.",
+        "Consumer admission null; machine intervals null."
+      ],
+      "remainingBlockers": [
+        "Independent assessment of new approximate placement."
+      ]
+    },
+    {
+      "recordId": "DELTA3-TERRIFIEDEXIST",
+      "name": "TerrifiedExist Haunted Attractions",
+      "priorIndependentFactualVerdict": "HOLD",
+      "priorIndependentVerdictSource": {
+        "path": "phase4-missouri/independent-data/Delta-Eight-Independent-Verdicts-R1.json",
+        "bytes": 37499,
+        "sha256": "717e98f4362a06dc17f4e2e05251f80b456a667dfdacc80a18b69bee9f98ff31"
+      },
+      "researchRole": "Author proposal; independent review pending",
+      "acceptedPlacement": null,
+      "candidatePlacement": null,
+      "consumerProjectionProposal": null,
+      "priorAcceptedDates": null,
+      "priorAcceptedExpiry": null,
+      "runtimeEligible": false,
+      "automaticImportAllowed": false,
+      "releaseApproved": false,
+      "openNowPolicy": "never",
+      "machineOpeningIntervals": null,
+      "directionsMode": "address",
+      "no2027Rollover": true,
+      "researchRecommendation": "FACTUAL AND PLACEMENT HOLD",
+      "newEvidence": {
+        "ticketingAttempt": {
+          "id": "terrified-tickets",
+          "url": "https://terrifiedexist.ticketleap.com/",
+          "retrievedAt": "2026-10-10T17:51:57.595401+00:00",
+          "status": 200,
+          "finalUrl": "https://www.ticketleap.com/",
+          "rawFile": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/raw/terrified-tickets.html",
+          "bytes": 128464,
+          "sha256": "48a16f3f5cc5400ecc3ec2c9d3b279fb2073573c3dfa355c3498ceafdd92f0cb",
+          "originalScriptRelativeRawFile": "phase4-missouri/delta/raw/terrified-tickets.html",
+          "evidenceAssessment": "Request succeeded but final URL is generic TicketLeap homepage, not a TerrifiedExist event. No attraction-specific invitation/date/expiry was recovered; no closure inferred."
+        }
+      },
+      "sourceAssessment": "The exact TerrifiedExist Ticketleap organizer URL redirects to generic https://www.ticketleap.com/. Its copyright/modified dates, generic Haunted Attractions menu and marketing are not TerrifiedExist operation evidence. No visitor event date, season expiry, or point is proposed; no closure inference.",
+      "acceptedDates": null,
+      "acceptedExpiry": null,
+      "remainingBlockers": [
+        "Attraction-specific current visitor operation/date binding and supported expiry remain missing.",
+        "No new visitor-address placement supplied by this authorized seven-target request batch."
+      ]
+    }
+  ],
+  "counts": {
+    "placementClearanceCandidatesWithPriorFactualPass": 2,
+    "recoveredYearBindingAndPlacementCandidate": 1,
+    "unchangedFactualAndPlacementHold": 1,
+    "newIndependentApprovals": 0,
+    "runtimeImports": 0
+  },
+  "independentReview": "PENDING",
+  "preservedHolds": [
+    "TerrifiedExist visitor operation/date/expiry",
+    "All other Phase 4 records and parked performance outside scope"
+  ],
+  "supersedesProjectionSha256": "8c1d7319e76fe435c986271cf06438984a5bad2706f54341fbf022b671310ed8",
+  "revisionScope": "Branson consumer copy only, per independent review: remove routine audit/pricing uncertainty phrase while preserving the sensory warning and all material dates, restrictions, source qualifications and null audit fields. No factual or placement changes."
+}

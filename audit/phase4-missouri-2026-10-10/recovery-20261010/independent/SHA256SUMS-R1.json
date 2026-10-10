@@ -1,0 +1,153 @@
+{
+  "package": "PHASE4-RECOVERY-INDEPENDENT-REVIEW-R1",
+  "frozenAt": "2026-10-10T18:06:15.975186+00:00",
+  "scope": "Final review, 17-record ledger, accepted seven inputs and actual independent evidence. No further file changes; corrections require a new revision.",
+  "excluded": "Assembly script is not a source capture or authoritative deliverable. Manifest excludes itself.",
+  "members": [
+    {
+      "path": "Accepted-Seven-Record-Subset-R1.json",
+      "bytes": 34632,
+      "sha256": "827eb67919c99dec61991cbc01cba63097ccd5dd1868de355b5f79b07d348882"
+    },
+    {
+      "path": "HANDOFF-R1.md",
+      "bytes": 5335,
+      "sha256": "89abfdc06945182830c7578a8d61ae7034f1770664077e29f4af33bb5c634ec2"
+    },
+    {
+      "path": "Phase4-17-Record-Ledger-Recovery-R1.json",
+      "bytes": 19645,
+      "sha256": "3b1772c055e8b2852b732b56b9e9a0756755c31ef6c8a57341c684cab9f6a7b6"
+    },
+    {
+      "path": "Recovery-Independent-Review-R1.json",
+      "bytes": 50498,
+      "sha256": "49c8800ba964923d70dda46aeeb86a653d201fda251134c335523a5abfce9484"
+    },
+    {
+      "path": "evidence/branson-narrow-official-binding-search.json",
+      "bytes": 10045,
+      "sha256": "661a8bf6130350548a22e62277cf93b51ef83ed644176a2bc8887a4086ab14be"
+    },
+    {
+      "path": "evidence/carolyn-independent-cloud-map.json",
+      "bytes": 1155,
+      "sha256": "dfac037f899ebe38dde467bdc1a0305b873dd6c112b239d05d97fd6f9bd3a2a2"
+    },
+    {
+      "path": "evidence/carolyn-terror-independent-operator-reopens.json",
+      "bytes": 30970,
+      "sha256": "80bc5a468cd9b8f200cf607968447583e591cd1944bab7f87c0e5e26f6c9b143"
+    },
+    {
+      "path": "evidence/carolyn-terror-integrity.json",
+      "bytes": 6490,
+      "sha256": "c2b54b0f0d591ba202d483050ad9a008208cafa7a67cfe0dc86644b1843e4ec0"
+    },
+    {
+      "path": "evidence/continuity-top-100.json",
+      "bytes": 12572,
+      "sha256": "bfb1c8a8210bee1b5d6149e0742eafec5f891b100d7e96643c0a7f7a9d344913"
+    },
+    {
+      "path": "evidence/final-package-consistency.json",
+      "bytes": 2349,
+      "sha256": "422f12f19a8308b517ff4c2d569d6b83e94a456e496365b5a8b7ff20be65dcd3"
+    },
+    {
+      "path": "evidence/held-source-reopens.json",
+      "bytes": 9192,
+      "sha256": "2cdd083c8e852997b6cfb66bbdd39ef0c820247213e68c448cf4a20e72273945"
+    },
+    {
+      "path": "evidence/independent-branson-census.body",
+      "bytes": 647,
+      "sha256": "1ba5568b329ab68709555a59e80c97786693b221f19bf069ffdfdcf86e9c4526"
+    },
+    {
+      "path": "evidence/independent-fearstone-census.body",
+      "bytes": 643,
+      "sha256": "2c682086aaae4224d9405d1a54bf5a005cf04bb6c4e9bfd3161eec5aff4c5dc9"
+    },
+    {
+      "path": "evidence/independent-fearstone-faq.body",
+      "bytes": 1080922,
+      "sha256": "ef01c01d44449ce36822f05541ca679a86e6f04803c8099dee55751fd83739ad"
+    },
+    {
+      "path": "evidence/independent-fun-time-census.body",
+      "bytes": 656,
+      "sha256": "c89c8b6dec8efe4db121f62397672a1d2d72bb6e56c9ba10bf5cd037f1411ed0"
+    },
+    {
+      "path": "evidence/independent-placement-checks.json",
+      "bytes": 881,
+      "sha256": "31a868a04e2e292ebce93e244607f84dee18936fae106befd20f19c0642029db"
+    },
+    {
+      "path": "evidence/independent-source-capture-receipts.json",
+      "bytes": 6076,
+      "sha256": "7e8761c36c1aff4142b180b547b475a0bc79616494d6ea0579ba8c49dda9c2e2"
+    },
+    {
+      "path": "evidence/official-package-integrity.json",
+      "bytes": 7033,
+      "sha256": "4528132effbc27bb9053b0137d8d667bd1b91414721ec29048418def28d88c20"
+    },
+    {
+      "path": "evidence/official-r3-integrity.json",
+      "bytes": 8266,
+      "sha256": "13dbab3d6e981485e05255214e1fb420e20770834fc6537987b0ee9736044d20"
+    },
+    {
+      "path": "evidence/official-r4-integrity.json",
+      "bytes": 9097,
+      "sha256": "0da5c7bb6299a5967e2c2bdbb632b872e4b0a20ccfccb0d4f7ed80d6b0a86c85"
+    },
+    {
+      "path": "evidence/official-recovery-reopens.json",
+      "bytes": 1921,
+      "sha256": "d8e77956ec129a28be4cda7c6be1047e5fa4841af0b159db921fbecaa304c097"
+    },
+    {
+      "path": "evidence/operator-reopens-1.json",
+      "bytes": 14233,
+      "sha256": "9d3d77b3d014c59a3edebfc951c54b9951445e43356a57b1b88a78b44d7471b3"
+    },
+    {
+      "path": "evidence/partial-first-attempt/independent-fearstone-census.body",
+      "bytes": 643,
+      "sha256": "2c682086aaae4224d9405d1a54bf5a005cf04bb6c4e9bfd3161eec5aff4c5dc9"
+    },
+    {
+      "path": "evidence/partial-first-attempt/independent-fearstone-faq.body",
+      "bytes": 1080922,
+      "sha256": "ef01c01d44449ce36822f05541ca679a86e6f04803c8099dee55751fd83739ad"
+    },
+    {
+      "path": "evidence/partial-first-attempt/receipt.json",
+      "bytes": 699,
+      "sha256": "75065d867e7a94fee0c2ba06b021332d7dbc87d6e3cd51917bb1efb0a3193021"
+    },
+    {
+      "path": "evidence/prior-calendar-invalid-route-reopens.json",
+      "bytes": 721,
+      "sha256": "28a5c8bf8a3ecf4ee6e7ade79094f0d8ce59461c70a5c455409d14fb07db4fa8"
+    },
+    {
+      "path": "evidence/prior-calendar-reopens.json",
+      "bytes": 25550,
+      "sha256": "7905c640b90d4709cf2627d79c9a85f1ed988cbe0e2ca724583b6030a5bbae11"
+    },
+    {
+      "path": "evidence/prior-integrity-calendar-timezone.json",
+      "bytes": 15829,
+      "sha256": "25aec07fbcd1bd547de2e653f988ec4b4e36f19169cae01bed8be62857099e21"
+    },
+    {
+      "path": "evidence/terror-independent-cloud-map.json",
+      "bytes": 1224,
+      "sha256": "7b6cfda4a5e76e76da838bb8ea2ba45baa366a041de5183bb8bc377cd8d4a928"
+    }
+  ]
+}

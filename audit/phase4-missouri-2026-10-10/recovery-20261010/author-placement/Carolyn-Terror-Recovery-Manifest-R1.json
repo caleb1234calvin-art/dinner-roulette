@@ -1,0 +1,144 @@
+{
+  "package_id": "Carolyn-Terror-Public-Source-Recovery-R1",
+  "frozen_at": "2026-10-10T17:57:23.492859+00:00",
+  "root": "phase4-missouri/commercial-placement/placement/evidence",
+  "algorithm": "sha256",
+  "immutable_version": 1,
+  "members": [
+    {
+      "path": "Carolyn-Terror-Recovery-Handoff-R1.txt",
+      "bytes": 1798,
+      "sha256": "9e3c43d3358df696223f83d44b119945acb225d36673b03d41a6af23e83a31e7"
+    },
+    {
+      "path": "Carolyn-Terror-Recovery-Projections-R1.json",
+      "bytes": 13461,
+      "sha256": "9cd59d743b59ff25c5cb2c1d89c87f7509fd2c6f8da5c0fc1aa4e9a0869fa548"
+    },
+    {
+      "path": "Carolyn-Terror-Recovery-Research-R1.json",
+      "bytes": 3794,
+      "sha256": "67134dc63a571ec746790f2baaeb909626cb7c51327694ff3eb48de9e1a86773"
+    },
+    {
+      "path": "carolyn-canonical-home-retry-r1.receipt.json",
+      "bytes": 410,
+      "sha256": "53640478b1b84a087e16a67131cb65a84d2827219f01f3cde3661c2d47651acc"
+    },
+    {
+      "path": "carolyn-directions-retry-r1.receipt.json",
+      "bytes": 430,
+      "sha256": "29ab4522212d3fa09b7d2166a0cf9b81b97beb5888c3409db66704b8236f5156"
+    },
+    {
+      "path": "carolyn-faq-retry-r1.receipt.json",
+      "bytes": 426,
+      "sha256": "fcb02be4540be3d2710742304cf761679273151fc9ef217657eb1d2064bd5187"
+    },
+    {
+      "path": "carolyn-home-retry-r1.receipt.json",
+      "bytes": 378,
+      "sha256": "f78c7bd224e6fb30ca840ad1ef6ec67405a4bb17ca4a983325acb2f9fadad4b2"
+    },
+    {
+      "path": "carolyn-hours-retry-r1.receipt.json",
+      "bytes": 419,
+      "sha256": "e7959aea48ab459baabb5e75e7fc987e0b62eae418fe3841adec8a3baa149cdd"
+    },
+    {
+      "path": "carolyn-map-retry-r1.body",
+      "bytes": 220514,
+      "sha256": "acc2823c0c404fdce59216ddf4cfff8bc66de1733cc6355a7103b6666fd265fa"
+    },
+    {
+      "path": "carolyn-map-retry-r1.receipt.json",
+      "bytes": 1069,
+      "sha256": "758a67ff24d06f9b91382c36adc2c452f539e7064fe55e8d70af7757ef15d88f"
+    },
+    {
+      "path": "carolyn-rendered-place-retry-r1.json",
+      "bytes": 1108,
+      "sha256": "d8e87450bbb42f6fe94665b1420b72f430f241ef2cc62a3e19bc2cf01bac0587"
+    },
+    {
+      "path": "terror-directions-retry-r1.body",
+      "bytes": 221073,
+      "sha256": "56a5a94f39bd22d9a282e34053c51342842d955bc5a0281f12ea5078df025d63"
+    },
+    {
+      "path": "terror-directions-retry-r1.receipt.json",
+      "bytes": 794,
+      "sha256": "f51f466fd1b82230e2544c9385a4560a05df08936426793d14582f9b47461f27"
+    },
+    {
+      "path": "terror-home-retry-r1.body",
+      "bytes": 30263,
+      "sha256": "37f28a652f0526f497b6c5bf5843318684a55090d5acc3063bb5c9e0acb348be"
+    },
+    {
+      "path": "terror-home-retry-r1.receipt.json",
+      "bytes": 677,
+      "sha256": "5648531adf21d183cd108ab330cc1f48aa3ce960a25e0d245b832c7562fb4244"
+    },
+    {
+      "path": "terror-rendered-address-retry-r1.json",
+      "bytes": 1116,
+      "sha256": "a5f8a30281123ce23ec99e45056f70a4d68c8dad0df6acd973b0413ad6922788"
+    },
+    {
+      "path": "terror-rendered-place-retry-r1.json",
+      "bytes": 1085,
+      "sha256": "1ce721b4916c0390f7ddb24b0b48d19ce78f96c7d90c20282688456f8c10551f"
+    },
+    {
+      "path": "terror-ticket-retry-r1.body",
+      "bytes": 39725,
+      "sha256": "ee129975fab0a89194302af4b0fcfd3435346f38893a6574d26bc0c32805015d"
+    },
+    {
+      "path": "terror-ticket-retry-r1.receipt.json",
+      "bytes": 782,
+      "sha256": "c3ebe71745ffaae3ad2d18973eea961a9053e735ef1ce670468b70fd8ce07f11"
+    },
+    {
+      "path": "web-carolyn-home-retry-r1.json",
+      "bytes": 20621,
+      "sha256": "4bc2419a32a65f57d7e46b6af9062c2b3bfa54a5738f36daca668471ffb5d625"
+    },
+    {
+      "path": "web-carolyn-map-link-faq-retry-r1.json",
+      "bytes": 20074,
+      "sha256": "6c56d86fdd1e4fac9741adfe13993c215d4b9a6b7245573dd638df56f50fae8a"
+    },
+    {
+      "path": "web-carolyn-visitor-pages-retry-r1.json",
+      "bytes": 31468,
+      "sha256": "164f742a0c572482f4b1c27c5a4f86fa0d05ff4e038cd04928a7db772da70298"
+    },
+    {
+      "path": "web-home-retry-r1.json",
+      "bytes": 11254,
+      "sha256": "86b551f658676c377b097c94442324454075627415b43ce094d84c30220361b6"
+    },
+    {
+      "path": "web-maps-retry-r1.json",
+      "bytes": 1451,
+      "sha256": "4b68f2f9d6a8681d60ff099bc6bb1503017e8d380a7fdf75191c76ceeab32fca"
+    }
+  ],
+  "prior_artifacts": [
+    {
+      "path": "../prior-research-r2.json",
+      "sha256": "472f93d561ebf14ffb3cecfe1290314a64012c013d7ed509ed4feac29aae1dab",
+      "bytes": 52097,
+      "role": "Existing local recovered prior artifact; no assertion that it matches the original external historical file bytes."
+    },
+    {
+      "path": "../prior-independent-r2.md",
+      "sha256": "c8bf544e6ece6a77c4140eabc97fe03e0f2a34c3e17629ef0ccd82e206b42071",
+      "bytes": 5686,
+      "role": "Existing local recovered prior artifact; no assertion that it matches the original external historical file bytes."
+    }
+  ],
+  "exclusions": "Existing earlier failed receipts and unproven historical carolyn-map.html are not new package members. Manifest does not hash itself. No source-body reconstruction."
+}
