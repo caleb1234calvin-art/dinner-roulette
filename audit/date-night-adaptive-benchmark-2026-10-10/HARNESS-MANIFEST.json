@@ -1,0 +1,126 @@
+{
+  "status": "FIXTURE_ONLY_NOT_LIVE_APPROVAL",
+  "protocolSha256": "a02fac37a8ed0d53d29b5f28e215bb1f984f57fb8a242eb7eae02f69550920ef",
+  "files": {
+    "HARNESS-DELTA-REVIEW.md": {
+      "bytes": 4647,
+      "sha256": "f53a0c5784bf0bbbe65552bdc7ebd9730a1e4e12f4c4385aa5b243ea128b77c6"
+    },
+    "PREFLIGHT-TRIGGER.json": {
+      "bytes": 225,
+      "sha256": "b5953df1bbbe4afda129148a94c66327c057d11616b847d1c4f543859ee121cb"
+    },
+    "SOURCE-IDENTITIES.json": {
+      "bytes": 631,
+      "sha256": "be153c3344f8121b201a325d76c8db3fd3acaef976a407133acd8506f592b11f"
+    },
+    "TARGETED-PROTOCOL-FROZEN.md": {
+      "bytes": 20615,
+      "sha256": "a02fac37a8ed0d53d29b5f28e215bb1f984f57fb8a242eb7eae02f69550920ef"
+    },
+    "adaptive-ledger.test.mjs": {
+      "bytes": 5129,
+      "sha256": "c686683f70e44d49026823240a1f851872dd3d53281dc72f88ddf83c2ded4738"
+    },
+    "analysis-helpers.mjs": {
+      "bytes": 1823,
+      "sha256": "e58bde6e7ad33cb7ef5c12fc912787fe51f4e39d18198822056b82bfe8625d25"
+    },
+    "analysis-helpers.test.mjs": {
+      "bytes": 1465,
+      "sha256": "7153ad8e233135cbdd803590dc69cc46799d815c20ddca4b0310d6d3989cb809"
+    },
+    "analysis-missing-result.test.mjs": {
+      "bytes": 1202,
+      "sha256": "ed40914841e4720d6dbf136e1b8d10375f377ab652e782c9a11be1b218e5bcff"
+    },
+    "analyze.mjs": {
+      "bytes": 6331,
+      "sha256": "6fd8fc7bdb5b7f190468878fd9e640c4123b8e9733cbac199069ced596d35c01"
+    },
+    "browser-runner.mjs": {
+      "bytes": 50497,
+      "sha256": "23512fb104cc92f26d0010a71ba945f43081347b621f5ee863179a19222cf81f"
+    },
+    "browser-runner.test.mjs": {
+      "bytes": 7322,
+      "sha256": "80362dc947a07bb874d7d7913f29c5198a03a9dec9ceed475dd47e8e40253694"
+    },
+    "coordinator.mjs": {
+      "bytes": 10125,
+      "sha256": "c3cfe583bb78a0f58b7036865e2cd072bab72261b2ca970aa3bff79fea7c106f"
+    },
+    "freeze-harness.mjs": {
+      "bytes": 821,
+      "sha256": "e2f88d6647c96acc3d8f00c878ae73e542689edaf256f029e87ddc00d2abfbf9"
+    },
+    "ledger-lifecycle.test.mjs": {
+      "bytes": 5861,
+      "sha256": "ab844576c2cedf4edfa8867287215e577feedb4d7068ddd5217ad93d38fa3cf3"
+    },
+    "ledger-prefix.test.mjs": {
+      "bytes": 2958,
+      "sha256": "fc780b0043532b7362d7231e1f9360517e734c4411f2d0d014ea7e3e7b9fbef8"
+    },
+    "measurement.test.mjs": {
+      "bytes": 2094,
+      "sha256": "ff043acf758ef4ec0ae0f3c0c763d8ae556e2e98d1998a54ee88c96aacb773d9"
+    },
+    "observer-cost.test.mjs": {
+      "bytes": 2335,
+      "sha256": "70718fc1720a3c8184fe1c7cb2faeff7e84019a5a5865828b70b68f9c75cc16a"
+    },
+    "policy-observations.mjs": {
+      "bytes": 6605,
+      "sha256": "431e0122121a7f772e945712c237a4999873dbad2912fa631d0448cad1b96e0c"
+    },
+    "policy-observations.test.mjs": {
+      "bytes": 2806,
+      "sha256": "3ca4d545729f5c7eb8867cd29570bd77f92fb43867c0dc6dc11e041ac97ea2fb"
+    },
+    "preflight-verdict.mjs": {
+      "bytes": 4636,
+      "sha256": "569965ddcb281fc56a2add05d6ead0adf8a3367cf5a39c1c886a7db9c7b23825"
+    },
+    "preflight-verdict.test.mjs": {
+      "bytes": 2475,
+      "sha256": "cebd202e2da3e289e85ccc760c7d66ac69b9ff1b04aa8dae7574b5fe3759d564"
+    },
+    "preload.test.mjs": {
+      "bytes": 4438,
+      "sha256": "0ca8aac8b91f8d386c06c187cfbc32d79428adbf8ee7d326cbbd2f3f4db1882f"
+    },
+    "request-ledger.mjs": {
+      "bytes": 6932,
+      "sha256": "4088bd10984957d4c5fd9c14c67dec6d8e16f49a758003d7d798e838f68e62f4"
+    },
+    "request-timing.test.mjs": {
+      "bytes": 1559,
+      "sha256": "ba8f1643a91934c8fac8d062aad7a0a323b6cb4dada54ae72eec355354a005cc"
+    },
+    "runner-lifecycle.mjs": {
+      "bytes": 1259,
+      "sha256": "de66221f5f74163804eec883840db9db12a9c49c80e20c4ad7c15aff20a73e99"
+    },
+    "server-preload.mjs": {
+      "bytes": 5666,
+      "sha256": "94b5d1bb0ceccde347c05f4f23570e1ce022191dda46dd3a70d078d270702ec2"
+    },
+    "targeted-protocol.mjs": {
+      "bytes": 2839,
+      "sha256": "1b60c0ba43e9541171ad9653c857554c01225db70daf771392deb6827a944c43"
+    },
+    "warm-guard.test.mjs": {
+      "bytes": 4122,
+      "sha256": "65162efd7eb420248bd2d1f87b4f4018945834f97f6036b1d31ae6e9127ac506"
+    },
+    "workflow-contract.test.mjs": {
+      "bytes": 966,
+      "sha256": "d862eb265db96a7512b027e63f053cc9d48c5823ef7a2f1590b1e48e74bbd7c7"
+    },
+    "workflow.yml": {
+      "bytes": 4350,
+      "sha256": "0f609ca73966b8eb36073d8426f0e30fc561613cff13cab6bb33b654dc101c07"
+    }
+  }
+}

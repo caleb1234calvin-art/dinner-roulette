@@ -1,0 +1,20 @@
+{
+  "status": "PHASE1_EXACT_SOURCE_PASS",
+  "shas": {
+    "R": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "D": "d6d6f91b16aecd27773168c68d3c8ebdc33001c7"
+  },
+  "trees": {
+    "R": "8d5059c9fee871c522616971cce0a80b153e4d23",
+    "D": "17f36a46f1d6894b6adf44edf7aefefc2b457cbb"
+  },
+  "independentPhase1Binding": "adaptive-audit-independent/REMOTE-D6D6-BINDING-PASS.md",
+  "policy": {
+    "healthyInitialDelayMs": 2000,
+    "healthySettlementSpacingMs": 2000,
+    "fullySuccessfulZeroYieldLimit": 4,
+    "healthyMinimumEligibleUnique": 4,
+    "partialPrimaryMode": "recovery",
+    "completeCoverageAfterEarlyStop": false
+  }
+}
