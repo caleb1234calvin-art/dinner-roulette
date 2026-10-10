@@ -4,7 +4,7 @@ import { appModuleLoader } from "./test-support/load-app-module.mjs";
 import { discoveryClock, deferred, flush } from "./test-support/discovery-clock.mjs";
 import { discoveryModes, discoveryPayload, discoveryComponentHarness } from "./test-support/discovery-component-harness.mjs";
 const load = appModuleLoader();
-const { createDateNightHybridSession } = load("src/lib/date-night/hybrid-session.ts");
+const { createDateNightHybridSession, dateNightHybridProgress } = load("src/lib/date-night/hybrid-session.ts");
 const { createDateNightRadialSession } = load("src/lib/date-night/radial-session.ts");
 const { dateNightHealthyPool, rememberDateNightUsefulIdentities } = load("src/lib/date-night/adaptive-audit.ts");
 const { buildDateNightQueryPlan } = load("src/lib/date-night/query-plan.ts");
@@ -202,4 +202,37 @@ test("partial mixed primary remains immediate recovery despite a rich eligible p
   r.discovery.groups.find(g => g.id === "entertainment").outcome = "failed"; r.discovery.partial = true;
   c.resolve(r); await flush();
   assert.equal(h.calls.length, 2); assert.equal(h.state.auditPolicy.mode, "recovery");
+});
+
+
+test("ADAPT-IV01: early-stop incompleteness stays explicit when local favorites filter makes pool empty", async t => {
+  const h = setup(t); await firstFour(h);
+  h.filters.favoritesOnly = true; h.update();
+  assert.equal(h.state.phase, "empty-audit-stopped");
+  assert.equal(h.state.auditPolicy.stopped, true); assert.equal(h.state.coverage.complete, false);
+  const label = dateNightHybridProgress(h.state.phase, h.state.expanding);
+  assert.match(label, /No matching.*paused.*incomplete/); assert.doesNotMatch(label, /Ready/);
+  await h.clock.tick(10000); assert.equal(h.calls.length, 5);
+  h.filters.favoritesOnly = false; h.update();
+  assert.equal(h.state.phase, "audit-stopped"); assert.equal(h.calls.length, 5);
+});
+
+for (const cause of ["open-now", "expiry"]) test(`ADAPT-IV01: ${cause} empty pool preserves stopped/incomplete status`, async t => {
+  const h = setup(t), rows = primary();
+  for (const row of rows) {
+    if (cause === "open-now") row.openingHours = null;
+    else {
+      row.activityTypes = ["movies", "haunted-house"];
+      row.seasonalAvailability = { status: "confirmed", checkedAt: "2026-10-01", seasonYear: 2026,
+        activeFrom: "2026-10-01", activeUntil: "2026-10-31", endsAt: new Date(Date.now() + 9000).toISOString().replace(".000", "") };
+    }
+  }
+  await h.reply(rows); await h.clock.tick(2000);
+  for (let i = 0; i < 4; i++) { await h.reply(); if (i < 3) await h.clock.tick(2000); }
+  assert.equal(h.state.phase, "audit-stopped");
+  if (cause === "open-now") h.filters.openNowOnly = true; else await h.clock.tick(1000);
+  h.update();
+  assert.equal(h.state.phase, "empty-audit-stopped");
+  assert.match(dateNightHybridProgress(h.state.phase, h.state.expanding), /No matching.*paused.*incomplete/);
+  await h.clock.tick(10000); assert.equal(h.calls.length, 5);
 });

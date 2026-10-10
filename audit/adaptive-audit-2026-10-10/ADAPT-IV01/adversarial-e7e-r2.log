@@ -1,0 +1,34 @@
+✔ negative received at stop remains authoritative while four survivors keep pool healthy (101.21645ms)
+✔ rich mixed pool with missing selected category is thin and begins immediately (13.933048ms)
+✔ expiry immediately before fourth settlement prevents healthy stop (55.459601ms)
+✔ explicit retry after early stop resumes missing patch without another disk primary (67.855891ms)
+✔ radius change during defer cancels obsolete timer and retains separate disk versus patch authority (7.240612ms)
+✖ early-stop incompleteness remains explicit after local filter makes current pool empty (29.50265ms)
+ℹ {"phase":"empty","stopped":true,"coverageComplete":false,"message":"No matching date ideas available","requests":5}
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1776.971328
+
+✖ failing tests:
+
+test at ../../workspace/scratch/a0ea701c7b34/adaptive-audit-independent/adversarial-e7e.test.mjs:19:1
+✖ early-stop incompleteness remains explicit after local filter makes current pool empty (29.50265ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /incomplete|paused|unsearched/i. Input:
+  
+  'No matching date ideas available'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/a0ea701c7b34/adaptive-audit-independent/adversarial-e7e.test.mjs:19:531)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'No matching date ideas available',
+    expected: /incomplete|paused|unsearched/i,
+    operator: 'match',
+    diff: 'simple'
+  }

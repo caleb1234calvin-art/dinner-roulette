@@ -1,0 +1,32 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> lint
+> eslint .
+
+
+/tmp/adaptive-audit-source/audit/seasonal-discovery-coverage-audit-1-evidence/probe.mjs
+  61:7  warning  'normalized' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/tmp/adaptive-audit-source/scripts/test-support/slider-accessibility-fixture.tsx
+  5:10  warning  Fast refresh only works when a file has exports. Move your component(s) to a separate file  react-refresh/only-export-components
+
+/tmp/adaptive-audit-source/src/components/ui/button.tsx
+  42:18  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/tmp/adaptive-audit-source/src/lib/auth/use-current-user.ts
+  59:3  warning  Unused eslint-disable directive (no problems were reported from 'react-hooks/rules-of-hooks')
+
+/tmp/adaptive-audit-source/src/lib/nightlife/casino-catalog-pass-16.ts
+  4:7  warning  'MGC_PROPERTY_LIST_SOURCE' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/tmp/adaptive-audit-source/src/lib/nightlife/casino-catalog-pass-25.ts
+  6:7  warning  'NIGC_SOURCE' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+✖ 6 problems (0 errors, 6 warnings)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

@@ -12,7 +12,7 @@ import { dateNightHealthyPool, dateNightPrimaryFailed, rememberDateNightUsefulId
   type DateNightAuditMode, type DateNightAuditView } from "./adaptive-audit";
 import type { DateNightPlace, DateNightSearchResponse } from "./types";
 
-export type DateNightLoadPhase = "initial-loading" | "audit-deferred" | "audit-stopped" | "ready" | "background-auditing" | "background-partial" | "audit-complete" | "empty" | "unavailable";
+export type DateNightLoadPhase = "initial-loading" | "audit-deferred" | "audit-stopped" | "empty-audit-stopped" | "ready" | "background-auditing" | "background-partial" | "audit-complete" | "empty" | "unavailable";
 export interface DateNightHybridUpdate {
   response: DateNightSearchResponse | null;
   loading: boolean;
@@ -89,7 +89,7 @@ export function createDateNightHybridSession({ now = Date.now,
     const auditing = Boolean(audit && (audit.loading || audit.expanding));
     const failedPrimary = Boolean(error || primary?.discovery?.groups.some(group => group.outcome === "failed"));
     const phase: DateNightLoadPhase = !foregroundComplete ? "initial-loading"
-      : !hasUsablePool ? failedPrimary ? "unavailable" : "empty" : auditing ? "background-auditing"
+      : !hasUsablePool ? auditStopped ? "empty-audit-stopped" : failedPrimary ? "unavailable" : "empty" : auditing ? "background-auditing"
       : audit?.coverage.complete ? "audit-complete" : auditStopped ? "audit-stopped" : auditTimer ? "audit-deferred" : partial ? "background-partial" : "ready";
     const response = foregroundComplete ? {
       venues, source: primary?.source ?? (venues.some(v => v.source !== "osm") ? "merged" : "live"),
@@ -211,6 +211,7 @@ export function createDateNightHybridSession({ now = Date.now,
 export function dateNightHybridProgress(phase: DateNightLoadPhase, auditing = false) {
   switch (phase) {
     case "audit-deferred": return "Ready · background coverage check scheduled";
+    case "empty-audit-stopped": return "No matching date ideas available · background checks paused; coverage incomplete";
     case "audit-stopped": return "Ready · background checks paused after no new choices; coverage incomplete";
     case "empty": return auditing ? "No matching date ideas yet · checking background coverage" : "No matching date ideas available";
     case "unavailable": return auditing ? "Live discovery unavailable · checking background coverage" : "Live discovery unavailable · try again";
