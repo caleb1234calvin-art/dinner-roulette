@@ -1,5 +1,6 @@
 import { readFileSync,writeFileSync,mkdirSync,existsSync,readdirSync,appendFileSync } from 'node:fs';
 import { resolve,dirname } from 'node:path';import { pathToFileURL,fileURLToPath } from 'node:url';import { fork,execFileSync } from 'node:child_process';import { setTimeout as delay } from 'node:timers/promises';import { createHash } from 'node:crypto';
+import {assessReserveRubric} from './reserve-rubric.mjs';
 import {MAIN_JOBS,RESERVE_JOBS,reserveDecision} from './targeted-protocol.mjs';
 import {createLedger} from './request-ledger.mjs';import {boundedAwait} from './runner-lifecycle.mjs';import {runBrowserCase} from './browser-runner.mjs';
 const here=dirname(fileURLToPath(import.meta.url));
@@ -11,9 +12,11 @@ const mode=process.argv[2];if(!['fixture','live'].includes(mode))throw Error('Ex
 const sourceIdentity=JSON.parse(readFileSync(resolve(here,'SOURCE-IDENTITIES.json'),'utf8'));
 const roots={R:resolve(process.env.PFU_BASELINE_ROOT),D:resolve(process.env.PFU_CANDIDATE_ROOT)};
 const shas=sourceIdentity.shas,trees=sourceIdentity.trees;
+const historicalReplay=JSON.parse(readFileSync(resolve(here,'REPLAY-QUALIFICATION.json'),'utf8'));
 const output=resolve(process.env.PFU_BENCH_OUTPUT??`/tmp/pfu-adaptive-${mode}`);
 if(existsSync(output)&&readdirSync(output).length)throw Error('Evidence exists: restart refused');mkdirSync(output,{recursive:true});
 if(mode==='live'){
+ if(historicalReplay.passed!==true||historicalReplay.candidate!==shas.D||historicalReplay.independentReview!=='PASS')throw Error('Exact reviewed historical replay qualification required');
  if(process.env.PFU_LIVE_APPROVED!=='yes'||process.env.GITHUB_RUN_ATTEMPT!=='1')throw Error('Single reviewed first-attempt live run only');
  const receipt=JSON.parse(readFileSync(resolve(here,'LIVE-APPROVAL.json'),'utf8'));
  if(receipt.harnessManifestSha!==harnessManifestSha)throw Error('Live approval harness identity mismatch');
@@ -29,6 +32,7 @@ const policyClock='2026-10-10T12:00:00.000Z';
 writeFileSync(`${output}/manifest.json`,JSON.stringify({mode,publicProviderCalls:mode==='fixture'?0:null,shas,trees,proofs,jobs,policyClock,node:process.version,harnessSha:process.env.GITHUB_SHA??null},null,2));
 const ledger=createLedger(`${output}/${mode==='fixture'?'fixture-accounting':'physical-ledger'}.jsonl`),rows=[];
 let child=null,currentCase=null;
+const assessRubric=async()=>{const evaluators={};for(const arm of ['R','D']){process.chdir(roots[arm]);const {appModuleLoader}=await import(pathToFileURL(`${roots[arm]}/scripts/test-support/load-app-module.mjs`));const load=appModuleLoader();evaluators[arm]={...load('src/lib/date-night/eligibility.ts'),...load('src/lib/date-night/identity.ts')};}return assessReserveRubric(rows,{historicalReplay,sourceD:shas.D,sameIdentity:(a,b)=>evaluators.D.mergeDateNight([a],[b]).length===1,semanticEligible:(row,venues,ms)=>{const e=evaluators[row.strategy],now=new Date(Date.parse(policyClock)+ms),filters={radiusMiles:row.radius,activityTypes:row.activityTypes,mood:50,openNowOnly:false,favoritesOnly:false,reduceParks:false};return e.eligibleDateNight(e.decorateDateNight(venues,row,now),filters,true,{},[],now.getTime());}});};
 const caseSummary=row=>{const {metrics,rpc,finalState,...summary}=row;return summary;};
 const persist=()=>writeFileSync(`${output}/progress.json`,JSON.stringify({mode,rows:rows.map(caseSummary),currentCase,ledger:ledger.snapshot(),planned:jobs},null,2));
 const signalStop=()=>{if(child?.connected)child.send({type:'stop',reason:ledger.snapshot().stopped??'coordinator-stop'});};ledger.signal.addEventListener('abort',signalStop);
@@ -57,11 +61,11 @@ try{
   await Promise.allSettled([...messages]);
   if(ledger.snapshot().pending.length)ledger.stop('unsettled-attempt-hold');
   child.kill('SIGTERM');for(let t=0;t<50&&!unexpectedExit;t++)await delay(100);if(!unexpectedExit){child.kill('SIGKILL');ledger.stop('server-drain-hold');}
-  child=null;rows.push({...job,...result,outcome:result.outcome??result.terminal??(result.censored?'censored':'unknown'),serverExit:unexpectedExit,ledgerAtEnd:ledger.snapshot(),finishedUtc:new Date().toISOString()});currentCase=null;persist();
+  child=null;const outcomes=ledger.outcomesFor({caseId:job.caseId});result.physicalSummary={starts:outcomes.length,knownBodyBytes:outcomes.reduce((n,r)=>n+(Number.isFinite(r.metadata?.bytes)?r.metadata.bytes:0),0),unknownBodyAttempts:outcomes.filter(r=>!Number.isFinite(r.metadata?.bytes)).length};rows.push({...job,...result,outcome:result.outcome??result.terminal??(result.censored?'censored':'unknown'),serverExit:unexpectedExit,ledgerAtEnd:ledger.snapshot(),finishedUtc:new Date().toISOString()});currentCase=null;persist();
   console.log(JSON.stringify({caseId:job.caseId,outcome:result.outcome??result.terminal??null,attempts:ledger.snapshot().attempts,stop:ledger.snapshot().stopped}));
   if(result.censored||result.outcome==='censored')ledger.stop('observation-censored-no-complete-decision');
-  if(mode==='live'&&i===7){const evidence=reserveDecision(rows,ledger.snapshot());ledger.note({reserveDecision:evidence});if(evidence.allowed){ledger.enterReserve(evidence);jobs.push(...RESERVE_JOBS.map(j=>({...j})));}}
-  if(mode==='live'&&i>=8){const evidence=reserveDecision(rows,ledger.snapshot());ledger.note({reserveReassessment:evidence});if(evidence.missingRequired.length===0)break;}
+  if(mode==='live'&&i===7){const evidence=reserveDecision(rows,ledger.snapshot(),await assessRubric());ledger.note({reserveDecision:evidence});if(evidence.allowed){ledger.enterReserve(evidence);jobs.push(...RESERVE_JOBS.map(j=>({...j})));}}
+  if(mode==='live'&&i>=8){const evidence=reserveDecision(rows,ledger.snapshot(),await assessRubric());ledger.note({reserveReassessment:evidence});if(evidence.missingRequired.length===0||evidence.rubric?.passed!==true)break;}
  }
 }catch(e){ledger.stop(`coordinator-error:${e.message}`);currentCase={...currentCase,error:e.stack};persist();}
 finally{if(child?.connected)child.send({type:'stop',reason:'final-drain'});const at=performance.now();while(ledger.snapshot().pending.length&&performance.now()-at<10000)await delay(50);if(child)child.kill('SIGTERM');try{checkSources();}catch(e){ledger.stop('source-drift');currentCase={...currentCase,sourceDrift:e.message};}persist();writeFileSync(`${output}/terminal.json`,JSON.stringify({mode,verdict:ledger.snapshot().pending.length?'PROTOCOL HOLD':'REVIEW REQUIRED',rows:rows.length,planned:jobs.length,unrun:jobs.slice(rows.length),ledger:ledger.snapshot(),finishedUtc:new Date().toISOString(),sourceIdentityFinal:ledger.snapshot().stopped==='source-drift'?'HOLD':'checked'},null,2));ledger.dispose();}

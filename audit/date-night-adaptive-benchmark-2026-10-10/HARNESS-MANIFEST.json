@@ -7,8 +7,20 @@
       "sha256": "f53a0c5784bf0bbbe65552bdc7ebd9730a1e4e12f4c4385aa5b243ea128b77c6"
     },
     "PREFLIGHT-TRIGGER.json": {
-      "bytes": 225,
-      "sha256": "b5953df1bbbe4afda129148a94c66327c057d11616b847d1c4f543859ee121cb"
+      "bytes": 281,
+      "sha256": "395f4f7ab70693684e39c34498273dbf08d2ee6e126d00fb3a5d5a3ebbe34c90"
+    },
+    "R2-MINIMAL-DELTA.md": {
+      "bytes": 3887,
+      "sha256": "035ff1977a0ae2174ff852b2d26badf5f094e1c1b0d6ed4c7ebf6cc1458c4310"
+    },
+    "RECOVERY-INTERPRETATION-ADDENDUM.md": {
+      "bytes": 2693,
+      "sha256": "da8fc86c9fe62d474b9856364c402c5d772d7fd15dd80f1bb067540ea345cafc"
+    },
+    "REPLAY-QUALIFICATION.json": {
+      "bytes": 10644,
+      "sha256": "e3511be6556cfdbe13813de9178ce6f467a8216ba3e99280939ec6822163fcde"
     },
     "SOURCE-IDENTITIES.json": {
       "bytes": 631,
@@ -19,8 +31,8 @@
       "sha256": "a02fac37a8ed0d53d29b5f28e215bb1f984f57fb8a242eb7eae02f69550920ef"
     },
     "adaptive-ledger.test.mjs": {
-      "bytes": 5129,
-      "sha256": "c686683f70e44d49026823240a1f851872dd3d53281dc72f88ddf83c2ded4738"
+      "bytes": 5315,
+      "sha256": "7c57173be1e90cf9cb4839b6934a18aa0a24e0604583e0e078af6bc1dfcf85ee"
     },
     "analysis-helpers.mjs": {
       "bytes": 1823,
@@ -47,12 +59,12 @@
       "sha256": "80362dc947a07bb874d7d7913f29c5198a03a9dec9ceed475dd47e8e40253694"
     },
     "coordinator.mjs": {
-      "bytes": 10125,
-      "sha256": "c3cfe583bb78a0f58b7036865e2cd072bab72261b2ca970aa3bff79fea7c106f"
+      "bytes": 11653,
+      "sha256": "42c90220173b62a03adf3cf4a3a90c48de66bf021b2e77a5ea10b66a642e18d8"
     },
     "freeze-harness.mjs": {
-      "bytes": 821,
-      "sha256": "e2f88d6647c96acc3d8f00c878ae73e542689edaf256f029e87ddc00d2abfbf9"
+      "bytes": 909,
+      "sha256": "7121e77157c8656ae7a75dff938d43b209812f3b775ea4f07ee77db77f1a49f3"
     },
     "ledger-lifecycle.test.mjs": {
       "bytes": 5861,
@@ -71,24 +83,28 @@
       "sha256": "70718fc1720a3c8184fe1c7cb2faeff7e84019a5a5865828b70b68f9c75cc16a"
     },
     "policy-observations.mjs": {
-      "bytes": 6605,
-      "sha256": "431e0122121a7f772e945712c237a4999873dbad2912fa631d0448cad1b96e0c"
+      "bytes": 6709,
+      "sha256": "47b511ffa08a63aac066e6d8ab6a0d0ffe6428eafa87971f18d11261322c2b25"
     },
     "policy-observations.test.mjs": {
-      "bytes": 2806,
-      "sha256": "3ca4d545729f5c7eb8867cd29570bd77f92fb43867c0dc6dc11e041ac97ea2fb"
+      "bytes": 3638,
+      "sha256": "afc58995c05b644d238e557227f6176a95ebbc3c1b09945a6fb6e9635e4e50d2"
     },
     "preflight-verdict.mjs": {
-      "bytes": 4636,
-      "sha256": "569965ddcb281fc56a2add05d6ead0adf8a3367cf5a39c1c886a7db9c7b23825"
+      "bytes": 4917,
+      "sha256": "a0e5c1de17d8143ee97f668d3717c098422128d763badae9380803f1d3b84452"
     },
     "preflight-verdict.test.mjs": {
-      "bytes": 2475,
-      "sha256": "cebd202e2da3e289e85ccc760c7d66ac69b9ff1b04aa8dae7574b5fe3759d564"
+      "bytes": 2551,
+      "sha256": "1be2eaca2c0c4c96a82c8a057f9e7441bad35d5784d8d1f55dfe64f8762a7bb6"
     },
     "preload.test.mjs": {
       "bytes": 4438,
       "sha256": "0ca8aac8b91f8d386c06c187cfbc32d79428adbf8ee7d326cbbd2f3f4db1882f"
+    },
+    "recompute-fixture-policy.mjs": {
+      "bytes": 2178,
+      "sha256": "7432e2c3b82f296b962072f4f60e10aca7d00780daf870582446cfdac9dcb597"
     },
     "request-ledger.mjs": {
       "bytes": 6932,
@@ -97,6 +113,14 @@
     "request-timing.test.mjs": {
       "bytes": 1559,
       "sha256": "ba8f1643a91934c8fac8d062aad7a0a323b6cb4dada54ae72eec355354a005cc"
+    },
+    "reserve-rubric.mjs": {
+      "bytes": 9961,
+      "sha256": "a159e93ef75a8d5b4bfaf50c476d0419633e8e86331cfe9b722e600ab55105ff"
+    },
+    "reserve-rubric.test.mjs": {
+      "bytes": 7521,
+      "sha256": "c23cb4816d3000e2e53aaa97fc602aa6d85ffcd1da9125bea4e03dac95a58547"
     },
     "runner-lifecycle.mjs": {
       "bytes": 1259,
@@ -107,8 +131,8 @@
       "sha256": "94b5d1bb0ceccde347c05f4f23570e1ce022191dda46dd3a70d078d270702ec2"
     },
     "targeted-protocol.mjs": {
-      "bytes": 2839,
-      "sha256": "1b60c0ba43e9541171ad9653c857554c01225db70daf771392deb6827a944c43"
+      "bytes": 3032,
+      "sha256": "468df4f32040ebff0dc972e431d8380e5bd736966ceb8caabcd078fc214728eb"
     },
     "warm-guard.test.mjs": {
       "bytes": 4122,
