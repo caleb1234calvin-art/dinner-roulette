@@ -1,0 +1,184 @@
+{
+  "mode": "live",
+  "verdict": "REVIEW REQUIRED",
+  "rows": 1,
+  "planned": 8,
+  "unrun": [
+    {
+      "location": "KansasCity",
+      "radius": 20,
+      "radiusMiles": 20,
+      "strategy": "R",
+      "lat": 39.0997,
+      "lon": -94.5786,
+      "activityTypes": [
+        "escape-room",
+        "movies"
+      ],
+      "controlOrder": [
+        "pick",
+        "options",
+        "plan"
+      ],
+      "reducedMotion": "no-preference",
+      "holdPick": true,
+      "block": 0,
+      "position": 1,
+      "stage": "main"
+    },
+    {
+      "location": "Joplin",
+      "radius": 50,
+      "radiusMiles": 50,
+      "strategy": "R",
+      "lat": 37.0842,
+      "lon": -94.5133,
+      "activityTypes": [
+        "movies"
+      ],
+      "controlOrder": [
+        "pick",
+        "options",
+        "plan"
+      ],
+      "reducedMotion": "no-preference",
+      "block": 1,
+      "position": 2,
+      "stage": "main"
+    },
+    {
+      "location": "Joplin",
+      "radius": 50,
+      "radiusMiles": 50,
+      "strategy": "D",
+      "lat": 37.0842,
+      "lon": -94.5133,
+      "activityTypes": [
+        "movies"
+      ],
+      "controlOrder": [
+        "pick",
+        "options",
+        "plan"
+      ],
+      "reducedMotion": "no-preference",
+      "holdPick": true,
+      "block": 1,
+      "position": 3,
+      "stage": "main"
+    },
+    {
+      "location": "Joplin",
+      "radius": 50,
+      "radiusMiles": 50,
+      "strategy": "D",
+      "lat": 37.0842,
+      "lon": -94.5133,
+      "activityTypes": [
+        "movies"
+      ],
+      "controlOrder": [
+        "pick",
+        "options",
+        "plan"
+      ],
+      "reducedMotion": "no-preference",
+      "holdControl": "options",
+      "block": 1,
+      "position": 4,
+      "stage": "main"
+    },
+    {
+      "location": "Joplin",
+      "radius": 50,
+      "radiusMiles": 50,
+      "strategy": "R",
+      "lat": 37.0842,
+      "lon": -94.5133,
+      "activityTypes": [
+        "movies"
+      ],
+      "controlOrder": [
+        "pick",
+        "options",
+        "plan"
+      ],
+      "reducedMotion": "no-preference",
+      "block": 1,
+      "position": 5,
+      "stage": "main"
+    },
+    {
+      "location": "Columbia",
+      "radius": 20,
+      "radiusMiles": 20,
+      "strategy": "D",
+      "lat": 38.9517,
+      "lon": -92.3341,
+      "activityTypes": [
+        "movies"
+      ],
+      "controlOrder": [
+        "pick",
+        "options",
+        "plan"
+      ],
+      "reducedMotion": "no-preference",
+      "block": 2,
+      "position": 6,
+      "stage": "main"
+    },
+    {
+      "location": "Columbia",
+      "radius": 50,
+      "radiusMiles": 50,
+      "strategy": "D",
+      "lat": 38.9517,
+      "lon": -92.3341,
+      "activityTypes": [
+        "escape-room",
+        "movies"
+      ],
+      "controlOrder": [
+        "pick",
+        "options",
+        "plan"
+      ],
+      "reducedMotion": "no-preference",
+      "holdControl": "plan",
+      "block": 3,
+      "position": 7,
+      "stage": "main"
+    }
+  ],
+  "ledger": {
+    "attempts": 8,
+    "outcomes": 8,
+    "pending": [],
+    "physicalFailures": 8,
+    "cumulativeFailures": 8,
+    "handlerFailures": 1,
+    "stopped": "physical-failure-cap",
+    "startedAt": 1791622887828.4248,
+    "config": {
+      "maxAttempts": 384,
+      "maxCumulativeFailures": 96,
+      "maxPhysicalFailures": 8,
+      "maxHandlerFailures": 2,
+      "maxWallMs": 1800000,
+      "maxMainAttempts": 288,
+      "maxReserveAttempts": 96
+    },
+    "stage": "main",
+    "stageAttempts": {
+      "main": 8,
+      "reserve": 0
+    },
+    "reserveEntered": false,
+    "lastHash": "f114b6fed630a769e490317b74942cc3d45c08d5290b783d2b105abb27ca6ea6",
+    "remaining": 376,
+    "remainingMs": 1786907.2490234375
+  },
+  "finishedUtc": "2026-10-10T09:01:40.921Z",
+  "sourceIdentityFinal": "checked"
+}

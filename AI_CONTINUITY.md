@@ -1,3 +1,60 @@
+# Adaptive Performance PARKED — Provider-Limited MORE; Phase 4 Missouri NEXT (2026-10-10 09:10 UTC)
+
+## CURRENT / final decision
+
+**MORE EVIDENCE REQUIRED — provider-limited, category B. Park adaptive performance and adoption.** The sole authorized live execution is terminal and independently reviewed. It stopped correctly in the first Kansas City 20-mile Escape Room + Movies case after eight consecutive physical failures. **One main case started, zero completed, seven unrun; no reserve.** The global stop is final despite 376 unused request slots. No follow-up, reset, rerun, replacement case or Phase 3 hardening is unlocked.
+
+“Radial discovery becomes an audit layer” remains an experimental design. Adaptive D retains scoped technical/fixture evidence, not adoption or release PASS. Existing production remains radial operationally; the evidence does **not** establish comparative radial superiority, preference for c78, or adoption of D.
+
+## Exact execution and clean stop
+
+[Run 38039658685](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38039658685), workflow 380371053, number 3 / attempt 1, is completed/SUCCESS. Workflow success means safe terminal handling and retained evidence; performance adoption did not pass.
+
+Benchmark publication **b8c021aa72a26665ace549fd73dc123a9e306d6a**, tree **5a7f78f2256f0e4ed7d5236934c78e98c9d81e6c**, parent **51a3af4b04b7d0abc0c3b598b37b4e9a34b7037d** remains frozen. D **d6d6f91b16aecd27773168c68d3c8ebdc33001c7 /tree17f36a46f1d6894b6adf44edf7aefefc2b457cbb**; R **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2 /tree8d5059c9fee871c522616971cce0a80b153e4d23**. Harness8660d414800e4e450abc9a2652ad9bfc04838ec0915e6e6cd4a0705a1752478c and approval4e4c4b5c7376801e11766baee813ae8534b8eb2c97f46b79ae60d95cf29370cf were unchanged; final source checks passed.
+
+Independent accounting: **19 chained rows, eight starts /eight settlements /zero pending, no post-stop dispatch**. Two source category groups used the existing four-mirror strategy, giving maximum physical concurrency eight within one logical primary acquisition, not eight user trials. Outcomes: two HTTP500, two HTTP504 and four timeouts; no success, neutral abort or429. All four retained provider bodies and the one RPC body match hashes. Known complete provider bodies total1,612 bytes; timeout partial transfers remain unknown.
+
+First dispatch **2026-10-10T09:01:27.828Z**; irreversible physical-failure-cap stop **09:01:40.330Z**; terminal **09:01:40.921Z**. Main used8 of288 starts, reserve0, cumulative failures8, wholly failed dispatched handler1. The separate consecutive-failure rule stopped the run before the 384/96/30-minute global totals were exhausted. Unused capacity cannot override the latch.
+
+## What remains unmeasured
+
+No usable actual Pick, Options, four-card reclick or genuine Plan was rendered/timed; no R case ran. No audit physical request was dispatched. Natural primary failure occurred, but subsequent recovery is **unobserved/censored**, neither successful nor infinite. The final loading snapshot at imposed stop is censored, not proof of indefinite app deadlock. Warm, live stability, healthy/thin stopping, marginal audit yield, live recall parity, comparative speed and current physical savings remain unmeasured. One failure out of one primary is descriptive, not a provider reliability estimate.
+
+Separate evidence remains scoped:
+- D Phase 1: 164 focused plus six adversarial checks, typecheck/lint PASS; ADAPT-IV01 closed.
+- Harness77 offline tests and seven hosted zero-public browser fixtures PASS, including real controls and provider-backed synthetic recovery. This is not natural live recovery.
+- Failed-primary20-to-15 guarded warm-refetch remains HOLD.
+- Historical H/D replay preserves3/3/14/14 sampled identities; Joplin audit32-to-4 and total33-to-5 are counterfactual intent savings. Fifth-patch-only venue and closure counterexamples retain explicit non-parity/unknown-freshness risks.
+- Historical c78 full functional PASS, prior counter-reset failure, a4 incomplete run and later427-attempt stopped matrix remain unchanged; none is erased or broadened.
+
+## Recoverable terminal evidence
+
+Both full frozen reports were read:
+- [Independent final review](audit/hybrid-loading-2026-10-10/Adaptive-LIVE-FINAL-REVIEW.md), SHA **62f8deec3362cf50d3ec7936b31f487b07f9e6f185eccd7c1ec1ec87b7c15e3d**.
+- [Producer decision report](audit/hybrid-loading-2026-10-10/Adaptive-DECISION-REPORT.md), SHA **8491b1132bb550f47a93d981a56814c5e45cc434c14ba461f1246caa72f08a70**.
+- [Complete evidence hash inventory](audit/hybrid-loading-2026-10-10/Adaptive-EVIDENCE-HASHES.json), SHA **635b70d92402600ee4adb45fbc0d324d986ceeeada4fd61c47b56ce03e254ee8**.
+- [Original terminal receipt](audit/hybrid-loading-2026-10-10/Adaptive-live-terminal.json), SHA **9230a18d7bca08db23d0686da6a31ca31515cded716e18df416ec83161aa8660**. Its producer-time REVIEW REQUIRED label is superseded by the final reviews above, without altering historical bytes.
+
+Original artifact **11665596173**, **2,578,140 bytes**, SHA **4dafb0293106d9e2b3355b406dbf6a56aec49c18a510418537a05be9177b674c**, independently verified with212 ZIP-member CRCs. Full raw package `adaptive-benchmark/hosted-live/raw/` preserves bodies, RPC, screenshot, events, build/source proof, ledger and earlier fixture evidence. Ledger SHA **b7e92420f818e4467e797b37ef6bed95408cf652927864ccbd8a28c34d74703e**, final chain **f114b6fed630a769e490317b74942cc3d45c08d5290b783d2b105abb27ca6ea6**; live manifest **8e27816e844ed89f43b4fe9633fdd142b1d53e4de65c3ee10cd2898c67aedf66**; progress **613c0dc5aa567d4ca64a017d80a594719874f2e55f122d7245c363c0c699983a**. Large raw bodies remain in the verified original artifact rather than duplicated into Git. Library upload is in progress; no unconfirmed IDs are asserted.
+
+## NEXT — authorized Phase 4, after this checkpoint readback
+
+The owner already authorized the provider-limited branch of the phased brief. After this park checkpoint is published and fully read back, the coordinator proceeds to **bounded Phase 4 Missouri research with Cadaver priority**, remaining commercial HOLDs, discovery delta and placement enrichment, followed by independent review and a bounded accepted-subset candidate as authorized. No new research result, clearance, implementation candidate or import is claimed at this transition.
+
+Cadaver remains explicitly HOLD for reliable attraction-specific **2026 operation/date binding and supported expiry**. Supported address/approximate placement is retained; exact arrival coordinates, complete hours and exact prices are not automatic listing gates under accepted V1. Preserve every other HOLD, residential distinction and incomplete-source-coverage limitation; no invented exhaustion or blind repeat of exhausted searches.
+
+Do not call the overall assignment DONE merely because performance is parked. Phase 3 is not triggered. No further provider benchmark traffic is authorized by this result. Missouri work must not inherit or merge the experimental loader branches by accident; production and reviewed source identities remain distinct.
+
+## Unchanged production / authority
+
+Fresh 09:09 main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**; production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/source fe22**; 52 shipped curated records. PR61 **c78b97175cc094436e454fa888e1ed83486f750d**, tree **6f7130dc46e5decc9b045c2841b63c73406ae2ae**, remains draft/open/unmerged. Adaptive branch remains d6d6 and parked. These are fresh remote identity/metadata checks, not new route probes or smoke.
+
+Physical Android/WebView/GPS/signing/Play and existing factual/release limits remain. No merge, deploy, settings, protection waiver, paid API or operator contact authority. Retained rollback history is unchanged; any future release requires its own fresh authorized checks.
+
+**PARENT CONTINUITY COMMIT:** `4f8c26bbde863d355205b2961682ff0a0d8bfcdc`; **PARENT TREE:** `3dba50e5759bb945e844488ddbdbc444d26e06c9`. Deployment-disabled documentation checkpoint; complete history follows.
+
+---
+
 # Adaptive Hosted Fixtures PASS; Sole Bounded Live Execution Published (2026-10-10 08:58 UTC)
 
 ## CURRENT

@@ -1,0 +1,1109 @@
+{
+  "runId": 38039658685,
+  "runNumber": 3,
+  "attempt": 1,
+  "verdict": "MORE EVIDENCE REQUIRED",
+  "classification": "B: provider-limited; park",
+  "files": [
+    {
+      "path": "HARNESS-MANIFEST.json",
+      "bytes": 5298,
+      "sha256": "8660d414800e4e450abc9a2652ad9bfc04838ec0915e6e6cd4a0705a1752478c"
+    },
+    {
+      "path": "RECOVERY-INTERPRETATION-ADDENDUM.md",
+      "bytes": 2693,
+      "sha256": "da8fc86c9fe62d474b9856364c402c5d772d7fd15dd80f1bb067540ea345cafc"
+    },
+    {
+      "path": "REPLAY-QUALIFICATION.json",
+      "bytes": 10644,
+      "sha256": "e3511be6556cfdbe13813de9178ce6f467a8216ba3e99280939ec6822163fcde"
+    },
+    {
+      "path": "TARGETED-PROTOCOL-FROZEN.md",
+      "bytes": 20615,
+      "sha256": "a02fac37a8ed0d53d29b5f28e215bb1f984f57fb8a242eb7eae02f69550920ef"
+    },
+    {
+      "path": "hosted-live/pr61-adaptive-live.zip",
+      "bytes": 2578140,
+      "sha256": "4dafb0293106d9e2b3355b406dbf6a56aec49c18a510418537a05be9177b674c"
+    },
+    {
+      "path": "hosted-live/raw/live/0-KansasCity-20-D/0-KansasCity-20-D-rpc-1.rpc-body",
+      "bytes": 16898,
+      "sha256": "8ce4602f058d78529d13a7f5de81b7e1aabf3cb4eb849f70ff79f7c930852faa"
+    },
+    {
+      "path": "hosted-live/raw/live/0-KansasCity-20-D/browser-events.jsonl",
+      "bytes": 40555,
+      "sha256": "c9784473b676c11d594c8a2b328293315bc21da9960f66d612db1844858f2757"
+    },
+    {
+      "path": "hosted-live/raw/live/0-KansasCity-20-D/browser-result.json",
+      "bytes": 46084,
+      "sha256": "c5e1f1a55b71a41479d5db4ae84939529da7ab2ba66b38ab3cf65c605e2be781"
+    },
+    {
+      "path": "hosted-live/raw/live/0-KansasCity-20-D/cold-final.png",
+      "bytes": 181283,
+      "sha256": "85b6fe3b70568974b97eeb73f2c94d2f282090cef20c932b9a151246613ef580"
+    },
+    {
+      "path": "hosted-live/raw/live/0-KansasCity-20-D/response-3.bin",
+      "bytes": 646,
+      "sha256": "37b2ff87b09dfe5a169c16650a4d67451afa5e9b734b27c42379bfbdb024e542"
+    },
+    {
+      "path": "hosted-live/raw/live/0-KansasCity-20-D/response-4.bin",
+      "bytes": 646,
+      "sha256": "37b2ff87b09dfe5a169c16650a4d67451afa5e9b734b27c42379bfbdb024e542"
+    },
+    {
+      "path": "hosted-live/raw/live/0-KansasCity-20-D/response-5.bin",
+      "bytes": 160,
+      "sha256": "c9c89d274726b86306e1c97d80360f820bce86042c34c9bb2487aac4ada6d606"
+    },
+    {
+      "path": "hosted-live/raw/live/0-KansasCity-20-D/response-6.bin",
+      "bytes": 160,
+      "sha256": "c9c89d274726b86306e1c97d80360f820bce86042c34c9bb2487aac4ada6d606"
+    },
+    {
+      "path": "hosted-live/raw/live/0-KansasCity-20-D/server.log",
+      "bytes": 1779,
+      "sha256": "a1ee9c70e273a107d03a6bae76c50a3536349cd67db072c9f7a8eb819621c658"
+    },
+    {
+      "path": "hosted-live/raw/live/analysis.json",
+      "bytes": 11016,
+      "sha256": "8fc7db59ddc6d609b94273f2c1f252f93d95c688938b2bc741d5e8664c1565d5"
+    },
+    {
+      "path": "hosted-live/raw/live/manifest.json",
+      "bytes": 4699,
+      "sha256": "8e27816e844ed89f43b4fe9633fdd142b1d53e4de65c3ee10cd2898c67aedf66"
+    },
+    {
+      "path": "hosted-live/raw/live/physical-ledger.jsonl",
+      "bytes": 104752,
+      "sha256": "b7e92420f818e4467e797b37ef6bed95408cf652927864ccbd8a28c34d74703e"
+    },
+    {
+      "path": "hosted-live/raw/live/progress.json",
+      "bytes": 8383,
+      "sha256": "613c0dc5aa567d4ca64a017d80a594719874f2e55f122d7245c363c0c699983a"
+    },
+    {
+      "path": "hosted-live/raw/live/terminal.json",
+      "bytes": 3795,
+      "sha256": "9230a18d7bca08db23d0686da6a31ca31515cded716e18df416ec83161aa8660"
+    },
+    {
+      "path": "hosted-live/raw/offline-tests.log",
+      "bytes": 7105,
+      "sha256": "fc336ba8ac1bca95901b6af4f55ec1f03539d3ef9e1c77632a03231c185e0e54"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-1.rpc-body",
+      "bytes": 42482,
+      "sha256": "718c0e1972bd2d8fcc3fa74957bffd209543a826f017ba4ebe219fc89e63c8d8"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-10.rpc-body",
+      "bytes": 620,
+      "sha256": "7177e63612f6583b254f620826d7a081a563f0272d96086b0987a6a45533ea7d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-11.rpc-body",
+      "bytes": 620,
+      "sha256": "1d14e28df31425bca94d1c54a057a8f2b4500c67cc6e1a9ad837282c609190c4"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-12.rpc-body",
+      "bytes": 620,
+      "sha256": "a06cf847eb5a6902a78ab080a85382d31974b40029be1d902ac89d51310381d3"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-13.rpc-body",
+      "bytes": 620,
+      "sha256": "307362f7884057fe7144008c9a4675350155adf05a54d9eeef0b7bc222bbcd52"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-14.rpc-body",
+      "bytes": 620,
+      "sha256": "cb94693388607203e0e3e37de36582d0450d5a583754dd61622486b4d39ac984"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-15.rpc-body",
+      "bytes": 620,
+      "sha256": "a5358eaa741f718ed302cbd422b971dfe11894c09a546d23a064eb7afb69bdb6"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-16.rpc-body",
+      "bytes": 620,
+      "sha256": "302d58ece9efac6f1572c6dc965efbd2a4acfe32a49024cd36c8e4e7f54db7e9"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-17.rpc-body",
+      "bytes": 620,
+      "sha256": "ead5948d7aa620c0d6654d01c3c1d7b3375e0e3bd7404c018ba1a204a845c0db"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-18.rpc-body",
+      "bytes": 620,
+      "sha256": "11cdf6a3d55272d2e2f9e325d3a2a6fb8a85dbfe0740d2fd6b497b450c6275b8"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-19.rpc-body",
+      "bytes": 620,
+      "sha256": "f29b21a59719c3acb0b3497ac64ca213d6c8708fb7233e4c7136753c1e8b637e"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-2.rpc-body",
+      "bytes": 620,
+      "sha256": "3f33197734b3cfd2179742a89b3fbb0c72f557fac6c9b3fc179990018ad01c5f"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-20.rpc-body",
+      "bytes": 620,
+      "sha256": "d077e4cb8ebb9dfbd5f924ddde40d340b85d0c5ad69296509d409064adbacf18"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-21.rpc-body",
+      "bytes": 620,
+      "sha256": "a016917bdbe60c2f16dde22fe5709cc96a215827481af19a0265c8630bf2a96a"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-22.rpc-body",
+      "bytes": 620,
+      "sha256": "aa170fcecfb0e5219dfa7f5d6ccf07d94b850c7ab86ba072abb406c39b9cf07f"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-23.rpc-body",
+      "bytes": 620,
+      "sha256": "603f4d3930f2ba57116b8d2828e2c7e5c6170b6df4b4c41b6c900bb166a3ab22"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-24.rpc-body",
+      "bytes": 620,
+      "sha256": "b08267d89d7706aef439bf03b5e51c217a63dff222566cce08a90da4ceb98411"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-25.rpc-body",
+      "bytes": 4615,
+      "sha256": "dee8ec1afb256ba37e01c420a3213ae6a83f114f81a52ea89bbe8a41fa4e9245"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-26.rpc-body",
+      "bytes": 4400,
+      "sha256": "8bf4395c3c8a92338da7914ef4c371bf84a11ebb40f8886fd4963eada8f96e73"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-27.rpc-body",
+      "bytes": 620,
+      "sha256": "56864364754f6b2f309a366d416f73e7f8c633251f555bf507ae34be90da654a"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-28.rpc-body",
+      "bytes": 620,
+      "sha256": "70e95aeb842822dc7c1c3031db245a878447415c26190e450518104de569498e"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-29.rpc-body",
+      "bytes": 620,
+      "sha256": "02e0dddecec84cb367011c3480d3fc376dc6d6f38a611a621038b5c8672544d5"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-3.rpc-body",
+      "bytes": 620,
+      "sha256": "13836f61f1cd56393b6a7a0a6c2c27b3d82cbf8fb339e74095da913b06aafd5a"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-30.rpc-body",
+      "bytes": 620,
+      "sha256": "022c08c7f731302dbd3e162ab3ee8980f4968087e5116b32b5b1b88582c0bbc8"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-31.rpc-body",
+      "bytes": 620,
+      "sha256": "8b9702d5bcd07f1813020e8498adc550cea2c4606f303b71db9a78fb10a02c1e"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-32.rpc-body",
+      "bytes": 621,
+      "sha256": "7e29b4084c893aa97623ee2e8fd9ff59aa59861243b3a1560b5a3e40173bb6c3"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-4.rpc-body",
+      "bytes": 620,
+      "sha256": "bffd4b00a78cf768af20238dacb4f10f5bee4ead3f4ead05ee105b55249c924f"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-5.rpc-body",
+      "bytes": 620,
+      "sha256": "e92d15fcb12e53d23633012f982014af878d55b1d56bb54e7cc912c333919e9a"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-6.rpc-body",
+      "bytes": 620,
+      "sha256": "5d83b07394c1711fd411615867067c93a2ad40db096eb6812d1381dcda4c9359"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-7.rpc-body",
+      "bytes": 1334,
+      "sha256": "5aa9f5a3e3fb1ee1e66e2ad0995ba1bdeed3ed7890e0b5c6332c8ca9d1290856"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-8.rpc-body",
+      "bytes": 620,
+      "sha256": "ab803da7ee36548f85ae5303801a62ff529996a5ddb7feabc5e749ff760c5faa"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/0-Joplin-50-R-rpc-9.rpc-body",
+      "bytes": 620,
+      "sha256": "9bedec9b4814bb510ddb20a3763d017bb6d3271203bfcc0b4e24e35a78e2ecc6"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/browser-events.jsonl",
+      "bytes": 4865803,
+      "sha256": "726a0c987834e88945fb42cfe43c9c063e7e775356c94cdb75b80dae28580ceb"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/browser-result.json",
+      "bytes": 4581809,
+      "sha256": "8f939773d39c023848b9a7e66e7b171097dc2d4b0438764b35eb39d1e0025f81"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/cold-final.png",
+      "bytes": 40635,
+      "sha256": "7b562ffb83de4276a5f3043a1d730281e87034ab6f629a8b905a289adba1b65b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/options-first-render.png",
+      "bytes": 66185,
+      "sha256": "a579b7b0be6587f34d9fc26cd2715a4c9bc3af41c31469897955270e403e7d24"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/pick-first-render.png",
+      "bytes": 56424,
+      "sha256": "394454064e8f4e9e604bb1bd192a827acbf93b121a4e4fa7d29a3ca9f140ba0b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/plan-first-render.png",
+      "bytes": 40635,
+      "sha256": "7b562ffb83de4276a5f3043a1d730281e87034ab6f629a8b905a289adba1b65b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-1.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-10.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-11.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-12.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-13.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-14.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-15.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-16.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-17.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-18.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-19.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-2.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-20.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-21.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-22.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-23.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-24.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-25.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-26.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-27.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-28.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-29.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-3.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-30.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-31.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-32.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-4.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-5.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-6.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-7.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-8.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/response-9.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/0-Joplin-50-R/server.log",
+      "bytes": 240,
+      "sha256": "47d7831f42468f1bea17702380985922ae3d4a2b83395653703c260c8751a289"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/1-Joplin-50-D-rpc-1.rpc-body",
+      "bytes": 50881,
+      "sha256": "a45253b35279da3daac63ef9169d5179d3f35974f0f4f7d0341c52eab23728d8"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/1-Joplin-50-D-rpc-2.rpc-body",
+      "bytes": 42482,
+      "sha256": "718c0e1972bd2d8fcc3fa74957bffd209543a826f017ba4ebe219fc89e63c8d8"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/1-Joplin-50-D-rpc-3.rpc-body",
+      "bytes": 620,
+      "sha256": "3f33197734b3cfd2179742a89b3fbb0c72f557fac6c9b3fc179990018ad01c5f"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/1-Joplin-50-D-rpc-4.rpc-body",
+      "bytes": 620,
+      "sha256": "13836f61f1cd56393b6a7a0a6c2c27b3d82cbf8fb339e74095da913b06aafd5a"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/1-Joplin-50-D-rpc-5.rpc-body",
+      "bytes": 620,
+      "sha256": "bffd4b00a78cf768af20238dacb4f10f5bee4ead3f4ead05ee105b55249c924f"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/browser-events.jsonl",
+      "bytes": 1068050,
+      "sha256": "919ff472e2e90e23c11e702b8f4feab8bf130480d2e4f688eb93e2495767cb32"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/browser-result.json",
+      "bytes": 1019056,
+      "sha256": "41b8d13bad03242dadfb1710cd5f4e9ffadd374468a32320479950d21334415c"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/cold-final.png",
+      "bytes": 40635,
+      "sha256": "7b562ffb83de4276a5f3043a1d730281e87034ab6f629a8b905a289adba1b65b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/options-first-render.png",
+      "bytes": 67212,
+      "sha256": "d58b03447a55120650149f523fceb9354d0bb43c40c82d9bf57525ef86bae496"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/pick-first-render.png",
+      "bytes": 57027,
+      "sha256": "792889d5fccb99d07a9b5943d60b4392f10ba8432d111488401accd7ee865f0e"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/plan-first-render.png",
+      "bytes": 40635,
+      "sha256": "7b562ffb83de4276a5f3043a1d730281e87034ab6f629a8b905a289adba1b65b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/response-33.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/response-34.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/response-35.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/response-36.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/response-37.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/1-Joplin-50-D/server.log",
+      "bytes": 240,
+      "sha256": "72de65bbd46ff875f45c9f3bc5a28fdef198c491d94b014564478b941883a45e"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/2-Joplin-20-R-rpc-1.rpc-body",
+      "bytes": 42482,
+      "sha256": "718c0e1972bd2d8fcc3fa74957bffd209543a826f017ba4ebe219fc89e63c8d8"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/2-Joplin-20-R-rpc-2.rpc-body",
+      "bytes": 195,
+      "sha256": "c468046eb4c168832e1fafffa0b9bd3353a1d07d92820f2388685ecf0e58a874"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/2-Joplin-20-R-rpc-3.rpc-body",
+      "bytes": 620,
+      "sha256": "13836f61f1cd56393b6a7a0a6c2c27b3d82cbf8fb339e74095da913b06aafd5a"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/2-Joplin-20-R-rpc-4.rpc-body",
+      "bytes": 620,
+      "sha256": "bffd4b00a78cf768af20238dacb4f10f5bee4ead3f4ead05ee105b55249c924f"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/2-Joplin-20-R-rpc-5.rpc-body",
+      "bytes": 620,
+      "sha256": "e92d15fcb12e53d23633012f982014af878d55b1d56bb54e7cc912c333919e9a"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/browser-events.jsonl",
+      "bytes": 485787,
+      "sha256": "e5fe9df261880e4fa8ae8105bcb342b5d6658c1640c4795811a7635e331f0807"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/browser-result.json",
+      "bytes": 506168,
+      "sha256": "89a81dc2175d638c84bf6804b046fcd360538d05abca21f315ad2cb0db0c8082"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/cold-final.png",
+      "bytes": 40635,
+      "sha256": "7b562ffb83de4276a5f3043a1d730281e87034ab6f629a8b905a289adba1b65b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/options-first-render.png",
+      "bytes": 66171,
+      "sha256": "8be82ecde66893434c6a406455accf1809cce61df05d9a2b9627290bbf80ea25"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/pick-first-render.png",
+      "bytes": 56514,
+      "sha256": "849b176d59d2fc3d0fd3ccd68e5d436d10e97e6d04a8ca377e688b7acc01db49"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/plan-first-render.png",
+      "bytes": 40635,
+      "sha256": "7b562ffb83de4276a5f3043a1d730281e87034ab6f629a8b905a289adba1b65b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/response-38.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/response-39.bin",
+      "bytes": 29,
+      "sha256": "2895032a955103cfabc504301ae2db4040e91dcbb5cc5d705af81662790f6c3d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/response-40.bin",
+      "bytes": 29,
+      "sha256": "2895032a955103cfabc504301ae2db4040e91dcbb5cc5d705af81662790f6c3d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/response-41.bin",
+      "bytes": 29,
+      "sha256": "2895032a955103cfabc504301ae2db4040e91dcbb5cc5d705af81662790f6c3d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/response-42.bin",
+      "bytes": 29,
+      "sha256": "2895032a955103cfabc504301ae2db4040e91dcbb5cc5d705af81662790f6c3d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/response-43.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/response-44.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/response-45.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/2-Joplin-20-R/server.log",
+      "bytes": 1151,
+      "sha256": "c16652d51c568fb1419194509ae77af27dd16053ddd0e9b07ec8dcd56586aea5"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/3-Joplin-20-D-rpc-1.rpc-body",
+      "bytes": 38568,
+      "sha256": "9155aec51716c422b05202c66e943a22ce09f9a802470019db5ee02152394071"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/3-Joplin-20-D-rpc-2.rpc-body",
+      "bytes": 42482,
+      "sha256": "718c0e1972bd2d8fcc3fa74957bffd209543a826f017ba4ebe219fc89e63c8d8"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/3-Joplin-20-D-rpc-3.rpc-body",
+      "bytes": 620,
+      "sha256": "3f33197734b3cfd2179742a89b3fbb0c72f557fac6c9b3fc179990018ad01c5f"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/3-Joplin-20-D-rpc-4.rpc-body",
+      "bytes": 620,
+      "sha256": "13836f61f1cd56393b6a7a0a6c2c27b3d82cbf8fb339e74095da913b06aafd5a"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/3-Joplin-20-D-rpc-5.rpc-body",
+      "bytes": 620,
+      "sha256": "bffd4b00a78cf768af20238dacb4f10f5bee4ead3f4ead05ee105b55249c924f"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/3-Joplin-20-D-rpc-6.rpc-body",
+      "bytes": 620,
+      "sha256": "e92d15fcb12e53d23633012f982014af878d55b1d56bb54e7cc912c333919e9a"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/browser-events.jsonl",
+      "bytes": 603714,
+      "sha256": "825b33f39bb7cb02f4d68d93751027cba5b429d701fcfd570cbcd3bfe38e9d30"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/browser-result.json",
+      "bytes": 636195,
+      "sha256": "3cd0aa5c32439b8c8b784e740e3b4d2c19a09a1f64c9140d23797a99ac035876"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/cold-final.png",
+      "bytes": 40635,
+      "sha256": "7b562ffb83de4276a5f3043a1d730281e87034ab6f629a8b905a289adba1b65b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/options-first-render.png",
+      "bytes": 67222,
+      "sha256": "848f04eb19f4ec7cb724c49d5d5fa337e36d2cfe25aadf561c2210a4241fe1b0"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/pick-first-render.png",
+      "bytes": 55312,
+      "sha256": "0aab656e65a345b981333123fc22d0c4f23c6b21a4f578edf71972378142de35"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/plan-first-render.png",
+      "bytes": 40635,
+      "sha256": "7b562ffb83de4276a5f3043a1d730281e87034ab6f629a8b905a289adba1b65b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/response-46.bin",
+      "bytes": 29,
+      "sha256": "2895032a955103cfabc504301ae2db4040e91dcbb5cc5d705af81662790f6c3d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/response-47.bin",
+      "bytes": 29,
+      "sha256": "2895032a955103cfabc504301ae2db4040e91dcbb5cc5d705af81662790f6c3d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/response-48.bin",
+      "bytes": 29,
+      "sha256": "2895032a955103cfabc504301ae2db4040e91dcbb5cc5d705af81662790f6c3d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/response-49.bin",
+      "bytes": 29,
+      "sha256": "2895032a955103cfabc504301ae2db4040e91dcbb5cc5d705af81662790f6c3d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/response-50.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/response-51.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/response-52.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/response-53.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/response-54.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/3-Joplin-20-D/server.log",
+      "bytes": 1153,
+      "sha256": "1052cecb649c6d9cfed0929485036d699dc0afb10f5e37ebe966373d76ceeff8"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/4-Columbia-20-D-rpc-1.rpc-body",
+      "bytes": 15198,
+      "sha256": "f55886247c495eda5cec429da91805f56ad7ae2d14c46fa3d9649dca6ee9c3c9"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/4-Columbia-20-D-rpc-2.rpc-body",
+      "bytes": 15314,
+      "sha256": "d62abef0574467bb08f1b816c0191d3f042ad5ebe22fb5d79ab4ab71bd1debb6"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/4-Columbia-20-D-rpc-3.rpc-body",
+      "bytes": 620,
+      "sha256": "3f33197734b3cfd2179742a89b3fbb0c72f557fac6c9b3fc179990018ad01c5f"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/4-Columbia-20-D-rpc-4.rpc-body",
+      "bytes": 620,
+      "sha256": "13836f61f1cd56393b6a7a0a6c2c27b3d82cbf8fb339e74095da913b06aafd5a"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/4-Columbia-20-D-rpc-5.rpc-body",
+      "bytes": 620,
+      "sha256": "bffd4b00a78cf768af20238dacb4f10f5bee4ead3f4ead05ee105b55249c924f"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/4-Columbia-20-D-rpc-6.rpc-body",
+      "bytes": 620,
+      "sha256": "e92d15fcb12e53d23633012f982014af878d55b1d56bb54e7cc912c333919e9a"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/browser-events.jsonl",
+      "bytes": 428923,
+      "sha256": "abbee53ac0e098da0163d3441d730e3725be66aaabe15cfbe5f3e50c1aa46572"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/browser-result.json",
+      "bytes": 375806,
+      "sha256": "1b62a7fdd2a0e2d4a7780a74f18adafb8e9cbb47927577d0064dfc1e816d37f5"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/cold-final.png",
+      "bytes": 40635,
+      "sha256": "7b562ffb83de4276a5f3043a1d730281e87034ab6f629a8b905a289adba1b65b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/options-first-render.png",
+      "bytes": 59662,
+      "sha256": "8822417d1c628ff36d27d25ae2102f0696e24e524601fb64e30fa6f8bdfd5e99"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/pick-first-render.png",
+      "bytes": 51561,
+      "sha256": "88ecae9e30e45b2eba8b7d1a6b43546c8c63d912972b26ecd89fd651b807cb11"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/plan-first-render.png",
+      "bytes": 40635,
+      "sha256": "7b562ffb83de4276a5f3043a1d730281e87034ab6f629a8b905a289adba1b65b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/response-55.bin",
+      "bytes": 470,
+      "sha256": "0a2cea9e68ec3d3ae6868e19d295565e5b14c54fc614f430d8d04354d7e492da"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/response-56.bin",
+      "bytes": 470,
+      "sha256": "0a2cea9e68ec3d3ae6868e19d295565e5b14c54fc614f430d8d04354d7e492da"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/response-57.bin",
+      "bytes": 470,
+      "sha256": "0a2cea9e68ec3d3ae6868e19d295565e5b14c54fc614f430d8d04354d7e492da"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/response-58.bin",
+      "bytes": 470,
+      "sha256": "0a2cea9e68ec3d3ae6868e19d295565e5b14c54fc614f430d8d04354d7e492da"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/response-59.bin",
+      "bytes": 470,
+      "sha256": "0a2cea9e68ec3d3ae6868e19d295565e5b14c54fc614f430d8d04354d7e492da"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/response-60.bin",
+      "bytes": 470,
+      "sha256": "0a2cea9e68ec3d3ae6868e19d295565e5b14c54fc614f430d8d04354d7e492da"
+    },
+    {
+      "path": "hosted-live/raw/preflight/4-Columbia-20-D/server.log",
+      "bytes": 240,
+      "sha256": "72de65bbd46ff875f45c9f3bc5a28fdef198c491d94b014564478b941883a45e"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/5-Columbia-50-D-rpc-1.rpc-body",
+      "bytes": 20165,
+      "sha256": "00838b21940e3077bf78846362f5e8bb71b18265c3e36f760179f1256dad38be"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/5-Columbia-50-D-rpc-2.rpc-body",
+      "bytes": 16624,
+      "sha256": "6bcd3d4581f6b1ce6067e47784cc6185c89c5bd21ef220a659eb0a69949336f6"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/5-Columbia-50-D-rpc-3.rpc-body",
+      "bytes": 804,
+      "sha256": "21aace893f982f49a9607d07f11dd4f6b40ee52048fde2456642434fa5013f53"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/5-Columbia-50-D-rpc-4.rpc-body",
+      "bytes": 804,
+      "sha256": "92a26e1a61d39681bccb3ee5b6384621afa7f49b662cb8f4722ca25242b7dac4"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/5-Columbia-50-D-rpc-5.rpc-body",
+      "bytes": 804,
+      "sha256": "adc6754cec0c2986ee1ecfd567d33e0b000acecdf880196ff3d53e023c44b867"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/browser-events.jsonl",
+      "bytes": 884316,
+      "sha256": "2469197c543a2c11c8017ac1c04337db068474a7e82a240dcb8dc0480d04f646"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/browser-result.json",
+      "bytes": 828056,
+      "sha256": "0f4d9e4919e3d2e492bc10303e60a5cffb2262424826b58656882e92ae3d5423"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/cold-final.png",
+      "bytes": 63654,
+      "sha256": "7de6f80a74bc856aceed5227b62ff65733a7b53d02f8b0d2080bcd359b875661"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/options-first-render.png",
+      "bytes": 63140,
+      "sha256": "ccb10c967f7d15c1fd3f60f62be411fa61b381ffc828b25b9413a7ba9edb286d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/pick-first-render.png",
+      "bytes": 53308,
+      "sha256": "2cfd548697995366194e430c01cd4af0f0f501e643bee08e66dfe47a208a2128"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/plan-first-render.png",
+      "bytes": 63654,
+      "sha256": "7de6f80a74bc856aceed5227b62ff65733a7b53d02f8b0d2080bcd359b875661"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/response-61.bin",
+      "bytes": 632,
+      "sha256": "1b75f4a4226876742544c778825329411033cfedb3b4eb1f9adc37a32856a164"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/response-62.bin",
+      "bytes": 632,
+      "sha256": "1b75f4a4226876742544c778825329411033cfedb3b4eb1f9adc37a32856a164"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/response-63.bin",
+      "bytes": 632,
+      "sha256": "1b75f4a4226876742544c778825329411033cfedb3b4eb1f9adc37a32856a164"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/response-64.bin",
+      "bytes": 632,
+      "sha256": "1b75f4a4226876742544c778825329411033cfedb3b4eb1f9adc37a32856a164"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/response-65.bin",
+      "bytes": 632,
+      "sha256": "1b75f4a4226876742544c778825329411033cfedb3b4eb1f9adc37a32856a164"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/response-66.bin",
+      "bytes": 632,
+      "sha256": "1b75f4a4226876742544c778825329411033cfedb3b4eb1f9adc37a32856a164"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/response-67.bin",
+      "bytes": 632,
+      "sha256": "1b75f4a4226876742544c778825329411033cfedb3b4eb1f9adc37a32856a164"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/response-68.bin",
+      "bytes": 632,
+      "sha256": "1b75f4a4226876742544c778825329411033cfedb3b4eb1f9adc37a32856a164"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/response-69.bin",
+      "bytes": 632,
+      "sha256": "1b75f4a4226876742544c778825329411033cfedb3b4eb1f9adc37a32856a164"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/response-70.bin",
+      "bytes": 632,
+      "sha256": "1b75f4a4226876742544c778825329411033cfedb3b4eb1f9adc37a32856a164"
+    },
+    {
+      "path": "hosted-live/raw/preflight/5-Columbia-50-D/server.log",
+      "bytes": 240,
+      "sha256": "72de65bbd46ff875f45c9f3bc5a28fdef198c491d94b014564478b941883a45e"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/6-Joplin-50-D-rpc-1.rpc-body",
+      "bytes": 50881,
+      "sha256": "a45253b35279da3daac63ef9169d5179d3f35974f0f4f7d0341c52eab23728d8"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/6-Joplin-50-D-rpc-2.rpc-body",
+      "bytes": 42482,
+      "sha256": "718c0e1972bd2d8fcc3fa74957bffd209543a826f017ba4ebe219fc89e63c8d8"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/6-Joplin-50-D-rpc-3.rpc-body",
+      "bytes": 620,
+      "sha256": "3f33197734b3cfd2179742a89b3fbb0c72f557fac6c9b3fc179990018ad01c5f"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/6-Joplin-50-D-rpc-4.rpc-body",
+      "bytes": 620,
+      "sha256": "13836f61f1cd56393b6a7a0a6c2c27b3d82cbf8fb339e74095da913b06aafd5a"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/6-Joplin-50-D-rpc-5.rpc-body",
+      "bytes": 620,
+      "sha256": "bffd4b00a78cf768af20238dacb4f10f5bee4ead3f4ead05ee105b55249c924f"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/browser-events.jsonl",
+      "bytes": 1022963,
+      "sha256": "6181e16d7aa5e65b3a22555b0e3648ad9737a26e2f7a1ad5cdb065de72e5fa65"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/browser-result.json",
+      "bytes": 980108,
+      "sha256": "7b023aee92a6eda90e5b120e9d485ad602ecd658b1ede51dcba31a185bc5a84b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/cold-final.png",
+      "bytes": 40635,
+      "sha256": "7b562ffb83de4276a5f3043a1d730281e87034ab6f629a8b905a289adba1b65b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/options-first-render.png",
+      "bytes": 42200,
+      "sha256": "148454581ea514f135c00ad056dc82614e915bd0ad7b8645ad442448c6e44d71"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/optionsFour-first-render.png",
+      "bytes": 61077,
+      "sha256": "1e7f5770bcb768c04343b0f2847dd877270379326f7e3527d9e81157c57a12cf"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/pick-first-render.png",
+      "bytes": 55987,
+      "sha256": "483db61feaf1ae56cd42a7fdb1035881cfb6519c34bbd4efeab37f903eff9deb"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/plan-first-render.png",
+      "bytes": 40635,
+      "sha256": "7b562ffb83de4276a5f3043a1d730281e87034ab6f629a8b905a289adba1b65b"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/response-71.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/response-72.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/response-73.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/response-74.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/response-75.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/response-76.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/response-77.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/response-78.bin",
+      "bytes": 622,
+      "sha256": "9dddfd2d25db387d7523f32297ddf6183c718b7138c3afa5291c998aceedae9d"
+    },
+    {
+      "path": "hosted-live/raw/preflight/6-Joplin-50-D/server.log",
+      "bytes": 1128,
+      "sha256": "cddae7ab2ee7132f241dc13d3047e38f687fc6b35fbfafdebcb4fec894c9f932"
+    },
+    {
+      "path": "hosted-live/raw/preflight/fixture-accounting.jsonl",
+      "bytes": 1168850,
+      "sha256": "565f85fd5575b7d1b91f6f5ea31f68a0a3206e73dbb82e2324ea0097e768cb65"
+    },
+    {
+      "path": "hosted-live/raw/preflight/manifest.json",
+      "bytes": 4554,
+      "sha256": "4023ebb7d08a20e5437f00d43319056df4949d598c4769a510c125be760edba0"
+    },
+    {
+      "path": "hosted-live/raw/preflight/preflight-verdict.json",
+      "bytes": 78,
+      "sha256": "07cb3abf56fc64679549e8eda6ec68990281575289fe7aaab9578fe4a24e27f0"
+    },
+    {
+      "path": "hosted-live/raw/preflight/progress.json",
+      "bytes": 73166,
+      "sha256": "ac42a68fb2c7a3afe33bef0401dbeafd1489da0eefaede5de77a95055649f844"
+    },
+    {
+      "path": "hosted-live/raw/preflight/terminal.json",
+      "bytes": 892,
+      "sha256": "584ced2dc5d3f29c0fd8d1ccaf3475398cb69d90943a9fddc8804fba3c87adcf"
+    },
+    {
+      "path": "independent-review/LIVE-FINAL-REVIEW.md",
+      "bytes": 6362,
+      "sha256": "62f8deec3362cf50d3ec7936b31f487b07f9e6f185eccd7c1ec1ec87b7c15e3d"
+    },
+    {
+      "path": "live-proposal/LIVE-APPROVAL.json",
+      "bytes": 1844,
+      "sha256": "4e4c4b5c7376801e11766baee813ae8534b8eb2c97f46b79ae60d95cf29370cf"
+    },
+    {
+      "path": "live-review/DECISION-REPORT.md",
+      "bytes": 6453,
+      "sha256": "8491b1132bb550f47a93d981a56814c5e45cc434c14ba461f1246caa72f08a70"
+    }
+  ]
+}
