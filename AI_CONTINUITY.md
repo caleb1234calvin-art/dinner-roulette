@@ -1,3 +1,46 @@
+# New Owner-Authorized Phased Adaptive Audit Work — Initial Preflight Complete (2026-10-10 08:02 UTC)
+
+## CURRENT
+
+The owner's07:53 phased brief supersedes the previous STOP **only within the newly authorized sequential scope**. Phase1 adaptive-audit implementation is active and unfrozen; no new immutable candidate or candidate PASS exists yet. Exact historical PR61 **c78b97175cc094436e454fa888e1ed83486f750d**, tree **6f7130dc46e5decc9b045c2841b63c73406ae2ae**, remains open/draft/unmerged. Its prior functional PASS does not transfer to new source. “Radial discovery becomes an audit layer.”
+
+Workers: `implement_adaptive_audit_policy` owns bounded source work; `design_targeted_adaptive_benchmark` owns proposed targeted measurement; `verify_adaptive_safety_preflight` owns independent safety/protocol gates. The writer only records verified checkpoints.
+
+[Independent preflight](audit/hybrid-loading-2026-10-10/Adaptive-Audit-PREFLIGHT.md), SHA **4d6b1a6dc5d4bd0a7ea452aa74fcd827dbb49b3d1737aa52e34785a810511dbf**, was read in full. Collective full historical continuity coverage is confirmed: implementer lines1–800, verifier801–2600, researcher2601–4433, with truncation gaps reopened. Remote content matches the readback apart from its one extra final local newline.
+
+## Proposed Phase1 policy — conditional design acceptance only
+
+Healthy primary requires authoritative, nonfailed/nonpartial coverage, at least four **currently eligible** identities, semantic selection/category coverage and a genuine distinct plan pair where applicable. Proposed experimental policy: healthy audit defers2seconds, spaces patches2seconds and stops after four successful zero-useful-yield patches. Thin primary starts immediately; failed/partial primary remains immediate recovery with **no early yield-stop**, even if curated/recovered rows enlarge the pool.
+
+Anything is not identical to every concrete provider category. Explicit mixed selections require all requested coverage. Curated availability never proves provider health. Negative lifecycle evidence must merge before health/streak decisions, including capacity rejection and aliases; failed/partial patches reset the streak. Duplicates, aliases, filtered/out-of-radius rows cannot manufacture yield. Deferred work must cancel cleanly; stale results cannot seed a newer session. Early stopping must retain truthful missing geographic authority, with an explicit unseen fifth-patch-only omission control. Pure local filter changes cannot silently restart a completed audit pass. All prior expiry/no2027/radius/current-policy/open-decision safeguards remain mandatory.
+
+These are proposed design parameters under implementation, **not verified runtime behavior, performance benefit or adopted policy**.
+
+## Phase2 protocol concept PASS — source/harness/live gates HOLD
+
+Researcher proposes eight targeted cases: Kansas City20 mixed D/R; Joplin50 Movies RDDR; Columbia20 Movies D and50 mixed D, where D denotes the proposed adaptive successor and R the baseline. Proposed single global ceiling **384 physical attempts /96 failures-and-timeouts /30 minutes**, main portion≤288 attempts and reserved follow-up≤96. At most one specifically bounded evidence-gap follow-up may use the same remaining ledger/budget; **global stops never reset**. Draft3 has independent CONCEPT PASS, protocol SHA **3fb97df81d3874f68933e4c1a065664d6c9582727a3fcf2f1aafdc218a8b7f40**; exact source, executable harness, hosted zero-public fixture and live-entry gates remain HOLD. It is not permission to issue traffic. Only Joplin is repeated/counterbalanced; Kansas City is one descriptive pair and Columbia is unpaired. Estimated264 main starts versus288 cap leaves narrow headroom; censoring is plausible and cannot justify expansion. Reserve is allowed only for a singleton missing naturalRecovery/healthy/thin evidence set after complete trustworthy main observations and no stop. Four outcomes are ADOPT adaptive hybrid / KEEP CURRENT PR61 HYBRID unmerged / KEEP RADIAL V1 / MORE EVIDENCE REQUIRED, with no release implication. Natural live recovery remains required for positive adoption; synthetic evidence cannot replace it. The full draft and concept review were read; harness worker implement_targeted_benchmark_harness is active.
+
+## NEXT / phased stopping rules
+
+1. Finish bounded adaptive policy, freeze exact nonproduction candidate, independently validate safety and protocol, and checkpoint each stable gate.
+2. Execute only the reviewed/authorized targeted benchmark under its one global budget; preserve all partial/failed/censored evidence.
+3. **Only if the decision is ADOPT:** complete full hardening and fresh exact-head verification, then STOP at the owner release decision. No merge or deploy is implied.
+4. **If KEEP RADIAL or provider-limited MORE EVIDENCE REQUIRED:** park the architecture and proceed to the newly authorized Phase4 Missouri/Cadaver work. Do not call the overall phased assignment DONE merely because architecture was parked. Stop only at the applicable verified Missouri candidate or genuine owner blocker, with canonical readback.
+
+Routine evidence exports, documentation retries and minimal corrections to the current failure are authorized within this brief. This does not authorize unrelated work, policy weakening, new budgets, paid APIs, operator contact, settings, signing or production actions.
+
+## HOLD / baseline
+
+Prior final performance decision remains **MORE EVIDENCE REQUIRED** until new valid evidence changes it. The latest427-attempt failure-stopped incomplete matrix, prior327-attempt run, Track F counter-reset NOT PASS and failed-primary warm-refetch limitation remain preserved. Zero extra audit identities over199 attempts does not establish universal completeness or audit uselessness.
+
+Fresh08:01 main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**, PR61 c78 draft/unmerged, production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/sourcefe22** unchanged;52 shipped records. Alias observations are metadata only, **not fresh direct route probes or live smoke**. No merge/deploy/settings/waiver authority.
+
+Missouri/Cadaver remain parked during Phases1–2, with conditional Phase4 authorization above. Cadaver still lacks reliable attraction-specific **2026 operation/date binding and supported expiry**; this new task is not clearance. Physical Android/WebView/GPS/signing/Play and other backlog limits persist.
+
+**PARENT CONTINUITY COMMIT:** `3eb77969b1dcddba9115d2af1b4846445c0c2ca3`; **PARENT TREE:** `88d5157881b7aa878f5ef1e87144d26ddb07f445`. Documentation-only deployment-disabled checkpoint; all history follows.
+
+---
+
 # PR #61 Performance Decision Benchmark CLOSED — MORE EVIDENCE REQUIRED; STOP (2026-10-10 07:42 UTC)
 
 ## CURRENT / decision
