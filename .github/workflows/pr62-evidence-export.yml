@@ -1,0 +1,193 @@
+name: PR62 original evidence export only
+on:
+  push:
+    branches: [integration/pr62-bf884-evidence-export-2026-10-10]
+    paths: [.github/workflows/pr62-evidence-export.yml]
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: pr62-original-evidence-export
+  cancel-in-progress: false
+jobs:
+  export:
+    name: Preserve and split original PR62 browser ZIP
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: caleb1234calvin-art/dinner-roulette
+    steps:
+      - name: Download original once, verify identity, enumerate and split bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib, subprocess, zipfile, datetime
+          R = "caleb1234calvin-art/dinner-roulette"
+          SHA = "bf88443932739a9448fac8d27fd845e9947cf697"
+          TREE = "7d91061065f5e7e36e4f76307a7b915a66ea006d"
+          PARENT = "dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f"
+          RUN, ART, SIZE = 38081550608, 11682503939, 761906766
+          DIGEST = "310afc592cc6f11c7ea9512b91afc296dd3025703f55ea29235f39b504cb971e"
+          CHUNK = 240 * 1024 * 1024
+          out = pathlib.Path("export")
+          out.mkdir()
+          meta = out / "metadata"
+          meta.mkdir()
+          def api(path):
+              return json.loads(subprocess.check_output(["gh", "api", "repos/" + R + "/" + path], timeout=120))
+          def save(name, obj):
+              (meta / name).write_text(json.dumps(obj, indent=2) + "\n")
+          pr = api("pulls/62")
+          assert pr["head"]["sha"] == SHA and pr["head"]["ref"] == "integration/phase4-missouri-recovery-2026-10-10"
+          source = api("git/commits/" + SHA)
+          assert source["tree"]["sha"] == TREE and [p["sha"] for p in source["parents"]] == [PARENT]
+          original = api("actions/artifacts/" + str(ART))
+          run = api("actions/runs/" + str(RUN))
+          jobs = api("actions/runs/" + str(RUN) + "/jobs?per_page=100")
+          assert original["id"] == ART and not original["expired"]
+          assert original["size_in_bytes"] == SIZE and original["digest"] == "sha256:" + DIGEST
+          assert original["workflow_run"]["id"] == RUN and original["workflow_run"]["head_sha"] == SHA
+          assert run["head_sha"] == SHA and run["conclusion"] == "success"
+          save("original-artifact.json", original)
+          save("original-run.json", run)
+          save("original-jobs.json", jobs)
+          save("candidate-commit.json", source)
+          export_run = api("actions/runs/" + os.environ["GITHUB_RUN_ID"])
+          export_jobs = api("actions/runs/" + os.environ["GITHUB_RUN_ID"] + "/jobs?per_page=100")
+          save("export-run.json", export_run)
+          save("export-jobs.json", export_jobs)
+          archive = pathlib.Path("original-11682503939.zip")
+          with archive.open("wb") as f:
+              subprocess.run(["gh", "api", "repos/" + R + "/actions/artifacts/" + str(ART) + "/zip"], stdout=f, check=True, timeout=600)
+          assert archive.stat().st_size == SIZE, "Original byte size mismatch"
+          def digest_file(path):
+              h = hashlib.sha256()
+              with path.open("rb") as f:
+                  for block in iter(lambda: f.read(4*1024*1024), b""):
+                      h.update(block)
+              return h.hexdigest()
+          actual = digest_file(archive)
+          assert actual == DIGEST, "Original ZIP digest mismatch"
+          files, names = [], set()
+          with zipfile.ZipFile(archive) as z:
+              for entry in z.infolist():
+                  name = entry.filename
+                  assert name not in names, "Duplicate ZIP member"
+                  names.add(name)
+                  assert not name.startswith("/") and ".." not in pathlib.PurePosixPath(name).parts
+                  h, total = hashlib.sha256(), 0
+                  with z.open(entry) as f:
+                      for block in iter(lambda: f.read(4*1024*1024), b""):
+                          h.update(block)
+                          total += len(block)
+                  assert total == entry.file_size
+                  files.append({"path":name, "is_directory":entry.is_dir(), "size_bytes":total,
+                                "compressed_size_bytes":entry.compress_size, "crc32":format(entry.CRC,"08x"),
+                                "sha256":h.hexdigest(), "compression":entry.compress_type,
+                                "header_offset":entry.header_offset, "external_attr":entry.external_attr})
+          selected_original_members = []
+          selected_names = ["source-revision.txt", "build-proof.json",
+                            "seasonal-phase4-recovery-seven/verdict.json",
+                            "seasonal-card-layout/verdict.json"]
+          with zipfile.ZipFile(archive) as z:
+              for name in selected_names:
+                  if name not in names:
+                      continue
+                  data = z.read(name)
+                  target = meta / "original-selected" / name
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(data)
+                  selected_original_members.append({"path":name, "size_bytes":len(data), "sha256":hashlib.sha256(data).hexdigest()})
+          assert {"seasonal-phase4-recovery-seven/verdict.json", "seasonal-card-layout/verdict.json"} <= {x["path"] for x in selected_original_members}
+          parts = []
+          with archive.open("rb") as f:
+              index, offset = 1, 0
+              while True:
+                  block = f.read(CHUNK)
+                  if not block:
+                      break
+                  name = "original-11682503939.zip.part%03d" % index
+                  p = out / name
+                  p.write_bytes(block)
+                  parts.append({"order":index,"file":name,"offset":offset,"size_bytes":len(block),
+                                "sha256":hashlib.sha256(block).hexdigest()})
+                  offset += len(block)
+                  index += 1
+          assert len(parts) == 4 and offset == SIZE
+          joined = hashlib.sha256()
+          for p in parts:
+              with (out/p["file"]).open("rb") as f:
+                  for block in iter(lambda:f.read(4*1024*1024),b""):
+                      joined.update(block)
+          assert joined.hexdigest() == DIGEST
+          final_pr = api("pulls/62")
+          assert final_pr["head"]["sha"] == SHA
+          manifest = {
+              "schema":"pick-for-us-original-evidence-export-v1",
+              "created_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              "repository":R, "pr":62, "source_sha":SHA, "source_tree":TREE, "source_parent":PARENT,
+              "original_artifact_id":ART,"original_reported_size_bytes":SIZE,
+              "original_reported_digest":original["digest"],"original_verified_sha256":actual,
+              "original_run_id":RUN,"original_workflow_id":run["workflow_id"],
+              "original_job_ids":[j["id"] for j in jobs["jobs"]],
+              "export_run_id":int(os.environ["GITHUB_RUN_ID"]),
+              "export_run_attempt":int(os.environ["GITHUB_RUN_ATTEMPT"]),
+              "export_workflow_id":export_run["workflow_id"],
+              "export_job_key":os.environ["GITHUB_JOB"],
+              "export_job_ids":[j["id"] for j in export_jobs["jobs"]],
+              "export_commit":os.environ["GITHUB_SHA"],"export_ref":os.environ["GITHUB_REF"],
+              "raw_part_limit_bytes":CHUNK,"delivery_artifact_limit_bytes":256*1024*1024,
+              "method":"Ordered raw binary split of original ZIP; no recompression, no app execution, no source checkout",
+              "regenerated_application_behavior":False,
+              "complete_archive_member_count":len(files),
+              "complete_file_count":sum(not x["is_directory"] for x in files),
+              "total_uncompressed_bytes":sum(x["size_bytes"] for x in files),
+              "original_crc_and_member_hash_verification":"PASS",
+              "raw_reconstruction_sha256":joined.hexdigest(),
+              "parts":parts,"files":files,"selected_original_members":selected_original_members}
+          save("manifest.json",manifest)
+          (meta/"SHA256SUMS").write_text("".join(p["sha256"]+"  "+p["file"]+"\n" for p in parts)+DIGEST+"  "+archive.name+"\n")
+          print(json.dumps({k:manifest[k] for k in ("original_artifact_id","original_verified_sha256","complete_file_count","total_uncompressed_bytes","parts")},indent=2))
+          PY
+      - name: Export original raw part 001
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr62-original-11682503939-part001
+          path: export/original-11682503939.zip.part001
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - name: Export original raw part 002
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr62-original-11682503939-part002
+          path: export/original-11682503939.zip.part002
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - name: Export original raw part 003
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr62-original-11682503939-part003
+          path: export/original-11682503939.zip.part003
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - name: Export original raw part 004
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr62-original-11682503939-part004
+          path: export/original-11682503939.zip.part004
+          compression-level: 0
+          retention-days: 14
+          if-no-files-found: error
+      - name: Export complete manifest and original metadata
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr62-original-11682503939-manifest
+          path: export/metadata/
+          compression-level: 6
+          retention-days: 14
+          if-no-files-found: error
