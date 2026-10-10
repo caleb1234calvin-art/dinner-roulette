@@ -176,6 +176,7 @@ export function DateNightHome() {
   const [primaryPending, setPrimaryPending] = useState(true);
   const halloweenActive = isHalloweenDateNightActive(spookySeasonEnabled, now);
   const activityChips = dateNightChipsForNow(spookySeasonEnabled, now);
+  const semanticSelectionSignature = filters.activityTypes.join(",");
   const acquisitionSignature = normalizeDateNightClientActivityTypes(filters.activityTypes, halloweenActive).join(",");
 
   useEffect(() => {
@@ -184,6 +185,11 @@ export function DateNightHome() {
       halloweenActive, activityTypes: acquisitionSignature.split(",") as ConcreteDateNightType[],
     }, {
       retryVersion: requestVersion,
+      auditView: {
+        selectedTypes: filters.activityTypes,
+        eligible: places => eligibleDateNight(decorateDateNight(places, location, new Date(Date.now())),
+          filters, halloweenActive, preferences, exclusions, Date.now()),
+      },
       request: (acquisition, signal) => searchDateNight({
         data: {
           lat: acquisition.lat, lon: acquisition.lon, radiusMiles: acquisition.radiusMiles,
@@ -204,7 +210,7 @@ export function DateNightHome() {
         setRadialCoverage(nextCoverage);
       },
     });
-  }, [location.lat, location.lon, filters.radiusMiles, spookySeasonEnabled, halloweenActive, acquisitionSignature, radialSession, requestVersion]);
+  }, [location.lat, location.lon, filters.radiusMiles, spookySeasonEnabled, halloweenActive, acquisitionSignature, radialSession, requestVersion, filters.openNowOnly, filters.favoritesOnly, preferences, exclusions, now, semanticSelectionSignature]);
   useEffect(() => () => radialSession.dispose(), [radialSession]);
 
   const decorated = useMemo(() => decorateDateNight(venues, location, now), [venues, location, now]);

@@ -6,7 +6,6 @@ import { discoveryComponentHarness, discoveryModes, discoveryPayload, textOf } f
 const load = appModuleLoader();
 const { planDateNightPatches } = load("src/lib/date-night/radial-plan.ts");
 const { buildDateNightQueryPlan } = load("src/lib/date-night/query-plan.ts");
-const { DATE_NIGHT_RADIAL_SUCCESS_PAUSE_MS } = load("src/lib/date-night/radial-session.ts");
 const config = discoveryModes[1];
 function setup(t, radiusMiles = 50) {
   const clock = discoveryClock(t), h = discoveryComponentHarness(config);
@@ -40,27 +39,27 @@ test("actual UI: selected-radius primary enables all actions before serial backg
   assert.equal(h.requests[0].args.data.radiusMiles, 50);
   assert.equal(h.status().loading, false, "supported local cinemas are immediately usable before live primary");
   assert.equal(h.button(h.render(), "Pick our date").props.disabled, false);
-  reply(h); await h.settle();
+  reply(h); await h.settle(); await clock.tick(2000);
   assert.equal(h.status().loading, false);
   for (const label of ["Pick our date", "Give us options", "Plan the night"]) assert.equal(h.button(h.render(), label).props.disabled, false);
   assert.match(progress(h), /Ready/);
   assert.equal(h.requests[1].args.data.patchId, "radial-v1:core");
-  await clock.tick(1000);
+  await clock.tick(2000);
   assert.equal(h.requests.length, 2, "one audit RPC in flight");
-  reply(h); await h.settle(); await clock.tick(DATE_NIGHT_RADIAL_SUCCESS_PAUSE_MS);
+  reply(h); await h.settle(); await clock.tick(2000);
   assert.equal(h.requests[2].args.data.patchId, "radial-v1:20:0");
 });
 
 for (const [label, overlay, prop] of [["Pick our date", "ResultOverlay", "restaurant"], ["Give us options", "OptionsOverlay", "restaurants"], ["Plan the night", "DateNightPlanOverlay", "plan"]]) {
   test(`actual UI: open ${overlay} stays stable when audit venues arrive; future action uses enlarged pool`, async t => {
     const { h, clock } = setup(t);
-    reply(h); await h.settle();
+    reply(h); await h.settle(); await clock.tick(2000);
     t.mock.method(Math, "random", () => 0.9999999);
     h.button(h.render(), label).props.onClick();
     const ids = () => [h.overlay(h.render(), overlay).props[prop]].flat().map(v => v.id);
     const before = ids();
-    reply(h); await h.settle(); await clock.tick(1000);
-    reply(h); await h.settle();
+    reply(h); await h.settle(); await clock.tick(2000);
+    reply(h); await h.settle(); await clock.tick(2000);
     assert.deepEqual(ids(), before);
     const node = h.overlay(h.render(), overlay);
     (node.props.onReroll ?? node.props.onShuffle ?? node.props.onReplan)();
@@ -70,23 +69,23 @@ for (const [label, overlay, prop] of [["Pick our date", "ResultOverlay", "restau
 
 test("audit middle failure retains primary picks and explicit retry targets missing sector", async t => {
   const { h, clock } = setup(t, 20);
-  reply(h); await h.settle(); reply(h); await h.settle();
-  for (let i = 0; i < 4; i++) { await clock.tick(1000); reply(h, { fail: i === 1 }); await h.settle(); }
+  reply(h); await h.settle(); await clock.tick(2000); reply(h); await h.settle(); await clock.tick(2000);
+  for (let i = 0; i < 4; i++) { await clock.tick(2000); reply(h, { fail: i === 1 }); await h.settle(); }
   assert.equal(h.requests.length, 6);
   assert.match(progress(h), /Ready · some background coverage checks are unavailable/);
   assert.equal(h.button(h.render(), "Pick our date").props.disabled, false);
   h.button(h.render(), "Retry missing areas").props.onClick(); h.render();
-  await clock.tick(1000);
+  await clock.tick(2000);
   assert.equal(h.requests.at(-1).args.data.patchId, "radial-v1:20:1");
-  reply(h); await h.settle();
+  reply(h); await h.settle(); await clock.tick(2000);
   assert.match(progress(h), /Ready · background coverage checked/);
 });
 
 test("outermost audit failure preserves primary and bounded audit never auto-retries", async t => {
   const { h, clock } = setup(t);
   const total = planDateNightPatches(h.store.location, 50).length;
-  reply(h); await h.settle();
-  for (let i = 0; i < total; i++) { if (i) await clock.tick(1000); reply(h, { fail: i === total - 1 }); await h.settle(); }
+  reply(h); await h.settle(); await clock.tick(2000);
+  for (let i = 0; i < total; i++) { if (i) await clock.tick(2000); reply(h, { fail: i === total - 1 }); await h.settle(); }
   assert.equal(h.requests.length, total + 1);
   assert.match(progress(h), /Ready · some background coverage checks are unavailable/);
   assert.equal(h.button(h.render(), "Give us options").props.disabled, false);
@@ -97,8 +96,8 @@ test("outermost audit failure preserves primary and bounded audit never auto-ret
 
 test("three consecutive degraded audit patches stop bounded pass without removing primary", async t => {
   const { h, clock } = setup(t);
-  reply(h); await h.settle(); reply(h); await h.settle();
-  for (let i = 0; i < 3; i++) { await clock.tick(1000); reply(h, { fail: true }); await h.settle(); }
+  reply(h); await h.settle(); await clock.tick(2000); reply(h); await h.settle(); await clock.tick(2000);
+  for (let i = 0; i < 3; i++) { await clock.tick(2000); reply(h, { fail: true }); await h.settle(); }
   await clock.tick(100_000);
   assert.equal(h.requests.length, 5);
   assert.match(progress(h), /Ready · some background coverage checks are unavailable/);
@@ -107,8 +106,8 @@ test("three consecutive degraded audit patches stop bounded pass without removin
 });
 
 test("15→50 acquires missing disk authority; narrowing cancels obsolete work and clips locally", async t => {
-  const { h } = setup(t, 15);
-  reply(h); await h.settle();
+  const { h, clock } = setup(t, 15);
+  reply(h); await h.settle(); await clock.tick(2000);
   h.store.setDateNightFilters({ radiusMiles: 50 }); h.render();
   const wide = h.requests.at(-1);
   assert.equal(wide.args.data.patchId, undefined);
@@ -124,19 +123,19 @@ test("15→50 acquires missing disk authority; narrowing cancels obsolete work a
 });
 
 test("rapid radius change cancels obsolete primary and strictly clips its replacement", async t => {
-  const { h } = setup(t);
+  const { h, clock } = setup(t);
   h.store.setDateNightFilters({ radiusMiles: 1 }); h.render();
   assert.equal(h.requests[0].args.signal.aborted, true);
   assert.equal(h.requests.at(-1).args.data.radiusMiles, 1);
-  reply(h); await h.settle();
+  reply(h); await h.settle(); await clock.tick(2000);
   assert.match(progress(h), /1 activities match/);
   reply(h, { index: 0 }); await h.settle();
   assert.match(progress(h), /1 activities match/);
 });
 
 test("all local-only filters cause zero RPCs and do not cancel background audit", async t => {
-  const { h } = setup(t);
-  reply(h); await h.settle();
+  const { h, clock } = setup(t);
+  reply(h); await h.settle(); await clock.tick(2000);
   for (const patch of [{ openNowOnly: true }, { mood: 99 }, { favoritesOnly: true }, { reduceParks: false }]) {
     h.store.setDateNightFilters(patch); h.render();
     assert.equal(h.requests.length, 2);
@@ -145,8 +144,8 @@ test("all local-only filters cause zero RPCs and do not cancel background audit"
 });
 
 test("location change cancels audit and late response cannot replace newer primary", async t => {
-  const { h } = setup(t);
-  reply(h); await h.settle();
+  const { h, clock } = setup(t);
+  reply(h); await h.settle(); await clock.tick(2000);
   h.store.location = { ...h.store.location, lat: 38 }; h.render();
   assert.equal(h.requests[1].args.signal.aborted, true);
   assert.equal(h.requests[2].args.data.patchId, undefined);

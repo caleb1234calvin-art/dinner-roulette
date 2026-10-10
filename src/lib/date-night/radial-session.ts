@@ -20,6 +20,9 @@ export interface DateNightRadialUpdate {
   paused: boolean;
   error: string | null;
 }
+export interface DateNightRadialAuditPolicy {
+  settled: (state: { response: DateNightSearchResponse | null; coverage: DateNightCoverageState; degraded: boolean; acquisition: DateNightAcquisition }) => { stop: boolean; pauseMs?: number };
+}
 type Request = (query: DateNightAcquisition, signal: AbortSignal) => Promise<DateNightSearchResponse>;
 
 /** One mounted-session controller. No unbounded retry, parallel patch fan-out,
@@ -29,6 +32,8 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
   let request: Request;
   let onChange: (state: DateNightRadialUpdate) => void;
   let retryVersion = 0;
+  let auditPolicy: DateNightRadialAuditPolicy | undefined;
+  let policyStopped = false;
   let inFlight: { query: DateNightAcquisition; types: ConcreteDateNightType[]; cleanup?: () => void } | undefined;
   let timer: ReturnType<typeof setTimeout> | undefined;
   // Monotonic admission deadline survives timer cancellation, compatible updates
@@ -70,7 +75,7 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
     if (visible && hasFailure && response) visible = { ...visible, warning: PARTIAL_WARNING,
       discovery: { groups: visible.discovery?.groups ?? [], partial: true } };
     const ready = Boolean(visible) || (coreSettled && !inFlight);
-    const expanding = !paused && Boolean(inFlight || timer || candidates(coverage).length);
+    const expanding = !policyStopped && !paused && Boolean(inFlight || timer || candidates(coverage).length);
     onChange({ response: visible, coverage, loading: !ready && Boolean(inFlight),
       expanding: ready && expanding, paused, error: visible ? null : error });
   };
@@ -85,7 +90,7 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
   };
   const next = () => {
     timer = undefined;
-    if (!query || inFlight || paused) return publish();
+    if (!query || inFlight || paused || policyStopped) return publish();
     const { coverage } = snapshot();
     const candidate = candidates(coverage)[0];
     if (!candidate) return publish();
@@ -146,29 +151,32 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
         consecutiveFailures = degraded ? consecutiveFailures + 1 : 0;
         const after = snapshot().coverage;
         if ((!candidate.innerMiles && after.patches[0]!.missingActivityTypes.length) || consecutiveFailures >= DATE_NIGHT_RADIAL_FAILURE_LIMIT) paused = true;
-        const pause = degraded ? DATE_NIGHT_RADIAL_PAUSE_MS : DATE_NIGHT_RADIAL_SUCCESS_PAUSE_MS;
+        const policy = auditPolicy?.settled({ response: snapshot().response, coverage: after, degraded, acquisition: flight.query });
+        policyStopped = Boolean(policy?.stop && candidates(after).length);
+        const pause = Math.max(policy?.pauseMs ?? 0, degraded ? DATE_NIGHT_RADIAL_PAUSE_MS : DATE_NIGHT_RADIAL_SUCCESS_PAUSE_MS);
         outerReadyAt = Math.max(outerReadyAt, performance.now() + pause);
-        if (!paused && candidates(after).length) timer = setTimeout(next, outerReadyAt - performance.now());
+        if (!paused && !policyStopped && candidates(after).length) timer = setTimeout(next, outerReadyAt - performance.now());
         publish();
       },
     });
     publish();
   };
   return {
-    update(acquisition: DateNightAcquisition, callbacks: { request: Request; onChange: typeof onChange; retryVersion?: number }) {
+    update(acquisition: DateNightAcquisition, callbacks: { request: Request; onChange: typeof onChange; retryVersion?: number; auditPolicy?: DateNightRadialAuditPolicy }) {
       const compatible = query && sameSignature(query, acquisition);
       const retry = callbacks.retryVersion !== undefined && callbacks.retryVersion !== retryVersion;
       request = callbacks.request;
+      auditPolicy = callbacks.auditPolicy;
       onChange = callbacks.onChange;
       retryVersion = callbacks.retryVersion ?? 0;
       query = { ...acquisition, activityTypes: normalizeDateNightActivityTypes(acquisition.activityTypes, acquisition.halloweenActive) };
       if (!compatible) {
         cancel(); attempts = new Map(); failed = new Map(); passRequests = 0; consecutiveFailures = 0;
-        paused = false; coreSettled = false; displayOnly = null; error = null;
+        paused = false; policyStopped = false; coreSettled = false; displayOnly = null; error = null;
       } else {
         for (const [id, at] of attempts) if (now() < at || now() - at >= DATE_NIGHT_CACHE_TTL_MS) attempts.delete(id);
         if (retry) {
-          attempts.clear(); failed.clear(); passRequests = 0; consecutiveFailures = 0; paused = false; error = null;
+          attempts.clear(); failed.clear(); passRequests = 0; consecutiveFailures = 0; paused = false; policyStopped = false; error = null;
         }
         const current = snapshot().coverage;
         const needed = inFlight && current.patches.find(p => p.id === inFlight!.query.patchId);
