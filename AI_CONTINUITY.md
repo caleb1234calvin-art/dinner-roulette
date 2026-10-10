@@ -1,3 +1,51 @@
+# Adaptive Audit Phase 1 Scoped PASS — Published Source Bound; Phase 2 Entry Pending (2026-10-10 08:12 UTC)
+
+## CURRENT
+
+“Radial discovery becomes an audit layer.” The new adaptive candidate is published on deployment-disabled `integration/date-night-adaptive-audit-2026-10-10`: **d6d6f91b16aecd27773168c68d3c8ebdc33001c7**, tree **17f36a46f1d6894b6adf44edf7aefefc2b457cbb**, sole parent **bb3871f0b7b4fe6bd150ef8c2cb8272744c5eae3**. This is a separate branch; PR61 remains draft/open/unmerged at **c78b97175cc094436e454fa888e1ed83486f750d**, tree **6f7130dc46e5decc9b045c2841b63c73406ae2ae**. No new adaptive PR identity is asserted.
+
+**Independent Phase 1 scoped PASS:** 164 focused tests and six separately authored adversarial tests; typecheck PASS; lint zero errors and six inherited warnings. These are focused scopes, not a full application-suite count. Exact local reviewed source was rebound to the complete published tree, rather than assuming old-SHA results transfer. Full Phase 3 tests/build/browser/geometry/Android, live performance, adoption and release remain unpassed.
+
+## Historical HOLD and exact correction
+
+Historical local **e7e09ffdd5a7578a079c5a9003cc8227b69f8e99**, tree **7a1a5a444d0ae81bb432193f58c3e1626fc1f233**, had **ADAPT-IV01 HOLD**: Favorites only removed all currently eligible venues after early stopping, and the empty-state message hid explicit paused/incomplete coverage. Cache coverage remained incomplete, no extra RPC occurred, and no negative-authority loss was demonstrated. Its 161 focused and five adversarial passes did not override the sixth failed independent test.
+
+The corrected local **9322fdf7c99e7cce06e23302bdede7fa9b34ff94** adds truthful `empty-audit-stopped` disclosure: “No matching date ideas available · background checks paused; coverage incomplete.” Favorites, Open Now and expiry empty states retain zero-current-eligible truth without false Ready or automatic restart. The original independent reproducer now passes. Correction changes phase/precedence/label plus tests/evidence; acquisition, pacing, membership, provider and cache implementation were unchanged by this correction.
+
+Publication preserved all three full trees:
+- remote **2ef3f8eaf0dc19b9c3c92ef0702f8a9c11f5b414** = local **4aee376f14a30f01a669b5667c7b9aa7f2b79249**, tree **004e400bb740150086eb3787368b87f2d16ef61d**, parent c78;
+- remote **bb3871f0b7b4fe6bd150ef8c2cb8272744c5eae3** = historical local e7, parent 2ef3;
+- remote **d6d6f91b16aecd27773168c68d3c8ebdc33001c7** = corrected local 9322, parent bb3871.
+
+The independently compared full recursive tree listing hash is **65fa3065a33d16bb9b94102d24218452b171ba0744897a9fd2645da03f1f75ac**; full 9322-to-d6d6 diff is empty. Twenty c78-relative paths comprise four source, two test and fourteen evidence paths. Remote source/evidence is recoverable from the exact branch commit; local Git publication authentication failure made no remote ref change before successful connector publication.
+
+## Explicit recall, freshness and measurement limits
+
+Healthy means authoritative successful nonpartial primary, at least four currently eligible unique identities, semantic category representation and a genuine distinct pair where applicable. Anything requires two represented types, not every provider category. Curated richness does not establish provider health. Healthy uses a two-second deferral and at least two-second settlement spacing, with four fully successful zero-useful-addition patches needed for stopping. Thin and failed/partial recovery remain immediate under inherited pacing; failed/partial primary cannot yield-stop. Negative evidence merges before health/streak decisions.
+
+Independent fixtures retain the known cost of early stopping: an eligible venue only in the fifth unseen patch can be missed; a closure known only in an unqueried patch can leave a stale positive. Previously observed negatives remain authoritative. At mocked 50 miles, four versus 32 patch acquisitions leaves 28 missing patches. These are intent counts, **not measured physical-provider savings, parity or a population recall guarantee**.
+
+A deferred timer has primaryPending=false and expanding=false without being terminal. Phase 2 must not confuse it with quiescence. Stopped and empty-stopped states are explicitly incomplete, never complete geographic coverage. Prior c78 full functional PASS remains historical and separate.
+
+## Recoverable independent receipts
+
+All three reports were read in full and preserved unchanged:
+- [Historical e7 HOLD](audit/hybrid-loading-2026-10-10/Adaptive-E7E-REVIEW-HOLD.md), SHA **b44d08a2cf5205a17e6dbfc23542022e3a92b62f22c76717a4c9ab9c7e77c303**.
+- [Scoped corrected Phase 1 PASS](audit/hybrid-loading-2026-10-10/Adaptive-PHASE1-932-PASS.md), SHA **f8c026b44d331ca99f18bbb63304a82006ebc0f4072628bcc70ce2f25614bd11**.
+- [Independent remote identity binding](audit/hybrid-loading-2026-10-10/Adaptive-REMOTE-D6D6-BINDING-PASS.md), SHA **545a0dedb7212b3a500493223d1b75fbb54901c604ffbeeb50c9db7c7006deb0**.
+
+## NEXT / HOLD
+
+Proceed only to the separately reviewed Phase 2 executable harness, immutable source binding and hosted zero-public fixture entry gates. Protocol D3 has concept PASS; harness review and live entry are pending. No live calls have begun. The proposed single global **384 physical starts /96 cumulative failure-timeout outcomes /30 minutes** includes main at most 288 and reserve at most 96 for at most one qualifying follow-up; stops never reset. Required healthy/thin/natural recovery, actual four-option interaction and genuine mixed plan observations remain unperformed.
+
+Performance/adoption remains **MORE EVIDENCE REQUIRED / HOLD**. Preserve the prior counter-reset failure, a4 exit-13 incomplete experiment, latest 427-attempt clean failure-stop, and failed-primary warm radius-refetch limitation. Only ADOPT leads to full Phase 3 hardening/verification then owner release STOP. KEEP RADIAL or provider-limited MORE leads to parked architecture and the newly authorized Phase 4 Missouri/Cadaver work. Do not prematurely close the overall phased task at architecture parking.
+
+Fresh writer checks at 08:09–08:11: main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**; production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/source fe22**; PR61 c78 draft/unmerged; 52 shipped records unchanged. Metadata checks are not new route or live-smoke acceptance. No merge, deploy, settings, signing, waiver or operator-contact authority. Cadaver remains HOLD for reliable attraction-specific **2026 operation/date binding and supported expiry**; Missouri is parked during Phases 1–2. Physical Android/WebView/GPS and all other backlog limits remain.
+
+**PARENT CONTINUITY COMMIT:** `a9e5e17717973985f12c22d6e328edb566298015`; **PARENT TREE:** `035bfeeacf0844608454ef21b14d54a8bda1264b`. Documentation-only checkpoint; integration/** deployment is disabled in verified vercel.json blob65925d91f882a10433e3eb43f53ed802914c969b. All history follows.
+
+---
+
 # New Owner-Authorized Phased Adaptive Audit Work — Initial Preflight Complete (2026-10-10 08:02 UTC)
 
 ## CURRENT
