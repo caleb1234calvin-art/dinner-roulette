@@ -1,3 +1,99 @@
+# Phase 4 Seven-Record Candidate Frozen — Exact-Head Verification Pending (2026-10-10 18:34 UTC)
+
+## CURRENT — authoritative candidate gate
+
+This entry supersedes older CURRENT/NEXT statements below. The selected seven-record implementation has been published as [draft PR #62](https://github.com/caleb1234calvin-art/dinner-roulette/pull/62), **open, draft and unmerged**:
+- Branch: `integration/phase4-missouri-recovery-2026-10-10`.
+- Candidate commit: **dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f**.
+- Candidate tree: **3ce7bd595e4061a6405b008fb0daec82c5b2823a**.
+- Sole parent: verified main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**.
+- Exact accepted research input: SHA-256 **827eb67919c99dec61991cbc01cba63097ccd5dd1868de355b5f79b07d348882**; published/read-back research gate **0fcb454c501b433d90b8971ca1d2b0be8daff56b**.
+- **33 changed paths**, independently enumerated by the remote main-to-candidate comparison. The [immutable candidate handoff](https://github.com/caleb1234calvin-art/dinner-roulette/blob/dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f/audit/phase4-recovery-implementation-2026-10-10/IMPLEMENTATION-HANDOFF-R1.md) and [candidate validation record](https://github.com/caleb1234calvin-art/dinner-roulette/blob/dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f/audit/phase4-recovery-implementation-2026-10-10/Implementation-Validation-R1.json) describe the implementation.
+
+The independent runtime verifier has started review of this exact candidate; the author owns any remediation. **No independent implementation/runtime PASS or release PASS is claimed.** Candidate publication is not production import. The earlier staged tree was superseded by the final published tree above after a documentation/evidence-publication correction; do not transfer an old candidate/tree PASS.
+
+### Verified baseline, counting and scope
+
+Fresh 18:33–18:34 UTC reads confirm unchanged main and production: **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa**, **READY**, Git source **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**. No new browser smoke is implied.
+
+Current main has **52 V1 listings plus one legacy Werehouse anchor = 53 distinct seasonal identities**. The candidate has **59 V1 / 59 distinct identities: six net-new venues plus the existing Werehouse amendment**. Do not describe the seven selected records as seven net-new venues. The author records all prior 52 V1 catalogs/presentations unchanged and 26 protected files byte-bound to main.
+
+Selected seven remain Wolfman, Werehouse, Fearstone, Fun Time, Carolyn, Terror on Route 66 and Branson. Rolla is deliberately omitted; its October 10-only evidence is not yet expired at this checkpoint and must expire at **2026-10-11T05:00:00Z**. Cadaver and all other factual HOLDs remain outside this candidate.
+
+The research gate remains **8 factual + approximate-placement ready of 17, 9 factual HOLD**, with seven selected. Incidental new evidence discussed below has not changed that gate.
+
+## Validation — passed, not run and pending kept distinct
+
+Author local validation recorded in immutable candidate evidence:
+- **1,062 passed tests**: 991 repository + 71 application; **four inherited external-documentation skips**, no failed tests in the final local run. The 44 new recovery tests and 68 combined focused/component checks are included subsets, not additional totals.
+- Typecheck PASS; lint **0 errors, six inherited warnings**.
+- Safe auth-enabled, migration-free production build PASS. No migration-triggering build shortcut.
+- Android structure/icons and **three native Python tests PASS**.
+- Initial pre-build failures, initial focused-test corrections and the corrected obsolete Werehouse Open Now expectation remain preserved in evidence rather than omitted.
+
+**Local browser and geometry: NOT RUN.** Chromium could not create its Unix socket in this environment, including reviewed retries, before the first scenario/comparison. Zero browser assertions or geometry comparisons ran locally. This is an execution-environment restriction, not an observed application assertion failure and not browser PASS.
+
+Exact candidate-head hosted runs were **in progress** at the fresh check:
+- [Validate Dinner Integration run 411 / 38076168774](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38076168774), head **dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f**.
+- [Android Release Readiness run 82 / 38076168794](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38076168794), same head.
+
+The workflow preserves prior suites and adds the seven-record **164-scenario browser invocation** plus all-seven geometry. Those are expected checks, not observed pass totals. Hosted Android remains unsigned; signing, Play and physical-device claims remain excluded.
+
+## Exact behavior still requiring independent verification
+
+- Approximate coordinates are map/distance placements only; Directions use public visitor addresses. All seven and provider/cache/saved paths must preserve null machine intervals and never Open Now.
+- Werehouse keeps **date-night-werehouse-joplin**, replaces its old coordinates/hours and must not duplicate the legacy anchor or revive old machine-hour confidence.
+- Fun Time has no invented subtype dates, full hours or operating end. November 1 05:00 UTC remains editorial visibility expiry.
+- Carolyn is Pumpkin Patch only; Liberty Corn Maze remains distinct. The supported contact is a text line, visible in Details without a misleading generic Call action.
+- Preserve compact material access, age, ID, touch, guardian, waiver and grouping restrictions.
+- Branson's exact 17-date evidence includes November 6/7/13/14 and final expiry **2026-11-15T06:00:00Z**. Candidate listing-lifecycle visibility retains it in Anything beyond the Halloween window without extending seasonal chips or live provider discovery.
+- Preserve the existing V1 contract: upcoming/closed-today curated listings may remain browseable and pickable with Open Now off until hard expiry. This does not assert operation on nonlisted dates. Exact active dates govern schedule status, not a newly invented browsing exclusion.
+- Verify destination-local America/Chicago dates, fall-back DST, every relevant cutoff minus 1 ms/exact/plus 1 ms, wall-clock expiry without successful RPC, all aliases/routes, dedupe, stale provider/cache/saved suppression and no 2027 revival.
+
+Fresh revalidation evidence distinguishes raw origin, indexed official content and inaccessible reopens. Wolfman/Werehouse raw 2026 active-day cells reproduced the accepted subsets; Branson indexed official DMO evidence was reproduced. Fun Time's fresh exact official-post reopen was inconclusive, so its recently accepted record-specific evidence remains retained at its disclosed limits. No fabricated fresh corroboration.
+
+## Evidence publication and retained denial
+
+The scoped [R2 evidence archive](https://github.com/caleb1234calvin-art/dinner-roulette/blob/dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f/audit/phase4-recovery-implementation-2026-10-10/Preimport-And-Local-Validation-Evidence-R2.zip) is **363,085 bytes, 12 members**, SHA-256 **044dbe268fc80c167be4929e9104936d0ef214abd6258e7bc4bf9f7ea7e38308**. Its manifest records 11 unchanged raw/log members plus an omission receipt.
+
+Repository publication of the mixed `preimport-web-2.json` receipt was denied because returned search results included unrelated material. **The entire file is omitted from the published candidate and both evidence archives**, retained locally only. It was not repackaged, substituted or retried. The scoped receipts and immutable accepted evidence remain available. This denial is distinct from the earlier two completed, explicitly authorized recovery operations.
+
+Candidate handoff SHA-256 **893f6a5241266918cf3833738d374ba830c70c3d4eea5c14549389f7ba7e83cf**; candidate validation SHA-256 **0e9f4226804c5f2e51dc6d6e516d9a4f7243068a684a9a469a53fed61b3b60d7**; normalized projection SHA-256 **b9d1bd5edb71adb5c96459d47f6c91ac35e2880f1e4a41c5035f9d8f90162076**. Full immutable member identities are in the candidate's SHA256SUMS-Implementation-R1.json.
+
+## Incidental Cadaver evidence — separate future queue
+
+A separate incidental review is now frozen: **CADAVER-INCIDENTAL-PIXEL-REVIEW-2026-10-10-R1**, reviewed 18:34:25 UTC. **Materially new evidence preserved; ready for later bounded Cadaver reclearance.** The current seven-record batch and canonical factual/runtime HOLD remain unchanged.
+
+Actual uploaded poster pixels visibly identify Cadaver Zone, the accepted Webb City address and 2026 calendars. They mark **13 dates: September 25–26; October 2–3, 9–10, 16–17, 23–24 and 29–31**. Printed general hours are **7 p.m.–midnight**, with **October 29 separately 7–10 p.m.** This resolves the older historical “no actual poster pixels” limitation; it does not authenticate the old disputed Instagram attribution.
+
+Official Facebook origin is explicitly owner-attested. The exact source account/post URL and publication timestamp were not independently observed. Upload time is not publication time. Preserve this source class rather than relabeling it independently captured origin-page evidence.
+
+Suggested expiry for the later reclearance is **2026-11-01T05:00:00Z**, derived from the final October 31 midnight close in America/Chicago, still CDT. It is not a printed expiry, last-admission cutoff or final-exit guarantee. Prior public address and approximate placement remain accepted without another geocode or entrance claim.
+
+The later bounded gate must explicitly accept the owner-attested first-party capture and exact date/expiry derivation before a separate candidate addition. If independently observed origin provenance is required, the missing item is the source post/account binding for this same poster, not more year pixels or another repeated extractor result. Continue the current candidate first; no broad source restart and no eighth-record addition now.
+
+Immutable report JSON SHA-256 **024e0b537de6cd4b70c023755e8cc1befd9207f457951ab9ffbd744e1aa6d158**; report Markdown **86e6d7251e5e131893b56a7a3006cc78dbc1a7480b0d0a353274f46efd461c9e**; four-member manifest **34ba8a53ff580da4605948d9c29f68956253a878a5b906ff1539d31e9f2e5bf4**; actual image **203d12ea4634752d27fa94544aa307c8c792b3644707e419c8d18cd6a16b4578**. This checkpoint records the result and immutable identities without publishing private conversation links or the user-supplied image.
+
+## NEXT — finish exact-head verification; author owns remediation
+
+Track the exact hosted results above and complete independent runtime/consumer verification on **dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f / 3ce7bd595e4061a6405b008fb0daec82c5b2823a**. Diagnose any failure and have the candidate author make authorized corrections on the same branch. Every changed candidate requires a newly frozen SHA/tree and exact-head re-verification; do not transfer a previous candidate's PASS.
+
+At the next material stable gate, publish and fully read back canonical continuity with the exact results, candidate identities and remaining HOLDs. Keep ordinary continuity on this deployment-disabled documentation branch rather than adding documentation-only churn to the runtime candidate.
+
+**Stop before merge, deployment or production import.** Independent review and the owner's separate concrete release gate remain required.
+
+## HOLD — release, performance and inherited limits
+
+**Release HOLD.** No merge/deployment/production import, Vercel/protection change, operator contact, paid API, signing or Play action occurred in this documentation checkpoint.
+
+Performance PR #61/c78 and adaptive D remain parked **MORE EVIDENCE REQUIRED, provider-limited category B**. **“Radial discovery becomes an audit layer.”** remains design intent. No benchmark retry/budget reset/reserve/Phase 3 hardening, no performance history in the Missouri candidate and no transfer of historical performance PASS. Retain Cadaver and other factual holds, residential separation, physical Android/WebView/GPS HOLD, inherited warnings/known geometry limits and no live provider/weather/ticket guarantees.
+
+`integration/continuity-refresh-2026-10-07` retains **integration/** deployment disabled; `vercel.json` blob **65925d91f882a10433e3eb43f53ed802914c969b** is unchanged. No avoidable docs-only production deployment.
+
+**PARENT CONTINUITY COMMIT:** `0fcb454c501b433d90b8971ca1d2b0be8daff56b`; **PARENT TREE:** `e0ebb3bde40261ec61ba8e72c12a64690f0c7c09`. The entire prior **741,806-byte** continuity body, SHA-256 **8849bfd7754786eaa1e6555bf4d2ca768f27194be07394146b2657fd1ada399c**, is preserved unchanged below.
+
+---
+
 # Phase 4 Recovery Gate Complete — Seven-Record Implementation NEXT (2026-10-10 18:07 UTC)
 
 ## CURRENT — authoritative checkpoint

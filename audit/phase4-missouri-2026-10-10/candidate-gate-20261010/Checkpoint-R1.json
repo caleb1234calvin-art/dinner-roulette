@@ -1,0 +1,130 @@
+{
+  "package": "PHASE4-CANDIDATE-FREEZE-CONTINUITY-R1",
+  "checkedAt": "2026-10-10T18:35:48.096Z",
+  "candidate": {
+    "commit": "dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f",
+    "tree": "3ce7bd595e4061a6405b008fb0daec82c5b2823a",
+    "soleParent": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "branch": "integration/phase4-missouri-recovery-2026-10-10",
+    "draftPr": 62,
+    "changedPaths": [
+      ".github/workflows/validate-icon-pack.yml",
+      "audit/phase4-recovery-implementation-2026-10-10/Accepted-Seven-Record-Subset-R1.json",
+      "audit/phase4-recovery-implementation-2026-10-10/IMPLEMENTATION-HANDOFF-R1.md",
+      "audit/phase4-recovery-implementation-2026-10-10/Implementation-Validation-R1.json",
+      "audit/phase4-recovery-implementation-2026-10-10/Normalized-Projection-R1.json",
+      "audit/phase4-recovery-implementation-2026-10-10/Preimport-And-Local-Validation-Evidence-R2.zip",
+      "audit/phase4-recovery-implementation-2026-10-10/Preimport-Raw-Receipts-R1.json",
+      "audit/phase4-recovery-implementation-2026-10-10/Preimport-Revalidation-R1.json",
+      "audit/phase4-recovery-implementation-2026-10-10/Production-Baseline-Receipts-R1.json",
+      "audit/phase4-recovery-implementation-2026-10-10/SHA256SUMS-Implementation-R1.json",
+      "audit/phase4-recovery-implementation-2026-10-10/build-proof.json",
+      "audit/phase4-recovery-implementation-2026-10-10/geometry-local-browser-notrun.json",
+      "audit/phase4-recovery-implementation-2026-10-10/geometry-local-sandbox-limit.json",
+      "audit/phase4-recovery-implementation-2026-10-10/phase4-local-browser-notrun.json",
+      "audit/phase4-recovery-implementation-2026-10-10/preimport-web-1.json",
+      "audit/phase4-recovery-implementation-2026-10-10/preimport-web-3.json",
+      "audit/phase4-recovery-implementation-2026-10-10/research-HANDOFF-R1.md",
+      "audit/phase4-recovery-implementation-2026-10-10/research-Recovery-Independent-Review-R1.json",
+      "audit/phase4-recovery-implementation-2026-10-10/research-SHA256SUMS-R1.json",
+      "scripts/missouri-two-record-browser.mjs",
+      "scripts/seasonal-card-layout-browser.mjs",
+      "scripts/seasonal-discovery.test.mjs",
+      "scripts/seasonal-phase4-recovery.test.mjs",
+      "scripts/seasonal-ten-record-browser.mjs",
+      "scripts/test-support/phase4-recovery-browser-facts.mjs",
+      "scripts/test-support/phase4-recovery-browser-projections.json",
+      "src/lib/date-night/availability.test.ts",
+      "src/lib/date-night/availability.ts",
+      "src/lib/date-night/curated-policy.ts",
+      "src/lib/date-night/missouri-2026-phase4-recovery-catalog.ts",
+      "src/lib/date-night/search.ts",
+      "src/lib/date-night/seasonal-catalog.ts",
+      "src/lib/date-night/seasonal-presentation-catalog.ts"
+    ]
+  },
+  "production": {
+    "id": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+    "state": "READY",
+    "source": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2"
+  },
+  "validationSource": {
+    "path": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f/audit/phase4-recovery-implementation-2026-10-10/Implementation-Validation-R1.json",
+    "sha256": "0e9f4226804c5f2e51dc6d6e516d9a4f7243068a684a9a469a53fed61b3b60d7"
+  },
+  "authorLocalValidation": {
+    "newFocusedTests": 44,
+    "combinedFocusedAndExistingComponentTests": 68,
+    "repository": {
+      "tests": 995,
+      "passed": 991,
+      "failed": 0,
+      "skipped": 4
+    },
+    "application": {
+      "tests": 71,
+      "passed": 71,
+      "failed": 0
+    },
+    "combinedPassed": 1062,
+    "inheritedDocumentationSkips": 4,
+    "typecheck": "PASS",
+    "lint": {
+      "errors": 0,
+      "inheritedWarnings": 6
+    },
+    "safeAuthEnabledMigrationFreeBuild": "PASS",
+    "androidStructureAndIcons": "PASS",
+    "nativePythonTests": 3,
+    "phase4Browser": "NOT RUN: Chromium Unix socket restriction before scenario 1, including reviewed retry",
+    "geometryBrowser": "NOT RUN: same Chromium Unix socket restriction before first comparison"
+  },
+  "counts": {
+    "previousV1": 52,
+    "previousLegacyWerehouse": 1,
+    "previousDistinctSeasonalIdentities": 53,
+    "selectedNew": 6,
+    "selectedAmendments": 1,
+    "candidateV1": 59,
+    "candidateDistinctSeasonalIdentities": 59,
+    "rollaImported": false
+  },
+  "hostedRuns": [
+    {
+      "id": 38076168774,
+      "status": "in_progress",
+      "conclusion": null,
+      "head": "dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f",
+      "runNumber": 411
+    },
+    {
+      "id": 38076168794,
+      "status": "in_progress",
+      "conclusion": null,
+      "head": "dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f",
+      "runNumber": 82
+    }
+  ],
+  "independentRuntimeReview": "Started on exact head; no PASS",
+  "evidenceArchive": {
+    "path": "Preimport-And-Local-Validation-Evidence-R2.zip",
+    "bytes": 363085,
+    "sha256": "044dbe268fc80c167be4929e9104936d0ef214abd6258e7bc4bf9f7ea7e38308",
+    "members": 12,
+    "verification": "All 11 raw capture/log members byte-match R1 originals; explicit omission receipt added. Rejected mixed web receipt is absent from R1 and R2 archives."
+  },
+  "omittedReceipt": {
+    "path": "preimport-web-2.json",
+    "reason": "Mixed unrelated search output; repository blob disclosure denied. Whole receipt omitted, original retained locally and not repackaged."
+  },
+  "cadaver": {
+    "package": "CADAVER-INCIDENTAL-PIXEL-REVIEW-2026-10-10-R1",
+    "reportSha256": "024e0b537de6cd4b70c023755e8cc1befd9207f457951ab9ffbd744e1aa6d158",
+    "manifestSha256": "34ba8a53ff580da4605948d9c29f68956253a878a5b906ff1539d31e9f2e5bf4",
+    "outcome": "Materially new actual poster pixels and owner-attested official Facebook origin; ready for later bounded reclearance. Canonical factual/runtime HOLD and selected seven unchanged.",
+    "originLimit": "Exact source post/account and publication timestamp not independently observed.",
+    "suggestedLaterExpiry": "2026-11-01T05:00:00Z",
+    "expiryIsAcceptedNow": false
+  },
+  "release": "HOLD; no merge, deployment or production import"
+}
