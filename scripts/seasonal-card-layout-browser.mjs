@@ -12,6 +12,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { chromium } from "playwright";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 import { assertBrowserBuild } from "./browser-build-proof.mjs";
+import { PHASE4_MATERIAL_FACTS, PHASE4_FORBIDDEN_COPY } from "./test-support/phase4-recovery-browser-facts.mjs";
 const baseline = "2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81";
 const proof = assertBrowserBuild();
 const out = "audit/browser-results/seasonal-card-layout";
@@ -28,6 +29,7 @@ const rows = [
   ...pure("src/lib/date-night/missouri-2026-astra-eleven-catalog.ts").MISSOURI_2026_ASTRA_ELEVEN_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-astra-commercial-catalog.ts").MISSOURI_2026_ASTRA_COMMERCIAL_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-astra-delta-catalog.ts").MISSOURI_2026_ASTRA_DELTA_CATALOG,
+  ...pure("src/lib/date-night/missouri-2026-phase4-recovery-catalog.ts").MISSOURI_2026_PHASE4_RECOVERY_CATALOG,
 ];
 const { HALLOWEEN_THRILL_TYPES } = pure("src/lib/date-night/season.ts");
 const isThrill = row => row.activityTypes.some(type => HALLOWEEN_THRILL_TYPES.includes(type));
@@ -94,7 +96,8 @@ try {
   }
   for (const width of [320, 390, 512]) {
     for (const row of rows) {
-    for (const kind of ["options", "result", ...(isThrill(row) ? ["plan"] : [])]) {
+    for (const kind of ["options", "result", ...(isThrill(row) ? ["plan"] : PHASE4_MATERIAL_FACTS[row.seasonalListing.recordId] ? ["plan-settle"] : [])]) {
+      const isPlan = kind === "plan" || kind === "plan-settle", componentKind = isPlan ? "plan" : kind;
       const context = await browser.newContext({ viewport: { width, height: 844 }, reducedMotion: "reduce" });
       const page = await context.newPage();
       const measured = {};
@@ -105,10 +108,13 @@ try {
         const item = ["ordinary", "standard", "current-standard", "current-ordinary"].includes(variant) ? ordinary(row) : decorate(row);
         if (variant.endsWith("standard")) { item.name = "Ordinary park"; item.activityTypes = ["park"]; }
         // Both sides require the same valid Scare/Settle fixture.
-        if (kind === "plan") item.activityTypes = row.activityTypes;
-        await page.setContent(`<html class="dark"><head><style>${css}</style></head><body>${render(kind, [item, { ...ordinary(row), id: "second-control", name: "Ordinary park", activityTypes: ["park"] }])}</body></html>`);
+        if (isPlan) item.activityTypes = row.activityTypes;
+        const records = kind === "plan-settle"
+          ? [{ ...ordinary(row), id: "first-control", name: "Ordinary escape room", activityTypes: ["escape-room"] }, item]
+          : [item, { ...ordinary(row), id: "second-control", name: "Ordinary park", activityTypes: ["park"] }];
+        await page.setContent(`<html class="dark"><head><style>${css}</style></head><body>${render(componentKind, records)}</body></html>`);
         await page.locator("img").evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
-        const card = kind === "result" ? page.locator(".result-in") : page.locator("article").first();
+        const card = kind === "result" ? page.locator(".result-in") : page.locator("article").nth(kind === "plan-settle" ? 1 : 0);
         assert.equal(await card.count(), 1, "A valid geometry fixture must render its card");
         const geometry = await card.evaluate((el, kind) => {
           const rect = el.getBoundingClientRect(), image = kind === "result" ? document.querySelector("img") : el.querySelector("img"), media = image.parentElement.getBoundingClientRect();
@@ -144,7 +150,17 @@ try {
           await details.locator("summary").press("Enter");
           assert.notEqual(await details.getAttribute("open"), null);
           assert.ok(await details.locator("p").count());
-          if (kind === "plan") {
+          if (PHASE4_MATERIAL_FACTS[row.seasonalListing.recordId]) {
+            const text = await card.innerText();
+            assert.match(text, /Approx\./, "Phase 4 never implies precise distance");
+            assert.doesNotMatch(text, PHASE4_FORBIDDEN_COPY, "No prices, refund boilerplate or audit prose in Phase 4 cards");
+            assert.equal(await card.locator("[data-seasonal-confidence]").innerText(), "Limited details");
+            for (const fact of PHASE4_MATERIAL_FACTS[row.seasonalListing.recordId]) assert.match(await details.innerText(), fact);
+            assert.equal(row.seasonalListing.directionsTarget.kind, "visitor-address");
+            const maps = card.getByRole("link", { name: isPlan ? "Maps" : /Directions · Google Maps/, exact: isPlan });
+            if (kind !== "options") assert.equal(new URL(await maps.getAttribute("href")).searchParams.get("destination"), row.address);
+          }
+          if (isPlan) {
             const paragraphs = details.locator("p");
             geometry.expandedNotes = [];
             for (let index = 0; index < await paragraphs.count(); index++) {
@@ -179,7 +195,7 @@ try {
       assert.equal(measured.after.mediaClass, measured.ordinary.mediaClass);
       assert.equal(measured.after.cardClass, measured.ordinary.cardClass);
       if (delta > (kind === "options" ? 0.5 : 5)) verdict.errors.push(`Collapsed ${kind} seasonal card exceeds matched ordinary by ${delta}px at ${width}: ${row.name}`);
-      if (["options", "plan"].includes(kind) && measured.after.height - measured.standard.height > (kind === "options" ? 0.5 : 5)) verdict.errors.push(`Collapsed ${kind} exceeds short standard by ${measured.after.height - measured.standard.height}px at ${width}: ${row.name}`);
+      if (["options", "plan", "plan-settle"].includes(kind) && measured.after.height - measured.standard.height > (kind === "options" ? 0.5 : 5)) verdict.errors.push(`Collapsed ${kind} exceeds short standard by ${measured.after.height - measured.standard.height}px at ${width}: ${row.name}`);
       assert.ok(measured.after.height <= measured.before.height);
       } catch (error) {
         verdict.errors.push({ id: row.id, kind, width, message: error.stack });

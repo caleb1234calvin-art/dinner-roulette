@@ -1,0 +1,420 @@
+{
+  "sourceFile": "Accepted-Seven-Record-Subset-R1.json",
+  "sourceSha256": "827eb67919c99dec61991cbc01cba63097ccd5dd1868de355b5f79b07d348882",
+  "baselineMain": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+  "records": [
+    {
+      "id": "date-night-mo26-phase4-wolfmans-house-of-screams",
+      "recordId": "MO26-006",
+      "acceptedProjectionCanonicalSha256": "7c2c243fe971c3319b745b5b21ace270a8845d1cb229a6eb0af7dd3c978421c8",
+      "acceptedProjection": {
+        "name": "Wolfmans House Of Screams",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "categoryLabel": "Haunted House",
+        "address": "26267 King Lane, Carl Junction, MO 64834",
+        "directionsTarget": "26267 King Lane, Carl Junction, MO 64834",
+        "website": "https://www.facebook.com/WolfmansHouseOfScreams/",
+        "actionLabel": "Visit website",
+        "description": "A seasonal haunted house in Carl Junction.",
+        "details": "Listed 2026 dates: October 3, 9\u201310, 16\u201317, 23\u201324 and 30\u201331. Listed opening time is 7 p.m.; check the operator for current hours before traveling. Location is approximate.",
+        "lat": 37.203626664776,
+        "lon": -94.531270552631,
+        "coordinatePrecision": "approximate",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "valid_dates": [
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "listing_expires_at": "2026-11-01T00:00:00-05:00",
+        "ends_at": null,
+        "no_2027_recurrence": true
+      }
+    },
+    {
+      "id": "date-night-werehouse-joplin",
+      "recordId": "MO26-004",
+      "acceptedProjectionCanonicalSha256": "d932d56d8cb9fd4c4a2559d8a7f93b35735ade53155edb5476f448202b330007",
+      "acceptedProjection": {
+        "name": "The Werehouse",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "categoryLabel": "Haunted House",
+        "address": "3819 E 20th Street, Joplin, MO 64801",
+        "directionsTarget": "3819 E 20th Street, Joplin, MO 64801",
+        "website": "https://thewerehouse.net/",
+        "actionLabel": "Visit website",
+        "description": "A haunted attraction in Joplin.",
+        "details": "Listed Fridays and Saturdays, September 25\u2013October 31, 2026, from 7 p.m. to midnight. Check the operator for updates before traveling. Location is approximate.",
+        "lat": 37.069463315708,
+        "lon": -94.464636904963,
+        "coordinatePrecision": "approximate",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "valid_dates": [
+          "2026-09-25",
+          "2026-09-26",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "listing_expires_at": "2026-11-01T00:00:00-05:00",
+        "ends_at": null,
+        "no_2027_recurrence": true
+      }
+    },
+    {
+      "id": "date-night-mo26-phase4-fearstone-forest",
+      "recordId": "DELTA3-FEARSTONE",
+      "acceptedProjectionCanonicalSha256": "e2983c4f78fc45f6a760bbf21e2f338068b8f1af0b2710afccd12f505edf43cd",
+      "acceptedProjection": {
+        "name": "Fearstone Forest Haunted Trail",
+        "category": "Haunted House",
+        "address": "85 Benne Blvd, Camdenton, MO 65020",
+        "website": "https://www.fearstoneforest.com/",
+        "seasonYear": 2026,
+        "exactActiveDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30"
+        ],
+        "listingExpiresAt": "2026-10-31T00:00:00-05:00",
+        "expiryKind": "last-supported-date visibility cutoff",
+        "hoursState": "unknown",
+        "hoursText": null,
+        "admission": null,
+        "details": [
+          "October 17 is adults 18+ only with valid photo ID. A waiver is required.",
+          "On ordinary haunt nights, the operator recommends ages 12+. Children under 12 must have a parent or guardian and be able to walk independently.",
+          "The operator FAQ says the attraction is not \u201chandicap accessible.\u201d Check whether the trail is suitable for your access needs before visiting.",
+          "Outdoor haunted trail; lightning may delay or cancel the night. Check current operator hours and weather updates before travel.",
+          "Separate no-scare Kids Night October 31, 4\u20136 p.m., is not included in this haunted-trail schedule.",
+          "Approximate location; Directions use 85 Benne Blvd, not the organizer\u2019s Highway 5 address."
+        ],
+        "openNowPolicy": "never",
+        "machineOpeningIntervals": null
+      },
+      "acceptedPlacement": {
+        "latitude": 38.016075473125,
+        "longitude": -92.758610359304,
+        "precision": "approximate address-range point",
+        "method": "U.S. Census Public_AR_Current single normalized address match",
+        "directionsMode": "address",
+        "verifiedEntrance": false,
+        "verifiedParking": false,
+        "verifiedRideshareDropoff": false
+      }
+    },
+    {
+      "id": "date-night-mo26-phase4-fun-time-farms",
+      "recordId": "DELTA3-FUN-TIME",
+      "acceptedProjectionCanonicalSha256": "62290cc83c933b94fe929ee3f91acc26f49eed9af87ca3e8496828dbda55982a",
+      "acceptedProjection": {
+        "name": "Fun Time Farms Corn MAiZE",
+        "categories": [
+          "Corn Maze",
+          "Haunted House"
+        ],
+        "address": "11050 NE 201 Road, Lowry City, MO 64763",
+        "website": "https://www.facebook.com/FunTimeFarms/posts/we-are-one-month-out-from-our-opening-day-heres-our-updated-price-list-for-the-2/1544670360793681/",
+        "seasonYear": 2026,
+        "exactActiveDates": null,
+        "operatorSeasonStart": null,
+        "operatorSeasonEnd": null,
+        "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+        "expiryKind": "editorial visibility cutoff, not operating dates",
+        "hoursState": "unknown",
+        "hoursText": null,
+        "admission": null,
+        "details": [
+          "2026 season advertised by the operator; exact dates and hours are unverified. Check current updates before travel.",
+          "Approximate location; Directions use the listed visitor address."
+        ],
+        "openNowPolicy": "never",
+        "machineOpeningIntervals": null
+      },
+      "acceptedPlacement": {
+        "latitude": 38.183365966646,
+        "longitude": -93.739844249626,
+        "precision": "approximate address-range point",
+        "method": "U.S. Census Public_AR_Current single normalized address match",
+        "directionsMode": "address",
+        "verifiedEntrance": false,
+        "verifiedParking": false,
+        "verifiedRideshareDropoff": false
+      }
+    },
+    {
+      "id": "date-night-mo26-phase4-carolyns-pumpkin-patch",
+      "recordId": "MO26-055",
+      "acceptedProjectionCanonicalSha256": "c7efc916fba55e55f83581f22294d7139e6d68a2456af144c3484ec9abd56a3f",
+      "acceptedProjection": {
+        "name": "Carolyn\u2019s Pumpkin Patch",
+        "season_year": 2026,
+        "fields": {
+          "visitor_address": {
+            "value": "17607 NE 52nd Street, Liberty, MO 64068",
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/location-and-directions/"
+            ]
+          },
+          "category": {
+            "value": "Pumpkin Patch",
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/"
+            ]
+          },
+          "activity_subtype": {
+            "value": [
+              "Pumpkin patch",
+              "wagon ride"
+            ],
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/"
+            ]
+          },
+          "current_season": {
+            "value": "Explicit 2026 season September 19 through October 31",
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/"
+            ]
+          },
+          "date_rule": {
+            "value": "Thursday through Monday within September 19\u2013October 31, 2026",
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/"
+            ]
+          },
+          "hours": {
+            "value": {
+              "state": "partial",
+              "display": "Thursday\u2013Monday. Check daily hours; entrance stops one hour before closing.",
+              "machine_last_admission": null
+            },
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/",
+              "https://carolynspumpkinpatch.com/hours-and-pricing/"
+            ]
+          },
+          "restrictions": {
+            "value": [
+              "Tickets use one-hour check-in windows.",
+              "No outside food/alcohol; medical/dietary access questions should go to venue.",
+              "No pets; operator permits outside service animals.",
+              "Liberty Corn Maze next door is distinct; pumpkin listing does not imply corn-maze access."
+            ],
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/hours-and-pricing/",
+              "https://carolynspumpkinpatch.com/frequently-asked-questions/"
+            ]
+          },
+          "phone": {
+            "value": "816-781-9196 (text line)",
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/"
+            ]
+          },
+          "expiry": {
+            "value": {
+              "at": "2026-11-01T00:00:00-05:00",
+              "basis": "date-only",
+              "derivation": "Conservative midnight after the final October 31 date, America/Chicago. This is retention expiry, not an asserted operator closing time. DST has not ended at this midnight.",
+              "at_utc": "2026-11-01T05:00:00Z"
+            },
+            "source_urls": [
+              "https://carolynspumpkinpatch.com/"
+            ]
+          }
+        },
+        "open_now_policy": "never",
+        "machine_opening_intervals": null,
+        "rollover_2027_allowed": false,
+        "directions_policy": "Supported public visitor street address only; do not substitute placement coordinates for Directions or rideshare arrival."
+      },
+      "acceptedPlacement": {
+        "latitude": 39.1857337,
+        "longitude": -94.3697357,
+        "basis": "operator-linked named-place destination",
+        "precision": "Approximate site placement only; no entrance, parking, gate, doorway, boundary or rideshare drop-off claim. Source decimal precision does not imply physical precision.",
+        "source_url": "https://goo.gl/maps/pKngpKRpDZhtK55M9",
+        "field_path": "Rendered Maps URL selected-place !8m2!3d39.1857337!4d-94.3697357; not the @ viewport center.",
+        "evidence_files": [
+          "carolyn-rendered-place-retry-r1.json",
+          "carolyn-map-retry-r1.receipt.json",
+          "carolyn-map-retry-r1.body",
+          "web-carolyn-map-link-faq-retry-r1.json",
+          "web-carolyn-visitor-pages-retry-r1.json"
+        ],
+        "independentVerdict": "PASS",
+        "verifiedEntrance": false,
+        "verifiedParking": false,
+        "verifiedRideshareDropoff": false
+      }
+    },
+    {
+      "id": "date-night-mo26-phase4-terror-on-route-66",
+      "recordId": "DELTA2-TERROR66",
+      "acceptedProjectionCanonicalSha256": "743aeae0d45c846aff40ad57e34d853a39146401c0d8dd996ec074d86929d5fe",
+      "acceptedProjection": {
+        "name": "Terror on Route 66",
+        "season_year": 2026,
+        "fields": {
+          "category": {
+            "value": "Haunted House",
+            "source_urls": [
+              "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+            ]
+          },
+          "current_season": {
+            "value": "Explicit 2026 Halloween season ending November 1; individual opening dates and hours are not asserted.",
+            "source_urls": [
+              "https://scarestl.com/",
+              "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+            ]
+          },
+          "hours": {
+            "value": {
+              "state": "unknown"
+            },
+            "source_urls": [
+              "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+            ]
+          },
+          "material_access": {
+            "value": [
+              "All participants must complete a waiver. General admission is no-touch.",
+              "Optional Interactive Touch Pass is ages 10+. Minors under 18 must be accompanied by an adult with valid ID.",
+              "A valid ID is required at check-in for every Interactive Touch Pass and Rated R Pass participant.",
+              "Rated R Pass is 18+ and includes full contact, adult language and dark humor. Rated R participants cannot enter with guests who do not hold Rated R passes. General admission and Interactive Touch guests may enter together."
+            ],
+            "source_urls": [
+              "https://scarestl.com/",
+              "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+            ]
+          },
+          "visitor_address": {
+            "value": "1143 North Service Road West, Sullivan, MO 63080",
+            "source_urls": [
+              "https://scarestl.com/",
+              "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+            ]
+          },
+          "expiry": {
+            "value": {
+              "at": "2026-11-02T00:00:00-06:00",
+              "basis": "date-only",
+              "at_utc": "2026-11-02T06:00:00Z",
+              "derivation": "Conservative midnight after the stated final November 1, 2026 season date, America/Chicago. DST ended earlier November 1, so this midnight is CST UTC\u221206:00. Not an operator closing-time assertion."
+            },
+            "source_urls": [
+              "https://scarestl.com/",
+              "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+            ]
+          }
+        },
+        "open_now_policy": "never",
+        "machine_opening_intervals": null,
+        "rollover_2027_allowed": false,
+        "directions_policy": "Supported public visitor street address only; do not substitute placement coordinates for Directions or rideshare arrival."
+      },
+      "acceptedPlacement": {
+        "latitude": 38.2432122,
+        "longitude": -91.1408597,
+        "basis": "named-place destination corroborated by operator public address lookup",
+        "precision": "Approximate site placement only; no entrance, parking, gate, doorway, boundary or rideshare drop-off claim. Source decimal precision does not imply physical precision.",
+        "source_url": "https://www.google.com/maps/search/?api=1&query=Terror+On+Route+66+1143+North+Service+Road+West+Sullivan+MO",
+        "field_path": "Rendered Maps URL selected-place !8m2!3d38.2432122!4d-91.1408597; not inferred from viewport.",
+        "evidence_files": [
+          "terror-rendered-place-retry-r1.json",
+          "terror-rendered-address-retry-r1.json",
+          "terror-home-retry-r1.body",
+          "terror-home-retry-r1.receipt.json"
+        ],
+        "independentVerdict": "PASS",
+        "verifiedEntrance": false,
+        "verifiedParking": false,
+        "verifiedRideshareDropoff": false
+      }
+    },
+    {
+      "id": "date-night-mo26-phase4-field-of-screams-branson",
+      "recordId": "DELTA6-BRANSON-FIELD",
+      "acceptedProjectionCanonicalSha256": "865ddfdd66059755feebf3f422e9e641c5a793e57b5dae882642cc78ea23d95d",
+      "acceptedProjection": {
+        "name": "Field of Screams Branson",
+        "category": "Haunted House",
+        "address": "1000 Pat Nash Drive, Branson, MO 65616",
+        "website": "https://www.fieldofscreamsbranson.com/home-1",
+        "seasonYear": 2026,
+        "exactActiveDates": [
+          "2026-10-10",
+          "2026-10-11",
+          "2026-10-15",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-22",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-29",
+          "2026-10-30",
+          "2026-10-31",
+          "2026-11-06",
+          "2026-11-07",
+          "2026-11-13",
+          "2026-11-14"
+        ],
+        "listingExpiresAt": "2026-11-15T00:00:00-06:00",
+        "expiryKind": "last-supported-date visibility cutoff",
+        "hoursState": "partial",
+        "hoursText": "Posted October hours: Thursday/Sunday 7\u201311 p.m.; Friday/Saturday 7 p.m.\u2013midnight; box office 6 p.m. November crossover hours are unverified.",
+        "admission": null,
+        "details": [
+          "Listed nights, October 10\u2013November 14, 2026; check operator updates before travel.",
+          "Indoor haunted attraction at Ballparks of America, distinct from Field of Screams Nixa.",
+          "November 6\u20137 and 13\u201314 are a Halloween/Christmas crossover event; crossover hours are unverified.",
+          "The operator describes intense audio, live actors, fog and strobes.",
+          "Approximate location; Directions use 1000 Pat Nash Drive, Branson, MO 65616."
+        ],
+        "openNowPolicy": "never",
+        "machineOpeningIntervals": null,
+        "operatorSeasonStart": null,
+        "timeZone": "America/Chicago"
+      },
+      "acceptedPlacement": {
+        "latitude": 36.645101695991,
+        "longitude": -93.284825773276,
+        "precision": "approximate address-range point",
+        "method": "U.S. Census Public_AR_Current single normalized address match",
+        "directionsMode": "address",
+        "verifiedEntrance": false,
+        "verifiedParking": false,
+        "verifiedRideshareDropoff": false
+      }
+    }
+  ]
+}

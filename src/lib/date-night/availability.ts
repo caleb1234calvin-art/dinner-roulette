@@ -19,18 +19,39 @@ export type SeasonalVenueAvailability = {
   openNowPolicy?: "never";
 };
 
-/** Existing anchors only. Evidence: original audit reference-event-metadata.json
- * and reference-source-retrievals.json, fetched 2026-09-30 UTC / Sep 29 Chicago.
- * Dates expire after this season; never roll a past calendar into a new year.
- * Recheck operator calendars before each season and when revalidateAfter passes.
- */
+/** Legacy ID-only callers also receive the independently reviewed Werehouse
+ * date subset and hard cutoff. No stale hours can restore Open Now. The current
+ * V1 catalog governs placement and full consumer fields. */
 export const SEASONAL_VENUE_AVAILABILITY: Readonly<Record<string, SeasonalVenueAvailability>> = {
   "date-night-werehouse-joplin": {
-    status: "confirmed", activeFrom: "2026-09-25", activeUntil: "2026-10-31",
-    checkedAt: "2026-09-29", revalidateAfter: "2026-10-31",
-    sourceUrls: ["https://thewerehouse.net/", "https://www.missourihauntedhouses.com/halloween/haunted-house-joplin.html"],
-    note: "Operator weekly hours and current directory season corroborated by the retained audit retrievals.",
-  },
+  "status": "confirmed",
+  "checkedAt": "2026-10-10",
+  "timeZone": "America/Chicago",
+  "openNowPolicy": "never",
+  "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+  "seasonYear": 2026,
+  "sourceUrls": [
+    "https://thewerehouse.net/",
+    "https://www.missourihauntedhouses.com/halloween/haunted-house-joplin.html",
+    "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3819+E+20th+Street%2C+Joplin%2C+MO+64801&benchmark=Public_AR_Current&format=json"
+  ],
+  "activeFrom": "2026-09-25",
+  "activeUntil": "2026-10-31",
+  "activeDates": [
+    "2026-09-25",
+    "2026-09-26",
+    "2026-10-02",
+    "2026-10-03",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-16",
+    "2026-10-17",
+    "2026-10-23",
+    "2026-10-24",
+    "2026-10-30",
+    "2026-10-31"
+  ]
+},
 };
 
 export type DateNightAvailabilityStatus = "open-now" | "closed-now" | "hours-unknown" |

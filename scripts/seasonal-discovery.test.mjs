@@ -517,9 +517,9 @@ test("actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dep
   browserGlobals(t);
   await search(t, [], origin);
   const store = storeFor(),
-    clock = { value: new Date(2026, 8, 29, 20) };
-  // Isolate the legacy Werehouse clock regression; new V1 browseable additions
-  // are covered separately and must not alter this fixture's one-venue intent.
+    clock = { value: new Date("2026-09-29T20:00:00-05:00") };
+  // Isolate the amended Werehouse identity. Its reviewed display hours never
+  // establish Open Now; the same favorite expires locally at its exact cutoff.
   store.dateNightFilters.favoritesOnly = true;
   store.preferences["date-night-werehouse-joplin"] = { favorite: true };
   const harness = dateNightComponentHarness({ store, now: clock, search: searchDateNight });
@@ -539,16 +539,23 @@ test("actual component: OFF/ON/OFF, labels, saved-only disclosure, and clock-dep
   store.dateNightFilters.openNowOnly = false;
   tree = harness.render();
   assert.match(textOf(tree), /1 activities match/);
-  clock.value = new Date(2026, 9, 10, 20);
+  clock.value = new Date("2026-10-10T20:00:00-05:00");
   store.dateNightFilters.openNowOnly = true;
   tree = harness.render();
+  assert.match(textOf(tree), /0 activities match/);
+  assert.equal(harness.button(tree, "Pick our date").props.disabled, true);
+  store.dateNightFilters.openNowOnly = false;
+  clock.value = new Date("2026-11-01T04:59:59.999Z");
+  tree = harness.render();
   assert.match(textOf(tree), /1 activities match/);
-  clock.value = new Date(2026, 9, 11, 0);
+  harness.button(tree, "Give us options").props.onClick();
+  tree = harness.render();
+  assert.ok(harness.overlay(tree, "OptionsOverlay"));
+  clock.value = new Date("2026-11-01T05:00:00Z");
   tree = harness.render();
   assert.match(textOf(tree), /0 activities match/);
   assert.equal(harness.overlay(tree, "OptionsOverlay"), null);
-  clock.value = new Date(2026, 10, 1, 20);
-  store.dateNightFilters.openNowOnly = false;
+  clock.value = new Date("2026-11-01T05:00:00.001Z");
   tree = harness.render();
   assert.match(textOf(tree), /0 activities match/);
 });

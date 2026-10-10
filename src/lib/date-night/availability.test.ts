@@ -10,25 +10,25 @@ import {
 describe("seasonal date-night availability", () => {
   it("keeps The Werehouse closed before its verified 2026 season starts", () => {
     assert.equal(
-      getSeasonalDateStatus("date-night-werehouse-joplin", new Date(2026, 8, 24, 20, 0)),
+      getSeasonalDateStatus("date-night-werehouse-joplin", new Date("2026-09-24T20:00:00-05:00")),
       "unavailable",
     );
   });
 
-  it("allows The Werehouse during the conservative verified season window", () => {
+  it("retains the reviewed Werehouse date subset without machine Open Now", () => {
     assert.equal(
-      getSeasonalDateStatus("date-night-werehouse-joplin", new Date(2026, 8, 25, 20, 0)),
+      getSeasonalDateStatus("date-night-werehouse-joplin", new Date("2026-09-25T20:00:00-05:00")),
       "available",
     );
     assert.equal(
-      getSeasonalDateStatus("date-night-werehouse-joplin", new Date(2026, 9, 31, 20, 0)),
+      getSeasonalDateStatus("date-night-werehouse-joplin", new Date("2026-10-31T20:00:00-05:00")),
       "available",
     );
   });
 
   it("closes The Werehouse after the conservative verified window", () => {
     assert.equal(
-      getSeasonalDateStatus("date-night-werehouse-joplin", new Date(2026, 10, 1, 20, 0)),
+      getSeasonalDateStatus("date-night-werehouse-joplin", new Date("2026-11-01T20:00:00-06:00")),
       "unavailable",
     );
   });
@@ -54,7 +54,7 @@ describe("seasonal date-night availability", () => {
       isDateNightOpenNowEligible(
         { id: "date-night-werehouse-joplin", hoursKnown: true, isOpen: true },
         true,
-        new Date(2026, 8, 24, 20, 0),
+        new Date("2026-09-24T20:00:00-05:00"),
       ),
       false,
     );
@@ -62,9 +62,9 @@ describe("seasonal date-night availability", () => {
       isDateNightOpenNowEligible(
         { id: "date-night-werehouse-joplin", hoursKnown: true, isOpen: true },
         true,
-        new Date(2026, 8, 25, 20, 0),
+        new Date("2026-09-25T20:00:00-05:00"),
       ),
-      true,
+      false,
     );
   });
 

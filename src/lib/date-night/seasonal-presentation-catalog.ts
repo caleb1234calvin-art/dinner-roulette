@@ -3,6 +3,79 @@ import type { SeasonalPresentation } from "./seasonal-presentation";
 /** Explicit independently reviewed visitor copy. Full facts remain in immutable audit
  * artifacts and catalog metadata; no audit narratives are rendered as consumer prose. */
 export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentation>> = {
+  "MO26-006": {
+    "canonicalId": "date-night-mo26-phase4-wolfmans-house-of-screams",
+    "confidence": "limited",
+    "details": [
+      "Listed 2026 dates: October 3, 9–10, 16–17, 23–24 and 30–31.",
+      "Listed opening time is 7 p.m.; closing time is unconfirmed.",
+      "Location is approximate."
+    ]
+  },
+  "MO26-004": {
+    "canonicalId": "date-night-werehouse-joplin",
+    "confidence": "limited",
+    "details": [
+      "Listed Fridays and Saturdays, September 25–October 31, 2026, 7 p.m.–midnight.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA3-FEARSTONE": {
+    "canonicalId": "date-night-mo26-phase4-fearstone-forest",
+    "confidence": "limited",
+    "details": [
+      "Haunted trail: October 2–3, 9–10, 16–17, 23–24 and 30, 2026. Hours unconfirmed. Separate no-scare Kids Night: October 31, 4–6 p.m.",
+      "October 17 is 18+ only; photo ID and a waiver are required.",
+      "Ordinary nights: ages 12+ recommended. Children under 12 need a parent or guardian and must walk independently.",
+      "The operator says the trail is not handicap accessible. Contact it about your access needs.",
+      "Lightning may delay or cancel this outdoor attraction.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA3-FUN-TIME": {
+    "canonicalId": "date-night-mo26-phase4-fun-time-farms",
+    "confidence": "limited",
+    "details": [
+      "2026 season; attraction dates and hours unconfirmed.",
+      "Location is approximate."
+    ]
+  },
+  "MO26-055": {
+    "canonicalId": "date-night-mo26-phase4-carolyns-pumpkin-patch",
+    "confidence": "limited",
+    "details": [
+      "September 19–October 31, 2026, Thursday–Monday. Check daily hours.",
+      "Tickets have one-hour check-in windows; entrance stops one hour before closing.",
+      "No outside food or alcohol; contact the venue about medical or dietary needs.",
+      "No pets; service animals are permitted.",
+      "Liberty Corn Maze next door is separate and is not included.",
+      "Questions: text 816-781-9196.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA2-TERROR66": {
+    "canonicalId": "date-night-mo26-phase4-terror-on-route-66",
+    "confidence": "limited",
+    "details": [
+      "2026 season through November 1; exact nights and hours unconfirmed.",
+      "Everyone needs a waiver. General admission is no-touch.",
+      "Interactive Touch Pass: ages 10+; under-18s need an accompanying adult with valid ID.",
+      "All Interactive Touch and Rated R participants need valid ID at check-in.",
+      "Rated R: 18+ with full contact, adult language and dark humor. Rated R groups cannot include other pass types; general and Interactive Touch guests may enter together.",
+      "Location is approximate."
+    ]
+  },
+  "DELTA6-BRANSON-FIELD": {
+    "canonicalId": "date-night-mo26-phase4-field-of-screams-branson",
+    "confidence": "limited",
+    "details": [
+      "Listed October nights: 10–11, 15–18, 22–25 and 29–31, 2026.",
+      "Posted October hours: Thursday/Sunday 7–11 p.m.; Friday/Saturday 7 p.m.–midnight. Box office opens at 6 p.m.",
+      "Halloween/Christmas crossover: November 6–7 and 13–14. Crossover hours unconfirmed.",
+      "Indoor haunt at Ballparks of America, separate from Field of Screams Nixa. Intense audio, live actors, fog and strobes.",
+      "Location is approximate."
+    ]
+  },
   "DELTA6-WORLDS-OF-FUN": {
     "canonicalId": "date-night-mo26-astra-worlds-of-fun-haunt",
     "confidence": "limited",

@@ -1,0 +1,794 @@
+{
+  "package": "PHASE4-RECOVERY-INDEPENDENT-REVIEW-R1",
+  "frozenAt": "2026-10-10T18:05:57.352424+00:00",
+  "verifierRole": "Independent data/placement verifier; no research-file changes, source/runtime edits, import or publication",
+  "authorityRead": "ec5a13c0033d0b182b756716414b66fc07ee5442 current100lines independently read; parent confirmed complete historical readback. No claim of full historical semantic reading from truncated tool output.",
+  "baseline": {
+    "source": "Parent fresh17:50metadata and authoritative checkpoint; no new production browser smoke claimed",
+    "main": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "production": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY sourcefe22",
+    "liveCuratedRecords": 52,
+    "performance": "PARKED / MORE EVIDENCE REQUIRED provider-limited; no new benchmark traffic"
+  },
+  "counts": {
+    "reviewedRecords": 17,
+    "factualPass": 8,
+    "factualHold": 9,
+    "placementFieldPass": 9,
+    "factualAndPlacementReadyAtReview": 8,
+    "recommendedSubset": 7,
+    "recommendedPotentialNewRuntimeIdentities": 6,
+    "recommendedExistingIdentityAmendments": 1,
+    "allReadyPotentialNewRuntimeIdentities": 7,
+    "allReadyExistingIdentityAmendments": 1,
+    "newlyFullyEligibleInRecovery": 5,
+    "newFactualClearancesInRecovery": 3,
+    "expiredAtReview": 0,
+    "rejected": 0,
+    "runtimeImported": 0,
+    "newDiscoveries": 0
+  },
+  "inputInventory": [
+    {
+      "path": "phase4-missouri/independent-data/Independent-Evidence-Manifest-R1.json",
+      "bytes": 7364,
+      "sha256": "86aec853b29cd206af5f0084c054128a21ff3e0370acf8655f976d04f38a5a92"
+    },
+    {
+      "path": "phase4-missouri/independent-data/Phase4-17-Record-Summary-R1.json",
+      "bytes": 11089,
+      "sha256": "95a851650d881d9c72da7bc6e4be04cb3bad63c3217653f152ed19a590ca60da"
+    },
+    {
+      "path": "phase4-missouri/independent-data/Commercial-Six-Independent-Verdicts-R1.json",
+      "bytes": 21146,
+      "sha256": "0fd99a3f819d8ac6f0fb2685cccbe7d151691e18e3f0c0b66a33c60800cfc99f"
+    },
+    {
+      "path": "phase4-missouri/independent-data/Delta-Eight-Independent-Verdicts-R1.json",
+      "bytes": 37499,
+      "sha256": "717e98f4362a06dc17f4e2e05251f80b456a667dfdacc80a18b69bee9f98ff31"
+    },
+    {
+      "path": "phase4-missouri/independent-data/Cadaver-Independent-Verdict-R1.json",
+      "bytes": 3456,
+      "sha256": "6101c8eaf67aab3ef003e91732c034b62c4bfe931b54bc603828559fbdabafa3"
+    },
+    {
+      "path": "phase4-missouri/commercial-placement/placement/evidence/Carolyn-Terror-Recovery-Manifest-R1.json",
+      "bytes": 5107,
+      "sha256": "957009d868ea0c545ace5b5c5c82ae38d981626974c9d2b5bcc967dd1b521560"
+    },
+    {
+      "path": "phase4-missouri/commercial-placement/placement/evidence/Carolyn-Terror-Recovery-Projections-R1.json",
+      "bytes": 13461,
+      "sha256": "9cd59d743b59ff25c5cb2c1d89c87f7509fd2c6f8da5c0fc1aa4e9a0869fa548"
+    },
+    {
+      "path": "phase4-missouri/commercial-placement/placement/evidence/Carolyn-Terror-Recovery-Research-R1.json",
+      "bytes": 3794,
+      "sha256": "67134dc63a571ec746790f2baaeb909626cb7c51327694ff3eb48de9e1a86773"
+    },
+    {
+      "path": "phase4-missouri/delta/official-retry-20261010T1751Z/SHA256SUMS-R4.json",
+      "bytes": 6505,
+      "sha256": "d1cb4bde0a6f6204467d4f207e7d99b005a671ec180363048fdb606b048e847e"
+    },
+    {
+      "path": "phase4-missouri/delta/official-retry-20261010T1751Z/Delta-Official-Recovery-Projections-Addendum-R4.json",
+      "bytes": 28452,
+      "sha256": "67d5c19a1739e838f662279cc389061753c20fceb12606ef76f0e07403c510f6"
+    },
+    {
+      "path": "phase4-missouri/delta/official-retry-20261010T1751Z/Official-Retry-Capture-Manifest-R1.json",
+      "bytes": 6832,
+      "sha256": "e60997ddb79bcd1c1588f54565db84bd1692335feefe2216a2c72209244e41a8"
+    },
+    {
+      "path": "phase4-missouri/delta/official-retry-20261010T1751Z/Census-Placement-Proposals-R1.json",
+      "bytes": 11241,
+      "sha256": "c6f7caebae5b6a3b371b8b70f3565632f1520893564350389149aaae12311452"
+    },
+    {
+      "path": "phase4-missouri/delta/official-retry-20261010T1751Z/Branson-Year-Binding-Assessment-R3.json",
+      "bytes": 4696,
+      "sha256": "d5e573da0fafa18c72f0cd50a4b95ec1982703b557e95f9d1a7d14b7e85baebe"
+    }
+  ],
+  "integritySummary": {
+    "priorIndependentMembers": 42,
+    "carolynTerrorNewMembers": 24,
+    "carolynTerrorPriorReferences": 2,
+    "officialRecoveryR4Members": 36,
+    "mismatches": []
+  },
+  "method": "Inspect immutable raw captures, receipts and field context; preserve stronger prior raw proofs; independently reopen bounded decisive sources. Distinguish factual clearance, approximate placement and unimplemented runtime. No broad sweep, mirrors, bypass, login, paid API or operator contact.",
+  "independentRecaptureHistory": "First four-target direct review attempt left two partial files, then polling was canceled by approval review. Partial bytes preserved separately. Exact owner evidence was supplied, one exact retry completed with four HTTP200 responses. All four FAQ/Census recaptures byte-match author captures; no further recapture retry. Web tool failures and direct DMO403 are transport/access facts, never venue facts.",
+  "bransonReviewHistory": "Initial inheritedHOLD was reassessed after a narrow independent official-DMO query reproduced explicit2026 venue binding. Author created immutableR3 and consumer-onlyR4; reviewer did not edit research files.17-date current/future subset accepted; historical lower bounds unresolved, not current subset ambiguity.",
+  "records": [
+    {
+      "recordId": "DELTA3-FEARSTONE",
+      "name": "Fearstone Forest Haunted Trail",
+      "researchQualityVerdict": "PASS at disclosed bounded-source limits",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS approximate address-range point",
+      "factualAndPlacementReady": true,
+      "runtimeImplementationVerdict": "HOLD / not implemented or exact-head tested",
+      "authorProjectionFile": {
+        "path": "phase4-missouri/delta/official-retry-20261010T1751Z/Delta-Official-Recovery-Projections-Addendum-R4.json",
+        "bytes": 28452,
+        "sha256": "67d5c19a1739e838f662279cc389061753c20fceb12606ef76f0e07403c510f6"
+      },
+      "authorRecordCanonicalSha256": "bffa193a81580f93b88a76224e5ded265bb9066b98d80c6267d8db5ca1a5eb67",
+      "acceptedConsumerProjection": {
+        "name": "Fearstone Forest Haunted Trail",
+        "category": "Haunted House",
+        "address": "85 Benne Blvd, Camdenton, MO 65020",
+        "website": "https://www.fearstoneforest.com/",
+        "seasonYear": 2026,
+        "exactActiveDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30"
+        ],
+        "listingExpiresAt": "2026-10-31T00:00:00-05:00",
+        "expiryKind": "last-supported-date visibility cutoff",
+        "hoursState": "unknown",
+        "hoursText": null,
+        "admission": null,
+        "details": [
+          "October 17 is adults 18+ only with valid photo ID. A waiver is required.",
+          "On ordinary haunt nights, the operator recommends ages 12+. Children under 12 must have a parent or guardian and be able to walk independently.",
+          "The operator FAQ says the attraction is not “handicap accessible.” Check whether the trail is suitable for your access needs before visiting.",
+          "Outdoor haunted trail; lightning may delay or cancel the night. Check current operator hours and weather updates before travel.",
+          "Separate no-scare Kids Night October 31, 4–6 p.m., is not included in this haunted-trail schedule.",
+          "Approximate location; Directions use 85 Benne Blvd, not the organizer’s Highway 5 address."
+        ],
+        "openNowPolicy": "never",
+        "machineOpeningIntervals": null
+      },
+      "acceptedPlacement": {
+        "latitude": 38.016075473125,
+        "longitude": -92.758610359304,
+        "precision": "approximate address-range point",
+        "method": "U.S. Census Public_AR_Current single normalized address match",
+        "directionsMode": "address",
+        "verifiedEntrance": false,
+        "verifiedParking": false,
+        "verifiedRideshareDropoff": false
+      },
+      "sourceReview": {
+        "priorFactualReport": {
+          "path": "phase4-missouri/independent-data/Delta-Eight-Independent-Verdicts-R1.json",
+          "bytes": 37499,
+          "sha256": "717e98f4362a06dc17f4e2e05251f80b456a667dfdacc80a18b69bee9f98ff31"
+        },
+        "decisiveUrls": [
+          "https://www.fearstoneforest.com/",
+          "https://www.fearstoneforest.com/faq",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=85+Benne+Blvd%2C+Camdenton%2C+MO+65020&benchmark=Public_AR_Current&format=json"
+        ],
+        "rawIndependentRecaptures": [
+          "evidence/independent-fearstone-faq.body",
+          "evidence/independent-fearstone-census.body"
+        ],
+        "calendarPixelsReviewed": [
+          "phase4-missouri/independent-data/evidence/fearstone-img-5-independent.img",
+          "phase4-missouri/independent-data/evidence/fearstone-img-6-independent.img",
+          "phase4-missouri/independent-data/evidence/fearstone-img-7-independent.img"
+        ],
+        "sourceMode": "Retained raw operator HTML/pixels plus fresh raw FAQ/Census; homepage web extraction independently reopened."
+      },
+      "remainingFactualBlockers": [],
+      "requiredRuntimeConstraints": [
+        "Data/placement clearance only. No runtime, exact-head test, release, merge or deployment PASS.",
+        "Start from verified main fe22c15cc6442fc4a48fec23c9a1331c69d70bd2; exclude c78 and adaptive D loader history.",
+        "Never Open Now; machine opening intervals null. Qualified display hours must not become machine confidence.",
+        "Accepted coordinates are approximate map/distance points only. Directions use the supported public visitor address; no entrance, parking or rideshare precision.",
+        "Apply lifecycle/restrictions to discovery, detail, Options/Pick/Plan, provider aliases/merges, saved items, cache replay and stale-client paths.",
+        "Expiry must update from wall clock without waiting for successful RPC; test cutoff minus 1 ms, exact cutoff and plus 1 ms.",
+        "No automatic 2027 recurrence, calendar rollover, synthesized dates or saved/cache/provider revival.",
+        "Unknown prices/full hours or absent entrance precision are not automatic factual-listing gates. Keep routine price/refund/audit boilerplate out of consumer copy.",
+        "Keep residential displays separate. Do not infer public access or family suitability beyond source-supported facts.",
+        "No live ticket, weather, cancellation or provider-availability guarantee is established by this review."
+      ],
+      "releaseApproved": false,
+      "acceptedConsumerProjectionCanonicalSha256": "e2983c4f78fc45f6a760bbf21e2f338068b8f1af0b2710afccd12f505edf43cd",
+      "adjudication": "Retain the immutable prior factual PASS and exact nine-date haunt subset. Raw countdown binds opening to 2026-10-02; actual calendar and highlighted-date pixels independently rechecked. FAQ and Census independently recaptured byte-identically. One normalized match for 85 BENNE BLVD; number 85 lies in odd range 1–99. Operator address-bound point is 8.505 m away, corroborating approximate suitability only. FAQ additions preserve material ordinary-night under-12 guardian/independent-walking rule, 12+ recommendation, adult-only October 17 photo ID/waiver, operator-stated accessibility limitation and lightning risk. No countdown time becomes opening hours.",
+      "specificConstraints": [
+        "October 17 remains 18+ with valid photo ID and waiver. Ordinary-night rules do not override adult-night rules.",
+        "October 31 separate no-scare Kids Night is excluded; expire haunted subset at 2026-10-31T05:00:00Z.",
+        "Unknown hours and null admission retained; consumer details hold access/weather restrictions rather than ticket boilerplate."
+      ]
+    },
+    {
+      "recordId": "DELTA3-FUN-TIME",
+      "name": "Fun Time Farms Haunted Corn MAiZE",
+      "researchQualityVerdict": "PASS at disclosed bounded-source limits",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS approximate address-range point",
+      "factualAndPlacementReady": true,
+      "runtimeImplementationVerdict": "HOLD / not implemented or exact-head tested",
+      "authorProjectionFile": {
+        "path": "phase4-missouri/delta/official-retry-20261010T1751Z/Delta-Official-Recovery-Projections-Addendum-R4.json",
+        "bytes": 28452,
+        "sha256": "67d5c19a1739e838f662279cc389061753c20fceb12606ef76f0e07403c510f6"
+      },
+      "authorRecordCanonicalSha256": "ccec254641efd6c516280f5ba391ad55e45a2b4cac2af86e69af0a905f4bcf9e",
+      "acceptedConsumerProjection": {
+        "name": "Fun Time Farms Corn MAiZE",
+        "categories": [
+          "Corn Maze",
+          "Haunted House"
+        ],
+        "address": "11050 NE 201 Road, Lowry City, MO 64763",
+        "website": "https://www.facebook.com/FunTimeFarms/posts/we-are-one-month-out-from-our-opening-day-heres-our-updated-price-list-for-the-2/1544670360793681/",
+        "seasonYear": 2026,
+        "exactActiveDates": null,
+        "operatorSeasonStart": null,
+        "operatorSeasonEnd": null,
+        "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+        "expiryKind": "editorial visibility cutoff, not operating dates",
+        "hoursState": "unknown",
+        "hoursText": null,
+        "admission": null,
+        "details": [
+          "2026 season advertised by the operator; exact dates and hours are unverified. Check current updates before travel.",
+          "Approximate location; Directions use the listed visitor address."
+        ],
+        "openNowPolicy": "never",
+        "machineOpeningIntervals": null
+      },
+      "acceptedPlacement": {
+        "latitude": 38.183365966646,
+        "longitude": -93.739844249626,
+        "precision": "approximate address-range point",
+        "method": "U.S. Census Public_AR_Current single normalized address match",
+        "directionsMode": "address",
+        "verifiedEntrance": false,
+        "verifiedParking": false,
+        "verifiedRideshareDropoff": false
+      },
+      "sourceReview": {
+        "priorFactualReport": {
+          "path": "phase4-missouri/independent-data/Delta-Eight-Independent-Verdicts-R1.json",
+          "bytes": 37499,
+          "sha256": "717e98f4362a06dc17f4e2e05251f80b456a667dfdacc80a18b69bee9f98ff31"
+        },
+        "decisiveUrls": [
+          "https://www.facebook.com/FunTimeFarms/posts/we-are-one-month-out-from-our-opening-day-heres-our-updated-price-list-for-the-2/1544670360793681/",
+          "https://www.missourihauntedhouses.com/halloween/fun-time-farms-mo.html",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=11050+NE+201+Road%2C+Lowry+City%2C+MO+64763&benchmark=Public_AR_Current&format=json"
+        ],
+        "priorOperatorRaw": {
+          "path": "phase4-missouri/independent-data/evidence/fun-time-independent.html",
+          "bytes": 347018,
+          "sha256": "666d13d58aa8eb980597c0a32d63a4aa86aa9206b624b8e2b0e7398804e6aa95"
+        },
+        "rawIndependentRecaptures": [
+          "evidence/independent-fun-time-census.body"
+        ],
+        "sourceMode": "Strong retained raw public operator metadata; retained secondary visitor address; fresh independently matched Census."
+      },
+      "remainingFactualBlockers": [],
+      "requiredRuntimeConstraints": [
+        "Data/placement clearance only. No runtime, exact-head test, release, merge or deployment PASS.",
+        "Start from verified main fe22c15cc6442fc4a48fec23c9a1331c69d70bd2; exclude c78 and adaptive D loader history.",
+        "Never Open Now; machine opening intervals null. Qualified display hours must not become machine confidence.",
+        "Accepted coordinates are approximate map/distance points only. Directions use the supported public visitor address; no entrance, parking or rideshare precision.",
+        "Apply lifecycle/restrictions to discovery, detail, Options/Pick/Plan, provider aliases/merges, saved items, cache replay and stale-client paths.",
+        "Expiry must update from wall clock without waiting for successful RPC; test cutoff minus 1 ms, exact cutoff and plus 1 ms.",
+        "No automatic 2027 recurrence, calendar rollover, synthesized dates or saved/cache/provider revival.",
+        "Unknown prices/full hours or absent entrance precision are not automatic factual-listing gates. Keep routine price/refund/audit boilerplate out of consumer copy.",
+        "Keep residential displays separate. Do not infer public access or family suitability beyond source-supported facts.",
+        "No live ticket, weather, cancellation or provider-availability guarantee is established by this review."
+      ],
+      "releaseApproved": false,
+      "acceptedConsumerProjectionCanonicalSha256": "62290cc83c933b94fe929ee3f91acc26f49eed9af87ca3e8496828dbda55982a",
+      "adjudication": "Retain limited 2026 factual PASS from immutable operator Facebook metadata, personally re-read in raw HTML: operator explicitly announces the 2026 season. Current web reopen failed; stronger retained operator bytes remain. Single normalized Census match independently recaptured byte-identically; house number 11050 and NE directional match even range 11000–11098. Address-range placement is adequate for approximate radius use, with no entrance claim. Exact haunt/daytime subtype dates, hours and actual operator season end remain unknown. November 1 midnight CDT is editorial visibility policy only.",
+      "specificConstraints": [
+        "Do not promote the 17 general-farm directory dates or Friday/Saturday pattern to verified haunted-maze dates.",
+        "Editorial cutoff 2026-11-01T05:00:00Z does not assert the business closes then.",
+        "Unknown operator start/end and machine intervals remain null."
+      ]
+    },
+    {
+      "recordId": "DELTA6-BRANSON-FIELD",
+      "name": "Field of Screams Branson",
+      "researchQualityVerdict": "PASS at disclosed bounded-source limits",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS approximate address-range point",
+      "factualAndPlacementReady": true,
+      "runtimeImplementationVerdict": "HOLD / not implemented or exact-head tested",
+      "authorProjectionFile": {
+        "path": "phase4-missouri/delta/official-retry-20261010T1751Z/Delta-Official-Recovery-Projections-Addendum-R4.json",
+        "bytes": 28452,
+        "sha256": "67d5c19a1739e838f662279cc389061753c20fceb12606ef76f0e07403c510f6"
+      },
+      "authorRecordCanonicalSha256": "dd668283ddc5a4db021588cba50d88e58d57687894927e6927206bfec5f02782",
+      "acceptedConsumerProjection": {
+        "name": "Field of Screams Branson",
+        "category": "Haunted House",
+        "address": "1000 Pat Nash Drive, Branson, MO 65616",
+        "website": "https://www.fieldofscreamsbranson.com/home-1",
+        "seasonYear": 2026,
+        "exactActiveDates": [
+          "2026-10-10",
+          "2026-10-11",
+          "2026-10-15",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-22",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-29",
+          "2026-10-30",
+          "2026-10-31",
+          "2026-11-06",
+          "2026-11-07",
+          "2026-11-13",
+          "2026-11-14"
+        ],
+        "listingExpiresAt": "2026-11-15T00:00:00-06:00",
+        "expiryKind": "last-supported-date visibility cutoff",
+        "hoursState": "partial",
+        "hoursText": "Posted October hours: Thursday/Sunday 7–11 p.m.; Friday/Saturday 7 p.m.–midnight; box office 6 p.m. November crossover hours are unverified.",
+        "admission": null,
+        "details": [
+          "Listed nights, October 10–November 14, 2026; check operator updates before travel.",
+          "Indoor haunted attraction at Ballparks of America, distinct from Field of Screams Nixa.",
+          "November 6–7 and 13–14 are a Halloween/Christmas crossover event; crossover hours are unverified.",
+          "The operator describes intense audio, live actors, fog and strobes.",
+          "Approximate location; Directions use 1000 Pat Nash Drive, Branson, MO 65616."
+        ],
+        "openNowPolicy": "never",
+        "machineOpeningIntervals": null,
+        "operatorSeasonStart": null,
+        "timeZone": "America/Chicago"
+      },
+      "acceptedPlacement": {
+        "latitude": 36.645101695991,
+        "longitude": -93.284825773276,
+        "precision": "approximate address-range point",
+        "method": "U.S. Census Public_AR_Current single normalized address match",
+        "directionsMode": "address",
+        "verifiedEntrance": false,
+        "verifiedParking": false,
+        "verifiedRideshareDropoff": false
+      },
+      "sourceReview": {
+        "decisiveUrls": [
+          "https://www.explorebranson.com/events-branson/",
+          "https://www.explorebranson.com/",
+          "https://www.fieldofscreamsbranson.com/home-1",
+          "https://www.fieldofscreamsbranson.com/home-1-5-5",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1000+Pat+Nash+Dr%2C+Branson%2C+MO+65616&benchmark=Public_AR_Current&format=json"
+        ],
+        "independentDmoResult": {
+          "path": "phase4-missouri/recovery-independent-20261010T1753Z/evidence/branson-narrow-official-binding-search.json",
+          "bytes": 10045,
+          "sha256": "661a8bf6130350548a22e62277cf93b51ef83ed644176a2bc8887a4086ab14be"
+        },
+        "independentDmoRetrievalWindowUtc": "2026-10-10T17:57:35Z–2026-10-10T17:57:49Z; exact subsecond fetch time not serialized",
+        "operatorDateBody": {
+          "path": "phase4-missouri/delta/official-retry-20261010T1751Z/prior-inputs/branson-home.html",
+          "bytes": 761447,
+          "sha256": "de7d8af3a6f991335c791bee51fbbf5fb30c2e8f61e6555bc404cc24c23ce1c0"
+        },
+        "rawIndependentRecaptures": [
+          "evidence/independent-branson-census.body"
+        ],
+        "sourceMode": "Indexed official DMO year binding plus immutable direct operator dates/address and fresh Census. Direct DMO 403 and generic web reopen remain disclosed; neither refutes indexed evidence."
+      },
+      "remainingFactualBlockers": [],
+      "requiredRuntimeConstraints": [
+        "Data/placement clearance only. No runtime, exact-head test, release, merge or deployment PASS.",
+        "Start from verified main fe22c15cc6442fc4a48fec23c9a1331c69d70bd2; exclude c78 and adaptive D loader history.",
+        "Never Open Now; machine opening intervals null. Qualified display hours must not become machine confidence.",
+        "Accepted coordinates are approximate map/distance points only. Directions use the supported public visitor address; no entrance, parking or rideshare precision.",
+        "Apply lifecycle/restrictions to discovery, detail, Options/Pick/Plan, provider aliases/merges, saved items, cache replay and stale-client paths.",
+        "Expiry must update from wall clock without waiting for successful RPC; test cutoff minus 1 ms, exact cutoff and plus 1 ms.",
+        "No automatic 2027 recurrence, calendar rollover, synthesized dates or saved/cache/provider revival.",
+        "Unknown prices/full hours or absent entrance precision are not automatic factual-listing gates. Keep routine price/refund/audit boilerplate out of consumer copy.",
+        "Keep residential displays separate. Do not infer public access or family suitability beyond source-supported facts.",
+        "No live ticket, weather, cancellation or provider-availability guarantee is established by this review."
+      ],
+      "releaseApproved": false,
+      "acceptedConsumerProjectionCanonicalSha256": "865ddfdd66059755feebf3f422e9e641c5a793e57b5dae882642cc78ea23d95d",
+      "adjudication": "PASS for the conservative 17 operator-listed dates October 10–November 14, 2026 only. A narrow independent query of the exact official DMO route reproduced named Field of Screams Branson at Ballparks of America with 2026 and November 14 binding; the official homepage independently appears in that result with the same venue/end. This is indexed official content, not raw-origin success. Different October 2/4/10 lower bounds are not adjudicated as historical opening dates; five earlier operator dates are excluded without cancellation inference. Raw operator list supplies individual dates, not a continuous DMO range. Fresh Census exact normalized match independently reproduced number 1000 in even range 100–1098. Correct CST expiry is November 15 06:00Z.",
+      "specificConstraints": [
+        "Use America/Chicago destination dates and never infer daily operation from the DMO range.",
+        "The verified late-fall record must survive the ordinary October 31/November 1 seasonal cutoff; supported crossover dates must remain visible/selectable under the intended date-filter policy. Do not claim other November dates are active.",
+        "Prove correct visibility on November 6, 7, 13 and 14 and correct removal at 2026-11-15T06:00:00Z. Test cutoff minus 1 ms, exact cutoff, and plus 1 ms.",
+        "Test DST fall-back November 1, 2026: October dates use CDT; November 14/15 use CST. Do not reuse a fixed -05:00 offset for expiry.",
+        "Apply the same exact lifecycle and restriction behavior across discovery, detail, picks/ranking, provider merges, saved/cache replay and stale-client paths. Expiry must update without waiting for a successful RPC.",
+        "Keep Open Now fail-closed/never and machine opening intervals null, including qualified October hours and unknown crossover hours.",
+        "Use approximate point only for reviewed map/distance purposes; Directions stay address-based. No entrance/parking/drop-off precision.",
+        "No 2027 recurrence, rollover, fallback date synthesis, or saved/cache revival after expiry."
+      ],
+      "unresolvedNonblockingFields": [
+        "Historical season start, exact November crossover hours, prices, age restrictions, accessibility, current inventory/cancellation. No affirmative guarantees are made."
+      ],
+      "consumerCorrection": "R4 removes routine unknown-admission/access audit wording from consumer details while retaining the sensory warning. Audit unknowns remain explicit here."
+    },
+    {
+      "recordId": "DELTA3-TERRIFIEDEXIST",
+      "name": "TerrifiedExist Haunted Attractions",
+      "researchQualityVerdict": "PASS at disclosed bounded-source limits",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD; no new point",
+      "factualAndPlacementReady": false,
+      "runtimeImplementationVerdict": "HOLD / not implemented or exact-head tested",
+      "authorProjectionFile": {
+        "path": "phase4-missouri/delta/official-retry-20261010T1751Z/Delta-Official-Recovery-Projections-Addendum-R4.json",
+        "bytes": 28452,
+        "sha256": "67d5c19a1739e838f662279cc389061753c20fceb12606ef76f0e07403c510f6"
+      },
+      "authorRecordCanonicalSha256": "64420282dfa513909fcb08fc7bea7b4299a066dd8ca8284841838184035a8822",
+      "acceptedConsumerProjection": null,
+      "acceptedPlacement": null,
+      "sourceReview": {
+        "decisiveUrls": [
+          "https://terrifiedexist.ticketleap.com/"
+        ],
+        "finalRedirect": "https://www.ticketleap.com/",
+        "rawCapture": {
+          "path": "phase4-missouri/delta/official-retry-20261010T1751Z/phase4-missouri/delta/raw/terrified-tickets.html",
+          "bytes": 128464,
+          "sha256": "48a16f3f5cc5400ecc3ec2c9d3b279fb2073573c3dfa355c3498ceafdd92f0cb"
+        },
+        "sourceMode": "Actual retained raw generic redirect response; unsuccessful attraction evidence."
+      },
+      "remainingFactualBlockers": [
+        "Attraction-specific current visitor operation/date binding and supported expiry remain missing."
+      ],
+      "requiredRuntimeConstraints": [
+        "Data/placement clearance only. No runtime, exact-head test, release, merge or deployment PASS.",
+        "Start from verified main fe22c15cc6442fc4a48fec23c9a1331c69d70bd2; exclude c78 and adaptive D loader history.",
+        "Never Open Now; machine opening intervals null. Qualified display hours must not become machine confidence.",
+        "Accepted coordinates are approximate map/distance points only. Directions use the supported public visitor address; no entrance, parking or rideshare precision.",
+        "Apply lifecycle/restrictions to discovery, detail, Options/Pick/Plan, provider aliases/merges, saved items, cache replay and stale-client paths.",
+        "Expiry must update from wall clock without waiting for successful RPC; test cutoff minus 1 ms, exact cutoff and plus 1 ms.",
+        "No automatic 2027 recurrence, calendar rollover, synthesized dates or saved/cache/provider revival.",
+        "Unknown prices/full hours or absent entrance precision are not automatic factual-listing gates. Keep routine price/refund/audit boilerplate out of consumer copy.",
+        "Keep residential displays separate. Do not infer public access or family suitability beyond source-supported facts.",
+        "No live ticket, weather, cancellation or provider-availability guarantee is established by this review."
+      ],
+      "releaseApproved": false,
+      "adjudication": "HOLD. Actual retained TicketLeap body is generic platform marketing after redirect to https://www.ticketleap.com/; it contains no TerrifiedExist visitor event, operation date or expiry. HTTP 200 is not factual venue evidence, and generic copyright 2026 is not year binding. Independent web reopen unavailable; no closure inferred. Prior hiring/evergreen information remains insufficient."
+    },
+    {
+      "recordId": "MO26-055",
+      "name": "Carolyn’s Pumpkin Patch",
+      "researchQualityVerdict": "PASS with disclosed historical-copy provenance limit",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS approximate selected-place location",
+      "factualAndPlacementReady": true,
+      "runtimeImplementationVerdict": "HOLD / not implemented or exact-head tested",
+      "authorProjectionFile": {
+        "path": "phase4-missouri/commercial-placement/placement/evidence/Carolyn-Terror-Recovery-Projections-R1.json",
+        "bytes": 13461,
+        "sha256": "9cd59d743b59ff25c5cb2c1d89c87f7509fd2c6f8da5c0fc1aa4e9a0869fa548"
+      },
+      "authorRecordCanonicalSha256": "df749518d9a204a1f3482bf51ad8fc18e48c556249f0bb4f8a2fcac90f8443a6",
+      "acceptedFieldProjection": {
+        "visitor_address": {
+          "value": "17607 NE 52nd Street, Liberty, MO 64068",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/location-and-directions/"
+          ]
+        },
+        "category": {
+          "value": "Pumpkin Patch",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "activity_subtype": {
+          "value": [
+            "Pumpkin patch",
+            "wagon ride"
+          ],
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "current_season": {
+          "value": "Explicit 2026 season September 19 through October 31",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "date_rule": {
+          "value": "Thursday through Monday within September 19–October 31, 2026",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "partial",
+            "display": "Thursday–Monday. Check daily hours; entrance stops one hour before closing.",
+            "machine_last_admission": null
+          },
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/",
+            "https://carolynspumpkinpatch.com/hours-and-pricing/"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "Tickets use one-hour check-in windows.",
+            "No outside food/alcohol; medical/dietary access questions should go to venue.",
+            "No pets; operator permits outside service animals.",
+            "Liberty Corn Maze next door is distinct; pumpkin listing does not imply corn-maze access."
+          ],
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/hours-and-pricing/",
+            "https://carolynspumpkinpatch.com/frequently-asked-questions/"
+          ]
+        },
+        "phone": {
+          "value": "816-781-9196 (text line)",
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-11-01T00:00:00-05:00",
+            "basis": "date-only",
+            "derivation": "Conservative midnight after the final October 31 date, America/Chicago. This is retention expiry, not an asserted operator closing time. DST has not ended at this midnight.",
+            "at_utc": "2026-11-01T05:00:00Z"
+          },
+          "source_urls": [
+            "https://carolynspumpkinpatch.com/"
+          ]
+        }
+      },
+      "acceptedFieldProjectionCanonicalSha256": "2bba488807e2edcb32d87d173e4fdc0a97803a623050da501a4289f9b29d8c69",
+      "acceptedPlacement": {
+        "latitude": 39.1857337,
+        "longitude": -94.3697357,
+        "basis": "operator-linked named-place destination",
+        "precision": "Approximate site placement only; no entrance, parking, gate, doorway, boundary or rideshare drop-off claim. Source decimal precision does not imply physical precision.",
+        "source_url": "https://goo.gl/maps/pKngpKRpDZhtK55M9",
+        "field_path": "Rendered Maps URL selected-place !8m2!3d39.1857337!4d-94.3697357; not the @ viewport center.",
+        "evidence_files": [
+          "carolyn-rendered-place-retry-r1.json",
+          "carolyn-map-retry-r1.receipt.json",
+          "carolyn-map-retry-r1.body",
+          "web-carolyn-map-link-faq-retry-r1.json",
+          "web-carolyn-visitor-pages-retry-r1.json"
+        ],
+        "independentVerdict": "PASS",
+        "verifiedEntrance": false,
+        "verifiedParking": false,
+        "verifiedRideshareDropoff": false
+      },
+      "requiredRuntimeConstraints": [
+        "Data/placement clearance only. No runtime, exact-head test, release, merge or deployment PASS.",
+        "Start from verified main fe22c15cc6442fc4a48fec23c9a1331c69d70bd2; exclude c78 and adaptive D loader history.",
+        "Never Open Now; machine opening intervals null. Qualified display hours must not become machine confidence.",
+        "Accepted coordinates are approximate map/distance points only. Directions use the supported public visitor address; no entrance, parking or rideshare precision.",
+        "Apply lifecycle/restrictions to discovery, detail, Options/Pick/Plan, provider aliases/merges, saved items, cache replay and stale-client paths.",
+        "Expiry must update from wall clock without waiting for successful RPC; test cutoff minus 1 ms, exact cutoff and plus 1 ms.",
+        "No automatic 2027 recurrence, calendar rollover, synthesized dates or saved/cache/provider revival.",
+        "Unknown prices/full hours or absent entrance precision are not automatic factual-listing gates. Keep routine price/refund/audit boilerplate out of consumer copy.",
+        "Keep residential displays separate. Do not infer public access or family suitability beyond source-supported facts.",
+        "No live ticket, weather, cancellation or provider-availability guarantee is established by this review."
+      ],
+      "sourceLimitations": [
+        "Direct HTTP to both Carolyn domains returned 403; cloud browser countrycousins.com returned a 502 HTTP/2 transport error. No bypass performed.",
+        "Carolyn factual pages are fresh web-tool retrievals of indexed/extracted operator content, with reported crawl ages today or 3 days; not claimed to be fresh origin HTML.",
+        "A footer copyright range is not a 2027 season; only explicit 2026 visitor-season content is used.",
+        "Google dynamic hours, ratings, reviews and accessibility labels are not used as factual opening/access evidence."
+      ],
+      "releaseApproved": false,
+      "sourceReview": {
+        "freshFactualEvidenceFiles": [
+          "web-carolyn-home-retry-r1.json",
+          "web-carolyn-visitor-pages-retry-r1.json",
+          "web-carolyn-map-link-faq-retry-r1.json"
+        ],
+        "historicalCopyLimitation": "Local prior research SHA472f93d561ebf14ffb3cecfe1290314a64012c013d7ed509ed4feac29aae1dab differs from historical report SHA6ebdd30a18c6089cf8e0ebe9f589977a3150030b3fb01747682face6221849aa. No byte-equivalence or explanation asserted. Freshly read current operator sources govern all accepted material fields.",
+        "decisiveUrls": [
+          "https://carolynspumpkinpatch.com/",
+          "https://carolynspumpkinpatch.com/location-and-directions/",
+          "https://carolynspumpkinpatch.com/hours-and-pricing/",
+          "https://carolynspumpkinpatch.com/frequently-asked-questions/",
+          "https://goo.gl/maps/pKngpKRpDZhtK55M9"
+        ],
+        "independentMapCapture": {
+          "path": "phase4-missouri/recovery-independent-20261010T1753Z/evidence/carolyn-independent-cloud-map.json",
+          "bytes": 1155,
+          "sha256": "dfac037f899ebe38dde467bdc1a0305b873dd6c112b239d05d97fd6f9bd3a2a2"
+        },
+        "sourceMode": "Fresh indexed/extracted official content, not raw-origin success; independently rendered public selected-place destination."
+      },
+      "adjudication": "Fresh operator extractions independently reopened and checked: explicit 2026 September 19–October 31 season, Thursday–Monday pattern, visitor street address, one-hour ticket check-in windows and admission cutoff relative to closing. Exact daily hours remain partial, no machine intervals. Independent cloud-browser reopen of the official Directions shortlink resolves to the same named Carolyn place, official website and street address, selected-place coordinates 39.1857337,-94.3697357. Prefer this current identity-bound selected point over historical redirect destination 416 m away and address interpolation 860 m away; no averaging and no gate precision. Distinct Liberty Corn Maze is not this listing.",
+      "specificConstraints": [
+        "Pumpkin Patch only; Liberty Corn Maze remains a distinct identity/access product.",
+        "Preserve ticket check-in window and one-hour-before-closing entrance rule without inventing daily clock hours.",
+        "Preserve no pets/service-animal and outside-food/alcohol qualifications. Do not turn a digital-accessibility statement or Maps accessibility label into physical-access clearance.",
+        "Expiry2026-11-01T05:00:00Z is before fall-back; UTC−05 is correct."
+      ]
+    },
+    {
+      "recordId": "DELTA2-TERROR66",
+      "name": "Terror on Route 66",
+      "researchQualityVerdict": "PASS with disclosed historical-copy provenance limit",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS approximate selected-place location",
+      "factualAndPlacementReady": true,
+      "runtimeImplementationVerdict": "HOLD / not implemented or exact-head tested",
+      "authorProjectionFile": {
+        "path": "phase4-missouri/commercial-placement/placement/evidence/Carolyn-Terror-Recovery-Projections-R1.json",
+        "bytes": 13461,
+        "sha256": "9cd59d743b59ff25c5cb2c1d89c87f7509fd2c6f8da5c0fc1aa4e9a0869fa548"
+      },
+      "authorRecordCanonicalSha256": "4925c2b26c4d8d56065eda16090816fb3faf92eb02208dcf88264f40cec66dd9",
+      "acceptedFieldProjection": {
+        "category": {
+          "value": "Haunted House",
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "current_season": {
+          "value": "Explicit 2026 Halloween season ending November 1; individual opening dates and hours are not asserted.",
+          "source_urls": [
+            "https://scarestl.com/",
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "unknown"
+          },
+          "source_urls": [
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "material_access": {
+          "value": [
+            "All participants must complete a waiver. General admission is no-touch.",
+            "Optional Interactive Touch Pass is ages 10+. Minors under 18 must be accompanied by an adult with valid ID.",
+            "A valid ID is required at check-in for every Interactive Touch Pass and Rated R Pass participant.",
+            "Rated R Pass is 18+ and includes full contact, adult language and dark humor. Rated R participants cannot enter with guests who do not hold Rated R passes. General admission and Interactive Touch guests may enter together."
+          ],
+          "source_urls": [
+            "https://scarestl.com/",
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "visitor_address": {
+          "value": "1143 North Service Road West, Sullivan, MO 63080",
+          "source_urls": [
+            "https://scarestl.com/",
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "at": "2026-11-02T00:00:00-06:00",
+            "basis": "date-only",
+            "at_utc": "2026-11-02T06:00:00Z",
+            "derivation": "Conservative midnight after the stated final November 1, 2026 season date, America/Chicago. DST ended earlier November 1, so this midnight is CST UTC−06:00. Not an operator closing-time assertion."
+          },
+          "source_urls": [
+            "https://scarestl.com/",
+            "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565"
+          ]
+        }
+      },
+      "acceptedFieldProjectionCanonicalSha256": "14247d76e9f9a5405e212c21b34651388becd910a5048f7b0bc2627a89d7acf3",
+      "acceptedPlacement": {
+        "latitude": 38.2432122,
+        "longitude": -91.1408597,
+        "basis": "named-place destination corroborated by operator public address lookup",
+        "precision": "Approximate site placement only; no entrance, parking, gate, doorway, boundary or rideshare drop-off claim. Source decimal precision does not imply physical precision.",
+        "source_url": "https://www.google.com/maps/search/?api=1&query=Terror+On+Route+66+1143+North+Service+Road+West+Sullivan+MO",
+        "field_path": "Rendered Maps URL selected-place !8m2!3d38.2432122!4d-91.1408597; not inferred from viewport.",
+        "evidence_files": [
+          "terror-rendered-place-retry-r1.json",
+          "terror-rendered-address-retry-r1.json",
+          "terror-home-retry-r1.body",
+          "terror-home-retry-r1.receipt.json"
+        ],
+        "independentVerdict": "PASS",
+        "verifiedEntrance": false,
+        "verifiedParking": false,
+        "verifiedRideshareDropoff": false
+      },
+      "requiredRuntimeConstraints": [
+        "Data/placement clearance only. No runtime, exact-head test, release, merge or deployment PASS.",
+        "Start from verified main fe22c15cc6442fc4a48fec23c9a1331c69d70bd2; exclude c78 and adaptive D loader history.",
+        "Never Open Now; machine opening intervals null. Qualified display hours must not become machine confidence.",
+        "Accepted coordinates are approximate map/distance points only. Directions use the supported public visitor address; no entrance, parking or rideshare precision.",
+        "Apply lifecycle/restrictions to discovery, detail, Options/Pick/Plan, provider aliases/merges, saved items, cache replay and stale-client paths.",
+        "Expiry must update from wall clock without waiting for successful RPC; test cutoff minus 1 ms, exact cutoff and plus 1 ms.",
+        "No automatic 2027 recurrence, calendar rollover, synthesized dates or saved/cache/provider revival.",
+        "Unknown prices/full hours or absent entrance precision are not automatic factual-listing gates. Keep routine price/refund/audit boilerplate out of consumer copy.",
+        "Keep residential displays separate. Do not infer public access or family suitability beyond source-supported facts.",
+        "No live ticket, weather, cancellation or provider-availability guarantee is established by this review."
+      ],
+      "sourceLimitations": [
+        "No exact schedule image extraction or machine hours added; explicit season endpoint suffices for the unchanged date-only lifecycle.",
+        "The public operator-address iframe query was opened in full Maps by omitting output=embed; that address result is described accurately, not misrepresented as the named attraction or a gate.",
+        "No user origin, account data or private browser history is included in the selected DOM captures.",
+        "Google dynamic hours, ratings, reviews and accessibility labels are not imported."
+      ],
+      "releaseApproved": false,
+      "sourceReview": {
+        "freshFactualEvidenceFiles": [
+          "terror-home-retry-r1.body",
+          "terror-home-retry-r1.receipt.json",
+          "terror-ticket-retry-r1.body",
+          "terror-ticket-retry-r1.receipt.json",
+          "web-home-retry-r1.json"
+        ],
+        "historicalCopyLimitation": "Local prior research SHA472f93d561ebf14ffb3cecfe1290314a64012c013d7ed509ed4feac29aae1dab differs from historical report SHA6ebdd30a18c6089cf8e0ebe9f589977a3150030b3fb01747682face6221849aa. No byte-equivalence or explanation asserted. Freshly read current operator sources govern all accepted material fields.",
+        "decisiveUrls": [
+          "https://scarestl.com/",
+          "https://www.simpletix.com/e/2026-daily-tickets-terror-on-route-66-tickets-288565",
+          "https://www.google.com/maps/search/?api=1&query=Terror+On+Route+66+1143+North+Service+Road+West+Sullivan+MO"
+        ],
+        "independentMapCapture": {
+          "path": "phase4-missouri/recovery-independent-20261010T1753Z/evidence/terror-independent-cloud-map.json",
+          "bytes": 1224,
+          "sha256": "7b6cfda4a5e76e76da838bb8ea2ba45baa366a041de5183bb8bc377cd8d4a928"
+        },
+        "sourceMode": "Fresh retained raw operator/ticket bodies and independent operator web reopen; independent rendered named-place destination corroborates author address-map."
+      },
+      "adjudication": "Fresh operator and operator-linked SimpleTix raw bodies read in full visitor-relevant context. Explicit2026 Halloween season ending November 1 supplies lifecycle; schedule image is not flattened into guessed opening dates/hours. Both sources support 1143 North Service Road West. Independent cloud-browser named-place result reproduces 38.2432122,-91.1408597 with matching name/address/scarestl.com; retained operator address-map result is 3.179 m away and lists Terror at that place. Distant SimpleTix point 2.242 km away and old East address remain excluded. Fresh facts support clearance independently of the mismatched historical-copy hash.",
+      "specificConstraints": [
+        "All participants need waiver. General admission no-touch. Interactive Touch is10+; its minors need accompanying adult with valid ID. All Interactive Touch/ RatedR participants need check-in ID.",
+        "RatedR is18+, full contact, adult language/dark humor, and cannot mix with guests without RatedR passes. General/Interactive guests may enter together.",
+        "No routine sales/refund boilerplate or exact-price machinery in consumer copy.",
+        "Exact nights/hours remain unknown; Nov2 midnight CST expiry=2026-11-02T06:00:00Z after fall-back."
+      ]
+    }
+  ],
+  "recommendedNext": "Proceed only after the coordinator publishes/reads back this research gate, to the authorized main-based seven-record candidate excluding Rolla. Independently verify exact candidate runtime and consumer behavior, then stop before release/merge/deploy.",
+  "recommendedIds": [
+    "MO26-006",
+    "MO26-004",
+    "DELTA3-FEARSTONE",
+    "DELTA3-FUN-TIME",
+    "MO26-055",
+    "DELTA2-TERROR66",
+    "DELTA6-BRANSON-FIELD"
+  ],
+  "deferredButNotExpired": [
+    "DELTA6-ROLLA"
+  ],
+  "rollaHardCutoffUtc": "2026-10-11T05:00:00Z",
+  "sharedRuntimeConstraints": [
+    "Data/placement clearance only. No runtime, exact-head test, release, merge or deployment PASS.",
+    "Start from verified main fe22c15cc6442fc4a48fec23c9a1331c69d70bd2; exclude c78 and adaptive D loader history.",
+    "Never Open Now; machine opening intervals null. Qualified display hours must not become machine confidence.",
+    "Accepted coordinates are approximate map/distance points only. Directions use the supported public visitor address; no entrance, parking or rideshare precision.",
+    "Apply lifecycle/restrictions to discovery, detail, Options/Pick/Plan, provider aliases/merges, saved items, cache replay and stale-client paths.",
+    "Expiry must update from wall clock without waiting for successful RPC; test cutoff minus 1 ms, exact cutoff and plus 1 ms.",
+    "No automatic 2027 recurrence, calendar rollover, synthesized dates or saved/cache/provider revival.",
+    "Unknown prices/full hours or absent entrance precision are not automatic factual-listing gates. Keep routine price/refund/audit boilerplate out of consumer copy.",
+    "Keep residential displays separate. Do not infer public access or family suitability beyond source-supported facts.",
+    "No live ticket, weather, cancellation or provider-availability guarantee is established by this review."
+  ],
+  "scopeLimits": [
+    "Cadaver and eight other factualHOLDs retained; no statewide exhaustion.",
+    "Werehouse is an existing identity amendment, not an added venue.",
+    "Consumer source-derived restrictions retained without routine ticket/refund/unknown-price clutter.",
+    "Physical Android/WebView/GPS and prior release limitations remain."
+  ],
+  "runtimeReleaseVerdict": "HOLD / not implemented, tested, imported, merged or deployed"
+}

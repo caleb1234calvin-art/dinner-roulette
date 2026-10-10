@@ -43,6 +43,7 @@ const nearbyCatalog = [
   ...load("src/lib/date-night/missouri-2026-astra-eleven-catalog.ts").MISSOURI_2026_ASTRA_ELEVEN_CATALOG,
   ...load("src/lib/date-night/missouri-2026-astra-commercial-catalog.ts").MISSOURI_2026_ASTRA_COMMERCIAL_CATALOG,
   ...load("src/lib/date-night/missouri-2026-astra-delta-catalog.ts").MISSOURI_2026_ASTRA_DELTA_CATALOG,
+  ...load("src/lib/date-night/missouri-2026-phase4-recovery-catalog.ts").MISSOURI_2026_PHASE4_RECOVERY_CATALOG,
 ];
 const { haversineMiles } = load("src/lib/restaurants/geo.ts");
 const { getDateNightAvailability } = load("src/lib/date-night/availability.ts");
@@ -587,6 +588,11 @@ try {
       for (const row of fallbackRows) assert.ok(test.rpc[0].response.includes(row.id), `Fallback includes the eligible reviewed neighborhood identity ${row.id}`);
       await openOptionsContaining(test, [myer, werehouse]);
       await page.getByRole("heading", { name: "The Werehouse", exact: true }).waitFor();
+      assert.equal(werehouse.id, "date-night-werehouse-joplin", "Werehouse amendment preserves the existing identity");
+      assert.doesNotMatch(await rowCard(page, werehouse).innerText(), /Open now/);
+      assert.match(await rowCard(page, werehouse).innerText(), /Approx\./);
+      assert.equal(werehouse.openingHours, null, "Superseded weekly hours cannot revive Open Now");
+      assert.equal(werehouse.seasonalListing.directionsTarget.kind, "visitor-address");
       assert.equal(await rowHeading(page, myer).count(), 1);
       assert.doesNotMatch(await rowCard(page, myer).innerText(), /Open now/);
       result.evidence.fallbackNames = await page.locator("article h3").allTextContents();

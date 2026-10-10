@@ -7,14 +7,16 @@ import { chromium } from "playwright";
 import { fromCrossJSON } from "seroval";
 import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
+import { PHASE4_MATERIAL_FACTS, PHASE4_FORBIDDEN_COPY, STALE_WEREHOUSE_FAVORITE } from "./test-support/phase4-recovery-browser-facts.mjs";
 assert.equal(process.env.CI, "true");
 const proof = assertBrowserBuild();
 const cumulative = process.env.SEASONAL_CUMULATIVE === "true";
 const astra = process.env.SEASONAL_ASTRA === "true";
 const extras = process.env.SEASONAL_ASTRA_EXTRAS === "true";
-const expanded = astra || extras;
-assert.ok([cumulative, astra, extras].filter(Boolean).length <= 1, "Select one bounded addition batch per invocation");
-const output = resolve(`audit/browser-results/${extras ? "seasonal-astra-extras" : astra ? "seasonal-astra-eleven" : cumulative ? "seasonal-cumulative-15" : "seasonal-ten-record"}`);
+const phase4 = process.env.SEASONAL_PHASE4 === "true";
+const expanded = astra || extras || phase4;
+assert.ok([cumulative, astra, extras, phase4].filter(Boolean).length <= 1, "Select one bounded addition batch per invocation");
+const output = resolve(`audit/browser-results/${phase4 ? "seasonal-phase4-recovery-seven" : extras ? "seasonal-astra-extras" : astra ? "seasonal-astra-eleven" : cumulative ? "seasonal-cumulative-15" : "seasonal-ten-record"}`);
 await mkdir(output, { recursive: true });
 const control = resolve(output, "control.json"), events = resolve(output, "events.jsonl");
 const origin = "http://127.0.0.1:8099", defaultAt = "2026-10-07T18:00:00Z";
@@ -47,7 +49,9 @@ const extraRows = [
   ...load("src/lib/date-night/missouri-2026-astra-commercial-catalog.ts").MISSOURI_2026_ASTRA_COMMERCIAL_CATALOG,
   ...load("src/lib/date-night/missouri-2026-astra-delta-catalog.ts").MISSOURI_2026_ASTRA_DELTA_CATALOG,
 ];
-const rows = extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
+const phase4Rows = load("src/lib/date-night/missouri-2026-phase4-recovery-catalog.ts").MISSOURI_2026_PHASE4_RECOVERY_CATALOG;
+const phase4Accepted = JSON.parse(await readFile("scripts/test-support/phase4-recovery-browser-projections.json", "utf8"));
+const rows = phase4 ? phase4Rows : extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
 const destinationFor = row => {
   const target = row.seasonalListing.directionsTarget;
   return target.kind === "verified-point" ? `${target.lat},${target.lon}` : target.address;
@@ -58,9 +62,12 @@ const { seasonalPresentation, SEASONAL_VISITOR_NOTICE, SEASONAL_CONFIDENCE_LABEL
 const forbiddenConsumerCopy = /\$\s*\d|\bUSD\b|priced by weight|ticket fee|checkout total|audit|provenance|retention|Census|reviewRevision|survey-grade|periodic review|Schedule checked|listingExpiresAt|ListingCompletenessV1|machine opening|\b20\d{2}-\d{2}-\d{2}\b/i;
 const assertConsumerOnly = async (scope, row) => {
   const text = await scope.innerText();
-  assert.doesNotMatch(text, forbiddenConsumerCopy, "Consumer UI must not expose prices, audit or retention prose");
+  assert.doesNotMatch(text, phase4Rows.some(item => item.id === row.id) ? PHASE4_FORBIDDEN_COPY : forbiddenConsumerCopy, "Consumer UI must not expose prices, audit or retention prose");
   const projected = seasonalPresentation(row);
   for (const raw of row.seasonalVisitNotes ?? []) {
+    // Accepted Phase 4 field projections also retain plain display atoms in
+    // their audit arrays. Address/category/name remain legitimate consumer UI.
+    if (phase4Rows.some(item => item.id === row.id) && [row.name, row.address, row.cuisineLabel].includes(raw)) continue;
     if (!projected.details.includes(raw)) assert.ok(!text.includes(raw), "Full factual audit notes remain data-only");
   }
 };
@@ -98,7 +105,7 @@ const assertNoRpc = async (test, count, label) => {
   assert.equal(test.rpc.length, count, label);
 };
 const overlayRoot = (page, kind) => page.locator(".fixed.inset-0.z-50").filter({
-  has: page.getByRole("button", { name: `Close ${kind}`, exact: true }),
+  has: page.getByRole("button", { name: kind === "plan" ? "Close night plan" : `Close ${kind}`, exact: true }),
 });
 async function inspectIcons(test, kind, label) {
   const { page, result, state } = test;
@@ -144,8 +151,8 @@ async function inspectQualifiedOverlay(test, row, kind) {
   const { page, result, state } = test;
   const overlay = overlayRoot(page, kind);
   await inspectIcons(test, kind, kind);
-  assertPrecision(await (kind === "options" ? rowCard(page, row) : overlay).innerText(), row);
-  const scope = kind === "options" ? rowCard(page, row) : overlay;
+  assertPrecision(await (kind !== "result" ? rowCard(page, row) : overlay).innerText(), row);
+  const scope = kind !== "result" ? rowCard(page, row) : overlay;
   const section = scope.locator("[data-seasonal-visit-notes]");
   assert.equal(await section.locator(":scope > p").count(), 1, "Exactly one compact notice");
   assert.equal(await section.locator(":scope > p").innerText(), SEASONAL_VISITOR_NOTICE);
@@ -187,6 +194,10 @@ async function inspectQualifiedOverlay(test, row, kind) {
   const controls = kind === "options" ? [
     ["Shuffle options", overlay.getByRole("button", { name: "Shuffle options", exact: true })],
     ["Close options", overlay.getByRole("button", { name: "Close options", exact: true })],
+  ] : kind === "plan" ? [
+    ["Maps", scope.getByRole("link", { name: "Maps", exact: true })],
+    ["Info", scope.getByRole("link", { name: "Info", exact: true })],
+    ["Close night plan", overlay.getByRole("button", { name: "Close night plan", exact: true })],
   ] : [
     ["Directions", overlay.getByRole("link", { name: /Directions · Google Maps/ })],
     ...(row.website ? [["Website", overlay.getByRole("link", { name: /Website & info/ })]] : []),
@@ -199,7 +210,8 @@ async function inspectQualifiedOverlay(test, row, kind) {
     // external link, placing a call or changing the selected result.
     await control.click({ trial: true, timeout: 5000 });
     const href = await control.getAttribute("href");
-    if (label === "Website") assert.equal(href, row.website);
+    if (label === "Website" || label === "Info") assert.equal(href, row.website);
+    if (label === "Maps") assert.equal(new URL(href).searchParams.get("destination"), destinationFor(row));
     if (label === "Call venue") assert.equal(href, `tel:${row.phone}`);
     reachability.controls.push({ label, href, reachable: true });
     await page.screenshot({ path: resolve(output, `${state.scenario}-${kind}-control-${label.replaceAll(" ", "-")}.png`), animations: "disabled" });
@@ -391,7 +403,7 @@ const extraFacts = {
 };
 const extraConfidence = { "MO26-002": "limited", "DELTA2-SHEPHERD-LANTERN": "limited", "DELTA2-HOLLOWS": "limited", "MO26-039": "limited",
   "DELTA6-WORLDS-OF-FUN": "limited", "DELTA2-OZARK": "limited", "DELTA3-BALLWIN": "limited", "DELTA6-OFALLON": "limited", "DELTA3-GROTTO": "limited" };
-const materialFacts = extras ? extraFacts : astra ? astraFacts : cumulative ? newFacts : priorFacts;
+const materialFacts = phase4 ? PHASE4_MATERIAL_FACTS : extras ? extraFacts : astra ? astraFacts : cumulative ? newFacts : priorFacts;
 const newConfidence = { "MO26-036": "good", "MO26-058": "high", "MO26-069": "high", "MO26-071": "high", "MO26-118": "good", "MO26-012": "good", "MO26-028": "good", "MO26-074": "good", "MO26-084": "good", "MO26-085": "good", "DELTA-EDGE-2026": "high", "DELTA-CREEPYWORLD-2026": "good", "DELTA-DARKNESS-2026": "good", "DELTA-HAUNTED-RIVER-2026": "high", "DELTA-FEAR-BLOODY-TIMBER-2026": "high" };
 const oldRows = [
   ...load("src/lib/date-night/missouri-2026-cleared-catalog.ts").MISSOURI_2026_CLEARED_SEASONAL_CATALOG,
@@ -401,13 +413,13 @@ const ordinaryRows = load("src/lib/date-night/jasper-county-catalog.ts").JASPER_
 const anchors = load("src/lib/date-night/seasonal-catalog.ts").JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG;
 const previousRows = [...oldRows, ...priorTen, ...addedRows];
 const previousReceipts = JSON.parse(await readFile("scripts/test-support/missouri-previous32-receipts.json", "utf8"));
-const catalog = [...ordinaryRows, ...anchors, ...previousRows, ...astraRows, ...extraRows];
+const catalog = [...ordinaryRows, ...anchors, ...previousRows, ...astraRows, ...extraRows, ...phase4Rows];
 const { haversineMiles } = load("src/lib/restaurants/geo.ts");
 const { getOpenStatus } = load("src/lib/restaurants/hours.ts");
 const { getDateNightAvailability } = load("src/lib/date-night/availability.ts");
-const categoryLabel = row => row.activityTypes.includes("other-halloween-fall") ? "Other Halloween / Fall" : row.activityTypes.includes("corn-maze") ? "Corn Maze" : "Haunted House";
+const categoryLabel = row => row.activityTypes.includes("other-halloween-fall") ? "Other Halloween / Fall" : row.activityTypes.includes("corn-maze") ? "Corn Maze" : row.activityTypes.includes("pumpkin-patch") ? "Pumpkin Patch" : "Haunted House";
 const categoryButton = (page, row) => page.getByRole("button", { name: categoryLabel(row), exact: true });
-const categoryTypes = row => [row.activityTypes.includes("other-halloween-fall") ? "other-halloween-fall" : row.activityTypes.includes("corn-maze") ? "corn-maze" : "haunted-house"];
+const categoryTypes = row => [row.activityTypes.includes("other-halloween-fall") ? "other-halloween-fall" : row.activityTypes.includes("corn-maze") ? "corn-maze" : row.activityTypes.includes("pumpkin-patch") ? "pumpkin-patch" : "haunted-house"];
 const seasonalTypes = new Set(["other-halloween-fall", "corn-maze", "pumpkin-patch", "haunted-house"]);
 // Counts include real existing city venues and colocated records. Radius uses
 // the app's documented 0.05-mile boundary tolerance; it is not a record count.
@@ -459,19 +471,67 @@ const inspectSaved = async (test, row, label, ended = false) => {
   await noOverflow(page);
 };
 
+const phase4ExpectedDates = accepted => {
+  const projection = accepted.acceptedProjection;
+  if (accepted.recordId !== "MO26-055") return projection.valid_dates ?? projection.exactActiveDates ?? null;
+  // Independently expand only the accepted Thursday–Monday date rule.
+  const dates = [];
+  for (let date = Date.parse("2026-09-19T12:00:00Z"); date <= Date.parse("2026-10-31T12:00:00Z"); date += 86400000) {
+    if ([0, 1, 4, 5, 6].includes(new Date(date).getUTCDay())) dates.push(new Date(date).toISOString().slice(0, 10));
+  }
+  return dates;
+};
+const assertPhase4Projection = row => {
+  const accepted = phase4Accepted.records.find(item => item.id === row.id);
+  assert.ok(accepted, "Every Phase 4 identity is independently accepted");
+  const projection = accepted.acceptedProjection, listing = row.seasonalListing;
+  const address = projection.address ?? projection.fields.visitor_address.value;
+  const expiresAt = projection.listing_expires_at ?? projection.listingExpiresAt ?? projection.fields.expiry.value.at;
+  assert.equal(listing.recordId, accepted.recordId);
+  assert.equal(row.name, projection.name);
+  assert.equal(row.address, address);
+  assert.deepEqual(listing.directionsTarget, { kind: "visitor-address", address });
+  assert.equal(listing.visitorAddress, address);
+  assert.equal(row.lat, accepted.acceptedPlacement?.latitude ?? projection.lat);
+  assert.equal(row.lon, accepted.acceptedPlacement?.longitude ?? projection.lon);
+  assert.equal(listing.placement.lat, row.lat); assert.equal(listing.placement.lon, row.lon);
+  assert.notEqual(listing.placement.basis, "verified-arrival");
+  assert.equal(Date.parse(listing.listingExpiresAt), Date.parse(expiresAt));
+  assert.equal(listing.timeZone, "America/Chicago"); assert.equal(listing.seasonYear, 2026);
+  assert.equal(row.openingHours, null); assert.equal(row.seasonalAvailability.openNowPolicy, "never");
+  assert.equal(row.seasonalAvailability.endsAt ?? null, null, "Date-only/editorial cutoff is not an operator closing time");
+  assert.deepEqual(row.seasonalAvailability.activeDates ?? null, phase4ExpectedDates(accepted), "No synthesized operation dates");
+  if (accepted.recordId === "DELTA3-FUN-TIME") {
+    assert.equal(row.seasonalAvailability.activeFrom ?? null, null);
+    assert.equal(row.seasonalAvailability.activeUntil ?? null, null);
+    assert.equal(listing.expiryBasis, "editorial");
+  }
+  if (accepted.recordId === "MO26-055") assert.deepEqual(row.activityTypes, ["pumpkin-patch"], "Carolyn is separate from Liberty Corn Maze");
+  if (accepted.recordId === "DELTA6-BRANSON-FIELD") {
+    assert.equal(listing.visibility, "listing-lifecycle");
+    assert.equal(row.seasonalAvailability.activeDates.length, 17);
+    assert.equal(Date.parse(listing.listingExpiresAt), Date.parse("2026-11-15T06:00:00Z"));
+  }
+};
+
 try {
   await waitFor(async () => { try { return (await fetch(origin)).ok; } catch { return false; } }, "Preview startup failed");
   browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
     args: ["--no-sandbox", "--disable-dev-shm-usage"] });
   assert.deepEqual(rows.map(row => row.seasonalListing.recordId).sort(), Object.keys(materialFacts).sort(), "Exactly the independently cleared selected batch");
-  assert.equal(new Set(rows.map(row => row.id)).size, extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
+  assert.equal(new Set(rows.map(row => row.id)).size, phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
   assert.equal(previousRows.length, 32, "All previously shipped curated identities remain regression controls");
+  assert.equal(new Set(catalog.map(row => row.id)).size, catalog.length, "Amended Werehouse remains one canonical identity across every invocation");
+  assert.equal(anchors.some(row => row.id === "date-night-werehouse-joplin"), false, "Legacy weekly-hours Werehouse anchor is superseded");
+  assert.equal(phase4Accepted.sourceSha256, "827eb67919c99dec61991cbc01cba63097ccd5dd1868de355b5f79b07d348882");
+  assert.deepEqual(phase4Rows.map(row => row.id).sort(), phase4Accepted.records.map(row => row.id).sort());
+  for (const row of phase4Rows) assertPhase4Projection(row);
   assert.deepEqual(previousRows.map(row => ({ id: row.id, recordId: row.seasonalListing.recordId, name: row.name,
     reviewRevision: row.seasonalListing.reviewRevision, directionsTarget: row.seasonalListing.directionsTarget,
     placement: row.seasonalListing.placement })), previousReceipts.records,
   "Previously shipped receipt revisions and navigation remain bound to the immutable production baseline");
   for (const row of rows) {
-    assert.equal(seasonalPresentation(row).confidence, (extras ? extraConfidence : astra ? astraConfidence : cumulative ? newConfidence : expectedConfidence)[row.seasonalListing.recordId]);
+    assert.equal(seasonalPresentation(row).confidence, phase4 ? "limited" : (extras ? extraConfidence : astra ? astraConfidence : cumulative ? newConfidence : expectedConfidence)[row.seasonalListing.recordId]);
     assert.equal(row.openingHours, null); assert.equal(row.seasonalAvailability.openNowPolicy, "never");
     assert.ok(["visitor-address", "verified-point"].includes(row.seasonalListing.directionsTarget.kind));
     assert.ok(nearby(row).length <= 3, "The scoped neighborhood must fit in the real four-card shortlist with one ordinary fixture");
@@ -761,6 +821,29 @@ try {
     }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
       [node]: preference(row, node, { favorite: true, ourRating: 4 }), [way]: preference(row, way, { favorite: true }),
     } });
+    if (phase4) {
+      const settle = row.activityTypes.includes("pumpkin-patch")
+        ? astraRows.find(item => item.seasonalListing.recordId === "MO26-056")
+        : { ...row, id: "date-night-osm-node-910003", name: "Ordinary park control", activityTypes: ["park"] };
+      await runScenario(row, index, "qualified-night-plan", async test => {
+        const { page } = test;
+        await activityCount(page, 2);
+        await settleLocal(test); const before = test.rpc.length;
+        await page.getByRole("button", { name: "Plan the night", exact: true }).click();
+        await rowHeading(page, row).waitFor();
+        const overlay = overlayRoot(page, "plan");
+        assert.equal(await overlay.locator("article").count(), 2, "Plan uses two distinct real eligible identities");
+        assert.equal(await rowHeading(page, settle).count(), 1);
+        const targetCard = rowCard(page, row);
+        assert.match(await targetCard.innerText(), row.activityTypes.includes("pumpkin-patch") ? /2 · Settle/ : /1 · Scare/);
+        await inspectQualifiedOverlay(test, row, "plan");
+        await overlay.getByRole("button", { name: "Close night plan", exact: true }).click();
+        await assertNoRpc(test, before, "Qualified Scare/Settle plan uses the acquired local superset");
+        test.result.evidence.plan = { ids: [row.id, settle.id], targetRole: row.activityTypes.includes("pumpkin-patch") ? "settle" : "scare" };
+      }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
+        [row.id]: preference(row, row.id, { favorite: true }), [settle.id]: preference(settle, settle.id, { favorite: true }),
+      } });
+    }
     if (expanded) {
       await runScenario(row, index, "explicit-nonseasonal-filter", async test => {
         const expected = nearby(row, { category: ["park"] });
@@ -811,6 +894,79 @@ try {
           staleResponseContainedId: true, expiredIdRendered: false, requests: test.rpc.length };
       }, { holdInitialRpc: true, at: new Date(Date.parse(expiresAt) - 1).toISOString() });
     }
+  }
+  if (phase4) {
+    const werehouse = rows.find(row => row.id === "date-night-werehouse-joplin");
+    for (const [label, at, ended] of [
+      ["current", defaultAt, false],
+      ["exact-cutoff", "2026-11-01T05:00:00Z", true],
+      ["next-year", "2027-10-07T18:00:00Z", true],
+    ]) {
+      await runScenario(werehouse, "amend", `stale-werehouse-exact-id-${label}`, async test => {
+        await inspectSaved(test, werehouse, `amended-${label}`, ended);
+        assert.doesNotMatch(await savedItem(test.page, werehouse).innerText(), /Open now|3819 E 20th St, Joplin/);
+        await test.page.reload({ waitUntil: "domcontentloaded" });
+        await inspectSaved(test, werehouse, `amended-${label}-reload`, ended);
+        await assertNoRpc(test, 0, "Pre-amendment exact-ID favorite resolves current approximate address policy without discovery");
+        const favorite = (await stored(test.page)).preferences[werehouse.id];
+        assert.equal(favorite.ourRating, 4); assert.equal(favorite.timesVisited, 2);
+        test.result.evidence.amendment = { old: STALE_WEREHOUSE_FAVORITE, canonicalId: werehouse.id,
+          destination: destinationFor(werehouse), at, ended };
+      }, { at, pathname: "/favorites", preferences: { [werehouse.id]: STALE_WEREHOUSE_FAVORITE } });
+    }
+    const branson = rows.find(row => row.seasonalListing.recordId === "DELTA6-BRANSON-FIELD");
+    await runScenario(branson, "branson", "destination-dst-fallback", async test => {
+      await activityCount(test.page, nearby(branson, { at: test.state.at }).length);
+      await optionsButton(test.page).click(); await rowHeading(test.page, branson).waitFor();
+      await settleLocal(test); const before = test.rpc.length;
+      for (const at of ["2026-11-01T06:59:59.999Z", "2026-11-01T07:00:00.000Z", "2026-11-01T07:00:00.001Z"]) {
+        await advance(test, at);
+        assert.match(await rowCard(test.page, branson).innerText(), /Closed now/);
+        assert.doesNotMatch(await rowCard(test.page, branson).innerText(), /Open now/);
+        await assertNoRpc(test, before, "Unlisted November 1 stays closed through America/Chicago fall-back without RPC");
+      }
+      test.result.evidence.dst = { timeZone: "America/Chicago", transition: "2026-11-01T07:00:00Z", status: "closed-now" };
+    }, { at: "2026-11-01T06:59:59Z" });
+    await runScenario(branson, "branson", "exact-november-dates-and-unlisted-browse", async test => {
+      const { page, result } = test;
+      const activeDates = phase4ExpectedDates(phase4Accepted.records.find(row => row.id === branson.id));
+      const count = nearby(branson, { at: test.state.at, season: false }).length + 1;
+      await activityCount(page, count); await settleLocal(test); const before = test.rpc.length;
+      assert.ok(test.rpc[0].response.includes("date-night-osm-node-910001") && test.rpc[0].response.includes("date-night-osm-way-910002"));
+      result.evidence.november = [];
+      for (let day = 3; day <= 14; day++) {
+        const date = `2026-11-${String(day).padStart(2, "0")}`, at = `${date}T18:00:00Z`;
+        await advance(test, at); await activityCount(page, count);
+        assert.equal(await page.getByRole("button", { name: "Haunted House", exact: true }).count(), 0);
+        await optionsButton(page).click(); await rowHeading(page, branson).waitFor();
+        assert.equal(await rowHeading(page, branson).count(), 1, "Late-fall provider duplicates remain one identity");
+        const text = await rowCard(page, branson).innerText(), listed = activeDates.includes(date);
+        assert.doesNotMatch(text, /Open now/);
+        assert.match(text, listed ? /Hours partly confirmed/ : /Closed now/);
+        await selectTarget(page, branson);
+        assert.doesNotMatch(await overlayRoot(page, "result").innerText(), /Open now/);
+        assert.equal(new URL(await page.getByRole("link", { name: /Directions · Google Maps/ }).getAttribute("href")).searchParams.get("destination"), branson.address);
+        await closeResult(page);
+        const open = page.getByRole("switch", { name: "Open now only", exact: true });
+        await press(open, "Space"); await activityCount(page, nearby(branson, { at, open: true, season: false }).length + 1);
+        await press(open, "Space"); await activityCount(page, count);
+        await assertNoRpc(test, before, "Listed and unlisted November dates browse locally but never inherit 24/7 provider opening");
+        result.evidence.november.push({ date, listed, browseEligible: true, openNowEligible: false, selected: true });
+      }
+      assert.deepEqual(result.evidence.november.filter(day => day.listed).map(day => day.date), ["2026-11-06", "2026-11-07", "2026-11-13", "2026-11-14"]);
+      const expiry = "2026-11-15T06:00:00Z";
+      await advance(test, new Date(Date.parse(expiry) - 1).toISOString());
+      await optionsButton(page).click(); await rowHeading(page, branson).waitFor();
+      for (const at of [expiry, new Date(Date.parse(expiry) + 1).toISOString()]) {
+        await advance(test, at); await rowHeading(page, branson).waitFor({ state: "hidden" });
+        await activityCount(page, nearby(branson, { at, season: false }).length + 1);
+        await assertNoRpc(test, before, "Branson exact CST cutoff removes cached/provider identity without RPC");
+      }
+      await closeOptions(page);
+      const calls = (await readFile(events, "utf8")).split("\n").filter(Boolean).map(JSON.parse).filter(event => event.scenario === test.state.scenario);
+      assert.ok(calls.every(event => event.group !== "seasonal"), "Late-fall listing-lifecycle does not restart seasonal discovery");
+      result.evidence.providerCalls = calls;
+    }, { at: "2026-11-03T18:00:00Z", fixture: "mixed" });
   }
   if (cumulative || expanded) for (const [index, row] of rows.filter(row => row.seasonalListing.visibility === "listing-lifecycle").entries()) {
     const at = "2026-11-05T12:00:00-06:00";
@@ -884,7 +1040,8 @@ try {
       identityReceipts: { [providerId]: { canonicalId: row.id, canonicalName: row.name, reviewRevision: oldRevision(row) } } });
   }
   assert.equal(verdict.scenarios.length, rows.length * (expanded ? 17 : 15) + receiptRows.length +
-    ((cumulative || expanded) ? rows.filter(row => row.seasonalListing.visibility === "listing-lifecycle").length : 0));
+    ((cumulative || expanded) ? rows.filter(row => row.seasonalListing.visibility === "listing-lifecycle").length : 0) +
+    (phase4 ? rows.length + 5 : 0));
   assert.equal(verdict.errors.length, 0);
   verdict.passed = true;
 } catch (error) {

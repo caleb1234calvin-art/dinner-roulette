@@ -127,6 +127,13 @@ jobs:
           SEASONAL_ASTRA_EXTRAS: "true"
         run: node scripts/seasonal-ten-record-browser.mjs
 
+      - name: Exercise seven independently cleared Phase 4 recovery records in local Chromium
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+          SEASONAL_PHASE4: "true"
+        run: node scripts/seasonal-ten-record-browser.mjs
+
       # Run interaction gates before the longer geometry comparison for faster failure feedback.
       - name: Compare seasonal and standard card geometry
         env:
