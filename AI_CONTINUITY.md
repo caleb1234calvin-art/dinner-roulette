@@ -1,3 +1,65 @@
+# PR #61 Performance Decision Benchmark CLOSED — MORE EVIDENCE REQUIRED; STOP (2026-10-10 07:42 UTC)
+
+## CURRENT / decision
+
+**Final independent and producer decision: MORE EVIDENCE REQUIRED.** The sole authorized experiment is terminal and closed. It stopped correctly at the preregistered eight-consecutive-physical-failure threshold. This is not permission to resume, reset, raise limits, replace missing cases or run another experiment. The incomplete-matrix rule prevents ADOPT HYBRID or a complete-matrix KEEP RADIAL-V1 PRIMARY conclusion. Existing production remains radial-v1; exact c78 functional verification remains PASS. **Performance/adoption and release readiness remain HOLD.**
+
+“Radial discovery becomes an audit layer” remains the candidate design, not an adopted production architecture.
+
+## Exact execution / clean stop
+
+Benchmark-only **103a093d600138e921a9c00bd46b53a241907a14**, tree **4b317d20adf6d264cf3cdc77760ba2bd9810da60**, parent **fdc67197cc505713b31929e2580fd1c573917d4b**; branch `integration/pr61-performance-decision-benchmark-2026-10-10`. [Run38034143730](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38034143730), number3/attempt1, is terminal. Workflow SUCCESS means evidence was retained and the controlled stop handled; it does not mean the planned comparison completed or adoption passed.
+
+A baseline **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2 /tree8d5059c9fee871c522616971cce0a80b153e4d23**; B **c78b97175cc094436e454fa888e1ed83486f750d /tree6f7130dc46e5decc9b045c2841b63c73406ae2ae**. Final source checks passed. Frozen manifest a0acb0e4562f9e958c5a013a33abc6c16d59ff1e270d9c582959830aebe3eda5 and unique approval8dad0fd7b2b8b227d27923393a408ba5705eb23d1d988b326717217fd93410ed remain binding.
+
+First dispatch **07:23:35.211Z**, stop about **07:32:25.352Z**, terminal **07:32:25.706Z** on2026-10-10. **427 starts /427 outcomes /zero pending**,1,011 independently replayed ledger rows;274 provider and155 RPC retained bodies verified. No overlapping cases or post-stop physical dispatch; maximum physical concurrency3. Fixed1,280/45-minute limit was not exhausted:853 attempts remained. No429, reset or extra probe.
+
+Outcomes:152 success,147 neutral hedge abort,122 failure,6 timeout. The final eight failures spanned Kansas City A core and B primary. A later B audit RPC was denied physical dispatch after the stop; its handler failure is not another provider acquisition or observed recovery failure. Unknown partial bytes for153 aborted/timed-out attempts are not zero-cost transfers.
+
+**24 planned /10 started: eight complete, one quiescent-partial, one globally stopped,14 unrun.** Optional mixed cases were not run. Both Kansas City cases had zero eligible Movies and no usable controls; their latency stays absent, not fabricated. Four usable/one unusable-or-censored started cases per arm is not a population reliability estimate.
+
+## Observed actual-browser results and limits
+
+Only Columbia20 and Joplin50 completed counterbalanced blocks, with two observations per arm:
+
+- **Columbia20 actual Pick median:** A6.3572s, B6.81185s; hybrid454.65ms slower (+7.2%). First live eligible median A4.53155s/B4.9928s.
+- **Joplin50 actual Pick median:** A5.8205s, B2.95525s; hybrid2.86525s faster (49.2%) from immediate curated Route66 Theater/66DriveIn availability, **not faster live retrieval**. First live/four-eligible median A3.97125s/B8.0982s. Hybrid clicked Options early with two valid choices; later actual four-card interaction is unmeasured. Radial actually rendered four.
+- Columbia had only three eligible choices; four Options was inapplicable. Movies-only Plan truthfully had no compatible pair: genuine-plan speed remains unmeasured.
+- Final eligible sets matched in completed blocks: three Columbia/fourteen Joplin. This is bounded parity, not ground-truth recall.
+- Four successful hybrid primaries contributed all final eligible identities. **Zero additional final-visible eligible audit identities across199 audit physical attempts.** No successful-primary geographic omission benefit was demonstrated; this does not prove audit universally unnecessary.
+- Hybrid primary failures were **1/5 started (20%)**, a tiny early-stopped descriptive denominator. Recovery after that failure was censored by the global stop with zero audit dispatch, not infinite or successful.
+- Eight complete cases gave20 warm observations per arm, all zero-refetch. Warm eligible-DOM p95 A31.5ms/B63.8ms, both below100ms. Failed Kansas City warm checks were skipped. Earlier failed-primary20→15 fixture refetch HOLD remains.
+- Offline Node merge/dedupe medians were about5.4ms A/8.25ms B in Joplin; not browser latency. Completed-block attempt/body ratios stayed within practical thresholds, but partial sample and unknown aborted body bytes do not establish matrix-wide acceptable cost.
+
+Trusted-click/observer gates passed in observed rows; ordinary Pick animation is included. Live stability snapshots cover only particular open windows, not a new all-control stability proof. Hybrid Joplin had moved to no-pair Plan before provider enrichment; its Pick/Options enrichment stability was not freshly demonstrated here. Existing functional proof remains separate.
+
+## Recoverable final reports and evidence
+
+Both full reports were read:
+- [Independent final review](audit/hybrid-loading-2026-10-10/Decision-Benchmark-LIVE-FINAL-REVIEW.md), SHA **a38501225cac653f894d0857ae3985d60e8fcb978b8818bc81ded854490a78ce**.
+- [Final producer report](audit/hybrid-loading-2026-10-10/Decision-Benchmark-DECISION-REPORT.md), SHA **739c3689e9c5e1ca8f3e6803ad9c5fa73e03662b248deab41a782eeeaf98b36c**.
+- [Per-case summary](audit/hybrid-loading-2026-10-10/Decision-Benchmark-CASE-SUMMARY.json), SHA **d9807931820b588b6b1c89e429c7dc5e4fc7d33619a5d9ea5b8d91eed5335b77**.
+- [Full execution manifest](audit/hybrid-loading-2026-10-10/Decision-Benchmark-live-manifest.json), SHA **21a63c95ea3cf185859dbb41ed582a0aa286d5e5e352093af57eacb198062c29**.
+- [Original terminal receipt](audit/hybrid-loading-2026-10-10/Decision-Benchmark-terminal.json), SHA **0b7bea2f0a9927a0f29babb6adc9824c04cab79c7d4b549a574c5f5803c56814**. Its initial REVIEW REQUIRED field is superseded by final independent review, not edited.
+
+Original GitHub artifact **11662969953**, **7,283,972 bytes**, SHA **1c2334c4998d5ad3f2cdd07b34485ad499befcc2e10def0319cc3a4bbba14903**, independently hash/CRC verified. It retains the complete6,386,704-byte `live/physical-ledger.jsonl`, SHA **184e27d50388f8b14c6a370503475f7e709c6f186dc5ace612c59d855ae2ac4f**, final chain **3e30c07c6fe60d7d96348966c2c0e6595c8438a59807cb01899c28bb9740b469**, and every raw body/receipt. The full ledger is retained in the original archive instead of duplicated as a large Git file. Progress SHA b86fb663d633e2b238bbaf234bde4206d0d46ab80e95c8fd77e2118cf1ac0df3; analysis SHA f99d6c59895b24a75b3481f3d37e1e4fe66e7d6535540c6191b495be320a5882. Local raw package: `decision-benchmark/live-hosted-evidence/live/`.
+
+Durable Library copies: final producer report **libfile_759b7d5a0fa881918369c8df134157ee**; complete raw archive **libfile_2a04f74a71fc81919e593f4af9bb54c7**; case summary **libfile_9b04df5ca4c48191bcb84e5370e7eaac**; independent review **libfile_6ac176a8e374819181ff08b90a225289**. These retain the exact frozen hashes above.
+
+## NEXT / STOP / HOLD
+
+**STOP. Owner decision only.** No automatic extra evidence gathering, rerun, optimization, source remediation, merge, deployment, settings change or release waiver. Neither radius has the required three-city matrix: Kansas City20 second pair missing, Columbia50/Joplin20/KansasCity50 unrun. Live failed-primary recovery, later hybrid four-card interaction and genuine plan pairs remain unmeasured. These are precise evidence gaps, not authority to fill them.
+
+Prior functional PASS remains1,059 application/repository tests,970 browser checks,426 geometry+14 controls. New48 harness tests validate benchmark mechanics only. Earlier Track F counter-reset NOT PASS, a4 incomplete327-attempt run, R1 hosted preflight failure and R2 warm limitation remain preserved.
+
+Missouri/Cadaver work remains parked. Cadaver's exact blocker is reliable attraction-specific **2026 operation/date binding and supported expiry**. Physical Android/WebView/GPS/signing/Play and all other backlog limits remain unchanged.
+
+Fresh07:41 reads confirm main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree8d5059, PR61 c78 draft/unmerged, production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/sourcefe22**,52 shipped records unchanged. Production received no change. Canonical update is deployment-disabled documentation only.
+
+**PARENT CONTINUITY COMMIT:** `cbf31562e1b56f194027b55c45b816753b34a723`; **PARENT TREE:** `e256047b4ec8d04546675d160a88481afdbeebb2`. All prior history follows verbatim.
+
+---
+
 # Decision Benchmark Hosted Fixture PASS — Sole Bounded Live Execution Running (2026-10-10 07:22 UTC)
 
 ## CURRENT
