@@ -1,0 +1,411 @@
+{
+  "package": "PHASE4-COMMERCIAL-SIX-INDEPENDENT-DATA-R1",
+  "reviewedAt": "2026-10-10T09:22:29.046249+00:00",
+  "inputResearchSha256": "8b3088365d310fa86ea94ff36bb0955da2953b1465f7dffe36984e3072716446",
+  "inputManifestSha256": "862cefc43a48ceed1c89ad720ba9456094c404db6109e7465e192de463c9d7ca",
+  "inputAddendumSha256": "9ffd919662c01541f30f6bdbc6e678d2f0668cab2604964e74a46569c8ecd883",
+  "integrity": {
+    "manifestFilesChecked": 62,
+    "mismatches": []
+  },
+  "counts": {
+    "factualPass": 2,
+    "factualHold": 4,
+    "expired": 0,
+    "rejected": 0,
+    "newDiscoveries": 0,
+    "newCuratedIdentitiesPotential": 1,
+    "existingIdentityAmendmentsPotential": 1,
+    "runtimeImports": 0
+  },
+  "records": [
+    {
+      "recordId": "MO26-006",
+      "name": "Wolfmans House Of Screams",
+      "researchQuality": "PASS at stated limits",
+      "factualVerdict": "PASS",
+      "runtimePlacementEligibility": true,
+      "runtimeImplementationVerdict": "HOLD: no implementation or exact-head validation performed",
+      "projectionSha256": "7c2c243fe971c3319b745b5b21ace270a8845d1cb229a6eb0af7dd3c978421c8",
+      "fieldReview": {
+        "identityCategory": "PASS retained; public attraction, not a residential display",
+        "visitorAddress": "26267 King Lane, Carl Junction, MO 64834",
+        "dates": {
+          "status": "PASS qualified directory-derived exact subset",
+          "acceptedValues": [
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ]
+        },
+        "expiry": {
+          "status": "PASS as conservative visibility cutoff, not final exit",
+          "acceptedValue": "2026-11-01T00:00:00-05:00",
+          "basis": "End of last supported local date / no extra November 1 operation"
+        },
+        "approximatePlacement": {
+          "status": "PASS independently reproduced exact-address Census",
+          "lat": 37.203626664776,
+          "lon": -94.531270552631,
+          "qualification": "Address-range interpolation only. Directions must use supported visitor street address; no entrance, parking, rooftop, ride or property-boundary claim."
+        },
+        "hoursPrices": "Partial/unknown allowed; display-only, null machine intervals and never Open Now. No price guarantee.",
+        "restrictions": "No new age, guardian or accessibility guarantee. Retain published sensory and access limitations where used; do not infer family suitability from directory features.",
+        "dedupe": {
+          "existing_ledger_id": "MO26-006",
+          "is_new_discovery": false,
+          "existing_runtime_id": null,
+          "implementation_action_if_independently_accepted": "new curated listing only after independent data and runtime gates"
+        }
+      },
+      "adjudication": "Independent raw HTML fetch reproduced nine marked dates under attraction-specific 2026 month headings, consistent with schema bounds and separately reopened Scare Factor 2026 season statement. Stale 2025 marketing paragraph and inaccessible operator calendar remain disclosed; they do not negate the explicit date fields. Census independently returned exact address and submitted point.",
+      "minimalAuthorCorrections": [],
+      "acceptedProjection": {
+        "name": "Wolfmans House Of Screams",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "categoryLabel": "Haunted House",
+        "address": "26267 King Lane, Carl Junction, MO 64834",
+        "directionsTarget": "26267 King Lane, Carl Junction, MO 64834",
+        "website": "https://www.facebook.com/WolfmansHouseOfScreams/",
+        "actionLabel": "Visit website",
+        "description": "A seasonal haunted house in Carl Junction.",
+        "details": "Listed 2026 dates: October 3, 9–10, 16–17, 23–24 and 30–31. Listed opening time is 7 p.m.; check the operator for current hours before traveling. Location is approximate.",
+        "lat": 37.203626664776,
+        "lon": -94.531270552631,
+        "coordinatePrecision": "approximate",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "valid_dates": [
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "listing_expires_at": "2026-11-01T00:00:00-05:00",
+        "ends_at": null,
+        "no_2027_recurrence": true
+      },
+      "runtimeRequirements": [
+        "No 2027 recurrence or revival through saved/cache/provider aliases",
+        "Enforce expiry at exact cutoff with no dependency on RPC completion",
+        "Approximate point for map/distance only, supported visitor address for Directions",
+        "No machine opening intervals and never Open Now"
+      ]
+    },
+    {
+      "recordId": "MO26-004",
+      "name": "The Werehouse",
+      "researchQuality": "PASS at stated limits",
+      "factualVerdict": "PASS",
+      "runtimePlacementEligibility": true,
+      "runtimeImplementationVerdict": "HOLD: no implementation or exact-head validation performed",
+      "projectionSha256": "d932d56d8cb9fd4c4a2559d8a7f93b35735ade53155edb5476f448202b330007",
+      "fieldReview": {
+        "identityCategory": "PASS retained; public attraction, not a residential display",
+        "visitorAddress": "3819 E 20th Street, Joplin, MO 64801",
+        "dates": {
+          "status": "PASS qualified directory-derived exact subset",
+          "acceptedValues": [
+            "2026-09-25",
+            "2026-09-26",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ]
+        },
+        "expiry": {
+          "status": "PASS as conservative visibility cutoff, not final exit",
+          "acceptedValue": "2026-11-01T00:00:00-05:00",
+          "basis": "End of last supported local date / no extra November 1 operation"
+        },
+        "approximatePlacement": {
+          "status": "PASS independently reproduced exact-address Census",
+          "lat": 37.069463315708,
+          "lon": -94.464636904963,
+          "qualification": "Address-range interpolation only. Directions must use supported visitor street address; no entrance, parking, rooftop, ride or property-boundary claim."
+        },
+        "hoursPrices": "Partial/unknown allowed; display-only, null machine intervals and never Open Now. No price guarantee.",
+        "restrictions": "No new age, guardian or accessibility guarantee. Retain published sensory and access limitations where used; do not infer family suitability from directory features.",
+        "dedupe": {
+          "existing_ledger_id": "MO26-004",
+          "is_new_discovery": false,
+          "existing_runtime_id": "date-night-werehouse-joplin",
+          "implementation_action_if_independently_accepted": "amend existing identity, never add a duplicate"
+        }
+      },
+      "adjudication": "Independent raw HTML fetch reproduced twelve marked dates under attraction-specific 2026 month headings. Reopened operator confirms address and Fri/Sat evening hours; explicit 2026 dates come from the directory, not inferred weekly recurrence. Exact Census match independently reproduced. Current operator visitor address supersedes the 2025 alternative; point remains approximate.",
+      "minimalAuthorCorrections": [],
+      "acceptedProjection": {
+        "name": "The Werehouse",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "categoryLabel": "Haunted House",
+        "address": "3819 E 20th Street, Joplin, MO 64801",
+        "directionsTarget": "3819 E 20th Street, Joplin, MO 64801",
+        "website": "https://thewerehouse.net/",
+        "actionLabel": "Visit website",
+        "description": "A haunted attraction in Joplin.",
+        "details": "Listed Fridays and Saturdays, September 25–October 31, 2026, from 7 p.m. to midnight. Check the operator for updates before traveling. Location is approximate.",
+        "lat": 37.069463315708,
+        "lon": -94.464636904963,
+        "coordinatePrecision": "approximate",
+        "machine_opening_intervals": null,
+        "open_now_policy": "never",
+        "valid_dates": [
+          "2026-09-25",
+          "2026-09-26",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "listing_expires_at": "2026-11-01T00:00:00-05:00",
+        "ends_at": null,
+        "no_2027_recurrence": true
+      },
+      "runtimeRequirements": [
+        "No 2027 recurrence or revival through saved/cache/provider aliases",
+        "Enforce expiry at exact cutoff with no dependency on RPC completion",
+        "Approximate point for map/distance only, supported visitor address for Directions",
+        "No machine opening intervals and never Open Now",
+        "Amend date-night-werehouse-joplin; do not add a duplicate or count as a new venue",
+        "Remove legacy machine-hour/Open Now confidence through all access paths"
+      ]
+    },
+    {
+      "recordId": "DELTA2-FEARFACTORY",
+      "name": "Fear Factory LLC",
+      "researchQuality": "PASS at stated limits",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "runtimeImplementationVerdict": "HOLD: no implementation or exact-head validation performed",
+      "projectionSha256": "6fd44f35ff95499d5721077121a4d538be6c2b15632544177f6ed92f96f3be8e",
+      "fieldReview": {
+        "identityCategory": "PASS retained; public attraction, not a residential display",
+        "visitorAddress": "102 South Main Street, Mountain Grove, MO 65711",
+        "dates": {
+          "status": "HOLD for current visitor operation",
+          "acceptedValues": null
+        },
+        "expiry": {
+          "status": "HOLD / null",
+          "acceptedValue": null,
+          "basis": null
+        },
+        "approximatePlacement": {
+          "status": "Staged only; not independently cleared for runtime",
+          "lat": null,
+          "lon": null,
+          "qualification": "Address-range interpolation only. Directions must use supported visitor street address; no entrance, parking, rooftop, ride or property-boundary claim."
+        },
+        "hoursPrices": "Partial/unknown allowed; display-only, null machine intervals and never Open Now. No price guarantee.",
+        "restrictions": "No new age, guardian or accessibility guarantee. Retain published sensory and access limitations where used; do not infer family suitability from directory features.",
+        "dedupe": {
+          "existing_ledger_id": "DELTA2-FEARFACTORY",
+          "is_new_discovery": false,
+          "existing_runtime_id": null,
+          "implementation_action_if_independently_accepted": "new curated listing only after independent data and runtime gates"
+        }
+      },
+      "adjudication": "Independent official contact read still explicitly labels Halloween Season 2025. This does not support 2026 dates; contradictory Morty status is not closure proof. No accepted expiry.",
+      "minimalAuthorCorrections": [],
+      "acceptedProjection": null,
+      "runtimeRequirements": [
+        "No 2027 recurrence or revival through saved/cache/provider aliases",
+        "Enforce expiry at exact cutoff with no dependency on RPC completion",
+        "Approximate point for map/distance only, supported visitor address for Directions",
+        "No machine opening intervals and never Open Now"
+      ]
+    },
+    {
+      "recordId": "DELTA2-WACO",
+      "name": "Waco School House Haunt",
+      "researchQuality": "PASS at stated limits",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "runtimeImplementationVerdict": "HOLD: no implementation or exact-head validation performed",
+      "projectionSha256": "0201b77a3ddec2e9d753b723841196c49c453a0b1401dc06b1c6651d11474333",
+      "fieldReview": {
+        "identityCategory": "PASS retained; public attraction, not a residential display",
+        "visitorAddress": "148 Rose Street, Waco / Asbury, MO 64832",
+        "dates": {
+          "status": "HOLD for current visitor operation",
+          "acceptedValues": null
+        },
+        "expiry": {
+          "status": "HOLD / null",
+          "acceptedValue": null,
+          "basis": null
+        },
+        "approximatePlacement": {
+          "status": "Staged only; not independently cleared for runtime",
+          "lat": null,
+          "lon": null,
+          "qualification": "Address-range interpolation only. Directions must use supported visitor street address; no entrance, parking, rooftop, ride or property-boundary claim."
+        },
+        "hoursPrices": "Partial/unknown allowed; display-only, null machine intervals and never Open Now. No price guarantee.",
+        "restrictions": "No new age, guardian or accessibility guarantee. Retain published sensory and access limitations where used; do not infer family suitability from directory features.",
+        "dedupe": {
+          "existing_ledger_id": "DELTA2-WACO",
+          "is_new_discovery": false,
+          "existing_runtime_id": null,
+          "implementation_action_if_independently_accepted": "new curated listing only after independent data and runtime gates"
+        }
+      },
+      "adjudication": "Independent Scare Factor read corroborates the known address and explicitly says forthcoming dates/hours are not loaded. No accepted current-season/date/expiry proof; failed origin reads do not prove closure.",
+      "minimalAuthorCorrections": [],
+      "acceptedProjection": null,
+      "runtimeRequirements": [
+        "No 2027 recurrence or revival through saved/cache/provider aliases",
+        "Enforce expiry at exact cutoff with no dependency on RPC completion",
+        "Approximate point for map/distance only, supported visitor address for Directions",
+        "No machine opening intervals and never Open Now"
+      ]
+    },
+    {
+      "recordId": "DELTA5-RISING-RECHECK",
+      "name": "Rising Haunted Attraction",
+      "researchQuality": "PASS at stated limits",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "runtimeImplementationVerdict": "HOLD: no implementation or exact-head validation performed",
+      "projectionSha256": "6ee5028160cb8ad7ea9fad150c24a852d3fd2d9f2e7b53aa318d6fbcc5fbb944",
+      "fieldReview": {
+        "identityCategory": "PASS retained; public attraction, not a residential display",
+        "visitorAddress": "25238 Raleigh Road, Waynesville, MO 65583",
+        "dates": {
+          "status": "HOLD for current visitor operation",
+          "acceptedValues": null
+        },
+        "expiry": {
+          "status": "HOLD / null",
+          "acceptedValue": null,
+          "basis": null
+        },
+        "approximatePlacement": {
+          "status": "Staged only; not independently cleared for runtime",
+          "lat": null,
+          "lon": null,
+          "qualification": "Address-range interpolation only. Directions must use supported visitor street address; no entrance, parking, rooftop, ride or property-boundary claim."
+        },
+        "hoursPrices": "Partial/unknown allowed; display-only, null machine intervals and never Open Now. No price guarantee.",
+        "restrictions": "No new age, guardian or accessibility guarantee. Retain published sensory and access limitations where used; do not infer family suitability from directory features.",
+        "dedupe": {
+          "existing_ledger_id": "DELTA5-RISING-RECHECK",
+          "is_new_discovery": false,
+          "existing_runtime_id": null,
+          "implementation_action_if_independently_accepted": "new curated listing only after independent data and runtime gates"
+        }
+      },
+      "adjudication": "Independent raw HTML reproduces ten 2026 marked dates, but fresh Morty location page says no longer operational while researcher preserves other conflicting status text. The unsupported lifecycle conflict remains unresolved. Directory fields are useful, but complete current operational record remains HOLD, not EXPIRED or closed.",
+      "minimalAuthorCorrections": [],
+      "acceptedProjection": null,
+      "runtimeRequirements": [
+        "No 2027 recurrence or revival through saved/cache/provider aliases",
+        "Enforce expiry at exact cutoff with no dependency on RPC completion",
+        "Approximate point for map/distance only, supported visitor address for Directions",
+        "No machine opening intervals and never Open Now"
+      ]
+    },
+    {
+      "recordId": "DELTA2-TWISTED",
+      "name": "Twisted Minds Haunted House",
+      "researchQuality": "PASS at stated limits",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "runtimeImplementationVerdict": "HOLD: no implementation or exact-head validation performed",
+      "projectionSha256": "883b0618e7e474cb487a2b598d7845b1e65ca9663a3b5b460b2c1fe3db0cbc79",
+      "fieldReview": {
+        "identityCategory": "PASS retained; public attraction, not a residential display",
+        "visitorAddress": "10000 Bear Cove Road, Richwoods, MO 63071",
+        "dates": {
+          "status": "HOLD for current visitor operation",
+          "acceptedValues": null
+        },
+        "expiry": {
+          "status": "HOLD / null",
+          "acceptedValue": null,
+          "basis": null
+        },
+        "approximatePlacement": {
+          "status": "Staged only; not independently cleared for runtime",
+          "lat": null,
+          "lon": null,
+          "qualification": "Address-range interpolation only. Directions must use supported visitor street address; no entrance, parking, rooftop, ride or property-boundary claim."
+        },
+        "hoursPrices": "Partial/unknown allowed; display-only, null machine intervals and never Open Now. No price guarantee.",
+        "restrictions": "No new age, guardian or accessibility guarantee. Retain published sensory and access limitations where used; do not infer family suitability from directory features.",
+        "dedupe": {
+          "existing_ledger_id": "DELTA2-TWISTED",
+          "is_new_discovery": false,
+          "existing_runtime_id": null,
+          "implementation_action_if_independently_accepted": "new curated listing only after independent data and runtime gates"
+        }
+      },
+      "adjudication": "Independent Hauntworld read reproduces historical identity, Richwoods address and activity type only. No year-bound 2026 operation or expiry. California namesake material is unrelated.",
+      "minimalAuthorCorrections": [],
+      "acceptedProjection": null,
+      "runtimeRequirements": [
+        "No 2027 recurrence or revival through saved/cache/provider aliases",
+        "Enforce expiry at exact cutoff with no dependency on RPC completion",
+        "Approximate point for map/distance only, supported visitor address for Directions",
+        "No machine opening intervals and never Open Now"
+      ]
+    }
+  ],
+  "sourceReview": {
+    "independentRawCalendarReproductions": [
+      "evidence/wolfman-independent.body",
+      "evidence/werehouse-independent.body",
+      "evidence/rising-independent.body"
+    ],
+    "independentCensusReproductions": [
+      "evidence/wolfman-census-independent.json",
+      "evidence/werehouse-census-independent.json"
+    ],
+    "independentWebReopens": [
+      "evidence/commercial-calendars-web.json",
+      "evidence/commercial-binding-web.json",
+      "evidence/wolfman-image-web.json",
+      "evidence/twisted-independent-web.json",
+      "evidence/rising-lifecycle-web.json"
+    ],
+    "retrievalDistinction": "Raw origin captures are separately labeled from indexed/rendered web retrieval. Calendar cell identity was checked in raw HTML; plain-text flattening alone cannot establish highlighted dates. Source last-edit metadata is never treated as field-wide verification.",
+    "wolfmanImage": "Both author HTTP-200 195-byte HTML unavailability and independent web Cache miss retained; no recovered poster pixels claimed."
+  },
+  "excludedSiblingPlacement": "Carolyn and Route66 remain separate staged work subject to blocked local source-retention authorization; neither silently included in this six-record clearance.",
+  "baseline": {
+    "mainFreshRemote": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "productionFreshRemote": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY production/main/fe22",
+    "runtimeRecordCountFromCanonical": 52,
+    "candidateMustExcludeExperimentalBranches": true
+  },
+  "scope": "Data/placement clearance only. No runtime import, merge, deploy, provider traffic, paid API, operator contact, or residential policy change. A main-based accepted subset still needs independent exact-candidate runtime review."
+}

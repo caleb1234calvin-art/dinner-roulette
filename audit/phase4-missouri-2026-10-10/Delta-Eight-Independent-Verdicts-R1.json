@@ -1,0 +1,746 @@
+{
+  "package": "PHASE4-DELTA-EIGHT-INDEPENDENT-DATA-R1",
+  "reviewedAt": "2026-10-10T09:27:24.662124+00:00",
+  "inputProjection": "Delta-Projections-R5.json",
+  "inputProjectionSha256": "59bcde127b2b25ffdba7b3968ca11edc832ef45662ddff7a2e6f11f6a1fc6385",
+  "inputCandidatesSha256": "864bb7f460d610fc43e247b8da278edb6655966710c5933da5b8d0b1bdc07d88",
+  "integrity": [
+    {
+      "revision": 1,
+      "filesChecked": 56,
+      "mismatches": [],
+      "manifestSha256": "8635411e556f2e036a734877cd5af9d339fa8a2d40305df0a2fdc8caa0cf33b9"
+    },
+    {
+      "revision": 2,
+      "filesChecked": 3,
+      "mismatches": [],
+      "manifestSha256": "b3ca8e7551479d4bbe816deb87f94f6d1eca5b5b4bf51dd967a13414afb8ddcb"
+    },
+    {
+      "revision": 3,
+      "filesChecked": 3,
+      "mismatches": [],
+      "manifestSha256": "34ade7ed3f5b28b9be81d9daf0095eba94dfb22a3539c51657b836c4aea17c74"
+    },
+    {
+      "revision": 4,
+      "filesChecked": 3,
+      "mismatches": [],
+      "manifestSha256": "9cb5066c1cf36c09a08a68596db9078f7914cd09fe5238ebf1460bbd4d2eb16b"
+    },
+    {
+      "revision": 5,
+      "filesChecked": 3,
+      "mismatches": [],
+      "manifestSha256": "5bd0e485acc28de93b2de323e8c5c3c32320698a721689f57eb0dfff077152f6"
+    }
+  ],
+  "records": [
+    {
+      "recordId": "DELTA6-ROLLA",
+      "name": "A Field of Screams / Timmy’s Terror, Rolla",
+      "researchQuality": "PASS at stated limits after author R2–R5 corrections",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS approximate operator address-bound point",
+      "runtimePlacementEligibility": true,
+      "runtimeImplementationVerdict": "HOLD / no implementation or exact-candidate runtime validation",
+      "adjudication": "PASS for October 10, 2026 only. Independent public Facebook origin HTML metadata explicitly names Timmy's Terror and the date; full event body remains unavailable. Operator HTML independently reproduced name, street address, exact approximate geo and descriptive hours. Undated October 2–31 season is not expanded.",
+      "fieldReview": {
+        "identity": {
+          "value": "Timmy's Terror — A Field of Screams",
+          "qualification": null,
+          "sourceUrls": [
+            "https://hauntedhouserolla.com/"
+          ]
+        },
+        "visitorAddress": {
+          "value": "18255 U.S. 63, Rolla, MO 65401",
+          "qualification": null,
+          "sourceUrls": [
+            "https://hauntedhouserolla.com/"
+          ]
+        },
+        "operation2026": {
+          "value": "Explicit October 10, 2026 event by Timmy's Terror",
+          "qualification": "Direct public Facebook HTML meta description; full event body not exposed. Never extrapolated to every October weekend.",
+          "sourceUrls": [
+            "https://www.facebook.com/events/rolla-mo-united-states-missouri/timmys-terror-haunted-trail/1545245127374595/"
+          ]
+        },
+        "exactActiveDates": {
+          "value": [
+            "2026-10-10"
+          ],
+          "qualification": null,
+          "sourceUrls": [
+            "https://www.facebook.com/events/rolla-mo-united-states-missouri/timmys-terror-haunted-trail/1545245127374595/"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "partial",
+            "text": "Operator lists Friday/Saturday 7:30–11 p.m.; confirm before travel."
+          },
+          "qualification": "Schema.org LocalBusiness hours are undated; retained qualified, no machine interval.",
+          "sourceUrls": [
+            "https://hauntedhouserolla.com/"
+          ]
+        },
+        "admission": {
+          "value": null,
+          "qualification": "Ticket catalog extraction empty. No current exact price accepted.",
+          "sourceUrls": [
+            "https://timmysterror.square.site/s/shop"
+          ]
+        },
+        "expiry": {
+          "value": "2026-10-11T00:00:00-05:00",
+          "qualification": "Date-only visibility expiry after the sole accepted date, not a claim of admission until midnight.",
+          "sourceUrls": [
+            "https://www.facebook.com/events/rolla-mo-united-states-missouri/timmys-terror-haunted-trail/1545245127374595/"
+          ]
+        }
+      },
+      "placement": {
+        "latitude": 37.83109779999999,
+        "longitude": -91.8062448,
+        "method": "operator LocalBusiness address-bound geo marker",
+        "precision": "approximate venue/address point only",
+        "source": {
+          "value": "18255 US 63, Rolla MO65401",
+          "sources": [
+            {
+              "id": "rolla",
+              "url": "https://hauntedhouserolla.com/",
+              "retrievedAt": "2026-10-10T09:15:12.839906+00:00",
+              "rawFile": "phase4-missouri/delta/raw/rolla.html",
+              "sha256": "0365c0d03c97c659441dc68771217512c46da88e1b06d0344a2102d19d4ff4dc"
+            }
+          ]
+        },
+        "directionsMode": "address",
+        "verifiedEntrance": false,
+        "verifiedRideshareDropoff": false
+      },
+      "acceptedConsumerProjection": {
+        "name": "Timmy's Terror — A Field of Screams",
+        "category": "Haunted House",
+        "address": "18255 U.S. 63, Rolla, MO 65401",
+        "website": "https://hauntedhouserolla.com/",
+        "seasonYear": 2026,
+        "exactActiveDates": [
+          "2026-10-10"
+        ],
+        "listingExpiresAt": "2026-10-11T00:00:00-05:00",
+        "expiryKind": "last-supported-date visibility cutoff",
+        "hoursState": "partial",
+        "hoursText": "Operator lists Friday/Saturday 7:30–11 p.m.; confirm tonight’s hours before travel.",
+        "admission": null,
+        "details": [
+          "Only the October 10, 2026 event is verified here; later October nights are not included.",
+          "Outdoor haunted trail. Check operator updates and weather before traveling.",
+          "Approximate location; directions use the listed street address."
+        ],
+        "openNowPolicy": "never",
+        "machineOpeningIntervals": null
+      },
+      "acceptedDates": [
+        "2026-10-10"
+      ],
+      "acceptedExpiry": "2026-10-11T00:00:00-05:00",
+      "dedupe": "Existing research ledger identity, not net-new discovery. No overlap with current 52 live record IDs. Preserve named venue and address distinctions.",
+      "runtimeConstraints": [
+        "Never Open Now; machine intervals null",
+        "Approximate reviewed point for map/distance only; supported visitor street address for Directions",
+        "No 2027 recurrence or saved/cache revival",
+        "Expiry must update without RPC completion; exact cutoff +/-1ms testing required",
+        "October 10-only record becomes EXPIRED at 2026-10-11T05:00:00Z; do not count or import after cutoff; later October nights unaccepted"
+      ],
+      "releaseApproved": false
+    },
+    {
+      "recordId": "DELTA6-BRANSON-FIELD",
+      "name": "Field of Screams Branson",
+      "researchQuality": "PASS at stated limits after author R2–R5 corrections",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / no independently cleared approximate point",
+      "runtimePlacementEligibility": false,
+      "runtimeImplementationVerdict": "HOLD / no implementation or exact-candidate runtime validation",
+      "adjudication": "HOLD for complete current-season factual clearance. Operator address, 22 day/month dates and four November crossover nights independently reproduced from byte-identical HTML. Explicit 2026 year binding remains a research indexed-DMO claim; the decisive events-branson route was in a canceled network batch and independent reopen is paused awaiting permission. This is a verification/access HOLD, not rejection of the submitted year evidence or a claim of closure. Placement also null.",
+      "fieldReview": {
+        "visitorAddress": {
+          "value": "1000 Pat Nash Drive, Branson, MO 65616",
+          "qualification": null,
+          "sourceUrls": [
+            "https://www.fieldofscreamsbranson.com/home-1"
+          ]
+        },
+        "exactActiveDates": {
+          "value": [
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-08",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-11",
+            "2026-10-15",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-18",
+            "2026-10-22",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-25",
+            "2026-10-29",
+            "2026-10-30",
+            "2026-10-31",
+            "2026-11-06",
+            "2026-11-07",
+            "2026-11-13",
+            "2026-11-14"
+          ],
+          "qualification": "Direct operator dates plus indexed official DMO year-binding, saved raw/search5.json and search3-open3.json. November is explicitly Halloween/Christmas crossover; not Nixa.",
+          "sourceUrls": [
+            "https://www.fieldofscreamsbranson.com/home-1"
+          ]
+        },
+        "operation2026": {
+          "value": "Official Branson CVB indexed entry explicitly names Field of Screams Branson Oct4,2026–Nov14,2026 at Ballparks of America",
+          "qualification": "Search-indexed official source, not direct readable event detail; direct HTML has generic navigation. Operator exact list controls dates, DMO entry supplies 2026 binding only. Independent acceptance required.",
+          "sourceUrls": [
+            "https://www.explorebranson.com/events-branson/"
+          ]
+        },
+        "hours": {
+          "value": {
+            "state": "partial",
+            "text": "Box office6 p.m.; Thursday/Sunday7–11 p.m.; Friday/Saturday7 p.m.–midnight."
+          },
+          "qualification": "Not treated as machine intervals. November crossover hours not separately confirmed.",
+          "sourceUrls": [
+            "https://www.fieldofscreamsbranson.com/home-1"
+          ]
+        },
+        "admission": {
+          "value": null,
+          "qualification": "No readable price or ticket inventory; Get Tickets extraction alone is not availability.",
+          "sourceUrls": [
+            "https://www.fieldofscreamsbranson.com/home-1"
+          ]
+        },
+        "expiry": {
+          "value": "2026-11-15T00:00:00-06:00",
+          "qualification": "Last listed crossover date November14, explicit known end; never rolls into2027.",
+          "sourceUrls": [
+            "https://www.fieldofscreamsbranson.com/home-1"
+          ]
+        }
+      },
+      "placement": null,
+      "acceptedConsumerProjection": null,
+      "acceptedDates": null,
+      "acceptedExpiry": null,
+      "dedupe": "Existing research ledger identity, not net-new discovery. No overlap with current 52 live record IDs. Preserve named venue and address distinctions.",
+      "runtimeConstraints": [
+        "Never Open Now; machine intervals null",
+        "Approximate reviewed point for map/distance only; supported visitor street address for Directions",
+        "No 2027 recurrence or saved/cache revival",
+        "Expiry must update without RPC completion; exact cutoff +/-1ms testing required"
+      ],
+      "releaseApproved": false
+    },
+    {
+      "recordId": "DELTA3-FEARSTONE",
+      "name": "Fearstone Forest Haunted Trail",
+      "researchQuality": "PASS at stated limits after author R2–R5 corrections",
+      "factualVerdict": "PASS",
+      "placementVerdict": "HOLD / no independently cleared approximate point",
+      "runtimePlacementEligibility": false,
+      "runtimeImplementationVerdict": "HOLD / no implementation or exact-candidate runtime validation",
+      "adjudication": "PASS for nine haunted-trail dates through October 30. Independently reproduced operator countdown target-date 2026-10-02, same-page visitor address and byte-identical calendar/highlighted-date images. Visual review confirms marked 2/3,9/10,16/17,23/24,30/31; October 31 is separately Kids Night and conservatively omitted. October 17 requires ages 18+ and valid ID; waiver retained. Countdown target-time is not operating hours. Organizer address and coordinates are not visitor destination.",
+      "fieldReview": {
+        "visitorAddress": {
+          "value": "85 Benne Blvd, Camdenton, MO 65020",
+          "qualification": "Explicit attraction address in operator waiver and og:description. Organizer 837 N Highway5 is not the destination; prior shorthand Eldon is rejected.",
+          "sourceUrls": [
+            "https://www.fearstoneforest.com/"
+          ]
+        },
+        "operation2026": {
+          "value": "Opening-night countdown target-date=2026-10-02; end-text=OPEN FRIDAY AND SATURDAY NIGHT",
+          "qualification": "Attraction-specific embedded countdown immediately beside current calendar, not copyright/sponsor filename. target-time 05:00 is not an opening hour.",
+          "sourceUrls": [
+            "https://www.fearstoneforest.com/"
+          ]
+        },
+        "exactActiveDates": {
+          "value": [
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30"
+          ],
+          "qualification": "Calendar image visually inspected; weekdays match 2026. October31 Kids Night is a separate no-scare program and omitted from haunted-trail dates.",
+          "sourceUrls": [
+            "https://www.fearstoneforest.com/",
+            "https://static.wixstatic.com/media/318a35_8acb0514c7314bf3bb0a907ae7c50e85~mv2.png/v1/fill/w_973,h_782,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/FEARSTONE%20FOREST%20HAUNTED%20ATTRACTION%20CALENDER.png"
+          ]
+        },
+        "restrictions": {
+          "value": [
+            "October17 Adult Night is ages18+ with valid ID.",
+            "Waiver applies; adult night includes gore and adult language.",
+            "October31 is separate Kids Night, 4–6 p.m.; not imported as haunted trail."
+          ],
+          "qualification": null,
+          "sourceUrls": [
+            "https://static.wixstatic.com/media/318a35_60fd8cc64d73405f8907efe7d70f1469~mv2.png/v1/crop/x_2,y_0,w_2046,h_1554/fill/w_974,h_740,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/FEARSTONE%20HIGHLITED%20DATES.png",
+            "https://www.fearstoneforest.com/copy-of-kids-night",
+            "https://static.wixstatic.com/media/318a35_61d6c85674354254a993e49fdcbe1278~mv2.jpg/v1/fill/w_256,h_351,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/fearstone%20kids%20night%202026%20copy.jpg",
+            "https://www.fearstoneforest.com/"
+          ]
+        },
+        "admission": {
+          "value": {
+            "general": 25,
+            "fastPass": 40,
+            "escapeRoomAddon": 5,
+            "currency": "USD",
+            "purchase": "at gate",
+            "feesTaxes": "unknown"
+          },
+          "qualification": "Current operator price artwork; special-event charges can differ. October31 kids pricing not mixed with haunted trail.",
+          "sourceUrls": [
+            "https://static.wixstatic.com/media/318a35_69d5964257e14a42b375457d8daa2253~mv2.png/v1/crop/x_0,y_20,w_1402,h_1102/fill/w_965,h_758,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/HAUNTED%20HOUSE%20PRICES.png"
+          ]
+        },
+        "hours": {
+          "value": null,
+          "qualification": "Haunt opening/closing hours not recovered; countdown target-time is not interpreted as event hours.",
+          "sourceUrls": [
+            "https://www.fearstoneforest.com/"
+          ]
+        },
+        "expiry": {
+          "value": "2026-10-31T00:00:00-05:00",
+          "qualification": "Date-only end after last included haunted date October30; does not claim hours or cancel the distinct October31 kids program.",
+          "sourceUrls": [
+            "https://static.wixstatic.com/media/318a35_8acb0514c7314bf3bb0a907ae7c50e85~mv2.png/v1/fill/w_973,h_782,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/FEARSTONE%20FOREST%20HAUNTED%20ATTRACTION%20CALENDER.png"
+          ]
+        }
+      },
+      "placement": null,
+      "acceptedConsumerProjection": {
+        "name": "Fearstone Forest Haunted Trail",
+        "category": "Haunted House",
+        "address": "85 Benne Blvd, Camdenton, MO 65020",
+        "website": "https://www.fearstoneforest.com/",
+        "seasonYear": 2026,
+        "exactActiveDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30"
+        ],
+        "listingExpiresAt": "2026-10-31T00:00:00-05:00",
+        "expiryKind": "last-supported-date visibility cutoff",
+        "hoursState": "unknown",
+        "hoursText": null,
+        "admission": null,
+        "details": [
+          "October 17 is adults 18+ only with valid ID. A waiver is required.",
+          "Outdoor haunted trail; check weather and current operator hours before travel.",
+          "Separate no-scare Kids Night October 31, 4–6 p.m., is not included in this haunted-trail schedule.",
+          "Directions use 85 Benne Blvd, not the organizer’s Highway 5 address."
+        ],
+        "openNowPolicy": "never",
+        "machineOpeningIntervals": null
+      },
+      "acceptedDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30"
+      ],
+      "acceptedExpiry": "2026-10-31T00:00:00-05:00",
+      "dedupe": "Existing research ledger identity, not net-new discovery. No overlap with current 52 live record IDs. Preserve named venue and address distinctions.",
+      "runtimeConstraints": [
+        "Never Open Now; machine intervals null",
+        "Approximate reviewed point for map/distance only; supported visitor street address for Directions",
+        "No 2027 recurrence or saved/cache revival",
+        "Expiry must update without RPC completion; exact cutoff +/-1ms testing required",
+        "October 17 adult-only/ID restriction must remain visible; October 31 Kids Night excluded; no ordinary haunt selection that date"
+      ],
+      "releaseApproved": false
+    },
+    {
+      "recordId": "DELTA3-FUN-TIME",
+      "name": "Fun Time Farms Haunted Corn MAiZE",
+      "researchQuality": "PASS at stated limits after author R2–R5 corrections",
+      "factualVerdict": "PASS",
+      "placementVerdict": "HOLD / no independently cleared approximate point",
+      "runtimePlacementEligibility": false,
+      "runtimeImplementationVerdict": "HOLD / no implementation or exact-candidate runtime validation",
+      "adjudication": "PASS at limited current-season scope. Independent origin metadata reproduces operator invitation and price-list announcement for 2026. Exact haunt subtype dates, hours and operator season end remain unknown. Actual 17 secondary general-farm calendar dates retained as field evidence, not promoted to confirmed haunted-maze nights. Editorial November 1 cutoff is supported policy for established 2026 operation, not a claimed business end.",
+      "fieldReview": {
+        "operation2026": {
+          "value": "Official operator advertises upcoming opening and updated price list for the 2026 season",
+          "qualification": "Public HTML metadata preserves exact operator text. Posting timestamp/opening day not recovered; no exact dates inferred.",
+          "sourceUrls": [
+            "https://www.facebook.com/FunTimeFarms/posts/we-are-one-month-out-from-our-opening-day-heres-our-updated-price-list-for-the-2/1544670360793681/"
+          ]
+        },
+        "visitorAddress": {
+          "value": "11050 NE 201 Road, Lowry City, MO 64763",
+          "qualification": "Secondary public visitor-address evidence; Box332 is not a navigation address.",
+          "sourceUrls": [
+            "https://www.missourihauntedhouses.com/halloween/fun-time-farms-mo.html"
+          ]
+        },
+        "activity": {
+          "value": [
+            "Corn Maze",
+            "Haunted Corn Maze"
+          ],
+          "qualification": "Directory describes haunted maze Friday/Saturday after dark and no haunted maze on Sundays. This subtype pattern is retained as qualified secondary research only, not a verified2026 consumer schedule; operator Corn MAiZE identity supports activity-level attribution.",
+          "sourceUrls": [
+            "https://www.missourihauntedhouses.com/halloween/fun-time-farms-mo.html"
+          ]
+        },
+        "dates": {
+          "value": null,
+          "qualification": "Directory has17 actual active-date cells under2026 headers, endingOctober31. Retained as current secondary general farm schedule; exact attraction-specific haunted/daytime dates and operator-confirmed final date remain unknown. Proposed projection stays conservative.",
+          "sourceUrls": [
+            "https://www.facebook.com/FunTimeFarms/posts/we-are-one-month-out-from-our-opening-day-heres-our-updated-price-list-for-the-2/1544670360793681/",
+            "https://www.missourihauntedhouses.com/halloween/fun-time-farms-mo.html"
+          ]
+        },
+        "admission": {
+          "value": {
+            "age4Plus": 15,
+            "age3AndUnder": 0,
+            "sundays": 8,
+            "zombieShootout100Paintballs": 10,
+            "currency": "USD"
+          },
+          "qualification": "2026 operator image overrides conflicting stale directory Sunday$7 text; no taxes/fees guarantee.",
+          "sourceUrls": [
+            "https://www.facebook.com/FunTimeFarms/posts/we-are-one-month-out-from-our-opening-day-heres-our-updated-price-list-for-the-2/1544670360793681/",
+            "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/787406069_1544669674127083_3017437724877782161_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1536x2048&ctp=p600x600&_nc_cat=101&ccb=1-7&_nc_sid=b96d88&_nc_ohc=bvN1RiBFqAkQ7kNvwFG81sL&_nc_oc=Adpo9im8fnMffHZljpkSsD8xUqZ7iOac5gSp6hqX06-s8tebjmkuotThTRcq45MwguucXsqn3ywlARnZ3UFiOxtV&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=-QvIk3G6XXiUNGRC3Wjkeg&_nc_ss=7920f&oh=00_AQOuZ5w8a1z9GPWbDg1TOQIrEIEdRFbrnx6wH9MckW-VVw&oe=6ACFD5E1"
+          ]
+        },
+        "expiry": {
+          "value": {
+            "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+            "kind": "editorial",
+            "operatorSeasonEnd": null
+          },
+          "qualification": "Authorized conservative current-season visibility cutoff, not an asserted operating date or an exact closing date.",
+          "sourceUrls": [
+            "https://www.facebook.com/FunTimeFarms/posts/we-are-one-month-out-from-our-opening-day-heres-our-updated-price-list-for-the-2/1544670360793681/"
+          ]
+        },
+        "secondaryGeneralFarmActiveDates": {
+          "value": [
+            "2026-09-25",
+            "2026-09-26",
+            "2026-09-27",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-11",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-18",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-25",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "qualification": "Raw HTML calendar td.active-day cells under September/October2026 headers, not merely an empty current-year wrapper. These bind the directory general farm schedule; haunted-vs-daytime subtype dates are not independently operator confirmed.",
+          "sourceUrls": [
+            "https://www.missourihauntedhouses.com/halloween/fun-time-farms-mo.html"
+          ]
+        }
+      },
+      "placement": null,
+      "acceptedConsumerProjection": {
+        "name": "Fun Time Farms Corn MAiZE",
+        "categories": [
+          "Corn Maze",
+          "Haunted House"
+        ],
+        "address": "11050 NE 201 Road, Lowry City, MO 64763",
+        "website": "https://www.facebook.com/FunTimeFarms/posts/we-are-one-month-out-from-our-opening-day-heres-our-updated-price-list-for-the-2/1544670360793681/",
+        "seasonYear": 2026,
+        "exactActiveDates": null,
+        "operatorSeasonStart": null,
+        "operatorSeasonEnd": null,
+        "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+        "expiryKind": "editorial visibility cutoff, not operating dates",
+        "hoursState": "unknown",
+        "hoursText": null,
+        "admission": null,
+        "details": [
+          "2026 season advertised by the operator; exact dates and hours are unverified. Check current updates before travel.",
+          "Directions use the listed visitor address."
+        ],
+        "openNowPolicy": "never",
+        "machineOpeningIntervals": null
+      },
+      "acceptedDates": null,
+      "acceptedExpiry": "2026-11-01T00:00:00-05:00",
+      "dedupe": "Existing research ledger identity, not net-new discovery. No overlap with current 52 live record IDs. Preserve named venue and address distinctions.",
+      "runtimeConstraints": [
+        "Never Open Now; machine intervals null",
+        "Approximate reviewed point for map/distance only; supported visitor street address for Directions",
+        "No 2027 recurrence or saved/cache revival",
+        "Expiry must update without RPC completion; exact cutoff +/-1ms testing required",
+        "Editorial cutoff is not an operating date; subtype availability remains unknown"
+      ],
+      "releaseApproved": false
+    },
+    {
+      "recordId": "DELTA3-TERRIFIEDEXIST",
+      "name": "TerrifiedExist Haunted Attractions",
+      "researchQuality": "PASS at stated limits after author R2–R5 corrections",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / no independently cleared approximate point",
+      "runtimePlacementEligibility": false,
+      "runtimeImplementationVerdict": "HOLD / no implementation or exact-candidate runtime validation",
+      "adjudication": "HOLD. Current visitor operation remains unproven; hiring is not visitor operation. Own official homepage open unavailable. Exact canceled Ticketleap request not retried. Missing dates/expiry not repaired by generic hours or page freshness metadata.",
+      "fieldReview": {
+        "operation2026": {
+          "value": null,
+          "qualification": "Direct operator fetch502; earlier hiring event and evergreen directory hours cannot establish visitor dates. No closure inferred.",
+          "sourceUrls": [
+            "https://terrifiedexist.com/"
+          ]
+        }
+      },
+      "placement": null,
+      "acceptedConsumerProjection": null,
+      "acceptedDates": null,
+      "acceptedExpiry": null,
+      "dedupe": "Existing research ledger identity, not net-new discovery. No overlap with current 52 live record IDs. Preserve named venue and address distinctions.",
+      "runtimeConstraints": [
+        "Never Open Now; machine intervals null",
+        "Approximate reviewed point for map/distance only; supported visitor street address for Directions",
+        "No 2027 recurrence or saved/cache revival",
+        "Expiry must update without RPC completion; exact cutoff +/-1ms testing required"
+      ],
+      "releaseApproved": false
+    },
+    {
+      "recordId": "MO26-088",
+      "name": "Lemp Brewery Haunted House",
+      "researchQuality": "PASS at stated limits after author R2–R5 corrections",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / no independently cleared approximate point",
+      "runtimePlacementEligibility": false,
+      "runtimeImplementationVerdict": "HOLD / no implementation or exact-candidate runtime validation",
+      "adjudication": "HOLD. Independent first-party page reproduces contradictory may-or-may-not-open 2026 and back-in-2026 marketing. No decisive Lemp-specific calendar/ticket binding. Darkness/Creepyworld schedules cannot supply Lemp dates; no closure asserted.",
+      "fieldReview": {
+        "operation2026": {
+          "value": null,
+          "qualification": "Operator still says may/may-not open in2026 alongside back2026 marketing. Shared ticket page does not establish Lemp-specific dates.",
+          "sourceUrls": [
+            "https://www.lemphauntedhouse.com/whats-new-lemp-haunted-house",
+            "https://www.lemphauntedhouse.com/illinois-haunted-house-lemp-brewery-operation-dates",
+            "https://scarefest.fearticket.com/"
+          ]
+        },
+        "visitorAddress": {
+          "value": "3500 Lemp Avenue, St. Louis, MO63118",
+          "qualification": "Retained existing identity; no new precision claim.",
+          "sourceUrls": [
+            "https://www.lemphauntedhouse.com/whats-new-lemp-haunted-house"
+          ]
+        }
+      },
+      "placement": null,
+      "acceptedConsumerProjection": null,
+      "acceptedDates": null,
+      "acceptedExpiry": null,
+      "dedupe": "Existing research ledger identity, not net-new discovery. No overlap with current 52 live record IDs. Preserve named venue and address distinctions.",
+      "runtimeConstraints": [
+        "Never Open Now; machine intervals null",
+        "Approximate reviewed point for map/distance only; supported visitor street address for Directions",
+        "No 2027 recurrence or saved/cache revival",
+        "Expiry must update without RPC completion; exact cutoff +/-1ms testing required"
+      ],
+      "releaseApproved": false
+    },
+    {
+      "recordId": "DELTA6-BOSS",
+      "name": "BOSS Haunted House, Fort Leonard Wood",
+      "researchQuality": "PASS at stated limits after author R2–R5 corrections",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / no independently cleared approximate point",
+      "runtimePlacementEligibility": false,
+      "runtimeImplementationVerdict": "HOLD / no implementation or exact-candidate runtime validation",
+      "adjudication": "HOLD for general-public eligibility/access. Retained official Army MWR Harvest Fest source expressly advertises October 24, 2026 BOSS Haunted House admission, so prior operation gap is materially improved. Independent official base-access read requires screening/pass for noncredentialed visitors and event-coordinator-specific procedures. No supported event access route for ordinary users; no runtime destination proposed. Harvest Fest hours are not separately proved haunt hours.",
+      "fieldReview": {
+        "operation2026": {
+          "value": "BOSS Haunted House at Harvest Fest, October24,2026",
+          "qualification": "Visitor-facing scope corroborated by paid HarvestFest+HauntedHouse admission; construction contest alone not used.",
+          "sourceUrls": [
+            "https://leonardwood.armymwr.com/calendar/event/boss-haunted-house-contest/7448156/114097",
+            "https://leonardwood.armymwr.com/calendar/event/harvest-fest/7461823/114564"
+          ]
+        },
+        "visitorAddress": {
+          "value": "Piney Valley Golf Course, 18694 FLW20, BLDG10221, Fort Leonard Wood, MO65473",
+          "qualification": "Event facility, not a verified haunt entrance or public base-access route.",
+          "sourceUrls": [
+            "https://leonardwood.armymwr.com/calendar/event/harvest-fest/7461823/114564"
+          ]
+        },
+        "schedule": {
+          "value": {
+            "date": "2026-10-24",
+            "harvestFest": "15:30–21:00",
+            "bossContest": "18:00",
+            "hauntHours": null
+          },
+          "qualification": null,
+          "sourceUrls": [
+            "https://leonardwood.armymwr.com/calendar/event/harvest-fest/7461823/114564",
+            "https://leonardwood.armymwr.com/calendar/event/boss-haunted-house-contest/7448156/114097"
+          ]
+        },
+        "admission": {
+          "value": {
+            "harvestPlusHauntIndividual": 10,
+            "harvestPlusHauntFamily": 25,
+            "familyMaxMembers": 6,
+            "currency": "USD"
+          },
+          "qualification": null,
+          "sourceUrls": [
+            "https://leonardwood.armymwr.com/calendar/event/harvest-fest/7461823/114564"
+          ]
+        },
+        "baseAccess": {
+          "value": "Restricted military installation. Noncredentialed adults require valid reason, screening and pass; event-specific access must be confirmed with event coordinator.",
+          "qualification": "Official indexed access rules. No general-public invitation/access exception established.",
+          "sourceUrls": [
+            "https://home.army.mil/wood/Garrison/DES/physical-security/access-control"
+          ]
+        }
+      },
+      "placement": null,
+      "acceptedConsumerProjection": null,
+      "acceptedDates": null,
+      "acceptedExpiry": null,
+      "dedupe": "Existing research ledger identity, not net-new discovery. No overlap with current 52 live record IDs. Preserve named venue and address distinctions.",
+      "runtimeConstraints": [
+        "Never Open Now; machine intervals null",
+        "Approximate reviewed point for map/distance only; supported visitor street address for Directions",
+        "No 2027 recurrence or saved/cache revival",
+        "Expiry must update without RPC completion; exact cutoff +/-1ms testing required"
+      ],
+      "releaseApproved": false
+    },
+    {
+      "recordId": "DELTA2-MACABRE",
+      "name": "Macabre Cinema",
+      "researchQuality": "PASS at stated limits after author R2–R5 corrections",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / no independently cleared approximate point",
+      "runtimePlacementEligibility": false,
+      "runtimeImplementationVerdict": "HOLD / no implementation or exact-candidate runtime validation",
+      "adjudication": "HOLD. Independent Visit KC page explicitly describes redevelopment and departure from full-season operation, with possible specials unannounced. Wrapper daily dates are not a public invitation. Do not import calendar wrapper or infer closure forever.",
+      "fieldReview": {
+        "operation2026": {
+          "value": null,
+          "qualification": "DMO explains redevelopment and departure from traditional full season; possible specials remain unannounced. Daily calendar wrapper is not dated visitor operation.",
+          "sourceUrls": [
+            "https://www.visitkc.com/events/macabre-cinema-haunted-attraction-2026-update/"
+          ]
+        }
+      },
+      "placement": null,
+      "acceptedConsumerProjection": null,
+      "acceptedDates": null,
+      "acceptedExpiry": null,
+      "dedupe": "Existing research ledger identity, not net-new discovery. No overlap with current 52 live record IDs. Preserve named venue and address distinctions.",
+      "runtimeConstraints": [
+        "Never Open Now; machine intervals null",
+        "Approximate reviewed point for map/distance only; supported visitor street address for Directions",
+        "No 2027 recurrence or saved/cache revival",
+        "Expiry must update without RPC completion; exact cutoff +/-1ms testing required"
+      ],
+      "releaseApproved": false
+    }
+  ],
+  "counts": {
+    "factualPass": 3,
+    "factualHold": 5,
+    "runtimePlacementEligible": 1,
+    "runtimeImports": 0,
+    "expiredAtReview": 0,
+    "rejected": 0,
+    "netNewDiscovery": 0
+  },
+  "closedAuthorFindings": [
+    {
+      "id": "D-IV01",
+      "finding": "Routine Fearstone/Fun Time consumer admission pricing",
+      "resolution": "R2 sets consumer admission null; research/source evidence retained"
+    },
+    {
+      "id": "D-IV02",
+      "finding": "Fun Time calendar actual marked date cells omitted from provenance",
+      "resolution": "R3 preserves actual general-farm date array; R4 corrects count to17"
+    },
+    {
+      "id": "D-IV03",
+      "finding": "Fun Time unbound weekly haunted-maze pattern appeared in consumer Details",
+      "resolution": "R5 removes consumer sentence and retains qualified research evidence"
+    }
+  ],
+  "independentEvidence": [
+    "evidence/rolla-independent.html",
+    "evidence/rolla-event-independent.html",
+    "evidence/fearstone-independent.html",
+    "evidence/fearstone-img-5-independent.img",
+    "evidence/fearstone-img-6-independent.img",
+    "evidence/fearstone-img-7-independent.img",
+    "evidence/fun-time-independent.html",
+    "evidence/branson-independent.html",
+    "evidence/delta-official-web.json",
+    "evidence/fearstone-calendar-web.json",
+    "evidence/delta-holds-web.json",
+    "evidence/boss-base-access-web.json"
+  ],
+  "sourceLimits": [
+    "Direct public metadata is accepted only for the actual fields it exposes, not a full event-content claim.",
+    "Web-image retrieval errors retained; separate origin image re-fetch succeeded byte-identically and reviewer visually inspected the source images.",
+    "Branson decisive DMO year-binding reopen and three geocode routes remain permission-paused; no alternate route used to bypass the canceled requests.",
+    "No source-updated label promoted to all-fields verification; no generic recurrence, expiration or closure inference.",
+    "Source inventories retain raw bytes from R1, including unsuccessful captures. No candidate or raw source file modified by this reviewer."
+  ],
+  "scope": "Independent data verdict only. Main-based later candidate must exclude c78 and experimental adaptive D. No import/merge/deploy/paid API/operator contact/Overpass or residential-policy change.",
+  "pending": "Branson independent year-binding read and three placements can resume only with exact permission evidence; Carolyn/Terror placement sibling retention remains separate and unapproved."
+}

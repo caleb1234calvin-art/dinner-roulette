@@ -1,0 +1,184 @@
+{
+  "package": "PHASE4-INDEPENDENT-17-RECORD-SUMMARY-R1",
+  "frozenAt": "2026-10-10T09:28:33.719209+00:00",
+  "scope": "Bounded17 submitted records only. No extra quota search or statewide restart. Research quality, complete factual clearance and runtime placement eligibility remain separate.",
+  "counts": {
+    "reviewedRecords": 17,
+    "factualPass": 5,
+    "completeFreshClearanceHold": 12,
+    "factualPassButAddressOnlyStaged": 2,
+    "runtimePlacementCleared": 3,
+    "runtimeImported": 0,
+    "expiredAtReview": 0,
+    "rejected": 0,
+    "runtimePotentialNewIdentities": 2,
+    "runtimeExistingIdentityAmendments": 1,
+    "newDiscoveries": 0
+  },
+  "eligibleIds": [
+    "MO26-006",
+    "MO26-004",
+    "DELTA6-ROLLA"
+  ],
+  "addressOnlyFactualPassIds": [
+    "DELTA3-FEARSTONE",
+    "DELTA3-FUN-TIME"
+  ],
+  "reports": {
+    "Cadaver-Independent-Verdict-R1.json": "6101c8eaf67aab3ef003e91732c034b62c4bfe931b54bc603828559fbdabafa3",
+    "Commercial-Six-Independent-Verdicts-R1.json": "0fd99a3f819d8ac6f0fb2685cccbe7d151691e18e3f0c0b66a33c60800cfc99f",
+    "Delta-Eight-Independent-Verdicts-R1.json": "717e98f4362a06dc17f4e2e05251f80b456a667dfdacc80a18b69bee9f98ff31"
+  },
+  "records": [
+    {
+      "recordId": "MO26-007",
+      "name": "The Cadaver Zone Spook House",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "blocker": "Reliable attraction-specific 2026 operation/date binding and supported expiry missing. Previously accepted address/approximate point retained. Same disputed extracted poster text did not resolve source-year reliability."
+    },
+    {
+      "recordId": "MO26-006",
+      "name": "Wolfmans House Of Screams",
+      "factualVerdict": "PASS",
+      "runtimePlacementEligibility": true,
+      "blocker": "No remaining factual/approximate-placement blocker. Independent exact-candidate runtime tests and owner-approved bounded candidate phase remain pending.",
+      "acceptedConsumerProjectionSha256": "7c2c243fe971c3319b745b5b21ace270a8845d1cb229a6eb0af7dd3c978421c8",
+      "projectionHashEncoding": "UTF-8 compact JSON, sorted keys, ensure_ascii=false",
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "dedupeAction": "Potential new curated runtime identity; existing research identity, not a new discovery"
+    },
+    {
+      "recordId": "MO26-004",
+      "name": "The Werehouse",
+      "factualVerdict": "PASS",
+      "runtimePlacementEligibility": true,
+      "blocker": "No remaining factual/approximate-placement blocker. Must amend existing date-night-werehouse-joplin, remove legacy machine-hour/Open Now confidence through all paths, and verify no duplicate. Candidate/runtime gates pending.",
+      "acceptedConsumerProjectionSha256": "d932d56d8cb9fd4c4a2559d8a7f93b35735ade53155edb5476f448202b330007",
+      "projectionHashEncoding": "UTF-8 compact JSON, sorted keys, ensure_ascii=false",
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "dedupeAction": "AMEND date-night-werehouse-joplin; never a new venue"
+    },
+    {
+      "recordId": "DELTA2-FEARFACTORY",
+      "name": "Fear Factory LLC",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "blocker": "Current official season evidence remains explicitly2025; reliable2026 operation/date binding and expiry missing. Secondary lifecycle conflict does not prove closure."
+    },
+    {
+      "recordId": "DELTA2-WACO",
+      "name": "Waco School House Haunt",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "blocker": "No accepted2026 invitation/date binding or expiry. Public visitor address retained; origin failures are not closure."
+    },
+    {
+      "recordId": "DELTA5-RISING-RECHECK",
+      "name": "Rising Haunted Attraction",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "blocker": "Explicit2026 directory calendar recovered, but conflicting current no-longer-operational/closing/reopening source statements lack reliable lifecycle resolution. No closure or expiration adjudicated."
+    },
+    {
+      "recordId": "DELTA2-TWISTED",
+      "name": "Twisted Minds Haunted House",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "blocker": "Undated Richwoods identity/address only; reliable2026 invitation, dates and lifecycle cutoff absent. California namesake excluded."
+    },
+    {
+      "recordId": "DELTA6-ROLLA",
+      "name": "A Field of Screams / Timmy’s Terror, Rolla",
+      "factualVerdict": "PASS",
+      "runtimePlacementEligibility": true,
+      "blocker": "No remaining factual/approximate-placement blocker for October10 only. Exact-candidate gates pending; becomes EXPIRED at2026-10-11T05:00:00Z. Do not import/count afterward.",
+      "acceptedConsumerProjectionSha256": "e06e8fb4dc125f053ed67cecfb6a70683fa89d3ebd38689ad12cb5cd7c4294eb",
+      "projectionHashEncoding": "UTF-8 compact JSON, sorted keys, ensure_ascii=false",
+      "listingExpiresAt": "2026-10-11T00:00:00-05:00",
+      "dedupeAction": "Potential new curated runtime identity; existing research identity, not a new discovery"
+    },
+    {
+      "recordId": "DELTA6-BRANSON-FIELD",
+      "name": "Field of Screams Branson",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "blocker": "Year/date binding independently incomplete: decisive official DMO events-branson route is permission-paused following canceled batch. Operator day/month list and address reproduced; approximate point also null and geocode permission-paused."
+    },
+    {
+      "recordId": "DELTA3-FEARSTONE",
+      "name": "Fearstone Forest Haunted Trail",
+      "factualVerdict": "PASS",
+      "runtimePlacementEligibility": false,
+      "blocker": "Facts clear, approximate point remains null. Exact requested Census operation was in canceled batch; owner permission required before resuming. Supported street address retained; no artificial entrance gate.",
+      "acceptedConsumerProjectionSha256": "d06275debfc6dfc57fea4fed36b7c597c15391c6bcacffa8642e132abe52476a",
+      "projectionHashEncoding": "UTF-8 compact JSON, sorted keys, ensure_ascii=false",
+      "listingExpiresAt": "2026-10-31T00:00:00-05:00"
+    },
+    {
+      "recordId": "DELTA3-FUN-TIME",
+      "name": "Fun Time Farms Haunted Corn MAiZE",
+      "factualVerdict": "PASS",
+      "runtimePlacementEligibility": false,
+      "blocker": "Current-season facts clear with editorial cutoff and unknown subtype dates/hours. Approximate point null; exact requested Census operation paused after canceled batch. Owner permission needed to resume.",
+      "acceptedConsumerProjectionSha256": "f012e9836971d8fbfb756d57ad924833e8247d47af788750413c2fda52f0551f",
+      "projectionHashEncoding": "UTF-8 compact JSON, sorted keys, ensure_ascii=false",
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00"
+    },
+    {
+      "recordId": "DELTA3-TERRIFIEDEXIST",
+      "name": "TerrifiedExist Haunted Attractions",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "blocker": "Visitor operation/date/expiry not established by hiring or evergreen content. Exact Ticketleap route permission-paused; no current public invitation accepted."
+    },
+    {
+      "recordId": "MO26-088",
+      "name": "Lemp Brewery Haunted House",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "blocker": "First-party may/may-not-open and2026-return claims conflict. No Lemp-specific current calendar/ticket binding; never borrow Darkness or Creepyworld schedule."
+    },
+    {
+      "recordId": "DELTA6-BOSS",
+      "name": "BOSS Haunted House, Fort Leonard Wood",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "blocker": "2026 event evidence recovered, but general-public eligibility and event-specific military base access process not established. No unrestricted route or eligible runtime point accepted."
+    },
+    {
+      "recordId": "DELTA2-MACABRE",
+      "name": "Macabre Cinema",
+      "factualVerdict": "HOLD",
+      "runtimePlacementEligibility": false,
+      "blocker": "DMO describes redevelopment and suspended traditional season. Specials not explicitly announced; calendar wrapper cannot establish operation. No blanket permanent-closure claim."
+    },
+    {
+      "recordId": "MO26-055",
+      "name": "Carolyn’s Pumpkin Patch",
+      "factualVerdict": "HOLD for fresh complete clearance; prior factual PASS retained",
+      "runtimePlacementEligibility": false,
+      "blocker": "New approximate-placement proposal exists only in researcher messages. Exact local evidence-retention write was denied twice and remains owner-permission pending. Do not reconstruct denied artifact through another path. No immutable retained source package or independent placement clearance.",
+      "scope": "Status-only blocker summary; does not reconstruct denied projection or capture artifacts."
+    },
+    {
+      "recordId": "DELTA2-TERROR66",
+      "name": "Terror on Route66",
+      "factualVerdict": "HOLD for fresh complete clearance; prior factual PASS retained",
+      "runtimePlacementEligibility": false,
+      "blocker": "New approximate-placement proposal exists only in researcher messages. Exact local evidence-retention write was denied twice and remains owner-permission pending. Do not reconstruct denied artifact through another path. No immutable retained source package or independent placement clearance. Consumer copy also requires authorized author revision to omit routine ticket/refund boilerplate while retaining age/ID/touch/waiver restrictions.",
+      "scope": "Status-only blocker summary; does not reconstruct denied projection or capture artifacts."
+    }
+  ],
+  "urgentLifecycle": "Rolla accepts only2026-10-10. Expires2026-10-11T00:00:00-05:00 =2026-10-11T05:00:00Z. Recheck wall clock before candidate publication; never import or count the expired record, infer later nights, or roll to2027.",
+  "decision": "Three runtime-placement-cleared records is below the stated five-record candidate threshold. No implementation proceeds unless owner decides otherwise. Pending owner permissions are genuine blockers; do not route around denials or invent additional research to meet quota.",
+  "candidateConstraints": [
+    "Future candidate must start from verified main fe22c15cc6442fc4a48fec23c9a1331c69d70bd2; exclude experimental c78 and adaptive D.",
+    "No merge/deploy/publication authorization follows from this data review.",
+    "Exact-head runtime and lifecycle tests still required, including saved/cache/provider aliases and expiry without RPC completion.",
+    "Never Open Now; machine intervals null; approximate points for map/distance, supported visitor addresses for Directions.",
+    "Unknown prices/hours or lack of entrance precision are not listing blockers.",
+    "No residential-display policy change or private access inference."
+  ],
+  "baseline": "Fresh main remote matchedfe22; productiondpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY mainfe22; canonical52record inventory retained. No runtime change."
+}

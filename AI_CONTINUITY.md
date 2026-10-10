@@ -1,3 +1,102 @@
+# Phase 4 Independent Review Complete — Research/Placement Decision HOLD (2026-10-10 17:00 UTC)
+
+## CURRENT — authoritative checkpoint
+
+This entry supersedes older CURRENT/NEXT statements below. The 17-record Phase 4 independent review is complete: **5 factual PASS, 12 fresh complete-clearance HOLD, 0 REJECT, 0 expired at the review cutoff**. Only **3 records have independently cleared factual and approximate-placement requirements**; 2 factual-PASS records remain address-only and staged outside radius-dependent selection. No implementation candidate, runtime import, release verification, merge or deployment occurred. Research quality and factual/placement clearance do not imply implementation or release PASS.
+
+The former nine-hour-old “other research active/unverified” language is historical. This checkpoint was delayed by a pending documentation operation; owner confirmed approval and standing continuity-update authority at 16:59 UTC. That authority covers ordinary deployment-safe continuity, not production, denied research captures, canceled external requests or a smaller implementation batch.
+
+### Reverified production and release objects
+
+Fresh 16:59–17:00 UTC remote reads:
+- Main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**.
+- Current Vercel project production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa**, **READY**, Git source **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**. **52 curated records remain live.**
+- Reported production aliases: pickforus.app; www.pickforus.app; dinner-roulette-chi.vercel.app; dinner-roulette-minions-9e2c.vercel.app; dinner-roulette-git-main-minions-9e2c.vercel.app. These are fresh deployment/project metadata reads, not a new browser smoke.
+- PR #61 remains draft/open/unmerged at **c78b97175cc094436e454fa888e1ed83486f750d**, tree **6f7130dc46e5decc9b045c2841b63c73406ae2ae**, sole parent **cd78a0d8b5efb7fee818da5b2ea79588e28c8270**.
+- Adaptive experimental branch `integration/date-night-adaptive-audit-2026-10-10` remains recorded at **d6d6f91b16aecd27773168c68d3c8ebdc33001c7**, tree **17f36a46f1d6894b6adf44edf7aefefc2b457cbb**, parent **bb3871f0b7b4fe6bd150ef8c2cb8272744c5eae3**. It is parked and must not enter a Missouri candidate.
+- Retained rollback history: **dpl_F1XiMcc9AUuykunNamr87R3re7gP** (979d83aede9d66163e1ebaed9ad5b219cb637882) and **dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv** (213502ef8cf3f67d75e6d9c9c8ff43f9f656890c). Rollback access was not re-exercised in this documentation task. Any future release requires fresh authorized rollback preflight.
+
+Documentation branch `integration/continuity-refresh-2026-10-07` has verified `vercel.json` integration/** deployment disabled. No configuration change accompanies this checkpoint.
+
+## PERFORMANCE — parked terminal MORE EVIDENCE REQUIRED
+
+**MORE EVIDENCE REQUIRED, provider-limited category B.** “Radial discovery becomes an audit layer.” remains the design intent, not an adopted production architecture.
+
+Historical c78 functional verification remains PASS (1,059 tests; 970 browser checks; 426 geometry comparisons; 14 negative controls; typecheck; baseline lint; safe migration-free build; reconstructed evidence). It does not transfer to adaptive D or establish adoption.
+
+Adaptive D retains 164 focused and 6 adversarial checks plus typecheck/lint PASS. Retained-payload replay preserved sampled identities and reduced Joplin audit intents 32→4; these are counterfactual request intents, not measured live savings. Later-patch-only venue and negative-evidence omissions remain disclosed. The live run **38039658685** stopped after **8 starts/8 settlements, 8 consecutive provider failures**, before the first case completed; 7 cases unrun, no audit requests, no usable-control timing or live recovery. No budget reset, reserve, follow-up or Phase 3 hardening is authorized by that outcome. Failed-primary warm radius refetch remains HOLD. Prior protocol failure and all incomplete benchmarks remain historical evidence.
+
+Independent terminal review SHA **62f8deec3362cf50d3ec7936b31f487b07f9e6f185eccd7c1ec1ec87b7c15e3d**; raw artifact **11665596173**, SHA **4dafb0293106d9e2b3355b406dbf6a56aec49c18a510418537a05be9177b674c**. Full earlier checkpoint below preserves ledger and remaining hashes.
+
+## MISSOURI — exact independent outcomes
+
+The immutable [17-record summary](audit/phase4-missouri-2026-10-10/Phase4-17-Record-Summary-R1.md) and [machine-readable ledger](audit/phase4-missouri-2026-10-10/Phase4-17-Record-Summary-R1.json) govern record-level findings.
+
+### Factual PASS with accepted approximate placement
+
+- **MO26-006 Wolfmans House Of Screams:** independently supported explicit 2026 date subset and address-derived approximate point; future bounded runtime candidate still unimplemented/unverified.
+- **MO26-004 The Werehouse:** existing **date-night-werehouse-joplin** identity amendment, NOT a new venue. Must remove legacy machine-hour/Open Now confidence across provider/cache/saved paths and test no duplicate. Approximate placement only.
+- **DELTA6-ROLLA Timmy’s Terror / A Field of Screams:** **October 10 only**. Exact cutoff **2026-10-11T05:00:00Z** (midnight CDT after October 10). Do not infer later recurrence, extend expiry or import/count this subset after cutoff. It is still before that cutoff at this checkpoint; no future-time clearance is implied.
+
+### Factual PASS, staged outside radius
+
+- **DELTA3-FEARSTONE Fearstone Forest:** supported visitor address, 2026 haunted-trail subset and material restrictions; approximate point null. October 31 separate Kids Night is not silently part of the haunt projection.
+- **DELTA3-FUN-TIME Fun Time Farms:** current season supported; unknown subtype dates/hours and explicitly editorial cutoff retained. Approximate point null.
+
+Supported address is enough for factual listing clearance under V1. These two are outside radius-dependent picking/ranking until reviewed placement or a separately implemented distance-unknown view exists. Exact entrance/parking precision, exact price and full hours are not listing prerequisites.
+
+### Twelve fresh complete-clearance HOLDs
+
+- **Cadaver Zone MO26-007:** reliable attraction-specific **2026 operation/date binding + supported expiry** remain absent. Prior identity, intentionally public visitor address and approximate placement retained. Repeated same-extractor poster text is not independent corroboration.
+- **Fear Factory:** official season evidence remains 2025; reliable 2026 operation/expiry absent; secondary lifecycle conflict unresolved.
+- **Waco:** no accepted 2026 invitation/date binding or expiry; transport failures are not closure.
+- **Rising:** explicit 2026 directory calendar recovered, but current closing/no-longer-operational/reopening conflict unresolved.
+- **Twisted Minds:** undated Richwoods identity/address only; 2026 invitation/date/expiry absent; California namesake excluded.
+- **Field of Screams Branson:** operator day/month dates and address reproduced, decisive official DMO year-binding verification permission-paused; approximate point null.
+- **TerrifiedExist:** hiring/evergreen material insufficient for visitor operation/date/expiry; exact Ticketleap route permission-paused.
+- **Lemp:** conflicting first-party may/may-not-open/2026 return assertions; no Lemp-specific date/ticket binding. Never borrow Darkness dates.
+- **BOSS Fort Leonard Wood:** 2026 event evidence recovered; general-public eligibility and event-specific military base access route unresolved.
+- **Macabre Cinema:** redevelopment/suspended traditional season; no dated special established. No permanent-closure claim.
+- **Carolyn’s Pumpkin Patch:** prior factual PASS retained, but new placement proposal is message-only; denied local retention operation not bypassed and no independent immutable placement clearance.
+- **Terror on Route 66:** same placement-retention blocker; routine refund/ticket boilerplate also needs author revision while preserving material age/ID/touch/waiver restrictions.
+
+There is no statewide-exhaustion claim. Residential/home-haunt lane remains separate.
+
+## Recoverable evidence / owner delivery
+
+Exact immutable files added alongside the existing Cadaver package:
+- Summary Markdown SHA **9726a82423e343a1e658f9e8df02d0170ca3097241b49e23817e2cc23b19fb25**.
+- Summary JSON SHA **95a851650d881d9c72da7bc6e4be04cb3bad63c3217653f152ed19a590ca60da**.
+- Commercial six independent verdict SHA **0fd99a3f819d8ac6f0fb2685cccbe7d151691e18e3f0c0b66a33c60800cfc99f**.
+- Delta eight independent verdict SHA **717e98f4362a06dc17f4e2e05251f80b456a667dfdacc80a18b69bee9f98ff31**.
+- Existing Cadaver independent verdict SHA **6101c8eaf67aab3ef003e91732c034b62c4bfe931b54bc603828559fbdabafa3**.
+- [Library delivery receipt](audit/phase4-missouri-2026-10-10/Library-Delivery-Receipt-R1.json), SHA **a171590b1176a04e20ddfafc235b5e68c8bab71384eba7ebded1bb751ded7319**.
+- Evidence ZIP **3,613,204 bytes**, SHA **a959dbd3e0071d2dc1bff5036f7cd8f32e6a5f210296fa0211ec5bb72418aa78**; 43 members (42 independent evidence files + manifest), hashes/sizes/CRCs verified. Denied placement captures are excluded, not reconstructed elsewhere.
+
+Six files were delivered to the owner at 11:38 UTC in message **Sentinel_1c7381a664d481918a876c9c7fcbb6ff**. Library IDs: summary MD **libfile_0514bd02f0a881918adb20c664f71046**; summary JSON **libfile_1a29a6b5b5d88191b546f0f8b0a09ab5**; Cadaver **libfile_9593208dcf5c8191bb6eb9d207840fe9**; commercial **libfile_a4f0a7d014908191b598ca20fca0b27b**; delta **libfile_deeda1fb91d88191ac8a4dc85477a532**; ZIP **libfile_3063758db9a48191bc821174f3266baa**. Delivery and research findings do not imply import approval.
+
+## NEXT / genuine owner decision gate
+
+**STOP after this documentation checkpoint and full readback. No implementation/discovery is resumed by this continuity operation.**
+
+Only 3 placement-eligible records (including one existing-identity amendment and one short-lived subset) are below the owner's stated 5–15-record implementation condition. Next productive action is resolving specific pending research permissions and obtaining immutable independent placement/year clearance; alternatively owner may explicitly authorize a smaller bounded candidate. Do not pad the batch or rush Rolla.
+
+Separate unresolved operations:
+1. Previously denied twice: save Carolyn/Terror public-source captures and corrected research JSON under `phase4-missouri/commercial-placement/placement/evidence`. No alternate-path reconstruction.
+2. Canceled network approval: exact official venue/tourism/ticketing and public Census address-lookup batch for Branson/Fearstone/Fun Time/TerrifiedExist (`phase4-missouri/delta/capture_final_official.py`). No assumed approval from the continuity-only permission. The separately denied StayHappening mirror is not part of that retry.
+
+The owner's 16:59 continuity approval resolves documentation authority only. No new factual evidence or research permission result is invented. Reverify time-sensitive fields before any future implementation.
+
+## HOLD / safety and release authority
+
+Performance adoption, runtime implementation/release, pending source/placement permissions, Cadaver and all other exact factual conflicts remain HOLD. Android physical/WebView/GPS remains HOLD; signing/Play out of scope. Six inherited lint warnings, inherited narrow Directions-label clipping, approximate placement, conservative Open Now, temporary Other icon and no live provider/weather/ticket guarantees remain.
+
+No merge, deployment, source/runtime/test changes, Vercel/protection changes, waiver, operator contact or paid API. Historical waivers remain consumed. Future implementation must be main-based and exclude experimental loader history. All earlier entries below are preserved as history.
+
+**PARENT CONTINUITY COMMIT:** `a66288eb1a9d2f770a3bd7ad03d591adaaed7156`; **PARENT TREE:** `22c3da5302956cb55f2a2a4df0b5984953bfd5bd`.
+
+---
+
 # Phase 4 Cadaver Priority Review Complete — Factual HOLD; Other Research Active (2026-10-10 09:17 UTC)
 
 ## CURRENT
