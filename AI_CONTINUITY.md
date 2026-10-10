@@ -1,3 +1,31 @@
+# PR #61 R5 Hosted Web SUCCESS — Artifact Integrity and Final Acceptance Pending (2026-10-10 05:39 UTC)
+
+## CURRENT
+
+Exact draft PR61 **c78b97175cc094436e454fa888e1ed83486f750d**, tree **6f7130dc46e5decc9b045c2841b63c73406ae2ae**, parent **cd78a0d8b5efb7fee818da5b2ea79588e28c8270**, now has **hosted web run38007930982 / job114080948337 SUCCESS**. All hosted seasonal/browser/geometry steps, casino/location, typecheck, lint, both builds, tests and icon checks report SUCCESS in authenticated job metadata. Fresh authenticated run metadata binds the completed successful run to this exact source. Prior independent exact local **1,059 PASS /4 skips**, typecheck, lint0errors/6warnings and safe auth-enabled build PASS remain recorded.
+
+**Artifact integrity, actual screenshot inspection and final independent acceptance are still PENDING.** Hosted success does not substitute for those gates. No final browser/geometry acceptance or architectural adoption PASS is claimed here.
+
+GitHub reports artifact **11655536362**, `casino-browser-evidence`, **664,570,042 bytes**, SHA-256 **98c26695fecc09ad4625263f9f1b8546a832fae90320afa8b434ac38fc08960f**, created2026-10-10T01:26:50Z and not expired at this read. This is the server-reported digest and size, **not yet independently downloaded/reconstructed-byte proof**. The archive exceeds the single-tool retrieval cap.
+
+## NEXT
+
+The owner explicitly authorized the evidence export and cancelled documentation-write retry at2026-10-10T05:37:37.097636Z. The previously cancelled continuity create_blob is retried once under that approval. The separate export create_tree had also been blocked; approval now resolves the authorization requirement, but does not prove export completion. The authorized separate deployment-disabled branch `integration/pr61-evidence-export-2026-10-09` will export the original archive in raw240MiB parts with complete hash/CRC manifest and exact c78/run/artifact bindings. Export commit identity is not available at this checkpoint. Preserve the original bytes; no application checkout change, test rerun, PR, main or deployment is part of this evidence-only operation.
+
+Recover and verify the full archive, inspect source-bound verdicts and actual screenshots, then obtain the fresh independent final functional verdict. Record the actual export identity and receipts at the next stable gate. After both authorized operations reach a terminal state, publish and fully read back final continuity, report its exact SHA and evidence IDs/hashes with CURRENT / NEXT / HOLD, then STOP. Do not resume other work. Earlier failed runs remain immutable history.
+
+## HOLD / boundaries
+
+**Final candidate acceptance remains HOLD pending evidence review. Performance recommendation remains MORE EVIDENCE REQUIRED** independently of hosted success. “Radial discovery becomes an audit layer.” No further live benchmark traffic, reset, compensating calls, optimization or release authority. Prior Track F global failure-counter reset remains protocol NOT PASS; the later a4 327-attempt performance run remains incomplete. Neither is waived by hosted success. The a4 benchmark termination failure and 327-attempt evidence remain unchanged.
+
+No main/deployment/settings mutation, no new waiver, and no Missouri/Cadaver resumption. Cadaver's blocker remains reliable attraction-specific **2026 operation/date binding and supported expiry**. Physical Android/signing/Play and parked backlog limits remain.
+
+Fresh05:38 reads confirm draft PR61 remains open/unmerged at c78; main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**, and production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/sourcefe22** are unchanged. All52 shipped records remain unchanged. Continuity is published only on deployment-disabled integration.
+
+**PARENT CONTINUITY COMMIT:** `1c3fcf8e583bdfa8fc048624d3cd56ba8db2ad8e`; **PARENT TREE:** `9dd29773b3ab444ff086a0a38cd190b9d920a8c6`. All history follows verbatim.
+
+---
+
 # PR #61 R5 Independent Exact Local Validation PASS — Hosted Acceptance Pending (2026-10-10 00:21 UTC)
 
 ## CURRENT
