@@ -1,3 +1,35 @@
+# PR #61 R5 Test-Only Candidate Frozen — Full Acceptance Pending (2026-10-10 00:12 UTC)
+
+## CURRENT
+
+Draft [PR #61](https://github.com/caleb1234calvin-art/dinner-roulette/pull/61), branch `integration/date-night-primary-radial-audit-1`, now controls exact remote **c78b97175cc094436e454fa888e1ed83486f750d**, tree **6f7130dc46e5decc9b045c2841b63c73406ae2ae**, sole parent **cd78a0d8b5efb7fee818da5b2ea79588e28c8270**. Nine parent-relative paths comprise five test files, the expectation map, and preserved cd78 review JSON/Markdown/screenshot. No runtime, configuration, workflow or dependency change.
+
+**Exact R5 full local, hosted and independent acceptance remain pending.** Hosted web **38007930982** and Android **38007931025** are running. No previous-head PASS transfers. Overall acceptance remains HOLD; architecture/performance remains **MORE EVIDENCE REQUIRED**.
+
+## Reviewed bounded correction
+
+[Independent prepublication scope review](audit/hybrid-loading-2026-10-09/R5-Prepublication-Scope-Review.md), SHA-256 **57ee45d6da517f449ebac5ea1f40f948e5d26c1f5236d03a41470c0e3399d03f**, grants PASS for freezing and testing only. Seven controls were independently rerun under the normal host zone and America/Denver. The report binds all five reviewed test-file hashes.
+
+Each RPC now records a valid fixture request timestamp and encoded Boolean toggle. The helper uses the application's actual season predicate with the browser fixture's UTC calendar to compare effective seasonal context. Active-window mismatch, including November2, still fails; wrong origin/category/radius, missing or invalid clock, malformed toggle and duplicate audit remain rejected. Exact primary counts, raw receipts, distinct-primary audit ownership and total no-refetch assertions remain.
+
+The raw primary catalog response check uses the inherited **max(requested radius,15)+1** acquisition envelope. Strict visible radius, selected-target, current policy, Open Now, expiry, no-2027 and Directions assertions remain unchanged. UTC alignment applies only to disposable fixture servers, not production configuration. The [committed expectation map](https://github.com/caleb1234calvin-art/dinner-roulette/blob/c78b97175cc094436e454fa888e1ed83486f750d/audit/date-night-hybrid-candidate/test-expectation-migration.md) records the correction and was read.
+
+## Preserved failure / NEXT
+
+cd78 remains a failed historical hosted attempt: **530 attempted, 513 PASS /17 FAIL**, including cumulative15 **218/235 PASS**; later Astra/geometry gates skipped. Independent review classified the 15 effective-season mismatches and two old core-envelope assumptions as test issues, without demonstrating a new runtime defect. That classification does not turn the failed run into PASS.
+
+Complete exact R5 full tests, typecheck, lint, safe auth-enabled build, hosted hybrid/seasonal/geometry evidence, artifact/pixel inspection and independent final review. “Radial discovery becomes an audit layer” is still a nonproduction candidate awaiting applicable acceptance.
+
+## HOLD / baseline
+
+No further live benchmark traffic, replacement ledger, compensating calls or performance optimization. The a4 327-attempt incomplete benchmark and MORE EVIDENCE REQUIRED recommendation remain unchanged. No merge, deployment, settings change or release waiver. Missouri/Cadaver remain parked; Cadaver specifically lacks reliable attraction-specific **2026 operation/date binding and supported expiry**. Physical Android/signing/Play and all backlog limitations remain.
+
+Fresh00:11 checks confirm main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**, production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/sourcefe22**, with 52 shipped records unchanged. The continuity branch remains explicitly deployment-disabled by unchanged vercel.json.
+
+**PARENT CONTINUITY COMMIT:** `3d1ae7a8a68e3415329faac67f5ce057ffe3c6fd`; **PARENT TREE:** `247dfc6014b3c30d4d598facd8bcdcf9f5b325b3`. All history follows verbatim.
+
+---
+
 # PR #61 R4 Hosted HOLD — Seventeen Independently Classified Harness Failures (2026-10-10 00:07 UTC)
 
 ## CURRENT
