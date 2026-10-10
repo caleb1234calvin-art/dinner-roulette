@@ -13,16 +13,18 @@ const output = resolve("audit/browser-results/seasonal-completeness-v1");
 await mkdir(output, { recursive: true });
 const control = resolve(output, "control.json"), events = resolve(output, "events.jsonl");
 const origin = "http://127.0.0.1:8098", defaultAt = "2026-10-07T18:00:00Z";
+let evidenceClock;
 const setControl = async state => {
   await writeFile(`${control}.next`, JSON.stringify(state));
   await rename(`${control}.next`, control);
+  evidenceClock = state.at;
 };
 await writeFile(events, "");
 await setControl({ at: defaultAt, scenario: "startup" });
 const server = spawn(process.execPath, ["scripts/with-app-env.mjs", process.execPath, "--import",
   resolve("scripts/test-support/seasonal-completeness-v1-preload.mjs"), "node_modules/vite/bin/vite.js", "preview",
   "--host", "127.0.0.1", "--port", "8098", "--strictPort"], {
-  env: { ...process.env, DATABASE_URL: "", SEASONAL_V1_CONTROL: control, SEASONAL_V1_EVENTS: events },
+  env: { ...process.env, TZ: "UTC", DATABASE_URL: "", SEASONAL_V1_CONTROL: control, SEASONAL_V1_EVENTS: events },
   detached: true, stdio: ["ignore", "pipe", "pipe"],
 });
 let logs = "", browser;
@@ -256,7 +258,7 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
     });
     page.on("request", request => {
       if (request.url().includes("/_serverFn/") && request.postData()?.includes("activityTypes")) {
-        result.rpc.push({ acquisition: dateNightRpcEvidence(request.postData()), request, method: request.method(), body: request.postData() });
+        result.rpc.push({ fixtureAt: evidenceClock, acquisition: dateNightRpcEvidence(request.postData()), request, method: request.method(), body: request.postData() });
       }
     });
     page.on("response", response => {

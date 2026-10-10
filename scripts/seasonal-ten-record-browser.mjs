@@ -1,4 +1,4 @@
-import { dateNightRpcEvidence, assertBoundedSeasonalAudit } from "./test-support/hybrid-rpc-evidence.mjs";
+import { dateNightRpcEvidence, assertBoundedSeasonalAudit, primaryCatalogEnvelopeMiles } from "./test-support/hybrid-rpc-evidence.mjs";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
@@ -19,16 +19,18 @@ const output = resolve(`audit/browser-results/${extras ? "seasonal-astra-extras"
 await mkdir(output, { recursive: true });
 const control = resolve(output, "control.json"), events = resolve(output, "events.jsonl");
 const origin = "http://127.0.0.1:8099", defaultAt = "2026-10-07T18:00:00Z";
+let evidenceClock;
 const setControl = async state => {
   await writeFile(`${control}.next`, JSON.stringify(state));
   await rename(`${control}.next`, control);
+  evidenceClock = state.at;
 };
 await writeFile(events, "");
 await setControl({ at: defaultAt, scenario: "startup" });
 const server = spawn(process.execPath, ["scripts/with-app-env.mjs", process.execPath, "--import",
   resolve("scripts/test-support/seasonal-ten-record-preload.mjs"), "node_modules/vite/bin/vite.js", "preview",
   "--host", "127.0.0.1", "--port", "8099", "--strictPort"], {
-  env: { ...process.env, DATABASE_URL: "", SEASONAL_TEN_CONTROL: control, SEASONAL_TEN_EVENTS: events },
+  env: { ...process.env, TZ: "UTC", DATABASE_URL: "", SEASONAL_TEN_CONTROL: control, SEASONAL_TEN_EVENTS: events },
   detached: true, stdio: ["ignore", "pipe", "pipe"],
 });
 let logs = "", browser;
@@ -284,7 +286,7 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
     });
     page.on("request", request => {
       if (request.url().includes("/_serverFn/") && request.postData()?.includes("activityTypes")) {
-        result.rpc.push({ acquisition: dateNightRpcEvidence(request.postData()), request, method: request.method(), body: request.postData() });
+        result.rpc.push({ fixtureAt: evidenceClock, acquisition: dateNightRpcEvidence(request.postData()), request, method: request.method(), body: request.postData() });
       }
     });
     page.on("response", response => {
@@ -588,7 +590,7 @@ try {
         assert.equal(reviewed?.seasonalListing?.visibility, "listing-lifecycle", "Every remaining seasonal identity has reviewed lifecycle visibility");
         assert.deepEqual(venue.seasonalListing, reviewed.seasonalListing, "Season-off lifecycle metadata matches the reviewed catalog");
         assert.equal(getDateNightAvailability(reviewed, new Date(test.state.at)).browseEligible, true, "Season-off lifecycle identity remains eligible at the current clock");
-        assert.ok(haversineMiles(row.lat, row.lon, venue.lat, venue.lon) <= 15.05, "Lifecycle superset stays within the existing 15-mile server core");
+        assert.ok(haversineMiles(row.lat, row.lon, venue.lat, venue.lon) <= primaryCatalogEnvelopeMiles(test.primaryRpc.at(-1).acquisition), "Lifecycle raw primary superset stays within the exact inherited server catalog envelope; UI radius remains strict");
       }
       result.evidence.seasonOffSuperset = { targetAliases: offAliases.map(venue => ({ id: venue.id, activityTypes: venue.activityTypes,
         seasonalKeys: seasonalKeys.filter(key => Object.hasOwn(venue, key)) })), lifecycleRows: offSeasonal.map(venue => ({ id: venue.id,

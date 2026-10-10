@@ -1,0 +1,177 @@
+{
+  "candidateSha": "cd78a0d8b5efb7fee818da5b2ea79588e28c8270",
+  "candidateTree": "f43672a114fd772cfc0084fc149c41abcb500104",
+  "run": 38004387318,
+  "job": 114069697671,
+  "gate": "HOLD",
+  "artifact": {
+    "id": 11651538001,
+    "bytes": 279189204,
+    "sha256": "b29ab2e831c08569f711a49ee02911c0ab0eaf9949d0f421c653e983de524d0b",
+    "members": 2285,
+    "crc": "PASS",
+    "paths": "PASS"
+  },
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "72350f5b1eb681130609a1b904c0b3af056f225591ed3650704afe38e7f6651f",
+      "files": 477
+    },
+    "startedAt": "2026-10-09T23:26:31.684Z",
+    "output": {
+      "sha256": "4ac737c3a629765221f513097d996189817444ed84e37a2999f1471b05a92e45",
+      "files": 194
+    },
+    "completedAt": "2026-10-09T23:26:34.373Z"
+  },
+  "suites": {
+    "date-night-hybrid": {
+      "passed": true,
+      "attempted": 18,
+      "passing": 18,
+      "failing": 0
+    },
+    "missouri-two-records": {
+      "passed": true,
+      "attempted": 23,
+      "passing": 23,
+      "failing": 0
+    },
+    "seasonal-completeness-v1": {
+      "passed": true,
+      "attempted": 97,
+      "passing": 97,
+      "failing": 0
+    },
+    "seasonal-ten-record": {
+      "passed": true,
+      "attempted": 157,
+      "passing": 157,
+      "failing": 0
+    },
+    "seasonal-cumulative-15": {
+      "passed": false,
+      "attempted": 235,
+      "passing": 218,
+      "failing": 17
+    }
+  },
+  "failedCases": [
+    {
+      "id": "date-night-mo26-085-brookdale-farms",
+      "scenario": "ended",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:306:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:532:7"
+    },
+    {
+      "id": "date-night-mo26-085-brookdale-farms",
+      "scenario": "resume-expiry-options",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at assertNoRpc (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:100:3)\n    at async runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:647:9)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:304:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:622:7"
+    },
+    {
+      "id": "date-night-mo26-085-brookdale-farms",
+      "scenario": "resume-expiry-result",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at assertNoRpc (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:100:3)\n    at async runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:647:9)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:304:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:622:7"
+    },
+    {
+      "id": "date-night-mo26-085-brookdale-farms",
+      "scenario": "favorite-alias-cache-resume-unsave",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:306:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:672:5"
+    },
+    {
+      "id": "date-night-mo26-delta-creepyworld",
+      "scenario": "ended",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:306:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:532:7"
+    },
+    {
+      "id": "date-night-mo26-delta-creepyworld",
+      "scenario": "mixed-alias-toggle-cache",
+      "error": "AssertionError [ERR_ASSERTION]: Lifecycle superset stays within the existing 15-mile server core\n    at runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:591:16)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:304:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:549:5"
+    },
+    {
+      "id": "date-night-mo26-delta-creepyworld",
+      "scenario": "resume-expiry-options",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at assertNoRpc (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:100:3)\n    at async runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:647:9)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:304:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:622:7"
+    },
+    {
+      "id": "date-night-mo26-delta-creepyworld",
+      "scenario": "resume-expiry-result",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at assertNoRpc (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:100:3)\n    at async runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:647:9)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:304:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:622:7"
+    },
+    {
+      "id": "date-night-mo26-delta-creepyworld",
+      "scenario": "favorite-alias-cache-resume-unsave",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:306:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:672:5"
+    },
+    {
+      "id": "date-night-mo26-delta-darkness",
+      "scenario": "ended",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:306:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:532:7"
+    },
+    {
+      "id": "date-night-mo26-delta-darkness",
+      "scenario": "mixed-alias-toggle-cache",
+      "error": "AssertionError [ERR_ASSERTION]: Lifecycle superset stays within the existing 15-mile server core\n    at runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:591:16)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:304:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:549:5"
+    },
+    {
+      "id": "date-night-mo26-delta-darkness",
+      "scenario": "resume-expiry-options",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at assertNoRpc (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:100:3)\n    at async runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:647:9)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:304:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:622:7"
+    },
+    {
+      "id": "date-night-mo26-delta-darkness",
+      "scenario": "resume-expiry-result",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at assertNoRpc (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:100:3)\n    at async runScenario.fixture (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:647:9)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:304:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:622:7"
+    },
+    {
+      "id": "date-night-mo26-delta-darkness",
+      "scenario": "favorite-alias-cache-resume-unsave",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:306:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:672:5"
+    },
+    {
+      "id": "date-night-mo26-085-brookdale-farms",
+      "scenario": "late-fall-anything-cache-expiry",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at assertNoRpc (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:100:3)\n    at async runScenario.at.at (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:837:7)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:304:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:822:5"
+    },
+    {
+      "id": "date-night-mo26-delta-creepyworld",
+      "scenario": "late-fall-anything-cache-expiry",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at assertNoRpc (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:100:3)\n    at async runScenario.at.at (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:837:7)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:304:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:822:5"
+    },
+    {
+      "id": "date-night-mo26-delta-darkness",
+      "scenario": "late-fall-anything-cache-expiry",
+      "error": "AssertionError [ERR_ASSERTION]: Each audit must correspond to one distinct primary context/category acquisition\n    at assertBoundedSeasonalAudit (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/test-support/hybrid-rpc-evidence.mjs:40:12)\n    at assertNoRpc (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:100:3)\n    at async runScenario.at.at (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:837:7)\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:304:5)\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:822:5"
+    }
+  ],
+  "skipped": [
+    "Astra eleven",
+    "Astra additional",
+    "card geometry",
+    "icon pack step"
+  ],
+  "browserReadyMs": {
+    "min": 1071,
+    "median": 1121.0,
+    "max": 1195,
+    "qualification": "Candidate-only controlled provider; includes immediate curated readiness. Not A/B first-interaction speedup or live-provider reliability proof."
+  },
+  "directScreenshotInspection": [
+    "date-night-hybrid/location-cancel.png",
+    "date-night-hybrid/plan-stable.png",
+    "seasonal-cumulative-15/late-2-late-fall-anything-cache-expiry-failure.png"
+  ],
+  "diagnosis": {
+    "rawSeasonMatcher": "15 failures compare raw primary toggle true against audit false after seasonal-window transition. Both ordinary-only category sets, identical origin/radius. Effective seasonal equivalence needs independent review; no assertion weakened.",
+    "rawRadiusBound": "2 mixed failures impose old patched-core15.05mi bound on unpatched primary catalog superset; inherited helper radius+1 margin exists in baselinefe22 too. Distinguish response superset from strict selected-radius client eligibility before any correction.",
+    "status": "Evidence-supported probable harness assumptions; independent classification pending. No product clearance or remediation."
+  },
+  "limits": [
+    "Author review, not independent approval",
+    "Downstream skipped gates not PASS",
+    "Original job log fetch transport closed; artifact verdicts and step metadata retained",
+    "No source edits or provider traffic during diagnosis"
+  ]
+}
