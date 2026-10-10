@@ -1,0 +1,28 @@
+✔ healthy readiness is immediate; four zero patches stop with incomplete coverage and 28 avoided audit acquisitions (58.620162ms)
+✔ honest recall tradeoff: sole fifth-patch omission at 15–20mi is lost, retained radial reference finds it (203.384178ms)
+ℹ {"fixture":"fifth-patch-omission","stoppedAuditAcquisitions":4,"exhaustiveAuditAcquisitions":32,"avoidedAuditAcquisitions":28,"lostUsefulIds":["known-late-omission"],"adaptiveFinalIds":["initial-0","initial-1","initial-2","initial-3"],"radialFinalIds":["initial-0","initial-1","initial-2","initial-3","known-late-omission"],"omittedPatch":"radial-v1:20:3","bandMiles":[15,20],"physicalProviderAttempts":"not measured: transport is mocked"}
+✔ useful fourth-patch omission resets streak and is retained before a later stop (31.819572ms)
+✔ thin starts immediately, promotes to healthy after useful recovery, then requires four fresh zero patches (20.863775ms)
+✔ failed primary recovers immediately and never yield-stops even with four eligible recovered venues (285.893192ms)
+✔ fourth patch negative applies before stop and makes four-venue primary thin (57.191687ms)
+✔ fourth patch failure resets zero streak without sacrificing usable primary (15.620505ms)
+✔ dispose cancels healthy deferred dispatch (2.600133ms)
+✔ location cancels healthy deferred dispatch (2.418548ms)
+✔ category cancels healthy deferred dispatch (2.031735ms)
+✔ local exclusion during deferral accelerates existing audit without refetching primary (4.039844ms)
+✔ semantic category coverage and genuine Plan applicability use the user's selection (0.399272ms)
+✔ affirmed aliases do not inflate useful-yield count (0.143977ms)
+✔ actual UI gets four options before healthy audit dispatch (379.045013ms)
+✔ unobserved negative in skipped patch remains a disclosed stale-positive risk, radial reference removes it (208.154684ms)
+ℹ {"fixture":"skipped-negative","skippedPatch":"radial-v1:20:3","stalePositiveId":"initial-0","adaptiveEligibleIds":["initial-0","initial-1","initial-2","initial-3"],"radialEligibleIds":["initial-1","initial-2","initial-3"],"observedNegativeResurrected":false}
+✔ expiry at deferred dispatch reclassifies as thin; expired identity cannot support health (7.638819ms)
+✔ filtered-only patch additions have zero useful yield (16.821861ms)
+✔ partial mixed primary remains immediate recovery despite a rich eligible pool (3.704699ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2401.48644

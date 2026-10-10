@@ -1,0 +1,216 @@
+✔ primary disk resolves READY independently; serial audit recovers omitted unique venues without foreground loading (29.063442ms)
+✔ curated-first readiness carries no live coverage and waits for primary settlement before auditing (23.3745ms)
+✔ obsolete primary is aborted on {"lat":42} and late results cannot seed cache (1.626083ms)
+✔ obsolete primary is aborted on {"activityTypes":["park"]} and late results cannot seed cache (0.976813ms)
+✔ obsolete primary is aborted on {"radiusMiles":20} and late results cannot seed cache (1.250676ms)
+✔ audit aborts on category/location change and disposal; cancelled audit cannot publish (3.26134ms)
+✔ 50-mile disk authority permits local decrease and covered increase; widening beyond authority requests disk (12.029988ms)
+✔ negative eviction retires older disk positives, patch=none (0.872766ms)
+✔ negative eviction retires older disk positives, patch=radial-v1:core (0.376708ms)
+✔ audit lifecycle negatives override disk positives through radius/category changes (14.071136ms)
+✔ actual server handler propagates abort upstream and never starts later mirrors (primary) (190.117721ms)
+✔ actual server handler propagates abort upstream and never starts later mirrors (radial-v1:core) (188.998653ms)
+✔ audit positive ownership remains spatially clipped and primary disk does not claim patch coverage (5.541209ms)
+✔ bounded negative retirement survives repeated cap pressure and alias/category/radius changes (cap 2) (2.13434ms)
+✔ bounded negative retirement survives repeated cap pressure and alias/category/radius changes (cap 3) (1.897442ms)
+✔ bounded negative retirement survives repeated cap pressure and alias/category/radius changes (cap 8) (2.822027ms)
+✔ HYB-IV-01 capacity-rejected core negative still suppresses primary and cached aliases (cap 1) (5.876424ms)
+✔ HYB-IV-01 capacity-rejected outer negative still suppresses primary and cached aliases (cap 1) (7.397519ms)
+✔ HYB-IV-01 capacity-rejected core negative still suppresses primary and cached aliases (cap 20000) (46.11932ms)
+✔ HYB-IV-01 capacity-rejected outer negative still suppresses primary and cached aliases (cap 20000) (17.029739ms)
+✔ cancelled oversized audit cannot retire a newer origin's positive identity (2.946635ms)
+✔ HYB-IV-02 ResultOverlay follows affirmed rekey z→a but still invalidates lifecycle negatives (353.558139ms)
+✔ HYB-IV-02 OptionsOverlay follows affirmed rekey z→a but still invalidates lifecycle negatives (29.888907ms)
+✔ HYB-IV-02 DateNightPlanOverlay follows affirmed rekey z→a but still invalidates lifecycle negatives (23.676086ms)
+✔ HYB-IV-02 ResultOverlay follows affirmed rekey a→z but still invalidates lifecycle negatives (22.876059ms)
+✔ HYB-IV-02 OptionsOverlay follows affirmed rekey a→z but still invalidates lifecycle negatives (21.651701ms)
+✔ HYB-IV-02 DateNightPlanOverlay follows affirmed rekey a→z but still invalidates lifecycle negatives (21.990963ms)
+✔ settled succeeded-empty primary ends spinner without claiming usable READY; audit can recover (5.62821ms)
+✔ settled failed primary ends spinner without claiming usable READY; audit can recover (4.190211ms)
+✔ failed primary with an eligible curated pool remains usable (20.401155ms)
+✔ actual UI: empty failed primary stops foreground loading without a Ready label or enabled decisions (8.799144ms)
+✔ succeeded-nonempty: core first, then exactly 250ms after a slow successful outer settlement (45.431192ms)
+✔ succeeded-empty: core first, then exactly 250ms after a slow successful outer settlement (6.391101ms)
+✔ outer start floor with 0ms latency survives repeated compatible updates (12.981694ms)
+✔ outer start floor with 100ms latency survives repeated compatible updates (16.501692ms)
+✔ outer start floor with 749ms latency survives repeated compatible updates (16.49993ms)
+✔ outer start floor with 750ms latency survives repeated compatible updates (11.996757ms)
+✔ outer start floor with 900ms latency survives repeated compatible updates (15.168617ms)
+✔ failed: outer degradation retains 1000ms settlement delay, even on explicit retry (11.632969ms)
+✔ throw: outer degradation retains 1000ms settlement delay, even on explicit retry (13.84844ms)
+✔ partial: outer degradation retains 1000ms settlement delay, even on explicit retry (10.180637ms)
+✔ explicit retry of older missing work honors the most recent successful outer start (9.19483ms)
+✔ dispose clears a pending success timer (4.147447ms)
+✔ shrink clears a pending success timer (5.108295ms)
+✔ radius shrink cancels outer work; immediate re-expansion is spaced and ignores late settlement (5.406325ms)
+✔ generation replacement rejects late abort-ignoring outer response and remains serial (7.711032ms)
+✔ incomplete core blocks expansion with no automatic retry loop (10.15604ms)
+✔ three consecutive degraded outer patches pause without retrying attempted work (10.712851ms)
+✔ 32-start cap also blocks newly requested categories after a complete successful-empty pass (118.153379ms)
+✔ synthetic 6-second cold pass measures 199750ms; baseline model is 223000ms (103.135093ms)
+✖ actual UI: selected-radius primary enables all actions before serial background audit (636.610237ms)
+✖ actual UI: open ResultOverlay stays stable when audit venues arrive; future action uses enlarged pool (221.205948ms)
+✖ actual UI: open OptionsOverlay stays stable when audit venues arrive; future action uses enlarged pool (217.560649ms)
+✖ actual UI: open DateNightPlanOverlay stays stable when audit venues arrive; future action uses enlarged pool (225.071639ms)
+✖ audit middle failure retains primary picks and explicit retry targets missing sector (182.396829ms)
+✖ outermost audit failure preserves primary and bounded audit never auto-retries (1781.935972ms)
+✖ three consecutive degraded audit patches stop bounded pass without removing primary (174.833064ms)
+✔ 15→50 acquires missing disk authority; narrowing cancels obsolete work and clips locally (88.084615ms)
+✔ rapid radius change cancels obsolete primary and strictly clips its replacement (24.316232ms)
+✖ all local-only filters cause zero RPCs and do not cancel background audit (63.366788ms)
+✖ location change cancels audit and late response cannot replace newer primary (54.016948ms)
+✔ stalled primary watchdog cancels obsolete work and settles foreground state (51.707291ms)
+✔ saved primary fallback remains usable without inventing live coverage (70.696605ms)
+ℹ tests 63
+ℹ suites 0
+ℹ pass 54
+ℹ fail 9
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4616.761185
+
+✖ failing tests:
+
+test at scripts/date-night-radial-session.test.mjs:36:1
+✖ actual UI: selected-radius primary enables all actions before serial background audit (636.610237ms)
+  TypeError: Cannot read properties of undefined (reading 'args')
+      at TestContext.<anonymous> (file:///tmp/adaptive-audit-source/scripts/date-night-radial-session.test.mjs:47:30)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at scripts/date-night-radial-session.test.mjs:55:3
+✖ actual UI: open ResultOverlay stays stable when audit venues arrive; future action uses enlarged pool (221.205948ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(ids().some(id => id.startsWith("radial-v1:20:0")))
+  
+      at TestContext.<anonymous> (file:///tmp/adaptive-audit-source/scripts/date-night-radial-session.test.mjs:67:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at scripts/date-night-radial-session.test.mjs:55:3
+✖ actual UI: open OptionsOverlay stays stable when audit venues arrive; future action uses enlarged pool (217.560649ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(ids().some(id => id.startsWith("radial-v1:20:0")))
+  
+      at TestContext.<anonymous> (file:///tmp/adaptive-audit-source/scripts/date-night-radial-session.test.mjs:67:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at scripts/date-night-radial-session.test.mjs:55:3
+✖ actual UI: open DateNightPlanOverlay stays stable when audit venues arrive; future action uses enlarged pool (225.071639ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(ids().some(id => id.startsWith("radial-v1:20:0")))
+  
+      at TestContext.<anonymous> (file:///tmp/adaptive-audit-source/scripts/date-night-radial-session.test.mjs:67:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at scripts/date-night-radial-session.test.mjs:71:1
+✖ audit middle failure retains primary picks and explicit retry targets missing sector (182.396829ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 6
+  
+      at TestContext.<anonymous> (file:///tmp/adaptive-audit-source/scripts/date-night-radial-session.test.mjs:75:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 6,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/date-night-radial-session.test.mjs:85:1
+✖ outermost audit failure preserves primary and bounded audit never auto-retries (1781.935972ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  16 !== 33
+  
+      at TestContext.<anonymous> (file:///tmp/adaptive-audit-source/scripts/date-night-radial-session.test.mjs:90:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 16,
+    expected: 33,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/date-night-radial-session.test.mjs:98:1
+✖ three consecutive degraded audit patches stop bounded pass without removing primary (174.833064ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 5
+  
+      at TestContext.<anonymous> (file:///tmp/adaptive-audit-source/scripts/date-night-radial-session.test.mjs:103:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 5,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/date-night-radial-session.test.mjs:137:1
+✖ all local-only filters cause zero RPCs and do not cancel background audit (63.366788ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 2
+  
+      at TestContext.<anonymous> (file:///tmp/adaptive-audit-source/scripts/date-night-radial-session.test.mjs:142:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/date-night-radial-session.test.mjs:147:1
+✖ location change cancels audit and late response cannot replace newer primary (54.016948ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///tmp/adaptive-audit-source/scripts/date-night-radial-session.test.mjs:151:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
