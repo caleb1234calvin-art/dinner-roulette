@@ -1,3 +1,49 @@
+# Adaptive Hosted Fixtures PASS; Sole Bounded Live Execution Published (2026-10-10 08:58 UTC)
+
+## CURRENT
+
+The exact reviewed fixture prerequisite is **PASS**. Coordinator GO at 08:56:12 authorized the single frozen benchmark execution under the owner's phased brief. Benchmark branch `integration/pr61-adaptive-benchmark-2026-10-10` now resolves to **b8c021aa72a26665ace549fd73dc123a9e306d6a**, tree **5a7f78f2256f0e4ed7d5236934c78e98c9d81e6c**, sole parent **51a3af4b04b7d0abc0c3b598b37b4e9a34b7037d**. Exactly one LIVE-APPROVAL receipt was added; all 39 prior inventory bindings remain unchanged.
+
+[Run 38039658685](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38039658685), workflow **380371053**, **number 3 / attempt 1**, is **in progress** at the fresh 08:57 read. This is execution status, not a performance result or proof that all planned cases have dispatched. “Radial discovery becomes an audit layer.”
+
+Adaptive D remains **d6d6f91b16aecd27773168c68d3c8ebdc33001c7**, tree **17f36a46f1d6894b6adf44edf7aefefc2b457cbb**. Baseline R is shipped **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**. PR61 remains c78 draft/unmerged; no application source change accompanies this live authorization.
+
+## Exact hosted R2 acceptance
+
+[Full independent hosted review](audit/hybrid-loading-2026-10-10/Adaptive-HOSTED-FIXTURE-R2-PASS.md), SHA **b3a6c25646b6d1471251edebc67896a02b2d5c830938cc3c2db5731cd72c4afc**, was read in full. Fixture run **38039008237**, number 2 / attempt 1, at exact 51a3 passed. Artifact **11664867757**, **2,348,934 bytes**, SHA **75e6d7896082938cf6bc26e335560de1ca3ff6e3d32d42be84277cf4e5384053**, has 198 independently verified members/CRC.
+
+Independent review verified 221 chained rows, **78 mock starts /78 settlements /zero pending**, all 78 provider and 64 RPC bodies, and 77 hosted offline tests. Fixture mode made **zero public requests**. Exact auth-enabled R/D build proofs and final source checks passed.
+
+Seven browser cases verified healthy two-second deferral/spacing and four-zero stopping with incomplete coverage, immediate thin/recovery mechanics, actual genuine distinct Escape Room/Movies Plan, early two curated Options followed by a separate four-provider-card interaction, and stable ordered choices through later settlements. Corrected provider-backed recovery was **2427.828ms in a synthetic fixture**; pre-existing curated-only Pick is excluded and naturalRecovery=false.
+
+The exact inherited failed-primary warm20-to-15 broad request was blocked before provider dispatch. Its status remains **HOLD**, with no timing/PASS imputation. Successful fixture paths had zero refetch. Fixture acceptance does not predict natural recovery, provider health, material live benefit or universal recall.
+
+## Single live binding and immutable limits
+
+[Exact live approval receipt](audit/hybrid-loading-2026-10-10/Adaptive-LIVE-APPROVAL.json), **1,844 bytes**, SHA **4e4c4b5c7376801e11766baee813ae8534b8eb2c97f46b79ae60d95cf29370cf**, binds final harness manifest **8660d414800e4e450abc9a2652ad9bfc04838ec0915e6e6cd4a0705a1752478c**, exact R/D identities, reviewed fixture artifact/report, workflow number 3 / attempt 1 and unchanged protocol/recovery/replay qualification hashes. Its stored “only after explicit root GO” status records the prerequisite; the coordinator GO and actual publication above resolve that prerequisite.
+
+One append-only ledger and native clock cover all phases:
+- At most **384 physical starts**, **96 cumulative failure/timeout outcomes**, **30 minutes** from first dispatch.
+- Main at most **288** starts; reserve at most **96** for one specifically qualifying follow-up, never replacing incomplete main cases.
+- Global eight-consecutive physical failure, two wholly failed dispatched-handler, 429, integrity/source/egress/owner-stop and hard limits remain irreversible.
+- Reserve requires full trustworthy main rubric and exactly one permitted missing mechanism, with no adverse/unassessed criterion; all counters and clock carry forward.
+
+No rerun, reset, budget increase, compensating cases, source change or retrospective threshold adjustment is authorized. Previous failed and incomplete experiments remain historical; this execution does not erase them.
+
+## NEXT / HOLD / unchanged production
+
+NEXT: preserve the sole execution's raw evidence at terminal state, independently verify ledger/control/source integrity and the final four-way decision, then checkpoint that stable result. **Performance/adoption remains MORE EVIDENCE REQUIRED / HOLD while evidence is pending**. No source hardening, release readiness, merge or deployment follows from run initiation.
+
+If ADOPT, continue authorized Phase 3 hardening/full verification then STOP for owner release decision. If KEEP RADIAL or provider-limited MORE, park architecture and proceed to authorized Phase 4 Missouri/Cadaver; do not call the overall phased assignment DONE merely because performance is parked.
+
+Fresh 08:57 main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**; PR61 **c78b97175cc094436e454fa888e1ed83486f750d** draft/open/unmerged; production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/source fe22** unchanged. This is identity/metadata confirmation, not a new live production smoke. 52 curated records remain shipped.
+
+Missouri/Cadaver are parked during the active benchmark; Cadaver still lacks reliable attraction-specific **2026 operation/date binding and supported expiry**. Physical Android and all other factual/release limitations remain. No settings, waiver, signing, paid API, operator contact or production mutation authority.
+
+**PARENT CONTINUITY COMMIT:** `6aeb6e66182837bceb1e2d821f8747c05c00e330`; **PARENT TREE:** `a91eeee80da8e41c7bdb084cee5b7b1f97616698`. Deployment-disabled documentation checkpoint; all prior history follows.
+
+---
+
 # Adaptive Hosted R1 Verified with Live HOLD; Corrected R2 Fixture Running (2026-10-10 08:47 UTC)
 
 ## CURRENT
