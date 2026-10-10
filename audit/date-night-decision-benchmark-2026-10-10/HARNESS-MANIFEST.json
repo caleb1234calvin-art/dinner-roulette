@@ -1,0 +1,57 @@
+{
+  "status": "FROZEN FOR INDEPENDENT PREFLIGHT REVIEW; NO LIVE TRAFFIC",
+  "files": {
+    "server-preload.mjs": {
+      "bytes": 5343,
+      "sha256": "4f5eed6300fb06679316403a74c375881d4e6ef3a1cd6011344fe81869d14074"
+    },
+    "browser-runner.mjs": {
+      "bytes": 32097,
+      "sha256": "5077719ac7cd2dbf365f013b588a27eee44654926681567a02985ffcb13f272b"
+    },
+    "PROTOCOL-DRAFT.md": {
+      "bytes": 13623,
+      "sha256": "f9a4083f977ab21641bf6c16687f0313bd50f5bb6278aad972439c2540751211"
+    },
+    "workflow.yml": {
+      "bytes": 4590,
+      "sha256": "9c720516c36f92a19235661781c8c64f907a63e70671c485e49e75e9bcf3a87f"
+    },
+    "request-ledger.mjs": {
+      "bytes": 5000,
+      "sha256": "d31054a80f9da72a8d79f5e518bd9175fb536ecbd254482bb3e062606459dabd"
+    },
+    "ledger-lifecycle.test.mjs": {
+      "bytes": 5823,
+      "sha256": "4b9510a8e3dc472751afa4592f8ac16515f38ea367d0855b257136df53377c0b"
+    },
+    "runner-lifecycle.mjs": {
+      "bytes": 1259,
+      "sha256": "de66221f5f74163804eec883840db9db12a9c49c80e20c4ad7c15aff20a73e99"
+    },
+    "offline-tests.log": {
+      "bytes": 2844,
+      "sha256": "6b87713a5f1d796d8868892cc04eba98cf4675eed3dcfff6474ec04e26be4b39"
+    },
+    "browser-runner.test.mjs": {
+      "bytes": 7322,
+      "sha256": "80362dc947a07bb874d7d7913f29c5198a03a9dec9ceed475dd47e8e40253694"
+    },
+    "preload.test.mjs": {
+      "bytes": 4438,
+      "sha256": "0ca8aac8b91f8d386c06c187cfbc32d79428adbf8ee7d326cbbd2f3f4db1882f"
+    },
+    "workflow-contract.test.mjs": {
+      "bytes": 966,
+      "sha256": "d862eb265db96a7512b027e63f053cc9d48c5823ef7a2f1590b1e48e74bbd7c7"
+    },
+    "coordinator.mjs": {
+      "bytes": 9925,
+      "sha256": "a45da4b0787f672a2df31687b000f5452f099573ba5c3b8365076e4c15f60583"
+    },
+    "analyze.mjs": {
+      "bytes": 5231,
+      "sha256": "2f12bfcd6dd5f194f404b672cb0da02c32dafe636346a95e7c7261a470c1e4ce"
+    }
+  }
+}

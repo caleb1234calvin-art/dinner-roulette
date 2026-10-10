@@ -1,0 +1,90 @@
+name: PR61 bounded browser decision benchmark
+on:
+  push:
+    branches: [integration/pr61-performance-decision-benchmark-2026-10-10]
+    paths:
+      - audit/date-night-decision-benchmark-2026-10-10/PREFLIGHT-TRIGGER.json
+      - audit/date-night-decision-benchmark-2026-10-10/LIVE-APPROVAL.json
+permissions:
+  contents: read
+concurrency:
+  group: pr61-final-decision-benchmark
+  cancel-in-progress: false
+jobs:
+  benchmark:
+    if: github.run_attempt == 1
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    env:
+      CI: "true"
+      TZ: UTC
+      VITE_AUTH_ENABLED: "true"
+      DATABASE_URL: ""
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: harness
+      - name: Verify deployment exclusion and exact requested branch
+        working-directory: harness
+        run: |
+          test "$GITHUB_REF" = refs/heads/integration/pr61-performance-decision-benchmark-2026-10-10
+          node --input-type=module -e "import fs from 'node:fs'; const v=JSON.parse(fs.readFileSync('vercel.json')); if(v.git?.deploymentEnabled?.['integration/**']!==false)throw Error('Deployment exclusion missing');"
+      - uses: actions/checkout@v4
+        with:
+          ref: fe22c15cc6442fc4a48fec23c9a1331c69d70bd2
+          path: baseline
+      - uses: actions/checkout@v4
+        with:
+          ref: c78b97175cc094436e454fa888e1ed83486f750d
+          path: candidate
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Install locked dependencies without lifecycle scripts
+        run: |
+          (cd baseline && npm ci --ignore-scripts --no-audit --no-fund)
+          (cd candidate && npm ci --ignore-scripts --no-audit --no-fund)
+          (cd candidate && npx playwright install --with-deps chromium)
+      - name: Exact-source safe auth-enabled migration-free builds
+        run: |
+          for source in baseline candidate; do
+            (cd "$source" && node scripts/browser-build-proof.mjs capture && node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production && node scripts/browser-build-proof.mjs complete && node scripts/browser-build-proof.mjs verify)
+          done
+      - name: Offline harness accounting and termination tests
+        working-directory: harness
+        env:
+          PFU_BASELINE_ROOT: ${{ github.workspace }}/baseline
+          PFU_CANDIDATE_ROOT: ${{ github.workspace }}/candidate
+        run: |
+          mkdir -p /tmp/pfu-decision-evidence
+          node --test audit/date-night-decision-benchmark-2026-10-10/*.test.mjs | tee /tmp/pfu-decision-evidence/offline-tests.log
+      - name: Zero-public-traffic actual-browser transport preflight
+        env:
+          PFU_BASELINE_ROOT: ${{ github.workspace }}/baseline
+          PFU_CANDIDATE_ROOT: ${{ github.workspace }}/candidate
+          PFU_BENCH_OUTPUT: /tmp/pfu-decision-evidence/preflight
+        run: node harness/audit/date-night-decision-benchmark-2026-10-10/coordinator.mjs fixture
+      - name: Verify browser preflight terminal
+        run: |
+          node --input-type=module -e "import fs from 'node:fs';const r=JSON.parse(fs.readFileSync('/tmp/pfu-decision-evidence/preflight/progress.json'));if(r.rows.length!==4||r.ledger.stopped||r.ledger.pending.length||r.rows.some((x,i)=>x.outcome!==['complete','complete','quiescent-partial','complete'][i]))throw Error('Preflight not complete');"
+      - name: Single approved bounded live experiment
+        if: hashFiles('harness/audit/date-night-decision-benchmark-2026-10-10/LIVE-APPROVAL.json') != ''
+        env:
+          PFU_LIVE_APPROVED: "yes"
+          PFU_BASELINE_ROOT: ${{ github.workspace }}/baseline
+          PFU_CANDIDATE_ROOT: ${{ github.workspace }}/candidate
+          PFU_BENCH_OUTPUT: /tmp/pfu-decision-evidence/live
+        run: node harness/audit/date-night-decision-benchmark-2026-10-10/coordinator.mjs live
+      - name: Offline exact-code retained-response cost and yield analysis
+        if: always() && hashFiles('harness/audit/date-night-decision-benchmark-2026-10-10/LIVE-APPROVAL.json') != ''
+        env:
+          PFU_BASELINE_ROOT: ${{ github.workspace }}/baseline
+          PFU_CANDIDATE_ROOT: ${{ github.workspace }}/candidate
+        run: |
+          if test -f /tmp/pfu-decision-evidence/live/progress.json; then node harness/audit/date-night-decision-benchmark-2026-10-10/analyze.mjs /tmp/pfu-decision-evidence/live; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pr61-decision-benchmark-evidence
+          path: /tmp/pfu-decision-evidence
+          retention-days: 14
