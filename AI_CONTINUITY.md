@@ -1,3 +1,108 @@
+# Phase 4 Corrected Candidate Independently Verified — Candidate PASS, Release HOLD (2026-10-10 22:13 UTC)
+
+## CURRENT — authoritative final candidate gate
+
+This entry supersedes older CURRENT/NEXT statements below. **The bounded corrected seven-record candidate has independent exact-head PASS. Release remains HOLD.** Fresh Web Run 412 and Android Run 83 succeeded; raw artifacts, previously unreached plan checks, geometry and representative actual pixels were independently verified.
+
+[Draft PR #62](https://github.com/caleb1234calvin-art/dinner-roulette/pull/62) remains **open, draft and unmerged**:
+- Candidate **bf88443932739a9448fac8d27fd845e9947cf697**.
+- Tree **7d91061065f5e7e36e4f76307a7b915a66ea006d**.
+- Sole parent **dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f**.
+- Main base **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**.
+- Branch `integration/phase4-missouri-recovery-2026-10-10`; **35 paths, 5,064 additions/103 deletions** versus main.
+
+The [final independent report](audit/phase4-missouri-2026-10-10/final-gate-20261010/INDEPENDENT-EXACT-BF884-VERDICT.md) governs the qualified PASS. **Web release is held solely for the owner's concrete release authorization. Physical Android/WebView/GPS remains a separate, accepted nonblocking limitation for the web scope.** No merge, deployment, production import, release signing, Play upload or physical-device PASS occurred. This PASS comes from fresh bf884 evidence, never reassignment of the original failed dbb5 verdict.
+
+### Candidate identity, correction and counts
+
+The bf884 delta from dbb5 is exactly three paths: the browser harness plus **Validation-Correction-R2.json** and **Validation-Correction-Logs-R2.zip**. The only executable change is the two case-insensitive **i** flags in `scripts/seasonal-ten-record-browser.mjs:838`. No runtime/component/data/CSS/workflow change was needed. Role ordinals, intended roles, expected counts and all downstream assertions remain. The existing substring regexes are not anchored; no new exact-anchor guarantee is claimed.
+
+Accepted input remains **34,632 bytes**, SHA-256 **827eb67919c99dec61991cbc01cba63097ccd5dd1868de355b5f79b07d348882**, from research checkpoint **0fcb454c501b433d90b8971ca1d2b0be8daff56b**. Canonical input, candidate normalized/browser projections and seven identities match.
+
+Selected: Wolfman, existing Werehouse, Fearstone, Fun Time, Carolyn, Terror on Route 66 and Branson. **Six net additions plus one existing-identity amendment**, never seven new venues. Main's **52 V1 + one legacy Werehouse anchor = 53 distinct identities** becomes **59 V1 / 59 distinct** in the candidate. All 26 protected-file hashes and all 52 prior presentations were independently checked against the true base. No Cadaver, Rolla, residential or experimental-loader addition.
+
+## Fresh exact-head hosted and independent results
+
+- [Web Run 412 / 38081550608](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38081550608), job **114299322669**: **SUCCESS** at bf884. All required typecheck/lint/audit/build/tests/browser steps, new Phase 4 step 23, geometry step 24, evidence step 25 and final Dinner icon step 26 pass.
+- [Android Run 83 / 38081550610](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38081550610), job **114299323024**: **SUCCESS** at bf884. Signing job **114300076400 SKIPPED** as intended; unsigned readiness only.
+- Shared hosted proof: auth enabled; **472 source files**, SHA-256 **cfd01395c9b9cefbe9447d3795bc3175d7bff76dfbd2a63929b1aeaa8399e020**; **194 output files**, SHA-256 **f7e4568fa60778c155a0fee05c322b767e1707ef8510d43fe8a4770ff71d4f29**. Source proof was independently recomputed from the exact candidate. Do not substitute the separate local build-output hash.
+
+### Browser coverage
+
+Eight raw scenario suites are **1,091/1,091 PASS**: ordinary radial 10; two-record 23; V1 97; ten-record 157; cumulative fifteen 235; Astra eleven 220; additional Astra 185; Phase 4 seven **164/164**. Casino's 16 checks and location's 19 checks are separately successful and are not added to that scenario total.
+
+All seven formerly blocked qualified-night-plan cases now execute their downstream checks:
+- **31 exact normalized note strings**, readable and unobscured after scrolling.
+- **14 decoded, complete, nonzero-resolution plan images**.
+- **21 reachable Maps/Info/close controls**; exact visitor-address Maps targets and accepted website Info URLs.
+- Six Scare targets and Carolyn as Settle with a distinct eligible Liberty Corn Maze partner. Carolyn's own listing remains pumpkin-only and does not imply shared admission.
+- All no-extra-RPC checks execute; actual screenshots for all seven representative plans were directly inspected.
+
+Phase 4 covers provider aliases, saved/favorite/exclusion/cache paths, stale exact Werehouse IDs, seven pending-RPC-at-expiry cases, exact cutoff boundaries, destination DST, Branson November dates/unlisted browse and late-fall expiry. **680 intercepted provider calls, zero public/forwarded external requests**. These controlled fixtures do not establish live-provider availability.
+
+### Geometry and pixels
+
+**489/489 geometry comparisons PASS** for **59 identities**, at 320/390/512 px. Per width: 59 options + 59 results + 44 Scare plans + one Carolyn Settle plan. All **3,507 expected geometry PNGs** are present, hash-bound, with no omissions/extras. Separately, the raw verdict explicitly records **15 ineligible first-stop controls PASS**, including Carolyn: no fabricated first-stop card and the correct empty-plan message. Her valid Settle-slot plan is separately verified at all three widths; this control count is not inferred by subtraction.
+
+Independent review confirms **978 before/after control PNG pairs byte-identical**, plus unchanged recorded ordinary and short-standard geometries. **573 expanded-plan paragraph measurements**, including **93 Phase 4**, fit horizontally and are unobscured after scrolling. **51 original geometry PNGs** and the seven actual plan screenshots were directly viewed.
+
+Retained limits: one-CSS-pixel tolerance permits three tiny below-viewport line-box extensions; visible text remained readable. This is not accessibility/contrast certification. Inherited 320px Directions-label clipping remains **35 px overwide** across before/ordinary/after controls, with no regression or fix claimed. Geometry viewport crops do not by themselves prove lower-control reachability; separate actual application evidence does.
+
+## Runtime/research constraints verified and retained
+
+No machine hours and never Open Now, including 24/7 aliases and stale saved/cache objects. Werehouse retains its canonical identity and current coordinates/policy without duplicate or old-hour revival. Approximate points support map/distance only; Directions are address-based and ride links generic, with no entrance/parking/pickup precision.
+
+Exact exclusive cutoffs remain: Fearstone **October 31 05:00Z**; Wolfman/Werehouse/Fun Time/Carolyn **November 1 05:00Z**; Terror **November 2 06:00Z**; Branson **November 15 06:00Z**. Exact minus 1 ms/exact/plus 1 ms, pending-RPC wall clock, DST and no-2027 revival are covered.
+
+Fun Time's cutoff stays editorial, without invented subtype dates or operator end. Its inaccessible fresh origin reopen stays qualified against accepted retained recent 2026 evidence. Branson has exactly 17 accepted dates with **November 6/7/13/14 only** as crossover. Listing-lifecycle Anything browsing does not extend Halloween chips/provider discovery or assert operation on unlisted dates. Existing V1 upcoming/closed-today browsing until expiry remains intentional. Compact material access, guardian/age/ID/waiver/touch/grouping and seasonal qualifications remain visible.
+
+## Immutable evidence and evidence-only export
+
+Final independent report: **15,669 bytes**, SHA-256 **496a360924249c00412eda8fcdd2c9c0f09e44a6a425c4a398389c6397dab4b8**. Compact review package: **17,244,015 bytes**, SHA-256 **d719576ecf7c8a8bb620512632f51f410032b9e39fa418e6bdf52ae99508500b**. Checksum file **FINAL-REVIEW-SHA256SUMS** SHA-256 **7c1285ed2f9a7aaba7cbc6b1ef863ee72ece1c4edfa16919f3f81ca1f353962d**; JSON **FINAL-REVIEW-MANIFEST.json** SHA-256 **759f4fdf8b3c20ac7dee828096f26501e4df5e9c7dd9fcea1cebef0fb31d3f2f**.
+
+Both final deliverables were persisted privately and delivered to the owner at **21:34:44 UTC**, message **Sentinel_3fdfaed8afc08191ab44cf6f32dc64b1**. Report Library ID **libfile_9d3e1eed89b48191b83d9d9e08a47d39**; package Library ID **libfile_4964c30207f08191b61472428ec2dfd6**. Their original report/package hashes are unchanged; no private download URL is published.
+
+Normal browser artifact **11682503939**: **761,906,766 bytes**, SHA-256 **310afc592cc6f11c7ea9512b91afc296dd3025703f55ea29235f39b504cb971e**. Its ordinary connector download exceeded the size cap. A separately authorized **evidence-only** workflow exported original bytes:
+- Branch `integration/pr62-bf884-evidence-export-2026-10-10`.
+- Commit **7ff29bf8473e701b4e4ed1199b666d05df8bad34**, tree **7655638363fc633b716f7ec8c9b21128a10e2187**, sole parent bf884.
+- [Run 38087364649](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38087364649), job **114316560265**, **SUCCESS**.
+- Manifest artifact **11681874050**; delivery parts **11681953846, 11681704325, 11681764335, 11681709366**.
+- Four delivery wrappers and raw offsets/hashes were independently verified; reassembled original ZIP exactly matches size/SHA. All **7,667 original members** passed individual SHA/CRC/path/uniqueness verification.
+
+The export branch is not the application candidate. It did not check out/rebuild the app, rerun acceptance or regenerate screenshots. PR #62 remains bf884. GitHub artifact retention is finite, currently reporting October 24 expiration. The compact package retains raw verdicts, complete original inventory, reconstruction receipts, directly inspected representative pixels and native proof, without duplicating the 761.9 MB original.
+
+Raw Phase 4 verdict SHA-256 **31fcd16bb346c20dcddebe31d7d9d6814a0670f9b0734843a56486aa66536ea7**; raw geometry verdict **bdbe8f0eac84d215096ae1515bd3dc5e041028866403bf94a77e63323e345cbf**. The minimal repository audit preserves exact final reports/receipts and their provenance; it is not labeled the full raw archive.
+
+## Local, Android and reset qualifications
+
+Revalidated R2 local logs show **1,062 passes**, four inherited documentation skips, 68 included focused tests, typecheck, lint zero errors/six warnings, safe auth-enabled migration-free build, Android structure/icons and three native Python tests. The wrong initial Python discovery ran zero tests and is not counted. Local Chromium remained NOT RUN; fresh hosted evidence satisfies the browser gate.
+
+Android validation artifact **11680990315**, SHA-256 **d33864933fe9da4ba4ac4f71a1c4eae168bf0f71173b8b0d4d595c8f86eb61e1**, and lint artifact **11680264540**, SHA-256 **87a0e8c22e9de8562bcf95607c18039a5d4d3bd050bca380e4f005dac40725a6**, bind bf884 through source revision despite merge-SHA names. ZIPs and nested AAB/APK integrity passed. **14 inherited Android lint warnings** remain. This is an **unsigned remote HTTPS wrapper**, not an embedded candidate snapshot; physical Android/WebView/GPS, signing and Play acceptance remain unverified.
+
+A **workspace reset around 21:12 UTC** removed the original local checkout and review bundles. Remote Git objects, committed audit evidence, workflows/artifacts and canonical continuity survived. Current corrected evidence was independently restored/downloaded/reconstructed and rehashed as described in the final report. Do not treat old local paths as still present.
+
+The original dbb5 report was recovered byte-for-byte: **6,939 bytes**, SHA-256 **9c7c888a57c6f43c2b6df2139e6cfcfb6953f3902c405921946c490e856a0a73**. Its old **6,633,496-byte evidence ZIP was not retained or restored**. Pre-reset independent probe stdout was also lost; its observed 68 focused, 546 calendar and 63 cutoff checks are not represented as recovered raw files. This is a new bf884 report/package identity.
+
+Original dbb5 remains **FAIL/HOLD**, with seven role-case failures, unreached plan tails and skipped geometry/final icons. Original browser artifact **11679797744**, SHA-256 **868da5d487c5f4d80133f4785d48833c3e16b1faa6f55ac4f81fda6bdbd0b060**, remains the remote failed-attempt identity. The unrelated mixed search receipt stays wholly omitted from public repository/archive publication.
+
+An intermediate 19:54 documentation blob **28bbd6a37616bbe45bdea234107144872cdeeb70** was created, but its tree operation was canceled and no commit/ref followed. That stale in-progress draft never became canonical. This checkpoint records current terminal evidence after the explicitly approved documentation retry.
+
+## NEXT / HOLD
+
+**Candidate verification is complete; stop before release. Web execution awaits only the owner's separate concrete merge/deployment/production-import authorization.** Preserve exact bf884; once authorized, reverify the exact release/rollback path before execution. Physical Android is a separate nonblocking web-scope limit. Do not substitute the evidence-export commit or infer release authorization from candidate PASS. No automatic waiver, main merge or deployment.
+
+Cadaver remains a separate later bounded reclearance queue: actual 2026 poster pixels and owner-attested official Facebook origin are materially new; exact account/post/publication time is still not independently observed. Source-class and derived-expiry acceptance must be explicit before another candidate addition. No current seven-record expansion or repeated source hunt. Rolla stays excluded and must expire **2026-10-11T05:00:00Z**. The underlying research gate remains 8 ready of 17 / nine factual HOLD, seven selected.
+
+Performance PR #61/c78 and adaptive D remain parked **MORE EVIDENCE REQUIRED, provider-limited category B**. **“Radial discovery becomes an audit layer.”** remains design intent. No performance adoption, benchmark retry, budget reset/reserve or Phase 3 hardening. Retain all inherited lint/layout/temporary-icon, source-freshness, controlled-provider and physical-device limits.
+
+Fresh **22:13:35 UTC** main/project/deployment checks retain **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2** and **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY**. Independent served-asset binding confirms the unchanged 52 V1 + legacy Werehouse live bundle and no Phase 4 markers; it is not an interactive production smoke.
+
+Documentation stays on `integration/continuity-refresh-2026-10-07`, with **integration/** deployment disabled and unchanged `vercel.json` blob **65925d91f882a10433e3eb43f53ed802914c969b**. No avoidable docs-only production deployment, application change, merge, production import, Vercel/protection change, operator contact, paid API, signing or Play action.
+
+**PARENT CONTINUITY COMMIT:** `4325cfeeb1515883cd5078c14e3991e0b7eb979e`; **PARENT TREE:** `7addde26dcf2024433f173468dc4346f0f2632c3`. The entire prior **763,872-byte** continuity body, SHA-256 **fbc500d56c304948629983ea2a290524def4f4234e594662b5b45c9d0184502a**, is preserved unchanged below.
+
+---
+
 # Phase 4 Hosted Attempt Failed — Test-Assertion Remediation NEXT (2026-10-10 19:51 UTC)
 
 ## CURRENT — authoritative failure gate

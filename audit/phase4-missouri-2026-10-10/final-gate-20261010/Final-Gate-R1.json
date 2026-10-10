@@ -1,0 +1,139 @@
+{
+  "package": "PHASE4-FINAL-EXACT-CANDIDATE-GATE-R1",
+  "recordedAt": "2026-10-10T22:14:16.641Z",
+  "candidate": {
+    "sha": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "tree": "7d91061065f5e7e36e4f76307a7b915a66ea006d",
+    "soleParent": "dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f",
+    "mainBase": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "draftPr": 62,
+    "status": "Independent bounded exact-head PASS"
+  },
+  "scope": {
+    "selected": 7,
+    "newIdentities": 6,
+    "existingIdentityAmendments": 1,
+    "candidateV1": 59,
+    "mainV1": 52,
+    "mainDistinctIncludingLegacyWerehouse": 53
+  },
+  "webRun": {
+    "id": 38081550608,
+    "number": 412,
+    "job": 114299322669,
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "androidRun": {
+    "id": 38081550610,
+    "number": 83,
+    "job": 114299323024,
+    "status": "completed",
+    "conclusion": "success",
+    "signingJob": 114300076400,
+    "signing": "skipped"
+  },
+  "results": {
+    "eightScenarioSuites": 1091,
+    "eightScenarioSuitesPassed": 1091,
+    "casinoChecks": 16,
+    "locationChecks": 19,
+    "phase4": 164,
+    "phase4Passed": 164,
+    "qualifiedPlanCases": 7,
+    "planNotes": 31,
+    "decodedPlanImages": 14,
+    "reachablePlanControls": 21,
+    "geometryComparisons": 489,
+    "geometryPassed": 489,
+    "geometryIdentities": 59,
+    "geometryPngs": 3507,
+    "byteIdenticalControlPngPairs": 978,
+    "geometryPixelsDirectlyViewed": 51,
+    "applicationPlanPixelsDirectlyViewed": 7,
+    "ineligibleFirstStopControls": 15,
+    "expandedPlanParagraphs": 573,
+    "phase4ExpandedPlanParagraphs": 93,
+    "publicProviderCalls": 0,
+    "localTestsPassed": 1062,
+    "inheritedDocumentationSkips": 4
+  },
+  "proof": {
+    "sourceFiles": 472,
+    "sourceSha256": "cfd01395c9b9cefbe9447d3795bc3175d7bff76dfbd2a63929b1aeaa8399e020",
+    "hostedOutputFiles": 194,
+    "hostedOutputSha256": "f7e4568fa60778c155a0fee05c322b767e1707ef8510d43fe8a4770ff71d4f29"
+  },
+  "finalReport": {
+    "bytes": 15669,
+    "sha256": "496a360924249c00412eda8fcdd2c9c0f09e44a6a425c4a398389c6397dab4b8"
+  },
+  "compactPackage": {
+    "bytes": 17244015,
+    "sha256": "d719576ecf7c8a8bb620512632f51f410032b9e39fa418e6bdf52ae99508500b"
+  },
+  "manifestJsonSha256": "759f4fdf8b3c20ac7dee828096f26501e4df5e9c7dd9fcea1cebef0fb31d3f2f",
+  "checksumFileSha256": "7c1285ed2f9a7aaba7cbc6b1ef863ee72ece1c4edfa16919f3f81ca1f353962d",
+  "originalBrowserArtifact": {
+    "id": 11682503939,
+    "bytes": 761906766,
+    "sha256": "310afc592cc6f11c7ea9512b91afc296dd3025703f55ea29235f39b504cb971e",
+    "members": 7667,
+    "integrity": "All members SHA/CRC/safe-path/uniqueness PASS"
+  },
+  "export": {
+    "commit": "7ff29bf8473e701b4e4ed1199b666d05df8bad34",
+    "tree": "7655638363fc633b716f7ec8c9b21128a10e2187",
+    "parent": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "run": 38087364649,
+    "job": 114316560265,
+    "conclusion": "success",
+    "manifestArtifact": 11681874050,
+    "deliveryArtifacts": [
+      11681953846,
+      11681704325,
+      11681764335,
+      11681709366
+    ],
+    "applicationRerun": false,
+    "screenshotsRegenerated": false
+  },
+  "reset": {
+    "around": "2026-10-10T21:12:00Z",
+    "originalLocalReviewBundlesLost": true,
+    "dbbReportRestoredBytes": 6939,
+    "dbbReportSha256": "9c7c888a57c6f43c2b6df2139e6cfcfb6953f3902c405921946c490e856a0a73",
+    "oldDbbEvidenceZipRestored": false,
+    "preResetIndependentProbeStdoutRestored": false
+  },
+  "delivery": {
+    "at": "2026-10-10T21:34:44Z",
+    "messageId": "Sentinel_3fdfaed8afc08191ab44cf6f32dc64b1",
+    "reportLibraryId": "libfile_9d3e1eed89b48191b83d9d9e08a47d39",
+    "packageLibraryId": "libfile_4964c30207f08191b61472428ec2dfd6"
+  },
+  "documentation": {
+    "parent": "4325cfeeb1515883cd5078c14e3991e0b7eb979e",
+    "historicalUnreferencedBlob": "28bbd6a37616bbe45bdea234107144872cdeeb70",
+    "staleTreeCanceled": true,
+    "latestRetryExplicitlyAuthorized": true
+  },
+  "prewrite": {
+    "canonical": "4325cfeeb1515883cd5078c14e3991e0b7eb979e",
+    "main": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "candidate": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "production": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+    "state": "READY",
+    "gitSource": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "vercelConfigBlob": "65925d91f882a10433e3eb43f53ed802914c969b"
+  },
+  "prewriteAt": "2026-10-10T22:13:35.212Z",
+  "release": "HOLD solely for owner concrete web release authorization",
+  "physicalAndroid": "Separate, accepted nonblocking limitation for web scope; physical WebView/GPS/signing/Play unverified",
+  "cadaver": "Separate later bounded reclearance; no current batch addition",
+  "performance": "Parked MORE EVIDENCE REQUIRED; Radial discovery becomes an audit layer.",
+  "rolla": {
+    "selected": false,
+    "expiresAt": "2026-10-11T05:00:00Z"
+  }
+}

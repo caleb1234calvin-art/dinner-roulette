@@ -1,0 +1,61 @@
+{
+  "package": "PHASE4-FINAL-MINIMAL-AUDIT-ARCHIVE-R1",
+  "createdAt": "2026-10-10T22:14:16.641Z",
+  "scope": "Exact immutable report/manifest/receipt copies plus a derived final gate and explicit post-freeze clarifications. This is a minimal repository audit, not the entire raw browser archive or compact Library evidence package.",
+  "files": [
+    {
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/final-gate-20261010/INDEPENDENT-EXACT-BF884-VERDICT.md",
+      "source": "phase4-independent-runtime-bf884-restored/INDEPENDENT-EXACT-BF884-VERDICT.md",
+      "bytes": 15669,
+      "sha256": "496a360924249c00412eda8fcdd2c9c0f09e44a6a425c4a398389c6397dab4b8"
+    },
+    {
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/final-gate-20261010/FINAL-REVIEW-SHA256SUMS",
+      "source": "phase4-independent-runtime-bf884-restored/FINAL-REVIEW-SHA256SUMS",
+      "bytes": 17402,
+      "sha256": "7c1285ed2f9a7aaba7cbc6b1ef863ee72ece1c4edfa16919f3f81ca1f353962d"
+    },
+    {
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/final-gate-20261010/independent-export-reconstruction.json",
+      "source": "phase4-independent-runtime-bf884-restored/independent-export-reconstruction.json",
+      "bytes": 5837,
+      "sha256": "dbcf2a2db68b1e49ce55e98f069450f94fa4aa9f472a642410819c3821be2f9c"
+    },
+    {
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/final-gate-20261010/independent-browser-suite-summary.json",
+      "source": "phase4-independent-runtime-bf884-restored/independent-browser-suite-summary.json",
+      "bytes": 1863,
+      "sha256": "e48050c2e7e6ee44b884646647bbe2baf939ca276ed6358f15f67b3be25487a3"
+    },
+    {
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/final-gate-20261010/independent-phase4-plan-audit.json",
+      "source": "phase4-independent-runtime-bf884-restored/independent-phase4-plan-audit.json",
+      "bytes": 4538,
+      "sha256": "d5c176d351f884a355f5291f44dafa853cb1961b15843d0c175ae83d553f1aeb"
+    },
+    {
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/final-gate-20261010/historical/INDEPENDENT-EXACT-DBB5-VERDICT.md",
+      "source": "continuity-recovery-20261010T2128Z/INDEPENDENT-EXACT-DBB5-VERDICT.md",
+      "bytes": 6939,
+      "sha256": "9c7c888a57c6f43c2b6df2139e6cfcfb6953f3902c405921946c490e856a0a73"
+    },
+    {
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/final-gate-20261010/Review-Clarifications-R1.json",
+      "source": "Verifier post-freeze clarification; report hash unchanged",
+      "bytes": 1614,
+      "sha256": "5baaa22258860e99ac2bee889bb065706355b329cfac214576aa126dee576239"
+    },
+    {
+      "repositoryPath": "audit/phase4-missouri-2026-10-10/final-gate-20261010/FINAL-REVIEW-MANIFEST.json",
+      "source": "phase4-independent-runtime-bf884-restored/FINAL-REVIEW-MANIFEST.json",
+      "bytes": 28134,
+      "sha256": "759f4fdf8b3c20ac7dee828096f26501e4df5e9c7dd9fcea1cebef0fb31d3f2f"
+    }
+  ],
+  "rawSourceArtifact": 11682503939,
+  "rawSourceSha256": "310afc592cc6f11c7ea9512b91afc296dd3025703f55ea29235f39b504cb971e",
+  "correctionAcceptedCandidate": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "oldFailedCandidate": "dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f",
+  "privateChatLinksAndCadaverImagePublished": false,
+  "signedDownloadUrlsPublished": false
+}

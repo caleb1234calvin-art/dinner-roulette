@@ -1,0 +1,137 @@
+{
+  "candidate": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "phase4Scenarios": 164,
+  "phase4Passed": 164,
+  "scenarioCounts": {
+    "consumer-anything-category-320": 7,
+    "consumer-anything-category-390": 7,
+    "open-now": 7,
+    "ended": 7,
+    "next-year": 7,
+    "season-off": 7,
+    "radius-exclusion": 7,
+    "mixed-alias-toggle-cache": 7,
+    "resume-expiry-options": 7,
+    "resume-expiry-result": 7,
+    "provider-failure": 7,
+    "favorite-alias-cache-resume-unsave": 7,
+    "negative-alias-beats-canonical-favorite": 7,
+    "alias-exclusion-expiry-and-not-tonight": 7,
+    "affirmed-favorites-direct-reload-expiry": 7,
+    "qualified-night-plan": 7,
+    "explicit-nonseasonal-filter": 7,
+    "pending-rpc-at-expiry": 7,
+    "stale-werehouse-exact-id-current": 1,
+    "stale-werehouse-exact-id-exact-cutoff": 1,
+    "stale-werehouse-exact-id-next-year": 1,
+    "destination-dst-fallback": 1,
+    "exact-november-dates-and-unlisted-browse": 1,
+    "late-fall-anything-cache-expiry": 1,
+    "old-receipt-survives-batch": 32
+  },
+  "plans": [
+    {
+      "id": "date-night-mo26-phase4-wolfmans-house-of-screams",
+      "passed": true,
+      "role": "scare",
+      "notes": 3,
+      "decodedImages": 2,
+      "reachableControls": 3,
+      "directions": "exact visitor address",
+      "information": "exact accepted website"
+    },
+    {
+      "id": "date-night-werehouse-joplin",
+      "passed": true,
+      "role": "scare",
+      "notes": 2,
+      "decodedImages": 2,
+      "reachableControls": 3,
+      "directions": "exact visitor address",
+      "information": "exact accepted website"
+    },
+    {
+      "id": "date-night-mo26-phase4-fearstone-forest",
+      "passed": true,
+      "role": "scare",
+      "notes": 6,
+      "decodedImages": 2,
+      "reachableControls": 3,
+      "directions": "exact visitor address",
+      "information": "exact accepted website"
+    },
+    {
+      "id": "date-night-mo26-phase4-fun-time-farms",
+      "passed": true,
+      "role": "scare",
+      "notes": 2,
+      "decodedImages": 2,
+      "reachableControls": 3,
+      "directions": "exact visitor address",
+      "information": "exact accepted website"
+    },
+    {
+      "id": "date-night-mo26-phase4-carolyns-pumpkin-patch",
+      "passed": true,
+      "role": "settle",
+      "notes": 7,
+      "decodedImages": 2,
+      "reachableControls": 3,
+      "directions": "exact visitor address",
+      "information": "exact accepted website"
+    },
+    {
+      "id": "date-night-mo26-phase4-terror-on-route-66",
+      "passed": true,
+      "role": "scare",
+      "notes": 6,
+      "decodedImages": 2,
+      "reachableControls": 3,
+      "directions": "exact visitor address",
+      "information": "exact accepted website"
+    },
+    {
+      "id": "date-night-mo26-phase4-field-of-screams-branson",
+      "passed": true,
+      "role": "scare",
+      "notes": 5,
+      "decodedImages": 2,
+      "reachableControls": 3,
+      "directions": "exact visitor address",
+      "information": "exact accepted website"
+    }
+  ],
+  "notes": 31,
+  "decodedImages": 14,
+  "reachableControls": 21,
+  "network": {
+    "interceptedProviderCalls": 680,
+    "blockedServerRequests": [],
+    "forwardedExternalCalls": 0
+  },
+  "publicProviderCalls": 0,
+  "proof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "cfd01395c9b9cefbe9447d3795bc3175d7bff76dfbd2a63929b1aeaa8399e020",
+      "files": 472
+    },
+    "startedAt": "2026-10-10T19:53:43.302Z",
+    "output": {
+      "sha256": "f7e4568fa60778c155a0fee05c322b767e1707ef8510d43fe8a4770ff71d4f29",
+      "files": 194
+    },
+    "completedAt": "2026-10-10T19:53:46.427Z"
+  },
+  "actualScreenshotPixelsReviewed": [
+    "seasonal-phase4-recovery-seven/0-qualified-night-plan-plan-note-date-night-mo26-phase4-wolfmans-house-of-screams-0.png",
+    "seasonal-phase4-recovery-seven/1-qualified-night-plan-plan-note-date-night-werehouse-joplin-1.png",
+    "seasonal-phase4-recovery-seven/2-qualified-night-plan-plan-note-date-night-mo26-phase4-fearstone-forest-1.png",
+    "seasonal-phase4-recovery-seven/3-qualified-night-plan-plan-note-date-night-mo26-phase4-fun-time-farms-1.png",
+    "seasonal-phase4-recovery-seven/4-qualified-night-plan-plan-note-date-night-mo26-phase4-carolyns-pumpkin-patch-2.png",
+    "seasonal-phase4-recovery-seven/5-qualified-night-plan-plan-note-date-night-mo26-phase4-terror-on-route-66-1.png",
+    "seasonal-phase4-recovery-seven/6-qualified-night-plan-plan-note-date-night-mo26-phase4-field-of-screams-branson-1.png"
+  ]
+}
