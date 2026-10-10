@@ -1,3 +1,33 @@
+# PR #61 R5 Independent Exact Local Validation PASS — Hosted Acceptance Pending (2026-10-10 00:21 UTC)
+
+## CURRENT
+
+Exact draft PR61 **c78b97175cc094436e454fa888e1ed83486f750d**, tree **6f7130dc46e5decc9b045c2841b63c73406ae2ae**, parent **cd78a0d8b5efb7fee818da5b2ea79588e28c8270**, has fresh **independent local validation PASS**. Author local gates also pass. Overall candidate acceptance remains HOLD until hosted browser/geometry evidence and final review finish.
+
+[Full independent local report](audit/hybrid-loading-2026-10-09/R5-Exact-Local-Validation.md), SHA-256 **fc98da93ee353dc1d0d0ad72abbc618ea1ed84c9db1b51c22de4fa0915f9fea5**:
+
+- **1,059 tests PASS (988 repository +71 application), zero failures, four documented external-documentation skips.**
+- Typecheck PASS; ESLint **0 errors /6 inherited warnings**, unchanged policy.
+- Safe auth-enabled migration-free direct Vite build and capture/complete/verify proof PASS.
+- Source **853fe21f5c661a59d021ce0f870b391ce6d3cc14653b693f4c5db46ab88c05b2 /477 files**; independent output **147c95da2d5e6431788d29bbd06f97e3cacb93a2bf717580106b26ba796e4755 /194 files**.
+- Five reviewed test hashes match; nine parent-relative paths are test/evidence only. Runtime, server, public assets, dependencies, workflow and production configuration remain identical to R3. Tracked checkout stayed clean.
+
+The initial verifier command mistakenly carried build-only VITE_AUTH_ENABLED=true into npm test. Two repository-default-false wrapper tests correctly failed. That attempt is preserved; clearing the build-only variable and rerunning on unchanged source passed. This was an invocation correction, with no source remediation or assertion suppression.
+
+Prior independent runtime safety probes remain bound to byte-identical runtime; they are not claimed as newly rerun in this workspace. The fresh full suite includes committed regressions. Hosted web **38007930982** was still running at the coordinator observation, with steps1–17 passed and V1 underway; all remaining gates require actual terminal results. Partial progress is not full acceptance.
+
+## NEXT / HOLD
+
+Finish exact-head hosted hybrid/seasonal/geometry execution, artifact integrity and actual evidence inspection, followed by independent final review. **Architecture/performance remains MORE EVIDENCE REQUIRED** separately from functional acceptance. The incomplete a4 benchmark, failed earlier candidates and all original receipts remain preserved. No new live requests, restart, compensating traffic or performance optimization.
+
+No merge/deploy/settings/release waiver. Missouri and Cadaver remain parked; Cadaver lacks reliable attraction-specific **2026 operation/date binding and supported expiry**. Physical Android, signing/Play and existing backlog limits remain.
+
+Fresh00:20 reads confirm PR61 remains draft/unmerged at c78, main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**, and production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/sourcefe22**. All52 shipped records unchanged. Only deployment-disabled integration continuity is updated.
+
+**PARENT CONTINUITY COMMIT:** `b4cbf07fe0aa72e6f95d7dbf57c76224079967cc`; **PARENT TREE:** `4e93ec4a1dbff09ac34d3ff4537813374f42695c`. Prior history follows verbatim.
+
+---
+
 # PR #61 R5 Test-Only Candidate Frozen — Full Acceptance Pending (2026-10-10 00:12 UTC)
 
 ## CURRENT
