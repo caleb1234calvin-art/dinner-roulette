@@ -1,3 +1,62 @@
+# PR #61 Final Evidence Recovery and Functional Verification PASS — PERFORMANCE / ADOPTION HOLD; STOP (2026-10-10 05:47 UTC)
+
+## CURRENT
+
+**Both owner-authorized operations are complete at this checkpoint: original evidence export/reconstruction and canonical documentation retry. Functional candidate verification is PASS. Performance/adoption and release readiness remain HOLD.** This is not a release-ready label or merge/deployment approval.
+
+Exact open draft [PR #61](https://github.com/caleb1234calvin-art/dinner-roulette/pull/61), `integration/date-night-primary-radial-audit-1`:
+- Candidate **c78b97175cc094436e454fa888e1ed83486f750d**
+- Tree **6f7130dc46e5decc9b045c2841b63c73406ae2ae**
+- Sole parent **cd78a0d8b5efb7fee818da5b2ea79588e28c8270**
+- Runtime remains byte-identical to R3; R4/R5 changes were reviewed test/evidence corrections.
+- Independent **1,059 tests PASS (988+71), zero failures /4 documented skips**, typecheck PASS, lint0errors/6 inherited warnings, safe auth-enabled migration-free build/proof PASS.
+- Exact web **38007930982 / job114080948337 SUCCESS**; Android automated readiness **38007931025 SUCCESS**. Physical Android/WebView/GPS remains HOLD; signing/Play outside scope.
+
+[Full final independent report](audit/hybrid-loading-2026-10-09/R5-Final-Independent-Verification.md), SHA-256 **f8df72b821b2f7e47c8cfe46ca79e67c0f3afff5017a68bddda1343a8f599f54**, Library **libfile_78fc17260c048191a9c3f14c4523c5e0**, was read in full. It independently closes the oversized-evidence inspection HOLD and establishes the scoped functional verdict. [Independent integrity receipt](audit/hybrid-loading-2026-10-09/R5-Integrity-Independent.json), SHA **ff0bff7773dca69f1ba50b7566aab638b79ebd76f7fac23d69c3c59fabcfe046**.
+
+## Verified original archive and exact export identities
+
+Original artifact **11655536362** from web38007930982 is **664,570,042 bytes**, independently reconstructed SHA-256 **98c26695fecc09ad4625263f9f1b8546a832fae90320afa8b434ac38fc08960f**. All **6,614 members** and extracted files were independently checked for exact membership, unique safe paths, size, CRC32 and SHA256. This is verified original evidence, not regenerated application behavior.
+
+Export branch `integration/pr61-evidence-export-2026-10-09`, commit **e99e9423c67ab8d1301e4413e0f95d5111155465**, tree **dec32602319b1fc59e78c6218005aaef0681550d**, parent **c78b97175cc094436e454fa888e1ed83486f750d**. Only the evidence-export workflow differs; no candidate source identity changed. Export **run38028198537 / job114143440638 SUCCESS**. No new PR or deployment.
+
+Ordered raw parts, distinct from their GitHub ZIP wrappers:
+1. GitHub artifact **11661161616**, raw `original-11655536362.zip.part001`, **251,658,240 bytes**, SHA **212b280ceade7340613e3997e5a777c2ffaee432c83ba770c21e861e58408bcf**. Library **libfile_c645d3b9a9f481918cdc723d7f52dca3**.
+2. Artifact **11661281494**, raw part002, **251,658,240 bytes**, SHA **c99adb6577cb017e05b97e6b928be3e570716ad434a0606bc6d7b49ae246fa31**. Library **libfile_b49e52ca02a48191bde057113fa5c87c**.
+3. Artifact **11660946830**, raw part003, **161,253,562 bytes**, SHA **a6ee02ea0cd4338a0897bf745d6e77f03d5688c79f29f749e0f66b922fbbf800**. Library **libfile_0f9debe4c16c81918470d3cd2347d508**.
+
+Complete manifest artifact **11661406304**, `manifest.json` SHA **b9f04db1b757faf282b04bfc2a68635852735ff7920bfa75a9545eeaa2e66b35**, Library **libfile_e8cc3a7b0ccc81918e1dfd51783fae39**. Local recoverable manifest: `/tmp/hybrid-r5-final-evidence/manifest/manifest.json`; canonical accessible originals remain in the named GitHub Actions export artifacts and Library. Author review SHA **656f03c58658179eca8560ae14d94dae53a6502e008819a339c01b0bb3b9bcd1**, Library **libfile_f4f4dabdd938819198ca5ddcc3d5731b**. All raw parts preserve exact ordered original bytes; wrapper sizes differ.
+
+## Functional evidence scope
+
+**970 browser scenarios/checks PASS**:917 seasonal,18 hybrid,16 casino and19 location. **426 geometry comparisons +14 no-plan controls PASS**. Maximum matched-ordinary height excess: options0px, result4.671875px, plan3px. Result comparison uses matched title/address, not the unmatched shortest-card control.
+
+All hosted proofs bind auth=true, source **853fe21f5c661a59d021ce0f870b391ce6d3cc14653b693f4c5db46ab88c05b2 /477 files**, hosted output **8bcd2d72c1c8e64a7b9dc65b4b1ab88b7747bb1d57c129e871e44b3998103530 /194 files**. Separate local output differs; no cross-build reproducibility claim.
+
+Independent raw receipts, assertions and representative pixels establish usable primary/curated controls before background completion, failed-audit usability, stable valid open decisions, genuine plan/no-pair behavior, actual same-document manual location replacement with upstream abort, strict lifecycle/radius/Open Now/expiry/cache/no2027 policies. Prior HYB-IV01/02/03 are closed on unchanged runtime. Historical ad hoc probes were not newly rerun after environment refresh; fresh full/browser suites include the regressions.
+
+Representative pixel inspection covered manual location, stable choices, mobile, seasonal/ordinary matched results, expanded plan Details and late-fall Details. Existing narrow Directions clipping remains inherited; intentional truncation has full facts in Details. One hybrid plan screenshot caught a transient image placeholder; dedicated artwork/geometry evidence establishes loaded images, not every arbitrary screenshot instant. No pixel-perfect claim. Controlled provider fixtures do not establish live provider reliability or physical Android behavior.
+
+## PERFORMANCE / ADOPTION HOLD
+
+**Radial discovery becomes an audit layer. Recommendation remains MORE EVIDENCE REQUIRED.**
+
+Candidate-only controlled browser READY1352–1496ms (median1421.5ms) includes immediate curated availability and is not an A/B first-interaction speedup. Some receipts finish before background completion; latest response is not universal audit completion.
+
+Prior Track F global failure-counter reset remains protocol NOT PASS. The later a4 benchmark remains incomplete:327 accounted attempts, seven finalized cases plus an unfinalized eighth, exit13/unsettled await. Both observed hybrid50-mile primaries failed and the audit recovered nine venues each. No successful-primary omission superiority, broad recall/reliability or complete repeated comparative benefit was established. Controlled288/72 parity and omission mechanisms do not change baseline first-useful100ms equaling noncurated hybrid100ms. Additional audit cost and higher local cached-radius CPU remain concerns. Failed attempts, timing confounds and all prior reports are preserved; no new traffic filled the gaps.
+
+## NEXT / STOP
+
+**STOP under the owner's05:37 approval.** Evidence export and continuity publication/readback are the terminal authorized operations. Report the exact checkpoint SHA, evidence IDs/hashes and these CURRENT / NEXT / HOLD distinctions, then perform no further work. Further bounded performance research or another architecture direction requires a new owner decision. No merge/deploy/settings/waiver, no automatic continuation.
+
+Missouri discovery and Cadaver remain parked. Cadaver's exact factual/runtime blocker is reliable attraction-specific **2026 operation/date binding and supported expiry**; no accepted import projection. Other backlog, physical Android and signing/Play limits remain unchanged.
+
+Fresh05:47 reads confirm main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**, production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/sourcefe22**,52 shipped records unchanged. PR61 remains draft/unmerged at c78. Both exact candidate CI and export run are successful. Documentation branch remains deployment-disabled.
+
+**PARENT CONTINUITY COMMIT:** `7fe0a9f960719d17a58a547f3a5d883a27361481`; **PARENT TREE:** `59b7b0f75bebc6c9deacfc87dea78d6d18e51733`. Previous pending labels are historical and superseded only within the explicit gates above. All history follows verbatim.
+
+---
+
 # PR #61 R5 Hosted Web SUCCESS — Artifact Integrity and Final Acceptance Pending (2026-10-10 05:39 UTC)
 
 ## CURRENT
