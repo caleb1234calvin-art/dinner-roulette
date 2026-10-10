@@ -1,3 +1,38 @@
+# PR #61 R4 Hosted HOLD — Seventeen Independently Classified Harness Failures (2026-10-10 00:07 UTC)
+
+## CURRENT
+
+Exact draft PR61 remains **cd78a0d8b5efb7fee818da5b2ea79588e28c8270**, tree **f43672a114fd772cfc0084fc149c41abcb500104**, parent **63b4c0096c2af305019cc7f5adf67e55720b562a**, branch `integration/date-night-primary-radial-audit-1`. **Full candidate acceptance is HOLD.** Bounded test-only R5 remediation is authorized and active; no successor is published at this checkpoint.
+
+Hosted web **38004387318 / job114069697671 FAILED** at cumulative15 step20 after steps1–19 passed. Across the executed hybrid/seasonal suites, **530 attempted: 513 PASS / 17 FAIL**. Hybrid18/18, two-record23/23, V1 97/97, ten-record157/157; cumulative15 **218/235 PASS, 17 FAIL**. Casino/location workflow checks passed separately and are not added to those counts. Astra eleven, additional, card geometry and later icon step were **SKIPPED**, not PASS. Prior independent local **1,055 PASS** and scoped runtime safety remain historical exact-candidate evidence, not a waiver of hosted failures.
+
+Artifact **11651538001**, **279,189,204 bytes**, SHA-256 **b29ab2e831c08569f711a49ee02911c0ab0eaf9949d0f421c653e983de524d0b**: all 2,285 member paths and CRCs verified by the browser worker. Independent reviewer inspected verdicts, raw RPCs, build proof, events and representative screenshots. Auth-enabled build source **72350f5b1eb681130609a1b904c0b3af056f225591ed3650704afe38e7f6651f /477 files**; output **4ac737c3a629765221f513097d996189817444ed84e37a2999f1471b05a92e45 /194 files**.
+
+## Independent failure classification
+
+[Full independent report](audit/hybrid-loading-2026-10-09/cd78-Hosted-Failure-Classification.md), SHA **24af9e254f2e88bc1bb27170c71c54c34a5063c9a44410b18487348fe30b0804**, establishes **harness assumptions**, with no demonstrated new runtime defect:
+
+- Fifteen late-fall cases compare raw primary season toggle true with audit false after the global Halloween UI/provider window. Both have identical origin/radius and ordinary categories, and effective Halloween is false at the actual request date. The correction must bind effective context to request time while retaining strict wrong-season/category/origin rejection; deleting season matching is not authorized.
+- Two mixed cases impose old patched-core15.05-mile ownership on the unpatched primary response. The inherited catalog acquisition envelope is max(selectedRadius,15)+1 miles, and the two records are15.748661 miles apart. The raw superset does not establish visible out-of-radius eligibility. Correct only the explicit primary-envelope assertion, preserving strict visible radius, catalog/lifecycle and expiry assertions.
+
+Normal manual-location browser evidence is now scoped PASS on cd78: same-document UI change, persisted Columbia coordinates, abort of held old-origin primary/audit, selectable new-origin pool and stable options. Representative screenshot shows Columbia with four activities. This is controlled fixture evidence, not public-provider, comparative performance or physical Android proof. Replacement audit fixture phase labels are unsuitable for independent acquisition-count metrics.
+
+## Evidence and NEXT
+
+[Author browser report](audit/hybrid-loading-2026-10-09/cd78-hosted-browser-review.md), SHA **764ba5db6a534de0579d5e4130c7d6a856cd5e1e8a94b9ff13c2434a7c67511b**, and [full JSON](audit/hybrid-loading-2026-10-09/cd78-hosted-browser-review.json), SHA **ec6a4c810a79484eaaa8aed1c4ad4eb1e9fa3d41ebe8613872a4169ed206338d**, preserve every failed case. Their producer-time “independent classification pending” labels are superseded only by the separate independent report above. Original job-log fetch failed with Transport closed; recovered complete artifact evidence supports this checkpoint.
+
+Finish only the authorized bounded R5 test corrections, independently inspect the diff, freeze an exact new remote identity, and rerun all required gates and downstream browser/geometry evidence. Preserve this failed run. No guessed new candidate identity or previous-head acceptance transfer.
+
+## HOLD / unchanged boundaries
+
+**Architecture/performance remains MORE EVIDENCE REQUIRED / HOLD. No further live traffic, restart, replacement ledger or compensating calls.** The a4 terminal 327-attempt benchmark remains incomplete. No merge, deployment, settings change, new release waiver or Missouri/Cadaver resumption. Cadaver remains HOLD for reliable attraction-specific **2026 operation/date binding and supported expiry**. Physical Android/signing/Play and parked backlog limits remain unchanged.
+
+Fresh 00:03 reads confirmed main **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, tree **8d5059c9fee871c522616971cce0a80b153e4d23**, production **dpl_8xyE9R3BxyE1883QpavaEBWV2LGa READY/sourcefe22**, and current cd78 draft/unmerged. All52 shipped records are unchanged. Publication uses deployment-disabled integration continuity only.
+
+**PARENT CONTINUITY COMMIT:** `1a4226af3cd26bb09e97aa35379f4988872d788e`; **PARENT TREE:** `6e5c8bd92722adce3a2ea3d6caec1ae812c473d3`. All prior history follows verbatim.
+
+---
+
 # PR #61 R4 Test-Only Remediation Frozen — Exact-Head Acceptance Pending (2026-10-09 23:26 UTC)
 
 ## CURRENT
