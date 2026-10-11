@@ -1,0 +1,298 @@
+{
+  "checkedAt": "2026-10-11T06:16:48.801Z",
+  "verdict": "VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION",
+  "repository": {
+    "main": {
+      "sha": "bf88443932739a9448fac8d27fd845e9947cf697",
+      "tree": "7d91061065f5e7e36e4f76307a7b915a66ea006d",
+      "protected": false
+    },
+    "rulesets": [],
+    "pr": {
+      "number": 63,
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "base": "bf88443932739a9448fac8d27fd845e9947cf697",
+      "draft": true,
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "commits": 2,
+      "changedFiles": 19,
+      "autoMerge": null
+    },
+    "commit": {
+      "sha": "f92870632b71def18d7642596dc9dd3357675f76",
+      "tree": "9153ead1946bbbb7e38c45981c47332997001c3e",
+      "parents": [
+        "ca1a2979fa3c07fe2ed4f417e153f152288d1553"
+      ]
+    }
+  },
+  "production": {
+    "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+    "state": "READY",
+    "source": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "aliases": [
+      {
+        "host": "pickforus.app",
+        "checkedAt": "2026-10-11T03:04:24.327Z",
+        "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+        "state": "READY",
+        "source": "bf88443932739a9448fac8d27fd845e9947cf697"
+      },
+      {
+        "host": "www.pickforus.app",
+        "checkedAt": "2026-10-11T03:04:24.327Z",
+        "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+        "state": "READY",
+        "source": "bf88443932739a9448fac8d27fd845e9947cf697"
+      },
+      {
+        "host": "dinner-roulette-chi.vercel.app",
+        "checkedAt": "2026-10-11T03:04:24.327Z",
+        "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+        "state": "READY",
+        "source": "bf88443932739a9448fac8d27fd845e9947cf697"
+      },
+      {
+        "host": "dinner-roulette-minions-9e2c.vercel.app",
+        "checkedAt": "2026-10-11T03:04:24.327Z",
+        "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+        "state": "READY",
+        "source": "bf88443932739a9448fac8d27fd845e9947cf697"
+      },
+      {
+        "host": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+        "checkedAt": "2026-10-11T03:04:24.327Z",
+        "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+        "state": "READY",
+        "source": "bf88443932739a9448fac8d27fd845e9947cf697"
+      }
+    ],
+    "httpReceipt": "production-alias-http.json"
+  },
+  "rollback": {
+    "supportedPrevious": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+    "route": "Postrelease authenticated Instant Rollback reached enabled confirmation; cancelled without execution. Route is tied to current HaYi deployment.",
+    "implications": [
+      "Reassign production aliases to previous build",
+      "Use original environment and cron",
+      "Pause automatic production promotion until rollback is removed"
+    ],
+    "retained": [
+      {
+        "id": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+        "state": "READY",
+        "source": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+        "url": "dinner-roulette-55q5rf8y3-minions-9e2c.vercel.app",
+        "target": "production"
+      },
+      {
+        "id": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+        "state": "READY",
+        "source": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+        "url": "dinner-roulette-ezfgoqn2y-minions-9e2c.vercel.app",
+        "target": "production"
+      },
+      {
+        "id": "dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv",
+        "state": "READY",
+        "source": "213502ef8cf3f67d75e6d9c9c8ff43f9f656890c",
+        "url": "dinner-roulette-j8zc29052-minions-9e2c.vercel.app",
+        "target": "production"
+      }
+    ],
+    "olderArbitraryInstantRollback": "Not assumed; observed Hobby UI requires Pro."
+  },
+  "candidateDeployments": 0,
+  "checks": [
+    {
+      "id": 114378142097,
+      "name": "validate",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114378142097",
+      "startedAt": "2026-10-11T03:23:27Z",
+      "completedAt": "2026-10-11T03:23:30Z"
+    },
+    {
+      "id": 114376293230,
+      "name": "sign-upload-bundle",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "skipped",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379726/job/114376293230",
+      "startedAt": "2026-10-11T03:11:42Z",
+      "completedAt": "2026-10-11T03:11:42Z"
+    },
+    {
+      "id": 114375637146,
+      "name": "Browser (geometry)",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114375637146",
+      "startedAt": "2026-10-11T03:07:37Z",
+      "completedAt": "2026-10-11T03:17:12Z"
+    },
+    {
+      "id": 114375637051,
+      "name": "Browser (seasonal-next-missouri)",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114375637051",
+      "startedAt": "2026-10-11T03:07:37Z",
+      "completedAt": "2026-10-11T03:14:02Z"
+    },
+    {
+      "id": 114375636988,
+      "name": "Browser (date-night-radial)",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114375636988",
+      "startedAt": "2026-10-11T03:07:37Z",
+      "completedAt": "2026-10-11T03:09:43Z"
+    },
+    {
+      "id": 114375636978,
+      "name": "Browser (seasonal-astra)",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114375636978",
+      "startedAt": "2026-10-11T03:07:37Z",
+      "completedAt": "2026-10-11T03:18:47Z"
+    },
+    {
+      "id": 114375636965,
+      "name": "Browser (casino)",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114375636965",
+      "startedAt": "2026-10-11T03:07:37Z",
+      "completedAt": "2026-10-11T03:08:31Z"
+    },
+    {
+      "id": 114375636963,
+      "name": "Browser (seasonal-astra-extras)",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114375636963",
+      "startedAt": "2026-10-11T03:07:37Z",
+      "completedAt": "2026-10-11T03:20:13Z"
+    },
+    {
+      "id": 114375636944,
+      "name": "Browser (seasonal-ten)",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114375636944",
+      "startedAt": "2026-10-11T03:07:37Z",
+      "completedAt": "2026-10-11T03:18:41Z"
+    },
+    {
+      "id": 114375636927,
+      "name": "Browser (seasonal-phase4)",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114375636927",
+      "startedAt": "2026-10-11T03:07:37Z",
+      "completedAt": "2026-10-11T03:19:11Z"
+    },
+    {
+      "id": 114375636920,
+      "name": "Browser (seasonal-cumulative)",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114375636920",
+      "startedAt": "2026-10-11T03:07:37Z",
+      "completedAt": "2026-10-11T03:23:25Z"
+    },
+    {
+      "id": 114375636906,
+      "name": "Browser (seasonal-completeness-v1)",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114375636906",
+      "startedAt": "2026-10-11T03:07:38Z",
+      "completedAt": "2026-10-11T03:14:38Z"
+    },
+    {
+      "id": 114375636899,
+      "name": "Browser (location)",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114375636899",
+      "startedAt": "2026-10-11T03:07:37Z",
+      "completedAt": "2026-10-11T03:08:39Z"
+    },
+    {
+      "id": 114375636896,
+      "name": "validate-android",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379726/job/114375636896",
+      "startedAt": "2026-10-11T03:07:37Z",
+      "completedAt": "2026-10-11T03:11:42Z"
+    },
+    {
+      "id": 114375636777,
+      "name": "Browser (seasonal-two)",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114375636777",
+      "startedAt": "2026-10-11T03:07:38Z",
+      "completedAt": "2026-10-11T03:10:13Z"
+    },
+    {
+      "id": 114375636655,
+      "name": "checks",
+      "head": "f92870632b71def18d7642596dc9dd3357675f76",
+      "status": "completed",
+      "conclusion": "success",
+      "detailsUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/job/114375636655",
+      "startedAt": "2026-10-11T03:07:37Z",
+      "completedAt": "2026-10-11T03:08:41Z"
+    }
+  ],
+  "runs": [
+    {
+      "id": 38107379726,
+      "name": "Pick For Us Android Release Readiness",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 85,
+      "jobs_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/38107379726/jobs",
+      "logs_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/38107379726/logs",
+      "workflow_id": 351386078
+    },
+    {
+      "id": 38107379751,
+      "name": "Validate Dinner Integration",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 414,
+      "jobs_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/jobs",
+      "logs_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/38107379751/logs",
+      "workflow_id": 354688615
+    }
+  ],
+  "ownerAuthority": {
+    "pr62Waiver": "CONSUMED",
+    "pr63Release": "NOT AUTHORIZED",
+    "next": "Owner release decision and fresh preflight; a separate waiver would be needed if main remains unprotected."
+  }
+}
+

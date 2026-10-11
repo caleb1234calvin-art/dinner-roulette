@@ -1,0 +1,2406 @@
+{
+  "ref": "f92870632b71def18d7642596dc9dd3357675f76",
+  "tree": "9153ead1946bbbb7e38c45981c47332997001c3e",
+  "source": {
+    "sha256": "f5e2385ea77bead33b8fec64c3d7dbc939718e34eeedf12acb0722a1a7c11bba",
+    "files": 477
+  },
+  "roots": [
+    "src",
+    "server",
+    "public",
+    "scripts",
+    "package.json",
+    "package-lock.json",
+    "vite.config.ts",
+    "tsconfig.json",
+    "vercel.json"
+  ],
+  "entries": [
+    {
+      "path": "src/components/app-shell.tsx",
+      "bytes": 2017,
+      "sha256": "8c3e25f9efdfb564dd953bb71acb068544860460ae81ac330eac9c768b113d7f"
+    },
+    {
+      "path": "src/components/date-night-home.tsx",
+      "bytes": 21711,
+      "sha256": "cf5b4a2e9b903c81d6de8afb68fd665907715e20b690b2258f947e526c1ce300"
+    },
+    {
+      "path": "src/components/date-night-plan-overlay.tsx",
+      "bytes": 7570,
+      "sha256": "85c1c962f2c26dce10c079471ccab83f7a9696865b681360a7740a08d8d37690"
+    },
+    {
+      "path": "src/components/discovery-status.tsx",
+      "bytes": 1950,
+      "sha256": "0af74d7fc2888cd3ac42ed1772b2ea38f9de944d40075492cfacef09d2fff5c6"
+    },
+    {
+      "path": "src/components/favorites-page.tsx",
+      "bytes": 6885,
+      "sha256": "c2efb384f19bb401471b5a96c6defa91387307b1c593a8d559986463bb943e57"
+    },
+    {
+      "path": "src/components/halloween-date-night-panel.tsx",
+      "bytes": 15417,
+      "sha256": "92dc571ac646c21438a8f67e609f7359784d6ff9c3345da4b068ffa1d4e8305d"
+    },
+    {
+      "path": "src/components/history-page.tsx",
+      "bytes": 3117,
+      "sha256": "4497e803ad750fba5253380128a9e09c30d1972d90493d21ea0a3922883fe67d"
+    },
+    {
+      "path": "src/components/location-control.tsx",
+      "bytes": 5087,
+      "sha256": "b99db281c8f3ffc5f821558729fba3dd00ac275c128f086dfbaa6ce5321d6b5a"
+    },
+    {
+      "path": "src/components/mode-hint.tsx",
+      "bytes": 3267,
+      "sha256": "b01cafd0ab789869555c6110c0ef29f8bdec5b919eb60387397a015d13080539"
+    },
+    {
+      "path": "src/components/mode-home.tsx",
+      "bytes": 8025,
+      "sha256": "7b618b46f890fbe1063c968439aa90f344549f38f911b3154881ae4653951288"
+    },
+    {
+      "path": "src/components/nightlife-home.tsx",
+      "bytes": 12082,
+      "sha256": "84680a951e7266263467d55099f7ac5dc3572a4b8774d4c92870bcce1319d352"
+    },
+    {
+      "path": "src/components/options-overlay.tsx",
+      "bytes": 8150,
+      "sha256": "c54df8dd9b56f7b098f8894d5e8d907c4395a3f3b45f1a323712e59aacc1e812"
+    },
+    {
+      "path": "src/components/pick-home.tsx",
+      "bytes": 20051,
+      "sha256": "4996846980f4535a862fa6b84d10137d1b7b11149621a6c17b41db85abbf89a5"
+    },
+    {
+      "path": "src/components/preview-host-bridge.tsx",
+      "bytes": 668,
+      "sha256": "e4277e80ce127e7305057fb280d03d0703c5c7115b17d2e2aecf000e4867555e"
+    },
+    {
+      "path": "src/components/result-overlay.tsx",
+      "bytes": 16233,
+      "sha256": "bc4cd9a5440e2b37eefc8554f88356da56461e626695f91abe35ba4089baab4a"
+    },
+    {
+      "path": "src/components/rideshare-quick-actions.tsx",
+      "bytes": 2071,
+      "sha256": "05b17eb74a40c2ef1c465aa18941db17f49c4e867a694b16b947dd9fe8777484"
+    },
+    {
+      "path": "src/components/seasonal-visit-notes.tsx",
+      "bytes": 1399,
+      "sha256": "d3d52ca549c66fe3ad5bde56497775a4fd077db78ef1c63e1b244cb2b9ec8f64"
+    },
+    {
+      "path": "src/components/settings-page.tsx",
+      "bytes": 8865,
+      "sha256": "28b243ebac7baaea0dde0ac153aa6f6bf46a8dea4d34eb16c205247e55c9ce32"
+    },
+    {
+      "path": "src/components/startup-ident.tsx",
+      "bytes": 1154,
+      "sha256": "a8fe83dcfffb159d76904d53db7dba240f906218815ba73d0befec65658ae518"
+    },
+    {
+      "path": "src/components/ui/button.tsx",
+      "bytes": 1706,
+      "sha256": "8ed6c9bfea9d6e36c5e0a86d640ee548940c44662c782a9c06381c455a04d206"
+    },
+    {
+      "path": "src/components/ui/input.tsx",
+      "bytes": 481,
+      "sha256": "4bc2223705e7d753c0ef0b4df2b2da9b9fc68e493f47ca11a35cd3b0fda67c6c"
+    },
+    {
+      "path": "src/components/ui/slider.tsx",
+      "bytes": 2348,
+      "sha256": "b052b42cd625b25112becb6eb3051b8303ec968bff1f65bc32261247cf25ed11"
+    },
+    {
+      "path": "src/components/ui/switch.tsx",
+      "bytes": 903,
+      "sha256": "b12334f678646cdec7ceff87860f00f18b5ea2ecc9f491a31f5df8f374d57b18"
+    },
+    {
+      "path": "src/date-night-base-polish.css",
+      "bytes": 1209,
+      "sha256": "a8d785c61dcae329c4a8f69d522529247293f68ccebff40eb0e52e9445519ba5"
+    },
+    {
+      "path": "src/halloween-date-night-overrides.css",
+      "bytes": 3043,
+      "sha256": "fcc2b3b2aa5302c1118f0930ac5197e4a3caa126a58c8b5c5a7b6a642f04fa42"
+    },
+    {
+      "path": "src/lib/analytics.ts",
+      "bytes": 416,
+      "sha256": "9572cb5b49ef589600717582d0540ff9a48bfa8298bd1021b68b341a5e6612c2"
+    },
+    {
+      "path": "src/lib/app-data/app-data.test.ts",
+      "bytes": 11834,
+      "sha256": "c5f1340a0d76d60894841cfb4953eca5d1a2178df2a0cc6f735dec26fa2ebc99"
+    },
+    {
+      "path": "src/lib/app-data/client.server.ts",
+      "bytes": 9965,
+      "sha256": "69cb06662e312a29ae9822653909148ae7ded452271e036fa6242cf9036321ac"
+    },
+    {
+      "path": "src/lib/app-data/errors.ts",
+      "bytes": 1377,
+      "sha256": "cddf76aa0f0069a4a55f3457cb3d20ab975698fc71a6d6d85275dbea33e019a3"
+    },
+    {
+      "path": "src/lib/app-data/index.ts",
+      "bytes": 398,
+      "sha256": "0b05fb1b521013f63e22ca59fa7962008223f0bf963edc4977f5333bce52c236"
+    },
+    {
+      "path": "src/lib/app-data/login.ts",
+      "bytes": 719,
+      "sha256": "1d85cd186850c3b09fd7e984c61515bf960775025bc4209fa1568fb998b8db90"
+    },
+    {
+      "path": "src/lib/app-data/server-only.ts",
+      "bytes": 476,
+      "sha256": "82821474088face6b9fcadad49793629e5f07a16386402b816262a1c070a3210"
+    },
+    {
+      "path": "src/lib/app-data/types.ts",
+      "bytes": 968,
+      "sha256": "fb4d55607113a970ae2b462026bcabf8b468e62e44b0b47f3202c042e43e0b95"
+    },
+    {
+      "path": "src/lib/auth/client.ts",
+      "bytes": 9714,
+      "sha256": "4bca649afb627b11231a7b31acfcffe9323efddebc05944b2d769d2b8589294f"
+    },
+    {
+      "path": "src/lib/auth/email-password.ts",
+      "bytes": 442,
+      "sha256": "9b1da7c786e48adfa9a6f7c485bcf5817cf2075a601d8726a965f11171910354"
+    },
+    {
+      "path": "src/lib/auth/gate-identity.server.ts",
+      "bytes": 5772,
+      "sha256": "af3dc9e48dd8b9a0745490bc4a1b62f10b11cb600f3e946e26248e8fcdf21253"
+    },
+    {
+      "path": "src/lib/auth/gate-identity.test.ts",
+      "bytes": 14346,
+      "sha256": "21202fb2b56ffd10cb9b5bb7d9f305be88cce3902b858f73cea914df05ce2652"
+    },
+    {
+      "path": "src/lib/auth/gate-session-marker.ts",
+      "bytes": 879,
+      "sha256": "3dbf8cb789b0288f9d5c53b1515a3e87d265fcb22e11fe28dc3289c4bd7c06eb"
+    },
+    {
+      "path": "src/lib/auth/gate-session.server.ts",
+      "bytes": 11980,
+      "sha256": "68aa500523ca2f0ad5c7ba34372c10aa1851a9774f8567c6b7781af5dd6cf204"
+    },
+    {
+      "path": "src/lib/auth/gates.tsx",
+      "bytes": 4924,
+      "sha256": "39950c211bd4ad4f7129082bf5a43a42ff23975e681b99fd7cfbce372f83a5be"
+    },
+    {
+      "path": "src/lib/auth/isolation.server.ts",
+      "bytes": 2386,
+      "sha256": "a4adf6a5d548e70a0be52d7efdc7433126028908072b47bf9f92135d9ee558a0"
+    },
+    {
+      "path": "src/lib/auth/middleware.ts",
+      "bytes": 2462,
+      "sha256": "8dc37c4e9bd583f175402330d0952ef4d584c7410723cc2649c4046d5084bd80"
+    },
+    {
+      "path": "src/lib/auth/pglite-dialect.ts",
+      "bytes": 4088,
+      "sha256": "bd66925574245cd47cdd98b5c068dd7b4ee4a51c9439e8421dc54c62fe7c4f50"
+    },
+    {
+      "path": "src/lib/auth/popup.server.ts",
+      "bytes": 6133,
+      "sha256": "81f8833d9ab639f76b86f4bb23fed42a04cec4b0c6d90b7a67425a9232c9bb4a"
+    },
+    {
+      "path": "src/lib/auth/preview.ts",
+      "bytes": 1679,
+      "sha256": "d52a3654a5cef7e841cbca789fd106dc464ea55db574f02aa5d295b7350f8664"
+    },
+    {
+      "path": "src/lib/auth/provider.tsx",
+      "bytes": 593,
+      "sha256": "4cbbc7f8cc1765788ad65455a33f64dcdafc6fe4ed1d13f90ccfa0ba4c13d1f3"
+    },
+    {
+      "path": "src/lib/auth/providers.ts",
+      "bytes": 1486,
+      "sha256": "4acefac17931529bdeab053588a917b06e44abdb67a275a2ca1c7841080c6a78"
+    },
+    {
+      "path": "src/lib/auth/server.ts",
+      "bytes": 12548,
+      "sha256": "e0544cadbfa1a09c3cb4cf2a0ec187dbbb2831aebf7de887a3c858abdd72ca43"
+    },
+    {
+      "path": "src/lib/auth/sign-in-gate.test.ts",
+      "bytes": 854,
+      "sha256": "2c352588cb6a8f58faf3aecc1d1f418ae827ddbb6a5eca8e56668ec72cd328d2"
+    },
+    {
+      "path": "src/lib/auth/sign-in-gate.ts",
+      "bytes": 332,
+      "sha256": "d2c65c20ab50ae41657ceecd61ded005fac29315deace9fc4d966cf56300754c"
+    },
+    {
+      "path": "src/lib/auth/use-current-user.ts",
+      "bytes": 3315,
+      "sha256": "a0cc4bd74b6da5b346b6bafc1aec58b9bf5cc0278264379b737b79a5cff1e482"
+    },
+    {
+      "path": "src/lib/auth/verify.server.ts",
+      "bytes": 3874,
+      "sha256": "42a7d5c1b17027ba004d6524a7f7bb4827b908d75ee3c3aefc940fa9c891c2ee"
+    },
+    {
+      "path": "src/lib/date-night/availability.test.ts",
+      "bytes": 2648,
+      "sha256": "e2c32dc3bc7192ae007a73e756a7f65a2dd32d5e6d66525fd330877626b1c5b6"
+    },
+    {
+      "path": "src/lib/date-night/availability.ts",
+      "bytes": 10741,
+      "sha256": "f015faab5a774fc9bc547c712a7db9b699fff9ebbfa81e05657124412735df0f"
+    },
+    {
+      "path": "src/lib/date-night/cache.ts",
+      "bytes": 12678,
+      "sha256": "06e5311699c6f16b7a969bbdf95b9db3d0c7ca669de21fd9f6ca580b9a216a80"
+    },
+    {
+      "path": "src/lib/date-night/coverage.ts",
+      "bytes": 2428,
+      "sha256": "12d7dbd673b781bea2bab58554171685c7a23d46de9466dc95f97aaaf6c72bfa"
+    },
+    {
+      "path": "src/lib/date-night/curated-policy.ts",
+      "bytes": 2279,
+      "sha256": "995e51118114c865b3c44b72f9271178b3c2474ba8c906556442c49580855c36"
+    },
+    {
+      "path": "src/lib/date-night/eligibility.ts",
+      "bytes": 3053,
+      "sha256": "e91d0b9fe851a4abd0511ee8fe96559bcf8b22567ff7c62f77c2c18370b38c65"
+    },
+    {
+      "path": "src/lib/date-night/icons.ts",
+      "bytes": 6744,
+      "sha256": "6977b2853615c9c1dc2a66518eca7438ccc44b5c58721da6db7d54cc6ee08b1d"
+    },
+    {
+      "path": "src/lib/date-night/identity-preferences.ts",
+      "bytes": 1587,
+      "sha256": "6b4e7a4982413c677b83c850c4f31eb7ddc57a9d7b855bd30a504edb6ca9e959"
+    },
+    {
+      "path": "src/lib/date-night/identity-receipts.ts",
+      "bytes": 4046,
+      "sha256": "2f04732177c382327d962590b97ad49150969bfecb2d20c09f314054afd697c3"
+    },
+    {
+      "path": "src/lib/date-night/identity.ts",
+      "bytes": 6122,
+      "sha256": "77f0ef9a4f4838d76c4ac17a1b05f2576a0d9b8eae774b4d0d465250dd0a89bb"
+    },
+    {
+      "path": "src/lib/date-night/jasper-county-catalog.ts",
+      "bytes": 8447,
+      "sha256": "d2396061d33e211c0ac51ed4880130c926db1bcb5b28344a7ef61c8d97612ca1"
+    },
+    {
+      "path": "src/lib/date-night/lifecycle.ts",
+      "bytes": 5027,
+      "sha256": "62ca9385065f8cf2adc75393552257aec79f5450e8076c099f256248cd1d00a9"
+    },
+    {
+      "path": "src/lib/date-night/listing.ts",
+      "bytes": 2295,
+      "sha256": "e42200e1b13c3e2bf025161773bdc5d19675e426da16a5a1043afe0239f3c4ef"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-astra-commercial-catalog.ts",
+      "bytes": 14778,
+      "sha256": "06968eab6c10fd3d1ae45c43baa99ef5a41c85fbae98a3de92907ac0bc02813b"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-astra-delta-catalog.ts",
+      "bytes": 16835,
+      "sha256": "b8ef2cd904c7496f65256de4b69bfb4962f1c4dd2882222443b4ac3c5201e4c3"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts",
+      "bytes": 35015,
+      "sha256": "7c2c15b5323bc0649b6c2e64f815c9052bd476f17e26f3d0e4448876e712c08b"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-cleared-catalog.ts",
+      "bytes": 7110,
+      "sha256": "52564f746709696bdde3ea775c50743aae40d1ca932bfb872aa93f840720f65a"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-deferred-batch-3-catalog.ts",
+      "bytes": 15442,
+      "sha256": "42ba5f69f4d8ecd0fcfd8fc647dc21b5938bd105c93ac5489fc2559952b5757b"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-final-four-catalog.ts",
+      "bytes": 10966,
+      "sha256": "7ab28748dbd26df3993882fe82903f35c61db1a8830399e110af51c1fae92111"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-late-fall-catalog.ts",
+      "bytes": 3890,
+      "sha256": "c64b98a0d6ac8b5b2ba12974597ee93fa78123e29e1b71c21aafa43bd20297e3"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-next-catalog.ts",
+      "bytes": 3911,
+      "sha256": "f9014353658689334c0133df4defbc7590a94c91002b630e07557dd172081d88"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-phase4-recovery-catalog.ts",
+      "bytes": 25214,
+      "sha256": "1e24869eb9f4b0a7b20f3f53cb3b4e6c136335f96d12153bd39f8158ba3863a4"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-three-source-tier-a-catalog.ts",
+      "bytes": 15735,
+      "sha256": "88a36ad0a025299f7e21d6ef570653a9b791855905470ad0b2cdcb5579bfe9f8"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-v1-catalog.ts",
+      "bytes": 24089,
+      "sha256": "726e2d0b717f68d1ead576d7cbc172782ab597e9a0b714a7a20a1d0c2649e9b0"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-v1-next-catalog.ts",
+      "bytes": 35128,
+      "sha256": "0866a11ff68b0f2e0987a94848ec606195b1351dafb6a53df014ba9ffa6aef37"
+    },
+    {
+      "path": "src/lib/date-night/provider-evidence.ts",
+      "bytes": 4115,
+      "sha256": "b346700484c6f8136aa03c3e29a13257c847f59915c9da1ae8de39134de33b4a"
+    },
+    {
+      "path": "src/lib/date-night/query-plan.ts",
+      "bytes": 4350,
+      "sha256": "208e29b22a462542e123ba43916e57a26dfc22c07c05cb5dcb673aa3e517218e"
+    },
+    {
+      "path": "src/lib/date-night/radial-cache.ts",
+      "bytes": 3182,
+      "sha256": "47a6575b65086cec0d35e5273cc004ae173fd1f1776594888ab613f8ba6551cf"
+    },
+    {
+      "path": "src/lib/date-night/radial-plan.ts",
+      "bytes": 6747,
+      "sha256": "6b34f98e597bf23cd94d1ba54e3e2a7f679330ff5fdaa2b63a302e50ed940c94"
+    },
+    {
+      "path": "src/lib/date-night/radial-session.ts",
+      "bytes": 10847,
+      "sha256": "423cc4d5c5959198ae00559a41d37fe3bed8f0aae4f6cb38ff94412cc59a1290"
+    },
+    {
+      "path": "src/lib/date-night/search.ts",
+      "bytes": 12336,
+      "sha256": "a093a6234772beaf6704eeb647b52eea3e628ca6bcc117c58ad831d2e59cf477"
+    },
+    {
+      "path": "src/lib/date-night/season.ts",
+      "bytes": 3982,
+      "sha256": "755ab96832179ba891519c43476e76cc63221b2e81489f01c1d2411937b667db"
+    },
+    {
+      "path": "src/lib/date-night/seasonal-catalog.ts",
+      "bytes": 417,
+      "sha256": "3930289e537bcc5c190e44e5fa8203cc70559ee5314390db979a3a90dbbbc560"
+    },
+    {
+      "path": "src/lib/date-night/seasonal-presentation-catalog.ts",
+      "bytes": 29864,
+      "sha256": "c7eacd9a9c10a9486bc49c4eb1683bf5bcdf24b643e2de919b4d78ac9ae8400c"
+    },
+    {
+      "path": "src/lib/date-night/seasonal-presentation.ts",
+      "bytes": 1342,
+      "sha256": "ae7bda0d3a345a3553e09e15f826fbc605c9dbc4bd2adab29487112749874849"
+    },
+    {
+      "path": "src/lib/date-night/types.ts",
+      "bytes": 4086,
+      "sha256": "e57153b401a721a01998a53de1e30e33fb7450a8280896934415eb9d5374bff0"
+    },
+    {
+      "path": "src/lib/date-night/use-clock.ts",
+      "bytes": 758,
+      "sha256": "7413ca99b6c4d5a11cacbad94ebb50c4c9f8c5ce9bf0708137d2eb696aa16add"
+    },
+    {
+      "path": "src/lib/db.ts",
+      "bytes": 9525,
+      "sha256": "8decf7689ff4833ad2f6f263eff9041dd2a68ce923824fa1d55ad620dea72e49"
+    },
+    {
+      "path": "src/lib/discovery/client-request.ts",
+      "bytes": 1430,
+      "sha256": "88eb962d39fab52460eb41bfe0b268fcf93e6f4dfc276380d62fd04eb838a861"
+    },
+    {
+      "path": "src/lib/discovery/hedged-provider.ts",
+      "bytes": 8398,
+      "sha256": "bf99b03bc28009f4bf8af104b9cfef89bcc0a57e0d87e0d3ed651223eeca5df6"
+    },
+    {
+      "path": "src/lib/discovery/provider-chain.ts",
+      "bytes": 4091,
+      "sha256": "e223716101651d19b1ac8b466d966691334fced3ad932d6058870eb5f58386bf"
+    },
+    {
+      "path": "src/lib/error-component.tsx",
+      "bytes": 712,
+      "sha256": "9229c991de332d16bec672227a32fcf458316cc0962b58c4c850b7bfd1ca85c8"
+    },
+    {
+      "path": "src/lib/location/controller.ts",
+      "bytes": 4980,
+      "sha256": "0f84b7d7608b35ce9eafddbe3430b9a9719731f061e6394be4f8ae1f108797f5"
+    },
+    {
+      "path": "src/lib/location/location.test.ts",
+      "bytes": 13743,
+      "sha256": "ddc397a5bd1a033d1f23dc50587ec1dc8f7d19e76e06056d088988110d53fde3"
+    },
+    {
+      "path": "src/lib/location/maps.ts",
+      "bytes": 1182,
+      "sha256": "63b378e90362dfa484e02da537b26897672d98a827365a3e2abb6fe9bd55671c"
+    },
+    {
+      "path": "src/lib/location/model.ts",
+      "bytes": 2550,
+      "sha256": "b6110d204ae746aa57d3412640533a78618c6200a6cd2bdb1f3876cea2a121e5"
+    },
+    {
+      "path": "src/lib/location/ride-target.ts",
+      "bytes": 1624,
+      "sha256": "2695af21a047b48cf033d29eabbd68575aafef10483a333556895a96a8b3de48"
+    },
+    {
+      "path": "src/lib/multiplayer/index.ts",
+      "bytes": 169,
+      "sha256": "bcb96816a2135e315078e2e7d0eda5522579b0caf9e768dc6c34294e4fa49137"
+    },
+    {
+      "path": "src/lib/multiplayer/p2p.ts",
+      "bytes": 20579,
+      "sha256": "4d0d2492ac249a2cf267c8d2db7688b5a2c488ab640da7727c0f1b73c2e92f60"
+    },
+    {
+      "path": "src/lib/nightlife/CASINO_AUDIT.md",
+      "bytes": 3927,
+      "sha256": "f03ff77f8d4609005e7186cda929bfe0742b1426ce6d02fac2950d8481a34b13"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-10.ts",
+      "bytes": 4752,
+      "sha256": "8fbdd3f0537a25b1b6b9adf0da2a3504e9c6462fc9eb3a2cc129714ae7e787fc"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-11.ts",
+      "bytes": 4201,
+      "sha256": "c606887c98e6d365a82b90f6b904244ad85608a66cbf9e4c25dd8b59f26fd4f0"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-12.ts",
+      "bytes": 1726,
+      "sha256": "3d5c751c1c1d06d60e5c1d813d204145a33d520fc620df2769987801c4319fb2"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-13.ts",
+      "bytes": 7050,
+      "sha256": "b6fc2f9dbef01ef06af56fe1eee84d9b2dc927cf3c02815c34a8dd1be96ded4f"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-14.ts",
+      "bytes": 4079,
+      "sha256": "2f2292b650bc9464f127077e11c4eed40140be8feafd83d4cd1c24234f102e6f"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-15.ts",
+      "bytes": 6946,
+      "sha256": "f7714358470385ce327fa230b642d44cbb686b7f7d236c2c64b0e5f36ae7aec4"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-16.ts",
+      "bytes": 8075,
+      "sha256": "796fd03b3c07ae8b1d0ca2c8b37a32a8a75b4c80dd7300a363365fb219cdf6bd"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-17.ts",
+      "bytes": 7243,
+      "sha256": "4c7135eb3df4cfa7745341c6c46fd8992237ab5cb0faa6b2a03bc7aaae485d5c"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-18.ts",
+      "bytes": 5929,
+      "sha256": "f2145b5a3dd645cba1cbc907b3ce32441fa79cd64c99beb38c389afcd07ee535"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-19.ts",
+      "bytes": 11763,
+      "sha256": "af3adbc12671472dc9b22911e0bb84276ab638b5501b0bdc77b398a0ecfb2c97"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-2.ts",
+      "bytes": 1986,
+      "sha256": "39148f0d3a9753b8fbdc843ef4d7c39959f94aca53ed0465db84f123a66984f4"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-20.ts",
+      "bytes": 3137,
+      "sha256": "17b3cc633618af1fa03a1104d44df2c306bc60a1dfb749f913606c42eb1f75b6"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-21.ts",
+      "bytes": 5829,
+      "sha256": "31c157eeaf6a7864f625e4432c47fe9fc15b97c02981f7178d70e321167ca97c"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-22.ts",
+      "bytes": 6668,
+      "sha256": "f99d3e63eb0db94f1d0b547afd43e5ba7aede220db7f362a45eee5136da97e14"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-23.ts",
+      "bytes": 8382,
+      "sha256": "a89105d8b0d2f7d71cabfadfafb9d87a6ff3907bc2a49682b16560183964abd8"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-24.ts",
+      "bytes": 8821,
+      "sha256": "f5a2c15bcb695aa56ca30f80959f7e4f049377c1ac2629679c0dfdf793e0c99f"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-25.ts",
+      "bytes": 8715,
+      "sha256": "38e7dc81e1e72260376047bf38968d6fb78ec96b19ca37f9f44834f1f6727746"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-26.ts",
+      "bytes": 4868,
+      "sha256": "4984d042f27b8b98070052b7d7fd46babae2afcca1e4e743a3707f5ec84fa5ed"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-27.ts",
+      "bytes": 5147,
+      "sha256": "474ff40aae008960f9edae090e6df3dee861e8657e540be31142715390bd5c7b"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-28.ts",
+      "bytes": 11958,
+      "sha256": "12128b9946d1da369eeedd02f22d515b9ac89a70cb6ac07c5120b0c413dcdae3"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-29.ts",
+      "bytes": 8793,
+      "sha256": "2fb00edabfdcb581a833682a6700f9178c7297a65457da78b5b22da79fbfc2f7"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-3.ts",
+      "bytes": 4849,
+      "sha256": "bcd6efacae81928b08009c392758e311cac76e39239098592414c5eb8305cd62"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-30.ts",
+      "bytes": 1875,
+      "sha256": "de6202d6c4b0ff29b914b9136ff87e7412f9a1d267c702132eb5a395e1316823"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-31.ts",
+      "bytes": 1380,
+      "sha256": "f944170c54fd86099eaff074553c773e98c8947d999fd99c05f5ace9850eea32"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-32.ts",
+      "bytes": 3355,
+      "sha256": "a01451c937fafef4652dae955602ed342e41b0f6121605664eee2e07bd2adb80"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-33.ts",
+      "bytes": 2050,
+      "sha256": "4c65a7fb83cf1c248fb501d8f1b87e10f077a5313b8ddbca3eaf2c204f9f65ed"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-34.ts",
+      "bytes": 2199,
+      "sha256": "2d13fa313d736fa7b4e4fb42f96d4998562b4a871251ad7f6c202c37e49ebc30"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-35.ts",
+      "bytes": 3002,
+      "sha256": "4c4c274e29ed28544e8dc151340f8a3b54b9c9a3750fb25af23604b7e7feae48"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-36.ts",
+      "bytes": 2286,
+      "sha256": "6b0583c9dcd4f7535f85faacf3c0a60bf83f1d718eb9cc1e269a7d0d232ceefa"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-37.ts",
+      "bytes": 1920,
+      "sha256": "1d37078f0e656e8db0e02f731dfb42ac7234866fb153b41cb7ef5ffd0fb5b721"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-38.ts",
+      "bytes": 754,
+      "sha256": "aaf1cc6050efaeb3827db2c58ad768e23bfa0442a647c8fd5384cae37d6c2d94"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-39.ts",
+      "bytes": 962,
+      "sha256": "ae7dbbbadcaef0f5b0d95772ed74679abf3c91e253e427e0823a50bc4c7061c6"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-4.ts",
+      "bytes": 3927,
+      "sha256": "e23f5eedc15f2d1a2bc6703473c94eb374e2a02c6fc5d2f00dfcde8ca8b472c2"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-40.ts",
+      "bytes": 1632,
+      "sha256": "9eb72cda1894900016b3b9635bc1ab70e1effd9338c6b17f843169d728e0d2a0"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-41.ts",
+      "bytes": 954,
+      "sha256": "13b527b3a544e239725a9380e115cf540912d6f391290f0e8c37c8f74d859d97"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-42.ts",
+      "bytes": 788,
+      "sha256": "f18f5e5093ab8d112b295beac1f426a84ad519067c88ec82ebbca27742243cab"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-43.ts",
+      "bytes": 782,
+      "sha256": "55131dae84cc05a76b3a865059944f509fc71445c02185b99dc87f71213f057a"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-44.ts",
+      "bytes": 777,
+      "sha256": "22dd97e49b61b564e65506bed874c26bd237af26f1ff2ceca915816da689cf85"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-45.ts",
+      "bytes": 807,
+      "sha256": "fcf840454bd0099edc580d27f6168a87b6f0794739dbbff919a9fc8d8dae2fef"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-46.ts",
+      "bytes": 802,
+      "sha256": "285425e5ba5c5a550ba7747c430f94fb10505335ba458f4d3b5ad564b9fd0c0e"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-47.ts",
+      "bytes": 746,
+      "sha256": "abefac9a6413f815452ab2e6c8f7ea1f9cfbf9041b13e856f7ecc5d849a7cd53"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-48.ts",
+      "bytes": 798,
+      "sha256": "3ee0c3fc49da973a5b4bb4c1e040cbae03b7c5602863d28bc79589cd18fc8311"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-49.ts",
+      "bytes": 762,
+      "sha256": "333c775b5a261c815e6941a4be829a916f5f3a0007adad322981f69950017538"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-5.ts",
+      "bytes": 9942,
+      "sha256": "0e881f784b79d868c575869aaeb395a5c03adc62e302bd662fc6540f0ea12296"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-50.ts",
+      "bytes": 4531,
+      "sha256": "5d34d049bddee81ff49ccc52b3668eaa9f8b2ca637be754f91505eef8720a693"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-51.ts",
+      "bytes": 26659,
+      "sha256": "d50c1dc3c9896f54a01e8f29af3378e83797ffd6a100ca94c5ad0bbac879986f"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-52.ts",
+      "bytes": 32270,
+      "sha256": "88f52138995d4c2aa29c437bc3a3663604cb267dabfaae937e43fa87e3ea7738"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-53.ts",
+      "bytes": 4976,
+      "sha256": "141c585bc9f69d9fe560fc194bbe4a3e56d1d34e152b671f443ddc3039431349"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-54.ts",
+      "bytes": 20772,
+      "sha256": "3e9eb56069516b7eb31fdb5099040defae855dad5fb8c27f3fd83aa0a52ecdda"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-55.ts",
+      "bytes": 11144,
+      "sha256": "2235aa89ef1bfe130491e0b98bd794a877eb7409d3c880435187b32dfae2307f"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-56.ts",
+      "bytes": 12727,
+      "sha256": "4fcab40975b593bfb42d28d49cb5aa6a400268d6835daff62c9b03199d9f6b2c"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-57.ts",
+      "bytes": 13116,
+      "sha256": "56b272e2e6287e45867f3b54f8f41968af62a5b469febd3cdb5395cc1feb0cb8"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-58.ts",
+      "bytes": 15070,
+      "sha256": "379e80888f58de89228557df8bc94dfc45f06f062ec4a87f5da5604e90780d38"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-59.ts",
+      "bytes": 23997,
+      "sha256": "d28d93044fa650646fd9f277cc2367b57b1722cb50bc4bbf84c1c16ac7e4c870"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-6.ts",
+      "bytes": 1756,
+      "sha256": "dd0887f27562065baa2b20e16328ca6bd50448480213f067a9a11a85a1fb5f69"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-60.ts",
+      "bytes": 3455,
+      "sha256": "46cab82475b137b95bb06b7ff7225b6c8908a4c5205d3093ad1238ad30b8abe5"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-7.ts",
+      "bytes": 2279,
+      "sha256": "d40b89ff5efd9d5c08cd5ca96dfe5b2da985ec8c25d4a779ea538f4c87179966"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-8.ts",
+      "bytes": 3867,
+      "sha256": "50368538a465d245a1e99b91a9d815ad6a402dbb3290881422d10486a62ec256"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog-pass-9.ts",
+      "bytes": 2731,
+      "sha256": "c7bbcb1f2240b6e39ac5c9004e7ce7bd2e50efd27043eba24095424156f0ad04"
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog.ts",
+      "bytes": 15591,
+      "sha256": "84d83a91bdae6cba79af9fde6228479349ffc67f9470b0069a422114b2a89d3d"
+    },
+    {
+      "path": "src/lib/nightlife/catalog.ts",
+      "bytes": 7853,
+      "sha256": "a395fd2836c3f5b76268709b55581fd29afe7fc4432617bffa13d0235223b96b"
+    },
+    {
+      "path": "src/lib/nightlife/discovery-policy.ts",
+      "bytes": 9300,
+      "sha256": "2c67b9f9312044e3d6594b6ea3f1a341c791eb15344265b1f26d14688aa3d931"
+    },
+    {
+      "path": "src/lib/nightlife/jasper-county-catalog.ts",
+      "bytes": 2582,
+      "sha256": "919e2a20a460ec09b048110dcc5b1a43658032e4d13e5c68cd227558a3ab1ec3"
+    },
+    {
+      "path": "src/lib/nightlife/search.ts",
+      "bytes": 14829,
+      "sha256": "b7061b1ebc8ba0c6a897bab31b9914c3a11cebe21bc286666760eb795e9bc2d2"
+    },
+    {
+      "path": "src/lib/nightlife/selection.ts",
+      "bytes": 2570,
+      "sha256": "6c0db123211087ffc1e48488f98ab6b526c6876b79d653a3776f17631bb61dab"
+    },
+    {
+      "path": "src/lib/nightlife/types.ts",
+      "bytes": 3494,
+      "sha256": "8651c123e5b1334c1f52c952a06c6884c10fb76ca662dc207f0b15fdb76ea8a8"
+    },
+    {
+      "path": "src/lib/og/metadata.mjs",
+      "bytes": 2103,
+      "sha256": "1d2eba104e5c3d9245eafc6d75565eb76b93c787c109ad558e949f5c811c85ec"
+    },
+    {
+      "path": "src/lib/og/site.json",
+      "bytes": 214,
+      "sha256": "1ed0764d7ce298133da666b932a684fbb16a049a285a982349d790807c2712c6"
+    },
+    {
+      "path": "src/lib/presets.ts",
+      "bytes": 1602,
+      "sha256": "bca14de2c2969fa533dfe80bb580ad865c8f6c90e1738f78c7157f833a5a2475"
+    },
+    {
+      "path": "src/lib/preview-embedder-origin.ts",
+      "bytes": 1855,
+      "sha256": "c2d5e1acc5653ff2abc08a5eeb5feb3331f4e3d7c751ec83d60dee83cf33a6ee"
+    },
+    {
+      "path": "src/lib/preview-host-bridge.ts",
+      "bytes": 8723,
+      "sha256": "3d3144d8da9eb395b863375a2ac9c02061ff08b318a49a56e66d3277e1b945ac"
+    },
+    {
+      "path": "src/lib/restaurants/catalog-refresh-2.ts",
+      "bytes": 3232,
+      "sha256": "51c0dbb6bad9b99ad8e3292731087624ffaa4fab0967df73a4c548020cebc5d7"
+    },
+    {
+      "path": "src/lib/restaurants/catalog-refresh.ts",
+      "bytes": 16180,
+      "sha256": "b00de4ae90a989a3df58bae386acbe6750579d03665cb2e35b774583c2670baa"
+    },
+    {
+      "path": "src/lib/restaurants/catalog.ts",
+      "bytes": 12577,
+      "sha256": "9916301223c08efbd348eac2df45157eb8f9ef55e723d5455c09290db98ce595"
+    },
+    {
+      "path": "src/lib/restaurants/chains.ts",
+      "bytes": 2089,
+      "sha256": "dc6b872e0a9c2edb6b75563e8cb41860651ca1ae08d2717993e6dc90858a9578"
+    },
+    {
+      "path": "src/lib/restaurants/cuisines.ts",
+      "bytes": 7283,
+      "sha256": "33d25144107888a3213e9acf106d7f12588d46079a5b543f8a8dfd1b8c19d4aa"
+    },
+    {
+      "path": "src/lib/restaurants/decorate.ts",
+      "bytes": 1736,
+      "sha256": "cd6a998d6a58bde4b3e493d0f3e5eed2e1722812fb774aa49d596ddcb0c6a47e"
+    },
+    {
+      "path": "src/lib/restaurants/dinner-icons.ts",
+      "bytes": 4826,
+      "sha256": "99298fbed3f9dd61d3fdd5c8f0bf3b8bb5e41ef324a9698fdb923532afa28136"
+    },
+    {
+      "path": "src/lib/restaurants/fallback-data.ts",
+      "bytes": 29937,
+      "sha256": "92e766081e9a63b2c02ab0c973902ac6231126a217dbed3f83ac67d929b374db"
+    },
+    {
+      "path": "src/lib/restaurants/geo.ts",
+      "bytes": 727,
+      "sha256": "a54927bd8cc9ff1132ddb99eebf2766dcf0cd06067256da1355195fbd36546b6"
+    },
+    {
+      "path": "src/lib/restaurants/geocode.ts",
+      "bytes": 3720,
+      "sha256": "3df3d5b1062870ff5c12c52a1fc597b11282ea3a6ffaf559c626e0dfc9d84f0e"
+    },
+    {
+      "path": "src/lib/restaurants/hours.ts",
+      "bytes": 5925,
+      "sha256": "9e30d379dd4f1cafe722adff749caaa097b42e3bd6b1e332c2d15891aabbbc7d"
+    },
+    {
+      "path": "src/lib/restaurants/image-overrides.ts",
+      "bytes": 799,
+      "sha256": "cbaca65fd866311fec24493b48949173abca34b1103c0e30f5305d03d8dfc297"
+    },
+    {
+      "path": "src/lib/restaurants/jasper-county-catalog.ts",
+      "bytes": 6611,
+      "sha256": "7e4ad1fa48eed0e0929fa398de36e7af945f9e3e38525590159189c312f1499d"
+    },
+    {
+      "path": "src/lib/restaurants/normalize.ts",
+      "bytes": 6368,
+      "sha256": "4f1c0474a86923d4cde286350b08023b9c358060a57ca40ae23ed95ff9cd4fca"
+    },
+    {
+      "path": "src/lib/restaurants/overpass.ts",
+      "bytes": 3359,
+      "sha256": "55c0755a6ac3540323c368693e968c7157737d0627824c12f68d713d7a61d07c"
+    },
+    {
+      "path": "src/lib/restaurants/search.ts",
+      "bytes": 2660,
+      "sha256": "f52368b9bbca1ec79a30ec1a16964190118cdbee679f1d3c6bb32a91a01f3b65"
+    },
+    {
+      "path": "src/lib/restaurants/types.ts",
+      "bytes": 3777,
+      "sha256": "f0733c28a6d34bb70fbf8f8f249373aa642660b2ac09d6319a134ac63b175a4f"
+    },
+    {
+      "path": "src/lib/restaurants/weighting.ts",
+      "bytes": 8021,
+      "sha256": "8c48fd9858848186466c7b24a559d7a27705aea98fe311fda0746cd2b6ea6050"
+    },
+    {
+      "path": "src/lib/seasonal-features.ts",
+      "bytes": 247,
+      "sha256": "23f84413d9a715ab831d7ad1c425b79999be764a712cd5c8238cf29376dcb0e9"
+    },
+    {
+      "path": "src/lib/session-hints.ts",
+      "bytes": 602,
+      "sha256": "81e0fe5ac048a74fb017b1617e718fc7a96f4acfa5f7ac00351d3970be4b81cc"
+    },
+    {
+      "path": "src/lib/store.ts",
+      "bytes": 10594,
+      "sha256": "d34c3c50de7716c19f0fa992606dc3f7e8437656d8d75f480374325895eaa68e"
+    },
+    {
+      "path": "src/lib/theme.ts",
+      "bytes": 832,
+      "sha256": "c3fcec8bc5c16cd04629992c5f8240b25e5d5ccbf4b39b73f1479d0b374d1ce1"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "bytes": 1337,
+      "sha256": "147b1288cfbbd8eb651641b777ae94037ff71fdae7072f4c769169bbd7bdecc4"
+    },
+    {
+      "path": "src/router.tsx",
+      "bytes": 272,
+      "sha256": "b3418d117d99e4e47f8c26f90eaa972b3732214b133a7052591e6b2907090752"
+    },
+    {
+      "path": "src/routes/__root.tsx",
+      "bytes": 3020,
+      "sha256": "adb861ffe08f42c51d709abc75a64ca4fe57a1f18941e8b8328d6cc0709589c4"
+    },
+    {
+      "path": "src/routes/favorites.tsx",
+      "bytes": 202,
+      "sha256": "53059fdff5dcef78b0b7b4d2c9a3e50756bb8019fdbd386550a46af4fdcc9a32"
+    },
+    {
+      "path": "src/routes/history.tsx",
+      "bytes": 194,
+      "sha256": "4b9b6df2b743b3ae02b911a0d682308febb4dac4c35fceaacb4c5d40a6a03ec0"
+    },
+    {
+      "path": "src/routes/index.tsx",
+      "bytes": 218,
+      "sha256": "1a63640ce23d9d62f60e2f1aecff873991134106890a5376c0fe9fd9d7a92c19"
+    },
+    {
+      "path": "src/routes/settings.tsx",
+      "bytes": 198,
+      "sha256": "5723538af89a3b65a406f274a7967ecdd10229169d65f04ef7a643efd76e39d5"
+    },
+    {
+      "path": "src/routeTree.gen.ts",
+      "bytes": 3592,
+      "sha256": "4f0ecbb466c7682c1d48012b2d223d098e55ca64f4200ce7affae814db85cc8a"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 9532,
+      "sha256": "84c8bb6599ffa585babf81347508a6924b39f5c05fbd1dae7d2818e155a55f86"
+    },
+    {
+      "path": "server/middleware/grok-pwa.ts",
+      "bytes": 3667,
+      "sha256": "77f836ca63f08debb056ab1ca863d44b0c51aff2065cf5629c82aeb39de1dcbf"
+    },
+    {
+      "path": "server/virtual-grok-og-identity.d.ts",
+      "bytes": 333,
+      "sha256": "fe8c5ad2ee85d4b903211dc6bb19d00f93ae8ee9ae6317c867f9209f1a3c864e"
+    },
+    {
+      "path": "public/__grok/icon-180.png",
+      "bytes": 2100,
+      "sha256": "3cf5d17d294b51c6cca6c86070309b88554b7ad702b0412e8e2709a01990bc8a"
+    },
+    {
+      "path": "public/__grok/install/assets/homescreen/glass-puzzle.svg",
+      "bytes": 1811,
+      "sha256": "a677c9356c23d1e699559ddbffac97cd135c2782cd893fb34f3738f6d11bee17"
+    },
+    {
+      "path": "public/__grok/install/assets/homescreen/glass-share.svg",
+      "bytes": 2388,
+      "sha256": "efad1b4b507a68c1f1af4aad2c93e8c24076224aa593da86677697f543d026d6"
+    },
+    {
+      "path": "public/__grok/install/assets/homescreen/logo-grok.svg",
+      "bytes": 1059,
+      "sha256": "0654e3e59cce69856f38525cbfe4ab3a9ef52d4b64c8532dd0bc1a3f34fcb5b1"
+    },
+    {
+      "path": "public/__grok/install/assets/homescreen/ob-ipad.png",
+      "bytes": 101843,
+      "sha256": "4c9b09a4660c662b394597d551a04124293b0e37a7a7c72271dd2948c4499a14"
+    },
+    {
+      "path": "public/__grok/install/assets/homescreen/ob-phone.png",
+      "bytes": 103612,
+      "sha256": "80e0a5ede614d9b920c67d7cb79c80a79134687b1fc9f560384e896a88e302db"
+    },
+    {
+      "path": "public/__grok/install/assets/homescreen/plus.svg",
+      "bytes": 2401,
+      "sha256": "c2c94be46aa2c3c2fda95d7c6f2fc6d0b656d1f5847828d5d95b5a81a6f4f20d"
+    },
+    {
+      "path": "public/__grok/install/styles.css",
+      "bytes": 6717,
+      "sha256": "7e8e881302f58e54a9c07e7be395692d3de20fdaa27ce358531cc8dcca472cb6"
+    },
+    {
+      "path": "public/apple-touch-icon.png",
+      "bytes": 30119,
+      "sha256": "99877ec24a597c68df9169fbbf45cf69cfb7706a681754346d43297b13ff9ac0"
+    },
+    {
+      "path": "public/brand/CAUSTIC_RELAY_ident-2.mp4",
+      "bytes": 5818729,
+      "sha256": "76db1f4865cf62f774812fcf3d7744d0b44297a3589ac12e19a6a796bc6d313b"
+    },
+    {
+      "path": "public/brand/grok_1789541884918.jpg",
+      "bytes": 711385,
+      "sha256": "5d823a5c4ef6cc0a76ffc8926f83f0eaae85cb8b59cdcd280d9b8d148f99500a"
+    },
+    {
+      "path": "public/brand/grok_video_2026-09-10-20-20-31_1.mp4",
+      "bytes": 2101557,
+      "sha256": "0a4c4ac75b9089fd229e8df944cb7199a2eabbc198624d065996cd22ab66e273"
+    },
+    {
+      "path": "public/brand/pick-for-us-icon-master.jpg",
+      "bytes": 494490,
+      "sha256": "12afcedace4aacb19109e561fc70af76076ece7d4997348021422a9396e865d5"
+    },
+    {
+      "path": "public/date-night-icons/arcade.png",
+      "bytes": 1297181,
+      "sha256": "773522b33b27d335a0f34b34583083d9cc3a9a1d9ffaf0835e52f8f016f724b4"
+    },
+    {
+      "path": "public/date-night-icons/bowling.png",
+      "bytes": 1299537,
+      "sha256": "9d2ca049151d3d2eadcada82360e92f41042f79d1b56a8a8698f9b5ea16259c5"
+    },
+    {
+      "path": "public/date-night-icons/escape-room.png",
+      "bytes": 1249617,
+      "sha256": "4c95b1817b22de627aa8b8008bed00a7747ca8750b25dbd35141827122986e4e"
+    },
+    {
+      "path": "public/date-night-icons/exact-arcade.svg",
+      "bytes": 9256,
+      "sha256": "fe4a70db5a7facc33d6e99597a7927d1425e53b7766f6cb414a53f5c78f28478"
+    },
+    {
+      "path": "public/date-night-icons/exact-mini-golf.svg",
+      "bytes": 19952,
+      "sha256": "5c44c1bc55d50e695ba61d45636afe389356421ee86b91bd50afdcd2d0b0963e"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905177823.jpg",
+      "bytes": 261674,
+      "sha256": "43d2480f316cfa96bbe31fc087fd96ac9a6aebe7398d3272dfd5227a110dc2d3"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905180227.jpg",
+      "bytes": 276388,
+      "sha256": "b8752fbc56b55b32054337fa197e26be447879eff1b429bfdce5379da4a81215"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905184073.jpg",
+      "bytes": 319116,
+      "sha256": "86ba6ad139c6ce67377ae1f5789c8cc52d1a01fc057bf1225ba076330c6fb21e"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905187785.jpg",
+      "bytes": 146323,
+      "sha256": "128041393d3707b200b42f68adb5d9ecb9dec757744976669f5d3e4a205d80c0"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905190727.jpg",
+      "bytes": 112740,
+      "sha256": "42b4bc75b1f84d7eea818747a3a9bbe028523674e34270719b5b4c84453048e9"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905196749.jpg",
+      "bytes": 255586,
+      "sha256": "37c488a7828a4a409d4f4ca56524e57f85167340966b11281c15fb096f8bda7a"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905199846.jpg",
+      "bytes": 419002,
+      "sha256": "f9fcb33683f59a0e3d81caeadd32042997318c43aea20ae70e1a71e6d37572b6"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905202767.jpg",
+      "bytes": 363771,
+      "sha256": "c45311c9ca8e6f712315f34f553913efab46193bfd8dfb04e6011ab67fc58ff1"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905205875.jpg",
+      "bytes": 391625,
+      "sha256": "a2465a8fa922dabbaf3f3620d02e67d69b534ab2cebd5bf844dd01dce23b45c8"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905208616.jpg",
+      "bytes": 451483,
+      "sha256": "4a8e20a095f7e40840551cb5723b40854a1dad6bafda1287b48d64113d03fb32"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905211949.jpg",
+      "bytes": 248362,
+      "sha256": "79a155cc9097d01d132ba5a7c89641e08b443a8cc65bb1c52a0a20d1f2429cc2"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905507708.jpg",
+      "bytes": 131138,
+      "sha256": "9f1cd67b83fb65bbf03d8f54e9b739807296011f4287065a3952378f2f56641c"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905528223.jpg",
+      "bytes": 118395,
+      "sha256": "4370abc495e7a3256950b6bd64a0158eca650c23aab6557effd4a548a09b8ee5"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905531240.jpg",
+      "bytes": 150624,
+      "sha256": "94ef9251052eab89387fc990d0362f8762986fa9e2e0e1e53a5c801ab75a7f09"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905535614.jpg",
+      "bytes": 157465,
+      "sha256": "02a93aca0e19997402d6caee6b6a80f3eaf1d3ec0f9b0d04bedad6044c495ad1"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905538605.jpg",
+      "bytes": 116713,
+      "sha256": "b6797a4221025b81f4ccb1eed65bd1bec6aaf8990a91e83fbade77e8a80c7e6f"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905541667.jpg",
+      "bytes": 178578,
+      "sha256": "abd01d25a1e6d01078787a254638af2f58546cb0d52e1a24da06a047a49ac347"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905545571.jpg",
+      "bytes": 131686,
+      "sha256": "556b83d7c416731a9c2dce2f6653642bdb7690b7b90b15f0705851310c4e4bfe"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788905549562.jpg",
+      "bytes": 124253,
+      "sha256": "ee2d5491a7bb1b079e70e60aace86dee1fe2ad943cd71e6edba1461ac9e3667b"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788909442728.jpg",
+      "bytes": 245171,
+      "sha256": "c635b443d114ea23d76ed15abcc00a4a9c0726ab02842810c6ea20bd0f35a9b4"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788909445858.jpg",
+      "bytes": 257952,
+      "sha256": "e905b4ba51f5b0e7a4377379b5d3978a99f43baf36727e3895cb15fb04181b1d"
+    },
+    {
+      "path": "public/date-night-icons/grok_1788909448716.jpg",
+      "bytes": 224942,
+      "sha256": "96d777515d23b6941746db34feac2a3dca9ce54ea3ff113db7ffed45e93dc77b"
+    },
+    {
+      "path": "public/date-night-icons/halloween-park.svg",
+      "bytes": 127,
+      "sha256": "147519357e9b121b113b081ef6f7784e86a38a3151c49a3b3fd585c52bc80042"
+    },
+    {
+      "path": "public/date-night-icons/mini-golf.png",
+      "bytes": 1327040,
+      "sha256": "1547fdacc638c9963c8fbbedc427e72fbe70a0bd730e8674fef2bf6558bbf2ec"
+    },
+    {
+      "path": "public/date-night-icons/movies.png",
+      "bytes": 1273856,
+      "sha256": "6211c4be0f6e2a9591867c0e6c797a58e48ffe8132ead90e72c968a90050b611"
+    },
+    {
+      "path": "public/date-night-icons/museum.png",
+      "bytes": 1284333,
+      "sha256": "5794acec347faaf453c3f17d84715860393f7a402208b44c42844ade39f9d8eb"
+    },
+    {
+      "path": "public/date-night-icons/park.png",
+      "bytes": 1450660,
+      "sha256": "31cc9aac3c4bd77ff0547d778a887c208610b5d4dddbdadb908bcf60123b748d"
+    },
+    {
+      "path": "public/date-night-icons/README.md",
+      "bytes": 301,
+      "sha256": "c5dec738f1e4962a3708e636286e17ad7c77918632da9833e5157d41b0ca4553"
+    },
+    {
+      "path": "public/date-night-icons/skating.png",
+      "bytes": 1359525,
+      "sha256": "30e80b4577d02bf952b8769e94c151dea8de0e38bfa240407cfdb3a736aa9e91"
+    },
+    {
+      "path": "public/dinner-icons/dark/bbq.jpg",
+      "bytes": 182526,
+      "sha256": "2f6bacd8f32c876deedb00b134c7843f7b5d47ed4e476a65729f182e04b7c35c"
+    },
+    {
+      "path": "public/dinner-icons/dark/breakfast.jpg",
+      "bytes": 138749,
+      "sha256": "81afef93a350fa8982b917dab15532ab7e28e5dab596d62cebaa117dc76cdae8"
+    },
+    {
+      "path": "public/dinner-icons/dark/buffet.jpg",
+      "bytes": 168134,
+      "sha256": "f19c0a612d4a92f0db99be3ac684402c1c27781bf2684b6fa2ceaf8de9620fd3"
+    },
+    {
+      "path": "public/dinner-icons/dark/burger.jpg",
+      "bytes": 145119,
+      "sha256": "2fd24d6d9eee46a9d3340c6fc5ef1da506784e8ccafcb0a63bb01013d33bdc97"
+    },
+    {
+      "path": "public/dinner-icons/dark/cafe-bakery.jpg",
+      "bytes": 156922,
+      "sha256": "cac3ed77c0033c8586e1325deac06f1e258fe190b2b7f9133f6c21b77ea26f4d"
+    },
+    {
+      "path": "public/dinner-icons/dark/chicken.jpg",
+      "bytes": 178748,
+      "sha256": "62aab6a61e367c18bc511f403c1c5f6ab1c81876167fa19a245a55f36ffb656c"
+    },
+    {
+      "path": "public/dinner-icons/dark/chinese.jpg",
+      "bytes": 201316,
+      "sha256": "97ded0218b1a8a5fa79854447280d67b0afa3ab02062cc46e00d49f59b5716e5"
+    },
+    {
+      "path": "public/dinner-icons/dark/dessert.jpg",
+      "bytes": 173574,
+      "sha256": "75bb8c8c2fc6f4e07994ccc809fda8f9a2eaa1aafc817bc3b5099f72d50f2039"
+    },
+    {
+      "path": "public/dinner-icons/dark/fallback.jpg",
+      "bytes": 159923,
+      "sha256": "0bf04b5b2d062bb8b2abc765eec18e22a04d675e2cd6294d7fccb6caf2082911"
+    },
+    {
+      "path": "public/dinner-icons/dark/italian.jpg",
+      "bytes": 139780,
+      "sha256": "bb088dd574a7047227833f312a47f1266fd0efc3f96675d9f6fc791642caad40"
+    },
+    {
+      "path": "public/dinner-icons/dark/japanese.jpg",
+      "bytes": 155140,
+      "sha256": "14254ea1c3d117148bd5230d1027a22ec8e86fc1d0bfe93edbfa6e21ab250ca8"
+    },
+    {
+      "path": "public/dinner-icons/dark/mexican.jpg",
+      "bytes": 153483,
+      "sha256": "93a2ed30fe084eb40720d0f2a1bccf19f1b7a5ccfd70de62eda94a1494a6c542"
+    },
+    {
+      "path": "public/dinner-icons/dark/pizza.jpg",
+      "bytes": 137892,
+      "sha256": "e4f841debc724e061cbc5a786881f2f258004bcfd1f7e5c1a744ada7afe960a5"
+    },
+    {
+      "path": "public/dinner-icons/dark/README.md",
+      "bytes": 650,
+      "sha256": "74dd62d4b3efbafdd3a08cd8bdf5b097f2f8217df81678380dacaf8d7e3d750b"
+    },
+    {
+      "path": "public/dinner-icons/dark/seafood.jpg",
+      "bytes": 133386,
+      "sha256": "f83aac5ac9fd7faf34b98e9ffcf1f3db0533d8bc1a60f0046acc07f92576c16e"
+    },
+    {
+      "path": "public/dinner-icons/dark/steakhouse.jpg",
+      "bytes": 142599,
+      "sha256": "19b013bebf95995d85118a1a06c2856f02b78f363d48d8d9fb93588d9e2fabc5"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789020788496.jpg",
+      "bytes": 145119,
+      "sha256": "2fd24d6d9eee46a9d3340c6fc5ef1da506784e8ccafcb0a63bb01013d33bdc97"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789020795500.jpg",
+      "bytes": 137892,
+      "sha256": "e4f841debc724e061cbc5a786881f2f258004bcfd1f7e5c1a744ada7afe960a5"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789020802295.jpg",
+      "bytes": 153483,
+      "sha256": "93a2ed30fe084eb40720d0f2a1bccf19f1b7a5ccfd70de62eda94a1494a6c542"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789020806207.jpg",
+      "bytes": 201316,
+      "sha256": "97ded0218b1a8a5fa79854447280d67b0afa3ab02062cc46e00d49f59b5716e5"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789020854624.jpg",
+      "bytes": 155140,
+      "sha256": "14254ea1c3d117148bd5230d1027a22ec8e86fc1d0bfe93edbfa6e21ab250ca8"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789020858945.jpg",
+      "bytes": 139780,
+      "sha256": "bb088dd574a7047227833f312a47f1266fd0efc3f96675d9f6fc791642caad40"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789020877945.jpg",
+      "bytes": 142599,
+      "sha256": "19b013bebf95995d85118a1a06c2856f02b78f363d48d8d9fb93588d9e2fabc5"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789021318302.jpg",
+      "bytes": 182526,
+      "sha256": "2f6bacd8f32c876deedb00b134c7843f7b5d47ed4e476a65729f182e04b7c35c"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789021408516.jpg",
+      "bytes": 178748,
+      "sha256": "62aab6a61e367c18bc511f403c1c5f6ab1c81876167fa19a245a55f36ffb656c"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789021446866.jpg",
+      "bytes": 156922,
+      "sha256": "cac3ed77c0033c8586e1325deac06f1e258fe190b2b7f9133f6c21b77ea26f4d"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789021452624.jpg",
+      "bytes": 173574,
+      "sha256": "75bb8c8c2fc6f4e07994ccc809fda8f9a2eaa1aafc817bc3b5099f72d50f2039"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789021457077.jpg",
+      "bytes": 133386,
+      "sha256": "f83aac5ac9fd7faf34b98e9ffcf1f3db0533d8bc1a60f0046acc07f92576c16e"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789021461868.jpg",
+      "bytes": 168134,
+      "sha256": "f19c0a612d4a92f0db99be3ac684402c1c27781bf2684b6fa2ceaf8de9620fd3"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789021542829.jpg",
+      "bytes": 138749,
+      "sha256": "81afef93a350fa8982b917dab15532ab7e28e5dab596d62cebaa117dc76cdae8"
+    },
+    {
+      "path": "public/dinner-icons/grok_1789021660803.jpg",
+      "bytes": 159923,
+      "sha256": "0bf04b5b2d062bb8b2abc765eec18e22a04d675e2cd6294d7fccb6caf2082911"
+    },
+    {
+      "path": "public/dinner-icons/light/bbq.jpg",
+      "bytes": 261624,
+      "sha256": "826f0a307a2280d73f6cbbb3e3efede6ec2ed471a569a28e9bbc1a808325c9cb"
+    },
+    {
+      "path": "public/dinner-icons/light/breakfast.jpg",
+      "bytes": 159885,
+      "sha256": "89d52595c1ca0178760d903ceda308072da56aed905253d3f31fff8d765b2697"
+    },
+    {
+      "path": "public/dinner-icons/light/buffet.jpg",
+      "bytes": 135845,
+      "sha256": "e023ca1f9d1d3512dc09943c31573a68dce6cc49324af39002e59db790762c81"
+    },
+    {
+      "path": "public/dinner-icons/light/burger.jpg",
+      "bytes": 151303,
+      "sha256": "7438c08063317510d1adcb0e7264eae2bf938c81ddabab4f624753015d703d60"
+    },
+    {
+      "path": "public/dinner-icons/light/cafe-bakery.jpg",
+      "bytes": 139971,
+      "sha256": "d479fe83f567ab8fbba6fe0f1682a43e8e5fc3ba22d7f1ef22e75e70692f74da"
+    },
+    {
+      "path": "public/dinner-icons/light/chicken.jpg",
+      "bytes": 136378,
+      "sha256": "a785a1b67399fe8de852859c7dce57d6419d772c331a7a8b2dcf53016a234e0e"
+    },
+    {
+      "path": "public/dinner-icons/light/chinese.jpg",
+      "bytes": 151125,
+      "sha256": "dea3186a6bdcd940d6f340215fc752d9ce3516ce4867f4a7e45cc692fefb579a"
+    },
+    {
+      "path": "public/dinner-icons/light/dessert.jpg",
+      "bytes": 161547,
+      "sha256": "52232acc2f662c62881869080008c062156e1dd122e5523c0c54aef476ca2d95"
+    },
+    {
+      "path": "public/dinner-icons/light/fallback.jpg",
+      "bytes": 131083,
+      "sha256": "cfe950a2224e7d3baae3e28f7ae659b5a2fe548d613c295801f687b6df59704c"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022393490.jpg",
+      "bytes": 151303,
+      "sha256": "7438c08063317510d1adcb0e7264eae2bf938c81ddabab4f624753015d703d60"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022396131.jpg",
+      "bytes": 159616,
+      "sha256": "f3f0ff396edd070bf756e0f7708a23ea236e88adb26afe6f6abc173c3f5784fe"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022398669.jpg",
+      "bytes": 162200,
+      "sha256": "3edac77e260fed424f40638d36a4877856d0e0cbbf667d6babd6a341e5f878ff"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022401139.jpg",
+      "bytes": 151125,
+      "sha256": "dea3186a6bdcd940d6f340215fc752d9ce3516ce4867f4a7e45cc692fefb579a"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022403422.jpg",
+      "bytes": 137773,
+      "sha256": "7e11ddfe8e1993b42bba4828312774b06cc2c53f7cdd236131f439504fd2dff5"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022405768.jpg",
+      "bytes": 150090,
+      "sha256": "0462624a355938a6125ddfee4e7c3e5f5bae8f36e2811d52615bd2e43c434921"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022421016.jpg",
+      "bytes": 136378,
+      "sha256": "a785a1b67399fe8de852859c7dce57d6419d772c331a7a8b2dcf53016a234e0e"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022424103.jpg",
+      "bytes": 139971,
+      "sha256": "d479fe83f567ab8fbba6fe0f1682a43e8e5fc3ba22d7f1ef22e75e70692f74da"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022427131.jpg",
+      "bytes": 161547,
+      "sha256": "52232acc2f662c62881869080008c062156e1dd122e5523c0c54aef476ca2d95"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022449451.jpg",
+      "bytes": 135845,
+      "sha256": "e023ca1f9d1d3512dc09943c31573a68dce6cc49324af39002e59db790762c81"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022453573.jpg",
+      "bytes": 159885,
+      "sha256": "89d52595c1ca0178760d903ceda308072da56aed905253d3f31fff8d765b2697"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022457008.jpg",
+      "bytes": 131083,
+      "sha256": "cfe950a2224e7d3baae3e28f7ae659b5a2fe548d613c295801f687b6df59704c"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022516120.jpg",
+      "bytes": 287783,
+      "sha256": "892eb9d6b0d2dd29b067e145e5e14966fae7d11fb4344f2f378d00216dfe9556"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022523548.jpg",
+      "bytes": 339601,
+      "sha256": "861e6cba29c574ba2227d484bdcb15b248c40bdc1f665873e9b9b9374f93917b"
+    },
+    {
+      "path": "public/dinner-icons/light/grok_1789022599548.jpg",
+      "bytes": 261624,
+      "sha256": "826f0a307a2280d73f6cbbb3e3efede6ec2ed471a569a28e9bbc1a808325c9cb"
+    },
+    {
+      "path": "public/dinner-icons/light/italian.jpg",
+      "bytes": 150090,
+      "sha256": "0462624a355938a6125ddfee4e7c3e5f5bae8f36e2811d52615bd2e43c434921"
+    },
+    {
+      "path": "public/dinner-icons/light/japanese.jpg",
+      "bytes": 137773,
+      "sha256": "7e11ddfe8e1993b42bba4828312774b06cc2c53f7cdd236131f439504fd2dff5"
+    },
+    {
+      "path": "public/dinner-icons/light/mexican.jpg",
+      "bytes": 162200,
+      "sha256": "3edac77e260fed424f40638d36a4877856d0e0cbbf667d6babd6a341e5f878ff"
+    },
+    {
+      "path": "public/dinner-icons/light/pizza.jpg",
+      "bytes": 159616,
+      "sha256": "f3f0ff396edd070bf756e0f7708a23ea236e88adb26afe6f6abc173c3f5784fe"
+    },
+    {
+      "path": "public/dinner-icons/light/seafood.jpg",
+      "bytes": 287783,
+      "sha256": "892eb9d6b0d2dd29b067e145e5e14966fae7d11fb4344f2f378d00216dfe9556"
+    },
+    {
+      "path": "public/dinner-icons/light/steakhouse.jpg",
+      "bytes": 339601,
+      "sha256": "861e6cba29c574ba2227d484bdcb15b248c40bdc1f665873e9b9b9374f93917b"
+    },
+    {
+      "path": "public/dinner-icons/README.md",
+      "bytes": 822,
+      "sha256": "91d6d9d8a636883c53d28a74226a0429bf3d5dec0474cd0d4ee0aafa3fb4bf4f"
+    },
+    {
+      "path": "public/favicon.png",
+      "bytes": 9035,
+      "sha256": "71bc53defea0d5ae0837cd7c0eb01df0c4cd04d43920c3af36e47a80f357191c"
+    },
+    {
+      "path": "public/favicon.svg",
+      "bytes": 288,
+      "sha256": "61dd8ceb29441ce0d66d5102f5bb21127f17923c37f9db0857d41637bdc05808"
+    },
+    {
+      "path": "public/food/american.jpg",
+      "bytes": 579857,
+      "sha256": "5982bcd93f451e5a3f81b84813ea18ed20f05b6ae04e95a4f968bd9355be6aa4"
+    },
+    {
+      "path": "public/food/asian.jpg",
+      "bytes": 521695,
+      "sha256": "2528f0321e5a90d75b1d44c25b52c94658bdde58041bfe427b6deb460161948c"
+    },
+    {
+      "path": "public/food/bbq.jpg",
+      "bytes": 752864,
+      "sha256": "54df3f97e07f46113f58f6d985ca266aae907a0acd705b24ef37796f931578dc"
+    },
+    {
+      "path": "public/food/cafe.jpg",
+      "bytes": 570500,
+      "sha256": "6953a8caecda7e371d717088be701f765bb506547316c74a96a6e831a6d31f81"
+    },
+    {
+      "path": "public/food/dessert.jpg",
+      "bytes": 531058,
+      "sha256": "7ae0e17da00d2df9fc1d1b55d1ed37d0e053fa052100f811f296f9017b6bb7b2"
+    },
+    {
+      "path": "public/food/italian.jpg",
+      "bytes": 574442,
+      "sha256": "89061cddee3a67f58597bc2827fb2f3b44acf0dc125d2de4885b27758671c7b1"
+    },
+    {
+      "path": "public/food/mediterranean.jpg",
+      "bytes": 722361,
+      "sha256": "04e260445bdad850dd8c03c3660e829e3fea12daaf7cfa312f8f21ea8c9cbc0d"
+    },
+    {
+      "path": "public/food/mexican.jpg",
+      "bytes": 732782,
+      "sha256": "2743bdb7011801ff79d1e29f914f0b20877dd9f659b4636d20f8feb18c7b9cd1"
+    },
+    {
+      "path": "public/food/pizza.jpg",
+      "bytes": 958916,
+      "sha256": "e03e39eec7dc5814aee8548e876e2447a0e6c318c51fdf7f9b0da68a1c1c666a"
+    },
+    {
+      "path": "public/food/seafood.jpg",
+      "bytes": 724243,
+      "sha256": "2106f379660e5575dfc50de822b53850aae08e17c6a0f294ebe3ae45a2cf9c33"
+    },
+    {
+      "path": "public/food/steak.jpg",
+      "bytes": 656673,
+      "sha256": "ea387d25e108930b775b5ac76f89266ab38cbe18f4dc9d54adeb3bf61cb15a20"
+    },
+    {
+      "path": "public/food/thai.jpg",
+      "bytes": 651721,
+      "sha256": "78b4739f4ac3761c2cf49f4408f1f2768a2455c42324074e7cf35e8e554386ca"
+    },
+    {
+      "path": "public/grok_1788913461447.jpg",
+      "bytes": 284185,
+      "sha256": "562573e5384bc8c39a64e6e3497a8872c4bc5c222a2181f79f37cabe0cfa54dc"
+    },
+    {
+      "path": "public/grok_1788914079961.jpg",
+      "bytes": 266364,
+      "sha256": "cbcb7c2c4377a21116ca8387a3732a5b4d69cc6a462c8c18286db24d2ad990e2"
+    },
+    {
+      "path": "public/grok_1789340964876.jpg",
+      "bytes": 256836,
+      "sha256": "a7be80ed07264b0f968c675013ced89d7fe46ecce980d491d2b3952a151b5c74"
+    },
+    {
+      "path": "public/grok_1789340968434.jpg",
+      "bytes": 257826,
+      "sha256": "07206881481c867f326759bc6f187df9fda0f24ad90cd3eb5640293ec343774f"
+    },
+    {
+      "path": "public/grok_1789340971434.jpg",
+      "bytes": 263060,
+      "sha256": "34915ec8a945f6d898b103896ca4c9a1ad3f6f96069bc7d57719855ed894ba62"
+    },
+    {
+      "path": "public/grok_1789340974874.jpg",
+      "bytes": 251019,
+      "sha256": "386e2c11b14bcc4be8fa6ddab040dbbcfd4b772da027ffb5cf5fd8f2946624be"
+    },
+    {
+      "path": "public/grok_1789341445435.jpg",
+      "bytes": 224053,
+      "sha256": "68c54517e46a1e0b61950a1e156fffcbf9dae7a449aaddc19b73220860f2fc47"
+    },
+    {
+      "path": "public/grok_1789541884918.jpg",
+      "bytes": 711385,
+      "sha256": "5d823a5c4ef6cc0a76ffc8926f83f0eaae85cb8b59cdcd280d9b8d148f99500a"
+    },
+    {
+      "path": "public/manifest.webmanifest",
+      "bytes": 706,
+      "sha256": "d7ef890edab6f047680917f29436842b5f7b517aa160490608d0a63a30beb1ef"
+    },
+    {
+      "path": "public/og.jpg",
+      "bytes": 108152,
+      "sha256": "ab64b705321a7f01e094663c63df3f06c7284ff3a104d0ef028ba23e81984813"
+    },
+    {
+      "path": "public/pwa-icon-512.png",
+      "bytes": 407901,
+      "sha256": "4d71389437dc6339ed31ae413e189f5d8a6abe966296333f58c9f1facd202be9"
+    },
+    {
+      "path": "public/pwa-icon-maskable-512.png",
+      "bytes": 143231,
+      "sha256": "dbdc4ba01136f56b204f97a69c6797a95009072992818e9d7e5cc5f6a31531bc"
+    },
+    {
+      "path": "scripts/android-icons.py",
+      "bytes": 6170,
+      "sha256": "e3667970430faa27d53a760c81a7a125f75dfdffb75d2266c384738e5d5c33bd"
+    },
+    {
+      "path": "scripts/android-release.test.mjs",
+      "bytes": 2321,
+      "sha256": "7d9c223dc81187095235874f0a38c2a9efd21a0e1390d9092f6eda96a1068e2a"
+    },
+    {
+      "path": "scripts/app-env-plugin.mjs",
+      "bytes": 1278,
+      "sha256": "92962d2361a98413c0cef80b31266d49b063cf4ecf6421bb99f57f6eef4ed7b6"
+    },
+    {
+      "path": "scripts/audit-casino-catalog.mjs",
+      "bytes": 1526,
+      "sha256": "5823207a83c8fc71f9f6c9b54809ce3a75371e57a9d9e0282a9b258b7c33b03f"
+    },
+    {
+      "path": "scripts/audit-national-coverage.mjs",
+      "bytes": 2766,
+      "sha256": "791b0bfc77a7246019a1e19019b2cce61f444e2c2da987cef01adc555d024b27"
+    },
+    {
+      "path": "scripts/brand-check.mjs",
+      "bytes": 9609,
+      "sha256": "318f33ce7b29b55c386cc8847084068777880f795a5082043229bb06686be035"
+    },
+    {
+      "path": "scripts/brand-check.test.mjs",
+      "bytes": 15281,
+      "sha256": "b0418eded233a2c3c09b4ba2f83d2ff89e910d25e1a9dc449c7ae8bf41f048fb"
+    },
+    {
+      "path": "scripts/browser-build-proof.mjs",
+      "bytes": 3677,
+      "sha256": "634b9c9000e07aa300a37c1df22fd9952377bb40702545b2904c441e35692e0c"
+    },
+    {
+      "path": "scripts/browser-build-proof.test.mjs",
+      "bytes": 1856,
+      "sha256": "5ba6fae092a02c1e1af1e99a8a69ed184ae891e0c90206eebd49c86b853356e8"
+    },
+    {
+      "path": "scripts/browser-guard.mjs",
+      "bytes": 1724,
+      "sha256": "c6fb865defe5a37bd94e3805b00311d4e8267daf92812e39f62b1213d947265e"
+    },
+    {
+      "path": "scripts/browser-smoke-verdict.mjs",
+      "bytes": 4663,
+      "sha256": "5699614f7fa62515e25ba9cca6397db2770cf6feb9b973f3c19f2915874c53de"
+    },
+    {
+      "path": "scripts/browser-smoke-verdict.test.mjs",
+      "bytes": 15643,
+      "sha256": "48b3924b41d606f94a9b8faae47ff350b84978fdd5ab3f6ca01640ed4c7087d7"
+    },
+    {
+      "path": "scripts/browser-smoke.mjs",
+      "bytes": 6042,
+      "sha256": "2e1cc3136f33bd74b73b4b3dba812e74ac299c24893b9a7c406e9bbeaf46571f"
+    },
+    {
+      "path": "scripts/casino-audit-artifacts.test.mjs",
+      "bytes": 503,
+      "sha256": "67093954bb6b8f8c7b456e53ffcf72925e1a4df0501155a549010b39e5328e80"
+    },
+    {
+      "path": "scripts/casino-audit.mjs",
+      "bytes": 6802,
+      "sha256": "9a561e03a37fd7665067d1b04725ab36cc4142ebc7cab2749e44830ea3b77082"
+    },
+    {
+      "path": "scripts/casino-audit.test.mjs",
+      "bytes": 6830,
+      "sha256": "29ebdaeb2715a9c8aff970b692e7c64b4da42218d446811ffd61ffa369fb8212"
+    },
+    {
+      "path": "scripts/casino-browser-live-check.mjs",
+      "bytes": 12332,
+      "sha256": "ee30abe213d0ea9ee2de62529cb3be1368210bb98f538bd6bd2551428088bf43"
+    },
+    {
+      "path": "scripts/casino-browser-smoke.mjs",
+      "bytes": 11995,
+      "sha256": "f488e9742fd990592a1375ca9a1858a171fb90c5967a0baee0fe8e657106f819"
+    },
+    {
+      "path": "scripts/casino-catalog-lineage.test.mjs",
+      "bytes": 1943,
+      "sha256": "a0c7b84912586d28bfced5e8de06e7c84fe81dd8354b71722add387fede15c1e"
+    },
+    {
+      "path": "scripts/casino-catalog-loader.mjs",
+      "bytes": 3380,
+      "sha256": "7f0a497db2ec3313c26eea85defd81f8ba37f77868c7ed238ab03f75591e9c99"
+    },
+    {
+      "path": "scripts/casino-catalog-loader.test.mjs",
+      "bytes": 2667,
+      "sha256": "85dfb2cd2c312be93e3e05cfdb0137293daabd18250790b4751f38ccaffadbbc"
+    },
+    {
+      "path": "scripts/casino-continuation.test.mjs",
+      "bytes": 8402,
+      "sha256": "1f571bbc1779ebfb00e4541eb53b4fd46d3d560953fcfd140fc53dca8080c1f4"
+    },
+    {
+      "path": "scripts/casino-discovery.test.mjs",
+      "bytes": 8840,
+      "sha256": "dd4b50cc0c9238895caa458a2f32862839ac2aac833c007c91352bcf80a3ebf9"
+    },
+    {
+      "path": "scripts/casino-freeze.test.mjs",
+      "bytes": 8772,
+      "sha256": "aafd326a2c0fc722a7d504f1ff4bae27a7149cadb11295ca9579c4bf535ed6c5"
+    },
+    {
+      "path": "scripts/casino-frontier.test.mjs",
+      "bytes": 3412,
+      "sha256": "b9c817f0e845330a2922b33859a4bbb2bb0ffc27dea112a7ab9941ddf5f64c3d"
+    },
+    {
+      "path": "scripts/casino-live-network-log.mjs",
+      "bytes": 1673,
+      "sha256": "10097b2d95d92042f9dab8fad1dc42a03cbdb18a0dcd9f71bee8be23614d4e6e"
+    },
+    {
+      "path": "scripts/casino-location-integration.test.mjs",
+      "bytes": 4803,
+      "sha256": "69c8e2e35ee53bca338281cac7268e20611991c24f2848cbbb4d10c06872bfa7"
+    },
+    {
+      "path": "scripts/casino-rc-conflicts.test.mjs",
+      "bytes": 2865,
+      "sha256": "c9324cf01e07284640b6806a2bf86e1360a18d44f92d9035350bbfdde077aa44"
+    },
+    {
+      "path": "scripts/casino-rc-evidence.test.mjs",
+      "bytes": 3503,
+      "sha256": "025f55754363528607f6e06f11b1ea7d1841442c034fbccf083cb06d848259b6"
+    },
+    {
+      "path": "scripts/casino-rc-final.test.mjs",
+      "bytes": 2244,
+      "sha256": "ced81130c66318a0ec6a597b880ea6f80cee629b6f9ec55548c43798af4b6285"
+    },
+    {
+      "path": "scripts/casino-rc-frontier.test.mjs",
+      "bytes": 2609,
+      "sha256": "5d6db23f54e39bbed16cd5d89573da0b93d61dfb1595174509b22801797c17c1"
+    },
+    {
+      "path": "scripts/casino-recent-provenance.test.mjs",
+      "bytes": 1785,
+      "sha256": "adffc6aa844d17cefe9484afb8752e68130e196fad2b35b3a5dc83152f17a1e0"
+    },
+    {
+      "path": "scripts/casino-schema.mjs",
+      "bytes": 3448,
+      "sha256": "8cb6a2609baa676882f3cc15a98fc2eb56e145330c85680fa91d43e8ee65a1db"
+    },
+    {
+      "path": "scripts/casino-schema.test.mjs",
+      "bytes": 1846,
+      "sha256": "d9aa2a53fbcd27976c2873a85c7d7bfdd86bb0a14eb2e391d618823739e53961"
+    },
+    {
+      "path": "scripts/casino-selection.test.mjs",
+      "bytes": 3552,
+      "sha256": "09e39a83d250ef38d1f5ec6632828d2b5f7f1fa85bbc74d8325b72fdfce5ddf5"
+    },
+    {
+      "path": "scripts/casino-smoke-network.mjs",
+      "bytes": 1379,
+      "sha256": "50a4a10d45f7182580f3d380489a4cc578313a5273eafe80211dec8a746b0313"
+    },
+    {
+      "path": "scripts/check-android.mjs",
+      "bytes": 3760,
+      "sha256": "37d223b9af2275fd6b5c22a2f0a3530434fe7c14cc922362a11b75cd6b483cb8"
+    },
+    {
+      "path": "scripts/check-auth-invariant.mjs",
+      "bytes": 4203,
+      "sha256": "d712203c4bc92c197c342e5c91660fc5a141a31171f22f35c505a0bff45f98ee"
+    },
+    {
+      "path": "scripts/check-auth-invariant.test.mjs",
+      "bytes": 4218,
+      "sha256": "75a58f44dffb2fc77eb47473638646f607dba26a68a6900156031c7b6227cf3c"
+    },
+    {
+      "path": "scripts/date-night-cache.test.mjs",
+      "bytes": 28637,
+      "sha256": "f44d945406c9cfaf6b638e2f40fd1c11ad4b3d84baaa8834e52dbbfeab3e1f78"
+    },
+    {
+      "path": "scripts/date-night-hedged-provider.test.mjs",
+      "bytes": 9588,
+      "sha256": "9bfd8932f27c9ace295628d5ffbd25539a2ec2ee8d58672adf6edf8b24dfcc3b"
+    },
+    {
+      "path": "scripts/date-night-lifecycle-parity.test.mjs",
+      "bytes": 13997,
+      "sha256": "3ddaeb6b2dc2fa68342045b9f024a451d85be6a24a10c16c588e803bb920bd56"
+    },
+    {
+      "path": "scripts/date-night-partial-results.test.mjs",
+      "bytes": 13201,
+      "sha256": "8dd68f1a26ebd6f49cb10b8352090e4264974fcb3b9370cc8e5d06d3b62a95c2"
+    },
+    {
+      "path": "scripts/date-night-partial-ui.test.mjs",
+      "bytes": 1966,
+      "sha256": "ad44b057ec9301d59eb956165ce5f522e9e069ade2dba19da209ba06a0055f00"
+    },
+    {
+      "path": "scripts/date-night-query-cost.test.mjs",
+      "bytes": 7159,
+      "sha256": "4a835da2f0570999690d293986cfaaed41cecc41e955d8e470886a56993b5361"
+    },
+    {
+      "path": "scripts/date-night-query-plan.test.mjs",
+      "bytes": 36829,
+      "sha256": "367dd032e87e0fbfc415bba1c0ce82d69fb348ba923e5936ab75bd3459307fee"
+    },
+    {
+      "path": "scripts/date-night-radial-browser.mjs",
+      "bytes": 10653,
+      "sha256": "a465de469781c1eb82bec2a896dabf391f2c626332c72152c1d54a0fcd39e263"
+    },
+    {
+      "path": "scripts/date-night-radial-cache.test.mjs",
+      "bytes": 8181,
+      "sha256": "4bc4410d940f30f0cabf12e1d31f40f1cbcb8fa3d3ec8f4f77e88048f68ab6f5"
+    },
+    {
+      "path": "scripts/date-night-radial-live.mjs",
+      "bytes": 9284,
+      "sha256": "0dd77b7ce33d6998cfeecce3c120f6a4115aac5297c68136acc8e303297f5f83"
+    },
+    {
+      "path": "scripts/date-night-radial-pacing.test.mjs",
+      "bytes": 9847,
+      "sha256": "99d0d80f02d7287381f12c5b59460d33e85b506f0b787f013d585205a9c08a3c"
+    },
+    {
+      "path": "scripts/date-night-radial-plan.test.mjs",
+      "bytes": 7306,
+      "sha256": "8cc8495097f10e6dd815d7e1d1806696fd0224bf58f9531a6d2f947535157079"
+    },
+    {
+      "path": "scripts/date-night-radial-search.test.mjs",
+      "bytes": 4234,
+      "sha256": "7c375b1f4175ad6b91193ad84b082431bf633335c809c95148e8e2db6fac85ed"
+    },
+    {
+      "path": "scripts/date-night-radial-session.test.mjs",
+      "bytes": 10207,
+      "sha256": "d6ed22dd84ab0e84c104b51491f10ebc31b8127d726fbc22f9b51158e3cb434a"
+    },
+    {
+      "path": "scripts/date-night-resilience-browser.mjs",
+      "bytes": 10824,
+      "sha256": "489d6aa11dc92de9ea24395cb6afbd144c9c9a8702fe6e74eb84bedca73bf16b"
+    },
+    {
+      "path": "scripts/date-night-resilience-live.mjs",
+      "bytes": 19384,
+      "sha256": "8182e0b66c6cfa7174948ea4a4404ec14fc430f478244b353c986eb1aa6adc08"
+    },
+    {
+      "path": "scripts/discovery-client-lifecycle.test.mjs",
+      "bytes": 10632,
+      "sha256": "c42365990fcc68616252eb1e1fe13c6c5576bf7ebd7fa072055692687a86575c"
+    },
+    {
+      "path": "scripts/discovery-provider-deadlines.test.mjs",
+      "bytes": 11263,
+      "sha256": "d63145ed83cfa542b45cde3fbc1481a65446b23bcfd957b88db3af89f27144e2"
+    },
+    {
+      "path": "scripts/domain-readiness.test.mjs",
+      "bytes": 11798,
+      "sha256": "e534f96f53e1efdc725b571c413c0e21363f399a53478e62fd11be9b15f47f51"
+    },
+    {
+      "path": "scripts/grok-pwa-plugin.mjs",
+      "bytes": 6710,
+      "sha256": "773227a92f8c7655968cc92476de93e32389a66369d2bb31bb37462e05f56e31"
+    },
+    {
+      "path": "scripts/grok-pwa-plugin.test.mjs",
+      "bytes": 20430,
+      "sha256": "41b710d173e7a1e61dba75ea496c0285164f5853d60a29b21d5a7570a019c80b"
+    },
+    {
+      "path": "scripts/grok-pwa-shared.d.mts",
+      "bytes": 3361,
+      "sha256": "b23fcda74713136cc077f20f534f60b06034c87dbee61fa915f18f42835f37e5"
+    },
+    {
+      "path": "scripts/grok-pwa-shared.mjs",
+      "bytes": 18928,
+      "sha256": "992bc8e14c369a70ba804b0f0d7c3f147e165969a0ede62c121ddccf5466e372"
+    },
+    {
+      "path": "scripts/icon-refresh.test.mjs",
+      "bytes": 996,
+      "sha256": "0dc9b748db40cac110f9e36993d150de0e9ea62ebfa97e86ecf2e45966b9c4db"
+    },
+    {
+      "path": "scripts/icon-refresh.test.py",
+      "bytes": 4241,
+      "sha256": "f7e045ac5de2062dc3ff7516025626bd0e85e6f1d2b8e92639ccb2d4a91c0ff4"
+    },
+    {
+      "path": "scripts/install-page.html",
+      "bytes": 5704,
+      "sha256": "b0973d1fa4a6870cf4e0416592638c4948478b54c6cf524ed36fd8e055235c61"
+    },
+    {
+      "path": "scripts/location-browser-live.mjs",
+      "bytes": 8569,
+      "sha256": "03293f840f624546ffb1769dda608b78d408c1dbb895d777a17e95f575d144da"
+    },
+    {
+      "path": "scripts/location-browser.mjs",
+      "bytes": 19952,
+      "sha256": "d11b0d414af3969a17bcffe28dc90ddc7cb64f354da6fa9590b6e7ee40157a0c"
+    },
+    {
+      "path": "scripts/location-discovery.test.mjs",
+      "bytes": 10257,
+      "sha256": "ed74dc8cb4d16a54253765d220d47d74ea4bdc0af58fee27895c104acb279ca1"
+    },
+    {
+      "path": "scripts/location-normalization.test.mjs",
+      "bytes": 3069,
+      "sha256": "38d6cd334a658893993b7b65dc2d95765f32422d21354f7aca0abbc398d5176f"
+    },
+    {
+      "path": "scripts/migrate.mjs",
+      "bytes": 3181,
+      "sha256": "e1a31c8046a099df37b4bcbcafa4f4f7d7d18b1f1f0dc6d79676d41c4be976be"
+    },
+    {
+      "path": "scripts/migration-plan.mjs",
+      "bytes": 1525,
+      "sha256": "9305d8cfe8cdad73671065d675c89d0f20075d18c756f9aba5043b72e7c19a0d"
+    },
+    {
+      "path": "scripts/migration-plan.test.mjs",
+      "bytes": 3558,
+      "sha256": "9787b5f5f1a7057db94f0a5a8c89abf6ec569fd22d26f99be1c248a2a9f0c082"
+    },
+    {
+      "path": "scripts/missouri-two-record-browser.mjs",
+      "bytes": 43701,
+      "sha256": "6e33dcf471d875c9cc020e82bbc988e6bbdc12694d002311986d63aba4d5d7eb"
+    },
+    {
+      "path": "scripts/missouri-two-records.test.mjs",
+      "bytes": 9310,
+      "sha256": "f1f08e85aa2d043650069334906494a667d15594060320cc60a8a01d1173b50c"
+    },
+    {
+      "path": "scripts/optional-workspace-docs.mjs",
+      "bytes": 595,
+      "sha256": "84d0da0d7bbfea2994535dedd9a98a53aa9fc5bb23081591d78a0df279340799"
+    },
+    {
+      "path": "scripts/optional-workspace-docs.test.mjs",
+      "bytes": 890,
+      "sha256": "ebf0ea11e19be07dafddc942977ee6456f35a65ff3112baf956d25b1d11dfb9b"
+    },
+    {
+      "path": "scripts/preview-thumbnail.mjs",
+      "bytes": 1762,
+      "sha256": "fd7263a1dd76f788c2b51e9381e1f1de1a58993fd94e01040285556cd38c0c40"
+    },
+    {
+      "path": "scripts/preview.mjs",
+      "bytes": 11074,
+      "sha256": "b366b1c28844cda81d21e36a88af5f548bdec6a5a4b3000aac12be3ec99cf605"
+    },
+    {
+      "path": "scripts/preview.test.mjs",
+      "bytes": 9207,
+      "sha256": "0105fe41d056ecc22c586a191a9cbd7d0e838b7c878d6993c8c9573c7ea708b1"
+    },
+    {
+      "path": "scripts/release-polish.test.mjs",
+      "bytes": 2685,
+      "sha256": "f30ecdb40cfe9f382d0d7e448e0ed7f4bc3e099af9a0826156a5adba420061e2"
+    },
+    {
+      "path": "scripts/seasonal-astra-commercial.test.mjs",
+      "bytes": 10090,
+      "sha256": "b203036190bd312666453e59791364badaac6fd2604b0c5b2031c61e5c547ccd"
+    },
+    {
+      "path": "scripts/seasonal-astra-delta.test.mjs",
+      "bytes": 11095,
+      "sha256": "de4013bd325e7c7ec7b818001e13179707f8c4aca6211db56fa25ab743633d18"
+    },
+    {
+      "path": "scripts/seasonal-astra-eleven.test.mjs",
+      "bytes": 13228,
+      "sha256": "c5e851a97208438846afd2077c62a0c0d95d356e2e11c117ebfd8936be1f99d7"
+    },
+    {
+      "path": "scripts/seasonal-card-layout-browser.mjs",
+      "bytes": 17768,
+      "sha256": "984e8bfb977b70be9cc8708ec55eafbd0017a735e02f8e52ac38a429cb369405"
+    },
+    {
+      "path": "scripts/seasonal-card-layout.test.mjs",
+      "bytes": 1771,
+      "sha256": "9b443104e58a0c7e374dcafdc86b6c5b1b593cf440fbbdcb9a92d441c6241243"
+    },
+    {
+      "path": "scripts/seasonal-completeness-v1-browser.mjs",
+      "bytes": 47027,
+      "sha256": "8083b7643709b1d45f6236277aaaf1140a0c009266dcc56faa831bbb1db7039a"
+    },
+    {
+      "path": "scripts/seasonal-completeness-v1.test.mjs",
+      "bytes": 18765,
+      "sha256": "356a42ca4253381c4fc213b566462b7b9c03fb6fdca60af212cd8c5e0da55c26"
+    },
+    {
+      "path": "scripts/seasonal-deferred-batch-3.test.mjs",
+      "bytes": 4369,
+      "sha256": "465dc6b55eae9bd5f40e1643c2468ef7a1b6cc8b96369ff5e4af3716aabc956c"
+    },
+    {
+      "path": "scripts/seasonal-discovery.test.mjs",
+      "bytes": 34974,
+      "sha256": "0e1500e016d39aeecd64cd9d95fe005de2ebb51d42f58c8148ac5e59be025aed"
+    },
+    {
+      "path": "scripts/seasonal-final-four.test.mjs",
+      "bytes": 2981,
+      "sha256": "2651d4409190a9ab5baadf3eca46179645d4dfb77c8be8e1e70ccee6770858ec"
+    },
+    {
+      "path": "scripts/seasonal-late-fall-client-cache.test.mjs",
+      "bytes": 12485,
+      "sha256": "a4b244b692cfdf37479e3d272e246336bafdbd1286fba1fa16e30bd69706faf1"
+    },
+    {
+      "path": "scripts/seasonal-late-fall.test.mjs",
+      "bytes": 12131,
+      "sha256": "b4b9026c9000853db43dd0d611eb09b9f45cd7790c4f504779bd2f179f011040"
+    },
+    {
+      "path": "scripts/seasonal-next-batch.test.mjs",
+      "bytes": 8725,
+      "sha256": "371cdaa2c6fdafddbad0c2b06788add01019a7fd6710f088b1d4c9eddfe13d17"
+    },
+    {
+      "path": "scripts/seasonal-next-missouri.test.mjs",
+      "bytes": 13565,
+      "sha256": "aa66e2b5310c2b9a8982cfccdc3b8738c05cc89efd3883232dac9fd463b90c5f"
+    },
+    {
+      "path": "scripts/seasonal-overnight-final-end.test.mjs",
+      "bytes": 8034,
+      "sha256": "cf890cc3ba0cd558956e2075126072118428d6686d1a5494a57c5a2e6b438e43"
+    },
+    {
+      "path": "scripts/seasonal-phase4-recovery.test.mjs",
+      "bytes": 19173,
+      "sha256": "defe4cf6e0820b02a019e2a0fb247444c2e42b6819b9434f63eb677c1db36c66"
+    },
+    {
+      "path": "scripts/seasonal-presentation.test.mjs",
+      "bytes": 3393,
+      "sha256": "35d68c05b757923858c1d03ce90e223febdec82572555e5eb04c1ed315f5d294"
+    },
+    {
+      "path": "scripts/seasonal-rideshare-precision.test.mjs",
+      "bytes": 2206,
+      "sha256": "1c368e1d67d8b459bd10c5f307ec7931a369c0d945679eb349348e98dc3b19f9"
+    },
+    {
+      "path": "scripts/seasonal-ten-record-browser.mjs",
+      "bytes": 85629,
+      "sha256": "352ed7d6cc81b8e7132a646a5d288c40d2e2c0a2003df55e66706779f859b9f0"
+    },
+    {
+      "path": "scripts/seasonal-three-source-tier-a.test.mjs",
+      "bytes": 3744,
+      "sha256": "554f957e52300659c84007dc5f554edf14bec47749e5f518e3f71f23a539b16f"
+    },
+    {
+      "path": "scripts/sign-out-plan.mjs",
+      "bytes": 5971,
+      "sha256": "32ae072de23b5138bf849c344caf72ab2dab6cb4617ab9915db4e4f5b9c7e2f0"
+    },
+    {
+      "path": "scripts/sign-out-plan.test.mjs",
+      "bytes": 8659,
+      "sha256": "1942e32f4b6a9d8b62733338b0f0e1a7d84ed278b4e6c4f24fa7616a3abc694e"
+    },
+    {
+      "path": "scripts/slider-accessibility-browser.mjs",
+      "bytes": 4069,
+      "sha256": "7642913248fbf9fa987b6cc989db6d8dfa39eff3859a17e25533828645085043"
+    },
+    {
+      "path": "scripts/social-card-refresh.py",
+      "bytes": 2886,
+      "sha256": "de7f54bf34e82ef08b548fff568354fc3d09035e134630e8b58ea29ab0c80190"
+    },
+    {
+      "path": "scripts/tanstack-security.test.mjs",
+      "bytes": 16451,
+      "sha256": "1cef8dd8df8d7e928150a861dc473d737287f66109e78fa098196f3faf126c0c"
+    },
+    {
+      "path": "scripts/test-runner.mjs",
+      "bytes": 1714,
+      "sha256": "8d8290eb35ca7c5d4353961f36e914eefd22e445841ea15222a85ad8f87e5c97"
+    },
+    {
+      "path": "scripts/test-runner.test.mjs",
+      "bytes": 1677,
+      "sha256": "663ccff31c087e45bc69b80df84eafeac540ba98e461a0ad75ac335ac837b18e"
+    },
+    {
+      "path": "scripts/test-support/date-night-component-harness.mjs",
+      "bytes": 5153,
+      "sha256": "71a76c94a7f0f2f7f8d531731827285b4cd7e2321eea7282b0fe238cd596232a"
+    },
+    {
+      "path": "scripts/test-support/date-night-query-evaluator.mjs",
+      "bytes": 4289,
+      "sha256": "a23d90b089b4df4866bde4078b677572cd05fd63294b4deced7d35055fb637d1"
+    },
+    {
+      "path": "scripts/test-support/date-night-radial-preload.mjs",
+      "bytes": 3608,
+      "sha256": "aed77e2933f099cf7a8f288281e34cd3817829c0e4346dfd123cd93a91eb3e5a"
+    },
+    {
+      "path": "scripts/test-support/date-night-resilience-preload.mjs",
+      "bytes": 4423,
+      "sha256": "ef974b5ceb6e10a82c68e03de3d626467ea1026b64b4be6589baa1d9b1d4a725"
+    },
+    {
+      "path": "scripts/test-support/discovery-clock.mjs",
+      "bytes": 1877,
+      "sha256": "c6c307bd3350dc856112f65dc2d6d4b727dbbc1d001a03f4e7cedddb492679d6"
+    },
+    {
+      "path": "scripts/test-support/discovery-component-harness.mjs",
+      "bytes": 5985,
+      "sha256": "b800517acfcea137dbca11e0c553f12f322a0a76a2e55f7388d915a99b4e50a0"
+    },
+    {
+      "path": "scripts/test-support/load-app-module.mjs",
+      "bytes": 2084,
+      "sha256": "e3342c75e08db594d7edefc7460ce53f4c7fecd5963b0d9e925817c111d1fc74"
+    },
+    {
+      "path": "scripts/test-support/location-provider-fixtures.mjs",
+      "bytes": 3855,
+      "sha256": "ae1b4a38f0b2dc85ace2793ad248294655e9e7d7d88a580dc7f9548f4f25ec5d"
+    },
+    {
+      "path": "scripts/test-support/missouri-previous32-receipts.json",
+      "bytes": 25433,
+      "sha256": "57bdf99098fc38fe3923b778f14360719111b7d3aef7f80c43bbd652d1105e89"
+    },
+    {
+      "path": "scripts/test-support/missouri-two-record-preload.mjs",
+      "bytes": 3188,
+      "sha256": "9fa4c53fb73085d6600ea8613aef30dcac33d208cf31ac4a399edaf3f8635993"
+    },
+    {
+      "path": "scripts/test-support/next-missouri-baseline-receipts.json",
+      "bytes": 31642,
+      "sha256": "1ed4e451be969a1c4689a5dbc670b7e17ce0e1b1140b49fcef4f414d1a44f501"
+    },
+    {
+      "path": "scripts/test-support/next-missouri-browser-facts.mjs",
+      "bytes": 1295,
+      "sha256": "e4963cfe321fcba54b65d7faee8562c4100ce01d7c1285408d5c8bc758f1aba1"
+    },
+    {
+      "path": "scripts/test-support/next-missouri-browser-projections.json",
+      "bytes": 8778,
+      "sha256": "0b406b9131d2e3149c05366d68a97d34ee2897b77542762e5f5829c259d2e2c5"
+    },
+    {
+      "path": "scripts/test-support/phase4-recovery-browser-facts.mjs",
+      "bytes": 2861,
+      "sha256": "4e3394006645666e7a2d8160c312c82ad6e345f9df4ab4ce7b642b87073e59e2"
+    },
+    {
+      "path": "scripts/test-support/phase4-recovery-browser-projections.json",
+      "bytes": 18009,
+      "sha256": "7765e64dd8748ed36dfd4584b6e4815b7faabcf4067fc91ece28f08a5e6aebe5"
+    },
+    {
+      "path": "scripts/test-support/seasonal-completeness-v1-preload.mjs",
+      "bytes": 3142,
+      "sha256": "12793631a0bc80a78819fa55a57d77b302e52646e381fa4735d0352ff24e5f4a"
+    },
+    {
+      "path": "scripts/test-support/seasonal-ten-record-preload.mjs",
+      "bytes": 3145,
+      "sha256": "83ca982effa231c366d867feb7fa90b8e79c8545cbb61f4fcddfd70c0fad7bf2"
+    },
+    {
+      "path": "scripts/test-support/slider-accessibility-fixture.tsx",
+      "bytes": 1290,
+      "sha256": "0d29b560f455b9f34b9c5b660751a18871a9b1fce35c6bac7d92a7e444271902"
+    },
+    {
+      "path": "scripts/ts-test-loader.mjs",
+      "bytes": 1577,
+      "sha256": "52827fdc93a5beadc9bc8082d4803044a7a9afdaff9aa865955f944b175af0c6"
+    },
+    {
+      "path": "scripts/verify-android-bundle.py",
+      "bytes": 7673,
+      "sha256": "cf22b2bde53eaa1e22b2436ef7c50952c7031ec2edd5cddfc3b2069a1c4725e2"
+    },
+    {
+      "path": "scripts/with-app-env.mjs",
+      "bytes": 4601,
+      "sha256": "a846b68bd3645299c23eef965d9ef226df3a500d345d7576c23f7a2b2ff643c7"
+    },
+    {
+      "path": "scripts/with-app-env.test.mjs",
+      "bytes": 4466,
+      "sha256": "384ea7d0d20f980f733ee38d8f48b0bedd8a4ad39c80ca4792b9aeebcb275851"
+    },
+    {
+      "path": "scripts/write-atomic.mjs",
+      "bytes": 3607,
+      "sha256": "650b62e8aa38697e1b931049025afe3aac829e6761a8aadf428712faef8b1544"
+    },
+    {
+      "path": "scripts/write-atomic.test.mjs",
+      "bytes": 7620,
+      "sha256": "180e64b09f4de0249b4f40156d11e3ce6dff9cc802243bc47b03ec93c2669445"
+    },
+    {
+      "path": "package.json",
+      "bytes": 3973,
+      "sha256": "6d966eda6ff732719e17862d97ca822a8574926f2fbe5edaaae1cf45607aebf0"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 302347,
+      "sha256": "462f09bd3fda35cf30646b2f343cd8d2a65340a63b59222b5f9d57084d9aa4b3"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 6750,
+      "sha256": "5451c22b17e7d8408674909b3d231f0ae4a4d017b740491ce7df008d961a7eee"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 722,
+      "sha256": "8abad87a6c62322f1f4fdff02d5f3f764ea10a98c49cfafccdc288a0dced492f"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 583,
+      "sha256": "b6cb6dbc8995fe4637bd63f7201389987e27762c2a0ce494506e2db1ceae82e3"
+    }
+  ]
+}

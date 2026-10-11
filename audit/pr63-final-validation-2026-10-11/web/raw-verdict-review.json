@@ -1,0 +1,389 @@
+{
+  "candidate": "f92870632b71def18d7642596dc9dd3357675f76",
+  "run": 38107379751,
+  "state": "ALL RAW VERDICTS PASS",
+  "verifiedAt": "2026-10-11T03:25:34.982194+00:00",
+  "artifactCount": 13,
+  "artifactBytes": 797715028,
+  "memberCount": 8042,
+  "sourceProofGroups": {
+    "f5e2385ea77bead33b8fec64c3d7dbc939718e34eeedf12acb0722a1a7c11bba": 13
+  },
+  "outputProofGroups": {
+    "bf57eb8dc1fa4ffc726ca14017f72221977da7bc515b1a2c7ffa01e2acbf7bd0": 1,
+    "54b60b953a9db651824777b717ba12437203fc5470ae17514dede64050fed3ca": 1,
+    "1748d7fc61d09143b2a0006e75b978070e4bfc785f7b2c7b93c0884923ee5829": 1,
+    "9c7ccd33bde47a3820fbac83a63c1ea82c90a3ffcacdda94b8f7133660e2efdf": 1,
+    "e4ac5eb32dc77e0f03a3c8d5f3e3d5c8d10cef922d251d827ca878c7e21febb4": 1,
+    "23297aa64295b823c438f1fc753ee5dc127bb73364a6d779310fac90a8151b1e": 1,
+    "ed7bf6071c4d08f11dc15d5b412d2b27903e339b030fe59c6d008f3078819080": 1,
+    "43e7b855b5a0ac73b4947ddf01f598dd023ddedfb23380823d61cdc1d2f7c94c": 1,
+    "400ecfcc8f463ab5b4381f29d564687da4b38acbc2c94b5716c3b8a4fa99c32e": 1,
+    "43dfe93406a37addae7b8eef481bda9c9b89a47ab13242fdb256bd2e4db543f7": 1,
+    "c2126a951e9d2234c5041da91e89549e2f239bf56ae8a05ec7aeda72e29efb7a": 1,
+    "e1f0d6894b5e59d33a5ce3269611ad9ce2f7c25378fe9420cd2d0a6e56d08f38": 1,
+    "a6428bd49bf204d420168009f56c74c5cad617b934638a993f31f021f6e5dcd3": 1
+  },
+  "artifacts": [
+    {
+      "id": 11689523932,
+      "name": "casino-browser-evidence-location",
+      "bytes": 429438,
+      "sha256": "46d166ec29524923bd5f14e1689c873586c1fe0b8a9f0db2fc50f6901e660af4",
+      "members": 8,
+      "output": {
+        "sha256": "bf57eb8dc1fa4ffc726ca14017f72221977da7bc515b1a2c7ffa01e2acbf7bd0",
+        "files": 194
+      },
+      "verdicts": [
+        {
+          "file": "location/result.json",
+          "sha256": "bf5834b2d33606b2779d3f53c1712b5495aae2a28d4e31067005c83c29adb8eb",
+          "passed": true,
+          "scenarioCount": 0,
+          "legacyCheckCount": 19,
+          "comparisonCount": 0,
+          "negativePlanControls": 0,
+          "imageDecodeMeasurements": 0,
+          "publicProviderCalls": null,
+          "network": null,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "id": 11689784418,
+      "name": "casino-browser-evidence-date-night-radial",
+      "bytes": 3288518,
+      "sha256": "8e8bc2a02ab35e0148700825f5b004ff42abc862eee8bffe92777ce7845916c2",
+      "members": 15,
+      "output": {
+        "sha256": "54b60b953a9db651824777b717ba12437203fc5470ae17514dede64050fed3ca",
+        "files": 194
+      },
+      "verdicts": [
+        {
+          "file": "date-night-radial/verdict.json",
+          "sha256": "c45b152d325069e59e4d1e85ccf6ffe98c2fb897ef1edd16c131984695780cda",
+          "passed": true,
+          "scenarioCount": 10,
+          "legacyCheckCount": 0,
+          "comparisonCount": 0,
+          "negativePlanControls": 0,
+          "imageDecodeMeasurements": 0,
+          "publicProviderCalls": 0,
+          "network": null,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "id": 11689909102,
+      "name": "validation-check-build-proof",
+      "bytes": 393,
+      "sha256": "e863483cd92bebd49653d1d84596fa739a081d2170c108ab26ba89ff8d78dc6e",
+      "members": 1,
+      "output": {
+        "sha256": "1748d7fc61d09143b2a0006e75b978070e4bfc785f7b2c7b93c0884923ee5829",
+        "files": 194
+      },
+      "verdicts": []
+    },
+    {
+      "id": 11689919969,
+      "name": "casino-browser-evidence-seasonal-phase4",
+      "bytes": 68369152,
+      "sha256": "f48b41ce3ab1af2c321bc7d8b4d74ba44d8c47e28e3497b141b17653532805f2",
+      "members": 587,
+      "output": {
+        "sha256": "9c7ccd33bde47a3820fbac83a63c1ea82c90a3ffcacdda94b8f7133660e2efdf",
+        "files": 194
+      },
+      "verdicts": [
+        {
+          "file": "seasonal-phase4-recovery-seven/verdict.json",
+          "sha256": "3548a9d227e5f8742778648842a4d81636539dfc9f57bf6b9b62dac37fbd1719",
+          "passed": true,
+          "scenarioCount": 164,
+          "legacyCheckCount": 0,
+          "comparisonCount": 0,
+          "negativePlanControls": 0,
+          "imageDecodeMeasurements": 60,
+          "publicProviderCalls": 0,
+          "network": {
+            "interceptedProviderCalls": 700,
+            "blockedServerRequests": [],
+            "forwardedExternalCalls": 0
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "id": 11690054222,
+      "name": "casino-browser-evidence-seasonal-two",
+      "bytes": 21937347,
+      "sha256": "958b05760b7b7713869a51b65d8e9f8e3c96a9d718ce9411ab7d6144102a1f42",
+      "members": 214,
+      "output": {
+        "sha256": "e4ac5eb32dc77e0f03a3c8d5f3e3d5c8d10cef922d251d827ca878c7e21febb4",
+        "files": 194
+      },
+      "verdicts": [
+        {
+          "file": "missouri-two-records/verdict.json",
+          "sha256": "0d11c48e4b852184499c6bb7429e02e216ce9795f70e59a7ca7b97f149b04d99",
+          "passed": true,
+          "scenarioCount": 23,
+          "legacyCheckCount": 0,
+          "comparisonCount": 0,
+          "negativePlanControls": 0,
+          "imageDecodeMeasurements": 35,
+          "publicProviderCalls": 0,
+          "network": {
+            "interceptedProviderCalls": 106,
+            "blockedServerRequests": [],
+            "forwardedExternalCalls": 0
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "id": 11690128787,
+      "name": "casino-browser-evidence-casino",
+      "bytes": 216741,
+      "sha256": "276b0817163cfddd0c103edb16d75ee260eab75b5b5e44db2d99197ea735635f",
+      "members": 7,
+      "output": {
+        "sha256": "23297aa64295b823c438f1fc753ee5dc127bb73364a6d779310fac90a8151b1e",
+        "files": 194
+      },
+      "verdicts": [
+        {
+          "file": "verdict.json",
+          "sha256": "ff1ab2779a36123af48c4243d8a9c6254c3e712daef8cef3dff739f68779f5df",
+          "passed": true,
+          "scenarioCount": 0,
+          "legacyCheckCount": 16,
+          "comparisonCount": 0,
+          "negativePlanControls": 0,
+          "imageDecodeMeasurements": 0,
+          "publicProviderCalls": null,
+          "network": null,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "id": 11690219093,
+      "name": "casino-browser-evidence-seasonal-next-missouri",
+      "bytes": 29862973,
+      "sha256": "83aae8b6996f7bb0e7f8b099c823298152d960f205d5f0286152e54d8d517e2f",
+      "members": 282,
+      "output": {
+        "sha256": "ed7bf6071c4d08f11dc15d5b412d2b27903e339b030fe59c6d008f3078819080",
+        "files": 194
+      },
+      "verdicts": [
+        {
+          "file": "seasonal-next-missouri-three/verdict.json",
+          "sha256": "b6af0bc61f5e7f844c237043e3e9a16dfc128d10936fdb02bca683b242b598dc",
+          "passed": true,
+          "scenarioCount": 87,
+          "legacyCheckCount": 0,
+          "comparisonCount": 0,
+          "negativePlanControls": 0,
+          "imageDecodeMeasurements": 28,
+          "publicProviderCalls": 0,
+          "network": {
+            "interceptedProviderCalls": 297,
+            "blockedServerRequests": [],
+            "forwardedExternalCalls": 0
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "id": 11690254467,
+      "name": "casino-browser-evidence-geometry",
+      "bytes": 253578165,
+      "sha256": "7ab22eb9d5db05f8b9229361effd152ed526f059d1a28ffd89947533736550b4",
+      "members": 3582,
+      "output": {
+        "sha256": "43e7b855b5a0ac73b4947ddf01f598dd023ddedfb23380823d61cdc1d2f7c94c",
+        "files": 194
+      },
+      "verdicts": [
+        {
+          "file": "seasonal-card-layout/verdict.json",
+          "sha256": "acc320cd5f60fa567c926a9ab40d5c7b686c6a8c732d0d724bd1bb9b22964e7d",
+          "passed": true,
+          "scenarioCount": 0,
+          "legacyCheckCount": 0,
+          "comparisonCount": 498,
+          "negativePlanControls": 15,
+          "imageDecodeMeasurements": 0,
+          "publicProviderCalls": null,
+          "network": null,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "id": 11690274027,
+      "name": "casino-browser-evidence-seasonal-completeness-v1",
+      "bytes": 57694442,
+      "sha256": "0ca6aa7434cd33dc91347ea620c4e243dbc9c38576ca289df791fbca8a58d815",
+      "members": 513,
+      "output": {
+        "sha256": "400ecfcc8f463ab5b4381f29d564687da4b38acbc2c94b5716c3b8a4fa99c32e",
+        "files": 194
+      },
+      "verdicts": [
+        {
+          "file": "seasonal-completeness-v1/verdict.json",
+          "sha256": "b2121c07fb4c25e3bda7aa7b4f9b1a06d778f859757512e1f6fb23e50fbdba15",
+          "passed": true,
+          "scenarioCount": 97,
+          "legacyCheckCount": 0,
+          "comparisonCount": 0,
+          "negativePlanControls": 0,
+          "imageDecodeMeasurements": 58,
+          "publicProviderCalls": 0,
+          "network": {
+            "interceptedProviderCalls": 512,
+            "blockedServerRequests": [],
+            "forwardedExternalCalls": 0
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "id": 11690455788,
+      "name": "casino-browser-evidence-seasonal-astra",
+      "bytes": 94376098,
+      "sha256": "404fa7bbd0024bf2d24db15ccfcb85ccf405f09939fc6f206b801f7230b08dbd",
+      "members": 729,
+      "output": {
+        "sha256": "43dfe93406a37addae7b8eef481bda9c9b89a47ab13242fdb256bd2e4db543f7",
+        "files": 194
+      },
+      "verdicts": [
+        {
+          "file": "seasonal-astra-eleven/verdict.json",
+          "sha256": "ed456a5e9763a16de909edb2f20575b7e4c1c5945852d3b00b46ca46037d351c",
+          "passed": true,
+          "scenarioCount": 220,
+          "legacyCheckCount": 0,
+          "comparisonCount": 0,
+          "negativePlanControls": 0,
+          "imageDecodeMeasurements": 70,
+          "publicProviderCalls": 0,
+          "network": {
+            "interceptedProviderCalls": 1032,
+            "blockedServerRequests": [],
+            "forwardedExternalCalls": 0
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "id": 11690610611,
+      "name": "casino-browser-evidence-seasonal-astra-extras",
+      "bytes": 76205617,
+      "sha256": "18c1a5ee667928c2397e4f7f38142949fdb126df016809169c43eaf5efae9edf",
+      "members": 582,
+      "output": {
+        "sha256": "c2126a951e9d2234c5041da91e89549e2f239bf56ae8a05ec7aeda72e29efb7a",
+        "files": 194
+      },
+      "verdicts": [
+        {
+          "file": "seasonal-astra-extras/verdict.json",
+          "sha256": "dd28ad5d163a8739aa90dab320543d61fe22b914de453a81152d61486aed6802",
+          "passed": true,
+          "scenarioCount": 185,
+          "legacyCheckCount": 0,
+          "comparisonCount": 0,
+          "negativePlanControls": 0,
+          "imageDecodeMeasurements": 54,
+          "publicProviderCalls": 0,
+          "network": {
+            "interceptedProviderCalls": 834,
+            "blockedServerRequests": [],
+            "forwardedExternalCalls": 0
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "id": 11690700250,
+      "name": "casino-browser-evidence-seasonal-ten",
+      "bytes": 75803855,
+      "sha256": "2d577420651e7fd38b83cbf5a28a84f63ff95a9427c24ce161b2714251ee2821",
+      "members": 582,
+      "output": {
+        "sha256": "e1f0d6894b5e59d33a5ce3269611ad9ce2f7c25378fe9420cd2d0a6e56d08f38",
+        "files": 194
+      },
+      "verdicts": [
+        {
+          "file": "seasonal-ten-record/verdict.json",
+          "sha256": "8389ae0a0655ed80ab79835c04cebd04edae6476e9014cd8c68ac8b77e85047a",
+          "passed": true,
+          "scenarioCount": 157,
+          "legacyCheckCount": 0,
+          "comparisonCount": 0,
+          "negativePlanControls": 0,
+          "imageDecodeMeasurements": 66,
+          "publicProviderCalls": 0,
+          "network": {
+            "interceptedProviderCalls": 878,
+            "blockedServerRequests": [],
+            "forwardedExternalCalls": 0
+          },
+          "errors": []
+        }
+      ]
+    },
+    {
+      "id": 11691285182,
+      "name": "casino-browser-evidence-seasonal-cumulative",
+      "bytes": 115952289,
+      "sha256": "94611b8ca91ee43db185e819a11ca679196dcdcdc8b4cf3574d4998f807d8f6c",
+      "members": 940,
+      "output": {
+        "sha256": "a6428bd49bf204d420168009f56c74c5cad617b934638a993f31f021f6e5dcd3",
+        "files": 194
+      },
+      "verdicts": [
+        {
+          "file": "seasonal-cumulative-15/verdict.json",
+          "sha256": "04bcf65dc1221d4139d51cbda83098231d5b27a0d9c898f0522c7865741e13f8",
+          "passed": true,
+          "scenarioCount": 235,
+          "legacyCheckCount": 0,
+          "comparisonCount": 0,
+          "negativePlanControls": 0,
+          "imageDecodeMeasurements": 100,
+          "publicProviderCalls": 0,
+          "network": {
+            "interceptedProviderCalls": 1337,
+            "blockedServerRequests": [],
+            "forwardedExternalCalls": 0
+          },
+          "errors": []
+        }
+      ]
+    }
+  ],
+  "scenarioTotal": 1178,
+  "legacyCheckTotal": 35,
+  "geometryTotal": 498,
+  "negativePlanControls": 15
+}

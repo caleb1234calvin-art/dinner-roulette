@@ -1,0 +1,5384 @@
+{
+  "verdict": "PASS498 MEASUREMENTS +3 VISUALS",
+  "headSha": "f92870632b71def18d7642596dc9dd3357675f76",
+  "artifactId": 11690254467,
+  "rawVerdictSha256": "acc320cd5f60fa567c926a9ab40d5c7b686c6a8c732d0d724bd1bb9b22964e7d",
+  "comparisons": 498,
+  "uniqueIds": 60,
+  "negativePlanControls": [
+    "date-night-mo26-116-sam-baker-halloween-bash",
+    "date-night-mo26-019-james-river-joplin-party",
+    "date-night-mo26-031-silver-dollar-city-harvest",
+    "date-night-mo26-034-boone-historical-haunts",
+    "date-night-mo26-115-bollinger-trick-or-treat",
+    "date-night-mo26-delta-haunted-river-float",
+    "date-night-mo26-012-witches-day-out",
+    "date-night-mo26-028-nevada-oktoberfest",
+    "date-night-mo26-074-osage-beach-fall-festival",
+    "date-night-mo26-084-mcwilliams",
+    "date-night-mo26-071-pomme-de-terror",
+    "date-night-mo26-astra-branson-ghoster",
+    "date-night-mo26-astra-tunnel-of-terror-ballwin",
+    "date-night-mo26-astra-tunnel-of-terror-ofallon",
+    "date-night-mo26-phase4-carolyns-pumpkin-patch"
+  ],
+  "widths": [
+    320,
+    390,
+    512
+  ],
+  "kindCounts": {
+    "options": 180,
+    "result": 180,
+    "plan": 135,
+    "plan-settle": 3
+  },
+  "maxMatchedOrdinaryDeltaPx": 4.671875,
+  "checks": [
+    {
+      "comparison": "date-night-mo26-goblin-kings-haunted-trail 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-goblin-kings-haunted-trail 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-goblin-kings-haunted-trail 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-068-lloyds-family-farm 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-068-lloyds-family-farm 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-068-lloyds-family-farm 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-116-sam-baker-halloween-bash 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-116-sam-baker-halloween-bash 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-myers-inn-carthage 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-myers-inn-carthage 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-myers-inn-carthage 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-010-aftermath 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-010-aftermath 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-010-aftermath 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-011-beyond-outer-limits 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-011-beyond-outer-limits 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-011-beyond-outer-limits 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-029-campbells 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-029-campbells 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-029-campbells 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-030-rutledge-wilson 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-030-rutledge-wilson 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-030-rutledge-wilson 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-019-james-river-joplin-party 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-019-james-river-joplin-party 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-031-silver-dollar-city-harvest 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-031-silver-dollar-city-harvest 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-034-boone-historical-haunts 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-034-boone-historical-haunts 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-054-fun-farm 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-054-fun-farm 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-054-fun-farm 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-067-shryocks-callaway-farms 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-067-shryocks-callaway-farms 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-067-shryocks-callaway-farms 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-100-urban-gardens 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-100-urban-gardens 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-100-urban-gardens 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-114-perryville-pumpkin-farm 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-114-perryville-pumpkin-farm 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-114-perryville-pumpkin-farm 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-115-bollinger-trick-or-treat 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-115-bollinger-trick-or-treat 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-124-hotel-of-terror 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-124-hotel-of-terror 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-124-hotel-of-terror 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-125-dungeons-of-doom 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-125-dungeons-of-doom 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-125-dungeons-of-doom 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-edge-of-hell 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-edge-of-hell 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-edge-of-hell 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-creepyworld 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-creepyworld 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-creepyworld 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-darkness 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-darkness 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-darkness 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-haunted-river-float 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-haunted-river-float 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-fear-bloody-timber 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-fear-bloody-timber 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-fear-bloody-timber 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-085-brookdale-farms 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-085-brookdale-farms 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-085-brookdale-farms 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-012-witches-day-out 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-012-witches-day-out 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-028-nevada-oktoberfest 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-028-nevada-oktoberfest 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-074-osage-beach-fall-festival 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-074-osage-beach-fall-festival 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-084-mcwilliams 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-084-mcwilliams 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-036-monster-corn-maze 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-036-monster-corn-maze 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-036-monster-corn-maze 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-058-beast 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-058-beast 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-058-beast 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-069-dead-factory 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-069-dead-factory 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-069-dead-factory 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-071-pomme-de-terror 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-071-pomme-de-terror 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-118-haunted-hall-horror 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-118-haunted-hall-horror 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-118-haunted-hall-horror 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-branson-ghoster 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-branson-ghoster 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-liberty-corn-maze 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-liberty-corn-maze 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-liberty-corn-maze 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-terror-at-the-ranch 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-terror-at-the-ranch 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-terror-at-the-ranch 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-cobb-factory 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-cobb-factory 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-cobb-factory 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-field-of-screams-nixa 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-field-of-screams-nixa 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-field-of-screams-nixa 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-missouri-nightmare 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-missouri-nightmare 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-missouri-nightmare 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-trepidations 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-trepidations 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-trepidations 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-freaks-fair 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-freaks-fair 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-freaks-fair 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-hell-harvest 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-hell-harvest 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-hell-harvest 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-myers-forest-of-fears 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-myers-forest-of-fears 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-myers-forest-of-fears 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-labyrinth-of-fear 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-labyrinth-of-fear 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-labyrinth-of-fear 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-aurora-maize 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-aurora-maize 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-aurora-maize 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-shepherds-lantern 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-shepherds-lantern 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-shepherds-lantern 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-hollows 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-hollows 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-hollows 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-feemster-corn-maze 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-feemster-corn-maze 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-feemster-corn-maze 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-worlds-of-fun-haunt 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-worlds-of-fun-haunt 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-worlds-of-fun-haunt 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-ozark-nightmares 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-ozark-nightmares 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-ozark-nightmares 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-tunnel-of-terror-ballwin 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-tunnel-of-terror-ballwin 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-tunnel-of-terror-ofallon 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-tunnel-of-terror-ofallon 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-grotto 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-grotto 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-grotto 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-wolfmans-house-of-screams 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-wolfmans-house-of-screams 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-wolfmans-house-of-screams 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-werehouse-joplin 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-werehouse-joplin 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-werehouse-joplin 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fearstone-forest 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fearstone-forest 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fearstone-forest 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fun-time-farms 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fun-time-farms 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fun-time-farms 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-carolyns-pumpkin-patch 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-carolyns-pumpkin-patch 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-carolyns-pumpkin-patch 320 plan-settle",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-terror-on-route-66 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-terror-on-route-66 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-terror-on-route-66 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-field-of-screams-branson 320 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-field-of-screams-branson 320 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-field-of-screams-branson 320 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-goblin-kings-haunted-trail 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-goblin-kings-haunted-trail 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-goblin-kings-haunted-trail 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-068-lloyds-family-farm 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-068-lloyds-family-farm 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-068-lloyds-family-farm 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-116-sam-baker-halloween-bash 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-116-sam-baker-halloween-bash 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-myers-inn-carthage 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-myers-inn-carthage 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-myers-inn-carthage 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-010-aftermath 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-010-aftermath 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-010-aftermath 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-011-beyond-outer-limits 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-011-beyond-outer-limits 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-011-beyond-outer-limits 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-029-campbells 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-029-campbells 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-029-campbells 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-030-rutledge-wilson 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-030-rutledge-wilson 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-030-rutledge-wilson 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-019-james-river-joplin-party 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-019-james-river-joplin-party 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-031-silver-dollar-city-harvest 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-031-silver-dollar-city-harvest 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-034-boone-historical-haunts 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-034-boone-historical-haunts 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-054-fun-farm 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-054-fun-farm 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-054-fun-farm 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-067-shryocks-callaway-farms 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-067-shryocks-callaway-farms 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-067-shryocks-callaway-farms 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-100-urban-gardens 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-100-urban-gardens 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-100-urban-gardens 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-114-perryville-pumpkin-farm 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-114-perryville-pumpkin-farm 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-114-perryville-pumpkin-farm 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-115-bollinger-trick-or-treat 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-115-bollinger-trick-or-treat 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-124-hotel-of-terror 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-124-hotel-of-terror 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-124-hotel-of-terror 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-125-dungeons-of-doom 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-125-dungeons-of-doom 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-125-dungeons-of-doom 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-edge-of-hell 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-edge-of-hell 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-edge-of-hell 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-creepyworld 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-creepyworld 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-creepyworld 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-darkness 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-darkness 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-darkness 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-haunted-river-float 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-haunted-river-float 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-fear-bloody-timber 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-fear-bloody-timber 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-fear-bloody-timber 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-085-brookdale-farms 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-085-brookdale-farms 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-085-brookdale-farms 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-012-witches-day-out 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-012-witches-day-out 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-028-nevada-oktoberfest 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-028-nevada-oktoberfest 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-074-osage-beach-fall-festival 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-074-osage-beach-fall-festival 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-084-mcwilliams 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-084-mcwilliams 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-036-monster-corn-maze 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-036-monster-corn-maze 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-036-monster-corn-maze 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-058-beast 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-058-beast 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-058-beast 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-069-dead-factory 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-069-dead-factory 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-069-dead-factory 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-071-pomme-de-terror 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-071-pomme-de-terror 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-118-haunted-hall-horror 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-118-haunted-hall-horror 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-118-haunted-hall-horror 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-branson-ghoster 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-branson-ghoster 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-liberty-corn-maze 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-liberty-corn-maze 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-liberty-corn-maze 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-terror-at-the-ranch 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-terror-at-the-ranch 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-terror-at-the-ranch 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-cobb-factory 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-cobb-factory 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-cobb-factory 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-field-of-screams-nixa 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-field-of-screams-nixa 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-field-of-screams-nixa 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-missouri-nightmare 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-missouri-nightmare 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-missouri-nightmare 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-trepidations 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-trepidations 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-trepidations 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-freaks-fair 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-freaks-fair 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-freaks-fair 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-hell-harvest 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-hell-harvest 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-hell-harvest 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-myers-forest-of-fears 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-myers-forest-of-fears 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-myers-forest-of-fears 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-labyrinth-of-fear 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-labyrinth-of-fear 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-labyrinth-of-fear 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-aurora-maize 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-aurora-maize 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-aurora-maize 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-shepherds-lantern 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-shepherds-lantern 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-shepherds-lantern 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-hollows 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-hollows 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-hollows 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-feemster-corn-maze 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-feemster-corn-maze 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-feemster-corn-maze 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-worlds-of-fun-haunt 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-worlds-of-fun-haunt 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-worlds-of-fun-haunt 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-ozark-nightmares 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-ozark-nightmares 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-ozark-nightmares 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-tunnel-of-terror-ballwin 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-tunnel-of-terror-ballwin 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-tunnel-of-terror-ofallon 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-tunnel-of-terror-ofallon 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-grotto 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-grotto 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-grotto 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-wolfmans-house-of-screams 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-wolfmans-house-of-screams 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-wolfmans-house-of-screams 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-werehouse-joplin 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-werehouse-joplin 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-werehouse-joplin 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fearstone-forest 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fearstone-forest 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fearstone-forest 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fun-time-farms 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fun-time-farms 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fun-time-farms 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-carolyns-pumpkin-patch 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-carolyns-pumpkin-patch 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-carolyns-pumpkin-patch 390 plan-settle",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-terror-on-route-66 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-terror-on-route-66 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-terror-on-route-66 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-field-of-screams-branson 390 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-field-of-screams-branson 390 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-field-of-screams-branson 390 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-goblin-kings-haunted-trail 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-goblin-kings-haunted-trail 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-goblin-kings-haunted-trail 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-068-lloyds-family-farm 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-068-lloyds-family-farm 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-068-lloyds-family-farm 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-116-sam-baker-halloween-bash 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-116-sam-baker-halloween-bash 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-myers-inn-carthage 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-myers-inn-carthage 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-myers-inn-carthage 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-010-aftermath 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-010-aftermath 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-010-aftermath 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-011-beyond-outer-limits 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-011-beyond-outer-limits 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-011-beyond-outer-limits 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-029-campbells 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-029-campbells 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-029-campbells 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-030-rutledge-wilson 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-030-rutledge-wilson 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-030-rutledge-wilson 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-019-james-river-joplin-party 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-019-james-river-joplin-party 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-031-silver-dollar-city-harvest 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-031-silver-dollar-city-harvest 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-034-boone-historical-haunts 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-034-boone-historical-haunts 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-054-fun-farm 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-054-fun-farm 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-054-fun-farm 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-067-shryocks-callaway-farms 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-067-shryocks-callaway-farms 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-067-shryocks-callaway-farms 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-100-urban-gardens 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-100-urban-gardens 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-100-urban-gardens 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-114-perryville-pumpkin-farm 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-114-perryville-pumpkin-farm 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-114-perryville-pumpkin-farm 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-115-bollinger-trick-or-treat 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-115-bollinger-trick-or-treat 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-124-hotel-of-terror 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-124-hotel-of-terror 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-124-hotel-of-terror 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-125-dungeons-of-doom 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-125-dungeons-of-doom 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-125-dungeons-of-doom 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-edge-of-hell 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-edge-of-hell 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-edge-of-hell 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-creepyworld 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-creepyworld 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-creepyworld 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-darkness 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-darkness 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-darkness 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-haunted-river-float 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-haunted-river-float 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-fear-bloody-timber 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-fear-bloody-timber 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-delta-fear-bloody-timber 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-085-brookdale-farms 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-085-brookdale-farms 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-085-brookdale-farms 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-012-witches-day-out 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-012-witches-day-out 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-028-nevada-oktoberfest 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-028-nevada-oktoberfest 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-074-osage-beach-fall-festival 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-074-osage-beach-fall-festival 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-084-mcwilliams 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-084-mcwilliams 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-036-monster-corn-maze 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-036-monster-corn-maze 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-036-monster-corn-maze 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-058-beast 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-058-beast 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-058-beast 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-069-dead-factory 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-069-dead-factory 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-069-dead-factory 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-071-pomme-de-terror 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-071-pomme-de-terror 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-118-haunted-hall-horror 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-118-haunted-hall-horror 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-118-haunted-hall-horror 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-branson-ghoster 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-branson-ghoster 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-liberty-corn-maze 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-liberty-corn-maze 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-liberty-corn-maze 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-terror-at-the-ranch 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-terror-at-the-ranch 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-terror-at-the-ranch 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-cobb-factory 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-cobb-factory 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-cobb-factory 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-field-of-screams-nixa 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-field-of-screams-nixa 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-field-of-screams-nixa 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-missouri-nightmare 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-missouri-nightmare 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-missouri-nightmare 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-trepidations 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-trepidations 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-trepidations 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-freaks-fair 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-freaks-fair 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-freaks-fair 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-hell-harvest 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-hell-harvest 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-hell-harvest 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-myers-forest-of-fears 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-myers-forest-of-fears 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-myers-forest-of-fears 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-labyrinth-of-fear 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-labyrinth-of-fear 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-labyrinth-of-fear 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-aurora-maize 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-aurora-maize 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-aurora-maize 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-shepherds-lantern 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-shepherds-lantern 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-shepherds-lantern 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-hollows 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-hollows 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-hollows 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-feemster-corn-maze 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-feemster-corn-maze 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-feemster-corn-maze 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-worlds-of-fun-haunt 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-worlds-of-fun-haunt 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-worlds-of-fun-haunt 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-ozark-nightmares 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-ozark-nightmares 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-ozark-nightmares 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-tunnel-of-terror-ballwin 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-tunnel-of-terror-ballwin 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-tunnel-of-terror-ofallon 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-tunnel-of-terror-ofallon 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-grotto 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-grotto 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-astra-haunted-grotto 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-wolfmans-house-of-screams 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-wolfmans-house-of-screams 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-wolfmans-house-of-screams 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-werehouse-joplin 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-werehouse-joplin 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-werehouse-joplin 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fearstone-forest 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fearstone-forest 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fearstone-forest 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fun-time-farms 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fun-time-farms 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-fun-time-farms 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-carolyns-pumpkin-patch 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-carolyns-pumpkin-patch 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-carolyns-pumpkin-patch 512 plan-settle",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-terror-on-route-66 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-terror-on-route-66 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-terror-on-route-66 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-field-of-screams-branson 512 options",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-field-of-screams-branson 512 result",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    },
+    {
+      "comparison": "date-night-mo26-phase4-field-of-screams-branson 512 plan",
+      "passed": true,
+      "noNewOverflow": true,
+      "seasonalNotesNoOverflow": true
+    }
+  ],
+  "failedComparisons": [],
+  "visuals": [
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/pr63-web-evidence-f928/extracted/11690254467/seasonal-card-layout/DELTA3-GOBLIN-320-options-after.png",
+      "sha256": "4a516e8a63818322ab145d7ecd62d28d035275855cb4deaedbf0232d08ca6e3e",
+      "observation": "PASS: collapsed320two-columnoptions fitsmatchedordinaryheight withvisibleartwork,qualifiedapproximation,noticeandDetails; compactlongtitletruncationexpected."
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/pr63-web-evidence-f928/extracted/11690254467/seasonal-card-layout/MO26-085-320-plan-expanded-3.png",
+      "sha256": "29b6ad5c81c855760ff80ea7bbe77a002293adb49d3623365aecce04656718d0",
+      "observation": "PASS: narrow320Planexpanded separateHollowsadmission sentence andpriorfactsreadable; Map/Info visible, distinctsecondstop."
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/pr63-web-evidence-f928/extracted/11690254467/seasonal-card-layout/MO26-124-512-result-after.png",
+      "sha256": "0464d495b452d9820e5f8699c230f0df4394a34b0286f2bbca86921549971a6a",
+      "observation": "PASS: wider512resultcollapsedDetails fitsnotice/confidence, addressandapproximationreadable, artworkandDirections visible."
+    }
+  ],
+  "limits": "Static realcomponents+productionstylesheet geometry; actualhydration/RPCbehavior reviewed separately.3579PNGintegritychecked; threegeometryframes visuallyinspected, notall.",
+  "inheritedGeometryQualification": "Existing source explicitly records accepted full-result Directions-label overflow at320px. Independently compared every overflowing result child to its same tag/text baseline and confirmed no increase; intentional truncated compact titles remain. New seasonal notice/summary text has no overflow. Initial reviewer overbroad no-overflow-elements condition was corrected, original failed reviewer receipt retained.",
+  "inherited320DirectionsOverflowEvidence": {
+    "sourceAssertionFile": "scripts/seasonal-card-layout-browser.mjs",
+    "candidateSourceSha256": "984e8bfb977b70be9cc8708ec55eafbd0017a735e02f8e52ac38a429cb369405",
+    "sourceAssertionIdenticalToReleasedBase": true,
+    "releasedBase": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "componentGeometryBaseline": "2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81",
+    "assertionVerbatim": "          // The full result has a separately accepted inherited Directions-label\n          // overflow at 320px. Do not confuse that unchanged control with a new\n          // seasonal-content overflow, or erase its measured baseline.\n          const priorOverflow = kind === \"result\" ? Math.max(measured.before.scrollWidth, measured.ordinary.scrollWidth) : geometry.width;\n          assert.ok(geometry.scrollWidth <= Math.max(geometry.width, priorOverflow) + 1, \"No new horizontal card overflow\");\n          if (kind === \"result\") for (const child of geometry.overflowElements) {\n            const prior = measured.before.overflowElements.find(old => old.tag === child.tag && old.text === child.text);\n            assert.ok(prior && child.overflow <= prior.overflow + 1, `No newly overflowing result element: ${child.text}`);\n          }\n",
+    "recordsMeasured": 60,
+    "allDirectionChildMeasurementsIdenticalToBeforeAndOrdinary": true,
+    "typicalExactMeasurements": {
+      "viewportWidth": 320,
+      "cardWidth": 320,
+      "cardScrollWidth": 335,
+      "directionsControlWidth": 280,
+      "directionsControlScrollWidth": 315,
+      "directionsControlOverflow": 35
+    },
+    "rows": [
+      {
+        "id": "date-night-mo26-goblin-kings-haunted-trail",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-068-lloyds-family-farm",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-116-sam-baker-halloween-bash",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-myers-inn-carthage",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-010-aftermath",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-011-beyond-outer-limits",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-029-campbells",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-030-rutledge-wilson",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-019-james-river-joplin-party",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-031-silver-dollar-city-harvest",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-034-boone-historical-haunts",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-054-fun-farm",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-067-shryocks-callaway-farms",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-100-urban-gardens",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-114-perryville-pumpkin-farm",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-115-bollinger-trick-or-treat",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-124-hotel-of-terror",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-125-dungeons-of-doom",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-delta-edge-of-hell",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-delta-creepyworld",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-delta-darkness",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-delta-haunted-river-float",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-delta-fear-bloody-timber",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-085-brookdale-farms",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-012-witches-day-out",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-028-nevada-oktoberfest",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-074-osage-beach-fall-festival",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-084-mcwilliams",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-036-monster-corn-maze",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-058-beast",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-069-dead-factory",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-071-pomme-de-terror",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-118-haunted-hall-horror",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-branson-ghoster",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-liberty-corn-maze",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-terror-at-the-ranch",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-cobb-factory",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-field-of-screams-nixa",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-missouri-nightmare",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-trepidations",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-freaks-fair",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-hell-harvest",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-myers-forest-of-fears",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-labyrinth-of-fear",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-aurora-maize",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-shepherds-lantern",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-haunted-hollows",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-feemster-corn-maze",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-worlds-of-fun-haunt",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-ozark-nightmares",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-haunted-grotto",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-phase4-wolfmans-house-of-screams",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-werehouse-joplin",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-phase4-fearstone-forest",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-phase4-fun-time-farms",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-phase4-carolyns-pumpkin-patch",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-phase4-terror-on-route-66",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      },
+      {
+        "id": "date-night-mo26-phase4-field-of-screams-branson",
+        "before": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "after": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "ordinary": {
+          "tag": "A",
+          "text": "Directions \u00b7 Google Maps \u2197",
+          "width": 280,
+          "scrollWidth": 315,
+          "overflow": 35
+        },
+        "cardWidths": {
+          "before": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "after": {
+            "width": 320,
+            "scrollWidth": 335
+          },
+          "ordinary": {
+            "width": 320,
+            "scrollWidth": 335
+          }
+        }
+      }
+    ],
+    "otherBaselineMatchedOverflow": [
+      {
+        "id": "date-night-mo26-astra-liberty-corn-maze",
+        "after": {
+          "tag": "DIV",
+          "text": "Approx. 2.5 miles \u00b7 Hours unknown17607 Liberty Bend Road S,Liberty,MO64068",
+          "width": 128,
+          "scrollWidth": 134,
+          "overflow": 6
+        },
+        "before": {
+          "tag": "DIV",
+          "text": "Approx. 2.5 miles \u00b7 Hours unknown17607 Liberty Bend Road S,Liberty,MO64068",
+          "width": 128,
+          "scrollWidth": 134,
+          "overflow": 6
+        }
+      },
+      {
+        "id": "date-night-mo26-astra-liberty-corn-maze",
+        "after": {
+          "tag": "P",
+          "text": "17607 Liberty Bend Road S,Liberty,MO64068",
+          "width": 128,
+          "scrollWidth": 134,
+          "overflow": 6
+        },
+        "before": {
+          "tag": "P",
+          "text": "17607 Liberty Bend Road S,Liberty,MO64068",
+          "width": 128,
+          "scrollWidth": 134,
+          "overflow": 6
+        }
+      }
+    ],
+    "reviewerCorrection": "Initial independent reviewer wrongly required no overflowElements at all; corrected to unchanged source no-new-overflow assertion and exact per-child baseline comparison. No product, layout, source assertion, threshold or CI gate was modified."
+  }
+}

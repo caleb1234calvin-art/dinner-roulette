@@ -1,0 +1,59 @@
+{
+  "sha": "f92870632b71def18d7642596dc9dd3357675f76",
+  "tree": "9153ead1946bbbb7e38c45981c47332997001c3e",
+  "parent": "ca1a2979fa3c07fe2ed4f417e153f152288d1553",
+  "nativeChangePaths": [],
+  "files": [
+    {
+      "path": ".github/workflows/android-apk.yml",
+      "bytes": 8396,
+      "sha256": "8f6735487e1f793c0b120abca4a8c3171ba17a34a094a93e0304bee7a4637f8a"
+    },
+    {
+      "path": "capacitor.config.json",
+      "bytes": 395,
+      "sha256": "344a3fb58f0ff52777fb6037bd1f2afaaf13951d6f42809f51ed2f035d2b9a78"
+    },
+    {
+      "path": "android/version.properties",
+      "bytes": 111,
+      "sha256": "ff2318c74b691337f9362664a824e4e7050ce4302610534075273c3671649a71"
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "bytes": 1919,
+      "sha256": "9e1637c9853ada5c684463dec0d6c4361b55cd3842104d1c35e81bec4afcb9a5"
+    },
+    {
+      "path": "android/signing.gradle",
+      "bytes": 2023,
+      "sha256": "5225ae45ced4370dbf95e1eacd8c14b9699d9bb39f1dfafd20194ad8aa58e827"
+    },
+    {
+      "path": "scripts/verify-android-bundle.py",
+      "bytes": 7673,
+      "sha256": "cf22b2bde53eaa1e22b2436ef7c50952c7031ec2edd5cddfc3b2069a1c4725e2"
+    },
+    {
+      "path": "native-web/index.html",
+      "bytes": 647,
+      "sha256": "bbbb4470354e0191642e4701caf872de76cc14e9566705fe4edc591fb6b877ac"
+    },
+    {
+      "path": "scripts/check-android.mjs",
+      "bytes": 3760,
+      "sha256": "37d223b9af2275fd6b5c22a2f0a3530434fe7c14cc922362a11b75cd6b483cb8"
+    },
+    {
+      "path": "native-android/requirements.txt",
+      "bytes": 85,
+      "sha256": "3df19d06ec9cf350b8240b3312f96071169ce2fb6c63df4d675f5baf9ee5ef61"
+    },
+    {
+      "path": "android/app/build.gradle",
+      "bytes": 2400,
+      "sha256": "cd8225c795820fadf71ddee3dcdc5f3b3a7996f3deafa3eda399a81044860c21"
+    }
+  ],
+  "allSourceInputsEqualPriorCa1a": true
+}

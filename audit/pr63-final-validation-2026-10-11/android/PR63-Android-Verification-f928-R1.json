@@ -1,0 +1,115 @@
+{
+  "reviewedAt": "2026-10-11T03:13:16.343270+00:00",
+  "verdict": "PASS_AUTOMATED_ANDROID_READINESS",
+  "source": "f92870632b71def18d7642596dc9dd3357675f76",
+  "tree": "9153ead1946bbbb7e38c45981c47332997001c3e",
+  "parent": "ca1a2979fa3c07fe2ed4f417e153f152288d1553",
+  "run": 38107379726,
+  "job": 114375636896,
+  "workflowConclusion": "success",
+  "runAttempt": 1,
+  "node": "v24.21.0",
+  "safeBuild": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production",
+  "typecheck": "PASS",
+  "fullTests": {
+    "pass": 1077,
+    "skipped": 4,
+    "failed": 0,
+    "groups": {
+      "tests": [
+        1010,
+        71
+      ],
+      "pass": [
+        1006,
+        71
+      ],
+      "fail": [
+        0,
+        0
+      ],
+      "skipped": [
+        4,
+        0
+      ]
+    }
+  },
+  "sourceIdentityIconsGuard": "PASS; 15 launcher resources and 4 web icons; approved master unchanged",
+  "pythonManifestNegativeTests": 3,
+  "nativeSync": "PASS; git diff --exit-code -- android capacitor.config.json",
+  "missingSigningKey": "PASS; ordinary release rejected by missing upload-key guard",
+  "gradle": "PASS lintRelease testReleaseUnitTest bundleRelease assembleDebug -PallowUnsignedRelease=true",
+  "nativeUnitTests": "NO-SOURCE; not counted as executed native tests",
+  "bundletool": "Hosted pinned 1.18.3 validation PASS; raw report and XML independently inspected, not a separate local bundletool rerun",
+  "unsignedReleaseManifest": "PASS: package/version/SDK/backup/cleartext/permissions exact; signature-only AndroidX dynamic receiver permission",
+  "androidLint": {
+    "errors": 0,
+    "warnings": 14,
+    "xmlEqualsSummary": true
+  },
+  "signUploadJob": {
+    "id": 114376293230,
+    "conclusion": "skipped"
+  },
+  "archives": [
+    {
+      "file": "pr63-android-validation.zip",
+      "bytes": 6866409,
+      "sha256": "3a30bfaa015b75ea44389db3c384b307860142d1fcf0c463fec2263fc9be3575",
+      "members": 8,
+      "crc": "PASS",
+      "safeUniquePaths": "PASS",
+      "memberManifest": "pr63-android-validation.zip.members.json",
+      "githubArtifactId": 11690019239
+    },
+    {
+      "file": "pr63-android-lint.zip",
+      "bytes": 24069,
+      "sha256": "33803eb294b66820475db92888b63b76b8ae4807eb8a7a9bda82e67d63358212",
+      "members": 3,
+      "crc": "PASS",
+      "safeUniquePaths": "PASS",
+      "memberManifest": "pr63-android-lint.zip.members.json",
+      "githubArtifactId": 11689869656
+    },
+    {
+      "file": "pr63-android-validation/PickForUs-unsigned.aab",
+      "bytes": 3103535,
+      "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee",
+      "members": 430,
+      "crc": "PASS",
+      "safeUniquePaths": "PASS",
+      "memberManifest": "PickForUs-unsigned.aab.members.json",
+      "githubArtifactId": null,
+      "capacitorConfigExactSourceMatch": true,
+      "nativeFallbackExactSourceMatch": true,
+      "serverUrl": "https://dinner-roulette-chi.vercel.app",
+      "nativeLibraries": [],
+      "zipJarSignatureFiles": [],
+      "remoteRuntime": "HTTPS production application; not a packaged snapshot of PR63 web content"
+    },
+    {
+      "file": "pr63-android-validation/PickForUs-debug.apk",
+      "bytes": 4174862,
+      "sha256": "88ea993e3f6a0e97705a9c817abd07b07ff2cdec078cc9eff1977dbc1b46a589",
+      "members": 427,
+      "crc": "PASS",
+      "safeUniquePaths": "PASS",
+      "memberManifest": "PickForUs-debug.apk.members.json",
+      "githubArtifactId": null,
+      "capacitorConfigExactSourceMatch": true,
+      "nativeFallbackExactSourceMatch": true,
+      "serverUrl": "https://dinner-roulette-chi.vercel.app",
+      "nativeLibraries": [],
+      "zipJarSignatureFiles": [],
+      "remoteRuntime": "HTTPS production application; not a packaged snapshot of PR63 web content"
+    }
+  ],
+  "artifactNameQualification": "Artifact names use github.sha c6d1ce390a11aa5aba3be7208ee6218c107db408 (PR synthetic merge context); run metadata, checkout logs and source-revision.txt bind actual f92870632b71def18d7642596dc9dd3357675f76 head. No head substitution.",
+  "limits": [
+    "Unsigned AAB and development APK only. No upload signing, publishing, Play action or repository edit occurred.",
+    "Android loads remote production HTTPS origin; PR63 candidate web content is not installed as an offline native snapshot.",
+    "Physical Android/WebView/GPS/arrival and Play Console acceptance remain HOLD / NOT VERIFIED.",
+    "Compiled XML is preserved hosted bundletool output, inspected against downloaded raw bundle report and exact source; no separate local bundletool rerun claimed."
+  ]
+}

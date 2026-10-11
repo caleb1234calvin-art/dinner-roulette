@@ -1,0 +1,311 @@
+{
+  "verdict": "VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION",
+  "candidate": {
+    "sha": "f92870632b71def18d7642596dc9dd3357675f76",
+    "tree": "9153ead1946bbbb7e38c45981c47332997001c3e",
+    "parent": "ca1a2979fa3c07fe2ed4f417e153f152288d1553",
+    "pr": 63
+  },
+  "main": {
+    "sha": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "tree": "7d91061065f5e7e36e4f76307a7b915a66ea006d"
+  },
+  "fileSHA256": [
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/Web-Final-Review-f928.md",
+      "bytes": 2434,
+      "sha256": "b7b1dd116b77d5cd87b74b604421591d03d5a9375bdf8149b3a3e14bd5daf93b"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/Web-Final-Review-f928.json",
+      "bytes": 27255,
+      "sha256": "fee19e7217286e4f761eda6e1de4278fc32d1d61d34b67041eec46429226afad"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/raw-verdict-review.json",
+      "bytes": 12964,
+      "sha256": "33d6dee4a2e2d35d374a14e41d0d6583596bfd024206721a29abb9e8040bf879"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/representative-screenshot-review.json",
+      "bytes": 2672,
+      "sha256": "bb5e0b58328ef230f5a409657a3bc52fd97f75e383ea9c0a945de3c9016900b8"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/terminal-run.json",
+      "bytes": 16093,
+      "sha256": "2e9c8bc0fad811b39bad9afa9bf5e772ccfc6eb6a8288385e8696349b0be9016"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/terminal-jobs.json",
+      "bytes": 98846,
+      "sha256": "e767729041e375fffd2012a00baad7fa414a6432bec0733ac904b191df331ec2"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/terminal-artifacts.json",
+      "bytes": 12179,
+      "sha256": "c5762e13edd81f80c3aa44954adf7360c41a17739353874eb7293242f0b2273d"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/expected-source-proof.json",
+      "bytes": 234,
+      "sha256": "898e61f15e857ae58a7ef6d31aaf6c8efaefb0b42474553b39a6c5b523963fe2"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/verify_archive.py",
+      "bytes": 2486,
+      "sha256": "77ae538cdc8b9c8325246b574fe10581ffa03044f9e281373fb8ab2975712e04"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/android/PR63-Android-Verification-f928-R1.md",
+      "bytes": 4532,
+      "sha256": "d58852b06224d097dc8b5f84a759c77ee2363d38e06d463b3a21a7b8dd11cd5f"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/android/PR63-Android-Verification-f928-R1.json",
+      "bytes": 4610,
+      "sha256": "74ab1f71af1dbeeddf67e700342bbf74907ce8b73114b2923eebfdf54f1a627e"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/android/SHA256SUMS-Android-Evidence-f928-R1.json",
+      "bytes": 6494,
+      "sha256": "c956e483acc3f2fedb0379f1cb2b8c67c9ccb88feb53839d7cd20af5126ae57e"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/android/PickForUs-debug.apk.members.json",
+      "bytes": 96602,
+      "sha256": "ccbb88bd5434cfcdcb75f5e0d69a04d53a239461617ade226b8bb6b20a563ab5"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/android/PickForUs-unsigned.aab.members.json",
+      "bytes": 99814,
+      "sha256": "220b1e24f3e8b7de8667638e671a5f6a6d96f59d31aa3490c9d01ac274a2bc5c"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/android/pr63-android-lint.zip.members.json",
+      "bytes": 616,
+      "sha256": "b52fc6cc9eda6807abad0b66ee08d606b36dc5a3f66e2c2463808a7d9dc91bcb"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/android/pr63-android-validation.zip.members.json",
+      "bytes": 1621,
+      "sha256": "a21f623a2fc2079ad9c3688f80a8a02455e9036354d756201cc6bf3d7f3138bd"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/android/run-final.json",
+      "bytes": 16095,
+      "sha256": "53a97ece5a270f5953601d50c9937bf6a40e301e24f862536320607391adb5ed"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/android/jobs-final.json",
+      "bytes": 3922,
+      "sha256": "a1b6a260b3696da0b5e3027ac9202f168407e13926f3b7c2275650c9aa7c1c55"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/android/artifacts-final.json",
+      "bytes": 1838,
+      "sha256": "082b2c808471edbe407c29871ceb5b6aa493657eb4641243dafb593e45507868"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/android/source-input-binding.json",
+      "bytes": 1871,
+      "sha256": "d0f691131e41c24b078e244602a3863e9c83f49ee07d473b19da25b5d3e7c50e"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/independent/Independent-Final-Candidate-f9287063.json",
+      "bytes": 11336,
+      "sha256": "a0214efd7db43d47ca59b6b806ab2778592aaab9b50ef01ff8b3956b2cc4ddd1"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/independent/Frozen-Candidate-Source-Binding-f9287063.json",
+      "bytes": 1345,
+      "sha256": "2093065dd4e70c0a1ff8a1954297b1b391882327830499e01ed60df03524e8bc"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/independent/Source-Audit-f9287063.json",
+      "bytes": 10738,
+      "sha256": "0183015bd8181cc40075538423c05b21831ac165ab627b3f98a9c127b6667674"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/independent/Expected-Browser-Build-Source-f9287063.json",
+      "bytes": 82391,
+      "sha256": "9d208a96637b7fead6801e8b77f7b81ea54bdd2d62a5e34f649b309fb5a96256"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/independent/Independent-Core-Raw-Log-f9287063.json",
+      "bytes": 1583,
+      "sha256": "c355def93c9289d59407ba294ca76dada84599d5662399c16767bbfea38cbd8d"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/independent/Independent-New3-Behavior-Visual-f9287063.json",
+      "bytes": 15466,
+      "sha256": "9a61438e1c02d9b76699e1de58be7bc12a86ddf51c40144702d664a2aa02ac04"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/independent/Independent-Geometry-Visual-f9287063.json",
+      "bytes": 150166,
+      "sha256": "319394cedf5698b976f04f4660dba0d20f0d7457648f5dc431ae6fe30b940f43"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/independent/Independent-Android-Raw-f9287063.json",
+      "bytes": 443547,
+      "sha256": "eeca3f14283164f80cb5cbae4b3b3d98a0c36b2fe9b42ab59aaa2c2e48acb8c5"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/independent/Independent-Harness-Fix-R1.json",
+      "bytes": 1116,
+      "sha256": "224e4be563ecb134e50dde811dd5907f16a04b387bca16c31aa489f1ba5e0163"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/Root-Visual-Review.json",
+      "bytes": 2935,
+      "sha256": "d20686c1de3200c66afd5c7d288359e6c2a71e47cacaf193f8f65210288f57ff"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/Final-Repository-Production-Checks.json",
+      "bytes": 11250,
+      "sha256": "af56d9d4212c1a259f1e4f5c2faaa098a907c4bd0535e81725d61b089782850f"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/production-alias-http.json",
+      "bytes": 2177,
+      "sha256": "5dcb129c673ce378433de924336db5ac6c4c070e2203cdcec910acc5c111e033"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/production-and-rollback.json",
+      "bytes": 2895,
+      "sha256": "d717b8b942f8ffbad4a93ff44ff7052cbbf960e60c0d5d3d544c9542edb18013"
+    }
+  ],
+  "originalWebArchiveIntegrityGitBlobs": [
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/integrity-11689523932.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bf36ec19f15a2fa8c6ce12b2db231a4429be1e1"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/integrity-11689784418.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f3c3ce231c21b0af95c5f23e09dc197b9148015"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/integrity-11689909102.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5adaeb178614ef70094c1536c7ac505dd2b1e032"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/integrity-11689919969.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a9947ef3a6237ec0a385a38197fcf0f898ba690"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/integrity-11690054222.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79a3d29de3bbf5598c748b2e201506697420e162"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/integrity-11690128787.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5688e95b87c92036403dabeceaa08a982417b32a"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/integrity-11690219093.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b8869f1e53a7c24826bf63e70ef7334585c76f2"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/integrity-11690254467.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4967f43fcd5f09830a907f2d9d45ecb2eb97ec0"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/integrity-11690274027.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3099a039472616b9dd76fe5155706252c3d13f9a"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/integrity-11690455788.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca63d7dd813bf192b032abb9c14a05ac6a074f3f"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/integrity-11690610611.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c748b710894a761d076a4c5995647ad66080534"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/integrity-11690700250.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5868ef2ed9ca1f68b8ed79123db4693951e453f1"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/web/integrity-11691285182.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8056d701d50f9274abaec545fa7dcac5fb735c43"
+    }
+  ],
+  "selectedScreenshotGitBlobs": [
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/screenshots/goblin-result.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05613f7a73fbe5b8d45647e5aa1e1107d353d186"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/screenshots/hotel-dungeons-distinct-options.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f08829dd54cee0c2d20243f170dcae44012de5c"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/screenshots/brookdale-plan.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5184d9a71545da620a34107ea71d1099a7b1d45"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/screenshots/goblin-details.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c797e88b003534d38594a5593cbf143b25678832"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/screenshots/hotel-transfer-details.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75a0548190e9d3daa00a89f80740b91b662b63d7"
+    },
+    {
+      "path": "audit/pr63-final-validation-2026-10-11/screenshots/brookdale-admission-details.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a1cfe5dd60316b02b4a9e685502acd36a970bc9"
+    }
+  ],
+  "rawOriginalWebArchives": {
+    "count": 13,
+    "bytes": 797715028,
+    "members": 8042,
+    "earliestExpiry": "2026-10-25T03:08:29Z",
+    "latestExpiry": "2026-10-25T03:23:18Z"
+  },
+  "limitations": [
+    "Supplementary cumulative text-log export failed; complete source-bound original artifact and 235 raw scenarios verified.",
+    "Inherited geometry overflow unchanged; no new overflow.",
+    "Automated Android only; physical device/Play unverified."
+  ],
+  "publication": "Documentation/evidence only on deployment-disabled continuity branch; no PR63 merge, production deployment, Android signing or public release."
+}

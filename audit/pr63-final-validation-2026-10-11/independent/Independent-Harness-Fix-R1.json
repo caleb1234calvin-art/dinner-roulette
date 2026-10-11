@@ -1,0 +1,22 @@
+{
+  "verdict": "PASS MINIMAL HARNESS FIX SOURCE",
+  "failedHead": "ca1a2979fa3c07fe2ed4f417e153f152288d1553",
+  "failureArtifact": "11689823965",
+  "rawVerdictSha256": "9fc338c9b76a31b3a80e5b35ab79dca6af7fbaac4979f3b551a8a1f2729a945c",
+  "oldPassedScenarios": 85,
+  "oldFailedScenarios": 2,
+  "priorPredicateFailure": "Cannot read properties of undefined (reading 'recordId')",
+  "ordinaryRows": 15,
+  "afterSelectedCanonicalIds": [
+    "date-night-mo26-124-hotel-of-terror",
+    "date-night-mo26-125-dungeons-of-doom"
+  ],
+  "afterFilteredCanonicalIds": [
+    "date-night-mo26-124-hotel-of-terror",
+    "date-night-mo26-125-dungeons-of-doom"
+  ],
+  "onlyTwoOptionalChains": true,
+  "changedHarnessSha256": "352ed7d6cc81b8e7132a646a5d288c40d2e2c0a2003df55e66706779f859b9f0",
+  "meaning": "Old predicate encounters ordinary rows without seasonalListing. Optional chaining excludes these from seasonal ID search, retaining required Hotel and Dungeons render-count assertions and exact evidence collection.",
+  "pending": "New frozen SHA/tree/source proof and exact-head CI/browser acceptance; failed head retained."
+}

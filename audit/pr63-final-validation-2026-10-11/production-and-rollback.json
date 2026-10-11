@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-10-11T03:04:44.634Z",
+  "main": {
+    "sha": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "tree": "7d91061065f5e7e36e4f76307a7b915a66ea006d"
+  },
+  "aliases": [
+    {
+      "host": "pickforus.app",
+      "checkedAt": "2026-10-11T03:04:24.327Z",
+      "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+      "state": "READY",
+      "source": "bf88443932739a9448fac8d27fd845e9947cf697"
+    },
+    {
+      "host": "www.pickforus.app",
+      "checkedAt": "2026-10-11T03:04:24.327Z",
+      "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+      "state": "READY",
+      "source": "bf88443932739a9448fac8d27fd845e9947cf697"
+    },
+    {
+      "host": "dinner-roulette-chi.vercel.app",
+      "checkedAt": "2026-10-11T03:04:24.327Z",
+      "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+      "state": "READY",
+      "source": "bf88443932739a9448fac8d27fd845e9947cf697"
+    },
+    {
+      "host": "dinner-roulette-minions-9e2c.vercel.app",
+      "checkedAt": "2026-10-11T03:04:24.327Z",
+      "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+      "state": "READY",
+      "source": "bf88443932739a9448fac8d27fd845e9947cf697"
+    },
+    {
+      "host": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "checkedAt": "2026-10-11T03:04:24.327Z",
+      "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+      "state": "READY",
+      "source": "bf88443932739a9448fac8d27fd845e9947cf697"
+    }
+  ],
+  "rollback": {
+    "supportedPrevious": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+    "route": "Postrelease authenticated Instant Rollback reached enabled confirmation; cancelled without execution. Route is tied to current HaYi deployment.",
+    "implications": [
+      "Reassign production aliases to previous build",
+      "Use original environment and cron",
+      "Pause automatic production promotion until rollback is removed"
+    ],
+    "retained": [
+      {
+        "id": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+        "state": "READY",
+        "source": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+        "url": "dinner-roulette-55q5rf8y3-minions-9e2c.vercel.app",
+        "target": "production"
+      },
+      {
+        "id": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+        "state": "READY",
+        "source": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+        "url": "dinner-roulette-ezfgoqn2y-minions-9e2c.vercel.app",
+        "target": "production"
+      },
+      {
+        "id": "dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv",
+        "state": "READY",
+        "source": "213502ef8cf3f67d75e6d9c9c8ff43f9f656890c",
+        "url": "dinner-roulette-j8zc29052-minions-9e2c.vercel.app",
+        "target": "production"
+      }
+    ],
+    "olderArbitraryInstantRollback": "Not assumed; observed Hobby UI requires Pro."
+  },
+  "candidate": {
+    "sha": "ca1a2979fa3c07fe2ed4f417e153f152288d1553",
+    "tree": "74945dc91b865d7f5825461acf5566f492169da1",
+    "pr": 63,
+    "deployments": 0,
+    "releaseAuthorized": false
+  }
+}
+

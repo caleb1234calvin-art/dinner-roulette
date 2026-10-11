@@ -1,0 +1,64 @@
+{
+  "headSha": "f92870632b71def18d7642596dc9dd3357675f76",
+  "jobId": 114375636655,
+  "rawLog": "/workspace/scratch/b32d3f8a7b78/pr63-web-evidence-f928/logs/114375636655.log",
+  "rawLogSha256": "0f2f002d3c1299588db5197fa61052d2d4c60457892b510fae658bd558254101",
+  "observedTestSummaries": {
+    "tests": [
+      83,
+      1010,
+      71
+    ],
+    "pass": [
+      83,
+      1006,
+      71
+    ],
+    "fail": [
+      0,
+      0,
+      0
+    ],
+    "skipped": [
+      0,
+      4,
+      0
+    ]
+  },
+  "acceptedLintSummary": true,
+  "exactHeadCheckout": true,
+  "typecheckInvoked": true,
+  "devBuildInvoked": true,
+  "migrationFreeBuildCommand": true,
+  "authProofs": [
+    {
+      "schemaVersion": 1,
+      "status": "BUILD_PENDING",
+      "authFlag": "true",
+      "source": {
+        "sha256": "f5e2385ea77bead33b8fec64c3d7dbc939718e34eeedf12acb0722a1a7c11bba",
+        "files": 477
+      },
+      "startedAt": "2026-10-11T03:08:03.063Z"
+    },
+    {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "f5e2385ea77bead33b8fec64c3d7dbc939718e34eeedf12acb0722a1a7c11bba",
+        "files": 477
+      },
+      "startedAt": "2026-10-11T03:08:03.063Z",
+      "output": {
+        "sha256": "1748d7fc61d09143b2a0006e75b978070e4bfc785f7b2c7b93c0884923ee5829",
+        "files": 194
+      },
+      "completedAt": "2026-10-11T03:08:04.989Z"
+    }
+  ],
+  "icon30Verified": true,
+  "noFailedTests": true,
+  "limits": "Job conclusion metadata remains to be included with final all-jobs snapshot.",
+  "verdict": "PASS CHECKED RAW LOG"
+}

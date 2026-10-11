@@ -1,0 +1,295 @@
+{
+  "verdict": "PASS INDEPENDENT VERIFIED CANDIDATE",
+  "candidate": {
+    "sha": "f92870632b71def18d7642596dc9dd3357675f76",
+    "tree": "9153ead1946bbbb7e38c45981c47332997001c3e",
+    "parent": "ca1a2979fa3c07fe2ed4f417e153f152288d1553",
+    "baseReleasedMain": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "approvedProjectionSha256": "0b406b9131d2e3149c05366d68a97d34ee2897b77542762e5f5829c259d2e2c5",
+    "sourceBuildFingerprint": "f5e2385ea77bead33b8fec64c3d7dbc939718e34eeedf12acb0722a1a7c11bba",
+    "sourceBuildFiles": 477
+  },
+  "scope": "Independent review of accepted research, immutable source, exact-head CI metadata, raw browser artifacts, all ZIP members and PNG integrity, selected actual screenshots, and automated Android evidence. Current production and owner release authority remain the root release gate. This review does not authorize publication.",
+  "webRun": 38107379751,
+  "androidRun": 38107379726,
+  "tests": {
+    "passed": 1077,
+    "skipped": 4,
+    "failed": 0,
+    "separateCasinoAuditTests": 83
+  },
+  "browserScenarios": 1178,
+  "additionalCasinoLocationChecks": 35,
+  "geometryComparisons": 498,
+  "negativePlanControls": 15,
+  "new3Scenarios": 87,
+  "webArtifacts": {
+    "count": 13,
+    "totalBytes": 797715028,
+    "totalMembers": 8042,
+    "totalPngsIntegrityDecoded": 7986,
+    "visuallyViewedFinalCandidateFrames": 11,
+    "allUpstreamDigestsSizesAndEveryMemberCrcHashSizePathVerified": true,
+    "completeTextJobLogs": 13,
+    "missingTextJobLog": "Browser (seasonal-cumulative)"
+  },
+  "lanes": [
+    {
+      "artifactId": "11689523932",
+      "lane": "casino-browser-evidence-location",
+      "rawVerdictSha256": "bf5834b2d33606b2779d3f53c1712b5495aae2a28d4e31067005c83c29adb8eb",
+      "checkCount": 19
+    },
+    {
+      "artifactId": "11689784418",
+      "lane": "casino-browser-evidence-date-night-radial",
+      "rawVerdictSha256": "c45b152d325069e59e4d1e85ccf6ffe98c2fb897ef1edd16c131984695780cda",
+      "scenarioCount": 10
+    },
+    {
+      "artifactId": "11689919969",
+      "lane": "casino-browser-evidence-seasonal-phase4",
+      "rawVerdictSha256": "3548a9d227e5f8742778648842a4d81636539dfc9f57bf6b9b62dac37fbd1719",
+      "scenarioCount": 164
+    },
+    {
+      "artifactId": "11690054222",
+      "lane": "casino-browser-evidence-seasonal-two",
+      "rawVerdictSha256": "0d11c48e4b852184499c6bb7429e02e216ce9795f70e59a7ca7b97f149b04d99",
+      "scenarioCount": 23
+    },
+    {
+      "artifactId": "11690128787",
+      "lane": "casino-browser-evidence-casino",
+      "rawVerdictSha256": "ff1ab2779a36123af48c4243d8a9c6254c3e712daef8cef3dff739f68779f5df",
+      "checkCount": 16
+    },
+    {
+      "artifactId": "11690219093",
+      "lane": "casino-browser-evidence-seasonal-next-missouri",
+      "rawVerdictSha256": "b6af0bc61f5e7f844c237043e3e9a16dfc128d10936fdb02bca683b242b598dc",
+      "scenarioCount": 87
+    },
+    {
+      "artifactId": "11690254467",
+      "lane": "casino-browser-evidence-geometry",
+      "rawVerdictSha256": "acc320cd5f60fa567c926a9ab40d5c7b686c6a8c732d0d724bd1bb9b22964e7d",
+      "comparisonCount": 498,
+      "negativePlanCount": 15
+    },
+    {
+      "artifactId": "11690274027",
+      "lane": "casino-browser-evidence-seasonal-completeness-v1",
+      "rawVerdictSha256": "b2121c07fb4c25e3bda7aa7b4f9b1a06d778f859757512e1f6fb23e50fbdba15",
+      "scenarioCount": 97
+    },
+    {
+      "artifactId": "11690455788",
+      "lane": "casino-browser-evidence-seasonal-astra",
+      "rawVerdictSha256": "ed456a5e9763a16de909edb2f20575b7e4c1c5945852d3b00b46ca46037d351c",
+      "scenarioCount": 220
+    },
+    {
+      "artifactId": "11690610611",
+      "lane": "casino-browser-evidence-seasonal-astra-extras",
+      "rawVerdictSha256": "dd28ad5d163a8739aa90dab320543d61fe22b914de453a81152d61486aed6802",
+      "scenarioCount": 185
+    },
+    {
+      "artifactId": "11690700250",
+      "lane": "casino-browser-evidence-seasonal-ten",
+      "rawVerdictSha256": "8389ae0a0655ed80ab79835c04cebd04edae6476e9014cd8c68ac8b77e85047a",
+      "scenarioCount": 157
+    },
+    {
+      "artifactId": "11691285182",
+      "lane": "casino-browser-evidence-seasonal-cumulative",
+      "rawVerdictSha256": "04bcf65dc1221d4139d51cbda83098231d5b27a0d9c898f0522c7865741e13f8",
+      "scenarioCount": 235
+    }
+  ],
+  "checks": [
+    {
+      "name": "web run exacthead completedSUCCESS",
+      "passed": true
+    },
+    {
+      "name": "all14 exacthead jobs successful",
+      "passed": true
+    },
+    {
+      "name": "13 artifacts exactly match independently reviewed set",
+      "passed": true
+    },
+    {
+      "name": "all rawartifact independentchecksPASS",
+      "passed": true
+    },
+    {
+      "name": "finalmetadata exact digest+size 11691285182",
+      "passed": true
+    },
+    {
+      "name": "finalmetadata exact digest+size 11690700250",
+      "passed": true
+    },
+    {
+      "name": "finalmetadata exact digest+size 11690610611",
+      "passed": true
+    },
+    {
+      "name": "finalmetadata exact digest+size 11690455788",
+      "passed": true
+    },
+    {
+      "name": "finalmetadata exact digest+size 11690274027",
+      "passed": true
+    },
+    {
+      "name": "finalmetadata exact digest+size 11690254467",
+      "passed": true
+    },
+    {
+      "name": "finalmetadata exact digest+size 11690219093",
+      "passed": true
+    },
+    {
+      "name": "finalmetadata exact digest+size 11690128787",
+      "passed": true
+    },
+    {
+      "name": "finalmetadata exact digest+size 11690054222",
+      "passed": true
+    },
+    {
+      "name": "finalmetadata exact digest+size 11689919969",
+      "passed": true
+    },
+    {
+      "name": "finalmetadata exact digest+size 11689909102",
+      "passed": true
+    },
+    {
+      "name": "finalmetadata exact digest+size 11689784418",
+      "passed": true
+    },
+    {
+      "name": "finalmetadata exact digest+size 11689523932",
+      "passed": true
+    },
+    {
+      "name": "all1178browser scenarios plus35legacychecks",
+      "passed": true
+    },
+    {
+      "name": "498geometry15negativePlancontrols",
+      "passed": true
+    },
+    {
+      "name": "acceptance receipt Frozen-Candidate-Source-Binding-f9287063.json",
+      "passed": true
+    },
+    {
+      "name": "acceptance receipt Source-Audit-f9287063.json",
+      "passed": true
+    },
+    {
+      "name": "acceptance receipt Expected-Browser-Build-Source-f9287063.json",
+      "passed": true
+    },
+    {
+      "name": "acceptance receipt Independent-Core-Raw-Log-f9287063.json",
+      "passed": true
+    },
+    {
+      "name": "acceptance receipt Independent-New3-Behavior-Visual-f9287063.json",
+      "passed": true
+    },
+    {
+      "name": "acceptance receipt Independent-Geometry-Visual-f9287063.json",
+      "passed": true
+    },
+    {
+      "name": "acceptance receipt Independent-Android-Raw-f9287063.json",
+      "passed": true
+    },
+    {
+      "name": "acceptance receipt Independent-Harness-Fix-R1.json",
+      "passed": true
+    },
+    {
+      "name": "source count60 baseline59 andprotected57",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "auditReceipts": [
+    {
+      "path": "Frozen-Candidate-Source-Binding-f9287063.json",
+      "sha256": "2093065dd4e70c0a1ff8a1954297b1b391882327830499e01ed60df03524e8bc",
+      "verdict": "PASS SOURCE ONLY"
+    },
+    {
+      "path": "Source-Audit-f9287063.json",
+      "sha256": "0183015bd8181cc40075538423c05b21831ac165ab627b3f98a9c127b6667674",
+      "verdict": "PASS SOURCE ONLY"
+    },
+    {
+      "path": "Expected-Browser-Build-Source-f9287063.json",
+      "sha256": "9d208a96637b7fead6801e8b77f7b81ea54bdd2d62a5e34f649b309fb5a96256",
+      "verdict": null
+    },
+    {
+      "path": "Independent-Core-Raw-Log-f9287063.json",
+      "sha256": "c355def93c9289d59407ba294ca76dada84599d5662399c16767bbfea38cbd8d",
+      "verdict": "PASS CHECKED RAW LOG"
+    },
+    {
+      "path": "Independent-New3-Behavior-Visual-f9287063.json",
+      "sha256": "9a61438e1c02d9b76699e1de58be7bc12a86ddf51c40144702d664a2aa02ac04",
+      "verdict": "PASS CHECKED NEW3 RAW +8 VISUALS"
+    },
+    {
+      "path": "Independent-Geometry-Visual-f9287063.json",
+      "sha256": "319394cedf5698b976f04f4660dba0d20f0d7457648f5dc431ae6fe30b940f43",
+      "verdict": "PASS498 MEASUREMENTS +3 VISUALS"
+    },
+    {
+      "path": "Independent-Android-Raw-f9287063.json",
+      "sha256": "eeca3f14283164f80cb5cbae4b3b3d98a0c36b2fe9b42ab59aaa2c2e48acb8c5",
+      "verdict": "PASS AUTOMATED ANDROID READINESS"
+    },
+    {
+      "path": "Independent-Harness-Fix-R1.json",
+      "sha256": "224e4be563ecb134e50dde811dd5907f16a04b387bca16c31aa489f1ba5e0163",
+      "verdict": "PASS MINIMAL HARNESS FIX SOURCE"
+    }
+  ],
+  "metadataReceipts": [
+    {
+      "path": "terminal-run.json",
+      "sha256": "2e9c8bc0fad811b39bad9afa9bf5e772ccfc6eb6a8288385e8696349b0be9016"
+    },
+    {
+      "path": "terminal-jobs.json",
+      "sha256": "e767729041e375fffd2012a00baad7fa414a6432bec0733ac904b191df331ec2"
+    },
+    {
+      "path": "terminal-artifacts.json",
+      "sha256": "c5762e13edd81f80c3aa44954adf7360c41a17739353874eb7293242f0b2273d"
+    }
+  ],
+  "retainedHistory": [
+    "The ca1a new-record lane passed 85/87; two Hotel scenarios failed at 320/390 px. The historical ten-record lane passed 153/157; four Hotel/Dungeons scenarios failed. The successor adds exactly two optional chains to the test harness; runtime source is unchanged.",
+    "The initial ca1a seasonal-two download was truncated to 16,236,544 bytes and retained. Its recovered original 21,965,061-byte archive was independently verified.",
+    "The independent Android log parser initially missed the Node 24 informational prefix. That reviewer parser was corrected and its original failed receipt retained.",
+    "The independent geometry reviewer initially required zero overflow elements. This overbroad assumption was corrected to the unchanged source assertion requiring no new overflow. The original failed reviewer receipt remains retained."
+  ],
+  "limitations": [
+    "Existing 320 px result Directions-label overflow remains: 280 px client width, 315 px scroll width, and 35 px child overflow; full-card dimensions are 320/335 px. All 60 records match their previous and ordinary baseline exactly. The existing Liberty address also retains its baseline 6 px overflow. No new overflow or gate change occurred.",
+    "A legacy casino snapshot does not prove decoded artwork. The new three-record lane explicitly verifies decoded and rendered images and retains their screenshots. Candidate UI and assets are unchanged.",
+    "Android verification is automated only, covering an unsigned AAB and development APK. The native wrapper serves the production HTTPS app, not an offline candidate snapshot. Physical device, WebView, GPS, arrival, and Play Console acceptance remain unverified.",
+    "The next candidate has no production release authorization. Publication requires the owner\u2019s release decision and fresh release preflight.",
+    "The cumulative full textual job-log export failed twice with Transport closed. This report does not claim 14 complete text logs. Exact-head terminal job and step SUCCESS metadata, the original archive, all 235 raw scenarios, and the source build proof are present and independently verified. The missing supplemental text log replaces no required behavior or source check."
+  ]
+}
