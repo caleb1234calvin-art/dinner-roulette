@@ -580,10 +580,10 @@ try {
         assert.equal(await page.locator("article").count(), n);
         if (["MO26-124", "MO26-125"].includes(row.seasonalListing.recordId)) {
           for (const recordId of ["MO26-124", "MO26-125"]) {
-            const distinct = catalog.find(candidate => candidate.seasonalListing.recordId === recordId);
+            const distinct = catalog.find(candidate => candidate.seasonalListing?.recordId === recordId);
             assert.equal(await rowHeading(page, distinct).count(), 1, "Nearby Hotel and Dungeons keep distinct catalog identities");
           }
-          result.evidence.distinctColocatedIds = catalog.filter(candidate => ["MO26-124", "MO26-125"].includes(candidate.seasonalListing.recordId)).map(candidate => candidate.id);
+          result.evidence.distinctColocatedIds = catalog.filter(candidate => ["MO26-124", "MO26-125"].includes(candidate.seasonalListing?.recordId)).map(candidate => candidate.id);
         }
         await inspectQualifiedOverlay(test, row, "options");
         await selectTarget(page, row); await inspectQualifiedOverlay(test, row, "result"); await closeResult(page);
