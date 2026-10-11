@@ -1,0 +1,199 @@
+{
+  "reviewedAt": "2026-10-11T02:28:11.614586+00:00",
+  "kind": "INDEPENDENT_DERIVATION_NOT_NEW_SOURCE_CAPTURE",
+  "recordId": "MO26-007",
+  "acceptedPriorPlacement": {
+    "latitude": 37.214948823592,
+    "longitude": -94.510739246392,
+    "runtimeRoundedLatitude": 37.214949,
+    "runtimeRoundedLongitude": -94.510739,
+    "address": "25088 Kafir Rd, Webb City, MO",
+    "retainedCensusAddress": "25088 KAFIR RD, WEBB CITY, MO, 64870",
+    "precision": "address-range interpolation only",
+    "censusSourceSha256": "a72f56fd051077c1058ad9026d21e69ac302262bc5247004c9af359b6b25fa31",
+    "tigerLineId": "651372603",
+    "range": [
+      "25000",
+      "25148"
+    ],
+    "pointUsage": [
+      "approximate map placement",
+      "qualified distance",
+      "radius when factual clearance passes"
+    ],
+    "notSupported": [
+      "entrance",
+      "parking",
+      "ride dropoff"
+    ],
+    "directions": "supported visitor address, not numeric coordinate"
+  },
+  "retainedPosterPixelEvidence": {
+    "imageSha256": "203d12ea4634752d27fa94544aa307c8c792b3644707e419c8d18cd6a16b4578",
+    "priorReviewedAt": "2026-10-10T18:34:25Z",
+    "sourceClass": "owner-supplied screenshot; Facebook origin owner-attested",
+    "independentPixelReviewRetained": true,
+    "freshImageInspectionByThisReviewer": false,
+    "priorReportSha256": "024e0b537de6cd4b70c023755e8cc1befd9207f457951ab9ffbd744e1aa6d158",
+    "year": 2026,
+    "explicitDateCount": 13,
+    "dates": [
+      "2026-09-25",
+      "2026-09-26",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-23",
+      "2026-10-24",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31"
+    ],
+    "generalHours": "7 PM\u2013midnight",
+    "october29Exception": "7 PM\u201310 PM",
+    "admissionOwnerSuppliedUSD": 15,
+    "publicationTimestamp": null,
+    "independentOfficialAccountPostBinding": "PENDING_AUTHOR_PROVENANCE_LANE"
+  },
+  "derivedDisplaySchedule": [
+    {
+      "localDate": "2026-09-25",
+      "weekday": "Friday",
+      "displayOpeningLocal": "2026-09-25T19:00:00-05:00",
+      "displayClosingLocal": "2026-09-26T00:00:00-05:00",
+      "displayClosingUtc": "2026-09-26T05:00:00+00:00",
+      "machineIntervalsPermitted": false
+    },
+    {
+      "localDate": "2026-09-26",
+      "weekday": "Saturday",
+      "displayOpeningLocal": "2026-09-26T19:00:00-05:00",
+      "displayClosingLocal": "2026-09-27T00:00:00-05:00",
+      "displayClosingUtc": "2026-09-27T05:00:00+00:00",
+      "machineIntervalsPermitted": false
+    },
+    {
+      "localDate": "2026-10-02",
+      "weekday": "Friday",
+      "displayOpeningLocal": "2026-10-02T19:00:00-05:00",
+      "displayClosingLocal": "2026-10-03T00:00:00-05:00",
+      "displayClosingUtc": "2026-10-03T05:00:00+00:00",
+      "machineIntervalsPermitted": false
+    },
+    {
+      "localDate": "2026-10-03",
+      "weekday": "Saturday",
+      "displayOpeningLocal": "2026-10-03T19:00:00-05:00",
+      "displayClosingLocal": "2026-10-04T00:00:00-05:00",
+      "displayClosingUtc": "2026-10-04T05:00:00+00:00",
+      "machineIntervalsPermitted": false
+    },
+    {
+      "localDate": "2026-10-09",
+      "weekday": "Friday",
+      "displayOpeningLocal": "2026-10-09T19:00:00-05:00",
+      "displayClosingLocal": "2026-10-10T00:00:00-05:00",
+      "displayClosingUtc": "2026-10-10T05:00:00+00:00",
+      "machineIntervalsPermitted": false
+    },
+    {
+      "localDate": "2026-10-10",
+      "weekday": "Saturday",
+      "displayOpeningLocal": "2026-10-10T19:00:00-05:00",
+      "displayClosingLocal": "2026-10-11T00:00:00-05:00",
+      "displayClosingUtc": "2026-10-11T05:00:00+00:00",
+      "machineIntervalsPermitted": false
+    },
+    {
+      "localDate": "2026-10-16",
+      "weekday": "Friday",
+      "displayOpeningLocal": "2026-10-16T19:00:00-05:00",
+      "displayClosingLocal": "2026-10-17T00:00:00-05:00",
+      "displayClosingUtc": "2026-10-17T05:00:00+00:00",
+      "machineIntervalsPermitted": false
+    },
+    {
+      "localDate": "2026-10-17",
+      "weekday": "Saturday",
+      "displayOpeningLocal": "2026-10-17T19:00:00-05:00",
+      "displayClosingLocal": "2026-10-18T00:00:00-05:00",
+      "displayClosingUtc": "2026-10-18T05:00:00+00:00",
+      "machineIntervalsPermitted": false
+    },
+    {
+      "localDate": "2026-10-23",
+      "weekday": "Friday",
+      "displayOpeningLocal": "2026-10-23T19:00:00-05:00",
+      "displayClosingLocal": "2026-10-24T00:00:00-05:00",
+      "displayClosingUtc": "2026-10-24T05:00:00+00:00",
+      "machineIntervalsPermitted": false
+    },
+    {
+      "localDate": "2026-10-24",
+      "weekday": "Saturday",
+      "displayOpeningLocal": "2026-10-24T19:00:00-05:00",
+      "displayClosingLocal": "2026-10-25T00:00:00-05:00",
+      "displayClosingUtc": "2026-10-25T05:00:00+00:00",
+      "machineIntervalsPermitted": false
+    },
+    {
+      "localDate": "2026-10-29",
+      "weekday": "Thursday",
+      "displayOpeningLocal": "2026-10-29T19:00:00-05:00",
+      "displayClosingLocal": "2026-10-29T22:00:00-05:00",
+      "displayClosingUtc": "2026-10-30T03:00:00+00:00",
+      "machineIntervalsPermitted": false
+    },
+    {
+      "localDate": "2026-10-30",
+      "weekday": "Friday",
+      "displayOpeningLocal": "2026-10-30T19:00:00-05:00",
+      "displayClosingLocal": "2026-10-31T00:00:00-05:00",
+      "displayClosingUtc": "2026-10-31T05:00:00+00:00",
+      "machineIntervalsPermitted": false
+    },
+    {
+      "localDate": "2026-10-31",
+      "weekday": "Saturday",
+      "displayOpeningLocal": "2026-10-31T19:00:00-05:00",
+      "displayClosingLocal": "2026-11-01T00:00:00-05:00",
+      "displayClosingUtc": "2026-11-01T05:00:00+00:00",
+      "machineIntervalsPermitted": false
+    }
+  ],
+  "expiry": {
+    "value": "2026-11-01T05:00:00Z",
+    "local": "2026-11-01T00:00:00-05:00",
+    "timezone": "America/Chicago",
+    "offsetSeconds": -18000,
+    "tzAbbreviation": "CDT",
+    "basis": "final listed October31 midnight close; derived listing cutoff, not printed expiry, last admission, or final exit guarantee",
+    "conditionalOnOfficialProvenance": true,
+    "boundaryBeforeUtc": "2026-11-01T04:59:59.999000+00:00",
+    "boundaryAtUtc": "2026-11-01T05:00:00+00:00",
+    "boundaryAfterUtc": "2026-11-01T05:00:00.001000+00:00"
+  },
+  "noRecurrenceInference": true,
+  "no2027Recurrence": true,
+  "machineHours": null,
+  "neverOpenNow": true,
+  "unknownUnchanged": [
+    "last admission",
+    "final exit guarantee",
+    "payment methods",
+    "accessibility",
+    "age or guardian rules",
+    "weather cancellation rules",
+    "entrance/parking/ride dropoff"
+  ],
+  "verdictAtThisCheckpoint": {
+    "placement": "PASS_RETAINED",
+    "dateMath": "PASS_CONDITIONAL_ON_SOURCE_PROVENANCE",
+    "factual": "PENDING_OFFICIAL_PROVENANCE",
+    "implementationEligibility": "PENDING_OFFICIAL_PROVENANCE"
+  },
+  "scope": "No source/runtime/repository changes, operator contact, paid API, browser use, or other Missouri record research."
+}

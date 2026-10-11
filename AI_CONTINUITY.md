@@ -1,3 +1,39 @@
+# Cadaver Zone Re-clearance — Precise Provenance HOLD (2026-10-11)
+
+## CURRENT
+
+PR #62 production acceptance remains PASS. Main **bf88443932739a9448fac8d27fd845e9947cf697**, tree **7d91061065f5e7e36e4f76307a7b915a66ea006d**. Production **dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U READY**, same source, all five aliases healthy at the preceding release checkpoint. No subsequent production/runtime mutation.
+
+**Cadaver Zone / MO26-007: FACTUAL HOLD, PLACEMENT PASS retained, IMPLEMENTATION HOLD.** The precise remaining blocker is independently preserved binding of the accepted 2026 poster to the official Facebook account. This is not a missing-address, missing-placement, missing-year-pixels or general-hours blocker. No closure is inferred.
+
+## Cadaver findings
+
+The authoritative October 10 incidental pixel review is retained: image SHA-256 **203d12ea4634752d27fa94544aa307c8c792b3644707e419c8d18cd6a16b4578**, report **024e0b537de6cd4b70c023755e8cc1befd9207f457951ab9ffbd744e1aa6d158**. Actual poster pixels established venue/address, printed 2026, thirteen dates and the hours exception. The private image was not newly inspected or republished in this pass. Its Facebook origin remains owner-attested, not independently captured.
+
+Accepted prior pixel findings: September **25–26**; October **2–3, 9–10, 16–17, 23–24 and 29–31**. Normal display hours **7 PM–midnight**; **October 29 7 PM–10 PM**. The current owner's **$15** field is preserved as owner-supplied evidence; the earlier quoted pixel-review checkpoint did not explicitly attest a price inspection. No historical price or payment policy is substituted.
+
+Supported visitor address **25088 Kafir Rd, Webb City, MO** remains accepted for Directions. Independently rechecked retained Census response/receipt agree on approximate point **37.214948823592, -94.510739246392** (six-decimal presentation permitted), normalized ZIP 64870, address range 25000–25148. Raw Census SHA-256 **a72f56fd051077c1058ad9026d21e69ac302262bc5247004c9af359b6b25fa31**. This is an address-range approximation, never entrance, parking or ride dropoff.
+
+Conditional expiry derivation independently PASS: **2026-11-01T05:00:00Z**, midnight CDT after October 31, before the later daylight-saving fallback. This is a derived lifecycle cutoff, not printed last admission or final exit. It cannot authorize an active record until provenance clears. Machine intervals stay null, never Open Now; no other dates, recurrence or 2027 schedule.
+
+Bounded fresh search/open did not preserve the missing origin binding. Facebook web retrieval supplied old cached temporary-block content; the disputed Instagram route did not yield reliable poster provenance. A cloud-browser selection succeeded but creation of a new source tab was aborted after 288.1 seconds with no page state. That is a tool/navigation interruption, not evidence of a live Facebook bot block. No existing production/Vercel tabs were touched. No access-control bypass, operator contact or paid API.
+
+## ROLLBACK
+
+The freshly inspected supported route from the preceding checkpoint remains **HaYi → dpl_8xyE9R3BxyE1883QpavaEBWV2LGa**, source **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**. Enabled final confirmation was observed and cancelled. READY F1 and BCd are retained but not claimed as arbitrary Hobby Instant Rollback targets. Domains, original environment and cron would revert; automatic promotion would stop until rollback removal. No restore executed.
+
+## NEXT / HOLD
+
+**Cadaver review completed at its exact HOLD.** Preserve accepted field-by-field evidence; reopen only for materially new independently preserved official poster binding. Do not repeat the exhausted extractor or require another geocode.
+
+Continue automatically to the existing Missouri HOLD/near-PASS inventory: highest-value commercial HOLDs, factual-PASS/placement-HOLD leads, recent delta leads and useful amendments. Do not restart statewide discovery, reopen resolved PR #62 research, add residential records, or pad a batch. A new useful cleared subset may proceed independently of Cadaver. No next runtime candidate has been created yet.
+
+PR #61/adaptive radial remains PARKED; “Radial discovery becomes an audit layer.” remains future intent. The consumed PR #62 waiver grants no authority for another release. Next candidate release remains owner-only.
+
+Evidence is under `audit/cadaver-reclearance-2026-10-11/`, with scoped source review, independent field/placement review and hashes. This documentation/evidence-only checkpoint preserves the entire parent continuity below, on deployment-disabled `integration/continuity-refresh-2026-10-07`. Parent continuity **77815be784b413e577fbf964036a0a3cc6bc0393**, tree **5e120decaca8ed183a22cc2a7992df735d8d1467**.
+
+---
+
 # PR #62 Released — Scoped Production Acceptance PASS (2026-10-11)
 
 ## CURRENT
