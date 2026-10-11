@@ -1,0 +1,2225 @@
+{
+  "checkedAt": "2026-10-11T00:45:25.161384+00:00",
+  "verdict": "PASS",
+  "deployment": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+  "deploymentIdentityBasis": "Fresh parent release operator notification; parent owns metadata/aliases verification",
+  "source": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "tree": "7d91061065f5e7e36e4f76307a7b915a66ea006d",
+  "servedFrom": "https://pickforus.app/",
+  "method": "Read public HTML and referenced assets. Parse data literals and minifier constant-string split encoding in Python; no downloaded JavaScript executed. Compare all object fields recursively against exact Git candidate sources.",
+  "catalogCount": 59,
+  "prior52Unchanged": true,
+  "selected7Equal": true,
+  "presentationCount": 59,
+  "prior52PresentationsUnchanged": true,
+  "selected7PresentationsEqual": true,
+  "werehouseCatalogObjects": 1,
+  "werehouseLegacyAvailabilityEqual": true,
+  "details": [
+    {
+      "id": "date-night-mo26-astra-aurora-maize",
+      "recordId": "MO26-002",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Aurora Maize at Adventure Farm",
+      "address": "20591 County Road 2200, Aurora, MO 65605",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "20591 County Road 2200, Aurora, MO 65605"
+      },
+      "placement": {
+        "lat": 36.9808456,
+        "lon": -93.6877871,
+        "basis": "operator-site",
+        "sourceUrl": "https://www.google.com/maps/d/embed?mid=1r3gzFPM4zv8RVTvb5uD9ouIY6uALIFRs",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-10-31T22:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-19",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-07",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-14",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-21",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-28",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-shepherds-lantern",
+      "recordId": "DELTA2-SHEPHERD-LANTERN",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "The Broken Hour at Shepherd’s Lantern",
+      "address": "5803 Jakes Prairie Road, Cuba, MO 65453",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "5803 Jakes Prairie Road, Cuba, MO 65453"
+      },
+      "placement": {
+        "lat": 38.130489811549,
+        "lon": -91.467898376669,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5803+Jakes+Prairie+Road%2C+Cuba%2C+MO+65453&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-10-17T22:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-haunted-hollows",
+      "recordId": "DELTA2-HOLLOWS",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Haunted Hollows Haunted Trail",
+      "address": "5947 County Road 261, Palmyra, MO 63461",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "5947 County Road 261, Palmyra, MO 63461"
+      },
+      "placement": {
+        "lat": 39.733676,
+        "lon": -91.562875,
+        "basis": "operator-site",
+        "sourceUrl": "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-10-30T23:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-24",
+        "2026-10-30"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-feemster-corn-maze",
+      "recordId": "MO26-039",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Feemster Twisted Corn Maze",
+      "address": "2501 E Farm Road 94, Springfield, MO 65803",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "2501 E Farm Road 94, Springfield, MO 65803"
+      },
+      "placement": {
+        "lat": 37.273100307742,
+        "lon": -93.24361332435,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=2501+E+Farm+Road+94%2C+Springfield%2C+MO+65803&f=pjson&outFields=Match_addr%2CAddr_type&maxLocations=3",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-11-01T21:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-worlds-of-fun-haunt",
+      "recordId": "DELTA6-WORLDS-OF-FUN",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Worlds of Fun — Halloween Haunt",
+      "address": "4545 Worlds of Fun Avenue, Kansas City, MO 64161",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "4545 Worlds of Fun Avenue, Kansas City, MO 64161"
+      },
+      "placement": {
+        "lat": 39.177249320447,
+        "lon": -94.489341242397,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=4545+Worlds+of+Fun+Avenue%2C+Kansas+City%2C+MO+64161&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-09T05:01:32.879431+00:00",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-ozark-nightmares",
+      "recordId": "DELTA2-OZARK",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Ozark Nightmares Haunted House — The Viscount’s Manor",
+      "address": "22599 Highway 32, Lebanon, MO 65536",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "22599 Highway 32, Lebanon, MO 65536"
+      },
+      "placement": {
+        "lat": 37.668169182421,
+        "lon": -92.619844432713,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=22599+Highway+32%2C+Lebanon%2C+MO+65536&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-09T05:01:32.879431+00:00",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-tunnel-of-terror-ballwin",
+      "recordId": "DELTA3-BALLWIN",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Tunnel of Terror — Tommy’s Express Ballwin",
+      "address": "14918 Manchester Road, Ballwin, MO 63011",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "14918 Manchester Road, Ballwin, MO 63011"
+      },
+      "placement": {
+        "lat": 38.592934080507,
+        "lon": -90.543467455396,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=14918+Manchester+Road%2C+Ballwin%2C+MO+63011&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-09T05:01:32.879431+00:00",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-10-24T21:30:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-23",
+        "2026-10-24"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-tunnel-of-terror-ofallon",
+      "recordId": "DELTA6-OFALLON",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Tunnel of Terror — Tommy’s Express O’Fallon",
+      "address": "101 Fallon Loop Road, O’Fallon, MO 63368",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "101 Fallon Loop Road, O’Fallon, MO 63368"
+      },
+      "placement": {
+        "lat": 38.764203107345,
+        "lon": -90.700048687725,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=101+Fallon+Loop+Road%2C+O+Fallon%2C+MO+63368&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-09T05:01:32.879431+00:00",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-10-24T21:30:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-23",
+        "2026-10-24"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-haunted-grotto",
+      "recordId": "DELTA3-GROTTO",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "The Haunted Grotto",
+      "address": "3102 Aad Grotto Road, Poplar Bluff, MO 63901",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "3102 Aad Grotto Road, Poplar Bluff, MO 63901"
+      },
+      "placement": {
+        "lat": 36.7950117,
+        "lon": -90.4314449,
+        "basis": "address-geocode",
+        "sourceUrl": "https://www.waze.com/live-map/directions/us/mo/poplar-bluff/3102-aad-grotto-rd?to=place.ChIJyQVQh72614cRiUJfLHYyszA",
+        "checkedAt": "2026-10-09T05:03:13.790045+00:00",
+        "precisionLabel": "Approximate address-derived placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-10-31T22:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-branson-ghoster",
+      "recordId": "DELTA2-BRANSON-GHOSTER",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "The Curse at The Branson Ghoster Coaster",
+      "address": "2115 W. 76 Country Blvd, Branson, MO 65616",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "2115 W. 76 Country Blvd, Branson, MO 65616"
+      },
+      "placement": {
+        "lat": 36.64095609765,
+        "lon": -93.260005613352,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2115+W+76+Country+Blvd%2C+Branson%2C+MO+65616&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "Approximate Census address-range interpolation; not an entrance, parking stall, gate, doorway or rideshare drop-off."
+      },
+      "listingExpiresAt": "2026-10-31T22:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-liberty-corn-maze",
+      "recordId": "MO26-056",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Liberty Corn Maze",
+      "address": "17607 Liberty Bend Road S,Liberty,MO64068",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "17607 Liberty Bend Road S,Liberty,MO64068"
+      },
+      "placement": {
+        "lat": 39.1857233,
+        "lon": -94.3698827,
+        "basis": "operator-site",
+        "sourceUrl": "https://www.libertycornmaze.com/maze-info/",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "Approximate site placement only; not independently verified entrance or parking."
+      },
+      "listingExpiresAt": "2026-10-30T23:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13",
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-20",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-terror-at-the-ranch",
+      "recordId": "DELTA3-RANCH",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Terror at the Ranch",
+      "address": "23111 S. Jefferson Pkwy, Harrisonville, MO64701",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "23111 S. Jefferson Pkwy, Harrisonville, MO64701"
+      },
+      "placement": {
+        "lat": 38.699068931183,
+        "lon": -94.350116918769,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=23111+S+Jefferson+Pkwy%2C+Harrisonville%2C+MO+64701&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "approximate-address-derived; not gate/parking/doorway/rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-10-31T23:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": null
+    },
+    {
+      "id": "date-night-mo26-astra-cobb-factory",
+      "recordId": "DELTA3-COBB",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "PanicFest — The Cobb Factory",
+      "address": "141 E. Main Street, Old Monroe, MO63369",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "141 E. Main Street, Old Monroe, MO63369"
+      },
+      "placement": {
+        "lat": 38.931375171592,
+        "lon": -90.746591944663,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=141+E+Main+Street%2C+Old+Monroe%2C+MO+63369&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "approximate-address-derived; not gate/parking/doorway/rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-11-07T23:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01",
+        "2026-11-06",
+        "2026-11-07"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-field-of-screams-nixa",
+      "recordId": "MO26-037",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Field of Screams Nixa",
+      "address": "Summers at the River, 2142 N. Sports Complex Ln., Nixa, MO 65714",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "Summers at the River, 2142 N. Sports Complex Ln., Nixa, MO 65714"
+      },
+      "placement": {
+        "lat": 37.0931968,
+        "lon": -93.3012305,
+        "basis": "operator-site",
+        "sourceUrl": "https://maps.app.goo.gl/uockRQnBPToZLvkk8",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "Approximate site placement only; not entrance, parking, gate, doorway or rideshare dropoff."
+      },
+      "listingExpiresAt": "2026-11-02T00:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-missouri-nightmare",
+      "recordId": "DELTA2-MISSOURI-NIGHTMARE",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Missouri Nightmare Haunted Attraction",
+      "address": "1420 County Rd276, Columbia, MO65202",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "1420 County Rd276, Columbia, MO65202"
+      },
+      "placement": {
+        "lat": 38.977510601859,
+        "lon": -92.139911854447,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1420+County+Rd+276%2C+Columbia%2C+MO+65202&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "Approximate Census address-range interpolation only; Directions must use supported visitor address."
+      },
+      "listingExpiresAt": "2026-11-01T20:30:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": null
+    },
+    {
+      "id": "date-night-mo26-astra-trepidations",
+      "recordId": "DELTA2-TREPIDATIONS",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Trepidations Haunted Attraction",
+      "address": "101 East Commercial Street, Exeter, MO65647",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "101 East Commercial Street, Exeter, MO65647"
+      },
+      "placement": {
+        "lat": 36.6725635,
+        "lon": -93.9396267,
+        "basis": "operator-site",
+        "sourceUrl": "https://trepidationshaunt.fearticket.com/",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "Approximate site placement only; not entrance, parking, gate, doorway or rideshare dropoff."
+      },
+      "listingExpiresAt": "2026-11-01T23:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-freaks-fair",
+      "recordId": "DELTA3-FREAKS",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Freaks Fair Haunted Attraction",
+      "address": "126 SW 400 Rd. (Twin Oaks Event Center), Warrensburg, MO 64093",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "126 SW 400 Rd. (Twin Oaks Event Center), Warrensburg, MO 64093"
+      },
+      "placement": {
+        "lat": 38.7627893,
+        "lon": -93.7360498,
+        "basis": "operator-site",
+        "sourceUrl": "https://freaksfair2026.fearticket.com/",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "Approximate site placement only, not an entrance, parking, gate or rideshare dropoff."
+      },
+      "listingExpiresAt": "2026-10-31T22:30:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-hell-harvest",
+      "recordId": "DELTA4-HELL-HARVEST",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Hell Harvest",
+      "address": "19126 Missouri 8, Potosi, MO 63664",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "19126 Missouri 8, Potosi, MO 63664"
+      },
+      "placement": {
+        "lat": 37.9133909,
+        "lon": -90.942628,
+        "basis": "operator-site",
+        "sourceUrl": "https://hellharvest2026.fearticket.com/",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "Approximate operator ticket-map site placement only; not entrance, parking stall, gate, doorway or rideshare dropoff."
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-myers-forest-of-fears",
+      "recordId": "MO26-005",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Myers Forest of Fears",
+      "address": "3935 S Garrison Avenue, Carthage, MO 64836",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "3935 S Garrison Avenue, Carthage, MO 64836"
+      },
+      "placement": {
+        "lat": 37.119659,
+        "lon": -94.312243,
+        "basis": "operator-site",
+        "sourceUrl": "https://www.myersforestoffears.com/location",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "Approximate operator-linked site placement; not an entrance, parking point or rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-astra-labyrinth-of-fear",
+      "recordId": "MO26-027",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Labyrinth of Fear",
+      "address": "17866 East Overland Road, Nevada, MO 64772",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "17866 East Overland Road, Nevada, MO 64772"
+      },
+      "placement": {
+        "lat": 37.828856,
+        "lon": -94.315562,
+        "basis": "operator-site",
+        "sourceUrl": "https://www.labyrinthoffear.com/location",
+        "checkedAt": "2026-10-09",
+        "precisionLabel": "Approximate operator-linked site placement; not an entrance, parking point or rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-068-lloyds-family-farm",
+      "recordId": "MO26-068",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Lloyd’s Family Farm",
+      "address": "7015 E Route Y, Ashland, MO 65010",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "7015 E Route Y, Ashland, MO 65010"
+      },
+      "placement": {
+        "lat": 38.7746696,
+        "lon": -92.2372283,
+        "basis": "operator-site",
+        "sourceUrl": "https://www.lloydsfamilyfarm.com/fallfestival",
+        "checkedAt": "2026-10-07",
+        "precisionLabel": "Approximate operator-designated site arrival"
+      },
+      "listingExpiresAt": "2026-10-31T16:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-116-sam-baker-halloween-bash",
+      "recordId": "MO26-116",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Sam A. Baker State Park — Halloween Bash",
+      "address": "5580 State Highway 143, Patterson, MO",
+      "directionsTarget": {
+        "kind": "verified-point",
+        "lat": 37.259288,
+        "lon": -90.505404,
+        "description": "Official free parking next to Shelter 1"
+      },
+      "placement": {
+        "lat": 37.259288,
+        "lon": -90.505404,
+        "basis": "verified-arrival",
+        "sourceUrl": "https://mostateparks.com/event/halloween-bash-2026",
+        "checkedAt": "2026-10-07",
+        "precisionLabel": "Official parking next to Shelter 1; not survey-grade"
+      },
+      "listingExpiresAt": "2026-10-31T18:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-036-monster-corn-maze",
+      "recordId": "MO26-036",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Monster Corn Maze",
+      "address": "711 State Route AM, Cabool, MO 65689",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "711 State Route AM, Cabool, MO 65689"
+      },
+      "placement": {
+        "lat": 37.026841,
+        "lon": -92.074599,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=711+State+Route+AM%2C+Cabool%2C+MO+65689&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-07",
+        "precisionLabel": "Approximate address-range interpolation; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-10-31T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30"
+      ]
+    },
+    {
+      "id": "date-night-mo26-058-beast",
+      "recordId": "MO26-058",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Beast Haunted House",
+      "address": "1401 W 13th St, Suite B, Kansas City, MO 64102",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "1300 W 13th St, Kansas City, MO 64102"
+      },
+      "placement": {
+        "lat": 39.09963,
+        "lon": -94.60158,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=1401+W+13th+Street%2C+Suite+B%2C+Kansas+City%2C+MO+64102&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-07",
+        "precisionLabel": "Approximate attraction address; not the required first check-in stop"
+      },
+      "listingExpiresAt": "2026-11-01T00:30:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-069-dead-factory",
+      "recordId": "MO26-069",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Dead Factory Haunted House",
+      "address": "2100 E Liberty St, Mexico, MO 65265",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "2100 E Liberty St, Mexico, MO 65265"
+      },
+      "placement": {
+        "lat": 39.163136,
+        "lon": -91.85066,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=2100+E+Liberty+Street%2C+Mexico%2C+MO+65265&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-07",
+        "precisionLabel": "Approximate address-range placement; operator advertises free onsite parking"
+      },
+      "listingExpiresAt": "2026-10-31T23:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-071-pomme-de-terror",
+      "recordId": "MO26-071",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Pomme de Terre State Park — Pomme de Terror",
+      "address": "Hermitage Area Campground, Pomme de Terre State Park, Hermitage, MO",
+      "directionsTarget": {
+        "kind": "verified-point",
+        "lat": 37.883074,
+        "lon": -93.303521,
+        "description": "Hermitage Area Campground event location"
+      },
+      "placement": {
+        "lat": 37.883074,
+        "lon": -93.303521,
+        "basis": "verified-arrival",
+        "sourceUrl": "https://mostateparks.com/event/pomme-de-terror-2026",
+        "checkedAt": "2026-10-08",
+        "precisionLabel": "Official Hermitage Area Campground event location"
+      },
+      "listingExpiresAt": "2026-10-18T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-16",
+        "2026-10-17"
+      ]
+    },
+    {
+      "id": "date-night-mo26-118-haunted-hall-horror",
+      "recordId": "MO26-118",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Haunted Hall of Horror at A. C. Brase Arena",
+      "address": "410 Kiwanis Drive, Cape Girardeau, MO 63701",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "410 Kiwanis Drive, Cape Girardeau, MO 63701"
+      },
+      "placement": {
+        "lat": 37.313042334782,
+        "lon": -89.558803512232,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=410+Kiwanis+Drive%2C+Cape+Girardeau%2C+MO+63701&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-07",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-10-31T22:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-012-witches-day-out",
+      "recordId": "MO26-012",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Christine’s Vineyard — Witches Day Out",
+      "address": "25695 Mulberry Road, Webb City, MO 64870",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "25695 Mulberry Road, Webb City, MO 64870"
+      },
+      "placement": {
+        "lat": 37.23722,
+        "lon": -94.523237,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=25695+Mulberry+Road%2C+Webb+City%2C+MO+64870&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-07",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-10-10T22:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-10"
+      ]
+    },
+    {
+      "id": "date-night-mo26-028-nevada-oktoberfest",
+      "recordId": "MO26-028",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Nevada/Vernon County Oktoberfest Fall Festival",
+      "address": "1641 E Ashland Street, Nevada, MO 64772",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "1641 E Ashland Street, Nevada, MO 64772"
+      },
+      "placement": {
+        "lat": 37.844012,
+        "lon": -94.335017,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=1641+E+Ashland+Street%2C+Nevada%2C+MO&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-07",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-10-10T14:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-10"
+      ]
+    },
+    {
+      "id": "date-night-mo26-074-osage-beach-fall-festival",
+      "recordId": "MO26-074",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Osage Beach City Park Fall Festival",
+      "address": "950 Hatchery Road, Osage Beach, MO 65065",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "950 Hatchery Road, Osage Beach, MO 65065"
+      },
+      "placement": {
+        "lat": 38.142296,
+        "lon": -92.616978,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=950+Hatchery+Road%2C+Osage+Beach%2C+MO&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-07",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-10-10T17:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-10"
+      ]
+    },
+    {
+      "id": "date-night-mo26-084-mcwilliams",
+      "recordId": "MO26-084",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "McWilliams Pumpkin Patch",
+      "address": "4007 County Road 6920, West Plains, MO 65775",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "4007 County Road 6920, West Plains, MO 65775"
+      },
+      "placement": {
+        "lat": 36.663875,
+        "lon": -91.937198,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=4007+County+Road+6920%2C+West+Plains%2C+MO+65775&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-07",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-10-31T17:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-04",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-085-brookdale-farms",
+      "recordId": "MO26-085",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Brookdale Farms Fall Festival",
+      "address": "8004 Twin Rivers Road, Eureka, MO 63025",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "8004 Twin Rivers Road, Eureka, MO 63025"
+      },
+      "placement": {
+        "lat": 38.465355,
+        "lon": -90.616517,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=8004+Twin+Rivers+Road%2C+Eureka%2C+MO+63025&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-07",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-11-08T18:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": null
+    },
+    {
+      "id": "date-night-mo26-delta-edge-of-hell",
+      "recordId": "DELTA-EDGE-2026",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Edge of Hell Haunted Attraction",
+      "address": "1300 W 12th St, Kansas City, MO 64101",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "1300 W 13th St, Kansas City, MO 64102"
+      },
+      "placement": {
+        "lat": 39.100665528955,
+        "lon": -94.599950797359,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=1300+W+12th+St%2C+Kansas+City%2C+MO+64101&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08",
+        "precisionLabel": "Approximate attraction address; not the required first check-in stop"
+      },
+      "listingExpiresAt": "2026-11-01T00:30:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-delta-creepyworld",
+      "recordId": "DELTA-CREEPYWORLD-2026",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Creepyworld",
+      "address": "1400 S Old Highway 141, Fenton, MO 63026",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "1400 S Old Highway 141, Fenton, MO 63026"
+      },
+      "placement": {
+        "lat": 38.484571437462,
+        "lon": -90.442969239594,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=1400+S+Old+Highway+141%2C+Fenton%2C+MO+63026&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-11-13T22:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01",
+        "2026-11-07",
+        "2026-11-13"
+      ]
+    },
+    {
+      "id": "date-night-mo26-delta-darkness",
+      "recordId": "DELTA-DARKNESS-2026",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "The Darkness",
+      "address": "1525 South 8th Street, St. Louis, MO 63104",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "1525 South 8th Street, St. Louis, MO 63104"
+      },
+      "placement": {
+        "lat": 38.61118574065,
+        "lon": -90.200631908052,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=1525+South+8th+Street%2C+St+Louis%2C+MO+63104&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-11-13T22:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-19",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01",
+        "2026-11-07",
+        "2026-11-13"
+      ]
+    },
+    {
+      "id": "date-night-mo26-delta-haunted-river-float",
+      "recordId": "DELTA-HAUNTED-RIVER-2026",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "The Haunted River Float at Ruby’s Landing River Resort",
+      "address": "22474 Restful Lane, Waynesville, MO 65583",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "22474 Restful Lane, Waynesville, MO 65583"
+      },
+      "placement": {
+        "lat": 37.871525332879,
+        "lon": -92.250392066473,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=22474+Restful+Lane%2C+Waynesville%2C+MO+65583&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-03",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-delta-fear-bloody-timber",
+      "recordId": "DELTA-FEAR-BLOODY-TIMBER-2026",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Fear the Bloody Timber Haunted Attraction & Corn Maze",
+      "address": "8518 County Road 7190, West Plains, MO 65775",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "8518 County Road 7190, West Plains, MO 65775"
+      },
+      "placement": {
+        "lat": 36.742952329743,
+        "lon": -92.037362377697,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=8518+County+Road+7190%2C+West+Plains%2C+MO+65775&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08",
+        "precisionLabel": "Approximate address-range placement; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-10-31T23:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-myers-inn-carthage",
+      "recordId": "MO26-003",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "RIP at Myer’s Inn",
+      "address": "529 West Airport Drive, Carthage, MO 64836",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "529 West Airport Drive, Carthage, MO 64836"
+      },
+      "placement": {
+        "lat": 37.147546859607,
+        "lon": -94.317780429306,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=529+West+Airport+Drive%2C+Carthage%2C+MO+64836&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08T02:33:27.364574+00:00",
+        "precisionLabel": "Approximate address location"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-010-aftermath",
+      "recordId": "MO26-010",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "The Aftermath Haunted Attraction",
+      "address": "2520 Jaguar Road, Joplin, MO 64804",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "2520 Jaguar Road, Joplin, MO 64804"
+      },
+      "placement": {
+        "lat": 37.032013052845,
+        "lon": -94.424739897714,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=2520+Jaguar+Road%2C+Joplin%2C+MO+64804&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08T02:33:27.365147+00:00",
+        "precisionLabel": "Approximate address location"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-011-beyond-outer-limits",
+      "recordId": "MO26-011",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Beyond The Outer Limits",
+      "address": "2163 Jaguar Road, Joplin, MO 64804",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "2163 Jaguar Road, Joplin, MO 64804"
+      },
+      "placement": {
+        "lat": 37.03315620173,
+        "lon": -94.424538484412,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=2163+Jaguar+Road%2C+Joplin%2C+MO+64804&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08T02:33:27.365543+00:00",
+        "precisionLabel": "Approximate address location"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-029-campbells",
+      "recordId": "MO26-029",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Campbell’s Maze Daze & Pumpkin Patch",
+      "address": "177 Carob Road, Clever, MO 65631",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "177 Carob Road, Clever, MO 65631"
+      },
+      "placement": {
+        "lat": 36.9937383,
+        "lon": -93.418114,
+        "basis": "operator-site",
+        "sourceUrl": "https://www.google.com/maps/dir//177%2BCarob%2BRoad%2C%2BClever%2C%2BMO%2B65631/%4036.9937331%2C-93.4532193%2C13z/data%3D%213m1%214b1%214m8%214m7%211m0%211m5%211m1%211s0x87cf69fe4b218a17%3A0x29aaddfb530f6d13%212m2%211d-93.418114%212d36.9937383",
+        "checkedAt": "2026-10-08T02:37:30.513176+00:00",
+        "precisionLabel": "Approximate venue location"
+      },
+      "listingExpiresAt": "2026-10-31T23:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": null
+    },
+    {
+      "id": "date-night-mo26-030-rutledge-wilson",
+      "recordId": "MO26-030",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Rutledge-Wilson Farm Park",
+      "address": "3825 W Farm Road 146, Springfield, MO 65802",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "3825 W Farm Road 146, Springfield, MO 65802"
+      },
+      "placement": {
+        "lat": 37.191319,
+        "lon": -93.360734,
+        "basis": "operator-site",
+        "sourceUrl": "https://www.google.com/maps/d/kml?mid=1GWi3uqBrcGQqN_iYWg4igElBk16fJnCe&forcekml=1",
+        "checkedAt": "2026-10-08T02:37:30.513176+00:00",
+        "precisionLabel": "Approximate venue location"
+      },
+      "listingExpiresAt": "2026-10-25T18:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": null
+    },
+    {
+      "id": "date-night-mo26-019-james-river-joplin-party",
+      "recordId": "MO26-019",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "James River Church Joplin — October 31st Party",
+      "address": "1850 S Maiden Lane, Joplin, MO",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "1850 S Maiden Lane, Joplin, MO"
+      },
+      "placement": {
+        "lat": 37.0715533,
+        "lon": -94.5331944,
+        "basis": "operator-site",
+        "sourceUrl": "https://jamesriver.church/locations/joplin/",
+        "checkedAt": "2026-10-08T02:33:46.702845+00:00",
+        "precisionLabel": "Approximate venue location"
+      },
+      "listingExpiresAt": "2026-10-31T17:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-031-silver-dollar-city-harvest",
+      "recordId": "MO26-031",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Silver Dollar City — Harvest Festival",
+      "address": "399 Silver Dollar City Parkway, Branson, MO 65616",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "399 Silver Dollar City Parkway, Branson, MO 65616"
+      },
+      "placement": {
+        "lat": 36.661658,
+        "lon": -93.338519,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=399+Silver+Dollar+City+Parkway%2C+Branson%2C+MO+65616&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08T02:33:26.014163+00:00",
+        "precisionLabel": "Approximate address-range interpolation; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": null
+    },
+    {
+      "id": "date-night-mo26-034-boone-historical-haunts",
+      "recordId": "MO26-034",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Nathan and Olive Boone Homestead — Historical Haunts",
+      "address": "7850 N State Highway V, Ash Grove, MO 65604",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "7850 N State Highway V, Ash Grove, MO 65604"
+      },
+      "placement": {
+        "lat": 37.347285,
+        "lon": -93.582655,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=7850+N+State+Highway+V%2C+Ash+Grove%2C+MO+65604&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08T02:33:26.015875+00:00",
+        "precisionLabel": "Approximate address-range interpolation; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-10-17T20:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-17"
+      ]
+    },
+    {
+      "id": "date-night-mo26-054-fun-farm",
+      "recordId": "MO26-054",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Fun Farm",
+      "address": "650 N Jefferson Street, Kearney, MO 64060",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "650 N Jefferson Street, Kearney, MO 64060"
+      },
+      "placement": {
+        "lat": 39.379769,
+        "lon": -94.3646,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=650+N+Jefferson+Street%2C+Kearney%2C+MO+64060&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08T02:33:29.900271+00:00",
+        "precisionLabel": "Approximate address-range interpolation; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-11-01T21:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-20",
+        "2026-09-21",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-05",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ]
+    },
+    {
+      "id": "date-night-mo26-067-shryocks-callaway-farms",
+      "recordId": "MO26-067",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Shryocks Callaway Farms",
+      "address": "2927 County Road 253, Columbia, MO 65202",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "2927 County Road 253, Columbia, MO 65202"
+      },
+      "placement": {
+        "lat": 38.955913,
+        "lon": -92.079145,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=2927+County+Road+253%2C+Columbia%2C+MO+65202&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08T02:33:33.817477+00:00",
+        "precisionLabel": "Approximate address-range interpolation; not an entrance or parking coordinate"
+      },
+      "listingExpiresAt": "2026-11-02T00:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-20",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ]
+    },
+    {
+      "id": "date-night-mo26-100-urban-gardens",
+      "recordId": "MO26-100",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Urban Gardens Pumpkin Patch & Corn Maze",
+      "address": "701 W LaHarpe Street, Kirksville, MO 63501",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "701 W LaHarpe Street, Kirksville, MO 63501"
+      },
+      "placement": {
+        "lat": 40.179161,
+        "lon": -92.587774,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=701+W+LaHarpe+Street%2C+Kirksville%2C+MO+63501&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-07T06:44:14.521149+00:00",
+        "precisionLabel": "Approximate venue location"
+      },
+      "listingExpiresAt": "2026-11-01T18:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-05",
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-20",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ]
+    },
+    {
+      "id": "date-night-mo26-114-perryville-pumpkin-farm",
+      "recordId": "MO26-114",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Perryville Pumpkin Farm",
+      "address": "1410 Allens Landing Road, Perryville, MO 63775",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "1410 Allens Landing Road, Perryville, MO 63775"
+      },
+      "placement": {
+        "lat": 37.730183,
+        "lon": -89.84486,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=1410+Allens+Landing+Road%2C+Perryville%2C+MO+63775&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08T02:33:57.537465+00:00",
+        "precisionLabel": "Approximate address-range location"
+      },
+      "listingExpiresAt": "2026-10-31T20:30:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": null
+    },
+    {
+      "id": "date-night-mo26-115-bollinger-trick-or-treat",
+      "recordId": "MO26-115",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Bollinger Mill State Historic Site — Trick-or-Treat Night",
+      "address": "113 Bollinger Mill Road, Burfordville, MO 63739-9051",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "113 Bollinger Mill Road, Burfordville, MO 63739-9051"
+      },
+      "placement": {
+        "lat": 37.3679,
+        "lon": -89.802902,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=113+Bollinger+Mill+Road%2C+Burfordville%2C+MO&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-07T06:44:26.400223+00:00",
+        "precisionLabel": "Approximate venue location"
+      },
+      "listingExpiresAt": "2026-10-23T19:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-23"
+      ]
+    },
+    {
+      "id": "date-night-mo26-124-hotel-of-terror",
+      "recordId": "MO26-124",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Hotel of Terror",
+      "address": "334 N Main Avenue, Springfield, MO 65806",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "334 N Main Avenue, Springfield, MO 65806"
+      },
+      "placement": {
+        "lat": 37.210875,
+        "lon": -93.296377,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=334+N+Main+Avenue%2C+Springfield%2C+MO+65806&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08T02:33:57.538483+00:00",
+        "precisionLabel": "Approximate address-range location"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-125-dungeons-of-doom",
+      "recordId": "MO26-125",
+      "prior52": true,
+      "fullLiteralEqual": true,
+      "name": "Dungeons of Doom",
+      "address": "701 W Wall Street, Springfield, MO 65802",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "701 W Wall Street, Springfield, MO 65802"
+      },
+      "placement": {
+        "lat": 37.211958,
+        "lon": -93.298751,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=701+W+Wall+Street%2C+Springfield%2C+MO+65802&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-08T02:33:57.539597+00:00",
+        "precisionLabel": "Approximate address-range location"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-phase4-wolfmans-house-of-screams",
+      "recordId": "MO26-006",
+      "prior52": false,
+      "fullLiteralEqual": true,
+      "name": "Wolfmans House Of Screams",
+      "address": "26267 King Lane, Carl Junction, MO 64834",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "26267 King Lane, Carl Junction, MO 64834"
+      },
+      "placement": {
+        "lat": 37.203626664776,
+        "lon": -94.531270552631,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=26267+King+Lane%2C+Carl+Junction%2C+MO+64834&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-10",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-werehouse-joplin",
+      "recordId": "MO26-004",
+      "prior52": false,
+      "fullLiteralEqual": true,
+      "name": "The Werehouse",
+      "address": "3819 E 20th Street, Joplin, MO 64801",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "3819 E 20th Street, Joplin, MO 64801"
+      },
+      "placement": {
+        "lat": 37.069463315708,
+        "lon": -94.464636904963,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3819+E+20th+Street%2C+Joplin%2C+MO+64801&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-10",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-phase4-fearstone-forest",
+      "recordId": "DELTA3-FEARSTONE",
+      "prior52": false,
+      "fullLiteralEqual": true,
+      "name": "Fearstone Forest Haunted Trail",
+      "address": "85 Benne Blvd, Camdenton, MO 65020",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "85 Benne Blvd, Camdenton, MO 65020"
+      },
+      "placement": {
+        "lat": 38.016075473125,
+        "lon": -92.758610359304,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=85+Benne+Blvd%2C+Camdenton%2C+MO+65020&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-10",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-10-31T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30"
+      ]
+    },
+    {
+      "id": "date-night-mo26-phase4-fun-time-farms",
+      "recordId": "DELTA3-FUN-TIME",
+      "prior52": false,
+      "fullLiteralEqual": true,
+      "name": "Fun Time Farms Corn MAiZE",
+      "address": "11050 NE 201 Road, Lowry City, MO 64763",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "11050 NE 201 Road, Lowry City, MO 64763"
+      },
+      "placement": {
+        "lat": 38.183365966646,
+        "lon": -93.739844249626,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=11050+NE+201+Road%2C+Lowry+City%2C+MO+64763&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-10",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": null
+    },
+    {
+      "id": "date-night-mo26-phase4-carolyns-pumpkin-patch",
+      "recordId": "MO26-055",
+      "prior52": false,
+      "fullLiteralEqual": true,
+      "name": "Carolyn’s Pumpkin Patch",
+      "address": "17607 NE 52nd Street, Liberty, MO 64068",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "17607 NE 52nd Street, Liberty, MO 64068"
+      },
+      "placement": {
+        "lat": 39.1857337,
+        "lon": -94.3697357,
+        "basis": "operator-site",
+        "sourceUrl": "https://goo.gl/maps/pKngpKRpDZhtK55M9",
+        "checkedAt": "2026-10-10",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-09-19",
+        "2026-09-20",
+        "2026-09-21",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-09-28",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-05",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ]
+    },
+    {
+      "id": "date-night-mo26-phase4-terror-on-route-66",
+      "recordId": "DELTA2-TERROR66",
+      "prior52": false,
+      "fullLiteralEqual": true,
+      "name": "Terror on Route 66",
+      "address": "1143 North Service Road West, Sullivan, MO 63080",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "1143 North Service Road West, Sullivan, MO 63080"
+      },
+      "placement": {
+        "lat": 38.2432122,
+        "lon": -91.1408597,
+        "basis": "operator-site",
+        "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Terror+On+Route+66+1143+North+Service+Road+West+Sullivan+MO",
+        "checkedAt": "2026-10-10",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-11-02T00:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": null
+    },
+    {
+      "id": "date-night-mo26-phase4-field-of-screams-branson",
+      "recordId": "DELTA6-BRANSON-FIELD",
+      "prior52": false,
+      "fullLiteralEqual": true,
+      "name": "Field of Screams Branson",
+      "address": "1000 Pat Nash Drive, Branson, MO 65616",
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "1000 Pat Nash Drive, Branson, MO 65616"
+      },
+      "placement": {
+        "lat": 36.645101695991,
+        "lon": -93.284825773276,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1000+Pat+Nash+Dr%2C+Branson%2C+MO+65616&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-10",
+        "precisionLabel": "Approximate site/address placement only; not a verified entrance, parking or rideshare dropoff"
+      },
+      "listingExpiresAt": "2026-11-15T00:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null,
+      "activeDates": [
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-13",
+        "2026-11-14"
+      ]
+    }
+  ],
+  "evidenceLinks": "exact-head-evidence-links.json",
+  "qualifications": [
+    "Data/source-bound acceptance; runtime browser behavior is covered by retained exact-head evidence and separate parent live smoke.",
+    "Literal absence of 2027 dates is not itself proof of no revival; exact-head expiry/cache/pending RPC/no2027 behavior evidence is explicitly retained and linked.",
+    "No byte-for-byte CI/Vercel build reproducibility claim.",
+    "Approximate coordinates remain map/distance placements, with visitor-address Directions and generic rides.",
+    "Fun Time cutoff remains editorial, without invented operator dates/end; Branson crossover remains four accepted November dates."
+  ],
+  "files": [
+    {
+      "path": "production-index.html",
+      "bytes": 29113,
+      "sha256": "b514fe0a0c17e307a18aac3c692ed6903f6f761dfa96cce7fc42492a40cc005c"
+    },
+    {
+      "path": "index-BPy9duSG.js",
+      "bytes": 601359,
+      "sha256": "9943ca9df54dfae7d59e4c4735a99654816ce93f2fa99f3741a15befce7c3921"
+    },
+    {
+      "path": "routes-CXZhZYSt.js",
+      "bytes": 162612,
+      "sha256": "b5c4a6ec51cb85718ed6eef2593cb797145e6545d660ee8ad8e6f65e1757d42c"
+    },
+    {
+      "path": "hours-C8llU-w4.js",
+      "bytes": 10987,
+      "sha256": "9be3c3d8d3770f8c3f0aaa8309b3282d62b84b225227d9026b6cd0922a40b4c0"
+    },
+    {
+      "path": "expected-source.json",
+      "bytes": 246198,
+      "sha256": "44e82ce1e7385953ec3b24fa39f8b1ac349d436fe3e39269b9146c5e07b88313"
+    },
+    {
+      "path": "exact-head-evidence-links.json",
+      "bytes": 4239,
+      "sha256": "d0f0e1ba9a2fa9c547244497b2b3cee5af32c907ca266d2084db4ca54e442427"
+    }
+  ]
+}

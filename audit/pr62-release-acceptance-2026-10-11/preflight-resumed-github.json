@@ -1,0 +1,104 @@
+{
+  "observedAt": "2026-10-11T00:40:42.382Z",
+  "main": {
+    "sha": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "tree": "8d5059c9fee871c522616971cce0a80b153e4d23",
+    "protected": false
+  },
+  "candidate": {
+    "sha": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "tree": "7d91061065f5e7e36e4f76307a7b915a66ea006d",
+    "parents": [
+      "dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f"
+    ]
+  },
+  "pr": {
+    "number": 62,
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "head": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "headRef": "integration/phase4-missouri-recovery-2026-10-10",
+    "base": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "baseRef": "main",
+    "mergeable": true,
+    "mergeableState": "clean",
+    "changedFiles": 35,
+    "updatedAt": "2026-10-10T21:34:19Z"
+  },
+  "checks": {
+    "total": 3,
+    "checks": [
+      {
+        "name": "sign-upload-bundle",
+        "sha": "bf88443932739a9448fac8d27fd845e9947cf697",
+        "status": "completed",
+        "conclusion": "skipped",
+        "id": 114300076400,
+        "details": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38081550610/job/114300076400",
+        "completed": "2026-10-10T19:56:58Z"
+      },
+      {
+        "name": "validate-android",
+        "sha": "bf88443932739a9448fac8d27fd845e9947cf697",
+        "status": "completed",
+        "conclusion": "success",
+        "id": 114299323024,
+        "details": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38081550610/job/114299323024",
+        "completed": "2026-10-10T19:56:57Z"
+      },
+      {
+        "name": "validate",
+        "sha": "bf88443932739a9448fac8d27fd845e9947cf697",
+        "status": "completed",
+        "conclusion": "success",
+        "id": 114299322669,
+        "details": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38081550608/job/114299322669",
+        "completed": "2026-10-10T21:18:41Z"
+      }
+    ]
+  },
+  "statuses": {
+    "state": "pending",
+    "total": 0,
+    "statuses": []
+  },
+  "rulesets": [],
+  "protectionRead": {
+    "content": [
+      {
+        "type": "text",
+        "text": "GitHub API error 403: {\"message\":\"Resource not accessible by integration\",\"documentation_url\":\"https://docs.github.com/rest/branches/branch-protection#get-branch-protection\",\"status\":\"403\"}"
+      }
+    ],
+    "structuredContent": {
+      "error": "GitHub API error 403: {\"message\":\"Resource not accessible by integration\",\"documentation_url\":\"https://docs.github.com/rest/branches/branch-protection#get-branch-protection\",\"status\":\"403\"}",
+      "error_code": "FORBIDDEN",
+      "error_data": {
+        "message": "Resource not accessible by integration",
+        "documentation_url": "https://docs.github.com/rest/branches/branch-protection#get-branch-protection",
+        "status": "403"
+      }
+    },
+    "isError": true
+  },
+  "branchRulesRead": {
+    "content": [
+      {
+        "type": "text",
+        "text": "HTTPError: 400: GitHub Fetch URL is not an allowed public GitHub repository or search endpoint. (Response: None)"
+      }
+    ],
+    "structuredContent": {
+      "error": "HTTPError: 400: GitHub Fetch URL is not an allowed public GitHub repository or search endpoint. (Response: None)",
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "isError": true
+  },
+  "continuity": "8d5375eff20994b9897726e829d26dc11737dbe8",
+  "interpretation": [
+    "All observed source identities match expected pre-release state.",
+    "Legacy status endpoint has zero entries; aggregate pending is not a failed check.",
+    "Main protected:false and rulesets [] observed; admin protection details unavailable to integration."
+  ]
+}

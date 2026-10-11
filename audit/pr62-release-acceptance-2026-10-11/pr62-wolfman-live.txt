@@ -1,0 +1,140 @@
+- banner:
+  - paragraph: Pick For Us · October after dark
+  - heading "Where Should the Night Take Us?" [level=1]
+  - paragraph: Pick your poison. Set the mood. Let October decide the rest.
+- button "Dinner":
+  - text: Dinner
+- button "Nightlife":
+  - text: Nightlife
+- button "Date Night" [pressed]:
+  - text: Date Night
+- text: Spooky Season
+- heading "October after dark." [level=2]
+- paragraph: Halloween styling and October presets are on. Choose a mood and explore the available date ideas.
+- paragraph: Seasonal picks use saved local places and map listings. Current-season attraction schedules are not refreshed live. Check dates and hours before going.
+- switch "Spooky Season" [checked]
+- paragraph: Or set the whole night
+- button "Something Wicked Haunts, escape rooms, and anything that earns a nervous laugh.":
+  - generic: Something Wicked
+  - generic: Haunts, escape rooms, and anything that earns a nervous laugh.
+- button "Autumn After Dark Corn mazes, pumpkin patches, parks, and cool-air wandering.":
+  - generic: Autumn After Dark
+  - generic: Corn mazes, pumpkin patches, parks, and cool-air wandering.
+- button "Velvet Night Low light, old stories, movies, and places with atmosphere.":
+  - generic: Velvet Night
+  - generic: Low light, old stories, movies, and places with atmosphere.
+- button "Scare, Then Settle One sharp thrill, then a quieter closer so the night has an arc.":
+  - generic: Scare, Then Settle
+  - generic: One sharp thrill, then a quieter closer so the night has an arc.
+- main:
+  - region "Search location":
+    - paragraph: Searching near
+    - paragraph: Joplin, Missouri, United States
+    - button "Use my location":
+    - button "Change location":
+  - heading "How far?" [level=2]
+  - paragraph: Within 15 miles
+  - slider "Travel distance"
+  - generic: "1"
+  - generic: "3"
+  - generic: "5"
+  - generic: "10"
+  - generic: "15"
+  - generic: "20"
+  - generic: "30"
+  - generic: "40"
+  - generic: "50"
+  - heading "What sounds fun?" [level=2]
+  - button "Anything"
+  - button "Bowling"
+  - button "Arcade"
+  - button "Movies"
+  - button "Mini Golf"
+  - button "Escape Room"
+  - button "Parks"
+  - button "Museum"
+  - button "Skating"
+  - button "Haunted House" [pressed]
+  - button "Corn Maze"
+  - button "Pumpkin Patch"
+  - button "Other Halloween / Fall"
+  - heading "What's the mood?" [level=2]
+  - paragraph: Playful
+  - slider "Cozy to adventurous"
+  - generic: Cozy
+  - generic: Playful
+  - generic: Adventurous
+  - paragraph: Open now only
+  - paragraph: Only activities with confirmed open hours
+  - switch "Open now only"
+  - paragraph: Favorites only
+  - paragraph: Pick from date spots you've saved
+  - switch "Favorites only"
+  - paragraph: Fewer parks
+  - paragraph: Keep parks available, but make the park category much less likely
+  - switch "Fewer parks" [checked]
+  - status: Loaded through 15 miles
+  - status: "No map listings found for these seasonal categories. Saved places only: Haunted House. Coverage may be incomplete; check schedules before going."
+  - paragraph: 6 activities match
+  - note: Seasonal listings can change quickly. Double-check the location, dates, and hours before you go.
+  - button "Pick our date":
+    - text: Pick our date
+  - button "Give us options":
+    - text: Give us options
+  - button "Plan the night"
+- navigation "Main":
+  - link "Pick":
+    - /url: /
+    - text: Pick
+  - link "Favorites":
+    - /url: /favorites
+    - text: Favorites
+  - link "History":
+    - /url: /history
+    - text: History
+  - link "Settings":
+    - /url: /settings
+    - text: Settings
+- button "Close result":
+- paragraph: Tonight's date
+- heading "Wolfmans House Of Screams" [level=2]
+- generic: Haunted House
+- paragraph: Approx. 8.3 miles · Hours partly confirmed
+- paragraph: 26267 King Lane, Carl Junction, MO 64834
+- paragraph: Drive sober.
+- link "Open Uber; choose your destination in the external service":
+  - /url: https://m.uber.com/
+  - generic: Uber ↗
+- link "Open Lyft; external service":
+  - /url: https://ride.lyft.com/
+  - generic: Lyft ↗
+- paragraph: People care about you.
+- paragraph: Independent third-party services · ride availability and pricing vary.
+- paragraph: Check current hours, admission, and weather before you go.
+- generic "Limited details Details" [active]:
+  - generic: Limited details
+  - generic: Details
+- paragraph: "Listed 2026 dates: October 3, 9–10, 16–17, 23–24 and 30–31."
+- paragraph: Listed opening time is 7 p.m.; closing time is unconfirmed.
+- paragraph: Location is approximate.
+- paragraph: Why this pick?
+- generic: Haunted House
+- generic: Adventurous mood
+- generic: Hours partly confirmed
+- generic: Approx. 8.3 miles away
+- link "Directions · Google Maps ↗":
+  - /url: https://www.google.com/maps/dir/?api=1&destination=26267%20King%20Lane%2C%20Carl%20Junction%2C%20MO%2064834
+  - generic: Directions · Google Maps ↗
+- paragraph: Directions open an independent third-party mapping service. Verify destination details before travel.
+- link "Website & info ↗":
+  - /url: https://www.facebook.com/WolfmansHouseOfScreams/
+  - generic: Website & info ↗
+- paragraph: Opens the venue's external website. Hours, prices, tickets, and availability are controlled by the venue.
+- button "Reroll":
+  - text: Reroll
+- button "Not tonight":
+  - text: Not tonight
+- button "Save":
+  - text: Save
+- button "We did this":
+  - text: We did this

@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-11T00:41:00Z",
+  "status": "PASS pending final immediate readback",
+  "candidate": {
+    "sha": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "tree": "7d91061065f5e7e36e4f76307a7b915a66ea006d",
+    "parent": "dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f"
+  },
+  "main": {
+    "sha": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+    "tree": "8d5059c9fee871c522616971cce0a80b153e4d23"
+  },
+  "browser": {
+    "authenticated": true,
+    "project": "https://vercel.com/minions-9e2c/dinner-roulette",
+    "buildSettingsUrl": "https://vercel.com/minions-9e2c/dinner-roulette/settings/build-and-deployment",
+    "buildCommand": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production",
+    "overrideChecked": true,
+    "rootDirectory": "",
+    "nodeVersion": "24.x",
+    "ignoredBuildStep": "Automatic",
+    "productionTrigger": "To update your Production Deployment, push to the main branch.",
+    "settingsChanged": false
+  },
+  "rollback": {
+    "route": "Overview > Instant Rollback > Continue > enabled Confirm Rollback",
+    "from": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+    "target": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+    "targetSource": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+    "confirmationEnabled": true,
+    "implications": [
+      "Assigns domains to previous deployment",
+      "Original build environment variables remain",
+      "Cron jobs revert to previous deployment state",
+      "Automatic production promotion stops until rollback removed"
+    ],
+    "inspectionCancelled": true,
+    "rollbackExecuted": false,
+    "olderTargets": "Hobby UI requires Pro for earlier Instant Rollback; BCd retention does not assert current Instant Rollback eligibility"
+  },
+  "authorization": {
+    "exactCandidateRelease": true,
+    "oneReleaseWaiver": "Owner authorized for exact bf884 tree7d910 only; no standing waiver",
+    "procedure": "Non-force expected-main-guarded fast-forward to exact candidate"
+  }
+}

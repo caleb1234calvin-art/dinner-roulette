@@ -1,3 +1,57 @@
+# PR #62 Released — Scoped Production Acceptance PASS (2026-10-11)
+
+## CURRENT
+
+This entry supersedes the pre-publication HOLD below. The authorized exact PR #62 candidate was published by a non-force, expected-main-guarded fast-forward. PR #62 is merged/closed at **2026-10-11T00:41:38Z**. Main is **bf88443932739a9448fac8d27fd845e9947cf697**, tree **7d91061065f5e7e36e4f76307a7b915a66ea006d**, sole parent **dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f**. No source mutation occurred during release.
+
+Production **dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U** is **READY**, source exactly released main, URL `dinner-roulette-1kgtpnjlr-minions-9e2c.vercel.app`. All five aliases bind this deployment: `pickforus.app`, `www.pickforus.app`, `dinner-roulette-chi.vercel.app`, `dinner-roulette-minions-9e2c.vercel.app`, and `dinner-roulette-git-main-minions-9e2c.vercel.app`. Four return 200; www redirects 308 to apex then 200.
+
+The owner’s one-release-only unprotected-main waiver is **CONSUMED** by this release. Fresh main was unprotected and rulesets empty; no protection or Vercel setting was changed. No standing release authority exists for the next candidate.
+
+## Release preflight and acceptance
+
+Authenticated effective build settings confirmed the enabled override:
+`VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`.
+Node 24.x, repository-root build, main production trigger. The production build cloned exact bf884 and completed the client/SSR build. Ordinary `npm run build` still chains a migration and remains prohibited for this mission. Retrieved build-event output was truncated; it is not represented as a complete raw log.
+
+Fresh preflight preserved exact head/tree/parent, scope, green exact-head Web 412 / 38081550608 and Android 83 / 38081550610, current production/main binding, five aliases, retained builds, and supported restoration controls. All seven accepted listing cutoffs were future at publication. Rolla remained excluded.
+
+**Scoped production acceptance PASS.** Live public UI verified:
+- Ordinary Joplin Date Night returned nine open activities and rendered normal options.
+- Werehouse’s amended 2026 Friday/Saturday schedule, approximate distance, supported visitor-address Directions and generic Uber/Lyft links.
+- Saving Werehouse and fully reloading Favorites preserved one canonical identity and current address. The test favorite was removed.
+- Wolfman’s new listing rendered exact 2026 dates, unconfirmed closing time, approximate placement and address Directions.
+- Field of Screams Branson rendered its October dates/hours, November 6–7 and 13–14 crossover with unconfirmed crossover hours, Nixa distinction and material sensory details.
+- Joplin Haunted House plus Open Now produced zero matches and disabled Pick/Options/Plan; returning Spooky Season off restored ordinary Date Night UI.
+
+Independent served-source verification deep-compared **all 59 complete catalog objects and all 59 presentations** to exact bf884. The 52 prior presentations are unchanged. Werehouse has one canonical identity. All seven new/amended records retain exact 2026 expiry, null machine intervals, never-Open-Now, qualified approximate coordinates and address Directions. Served index SHA-256 **9943ca9df54dfae7d59e4c4735a99654816ce93f2fa99f3741a15befce7c3921**; routes SHA-256 **b5c4a6ec51cb85718ed6eef2593cb797145e6545d660ee8ad8e6f65e1757d42c**.
+
+Expiry ±1 ms, pending RPC at expiry, stale saved/cache policy and no-2027 behavior remain supported by retained independently verified exact-head tests/browser evidence, now bound to served data. No future production clock mutation or fresh full-suite rerun is asserted. Prior accepted counts remain 1,062 tests, 1,091 browser scenarios, 489 geometry comparisons and 15 negative Plan controls. Physical Android/WebView/GPS remains the accepted nonblocking limitation; no signing or publication.
+
+## ROLLBACK — freshly supported route, not executed
+
+The post-release authenticated UI offered **HaYi → dpl_8xyE9R3BxyE1883QpavaEBWV2LGa**, source **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, URL `dinner-roulette-55q5rf8y3-minions-9e2c.vercel.app`. Overview → Instant Rollback → Continue reached an **enabled Confirm Rollback**. Inspection then used Back and Cancel; no rollback executed.
+
+The UI states restoration assigns domains to the previous deployment, preserves its build environment, restores its cron state and suspends automatic production promotion until rollback is removed. Reverify all five alias implications if restoration is ever executed; inspection is not a restoration test.
+
+Retained READY builds: **8xy** above; **dpl_F1XiMcc9AUuykunNamr87R3re7gP**, source **979d83aede9d66163e1ebaed9ad5b219cb637882**; **dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv**, source **213502ef8cf3f67d75e6d9c9c8ff43f9f656890c**. Hobby UI requires Pro for earlier Instant Rollback. READY retention does not establish eligibility for arbitrary older targets.
+
+## Evidence
+
+Release receipts, live DOM snapshots, representative screenshot, final identity/alias checks, independent source-binding report and retained exact-head evidence links are under `audit/pr62-release-acceptance-2026-10-11/`. The manifest records bytes and SHA-256. Source-binding full report SHA-256 **1dc1aeb5e48633d73c4220b2851da822bb3a6df6cfaff68cc2696ba0c09ca7d6**; summary **b8451efef66ff78c992dadfbfeb4caad0dd7dd4f069ae27110c9d2d102b07eda**.
+
+## NEXT / HOLD
+
+Phase 1 PASS permits Phase 2 only after this checkpoint is committed and read back. **Cadaver re-clearance is NEXT and has not yet begun.** Independently preserve official Facebook provenance and 2026 poster binding; review the owner-supplied 13 dates, October 29 exception, $15 admission, visitor address and November 1 05:00Z expiry. Prior approximate placement is accepted; never infer entrance/parking/dropoff precision.
+
+Next Missouri research and implementation candidate: **NOT STARTED; no candidate identity yet**. Re-evaluate existing HOLD/near-PASS inventory after Cadaver; no statewide restart, residential additions, PR #62 research reopening or padding. Rolla remains deferred, with immutable October 11 05:00Z expiry. PR #61/adaptive radial work remains PARKED. “Radial discovery becomes an audit layer.” is future product intent only.
+
+The next candidate may be prepared and verified but **must not be released automatically**. Preserve all ListingCompletenessV1, lifecycle, saved/cache, duplicate, Directions and placement contracts. No paid APIs, operator contact, protection/settings changes or Android signing/publication.
+
+This is a documentation/evidence-only checkpoint on deployment-disabled `integration/continuity-refresh-2026-10-07`. Parent continuity **8d5375eff20994b9897726e829d26dc11737dbe8**, parent tree **ca05e9772d3e6b956307c5a22721d71787ed3f58**. Entire prior continuity body follows unchanged.
+
+---
+
 # PR #62 Owner-Authorized Release Preflight — HOLD Before Publication (2026-10-10 23:15 UTC)
 
 ## CURRENT — exact candidate unchanged; release access gate incomplete

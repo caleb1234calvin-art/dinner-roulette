@@ -1,0 +1,174 @@
+{
+  "observedAt": "2026-10-11T02:24:33.550Z",
+  "scope": "Independent final read-only PR62 release identity, alias mapping and retained rollback deployment retention check; five-alias HTTP health separately preserved.",
+  "main": {
+    "sha": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "tree": "7d91061065f5e7e36e4f76307a7b915a66ea006d",
+    "protected": false
+  },
+  "pr": {
+    "number": 62,
+    "state": "closed",
+    "draft": false,
+    "merged": true,
+    "mergedAt": "2026-10-11T00:41:38Z",
+    "mergeCommit": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "head": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "base": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2"
+  },
+  "project": {
+    "id": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+    "name": "dinner-roulette",
+    "framework": "tanstack-start",
+    "accountId": "team_iBSXkvS9Z7tu8o8AtW0vlDt7",
+    "createdAt": 1788646871484,
+    "updatedAt": 1791679316871,
+    "nodeVersion": "24.x",
+    "live": false,
+    "latestDeployment": {
+      "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+      "url": "dinner-roulette-1kgtpnjlr-minions-9e2c.vercel.app",
+      "createdAt": 1791679299906,
+      "readyState": "READY",
+      "target": "production"
+    },
+    "domains": [
+      "pickforus.app",
+      "dinner-roulette-chi.vercel.app",
+      "www.pickforus.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app"
+    ],
+    "passwordProtection": {
+      "enabled": false,
+      "deploymentType": null
+    },
+    "ssoProtection": {
+      "enabled": false,
+      "deploymentType": null
+    },
+    "trustedIps": {
+      "enabled": false,
+      "deploymentType": null,
+      "addresses": [],
+      "protectionMode": null
+    }
+  },
+  "deployments": [
+    {
+      "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+      "url": "dinner-roulette-1kgtpnjlr-minions-9e2c.vercel.app",
+      "state": "READY",
+      "readyState": "READY",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "target": "production",
+      "source": "git",
+      "sourceSha": "bf88443932739a9448fac8d27fd845e9947cf697",
+      "sourceRef": "main",
+      "aliasError": null
+    },
+    {
+      "id": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+      "url": "dinner-roulette-55q5rf8y3-minions-9e2c.vercel.app",
+      "state": "READY",
+      "readyState": "READY",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "target": "production",
+      "source": "git",
+      "sourceSha": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+      "sourceRef": "main",
+      "aliasError": null
+    },
+    {
+      "id": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "url": "dinner-roulette-ezfgoqn2y-minions-9e2c.vercel.app",
+      "state": "READY",
+      "readyState": "READY",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "target": "production",
+      "source": "git",
+      "sourceSha": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+      "sourceRef": "main",
+      "aliasError": null
+    },
+    {
+      "id": "dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv",
+      "url": "dinner-roulette-j8zc29052-minions-9e2c.vercel.app",
+      "state": "READY",
+      "readyState": "READY",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "target": "production",
+      "source": "git",
+      "sourceSha": "213502ef8cf3f67d75e6d9c9c8ff43f9f656890c",
+      "sourceRef": "main",
+      "aliasError": null
+    }
+  ],
+  "aliases": [
+    {
+      "alias": "pickforus.app",
+      "deployment": {
+        "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+        "url": "dinner-roulette-1kgtpnjlr-minions-9e2c.vercel.app"
+      },
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1791679316000
+    },
+    {
+      "alias": "www.pickforus.app",
+      "deployment": {
+        "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+        "url": "dinner-roulette-1kgtpnjlr-minions-9e2c.vercel.app"
+      },
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": "pickforus.app",
+      "redirectStatusCode": 308,
+      "updatedAt": 1791679316003
+    },
+    {
+      "alias": "dinner-roulette-chi.vercel.app",
+      "deployment": {
+        "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+        "url": "dinner-roulette-1kgtpnjlr-minions-9e2c.vercel.app"
+      },
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1791679315984
+    },
+    {
+      "alias": "dinner-roulette-minions-9e2c.vercel.app",
+      "deployment": {
+        "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+        "url": "dinner-roulette-1kgtpnjlr-minions-9e2c.vercel.app"
+      },
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1791679315983
+    },
+    {
+      "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "deployment": {
+        "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+        "url": "dinner-roulette-1kgtpnjlr-minions-9e2c.vercel.app"
+      },
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1791679315987
+    }
+  ],
+  "independentVerdict": "PASS: released main, merged PR and current production source equal exact approved candidate; all current alias objects bind new READY production; prior8xy/F1/BCd retained READY at expected sources; no material divergence.",
+  "coordinatorReportedSeparateAcceptance": {
+    "notIndependentlyRepeatedByThisLane": true,
+    "uiSmoke": "PASS: ordinary Joplin Date Night9open options; Werehouse exact2026 amendment/one identity/saved-reload; Wolfman new dates/address/approximate placement/generic ride; Branson October17/November crossover/details/address; HauntedHouse OpenNow failclosed0.",
+    "rollback": "Coordinator inspected authenticated HaYi→8xy/sourcefe22 rollback confirmation enabled, then cancelled. No rollback executed."
+  },
+  "limitations": [
+    "HTTP health is a separate receipt; this does not replace coordinator UI behavior evidence.",
+    "Retained READY identity does not independently prove restore-control eligibility; coordinator owns that separate authenticated inspection."
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "candidate": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "continuity": "cf976a56f46d97a6a43aa82ff8b18636704d81d1",
+  "qualifiedIndependentReport": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/cf976a56f46d97a6a43aa82ff8b18636704d81d1/audit/phase4-missouri-2026-10-10/final-gate-20261010/INDEPENDENT-EXACT-BF884-VERDICT.md",
+  "webRun": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38081550608",
+  "browserArtifact": {
+    "id": 11682503939,
+    "bytes": 761906766,
+    "sha256": "310afc592cc6f11c7ea9512b91afc296dd3025703f55ea29235f39b504cb971e"
+  },
+  "phase4VerdictSha256": "31fcd16bb346c20dcddebe31d7d9d6814a0670f9b0734843a56486aa66536ea7",
+  "geometryVerdictSha256": "bdbe8f0eac84d215096ae1515bd3dc5e041028866403bf94a77e63323e345cbf",
+  "sourceFingerprint": "cfd01395c9b9cefbe9447d3795bc3175d7bff76dfbd2a63929b1aeaa8399e020",
+  "coverage": [
+    {
+      "topic": "exact cutoff -1ms/exact/+1ms",
+      "path": "scripts/seasonal-phase4-recovery.test.mjs",
+      "lines": [
+        72
+      ],
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/bf88443932739a9448fac8d27fd845e9947cf697/scripts/seasonal-phase4-recovery.test.mjs#L72"
+    },
+    {
+      "topic": "conflicting provider/cache",
+      "path": "scripts/seasonal-phase4-recovery.test.mjs",
+      "lines": [
+        91
+      ],
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/bf88443932739a9448fac8d27fd845e9947cf697/scripts/seasonal-phase4-recovery.test.mjs#L91"
+    },
+    {
+      "topic": "saved alias receipts",
+      "path": "scripts/seasonal-phase4-recovery.test.mjs",
+      "lines": [
+        106
+      ],
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/bf88443932739a9448fac8d27fd845e9947cf697/scripts/seasonal-phase4-recovery.test.mjs#L106"
+    },
+    {
+      "topic": "Werehouse legacy ID-only",
+      "path": "scripts/seasonal-phase4-recovery.test.mjs",
+      "lines": [
+        137
+      ],
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/bf88443932739a9448fac8d27fd845e9947cf697/scripts/seasonal-phase4-recovery.test.mjs#L137"
+    },
+    {
+      "topic": "all 52 previous",
+      "path": "scripts/seasonal-phase4-recovery.test.mjs",
+      "lines": [
+        208
+      ],
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/bf88443932739a9448fac8d27fd845e9947cf697/scripts/seasonal-phase4-recovery.test.mjs#L208"
+    },
+    {
+      "topic": "resume-expiry-",
+      "path": "scripts/seasonal-ten-record-browser.mjs",
+      "lines": [
+        677
+      ],
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/bf88443932739a9448fac8d27fd845e9947cf697/scripts/seasonal-ten-record-browser.mjs#L677"
+    },
+    {
+      "topic": "pending-rpc-at-expiry",
+      "path": "scripts/seasonal-ten-record-browser.mjs",
+      "lines": [
+        866
+      ],
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/bf88443932739a9448fac8d27fd845e9947cf697/scripts/seasonal-ten-record-browser.mjs#L866"
+    },
+    {
+      "topic": "affirmed-favorites-direct-reload-expiry",
+      "path": "scripts/seasonal-ten-record-browser.mjs",
+      "lines": [
+        794
+      ],
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/bf88443932739a9448fac8d27fd845e9947cf697/scripts/seasonal-ten-record-browser.mjs#L794"
+    },
+    {
+      "topic": "Cached identity cannot roll forward into 2027",
+      "path": "scripts/seasonal-ten-record-browser.mjs",
+      "lines": [
+        712
+      ],
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/bf88443932739a9448fac8d27fd845e9947cf697/scripts/seasonal-ten-record-browser.mjs#L712"
+    },
+    {
+      "topic": "Branson exact CST cutoff",
+      "path": "scripts/seasonal-ten-record-browser.mjs",
+      "lines": [
+        963
+      ],
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/bf88443932739a9448fac8d27fd845e9947cf697/scripts/seasonal-ten-record-browser.mjs#L963"
+    }
+  ],
+  "scope": "Retained independently verified exact-head controlled-browser and unit evidence, now data-bound to served source. No future production clock mutation or browser rerun asserted."
+}

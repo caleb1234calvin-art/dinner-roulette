@@ -1,0 +1,26 @@
+- main:
+  - paragraph: Saved for later
+  - heading "Favorites" [level=1]
+  - paragraph: Places you already know you like.
+  - list:
+    - paragraph: The Werehouse
+    - paragraph: Haunted House
+    - paragraph: Approx. 2.9 miles
+    - paragraph: 3819 E 20th Street, Joplin, MO 64801 · Hours partly confirmed
+    - link "Directions":
+      - /url: https://www.google.com/maps/dir/?api=1&destination=3819%20E%2020th%20Street%2C%20Joplin%2C%20MO%2064801
+      - text: Directions
+    - button "Remove The Werehouse":
+- navigation "Main":
+  - link "Pick":
+    - /url: /
+    - text: Pick
+  - link "Favorites":
+    - /url: /favorites
+    - text: Favorites
+  - link "History":
+    - /url: /history
+    - text: History
+  - link "Settings":
+    - /url: /settings
+    - text: Settings

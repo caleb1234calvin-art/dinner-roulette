@@ -1,0 +1,167 @@
+{
+  "observedAt": "2026-10-11T00:40:42.382Z",
+  "project": {
+    "id": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+    "name": "dinner-roulette",
+    "framework": "tanstack-start",
+    "accountId": "team_iBSXkvS9Z7tu8o8AtW0vlDt7",
+    "createdAt": 1788646871484,
+    "updatedAt": 1791575315090,
+    "nodeVersion": "24.x",
+    "live": false,
+    "latestDeployment": {
+      "id": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+      "url": "dinner-roulette-55q5rf8y3-minions-9e2c.vercel.app",
+      "createdAt": 1791575295871,
+      "readyState": "READY",
+      "target": "production"
+    },
+    "domains": [
+      "pickforus.app",
+      "dinner-roulette-chi.vercel.app",
+      "www.pickforus.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app"
+    ],
+    "passwordProtection": {
+      "enabled": false,
+      "deploymentType": null
+    },
+    "ssoProtection": {
+      "enabled": false,
+      "deploymentType": null
+    },
+    "trustedIps": {
+      "enabled": false,
+      "deploymentType": null,
+      "addresses": [],
+      "protectionMode": null
+    }
+  },
+  "deployments": [
+    {
+      "id": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+      "url": "dinner-roulette-55q5rf8y3-minions-9e2c.vercel.app",
+      "state": "READY",
+      "readyState": "READY",
+      "project": {
+        "id": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "name": "dinner-roulette",
+        "framework": "tanstack-start"
+      },
+      "target": "production",
+      "source": "git",
+      "meta": {
+        "githubCommitRef": "main",
+        "githubCommitSha": "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2",
+        "githubCommitMessage": "test: scope season-off metadata assertions to reviewed identities",
+        "githubRepo": "dinner-roulette",
+        "githubOrg": "caleb1234calvin-art"
+      },
+      "aliasError": null
+    },
+    {
+      "id": "dpl_F1XiMcc9AUuykunNamr87R3re7gP",
+      "url": "dinner-roulette-ezfgoqn2y-minions-9e2c.vercel.app",
+      "state": "READY",
+      "readyState": "READY",
+      "project": {
+        "id": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "name": "dinner-roulette",
+        "framework": "tanstack-start"
+      },
+      "target": "production",
+      "source": "git",
+      "meta": {
+        "githubCommitRef": "main",
+        "githubCommitSha": "979d83aede9d66163e1ebaed9ad5b219cb637882",
+        "githubCommitMessage": "test(seasonal): synchronize lifecycle overlay acceptance",
+        "githubRepo": "dinner-roulette",
+        "githubOrg": "caleb1234calvin-art"
+      },
+      "aliasError": null
+    },
+    {
+      "id": "dpl_BCdD3eWRXk6UEN2FNJQE88r18VXv",
+      "url": "dinner-roulette-j8zc29052-minions-9e2c.vercel.app",
+      "state": "READY",
+      "readyState": "READY",
+      "project": {
+        "id": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "name": "dinner-roulette",
+        "framework": "tanstack-start"
+      },
+      "target": "production",
+      "source": "git",
+      "meta": {
+        "githubCommitRef": "main",
+        "githubCommitSha": "213502ef8cf3f67d75e6d9c9c8ff43f9f656890c",
+        "githubCommitMessage": "fix(seasonal): finish plan spacing and verify expanded facts",
+        "githubRepo": "dinner-roulette",
+        "githubOrg": "caleb1234calvin-art"
+      },
+      "aliasError": null
+    }
+  ],
+  "aliases": [
+    {
+      "alias": "pickforus.app",
+      "deployment": {
+        "id": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+        "url": "dinner-roulette-55q5rf8y3-minions-9e2c.vercel.app"
+      },
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1791575315044
+    },
+    {
+      "alias": "www.pickforus.app",
+      "deployment": {
+        "id": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+        "url": "dinner-roulette-55q5rf8y3-minions-9e2c.vercel.app"
+      },
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": "pickforus.app",
+      "redirectStatusCode": 308,
+      "updatedAt": 1791575315042
+    },
+    {
+      "alias": "dinner-roulette-chi.vercel.app",
+      "deployment": {
+        "id": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+        "url": "dinner-roulette-55q5rf8y3-minions-9e2c.vercel.app"
+      },
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1791575315022
+    },
+    {
+      "alias": "dinner-roulette-minions-9e2c.vercel.app",
+      "deployment": {
+        "id": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+        "url": "dinner-roulette-55q5rf8y3-minions-9e2c.vercel.app"
+      },
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1791575315024
+    },
+    {
+      "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "deployment": {
+        "id": "dpl_8xyE9R3BxyE1883QpavaEBWV2LGa",
+        "url": "dinner-roulette-55q5rf8y3-minions-9e2c.vercel.app"
+      },
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1791575315020
+    }
+  ],
+  "limitations": [
+    "Read-only metadata. No actual restore control inspection or rollback action in this lane.",
+    "Historical alias arrays on retained deployments are not used as current mapping proof."
+  ]
+}

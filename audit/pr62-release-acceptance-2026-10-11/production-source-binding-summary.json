@@ -1,0 +1,127 @@
+{
+  "checkedAt": "2026-10-11T00:45:25.161384+00:00",
+  "verdict": "PASS",
+  "deployment": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+  "source": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "tree": "7d91061065f5e7e36e4f76307a7b915a66ea006d",
+  "servedFrom": "https://pickforus.app/",
+  "method": "Read public HTML and referenced assets. Parse data literals and minifier constant-string split encoding in Python; no downloaded JavaScript executed. Compare all object fields recursively against exact Git candidate sources.",
+  "catalogCount": 59,
+  "prior52Unchanged": true,
+  "selected7Equal": true,
+  "presentationCount": 59,
+  "prior52PresentationsUnchanged": true,
+  "selected7PresentationsEqual": true,
+  "werehouseCatalogObjects": 1,
+  "werehouseLegacyAvailabilityEqual": true,
+  "evidenceLinks": "exact-head-evidence-links.json",
+  "qualifications": [
+    "Data/source-bound acceptance; runtime browser behavior is covered by retained exact-head evidence and separate parent live smoke.",
+    "Literal absence of 2027 dates is not itself proof of no revival; exact-head expiry/cache/pending RPC/no2027 behavior evidence is explicitly retained and linked.",
+    "No byte-for-byte CI/Vercel build reproducibility claim.",
+    "Approximate coordinates remain map/distance placements, with visitor-address Directions and generic rides.",
+    "Fun Time cutoff remains editorial, without invented operator dates/end; Branson crossover remains four accepted November dates."
+  ],
+  "files": [
+    {
+      "path": "production-index.html",
+      "bytes": 29113,
+      "sha256": "b514fe0a0c17e307a18aac3c692ed6903f6f761dfa96cce7fc42492a40cc005c"
+    },
+    {
+      "path": "index-BPy9duSG.js",
+      "bytes": 601359,
+      "sha256": "9943ca9df54dfae7d59e4c4735a99654816ce93f2fa99f3741a15befce7c3921"
+    },
+    {
+      "path": "routes-CXZhZYSt.js",
+      "bytes": 162612,
+      "sha256": "b5c4a6ec51cb85718ed6eef2593cb797145e6545d660ee8ad8e6f65e1757d42c"
+    },
+    {
+      "path": "hours-C8llU-w4.js",
+      "bytes": 10987,
+      "sha256": "9be3c3d8d3770f8c3f0aaa8309b3282d62b84b225227d9026b6cd0922a40b4c0"
+    },
+    {
+      "path": "expected-source.json",
+      "bytes": 246198,
+      "sha256": "44e82ce1e7385953ec3b24fa39f8b1ac349d436fe3e39269b9146c5e07b88313"
+    },
+    {
+      "path": "exact-head-evidence-links.json",
+      "bytes": 4239,
+      "sha256": "d0f0e1ba9a2fa9c547244497b2b3cee5af32c907ca266d2084db4ca54e442427"
+    }
+  ],
+  "selectedRecords": [
+    {
+      "recordId": "MO26-006",
+      "name": "Wolfmans House Of Screams",
+      "id": "date-night-mo26-phase4-wolfmans-house-of-screams",
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null
+    },
+    {
+      "recordId": "MO26-004",
+      "name": "The Werehouse",
+      "id": "date-night-werehouse-joplin",
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null
+    },
+    {
+      "recordId": "DELTA3-FEARSTONE",
+      "name": "Fearstone Forest Haunted Trail",
+      "id": "date-night-mo26-phase4-fearstone-forest",
+      "listingExpiresAt": "2026-10-31T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null
+    },
+    {
+      "recordId": "DELTA3-FUN-TIME",
+      "name": "Fun Time Farms Corn MAiZE",
+      "id": "date-night-mo26-phase4-fun-time-farms",
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null
+    },
+    {
+      "recordId": "MO26-055",
+      "name": "Carolyn’s Pumpkin Patch",
+      "id": "date-night-mo26-phase4-carolyns-pumpkin-patch",
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null
+    },
+    {
+      "recordId": "DELTA2-TERROR66",
+      "name": "Terror on Route 66",
+      "id": "date-night-mo26-phase4-terror-on-route-66",
+      "listingExpiresAt": "2026-11-02T00:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null
+    },
+    {
+      "recordId": "DELTA6-BRANSON-FIELD",
+      "name": "Field of Screams Branson",
+      "id": "date-night-mo26-phase4-field-of-screams-branson",
+      "listingExpiresAt": "2026-11-15T00:00:00-06:00",
+      "seasonYear": 2026,
+      "openNowPolicy": "never",
+      "openingHours": null
+    }
+  ],
+  "completeReceipt": {
+    "name": "production-source-binding.json",
+    "bytes": 76140,
+    "sha256": "1dc1aeb5e48633d73c4220b2851da822bb3a6df6cfaff68cc2696ba0c09ca7d6"
+  }
+}
