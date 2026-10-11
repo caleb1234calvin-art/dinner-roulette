@@ -1,0 +1,432 @@
+{
+  "verdict": "PASS SOURCE ONLY",
+  "baseSha": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "files": {
+    ".github/workflows/validate-icon-pack.yml": "8233007d728a47f812234b5ecf68d4cad14e565f02a0c8ff12bc112802724e5d",
+    "scripts/seasonal-next-missouri.test.mjs": "aa66e2b5310c2b9a8982cfccdc3b8738c05cc89efd3883232dac9fd463b90c5f",
+    "scripts/seasonal-phase4-recovery.test.mjs": "defe4cf6e0820b02a019e2a0fb247444c2e42b6819b9434f63eb677c1db36c66",
+    "scripts/seasonal-ten-record-browser.mjs": "af8d22040179790ceab00977a1239fe18d7c6578cd3ffd856dce1b991ea693a0",
+    "scripts/seasonal-card-layout-browser.mjs": "984e8bfb977b70be9cc8708ec55eafbd0017a735e02f8e52ac38a429cb369405",
+    "scripts/test-support/next-missouri-browser-facts.mjs": "e4963cfe321fcba54b65d7faee8562c4100ce01d7c1285408d5c8bc758f1aba1",
+    "scripts/test-support/next-missouri-browser-projections.json": "0b406b9131d2e3149c05366d68a97d34ee2897b77542762e5f5829c259d2e2c5",
+    "scripts/test-support/next-missouri-baseline-receipts.json": "1ed4e451be969a1c4689a5dbc670b7e17ce0e1b1140b49fcef4f414d1a44f501"
+  },
+  "checks": [
+    {
+      "name": "workflow triggers and permissions preserved",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Record validated commit",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Install dependencies",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Typecheck",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: ESLint",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Casino audit regression tests",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Audit curated casino catalog",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Build development bundle",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Build production-mode bundle without database migrations",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Repository and application tests",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Install Chromium for disposable local browser validation",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Exercise casino experience in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Exercise country-aware location flow in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Regress ordinary Date Night progressive loading and local controls",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Exercise integrated two-record seasonal experience in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Exercise seasonal listing completeness V1 in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Exercise reviewed ten-record seasonal batch in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Exercise cumulative fifteen-record seasonal additions in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Exercise additional independently cleared Astra records in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Compare seasonal and standard card geometry",
+      "passed": true
+    },
+    {
+      "name": "original command/env retained: Verify Dinner icon packs",
+      "passed": true
+    },
+    {
+      "name": "exact12 independent browser lanes",
+      "passed": true
+    },
+    {
+      "name": "all matrix failures retained",
+      "passed": true
+    },
+    {
+      "name": "lane resolves one command: casino",
+      "passed": true
+    },
+    {
+      "name": "lane resolves one command: location",
+      "passed": true
+    },
+    {
+      "name": "lane resolves one command: date-night-radial",
+      "passed": true
+    },
+    {
+      "name": "lane resolves one command: seasonal-two",
+      "passed": true
+    },
+    {
+      "name": "lane resolves one command: seasonal-completeness-v1",
+      "passed": true
+    },
+    {
+      "name": "lane resolves one command: seasonal-ten",
+      "passed": true
+    },
+    {
+      "name": "lane resolves one command: seasonal-cumulative",
+      "passed": true
+    },
+    {
+      "name": "lane resolves one command: seasonal-astra",
+      "passed": true
+    },
+    {
+      "name": "lane resolves one command: seasonal-astra-extras",
+      "passed": true
+    },
+    {
+      "name": "lane resolves one command: seasonal-phase4",
+      "passed": true
+    },
+    {
+      "name": "lane resolves one command: seasonal-next-missouri",
+      "passed": true
+    },
+    {
+      "name": "lane resolves one command: geometry",
+      "passed": true
+    },
+    {
+      "name": "checks checkout exact candidate and safe auth build",
+      "passed": true
+    },
+    {
+      "name": "browser checkout exact candidate and safe auth build",
+      "passed": true
+    },
+    {
+      "name": "no softened job or step",
+      "passed": true
+    },
+    {
+      "name": "aggregate waits all jobs despite failures",
+      "passed": true
+    },
+    {
+      "name": "aggregate only success+success passes",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Record validated commit",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Install dependencies",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Typecheck",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: ESLint",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Casino audit regression tests",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Audit curated casino catalog",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Build development bundle",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Build production-mode bundle without database migrations",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Repository and application tests",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Verify Dinner icon packs",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Record validated commit",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Install dependencies",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Build production-mode bundle without database migrations",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Install Chromium for disposable local browser validation",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Exercise casino experience in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Exercise country-aware location flow in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Regress ordinary Date Night progressive loading and local controls",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Exercise integrated two-record seasonal experience in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Exercise seasonal listing completeness V1 in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Exercise reviewed ten-record seasonal batch in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Exercise cumulative fifteen-record seasonal additions in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Exercise additional independently cleared Astra records in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Exercise independently cleared next Missouri records in local Chromium",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Compare seasonal and standard card geometry",
+      "passed": true
+    },
+    {
+      "name": "shell syntax: Require all validation jobs to pass",
+      "passed": true
+    },
+    {
+      "name": "per-lane unique always-upload raw evidence",
+      "passed": true
+    },
+    {
+      "name": "baseline fixture exact59 presentations",
+      "passed": true
+    },
+    {
+      "name": "baseline source59 catalog files independently bound",
+      "passed": true
+    },
+    {
+      "name": "author projection fixture exact independently acceptedR2",
+      "passed": true
+    },
+    {
+      "name": "independent verdict fixture exactR2",
+      "passed": true
+    }
+  ],
+  "aggregateTruthTable": [
+    {
+      "checks": "success",
+      "browser": "success",
+      "passed": true
+    },
+    {
+      "checks": "success",
+      "browser": "failure",
+      "passed": false
+    },
+    {
+      "checks": "success",
+      "browser": "cancelled",
+      "passed": false
+    },
+    {
+      "checks": "success",
+      "browser": "skipped",
+      "passed": false
+    },
+    {
+      "checks": "failure",
+      "browser": "success",
+      "passed": false
+    },
+    {
+      "checks": "failure",
+      "browser": "failure",
+      "passed": false
+    },
+    {
+      "checks": "failure",
+      "browser": "cancelled",
+      "passed": false
+    },
+    {
+      "checks": "failure",
+      "browser": "skipped",
+      "passed": false
+    },
+    {
+      "checks": "cancelled",
+      "browser": "success",
+      "passed": false
+    },
+    {
+      "checks": "cancelled",
+      "browser": "failure",
+      "passed": false
+    },
+    {
+      "checks": "cancelled",
+      "browser": "cancelled",
+      "passed": false
+    },
+    {
+      "checks": "cancelled",
+      "browser": "skipped",
+      "passed": false
+    },
+    {
+      "checks": "skipped",
+      "browser": "success",
+      "passed": false
+    },
+    {
+      "checks": "skipped",
+      "browser": "failure",
+      "passed": false
+    },
+    {
+      "checks": "skipped",
+      "browser": "cancelled",
+      "passed": false
+    },
+    {
+      "checks": "skipped",
+      "browser": "skipped",
+      "passed": false
+    }
+  ],
+  "manualReview": {
+    "newUnitCoverage": [
+      "59 old catalog byte hashes independently agree with released git",
+      "57 protected presentations unchanged; exact2 amendments only",
+      "one new Goblin matches immutable source projection including optional website/phone",
+      "expiry -1/exact/+1 milliseconds",
+      "conservative machine OpenNow and no2027 revival",
+      "provider/cache duplicates in both orders preserve current policy",
+      "permanently-closed and never-recommend negatives win",
+      "stale saved identifiers and provider aliases hydrate current details/address/lifecycle",
+      "actual server search success/fallback",
+      "address-only radius exclusion",
+      "Brookdale/Hollows and Hotel/Dungeons retain separate identities and unamended counterparts"
+    ],
+    "browserCoverage": [
+      "one Goblin + two amendments selected by canonicalID",
+      "independent material regex and accepted fixture hash",
+      "all existing gates retained; Hotel counterpart lookup widened from selected batch to full catalog to prevent fixtureundefined",
+      "320/390px qualified options/result artwork, allnotes and reachablecontrols",
+      "source address Directions; exactoptional website/phone; genericexternal Uber",
+      "plan uses real app UI with selected favorite identity and park control",
+      "expiry cachedoptions/result -1/exact/+1ms; no2027",
+      "pending real built-app RPC captured beforeexpiry and delivered afterward",
+      "savedcurrentpolicy and reload/navigation receipts",
+      "ordinary regressions in separate existing lane; historical seasonal lanes retained"
+    ],
+    "expectedNextMissouriScenarios": 87,
+    "geometryExpectedComparisons": 498,
+    "geometryExpectedNegativePlanControls": 15,
+    "geometryLimit": "Real components and production stylesheet, static rendered geometry comparison only; full hydration/RPC behavior is separate browser lane.",
+    "phase4TestChange": "Adds exact source-hash-locked two amendment exceptions; retains all other historical presentation comparisons. Excludes only newlyadded catalog from prior59 accounting."
+  },
+  "limitations": [
+    "Workingtree source audit; immutable candidate SHA/tree and exact-headCI still required.",
+    "No raw browser verdicts/screenshots reviewed yet.",
+    "Upload if-no-files-found warn remains; independent final evidence review must ensure all artifacts exist and bind source/build.",
+    "Unit/browser code review is not a claim that runtime executions passed."
+  ]
+}

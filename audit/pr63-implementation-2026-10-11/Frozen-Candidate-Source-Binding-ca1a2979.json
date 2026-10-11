@@ -1,0 +1,66 @@
+{
+  "verdict": "PASS SOURCE ONLY",
+  "sha": "ca1a2979fa3c07fe2ed4f417e153f152288d1553",
+  "tree": "74945dc91b865d7f5825461acf5566f492169da1",
+  "parent": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "sourceReview": {
+    "path": "Validation-Source-Audit-working-r1.json",
+    "sha256": "2f1ae5e0db742117c0ffc8f6e8b67d81b44ef8e4fb1f89dee5993815394a73ef",
+    "passedChecks": 74
+  },
+  "runtimeReview": {
+    "path": "Source-Audit-ca1a2979.json",
+    "sha256": "7d7716ee0e68fc50a9699a5ba1174c67aa957a419f7db284a88072f8551acad7",
+    "passedChecks": 61
+  },
+  "checks": [
+    {
+      "path": ".github/workflows/validate-icon-pack.yml",
+      "sha256": "8233007d728a47f812234b5ecf68d4cad14e565f02a0c8ff12bc112802724e5d",
+      "matchesIndependentlyReviewedSource": true
+    },
+    {
+      "path": "scripts/seasonal-next-missouri.test.mjs",
+      "sha256": "aa66e2b5310c2b9a8982cfccdc3b8738c05cc89efd3883232dac9fd463b90c5f",
+      "matchesIndependentlyReviewedSource": true
+    },
+    {
+      "path": "scripts/seasonal-phase4-recovery.test.mjs",
+      "sha256": "defe4cf6e0820b02a019e2a0fb247444c2e42b6819b9434f63eb677c1db36c66",
+      "matchesIndependentlyReviewedSource": true
+    },
+    {
+      "path": "scripts/seasonal-ten-record-browser.mjs",
+      "sha256": "af8d22040179790ceab00977a1239fe18d7c6578cd3ffd856dce1b991ea693a0",
+      "matchesIndependentlyReviewedSource": true
+    },
+    {
+      "path": "scripts/seasonal-card-layout-browser.mjs",
+      "sha256": "984e8bfb977b70be9cc8708ec55eafbd0017a735e02f8e52ac38a429cb369405",
+      "matchesIndependentlyReviewedSource": true
+    },
+    {
+      "path": "scripts/test-support/next-missouri-browser-facts.mjs",
+      "sha256": "e4963cfe321fcba54b65d7faee8562c4100ce01d7c1285408d5c8bc758f1aba1",
+      "matchesIndependentlyReviewedSource": true
+    },
+    {
+      "path": "scripts/test-support/next-missouri-browser-projections.json",
+      "sha256": "0b406b9131d2e3149c05366d68a97d34ee2897b77542762e5f5829c259d2e2c5",
+      "matchesIndependentlyReviewedSource": true
+    },
+    {
+      "path": "scripts/test-support/next-missouri-baseline-receipts.json",
+      "sha256": "1ed4e451be969a1c4689a5dbc670b7e17ce0e1b1140b49fcef4f414d1a44f501",
+      "matchesIndependentlyReviewedSource": true
+    }
+  ],
+  "identityMatchesParentFreeze": true,
+  "worktreeClean": true,
+  "pending": [
+    "exact-headCI",
+    "all raw artifacts/verdicts",
+    "representative screenshots",
+    "Android automated readiness"
+  ]
+}

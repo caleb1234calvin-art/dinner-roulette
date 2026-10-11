@@ -1,3 +1,36 @@
+# CURRENT — PR #63 IMPLEMENTATION CANDIDATE FROZEN; FINAL VALIDATION IN PROGRESS (2026-10-11)
+
+This checkpoint supersedes earlier NEXT instructions. PR #62 release and production acceptance PASS; its exact-candidate one-release waiver is consumed. Cadaver review and the next Missouri research subset are checkpointed below. No authority exists to release PR #63.
+
+## CURRENT
+- Main remains `bf88443932739a9448fac8d27fd845e9947cf697`, tree `7d91061065f5e7e36e4f76307a7b915a66ea006d`, parent `dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f`.
+- Production `dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U` remains READY with all five aliases assigned. Fresh candidate deployment query returns zero deployments. PR #62 acceptance and exact served-source evidence remain preserved in checkpoint `77815be784b413e577fbf964036a0a3cc6bc0393`.
+- Retained supported rollback is the previous READY deployment `dpl_8xyE9R3BxyE1883QpavaEBWV2LGa`, source `fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`. The postrelease authenticated Instant Rollback route reached enabled confirmation and was cancelled without execution. Its documented effects are alias reassignment, original environment/cron restoration, and paused automatic production promotion until rollback is removed. F1/BCd older retained READY identities remain preserved below; arbitrary older Hobby rollback is not assumed.
+- Draft PR #63: https://github.com/caleb1234calvin-art/dinner-roulette/pull/63 on `integration/missouri-next-2026-10-11`.
+- Exact candidate SHA `ca1a2979fa3c07fe2ed4f417e153f152288d1553`; tree `74945dc91b865d7f5825461acf5566f492169da1`; sole parent `bf88443932739a9448fac8d27fd845e9947cf697`. GitHub tree matched independently calculated local git tree; exact commit metadata and draft PR read back. Local worktree is clean at that commit.
+- Candidate has 19 changed files: four runtime files, seven scripts/fixtures, one validation workflow, seven scoped audit files. One Goblin King's Haunted Trail addition and two presentation amendments (Brookdale / Hotel of Terror); all 59 prior catalog objects and other 57 presentations preserved. Independent runtime source audit 61 checks PASS; independent harness/workflow source audit 74 checks PASS.
+- Accepted projection R2 SHA256 `0b406b9131d2e3149c05366d68a97d34ee2897b77542762e5f5829c259d2e2c5`; independent accepted subset R2 SHA256 `96fa3143a4cc19f5295a524f57e1059ff42f277e596e7ed65354961e50810e1c`. Runtime source fingerprint `03b24faf01f6a58521b9d1940782a6442f523a327960e5155145fece53e749b1`.
+- Local full gates PASS: 1,006 repository tests plus 71 application tests = 1,077 passed, four existing repository skips (1,081 discovered), no failures. Typecheck PASS, ESLint zero errors/six accepted baseline warnings, development build PASS, auth-enabled direct Vite production build without migrations PASS. Node 24.19.0 / npm 11.9.0.
+- Local browser build input proof `75d3a817b66c7cdb49455c64f878cbbc0cf1b09f59bea3c54c8df992d0909cd1` (477 files); compiled output proof `55bc3d7baae1eb3e81b2a15e412566ca6a3576b12064f4650dd1c3a2c4996dbd` (194 files). Local proof does not replace CI proof.
+- Exact-head web validation run `38106858658` and unsigned Android readiness run `38106858660` started. Web core plus 12 isolated browser lanes run independently; final validate requires all jobs success. All original commands/env retained. Expected additional new browser group is 87 scenarios; expected total browser 1,178 and geometry 498 plus 15 negative Plan controls are expectations only until raw evidence verifies.
+- Candidate audit: `audit/missouri-next-2026-10-11/`. Canonical continuity remains this deployment-disabled documentation branch, not the candidate's inherited older copy. Vercel integration/** exclusion, production settings, main protection, and PR #61 remain unchanged.
+
+## NEXT
+1. Bind independent source audits to frozen candidate git objects.
+2. Complete exact-head core, all browser suites/geometry, and unsigned Android gates; inspect raw logs, build proofs, verdicts, events and representative screenshots independently.
+3. Verify archives and every member's path/size/CRC/SHA. If an evidence artifact exceeds download limits, use authorized bounded raw-byte splitting and exact reconstruction; do not rerun passing suites solely for evidence retrieval.
+4. Fix only concrete failures with reviewed minimal changes; bind any new candidate identity and rerun affected gates without weakening validation.
+5. Record final main/production/rollback/candidate/evidence state, update and read back continuity, then STOP at VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION. Do not release PR #63.
+
+## HOLD
+- Cadaver remains precise provenance HOLD: owner-supplied official-page poster facts are retained, but independently preserved official Facebook provenance/year binding did not clear. Address placement remains approximately supported; conditional expiry is 2026-11-01T05:00:00Z if provenance clears. No runtime addition.
+- Research remains 17 reviewed proposals: 3 PASS (the implemented subset), 14 HOLD; plus Cadaver separate HOLD = 15 retained HOLDs. Exact reasons and sources remain in research checkpoint `a35bd6acc98ef3bbdcf816597fca5cb4663b0a27` and `audit/missouri-next-research-2026-10-11/`. No residential records and no padding.
+- Final browser/geometry/Android/independent evidence gates remain pending at this checkpoint. No VERIFIED CANDIDATE claim yet.
+- PR #61 adaptive radial performance architecture is PARKED; “Radial discovery becomes an audit layer.” remains future intent only.
+- No production release, additional waiver, Android signing/Play upload, operator contact, paid APIs, or settings/protection changes authorized for this next candidate.
+
+---
+
 # Next Missouri Research Gate — Three-Record Subset Independently Accepted (2026-10-11)
 
 ## CURRENT

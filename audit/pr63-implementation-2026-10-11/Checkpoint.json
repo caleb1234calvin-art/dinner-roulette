@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-11T03:00:30.239Z",
+  "candidate": {
+    "sha": "ca1a2979fa3c07fe2ed4f417e153f152288d1553",
+    "tree": "74945dc91b865d7f5825461acf5566f492169da1",
+    "parent": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "pr": 63,
+    "draft": true,
+    "branch": "integration/missouri-next-2026-10-11"
+  },
+  "production": {
+    "id": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+    "name": "dinner-roulette",
+    "url": "dinner-roulette-1kgtpnjlr-minions-9e2c.vercel.app",
+    "type": "LAMBDAS",
+    "state": "READY",
+    "createdAt": 1791679299906,
+    "creator": {
+      "uid": "vJzqOIJ7PLOtgdkmemscyDMC",
+      "username": "caleb1234calvin-6132"
+    },
+    "project": {
+      "id": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "name": "dinner-roulette",
+      "framework": "tanstack-start"
+    },
+    "meta": {
+      "githubCommitRef": "main",
+      "githubCommitSha": "bf88443932739a9448fac8d27fd845e9947cf697",
+      "githubCommitMessage": "test: normalize rendered Phase 4 plan role casing",
+      "githubRepo": "dinner-roulette",
+      "githubOrg": "caleb1234calvin-art"
+    },
+    "alias": [
+      "pickforus.app",
+      "dinner-roulette-chi.vercel.app",
+      "www.pickforus.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app"
+    ],
+    "target": "production",
+    "regions": [
+      "iad1"
+    ],
+    "buildingAt": 1791679301077,
+    "ready": 1791679315844,
+    "readyState": "READY",
+    "source": "git",
+    "aliasError": null
+  },
+  "candidateDeployments": {
+    "result": {
+      "deployments": {
+        "pagination": {
+          "count": 0
+        },
+        "deployments": []
+      }
+    }
+  },
+  "workflowRuns": {
+    "web": 38106858658,
+    "android": 38106858660
+  },
+  "state": "IMPLEMENTED; FINAL VALIDATION PENDING"
+}
