@@ -1,0 +1,347 @@
+{
+  "package": "MISSOURI-NEXT-INDEPENDENT-FROZEN-PROJECTION-VERDICT-R1",
+  "frozenAt": "2026-10-11T02:44:51.234871+00:00",
+  "authorProjection": "missouri-next-delta-20261011/Candidate-Projections-R2.json",
+  "authorProjectionSha256": "0b406b9131d2e3149c05366d68a97d34ee2897b77542762e5f5829c259d2e2c5",
+  "baseSha": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "baseTree": "7d91061065f5e7e36e4f76307a7b915a66ea006d",
+  "verdict": "PASS — EXACT THREE-RECORD DATA/COPY SUBSET IMPLEMENTATION-ELIGIBLE",
+  "counts": {
+    "newAttractions": 1,
+    "existingRecordAmendments": 2,
+    "totalChangedRecords": 3,
+    "independentlyClearedNewAttractionFacts": 1,
+    "independentlyClearedApproximatePlacements": 1,
+    "independentlyClearedExactCopyAmendments": 2,
+    "darkNightmaresHold": 1
+  },
+  "acceptedIds": [
+    "DELTA3-GOBLIN",
+    "MO26-085",
+    "MO26-124"
+  ],
+  "acceptedImmutableCopy": "Accepted-Author-Projections-R2.json",
+  "findingsClosed": [
+    {
+      "id": "SCHEMA-PLACEMENT-BASIS",
+      "old": "operator-linked-map",
+      "accepted": "operator-site",
+      "reason": "Existing ListingCompletenessV1 basis enum; retains approximate operator-linked site semantics."
+    },
+    {
+      "id": "SCHEMA-EXPIRY-BASIS",
+      "old": "source-bound",
+      "accepted": "date-only",
+      "reason": "Existing ListingCompletenessV1 expiry enum; source binding remains rationale and finaldate is explicit, closing unknown."
+    }
+  ],
+  "checks": {
+    "r1ToR2OnlyTwoSchemaLabelsChanged": true,
+    "goblinNotInReleasedRecordIdOrCanonicalIdSet": true,
+    "releasedObjectCount": 59,
+    "explicitYearAndDateListIndependentlyReopened": true,
+    "sourceBoundLocalMidnightExpiryUtcIndependentlyComputed": true,
+    "operatorAddressMapSelectedFeatureIndependentlyReproduced": true,
+    "viewportNotUsed": true,
+    "partialHoursNotGeneralized": true,
+    "noMachineOpenNow": true,
+    "no2027RecurrenceDeclared": true,
+    "noResidentialImport": true,
+    "noSeparateOctober31FeastImported": true,
+    "amendments": [
+      {
+        "recordId": "MO26-085",
+        "beforeArrayMatchesReleasedPresentation": true,
+        "onlyOneInsertedSentence": true,
+        "canonicalIdRetained": true
+      },
+      {
+        "recordId": "MO26-124",
+        "beforeArrayMatchesReleasedPresentation": true,
+        "onlyOneInsertedSentence": true,
+        "canonicalIdRetained": true
+      }
+    ]
+  },
+  "fieldReviews": [
+    {
+      "recordId": "DELTA3-GOBLIN",
+      "name": "Goblin King Haunted Trail: Shadow's Play",
+      "sourceReviewVerdict": "FACTUAL PASS / APPROXIMATE PLACEMENT PASS",
+      "exactAuthorProjectionAcceptance": "PASS exact frozen R2",
+      "fields": {
+        "identity": {
+          "verdict": "PASS",
+          "value": "Public haunted woodland trail at White Hart Renaissance Fairegrounds; existing historical DELTA3-GOBLIN identity, not a new discovery",
+          "sources": [
+            "turn46view0",
+            "turn47view2",
+            "turn46view1"
+          ]
+        },
+        "yearAndDates": {
+          "verdict": "PASS",
+          "value": [
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24"
+          ],
+          "sources": [
+            "turn46view0",
+            "turn47view2"
+          ],
+          "reason": "Explicitly labeled 2026 trail dates, not inferred from weekday pattern or copyright. Separate October31 Feast event not imported as trail date."
+        },
+        "visitorAddress": {
+          "verdict": "PASS",
+          "value": "5651 State Hwy F, Hartville, MO 65667",
+          "sources": [
+            "turn46view0",
+            "turn47view2",
+            "turn46view1"
+          ]
+        },
+        "hours": {
+          "verdict": "PARTIAL PASS",
+          "value": "7–11:30 p.m. independently confirmed for October10 andOctober16 only. FinalOctober24 closing unverified. Do not generalize to every date.",
+          "sources": [
+            "turn46view0",
+            "turn47view2"
+          ]
+        },
+        "admission": {
+          "verdict": "LIMITED PASS",
+          "value": "Selected October10/16 event pages offer single admission $15 plus displayed $0.38 service fee and four-pack $55 plus $1.38 fee. No checkout, availability guarantee, or all-date pricing claim. Safest consumer copy checks operator ticket page.",
+          "sources": [
+            "turn46view0",
+            "turn47view2"
+          ]
+        },
+        "placement": {
+          "verdict": "PASS APPROXIMATE ONLY",
+          "value": {
+            "lat": 37.2632207,
+            "lon": -92.6693091,
+            "basis": "operator-site",
+            "sourceUrl": "https://goo.gl/maps/hLccWtsgQV1v4SgKA"
+          },
+          "sources": [
+            "turn47view0"
+          ],
+          "reason": "Independently clicked address-labeled first-party link; redirect names White Hart Renaissance Fairgrounds and encodes selected feature !3d/!4d coordinates. Destination body inaccessible; no raw map body success or independently certified arrival point claimed. Viewport longitude -92.6718894 rejected."
+        },
+        "directions": {
+          "verdict": "PASS REQUIRED CONTRACT",
+          "value": "Use visitor-address string. Never use approximate map feature as exact entrance, parking or ride drop-off."
+        },
+        "lifecycle": {
+          "verdict": "PASS DATE-ONLY",
+          "value": "2026-10-25T00:00:00-05:00 = 2026-10-25T05:00:00Z",
+          "reason": "Midnight following final explicitly listed October24date; visibility expiry only, not claimed operator closing. No 2027 recurrence."
+        },
+        "restrictions": {
+          "verdict": "PASS AT STATED LIMITS",
+          "value": "Outdoor wooded terrain, darkness, fog, loud/sudden scares and uneven ground. Operator recommends comfortable closed-toe shoes and weather-appropriate dress; do not convert recommendation to strict requirement. Weather/site safety may close trail. Age/accessibility not established.",
+          "sources": [
+            "turn46view0",
+            "turn47view2"
+          ]
+        },
+        "openNow": {
+          "verdict": "PASS REQUIRED CONTRACT",
+          "value": "never; machine opening intervals null"
+        }
+      }
+    },
+    {
+      "recordId": "DELTA3-DARK-NIGHTMARES",
+      "name": "Dark Nightmares Haunted Forest",
+      "sourceReviewVerdict": "HOLD",
+      "exactAuthorProjectionAcceptance": "HOLD confirmed for exact Delta-B-Research-R1.json",
+      "fields": {
+        "identity": {
+          "verdict": "PASS",
+          "value": "Official darknightmares.net links HauntPay event and Facebook profile100040742512482.",
+          "sources": [
+            "turn50view0",
+            "turn51view1",
+            "turn51view2"
+          ]
+        },
+        "2026Operation": {
+          "verdict": "LIMITED PASS",
+          "value": "Operator-linked ticket details show October10,2026 9:30p.m.CDT; no future/final date accepted.",
+          "sources": [
+            "turn50view2"
+          ]
+        },
+        "visitorAddress": {
+          "verdict": "HOLD",
+          "value": "Official linked ticket platform shows34100 E24Hwy,Buckner. Author preserved indexed official-account Oct2post shows33100US24. First-party conflict unresolved; no silent hierarchy, averaging or geocoding to settle it.",
+          "sources": [
+            "turn50view2",
+            "turn51view1"
+          ],
+          "authorReceipt": "missouri-next-delta-b-20261011/evidence/deltaB_search2.json#turn32search24",
+          "independentLimitation": "Site→officialFacebook profile linkage independently reproduced. Conflicting post direct reopen throttled; narrow indexed search did not reproduce it. Retained author source is unresolved evidence, not independently dismissed."
+        },
+        "placement": {
+          "verdict": "HOLD",
+          "reason": "Visitor address unresolved; no point proposed."
+        },
+        "finalExpiry": {
+          "verdict": "HOLD",
+          "reason": "Current final supported future date not established; do not infer whole October or recurrence."
+        },
+        "restrictions": {
+          "verdict": "PASS AS RETAINED FIELDS ONLY",
+          "value": "1.2-mile outdoor trail; closed-toe shoes required; operator flashlight only; optional Blood Pass permits physical actor interaction with additional waiver; most suitable14+ is recommendation; under18 guardian waiver; no strollers/scooters; recommend15minutes early.",
+          "sources": [
+            "turn50view0"
+          ]
+        }
+      },
+      "authorFreezeSha256": "6faa6ec0ec1f9bb2649d4539f4113a835c67385dbc11ad738fc57777f26fc073"
+    },
+    {
+      "recordId": "MO26-085",
+      "canonicalId": "date-night-mo26-085-brookdale-farms",
+      "sourceReviewVerdict": "FACTUAL/COPY PASS",
+      "exactAuthorProjectionAcceptance": "PASS exact frozen R2",
+      "approvedAddition": "The Hollows haunted trail uses separate admission and its own October calendar.",
+      "fields": {
+        "separateAdmission": {
+          "verdict": "PASS",
+          "sources": [
+            "turn53view0"
+          ],
+          "reason": "Current dedicated haunted-trail ticket product; page distinguishes separately ticketed other attractions. Current bundle includes Campfire Nights, not general FallFestival."
+        },
+        "calendar": {
+          "verdict": "PASS",
+          "sources": [
+            "turn53view0"
+          ],
+          "reason": "Explicit2026tickets/October calendar"
+        },
+        "preservation": {
+          "verdict": "REQUIRED",
+          "value": "Append only; retain FallFestival November8 lifecycle, categories, directions/placement, current stronger copy, no old2025FAQprices or new HauntedHouse category."
+        }
+      }
+    },
+    {
+      "recordId": "MO26-124",
+      "canonicalId": "date-night-mo26-124-hotel-of-terror",
+      "sourceReviewVerdict": "FACTUAL/COPY PASS",
+      "exactAuthorProjectionAcceptance": "PASS exact frozen R2",
+      "approvedAddition": "A combo pass with Dungeons of Doom includes transfer rides between the two haunts.",
+      "fields": {
+        "combo": {
+          "verdict": "PASS",
+          "sources": [
+            "turn53view1"
+          ],
+          "reason": "2026operator homepage explicitly says both-haunt combo includes hay/hearse transfers."
+        },
+        "preservation": {
+          "verdict": "REQUIRED",
+          "value": "Append exact generic sentence only; no specific vehicle/time/inventory promise, duplicate destination, lifecycle or routing change. Existing final2026season wording from prior accepted record is outside this narrow review; do not add unsupported new directory last-ever claims."
+        }
+      }
+    }
+  ],
+  "implementationConditions": [
+    "Implement exact Goblin dates/address/coordinates/details with operator-site/date-only schema values; no extra2026dates, 2027recurrence or generalizedhours.",
+    "Use visitor-address Directions and retain generic ride picker; map point is not an arrival coordinate.",
+    "Import the two exact additive presentation sentences only, preserving existing before arrays and all otherrecordbehavior.",
+    "Do not create duplicate Brookdale/Hollows or Hotel/Dungeons attractions or count the Dungeons counterpart as another amendment.",
+    "Preserve ListingCompletenessV1, conservativeOpenNow, saved/cache currentpolicy and lifecycle negatives.",
+    "Validate actual immutable runtime candidate through all authorized gates; this source verdict is not runtime/browser/CI/production acceptance."
+  ],
+  "evidenceLimits": [
+    "Goblin Maps destination body inaccessible; accepted only named feature redirect from operator visitor-address link independently reproduced.",
+    "GoblinOct24 final closing unknown; date-only expiry does not assert midnight operation. Admission/prices retained as selectedevent evidence only; consumerdetails promise no price/availability.",
+    "DarkNightmares direct officialFacebook post could not reopen; retained author indexed address conflict is not dismissed. No final/futuredate accepted.",
+    "Bakersfield/Farrington HOLD findings are outside this independently reopened source subset; no fresh independentPASS assigned."
+  ],
+  "noRuntimeMutation": true,
+  "releaseAuthorized": false,
+  "inputsAndEvidence": [
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-next-delta-20261011/Candidate-Projections-R1.json",
+      "bytes": 8787,
+      "sha256": "df28a80b533f1c957e37c4c433727fe3eb8ded5bcd51eaf8a64da9ab85420d03"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-next-delta-20261011/Candidate-Projections-R2.json",
+      "bytes": 8778,
+      "sha256": "0b406b9131d2e3149c05366d68a97d34ee2897b77542762e5f5829c259d2e2c5"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-next-delta-20261011/Source-Review-R1.json",
+      "bytes": 6277,
+      "sha256": "00726e78d8b4c1b53c91d2ace727b2a12faf0d1f6bbbf91746540b5d77de2679"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-next-delta-20261011/Projection-R2-Change-Receipt.json",
+      "bytes": 793,
+      "sha256": "3060457b6ae5d6af5e1f92844e09858071c068cb57a958e7f7d87d2140b69d95"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-next-delta-b-20261011/Delta-B-Research-R1.json",
+      "bytes": 12983,
+      "sha256": "6faa6ec0ec1f9bb2649d4539f4113a835c67385dbc11ad738fc57777f26fc073"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/pr62-production-binding/expected-source.json",
+      "bytes": 246198,
+      "sha256": "44e82ce1e7385953ec3b24fa39f8b1ac349d436fe3e39269b9146c5e07b88313"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/pr62-production-binding/served-presentation-literals.json",
+      "bytes": 28865,
+      "sha256": "ea9c78fa96e06b0a7c3a3f0cbafd0021c39b5262da64b2949ab85b266ca76e67"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/pr62-production-binding/production-source-binding-summary.json",
+      "bytes": 4631,
+      "sha256": "b8451efef66ff78c992dadfbfeb4caad0dd7dd4f069ae27110c9d2d102b07eda"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-next-independent-20261011/evidence/amendments-independent-r1.json",
+      "bytes": 24140,
+      "sha256": "6d6263de627d568f90d5ebd10648e0118647ce46ddbc02b38d362ce5fee153ed"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-next-independent-20261011/evidence/dark-independent-click-r1.json",
+      "bytes": 2754,
+      "sha256": "ed1ee8f31c38314cc20abd7ae2156d056f503d07b6d6163e95caffa5a09983ea"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-next-independent-20261011/evidence/dark-independent-r1.json",
+      "bytes": 7972,
+      "sha256": "63dbb9e595202411522a53a2dc6874dcac317eeb1adaefa5520a28056c5b18b2"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-next-independent-20261011/evidence/goblin-click-r1.json",
+      "bytes": 8367,
+      "sha256": "b1d8c087fe0783e707b633d8387652ade97f94a5cecbbfa7cf0b54d53d4fd3e6"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-next-independent-20261011/evidence/goblin-open-r1.json",
+      "bytes": 8625,
+      "sha256": "092d4afa489e966bb66a603c63aec46b05056d022ce0c3751b73ff82dfbd3041"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-next-independent-20261011/evidence/listing-bf884439.ts",
+      "bytes": 2295,
+      "sha256": "e42200e1b13c3e2bf025161773bdc5d19675e426da16a5a1043afe0239f3c4ef"
+    }
+  ]
+}

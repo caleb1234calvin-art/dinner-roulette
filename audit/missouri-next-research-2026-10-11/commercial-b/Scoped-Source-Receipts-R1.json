@@ -1,0 +1,96 @@
+{
+  "savedAt": "2026-10-11T02:41:25.679522+00:00",
+  "sources": [
+    {
+      "key": "terrified",
+      "ref": "turn7view0",
+      "mode": "Official URL web-open unavailable; separate direct HTTP retrieval",
+      "finding": "Direct original domain now returns a domain landing document after redirect to ww547.terrifiedexist.com. No dated attraction invitation established; no closure inference.",
+      "httpObservedAt": "2026-10-11T02:37:05.707828Z",
+      "responseBytes": 16965,
+      "responseSha256": "18679355567997db8a596cdf97b2265c684886fa4537274e2626eee478f280d1",
+      "url": "https://terrifiedexist.com/"
+    },
+    {
+      "key": "ticketleap",
+      "mode": "One direct public GET; no bypass or repeat after refusal",
+      "finding": "HTTP403. Latest accepted prior body had redirected to generic platform. Neither supplies attraction-specific visitor dates.",
+      "httpObservedAt": "2026-10-11T02:38:13.408976Z",
+      "url": "https://terrifiedexist.ticketleap.com/"
+    },
+    {
+      "key": "universe",
+      "ref": "turn21search0",
+      "mode": "Engine1 indexed operator-named site; direct web-open unavailable and homepage HTTP403",
+      "finding": "Indexed directions corroborate 11490 Mehl Ave, Florissant, MO 63033, but no current season/event/lifecycle.",
+      "url": "https://terrifiedexist-pkcy.univer.se/directions"
+    },
+    {
+      "key": "lemp-new",
+      "ref": "turn7view1",
+      "mode": "Fresh official page web-open",
+      "finding": "The same page leaves2026 opening undecided and suggests2026 or 2027 return, while also marketing2026 return. No exact Lemp dates.",
+      "url": "https://www.lemphauntedhouse.com/whats-new-lemp-haunted-house"
+    },
+    {
+      "key": "lemp-schedule",
+      "ref": "turn10view1",
+      "mode": "Fresh official schedule via observed link",
+      "finding": "Page title names Lemp/2026, but dated operating rows explicitly concern Darkness/Creepyworld; cannot borrow those dates for Lemp.",
+      "url": "https://www.lemphauntedhouse.com/illinois-haunted-house-lemp-brewery-operation-dates"
+    },
+    {
+      "key": "lemp-ticket",
+      "ref": "turn10view2",
+      "mode": "Fresh operator-linked ticket frontend read",
+      "finding": "Response contains only loading state; no Lemp event inventory or lifecycle recovered.",
+      "url": "https://scarefest.fearticket.com/"
+    },
+    {
+      "key": "boss-harvest",
+      "ref": "turn7view2",
+      "mode": "Fresh official page web-open plus direct HTTP200",
+      "finding": "October 24,2026; Harvest Fest 15:30–21:00; BOSS haunt listed; combined admission individual $10/family $25 (up to 6). Shuttle from Pershing Community Center starts 15:00. Haunt-specific hours not separately established.",
+      "responseSha256": "20c1f426e6a09356a64ffe7e2dcaad33895b578bc77ec27a5ba9162d4532d162",
+      "url": "https://leonardwood.armymwr.com/calendar/event/harvest-fest/7461823/114564"
+    },
+    {
+      "key": "boss-contest",
+      "ref": "turn10view4",
+      "mode": "Fresh official page web-open",
+      "finding": "October 24,2026 18:00 contest; FLW patrons entering haunt vote. At Piney Valley. The 6 pm contest listing does not establish complete haunt hours.",
+      "url": "https://leonardwood.armymwr.com/calendar/event/boss-haunted-house-contest/7448156/114097"
+    },
+    {
+      "key": "boss-course",
+      "ref": "turn29view0",
+      "mode": "Engine1 corroborated; fresh official page web-open and direct HTTP200",
+      "finding": "General public may golf. Facility FAQ directs visitors without base access to Main Gate Visitor Center. This establishes conditional public golf access, not event-specific nonmilitary admission.",
+      "responseSha256": "a40143a8d74f0cc5af8c832937eac20dc23ee7c6ce6206bc3a21c5a4acde6f9b",
+      "url": "https://leonardwood.armymwr.com/programs/piney-valley-golf-course-pvgc"
+    },
+    {
+      "key": "boss-access",
+      "ref": "turn10view0",
+      "mode": "Fresh official garrison page web-open",
+      "finding": "GateID checks; noncredentialed visitors need valid purpose, screening and pass. Physical acceptable ID required; driver needs license/insurance/registration. Page explicitly sends special-event visitors to event coordinator for event access requirements; no event exemption inferred.",
+      "url": "https://home.army.mil/wood/Garrison/DES/physical-security/access-control"
+    },
+    {
+      "key": "macabre-dmo",
+      "ref": "turn7view3",
+      "mode": "Fresh official DMO web-open",
+      "finding": "Traditional full-season operation suspended during redevelopment; any special events still unannounced. Daily wrapper October 16–November 15 is not visitor-operation schedule.",
+      "url": "https://www.visitkc.com/events/macabre-cinema-haunted-attraction-2026-update/"
+    },
+    {
+      "key": "macabre",
+      "ref": "turn10view3",
+      "mode": "Fresh official website from observed DMOlink",
+      "finding": "Identity/address1222W 12thSt,KansasCity,MO 64101; no dates,tickets or special-event announcement.",
+      "url": "https://www.macabrecinema.com/"
+    }
+  ],
+  "scope": "Factual extraction and retrieval metadata, not a complete raw-page archive. Full intended-source raw bodies retained separately in scratch for independent review; unrelated search results and landing-page contents excluded from deliverable.",
+  "captureTiming": "Exact direct retrieval timestamps are in per-request receipts. Web-tool excerpts carry crawl labels; savedAt is packaging time, not an invented retrieval timestamp."
+}

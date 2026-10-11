@@ -1,0 +1,33 @@
+{
+  "package": "COMMERCIAL-B-ELIGIBLE-FIELD-PROJECTIONS-R1",
+  "eligibleRecords": [],
+  "holdIds": [
+    "DELTA3-TERRIFIEDEXIST",
+    "MO26-088",
+    "DELTA6-BOSS",
+    "DELTA2-MACABRE"
+  ],
+  "bossPartialFields": {
+    "recordId": "DELTA6-BOSS",
+    "name": "BOSS Haunted House, Fort Leonard Wood",
+    "factualVerdict": "HOLD / event public eligibility-access remains unresolved",
+    "operation2026FieldVerdict": "SUPPORTED October 24,2026",
+    "placementVerdict": "HOLD / no independently reviewed approximate point; not the primary blocker",
+    "implementationEligible": false,
+    "sourceKeys": [
+      "boss-harvest",
+      "boss-contest",
+      "boss-course",
+      "boss-access"
+    ],
+    "visitorAddress": "Piney Valley Golf Course, 18694 FLW 20, BLDG 10221, Fort Leonard Wood, MO 65473",
+    "supportedEventDate": "2026-10-24",
+    "conditionalDateOnlyCutoffUtc": "2026-10-25T05:00:00Z",
+    "cutoffAdopted": false,
+    "hoursState": "unknown",
+    "machineOpeningIntervals": null,
+    "reason": "Official facility welcomes public golfers through Visitor Center, but current evidence does not explicitly establish ordinary-public eligibility for this BOSS/Harvest event or its event-specific screening/pass process. Special-event instruction requires coordinator-provided rules. This is a narrow unresolved eligibility/access field, not a requirement for unrestricted access.",
+    "delta": "New first-party public-golf access field and published Visitor Center route recovered; insufficient by itself to transfer golf eligibility to special event. Official images visually inspected: decorative banners without additionaldates/access terms."
+  },
+  "warning": "BOSS partial fields are research only; cutoff derivation not adopted and no placement or runtime eligibility approved."
+}

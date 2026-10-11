@@ -1,0 +1,193 @@
+{
+  "package": "MISSOURI-NEXT-COMMERCIAL-B-R1",
+  "frozenAt": "2026-10-11T02:41:25.679522+00:00",
+  "role": "Bounded researcher; independent review separate before import",
+  "baselineContinuity": "7f99dd58fe0e1406ae5eaffd1583eec686674732",
+  "priorLedger": {
+    "path": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+    "sha256": "3b1772c055e8b2852b732b56b9e9a0756755c31ef6c8a57341c684cab9f6a7b6"
+  },
+  "counts": {
+    "reviewed": 4,
+    "implementationEligible": 0,
+    "factualPass": 0,
+    "hold": 4,
+    "reject": 0
+  },
+  "records": [
+    {
+      "recordId": "DELTA3-TERRIFIEDEXIST",
+      "name": "TerrifiedExist Haunted Attractions",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / not independently established",
+      "implementationEligible": false,
+      "sourceKeys": [
+        "terrified",
+        "ticketleap",
+        "universe"
+      ],
+      "retainedVisitorAddress": "11490 Mehl Ave, Florissant, MO 63033",
+      "current2026VisitorOperation": null,
+      "acceptedDates": null,
+      "acceptedExpiry": null,
+      "reason": "No attraction-specific2026 public visitor invitation/date/lifecycle. Earlier hiring/evergreen sources remain insufficient. Current former-domain landing redirect and inaccessible ticket/operator-hosted endpoints do not prove closure.",
+      "delta": "Website destination changed in current direct retrieval; no factual clearance."
+    },
+    {
+      "recordId": "MO26-088",
+      "name": "Lemp Brewery Haunted House",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / not independently established",
+      "implementationEligible": false,
+      "sourceKeys": [
+        "lemp-new",
+        "lemp-schedule",
+        "lemp-ticket"
+      ],
+      "retainedVisitorAddress": "3500 Lemp Avenue, St. Louis, MO 63118",
+      "current2026VisitorOperation": null,
+      "acceptedDates": null,
+      "acceptedExpiry": null,
+      "reason": "Unresolved first-party operation conflict. Current schedule body explicitly belongs to Darkness/Creepyworld and ticket frontend yields no Lemp-specific event.",
+      "delta": "Current official pages reproduce retained conflict. No schedule borrowing, no closure assertion."
+    },
+    {
+      "recordId": "DELTA6-BOSS",
+      "name": "BOSS Haunted House, Fort Leonard Wood",
+      "factualVerdict": "HOLD / event public eligibility-access remains unresolved",
+      "operation2026FieldVerdict": "SUPPORTED October 24,2026",
+      "placementVerdict": "HOLD / no independently reviewed approximate point; not the primary blocker",
+      "implementationEligible": false,
+      "sourceKeys": [
+        "boss-harvest",
+        "boss-contest",
+        "boss-course",
+        "boss-access"
+      ],
+      "visitorAddress": "Piney Valley Golf Course, 18694 FLW 20, BLDG 10221, Fort Leonard Wood, MO 65473",
+      "supportedEventDate": "2026-10-24",
+      "conditionalDateOnlyCutoffUtc": "2026-10-25T05:00:00Z",
+      "cutoffAdopted": false,
+      "hoursState": "unknown",
+      "machineOpeningIntervals": null,
+      "reason": "Official facility welcomes public golfers through Visitor Center, but current evidence does not explicitly establish ordinary-public eligibility for this BOSS/Harvest event or its event-specific screening/pass process. Special-event instruction requires coordinator-provided rules. This is a narrow unresolved eligibility/access field, not a requirement for unrestricted access.",
+      "delta": "New first-party public-golf access field and published Visitor Center route recovered; insufficient by itself to transfer golf eligibility to special event. Official images visually inspected: decorative banners without additionaldates/access terms."
+    },
+    {
+      "recordId": "DELTA2-MACABRE",
+      "name": "Macabre Cinema",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / not independently established",
+      "implementationEligible": false,
+      "sourceKeys": [
+        "macabre-dmo",
+        "macabre"
+      ],
+      "visitorAddress": "1222 W 12th St, Kansas City, MO 64101",
+      "current2026VisitorOperation": null,
+      "acceptedDates": null,
+      "acceptedExpiry": null,
+      "reason": "No dated special event following suspension of traditional season during redevelopment. DMO daily wrapper conflicts with explicit narrative and is not operation evidence.",
+      "delta": "Official own website corroborates public venue identity/address only; no new schedule. Not asserted permanently closed."
+    }
+  ],
+  "sources": [
+    {
+      "key": "terrified",
+      "ref": "turn7view0",
+      "mode": "Official URL web-open unavailable; separate direct HTTP retrieval",
+      "finding": "Direct original domain now returns a domain landing document after redirect to ww547.terrifiedexist.com. No dated attraction invitation established; no closure inference.",
+      "httpObservedAt": "2026-10-11T02:37:05.707828Z",
+      "responseBytes": 16965,
+      "responseSha256": "18679355567997db8a596cdf97b2265c684886fa4537274e2626eee478f280d1",
+      "url": "https://terrifiedexist.com/"
+    },
+    {
+      "key": "ticketleap",
+      "mode": "One direct public GET; no bypass or repeat after refusal",
+      "finding": "HTTP403. Latest accepted prior body had redirected to generic platform. Neither supplies attraction-specific visitor dates.",
+      "httpObservedAt": "2026-10-11T02:38:13.408976Z",
+      "url": "https://terrifiedexist.ticketleap.com/"
+    },
+    {
+      "key": "universe",
+      "ref": "turn21search0",
+      "mode": "Engine1 indexed operator-named site; direct web-open unavailable and homepage HTTP403",
+      "finding": "Indexed directions corroborate 11490 Mehl Ave, Florissant, MO 63033, but no current season/event/lifecycle.",
+      "url": "https://terrifiedexist-pkcy.univer.se/directions"
+    },
+    {
+      "key": "lemp-new",
+      "ref": "turn7view1",
+      "mode": "Fresh official page web-open",
+      "finding": "The same page leaves2026 opening undecided and suggests2026 or 2027 return, while also marketing2026 return. No exact Lemp dates.",
+      "url": "https://www.lemphauntedhouse.com/whats-new-lemp-haunted-house"
+    },
+    {
+      "key": "lemp-schedule",
+      "ref": "turn10view1",
+      "mode": "Fresh official schedule via observed link",
+      "finding": "Page title names Lemp/2026, but dated operating rows explicitly concern Darkness/Creepyworld; cannot borrow those dates for Lemp.",
+      "url": "https://www.lemphauntedhouse.com/illinois-haunted-house-lemp-brewery-operation-dates"
+    },
+    {
+      "key": "lemp-ticket",
+      "ref": "turn10view2",
+      "mode": "Fresh operator-linked ticket frontend read",
+      "finding": "Response contains only loading state; no Lemp event inventory or lifecycle recovered.",
+      "url": "https://scarefest.fearticket.com/"
+    },
+    {
+      "key": "boss-harvest",
+      "ref": "turn7view2",
+      "mode": "Fresh official page web-open plus direct HTTP200",
+      "finding": "October 24,2026; Harvest Fest 15:30–21:00; BOSS haunt listed; combined admission individual $10/family $25 (up to 6). Shuttle from Pershing Community Center starts 15:00. Haunt-specific hours not separately established.",
+      "responseSha256": "20c1f426e6a09356a64ffe7e2dcaad33895b578bc77ec27a5ba9162d4532d162",
+      "url": "https://leonardwood.armymwr.com/calendar/event/harvest-fest/7461823/114564"
+    },
+    {
+      "key": "boss-contest",
+      "ref": "turn10view4",
+      "mode": "Fresh official page web-open",
+      "finding": "October 24,2026 18:00 contest; FLW patrons entering haunt vote. At Piney Valley. The 6 pm contest listing does not establish complete haunt hours.",
+      "url": "https://leonardwood.armymwr.com/calendar/event/boss-haunted-house-contest/7448156/114097"
+    },
+    {
+      "key": "boss-course",
+      "ref": "turn29view0",
+      "mode": "Engine1 corroborated; fresh official page web-open and direct HTTP200",
+      "finding": "General public may golf. Facility FAQ directs visitors without base access to Main Gate Visitor Center. This establishes conditional public golf access, not event-specific nonmilitary admission.",
+      "responseSha256": "a40143a8d74f0cc5af8c832937eac20dc23ee7c6ce6206bc3a21c5a4acde6f9b",
+      "url": "https://leonardwood.armymwr.com/programs/piney-valley-golf-course-pvgc"
+    },
+    {
+      "key": "boss-access",
+      "ref": "turn10view0",
+      "mode": "Fresh official garrison page web-open",
+      "finding": "GateID checks; noncredentialed visitors need valid purpose, screening and pass. Physical acceptable ID required; driver needs license/insurance/registration. Page explicitly sends special-event visitors to event coordinator for event access requirements; no event exemption inferred.",
+      "url": "https://home.army.mil/wood/Garrison/DES/physical-security/access-control"
+    },
+    {
+      "key": "macabre-dmo",
+      "ref": "turn7view3",
+      "mode": "Fresh official DMO web-open",
+      "finding": "Traditional full-season operation suspended during redevelopment; any special events still unannounced. Daily wrapper October 16–November 15 is not visitor-operation schedule.",
+      "url": "https://www.visitkc.com/events/macabre-cinema-haunted-attraction-2026-update/"
+    },
+    {
+      "key": "macabre",
+      "ref": "turn10view3",
+      "mode": "Fresh official website from observed DMOlink",
+      "finding": "Identity/address1222W 12thSt,KansasCity,MO 64101; no dates,tickets or special-event announcement.",
+      "url": "https://www.macabrecinema.com/"
+    }
+  ],
+  "permissionHistoryCorrection": "Earlier initial summary mistakenly consulted superseded Phase4-17-Record-Summary-R1. Later recovery ledger supersedes old TicketLeap permission pause: an exact authorized retry completed and returned generic platform. Current bounded research allowed one ordinary request; current 403 was not bypassed. No active prior approval block asserted.",
+  "methodLimits": [
+    "Research limited to four existing ledger identities; no statewide/residential discovery, no PR62 reopening.",
+    "Searchengine1 single exact query used for Terrified and BOSS official corroboration; generic/unrelated multi-query results excluded from evidence.",
+    "No browser, operator contact, paid API, code/production mutation or geocode work on uncleared records.",
+    "Access restrictions may be valid consumer qualifications once actual event eligibility is established.",
+    "No currently eligible field projection is supplied; conditional BOSS fields must not be imported before independent review and missing gate clearance."
+  ]
+}

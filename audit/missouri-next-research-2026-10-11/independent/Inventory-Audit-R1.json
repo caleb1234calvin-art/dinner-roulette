@@ -1,0 +1,370 @@
+{
+  "audit": "MISSOURI-NEXT-INDEPENDENT-INVENTORY-R1",
+  "checkedAt": "2026-10-11T02:39:34.172678+00:00",
+  "scope": "Read-only reconciliation of retained delta2–6, Candidate6 inventory and final Phase4 17-record recovery ledger against released PR62 catalog source. No new source hunt, worldwide/statewide completeness claim, runtime mutation or clearance award.",
+  "baseline": {
+    "source": "bf88443932739a9448fac8d27fd845e9947cf697",
+    "tree": "7d91061065f5e7e36e4f76307a7b915a66ea006d",
+    "production": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+    "catalogObjectCount": 59,
+    "prior52Retained": true,
+    "werehouseCanonicalId": "date-night-werehouse-joplin",
+    "coordinatorPhase1Checkpoint": "77815be",
+    "coordinatorPhase2Checkpoint": "7f99dd58fe0e1406ae5eaffd1583eec686674732",
+    "baselineMethod": "Retained production-source-binding receipt and coordinator update; no independent fresh remote read in this lane."
+  },
+  "counts": {
+    "unshippedPublicResearchIdentities": 16,
+    "cadaver": 1,
+    "commercialPriorityEight": 8,
+    "olderDeltaPublicHolds": 7,
+    "alreadyApprovedReadyUnshippedUsefulRecords": 0,
+    "overlookedFactualPassPlacementHoldInInspectedLedgers": 0,
+    "optionalExistingRecordAmendments": 2,
+    "deferredRolla": 1
+  },
+  "remainingPublicRecords": [
+    {
+      "recordId": "MO26-007",
+      "name": "The Cadaver Zone Spook House",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "PASS",
+      "gap": "Reliable attraction-specific2026 operation/date binding and supported expiry still missing. Prior public visitor address and approximate placement PASS retained. Same disputed extractor does not resolve year reliability.",
+      "sourceRef": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+      "lane": "Cadaver",
+      "alreadyRuntime": false,
+      "historicalGapSupersededByCoordinatorCheckpoint": {
+        "checkpoint": "7f99dd58fe0e1406ae5eaffd1583eec686674732",
+        "factualVerdict": "PROVENANCE HOLD",
+        "placementVerdict": "PASS",
+        "meaning": "Poster pixels/date/expiry derivation accepted conditionally; official account/post-to-poster provenance not independently preserved. No fresh provenance assessment performed by this inventory lane."
+      }
+    },
+    {
+      "recordId": "DELTA2-FEARFACTORY",
+      "name": "Fear Factory LLC",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD",
+      "gap": "Current official season evidence remains explicitly2025; reliable2026 operation/date binding and expiry missing. Secondary lifecycle conflict does not prove closure.",
+      "sourceRef": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+      "lane": "commercial8",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "DELTA2-WACO",
+      "name": "Waco School House Haunt",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD",
+      "gap": "No accepted2026 invitation/date binding or expiry. Public visitor address retained; origin failures are not closure.",
+      "sourceRef": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+      "lane": "commercial8",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "DELTA5-RISING-RECHECK",
+      "name": "Rising Haunted Attraction",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD",
+      "gap": "Explicit2026 directory calendar recovered, but conflicting current no-longer-operational/closing/reopening source statements lack reliable lifecycle resolution. No closure or expiration adjudicated.",
+      "sourceRef": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+      "lane": "commercial8",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "DELTA2-TWISTED",
+      "name": "Twisted Minds Haunted House",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD",
+      "gap": "Undated Richwoods identity/address only; reliable2026 invitation, dates and lifecycle cutoff absent. California namesake excluded.",
+      "sourceRef": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+      "lane": "commercial8",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "DELTA3-TERRIFIEDEXIST",
+      "name": "TerrifiedExist Haunted Attractions",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD",
+      "gap": "HOLD. Actual retained TicketLeap body is generic platform marketing after redirect to https://www.ticketleap.com/; it contains no TerrifiedExist visitor event, operation date or expiry. HTTP200 is not factual venue evidence, and generic copyright2026 is not year binding. Independent web reopen unavailable; no closure inferred. Prior hiring/evergreen information remains insufficient.",
+      "sourceRef": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+      "lane": "commercial8",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "MO26-088",
+      "name": "Lemp Brewery Haunted House",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD",
+      "gap": "First-party may/may-not-open and2026-return claims conflict. No Lemp-specific current calendar/ticket binding; never borrow Darkness or Creepyworld schedule.",
+      "sourceRef": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+      "lane": "commercial8",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "DELTA6-BOSS",
+      "name": "BOSS Haunted House, Fort Leonard Wood",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD",
+      "gap": "2026 event evidence recovered, but general-public eligibility and event-specific military base access process not established. No unrestricted route or eligible runtime point accepted.",
+      "sourceRef": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+      "lane": "commercial8",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "DELTA2-MACABRE",
+      "name": "Macabre Cinema",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD",
+      "gap": "DMO describes redevelopment and suspended traditional season. Specials not explicitly announced; calendar wrapper cannot establish operation. No blanket permanent-closure claim.",
+      "sourceRef": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+      "lane": "commercial8",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "DELTA2-HANNIBAL",
+      "name": "Hannibal Jaycees’ Warehouse of Nightmares",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / NOT CLEARED",
+      "gap": "DMO event routes320S.Bird St while operator/directory320S3rd St. Resolve destination conflict. DMO says first 4 weekends but explicitlist includesOct 30; preserve explicitlist vs prose conflict rather than infer recurrence.",
+      "sourceRef": "audit/missouri-three-source-delta4-research-r4.json",
+      "lane": "delta/amendments",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "DELTA3-BAKERSFIELD",
+      "name": "The Bakersfield Haunted House",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / NOT CLEARED",
+      "gap": "Directory season empty; recovered local newspaper evidence is 2025/older, not current 2026.",
+      "sourceRef": "audit/missouri-three-source-delta3-research-r2.json",
+      "lane": "delta/amendments",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "DELTA3-DARK-NIGHTMARES",
+      "name": "Dark Nightmares Haunted Attraction",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / NOT CLEARED",
+      "gap": "Current 2026 operator binding missing; secondary Morty gives33100US24 versus directory34100. Preserve routing conflict.",
+      "sourceRef": "audit/missouri-three-source-delta3-research-r2.json",
+      "lane": "delta/amendments",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "DELTA3-GOBLIN",
+      "name": "The Goblin Kings Haunted Trail",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / NOT CLEARED",
+      "gap": "Directory identity/activity/address retained. No current2026 season evidence recovered; old2024 visitor review not current operation.",
+      "sourceRef": "audit/missouri-three-source-delta3-research-r2.json",
+      "lane": "delta/amendments",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "DELTA3-ZOMBIE-WORLD",
+      "name": "Zombie World Strange Things",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / NOT CLEARED",
+      "gap": "Operator booking explicitly October2025/theme2025 and old rain cancellation. Do not relabel current2026. Activity and under10 equipment restriction retained as historical field leads.",
+      "sourceRef": "audit/missouri-three-source-delta3-research-r2.json",
+      "lane": "delta/amendments",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "DELTA3-DARK-LORDS",
+      "name": "Dark Lords Manor Haunted House",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / NOT CLEARED",
+      "gap": "Directory identity/address/activity retained; no current2026 season binding recovered.",
+      "sourceRef": "audit/missouri-three-source-delta3-research-r2.json",
+      "lane": "delta/amendments",
+      "alreadyRuntime": false
+    },
+    {
+      "recordId": "DELTA3-FARRINGTON",
+      "name": "Annual Farrington Park Haunted Hayride",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD / NOT CLEARED",
+      "gap": "Operator says this year Oct17–18 19:00 but year not bound outside copyright; ticket page unavailable. Need current2026 event binding, not repeat copyright inference.",
+      "sourceRef": "audit/missouri-three-source-delta3-research-r2.json",
+      "lane": "delta/amendments",
+      "alreadyRuntime": false
+    }
+  ],
+  "deferredRolla": {
+    "recordId": "DELTA6-ROLLA",
+    "name": "A Field of Screams / Timmy’s Terror, Rolla",
+    "statusAtAudit": "DEFERRED, NOT YET EXPIRED AT AUDIT",
+    "cutoffUtc": "2026-10-11T05:00:00Z",
+    "decision": "Owner/task-deferred; do not count/import. No extension, guessed season or 2027 recurrence."
+  },
+  "resolvedPlacementHolds": [
+    {
+      "recordId": "MO26-002",
+      "name": "Aurora Maize at Adventure Farm",
+      "oldVerdict": "FACTUAL PASS / PLACEMENT HOLD",
+      "currentRuntimeCanonicalId": "date-night-mo26-astra-aurora-maize",
+      "disposition": "SHIPPED, NOT NEXT-CANDIDATE ADDITION"
+    },
+    {
+      "recordId": "MO26-039",
+      "name": "Feemster Twisted Corn Maze",
+      "oldVerdict": "FACTUAL PASS / PLACEMENT HOLD",
+      "currentRuntimeCanonicalId": "date-night-mo26-astra-feemster-corn-maze",
+      "disposition": "SHIPPED, NOT NEXT-CANDIDATE ADDITION"
+    },
+    {
+      "recordId": "DELTA2-SHEPHERD-LANTERN",
+      "name": "Shepherd’s Lantern — Bellweather and The Broken Hour",
+      "oldVerdict": "FACTUAL PASS / PLACEMENT HOLD",
+      "currentRuntimeCanonicalId": "date-night-mo26-astra-shepherds-lantern",
+      "disposition": "SHIPPED, NOT NEXT-CANDIDATE ADDITION"
+    },
+    {
+      "recordId": "MO26-055",
+      "name": "Carolyn’s Pumpkin Patch",
+      "oldVerdict": "FACTUAL PASS / PLACEMENT HOLD",
+      "currentRuntimeCanonicalId": "date-night-mo26-phase4-carolyns-pumpkin-patch",
+      "disposition": "SHIPPED PR62, NOT NEXT-CANDIDATE ADDITION"
+    },
+    {
+      "recordId": "DELTA2-TERROR66",
+      "name": "Terror on Route 66",
+      "oldVerdict": "FACTUAL PASS / PLACEMENT HOLD",
+      "currentRuntimeCanonicalId": "date-night-mo26-phase4-terror-on-route-66",
+      "disposition": "SHIPPED PR62, NOT NEXT-CANDIDATE ADDITION"
+    }
+  ],
+  "optionalAmendments": [
+    {
+      "recordId": "MO26-085",
+      "canonicalId": "date-night-mo26-085-brookdale-farms",
+      "addedSentence": "The Hollows haunted trail uses separate admission and its own October calendar.",
+      "sourceUrl": "https://www.brookdalefarms.com/the-hollows",
+      "scope": "Optional sentence only. Do not add HauntedHouse category to FallFestival, overwrite currenthours/cutoff, import2025FAQprices, or borrow SummerFest parking7997JimWeberRd.",
+      "runtimeApplied": false,
+      "decision": "Independent factual/copy PASS, evidence-only retained"
+    },
+    {
+      "recordId": "MO26-124",
+      "canonicalId": "date-night-mo26-124-hotel-of-terror",
+      "addedSentence": "A combo pass with Dungeons of Doom includes transfer rides between the two haunts.",
+      "sourceUrl": "https://www.hotelofterror.com/",
+      "scope": "Optional arrival/admission note only; do not promise specific ridevehicle or availability, and do not add directory unsupported last-ever-season claim.",
+      "runtimeApplied": false,
+      "decision": "Independent factual/copy PASS, evidence-only retained"
+    }
+  ],
+  "duplicateProtection": {
+    "currentCanonicalIdsUnique": true,
+    "noneOfRemainingInReleasedRecordIds": true,
+    "namedDuplicate": "DUP-BEAST-EDGE is two already-existing attractions, never a third identity",
+    "aliases": "MO26-059 maps to DELTA-EDGE-2026; MO26-086/087 map to DELTA-DARKNESS-2026/DELTA-CREEPYWORLD-2026; Werehouse remains existing date-night-werehouse-joplin."
+  },
+  "excludedResidentialScope": {
+    "policy": "All residential/home/uncertain entries stay separate. No product-policy clearance or fresh research performed. Do not sum overlapping historical ledgers as unique residential count.",
+    "refs": [
+      "audit/missouri-three-source-delta2-research-r3.json#residential_separate_ledger",
+      "audit/missouri-three-source-delta3-research-r2.json#DELTA3-MOUNT-WASHINGTON",
+      "audit/missouri-delta5-independent-2026-10-09/final/Independent-Delta5-R2-Final-Verdicts.json#residential",
+      "audit/astra-release-prep-2026-10-09/Candidate6-Release-Inventory.json#residentialSeparate"
+    ]
+  },
+  "reviewPriority": [
+    "Cadaver official provenance binding (already HOLD in this mission)",
+    "Commercial eight exact blockers (parallel research lanes)",
+    "Hannibal then six retained delta3 public leads (delta lane)",
+    "Material Brookdale/Hotel copy amendments if freshly source-bound; do not pad batch"
+  ],
+  "eligibilityContracts": [
+    "ListingCompletenessV1 with 2026 source binding and exact finite lifecycle; editorial cutoff explicitly labeled if used",
+    "Field-specific provenance; qualified unknown/partial hours permitted",
+    "Visitor-address Directions and independently supported approximate placement; address-only records excluded from radius selection",
+    "No inferred entrance, parking or rideshare destination; preserve generic ride semantics",
+    "No machine Open Now upgrade, no 2027 recurrence, cached/saved current policy and negative lifecycle protection",
+    "Dedupe existing identities and amend existing canonical ID when appropriate",
+    "No unreviewed author self-awarded independent PASS; frozen evidence with hashes required before candidate import"
+  ],
+  "limits": [
+    "Original 134-identity list is a dedupe reference, not proof all 134 have actionable current HOLDs. This audit does not restart that statewide search.",
+    "No material pass proposal received yet; source/eligibility independent review of new proposals remains pending.",
+    "Rolla status must recompute against exact cutoff; UTC date October11 alone does not imply expiry before05:00Z."
+  ],
+  "inputs": [
+    {
+      "key": "phase4",
+      "path": "/workspace/scratch/b32d3f8a7b78/release-repo/audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+      "bytes": 19645,
+      "sha256": "3b1772c055e8b2852b732b56b9e9a0756755c31ef6c8a57341c684cab9f6a7b6",
+      "repositoryCheckpoint": "cf976a56f46d97a6a43aa82ff8b18636704d81d1"
+    },
+    {
+      "key": "candidate6",
+      "path": "/workspace/scratch/b32d3f8a7b78/release-repo/audit/astra-release-prep-2026-10-09/Candidate6-Release-Inventory.json",
+      "bytes": 95001,
+      "sha256": "a05f684f1cbfe6b01cf67b79f2104275fd9388438f281d443de17af53ccb59a1",
+      "repositoryCheckpoint": "cf976a56f46d97a6a43aa82ff8b18636704d81d1"
+    },
+    {
+      "key": "delta2",
+      "path": "/workspace/scratch/b32d3f8a7b78/release-repo/audit/missouri-three-source-delta2-research-r3.json",
+      "bytes": 41662,
+      "sha256": "a57340ed8a18150c21c5ede1339ac66c709fff6183e8d1f769e966d9925d9be5",
+      "repositoryCheckpoint": "cf976a56f46d97a6a43aa82ff8b18636704d81d1"
+    },
+    {
+      "key": "delta3",
+      "path": "/workspace/scratch/b32d3f8a7b78/release-repo/audit/missouri-three-source-delta3-research-r2.json",
+      "bytes": 40014,
+      "sha256": "0845719a25a8fae03a810a2370aad117b577a67990054be95dc8718dcd87539c",
+      "repositoryCheckpoint": "cf976a56f46d97a6a43aa82ff8b18636704d81d1"
+    },
+    {
+      "key": "delta4",
+      "path": "/workspace/scratch/b32d3f8a7b78/release-repo/audit/missouri-three-source-delta4-research-r4.json",
+      "bytes": 60259,
+      "sha256": "45918c34c1ab199cdeca72614803b290396d258e095d3ee15acdd93e07ba032b",
+      "repositoryCheckpoint": "cf976a56f46d97a6a43aa82ff8b18636704d81d1"
+    },
+    {
+      "key": "delta5",
+      "path": "/workspace/scratch/b32d3f8a7b78/release-repo/audit/missouri-delta5-independent-2026-10-09/final/Independent-Delta5-R2-Final-Verdicts.json",
+      "bytes": 37222,
+      "sha256": "396e558e1bd0c5605b85e621c245374c9ec4afc35cdd2b0851f1993ef2baf006",
+      "repositoryCheckpoint": "cf976a56f46d97a6a43aa82ff8b18636704d81d1"
+    },
+    {
+      "key": "delta6",
+      "path": "/workspace/scratch/b32d3f8a7b78/release-repo/audit/astra-statewide-delta6-2026-10-09/Classification-Matrix-R2.json",
+      "bytes": 31515,
+      "sha256": "ca6fd3c1592039a30a1757ec4fab214660b102febaa5dbff08fb53cdb0ab3974",
+      "repositoryCheckpoint": "cf976a56f46d97a6a43aa82ff8b18636704d81d1"
+    },
+    {
+      "key": "priority6",
+      "path": "/workspace/scratch/b32d3f8a7b78/release-repo/audit/astra-statewide-delta6-2026-10-09/Priority-Projections-R2.json",
+      "bytes": 26519,
+      "sha256": "a29096db200a38c405401a795a7ef8dae92974ba2963ed9b0cf734441dee7e09",
+      "repositoryCheckpoint": "cf976a56f46d97a6a43aa82ff8b18636704d81d1"
+    },
+    {
+      "key": "enrichment",
+      "path": "/workspace/scratch/b32d3f8a7b78/release-repo/audit/astra-delta6-independent-2026-10-09/Enrichment-Two-Independent-R1.json",
+      "bytes": 4102,
+      "sha256": "cef4ef079260642fc1576dfa03ec4ae45f7291d8ae1f226b51288fab81844ab7",
+      "repositoryCheckpoint": "cf976a56f46d97a6a43aa82ff8b18636704d81d1"
+    },
+    {
+      "key": "expected-source.json",
+      "path": "/workspace/scratch/b32d3f8a7b78/pr62-production-binding/expected-source.json",
+      "bytes": 246198,
+      "sha256": "44e82ce1e7385953ec3b24fa39f8b1ac349d436fe3e39269b9146c5e07b88313"
+    },
+    {
+      "key": "production-source-binding-summary.json",
+      "path": "/workspace/scratch/b32d3f8a7b78/pr62-production-binding/production-source-binding-summary.json",
+      "bytes": 4631,
+      "sha256": "b8451efef66ff78c992dadfbfeb4caad0dd7dd4f069ae27110c9d2d102b07eda"
+    }
+  ]
+}

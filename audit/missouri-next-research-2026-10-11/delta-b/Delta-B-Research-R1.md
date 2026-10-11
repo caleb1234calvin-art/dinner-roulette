@@ -1,0 +1,11 @@
+# Missouri next batch — bounded delta lane B
+
+**Three researched; zero proposed PASS; three HOLD.** No runtime record emitted. Independent review pending.
+
+- **Bakersfield:** the official website strengthens public commercial classification and the visitor address, **652 County Road 585, Bakersfield, MO 65609**. Downloaded official calendar pixels explicitly show **October 2020**, SHA256 `433dad571a83c761af140427a502a09ae18991b062d777bca3a1a93580c350a2`. The October 2026 Friday/Saturday pattern happens to match 2020 and cannot relabel the poster. A newly indexed official Facebook title mentions October 2026 but the full post could not be reliably retrieved. Current 2026 operation/date binding and lifecycle remain HOLD.
+- **Dark Nightmares:** the official website links HauntPay, whose dated October 9/10, 2026 ticket content newly supports 2026 operation. The official FAQ supplies useful material trail, shoe, guardian-waiver and optional-contact restrictions. **Visitor address remains a material HOLD:** linked ticketing gives **34100 E. 24 Hwy**, while an indexed October 2, 2026 official Facebook post gives **33100 US-24**. Do not select by majority or infer a shared entrance. No future/final date was accepted and no editorial expiry was silently imposed.
+- **Farrington:** the official public ticketed city-park event and **116 S County Line Rd, Windsor, MO 65360** are supported. The official home page still says “this year” October 17–18 at 7 PM, with only copyright 2026 as year evidence. The ticket page is now accessible but contains no explicitly dated schedule. Current-year and lifecycle HOLD remains.
+
+All three are supported public business or organized-event leads, not residential home haunts. No new placement points were invented; no geocode was attempted while factual gates remain. Unknown hours or prices are not independent automatic V1 blockers. No closure or source-exhaustion claim is made.
+
+Source URLs and exact scope-labeled receipts are indexed in `Delta-B-Research-R1.json`. The raw primary HauntPay HTTP body and actual Bakersfield calendar image with retrieval receipts are retained. Mixed search outputs were scoped to these venue/source blocks; unrelated search blocks were excluded from this package. No browser use, operator contact, paid API, repository mutation or production action occurred.

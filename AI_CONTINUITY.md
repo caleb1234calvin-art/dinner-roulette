@@ -1,3 +1,47 @@
+# Next Missouri Research Gate — Three-Record Subset Independently Accepted (2026-10-11)
+
+## CURRENT
+
+PR #62 release and scoped production acceptance remain PASS. Main **bf88443932739a9448fac8d27fd845e9947cf697**, tree **7d91061065f5e7e36e4f76307a7b915a66ea006d**. Production **dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U READY**, same source; all five aliases passed the preserved release checks. No subsequent runtime or production mutation.
+
+Phase 3 reviewed **17 existing public/commercial records or amendment proposals: 3 PASS, 14 HOLD, 0 REJECT**. Cadaver's separate Phase 2 HOLD remains, making **15 retained HOLDs** across this mission's reviewed pool. No statewide discovery restart or residential addition. Rolla remains separately DEFERRED with immutable **2026-10-11T05:00:00Z** cutoff and is not selected.
+
+**One useful nonproduction subset is frozen: one addition plus two material amendments.** Three is below the preferred 5–15; no additional record is padded into the batch. Controlling author **Candidate-Projections-R2.json** SHA-256 **0b406b9131d2e3149c05366d68a97d34ee2897b77542762e5f5829c259d2e2c5**. Final independent exact-subset report **Independent-Eligible-Subset-R2.json** SHA-256 **96fa3143a4cc19f5295a524f57e1059ff42f277e596e7ed65354961e50810e1c**. Data/copy acceptance is not runtime or release PASS.
+
+## ACCEPTED
+
+- **DELTA3-GOBLIN — The Goblin King's Haunted Trail — Shadow's Play:** existing research identity, new runtime attraction. Official operator event pages explicitly bind October **2–3, 9–10, 16–17 and 23–24, 2026**. Visitor address **5651 State Hwy F, Hartville, MO 65667**. Official address link independently resolves the named White Hart Renaissance Fairgrounds feature at **37.2632207, -92.6693091**; qualified approximate placement only. Map destination body was inaccessible, so no rendered-map or entrance/parking/dropoff verification is claimed. Directions use the visitor address. End-of-final-date lifecycle cutoff **2026-10-25T05:00:00Z**, not a midnight closing-time assertion. Selected October 10/16 hours were observed, but final-date closing and all-date hours remain unverified. Preserve outdoor uneven-ground, darkness/fog/loud-scare and weather qualifications; closed-toe footwear is advice, not an invented mandatory rule. Never Open Now; machine hours null; no October 31 Feast import or 2027 recurrence. Official phone and website navigation target independently reviewed.
+- **MO26-085 — Brookdale Farms Fall Festival:** append exactly “The Hollows haunted trail uses separate admission and its own October calendar.” Preserve Fall Festival's existing November 8 lifecycle, categories, stronger notes, identity and Directions. No duplicate Hollows venue or category expansion.
+- **MO26-124 — Hotel of Terror:** append exactly “A combo pass with Dungeons of Doom includes transfer rides between the two haunts.” Preserve both distinct identities, existing lifecycle and separate Directions; no specific vehicle, live availability or exact dropoff claim.
+
+R2 corrected only two schema labels from R1: placement basis **operator-site**, expiry basis **date-only**. Independent review preserved all factual values and compared both amendment before-arrays against released bf884. No candidate source has been committed yet.
+
+## HOLD
+
+Four commercial-A HOLDs: **Fear Factory** (available official calendar/contact remains 2025), **Waco** (operator opening signal lacks accepted year binding), **Rising** (official tourism dates are 2024; secondary lifecycle conflict unresolved), **Twisted Minds** (no 2026 binding; 10000/10002 visitor-address conflict).
+
+Four commercial-B HOLDs: **TerrifiedExist** (no 2026 visitor-date/final-expiry proof; generic/landing responses and access failures do not establish closure), **Lemp** (operator opening statements conflict; never borrow Darkness/Creepyworld dates), **BOSS Fort Leonard Wood** (October 24 event supported, but public eligibility/access for this specific event unestablished; public golf/Visitor Center facts retained separately), **Macabre Cinema** (traditional season suspended during redevelopment; no dated special established).
+
+Three delta-B HOLDs: **Bakersfield** (actual official calendar image is 2020, not 2026), **Dark Nightmares** (2026 operation newly supported, but first-party 34100/33100 US-24 address conflict and no accepted future/final schedule), **Farrington Park** (October 17–18 lacks reliable explicit year binding beyond copyright).
+
+Three remaining delta HOLDs: **Hannibal Jaycees** (visitor-address and calendar prose/list conflicts), **Zombie World** (operator booking remains explicitly 2025), **Dark Lords Manor** (no accepted 2026 binding).
+
+**Cadaver** remains FACTUAL/IMPLEMENTATION HOLD solely for independently preserved official poster binding. Accepted address/approximate placement and prior 2026 poster pixels remain; conditional expiry **2026-11-01T05:00:00Z**. Do not reinstate superseded no-pixels or exact-entrance gates.
+
+## NEXT / ROLLBACK / EVIDENCE
+
+Implement the exact accepted three-record subset on an isolated **integration/** nonproduction branch based on released bf884. Preserve all ListingCompletenessV1, expiry ±1 ms, pending-RPC, saved/cache, no-2027, duplicate, approximate placement, address Directions and generic ride-link behavior. Validate full repository tests, typecheck, accepted lint baseline, safe auth-enabled migration-free build, exact-head CI, browser/geometry and Android automated readiness. Parallelize independent lanes with isolated ports/runners.
+
+Supported rollback inspected at the release gate: **HaYi → dpl_8xyE9R3BxyE1883QpavaEBWV2LGa**, source **fe22c15cc6442fc4a48fec23c9a1331c69d70bd2**, enabled final confirmation observed then cancelled. READY F1 and BCd remain retained, not arbitrary Hobby Instant Rollback guarantees. Reversion would reassign domains and prior build environment/cron, stopping auto-promotion until rollback removal. No restore performed.
+
+Scoped research reports, exact proposals, independent verdicts, source references and hashes are under `audit/missouri-next-research-2026-10-11/`. Unrelated mixed search results are not published. Original source-capture limitations remain explicit in reports. No next candidate SHA/tree exists yet.
+
+PR #61/adaptive radial is PARKED. The PR #62 waiver is consumed. **Do not release the next candidate automatically.** Stop at VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION.
+
+Documentation/evidence only on deployment-disabled `integration/continuity-refresh-2026-10-07`. Parent continuity **7f99dd58fe0e1406ae5eaffd1583eec686674732**, tree **e93802309fa37a2a0ab484f3914b4f04a0d3681c**. Entire prior continuity follows unchanged.
+
+---
+
 # Cadaver Zone Re-clearance — Precise Provenance HOLD (2026-10-11)
 
 ## CURRENT

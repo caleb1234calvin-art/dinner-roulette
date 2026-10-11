@@ -1,0 +1,250 @@
+{
+  "package": "MISSOURI-NEXT-DELTA-B-20261011-R1",
+  "frozenAt": "2026-10-11T02:42:28.139236+00:00",
+  "role": "researchauthor; independentverificationpending",
+  "control": "Parent reportsCadavercheckpoint7f99dd5readback andPhase3authorization; production/main notmutatedbythislane. Currentruntime sourcebf884 fromparent; localrelease-repo checkoutcontains historicaldocsbranchruntime, notusedascurrentcatalogclearance.",
+  "priorInputSha256": "0845719a25a8fae03a810a2370aad117b577a67990054be95dc8718dcd87539c",
+  "scope": [
+    "DELTA3-BAKERSFIELD",
+    "DELTA3-DARK-NIGHTMARES",
+    "DELTA3-FARRINGTON"
+  ],
+  "metrics": {
+    "researched": 3,
+    "proposedPASS": 0,
+    "HOLD": 3,
+    "REJECT": 0,
+    "residentialSkipped": 0,
+    "runtimeAdditions": 0
+  },
+  "records": [
+    {
+      "seasonYear": 2026,
+      "neverOpenNow": true,
+      "machineOpeningIntervals": null,
+      "no2027Recurrence": true,
+      "approximateCoordinates": null,
+      "placementVerdict": "NOT CLEARED; no previously accepted point and no new geocode attempted while source blockers remain",
+      "directionsPolicy": "supported visitor address only once record clears; no numeric entrance, parking or ride dropoff assertion",
+      "runtimeProjection": null,
+      "runtimeEligible": false,
+      "independentVerdict": "PENDING",
+      "residentialPolicyUsed": false,
+      "recordId": "DELTA3-BAKERSFIELD",
+      "name": "The Bakersfield Haunted House",
+      "researchVerdict": "HOLD",
+      "classification": {
+        "value": "public commercial haunted-house business; not a residential/home-display lead",
+        "basis": "Official About Us calls it family-owned Haunted House Business; official home sells admission and concessions. TSF classifies Haunted House (Single), not Home Haunt/Yard Display.",
+        "sources": [
+          "https://www.thebakersfieldhauntedhouse.com/about-us",
+          "https://www.thescarefactor.com/haunted-houses/missouri/the-bakersfield-haunted-house/"
+        ]
+      },
+      "visitorAddress": {
+        "value": "652 County Road 585, Bakersfield, MO 65609",
+        "status": "primary-source supported",
+        "sources": [
+          "https://www.thebakersfieldhauntedhouse.com/directions"
+        ]
+      },
+      "activity": "Haunted House",
+      "current2026Binding": {
+        "status": "UNRESOLVED",
+        "finding": "An indexed exact official Facebook post is titled Bakersfield Haunted House opens October2026, but summary-only snippet and inaccessible full post do not bind a reliable exact current schedule; profile result mixes2026 snippet with a1.5year-old temporary-block capture.",
+        "source": "https://www.facebook.com/thebakersfieldhauntedhouse/posts/one-month-until-the-best-time-of-the-year-the-countdown-is-officially-on-only-on/1781871836927590/"
+      },
+      "dates": null,
+      "hours": null,
+      "admission": null,
+      "expiry": null,
+      "materialRestrictions": null,
+      "blockers": [
+        "Reliable current2026 operation/date binding remains unaccepted; official website calendar is explicitly October2020, not current.",
+        "No accepted current lifecycle or expiry; no runtime addition."
+      ],
+      "historicalFactsNotCarried": [
+        "Official website generic Friday/SaturdayOctober, dark\u201310PM and$15 match clearly historical2020 calendar; not current2026 facts.",
+        "Social profile indexed$20 admission is not independently corroborated as current.",
+        "Identical2020/2026 Friday/Saturday October calendar pattern does not establish year."
+      ],
+      "decisiveEvidence": [
+        "evidence/deltaB_search4.json",
+        "evidence/deltaB_search5.json",
+        "evidence/deltaB_click2.json",
+        "evidence/bakersfield-calendar.body",
+        "evidence/bakersfield-calendar.receipt.json"
+      ],
+      "imageInspection": {
+        "performed": true,
+        "visibleYear": 2020,
+        "imageSha256": "433dad571a83c761af140427a502a09ae18991b062d777bca3a1a93580c350a2",
+        "note": "Actual downloaded image viewed using view_image; not a2026 poster."
+      },
+      "nextUsefulEvidence": "Retrievable dated official2026 post/calendar/ticket listing binding exact supported current operation; do not reinterpret2020calendar or global novelty."
+    },
+    {
+      "seasonYear": 2026,
+      "neverOpenNow": true,
+      "machineOpeningIntervals": null,
+      "no2027Recurrence": true,
+      "approximateCoordinates": null,
+      "placementVerdict": "NOT CLEARED; no previously accepted point and no new geocode attempted while source blockers remain",
+      "directionsPolicy": "supported visitor address only once record clears; no numeric entrance, parking or ride dropoff assertion",
+      "runtimeProjection": null,
+      "runtimeEligible": false,
+      "independentVerdict": "PENDING",
+      "residentialPolicyUsed": false,
+      "recordId": "DELTA3-DARK-NIGHTMARES",
+      "name": "Dark Nightmares Haunted Attraction / Dark Nightmares Haunted Forest",
+      "researchVerdict": "HOLD",
+      "classification": {
+        "value": "public commercial paid haunted forest/trail; not a residential/home-display lead",
+        "basis": "Official independent website describes staffed1.2miletrail and links to public timed ticket sales; TSF Haunted Trail.",
+        "sources": [
+          "https://darknightmares.net/",
+          "https://app.hauntpay.com/events/dark-nightmares-haunted-forest/event_times"
+        ]
+      },
+      "visitorAddress": {
+        "value": null,
+        "status": "MATERIAL FIRST-PARTY CONFLICT",
+        "candidates": [
+          {
+            "value": "34100 E.24Hwy, Buckner, MO64016",
+            "sources": [
+              "https://app.hauntpay.com/events/dark-nightmares-haunted-forest/event_times",
+              "https://app.gopassage.com/events/dark-nightmares-haunted-forest"
+            ],
+            "evidence": "Officialsite links this ticket route; directHauntPayHTTP200 body reproduces34100."
+          },
+          {
+            "value": "33100 US-24, Buckner, MO64016",
+            "sources": [
+              "https://www.facebook.com/100040742512482/posts/see-you-tonight%EF%B8%8F/1908832323818166/",
+              "https://www.facebook.com/100040742512482/photos/1896099108424821/"
+            ],
+            "evidence": "Fresh indexed officialOctober2,2026 post specifically prints33100; exact open throttled. Conflict is no longer merely secondaryMorty versusdirectory."
+          }
+        ],
+        "resolution": "Neither number silentlyselected; could not establish officialrouting explanation or authoritativecorrection."
+      },
+      "activity": "Haunted trail/forest; broader Haunted House mapping subject to established taxonomy review",
+      "current2026Binding": {
+        "status": "SUPPORTED_PRIMARY_TICKET_OPERATION",
+        "source": "https://app.gopassage.com/events/dark-nightmares-haunted-forest",
+        "observed": "Fresh detailedpage showsSaturdayOctober10,2026@9:30PMCDT; earlier captureFridayOctober9,2026@7PMCDT. This is specificdated primaryticket content, not copyright inference.",
+        "currentDateSupport": [
+          "2026-10-09",
+          "2026-10-10"
+        ],
+        "notSupported": "No fullOctober date recurrence or finalseasondate inferred; atcapture localOctober10 21:40 ticketobserved21:30 already passed."
+      },
+      "dates": null,
+      "hours": {
+        "status": "PARTIAL_CONFLICT_UNACCEPTED_FOR_RUNTIME",
+        "observations": [
+          "Officialtickets show7PM and9:30PM time slots; do not infer final exit.",
+          "Indexed officialSeptember30post saysFriday/Saturday7:30PM until about12:30AM; its fullpost was inaccessible."
+        ],
+        "machineIntervals": null
+      },
+      "admission": null,
+      "expiry": null,
+      "materialRestrictions": {
+        "source": "https://darknightmares.net/",
+        "items": [
+          "1.2mile outdoor wooded trail; weather-appropriate clothing and closed-toe shoes required.",
+          "No strollers or scooters; no separatewaiting area foryoungchildren.",
+          "RatedR; most suitable14+ is a recommendation, not a14minimum admission ban.",
+          "Under18 requires guardian-signedwaiver.",
+          "Use the provided flashlight only; own flashlight can cause removal without refund.",
+          "BloodPass is optional enhanced-contact experience: actors may touch,pull,push,shove,drag; additionalwaiver; remove necklace to withdraw frominteraction. Do not portray allgeneral admission as touch.",
+          "Arrive15minutesbefore slot; lateadmission dependscapacity and can be unavailable."
+        ],
+        "ticketPolicies": [
+          "Generalrefundpolicy no refunds/returns; eventorganizer cancellationrefund within4businessdays."
+        ],
+        "sourceFreshness": "Currentretrieved undatedFAQ; preserved as firstparty conditions, not independently reproduced physicalpolicy."
+      },
+      "blockers": [
+        "Visitor-address conflict34100 versus33100 now reaches first-party sources; no supportedroutingdecision.",
+        "Only explicitOctober9/10 ticketdates recovered; no acceptedfuturedate/finaldate or separately reviewed editorial lifecycle proposal."
+      ],
+      "decisiveEvidence": [
+        "evidence/deltaB_open2.json",
+        "evidence/deltaB_click1.json",
+        "evidence/deltaB_search2.json",
+        "evidence/deltaB_search3.json",
+        "evidence/dark-ticket-times.body",
+        "evidence/dark-ticket-times.receipt.json"
+      ],
+      "nextUsefulEvidence": "Resolveofficial visitoraddress; capture actual futuredatedticket/calendar and finalschedule. If only general2026season remains, independently consider narrowlyboundededitoriallifecycle withoutinventing dates."
+    },
+    {
+      "seasonYear": 2026,
+      "neverOpenNow": true,
+      "machineOpeningIntervals": null,
+      "no2027Recurrence": true,
+      "approximateCoordinates": null,
+      "placementVerdict": "NOT CLEARED; no previously accepted point and no new geocode attempted while source blockers remain",
+      "directionsPolicy": "supported visitor address only once record clears; no numeric entrance, parking or ride dropoff assertion",
+      "runtimeProjection": null,
+      "runtimeEligible": false,
+      "independentVerdict": "PENDING",
+      "residentialPolicyUsed": false,
+      "recordId": "DELTA3-FARRINGTON",
+      "name": "Annual Farrington Park Haunted Hayride",
+      "researchVerdict": "HOLD",
+      "classification": {
+        "value": "public organized paid event in citypark; not a residential/homehaunt",
+        "basis": "Officialeventsite namesWindsorHolidayCollective sponsor, FarringtonCityPark and publictickets.",
+        "sources": [
+          "https://www.windsorhauntedhayride.com/",
+          "https://www.windsorhauntedhayride.com/tickets"
+        ]
+      },
+      "visitorAddress": {
+        "value": "116 S County Line Rd, Windsor, MO65360",
+        "status": "primary-source supported",
+        "source": "https://www.windsorhauntedhayride.com/"
+      },
+      "activity": "Other Halloween / Fall \u2014 Haunted Hayride",
+      "current2026Binding": {
+        "status": "UNRESOLVED",
+        "finding": "Officialhome says thisyearOctober17\u201318, start7PM; only2026 text is genericcopyright. Recoveredticketpage prints$8 but givesno datedevent. No reliable2026binding found.",
+        "sources": [
+          "https://www.windsorhauntedhayride.com/",
+          "https://www.windsorhauntedhayride.com/tickets"
+        ],
+        "secondaryHistoricalContext": "October12,2025 localorganizer-share surfaced; not treated as currentyear proof."
+      },
+      "dates": null,
+      "hours": null,
+      "admission": null,
+      "expiry": null,
+      "materialRestrictions": null,
+      "blockers": [
+        "Explicit2026 event-datebinding remains absent; copyright2026 doesnotqualify thisyearOctober17\u201318."
+      ],
+      "historicalFactsNotCarried": [
+        "UndatedOctober17\u201318 7PM schedule",
+        "$8 ticketprice andconveniencefee withoutyearbinding",
+        "6thannual label not converted to calendar year"
+      ],
+      "decisiveEvidence": [
+        "evidence/deltaB_open2.json",
+        "evidence/deltaB_click1.json",
+        "evidence/deltaB_search4.json"
+      ],
+      "nextUsefulEvidence": "Currentdatedofficialeventannouncement/ticketrecord or actualyearboundposter. Preservepublicaddress; unknownhours/prices alone arenotautomaticV1blockers."
+    }
+  ],
+  "limits": [
+    "No statewide discovery, unrelatedleadresearch,PR62recordreopen,operatorcontact,paidAPI,orbrowseruse.",
+    "Search sometimesreturnedunrelatedresults; scopedreceiptsretainonlyrelevantvenue/sourceblocks andlabelomissions.",
+    "Capturetime isnot publicationtime; cached/indexedsourcecontent isnot live-originproof.",
+    "No geocode issuedbecauseaddress/yearfactualgates remain; no inventedcoordinates.",
+    "No fullcurrentcatalogdedupe rerun onoldcheckedout docsbranch; identitiesremainexistingdelta-ledger leads, noveltyprovisional."
+  ]
+}

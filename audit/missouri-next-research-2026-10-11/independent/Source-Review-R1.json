@@ -1,0 +1,226 @@
+{
+  "audit": "MISSOURI-NEXT-INDEPENDENT-SOURCE-REVIEW-R1",
+  "checkedAt": "2026-10-11T02:41:58.366753+00:00",
+  "role": "Independent source verifier; no browser, runtime changes or release",
+  "status": "Three factual/placement-or-copy proposals supported; author frozen projection checks pending. DarkNightmares HOLD.",
+  "records": [
+    {
+      "recordId": "DELTA3-GOBLIN",
+      "name": "Goblin King Haunted Trail: Shadow's Play",
+      "sourceReviewVerdict": "FACTUAL PASS / APPROXIMATE PLACEMENT PASS",
+      "exactAuthorProjectionAcceptance": "PENDING author frozen projection",
+      "fields": {
+        "identity": {
+          "verdict": "PASS",
+          "value": "Public haunted woodland trail at White Hart Renaissance Fairegrounds; existing historical DELTA3-GOBLIN identity, not a new discovery",
+          "sources": [
+            "turn46view0",
+            "turn47view2",
+            "turn46view1"
+          ]
+        },
+        "yearAndDates": {
+          "verdict": "PASS",
+          "value": [
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24"
+          ],
+          "sources": [
+            "turn46view0",
+            "turn47view2"
+          ],
+          "reason": "Explicitly labeled 2026 trail dates, not inferred from weekday pattern or copyright. Separate October31 Feast event not imported as trail date."
+        },
+        "visitorAddress": {
+          "verdict": "PASS",
+          "value": "5651 State Hwy F, Hartville, MO 65667",
+          "sources": [
+            "turn46view0",
+            "turn47view2",
+            "turn46view1"
+          ]
+        },
+        "hours": {
+          "verdict": "PARTIAL PASS",
+          "value": "7–11:30 p.m. independently confirmed for October10 andOctober16 only. FinalOctober24 closing unverified. Do not generalize to every date.",
+          "sources": [
+            "turn46view0",
+            "turn47view2"
+          ]
+        },
+        "admission": {
+          "verdict": "LIMITED PASS",
+          "value": "Selected October10/16 event pages offer single admission $15 plus displayed $0.38 service fee and four-pack $55 plus $1.38 fee. No checkout, availability guarantee, or all-date pricing claim. Safest consumer copy checks operator ticket page.",
+          "sources": [
+            "turn46view0",
+            "turn47view2"
+          ]
+        },
+        "placement": {
+          "verdict": "PASS APPROXIMATE ONLY",
+          "value": {
+            "lat": 37.2632207,
+            "lon": -92.6693091,
+            "basis": "operator-site",
+            "sourceUrl": "https://goo.gl/maps/hLccWtsgQV1v4SgKA"
+          },
+          "sources": [
+            "turn47view0"
+          ],
+          "reason": "Independently clicked address-labeled first-party link; redirect names White Hart Renaissance Fairgrounds and encodes selected feature !3d/!4d coordinates. Destination body inaccessible; no raw map body success or independently certified arrival point claimed. Viewport longitude -92.6718894 rejected."
+        },
+        "directions": {
+          "verdict": "PASS REQUIRED CONTRACT",
+          "value": "Use visitor-address string. Never use approximate map feature as exact entrance, parking or ride drop-off."
+        },
+        "lifecycle": {
+          "verdict": "PASS DATE-ONLY",
+          "value": "2026-10-25T00:00:00-05:00 = 2026-10-25T05:00:00Z",
+          "reason": "Midnight following final explicitly listed October24date; visibility expiry only, not claimed operator closing. No 2027 recurrence."
+        },
+        "restrictions": {
+          "verdict": "PASS AT STATED LIMITS",
+          "value": "Outdoor wooded terrain, darkness, fog, loud/sudden scares and uneven ground. Operator recommends comfortable closed-toe shoes and weather-appropriate dress; do not convert recommendation to strict requirement. Weather/site safety may close trail. Age/accessibility not established.",
+          "sources": [
+            "turn46view0",
+            "turn47view2"
+          ]
+        },
+        "openNow": {
+          "verdict": "PASS REQUIRED CONTRACT",
+          "value": "never; machine opening intervals null"
+        }
+      }
+    },
+    {
+      "recordId": "DELTA3-DARK-NIGHTMARES",
+      "name": "Dark Nightmares Haunted Forest",
+      "sourceReviewVerdict": "HOLD",
+      "exactAuthorProjectionAcceptance": "No eligible projection accepted",
+      "fields": {
+        "identity": {
+          "verdict": "PASS",
+          "value": "Official darknightmares.net links HauntPay event and Facebook profile100040742512482.",
+          "sources": [
+            "turn50view0",
+            "turn51view1",
+            "turn51view2"
+          ]
+        },
+        "2026Operation": {
+          "verdict": "LIMITED PASS",
+          "value": "Operator-linked ticket details show October10,2026 9:30p.m.CDT; no future/final date accepted.",
+          "sources": [
+            "turn50view2"
+          ]
+        },
+        "visitorAddress": {
+          "verdict": "HOLD",
+          "value": "Official linked ticket platform shows34100 E24Hwy,Buckner. Author preserved indexed official-account Oct2post shows33100US24. First-party conflict unresolved; no silent hierarchy, averaging or geocoding to settle it.",
+          "sources": [
+            "turn50view2",
+            "turn51view1"
+          ],
+          "authorReceipt": "missouri-next-delta-b-20261011/evidence/deltaB_search2.json#turn32search24",
+          "independentLimitation": "Site→officialFacebook profile linkage independently reproduced. Conflicting post direct reopen throttled; narrow indexed search did not reproduce it. Retained author source is unresolved evidence, not independently dismissed."
+        },
+        "placement": {
+          "verdict": "HOLD",
+          "reason": "Visitor address unresolved; no point proposed."
+        },
+        "finalExpiry": {
+          "verdict": "HOLD",
+          "reason": "Current final supported future date not established; do not infer whole October or recurrence."
+        },
+        "restrictions": {
+          "verdict": "PASS AS RETAINED FIELDS ONLY",
+          "value": "1.2-mile outdoor trail; closed-toe shoes required; operator flashlight only; optional Blood Pass permits physical actor interaction with additional waiver; most suitable14+ is recommendation; under18 guardian waiver; no strollers/scooters; recommend15minutes early.",
+          "sources": [
+            "turn50view0"
+          ]
+        }
+      }
+    },
+    {
+      "recordId": "MO26-085",
+      "canonicalId": "date-night-mo26-085-brookdale-farms",
+      "sourceReviewVerdict": "FACTUAL/COPY PASS",
+      "exactAuthorProjectionAcceptance": "PENDING frozen amendment projection",
+      "approvedAddition": "The Hollows haunted trail uses separate admission and its own October calendar.",
+      "fields": {
+        "separateAdmission": {
+          "verdict": "PASS",
+          "sources": [
+            "turn53view0"
+          ],
+          "reason": "Current dedicated haunted-trail ticket product; page distinguishes separately ticketed other attractions. Current bundle includes Campfire Nights, not general FallFestival."
+        },
+        "calendar": {
+          "verdict": "PASS",
+          "sources": [
+            "turn53view0"
+          ],
+          "reason": "Explicit2026tickets/October calendar"
+        },
+        "preservation": {
+          "verdict": "REQUIRED",
+          "value": "Append only; retain FallFestival November8 lifecycle, categories, directions/placement, current stronger copy, no old2025FAQprices or new HauntedHouse category."
+        }
+      }
+    },
+    {
+      "recordId": "MO26-124",
+      "canonicalId": "date-night-mo26-124-hotel-of-terror",
+      "sourceReviewVerdict": "FACTUAL/COPY PASS",
+      "exactAuthorProjectionAcceptance": "PENDING frozen amendment projection",
+      "approvedAddition": "A combo pass with Dungeons of Doom includes transfer rides between the two haunts.",
+      "fields": {
+        "combo": {
+          "verdict": "PASS",
+          "sources": [
+            "turn53view1"
+          ],
+          "reason": "2026operator homepage explicitly says both-haunt combo includes hay/hearse transfers."
+        },
+        "preservation": {
+          "verdict": "REQUIRED",
+          "value": "Append exact generic sentence only; no specific vehicle/time/inventory promise, duplicate destination, lifecycle or routing change. Existing final2026season wording from prior accepted record is outside this narrow review; do not add unsupported new directory last-ever claims."
+        }
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "path": "evidence/amendments-independent-r1.json",
+      "bytes": 24140,
+      "sha256": "6d6263de627d568f90d5ebd10648e0118647ce46ddbc02b38d362ce5fee153ed"
+    },
+    {
+      "path": "evidence/dark-independent-click-r1.json",
+      "bytes": 2754,
+      "sha256": "ed1ee8f31c38314cc20abd7ae2156d056f503d07b6d6163e95caffa5a09983ea"
+    },
+    {
+      "path": "evidence/dark-independent-r1.json",
+      "bytes": 7972,
+      "sha256": "63dbb9e595202411522a53a2dc6874dcac317eeb1adaefa5520a28056c5b18b2"
+    },
+    {
+      "path": "evidence/goblin-click-r1.json",
+      "bytes": 8367,
+      "sha256": "b1d8c087fe0783e707b633d8387652ade97f94a5cecbbfa7cf0b54d53d4fd3e6"
+    },
+    {
+      "path": "evidence/goblin-open-r1.json",
+      "bytes": 8625,
+      "sha256": "092d4afa489e966bb66a603c63aec46b05056d022ce0c3751b73ff82dfbd3041"
+    }
+  ],
+  "scopeLimit": "No candidate/CI/runtime verdict. No exact author file hash bound yet; final independent eligible subset follows author freeze. Source retrieval via permitted web tool, map redirect receipt only."
+}

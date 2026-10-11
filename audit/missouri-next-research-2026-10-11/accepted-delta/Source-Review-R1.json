@@ -1,0 +1,93 @@
+{
+  "package": "MISSOURI-NEXT-DELTA-SOURCE-REVIEW-R1",
+  "reviewedAt": "2026-10-11T02:40:00Z",
+  "baseSha": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "method": "Bounded existing-inventory review. Search engine 1 used for primary verification; engine 2 filled recall gaps and led back to directly opened operator pages. These are analyst source notes, not byte-identical HTML captures or claimed HTTP receipts.",
+  "sources": [
+    {
+      "id": "GOBLIN-OFFICIAL-HOME",
+      "url": "https://www.whitehartfaire.com/",
+      "ref": "turn34view0",
+      "kind": "operator",
+      "observed": "White Hart Renaissance Fairgrounds identifies its public visitor address as 5651 State Hwy F, Hartville, MO 65667. Its upcoming 2026 section lists Goblin events in October and directly links the Shadow's Play ticket event."
+    },
+    {
+      "id": "GOBLIN-OFFICIAL-20261016",
+      "url": "https://www.whitehartfaire.com/event-details/goblin-king-haunted-trail-shadows-play-2026-10-16-19-00",
+      "ref": "turn36view0",
+      "kind": "operator event and ticket page",
+      "observed": "Explicit event time October 16, 2026, 19:00–23:30, at 5651 State Hwy F. Explicit complete 2026 haunted-trail dates: October 2, 3, 9, 10, 16, 17, 23, 24. Outdoor wooded trail; uneven ground, darkness, fog, loud sounds, sudden scares and theatrical effects. Closed-toe shoes/weather-appropriate clothing advised. Weather/site conditions may close attraction. General admission USD15 plus USD0.38 service fee; selected-night validity. No inventory or checkout total guarantee."
+    },
+    {
+      "id": "GOBLIN-OFFICIAL-20261010",
+      "url": "https://www.whitehartfaire.com/event-details/goblin-king-haunted-trail-shadows-play-2026-10-10-19-00",
+      "ref": "turn36view1",
+      "kind": "operator event and ticket page reached by homepage link",
+      "observed": "Same exact eight-date 2026 trail list and visitor address. October 10 occurrence explicitly 19:00–23:30. This does not establish closing time for every occurrence."
+    },
+    {
+      "id": "GOBLIN-OPERATOR-MAP",
+      "url": "https://goo.gl/maps/hLccWtsgQV1v4SgKA",
+      "ref": "turn36view2",
+      "kind": "operator-linked map redirect",
+      "observed": "Operator address hyperlink redirects to a Google Maps White Hart Renaissance Fairgrounds feature URL containing !3d37.2632207!4d-92.6693091. The separate viewport coordinate is 37.2632207,-92.6718894 and must not be substituted. Destination body was unavailable to web retrieval; independent point review remains pending.",
+      "redirectUrl": "https://www.google.com/maps/place/White+Hart+Renaissance+Fairgrounds/@37.2632207,-92.6718894,17z/data=!3m1!4b1!4m6!3m5!1s0x87cff627cfb41b6b:0x36cfd9438155ddad!8m2!3d37.2632207!4d-92.6693091!16s%2Fg%2F11f15jbqyp?entry=tts&shorturl=1"
+    },
+    {
+      "id": "GOBLIN-FINAL-DATE-LIMIT",
+      "url": "https://www.whitehartfaire.com/event-details/goblin-king-haunted-trail-shadows-play-2026-10-24-19-00",
+      "ref": "turn39view0",
+      "kind": "hypothesized occurrence URL; retrieval failed",
+      "observed": "No event content recovered. Do not treat guessed URL as evidence of hours. Final day October 24 is supported independently by the explicit 2026 date list on readable operator event pages."
+    },
+    {
+      "id": "HANNIBAL-DMO-INDEX",
+      "url": "https://visithannibal.com/events/",
+      "ref": "turn33view2",
+      "kind": "official destination marketing organization",
+      "observed": "Event index binds Warehouse of Nightmares to October 2–30, 2026; copy also says first four weekends, Fridays/Saturdays, and excludes October 31."
+    },
+    {
+      "id": "HANNIBAL-DMO-DETAIL",
+      "url": "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/",
+      "ref": "turn44view0",
+      "kind": "official destination marketing organization",
+      "observed": "Readable exact dates October2,3,9,10,16,17,23,24,30 at19:30–midnight. Still states first four weekends and routes to320 S.Bird St. Links Hannibal Jaycees operator. Address and October30/prose conflicts remain unresolved."
+    },
+    {
+      "id": "HANNIBAL-OPERATOR",
+      "url": "https://hannibaljaycees.org/",
+      "ref": "turn45view1",
+      "kind": "operator linked by official DMO",
+      "observed": "Operator contact location remains320 South3rd Street, Hannibal,MO63401. Haunt-specific route unavailable in this review; do not silently assume contact address resolves conflicting DMO visitor destination."
+    },
+    {
+      "id": "ZOMBIE-OFFICIAL",
+      "url": "https://booking.battlecreekpaintball.net/products/zombie-world",
+      "ref": "turn18view1",
+      "kind": "operator ticket page",
+      "observed": "Still explicitly labels theme and event calendar2025 despite2026 footer. No2026 operation or lifecycle established. RetainHOLD; do not infer closure."
+    },
+    {
+      "id": "DARK-LORDS-DIRECTORY",
+      "url": "https://www.thescarefactor.com/haunted-houses/missouri/dark-lords-manor-haunted-house/",
+      "ref": "turn26view1",
+      "kind": "secondary discovery/identity",
+      "observed": "Public Haunted House classification and14904 W State Hwy90,Noel,MO64854 retained; no current dates. Linked Facebook page61565644765225 unavailable via web. Bounded2026 searches returned no accepted first-party schedule."
+    },
+    {
+      "id": "BROOKDALE-HOLLOWS",
+      "url": "https://www.brookdalefarms.com/the-hollows",
+      "refs": ["turn18view2", "turn19view3"],
+      "kind": "operator",
+      "observed": "2026 Tickets and October2026 occurrence calendar directly readable. Dedicated Hollows ticket product and other simultaneous events requiring separate tickets support a concise separate-admission/own-October-calendar note. 2025 FAQ price remains historical and excluded; do not change Fall Festival lifecycle or categories."
+    },
+    {
+      "id": "HOTEL-COMBO",
+      "url": "https://www.hotelofterror.com/",
+      "refs": ["turn18view3", "turn19view1"],
+      "kind": "shared operator",
+      "observed": "2026 Terror Season and dated October2026 calendar readable. Combo pass includes entry to Hotel of Terror and Dungeons of Doom plus transfer rides between them. Proposed copy omits price, vehicle type, wait/availability, and any dropoff precision guarantee."
+    }
+  ]
+}

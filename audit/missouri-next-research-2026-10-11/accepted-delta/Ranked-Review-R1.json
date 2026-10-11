@@ -1,0 +1,107 @@
+{
+  "package": "MISSOURI-NEXT-DELTA-RANKED-REVIEW-R1",
+  "frozenAt": "2026-10-11T02:47:00Z",
+  "baseSha": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "scope": "Existing delta3–6 and retained release inventories only. No statewide discovery restart, residential research, operator contacts, paid APIs, production or runtime edits.",
+  "authorCounts": {"reviewedProposalRecords": 6, "factualPassNewRecord": 1, "materialAmendmentPass": 2, "hold": 3, "rejectRecords": 0},
+  "rankedRecords": [
+    {
+      "rank": 1,
+      "recordId": "DELTA3-GOBLIN",
+      "name": "The Goblin King's Haunted Trail — Shadow's Play",
+      "classification": "Existing unresolved delta3 public-attraction research identity; new runtime identity",
+      "factualVerdict": "AUTHOR PASS",
+      "placementVerdict": "AUTHOR PASS — qualified operator-linked fairground point",
+      "independentVerdict": "PENDING exact frozen projection review",
+      "decision": "Submit one new attraction for next nonproduction candidate",
+      "value": "Adds explicit 2026 public haunted-trail coverage at Hartville, including four future operating nights after October10.",
+      "sourceUrls": ["https://www.whitehartfaire.com/", "https://www.whitehartfaire.com/event-details/goblin-king-haunted-trail-shadows-play-2026-10-16-19-00", "https://goo.gl/maps/hLccWtsgQV1v4SgKA"],
+      "proposalPath": "Candidate-Projections-R1.json#/newRecords/0",
+      "remainingLimits": ["Exact final-night closing time unknown", "No generalization of date-specific19:00–23:30 hours", "Approximate point not arrival precision", "Runtime/CI/browser/geometry/expiry/cache/Android acceptance separate", "No October31 Feast import or2027 recurrence"]
+    },
+    {
+      "rank": 2,
+      "recordId": "MO26-085",
+      "name": "Brookdale Farms Fall Festival",
+      "classification": "Material amendment to existing released identity",
+      "factualVerdict": "AUTHOR PASS for exact added sentence",
+      "placementVerdict": "UNCHANGED reviewed baseline",
+      "independentVerdict": "PENDING exact frozen projection review",
+      "decision": "Submit separate-admission/own-October-calendar clarification",
+      "sourceUrls": ["https://www.brookdalefarms.com/the-hollows"],
+      "proposalPath": "Candidate-Projections-R1.json#/amendments/0",
+      "remainingLimits": ["Do not alter Fall Festival November8 lifecycle or categories", "Do not add a duplicate Hollows record", "No2025FAQprice or unrelated parking claim"]
+    },
+    {
+      "rank": 3,
+      "recordId": "MO26-124",
+      "name": "Hotel of Terror",
+      "classification": "Material amendment to existing released identity",
+      "factualVerdict": "AUTHOR PASS for exact added sentence",
+      "placementVerdict": "UNCHANGED reviewed baseline",
+      "independentVerdict": "PENDING exact frozen projection review",
+      "decision": "Submit combo-pass transfer clarification",
+      "sourceUrls": ["https://www.hotelofterror.com/"],
+      "proposalPath": "Candidate-Projections-R1.json#/amendments/1",
+      "remainingLimits": ["Keep Hotel and Dungeons separate identities/addresses", "No specific vehicle or live transfer availability guarantee", "No new final-ever-season statement", "One amendment counted, not one per haunt"]
+    },
+    {
+      "rank": 4,
+      "recordId": "DELTA2-HANNIBAL",
+      "name": "Hannibal Jaycees' Warehouse of Nightmares",
+      "classification": "Existing public-charity attraction lead",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD; no accepted current visitor-destination resolution",
+      "decision": "Preserve exact existing conflicts; no import",
+      "newlyReproduced": "Official DMO index still explicitly binds2026 operation. Detail contains nine exact dates includingOct30 plus first-four-weekends prose. DMO visitor location320 S.Bird contradicts operator320 South3rd contact location. Operator contact office alone is insufficient to resolve haunt visitor destination.",
+      "sourceUrls": ["https://visithannibal.com/events/", "https://visithannibal.com/events/hannibal-jaycees-warehouse-of-nightmares/", "https://hannibaljaycees.org/"],
+      "nextEvidenceNeeded": "Current haunt-specific operator address and resolution or defensible exact-date subset. No additional open-ended searches in this lane.",
+      "consumerProjection": null
+    },
+    {
+      "rank": 5,
+      "recordId": "DELTA3-ZOMBIE-WORLD",
+      "name": "Zombie World Strange Things",
+      "classification": "Existing public commercial attraction at Battle Creek Paintball",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "NOT ADVANCED because2026 lifecycle unresolved",
+      "decision": "No2026 import; retain identity and historical field leads",
+      "newlyReproduced": "Operator booking still labels theme and calendar October2025. Current copyright does not rebind event dates. No closure inferred.",
+      "sourceUrls": ["https://booking.battlecreekpaintball.net/products/zombie-world"],
+      "rejectedEvidenceUse": "Reusing2025 operating dates as2026",
+      "consumerProjection": null
+    },
+    {
+      "rank": 6,
+      "recordId": "DELTA3-DARK-LORDS",
+      "name": "Dark Lords Manor Haunted House",
+      "classification": "Existing public haunted-house directory lead; current operation unverified",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "NOT ADVANCED because2026 lifecycle unresolved",
+      "decision": "No import; do not infer closed",
+      "newlyReproduced": "Directory identity/category/address remain; no accepted2026 operation or final date. Directory-linked Facebook source unavailable, and bounded searches recovered no accepted first-party schedule.",
+      "sourceUrls": ["https://www.thescarefactor.com/haunted-houses/missouri/dark-lords-manor-haunted-house/", "https://www.facebook.com/profile.php?id=61565644765225"],
+      "consumerProjection": null
+    }
+  ],
+  "notCounted": [
+    {"identity": "DELTA3-MOUNT-WASHINGTON", "decision": "EXCLUDED from fresh research/import because prior residential/public classification remains ambiguous; separate product policy required"},
+    {"identity": "DELTA6-ROLLA", "decision": "Owner explicitly deferred; excluded regardless remaining October10 operating time"},
+    {"identity": "DELTA3-BAKERSFIELD / DELTA3-DARK-NIGHTMARES / DELTA3-FARRINGTON", "decision": "Reassigned to lane5; early search leads communicated, no verdict or duplicate research count here"},
+    {"identity": "Commercial eight + Cadaver", "decision": "Other lanes own review; no duplicated work"},
+    {"identity": "Seven PR62 resolved records", "decision": "Excluded except existing baseline identity checks"},
+    {"identity": "Earlier factualPASS/placementHOLD Aurora/Feemster/Shepherd", "decision": "Already shippedPR60; no new work"}
+  ],
+  "inputLedgers": [
+    "audit/missouri-three-source-delta3-research-r2.json",
+    "audit/missouri-three-source-delta4-research-r4.json",
+    "audit/missouri-delta5-independent-2026-10-09/final/Independent-Delta5-R2-Final-Verdicts.json",
+    "audit/astra-statewide-delta6-2026-10-09/Classification-Matrix-R2.json",
+    "audit/astra-statewide-delta6-2026-10-09/Priority-Projections-R2.json",
+    "audit/astra-delta6-independent-2026-10-09/Delta6-Independent-Eligible-R2.json",
+    "audit/astra-delta6-independent-2026-10-09/Enrichment-Two-Independent-R1.json",
+    "audit/astra-release-prep-2026-10-09/Candidate6-Release-Inventory.json",
+    "audit/phase4-missouri-2026-10-10/Phase4-17-Record-Summary-R1.json"
+  ],
+  "candidateRules": "Preferred batch size is not a quota. This lane recommends3 changed records only. All current contracts, source-bound lifecycle, no2027 recurrence, conservativeOpenNow, qualifiedplacement, addressDirections, duplicate/cache protections and pending exact-candidate gates remain mandatory. No next-candidate release authority."
+}

@@ -1,0 +1,192 @@
+{
+  "package": "MISSOURI-NEXT-COMMERCIAL-A-R1",
+  "frozenAt": "2026-10-11T02:40:47.228413+00:00",
+  "canonicalInput": "7f99dd58fe0e1406ae5eaffd1583eec686674732",
+  "releasedMain": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "production": "dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U",
+  "baselineScope": "Coordinator-provided phase3 baseline; this research lane did not repeat production reads",
+  "counts": {
+    "reviewedExistingRecords": 4,
+    "newFactualPass": 0,
+    "newPlacementPass": 0,
+    "implementationEligible": 0,
+    "hold": 4,
+    "reject": 0,
+    "runtimeImports": 0,
+    "newDiscoveries": 0
+  },
+  "priorInputs": [
+    {
+      "path": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+      "sha256": "3b1772c055e8b2852b732b56b9e9a0756755c31ef6c8a57341c684cab9f6a7b6"
+    },
+    {
+      "path": "audit/phase4-missouri-2026-10-10/Commercial-Six-Independent-Verdicts-R1.json",
+      "sha256": "0fd99a3f819d8ac6f0fb2685cccbe7d151691e18e3f0c0b66a33c60800cfc99f"
+    },
+    {
+      "path": "audit/astra-commercial-holds-2026-10-09/Commercial-Holds-Research-R1.json",
+      "sha256": "daa7a61c2f5ff9f4ff4a90fa0a870ba03134fe858ed448085f4e694210ca62cc"
+    },
+    {
+      "path": "audit/astra-commercial-holds-2026-10-09/Commercial-Holds-Report-R1.txt",
+      "sha256": "95707e9d2567fae932a90db5da6f42f3965ce9913ec348c3da6a7ada8a2b3038"
+    },
+    {
+      "path": "audit/astra-commercial-independent-2026-10-09/Commercial-Holds-Independent-Report-R1.md",
+      "sha256": "02a1c5cf6b9f9e2765daa2d99c5cad757d23148b4a36e12f31e4c9fd4a8b1535"
+    }
+  ],
+  "records": [
+    {
+      "identityVerdict": "PASS retained: existing public commercial attraction research identity",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD: no independently accepted runtime point; no speculative geocoding performed while operation remains unresolved",
+      "implementationEligible": false,
+      "runtimeImported": false,
+      "newDiscovery": false,
+      "lifecycleStatus": "UNRESOLVED; no closure or expiry adjudication",
+      "accepted2026Dates": null,
+      "listingExpiresAt": null,
+      "lat": null,
+      "lon": null,
+      "machineOpeningIntervals": null,
+      "openNowPolicy": "never",
+      "no2027Recurrence": true,
+      "acceptedProjection": null,
+      "recordId": "DELTA2-FEARFACTORY",
+      "name": "Fear Factory LLC",
+      "retainedVisitorAddress": "102 South Main Street, Mountain Grove, MO 65711",
+      "directionTargetIfCleared": "Supported visitor address only; no entrance, parking or ride-dropoff precision",
+      "sourceIds": [
+        "FF-CONTACT",
+        "FF-CALENDAR",
+        "FF-FACEBOOK"
+      ],
+      "reason": "No reliable 2026 operation/date binding or supported expiry. Available indexed first-party contact/calendar explicitly bind to 2025; direct fresh reads returned 502. Secondary closed claims remain insufficient to adjudicate closure.",
+      "fieldReview": {
+        "visitorAddress": "PASS retained; corroborated by indexed operator contact",
+        "hoursAdmission": "Only historical 2025 values recovered; no current guarantee",
+        "delta": "No factual clearance; 2025 calendar asset corroborated"
+      }
+    },
+    {
+      "identityVerdict": "PASS retained: existing public commercial attraction research identity",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD: no independently accepted runtime point; no speculative geocoding performed while operation remains unresolved",
+      "implementationEligible": false,
+      "runtimeImported": false,
+      "newDiscovery": false,
+      "lifecycleStatus": "UNRESOLVED; no closure or expiry adjudication",
+      "accepted2026Dates": null,
+      "listingExpiresAt": null,
+      "lat": null,
+      "lon": null,
+      "machineOpeningIntervals": null,
+      "openNowPolicy": "never",
+      "no2027Recurrence": true,
+      "acceptedProjection": null,
+      "recordId": "DELTA2-WACO",
+      "name": "Waco School House Haunt",
+      "retainedVisitorAddress": "148 Rose Street, Waco / Asbury, MO 64832",
+      "directionTargetIfCleared": "Supported visitor address only; no entrance, parking or ride-dropoff precision",
+      "sourceIds": [
+        "WACO-ORIGIN",
+        "WACO-FACEBOOK-POST",
+        "WACO-DIRECTORY"
+      ],
+      "reason": "No reliable 2026 invitation/date binding or expiry. An indexed operator post says October 9 through Halloween but has no accepted year/timestamp; direct post fetch throttled. The official origin remains unavailable; directory dates are not loaded.",
+      "fieldReview": {
+        "visitorAddress": "PASS retained; directory corroborates Asbury postal form",
+        "hoursAdmission": "Unknown; not a standalone blocker",
+        "delta": "Yearless operator opening-post lead preserved but not accepted; origin failure does not imply closure"
+      }
+    },
+    {
+      "identityVerdict": "PASS retained: existing public commercial attraction research identity",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD: no independently accepted runtime point; no speculative geocoding performed while operation remains unresolved",
+      "implementationEligible": false,
+      "runtimeImported": false,
+      "newDiscovery": false,
+      "lifecycleStatus": "UNRESOLVED; no closure or expiry adjudication",
+      "accepted2026Dates": null,
+      "listingExpiresAt": null,
+      "lat": null,
+      "lon": null,
+      "machineOpeningIntervals": null,
+      "openNowPolicy": "never",
+      "no2027Recurrence": true,
+      "acceptedProjection": null,
+      "recordId": "DELTA5-RISING-RECHECK",
+      "name": "Rising Haunted Attraction",
+      "retainedVisitorAddress": "25238 Raleigh Road, Waynesville, MO 65583",
+      "directionTargetIfCleared": "Supported visitor address only; no entrance, parking or ride-dropoff precision",
+      "sourceIds": [
+        "RISING-DMO",
+        "RISING-FACEBOOK",
+        "RISING-DIRECTORY",
+        "RISING-MORTY-OPEN",
+        "RISING-MORTY-SEARCH"
+      ],
+      "reason": "Reliable current lifecycle remains unresolved. Prior explicit 2026 secondary calendar is retained as a field finding, while same-URL Morty search reopening and full-text no-longer-operational assertions conflict. No current first-party resolution recovered; direct official tourism page explicitly lists 2024 events.",
+      "fieldReview": {
+        "visitorAddress": "PASS retained; current direct DMO body supports visitor address",
+        "calendarField": "Prior independently preserved ten marked 2026 directory dates retained, not a new full-record factual PASS",
+        "hoursAdmission": "Current reliable first-party values unknown; no blocker by themselves",
+        "delta": "Fresh direct DMO raw body conclusively binds its event dates to 2024; current secondary contradiction reproduced"
+      }
+    },
+    {
+      "identityVerdict": "PASS retained: existing public commercial attraction research identity",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD: no independently accepted runtime point; no speculative geocoding performed while operation remains unresolved",
+      "implementationEligible": false,
+      "runtimeImported": false,
+      "newDiscovery": false,
+      "lifecycleStatus": "UNRESOLVED; no closure or expiry adjudication",
+      "accepted2026Dates": null,
+      "listingExpiresAt": null,
+      "lat": null,
+      "lon": null,
+      "machineOpeningIntervals": null,
+      "openNowPolicy": "never",
+      "no2027Recurrence": true,
+      "acceptedProjection": null,
+      "recordId": "DELTA2-TWISTED",
+      "name": "Twisted Minds Haunted House",
+      "retainedVisitorAddress": "10000 Bear Cove Road, Richwoods, MO 63071",
+      "directionTargetIfCleared": "Supported visitor address only; no entrance, parking or ride-dropoff precision",
+      "sourceIds": [
+        "TWISTED-FACEBOOK",
+        "TWISTED-ABOUT",
+        "TWISTED-DIRECTORY",
+        "TWISTED-ORIGIN"
+      ],
+      "reason": "No reliable 2026 public invitation, dates or supported lifecycle cutoff. Operator-identity Facebook profile has yearless October recurrence; full page throttled. Newly indexed 10002 Bear Cove conflicts with retained directory 10000; destination correction is unadjudicated.",
+      "fieldReview": {
+        "visitorAddress": "Prior 10000 retained as historical field; new 10002 operator-profile candidate creates unresolved destination conflict, no replacement accepted",
+        "hoursAdmission": "Historical or yearless only; no current guarantee",
+        "delta": "10000/10002 address conflict preserved; California/Illinois namesakes explicitly excluded"
+      }
+    }
+  ],
+  "boundedResearch": {
+    "system1Queries": 13,
+    "system2Queries": 3,
+    "searchPolicy": "System1 primary-authority queries; system2 used to fill observed coverage gaps. Only exact assigned records and direct source followups.",
+    "directOriginRequests": 5,
+    "browserUsed": false,
+    "operatorContact": false,
+    "paidApi": false,
+    "statewideRestart": false,
+    "sourceRetention": "Scoped source-linked summaries and short excerpts; unrelated search outputs not republished. One relevant raw official tourism page retained with hash."
+  },
+  "researchLimitations": [
+    "Fresh search/open calls can return indexed historical content; crawl age is recorded per source. Fresh direct reads separately identify 502 versus raw200.",
+    "Source access failures do not establish closure. Same-source snippets are not independent corroboration.",
+    "No accepted next runtime projection. Do not pad the batch with these unresolved records.",
+    "No source, tests, runtime, production, protection, settings or canonical continuity changes."
+  ],
+  "next": "Retain all four HOLDs; re-open only on materially new first-party 2026 operational/lifecycle evidence or independently resolved source conflict. No automatic repeat sweep."
+}

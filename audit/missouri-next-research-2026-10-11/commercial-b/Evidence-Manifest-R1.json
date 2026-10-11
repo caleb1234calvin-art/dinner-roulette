@@ -1,0 +1,73 @@
+{
+  "package": "COMMERCIAL-B-MANIFEST-R1",
+  "createdAt": "2026-10-11T02:41:25.679522+00:00",
+  "files": [
+    {
+      "path": "Commercial-B-Review-R1.json",
+      "bytes": 10605,
+      "sha256": "9a289b5d6172cf81babea006931c58595d4f16f0e076f17aae246ab69567e1fc"
+    },
+    {
+      "path": "Eligible-Field-Projections-R1.json",
+      "bytes": 1798,
+      "sha256": "b94841c9613642c48cdb58465a028c51338edb04d22d2d362bda033d5e521bca"
+    },
+    {
+      "path": "Prior-Four-Ledger-Extract.json",
+      "bytes": 3634,
+      "sha256": "02ea4372177394a58fea5755db209c1a866435cc40e5afa070f756e95d321f55"
+    },
+    {
+      "path": "Scoped-Source-Receipts-R1.json",
+      "bytes": 5511,
+      "sha256": "f14a37235d3916cd315171c8f874cc3018001510806af62663a8064686c2e33f"
+    },
+    {
+      "path": "boss-contest-poster.jpg",
+      "bytes": 40404,
+      "sha256": "92a5adbd3d9fc5a5ec0f04084542c71cf9131318bdc99f013cfc95a363dae9b0"
+    },
+    {
+      "path": "boss-harvest-poster.jpg",
+      "bytes": 52700,
+      "sha256": "cb7fcf006e46e22ac0411ef583088f26816faab8893c914aea4e598ab9662b25"
+    },
+    {
+      "path": "direct-retrieval-receipts.json",
+      "bytes": 1199,
+      "sha256": "5367e45f3b37195dc3403b0723f233107b3733b5013e6a48a3c2db4d7d5cadf8"
+    },
+    {
+      "path": "poster-receipts.json",
+      "bytes": 539,
+      "sha256": "571763c59452113a5cc688b3204a71774a745b05a84346192f37d6e34c529d04"
+    }
+  ],
+  "privateReviewFilesOutsidePackage": [
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-commercial-b-raw-review/boss-course.html",
+      "bytes": 121564,
+      "sha256": "a40143a8d74f0cc5af8c832937eac20dc23ee7c6ce6206bc3a21c5a4acde6f9b",
+      "publication": "excluded"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-commercial-b-raw-review/boss-harvest.html",
+      "bytes": 91971,
+      "sha256": "20c1f426e6a09356a64ffe7e2dcaad33895b578bc77ec27a5ba9162d4532d162",
+      "publication": "excluded"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-commercial-b-raw-review/terrified-homepage.html",
+      "bytes": 16965,
+      "sha256": "18679355567997db8a596cdf97b2265c684886fa4537274e2626eee478f280d1",
+      "publication": "excluded"
+    },
+    {
+      "path": "/workspace/scratch/b32d3f8a7b78/missouri-commercial-b-raw-review/scoped-primary-web-receipts.json",
+      "bytes": 16778,
+      "sha256": "f187cb2a5a0488914a9eb026b4a408788e21a95c3b934ff2c9197dc1181fee66",
+      "publication": "excluded"
+    }
+  ],
+  "rawByteNormalization": "No normalization claim for webtool excerpts; direct HTML/image byte hashes recorded at retrieval."
+}

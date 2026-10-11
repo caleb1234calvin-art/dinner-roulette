@@ -1,0 +1,196 @@
+{
+  "schema": "MISSOURI-COMMERCIAL-A-SCOPED-SOURCE-EVIDENCE-R1",
+  "capturedAt": "2026-10-11T02:39:48.384Z",
+  "scope": "Four assigned existing commercial HOLD identities only. No unrelated search results republished.",
+  "evidence": [
+    {
+      "id": "FF-CONTACT",
+      "url": "https://www.fearfactoryllc.com/contact",
+      "toolRef": "turn8view0",
+      "retrieval": "Indexed/rendered open, crawl age five months; fresh direct origin independently returned 502",
+      "authority": "first-party operator website",
+      "excerpt": "Halloween Season 2025",
+      "findings": [
+        "Season header binds schedule to 2025, not 2026.",
+        "Public visitor destination remains102 South Main Street, Mountain Grove, MO 65711."
+      ],
+      "supports": [
+        "identity",
+        "historical visitor address",
+        "2025-only schedule"
+      ],
+      "doesNotSupport": [
+        "2026 operation",
+        "2026 dates",
+        "2026 expiry"
+      ]
+    },
+    {
+      "id": "FF-CALENDAR",
+      "url": "https://www.fearfactoryllc.com/calendar",
+      "toolRef": "turn17view4",
+      "retrieval": "Indexed/rendered open, crawl age seven months; fresh direct origin returned 502",
+      "authority": "first-party operator website",
+      "excerpt": "september-october-2025-calendar.jpg",
+      "findings": [
+        "Calendar page retains 2025 season label and 2025 calendar asset."
+      ],
+      "doesNotSupport": [
+        "2026 calendar"
+      ]
+    },
+    {
+      "id": "FF-FACEBOOK",
+      "url": "https://www.facebook.com/fearfactoryllc/",
+      "toolRef": "turn17view3",
+      "retrieval": "Open returned an indexed temporary-block page, not venue content",
+      "authority": "operator Facebook identity also named by operator contact page",
+      "excerpt": "You\u2019re Temporarily Blocked",
+      "findings": [
+        "No current official 2026 post content preserved."
+      ]
+    },
+    {
+      "id": "WACO-ORIGIN",
+      "url": "https://www.wacoschoolhousehaunt.com/",
+      "toolRef": "turn8view2",
+      "retrieval": "Tool inaccessible; fresh direct origin 502",
+      "authority": "previously identified official website",
+      "findings": [
+        "Access failure is not closure evidence."
+      ]
+    },
+    {
+      "id": "WACO-FACEBOOK-POST",
+      "url": "https://www.facebook.com/wacoshoolhousehaunt/posts/one-more-week-dont-forget-were-closed-tonight-but-starting-october-9-well-be-ope/1428381122781009/",
+      "toolRef": "turn9search3",
+      "openRef": "turn17view1",
+      "retrieval": "Indexed operator post; open throttled",
+      "authority": "official Waco page established by prior and directory-linked identity",
+      "excerpt": "opening October 9, Fridays and Saturdays through Halloween",
+      "findings": [
+        "No 2026 year or reliable post timestamp recovered; do not assign a year from weekday compatibility.",
+        "Not accepted for operating dates or expiry."
+      ]
+    },
+    {
+      "id": "WACO-DIRECTORY",
+      "url": "https://www.thescarefactor.com/haunted-houses/missouri/waco-school-house-haunt/",
+      "toolRef": "turn9search5",
+      "retrieval": "Indexed directory page, crawled last month",
+      "authority": "secondary attraction directory",
+      "excerpt": "Dates & hours for the coming season have not been loaded",
+      "findings": [
+        "Address corroborates148 Rose Street, Asbury, Missouri 64832.",
+        "No current season calendar provided."
+      ]
+    },
+    {
+      "id": "RISING-DMO",
+      "url": "https://visitpulaskicounty.org/events?event=17447",
+      "toolRef": "turn17view0",
+      "retrieval": "Indexed official DMO page plus direct 200 raw body captured 2026-10-11T02:38:23Z",
+      "authority": "official county tourism bureau",
+      "excerpt": "September 27, 2024",
+      "findings": [
+        "Raw origin has eleven explicitly 2024 event dates through October31,2024.",
+        "Retains25238 Raleigh Road, Waynesville, MO 65583 and operator Facebook link.",
+        "No 2026 operation/date clearance."
+      ]
+    },
+    {
+      "id": "RISING-FACEBOOK",
+      "url": "https://www.facebook.com/%40risinghauntedattraction",
+      "toolRef": "turn20view3",
+      "retrieval": "DMO-linked operator URL open throttled",
+      "authority": "first-party operator Facebook bound by official DMO link",
+      "findings": [
+        "No first-party 2026 lifecycle resolution preserved."
+      ]
+    },
+    {
+      "id": "RISING-DIRECTORY",
+      "url": "https://www.missourihauntedhouses.com/halloween/rising-haunted-attraction-mo.html",
+      "toolRef": "turn20view2",
+      "retrieval": "Indexed/rendered open, crawl age four days",
+      "authority": "secondary attraction directory",
+      "excerpt": "2026 Schedule",
+      "findings": [
+        "2026 month headings and recent review labels remain; open text flattens marked cells.",
+        "Prior independently retained ten marked 2026 dates remain a historical field finding; this retrieval does not newly reproduce cell marks.",
+        "Current operator lifecycle still unverified."
+      ]
+    },
+    {
+      "id": "RISING-MORTY-OPEN",
+      "url": "https://morty.app/location/rising-haunted-attraction/waynesville",
+      "toolRef": "turn20view1",
+      "retrieval": "Indexed/rendered open, crawl age last month",
+      "authority": "secondary directory",
+      "excerpt": "the venue is no longer operational",
+      "findings": [
+        "Full-text negative operational assertion conflicts with the same URL search snippet\u2019s 2026 reopening claim.",
+        "Neither secondary statement adjudicated as permanent closure or reliable reopening."
+      ]
+    },
+    {
+      "id": "RISING-MORTY-SEARCH",
+      "url": "https://morty.app/location/rising-haunted-attraction/waynesville",
+      "toolRef": "turn15search27",
+      "retrieval": "Search snippet, crawled two weeks ago",
+      "authority": "secondary directory search representation",
+      "excerpt": "the attraction reopens for the 2026 season",
+      "findings": [
+        "Conflicts with opened same URL; not independent corroboration or first-party evidence."
+      ]
+    },
+    {
+      "id": "TWISTED-FACEBOOK",
+      "url": "https://www.facebook.com/p/Twisted-Minds-Haunted-House-100063863258623/",
+      "toolRef": "turn8search1",
+      "openRef": "turn17view2",
+      "retrieval": "Indexed identity snippet; open throttled",
+      "authority": "apparent operator Facebook identity matching Richwoods attraction; full page unavailable",
+      "excerpt": "10002 Bear Cove",
+      "findings": [
+        "Address candidate10002 conflicts with retained10000 Bear Cove Road; no silent address replacement.",
+        "No explicit 2026 operation/date statement recovered."
+      ]
+    },
+    {
+      "id": "TWISTED-ABOUT",
+      "url": "https://www.facebook.com/100063863258623/about/",
+      "toolRef": "turn8search11",
+      "retrieval": "Indexed profile excerpt only",
+      "authority": "same operator-identity page candidate",
+      "excerpt": "We are open from Oct 2nd- Oct 31st",
+      "findings": [
+        "Yearless profile recurrence not accepted as 2026 dates.",
+        "Closed-now labels do not establish permanent closure."
+      ]
+    },
+    {
+      "id": "TWISTED-DIRECTORY",
+      "url": "https://www.hauntworld.com/haunted-house-in-richwoods-missouri-twisted-minds-haunted",
+      "toolRef": "turn8search3",
+      "retrieval": "Indexed secondary directory, crawled two months ago",
+      "authority": "secondary attraction directory",
+      "excerpt": "10000 Bear Cove Rd, Richwoods, Missouri, 63071",
+      "findings": [
+        "Historical public attraction identity,address and website retained; no 2026 calendar.",
+        "California Twisted Minds and Illinois Twisted Crypt results excluded as different identities."
+      ]
+    },
+    {
+      "id": "TWISTED-ORIGIN",
+      "url": "https://www.bearcoveent.com/",
+      "toolRef": "turn20view0",
+      "retrieval": "Tool inaccessible; direct 502",
+      "authority": "HTTPS form of historical directory-linked http://www.bearcoveent.com",
+      "findings": [
+        "No current operator invitation/date evidence retrieved.",
+        "Access failure is not closure evidence."
+      ]
+    }
+  ]
+}

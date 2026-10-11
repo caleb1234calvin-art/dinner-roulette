@@ -1,0 +1,11 @@
+{
+  "artifact": "Candidate-Projections-R2.json",
+  "originPackage": "MISSOURI-NEXT-DELTA-CANDIDATE-PROJECTIONS-R1",
+  "purpose": "Minimal schema normalization after independent review; R1 bytes preserved",
+  "changes": [
+    {"path": "/newRecords/0/placement/basis", "before": "operator-linked-map", "after": "operator-site", "reason": "Current ListingCompletenessV1 accepted enum; source remains operator-linked approximate fairground point"},
+    {"path": "/newRecords/0/expiryBasis", "before": "source-bound", "after": "date-only", "reason": "Current ListingCompletenessV1 accepted enum; same source-bound date rationale and exact cutoff"}
+  ],
+  "unchanged": "All facts, coordinates, dates, cutoffs, copy, identities, source links, metadata and limitations",
+  "runtimeMutations": false
+}

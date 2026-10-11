@@ -1,0 +1,65 @@
+{
+  "source": "audit/phase4-missouri-2026-10-10/recovery-20261010/independent/Phase4-17-Record-Ledger-Recovery-R1.json",
+  "records": [
+    {
+      "recordId": "DELTA3-TERRIFIEDEXIST",
+      "name": "TerrifiedExist Haunted Attractions",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD",
+      "factualAndPlacementReadyAtReview": false,
+      "selectedForRecommendedCandidate": false,
+      "lifecycleStatusAtReview": "UNRESOLVED / not asserted closed or expired",
+      "releaseApproved": false,
+      "runtimeImported": false,
+      "newDiscovery": false,
+      "dedupeAction": "Existing research identity; potential new runtime record only if cleared",
+      "reason": "HOLD. Actual retained TicketLeap body is generic platform marketing after redirect to https://www.ticketleap.com/; it contains no TerrifiedExist visitor event, operation date or expiry. HTTP200 is not factual venue evidence, and generic copyright2026 is not year binding. Independent web reopen unavailable; no closure inferred. Prior hiring/evergreen information remains insufficient.",
+      "reviewRef": "Recovery-Independent-Review-R1.json#DELTA3-TERRIFIEDEXIST"
+    },
+    {
+      "recordId": "MO26-088",
+      "name": "Lemp Brewery Haunted House",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD",
+      "factualAndPlacementReadyAtReview": false,
+      "selectedForRecommendedCandidate": false,
+      "lifecycleStatusAtReview": "UNRESOLVED / not asserted closed or expired",
+      "releaseApproved": false,
+      "runtimeImported": false,
+      "newDiscovery": false,
+      "dedupeAction": "Existing research identity; potential new runtime record only if cleared",
+      "reason": "First-party may/may-not-open and2026-return claims conflict. No Lemp-specific current calendar/ticket binding; never borrow Darkness or Creepyworld schedule.",
+      "reviewRef": "Prior independently accepted HOLD retained; no new evidence in this bounded recovery"
+    },
+    {
+      "recordId": "DELTA6-BOSS",
+      "name": "BOSS Haunted House, Fort Leonard Wood",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD",
+      "factualAndPlacementReadyAtReview": false,
+      "selectedForRecommendedCandidate": false,
+      "lifecycleStatusAtReview": "UNRESOLVED / not asserted closed or expired",
+      "releaseApproved": false,
+      "runtimeImported": false,
+      "newDiscovery": false,
+      "dedupeAction": "Existing research identity; potential new runtime record only if cleared",
+      "reason": "2026 event evidence recovered, but general-public eligibility and event-specific military base access process not established. No unrestricted route or eligible runtime point accepted.",
+      "reviewRef": "Prior independently accepted HOLD retained; no new evidence in this bounded recovery"
+    },
+    {
+      "recordId": "DELTA2-MACABRE",
+      "name": "Macabre Cinema",
+      "factualVerdict": "HOLD",
+      "placementVerdict": "HOLD",
+      "factualAndPlacementReadyAtReview": false,
+      "selectedForRecommendedCandidate": false,
+      "lifecycleStatusAtReview": "UNRESOLVED / not asserted closed or expired",
+      "releaseApproved": false,
+      "runtimeImported": false,
+      "newDiscovery": false,
+      "dedupeAction": "Existing research identity; potential new runtime record only if cleared",
+      "reason": "DMO describes redevelopment and suspended traditional season. Specials not explicitly announced; calendar wrapper cannot establish operation. No blanket permanent-closure claim.",
+      "reviewRef": "Prior independently accepted HOLD retained; no new evidence in this bounded recovery"
+    }
+  ]
+}

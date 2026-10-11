@@ -1,0 +1,138 @@
+{
+  "sourcePath": "/workspace/scratch/b32d3f8a7b78/release-repo/audit/missouri-three-source-delta3-research-r2.json",
+  "sourceSha256": "0845719a25a8fae03a810a2370aad117b577a67990054be95dc8718dcd87539c",
+  "records": [
+    {
+      "record_id": "DELTA3-BAKERSFIELD",
+      "name": "The Bakersfield Haunted House",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/the-bakersfield-haunted-house/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "The Bakersfield Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/the-bakersfield-haunted-house/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "652 County Road 585, Bakersfield, MO 65609",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/the-bakersfield-haunted-house/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/the-bakersfield-haunted-house/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Directory season empty; recovered local newspaper evidence is 2025/older, not current 2026."
+      ],
+      "consumer_projection": null
+    },
+    {
+      "record_id": "DELTA3-DARK-NIGHTMARES",
+      "name": "Dark Nightmares Haunted Attraction",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/dark-nightmares-haunted-attraction/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "Dark Nightmares Haunted Attraction",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/dark-nightmares-haunted-attraction/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "34100 E US-24, Buckner, MO 64016",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/dark-nightmares-haunted-attraction/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Haunted House",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/dark-nightmares-haunted-attraction/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Current 2026 operator binding missing; secondary Morty gives33100US24 versus directory34100. Preserve routing conflict."
+      ],
+      "consumer_projection": null
+    },
+    {
+      "record_id": "DELTA3-FARRINGTON",
+      "name": "Annual Farrington Park Haunted Hayride",
+      "discovery_class": "NET NEW \u2014 PROVISIONAL",
+      "identity_dedupe": "No matching canonical name was found in the retained 134-identity ledger or the active cumulative catalog. The earlier external sweep ledger is unavailable, so global novelty remains provisional.",
+      "discovery_source": "https://www.thescarefactor.com/haunted-houses/missouri/annual-farrington-park-haunted-hayride/",
+      "research_decision": "HOLD",
+      "independent_verdict": "NOT PERFORMED",
+      "runtime_eligible": false,
+      "fields": {
+        "identity": {
+          "value": "Annual Farrington Park Haunted Hayride",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/annual-farrington-park-haunted-hayride/",
+          "status": "directory lead"
+        },
+        "visitor_address": {
+          "value": "116 S County Line Rd, Windsor, MO65360",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/annual-farrington-park-haunted-hayride/",
+          "status": "directory lead; requires stronger corroboration unless overridden"
+        },
+        "category": {
+          "value": "Other Halloween / Fall",
+          "source": "https://www.thescarefactor.com/haunted-houses/missouri/annual-farrington-park-haunted-hayride/",
+          "status": "proposed mapping; independent activity classification required"
+        },
+        "season_year": {
+          "value": null,
+          "status": "unresolved"
+        },
+        "hours": {
+          "state": "unknown",
+          "display": null
+        },
+        "admission": null,
+        "expiry": null
+      },
+      "placement_candidate": null,
+      "open_now_policy": "never",
+      "machine_opening_intervals": null,
+      "blockers": [
+        "Operator says this year Oct17\u201318 19:00 but year not bound outside copyright; ticket page unavailable. Need current2026 event binding, not repeat copyright inference."
+      ],
+      "consumer_projection": null
+    }
+  ]
+}
