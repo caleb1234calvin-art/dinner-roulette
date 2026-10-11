@@ -1,0 +1,533 @@
+{
+  "source": "f92870632b71def18d7642596dc9dd3357675f76",
+  "tree": "9153ead1946bbbb7e38c45981c47332997001c3e",
+  "deployment": "dpl_7MmWVLGr9roCmWit3yzASutdRZGs",
+  "files": [
+    {
+      "path": "build-and-runtime-readback.json",
+      "bytes": 37060,
+      "sha256": "755343aaadebedb644c060f59f3cdf204787465582473f0bf893dce959b54baa"
+    },
+    {
+      "path": "ci-preflight/android-artifacts.json",
+      "bytes": 2363,
+      "sha256": "2b9f05bfda8278d3f876a4e1a7211db957425967747de08f518fa423d4f16422"
+    },
+    {
+      "path": "ci-preflight/android-jobs.json",
+      "bytes": 5089,
+      "sha256": "8765bd87a1581fec7dae79420b9daf43da06454cd4291d5e3b051d577140a5cb"
+    },
+    {
+      "path": "ci-preflight/commit-runs.json",
+      "bytes": 1316,
+      "sha256": "31ba6dc81633a5ee5153eced3e45a7c65fb5381ecbdd77a8798bbb25314b0119"
+    },
+    {
+      "path": "ci-preflight/log-excerpts-and-status.json",
+      "bytes": 7046,
+      "sha256": "6d28192ea549723a6a13ca65dda25dee6ecad27841d9f13bcd605d365c6dbe2d"
+    },
+    {
+      "path": "ci-preflight/report.json",
+      "bytes": 11220,
+      "sha256": "93c05dd2a7334d49e2e7551e73b3b466cc081fe87870952732f50db480238776"
+    },
+    {
+      "path": "ci-preflight/web-artifacts.json",
+      "bytes": 13248,
+      "sha256": "77df795abc80d78ebec5830c801107c3e9b9c54df0ae60fb646b83b9afcf0e76"
+    },
+    {
+      "path": "ci-preflight/web-jobs.json",
+      "bytes": 67442,
+      "sha256": "a045227d6193c06c99fe06944b82bda12afc07f4d9c78bde5a71fd7ca671fe02"
+    },
+    {
+      "path": "final-identity.json",
+      "bytes": 58352,
+      "sha256": "36d3b3dc9eb5f0375fdf3e3423ae239c3bd4eef701d0b9e8346959757fabaa1e"
+    },
+    {
+      "path": "live-ui/brookdale-live.txt",
+      "bytes": 5681,
+      "sha256": "4f3893419492c98055819ba81500b0ef9eb5aad2fc22ac2da3759b92895d01f9"
+    },
+    {
+      "path": "live-ui/dungeons-live.txt",
+      "bytes": 5233,
+      "sha256": "15993b1380b1fe9a7d95bc4676082cce5f7ca888e36a3b8f239f47105e866982"
+    },
+    {
+      "path": "live-ui/goblin-live.jpg",
+      "bytes": 60095,
+      "sha256": "16b311252d3c0924f4785c36ce17314149d0cfe701761d114860d9d53be6ccae"
+    },
+    {
+      "path": "live-ui/goblin-live.txt",
+      "bytes": 5686,
+      "sha256": "4665dc6a66b651705fba52ed04a88100e66b5dc555cfd9138d303d6f04ef04b4"
+    },
+    {
+      "path": "live-ui/goblin-open-now-negative.txt",
+      "bytes": 3757,
+      "sha256": "4048522c96c53d55a9b14e292644a0baaaa99783a059b6b27315f2dd448e9561"
+    },
+    {
+      "path": "live-ui/goblin-saved-reload.txt",
+      "bytes": 836,
+      "sha256": "6f869962d90632690784988dcf3c75a08392c51adc31ff6a9f13c476ac4dbb50"
+    },
+    {
+      "path": "live-ui/hotel-dungeons-distinct.txt",
+      "bytes": 5245,
+      "sha256": "c0942d92574b45a550fb2da7c09a805debe01b07ac13b7f4c42e40c9e9f7b661"
+    },
+    {
+      "path": "live-ui/hotel-live.jpg",
+      "bytes": 60210,
+      "sha256": "cc391f2b0549d4d96173a373fbdc069848d0344a769ae223b3bb54578e465d83"
+    },
+    {
+      "path": "live-ui/hotel-live.txt",
+      "bytes": 5613,
+      "sha256": "abe3151358e551ad06a03aa0c9cacf2152b140487c6fa467bf5a49f15fcd24be"
+    },
+    {
+      "path": "live-ui/ordinary-date-night.jpg",
+      "bytes": 48908,
+      "sha256": "3f92bb1108bebfee67366eaef593fd4a88444074c01da0f1de5178ca62945b10"
+    },
+    {
+      "path": "live-ui/ordinary-date-night.txt",
+      "bytes": 3558,
+      "sha256": "7261f297ba4be2f57d4675a22b556e99e0a7165671f6f2229643b92b008cb12d"
+    },
+    {
+      "path": "live-ui/postrelease-rollback-confirmation.txt",
+      "bytes": 1435,
+      "sha256": "8acc0a5a2d66061c97a711b626a2adf5ce8c5d03904d06c0bfea206283394269"
+    },
+    {
+      "path": "preflight-verdict.json",
+      "bytes": 2200,
+      "sha256": "cf7417a2cd772d2103d11d0223d580b6dadf63a40c72a12cc4c1319ca7f05db7"
+    },
+    {
+      "path": "production-postrelease/dinner-roulette-chi.vercel.app.headers",
+      "bytes": 377,
+      "sha256": "badd7e6ab65201f824b021ed827cf8b943bcb3af738dde5a39971969537eac7b"
+    },
+    {
+      "path": "production-postrelease/dinner-roulette-chi.vercel.app.html",
+      "bytes": 29113,
+      "sha256": "67ff515c00e6e9b668c27e4e5d5788073fef95ceff17f77840cc357de3e5e62b"
+    },
+    {
+      "path": "production-postrelease/dinner-roulette-git-main-minions-9e2c.vercel.app.headers",
+      "bytes": 400,
+      "sha256": "087bf0047ff8b77b23c1ace4860f439afeffe40e2820edc747147e44710ff02d"
+    },
+    {
+      "path": "production-postrelease/dinner-roulette-git-main-minions-9e2c.vercel.app.html",
+      "bytes": 29115,
+      "sha256": "3f1631b1e87c6cf9398457bc8195266550902439d3cbd378de20bacc9320b680"
+    },
+    {
+      "path": "production-postrelease/dinner-roulette-minions-9e2c.vercel.app.headers",
+      "bytes": 400,
+      "sha256": "4c0beae6b302dc7bb940a5577000fe3d3a883b3e9973d56ab04d75a28b3e94ab"
+    },
+    {
+      "path": "production-postrelease/dinner-roulette-minions-9e2c.vercel.app.html",
+      "bytes": 29115,
+      "sha256": "8d60065b7873f4a22eafafe3f0dbbe2b78258c1f2b2a9989e7735ef57ce6f261"
+    },
+    {
+      "path": "production-postrelease/http-health.json",
+      "bytes": 4044,
+      "sha256": "e74086bff790cd7bd1fa699da948d9c10d7379fa9994650bf4996dd9e6a54f21"
+    },
+    {
+      "path": "production-postrelease/pickforus.app.headers",
+      "bytes": 349,
+      "sha256": "b091ec8336d4088da1e556c8faf3cf40dbc95c58416f4290ebca8d73b211e102"
+    },
+    {
+      "path": "production-postrelease/pickforus.app.html",
+      "bytes": 29113,
+      "sha256": "6757f9121f5af84c43428644cb90fdd13a76d8aba008a0802db490af00e6764d"
+    },
+    {
+      "path": "production-postrelease/production-postrelease-summary.md",
+      "bytes": 1213,
+      "sha256": "daf6fe804d5e04260ca0b6e60e0aeec7a4704ad2cbd3a2dcd9c191eeca7fbc60"
+    },
+    {
+      "path": "production-postrelease/vercel-identity-aliases.json",
+      "bytes": 9992,
+      "sha256": "986e52864d9cb5c1a361468cf0213474cf9a6e86fb791a64d8831c5239e6b949"
+    },
+    {
+      "path": "production-postrelease/www.pickforus.app.headers",
+      "bytes": 721,
+      "sha256": "cb310cf232fd6599802b6f8d01179855d0776dd14a7a8f46069d3b7a8c2bd22f"
+    },
+    {
+      "path": "production-postrelease/www.pickforus.app.html",
+      "bytes": 29113,
+      "sha256": "c172dff742b9d750a739c4cc330899262e01d54d1080d57c74018ca9ff047ad5"
+    },
+    {
+      "path": "production-preflight/dinner-roulette-chi.vercel.app.headers",
+      "bytes": 377,
+      "sha256": "326ca2251fa2dd3009117a9f2316cbe2b337eb8897a14eff6583f9273576bfe0"
+    },
+    {
+      "path": "production-preflight/dinner-roulette-chi.vercel.app.html",
+      "bytes": 29113,
+      "sha256": "5fd4129178b88823127c5e15817707f06a47bd7788e67182eecde9b8f8a4c94c"
+    },
+    {
+      "path": "production-preflight/dinner-roulette-git-main-minions-9e2c.vercel.app.headers",
+      "bytes": 400,
+      "sha256": "ddabd233cf0592fb2eba3036af696d8edb5cf8f591d11ee0e43281813fc3f2eb"
+    },
+    {
+      "path": "production-preflight/dinner-roulette-git-main-minions-9e2c.vercel.app.html",
+      "bytes": 29115,
+      "sha256": "a0c4c9f84016e4faf267cba49aaaee9cc286b015d6d579d776bf07d5291e5d66"
+    },
+    {
+      "path": "production-preflight/dinner-roulette-minions-9e2c.vercel.app.headers",
+      "bytes": 400,
+      "sha256": "7c75b6bb9afdc10fa1e5da28a903bf66492f605cd10659c8b32aa647bb93cde9"
+    },
+    {
+      "path": "production-preflight/dinner-roulette-minions-9e2c.vercel.app.html",
+      "bytes": 29115,
+      "sha256": "0cf7bb1003ebaf1c5fef3ef406306052fa0877fc7f48a28778201deab90ff715"
+    },
+    {
+      "path": "production-preflight/html-inspection.json",
+      "bytes": 3526,
+      "sha256": "ff5882526ab7c5d662110dc97f2744983c40a28e6657676c1df346085d2863cd"
+    },
+    {
+      "path": "production-preflight/http-health.json",
+      "bytes": 1052,
+      "sha256": "d575b777191b8a548206e1d0beb3ee35d4a28b7a529589d8c3c0698f03c8e34c"
+    },
+    {
+      "path": "production-preflight/pickforus.app.headers",
+      "bytes": 349,
+      "sha256": "b25122870f9df3be8952eccdc92ff81ddfa2f866e0da1a0f54bff2606b2f36c2"
+    },
+    {
+      "path": "production-preflight/pickforus.app.html",
+      "bytes": 29113,
+      "sha256": "e00400b1c277f2217f75b0236a9d935c2dea7653489a8f37d9333b6229c98023"
+    },
+    {
+      "path": "production-preflight/production-preflight-summary.md",
+      "bytes": 1675,
+      "sha256": "432a51744f3c65392ac26606f583ce1d369de0ed4bfd25d7d245ab3b6ea0ee2f"
+    },
+    {
+      "path": "production-preflight/vercel-identity-aliases.json",
+      "bytes": 6768,
+      "sha256": "3485352adb5c805416862c1b0f5c79dd038c591696d8a875e440f7bf7d2469b5"
+    },
+    {
+      "path": "production-preflight/www.pickforus.app.headers",
+      "bytes": 721,
+      "sha256": "981cd6b30d59b8ec5d00569be13e126e9f5bc0732bb258263b19bddde55ee0f9"
+    },
+    {
+      "path": "production-preflight/www.pickforus.app.html",
+      "bytes": 29113,
+      "sha256": "914db8f6c2e65afa894116b0498f5f87bc5f626cf8f826344a5e60d79edeaeff"
+    },
+    {
+      "path": "publication.json",
+      "bytes": 59045,
+      "sha256": "89b80ef2f24ded9ef2d4ca562db27d99f757d94c60d02d2c2e13c3b7c9016fda"
+    },
+    {
+      "path": "release-acceptance.json",
+      "bytes": 961,
+      "sha256": "854b8261c5d155e945b5e7dda5544990eb6c18f40fbfcb259fc69be138d9a8fa"
+    },
+    {
+      "path": "release-continuity-prefix.md",
+      "bytes": 10841,
+      "sha256": "688b8b0f5f0dab75fd567aa0af8df60068330873579da26bce851bc49b365a3c"
+    },
+    {
+      "path": "rollback-preflight/raw-readbacks.json",
+      "bytes": 60175,
+      "sha256": "5d9cbc90283220056bef6d51d990b2b9991c9de8a662f8cc29bdd5ec43b94590"
+    },
+    {
+      "path": "rollback-preflight/rollback-review.json",
+      "bytes": 3064,
+      "sha256": "34c26aa84d96bcd4945c3759cebf32fa56210c4a300fa4f67d1705a3f706a638"
+    },
+    {
+      "path": "root-github-preflight.json",
+      "bytes": 33621,
+      "sha256": "29a2bf9cb39830af6dd46efdacf2f01a9dbc45ac0e6fc46b11731a6b858aae29"
+    },
+    {
+      "path": "smoke-prep/Evidence-Index.json",
+      "bytes": 12004,
+      "sha256": "3921697e56e89a3c9fd024624e6d9645a7e14da830dcac651d14265fa8bb083e"
+    },
+    {
+      "path": "smoke-prep/Independent-Final-Candidate-f9287063.json",
+      "bytes": 11336,
+      "sha256": "a0214efd7db43d47ca59b6b806ab2778592aaab9b50ef01ff8b3956b2cc4ddd1"
+    },
+    {
+      "path": "smoke-prep/Independent-New3-Behavior-Visual-f9287063.json",
+      "bytes": 15466,
+      "sha256": "9a61438e1c02d9b76699e1de58be7bc12a86ddf51c40144702d664a2aa02ac04"
+    },
+    {
+      "path": "smoke-prep/PRODUCTION-ACCEPTANCE-PLAN.md",
+      "bytes": 7801,
+      "sha256": "94e4aa11f3d186a4eaab6e27a811f00766060f4348cc129fdfda084337f6fac6"
+    },
+    {
+      "path": "smoke-prep/SHA256SUMS.json",
+      "bytes": 6675,
+      "sha256": "c4a2b16258930793d478110729c6dc77a2425b308a01c99c9c0ff82c7cc6598d"
+    },
+    {
+      "path": "smoke-prep/SOURCE-BINDING-ACCEPTANCE.md",
+      "bytes": 4740,
+      "sha256": "2984090d23cd0180cdccc24530cb8e8fef55a757dd8e00e0708d32d9577e5315"
+    },
+    {
+      "path": "smoke-prep/capture-attempts.json",
+      "bytes": 786,
+      "sha256": "6f1209b332003b2f188f04fa47b0582c35fff37a7b6217ebe4bc9f7ffd288e06"
+    },
+    {
+      "path": "smoke-prep/capture_served.py",
+      "bytes": 3607,
+      "sha256": "4e2c4a95946cc75ab9bcc8d4a56d221b9f4130d8fb494a44874ecafff5f44eec"
+    },
+    {
+      "path": "smoke-prep/catalog-lifecycle-inventory.json",
+      "bytes": 830,
+      "sha256": "2a396009254ddb45eb451ab8518364c9978b136b1a5e6403cba5cbffc1e28ee6"
+    },
+    {
+      "path": "smoke-prep/exact-head-evidence-links.json",
+      "bytes": 5532,
+      "sha256": "be1d60d9a77f8899a7f3094c45d4c139da728cca847b1cbdbd0b728359ba60f3"
+    },
+    {
+      "path": "smoke-prep/expected-source.json",
+      "bytes": 252032,
+      "sha256": "6c8af87ac9e533cfcdb8570cdb1a9df9ec9d8c436a9d854796267e1de166cd0f"
+    },
+    {
+      "path": "smoke-prep/immutable-assets/button-B8uMOWVZ.js",
+      "bytes": 4550,
+      "sha256": "c0a9ac52653ac3782f60d8e49d7a1877bd0905293d039456d5db7edeb540c4a5"
+    },
+    {
+      "path": "smoke-prep/immutable-assets/hours-MSRawQGu.js",
+      "bytes": 10987,
+      "sha256": "61e222f780151e4d7c3761963867ae88de9536fcdcd29fa494489d9d10041e2a"
+    },
+    {
+      "path": "smoke-prep/immutable-assets/icons-0KnAZP8T.js",
+      "bytes": 5271,
+      "sha256": "0c34e7874071c92fe998ecfa89f89b4e714bfb7b7a1fcbe98f089ad5833675bd"
+    },
+    {
+      "path": "smoke-prep/immutable-assets/index-Bp9wA5ps.js",
+      "bytes": 603883,
+      "sha256": "94d46b29d86339c34f9be7c20814c47390e4fa754bf032687c73205683b56cf7"
+    },
+    {
+      "path": "smoke-prep/immutable-assets/routes-Daqqcx29.js",
+      "bytes": 163199,
+      "sha256": "4c6a99b67b05dfbac6ad43f0480df225697198c807ab802c94aa0ccd7d4baf7a"
+    },
+    {
+      "path": "smoke-prep/immutable-assets/script.js",
+      "bytes": 2084,
+      "sha256": "00689fa65c01021db840ddd43584120a9a017574d9013d21292d7b5fd36bb219"
+    },
+    {
+      "path": "smoke-prep/immutable-assets/session-hints-B3lC-DOS.js",
+      "bytes": 9750,
+      "sha256": "1fe836e70801ef58388b0ffeb27ba6f7fc914950b881c06ae64500f255a53e9f"
+    },
+    {
+      "path": "smoke-prep/immutable-assets/sparkles-Cd47g3k0.js",
+      "bytes": 497,
+      "sha256": "963202970407615a401d51ba30e660274cb2dc008d20cab41c2338dc579f85ff"
+    },
+    {
+      "path": "smoke-prep/immutable-index.html",
+      "bytes": 29115,
+      "sha256": "bad96ae6532376452a87ce1e7d9b5d0e74b247475b3468b5106c03bdf1d80a4c"
+    },
+    {
+      "path": "smoke-prep/literal_parser.py",
+      "bytes": 3994,
+      "sha256": "2f39edfd9367171d0da47c4f26e00a419b672839594bd82bb4439e5405254eb1"
+    },
+    {
+      "path": "smoke-prep/missouri-2026-late-fall-catalog.ts",
+      "bytes": 3890,
+      "sha256": "c64b98a0d6ac8b5b2ba12974597ee93fa78123e29e1b71c21aafa43bd20297e3"
+    },
+    {
+      "path": "smoke-prep/missouri-2026-next-catalog.ts",
+      "bytes": 3911,
+      "sha256": "f9014353658689334c0133df4defbc7590a94c91002b630e07557dd172081d88"
+    },
+    {
+      "path": "smoke-prep/missouri-2026-v1-next-catalog.ts",
+      "bytes": 35128,
+      "sha256": "0866a11ff68b0f2e0987a94848ec606195b1351dafb6a53df014ba9ffa6aef37"
+    },
+    {
+      "path": "smoke-prep/next-missouri-browser-facts.mjs",
+      "bytes": 1295,
+      "sha256": "e4963cfe321fcba54b65d7faee8562c4100ce01d7c1285408d5c8bc758f1aba1"
+    },
+    {
+      "path": "smoke-prep/next-missouri-browser-projections.json",
+      "bytes": 8778,
+      "sha256": "0b406b9131d2e3149c05366d68a97d34ee2897b77542762e5f5829c259d2e2c5"
+    },
+    {
+      "path": "smoke-prep/prepare_expected.py",
+      "bytes": 3943,
+      "sha256": "22f504f0bdb411f4cf65c41f1a04b4328264f5d41bd151f278f00684b8d8aa28"
+    },
+    {
+      "path": "smoke-prep/production-index.html",
+      "bytes": 29113,
+      "sha256": "044cd4b81d7e53d98411e2546a4aae04fab028e6ff5ed2018611a7868872ef8e"
+    },
+    {
+      "path": "smoke-prep/production-source-binding.json",
+      "bytes": 9920,
+      "sha256": "412f99c325d57535549e966148edd2846c69ae14d2946b92e5830cde2729e9f3"
+    },
+    {
+      "path": "smoke-prep/seasonal-next-missouri.test.mjs",
+      "bytes": 13565,
+      "sha256": "aa66e2b5310c2b9a8982cfccdc3b8738c05cc89efd3883232dac9fd463b90c5f"
+    },
+    {
+      "path": "smoke-prep/seasonal-ten-record-browser.mjs",
+      "bytes": 85629,
+      "sha256": "352ed7d6cc81b8e7132a646a5d288c40d2e2c0a2003df55e66706779f859b9f0"
+    },
+    {
+      "path": "smoke-prep/selected-expectations.json",
+      "bytes": 20499,
+      "sha256": "2824da845afaaa9a4f01806827e0f554ffa4c042c39ebbb0bf35adfb33630f57"
+    },
+    {
+      "path": "smoke-prep/served-assets/button-B8uMOWVZ.js",
+      "bytes": 4550,
+      "sha256": "c0a9ac52653ac3782f60d8e49d7a1877bd0905293d039456d5db7edeb540c4a5"
+    },
+    {
+      "path": "smoke-prep/served-assets/hours-MSRawQGu.js",
+      "bytes": 10987,
+      "sha256": "61e222f780151e4d7c3761963867ae88de9536fcdcd29fa494489d9d10041e2a"
+    },
+    {
+      "path": "smoke-prep/served-assets/icons-0KnAZP8T.js",
+      "bytes": 5271,
+      "sha256": "0c34e7874071c92fe998ecfa89f89b4e714bfb7b7a1fcbe98f089ad5833675bd"
+    },
+    {
+      "path": "smoke-prep/served-assets/index-Bp9wA5ps.js",
+      "bytes": 603883,
+      "sha256": "94d46b29d86339c34f9be7c20814c47390e4fa754bf032687c73205683b56cf7"
+    },
+    {
+      "path": "smoke-prep/served-assets/routes-Daqqcx29.js",
+      "bytes": 163199,
+      "sha256": "4c6a99b67b05dfbac6ad43f0480df225697198c807ab802c94aa0ccd7d4baf7a"
+    },
+    {
+      "path": "smoke-prep/served-assets/script.js",
+      "bytes": 2084,
+      "sha256": "00689fa65c01021db840ddd43584120a9a017574d9013d21292d7b5fd36bb219"
+    },
+    {
+      "path": "smoke-prep/served-assets/session-hints-B3lC-DOS.js",
+      "bytes": 9750,
+      "sha256": "1fe836e70801ef58388b0ffeb27ba6f7fc914950b881c06ae64500f255a53e9f"
+    },
+    {
+      "path": "smoke-prep/served-assets/sparkles-Cd47g3k0.js",
+      "bytes": 497,
+      "sha256": "963202970407615a401d51ba30e660274cb2dc008d20cab41c2338dc579f85ff"
+    },
+    {
+      "path": "smoke-prep/served-assets-download.json",
+      "bytes": 24278,
+      "sha256": "6441797f1d10fb93bc20883057c54bf8fc1cfd027893f578a4aee031b72b09f5"
+    },
+    {
+      "path": "smoke-prep/served-catalog-literals.json",
+      "bytes": 221438,
+      "sha256": "6119947f666623c50765a80ef842b35f7705e093fd76d9d8154dcfcd11137f4d"
+    },
+    {
+      "path": "smoke-prep/served-presentation-literals.json",
+      "bytes": 32029,
+      "sha256": "7a2aaaeaf9650c7f2695380fdb0d5ac3755b7462f60e5c9437d3b9b242160e7c"
+    },
+    {
+      "path": "smoke-prep/verify_served.py",
+      "bytes": 6199,
+      "sha256": "82b6e0b956db62726ca83777e3e498a6661be72577683215f1a8cfb659f1278d"
+    },
+    {
+      "path": "source-review/complete-candidate-catalog.json",
+      "bytes": 209333,
+      "sha256": "edf8b079acf4c77f308a821aaaea7da6330b7daee4a9e8ca3abd45f9af638bf4"
+    },
+    {
+      "path": "source-review/complete-candidate-presentations.json",
+      "bytes": 29530,
+      "sha256": "7023fa8c6ec06acb3a46be4dc7aa92a582345d10fc66eca60550f9b6d7d8001d"
+    },
+    {
+      "path": "source-review/review.cjs",
+      "bytes": 8038,
+      "sha256": "12f25ffc0c99bb88b381a43c69c5d50037a51d8656a29e3db2a8e4f8a5c7a58a"
+    },
+    {
+      "path": "source-review/served-binding-independent-review.json",
+      "bytes": 1108,
+      "sha256": "5d94487abee359fbb81d7f189b51b4d52ed2560f58a76dbf2d086a827cb7f1b6"
+    },
+    {
+      "path": "source-review/source-preflight.json",
+      "bytes": 4376,
+      "sha256": "1772b83a6997fd173ff177a1d6b35d32caf92e1350feb3196e204baeb993d8ca"
+    }
+  ],
+  "sanitization": "Only dialog retained from Vercel DOM. Cookie/auth headers omitted if present.",
+  "archive": {
+    "file": "pr63-release-evidence.zip",
+    "bytes": 933920,
+    "sha256": "6db415170d3046b20e89cbd09b65c01e4dd4a30e4fad67b26937c87e95a17013"
+  }
+}
