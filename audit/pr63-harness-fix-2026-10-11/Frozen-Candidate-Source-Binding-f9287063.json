@@ -1,0 +1,32 @@
+{
+  "verdict": "PASS SOURCE ONLY",
+  "identity": [
+    "f92870632b71def18d7642596dc9dd3357675f76",
+    "9153ead1946bbbb7e38c45981c47332997001c3e",
+    "ca1a2979fa3c07fe2ed4f417e153f152288d1553"
+  ],
+  "expectedIdentity": [
+    "f92870632b71def18d7642596dc9dd3357675f76",
+    "9153ead1946bbbb7e38c45981c47332997001c3e",
+    "ca1a2979fa3c07fe2ed4f417e153f152288d1553"
+  ],
+  "identityMatches": true,
+  "changedPathsFromFailedHead": [
+    "scripts/seasonal-ten-record-browser.mjs"
+  ],
+  "validationSourceBindings": {
+    ".github/workflows/validate-icon-pack.yml": true,
+    "scripts/seasonal-next-missouri.test.mjs": true,
+    "scripts/seasonal-phase4-recovery.test.mjs": true,
+    "scripts/seasonal-ten-record-browser.mjs": true,
+    "scripts/seasonal-card-layout-browser.mjs": true,
+    "scripts/test-support/next-missouri-browser-facts.mjs": true,
+    "scripts/test-support/next-missouri-browser-projections.json": true,
+    "scripts/test-support/next-missouri-baseline-receipts.json": true
+  },
+  "protectedRuntimeSameAsFailedHead": true,
+  "runtimeAuditSha256": "0183015bd8181cc40075538423c05b21831ac165ab627b3f98a9c127b6667674",
+  "minimalFixAuditSha256": "224e4be563ecb134e50dde811dd5907f16a04b387bca16c31aa489f1ba5e0163",
+  "workingTreeClean": true,
+  "pending": "New exacthead raw CI/browser/Android artifacts and actual screenshots."
+}

@@ -1,3 +1,22 @@
+# CURRENT — PR #63 HARNESS FIX FROZEN; FRESH EXACT-HEAD GATES RUNNING (2026-10-11)
+
+## CURRENT
+- PR #62 remains released/accepted: main `bf88443932739a9448fac8d27fd845e9947cf697`, tree `7d91061065f5e7e36e4f76307a7b915a66ea006d`. Production `dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U` READY. All five aliases freshly returned HTTP 200 (www via expected 308) and independently resolved to HaYi/bf884 at 03:04 UTC.
+- Supported rollback remains READY `dpl_8xyE9R3BxyE1883QpavaEBWV2LGa` / `fe22c15cc6442fc4a48fec23c9a1331c69d70bd2`, through the verified postrelease Instant Rollback route recorded below. F1 and BCd retained deployments also freshly READY; their retention does not imply arbitrary older rollback eligibility.
+- Draft PR #63 successor SHA `f92870632b71def18d7642596dc9dd3357675f76`; tree `9153ead1946bbbb7e38c45981c47332997001c3e`; parent `ca1a2979fa3c07fe2ed4f417e153f152288d1553`. Branch `integration/missouri-next-2026-10-11`; base main bf884. GitHub/local tree equality and clean exact-head worktree PASS. Two commits/19 main-relative changed files.
+- Initial ca1a web run `38106858658` exposed a harness-only error: full-catalog Hotel/Dungeons find/filter predicates dereferenced seasonalListing on ordinary rows. Failed new-three artifact `11689823965` preserves 85/87 PASS and exact two Hotel 320/390 TypeErrors. No product failure or runtime source divergence was shown. Initial Android `38106858660` passed all automated gates and skipped signing, scoped only to ca1a.
+- Successor changes exactly two optional-chain guards in `scripts/seasonal-ten-record-browser.mjs`; all distinct-card/identity assertions remain. Root and independent reviewers accepted the reproduced cause and minimum fix. Focused syntax/lint/diff and 15 tests PASS. Fixed script SHA256 `352ed7d6cc81b8e7132a646a5d288c40d2e2c0a2003df55e66706779f859b9f0`. Runtime data, rendering, workflow, native files, settings and protection unchanged.
+- Fresh exact-head web run `38107379751` and unsigned Android run `38107379726` are running. Previous passing evidence is historical, not transferred as successor acceptance.
+- One initial seasonal-two artifact transport copy was later found truncated despite a reported successful download. It was retained, replaced atomically after fsync/close, and separately reread twice at the expected 21,965,061 bytes/SHA with all 214 member checks PASS. Exact transport cause is unknown; no passing suite was rerun for retrieval. Future downloads require separate stable-byte verification.
+
+## NEXT
+Complete successor exact-head CI and independent raw artifact/verdict/event/screenshot validation; retain both initial failure and successor evidence. Then update/read back final continuity and stop for owner release decision. PR #63 remains deployment-disabled and must not be released automatically.
+
+## HOLD
+Cadaver remains official Facebook poster-binding HOLD; fourteen additional research proposals remain HOLD. Three accepted proposals are implemented unchanged (one Goblin addition, Brookdale and Hotel notes). No final VERIFIED CANDIDATE claim yet. PR #62 waiver is consumed; no standing/new release authority. PR #61 performance remains PARKED, Android signing/Play and physical-device checks remain outside this automated gate.
+
+---
+
 # CURRENT — PR #63 IMPLEMENTATION CANDIDATE FROZEN; FINAL VALIDATION IN PROGRESS (2026-10-11)
 
 This checkpoint supersedes earlier NEXT instructions. PR #62 release and production acceptance PASS; its exact-candidate one-release waiver is consumed. Cadaver review and the next Missouri research subset are checkpointed below. No authority exists to release PR #63.

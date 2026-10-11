@@ -1,0 +1,30 @@
+{
+  "run": 38106858658,
+  "job": 114374107481,
+  "head": "ca1a2979fa3c07fe2ed4f417e153f152288d1553",
+  "rawLog": {
+    "bytes": 2000502,
+    "sha256": "dc40c9f320c87afbdd1b7067c029a34ff58f742735c104dcf2980b5436e1bb48",
+    "url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38106858658/job/114374107481"
+  },
+  "artifact": 11689823965,
+  "excerptOnly": true,
+  "selectedFailureLines": [
+    {
+      "line": 3127,
+      "text": "2026-10-11T03:02:57.2605916Z       \"error\": \"TypeError: Cannot read properties of undefined (reading 'recordId')\\n    at file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:583:82\\n    at Array.find (<anonymous>)\\n    at runScenario.width.width (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:583:38)\\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:320:5)\\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:570:7\""
+    },
+    {
+      "line": 3187,
+      "text": "2026-10-11T03:02:57.2668013Z       \"error\": \"TypeError: Cannot read properties of undefined (reading 'recordId')\\n    at file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:583:82\\n    at Array.find (<anonymous>)\\n    at runScenario.width.width (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:583:38)\\n    at async runScenario (file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:320:5)\\n    at async file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:570:7\""
+    },
+    {
+      "line": 10803,
+      "text": "2026-10-11T03:02:57.5311209Z       \"message\": \"Expected values to be strictly equal:\\n\\n2 !== 0\\n\","
+    },
+    {
+      "line": 10804,
+      "text": "2026-10-11T03:02:57.5311611Z       \"stack\": \"AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\\n\\n2 !== 0\\n\\n    at file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-ten-record-browser.mjs:1072:10\""
+    }
+  ]
+}

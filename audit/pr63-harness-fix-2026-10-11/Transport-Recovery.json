@@ -1,0 +1,20 @@
+{
+  "artifactId": 11690367322,
+  "status": "RECOVERED",
+  "verifiedAt": "2026-10-11T03:04:50.972904+00:00",
+  "firstCommandReportedSuccess": true,
+  "subsequentIndependentReadDetected": {
+    "bytes": 16236544,
+    "sha256": "f230bd1d593b6b354664a7d790442abf75fcdad4a8614964a6d1be51b6d3b3be",
+    "error": "Missing ZIP central directory"
+  },
+  "cause": "Undetermined. No duplicate writer was launched; initial parallel materialization reported exit0 and full verification, but subsequent independent filesystem read found a truncated file. No still-running downloader was identified.",
+  "recovery": "Fresh connector file reference; sequential download to unique .part; HTTP200 full Content-Length; flush/fsync/close; expected size+SHA check; atomic rename; two separate subsequent commands reverified original digest and ZIP/member integrity.",
+  "recovered": {
+    "bytes": 21965061,
+    "sha256": "05043644f2efde6edadf753876fc16d1d55e0fecfc1b7ba0cba2e9a490c7efe6",
+    "members": 214
+  },
+  "candidateChanged": false,
+  "acceptanceRerun": false
+}
