@@ -1,0 +1,209 @@
+{
+  "verdict": "PASS",
+  "scope": ".github/workflows/validate-icon-pack.yml",
+  "base": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "workflowSHA256": "8233007d728a47f812234b5ecf68d4cad14e565f02a0c8ff12bc112802724e5d",
+  "retainedOriginalRunSteps": [
+    "Record validated commit",
+    "Install dependencies",
+    "Typecheck",
+    "ESLint",
+    "Casino audit regression tests",
+    "Audit curated casino catalog",
+    "Build development bundle",
+    "Build production-mode bundle without database migrations",
+    "Repository and application tests",
+    "Install Chromium for disposable local browser validation",
+    "Exercise casino experience in local Chromium",
+    "Exercise country-aware location flow in local Chromium",
+    "Regress ordinary Date Night progressive loading and local controls",
+    "Exercise integrated two-record seasonal experience in local Chromium",
+    "Exercise seasonal listing completeness V1 in local Chromium",
+    "Exercise reviewed ten-record seasonal batch in local Chromium",
+    "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+    "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+    "Exercise additional independently cleared Astra records in local Chromium",
+    "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+    "Compare seasonal and standard card geometry",
+    "Verify Dinner icon packs"
+  ],
+  "isolatedBrowserLanes": {
+    "casino": {
+      "command": "node scripts/casino-browser-smoke.mjs",
+      "env": {
+        "VITE_AUTH_ENABLED": "true"
+      }
+    },
+    "location": {
+      "command": "node scripts/location-browser.mjs",
+      "env": {
+        "VITE_AUTH_ENABLED": "true",
+        "LOCATION_BROWSER_OUTPUT": "audit/browser-results/location"
+      }
+    },
+    "date-night-radial": {
+      "command": "node scripts/date-night-radial-browser.mjs",
+      "env": {
+        "CI": "true",
+        "VITE_AUTH_ENABLED": "true",
+        "DATE_NIGHT_RADIAL_OUTPUT": "audit/browser-results/date-night-radial"
+      }
+    },
+    "seasonal-two": {
+      "command": "node scripts/missouri-two-record-browser.mjs",
+      "env": {
+        "CI": "true",
+        "VITE_AUTH_ENABLED": "true"
+      }
+    },
+    "seasonal-completeness-v1": {
+      "command": "node scripts/seasonal-completeness-v1-browser.mjs",
+      "env": {
+        "CI": "true",
+        "VITE_AUTH_ENABLED": "true"
+      }
+    },
+    "seasonal-ten": {
+      "command": "node scripts/seasonal-ten-record-browser.mjs",
+      "env": {
+        "CI": "true",
+        "VITE_AUTH_ENABLED": "true"
+      }
+    },
+    "seasonal-cumulative": {
+      "command": "node scripts/seasonal-ten-record-browser.mjs",
+      "env": {
+        "CI": "true",
+        "VITE_AUTH_ENABLED": "true",
+        "SEASONAL_CUMULATIVE": "true"
+      }
+    },
+    "seasonal-astra": {
+      "command": "node scripts/seasonal-ten-record-browser.mjs",
+      "env": {
+        "CI": "true",
+        "VITE_AUTH_ENABLED": "true",
+        "SEASONAL_ASTRA": "true"
+      }
+    },
+    "seasonal-astra-extras": {
+      "command": "node scripts/seasonal-ten-record-browser.mjs",
+      "env": {
+        "CI": "true",
+        "VITE_AUTH_ENABLED": "true",
+        "SEASONAL_ASTRA_EXTRAS": "true"
+      }
+    },
+    "seasonal-phase4": {
+      "command": "node scripts/seasonal-ten-record-browser.mjs",
+      "env": {
+        "CI": "true",
+        "VITE_AUTH_ENABLED": "true",
+        "SEASONAL_PHASE4": "true"
+      }
+    },
+    "seasonal-next-missouri": {
+      "command": "node scripts/seasonal-ten-record-browser.mjs",
+      "env": {
+        "CI": "true",
+        "VITE_AUTH_ENABLED": "true",
+        "SEASONAL_NEXT_MISSOURI": "true"
+      }
+    },
+    "geometry": {
+      "command": "node scripts/seasonal-card-layout-browser.mjs",
+      "env": {
+        "CI": "true",
+        "VITE_AUTH_ENABLED": "true"
+      }
+    }
+  },
+  "authProductionProofPerRunner": true,
+  "sharedPortsSafeByRunnerIsolation": true,
+  "matrixFailFast": false,
+  "maxParallel": 12,
+  "shellSyntaxChecked": 27,
+  "aggregateTruthTable": [
+    {
+      "checks": "success",
+      "browser": "success",
+      "passed": true
+    },
+    {
+      "checks": "success",
+      "browser": "failure",
+      "passed": false
+    },
+    {
+      "checks": "success",
+      "browser": "cancelled",
+      "passed": false
+    },
+    {
+      "checks": "success",
+      "browser": "skipped",
+      "passed": false
+    },
+    {
+      "checks": "failure",
+      "browser": "success",
+      "passed": false
+    },
+    {
+      "checks": "failure",
+      "browser": "failure",
+      "passed": false
+    },
+    {
+      "checks": "failure",
+      "browser": "cancelled",
+      "passed": false
+    },
+    {
+      "checks": "failure",
+      "browser": "skipped",
+      "passed": false
+    },
+    {
+      "checks": "cancelled",
+      "browser": "success",
+      "passed": false
+    },
+    {
+      "checks": "cancelled",
+      "browser": "failure",
+      "passed": false
+    },
+    {
+      "checks": "cancelled",
+      "browser": "cancelled",
+      "passed": false
+    },
+    {
+      "checks": "cancelled",
+      "browser": "skipped",
+      "passed": false
+    },
+    {
+      "checks": "skipped",
+      "browser": "success",
+      "passed": false
+    },
+    {
+      "checks": "skipped",
+      "browser": "failure",
+      "passed": false
+    },
+    {
+      "checks": "skipped",
+      "browser": "cancelled",
+      "passed": false
+    },
+    {
+      "checks": "skipped",
+      "browser": "skipped",
+      "passed": false
+    }
+  ],
+  "validationLimit": "YAML, command/env preservation, lane mapping, shell syntax, aggregate outcomes verified locally; GitHub exact-head execution remains required."
+}

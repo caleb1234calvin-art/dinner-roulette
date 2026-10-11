@@ -3,6 +3,16 @@ import type { SeasonalPresentation } from "./seasonal-presentation";
 /** Explicit independently reviewed visitor copy. Full facts remain in immutable audit
  * artifacts and catalog metadata; no audit narratives are rendered as consumer prose. */
 export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentation>> = {
+  "DELTA3-GOBLIN": {
+    "canonicalId": "date-night-mo26-goblin-kings-haunted-trail",
+    "confidence": "limited",
+    "details": [
+      "Haunted trail on October 2–3, 9–10, 16–17 and 23–24, 2026. Check your selected event for hours.",
+      "Outdoor woods with uneven ground, darkness, fog, loud sounds and sudden scares. Wear closed-toe shoes and dress for the weather.",
+      "Weather or site conditions may close the trail.",
+      "Location is approximate."
+    ]
+  },
   "MO26-006": {
     "canonicalId": "date-night-mo26-phase4-wolfmans-house-of-screams",
     "confidence": "limited",
@@ -340,6 +350,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
       "Fall Festival runs September 11–November 8, 2026. Check the date-specific calendar because activities and closing times vary.",
       "Corn maze and pumpkin patch; activities vary with date, weather and staffing.",
       "Dogs require a waiver at check-in.",
+      "The Hollows haunted trail uses separate admission and its own October calendar.",
       "Location is approximate."
     ]
   },
@@ -513,6 +524,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "details": [
       "Selected dates September 11–October 31, 2026; doors open 7 p.m. Closing time varies with attendance.",
       "Liability waiver with fingerprint signature required. Loud sound, strobes, darkness, fog and wet conditions.",
+      "A combo pass with Dungeons of Doom includes transfer rides between the two haunts.",
       "Location is approximate."
     ]
   },

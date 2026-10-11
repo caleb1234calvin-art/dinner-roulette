@@ -26,7 +26,7 @@ const ids = ["MO26-006", "MO26-004", "DELTA3-FEARSTONE", "DELTA3-FUN-TIME", "MO2
 const cutoffs = ["2026-11-01T05:00:00Z", "2026-11-01T05:00:00Z", "2026-10-31T05:00:00Z", "2026-11-01T05:00:00Z", "2026-11-01T05:00:00Z", "2026-11-02T06:00:00Z", "2026-11-15T06:00:00Z"];
 const current = id => rows.find(row => row.seasonalListing.recordId === id);
 const providerFor = row => ({ ...row, id: `date-night-osm-node-${rows.indexOf(row) + 991100}`, source: "osm", openingHours: "24/7", seasonalAvailability: undefined, seasonalListing: undefined, seasonalVisitNotes: undefined });
-const allPrior = readdirSync("src/lib/date-night").filter(name => /^missouri-.*catalog\.ts$/.test(name) && !name.includes("phase4-recovery"))
+const allPrior = readdirSync("src/lib/date-night").filter(name => /^missouri-.*catalog\.ts$/.test(name) && !name.includes("phase4-recovery") && name !== "missouri-2026-next-catalog.ts")
   .flatMap(file => Object.entries(load(`src/lib/date-night/${file}`)).filter(([key]) => key.endsWith("_CATALOG")).flatMap(([, value]) => value));
 
 test("recovery input is exactly independently cleared seven; 52 V1 plus one legacy becomes 59 unique V1, six new", () => {
@@ -211,5 +211,15 @@ test("all 52 previous V1 records, presentation copy, radial implementation and u
   for (const [path, hash] of Object.entries(baseline.files)) assert.equal(createHash("sha256").update(readFileSync(path)).digest("hex"), hash, path);
   const { SEASONAL_PRESENTATIONS } = load("src/lib/date-night/seasonal-presentation-catalog.ts");
   assert.equal(Object.keys(baseline.presentations).length, 52);
-  for (const [id, expected] of Object.entries(baseline.presentations)) assert.deepEqual(SEASONAL_PRESENTATIONS[id], expected, id);
+  const acceptedNextBytes = readFileSync("scripts/test-support/next-missouri-browser-projections.json");
+  assert.equal(createHash("sha256").update(acceptedNextBytes).digest("hex"), "0b406b9131d2e3149c05366d68a97d34ee2897b77542762e5f5829c259d2e2c5");
+  const amendments = JSON.parse(acceptedNextBytes).amendments;
+  assert.deepEqual(amendments.map(row => row.recordId).sort(), ["MO26-085", "MO26-124"]);
+  for (const [id, expected] of Object.entries(baseline.presentations)) {
+    const amendment = amendments.find(row => row.recordId === id);
+    if (amendment) {
+      assert.deepEqual(expected.details, amendment.before, "Accepted amendment starts at the immutable historical presentation");
+      assert.deepEqual(SEASONAL_PRESENTATIONS[id], { ...expected, details: amendment.after }, id);
+    } else assert.deepEqual(SEASONAL_PRESENTATIONS[id], expected, id);
+  }
 });

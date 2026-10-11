@@ -1,0 +1,141 @@
+{
+  "package": "MISSOURI-NEXT-DELTA-CANDIDATE-PROJECTIONS-R1",
+  "frozenAt": "2026-10-11T02:44:00Z",
+  "baseSha": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "scope": "One new public attraction from existing delta3 inventory and two material amendments to existing records. Author factual/qualified-placement clearance only; independent frozen-projection acceptance and runtime validation remain separate.",
+  "newRecords": [
+    {
+      "recordId": "DELTA3-GOBLIN",
+      "canonicalId": "date-night-mo26-goblin-kings-haunted-trail",
+      "name": "The Goblin King's Haunted Trail — Shadow's Play",
+      "classification": "PUBLIC COMMERCIAL ATTRACTION at White Hart Renaissance Fairgrounds; not residential",
+      "category": "Haunted House",
+      "activityTypes": ["haunted-house"],
+      "displayActivity": "Haunted Trail",
+      "website": "https://www.whitehartfaire.com/hauntedtrailabout",
+      "ticketUrl": "https://www.whitehartfaire.com/event-details/goblin-king-haunted-trail-shadows-play-2026-10-16-19-00",
+      "phone": "417-241-8088",
+      "visitorAddress": "5651 State Hwy F, Hartville, MO 65667",
+      "seasonYear": 2026,
+      "timeZone": "America/Chicago",
+      "activeFrom": "2026-10-02",
+      "activeUntil": "2026-10-24",
+      "exactActiveDates": ["2026-10-02", "2026-10-03", "2026-10-09", "2026-10-10", "2026-10-16", "2026-10-17", "2026-10-23", "2026-10-24"],
+      "hours": {
+        "state": "partial",
+        "displayText": "October 2–3, 9–10, 16–17 and 23–24, 2026; check your selected event for hours.",
+        "verifiedOccurrences": [
+          {"date": "2026-10-10", "start": "19:00", "end": "23:30", "sourceId": "GOBLIN-OFFICIAL-20261010"},
+          {"date": "2026-10-16", "start": "19:00", "end": "23:30", "sourceId": "GOBLIN-OFFICIAL-20261016"}
+        ],
+        "finalDateClosingTime": null,
+        "noGeneralizedHours": true
+      },
+      "admission": {
+        "displayedGeneralAdmissionUsd": 15,
+        "displayedServiceFeeUsd": 0.38,
+        "validity": "One entry on selected event night",
+        "sourceId": "GOBLIN-OFFICIAL-20261016",
+        "liveAvailabilityVerified": false,
+        "checkoutTotalVerified": false,
+        "minimumAge": null
+      },
+      "placement": {
+        "lat": 37.2632207,
+        "lon": -92.6693091,
+        "basis": "operator-site",
+        "sourceUrl": "https://goo.gl/maps/hLccWtsgQV1v4SgKA",
+        "sourceId": "GOBLIN-OPERATOR-MAP",
+        "checkedAt": "2026-10-11",
+        "precisionLabel": "Approximate operator-linked fairground placement; not an entrance, parking or ride-dropoff point",
+        "destinationFeatureIdentity": "White Hart Renaissance Fairgrounds",
+        "verificationLimit": "Named feature coordinates independently reproduced from operator-link redirect. Map destination body unavailable in author web retrieval."
+      },
+      "directionsTarget": {"kind": "visitor-address", "address": "5651 State Hwy F, Hartville, MO 65667"},
+      "listingExpiresAt": "2026-10-25T00:00:00-05:00",
+      "listingExpiresAtUtc": "2026-10-25T05:00:00Z",
+      "expiryBasis": "date-only",
+      "expiryRationale": "Explicit 2026 operating-date list ends October24. End-of-final-date policy cutoff is not a claim of midnight admission or of verified final-night closing time.",
+      "contract": "ListingCompletenessV1",
+      "openingHours": null,
+      "machineOpeningIntervals": null,
+      "openNowPolicy": "never",
+      "automatic2027Recurrence": false,
+      "details": [
+        "Haunted trail on October 2–3, 9–10, 16–17 and 23–24, 2026. Check your selected event for hours.",
+        "Outdoor woods with uneven ground, darkness, fog, loud sounds and sudden scares. Wear closed-toe shoes and dress for the weather.",
+        "Weather or site conditions may close the trail.",
+        "Location is approximate."
+      ],
+      "sourceUrls": [
+        "https://www.whitehartfaire.com/",
+        "https://www.whitehartfaire.com/event-details/goblin-king-haunted-trail-shadows-play-2026-10-10-19-00",
+        "https://www.whitehartfaire.com/event-details/goblin-king-haunted-trail-shadows-play-2026-10-16-19-00",
+        "https://goo.gl/maps/hLccWtsgQV1v4SgKA"
+      ],
+      "dedupe": "Existing research identity DELTA3-GOBLIN; not present among released catalog identities. Preserve White Hart seasonal trail as one identity; do not import separate October31 Feast or infer shared dates.",
+      "authorFactualVerdict": "PASS",
+      "authorPlacementVerdict": "PASS qualified approximate operator-linked venue point",
+      "implementationEligibility": "ELIGIBLE subject to independent exact-projection acceptance and candidate runtime gates"
+    }
+  ],
+  "amendments": [
+    {
+      "recordId": "MO26-085",
+      "canonicalId": "date-night-mo26-085-brookdale-farms",
+      "name": "Brookdale Farms Fall Festival",
+      "presentationPath": "src/lib/date-night/seasonal-presentation-catalog.ts",
+      "operation": "Insert one sentence immediately before existing approximate-location sentence",
+      "baseSourceSha": "bf88443932739a9448fac8d27fd845e9947cf697",
+      "before": [
+        "Fall Festival runs September 11–November 8, 2026. Check the date-specific calendar because activities and closing times vary.",
+        "Corn maze and pumpkin patch; activities vary with date, weather and staffing.",
+        "Dogs require a waiver at check-in.",
+        "Location is approximate."
+      ],
+      "after": [
+        "Fall Festival runs September 11–November 8, 2026. Check the date-specific calendar because activities and closing times vary.",
+        "Corn maze and pumpkin patch; activities vary with date, weather and staffing.",
+        "Dogs require a waiver at check-in.",
+        "The Hollows haunted trail uses separate admission and its own October calendar.",
+        "Location is approximate."
+      ],
+      "addedSentence": "The Hollows haunted trail uses separate admission and its own October calendar.",
+      "sourceUrl": "https://www.brookdalefarms.com/the-hollows",
+      "sourceId": "BROOKDALE-HOLLOWS",
+      "materiality": "Prevents visitors from assuming a Fall Festival ticket or its September–November lifecycle grants access to a separately ticketed October scare attraction.",
+      "preserve": ["Existing identity", "Fall Festival lifecycle through November8", "Current categories", "Current hours/OpenNow policy", "Qualified approximate point", "Visitor-address Directions", "No separate Hollows duplicate identity", "No2025FAQprice"],
+      "authorFactualCopyVerdict": "PASS",
+      "implementationEligibility": "ELIGIBLE material existing-record amendment, independent acceptance and runtime gate pending"
+    },
+    {
+      "recordId": "MO26-124",
+      "canonicalId": "date-night-mo26-124-hotel-of-terror",
+      "name": "Hotel of Terror",
+      "presentationPath": "src/lib/date-night/seasonal-presentation-catalog.ts",
+      "operation": "Insert one sentence immediately before existing approximate-location sentence",
+      "baseSourceSha": "bf88443932739a9448fac8d27fd845e9947cf697",
+      "before": [
+        "Selected dates September 11–October 31, 2026; doors open 7 p.m. Closing time varies with attendance.",
+        "Liability waiver with fingerprint signature required. Loud sound, strobes, darkness, fog and wet conditions.",
+        "Location is approximate."
+      ],
+      "after": [
+        "Selected dates September 11–October 31, 2026; doors open 7 p.m. Closing time varies with attendance.",
+        "Liability waiver with fingerprint signature required. Loud sound, strobes, darkness, fog and wet conditions.",
+        "A combo pass with Dungeons of Doom includes transfer rides between the two haunts.",
+        "Location is approximate."
+      ],
+      "addedSentence": "A combo pass with Dungeons of Doom includes transfer rides between the two haunts.",
+      "sourceUrl": "https://www.hotelofterror.com/",
+      "sourceId": "HOTEL-COMBO",
+      "materiality": "Explains a concrete combined-visit and transportation option while preserving the two separately located attractions and their distinct Directions.",
+      "preserve": ["Existing Hotel identity", "Separate Dungeons identity", "Current lifecycle/hours/categories/OpenNow", "Qualified approximate point", "Visitor-address Directions", "No specific vehicle or live availability promise", "No ride-dropoff precision", "No new last-ever-season claim", "No extra Dungeons amendment counted"],
+      "authorFactualCopyVerdict": "PASS",
+      "implementationEligibility": "ELIGIBLE material existing-record amendment, independent acceptance and runtime gate pending"
+    }
+  ],
+  "counts": {"newAttractions": 1, "amendments": 2, "totalChangedRecordProposals": 3},
+  "noRuntimeMutations": true,
+  "releaseAuthorized": false
+}

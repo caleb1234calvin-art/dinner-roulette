@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-10-11T02:56:29.662221+00:00",
+  "baseSha": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "state": "PRECOMMIT LOCAL GATES PASS; exact-head CI pending",
+  "node": "24.19.0",
+  "npm": "11.9.0",
+  "typecheck": "PASS",
+  "lint": {
+    "errors": 0,
+    "acceptedBaselineWarnings": 6
+  },
+  "builds": [
+    "development PASS",
+    "VITE_AUTH_ENABLED=true direct Vite production build without migrations PASS"
+  ],
+  "tests": {
+    "repository": 1006,
+    "application": 71,
+    "total": 1077,
+    "failed": 0,
+    "repositoryDiscovered": 1010,
+    "repositorySkipped": 4,
+    "applicationDiscovered": 71,
+    "totalDiscovered": 1081,
+    "totalPassed": 1077,
+    "skipPolicy": "Four pre-existing skips retained; no new skip introduced."
+  },
+  "logs": [
+    {
+      "path": "next-missouri-typecheck.log",
+      "bytes": 128,
+      "sha256": "ae791f9f57ffbb3c0a592b6a34e25250c1f7f6f13fde4d05f77a0d4e7681f89a"
+    },
+    {
+      "path": "next-missouri-lint.log",
+      "bytes": 1643,
+      "sha256": "a6c13b2b2f5dae5c87e222e05ad14b14b4c0783799a9deb3faa984d6e4358132"
+    },
+    {
+      "path": "next-missouri-build-dev.log",
+      "bytes": 10727,
+      "sha256": "2010bd74e55bee8a11bae49d01f8553197b4217fdc8aa47eca1e5a260a33331b"
+    },
+    {
+      "path": "next-missouri-build-production.log",
+      "bytes": 10549,
+      "sha256": "404230ab62b3643c03c1815cc00e55cc797d14964b1b13573ceec342ec7ea1aa"
+    },
+    {
+      "path": "next-missouri-tests.log",
+      "bytes": 463143,
+      "sha256": "d40adc000cfb9e471fa2f25b1cbfdcfd78b638c8fdd0ec5e705fb1c746cabb11"
+    }
+  ]
+}

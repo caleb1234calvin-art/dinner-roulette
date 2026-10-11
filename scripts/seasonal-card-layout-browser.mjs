@@ -12,6 +12,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { chromium } from "playwright";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 import { assertBrowserBuild } from "./browser-build-proof.mjs";
+import { NEXT_MISSOURI_MATERIAL_FACTS, NEXT_MISSOURI_CONFIDENCE } from "./test-support/next-missouri-browser-facts.mjs";
 import { PHASE4_MATERIAL_FACTS, PHASE4_FORBIDDEN_COPY } from "./test-support/phase4-recovery-browser-facts.mjs";
 const baseline = "2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81";
 const proof = assertBrowserBuild();
@@ -19,6 +20,7 @@ const out = "audit/browser-results/seasonal-card-layout";
 fs.mkdirSync(out, { recursive: true });
 const req = createRequire(import.meta.url), pure = appModuleLoader();
 const rows = [
+  ...pure("src/lib/date-night/missouri-2026-next-catalog.ts").MISSOURI_2026_NEXT_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-cleared-catalog.ts").MISSOURI_2026_CLEARED_SEASONAL_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-v1-catalog.ts").MISSOURI_2026_V1_SEASONAL_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-v1-next-catalog.ts").MISSOURI_2026_V1_NEXT_SEASONAL_CATALOG,
@@ -159,6 +161,18 @@ try {
             assert.equal(row.seasonalListing.directionsTarget.kind, "visitor-address");
             const maps = card.getByRole("link", { name: isPlan ? "Maps" : /Directions · Google Maps/, exact: isPlan });
             if (kind !== "options") assert.equal(new URL(await maps.getAttribute("href")).searchParams.get("destination"), row.address);
+          }
+          if (NEXT_MISSOURI_MATERIAL_FACTS[row.seasonalListing.recordId]) {
+            assert.match(await card.innerText(), /Approx\./);
+            assert.doesNotMatch(await card.innerText(), PHASE4_FORBIDDEN_COPY);
+            const confidence = NEXT_MISSOURI_CONFIDENCE[row.seasonalListing.recordId];
+            assert.equal(await card.locator("[data-seasonal-confidence]").innerText(), confidence === "good" ? "Good confidence" : "Limited details");
+            for (const fact of NEXT_MISSOURI_MATERIAL_FACTS[row.seasonalListing.recordId]) assert.match(await details.innerText(), fact);
+            assert.equal(row.seasonalListing.directionsTarget.kind, "visitor-address");
+            if (kind !== "options") {
+              const maps = card.getByRole("link", { name: isPlan ? "Maps" : /Directions · Google Maps/, exact: isPlan });
+              assert.equal(new URL(await maps.getAttribute("href")).searchParams.get("destination"), row.address);
+            }
           }
           if (isPlan) {
             const paragraphs = details.locator("p");

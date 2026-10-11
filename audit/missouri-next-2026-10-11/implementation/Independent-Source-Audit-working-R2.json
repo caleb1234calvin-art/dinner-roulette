@@ -1,0 +1,400 @@
+{
+  "package": "NEXT-MISSOURI-INDEPENDENT-SOURCE-AUDIT",
+  "reviewedAt": "2026-10-11T02:52:02.108826+00:00",
+  "sourceMode": "working-tree-files",
+  "identity": "bf88443932739a9448fac8d27fd845e9947cf697 7d91061065f5e7e36e4f76307a7b915a66ea006d dbb5d3aa4f7a2ef9591a7e523c256ac7789f725f",
+  "ref": null,
+  "baseSha": "bf88443932739a9448fac8d27fd845e9947cf697",
+  "baseTree": "7d91061065f5e7e36e4f76307a7b915a66ea006d",
+  "acceptedProjectionSha256": "0b406b9131d2e3149c05366d68a97d34ee2897b77542762e5f5829c259d2e2c5",
+  "verdict": "PASS SOURCE ONLY",
+  "checkCount": 61,
+  "checks": [
+    {
+      "check": "Prior catalog bytes: src/lib/date-night/missouri-2026-astra-commercial-catalog.ts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Prior catalog bytes: src/lib/date-night/missouri-2026-astra-delta-catalog.ts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Prior catalog bytes: src/lib/date-night/missouri-2026-astra-eleven-catalog.ts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Prior catalog bytes: src/lib/date-night/missouri-2026-cleared-catalog.ts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Prior catalog bytes: src/lib/date-night/missouri-2026-deferred-batch-3-catalog.ts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Prior catalog bytes: src/lib/date-night/missouri-2026-final-four-catalog.ts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Prior catalog bytes: src/lib/date-night/missouri-2026-late-fall-catalog.ts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Prior catalog bytes: src/lib/date-night/missouri-2026-phase4-recovery-catalog.ts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Prior catalog bytes: src/lib/date-night/missouri-2026-three-source-tier-a-catalog.ts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Prior catalog bytes: src/lib/date-night/missouri-2026-v1-catalog.ts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Prior catalog bytes: src/lib/date-night/missouri-2026-v1-next-catalog.ts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "All 59 prior catalog objects unchanged",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "One Goblin row only",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "60 unique canonical and research identities",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Goblin accepted id",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Goblin accepted name",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Goblin accepted address",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Goblin accepted phone",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Goblin accepted website",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Goblin accepted activityTypes",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Goblin accepted seasonalVisitNotes",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "No machine opening hours",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Availability accepted seasonYear",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Availability accepted timeZone",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Availability accepted listingExpiresAt",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Availability accepted activeFrom",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Availability accepted activeUntil",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Availability accepted openNowPolicy",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Availability accepted sourceUrls",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Exact eight operating dates only",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Confirmed 2026 availability",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Listing accepted contract",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Listing accepted recordId",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Listing accepted seasonYear",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Listing accepted timeZone",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Listing accepted visitorAddress",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Listing accepted directionsTarget",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Listing accepted listingExpiresAt",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Listing accepted expiryBasis",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Listing accepted sourceUrls",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Placement accepted lat",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Placement accepted lon",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Placement accepted basis",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Placement accepted sourceUrl",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Placement accepted checkedAt",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Placement accepted precisionLabel",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Partial selected-date hours only",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Generic external ride picker",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Review revision binds exact accepted source",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "No late-fall visibility extension",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "No fabricated machine or 2027 time data",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Exact amendment before array: MO26-085",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Exact amendment before array: MO26-124",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Exact 60 presentation map",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "57 protected presentation objects unchanged",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Single approved sentence insertion: MO26-085",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Single approved sentence insertion: MO26-124",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Only prescribed registration change: src/lib/date-night/curated-policy.ts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "Only prescribed registration change: src/lib/date-night/search.ts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "check": "384 protected product file blobs unchanged",
+      "pass": true,
+      "evidence": {
+        "mismatches": [],
+        "declaredCheckoutTransforms": [
+          {
+            "path": "android/gradlew.bat",
+            "gitAttribute": "android/gradlew.bat: eol: crlf",
+            "gitBytesSha256": "94102713eb8fb22d032397924c0f38ab2da783ba60d07054339f1190a0c4e2cd",
+            "workingBytesSha256": "1d297e00bd21de3ace22b4d7f2de1f9dfa858883d66bbf7c1ccbecccec8f4f3b",
+            "exactDeclaredTransform": true
+          }
+        ]
+      }
+    },
+    {
+      "check": "Uses existing V1 placement conversion",
+      "pass": true,
+      "evidence": null
+    }
+  ],
+  "catalogCount": 60,
+  "presentationCount": 60,
+  "sourceFiles": [
+    {
+      "path": "src/lib/date-night/missouri-2026-astra-commercial-catalog.ts",
+      "sha256": "06968eab6c10fd3d1ae45c43baa99ef5a41c85fbae98a3de92907ac0bc02813b"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-astra-delta-catalog.ts",
+      "sha256": "b8ef2cd904c7496f65256de4b69bfb4962f1c4dd2882222443b4ac3c5201e4c3"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-astra-eleven-catalog.ts",
+      "sha256": "7c2c15b5323bc0649b6c2e64f815c9052bd476f17e26f3d0e4448876e712c08b"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-cleared-catalog.ts",
+      "sha256": "52564f746709696bdde3ea775c50743aae40d1ca932bfb872aa93f840720f65a"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-deferred-batch-3-catalog.ts",
+      "sha256": "42ba5f69f4d8ecd0fcfd8fc647dc21b5938bd105c93ac5489fc2559952b5757b"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-final-four-catalog.ts",
+      "sha256": "7ab28748dbd26df3993882fe82903f35c61db1a8830399e110af51c1fae92111"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-late-fall-catalog.ts",
+      "sha256": "c64b98a0d6ac8b5b2ba12974597ee93fa78123e29e1b71c21aafa43bd20297e3"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-phase4-recovery-catalog.ts",
+      "sha256": "1e24869eb9f4b0a7b20f3f53cb3b4e6c136335f96d12153bd39f8158ba3863a4"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-three-source-tier-a-catalog.ts",
+      "sha256": "88a36ad0a025299f7e21d6ef570653a9b791855905470ad0b2cdcb5579bfe9f8"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-v1-catalog.ts",
+      "sha256": "726e2d0b717f68d1ead576d7cbc172782ab597e9a0b714a7a20a1d0c2649e9b0"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-v1-next-catalog.ts",
+      "sha256": "0866a11ff68b0f2e0987a94848ec606195b1351dafb6a53df014ba9ffa6aef37"
+    },
+    {
+      "path": "src/lib/date-night/missouri-2026-next-catalog.ts",
+      "sha256": "f9014353658689334c0133df4defbc7590a94c91002b630e07557dd172081d88"
+    },
+    {
+      "path": "src/lib/date-night/seasonal-presentation-catalog.ts",
+      "sha256": "c7eacd9a9c10a9486bc49c4eb1683bf5bcdf24b643e2de919b4d78ac9ae8400c"
+    },
+    {
+      "path": "src/lib/date-night/curated-policy.ts",
+      "sha256": "995e51118114c865b3c44b72f9271178b3c2474ba8c906556442c49580855c36"
+    },
+    {
+      "path": "src/lib/date-night/search.ts",
+      "sha256": "a093a6234772beaf6704eeb647b52eea3e628ca6bcc117c58ad831d2e59cf477"
+    }
+  ],
+  "sourceFingerprint": "03b24faf01f6a58521b9d1940782a6442f523a327960e5155145fece53e749b1",
+  "limitations": [
+    "Source-only audit; no test/browser/geometry/Android/deployment acceptance claimed.",
+    "No 2027 date literal and preserved lifecycle code do not independently prove runtime no-revival; functional exact-head gates must verify.",
+    "Working-tree review must be rebound to immutable candidate SHA/tree before release-readiness conclusion."
+  ]
+}

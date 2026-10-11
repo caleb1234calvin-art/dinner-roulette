@@ -7,6 +7,8 @@ import { chromium } from "playwright";
 import { fromCrossJSON } from "seroval";
 import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
+import { createHash } from "node:crypto";
+import { NEXT_MISSOURI_PROJECTION_SHA256, NEXT_MISSOURI_MATERIAL_FACTS, NEXT_MISSOURI_CONFIDENCE } from "./test-support/next-missouri-browser-facts.mjs";
 import { PHASE4_MATERIAL_FACTS, PHASE4_FORBIDDEN_COPY, STALE_WEREHOUSE_FAVORITE } from "./test-support/phase4-recovery-browser-facts.mjs";
 assert.equal(process.env.CI, "true");
 const proof = assertBrowserBuild();
@@ -14,9 +16,10 @@ const cumulative = process.env.SEASONAL_CUMULATIVE === "true";
 const astra = process.env.SEASONAL_ASTRA === "true";
 const extras = process.env.SEASONAL_ASTRA_EXTRAS === "true";
 const phase4 = process.env.SEASONAL_PHASE4 === "true";
-const expanded = astra || extras || phase4;
-assert.ok([cumulative, astra, extras, phase4].filter(Boolean).length <= 1, "Select one bounded addition batch per invocation");
-const output = resolve(`audit/browser-results/${phase4 ? "seasonal-phase4-recovery-seven" : extras ? "seasonal-astra-extras" : astra ? "seasonal-astra-eleven" : cumulative ? "seasonal-cumulative-15" : "seasonal-ten-record"}`);
+const nextMissouri = process.env.SEASONAL_NEXT_MISSOURI === "true";
+const expanded = astra || extras || phase4 || nextMissouri;
+assert.ok([cumulative, astra, extras, phase4, nextMissouri].filter(Boolean).length <= 1, "Select one bounded addition batch per invocation");
+const output = resolve(`audit/browser-results/${nextMissouri ? "seasonal-next-missouri-three" : phase4 ? "seasonal-phase4-recovery-seven" : extras ? "seasonal-astra-extras" : astra ? "seasonal-astra-eleven" : cumulative ? "seasonal-cumulative-15" : "seasonal-ten-record"}`);
 await mkdir(output, { recursive: true });
 const control = resolve(output, "control.json"), events = resolve(output, "events.jsonl");
 const origin = "http://127.0.0.1:8099", defaultAt = "2026-10-07T18:00:00Z";
@@ -51,7 +54,11 @@ const extraRows = [
 ];
 const phase4Rows = load("src/lib/date-night/missouri-2026-phase4-recovery-catalog.ts").MISSOURI_2026_PHASE4_RECOVERY_CATALOG;
 const phase4Accepted = JSON.parse(await readFile("scripts/test-support/phase4-recovery-browser-projections.json", "utf8"));
-const rows = phase4 ? phase4Rows : extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
+const nextMissouriRows = load("src/lib/date-night/missouri-2026-next-catalog.ts").MISSOURI_2026_NEXT_CATALOG;
+const nextAcceptedBytes = await readFile("scripts/test-support/next-missouri-browser-projections.json");
+const nextAccepted = JSON.parse(nextAcceptedBytes);
+const amendedRows = [...priorTen, ...addedRows].filter(row => nextAccepted.amendments.some(item => item.canonicalId === row.id));
+const rows = nextMissouri ? [...nextMissouriRows, ...amendedRows] : phase4 ? phase4Rows : extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
 const destinationFor = row => {
   const target = row.seasonalListing.directionsTarget;
   return target.kind === "verified-point" ? `${target.lat},${target.lon}` : target.address;
@@ -346,7 +353,7 @@ const priorFacts = {
   "MO26-100": [/daily 10 a\.m\.–6 p\.m\./, /weather permitting/, /No pets, smoking, vaping or tobacco/, /field trips need appointments/, /Saloon opens Friday–Sunday/],
   "MO26-114": [/October 31/, /Flashlight nights/, /bring a flashlight/, /weekday group rides need an appointment/, /farm pass/],
   "MO26-115": [/October 23/, /4–7 p\.m\./, /flashlight and candy container/, /four mill floors/, /first floor only/, /upper floors.*stairs/],
-  "MO26-124": [/Selected dates/, /doors open 7 p\.m\./, /Closing time varies/, /waiver with fingerprint signature required/, /strobes/, /wet conditions/],
+  "MO26-124": [/Selected dates/, /doors open 7 p\.m\./, /Closing time varies/, /waiver with fingerprint signature required/, /strobes/, /wet conditions/, /combo pass with Dungeons of Doom includes transfer rides between the two haunts/],
   "MO26-125": [/Selected dates/, /doors open 7 p\.m\./, /Closing time varies/, /waiver with fingerprint signature required/, /strobes/, /wet conditions/],
 };
 const expectedConfidence = {
@@ -363,7 +370,7 @@ const newFacts = {
   "MO26-028": [/October 10/, /9 a.m.–2 p.m./, /Vernon County Fairgrounds/],
   "MO26-074": [/October 10/, /11 a.m.–5 p.m./],
   "MO26-084": [/October 4–31/, /closed Mondays/, /Reserve tables\/pavilions and bonfires/, /Partially wheelchair accessible/, /no smoking/],
-  "MO26-085": [/November 8/, /corn maze and pumpkin patch/i, /date, weather and staffing/],
+  "MO26-085": [/November 8/, /corn maze and pumpkin patch/i, /date, weather and staffing/, /The Hollows haunted trail uses separate admission and its own October calendar/],
   "DELTA-EDGE-2026": [/Central Waiver Station/, /1300 W 13th/, /one hour/],
   "DELTA-CREEPYWORLD-2026": [/November 13/, /15 minutes of closing/, /no-weapons/],
   "DELTA-DARKNESS-2026": [/November 13/, /October 16–17/, /15 minutes of closing/, /Teens need adult supervision or an immediate ride/],
@@ -403,7 +410,7 @@ const extraFacts = {
 };
 const extraConfidence = { "MO26-002": "limited", "DELTA2-SHEPHERD-LANTERN": "limited", "DELTA2-HOLLOWS": "limited", "MO26-039": "limited",
   "DELTA6-WORLDS-OF-FUN": "limited", "DELTA2-OZARK": "limited", "DELTA3-BALLWIN": "limited", "DELTA6-OFALLON": "limited", "DELTA3-GROTTO": "limited" };
-const materialFacts = phase4 ? PHASE4_MATERIAL_FACTS : extras ? extraFacts : astra ? astraFacts : cumulative ? newFacts : priorFacts;
+const materialFacts = nextMissouri ? NEXT_MISSOURI_MATERIAL_FACTS : phase4 ? PHASE4_MATERIAL_FACTS : extras ? extraFacts : astra ? astraFacts : cumulative ? newFacts : priorFacts;
 const newConfidence = { "MO26-036": "good", "MO26-058": "high", "MO26-069": "high", "MO26-071": "high", "MO26-118": "good", "MO26-012": "good", "MO26-028": "good", "MO26-074": "good", "MO26-084": "good", "MO26-085": "good", "DELTA-EDGE-2026": "high", "DELTA-CREEPYWORLD-2026": "good", "DELTA-DARKNESS-2026": "good", "DELTA-HAUNTED-RIVER-2026": "high", "DELTA-FEAR-BLOODY-TIMBER-2026": "high" };
 const oldRows = [
   ...load("src/lib/date-night/missouri-2026-cleared-catalog.ts").MISSOURI_2026_CLEARED_SEASONAL_CATALOG,
@@ -413,7 +420,7 @@ const ordinaryRows = load("src/lib/date-night/jasper-county-catalog.ts").JASPER_
 const anchors = load("src/lib/date-night/seasonal-catalog.ts").JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG;
 const previousRows = [...oldRows, ...priorTen, ...addedRows];
 const previousReceipts = JSON.parse(await readFile("scripts/test-support/missouri-previous32-receipts.json", "utf8"));
-const catalog = [...ordinaryRows, ...anchors, ...previousRows, ...astraRows, ...extraRows, ...phase4Rows];
+const catalog = [...ordinaryRows, ...anchors, ...previousRows, ...astraRows, ...extraRows, ...phase4Rows, ...nextMissouriRows];
 const { haversineMiles } = load("src/lib/restaurants/geo.ts");
 const { getOpenStatus } = load("src/lib/restaurants/hours.ts");
 const { getDateNightAvailability } = load("src/lib/date-night/availability.ts");
@@ -519,7 +526,7 @@ try {
   browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
     args: ["--no-sandbox", "--disable-dev-shm-usage"] });
   assert.deepEqual(rows.map(row => row.seasonalListing.recordId).sort(), Object.keys(materialFacts).sort(), "Exactly the independently cleared selected batch");
-  assert.equal(new Set(rows.map(row => row.id)).size, phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
+  assert.equal(new Set(rows.map(row => row.id)).size, nextMissouri ? 3 : phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
   assert.equal(previousRows.length, 32, "All previously shipped curated identities remain regression controls");
   assert.equal(new Set(catalog.map(row => row.id)).size, catalog.length, "Amended Werehouse remains one canonical identity across every invocation");
   assert.equal(anchors.some(row => row.id === "date-night-werehouse-joplin"), false, "Legacy weekly-hours Werehouse anchor is superseded");
@@ -530,8 +537,27 @@ try {
     reviewRevision: row.seasonalListing.reviewRevision, directionsTarget: row.seasonalListing.directionsTarget,
     placement: row.seasonalListing.placement })), previousReceipts.records,
   "Previously shipped receipt revisions and navigation remain bound to the immutable production baseline");
+  assert.equal(createHash("sha256").update(nextAcceptedBytes).digest("hex"), NEXT_MISSOURI_PROJECTION_SHA256);
+  assert.equal(nextAccepted.baseSha, "bf88443932739a9448fac8d27fd845e9947cf697");
+  assert.equal(nextMissouriRows.length, 1);
+  const goblinProjection = nextAccepted.newRecords[0], goblin = nextMissouriRows[0];
+  assert.equal(goblin.id, goblinProjection.canonicalId);
+  assert.equal(goblin.name, goblinProjection.name);
+  assert.equal(goblin.address, goblinProjection.visitorAddress);
+  assert.deepEqual([goblin.lat, goblin.lon], [goblinProjection.placement.lat, goblinProjection.placement.lon]);
+  assert.deepEqual(goblin.seasonalListing.directionsTarget, goblinProjection.directionsTarget);
+  assert.equal(goblin.seasonalListing.placement.basis, "operator-site");
+  assert.deepEqual(goblin.seasonalAvailability.activeDates, goblinProjection.exactActiveDates);
+  assert.equal(Date.parse(goblin.seasonalListing.listingExpiresAt), Date.parse(goblinProjection.listingExpiresAtUtc));
+  assert.equal(goblin.seasonalListing.expiryBasis, "date-only");
+  assert.equal(goblin.seasonalAvailability.endsAt, undefined);
+  assert.deepEqual(seasonalPresentation(goblin).details, goblinProjection.details);
+  for (const amendment of nextAccepted.amendments) {
+    const current = catalog.find(row => row.id === amendment.canonicalId);
+    assert.ok(current); assert.deepEqual(seasonalPresentation(current).details, amendment.after);
+  }
   for (const row of rows) {
-    assert.equal(seasonalPresentation(row).confidence, phase4 ? "limited" : (extras ? extraConfidence : astra ? astraConfidence : cumulative ? newConfidence : expectedConfidence)[row.seasonalListing.recordId]);
+    assert.equal(seasonalPresentation(row).confidence, nextMissouri ? NEXT_MISSOURI_CONFIDENCE[row.seasonalListing.recordId] : phase4 ? "limited" : (extras ? extraConfidence : astra ? astraConfidence : cumulative ? newConfidence : expectedConfidence)[row.seasonalListing.recordId]);
     assert.equal(row.openingHours, null); assert.equal(row.seasonalAvailability.openNowPolicy, "never");
     assert.ok(["visitor-address", "verified-point"].includes(row.seasonalListing.directionsTarget.kind));
     assert.ok(nearby(row).length <= 3, "The scoped neighborhood must fit in the real four-card shortlist with one ordinary fixture");
@@ -554,10 +580,10 @@ try {
         assert.equal(await page.locator("article").count(), n);
         if (["MO26-124", "MO26-125"].includes(row.seasonalListing.recordId)) {
           for (const recordId of ["MO26-124", "MO26-125"]) {
-            const distinct = rows.find(candidate => candidate.seasonalListing.recordId === recordId);
+            const distinct = catalog.find(candidate => candidate.seasonalListing.recordId === recordId);
             assert.equal(await rowHeading(page, distinct).count(), 1, "Nearby Hotel and Dungeons keep distinct catalog identities");
           }
-          result.evidence.distinctColocatedIds = rows.filter(candidate => ["MO26-124", "MO26-125"].includes(candidate.seasonalListing.recordId)).map(candidate => candidate.id);
+          result.evidence.distinctColocatedIds = catalog.filter(candidate => ["MO26-124", "MO26-125"].includes(candidate.seasonalListing.recordId)).map(candidate => candidate.id);
         }
         await inspectQualifiedOverlay(test, row, "options");
         await selectTarget(page, row); await inspectQualifiedOverlay(test, row, "result"); await closeResult(page);
@@ -821,8 +847,9 @@ try {
     }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
       [node]: preference(row, node, { favorite: true, ourRating: 4 }), [way]: preference(row, way, { favorite: true }),
     } });
-    if (phase4) {
-      const settle = row.activityTypes.includes("pumpkin-patch")
+    if (phase4 || nextMissouri) {
+      const targetIsSettle = phase4 && row.activityTypes.includes("pumpkin-patch");
+      const settle = targetIsSettle
         ? astraRows.find(item => item.seasonalListing.recordId === "MO26-056")
         : { ...row, id: "date-night-osm-node-910003", name: "Ordinary park control", activityTypes: ["park"] };
       await runScenario(row, index, "qualified-night-plan", async test => {
@@ -835,11 +862,11 @@ try {
         assert.equal(await overlay.locator("article").count(), 2, "Plan uses two distinct real eligible identities");
         assert.equal(await rowHeading(page, settle).count(), 1);
         const targetCard = rowCard(page, row);
-        assert.match(await targetCard.innerText(), row.activityTypes.includes("pumpkin-patch") ? /2 · Settle/i : /1 · Scare/i);
+        assert.match(await targetCard.innerText(), targetIsSettle ? /2 · Settle/i : /1 · Scare/i);
         await inspectQualifiedOverlay(test, row, "plan");
         await overlay.getByRole("button", { name: "Close night plan", exact: true }).click();
         await assertNoRpc(test, before, "Qualified Scare/Settle plan uses the acquired local superset");
-        test.result.evidence.plan = { ids: [row.id, settle.id], targetRole: row.activityTypes.includes("pumpkin-patch") ? "settle" : "scare" };
+        test.result.evidence.plan = { ids: [row.id, settle.id], targetRole: targetIsSettle ? "settle" : "scare" };
       }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
         [row.id]: preference(row, row.id, { favorite: true }), [settle.id]: preference(settle, settle.id, { favorite: true }),
       } });
@@ -1041,7 +1068,7 @@ try {
   }
   assert.equal(verdict.scenarios.length, rows.length * (expanded ? 17 : 15) + receiptRows.length +
     ((cumulative || expanded) ? rows.filter(row => row.seasonalListing.visibility === "listing-lifecycle").length : 0) +
-    (phase4 ? rows.length + 5 : 0));
+    (phase4 ? rows.length + 5 : nextMissouri ? rows.length : 0));
   assert.equal(verdict.errors.length, 0);
   verdict.passed = true;
 } catch (error) {
