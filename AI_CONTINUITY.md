@@ -1,3 +1,35 @@
+# CURRENT — BOUNDED MISSOURI HOLD SWEEP INDEPENDENTLY COMPLETE (2026-10-12)
+
+## CURRENT
+- Complete fifteen-record review: **2 PASS /13 HOLD /0 REJECT**, comprising Cadaver PASS plus the remaining fourteen's **1 PASS (BOSS) /13 HOLD**. No statewide restart or new research identities; two new runtime identities selected, no amendments or padding.
+- **Cadaver: FACTUAL PASS /PLACEMENT PASS approximate /IMPLEMENTATION-ELIGIBLE.** Owner-supplied first-party poster accepted; all thirteen explicit2026 dates, October29 exception, $15, visitor25088 Kafir Rd and exact `2026-11-01T05:00:00Z` expiry. Official-page origin is owner-attested, not independently re-fetched.
+- **BOSS: FACTUAL PASS /PLACEMENT PASS approximate /IMPLEMENTATION-ELIGIBLE.** Official Pulaski County tourism's October10 article establishes public eligibility for the specific October24 Harvest Fest, subject to installation access approval. Army MWR supports event, address18694 FLW20 BLDG10221, Fort Leonard Wood MO65473, and approximate37.73298,-92.06935. Mandatory screening/pass, acceptable physicalID and driver-document conditions retained. Overall event-end cutoff `2026-10-25T02:00:00Z`; no separate haunt-opening/closing claim, machine hours null, never automatic Open Now, no2027.
+- Complete independent ledger SHA256 `02863182eadcbda41c92b9c8746f8270145fbcdb64b8af5e756bcfe7bc391a4c`. Exact combined accepted projection SHA256 `fab3e9e0084fb58bb052846e02cf22217fc2989ec639c6d282870adbb08acc84`, independent acceptance `162248d2ca61340e0efe915b5ffced3d1fbb5aba84ed2b123fa9f2c5da6f1d5f`. Raw originals and field-specific research/reviews preserved privately; sanitized implementation facts and source hashes can be recorded in the repository.
+- Smaller batch is justified: Cadaver is locally useful and BOSS supplies a confirmed one-day event. Both reuse current architecture efficiently; no weak records added to reach five.
+- Released main remains `f92870632b71def18d7642596dc9dd3357675f76`, tree `9153ead1946bbbb7e38c45981c47332997001c3e`. Production `dpl_7MmWVLGr9roCmWit3yzASutdRZGs` READY, source exact main; five aliases healthy at fresh mission preflight. Published60 identities;57 before cutoffs at last acceptance. Immediate supported rollback `dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U` READY /source `bf88443932739a9448fac8d27fd845e9947cf697`, prior supported confirmation retained; no rollback execution.
+- Draft PR #64 has now been created: candidate `4cfd5134ff97b8ed5ccc1bbd48bca616c5242940`, tree `cc15a7080ef3411810027824f58e716705ea77e8`, sole parent released main f928; branch `integration/missouri-owner-field-2026-10-12`. No candidate deployments exist. Dedicated freeze/validation checkpoint follows. Local typecheck/lint(6 inherited warnings)/development build and29focused tests pass. Full tests currently expose one historical Phase4 enumeration assertion: its prior-catalog glob includes the new two-row catalog, yielding54 instead of the unchanged expected52. Independent diagnosis calls for excluding the exact new filename from that historical subset; no runtime or count relaxation; **no final validation PASS**.
+
+## NEXT
+Bind immutable source review and preserve initial failure. Review the smallest justified historical assertion correction, then freeze successor and complete exact-head web/browser/geometry/Android gates. No runtime framework change, no assertion weakening, no release.
+
+## HOLD
+- Fear Factory: available operator calendar remains2025; no accepted2026 lifecycle.
+- Waco: new indexed title mentions2026; actual operator post/year/final schedule remains unpreserved. The bounded extraction was aborted after902.3seconds and supplied no evidence; no repeated retrieval.
+- Rising: current secondary2026 calendar does not resolve lifecycle conflict.
+- Twisted Minds: no accepted2026 binding plus10000/10002 address conflict.
+- Terrified Existence: historical2024/2025 evidence; no accepted2026 dates/expiry.
+- Lemp: conflicting first-party opening statements, no Lemp-specific2026 schedule.
+- Macabre: seasonal closure/redevelopment; no dated special.
+- Bakersfield: prior actual calendar2020; no accepted2026 schedule.
+- Dark Nightmares: futureOctober16 ticket date recovered;34100/33100 first-party address conflict persists.
+- Farrington: October17–18 lacks accepted year binding.
+- Hannibal: Bird/Third Street and calendar prose/list conflicts persist; new ticket lead was2019.
+- Zombie World: operator booking remains2025.
+- Dark Lords: no accepted2026 public operation/invitation.
+HOLD means insufficient/conflicting evidence, not inferred closure. PR #61/adaptive radial remains **PARKED**; “Radial discovery becomes an audit layer.” is future design intent. Physical Android/WebView/GPS HOLD; signing/Play, merge/deploy/waiver/protection/settings changes not authorized.
+
+---
+
 # CURRENT — CADAVER OWNER FIELD EVIDENCE ACCEPTED (2026-10-12)
 
 ## CURRENT
