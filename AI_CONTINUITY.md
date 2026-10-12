@@ -1,3 +1,24 @@
+# CURRENT — PR #64 CORRECTED CANDIDATE FROZEN; EXACT-HEAD VALIDATION RUNNING (2026-10-12)
+
+## CURRENT
+- Draft PR #64: https://github.com/caleb1234calvin-art/dinner-roulette/pull/64 ; branch `integration/missouri-owner-field-2026-10-12`.
+- **Frozen SHA `70682626484fb848fb9addb2c22cdd5f52839b62`; tree `057282e66443396f25bad44941885f3c15cd84c4`; sole parent `4cfd5134ff97b8ed5ccc1bbd48bca616c5242940`.** Base remains released main `f92870632b71def18d7642596dc9dd3357675f76`, tree `9153ead1946bbbb7e38c45981c47332997001c3e`. Two candidate commits,16 main-relative paths. Vercel integration/** deployment exclusion unchanged; no merge/deploy authority.
+- **Cadaver FACTUAL/PLACEMENT PASS, implemented**, with13 exact2026 dates, October29 special7–10PM, $15, visitor25088 Kafir Rd address, approximate placement, no weekly machine hours and cutoff `2026-11-01T05:00:00Z`. Owner-supplied first-party poster origin is accurately distinguished from independent retrieval. **BOSS FACTUAL/PLACEMENT PASS, implemented**, with oneOctober24 event, installation-access conditions, approximate visitor-address Directions and overall-event-bound expiry `2026-10-25T02:00:00Z`.
+- Research **2 PASS /13 HOLD /0 REJECT**; two additions/no amendments, expected62 unique catalog identities. All60 prior catalog objects and presentations protected by immutable baseline checks. Accepted projection SHA256 `fab3e9e0084fb58bb052846e02cf22217fc2989ec639c6d282870adbb08acc84` remains unchanged. PR #61/adaptive radial stays **PARKED**; “Radial discovery becomes an audit layer.” is future intent only.
+- Initial4cfd exact candidate failed full tests: **1,019 repository PASS +71 application PASS /1 FAIL /4 inherited skips**. Failure is historical Phase4 prior-file enumeration including both new records (54 instead of unchanged52), not a product failure or missing Cadaver identity. Android run38211161433 and web38211161502 core reflect this failure. Initial browser lanes continue without cancellation; old source evidence will never be transferred as successor PASS.
+- Successor changes **one exact filename-exclusion predicate** in `scripts/seasonal-phase4-recovery.test.mjs`. All52/59 counts, original sevenIDs, prior-byte guards, exclusions and runtime remain unchanged. Independent minimum-fix review SHA256 `f55d33e10e8cac132d36a27ed99f7f489e5d5c8268b43d90945049db02133adc`; corrected file `f0c45c32a0b5f713c0143f7eaaae455ba36bb2ed2fa58f28cb2a28f0746ebd62`. Affected73tests PASS. Full original local and hosted failure logs/source/buildproof are retained.
+- Local initial typecheck, lint(0errors/6baselinewarnings), dev and safe auth-enabled production builds passed;83casino tests PASS. These are scoped initial-source results. **Successor full validation totals pending**; expect69 cleanup browser scenarios,516geometry comparisons/62identities and15negativePlan controls, but do not label expected values PASS.
+- Complete original research evidence privately saved as `missouri-hold-sweep-evidence-2026-10-12.zip`, **1,420,713bytes/103members**, SHA256 `5be4e5e53d6da6fe41676d642c41f3dc6881a9602e3c7eb93931678ddf2f4c4e`. Independent path/CRC/size/hash and101original-byte checks plus threeJPEGdecodes PASS; receipt `5d6d27afbaf8979eeaeaa235ea0c528c02b8f3bf42fb706ab5ae038efcab5a6e`. Raw screenshots and production responses are not newly published to GitHub; scoped code/review summaries/hashes only.
+- Production unchanged **`dpl_7MmWVLGr9roCmWit3yzASutdRZGs` READY**, source exact releasedmainf928; five aliases healthy at preflight. Published60,57beforecutoffs at prior acceptance. Immediate supported rollback **`dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U` READY**, source `bf88443932739a9448fac8d27fd845e9947cf697`; prior supported confirmation retained, none executed.
+
+## NEXT
+Run all successor exact-head local/hosted core,13isolated browser lanes/geometry and unsignedAndroid gates. Independently inspect raw verdicts, source/buildproof, memberintegrity and representative actual screenshots. Preserve initial failures. Only correct concrete justified failures; stop at VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION without publishing.
+
+## HOLD
+Research: Fear Factory, Waco, Rising, Twisted, Terrified Existence, Lemp, Macabre, Bakersfield, Dark Nightmares, Farrington, Hannibal, Zombie World, Dark Lords. Reasons remain field-specific in previouscheckpoint/privatearchive. Final browser/geometry/Android/evidence acceptance pending; noVERIFIEDclaim. Physical Android/WebView/GPS HOLD; signing/Play outside scope.6webwarnings/14historicalAndroidwarnings/4inheritedskips and320pxDirections/Libertyoverflow remain accepted baseline limitations. No releasewaiver/protection/productionsettingschange.
+
+---
+
 # CURRENT — BOUNDED MISSOURI HOLD SWEEP INDEPENDENTLY COMPLETE (2026-10-12)
 
 ## CURRENT
