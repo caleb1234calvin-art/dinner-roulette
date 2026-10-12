@@ -1,3 +1,39 @@
+# CURRENT — PR #65 VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION (2026-10-12)
+
+## CURRENT
+- **VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION.** Draft PR #65: https://github.com/caleb1234calvin-art/dinner-roulette/pull/65 . Exact candidate **`2cb05f37126eebd10de3182f1f8db40434e7d557`**, tree **`78f2017373e92e565e7a651f147a88ff1dca1686`**, sole parent/released main **`70682626484fb848fb9addb2c22cdd5f52839b62`**. Branch `integration/missouri-ranked-holds-2026-10-12`; unchanged and clean; no auto-merge.
+- One addition, **Fear Factory LLC**; **63 candidate / 62 published identities**, all prior 62 catalog/presentation objects preserved. ListingCompletenessV1, attributed secondary schedule, qualified approximate placement, visitor-address Directions, null machine hours/conservative Open Now, exact 2026 lifecycle, no 2027 revival, saved/cache current-policy handling and duplicate/lifecycle-negative protections retained.
+- **13 HOLDs ranked and independently reviewed: 1 factual PASS / 12 HOLD / 0 REJECT.** Fear Factory factual PASS / placement PASS (approximate) / implementation ELIGIBLE. Six remaining scheduled nights Oct16/17/23/24/30/31; cutoff **`2026-11-01T04:00:00Z`**, **STILL USEFUL** at final readback. Small one-record candidate is intentional; no padding.
+- **Validation PASS:** 1,027 repository passes plus four inherited skips, 71 application passes, typecheck, lint (zero errors/six inherited warnings), safe auth-enabled migration-free build. Exact-head web run38304682434 all16 jobs success; **1,288 seasonal +10 ordinary Date Night scenarios**, casino16/location19 checks; **525 geometry comparisons /15 negative Plan identities**. Plan excess maximum3px; result maximum4.671875px versus matched ordinary controls. Nine representative screenshots inspected.
+- **Android automated readiness PASS**, exact-head run38304682498, three Python verifier tests; unsigned artifact inspection and signing guard passed; fourteen native lint warnings and vendor baseline qualifications retained. Native unit tests NO-SOURCE; signing skipped; wrapper loads current production, not embedded candidate content.
+- **All17 original web/Android artifacts saved**, 850,055,345 bytes with original hashes. Web15 originals and8,535 members fully path/CRC/size/SHA verified. Complete cumulative evidence accepted; decoded cumulative job log unavailable through bounded transport attempts, explicitly disclosed without claiming exhaustive full CI logs.
+- Final baseline recheck **2026-10-12T20:51:20Z PASS**: main **`70682626484fb848fb9addb2c22cdd5f52839b62`**, tree **`057282e66443396f25bad44941885f3c15cd84c4`**; production **`dpl_FzXe9UNP3uGFaMeh9RsWe1Gaiv4K` READY**, source main, 62 identities; five aliases healthy with fresh HTTP200 and same-byte asset proof. Immediate supported rollback **`dpl_7MmWVLGr9roCmWit3yzASutdRZGs` READY/source `f92870632b71def18d7642596dc9dd3357675f76`**. No fresh rollback UI eligibility claim.
+- Owner deliverables: `missouri-candidate-release-decision-2026-10-12.txt`; `missouri-ranked-hold-final-review-2026-10-12.zip` plus verification JSON; complete `missouri-owner-field-research-requests-2026-10-12.txt`; prior research ZIP and separate original artifacts. Final-review package contains actual reports, preserved verdicts/manifests, retrieved complete logs, and selected screenshots; no truncated logs. Exact-head validation checkpoint **`0a39a5432585742a0c485a33152ba6c7e0aeee37`** was fully read back and matched.
+- **No merge, deployment, rollback, waiver, migration, upload-key signing or Play publication.** This checkpoint is documentation-only on deployment-disabled continuity branch and is not a release authorization.
+
+## NEXT
+- **Owner release decision for exact PR #65 SHA/tree above.** Do not merge/deploy without that decision. Before any later release, freshly recheck candidate/baseline drift, cutoff and required release protections.
+- Owner may supply the consolidated field evidence to clear future records; do not restart discovery or repeat exhausted retrieval. Capture visible facts, attributable source/page and full year/date; preserve provenance and independent corroboration separately.
+
+## HOLD
+- **Waco:** readable official 2026 invitation/calendar or fully dated post binding schedule and final date; approximate placement review remains.
+- **Dark Nightmares:** contemporaneous first-party34100/33100 visitor-address conflict; accepted final lifecycle still required.
+- **Farrington:** explicit2026 event binding for October17–18 beyond copyright.
+- **Hannibal:** visitor-address conflict320 S Bird/320 South3rd and first-four-weekends/October30 schedule conflict.
+- **Bakersfield:** preserved dated2026 public visitor evidence and supported dates/lifecycle; indexed opening snippet alone insufficient.
+- **Rising:** operator lifecycle after possible October4 closure unresolved; remaining2026 dates/final date required. Closure is not established.
+- **Terrified Existence:** reliable2026 public visitor invitation and source-bound dates/lifecycle.
+- **Twisted Minds:**2026 public visitor invitation/dates and10000/10002 Bear Cove address conflict.
+- **Dark Lords:**2026 public operation/final date and current visitor-address confirmation.
+- **Zombie World:** operator booking remainsOctober2025;2026 operation/lifecycle unbound.
+- **Lemp:** conflicting first-party opening statements; no Lemp-specific dated schedule. Conditional low-yield owner check.
+- **Macabre:** traditional season suspended during redevelopment; no dated public special established. Conditional low-yield owner check.
+- All twelve remain factual/placement/implementation HOLD and excluded. Full seven-field owner requests and exact preserved research blockers remain below and in the owner guide. Fear Factory first-party corroboration is optional.
+- Main unprotected; no waiver granted. Four repository skips, six JavaScript and fourteen native lint warnings retained; inherited320px Directions clipping remains. Physical Android/WebView/GPS HOLD; no signing/Play.
+- PR #61/performance **PARKED** at unchanged `c78b97175cc094436e454fa888e1ed83486f750d`. Future intent: **"Radial discovery becomes an audit layer."**
+
+---
+
 # CURRENT — PR #65 EXACT-HEAD VALIDATION ACCEPTED (2026-10-12)
 
 ## CURRENT
