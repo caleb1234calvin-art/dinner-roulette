@@ -1,3 +1,89 @@
+# 2026-10-12 final automated validation gate — PR #66 ready for owner release decision
+
+CURRENT:
+
+- **PR #65 release and production acceptance PASS.** Main SHA `2cb05f37126eebd10de3182f1f8db40434e7d557`, tree `78f2017373e92e565e7a651f147a88ff1dca1686`, parent `70682626484fb848fb9addb2c22cdd5f52839b62`. Exact authorized publication occurred at 2026-10-12T21:47:07Z; PR #65 is merged/closed. The ONE-RELEASE waiver is **CONSUMED**. No protection settings were changed; latest main still reports protected=false.
+- Production `dpl_45iETuFCFYrnp2r3wV8DxdvioC5a` is READY on released main. Immutable host: `dinner-roulette-r3km8m9k9-minions-9e2c.vercel.app`. All five aliases map to it and passed fresh HTTP checks: pickforus.app, www.pickforus.app (308 to apex), dinner-roulette-chi.vercel.app, dinner-roulette-minions-9e2c.vercel.app, dinner-roulette-git-main-minions-9e2c.vercel.app.
+- Immediate supported rollback: `dpl_FzXe9UNP3uGFaMeh9RsWe1Gaiv4K`, READY, source `70682626484fb848fb9addb2c22cdd5f52839b62`, immutable host `dinner-roulette-h5b58ovvz-minions-9e2c.vercel.app`. The postrelease Instant Rollback dialog offered this previous deployment; inspection was canceled. No rollback was needed. Older 7Mm is historical, not the immediate Hobby rollback.
+- Production has **63 identities**, preserving all previous 62. Live Fear Factory smoke passed: visitor-address Directions to 102 South Main Street, Mountain Grove, MO 65711; October 2–3, 9–10, 16–17, 23–24, 30–31, 2026; qualified placement; saved favorite/reload/cache; conservative Open Now; ordinary Date Night. Served catalog and presentations match released source. Cutoff `2026-11-01T04:00:00Z`, null machine hours and no 2027 recurrence remain bound to accepted exact-head tests. No future-clock production test is claimed.
+
+**Frozen nonproduction candidate**
+
+- Draft PR #66: https://github.com/caleb1234calvin-art/dinner-roulette/pull/66
+- Branch: `integration/missouri-admission-details-2026-10-12`.
+- SHA: `0032d913efaca4bd97d730414a50a5b01e1a2099`.
+- Tree: `f0d0a777ec90d5e82cc089d71b5c2eaf0646f21b`.
+- Sole parent: released main `2cb05f37126eebd10de3182f1f8db40434e7d557`.
+- Local/remote identity, all 19 reviewed files, and clean worktree verified. PR remains open/draft/unmerged. Zero Vercel deployments for the candidate; deployment-disabled integration/** setting unchanged. **No second merge or deployment.**
+- Scope: six admission-detail amendments in one runtime presentation file: Pomme, Bollinger, James River Joplin, Sam A. Baker, Rutledge-Wilson, Boone. All 63 catalog objects and 57 other presentations are unchanged. No dates, cutoff, hours, address, placement, identity policy, component/CSS, dependency, migration, workflow or deployment-setting changes.
+- Primary sources and exact approved before/after projection are committed under audit/missouri-admission-2026-10-12. Supporting tests preserve original baselines, allow only these six amendments, add registry negative controls, freeze historical Phase 4 membership, include Branson in the focused late-fall cache matrix, and assert actual Details/saved-reopen copy.
+
+**Final validation PASS**
+
+- Exact-head web workflow 38316422380 and Android workflow 38316422365 completed SUCCESS: **17 successful checks plus expected signing skip**.
+- **1,038 repository tests** (4 inherited skips, 0 failures), **71 application tests**, typecheck PASS, lint 0 errors / 6 inherited warnings, authenticated migration-free production build PASS.
+- Clarification to candidate-freeze prose: required full core gates are HOSTED exact-head CI. A redundant optional local full-core lane was stopped; no separate completed local full-core run is claimed. Independent local policy/data probes were completed separately.
+- **1,288 seasonal browser scenarios**: two 23, completeness 97, ten 157, cumulative 235, Astra 220, Astra extras 185, Phase 4 164, next Missouri 87, HOLD cleanup 69, ranked holds 51. Ordinary Date Night 10, casino 16, location 19 all PASS.
+- **525 geometry comparisons**, 63 identities, 15 negative Plan controls PASS. Six saved old receipts reopen the exact current approved paragraphs; 24 amended actual Options/Result inspections at 320/390 and 39 amended geometry copy projections PASS. Rutledge's legitimate Plan retains readable paid-extras copy at 320/390/512. Directions, rideshare, cache, favorites/exclusions, duplicates and conservative Open Now remain correct.
+- All 63 source/module probes cover -1ms / exact / +1ms cutoff and no-2027 revival (252 cases). Full browser suites exercise held-RPC expiry on their existing selected records. Do not claim individual millisecond/held-RPC browser coverage for every one of these six legacy records with unchanged lifecycle data.
+- Geometry is source-bound component coverage, separate from hydrated app/RPC coverage. Saved-reopen captures prove text/state; separate normal Details inspections verify decoded artwork. Zero RPC applies to direct Favorites reload before returning to Pick. Existing 320px Directions-label overflow remains an acknowledged baseline.
+- Android automated readiness PASS. All 53 native inputs unchanged; unsigned AAB/debug APK and compiled configuration/security/icon bytes inspected. Native unit tasks were NO-SOURCE. Android app lint has 0 errors / 14 inherited warnings; vendor baseline qualification retained. Physical device/WebView/GPS, upload-key signing and Play distribution remain unrun. The wrapper loads production, not embedded candidate web content.
+- All **17 original CI ZIPs** independently pass official size/SHA256, CRC, member safety, exact-source and authenticated build-proof checks. Independently reproduced source fingerprint: `f069a169a0906563c4db99822e5adbdcc717bc66e029801ed41851a31d4f87a4`, 493 inputs.
+- One cumulative download was truncated and rejected; reacquisition matched the official 116,339,404-byte archive, SHA256 `6ce1a40027695492c36ff8eedc8a9f0323a27884113708af3f47cf076cf884b0`. No CI rerun or source change. Final independent review PASS; JSON SHA256 `7146575592003d7f3adef89ac8e83d9c4fb1a6b71adb6dfebee80206b847270e`.
+
+**Automated cleanup and discovery**
+
+- Cleanup PASS with no demonstrated runtime defect: 759/759 invariants; 1,953 distinct identity pairs; 126 provider orders; 63 stale-identity, saved-alias and cache cases each; 189 favorite/exclusion controls; 41 Branson late-fall checks.
+- At audit time, 60 identities are lifecycle-eligible and three expired records are correctly suppressed: MO26-028, MO26-074, MO26-012. Eligibility does not imply open tonight.
+- Existing source review dates: 29 due October 14 and 20 due October 15. No new expiry within 72 hours; three within seven days: Boone October 17 20:00 CDT, Broken Hour October 17 22:00 CDT, Pomme October 18 00:00 CDT. Nine expire within fourteen days.
+- Bounded discovery cross-checked historical 134, current 63, full HOLD history and owner lane. FrightMaps examined 27; MissouriHauntedHouses.com screened 29; The Scare Factor classified 64 index entries. Counts overlap and are not a statewide unique total. Each lane used one index and at most three targeted checks.
+- **Zero new attractions cleared publication.** Six Flags St. Louis Fright Fest is a true net-new automated HOLD for authoritative Missouri-specific 2026 dates and visitor/placement evidence. Twelve incidental unexpanded FrightMaps links are not claimed researched. All screened leads are classified in preserved lane reports.
+- Branson hours amendment REJECTED: primary 2026 operator page supports the existing 7–10 p.m.; directory 8–10 snippet does not override it. Broken Hour's inaccessible fresh source leaves its accepted cutoff intact.
+
+NEXT:
+
+1. **STOP: VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION.** Owner may approve only PR #66 SHA `0032d913efaca4bd97d730414a50a5b01e1a2099` / tree `f0d0a777ec90d5e82cc089d71b5c2eaf0646f21b`, subject to fresh release preflight. If main remains unprotected without an applicable blocking ruleset, obtain a new one-release owner waiver; PR #65's waiver cannot be reused.
+2. Before the next useful release window, revalidate the three imminent expiries and known Darkness October 16–17 start-time conflict; then the oldest Lloyd/Sam evidence and remaining October 14–15 source queue. Fresh admission evidence does not silently rebaseline broader checkedAt or schedule facts.
+3. Reassess Six Flags only when materially new authoritative Missouri 2026 evidence appears. Defer broader registry/shortlist refactors until a concrete addition needs them.
+
+HOLD:
+
+- Owner field lane unchanged and PARKED: Waco, Dark Nightmares, Farrington, Hannibal, Bakersfield, Rising, Terrified Existence, Twisted Minds, Dark Lords, Zombie World, Lemp, Macabre. No repeated blocked-social research, operator contact, or inferred missing facts.
+- PR #66 publication/deployment awaits exact owner decision and fresh preflight. Any SHA/tree change invalidates this acceptance. No automatic second-release authority.
+- Physical Android/WebView/GPS, signing and Play limitations remain explicit.
+- PR #61/performance remains PARKED at `c78b97175cc094436e454fa888e1ed83486f750d`. Preserve **"Radial discovery becomes an audit layer."** as future product intent. No performance benchmarking resumed.
+
+EVIDENCE:
+
+- All 19 final files saved successfully; per-item status and local identity metadata verified in request order. The 17 original ZIPs total **854,796,187 bytes** and are preserved byte-for-byte. The review archive has 127 verified members.
+- PR #65 release archive: `libfile_9bda7c403504819197ba2d8f523b1b57`; 1,784,305 bytes; SHA256 `799429347a8c25dd828e5338786a244505b744970c75522917c03bd484d1435d`.
+- Prior full-readback stable gates: release `b3195b891c580e6dd35a6470600cc7de3fa07f6d`; cleanup `c5a8b2fda8879faaee53fa053a4c9220d7d4dbf5`; discovery `dd01eed7c28da1040ec671ef9d330c44b3ca39a4`; freeze `7226f387fefca9f65813e39111cbd46b93e70d1a`.
+- Final saved files under /Pick for Us/:
+
+| File | Library identity | Bytes | SHA256 |
+|---|---|---:|---|
+| PR66-Release-Decision.md | `libfile_c8354b0709308191ab2f42467b7b394c` | 11171 | `560ccd71277d84b29a53281bd159c1f82d6e7041401636916fd1f29be5b361e4` |
+| PR66-automated-review-evidence-2026-10-12.zip | `libfile_e47d8fe2d5508191a7d283e060b701db` | 2564729 | `ac5ebe290ef6f8c99af140a5c227e852b0bb1eb68b20180d19aa0d9f9be173ec` |
+| PR66-casino-browser-evidence-casino.zip | `libfile_33569de94cf48191a02922738c002cf7` | 214176 | `7e386ddc30bf136f5d09a626a7906b4d45a52e3bfee47e76c12edb8d0cef9f02` |
+| PR66-casino-browser-evidence-date-night-radial.zip | `libfile_ff1944a3692c819190a089d22651810b` | 3288778 | `218e84f5f63fffd72dda71ee8eac3077aa527004eac01ebdbdd092d2e43c2357` |
+| PR66-casino-browser-evidence-geometry.zip | `libfile_702e07976ffc8191ab947618ed07b974` | 267780956 | `6a6775b3615c6595b9a00eb432f6484c3e9ed0821ebde6740b9e57523780920a` |
+| PR66-casino-browser-evidence-location.zip | `libfile_ac998b1e9ac48191aa24e86f4a6466c1` | 429054 | `a26f91895990f333b21d985e49395346488a86f862f4a2f0fb250882135e07ce` |
+| PR66-casino-browser-evidence-seasonal-astra-extras.zip | `libfile_6b64c0566b6081919b5265de3b436c06` | 76191955 | `1df773ca390b118ed58e92be9c8a0b0c2a216fb584850e2cfec67ea0ee68c04b` |
+| PR66-casino-browser-evidence-seasonal-astra.zip | `libfile_6a9c2a8ef8ec8191bb420ebe445dcc4b` | 94470167 | `29f09490c4f5303c6bf78af7502eef5e56d19ab2a8c1aafb656dbac2147daf0e` |
+| PR66-casino-browser-evidence-seasonal-completeness-v1.zip | `libfile_abb42cdcd7d88191af7bb28d5d23fa3e` | 58514195 | `1373cedca0a5db5f3e91d30bbec71f8780e714c89da83c38f453ad3f90ff1e5f` |
+| PR66-casino-browser-evidence-seasonal-cumulative.zip | `libfile_cd49c23af86881919fc55928957c892a` | 116339404 | `6ce1a40027695492c36ff8eedc8a9f0323a27884113708af3f47cf076cf884b0` |
+| PR66-casino-browser-evidence-seasonal-hold-cleanup.zip | `libfile_67d3e35a80d88191bbef9f4b64e8efbf` | 20516254 | `da927b58ef6ef1f5980553edbba5a593de98063a57cae92fdaa4980a354a2570` |
+| PR66-casino-browser-evidence-seasonal-next-missouri.zip | `libfile_77e926cce47c8191bcfc7e5cf222550d` | 29859928 | `0c68f9e8398e54ae1e237b5901a698e6e1fb02ae54973d85c2a1605ad488beef` |
+| PR66-casino-browser-evidence-seasonal-phase4.zip | `libfile_70c05bf03b2c8191afbd6b366d56cf23` | 68420609 | `a28093f24afcacf966a1dad1ec53e66ba40223f0171b0c9d0e524a50aee34bd5` |
+| PR66-casino-browser-evidence-seasonal-ranked-holds.zip | `libfile_99d5cc0b272c8191bef99856404c0c65` | 12606018 | `ac27fe0be42f813e5545e141d5f97ca2835879b91c5fad23598e648b619fb27e` |
+| PR66-casino-browser-evidence-seasonal-ten.zip | `libfile_cef117c675748191806f1cf6d17d0cb9` | 76529226 | `54d5277d17f507ee515d1e6258f88ac59eb76b655dbd534a08ffe2a59392ca6f` |
+| PR66-casino-browser-evidence-seasonal-two.zip | `libfile_f8b0f99914108191beae1e96060000f3` | 22744592 | `aad501b50b4f0dd0990f4e906c4585fdc396a73aa5aca05a62cc28a47b5cde93` |
+| PR66-validation-check-build-proof.zip | `libfile_8508dc5db57c819195a30fe979e7f708` | 392 | `f9e97af4b219fa79c724dfffb56c49d718ec42784666da0b6d073d676fab2a8f` |
+| PR66-Android-lint-original.zip | `libfile_b55e4ffd3c308191a03c73e5e782b52d` | 24069 | `78a7ebc68d55dcaadfca825edd7ffdf30e38b728fac6a9a2bff2ca4a768aed04` |
+| PR66-Android-validation-original.zip | `libfile_5873ba3e75008191ae549505dee76e12` | 6866414 | `bfd4077b9c40f45d37e91a1b04ae47ac00e769ebdd99b5878ba9c42ea5ee8e77` |
+
+---
+
 # 2026-10-12 automated candidate freeze stable gate — PR #66
 
 CURRENT:
