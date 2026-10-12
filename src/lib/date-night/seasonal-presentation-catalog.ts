@@ -3,6 +3,16 @@ import type { SeasonalPresentation } from "./seasonal-presentation";
 /** Explicit independently reviewed visitor copy. Full facts remain in immutable audit
  * artifacts and catalog metadata; no audit narratives are rendered as consumer prose. */
 export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentation>> = {
+  "DELTA2-FEARFACTORY": {
+    "canonicalId": "date-night-mo26-fear-factory",
+    "confidence": "limited",
+    "details": [
+      "Listed 2026 dates: October 2–3, 9–10, 16–17, 23–24 and 30–31.",
+      "Directory lists 8–11 p.m.; confirm with venue before travel.",
+      "Approximate venue location. Use the visitor address for Directions.",
+      "The directory advises against visits for people with seizures because of frequent strobe lights, and recommends parental discretion for children under 13. Confirm visitor restrictions with the venue."
+    ]
+  },
   "DELTA6-BOSS": {
     "canonicalId": "date-night-mo26-boss-harvest-fest",
     "confidence": "limited",

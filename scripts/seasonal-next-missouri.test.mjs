@@ -44,7 +44,8 @@ test("exact independently accepted one addition and two presentation amendments 
   for (const [path, hash] of Object.entries(baseline.files)) assert.equal(createHash("sha256").update(readFileSync(path)).digest("hex"), hash, `Every released catalog byte remains intact: ${path}`);
   for (const row of [...previousRows, ...additions]) assert.equal(getCuratedSeasonalPlace(row.id), row);
   assert.equal(Object.keys(baseline.presentations).length, 59);
-  assert.equal(Object.keys(SEASONAL_PRESENTATIONS).length, 60 + cleanupAdditions.length, "Only the explicitly reviewed cleanup additions extend the released registry");
+  assert.equal(Object.keys(SEASONAL_PRESENTATIONS).length, 60 + cleanupAdditions.length + 1, "Only the cleanup additions and the single reviewed Fear Factory extend this registry");
+  assert.equal(SEASONAL_PRESENTATIONS["DELTA2-FEARFACTORY"].canonicalId, "date-night-mo26-fear-factory");
   for (const [recordId, before] of Object.entries(baseline.presentations)) {
     const amendment = accepted.amendments.find(row => row.recordId === recordId);
     if (!amendment) { assert.deepEqual(SEASONAL_PRESENTATIONS[recordId], before, recordId); continue; }

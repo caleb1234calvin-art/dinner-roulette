@@ -1,0 +1,88 @@
+{
+  "package": "MISSOURI-RANKED-HOLDS-ACCEPTED-PROJECTION-R1",
+  "baseSha": "70682626484fb848fb9addb2c22cdd5f52839b62",
+  "baseTree": "057282e66443396f25bad44941885f3c15cd84c4",
+  "controllingReview": {
+    "path": "research/independent/Fear-Factory-Eligibility-R2.json",
+    "sha256": "5b5ffb7c1c754b0edcb454e3196cbcf00164de5eb2dee959ad9c563e06f4064c",
+    "factual": "PASS",
+    "placement": "PASS approximate only",
+    "implementation": "ELIGIBLE"
+  },
+  "authorHandoffSha256": "4579e0328f404d584826f7f0a01bf7ad7321be34e8862a6e971c7c854efeea46",
+  "scope": "One independently eligible existing Missouri HOLD. Research acceptance is separate from runtime validation and owner release authorization.",
+  "newRecords": [
+    {
+      "recordId": "DELTA2-FEARFACTORY",
+      "canonicalId": "date-night-mo26-fear-factory",
+      "name": "Fear Factory LLC",
+      "contract": "ListingCompletenessV1",
+      "visitorAddress": "102 South Main Street, Mountain Grove, MO 65711",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "website": "https://www.fearfactoryllc.com/",
+      "phone": "+14172173065",
+      "seasonYear": 2026,
+      "timeZone": "America/Chicago",
+      "checkedAt": "2026-10-12",
+      "openNowPolicy": "never",
+      "activeFrom": "2026-10-02",
+      "activeUntil": "2026-10-31",
+      "listingExpiresAt": "2026-10-31T23:00:00-05:00",
+      "listingExpiresAtUtc": "2026-11-01T04:00:00Z",
+      "expiryBasis": "exact",
+      "placement": {
+        "lat": 37.127139,
+        "lon": -92.264897,
+        "basis": "address-geocode",
+        "sourceUrl": "https://www.waze.com/live-map/directions/us/mo/mountain-grove/fear-factory-llc?to=place.ChIJeV4WV3YP0IcRx9UJc2YdouA",
+        "checkedAt": "2026-10-12",
+        "precisionLabel": "Approximate named venue/address map location; entrance, parking and ride dropoff unverified"
+      },
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "102 South Main Street, Mountain Grove, MO 65711"
+      },
+      "ridesharePolicy": "external-picker",
+      "hours": {
+        "state": "partial",
+        "displayText": "Directory lists 8–11 p.m.; confirm with venue before travel."
+      },
+      "confidence": "limited",
+      "sourceUrls": [
+        "https://www.missourihauntedhouses.com/halloween/fear-factory-llc-mountain-grove.html",
+        "https://www.fearfactoryllc.com/contact",
+        "https://www.waze.com/live-map/directions/us/mo/mountain-grove/fear-factory-llc?to=place.ChIJeV4WV3YP0IcRx9UJc2YdouA"
+      ],
+      "exactActiveDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "openingHours": null,
+      "machineOpeningIntervals": null,
+      "automatic2027Recurrence": false,
+      "details": [
+        "Listed 2026 dates: October 2–3, 9–10, 16–17, 23–24 and 30–31.",
+        "Directory lists 8–11 p.m.; confirm with venue before travel.",
+        "Approximate venue location. Use the visitor address for Directions.",
+        "The directory advises against visits for people with seizures because of frequent strobe lights, and recommends parental discretion for children under 13. Confirm visitor restrictions with the venue."
+      ],
+      "provenance": {
+        "scheduleSourceClass": "CURRENT_TRUSTWORTHY_SECONDARY_DIRECTORY",
+        "operator2026ScheduleIndependentlyVerified": false,
+        "directoryRawSha256": "4586a67e00ce6998ac7f6e3af6d789722bb2844ad7f9a654450fa6d9d0390a04",
+        "placementRawSha256": "b8bbb64fa60d7b20fa85d51c23876aed5a8e0199a7bb1bc2a9e777ee1acd70e6",
+        "qualification": "Current directory calendar and closing time support the 2026 lifecycle. Operator contact supports the visitor address only. Waze supports approximate named venue/address placement, not arrival or parking."
+      }
+    }
+  ]
+}

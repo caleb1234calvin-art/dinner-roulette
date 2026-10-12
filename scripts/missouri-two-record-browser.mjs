@@ -31,6 +31,7 @@ const verdict = { passed: false, proof, publicProviderCalls: 0, scenarios: [], e
 const { MISSOURI_2026_CLEARED_SEASONAL_CATALOG: rows } = appModuleLoader()("src/lib/date-night/missouri-2026-cleared-catalog.ts");
 const load = appModuleLoader();
 const nearbyCatalog = [
+  ...load("src/lib/date-night/missouri-2026-ranked-holds-catalog.ts").MISSOURI_2026_RANKED_HOLDS_CATALOG,
   ...load("src/lib/date-night/missouri-2026-hold-cleanup-catalog.ts").MISSOURI_2026_HOLD_CLEANUP_CATALOG,
   ...load("src/lib/date-night/missouri-2026-next-catalog.ts").MISSOURI_2026_NEXT_CATALOG,
   ...load("src/lib/date-night/jasper-county-catalog.ts").JASPER_COUNTY_DATE_NIGHT_CATALOG,

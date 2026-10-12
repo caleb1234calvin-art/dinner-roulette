@@ -121,6 +121,7 @@ jobs:
           - seasonal-phase4
           - seasonal-next-missouri
           - seasonal-hold-cleanup
+          - seasonal-ranked-holds
           - geometry
 
     steps:
@@ -241,6 +242,14 @@ jobs:
           CI: "true"
           VITE_AUTH_ENABLED: "true"
           SEASONAL_HOLD_CLEANUP: "true"
+        run: node scripts/seasonal-ten-record-browser.mjs
+
+      - name: Ranked Missouri HOLD browser regression
+        if: matrix.suite == 'seasonal-ranked-holds'
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+          SEASONAL_RANKED_HOLDS: "true"
         run: node scripts/seasonal-ten-record-browser.mjs
 
       - name: Compare seasonal and standard card geometry

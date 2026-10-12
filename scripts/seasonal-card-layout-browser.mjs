@@ -12,6 +12,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { chromium } from "playwright";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 import { assertBrowserBuild } from "./browser-build-proof.mjs";
+import { RANKED_HOLDS_MATERIAL_FACTS, RANKED_HOLDS_CONFIDENCE } from "./test-support/ranked-holds-browser-facts.mjs";
 import { HOLD_CLEANUP_MATERIAL_FACTS, HOLD_CLEANUP_CONFIDENCE, assertCleanupConsumerCopy } from "./test-support/hold-cleanup-browser-facts.mjs";
 import { NEXT_MISSOURI_MATERIAL_FACTS, NEXT_MISSOURI_CONFIDENCE } from "./test-support/next-missouri-browser-facts.mjs";
 import { PHASE4_MATERIAL_FACTS, PHASE4_FORBIDDEN_COPY } from "./test-support/phase4-recovery-browser-facts.mjs";
@@ -21,6 +22,7 @@ const out = "audit/browser-results/seasonal-card-layout";
 fs.mkdirSync(out, { recursive: true });
 const req = createRequire(import.meta.url), pure = appModuleLoader();
 const rows = [
+  ...pure("src/lib/date-night/missouri-2026-ranked-holds-catalog.ts").MISSOURI_2026_RANKED_HOLDS_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-hold-cleanup-catalog.ts").MISSOURI_2026_HOLD_CLEANUP_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-next-catalog.ts").MISSOURI_2026_NEXT_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-cleared-catalog.ts").MISSOURI_2026_CLEARED_SEASONAL_CATALOG,
@@ -171,6 +173,18 @@ try {
             assertCleanupConsumerCopy(text, recordId, PHASE4_FORBIDDEN_COPY);
             assert.equal(await card.locator("[data-seasonal-confidence]").innerText(), HOLD_CLEANUP_CONFIDENCE[recordId] === "good" ? "Good confidence" : "Limited details");
             for (const fact of HOLD_CLEANUP_MATERIAL_FACTS[recordId]) assert.match(await details.innerText(), fact);
+            assert.equal(row.seasonalListing.directionsTarget.kind, "visitor-address");
+            if (kind !== "options") {
+              const maps = card.getByRole("link", { name: isPlan ? "Maps" : /Directions · Google Maps/, exact: isPlan });
+              assert.equal(new URL(await maps.getAttribute("href")).searchParams.get("destination"), row.address);
+            }
+          }
+          if (RANKED_HOLDS_MATERIAL_FACTS[row.seasonalListing.recordId]) {
+            assert.match(await card.innerText(), /Approx\./);
+            assert.doesNotMatch(await card.innerText(), PHASE4_FORBIDDEN_COPY);
+            const confidence = RANKED_HOLDS_CONFIDENCE[row.seasonalListing.recordId];
+            assert.equal(await card.locator("[data-seasonal-confidence]").innerText(), confidence === "good" ? "Good confidence" : "Limited details");
+            for (const fact of RANKED_HOLDS_MATERIAL_FACTS[row.seasonalListing.recordId]) assert.match(await details.innerText(), fact);
             assert.equal(row.seasonalListing.directionsTarget.kind, "visitor-address");
             if (kind !== "options") {
               const maps = card.getByRole("link", { name: isPlan ? "Maps" : /Directions · Google Maps/, exact: isPlan });

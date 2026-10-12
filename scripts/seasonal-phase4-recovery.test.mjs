@@ -26,7 +26,7 @@ const ids = ["MO26-006", "MO26-004", "DELTA3-FEARSTONE", "DELTA3-FUN-TIME", "MO2
 const cutoffs = ["2026-11-01T05:00:00Z", "2026-11-01T05:00:00Z", "2026-10-31T05:00:00Z", "2026-11-01T05:00:00Z", "2026-11-01T05:00:00Z", "2026-11-02T06:00:00Z", "2026-11-15T06:00:00Z"];
 const current = id => rows.find(row => row.seasonalListing.recordId === id);
 const providerFor = row => ({ ...row, id: `date-night-osm-node-${rows.indexOf(row) + 991100}`, source: "osm", openingHours: "24/7", seasonalAvailability: undefined, seasonalListing: undefined, seasonalVisitNotes: undefined });
-const allPrior = readdirSync("src/lib/date-night").filter(name => /^missouri-.*catalog\.ts$/.test(name) && !name.includes("phase4-recovery") && name !== "missouri-2026-next-catalog.ts" && name !== "missouri-2026-hold-cleanup-catalog.ts")
+const allPrior = readdirSync("src/lib/date-night").filter(name => /^missouri-.*catalog\.ts$/.test(name) && !name.includes("phase4-recovery") && name !== "missouri-2026-next-catalog.ts" && name !== "missouri-2026-hold-cleanup-catalog.ts" && name !== "missouri-2026-ranked-holds-catalog.ts")
   .flatMap(file => Object.entries(load(`src/lib/date-night/${file}`)).filter(([key]) => key.endsWith("_CATALOG")).flatMap(([, value]) => value));
 
 test("recovery input is exactly independently cleared seven; 52 V1 plus one legacy becomes 59 unique V1, six new", () => {
