@@ -6,6 +6,7 @@ import { setTimeout as delay } from "node:timers/promises";
 import { chromium } from "playwright";
 import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
+import { assertAdmissionConsumerCopy } from "./test-support/admission-amendments.mjs";
 assert.equal(process.env.CI, "true");
 const proof = assertBrowserBuild();
 const output = resolve("audit/browser-results/missouri-two-records");
@@ -225,6 +226,7 @@ async function inspectQualifiedOverlay(test, row, kind) {
   assert.equal(await details.getAttribute("open"), null, "Details initially collapsed");
   await details.locator("summary").click();
   const notes = details.locator("p");
+  assertAdmissionConsumerCopy(row.seasonalListing.recordId, await details.innerText());
   for (const fact of legacyMaterialFacts[row.seasonalListing.recordId]) assert.match(await details.innerText(), fact, `${kind}: retained material visitor fact ${fact}`);
   assert.equal(await notes.count(), presentation.details.length, `${kind}: every concise consumer fact is present`);
   await assertConsumerOnly(overlay, row);

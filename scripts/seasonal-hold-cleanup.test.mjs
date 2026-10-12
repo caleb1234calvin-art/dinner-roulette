@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { admissionPresentationAfter } from "./test-support/admission-amendments.mjs";
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
@@ -45,7 +46,7 @@ test("cleanup is bound to reviewed projections and preserves all 60 released obj
   for (const [file, hash] of Object.entries(baseline.files)) assert.equal(createHash("sha256").update(readFileSync(file)).digest("hex"), hash, `Released catalog is byte-preserved: ${file}`);
   assert.equal(Object.keys(baseline.presentations).length, 60);
   assert.deepEqual(Object.keys(SEASONAL_PRESENTATIONS).sort(), [...Object.keys(baseline.presentations), ...Object.keys(HOLD_CLEANUP_MATERIAL_FACTS), "DELTA2-FEARFACTORY"].sort());
-  for (const [recordId, presentation] of Object.entries(baseline.presentations)) assert.deepEqual(SEASONAL_PRESENTATIONS[recordId], presentation, recordId);
+  for (const [recordId, presentation] of Object.entries(baseline.presentations)) assert.deepEqual(SEASONAL_PRESENTATIONS[recordId], admissionPresentationAfter(recordId, presentation), recordId);
   for (const row of [...previous, ...rows]) assert.equal(getCuratedSeasonalPlace(row.id), row);
 });
 

@@ -1,0 +1,175 @@
+{
+  "package": "AUTOMATED-CLEANUP-FRESH-PRIMARY-ADMISSION-REVALIDATION-R1",
+  "retrievedAt": "2026-10-12T22:13:20Z",
+  "sourceSha": "2cb05f37126eebd10de3182f1f8db40434e7d557",
+  "sourceTree": "78f2017373e92e565e7a651f147a88ff1dca1686",
+  "scope": "Five proposed admission amendments and two impending events; exact known URLs only. No general searches, owner-field research or source mutation.",
+  "method": "Opened exact retained primary/delegated URLs through web retrieval. Reopened already returned parse references only to inspect omitted lines. Up to one alternate known URL per venue. Source tool reports cached crawler ages separately; this is a fresh retrieval of reported primary-page content, not direct origin-byte or live weather/ticket-inventory certification.",
+  "counts": {
+    "admissionProposalsSupported": 5,
+    "additionalExistingEventScheduleSupported": 1,
+    "freshRevalidationInaccessible": 1,
+    "conflictsObserved": 0
+  },
+  "proposalsStatus": "Five initial proposals supported; primary-only concise wording narrowed for Pomme and precision improved to most activities for Rutledge. Boone is optional sixth admission amendment discovered incidentally.",
+  "records": [
+    {
+      "recordId": "MO26-071",
+      "name": "Pomme de Terror",
+      "verdict": "PASS admission amendment; no source conflict observed",
+      "url": "https://mostateparks.com/event/pomme-de-terror-2026",
+      "sourceRef": "turn0view0",
+      "sourceClass": "Primary state park event",
+      "crawlerAge": "2 days ago",
+      "lines": "8–10,14–15,19–50,57–59",
+      "quote": "This event is free and open to the public.",
+      "facts": [
+        "Explicit October16–17,2026 event in HermitageAreaCampground.",
+        "Activity-specific program times still match the accepted listing; no final closing time added.",
+        "Event admission is free and public; lunch food is separately available for purchase."
+      ],
+      "copy": "Event admission is free and open to the public.",
+      "originalProposalStatus": "Admission component newly supported. Normal camping-fees qualification is retained accepted evidence, not freshly restated on event/park pages; do not describe it as newly verified.",
+      "retainedAlternative": "Free and open to the public. Normal camping fees still apply.",
+      "fallback": {
+        "url": "https://mostateparks.com/park/pomme-de-terre-state-park",
+        "sourceRef": "turn1view2",
+        "crawlerAge": "today",
+        "lines": "119–124,159–163",
+        "finding": "Park page corroborates2026Oct16–17 event and separate camping/lodging amenities; no camping-fee text observed."
+      },
+      "cutoff": "2026-10-18T00:00:00-05:00"
+    },
+    {
+      "recordId": "MO26-115",
+      "name": "Bollinger Mill Trick or Treat Night",
+      "verdict": "PASS",
+      "url": "https://mostateparks.com/event/trick-or-treat-night-2026",
+      "sourceRef": "turn0view1",
+      "sourceClass": "Primary state historic site event",
+      "crawlerAge": "5 days ago",
+      "lines": "7–16",
+      "quote": "Admission to this family-friendly event is free and open to the public. There is no need to register.",
+      "facts": [
+        "ExplicitOctober23,2026,4–7PM and113BollingerMillRoad retained.",
+        "Four mill floors open for event; food vendor sales do not make food universally free."
+      ],
+      "copy": "Free and open to the public; no registration required.",
+      "cutoff": "2026-10-23T19:00:00-05:00"
+    },
+    {
+      "recordId": "MO26-019",
+      "name": "James River Church October31stParty Joplin",
+      "verdict": "PASS",
+      "url": "https://jamesriver.church/october31/",
+      "sourceRef": "turn0view2",
+      "sourceClass": "Primary operator event",
+      "crawlerAge": "3 days ago",
+      "lines": "36–54,68–69,223–234",
+      "quote": "FUN, FREE, SAFE event",
+      "facts": [
+        "Public invitation identifies families and infants throughfifthgrade,1–5PM at everycampus; child-friendlycostumes.",
+        "Explicit2026October31 and JoplinCampus binding remains in the event's volunteersection.",
+        "Volunteerbackgroundscreening/waiver cannot be imported as visitorentryrestriction."
+      ],
+      "copy": "Free public family party for infants through fifth grade; kid-friendly costumes welcome.",
+      "operation": "Replace existing family-party sentence; do not append redundant paragraph.",
+      "cutoff": "2026-10-31T17:00:00-05:00"
+    },
+    {
+      "recordId": "MO26-116",
+      "name": "Sam A. Baker Halloween Bash",
+      "verdict": "PASS",
+      "url": "https://mostateparks.com/event/halloween-bash-2026",
+      "sourceRef": "turn0view3",
+      "sourceClass": "Primary state park event",
+      "crawlerAge": "today",
+      "lines": "7,14–24",
+      "quote": "All activities are free and open to the public, and there is no need to register.",
+      "facts": [
+        "ExplicitOctober31,2026;activities2–6PM unchanged;weathercancellationqualification remains.",
+        "OfficialShelter1parking andparkaddressremain;noGPSreclassification."
+      ],
+      "copy": "Activities are free and open to the public; no registration required.",
+      "cutoff": "2026-10-31T18:00:00-05:00"
+    },
+    {
+      "recordId": "MO26-030",
+      "name": "Rutledge-Wilson Harvest Fest",
+      "verdict": "PASS",
+      "url": "https://parkboard.org/harvestfest",
+      "sourceRef": "turn1view0",
+      "sourceClass": "Primary municipal park operator",
+      "crawlerAge": "today",
+      "lines": "32–35,40–59",
+      "quote": "Free admission, most activities have a small fee.",
+      "facts": [
+        "HarvestFestOctober3–25weekends,pumpkinpatchSept29–Oct25closedMondays unchanged.",
+        "Admissionfree;mostactivitiescharged;cornmazespecificcosts andpumpkinsbyweight.",
+        "Use 'most activities' rather than imply everyactivitychargeseparately."
+      ],
+      "copy": "Festival entry is free; most activities cost extra and pumpkins are priced by weight.",
+      "fallback": {
+        "url": "https://parkboard.org/Calendar.aspx?EID=9795",
+        "sourceRef": "turn2view0",
+        "crawlerAge": "today",
+        "lines": "223–267",
+        "quote": "Free admission, pumpkins priced by weight",
+        "finding": "OfficialOctober7,2026 pumpkinpatchoccurrence binds seasonyear,facility/address,freeentry andweightedpumpkinpricing; no inference ofnewdates."
+      },
+      "cutoff": "2026-10-25T18:00:00-05:00"
+    },
+    {
+      "recordId": "MO26-034",
+      "name": "Nathan and Olive Boone HistoricalHaunts",
+      "verdict": "PASS existing schedule revalidation; incidental amendment support",
+      "url": "https://mostateparks.com/event/historical-haunts-homestead-2026",
+      "sourceRef": "turn1view1",
+      "sourceClass": "Primary state historic site event",
+      "crawlerAge": "today",
+      "lines": "8–18,25–32",
+      "quote": "All activities are free and open to the public; there is no need to register.",
+      "facts": [
+        "ExplicitOctober17,2026;programs6–8PM,music6–7,hikes7–8 unchanged.",
+        "Outdoorweathercancellation/postponementqualification and7850NStateHighwayV unchanged.",
+        "Fresh free/public/no-registrationdetail absent currentcompactpresentation;potential sixthmaterialamendment."
+      ],
+      "copy": "Activities are free and open to the public; no registration required.",
+      "cutoff": "2026-10-17T20:00:00-05:00"
+    },
+    {
+      "recordId": "DELTA2-SHEPHERD-LANTERN",
+      "name": "The Broken Hour at Shepherd's Lantern",
+      "verdict": "INACCESSIBLE fresh revalidation; retained accepted facts unchanged",
+      "url": "https://www.eventbrite.com/e/the-broken-hour-tickets-2000536103338",
+      "sourceRef": "turn0view6",
+      "sourceClass": "Previously accepted delegated ticket source",
+      "error": "Internal Error",
+      "fallback": {
+        "url": "https://www.shepherdslanternllc.com/",
+        "sourceRef": "turn1view3",
+        "error": "URL is not accessible via this tool."
+      },
+      "facts": [
+        "One ticket attempt and one knownoperatorhomepagefallback;stopped.",
+        "Neitherfailureestablishesclosure,cancellation,dateschanges,ornewfactualconflict.",
+        "RetainpreviouslyacceptedOctober16–17datesandOctober17,22CDTcutoff;donotadvancecheckedAtasfreshPASS."
+      ],
+      "copy": null,
+      "cutoff": "2026-10-17T22:00:00-05:00"
+    }
+  ],
+  "unchangedConstraints": [
+    "No new identities or date extensions.",
+    "All conservative machinehours/OpenNow/lifecycle/placement/Directionscontracts remain.",
+    "No runtime source change made.",
+    "Existing owner twelve field-research blockers unchanged.",
+    "PR61performance remainsPARKED."
+  ],
+  "limitations": [
+    "Pomme normalcampingfees qualification remains previouslyaccepted;not newly observed on two fetched pages.",
+    "BrokenHour must remain separately classified freshrevalidationINACCESSIBLE,not freshPASS.",
+    "Absence of cancellation text in fetched content is not a guarantee of current operation or weather."
+  ],
+  "quotesPolicy": "Only bounded source excerpts retained; full third-party pages are not reproduced."
+}

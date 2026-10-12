@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { admissionPresentationAfter } from "./test-support/admission-amendments.mjs";
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
@@ -48,7 +49,7 @@ test("exact independently accepted one addition and two presentation amendments 
   assert.equal(SEASONAL_PRESENTATIONS["DELTA2-FEARFACTORY"].canonicalId, "date-night-mo26-fear-factory");
   for (const [recordId, before] of Object.entries(baseline.presentations)) {
     const amendment = accepted.amendments.find(row => row.recordId === recordId);
-    if (!amendment) { assert.deepEqual(SEASONAL_PRESENTATIONS[recordId], before, recordId); continue; }
+    if (!amendment) { assert.deepEqual(SEASONAL_PRESENTATIONS[recordId], admissionPresentationAfter(recordId, before), recordId); continue; }
     assert.deepEqual(amendment.before, before.details);
     assert.deepEqual(amendment.after, [...amendment.before.slice(0, -1), amendment.addedSentence, amendment.before.at(-1)]);
     assert.deepEqual(SEASONAL_PRESENTATIONS[recordId], { ...before, details: amendment.after });

@@ -1,0 +1,423 @@
+{
+  "package": "MISSOURI-ACCEPTED-ADMISSION-AMENDMENTS-R1",
+  "createdAt": "2026-10-12T22:15:46.303745+00:00",
+  "baseSha": "2cb05f37126eebd10de3182f1f8db40434e7d557",
+  "baseTree": "78f2017373e92e565e7a651f147a88ff1dca1686",
+  "baseIdentityCount": 63,
+  "expectedIdentityCount": 63,
+  "scope": "Six presentation-only admission qualifications; zero new identities, zero catalog amendments. This is a reviewed acceptance input, not an implementation candidate or release authorization.",
+  "status": "FACTS ACCEPTED; exact before/after projection ready for root review. No implementation candidate created or validated.",
+  "rootAcceptance": "Parent independently opened all six primary sources and accepted the facts; root requested the exact copy shown here, including event-admission-only Pomme and concise paid-extras Rutledge wording. Artifact review remains pending.",
+  "inputHashes": {
+    "servedPresentationsFileSha256": "b2feb85c72cc821cb6b6d22f6324eff1a29ed05ea5032473d59656462a362909",
+    "servedCatalogFileSha256": "3b14fa2dfa79bc3814a99e0f957ee5f123f193c26064bd5d7aebad1beb788586",
+    "freshSourceReportSha256": "46a4866c9b246f6c049e4adbd6390171a0c26949c5777b685530f95ef546d64c",
+    "allBeforePresentationsCanonicalJsonSha256": "00ca73649d849d962183ff3796a385891376fde918e71b6be2c269837e659e2a",
+    "allAfterPresentationsCanonicalJsonSha256": "20cdf216e1c97a97e3e50c3ceeb842e1d5c8a08f92535a1f2d4dd4e7d6108a1b"
+  },
+  "preserveAllOtherFields": true,
+  "preservationContract": [
+    "All 63 runtime catalog objects must remain byte/data equivalent to the released base.",
+    "All 57 nonselected presentation objects must remain deeply equal to the released base.",
+    "Six selected objects may differ only by the exact changes enumerated here; all names, identities, confidence values, schedules and material qualifications remain.",
+    "Do not mutate source-check dates merely because the admission copy was reviewed.",
+    "Do not relax geometry, source-fingerprint, lifecycle, current-policy, duplicate, Directions, rideshare, Plan, save/cache or Android validation gates.",
+    "Historical harness expectations may admit only these exact six reviewed presentation deltas while continuing to verify unchanged base values.",
+    "Owner field-research lane remains parked; PR #61 and performance remain parked."
+  ],
+  "amendments": [
+    {
+      "recordId": "MO26-071",
+      "canonicalId": "date-night-mo26-071-pomme-de-terror",
+      "name": "Pomme de Terre State Park — Pomme de Terror",
+      "kind": "presentation-only admission qualification",
+      "factualCopyStatus": "Facts accepted by root after independent primary-page inspection; exact before/after projection awaits root review, then implementation and candidate validation.",
+      "sourceUrls": [
+        "https://mostateparks.com/event/pomme-de-terror-2026"
+      ],
+      "observedDate": "2026-10-12",
+      "laneRetrievedAt": "2026-10-12T22:13:20Z",
+      "sourceFact": "The official 2026 event invitation explicitly permits public attendance without an admission charge; this statement does not make camping, food or lodging free.",
+      "sourceClass": "Primary state park event",
+      "sourceRefs": [
+        "turn0view0"
+      ],
+      "crawlerAgeAtRetrieval": "2 days ago",
+      "change": {
+        "operation": "insert",
+        "detailsIndex": 2,
+        "newText": "Event admission is free and open to the public.",
+        "oldText": null
+      },
+      "before": {
+        "canonicalId": "date-night-mo26-071-pomme-de-terror",
+        "confidence": "high",
+        "details": [
+          "October 16–17, 2026 at the Hermitage Area Campground. Friday naturalist program starts 7:30 p.m.",
+          "Saturday activities run at separate times, including trick-or-treating 5–7 p.m. Awards follow; final end time is unconfirmed.",
+          "Day-use visitors may join all activities except the campground decorating contest.",
+          "Directions use the official Hermitage campground event point, not the Pittsburg-side park office."
+        ]
+      },
+      "after": {
+        "canonicalId": "date-night-mo26-071-pomme-de-terror",
+        "confidence": "high",
+        "details": [
+          "October 16–17, 2026 at the Hermitage Area Campground. Friday naturalist program starts 7:30 p.m.",
+          "Saturday activities run at separate times, including trick-or-treating 5–7 p.m. Awards follow; final end time is unconfirmed.",
+          "Event admission is free and open to the public.",
+          "Day-use visitors may join all activities except the campground decorating contest.",
+          "Directions use the official Hermitage campground event point, not the Pittsburg-side park office."
+        ]
+      },
+      "beforeCanonicalJsonSha256": "c2d59dabcfcaa9a676e0c0988a7ff279f4453b5dc3a06dd6f87ff575e2a41482",
+      "afterCanonicalJsonSha256": "ad778f78054a5aa67352712ed914ad2d41295e8a65181f7a03f1d23cf3f81c58",
+      "unchangedCatalogCanonicalJsonSha256": "1bf2650aba81396996f56b503c9897e9b17823eab29486ff68f21f581fef7819",
+      "listingExpiresAt": "2026-10-18T00:00:00-05:00",
+      "constraints": [
+        "Preserve canonical ID, record ID, confidence and every other presentation field.",
+        "Preserve every existing detail string and relative ordering except the explicitly replaced James River family-party sentence.",
+        "Preserve the entire runtime catalog object; no checkedAt, revalidateAfter, lifecycle, schedule, address, placement, pricing classifier, category or machine-hours changes.",
+        "The admission statement does not assert that paid extras, food, camping, lodging or transport are free."
+      ]
+    },
+    {
+      "recordId": "MO26-115",
+      "canonicalId": "date-night-mo26-115-bollinger-trick-or-treat",
+      "name": "Bollinger Mill State Historic Site — Trick-or-Treat Night",
+      "kind": "presentation-only admission qualification",
+      "factualCopyStatus": "Facts accepted by root after independent primary-page inspection; exact before/after projection awaits root review, then implementation and candidate validation.",
+      "sourceUrls": [
+        "https://mostateparks.com/event/trick-or-treat-night-2026"
+      ],
+      "observedDate": "2026-10-12",
+      "laneRetrievedAt": "2026-10-12T22:13:20Z",
+      "sourceFact": "The official October 23, 2026 event page states that public admission is free and registration is unnecessary.",
+      "sourceClass": "Primary state historic site event",
+      "sourceRefs": [
+        "turn0view1"
+      ],
+      "crawlerAgeAtRetrieval": "5 days ago",
+      "change": {
+        "operation": "insert",
+        "detailsIndex": 1,
+        "newText": "Free and open to the public; no registration required.",
+        "oldText": null
+      },
+      "before": {
+        "canonicalId": "date-night-mo26-115-bollinger-trick-or-treat",
+        "confidence": "high",
+        "details": [
+          "October 23, 2026, 4–7 p.m. Bring a flashlight and candy container; costumes welcome.",
+          "Trick-or-treating spans four mill floors. Ramp access reaches the first floor only; upper floors involve stairs.",
+          "Location is approximate."
+        ]
+      },
+      "after": {
+        "canonicalId": "date-night-mo26-115-bollinger-trick-or-treat",
+        "confidence": "high",
+        "details": [
+          "October 23, 2026, 4–7 p.m. Bring a flashlight and candy container; costumes welcome.",
+          "Free and open to the public; no registration required.",
+          "Trick-or-treating spans four mill floors. Ramp access reaches the first floor only; upper floors involve stairs.",
+          "Location is approximate."
+        ]
+      },
+      "beforeCanonicalJsonSha256": "58d975c2fb0f32df1bd25e381c4dd0e541218538f2345d7df5f489fd3998623f",
+      "afterCanonicalJsonSha256": "819675ba54a14484b6cf7fe636d12e45ec6a11b3a31847d250b9b976cae75d64",
+      "unchangedCatalogCanonicalJsonSha256": "8050cd8c974d63425605ba13063c47e26a9394d82c252f107524d0b6d64cb037",
+      "listingExpiresAt": "2026-10-23T19:00:00-05:00",
+      "constraints": [
+        "Preserve canonical ID, record ID, confidence and every other presentation field.",
+        "Preserve every existing detail string and relative ordering except the explicitly replaced James River family-party sentence.",
+        "Preserve the entire runtime catalog object; no checkedAt, revalidateAfter, lifecycle, schedule, address, placement, pricing classifier, category or machine-hours changes.",
+        "The admission statement does not assert that paid extras, food, camping, lodging or transport are free."
+      ]
+    },
+    {
+      "recordId": "MO26-019",
+      "canonicalId": "date-night-mo26-019-james-river-joplin-party",
+      "name": "James River Church Joplin — October 31st Party",
+      "kind": "presentation-only admission qualification",
+      "factualCopyStatus": "Facts accepted by root after independent primary-page inspection; exact before/after projection awaits root review, then implementation and candidate validation.",
+      "sourceUrls": [
+        "https://jamesriver.church/october31/"
+      ],
+      "observedDate": "2026-10-12",
+      "laneRetrievedAt": "2026-10-12T22:13:20Z",
+      "sourceFact": "The operator describes a free family event for infants through fifth grade, welcomes child-friendly costumes, and binds October 31, 2026 to Joplin among its campuses.",
+      "sourceClass": "Primary operator event",
+      "sourceRefs": [
+        "turn0view2"
+      ],
+      "crawlerAgeAtRetrieval": "3 days ago",
+      "change": {
+        "operation": "replace",
+        "detailsIndex": 1,
+        "newText": "Free public family party for infants through fifth grade; kid-friendly costumes welcome.",
+        "oldText": "Family party for infants through fifth grade; kid-friendly costumes welcome."
+      },
+      "before": {
+        "canonicalId": "date-night-mo26-019-james-river-joplin-party",
+        "confidence": "high",
+        "details": [
+          "October 31, 2026, 1–5 p.m.",
+          "Family party for infants through fifth grade; kid-friendly costumes welcome.",
+          "Location is approximate."
+        ]
+      },
+      "after": {
+        "canonicalId": "date-night-mo26-019-james-river-joplin-party",
+        "confidence": "high",
+        "details": [
+          "October 31, 2026, 1–5 p.m.",
+          "Free public family party for infants through fifth grade; kid-friendly costumes welcome.",
+          "Location is approximate."
+        ]
+      },
+      "beforeCanonicalJsonSha256": "fbb6599505e89a4cde3959fbfa194d8fd5cd51385bc8ba2b11a20d0458352547",
+      "afterCanonicalJsonSha256": "713a0f2f82018401ec6d8892bfaf94b62a8983e0f9ed50b0c471336b56e5bda2",
+      "unchangedCatalogCanonicalJsonSha256": "045e7b0b28c6409b6d197755aeb75ed2edd57ab135c2cc9544a5bdc1c1fb05f0",
+      "listingExpiresAt": "2026-10-31T17:00:00-05:00",
+      "constraints": [
+        "Preserve canonical ID, record ID, confidence and every other presentation field.",
+        "Preserve every existing detail string and relative ordering except the explicitly replaced James River family-party sentence.",
+        "Preserve the entire runtime catalog object; no checkedAt, revalidateAfter, lifecycle, schedule, address, placement, pricing classifier, category or machine-hours changes.",
+        "The admission statement does not assert that paid extras, food, camping, lodging or transport are free."
+      ]
+    },
+    {
+      "recordId": "MO26-116",
+      "canonicalId": "date-night-mo26-116-sam-baker-halloween-bash",
+      "name": "Sam A. Baker State Park — Halloween Bash",
+      "kind": "presentation-only admission qualification",
+      "factualCopyStatus": "Facts accepted by root after independent primary-page inspection; exact before/after projection awaits root review, then implementation and candidate validation.",
+      "sourceUrls": [
+        "https://mostateparks.com/event/halloween-bash-2026"
+      ],
+      "observedDate": "2026-10-12",
+      "laneRetrievedAt": "2026-10-12T22:13:20Z",
+      "sourceFact": "The official October 31, 2026 event page makes activities free and publicly accessible without registration; weather cancellation remains possible.",
+      "sourceClass": "Primary state park event",
+      "sourceRefs": [
+        "turn0view3"
+      ],
+      "crawlerAgeAtRetrieval": "today",
+      "change": {
+        "operation": "insert",
+        "detailsIndex": 1,
+        "newText": "Activities are free and open to the public; no registration required.",
+        "oldText": null
+      },
+      "before": {
+        "canonicalId": "date-night-mo26-116-sam-baker-halloween-bash",
+        "confidence": "high",
+        "details": [
+          "October 31, 2026: campground trick-or-treating 2–4 p.m.; store recycling-station trunk-or-treat 2–5 p.m.; grill games and activities 3–6 p.m.",
+          "Parking is next to Shelter 1; activities are at the campgrounds, store and grill.",
+          "May be canceled for weather; check within 48 hours of the event."
+        ]
+      },
+      "after": {
+        "canonicalId": "date-night-mo26-116-sam-baker-halloween-bash",
+        "confidence": "high",
+        "details": [
+          "October 31, 2026: campground trick-or-treating 2–4 p.m.; store recycling-station trunk-or-treat 2–5 p.m.; grill games and activities 3–6 p.m.",
+          "Activities are free and open to the public; no registration required.",
+          "Parking is next to Shelter 1; activities are at the campgrounds, store and grill.",
+          "May be canceled for weather; check within 48 hours of the event."
+        ]
+      },
+      "beforeCanonicalJsonSha256": "b6202a5ec95647c61aa83da64ca6eb1812aa9358bd2fb29a544bfe8e27b2cf69",
+      "afterCanonicalJsonSha256": "16426a30b4b6d290b43bcbe4f5c1fd5b332a09c58adca284c3e241a716fa4869",
+      "unchangedCatalogCanonicalJsonSha256": "769e92d190541088ea7ce9b8c8cd8e5af1429cffd6327214c0b1f70b6ef501bd",
+      "listingExpiresAt": "2026-10-31T18:00:00-05:00",
+      "constraints": [
+        "Preserve canonical ID, record ID, confidence and every other presentation field.",
+        "Preserve every existing detail string and relative ordering except the explicitly replaced James River family-party sentence.",
+        "Preserve the entire runtime catalog object; no checkedAt, revalidateAfter, lifecycle, schedule, address, placement, pricing classifier, category or machine-hours changes.",
+        "The admission statement does not assert that paid extras, food, camping, lodging or transport are free."
+      ]
+    },
+    {
+      "recordId": "MO26-030",
+      "canonicalId": "date-night-mo26-030-rutledge-wilson",
+      "name": "Rutledge-Wilson Farm Park",
+      "kind": "presentation-only admission qualification",
+      "factualCopyStatus": "Facts accepted by root after independent primary-page inspection; exact before/after projection awaits root review, then implementation and candidate validation.",
+      "sourceUrls": [
+        "https://parkboard.org/harvestfest",
+        "https://parkboard.org/Calendar.aspx?EID=9795"
+      ],
+      "observedDate": "2026-10-12",
+      "laneRetrievedAt": "2026-10-12T22:13:20Z",
+      "sourceFact": "The municipal Harvest Fest page distinguishes free admission from charges for most activities and pumpkin pricing by weight; the official 2026 occurrence corroborates admission and pumpkin pricing.",
+      "sourceClass": "Primary municipal park operator",
+      "sourceRefs": [
+        "turn1view0",
+        "turn2view0"
+      ],
+      "crawlerAgeAtRetrieval": "today",
+      "change": {
+        "operation": "insert",
+        "detailsIndex": 2,
+        "newText": "Festival entry is free; most activities and pumpkins cost extra.",
+        "oldText": null
+      },
+      "before": {
+        "canonicalId": "date-night-mo26-030-rutledge-wilson",
+        "confidence": "high",
+        "details": [
+          "Corn maze/Harvest Fest, October 3–25, 2026: Sat 11 a.m.–6 p.m.; Sun noon–6 p.m.",
+          "Pumpkin patch, September 29–October 25: Tue–Fri 9 a.m.–5 p.m.; Sat 11 a.m.–6 p.m.; Sun noon–6 p.m.; closed Mondays.",
+          "Children 4 and under need an adult in the corn maze.",
+          "Drive west on Farm Road 146 through the roundabout; entrance is north of the road, opposite Stonehinge.",
+          "Location is approximate."
+        ]
+      },
+      "after": {
+        "canonicalId": "date-night-mo26-030-rutledge-wilson",
+        "confidence": "high",
+        "details": [
+          "Corn maze/Harvest Fest, October 3–25, 2026: Sat 11 a.m.–6 p.m.; Sun noon–6 p.m.",
+          "Pumpkin patch, September 29–October 25: Tue–Fri 9 a.m.–5 p.m.; Sat 11 a.m.–6 p.m.; Sun noon–6 p.m.; closed Mondays.",
+          "Festival entry is free; most activities and pumpkins cost extra.",
+          "Children 4 and under need an adult in the corn maze.",
+          "Drive west on Farm Road 146 through the roundabout; entrance is north of the road, opposite Stonehinge.",
+          "Location is approximate."
+        ]
+      },
+      "beforeCanonicalJsonSha256": "09cb4d53df9a2b07acb5a65b524a0469a40dbeb0b2c52db8765476e9091f3e90",
+      "afterCanonicalJsonSha256": "9123f4781f0e0536fc0ebcd479395a91b2985058d8b9d34e33fd0a71125dd6ef",
+      "unchangedCatalogCanonicalJsonSha256": "ab2a8cc61e795c3646538e3100d93b7bf32267a270515ca96c39397711f8cd55",
+      "listingExpiresAt": "2026-10-25T18:00:00-05:00",
+      "constraints": [
+        "Preserve canonical ID, record ID, confidence and every other presentation field.",
+        "Preserve every existing detail string and relative ordering except the explicitly replaced James River family-party sentence.",
+        "Preserve the entire runtime catalog object; no checkedAt, revalidateAfter, lifecycle, schedule, address, placement, pricing classifier, category or machine-hours changes.",
+        "The admission statement does not assert that paid extras, food, camping, lodging or transport are free.",
+        "Pumpkin pricing by weight remains source evidence only; concise consumer copy states paid extras without quantitative pricing detail."
+      ]
+    },
+    {
+      "recordId": "MO26-034",
+      "canonicalId": "date-night-mo26-034-boone-historical-haunts",
+      "name": "Nathan and Olive Boone Homestead — Historical Haunts",
+      "kind": "presentation-only admission qualification",
+      "factualCopyStatus": "Facts accepted by root after independent primary-page inspection; exact before/after projection awaits root review, then implementation and candidate validation.",
+      "sourceUrls": [
+        "https://mostateparks.com/event/historical-haunts-homestead-2026"
+      ],
+      "observedDate": "2026-10-12",
+      "laneRetrievedAt": "2026-10-12T22:13:20Z",
+      "sourceFact": "The official October 17, 2026 event page states that activities are free and open to the public without registration.",
+      "sourceClass": "Primary state historic site event",
+      "sourceRefs": [
+        "turn1view1"
+      ],
+      "crawlerAgeAtRetrieval": "today",
+      "change": {
+        "operation": "insert",
+        "detailsIndex": 1,
+        "newText": "Activities are free and open to the public; no registration required.",
+        "oldText": null
+      },
+      "before": {
+        "canonicalId": "date-night-mo26-034-boone-historical-haunts",
+        "confidence": "high",
+        "details": [
+          "October 17, 2026: history programs 6–8 p.m.; music 6–7 p.m.; lantern hikes 7–8 p.m.",
+          "Hikes start near the picnic shelter. Dress for outdoor weather; activities may be canceled or postponed.",
+          "Location is approximate."
+        ]
+      },
+      "after": {
+        "canonicalId": "date-night-mo26-034-boone-historical-haunts",
+        "confidence": "high",
+        "details": [
+          "October 17, 2026: history programs 6–8 p.m.; music 6–7 p.m.; lantern hikes 7–8 p.m.",
+          "Activities are free and open to the public; no registration required.",
+          "Hikes start near the picnic shelter. Dress for outdoor weather; activities may be canceled or postponed.",
+          "Location is approximate."
+        ]
+      },
+      "beforeCanonicalJsonSha256": "933170385ff3a5cdad0cc65750f20c85a4178e474a5fdd7aca48c3917de35f9b",
+      "afterCanonicalJsonSha256": "7fe9ace51017488ec5cde089eafa676aff8de33bc8201f3610c6411a15a5c56c",
+      "unchangedCatalogCanonicalJsonSha256": "cdfbd390512c9f8f4e7a9c2fe3dfb3633b63ab544132a177cd62db34f911f1fe",
+      "listingExpiresAt": "2026-10-17T20:00:00-05:00",
+      "constraints": [
+        "Preserve canonical ID, record ID, confidence and every other presentation field.",
+        "Preserve every existing detail string and relative ordering except the explicitly replaced James River family-party sentence.",
+        "Preserve the entire runtime catalog object; no checkedAt, revalidateAfter, lifecycle, schedule, address, placement, pricing classifier, category or machine-hours changes.",
+        "The admission statement does not assert that paid extras, food, camping, lodging or transport are free."
+      ]
+    }
+  ],
+  "unchangedPresentationRecordIds": [
+    "DELTA2-FEARFACTORY",
+    "DELTA6-BOSS",
+    "MO26-007",
+    "DELTA3-GOBLIN",
+    "MO26-006",
+    "MO26-004",
+    "DELTA3-FEARSTONE",
+    "DELTA3-FUN-TIME",
+    "MO26-055",
+    "DELTA2-TERROR66",
+    "DELTA6-BRANSON-FIELD",
+    "DELTA6-WORLDS-OF-FUN",
+    "DELTA2-OZARK",
+    "DELTA3-BALLWIN",
+    "DELTA6-OFALLON",
+    "DELTA3-GROTTO",
+    "MO26-002",
+    "DELTA2-SHEPHERD-LANTERN",
+    "DELTA2-HOLLOWS",
+    "MO26-039",
+    "DELTA2-BRANSON-GHOSTER",
+    "MO26-056",
+    "DELTA3-RANCH",
+    "DELTA3-COBB",
+    "MO26-037",
+    "DELTA2-MISSOURI-NIGHTMARE",
+    "DELTA2-TREPIDATIONS",
+    "DELTA3-FREAKS",
+    "DELTA4-HELL-HARVEST",
+    "MO26-005",
+    "MO26-027",
+    "DELTA-EDGE-2026",
+    "DELTA-CREEPYWORLD-2026",
+    "DELTA-DARKNESS-2026",
+    "DELTA-HAUNTED-RIVER-2026",
+    "DELTA-FEAR-BLOODY-TIMBER-2026",
+    "MO26-085",
+    "MO26-012",
+    "MO26-028",
+    "MO26-074",
+    "MO26-084",
+    "MO26-036",
+    "MO26-058",
+    "MO26-069",
+    "MO26-118",
+    "MO26-031",
+    "MO26-054",
+    "MO26-067",
+    "MO26-100",
+    "MO26-114",
+    "MO26-124",
+    "MO26-125",
+    "MO26-003",
+    "MO26-010",
+    "MO26-011",
+    "MO26-029",
+    "MO26-068"
+  ],
+  "independentSourceLimitations": [
+    "Fresh web retrieval reported cached crawler ages from today to five days; no direct-origin-byte, live ticket inventory or current-weather guarantee.",
+    "Pomme camping-fee text was not freshly restated, so this proposal is narrowly confined to event admission.",
+    "Broken Hour fresh retrieval failed after one fallback and is excluded from amendments.",
+    "Boone free/public/no-registration information was absent in the released compact presentation; its addition is not redundant."
+  ],
+  "mutationPerformed": false,
+  "updatedAt": "2026-10-12T22:16:02.548015+00:00"
+}

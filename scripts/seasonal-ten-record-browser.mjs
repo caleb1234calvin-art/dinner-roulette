@@ -7,6 +7,7 @@ import { chromium } from "playwright";
 import { fromCrossJSON } from "seroval";
 import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
+import { ADMISSION_AMENDMENTS, assertAdmissionConsumerCopy } from "./test-support/admission-amendments.mjs";
 import { createHash } from "node:crypto";
 import { RANKED_HOLDS_PROJECTION_SHA256, RANKED_HOLDS_MATERIAL_FACTS, RANKED_HOLDS_CONFIDENCE } from "./test-support/ranked-holds-browser-facts.mjs";
 import { HOLD_CLEANUP_PROJECTION_SHA256, HOLD_CLEANUP_MATERIAL_FACTS, HOLD_CLEANUP_CONFIDENCE, assertCleanupConsumerCopy } from "./test-support/hold-cleanup-browser-facts.mjs";
@@ -182,6 +183,7 @@ async function inspectQualifiedOverlay(test, row, kind) {
   assert.equal(await details.getAttribute("open"), null, "Details initially collapsed");
   await details.locator("summary").click();
   const notes = details.locator("p");
+  assertAdmissionConsumerCopy(row.seasonalListing.recordId, await details.innerText());
   assert.equal(await notes.count(), presentation.details.length, `${kind}: every concise consumer fact is present`);
   await assertConsumerOnly(scope, row);
   for (const fact of materialFacts[row.seasonalListing.recordId]) assert.match(await details.innerText(), fact, `${kind}: retained material visitor fact ${fact}`);
@@ -1172,6 +1174,21 @@ try {
       await assertNoRpc(test, 0, "Pre-batch receipt hydrates direct Favorites without discovery");
       assert.equal((await stored(page)).preferences[providerId].ourRating, 4);
       result.evidence.preservedReceipt = { providerId, canonicalId: row.id, revision: oldRevision(row), destination };
+      if (rankedHolds && ADMISSION_AMENDMENTS.some(item => item.canonicalId === row.id)) {
+        // A saved pre-amendment provider identity must render current reviewed
+        // copy after a real reload and return through the normal Pick flow.
+        await visitNav(page, "Pick", "/"); await ready(page);
+        await press(page.getByRole("switch", { name: "Favorites only", exact: true }), "Space");
+        await activityCount(page, 1);
+        await optionsButton(page).click(); await selectTarget(page, row);
+        const details = overlayRoot(page, "result").locator("[data-seasonal-visit-notes] details");
+        await details.locator("summary").click();
+        const paragraphs = await details.locator("p").allTextContents();
+        assertAdmissionConsumerCopy(row.seasonalListing.recordId, paragraphs);
+        assert.equal(new URL(await overlayRoot(page, "result").getByRole("link", { name: /Directions · Google Maps/ }).getAttribute("href")).searchParams.get("destination"), expectedDestination);
+        result.evidence.admissionAfterSavedReload = { recordId: row.seasonalListing.recordId, paragraphs, providerId, canonicalId: row.id };
+        await noOverflow(page);
+      }
     }, { pathname: "/favorites", preferences: { [providerId]: preference(row, providerId, { favorite: true, ourRating: 4 }) },
       identityReceipts: { [providerId]: { canonicalId: row.id, canonicalName: row.name, reviewRevision: oldRevision(row) } } });
   }

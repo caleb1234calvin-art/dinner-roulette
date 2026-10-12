@@ -11,6 +11,7 @@ import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { chromium } from "playwright";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
+import { assertAdmissionConsumerCopy } from "./test-support/admission-amendments.mjs";
 import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import { RANKED_HOLDS_MATERIAL_FACTS, RANKED_HOLDS_CONFIDENCE } from "./test-support/ranked-holds-browser-facts.mjs";
 import { HOLD_CLEANUP_MATERIAL_FACTS, HOLD_CLEANUP_CONFIDENCE, assertCleanupConsumerCopy } from "./test-support/hold-cleanup-browser-facts.mjs";
@@ -156,6 +157,7 @@ try {
           await details.locator("summary").press("Enter");
           assert.notEqual(await details.getAttribute("open"), null);
           assert.ok(await details.locator("p").count());
+          assertAdmissionConsumerCopy(row.seasonalListing.recordId, await details.locator("p").allTextContents());
           if (PHASE4_MATERIAL_FACTS[row.seasonalListing.recordId]) {
             const text = await card.innerText();
             assert.match(text, /Approx\./, "Phase 4 never implies precise distance");

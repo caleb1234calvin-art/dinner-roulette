@@ -457,6 +457,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "details": [
       "October 16–17, 2026 at the Hermitage Area Campground. Friday naturalist program starts 7:30 p.m.",
       "Saturday activities run at separate times, including trick-or-treating 5–7 p.m. Awards follow; final end time is unconfirmed.",
+      "Event admission is free and open to the public.",
       "Day-use visitors may join all activities except the campground decorating contest.",
       "Directions use the official Hermitage campground event point, not the Pittsburg-side park office."
     ]
@@ -475,7 +476,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "confidence": "high",
     "details": [
       "October 31, 2026, 1–5 p.m.",
-      "Family party for infants through fifth grade; kid-friendly costumes welcome.",
+      "Free public family party for infants through fifth grade; kid-friendly costumes welcome.",
       "Location is approximate."
     ]
   },
@@ -494,6 +495,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "confidence": "high",
     "details": [
       "October 17, 2026: history programs 6–8 p.m.; music 6–7 p.m.; lantern hikes 7–8 p.m.",
+      "Activities are free and open to the public; no registration required.",
       "Hikes start near the picnic shelter. Dress for outdoor weather; activities may be canceled or postponed.",
       "Location is approximate."
     ]
@@ -544,6 +546,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "confidence": "high",
     "details": [
       "October 23, 2026, 4–7 p.m. Bring a flashlight and candy container; costumes welcome.",
+      "Free and open to the public; no registration required.",
       "Trick-or-treating spans four mill floors. Ramp access reaches the first floor only; upper floors involve stairs.",
       "Location is approximate."
     ]
@@ -613,6 +616,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "details": [
       "Corn maze/Harvest Fest, October 3–25, 2026: Sat 11 a.m.–6 p.m.; Sun noon–6 p.m.",
       "Pumpkin patch, September 29–October 25: Tue–Fri 9 a.m.–5 p.m.; Sat 11 a.m.–6 p.m.; Sun noon–6 p.m.; closed Mondays.",
+      "Festival entry is free; most activities and pumpkins cost extra.",
       "Children 4 and under need an adult in the corn maze.",
       "Drive west on Farm Road 146 through the roundabout; entrance is north of the road, opposite Stonehinge.",
       "Location is approximate."
@@ -633,6 +637,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "confidence": "high",
     "details": [
       "October 31, 2026: campground trick-or-treating 2–4 p.m.; store recycling-station trunk-or-treat 2–5 p.m.; grill games and activities 3–6 p.m.",
+      "Activities are free and open to the public; no registration required.",
       "Parking is next to Shelter 1; activities are at the campgrounds, store and grill.",
       "May be canceled for weather; check within 48 hours of the event."
     ]

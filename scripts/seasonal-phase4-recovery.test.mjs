@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { readFileSync, readdirSync } from "node:fs";
+import { admissionPresentationAfter } from "./test-support/admission-amendments.mjs";
+import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 const load = appModuleLoader();
@@ -26,8 +27,10 @@ const ids = ["MO26-006", "MO26-004", "DELTA3-FEARSTONE", "DELTA3-FUN-TIME", "MO2
 const cutoffs = ["2026-11-01T05:00:00Z", "2026-11-01T05:00:00Z", "2026-10-31T05:00:00Z", "2026-11-01T05:00:00Z", "2026-11-01T05:00:00Z", "2026-11-02T06:00:00Z", "2026-11-15T06:00:00Z"];
 const current = id => rows.find(row => row.seasonalListing.recordId === id);
 const providerFor = row => ({ ...row, id: `date-night-osm-node-${rows.indexOf(row) + 991100}`, source: "osm", openingHours: "24/7", seasonalAvailability: undefined, seasonalListing: undefined, seasonalVisitNotes: undefined });
-const allPrior = readdirSync("src/lib/date-night").filter(name => /^missouri-.*catalog\.ts$/.test(name) && !name.includes("phase4-recovery") && name !== "missouri-2026-next-catalog.ts" && name !== "missouri-2026-hold-cleanup-catalog.ts" && name !== "missouri-2026-ranked-holds-catalog.ts")
-  .flatMap(file => Object.entries(load(`src/lib/date-night/${file}`)).filter(([key]) => key.endsWith("_CATALOG")).flatMap(([, value]) => value));
+const historicalBaseline = JSON.parse(readFileSync("audit/phase4-recovery-implementation-2026-10-10/Production-Baseline-Receipts-R1.json"));
+// Explicit frozen historical membership; later catalog files cannot enter this 52-record baseline.
+const allPrior = Object.keys(historicalBaseline.files).filter(file => /\/missouri-.*catalog\.ts$/.test(file))
+  .flatMap(file => Object.entries(load(file)).filter(([key]) => key.endsWith("_CATALOG")).flatMap(([, value]) => value));
 
 test("recovery input is exactly independently cleared seven; 52 V1 plus one legacy becomes 59 unique V1, six new", () => {
   assert.equal(createHash("sha256").update(acceptedBytes).digest("hex"), "827eb67919c99dec61991cbc01cba63097ccd5dd1868de355b5f79b07d348882");
@@ -220,6 +223,6 @@ test("all 52 previous V1 records, presentation copy, radial implementation and u
     if (amendment) {
       assert.deepEqual(expected.details, amendment.before, "Accepted amendment starts at the immutable historical presentation");
       assert.deepEqual(SEASONAL_PRESENTATIONS[id], { ...expected, details: amendment.after }, id);
-    } else assert.deepEqual(SEASONAL_PRESENTATIONS[id], expected, id);
+    } else assert.deepEqual(SEASONAL_PRESENTATIONS[id], admissionPresentationAfter(id, expected), id);
   }
 });
