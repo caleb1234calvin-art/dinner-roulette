@@ -8,6 +8,7 @@ import { fromCrossJSON } from "seroval";
 import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 import { createHash } from "node:crypto";
+import { HOLD_CLEANUP_PROJECTION_SHA256, HOLD_CLEANUP_MATERIAL_FACTS, HOLD_CLEANUP_CONFIDENCE, assertCleanupConsumerCopy } from "./test-support/hold-cleanup-browser-facts.mjs";
 import { NEXT_MISSOURI_PROJECTION_SHA256, NEXT_MISSOURI_MATERIAL_FACTS, NEXT_MISSOURI_CONFIDENCE } from "./test-support/next-missouri-browser-facts.mjs";
 import { PHASE4_MATERIAL_FACTS, PHASE4_FORBIDDEN_COPY, STALE_WEREHOUSE_FAVORITE } from "./test-support/phase4-recovery-browser-facts.mjs";
 assert.equal(process.env.CI, "true");
@@ -17,9 +18,10 @@ const astra = process.env.SEASONAL_ASTRA === "true";
 const extras = process.env.SEASONAL_ASTRA_EXTRAS === "true";
 const phase4 = process.env.SEASONAL_PHASE4 === "true";
 const nextMissouri = process.env.SEASONAL_NEXT_MISSOURI === "true";
-const expanded = astra || extras || phase4 || nextMissouri;
-assert.ok([cumulative, astra, extras, phase4, nextMissouri].filter(Boolean).length <= 1, "Select one bounded addition batch per invocation");
-const output = resolve(`audit/browser-results/${nextMissouri ? "seasonal-next-missouri-three" : phase4 ? "seasonal-phase4-recovery-seven" : extras ? "seasonal-astra-extras" : astra ? "seasonal-astra-eleven" : cumulative ? "seasonal-cumulative-15" : "seasonal-ten-record"}`);
+const holdCleanup = process.env.SEASONAL_HOLD_CLEANUP === "true";
+const expanded = astra || extras || phase4 || nextMissouri || holdCleanup;
+assert.ok([cumulative, astra, extras, phase4, nextMissouri, holdCleanup].filter(Boolean).length <= 1, "Select one bounded addition batch per invocation");
+const output = resolve(`audit/browser-results/${holdCleanup ? "seasonal-hold-cleanup" : nextMissouri ? "seasonal-next-missouri-three" : phase4 ? "seasonal-phase4-recovery-seven" : extras ? "seasonal-astra-extras" : astra ? "seasonal-astra-eleven" : cumulative ? "seasonal-cumulative-15" : "seasonal-ten-record"}`);
 await mkdir(output, { recursive: true });
 const control = resolve(output, "control.json"), events = resolve(output, "events.jsonl");
 const origin = "http://127.0.0.1:8099", defaultAt = "2026-10-07T18:00:00Z";
@@ -58,7 +60,10 @@ const nextMissouriRows = load("src/lib/date-night/missouri-2026-next-catalog.ts"
 const nextAcceptedBytes = await readFile("scripts/test-support/next-missouri-browser-projections.json");
 const nextAccepted = JSON.parse(nextAcceptedBytes);
 const amendedRows = [...priorTen, ...addedRows].filter(row => nextAccepted.amendments.some(item => item.canonicalId === row.id));
-const rows = nextMissouri ? [...nextMissouriRows, ...amendedRows] : phase4 ? phase4Rows : extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
+const cleanupRows = load("src/lib/date-night/missouri-2026-hold-cleanup-catalog.ts").MISSOURI_2026_HOLD_CLEANUP_CATALOG;
+const cleanupAcceptedBytes = await readFile("scripts/test-support/hold-cleanup-browser-projections.json");
+const cleanupAccepted = JSON.parse(cleanupAcceptedBytes);
+const rows = holdCleanup ? cleanupRows : nextMissouri ? [...nextMissouriRows, ...amendedRows] : phase4 ? phase4Rows : extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
 const destinationFor = row => {
   const target = row.seasonalListing.directionsTarget;
   return target.kind === "verified-point" ? `${target.lat},${target.lon}` : target.address;
@@ -69,7 +74,8 @@ const { seasonalPresentation, SEASONAL_VISITOR_NOTICE, SEASONAL_CONFIDENCE_LABEL
 const forbiddenConsumerCopy = /\$\s*\d|\bUSD\b|priced by weight|ticket fee|checkout total|audit|provenance|retention|Census|reviewRevision|survey-grade|periodic review|Schedule checked|listingExpiresAt|ListingCompletenessV1|machine opening|\b20\d{2}-\d{2}-\d{2}\b/i;
 const assertConsumerOnly = async (scope, row) => {
   const text = await scope.innerText();
-  assert.doesNotMatch(text, phase4Rows.some(item => item.id === row.id) ? PHASE4_FORBIDDEN_COPY : forbiddenConsumerCopy, "Consumer UI must not expose prices, audit or retention prose");
+  if (cleanupRows.some(item => item.id === row.id)) assertCleanupConsumerCopy(text, row.seasonalListing.recordId, forbiddenConsumerCopy);
+  else assert.doesNotMatch(text, phase4Rows.some(item => item.id === row.id) ? PHASE4_FORBIDDEN_COPY : forbiddenConsumerCopy, "Consumer UI must not expose prices, audit or retention prose");
   const projected = seasonalPresentation(row);
   for (const raw of row.seasonalVisitNotes ?? []) {
     // Accepted Phase 4 field projections also retain plain display atoms in
@@ -410,7 +416,7 @@ const extraFacts = {
 };
 const extraConfidence = { "MO26-002": "limited", "DELTA2-SHEPHERD-LANTERN": "limited", "DELTA2-HOLLOWS": "limited", "MO26-039": "limited",
   "DELTA6-WORLDS-OF-FUN": "limited", "DELTA2-OZARK": "limited", "DELTA3-BALLWIN": "limited", "DELTA6-OFALLON": "limited", "DELTA3-GROTTO": "limited" };
-const materialFacts = nextMissouri ? NEXT_MISSOURI_MATERIAL_FACTS : phase4 ? PHASE4_MATERIAL_FACTS : extras ? extraFacts : astra ? astraFacts : cumulative ? newFacts : priorFacts;
+const materialFacts = holdCleanup ? HOLD_CLEANUP_MATERIAL_FACTS : nextMissouri ? NEXT_MISSOURI_MATERIAL_FACTS : phase4 ? PHASE4_MATERIAL_FACTS : extras ? extraFacts : astra ? astraFacts : cumulative ? newFacts : priorFacts;
 const newConfidence = { "MO26-036": "good", "MO26-058": "high", "MO26-069": "high", "MO26-071": "high", "MO26-118": "good", "MO26-012": "good", "MO26-028": "good", "MO26-074": "good", "MO26-084": "good", "MO26-085": "good", "DELTA-EDGE-2026": "high", "DELTA-CREEPYWORLD-2026": "good", "DELTA-DARKNESS-2026": "good", "DELTA-HAUNTED-RIVER-2026": "high", "DELTA-FEAR-BLOODY-TIMBER-2026": "high" };
 const oldRows = [
   ...load("src/lib/date-night/missouri-2026-cleared-catalog.ts").MISSOURI_2026_CLEARED_SEASONAL_CATALOG,
@@ -420,7 +426,7 @@ const ordinaryRows = load("src/lib/date-night/jasper-county-catalog.ts").JASPER_
 const anchors = load("src/lib/date-night/seasonal-catalog.ts").JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG;
 const previousRows = [...oldRows, ...priorTen, ...addedRows];
 const previousReceipts = JSON.parse(await readFile("scripts/test-support/missouri-previous32-receipts.json", "utf8"));
-const catalog = [...ordinaryRows, ...anchors, ...previousRows, ...astraRows, ...extraRows, ...phase4Rows, ...nextMissouriRows];
+const catalog = [...ordinaryRows, ...anchors, ...previousRows, ...astraRows, ...extraRows, ...phase4Rows, ...nextMissouriRows, ...cleanupRows];
 const { haversineMiles } = load("src/lib/restaurants/geo.ts");
 const { getOpenStatus } = load("src/lib/restaurants/hours.ts");
 const { getDateNightAvailability } = load("src/lib/date-night/availability.ts");
@@ -526,7 +532,7 @@ try {
   browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
     args: ["--no-sandbox", "--disable-dev-shm-usage"] });
   assert.deepEqual(rows.map(row => row.seasonalListing.recordId).sort(), Object.keys(materialFacts).sort(), "Exactly the independently cleared selected batch");
-  assert.equal(new Set(rows.map(row => row.id)).size, nextMissouri ? 3 : phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
+  assert.equal(new Set(rows.map(row => row.id)).size, holdCleanup ? cleanupAccepted.newRecords.length : nextMissouri ? 3 : phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
   assert.equal(previousRows.length, 32, "All previously shipped curated identities remain regression controls");
   assert.equal(new Set(catalog.map(row => row.id)).size, catalog.length, "Amended Werehouse remains one canonical identity across every invocation");
   assert.equal(anchors.some(row => row.id === "date-night-werehouse-joplin"), false, "Legacy weekly-hours Werehouse anchor is superseded");
@@ -556,8 +562,26 @@ try {
     const current = catalog.find(row => row.id === amendment.canonicalId);
     assert.ok(current); assert.deepEqual(seasonalPresentation(current).details, amendment.after);
   }
+  assert.equal(createHash("sha256").update(cleanupAcceptedBytes).digest("hex"), HOLD_CLEANUP_PROJECTION_SHA256);
+  assert.equal(cleanupAccepted.baseSha, "f92870632b71def18d7642596dc9dd3357675f76");
+  assert.deepEqual(cleanupRows.map(row => row.id), cleanupAccepted.newRecords.map(row => row.canonicalId));
+  for (const accepted of cleanupAccepted.newRecords) {
+    const current = cleanupRows.find(row => row.id === accepted.canonicalId);
+    assert.equal(current.name, accepted.name); assert.equal(current.address, accepted.visitorAddress);
+    assert.deepEqual(current.activityTypes, accepted.activityTypes);
+    assert.deepEqual([current.lat, current.lon], [accepted.placement.lat, accepted.placement.lon]);
+    assert.deepEqual(current.seasonalListing.directionsTarget, accepted.directionsTarget);
+    assert.equal(current.seasonalListing.placement.basis, accepted.placement.basis);
+    assert.deepEqual(current.seasonalAvailability.activeDates, accepted.exactActiveDates);
+    assert.equal(current.seasonalAvailability.activeFrom, accepted.activeFrom);
+    assert.equal(current.seasonalAvailability.activeUntil, accepted.activeUntil);
+    assert.equal(Date.parse(current.seasonalListing.listingExpiresAt), Date.parse(accepted.listingExpiresAtUtc));
+    assert.equal(current.seasonalListing.expiryBasis, accepted.expiryBasis);
+    assert.deepEqual(current.seasonalListing.hours, { state: accepted.hours.state, displayText: accepted.hours.displayText });
+    assert.deepEqual(seasonalPresentation(current).details, accepted.details);
+  }
   for (const row of rows) {
-    assert.equal(seasonalPresentation(row).confidence, nextMissouri ? NEXT_MISSOURI_CONFIDENCE[row.seasonalListing.recordId] : phase4 ? "limited" : (extras ? extraConfidence : astra ? astraConfidence : cumulative ? newConfidence : expectedConfidence)[row.seasonalListing.recordId]);
+    assert.equal(seasonalPresentation(row).confidence, holdCleanup ? HOLD_CLEANUP_CONFIDENCE[row.seasonalListing.recordId] : nextMissouri ? NEXT_MISSOURI_CONFIDENCE[row.seasonalListing.recordId] : phase4 ? "limited" : (extras ? extraConfidence : astra ? astraConfidence : cumulative ? newConfidence : expectedConfidence)[row.seasonalListing.recordId]);
     assert.equal(row.openingHours, null); assert.equal(row.seasonalAvailability.openNowPolicy, "never");
     assert.ok(["visitor-address", "verified-point"].includes(row.seasonalListing.directionsTarget.kind));
     assert.ok(nearby(row).length <= 3, "The scoped neighborhood must fit in the real four-card shortlist with one ordinary fixture");
@@ -847,7 +871,7 @@ try {
     }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
       [node]: preference(row, node, { favorite: true, ourRating: 4 }), [way]: preference(row, way, { favorite: true }),
     } });
-    if (phase4 || nextMissouri) {
+    if (phase4 || nextMissouri || holdCleanup) {
       const targetIsSettle = phase4 && row.activityTypes.includes("pumpkin-patch");
       const settle = targetIsSettle
         ? astraRows.find(item => item.seasonalListing.recordId === "MO26-056")
@@ -921,6 +945,38 @@ try {
           staleResponseContainedId: true, expiredIdRendered: false, requests: test.rpc.length };
       }, { holdInitialRpc: true, at: new Date(Date.parse(expiresAt) - 1).toISOString() });
     }
+  }
+  if (holdCleanup) {
+    const cadaver = cleanupRows.find(row => row.seasonalListing.recordId === "MO26-007");
+    await runScenario(cadaver, "cadaver", "exact-poster-dates-and-special-hours", async test => {
+      const { page, result } = test;
+      await activityCount(page, nearby(cadaver, { at: test.state.at }).length);
+      await settleLocal(test); const before = test.rpc.length;
+      result.evidence.posterCalendar = [];
+      const expectedDates = ["2026-09-25", "2026-09-26", "2026-10-02", "2026-10-03", "2026-10-09", "2026-10-10", "2026-10-16", "2026-10-17", "2026-10-23", "2026-10-24", "2026-10-29", "2026-10-30", "2026-10-31"];
+      assert.deepEqual(cadaver.seasonalAvailability.activeDates, expectedDates);
+      for (const date of [...expectedDates, "2026-09-27", "2026-10-01", "2026-10-28"].sort()) {
+        const at = `${date}T20:00:00-05:00`, listed = expectedDates.includes(date);
+        await advance(test, at); await activityCount(page, nearby(cadaver, { at }).length);
+        await optionsButton(page).click(); await rowHeading(page, cadaver).waitFor();
+        assert.equal(await rowHeading(page, cadaver).count(), 1);
+        const card = rowCard(page, cadaver);
+        assert.match(await card.innerText(), listed ? /Hours partly confirmed/ : /Closed now/);
+        assert.doesNotMatch(await card.innerText(), /Open now/);
+        await card.locator("details > summary").click();
+        const text = await card.innerText();
+        assert.match(text, /7 PM–midnight; October 29, 7–10 PM/);
+        assert.match(text, /Admission \$15\./);
+        assertCleanupConsumerCopy(text, "MO26-007", forbiddenConsumerCopy);
+        await closeOptions(page);
+        const open = page.getByRole("switch", { name: "Open now only", exact: true });
+        await press(open, "Space"); await activityCount(page, nearby(cadaver, { at, open: true }).length);
+        await press(open, "Space"); await activityCount(page, nearby(cadaver, { at }).length);
+        await assertNoRpc(test, before, "Exact poster dates change display state locally without supplying machine opening hours");
+        result.evidence.posterCalendar.push({ date, listed, status: listed ? "hours-unknown" : "closed-now", openNow: false });
+      }
+      assert.deepEqual(result.evidence.posterCalendar.filter(row => row.listed).map(row => row.date), expectedDates);
+    }, { at: "2026-09-25T20:00:00-05:00" });
   }
   if (phase4) {
     const werehouse = rows.find(row => row.id === "date-night-werehouse-joplin");
@@ -1068,7 +1124,7 @@ try {
   }
   assert.equal(verdict.scenarios.length, rows.length * (expanded ? 17 : 15) + receiptRows.length +
     ((cumulative || expanded) ? rows.filter(row => row.seasonalListing.visibility === "listing-lifecycle").length : 0) +
-    (phase4 ? rows.length + 5 : nextMissouri ? rows.length : 0));
+    (phase4 ? rows.length + 5 : nextMissouri || holdCleanup ? rows.length : 0) + (holdCleanup ? 1 : 0));
   assert.equal(verdict.errors.length, 0);
   verdict.passed = true;
 } catch (error) {

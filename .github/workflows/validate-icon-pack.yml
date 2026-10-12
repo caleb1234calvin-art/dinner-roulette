@@ -120,6 +120,7 @@ jobs:
           - seasonal-astra-extras
           - seasonal-phase4
           - seasonal-next-missouri
+          - seasonal-hold-cleanup
           - geometry
 
     steps:
@@ -232,6 +233,14 @@ jobs:
           CI: "true"
           VITE_AUTH_ENABLED: "true"
           SEASONAL_NEXT_MISSOURI: "true"
+        run: node scripts/seasonal-ten-record-browser.mjs
+
+      - name: Exercise independently cleared Missouri HOLD resolutions in local Chromium
+        if: matrix.suite == 'seasonal-hold-cleanup'
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+          SEASONAL_HOLD_CLEANUP: "true"
         run: node scripts/seasonal-ten-record-browser.mjs
 
       - name: Compare seasonal and standard card geometry

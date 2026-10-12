@@ -1,0 +1,218 @@
+{
+  "package": "MISSOURI-HOLD-CLEANUP-ACCEPTED-PROJECTIONS-R1",
+  "frozenAt": "2026-10-12T06:02:24.791357+00:00",
+  "baseSha": "f92870632b71def18d7642596dc9dd3357675f76",
+  "scope": "Two independently factually cleared existing HOLD records; two new runtime identities. Exact combined normalized projection independent acceptance pending. No runtime or release PASS.",
+  "newRecords": [
+    {
+      "package": "CADAVER-ACCEPTED-FIELD-PROJECTION-R2",
+      "frozenAt": "2026-10-12T05:54:10.482234+00:00",
+      "baseSha": "f92870632b71def18d7642596dc9dd3357675f76",
+      "recordId": "MO26-007",
+      "canonicalId": "date-night-mo26-007-cadaver-zone",
+      "name": "Cadaver Zone Spookhouse",
+      "classification": "Existing publicly advertised haunted attraction; not residential/home-haunt addition",
+      "category": "Haunted House",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "website": "https://www.facebook.com/cadaverzone/",
+      "phone": "417-825-2005",
+      "visitorAddress": "25088 Kafir Rd, Webb City, MO",
+      "seasonYear": 2026,
+      "timeZone": "America/Chicago",
+      "activeFrom": "2026-09-25",
+      "activeUntil": "2026-10-31",
+      "exactActiveDates": [
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "hours": {
+        "state": "partial",
+        "displayText": "September 25–26; October 2–3, 9–10, 16–17, 23–24 and 29–31, 2026. 7 PM–midnight; October 29, 7–10 PM.",
+        "normalDisplayHours": "7 PM–midnight",
+        "exception": {
+          "date": "2026-10-29",
+          "displayHours": "7 PM–10 PM"
+        },
+        "noGeneralizedHours": true,
+        "machineIntervals": null,
+        "stateRationale": "Date-specific poster display schedule only; conservative runtime machine-hour policy remains unavailable."
+      },
+      "admission": {
+        "displayedGeneralAdmissionUsd": 15,
+        "sourceClass": "OWNER-SUPPLIED FIRST-PARTY EVIDENCE",
+        "pixelsVerified": true,
+        "liveTicketAvailabilityVerified": false,
+        "paymentMethods": null
+      },
+      "placement": {
+        "lat": 37.214949,
+        "lon": -94.510739,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?address=25088+Kafir+Road%2C+Webb+City%2C+MO+64870&benchmark=Public_AR_Current&vintage=Current_Current&format=json",
+        "checkedAt": "2026-10-12",
+        "precisionLabel": "Approximate address-derived location; not an entrance, parking or ride-dropoff point",
+        "verificationLimit": "Retained Census response integrity rechecked; no new geocode. Owner map point is supporting only."
+      },
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "25088 Kafir Rd, Webb City, MO"
+      },
+      "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+      "listingExpiresAtUtc": "2026-11-01T05:00:00Z",
+      "expiryBasis": "exact",
+      "expiryRationale": "Final October31 posted midnight close is midnight CDT at start of November1, before later DST fallback. Derived exclusive listing cutoff; not last admission or final exit.",
+      "contract": "ListingCompletenessV1",
+      "openingHours": null,
+      "machineOpeningIntervals": null,
+      "openNowPolicy": "never",
+      "automatic2027Recurrence": false,
+      "details": [
+        "September 25–26; October 2–3, 9–10, 16–17, 23–24 and 29–31, 2026.",
+        "7 PM–midnight; October 29, 7–10 PM. Admission $15.",
+        "Location is approximate."
+      ],
+      "sourceUrls": [
+        "https://www.facebook.com/cadaverzone/",
+        "https://www.thescarefactor.com/haunted-houses/missouri/the-cadaver-zone-spook-house/",
+        "https://morty.app/attraction/42641/the-cadaver-zone"
+      ],
+      "provenance": {
+        "sourceClass": "OWNER-SUPPLIED FIRST-PARTY EVIDENCE",
+        "scheduleAndPriceSource": "Owner-supplied official Facebook poster, actual pixels re-read",
+        "posterSha256": "203d12ea4634752d27fa94544aa307c8c792b3644707e419c8d18cd6a16b4578",
+        "officialOriginIndependentlyRecaptured": false,
+        "exactPostUrl": null,
+        "postPublicationTimestamp": null,
+        "fieldEvidenceDecision": "Cadaver-Field-Evidence-Decision-R1.json"
+      },
+      "dedupe": "MO26-007 is existing research identity, absent from released runtime catalog. Import as exactly one new runtime identity; do not duplicate Cadaver Zone/Spookhouse aliases.",
+      "authorFactualVerdict": "PASS",
+      "authorPlacementVerdict": "PASS approximate",
+      "implementationEligibility": "ELIGIBLE subject to independent exact-projection acceptance and full candidate runtime validation",
+      "revisionNote": "Schema-only normalization of R1: address-geocode, expiryBasis exact, confidence limited, external-picker; improve display spacing. All factual values preserved.",
+      "parentProjectionSha256": "c37032bb0eda7c5ff1b890f2cc6da4d79f33263e8f31de111e12ab72d7ea38f1",
+      "confidence": "limited",
+      "ridesharePolicy": "external-picker"
+    },
+    {
+      "recordId": "DELTA6-BOSS",
+      "canonicalId": "date-night-mo26-boss-harvest-fest",
+      "name": "BOSS Haunted House at Harvest Fest",
+      "classification": "Public event at military installation, subject to installation access approval; not a residential/home haunt.",
+      "category": "Haunted House",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "displayActivity": "Haunted House",
+      "website": "https://leonardwood.armymwr.com/calendar/event/harvest-fest/7461823/114564",
+      "phone": "+1 573-329-4770",
+      "visitorAddress": "18694 FLW 20, BLDG 10221, Fort Leonard Wood, MO 65473",
+      "locationName": "Piney Valley Golf Course",
+      "seasonYear": 2026,
+      "timeZone": "America/Chicago",
+      "activeFrom": "2026-10-24",
+      "activeUntil": "2026-10-24",
+      "exactActiveDates": [
+        "2026-10-24"
+      ],
+      "hours": {
+        "state": "partial",
+        "displayText": "October 24, 2026, during Harvest Fest (3:30–9 PM). Haunted-house hours are not separately confirmed.",
+        "noGeneralizedHours": true,
+        "machineIntervals": null,
+        "finalDateClosingTime": null,
+        "scope": "Overall Harvest Fest event hours only; separate haunted-house start/close not established."
+      },
+      "admission": {
+        "combinedHarvestFestAndHauntedHouse": {
+          "individualUSD": 10,
+          "familyUSD": 25,
+          "maxFamilyMembers": 6
+        },
+        "displayRequired": false,
+        "liveTicketAvailabilityVerified": false
+      },
+      "placement": {
+        "lat": 37.73298,
+        "lon": -92.06935,
+        "basis": "operator-site",
+        "sourceUrl": "https://leonardwood.armymwr.com/calendar/event/harvest-fest/7461823/114564",
+        "checkedAt": "2026-10-12",
+        "precisionLabel": "Approximate operator-linked venue location; not an entrance, parking, gate or ride-dropoff point",
+        "observedAddressLink": "https://www.google.com/maps/search/37.73298000,-92.06935000",
+        "verificationLimit": "Map/radius/distance only. No entrance, parking, gate, dropoff or rideshare precision. Google destination returned sparse text; no rendered-map inspection claimed."
+      },
+      "directionsTarget": {
+        "kind": "visitor-address",
+        "address": "18694 FLW 20, BLDG 10221, Fort Leonard Wood, MO 65473"
+      },
+      "ridesharePolicy": "external-picker",
+      "confidence": "limited",
+      "listingExpiresAt": "2026-10-24T21:00:00-05:00",
+      "listingExpiresAtUtc": "2026-10-25T02:00:00Z",
+      "expiryBasis": "exact",
+      "expiryRationale": "Source-bound listing cutoff is the overall Harvest Fest event end, Oct24 21:00 CDT. The haunt is explicitly part of this event; do not assert a separately measured haunt closing time. This replaces the historical unadopted date-only midnight proposal with the tighter supported event bound.",
+      "sourceExpiryBasis": "event-end",
+      "contract": "ListingCompletenessV1",
+      "openingHours": null,
+      "machineOpeningIntervals": null,
+      "openNowPolicy": "never",
+      "automatic2027Recurrence": false,
+      "startsAt": null,
+      "endsAt": null,
+      "details": [
+        "October 24, 2026, during Harvest Fest (3:30–9 PM). Haunted-house hours are not separately confirmed.",
+        "Open to the public, subject to Fort Leonard Wood access approval. Visitors without qualifying credentials need screening and a pass. Adults need acceptable physical ID (REAL ID or accepted supplemental documents). Confirm event access requirements before traveling.",
+        "Drivers must carry a current license, vehicle insurance and registration.",
+        "Shuttles begin at 3 PM from the Pershing Community Center parking lot.",
+        "Approximate venue location. Use the visitor address for Directions."
+      ],
+      "sourceUrls": [
+        "https://leonardwood.armymwr.com/calendar/event/harvest-fest/7461823/114564",
+        "https://visitpulaskicounty.org/stories?rec_id=465",
+        "https://home.army.mil/wood/Garrison/DES/physical-security/access-control",
+        "https://leonardwood.armymwr.com/programs/piney-valley-golf-course-pvgc"
+      ],
+      "provenance": {
+        "sourceClass": "Operator first-party event and installation access sources plus official destination marketing organization",
+        "fieldProjection": "../independent/BOSS-Accepted-Field-Projection-R1.json",
+        "acceptedFieldProjectionSha256": "3f9682762bd046db7e4f97d8cb62388a2caaed448609242848aa6b5d8c650587",
+        "eventSpecificPublicInvitation": "Official Pulaski County Tourism Bureau article dated October10,2026 explicitly binds this October24 event public eligibility to installation access criteria.",
+        "noGeneralGolfEligibilityInference": true
+      },
+      "dedupe": "Existing DELTA6-BOSS research identity; one BOSS Haunted House at Harvest Fest runtime record. Do not add a second Harvest Fest identity or extend categories.",
+      "authorFactualVerdict": "PASS independently reviewed",
+      "authorPlacementVerdict": "PASS qualified approximate operator-linked venue point",
+      "implementationEligibility": "ELIGIBLE subject to exact normalized projection acceptance and full runtime candidate gates"
+    }
+  ],
+  "amendments": [],
+  "counts": {
+    "newRuntimeIdentities": 2,
+    "amendments": 0,
+    "totalWorkItems": 2,
+    "newResearchIdentities": 0
+  },
+  "sourceBindings": {
+    "cadaverProjectionSha256": "111e480b5d80a2d1de87adb06b7622d2ae3729eeba047e9c1971e323363c48b8",
+    "bossAcceptedFieldProjectionSha256": "3f9682762bd046db7e4f97d8cb62388a2caaed448609242848aa6b5d8c650587"
+  },
+  "normalizations": {
+    "cadaver": "R2 object included unchanged",
+    "boss": "Maps accepted field names to existing catalog projection schema; expiryBasis exact represents supported overall-event end, not independently observed haunt close; confidence limited; null start/end retained; external-picker. No factual expansion."
+  },
+  "releaseAuthorized": false
+}

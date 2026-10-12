@@ -3,6 +3,26 @@ import type { SeasonalPresentation } from "./seasonal-presentation";
 /** Explicit independently reviewed visitor copy. Full facts remain in immutable audit
  * artifacts and catalog metadata; no audit narratives are rendered as consumer prose. */
 export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentation>> = {
+  "DELTA6-BOSS": {
+    "canonicalId": "date-night-mo26-boss-harvest-fest",
+    "confidence": "limited",
+    "details": [
+      "October 24, 2026, during Harvest Fest (3:30–9 PM). Haunted-house hours are not separately confirmed.",
+      "Open to the public, subject to Fort Leonard Wood access approval. Visitors without qualifying credentials need screening and a pass. Adults need acceptable physical ID (REAL ID or accepted supplemental documents). Confirm event access requirements before traveling.",
+      "Drivers must carry a current license, vehicle insurance and registration.",
+      "Shuttles begin at 3 PM from the Pershing Community Center parking lot.",
+      "Approximate venue location. Use the visitor address for Directions."
+    ]
+  },
+  "MO26-007": {
+    "canonicalId": "date-night-mo26-007-cadaver-zone",
+    "confidence": "limited",
+    "details": [
+      "September 25–26; October 2–3, 9–10, 16–17, 23–24 and 29–31, 2026.",
+      "7 PM–midnight; October 29, 7–10 PM. Admission $15.",
+      "Location is approximate."
+    ]
+  },
   "DELTA3-GOBLIN": {
     "canonicalId": "date-night-mo26-goblin-kings-haunted-trail",
     "confidence": "limited",

@@ -5,6 +5,7 @@ import { createHash } from "node:crypto";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 import { NEXT_MISSOURI_PROJECTION_SHA256, NEXT_MISSOURI_MATERIAL_FACTS } from "./test-support/next-missouri-browser-facts.mjs";
 const load = appModuleLoader();
+const { MISSOURI_2026_HOLD_CLEANUP_CATALOG: cleanupAdditions } = load("src/lib/date-night/missouri-2026-hold-cleanup-catalog.ts");
 const { MISSOURI_2026_NEXT_CATALOG: additions, MISSOURI_2026_NEXT_LISTINGS: listings } = load("src/lib/date-night/missouri-2026-next-catalog.ts");
 const { getCuratedSeasonalPlace } = load("src/lib/date-night/curated-policy.ts");
 const { decorateDateNight, eligibleDateNight } = load("src/lib/date-night/eligibility.ts");
@@ -43,7 +44,7 @@ test("exact independently accepted one addition and two presentation amendments 
   for (const [path, hash] of Object.entries(baseline.files)) assert.equal(createHash("sha256").update(readFileSync(path)).digest("hex"), hash, `Every released catalog byte remains intact: ${path}`);
   for (const row of [...previousRows, ...additions]) assert.equal(getCuratedSeasonalPlace(row.id), row);
   assert.equal(Object.keys(baseline.presentations).length, 59);
-  assert.equal(Object.keys(SEASONAL_PRESENTATIONS).length, 60);
+  assert.equal(Object.keys(SEASONAL_PRESENTATIONS).length, 60 + cleanupAdditions.length, "Only the explicitly reviewed cleanup additions extend the released registry");
   for (const [recordId, before] of Object.entries(baseline.presentations)) {
     const amendment = accepted.amendments.find(row => row.recordId === recordId);
     if (!amendment) { assert.deepEqual(SEASONAL_PRESENTATIONS[recordId], before, recordId); continue; }

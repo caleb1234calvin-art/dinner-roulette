@@ -1,0 +1,44 @@
+{
+  "baseSha": "f92870632b71def18d7642596dc9dd3357675f76",
+  "baseTree": "9153ead1946bbbb7e38c45981c47332997001c3e",
+  "scope": {
+    "newRuntimeIdentities": 2,
+    "amendments": 0,
+    "priorIdentitiesPreserved": 60,
+    "expectedTotalIdentities": 62
+  },
+  "acceptedProjection": {
+    "path": "scripts/test-support/hold-cleanup-browser-projections.json",
+    "sha256": "fab3e9e0084fb58bb052846e02cf22217fc2989ec639c6d282870adbb08acc84",
+    "independentAcceptanceSha256": "162248d2ca61340e0efe915b5ffced3d1fbb5aba84ed2b123fa9f2c5da6f1d5f"
+  },
+  "records": [
+    {
+      "id": "MO26-007",
+      "factual": "PASS",
+      "placement": "PASS approximate only",
+      "provenance": "OWNER-SUPPLIED FIRST-PARTY EVIDENCE",
+      "officialPosterIndependentlyRefetched": false,
+      "posterSha256": "203d12ea4634752d27fa94544aa307c8c792b3644707e419c8d18cd6a16b4578",
+      "cutoff": "2026-11-01T05:00:00Z"
+    },
+    {
+      "id": "DELTA6-BOSS",
+      "factual": "PASS",
+      "placement": "PASS approximate only",
+      "provenance": "Army MWR event and official Pulaski County tourism, subject to installation access approval",
+      "cutoff": "2026-10-25T02:00:00Z",
+      "cutoffMeaning": "Overall event end; not independently confirmed haunt close"
+    }
+  ],
+  "smallerBatchRationale": "Two useful previously held venues cleared independent review. Cadaver is locally valuable and should not wait for an arbitrary batch count; BOSS has a bounded public event with access conditions. Existing catalog and harness architecture makes two additions efficient. No weak records or unrelated amendments are padded in.",
+  "originalEvidence": "Preserved privately; raw screenshots and production responses are not included in this repository change.",
+  "cadaverPrivateArchive": {
+    "filename": "cadaver-owner-field-evidence-2026-10-12.zip",
+    "sha256": "801be79d7fa4551923ea9772c8e45208b382239a93864f02e8ae1c82ca196d08"
+  },
+  "preFreezeHarnessReviewSha256": "cc5dad2efff719275bf9700887df5bf4ba7014a63f272ba4aaa6224c5fabde14",
+  "validation": "Pending exact candidate gates; expected counts are not PASS.",
+  "releaseAuthorized": false,
+  "pr61": "PARKED"
+}
