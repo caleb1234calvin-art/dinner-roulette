@@ -1,3 +1,27 @@
+# CURRENT — FEAR FACTORY CANDIDATE FROZEN; EXACT-HEAD VALIDATION RUNNING (2026-10-12)
+
+## CURRENT
+- Ranked sweep and independent review complete: **13 reviewed, 1 FACTUAL PASS / 12 HOLD / 0 REJECT**. Fear Factory LLC alone is **PLACEMENT PASS (qualified approximate) / IMPLEMENTATION ELIGIBLE**. The complete ranked queue, exact blockers, source distinctions and all twelve seven-field owner requests remain preserved in the checkpoints below.
+- **Candidate SHA `2cb05f37126eebd10de3182f1f8db40434e7d557`; tree `78f2017373e92e565e7a651f147a88ff1dca1686`; sole parent/current released main `70682626484fb848fb9addb2c22cdd5f52839b62`.** Branch `integration/missouri-ranked-holds-2026-10-12`; draft PR **#65** https://github.com/caleb1234calvin-art/dinner-roulette/pull/65 . Fifteen bounded files; independent runtime and harness reviews passed before freeze; published tree equals reviewed local tree. Local HEAD fetched, aligned and clean. No PR61 adaptive-radial history.
+- **63 candidate identities / 62 published identities.** All62 existing catalog objects and presentations preserved. One-record batch is intentional: six future advertised nights over three weekends, useful Mountain Grove coverage, small implementation and full unchanged validation requirements; no padding with HOLDs.
+- Fear Factory cutoff freshly checked at freeze: **STILL USEFUL**, `2026-11-01T04:00:00Z` (October31 23:00 CDT). Exact2026 dates, visitor-address Directions, qualified approximate point, null machine hours/conservative Open Now, lifecycle-negative and saved/cache current-policy handling, duplicate protection and no2027 revival retained. Current directory schedule remains honestly secondary; no automated first-party schedule verification claimed.
+- Exact-head web workflow **38304682434** and Android readiness **38304682498** queued from draft PR. Independent validation lanes started; root also runs full repository/application suites, typecheck, lint and safe auth-enabled migration-free build on frozen HEAD. Expected counts are not acceptance results; final CI/artifact/source-proof and screenshot acceptance remain pending.
+- **Released main `70682626484fb848fb9addb2c22cdd5f52839b62`, tree `057282e66443396f25bad44941885f3c15cd84c4`; production `dpl_FzXe9UNP3uGFaMeh9RsWe1Gaiv4K` READY/source main; 62 published identities.** Fresh pre-mutation baseline verified all five healthy aliases and exact served catalog data. Immediate supported Hobby rollback **`dpl_7MmWVLGr9roCmWit3yzASutdRZGs` READY/source `f92870632b71def18d7642596dc9dd3357675f76`**. No merge, deployment, rollback, migration, signing or Play publication.
+- Consolidated owner guide: `missouri-owner-field-research-requests-2026-10-12.txt`, SHA256 `188fe7ed1e2a91bf1b9e4a3a5fc5ac520f74186bf03d594ec78ec7e75ed2b17d`, independently read in full. Research ZIP: 2,145,283 bytes,85 members, SHA256 `030ddd1097e964214e887aa1f47ab0cc0a0941c1a306fbe2d3a1b9079ef54e2e`; all member paths/CRC/size/SHA verified, prior original ZIP preserved byte-for-byte. Candidate validation evidence is separate and pending.
+
+## NEXT
+1. Finish all exact-head CI and full repository/application/type/lint/safe-build lanes; accept actual browser, geometry and unsigned Android raw evidence in parallel.
+2. Bind independent review and evidence to frozen SHA/tree, inspect verdicts and representative screenshots, and checkpoint exact-head validation.
+3. Reverify main/production/aliases/rollback and cutoff; stop at **VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION** only if all required gates pass. Do not merge or deploy.
+
+## HOLD
+- **Waco, Dark Nightmares, Farrington, Hannibal, Bakersfield, Rising, Terrified Existence, Twisted Minds, Dark Lords, Zombie World, Lemp and Macabre** remain excluded; all twelve explicit owner field-research requests preserved immediately below. Strong owner-supplied first-party evidence can be accepted with visible facts/provenance/independent corroboration separately classified; no repeated blocked automation required.
+- Physical Android/WebView/GPS HOLD. PR#61 and performance benchmarking PARKED; future intent: **"Radial discovery becomes an audit layer."**
+- No waiver granted. Inherited warning/skip and narrow-width layout limitations remain pending fresh measurement; no inherited test total is a fresh PASS.
+- Current checkpoint is documentation-only on the deployment-disabled continuity branch, separate from source candidate.
+
+---
+
 # CURRENT — RANKED SWEEP INDEPENDENT REVIEW AND OWNER FIELD ESCALATION COMPLETE (2026-10-12)
 
 ## CURRENT
