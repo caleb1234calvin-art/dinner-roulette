@@ -1,3 +1,29 @@
+# 2026-10-12 automated candidate freeze stable gate — PR #66
+
+CURRENT:
+- Production/released main remains `2cb05f37126eebd10de3182f1f8db40434e7d557`, tree `78f2017373e92e565e7a651f147a88ff1dca1686`,63identities; PR #65 release acceptance PASS. Production `dpl_45iETuFCFYrnp2r3wV8DxdvioC5a` READY on that source; immediate rollback `dpl_FzXe9UNP3uGFaMeh9RsWe1Gaiv4K` READY on `70682626484fb848fb9addb2c22cdd5f52839b62`.
+- New nonproduction draft PR #66: https://github.com/caleb1234calvin-art/dinner-roulette/pull/66 . Branch `integration/missouri-admission-details-2026-10-12`.
+- Exact frozen head `0032d913efaca4bd97d730414a50a5b01e1a2099`; tree `f0d0a777ec90d5e82cc089d71b5c2eaf0646f21b`; sole parent released main `2cb05f37126eebd10de3182f1f8db40434e7d557`. Local/remote tree equality and exact reconstructed commit bytes verified; local working tree clean. Fresh main still2cb05f3. Deployment-disabled integration/** setting unchanged.
+- Scope19paths: ONE runtime presentation file with six precise admission-copy amendments; supporting immutable acceptance/baseline data, unit/browser assertions; frozen historical52 membership and fifth Branson late-fall cache coverage. No catalog-object, dates, cutoffs, address, placement, machine-hours, identity-policy, component/CSS, dependency, migration, workflow or deployment-setting change. Still63identities;57otherpresentations deeply unchanged.
+- Independent six-primary-source/factual/data/harness source reviews PASS.125focused existing/new tests PASS after correcting a test-only raw-source-literal versus hydrated-coordinate fixture mismatch; initial failed fixture receipts retained and not represented as a runtime failure. Independent new amendment suite4/4PASS. Do not sum overlapping focused suites.
+- New browser assertions inspect exact source-approved Details in the three relevant app suites, actual saved-provider identity after reload/return-to-Pick, and expanded geometry including valid Rutledge Plan. Existing historic receipt revisions and all prior navigation/geometry controls remain.
+- Exact-head full hosted web run `38316422380` (number418) queued; Android readiness `38316422365` (number89) in progress. Full local core tests/type/lint/safe authenticated migration-free build started in independent lane. No full candidate acceptance yet.
+- Cleanup and bounded delta discovery complete (prior checkpoint `dd01eed7c28da1040ec671ef9d330c44b3ca39a4` fully read back). Zero new attractions cleared; Six Flags St. Louis remains corpus-net-new inquiry HOLD. Branson Ghoster source conflict resolved with primary7–10p.m.support; no source mutation.
+
+NEXT:
+- Finish exact-head mandatory validation and independent original-artifact/evidence acceptance. Parallel web/geometry/savedcopy, Android and core lanes; preserve initial failures and limitations.
+- Preserve full original artifacts and final evidence, update continuity and fully read back after final validation.
+- Stop at VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION. PR #66 remains draft/nonproduction; do not merge or deploy.
+
+HOLD:
+- PR #66 is NOT yet release-ready; CI/browser/geometry/Android/fullcore acceptance pending. No second release authorization exists; PR #65 one-release waiver consumed.
+- Per-record pending-RPC/±1ms browser coverage must not be overstated: existing broader suites exercise those contracts on selected newer records; all63 policy/source gates remain. Six new-copy saved-reload/rendering checks are explicit.
+- Twelve owner field venues remain untouched/parked; no repeated blocked research or operator contact. Six Flags unresolved2026facts stay separate automated-source HOLD.
+-49explicit live source reviews dueOct14–15;11 newer records lack explicit review date. Boone/Pomme/BrokenHour impendingOct17–18 cutoff queue remains.
+- PR #61/performance PARKED; “Radial discovery becomes an audit layer.”
+
+---
+
 # 2026-10-12 bounded automated discovery delta stable gate — COMPLETE
 
 CURRENT:
