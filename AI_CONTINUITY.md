@@ -1,3 +1,39 @@
+# CURRENT — MISSOURI RANKED HOLD TRIAGE (2026-10-12)
+
+## CURRENT
+- Owner authorized one bounded ranked resolution pass across the exact 13 remaining HOLDs, formal owner field research escalation, independent review, and a main-based candidate only if useful records genuinely clear. No statewide restart, merge, deployment, waiver, PR #61 work, or Android signing/publication.
+- Authoritative start: `0ee1281692c0dae9231ac5548990e3f432fde67b`. Complete continuity recovered; latest sections and full historical body read across contiguous parallel review ranges. Preserved 103-member research archive SHA256 `5be4e5e53d6da6fe41676d642c41f3dc6881a9602e3c7eb93931678ddf2f4c4e` recovered with exact bytes and valid CRCs; precise author and independent blockers read before searching.
+- Fresh main SHA `70682626484fb848fb9addb2c22cdd5f52839b62`, tree `057282e66443396f25bad44941885f3c15cd84c4`; production `dpl_FzXe9UNP3uGFaMeh9RsWe1Gaiv4K` READY/source exact main. All five aliases freshly resolve to Fz; HTTP/body review separately in progress. Published count remains 62, including Cadaver and BOSS, from accepted exact source. No runtime mutation.
+- Immediate supported rollback retained: `dpl_7MmWVLGr9roCmWit3yzASutdRZGs`, freshly READY/source `f92870632b71def18d7642596dc9dd3357675f76`. Prior supported Hobby route preserved; no fresh UI eligibility or execution claimed.
+- Main remains unprotected. Canonical docs branch is `integration/continuity-refresh-2026-10-07`; integration/** deployment exclusion retained. Waiver consumed; no new waiver.
+
+## RANKED QUEUE
+Ranking allocates effort only, without numerical probabilities or factual clearance. Higher-value narrow blockers start first; low-yield cases receive one new-angle announcement check, never repeated stale-page retrieval.
+
+| Rank | Record | Clearance | Value | Owner field lane | Exact retained blocker |
+|---|---|---|---|---|---|
+| 1 | Waco School House Haunt | HIGH | HIGH | YES | Indexed title now mentions October 2026, but the actual operator post, year binding and final schedule are unpreserved. |
+| 2 | Dark Nightmares Haunted Forest | MEDIUM | HIGH | YES | October 16 ticket date recovered, but first-party 34100 versus 33100 visitor-address conflict persists. |
+| 3 | Annual Farrington Park Haunted Hayride | HIGH | MEDIUM | YES | October 17–18 event year is unbound beyond copyright. |
+| 4 | Hannibal Jaycees Warehouse of Nightmares | MEDIUM | HIGH | YES | Current Bird versus Third Street destination conflict and first-four-weekends versus October 30 schedule conflict remain. |
+| 5 | The Bakersfield Haunted House | MEDIUM | HIGH | YES | No accepted current 2026 schedule or lifecycle; actual prior website calendar is 2020. |
+| 6 | Fear Factory LLC | MEDIUM | MEDIUM | YES | Reliable 2026 operation, dates and expiry remain absent; accepted operator calendar is historical 2025. |
+| 7 | Rising Haunted Attraction | MEDIUM | MEDIUM | YES | Current lifecycle conflict remains; secondary 2026 calendar does not resolve closing/reopening assertions. |
+| 8 | TerrifiedExist Haunted Attractions | MEDIUM | MEDIUM | YES | No reliable attraction-specific 2026 visitor dates and lifecycle; recovered ticket/social facts are historical. |
+| 9 | Twisted Minds Haunted House | LOW | MEDIUM | YES | No accepted 2026 invitation or dates; 10000 versus 10002 Bear Cove visitor-address conflict remains. |
+| 10 | Dark Lords Manor Haunted House | LOW | MEDIUM | MAYBE | No accepted current 2026 public operation or schedule. |
+| 11 | Zombie World Strange Things | LOW | MEDIUM | YES | Operator booking and event theme remain explicitly 2025; no accepted 2026 operation. |
+| 12 | Lemp Brewery Haunted House | LOW | LOW | MAYBE | Conflicting first-party opening statements; no Lemp-specific 2026 schedule or tickets. |
+| 13 | Macabre Cinema | LOW | LOW | MAYBE | Traditional season suspended during redevelopment; no supported dated special announced. |
+
+## NEXT
+Start parallel bounded source lanes in ranked order. Waco and Farrington have high likelihood of clearance through attributable current posters; Dark Nightmares' strong current ticket evidence makes its address correction valuable. Park blocked social retrieval for an explicit owner request. Independently review every researched disposition; build only eligible useful records. First-batch and field-request checkpoints follow before a final decision.
+
+## HOLD
+All 13 records remain FACTUAL HOLD / IMPLEMENTATION HOLD at triage; no new placement PASS or candidate assigned. Candidate SHA/tree/parent and validation totals: NOT APPLICABLE yet. Owner-supplied evidence must separately record visible fact, owner provenance and independent corroboration. Unknown hours are not a blocker by themselves. No inferred dates, public access, coordinates or 2027 recurrence. PR #61 remains PARKED; “Radial discovery becomes an audit layer.” is future intent. Physical Android/WebView/GPS remains HOLD. Retain inherited six web lint warnings, four test skips, 14 Android warnings and layout limitations. Earlier checkpoints below are historical.
+
+---
+
 # CURRENT — PR #64 EXACT RELEASE AND PRODUCTION ACCEPTANCE PASS (2026-10-12)
 
 ## CURRENT
