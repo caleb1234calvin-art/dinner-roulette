@@ -1,3 +1,30 @@
+# CURRENT — PR #65 RELEASE AND PRODUCTION ACCEPTANCE PASS (2026-10-12)
+
+## CURRENT
+- **PR #65 release PASS.** At **2026-10-12T21:47:07Z**, guarded non-force fast-forward moved main from `70682626484fb848fb9addb2c22cdd5f52839b62` to the exact authorized **`2cb05f37126eebd10de3182f1f8db40434e7d557`**, tree **`78f2017373e92e565e7a651f147a88ff1dca1686`**, sole parent unchanged. GitHub PR65 closed/merged with merge identity exactly the candidate; retained draft flag is metadata. No wrapper/squash/rebase or candidate edits.
+- **Production `dpl_45iETuFCFYrnp2r3wV8DxdvioC5a` READY**, source exact released main, immutable `dinner-roulette-r3km8m9k9-minions-9e2c.vercel.app`; READY at21:47:25.456Z, no alias error. All five aliases resolve to it and freshly return200, www redirects to apex. Application assets match immutable deployment bytes.
+- **63 published curated identities**, Fear Factory LIVE, all62 prior records and presentations preserved. Independently parsed all63 served catalog and presentation objects deeply equal exact Git source; zero duplicate identities. At22:04Z,60 are before cutoff; this is not an Open Now count. Three already-expired objects remain unchanged.
+- **Production smoke PASS:** Mountain Grove manual location, seasonal haunted filter yields Fear Factory; full listed ten2026dates and secondary8–11pm qualification/visitor restrictions display correctly; qualified approximate placement; address `102 South Main Street, Mountain Grove, MO65711` (runtime retains original spacing), exact visitor-address Directions; generic external rides. Save→Favorites→fullreload retains one current-policy identity and address Directions; own disposable favorite removed. OpenNow filter yields0 seasonal matches. Ordinary DateNight/Spookyoff yields6parks and normal Mountain Grove Town Square result/Directions without seasonal copy.
+- **Lifecycle acceptance remains source-bound** to previously accepted unchanged exact-head tests/browser evidence: expiry `2026-11-01T04:00:00Z`, null machine hours, never automatic OpenNow, pendingRPC expiry/cache/current-policy/±1ms/no2027. No production clock manipulation or claim of live future-time observation. Exact-head CI fresh17success plus expected signing skip. Accepted full1027repository+71app,1288seasonal+10ordinary,casino16/location19,525geometry and Android readiness retained, not newly rerun.
+- **Fresh preflight PASS:** exact SHA/tree/parent/scope, main/prod source, fivealias health, useful sixfuture nights, checks, safe build and rollback. Main unprotected/enforcementoff/rulesets[]; dedicated administration-only protection read403 honestly retained. Owner **one-release-only PR65 waiver consumed** by this release attempt; no standing authority or protection changes.
+- Dashboard freshly confirms build override **`VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`**, emptyroot,Node24.x, mainproductiontracking/autodomainsenabled. Never used migration-chaining npmrunbuild. Full returned build-event sequence reaches Deploymentcompleted/cacheuploaded; exact custom command/auth flag not echoed in logs, settings/source supply that evidence. No settings/env/secrets/migrations/signing/Play changes.
+- **Immediate supported Hobby rollback now `dpl_FzXe9UNP3uGFaMeh9RsWe1Gaiv4K` READY/source `70682626484fb848fb9addb2c22cdd5f52839b62`.** Fresh InstantRollback dialog shows45i current/Fz previous, exact targethref confirmed; Cancel, no Continue or rollback executed. Supported request_rollback/InstantRollback route retained; rollbackcandidate API403 is an access limitation, not an executed restore. Old7Mm is older history, not assumed immediately eligible.
+- Scoped error/fatal runtime query for45i from21:47:07Z through22:00:40Z returned no matchinglogs; bounded observation only.
+- Exact release evidence **`pr65-release-evidence-2026-10-12.zip`**,1784305bytes/70members, SHA256 **`799429347a8c25dd828e5338786a244505b744970c75522917c03bd484d1435d`**, allCRC/memberlength/hash verified and privately saved. Includes control-plane/API/UI text receipts, serveddata/assets and reproducible parser. Prior original candidate archives remain authoritative/preserved. Initial local capture-script import/URL/parsing failures were tooling issues, corrected without product mutation; no failed attempt claimed PASS.
+- Entire authoritative6045-line continuity at09726d7 read across six contiguous independent review lanes, full latest section also inspected; exact approved source reconstructed and all1383Gitblobs verified, sourcefingerprint `fbad0f35c48db52f33b8ee351ea290acb1d44b0e744850e602ae0ce6011a5248`/487 matches accepted hosted evidence.
+
+## NEXT
+- Phase1 gate PASS: after full checkpoint readback, continue automatically into automated catalog consistency/lifecycle/identity/saved-cache/placement/harness/source-revalidation audit.
+- Then bounded delta-only discovery across FrightMaps/MissouriHauntedHouses/TheScareFactor and authoritative sources. Do not restart statewide work. Build one nonproduction candidate only if useful fullyautomated items clear; stop for owner release decision, **no second merge/deploy authority**.
+
+## HOLD
+- **Owner field lane unchanged/PARKED:** Waco,DarkNightmares,Farrington,Hannibal,Bakersfield,Rising,TerrifiedExistence,TwistedMinds,DarkLords,ZombieWorld,Lemp,Macabre. Exact earlier blockers/requests remain authoritative; do not repeat them or wait for owner. New incidental evidence may be recorded honestly.
+- **PR #61/performance PARKED** at`c78b97175cc094436e454fa888e1ed83486f750d`; future intent **"Radial discovery becomes an audit layer."**
+- PhysicalAndroid/WebView/GPS HOLD; no signing/Play. Fourrepositoryskips,sixweb/fourteennativelintwarnings,inherited320pxDirectionsclipping/Libertyoverflow retained. No new automatedcandidate yet.
+- Documentation-only canonical deployment-disabled branch`integration/continuity-refresh-2026-10-07`; full prior history follows unchanged.
+
+---
+
 # CURRENT — PR #65 VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION (2026-10-12)
 
 ## CURRENT
