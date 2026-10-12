@@ -1,3 +1,25 @@
+# CURRENT — CADAVER OWNER FIELD EVIDENCE ACCEPTED (2026-10-12)
+
+## CURRENT
+- Owner authorized one bounded Cadaver +14 existing Missouri HOLD resolution mission, independent review, one main-based nonproduction candidate, full exact-head validation, and stop at VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION. No merge, deploy, release waiver, protection or production setting change, or Android signing/publication.
+- Fresh main `f92870632b71def18d7642596dc9dd3357675f76`, tree `9153ead1946bbbb7e38c45981c47332997001c3e`; production `dpl_7MmWVLGr9roCmWit3yzASutdRZGs` READY, source exact main. All five aliases independently resolved to this deployment and returned HTTP200 (www via expected308). Published catalog remains60 identities;57 before cutoffs at last release acceptance.
+- Immediate supported rollback remains `dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U`, freshly READY, source `bf88443932739a9448fac8d27fd845e9947cf697`. Supported Instant Rollback route is retained from prior exact release inspection; no new confirmation was executed or claimed, no rollback occurred.
+- **Cadaver MO26-007: FACTUAL PASS / PLACEMENT PASS (approximate only) / IMPLEMENTATION-ELIGIBLE.** Fresh original-pixel inspection and separate independent review accepted the readable, branded poster under the owner's new **OWNER-SUPPLIED FIRST-PARTY EVIDENCE** policy. This explicitly supersedes the prior independently re-fetched Facebook provenance requirement. The official Facebook origin is owner-attested; exact post/permalink/publication timestamp were not independently captured.
+- Original poster SHA256 `203d12ea4634752d27fa94544aa307c8c792b3644707e419c8d18cd6a16b4578` matches retained historical evidence. Pixels confirm13 explicit2026 dates: September25–26; October2–3,9–10,16–17,23–24,29–31; ordinary7PM–midnight; October29 only7–10PM; admission$15; visitor address25088 Kafir Rd, Webb City, MO. No extra dates or weekly recurrence.
+- Retained Census response SHA256 `a72f56fd051077c1058ad9026d21e69ac302262bc5247004c9af359b6b25fa31` supports approximate37.214949,-94.510739 address-range placement; maps are supporting visual observations only. Directions must use visitor address; no entrance/parking/dropoff precision. Machine hours null, never automatic Open Now.
+- Exact derived lifecycle cutoff **2026-11-01T05:00:00Z** independently verified as midnight CDT following October31. No2027 recurrence. Saved/cache/current-policy, cutoff±1ms and pending-RPC behavior require fresh candidate validation.
+- Independent Cadaver review SHA256 `dba4953b10e8e2d468fe298666b36d436f14c2145378bedb7c8005c9ccafa7a7`. Original poster/maps, prior evidence and new review preserved privately in `cadaver-owner-field-evidence-2026-10-12.zip` (SHA256 `801be79d7fa4551923ea9772c8e45208b382239a93864f02e8ae1c82ca196d08`, 21 verified members), with source-class distinctions. Automatic approval review rejected publishing raw screenshots/production responses to GitHub; private original preservation plus scoped repository summaries is the safer chosen route. No raw evidence was published by that rejected action.
+- Mission disposition so far:1 PASS /14 retained HOLD pending bounded sweep /0 REJECT. No implementation candidate frozen (SHA/tree/parent not yet assigned); validation totals not yet available.
+
+## NEXT
+Complete the fourteen blocker-only lanes and independent review; preserve useful recovered fields. Implement the truly cleared subset on released main without padding. Commit and read back each stable gate, then run full exact-head tests/build/CI/browser/geometry/Android readiness in parallel where safe.
+
+## HOLD
+Fear Factory, Waco, Rising, Twisted, Terrified Existence, Lemp, BOSS, Macabre, Bakersfield, Dark Nightmares, Farrington, Hannibal, Zombie World and Dark Lords remain retained pending current sweep adjudication. A new BOSS public-eligibility lead is under review, not PASS here.
+PR #61/adaptive radial remains **PARKED**. “Radial discovery becomes an audit layer.” is design intent only. Inherited320px Directions clipping/Liberty overflow,6 web lint warnings,14 Android warnings and4 documented test skips remain baseline limitations. Physical Android/WebView/GPS and signing/Play remain HOLD/out of scope.
+
+---
+
 # CURRENT — PR #63 RELEASE AND SCOPED PRODUCTION ACCEPTANCE PASS (2026-10-11)
 
 This checkpoint supersedes the earlier PR #63 owner-decision stop. The owner explicitly approved exact f928706 / tree 9153ead and a one-release-only unprotected-main waiver, subject to fresh preflight. Release and scoped production acceptance are complete. The waiver is CONSUMED. No standing release authority is created.
