@@ -1,3 +1,27 @@
+# CURRENT — MISSOURI FIRST RANKED RESEARCH BATCH (2026-10-12)
+
+## CURRENT
+- Ranked gate `520f4d2f8d1a900260598ba626ae13f0f507b21d` committed and fully read back before new research. First priority completed author results: **Waco, Farrington, Bakersfield: 0 PASS / 3 HOLD**, independent review in progress. This is a partial batch, not the final 13-record disposition.
+- Waco: a distinct official opening-night post `1434021132217008` corroborates retained address/opening-time hints but actual current year/timestamp/final schedule remain unpreserved. One new-post open throttled; no repeated old-post extraction. Indexed titles alone do not clear operation.
+- Farrington: sponsor/current-year search angle still returns undated October 17–18/sixth-annual copy. Explicit 2026 binding remains absent. No blocked Facebook URL retried. October 17–18 is a conditional time-sensitive lead, not accepted 2026 operation.
+- Bakersfield: current indexed profile signal says Opening Weekend 2026, but retrieved body is old/block content; accepted current operator schedule remains absent. One previously blocked post was attempted once without evidence; further retries are stopped. Historical website calendar remains 2020. No current operation inferred from a search label.
+- **Fresh independent baseline PASS:** five public aliases and immutable production host HTTP 200 (www through expected apex redirect); seven served JS assets match immutable release bytes. All **62 unique catalogs and 62 presentations** deep-equal exact released source; all 60 prior records preserved; **59 before cutoffs**, not Open Now. No UI or production mutation.
+- Main `70682626484fb848fb9addb2c22cdd5f52839b62`, tree `057282e66443396f25bad44941885f3c15cd84c4`; production `dpl_FzXe9UNP3uGFaMeh9RsWe1Gaiv4K` READY/source main. Rollback `dpl_7MmWVLGr9roCmWit3yzASutdRZGs` READY/source `f92870632b71def18d7642596dc9dd3357675f76`, supported route retained, no rollback executed.
+
+## OWNER FIELD-RESEARCH — INITIAL ESCALATIONS
+- **Waco School House Haunt:** need accepted current-season/year binding and remaining/final dates. Preferred official Facebook account/post/poster; show venue/account name, 2026 or unambiguous full publication date, schedule; preserve post URL/title if practical. Likely factual PASS and lifecycle basis; approximate placement remains independently reviewed before eligibility.
+- **Annual Farrington Park Haunted Hayride:** need explicit event year for October 17–18. Preferred operator-linked `facebook.com/WindsorAnnualHauntedHayride` or current Windsor Holiday Collective poster. Show venue name, 2026, dates/final date and hours if present, page name and post URL. Likely factual PASS and lifecycle; retained address requires qualified placement review. Recheck cutoff before selecting; do not infer this year's dates.
+- **The Bakersfield Haunted House:** need attributable 2026 public invitation/schedule, replacing historical 2020 calendar. Preferred official Facebook poster/post; show account/venue, 2026 or full post date, operating dates and final date/hours if supplied; retain URL/source title. Likely factual PASS and supported lifecycle; separate placement review still required.
+- These are formal parked evidence requests, not fabricated owner evidence and not a request to pause all lanes. A complete consolidated request list follows.
+
+## NEXT
+Complete Dark Nightmares and Hannibal address/calendar conflict checks, then the remaining ranked lanes and independent review. Accept V1 field-by-field evidence; a reliable current-season invitation can support an appropriately bounded editorial expiry where policy permits, but no current-operation conflict may be silently ignored. Do not keep researching blocked social content after a precise owner request is available.
+
+## HOLD
+All 13 remain implementation HOLD pending their review; no candidate SHA/tree/parent or new validation totals. PR #61 PARKED; “Radial discovery becomes an audit layer.” remains intent only. Physical Android/WebView/GPS HOLD; no signing/Play. No merge, deployment, waiver, protection or production setting changes. Canonical documentation-only branch retained, complete previous continuity unchanged below.
+
+---
+
 # CURRENT — MISSOURI RANKED HOLD TRIAGE (2026-10-12)
 
 ## CURRENT
