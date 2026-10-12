@@ -1,3 +1,32 @@
+# 2026-10-12 bounded automated discovery delta stable gate — COMPLETE
+
+CURRENT:
+- Main `2cb05f37126eebd10de3182f1f8db40434e7d557`, tree `78f2017373e92e565e7a651f147a88ff1dca1686`; 63 identities. PR #65 release acceptance PASS; production `dpl_45iETuFCFYrnp2r3wV8DxdvioC5a` READY on that source. Immediate rollback `dpl_FzXe9UNP3uGFaMeh9RsWe1Gaiv4K` READY on `70682626484fb848fb9addb2c22cdd5f52839b62`. No further production/source mutation during review.
+- Cleanup checkpoint `c5a8b2fda8879faaee53fa053a4c9220d7d4dbf5` fully read back; no runtime defect established.
+- Bounded discovery completed across all three requested directories, with one index and at most three targeted checks per lane; no statewide restart. Original 134-record corpus materialized and SHA256 verified `87a1f244d9a13348ec7f7318fcc022e4796f162f05d2ea24f350cb83260e4ede`, crosschecked with live 63 and historical continuity/HOLD records.
+- FrightMaps: 27 examined entries classified (7 live, 2 owner-field matches, 18 already residential/uncertain); no new clearing evidence. Twelve incidental links not expanded or claimed as researched.
+- MissouriHauntedHouses: 29 screened entries (17 live, 1 duplicate, 2 owner-field, 2 historical HOLD, 1 expired, 3 stale/unverified2026, 3 residential). Haunted Castle House, Rowe Crop Farm and Whiteman/Pixie do not establish current2026 operation. No new PASS.
+- The Scare Factor: all64 directory entries classified (39 live,12 owner-field,8 residential,2 historical HOLD,1 duplicate,1 expired,1 corpus-net-new inquiry). Six Flags St. Louis Fright Fest is new to compared corpus but HOLD: Missouri-specific current2026 calendar, authoritative visitor-address/placement not established. Do not import other parks' dates. No addition cleared.
+- Lane counts overlap; do not add them as unique statewide leads or claim statewide exhaustion.
+- Incidental Branson Ghoster directory 8–10p.m. conflict RESOLVED in favor of current published copy: primary operator2026 Halloween page freshly retrieved states Friday/Saturday 7–10p.m. No amendment required. Broken Hour primary retrieval inaccessible after one fallback; retain accepted schedule/cutoff, no fresh proof or closure inference.
+- Fresh primary sources independently support six useful admission-copy amendments: Pomme, Bollinger, James River Joplin, Sam Baker, Rutledge-Wilson, Boone. Exact before/after six-record projection reviewed by root; 63 catalog objects and other57 presentations preserved. Pomme limited to event admission; Rutledge says most activities and pumpkins cost extra; no quantitative prices or inferred dates.
+- Accepted input `automated-cleanup/accepted-admission-amendments-r1.json`, SHA256 `3fbf5703bb2f8bfea4b793b5fb1e8f5defd2f0dbe543adf6cea7f8d1d20140ce`; expected after-presentations canonical JSON hash `20cdf216e1c97a97e3e50c3ceeb842e1d5c8a08f92535a1f2d4dd4e7d6108a1b`. Facts/copy accepted as implementation inputs only, not candidate validation.
+- Evidence: discovery-delta/* lane ledgers, sources and Branson reconciliation; automated-cleanup/fresh-sources-revalidation-r1.json. Final durable package pending candidate outcome.
+
+NEXT:
+- Build one bounded nonproduction candidate with the six accepted visitor admission details and only the supporting test/harness changes needed to preserve exact historical amendments and coverage.
+- Freeze exact SHA/tree; run all mandatory repository/application, type/lint/safeauthbuild, exact-headCI, seasonal/ordinary browsers, geometry/negativePlan, Directions/rideshare/save/reload/favorites/exclusions/cache/expiry/pendingRPC/no2027/duplicates, Android readiness and independent evidence review.
+- Do not merge or deploy this second candidate. Stop when verified for owner release decision.
+- Six Flags is a new automated-source HOLD, separate from the unchanged owner field queue. No repeated low-yield search in this pass.
+
+HOLD:
+- Twelve owner field venues unchanged and parked: Waco, Dark Nightmares, Farrington, Hannibal, Bakersfield, Rising, Terrified Existence, Twisted Minds, Dark Lords, Zombie World, Lemp, Macabre. No operator contact.
+- Source freshness queue and imminent Boone/Pomme/Broken Hour cutoffs recorded in cleanup checkpoint remain applicable; admission revalidation does not silently reset all catalog checkedAt values.
+- PR #61/performance PARKED; “Radial discovery becomes an audit layer.”
+- PR #65 waiver consumed; no second publication/deployment authorization. Candidate identity does not yet exist.
+
+---
+
 # 2026-10-12 automated catalog cleanup stable gate — PASS
 
 CURRENT:
