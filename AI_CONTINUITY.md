@@ -1,3 +1,25 @@
+# CURRENT — EXACT CANDIDATE CORE AND ANDROID PASS; FINAL WEB ACCEPTANCE PENDING (2026-10-12)
+
+## CURRENT
+- Candidate remains draft PR #64, SHA `70682626484fb848fb9addb2c22cdd5f52839b62`, tree `057282e66443396f25bad44941885f3c15cd84c4`, sole parent `4cfd5134ff97b8ed5ccc1bbd48bca616c5242940`. Released main `f92870632b71def18d7642596dc9dd3357675f76` / tree `9153ead1946bbbb7e38c45981c47332997001c3e` remains unchanged; fresh branch readback is unprotected with empty rulesets. No waiver or settings change.
+- Cadaver FACTUAL PASS / PLACEMENT PASS approximate / IMPLEMENTED using owner-supplied first-party poster: thirteen exact 2026 dates, October 29 7–10 PM exception, $15, visitor address 25088 Kafir Rd, and exact cutoff `2026-11-01T05:00:00Z`. BOSS PASS / approximate / IMPLEMENTED for October 24, with access conditions and overall event-end cutoff `2026-10-25T02:00:00Z`. Neither has machine hours, automatic Open Now or 2027 recurrence.
+- Research remains **2 PASS / 13 HOLD / 0 REJECT**; two additions, no amendments, candidate 62 unique identities versus released 60. All prior catalog and presentation objects preserved.
+- **Exact successor local and hosted core PASS:** 1,020 repository + 71 application = **1,091 PASS, zero FAIL, four inherited skips**. Typecheck PASS, lint zero errors / six inherited warnings, development build and safe auth-enabled migration-free production build PASS. Source proof `1a7aabe71ee55450c3e9a6dc6ee90889c61481319991d6223b5d3b4d9e5b7817` / 482 files. Local receipt `5a49917f6f3aa9e0a6916c67649c24d0ff2349c27a3bc378bbd873c2f99a82ad`.
+- **Android automated readiness PASS**, exact run 38211700596: source/regression checks, three native Python tests, native sync, missing-key fail-closed guard, Gradle lint, unsigned AAB and debug APK packaging, checksum-pinned bundletool verification. Signing job skipped. Gradle release unit task reports NO-SOURCE, not an invented native test count. Four inherited test skips and 14 Android warnings / zero errors. Downloaded original ZIPs and nested AAB/APK members independently verified. Android review SHA256 `6c531527f4b56bc57061a5675ff0280e06dc0897b8b2c25dac1acb09ccbcf8f0`; integrity `0ee207ee057200f64294a3cc3c1c36f2ea4119e464e434b85ecdcabe88bc6e62`.
+- Final web run 38211700647 remains in progress. The actual cleanup artifact is independently **69/69 PASS**; exact Cadaver calendar and unlisted controls, address Directions, generic rides, saved aliases/cache, no-2027, and both successful stale RPC responses delivered at expiry are verified. Cleanup review `000d7151ef0eddb4f5cf9ad1cff9474aa546e2ed2a0eb98da547c6a01dace81c`. Aggregate browser/geometry acceptance remains pending.
+- Initial 4cfd web run 38211161502 is terminal: all 13 browser lanes PASS, core and aggregate FAIL solely from the historical Phase4 file-glob assertion. Failed original logs/source and complete terminal metadata retained, with no cancellation or rerun. Initial disposition `b989f9fe9cd5c5bf6f05c72474f6808acd9b1d167acbca0c3e0c5666a78cbd78`; no initial result substituted for successor validation.
+- Fresh production readback: `dpl_7MmWVLGr9roCmWit3yzASutdRZGs` READY / exact f928 main; all five aliases independently resolve to it and return 200 (www via 308). Candidate deployment query returns zero. Published 60; 57 before cutoffs at prior release acceptance.
+- Immediate supported Hobby rollback remains `dpl_HaYiRu6aYS9ubAPWdJGhh41jtV8U` READY / source `bf88443932739a9448fac8d27fd845e9947cf697`. Prior supported confirmation retained; no fresh UI eligibility claim and no execution. PR #61 remains PARKED; “Radial discovery becomes an audit layer.” is intent only.
+
+## NEXT
+Finish final-head web/geometry lanes and original artifact review, preserve originals and failed attempts, then record aggregate exact-head validation and the owner-decision checkpoint. Do not merge, deploy, sign, publish Android or change protection/production settings.
+
+## HOLD
+Fear Factory, Waco, Rising, Twisted, Terrified Existence, Lemp, Macabre, Bakersfield, Dark Nightmares, Farrington, Hannibal, Zombie World and Dark Lords. Final aggregate evidence acceptance pending. Physical Android/WebView/GPS and Play acceptance remain unverified; Android is a remote HTTPS wrapper targeting existing production, not a candidate web snapshot. Inherited 320 px Directions label clipping and Liberty address overflow remain baseline limitations. No release waiver granted.
+
+---
+
+
 # CURRENT — PR #64 CORRECTED CANDIDATE FROZEN; EXACT-HEAD VALIDATION RUNNING (2026-10-12)
 
 ## CURRENT
