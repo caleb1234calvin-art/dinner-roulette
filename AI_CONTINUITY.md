@@ -1,3 +1,121 @@
+# CURRENT — RANKED SWEEP INDEPENDENT REVIEW AND OWNER FIELD ESCALATION COMPLETE (2026-10-12)
+
+## CURRENT
+- **All 13 researched and independently reviewed: 1 FACTUAL PASS / 12 HOLD / 0 REJECT. Fear Factory alone has PLACEMENT PASS approximate and IMPLEMENTATION ELIGIBLE.** Remaining 12 placements and implementation are HOLD. Complete independent ledger SHA256 `c66f1d062300a2cd15e6e4da9dd3cfe03d5bee8011bab263cac5444e2bcadcc6`; final Fear Factory eligibility SHA256 `5b5ffb7c1c754b0edcb454e3196cbcf00164de5eb2dee959ad9c563e06f4064c`.
+- Original research HOLDs, raw failures and superseded R1 proposals retained. Independent review identified a useful new angle: actual raw calendar markings, not another flattened text scrape. Fear Factory's current MissouriHauntedHouses HTML explicitly has ten active October 2026 dates, EventScheduled schema, and October 7 edit label. Stale 2025 operator content and stale Morty closure text do not prove a current contradiction. Schedule is honestly classified as current secondary evidence, not first-party verification.
+- **Fear Factory LLC:** visitor address **102 South Main Street, Mountain Grove, MO 65711**; exact October **2, 3, 9, 10, 16, 17, 23, 24, 30, 31, 2026**. Display: directory lists 8–11 p.m., confirm before travel. Null machine hours and never automatic Open Now. Supported cutoff **`2026-11-01T04:00:00Z`**, final October31 11PM CDT. Qualified approximate named-address map point **37.127139,-92.264897**; visitor-address Directions and generic rides only. Waze recurring hours not used for season binding. No 2027 recurrence, entrance/parking/dropoff precision, price or unsupported restrictions added.
+- **STILL USEFUL:** six future nights across three weekends; final cutoff remains future. A one-record candidate is worthwhile despite the preferred larger range: distinct Mountain Grove regional coverage, small isolated data change using existing validation architecture, and no padding. This does not reduce validation requirements. Current released main alone is the source base; local untouched worktree is prepared at exact main.
+- New Dark Nightmares secondary schedule supplies six future October dates, but an actual October2,2026 operator post still prints33100 while current ticket uses34100. Conflict is contemporary, not merely stale profile metadata. Rising's genuine month-only2026reviews cannot establish operation after the possible October4closure; they do not prove current cancellation either. Precise conflict receipts retained.
+- Main **`70682626484fb848fb9addb2c22cdd5f52839b62`**, tree **`057282e66443396f25bad44941885f3c15cd84c4`**, production **`dpl_FzXe9UNP3uGFaMeh9RsWe1Gaiv4K` READY/source main**, **62 published identities**. Independent fresh HTTP/data baseline PASS: five aliases plus immutable host, seven matching assets, all62catalogs/presentations, all60previousobjects. Immediate supported rollback **`dpl_7MmWVLGr9roCmWit3yzASutdRZGs` READY/source `f92870632b71def18d7642596dc9dd3357675f76`**; no rollback executed or fresh UI eligibility claimed.
+
+## OWNER FIELD-RESEARCH REQUESTS — ALL 12 UNRESOLVED RECORDS
+These requests are grouped at the stable gate; they do not block the eligible candidate. Capture readable attributable public evidence. Separately record visible facts, owner-attested origin and independent corroboration. A successful automated re-fetch is not required. Exact complete machine hours are not universal V1 requirements; where permitted, a defensible editorial lifecycle can follow reliable current-season operation. Lemp and Macabre remain conditional low-yield checks. Fear Factory first-party corroboration is optional, not a gate.
+
+### OWNER FIELD-RESEARCH REQUEST — Waco School House Haunt
+- Need: 2026 year binding, exact visitor dates and final supported date/expiry.
+- Resolves with: Readable official 2026 season poster or dated operator post that explicitly invites public visits and states the remaining dates/final date; full-year post timestamp can bind otherwise yearless schedule.
+- Preferred source: Official Facebook page https://www.facebook.com/wacoshoolhousehaunt/ ; new post1434021132217008 or prior1433021242316997. 
+- Capture: Venue/account name, full poster/post,2026 or full timestamp, all listed dates including final date and any hour exceptions. Address if shown is useful.
+- URL/title: YES: capture page/account name and post URL if practical.
+- Expected result: Likely factual PASS plus supported expiry after review. Placement remains a separate qualified approximate-point review; implementation eligibility follows both.
+
+### OWNER FIELD-RESEARCH REQUEST — Dark Nightmares Haunted Forest
+- Need: Resolve 34100 E. 24 Hwy versus 33100 US-24 as the current public visitor address; preserve authoritative 2026 dates and final operating date.
+- Resolves with: Current operator post/poster or official routing instructions identifying the visitor address, ideally explaining which address guests should use, plus a readable official 2026 calendar. A named public map/sign observation may support placement but cannot alone settle season dates.
+- Preferred source: Official Dark Nightmares Facebook page and its current poster; operator-linked ticket calendar visible in a normal browser https://www.facebook.com/p/Dark-Nightmares-Haunted-attraction-100040742512482/ https://app.gopassage.com/events/dark-nightmares-haunted-forest
+- Capture: Venue/account name, complete public address, current 2026 context, full dates/final night, and any address correction or arrival instructions. Map screenshots should show venue name and street address.
+- URL/title: YES — capture page/account title and post/ticket URL when practical; separately state provenance of a photo.
+- Expected result: Likely factual PASS+supported lifecycle if authoritative address conflict and dates resolve. May support approximate placement PASS; implementation eligibility only after independent field/placement review.
+
+### OWNER FIELD-RESEARCH REQUEST — Annual Farrington Park Haunted Hayride
+- Need: Explicit 2026 year binding and exact final dates; the existing site says October 17–18 without an event year.
+- Resolves with: Readable current operator/sponsor poster, post, ticket occurrence or city/Chamber event announcement showing 2026 and operating dates.
+- Preferred source: Official Windsor Annual Haunted Hayride Facebook page or Windsor Holiday Collective poster https://www.facebook.com/WindsorAnnualHauntedHayride
+- Capture: Venue name, 2026, dates, final operating date, hours if printed, and visible page/account or poster publisher name.
+- URL/title: YES — preserve post URL and visible page/account title if practical; for signage/photo state where and when captured.
+- Expected result: Likely factual PASS+supported expiry. Placement still requires qualified approximate point review using retained public visitor address; implementation eligibility follows both gates and practical-release cutoff recheck.
+
+### OWNER FIELD-RESEARCH REQUEST — Hannibal Jaycees Warehouse of Nightmares
+- Need: Current haunt-specific visitor address resolving 320 S. Bird versus 320 South 3rd, and final 2026 schedule resolving first four weekends versus October 30.
+- Resolves with: Current official Jaycees/Warehouse poster or social event with the haunt address and explicit 2026 dates/final night; an official routing correction is also useful.
+- Preferred source: Hannibal Jaycees/Warehouse of Nightmares official social post or current venue flyer, reached through official operator site https://hannibaljaycees.org/
+- Capture: Haunt name, 2026, full visitor address, listed dates or final operating date, account/publisher title, and hours if printed.
+- URL/title: YES — preserve post URL and visible account/page title if possible; for posted signage record capture place/date.
+- Expected result: Likely factual PASS and supported expiry after both conflicts settle; approximate placement can then be reviewed. A poster establishing only South 3rd resolves routing evidence but does not automatically establish complete implementation eligibility.
+
+### OWNER FIELD-RESEARCH REQUEST — The Bakersfield Haunted House
+- Need: 2026 public visitor operation/date binding and a supported lifecycle bound.
+- Resolves with: Readable official 2026 opening/schedule poster or dated operator post with visitor dates; capture final date/hours if the source provides them. Complete hours are not mandatory.
+- Preferred source: Official The Bakersfield Haunted House Facebook page; exact known post 1781871836927590 or newer 2026 schedule. 
+- Capture: Venue/page name, post timestamp or explicit 2026, public invitation and operating dates; show full poster and any date/hour exceptions.
+- URL/title: Yes—capture visible page/account title and post URL if practical.
+- Expected result: Likely factual PASS plus supported expiry. Placement PASS still requires separate reproducible address placement; implementation eligibility follows both.
+
+### OWNER FIELD-RESEARCH REQUEST — Rising Haunted Attraction
+- Need: Current 2026 operating status after possible October 4 closure, remaining visitor dates/final date.
+- Resolves with: Dated official announcement explicitly confirming 2026 season operation/schedule, ideally after October 4; or a current dated cancellation/closed-season notice that resolves the conflict.
+- Preferred source: Official Facebook https://www.facebook.com/risinghauntedattraction/ or an operator poster/current official Pulaski County event. 
+- Capture: Venue/account identity, Waynesville/Raleigh Road, full post timestamp/year, explicit operating/reopening/cancellation status, remaining dates and final date.
+- URL/title: YES: official account/source title plus post/event URL if practical.
+- Expected result: Likely factual/lifecycle resolution, potentially PASS with supported expiry if affirmative. Separate approximate placement review remains. A closure finding resolves status but does not make the record eligible.
+
+### OWNER FIELD-RESEARCH REQUEST — TerrifiedExist Haunted Attractions
+- Need: Reliable 2026 public visitor invitation and supported operating dates/lifecycle.
+- Resolves with: Official dated 2026 poster, event page or ticket calendar actually inviting visitors; include final date if shown, or a clear bounded upcoming event.
+- Preferred source: Official Terrified Exist Haunted Attractions Facebook page, current linked ticket page, or operator-posted venue poster. 
+- Capture: Official page/account name, post timestamp/2026, venue name and Florissant address, dates and any hours or restrictions shown.
+- URL/title: Yes—preserve account/source title and post/ticket URL if practical.
+- Expected result: Likely factual PASS plus supported expiry if it establishes current visitor operation; placement remains separately unreviewed, so implementation eligibility is conditional.
+
+### OWNER FIELD-RESEARCH REQUEST — Twisted Minds Haunted House
+- Need: 2026 public operation/dates and correct visitor address:10000vs10002BearCove.
+- Resolves with: Current official operator post/poster binding2026 visitor dates and destination, ideally an explicit address correction or routing explanation.
+- Preferred source: Official Twisted Minds Haunted House Facebook page; current operator poster/signage or normal public map observation as supporting placement evidence. 
+- Capture: Venue/page name,2026/post timestamp,actual dates,full visitor-address line; if10002,include any context explaining where visitors should arrive. A map alone cannot prove current operation.
+- URL/title: Yes—account/title and post URL; for signage/map also capture location/source context.
+- Expected result: Likely factual PASS if both year and visitor address resolve. Map/sign evidence may support placement PASS after independent review; implementation needs both. Do not assume entrance/dropoff precision.
+
+### OWNER FIELD-RESEARCH REQUEST — Dark Lords Manor Haunted House
+- Need: Explicit 2026 public operation/invitation, operating dates/final date, and current visitor address.
+- Resolves with: Readable operator-posted 2026 public event poster or dated public ticket/event invitation with operating dates and final date; include visitor address.
+- Preferred source: Official-linked Facebook page https://www.facebook.com/profile.php?id=61565644765225 ; an operator-posted public event under Rivers End Entertainment is also useful if current affiliation is visible. 
+- Capture: Venue name, account/page name, explicit 2026 binding, public admission/invitation, exact dates or supported final date, and 14904 W State Hwy 90 visitor-address confirmation if still applicable.
+- URL/title: YES — preserve post/event URL and visible page/account/source title; screenshot the whole relevant post/poster rather than only cropped dates.
+- Expected result: Likely factual PASS and supported expiry if the evidence confirms current public operation; placement PASS can follow visitor-address confirmation and qualified approximate map evidence; implementation eligibility remains subject to both and independent review.
+
+### OWNER FIELD-RESEARCH REQUEST — Zombie World Strange Things
+- Need: 2026 operation and dated operating lifecycle; current booking page is explicitly October 2025.
+- Resolves with: Operator-posted 2026 schedule/poster or a specific 2026 booking occurrence that clearly identifies Zombie World, with its last supported operating date.
+- Preferred source: Battle Creek operator website/social page or normal-browser booking page at https://booking.battlecreekpaintball.net/products/zombie-world . 
+- Capture: Zombie World and Battle Creek names, explicit 2026/event date, open dates/final date, any current cancellation note, and address if shown. A 2026 footer or current calendar navigation alone does not resolve it.
+- URL/title: YES — visible account/page title and direct post/booking URL where practical.
+- Expected result: Likely factual PASS and supported expiry if genuinely current; existing facility address is retained as evidence, but placement and implementation remain pending qualified placement/current-address review.
+
+### OWNER FIELD-RESEARCH REQUEST — Lemp Brewery Haunted House
+- Need: Conflicting operator 2026 opening assertions and absence of Lemp-specific operating dates/final date.
+- Resolves with: A newer, unambiguous Lemp-specific reopening/operation announcement or dated Lemp-specific ticket occurrence that resolves the uncertain-opening copy and supplies supported event dates.
+- Preferred source: Lemp/Scarefest official account or https://scarefest.fearticket.com/ ; operator site is https://www.lemphauntedhouse.com/ . 
+- Capture: LEMP name, explicit 2026 event date(s), publication/event date and organizer identity, current reopening/operation statement, and final supported event date. Darkness/Creepyworld dates do not qualify.
+- URL/title: YES — preserve account/source title and direct dated announcement/ticket URL.
+- Expected result: Conditional factual PASS and supported expiry only if a real Lemp-specific dated event is announced and contradictions resolve; later placement review required for implementation. Low-yield owner check, not a reason to contact the operator or travel.
+
+### OWNER FIELD-RESEARCH REQUEST — Macabre Cinema
+- Need: Traditional season is suspended during redevelopment; no specific dated special event has been established.
+- Resolves with: An operator-announced 2026 Macabre-specific special event with exact date, public admission and location; a newly dated ticket page can support this.
+- Preferred source: Macabre/Full Moon official account or https://www.macabrecinema.com/ and its linked ticketing. 
+- Capture: Macabre Cinema name, official organizer/account, explicit 2026 event date, actual special-event description/public admission, and visitor location. Visit KC daily update-page dates or other Full Moon attractions do not qualify.
+- URL/title: YES — visible account/source title and direct announcement/ticket URL.
+- Expected result: Conditional factual PASS only if an actual dated special is announced; supported expiry and placement would then be reviewed. Otherwise remains low-yield HOLD without owner action.
+
+
+## NEXT
+Implement one Fear Factory addition on `integration/missouri-ranked-holds-2026-10-12` from released main. Preserve62prioridentities and all their objects. Review source and browser/geometry coverage independently, freeze SHA/tree/parent, then run all required exact-head local/CI/browser/geometry/Android gates in parallel where independent. Candidate is not yet frozen and no fresh test totals are claimed. Stop at VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION; no merge/deploy/waiver.
+
+## HOLD
+Waco, Dark Nightmares, Farrington, Hannibal, Bakersfield, Rising, TerrifiedExist, Twisted Minds, Dark Lords, Zombie World, Lemp and Macabre remain factual/placement/implementation HOLD with exact blockers above and in retained reports. No weak additions, residential records, speculative enrichment or statewide discovery. PR #61 PARKED; “Radial discovery becomes an audit layer.” remains design intent. Physical Android/WebView/GPS HOLD; signing/Play outside scope. Existing warnings/layout limitations retained. Canonical docs only, deployment-disabled branch; entire previous continuity follows unchanged.
+
+---
+
 # CURRENT — MISSOURI FIRST RANKED RESEARCH BATCH (2026-10-12)
 
 ## CURRENT
