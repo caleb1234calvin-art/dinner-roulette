@@ -1,3 +1,28 @@
+# CURRENT — PR #65 EXACT-HEAD VALIDATION ACCEPTED (2026-10-12)
+
+## CURRENT
+- **Exact-head validation PASS** for draft PR #65: SHA `2cb05f37126eebd10de3182f1f8db40434e7d557`, tree `78f2017373e92e565e7a651f147a88ff1dca1686`, sole parent `70682626484fb848fb9addb2c22cdd5f52839b62`. Candidate remains clean and unchanged. Fear Factory only; **63 candidate identities / 62 published**; all prior 62 objects and presentations preserved.
+- Core tests: **1,027 repository PASS / 4 inherited skips / 0 failures; 71 application PASS**. Typecheck, lint (zero errors / six inherited warnings), safe auth-enabled migration-free build PASS. Hosted web run **38304682434**, all **16 jobs success**; independent source fingerprint `fbad0f35c48db52f33b8ee351ea290acb1d44b0e744850e602ae0ce6011a5248` matches all 15 artifacts.
+- **1,288 seasonal browser scenarios + 10 ordinary Date Night scenarios PASS**, casino 16 and location 19 checks PASS. Fear Factory lane 51 scenarios (19 new-record / 32 preserved-receipt cases), including Directions/rideshare, save/reload, favorites/exclusions/cache, expiry -1ms/exact/+1ms, pending RPC at expiry, no 2027 revival and duplicate/lifecycle-negative protections.
+- **525 geometry comparisons** over 63 identities at 320/390/512px and **15 negative Plan identities PASS**. Maximum extra height: options 0px; Plan 3px; results 4.671875px versus matched ordinary controls (within frozen 5px gate). Result cards do not have a universal short-standard 3px gate. Nine representative screenshots inspected. Inherited 320px Directions-label clipping remains.
+- **15/15 original web ZIPs**, 843,164,864 bytes / 8,535 members accepted: original size/SHA256, unique safe paths, CRC, member size/SHA256 verified. All 17 web+Android originals, total 850,055,345 bytes, durably saved with original hashes. No split needed. Cumulative .part was complete and hash-matched before rename; earlier truncated transfers were replaced and verified. Full decoded cumulative job log remained unavailable (Transport closed); complete cumulative archive, 235 PASS cases, source proof and successful job/steps retained. No exhaustive CI-log-retention claim.
+- **Android automated readiness PASS**, run **38304682498**, exact candidate checked out despite synthetic-merge artifact label. Three Python verifier tests, signing guard, unsigned bundle/APK inspection PASS; signing skipped. Fourteen native lint warnings and vendor baseline qualifications retained. Native unit tests are NO-SOURCE. Wrapper loads current production; it does not embed the candidate.
+- Fresh final readback at **2026-10-12T20:51:20Z**: main `70682626484fb848fb9addb2c22cdd5f52839b62`, tree `057282e66443396f25bad44941885f3c15cd84c4`; production **`dpl_FzXe9UNP3uGFaMeh9RsWe1Gaiv4K` READY/source main**, 62 identities. Five aliases assigned correctly and HTTP200. Fresh public/immutable assets hash-match the prior independently parsed catalog.
+- Immediate supported rollback **`dpl_7MmWVLGr9roCmWit3yzASutdRZGs` READY/source `f92870632b71def18d7642596dc9dd3357675f76`**. Supported Hobby route retained from release acceptance; no fresh UI eligibility claim or rollback execution.
+- Fear Factory **STILL USEFUL**, six scheduled nights Oct16/17/23/24/30/31, expiry **`2026-11-01T04:00:00Z`** (Oct31 23:00 CDT). Schedule remains honestly secondary; approximate placement, visitor-address Directions and null machine hours/conservative Open Now preserved.
+- Evidence reports: `validation/web/Web-Artifact-Acceptance-R1.json`, `validation/android/Android-Readiness-R1.json`, `validation/Exact-Head-Local-Core-R1.json`, `validation/Final-Baseline-Recheck-R2.json`, `validation/Final-HTTP-Recheck-R2.json`, `validation/All-Original-Evidence-Saved-R1.json`.
+
+## NEXT
+Finalize bounded owner decision package and final continuity gate. Stop at **VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION**. No merge or deploy.
+
+## HOLD
+- Ranked sweep unchanged: **13 reviewed / 1 factual PASS / 12 HOLD / 0 REJECT**. Fear Factory factual and qualified placement PASS / implementation ELIGIBLE. Waco, Dark Nightmares, Farrington, Hannibal, Bakersfield, Rising, Terrified Existence, Twisted Minds, Dark Lords, Zombie World, Lemp and Macabre remain excluded with exact blockers and seven-field owner requests preserved below and in `missouri-owner-field-research-requests-2026-10-12.txt`.
+- Main remains unprotected; no waiver granted. Physical Android/WebView/GPS HOLD; no signing or Play publication.
+- PR #61/performance PARKED, unchanged `c78b97175cc094436e454fa888e1ed83486f750d`. Future intent: **"Radial discovery becomes an audit layer."**
+- This is documentation-only on deployment-disabled `integration/continuity-refresh-2026-10-07`; no candidate or production mutation.
+
+---
+
 # CURRENT — FEAR FACTORY CANDIDATE FROZEN; EXACT-HEAD VALIDATION RUNNING (2026-10-12)
 
 ## CURRENT
