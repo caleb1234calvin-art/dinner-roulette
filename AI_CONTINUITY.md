@@ -1,3 +1,30 @@
+# 2026-10-12 automated catalog cleanup stable gate — PASS
+
+CURRENT:
+- Released main remains `2cb05f37126eebd10de3182f1f8db40434e7d557`, tree `78f2017373e92e565e7a651f147a88ff1dca1686`; PR #65 exact candidate released and production acceptance PASS (prior checkpoint `b3195b891c580e6dd35a6470600cc7de3fa07f6d`).
+- Production `dpl_45iETuFCFYrnp2r3wV8DxdvioC5a` READY, source released main, all five aliases accepted. Immediate supported rollback `dpl_FzXe9UNP3uGFaMeh9RsWe1Gaiv4K` READY, source `70682626484fb848fb9addb2c22cdd5f52839b62`. Rollback route observed, not executed.
+- Catalog audit: 63 unique identities; 60 currently lifecycle-eligible, three Oct 10 records correctly expired. 759/759 source/module audit invariants and 89/89 targeted existing data tests PASS. Separate runtime protection lane 197 existing tests PASS; its current-catalog probes cover 1,953 distinct catalog pairs, 126 provider merge orders, 63 stale IDs, 63 saved aliases, 63 negative lifecycle suppressions, 252 expiry/no-2027 controls, 63 actual cache reapplications and 189 favorites/exclusions controls. Counts describe separate suites, not an additive unique-test total.
+- No runtime defect, source edit, production mutation or newly cleared identity. Null machine hours/conservative Open Now, cutoff boundaries, saved/cache current policy, duplicate protections, qualified address placement and accepted navigation exceptions PASS. Five late-fall identities retain individual lifecycles.
+- Audit corrections preserved: two legacy records intentionally use seasonalAvailability.endsAt; two unconfirmed schedules intentionally remain conservative. These are not defects.
+- Source freshness queue: 29 live reviews due Oct 14, 20 due Oct 15, 11 newer records lack explicit revalidateAfter. No new expiry within 72 hours; Boone Historical Haunts, Broken Hour and Pomme de Terror expire Oct 17–18; nine within 14 days.
+- Harness maintenance queue: historical 52-record directory-exclusion churn; three global presentation-total/key pins; older four-record late-fall cache suite omits Branson although separate current tests cover it. No product failure established.
+- Five optional admission-detail amendments supported by retained primary evidence: Pomme (free event, normal camping fees), Rutledge (free entry, paid activities/pumpkins), Bollinger (free/no registration), James River (free public family party), Sam Baker (free activities/no registration). Fresh bounded source confirmation and independent exact-copy review pending. Existing Brookdale/Hollows and Hotel/Dungeons amendments already shipped; do not repeat.
+- Evidence files: automated-cleanup/data-*.json and data-targeted-tests.log; harness-*.json/.tap/.log/.mjs; sources-inventory-r1.json, sources-ranked-queue-r1.json, sources-enrichment-proposals-r1.json. Final durable review package pending discovery completion.
+
+NEXT:
+- Cleanup/review gate is complete. Run bounded delta-only discovery against FrightMaps, MissouriHauntedHouses.com and The Scare Factor, then exact relevant authoritative sources. Deduplicate against the original 134-record audit, current 63 catalog and full historical continuity/HOLD ledger before any net-new claim.
+- Bounded revalidation of the five retained-evidence copy proposals and imminent Boone/Broken Hour sources; no broad statewide restart.
+- Consider one nonproduction candidate only if meaningful verified work clears; mandatory complete candidate validation and owner decision remain required. No second release authorization exists.
+- Ranked next work: imminent Oct 17–18 events; known Darkness Oct 16–17 start-time conflict; oldest Lloyd/Sam source checks; useful five admission qualifications; remaining due-source queue and explicit review-date gaps; harness maintenance.
+
+HOLD:
+- Owner field lane unchanged: Waco, Dark Nightmares, Farrington, Hannibal, Bakersfield, Rising, Terrified Existence, Twisted Minds, Dark Lords, Zombie World, Lemp, Macabre. Do not repeatedly research blocked facts or contact operators.
+- PR #61/performance remains PARKED. Preserve “Radial discovery becomes an audit layer.”
+- Exact PR #65 one-release branch-protection waiver consumed. No standing waiver or second production publication authority.
+- No automated next candidate exists yet. Do not mistake upcoming source-review dates or optional copy proposals for fresh evidence PASS.
+
+---
+
 # CURRENT — PR #65 RELEASE AND PRODUCTION ACCEPTANCE PASS (2026-10-12)
 
 ## CURRENT
