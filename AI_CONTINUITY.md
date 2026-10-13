@@ -1,3 +1,35 @@
+# CURRENT — PR #68 TWO-AMENDMENT CANDIDATE FROZEN; VALIDATION PENDING (2026-10-13)
+
+## CURRENT
+- Draft PR **#68**, https://github.com/caleb1234calvin-art/dinner-roulette/pull/68; branch **integration/missouri-occurrence-amendments-2026-10-13**.
+- Exact SHA **c33c8513eb7e2b2ec19248dd76e5effe04af6e51**, tree **df07b5808ff9144ac9ab25d9822df8f9c7a7cebc**, sole parent released main **8353e60056fb0568360c5c13878d102880395d9f**.
+- Main/tree8353/a10e02b3151fda349322b612c371ddacd88350e1 and **production dpl_3mPcvp1LGsjtQ3MVLgRUdmAzejN9 READY/source8353** unchanged.67 identities live and candidate; no additions/removals. PR67 waiver consumed; no PR68 merge/deployment authority.
+- Candidate implements only the two independently cleared amendments: Hollows adds four explicit dates and source-bound finalOctober31 23:00CDT cutoff; Missouri Nightmare qualifies finalNovember1 20:30CST ticket-time wording with unchanged cutoff. Existing policy/identity/location/routing/machine-hours behavior is not changed.
+- **Implementation author validation, hosted browser/geometry, Android and fresh independent exact-candidate acceptance PENDING/HOLD.** No implementation PASS claimed at freeze. Web **38346070970** queued; Android **38346070851** in progress at reported launch; local full gates running.
+
+## SCOPE / HISTORY
+-22 changed paths: three runtime catalog/presentation files plus tests, exact immutable baseline/projection receipts and safe audit documents. No components/CSS/dependencies/workflows/deployment settings/native changes.
+- Runtime paths: src/lib/date-night/missouri-2026-astra-commercial-catalog.ts; src/lib/date-night/missouri-2026-astra-eleven-catalog.ts; src/lib/date-night/seasonal-presentation-catalog.ts.
+- Audit paths: audit/occurrence-amendments-2026-10-13/AUTHOR-PROJECTIONS-R1.json; INDEPENDENT-SOURCE-CLEARANCE.md; README.md.
+- Test paths: scripts/seasonal-admission-amendments.test.mjs; seasonal-astra-commercial.test.mjs; seasonal-astra-eleven.test.mjs; seasonal-card-layout-browser.mjs; seasonal-hold-cleanup.test.mjs; seasonal-next-missouri.test.mjs; seasonal-occurrence-amendments.test.mjs; seasonal-owner-evidence.test.mjs; seasonal-phase4-recovery.test.mjs; seasonal-ranked-holds.test.mjs; seasonal-ten-record-browser.mjs.
+- Test-support paths: scripts/test-support/admission-amendments.mjs; occurrence-amendments.mjs; occurrence-cleared-projections.json; occurrence-release-baseline.json; occurrence-source-baselines.json.
+- Source transport history: oversized JSON extraction truncated; an843-second interrupted chunk orchestration returned no tree/commit/ref. Recovery collected bounded files and connector-created tree matched local exact tree; no source change or successful publication inferred from interrupted attempt. This is transport history, not a runtime verdict.
+
+## NEXT
+1. Complete local and exact c33c hosted gates plus fresh independent review; preserve all failed attempts and immutable IDs. Verify prior67 objects except exact cleared fields, both consumer texts, Hollows old/new cutoff boundaries, saved/cache/reopen, pending RPC, no2027, fail-closed Open Now, routing, ordinary Date Night and geometry.
+2. Independently inspect original artifacts/screenshots with exact-source proofs; use authorized bounded export if needed. Any mutation requires a new exact candidate and affected gates.
+3. Publish/read back final gate and stop at VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION. Do not merge/deploy or start a further discovery batch.
+
+## HOLD
+- Candidate validation pending; dataset clearance is not runtime/browser/release acceptance.
+- Nine published fresh-source HOLDs and nine owner-field HOLDs remain, no removal inferred. Three imminent lifecycles unchanged.
+- Physical Android/WebView/GPS HOLD; signing/Play outside scope. PR61 PARKED; “Radial discovery becomes an audit layer.” future intent only. Existing warnings/skips/clipping/approximate-location/Open Now/live-provider limitations retained.
+- Supported rollback6Zs/source0032 and three automatic versus two generated alias limitation remain as recorded in release checkpoint; future release preflight must reverify.
+
+Documentation only on deployment-disabled canonical branch. Full prior **b8aeafe701945b276be4953855a30055f5545112** preserved; main/prod/PR/head/tree/parent/current continuity freshly read before write. Full readback required. Older pending implementation/no-candidate wording is superseded; research evidence and failed correction history preserved.
+
+---
+
 # CURRENT — POST-PR67 REVIEW AND HOLD RANKING PASS; TWO AMENDMENTS CLEARED (2026-10-13)
 
 ## CURRENT
