@@ -1,3 +1,38 @@
+# CURRENT — POST-PR67 REVIEW AND HOLD RANKING PASS; TWO AMENDMENTS CLEARED (2026-10-13)
+
+## CURRENT
+- Main **8353e60056fb0568360c5c13878d102880395d9f**, tree **a10e02b3151fda349322b612c371ddacd88350e1**; production **dpl_3mPcvp1LGsjtQ3MVLgRUdmAzejN9 READY** on exact main.67 published identities. PR67 release/acceptance PASS; waiver consumed. Immediate supported rollback6Zs/source0032 and its three-automatic/two-generated-alias limitation remain as documented below.
+- **Independent corrected research R2 PASS**, all30 records covered:18 fresh-source-review HOLDs → **7 field-scoped VALID CURRENT,2 AMENDMENT NEEDED cleared,9 remaining fresh-source HOLD**; separately **3 EXPIRING AS EXPECTED and9 owner-field HOLD**. No new identity, removal, cancellation or factual rejection established. No runtime implementation yet and no new candidate identity.
+- Only two exact amendment projections are cleared for bounded implementation. All13 before-values independently match released main. Existing locations/precision/targets retain their accepted authority.
+
+## CLEARED SUBSET / NEXT IMPLEMENTATION
+1. **Haunted Hollows Haunted Trail (Palmyra), DELTA2-HOLLOWS:** add October16,17,23,31 to existing October9,10,24,30. Preserve prior historical9–10. activeUntil becomesOctober31; existing endsAt/listingExpiresAt fields become **2026-10-31T23:00:00-05:00 /2026-11-01T04:00:00Z**. Six remaining occurrence dates show19:30–23:00CDT. Update only approved display/visit/presentation wording and append two decisive occurrence URLs. This is5947 County Road261,Palmyra, not Brookdale.
+2. **Missouri Nightmare, DELTA2-MISSOURI-NIGHTMARE:** three copy locations only clarify **November1 8:30PM CST is the final listed ticket time**, not demonstrated physical closing. Exact current **2026-11-02T02:30:00Z** cutoff and all dates unchanged. Selected occurrence explicitCST/payloadUTC outrank blanket calendarCDT label; start=end is not final exit. Unavailable October24 is not cancellation.
+- No openingHours/machine intervals/Open Now/prices/admission/identity/sourceCheckedAt/checkedAt/revalidateAfter/reviewRevision/location/Directions/rideshare/cache/dedupe/lifecycle-negative code changes cleared. Seven valid reviews need ledger updates only, not runtime edits. No2027,September orDecember expansion.
+- **NEXT:** prepare one fresh8353-main-based nonproduction two-amendment candidate, still67 identities; run complete exact-head validation, fresh independent review and required browser/geometry/Android gates. Stop at VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION; no merge/deploy authority.
+
+## REVIEW / CORRECTION FINDINGS
+- Scoped valid: Fear the Bloody Timber (City/DMO six dated occurrences/year-bound poster, not operator-social proof); Ranch; Worlds of Fun's named Haunt entries; Myers; Labyrinth; Freaks Fair rendered selected dates; Trepidations calendar/current-year ticket binding. No new inferred hours from color/all-day calendars/product envelopes.
+- Imminent Boone October18 01:00Z exact, Broken Hour03:00Z exact and Pomme05:00Z date-only remain EXPIRING AS EXPECTED, no extension. Broken Hour envelope is not continuous overnight admission.
+- LaneB authorR1 incorrectly stated Myers/Labyrinth lacked textual legends. Fresh verifier found homepage red-square “dates open”; authorR2 restricts absence to inspected/calendar subpages. Correction independently PASS; classifications/exact projections unchanged. Original R1 and finding preserved.
+- Hollow's generic inherited seriesJSON-LD October3 differs in scope from selected finalOctober31 occurrence/header/payload; no unsupported supersession inferred. Nightmare selected occurrence establishes ticket time only.
+- One independent Nightmare navigation permission request was dismissed, not denied; same URL retried once successfully under owner-authorized bounded harmless retry, no security bypass. Optional missing BeautifulSoup affected text extraction only; local parsing of preserved successful HTTP bytes used. Screenshot filename/MIME differences documented honestly.
+
+## HOLD RANKING / STOP REPEATED LOW-YIELD RESEARCH
+- Nine remaining published source-review HOLDs: Liberty,Campbell's,Creepyworld,Darkness,Cobb,Tommy's Ballwin,Tommy's O'Fallon,Haunted Grotto,Ozark Nightmares. Date/start/admission conflicts lack precedence; Cobb retains unavailable-source HOLD, not closure. Existing qualified copy/cutoffs remain authoritative.
+- Evidence-triggered priorities from delta lane: Ballwin operator index/body discrepancy; O'Fallon current operator seasonal source; Hannibal address/calendar conflict; Grotto/Ozark current attributable seasonal sources; then remaining owner-field dates/address/lifecycle conflicts. These priorities are triggers, not authorization for another routine repeated scan.
+- Nine owner records remain HOLD unchanged: Hannibal,Bakersfield,Rising,Terrified Existence,Twisted Minds,Dark Lords,Zombie World,Lemp,Macabre. No new evidence clears any. Search-index snippets/secondary mirrors/hiring/licenses/other-state results do not establish operation or closure.
+- StayHappening/HappeningNext were search-returned excerpts only, not active mirror fetches/retries; previously excluded StayHappening is excluded from clearance. Only canonical/indexed Tommy's sources actively opened, insufficient. No further exhausted-source attempts without material change.
+- No runtime removal follows a fresh-source HOLD. Physical Android/WebView/GPS HOLD, signing/Play out of scope; PR61 PARKED, “Radial discovery becomes an audit layer.” future intent only. Existing warnings/skips/clipping/approximate/Open Now/provider limitations unchanged.
+
+## IMMUTABLE EVIDENCE / CONTINUITY
+- Independent REPORT-R2.md SHA256 **fb939339309ce35f721c4816ec759d2a5623bac7a66513278ec004c2c6d1b993**; record-verdicts-r2.json **4c3e06277a1f7e5f2a7fa64cd9c960edf429bc449e9b27ba9861e8d535168bfa**; cleared-projections-r2.json **9bdbdf739844bfb8884c9fb0342a2ef08abe07cd5917ab071450d2e2e512e993**.
+- Exact author lane-b/amendment-projections-r1.json **0b32fc6fdb1840dd66606bd766e7a89c86729a939c8176799aabf32dec0b4098**; corrected author manifest **bf1ecc098df3924ac88aa2aba3886ca5f5a202a90a185fd8c06b924db422f812**. Embedded original status strings remain historical proposal labels; independentR2 governs clearance.
+- Private complete source-review ZIP **libfile_eb2c3d36101c8191bbbff1afffc6120b**, Pick-For-Us-post-PR67-source-review-evidence.zip, **9,168,822 bytes**, SHA256 **6abb5b20144b730a1c80bb5bab4648d2fc0b328a81dd5ff31dab586dbab94f2d**,282 members/281 evidence plus manifest;271 declared lane/verifier files independently rehashed. Includes raw sources/screenshots/receipts, R1 correction history, R2 projections/verdicts. Raw remains private.
+- Documentation-only canonical branch. Full prior **ae2338d785af82b7a24955289331dc66874a32fa** preserved; fresh main/prod/current continuity checked. Full readback required before implementation. This supersedes pending-review language only; prior release facts and history remain.
+
+---
+
 # CURRENT — PR #67 RELEASE AND SCOPED PRODUCTION ACCEPTANCE PASS (2026-10-13)
 
 This entry supersedes the prior PR67 owner-decision stop. Owner message Sentinel_a097d494a1e0819195f2fa87a51be5b8 approved exact8353/treea10e publication with fresh preflight and one-release waiver, then bounded postrelease Missouri advancement. **PR67 waiver consumed. No next-candidate release authority.**
