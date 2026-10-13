@@ -1,3 +1,4 @@
+import { occurrenceSourceBefore, occurrenceCatalogBefore, occurrencePresentationAfter } from "./test-support/occurrence-amendments.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
@@ -38,16 +39,16 @@ test("four owner-evidence records bind accepted fields and preserve all 63 relea
   assert.equal(accepted.baseSha, baseline.source);
   assert.equal(previous.length, 63);
   assert.deepEqual(previous.map(row => row.id), baseline.catalog.map(row => row.id));
-  assert.deepEqual(JSON.parse(JSON.stringify(previous)), baseline.catalog);
+  assert.deepEqual(JSON.parse(JSON.stringify(previous.map(occurrenceCatalogBefore))), baseline.catalog);
   assert.equal(rows.length, 4);
   assert.deepEqual(rows.map(row => row.seasonalListing.recordId), ["DELTA2-WACO", "DELTA3-DARK-NIGHTMARES", "DELTA3-FARRINGTON", "NEW-MID-AMERICA-FRIGHT-FEST"]);
   assert.deepEqual(rows.map(row => row.seasonalListing.recordId), Object.keys(OWNER_EVIDENCE_MATERIAL_FACTS));
   assert.deepEqual(rows.map(row => row.id), accepted.newRecords.map(row => row.canonicalId));
   assert.equal(new Set([...previous, ...rows].map(row => row.id)).size, 67);
-  for (const [file, hash] of Object.entries(baseline.files)) assert.equal(createHash("sha256").update(readFileSync(file)).digest("hex"), hash, `Released catalog is byte-preserved: ${file}`);
+  for (const [file, hash] of Object.entries(baseline.files)) assert.equal(createHash("sha256").update(occurrenceSourceBefore(file)).digest("hex"), hash, `Released catalog is byte-preserved: ${file}`);
   assert.equal(Object.keys(baseline.presentations).length, 63);
   assert.deepEqual(Object.keys(SEASONAL_PRESENTATIONS).sort(), [...Object.keys(baseline.presentations), ...Object.keys(OWNER_EVIDENCE_MATERIAL_FACTS)].sort());
-  for (const [recordId, presentation] of Object.entries(baseline.presentations)) assert.deepEqual(SEASONAL_PRESENTATIONS[recordId], presentation, recordId);
+  for (const [recordId, presentation] of Object.entries(baseline.presentations)) assert.deepEqual(SEASONAL_PRESENTATIONS[recordId], occurrencePresentationAfter(recordId, presentation), recordId);
   for (const row of [...previous, ...rows]) assert.equal(getCuratedSeasonalPlace(row.id), row);
 });
 

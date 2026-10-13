@@ -535,7 +535,7 @@ export const MISSOURI_2026_ASTRA_ELEVEN_LISTINGS:
       },
       "hours": {
         "state": "partial",
-        "displayText": "Season listing October 9–November 1. First occurrence starts 7 p.m.; final November 1 occurrence ends 8:30 p.m. CST. Check individual visit times."
+        "displayText": "Selected events October 9–November 1, 2026; check individual times. The final listed ticket time is November 1 at 8:30 p.m. CST; check your ticket for arrival instructions."
       },
       "listingExpiresAt": "2026-11-01T20:30:00-06:00",
       "expiryBasis": "exact",
@@ -546,7 +546,7 @@ export const MISSOURI_2026_ASTRA_ELEVEN_LISTINGS:
       "reviewRevision": "MO2026-astra-eleven-d7348ea-freshness-2026-10-09"
     },
     "seasonalVisitNotes": [
-      "Selected events October 9–November 1; check individual times. First occurrence starts at 7 p.m.; final November 1 event ends at 8:30 p.m.",
+      "Selected events October 9–November 1, 2026; check individual times. The final listed ticket time is November 1 at 8:30 p.m. CST; check your ticket for arrival instructions.",
       "Location is approximate."
     ]
   },

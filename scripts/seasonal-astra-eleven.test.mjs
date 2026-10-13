@@ -1,3 +1,4 @@
+import { occurrencePresentationBefore } from "./test-support/occurrence-amendments.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
@@ -56,7 +57,7 @@ test("accepted field projections and reviewed visitor copy survive the runtime m
     if (i < 9) {
       const source = priorNine[i].projection;
       const presentation = source.consumer_presentation_proposal;
-      assert.deepEqual(seasonalPresentation(row).details, presentation.details);
+      assert.deepEqual(occurrencePresentationBefore(row.seasonalListing.recordId, seasonalPresentation(row)).details, presentation.details);
       assert.equal(row.address, presentation.directions.value);
       assert.deepEqual([row.lat, row.lon], [presentation.placement.latitude, presentation.placement.longitude]);
       assert.equal(row.seasonalListing.expiryBasis, source.lifecycle_for_audit_not_consumer_copy.basis);

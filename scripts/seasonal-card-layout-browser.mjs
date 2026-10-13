@@ -12,6 +12,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { chromium } from "playwright";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 import { assertAdmissionConsumerCopy } from "./test-support/admission-amendments.mjs";
+import { OCCURRENCE_AMENDMENTS, occurrencePresentationAfter, assertOccurrenceConsumerCopy } from "./test-support/occurrence-amendments.mjs";
 import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import { OWNER_EVIDENCE_MATERIAL_FACTS, OWNER_EVIDENCE_CONFIDENCE } from "./test-support/owner-evidence-browser-facts.mjs";
 import { RANKED_HOLDS_MATERIAL_FACTS, RANKED_HOLDS_CONFIDENCE } from "./test-support/ranked-holds-browser-facts.mjs";
@@ -20,6 +21,12 @@ import { NEXT_MISSOURI_MATERIAL_FACTS, NEXT_MISSOURI_CONFIDENCE } from "./test-s
 import { PHASE4_MATERIAL_FACTS, PHASE4_FORBIDDEN_COPY } from "./test-support/phase4-recovery-browser-facts.mjs";
 const baseline = "2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81";
 const proof = assertBrowserBuild();
+const occurrenceBase = "8353e60056fb0568360c5c13878d102880395d9f";
+const occurrenceBaselineSource = execFileSync("git", ["show", `${occurrenceBase}:src/lib/date-night/seasonal-presentation-catalog.ts`], { encoding: "utf8" });
+const occurrenceBaseline = JSON.parse(occurrenceBaselineSource.slice(occurrenceBaselineSource.indexOf(" = {") + 3, occurrenceBaselineSource.lastIndexOf(";")));
+assert.equal(Object.keys(occurrenceBaseline).length, 67);
+const occurrencePresentations = Object.fromEntries(OCCURRENCE_AMENDMENTS.map(({ recordId }) =>
+  [recordId, occurrencePresentationAfter(recordId, occurrenceBaseline[recordId])]));
 const out = "audit/browser-results/seasonal-card-layout";
 fs.mkdirSync(out, { recursive: true });
 const req = createRequire(import.meta.url), pure = appModuleLoader();
@@ -42,6 +49,8 @@ const rows = [
   ...pure("src/lib/date-night/missouri-2026-astra-delta-catalog.ts").MISSOURI_2026_ASTRA_DELTA_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-phase4-recovery-catalog.ts").MISSOURI_2026_PHASE4_RECOVERY_CATALOG,
 ];
+assert.deepEqual(rows.map(row => row.id).sort(), Object.values(occurrenceBaseline).map(row => row.canonicalId).sort(),
+  "Geometry retains all 67 released curated identities exactly once");
 const { HALLOWEEN_THRILL_TYPES } = pure("src/lib/date-night/season.ts");
 const isThrill = row => row.activityTypes.some(type => HALLOWEEN_THRILL_TYPES.includes(type));
 const cssDir = ".vercel/output/static/assets";
@@ -94,7 +103,7 @@ function renderer(old = false) {
 }
 const decorate = row => ({ ...row, cuisineLabel: row.activityTypes.join(" · "), distanceMiles: 2.5, hoursKnown: false, isOpen: false, closingSoon: false });
 const ordinary = row => ({ ...decorate(row), id: "ordinary-layout-control", seasonalListing: undefined, seasonalAvailability: undefined, seasonalVisitNotes: undefined, activityTypes: row.activityTypes, name: row.name });
-const verdict = { passed: false, baseline, proof, comparisons: [], errors: [] };
+const verdict = { passed: false, baseline, proof, occurrenceIdentityBaseline: { commit: occurrenceBase, retainedIds: rows.map(row => row.id).sort() }, comparisons: [], errors: [] };
 let browser;
 try {
   browser = await chromium.launch({ headless: true });
@@ -161,7 +170,14 @@ try {
           await details.locator("summary").press("Enter");
           assert.notEqual(await details.getAttribute("open"), null);
           assert.ok(await details.locator("p").count());
-          assertAdmissionConsumerCopy(row.seasonalListing.recordId, await details.locator("p").allTextContents());
+          const paragraphs = await details.locator("p").allTextContents();
+          assertAdmissionConsumerCopy(row.seasonalListing.recordId, paragraphs);
+          assertOccurrenceConsumerCopy(row.seasonalListing.recordId, paragraphs);
+          if (occurrencePresentations[row.seasonalListing.recordId]) {
+            assert.deepEqual(paragraphs, occurrencePresentations[row.seasonalListing.recordId].details,
+              "Exact independently cleared occurrence Details in every geometry variant");
+            geometry.occurrenceDetails = paragraphs;
+          }
           if (PHASE4_MATERIAL_FACTS[row.seasonalListing.recordId]) {
             const text = await card.innerText();
             assert.match(text, /Approx\./, "Phase 4 never implies precise distance");
@@ -209,7 +225,7 @@ try {
               assert.equal(new URL(await maps.getAttribute("href")).searchParams.get("destination"), row.address);
             }
           }
-          if (isPlan) {
+          if (isPlan || occurrencePresentations[row.seasonalListing.recordId]) {
             const paragraphs = details.locator("p");
             geometry.expandedNotes = [];
             for (let index = 0; index < await paragraphs.count(); index++) {
@@ -225,9 +241,9 @@ try {
                   fontSize: getComputedStyle(el).fontSize, unobscured: Boolean(hit && (el.contains(hit) || hit.contains(el))) };
               });
               geometry.expandedNotes.push(metric);
-              await page.screenshot({ path: `${out}/${row.seasonalListing?.recordId ?? row.id}-${width}-plan-expanded-${index}.png` });
-              assert.ok(metric.scrollWidth <= metric.width + 1, "Expanded plan fact is not clipped horizontally");
-              assert.ok(metric.y >= 0 && metric.bottom <= metric.viewportHeight + 1 && metric.height > 0 && metric.unobscured, "Expanded plan fact is readable after scrolling");
+              await page.screenshot({ path: `${out}/${row.seasonalListing?.recordId ?? row.id}-${width}-${isPlan ? "plan" : kind}-expanded-${index}.png` });
+              assert.ok(metric.scrollWidth <= metric.width + 1, "Expanded material fact is not clipped horizontally");
+              assert.ok(metric.y >= 0 && metric.bottom <= metric.viewportHeight + 1 && metric.height > 0 && metric.unobscured, "Expanded material fact is readable after scrolling");
               assert.ok(parseFloat(metric.fontSize) >= 12, "Expanded material facts retain readable text size");
             }
           }

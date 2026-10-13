@@ -1,3 +1,4 @@
+import { occurrenceCatalogBefore, occurrencePresentationBefore } from "./test-support/occurrence-amendments.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
@@ -19,7 +20,7 @@ const at = new Date("2026-10-16T20:00:00-05:00");
 const pool = (row, places = [row], now = at, filters = {}, preferences = {}, exclusions = [], halloween = true) => eligibleDateNight(
   decorateDateNight(places,row,now),{...DEFAULT_DATE_NIGHT_FILTERS,radiusMiles:1,activityTypes:["anything"],openNowOnly:false,...filters},halloween,preferences,exclusions,now.getTime());
 const ids = ["MO26-002","DELTA2-SHEPHERD-LANTERN","DELTA2-HOLLOWS","MO26-039"];
-const cutoffs = ["2026-10-31T22:00:00-05:00","2026-10-17T22:00:00-05:00","2026-10-30T23:00:00-05:00","2026-11-01T21:00:00-06:00"];
+const cutoffs = ["2026-10-31T22:00:00-05:00","2026-10-17T22:00:00-05:00","2026-10-31T23:00:00-05:00","2026-11-01T21:00:00-06:00"];
 const providerFor = row => ({...row,id:`date-night-osm-node-${rows.indexOf(row)+901100}`,source:"osm",openingHours:"24/7",seasonalAvailability:undefined,seasonalListing:undefined,seasonalVisitNotes:undefined});
 
 test("commercial subset contains exactly independently cleared4 and no unresolved neighboring hold",()=>{
@@ -41,11 +42,11 @@ test("four runtime projections bind exact independently approved fields and norm
     assert.equal(row.address,source.address);
     assert.deepEqual([row.lat,row.lon],[source.lat,source.lon]);
     assert.deepEqual(row.activityTypes,source.activityTypes);
-    assert.deepEqual(row.seasonalAvailability.activeDates,source.valid_dates);
+    assert.deepEqual(occurrenceCatalogBefore(row).seasonalAvailability.activeDates,source.valid_dates);
     assert.equal(row.seasonalListing.listingExpiresAt,cutoffs[i]);
-    assert.equal(row.seasonalListing.listingExpiresAt,source.expires_at);
+    assert.equal(occurrenceCatalogBefore(row).seasonalListing.listingExpiresAt,source.expires_at);
     if(i>=2)assert.equal(row.phone,research[i].fields.phone.value);
-    assert.equal(seasonalPresentation(row).details.join(" "),source.details.replaceAll("\\u2013","–")+" Location is approximate.");
+    assert.equal(occurrencePresentationBefore(row.seasonalListing.recordId, seasonalPresentation(row)).details.join(" "),source.details.replaceAll("\\u2013","–")+" Location is approximate.");
     assert.doesNotMatch(seasonalPresentation(row).details.join(" "),/\\u[0-9a-f]{4}|audit|runtime|recurrence|machine intervals/i);
   }
 });
@@ -113,14 +114,14 @@ test("Aurora last-admission cutoff is not encoded as final-exit time",()=>{
  assert.match(seasonalPresentation(aurora).details.join(" "),/last-admission times; final exit is not specified/);
  assert.equal(aurora.seasonalListing.directionsTarget.address,"20591 County Road 2200, Aurora, MO 65605");
 });
-test("Hollows stays a four-date subset and ignores conflicting generic schema hours",()=>{
- const hollows=rows[2];assert.deepEqual(hollows.seasonalAvailability.activeDates,["2026-10-09","2026-10-10","2026-10-24","2026-10-30"]);
+test("Hollows stays an eight-date explicitly cleared subset and ignores conflicting generic schema hours",()=>{
+ const hollows=rows[2];assert.deepEqual(hollows.seasonalAvailability.activeDates,["2026-10-09","2026-10-10","2026-10-16","2026-10-17","2026-10-23","2026-10-24","2026-10-30","2026-10-31"]);
  assert.match(seasonalPresentation(hollows).details.join(" "),/Confirmed ticket dates/);
  assert.doesNotMatch(hollows.seasonalListing.hours.displayText,/00:30|04:00/);
  const unlisted=decorateDateNight([hollows],hollows,new Date("2026-10-11T21:00:00-05:00"))[0];
  assert.equal(unlisted.availability.status,"closed-now");assert.equal(unlisted.isOpen,false);
  assert.equal(decorateDateNight([hollows],hollows,new Date("2026-10-17T21:00:00-05:00"))[0].availability.status,"schedule-unconfirmed");
- assert.equal(pool(hollows,[hollows],new Date("2026-10-31T12:00:00-05:00")).length,0);
+ assert.equal(pool(hollows,[hollows],new Date("2026-10-31T12:00:00-05:00")).length,1);
 });
 test("Feemster retains East-address placement, no pumpkin claim, last tickets and DST expiry",()=>{
  const feemster=rows[3];assert.deepEqual(feemster.activityTypes,["corn-maze"]);

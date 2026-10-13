@@ -1,3 +1,4 @@
+import { occurrencePresentationAfter } from "./occurrence-amendments.mjs";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
@@ -28,7 +29,7 @@ for (const amendment of ADMISSION_AMENDMENTS) {
  * link. A changed prior value, confidence, ID or unapproved extra detail fails. */
 export function admissionPresentationAfter(recordId, before) {
   const amendment = ADMISSION_AMENDMENTS.find(row => row.recordId === recordId);
-  if (!amendment) return before;
+  if (!amendment) return occurrencePresentationAfter(recordId, before);
   assert.deepEqual(before, amendment.before, `${recordId}: admission amendment starts at the exact frozen presentation`);
   return structuredClone(amendment.after);
 }

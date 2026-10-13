@@ -1,0 +1,165 @@
+{
+  "revision": "R1",
+  "baseCommit": "8353e60056fb0568360c5c13878d102880395d9f",
+  "projections": [
+    {
+      "recordId": "DELTA2-HOLLOWS",
+      "canonicalId": "date-night-mo26-astra-haunted-hollows",
+      "status": "PROPOSED, REQUIRES INDEPENDENT REVIEW AND SEPARATE IMPLEMENTATION AUTHORIZATION",
+      "catalogFields": [
+        {
+          "path": "seasonalAvailability.activeDates",
+          "before": [
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-24",
+            "2026-10-30"
+          ],
+          "after": [
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ]
+        },
+        {
+          "path": "seasonalAvailability.activeUntil",
+          "before": "2026-10-30",
+          "after": "2026-10-31"
+        },
+        {
+          "path": "seasonalAvailability.listingExpiresAt",
+          "before": "2026-10-30T23:00:00-05:00",
+          "after": "2026-10-31T23:00:00-05:00"
+        },
+        {
+          "path": "seasonalAvailability.endsAt",
+          "before": "2026-10-30T23:00:00-05:00",
+          "after": "2026-10-31T23:00:00-05:00"
+        },
+        {
+          "path": "seasonalListing.listingExpiresAt",
+          "before": "2026-10-30T23:00:00-05:00",
+          "after": "2026-10-31T23:00:00-05:00"
+        },
+        {
+          "path": "seasonalListing.hours.displayText",
+          "before": "October 10, 24 and 30 sessions: 7:30\u201311 p.m.; October 9 starts at 7:30 p.m.",
+          "after": "October 10, 16\u201317, 23\u201324 and 30\u201331 sessions: 7:30\u201311 p.m.; October 9 starts at 7:30 p.m."
+        },
+        {
+          "path": "seasonalAvailability.sourceUrls",
+          "before": [
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season",
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852662",
+            "https://app.hauntpay.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852666",
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852667"
+          ],
+          "after": [
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season",
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852662",
+            "https://app.hauntpay.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852666",
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852667",
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times",
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852668"
+          ]
+        },
+        {
+          "path": "seasonalListing.sourceUrls",
+          "before": [
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season",
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852662",
+            "https://app.hauntpay.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852666",
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852667"
+          ],
+          "after": [
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season",
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852662",
+            "https://app.hauntpay.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852666",
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852667",
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times",
+            "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852668"
+          ]
+        },
+        {
+          "path": "seasonalVisitNotes",
+          "before": [
+            "Confirmed ticket dates: October 9, 10, 24 and 30, 2026.",
+            "October 10, 24 and 30 sessions run 7:30\u201311 p.m.; October 9 starts at 7:30 p.m.",
+            "Check the booking calendar for other dates and current availability.",
+            "Tickets are nonrefundable unless the organizer cancels.",
+            "Location is approximate."
+          ],
+          "after": [
+            "Confirmed ticket dates: October 9\u201310, 16\u201317, 23\u201324 and 30\u201331, 2026.",
+            "October 10, 16\u201317, 23\u201324 and 30\u201331 sessions run 7:30\u201311 p.m.; October 9 starts at 7:30 p.m.",
+            "Check the booking calendar for other dates and current availability.",
+            "Tickets are nonrefundable unless the organizer cancels.",
+            "Location is approximate."
+          ]
+        }
+      ],
+      "evidence": [
+        "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times",
+        "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852668"
+      ],
+      "presentationFields": [
+        {
+          "path": "SEASONAL_PRESENTATIONS.DELTA2-HOLLOWS.details",
+          "before": [
+            "Confirmed ticket dates: October 9, 10, 24 and 30, 2026.",
+            "October 10, 24 and 30 sessions run 7:30\u201311 p.m.; October 9 starts at 7:30 p.m.",
+            "Check the booking calendar for other dates and current availability.",
+            "Tickets are nonrefundable unless the organizer cancels.",
+            "Location is approximate."
+          ],
+          "after": [
+            "Confirmed ticket dates: October 9\u201310, 16\u201317, 23\u201324 and 30\u201331, 2026.",
+            "October 10, 16\u201317, 23\u201324 and 30\u201331 sessions run 7:30\u201311 p.m.; October 9 starts at 7:30 p.m.",
+            "Check the booking calendar for other dates and current availability.",
+            "Tickets are nonrefundable unless the organizer cancels.",
+            "Location is approximate."
+          ]
+        }
+      ]
+    },
+    {
+      "recordId": "DELTA2-MISSOURI-NIGHTMARE",
+      "canonicalId": "date-night-mo26-astra-missouri-nightmare",
+      "status": "PROPOSED, REQUIRES INDEPENDENT REVIEW AND SEPARATE IMPLEMENTATION AUTHORIZATION",
+      "catalogFields": [
+        {
+          "path": "seasonalListing.hours.displayText",
+          "before": "Season listing October 9\u2013November 1. First occurrence starts 7 p.m.; final November 1 occurrence ends 8:30 p.m. CST. Check individual visit times.",
+          "after": "Selected events October 9\u2013November 1, 2026; check individual times. The final listed ticket time is November 1 at 8:30 p.m. CST; check your ticket for arrival instructions."
+        },
+        {
+          "path": "seasonalVisitNotes.0",
+          "before": "Selected events October 9\u2013November 1; check individual times. First occurrence starts at 7 p.m.; final November 1 event ends at 8:30 p.m.",
+          "after": "Selected events October 9\u2013November 1, 2026; check individual times. The final listed ticket time is November 1 at 8:30 p.m. CST; check your ticket for arrival instructions."
+        }
+      ],
+      "evidence": [
+        "https://app2.hauntpay.com/events/missouri-nightmare-haunted-attraction-2026/event_times/1815980?gift="
+      ],
+      "presentationFields": [
+        {
+          "path": "SEASONAL_PRESENTATIONS.DELTA2-MISSOURI-NIGHTMARE.details.0",
+          "before": "Selected events October 9\u2013November 1; check individual times. First occurrence starts at 7 p.m.; final November 1 event ends at 8:30 p.m.",
+          "after": "Selected events October 9\u2013November 1, 2026; check individual times. The final listed ticket time is November 1 at 8:30 p.m. CST; check your ticket for arrival instructions."
+        }
+      ],
+      "unchangedLifecycle": {
+        "activeFrom": "2026-10-09",
+        "activeUntil": "2026-11-01",
+        "listingExpiresAt": "2026-11-01T20:30:00-06:00",
+        "endsAt": "2026-11-01T20:30:00-06:00"
+      }
+    }
+  ],
+  "noOtherChanges": true
+}

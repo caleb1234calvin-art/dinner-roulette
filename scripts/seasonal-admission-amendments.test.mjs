@@ -1,3 +1,4 @@
+import { occurrenceSourceBefore, occurrenceCatalogBefore } from "./test-support/occurrence-amendments.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync, readdirSync } from "node:fs";
@@ -47,8 +48,8 @@ test("admission-only change preserves all 63 catalog bytes, objects, identities 
   assert.equal(manifest.source, ADMISSION_ACCEPTED.baseSha);
   assert.equal(manifest.tree, ADMISSION_ACCEPTED.baseTree);
   assert.deepEqual(files, Object.keys(manifest.files).sort(), "No new, removed or unreviewed catalog file");
-  for (const [file, sha] of Object.entries(manifest.files)) assert.equal(hash(readFileSync(file)), sha, file);
-  assert.deepEqual(serializedRows(rows), serializedRows(releasedPlaces));
+  for (const [file, sha] of Object.entries(manifest.files)) assert.equal(hash(occurrenceSourceBefore(file)), sha, file);
+  assert.deepEqual(serializedRows(rows.map(occurrenceCatalogBefore)), serializedRows(releasedPlaces));
   assertRegistryParity(rows, SEASONAL_PRESENTATIONS);
   for (const row of rows) assert.equal(getCuratedSeasonalPlace(row.id), row);
 });

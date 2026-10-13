@@ -4,7 +4,7 @@ import { seasonalListingToPlace, type SeasonalListing } from "./listing";
 /** Four independent commercial re-clearances bound at continuity 4f17f523.
  * Field provenance and exact approved visitor copy: audit/astra-commercial-2026-10-09/.
  * Null machine hours and address Directions preserve conservative navigation/status.
- * Aurora expires at last admission; Hollows includes only four supported ticket dates.
+ * Aurora expires at last admission; Hollows includes only explicitly supported ticket dates.
  */
 export const MISSOURI_2026_ASTRA_COMMERCIAL_LISTINGS:
   (Omit<DateNightPlace, "lat" | "lon"> & { seasonalListing: SeasonalListing })[] = [
@@ -211,26 +211,32 @@ export const MISSOURI_2026_ASTRA_COMMERCIAL_LISTINGS:
     "seasonalAvailability": {
       "status": "confirmed",
       "activeFrom": "2026-10-09",
-      "activeUntil": "2026-10-30",
+      "activeUntil": "2026-10-31",
       "activeDates": [
         "2026-10-09",
         "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
         "2026-10-24",
-        "2026-10-30"
+        "2026-10-30",
+        "2026-10-31"
       ],
       "checkedAt": "2026-10-09",
       "revalidateAfter": "2026-10-15",
       "timeZone": "America/Chicago",
       "openNowPolicy": "never",
-      "listingExpiresAt": "2026-10-30T23:00:00-05:00",
+      "listingExpiresAt": "2026-10-31T23:00:00-05:00",
       "seasonYear": 2026,
       "sourceUrls": [
         "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season",
         "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852662",
         "https://app.hauntpay.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852666",
-        "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852667"
+        "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852667",
+        "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times",
+        "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852668"
       ],
-      "endsAt": "2026-10-30T23:00:00-05:00"
+      "endsAt": "2026-10-31T23:00:00-05:00"
     },
     "seasonalListing": {
       "contract": "ListingCompletenessV1",
@@ -252,21 +258,23 @@ export const MISSOURI_2026_ASTRA_COMMERCIAL_LISTINGS:
       },
       "hours": {
         "state": "partial",
-        "displayText": "October 10, 24 and 30 sessions: 7:30–11 p.m.; October 9 starts at 7:30 p.m."
+        "displayText": "October 10, 16–17, 23–24 and 30–31 sessions: 7:30–11 p.m.; October 9 starts at 7:30 p.m."
       },
-      "listingExpiresAt": "2026-10-30T23:00:00-05:00",
+      "listingExpiresAt": "2026-10-31T23:00:00-05:00",
       "expiryBasis": "exact",
       "sourceUrls": [
         "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season",
         "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852662",
         "https://app.hauntpay.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852666",
-        "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852667"
+        "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852667",
+        "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times",
+        "https://app.gopassage.com/events/haunted-hollows-haunted-trail-2026-season/event_times/1852668"
       ],
       "reviewRevision": "MO2026-astra-commercial-independent-2026-10-09"
     },
     "seasonalVisitNotes": [
-      "Confirmed ticket dates: October 9, 10, 24 and 30, 2026.",
-      "October 10, 24 and 30 sessions run 7:30–11 p.m.; October 9 starts at 7:30 p.m.",
+      "Confirmed ticket dates: October 9–10, 16–17, 23–24 and 30–31, 2026.",
+      "October 10, 16–17, 23–24 and 30–31 sessions run 7:30–11 p.m.; October 9 starts at 7:30 p.m.",
       "Check the booking calendar for other dates and current availability.",
       "Tickets are nonrefundable unless the organizer cancels.",
       "Location is approximate."

@@ -1,3 +1,4 @@
+import { occurrenceSourceBefore } from "./test-support/occurrence-amendments.mjs";
 import { OWNER_EVIDENCE_MATERIAL_FACTS } from "./test-support/owner-evidence-browser-facts.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
@@ -43,7 +44,7 @@ test("exact independently accepted one addition and two presentation amendments 
   assert.deepEqual(rows.map(row => row.seasonalListing.recordId), ["DELTA3-GOBLIN", "MO26-085", "MO26-124"]);
   assert.equal(additions.length, 1); assert.equal(previousRows.length, 59);
   assert.equal(new Set([...previousRows, ...additions].map(row => row.id)).size, 60);
-  for (const [path, hash] of Object.entries(baseline.files)) assert.equal(createHash("sha256").update(readFileSync(path)).digest("hex"), hash, `Every released catalog byte remains intact: ${path}`);
+  for (const [path, hash] of Object.entries(baseline.files)) assert.equal(createHash("sha256").update(occurrenceSourceBefore(path)).digest("hex"), hash, `Every released catalog byte remains intact: ${path}`);
   for (const row of [...previousRows, ...additions]) assert.equal(getCuratedSeasonalPlace(row.id), row);
   assert.equal(Object.keys(baseline.presentations).length, 59);
   assert.equal(Object.keys(SEASONAL_PRESENTATIONS).filter(id => !Object.hasOwn(OWNER_EVIDENCE_MATERIAL_FACTS, id)).length, 60 + cleanupAdditions.length + 1, "Only the cleanup additions and the single reviewed Fear Factory extend this registry");

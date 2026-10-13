@@ -229,8 +229,8 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "canonicalId": "date-night-mo26-astra-haunted-hollows",
     "confidence": "limited",
     "details": [
-      "Confirmed ticket dates: October 9, 10, 24 and 30, 2026.",
-      "October 10, 24 and 30 sessions run 7:30–11 p.m.; October 9 starts at 7:30 p.m.",
+      "Confirmed ticket dates: October 9–10, 16–17, 23–24 and 30–31, 2026.",
+      "October 10, 16–17, 23–24 and 30–31 sessions run 7:30–11 p.m.; October 9 starts at 7:30 p.m.",
       "Check the booking calendar for other dates and current availability.",
       "Tickets are nonrefundable unless the organizer cancels.",
       "Location is approximate."
@@ -307,7 +307,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "canonicalId": "date-night-mo26-astra-missouri-nightmare",
     "confidence": "limited",
     "details": [
-      "Selected events October 9–November 1; check individual times. First occurrence starts at 7 p.m.; final November 1 event ends at 8:30 p.m.",
+      "Selected events October 9–November 1, 2026; check individual times. The final listed ticket time is November 1 at 8:30 p.m. CST; check your ticket for arrival instructions.",
       "Location is approximate."
     ]
   },

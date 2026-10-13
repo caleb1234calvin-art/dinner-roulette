@@ -1,13 +1,14 @@
 import assert from "node:assert/strict";
-import { spawn } from "node:child_process";
+import { execFileSync, spawn } from "node:child_process";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { setTimeout as delay } from "node:timers/promises";
 import { chromium } from "playwright";
-import { fromCrossJSON } from "seroval";
+import { fromCrossJSON, toCrossJSON } from "seroval";
 import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 import { ADMISSION_AMENDMENTS, assertAdmissionConsumerCopy } from "./test-support/admission-amendments.mjs";
+import { OCCURRENCE_AMENDMENTS, occurrenceCatalogBefore, occurrencePresentationAfter, assertOccurrenceConsumerCopy } from "./test-support/occurrence-amendments.mjs";
 import { createHash } from "node:crypto";
 import { OWNER_EVIDENCE_PROJECTION_SHA256, OWNER_EVIDENCE_MATERIAL_FACTS, OWNER_EVIDENCE_CONFIDENCE } from "./test-support/owner-evidence-browser-facts.mjs";
 import { RANKED_HOLDS_PROJECTION_SHA256, RANKED_HOLDS_MATERIAL_FACTS, RANKED_HOLDS_CONFIDENCE } from "./test-support/ranked-holds-browser-facts.mjs";
@@ -46,6 +47,14 @@ server.stdout.on("data", d => { logs += d; });
 server.stderr.on("data", d => { logs += d; });
 const verdict = { passed: false, proof, publicProviderCalls: 0, scenarios: [], errors: [] };
 const load = appModuleLoader();
+// Read the immutable released registry, rather than deriving expected copy or
+// identity membership from this candidate's mutable application modules.
+const occurrenceBase = "8353e60056fb0568360c5c13878d102880395d9f";
+const occurrenceBaselineSource = execFileSync("git", ["show", `${occurrenceBase}:src/lib/date-night/seasonal-presentation-catalog.ts`], { encoding: "utf8" });
+const occurrenceBaseline = JSON.parse(occurrenceBaselineSource.slice(occurrenceBaselineSource.indexOf(" = {") + 3, occurrenceBaselineSource.lastIndexOf(";")));
+assert.equal(Object.keys(occurrenceBaseline).length, 67);
+const occurrencePresentations = Object.fromEntries(OCCURRENCE_AMENDMENTS.map(({ recordId }) =>
+  [recordId, occurrencePresentationAfter(recordId, occurrenceBaseline[recordId])]));
 const { MISSOURI_2026_V1_NEXT_SEASONAL_CATALOG: priorTen } = load("src/lib/date-night/missouri-2026-v1-next-catalog.ts");
 const addedRows = [
   ...load("src/lib/date-night/missouri-2026-deferred-batch-3-catalog.ts").MISSOURI_2026_DEFERRED_BATCH_3_CATALOG,
@@ -182,22 +191,26 @@ async function inspectQualifiedOverlay(test, row, kind) {
   assert.equal(await section.locator(":scope > p").count(), 1, "Exactly one compact notice");
   assert.equal(await section.locator(":scope > p").innerText(), SEASONAL_VISITOR_NOTICE);
   const presentation = seasonalPresentation(row);
-  assert.ok(materialFacts[row.seasonalListing.recordId], "Each new row has an independent visitor-fact checklist");
+  const facts = materialFacts[row.seasonalListing.recordId] ?? occurrenceFacts[row.seasonalListing.recordId];
+  const expectedDetails = occurrencePresentations[row.seasonalListing.recordId]?.details ?? presentation.details;
+  assert.ok(facts, "Each inspected row has an independent visitor-fact checklist");
   assert.equal(await section.locator("[data-seasonal-confidence]").innerText(), SEASONAL_CONFIDENCE_LABELS[presentation.confidence]);
   assert.ok(presentation.details.length > 0, "Reviewed consumer details are required");
   const details = section.locator("details");
   assert.equal(await details.getAttribute("open"), null, "Details initially collapsed");
   await details.locator("summary").click();
   const notes = details.locator("p");
-  assertAdmissionConsumerCopy(row.seasonalListing.recordId, await details.innerText());
-  assert.equal(await notes.count(), presentation.details.length, `${kind}: every concise consumer fact is present`);
+  const paragraphs = await notes.allTextContents();
+  assertAdmissionConsumerCopy(row.seasonalListing.recordId, paragraphs);
+  assertOccurrenceConsumerCopy(row.seasonalListing.recordId, paragraphs);
+  assert.deepEqual(paragraphs, expectedDetails, `${kind}: every exact reviewed consumer fact is present`);
   await assertConsumerOnly(scope, row);
-  for (const fact of materialFacts[row.seasonalListing.recordId]) assert.match(await details.innerText(), fact, `${kind}: retained material visitor fact ${fact}`);
+  for (const fact of facts) assert.match(await details.innerText(), fact, `${kind}: retained material visitor fact ${fact}`);
 
   const reachability = { overlay: kind, notes: [], controls: [] };
   result.evidence.overlayReachability ??= [];
   result.evidence.overlayReachability.push(reachability);
-  for (const [index, expected] of presentation.details.entries()) {
+  for (const [index, expected] of expectedDetails.entries()) {
     const note = notes.nth(index);
     assert.equal(await note.innerText(), expected);
     await note.scrollIntoViewIfNeeded({ timeout: 5000 });
@@ -275,6 +288,26 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
           heldRpc.status = response.status();
           await rpcDelivery;
           return route.fulfill({ response });
+        }
+        if (overrides.negativeLifecycle && route.request().method() === "POST" && new URL(route.request().url()).pathname.startsWith("/_serverFn/") && route.request().postData()?.includes("patchId")) {
+          // A narrow response fixture adds only negative lifecycle evidence to
+          // the real built RPC. Catalog rehydration must not erase that veto.
+          const response = await route.fetch();
+          assert.equal(response.status(), 200);
+          const decoded = fromCrossJSON(JSON.parse(await response.text()), { refs: new Map() });
+          // Empty/radial patches and unrelated server results retain their exact
+          // response bytes; only an actual target-bearing venue patch is altered.
+          const target = Array.isArray(decoded?.result?.venues) ? decoded.result.venues.find(venue => venue.id === row.id) : undefined;
+          if (!target) return route.fulfill({ response });
+          assert.ok(["permanently-closed", "disused"].includes(overrides.negativeLifecycle));
+          assert.equal(target.lifecycle, undefined);
+          const before = structuredClone(target);
+          target.lifecycle = overrides.negativeLifecycle;
+          assert.deepEqual(target, { ...before, lifecycle: overrides.negativeLifecycle });
+          result.evidence.negativeLifecycleFixtures ??= [];
+          result.evidence.negativeLifecycleFixtures.push({ canonicalId: row.id, lifecycle: target.lifecycle,
+            source: "Actual built RPC with only a synthetic negative lifecycle field" });
+          return route.fulfill({ response, body: JSON.stringify(toCrossJSON(decoded)) });
         }
         return route.continue();
       }
@@ -404,7 +437,7 @@ const astraFacts = {
   "DELTA3-RANCH": [/Three haunted experiences/, /haunted corn maze/, /October 31 event ends at 11 p\.m\./],
   "DELTA3-COBB": [/September 25–November 1/, /November 6–7: 7–11 p\.m\./, /Sundays.*7–10 p\.m\./, /Tickets are purchased on site/, /Haunt directories report ages 10\+/, /Confirm restrictions with the venue/],
   "MO26-037": [/September 18–November 1, 7 p\.m\.–midnight/, /Children must have an adult/, /closed-toe shoes/, /medical-sensitivity warning/, /no wheelchair access or carried babies\/infants/, /confirm access restrictions/, /gate availability is not guaranteed/, /three hours/, /share one location/],
-  "DELTA2-MISSOURI-NIGHTMARE": [/October 9–November 1/, /First occurrence starts at 7 p\.m\./, /November 1 event ends at 8:30 p\.m\./],
+  "DELTA2-MISSOURI-NIGHTMARE": [/October 9–November 1, 2026/, /final listed ticket time is November 1 at 8:30 p\.m\. CST/, /check your ticket for arrival instructions/],
   "DELTA2-TREPIDATIONS": [/October 2–3, 9–10, 16–17, 23–24 and 30–31/, /No-scare nights October 22 and 29/, /November 1 Blackout: 7–11 p\.m\./, /medical, pregnancy and claustrophobia/, /casts, braces, crutches/, /medication\/drug use/, /Shoes required/, /no high heels/, /Remove jewelry\/earrings/],
   "DELTA3-FREAKS": [/October 23–24 and 30–31, 7–10:30 p\.m\./, /one entry on the selected night/],
   "DELTA4-HELL-HARVEST": [/October 31/, /8 p\.m\./, /Closing time unconfirmed/, /October 11 is chicken night/, /terrain is not accessible/, /casts, braces, crutches/, /medication\/drug use/, /No pets, weapons, alcohol, drugs, cigarettes or costumes/, /no video or flash photography/],
@@ -419,7 +452,7 @@ const astraConfidence = {
 const extraFacts = {
   "MO26-002": [/September 19–October 31/, /Wednesdays from October 7: 5–8:30 p\.m\./, /Fridays 5–10 p\.m\./, /Saturdays 4–10 p\.m\./, /last-admission times/, /final exit is not specified/, /Zombie Harvest runs Friday\/Saturday at dusk/, /Confirm the visitor entrance/],
   "DELTA2-SHEPHERD-LANTERN": [/October 16–17/, /check your ticket for arrival time/i, /Parental guidance/, /online and at the door/, /refunds.*seven days/i, /Confirm arrival instructions/],
-  "DELTA2-HOLLOWS": [/Confirmed ticket dates: October 9, 10, 24 and 30/, /October 10, 24 and 30 sessions run 7:30–11 p\.m\./, /October 9 starts at 7:30 p\.m\./, /other dates and current availability/, /nonrefundable unless the organizer cancels/],
+  "DELTA2-HOLLOWS": [/Confirmed ticket dates: October 9–10, 16–17, 23–24 and 30–31, 2026/, /October 10, 16–17, 23–24 and 30–31 sessions run 7:30–11 p\.m\./, /October 9 starts at 7:30 p\.m\./, /other dates and current availability/, /nonrefundable unless the organizer cancels/],
   "MO26-039": [/September 26–27/, /November 1 is 1–9 p\.m\./, /Last tickets.*one hour before closing/, /Hayrides and the apple cannon stop at sunset/, /Height and supervision rules/, /no-animal rule includes service animals/, /contact it about access arrangements/, /Facebook page for weather updates/],
   "DELTA6-WORLDS-OF-FUN": [/selected October nights through October 31/, /valid park admission or an eligible season pass/, /Guests 17 and younger need a chaperone age 21 or older/, /no more than five minors per chaperone/, /No re-entry after 6 p\.m\./, /ID, bag and costume rules/],
   "DELTA2-OZARK": [/Viscount’s Manor/, /September 25–26 and October 2–3, 9–10, 16–17, 23–24 and 30–31/, /Check the operator for nightly hours and admission/],
@@ -429,6 +462,10 @@ const extraFacts = {
 };
 const extraConfidence = { "MO26-002": "limited", "DELTA2-SHEPHERD-LANTERN": "limited", "DELTA2-HOLLOWS": "limited", "MO26-039": "limited",
   "DELTA6-WORLDS-OF-FUN": "limited", "DELTA2-OZARK": "limited", "DELTA3-BALLWIN": "limited", "DELTA6-OFALLON": "limited", "DELTA3-GROTTO": "limited" };
+const occurrenceFacts = {
+  "DELTA2-HOLLOWS": extraFacts["DELTA2-HOLLOWS"],
+  "DELTA2-MISSOURI-NIGHTMARE": astraFacts["DELTA2-MISSOURI-NIGHTMARE"],
+};
 const materialFacts = rankedHolds ? rankedLaneFacts : holdCleanup ? HOLD_CLEANUP_MATERIAL_FACTS : nextMissouri ? NEXT_MISSOURI_MATERIAL_FACTS : phase4 ? PHASE4_MATERIAL_FACTS : extras ? extraFacts : astra ? astraFacts : cumulative ? newFacts : priorFacts;
 const newConfidence = { "MO26-036": "good", "MO26-058": "high", "MO26-069": "high", "MO26-071": "high", "MO26-118": "good", "MO26-012": "good", "MO26-028": "good", "MO26-074": "good", "MO26-084": "good", "MO26-085": "good", "DELTA-EDGE-2026": "high", "DELTA-CREEPYWORLD-2026": "good", "DELTA-DARKNESS-2026": "good", "DELTA-HAUNTED-RIVER-2026": "high", "DELTA-FEAR-BLOODY-TIMBER-2026": "high" };
 const oldRows = [
@@ -439,7 +476,13 @@ const ordinaryRows = load("src/lib/date-night/jasper-county-catalog.ts").JASPER_
 const anchors = load("src/lib/date-night/seasonal-catalog.ts").JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG;
 const previousRows = [...oldRows, ...priorTen, ...addedRows];
 const previousReceipts = JSON.parse(await readFile("scripts/test-support/missouri-previous32-receipts.json", "utf8"));
-const catalog = [...ordinaryRows, ...anchors, ...previousRows, ...astraRows, ...extraRows, ...phase4Rows, ...nextMissouriRows, ...cleanupRows, ...rankedRows, ...ownerRows];
+const curatedRows = [...previousRows, ...astraRows, ...extraRows, ...phase4Rows, ...nextMissouriRows, ...cleanupRows, ...rankedRows, ...ownerRows];
+const catalog = [...ordinaryRows, ...anchors, ...curatedRows];
+const occurrenceRows = OCCURRENCE_AMENDMENTS.map(amendment => {
+  const row = curatedRows.find(candidate => candidate.id === amendment.canonicalId);
+  assert.ok(row, "Every occurrence amendment retains its released canonical identity");
+  return row;
+});
 const { haversineMiles } = load("src/lib/restaurants/geo.ts");
 const { getOpenStatus } = load("src/lib/restaurants/hours.ts");
 const { getDateNightAvailability } = load("src/lib/date-night/availability.ts");
@@ -547,6 +590,13 @@ try {
   assert.deepEqual(rows.map(row => row.seasonalListing.recordId).sort(), Object.keys(materialFacts).sort(), "Exactly the independently cleared selected batch");
   assert.equal(new Set(rows.map(row => row.id)).size, rankedHolds ? rankedAccepted.newRecords.length + ownerAccepted.newRecords.length : holdCleanup ? cleanupAccepted.newRecords.length : nextMissouri ? 3 : phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
   assert.equal(previousRows.length, 32, "All previously shipped curated identities remain regression controls");
+  assert.deepEqual(curatedRows.map(row => row.id).sort(), Object.values(occurrenceBaseline).map(row => row.canonicalId).sort(),
+    "All 67 released curated identities remain present exactly once");
+  for (const row of occurrenceRows) {
+    assert.deepEqual(seasonalPresentation(row), occurrencePresentations[row.seasonalListing.recordId], "Only the exact cleared occurrence presentation changes");
+    assertOccurrenceConsumerCopy(row.seasonalListing.recordId, seasonalPresentation(row).details);
+  }
+  verdict.occurrenceIdentityBaseline = { commit: occurrenceBase, retainedIds: curatedRows.map(row => row.id).sort() };
   assert.equal(new Set(catalog.map(row => row.id)).size, catalog.length, "Amended Werehouse remains one canonical identity across every invocation");
   assert.equal(anchors.some(row => row.id === "date-night-werehouse-joplin"), false, "Legacy weekly-hours Werehouse anchor is superseded");
   assert.equal(phase4Accepted.sourceSha256, "827eb67919c99dec61991cbc01cba63097ccd5dd1868de355b5f79b07d348882");
@@ -1002,6 +1052,155 @@ try {
       }, { holdInitialRpc: true, at: new Date(Date.parse(expiresAt) - 1).toISOString() });
     }
   }
+  if (extras) {
+    // Keep the hosted Extras invocation responsible for this bounded amendment
+    // evidence, including Nightmare whose full historical suite remains Astra.
+    const oldRevisions = {
+      "DELTA2-HOLLOWS": "MO2026-astra-commercial-independent-2026-10-09",
+      "DELTA2-MISSOURI-NIGHTMARE": "MO2026-astra-eleven-d7348ea-freshness-2026-10-09",
+    };
+    for (const [index, row] of occurrenceRows.entries()) {
+      const recordId = row.seasonalListing.recordId, old = occurrenceCatalogBefore(row);
+      assert.equal(old.seasonalListing.reviewRevision, oldRevisions[recordId]);
+      assert.equal(row.seasonalListing.reviewRevision, oldRevisions[recordId], "Copy/schedule amendment does not invalidate affirmed identity receipts");
+      for (const savedKind of ["canonical", "provider-receipt"]) {
+        const providerId = `date-night-osm-node-${940001 + index}`;
+        const savedId = savedKind === "canonical" ? row.id : providerId;
+        const at = recordId === "DELTA2-HOLLOWS" ? "2026-10-30T23:00:00.001-05:00" : "2026-11-01T20:29:00-06:00";
+        const saved = preference(old, savedId, { favorite: true, ourRating: 4, timesVisited: 2,
+          seasonalListing: old.seasonalListing, seasonalAvailability: old.seasonalAvailability, seasonalVisitNotes: old.seasonalVisitNotes });
+        const receipt = { canonicalId: row.id, canonicalName: old.name, reviewRevision: oldRevisions[recordId] };
+        await runScenario(row, `occurrence-${index}`, `stale-${savedKind}-copy-reload`, async test => {
+          const { page, result } = test;
+          await inspectSaved(test, row, `occurrence-${savedKind}-saved`);
+          assert.doesNotMatch(await savedItem(page, row).innerText(), /Season ended/, "Old Hollows expiry cannot end the amended saved identity");
+          await page.reload({ waitUntil: "domcontentloaded" });
+          await inspectSaved(test, row, `occurrence-${savedKind}-saved-reload`);
+          assert.doesNotMatch(await savedItem(page, row).innerText(), /Season ended/);
+          await assertNoRpc(test, 0, "Saved old copy resolves the reviewed amendment after reload without discovery");
+          let state = await stored(page);
+          assert.deepEqual(state.preferences[savedId], saved, "Hydration preserves the user's saved snapshot, rating and visit history");
+          if (savedKind === "provider-receipt") {
+            const receipts = await page.evaluate(() => JSON.parse(localStorage.getItem("pick-for-us-seasonal-identity-v1")));
+            assert.deepEqual(receipts[providerId], receipt, "The literal pre-amendment provider receipt remains valid after reload");
+          }
+          await visitNav(page, "Pick", "/"); await ready(page); await activityCount(page, 1);
+          await optionsButton(page).click(); await rowHeading(page, row).waitFor();
+          await inspectQualifiedOverlay(test, row, "options");
+          await selectTarget(page, row); await inspectQualifiedOverlay(test, row, "result");
+          assert.equal(await page.getByRole("button", { name: "Saved", exact: true }).count(), 1);
+          await closeResult(page);
+          state = await stored(page);
+          assert.deepEqual(state.preferences[savedId], saved, "Viewing current Details does not rewrite historical personal data");
+          await visitNav(page, "Favorites", "/favorites");
+          const before = test.rpc.length;
+          await advance(test, row.seasonalListing.listingExpiresAt);
+          await page.reload({ waitUntil: "domcontentloaded" });
+          await inspectSaved(test, row, `occurrence-${savedKind}-new-cutoff`, true);
+          await assertNoRpc(test, before, "New cutoff ends saved history without discovery");
+          await advance(test, "2027-10-17T02:00:00Z");
+          await page.reload({ waitUntil: "domcontentloaded" });
+          await inspectSaved(test, row, `occurrence-${savedKind}-2027`, true);
+          await assertNoRpc(test, before, "A saved amended identity cannot roll forward to 2027");
+          await visitNav(page, "Pick", "/"); await ready(page); await activityCount(page, 0);
+          assert.equal(await pickButton(page).isDisabled(), true);
+          result.evidence.occurrenceSaved = { canonicalId: row.id, savedId, oldReviewRevision: oldRevisions[recordId],
+            oldCutoff: old.seasonalListing.listingExpiresAt, currentCutoff: row.seasonalListing.listingExpiresAt,
+            inspectedDetails: occurrencePresentations[recordId].details, receipt: savedKind === "provider-receipt" ? receipt : null };
+        }, { at, pathname: "/favorites", filters: { favoritesOnly: true }, preferences: { [savedId]: saved },
+          ...(savedKind === "provider-receipt" ? { identityReceipts: { [providerId]: receipt } } : {}) });
+      }
+      for (const lifecycle of ["permanently-closed", "disused"]) {
+        await runScenario(row, `occurrence-${index}`, `negative-lifecycle-${lifecycle}`, async test => {
+          const { page, result } = test;
+          await activityCount(page, 0); await settleLocal(test);
+          assert.equal(test.rpc.length, 1);
+          assert.ok(result.evidence.negativeLifecycleFixtures?.some(fixture => fixture.canonicalId === row.id && fixture.lifecycle === lifecycle),
+            "At least one actual target-bearing response received the exact negative lifecycle fixture");
+          const decoded = fromCrossJSON(JSON.parse(test.rpc[0].response), { refs: new Map() });
+          assert.equal(decoded.result.venues.find(venue => venue.id === row.id).lifecycle, lifecycle,
+            "The negative lifecycle evidence actually reached the application");
+          assert.equal(await pickButton(page).isDisabled(), true);
+          assert.equal(await optionsButton(page).isDisabled(), true);
+          await press(categoryButton(page, row)); await activityCount(page, 0);
+          await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, 0);
+          await advance(test, new Date(Date.parse(defaultAt) + 60000).toISOString()); await activityCount(page, 0);
+          await press(page.getByRole("switch", { name: "Favorites only", exact: true }), "Space");
+          await activityCount(page, nearby(row).length);
+          await optionsButton(page).click();
+          await page.getByRole("button", { name: "Close options", exact: true }).waitFor();
+          assert.equal(await rowHeading(page, row).count(), 0, "Current occurrence metadata cannot erase a negative lifecycle veto");
+          await closeOptions(page);
+          await assertNoRpc(test, 1, "Negative lifecycle survives category, favorites and clock re-evaluation locally");
+          result.evidence.negativeLifecycle = { canonicalId: row.id, lifecycle, favoriteCouldNotRevive: true };
+        }, { fixture: "mixed", negativeLifecycle: lifecycle, filters: { favoritesOnly: true },
+          preferences: { [row.id]: preference(row, row.id, { favorite: true }) } });
+      }
+    }
+    const hollows = occurrenceRows.find(row => row.seasonalListing.recordId === "DELTA2-HOLLOWS");
+    const expectedDates = ["2026-10-09", "2026-10-10", "2026-10-16", "2026-10-17", "2026-10-23", "2026-10-24", "2026-10-30", "2026-10-31"];
+    await runScenario(hollows, "occurrence-hollows", "exact-retained-and-added-dates", async test => {
+      const { page, result } = test;
+      await activityCount(page, nearby(hollows, { at: test.state.at }).length); await settleLocal(test);
+      assert.equal(test.rpc.length, 1);
+      const delivered = fromCrossJSON(JSON.parse(test.rpc[0].response), { refs: new Map() }).result.venues.find(row => row.id === hollows.id);
+      assert.deepEqual(delivered.seasonalAvailability.activeDates, expectedDates, "Actual RPC keeps all four prior dates and only the four cleared additions");
+      assert.equal(delivered.seasonalListing.listingExpiresAt, "2026-10-31T23:00:00-05:00");
+      const before = test.rpc.length;
+      result.evidence.occurrenceDates = [];
+      for (const date of [...expectedDates, "2026-10-11", "2026-10-18", "2026-10-25"].sort()) {
+        const at = `${date}T20:00:00-05:00`, listed = expectedDates.includes(date);
+        await advance(test, at); await activityCount(page, nearby(hollows, { at }).length);
+        await optionsButton(page).click(); await rowHeading(page, hollows).waitFor();
+        const card = rowCard(page, hollows);
+        await card.locator("details > summary").click();
+        assert.deepEqual(await card.locator("details p").allTextContents(), occurrencePresentations["DELTA2-HOLLOWS"].details);
+        assertOccurrenceConsumerCopy("DELTA2-HOLLOWS", await card.innerText());
+        assert.doesNotMatch(await card.innerText(), /Open now/);
+        // Retain the pre-existing review-freshness gate. Newly supported dates
+        // after October 15 do not manufacture verified current operation.
+        assert.match(await card.innerText(), date > "2026-10-15" ? /Schedule unconfirmed/ : listed ? /Hours partly confirmed/ : /Closed now/);
+        await closeOptions(page);
+        const open = page.getByRole("switch", { name: "Open now only", exact: true });
+        await press(open, "Space"); await activityCount(page, nearby(hollows, { at, open: true }).length);
+        assert.equal(await rowHeading(page, hollows).count(), 0);
+        await press(open, "Space"); await activityCount(page, nearby(hollows, { at }).length);
+        await assertNoRpc(test, before, "Supported dates and unlisted-date browsing remain fail-closed and local");
+        result.evidence.occurrenceDates.push({ date, listed, browseEligible: true, openNowEligible: false });
+      }
+      assert.deepEqual(result.evidence.occurrenceDates.filter(row => row.listed).map(row => row.date), expectedDates);
+    }, { at: "2026-10-09T20:00:00-05:00" });
+    for (const kind of ["options", "result"]) {
+      const oldCutoff = "2026-10-30T23:00:00-05:00", currentCutoff = "2026-10-31T23:00:00-05:00";
+      const beforeAt = new Date(Date.parse(oldCutoff) - 60000).toISOString();
+      await runScenario(hollows, "occurrence-hollows", `old-cutoff-extension-${kind}`, async test => {
+        const { page, result } = test;
+        await activityCount(page, nearby(hollows, { at: beforeAt }).length + 1);
+        await optionsButton(page).click(); await rowHeading(page, hollows).waitFor();
+        if (kind === "result") await selectTarget(page, hollows);
+        await inspectQualifiedOverlay(test, hollows, kind); await settleLocal(test);
+        const before = test.rpc.length;
+        const scope = kind === "options" ? rowCard(page, hollows) : overlayRoot(page, kind);
+        result.evidence.occurrenceExtension = [];
+        for (const at of [new Date(Date.parse(oldCutoff) - 1).toISOString(), oldCutoff,
+          new Date(Date.parse(oldCutoff) + 1).toISOString(), new Date(Date.parse(currentCutoff) - 1).toISOString()]) {
+          await advance(test, at); await rowHeading(page, hollows).waitFor();
+          assert.deepEqual(await scope.locator("details p").allTextContents(), occurrencePresentations["DELTA2-HOLLOWS"].details);
+          assert.doesNotMatch(await scope.innerText(), /Open now|Season ended/);
+          await assertNoRpc(test, before, "Old cutoff cannot end the supported October 31 extension");
+          result.evidence.occurrenceExtension.push({ at, visible: true, openNowEligible: false });
+        }
+        for (const at of [currentCutoff, new Date(Date.parse(currentCutoff) + 1).toISOString()]) {
+          await advance(test, at); await rowHeading(page, hollows).waitFor({ state: "hidden" });
+          await activityCount(page, nearby(hollows, { at }).length + 1);
+          await assertNoRpc(test, before, "The new exact cutoff removes the cached occurrence once");
+          result.evidence.occurrenceExtension.push({ at, visible: false, openNowEligible: false });
+        }
+        if (kind === "options") await closeOptions(page);
+        else assert.equal(await page.getByRole("button", { name: "Close result", exact: true }).count(), 0);
+      }, { fixture: "mixed", at: beforeAt });
+    }
+  }
   if (rankedHolds) {
     const park = ownerRows.find(row => row.seasonalListing.recordId === "NEW-MID-AMERICA-FRIGHT-FEST");
     await runScenario(park, "rebrand", "exact-former-event-provider-alias", async test => {
@@ -1258,7 +1457,7 @@ try {
   }
   assert.equal(verdict.scenarios.length, rows.length * (expanded ? 17 : 15) + receiptRows.length +
     ((cumulative || expanded) ? rows.filter(row => row.seasonalListing.visibility === "listing-lifecycle").length : 0) +
-    (phase4 ? rows.length + 5 : nextMissouri || holdCleanup || rankedHolds ? rows.length : 0) + (holdCleanup || rankedHolds ? 1 : 0) + (rankedHolds ? 1 : 0));
+    (phase4 ? rows.length + 5 : nextMissouri || holdCleanup || rankedHolds ? rows.length : 0) + (holdCleanup || rankedHolds ? 1 : 0) + (rankedHolds ? 1 : 0) + (extras ? 11 : 0));
   assert.equal(verdict.errors.length, 0);
   verdict.passed = true;
 } catch (error) {
