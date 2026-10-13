@@ -1,3 +1,59 @@
+# CURRENT — PR #67 FOUR-RECORD CANDIDATE FROZEN; HOSTED/INDEPENDENT GATES PENDING (2026-10-13)
+
+## CURRENT
+- Draft PR **#67**, https://github.com/caleb1234calvin-art/dinner-roulette/pull/67, branch **integration/missouri-owner-evidence-four-2026-10-13**. Frozen SHA **b8776e319fcc75066fef17f8a617d2144f74e179**, tree **081a9533f43c91c247916124d7c0e27e4ed02270**, sole parent **0032d913efaca4bd97d730414a50a5b01e1a2099**.
+- Main remains parent0032, tree **f0d0a777ec90d5e82cc089d71b5c2eaf0646f21b**. Production **dpl_6Zsbjuca7iB6y5wPhpRk11xRYAFs READY** on exact main, all five aliases unchanged. Immediate supported rollback **dpl_45iETuFCFYrnp2r3wV8DxdvioC5a READY** on2cb05f37126eebd10de3182f1f8db40434e7d557. **63 published identities; 67 candidate identities.** No new release authority; PR66 waiver consumed.
+- Four independently cleared additions implemented: Waco, Dark Nightmares, Farrington and Mid America Adventure — Fright Fest. Previous63 complete catalog objects and63 presentations are pinned unchanged. Existing components/CSS, dependencies, workflows, deployment settings, native files and identity.ts remain unchanged.
+- Local author validation: **1,063 repository +71 application tests PASS, zero failures, four inherited skips; typecheck PASS; lint zero errors/six inherited warnings; authenticated migration-free build PASS; local Android source/icon readiness PASS.** Hosted browser/geometry, hosted Android and fresh independent exact-candidate verification remain **PENDING/HOLD**, not overall runtime PASS or release-ready.
+
+## BOUNDED REMEDIATION / FAILED ATTEMPTS
+- Concrete pre-freeze failure: exact former event name “Six Flags St. Louis Fright Fest” could duplicate the renamed event and remain eligible from standalone stale provider cache after cutoff/2027. Open Now was already false. The frozen correction is only the canonical current-policy resolver for exact full-event aliases with existing sub-0.6-mile guard, preserving provider receipts and negative lifecycle evidence. Different curated IDs, generic park names, substring variants, distant matches and unknown saved identities are not broadened.
+- A redundant identity.ts alias extension caused a historical byte-fingerprint failure; it was removed and identity.ts restored exactly. Final correction normalizes the reviewed alias before existing dedupe. Other pre-freeze failures included stale generated projection hash, old registry cardinality, one new lint warning, a negative fixture accidentally exercising ordinary close-point dedupe and omitted current-catalog evidence in the alias receipt. Corrections and all attempts/log hashes are preserved in **audit/owner-evidence-four-2026-10-13/PRE-FREEZE-ATTEMPTS.json**. No failed attempt is relabeled PASS.
+- Generated runtime/test source URLs were corrected to actual retained official series and policy URLs; immutable author projections unchanged. Local browser did not execute: Chromium socket permission denied, official Playwright downloads truncated. No bypass or untrusted binary; hosted browser acceptance is required.
+
+## NEXT
+1. Complete exact b8776e3 hosted CI, browser scenarios, 67-identity geometry, ordinary/seasonal regressions, Android automated readiness and fresh independent review of all18 paths. Review exact rebrand resolver, two merge orders, stale saved/cache expiry/no2027, source qualification, navigation and material Details.
+2. Independently inspect original evidence artifacts, using bounded verified transport if needed. Source changes invalidate affected old results and require a new exact freeze/recheck.
+3. Only after all applicable gates PASS, stop at **VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION**. Do not merge/deploy this candidate. No additional discovery batch.
+
+## HOLD
+- Hosted and independent implementation acceptance pending. Four dataset PASS results do not establish runtime/browser/release readiness.
+- Nine owner-field HOLDs unchanged; lifecycle review28 valid/3 expiring/18 fresh-review HOLD/0 runtime amendments remains separate. Existing release and imminent cutoffs unchanged.
+- Physical Android/WebView/GPS HOLD; signing/Play outside scope. Preserve inherited warnings/skips, narrow clipping/Liberty overflow, approximate placement, conservative Open Now and no live provider/weather/ticket guarantee.
+- PR61 remains parked. “Radial discovery becomes an audit layer.” remains future intent only.
+
+## COMPLETE CHANGED-PATH INVENTORY
+- audit/owner-evidence-four-2026-10-13/IMPLEMENTATION-SCOPE.md
+- audit/owner-evidence-four-2026-10-13/PRE-FREEZE-ATTEMPTS.json
+- audit/owner-evidence-four-2026-10-13/SAFE-EVIDENCE-INDEX.json
+- scripts/seasonal-admission-amendments.test.mjs
+- scripts/seasonal-card-layout-browser.mjs
+- scripts/seasonal-hold-cleanup.test.mjs
+- scripts/seasonal-next-missouri.test.mjs
+- scripts/seasonal-owner-evidence.test.mjs
+- scripts/seasonal-ranked-holds.test.mjs
+- scripts/seasonal-ten-record-browser.mjs
+- scripts/test-support/owner-evidence-baseline-receipts.json
+- scripts/test-support/owner-evidence-browser-facts.mjs
+- scripts/test-support/owner-evidence-browser-projections.json
+- scripts/test-support/seasonal-ten-record-preload.mjs
+- src/lib/date-night/curated-policy.ts
+- src/lib/date-night/missouri-2026-owner-evidence-catalog.ts
+- src/lib/date-night/search.ts
+- src/lib/date-night/seasonal-presentation-catalog.ts
+
+## RECOVERABLE PRIVATE EVIDENCE INDEX
+Public candidate contains safe summaries/projections/source URLs/hashes, never raw owner captures or private chat.
+- Owner-three complete author ZIP **libfile_c041f75b62c4819197c551b7f7258f45**,1,044,558 bytes,25 members/24 exact manifest entries, SHA256 **b2c9e964c9973efed135aeb35528c529e12554689d0a3ae1ce20aa5294acc7e1**. Includes three actual official-source owner images, raw public/Census/calendar receipts and projections; excludes assistant summary and unrelated Darkness image. Projection **7e61bfe47c9043fe593d4a91868cb5619efb8b575ac9f003645da6f551bfaf2e** unchanged.
+- Park/delta R1 ZIP **libfile_86599ba81f6881919823f7d845001f4e**,414,403 bytes/29 members, SHA256 **bc91b326336df9cff6604cb65f3a364b529c22aea6bb47e198d35419bb43e105**. R2 ZIP **libfile_12cc0ef1bc14819182fbcaef24af19c3**,419,308 bytes/33 members, SHA256 **41266d49e2fd82341389c0bf0759d530bb289ba569294dabcb75b5fa13953b6f**. Original byte streams/CRC verified; R1 findings retained.
+- Independent four-record review ZIP **libfile_67b4eca252248191865789cc95a1bcb0**,90,275 bytes, SHA256 **a7d9627fe8ee810bd6e32861027992350c8f4358ed0c91dbbbab36fd43e4168a**; JSON **libfile_9de99994ee8c8191a2c45c47360a4d61**, SHA256 **342b5b51b25070848d74764d2bcdc79899887130b01ea6908ed2fea12d4e9803**.
+- Lifecycle R1 ZIP **libfile_da32068e2030819192cc1bf1aacea2d6**,2,518,912 bytes/186 members, SHA256 **078b6c7521a1e11d8b68f9827fdf6de3e5f1636b7bda645a6e80cd0af9cedbae**. R2 correction ZIP **libfile_2d8db2e8158c8191a224f6093a6ded2b**,51,943 bytes/7 members, SHA256 **4e1fe9cfe69855a7451d6ede43e302f24bad7288380ef3aecf64a37a59adcb0d**; depends on R1.
+- Independent lifecycle report **libfile_4349d4cb9ec88191905d0d1ddf640ee9**,3,477 bytes, SHA256 **24af2265cd5e293fd421dfb36473ea908ec5e2d8924d20e16626df9ca62b3934**. Nine-HOLD supplementary accuracy report **libfile_b063599a6e348191a81913ed061cd9ce**,2,528 bytes, SHA256 **3ba07f0e9818a5da38ee57790e7a9a335b51501f173f4e5078ed1dda82f553c0**.
+
+Documentation-only checkpoint on deployment-disabled integration/continuity-refresh-2026-10-07. Prior canonical **30d470d44c0e7b3afafce9c64fc43b3e09f62281** preserved fully below. Fresh main/production/candidate identities checked before publication; full readback required. Historical CURRENT/NEXT/HOLD below is superseded where applicable.
+
+---
+
 # CURRENT — FOUR RECORDS CLEARED; LIFECYCLE REVIEW ACCEPTED (2026-10-13)
 
 This checkpoint supersedes the pending three-record and lifecycle review gates in the prior release entry. PR #66 remains released; this is a research/verification gate only. No new runtime candidate or release acceptance is claimed.
