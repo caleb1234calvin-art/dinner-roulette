@@ -1,3 +1,25 @@
+# CURRENT — PR #68 HOSTED VALIDATION PASS; FINAL ORIGINAL EVIDENCE ACCEPTANCE HOLD (2026-10-13)
+
+- Active Draft PR68 exact **3b6b9ed0f4be1581b3b541207b2637183fff57d3**, tree **577d680f089e0a6e6892da2bdd6419132b890354**, sole parent **c33c8513eb7e2b2ec19248dd76e5effe04af6e51**. Branch integration/missouri-occurrence-amendments-2026-10-13; two approved amendments/67 identities/23paths unchanged.
+- **Exact-head hosted PASS:** Web **38346362585** all15 jobs plus aggregate SUCCESS; Android **38346362567 /93** SUCCESS. Local and hosted **1,076 repository +71 application PASS**, four skips, typecheck PASS, lint0 errors/six inherited web warnings, authenticated migration-free build PASS.
+- Independent source/projection/correction acceptance remains PASS;106 adversarial/141 focused. **Final independent web original/browser/geometry acceptance remains HOLD**,11/15 web originals verified at this checkpoint. Green jobs do not replace complete raw integrity/verdict/screenshot acceptance.
+- Main **8353e60056fb0568360c5c13878d102880395d9f** /treea10e02b3151fda349322b612c371ddacd88350e1; **production dpl_3mPcvp1LGsjtQ3MVLgRUdmAzejN9 READY/source8353** unchanged.67 identities live. Immediate supported rollback6Zs/source0032 and alias limitation unchanged. No PR68 release authority.
+
+## ANDROID EXACT ORIGINAL ACCEPTANCE
+- Independent automated/native artifact review PASS on3b6. Validate115128610168 SUCCESS; signing115129642756 SKIPPED; native tests NO-SOURCE.193 native inputs equal released main,14 inherited native warnings/zero errors separate from six web warnings. Actual unsigned AAB/APK manifests/config/retry and15 launcher pixel matches/two adaptive controls inspected.
+- Original validation artifact **11789411364**,6,866,410 bytes,SHA256 **e1282bba26baa3fe0cc28c424513f07b08353952e8a9fa7776b98f2f77e9895f**. Original lint **11789366479**,24,069 bytes,SHA256 **590691b70ab06bcb98356ebcfde96da3a706d3b8e690550f67e4f9bcde07d6f5**. Complete API/actual hash/CRC/path/member/source integrity checked.
+- Private report **libfile_7ae14918455c8191bbb6c94de8303ba8**; review package **libfile_ae67437c81e48191a62e3311344cda7d**,14,222,175 bytes,SHA256 **797ab0bf5e2153e1ef1066bfff4361432ea7507c4d293200e4d482aea13165d2**, includes originals and c33 historical failure.
+- Physical Android/WebView/GPS HOLD; signing/Play outside scope.
+
+## NEXT / HOLD
+1. Finish independent complete exact3b6 web artifact integrity, browser verdicts, geometry and representative screenshot inspection. Preserve originals and failed c33; bounded exact-byte transport authorized if needed.
+2. Publish/read back terminal verdict and stop for owner release decision only if all required acceptance passes. No merge/deploy/new discovery.
+- Dev-only auth probe remains INCONCLUSIVE/INDETERMINATE; no mismatch proven. Local browser/geometry NOT EXECUTED because Chromium absent; no local scenario PASS inferred. Hosted acceptance is separately evaluated.
+- Nine source-review HOLDs/nine owner-field HOLDs, imminent lifecycles and inherited warning/skip/clipping/approximate/Open Now/provider limitations preserved. PR61 PARKED; “Radial discovery becomes an audit layer.” future intent only.
+- Docs-only canonical checkpoint. Full prior **06d3d8ebff4de34116e80344f8d0af2e503c071b** preserved. Fresh main/prod/PR/run identities and complete continuity checked; full readback required. No release-ready claim at this intermediate gate.
+
+---
+
 # CURRENT — PR #68 TEST-CHAIN REMEDIATION FROZEN; FULL ACCEPTANCE PENDING (2026-10-13)
 
 ## CURRENT
