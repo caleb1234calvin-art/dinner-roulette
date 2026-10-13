@@ -1,3 +1,58 @@
+# CURRENT — PR #67 VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION (2026-10-13)
+
+This is the terminal stop for the PR66 release → owner-evidence → next-candidate mission. **Do not automatically merge, deploy or start another batch.** New owner release authorization and fresh preflight are required for PR67. The preceding pending-evidence/HOLD gate is superseded by complete independent acceptance below; historical failed candidates remain history.
+
+## CURRENT / PRODUCTION
+- **PR #66 release PASS**, live main **0032d913efaca4bd97d730414a50a5b01e1a2099**, tree **f0d0a777ec90d5e82cc089d71b5c2eaf0646f21b**, sole parent **2cb05f37126eebd10de3182f1f8db40434e7d557**. Six admission-detail amendments accepted; **63 identities remain published**.
+- Production **dpl_6Zsbjuca7iB6y5wPhpRk11xRYAFs READY**, source exact0032; immutable host dinner-roulette-jd6pmhhj2-minions-9e2c.vercel.app. Five production aliases: pickforus.app, www.pickforus.app, dinner-roulette-chi.vercel.app, dinner-roulette-minions-9e2c.vercel.app, dinner-roulette-git-main-minions-9e2c.vercel.app. Release scoped smoke/source-bound acceptance remains PASS; no production mutation since PR66.
+- Immediate supported rollback **dpl_45iETuFCFYrnp2r3wV8DxdvioC5a READY**, source2cb05f37126eebd10de3182f1f8db40434e7d557. Authenticated route inspected/canceled during PR66 acceptance; actual restore untested. Fresh deployment metadata checked before this checkpoint; this does not replace a later release preflight or current rollback-access check.
+- PR66 one-release unprotected-main waiver is **CONSUMED**. No PR67 release/waiver authority exists.
+
+## EXACT PR #67 RELEASE OBJECT
+- Draft PR https://github.com/caleb1234calvin-art/dinner-roulette/pull/67; branch **integration/missouri-owner-evidence-four-2026-10-13**.
+- SHA **8353e60056fb0568360c5c13878d102880395d9f**.
+- Tree **a10e02b3151fda349322b612c371ddacd88350e1**.
+- Sole parent **b8776e319fcc75066fef17f8a617d2144f74e179**; released-main ancestor0032d913efaca4bd97d730414a50a5b01e1a2099.
+- **Independent exact-candidate verdict PASS WITH INHERITED LIMITATIONS.** Dataset clearance, source/runtime verification, hosted/browser/geometry acceptance and automated Android are now separately PASS. Physical Android and production acceptance of PR67 are not implied.
+- Four additions: Waco Schoolhouse Haunt; Dark Nightmares Haunted Forest; Annual Farrington Park Haunted Hayride; Mid America Adventure — Fright Fest (same renamed former Six Flags St. Louis park). **67 candidate identities**, prior63 complete catalog/presentation objects independently identical to base.18 total changed paths are listed in f628 checkpoint below and final verifier final-changed-paths.txt.
+- No component/CSS/media/dependency/workflow/native/migration/deployment-setting or identity.ts changes. Only bounded current-policy exact former-event resolver and its negative lifecycle correction accompany the new data, tests and safe evidence.
+
+## OWNER EVIDENCE / LIFECYCLE
+- All four records **factual PASS / placement PASS / implementation ELIGIBLE**, now independently implemented/verified. Owner accepts three first-party captures for2026 only; actual images viewed, provenance attested, no independent social-origin re-fetch claimed. Dark six future dates use explicitly attributed secondary calendar plus primary current-year ticket. Farrington year rests on explicit owner decision.
+- Waco expiry **2026-11-01T04:30:00Z** is final queue deadline, not exit. Dark **2026-11-01T05:00:00Z** is last-ticket midnight, not exit. Farrington **2026-10-19T05:00:00Z** is date-only retention, not invented closing. Park **2026-11-02T03:00:00Z** is November1 21:00CST event end. Chicago DST independently checked. No2027 recurrence, null machine intervals, never automatic Open Now; supported address navigation and approximate placement; no new late-fall exception.
+- Material qualifications preserved in Details: Waco queue/ticket/payment; Dark trail, footwear, guardian/access, optional contact/withdrawal and ticket-slot/gate distinctions; Farrington start/unknown close; park chaperone/age/ID/presence, separate haunt access, age12 costume ceiling, costume-mask/medical-mask exception, screening/weapons. Routine dollar amounts omitted; restrictions retained.
+- Lifecycle review remains **28 field-scoped VALID CURRENT /3 EXPIRING AS EXPECTED /18 fresh-review HOLD /0 runtime amendments**. Boone2026-10-18T01:00Z, Broken Hour03:00Z, Pomme05:00Z unchanged. Darkness October16–17 conflicting start times remain qualified. No automatic removal from source-review HOLD; no silent extension. Three October10 expired identities stay ineligible.
+
+## COMPLETE EXACT-HEAD ACCEPTANCE
+- Web run **38330278257 /420**, all16 jobs successful; Android **38330278252 /91** successful. **1,064 repository +71 application tests PASS**, zero failures, four external-documentation skips; typecheck PASS; ESLint0 errors/six inherited warnings; safe authenticated migration-free production build PASS. No ordinary migration-chaining build.
+- Independent498-input source fingerprint **b35b8b001328e9b95c6bc6b3289991840544023bdbd45799fa16147336d7e113** reproduced and bound by all15 original web build proofs. Different build-job output hashes are preserved, not falsely required equal.
+- **1,361 seasonal +10 ordinary Date Night scenarios PASS**, separately16 casino/19 location checks PASS. Seasonal lane counts23/97/157/235/220/185/164/87/69/124. Final lane retains51 previous cases and adds72 four-record cases plus one rebrand case.
+- **555 geometry comparisons /67 identities /17 negative Plan identities PASS**;4,536 width checks,654 expanded Plan paragraphs,72 new-record paragraph and46 control checks. Result maximum+4.671875px, Plan+3px remain within established5px tolerance. Historical geometry before baseline is2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81, not current main0032; current-main components/CSS remain byte-identical. Runtime verifier directly viewed12 originals; geometry verifier20, hashes/indexes retained.
+- Exact cutoff -1ms/exact/+1ms, pending RPC, saved/reload/cache/exclusions, provider24/7, aliases, radius/navigation/generic rideshare, Anything and no2027 PASS. Expired saved history may remain visible as ineligible history, never pick/Open Now.
+- **RUNTIME-01 closed:** successor independent50/50 probes and26/26 focused tests PASS. Historical b877 had47/50 PASS,3 failures from evidence-only disused loss; immutable HOLD remains. Fix preserves permanent-closure precedence then disused across top-level/evidence, exact full-event names/OSM/finite<0.6mi placement and conflicting curated-ID guards. Unknown historical bookmarks are not guessed by name.
+- Android original-byte automated acceptance PASS,14 native warnings/zero errors; native tests NO-SOURCE/signing SKIPPED. **Physical Android/WebView/GPS HOLD**.
+
+## EVIDENCE INTEGRITY / RECOVERY
+- All **15 original web ZIPs,899,948,044 bytes /9,046 members**, independently verified against API size/digest, actual SHA256, ZIPCRC, safe unique paths, full member sizes/CRC/SHA. Two Android originals add6,890,480 bytes; total17 originals906,838,524 bytes.
+- Durable original recovery manifest **libfile_dcc071c80d8c81919e39ba2183413aff**, PR67-8353e600-ORIGINAL-EVIDENCE-RECOVERY-MANIFEST.json,2,372,733 bytes,SHA256 **18c75c2a241332f7a1b3c730b1bb2714100dd69e62a117e14561cd590afc8476**. Contains14 intact web ZIP Library IDs, two <=256MiB geometry raw parts with offsets/hashes/exact reconstruction proof,9,046-member inventory and Android cross-reference. No behavior regenerated to shrink evidence.
+- Final independent report SHA256 **4a8aa60a40e42f3148caccb8e77385d8d2b5ca0ea1cf5eb40b9d0e8363c1e41f**. Compact114-member review ZIP **libfile_82e2e9bdd87c8191a884643a9d5ade06**,7,685,751 bytes,SHA256 **8914e54339b23175f44d100ddf2b8cf3e6b67c480e4ee605849697427b66b3cf**. Contains full verdict,18paths, source/probe/logs, original manifests/build proofs/raw verdicts and representative viewed screenshots, with failed b877 history.
+- Geometry independent report SHA256 **c279cdb6ba69855aaae129a2684a4936d6af9c3310db187b5d54e55440ae8bf9**, manifest **0b5d3064bf6ec5037b02403ebec4a6b4ccdadcb0ecdf90d2475e83680b92662f**.
+- Android review ZIP **libfile_7058b7cc86d48191b92933d661e332e2**,14,034,548 bytes,SHA256 **7ecdd4f7eef8bec570d0dbd0b3f293e43a2bd94507ef48285781a2e245798d45**. Exact original artifact IDs/hashes remain in previous CI entry. Raw owner/source research remains private and recoverable through full Library index in freeze checkpoint; public repo only safe projections/summaries/hashes.
+
+## NEXT / OWNER ACTION
+**STOP. One concrete owner release decision is required for exact PR67 SHA8353e60056fb0568360c5c13878d102880395d9f / treea10e02b3151fda349322b612c371ddacd88350e1.**
+Any later approval requires fresh main/production/head/tree/ancestry/checks/safe-build/aliases/rollback/protection preflight; source/tree/input drift invalidates this acceptance. No production promotion or new batch is authorized by this checkpoint.
+
+## HOLD / KNOWN LIMITATIONS
+- Nine remaining owner-field records remain HOLD: Hannibal, Bakersfield, Rising, Terrified Existence, Twisted Minds, Dark Lords, Zombie World, Lemp, Macabre. Ledger accuracy PASS is not clearance.18 source-review HOLDs are separate from these nine.
+- Physical Android/WebView/GPS HOLD; signing/Play outside scope.
+- Inherited320px Directions clipping35px excess and Liberty address overflow6px remain no-worse only, not fixed or newly waived. Existing title/category ellipsis and1px integer rounding tolerance remain; full collapsed-name readability not claimed.
+- Six web/14 native warnings and four skips remain. Controlled-provider fixtures do not prove live provider reachability; no live ticket/weather guarantee. Approximate placement/conservative Open Now/temporary Haunted House icon forOther unchanged.
+- PR61 remains PARKED. **“Radial discovery becomes an audit layer.”** remains future intent only.
+- Documentation-only on deployment-disabled integration/continuity-refresh-2026-10-07; prior **e6cd54e302871ccb3ea83b98ebd6869aa585c0d7** body preserved entirely. Main/production/rollback/PR and candidate immutable identities freshly checked; this entry must be fully read back before terminal completion. Earlier pending states below are history.
+
+---
+
 # CURRENT — PR #67 EXACT-HEAD HOSTED CI PASS; FINAL EVIDENCE ACCEPTANCE HOLD (2026-10-13)
 
 ## CURRENT
