@@ -1,3 +1,30 @@
+# CURRENT — PR #67 EXACT-HEAD HOSTED CI PASS; FINAL EVIDENCE ACCEPTANCE HOLD (2026-10-13)
+
+## CURRENT
+- Active Draft PR #67 remains **8353e60056fb0568360c5c13878d102880395d9f**, tree **a10e02b3151fda349322b612c371ddacd88350e1**, sole parent **b8776e319fcc75066fef17f8a617d2144f74e179**; branch integration/missouri-owner-evidence-four-2026-10-13.
+- **Exact-head hosted validation PASS:** Web **38330278257** and Android **38330278252** both completed SUCCESS on8353, freshly checked. Local author1,064 repository +71 application PASS/four skips/typecheck/lint0 errors6 web warnings/safe authenticated migration-free build results remain preserved.
+- Independent successor source/adversarial review **50/50 PASS**, focused **26/26 PASS**; evidence-only disused finding RUNTIME-01 closed on8353. Failed b877 and corrected verifier-harness history remain in prior entries and immutable receipts.
+- **Final independent original browser/geometry evidence acceptance still HOLD.** At this checkpoint8/15 web originals had been verified, all15 were available; geometry ZIP reported282,243,510 bytes may require authorized bounded transport. Successful hosted job status does not substitute for complete archive integrity, measured results and screenshot inspection. No release-ready claim.
+- Main **0032d913efaca4bd97d730414a50a5b01e1a2099** / tree **f0d0a777ec90d5e82cc089d71b5c2eaf0646f21b**, production **dpl_6Zsbjuca7iB6y5wPhpRk11xRYAFs READY** on exact main unchanged.63 identities published,67 candidate. Immediate supported rollback **dpl_45iETuFCFYrnp2r3wV8DxdvioC5a** on2cb05f37126eebd10de3182f1f8db40434e7d557. No merge/deployment authority; PR66 waiver consumed.
+
+## ANDROID INDEPENDENT ACCEPTANCE
+- Run91 /38330278252 automated readiness and original-byte inspection PASS. Original artifact **11782840181**,6,866,411 bytes,SHA256 **c8f4c0c28629f3896bbbcab3ae12b0ee97942b4a1a179ab8497d07e6431674b2**; artifact **11781749370**,24,069 bytes,SHA256 **9c7ed50c972fdb262bb267210dd38db6b302346528a40e87247aeaf8efaa9cde**.
+- Private review ZIP **libfile_7058b7cc86d48191b92933d661e332e2**, PR67-R2-independent-android-readiness.zip,14,034,548 bytes,SHA256 **7ecdd4f7eef8bec570d0dbd0b3f293e43a2bd94507ef48285781a2e245798d45**.
+- Native lint14 inherited warnings/zero errors is separate from six web warnings. Native tests NO-SOURCE; signing SKIPPED. Physical Android/WebView/GPS remains HOLD; automated PASS does not close it.
+
+## NEXT
+1. Finish independent verification of all exact8353 original web/browser/geometry archives, measurements and representative screenshots. Preserve raw originals and failed transport attempts; bounded parts <=256MiB if needed, exact reconstructed SHA/member/path/CRC checks.
+2. Reconcile final exact-candidate overall verdict and limitations. Publish/read back final continuity before declaring VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION.
+3. Stop for owner release approval; no autonomous merge/deploy or further discovery.
+
+## HOLD / BOUNDARIES
+- Final web artifact/browser/geometry evidence acceptance incomplete. No unknown or missing evidence becomes PASS because jobs are green.
+- Nine owner-field HOLDs,18 lifecycle fresh-review HOLDs and physical Android HOLD remain separate. No runtime removal implied by fresh source-review HOLDs.
+- PR61 PARKED. “Radial discovery becomes an audit layer.” remains future intent. Existing warning/skip/clipping/approximate-location/Open Now/live-provider limitations unchanged.
+- Previous18-path scope and full evidence index retained. Documentation-only checkpoint; full prior **c55fb3578487584b5ca6b007bcd28018be39ab99** body preserved. Fresh current continuity/main/prod/PR and run IDs checked before write; full readback required.
+
+---
+
 # CURRENT — PR #67 DISUSED-EVIDENCE REMEDIATION FROZEN; ACCEPTANCE PENDING (2026-10-13)
 
 ## CURRENT
