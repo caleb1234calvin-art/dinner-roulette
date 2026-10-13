@@ -1,3 +1,35 @@
+# CURRENT — PHASE 12 REGIONAL RESEARCH AUTHORIZED; PR #69 REMAINS SOLE RELEASE DECISION (2026-10-13)
+
+## AUTHORITATIVE CONTROL ROOM
+- Fresh read-only control-room inspection at approximately 18:15 UTC found no drift. Remote main **3b6b9ed0f4be1581b3b541207b2637183fff57d3**, tree **577d680f089e0a6e6892da2bdd6419132b890354**, parent **c33c8513eb7e2b2ec19248dd76e5effe04af6e51**.
+- Project latest production and deployment metadata agree: **dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ READY**, source main above; **67 published identities**. This is metadata revalidation, not a fresh live-browser acceptance run.
+- Five production aliases remain recorded as pickforus.app, www.pickforus.app, dinner-roulette-chi.vercel.app, dinner-roulette-minions-9e2c.vercel.app, dinner-roulette-git-main-minions-9e2c.vercel.app.
+- Immediate rollback metadata freshly confirms **dpl_3mPcvp1LGsjtQ3MVLgRUdmAzejN9 READY**, source **8353e60056fb0568360c5c13878d102880395d9f**. Authenticated supported restore route was last inspected/canceled during PR68 release, not exercised again here. Automatic restore covers apex/www/chi only; generated aliases need separate verification and a mismatch requires STOP without improvised settings.
+- Canonical prior checkpoint **4347152a835061325a6353cc3c1f1587223a0572** was retrieved in full from Git blob **392c7e4bc992e711831ab0c5bd9ed8923b2155f9** and is byte-for-byte identical to the previously fully read history: 1,069,108 bytes, SHA256 **69cffb5ef29f155c38d380a445c75e7a054449a9318529ae6e18c0fb9a53fcba**. Newest entry re-read; historical CURRENT/NEXT language below is history where superseded.
+
+## PR #69 / RELEASE AUTHORITY
+- Draft PR **#69** remains open on branch **integration/missouri-three-cleared-2026-10-13**, exact head **6c619adda4d9ef3b2683befb2ca874b257505eb2**, tree **236110f86f9f3dc8c0cf0a5a664be79e2569bc43**, sole parent current main **3b6b9ed0f4be1581b3b541207b2637183fff57d3**.
+- Existing exact-candidate independent verdict remains **PASS WITH INHERITED LIMITATIONS / VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION**. Three cleared additions (Rowe, Meramec, Pets and Pumpkins), 70 candidate identities; all prior67 unchanged. Verification totals, complete original evidence and inherited coverage limits are preserved in the next historical entry and are not newly rerun by this control-room check.
+- **No PR69 merge/deployment approval is implied by Phase12. No second implementation candidate while PR69 remains the frozen owner-decision candidate.** No unprotected-main waiver is granted or consumed here; previous PR68 waiver remains consumed.
+- Other open seasonal heads freshly observed: #58 d876dbc12de47d5d40be0e9cc2116b30d9834089; #56 a61af2bfd05ad959dfa3a3fb8dd564ad7b804921; #55 e397488c4e33355cbf1e278d388226d0a41716dc; #54 f539d49fc5ff1ff08727566b6344e86c00e35d91; #48 3dc116ef8d114127402d94fcbe299272080d0f4a; #47 277aca01996b5559b6e520d9d3f193c4989f4f64. These historical constituent PRs are not newly authorized publication candidates.
+- PR61 remains parked at **c78b97175cc094436e454fa888e1ed83486f750d**. **“Radial discovery becomes an audit layer.”** remains future product intent only.
+
+## NEXT — BOUNDED MULTI-STATE RESEARCH
+- Owner's Phase12 authorization (2026-10-13, message Sentinel_d4743246f3fc8191aa8dfeb9b2e5f7f1) starts regional expansion in priority order **Kansas → Arkansas → Oklahoma**. The coordinator's first-wave plan uses a bounded **20–40 lead** discovery set per state, union and deduplicate **Haunts.com, The Scare Factor, FrightMaps, FrightFind**, then verify important fields against current first-party/public-authority evidence.
+- Work field by field; preserve URLs, retrieval context, conflicts, current-year binding, identity, supported visitor address, qualified placement and finite lifecycle. A directory's missing field does not invalidate its useful other fields; an updated listing does not prove every claim.
+- Preserve separate state ledgers, immutable evidence, fresh independent record-level review and a future regional implementation queue. Research clearance, placement/radius eligibility, runtime eligibility and release authority remain distinct.
+- Because PR69 is already frozen, this mission advances **research/evidence/review/queue only**, with no second implementation candidate. First-ring work is bounded; review useful remaining opportunity and marginal evidence yield before extending work. Do not restart statewide Missouri discovery or repeat exhausted low-yield sources without materially new evidence.
+- Do not import HOLD, expired, rejected or residential/home-haunt records. Residential evidence remains a separate policy lane. Preserve ListingCompletenessV1, approximate-address semantics, truthful Directions, conservative Open Now, exact local-time 2026 expiry, cache/saved negative authority and no2027 recurrence in any future projection.
+- Owner also named a second expansion ring in order **Illinois, Iowa, Nebraska, Tennessee, Kentucky**. Do not move outward merely to consume time: proceed only while useful current-season leads, adequate evidence quality, meaningful implementation value and season timing justify it. Current run first completes useful first-ring queue/report and reassesses value; this is not an endless expansion mandate.
+- Next material gate: publish state research outcomes, exact evidence identities, independent dispositions and prioritized future queue; read continuity back. PR69 continues to await one concrete owner release decision independently of research.
+
+## HOLD / LIMITATIONS
+- All current Missouri source-review/owner-field/Cadaver/placement HOLDs retain their exact blockers from prior entries; regional expansion does not clear them. No new regional lead is yet claimed verified or implementation-ready at this mission-start checkpoint.
+- Physical Android/WebView/GPS and installed-PWA acceptance remain HOLD; signing/Play outside scope. Six web lint warnings, fourteen native warnings, inherited narrow Directions clipping/overflow, temporary Other icon, approximate placement, conservative Open Now, fixture/provider limitations and dev-only auth probe INCONCLUSIVE remain documented.
+- No production/runtime/source mutation, deployment, branch-protection/settings change or new release waiver is authorized by this documentation checkpoint. Canonical documentation is written only on deployment-disabled **integration/continuity-refresh-2026-10-07**, retaining the entire prior body. Full remote readback is required before treating this checkpoint as published.
+
+---
+
 # CURRENT — PR #69 VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION (2026-10-13)
 
 **TERMINAL STOP:** PR68 release and bounded Missouri advancement have reached the next verified candidate gate. Do not merge/deploy PR69 or begin another batch without owner authority.
