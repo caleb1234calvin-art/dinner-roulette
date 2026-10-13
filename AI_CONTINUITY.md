@@ -1,3 +1,40 @@
+# CURRENT — POST-PR68 RESEARCH PASS FOR EXACT THREE; IMPLEMENTATION NEXT (2026-10-13)
+
+## CURRENT
+- Main **3b6b9ed0f4be1581b3b541207b2637183fff57d3**, tree **577d680f089e0a6e6892da2bdd6419132b890354**; production **dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ READY/source3b6** unchanged.67 published identities; PR68 release PASS/waiver consumed. Immediate supported rollback3mP/source8353 and automatic-alias limitation retained.
+- **Fresh independent research PASS for exactly three projections:** Rowe Crop Farm Family Fall Fun; Meramec State Park Spooktacular (MO26-096); Pets and Pumpkins (MO26-046). Factual, approximate-placement, schema and consumer-projection clearance only; no implementation/runtime/release PASS yet.
+- All three are previously known held identities absent current67, not net-new discoveries. Rowe outside original134, other two within original134. Three older primary leads plus eight original134 opportunities were reviewed; this bounded batch does not establish statewide exhaustion/completeness.
+
+## EXACT CLEARED SET
+- **Rowe R4 plus presentationR1:**27 finite2026 activity dates, officialSeptember12–October25 season; September store-only midweek excluded. Corn Maze/Pumpkin Patch, supplemental hayrides, Good tier.10766 Webster Rd, approximate exact-address Census point37.764856912758,-90.787513301942. FinalOctober25 18:00CDT = **2026-10-25T23:00:00Z**. Last admission/policies unknown, no invented values.
+- **Meramec publicR2:** officialOctober17 public/free/no-registration event; games14–17 and trick-or-treat starts17, not closing. Vehicle road closure16:45 prominently retained. Supported park address/operator navigation point38.207388,-91.1022 is park-scale approximate, not precise entrance. Date-only cutoff **2026-10-18T05:00:00Z**, endsAt omitted, Good tier.
+- **Pets and Pumpkins publicR2:** organizerOctober24 11–16 at Park Central Square, rain or shine; approximately14:15 parade lineup at Park Central East. HOME map square point37.2089878,-93.2926909, not generic Downtown map; no invented street number/entrance. Exact **2026-10-24T21:00:00Z**, High tier. Routine pricing omitted from consumer Details.
+- All three null machine openingHours/never Open Now, supported-address Directions/external ride picker,2026-only/no recurrence. Exact qualified presentations frozen; no stronger coordinate precision.
+
+## OTHER DISPOSITIONS / HOLD RANKING
+- Tommy Ballwin and O'Fallon independently **VALID CURRENT scoped seasonal schedule/public invitation/address**, zero amendments. Normal Events rendering confirmsOctober23–24,2026 18:30–21:30 and retainedOctober25 02:30Z cutoff. No freshness/confidence/placement upgrade. Published fresh-source HOLD inventory **9→7** only from these two resolutions.
+- Eleven researched leads:3 full clear; Lone Jack factual-only PASS but placement/runtime HOLD; Beggs scoped dates/Pumpkin Patch fields PASS but **complete factual/public-access, placement and runtime HOLD**; Castle terminal closed/noneligible remainder2026; Pixie,Amber Valley,Sarcoxie,Fischer,Gardener HOLD. Zero farm imports.
+- Beggs R1 extraction limitation superseded by separately frozenR2 normal October/November2026 rendering. Latest confirmedNovember1 18CST envelope/November2 00Z is not declared season end; later blanks prove nothing. October30 Closed dominates residual tags; wrong HighwayY/Z Census rejected for HighwayU.
+- Lone Jack zero-match Census/map failure leaves approximate placement unresolved despite explicit2026 facts; no PumpkinPatch inferred from pumpkin retail. Gardener year/date conflict unresolved; Fischer403 not retried/closure inferred. Castle closure explicit, no invented final timestamp or2027 revival.
+- Seven published source HOLDs now Liberty,Campbell's,Creepyworld,Darkness,Cobb,Grotto,Ozark Nightmares. Nine owner HOLDs unchanged: Hannibal,Bakersfield,Rising,Terrified Existence,Twisted Minds,Dark Lords,Zombie World,Lemp,Macabre. Revisit only with materially new evidence; no repeated exhausted-source loop.
+- Independent released-policy inventory:67 published,64 lifecycle-browse eligible before geography/preferences/type filters,3expired,0OpenNow;4cutoffs within7days including Farrington. This is **not64 fresh factual clearances**. Status counts39closed-now/14upcoming/9hours-unknown/3finished/2schedule-unconfirmed. No broad source re-audit; original freshness preserved.
+
+## NEXT / BOUNDARIES
+1. Implement **only these exact three** on a fresh3b6-main nonproduction branch, expected70candidate identities if all integrated. Preserve exact projections, current policy, source-bound lifecycle/cache/saved/negative/identity and navigation semantics. No other HOLD import.
+2. Run full exact-head validation/browser/geometry/Android and fresh independent verification. Publish/read back freeze/remediation/validation gates.
+3. STOP at VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION. No next-candidate merge/deployment authority or further research expansion.
+- PR61 PARKED. “Radial discovery becomes an audit layer.” future intent only. Physical Android/WebView/GPS HOLD; signing/Play outside scope. Existing dev-probe INCONCLUSIVE, Plan coverage qualifications, warnings/skips/clipping/approximate/Open Now/provider limitations remain unchanged.
+
+## EVIDENCE / PRECISE RECEIPT CORRECTION
+- Private whole-gate archive **libfile_32cb1c92325081918cdd55994369132e**, Post-PR68-research-gate-evidence-2026-10-13.zip,8,787,018 bytes,264 members (261 frozen files+3metadata),SHA256 **6bb19d5a4f749aa417935ba4ff2e5e08017030501484d9093b472d96e2d8cd26**. Exact member-set/CRC/size/hash/unchanged inputs PASS; all predecessor revisions retained.
+- Cleared set **40af9e9076b7d18f9f037e3e7e75a980630e66f760d866abae1dd6a4062438e3**; verdict ledger **059233c7953fbef0ad1211086279b854f9521da9cf347017bb6e02a058f9d302**; independent report **7817d87610b55a2b4184126567857cb4f44b419da0427936655d812498d48807**; independent manifest **9e0ba3df90d0267b2bb7bbedab5371d74c0a6aab68d13e8c0e6699aee92d00bf**.
+- Rowe import **e2f05a5b05c5b428a035885eda1f56b485df2bf3cd88bd81927dc35601b9ee0a**, presentation **7371930ac2b8a133a8a108d4560b300233efbd22b0ba35f7713d0297e167779f**; publicR2 import **51096d03cfdef7ef5f28c3dc7de625403ae38a0a251bfd067cedc76f2ae28e13**, presentation **e6eef487cb86e087a065be23eabdb7dcc84602018557434f22191a93364b6f5a**.
+- Reviewer Rowe Census reopen was blocked and not retried/alternate-routed. Placement rests on original author656-byte HTTP200 exact match receiptSHA317a13779c464a4d831c56e4b30fc33b76157ed58a87ba31c1e1cdf9e38b0c3e, independently checked interpretation, not a new response. Browser/index/raw origin evidence types and clipping/truncation/cache limits kept distinct.
+- **Continuity receipt precision:** canonical Git blob at priorc469 is08a11814d26011e8ec0a418d9a0409fb976b4627,1,041,962 bytes,SHA256 **ef0515ee8d17ce92baccd6734e3f36c78ac49b86ca745edab0fed44e3477bf0f**. Previously reported1,041,963-byte/SHA3f532976… was the local readback file with one added trailing newline, not canonical Git bytes. Prior submitted/retrieved text equality and substantive/history preservation remain valid. Preserve historical receipt; use exact blob-byte hashes going forward.
+- Docs-only canonical branch. Full prior **c4698013ff212fd7d93b62871a9c7de4fc42c925** preserved. Fresh main/prod/current continuity checked; full readback before implementation. No raw owner/private captures in public repo.
+
+---
+
 # CURRENT — PR #68 RELEASE ACCEPTANCE PASS; BOUNDED MISSOURI REVIEW NEXT (2026-10-13)
 
 This supersedes the PR68 owner-decision stop. Owner mission Sentinel_a5f21b55107081918d62404a0b159b1b approved exact3b6/tree577 publication and one-release waiver, then bounded postrelease advancement. **PR68 waiver consumed; no next-candidate release authority.**
