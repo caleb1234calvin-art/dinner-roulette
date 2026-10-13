@@ -1,3 +1,4 @@
+import { releasedPresentationsOnly } from "./test-support/three-cleared.mjs";
 import { occurrenceSourceBefore, occurrenceCatalogBefore, occurrencePresentationAfter } from "./test-support/occurrence-amendments.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
@@ -15,7 +16,7 @@ const { combineDateNightDiscovery } = load("src/lib/date-night/cache.ts");
 const { resolveSavedSeasonalPlace, recordSeasonalIdentityReceipts, seasonalReceiptAliasIds } = load("src/lib/date-night/identity-receipts.ts");
 const { seasonalListingToPlace } = load("src/lib/date-night/listing.ts");
 const { seasonalPresentation } = load("src/lib/date-night/seasonal-presentation.ts");
-const { SEASONAL_PRESENTATIONS } = load("src/lib/date-night/seasonal-presentation-catalog.ts");
+const SEASONAL_PRESENTATIONS = releasedPresentationsOnly(load("src/lib/date-night/seasonal-presentation-catalog.ts").SEASONAL_PRESENTATIONS);
 const { getDateNightAvailability } = load("src/lib/date-night/availability.ts");
 const { directionsUrl } = load("src/lib/location/maps.ts");
 const { uberRideTarget } = load("src/lib/location/ride-target.ts");

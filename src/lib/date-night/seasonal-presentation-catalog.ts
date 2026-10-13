@@ -3,6 +3,36 @@ import type { SeasonalPresentation } from "./seasonal-presentation";
 /** Explicit independently reviewed visitor copy. Full facts remain in immutable audit
  * artifacts and catalog metadata; no audit narratives are rendered as consumer prose. */
 export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentation>> = {
+  "DELTA-ROWE-CROP-FARM-2026": {
+    "canonicalId": "date-night-mo26-delta-rowe-crop-farm",
+    "confidence": "good",
+    "details": [
+      "Family fall corn maze, pumpkin patch and hayrides; September 12–October 25, 2026.",
+      "September: Friday–Saturday 10 a.m.–6 p.m.; Sunday 1–6 p.m. Wednesday/Thursday opening is pumpkin barn store only.",
+      "October: Wednesday–Thursday 10 a.m.–3 p.m.; Friday–Saturday 10 a.m.–6 p.m.; Sunday 1–6 p.m. Last admission is not stated; check the operator before going.",
+      "Location is approximate. Directions use the visitor address."
+    ]
+  },
+  "MO26-096": {
+    "canonicalId": "date-night-mo26-096-meramec-spooktacular",
+    "confidence": "good",
+    "details": [
+      "October 17, 2026 in the campground. Carnival games run 2–5 p.m.; trick-or-treating starts at 5 p.m. Final end time is unconfirmed.",
+      "Contests and a scavenger hunt run at separate times; coloring sheets are available from 9 a.m. Open to the public; no registration required.",
+      "The campground road closes to vehicle traffic at 4:45 p.m. for trick-or-treater safety.",
+      "Directions use the park’s visitor address. Map placement is approximate and does not identify campground parking or an entrance."
+    ]
+  },
+  "MO26-046": {
+    "canonicalId": "date-night-mo26-046-pets-and-pumpkins",
+    "confidence": "high",
+    "details": [
+      "October 24, 2026, 11 a.m.–4 p.m. at Park Central Square.",
+      "Family festival with a costume walking parade and contest for people and pets. Rain or shine.",
+      "Parade line-up begins about 2:15 p.m. on Park Central East next to Civil Kitchen.",
+      "Directions use Park Central Square; map placement is approximate, not an admission entrance or ride-dropoff point."
+    ]
+  },
   "DELTA2-WACO": {
   "canonicalId": "date-night-mo26-waco-schoolhouse-haunt",
   "confidence": "good",

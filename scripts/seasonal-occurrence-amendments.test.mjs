@@ -1,3 +1,4 @@
+import { releasedPresentationsOnly } from "./test-support/three-cleared.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync, readdirSync } from "node:fs";
@@ -10,9 +11,11 @@ const load = appModuleLoader();
 const bytes = readFileSync("scripts/test-support/occurrence-release-baseline.json");
 assert.equal(createHash("sha256").update(bytes).digest("hex"), "f9ab4af54bcff0d5206674c11370b35c0450a8edfa0a2688d1b8b19ce2fc7e0a");
 const baseline = JSON.parse(bytes);
-const files = readdirSync("src/lib/date-night").filter(file => /^missouri-.*catalog\.ts$/.test(file)).sort().map(file => `src/lib/date-night/${file}`);
+const allFiles = readdirSync("src/lib/date-night").filter(file => /^missouri-.*catalog\.ts$/.test(file)).sort().map(file => `src/lib/date-night/${file}`);
+assert.deepEqual(allFiles, [...Object.keys(baseline.files), "src/lib/date-night/missouri-2026-three-cleared-catalog.ts"].sort());
+const files = Object.keys(baseline.files);
 const current = files.flatMap(file => Object.entries(load(file)).filter(([key]) => key.endsWith("_CATALOG")).flatMap(([, rows]) => rows));
-const { SEASONAL_PRESENTATIONS } = load("src/lib/date-night/seasonal-presentation-catalog.ts");
+const SEASONAL_PRESENTATIONS = releasedPresentationsOnly(load("src/lib/date-night/seasonal-presentation-catalog.ts").SEASONAL_PRESENTATIONS);
 const { getCuratedSeasonalPlace, applyCuratedSeasonalPolicy } = load("src/lib/date-night/curated-policy.ts");
 const { decorateDateNight, eligibleDateNight } = load("src/lib/date-night/eligibility.ts");
 const { DEFAULT_DATE_NIGHT_FILTERS } = load("src/lib/date-night/types.ts");

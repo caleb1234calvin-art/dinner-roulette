@@ -1,3 +1,4 @@
+import { THREE_CLEARED_RECORDS, THREE_CLEARED_PRESENTATIONS, THREE_CLEARED_MATERIAL_FACTS, THREE_CLEARED_CONFIDENCE, assertThreeClearedCatalog } from "./test-support/three-cleared.mjs";
 import assert from "node:assert/strict";
 import { execFileSync, spawn } from "node:child_process";
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
@@ -79,12 +80,13 @@ const cleanupAccepted = JSON.parse(cleanupAcceptedBytes);
 const rankedRows = load("src/lib/date-night/missouri-2026-ranked-holds-catalog.ts").MISSOURI_2026_RANKED_HOLDS_CATALOG;
 const rankedAcceptedBytes = await readFile("scripts/test-support/ranked-holds-browser-projections.json");
 const rankedAccepted = JSON.parse(rankedAcceptedBytes);
+const threeRows = load("src/lib/date-night/missouri-2026-three-cleared-catalog.ts").MISSOURI_2026_THREE_CLEARED_CATALOG;
 const ownerRows = load("src/lib/date-night/missouri-2026-owner-evidence-catalog.ts").MISSOURI_2026_OWNER_EVIDENCE_CATALOG;
 const ownerAcceptedBytes = await readFile("scripts/test-support/owner-evidence-browser-projections.json");
 const ownerAccepted = JSON.parse(ownerAcceptedBytes);
-const rankedLaneFacts = { ...RANKED_HOLDS_MATERIAL_FACTS, ...OWNER_EVIDENCE_MATERIAL_FACTS };
-const rankedLaneConfidence = { ...RANKED_HOLDS_CONFIDENCE, ...OWNER_EVIDENCE_CONFIDENCE };
-const rows = rankedHolds ? [...rankedRows, ...ownerRows] : holdCleanup ? cleanupRows : nextMissouri ? [...nextMissouriRows, ...amendedRows] : phase4 ? phase4Rows : extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
+const rankedLaneFacts = { ...RANKED_HOLDS_MATERIAL_FACTS, ...OWNER_EVIDENCE_MATERIAL_FACTS, ...THREE_CLEARED_MATERIAL_FACTS };
+const rankedLaneConfidence = { ...RANKED_HOLDS_CONFIDENCE, ...OWNER_EVIDENCE_CONFIDENCE, ...THREE_CLEARED_CONFIDENCE };
+const rows = rankedHolds ? [...rankedRows, ...ownerRows, ...threeRows] : holdCleanup ? cleanupRows : nextMissouri ? [...nextMissouriRows, ...amendedRows] : phase4 ? phase4Rows : extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
 const destinationFor = row => {
   const target = row.seasonalListing.directionsTarget;
   return target.kind === "verified-point" ? `${target.lat},${target.lon}` : target.address;
@@ -476,7 +478,7 @@ const ordinaryRows = load("src/lib/date-night/jasper-county-catalog.ts").JASPER_
 const anchors = load("src/lib/date-night/seasonal-catalog.ts").JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG;
 const previousRows = [...oldRows, ...priorTen, ...addedRows];
 const previousReceipts = JSON.parse(await readFile("scripts/test-support/missouri-previous32-receipts.json", "utf8"));
-const curatedRows = [...previousRows, ...astraRows, ...extraRows, ...phase4Rows, ...nextMissouriRows, ...cleanupRows, ...rankedRows, ...ownerRows];
+const curatedRows = [...previousRows, ...astraRows, ...extraRows, ...phase4Rows, ...nextMissouriRows, ...cleanupRows, ...rankedRows, ...ownerRows, ...threeRows];
 const catalog = [...ordinaryRows, ...anchors, ...curatedRows];
 const occurrenceRows = OCCURRENCE_AMENDMENTS.map(amendment => {
   const row = curatedRows.find(candidate => candidate.id === amendment.canonicalId);
@@ -588,10 +590,10 @@ try {
   browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
     args: ["--no-sandbox", "--disable-dev-shm-usage"] });
   assert.deepEqual(rows.map(row => row.seasonalListing.recordId).sort(), Object.keys(materialFacts).sort(), "Exactly the independently cleared selected batch");
-  assert.equal(new Set(rows.map(row => row.id)).size, rankedHolds ? rankedAccepted.newRecords.length + ownerAccepted.newRecords.length : holdCleanup ? cleanupAccepted.newRecords.length : nextMissouri ? 3 : phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
+  assert.equal(new Set(rows.map(row => row.id)).size, rankedHolds ? rankedAccepted.newRecords.length + ownerAccepted.newRecords.length + THREE_CLEARED_RECORDS.length : holdCleanup ? cleanupAccepted.newRecords.length : nextMissouri ? 3 : phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
   assert.equal(previousRows.length, 32, "All previously shipped curated identities remain regression controls");
-  assert.deepEqual(curatedRows.map(row => row.id).sort(), Object.values(occurrenceBaseline).map(row => row.canonicalId).sort(),
-    "All 67 released curated identities remain present exactly once");
+  assertThreeClearedCatalog(curatedRows, load("src/lib/date-night/seasonal-presentation-catalog.ts").SEASONAL_PRESENTATIONS);
+  for (const row of threeRows) assert.deepEqual(seasonalPresentation(row), THREE_CLEARED_PRESENTATIONS[row.seasonalListing.recordId]);
   for (const row of occurrenceRows) {
     assert.deepEqual(seasonalPresentation(row), occurrencePresentations[row.seasonalListing.recordId], "Only the exact cleared occurrence presentation changes");
     assertOccurrenceConsumerCopy(row.seasonalListing.recordId, seasonalPresentation(row).details);
@@ -977,7 +979,7 @@ try {
         await activityCount(page, 2);
         await settleLocal(test); const before = test.rpc.length;
         await page.getByRole("button", { name: "Plan the night", exact: true }).click();
-        const ownerOther = ownerRows.some(item => item.id === row.id) && row.activityTypes.includes("other-halloween-fall");
+        const ownerOther = [...ownerRows, ...threeRows].some(item => item.id === row.id) && row.activityTypes.includes("other-halloween-fall");
         if (ownerOther) {
           await page.getByText("No complete seasonal pair yet.", { exact: true }).waitFor();
           const overlay = overlayRoot(page, "plan");

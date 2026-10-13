@@ -1,3 +1,4 @@
+import { THREE_CLEARED_PRESENTATIONS, THREE_CLEARED_MATERIAL_FACTS, THREE_CLEARED_CONFIDENCE, assertThreeClearedCatalog } from "./test-support/three-cleared.mjs";
 // Source-bound geometry/pixel comparison of real overlay components, using the
 // production stylesheet. Native Details behavior is exercised here; the full
 // existing application browser suites separately cover hydration/RPC/actions.
@@ -30,9 +31,10 @@ const occurrencePresentations = Object.fromEntries(OCCURRENCE_AMENDMENTS.map(({ 
 const out = "audit/browser-results/seasonal-card-layout";
 fs.mkdirSync(out, { recursive: true });
 const req = createRequire(import.meta.url), pure = appModuleLoader();
-const ownerLaneFacts = { ...RANKED_HOLDS_MATERIAL_FACTS, ...OWNER_EVIDENCE_MATERIAL_FACTS };
-const ownerLaneConfidence = { ...RANKED_HOLDS_CONFIDENCE, ...OWNER_EVIDENCE_CONFIDENCE };
+const ownerLaneFacts = { ...RANKED_HOLDS_MATERIAL_FACTS, ...OWNER_EVIDENCE_MATERIAL_FACTS, ...THREE_CLEARED_MATERIAL_FACTS };
+const ownerLaneConfidence = { ...RANKED_HOLDS_CONFIDENCE, ...OWNER_EVIDENCE_CONFIDENCE, ...THREE_CLEARED_CONFIDENCE };
 const rows = [
+  ...pure("src/lib/date-night/missouri-2026-three-cleared-catalog.ts").MISSOURI_2026_THREE_CLEARED_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-owner-evidence-catalog.ts").MISSOURI_2026_OWNER_EVIDENCE_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-ranked-holds-catalog.ts").MISSOURI_2026_RANKED_HOLDS_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-hold-cleanup-catalog.ts").MISSOURI_2026_HOLD_CLEANUP_CATALOG,
@@ -49,8 +51,7 @@ const rows = [
   ...pure("src/lib/date-night/missouri-2026-astra-delta-catalog.ts").MISSOURI_2026_ASTRA_DELTA_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-phase4-recovery-catalog.ts").MISSOURI_2026_PHASE4_RECOVERY_CATALOG,
 ];
-assert.deepEqual(rows.map(row => row.id).sort(), Object.values(occurrenceBaseline).map(row => row.canonicalId).sort(),
-  "Geometry retains all 67 released curated identities exactly once");
+assertThreeClearedCatalog(rows, pure("src/lib/date-night/seasonal-presentation-catalog.ts").SEASONAL_PRESENTATIONS);
 const { HALLOWEEN_THRILL_TYPES } = pure("src/lib/date-night/season.ts");
 const isThrill = row => row.activityTypes.some(type => HALLOWEEN_THRILL_TYPES.includes(type));
 const cssDir = ".vercel/output/static/assets";
@@ -173,6 +174,9 @@ try {
           const paragraphs = await details.locator("p").allTextContents();
           assertAdmissionConsumerCopy(row.seasonalListing.recordId, paragraphs);
           assertOccurrenceConsumerCopy(row.seasonalListing.recordId, paragraphs);
+          if (THREE_CLEARED_PRESENTATIONS[row.seasonalListing.recordId]) {
+            assert.deepEqual(paragraphs, THREE_CLEARED_PRESENTATIONS[row.seasonalListing.recordId].details, "All exact independently cleared new Details survive geometry rendering");
+          }
           if (occurrencePresentations[row.seasonalListing.recordId]) {
             assert.deepEqual(paragraphs, occurrencePresentations[row.seasonalListing.recordId].details,
               "Exact independently cleared occurrence Details in every geometry variant");
@@ -205,7 +209,7 @@ try {
             assert.match(await card.innerText(), /Approx\./);
             assert.doesNotMatch(await card.innerText(), PHASE4_FORBIDDEN_COPY);
             const confidence = ownerLaneConfidence[row.seasonalListing.recordId];
-            assert.equal(await card.locator("[data-seasonal-confidence]").innerText(), confidence === "good" ? "Good confidence" : "Limited details");
+            assert.equal(await card.locator("[data-seasonal-confidence]").innerText(), confidence === "high" ? "High confidence" : confidence === "good" ? "Good confidence" : "Limited details");
             for (const fact of ownerLaneFacts[row.seasonalListing.recordId]) assert.match(await details.innerText(), fact);
             assert.equal(row.seasonalListing.directionsTarget.kind, "visitor-address");
             if (kind !== "options") {
@@ -217,7 +221,7 @@ try {
             assert.match(await card.innerText(), /Approx\./);
             assert.doesNotMatch(await card.innerText(), PHASE4_FORBIDDEN_COPY);
             const confidence = NEXT_MISSOURI_CONFIDENCE[row.seasonalListing.recordId];
-            assert.equal(await card.locator("[data-seasonal-confidence]").innerText(), confidence === "good" ? "Good confidence" : "Limited details");
+            assert.equal(await card.locator("[data-seasonal-confidence]").innerText(), confidence === "high" ? "High confidence" : confidence === "good" ? "Good confidence" : "Limited details");
             for (const fact of NEXT_MISSOURI_MATERIAL_FACTS[row.seasonalListing.recordId]) assert.match(await details.innerText(), fact);
             assert.equal(row.seasonalListing.directionsTarget.kind, "visitor-address");
             if (kind !== "options") {

@@ -1,0 +1,152 @@
+{
+  "base": "3b6b9ed0f4be1581b3b541207b2637183fff57d3",
+  "researchCheckpoint": "f0f0686f005cd4ba265f70154670ddfa3bac6f52",
+  "candidateIdentityCount": 70,
+  "retainedCompleteIdentities": 67,
+  "newRecords": 3,
+  "repositoryTests": {
+    "passed": 1099,
+    "failed": 0,
+    "inheritedSkips": 4
+  },
+  "applicationTests": {
+    "passed": 71,
+    "failed": 0
+  },
+  "typecheck": "PASS",
+  "lint": "PASS: zero errors, six inherited warnings",
+  "safeAuthenticatedMigrationFreeBuild": "PASS",
+  "androidSourceAndIcons": "PASS",
+  "browser": "NOT EXECUTED: zero scenarios; Chromium socket creation denied even after allowed escalated retry",
+  "geometry": "NOT EXECUTED: zero scenarios; provisional explicit Chromium launch denied sockets, removed; final unchanged hosted-default launcher has no installed Playwright executable locally",
+  "hosted": "PENDING exact-head web/browser/geometry and unsigned Android",
+  "fullIndependentAcceptance": "PENDING",
+  "preliminaryFailure": "Before safe build, full suite had 15 missing-compiled-output setup failures. Original retained. Safe build followed by full rerun passed. No failing runtime expectation was weakened.",
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "5449c437f5d58c824383b1a4493f71ad99609cfbf4c3c90d3117b0fb7fca5f8c",
+      "files": 507
+    },
+    "startedAt": "2026-10-13T07:31:20.945Z",
+    "output": {
+      "sha256": "c3d21c8db6f9f8ef1a51537eb578f6d0e45e6c770dd995ff7e1ec11c484d4a7d",
+      "files": 193
+    },
+    "completedAt": "2026-10-13T07:31:26.001Z"
+  },
+  "logs": {
+    "geometry-final-default.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "focused-owner.log": {
+      "bytes": 40940,
+      "sha256": "621889c189f04c95c86bb10935a4b3e2118884dfa9ef27624a2877ccf0db6d13"
+    },
+    "geometry-escalated.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build-proof-complete.log": {
+      "bytes": 353,
+      "sha256": "d2f0a99fc81072e8db6320769ef2656e5b83920b1034adc564624c1f11b734e0"
+    },
+    "browser-ranked-escalated.log": {
+      "bytes": 10228,
+      "sha256": "c0f1498925ef97ef81b0c4cc168f55f8a3d5c513508c015e207a2767a4d16ef2"
+    },
+    "geometry.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "lint-final2.log": {
+      "bytes": 1923,
+      "sha256": "677d7712185546f989c655c4760e536424d8bb9d78aa13849f38201c2ecf5056"
+    },
+    "lint-final.log": {
+      "bytes": 1923,
+      "sha256": "677d7712185546f989c655c4760e536424d8bb9d78aa13849f38201c2ecf5056"
+    },
+    "full-tests-final-clean-env.log": {
+      "bytes": 579137,
+      "sha256": "d882361212cea62fcf0e5d655ee235cb5acdcc264fe424101022ce6321b2cf61"
+    },
+    "full-tests-final.log": {
+      "bytes": 580607,
+      "sha256": "766a7834d04653f2de44d094cd9108a3965b4c8ffef69b36f0adb9d7c694fa29"
+    },
+    "typecheck-1.log": {
+      "bytes": 336,
+      "sha256": "fd701089501caed8921791099b43b18612be047d31390a24cf66a22b1fb8267c"
+    },
+    "safe-build.log": {
+      "bytes": 10317,
+      "sha256": "99908b4eb54a38b06bcfd954a890517731e42e7d2e9efaffa0ffef72da6cfd30"
+    },
+    "auth-dev-probe.log": {
+      "bytes": 76,
+      "sha256": "157bcd1dc8fcf68cc5c168b366a79496f47daf603e9456d1ca3cb4eeb14643c2"
+    },
+    "browser-ranked.log": {
+      "bytes": 10508,
+      "sha256": "68030f91bd4c5217ee95f58946ddf97de9d77dfcb0d8d7ecc12d5252ea52d792"
+    },
+    "build-proof-capture.log": {
+      "bytes": 221,
+      "sha256": "64710a9ec5740170f31a95cf8fdee27de38c1755a53e3c24c3d7fcd811b33a2a"
+    },
+    "seasonal-ranked-holds-verdict.json": {
+      "bytes": 10227,
+      "sha256": "8ca5077ad0945f236b380ab26be1b1debb1d8f7bd72d5d647b96c9360f9a6c06"
+    },
+    "browser-results-build-proof.json": {
+      "bytes": 392,
+      "sha256": "2f8a86fc675a02039e70d349d3d4eda30587e82d3e621cb61e7a52e2497c2850"
+    },
+    "android-source.log": {
+      "bytes": 525,
+      "sha256": "cd4ab08550fb1241ede73bad80df914901b8da3e86204e6888a33ce8734790cc"
+    },
+    "build-proof-final-complete.log": {
+      "bytes": 353,
+      "sha256": "0815bfce5d03b6dcf06dc9172abb5dd83d44d000bfbee74dc9dbc8ca6eb19a90"
+    },
+    "typecheck-final.log": {
+      "bytes": 336,
+      "sha256": "fd701089501caed8921791099b43b18612be047d31390a24cf66a22b1fb8267c"
+    },
+    "seasonal-card-layout-verdict.json": {
+      "bytes": 9053,
+      "sha256": "3b6132a16d20c339589c5c9230a6568600a6e2e4751b2af9288655d0f81961cf"
+    },
+    "full-tests-2.log": {
+      "bytes": 579220,
+      "sha256": "36fdccecda2f3b918cc7cab94b800ed3d0ed02b571586376761f30cbd7d77538"
+    },
+    "build-proof-final-capture.log": {
+      "bytes": 221,
+      "sha256": "681200e0360ff517c004c99fa4485983e69ad468024a399d60b0bd3ba39f2fb6"
+    },
+    "safe-build-final.log": {
+      "bytes": 10317,
+      "sha256": "1ce0df0c204c542e2071ada2a6c44f16e16e111ce0f95a28eef2f00f70fd2a7d"
+    },
+    "typecheck-final2.log": {
+      "bytes": 336,
+      "sha256": "fd701089501caed8921791099b43b18612be047d31390a24cf66a22b1fb8267c"
+    },
+    "lint-1.log": {
+      "bytes": 1923,
+      "sha256": "677d7712185546f989c655c4760e536424d8bb9d78aa13849f38201c2ecf5056"
+    },
+    "full-tests-1.log": {
+      "bytes": 562461,
+      "sha256": "9ee366157c0a935126a340e6d231d22053a51360cc52460336bb977d72fb6c3c"
+    }
+  },
+  "authDevProbe": "INDETERMINATE: dev-only endpoint unobservable; not a proved auth mismatch",
+  "additionalPreliminaryFailure": "Build shell exported VITE_AUTH_ENABLED=true into one npm test run; two wrapper environment expectations failed. Full suite rerun with shell override removed; no source/test changes."
+}
