@@ -1,3 +1,28 @@
+# CURRENT — PR #69 SOURCE AND ANDROID PASS; WEB ACCEPTANCE STILL HOLD (2026-10-13)
+
+- Exact Draft PR69 **6c619adda4d9ef3b2683befb2ca874b257505eb2** /tree **236110f86f9f3dc8c0cf0a5a664be79e2569bc43** /sole parent **3b6b9ed0f4be1581b3b541207b2637183fff57d3** unchanged.70 candidate/67published identities,18paths.
+- **Fresh independent source and locally executable gates PASS:** complete prior67 object/presentation/freshness parity; exactthree projections;528 independent adversarial assertions,12 mutation controls;1,099 repository+71application PASS/four skips;typecheck/lint0errors6warnings;safe authenticated migration-free build.507-input fingerprint **5449c437f5d58c824383b1a4493f71ad99609cfbf4c3c90d3117b0fb7fca5f8c**.
+- **Android exact-head automated original-artifact acceptance PASS**, run **38365309628 /94** completedSUCCESS. **Web38365309642 /423 remains IN_PROGRESS** at fresh checkpoint read; responsive browser/geometry/original evidence acceptance **PENDING/HOLD**. Source/native PASS does not imply overall release-ready.
+- Main3b6/tree577d680f089e0a6e6892da2bdd6419132b890354; **production dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ READY/source3b6** unchanged. Supported rollback3mP/source8353 and alias limits retained. No PR69 release authority.
+
+## ANDROID ORIGINALS / PRECISE LIMITS
+- Validation artifact **11796506980**,6,866,413 bytes,SHA256 **9354be924a61c60e38f396a529573902648d12759103f53d6009e958ba02ffd3**;lint artifact **11796272952**,24,070 bytes,SHA256 **787315bfab5aa28d4904455f9968ea9bfd3100039616eda94a7a8abb8f017450**.API/actualhash/length/CRC/member checks PASS.
+- Original unsigned AAB3,103,535 bytes/SHA **4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee**;debugAPK4,174,862 bytes/SHA **dc02c1af48243cdf49a9bf08a3f5c6a1b765960827ba51ff23bd315e846b2c62**. Compiled manifest/config/HTTPSfallback/launcher and original checksum/proof independently checked; no regenerated build.
+- Artifact naming uses syntheticPRmerge3bc820d2ac14b897d367cd0a98c45b0ab2ebe08b; source log/receipt/workflow checkout exact6c619. Synthetic merge tree independently equals candidate; no unreviewed-source transfer.
+-37Gradle NO-SOURCE tasks include allthree native unit test tasks; no native unit execution/physical/emulator claim.14inherited native warnings/zeroerrors separate from sixwebwarnings. First release signing guard expectedFAIL without uploadkey; unsigned validation buildPASS; sign jobSKIPPED. No key/Play activity.
+- Wrapper loads live67-record HTTPS production, not bundled candidate70 behavior. **Physical Android/WebView/GPS HOLD**, installedPWA/realOS permission/navigation unverified.
+- Private durable artifact upload not yet confirmed at this checkpoint; original local verifier evidence exists, final Library recovery identities must be recorded when confirmed.
+
+## IMMUTABLE REPORTS / NEXT
+- Independent source report SHA256 **902f53a10f0e0f578fab0bab7b78e123a6f10ddca86750413f0684a697ad5c5b**.
+- Android report SHA256 **50821346f3c9ef52387abb8dac5655dbb4a7a12f4e0c562104388c4f4bbfb906**;manifest **cf75f493f6967f59aa40816feb1b41fe2146020bd9772d4b23feeddbe37afff3**.
+- NEXT finish exact-head web/browser/geometry, independently inspect all original verdicts/measurements/screenshots/source proofs, preserve durable evidence, then final continuity gate. No PASS transfer or merge/deploy.
+- Prior pre-build/auth-environment/transport failures and localbrowser0 remain preserved. Dev-onlyauth INCONCLUSIVE. Seven publishedsource/nineownerHOLDs and farm/closed dispositions unchanged; no extra import.
+- PR61 PARKED; “Radial discovery becomes an audit layer.” future intent. Other inherited limits retained.
+- Docs-only checkpoint; entire prior **c2784bd828b0a833fa57b9fc5242ddaaa6be4b53** preserved; fresh main/prod/PR/run/fullblobread beforewrite. Full readback required. Source/android pending language below is historical; finaloverallacceptance remains HOLD.
+
+---
+
 # CURRENT — PR #69 EXACT THREE-RECORD CANDIDATE FROZEN; ACCEPTANCE PENDING (2026-10-13)
 
 ## CURRENT
