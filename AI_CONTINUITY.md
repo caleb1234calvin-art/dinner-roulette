@@ -1,3 +1,31 @@
+# CURRENT — PR #67 DISUSED-EVIDENCE REMEDIATION FROZEN; ACCEPTANCE PENDING (2026-10-13)
+
+## CURRENT
+- Draft PR #67 / integration/missouri-owner-evidence-four-2026-10-13 now points to **8353e60056fb0568360c5c13878d102880395d9f**, tree **a10e02b3151fda349322b612c371ddacd88350e1**, sole parent **b8776e319fcc75066fef17f8a617d2144f74e179**. This supersedes b877 as the active candidate; b877 remains failed-review history.
+- Main **0032d913efaca4bd97d730414a50a5b01e1a2099**, tree **f0d0a777ec90d5e82cc089d71b5c2eaf0646f21b**; production **dpl_6Zsbjuca7iB6y5wPhpRk11xRYAFs READY** on main; 63 published identities. Candidate remains four additions / 67 identities. Immediate supported rollback **dpl_45iETuFCFYrnp2r3wV8DxdvioC5a** on2cb05f37126eebd10de3182f1f8db40434e7d557. No production change or release authority.
+- **New local author gates PASS:** 1,064 repository +71 application tests; zero failures, four inherited skips; typecheck; lint zero errors/six inherited warnings; safe authenticated migration-free build; local Android source/icon readiness. Hosted/browser/geometry/Android and fresh independent exact-head review remain PENDING/HOLD. No overall runtime PASS or release readiness claimed.
+
+## FAILED CANDIDATE / NARROW CORRECTION
+- Independent b877 verdict **HOLD**, finding **RUNTIME-01**: exact legacy park event with evidence-only disused lifecycle and absent top-level lifecycle became ordinarily browse-eligible. Three failing cases were standalone legacy provider and both provider/canonical merge orders: **50 checks /47 PASS /3 FAIL /one distinct defect**. Prior63 catalogs/presentations and all18 paths otherwise reviewed. Earlier author25 focused tests did not cover this independent case.
+- Verifier's first custom probe accidentally inherited default Open Now filter; original preserved, explicit openNowOnly:false correction exposed the genuine disused defect. This harness history does not negate the final defect.
+- Successor changes only **src/lib/date-night/curated-policy.ts**, **scripts/seasonal-owner-evidence.test.mjs**, **audit/owner-evidence-four-2026-10-13/PRE-FREEZE-ATTEMPTS.json**. Preserve permanent-closure precedence then disused from top-level and discoveryEvidence. No widening of alias names, distance authority, unknown saved identities or receipt requirements; identity.ts remains baseline-exact.
+- Author26 focused tests cover both lifecycle-negative kinds, mixed positive evidence, evidence ordering, top-level precedence and merge orders. These are author tests; independent closure remains required.
+- b877 Web run **38329334897** and Android **38329334848** are retained failed-candidate receipts. Android reported PASS; original web had passing subsets and remaining work at successor freeze. Their results do not transfer automatically to8353 and do not override b877 independent HOLD. No cancellation or rewriting of failed history.
+
+## NEXT / HOLD
+1. Complete exact8353 hosted validation, browser/geometry, Android and fresh independent source/adversarial review, including RUNTIME-01 closure. Record exact new run IDs and evidence when available.
+2. Preserve every source/evidence boundary and four accepted projections, existing63 unchanged, expiry/cache/no2027/current-policy/negative lifecycle/navigation safeguards. No additional source changes without a new freeze and affected gate reruns.
+3. Stop only after complete acceptance at VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION; no merge/deployment authority.
+- Nine owner-field HOLDs and lifecycle review18 fresh-evidence HOLDs unchanged and separate. Physical Android/WebView/GPS HOLD; signing/Play out of scope. PR61 PARKED; “Radial discovery becomes an audit layer.” remains future intent only. Inherited warnings/skips/clipping and approximate/Open Now/provider limitations persist.
+
+## EVIDENCE / CONTINUITY
+- B877-INDEPENDENT-HOLD.json: 1,324 bytes, SHA256 **b1049e7d33134a98f9d20c4dba72521baadcbcae06424b80c9d867c729536d28**. B877-MANIFEST.json:1,344 bytes, SHA256 **be43b9f5b65d04032521bcf168cc99b050de1e75f5c8caf802af3932a605f63c**; binds probe/output/source diff and harness correction history.
+- Original pre-freeze failure ZIP:309,877 bytes, SHA256 **ae2b64570a9d9d012d25ec101472569ce0ea5310825d07f57b27c4fca8a009a8**. Candidate audit file retains failures/log hashes and complete successor local results.
+- Full public changed-path inventory and private research Library index remain in preceding f628 checkpoint. This successor adds no new files beyond the three listed above; overall scope remains18 paths.
+- Documentation-only canonical branch; full prior **f62828f54feec12212ba7b1f68f1735a35580ff2** body preserved below. Fresh remote main/production/PR/head/tree/parent and current continuity were read before writing. Full readback required. Older active-head language is superseded.
+
+---
+
 # CURRENT — PR #67 FOUR-RECORD CANDIDATE FROZEN; HOSTED/INDEPENDENT GATES PENDING (2026-10-13)
 
 ## CURRENT
