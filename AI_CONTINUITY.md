@@ -1,3 +1,48 @@
+# CURRENT — PR #68 RELEASE ACCEPTANCE PASS; BOUNDED MISSOURI REVIEW NEXT (2026-10-13)
+
+This supersedes the PR68 owner-decision stop. Owner mission Sentinel_a5f21b55107081918d62404a0b159b1b approved exact3b6/tree577 publication and one-release waiver, then bounded postrelease advancement. **PR68 waiver consumed; no next-candidate release authority.**
+
+## CURRENT / RELEASE
+- **PR68 RELEASE PASS WITH INHERITED LIMITATIONS.** Non-force expected-head fast-forward at2026-10-13T06:33:49Z; PR68 merged/closed exact SHA **3b6b9ed0f4be1581b3b541207b2637183fff57d3**, tree **577d680f089e0a6e6892da2bdd6419132b890354**, sole parent **c33c8513eb7e2b2ec19248dd76e5effe04af6e51**, prior released ancestor8353e60056fb0568360c5c13878d102880395d9f. No generated merge/source change.
+- **Production dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ READY** at2026-10-13T06:34:07.063Z, source exact3b6; immutable https://dinner-roulette-gdtsdwx99-minions-9e2c.vercel.app. All five actual mappings and HTTP200 verified: pickforus.app,www.pickforus.app (redirects apex),dinner-roulette-chi.vercel.app,dinner-roulette-minions-9e2c.vercel.app,dinner-roulette-git-main-minions-9e2c.vercel.app.
+- **67 identities retained, two amendments live.** Hollows addsOctober16,17,23,31 and exact finalOctober31 23CDT /November1 04Z cutoff. Nightmare says finalNovember1 20:30CST listed ticket time, not closing; unchangedNovember2 02:30Z cutoff. All13 approved operations exact, other65 complete objects/unprojected fields unchanged.
+- Fresh preflight verified immutable identities/ancestry/23paths/checks, production/aliases/cutoffs/rollback and safe build. Main protected:false/rulesets[]; detailed protection403/applicable-rules400 remain access limits. Exact one-release waiver consumed; no protection/settings changes.
+- Effective build remains VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production. No ordinary migration-chaining npm build.
+
+## LIVE / INDEPENDENT ACCEPTANCE
+- Actual cloud Chromium, current real date/no interception/no clock mutation: both actual Picks/expanded Details, supported addresses/Directions, approximate labels, compact notice/confidence, generic ride links PASS. Both Save→Favorites→reload→Pick/reopen preserve exact amended text; one eligible identity, no duplicate. Open Now0 with allcontrols disabled.
+- Ordinary seasonal-off Columbia six eligible pool/four options usable; partial provider failure explicitly disclosed. No live provider reliability PASS, external navigation or rideshare booking.
+- Independent served-source **PASS**: all67 actual served catalog objects/presentations equal exact source;13 approved fields and65 unchanged complete records. Five aliases currentassets/HTTP200; immutable/apex index/routes/hours byte-identical.
+-503-input fingerprint **068ad01b4a3241c1eb6347c6e83b8739b20747ac7ab1bfa80df3f393f130f8c0** independently reproduced.133 complete build events verify successful client/SSR build/no migration. Original15 web ZIPs914,419,599 bytes freshly rehashed and selected original proof/verdict members checked.
+- Fresh106 deterministic source probes and36 actual-served compiled-policy checks PASS. Exact source/build/cutoff binding transfers accepted expiry ±1ms, stale saved/cache/receipt, held-RPC at cutoff, negative lifecycle and no2027 evidence. No live future-clock test or new full1372-seasonal/10ordinary suite claimed.
+- No per-record live Plan journey newly claimed; prior actual component/static geometry/action coverage remains the bounded evidence. Dev-only auth probe remains INCONCLUSIVE.
+
+## ROLLBACK
+- **Current supported immediate rollback dpl_3mPcvp1LGsjtQ3MVLgRUdmAzejN9 READY**, source **8353e60056fb0568360c5c13878d102880395d9f**. Authenticated enabled postrelease2PV→3mP dialog inspected/canceled. Actual restore untested/unneeded.6Zs retained history, not current selectable earlier Hobby target.
+- Automatic set only apex/www/chi. Generated project/branch aliases require separate postrollback verification; STOP on mismatch without improvised alias/settings edits. Rollback does not rewrite main and may disable automatic assignment. Incorrect first alias query against target returned empty; correct current-deployment query identified three aliases, both receipts retained.
+
+## NEXT — BOUNDED POSTRELEASE ADVANCEMENT
+After this full checkpoint readback:
+1. Work ranked nine published fresh-source HOLDs and upcoming lifecycles only where a bounded new check can resolve a real remaining field; do not repeat completed30-record review as a new18-HOLD loop.
+2. Nine owner-field records remain new-evidence-only. No repeated blocked-social attempts without materially new owner/public evidence.
+3. Delta-only discovery/re-clearance, deduplicating67 published identities,134 historical leads, current HOLDs and expired records. No statewide restart, residential import, speculative enrichment or PR61 work.
+4. Independently verify useful proposals; build one fresh-main nonproduction candidate from cleared items, preferred3–10, smaller high-value allowed without padding. Full exact-head tests/build/browser/geometry/Android and fresh independent review.
+5. Publish/read back stable review/ranking/freeze/validation checkpoints. STOP at VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION for that next candidate. Do not release it automatically.
+
+## HOLD / LIMITATIONS
+- Nine published source HOLDs: Liberty,Campbell's,Creepyworld,Darkness,Cobb,Tommy's Ballwin/O'Fallon,Grotto,Ozark Nightmares. Nine owner HOLDs: Hannibal,Bakersfield,Rising,Terrified Existence,Twisted Minds,Dark Lords,Zombie World,Lemp,Macabre. No closure/removal follows retrieval failure; prior evidence-triggered ranking retained.
+- Prior completed30 review7valid/2amendments(nowlive)/9sourceHOLD/3expiring/9ownerHOLD remains historical starting evidence, not a fresh universal check. Boone/BrokenHour/Pomme cutoffs unchanged.
+- Physical Android/WebView/GPS HOLD; signing/Play outside scope. Six web/14native warnings,fourdocskips,native NO-SOURCE/signing SKIPPED, inherited320px Directions/Liberty overflow,ellipsis/rounding,approximate placement,conservative Open Now,temporaryOther icon and no provider/weather/ticket guarantee retained.
+- **PR61 PARKED. “Radial discovery becomes an audit layer.”** future intent only.
+
+## EVIDENCE / CONTINUITY
+- Private release archive **libfile_5d869679cf448191b00852b86552e20e**, PR68-release-acceptance-evidence.zip,62,030,756 bytes,1,505CRC-verified members,SHA256 **40e7ef119d020a8773bd533ea89f53631888abd305f27624e90db50ae42def65**.
+- Release report SHA256 **2cc2248671e643c65e442bd36626d0d4afbeb68097cbc6220906b3196c178722**; independent served report **fe687c4a9f42ba851a27f5cc9cdd953291f305f48ed84eceb6a569a270de308f**, served manifest **0e8212450b546b48e1541835ea09c9dee6c8a8a3da215f79b424f4699109f20c**.
+- Initial HTTP helper missing requests stopped before network; urllib succeeded. Reviewer raw/exported comparison mapping corrected and preserved; no product change or waived field. Historicalc33 failed assertion/transport attempts and exact candidate evidence remain recoverable below.
+- Docs-only deployment-disabled canonical branch; full prior **8e1a9fecb9b8ad5a9d48c75d97adb2b7d157b7b2** preserved. Fresh main/prod/rollback/PR/current complete continuity read; full readback before postrelease research. Older CURRENT/NEXT/HOLD entries historical.
+
+---
+
 # CURRENT — PR #68 VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION (2026-10-13)
 
 **TERMINAL STOP:** PR67 release → bounded postrelease review → next candidate mission is complete after this checkpoint readback. Do not merge/deploy PR68 or start another research batch without the relevant owner decision.
