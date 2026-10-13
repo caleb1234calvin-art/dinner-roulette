@@ -1,3 +1,48 @@
+# CURRENT — PR #67 RELEASE AND SCOPED PRODUCTION ACCEPTANCE PASS (2026-10-13)
+
+This entry supersedes the prior PR67 owner-decision stop. Owner message Sentinel_a097d494a1e0819195f2fa87a51be5b8 approved exact8353/treea10e publication with fresh preflight and one-release waiver, then bounded postrelease Missouri advancement. **PR67 waiver consumed. No next-candidate release authority.**
+
+## CURRENT
+- **PR #67 RELEASE PASS WITH RETAINED LIMITATIONS.** Expected-head, non-force fast-forward at2026-10-13T03:20:13Z published exact main **8353e60056fb0568360c5c13878d102880395d9f**, tree **a10e02b3151fda349322b612c371ddacd88350e1**, sole parent **b8776e319fcc75066fef17f8a617d2144f74e179**, previous released ancestor0032d913efaca4bd97d730414a50a5b01e1a2099. PR67 merged/closed same SHA, no generated merge tree/source changes.
+- **Production dpl_3mPcvp1LGsjtQ3MVLgRUdmAzejN9 READY**, source8353; READY2026-10-13T03:20:29.560Z; immutable https://dinner-roulette-rao0283eb-minions-9e2c.vercel.app. No alias error. All five mappings and actual HTTP200 verified: pickforus.app, www.pickforus.app (redirects apex), dinner-roulette-chi.vercel.app, dinner-roulette-minions-9e2c.vercel.app, dinner-roulette-git-main-minions-9e2c.vercel.app.
+- **67 published identities.** Four additions Waco, Dark Nightmares, Farrington and Mid America Adventure Fright Fest; all prior63 complete catalog/presentation objects unchanged. Independent actual served67 catalog objects and67 presentations deep-equal exact source.
+- Fresh release preflight confirmed exact source/tree/ancestry/diff/checks, future cutoffs, production and rollback. Main protected:false/rulesets[]; detailed protection403 and applicable-rules400 remain limitations, not successful reads. Exact PR67 one-release waiver consumed; no repository/Vercel/protection setting changed.
+- Effective authenticated migration-free dashboard build remains VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production. Ordinary migration-chaining npm build was not used. Existing exact-head verification and failed b877 history preserved.
+
+## PRODUCTION ACCEPTANCE
+- Actual cloud Chromium production flow, real current date/no interception/no clock manipulation: all four Details, supported addresses/Directions, approximate labels, compact notice/confidence, generic Uber/Lyft targets inspected. No external navigation or rideshare booking executed.
+- Waco saved→Favorites→reload→Pick/reopen retains exact current Details. Waco and park Open Now returned0/disabled Pick/Options/Plan despite display schedules. Dark maintains33100 address and all gate/ticket/trail/guardian/contact/withdrawal/access qualifications; Farrington date/start/unknown close/sponsor; park date/chaperone/ID/age12 costume/mask exceptions/access facts retained.
+- Ordinary seasonal-off Joplin returned59 eligible records and four options. Buckner live provider failure was accurately disclosed while curated results stayed usable; no provider-reliability PASS implied. Four screenshots and full AX recaptures preserved; no new geometry/narrow-width claim.
+- Independent served-source PASS:498 build inputs fingerprint **b35b8b001328e9b95c6bc6b3289991840544023bdbd45799fa16147336d7e113**; immutable/apex three bundles byte-identical and all alias asset names identical. All15 accepted web ZIPs/9,046members/1,371 seasonal+ordinary verdicts reverified. Fresh source50/50, focused26/26 and actual compiled negative-policy20/20 PASS.
+- Source-bound future-date/cache/expiry/no2027 proof transfers only to this exact source/cutoff/build input. No live future-clock test claimed. Waco2026-11-01T04:30Z queue deadline; Dark05:00Z last ticket; Farrington2026-10-19T05:00Z date-only retention; park2026-11-02T03:00Z event end. No final-exit or machine-hour inference; owner evidence2026-only/attested, not independently social-refetched.
+
+## ROLLBACK
+- **Current supported immediate rollback dpl_6Zsbjuca7iB6y5wPhpRk11xRYAFs READY**, source **0032d913efaca4bd97d730414a50a5b01e1a2099**. Authenticated enabled postrelease dialog3mP→6Zs inspected and canceled. Actual restoration untested and unnecessary.
+- Prior45i remains retained READY history, not claimed current selectable Hobby target.
+- Automatic rollback alias set contains only **pickforus.app, www.pickforus.app, dinner-roulette-chi.vercel.app**. Generated project/branch aliases are outside that set. Any authorized restore must verify all five aliases and STOP on mismatch; no improvised alias/settings changes. Instant Rollback does not rewrite Git main and disables automatic production assignment until separately restored.
+
+## NEXT — OWNER-AUTHORIZED BOUNDED POSTRELEASE REVIEW
+After this checkpoint is published and fully read back, continue:
+1. Revalidate the18 fresh-source-review HOLDs and imminent/near-imminent lifecycle records.
+2. Re-rank HOLDs; revisit nine owner-field records only with materially new owner/public evidence. If absent, retain HOLD without repeatedly fighting blocked social sources.
+3. Reassess true net-new automated HOLDs only where materially new authoritative evidence exists; delta-only discovery, no statewide restart.
+4. Independently review genuinely cleared records/amendments and build one fresh-main bounded nonproduction candidate. Preserve2026-only provenance, address/approximate placement, conservative Open Now, source-bound lifecycle, saved/cache/negative/duplicate policy.
+5. Publish/read back stable lifecycle/source review, HOLD ranking, candidate freeze and final exact-head validation checkpoints. Stop at **VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION** for that next candidate. No automatic release.
+
+## HOLD / LIMITATIONS
+- Nine owner-field HOLDs: Hannibal, Bakersfield, Rising, Terrified Existence, Twisted Minds, Dark Lords, Zombie World, Lemp, Macabre. Separate18 fresh-review HOLDs are not closure or automatic removal. Prior lifecycle28 field-valid/3expiring/18HOLD/0amendments remains the starting ledger, not a new revalidation.
+- Physical Android/WebView/GPS HOLD; signing/Play outside scope. Six web/14 native warnings, four documentation skips, native NO-SOURCE/signing SKIPPED retained.
+- Inherited320px Directions35px excess and Liberty6px overflow remain no-worse only; title/category ellipsis and rounding qualification remain. Approximate locations, conservative Open Now, temporary Haunted House icon forOther, no live provider/weather/ticket guarantee.
+- **PR61 PARKED. “Radial discovery becomes an audit layer.”** remains future intent only.
+
+## EVIDENCE / CONTINUITY
+- Release report SHA256 **6457498bfbee8be59733192473aa589b8a78a97d72688ea5bc694337acb27666**. Private94-member release ZIP **libfile_0593b4a3641c81919f231ae2d4e001ba**,1,413,081 bytes,SHA256 **ccc8cdee3842a6d256a22461acca8acc082fa7dbe3d77cd17361202f6c48137e**;93 manifest files size/hash/CRC verified.
+- Independent served report SHA256 **776d77baf6f32d2dee12d063e427f7c5e59b7861ef081527682d95ada47f040d** within release evidence. Source preparation excluded ignored Python bytecode via exact committed archive; harness corrections retained. No full new suite/build or live future-clock execution claimed.
+- Previous exact candidate, original17 CI archives and research recovery manifests remain indexed in prior entry. Raw private images/chat remain excluded from public repository.
+- Documentation-only on deployment-disabled integration/continuity-refresh-2026-10-07. Full prior **4e7631fce78cba0b7c50d6c5cf73007609c184ed** body preserved. Fresh main/production/rollback/PR/tree/parent and complete current continuity checked before writing; full readback is the prerequisite to postrelease research. Older CURRENT/NEXT/HOLD language below is historical.
+
+---
+
 # CURRENT — PR #67 VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION (2026-10-13)
 
 This is the terminal stop for the PR66 release → owner-evidence → next-candidate mission. **Do not automatically merge, deploy or start another batch.** New owner release authorization and fresh preflight are required for PR67. The preceding pending-evidence/HOLD gate is superseded by complete independent acceptance below; historical failed candidates remain history.
