@@ -1,3 +1,53 @@
+# CURRENT — PR #69 EXACT THREE-RECORD CANDIDATE FROZEN; ACCEPTANCE PENDING (2026-10-13)
+
+## CURRENT
+- Draft PR **#69**, https://github.com/caleb1234calvin-art/dinner-roulette/pull/69; branch **integration/missouri-three-cleared-2026-10-13**.
+- SHA **6c619adda4d9ef3b2683befb2ca874b257505eb2**, tree **236110f86f9f3dc8c0cf0a5a664be79e2569bc43**, sole parent **3b6b9ed0f4be1581b3b541207b2637183fff57d3**.
+- Three cleared additions only: Rowe, Meramec, Pets and Pumpkins. **70 candidate identities; all67 previous complete catalog/presentation objects and freshness unchanged.** New catalog/presentations plus existing discovery/cache-policy membership registration; no policy algorithm/component/CSS/dependency/workflow/native/deployment-setting changes.
+- Main3b6/tree577d680f089e0a6e6892da2bdd6419132b890354; production **dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ READY/source3b6**,67published identities unchanged. Supported rollback3mP/source8353 and alias limitations retained. No candidate release authority; PR68 waiver consumed.
+
+## VALIDATION / FAILED ATTEMPTS
+- Author **1,099 repository +71 application PASS**,zero failures/four inherited skips; typecheck PASS;lint0errors/six inherited warnings; safe authenticated migration-free build PASS; Android source/icon checks PASS. Independent source snapshot exact-tree match reported; **complete independent/hosted/browser/geometry/Android acceptance PENDING/HOLD**.
+- Exact-head Web **38365309642 /423** queued and Android **38365309628 /94** in progress at launch. No prior candidate PASS transfers.
+- Author pre-build full suite had15 missing-output setup failures; subsequent run accidentally inherited build-only auth override and failed two environment-wrapper tests. Both preserved; final tests rerun without that shell override after safe build. No runtime/test assertion weakened for setup errors.
+- Local browser/geometry **zero scenarios executed**: Chromium socket creation denied even after allowed escalated retry; provisional local geometry executable override removed, final hosted-default Playwright executable unavailable locally. Hosted browser remains required; no local browser PASS.
+- Publication collector stalled while reading final local documents before create_tree; interrupted, remote no-branch/no-PR confirmed. Bounded collection then produced exact local-matching tree/commit/branch/PR. No source mutation or publication success inferred from interrupted attempt.
+
+## SCOPE / NEXT
+- Rowe27 finite activity dates/no barn-store-only midweek, exactOctober25 23Z cutoff. Meramec vehicle-road16:45 closure, trick-or-treat17 start-only/date-onlyOctober18 05Z/noendsAt. PetsOctober24 11–16/rain-or-shine/square-only point/exact21Z. All null machine hours/neverOpenNow/addressDirections/external ridepicker,2026only/no recurrence.
+- Historical tests use complete pinned released67 registry plus exact independent three, not blanket exemptions. Rowe valid Corn Maze Scare+ordinarySettle Plan; Other-only Meramec/Pets negative Plan controls must not fabricate a pair. Geometry70identities and High/Good confidence coverage.
+- NEXT complete exact6c hosted/fullregressions and fresh independent review of18paths, identity/cache/saved/negative/expiry/pendingRPC/no2027/navigation/Details/geometry/ordinaryDateNight/Android. Independently inspect originals; bounded verified export permitted.
+- Stop after full independent PASS and final continuity readback at VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION. No merge/deploy/further research expansion.
+
+## COMPLETE18-PATH INVENTORY
+- audit/three-cleared-2026-10-13/AUTHOR-LOCAL-VALIDATION.json
+audit/three-cleared-2026-10-13/CLEARED-PROJECTIONS-R1.json
+audit/three-cleared-2026-10-13/IMPLEMENTATION.md
+scripts/seasonal-admission-amendments.test.mjs
+scripts/seasonal-card-layout-browser.mjs
+scripts/seasonal-hold-cleanup.test.mjs
+scripts/seasonal-next-missouri.test.mjs
+scripts/seasonal-occurrence-amendments.test.mjs
+scripts/seasonal-owner-evidence.test.mjs
+scripts/seasonal-ranked-holds.test.mjs
+scripts/seasonal-ten-record-browser.mjs
+scripts/seasonal-three-cleared.test.mjs
+scripts/test-support/three-cleared-baseline.json
+scripts/test-support/three-cleared.mjs
+src/lib/date-night/curated-policy.ts
+src/lib/date-night/missouri-2026-three-cleared-catalog.ts
+src/lib/date-night/search.ts
+src/lib/date-night/seasonal-presentation-catalog.ts
+
+
+## HOLD / CONTINUITY
+- Seven published source HOLDs/nine ownerHOLDs and all noncleared research outcomes unchanged. LoneJack factual-only placementHOLD; Beggs scoped-fieldsPASS but complete factual/access/placement/runtimeHOLD; Castle terminal2026closure. None imported.
+- Physical Android/WebView/GPS HOLD;signing/Play outside scope. PR61 PARKED; “Radial discovery becomes an audit layer.” future intent. Inherited warnings/skips/clipping/approximate/OpenNow/provider limits retained.
+- Exact author receipt **audit/three-cleared-2026-10-13/AUTHOR-LOCAL-VALIDATION.json** preserves logs/build proof and failures; implementation scope and independent projection hash accompany it. Private research recovery index in previous checkpoint.
+- Docs-only canonical branch. Full prior **f0f0686f005cd4ba265f70154670ddfa3bac6f52** preserved. Fresh main/prod/PR/head/tree/parent/current fullblob read; full readback required. No release-ready claim.
+
+---
+
 # CURRENT — POST-PR68 RESEARCH PASS FOR EXACT THREE; IMPLEMENTATION NEXT (2026-10-13)
 
 ## CURRENT
