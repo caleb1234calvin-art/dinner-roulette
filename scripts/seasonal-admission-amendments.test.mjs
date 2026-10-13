@@ -24,9 +24,13 @@ const releasedPlaces = releasedCatalog.map(record => ({
   ...(!Object.hasOwn(record, "lon") ? { lon: record.seasonalListing.placement.lon } : {}),
 }));
 const manifest = readPinned("admission-catalog-file-hashes.json", "8f1186cbef39690daf693a7362ed29d5cbc19d492d17edf122473d8eea94b578");
-const files = readdirSync("src/lib/date-night").filter(name => /^missouri-.*catalog\.ts$/.test(name)).map(name => `src/lib/date-night/${name}`).sort();
+const files = readdirSync("src/lib/date-night").filter(name => /^missouri-.*catalog\.ts$/.test(name) && name !== "missouri-2026-owner-evidence-catalog.ts").map(name => `src/lib/date-night/${name}`).sort();
 const rows = files.flatMap(file => Object.entries(load(file)).filter(([key]) => key.endsWith("_CATALOG")).flatMap(([, values]) => values));
-const { SEASONAL_PRESENTATIONS } = load("src/lib/date-night/seasonal-presentation-catalog.ts");
+const { SEASONAL_PRESENTATIONS: allPresentations } = load("src/lib/date-night/seasonal-presentation-catalog.ts");
+// Preserve the complete historical 63-record amendment contract. The new exact
+// 67-record membership and no-extra gate lives in seasonal-owner-evidence.test.
+const newIds = new Set(load("src/lib/date-night/missouri-2026-owner-evidence-catalog.ts").MISSOURI_2026_OWNER_EVIDENCE_CATALOG.map(row => row.seasonalListing.recordId));
+const SEASONAL_PRESENTATIONS = Object.fromEntries(Object.entries(allPresentations).filter(([id]) => !newIds.has(id)));
 const { seasonalPresentation } = load("src/lib/date-night/seasonal-presentation.ts");
 const { getCuratedSeasonalPlace } = load("src/lib/date-night/curated-policy.ts");
 const serializedRows = values => JSON.parse(JSON.stringify([...values].sort((a, b) => a.id.localeCompare(b.id))));

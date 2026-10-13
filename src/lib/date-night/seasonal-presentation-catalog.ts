@@ -3,6 +3,47 @@ import type { SeasonalPresentation } from "./seasonal-presentation";
 /** Explicit independently reviewed visitor copy. Full facts remain in immutable audit
  * artifacts and catalog metadata; no audit narratives are rendered as consumer prose. */
 export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentation>> = {
+  "DELTA2-WACO": {
+  "canonicalId": "date-night-mo26-waco-schoolhouse-haunt",
+  "confidence": "good",
+  "details": [
+    "October 9–10, 16–17, 23–24 and 30–31, 2026.",
+    "Haunt 7:30–11:30 PM; tickets from 7 PM. Guests in line by 11:30 PM are admitted; final exit time is unconfirmed.",
+    "Cash or card accepted. Location is approximate."
+  ]
+},
+  "DELTA3-DARK-NIGHTMARES": {
+  "canonicalId": "date-night-mo26-dark-nightmares-haunted-forest",
+  "confidence": "good",
+  "details": [
+    "October 16–17, 23–24 and 30–31, 2026. Gates open 7:30 PM; last tickets at midnight. Check your ticket time; closing time is unconfirmed.",
+    "1.2-mile wooded trail; closed-toe shoes required. No strollers or scooters, and no separate waiting area for young children.",
+    "Recommended for ages 14+. Under 18 requires a guardian-signed waiver.",
+    "Optional Blood Pass requires a separate waiver and allows touching, pulling, pushing, shoving or dragging. Remove the necklace to withdraw.",
+    "Arrive 15 minutes before your ticket slot; late entry depends on capacity. Use only the operator-provided flashlight. Location is approximate."
+  ]
+},
+  "DELTA3-FARRINGTON": {
+  "canonicalId": "date-night-mo26-farrington-haunted-hayride",
+  "confidence": "good",
+  "details": [
+    "October 17–18, 2026; starts 7 PM nightly. Closing time is unconfirmed.",
+    "Farrington City Park; sponsored by Windsor Holiday Collective.",
+    "Location is approximate."
+  ]
+},
+  "NEW-MID-AMERICA-FRIGHT-FEST": {
+  "canonicalId": "date-night-mo26-mid-america-fright-fest",
+  "confidence": "good",
+  "details": [
+    "Fright Fest: October 16–18, 23–25, 30–31 and November 1, 2026. Fridays/Saturdays 6–11 PM; Sundays 6–9 PM.",
+    "Valid park admission required; haunted attractions require a separate wristband or maze pass.",
+    "Ages 16 and under need a chaperone age 21+ with government photo ID (up to 6 minors). The chaperone must enter with them, stay in the park and remain reachable throughout the visit.",
+    "Ages 17+ should bring government photo ID to verify age. Costumes only for ages 12 and under; no costume masks. Costume makeup may cover no more than half the face. Masks for reducing the spread of germs are permitted.",
+    "All bags are screened; weapons prohibited. Location is approximate."
+  ]
+},
+
   "DELTA2-FEARFACTORY": {
     "canonicalId": "date-night-mo26-fear-factory",
     "confidence": "limited",

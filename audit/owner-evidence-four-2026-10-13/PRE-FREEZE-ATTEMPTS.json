@@ -1,0 +1,183 @@
+{
+  "stage": "pre-freeze implementation validation",
+  "failures": [
+    {
+      "attempt": "focused R1",
+      "result": "53 pass / 1 stale generated-projection hash failure",
+      "cause": "Test helper still pinned generated pre-correction URL projection; immutable research inputs unchanged."
+    },
+    {
+      "attempt": "full R1",
+      "repositoryPass": 1059,
+      "repositoryFail": 2,
+      "applicationPass": 71,
+      "applicationFail": 0,
+      "causes": [
+        "Historical next-Missouri registry cardinality expected 63 before four separately cleared additions.",
+        "Generated implementation projection helper pin not yet updated after source URL correction."
+      ]
+    },
+    {
+      "attempt": "lint R1",
+      "errors": 0,
+      "warnings": 7,
+      "correction": "Use copied availability import for display-schedule fail-closed checks; remove no rule or suppression."
+    },
+    {
+      "attempt": "alias focused R1",
+      "cause": "Negative fixture placed two non-curated provider points identically, exercising existing shared-type <0.03-mile matching instead of alias authority. Changed fixture to distant-from-reviewed-park and 0.1-mile pair separation; ordinary dedupe untouched."
+    },
+    {
+      "attempt": "alias focused R2",
+      "cause": "Resolver initially retained OSM evidence but omitted current catalog evidence required for affirmed receipt. Corrected evidence composition without relaxing receipt gate."
+    },
+    {
+      "attempt": "full after alias initial implementation",
+      "cause": "One historical identity.ts byte fingerprint failed. Removed redundant identity.ts alias function because the narrow current-policy resolver normalizes the reviewed alias before existing dedupe. Original identity.ts bytes retained."
+    }
+  ],
+  "urlCorrection": {
+    "scope": "Generated runtime/test projection only; not immutable author inputs",
+    "changes": [
+      {
+        "before": "https://midamericaadventure.enchantedparks.com/events/category/fright-fest/",
+        "after": "https://midamericaadventure.enchantedparks.com/series/fright-fest/",
+        "sourceReceipt": "park R2 retrievals series HTTP200"
+      },
+      {
+        "before": "https://midamericaadventure.enchantedparks.com/park-info/park-policies/",
+        "after": "https://midamericaadventure.enchantedparks.com/park-policies/",
+        "sourceReceipt": "park R2 retrievals policies HTTP200"
+      }
+    ]
+  },
+  "localBrowser": "Not run: installed Chromium Unix socket permission denied. No bypass; hosted browser required. Official Playwright download returned truncated archives; no alternate untrusted binary used.",
+  "logHashes": {
+    "owner-four-focused.log": {
+      "bytes": 72897,
+      "sha256": "b6f81cad0f802aef02b8756a7efdcf1973a980c8bb1636d06d3cf5acb8486210"
+    },
+    "owner-four-full.log": {
+      "bytes": 537788,
+      "sha256": "bb2e872de2f7e7bf1467a8a0aa39866410ac2e90fce55d5784003f2f47e64635"
+    },
+    "owner-four-lint.log": {
+      "bytes": 2140,
+      "sha256": "847fff85c0f7cabc26c3b8ef6fb5f430e3b669b3e22c68d4d710cb4eadb425f6"
+    },
+    "owner-four-npm-ci.log": {
+      "bytes": 331096,
+      "sha256": "adab05b733e070d697b8607fb41c7a75d668d837d7f9f082827d43f58c17d5c9"
+    },
+    "owner-four-npm-ci-r2.log": {
+      "bytes": 895,
+      "sha256": "9604421c34e29859b253e6a031618a5f01a11186025aa23c2f01773b4ae507f1"
+    },
+    "owner-four-playwright-install.log": {
+      "bytes": 5420,
+      "sha256": "6b8dd11239cd145835e2f732e7b4e0e523e7a7efb2a35db8694bcc4ee380bd1c"
+    },
+    "owner-four-full-r2.log": {
+      "bytes": 535893,
+      "sha256": "82efbfa44002dc5fce79985e15d8775bc00400bd8b570bbb495834b353a708e2"
+    },
+    "owner-four-focused-r2.log": {
+      "bytes": 66589,
+      "sha256": "2b062f2c5d7219afac919f085f286de79b277704b66eb706dbd05ddd289b79be"
+    },
+    "owner-four-lint-r2.log": {
+      "bytes": 1893,
+      "sha256": "0899f76111644c5415d2d6f32ddde5b8630d38c815e952b8d0f4326e4ab71b71"
+    },
+    "owner-four-typecheck-final.log": {
+      "bytes": 336,
+      "sha256": "fd701089501caed8921791099b43b18612be047d31390a24cf66a22b1fb8267c"
+    },
+    "owner-four-build-r2.log": {
+      "bytes": 10549,
+      "sha256": "6b0661e327ee4393ec599a2283066700b232c8d4bfb8fbd3fd7de6ef5738a25e"
+    },
+    "owner-four-android-local.log": {
+      "bytes": 331,
+      "sha256": "2c02229db216e2f8c5815b25dda78a0cea226d5cefb481084f189a763c2c142b"
+    },
+    "owner-four-full-freeze.log": {
+      "bytes": 535993,
+      "sha256": "1ee9345d1c81e5e46e17c0e274a186df328440ec73c3b006df74bf522e50db61"
+    },
+    "owner-four-build-freeze.log": {
+      "bytes": 10317,
+      "sha256": "e61812b8a263f1dc830a438d06e66a6f3837adddac44c599fe289d02264c1f49"
+    },
+    "owner-four-lint-freeze.log": {
+      "bytes": 1893,
+      "sha256": "0899f76111644c5415d2d6f32ddde5b8630d38c815e952b8d0f4326e4ab71b71"
+    },
+    "owner-four-typecheck-freeze.log": {
+      "bytes": 128,
+      "sha256": "ae791f9f57ffbb3c0a592b6a34e25250c1f7f6f13fde4d05f77a0d4e7681f89a"
+    },
+    "owner-four-alias-r5.log": {
+      "bytes": 111491,
+      "sha256": "c21fc390ffa480c9764af4e263c15ca58aa6a145394fa80647f438603ab3a5cd"
+    },
+    "owner-four-build-frozen.log": {
+      "bytes": 10317,
+      "sha256": "4c36c660a72066be4c2649a2b86a5739a956c1b75302e2b53ef67ac452b2170a"
+    },
+    "owner-four-alias-r4.log": {
+      "bytes": 40835,
+      "sha256": "a4fc6c4184ac981f49565b65141103e16614e581bfaed90209cfd534497c9570"
+    },
+    "owner-four-full-final.log": {
+      "bytes": 537322,
+      "sha256": "9828c80da0098c4bd355f2cb86e0fa32f1ab6fa7a26149d5ca499f4f04f40867"
+    },
+    "owner-four-build-final.log": {
+      "bytes": 10317,
+      "sha256": "5fe1812a21f7b8defce334d5059e9bdc0a8a89398d8be6f86d024c9cd0ccb5e1"
+    },
+    "owner-four-lint-r4.log": {
+      "bytes": 1893,
+      "sha256": "0899f76111644c5415d2d6f32ddde5b8630d38c815e952b8d0f4326e4ab71b71"
+    },
+    "owner-four-typecheck-r4.log": {
+      "bytes": 336,
+      "sha256": "fd701089501caed8921791099b43b18612be047d31390a24cf66a22b1fb8267c"
+    },
+    "owner-four-alias-r3.log": {
+      "bytes": 40833,
+      "sha256": "a962ac273c9c74dc7ec1e0cca0f5bfa6ec0ca2975d5ab6d39d2f47fd43072b34"
+    },
+    "owner-four-alias-r2.log": {
+      "bytes": 41845,
+      "sha256": "e04a1dd3042f84ee8eae7116b0e6b314e99f939f128870bf6f46c9b092130b9c"
+    },
+    "owner-four-alias-focused.log": {
+      "bytes": 41713,
+      "sha256": "004bb55dab7bbe6aad6505593270182070fb4b8f76d4c6b9143bcaab2933c74c"
+    },
+    "owner-four-build.log": {
+      "bytes": 10549,
+      "sha256": "82053ac83e2895e84549c629ebf57d3f6b373ea7e7b1365e50e6c91add267f12"
+    },
+    "owner-four-typecheck.log": {
+      "bytes": 336,
+      "sha256": "fd701089501caed8921791099b43b18612be047d31390a24cf66a22b1fb8267c"
+    }
+  },
+  "finalLocalGateResults": {
+    "repositoryPass": 1063,
+    "applicationPass": 71,
+    "failures": 0,
+    "inheritedSkips": 4,
+    "typecheck": "PASS",
+    "lintErrors": 0,
+    "lintInheritedWarnings": 6,
+    "migrationFreeAuthenticatedBuild": "PASS",
+    "localAndroidSourceIconReadiness": "PASS",
+    "hostedBrowser": "PENDING",
+    "hostedAndroidBuild": "PENDING"
+  },
+  "renamedProviderRisk": "Reproduced standalone exact former event provider ordinarily eligible at cutoff and 2027 before correction; Open Now was already false. Narrow canonical-policy resolver closes this path, preserving negative evidence and original provider ID in receipts. Existing identity.ts restored byte-for-byte; no generic dedupe changes."
+}

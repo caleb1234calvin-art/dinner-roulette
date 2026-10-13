@@ -9,6 +9,7 @@ import { assertBrowserBuild } from "./browser-build-proof.mjs";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 import { ADMISSION_AMENDMENTS, assertAdmissionConsumerCopy } from "./test-support/admission-amendments.mjs";
 import { createHash } from "node:crypto";
+import { OWNER_EVIDENCE_PROJECTION_SHA256, OWNER_EVIDENCE_MATERIAL_FACTS, OWNER_EVIDENCE_CONFIDENCE } from "./test-support/owner-evidence-browser-facts.mjs";
 import { RANKED_HOLDS_PROJECTION_SHA256, RANKED_HOLDS_MATERIAL_FACTS, RANKED_HOLDS_CONFIDENCE } from "./test-support/ranked-holds-browser-facts.mjs";
 import { HOLD_CLEANUP_PROJECTION_SHA256, HOLD_CLEANUP_MATERIAL_FACTS, HOLD_CLEANUP_CONFIDENCE, assertCleanupConsumerCopy } from "./test-support/hold-cleanup-browser-facts.mjs";
 import { NEXT_MISSOURI_PROJECTION_SHA256, NEXT_MISSOURI_MATERIAL_FACTS, NEXT_MISSOURI_CONFIDENCE } from "./test-support/next-missouri-browser-facts.mjs";
@@ -69,7 +70,12 @@ const cleanupAccepted = JSON.parse(cleanupAcceptedBytes);
 const rankedRows = load("src/lib/date-night/missouri-2026-ranked-holds-catalog.ts").MISSOURI_2026_RANKED_HOLDS_CATALOG;
 const rankedAcceptedBytes = await readFile("scripts/test-support/ranked-holds-browser-projections.json");
 const rankedAccepted = JSON.parse(rankedAcceptedBytes);
-const rows = rankedHolds ? rankedRows : holdCleanup ? cleanupRows : nextMissouri ? [...nextMissouriRows, ...amendedRows] : phase4 ? phase4Rows : extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
+const ownerRows = load("src/lib/date-night/missouri-2026-owner-evidence-catalog.ts").MISSOURI_2026_OWNER_EVIDENCE_CATALOG;
+const ownerAcceptedBytes = await readFile("scripts/test-support/owner-evidence-browser-projections.json");
+const ownerAccepted = JSON.parse(ownerAcceptedBytes);
+const rankedLaneFacts = { ...RANKED_HOLDS_MATERIAL_FACTS, ...OWNER_EVIDENCE_MATERIAL_FACTS };
+const rankedLaneConfidence = { ...RANKED_HOLDS_CONFIDENCE, ...OWNER_EVIDENCE_CONFIDENCE };
+const rows = rankedHolds ? [...rankedRows, ...ownerRows] : holdCleanup ? cleanupRows : nextMissouri ? [...nextMissouriRows, ...amendedRows] : phase4 ? phase4Rows : extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
 const destinationFor = row => {
   const target = row.seasonalListing.directionsTarget;
   return target.kind === "verified-point" ? `${target.lat},${target.lon}` : target.address;
@@ -423,7 +429,7 @@ const extraFacts = {
 };
 const extraConfidence = { "MO26-002": "limited", "DELTA2-SHEPHERD-LANTERN": "limited", "DELTA2-HOLLOWS": "limited", "MO26-039": "limited",
   "DELTA6-WORLDS-OF-FUN": "limited", "DELTA2-OZARK": "limited", "DELTA3-BALLWIN": "limited", "DELTA6-OFALLON": "limited", "DELTA3-GROTTO": "limited" };
-const materialFacts = rankedHolds ? RANKED_HOLDS_MATERIAL_FACTS : holdCleanup ? HOLD_CLEANUP_MATERIAL_FACTS : nextMissouri ? NEXT_MISSOURI_MATERIAL_FACTS : phase4 ? PHASE4_MATERIAL_FACTS : extras ? extraFacts : astra ? astraFacts : cumulative ? newFacts : priorFacts;
+const materialFacts = rankedHolds ? rankedLaneFacts : holdCleanup ? HOLD_CLEANUP_MATERIAL_FACTS : nextMissouri ? NEXT_MISSOURI_MATERIAL_FACTS : phase4 ? PHASE4_MATERIAL_FACTS : extras ? extraFacts : astra ? astraFacts : cumulative ? newFacts : priorFacts;
 const newConfidence = { "MO26-036": "good", "MO26-058": "high", "MO26-069": "high", "MO26-071": "high", "MO26-118": "good", "MO26-012": "good", "MO26-028": "good", "MO26-074": "good", "MO26-084": "good", "MO26-085": "good", "DELTA-EDGE-2026": "high", "DELTA-CREEPYWORLD-2026": "good", "DELTA-DARKNESS-2026": "good", "DELTA-HAUNTED-RIVER-2026": "high", "DELTA-FEAR-BLOODY-TIMBER-2026": "high" };
 const oldRows = [
   ...load("src/lib/date-night/missouri-2026-cleared-catalog.ts").MISSOURI_2026_CLEARED_SEASONAL_CATALOG,
@@ -433,7 +439,7 @@ const ordinaryRows = load("src/lib/date-night/jasper-county-catalog.ts").JASPER_
 const anchors = load("src/lib/date-night/seasonal-catalog.ts").JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG;
 const previousRows = [...oldRows, ...priorTen, ...addedRows];
 const previousReceipts = JSON.parse(await readFile("scripts/test-support/missouri-previous32-receipts.json", "utf8"));
-const catalog = [...ordinaryRows, ...anchors, ...previousRows, ...astraRows, ...extraRows, ...phase4Rows, ...nextMissouriRows, ...cleanupRows, ...rankedRows];
+const catalog = [...ordinaryRows, ...anchors, ...previousRows, ...astraRows, ...extraRows, ...phase4Rows, ...nextMissouriRows, ...cleanupRows, ...rankedRows, ...ownerRows];
 const { haversineMiles } = load("src/lib/restaurants/geo.ts");
 const { getOpenStatus } = load("src/lib/restaurants/hours.ts");
 const { getDateNightAvailability } = load("src/lib/date-night/availability.ts");
@@ -539,7 +545,7 @@ try {
   browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
     args: ["--no-sandbox", "--disable-dev-shm-usage"] });
   assert.deepEqual(rows.map(row => row.seasonalListing.recordId).sort(), Object.keys(materialFacts).sort(), "Exactly the independently cleared selected batch");
-  assert.equal(new Set(rows.map(row => row.id)).size, rankedHolds ? rankedAccepted.newRecords.length : holdCleanup ? cleanupAccepted.newRecords.length : nextMissouri ? 3 : phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
+  assert.equal(new Set(rows.map(row => row.id)).size, rankedHolds ? rankedAccepted.newRecords.length + ownerAccepted.newRecords.length : holdCleanup ? cleanupAccepted.newRecords.length : nextMissouri ? 3 : phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
   assert.equal(previousRows.length, 32, "All previously shipped curated identities remain regression controls");
   assert.equal(new Set(catalog.map(row => row.id)).size, catalog.length, "Amended Werehouse remains one canonical identity across every invocation");
   assert.equal(anchors.some(row => row.id === "date-night-werehouse-joplin"), false, "Legacy weekly-hours Werehouse anchor is superseded");
@@ -605,8 +611,23 @@ try {
     assert.deepEqual(current.seasonalListing.hours, { state: accepted.hours.state, displayText: accepted.hours.displayText });
     assert.deepEqual(seasonalPresentation(current).details, accepted.details);
   }
+  assert.equal(createHash("sha256").update(ownerAcceptedBytes).digest("hex"), OWNER_EVIDENCE_PROJECTION_SHA256);
+  assert.equal(ownerAccepted.baseSha, "0032d913efaca4bd97d730414a50a5b01e1a2099");
+  assert.deepEqual(ownerRows.map(row => row.id), ownerAccepted.newRecords.map(row => row.canonicalId));
+  for (const accepted of ownerAccepted.newRecords) {
+    const current = ownerRows.find(row => row.id === accepted.canonicalId);
+    assert.equal(current.name, accepted.name); assert.equal(current.address, accepted.visitorAddress);
+    assert.deepEqual(current.activityTypes, accepted.activityTypes);
+    assert.deepEqual([current.lat, current.lon], [accepted.placement.lat, accepted.placement.lon]);
+    assert.deepEqual(current.seasonalListing.directionsTarget, accepted.directionsTarget);
+    assert.deepEqual(current.seasonalAvailability.activeDates, accepted.exactActiveDates);
+    assert.equal(Date.parse(current.seasonalListing.listingExpiresAt), Date.parse(accepted.listingExpiresAtUtc));
+    assert.equal(current.seasonalListing.expiryBasis, accepted.expiryBasis);
+    assert.deepEqual(current.seasonalListing.hours, accepted.hours);
+    assert.deepEqual(seasonalPresentation(current).details, accepted.details);
+  }
   for (const row of rows) {
-    assert.equal(seasonalPresentation(row).confidence, rankedHolds ? RANKED_HOLDS_CONFIDENCE[row.seasonalListing.recordId] : holdCleanup ? HOLD_CLEANUP_CONFIDENCE[row.seasonalListing.recordId] : nextMissouri ? NEXT_MISSOURI_CONFIDENCE[row.seasonalListing.recordId] : phase4 ? "limited" : (extras ? extraConfidence : astra ? astraConfidence : cumulative ? newConfidence : expectedConfidence)[row.seasonalListing.recordId]);
+    assert.equal(seasonalPresentation(row).confidence, rankedHolds ? rankedLaneConfidence[row.seasonalListing.recordId] : holdCleanup ? HOLD_CLEANUP_CONFIDENCE[row.seasonalListing.recordId] : nextMissouri ? NEXT_MISSOURI_CONFIDENCE[row.seasonalListing.recordId] : phase4 ? "limited" : (extras ? extraConfidence : astra ? astraConfidence : cumulative ? newConfidence : expectedConfidence)[row.seasonalListing.recordId]);
     assert.equal(row.openingHours, null); assert.equal(row.seasonalAvailability.openNowPolicy, "never");
     assert.ok(["visitor-address", "verified-point"].includes(row.seasonalListing.directionsTarget.kind));
     assert.ok(nearby(row).length <= 3, "The scoped neighborhood must fit in the real four-card shortlist with one ordinary fixture");
@@ -906,6 +927,16 @@ try {
         await activityCount(page, 2);
         await settleLocal(test); const before = test.rpc.length;
         await page.getByRole("button", { name: "Plan the night", exact: true }).click();
+        const ownerOther = ownerRows.some(item => item.id === row.id) && row.activityTypes.includes("other-halloween-fall");
+        if (ownerOther) {
+          await page.getByText("No complete seasonal pair yet.", { exact: true }).waitFor();
+          const overlay = overlayRoot(page, "plan");
+          assert.equal(await overlay.locator("article").count(), 0, "Other-only does not fabricate a Scare first stop");
+          await overlay.getByRole("button", { name: "Close night plan", exact: true }).click();
+          await assertNoRpc(test, before, "Negative Plan control uses acquired pool");
+          test.result.evidence.plan = { target: row.id, eligible: false, reason: "No compatible Scare first stop" };
+          return;
+        }
         await rowHeading(page, row).waitFor();
         const overlay = overlayRoot(page, "plan");
         assert.equal(await overlay.locator("article").count(), 2, "Plan uses two distinct real eligible identities");
@@ -970,6 +1001,39 @@ try {
           staleResponseContainedId: true, expiredIdRendered: false, requests: test.rpc.length };
       }, { holdInitialRpc: true, at: new Date(Date.parse(expiresAt) - 1).toISOString() });
     }
+  }
+  if (rankedHolds) {
+    const park = ownerRows.find(row => row.seasonalListing.recordId === "NEW-MID-AMERICA-FRIGHT-FEST");
+    await runScenario(park, "rebrand", "exact-former-event-provider-alias", async test => {
+      const { page } = test;
+      await activityCount(page, nearby(park).length + 1); await settleLocal(test);
+      assert.equal(test.rpc.length, 1);
+      await optionsButton(page).click(); await selectTarget(page, park);
+      await inspectQualifiedOverlay(test, park, "result");
+      await page.getByRole("button", { name: "Save", exact: true }).click(); await closeResult(page);
+      await visitNav(page, "Favorites", "/favorites"); await inspectSaved(test, park, "renamed-canonical-saved");
+      await page.reload({ waitUntil: "domcontentloaded" }); await inspectSaved(test, park, "renamed-saved-reload");
+      const receipts = await page.evaluate(() => localStorage.getItem("pick-for-us-seasonal-identity-v1"));
+      assert.ok(receipts.includes(park.id));
+      assert.ok(receipts.includes("date-night-osm-node-910001"));
+      assert.ok(receipts.includes("date-night-osm-way-910002"));
+      await advance(test, park.seasonalListing.listingExpiresAt);
+      await page.reload({ waitUntil: "domcontentloaded" }); await inspectSaved(test, park, "renamed-expired-history", true);
+      await visitNav(page, "Pick", "/"); await ready(page); await settleLocal(test);
+      await activityCount(page, nearby(park, { at: park.seasonalListing.listingExpiresAt }).length + 1);
+      await optionsButton(page).click();
+      await page.getByRole("button", { name: "Close options", exact: true }).waitFor();
+      assert.equal(await rowHeading(page, park).count(), 0, "Legacy provider cannot revive event after its cutoff");
+      await closeOptions(page);
+      await advance(test, "2027-10-17T02:00:00Z");
+      await page.reload({ waitUntil: "domcontentloaded" }); await ready(page); await settleLocal(test);
+      await activityCount(page, nearby(park, { at: "2027-10-17T02:00:00Z" }).length + 1);
+      await optionsButton(page).click();
+      await page.getByRole("button", { name: "Close options", exact: true }).waitFor();
+      assert.equal(await rowHeading(page, park).count(), 0, "Legacy provider cannot recur in 2027");
+      await closeOptions(page);
+      test.result.evidence.rebrand = { providerName: "Six Flags St. Louis Fright Fest", canonicalId: park.id, receipts };
+    }, { fixture: "mixed", providerName: "Six Flags St. Louis Fright Fest" });
   }
   if (rankedHolds) {
     const fearFactory = rankedRows[0];
@@ -1194,7 +1258,7 @@ try {
   }
   assert.equal(verdict.scenarios.length, rows.length * (expanded ? 17 : 15) + receiptRows.length +
     ((cumulative || expanded) ? rows.filter(row => row.seasonalListing.visibility === "listing-lifecycle").length : 0) +
-    (phase4 ? rows.length + 5 : nextMissouri || holdCleanup || rankedHolds ? rows.length : 0) + (holdCleanup || rankedHolds ? 1 : 0));
+    (phase4 ? rows.length + 5 : nextMissouri || holdCleanup || rankedHolds ? rows.length : 0) + (holdCleanup || rankedHolds ? 1 : 0) + (rankedHolds ? 1 : 0));
   assert.equal(verdict.errors.length, 0);
   verdict.passed = true;
 } catch (error) {

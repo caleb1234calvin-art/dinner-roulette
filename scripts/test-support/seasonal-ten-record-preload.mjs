@@ -32,7 +32,7 @@ globalThis.fetch = async (input, init) => {
   const elements = [];
   if (state.fixture === "mixed" && (outdoor || seasonal)) {
     const row = state.row;
-    const tags = { name: row.name, leisure: "park", opening_hours: "24/7",
+    const tags = { name: state.providerName ?? row.name, leisure: "park", opening_hours: "24/7",
       "seasonal:activities": row.activityTypes.includes("corn-maze") ? "corn maze and pumpkin patch" : "haunted house" };
     // Two actual Overpass representations of the same identity. Catalog merging,
     // conflicting/provider hours, category union and cache reuse stay app-owned.

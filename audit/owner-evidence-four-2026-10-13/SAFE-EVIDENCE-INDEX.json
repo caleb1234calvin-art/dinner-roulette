@@ -1,0 +1,71 @@
+{
+  "schema": "owner-evidence-four-safe-index-v1",
+  "checkpoint": "30d470d44c0e7b3afafce9c64fc43b3e09f62281",
+  "baseSha": "0032d913efaca4bd97d730414a50a5b01e1a2099",
+  "baseTree": "f0d0a777ec90d5e82cc089d71b5c2eaf0646f21b",
+  "inputSha256": {
+    "ownerThree": "7e61bfe47c9043fe593d4a91868cb5619efb8b575ac9f003645da6f551bfaf2e",
+    "parkR2": "13cebde03c5ce11a8f5a9e351d90034b7b8e7a7416c5f480a2a401339b233460",
+    "independentVerdict": "342b5b51b25070848d74764d2bcdc79899887130b01ea6908ed2fea12d4e9803"
+  },
+  "independentDatasetVerdict": "4 factual PASS / 4 approximate placement PASS / 4 implementation ELIGIBLE; runtime review remains separate",
+  "sourcePolicy": "Raw owner screenshots and captures remain private. This publication includes normalized factual projections, source URLs, qualified provenance summaries and integrity hashes only.",
+  "records": [
+    {
+      "recordId": "DELTA2-WACO",
+      "sourceClass": "Owner-accepted official-source poster visibly states October 2026; independent secondary identity/address and independently repeated public Census geocode.",
+      "2026Only": true,
+      "lifecycleMeaning": "Final published queue/admission deadline; conservative acquisition cutoff, NOT final-exit time. Guests already in line by 23:30 are admitted. No additional dates.",
+      "placementMeaning": "Address-derived approximate placement only; no verified entrance, parking or ride dropoff.",
+      "sourceUrls": [
+        "https://www.facebook.com/wacoshoolhousehaunt/",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=148+Rose+Street%2C+Waco%2C+MO+64832&benchmark=Public_AR_Current&format=json"
+      ]
+    },
+    {
+      "recordId": "DELTA3-DARK-NIGHTMARES",
+      "sourceClass": "Owner-accepted operator capture controls 33100 address. Six exact future dates use independently reopened secondary EventVesta calendar plus current primary Passage ticket; official restrictions independently reopened.",
+      "2026Only": true,
+      "lifecycleMeaning": "Explicit secondary2026 calendar final nightOctober31 combined with owner-accepted last-ticket midnight. Last ticket at midnight occursNovember1 00:00CDT, BEFORE DST fallback. Acquisition stops05:00UTC; NOT guaranteed trail final-exit or asserted closing. No weekly-date inference.",
+      "placementMeaning": "Address-derived approximate placement only; no verified entrance, parking or ride dropoff.",
+      "sourceUrls": [
+        "https://darknightmares.net/",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=33100+US-24%2C+Buckner%2C+MO+64016&benchmark=Public_AR_Current&format=json",
+        "https://www.eventvesta.com/events/166345-dark-nightmares-haunted-forest",
+        "https://app.gopassage.com/events/dark-nightmares-haunted-forest"
+      ]
+    },
+    {
+      "recordId": "DELTA3-FARRINGTON",
+      "sourceClass": "Owner expressly binds official phrase this year to 2026. Official date/start/address wording independently reopened; no independently visible year claimed.",
+      "2026Only": true,
+      "lifecycleMeaning": "Date-only event retention boundary at midnight after finalOctober18date, not an operating closinghour, admission extension or finalexit assertion.",
+      "placementMeaning": "Address-derived approximate placement only; no verified entrance, parking or ride dropoff.",
+      "sourceUrls": [
+        "https://www.windsorhauntedhayride.com/",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=116+S+County+Line+Rd%2C+Windsor%2C+MO+65360&benchmark=Public_AR_Current&format=json"
+      ]
+    },
+    {
+      "recordId": "NEW-MID-AMERICA-FRIGHT-FEST",
+      "sourceClass": "Independent current official renamed-park event series, final November 1 event, policies and direct address-specific map link. Former Six Flags URL redirects to the same renamed park.",
+      "2026Only": true,
+      "lifecycleMeaning": "Official Nov1 event finishes21:00 America/Chicago CST,UTC-6; source-bound exact cutoff. No2027rollover.",
+      "placementMeaning": "Address-derived approximate placement only; no verified entrance, parking or ride dropoff.",
+      "sourceUrls": [
+        "https://midamericaadventure.enchantedparks.com/fright-fest/",
+        "https://midamericaadventure.enchantedparks.com/park-info/park-map/",
+        "https://midamericaadventure.enchantedparks.com/series/fright-fest/",
+        "https://midamericaadventure.enchantedparks.com/park-policies/"
+      ]
+    }
+  ],
+  "historicalLimits": [
+    "Park R1 costume copy was held; author R2 corrected the age-12 ceiling, costume mask wording and germ-reduction mask exception; independent R2 passed.",
+    "Dark old undated ticket address 34100 remains historical conflict; owner accepts 33100 unless materially newer contradictory first-party evidence emerges.",
+    "Dark ticket slot versus gate time differs; display check-ticket qualification remains; midnight is last ticket, not closing/exit.",
+    "No social-origin independent re-fetch or screenshot publication timestamp is claimed.",
+    "No cancellation/weather/ticket availability guarantee.",
+    "Nine remaining owner-field records remain HOLD and outside this candidate. PR61 remains parked."
+  ]
+}
