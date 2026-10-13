@@ -1,3 +1,31 @@
+# CURRENT — PR #68 TEST-CHAIN REMEDIATION FROZEN; FULL ACCEPTANCE PENDING (2026-10-13)
+
+## CURRENT
+- Active Draft PR68 branch integration/missouri-occurrence-amendments-2026-10-13 now **3b6b9ed0f4be1581b3b541207b2637183fff57d3**, tree **577d680f089e0a6e6892da2bdd6419132b890354**, sole parent **c33c8513eb7e2b2ec19248dd76e5effe04af6e51**. Released ancestor8353.23 overall changed paths (previous22 plus failure receipt).
+- Main8353e60056fb0568360c5c13878d102880395d9f/treea10e02b3151fda349322b612c371ddacd88350e1; production **dpl_3mPcvp1LGsjtQ3MVLgRUdmAzejN9 READY/source8353**,67 identities unchanged. No production change/release authority.
+- **Independent correction/source review PASS**, strict13-field equality,106 adversarial and141 focused checks PASS on successor. Full local/hosted/browser/geometry/Android acceptance remains PENDING/HOLD. New exact-head Web **38346362585**, Android **38346362567**. No prior full PASS transferred.
+
+## FAILED C33 / NARROW CORRECTION
+- c33/tree df07 failed hosted core and Android prerequisite: stale historical Hollows presentation assertion seasonal-next-missouri.test.mjs:149/157. **1,075 repository PASS /1 FAIL /4 skips;71 application PASS.** Runtime copy matched cleared amendment; historical counterpart needed explicit strict amendment composition.
+- Successor changes only stale assertion/test title plus **audit/occurrence-amendments-2026-10-13/FAILED-C33-ATTEMPT.json**. Runtime bytes and fixtures unchanged. Existing admissionPresentationAfter delegates pinned occurrence before/after chain; no broad exclusions, weakened field assertions or policy changes.
+- c33 failed Web **38346070970** and Android **38346070851 /92** preserved. Android never reached native sync/build/lint/binary inspection; artifact API empty. Optional signing SKIPPED, native readiness not PASS.
+- c33 local typecheck/lint0 errors6 warnings/safe authenticated migration-free build/icons passed, but suite failure remains. Browser and geometry **NOT EXECUTED, zero scenarios** because expected Chromium absent/download failed. Dev-only auth probe **INCONCLUSIVE/INDETERMINATE**, endpoint unobservable, not candidate mismatch and not PASS.
+- Independent verification confirmed12 failed-attempt log hashes. Earlier c33 source13-field/106 adversarial/126 focused PASS did not override full-suite failure; successor141 focused includes missed counterpart.
+
+## EVIDENCE
+- c33 Android private report **libfile_442780b741748191adf244ac7421c6d5**; failed-readiness archive **libfile_0da5c9ef43588191a47fec38c2676259**,217,807 bytes,SHA256 **3f738af69d4408aff23fac0b92b605b15c157fa9fd6d90713ebdd61105889ad2**. Exact source/API/log and BLOCKED verdict retained.
+- FAILED-C33-ATTEMPT.json records all12 log hashes, interrupted/truncated transport attempts and correction. No failing attempt erased or relabeled; no runtime/data/evidence projection mutation in remediation.
+
+## NEXT / HOLD
+1. Finish complete exact3b6 local/hosted validation and independent original artifact/browser/geometry/Android acceptance. Recheck67 objects with only13 authorized operations, Hollows date/cutoff extension, Nightmare ticket-copy qualification, saved/cache/negative/expiry/no2027/navigation/Open Now.
+2. Publish/read back final exact-candidate gate and stop for owner release decision only if independently PASS. No merge/deploy.
+- Nine fresh-source HOLDs/nine owner-field HOLDs, imminent lifecycles, physical Android/WebView/GPS HOLD and signing/Play exclusions unchanged. PR61 parked; “Radial discovery becomes an audit layer.” future intent only. Inherited warnings/skips/clipping/approximate/provider limits preserved.
+- Rollback6Zs/source0032 and automatic alias limits remain; reverify in any future release preflight.
+
+Docs-only canonical checkpoint; complete prior **6eaa8427d5043a1b40df656a4d0c4079ca387582** preserved. Fresh main/prod/PR/head/tree/parent/current continuity checked before write. Full readback required. c33 remains failed history, not current head.
+
+---
+
 # CURRENT — PR #68 TWO-AMENDMENT CANDIDATE FROZEN; VALIDATION PENDING (2026-10-13)
 
 ## CURRENT
