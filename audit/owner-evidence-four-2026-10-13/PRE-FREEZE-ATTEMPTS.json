@@ -164,10 +164,34 @@
     "owner-four-typecheck.log": {
       "bytes": 336,
       "sha256": "fd701089501caed8921791099b43b18612be047d31390a24cf66a22b1fb8267c"
+    },
+    "owner-four-r2-clean-build.log": {
+      "bytes": 10317,
+      "sha256": "c82b34ba0458f1770c3f3bd46d40ee047f7c097d55910d9d1256a36e6cf20152"
+    },
+    "owner-four-r2-full.log": {
+      "bytes": 536181,
+      "sha256": "c363242ea4dd76555b106356f3e1b218d1a4e3e3a75546aa52b5e0809eb37f82"
+    },
+    "owner-four-r2-build.log": {
+      "bytes": 10317,
+      "sha256": "7f392b7bd2a4b4fe734b6deb9874496c6c63fbb8ccdcc74a1e66d8457e1b2e30"
+    },
+    "owner-four-r2-lint.log": {
+      "bytes": 1893,
+      "sha256": "0899f76111644c5415d2d6f32ddde5b8630d38c815e952b8d0f4326e4ab71b71"
+    },
+    "owner-four-r2-typecheck.log": {
+      "bytes": 336,
+      "sha256": "fd701089501caed8921791099b43b18612be047d31390a24cf66a22b1fb8267c"
+    },
+    "owner-four-disused-fix.log": {
+      "bytes": 40935,
+      "sha256": "ef0cf7b60a25104bca0a317bcc037fd6798a506fb424d7b33bdea122922df8a4"
     }
   },
   "finalLocalGateResults": {
-    "repositoryPass": 1063,
+    "repositoryPass": 1064,
     "applicationPass": 71,
     "failures": 0,
     "inheritedSkips": 4,
@@ -179,5 +203,28 @@
     "hostedBrowser": "PENDING",
     "hostedAndroidBuild": "PENDING"
   },
-  "renamedProviderRisk": "Reproduced standalone exact former event provider ordinarily eligible at cutoff and 2027 before correction; Open Now was already false. Narrow canonical-policy resolver closes this path, preserving negative evidence and original provider ID in receipts. Existing identity.ts restored byte-for-byte; no generic dedupe changes."
+  "renamedProviderRisk": "Reproduced standalone exact former event provider ordinarily eligible at cutoff and 2027 before correction; Open Now was already false. Narrow canonical-policy resolver closes this path, preserving negative evidence and original provider ID in receipts. Existing identity.ts restored byte-for-byte; no generic dedupe changes.",
+  "independentReviewRemediation": {
+    "failedCandidate": "b8776e319fcc75066fef17f8a617d2144f74e179",
+    "failedTree": "081a9533f43c91c247916124d7c0e27e4ed02270",
+    "webRun": 38329334897,
+    "androidRun": 38329334848,
+    "finding": "Exact legacy park event provider with evidence-only disused and no top-level lifecycle remained ordinary-browse eligible. Independent review corrected an initial Open Now harness assumption before proving this concrete defect.",
+    "correction": "Preserve permanent closure precedence, then disused, from both top-level and discoveryEvidence. No expanded names, spatial authority or saved receipt mapping.",
+    "regression": "26 focused tests PASS, including both negative kinds, mixed positive evidence, both evidence orders, all top-level precedence combinations and both dedupe orders.",
+    "verification": "Replacement local full gates PASS: 1064 repository,71 application,four inherited skips,typecheck,lint zero errors/six warnings and safe authenticated migration-free build. Fresh hosted and independent verification still pending.",
+    "independentReceipt": {
+      "file": "B877-INDEPENDENT-HOLD.json",
+      "bytes": 1324,
+      "sha256": "b1049e7d33134a98f9d20c4dba72521baadcbcae06424b80c9d867c729536d28",
+      "checks": 50,
+      "pass": 47,
+      "fail": 3,
+      "distinctDefects": 1
+    },
+    "originalHostedStateAtSuccessorFreeze": {
+      "android": "PASS, run38329334848",
+      "web": "run38329334897 still running; checks, casino, location, ordinary Date Night, two-record, next-Missouri, completeness-V1 and HOLD-cleanup PASS; original browser jobs continue without cancellation because web workflow has no concurrency cancellation."
+    }
+  }
 }

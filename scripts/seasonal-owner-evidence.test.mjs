@@ -247,3 +247,28 @@ test("standalone old-name provider cache cannot revive the reviewed park after c
     assert.equal(applyCuratedSeasonalPolicy(negative).id, legacy.id);
   }
 });
+
+
+test("reviewed park alias retains every lifecycle-negative kind from mixed provider evidence", () => {
+  const park = rows.find(row => row.seasonalListing.recordId === "NEW-MID-AMERICA-FRIGHT-FEST");
+  const legacy = { ...providerFor(park), name: "Six Flags St. Louis Fright Fest" };
+  const { applyCuratedSeasonalPolicy } = load("src/lib/date-night/curated-policy.ts");
+  for (const lifecycle of ["disused", "permanently-closed"]) {
+    for (const topLevel of [undefined, "disused", "permanently-closed"]) {
+      const evidence = [{ id: legacy.id, source: "osm", activityTypes: ["park"], openingHours: "24/7", lifecycle },
+        { id: "date-night-osm-node-positive", source: "osm", activityTypes: ["park"], openingHours: "24/7" }];
+      for (const discoveryEvidence of [evidence, [...evidence].reverse()]) {
+        const negative = { ...legacy, lifecycle: topLevel, discoveryEvidence };
+        const converted = applyCuratedSeasonalPolicy(negative);
+        assert.equal(converted.lifecycle, lifecycle === "permanently-closed" || topLevel === "permanently-closed" ? "permanently-closed" : "disused");
+        assert.equal(pool(park, [negative], at, { openNowOnly: false }).length, 0);
+        for (const order of [[negative, park], [park, negative]]) {
+          const merged = dedupeDateNight(order);
+          assert.equal(merged.length, 1);
+          assert.equal(pool(park, merged, at, { openNowOnly: false }).length, 0);
+          assert.ok(merged[0].discoveryEvidence.some(item => item.id === legacy.id && item.lifecycle === lifecycle));
+        }
+      }
+    }
+  }
+});

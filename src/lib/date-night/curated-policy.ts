@@ -44,7 +44,8 @@ export function applyCuratedSeasonalPolicy(place: DateNightPlace): DateNightPlac
         openingHours: place.openingHours, website: place.website, lifecycle: place.lifecycle,
       }];
       place = { ...place,
-        lifecycle: evidence.some(item => item.lifecycle === "permanently-closed") ? "permanently-closed" : place.lifecycle,
+        lifecycle: place.lifecycle === "permanently-closed" || evidence.some(item => item.lifecycle === "permanently-closed") ? "permanently-closed"
+          : place.lifecycle === "disused" || evidence.some(item => item.lifecycle === "disused") ? "disused" : place.lifecycle,
         discoveryEvidence: [...evidence, { id: park.id, source: "catalog",
           activityTypes: park.activityTypes, openingHours: park.openingHours,
           website: park.website, lifecycle: park.lifecycle }],
