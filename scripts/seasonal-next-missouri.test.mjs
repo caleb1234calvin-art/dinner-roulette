@@ -146,7 +146,7 @@ for (const row of rows) {
   });
 }
 
-test("admission and transfer notes preserve separate attractions and navigation without a counterpart amendment", () => {
+test("admission and transfer notes preserve separate attractions and navigation with only explicitly cleared counterpart amendments", () => {
   for (const ids of [["MO26-085", "DELTA2-HOLLOWS"], ["MO26-124", "MO26-125"]]) {
     const pair = ids.map(id => previousRows.find(row => row.seasonalListing.recordId === id));
     assert.equal(dedupeDateNight(pair).length, 2);
@@ -154,7 +154,7 @@ test("admission and transfer notes preserve separate attractions and navigation 
     assert.notDeepEqual(pair[0].activityTypes, undefined);
     for (const row of pair) assert.equal(new URL(directionsUrl(row)).searchParams.get("destination"), row.address);
     const counterpart = pair[1];
-    assert.deepEqual(SEASONAL_PRESENTATIONS[counterpart.seasonalListing.recordId], baseline.presentations[counterpart.seasonalListing.recordId]);
+    assert.deepEqual(SEASONAL_PRESENTATIONS[counterpart.seasonalListing.recordId], admissionPresentationAfter(counterpart.seasonalListing.recordId, baseline.presentations[counterpart.seasonalListing.recordId]));
   }
   const brookdale = rows[1];
   assert.deepEqual(brookdale.activityTypes, ["corn-maze", "pumpkin-patch"]);

@@ -1,0 +1,81 @@
+{
+  "failedCommit": "c33c8513eb7e2b2ec19248dd76e5effe04af6e51",
+  "failedTree": "df07b5808ff9144ac9ab25d9822df8f9c7a7cebc",
+  "webRun": 38346070970,
+  "androidRun": 38346070851,
+  "repositoryTests": {
+    "passed": 1075,
+    "failed": 1,
+    "inheritedSkips": 4
+  },
+  "applicationTests": {
+    "passed": 71,
+    "failed": 0
+  },
+  "finding": "Historical counterpart assertion at seasonal-next-missouri.test.mjs:157 compared Hollows directly to immutable pre-amendment presentation. Actual runtime copy matched independent clearance. The assertion must compose the explicit approved before/after chain. All identity and address controls remain.",
+  "correction": "Use the existing admissionPresentationAfter chain, which delegates the two exact occurrence amendments with strict before-value checking. Rename test to state explicit amendments are allowed. No runtime or fixture changes.",
+  "otherLocalResults": {
+    "typecheck": "PASS",
+    "lint": "PASS zero errors/six inherited warnings",
+    "safeAuthenticatedMigrationFreeBuild": "PASS",
+    "androidSourceIcons": "PASS",
+    "authDevProbe": "INDETERMINATE: dev-only endpoint unobservable; no candidate mismatch proven",
+    "browserAndGeometry": "NOT EXECUTED: Playwright expected Chromium executable absent; zero scenarios ran"
+  },
+  "transportHistory": [
+    "Oversized local stdout collection truncated before create_tree; no remote mutation.",
+    "Parallel bounded collection was interrupted after 843 seconds before complete inputs stored; no commit/ref/PR call was reached.",
+    "Sequential collection succeeded; returned connector tree matched local staged tree exactly; exact remote commit fetched clean."
+  ],
+  "logs": {
+    "auth-ready.log": {
+      "bytes": 230,
+      "sha256": "1817b6c1931cd9d4469cc740c9b4c98f43e49f596547fac3331a168046b75db3"
+    },
+    "geometry.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "auth-dev-server.log": {
+      "bytes": 73,
+      "sha256": "8bff1a18062afb7209ceaa54fbfa3bd50313a15f8989de7229399c70a0012a4c"
+    },
+    "typecheck.log": {
+      "bytes": 336,
+      "sha256": "fd701089501caed8921791099b43b18612be047d31390a24cf66a22b1fb8267c"
+    },
+    "build.log": {
+      "bytes": 10891,
+      "sha256": "1b7ea57c7569291143db830d1992230968e1ca6c7a282cca2b62708417b8275a"
+    },
+    "full-tests.log": {
+      "bytes": 547847,
+      "sha256": "4cb230b5ab671484dcbd8c7495fdc88032a55666ccce0d0d10bbd0bf89831f00"
+    },
+    "auth.log": {
+      "bytes": 438,
+      "sha256": "144e9f3e4184e0f6f2f44d43b65d203aa89d450f4ba86e089a5a97c899fe838e"
+    },
+    "lint.log": {
+      "bytes": 1959,
+      "sha256": "7e3fbeec5325c53a4e1f43decdd67e31a47f723c42b239334b557e27ba37345f"
+    },
+    "android-source.log": {
+      "bytes": 733,
+      "sha256": "6c11f7cd965907341dd97f233de2ea3987a494f908825d20b026d1920dce2d11"
+    },
+    "playwright-install.log": {
+      "bytes": 110,
+      "sha256": "865814f7e3bbe4900de884ebdc71dd1e39686026acac49ecf1097343e7b6b549"
+    },
+    "auth-retry.log": {
+      "bytes": 230,
+      "sha256": "1817b6c1931cd9d4469cc740c9b4c98f43e49f596547fac3331a168046b75db3"
+    },
+    "browser-extras.log": {
+      "bytes": 2700,
+      "sha256": "9368b9434506af9dc672360106cecada0af8bfdec2bfd286848a03446587edd3"
+    }
+  },
+  "independentVerification": "Source and focused probes reported PASS, but overall c33 candidate HOLD due full suite failure. Successor requires all exact-head gates again."
+}
