@@ -1,3 +1,58 @@
+# CURRENT — PR #69 VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION (2026-10-13)
+
+**TERMINAL STOP:** PR68 release and bounded Missouri advancement have reached the next verified candidate gate. Do not merge/deploy PR69 or begin another batch without owner authority.
+
+## EXACT CANDIDATE / CURRENT PRODUCTION
+- **Independent source, hosted/browser/geometry and automated Android PASS WITH INHERITED LIMITATIONS.** Draft PR **#69**, https://github.com/caleb1234calvin-art/dinner-roulette/pull/69; branch **integration/missouri-three-cleared-2026-10-13**.
+- SHA **6c619adda4d9ef3b2683befb2ca874b257505eb2**; tree **236110f86f9f3dc8c0cf0a5a664be79e2569bc43**; sole parent **3b6b9ed0f4be1581b3b541207b2637183fff57d3**.
+- Three additions only: Rowe Crop Farm Family Fall Fun, Meramec State Park Spooktacular, Pets and Pumpkins. **70 candidate identities**, every field of all67 released objects/presentations/freshness unchanged.18 reviewed paths (complete inventory in freeze entry); four runtime files=new catalog/presentation entries/search and current-policy membership registration. No algorithm/components/CSS/dependencies/workflows/native/settings changes.
+- **PR68 release remains PASS**, main **3b6b9ed0f4be1581b3b541207b2637183fff57d3** /tree **577d680f089e0a6e6892da2bdd6419132b890354**,67 published identities. Production **dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ READY/source3b6**; immutable dinner-roulette-gdtsdwx99-minions-9e2c.vercel.app.
+- Five aliases remain pickforus.app,www.pickforus.app,dinner-roulette-chi.vercel.app,dinner-roulette-minions-9e2c.vercel.app,dinner-roulette-git-main-minions-9e2c.vercel.app. This checkpoint freshly rechecks metadata, not a new production browser audit.
+- Fresh rollback deployment read: **dpl_3mPcvp1LGsjtQ3MVLgRUdmAzejN9 READY/source8353e60056fb0568360c5c13878d102880395d9f**. Supported authenticated route last inspected/canceled during PR68 release; not newly exercised. Automatic restore set apex/www/chi only; both generated aliases require separate verification, STOP on mismatch, no improvised settings.
+- Fresh branch metadata protected:false and repository rulesets[]; **PR68 waiver consumed, no PR69 release approval or waiver**. Any future release requires owner decision and fresh full preflight.
+
+## EXACT DATA / RUNTIME SAFETY
+- Rowe:27 finite2026 activity dates, excludes September store-only midweek; Corn Maze/Pumpkin Patch, supplemental hayrides; Good tier; approximate address-derived point; exact **2026-10-25T23:00:00Z** cutoff. Unknown last admission remains unknown.
+- Meramec:October17 official event;16:45 vehicle-road closure retained prominently;17:00 trick-or-treat start, unknown closing; park-scale approximate placement; date-only **2026-10-18T05:00:00Z**,noendsAt;Good tier.
+- Pets:October24 11–16 at named Park Central Square,rain-or-shine/approximate parade-lineup note; square point,no invented street/entrance; exact **2026-10-24T21:00:00Z**;High tier.
+- Exact cleared full records/presentations preserved, null machine openingHours/neverOpenNow, supported-address Directions/external destination selection, no2027 recurrence, no strengthened precision/freshness. Rowe Census re-fetch limitation remains inherited; runtime verification is not new factual source re-clearance.
+- Source independent528assertions+12mutation controls PASS; all15 old catalog files byte-identical. Complete70 registry enforcement precedes exact-three historical-view filtering; no blanket historical exclusions.
+
+## EXACT-HEAD ACCEPTANCE
+- Web **38365309642 /423** checks+14browserjobs SUCCESS; Android **38365309628 /94** SUCCESS. **1,099 repository +71 application PASS**,zero failures/four documentation skips;typecheck;lint0errors/six warnings;safe authenticated migration-free build.
+-507-input fingerprint **5449c437f5d58c824383b1a4493f71ad99609cfbf4c3c90d3117b0fb7fca5f8c** independently reproduced; all15 original web/embedded verdict proofs BUILT/authtrue. Distinct output hashes retained separately.
+- **1,426 seasonal +10 ordinary Date Night scenarios PASS**, separately16casino/19location checks. Seasonal counts23/97/157/235/220/196/164/87/69/178. Ranked178 includes54newrecord scenarios,18 each, all names and raw evidence independently checked.
+- Actual application Options/Result/Details at320/390, address query targets, ride selectors, confidence/shared notice, exact material paragraphs, category/ordinary exclusions, aliases/duplicates, preferences/favorites/save/reload, negative precedence, cache/resume/stale current-policy restoration/outage and2027 PASS.
+- Allthree actual builtRPC responses present record before cutoff, delivered exactly at cutoff, cannot render expired record. Boundary-1/exact/+1 and local overlay retirement with zero expiry refresh PASS. Controlled browser clocks/fixtures, not future live time.
+- **Actual Rowe Plan journey PASS** with distinct ordinary park fixture partner; no real partner availability claim. Meramec/Pets Other-only negative journeys assert no articles/explicit no-complete-pair, no invented taxonomy. No screenshot of open negative state claimed.
+-52exact new live expanded paragraph/33control checks across12Options/Result overlays+RowePlan PASS.22 original screenshots directly viewed and hashed, no regeneration/substitution.
+- **576geometry comparisons/all70identities/19negativePlan controls PASS**;4,704note descendants/708expanded paragraphs,21new card-width contexts. Historical baseline2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81, not releasedmain; current components/styles equality separately established. MaxResult+4.671875px/Plan+3px within existing5px tolerance; media unchanged. Static metrics separate from actual-app new Other expanded reachability.
+- Android original automated artifact acceptance PASS; exact head checkout6c619 despite syntheticmerge artifact names3bc820d2ac14b897d367cd0a98c45b0ab2ebe08b (treeequal).233Gradle tasks/3Python tests;37NO-SOURCE tasks include allthree native unit tests.14native warnings/zeroerrors; missing-upload-key signing guard expectedFAIL, unsignedbuildPASS/signjobSKIPPED.
+- Native wrapper loads released67 HTTPS production, not candidate70 embeddedweb. **Physical Android/WebView/GPS and installedPWA HOLD**;signing/Play outside scope.
+
+## FAILED ATTEMPTS / LIMITATIONS
+- Author prebuild15missing-output failures and build-env2wrapper failures preserved; corrected execution setup only, no weakened assertions. Publication collection interrupted before remote mutation; bounded retry treeequal. Local browser/geometry0scenarios due socket denial/missing executable; hosted success does not relabel local failures. Dev-onlyauth **INCONCLUSIVE**.
+- All70static320px Results retain35px Directions-label overflow (315scroll/280content);390/512no measured overflow. Liberty narrowaddress overflow and223intentional title/category ellipses remain.1px tolerance is rounding only; no blanket no-clipping or new waiver. Long narrow Pets Details require scrolling.
+- Controlled fixtures/clocks do not prove live provider/tickets/weather/GPS/externalnavigation/ridebooking. TemporaryOther icon, sixweb/14nativewarnings/fourskips retained. No new precision or source freshness.
+
+## DURABLE EVIDENCE
+- All17original CI archives (15web+2Android) **959,930,658 bytes/9,563 members**, privately18Library files.15web alone953,040,175bytes/9,552members; complete API/actualSHA/CRC/safeunique paths/everymember checks PASS.
+- Recovery manifest **libfile_0f2bbaf5ec508191be12fda5d2d8c4d0**,version0,2,527,697 bytes,SHA256 **5337b8a7d2cec9b952e8e74b989c38308911cb70a52dd9697dc54c15f971b3ce**. Geometry11796984252 original296,073,312bytes split raw250,000,000+46,073,312. Reviewer freshly materialized SAVED version0 parts and independently reconstructed exact original/APIhash/all4,167members/CRC/inventory/byteequality PASS.
+- Compact114-member review **libfile_76cb1c0ed7e88191871385871c4a5ddf**,PR69-6c619-independent-review-evidence.zip,5,979,228bytes,SHA256 **06af8db89e7e1375c6685f3c10ae4584262878ea88f2748d3eea2aaf24c9202f**. Contains original author failure evidence, source/hosted/Android reports,22viewed screenshots, manifests and independent saved-part reconstruction.
+- Source report **902f53a10f0e0f578fab0bab7b78e123a6f10ddca86750413f0684a697ad5c5b**; hosted final report **da17cb900bb0acbba94861bfed6ea7d60d97f31763b9fbae0688456cfd20d1cf**; Android report **50821346f3c9ef52387abb8dac5655dbb4a7a12f4e0c562104388c4f4bbfb906**,manifest **cf75f493f6967f59aa40816feb1b41fe2146020bd9772d4b23feeddbe37afff3**.
+- Complete Android package **libfile_d95a8dbb44a48191a603b958bc266568**,14,397,979bytes/31members,SHA256 **c6394ae8fdf1b7e6b7c3dfb20e3d4b190d6df7810d2b093f353fe28c7968ff1d**. Original native artifact IDs/hashes retained in previous checkpoint.
+- Research archive **libfile_32cb1c92325081918cdd55994369132e**,8,787,018bytes/264members,SHA256 **6bb19d5a4f749aa417935ba4ff2e5e08017030501484d9093b472d96e2d8cd26** remains complete/private. Raw owner/source images notpublic.
+
+## REVIEW / HOLD / NEXT
+- Bounded11lead research:3fullclear nowverifiedcandidate; LoneJack factualonly/placementruntimeHOLD; Beggs scopedfieldsPASS but completefactual/access/placement/runtimeHOLD; Castle terminalclosed2026; Pixie/Amber/Sarcoxie/Fischer/GardenerHOLD. No farmHOLD import. Original134 not statewide completeness.
+- Tommy2 scopedVALIDCURRENT/zeroamendments reduced publishedsourceHOLDs9→7. Remaining Liberty,Campbell's,Creepyworld,Darkness,Cobb,Grotto,OzarkNightmares; nineownerHOLDs Hannibal,Bakersfield,Rising,TerrifiedExistence,TwistedMinds,DarkLords,ZombieWorld,Lemp,Macabre unchanged. No exhausted-source loop withoutmaterialchange.
+- Releasedinventory67/64lifecycleeligible/3expired/0OpenNow and4nearcutoffs remains a dated policy snapshot, not64freshclearances. No old freshness rewrite or silent extension.
+- PR61 PARKED. **“Radial discovery becomes an audit layer.”** futureintent only.
+- **STOP. Owner decision required for exact PR69 SHA6c619adda4d9ef3b2683befb2ca874b257505eb2 /tree236110f86f9f3dc8c0cf0a5a664be79e2569bc43.** No merge/deploy/futurewaiver granted. Any authorized release must freshly recheck identities, main/prod/checks/build/aliases/rollback/protection; drift invalidates acceptance.
+- Docs-only canonical checkpoint; full prior **9788d267a4eec2e571f4eea02aaf7b99ca478c30** preserved. Fresh main/prod/rollback/PR/head/tree/parent/protection and completecurrentblob read. Full readback required before terminal completion; prior pendingstates superseded, historyretained.
+
+---
+
 # CURRENT — PR #69 SOURCE AND ANDROID PASS; WEB ACCEPTANCE STILL HOLD (2026-10-13)
 
 - Exact Draft PR69 **6c619adda4d9ef3b2683befb2ca874b257505eb2** /tree **236110f86f9f3dc8c0cf0a5a664be79e2569bc43** /sole parent **3b6b9ed0f4be1581b3b541207b2637183fff57d3** unchanged.70 candidate/67published identities,18paths.
