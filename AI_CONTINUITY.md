@@ -24,7 +24,7 @@
 - Next material gate: publish state research outcomes, exact evidence identities, independent dispositions and prioritized future queue; read continuity back. PR69 continues to await one concrete owner release decision independently of research.
 
 ## HOLD / LIMITATIONS
-- All current Missouri source-review/owner-field/Cadaver/placement HOLDs retain their exact blockers from prior entries; regional expansion does not clear them. No new regional lead is yet claimed verified or implementation-ready at this mission-start checkpoint.
+- Current unresolved Missouri source-review, owner-field and placement HOLDs retain their exact blockers from prior entries; regional expansion does not clear them. **Cadaver Zone is already LIVE since PR64 and is not a current HOLD; do not reopen its superseded historical clearance blocker.** No new regional lead is yet claimed verified or implementation-ready at this mission-start checkpoint.
 - Physical Android/WebView/GPS and installed-PWA acceptance remain HOLD; signing/Play outside scope. Six web lint warnings, fourteen native warnings, inherited narrow Directions clipping/overflow, temporary Other icon, approximate placement, conservative Open Now, fixture/provider limitations and dev-only auth probe INCONCLUSIVE remain documented.
 - No production/runtime/source mutation, deployment, branch-protection/settings change or new release waiver is authorized by this documentation checkpoint. Canonical documentation is written only on deployment-disabled **integration/continuity-refresh-2026-10-07**, retaining the entire prior body. Full remote readback is required before treating this checkpoint as published.
 
