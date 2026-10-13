@@ -1,3 +1,56 @@
+# CURRENT — PR #68 VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION (2026-10-13)
+
+**TERMINAL STOP:** PR67 release → bounded postrelease review → next candidate mission is complete after this checkpoint readback. Do not merge/deploy PR68 or start another research batch without the relevant owner decision.
+
+## EXACT CANDIDATE / VERDICT
+- **PASS WITH INHERITED LIMITATIONS**, fresh independent exact-candidate source, runtime, hosted/browser/geometry and automated Android acceptance.
+- Draft PR **#68**, https://github.com/caleb1234calvin-art/dinner-roulette/pull/68; branch **integration/missouri-occurrence-amendments-2026-10-13**.
+- SHA **3b6b9ed0f4be1581b3b541207b2637183fff57d3**; tree **577d680f089e0a6e6892da2bdd6419132b890354**; sole parent **c33c8513eb7e2b2ec19248dd76e5effe04af6e51**; released-main ancestor **8353e60056fb0568360c5c13878d102880395d9f**.
+-23 paths reviewed; only three runtime catalog/presentation files change.67 identities retained, no additions/removals. Exactly13 approved fields across two records; all65 other complete objects and every unprojected amended property independently equal main. No policy/component/CSS/media/dependency/workflow/native/deployment changes.
+- **Haunted Hollows, Palmyra:** addOctober16,17,23,31 to retained9,10,24,30; finalOctober31 23:00CDT / **2026-11-01T04:00:00Z**, matching all approved end/expiry fields. Preserve October9 start-only qualification, refund/availability/approximate-location notes, current supported5947 County Road261 visitor target. Not Brookdale.
+- **Missouri Nightmare:** exact three copy locations say final listed ticket time November1 20:30CST, not physical closing. Existing **2026-11-02T02:30:00Z** cutoff/all dates unchanged. No cancellation inferred from unavailable dates.
+- Freshness/review dates, source authority boundaries, machine hours/never Open Now, navigation/rideshare and identity/negative policy unchanged.73 prior source-clearance manifest members rehashed; runtime verifier used accepted research, did not claim new source revalidation.
+
+## PRODUCTION / COMPLETED RELEASE
+- PR67 release and scoped production acceptance remain PASS. Main **8353e60056fb0568360c5c13878d102880395d9f**, tree **a10e02b3151fda349322b612c371ddacd88350e1**; **67 identities live**.
+- Production **dpl_3mPcvp1LGsjtQ3MVLgRUdmAzejN9 READY**, exact source8353; immutable dinner-roulette-rao0283eb-minions-9e2c.vercel.app. Five aliases: pickforus.app,www.pickforus.app,dinner-roulette-chi.vercel.app,dinner-roulette-minions-9e2c.vercel.app,dinner-roulette-git-main-minions-9e2c.vercel.app.
+- Immediate supported rollback **dpl_6Zsbjuca7iB6y5wPhpRk11xRYAFs READY**, source **0032d913efaca4bd97d730414a50a5b01e1a2099**. Prior authenticated route inspection/cancellation retained; actual restore untested. Automatic set only apex/www/chi; two generated aliases must separately be verified and mismatch causes STOP, no improvised settings/alias action. Reverify access/target before any future release.
+- PR67 one-release waiver consumed. **No PR68 release authority or waiver.** Production unchanged throughout candidate work; PR68 production acceptance not claimed.
+
+## EXACT-HEAD VALIDATION / HISTORY
+- Web **38346362585**,15 jobs plus aggregate SUCCESS; Android **38346362567 /93** SUCCESS. **1,076 repository +71 application PASS**, zero failures/four documentation skips; typecheck PASS; lint0 errors/six inherited warnings; authenticated migration-free production build PASS.
+- Independent503-input source fingerprint **068ad01b4a3241c1eb6347c6e83b8739b20747ac7ab1bfa80df3f393f130f8c0**, matches all15 original build proofs. Job output hashes preserved separately.
+- Independent **106 adversarial +141 focused +2 exact-record actual-component Plan action tests PASS**;442 raw RPC/evidence assertions across45 amendment-target hosted scenarios. Covers old/new cutoff ±1ms, current stale saved/cache/provider reconciliation, held RPC delivered at expiry, closed/disused negatives, provider24/7, no2027, identity/navigation/exclusions/favorites.
+- **1,372 seasonal +10 ordinary Date Night =1,382 scenarios PASS**, separately16 casino/19 location checks. Seasonal counts23/97/157/235/220/196/164/87/69/124; Extras retains185 prior plus11 amendment scenarios. Eight runtime original screenshots directly viewed.
+- **555 geometry comparisons /67 identities /4,536 width checks /696 expanded paragraphs PASS**;18 amended card-width contexts/63 amended paragraphs.161 component/style/media files equal current main. Result max+4.671875px, Plan+3px within existing5px tolerance.20 original geometry screenshots viewed. Historical geometry baseline2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81, not candidate parent/current main; equality to current main separately proved.
+- **Plan coverage limit explicit:** no per-record qualified live browser Plan journey for these two amended records. Actual Plan components have static Chromium/keyboard/scroll/pixel coverage at320/390/512; two independently executed actual DateNightHome actions use stale targets plus synthetic ordinary settle fixture. These are not hydration/live-nearby-venue claims. Unchanged paths and17 exact-head qualified other-record live Plan scenarios support no identified concrete blocker. Missing per-record live journeys remain a limitation, not a waived failing gate.
+- Android independent original unsigned AAB/APK/config/manifests/checksums/launcher/lint PASS;193 native inputs unchanged;14 inherited native warnings, native NO-SOURCE/signing SKIPPED. Wrapper loads live released website, not embedded successor behavior. Physical Android/WebView/GPS HOLD.
+- Failedc33 remains HOLD:1,075 repository PASS/1 stale historical assertion FAIL/4 skips,71appPASS; native not built. Successor modifies only strict assertion composition/title and failure receipt, runtime unchanged. All12 failed author log hashes preserved; no blanket exclusions. Verifier initial comparison-only undefined-key failures corrected in its harness and retained, no product mutation.
+- Local author browser executed zero scenarios due missing Chromium; hosted did execute. Dev-only auth probe **INCONCLUSIVE/INDETERMINATE**, not PASS or established mismatch. Safe production auth checks separately PASS. Transport interruptions and rejected local metadata patch/oversized output failures preserved without bypass or falsified success.
+
+## DURABLE EVIDENCE
+- All15 original web ZIPs **914,419,599 bytes /9,203 members**: API digest/size, actualSHA256,CRC, unique safe paths and every member size/CRC/SHA verified. Originals privately preserved as16 Library files; geometry raw250,000,000+36,176,880-byte parts independently reconstructed to original SHA **3408e3edf9790ec1911a76597ed4339ad2f5de215052993b1d0f0889d7c91ac0**. No regeneration to reduce archive.
+- Recovery manifest **libfile_9ef2a7c274fc81919e4133acab246793**, PR68-3b6b9ed0-ORIGINAL-EVIDENCE-RECOVERY-MANIFEST.json,2,444,882 bytes,SHA256 **54208e4a4a03bf898931fcffcb4a6f372b44ce938f637c8bd6ea4fcebf0d3215**.
+- Final report SHA256 **4935a05e8f8c9d514e18793a135fb184da2e0e416461a5359a757bb060bf4cfb**. Compact122-member independent package **libfile_fae96f49740481919878e2a116442f9d**, PR68-independent-acceptance-3b6b9ed0.zip,7,966,393 bytes,SHA256 **015cad8b46d016e1bc2c7779db3c1fe2ddfb5f03ced917db2f29b81e46b44447**.
+- Geometry report SHA256 **1b1807cd16c34745913a29107223efa8ca2ee0628e267e804459ec3057325e39**; manifest **e5c08ea998ca1fd20d7427ad48754aa2cd351c50360633c5ec8d9533d6a99adc**.
+- Android original recovery/review **libfile_ae67437c81e48191a62e3311344cda7d**,14,222,175 bytes,SHA256 **797ab0bf5e2153e1ef1066bfff4361432ea7507c4d293200e4d482aea13165d2**. Original artifact IDs/hashes in preceding checkpoint. Author successful/failed local transport evidence archive298,456 bytes/53CRC-verified members,SHA256 **deaff4b3cd1376c71f022b752b229013051c40e5ba5fb3c604391d38bb43e3b8** included in compact review.
+- Source research private ZIP **libfile_eb2c3d36101c8191bbbff1afffc6120b**,9,168,822 bytes,SHA256 **6abb5b20144b730a1c80bb5bab4648d2fc0b328a81dd5ff31dab586dbab94f2d** remains recoverable; raw owner/source captures not published.
+
+## POSTRELEASE REVIEW / HOLD
+- Completed30-record review:7 scoped valid,2 cleared amendments now verified in candidate,9 remaining published fresh-source HOLDs;3 imminent expiring;9 owner-field HOLDs. No automatic removal/cancellation or new identity.
+- Published HOLDs Liberty,Campbell's,Creepyworld,Darkness,Cobb,Tommy's Ballwin/O'Fallon,Grotto,Ozark Nightmares; owner HOLDs Hannibal,Bakersfield,Rising,Terrified Existence,Twisted Minds,Dark Lords,Zombie World,Lemp,Macabre. Trigger-based ranking retained; no repeated blocked/exhausted-source searches absent new evidence.
+- BooneOctober18 01Z,BrokenHour03Z,Pomme05Z cutoffs unchanged. PR67 owner-evidence2026-only scope retained. PR61 PARKED; **“Radial discovery becomes an audit layer.”** remains future intent.
+- Six web/14 native warnings,four skips, inherited320px Directions35px excess/Liberty6px overflow,title/category ellipsis/1px rounding retained; no fix or new waiver. Approximate placement, conservative Open Now, temporaryOther icon and no live provider/ticket/weather guarantee. Saved expired entries may remain ineligible history.
+- Physical Android/WebView/GPS HOLD; signing/Play outside scope.
+
+## NEXT / OWNER ACTION
+**STOP at VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION for exact PR68 SHA3b6b9ed0f4be1581b3b541207b2637183fff57d3 /tree577d680f089e0a6e6892da2bdd6419132b890354.**
+Ask one owner release decision. Any later release requires fresh main/prod/head/tree/ancestry/checks/build/aliases/rollback/protection preflight. No automatic release, new research or further runtime change.
+
+Docs-only canonical update; prior **1847c19e54667703275585f16ec7676c7569e5b3** body preserved. Fresh main/prod/rollback/PR/head/tree/parent/current continuity checked; full readback required before completion. Old pending gates are historical and superseded by this complete independent acceptance.
+
+---
+
 # CURRENT — PR #68 HOSTED VALIDATION PASS; FINAL ORIGINAL EVIDENCE ACCEPTANCE HOLD (2026-10-13)
 
 - Active Draft PR68 exact **3b6b9ed0f4be1581b3b541207b2637183fff57d3**, tree **577d680f089e0a6e6892da2bdd6419132b890354**, sole parent **c33c8513eb7e2b2ec19248dd76e5effe04af6e51**. Branch integration/missouri-occurrence-amendments-2026-10-13; two approved amendments/67 identities/23paths unchanged.
