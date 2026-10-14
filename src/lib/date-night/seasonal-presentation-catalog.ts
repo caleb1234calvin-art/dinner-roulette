@@ -839,7 +839,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
       "Parking is next to Shelter 1; activities are at the campgrounds, store and grill.",
       "May be canceled for weather; check within 48 hours of the event."
     ]
-  }
+  },
   "KS26-W1-WALTERS": {
   "canonicalId": "date-night-ks26-walters",
   "confidence": "good",
