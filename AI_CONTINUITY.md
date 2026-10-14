@@ -1,3 +1,58 @@
+# CURRENT — PR70 RECOVERY AND SOURCE-ONLY R3 REVIEW (2026-10-14, 15:48 UTC)
+
+## Current authoritative state
+- Fresh GitHub reads: canonical continuity remains **554bee58b1265b984caeca7bb85c0293d2a9ff21** before this documentation write. Draft PR **#70** remains open and unmerged at **cbf17b70787a2d8ee247eb9183d45fe9d1b73755**, tree **096aaa2c2b78962c5d3e2a92bc510cface3d618e**, sole parent **6c619adda4d9ef3b2683befb2ca874b257505eb2**, branch **integration/regional-wave1-2026-10-14**.
+- Main remains **6c619adda4d9ef3b2683befb2ca874b257505eb2**, tree **236110f86f9f3dc8c0cf0a5a664be79e2569bc43**. Fresh project/deployment reads confirm production **dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf READY**, source exact main, with the existing five aliases recorded. There are **70 published identities**; PR70's twelve additions would produce 82. This checkpoint performs no live production smoke or alias navigation.
+- Supported immediate rollback remains **dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ**, source **3b6b9ed0f4be1581b3b541207b2637183fff57d3**, as last inspected during PR69 acceptance. The authenticated restore route was not exercised again here. Automatic apex/www/chi restoration and separate generated-alias verification requirements remain.
+- The 07:44 platform preview-limit interruption stopped implementation, independent review and Illinois research. Continuous execution during that interval is not claimed. Existing tasks resumed normal execution by 15:47. The pending documentation create_blob returned success as **4e0c216fdb2947f84cd728b851c2277ff59a50dc**; no prior tree/commit/ref publication occurred. Its timestamped 07:43 failure entry is preserved immediately below, followed by the entire unchanged published history.
+
+## Validation and bounded correction
+- Fresh API read confirms original web run **38527728125 completed FAILURE** at exact cbf17b70. Coordinator terminal-status review reports all fourteen other browser jobs and core succeeded; this is workflow status, not independent inspection of every original artifact. A fresh jobs-list request timed out and was not treated as evidence of failure or absence.
+- Geometry job **115731957952** remains FAIL. Original artifact **11876982975**, 383,049,378 bytes / 5,296 members, SHA256 **6951d52783d6421d5039066c14264c45766b7554cc26b70a04b2ba75bb950cf1**, is retained. The three 320px expanded-paragraph scroll-position failures and independent screenshot diagnosis are detailed in the preserved entry below.
+- Independent **SOURCE-ONLY PASS** completed at 15:47 for local R3 **528670927eb6edf054b5360cc41a043781c62a9e**, tree **c7c49796abc809c4a00690cd282f69920e325bbc**, local parent **6c619adda4d9ef3b2683befb2ca874b257505eb2**. One line in **scripts/seasonal-card-layout-browser.mjs** adds explicit centered native scrolling. All 1,431 other blobs, original strict assertions, tolerances, paragraph loops, coverage and screenshot capture remain unchanged. No runtime data, presentation or CSS change.
+- Full independent receipt: **regional-hosted-independent-review/R3-SOURCE-ONLY-REVIEW.json**, SHA256 **e15a06c10e77274f432b746ed2e411f4176a56093c74244d41cb23f9a409fcc6**. Removing the exact added line restores prior bytes. This source review does not establish corrected hosted geometry or full candidate acceptance.
+- Hosted core passed 1,242 repository and 71 application tests with four inherited skips. Original Android run **38527728064** passed automated artifact review; unsigned artifacts, signing guard, skipped signing, 14 native warnings and 37 NO-SOURCE tasks remain as previously recorded. Android binaries load the current production URL, not the unshipped regional catalog.
+
+## NEXT
+1. Publish the reviewed R3 tree as a **normal child of remote cbf17b70**, with no force push. Record the new remote SHA and independently rebind exact tree/source review. The local R3 base-parent identity is not authority to rewrite the published branch.
+2. Rerun all required exact-head validation, browser, geometry and Android gates; preserve the original failed run and independently inspect the successor evidence. Do not transfer earlier execution PASS to a changed head.
+3. Continue the existing bounded Illinois research lane. Recovered work contains **41 selected leads (26 central/south, 15 east/north)**, with ledger reconciliation and independent review still pending. These are partial research counts, not final factual or placement clearance.
+4. Maintain one successor implementation PR and one eventual owner release decision. Later-state research may create evidence, ledgers and future queues only.
+
+## HOLD and authority
+- Corrected hosted acceptance, complete original-artifact review and final independent candidate verification remain HOLD. PR70 is not release-ready and has no merge, deployment or release-waiver authority.
+- Illinois has no final ledger, independent disposition or implementation clearance yet. Do not create a second implementation PR.
+- Physical Android/WebView/GPS/installed-PWA, inherited warnings and clipping/overflow, qualified approximate placement, conservative Open Now and provider/weather/ticket limitations remain. Missouri's existing field/source HOLDs remain distinct; Cadaver and The Werehouse are already live.
+- PR61 remains parked. **“Radial discovery becomes an audit layer.”** remains future product intent.
+- Owner's standing documentation authority and explicit 07:14 resumption cover this deployment-disabled recovery checkpoint. No new denial or cancellation was reported for the succeeded blob. Earlier canceled and interrupted attempts remain preserved as history.
+
+---
+
+# CURRENT — PR70 GEOMETRY FAILURE; BOUNDED HARNESS REMEDIATION AUTHORIZED (2026-10-14)
+
+## Exact current state
+- Fresh inspection at approximately **07:43 UTC**: Draft PR70 still points to **cbf17b70787a2d8ee247eb9183d45fe9d1b73755**, tree **096aaa2c2b78962c5d3e2a92bc510cface3d618e**, sole parent **6c619adda4d9ef3b2683befb2ca874b257505eb2**. Branch: **integration/regional-wave1-2026-10-14**. No successor remediation head was yet observed.
+- Web run **38527728125 remains IN_PROGRESS** at that read. Geometry job **115731957952 FAILED**. Do not call the entire run terminal or successful while other lanes are still settling.
+- Hosted core passed **1,242 repository +71 application tests**, with four inherited skips. This does not override the failed geometry gate.
+- Android run **38527728064 completed SUCCESS**. Independent unsigned AAB/debug APK inspection, signing guard and original artifacts passed; signing skipped, 14 native warnings and 37 NO-SOURCE tasks remain. Native binaries use the current production URL, so this is not proof of regional candidate operation on a physical device.
+
+## Failed geometry and diagnosis
+- Original geometry ZIP: **383,049,378 bytes /5,296 members**, API digest and member CRC verified by the independent reviewer.
+- **684 comparisons enumerated**, including 108 regional comparisons. Exactly three incomplete/failed expanded paragraph checks occurred at 320px Options: **Exiled KC, Haunted Castle and Horror in the Hollow**. Enumeration is not a claim that all comparisons passed.
+- Reviewer inspected all three original screenshots. Content was present at readable 12px, full width and unobscured, but the first paragraph was at **y=-0.5** after scrollIntoViewIfNeeded.
+- Classification: **harness scroll-position edge**, not a demonstrated runtime content/layout defect. The original job remains FAIL; diagnosis is not a retrospective PASS.
+- Coordinator authorized the minimum explicit centered native scroll before the **unchanged strict assertions**. No tolerance increase, text/copy omission, CSS, data, runtime UI or seasonal-fact change is authorized by this correction.
+- Author may prepare the bounded successor without waiting for documentation. Once changed, record its exact SHA/tree/parent, independently review the delta, and rerun all required exact-head gates. Do not transfer old-head execution PASS to the successor.
+
+## Next and boundaries
+- Preserve original failed artifacts, screenshots, measurements and logs. Complete remaining original lanes honestly; then validate the exact corrected candidate with full applicable hosted/browser/geometry/Android and independent evidence review.
+- Illinois research continues as evidence, ledgers and a future queue only. PR70 remains the one successor implementation PR. No second implementation PR, merge, deployment or release waiver.
+- Fresh main remains **6c619adda4d9ef3b2683befb2ca874b257505eb2**, tree **236110f86f9f3dc8c0cf0a5a664be79e2569bc43**. Latest production **dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf READY**,70 published identities, unchanged. Rollback2PV and prior alias limitations remain unchanged; no new live release check.
+- Physical Android/WebView/GPS/installed-PWA HOLD and inherited warning/clipping/provider/approximation limitations remain. Source/data clearance stays separate from geometry and release acceptance.
+- This deployment-disabled documentation checkpoint preserves full prior **554bee58b1265b984caeca7bb85c0293d2a9ff21** history. New head/status appearing after the timestamp must be recorded at the next stable gate; this entry does not freeze or block the author.
+
+---
+
 # CURRENT — DRAFT PR #70 PUBLISHED; EXACT-HEAD HOSTED VALIDATION IN PROGRESS (2026-10-14)
 
 ## Current candidate
