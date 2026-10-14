@@ -1,3 +1,39 @@
+# CURRENT — REGIONAL R2 LOCAL VALIDATION PASS; PUBLICATION RESUMING (2026-10-14)
+
+## CURRENT
+- Fresh main **6c619adda4d9ef3b2683befb2ca874b257505eb2**,tree **236110f86f9f3dc8c0cf0a5a664be79e2569bc43**; latestproduction **dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf READY**,70published. PR69accepted; rollback2PV/source3b6 and generated-alias limitations unchanged. No successor release authority.
+- Local R2 **b455d0dc6ff7603b1efd56a24aec96061b8333e1**,tree **096aaa2c2b78962c5d3e2a92bc510cface3d618e**,soleparentmain6c619;branch **integration/regional-wave1-2026-10-14**. Exact12 regional additions, expected82; all70 prior completeobjects/presentations unchanged. **No remote candidate PR confirmed at this checkpoint**; authorized publisher is resuming in parallel.
+- Independent source185assertions PASS;1148distance/1148ownership/56membership checks and exactobject parity retained. R2 source report SHA256 **c385e1a5fecea2a51b8b621edc14a6f526865a0e7fa67fd8edbc0c9097588c6a**. R2changes one historicaltest versusR1, no runtimefact changes.
+- Fresh **1242repository+71application PASS**,0fail/4inheritedskips;typecheck;lint0errors6warnings;casinoaudit;Androidsource/icons/targetedlint/dependencychecks;nativePython3/iconPython5 PASS. Development and authenticated migration-free production builds PASS;freshcompiledsecurity14PASS is separate rerun, not addedtotals.
+-512inputhash **7eb945a3281f55ee64e62b0a1ba0ccb612503e23ab4609d0ea2e0a0509f94f3f**;193outputhash **4e042b4bb7d6fb665d1e4c4fc6eca4cc0b3b03d8f713ec62a020c6298ecf126a**.
+- Local browser **0/317 executed**,0provider calls: Chromium socketpermission/Crashpad failed before firstscenario. OfficialPlaywright download invalid/truncatedZIPs retained; no alternativebinary/permissionbypass. FullAndroidGradle unavailable withoutSDK. **HostedCI/browser/geometry/Androidartifact acceptance still HOLD/unrun**, no overallcandidatePASS.
+
+## FAILED ATTEMPTS / OWNER RESUMPTION
+- R1 **19b2ba7f7ae6506f20fe8d46a53b118438b8dd5a**,tree **e11fffad75f643d01f347f7b1469d15830c2b5b2**,sameparent6c:1240repoPASS/2FAIL/4skips+71appPASS. Historical Carthage50mile cornmaze expectation correctly expands fromAurora toAurora+Annabelle47.685mi. R2 preserves sparse/missing/provenance assertions;24affectedtestsPASS.
+- R1browser0executed because ignoredscripts/__pycache__ alteredpostbuild fingerprint. R2 checks usePYTHONDONTWRITEBYTECODE=1 andbuildafterchecks; no guard weakening. Original.pyc/logs/proofs preserved.
+- Initial candidatecreate_tree hung1513sec thenROOT-interrupted forreconciliation; expectedtree/branch404/noPR, notownercancellation. Latercandidatecreate_blob radius-oracle explicitlyusercancelled after18confirmedblobs; no treecommitrefPRfollowed. Separatedocumentationcreate_tree explicitlycancelled too.
+- Owner **“You can resume anything you held off on”**,messageSentinel_a757dfc44ad48191bfbd25f566a8db6b at07:14:27UTC, explicitly answers bundledretry question for bothdocumentation andsingle draftPRpublication. Same authorized routes resume after actualrefs reconciled. This does not authorize successor merge/deploy/settings/PR61. Prior canonical remaineda4215; preparedstale maintenanceblobe294b76 was neverpublished. This coherent entry supersedes its prefreezeclaim while preserving actualfailedhistory.
+
+## MAINTENANCE — NO RUNTIME AMENDMENT
+- Sixboundedchecks/fiverecords;zeroamendments/newclearances. Fiveupcomingretirements: Boone2026-10-18T01Z;BrokenHour03Z;Pomme/Meramec05Z;Farrington2026-10-19T05Z. Date-onlyretirement is notclosing/admission;Farringtoninventoryonly/notrefetched.
+-50explicitreviewdates29Oct14/21Oct15, historical49plusRowe, **not50freshchecks**. Darkness18:45/18:30conflict persists;BrokenHour429fresh-evidenceHOLD notclosure;Meramec16:45roadclosure retained. Crawlages/failedimage limits remain.
+- SevenpublishedsourceHOLDs/nineownerHOLDs unchanged/separate. Cadaver/WerehouseLIVE. ReportSHA **a2005071acf5050168db1520ee73ba5ba3e848888b2052b0ba3c705442c9ccc5**;inventory **36c662b94f5c7eabb97dad251da6f0a62e38c014a7da444669729b4b25e934e5**. PrivateZIP **libfile_64c65e868ebc8191b39d8d124c50677f**,61312B,SHA **abc438a26e0d733b5ec823dc106b77a607e1f7b7efb550fae150e18df708e114**;upload/localhashverified, noindependentsavedredownloadclaim.
+
+## PRIVATE RECOVERY
+- Evidence **libfile_20bf9299defc81918bc04e2b6d28b4c1**,2318292B/117members,SHA **4f8a25cbb4cdd62721cde884a2b9e89f4cd34e46daeb27ca6919f17d40971b06**,all109freshinputs.
+- SourceSUBSET **libfile_5efb98bfac0881919ff3878aceac4cfd**,49125802B/1393files,SHA **c030043c8718e97c0664fa6b91c01bc60cc54feb2c69554a68f908ce6de79e52**.
+- Handoff **libfile_87e7078a31e48191abf8cd763e848bfd**,8797B,SHA **1952bc1becb3528a3aa37ba41fa2b235bc4481c24b9b536cbb1345b0699696bd**.
+- Finalindependentverification/correctionreceipt **libfile_ec75f2714d4c8191bb7bacf4ecf2413e**,908797B,SHA **d8117f0d18e163e4c5c2a3e0d56290466f38931bbb56ace47c20cf451d9a2dec**. Pinnedv0 savedbytes/CRC/path/hash/size/nestedarchives/bundles independentlyPASS.
+-39historicalscreenshot/containerfiles11751063B omittedwithfullmanifest; exactGit recovery requires unchangedaccessiblepublishedbase6c619. **Notfullyself-containedfulltree durability.** Gitarchive gradlew.bat LF→CRLF documented; finalreceipt embeds original2843byteLFblob **db3a6ac207e507b0bc1635a9f2c18d3b174e682e**,other1431sourcefilesmatchGit. FullrawsourceexportsLOCALONLY. No behavior regeneration orbrowserPASSadded.
+
+## NEXT / HOLD
+- Finish oneexactR2 draftPRpublication, exactheadhostedfullvalidation/browser/geometry/automatedAndroid andindependentacceptance. Recordnewidentitiesifanysourcechanges;noPASStransfer. Maintenancecheckpointdoesnotblockauthors.
+- Onceonecandidatefreezes/CIruns, Illinois/later researchmayrun ahead as ledgers/evidence/futurequeue only; **no secondimplementationPR,no successor release/waiver**.
+-52regionalfactualHOLDs/WarehouseOct22subtypemapping stayheld;physicalAndroid/WebView/GPS/PWA HOLD;signingPlayoutside;inheritedwarnings/clipping/approximate/OpenNow/provider/devprobe limits unchanged. PR61parked;“Radial discovery becomes an audit layer.”futureintentonly.
+- Documentationonlydeploymentdisabledcontinuitybranch;fullprior **a4215b5f8dfa3bdc7cd01dca5dd35c991eef2cbc** retained. Fullreadback andfreshproduction/refchecks required.
+
+---
+
 # CURRENT — ALL22 REGIONAL DATA CLEARED; EXACT12 SELECTED FOR ONE SUCCESSOR (2026-10-14)
 
 ## CURRENT / VERIFIED BASELINE
