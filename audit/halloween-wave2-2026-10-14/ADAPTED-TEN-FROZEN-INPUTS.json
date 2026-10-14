@@ -1,5 +1,5 @@
 {
-  "revision": "WAVE2-DRAFT-2026-10-14-R1",
+  "revision": "WAVE2-DRAFT-2026-10-14-R2",
   "releasedBase": "0344ccce79ce157196ff9e84b1aaf3e40802afc5",
   "releaseAuthorized": false,
   "fullIndependentFreshAcceptance": "PENDING",
@@ -8,6 +8,20 @@
     "IL26-W1-R2-independent-review.zip",
     "regional-window-2026-10-14-private-compact-review-v1.zip"
   ],
+  "adaptationAmendments": {
+    "omittedOptionalNullEndsAtIds": [
+      "date-night-il26-w1-spook",
+      "date-night-il26-w1-boo"
+    ],
+    "hayridePoint": {
+      "recordId": "date-night-il26-w1-hayride-horror-bayou",
+      "source": "https://maps.app.goo.gl/ajiUjspKKqxCBKvk6",
+      "checkedAt": "2026-10-14T21:57:43Z",
+      "publishedLat": 41.5748765,
+      "publishedLon": -88.0632969,
+      "method": "Operator page's Dellwood Park link was reopened; redirected named public Maps place contained !3d41.5748765!4d-88.0632969. This revalidation does not verify entrance/parking/dropoff precision."
+    }
+  },
   "identityOrder": [
     "date-night-ks26-walters",
     "date-night-il26-w1-spook",
@@ -143,7 +157,6 @@
         "openNowPolicy": "never",
         "checkedAt": "2026-10-14",
         "revalidateAfter": "2026-10-16",
-        "endsAt": null,
         "listingExpiresAt": "2026-10-31T00:00:00-05:00",
         "note": "Researcher-only 2026 seasonal listing eligibility. Select supported nights; range alone is not daily operation. No machine hours or 2027 recurrence.",
         "sourceUrls": [
@@ -231,7 +244,6 @@
         "openNowPolicy": "never",
         "checkedAt": "2026-10-14",
         "revalidateAfter": "2026-10-16",
-        "endsAt": null,
         "listingExpiresAt": "2026-10-31T00:00:00-05:00",
         "note": "Researcher-only 2026 seasonal listing eligibility. Select supported nights; range alone is not daily operation. No machine hours or 2027 recurrence.",
         "sourceUrls": [
@@ -439,7 +451,7 @@
           "lon": -88.0632969,
           "basis": "operator-linked-map",
           "sourceUrl": "https://maps.app.goo.gl/ajiUjspKKqxCBKvk6",
-          "checkedAt": null,
+          "checkedAt": "2026-10-14T21:57:43Z",
           "precisionLabel": "Approximate public venue/address point"
         },
         "directionsTarget": {

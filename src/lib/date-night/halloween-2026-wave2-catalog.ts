@@ -1,9 +1,9 @@
 import type { DateNightPlace } from "./types";
 import { seasonalListingToPlace, type SeasonalListing } from "./listing";
 
-/** Halloween 2026 Wave 2 provisional, bounded 10-record catalog.
- * Research/date/placement parity checked; integrated acceptance PENDING.
- * Does not assert live operator opening hours or admission availability. */
+/** Halloween 2026 Wave 2 provisional bounded ten-record catalog.
+ * Prior accepted research with exact 2026 dates, placements and qualified
+ * operator map link. Independent integrated release acceptance PENDING. */
 export const WAVE2_2026_LISTINGS:
   (Omit<DateNightPlace, "lat" | "lon"> & { seasonalListing: SeasonalListing })[] = [
   {
@@ -128,7 +128,6 @@ export const WAVE2_2026_LISTINGS:
       "openNowPolicy": "never",
       "checkedAt": "2026-10-14",
       "revalidateAfter": "2026-10-16",
-      "endsAt": null,
       "listingExpiresAt": "2026-10-31T00:00:00-05:00",
       "note": "Researcher-only 2026 seasonal listing eligibility. Select supported nights; range alone is not daily operation. No machine hours or 2027 recurrence.",
       "sourceUrls": [
@@ -216,7 +215,6 @@ export const WAVE2_2026_LISTINGS:
       "openNowPolicy": "never",
       "checkedAt": "2026-10-14",
       "revalidateAfter": "2026-10-16",
-      "endsAt": null,
       "listingExpiresAt": "2026-10-31T00:00:00-05:00",
       "note": "Researcher-only 2026 seasonal listing eligibility. Select supported nights; range alone is not daily operation. No machine hours or 2027 recurrence.",
       "sourceUrls": [
@@ -424,7 +422,7 @@ export const WAVE2_2026_LISTINGS:
         "lon": -88.0632969,
         "basis": "operator-linked-map",
         "sourceUrl": "https://maps.app.goo.gl/ajiUjspKKqxCBKvk6",
-        "checkedAt": null,
+        "checkedAt": "2026-10-14T21:57:43Z",
         "precisionLabel": "Approximate public venue/address point"
       },
       "directionsTarget": {
