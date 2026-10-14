@@ -1,3 +1,32 @@
+# CURRENT — PR70 REMOTE R3 FROZEN; EXACT-HEAD VALIDATION RUNNING (2026-10-14, 15:53 UTC)
+
+## CURRENT
+- Fresh remote reads confirm Draft PR **#70**, **integration/regional-wave1-2026-10-14**, is open and unmerged at **963d1e54954a8e6baa77ade00a052fbce39e5afb**, tree **c7c49796abc809c4a00690cd282f69920e325bbc**, sole parent **cbf17b70787a2d8ee247eb9183d45fe9d1b73755**. The branch advanced normally without rewriting history; released main **6c619adda4d9ef3b2683befb2ca874b257505eb2** remains the parent's sole parent. PR70 now contains two commits.
+- Independent **SOURCE IDENTITY BINDING PASS** covers all **1,432 blobs and 89 directories (1,521 entries)**. The complete remote tree equals local reviewed R3 **528670927eb6edf054b5360cc41a043781c62a9e**. The local construction commit was based directly on main; that intentional parent difference does not change tree equality.
+- The exact parent delta is one added centered native-scroll line in **scripts/seasonal-card-layout-browser.mjs**. Original strict assertions, thresholds, coverage, runtime data, CSS and presentation remain unchanged.
+- Receipt: **regional-hosted-independent-review/REMOTE-R3-SOURCE-BINDING-RECEIPT.json**, SHA256 **647478824bae05a2238f15057369003b1332ca8b08e5192527d431845f6ae015**. Source-only acceptance is rebound to the actual remote head; old-head CI execution is not relabeled as new-head execution.
+- New exact-head web/browser run **38593086320** and Android run **38593086226** have started. Corrected hosted, geometry, Android artifact and overall independent acceptance are still pending.
+- Original **cbf17b70** geometry FAIL, the original eighteen artifacts and all interrupted/failed attempts remain retained. The recovery checkpoint immediately below is historical and does not override this new remote identity.
+
+## Production and authority
+- Fresh reads confirm main **6c619adda4d9ef3b2683befb2ca874b257505eb2**, tree **236110f86f9f3dc8c0cf0a5a664be79e2569bc43**; production **dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf READY**, source exact main. **70 identities are published; 82 exist only in the candidate.**
+- Immediate rollback **dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ** and the previously inspected restore-route limitations remain recorded below. This documentation gate does not exercise rollback or live production UI.
+- One successor PR only. No merge, deployment, successor release waiver, settings change, signing or Play authority. Existing integration deployment exclusions remain in force.
+
+## NEXT
+1. Complete all new exact-head gates and independently inspect original browser, geometry and Android evidence. Preserve the original failure even if R3 succeeds.
+2. Continue Illinois evidence/ledger reconciliation and independent review. **41 provisional selected leads (26 central/south, 15 east/north)** are research work in progress; no final disposition counts are claimed.
+3. Publish the next material validation or research checkpoint without blocking either lane. Later research produces future queues, not a second implementation PR.
+
+## HOLD
+- Corrected hosted acceptance and final release readiness remain HOLD until exact-head evidence is complete.
+- Illinois final ledger and independent factual/placement review remain pending.
+- Physical Android/WebView/GPS/installed-PWA, inherited warnings/clipping/overflow, approximate placement and provider/weather/ticket limitations remain. Android automated binaries use the production URL and do not establish regional operation on a physical device.
+- PR61 remains parked; **“Radial discovery becomes an audit layer.”** remains future intent.
+- Full prior **91c00629e6cc70a7ca4b0917f957c74911eb893d** continuity is preserved unchanged below.
+
+---
+
 # CURRENT — PR70 RECOVERY AND SOURCE-ONLY R3 REVIEW (2026-10-14, 15:48 UTC)
 
 ## Current authoritative state
