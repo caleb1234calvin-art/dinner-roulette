@@ -156,7 +156,7 @@ export const WAVE2_2026_LISTINGS:
       "ridesharePolicy": "external-picker",
       "hours": {
         "state": "partial",
-        "displayText": "Current ticket occurrence shows18:00 start; complete admission/closing hours unknown."
+        "displayText": "Select October 2026 dates; a current ticket session starts 6 p.m. Final closing time is unconfirmed."
       },
       "listingExpiresAt": "2026-10-31T00:00:00-05:00",
       "expiryBasis": "date-only",
@@ -176,10 +176,9 @@ export const WAVE2_2026_LISTINGS:
     "moodLevel": 2,
     "phone": null,
     "seasonalVisitNotes": [
-      "Current ticket occurrence shows18:00 start; complete admission/closing hours unknown.",
-      "Intense indoor/outdoor attraction; under13 not recommended, but all ages allowed.",
-      "One ticket covers Spook Hollow, M.C. Manor and M.C. Nightmare; these are components of one venue. No refunds except stated organizer-cancellation policy.",
-      "Speed pass shortens wait but does not promise immediate access.",
+      "October 9–10, 16–17, 23–24 and 30, 2026. Tickets show a 6 p.m. start for October 16; final closing time is unconfirmed.",
+      "One ticket covers Spook Hollow, M.C. Manor and M.C. Nightmare. Speed Pass can shorten the wait but does not guarantee immediate entry.",
+      "Intense indoor/outdoor scares; not recommended for children under 13, although all ages are permitted. Refunds follow the organizer’s cancellation policy.",
       "Location is approximate. Directions use the visitor address."
     ]
   },
@@ -246,7 +245,7 @@ export const WAVE2_2026_LISTINGS:
       "ridesharePolicy": "external-picker",
       "hours": {
         "state": "partial",
-        "displayText": "Current2026 ticket event: Fridays/Saturdays in October except Halloween. Box office18:30; scares19:00; full closing not established."
+        "displayText": "Fridays and Saturdays in October 2026, except Halloween. Box office 6:30 p.m.; scares start 7 p.m. Closing time is unconfirmed."
       },
       "listingExpiresAt": "2026-10-31T00:00:00-05:00",
       "expiryBasis": "date-only",
@@ -269,11 +268,10 @@ export const WAVE2_2026_LISTINGS:
     "moodLevel": 2,
     "phone": null,
     "seasonalVisitNotes": [
-      "Current2026 ticket event: Fridays/Saturdays in October except Halloween. Box office18:30; scares19:00; full closing not established.",
-      "Under12 requires adult; no minimum age otherwise. Most, not all, areas accessible; wood-chip trail may be difficult.",
-      "No single regular GA tickets; regular GA groups2–6, VIP minimum4; max6 enter together. Timed queue entry; capacity may sell out before travel.",
-      "Appropriate footwear; no costumes/props or recording inside. Rain operation may stop for severe weather. No refund except organizer cancellation policy.",
-      "Actor proximity/incidental collision possible; do not promise no-contact.",
+      "Fridays and Saturdays in October 2026, except Halloween. Box office opens 6:30 p.m.; scares start 7 p.m. Closing time is unconfirmed.",
+      "Children under 12 need an adult. Most areas are accessible, but the wood-chip trail may be difficult.",
+      "Regular admission is sold for groups of 2–6; VIP requires at least four. At most six enter together. Timed ticket queues and capacity limits apply.",
+      "No costumes, props or recording inside; close actor encounters and incidental contact are possible. Severe weather can close the attraction; organizer-cancellation refund rules apply.",
       "Location is approximate. Directions use the visitor address."
     ]
   },
@@ -364,8 +362,9 @@ export const WAVE2_2026_LISTINGS:
     "moodLevel": 2,
     "phone": null,
     "seasonalVisitNotes": [
-      "Select published nights only; date bounds are not daily operation. Haunted experiences run through October 30; Friday/Saturday haunted hours end 22:00 CDT. Farm, bar and festival hours do not extend this endpoint.",
-      "Paid haunted-experience tickets. Advance purchase recommended because dates may sell out. Dogs are not permitted during Fall Fest. Free on-site parking and overflow shuttle arrangements are provided.",
+      "Haunted hayride and barn operate on select nights October 2–30, 2026; not every Fall Festival day includes the haunts.",
+      "Haunted experiences generally begin at 7 p.m.; Friday/Saturday haunted hours end at 10 p.m. Other nights may differ.",
+      "Fall Festival admission is free, but haunted attractions require tickets and may sell out. No dogs during Fall Fest; free parking with overflow shuttles as needed.",
       "Location is approximate. Directions use the visitor address."
     ]
   },
@@ -452,9 +451,10 @@ export const WAVE2_2026_LISTINGS:
     "moodLevel": 2,
     "phone": null,
     "seasonalVisitNotes": [
-      "Select published nights only; date bounds are not daily operation. Final October 30 session and last-ticket endpoint is 22:00 CDT. This is listing/admission-based retirement, not guaranteed final exit; queued guests may continue.",
-      "October 29 offers Curse of the Bayou only, with no hayride. Tickets are date-specific. Outdoor event is weather-dependent. Proper footwear is required; no flip-flops, sandals or high heels. No costumes, weapons or alcohol. Parents should use discretion for children.",
-      "Ordinary ticket sales are final and nonrefundable. If the venue or organizer cancels an event, ticket purchases are refunded within four business days of the event date.",
+      "Hayride of Horror and Curse of the Bayou run select October 2026 nights through October 30. October 29 offers Curse of the Bayou only, without the hayride.",
+      "Friday/Saturday events run 7–10 p.m.; October 25 and 29 run 6–9 p.m. Final October 30 ticket sale is 10 p.m.; guests already in line may exit later.",
+      "Tickets are date-specific. This outdoor event is weather-dependent; wear appropriate closed-toe shoes. No costumes, weapons or alcohol.",
+      "Other ticket sales are nonrefundable; organizer cancellations are refunded within four business days.",
       "Location is approximate. Directions use the visitor address."
     ]
   },
@@ -524,7 +524,7 @@ export const WAVE2_2026_LISTINGS:
       "ridesharePolicy": "external-picker",
       "hours": {
         "state": "partial",
-        "displayText": "Supported future subset only: Fri/Sat19:00–23:00; Sun/Thu18:00–21:00. Last scheduled dateOct31. Official 217 Terror 2026 ticket event duration ends October 31 at 23:00 CDT; future-only supported date subset is unchanged."
+        "displayText": "Select dates October 16–31, 2026: Fridays/Saturdays 7–11 p.m.; Sundays/Thursdays 6–9 p.m. Final October 31 advertised session ends 11 p.m."
       },
       "listingExpiresAt": "2026-10-31T23:00:00-05:00",
       "expiryBasis": "exact",
@@ -549,10 +549,10 @@ export const WAVE2_2026_LISTINGS:
     "moodLevel": 2,
     "phone": null,
     "seasonalVisitNotes": [
-      "Supported future subset only: Fri/Sat19:00–23:00; Sun/Thu18:00–21:00. Last scheduled dateOct31. Official 217 Terror 2026 ticket event duration ends October 31 at 23:00 CDT; future-only supported date subset is unchanged.",
-      "Operator warning excludes pregnancy, intoxication, casts, medical braces, crutches, physical limitations, and listed medical/respiratory/heart/seizure concerns. The warning also prohibits entry while taking medications or drugs; preserve the exact warning for operator clarification rather than give medical advice.",
-      "Four attractions at one venue and one ticket; no intentional touching. No age minimum; operator says11-and-under should have adult.",
-      "Indoor haunt and waiting; free parking; no photos/video, phones/lighters/flashlights inside. Ticket waiver and no-refund terms apply.",
+      "Select October 16–31, 2026 dates. Friday/Saturday 7–11 p.m.; Sunday/Thursday 6–9 p.m. One ticket covers four attractions at this venue.",
+      "The operator posts restrictions for pregnancy, some mobility and medical conditions (including heart, breathing and seizure concerns), intoxication and medication use. Review its full safety rules before buying.",
+      "No strict age minimum; children 11 and under should have an adult. No intentional touching, recording, phones or flashlights inside.",
+      "Waiver and no-refund terms apply. Free parking.",
       "Location is approximate. Directions use the visitor address."
     ]
   },
@@ -616,7 +616,7 @@ export const WAVE2_2026_LISTINGS:
       "ridesharePolicy": "external-picker",
       "hours": {
         "state": "partial",
-        "displayText": "2026Oct9/10/16/17/23/24/30/31 19:00–22:00; gates18:00."
+        "displayText": "October 9, 10, 16, 17, 23, 24, 30 and 31, 2026, 7–10 p.m.; gates open 6 p.m."
       },
       "listingExpiresAt": "2026-10-31T22:00:00-05:00",
       "expiryBasis": "exact",
@@ -636,12 +636,10 @@ export const WAVE2_2026_LISTINGS:
     "moodLevel": 2,
     "phone": null,
     "seasonalVisitNotes": [
-      "2026Oct9/10/16/17/23/24/30/31 19:00–22:00; gates18:00.",
-      "Zombie paintball bus followed by a haunted trail; targets do not fire back. The operator generally recommends ages five and up for the bus, not a hard minimum. Guests skipping the scary trail may ride the bus back.",
-      "No reservations; prepurchase or gate, first come/served; keep operator capacity claims qualified rather than promise availability.",
-      "Stops for thunderstorms/lightning or heavy rain; check current operator updates.",
-      "Separate ordinary paintball/airsoft hours excluded from seasonal hours.",
-      "Every participant must complete and sign the required waiver. For participants under 18, a parent or guardian must sign the waiver. The operator provides online submission; do not imply an assistant has signed or accepted it.",
+      "Zombie paintball bus and haunted trail on October 9, 10, 16, 17, 23, 24, 30 and 31, 2026, 7–10 p.m.; gates open 6 p.m.",
+      "All participants must sign a waiver; a parent or guardian signs for guests under 18. Ages five and up are recommended for the bus, not a strict minimum.",
+      "Zombies do not shoot back, and guests may skip the scary trail. Advance and gate tickets are offered; waits and capacity vary.",
+      "Lightning or heavy rain may close the attraction. Ordinary paintball and airsoft hours do not apply.",
       "Location is approximate. Directions use the visitor address."
     ]
   },
@@ -733,11 +731,10 @@ export const WAVE2_2026_LISTINGS:
     "moodLevel": 2,
     "phone": null,
     "seasonalVisitNotes": [
-      "2026 Fridays/Saturdays October 2–31: haunt 19:00–midnight; ticket office 18:30–23:30. Final closing is midnight after October 31.",
-      "Operator says the haunt is not wheelchair accessible: uneven and moving floors and stairs. Guests with prior injuries or medical conditions should not enter. No strict age minimum; parental discretion and not intended for younger children.",
-      "No-touch haunt; virtual queue sends text when group is called; max6/group, larger groups split.",
-      "Strobes, fog, moving floors, darkness and sudden effects; operator excludes pregnancy and conditions/medication impairing safe reaction; no intoxication.",
-      "No weapons/fire/recording/flashlights; no refunds. Groups15+ require reservation24hours ahead for group pricing.",
+      "Haunted school on Fridays and Saturdays through October 31, 2026, 7 p.m.–midnight. Ticket office runs 6:30–11:30 p.m.",
+      "A virtual queue sends a text when your group is called; no more than six enter together.",
+      "Not wheelchair accessible due to stairs and uneven/moving floors. Strobes, fog and darkness are used. The operator advises against entry during pregnancy or with relevant injuries or medical conditions.",
+      "No touching, filming, weapons or flashlights. No refunds; group pricing for 15 or more requires booking at least 24 hours ahead.",
       "Location is approximate. Directions use the visitor address."
     ]
   },
