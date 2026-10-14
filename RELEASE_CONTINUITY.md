@@ -1,3 +1,14 @@
+# CURRENT — WAVE 2 DRAFT PR #72, NOT RELEASED (2026-10-14)
+
+- **Production unchanged:** main `0344ccce79ce157196ff9e84b1aaf3e40802afc5`, reviewed tree `c7c49796abc809c4a00690cd282f69920e325bbc`, production `dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb` READY, **82** published seasonal curated identities; previous production rollback `dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf` READY but activation-permission inspection 403.
+- Sole new draft [PR #72](https://github.com/caleb1234calvin-art/dinner-roulette/pull/72) **OPEN, DRAFT, UNMERGED**, current source head `328f30a482034f9f9eccd46da6d1995c4faf7be0` / tree `d4dfb6f3f7ae24ee13b1e855525eb66e0b5910cd`, ten proposed 2026 records = prospective **92**, not production. Kansas City provider/radial outage gating is NOT in scope.
+- Current exact-head web/browser workflow [38645524767](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38645524767) and unsigned Android [38645525011](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38645525011) remain **PENDING aggregate acceptance**, as of this documentation entry. The latest web "checks" step succeeded, but every browser/expanded 320px geometry and Android gate still must be read back as original completed evidence. Never transfer old SHA pass.
+- Current source adapter preserves researched IDs, precise source 2026 dates/cutoffs, approximate placement with visitor-address Directions and never Open Now. Original 82 source/presentation baseline retains exact assertions; precisely ten new cards added to 320/390/512px geometry and explicit seasonal scoped visibility. Previous source/test failures (syntax, optional fields, historical registry guards, seasonal OFF cases) were documented and corrected by follow-on nonforce commits. **Independent current-source and consumer copy acceptance is still a release blocker**.
+- No merge, production promotion, DB migration, credential modification, mobile signing or Play action is authorized or performed. **Never execute `npm run build`**, which chains `db:migrate`. Vercel effective build override remains unverified. Physical Android/GPS/PWA HOLD; screenshot-bearing GitHub artifacts expire Oct28. Separate explicit owner release approval will be needed.
+- This documentation-only update is on deployment-disabled `integration/continuity-refresh-2026-10-07`; `continuity/release` is deliberately not touched because prior documentation-only preview failed with stale package. Full earlier release master/history follows unchanged.
+
+---
+
 # CURRENT — CLOSEOUT PARTIAL ACCEPTANCE AND INTERRUPTED REFRESH (2026-10-14, 21:13 UTC)
 
 - PR70 remains released at main **0344ccce79ce157196ff9e84b1aaf3e40802afc5**, tree **c7c49796abc809c4a00690cd282f69920e325bbc**; last independently verified production **dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb READY**, source exact main, 82 source identities. Main was freshly re-read for this checkpoint. No source, main, production or settings mutation occurred.
