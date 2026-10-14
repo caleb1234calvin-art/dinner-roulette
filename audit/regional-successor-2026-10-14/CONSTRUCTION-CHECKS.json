@@ -1,0 +1,79 @@
+{
+  "scope": "Construction-only checks before independent frozen-source review; no full/browser/hosted/Android acceptance yet.",
+  "baseCommit": "6c619adda4d9ef3b2683befb2ca874b257505eb2",
+  "baseTree": "236110f86f9f3dc8c0cf0a5a664be79e2569bc43",
+  "dataCheckpoint": "a4215b5f8dfa3bdc7cd01dca5dd35c991eef2cbc",
+  "candidateMembership": 82,
+  "retainedCompleteIdentities": 70,
+  "selectedAdditions": 12,
+  "typecheck": "PASS",
+  "lint": {
+    "errors": 0,
+    "inheritedWarnings": 6
+  },
+  "focusedCandidateTests": {
+    "passed": 143,
+    "failed": 0,
+    "skipped": 0
+  },
+  "focusedLegacyThreeClearedTests": {
+    "passed": 23,
+    "failed": 0,
+    "skipped": 0
+  },
+  "heavyValidation": "NOT STARTED: independent frozen-source review gate pending",
+  "browserSourceCases": 317,
+  "regionalGeometryComparisons": 108,
+  "preservedPreliminaryAttempts": [
+    "Default npm cache install failed ENOENT at /home/agent/.npm; supported writable /tmp cache retry succeeded without dependency changes.",
+    "Initial focused suite had twelve test-only source-tag expectation mismatches. Current-policy normalization restores catalog tag; final assertion retains exact catalog+OSM discovery provenance and verifies merged source before normalization. Runtime unchanged.",
+    "First lint ran while candidate file was being authored and showed ten new unused-import warnings. Final authored-file lint has only six inherited warnings.",
+    "Shell main-ref read was canceled/timed out by automatic review; read-only GitHub connector independently confirmed exact main. No remote ref write attempted."
+  ],
+  "logs": {
+    "legacy-three-cleared.log": {
+      "bytes": 34066,
+      "sha256": "e2a80d92bec0d6d228ecca3a899dcad18d39cb8305977cd390f0fcb47fcc82f0"
+    },
+    "lint-final.log": {
+      "bytes": 1511,
+      "sha256": "671b47c2726526cf634aa99dca5184bf4a237d1b6c793bb135ff9280f80e074c"
+    },
+    "lint.log": {
+      "bytes": 3179,
+      "sha256": "3d7c95e2a70e4cac0fb903bfa31e6d0d2a27957a8c53b0caeea470693680daf8"
+    },
+    "npm-ci-local-cache.log": {
+      "bytes": 895,
+      "sha256": "ea1707fac74db5752ed86d76580706a22f8bb465657b98d9d4d96a7c2f690a0e"
+    },
+    "npm-ci.log": {
+      "bytes": 302688,
+      "sha256": "2496ec0c149b4215d9321832177157dd8b60291211d9344a16104d1f42be97bf"
+    },
+    "regional-wave1-focused-complete.log": {
+      "bytes": 280803,
+      "sha256": "6db4b839c66eed53124749eb6b438e390f2c6f5dae1124240f4b230065393e06"
+    },
+    "regional-wave1-focused-final.log": {
+      "bytes": 268773,
+      "sha256": "f9ca323ae56eff6a1360fde01ea1d878bd2569886a671d345339689ffe7733c3"
+    },
+    "regional-wave1-focused-first.log": {
+      "bytes": 210814,
+      "sha256": "d24f0efe597da5ba6ed0b0e027ca564ce1132984e134f4f70eb537669e047c9b"
+    },
+    "regional-wave1-focused-lint.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "typecheck-final.log": {
+      "bytes": 128,
+      "sha256": "ae791f9f57ffbb3c0a592b6a34e25250c1f7f6f13fde4d05f77a0d4e7681f89a"
+    },
+    "typecheck.log": {
+      "bytes": 128,
+      "sha256": "ae791f9f57ffbb3c0a592b6a34e25250c1f7f6f13fde4d05f77a0d4e7681f89a"
+    }
+  }
+}

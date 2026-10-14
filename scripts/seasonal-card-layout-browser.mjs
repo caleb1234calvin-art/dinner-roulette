@@ -1,3 +1,4 @@
+import { REGIONAL_ROWS, REGIONAL_PRESENTATIONS, REGIONAL_MATERIAL_FACTS, REGIONAL_CONFIDENCE, assertRegionalCatalog } from "./test-support/regional-wave1.mjs";
 import { THREE_CLEARED_PRESENTATIONS, THREE_CLEARED_MATERIAL_FACTS, THREE_CLEARED_CONFIDENCE, assertThreeClearedCatalog } from "./test-support/three-cleared.mjs";
 // Source-bound geometry/pixel comparison of real overlay components, using the
 // production stylesheet. Native Details behavior is exercised here; the full
@@ -34,6 +35,7 @@ const req = createRequire(import.meta.url), pure = appModuleLoader();
 const ownerLaneFacts = { ...RANKED_HOLDS_MATERIAL_FACTS, ...OWNER_EVIDENCE_MATERIAL_FACTS, ...THREE_CLEARED_MATERIAL_FACTS };
 const ownerLaneConfidence = { ...RANKED_HOLDS_CONFIDENCE, ...OWNER_EVIDENCE_CONFIDENCE, ...THREE_CLEARED_CONFIDENCE };
 const rows = [
+  ...pure("src/lib/date-night/regional-2026-wave1-catalog.ts").REGIONAL_2026_WAVE1_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-three-cleared-catalog.ts").MISSOURI_2026_THREE_CLEARED_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-owner-evidence-catalog.ts").MISSOURI_2026_OWNER_EVIDENCE_CATALOG,
   ...pure("src/lib/date-night/missouri-2026-ranked-holds-catalog.ts").MISSOURI_2026_RANKED_HOLDS_CATALOG,
@@ -52,8 +54,15 @@ const rows = [
   ...pure("src/lib/date-night/missouri-2026-phase4-recovery-catalog.ts").MISSOURI_2026_PHASE4_RECOVERY_CATALOG,
 ];
 assertThreeClearedCatalog(rows, pure("src/lib/date-night/seasonal-presentation-catalog.ts").SEASONAL_PRESENTATIONS);
-const { HALLOWEEN_THRILL_TYPES } = pure("src/lib/date-night/season.ts");
+assertRegionalCatalog(rows, pure("src/lib/date-night/seasonal-presentation-catalog.ts").SEASONAL_PRESENTATIONS);
+assert.deepEqual(rows.filter(row => REGIONAL_PRESENTATIONS[row.seasonalListing.recordId]), REGIONAL_ROWS,
+  "Geometry subjects are bound to all twelve independently accepted records");
+const { HALLOWEEN_THRILL_TYPES, HALLOWEEN_SETTLE_TYPES } = pure("src/lib/date-night/season.ts");
 const isThrill = row => row.activityTypes.some(type => HALLOWEEN_THRILL_TYPES.includes(type));
+const isSettle = row => row.activityTypes.some(type => HALLOWEEN_SETTLE_TYPES.includes(type));
+const geometryKinds = row => ["options", "result", ...(isThrill(row) ? ["plan"] : isSettle(row) ? ["plan-settle"] : [])];
+const geometryWidths = [320, 390, 512];
+const comparisonVariants = ["standard", "ordinary", "current-standard", "current-ordinary", "before", "after"];
 const cssDir = ".vercel/output/static/assets";
 const css = fs.readdirSync(cssDir).filter(p => p.endsWith(".css")).map(p => fs.readFileSync(path.join(cssDir, p), "utf8")).join("\n");
 const state = { theme: "dark", spookySeasonEnabled: true, preferences: {}, toggleFavorite() {}, recordVisit() {} };
@@ -115,16 +124,16 @@ try {
     assert.ok(html.includes("No complete seasonal pair yet."));
     verdict.ineligiblePlanControls.push(row.id);
   }
-  for (const width of [320, 390, 512]) {
+  for (const width of geometryWidths) {
     for (const row of rows) {
-    for (const kind of ["options", "result", ...(isThrill(row) ? ["plan"] : PHASE4_MATERIAL_FACTS[row.seasonalListing.recordId] ? ["plan-settle"] : [])]) {
+    for (const kind of geometryKinds(row)) {
       const isPlan = kind === "plan" || kind === "plan-settle", componentKind = isPlan ? "plan" : kind;
       const context = await browser.newContext({ viewport: { width, height: 844 }, reducedMotion: "reduce" });
       const page = await context.newPage();
       const measured = {};
       await context.route("**/*", route => route.abort());
       try {
-      for (const variant of ["standard", "ordinary", "current-standard", "current-ordinary", "before", "after"]) {
+      for (const variant of comparisonVariants) {
         const render = renderer(variant !== "after" && !variant.startsWith("current-"));
         const item = ["ordinary", "standard", "current-standard", "current-ordinary"].includes(variant) ? ordinary(row) : decorate(row);
         if (variant.endsWith("standard")) { item.name = "Ordinary park"; item.activityTypes = ["park"]; }
@@ -168,12 +177,43 @@ try {
           geometry.notes = noteGeometry;
           assert.ok(noteGeometry.scrollWidth <= noteGeometry.width + 1, "Seasonal notice and summary never overflow");
           for (const child of noteGeometry.descendants) assert.ok(child.scrollWidth <= child.width + 1, "Seasonal text is not clipped");
+          await details.locator("summary").focus();
           await details.locator("summary").press("Enter");
           assert.notEqual(await details.getAttribute("open"), null);
           assert.ok(await details.locator("p").count());
           const paragraphs = await details.locator("p").allTextContents();
           assertAdmissionConsumerCopy(row.seasonalListing.recordId, paragraphs);
           assertOccurrenceConsumerCopy(row.seasonalListing.recordId, paragraphs);
+          if (REGIONAL_PRESENTATIONS[row.seasonalListing.recordId]) {
+            const recordId = row.seasonalListing.recordId, expected = REGIONAL_PRESENTATIONS[recordId];
+            assert.deepEqual(paragraphs, expected.details, "Every exact independently accepted regional Detail survives every width and qualified overlay");
+            assert.equal(await card.locator("[data-seasonal-confidence]").innerText(), REGIONAL_CONFIDENCE[recordId] === "high" ? "High confidence" : REGIONAL_CONFIDENCE[recordId] === "good" ? "Good confidence" : "Limited details");
+            assert.match(await card.innerText(), /Approx\./);
+            assert.doesNotMatch(await card.innerText(), /Open now|audit|provenance|retention|Census|reviewRevision|listingExpiresAt|ListingCompletenessV1/);
+            for (const fact of REGIONAL_MATERIAL_FACTS[recordId]) assert.match(await details.innerText(), fact);
+            assert.equal(row.seasonalListing.directionsTarget.kind, "visitor-address");
+            const controls = [page.getByRole("button", { name: isPlan ? "Close night plan" : `Close ${kind}`, exact: true })];
+            if (kind === "options") controls.push(page.getByRole("button", { name: "Shuffle options", exact: true }));
+            else {
+              const maps = card.getByRole("link", { name: isPlan ? "Maps" : /Directions · Google Maps/, exact: isPlan });
+              assert.equal(new URL(await maps.getAttribute("href")).searchParams.get("destination"), row.seasonalListing.visitorAddress);
+              controls.push(maps);
+              const website = card.getByRole("link", { name: isPlan ? "Info" : /Website & info/, exact: isPlan });
+              assert.equal(await website.getAttribute("href"), row.website);
+              controls.push(website);
+              if (kind === "result") {
+                const uber = card.getByRole("link", { name: "Open Uber; choose your destination in the external service", exact: true });
+                assert.equal(await uber.getAttribute("href"), "https://m.uber.com/");
+                controls.push(uber);
+              }
+            }
+            geometry.regional = { details: paragraphs, confidence: REGIONAL_CONFIDENCE[recordId], controls: [] };
+            for (const control of controls) {
+              await control.scrollIntoViewIfNeeded();
+              await control.click({ trial: true });
+              geometry.regional.controls.push({ label: await control.innerText(), href: await control.getAttribute("href"), reachable: true });
+            }
+          }
           if (THREE_CLEARED_PRESENTATIONS[row.seasonalListing.recordId]) {
             assert.deepEqual(paragraphs, THREE_CLEARED_PRESENTATIONS[row.seasonalListing.recordId].details, "All exact independently cleared new Details survive geometry rendering");
           }
@@ -229,12 +269,13 @@ try {
               assert.equal(new URL(await maps.getAttribute("href")).searchParams.get("destination"), row.address);
             }
           }
-          if (isPlan || occurrencePresentations[row.seasonalListing.recordId]) {
+          if (isPlan || occurrencePresentations[row.seasonalListing.recordId] || REGIONAL_PRESENTATIONS[row.seasonalListing.recordId]) {
             const paragraphs = details.locator("p");
             geometry.expandedNotes = [];
             for (let index = 0; index < await paragraphs.count(); index++) {
               const paragraph = paragraphs.nth(index);
               await paragraph.scrollIntoViewIfNeeded();
+              await paragraph.evaluate(el => el.scrollIntoView({ block: "center", inline: "nearest", behavior: "instant" }));
               const metric = await paragraph.evaluate(el => {
                 const box = el.getBoundingClientRect();
                 const x = Math.max(0, Math.min(innerWidth - 1, box.x + box.width / 2));
@@ -274,6 +315,15 @@ try {
     }
     }
   }
+  assert.equal(verdict.comparisons.length, rows.reduce((count, row) => count + geometryKinds(row).length * geometryWidths.length, 0),
+    "Exact geometry scenario accounting retains every historical and regional width/overlay comparison");
+  const regionalComparisons = verdict.comparisons.filter(item => REGIONAL_ROWS.some(row => row.id === item.id));
+  assert.equal(regionalComparisons.length, 12 * 3 * 3, "All twelve regional records have Options, Result and valid Scare Plan at three widths");
+  for (const comparison of regionalComparisons) {
+    assert.deepEqual(comparisonVariants.filter(variant => comparison[variant]), comparisonVariants, "All six regional comparison variants ran");
+  }
+  verdict.regionalGeometry = { acceptedIds: REGIONAL_ROWS.map(row => row.id), widths: geometryWidths,
+    variants: comparisonVariants, expectedComparisons: 108, completedComparisons: regionalComparisons.length };
   verdict.passed = verdict.errors.length === 0;
   if (!verdict.passed) process.exitCode = 1;
 } catch (error) { verdict.errors.push(error.stack); process.exitCode = 1; }

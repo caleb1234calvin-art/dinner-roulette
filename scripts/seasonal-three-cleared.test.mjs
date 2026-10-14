@@ -1,3 +1,4 @@
+import { releasedSeventyPresentationsOnly } from "./test-support/regional-wave1.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync, readdirSync } from "node:fs";
@@ -30,7 +31,7 @@ const { resolveSavedSeasonalPlace, recordSeasonalIdentityReceipts, seasonalRecei
 const { seasonalIdentityPreference, seasonalFavoriteToggleIds } = load("src/lib/date-night/identity-preferences.ts");
 const { seasonalListingToPlace, isApproximateSeasonalPlace, seasonalDistancePrefix } = load("src/lib/date-night/listing.ts");
 const { seasonalPresentation, SEASONAL_VISITOR_NOTICE } = load("src/lib/date-night/seasonal-presentation.ts");
-const { SEASONAL_PRESENTATIONS } = load("src/lib/date-night/seasonal-presentation-catalog.ts");
+const SEASONAL_PRESENTATIONS = releasedSeventyPresentationsOnly(load("src/lib/date-night/seasonal-presentation-catalog.ts").SEASONAL_PRESENTATIONS);
 const { getDateNightAvailability } = load("src/lib/date-night/availability.ts");
 const { directionsUrl } = load("src/lib/location/maps.ts");
 const { uberRideTarget } = load("src/lib/location/ride-target.ts");

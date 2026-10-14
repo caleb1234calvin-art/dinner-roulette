@@ -1,0 +1,438 @@
+{
+  "frozenAt": "2026-10-14T03:04:26.997065+00:00",
+  "revision": "INDEPENDENT-REGIONAL-22-FINAL-R1",
+  "scope": "Immutable independent evidence and exact data-only clearance; no runtime integration or release acceptance",
+  "fileCount": 86,
+  "files": [
+    {
+      "path": "EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+      "bytes": 103343,
+      "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+    },
+    {
+      "path": "FINAL-22-VERDICT-LEDGER.json",
+      "bytes": 59091,
+      "sha256": "0202c8580ff0534f439b9f66c590eb0aa3357b12e020925ac8491f8dfdb0062d"
+    },
+    {
+      "path": "FINAL-FULL-FIELD-DIFF.json",
+      "bytes": 37127,
+      "sha256": "c097654605bd40b4979cf029c56fd1664689c4da322ee669fecf2393c9d7b8bf"
+    },
+    {
+      "path": "FINAL-ORIGIN-PARITY.json",
+      "bytes": 270,
+      "sha256": "f3fb331b325d4fea9d5c354ce2b82ccce63ead92c484feb858106ca20eae7729"
+    },
+    {
+      "path": "FINAL-PROJECTION-PROBES.json",
+      "bytes": 94827,
+      "sha256": "d36bc6643dfb91a24435fc55cccfd0e796666b55eae807ee511418210e93db6c"
+    },
+    {
+      "path": "FINAL-STATIC-ORACLES.json",
+      "bytes": 51772,
+      "sha256": "cd200b89d6c89ad1ec2833f4f452b51aec49ac7b15da36f32a4a026ae98b1094"
+    },
+    {
+      "path": "FINAL-SUCCESSOR-INPUT-INTEGRITY.json",
+      "bytes": 1281,
+      "sha256": "8628e4f90dd604509b6d36e85c5a8a167d672a86d19ce3792a2a509ba8d3edde"
+    },
+    {
+      "path": "INDEPENDENT-OBSERVATIONS.json",
+      "bytes": 3357,
+      "sha256": "db590eadcec781866b9d27455b8187b033299c7fb6a245af49689d363eb98475"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 20727,
+      "sha256": "71c7a3ed2ff0050ffe78071973446fda9e7cd78252e84c8eb9c501923d91cd69"
+    },
+    {
+      "path": "REVIEW-CHECKLIST.md",
+      "bytes": 3541,
+      "sha256": "c2ac8c71788cf1c0c2aac201631b98d745135456ae24847b34897dc5f7571d0b"
+    },
+    {
+      "path": "arkansas-full-field-diff.json",
+      "bytes": 4904,
+      "sha256": "f7401b971c6744e80c2e441d19db85962a158e6fa82aca68bd3cd58eefc8c39b"
+    },
+    {
+      "path": "arkansas-http-urls.json",
+      "bytes": 1702,
+      "sha256": "9a5904858f0e7a36a6b8f3621b3144915484b3cb2e268f41b11b14df6aba0c03"
+    },
+    {
+      "path": "arkansas-input-integrity.json",
+      "bytes": 1257,
+      "sha256": "522f6d655c292a177315dd2222d6530e23a3d8887a08f90fa88c701cf3a012f0"
+    },
+    {
+      "path": "arkansas-projection-probes.json",
+      "bytes": 34612,
+      "sha256": "0382d47017f196c3501b47a084aeb2f1a6a9d8482ebdbe2aec0e48bf78c0f7f5"
+    },
+    {
+      "path": "baseline-70-dedupe.json",
+      "bytes": 2519,
+      "sha256": "21308f568a28e4a92fc622dfb6138b5b99c407b475ff0806f12b2e967e874649"
+    },
+    {
+      "path": "baseline-handoff-integrity.json",
+      "bytes": 2699,
+      "sha256": "7be208d0646c6b5b8d146c429b2c650081c2559b0374c9720777c645fa90d598"
+    },
+    {
+      "path": "build-final.py",
+      "bytes": 8473,
+      "sha256": "94fe81755014e1cf6a0b2cb4d4fd49b82bbf45247377a9dcf71e9889fdc41477"
+    },
+    {
+      "path": "canonical-current.md",
+      "bytes": 1094174,
+      "sha256": "0312b8fb303a3e87550506943c6e46736eb83ea5c97980e1875803497cd94fab"
+    },
+    {
+      "path": "capture_http.py",
+      "bytes": 1166,
+      "sha256": "685c5a5ceb9493e1034b82a37ffbec9e6eab39b5463896a852cd60385fca348e"
+    },
+    {
+      "path": "captures/ar-http/INDEX.json",
+      "bytes": 5602,
+      "sha256": "bec379143744516b157a96b0e1b2347117dff20eeabcb792ee5578eeaa736ab0"
+    },
+    {
+      "path": "captures/ar-http/asylum-tickets.body",
+      "bytes": 15100,
+      "sha256": "84e63aec380892f051677bc8dad92323dc358dfedcf064b775596ee3783dc083"
+    },
+    {
+      "path": "captures/ar-http/asylum-tickets.receipt.json",
+      "bytes": 1004,
+      "sha256": "abcf8b1a4d55fa1a825640683724cfbac91be78f1dc0a7acdb61b9b157a5f9c3"
+    },
+    {
+      "path": "captures/ar-http/date-night-ar26-asylum-placement.receipt.json",
+      "bytes": 451,
+      "sha256": "2ed5b5c4235caa561255b66cfc51a45ee5aed60ed3985a65301acbaf97bb1b7c"
+    },
+    {
+      "path": "captures/ar-http/date-night-ar26-chill-placement.receipt.json",
+      "bytes": 445,
+      "sha256": "278419fc983123d4b007551e2af9ea7b816557f6c24b09ea1cf84a1b374dffe8"
+    },
+    {
+      "path": "captures/ar-http/date-night-ar26-fear-factory-placement.receipt.json",
+      "bytes": 456,
+      "sha256": "028a90c84fe426c59c53c2d56c1d176bc9b2a6258a2ff1615b8342d29dc0ccb1"
+    },
+    {
+      "path": "captures/ar-http/date-night-ar26-hollow-placement.body",
+      "bytes": 171686,
+      "sha256": "5791a455fa4725c0552ead2090b03579567175163660eb5e07c2157289b69ff5"
+    },
+    {
+      "path": "captures/ar-http/date-night-ar26-hollow-placement.receipt.json",
+      "bytes": 1187,
+      "sha256": "56ffd1c698cbf81d2c4a3084fa5beb019d8080d8cadad44de6e95704ae9e0a59"
+    },
+    {
+      "path": "captures/ar-http/date-night-ar26-magic-placement.receipt.json",
+      "bytes": 458,
+      "sha256": "8c2afd33f914b806894a27e90e352812ab5b31df3b6f681b2f78ad882f9cfe2c"
+    },
+    {
+      "path": "captures/ar-http/date-night-ar26-river-placement.receipt.json",
+      "bytes": 458,
+      "sha256": "7d27036ebe778d40c530645426abfb003cd017423688db9cda3210b2e9a2bb40"
+    },
+    {
+      "path": "captures/ar-http/date-night-ar26-royal-placement.receipt.json",
+      "bytes": 446,
+      "sha256": "6a69dacafdb35056ca9b4ca03c5588774ec46dadf6c406f2d403b05d14e3cfaf"
+    },
+    {
+      "path": "captures/ar-http/date-night-ar26-warehouse-placement.receipt.json",
+      "bytes": 467,
+      "sha256": "fde003fa924305e27bd98f1913fea006f14bfe8ab17f2f3cb0c16528770bc2ca"
+    },
+    {
+      "path": "captures/ar01-web.json",
+      "bytes": 19928,
+      "sha256": "852bea95e8dc2fbc5bec3cc81cc3e3e40b78bb37e7304680e75b2698c1914f4f"
+    },
+    {
+      "path": "captures/ar02-web.json",
+      "bytes": 20735,
+      "sha256": "714a0c1195a54ef11d580509332461498981de6bdb489b7df8784e1f2e1f64ea"
+    },
+    {
+      "path": "captures/ar03-web.json",
+      "bytes": 27064,
+      "sha256": "c524a0ea8cfe725181e820800414a4b2c0e58862c1b69cad213fc86e58cd284d"
+    },
+    {
+      "path": "captures/ar04-web.json",
+      "bytes": 36076,
+      "sha256": "a82726e3d966b1b544114b88421be0c129518c72bcf7d26f85c641e00b4af953"
+    },
+    {
+      "path": "captures/ar05-web.json",
+      "bytes": 19840,
+      "sha256": "353ebb2915fe628aeb84e4dd67ae56785d3a7cb2413b68460e4a13ab41bfc9cd"
+    },
+    {
+      "path": "captures/ar06-web.json",
+      "bytes": 7216,
+      "sha256": "ba7a5c254deff5c8ceb762891a9324f08e1516f5694b33d34b268383b3d19425"
+    },
+    {
+      "path": "captures/ks-acres-browser01.json",
+      "bytes": 25654,
+      "sha256": "430b148029da7495d2952a384b17cbea1f365929ec7e70f9117fce10d76cb10f"
+    },
+    {
+      "path": "captures/ks-acres-browser02.json",
+      "bytes": 2216,
+      "sha256": "7e8707c91ff1552e13f9ec366fb14ce0598d6b548c081fce6c27840a312ede9f"
+    },
+    {
+      "path": "captures/ks-acres-calendar-nov.json",
+      "bytes": 4523,
+      "sha256": "eed78e1780eac6cdd644f2d549fbabe774daedab7b6e76f1d735644d739090b8"
+    },
+    {
+      "path": "captures/ks-acres-calendar-oct-nov.json",
+      "bytes": 3057,
+      "sha256": "f520dd91e9ef6051c7475ad00daebb2c1f810ebb7876cfbdcee2e51696d7a999"
+    },
+    {
+      "path": "captures/ks-acres-calendar-oct.json",
+      "bytes": 1129,
+      "sha256": "7a8cecc636fd15c89f8c8fb3508f39776d8a5671e999908a03954a72c66a9fef"
+    },
+    {
+      "path": "captures/ks-souls-browser01.json",
+      "bytes": 11225,
+      "sha256": "0ec1396f5d75efb34ae978dd5551f87dbb828dc5fb552ce89ca3e2a11462ab79"
+    },
+    {
+      "path": "captures/ks-souls-product.json",
+      "bytes": 5211,
+      "sha256": "1c02152fd84ee6c40bbf15029b3472e735d39480e07ecfb5cb832edc15665492"
+    },
+    {
+      "path": "captures/ks01-web.json",
+      "bytes": 28012,
+      "sha256": "326ed0a61d0032b6e0ef293a000a2580fea2106106e1f6961bab064055a04bed"
+    },
+    {
+      "path": "captures/ks02-web.json",
+      "bytes": 23558,
+      "sha256": "4a69c2a68e4dcebf1b8f2ee3893a7340a48ae8165f961405c442ae14b8cbbf4e"
+    },
+    {
+      "path": "captures/ks03-web.json",
+      "bytes": 26863,
+      "sha256": "1af59e2581018e079dcc3fd63ffaee7eebdc0939d60539abb6b69a33538fec7e"
+    },
+    {
+      "path": "captures/ok-http/INDEX.json",
+      "bytes": 15987,
+      "sha256": "15a280cb1ab64590be3ac4af675029d0389f4ae6fcd4c5e614f9a8a103b63580"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-annabelle-2.body",
+      "bytes": 128959,
+      "sha256": "b567787dcf421884507329f50716f2b29dc3eb59b2b369605afb84c649394023"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-annabelle-2.receipt.json",
+      "bytes": 4278,
+      "sha256": "ceb367578bb3c23c1e453b9cf07a5218e632f79e5f3afb2ced24bbfb5bfc420d"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-annabelle-3.body",
+      "bytes": 83679,
+      "sha256": "68d76aedaf852c636baaab4339783b7d2c2f3d804e50d0685dff8a1922fa95b3"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-annabelle-3.receipt.json",
+      "bytes": 2088,
+      "sha256": "e7747dbc56219c45ded720cd078b2d10c1a30b00fa2a9dd0c570cc04147e5b44"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-annabelle-4.body",
+      "bytes": 78361,
+      "sha256": "1294c2a5db645981e1d045e74cbdd2afd7082273e7629fd0c7adb87c65117742"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-annabelle-4.receipt.json",
+      "bytes": 2128,
+      "sha256": "b5f46d45d3e83228353cdb49a3e417675574697c840a0895fd02aa436a552fe0"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-annabelle-5.body",
+      "bytes": 2247309,
+      "sha256": "d2f6065852e01951757c4f05bbc06d148520a8934b5e002209bbd726274c80d6"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-annabelle-5.receipt.json",
+      "bytes": 2121,
+      "sha256": "c1be0029a1479449211243b21e1b544f292f6b6af6a01e76f7ffdd383afb32b4"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-guthrie-1.receipt.json",
+      "bytes": 335,
+      "sha256": "69ae95870a265bdadd93c423ae1058076e8f350a7a441f256a517e6e2934a628"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-guthrie-3.body",
+      "bytes": 15994,
+      "sha256": "986072e9118f3933f7e6209b9240c59d756d5e335c532fa1dbd528360949c6db"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-guthrie-3.receipt.json",
+      "bytes": 1046,
+      "sha256": "0042af1602d89a93ff5bba7d72a6373197a793666b4b4e0230da5b868faad3ff"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-plantation-0.receipt.json",
+      "bytes": 351,
+      "sha256": "8e54c3ac6c6ba4124015788eaa1f50265f2f7391f0840376b61a7357d98d25f5"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-psycho-0.body",
+      "bytes": 66169,
+      "sha256": "29389a94408f1ee34da065a1470d3d3e79859a77b34fea8ac6bd0d95d31bee06"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-psycho-0.receipt.json",
+      "bytes": 1463,
+      "sha256": "35f4876abe855c0b4248268d85612e2707ca3e54aa1a2e6643a41503de8c1711"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-roots-1.body",
+      "bytes": 90302,
+      "sha256": "353b4348a26a03017291c8a6e35c2f60184b98dececd191d645b94234aa4bdec"
+    },
+    {
+      "path": "captures/ok-http/date-night-ok26-w1-roots-1.receipt.json",
+      "bytes": 1611,
+      "sha256": "bfbd63d43d396cdde7117022086a78338be335be017b00e7af110923ae7a6a5b"
+    },
+    {
+      "path": "captures/ok01-web.json",
+      "bytes": 26947,
+      "sha256": "e4dfb2fe6695322acdc117c76fead1a1a85d45ede40bc2765951e93796a17846"
+    },
+    {
+      "path": "captures/ok02-web.json",
+      "bytes": 15583,
+      "sha256": "258877e9e0bae0cb15b8615874d1bcb93c3a8a0a40bb8bb5089f558e549be96f"
+    },
+    {
+      "path": "captures/ok03-web.json",
+      "bytes": 34251,
+      "sha256": "b00dfa12dcf7c57f945cbfa0a9141be5318be462770c21067cb56dad531a79d9"
+    },
+    {
+      "path": "captures/ok04-web.json",
+      "bytes": 12985,
+      "sha256": "ec7cf331a1d729f4b700d62f1c84795284c909b1151b876323cef489aa793574"
+    },
+    {
+      "path": "compare_projection_fields.py",
+      "bytes": 1227,
+      "sha256": "1e9b728b6d3470466a27ac15dd0d3cf2e2814b1f87e866ecfa7d4a627f906529"
+    },
+    {
+      "path": "expected-source-checklist.json",
+      "bytes": 20513,
+      "sha256": "3174ada73a90c59d2597690a646156445d81d68c01813847010228fb66b78be1"
+    },
+    {
+      "path": "kansas-R1-full-field-diff.json",
+      "bytes": 22062,
+      "sha256": "5578f5fec1eb328ba1adeb5d7cdd20dd6d686853fccd57e75fcb78c788c2232c"
+    },
+    {
+      "path": "kansas-R1-input.json",
+      "bytes": 36763,
+      "sha256": "be5231a2e0b0119af8c3de17df671796c7c251b0a29e2322daab8c303434d601"
+    },
+    {
+      "path": "kansas-R1-probes.json",
+      "bytes": 34103,
+      "sha256": "8f4c8cae9c5fc73df6856e8c4b57e6904e2a8058c5a5a763db4e6fab7595efd6"
+    },
+    {
+      "path": "kansas-R2-adoption-checks.json",
+      "bytes": 1562,
+      "sha256": "96fcd5aac55b7602a3a74f0f0fdcadc20eb96e26204bd3ac0f3dde82faf80fde"
+    },
+    {
+      "path": "kansas-R2-input.json",
+      "bytes": 37183,
+      "sha256": "8d95494a26e8cc078240108b237c0abddda0eaa55d24e748ffcbb549da85bba3"
+    },
+    {
+      "path": "kansas-R2-probes.json",
+      "bytes": 34568,
+      "sha256": "eaa8adaa432deae42d949daf0400c4effa939dfb05cc158a47a68f134c22cac5"
+    },
+    {
+      "path": "kansas-input-integrity.json",
+      "bytes": 5583,
+      "sha256": "a2051e0b8121afbb6dd118874fa4a2d0877864de280600d43835cc8d6d34ef0b"
+    },
+    {
+      "path": "ok-http-urls.json",
+      "bytes": 1259,
+      "sha256": "788084238a75045f8a6bef6955bfddbeb6720de497cdc02a892d633b7c3b8a5e"
+    },
+    {
+      "path": "oklahoma-R1-full-field-diff.json",
+      "bytes": 7152,
+      "sha256": "9d4a12c57fa16155a28dc211b0dcc53e3b18becb13c2700893a11746797151e7"
+    },
+    {
+      "path": "oklahoma-R1-input.json",
+      "bytes": 28977,
+      "sha256": "7d6c597e2d4acec7a506eee07c68749dfb088706e68874f4e3651f14ec9a0b99"
+    },
+    {
+      "path": "oklahoma-R1-probes.json",
+      "bytes": 26259,
+      "sha256": "60027d904048b7e6a260b41024798f10a00536593279ed47ed004be84a7f9354"
+    },
+    {
+      "path": "oklahoma-input-integrity.json",
+      "bytes": 15433,
+      "sha256": "e021b8cb34a8b3e6dbdb9584081472455022d75907ff306845f53a8b73fae3a5"
+    },
+    {
+      "path": "prior22-harness-check.json",
+      "bytes": 93876,
+      "sha256": "99d735bb9a7f002dcaae04f4b0180779e5893fd22aea42f24bb65d635611ae78"
+    },
+    {
+      "path": "prior22-harness-input.json",
+      "bytes": 98697,
+      "sha256": "d7e3628a869b7d105679651a3fa40ddd8c316bf9d2db197e1701d98179f04d26"
+    },
+    {
+      "path": "probe-projections.mjs",
+      "bytes": 4136,
+      "sha256": "cf75010872cfeaddfad18b9d27561c9f408200a055fa3a0352a1373058f28cb4"
+    },
+    {
+      "path": "static-oracles.py",
+      "bytes": 5923,
+      "sha256": "2dbb908c046c69440223b864e26582f9b66c0bbebb92f4c5b96329456fd765b3"
+    }
+  ]
+}
