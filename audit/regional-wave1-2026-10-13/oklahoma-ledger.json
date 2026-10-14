@@ -1,0 +1,3626 @@
+{
+  "scope": "FUTURE_RESEARCH_ONLY",
+  "counts": {
+    "selectedPublicCommercialLeads": 29,
+    "factualPass": 6,
+    "placementReady": 5,
+    "needsOneField": 1,
+    "selectedFactualHold": 23,
+    "queueStatuses": {
+      "READY FOR IMPLEMENTATION": 5,
+      "NEEDS ONE FIELD": 1,
+      "HOLD": 20,
+      "OWNER EVIDENCE NEEDED": 3
+    },
+    "rawSourceAppearances": 137,
+    "rawBySource": {
+      "Haunts.com": 19,
+      "The Scare Factor": 49,
+      "FrightMaps": 52,
+      "FrightFindMain": 15,
+      "FrightFindFeatured": 2
+    },
+    "provisionalUnionNameAliasGroups": 107,
+    "separateResidentialSightings": 11,
+    "countCaveat": "107 provisional name/alias groups and11 separate residential sightings are distinct units, not proven current venues. Overall reviewer5PASS/24HOLD versus factual6PASS/23HOLD; Psycho placement accounts for the difference."
+  },
+  "records": [
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-ANNABELLE",
+      "canonicalIDproposal": "date-night-ok26-w1-annabelle",
+      "name": "Annabelle’s Fun Farm",
+      "city": "Welch",
+      "category": [
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "444584 East 110 Rd, Welch, OK 74369",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 36.859403553545,
+          "lon": -95.077985149603,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=444584+East+110+Rd%2C+Welch%2C+OK+74369&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:21:20.017440+00:00",
+          "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-09-26",
+          "2026-09-27",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-04",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-11",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-30",
+          "2026-10-31",
+          "2026-11-01"
+        ],
+        "activeFrom": "2026-09-26",
+        "activeUntil": "2026-11-01",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-02T00:00:00Z",
+        "basis": "exact",
+        "timeZone": "America/Chicago",
+        "endsAt": "2026-11-02T00:00:00Z",
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "Some attractions and locations may be closed on Fridays."
+        ],
+        "consumerDetails": [
+          "Corn maze, pumpkin patch and fall farm activities, September 26–November 1, 2026.",
+          "Fridays 1–6 p.m.; Saturdays and Sundays 10 a.m.–6 p.m. Some attractions may be closed Fridays.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/annabellesfunfarm",
+          "https://frightfind.com/annabelles-fun-farm-llc/",
+          "https://www.annabellesfunfarm.com/",
+          "https://annabellesfunfarm.com/pages/hours-pricing",
+          "https://annabellesfunfarm.com/pages/calendar",
+          "https://annabellesfunfarm.com/cdn/shop/files/2026_Hours.png?v=1788302842&width=1800",
+          "https://annabellesfunfarm.com/cdn/shop/files/2026_Season_Dates_for_Footer.png?v=1788302878&width=1800",
+          "https://annabellesfunfarm.com/cdn/shop/files/Annabelles_Weekends_2026.png?v=1790393327&width=1800",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=444584+East+110+Rd%2C+Welch%2C+OK+74369&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": "regional-wave1/oklahoma/R2/six-proposals.json",
+        "projectionSha256": "995f39669d6c2f69ad37fedfb825e459485771811c3235252d8fb88e2c297885"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-ANNABELLE",
+          "name": "Annabelle’s Fun Farm",
+          "state": "Oklahoma",
+          "overallVerdict": "PASS",
+          "factualStatus": "PASS",
+          "placementStatus": "PASS_APPROXIMATE_ADDRESS_ONLY",
+          "futureImplementationQueueStatus": "PASS_FUTURE_QUEUE_ONLY",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative identity, public visitor destination, finite2026 schedule, qualified partial hours and lifecycle are supported.",
+          "classification": "current commercial/public",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [
+        "Annabelle’s Fun Farm llc"
+      ],
+      "operator": "Annabelle’s Fun Farm",
+      "operatorDomain": "annabellesfunfarm.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-16"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ok26-w1-annabelle",
+        "name": "Annabelle’s Fun Farm",
+        "address": "444584 East 110 Rd, Welch, OK 74369",
+        "website": "https://annabellesfunfarm.com/",
+        "activityTypes": [
+          "corn-maze",
+          "pumpkin-patch"
+        ],
+        "openingHours": null,
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "phone": null,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-09-26",
+          "activeUntil": "2026-11-01",
+          "activeDates": [
+            "2026-09-26",
+            "2026-09-27",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-11",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-18",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-25",
+            "2026-10-30",
+            "2026-10-31",
+            "2026-11-01"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-16",
+          "timeZone": "America/Chicago",
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-02T00:00:00Z",
+          "seasonYear": 2026,
+          "sourceUrls": [
+            "https://www.annabellesfunfarm.com/",
+            "https://annabellesfunfarm.com/pages/hours-pricing",
+            "https://annabellesfunfarm.com/pages/calendar",
+            "https://annabellesfunfarm.com/cdn/shop/files/2026_Hours.png?v=1788302842&width=1800",
+            "https://annabellesfunfarm.com/cdn/shop/files/2026_Season_Dates_for_Footer.png?v=1788302878&width=1800",
+            "https://annabellesfunfarm.com/cdn/shop/files/Annabelles_Weekends_2026.png?v=1790393327&width=1800",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=444584+East+110+Rd%2C+Welch%2C+OK+74369&benchmark=Public_AR_Current&format=json"
+          ],
+          "note": "Finite source-bound 2026 dates only; no 2027 recurrence. Display-only hours. Research proposal awaiting fresh independent review.",
+          "endsAt": "2026-11-02T00:00:00Z"
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "OK-W1-ANNABELLE-2026",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "444584 East 110 Rd, Welch, OK 74369",
+          "placement": {
+            "lat": 36.859403553545,
+            "lon": -95.077985149603,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=444584+East+110+Rd%2C+Welch%2C+OK+74369&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:21:20.017440+00:00",
+            "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "444584 East 110 Rd, Welch, OK 74369"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "September 26–November 1, 2026: Fridays 1–6 p.m.; Saturdays and Sundays 10 a.m.–6 p.m. Some attractions and locations may be closed on Fridays. Last admission is not stated."
+          },
+          "listingExpiresAt": "2026-11-02T00:00:00Z",
+          "expiryBasis": "exact",
+          "sourceUrls": [
+            "https://www.annabellesfunfarm.com/",
+            "https://annabellesfunfarm.com/pages/hours-pricing",
+            "https://annabellesfunfarm.com/pages/calendar",
+            "https://annabellesfunfarm.com/cdn/shop/files/2026_Hours.png?v=1788302842&width=1800",
+            "https://annabellesfunfarm.com/cdn/shop/files/2026_Season_Dates_for_Footer.png?v=1788302878&width=1800",
+            "https://annabellesfunfarm.com/cdn/shop/files/Annabelles_Weekends_2026.png?v=1790393327&width=1800",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=444584+East+110+Rd%2C+Welch%2C+OK+74369&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "OK2026-W1-R2-2026-10-13",
+          "visibility": "listing-lifecycle"
+        },
+        "seasonalVisitNotes": [
+          "Corn maze, pumpkin patch and fall farm activities, September 26–November 1, 2026.",
+          "Fridays 1–6 p.m.; Saturdays and Sundays 10 a.m.–6 p.m. Some attractions may be closed Fridays.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Corn Maze / Pumpkin Patch",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "moodLevel": 2
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ok26-w1-annabelle",
+        "confidence": "good",
+        "details": [
+          "Corn maze, pumpkin patch and fall farm activities, September 26–November 1, 2026.",
+          "Fridays 1–6 p.m.; Saturdays and Sundays 10 a.m.–6 p.m. Some attractions may be closed Fridays.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-PSYCHO",
+      "canonicalIDproposal": "date-night-ok26-w1-psycho",
+      "name": "Psycho Path Haunted Attraction",
+      "city": "Sperry",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "NEEDS ONE FIELD",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "1517 East 106th Street North, Sperry, OK 74073",
+      "placement": {
+        "status": "address-only; radius-ineligible",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "activeFrom": "2026-10-02",
+        "activeUntil": "2026-10-31",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-01T05:00:00Z",
+        "basis": "date-only",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "Timed online tickets required for main admission; arrive within 15 minutes before the selected slot.",
+          "The operator separately lists Shadow Box-only tickets on-site, including lights-out October 30–31.",
+          "Outdoor, weather-dependent; strobes, fog and loud noises.",
+          "No published age minimum; parent judgment."
+        ],
+        "consumerDetails": [
+          "Outdoor haunted ride and Shadow Box walkthrough on Fridays and Saturdays in October 2026.",
+          "Book main admission online for a timed entry. Shadow Box lights-out nights are October 30–31; Shadow Box-only tickets are listed as on-site.",
+          "Outdoor and weather-dependent, with strobes, fog and loud noises.",
+          "Directions use the visitor address. Map placement is not yet available."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/psychopathhaunt",
+          "https://www.thescarefactor.com/haunted-houses/oklahoma/psycho-path-haunted-attraction/",
+          "https://frightmaps.com/houses/oklahoma/psycho-path-haunted-attraction",
+          "https://frightfind.com/psycho-path-haunted-attraction/",
+          "https://i0.wp.com/psychopathhaunt.com/wp-content/uploads/2026/09/2026-CALENDAR%403x.png?w=800",
+          "https://psychopathhaunt.com/",
+          "https://psychopathhaunt.com/faq/"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": "regional-wave1/oklahoma/R2/six-proposals.json",
+        "projectionSha256": "995f39669d6c2f69ad37fedfb825e459485771811c3235252d8fb88e2c297885"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-PSYCHO",
+          "name": "Psycho Path Haunted Attraction",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "PASS",
+          "placementStatus": "HOLD_NO_REVIEWED_POINT",
+          "futureImplementationQueueStatus": "HOLD_PLACEMENT",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative identity, public visitor destination, finite2026 schedule, qualified partial hours and lifecycle are supported.",
+          "classification": "current commercial/public",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Reviewed placement required; no radius eligibility",
+      "aliases": [],
+      "operator": "Psycho Path LLC",
+      "operatorDomain": "psychopathhaunt.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-16"
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-ROOTS",
+      "canonicalIDproposal": "date-night-ok26-w1-roots",
+      "name": "TwistedRoots Haunted Trail",
+      "city": "Muskogee",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "1900 E 62nd Street N, Muskogee, OK 74403",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 35.829712091412,
+          "lon": -95.351540504515,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1900+E+62nd+Street+N%2C+Muskogee%2C+OK+74403&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:24:02.865402+00:00",
+          "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "activeFrom": "2026-10-02",
+        "activeUntil": "2026-10-31",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-01T04:00:00Z",
+        "basis": "exact",
+        "timeZone": "America/Chicago",
+        "endsAt": "2026-11-01T04:00:00Z",
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "Fully outdoor wooded walking trail; no open-toed shoes.",
+          "Optional Twisted Touch upgrade is 18+ and permits actor contact; general admission is not described as automatically touch-enabled.",
+          "Under 12s require adult accompaniment unless management approves otherwise; recommended age 13+.",
+          "Not wheelchair accessible: uneven terrain, steep inclines and stairs."
+        ],
+        "consumerDetails": [
+          "Outdoor haunted walking trail on Fridays and Saturdays in October 2026. Wear sturdy closed-toe shoes.",
+          "Midway opens 7 p.m.; trail starts about 8 p.m. or when dark and runs until 11 p.m.",
+          "Recommended ages 13+; under 12s need an adult unless management approves otherwise. Optional Twisted Touch upgrade is 18+.",
+          "Not wheelchair accessible; uneven terrain, inclines and stairs.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/feartheroots",
+          "https://www.thescarefactor.com/haunted-houses/oklahoma/twistedroots-haunted-trail/",
+          "https://www.feartheroots.com/",
+          "https://static.wixstatic.com/media/b1a87b_5e80d1d797d0470e8ba68e32d45cd9bf~mv2.png/v1/fill/w_384,h_335,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/October%202026%20Calendar_edited_edited.png",
+          "https://tickets.feartheroots.com/",
+          "https://www.feartheroots.com/faq",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1900+E+62nd+Street+N%2C+Muskogee%2C+OK+74403&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": "regional-wave1/oklahoma/R2/six-proposals.json",
+        "projectionSha256": "995f39669d6c2f69ad37fedfb825e459485771811c3235252d8fb88e2c297885"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-ROOTS",
+          "name": "TwistedRoots Haunted Trail",
+          "state": "Oklahoma",
+          "overallVerdict": "PASS",
+          "factualStatus": "PASS",
+          "placementStatus": "PASS_APPROXIMATE_ADDRESS_ONLY",
+          "futureImplementationQueueStatus": "PASS_FUTURE_QUEUE_ONLY",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative identity, public visitor destination, finite2026 schedule, qualified partial hours and lifecycle are supported.",
+          "classification": "current commercial/public",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [
+        "TwistedRoots Haunted Attraction; former Chelsea and Ada locations"
+      ],
+      "operator": "TwistedRoots Ent LLC",
+      "operatorDomain": "feartheroots.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-16"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ok26-w1-roots",
+        "name": "TwistedRoots Haunted Trail",
+        "address": "1900 E 62nd Street N, Muskogee, OK 74403",
+        "website": "https://www.feartheroots.com/",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "openingHours": null,
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "phone": null,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-10-02",
+          "activeUntil": "2026-10-31",
+          "activeDates": [
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-16",
+          "timeZone": "America/Chicago",
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-01T04:00:00Z",
+          "seasonYear": 2026,
+          "sourceUrls": [
+            "https://www.feartheroots.com/",
+            "https://static.wixstatic.com/media/b1a87b_5e80d1d797d0470e8ba68e32d45cd9bf~mv2.png/v1/fill/w_384,h_335,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/October%202026%20Calendar_edited_edited.png",
+            "https://tickets.feartheroots.com/",
+            "https://www.feartheroots.com/faq",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1900+E+62nd+Street+N%2C+Muskogee%2C+OK+74403&benchmark=Public_AR_Current&format=json"
+          ],
+          "note": "Finite source-bound 2026 dates only; no 2027 recurrence. Display-only hours. Research proposal awaiting fresh independent review.",
+          "endsAt": "2026-11-01T04:00:00Z"
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "OK-W1-ROOTS-2026",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "1900 E 62nd Street N, Muskogee, OK 74403",
+          "placement": {
+            "lat": 35.829712091412,
+            "lon": -95.351540504515,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1900+E+62nd+Street+N%2C+Muskogee%2C+OK+74403&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:24:02.865402+00:00",
+            "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "1900 E 62nd Street N, Muskogee, OK 74403"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "Fridays and Saturdays in October 2026. Midway opens 7 p.m.; trail begins about 8 p.m. or when dark and runs until 11 p.m. Last ticket time is not stated."
+          },
+          "listingExpiresAt": "2026-11-01T04:00:00Z",
+          "expiryBasis": "exact",
+          "sourceUrls": [
+            "https://www.feartheroots.com/",
+            "https://static.wixstatic.com/media/b1a87b_5e80d1d797d0470e8ba68e32d45cd9bf~mv2.png/v1/fill/w_384,h_335,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/October%202026%20Calendar_edited_edited.png",
+            "https://tickets.feartheroots.com/",
+            "https://www.feartheroots.com/faq",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1900+E+62nd+Street+N%2C+Muskogee%2C+OK+74403&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "OK2026-W1-R2-2026-10-13",
+          "visibility": "listing-lifecycle"
+        },
+        "seasonalVisitNotes": [
+          "Outdoor haunted walking trail on Fridays and Saturdays in October 2026. Wear sturdy closed-toe shoes.",
+          "Midway opens 7 p.m.; trail starts about 8 p.m. or when dark and runs until 11 p.m.",
+          "Recommended ages 13+; under 12s need an adult unless management approves otherwise. Optional Twisted Touch upgrade is 18+.",
+          "Not wheelchair accessible; uneven terrain, inclines and stairs.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "moodLevel": 3
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ok26-w1-roots",
+        "confidence": "good",
+        "details": [
+          "Outdoor haunted walking trail on Fridays and Saturdays in October 2026. Wear sturdy closed-toe shoes.",
+          "Midway opens 7 p.m.; trail starts about 8 p.m. or when dark and runs until 11 p.m.",
+          "Recommended ages 13+; under 12s need an adult unless management approves otherwise. Optional Twisted Touch upgrade is 18+.",
+          "Not wheelchair accessible; uneven terrain, inclines and stairs.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-GUTHRIE",
+      "canonicalIDproposal": "date-night-ok26-w1-guthrie",
+      "name": "Guthrie Haunts Scaregrounds",
+      "city": "Guthrie",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "4524 Riverside Circle, Guthrie, OK 73044",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 35.922897131675,
+          "lon": -97.425477322616,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4524+Riverside+Circle%2C+Guthrie%2C+OK+73044&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:21:20.019978+00:00",
+          "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31",
+          "2026-11-06",
+          "2026-11-07"
+        ],
+        "activeFrom": "2026-10-16",
+        "activeUntil": "2026-11-07",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-08T06:00:00Z",
+        "basis": "date-only",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "Blackout performances November 6–7.",
+          "Age, touch, waiver and accessibility requirements were not established from the operator pages captured; review ticket conditions before visiting."
+        ],
+        "consumerDetails": [
+          "Indoor and outdoor haunted attraction. Remaining 2026 dates: October 16–17, 23–24, 30–31 and November 6–7.",
+          "Ticket window 7 p.m.–midnight; the haunt may continue later for guests in line. November 6–7 are Blackout nights.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/guthriehaunts",
+          "https://www.thescarefactor.com/haunted-houses/oklahoma/guthrie-haunts-scare-grounds/",
+          "https://frightmaps.com/houses/oklahoma/guthrie-haunts-scaregrounds",
+          "https://www.guthriescaregrounds.com/",
+          "https://www.guthriescaregrounds.com/calendar",
+          "https://www.guthriescaregrounds.com/location",
+          "https://www.stubwire.com/events/guthriehauntsscaregrounds/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4524+Riverside+Circle%2C+Guthrie%2C+OK+73044&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": "regional-wave1/oklahoma/R2/six-proposals.json",
+        "projectionSha256": "995f39669d6c2f69ad37fedfb825e459485771811c3235252d8fb88e2c297885"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-GUTHRIE",
+          "name": "Guthrie Haunts Scaregrounds",
+          "state": "Oklahoma",
+          "overallVerdict": "PASS",
+          "factualStatus": "PASS",
+          "placementStatus": "PASS_APPROXIMATE_ADDRESS_ONLY",
+          "futureImplementationQueueStatus": "PASS_FUTURE_QUEUE_ONLY",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative identity, public visitor destination, finite2026 schedule, qualified partial hours and lifecycle are supported.",
+          "classification": "current commercial/public",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [],
+      "operator": "Guthrie Haunts LLC",
+      "operatorDomain": "guthriescaregrounds.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-16"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ok26-w1-guthrie",
+        "name": "Guthrie Haunts Scaregrounds",
+        "address": "4524 Riverside Circle, Guthrie, OK 73044",
+        "website": "https://www.guthriescaregrounds.com/",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "openingHours": null,
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "phone": null,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-10-16",
+          "activeUntil": "2026-11-07",
+          "activeDates": [
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31",
+            "2026-11-06",
+            "2026-11-07"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-16",
+          "timeZone": "America/Chicago",
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-08T06:00:00Z",
+          "seasonYear": 2026,
+          "sourceUrls": [
+            "https://www.guthriescaregrounds.com/",
+            "https://www.guthriescaregrounds.com/calendar",
+            "https://www.guthriescaregrounds.com/location",
+            "https://www.stubwire.com/events/guthriehauntsscaregrounds/",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4524+Riverside+Circle%2C+Guthrie%2C+OK+73044&benchmark=Public_AR_Current&format=json"
+          ],
+          "note": "Finite source-bound 2026 dates only; no 2027 recurrence. Display-only hours. Research proposal awaiting fresh independent review."
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "OK-W1-GUTHRIE-2026",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "4524 Riverside Circle, Guthrie, OK 73044",
+          "placement": {
+            "lat": 35.922897131675,
+            "lon": -97.425477322616,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4524+Riverside+Circle%2C+Guthrie%2C+OK+73044&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:21:20.019978+00:00",
+            "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "4524 Riverside Circle, Guthrie, OK 73044"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "Remaining 2026 nights: October 16–17, 23–24, 30–31 and November 6–7. Ticket window 7 p.m.–midnight; guests already in line may enter later. November 6–7 are Blackout nights. Final closing is not stated."
+          },
+          "listingExpiresAt": "2026-11-08T06:00:00Z",
+          "expiryBasis": "date-only",
+          "sourceUrls": [
+            "https://www.guthriescaregrounds.com/",
+            "https://www.guthriescaregrounds.com/calendar",
+            "https://www.guthriescaregrounds.com/location",
+            "https://www.stubwire.com/events/guthriehauntsscaregrounds/",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4524+Riverside+Circle%2C+Guthrie%2C+OK+73044&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "OK2026-W1-R2-2026-10-13",
+          "visibility": "listing-lifecycle"
+        },
+        "seasonalVisitNotes": [
+          "Indoor and outdoor haunted attraction. Remaining 2026 dates: October 16–17, 23–24, 30–31 and November 6–7.",
+          "Ticket window 7 p.m.–midnight; the haunt may continue later for guests in line. November 6–7 are Blackout nights.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "moodLevel": 3
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ok26-w1-guthrie",
+        "confidence": "good",
+        "details": [
+          "Indoor and outdoor haunted attraction. Remaining 2026 dates: October 16–17, 23–24, 30–31 and November 6–7.",
+          "Ticket window 7 p.m.–midnight; the haunt may continue later for guests in line. November 6–7 are Blackout nights.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-WICKED",
+      "canonicalIDproposal": "date-night-ok26-w1-wicked",
+      "name": "Wicked Forest of Terror",
+      "city": "Oklahoma City",
+      "category": "haunted-trail",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/wickedforestofterror",
+          "https://www.thescarefactor.com/haunted-houses/oklahoma/wicked-forest-of-terror/"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-WICKED",
+          "name": "Wicked Forest of Terror",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-CHAMBER",
+      "canonicalIDproposal": "date-night-ok26-w1-chamber",
+      "name": "Chamber of Terror",
+      "city": "Moore",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/13thdoorokc",
+          "https://www.thescarefactor.com/haunted-houses/oklahoma/chamber-of-terror/",
+          "https://frightmaps.com/houses/oklahoma/chamber-of-terror"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-CHAMBER",
+          "name": "Chamber of Terror",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [
+        "13th Door Haunted House",
+        "Chamber of Terror OK"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-DEADMAN",
+      "canonicalIDproposal": "date-night-ok26-w1-deadman",
+      "name": "Dead Man’s Crossing",
+      "city": "Oklahoma City",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/imaginightmare",
+          "https://frightmaps.com/houses/oklahoma/dead-mans-crossing-haunted-attraction"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-DEADMAN",
+          "name": "Dead Man’s Crossing",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-DCP",
+      "canonicalIDproposal": "date-night-ok26-w1-dcp",
+      "name": "DCP Haunted Trail",
+      "city": "Yukon",
+      "category": "haunted-trail",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/dcphauntedtrails",
+          "https://www.thescarefactor.com/haunted-houses/oklahoma/dcp-haunted-trail/",
+          "https://www.haunts.com/dcphauntedtrail"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-DCP",
+          "name": "DCP Haunted Trail",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [
+        "The Haunted Trail at Dodge City Paintball"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-SYCAMORE",
+      "canonicalIDproposal": "date-night-ok26-w1-sycamore",
+      "name": "Sycamore Asylum",
+      "city": "Hendrix",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/sycamoreasylumhauntedhouse"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-SYCAMORE",
+          "name": "Sycamore Asylum",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-WRETCHED",
+      "canonicalIDproposal": "date-night-ok26-w1-wretched",
+      "name": "Wretched Oaks",
+      "city": "Noble",
+      "category": "haunted-trail",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/1egh7yxw87"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-WRETCHED",
+          "name": "Wretched Oaks",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-TONKAWA",
+      "canonicalIDproposal": "date-night-ok26-w1-tonkawa",
+      "name": "Tonkawa Haunted Sale Barn",
+      "city": "Tonkawa",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/tonkawahsb"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-TONKAWA",
+          "name": "Tonkawa Haunted Sale Barn",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-ELRENO",
+      "canonicalIDproposal": "date-night-ok26-w1-elreno",
+      "name": "Trail of Terror and Haunted Barn",
+      "city": "El Reno",
+      "category": "haunted-trail",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/trailofterror"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-ELRENO",
+          "name": "Trail of Terror and Haunted Barn",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-MINDZ",
+      "canonicalIDproposal": "date-night-ok26-w1-mindz",
+      "name": "Twisted Mindz Haunted Attraction",
+      "city": "Oklahoma City",
+      "category": "haunted-trail",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/twistedmindzhauntedattraction"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-MINDZ",
+          "name": "Twisted Mindz Haunted Attraction",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-NIGHTFALL",
+      "canonicalIDproposal": "date-night-ok26-w1-nightfall",
+      "name": "Nightfall Haunted Territory",
+      "city": "Oklahoma City",
+      "category": "haunted-trail",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/nightfallhauntedterritory"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-NIGHTFALL",
+          "name": "Nightfall Haunted Territory",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-NEWCASTLE",
+      "canonicalIDproposal": "date-night-ok26-w1-newcastle",
+      "name": "Newcastle Nightmare",
+      "city": "Newcastle",
+      "category": "haunted-maze",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/newcastlenightmare"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-NEWCASTLE",
+          "name": "Newcastle Nightmare",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-WAREHOUSE",
+      "canonicalIDproposal": "date-night-ok26-w1-warehouse",
+      "name": "Nightmare Warehouse",
+      "city": "Enid",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/nightmarewarehouseenid"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-WAREHOUSE",
+          "name": "Nightmare Warehouse",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-FRONTIER",
+      "canonicalIDproposal": "date-night-ok26-w1-frontier",
+      "name": "Frontier City Fright Fest",
+      "city": "Oklahoma City",
+      "category": "halloween-park",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/frontiercitythemepark"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-FRONTIER",
+          "name": "Frontier City Fright Fest",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-COUNTRY",
+      "canonicalIDproposal": "date-night-ok26-w1-country",
+      "name": "Nightmare in the Country Scream Park",
+      "city": "Woodward",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/hauntedwoodward"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-COUNTRY",
+          "name": "Nightmare in the Country Scream Park",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-ASYLUM",
+      "canonicalIDproposal": "date-night-ok26-w1-asylum",
+      "name": "Oklahoma Asylum",
+      "city": "Nowata",
+      "category": "haunted-house",
+      "status": "OWNER EVIDENCE NEEDED",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/oklahoma/oklahoma-asylum/"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-ASYLUM",
+          "name": "Oklahoma Asylum",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Primary operator identity/touch/blood facts retained; specific remaining-season/calendar and placement review unfinished. Loading-only booking read is not evidence of closure.",
+          "classification": "current commercial/public; seasonal dates pending primary capture",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Operator proves interactive touch/blood experience; ticket site returns Loading only. Secondary Tulsa After Dark 2026 schedule is a lead, not sufficient primary occurrence verification.",
+      "aliases": [],
+      "operator": "Oklahoma Asylum",
+      "operatorDomain": "oklahomaasylum.com",
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-CASTLE",
+      "canonicalIDproposal": "date-night-ok26-w1-castle",
+      "name": "Haunted Castle Halloween Festival",
+      "city": "Muskogee",
+      "category": [
+        "haunted-house",
+        "other-halloween-fall"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "3400 W Fern Mountain Rd, Muskogee, OK 74401",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 35.784066316157,
+          "lon": -95.40543363465,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3400+W+Fern+Mountain+Rd%2C+Muskogee%2C+OK+74401&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:21:20.019018+00:00",
+          "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "activeFrom": "2026-10-02",
+        "activeUntil": "2026-10-31",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-01T05:00:00Z",
+        "basis": "date-only",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "Under 16 must have a parent or legal guardian present at all times.",
+          "Unaccompanied minors under 18 must present photo ID (dated city tourism announcement).",
+          "Village admission is included with an attraction ticket; otherwise festival-only admission is required.",
+          "Strobes, fog and loud noises.",
+          "Children cannot be carried, held, worn in carriers or transported in strollers/wagons inside walkthrough attractions.",
+          "Festival grounds are wheelchair accessible. Casa Morte, Domus Horrificus and Monster Blaster accommodate wheelchairs up to 36 inches wide; other haunts have limitations."
+        ],
+        "consumerDetails": [
+          "Haunted attractions and family-friendly festival activities on Fridays and Saturdays, October 2–31, 2026.",
+          "Gates open 5:30 p.m.; indoor attractions at 6:15 p.m., outdoor attractions at dusk. Ticket sales end 11 p.m.; haunts may run later.",
+          "Under 16s need a parent or legal guardian throughout. Unaccompanied under-18s need photo ID. Children cannot be carried or taken in strollers/wagons through walkthroughs.",
+          "Festival grounds are wheelchair accessible. Casa Morte, Domus Horrificus and Monster Blaster accommodate wheelchairs up to 36 inches wide; other haunts have limitations.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/oklahoma/the-castle-halloween-festival/",
+          "https://frightmaps.com/houses/oklahoma/haunted-castle-halloween-festival-at-the-castle-of-muskogee",
+          "https://frightfind.com/castle-of-muskogee/",
+          "https://www.okcastle.com/halloween.html",
+          "https://okcastle.com/halloween-festival-faq/halloween-festival-faq/",
+          "https://visitmuskogee.com/news/castle-of-muskogee-announces-2026-halloween-festival/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3400+W+Fern+Mountain+Rd%2C+Muskogee%2C+OK+74401&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": "regional-wave1/oklahoma/R2/six-proposals.json",
+        "projectionSha256": "995f39669d6c2f69ad37fedfb825e459485771811c3235252d8fb88e2c297885"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-CASTLE",
+          "name": "Haunted Castle Halloween Festival",
+          "state": "Oklahoma",
+          "overallVerdict": "PASS",
+          "factualStatus": "PASS",
+          "placementStatus": "PASS_APPROXIMATE_ADDRESS_ONLY",
+          "futureImplementationQueueStatus": "PASS_FUTURE_QUEUE_ONLY",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative identity, public visitor destination, finite2026 schedule, qualified partial hours and lifecycle are supported.",
+          "classification": "current commercial/public",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [],
+      "operator": "The Castle of Muskogee",
+      "operatorDomain": "okcastle.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-16"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ok26-w1-castle",
+        "name": "Haunted Castle Halloween Festival",
+        "address": "3400 W Fern Mountain Rd, Muskogee, OK 74401",
+        "website": "https://okcastle.com/",
+        "activityTypes": [
+          "haunted-house",
+          "other-halloween-fall"
+        ],
+        "openingHours": null,
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "phone": null,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-10-02",
+          "activeUntil": "2026-10-31",
+          "activeDates": [
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-16",
+          "timeZone": "America/Chicago",
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-01T05:00:00Z",
+          "seasonYear": 2026,
+          "sourceUrls": [
+            "https://www.okcastle.com/halloween.html",
+            "https://okcastle.com/halloween-festival-faq/halloween-festival-faq/",
+            "https://visitmuskogee.com/news/castle-of-muskogee-announces-2026-halloween-festival/",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3400+W+Fern+Mountain+Rd%2C+Muskogee%2C+OK+74401&benchmark=Public_AR_Current&format=json"
+          ],
+          "note": "Finite source-bound 2026 dates only; no 2027 recurrence. Display-only hours. Research proposal awaiting fresh independent review."
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "OK-W1-CASTLE-2026",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "3400 W Fern Mountain Rd, Muskogee, OK 74401",
+          "placement": {
+            "lat": 35.784066316157,
+            "lon": -95.40543363465,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3400+W+Fern+Mountain+Rd%2C+Muskogee%2C+OK+74401&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:21:20.019018+00:00",
+            "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "3400 W Fern Mountain Rd, Muskogee, OK 74401"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "Fridays and Saturdays, October 2–31, 2026. Gates 5:30 p.m.; indoor attractions 6:15 p.m.; outdoor attractions at dusk. Ticket sales end 11 p.m.; attractions may run later. Final closing is not stated."
+          },
+          "listingExpiresAt": "2026-11-01T05:00:00Z",
+          "expiryBasis": "date-only",
+          "sourceUrls": [
+            "https://www.okcastle.com/halloween.html",
+            "https://okcastle.com/halloween-festival-faq/halloween-festival-faq/",
+            "https://visitmuskogee.com/news/castle-of-muskogee-announces-2026-halloween-festival/",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3400+W+Fern+Mountain+Rd%2C+Muskogee%2C+OK+74401&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "OK2026-W1-R2-2026-10-13",
+          "visibility": "listing-lifecycle"
+        },
+        "seasonalVisitNotes": [
+          "Haunted attractions and family-friendly festival activities on Fridays and Saturdays, October 2–31, 2026.",
+          "Gates open 5:30 p.m.; indoor attractions at 6:15 p.m., outdoor attractions at dusk. Ticket sales end 11 p.m.; haunts may run later.",
+          "Under 16s need a parent or legal guardian throughout. Unaccompanied under-18s need photo ID. Children cannot be carried or taken in strollers/wagons through walkthroughs.",
+          "Festival grounds are wheelchair accessible. Casa Morte, Domus Horrificus and Monster Blaster accommodate wheelchairs up to 36 inches wide; other haunts have limitations.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House / Halloween Festival",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "moodLevel": 3
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ok26-w1-castle",
+        "confidence": "good",
+        "details": [
+          "Haunted attractions and family-friendly festival activities on Fridays and Saturdays, October 2–31, 2026.",
+          "Gates open 5:30 p.m.; indoor attractions at 6:15 p.m., outdoor attractions at dusk. Ticket sales end 11 p.m.; haunts may run later.",
+          "Under 16s need a parent or legal guardian throughout. Unaccompanied under-18s need photo ID. Children cannot be carried or taken in strollers/wagons through walkthroughs.",
+          "Festival grounds are wheelchair accessible. Casa Morte, Domus Horrificus and Monster Blaster accommodate wheelchairs up to 36 inches wide; other haunts have limitations.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-HEX",
+      "canonicalIDproposal": "date-night-ok26-w1-hex",
+      "name": "The Hex House",
+      "city": "Tulsa",
+      "category": "haunted-house",
+      "status": "OWNER EVIDENCE NEEDED",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/oklahoma/hex-house-and-westside-grim-haunted-house/",
+          "https://frightmaps.com/houses/oklahoma/the-hex-house",
+          "https://frightfind.com/the-hex-house/"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-HEX",
+          "name": "The Hex House",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current operator/address and seasonal2026 lead exist; full field/projection and placement review unfinished. Missing readable calendar is an evidence gap, not a general requirement for complete daily hours. No claim operator is closed.",
+          "classification": "current commercial/public; schedule not fully transcribed",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Operator 2026 calendar image exists but direct capture was HTTP 403. Need readable dated occurrences; 20-night range alone is not a daily schedule.",
+      "aliases": [
+        "Hex House and Westside Grim Haunted House",
+        "The Experiment",
+        "Haunted Overdrive"
+      ],
+      "operator": "HexHouse",
+      "operatorDomain": "hexhouse.com",
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-FROZEN",
+      "canonicalIDproposal": "date-night-ok26-w1-frozen",
+      "name": "Frozen Morgue Haunted Attractions",
+      "city": "Chouteau / Inola unresolved",
+      "category": "haunted-house",
+      "status": "OWNER EVIDENCE NEEDED",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/oklahoma/frozen-morgue-haunted-attractions/",
+          "https://frightfind.com/frozen-morgue-haunted-attractions/"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-FROZEN",
+          "name": "Frozen Morgue Haunted Attractions",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-PLANTATION",
+      "canonicalIDproposal": "date-night-ok26-w1-plantation",
+      "name": "Haunted Plantation",
+      "city": "Coweta",
+      "category": [
+        "haunted-house",
+        "corn-maze",
+        "other-halloween-fall"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "21701 E 161st St S, Coweta, OK 74429",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 35.93010608085,
+          "lon": -95.734447960358,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=21701+E+161st+St+S%2C+Coweta%2C+OK+74429&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:21:20.021667+00:00",
+          "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "activeFrom": "2026-10-16",
+        "activeUntil": "2026-10-31",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-01T05:00:00Z",
+        "basis": "date-only",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "Interactive attraction with light touching, theatrical blood, fog, strobes and uneven outdoor terrain; waiver required.",
+          "Operator recommends hayride for ages 12+; parent discretion.",
+          "Grounds entry is free; attraction tickets separate.",
+          "Zombie Rampage is co-located but uses a separate business/ticket account."
+        ],
+        "consumerDetails": [
+          "Interactive haunted hayride, wooded trail and corn-maze game. Remaining verified dates: October 16–17, 23–24 and 30–31, 2026.",
+          "Gates open 6 p.m.; rides begin at dark; last on-site tickets 10 p.m.",
+          "Expect light touching and theatrical blood; a waiver is required. Hayride recommended for ages 12+. Outdoor terrain, fog and strobes.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/oklahoma/haunted-plantation-ok/",
+          "https://www.ticketsignup.io/TicketEvent/HauntedPlantation",
+          "https://hauntedplantationok.com/",
+          "https://hauntedplantationok.com/faqs/",
+          "https://hauntedplantationok.com/parking/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=21701+E+161st+St+S%2C+Coweta%2C+OK+74429&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": "regional-wave1/oklahoma/R2/six-proposals.json",
+        "projectionSha256": "995f39669d6c2f69ad37fedfb825e459485771811c3235252d8fb88e2c297885"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-PLANTATION",
+          "name": "Haunted Plantation",
+          "state": "Oklahoma",
+          "overallVerdict": "PASS",
+          "factualStatus": "PASS",
+          "placementStatus": "PASS_APPROXIMATE_ADDRESS_ONLY",
+          "futureImplementationQueueStatus": "PASS_FUTURE_QUEUE_ONLY",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative identity, public visitor destination, finite2026 schedule, qualified partial hours and lifecycle are supported.",
+          "classification": "current commercial/public",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [],
+      "operator": "Haunted Plantation OK LLC",
+      "operatorDomain": "hauntedplantationok.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-16"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ok26-w1-plantation",
+        "name": "Haunted Plantation",
+        "address": "21701 E 161st St S, Coweta, OK 74429",
+        "website": "https://hauntedplantationok.com/",
+        "activityTypes": [
+          "haunted-house",
+          "corn-maze",
+          "other-halloween-fall"
+        ],
+        "openingHours": null,
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "phone": null,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-10-16",
+          "activeUntil": "2026-10-31",
+          "activeDates": [
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-16",
+          "timeZone": "America/Chicago",
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-01T05:00:00Z",
+          "seasonYear": 2026,
+          "sourceUrls": [
+            "https://www.ticketsignup.io/TicketEvent/HauntedPlantation",
+            "https://hauntedplantationok.com/",
+            "https://hauntedplantationok.com/faqs/",
+            "https://hauntedplantationok.com/parking/",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=21701+E+161st+St+S%2C+Coweta%2C+OK+74429&benchmark=Public_AR_Current&format=json"
+          ],
+          "note": "Finite source-bound 2026 dates only; no 2027 recurrence. Display-only hours. Research proposal awaiting fresh independent review."
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "OK-W1-PLANTATION-2026",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "21701 E 161st St S, Coweta, OK 74429",
+          "placement": {
+            "lat": 35.93010608085,
+            "lon": -95.734447960358,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=21701+E+161st+St+S%2C+Coweta%2C+OK+74429&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:21:20.021667+00:00",
+            "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "21701 E 161st St S, Coweta, OK 74429"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "Remaining verified ticket dates: October 16–17, 23–24 and 30–31, 2026. Gates open 6 p.m.; rides begin at dark; last on-site tickets 10 p.m. Final closing is unclear; check with the operator."
+          },
+          "listingExpiresAt": "2026-11-01T05:00:00Z",
+          "expiryBasis": "date-only",
+          "sourceUrls": [
+            "https://www.ticketsignup.io/TicketEvent/HauntedPlantation",
+            "https://hauntedplantationok.com/",
+            "https://hauntedplantationok.com/faqs/",
+            "https://hauntedplantationok.com/parking/",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=21701+E+161st+St+S%2C+Coweta%2C+OK+74429&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "OK2026-W1-R2-2026-10-13",
+          "visibility": "listing-lifecycle"
+        },
+        "seasonalVisitNotes": [
+          "Interactive haunted hayride, wooded trail and corn-maze game. Remaining verified dates: October 16–17, 23–24 and 30–31, 2026.",
+          "Gates open 6 p.m.; rides begin at dark; last on-site tickets 10 p.m.",
+          "Expect light touching and theatrical blood; a waiver is required. Hayride recommended for ages 12+. Outdoor terrain, fog and strobes.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted Attractions / Corn Maze",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "moodLevel": 3
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ok26-w1-plantation",
+        "confidence": "good",
+        "details": [
+          "Interactive haunted hayride, wooded trail and corn-maze game. Remaining verified dates: October 16–17, 23–24 and 30–31, 2026.",
+          "Gates open 6 p.m.; rides begin at dark; last on-site tickets 10 p.m.",
+          "Expect light touching and theatrical blood; a waiver is required. Hayride recommended for ages 12+. Outdoor terrain, fog and strobes.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-ZOMBIE",
+      "canonicalIDproposal": "date-night-ok26-w1-zombie",
+      "name": "Zombie Rampage",
+      "city": "Coweta",
+      "category": "zombie-paintball",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/oklahoma/zombie-rampage/"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-ZOMBIE",
+          "name": "Zombie Rampage",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Separate business visitor terms/access review, normalized identity relationship and complete future projection remain unfinished in this bounded wave. Current-year dates are available; not an access-failure HOLD.",
+          "classification": "current commercial/public",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Separate business visitor terms/access review, normalized identity relationship and complete future projection remain unfinished in this bounded wave. Current-year dates are available; not an access-failure HOLD.",
+      "aliases": [],
+      "operator": "Zombie Rampage; separate LLC from Haunted Plantation per operator FAQ",
+      "operatorDomain": "zombierampage-ok.com",
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-INSANITY",
+      "canonicalIDproposal": "date-night-ok26-w1-insanity",
+      "name": "Insanity Farms",
+      "city": "Tulsa",
+      "category": "haunted-corn-maze",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/oklahoma/insanity-farms/"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-INSANITY",
+          "name": "Insanity Farms",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-PUMPKINTOWN",
+      "canonicalIDproposal": "date-night-ok26-w1-pumpkintown",
+      "name": "Pumpkin Town",
+      "city": "Tulsa",
+      "category": "pumpkin-patch",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://frightfind.com/pumpkin-town/"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-PUMPKINTOWN",
+          "name": "Pumpkin Town",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-ROBBERS",
+      "canonicalIDproposal": "date-night-ok26-w1-robbers",
+      "name": "Robbers Cave Haunted Hay Ride",
+      "city": "Wilburton",
+      "category": "haunted-hayride",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://frightfind.com/robbers-cave-haunted-hay-ride/"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-ROBBERS",
+          "name": "Robbers Cave Haunted Hay Ride",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-WARD",
+      "canonicalIDproposal": "date-night-ok26-w1-ward",
+      "name": "The 13th Ward Haunted Attraction",
+      "city": "Broken Arrow",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://frightfind.com/the-13th-ward-haunted-attraction/"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-WARD",
+          "name": "The 13th Ward Haunted Attraction",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Stale2017 closure text is not current permanent closure. Current2026 operation remains unverified; HOLD/stale, not REJECT.",
+          "classification": "stale",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Only historical CLOSED FOR2017 notice captured. Hold as stale pending authoritative current2026 status; this is not proof of current closure or permanent ineligibility.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-LOSTLAKES",
+      "canonicalIDproposal": "date-night-ok26-w1-lostlakes",
+      "name": "Lost Lakes Haunted Forest",
+      "city": "Oklahoma City",
+      "category": "haunted-trail",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://frightfind.com/lost-lakes-haunted-forest/"
+        ],
+        "authorArtifact": "regional-wave1/oklahoma/R2/ledger.json",
+        "authorSha256": "d5f36960567d8e55d7e3b002edb6229b1c71cfe47823e9a839741df13d9dbabf",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+        "exacthash": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+        "report": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+        "reportSha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+        "verdict": {
+          "leadId": "OK-W1-LOSTLAKES",
+          "name": "Lost Lakes Haunted Forest",
+          "state": "Oklahoma",
+          "overallVerdict": "HOLD",
+          "factualStatus": "HOLD",
+          "placementStatus": "NOT_CLEARED",
+          "futureImplementationQueueStatus": "HOLD_UNFINISHED_FACTUAL_REVIEW",
+          "runtimeAcceptance": "NOT_RUN_NOT_AUTHORIZED",
+          "releaseApproval": "NONE_PR69_REMAINS_SOLE_DECISION",
+          "reason": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+          "classification": "uncertain",
+          "expectedImplementedIdentityImpact": 0
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current authoritative 2026 dates, visitor address and access facts not yet verified. Unknown hours or prices alone are not blockers.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    }
+  ],
+  "residentialPolicy": "All residential/unclassified entries excluded from implementation. Counts only; no private addresses or owner travel request."
+}

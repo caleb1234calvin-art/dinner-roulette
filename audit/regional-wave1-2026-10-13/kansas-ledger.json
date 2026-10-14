@@ -1,0 +1,3636 @@
+{
+  "scope": "FUTURE_RESEARCH_ONLY",
+  "counts": {
+    "selectedPublicCommercialLeads": 24,
+    "factualPass": 8,
+    "placementReady": 7,
+    "needsOneField": 1,
+    "selectedFactualHold": 16,
+    "queueStatuses": {
+      "READY FOR IMPLEMENTATION": 7,
+      "OWNER EVIDENCE NEEDED": 4,
+      "NEEDS ONE FIELD": 1,
+      "HOLD": 12
+    },
+    "rawSourceAppearances": 124,
+    "rawBySource": {
+      "Haunts.com": 13,
+      "The Scare Factor": 33,
+      "FrightMaps": 48,
+      "FrightFind": 30
+    },
+    "provisionalUnionIdentities": 101,
+    "residentialOrUnclassifiedSeparateIdentities": 52,
+    "otherNonselectedUnionIdentities": 25,
+    "countCaveat": "Provisional name/alias union, not proven current operating destinations.52 residential/unclassified includes unknown classification. Bounded incomplete source coverage.",
+    "otherNonselectedDispositions": {
+      "HOLD": 18,
+      "loreExcluded": 7,
+      "REJECT": 0
+    },
+    "latestAccountingAuthority": "independent-kansas-accounting-R1; overrides only two nonselected directory-closed REJECT labels to HOLD; selected24 unchanged"
+  },
+  "records": [
+    {
+      "state": "Kansas",
+      "researchRecordId": "exiled",
+      "canonicalIDproposal": "date-night-ks26-exiled",
+      "name": "Exiled KC: Trail of Terrors & Twisted Carnival",
+      "city": "Bonner Springs",
+      "category": [
+        "haunted-house",
+        "other-halloween-fall"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "12829 Loring Road, Bonner Springs, KS 66012, USA",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 39.010297081473,
+          "lon": -94.914563314124,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=12829+Loring+Rd%2C+Bonner+Springs%2C+KS+66012&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:19:31.801356+00:00",
+          "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-29",
+          "2026-10-30",
+          "2026-10-31",
+          "2026-11-01"
+        ],
+        "activeFrom": "2026-10-02",
+        "activeUntil": "2026-11-01",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-02T06:00:00Z",
+        "basis": "date-only",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "admission": "Paid timed Trail; free-entry Carnival; games/food/drinks extra",
+        "restrictions": [
+          "Closed-toe shoes required",
+          "No mobility aids on Trail",
+          "No identity-concealing costumes/masks/makeup or outside lights",
+          "Under12 accompanied; Green16+",
+          "Fog/strobes; hills, stairs, bending/crawling",
+          "Health warnings on operator FAQ"
+        ]
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://exiledkc.com/",
+          "https://exiledkc.com/carnival/",
+          "https://exiledkc.com/faq/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=12829+Loring+Rd%2C+Bonner+Springs%2C+KS+66012&benchmark=Public_AR_Current&format=json",
+          "https://frightfind.com/state-frights/kansas/c/haunted-houses-attractions/haunt-events/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": "regional-wave1/kansas/R3/intended-v1-projections.json",
+        "projectionSha256": "7a56d7ca82351fb81389b79f78d65daa1030ce24fbe5f5d322fc40dfec501493"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "exiled",
+          "name": "Exiled KC: Trail of Terrors & Twisted Carnival",
+          "state": "KS",
+          "verdict": "PASS",
+          "factual": "PASS",
+          "placement": "PASS_APPROXIMATE_ADDRESS_DERIVED",
+          "disposition": "READY FOR IMPLEMENTATION",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": null,
+          "finding": "Operator Carnival page independently supplies13 explicit2026 show nights. One paid timed Trail/free-entry Carnival destination. Check-in not start; no final close invented. Unique Census house/city/zip match accepted only approximate despite Road→Drive normalization; Directions retain operator Road. Optional Green16+, under12 adult, shoes, mobility and visitor prohibitions retained.",
+          "sourceReviewScope": "Independent decisive operator/public source reopen and archived authored evidence",
+          "lifecycle": {
+            "status": "confirmed",
+            "activeFrom": "2026-10-02",
+            "activeUntil": "2026-11-01",
+            "activeDates": [
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-09",
+              "2026-10-10",
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-25",
+              "2026-10-29",
+              "2026-10-30",
+              "2026-10-31",
+              "2026-11-01"
+            ],
+            "checkedAt": "2026-10-13",
+            "revalidateAfter": "2026-10-15",
+            "timeZone": "America/Chicago",
+            "openNowPolicy": "never",
+            "listingExpiresAt": "2026-11-02T06:00:00Z",
+            "seasonYear": 2026,
+            "sourceUrls": [
+              "https://exiledkc.com/",
+              "https://exiledkc.com/carnival/",
+              "https://exiledkc.com/faq/"
+            ],
+            "note": "Finite 2026 occurrences only. No machine opening intervals; no 2027 recurrence."
+          },
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [
+        "Exiled KC",
+        "Exiled: Trail of Terrors"
+      ],
+      "operator": null,
+      "operatorDomain": "exiledkc.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ks26-exiled",
+        "name": "Exiled KC: Trail of Terrors & Twisted Carnival",
+        "address": "12829 Loring Road, Bonner Springs, KS 66012, USA",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://exiledkc.com/",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house",
+          "other-halloween-fall"
+        ],
+        "moodLevel": 2,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-10-02",
+          "activeUntil": "2026-11-01",
+          "activeDates": [
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-25",
+            "2026-10-29",
+            "2026-10-30",
+            "2026-10-31",
+            "2026-11-01"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-02T06:00:00Z",
+          "seasonYear": 2026,
+          "sourceUrls": [
+            "https://exiledkc.com/",
+            "https://exiledkc.com/carnival/",
+            "https://exiledkc.com/faq/"
+          ],
+          "note": "Finite 2026 occurrences only. No machine opening intervals; no 2027 recurrence."
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "KS26-W1-EXILED",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "12829 Loring Road, Bonner Springs, KS 66012, USA",
+          "placement": {
+            "lat": 39.010297081473,
+            "lon": -94.914563314124,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=12829+Loring+Rd%2C+Bonner+Springs%2C+KS+66012&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:19:31.801356+00:00",
+            "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "12829 Loring Road, Bonner Springs, KS 66012, USA"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "13 show nights October 2–November 1, 2026. Trail check-in starts at the ticket time and lasts 30 minutes; actual start depends on the line. Carnival opens 30 minutes before first Trail time and stays open approximately 90 minutes after last ticket time. Final closing time unknown."
+          },
+          "listingExpiresAt": "2026-11-02T06:00:00Z",
+          "expiryBasis": "date-only",
+          "sourceUrls": [
+            "https://exiledkc.com/",
+            "https://exiledkc.com/carnival/",
+            "https://exiledkc.com/faq/",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=12829+Loring+Rd%2C+Bonner+Springs%2C+KS+66012&benchmark=Public_AR_Current&format=json",
+            "https://frightfind.com/state-frights/kansas/c/haunted-houses-attractions/haunt-events/"
+          ],
+          "reviewRevision": "KS-WAVE1-R3-PENDING-INDEPENDENT-REVIEW",
+          "visibility": "listing-lifecycle"
+        },
+        "seasonalVisitNotes": [
+          "Outdoor Trail of Terrors and Twisted Carnival on 13 nights, October 2–November 1, 2026.",
+          "Paid timed Trail ticket required; Carnival entry is free. Check in during the 30-minute window beginning at your ticket time.",
+          "Closed-toe shoes required. Trail has hills, stairs and crawling and cannot accommodate mobility aids. Recommended 12+; under 12 must stay with an adult.",
+          "Optional Green Level is 16+ and may include light contact and simulated blood or paint; consent required.",
+          "No costumes, identity-concealing masks or outside lights on the Trail. Fog and strobes are used; review the operator’s health guidance before booking.",
+          "Location is approximate."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ks26-exiled",
+        "confidence": "good",
+        "details": [
+          "Outdoor Trail of Terrors and Twisted Carnival on 13 nights, October 2–November 1, 2026.",
+          "Paid timed Trail ticket required; Carnival entry is free. Check in during the 30-minute window beginning at your ticket time.",
+          "Closed-toe shoes required. Trail has hills, stairs and crawling and cannot accommodate mobility aids. Recommended 12+; under 12 must stay with an adult.",
+          "Optional Green Level is 16+ and may include light contact and simulated blood or paint; consent required.",
+          "No costumes, identity-concealing masks or outside lights on the Trail. Fog and strobes are used; review the operator’s health guidance before booking.",
+          "Location is approximate."
+        ]
+      }
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "acres",
+      "canonicalIDproposal": "date-night-ks26-acres",
+      "name": "Acres of Madness",
+      "city": "Kansas City",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "5615 Wolcott Drive, Kansas City, KS 66109, USA",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 39.201193638566,
+          "lon": -94.820425979083,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5615+Wolcott+Drive%2C+Kansas+City%2C+KS+66109&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:40:58.198599+00:00",
+          "precisionLabel": "Approximate public visitor-address location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-02T06:00:00Z",
+        "basis": "editorial",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "admission": "Each attraction requires a ticket; buy online or at the on-site ticket trailer. Dates and hours are unconfirmed; check the operator before going.",
+        "restrictions": [
+          "Hell’s Gate and Knightmares Kurse are intense haunts. Expect tight corridors, heavy fog and strobes; not recommended for young children or anyone easily overwhelmed.",
+          "The operator describes a “full-contact atmosphere”; actual guest-touching and consent rules are unconfirmed. Check those rules before booking."
+        ]
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/kansas/",
+          "https://www.thescarefactor.com/haunted-houses/Kansas/",
+          "https://frightmaps.com/haunted-houses/kansas",
+          "https://frightfind.com/state-frights/kansas/",
+          "https://zombiepurge.com/",
+          "https://acresofmadness.ticketspice.com/acres-of-madness-2026",
+          "https://zombiepurge.com/hells-gate",
+          "https://zombiepurge.com/knightmares-kurse",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5615+Wolcott+Drive%2C+Kansas+City%2C+KS+66109&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": "regional-wave1/kansas/R3/intended-v1-projections.json",
+        "projectionSha256": "7a56d7ca82351fb81389b79f78d65daa1030ce24fbe5f5d322fc40dfec501493"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "acres",
+          "name": "Acres of Madness",
+          "state": "KS",
+          "verdict": "PASS",
+          "factual": "PASS",
+          "placement": "PASS_APPROXIMATE_ADDRESS_DERIVED",
+          "disposition": "READY FOR IMPLEMENTATION",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": null,
+          "finding": "Independent operator current2026 invitation, named attractions and Lakeside Speedway address establish factual fit. One destination with Hells Gate/Knightmares Kurse/Zombie Purge. Dates/hours unknown; editorial retention is not operating-through claim. Intense fog/strobes/young-child guidance and contact-policy ambiguity retained.",
+          "sourceReviewScope": "Independent decisive operator/public source reopen and archived authored evidence",
+          "lifecycle": {
+            "status": "confirmed",
+            "checkedAt": "2026-10-13",
+            "revalidateAfter": "2026-10-15",
+            "timeZone": "America/Chicago",
+            "openNowPolicy": "never",
+            "listingExpiresAt": "2026-11-02T06:00:00Z",
+            "seasonYear": 2026,
+            "sourceUrls": [
+              "https://zombiepurge.com/",
+              "https://acresofmadness.ticketspice.com/acres-of-madness-2026",
+              "https://zombiepurge.com/hells-gate",
+              "https://zombiepurge.com/knightmares-kurse"
+            ],
+            "note": "Current2026 season advertised; exact occurrence dates and final end unavailable. Editorial listing retention only, not operating through Nov2 or permission to admit. No active dates/intervals inferred; no2027 rollover."
+          },
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [
+        "Acres of Madness",
+        "HELLS Gate"
+      ],
+      "operator": null,
+      "operatorDomain": "zombiepurge.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ks26-acres",
+        "name": "Acres of Madness",
+        "address": "5615 Wolcott Drive, Kansas City, KS 66109, USA",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://zombiepurge.com/",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 2,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-02T06:00:00Z",
+          "seasonYear": 2026,
+          "sourceUrls": [
+            "https://zombiepurge.com/",
+            "https://acresofmadness.ticketspice.com/acres-of-madness-2026",
+            "https://zombiepurge.com/hells-gate",
+            "https://zombiepurge.com/knightmares-kurse"
+          ],
+          "note": "Current2026 season advertised; exact occurrence dates and final end unavailable. Editorial listing retention only, not operating through Nov2 or permission to admit. No active dates/intervals inferred; no2027 rollover."
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "KS26-W1-ACRES",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "5615 Wolcott Drive, Kansas City, KS 66109, USA",
+          "placement": {
+            "lat": 39.201193638566,
+            "lon": -94.820425979083,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5615+Wolcott+Drive%2C+Kansas+City%2C+KS+66109&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:40:58.198599+00:00",
+            "precisionLabel": "Approximate public visitor-address location; not a verified entrance, parking area or rideshare dropoff."
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "5615 Wolcott Drive, Kansas City, KS 66109, USA"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "unknown",
+            "displayText": "2026 season advertised. Exact dates and hours unconfirmed; check the operator before going."
+          },
+          "listingExpiresAt": "2026-11-02T06:00:00Z",
+          "expiryBasis": "editorial",
+          "sourceUrls": [
+            "https://zombiepurge.com/",
+            "https://acresofmadness.ticketspice.com/acres-of-madness-2026",
+            "https://zombiepurge.com/hells-gate",
+            "https://zombiepurge.com/knightmares-kurse",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5615+Wolcott+Drive%2C+Kansas+City%2C+KS+66109&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "KS-WAVE1-R3-PENDING-INDEPENDENT-REVIEW",
+          "visibility": "listing-lifecycle"
+        },
+        "seasonalVisitNotes": [
+          "Multi-attraction 2026 haunt at Lakeside Speedway, including Zombie Purge, Hell’s Gate and Knightmares Kurse.",
+          "Each attraction requires a ticket; buy online or at the on-site ticket trailer. Dates and hours are unconfirmed; check the operator before going.",
+          "Hell’s Gate and Knightmares Kurse are intense haunts. Expect tight corridors, heavy fog and strobes; not recommended for young children or anyone easily overwhelmed.",
+          "The operator describes a “full-contact atmosphere”; actual guest-touching and consent rules are unconfirmed. Check those rules before booking.",
+          "Location is approximate. Directions use the public visitor address."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ks26-acres",
+        "confidence": "limited",
+        "details": [
+          "Multi-attraction 2026 haunt at Lakeside Speedway, including Zombie Purge, Hell’s Gate and Knightmares Kurse.",
+          "Each attraction requires a ticket; buy online or at the on-site ticket trailer. Dates and hours are unconfirmed; check the operator before going.",
+          "Hell’s Gate and Knightmares Kurse are intense haunts. Expect tight corridors, heavy fog and strobes; not recommended for young children or anyone easily overwhelmed.",
+          "The operator describes a “full-contact atmosphere”; actual guest-touching and consent rules are unconfirmed. Check those rules before booking.",
+          "Location is approximate. Directions use the public visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "field",
+      "canonicalIDproposal": "date-night-ks26-field",
+      "name": "Field of Screams Kansas",
+      "city": "Maize",
+      "category": "haunted-house",
+      "status": "OWNER EVIDENCE NEEDED",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/kansas/",
+          "https://www.thescarefactor.com/haunted-houses/Kansas/",
+          "https://frightmaps.com/haunted-houses/kansas",
+          "https://frightfind.com/state-frights/kansas/",
+          "https://scaryprairiepines.com/hours/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "field",
+          "name": "Field of Screams Kansas",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "OWNER EVIDENCE NEEDED",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Operator 2026 calendar is image-only; image retrieval returned 403 and ticket site yielded no readable occurrences. Need public capture of calendar for finite dates/expiry.",
+          "finding": "Operator 2026 calendar is image-only; image retrieval returned 403 and ticket site yielded no readable occurrences. Need public capture of calendar for finite dates/expiry.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Operator 2026 calendar is image-only; image retrieval returned 403 and ticket site yielded no readable occurrences. Need public capture of calendar for finite dates/expiry.",
+      "aliases": [
+        "Field of Screams Kansas",
+        "Field of Screams"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "wicked",
+      "canonicalIDproposal": "date-night-ks26-wicked",
+      "name": "Wicked Island",
+      "city": "Wichita",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "3022 S. McLean Blvd., Wichita, KS 67217, USA",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 37.640056507941,
+          "lon": -97.343205633423,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3022+S+McLean+Blvd%2C+Wichita%2C+KS+67217&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:19:31.802085+00:00",
+          "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-09-26",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "activeFrom": "2026-09-26",
+        "activeUntil": "2026-10-31",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-01T05:00:00Z",
+        "basis": "exact",
+        "timeZone": "America/Chicago",
+        "endsAt": "2026-11-01T05:00:00Z",
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "admission": "Paid ticket, online or gate",
+        "restrictions": [
+          "Uneven/rough trail",
+          "Weather permitting",
+          "No outside lights",
+          "No weapons",
+          "Groups may be combined/split"
+        ]
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.wickedwoodswichita.com/hours",
+          "https://www.wickedwoodswichita.com/",
+          "https://www.wickedwoodswichita.com/rules",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3022+S+McLean+Blvd%2C+Wichita%2C+KS+67217&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": "regional-wave1/kansas/R3/intended-v1-projections.json",
+        "projectionSha256": "7a56d7ca82351fb81389b79f78d65daa1030ce24fbe5f5d322fc40dfec501493"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "wicked",
+          "name": "Wicked Island",
+          "state": "KS",
+          "verdict": "PASS",
+          "factual": "PASS",
+          "placement": "PASS_APPROXIMATE_ADDRESS_DERIVED",
+          "disposition": "READY FOR IMPLEMENTATION",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": null,
+          "finding": "Operator independently confirms11 dates, ticket-sales start19:30, haunt20:00–midnight, park-gate cutoff23:30. Final midnight is Nov1 00:00CDT, before DST fallback. Two Census spelling variants have identical coordinates, one location.",
+          "sourceReviewScope": "Independent decisive operator/public source reopen and archived authored evidence",
+          "lifecycle": {
+            "status": "confirmed",
+            "activeFrom": "2026-09-26",
+            "activeUntil": "2026-10-31",
+            "activeDates": [
+              "2026-09-26",
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-09",
+              "2026-10-10",
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-30",
+              "2026-10-31"
+            ],
+            "checkedAt": "2026-10-13",
+            "revalidateAfter": "2026-10-15",
+            "timeZone": "America/Chicago",
+            "openNowPolicy": "never",
+            "listingExpiresAt": "2026-11-01T05:00:00Z",
+            "seasonYear": 2026,
+            "sourceUrls": [
+              "https://www.wickedwoodswichita.com/hours",
+              "https://www.wickedwoodswichita.com/",
+              "https://www.wickedwoodswichita.com/rules"
+            ],
+            "note": "Finite 2026 occurrences only. No machine opening intervals; no 2027 recurrence.",
+            "endsAt": "2026-11-01T05:00:00Z"
+          },
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [
+        "Plant Kingdoms Wicked Island",
+        "Wicked Island"
+      ],
+      "operator": null,
+      "operatorDomain": "wickedwoodswichita.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ks26-wicked",
+        "name": "Wicked Island",
+        "address": "3022 S. McLean Blvd., Wichita, KS 67217, USA",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://www.wickedwoodswichita.com/hours",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 2,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-09-26",
+          "activeUntil": "2026-10-31",
+          "activeDates": [
+            "2026-09-26",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-01T05:00:00Z",
+          "seasonYear": 2026,
+          "sourceUrls": [
+            "https://www.wickedwoodswichita.com/hours",
+            "https://www.wickedwoodswichita.com/",
+            "https://www.wickedwoodswichita.com/rules"
+          ],
+          "note": "Finite 2026 occurrences only. No machine opening intervals; no 2027 recurrence.",
+          "endsAt": "2026-11-01T05:00:00Z"
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "KS26-W1-WICKED",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "3022 S. McLean Blvd., Wichita, KS 67217, USA",
+          "placement": {
+            "lat": 37.640056507941,
+            "lon": -97.343205633423,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3022+S+McLean+Blvd%2C+Wichita%2C+KS+67217&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:19:31.802085+00:00",
+            "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "3022 S. McLean Blvd., Wichita, KS 67217, USA"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "September 26 and October 2–3,9–10,16–17,23–24,30–31, 2026. Haunt 8 p.m.–midnight; ticket sales start 7:30 p.m.; park gates close 11:30 p.m. Last ticket sale not separately stated."
+          },
+          "listingExpiresAt": "2026-11-01T05:00:00Z",
+          "expiryBasis": "exact",
+          "sourceUrls": [
+            "https://www.wickedwoodswichita.com/hours",
+            "https://www.wickedwoodswichita.com/",
+            "https://www.wickedwoodswichita.com/rules",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3022+S+McLean+Blvd%2C+Wichita%2C+KS+67217&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "KS-WAVE1-R3-PENDING-INDEPENDENT-REVIEW",
+          "visibility": "listing-lifecycle"
+        },
+        "seasonalVisitNotes": [
+          "Haunted island trail on September 26 and October 2–3,9–10,16–17,23–24 and 30–31, 2026.",
+          "Haunt 8 p.m.–midnight; tickets from 7:30 p.m.; park gates close 11:30 p.m. Weather permitting.",
+          "Tickets online or at the gate. Uneven trail; no flashlights, smoking or open flames on the island.",
+          "Location is approximate."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ks26-wicked",
+        "confidence": "good",
+        "details": [
+          "Haunted island trail on September 26 and October 2–3,9–10,16–17,23–24 and 30–31, 2026.",
+          "Haunt 8 p.m.–midnight; tickets from 7:30 p.m.; park gates close 11:30 p.m. Weather permitting.",
+          "Tickets online or at the gate. Uneven trail; no flashlights, smoking or open flames on the island.",
+          "Location is approximate."
+        ]
+      }
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "walters",
+      "canonicalIDproposal": "date-night-ks26-walters",
+      "name": "The Haunt at Walters",
+      "city": "Burns",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "10001 NW U.S. Highway 77, Burns, KS 66840, USA",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 37.953096849462,
+          "lon": -96.85429777569,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10001+NW+US+Highway+77%2C+Burns%2C+KS+66840&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:19:31.803572+00:00",
+          "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-09-18",
+          "2026-09-19",
+          "2026-09-25",
+          "2026-09-26",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30"
+        ],
+        "activeFrom": "2026-09-18",
+        "activeUntil": "2026-10-30",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-10-31T04:00:00Z",
+        "basis": "exact",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "admission": "Separately ticketed haunt; do not use daytime Pumpkinfest admission/hours",
+        "restrictions": [
+          "Recommended12+",
+          "Operator health guidance on ticket page",
+          "No pets or outside food/drinks under farm policy"
+        ]
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://thewaltersfarm.com/haunt/",
+          "https://walterspumpkinpatch.ticketspice.com/the-haunt-at-walters-2026-season",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10001+NW+US+Highway+77%2C+Burns%2C+KS+66840&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": "regional-wave1/kansas/R3/intended-v1-projections.json",
+        "projectionSha256": "7a56d7ca82351fb81389b79f78d65daa1030ce24fbe5f5d322fc40dfec501493"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "walters",
+          "name": "The Haunt at Walters",
+          "state": "KS",
+          "verdict": "PASS",
+          "factual": "PASS",
+          "placement": "PASS_APPROXIMATE_ADDRESS_DERIVED",
+          "disposition": "READY FOR IMPLEMENTATION",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": null,
+          "finding": "Operator13 haunt dates independently bound to linked2026 TicketSpice. Gate19:30, wagon20:00, gate close23:00 distinct; final patron exit unknown. Exact final gate-based listing retirement is conservative and not a claimed attraction completion time. Daytime Pumpkinfest schedule not imported.",
+          "sourceReviewScope": "Independent decisive operator/public source reopen and archived authored evidence",
+          "lifecycle": {
+            "status": "confirmed",
+            "activeFrom": "2026-09-18",
+            "activeUntil": "2026-10-30",
+            "activeDates": [
+              "2026-09-18",
+              "2026-09-19",
+              "2026-09-25",
+              "2026-09-26",
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-09",
+              "2026-10-10",
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-30"
+            ],
+            "checkedAt": "2026-10-13",
+            "revalidateAfter": "2026-10-15",
+            "timeZone": "America/Chicago",
+            "openNowPolicy": "never",
+            "listingExpiresAt": "2026-10-31T04:00:00Z",
+            "seasonYear": 2026,
+            "sourceUrls": [
+              "https://thewaltersfarm.com/haunt/",
+              "https://walterspumpkinpatch.ticketspice.com/the-haunt-at-walters-2026-season"
+            ],
+            "note": "Finite 2026 occurrences only. No machine opening intervals; no 2027 recurrence."
+          },
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [
+        "The Haunt at Walters"
+      ],
+      "operator": null,
+      "operatorDomain": "thewaltersfarm.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ks26-walters",
+        "name": "The Haunt at Walters",
+        "address": "10001 NW U.S. Highway 77, Burns, KS 66840, USA",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://thewaltersfarm.com/haunt/",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 2,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-09-18",
+          "activeUntil": "2026-10-30",
+          "activeDates": [
+            "2026-09-18",
+            "2026-09-19",
+            "2026-09-25",
+            "2026-09-26",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-10-31T04:00:00Z",
+          "seasonYear": 2026,
+          "sourceUrls": [
+            "https://thewaltersfarm.com/haunt/",
+            "https://walterspumpkinpatch.ticketspice.com/the-haunt-at-walters-2026-season"
+          ],
+          "note": "Finite 2026 occurrences only. No machine opening intervals; no 2027 recurrence."
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "KS26-W1-WALTERS",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "10001 NW U.S. Highway 77, Burns, KS 66840, USA",
+          "placement": {
+            "lat": 37.953096849462,
+            "lon": -96.85429777569,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10001+NW+US+Highway+77%2C+Burns%2C+KS+66840&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:19:31.803572+00:00",
+            "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "10001 NW U.S. Highway 77, Burns, KS 66840, USA"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "September 18–19,25–26; October 2–3,9–10,16–17,23–24 and 30, 2026. Gates 7:30 p.m.; first wagon 8 p.m.; gates close 11 p.m. Final exit and last-ticket time unknown."
+          },
+          "listingExpiresAt": "2026-10-31T04:00:00Z",
+          "expiryBasis": "exact",
+          "sourceUrls": [
+            "https://thewaltersfarm.com/haunt/",
+            "https://walterspumpkinpatch.ticketspice.com/the-haunt-at-walters-2026-season",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10001+NW+US+Highway+77%2C+Burns%2C+KS+66840&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "KS-WAVE1-R3-PENDING-INDEPENDENT-REVIEW",
+          "visibility": "listing-lifecycle"
+        },
+        "seasonalVisitNotes": [
+          "Haunted wagon ride and two barns on select nights, September 18–October 30, 2026.",
+          "Gates open 7:30 p.m.; first wagon 8 p.m.; gates close 11 p.m. Final exit time is unconfirmed.",
+          "Separate haunt ticket required. Recommended for ages 12+.",
+          "Location is approximate."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ks26-walters",
+        "confidence": "good",
+        "details": [
+          "Haunted wagon ride and two barns on select nights, September 18–October 30, 2026.",
+          "Gates open 7:30 p.m.; first wagon 8 p.m.; gates close 11 p.m. Final exit time is unconfirmed.",
+          "Separate haunt ticket required. Recommended for ages 12+.",
+          "Location is approximate."
+        ]
+      }
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "louisburg",
+      "canonicalIDproposal": "date-night-ks26-louisburg",
+      "name": "Louisburg Cider Mill Family Farm",
+      "city": "Louisburg",
+      "category": [
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "status": "NEEDS ONE FIELD",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "14730 K68 Highway, Louisburg, KS 66053, USA",
+      "placement": {
+        "status": "address-only; radius-ineligible",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-09-11",
+          "2026-09-12",
+          "2026-09-13",
+          "2026-09-14",
+          "2026-09-15",
+          "2026-09-16",
+          "2026-09-17",
+          "2026-09-18",
+          "2026-09-19",
+          "2026-09-20",
+          "2026-09-21",
+          "2026-09-22",
+          "2026-09-23",
+          "2026-09-24",
+          "2026-09-25",
+          "2026-09-26",
+          "2026-09-27",
+          "2026-09-28",
+          "2026-09-29",
+          "2026-09-30",
+          "2026-10-01",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-04",
+          "2026-10-05",
+          "2026-10-06",
+          "2026-10-07",
+          "2026-10-08",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-11",
+          "2026-10-12",
+          "2026-10-13",
+          "2026-10-14",
+          "2026-10-15",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-19",
+          "2026-10-20",
+          "2026-10-21",
+          "2026-10-22",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-26",
+          "2026-10-27",
+          "2026-10-28",
+          "2026-10-29",
+          "2026-10-30",
+          "2026-10-31",
+          "2026-11-01"
+        ],
+        "activeFrom": "2026-09-11",
+        "activeUntil": "2026-11-01",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-02T00:00:00Z",
+        "basis": "exact",
+        "timeZone": "America/Chicago",
+        "endsAt": "2026-11-02T00:00:00Z",
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "admission": "Paid Family Farm; Country Store free, pumpkins extra",
+        "restrictions": [
+          "Outdoor weather may affect activities",
+          "Leashed friendly dogs permitted"
+        ]
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.louisburgcidermill.com/family-farm",
+          "https://louisburgcidermill.com/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": "regional-wave1/kansas/R3/intended-v1-projections.json",
+        "projectionSha256": "7a56d7ca82351fb81389b79f78d65daa1030ce24fbe5f5d322fc40dfec501493"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "louisburg",
+          "name": "Louisburg Cider Mill Family Farm",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "PASS",
+          "placement": "HOLD_ADDRESS_ONLY",
+          "disposition": "NEEDS ONE FIELD",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Reviewed supported approximate placement",
+          "finding": "Independent farm page supports52 daily dates and farm-specific hours, paid farm/free store distinction. Nov1 18:00CST equals Nov2 00:00Z. Historical MO26-064 known identity, not new discovery. Census returned no match; address-only, no radius/count/ranking/picks.",
+          "sourceReviewScope": "Independent decisive operator/public source reopen and archived authored evidence",
+          "lifecycle": {
+            "status": "confirmed",
+            "activeFrom": "2026-09-11",
+            "activeUntil": "2026-11-01",
+            "activeDates": [
+              "2026-09-11",
+              "2026-09-12",
+              "2026-09-13",
+              "2026-09-14",
+              "2026-09-15",
+              "2026-09-16",
+              "2026-09-17",
+              "2026-09-18",
+              "2026-09-19",
+              "2026-09-20",
+              "2026-09-21",
+              "2026-09-22",
+              "2026-09-23",
+              "2026-09-24",
+              "2026-09-25",
+              "2026-09-26",
+              "2026-09-27",
+              "2026-09-28",
+              "2026-09-29",
+              "2026-09-30",
+              "2026-10-01",
+              "2026-10-02",
+              "2026-10-03",
+              "2026-10-04",
+              "2026-10-05",
+              "2026-10-06",
+              "2026-10-07",
+              "2026-10-08",
+              "2026-10-09",
+              "2026-10-10",
+              "2026-10-11",
+              "2026-10-12",
+              "2026-10-13",
+              "2026-10-14",
+              "2026-10-15",
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-18",
+              "2026-10-19",
+              "2026-10-20",
+              "2026-10-21",
+              "2026-10-22",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-25",
+              "2026-10-26",
+              "2026-10-27",
+              "2026-10-28",
+              "2026-10-29",
+              "2026-10-30",
+              "2026-10-31",
+              "2026-11-01"
+            ],
+            "checkedAt": "2026-10-13",
+            "revalidateAfter": "2026-10-15",
+            "timeZone": "America/Chicago",
+            "openNowPolicy": "never",
+            "listingExpiresAt": "2026-11-02T00:00:00Z",
+            "seasonYear": 2026,
+            "sourceUrls": [
+              "https://www.louisburgcidermill.com/family-farm",
+              "https://louisburgcidermill.com/"
+            ],
+            "note": "Finite 2026 occurrences only. No machine opening intervals; no 2027 recurrence.",
+            "endsAt": "2026-11-02T00:00:00Z"
+          },
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": false,
+        "knownHistoricalIdentities": [
+          "MO26-064"
+        ],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Reviewed placement required; no radius eligibility",
+      "aliases": [
+        "Cider Mill Pumpkin Patch and Corn Maze"
+      ],
+      "operator": null,
+      "operatorDomain": "louisburgcidermill.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "klausmeyer",
+      "canonicalIDproposal": "date-night-ks26-klausmeyer",
+      "name": "Klausmeyer Farm & Pumpkin Patch",
+      "city": "Clearwater",
+      "category": "pumpkin-patch",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/kansas/",
+          "https://www.klausmeyerdairyfarms.com/pumpkin-patch"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "klausmeyer",
+          "name": "Klausmeyer Farm & Pumpkin Patch",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "HOLD",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Operator date span lacks year; no explicit 2026 dated occurrence evidence. Do not infer 2026 from weekday compatibility or footer.",
+          "finding": "Operator date span lacks year; no explicit 2026 dated occurrence evidence. Do not infer 2026 from weekday compatibility or footer.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Operator date span lacks year; no explicit 2026 dated occurrence evidence. Do not infer 2026 from weekday compatibility or footer.",
+      "aliases": [
+        "Zombie Paintball at Klausmeyer Family Farm"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "zombie",
+      "canonicalIDproposal": "date-night-ks26-zombie",
+      "name": "Zombie Toxin Haunted House",
+      "city": "Junction City",
+      "category": "haunted-house",
+      "status": "OWNER EVIDENCE NEEDED",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/Kansas/",
+          "https://frightmaps.com/haunted-houses/kansas",
+          "https://frightfind.com/state-frights/kansas/",
+          "https://www.zombietoxin.com/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "zombie",
+          "name": "Zombie Toxin Haunted House",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "OWNER EVIDENCE NEEDED",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Operator 2026 schedule is image-only and image fetch returned 403. DMO Oct.16 occurrence uses 206 E 4th while modern directory uses 417 N Franklin; resolve current visitor address.",
+          "finding": "Operator 2026 schedule is image-only and image fetch returned 403. DMO Oct.16 occurrence uses 206 E 4th while modern directory uses 417 N Franklin; resolve current visitor address.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Operator 2026 schedule is image-only and image fetch returned 403. DMO Oct.16 occurrence uses 206 E 4th while modern directory uses 417 N Franklin; resolve current visitor address.",
+      "aliases": [
+        "Zombie Toxin Haunted House",
+        "Zombie Toxin"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "souls",
+      "canonicalIDproposal": "date-night-ks26-souls",
+      "name": "13 Sinister Souls",
+      "city": "Wichita",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "527 E Harry St, Wichita, KS 67211, USA",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 37.664297309832,
+          "lon": -97.332499508779,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=527+E+Harry+St%2C+Wichita%2C+KS+67211&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:41:02.583241+00:00",
+          "precisionLabel": "Approximate public visitor-address location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-02T06:00:00Z",
+        "basis": "editorial",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "admission": "Use your purchased time slot. Exact dates and hours are unconfirmed; check the operator before going.",
+        "restrictions": [
+          "High-gore, intense indoor scares; the operator warns this experience may be too much for some visitors."
+        ]
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/Kansas/",
+          "https://13sinistersouls.com/buy-tickets/",
+          "https://13sinistersouls.com/",
+          "https://13sinistersouls.com/about/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=527+E+Harry+St%2C+Wichita%2C+KS+67211&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": "regional-wave1/kansas/R3/intended-v1-projections.json",
+        "projectionSha256": "7a56d7ca82351fb81389b79f78d65daa1030ce24fbe5f5d322fc40dfec501493"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "souls",
+          "name": "13 Sinister Souls",
+          "state": "KS",
+          "verdict": "PASS",
+          "factual": "PASS",
+          "placement": "PASS_APPROXIMATE_ADDRESS_DERIVED",
+          "disposition": "READY FOR IMPLEMENTATION",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": null,
+          "finding": "Independent operator ticket page explicitly offers2026 season tickets at527 E Harry; main/about support indoor haunt and intensity. Purchased slot respected. No dates, recurrence or operating end invented; editorial retention and limited-details presentation.",
+          "sourceReviewScope": "Independent decisive operator/public source reopen and archived authored evidence",
+          "lifecycle": {
+            "status": "confirmed",
+            "checkedAt": "2026-10-13",
+            "revalidateAfter": "2026-10-15",
+            "timeZone": "America/Chicago",
+            "openNowPolicy": "never",
+            "listingExpiresAt": "2026-11-02T06:00:00Z",
+            "seasonYear": 2026,
+            "sourceUrls": [
+              "https://13sinistersouls.com/",
+              "https://13sinistersouls.com/buy-tickets/",
+              "https://13sinistersouls.com/about/"
+            ],
+            "note": "Current2026 season advertised; exact occurrence dates and final end unavailable. Editorial listing retention only, not operating through Nov2 or permission to admit. No active dates/intervals inferred; no2027 rollover."
+          },
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [
+        "13 Sinister Souls"
+      ],
+      "operator": null,
+      "operatorDomain": "13sinistersouls.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ks26-souls",
+        "name": "13 Sinister Souls",
+        "address": "527 E Harry St, Wichita, KS 67211, USA",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://13sinistersouls.com/",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 2,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-02T06:00:00Z",
+          "seasonYear": 2026,
+          "sourceUrls": [
+            "https://13sinistersouls.com/",
+            "https://13sinistersouls.com/buy-tickets/",
+            "https://13sinistersouls.com/about/"
+          ],
+          "note": "Current2026 season advertised; exact occurrence dates and final end unavailable. Editorial listing retention only, not operating through Nov2 or permission to admit. No active dates/intervals inferred; no2027 rollover."
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "KS26-W1-SOULS",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "527 E Harry St, Wichita, KS 67211, USA",
+          "placement": {
+            "lat": 37.664297309832,
+            "lon": -97.332499508779,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=527+E+Harry+St%2C+Wichita%2C+KS+67211&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:41:02.583241+00:00",
+            "precisionLabel": "Approximate public visitor-address location; not a verified entrance, parking area or rideshare dropoff."
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "527 E Harry St, Wichita, KS 67211, USA"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "unknown",
+            "displayText": "2026 season advertised. Exact dates and hours unconfirmed; check the operator before going."
+          },
+          "listingExpiresAt": "2026-11-02T06:00:00Z",
+          "expiryBasis": "editorial",
+          "sourceUrls": [
+            "https://13sinistersouls.com/",
+            "https://13sinistersouls.com/buy-tickets/",
+            "https://13sinistersouls.com/about/",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=527+E+Harry+St%2C+Wichita%2C+KS+67211&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "KS-WAVE1-R3-PENDING-INDEPENDENT-REVIEW",
+          "visibility": "listing-lifecycle"
+        },
+        "seasonalVisitNotes": [
+          "Indoor haunted house with live actors; 2026 tickets are on sale.",
+          "Use your purchased time slot. Exact dates and hours are unconfirmed; check the operator before going.",
+          "High-gore, intense indoor scares; the operator warns this experience may be too much for some visitors.",
+          "Location is approximate. Directions use the public visitor address."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ks26-souls",
+        "confidence": "limited",
+        "details": [
+          "Indoor haunted house with live actors; 2026 tickets are on sale.",
+          "Use your purchased time slot. Exact dates and hours are unconfirmed; check the operator before going.",
+          "High-gore, intense indoor scares; the operator warns this experience may be too much for some visitors.",
+          "Location is approximate. Directions use the public visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "fearzone",
+      "canonicalIDproposal": "date-night-ks26-fearzone",
+      "name": "Fear Zone",
+      "city": "Topeka",
+      "category": "haunted-house",
+      "status": "OWNER EVIDENCE NEEDED",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/kansas/",
+          "https://www.thescarefactor.com/haunted-houses/Kansas/",
+          "https://www.thescarefactor.com/haunted-houses/kansas/fear-zone/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "fearzone",
+          "name": "Fear Zone",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "OWNER EVIDENCE NEEDED",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Directory year label and Fri/Sat hours are not reopened operator 2026 dates. Public operator Facebook capture needed.",
+          "finding": "Directory year label and Fri/Sat hours are not reopened operator 2026 dates. Public operator Facebook capture needed.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Directory year label and Fri/Sat hours are not reopened operator 2026 dates. Public operator Facebook capture needed.",
+      "aliases": [
+        "Fear Zone Topeka",
+        "Fear Zone"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "colby",
+      "canonicalIDproposal": "date-night-ks26-colby",
+      "name": "Colby Haunted House",
+      "city": "Colby",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "660 N. Franklin, Colby, KS 67701, USA",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 39.399554732651,
+          "lon": -101.045933842025,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=660+N+Franklin%2C+Colby%2C+KS+67701&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:20:24.299484+00:00",
+          "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "activeFrom": "2026-10-23",
+        "activeUntil": "2026-10-31",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-01T03:00:00Z",
+        "basis": "exact",
+        "timeZone": "America/Chicago",
+        "endsAt": "2026-11-01T03:00:00Z",
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "admission": "Paid admission all ages",
+        "restrictions": [
+          "Intense actors/animatronics; matinee not confirmed"
+        ]
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.colbyhauntedhouse.com/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=660+N+Franklin%2C+Colby%2C+KS+67701&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": "regional-wave1/kansas/R3/intended-v1-projections.json",
+        "projectionSha256": "7a56d7ca82351fb81389b79f78d65daa1030ce24fbe5f5d322fc40dfec501493"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "colby",
+          "name": "Colby Haunted House",
+          "state": "KS",
+          "verdict": "PASS",
+          "factual": "PASS",
+          "placement": "PASS_APPROXIMATE_ADDRESS_DERIVED",
+          "disposition": "READY FOR IMPLEMENTATION",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": null,
+          "finding": "Operator independently supports four2026 dates,19:00–22:00 and660 N Franklin. Central timezone, not Mountain. AYSO old address/phone is possible antecedent only; no second addition and no proven historical alias claim. Matinee unconfirmed.",
+          "sourceReviewScope": "Independent decisive operator/public source reopen and archived authored evidence",
+          "lifecycle": {
+            "status": "confirmed",
+            "activeFrom": "2026-10-23",
+            "activeUntil": "2026-10-31",
+            "activeDates": [
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-30",
+              "2026-10-31"
+            ],
+            "checkedAt": "2026-10-13",
+            "revalidateAfter": "2026-10-15",
+            "timeZone": "America/Chicago",
+            "openNowPolicy": "never",
+            "listingExpiresAt": "2026-11-01T03:00:00Z",
+            "seasonYear": 2026,
+            "sourceUrls": [
+              "https://www.colbyhauntedhouse.com/"
+            ],
+            "note": "Finite 2026 occurrences only. No machine opening intervals; no 2027 recurrence.",
+            "endsAt": "2026-11-01T03:00:00Z"
+          },
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [
+          "AYSO possible historical antecedent; not an established alias and not a second runtime addition"
+        ],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [
+        "Colby Haunted House"
+      ],
+      "operator": null,
+      "operatorDomain": "colbyhauntedhouse.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ks26-colby",
+        "name": "Colby Haunted House",
+        "address": "660 N. Franklin, Colby, KS 67701, USA",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://www.colbyhauntedhouse.com/",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 2,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-10-23",
+          "activeUntil": "2026-10-31",
+          "activeDates": [
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-01T03:00:00Z",
+          "seasonYear": 2026,
+          "sourceUrls": [
+            "https://www.colbyhauntedhouse.com/"
+          ],
+          "note": "Finite 2026 occurrences only. No machine opening intervals; no 2027 recurrence.",
+          "endsAt": "2026-11-01T03:00:00Z"
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "KS26-W1-COLBY",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "660 N. Franklin, Colby, KS 67701, USA",
+          "placement": {
+            "lat": 39.399554732651,
+            "lon": -101.045933842025,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=660+N+Franklin%2C+Colby%2C+KS+67701&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:20:24.299484+00:00",
+            "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "660 N. Franklin, Colby, KS 67701, USA"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "October 23–24 and 30–31, 2026,7–10 p.m. Last admission not separately stated."
+          },
+          "listingExpiresAt": "2026-11-01T03:00:00Z",
+          "expiryBasis": "exact",
+          "sourceUrls": [
+            "https://www.colbyhauntedhouse.com/",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=660+N+Franklin%2C+Colby%2C+KS+67701&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "KS-WAVE1-R3-PENDING-INDEPENDENT-REVIEW",
+          "visibility": "listing-lifecycle"
+        },
+        "seasonalVisitNotes": [
+          "Volunteer-run haunted house, October 23–24 and 30–31, 2026,7–10 p.m.",
+          "Paid admission. Any lights-on matinee is unconfirmed; check the operator.",
+          "Location is approximate."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ks26-colby",
+        "confidence": "good",
+        "details": [
+          "Volunteer-run haunted house, October 23–24 and 30–31, 2026,7–10 p.m.",
+          "Paid admission. Any lights-on matinee is unconfirmed; check the operator.",
+          "Location is approximate."
+        ]
+      }
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "shattered",
+      "canonicalIDproposal": "date-night-ks26-shattered",
+      "name": "Shattered Souls Haunted House",
+      "city": "Independence",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://frightfind.com/state-frights/kansas/",
+          "https://frightfind.com/shattered-souls-haunted-house/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "shattered",
+          "name": "Shattered Souls Haunted House",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "HOLD",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Directory carries 2017 dates; local haunt guide says CLOSED 2023; no reopened 2026 operator evidence.",
+          "finding": "Directory carries 2017 dates; local haunt guide says CLOSED 2023; no reopened 2026 operator evidence.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Directory carries 2017 dates; local haunt guide says CLOSED 2023; no reopened 2026 operator evidence.",
+      "aliases": [
+        "Shattered Souls Haunted House & Shatter Vision 3D"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "project",
+      "canonicalIDproposal": "date-night-ks26-project",
+      "name": "Project Fear",
+      "city": "Parsons",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://frightfind.com/state-frights/kansas/",
+          "https://frightfind.com/state-frights/kansas/page/2/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "project",
+          "name": "Project Fear",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "HOLD",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "No 2026 operator evidence; directory 2631 Stevens conflicts with other listing 400 Katy Ave and non-operational report.",
+          "finding": "No 2026 operator evidence; directory 2631 Stevens conflicts with other listing 400 Katy Ave and non-operational report.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "No 2026 operator evidence; directory 2631 Stevens conflicts with other listing 400 Katy Ave and non-operational report.",
+      "aliases": [
+        "Project Fear"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "reichenberger",
+      "canonicalIDproposal": "date-night-ks26-reichenberger",
+      "name": "Reichenberger Corn Maze & Pumpkin Patch",
+      "city": "Independence",
+      "category": "corn-maze",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://frightfind.com/state-frights/kansas/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "reichenberger",
+          "name": "Reichenberger Corn Maze & Pumpkin Patch",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "HOLD",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Only stale farm-directory material; 2009 maze and 2013 farm-tour references are not 2026 proof.",
+          "finding": "Only stale farm-directory material; 2009 maze and 2013 farm-tour references are not 2026 proof.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Only stale farm-directory material; 2009 maze and 2013 farm-tour references are not 2026 proof.",
+      "aliases": [
+        "Reichenberger Corn Maze & Pumpkin Patch"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "labyrinth",
+      "canonicalIDproposal": "date-night-ks26-labyrinth",
+      "name": "Labyrinth of Terror",
+      "city": "Winfield",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/kansas/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "labyrinth",
+          "name": "Labyrinth of Terror",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "HOLD",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Directory says closed for 2025; no 2026 reopening found.",
+          "finding": "Directory says closed for 2025; no 2026 reopening found.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Directory says closed for 2025; no 2026 reopening found.",
+      "aliases": [
+        "Labyrinth of Terror"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "cottage",
+      "canonicalIDproposal": "date-night-ks26-cottage",
+      "name": "Cottage Lane Pumpkin Patch",
+      "city": "Ellis",
+      "category": "pumpkin-patch",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/kansas/",
+          "https://www.visithays.com/Calendar.aspx?EID=21525&calType=0&day=9&month=11&year=2025"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "cottage",
+          "name": "Cottage Lane Pumpkin Patch",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "HOLD",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "DMO evidence explicitly 2025, no current 2026 season reopened.",
+          "finding": "DMO evidence explicitly 2025, no current 2026 season reopened.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "DMO evidence explicitly 2025, no current 2026 season reopened.",
+      "aliases": [
+        "Cottage Lane Pumpkin Patch"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "britt",
+      "canonicalIDproposal": "date-night-ks26-britt",
+      "name": "Britt’s Farm Scary Maze",
+      "city": "Manhattan",
+      "category": "haunted-house",
+      "status": "OWNER EVIDENCE NEEDED",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/kansas/",
+          "https://www.brittsfarm.com/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "britt",
+          "name": "Britt’s Farm Scary Maze",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "OWNER EVIDENCE NEEDED",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Operator fetch failed 502 and web fetch timed out; current dated schedule unavailable in bounded pass.",
+          "finding": "Operator fetch failed 502 and web fetch timed out; current dated schedule unavailable in bounded pass.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Operator fetch failed 502 and web fetch timed out; current dated schedule unavailable in bounded pass.",
+      "aliases": [
+        "Britt’s Garden Acres Scary Maze"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "opera",
+      "canonicalIDproposal": "date-night-ks26-opera",
+      "name": "Haunted Opera House",
+      "city": "Wamego",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/Kansas/",
+          "https://frightfind.com/state-frights/kansas/",
+          "https://www.thescarefactor.com/haunted-houses/kansas/haunted-opera-house/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "opera",
+          "name": "Haunted Opera House",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "HOLD",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Current directory says coming dates not loaded; readable local reporting is 2025, and directory address 901 conflicts with FrightFind 903.",
+          "finding": "Current directory says coming dates not loaded; readable local reporting is 2025, and directory address 901 conflicts with FrightFind 903.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Current directory says coming dates not loaded; readable local reporting is 2025, and directory address 901 conflicts with FrightFind 903.",
+      "aliases": [
+        "Haunted Opera House"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "neosho",
+      "canonicalIDproposal": "date-night-ks26-neosho",
+      "name": "Neosho Rapids Haunted House",
+      "city": "Neosho Rapids",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/Kansas/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "neosho",
+          "name": "Neosho Rapids Haunted House",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "HOLD",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Read sources support historical charity haunt; no explicit 2026 occurrence/date/visitor-address revalidation in bounded pass.",
+          "finding": "Read sources support historical charity haunt; no explicit 2026 occurrence/date/visitor-address revalidation in bounded pass.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Read sources support historical charity haunt; no explicit 2026 occurrence/date/visitor-address revalidation in bounded pass.",
+      "aliases": [
+        "Neosho Rapids Haunted House"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "blackcreek",
+      "canonicalIDproposal": "date-night-ks26-blackcreek",
+      "name": "The Haunting at Black Creek",
+      "city": "McPherson",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/Kansas/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "blackcreek",
+          "name": "The Haunting at Black Creek",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "HOLD",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Directory lead only; no reopened current operator occurrence evidence in bounded pass.",
+          "finding": "Directory lead only; no reopened current operator occurrence evidence in bounded pass.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Directory lead only; no reopened current operator occurrence evidence in bounded pass.",
+      "aliases": [
+        "The Haunting At Black Creek"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "nightmare",
+      "canonicalIDproposal": "date-night-ks26-nightmare",
+      "name": "Nightmare Festival",
+      "city": "Topeka",
+      "category": [
+        "haunted-house",
+        "other-halloween-fall"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "One Expocentre Drive, Topeka, KS 66612-1442, USA",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 39.034496091335,
+          "lon": -95.683529000007,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Expocentre+Dr%2C+Topeka%2C+KS+66612&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:21:30.378731+00:00",
+          "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "activeFrom": "2026-10-16",
+        "activeUntil": "2026-10-31",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-01T03:30:00Z",
+        "basis": "exact",
+        "timeZone": "America/Chicago",
+        "endsAt": "2026-11-01T03:30:00Z",
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "admission": "Free festival entry, paid haunt/activity tokens at door; advance group experiences exception",
+        "restrictions": [
+          "Clear bags only",
+          "October31 Blackout Night"
+        ]
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.stormontvaileventscenter.com/events/2026/nightmare26",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Expocentre+Dr%2C+Topeka%2C+KS+66612&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": "regional-wave1/kansas/R3/intended-v1-projections.json",
+        "projectionSha256": "7a56d7ca82351fb81389b79f78d65daa1030ce24fbe5f5d322fc40dfec501493"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "nightmare",
+          "name": "Nightmare Festival",
+          "state": "KS",
+          "verdict": "PASS",
+          "factual": "PASS",
+          "placement": "PASS_APPROXIMATE_ADDRESS_DERIVED",
+          "disposition": "READY FOR IMPLEMENTATION",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": null,
+          "finding": "Venue independently supports eight2026 dates,18:45 doors vs19:00–22:30 attractions,Oct31 Blackout, clear bags, free festival entry and paid at-door tokens. One Exhibition Hall venue; constituent haunts not separate identities. Census is general address point, not hall entrance.",
+          "sourceReviewScope": "Independent decisive operator/public source reopen and archived authored evidence",
+          "lifecycle": {
+            "status": "confirmed",
+            "activeFrom": "2026-10-16",
+            "activeUntil": "2026-10-31",
+            "activeDates": [
+              "2026-10-16",
+              "2026-10-17",
+              "2026-10-18",
+              "2026-10-23",
+              "2026-10-24",
+              "2026-10-25",
+              "2026-10-30",
+              "2026-10-31"
+            ],
+            "checkedAt": "2026-10-13",
+            "revalidateAfter": "2026-10-15",
+            "timeZone": "America/Chicago",
+            "openNowPolicy": "never",
+            "listingExpiresAt": "2026-11-01T03:30:00Z",
+            "seasonYear": 2026,
+            "sourceUrls": [
+              "https://www.stormontvaileventscenter.com/events/2026/nightmare26"
+            ],
+            "note": "Finite 2026 occurrences only. No machine opening intervals; no 2027 recurrence.",
+            "endsAt": "2026-11-01T03:30:00Z"
+          },
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [
+        "Nightmare Festival"
+      ],
+      "operator": null,
+      "operatorDomain": "stormontvaileventscenter.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ks26-nightmare",
+        "name": "Nightmare Festival",
+        "address": "One Expocentre Drive, Topeka, KS 66612-1442, USA",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://www.stormontvaileventscenter.com/events/2026/nightmare26",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house",
+          "other-halloween-fall"
+        ],
+        "moodLevel": 2,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-10-16",
+          "activeUntil": "2026-10-31",
+          "activeDates": [
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-18",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-25",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-01T03:30:00Z",
+          "seasonYear": 2026,
+          "sourceUrls": [
+            "https://www.stormontvaileventscenter.com/events/2026/nightmare26"
+          ],
+          "note": "Finite 2026 occurrences only. No machine opening intervals; no 2027 recurrence.",
+          "endsAt": "2026-11-01T03:30:00Z"
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "KS26-W1-NIGHTMARE",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "One Expocentre Drive, Topeka, KS 66612-1442, USA",
+          "placement": {
+            "lat": 39.034496091335,
+            "lon": -95.683529000007,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Expocentre+Dr%2C+Topeka%2C+KS+66612&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:21:30.378731+00:00",
+            "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "One Expocentre Drive, Topeka, KS 66612-1442, USA"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "October 16–18,23–25,30–31, 2026. Doors 6:45 p.m.; attractions 7–10:30 p.m. Last ticket/token sale unspecified. October 31 Blackout Night."
+          },
+          "listingExpiresAt": "2026-11-01T03:30:00Z",
+          "expiryBasis": "exact",
+          "sourceUrls": [
+            "https://www.stormontvaileventscenter.com/events/2026/nightmare26",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Expocentre+Dr%2C+Topeka%2C+KS+66612&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "KS-WAVE1-R3-PENDING-INDEPENDENT-REVIEW",
+          "visibility": "listing-lifecycle"
+        },
+        "seasonalVisitNotes": [
+          "Indoor haunted festival at Exhibition Hall, October 16–18,23–25 and 30–31, 2026. October 31 is Blackout Night.",
+          "Doors 6:45 p.m.; event 7–10:30 p.m.",
+          "Festival entry is free; haunted attractions and activities require paid tokens sold at the door. Advance sales only for group experiences. Clear bags only.",
+          "Location is approximate; use the venue’s visitor address."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ks26-nightmare",
+        "confidence": "good",
+        "details": [
+          "Indoor haunted festival at Exhibition Hall, October 16–18,23–25 and 30–31, 2026. October 31 is Blackout Night.",
+          "Doors 6:45 p.m.; event 7–10:30 p.m.",
+          "Festival entry is free; haunted attractions and activities require paid tokens sold at the door. Advance sales only for group experiences. Clear bags only.",
+          "Location is approximate; use the venue’s visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "udall",
+      "canonicalIDproposal": "date-night-ks26-udall",
+      "name": "Udall Forest of Fear",
+      "city": "Udall",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://frightfind.com/state-frights/kansas/",
+          "https://frightfind.com/state-frights/kansas/page/2/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "udall",
+          "name": "Udall Forest of Fear",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "HOLD",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Evergreen directory entry; no reopened operator 2026 occurrence evidence in bounded pass.",
+          "finding": "Evergreen directory entry; no reopened operator 2026 occurrence evidence in bounded pass.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Evergreen directory entry; no reopened operator 2026 occurrence evidence in bounded pass.",
+      "aliases": [
+        "Udall Forest of Fear"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "kccorn",
+      "canonicalIDproposal": "date-night-ks26-kccorn",
+      "name": "KC Corn Maze and Pumpkin Festival",
+      "city": "Gardner",
+      "category": "corn-maze",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://frightfind.com/state-frights/kansas/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "kccorn",
+          "name": "KC Corn Maze and Pumpkin Festival",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "HOLD",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Stale directory address contains 1919st typo; public operator identity and 2026 occurrence need revalidation.",
+          "finding": "Stale directory address contains 1919st typo; public operator identity and 2026 occurrence need revalidation.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [
+          "MO26-063 KC Pumpkin Patch possible relation, not resolved"
+        ],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Stale directory address contains 1919st typo; public operator identity and 2026 occurrence need revalidation.",
+      "aliases": [
+        "KC CORN MAZE and PUMPKIN FESTIVAL"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Kansas",
+      "researchRecordId": "expedition",
+      "canonicalIDproposal": "date-night-ks26-expedition",
+      "name": "Zombie Expedition",
+      "city": "Assaria",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/Kansas/"
+        ],
+        "authorArtifact": "regional-wave1/kansas/R3/selected-state-ledger.json",
+        "authorSha256": "91665829d1d9fad510cae44ccd106dc19eedc6f9526619fc75b473518b74c241",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-kansas/independent-ledger.json",
+        "exacthash": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+        "report": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+        "reportSha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+        "verdict": {
+          "key": "expedition",
+          "name": "Zombie Expedition",
+          "state": "KS",
+          "verdict": "HOLD",
+          "factual": "HOLD",
+          "placement": "NOT_REVIEWED",
+          "disposition": "HOLD",
+          "meaning": "Future research queue only; implementation/runtime/release not authorized or validated.",
+          "missingField": "Directory-only public zombie-paintball lead; no reopened 2026 occurrence evidence in bounded pass.",
+          "finding": "Directory-only public zombie-paintball lead; no reopened 2026 occurrence evidence in bounded pass.",
+          "sourceReviewScope": "Archived bounded discovery/source evidence reviewed; no new2026 operating/closed conclusion inferred",
+          "lifecycle": null,
+          "runtimeEligibleNow": false,
+          "releaseAuthorized": false
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Directory-only public zombie-paintball lead; no reopened 2026 occurrence evidence in bounded pass.",
+      "aliases": [
+        "Zombie Expedition"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    }
+  ],
+  "residentialPolicy": "All residential/unclassified entries excluded from implementation. Counts only; no private addresses or owner travel request."
+}

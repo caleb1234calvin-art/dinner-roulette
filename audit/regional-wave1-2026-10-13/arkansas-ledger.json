@@ -1,0 +1,3245 @@
+{
+  "scope": "FUTURE_RESEARCH_ONLY",
+  "counts": {
+    "selectedPublicCommercialLeads": 21,
+    "factualPass": 8,
+    "placementReady": 8,
+    "needsOneField": 0,
+    "selectedFactualHold": 13,
+    "queueStatuses": {
+      "HOLD": 9,
+      "READY FOR IMPLEMENTATION": 8,
+      "OWNER EVIDENCE NEEDED": 4
+    },
+    "retainedSelectedMembershipRows": 50,
+    "retainedRowsBySource": {
+      "Haunts.com": 13,
+      "The Scare Factor": 20,
+      "FrightMaps": 9,
+      "FrightFind": 8
+    },
+    "provisionalWholeSourceUnionIdentities": null,
+    "separateResidentialEntries": 15,
+    "residentialExcludedForImportScope": 14,
+    "residentialClassificationHold": 1,
+    "countCaveat": "50 is retained selected memberships, not whole raw state inventory and not comparable to KS124/OK137. Asylum FrightFind membership is a related-link on Carpenter detail. Bounded selected snapshot; no statewide completeness."
+  },
+  "records": [
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-001",
+      "canonicalIDproposal": "date-night-ar26-nightmares",
+      "name": "Nightmares Haunted House",
+      "city": "Bentonville",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/arkansas/nightmares-haunted-house-ar/",
+          "https://frightmaps.com/houses/arkansas/nightmares-haunted-house",
+          "https://frightfind.com/state-frights/arkansas/",
+          "https://nightmareshauntedhouse.net/contact-us/",
+          "https://www.visitbentonville.com/event/nightmares-haunted-house/10853/",
+          "https://www.strideevents.com/events/nightmares-haunted-house/2026/tickets"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-001",
+          "id": "date-night-ar26-nightmares",
+          "name": "Nightmares Haunted House",
+          "aliases": [
+            "Nightmares Haunted House AR"
+          ],
+          "state": "Arkansas",
+          "verdict": "HOLD",
+          "factual": "HOLD_COMPLETE_RECORD",
+          "placement": "HOLD_NO_REVIEWED_POINT",
+          "implementationQueue": "EXCLUDED_HOLD",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Operator contact gives 3705 NW Frontage Road; DMO gives 3706 #2; old FrightFind gives 13080 Highway 71. DMO includes October 29 but official ticket text says Friday/Saturday only. Do not silently choose an arrival point or union inconsistent dates."
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Operator contact gives 3705 NW Frontage Road; DMO gives 3706 #2; old FrightFind gives 13080 Highway 71. DMO includes October 29 but official ticket text says Friday/Saturday only. Do not silently choose an arrival point or union inconsistent dates.",
+      "aliases": [
+        "Nightmares Haunted House AR"
+      ],
+      "operator": null,
+      "operatorDomain": "nightmareshauntedhouse.net",
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-002",
+      "canonicalIDproposal": "date-night-ar26-asylum",
+      "name": "The Asylum Haunted House",
+      "city": "Cave Springs",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "210 N Main St, Cave Springs, AR 72718",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 36.265148995252,
+          "lon": -94.231741991627,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=210+N+Main+St%2C+Cave+Springs%2C+AR+72718&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+          "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-29",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "activeFrom": "2026-10-16",
+        "activeUntil": "2026-10-31",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-01T00:00:00-05:00",
+        "basis": "date-only",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "No strict age minimum; not recommended for young children",
+          "Zero-contact; no touching actors",
+          "No refunds; operator says no chicken run",
+          "Follow onsite parking attendants"
+        ],
+        "consumerDetails": [
+          "Remaining 2026 ticket dates: October 16–17, 23–24 and 29–31. Ticket window opens 7 PM; haunt start and closing time are unconfirmed.",
+          "Intense, zero-contact haunted house. Not recommended for young children; no strict age limit.",
+          "No refunds, including if you cannot finish. Follow onsite parking attendants and signs.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/arkansas/asylum-haunted-house/",
+          "https://frightmaps.com/houses/arkansas/the-asylum-haunted-house",
+          "https://frightfind.com/state-frights/arkansas/",
+          "https://www.stubwire.com/events/asylumhauntedhouse/",
+          "https://www.theasylumhauntedhouse.net/",
+          "https://www.theasylumhauntedhouse.net/faq/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=210+N+Main+St%2C+Cave+Springs%2C+AR+72718&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": "regional-wave1/arkansas/R3/future-queue-projections-r3.json",
+        "projectionSha256": "3f68c93b405aeffd2a1373bcab0f2d9f8af731d32a665663ccc416d61afdfae1"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-002",
+          "id": "date-night-ar26-asylum",
+          "name": "The Asylum Haunted House",
+          "aliases": [],
+          "state": "Arkansas",
+          "verdict": "PASS",
+          "factual": "PASS_WITH_DOCUMENTED_UNKNOWNS",
+          "placement": "PASS_APPROXIMATE_ONLY",
+          "implementationQueue": "READY_FOR_IMPLEMENTATION_FUTURE_ONLY",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Independent first-party/year/address/category/access/lifecycle and approximate-placement clearance; exact immutable V1 and presentation reviewed.",
+          "visitorAddress": "210 N Main St, Cave Springs, AR 72718",
+          "expiryBasis": "date-only",
+          "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+          "scheduleStatus": "confirmed",
+          "confidence": "good"
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": "theasylumhauntedhouse.net",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ar26-asylum",
+        "name": "The Asylum Haunted House",
+        "address": "210 N Main St, Cave Springs, AR 72718",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://www.theasylumhauntedhouse.net/",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 3,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-10-16",
+          "activeUntil": "2026-10-31",
+          "activeDates": [
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-29",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "seasonYear": 2026,
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+          "sourceUrls": [
+            "https://www.stubwire.com/events/asylumhauntedhouse/",
+            "https://www.theasylumhauntedhouse.net/",
+            "https://www.theasylumhauntedhouse.net/faq/"
+          ],
+          "note": "Finite 2026 date list; no machine opening intervals or automatic recurrence. Remaining ticket dates only; not a claim about the full past season."
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "AR26-W1-002",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "210 N Main St, Cave Springs, AR 72718",
+          "placement": {
+            "lat": 36.265148995252,
+            "lon": -94.231741991627,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=210+N+Main+St%2C+Cave+Springs%2C+AR+72718&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+            "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "210 N Main St, Cave Springs, AR 72718"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "Remaining dated tickets: October 16–17, 23–24 and 29–31, 2026. Ticket window opens 7 PM; attraction start, last admission and closing time are unconfirmed."
+          },
+          "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+          "expiryBasis": "date-only",
+          "sourceUrls": [
+            "https://www.stubwire.com/events/asylumhauntedhouse/",
+            "https://www.theasylumhauntedhouse.net/",
+            "https://www.theasylumhauntedhouse.net/faq/",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=210+N+Main+St%2C+Cave+Springs%2C+AR+72718&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "AR2026-WAVE1-R3-PROPOSED-NOT-APPROVED",
+          "visibility": "halloween-layer"
+        },
+        "seasonalVisitNotes": [
+          "Remaining 2026 ticket dates: October 16–17, 23–24 and 29–31. Ticket window opens 7 PM; haunt start and closing time are unconfirmed.",
+          "Intense, zero-contact haunted house. Not recommended for young children; no strict age limit.",
+          "No refunds, including if you cannot finish. Follow onsite parking attendants and signs.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ar26-asylum",
+        "confidence": "good",
+        "details": [
+          "Remaining 2026 ticket dates: October 16–17, 23–24 and 29–31. Ticket window opens 7 PM; haunt start and closing time are unconfirmed.",
+          "Intense, zero-contact haunted house. Not recommended for young children; no strict age limit.",
+          "No refunds, including if you cannot finish. Follow onsite parking attendants and signs.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-003",
+      "canonicalIDproposal": "date-night-ar26-warehouse",
+      "name": "Warehouse of Fear at Riverside Entertainment",
+      "city": "Siloam Springs",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "17023 Chamber Springs Rd, Siloam Springs, AR 72761",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 36.170073979298,
+          "lon": -94.433748347312,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=17023+Chamber+Springs+Rd%2C+Siloam+Springs%2C+AR+72761&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+          "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "activeFrom": "2026-10-02",
+        "activeUntil": "2026-10-31",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-01T00:00:00-05:00",
+        "basis": "date-only",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "No age minimum; not recommended for children",
+          "Not wheelchair accessible",
+          "No touching actors; no inside filming/photography",
+          "Rain or shine"
+        ],
+        "consumerDetails": [
+          "Haunted house on Fridays and Saturdays in October 2026; doors open 7 PM. Closing time is unconfirmed.",
+          "Intense no-contact attraction, not recommended for children. The operator says it is not wheelchair accessible.",
+          "A separate no-scare visit runs October 22, 6–9 PM. No filming or photography inside the haunt.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/nwariversideentertainment215",
+          "https://www.haunts.com/nwariversideentertainment",
+          "https://www.thescarefactor.com/haunted-houses/arkansas/",
+          "https://www.riverside-entertainment.com/warehouse-of-fear-2/",
+          "https://app.hauntpay.com/events/warehouse-of-fear-haunted-house",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=17023+Chamber+Springs+Rd%2C+Siloam+Springs%2C+AR+72761&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": "regional-wave1/arkansas/R3/future-queue-projections-r3.json",
+        "projectionSha256": "3f68c93b405aeffd2a1373bcab0f2d9f8af731d32a665663ccc416d61afdfae1"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-003",
+          "id": "date-night-ar26-warehouse",
+          "name": "Warehouse of Fear at Riverside Entertainment",
+          "aliases": [
+            "Haunted Attractions at Riverside Entertainment",
+            "Warehouse of Fear"
+          ],
+          "state": "Arkansas",
+          "verdict": "PASS",
+          "factual": "PASS_WITH_DOCUMENTED_UNKNOWNS",
+          "placement": "PASS_APPROXIMATE_ONLY",
+          "implementationQueue": "READY_FOR_IMPLEMENTATION_FUTURE_ONLY",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Independent first-party/year/address/category/access/lifecycle and approximate-placement clearance; exact immutable V1 and presentation reviewed.",
+          "visitorAddress": "17023 Chamber Springs Rd, Siloam Springs, AR 72761",
+          "expiryBasis": "date-only",
+          "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+          "scheduleStatus": "confirmed",
+          "confidence": "good"
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [
+        "Haunted Attractions at Riverside Entertainment",
+        "Warehouse of Fear"
+      ],
+      "operator": null,
+      "operatorDomain": "riverside-entertainment.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ar26-warehouse",
+        "name": "Warehouse of Fear at Riverside Entertainment",
+        "address": "17023 Chamber Springs Rd, Siloam Springs, AR 72761",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://www.riverside-entertainment.com/warehouse-of-fear-2/",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 3,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-10-02",
+          "activeUntil": "2026-10-31",
+          "activeDates": [
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "seasonYear": 2026,
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+          "sourceUrls": [
+            "https://www.riverside-entertainment.com/warehouse-of-fear-2/",
+            "https://app.hauntpay.com/events/warehouse-of-fear-haunted-house"
+          ],
+          "note": "Finite 2026 date list; no machine opening intervals or automatic recurrence. "
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "AR26-W1-003",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "17023 Chamber Springs Rd, Siloam Springs, AR 72761",
+          "placement": {
+            "lat": 36.170073979298,
+            "lon": -94.433748347312,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=17023+Chamber+Springs+Rd%2C+Siloam+Springs%2C+AR+72761&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+            "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "17023 Chamber Springs Rd, Siloam Springs, AR 72761"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "Fridays and Saturdays in October; doors open 7 PM. Closing time and last admission are unconfirmed."
+          },
+          "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+          "expiryBasis": "date-only",
+          "sourceUrls": [
+            "https://www.riverside-entertainment.com/warehouse-of-fear-2/",
+            "https://app.hauntpay.com/events/warehouse-of-fear-haunted-house",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=17023+Chamber+Springs+Rd%2C+Siloam+Springs%2C+AR+72761&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "AR2026-WAVE1-R3-PROPOSED-NOT-APPROVED",
+          "visibility": "halloween-layer"
+        },
+        "seasonalVisitNotes": [
+          "Haunted house on Fridays and Saturdays in October 2026; doors open 7 PM. Closing time is unconfirmed.",
+          "Intense no-contact attraction, not recommended for children. The operator says it is not wheelchair accessible.",
+          "A separate no-scare visit runs October 22, 6–9 PM. No filming or photography inside the haunt.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ar26-warehouse",
+        "confidence": "good",
+        "details": [
+          "Haunted house on Fridays and Saturdays in October 2026; doors open 7 PM. Closing time is unconfirmed.",
+          "Intense no-contact attraction, not recommended for children. The operator says it is not wheelchair accessible.",
+          "A separate no-scare visit runs October 22, 6–9 PM. No filming or photography inside the haunt.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-004",
+      "canonicalIDproposal": "date-night-ar26-midnight",
+      "name": "Midnight Movies",
+      "city": "Gravette",
+      "category": "haunted-house",
+      "status": "OWNER EVIDENCE NEEDED",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/themidnightmovies",
+          "https://www.thescarefactor.com/haunted-houses/arkansas/",
+          "https://frightfind.com/state-frights/arkansas/",
+          "https://midnightmovies.hytix.com/"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-004",
+          "id": "date-night-ar26-midnight",
+          "name": "Midnight Movies",
+          "aliases": [
+            "Midnight Movies (Haunted Attraction)"
+          ],
+          "state": "Arkansas",
+          "verdict": "HOLD",
+          "factual": "HOLD_COMPLETE_RECORD",
+          "placement": "HOLD_NO_REVIEWED_POINT",
+          "implementationQueue": "EXCLUDED_HOLD",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "HOLD because decisive current-year ticket evidence remains indexed/extraction-only without usable opened source, not because every individual session is mandatory. A supported range plus honest unknown dates would be acceptable once source proof is inspectable."
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Hytix indexed text shows Oct 3–Nov 1, 2026 and public address; opened page only one line. Do not treat indexed range as continuous nightly operation. Actual remaining ticket dates/final lifecycle need rendered public capture.",
+      "aliases": [
+        "Midnight Movies (Haunted Attraction)"
+      ],
+      "operator": null,
+      "operatorDomain": "midnightmovies.hytix.com",
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-005",
+      "canonicalIDproposal": "date-night-ar26-banshee",
+      "name": "Banshee Manor Haunted House",
+      "city": "Decatur",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/arkansas/banshee-manor-haunted-house/",
+          "https://texashaunts.net/",
+          "https://www.axios.com/local/nw-arkansas/2021/10/13/5-haunted-houses-to-check-out-in-nw-arkansas"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-005",
+          "id": "date-night-ar26-banshee",
+          "name": "Banshee Manor Haunted House",
+          "aliases": [],
+          "state": "Arkansas",
+          "verdict": "HOLD",
+          "factual": "HOLD_COMPLETE_RECORD",
+          "placement": "HOLD_NO_REVIEWED_POINT",
+          "implementationQueue": "EXCLUDED_HOLD",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Directory has 250 S Main Street Decatur; older 2021 report placed Banshee at Lokomotion in Fayetteville. TexasHaunts secondary reports permanently closed. No current operator closure proof; classify reported-closed, never claim confirmed closure or import old Fayetteville point."
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Directory has 250 S Main Street Decatur; older 2021 report placed Banshee at Lokomotion in Fayetteville. TexasHaunts secondary reports permanently closed. No current operator closure proof; classify reported-closed, never claim confirmed closure or import old Fayetteville point.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-006",
+      "canonicalIDproposal": "date-night-ar26-carpenter",
+      "name": "Carpenter’s Mortuary Spook House",
+      "city": "Gentry",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://frightfind.com/carpenters-mortuary/",
+          "https://www.mortuarystudios.com/"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-006",
+          "id": "date-night-ar26-carpenter",
+          "name": "Carpenter’s Mortuary Spook House",
+          "aliases": [
+            "Carpenter’s Mortuary"
+          ],
+          "state": "Arkansas",
+          "verdict": "HOLD",
+          "factual": "HOLD_COMPLETE_RECORD",
+          "placement": "HOLD_NO_REVIEWED_POINT",
+          "implementationQueue": "EXCLUDED_HOLD",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "FrightFind detail is undated evergreen with 2015 video and 2017 reviews. Linked operator fetch failed. No 2026 invitation/calendar captured; not a confirmed closure."
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "FrightFind detail is undated evergreen with 2015 video and 2017 reviews. Linked operator fetch failed. No 2026 invitation/calendar captured; not a confirmed closure.",
+      "aliases": [
+        "Carpenter’s Mortuary"
+      ],
+      "operator": null,
+      "operatorDomain": "mortuarystudios.com",
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-007",
+      "canonicalIDproposal": "date-night-ar26-river",
+      "name": "River Valley Nightmare",
+      "city": "Fort Smith",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "10203 Columbus Acres Rd, Fort Smith, AR 72916",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 35.289291260452,
+          "lon": -94.387901368211,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10203+Columbus+Acres+Rd%2C+Fort+Smith%2C+AR+72916&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+          "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "activeFrom": "2026-10-03",
+        "activeUntil": "2026-10-31",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-01T00:00:00-05:00",
+        "basis": "date-only",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "Public ticketed outdoor trail; free concessions/live-entertainment area",
+          "Closed-toe shoes requested; sandals/flip-flops unsuitable",
+          "No age minimum; not recommended for very young children",
+          "No intentional contact; incidental contact possible",
+          "No refunds; weather-closure tickets usable another operating night"
+        ],
+        "consumerDetails": [
+          "October 3, 9–10, 16–17, 23–24 and 30–31, 2026. Gates open 7 PM; trail opens 8 PM.",
+          "Ticket sales end 10 PM; nominal close is 11 PM. Guests already in line can finish, so final exit time is unconfirmed.",
+          "Outdoor trail; wear closed-toe shoes. Severe weather may close the event. Not recommended for very young children.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/rivervalleynightmare",
+          "https://www.thescarefactor.com/haunted-houses/arkansas/",
+          "https://frightfind.com/state-frights/arkansas/",
+          "https://rivervalleynightmare.com/",
+          "https://rivervalleynightmare.com/frequently-asked-questions/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10203+Columbus+Acres+Rd%2C+Fort+Smith%2C+AR+72916&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": "regional-wave1/arkansas/R3/future-queue-projections-r3.json",
+        "projectionSha256": "3f68c93b405aeffd2a1373bcab0f2d9f8af731d32a665663ccc416d61afdfae1"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-007",
+          "id": "date-night-ar26-river",
+          "name": "River Valley Nightmare",
+          "aliases": [],
+          "state": "Arkansas",
+          "verdict": "PASS",
+          "factual": "PASS_WITH_DOCUMENTED_UNKNOWNS",
+          "placement": "PASS_APPROXIMATE_ONLY",
+          "implementationQueue": "READY_FOR_IMPLEMENTATION_FUTURE_ONLY",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Independent first-party/year/address/category/access/lifecycle and approximate-placement clearance; exact immutable V1 and presentation reviewed.",
+          "visitorAddress": "10203 Columbus Acres Rd, Fort Smith, AR 72916",
+          "expiryBasis": "date-only",
+          "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+          "scheduleStatus": "confirmed",
+          "confidence": "good"
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": "rivervalleynightmare.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ar26-river",
+        "name": "River Valley Nightmare",
+        "address": "10203 Columbus Acres Rd, Fort Smith, AR 72916",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://rivervalleynightmare.com/",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 3,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-10-03",
+          "activeUntil": "2026-10-31",
+          "activeDates": [
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "seasonYear": 2026,
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+          "sourceUrls": [
+            "https://rivervalleynightmare.com/",
+            "https://rivervalleynightmare.com/frequently-asked-questions/"
+          ],
+          "note": "Finite 2026 date list; no machine opening intervals or automatic recurrence. "
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "AR26-W1-007",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "10203 Columbus Acres Rd, Fort Smith, AR 72916",
+          "placement": {
+            "lat": 35.289291260452,
+            "lon": -94.387901368211,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10203+Columbus+Acres+Rd%2C+Fort+Smith%2C+AR+72916&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+            "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "10203 Columbus Acres Rd, Fort Smith, AR 72916"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "Gates/ticket booth 7 PM; trail 8 PM; last ticket sales 10 PM; nominal close 11 PM. Guests in line before closing are admitted; final exit unconfirmed."
+          },
+          "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+          "expiryBasis": "date-only",
+          "sourceUrls": [
+            "https://rivervalleynightmare.com/",
+            "https://rivervalleynightmare.com/frequently-asked-questions/",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10203+Columbus+Acres+Rd%2C+Fort+Smith%2C+AR+72916&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "AR2026-WAVE1-R3-PROPOSED-NOT-APPROVED",
+          "visibility": "halloween-layer"
+        },
+        "seasonalVisitNotes": [
+          "October 3, 9–10, 16–17, 23–24 and 30–31, 2026. Gates open 7 PM; trail opens 8 PM.",
+          "Ticket sales end 10 PM; nominal close is 11 PM. Guests already in line can finish, so final exit time is unconfirmed.",
+          "Outdoor trail; wear closed-toe shoes. Severe weather may close the event. Not recommended for very young children.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ar26-river",
+        "confidence": "good",
+        "details": [
+          "October 3, 9–10, 16–17, 23–24 and 30–31, 2026. Gates open 7 PM; trail opens 8 PM.",
+          "Ticket sales end 10 PM; nominal close is 11 PM. Guests already in line can finish, so final exit time is unconfirmed.",
+          "Outdoor trail; wear closed-toe shoes. Severe weather may close the event. Not recommended for very young children.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-008",
+      "canonicalIDproposal": "date-night-ar26-asylum-x",
+      "name": "Asylum X Haunted House",
+      "city": "Fort Smith",
+      "category": "haunted-house",
+      "status": "OWNER EVIDENCE NEEDED",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/arkansas/asylum-x-haunted-house/",
+          "https://frightmaps.com/houses/arkansas/asylum-x-haunted-house",
+          "https://shadyslaughters.com/",
+          "https://shadyslaughters.com/tickets",
+          "https://app.hauntpay.com/events/asylum-x-haunted-house-1",
+          "https://halloweenchristmasmaps.com/asylum-x-haunted-house"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-008",
+          "id": "date-night-ar26-asylum-x",
+          "name": "Asylum X Haunted House",
+          "aliases": [],
+          "state": "Arkansas",
+          "verdict": "HOLD",
+          "factual": "HOLD_COMPLETE_RECORD",
+          "placement": "HOLD_NO_REVIEWED_POINT",
+          "implementationQueue": "EXCLUDED_HOLD",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Current2026 ticket evidence exists; not a missing-year HOLD. Complete destination/ZIP/source-identity conflict remains, with operator content uninspectable and wrong River Valley address in secondary evidence. No broad seasonal schedule or normalized arrival destination is cleared."
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Official indexed header advertises September 25–November 7 Fridays/Saturdays but direct web page has no extract. HauntPay proves October 16 ticket and 223 N 10th Street but zip conflicts 72956 vs directory 72901. FrightMaps home-haunt tag conflicts with public ticketing and is not accepted. Incorrect secondary 10203 Columbus Acres address belongs to River Valley; never transfer.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": "shadyslaughters.com",
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-009",
+      "canonicalIDproposal": "date-night-ar26-fear-factory",
+      "name": "Fear Factory 501",
+      "city": "Jacksonville",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "25120 AR-107, Jacksonville, AR 72076",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 34.941053703969,
+          "lon": -92.164002769092,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=25120+AR-107%2C+Jacksonville%2C+AR+72076&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:31:04.912794+00:00",
+          "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "unconfirmed",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-02T00:00:00-06:00",
+        "basis": "editorial",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "Ages12+ recommended, no strict minimum",
+          "No touch by default; no actor/prop/wall contact",
+          "All sales final",
+          "Rain or shine except severe-weather disruptions"
+        ],
+        "consumerDetails": [
+          "2026 haunted-house tickets are listed; confirm your operating night and entry time with the official ticket calendar.",
+          "Recommended for ages 12+; no strict minimum age. No-touch by default; do not touch actors, props or walls.",
+          "No refunds. Check for severe-weather updates before travel.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/fearfactory501",
+          "https://www.thescarefactor.com/haunted-houses/arkansas/",
+          "https://frightmaps.com/houses/arkansas/fear-factory-501",
+          "https://frightfind.com/state-frights/arkansas/",
+          "https://fearfactory501.com/",
+          "https://www.strideevents.com/events/fear-factory-501/2026/tickets",
+          "https://www.strideevents.com/fear-factory-501/event-information",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=25120+AR-107%2C+Jacksonville%2C+AR+72076&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": "regional-wave1/arkansas/R3/future-queue-projections-r3.json",
+        "projectionSha256": "3f68c93b405aeffd2a1373bcab0f2d9f8af731d32a665663ccc416d61afdfae1"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-009",
+          "id": "date-night-ar26-fear-factory",
+          "name": "Fear Factory 501",
+          "aliases": [],
+          "state": "Arkansas",
+          "verdict": "PASS",
+          "factual": "PASS_WITH_DOCUMENTED_UNKNOWNS",
+          "placement": "PASS_APPROXIMATE_ONLY",
+          "implementationQueue": "READY_FOR_IMPLEMENTATION_FUTURE_ONLY",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Independent first-party/year/address/category/access/lifecycle and approximate-placement clearance; exact immutable V1 and presentation reviewed.",
+          "visitorAddress": "25120 AR-107, Jacksonville, AR 72076",
+          "expiryBasis": "editorial",
+          "listingExpiresAt": "2026-11-02T00:00:00-06:00",
+          "scheduleStatus": "unconfirmed",
+          "confidence": "limited"
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": "fearfactory501.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ar26-fear-factory",
+        "name": "Fear Factory 501",
+        "address": "25120 AR-107, Jacksonville, AR 72076",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://fearfactory501.com/",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 3,
+        "seasonalAvailability": {
+          "status": "unconfirmed",
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "seasonYear": 2026,
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-02T00:00:00-06:00",
+          "sourceUrls": [
+            "https://fearfactory501.com/",
+            "https://www.strideevents.com/events/fear-factory-501/2026/tickets",
+            "https://www.strideevents.com/fear-factory-501/event-information"
+          ],
+          "note": "Credible 2026 operation; no occurrence dates or operational end inferred. Editorial listing retention is not operating evidence."
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "AR26-W1-009",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "25120 AR-107, Jacksonville, AR 72076",
+          "placement": {
+            "lat": 34.941053703969,
+            "lon": -92.164002769092,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=25120+AR-107%2C+Jacksonville%2C+AR+72076&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:31:04.912794+00:00",
+            "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "25120 AR-107, Jacksonville, AR 72076"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "Current 2026 tickets are listed. Operating nights, last admission and final closing time are unconfirmed; check the official ticket calendar."
+          },
+          "listingExpiresAt": "2026-11-02T00:00:00-06:00",
+          "expiryBasis": "editorial",
+          "sourceUrls": [
+            "https://fearfactory501.com/",
+            "https://www.strideevents.com/events/fear-factory-501/2026/tickets",
+            "https://www.strideevents.com/fear-factory-501/event-information",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=25120+AR-107%2C+Jacksonville%2C+AR+72076&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "AR2026-WAVE1-R3-PROPOSED-NOT-APPROVED",
+          "visibility": "halloween-layer"
+        },
+        "seasonalVisitNotes": [
+          "2026 haunted-house tickets are listed; confirm your operating night and entry time with the official ticket calendar.",
+          "Recommended for ages 12+; no strict minimum age. No-touch by default; do not touch actors, props or walls.",
+          "No refunds. Check for severe-weather updates before travel.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ar26-fear-factory",
+        "confidence": "limited",
+        "details": [
+          "2026 haunted-house tickets are listed; confirm your operating night and entry time with the official ticket calendar.",
+          "Recommended for ages 12+; no strict minimum age. No-touch by default; do not touch actors, props or walls.",
+          "No refunds. Check for severe-weather updates before travel.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-010",
+      "canonicalIDproposal": "date-night-ar26-haunted-hotel",
+      "name": "Haunted Hotel of Arkansas",
+      "city": "Little Rock",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/hauntedhotelar",
+          "https://www.thescarefactor.com/haunted-houses/arkansas/",
+          "https://frightmaps.com/best-haunted-houses-arkansas-2026",
+          "https://www.arkansashauntedhouses.com/halloween/haunted-hotel-ar.html",
+          "https://mrfear.com/haunts/little-rock/"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-010",
+          "id": "date-night-ar26-haunted-hotel",
+          "name": "Haunted Hotel of Arkansas",
+          "aliases": [
+            "Haunted Hotel of Arkansas, Inc",
+            "The Haunted Hotel of Arkansas"
+          ],
+          "state": "Arkansas",
+          "verdict": "HOLD",
+          "factual": "HOLD_COMPLETE_RECORD",
+          "placement": "HOLD_NO_REVIEWED_POINT",
+          "implementationQueue": "EXCLUDED_HOLD",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "10800 Arch Street is directory destination. Current secondary describes Friday/Saturday season, but directory says last updated 386 days ago despite 2026 wrapper. Need current operator/ticket schedule; not Capital Hotel or other year-round hotel."
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "10800 Arch Street is directory destination. Current secondary describes Friday/Saturday season, but directory says last updated 386 days ago despite 2026 wrapper. Need current operator/ticket schedule; not Capital Hotel or other year-round hotel.",
+      "aliases": [
+        "Haunted Hotel of Arkansas, Inc",
+        "The Haunted Hotel of Arkansas"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-011",
+      "canonicalIDproposal": "date-night-ar26-reaper",
+      "name": "The Reaper Haunted House",
+      "city": "North Little Rock",
+      "category": "haunted-house",
+      "status": "OWNER EVIDENCE NEEDED",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/arreaper",
+          "https://www.thescarefactor.com/haunted-houses/arkansas/",
+          "https://frightmaps.com/best-haunted-houses-arkansas-2026",
+          "https://arreaper.com/",
+          "https://www.arreaper.com/",
+          "https://www.arkansashauntedhouses.com/halloween/arkansass-reaper-haunted-house-ar.html"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-011",
+          "id": "date-night-ar26-reaper",
+          "name": "The Reaper Haunted House",
+          "aliases": [],
+          "state": "Arkansas",
+          "verdict": "HOLD",
+          "factual": "HOLD_COMPLETE_RECORD",
+          "placement": "HOLD_NO_REVIEWED_POINT",
+          "implementationQueue": "EXCLUDED_HOLD",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Directory calendar matrix loses highlighted dates in text. Operator non-www and www fetch failed. Primary 2026 dates and lifecycle unverified; no transfer from MO Reaper attractions."
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Directory calendar matrix loses highlighted dates in text. Operator non-www and www fetch failed. Primary 2026 dates and lifecycle unverified; no transfer from MO Reaper attractions.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": "arreaper.com",
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-012",
+      "canonicalIDproposal": "date-night-ar26-royal",
+      "name": "Royal Haunted House",
+      "city": "Benton",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "111 South Market Street, Benton, AR 72015",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 34.563224662909,
+          "lon": -92.588223916041,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=111+S+Market+St%2C+Benton%2C+AR+72015&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:31:04.913570+00:00",
+          "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-10-15",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-22",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-29",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "activeFrom": "2026-10-15",
+        "activeUntil": "2026-10-31",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-10-31T22:00:00-05:00",
+        "basis": "exact",
+        "timeZone": "America/Chicago",
+        "endsAt": "2026-10-31T22:00:00-05:00",
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "Public ticketed theatre haunt",
+          "Walking and stairs required; no wheelchair route",
+          "No intoxication, casts, braces or crutches",
+          "Strobe/fog/low-visibility/narrow-area hazards; operator health/pregnancy/claustrophobia warnings",
+          "No contact with actors/props",
+          "No refunds; special skip-the-line tickets not exchangeable",
+          "Private sensory-friendly tours require separate arrangement and are not public scheduled occurrences"
+        ],
+        "consumerDetails": [
+          "October 15–17, 22–24 and 29–31, 2026. Thursdays 7–9 PM; Fridays and Saturdays 7–10 PM.",
+          "Requires walking and stairs; no wheelchair-accessible route. No admission with casts, braces or crutches, or while intoxicated.",
+          "Strobes, fog and narrow areas; operator warns against admission during pregnancy or with heart, breathing, seizure or other medical conditions.",
+          "Entry is first-come, first-served, except skip-the-line tickets. Tickets may sell out; no refunds or touching actors/props.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/theroyaltheatre",
+          "https://www.thescarefactor.com/haunted-houses/arkansas/",
+          "https://frightmaps.com/best-haunted-houses-arkansas-2026",
+          "https://www.theroyaltheatre.org/",
+          "https://onthestage.tickets/the-royal-theatre/season",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=111+S+Market+St%2C+Benton%2C+AR+72015&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": "regional-wave1/arkansas/R3/future-queue-projections-r3.json",
+        "projectionSha256": "3f68c93b405aeffd2a1373bcab0f2d9f8af731d32a665663ccc416d61afdfae1"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-012",
+          "id": "date-night-ar26-royal",
+          "name": "Royal Haunted House",
+          "aliases": [],
+          "state": "Arkansas",
+          "verdict": "PASS",
+          "factual": "PASS_WITH_DOCUMENTED_UNKNOWNS",
+          "placement": "PASS_APPROXIMATE_ONLY",
+          "implementationQueue": "READY_FOR_IMPLEMENTATION_FUTURE_ONLY",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Independent first-party/year/address/category/access/lifecycle and approximate-placement clearance; exact immutable V1 and presentation reviewed.",
+          "visitorAddress": "111 South Market Street, Benton, AR 72015",
+          "expiryBasis": "exact",
+          "listingExpiresAt": "2026-10-31T22:00:00-05:00",
+          "scheduleStatus": "confirmed",
+          "confidence": "good"
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": "theroyaltheatre.org",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ar26-royal",
+        "name": "Royal Haunted House",
+        "address": "111 South Market Street, Benton, AR 72015",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://www.theroyaltheatre.org/",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 3,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "seasonYear": 2026,
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-10-31T22:00:00-05:00",
+          "sourceUrls": [
+            "https://www.theroyaltheatre.org/",
+            "https://onthestage.tickets/the-royal-theatre/season"
+          ],
+          "note": "Explicit 2026 finite dates",
+          "activeDates": [
+            "2026-10-15",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-22",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-29",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "activeFrom": "2026-10-15",
+          "activeUntil": "2026-10-31",
+          "endsAt": "2026-10-31T22:00:00-05:00"
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "AR26-W1-012",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "111 South Market Street, Benton, AR 72015",
+          "placement": {
+            "lat": 34.563224662909,
+            "lon": -92.588223916041,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=111+S+Market+St%2C+Benton%2C+AR+72015&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:31:04.913570+00:00",
+            "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "111 South Market Street, Benton, AR 72015"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "verified",
+            "displayText": "October 15–17, 22–24 and 29–31, 2026. Thursdays 7–9 PM; Fridays and Saturdays 7–10 PM. Tickets are sold until sold out; online sales may end earlier than box-office sales."
+          },
+          "listingExpiresAt": "2026-10-31T22:00:00-05:00",
+          "expiryBasis": "exact",
+          "sourceUrls": [
+            "https://www.theroyaltheatre.org/",
+            "https://onthestage.tickets/the-royal-theatre/season",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=111+S+Market+St%2C+Benton%2C+AR+72015&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "AR2026-WAVE1-R3-PROPOSED-NOT-APPROVED",
+          "visibility": "halloween-layer"
+        },
+        "seasonalVisitNotes": [
+          "October 15–17, 22–24 and 29–31, 2026. Thursdays 7–9 PM; Fridays and Saturdays 7–10 PM.",
+          "Requires walking and stairs; no wheelchair-accessible route. No admission with casts, braces or crutches, or while intoxicated.",
+          "Strobes, fog and narrow areas; operator warns against admission during pregnancy or with heart, breathing, seizure or other medical conditions.",
+          "Entry is first-come, first-served, except skip-the-line tickets. Tickets may sell out; no refunds or touching actors/props.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ar26-royal",
+        "confidence": "good",
+        "details": [
+          "October 15–17, 22–24 and 29–31, 2026. Thursdays 7–9 PM; Fridays and Saturdays 7–10 PM.",
+          "Requires walking and stairs; no wheelchair-accessible route. No admission with casts, braces or crutches, or while intoxicated.",
+          "Strobes, fog and narrow areas; operator warns against admission during pregnancy or with heart, breathing, seizure or other medical conditions.",
+          "Entry is first-come, first-served, except skip-the-line tickets. Tickets may sell out; no refunds or touching actors/props.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-013",
+      "canonicalIDproposal": "date-night-ar26-creepy-works",
+      "name": "Creepy Works Haunted House",
+      "city": "Conway",
+      "category": "haunted-house",
+      "status": "OWNER EVIDENCE NEEDED",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/creepyworks",
+          "https://www.thescarefactor.com/haunted-houses/arkansas/creepy-works-haunted-house/",
+          "https://creepyworks.com/",
+          "https://creepyworks.com/calendar.html",
+          "https://creepyworks.com/images/CW26calendar.jpg"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-013",
+          "id": "date-night-ar26-creepy-works",
+          "name": "Creepy Works Haunted House",
+          "aliases": [
+            "Creepy Works"
+          ],
+          "state": "Arkansas",
+          "verdict": "HOLD",
+          "factual": "HOLD_COMPLETE_RECORD",
+          "placement": "HOLD_NO_REVIEWED_POINT",
+          "implementationQueue": "EXCLUDED_HOLD",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Operator calendar is CW26calendar.jpg image; page text carries no dates. Direct image GET returned 406; no bypass attempted. Need ordinary public rendered calendar capture, not dates from secondary summary."
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Operator calendar is CW26calendar.jpg image; page text carries no dates. Direct image GET returned 406; no bypass attempted. Need ordinary public rendered calendar capture, not dates from secondary summary.",
+      "aliases": [
+        "Creepy Works"
+      ],
+      "operator": null,
+      "operatorDomain": "creepyworks.com",
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-014",
+      "canonicalIDproposal": "date-night-ar26-willow",
+      "name": "Creepy Trail of Willow Creek",
+      "city": "Little Rock",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/creepytrailofwillowcreek",
+          "https://www.thescarefactor.com/haunted-houses/arkansas/"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-014",
+          "id": "date-night-ar26-willow",
+          "name": "Creepy Trail of Willow Creek",
+          "aliases": [],
+          "state": "Arkansas",
+          "verdict": "HOLD",
+          "factual": "HOLD_COMPLETE_RECORD",
+          "placement": "HOLD_NO_REVIEWED_POINT",
+          "implementationQueue": "EXCLUDED_HOLD",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Public trail directory lead; current authoritative calendar and supported visitor address not established in bounded pass."
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Public trail directory lead; current authoritative calendar and supported visitor address not established in bounded pass.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-015",
+      "canonicalIDproposal": "date-night-ar26-barn",
+      "name": "Reaper’s Night Off: THE BARN",
+      "city": "Donaldson",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/reapersnightoff",
+          "https://www.thescarefactor.com/haunted-houses/arkansas/",
+          "https://www.haunts.com/arkansas"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-015",
+          "id": "date-night-ar26-barn",
+          "name": "Reaper’s Night Off: THE BARN",
+          "aliases": [
+            "Reapers Night Off THE BARN",
+            "THE BARN / Reaper’s Night Off ELF OFF THE SHELF"
+          ],
+          "state": "Arkansas",
+          "verdict": "HOLD",
+          "factual": "HOLD_COMPLETE_RECORD",
+          "placement": "HOLD_NO_REVIEWED_POINT",
+          "implementationQueue": "EXCLUDED_HOLD",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Same Haunts URL alternates Christmas ELF OFF THE SHELF and Halloween THE BARN labels across extracts. Preserve aliases, require specific 2026 Halloween calendar; no Christmas facts transferred to haunt."
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Same Haunts URL alternates Christmas ELF OFF THE SHELF and Halloween THE BARN labels across extracts. Preserve aliases, require specific 2026 Halloween calendar; no Christmas facts transferred to haunt.",
+      "aliases": [
+        "Reapers Night Off THE BARN",
+        "THE BARN / Reaper’s Night Off ELF OFF THE SHELF"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-016",
+      "canonicalIDproposal": "date-night-ar26-holland",
+      "name": "Holland’s Haunted Forest at Holland Acres",
+      "city": "Vilonia / Holland",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/hollands-haunted-forest-at-holland-acres-ar",
+          "https://www.thescarefactor.com/haunted-houses/arkansas/"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-016",
+          "id": "date-night-ar26-holland",
+          "name": "Holland’s Haunted Forest at Holland Acres",
+          "aliases": [],
+          "state": "Arkansas",
+          "verdict": "HOLD",
+          "factual": "HOLD_COMPLETE_RECORD",
+          "placement": "HOLD_NO_REVIEWED_POINT",
+          "implementationQueue": "EXCLUDED_HOLD",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Same forest appears as Vilonia and Holland; same-name/operator likely but normalize only after public address/operator confirmation. Haunts detail fetch unavailable."
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Same forest appears as Vilonia and Holland; same-name/operator likely but normalize only after public address/operator confirmation. Haunts detail fetch unavailable.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-017",
+      "canonicalIDproposal": "date-night-ar26-fields",
+      "name": "Fields of Terror",
+      "city": "Mountain Home / Gassville",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.haunts.com/fieldsofterror539",
+          "https://www.thescarefactor.com/haunted-houses/arkansas/",
+          "https://somewhereinarkansas.com/haunted-houses-in-arkansas/"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-017",
+          "id": "date-night-ar26-fields",
+          "name": "Fields of Terror",
+          "aliases": [],
+          "state": "Arkansas",
+          "verdict": "HOLD",
+          "factual": "HOLD_COMPLETE_RECORD",
+          "placement": "HOLD_NO_REVIEWED_POINT",
+          "implementationQueue": "EXCLUDED_HOLD",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Haunts Mountain Home versus Scare Factor Gassville. Secondary 188 Skeet Street not sufficient to resolve possible relocation. Require primary address and current calendar."
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "Haunts Mountain Home versus Scare Factor Gassville. Secondary 188 Skeet Street not sufficient to resolve possible relocation. Require primary address and current calendar.",
+      "aliases": [],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-018",
+      "canonicalIDproposal": "date-night-ar26-magic",
+      "name": "Magic Screams at Magic Springs",
+      "city": "Hot Springs",
+      "category": [
+        "other-halloween-fall",
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "1701 East Grand Avenue, Hot Springs, AR 71901",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 34.518342001859,
+          "lon": -93.021430344209,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1701+East+Grand+Avenue%2C+Hot+Springs%2C+AR+71901&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+          "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-09-26",
+          "2026-09-27",
+          "2026-10-03",
+          "2026-10-04",
+          "2026-10-10",
+          "2026-10-11",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-31",
+          "2026-11-01"
+        ],
+        "activeFrom": "2026-09-26",
+        "activeUntil": "2026-11-01",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-01T21:00:00-06:00",
+        "basis": "exact",
+        "timeZone": "America/Chicago",
+        "endsAt": "2026-11-01T21:00:00-06:00",
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "Park admission required; haunted house/scare zones included",
+          "No re-entry after 18:00",
+          "Bag screening; no large backpacks, coolers or weapons including plastic",
+          "Over-13 full-face coverings generally disallowed, with staffed full-costume exceptions",
+          "Child-specific Booville hours are distinct; no blanket all-activities-at-14:00 claim",
+          "All ticket sales nonrefundable",
+          "Wasteland opens19:00; recommended12+ with parental discretion, not mandatory admission minimum",
+          "Wasteland participants must move forward themselves and willingly; no carrying children",
+          "Slash Island9+ suggestion is attraction-specific, not a blanket park age restriction"
+        ],
+        "consumerDetails": [
+          "Weekends September 26–November 1, 2026. Saturdays 2–11 PM; Sundays 2–9 PM.",
+          "Family activities by day; scare attractions begin opening at 6 PM, with some starting at 7 PM. Park admission includes the haunt, scare zones and available rides.",
+          "No re-entry after 6 PM. Bags are searched; no large backpacks, coolers or weapons, including toy weapons.",
+          "Face-covering masks for guests over 13 require a costume-policy exception; staff may ask to see your face.",
+          "Wasteland opens 7 PM and is recommended for ages 12+ with parental discretion. Participants must move forward independently and willingly; children cannot be carried.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/arkansas/magic-screams/",
+          "https://magicsprings.com/buy-tickets/",
+          "https://magicsprings.com/magic-screams/",
+          "https://magicsprings.com/magic-screams/fright-by-night/",
+          "https://magicsprings.com/contact/",
+          "https://magicsprings.com/calendar/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1701+East+Grand+Avenue%2C+Hot+Springs%2C+AR+71901&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": "regional-wave1/arkansas/R3/future-queue-projections-r3.json",
+        "projectionSha256": "3f68c93b405aeffd2a1373bcab0f2d9f8af731d32a665663ccc416d61afdfae1"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-018",
+          "id": "date-night-ar26-magic",
+          "name": "Magic Screams at Magic Springs",
+          "aliases": [
+            "Magic Screams"
+          ],
+          "state": "Arkansas",
+          "verdict": "PASS",
+          "factual": "PASS_WITH_DOCUMENTED_UNKNOWNS",
+          "placement": "PASS_APPROXIMATE_ONLY",
+          "implementationQueue": "READY_FOR_IMPLEMENTATION_FUTURE_ONLY",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Independent first-party/year/address/category/access/lifecycle and approximate-placement clearance; exact immutable V1 and presentation reviewed.",
+          "visitorAddress": "1701 East Grand Avenue, Hot Springs, AR 71901",
+          "expiryBasis": "exact",
+          "listingExpiresAt": "2026-11-01T21:00:00-06:00",
+          "scheduleStatus": "confirmed",
+          "confidence": "good"
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [
+        "Magic Screams"
+      ],
+      "operator": null,
+      "operatorDomain": "magicsprings.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ar26-magic",
+        "name": "Magic Screams at Magic Springs",
+        "address": "1701 East Grand Avenue, Hot Springs, AR 71901",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Other Halloween / Fall",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://magicsprings.com/magic-screams/",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "other-halloween-fall",
+          "haunted-house"
+        ],
+        "moodLevel": 2,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-09-26",
+          "activeUntil": "2026-11-01",
+          "activeDates": [
+            "2026-09-26",
+            "2026-09-27",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-10",
+            "2026-10-11",
+            "2026-10-17",
+            "2026-10-18",
+            "2026-10-24",
+            "2026-10-25",
+            "2026-10-31",
+            "2026-11-01"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "seasonYear": 2026,
+          "openNowPolicy": "never",
+          "endsAt": "2026-11-01T21:00:00-06:00",
+          "listingExpiresAt": "2026-11-01T21:00:00-06:00",
+          "sourceUrls": [
+            "https://magicsprings.com/buy-tickets/",
+            "https://magicsprings.com/magic-screams/",
+            "https://magicsprings.com/magic-screams/fright-by-night/",
+            "https://magicsprings.com/contact/",
+            "https://magicsprings.com/calendar/"
+          ],
+          "note": "Finite 2026 date list; no machine opening intervals or automatic recurrence. "
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "AR26-W1-018",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "1701 East Grand Avenue, Hot Springs, AR 71901",
+          "placement": {
+            "lat": 34.518342001859,
+            "lon": -93.021430344209,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1701+East+Grand+Avenue%2C+Hot+Springs%2C+AR+71901&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+            "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "1701 East Grand Avenue, Hot Springs, AR 71901"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "verified",
+            "displayText": "Saturdays 2–11 PM; Sundays 2–9 PM. Family daytime activities precede scare attractions, which begin opening at 6 PM; some open at 7 PM."
+          },
+          "listingExpiresAt": "2026-11-01T21:00:00-06:00",
+          "expiryBasis": "exact",
+          "sourceUrls": [
+            "https://magicsprings.com/buy-tickets/",
+            "https://magicsprings.com/magic-screams/",
+            "https://magicsprings.com/magic-screams/fright-by-night/",
+            "https://magicsprings.com/contact/",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1701+East+Grand+Avenue%2C+Hot+Springs%2C+AR+71901&benchmark=Public_AR_Current&format=json",
+            "https://magicsprings.com/calendar/"
+          ],
+          "reviewRevision": "AR2026-WAVE1-R3-PROPOSED-NOT-APPROVED",
+          "visibility": "listing-lifecycle"
+        },
+        "seasonalVisitNotes": [
+          "Weekends September 26–November 1, 2026. Saturdays 2–11 PM; Sundays 2–9 PM.",
+          "Family activities by day; scare attractions begin opening at 6 PM, with some starting at 7 PM. Park admission includes the haunt, scare zones and available rides.",
+          "No re-entry after 6 PM. Bags are searched; no large backpacks, coolers or weapons, including toy weapons.",
+          "Face-covering masks for guests over 13 require a costume-policy exception; staff may ask to see your face.",
+          "Wasteland opens 7 PM and is recommended for ages 12+ with parental discretion. Participants must move forward independently and willingly; children cannot be carried.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ar26-magic",
+        "confidence": "good",
+        "details": [
+          "Weekends September 26–November 1, 2026. Saturdays 2–11 PM; Sundays 2–9 PM.",
+          "Family activities by day; scare attractions begin opening at 6 PM, with some starting at 7 PM. Park admission includes the haunt, scare zones and available rides.",
+          "No re-entry after 6 PM. Bags are searched; no large backpacks, coolers or weapons, including toy weapons.",
+          "Face-covering masks for guests over 13 require a costume-policy exception; staff may ask to see your face.",
+          "Wasteland opens 7 PM and is recommended for ages 12+ with parental discretion. Participants must move forward independently and willingly; children cannot be carried.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-019",
+      "canonicalIDproposal": "date-night-ar26-hollow",
+      "name": "Horror in the Hollow at Pumpkin Hollow",
+      "city": "Piggott",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "671 County Road 336, Piggott, AR 72454",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 36.46053333333333,
+          "lon": -90.19216666666667,
+          "basis": "operator-site",
+          "sourceUrl": "https://www.pumpkinhollow.com/directions",
+          "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+          "precisionLabel": "Approximate operator property point; not an entrance, parking area or ride dropoff"
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "confirmed",
+        "activeDates": [
+          "2026-09-19",
+          "2026-09-26",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "activeFrom": "2026-09-19",
+        "activeUntil": "2026-10-31",
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-01T00:00:00-05:00",
+        "basis": "date-only",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "Children must be accompanied by adult; haunts not recommended for small children",
+          "Intense audio, strobe lights, fog and difficult trails; operator warnings for pregnancy, heart/breathing conditions and seizure susceptibility",
+          "No intentional touching",
+          "No fear-based refunds",
+          "Zipline separate add-on: minimum age 8 and waiver required; not part of core haunt clearance",
+          "Public operator directions carry bridge-closure/detour notice; verify before travel"
+        ],
+        "consumerDetails": [
+          "September 19 and 26, then Fridays and Saturdays October 2–31, 2026. Haunting starts around 7 PM.",
+          "Tickets sell 6:30–10 PM; online tickets must be exchanged before 10 PM. Final closing time depends on guests finishing their paid activities.",
+          "Intense effects and uneven trails; not recommended for small children. All children must be accompanied by an adult.",
+          "Strobes, fog and uneven trails; the operator advises against visits for people with seizure, heart or breathing conditions and during pregnancy.",
+          "Check the operator’s current directions for the Highway 62 bridge detour before travel.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/arkansas/horror-in-the-hollow/",
+          "https://frightfind.com/state-frights/arkansas/",
+          "https://www.pumpkinhollow.com/horror-in-the-hollow",
+          "https://www.pumpkinhollow.com/hith-faqs",
+          "https://www.pumpkinhollow.com/directions",
+          "https://www.pumpkinhollow.com/policies"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": "regional-wave1/arkansas/R3/future-queue-projections-r3.json",
+        "projectionSha256": "3f68c93b405aeffd2a1373bcab0f2d9f8af731d32a665663ccc416d61afdfae1"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-019",
+          "id": "date-night-ar26-hollow",
+          "name": "Horror in the Hollow at Pumpkin Hollow",
+          "aliases": [
+            "Horror in the Hollow",
+            "Pumpkin Hollow"
+          ],
+          "state": "Arkansas",
+          "verdict": "PASS",
+          "factual": "PASS_WITH_DOCUMENTED_UNKNOWNS",
+          "placement": "PASS_APPROXIMATE_ONLY",
+          "implementationQueue": "READY_FOR_IMPLEMENTATION_FUTURE_ONLY",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Independent first-party/year/address/category/access/lifecycle and approximate-placement clearance; exact immutable V1 and presentation reviewed.",
+          "visitorAddress": "671 County Road 336, Piggott, AR 72454",
+          "expiryBasis": "date-only",
+          "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+          "scheduleStatus": "confirmed",
+          "confidence": "good"
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [
+        "Horror in the Hollow",
+        "Pumpkin Hollow"
+      ],
+      "operator": null,
+      "operatorDomain": "pumpkinhollow.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ar26-hollow",
+        "name": "Horror in the Hollow at Pumpkin Hollow",
+        "address": "671 County Road 336, Piggott, AR 72454",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://www.pumpkinhollow.com/horror-in-the-hollow",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 3,
+        "seasonalAvailability": {
+          "status": "confirmed",
+          "activeFrom": "2026-09-19",
+          "activeUntil": "2026-10-31",
+          "activeDates": [
+            "2026-09-19",
+            "2026-09-26",
+            "2026-10-02",
+            "2026-10-03",
+            "2026-10-09",
+            "2026-10-10",
+            "2026-10-16",
+            "2026-10-17",
+            "2026-10-23",
+            "2026-10-24",
+            "2026-10-30",
+            "2026-10-31"
+          ],
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "seasonYear": 2026,
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+          "sourceUrls": [
+            "https://www.pumpkinhollow.com/horror-in-the-hollow",
+            "https://www.pumpkinhollow.com/hith-faqs",
+            "https://www.pumpkinhollow.com/directions",
+            "https://www.pumpkinhollow.com/policies"
+          ],
+          "note": "Finite 2026 date list; no machine opening intervals or automatic recurrence. "
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "AR26-W1-019",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "671 County Road 336, Piggott, AR 72454",
+          "placement": {
+            "lat": 36.46053333333333,
+            "lon": -90.19216666666667,
+            "basis": "operator-site",
+            "sourceUrl": "https://www.pumpkinhollow.com/directions",
+            "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+            "precisionLabel": "Approximate operator property point; not an entrance, parking area or ride dropoff"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "671 County Road 336, Piggott, AR 72454"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "Haunting starts approximately 7 PM; tickets from 6:30–10 PM. Guests in line to buy by 10 PM are admitted; haunts finish after purchased activities, so final close is unknown."
+          },
+          "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+          "expiryBasis": "date-only",
+          "sourceUrls": [
+            "https://www.pumpkinhollow.com/horror-in-the-hollow",
+            "https://www.pumpkinhollow.com/hith-faqs",
+            "https://www.pumpkinhollow.com/directions",
+            "https://www.pumpkinhollow.com/policies",
+            "https://www.pumpkinhollow.com/directions"
+          ],
+          "reviewRevision": "AR2026-WAVE1-R3-PROPOSED-NOT-APPROVED",
+          "visibility": "halloween-layer"
+        },
+        "seasonalVisitNotes": [
+          "September 19 and 26, then Fridays and Saturdays October 2–31, 2026. Haunting starts around 7 PM.",
+          "Tickets sell 6:30–10 PM; online tickets must be exchanged before 10 PM. Final closing time depends on guests finishing their paid activities.",
+          "Intense effects and uneven trails; not recommended for small children. All children must be accompanied by an adult.",
+          "Strobes, fog and uneven trails; the operator advises against visits for people with seizure, heart or breathing conditions and during pregnancy.",
+          "Check the operator’s current directions for the Highway 62 bridge detour before travel.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ar26-hollow",
+        "confidence": "good",
+        "details": [
+          "September 19 and 26, then Fridays and Saturdays October 2–31, 2026. Haunting starts around 7 PM.",
+          "Tickets sell 6:30–10 PM; online tickets must be exchanged before 10 PM. Final closing time depends on guests finishing their paid activities.",
+          "Intense effects and uneven trails; not recommended for small children. All children must be accompanied by an adult.",
+          "Strobes, fog and uneven trails; the operator advises against visits for people with seizure, heart or breathing conditions and during pregnancy.",
+          "Check the operator’s current directions for the Highway 62 bridge detour before travel.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-020",
+      "canonicalIDproposal": "date-night-ar26-chill",
+      "name": "Chill Factor Haunted Attraction",
+      "city": "Trumann",
+      "category": [
+        "haunted-house"
+      ],
+      "status": "READY FOR IMPLEMENTATION",
+      "factualStatus": "PASS_WITH_REVIEWED_UNKNOWNS",
+      "visitoraddress": "115 E Main St, Trumann, AR 72472",
+      "placement": {
+        "status": "reviewed approximate only",
+        "point": {
+          "lat": 35.67390966313,
+          "lon": -90.505908265161,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=115+E+Main+St%2C+Trumann%2C+AR+72472&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:31:04.912011+00:00",
+          "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+        },
+        "radiusReady": true
+      },
+      "2026dates": {
+        "status": "unconfirmed",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": "2026-11-02T00:00:00-06:00",
+        "basis": "editorial",
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [
+          "Public ticketed haunted attractions",
+          "Known special access/age restrictions not established; do not imply unrestricted accessibility"
+        ],
+        "consumerDetails": [
+          "The operator has announced its 2026 haunted season. Check current operating nights before going.",
+          "Lobby opens 7 PM on operating nights. Haunt start, last admission and closing time are unconfirmed.",
+          "Two indoor haunted attractions; tickets may be bought separately or as a combo.",
+          "Location is approximate. Directions use the visitor address."
+        ],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/arkansas/chill-factor/",
+          "https://frightmaps.com/best-haunted-houses-arkansas-2026",
+          "https://frightfind.com/state-frights/arkansas/",
+          "https://chillfactorhaunt.com/",
+          "https://chillfactorhaunt.com/attractions",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=115+E+Main+St%2C+Trumann%2C+AR+72472&benchmark=Public_AR_Current&format=json"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": "regional-wave1/arkansas/R3/future-queue-projections-r3.json",
+        "projectionSha256": "3f68c93b405aeffd2a1373bcab0f2d9f8af731d32a665663ccc416d61afdfae1"
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-020",
+          "id": "date-night-ar26-chill",
+          "name": "Chill Factor Haunted Attraction",
+          "aliases": [
+            "Chill Factor"
+          ],
+          "state": "Arkansas",
+          "verdict": "PASS",
+          "factual": "PASS_WITH_DOCUMENTED_UNKNOWNS",
+          "placement": "PASS_APPROXIMATE_ONLY",
+          "implementationQueue": "READY_FOR_IMPLEMENTATION_FUTURE_ONLY",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "Independent first-party/year/address/category/access/lifecycle and approximate-placement clearance; exact immutable V1 and presentation reviewed.",
+          "visitorAddress": "115 E Main St, Trumann, AR 72472",
+          "expiryBasis": "editorial",
+          "listingExpiresAt": "2026-11-02T00:00:00-06:00",
+          "scheduleStatus": "unconfirmed",
+          "confidence": "limited"
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": null,
+      "aliases": [
+        "Chill Factor"
+      ],
+      "operator": null,
+      "operatorDomain": "chillfactorhaunt.com",
+      "sourceFreshness": {
+        "checkedAt": "2026-10-13",
+        "revalidateAfter": "2026-10-15"
+      },
+      "exactClearedProjection": {
+        "id": "date-night-ar26-chill",
+        "name": "Chill Factor Haunted Attraction",
+        "address": "115 E Main St, Trumann, AR 72472",
+        "cuisines": [
+          "other"
+        ],
+        "cuisineLabel": "Haunted House",
+        "priceLevel": null,
+        "rating": null,
+        "reviewCount": null,
+        "openingHours": null,
+        "phone": null,
+        "website": "https://chillfactorhaunt.com/",
+        "isChain": false,
+        "photoKey": "cafe",
+        "source": "catalog",
+        "activityTypes": [
+          "haunted-house"
+        ],
+        "moodLevel": 3,
+        "seasonalAvailability": {
+          "status": "unconfirmed",
+          "checkedAt": "2026-10-13",
+          "revalidateAfter": "2026-10-15",
+          "timeZone": "America/Chicago",
+          "seasonYear": 2026,
+          "openNowPolicy": "never",
+          "listingExpiresAt": "2026-11-02T00:00:00-06:00",
+          "sourceUrls": [
+            "https://chillfactorhaunt.com/",
+            "https://chillfactorhaunt.com/attractions"
+          ],
+          "note": "Credible 2026 operation; no occurrence dates or operational end inferred. Editorial listing retention is not operating evidence."
+        },
+        "seasonalListing": {
+          "contract": "ListingCompletenessV1",
+          "recordId": "AR26-W1-020",
+          "seasonYear": 2026,
+          "timeZone": "America/Chicago",
+          "visitorAddress": "115 E Main St, Trumann, AR 72472",
+          "placement": {
+            "lat": 35.67390966313,
+            "lon": -90.505908265161,
+            "basis": "address-geocode",
+            "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=115+E+Main+St%2C+Trumann%2C+AR+72472&benchmark=Public_AR_Current&format=json",
+            "checkedAt": "2026-10-13T18:31:04.912011+00:00",
+            "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+          },
+          "directionsTarget": {
+            "kind": "visitor-address",
+            "address": "115 E Main St, Trumann, AR 72472"
+          },
+          "ridesharePolicy": "external-picker",
+          "hours": {
+            "state": "partial",
+            "displayText": "2026 season announced. Lobby opens 7 PM on operating nights; operating dates, attraction opening, last admission and final close are unconfirmed."
+          },
+          "listingExpiresAt": "2026-11-02T00:00:00-06:00",
+          "expiryBasis": "editorial",
+          "sourceUrls": [
+            "https://chillfactorhaunt.com/",
+            "https://chillfactorhaunt.com/attractions",
+            "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=115+E+Main+St%2C+Trumann%2C+AR+72472&benchmark=Public_AR_Current&format=json"
+          ],
+          "reviewRevision": "AR2026-WAVE1-R3-PROPOSED-NOT-APPROVED",
+          "visibility": "halloween-layer"
+        },
+        "seasonalVisitNotes": [
+          "The operator has announced its 2026 haunted season. Check current operating nights before going.",
+          "Lobby opens 7 PM on operating nights. Haunt start, last admission and closing time are unconfirmed.",
+          "Two indoor haunted attractions; tickets may be bought separately or as a combo.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      },
+      "exactClearedPresentation": {
+        "canonicalId": "date-night-ar26-chill",
+        "confidence": "limited",
+        "details": [
+          "The operator has announced its 2026 haunted season. Check current operating nights before going.",
+          "Lobby opens 7 PM on operating nights. Haunt start, last admission and closing time are unconfirmed.",
+          "Two indoor haunted attractions; tickets may be bought separately or as a combo.",
+          "Location is approximate. Directions use the visitor address."
+        ]
+      }
+    },
+    {
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-021",
+      "canonicalIDproposal": "date-night-ar26-scared-city",
+      "name": "Scared City Haunted House",
+      "city": "Bono",
+      "category": "haunted-house",
+      "status": "HOLD",
+      "factualStatus": "HOLD",
+      "visitoraddress": null,
+      "placement": {
+        "status": "not cleared",
+        "point": null,
+        "radiusReady": false
+      },
+      "2026dates": {
+        "status": "not established",
+        "activeDates": null,
+        "activeFrom": null,
+        "activeUntil": null,
+        "no2027Recurrence": true
+      },
+      "lifecyclecutoff": {
+        "instant": null,
+        "basis": null,
+        "timeZone": "America/Chicago",
+        "endsAt": null,
+        "note": "Date-only/editorial cutoffs are product retention, not closing time; editorial cap November2 local midnight."
+      },
+      "OpenNowpolicy": {
+        "value": "never",
+        "openingHours": null
+      },
+      "admission/access": {
+        "restrictions": [],
+        "consumerDetails": [],
+        "unknowns": "Do not infer unlisted admission, last entry, final exit or accessibility."
+      },
+      "provenance": {
+        "sourceUrls": [
+          "https://www.thescarefactor.com/haunted-houses/arkansas/scared-city-haunted-house/",
+          "https://frightmaps.com/houses/arkansas/scared-city-haunted-house-terror-ridge"
+        ],
+        "authorArtifact": "regional-wave1/arkansas/R3/state-ledger-r3.json",
+        "authorSha256": "ecbfc10966cb54500c2c2be143a1a0f3347b40833477c0f7c49081830af125c0",
+        "projectionArtifact": null,
+        "projectionSha256": null
+      },
+      "independentreview": {
+        "artifact": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+        "exacthash": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+        "report": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+        "reportSha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+        "verdict": {
+          "recordId": "AR26-W1-021",
+          "id": "date-night-ar26-scared-city",
+          "name": "Scared City Haunted House",
+          "aliases": [
+            "Scared City Haunted House & Terror Ridge"
+          ],
+          "state": "Arkansas",
+          "verdict": "HOLD",
+          "factual": "HOLD_COMPLETE_RECORD",
+          "placement": "HOLD_NO_REVIEWED_POINT",
+          "implementationQueue": "EXCLUDED_HOLD",
+          "runtimeAcceptance": "NOT_PERFORMED_NOT_AUTHORIZED",
+          "reason": "TSF lists Scared City and Terror Ridge separately, FrightMaps combines them. Selected Scared City only; do not count Terror Ridge as second lead or assume shared operator/date. 7060 State Highway 228 is TSF address; current primary season unresolved."
+        }
+      },
+      "expectedidentityimpact": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": "unestablished while held",
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      },
+      "validationrequirements": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10"
+      ],
+      "blocker": "TSF lists Scared City and Terror Ridge separately, FrightMaps combines them. Selected Scared City only; do not count Terror Ridge as second lead or assume shared operator/date. 7060 State Highway 228 is TSF address; current primary season unresolved.",
+      "aliases": [
+        "Scared City Haunted House & Terror Ridge"
+      ],
+      "operator": null,
+      "operatorDomain": null,
+      "sourceFreshness": {
+        "checkedAt": null,
+        "revalidateAfter": null
+      },
+      "exactClearedProjection": null,
+      "exactClearedPresentation": null
+    }
+  ],
+  "residentialPolicy": "All residential/unclassified entries excluded from implementation. Counts only; no private addresses or owner travel request."
+}

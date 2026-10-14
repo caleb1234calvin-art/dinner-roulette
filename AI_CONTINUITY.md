@@ -1,3 +1,61 @@
+# CURRENT — PHASE12 FIRST-RING RESEARCH COMPLETE; PR69 REMAINS SOLE RELEASE DECISION (2026-10-14)
+
+## CURRENT / AUTHORITY
+- Fresh control-room inspection at approximately 00:44 UTC: main **3b6b9ed0f4be1581b3b541207b2637183fff57d3**, tree **577d680f089e0a6e6892da2bdd6419132b890354**; project latest production **dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ READY**, source exact main; **67 published identities**. No release, runtime mutation or second implementation candidate occurred in Phase12.
+- Draft PR **69**, branch **integration/missouri-three-cleared-2026-10-13**, remains exact **6c619adda4d9ef3b2683befb2ca874b257505eb2**, tree **236110f86f9f3dc8c0cf0a5a664be79e2569bc43**, sole parent current main; 70 candidate identities. Existing independent **PASS WITH INHERITED LIMITATIONS / VERIFIED CANDIDATE READY FOR OWNER RELEASE DECISION** is preserved, not rerun by research.
+- PR69 has **no merge/deployment authority or new unprotected-main waiver**. Owner's latest confirmation authorizes this documentation publication only. Prior PR68 waiver consumed.
+- Immediate rollback remains **dpl_3mPcvp1LGsjtQ3MVLgRUdmAzejN9**, source **8353e60056fb0568360c5c13878d102880395d9f**; supported authenticated route last inspected/canceled during PR68 release. Automatic restore set apex/www/chi only; generated project/branch aliases require separate verification. No rollback exercise is claimed.
+- Five production aliases remain pickforus.app, www.pickforus.app, dinner-roulette-chi.vercel.app, dinner-roulette-minions-9e2c.vercel.app and dinner-roulette-git-main-minions-9e2c.vercel.app. This check is metadata, not a new live smoke.
+- Full previous canonical body **dc452009b874e19a4796632ff11c3e3c4da8378d** is preserved. Its mission-start NEXT is superseded by this final research gate. Cadaver Zone remains **LIVE since PR64**, not a current HOLD.
+
+## INDEPENDENT RESEARCH / COUNTING
+- Research dispositions are dated **October13,2026**. **74 selected commercial/public leads; 22 factual PASS /52 factual HOLD /0 selected REJECT.** Of factual passes, **20 research/schema/placement-ready**, **2 factual-only/address-only**. None has integrated regional runtime or release PASS.
+- Kansas:24 selected,8 factual PASS/16 factual HOLD;7 ready+Louisburg placement HOLD. Overall independent7 PASS/17 HOLD.
+- Arkansas:21 selected,8 factual PASS/13 HOLD;all8 ready. Overall8 PASS/13 HOLD.
+- Oklahoma:29 selected,6 factual PASS/23 HOLD;5 ready+Psycho Path placement HOLD. Overall5 PASS/24 HOLD.
+- Queue labels partition all74 as20 READY FOR IMPLEMENTATION,2 NEEDS ONE FIELD,11 OWNER EVIDENCE NEEDED,41 HOLD. READY means research readiness only. Owner evidence means attributable public capture; no travel/operator contact authorized.
+- Kansas124 raw appearances/101 provisional union groups;24 selected,52 residential-or-unclassified,25 other nonselected. Final25 disposition is18 HOLD+7 lore exclusions/0 factual REJECT; secondary/undated closure reports do not establish current verified closure.
+- Arkansas50 retained selected-membership rows, not exhaustive raw state inventory;21 selected. Separate15 residential entries=14 exclusions+1 classification HOLD. Oklahoma **137** raw appearances/107 provisional groups;29 selected;11 residential sightings, not11 unique homes. These different denominators must not be combined into statewide recall/completeness.
+- Earlier author/reviewer revisions and schema/copy/count/closure corrections are preserved privately; final independent state ledgers and addenda control. No factual PASS is transferred to a different projection.
+
+## REPOSITORY-RECOVERABLE FUTURE QUEUE
+Six reviewed sanitized files are published beside this entry under **audit/regional-wave1-2026-10-13/**:
+1. README.md: report, count definitions, scope/limitations, ranking rationale and future validation.
+2. kansas-ledger.json
+3. arkansas-ledger.json
+4. oklahoma-ledger.json
+5. future-implementation-queue.json
+6. evidence-index.json
+These preserve all74 selected dispositions/blockers, exact20 ready projection/presentation objects, independent source hashes and future test matrix. They contain no raw capture pages/screenshots or residential-ledger identities/private addresses. The private archives are not published.
+
+## NEXT / FUTURE BATCH
+- Proposed first future batch **12**, after a separate implementation decision and fresh pre-import revalidation: Exiled KC; Annabelle's Fun Farm; Warehouse of Fear; The Asylum (Cave Springs); TwistedRoots; Haunted Castle (Muskogee); Haunted Plantation; Horror in the Hollow; River Valley Nightmare; Magic Screams; Nightmare Festival; The Haunt at Walters.
+- Eight ready reserves: Acres of Madness, Wicked Island,13 Sinister Souls, Colby Haunted House, Fear Factory501, Royal Haunted House, Chill Factor, Guthrie Haunts. Recommendation12 and reserve8 are disjoint and exhaust20 ready identities.
+- Louisburg retains historical **MO26-064**, not newly discovered; Psycho Path and Louisburg have null placement/radiusReady false and no ready projection. Neither is radius/import-ready. Kansas KC Corn Maze versus historical KC Pumpkin Patch identity remains HOLD.
+- Ranking is qualitative geography/source specificity/remaining season/identity, not measured distance, route, user-radius coverage or statewide recall. Arkansas's8 placement-complete passes are a selected-set advantage only. Southeast Kansas, southern Arkansas and western/southwestern Oklahoma remain weak or unestablished coverage.
+- **Do not create a second implementation candidate while PR69 awaits owner decision.** Stop this useful first-ring wave with evidence/queue preserved. Illinois is provisional next unresearched second-ring state, then Iowa/Nebraska/Tennessee/Kentucky, only if season timing and expected useful evidence justify another bounded authorization/work plan; no expansion merely to consume time.
+- Clearance from October13 must be freshly revalidated before any import. Do not assume listed occurrences remain future indefinitely. Expired records become EXPIRED/TOO LATE; never extend cutoff.
+- Future integrated candidate must test cross-state registry/radius behavior, ListingCompletenessV1, complete factual/presentation equality, address Directions/approximate geometry, neverOpenNow, DST-aware expiry-1/exact/+1, cache/saved/favorites/pendingRPC negative authority, no2027, actual UI and full repository/hosted/geometry/Android gates. Missouri-named helpers must not silently restrict other states.
+- Guthrie late-fall requires scoped curatedAnything lifecycle, not extended Halloween chips/provider season. Editorial cutoff is retention only, no later than November2 local midnight; Warehouse October22 no-scare subtype remains separate mapping HOLD.
+
+## DURABLE PRIVATE EVIDENCE / INTEGRITY
+- Full original research **libfile_a8bf6c359dc88191a6019594ae85061c**, version0,22,619,842 bytes; SHA256 **8c33cfd246528eaadceb17cf56e3ecf646b38ae6ad5402012c0b5f9564a91257**;1,004 source files plus manifest. Source manifest **e6a8bcd692250ec5a94bbdd3dd72c0063455a62d13c36ed6ae106f9806ddcb44**.
+- Compact PRIVATE review **libfile_8f9743275f888191b1b600fbcf10426f**, version0,605,759 bytes; SHA256 **dff1a3d56302c3acf23818b8844682446b1572ffb10afe51fd1a95abd268313b**;180 source files plus manifest. This includes private residential summary ledgers and is not publishable as a whole.
+- Recovery index **libfile_99c6250c7dac8191a82896cd460fc910**,3,476 bytes,SHA256 **07db5c60fac52f3e7c162afcd07702ea46b756e862873d3ee2247da03cde0138**.
+- Independent preservation/accounting receipt **libfile_4c4b77488abc8191be9deb32a7a2366c**,27,249 bytes/15members,SHA256 **7396026b1964b1cd0a8b8a04e9df1cd505f4dc97aa35f04b09ed729ca72e3cfd**.
+- Independent reviewer materialized saved version0 full/compact archives and verified all member CRC/path/size/SHA, complete source retention, all74 disposition equality, exact20 ready projections AND presentations and12+8 partition. This is transport/accounting PASS, not renewed factual or application acceptance.
+- Rollup freeze SHA256 **d099032740bd9b41e88384e2eff3f2cc0d4cb65d96228b853437e462cb65194d**; report/README **ba71383e87ce17b682f0dec7e1748dd0f5aa9f1ea5df47a897ac6f6913310430**. Current writer separately recovered exact compact/index/receipt hashes after workspace replacement before publishing exact six reviewed files.
+- Original publication had not reached the canonical ref when resumed; fresh ref remained dc452009. Owner confirmed pending Git blob approval. No duplicate candidate or runtime work was performed. Recovery helper initially required absolute metadata paths, then succeeded; no evidence bytes changed.
+
+## HOLD / STOP
+- Missouri seven published source-review HOLDs and nine owner-field HOLDs remain separate classes, not a unique16 sum; regional research clears none. Cadaver already live. All52 regional factual HOLDs and two placement-only gaps remain explicit in ledgers. Residential lane excluded.
+- PR61 stays parked; **“Radial discovery becomes an audit layer.”** remains future intent only.
+- Physical Android/WebView/GPS/installedPWA HOLD;signing/Play outside. Inherited6web/14native warnings, narrow Directions clipping/overflow, temporary Other icon, approximate coordinates, conservative Open Now, controlled-provider/ticket/weather limits and dev-only auth INCONCLUSIVE persist.
+- **Owner next action: exact PR69 release decision only.** Regional queue awaits future implementation authority/baseline and fresh source checks. No merge/deployment/waiver/settings changes from this task.
+- Documentation-only deployment-disabled continuity branch; full old history retained. Full remote readback of all seven changed paths is mandatory before completion.
+
+---
+
 # CURRENT — PHASE 12 REGIONAL RESEARCH AUTHORIZED; PR #69 REMAINS SOLE RELEASE DECISION (2026-10-13)
 
 ## AUTHORITATIVE CONTROL ROOM

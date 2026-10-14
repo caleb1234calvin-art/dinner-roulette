@@ -1,0 +1,1294 @@
+{
+  "scope": "Sanitized public-fact artifact pointers and exact hashes only. Original raw captures/screenshots preserved privately, not copied into repository.",
+  "inputs": [
+    {
+      "state": "Kansas",
+      "role": "report",
+      "path": "regional-wave1/independent-kansas/FINAL-REPORT.md",
+      "sha256": "74a4c0ba2988eaf306a3f8163e93a2bc234b982efce8db52ed148c4a26b9e861",
+      "bytes": 16383
+    },
+    {
+      "state": "Kansas",
+      "role": "verdicts",
+      "path": "regional-wave1/independent-kansas/independent-ledger.json",
+      "sha256": "bd847fc372fc260a7fdc48b04379fc17646f346386441a2422f8a381b740ec4c",
+      "bytes": 38034
+    },
+    {
+      "state": "Kansas",
+      "role": "exactQueue",
+      "path": "regional-wave1/independent-kansas/cleared-future-queue.json",
+      "sha256": "2f98cc4c7524ef715ffaebb3572082c94019bde4b7a60712995ec75fc8712f02",
+      "bytes": 47986
+    },
+    {
+      "state": "Kansas",
+      "role": "manifest",
+      "path": "regional-wave1/independent-kansas/MANIFEST.sha256",
+      "sha256": "a15f4ccda416e0f5e8159a3e7edc0c15f4c10d7348d7f38f5593effdedff81cb",
+      "bytes": 3774
+    },
+    {
+      "state": "Kansas",
+      "role": "accountingAddendum",
+      "path": "regional-wave1/independent-kansas-accounting-R1/accounting-addendum.json",
+      "sha256": "ae3170b484f1171368de324f2a1c9eb5827ff7afc5ec66a0defc57d84c8d25e6",
+      "bytes": 3438
+    },
+    {
+      "state": "Kansas",
+      "role": "accountingAddendumReport",
+      "path": "regional-wave1/independent-kansas-accounting-R1/ACCOUNTING-ADDENDUM.md",
+      "sha256": "10d1048ab60c3418828e57f575297ed615bd9434a23a4a92deb93fc3e6f1824e",
+      "bytes": 1658
+    },
+    {
+      "state": "Kansas",
+      "role": "accountingAddendumManifest",
+      "path": "regional-wave1/independent-kansas-accounting-R1/MANIFEST.sha256",
+      "sha256": "e5c75b26e10540cbf8e8e89bea8808127ccc4a97634e4b0bd92bc0e0336e27ed",
+      "bytes": 180
+    },
+    {
+      "state": "Arkansas",
+      "role": "report",
+      "path": "regional-wave1/independent-arkansas/R3/INDEPENDENT-REPORT.md",
+      "sha256": "53378c389cc7093bb6205ccc29b2511984a307dc511d5161ee901ae02076a958",
+      "bytes": 10464
+    },
+    {
+      "state": "Arkansas",
+      "role": "verdicts",
+      "path": "regional-wave1/independent-arkansas/R3/all-record-verdicts.json",
+      "sha256": "0d489c46c83fb1073c8b5cc4effeb1c50e6274f7f1bca454fe0b97c1330f72a2",
+      "bytes": 30407
+    },
+    {
+      "state": "Arkansas",
+      "role": "exactQueue",
+      "path": "regional-wave1/independent-arkansas/R3/exact-cleared-queue.json",
+      "sha256": "8d9669391e3476cd33fe52eb5215bc51ec67b01e0254b5ff3915e8cb0f989002",
+      "bytes": 49908
+    },
+    {
+      "state": "Arkansas",
+      "role": "manifest",
+      "path": "regional-wave1/independent-arkansas/INDEPENDENT-MANIFEST-R3.json",
+      "sha256": "c304d3e2ccda2a15c1e7a5678be43f84db4552c38a1fc5095b02c6202f902120",
+      "bytes": 8595
+    },
+    {
+      "state": "Oklahoma",
+      "role": "report",
+      "path": "regional-wave1/independent-oklahoma/R2/REPORT.md",
+      "sha256": "69e90d1ad1c4af43ddc1148ee1c5728af4bd2290e7bd31d2fc985e30828b519c",
+      "bytes": 10522
+    },
+    {
+      "state": "Oklahoma",
+      "role": "verdicts",
+      "path": "regional-wave1/independent-oklahoma/R2/VERDICT-LEDGER.json",
+      "sha256": "7f7f6bc67f6d8705aa4c5d4a3acf89907fc7536ccee80a64797b37c95454ed63",
+      "bytes": 22649
+    },
+    {
+      "state": "Oklahoma",
+      "role": "exactQueue",
+      "path": "regional-wave1/independent-oklahoma/R2/EXACT-CLEARED-FUTURE-QUEUE.json",
+      "sha256": "2bcaa197646c96cc6eafd7c1c757492118e9e5cc91af3f4f8116850618c1d4e1",
+      "bytes": 25273
+    },
+    {
+      "state": "Oklahoma",
+      "role": "manifest",
+      "path": "regional-wave1/independent-oklahoma/MANIFEST.json",
+      "sha256": "12fc8f8c3f63708fbccf936f0af5681785da4d21a18195efe1bfb3378a36d653",
+      "bytes": 19403
+    },
+    {
+      "state": "Oklahoma",
+      "role": "addressOnly",
+      "path": "regional-wave1/independent-oklahoma/R2/ADDRESS-ONLY-FACTUAL-PASS.json",
+      "sha256": "b7ead7bfdef059fbc2605f647a9d7ebcc55cac42b7869e45355f7645b98b2292",
+      "bytes": 3718
+    },
+    {
+      "role": "released67",
+      "path": "post68-seasonal-candidate/scripts/test-support/three-cleared-baseline.json",
+      "sha256": "cf19a8c41d3c6f49a5a3d9e56dff5525baeb3c5e2c78b2bfc838aec4ac729074",
+      "count": 67
+    },
+    {
+      "role": "PR69three",
+      "path": "post68-seasonal-candidate/audit/three-cleared-2026-10-13/CLEARED-PROJECTIONS-R1.json",
+      "sha256": "40af9e9076b7d18f9f037e3e7e75a980630e66f760d866abae1dd6a4062438e3",
+      "count": 3
+    },
+    {
+      "role": "original134",
+      "path": "attachments/53620d7e-a03c-465b-a1ca-896fcc171ea2/Missouri-Seasonal-2026-Candidates.json",
+      "sha256": "87a1f244d9a13348ec7f7318fcc022e4796f162f05d2ea24f350cb83260e4ede",
+      "count": 134
+    },
+    {
+      "role": "published source HOLD (seven current; excludes cleared Tommy locations)",
+      "path": "post-pr68-review-preparation/queue.json",
+      "sha256": "e333705695b11c2a55374dd8328fa32e2dd5dc6596a4ff7212986fe7ab134d31",
+      "count": 7
+    },
+    {
+      "role": "owner HOLD (separate nine-class)",
+      "path": "post-pr68-review-preparation/queue.json",
+      "sha256": "e333705695b11c2a55374dd8328fa32e2dd5dc6596a4ff7212986fe7ab134d31",
+      "count": 9
+    },
+    {
+      "role": "canonical Phase12 full local readback",
+      "path": "continuity-phase12-corrected-readback.md",
+      "sha256": "12bb1e5d96723ca16c1ff8211aa2b3cd4a8988fa5a39ff605589c5bf05106ea6",
+      "commit": "dc452009b874e19a4796632ff11c3e3c4da8378d"
+    }
+  ],
+  "validationMatrix": [
+    {
+      "id": "V1",
+      "gate": "Revalidate exact state-specific 2026 operator/public-authority sources, cancellations, access and freshness before any separately authorized implementation.",
+      "state": "REQUIRED BEFORE FUTURE IMPLEMENTATION/ACCEPTANCE"
+    },
+    {
+      "id": "V2",
+      "gate": "Reconcile canonical ID/operator/domain/address/name/aliases against the actual import baseline, original134 and unresolved holds; one destination must not multiply by attraction or occurrence.",
+      "state": "REQUIRED BEFORE FUTURE IMPLEMENTATION/ACCEPTANCE"
+    },
+    {
+      "id": "V3",
+      "gate": "Retain ListingCompletenessV1, explicit presentation/access restrictions, supported visitor-address Directions, external rideshare picker and approximate-only placement. Address-only is radius-ineligible.",
+      "state": "REQUIRED BEFORE FUTURE IMPLEMENTATION/ACCEPTANCE"
+    },
+    {
+      "id": "V4",
+      "gate": "Keep openingHours null, never Open Now, no inferred daily hours, last admission or final exit; no2027 recurrence.",
+      "state": "REQUIRED BEFORE FUTURE IMPLEMENTATION/ACCEPTANCE"
+    },
+    {
+      "id": "V5",
+      "gate": "Test exact local-time/DST cutoff minus1/exact/plus1, stale cache/favorites/saved negative authority, pendingRPC delivery and2027 absence.",
+      "state": "REQUIRED BEFORE FUTURE IMPLEMENTATION/ACCEPTANCE"
+    },
+    {
+      "id": "V6",
+      "gate": "For source-dated late-fall records use scoped curatedAnything/listing-lifecycle eligibility; keep Halloween chips/provider season unchanged. Test Halloween-only, seasonal-off and ordinary Anything separately.",
+      "state": "REQUIRED BEFORE FUTURE IMPLEMENTATION/ACCEPTANCE"
+    },
+    {
+      "id": "V7",
+      "gate": "Editorial retention must not exceed approved November2 local midnight cap and must never imply operating hours, an active date or an operating extension.",
+      "state": "REQUIRED BEFORE FUTURE IMPLEMENTATION/ACCEPTANCE"
+    },
+    {
+      "id": "V8",
+      "gate": "Perform actual Options/Result/Details/qualified Plan journeys,320/390 layouts and inherited geometry; full repository/type/lint/safe authenticated build/exact-head CI and automatedAndroid acceptance required. PhysicalAndroid/WebView/GPS/installedPWA remain inherited HOLD.",
+      "state": "REQUIRED BEFORE FUTURE IMPLEMENTATION/ACCEPTANCE"
+    },
+    {
+      "id": "V9",
+      "gate": "Test cross-state discovery, radius membership, aliases and current-policy registration. Existing Missouri-named registration helpers must not silently exclude Kansas/Arkansas/Oklahoma; inspect integration surfaces without broadening unrelated provider/UI season.",
+      "state": "REQUIRED BEFORE FUTURE IMPLEMENTATION/ACCEPTANCE"
+    },
+    {
+      "id": "V10",
+      "gate": "Research READY is data readiness only; no runtime, release or second-candidate PASS. Recheck remaining2026 utility at implementation time; do not import after cutoff.",
+      "state": "REQUIRED BEFORE FUTURE IMPLEMENTATION/ACCEPTANCE"
+    }
+  ],
+  "dedupe": {
+    "crossStateExactSignals": [],
+    "selectedUniqueProposedIDs": 74,
+    "baselineRecordChecks": [
+      {
+        "recordId": "exiled",
+        "state": "Kansas",
+        "name": "Exiled KC: Trail of Terrors & Twisted Carnival",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "acres",
+        "state": "Kansas",
+        "name": "Acres of Madness",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "field",
+        "state": "Kansas",
+        "name": "Field of Screams Kansas",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "wicked",
+        "state": "Kansas",
+        "name": "Wicked Island",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "walters",
+        "state": "Kansas",
+        "name": "The Haunt at Walters",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "louisburg",
+        "state": "Kansas",
+        "name": "Louisburg Cider Mill Family Farm",
+        "exactSignals": [
+          {
+            "baseline": "original134",
+            "identity": "MO26-064",
+            "name": "Louisburg Cider Mill",
+            "signals": [
+              "operator domain"
+            ]
+          }
+        ],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": false,
+          "knownHistoricalIdentities": [
+            "MO26-064"
+          ],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "klausmeyer",
+        "state": "Kansas",
+        "name": "Klausmeyer Farm & Pumpkin Patch",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "zombie",
+        "state": "Kansas",
+        "name": "Zombie Toxin Haunted House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "souls",
+        "state": "Kansas",
+        "name": "13 Sinister Souls",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "fearzone",
+        "state": "Kansas",
+        "name": "Fear Zone",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "colby",
+        "state": "Kansas",
+        "name": "Colby Haunted House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [
+            "AYSO possible historical antecedent; not an established alias and not a second runtime addition"
+          ],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "shattered",
+        "state": "Kansas",
+        "name": "Shattered Souls Haunted House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "project",
+        "state": "Kansas",
+        "name": "Project Fear",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "reichenberger",
+        "state": "Kansas",
+        "name": "Reichenberger Corn Maze & Pumpkin Patch",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "labyrinth",
+        "state": "Kansas",
+        "name": "Labyrinth of Terror",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "cottage",
+        "state": "Kansas",
+        "name": "Cottage Lane Pumpkin Patch",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "britt",
+        "state": "Kansas",
+        "name": "Britt’s Farm Scary Maze",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "opera",
+        "state": "Kansas",
+        "name": "Haunted Opera House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "neosho",
+        "state": "Kansas",
+        "name": "Neosho Rapids Haunted House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "blackcreek",
+        "state": "Kansas",
+        "name": "The Haunting at Black Creek",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "nightmare",
+        "state": "Kansas",
+        "name": "Nightmare Festival",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "udall",
+        "state": "Kansas",
+        "name": "Udall Forest of Fear",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "kccorn",
+        "state": "Kansas",
+        "name": "KC Corn Maze and Pumpkin Festival",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [
+            "MO26-063 KC Pumpkin Patch possible relation, not resolved"
+          ],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "expedition",
+        "state": "Kansas",
+        "name": "Zombie Expedition",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-001",
+        "state": "Arkansas",
+        "name": "Nightmares Haunted House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-002",
+        "state": "Arkansas",
+        "name": "The Asylum Haunted House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-003",
+        "state": "Arkansas",
+        "name": "Warehouse of Fear at Riverside Entertainment",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-004",
+        "state": "Arkansas",
+        "name": "Midnight Movies",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-005",
+        "state": "Arkansas",
+        "name": "Banshee Manor Haunted House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-006",
+        "state": "Arkansas",
+        "name": "Carpenter’s Mortuary Spook House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-007",
+        "state": "Arkansas",
+        "name": "River Valley Nightmare",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-008",
+        "state": "Arkansas",
+        "name": "Asylum X Haunted House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-009",
+        "state": "Arkansas",
+        "name": "Fear Factory 501",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-010",
+        "state": "Arkansas",
+        "name": "Haunted Hotel of Arkansas",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-011",
+        "state": "Arkansas",
+        "name": "The Reaper Haunted House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-012",
+        "state": "Arkansas",
+        "name": "Royal Haunted House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-013",
+        "state": "Arkansas",
+        "name": "Creepy Works Haunted House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-014",
+        "state": "Arkansas",
+        "name": "Creepy Trail of Willow Creek",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-015",
+        "state": "Arkansas",
+        "name": "Reaper’s Night Off: THE BARN",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-016",
+        "state": "Arkansas",
+        "name": "Holland’s Haunted Forest at Holland Acres",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-017",
+        "state": "Arkansas",
+        "name": "Fields of Terror",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-018",
+        "state": "Arkansas",
+        "name": "Magic Screams at Magic Springs",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-019",
+        "state": "Arkansas",
+        "name": "Horror in the Hollow at Pumpkin Hollow",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-020",
+        "state": "Arkansas",
+        "name": "Chill Factor Haunted Attraction",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "AR26-W1-021",
+        "state": "Arkansas",
+        "name": "Scared City Haunted House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-ANNABELLE",
+        "state": "Oklahoma",
+        "name": "Annabelle’s Fun Farm",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-PSYCHO",
+        "state": "Oklahoma",
+        "name": "Psycho Path Haunted Attraction",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-ROOTS",
+        "state": "Oklahoma",
+        "name": "TwistedRoots Haunted Trail",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-GUTHRIE",
+        "state": "Oklahoma",
+        "name": "Guthrie Haunts Scaregrounds",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-WICKED",
+        "state": "Oklahoma",
+        "name": "Wicked Forest of Terror",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-CHAMBER",
+        "state": "Oklahoma",
+        "name": "Chamber of Terror",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-DEADMAN",
+        "state": "Oklahoma",
+        "name": "Dead Man’s Crossing",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-DCP",
+        "state": "Oklahoma",
+        "name": "DCP Haunted Trail",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-SYCAMORE",
+        "state": "Oklahoma",
+        "name": "Sycamore Asylum",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-WRETCHED",
+        "state": "Oklahoma",
+        "name": "Wretched Oaks",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-TONKAWA",
+        "state": "Oklahoma",
+        "name": "Tonkawa Haunted Sale Barn",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-ELRENO",
+        "state": "Oklahoma",
+        "name": "Trail of Terror and Haunted Barn",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-MINDZ",
+        "state": "Oklahoma",
+        "name": "Twisted Mindz Haunted Attraction",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-NIGHTFALL",
+        "state": "Oklahoma",
+        "name": "Nightfall Haunted Territory",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-NEWCASTLE",
+        "state": "Oklahoma",
+        "name": "Newcastle Nightmare",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-WAREHOUSE",
+        "state": "Oklahoma",
+        "name": "Nightmare Warehouse",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-FRONTIER",
+        "state": "Oklahoma",
+        "name": "Frontier City Fright Fest",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-COUNTRY",
+        "state": "Oklahoma",
+        "name": "Nightmare in the Country Scream Park",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-ASYLUM",
+        "state": "Oklahoma",
+        "name": "Oklahoma Asylum",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-CASTLE",
+        "state": "Oklahoma",
+        "name": "Haunted Castle Halloween Festival",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-HEX",
+        "state": "Oklahoma",
+        "name": "The Hex House",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-FROZEN",
+        "state": "Oklahoma",
+        "name": "Frozen Morgue Haunted Attractions",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-PLANTATION",
+        "state": "Oklahoma",
+        "name": "Haunted Plantation",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": 1,
+          "newlyDiscoveredIdentity": true,
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-ZOMBIE",
+        "state": "Oklahoma",
+        "name": "Zombie Rampage",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-INSANITY",
+        "state": "Oklahoma",
+        "name": "Insanity Farms",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-PUMPKINTOWN",
+        "state": "Oklahoma",
+        "name": "Pumpkin Town",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-ROBBERS",
+        "state": "Oklahoma",
+        "name": "Robbers Cave Haunted Hay Ride",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-WARD",
+        "state": "Oklahoma",
+        "name": "The 13th Ward Haunted Attraction",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      },
+      {
+        "recordId": "OK-W1-LOSTLAKES",
+        "state": "Oklahoma",
+        "name": "Lost Lakes Haunted Forest",
+        "exactSignals": [],
+        "expectedIdentityImpact": {
+          "implementedNow": 0,
+          "potentialFutureRuntimeAddition": "unestablished while held",
+          "newlyDiscoveredIdentity": "unestablished",
+          "knownHistoricalIdentities": [],
+          "unresolvedRelationships": [],
+          "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+        }
+      }
+    ],
+    "method": "Normalized ID/name/alias/domain/address/operator screen plus state independent manual reviews of generic-name collisions; absence of an exact signal is not proof all held identities resolved. No new factual discovery.",
+    "knownNearNameGroups": [
+      "KS Field of Screams versus MO Nixa/Branson; independent operators/places, never copy Missouri facts.",
+      "AR Warehouse of Fear versus MO Werehouse and OK Nightmare Warehouse; distinct state/city/operator evidence.",
+      "AR The Asylum/AsylumX versus OK Oklahoma Asylum/Sycamore; held identities remain held.",
+      "AR Fear Factory501 versus Missouri Fear Factory; separate operator/address.",
+      "KS Wicked Island versus OK Wicked Forest; separate name/place; Oklahoma remains HOLD.",
+      "Kansas directory Missouri Beast/Edge of Hell/Macabre/Labyrinth appearances excluded from selected Kansas venue identities."
+    ],
+    "currentHoldClasses": {
+      "publishedSourceHolds": [
+        "Liberty",
+        "Campbell’s",
+        "Creepyworld",
+        "Darkness",
+        "Cobb",
+        "Grotto",
+        "Ozark Nightmares"
+      ],
+      "ownerHolds": [
+        "Hannibal",
+        "Bakersfield",
+        "Rising",
+        "Terrified Existence",
+        "Twisted Minds",
+        "Dark Lords",
+        "Zombie World",
+        "Lemp",
+        "Macabre"
+      ],
+      "note": "Separate classes, not claimed disjoint unique total. Cadaver Zone already live; no stale HOLD reopened."
+    }
+  }
+}
