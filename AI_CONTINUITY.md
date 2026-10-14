@@ -1,3 +1,55 @@
+# CURRENT — ALL22 REGIONAL DATA CLEARED; EXACT12 SELECTED FOR ONE SUCCESSOR (2026-10-14)
+
+## CURRENT / VERIFIED BASELINE
+- PR69 release remains PASS WITH RETAINED LIMITATIONS. Fresh remote main **6c619adda4d9ef3b2683befb2ca874b257505eb2**, tree **236110f86f9f3dc8c0cf0a5a664be79e2569bc43**, sole parent **3b6b9ed0f4be1581b3b541207b2637183fff57d3**. Project latest production **dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf READY/source exact main**,70 published identities, unchanged.
+- Supported immediate rollback remains **dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ/source3b6**, last authenticated inspection at PR69 release; automatic restore apex/www/chi only and generated aliases require separate checks. No new rollback or live smoke here. PR69 waiver consumed; no successor release authority.
+- **Fresh revalidation covered ALL20 previously ready records plus BOTH placement gaps**, not merely the old recommended12. Final independent result: **22 factual PASS /22 placement PASS /22 implementation ELIGIBLE at the data layer**,8Kansas/8Arkansas/6Oklahoma. Louisburg/PsychoPath are no longer placement HOLD. Remaining52 regional factual HOLDs were not reopened.
+- **No new runtime candidate/branch/PR exists at this checkpoint.** Research/pure-function PASS is not integrated application/browser/CI/release acceptance.
+
+## EXACT ACCEPTED INPUTS / SELECTION
+- Independent combined22 complete record/presentation file SHA256 **c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688**; full22 verdict ledger **0202c8580ff0534f439b9f66c590eb0aa3357b12e020925ac8491f8dfdb0062d**; independent freeze manifest **202106d50e63a02542c60089d1b29595125031560e592db84be3f63469c19de5**.
+- Selection freeze **b8ce7d8d5c40dc70a9638ee0162af4973826c5bcfb93a7e54c0f0b1750247d6d**; selection JSON **d584dfeaf5d0d541b1234bf765c9d887d23a7ad61de845feb771bfcc6c21075d**; exact selected12 full objects/presentations **6924a8b0747e780be1fe90f636d950ca1cdf0ec388435e004b9d35fb0b7ae8bc**; exact reserve10 **f30546114fd67c28b1d4acc64fdc89255f43f0ac64bc7bdb51df0337565fd428**.
+- Selected12 (2KS/5AR/5OK), in order:
+  1. Annabelle's Fun Farm — date-night-ok26-w1-annabelle
+  2. Warehouse of Fear — date-night-ar26-warehouse
+  3. The Asylum — date-night-ar26-asylum
+  4. Louisburg Cider Mill Family Farm — date-night-ks26-louisburg
+  5. Exiled KC — date-night-ks26-exiled
+  6. Psycho Path — date-night-ok26-w1-psycho
+  7. River Valley Nightmare — date-night-ar26-river
+  8. TwistedRoots — date-night-ok26-w1-roots
+  9. Haunted Castle — date-night-ok26-w1-castle
+  10. Horror in the Hollow — date-night-ar26-hollow
+  11. Haunted Plantation — date-night-ok26-w1-plantation
+  12. Magic Screams — date-night-ar26-magic
+- Eligible reserves (6KS/3AR/1OK): Nightmare Festival,date-night-ks26-nightmare; Walters,date-night-ks26-walters; Wicked Island,date-night-ks26-wicked; Royal,date-night-ar26-royal; Guthrie,date-night-ok26-w1-guthrie; Acres,date-night-ks26-acres;13SinisterSouls,date-night-ks26-souls;Colby,date-night-ks26-colby;FearFactory501,date-night-ar26-fear-factory;ChillFactor,date-night-ar26-chill.
+- Louisburg and Psycho replace Walters/Nightmare in initial12; reserve is not factual downgrade. Qualitative geographic/activity/remaining-season choice, not measured owner-radius/travel or quota. Expected future total **82** only if exact12 imported onto unchanged70 baseline.
+- Walters planning prose erratum: **five** remaining nights Oct16,17,23,24,30, not six. Original frozen files/objects unchanged. Erratum SHA256 **562d81052fb36a009109bff9249854553a1ac7bd9ce76c602532dcdb2db30912**, private **libfile_bfac5566b58c8191b3dcd9e7fcdfa688**,2,805bytes.
+
+## REVIEW QUALIFICATIONS / SAFETY
+- Independent **660 released-source projection probes +272 static/source oracles PASS**. These932 checks establish data/pure-function compatibility, not integrated registry/cache/pendingRPC/browser/geometry/Android acceptance.
+- Standard web crawl ages preserved; selected primary calendars/images freshly fetched/viewed. Seven Arkansas Census refreshes timed out: unchanged previously accepted points and old source timestamps retained, current addresses reopened/no relocation conflict. Do not describe them as newly geocoded. Horror operator point independently reconverted; Oklahoma5 prior points freshly recaptured by author and preserved.
+- Louisburg new approximate shared-business point38.6218568,-94.755488; Psycho new operator-linked named-place point36.3076991,-95.9675955. No entrance/parking/dropoff precision. Psycho viewport excluded and conflicting lower-priority directory point not averaged. Louisburg historicalMO26-064, not netnew discovery.
+- Louisburg Fri/Sat20:00-versus22:00 close remains qualified; Plantation age recommendations vary/parent discretion, not invented minimum. Keep all contact/health/mobility/child restrictions. WarehouseOct22 no-scare remains separate subtype-mapping HOLD, excluded from haunted activeDates/newidentity.
+- Acres/Souls gained finite current calendar evidence; Acres/Guthrie Nov6–7 remain reserves requiring scoped latefall. Selected12 no dates afterNov1; selectedNov1 still needs DST/seasonaloff/lifecycle tests. No global chips/provider extension. Null machinehours/neverOpenNow; date-only retirement never claims final exit; no2027.
+- Kansas/Arkansas revalidateAfterOct15 and OklahomaOct16 preserved, not availability promises. If implementation slips, recheck source drift without extending freshness. Editorial-only reserves retain exact approved cutoffs; no unrelated generic-guard remediation inferred.
+
+## DURABLE PRIVATE PACKAGE
+- Full **libfile_5f60ad45c8508191b6c1ab31e6da5844**,version0,19,223,965bytes/398members, SHA256 **2fb8ba6e7cf7fcee2e06ea647a3d1643bcf0da05b3bccd6bab49789637d56191**; all393 frozen source files/29,809,289sourcebytes retained.
+- Compact **libfile_de3d2078161c819199e98fd44b53f234**,530,743bytes/155members,SHA256 **7a76e04188ac524d768ae2d5badb08efec242a0534b46579781f300733a65a5e**.
+- Readable preservation review **libfile_02dc75a1c36481918ee7485ffdc09798**,8,532bytes,SHA256 **cc854b716a5164ee854377981984c75d30da824312edc68ae908b5e0aef9e2fc**.
+- Verified saved-ID/member/check receipt **libfile_ae5bda68668481919e3e24304af03303**,281,068bytes,SHA256 **f13066dd1229e9e5840b6a1b90f26c76628c0b06187f5bec8daed413cede2bb5**.
+- Saved versions independently materialized and byte/SHA/size/CRC/safepath/nestedZIP checked. All identified images are direct public operator-authored source files, no browser screenshot pixels. Original revisions/failures/corrections retained. Compact is a subset, not fullarchive; private captures are not published.
+- Exact paths within packages: regional-window-2026-10-14/independent/{REPORT.md,EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json,FINAL-22-VERDICT-LEDGER.json,FREEZE-MANIFEST.json}; selection/R1/{README.md,SELECTED-12-EXACT-ACCEPTED-OBJECTS.json,RESERVE-10-EXACT-ACCEPTED-OBJECTS.json}; selection/FREEZE-MANIFEST.json. Prior repository wave1 ledgers are historical October13 inputs superseded by these exact accepted22 decisions.
+
+## NEXT / HOLD
+- **After this checkpoint's full readback, implement exactly selected12 on one fresh main-based nonproduction candidate.** Preserve all70 prior full objects/presentations/freshness. Independently review exact newhead/fullgates including cross-state registry/radius, identity/preferences, actual320/390UI, qualifiedPlan, address/ride targets, cache/saved/favorites/pendingRPC, all12 cutoff−1/exact/+1, DST/no2027, fulltests/type/lint/safeauthbuild/hosted/geometry/automatedAndroid.
+- Once that ONE successor freezes, run-ahead Illinois/later-state bounded research/evidence/queues may proceed under owner plan. **No second implementation PR and no successor merge/deployment/waiver.** Existing source-review/native/residential HOLDs persist; Cadaver/Werehouse already live and not reopened. PR61 PARKED; “Radial discovery becomes an audit layer.” future intent only.
+- Interrupted platform execution delayed documentation, not data review: fresh canonical remained686c0f11, no regional publication confirmed; saved evidence recovered/verified. User Continue authorized resumption through same documentation route after actual refs checked. No alternate bypass, duplicate runtime work or production change.
+- All inherited warning/clipping/approximation/provider/dev-auth/nativephysical limits remain in prior release entry. Documentation-only deployment-disabled integration/continuity-refresh-2026-10-07; full prior686c0f11c23b223ee95f14884dfaed6d58186226 history preserved.
+
+---
+
 # CURRENT — PR69 RELEASE ACCEPTED; ONE REGIONAL SUCCESSOR AUTHORIZED (2026-10-14)
 
 ## RELEASE / PRODUCTION PASS WITH RETAINED LIMITATIONS
