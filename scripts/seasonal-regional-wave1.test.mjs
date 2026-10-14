@@ -9,7 +9,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 import { REGIONAL_RECORDS, REGIONAL_ROWS, REGIONAL_PRESENTATIONS, REGIONAL_IDS,
   REGIONAL_RECORD_IDS, REGIONAL_MATERIAL_FACTS, REGIONAL_CONFIDENCE, REGIONAL_BASELINE,
-  assertRegionalCatalog, releasedSeventyPresentationsOnly } from "./test-support/regional-wave1.mjs";
+  assertRegionalCatalog, releasedSeventyPresentationsOnly, WAVE2_EXPECTED_PRESENTATIONS } from "./test-support/regional-wave1.mjs";
 
 // Expectations bind independent accepted bytes and the immutable released 70.
 // This suite does not derive its expected objects from the candidate catalog.
@@ -131,7 +131,8 @@ test("regional successor binds exact independent selected bytes and all 70 relea
 });
 
 test("exact 82 registry presentations, module imports and legacy adapter cannot hide a reserve or replacement", () => {
-  assert.deepEqual(SEASONAL_PRESENTATIONS, { ...REGIONAL_BASELINE.presentations, ...REGIONAL_PRESENTATIONS });
+  assert.deepEqual(SEASONAL_PRESENTATIONS, { ...REGIONAL_BASELINE.presentations, ...REGIONAL_PRESENTATIONS, ...WAVE2_EXPECTED_PRESENTATIONS },
+    "The immutable 82 presentations plus exactly ten new reviewed-queue entries are preserved");
   assert.deepEqual(releasedSeventyPresentationsOnly(SEASONAL_PRESENTATIONS), REGIONAL_BASELINE.presentations);
   assert.equal(SEASONAL_VISITOR_NOTICE, "Check current hours, admission, and weather before you go.");
   const files = [...Object.keys(REGIONAL_BASELINE.files), regionalFile];

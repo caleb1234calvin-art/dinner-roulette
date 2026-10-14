@@ -50,6 +50,9 @@ test("Wave 2 never claims Open Now, revives expired/2027 entries or leaks in sea
     assert.equal(eligible(new Date(cutoff)).length, 0, row.id);
     assert.equal(eligible(new Date(cutoff + 1)).length, 0, row.id);
     assert.equal(eligible(new Date("2027-10-21T12:00:00-05:00")).length, 0, row.id);
-    assert.equal(eligible(date, {}, false).length, 0, row.id);
+    const explicitlyScoped = row.seasonalListing.visibility === "listing-lifecycle";
+    assert.equal(eligible(date, {}, false).length, explicitlyScoped ? 1 : 0,
+      row.id + ": preserve source-backed listing-lifecycle visibility only when explicitly scoped");
+    assert.equal(eligible(date, { openNowOnly: true }, false).length, 0, row.id);
   }
 });
