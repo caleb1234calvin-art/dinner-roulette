@@ -70,7 +70,8 @@ export function assertRegionalCatalog(rows, presentations) {
 }
 export function releasedSeventyPresentationsOnly(registry) {
   assert.deepEqual(registry, EXPECTED_92_PRESENTATIONS, "Only frozen 82 plus approved ten presentation IDs");
-  const legacy = Object.fromEntries(Object.entries(registry).filter(([id]) => !REGIONAL_RECORD_IDS.includes(id)));
+  const legacy = Object.fromEntries(Object.entries(registry).filter(([id]) =>
+    !REGIONAL_RECORD_IDS.includes(id) && !Object.hasOwn(WAVE2_EXPECTED_PRESENTATIONS, id)));
   assert.deepEqual(legacy, REGIONAL_BASELINE.presentations, "All 70 legacy presentations remain exact");
   return legacy;
 }
